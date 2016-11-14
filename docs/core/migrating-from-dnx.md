@@ -12,15 +12,15 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: c86f277a4c6fd6e6713da2b5f59eb171900190df
+ms.sourcegitcommit: 956a0766fe0171052983627f2cf2e8264d6b0365
+ms.openlocfilehash: e79746734c179c3f7797a10bdcd79606b818afea
 
 ---
 
 # <a name="migrating-from-dnx-to-net-core-cli"></a>從 DNX 移轉到 .NET Core CLI
 
 ## <a name="overview"></a>概觀
-在 .NET Core 和 ASP.NET Core 1.0 的 RC1 版本中，我們將 DNX 工具引入全球。 在 .NET Core 和 ASP.NET Core 1.0 的 RC2 版本中，我們則轉換到 .NET Core CLI。
+.NET Core 的 RC1 版本與 ASP.NET Core 1.0 引進了 DNX 工具。 .NET Core 的 RC2 版本與 ASP.NET Core 1.0 則從 DNX 進展到了 .NET Core CLI。
 
 現在，讓我們稍微複習一下什麼是 DNX。 DNX 是一種執行階段和工具組，可用來建置 .NET Core 和 ASP.NET Core 1.0 應用程式。 它由 3 個主要部分所組成：
 
@@ -147,6 +147,6 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
