@@ -66,6 +66,6 @@ GC 已有稱為大型物件堆積 (LOH) 之大型物件的堆積。 它是保留
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
