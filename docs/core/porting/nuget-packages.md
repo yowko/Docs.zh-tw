@@ -16,7 +16,7 @@ ms.openlocfilehash: 1f04a48afdd029670819ed5f85fb95c711e0d8a9
 
 ---
 
-# <a name="-porting-to-net-core-nuget-packages"></a>������ 移轉到 .NET Core - NuGet 套件
+# <a name="-porting-to-net-core-nuget-packages"></a>🔧 移轉到 .NET Core - NuGet 套件
 
 > **注意**
 > 
