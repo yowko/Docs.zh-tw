@@ -26,6 +26,6 @@ ms.openlocfilehash: 1c4179fe9d219bf6580e4792959da64364a6607c
 如需開發 ASP.NET Core Web 應用程式的教學課程，建議您參閱 [ASP.NET Core 文件](https://docs.asp.net)。
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -161,6 +161,6 @@ GitHub 上的 .NET Core 儲存機制每天都有認可和 PR，進而產生許�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

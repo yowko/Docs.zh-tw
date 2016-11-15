@@ -99,6 +99,6 @@ ms.openlocfilehash: 8c3a58f97c9cb70e168a055cd874ee10ebb08c54
 此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 您將建立之程式碼的完成版本位於 [GitHub 上的 core-docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)。
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
