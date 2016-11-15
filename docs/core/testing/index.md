@@ -11,8 +11,8 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 149086110d7470d97e1ab3e5969269626290b523
-ms.openlocfilehash: 94bae12916fd20f534916d97157605c6a9aa9202
+ms.sourcegitcommit: 352d4a1fe96b701ebf9e0d60d006cfb9ed77977c
+ms.openlocfilehash: e055475200c55c2e2f890ac63b8b258aeacfae75
 
 ---
 
@@ -30,7 +30,7 @@ ms.openlocfilehash: 94bae12916fd20f534916d97157605c6a9aa9202
 > [!NOTE]
 > 開發人員經常必須絞盡腦汁才能想出適合其測試類別和方法的名稱。 因此，ASP.NET 產品團隊會遵循[這些慣例](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)以做為起點。
 
-在撰寫單元測試時，務必小心不要在基礎結構中導入相依性。 這些相依性通常會讓測試速度更慢，而且更不可靠，因此應該將其保留到整合測試時進行。 您可以遵循 [Explicit Dependencies Principle](http://deviq.com/explicit-dependencies-principle/) (明確相依性準則) 的內容，在應用程式程式碼中避免這些隱藏的相依性，並使用 [Dependency Injection](https://docs.asp.net/en/latest/fundamentals/dependency-injection.html) (相依性插入) 來要求架構的相依性。 您也可以將單元測試保存在整合測試以外的個別專案中，並確保您的單元測試專案不會參考基礎結構套件，或不具有基礎結構套件的相依性。
+在撰寫單元測試時，務必小心不要在基礎結構中導入相依性。 這些相依性通常會讓測試速度更慢，而且更不可靠，因此應該將其保留到整合測試時進行。 您可以遵循 [Explicit Dependencies Principle](http://deviq.com/explicit-dependencies-principle/) (明確相依性準則) 的內容，在應用程式程式碼中避免這些隱藏的相依性，並使用 [Dependency Injection](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) (相依性插入) 來要求架構的相依性。 您也可以將單元測試保存在整合測試以外的個別專案中，並確保您的單元測試專案不會參考基礎結構套件，或不具有基礎結構套件的相依性。
 
 進一步了解 .NET Core 專案的單元測試：
 
@@ -40,6 +40,6 @@ XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Stu
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
