@@ -16,7 +16,7 @@ ms.openlocfilehash: df8a31244a4cf1e86df58132402a329320900dbd
 
 ---
 
-# <a name="-deploying-net-core-applications"></a>🔧 部署 .NET Core 應用程式
+# <a name="-deploying-net-core-applications"></a> 部署 .NET Core 應用程式
 
 > **注意**
 > 
