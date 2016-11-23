@@ -38,15 +38,15 @@ ms.openlocfilehash: 274402bbd254e97d88771675daf07995983914aa
 
 ## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>建立 ASP.NET Web 應用程式並新增 Docker 支援
 
-使用 Visual Studio 建立新的 ASP.NET Core Web 應用程式。 載入應用程式時，從 [專案] 功能表選取 [Add Docker Support] (新增 Docker 支援)，或在方案總管中的專案上按一下滑鼠右鍵，選取 [新增] > [Docker Support] (Docker 支援)。
+使用 Visual Studio 建立新的 ASP.NET Core Web 應用程式。 載入應用程式時，從 [專案] 功能表選取 「Add Docker Support」 (新增 Docker 支援)，或在方案總管中的專案上按一下滑鼠右鍵，選取 [新增] > [Docker Support] 「Docker 支援」。
 
 [專案] 功能表
 
-![[專案] [Add Docker Support] (新增 Docker 支援)](./media/visual-studio-tools-for-docker/project-add-docker-support.png)
+![[專案] 「Add Docker Support」 (新增 Docker 支援)](./media/visual-studio-tools-for-docker/project-add-docker-support.png)
 
 [專案] 內容功能表
 
-![以滑鼠右鍵按一下 [Add Docker Support] (新增 Docker 支援)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+![以滑鼠右鍵按一下 「Add Docker Support」 (新增 Docker 支援)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
 
 下列檔案即會加入專案中。
 
