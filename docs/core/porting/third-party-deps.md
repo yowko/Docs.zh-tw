@@ -16,7 +16,7 @@ ms.openlocfilehash: 7e4e96183484d102d102eeab97191f8be9b9be8a
 
 ---
 
-# <a name="porting-to-net-core-analyzing-your-thirdparty-party-dependencies"></a>移轉到 .NET Core - 分析協力廠商相依性
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>移轉到 .NET Core - 分析協力廠商相依性
 
 移轉程序的第一個步驟是了解您的協力廠商相依性。  您需要找出他們哪些尚未執行 .NET Core (如有)，並針對不執行 .NET Core 的開發應變計劃。
 
@@ -31,7 +31,7 @@ ms.openlocfilehash: 7e4e96183484d102d102eeab97191f8be9b9be8a
 使用 [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) 工具檢查 NuGet 封裝資料夾非常簡單。  以下為作法。
 
 1. 下載並開啟 [NuGet Package Explorer] (NuGet 封裝總管)。
-2. 按一下 [Open package from online feed] (從線上摘要開啟封裝)。
+2. 按一下 「Open package from online feed」 (從線上摘要開啟封裝)。
 3. 搜尋封裝的名稱。
 4. 展開右手邊的 "lib" 資料夾，並查看資料夾名稱。
 
@@ -78,7 +78,7 @@ dotnet5.5
 如果您依賴的 NuGet 封裝在 .NET Core 上不執行，您可以做幾件事。
 
 1. 如果專案是開放原始碼並裝載在 GitHub 等位置，您可以直接連絡開發人員。
-2. 您可以搜尋封裝，然後按一下封裝頁面左手邊的 [Contact Owners] (連絡擁有者)，在 [nuget.org](https://www.nuget.org/) 直接連絡作者。
+2. 您可以搜尋封裝，然後按一下封裝頁面左手邊的 「Contact Owners」 (連絡擁有者)，在 [nuget.org](https://www.nuget.org/) 直接連絡作者。
 3. 您可以尋找另一個在 .NET Core 執行的封裝，與您所用封裝達成相同的工作。
 4. 您可以嘗試自行撰寫封裝執行工作的程式碼。
 5. 您可以變更應用程式的功能，消除封裝的相依性，至少等到有可用的相容版本封裝。
