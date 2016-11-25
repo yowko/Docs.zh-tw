@@ -11,8 +11,8 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 translationtype: Human Translation
-ms.sourcegitcommit: 213ce098bcc2b5e31c55e759d895254d5ca33caa
-ms.openlocfilehash: 68815f7e7e96483eff218138dd1612a20e2eb1e6
+ms.sourcegitcommit: b022f5b9e8ac81c00a6e5aa189feab4e7157dfd4
+ms.openlocfilehash: 0734347048742657b8e33a1fffae15448ecad4f3
 
 ---
 
@@ -59,6 +59,6 @@ ms.openlocfilehash: 68815f7e7e96483eff218138dd1612a20e2eb1e6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -11,24 +11,24 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: aafa0c110dc3a2820f7e050d70b9450af1db35d8
+ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
+ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core
 
-此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。  它會從最基本的主控台應用程式開始，最終會跨越多個專案，包括測試。 您將逐步新增這些功能，這些功能會建置在您已熟悉並建置的項目之上。
+本指南說明如何使用 .NET Core CLI 工具，來建置基本的跨平台主控台應用程式。
 
 如果您不熟悉 .NET Core CLI 工具組，請參閱 [.NET Core SDK 概觀](../sdk.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
-在開始之前，請確定您有[最新的 .NET Core CLI 工具](https://www.microsoft.com/net/core)。  您也需要文字編輯器。
+在開始之前，請確定您有[最新的 .NET Core CLI 工具](https://www.microsoft.com/net/core)。 您也需要文字編輯器。
 
 ## <a name="hello-console-app"></a>嗨，主控台應用程式！
 
-首先，瀏覽至或用您喜歡的名稱建立新的資料夾。  "Hello" 是針對範例程式碼選擇的名稱，您可以在[這裡](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello)找到。
+瀏覽至或用您喜歡的名稱建立新的資料夾。 "Hello" 是針對範例程式碼選擇的名稱，您可以在[這裡](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello)找到。
 
 開啟命令提示字元並輸入下列命令：
 
@@ -97,7 +97,7 @@ Hello, World!
 
 您也可以執行 [`dotnet build`](../tools/dotnet-build.md) 來編譯程式碼，而不執行建置主控台應用程式。
 
-### <a name="building-a-selfcontained-application"></a>建置獨立的應用程式
+### <a name="building-a-self-contained-application"></a>建置獨立的應用程式
 
 讓我們來試試編譯獨立的應用程式，而不是可攜式應用程式。 您可以深入閱讀 [.NET Core 中的可攜性類型](../deploying/index.md)，來了解不同的應用程式類型，及其部署方式。
 
@@ -647,6 +647,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
