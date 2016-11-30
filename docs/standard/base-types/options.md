@@ -215,7 +215,7 @@ End If
  
 因為 [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) 選項代表規則運算式引擎的預設行為，所以很少明確地指定在方法呼叫中， 而是會呼叫不含 options 參數的建構函式或靜態模式比對方法。
 
-## <a name="caseinsensitive-matching"></a>不區分大小寫的比對方式
+## <a name="case-insensitive-matching"></a>不區分大小寫的比對方式
 
 [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) 選項 (或 **i** 內嵌選項) 提供不區分大小寫比對。 依預設，會使用目前文化特性的大小寫慣例。
 
@@ -543,7 +543,7 @@ End Class
 '    Joe: 164
 ```
 
-## <a name="singleline-mode"></a>單行模式
+## <a name="single-line-mode"></a>單行模式
 
 [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) 選項 (或 s 內嵌選項) 會使規則運算式引擎將輸入字串當作其包含單行。 其作法是變更句點 (**.**) 語言項目的行為，使其比對每個字元，而不是比對新行字元 **\n** 或 \u000A 以外的每個字元。
 
@@ -1233,7 +1233,7 @@ End Module
 '       Instead, it is a nonsensical paragraph.
 ```
 
-## <a name="righttoleft-mode"></a>由右至左模式
+## <a name="right-to-left-mode"></a>由右至左模式
 
 依預設，規則運算式引擎會由左至右搜尋。 您可以使用 [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) 選項來反轉搜尋方向。 此搜尋會自動從字串最後一個字元的位置開始。 針對包含開始位置參數的模式比對方法，例如 [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32))，開始位置是要開始搜尋之最右邊字元位置的索引。 
 
