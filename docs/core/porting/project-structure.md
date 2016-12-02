@@ -83,7 +83,7 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 *  將 `project.json` 重新命名為 `{project-name}.project.json`
     * 嘗試還原相同目錄中的程式庫封裝時，這可避免 Visual Studio 中的潛在衝突。 如需詳細資訊，請參閱 [NuGet 常見問題集](https://docs.nuget.org/consume/nuget-faq#working-with-packages)的「_我在同一個資料夾中有多個專案，我該如何為每個專案使用不同的 packages.config 或 project.json 檔案的？_」
     *  **替代**︰在另一個資料夾中建立 PCL，並參考原始的原始程式碼避免這個問題。  將 PCL 放在另一個資料夾中的額外好處，是沒有 Visual Studio 2015 的使用者仍可使用較舊的專案，不必載入新的方案。
-*  若要在建立 PCL 之後以 .NET Standard 為目標，請在 Visual Studio 中開啟 [Project's Properties] (專案的內容)。 在 [目標] 區段中，按一下 [以 .NET 平台標準為目標] 連結。  重複相同的步驟可以反轉這項變更。
+*  若要在建立 PCL 之後以 .NET Standard 為目標，請在 Visual Studio 中開啟 [Project's Properties]\(專案的內容)。 在 [目標] 區段中，按一下 [以 .NET 平台標準為目標] 連結。  重複相同的步驟可以反轉這項變更。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
 
