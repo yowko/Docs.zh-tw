@@ -3,11 +3,10 @@ title: "使用 MSTest 和 Windows 的 .NET Core"
 description: "搭配 Visual Studio 2015 時，如何使用 MSTest 和 Windows 的 .NET Core"
 keywords: MSTest, .NET, .NET Core
 author: ncarandini
-manager: wpickett
+ms.author: wiwagn
 ms.date: 08/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
 translationtype: Human Translation

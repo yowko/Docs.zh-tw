@@ -3,11 +3,11 @@ title: "深入了解非同步"
 description: "深入解說非同步程式碼在 .NET 中的運作方式"
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
@@ -35,7 +35,7 @@ Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 
 
 如需 Task 及與其互動之不同方式的詳細資訊，請參閱[以工作為基礎的非同步模式 (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) 一文。
 
-## <a name="deeper-dive-into-tasks-for-an-iobound-operation"></a>更深入了解 I/O-Bound 作業的 Task
+## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>更深入了解 I/O-Bound 作業的 Task
 
 下一節將概要描述使用一般非同步 I/O 呼叫會發生什麼情況。 首先讓我們示範兩個範例。
 
@@ -117,7 +117,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 此外，使用 `async` 方法可輕鬆地將工作分派給 UI 執行緒 (例如更新 UI)，而且不需要額外的工作 (例如呼叫安全執行緒委派)。
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpubound-operation"></a>更深入了解 CPU-Bound 作業的 Task 和 Task<T>
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>更深入了解 CPU-Bound 作業的 Task 和 Task<T>
 
 CPU-bound `async` 程式碼與 I/O-bound `async` 程式碼稍微不同。  由於工作會在 CPU 上執行，因此必須指定專門用於計算的執行緒。  使用 `async` 和 `await` 可讓您無障礙地與背景執行緒互動，並確保非同步方法的呼叫端保持回應。  請注意，這不會對共用資料提供任何保護。  如果您要使用共用資料，您仍然需要套用適當的同步處理策略。
 

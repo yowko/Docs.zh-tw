@@ -3,11 +3,11 @@ title: "如何：反覆存取日期和時間值"
 description: "如何：反覆存取日期和時間值"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation
@@ -16,11 +16,11 @@ ms.openlocfilehash: b4bf747faff171e4a90a897e5f7ef442012e7699
 
 ---
 
-# <a name="how-to-roundtrip-date-and-time-values"></a>如何：反覆存取日期和時間值
+# <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
 
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 [DateTime](xref:System.DateTime) 值與 [DateTimeOffset](xref:System.DateTimeOffset) 值，以讓還原值識別出與儲存值相同的時間。
 
-## <a name="to-roundtrip-a-datetime-value"></a>若要反覆存取 DateTime 值
+## <a name="to-round-trip-a-datetime-value"></a>若要反覆存取 DateTime 值
 
 1. 呼叫 [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) 方法與 "o" 格式規範，以將 [DateTime](xref:System.DateTime) 值轉換為其字串表示。
 
@@ -97,7 +97,7 @@ Console.WriteLine("Read {0} ({2}) from {1}.", restoredDate.ToString(), _
 
 反覆存取 [DateTime](xref:System.DateTime) 值時，這項技術可以成功保留所有當地和全球通用時間的時間。 例如，如果當地的 [DateTime](xref:System.DateTime) 值儲存在美國太平洋標準時區的系統上，但該值在美國中央標準時區的系統上還原，則還原的日期和時間會比原始時間晚兩個小時，以反映出兩個時區之間的時間差異。 不過，針對未指定的時間，這項技術並不一定準確。 只要 [DateTime](xref:System.DateTime) 值的 [Kind](xref:System.DateTime.Kind) 屬性是 [Unspecified](xref:System.DateTimeKind.Unspecified)，系統就會將其全部視為當地時間。 如果不是這種狀況，[DateTime](xref:System.DateTime) 就無法成功地識別出正確的時間點。 這項限制的因應措施，是將日期和時間值與其儲存和還原作業的時區緊密結合。
 
-## <a name="to-roundtrip-a-datetimeoffset-value"></a>若要反覆存取 DateTimeOffset 值
+## <a name="to-round-trip-a-datetimeoffset-value"></a>若要反覆存取 DateTimeOffset 值
 
 呼叫 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 方法與 "o" 格式規範，以將 [DateTimeOffset](xref:System.DateTimeOffset) 值轉換為其字串表示。
 

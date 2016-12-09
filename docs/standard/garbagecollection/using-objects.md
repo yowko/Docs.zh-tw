@@ -3,11 +3,11 @@ title: "使用實作 IDisposable 的物件"
 description: "使用實作 IDisposable 的物件"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/19/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: df780a6e-734e-44b8-9747-9f7783f79e20
 translationtype: Human Translation

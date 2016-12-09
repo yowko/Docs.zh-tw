@@ -3,11 +3,11 @@ title: "使用跨平台工具建立 NuGet 封裝"
 description: "使用跨平台工具建立 NuGet 封裝"
 keywords: ".NET、.NET Core、NuGet"
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
 translationtype: Human Translation

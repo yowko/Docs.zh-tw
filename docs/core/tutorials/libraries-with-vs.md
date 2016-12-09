@@ -2,12 +2,9 @@
 title: "使用 Visual Studio 開發 .NET Core 程式庫"
 description: "使用 Visual Studio 開發 .NET Core 程式庫"
 keywords: .NET, .NET Core
-author: dotnet-bot
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 01b988ed-583f-48c8-a016-caeee282e0a6
 translationtype: Human Translation

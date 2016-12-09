@@ -3,11 +3,11 @@ title: "如何：具現化 TimeZoneInfo 物件"
 description: "如何具現化 TimeZoneInfo 物件"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bff137e5-d550-44c3-b460-b3f2dabd4035
 translationtype: Human Translation

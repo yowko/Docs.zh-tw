@@ -3,11 +3,11 @@ title: "如何：解決不明確的時間"
 description: "如何解決不明確的時間"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e86050c6-d16d-405e-8bba-7205945c9a81
 translationtype: Human Translation

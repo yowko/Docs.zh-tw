@@ -4,11 +4,10 @@ description: "了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI
 keywords: "dotnet-install, dotnet-install 指令碼, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
@@ -17,7 +16,7 @@ ms.openlocfilehash: 08a401abed36e68caa7172e05184d18469fef48f
 
 ---
 
-#<a name="dotnetinstall-scripts-reference"></a>dotnet-install 指令碼參考
+#<a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
 ## <a name="name"></a>名稱
 dotnet-install.ps1 | dotnet-install.sh - 用來安裝命令列介面 (CLI) 工具和共用執行階段的指令碼

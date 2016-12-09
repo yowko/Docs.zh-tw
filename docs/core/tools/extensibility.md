@@ -2,12 +2,12 @@
 title: ".NET Core CLI 擴充性模型"
 description: ".NET Core CLI 擴充性模型"
 keywords: "CLI, 擴充性, 自訂命令, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
@@ -29,14 +29,14 @@ CLI 工具可以透過兩種主要方式進行擴充︰
 
 上述這兩種擴充性機制都不是專用的；您可以使用兩者或其中一個。 選擇哪一個主要取決於您嘗試使用擴充功能達成的目標。
 
-## <a name="perproject-based-extensibility"></a>個別專案擴充性
+## <a name="per-project-based-extensibility"></a>個別專案擴充性
 個別專案工具是散發為 NuGet 套件的[可攜式主控台應用程式](../deploying/index.md)。 工具僅適用於參考它們以及還原它們的專案內容；因為將會找不到命令，所以專案內容外部的叫用 (例如，包含專案的目錄外部) 會失敗。
 
 因為不需要 `project.json` 外部的任何項目，所以這些工具也非常適合組建伺服器。 建置流程會執行所建置專案的還原，並且可以使用這些工具。 語言專案 (例如 F#) 也在這個分類中；畢竟，每個專案都只能以一種特定語言撰寫。 
 
 最後，這個擴充性模型支援建立存取專案的已建置輸出所需的工具。 例如，[ASP.NET](https://www.asp.net/) MVC 應用程式中的各種 Razor 檢視工具都會落入這個分類。 
 
-### <a name="consuming-perproject-tools"></a>使用個別專案工具
+### <a name="consuming-per-project-tools"></a>使用個別專案工具
 使用這些工具時，需要您將 `tools` 節點新增至 `project.json`。 在 `tools` 節點內，您參考工具所在的套件。 執行 `dotnet restore` 之後，會還原工具和其相依性。 
 
 針對需要載入專案建置輸出來執行的工具，通常在專案檔中的一般相依性下方會列出另一個相依性。 這表示載入專案程式碼的工具有兩個元件︰ 
@@ -101,7 +101,7 @@ CLI 工具可以透過兩種主要方式進行擴充︰
 * [架構特有相依性的實作](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages/dotnet-desktop-and-portable)
 
 
-### <a name="pathbased-extensibility"></a>PATH 擴充性
+### <a name="path-based-extensibility"></a>PATH 擴充性
 PATH 擴充性通常用於開發電腦，而在開發電腦中，您需要有概念上涵蓋多個單一專案的工具。 這個擴充功能機制的主要缺點是繫結至工具所在的電腦。 如果您需要在另一部電腦上使用它，則必須部署它。
 
 這種模式的 CLI 工具組擴充性十分簡單。 如 [.NET Core CLI 概觀](index.md)中所涵蓋，`dotnet` 驅動程式可以執行任何在 `dotnet-<command>` 慣例後面命名的命令。 預設解析邏輯會先探查數個位置，最後再轉到系統 PATH。 如果要求的命令存在於系統 PATH 中，而且是可叫用的二進位檔，`dotnet` 驅動程式將會叫用它。 

@@ -3,11 +3,11 @@ title: "在 DateTime 與 DateTimeOffset 之間轉換"
 description: "在 DateTime 與 DateTimeOffset 之間轉換"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fab3af5b-5d0f-4384-a40a-1b5d99b30dd1
 translationtype: Human Translation
@@ -417,7 +417,7 @@ Console.WriteLine("{0} converted to {1} {2}", _
 '       11/4/2007 4:00:00 AM -05:00 converted to 11/4/2007 1:00:00 AM Local
 ```
 
-## <a name="a-generalpurpose-conversion-method"></a>一般目的轉換方法
+## <a name="a-general-purpose-conversion-method"></a>一般目的轉換方法
 
 下列範例定義名為 `ConvertFromDateTimeOffset` 的方法，以將 [DateTimeOffset](xref:System.DateTimeOffset) 值轉換為 [DateTime](xref:System.DateTime) 值。 根據其位移，它會判斷 [DateTimeOffset](xref:System.DateTimeOffset) 值是否為 UTC 時間、當地時間或一些其他時間，並據此定義所傳回日期和時間值的 [Kind](xref:System.DateTime.Kind) 屬性。 
 

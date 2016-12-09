@@ -3,11 +3,11 @@ title: "如何：在日期與時間值中顯示毫秒"
 description: "如何在日期與時間值中顯示毫秒"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 78599e33-1c3f-4335-b320-751e35906338
 translationtype: Human Translation

@@ -3,11 +3,11 @@ title: "時區概觀"
 description: "時區概觀"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e3a10f62-d403-4441-8621-adc964e32c07
 translationtype: Human Translation

@@ -3,11 +3,11 @@ title: "使用安全執行緒集合的時機"
 description: "使用安全執行緒集合的時機"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a2a42d44-f6a5-4f16-9000-026221d66349
 translationtype: Human Translation
@@ -16,7 +16,7 @@ ms.openlocfilehash: 05f692a1a58c0c653e14993cafd61a0711ebf9f8
 
 ---
 
-# <a name="when-to-use-a-threadsafe-collection"></a>使用安全執行緒集合的時機
+# <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
 
 `ConcurrentQueue`、`ConcurrentStack`、`ConcurrentDictionary`、`ConcurrentBag` 和 `BlockingCollection` 集合類型是特別設計來支援多執行緒新增和移除作業。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。
 

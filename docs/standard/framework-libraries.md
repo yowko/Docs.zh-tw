@@ -3,11 +3,11 @@ title: "Framework 程式庫"
 description: "Framework 程式庫"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
@@ -58,7 +58,7 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) - 此 API 可用於載入，以及使用 LINQ 查詢 XML 文件。
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) - 此 API 可用於讀取檔案 ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx) 可用來寫入檔案)。
 
-## <a name="appmodel-apis"></a>應用程式模型 API
+## <a name="app-model-apis"></a>應用程式模型 API
 
 有幾家公司提供許多應用程式模型以搭配 .NET 使用。
 

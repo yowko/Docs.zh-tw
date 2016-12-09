@@ -3,11 +3,10 @@ title: "使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解�
 description: "使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
@@ -26,9 +25,9 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 請依照[我們的必要條件頁面](../windows-prerequisites.md)上的指示進行，更新您的環境。
 
-# <a name="a-solution-using-only-net-core-projects"></a>只使用 .NET Core 專案的方案
+## <a name="a-solution-using-only-net-core-projects"></a>只使用 .NET Core 專案的方案
 
-## <a name="writing-the-library"></a>撰寫程式庫
+### <a name="writing-the-library"></a>撰寫程式庫
 
 1. 在 Visual Studio 中，依序選擇 [檔案]、[新增]、[專案]。 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，然後依序選擇 [.NET Core] 節點和 [類別庫 (.NET 標準)]。 
 

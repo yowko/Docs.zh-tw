@@ -4,11 +4,10 @@ description: "語言獨立性以及與語言無關的元件"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/22/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
@@ -17,7 +16,7 @@ ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
 
 ---
 
-# <a name="language-independence-and-languageindependent-components"></a>語言獨立性以及與語言無關的元件
+# <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
 .NET 平台與語言無關。 這表示，身為開發人員，您可以使用以 .NET 平台為目標的許多語言之一進行開發，例如 C#、F# 和 Visual Basic。 您可以存取為 .NET 平台開發之類別庫的類型和成員，而不必知道原始撰寫的語言，也不必遵循原始語言的任何慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET 應用程式存取。
 
@@ -2816,7 +2815,7 @@ End Class
 
 如果您要開發的是應用程式而非程式庫 (也就是說，如果您不會公開可由其他應用程式開發人員使用的類型或成員)，則您的應用程式所使用之程式項目的 CLS 符合性，只有在您的語言不支援這些項目時才需要考慮。 在這種情況下，當您嘗試使用不符合 CLS 標準的項目時，您的語言編譯器會產生錯誤。 
 
-## <a name="crosslanguage-interoperability"></a>跨語言互通性
+## <a name="cross-language-interoperability"></a>跨語言互通性
 
 語言獨立性的意義可能有許多種。 其中一種意義是指能夠在以某種語言撰寫的應用程式中，順利使用以另一種語言撰寫的類型。 第二種意義則是本文重點所在，是指將多種語言撰寫的程式碼合併至單一 .NET Framework 組件中。 
 

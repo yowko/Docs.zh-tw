@@ -3,11 +3,10 @@ title: "減少與 project.json 的封裝相依性"
 description: "減少與 project.json 的封裝相依性"
 keywords: ".NET、.NET Core"
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
 translationtype: Human Translation

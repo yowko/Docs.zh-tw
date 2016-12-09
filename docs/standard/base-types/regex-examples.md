@@ -3,11 +3,11 @@ title: "規則運算式範例"
 description: "規則運算式範例"
 keywords: ".NET、.NET Core"
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 232b9f8d-464b-4e40-98bb-d69c32059bc0
 translationtype: Human Translation

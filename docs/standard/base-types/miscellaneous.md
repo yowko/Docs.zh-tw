@@ -4,11 +4,10 @@ description: "規則運算式中的其他建構"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 478901dc-db6c-4d90-9d3b-f5cfdca2cbf5
 translationtype: Human Translation
@@ -228,7 +227,7 @@ End Module
 '       Group 1: Dreaded
 ```
 
-## <a name="endofline-comment"></a>行結尾註解
+## <a name="end-of-line-comment"></a>行結尾註解
 
 數字符號 (**#**) 會標記 x 模式註解，從規則運算式模式結尾未逸出的 # 字元開始，並持續到行結尾。 若要使用此建構，您必須在具現化 [Regex](xref:System.Text.RegularExpressions.Regex) 物件或呼叫靜態 [Regex](xref:System.Text.RegularExpressions.Regex) 方法時，啟用 **x** 選項 (透過內嵌選項)，或提供 [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace) 值給 *option* 參數。 
 

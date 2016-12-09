@@ -3,11 +3,11 @@ title: ".NET 中的規則運算式"
 description: ".NET 中的規則運算式"
 keywords: ".NET、.NET Core"
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
@@ -150,7 +150,7 @@ End Module
 
 請注意，輸入字串包括子字串 "this? This"。 不過，因為中間有標點符號，所以不會將其視為重複。
 
-### <a name="example-3-dynamically-building-a-culturesensitive-regular-expression"></a>範例 3：動態建立區分文化特性的規則運算式
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>範例 3：動態建立區分文化特性的規則運算式
 
 下列範例說明規則運算式結合 .NET 全球化功能所提供的彈性，功能有多麼強大。 它會使用 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 物件來判定系統目前文化特性中的幣值格式， 然後利用該資訊動態建構可從文字擷取幣值的規則運算式。 針對每個比對，它會擷取僅包含數值字串的子群組，將其轉換成[十進位](xref:System.Decimal)值，並計算執行總計。 
 

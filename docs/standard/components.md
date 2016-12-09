@@ -3,12 +3,11 @@ title: ".NET 架構元件"
 description: "說明主要的 .NET 架構元件，例如，.NET 標準程式庫、.NET 執行階段和工具。"
 keywords: ".NET, .NET 標準程式庫, .NET 標準, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 編譯器"
 author: cartermp
-manager: wpickett
-ms.author: cartermp
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-core-technologies
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
