@@ -1,0 +1,8 @@
+# [類型 (C# 程式設計手冊)](index.md)
+# [如何：使用 as 和 is 運算子進行安全轉型 (C# 程式設計手冊)](how-to-safely-cast-by-using-as-and-is-operators.md)
+# [Boxing 和 Unboxing (C# 程式設計手冊)](boxing-and-unboxing.md)
+# [如何：在十六進位字串和數字類型間轉換 (C# 程式設計手冊)](how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+# [逐步解說：建立和使用動態物件 (C# 和 Visual Basic)](walkthrough-creating-and-using-dynamic-objects.md)
+# [轉型和類型轉換 (C# 程式設計手冊)](casting-and-type-conversions.md)
+# [如何：將字串轉換為數值 (C# 程式設計手冊)](how-to-convert-a-string-to-a-number.md)
+# [使用動態類型 (C# 程式設計手冊)](using-type-dynamic.md)

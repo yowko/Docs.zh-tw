@@ -1,0 +1,7 @@
+# [字串函式 (Visual Basic)](string-functions.md)
+# [CType 函式 (Visual Basic)](ctype-function.md)
+# [Type Conversion Functions (Visual Basic)](type-conversion-functions.md)
+# [函式 (Visual Basic)](index.md)
+# [Conversion Functions (Visual Basic)](conversion-functions.md)
+# [數學函式 (Visual Basic)](math-functions.md)
+# [Return Values for the CStr Function (Visual Basic)](return-values-for-the-cstr-function.md)

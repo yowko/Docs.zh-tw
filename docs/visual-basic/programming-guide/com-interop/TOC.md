@@ -1,0 +1,6 @@
+# [Walkthrough: Implementing Inheritance with COM Objects (Visual Basic)](walkthrough-implementing-inheritance-with-com-objects.md)
+# [How to: Work with ActiveX Controls (Visual Basic)](how-to-work-with-activex-controls.md)
+# [How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)](how-to-call-a-windows-function-that-takes-unsigned-types.md)
+# [Troubleshooting Interoperability (Visual Basic)](troubleshooting-interoperability.md)
+# [How to: Reference COM Objects from Visual Basic](how-to-reference-com-objects.md)
+# [Walkthrough: Creating COM Objects with Visual Basic](walkthrough-creating-com-objects.md)
