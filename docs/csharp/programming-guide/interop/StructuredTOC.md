@@ -1,0 +1,7 @@
+# [互通性 (C# 程式設計手冊)](interoperability.md)
+## [Interoperability Overview](TocOutOfQuery)
+## [How to: Access Office Interop Objects by Using Visual C# Features](TocOutOfQuery)
+## [如何：在 COM Interop 程式設計中使用索引的屬性 (C# 程式設計手冊)](how-to-use-indexed-properties-in-com-interop-rogramming.md)
+## [How to: Use Platform Invoke to Play a Wave File](TocOutOfQuery)
+## [逐步解說：Office 程式設計 (C# 和 Visual Basic)](walkthrough-office-programming.md)
+## [範例 COM 類別 (C# 程式設計手冊)](example-com-class.md)
