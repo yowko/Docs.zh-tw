@@ -1,0 +1,5 @@
+# [Directives](TocOutOfQuery)
+## [#Const Directive](TocOutOfQuery)
+## [#ExternalSource Directive](externalsource-directive.md)
+## [#If...Then...#Else Directives](if-then-else-directives.md)
+## [#Region Directive](region-directive.md)
