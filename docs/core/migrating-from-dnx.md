@@ -4,16 +4,14 @@ description: "從 DNX 移轉到 .NET Core CLI"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
 ms.sourcegitcommit: 956a0766fe0171052983627f2cf2e8264d6b0365
-ms.openlocfilehash: e79746734c179c3f7797a10bdcd79606b818afea
+ms.openlocfilehash: f01c6521becb930923693a6b6867479f3b5d6df9
 
 ---
 
@@ -147,6 +145,6 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

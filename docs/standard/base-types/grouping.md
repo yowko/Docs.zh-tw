@@ -4,16 +4,15 @@ description: "規則運算式中的群組建構"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: d27c8c68ea49f150fa0ae5c5c8b437c8c42c9c90
+ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
 
 ---
 
@@ -613,7 +612,7 @@ Next
 '    'decidedly ' found at index 9. 
 ```
 
-## <a name="zerowidth-positive-lookahead-assertions"></a>零寬度右合樣 (Positive Lookahead) 判斷提示
+## <a name="zero-width-positive-lookahead-assertions"></a>零寬度右合樣 (Positive Lookahead) 判斷提示
 
 下列群組建構可定義零寬度右合樣 (Positive Lookahead) 判斷提示：
 
@@ -692,7 +691,7 @@ End Module
 `\w+` | 比對一個或多個文字字元。
 `(?=\sis\b)` | 判定文字字元後面是否接著空格字元和字串 "is"，在字邊界結束。 若是如此，比對將會成功。
 
-## <a name="zerowidth-negative-lookahead-assertions"></a>零寬度右不合樣 (Negative Lookahead) 判斷提示
+## <a name="zero-width-negative-lookahead-assertions"></a>零寬度右不合樣 (Negative Lookahead) 判斷提示
 
 下列群組建構可定義零寬度右不合樣 (Negative Lookahead) 判斷提示：
 
@@ -806,7 +805,7 @@ End Module
 `\b` | 結束字緣比對。
 `\p{P})` | 如果下一個字元不是標點符號 (例如句點或逗號)，則比對成功。
  
-## <a name="zerowidth-positive-lookbehind-assertions"></a>零寬度左合樣 (Positive Lookbehind) 判斷提示
+## <a name="zero-width-positive-lookbehind-assertions"></a>零寬度左合樣 (Positive Lookbehind) 判斷提示
 
 下列群組建構可定義零寬度左合樣 (Positive Lookbehind) 判斷提示：
 
@@ -866,7 +865,7 @@ End Module
  
 當擷取群組中的最後一或多個字元，必須是符合該群組規則運算式模式的字元子集時，零寬度左合樣 (Positive Lookbehind) 判斷提示也可以用來限制回溯。 例如，如果群組擷取所有連續的文字字元，您就可以使用零寬度左合樣 (Positive Lookbehind) 判斷提示，要求最後一個字元為英文字母。 
 
-## <a name="zerowidth-negative-lookbehind-assertions"></a>零寬度左不合樣 (Negative Lookbehind) 判斷提示
+## <a name="zero-width-negative-lookbehind-assertions"></a>零寬度左不合樣 (Negative Lookbehind) 判斷提示
 
 下列群組建構可定義零寬度左不合樣 (Negative Lookbehind) 判斷提示：
 
@@ -1164,6 +1163,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

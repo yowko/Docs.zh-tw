@@ -3,16 +3,16 @@ title: "如何：確認字串是否為有效的電子郵件格式"
 description: "如何確認字串是否為有效的電子郵件格式"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6d735520-4059-4754-b34c-d117299d36f1
 translationtype: Human Translation
 ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: d04c77b2d7597371651f15ca4a7e203c9cbb8ccb
+ms.openlocfilehash: bedd1d281256545776c874a38ccb71ad594467c2
 
 ---
 
@@ -247,6 +247,6 @@ End Class
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

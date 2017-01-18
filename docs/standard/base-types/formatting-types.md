@@ -4,16 +4,15 @@ description: "格式化類型"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6c6ddfdbe288fe012adf31fd4d45af1b697d1132
+ms.openlocfilehash: 2dc4d1deff8d1b72cbe433c45dda873e9caa26fb
 
 ---
 
@@ -666,7 +665,7 @@ End Module
 [列舉格式字串](enumeration-format.md) | 說明用來建立列舉值之字串表示的標準格式字串。
 [Guid.ToString(String)](xref:System.Guid.ToString(System.String)) | 描述 [Guid](xref:System.Guid) 值的標準格式字串。
 
-## <a name="culturesensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>以格式提供者和 IFormatProvider 介面進行符合文化特性的格式化
+## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>以格式提供者和 IFormatProvider 介面進行符合文化特性的格式化
 
 雖然格式規範可讓您自訂物件的格式，但如果要為物件產生有意義的字串表示，您通常還需要其他格式設定資訊。 例如，如果要使用 "C" 標準格式字串或自訂格式字串 (例如 "$ #,#.00") 將數字格式化為貨幣值，您至少還需要有正確的貨幣符號、群組分隔符號和小數分隔符號的相關資訊。 在 .NET 中，這項額外的格式資訊是透過 [IFormatProvider](xref:System.IFormatProvider) 介面取得，而這個介面會當做傳遞至數值類型以及日期和時間類型的 `ToString` 方法之一個或多個多載的參數來提供。 [IFormatProvider](xref:System.IFormatProvider) 實作會在 .NET 中用來支援文化特性專屬格式。 下列範例示範以代表不同文化特性的三個 [IFormatProvider](xref:System.IFormatProvider) 物件進行格式化時，物件的字串表示會有什麼樣的變化。
 
@@ -730,7 +729,7 @@ End Module
 
 您也可以實作自己的格式提供者來取代上述任何一個類別。 不過，您實作的 `GetFormat` 方法如果必須提供格式設定資訊給 `ToString` 方法，則必須傳回上表所列之類型的物件。
 
-### <a name="culturesensitive-formatting-of-numeric-values"></a>區分文化特性的數值格式
+### <a name="culture-sensitive-formatting-of-numeric-values"></a>區分文化特性的數值格式
 
 根據預設，數值格式會區分文化特性。 如果當您呼叫格式化方法時未指定文化特性，則會使用目前執行緒文化特性的格式設定慣例。 下列範例將說明這種情形，其中目前執行緒文化特性會變更四次，然後呼叫 [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)) 方法。 在各案例中，結果字串都會反映目前文化特性的格式設定慣例。 這是因為 `ToString` 和 `ToString(String)` 方法會包裝對每個數值類型之 `ToString(String, IFormatProvider)` 方法的呼叫。 
 
@@ -856,7 +855,7 @@ End Module
 '       fr:    1 043,630
 ```
 
-### <a name="culturesensitive-formatting-of-date-and-time-values"></a>區分文化特性的日期與時間值格式
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>區分文化特性的日期與時間值格式
 
 根據預設，日期和時間值的格式區分文化特性。 如果當您呼叫格式化方法時未指定文化特性，則會使用目前執行緒文化特性的格式設定慣例。 下列範例將說明這種情形，其中目前執行緒文化特性會變更四次，然後呼叫 [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) 方法。 在各案例中，結果字串都會反映目前文化特性的格式設定慣例。 這是因為 [DateTime.ToString()](xref:System.DateTime.ToString)、[DateTime.ToString(String)](xref:System.DateTime.ToString(System.String))、[DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) 和 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 方法會包裝 [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 和 [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) 方法的呼叫。
 
@@ -1404,6 +1403,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

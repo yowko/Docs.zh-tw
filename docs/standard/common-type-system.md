@@ -3,16 +3,16 @@ title: "一般類型系統和 Common Language Specification"
 description: "一般類型系統和 Common Language Specification"
 keywords: .NET, .NET Core
 author: blackdwarf
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
 translationtype: Human Translation
 ms.sourcegitcommit: 9cf6022fc910bc5418c03c0fa81d9432d85be3b0
-ms.openlocfilehash: 4ea3ae3471636c4833597520628e903999f35c0a
+ms.openlocfilehash: f655c141a0c86da7905091c138b7ec4324cad07a
 
 ---
 
@@ -62,6 +62,6 @@ CLS 是 CTS 的子集。 除非 CLS 規則更嚴格，否則這表示 CTS 中的
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

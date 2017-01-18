@@ -4,16 +4,15 @@ description: "規則運算式中的錨點"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 96dff1be-3005-4ba5-af1b-323182a26085
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: b2162a90d5cb6f3472a9d323a3e46e137c9edf82
+ms.openlocfilehash: ef2a63115f1efbe2418c348a3379fe7dd2face86
 
 ---
 
@@ -835,7 +834,7 @@ End Module
 `\w*` | 比對零個或多個文字字元。
 `\b` | 結束字緣比對。
  
-## <a name="nonword-boundary-b"></a>非字邊界：\B
+## <a name="non-word-boundary-b"></a>非字邊界：\B
 
 **\B** 錨點指定比對不得發生在字邊界上。 這和 **\b** 錨點相反。
 
@@ -898,6 +897,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

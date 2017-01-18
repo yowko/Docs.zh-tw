@@ -4,16 +4,15 @@ description: "規則運算式的最佳做法"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 00c7228c5cb906f41df5e60a318721008ecf0bb7
+ms.openlocfilehash: d92549bf46f1c7a728bc6e2ac7cb183251115084
 
 ---
 
@@ -686,7 +685,7 @@ End Module
 **(?<**=_subexpression_**)** | 零寬度左合樣。 從目前的位置向左合樣，判斷 *subexpression* 是否符合輸入字串。
 **(?<!**_subexpression_**)** | 零寬度左不合樣。 從目前的位置向左合樣，判斷 *subexpression* 是否不符合輸入字串。
  
-## <a name="use-timeout-values"></a>使用逾時值
+## <a name="use-time-out-values"></a>使用逾時值
 
 如果您的規則運算式會處理幾乎符合規則運算式模式的輸入，它經常會依賴大量回溯，如此就會大幅影響其效能。 除了仔細考量使用回溯以及對幾乎符合的輸入進行規則運算式測試之外，務必要設定逾時值，以確保將大量回溯 (如發生的話) 的影響降至最低。
 
@@ -1106,6 +1105,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -3,16 +3,16 @@ title: "在 .NET 中處理和擲回例外狀況"
 description: "了解如何在 .NET 中使用例外狀況"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
 ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 0c73fb0a12092877ff5b54221f4a80693d1d1152
+ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 0c73fb0a12092877ff5b54221f4a80693d1d1152
 
 在 .NET 中，例外狀況是從 [System.Exception](xref:System.Exception) 類別繼承的物件。 從發生問題的程式碼區域擲回例外狀況。 例外狀況會向上傳遞堆疊，直到應用程式處理或程式終止它。
 
-## <a name="exceptions-vs-traditional-errorhandling-methods"></a>例外狀況與傳統錯誤處理方法的比較
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>例外狀況與傳統錯誤處理方法的比較
 
 傳統上，一種語言的錯誤處理模型不是依賴語言唯一偵測錯誤的方式與尋找處理常式，就是依賴作業系統所提供的錯誤處理機制。 .NET 實作例外狀況處理的方式具有下列優點：
 
@@ -247,7 +247,7 @@ public class ProcessFile
 }
 ```
 
-## <a name="how-to-create-userdefined-exceptions"></a>如何建立使用者定義的例外狀況
+## <a name="how-to-create-user-defined-exceptions"></a>如何建立使用者定義的例外狀況
 
 .NET 提供的例外狀況類別階層最終由基底類別 @System.Exception. 衍生而出。倘若沒有任何預先定義的例外狀況符合您的需求，您可以從 @System.Exception衍生建立您自己的例外狀況類別。
 
@@ -509,6 +509,6 @@ catch (Exception ex)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

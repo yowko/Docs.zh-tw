@@ -3,16 +3,16 @@ title: "如何：具現化 TimeZoneInfo 物件"
 description: "如何具現化 TimeZoneInfo 物件"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bff137e5-d550-44c3-b460-b3f2dabd4035
 translationtype: Human Translation
 ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 5af479c40bb5db3213f45c0472dbdea99bbd5c21
+ms.openlocfilehash: 1c619cf6bd150e009367b43d1d83fa1713ec2690
 
 ---
 
@@ -111,6 +111,6 @@ End
 [尋找本機系統上定義的時區](finding-the-time-zones-on-local-system.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

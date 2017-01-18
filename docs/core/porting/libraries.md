@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 translationtype: Human Translation
 ms.sourcegitcommit: 46061efa8e33c6a73befa5181eb33b8deb2fa637
-ms.openlocfilehash: 051c8d46abdafe722eec77a440e384efbae0e70a
+ms.openlocfilehash: 503cf3628ee317f701f467bddc4bcb5998b82af4
 
 ---
 
-# <a name="porting-to-net-core-libraries"></a>移轉到 .NET Core - 程式庫
+# <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
 
 使用 .NET Core 1.0 版本時，有機會移轉現有的程式庫程式碼，讓它可以跨平台執行。  本文討論 .NET 標準程式庫、無法使用的技術、如何說明 .NET Core 1.0 上提供的較少 API、如何使用 .NET Core SDK Preview 2 隨附的工具，以及移轉程式碼的建議作法。
 
@@ -241,7 +241,7 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 藉由建立可攜式類別庫 (PCL)，並在 [專案組態] 對話方塊中選取 [.NET Core]，您可以在 Visual Studio 中設定使用傳統專案系統的 .NET Core 為目標。  然後，您必須在 .NET Standard 上將用作基礎的專案重新設定為目標︰
 
 1. 以滑鼠右鍵按一下 Visual Studio 中的專案檔案，然後選取 [內容]。
-2. 在 [組建] 下，選取 [Convert to .NET Standard] (轉換為 .NET Standard)。
+2. 在 [組建] 下，選取 「Convert to .NET Standard」 (轉換為 .NET Standard)。
 
 如有進階的專案系統需求，這應該就是您的選擇。  請注意，如果想要透過產生特定平台組件來設定多目標，像使用 `xproj` 專案系統，您需要建立「誘導轉向」PCL，如 [How to Make Portable Class Libraries Work for You](https://blogs.msdn.microsoft.com/dsplaisted/2012/08/27/how-to-make-portable-class-libraries-work-for-you/) (如何讓可攜式類別庫為您工作) 中所述。
 
@@ -354,6 +354,6 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

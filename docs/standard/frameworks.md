@@ -1,22 +1,22 @@
 ---
-title: "架構"
-description: "架構"
+title: "架構與目標"
+description: "撰寫 .NET 程式碼時，請說明架構目標的概念。"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 09/19/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 translationtype: Human Translation
-ms.sourcegitcommit: 246d381246e78a27b7097d6b8126f421b52014de
-ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
+ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
+ms.openlocfilehash: 82ba6f4abe200dc48158eac1ad3e3609feeda2c9
 
 ---
 
-# <a name="frameworks"></a>架構
+# <a name="frameworks-and-targets"></a>架構與目標
 
 .NET 生態系統有一個架構概念。 架構定義您可以用來鎖定特定平台的 API。 .NET Framework 4.6 即為其中一個平台。 這些架構會在 Visual Studio 以及其他 IDE 和編輯器中使用，以提供您正確的 API 集合。 它們也可供 NuGet 使用 (用於 NuGet 套件的生產和使用)，以確保您產生及使用的是適用於目標架構的套件 (及基礎資產)。 您可以將架構想成是 .NET 生態系統的主要貨幣。 有了正確的概念後，可協助您及您的客戶在執行時避免收到 @System.MissingMethodException 及其類似的例外狀況。
 
@@ -61,6 +61,6 @@ ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

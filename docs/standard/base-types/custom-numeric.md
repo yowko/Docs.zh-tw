@@ -4,16 +4,15 @@ description: "自訂數值格式字串"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b1c16ee-956f-4e9c-8502-c3dd6598c51d
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: e36c0117f6f011589299fa59a8abd139870c2257
+ms.openlocfilehash: 2d5a051efd074d02f2a5e9ff03c11e1d9a202d7f
 
 ---
 
@@ -598,11 +597,11 @@ Console.WriteLine(String.Format("{0:" + fmt3 + "}", zeroValue))
 
 ## <a name="notes"></a>備註
 
-### <a name="floatingpoint-infinities-and-nan"></a>無限浮點數和 NaN
+### <a name="floating-point-infinities-and-nan"></a>無限浮點數和 NaN
 
 不論格式字串為何，如果 [Single](xref:System.Single) 或 [Double](xref:System.Double) 浮點類型的值為正無限大、負無限大或不是數字 (NaN)，則格式化後的字串會分別是 [PositiveInfinitySymbol](xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol)、[NegativeInfinitySymbol](xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol) 或 [NaNSymbol](xref:System.Globalization.NumberFormatInfo.NaNSymbol) 屬性的值 (這些屬性由目前適用的 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 物件所指定)。 
 
-### <a name="rounding-and-fixedpoint-format-strings"></a>四捨五入和定點格式字串
+### <a name="rounding-and-fixed-point-format-strings"></a>四捨五入和定點格式字串
 
 如果是定點格式字串 (即不含科學標記法格式字元的格式字串)，則數字會四捨五入成與小數點右邊之數字預留位置一樣多的小數位數。 如果格式字串不包含小數點，數值四捨五入至最接近的整數。 如果數值有比小數點左邊的數字預留位置還要多的位數，額外位數會緊接第一個數字預留位置之前複製到輸出字串。
 
@@ -651,6 +650,6 @@ Console.WriteLine(value2)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -3,16 +3,16 @@ title: Visual Studio Tools for Docker
 description: "使用 Visual Studio Tools for Docker"
 keywords: ".NET、.NET Core、Docker、ASP.NET Core、Visual Studio 2015"
 author: spboyer
-manager: wpickett
+ms.author: shboyer
 ms.date: 09/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 translationtype: Human Translation
 ms.sourcegitcommit: 03193513706967a46f74bccdba08a56946dd67df
-ms.openlocfilehash: f2792154a2f231fffc8e6f79c32b96e05edc71fa
+ms.openlocfilehash: 274402bbd254e97d88771675daf07995983914aa
 
 ---
 
@@ -38,15 +38,15 @@ ms.openlocfilehash: f2792154a2f231fffc8e6f79c32b96e05edc71fa
 
 ## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>建立 ASP.NET Web 應用程式並新增 Docker 支援
 
-使用 Visual Studio 建立新的 ASP.NET Core Web 應用程式。 載入應用程式時，從 [專案] 功能表選取 [Add Docker Support] (新增 Docker 支援)，或在方案總管中的專案上按一下滑鼠右鍵，選取 [新增] > [Docker Support] (Docker 支援)。
+使用 Visual Studio 建立新的 ASP.NET Core Web 應用程式。 載入應用程式時，從 [專案] 功能表選取 「Add Docker Support」 (新增 Docker 支援)，或在方案總管中的專案上按一下滑鼠右鍵，選取 [新增] > [Docker Support] 「Docker 支援」。
 
 [專案] 功能表
 
-![[專案] [Add Docker Support] (新增 Docker 支援)](./media/visual-studio-tools-for-docker/project-add-docker-support.png)
+![[專案] 「Add Docker Support」 (新增 Docker 支援)](./media/visual-studio-tools-for-docker/project-add-docker-support.png)
 
 [專案] 內容功能表
 
-![以滑鼠右鍵按一下 [Add Docker Support] (新增 Docker 支援)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+![以滑鼠右鍵按一下 「Add Docker Support」 (新增 Docker 支援)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
 
 下列檔案即會加入專案中。
 
@@ -126,6 +126,6 @@ microsoft/aspnetcore       1.0.1               189ad4312ce7        5 days ago   
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

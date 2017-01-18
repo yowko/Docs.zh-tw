@@ -3,16 +3,16 @@ title: ".NET Core 中的數值"
 description: ".NET Core 中的數值"
 keywords: .NET, .NET Core
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
 ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
+ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 
 ---
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
      
 請注意不帶正負號的整數類資料類型並不符合 CLS 標準。 如需詳細資訊，請參閱 [.NET 一般類型系統和 Common Language Specification](common-type-system.md)。
 
-## <a name="floatingpoint-types"></a>浮點類型
+## <a name="floating-point-types"></a>浮點類型
 
 .NET Core 包含三個基本浮點類型，如下表所列。 
 
@@ -61,7 +61,7 @@ ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
 
 [System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex) 類型代表複數，也就是具有實數和虛數的數字。 它支援一組標準的算術、比較、等號比較、明確轉換和隱含轉換的運算子，以及數學、代數和三角函數方法。 
 
-## <a name="simdenabled-vector-types"></a>啟用 SIMD 的向量類型
+## <a name="simd-enabled-vector-types"></a>啟用 SIMD 的向量類型
 
 `System.Numerics` 命名空間包含一組針對 .NET Core 的向量類型，該類型已啟用 SIMD 。 SIMD 允許在硬體層級上平行處理某些作業，因此會大幅提升對向量執行計算的數學、科學和圖形應用程式效能。 
 
@@ -77,6 +77,6 @@ ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

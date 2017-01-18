@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
 ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
+ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 
 ---
 
@@ -33,13 +33,13 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
   * 不允許您在相同的方案檔中，跨不同專案類型共用 .NET Core 程式庫。 若要支援此功能，[建立可攜式類別庫](#support-pcl)是較好的選擇。
   * 不允許 MSBuild 目標和工作支援的專案組建或負載修改。 若要支援此功能，[建立可攜式類別庫](#support-pcl)是較好的選擇。
 
-* [**將現有專案與新的 .NET Core 專案分開**][option-xproj-folder]
+* <a name="support-vs"></a>[**將現有專案與新的 .NET Core 專案分開**][option-xproj-folder]
   
   *適用於︰*
   * 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2015 的開發人員/參與者。
   * 減少現有專案中製造新 bug 的可能性，因為這些專案不需要任何程式碼變換。
 
-* [**保留現有的專案並建立以 .NET Core 為目標的可攜式類別程式庫 (PCLs)**][option-pcl]
+* <a name="support-pcl"></a>[**保留現有的專案並建立以 .NET Core 為目標的可攜式類別庫 (PCL)**][option-pcl]
 
   *適用於︰*
   * 參考桌面的 .NET Core 程式庫及/或相同方案中以完整 .NET Framework 為目標的 Web 專案。
@@ -58,7 +58,7 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 
 有幾種不同的方式可以加入此儲存機制的 .NET Core 支援，視現有專案的條件約束和複雜性而定，後文會說明。
 
-## <a name="replace-existing-projects-with-a-multitargeted-net-core-project-xproj"></a>使用多目標 .NET Core 專案 (xproj) 取代現有的專案
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>使用多目標 .NET Core 專案 (xproj) 取代現有的專案
 
 儲存機制可以重新組織，以便移除任何現有的 `*.csproj` 檔案，並建立以多個架構為目標的單一 `*.xproj` 檔案。  這是很不錯的選擇，因為單一專案能夠編譯不同的架構。  它也有能力處理不同的編譯選項、相依性等等。 依目標架構。
 
@@ -83,7 +83,7 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 *  將 `project.json` 重新命名為 `{project-name}.project.json`
     * 嘗試還原相同目錄中的程式庫封裝時，這可避免 Visual Studio 中的潛在衝突。 如需詳細資訊，請參閱 [NuGet 常見問題集](https://docs.nuget.org/consume/nuget-faq#working-with-packages)的「_我在同一個資料夾中有多個專案，我該如何為每個專案使用不同的 packages.config 或 project.json 檔案的？_」
     *  **替代**︰在另一個資料夾中建立 PCL，並參考原始的原始程式碼避免這個問題。  將 PCL 放在另一個資料夾中的額外好處，是沒有 Visual Studio 2015 的使用者仍可使用較舊的專案，不必載入新的方案。
-*  若要在建立 PCL 之後以 .NET Standard 為目標，請在 Visual Studio 中開啟 [Project's Properties] (專案的內容)。 在 [目標] 區段中，按一下 [以 .NET 平台標準為目標] 連結。  重複相同的步驟可以反轉這項變更。
+*  若要在建立 PCL 之後以 .NET Standard 為目標，請在 Visual Studio 中開啟 [Project's Properties]\(專案的內容)。 在 [目標] 區段中，按一下 [以 .NET 平台標準為目標] 連結。  重複相同的步驟可以反轉這項變更。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
 
@@ -125,6 +125,6 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
