@@ -18,7 +18,7 @@
     }
   ],
   "notification_subscribers": [],
-  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/core-docs",
+  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.zh-tw",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
@@ -40,11 +40,7 @@
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/dotnet/docs",
-      "branch": "live",
-      "branch_mapping": {
-        "live": "live",
-        "master": "master"
-      }
+      "branch": "live"
     }
   ],
   "need_generate_pdf_url_template": false,
