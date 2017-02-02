@@ -10,8 +10,8 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 17023a076df7b99a26a20ddc7b78984dd170d001
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 17023a076df7b99a26a20ddc7b78984dd170d001
 
 您可以在 [F# 基礎網站](http://fsharp.org/learn.html)上找到學習 F# 程式設計語言的絕佳資源。 
 
-您可以在 [ASP.NET 網站](https://docs.asp.net/en/latest/tutorials/index.html)上找到學習 ASP.NET Core 的絕佳資源。
+您可以在 [ASP.NET 網站](https://docs.microsoft.com/aspnet/core/tutorials/)上找到學習 ASP.NET Core 的絕佳資源。
 
 此外，如果您對使用線上資源探索 C# 有興趣，請嘗試這些[互動式教學課程](http://go.microsoft.com/fwlink/?LinkId=817234)。
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: 17023a076df7b99a26a20ddc7b78984dd170d001
 此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 您將建立之程式碼的完成版本位於 [GitHub 上的 core-docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)。
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

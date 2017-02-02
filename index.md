@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 title: ".NET 文件"
 translationtype: Human Translation
-ms.sourcegitcommit: c8b9e166a49c86dcabfa89887db1dce3a8e45f4f
-ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 44b21665593717023aef7a85fe88a60d07519327
 
 ---
 <div id="main" class="v2">
@@ -86,7 +86,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/welcome">什麼是 .NET？</a></h3>
-                                                <p><a href="https://www.microsoft.com/net">開始使用</a></p>
+                                                <p><a href="/dotnet/articles/standard/getting-started">開始使用</a></p>
                                                 <p><a href="/dotnet/articles/standard/tour">.NET 教學課程</a></p>
                                                 <p><a href="/dotnet/articles/standard/components">.NET 架構概念</a></p>
                                             </div>
@@ -108,7 +108,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 <p><a href="/dotnet/articles/core/getting-started">開始使用</a></p>
                                                 <p><a href="/dotnet/articles/core/tutorials">教學課程</a></p>
                                                 <p><a href="/dotnet/articles/core/porting">從 .NET Framework 移植</a></p>
-                                                <p><a href="https://docs.asp.net/en/latest/getting-started.html">ASP.NET Core</a></p>
+                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -166,7 +166,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/csharp">C# 指南</a></h3>
                                                 <p><a href="/dotnet/articles/csharp/getting-started">開始使用</a></p>
-                                                <p><a href="/dotnet/articles/csharp/tour-of-csharp">C 的教學課程#</a></p>
+                                                <p><a href="/dotnet/articles/csharp/tour-of-csharp">C# 的教學課程</a></p>
                                                 <p><a href="/dotnet/articles/csharp/language-reference">C# 語言參考</a></p>
                                             </div>
                                         </div>
@@ -185,7 +185,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/fsharp">F# 指南</a></h3>
                                                 <p><a href="/dotnet/articles/fsharp/tutorials/getting-started">開始使用</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/tour">F 的教學課程#</a></p>
+                                                <p><a href="/dotnet/articles/fsharp/tour">F# 的教學課程</a></p>
                                                 <p><a href="/dotnet/articles/fsharp/language-reference">F# 語言參考</a></p>
                                             </div>
                                         </div>
