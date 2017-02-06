@@ -1,23 +1,24 @@
 ---
-title: "使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案"
+title: "使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案 | Microsoft Docs"
 description: "使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案"
-keywords: .NET, .NET Core
+keywords: ".NET、.NET Core"
 author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
-ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
+ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 9e65979d2f41e39e89109c2c5480acaebbef757f
+ms.sourcegitcommit: 82dfcb532ce6c14e93c5baedb61b619cc18e69f1
+ms.openlocfilehash: 02c48cd7e2fc551b82bb7afa53a3dd228e02dca1
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-tooling-preview-4"></a>使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案 (工具 Preview 4)
 
-[Bertrand Le Roy](https://github.com/bleroy) 和 [Phillip Carter](https://github.com/cartermp) 撰
+> [!WARNING]
+> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱[使用 Visual Studio 2015 在 Windows 上開始使用 .NET Core](../../tutorials/using-on-windows.md) 主題。
 
 Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用程式。 本文件中的程序說明建置一般 .NET Core 解決方案所需的步驟，其中包含可重複使用的程式庫、測試，以及使用協力廠商程式庫。 
 
@@ -66,7 +67,7 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 ### <a name="writing-the-console-app"></a>撰寫主控台應用程式
 
-1. 在 [方案總管] 中，開啟方案的操作功能表，並新增一個新的 [主控台應用程式 (.NET Core)] 專案。 將它命名為 "App"，並將位置設為 `Golden\src`。
+1. 在 [方案總管] 中，開啟方案的操作功能表，並新增一個新的 [主控台應用程式 (.NET Core)] 專案。 將它命名為「應用程式」。
 
 2. 在 [應用程式] 專案中，開啟 [相依性] 節點的操作功能表，然後依序選擇 [新增] 和 [參考]。 
 
@@ -74,7 +75,7 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 6. 開啟 **App** 節點的操作功能表，然後選擇 [設定為啟始專案]。 這確保在按下 F5 或 CTRL+F5 時，將會啟動主控台應用程式。
 
-7. 開啟 `Program.cs` 檔案、將 `using Library;` 指示詞新增至檔案的頂端，然後將 `Console.WriteLine($"The answer is {new Thing().Get(42)}");` 新增至 `Main` 方法。
+7. 開啟 `Program.cs` 檔案、將 `using Library;` 指示詞新增至檔案的頂端，然後將 `Console.WriteLine($"The answer is {new Thing().Get(42)}.");` 新增至 `Main` 方法。
 
 8. 在您剛才新增的行之後設定中斷點。
 
@@ -84,6 +85,6 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,22 +1,25 @@
 ---
-title: ".NET Core 工具遙測"
+title: ".NET Core 工具遙測 | Microsoft Docs"
 description: ".NET 核心"
-keywords: .NET, .NET Core
+keywords: ".NET、.NET Core"
 author: richlander
 ms.author: mairaw
-ms.date: 07/06/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: f2b312bb-f80b-4b0d-9101-93908f06a6fa
+ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 127c3f175754f91170d130ca98c17ef3cb68fd14
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 6d3750b0b8b452281c1733455e0f4ee4fd130386
 
 ---
 
-# <a name="net-core-tools-telemetry"></a>.NET Core 工具遙測
+# <a name="net-core-tools-telemetry-tooling-preview-4"></a>.NET Core 工具遙測 (工具 Preview 4)
+
+> [!WARNING]
+> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [.NET Core 工具遙測](../../tools/telemetry.md)主題。
 
 .NET Core 工具包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/pull/2145)。 .NET 小組必須了解如何使用這些工具，讓我們可以進行改善。
 
@@ -105,6 +108,6 @@ a minute to complete and will only happen once.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

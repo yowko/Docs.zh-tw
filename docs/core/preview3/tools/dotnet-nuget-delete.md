@@ -1,5 +1,5 @@
 ---
-title: "dotnet-nuget-delete 命令 | .NET Core SDK"
+title: "dotnet-nuget-delete 命令 | Microsoft Docs"
 description: "dotnet-nuget-delete 命令會從伺服器刪除或取消列出套件。"
 keywords: "dotnet-nuget-delete, CLI, CLI 命令, .NET Core"
 author: karann-msft
@@ -11,8 +11,8 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 787b1427b1064943570cbc361042ab2f20d11088
 
 ---
 
@@ -62,7 +62,7 @@ ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
 `--config-file <FILE>`
 
 專用於此命令的 NuGet 組態檔，它會取代使用標準組態檔探索和鏈結程序找到的其他組態檔。 這個路徑可為絕對路徑或相對路徑。
-如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)。 
+如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)。
 
 ## <a name="examples"></a>範例
 
@@ -84,6 +84,6 @@ ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

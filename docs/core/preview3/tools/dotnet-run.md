@@ -1,5 +1,5 @@
 ---
-title: "dotnet-run 命令 | .NET Core SDK"
+title: "dotnet-run 命令 | Microsoft Docs"
 description: "dotnet-run 命令提供方便的選項，以透過原始程式碼來執行應用程式。"
 keywords: "dotnet-run, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
+ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6f95125640e7341426c3a019771a6b8595d10e73
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 066fbcd9f342233fb12599a84211675ba5b95860
 
 ---
 
-#<a name="dotnet-run"></a>dotnet-run
+#<a name="dotnet-run-tooling-preview-4"></a>dotnet-run (工具 Preview 4)
+
+> [!WARNING]
+> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-run](../../tools/dotnet-run.md) 主題。
 
 ## <a name="name"></a>名稱 
 
-dotnet-run --「就地」執行原始程式碼，而不需要有任何明確的編譯或啟動命令
+dotnet-run --「就地」執行原始程式碼，而不需要有任何明確的編譯或啟動命令。
 
 ## <a name="synopsis"></a>概要
 
@@ -77,6 +80,6 @@ dotnet-run --「就地」執行原始程式碼，而不需要有任何明確的�
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,22 +1,25 @@
 ---
-title: "dotnet-build 命令 | .NET Core SDK"
+title: "dotnet-build 命令 | Microsoft Docs"
 description: "dotnet-build 命令會建置專案和其所有相依性。"
 keywords: "dotnet-build, CLI, CLI 命令, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04c4d77b31bf4a1bdb425d837c490440e7312e57
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
 
 ---
 
-#<a name="dotnet-build"></a>dotnet-build
+#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build (工具 Preview 4)
+
+> [!WARNING]
+> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-build](../../tools/dotnet-build.md) 主題。
 
 ## <a name="name"></a>名稱 
 dotnet-build -- 建置專案和其所有相依性 
@@ -31,7 +34,7 @@ dotnet-build -- 建置專案和其所有相依性
 ## <a name="description"></a>描述
 
 `dotnet build` 命令會將來源專案中的多個來源檔案和其相依性建置成二進位檔。 產生的二進位檔預設為中繼語言 (IL)，並且具有 DLL 擴充功能。 
-`dotnet build` 也會放置 `\*.deps` 檔案，這個檔案概述主機執行應用程式所需的作業。  
+`dotnet build` 也會放置 `*.deps` 檔案，這個檔案概述主機執行應用程式所需的作業。  
 
 建置會要求資產檔案 (列出應用程式所有相依性的檔案) 確實存在，這表示您必須先執行 [`dotnet restore`](dotnet-restore.md)，才能建置程式碼。
 
@@ -100,6 +103,6 @@ dotnet-build -- 建置專案和其所有相依性
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

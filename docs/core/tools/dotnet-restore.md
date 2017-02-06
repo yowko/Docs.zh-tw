@@ -1,26 +1,29 @@
 ---
-title: "dotnet-restore 命令 | .NET Core SDK"
+title: "dotnet-restore 命令 | Microsoft Docs"
 description: "了解如何使用 dotnet restore 命令來還原相依性和專案特有工具"
 keywords: "dotnet-restore, CLI, CLI 命令, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 3c6c651aebfac0c27f340021d7779d37aa8bfe38
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 46349d28388c1a04c0cb4b5222ed0d0a868e2762
 
 ---
 
-#<a name="dotnetrestore"></a>dotnet-restore
+#<a name="dotnet-restore"></a>dotnet-restore
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 Visual Studio 2017 RC - .NET Core 工具 Preview 4 版本，請參閱 [dotnet-restore 命令 (工具 Preview 4)](../preview3/tools/dotnet-restore.md) 主題。
 
-`dotnet-restore` - 還原專案的相依性和工具
+## <a name="name"></a>名稱
+
+`dotnet-restore` - 還原專案的相依性和工具。
 
 ## <a name="synopsis"></a>概要
 
@@ -111,6 +114,6 @@ ms.openlocfilehash: 3c6c651aebfac0c27f340021d7779d37aa8bfe38
 `dotnet restore --verbosity Error`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: 54da8aebd64e86c064214074bc261f72c3b0aedc
-ms.openlocfilehash: bf7bf944ebbf3c53ee6206f86e1a168111b54378
+ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
+ms.openlocfilehash: 446ada6d325a81f9c0078e4771866d99af341aed
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>在 Windows 上開始使用 .NET Core, 使用 Visual Studio 2015
 
-[Bertrand Le Roy](https://github.com/bleroy) 和 [Phillip Carter](https://github.com/cartermp) 撰
+> [!WARNING]
+> 此主題適用於 Visual Studio 2015 - .NET Core 工具 Preview 2。 Visual Studio 2017 RC - .NET Core 工具 Preview 4 版本，請參閱[使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core](../preview3/tutorials/using-on-windows-vs-2017.md) 主題。
 
 Visual Studio 2015 提供功能完整的開發環境來開發 .NET Core 應用程式。 這份文件中的程序說明使用 Visual Studio 建立許多一般 .NET Core 方案，或包含 .NET Core 元件之方案的必要步驟。 案例包括測試以及使用未明確針對最新版本 .NET Core 建置的協力廠商程式庫。 
 
@@ -275,6 +276,6 @@ Visual Studio 2015 提供功能完整的開發環境來開發 .NET Core 應用�
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
-title: "使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core (SDK Preview 3)"
+title: "使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core (SDK Preview 4) | Microsoft Docs"
 description: "使用 .NET Core 命令列介面 (CLI) 在 Windows、Linux 或 macOS 上開始使用 .NET Core"
-keywords: .NET, .NET Core
+keywords: ".NET、.NET Core"
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: ab71aab99505f211fe4adc86957eda4707761f1c
-ms.openlocfilehash: 01b17021e79bcdb2dc69f97b709f4aa63dbab9aa
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: e84012937be6ede9170dde7ff88575d2f4fa1052
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-sdk-preview-3"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core (SDK Preview 3)
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-tooling-preview-4"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core (工具 Preview 4)
+
+> [!WARNING]
+> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](../../tutorials/using-with-xplat-cli.md) 主題。
 
 此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。  它會從最基本的主控台應用程式開始，最終會跨越多個專案，包括測試。 您將逐步新增這些功能，這些功能會建置在您已熟悉並建置的項目之上。
 
@@ -24,7 +27,7 @@ ms.openlocfilehash: 01b17021e79bcdb2dc69f97b709f4aa63dbab9aa
 
 ## <a name="prerequisites"></a>必要條件
 
-開始之前，請確定您有[最新的 .NET Core CLI 工具 Preview 3 或更新版本](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md)。  您也需要文字編輯器。
+開始之前，請確定您有[最新的 .NET Core CLI 工具 Preview 4 或更新版本](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md)。  您也需要文字編輯器。
 
 ## <a name="hello-console-app"></a>嗨，主控台應用程式！
 
@@ -314,10 +317,10 @@ $ dotnet run
  
 希望本指南已協助您了解如何建立 .NET Core 主控台應用程式，從基礎一直到具有單元測試的多專案系統。  下一個步驟是建立您自己的出色主控台應用程式！
  
-如果您有興趣了解主控台應用程式的更進階範例，請參閱下一個教學課程︰[使用 .NET Core 命令列組織和測試專案 (SDK Preview 3)](using-with-xplat-cli-msbuild-folders.md)。
+如果您有興趣了解主控台應用程式的更進階範例，請參閱下一個教學課程︰[使用 .NET Core 命令列組織和測試專案 (SDK Preview 4)](using-with-xplat-cli-msbuild-folders.md)。
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

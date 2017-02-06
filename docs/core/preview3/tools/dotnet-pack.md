@@ -1,5 +1,5 @@
 ---
-title: "dotnet-pack 命令 | .NET Core SDK"
+title: "dotnet-pack 命令 | Microsoft Docs"
 description: "dotnet-pack 命令會建立 .NET Core 專案的 NuGet 套件。"
 keywords: "dotnet-pack, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
+ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 03fab8ad488f4001929524298e52cafeffc45e7f
 
 ---
 
-#<a name="dotnet-pack"></a>dotnet-pack
+#<a name="dotnet-pack-tooling-preview-4"></a>dotnet-pack (工具 Preview 4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-pack](../../tools/dotnet-pack.md) 主題。
 
-`dotnet-pack`- 將程式碼封裝到 NuGet 套件
+## <a name="name"></a>名稱
+
+`dotnet-pack` - 將程式碼封裝到 NuGet 套件。
 
 ## <a name="synopsis"></a>概要
 
@@ -34,7 +37,7 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 `dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件。 如果有 `--include-symbols` 選項，將會建立另一個包含偵錯符號的套件。 
 
-正在封裝之專案的 NuGet 相依性會新增至 nuspec 檔案，因此可以在安裝套件時進行解析。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則一個專案需要有一個套件。
+正在封裝之專案的 NuGet 相依性會新增至 `nuspec` 檔案，因此可以在安裝套件時進行解析。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則一個專案需要有一個套件。
 
 `dotnet pack` 預設會先建置專案。 如果您想要避免這種情況，請傳遞 `--no-build` 選項。 例如，這可能適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。 
 
@@ -58,7 +61,7 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 `--include-source`
 
-將原始程式檔納入 NuGet 套件。 原始程式檔包含在 nupkg 中的 `src` 資料夾。 
+將原始程式檔納入 NuGet 套件。 原始程式檔包含在 `nupkg` 中的 `src` 資料夾。 
 
 `--include-symbols`
 
@@ -95,7 +98,6 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 `dotnet pack --version-suffix "ci-1234"`
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

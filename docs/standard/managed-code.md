@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 translationtype: Human Translation
-ms.sourcegitcommit: 0013cf5604bfd1e8a16e5ca15577ac81fce49612
-ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
+ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
+ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
 
 ---
 
@@ -26,11 +26,11 @@ ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
 
 Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual Basic、F# 等)，並可在 .NET 平台上執行。 當您使用這些語言各自的編譯器來編譯以這些語言撰寫的程式碼時，您不會取得機器碼。 您會取得稍後可供執行階段編譯及執行的**中繼語言**碼。 這項規則的唯一例外是 C++，因為它也會產生在 Windows 上執行的原生、Unmanaged 二進位檔。
 
-## <a name="intermediate-language-execution"></a>中繼語言和執行
+## <a name="intermediate-language--execution"></a>中繼語言和執行
 
 什麼是「中繼語言」(簡稱 IL)？ 它是以高階 .NET 語言撰寫之程式碼的編譯結果。 當您編譯以其中一種語言撰寫的程式碼之後，您會取得由 IL 所組成的二進位檔。 請務必注意，IL 與在執行階段上執行的任何特定語言都無關；它甚至有個別的規格，如果您想要，可以閱讀此規格。
 
-當您從高階程式碼產生 IL 之後，您可能想要執行它。 此時 CLR 會接管，並開始 **Just-In-Time** 編譯 (或 **JIT-ing**) 的程序，以將您的程式碼從 IL 編譯成可實際在 CPU 上執行的機器碼。 如此一來，CLR 就會知道您的程式碼的實際功能，並可有效地進行_「管理」_。
+當您從高階程式碼產生 IL 之後，您可能想要執行它。 此時 CLR 會接管，並開始 **Just-In-Time** 編譯 (或 **JIT-ing**) 的程序，以將您的程式碼從 IL 編譯成可實際在 CPU 上執行的機器碼。 如此一來，CLR 就會知道您程式碼的實際功能，並可有效地進行「管理」。
 
 中繼語言有時也稱為通用中間語言 (CIL) 或 Microsoft Intermediate Language (MSIL)。
 
@@ -48,6 +48,6 @@ Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
