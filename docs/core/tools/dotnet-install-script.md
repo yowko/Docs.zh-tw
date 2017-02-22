@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 4ef9e076e3afb4cf5c96c627dc102da1ff2c8ce0
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
 > [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 Visual Studio 2017 RC - .NET Core 工具 Preview 4 版本，請參閱 [dotnet-install 指令碼參考 (工具 Preview 4)](../preview3/tools/dotnet-install-script.md) 主題。
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-install 指令碼參考 (.NET Core 工具 RC4)](../preview3/tools/dotnet-install-script.md) 主題。
 
 ## <a name="name"></a>名稱
 `dotnet-install.ps1` | `dotnet-install.sh` - 用來安裝命令列介面 (CLI) 工具和共用執行階段的指令碼。
@@ -129,6 +129,6 @@ macOS/Linux：
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

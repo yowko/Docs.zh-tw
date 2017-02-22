@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f9fb64a90bdbd2096d4752279b1670fad8e8703f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1cf1611ab83874ad44855521d21040d102206338
 
 ---
 
 #<a name="dotnet-publish"></a>dotnet-publish
 
 > [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 Visual Studio 2017 RC - .NET Core 工具 Preview 4 版本，請參閱 [dotnet-publish 命令 (工具 Preview 4)](../preview3/tools/dotnet-publish.md) 主題。
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-publish (.NET Core 工具 RC4)](../preview3/tools/dotnet-publish.md) 主題。
 
 ## <a name="name"></a>名稱
 
@@ -105,6 +105,6 @@ ms.openlocfilehash: f9fb64a90bdbd2096d4752279b1670fad8e8703f
 * [執行階段識別項 (RID) 目錄](../rid-catalog.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

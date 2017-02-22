@@ -1,23 +1,24 @@
 ---
-title: "使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core"
+title: "使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core | Microsoft Docs"
 description: "使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core"
-keywords: .NET, .NET Core
+keywords: ".NET、.NET Core"
 author: bleroy
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 01/18/2016
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
-ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
+ms.assetid: 613c65d0-f773-41b8-ba0e-83f6a82a0b30
 translationtype: Human Translation
-ms.sourcegitcommit: 71eab6216e116b99927dfeaa8ce3cf70bcc08a5e
-ms.openlocfilehash: 4437f44523bcc4e8517de5b6be42a63439f817d7
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: cc2c2853bc31e161d1fe0de4edc71d15281c6d24
 
 ---
 
-# <a name="getting-started-with-net-core-on-windows-using-visual-studio-2017"></a>使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core
+# <a name="getting-started-with-net-core-on-windows-using-visual-studio-2017-net-core-tools-rc4"></a>使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core (.NET Core 工具 RC4)
 
-[Bertrand Le Roy](https://github.com/bleroy) 和 [Phillip Carter](https://github.com/cartermp) 撰
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 RC4。 Visual Studio 2015 - .NET Core 工具 Preview 2 版本，請參閱[使用 Visual Studio 2015 在 Windows 上開始使用 .NET Core](../../tutorials/using-on-windows.md) 主題。
 
 Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用程式。 本文件中的程序說明使用 Visual Studio 和 .NET Core 來建置非常簡單的主控台應用程式所需的步驟。
 
@@ -31,7 +32,7 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 1. 開啟 Visual Studio 並在 [檔案] 功能表上，選擇 [新增]、[專案]。
 
-2. 在 [新增專案] 對話方塊的 [範本] 清單中，展開 [Visual C#] 節點，然後選擇 [.NET Core]。 您應該會看到三到四個專案範本，分別適用於**主控台應用程式 (.NET Core)**、**單元測試專案 (.NET Core)**、**類別庫 (.NET Core)**，以及 **ASP.NET Core Web 應用程式 (.NET Core)**。 選擇 [主控台應用程式 (.NET Core)]、輸入專案的名稱、挑選一個位置，然後按一下 [確定]。
+2. 在 [新增專案] 對話方塊的 [範本] 清單中，展開 [Visual C#] 節點，然後選擇 [.NET Core]。 您應該會看到四個專案範本，分別適用於**主控台應用程式 (.NET Core)**、**類別庫 (.NET Standard)**、**xUnit 測試專案 (.NET Core)**、**類別庫 (.NET Core)**，以及 **ASP.NET Core Web 應用程式 (.NET Core)**。 選擇 [主控台應用程式 (.NET Core)]、輸入專案的名稱、挑選一個位置，然後按一下 [確定]。
 
   ![新的專案︰主控台應用程式](media/new-project-console-app.png)
 
@@ -43,12 +44,12 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 祝各位寫程式愉快！
 
-## <a name="what-to-do-next"></a>後續步驟
+## <a name="next-steps"></a>後續步驟
 
 在此簡單的介紹之後，您可能會猜想應如何重複使用程式庫和測試來建置更進階的解決方案。 [使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案](using-on-windows-vs-2017-full-solution.md)主題會示範如何執行此動作。
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

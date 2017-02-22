@@ -11,8 +11,8 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 8d83b3f013ecdc1fbf92598a81dfe3a7a2d17054
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 57ae01419c6f7a75970816e1245094c38c5247fa
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 8d83b3f013ecdc1fbf92598a81dfe3a7a2d17054
 [!INCLUDE[preview-warning](../../../includes/warning.md)]
 
 ## <a name="name"></a>名稱 
-dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 4 .NET Core 專案
+dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 RC4 .NET Core 專案
 
 ## <a name="synopsis"></a>概要
 
@@ -31,8 +31,8 @@ dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 4 .NET Core �
     [--skip-backup]
     [<arguments>]`
 
-## <a name="description"></a>描述
-`dotnet migrate` 命令會將有效的 Preview 2 `project.json` 專案移轉至有效的 Preview 4 `csproj` 專案。 根據預設，命令將會移轉根專案和根專案包含的任何專案參考。 此行為可使用 `--skip-project-references` 選項在執行階段停用。 
+## <a name="description"></a>說明
+`dotnet migrate` 命令會將有效的 Preview 2 `project.json` 專案移轉至有效的 RC4 `csproj` 專案。 根據預設，命令將會移轉根專案和根專案包含的任何專案參考。 此行為可使用 `--skip-project-references` 選項在執行階段停用。 
 
 移轉可在以下任一情況完成：
 
@@ -44,7 +44,7 @@ dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 4 .NET Core �
 
 根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。 如果您使用 `--report-file` 選項，輸出也會儲存到您指定的檔案。 
 
-截至 Preview 4 為止，`dotnet migrate` 命令只支援有效的 Preview 2 `project.json` 檔案。 這表示您無法使用它來將舊的 DNX 或 Preview 1 `project.json` 檔案直接移轉為 csproj；您必須先將它們移轉為 Preview 2 project.json 檔案，然後再移轉為 csproj 檔案。 在未來，我們將加入對 Preview 1 專案的支援。 
+截至 RC4 為止，`dotnet migrate` 命令只支援有效的 Preview 2 `project.json` 檔案。 這表示您無法使用它來將舊的 DNX 或 Preview 1 `project.json` 檔案直接移轉為 csproj；您必須先將它們移轉為 Preview 2 project.json 檔案，然後再移轉為 csproj 檔案。 在未來，我們將加入對 Preview 1 專案的支援。 
 
 ## <a name="options"></a>選項
 
@@ -95,6 +95,6 @@ dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 4 .NET Core �
 `dotnet migrate -s -v 1.0.0-preview4`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

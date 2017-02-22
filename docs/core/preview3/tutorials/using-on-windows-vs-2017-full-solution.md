@@ -10,15 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
 translationtype: Human Translation
-ms.sourcegitcommit: 82dfcb532ce6c14e93c5baedb61b619cc18e69f1
-ms.openlocfilehash: 02c48cd7e2fc551b82bb7afa53a3dd228e02dca1
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 04f5264eaaa16be299e0d72f587ee232a5e61ca9
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-tooling-preview-4"></a>使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案 (工具 Preview 4)
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-net-core-tools-rc4"></a>使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案 (.NET Core 工具 RC4)
 
 > [!WARNING]
-> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱[使用 Visual Studio 2015 在 Windows 上開始使用 .NET Core](../../tutorials/using-on-windows.md) 主題。
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱[使用 Visual Studio 2015 在 Windows 上開始使用 .NET Core](../../tutorials/using-on-windows.md) 主題。
 
 Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用程式。 本文件中的程序說明建置一般 .NET Core 解決方案所需的步驟，其中包含可重複使用的程式庫、測試，以及使用協力廠商程式庫。 
 
@@ -85,6 +85,6 @@ Visual Studio 2017 提供功能完整的開發環境來開發 .NET Core 應用�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

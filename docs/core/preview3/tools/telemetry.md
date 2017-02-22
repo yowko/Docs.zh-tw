@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 6d3750b0b8b452281c1733455e0f4ee4fd130386
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 697382a215a45fae159df62e7e9f4c73f5907d8f
 
 ---
 
-# <a name="net-core-tools-telemetry-tooling-preview-4"></a>.NET Core 工具遙測 (工具 Preview 4)
+# <a name="net-core-tools-telemetry-net-core-tools-rc4"></a>.NET Core 工具遙測 (.NET Core 工具 RC4)
 
 > [!WARNING]
-> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [.NET Core 工具遙測](../../tools/telemetry.md)主題。
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [.NET Core 工具遙測](../../tools/telemetry.md)主題。
 
 .NET Core 工具包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/pull/2145)。 .NET 小組必須了解如何使用這些工具，讓我們可以進行改善。
 
@@ -81,33 +81,26 @@ operates as your consent to these practices.
 ```text
 Welcome to .NET Core!
 ---------------------
-
-Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to
+Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to 
 see available commands or go to https://aka.ms/dotnet-cli-docs.
 
 Telemetry
----------
-
-The .NET Core tools collect usage data in order to improve your experience.
-The data is anonymous and does not include commandline arguments. The data is
+--------------
+The .NET Core tools collect usage data in order to improve your experience. 
+The data is anonymous and does not include command-line arguments. The data is 
 collected by Microsoft and shared with the community.
-
-You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT
+You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT 
 environment variable to 1 using your favorite shell.
-
-You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-
-telemetry.
+You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
 
 Configuring...
---------------
-
-A command is running to initially populate your local package cache, to
-improve restore speed and enable offline access. This command will take up to
+-------------------
+A command is running to initially populate your local package cache, to 
+improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
 
 
-
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

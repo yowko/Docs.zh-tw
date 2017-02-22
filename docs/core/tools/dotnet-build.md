@@ -1,25 +1,28 @@
 ---
-title: "dotnet-build 命令 | .NET Core SDK"
+title: "dotnet-build 命令 | Microsoft Docs"
 description: "dotnet-build 命令會建置專案和其所有相依性。"
 keywords: "dotnet-build, CLI, CLI 命令, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bb64da75a2e7bc2d379bc1685b4187493792db78
 
 ---
 
-#<a name="dotnetbuild"></a>dotnet-build
+#<a name="dotnet-build"></a>dotnet-build
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-build (.NET Core 工具 RC4)](../preview3/tools/dotnet-build.md) 主題。
 
 ## <a name="name"></a>名稱 
-dotnet-build -- 建置專案和其所有相依性 
+`dotnet-build` - 建置專案和其所有相依性。 
 
 ## <a name="synopsis"></a>概要
 
@@ -76,11 +79,11 @@ dotnet-build -- 建置專案和其所有相依性
 
 定義用來建置的組態。  如果省略，會預設為 `Debug`。
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
 要建置的目標執行階段。 如需您可以使用的執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
 定義 [project.json](project-json.md#version) 檔案的 version 欄位中應該取代的 `*`。 格式遵循 NuGet 的版本指導方針。 
 
@@ -111,6 +114,6 @@ dotnet-build -- 建置專案和其所有相依性
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

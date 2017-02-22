@@ -1,5 +1,5 @@
 ---
-title: "global.json 參考 | .NET Core"
+title: "global.json 參考 | Microsoft Docs"
 description: "global.json 參考"
 keywords: .NET, .NET Core
 author: aL3891
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
 translationtype: Human Translation
-ms.sourcegitcommit: 6f3a46284bd5820520739577919fa202f5b784d7
-ms.openlocfilehash: adce52849247f5b12d43b389a7699de04fe278c4
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6b0ad546a8a121ad5ea4642c11842a8dccf7055
 
 ---
 
 # <a name="globaljson-reference"></a>global.json 參考
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [global.json 參考 (.NET Core 工具 RC4)](../preview3/tools/global-json.md) 主題。
 
 global.json 檔案用於 .NET Core 專案，以定義解決方案中繼資料。 當叫用 [dotnet-restore](dotnet-restore.md) 命令以還原 .NET Core 專案的相依性時，會使用此檔案。
 在本參考主題中，您會看到可在 global.json 檔案中定義的屬性清單。
@@ -68,6 +71,6 @@ global.json 檔案用於 .NET Core 專案，以定義解決方案中繼資料。
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

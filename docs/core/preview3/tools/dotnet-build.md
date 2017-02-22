@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
 
 ---
 
-#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build (工具 Preview 4)
+#<a name="dotnet-build-net-core-tools-rc4"></a>dotnet-build (.NET Core 工具 RC4)
 
 > [!WARNING]
-> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-build](../../tools/dotnet-build.md) 主題。
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-build](../../tools/dotnet-build.md) 主題。
 
 ## <a name="name"></a>名稱 
 dotnet-build -- 建置專案和其所有相依性 
@@ -103,6 +103,6 @@ dotnet-build -- 建置專案和其所有相依性
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

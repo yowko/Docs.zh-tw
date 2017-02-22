@@ -1,6 +1,6 @@
 ---
-title: "使用 .NET Core 命令列組織和測試專案 (SDK Preview 4) | Microsoft Docs"
-description: "使用 .NET Core 命令列組織和測試專案 (SDK Preview 4)"
+title: "使用 .NET Core 命令列組織和測試專案 (.NET Core 工具 RC4) | Microsoft Docs"
+description: "使用 .NET Core 命令列組織和測試專案 (.NET Core 工具 RC4)"
 keywords: ".NET、.NET Core"
 author: cartermp
 ms.author: mairaw
@@ -11,17 +11,17 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f3d5ebbac45726e320e5b886dbb6b81259bea36c
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb5ce9772ca2f3e35ebd7ec948d011ec04296e0
 
 ---
 
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-4"></a>使用 .NET Core 命令列組織和測試專案 (SDK Preview 4)
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line-net-core-tools-rc4"></a>使用 .NET Core 命令列組織和測試專案 (.NET Core 工具 RC4)
 
 > [!WARNING]
-> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](../../tutorials/using-with-xplat-cli.md) 主題。
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](../../tutorials/using-with-xplat-cli.md) 主題。
 
-本教學課程會遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core (SDK Preview 4)](./using-with-xplat-cli-msbuild.md)，以示範如何超越簡單的 "hello world" 案例，並為更進階且井然有序的應用程式打好基礎。
+本教學課程會遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core (.NET Core 工具 RC4)](./using-with-xplat-cli-msbuild.md)，以示範如何超越簡單的 "hello world" 案例，並為更進階且井然有序的應用程式打好基礎。
 
 ## <a name="using-folders-to-organize-code"></a>使用資料夾來組織程式碼
 
@@ -325,6 +325,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

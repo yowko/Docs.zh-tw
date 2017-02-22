@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: b2dbd39583b58c5d977d88edfc4770f6d9855ec1
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 594956488dee39903feba44e10d6bb81801412a4
 
 ---
 
-#<a name="dotnet-restore-tooling-preview-4"></a>dotnet-restore (工具 Preview 4)
+#<a name="dotnet-restore-net-core-tools-rc4"></a>dotnet-restore (.NET Core 工具 RC4)
 
 > [!WARNING]
-> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-restore](../../tools/dotnet-restore.md) 主題。
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-restore](../../tools/dotnet-restore.md) 主題。
 
 ## <a name="name"></a>名稱
 
@@ -103,6 +103,6 @@ ms.openlocfilehash: b2dbd39583b58c5d977d88edfc4770f6d9855ec1
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

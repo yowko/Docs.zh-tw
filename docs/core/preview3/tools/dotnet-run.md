@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 066fbcd9f342233fb12599a84211675ba5b95860
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 3f9d50dcc58ad4af836a6b19d8daf7bb6bf60341
 
 ---
 
-#<a name="dotnet-run-tooling-preview-4"></a>dotnet-run (工具 Preview 4)
+#<a name="dotnet-run-net-core-tools-rc4"></a>dotnet-run (.NET Core 工具 RC4)
 
 > [!WARNING]
-> 此主題適用於 Visual Studio 2017 RC - .NET Core 工具 Preview 4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-run](../../tools/dotnet-run.md) 主題。
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-run](../../tools/dotnet-run.md) 主題。
 
 ## <a name="name"></a>名稱 
 
@@ -80,6 +80,6 @@ dotnet-run --「就地」執行原始程式碼，而不需要有任何明確的�
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
