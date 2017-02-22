@@ -1,5 +1,5 @@
 ---
-title: "dotnet 命令 | .NET Core SDK"
+title: "dotnet 命令 | Microsoft Docs"
 description: "了解 dotnet 命令 (.NET Core CLI 工具的泛型驅動程式) 和其用法。"
 keywords: "dotnet, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
+ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: bbc13c8cca82e660f0f8ccf7d88c0340d9c06e68
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c80b5e7e26366b5253816e81a8203f90690eec1e
 
 ---
 
-#<a name="dotnet-command"></a>dotnet 命令
+#<a name="dotnet-command-net-core-tools-rc4"></a>dotnet 命令 (.NET Core 工具 RC4)
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet 命令](../../tools/dotnet.md)主題。
 
 ## <a name="name"></a>名稱
 
@@ -70,9 +73,9 @@ dotnet 具有下列命令：
 * [dotnet-pack](dotnet-pack.md)
    * 建立您程式碼的 NuGet 套件。
 * [dotnet-migrate](dotnet-migrate.md)
-   * 將有效的 Preview 2 專案移轉至 Preview 3 專案
+   * 將有效的 Preview 2 專案移轉至 RC4 專案。
 * [dotnet-msbuild](dotnet-msbuild.md)
-   * 提供對 MSBuild 命令列的存取
+   * 提供對 MSBuild 命令列的存取。
 
 ## <a name="examples"></a>範例
 
@@ -107,6 +110,6 @@ dotnet 具有下列命令：
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

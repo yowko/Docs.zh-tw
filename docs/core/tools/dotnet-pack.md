@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 227bdaabc88bddbf2014788d72ef87e75f956795
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: d439dc83cc4538b44634197f3dce1bf7ad2ad6c7
 
 ---
 
 #<a name="dotnet-pack"></a>dotnet-pack
 
 > [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 Visual Studio 2017 RC - .NET Core 工具 Preview 4 版本，請參閱 [dotnet-pack 命令 (工具 Preview 4)](../preview3/tools/dotnet-pack.md) 主題。
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-pack (.NET Core 工具 RC4)](../preview3/tools/dotnet-pack.md) 主題。
 
 ## <a name="name"></a>名稱
 
@@ -93,6 +93,6 @@ ms.openlocfilehash: 227bdaabc88bddbf2014788d72ef87e75f956795
 `dotnet pack --version-suffix "ci-1234"`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
