@@ -13,6 +13,7 @@ ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
 ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
 ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
@@ -53,7 +54,7 @@ dotnet-build -- 建置專案和其所有相依性
 
 `-h|--help`
 
-印出命令的簡短說明。  
+印出命令的簡短說明。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -69,11 +70,11 @@ dotnet-build -- 建置專案和其所有相依性
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-要建置的目標執行階段。 如需您可以使用的執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../../rid-catalog.md)。 
+要建置的目標執行階段。 如需您可以使用的執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../../rid-catalog.md)。
 
 `--version-suffix [VERSION_SUFFIX]`
 
-定義專案檔的 version 欄位中應該取代的 `*`。 格式遵循 NuGet 的版本指導方針。 
+定義專案檔的 version 欄位中應該取代的 `*`。 格式遵循 NuGet 的版本指導方針。
 
 `--build-profile`
 
@@ -100,9 +101,4 @@ dotnet-build -- 建置專案和其所有相依性
 針對特定執行階段，建置專案和其相依性 (在此範例中為 Ubuntu 16.04)：
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
