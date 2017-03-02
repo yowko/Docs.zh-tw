@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
-ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 8e2aad830bdaccad6e8184fa462dd0d3157fd6c9
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 
 ## <a name="integral-types"></a>整數類資料型別
 
-.NET Core 支援帶正負號和不帶正負號的整數，其長度介於 1 到 8 個位元組。 下表列出整數類資料類型和其大小，並指出它們是否帶正負號或不帶正負號，並記錄其範圍。 所有整數都是實值類型。 
+.NET Core 支援帶正負號和不帶正負號的整數，其長度介於&1; 到&8; 個位元組。 下表列出整數類資料類型和其大小，並指出它們是否帶正負號或不帶正負號，並記錄其範圍。 所有整數都是實值類型。 
 
 類型 | 帶正負號/不帶正負號 | 大小 (位元組) | 最小值 | 最大值
 ---- | --------------- | ------------ | ------------- | -------------
@@ -74,9 +75,4 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 * 有兩個矩陣類型，代表 3x2 矩陣的 [System.Numerics.Matrix3x2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix3x2)，以及代表 4x4 矩陣的 [System.Numerics.Matrix4x4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix4x4)。 
 
 * [System.Numerics.Plane](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Plane) 類型代表三維平面，而 [System.Numerics.Quaternion](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Quaternion) 類型代表用來編碼三維實體旋轉的向量。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

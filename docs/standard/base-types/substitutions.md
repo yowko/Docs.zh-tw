@@ -4,16 +4,16 @@ description: "規則運算式中的替代項目"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0fded615-1021-4468-a644-b491814305c6
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3e02d18d6566c67c7fff7003671f340f97b0dfce
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c8e82c2399916e5c17d1b54dd78a11ecfbc90bbf
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -49,7 +49,7 @@ ms.openlocfilehash: 3e02d18d6566c67c7fff7003671f340f97b0dfce
 
 **$** 後面接著的所有數字都會解譯為屬於 number 群組。 如果這不是您的目的，可以改為替代具名群組。 例如，您可以使用取代字串 **${1}1** 而非 **$11**，將取代字串定義為第一個擷取之群組的值連同數字 "1"。 如需詳細資訊，請參閱[替代具名群組](#substituting-a-named-group)。 
 
-未使用 **(?<**_name-**>)** 語法明確指派名稱的擷取群組，會從 1 開始由左至右編號。 具名群組是從最後一個未命名群組的索引加一開始，由左至右編號。 例如，在規則運算式 `(\w)(?<digit>\d)` 中，`digit` 具名群組的索引為 2。
+未使用 **(?<**_name-**>)** 語法明確指派名稱的擷取群組，會從&1; 開始由左至右編號。 具名群組是從最後一個未命名群組的索引加一開始，由左至右編號。 例如，在規則運算式 `(\w)(?<digit>\d)` 中，`digit` 具名群組的索引為 2。
 
 如果 *number* 沒有指定在規則運算式模式中定義的有效擷取群組，就會將 **$**_number_ 解譯為用以取代每個相符項目的常值字元序列。
 
@@ -157,7 +157,7 @@ End Module
 `\d*` | 比對零個或多個十進位數字。
 `(?<amount>\s?\d[.,]?\d*)` | 比對空白字元，後面接著一個或多個十進位數字，再接零個或一個句號或逗號，最後再接零個或多個十進位數字。 這是名為 amount 的擷取群組。 由於取代模式為 `${amount}`，因此呼叫 [Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)) 方法會將整個相符的子字串取代為這個擷取的群組。 
  
-## <a name="substituting-a-character"></a>替代 $ 字元
+## <a name="substituting-a--character"></a>替代 $ 字元
 
 **$$** 替代項目會在取代的字串中插入常值 "$" 字元。 
 
@@ -560,10 +560,5 @@ End Module
 ## <a name="see-also"></a>請參閱
 
 [規則運算式語言 - 快速參考](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

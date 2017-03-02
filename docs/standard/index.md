@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 254e89abefd28419bd2f36a047e4df939f7ff8da
-ms.openlocfilehash: 8eb9274def2683fae20765cbf701b706293744fc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: be44dce8181be45f6d73fcf498a873fb94aa56a6
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -79,10 +80,5 @@ C#、F# 和 Visual Basic 是依賴 .NET 平台並以其為目標的熱門語言�
 ------------
 
 .NET 是透過開放 [ECMA 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)所指定，該標準概述其功能，並可用來建立新的實作。 還有其他 .NET 實作，其中 Mono 和 Unity 是除了 Microsoft 以外最熱門的實作。
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

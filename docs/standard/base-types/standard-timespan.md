@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 4e0f02f1-4abd-47b5-8995-5c3ff45b0ce1
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: bb209c7bac71960fa0a679e546bedae486b412b8
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4e6b58cd8b29b4a9d46bd43a03c1e8c6c45dfcaa
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -140,7 +141,7 @@ End Module
 *hh* | 小時數，範圍從 "00" 到 "23"。
 *mm* | 分鐘數，範圍從 "00" 到 "59"。
 *ss* | 秒數，範圍從 "0" 到 "59"。
-*fffffff* | 秒的選擇性小數部分。 其值的範圍可從 "0000001" (一個刻度或一秒的千萬分之一) 到 "9999999" (一秒的千萬分之 9,999,999，也就是一秒減一個刻度)。 
+*fffffff* | 秒的選擇性小數部分。 其值的範圍可從 "0000001" (一個刻度或一秒的千萬分之一) 到 "9999999" (一秒的千萬分之&9;,999,999，也就是一秒減一個刻度)。 
 
 與 "g" 和 "G" 格式規範不同，"c" 格式規範不區分文化特性。 它會產生 [TimeSpan](xref:System.TimeSpan) 值的字串表示，而該值是非變異值，且對於 .NET Framework 4 之前的所有舊版 .NET Framework 皆通用。 "c" 是預設的 [TimeSpan](xref:System.TimeSpan) 格式字串，而 [TimeSpan.ToString](xref:System.TimeSpan.ToString) 方法會使用 "c" 格式字串來格式化時間間隔值。
 
@@ -366,10 +367,5 @@ End Module
 [複合格式](composite-format.md)
 
 [剖析字串](parsing-strings.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

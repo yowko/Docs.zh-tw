@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
 translationtype: Human Translation
-ms.sourcegitcommit: b7dbb80c16ca0d08ff6fe4c4f3a7b221f64c6608
-ms.openlocfilehash: f444cb6f8b102faba3fca702e592cf74d0ad192c
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 41093464c0dc2631217d89e2e715d05b78051284
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -36,8 +37,3 @@ ms.openlocfilehash: f444cb6f8b102faba3fca702e592cf74d0ad192c
 另一方面來看，安裝指令碼則不需要系統管理權限。 不過，它們也不會在電腦上安裝任何必要條件；您必須手動安裝所有必要條件。 指令碼大部分用於設定組建伺服器，或您想要安裝工具但沒有系統管理權限時 (請確實注意上述先決條件警告)。 如需詳細資訊，請參閱[安裝指令碼參考主題](tools/dotnet-install-script.md)。 如果您對如何在 CI 組建伺服器中設定 SDK 感興趣，可以查看 [CI 伺服器的 SDK](tools/using-ci-with-cli.md) 文件。 
 
 根據預設，SDK 會以並存 (SxS) 方式進行安裝。 這表示在任何指定時間，單一電腦上可同時存在多個版本的 CLI 工具。 .NET Core 命令列工具主題的[驅動程式區段](tools/index.md#driver)中，有詳細說明如何使用正確的版本。
-
-
-<!--HONumber=Nov16_HO3-->
-
-

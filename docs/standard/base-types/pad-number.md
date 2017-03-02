@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a517c066-b11e-4815-826b-9262611eac40
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 0a136d88dfbc83d40ff8a204f275537c24f9748b
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 92f8796eae0f269cacfa4cf70330c5e3c0826717
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -32,7 +33,7 @@ ms.openlocfilehash: 0a136d88dfbc83d40ff8a204f275537c24f9748b
     
   您也可以在使用[複合格式](composite-format.md)的方法 (例如 [Console.WriteLine](xref:System.Console.WriteLine) 或 [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))) 中使用格式字串。  
   
-下列範例會使用前置零來將數個整數值格式化，讓格式化數值的總長度至少為 8 個字元。
+下列範例會使用前置零來將數個整數值格式化，讓格式化數值的總長度至少為&8; 個字元。
 
 ```csharp
 byte byteValue = 254;
@@ -149,7 +150,7 @@ Console.WriteLine(value.ToString("X" + hexLength.ToString()))
 
 3. 呼叫數值的 `ToString(String)` 方法，並將其傳遞至自訂格式字串。 您也可以將自訂格式字串與支援複合格式的方法搭配使用。
 
-下列範例會使用前置零來將數個數值格式化，讓格式化數值的小數點左邊至少有 8 位數。
+下列範例會使用前置零來將數個數值格式化，讓格式化數值的小數點左邊至少有&8; 位數。
 
 ```csharp
 string fmt = "00000000.##";
@@ -294,10 +295,5 @@ Next
 [自訂數值格式字串](custom-numeric.md)
 
 [複合格式](composite-format.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

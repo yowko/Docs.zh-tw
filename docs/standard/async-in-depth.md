@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
-ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4c66c1dc6fb1d51eb2a7d6566fbf62b5f19b556b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -44,7 +45,7 @@ Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-    // Execution is synchronous here
+     // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -146,8 +147,3 @@ public async Task<int> CalculateResult(InputData data)
 ### <a name="why-does-async-help-here"></a>為什麼非同步有助於此作業？
 
 當您需要快速回應，`async` 與 `await` 是管理 CPU-bound 工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以這項新功能為主的程式碼。
-
-
-<!--HONumber=Nov16_HO3-->
-
-

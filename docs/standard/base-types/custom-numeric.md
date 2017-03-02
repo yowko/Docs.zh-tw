@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b1c16ee-956f-4e9c-8502-c3dd6598c51d
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2d5a051efd074d02f2a5e9ff03c11e1d9a202d7f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 017ee2b6feb87841f31660fe6cb76ccbefd5c83b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -79,26 +80,26 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 // Displays 0.6
 
 value = 1234567890;
-Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture)); 
+Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0}", value)); 
+                                "{0:0,0}", value));    
 // Displays 1,234,567,890      
 
 CultureInfo elGR = CultureInfo.CreateSpecificCulture("el-GR");
-Console.WriteLine(value.ToString("0,0", elGR)); 
-Console.WriteLine(String.Format(elGR, "{0:0,0}", value));   
+Console.WriteLine(value.ToString("0,0", elGR));    
+Console.WriteLine(String.Format(elGR, "{0:0,0}", value));    
 // Displays 1.234.567.890
 
 value = 1234567890.123456;
-Console.WriteLine(value.ToString("0,0.0", CultureInfo.InvariantCulture));   
+Console.WriteLine(value.ToString("0,0.0", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.0}", value));   
+                                "{0:0,0.0}", value));    
 // Displays 1,234,567,890.1  
 
 value = 1234.567890;
-Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture));  
+Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.00}", value));  
+                                "{0:0,0.00}", value));    
 // Displays 1,234.57
 ```
 
@@ -131,9 +132,9 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 0.6
 
 value = 1234567890
-Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture))  
+Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture))    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0}", value))  
+                                "{0:0,0}", value))    
 ' Displays 1,234,567,890      
 Dim elGR As CultureInfo = CultureInfo.CreateSpecificCulture("el-GR")
 Console.WriteLine(value.ToString("0,0", elGR))
@@ -147,13 +148,13 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 1,234,567,890.1  
 
 value = 1234.567890
-Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture))   
+Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture))    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.00}", value))   
+                                "{0:0,0.00}", value))    
 ' Displays 1,234.57
 ```
 
-## <a name="the-custom-specifier"></a>"#" 自訂規範
+## <a name="the--custom-specifier"></a>"#" 自訂規範
 
 "#" 自訂格式規範是當做數字預留位置符號。 如果正在格式化的值有數字位於格式字串中出現 "#" 符號的位置上，則該數字會複製到輸出字串。 否則，沒有東西會存放在結果字串中的那個位置。 
 
@@ -251,7 +252,7 @@ End Module
 '      The value is: ' .324'
 ```
 
-## <a name="the-custom-specifier"></a>"." 自訂規範
+## <a name="the--custom-specifier"></a>"." 自訂規範
 
 "." 自訂格式規範會將當地語系化的十進位分隔符號插入結果字串中。 格式字串中第一個點決定所格式化值中的小數分隔符號位置；任何其他點將被忽略。 
 
@@ -325,7 +326,7 @@ Dim value As Double
 ' Displays 8.6E+4
 ```
 
-## <a name="the-custom-specifier"></a>"," 自訂規範
+## <a name="the--custom-specifier"></a>"," 自訂規範
 
 "," 字元同時當做群組分隔符號和數值縮放規範。 
 
@@ -335,7 +336,7 @@ Dim value As Double
   
 * 數值縮放規範：如果在明確或隱含小數點的左側緊接著指定一個或多個逗號，則每指定一個逗號就會將要格式化的數字除以 1000。 例如，如果使用字串 "0,," 來格式化數字 1 億，則其輸出為 "100"。 
 
-您可以在相同的格式字串內使用群組分隔符號和數值縮放規範。 例如，如果使用字串 "#,0,," 和不變的文化特性來格式化數字 10 億，則輸出為 "1,000"。 
+您可以在相同的格式字串內使用群組分隔符號和數值縮放規範。 例如，如果使用字串 "#,0,," 和不變的文化特性來格式化數字&10; 億，則輸出為 "1,000"。 
 
 下列範例示範使用逗號做為群組分隔符號。
 
@@ -369,9 +370,9 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 
 ```csharp
 double value = 1234567890;
-Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture)); 
+Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:#,,}", value)); 
+                                "{0:#,,}", value));    
 // Displays 1235   
 
 Console.WriteLine(value.ToString("#,,,", CultureInfo.InvariantCulture));
@@ -388,7 +389,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ```vb
 Dim value As Double = 1234567890
   Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture))    
-  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#,,}", value))  
+  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#,,}", value))    
   ' Displays 1235   
 
   Console.WriteLine(value.ToString("#,,,", CultureInfo.InvariantCulture))
@@ -402,7 +403,7 @@ Dim value As Double = 1234567890
 ' Displays 1,235
 ```
 
-## <a name="the-custom-specifier"></a>"%" 自訂規範
+## <a name="the--custom-specifier"></a>"%" 自訂規範
 
 格式字串中的百分比符號 (%) 會使得數字在格式化之前先乘以 100。 數字中會根據格式字串中出現 % 的位置，插入當地語系化百分比符號。 使用的百分比字元由目前 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 物件的 [PercentSymbol](xref:System.Globalization.NumberFormatInfo.PercentSymbol) 屬性所定義。
 
@@ -424,7 +425,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 8.6% 
 ```
 
-## <a name="the-custom-specifier"></a>"‰" 自訂規範
+## <a name="the--custom-specifier"></a>"‰" 自訂規範
 
 格式字串中的千分比字元 (‰ 或 \u2030) 會使得數字在格式化之前先乘以 1000。 傳回的字串中會根據格式字串中出現 ‰ 符號的位置，插入適當的千分比符號。 使用的千分之一符號字元是由提供文化特性專屬格式資訊之物件的 [NumberFormatInfo.PerMilleSymbol](xref:System.Globalization.NumberFormatInfo.PerMilleSymbol) 屬性定義的。
 
@@ -490,7 +491,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 8.6E004
 ```
 
-## <a name="the-escape-character"></a>"\" 逸出字元
+## <a name="the--escape-character"></a>"\" 逸出字元
 
 格式字串中的 "#"、"0"、"."、","、"%" 和 "‰" 符號會解譯為格式規範，而不是常值字元。 大寫和小寫 "E" 以及 + 和 - 符號視其在自訂格式字串中的位置而定，也有可能會解譯為格式規範。 
 
@@ -499,7 +500,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 若要在結果字串中加上反斜線，您必須再加上一個反斜線 (變成 \\)，才能將反斜線解譯為常值。 
 
 > [!NOTE]
-> 某些編譯器 (例如 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。 為確保格式化時能正確地解譯字串，在使用 C# 時，可以在串前加上逐字字串常值字元 (@ 字元)，或在每個反斜線前再加上一個反斜線字元。 下列 C# 範例示範這兩種做法。
+> 某些編譯器 (例如 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。 為了確保字串在格式化時能夠正確獲得解譯，您可以在 C# 中的字串前面加上逐字字串常值字元 (@ 字元)，或在每個反斜線前面再加上一個反斜線字元。 下列 C# 範例示範這兩種做法。
 
 下列範例會使用逸出字元，以避免格式化作業將 "#"、"0" 和 "\" 字元解譯為逸出字元或格式規範。 此範例會多使用一個反斜線，以確保反斜線會解譯為常值字元。
 
@@ -539,7 +540,7 @@ Console.WriteLine(String.Format("{0:\\\\\\ ##0 dollars and \0\0 cents \\\\\\}",
 ' Displays \\\ 123 dollars and 00 cents \\\
 ```
 
-## <a name="the-section-separator"></a>; 區段分隔符號
+## <a name="the--section-separator"></a>; 區段分隔符號
 
 冒號 (;) 是條件式格式規範，這個規範會根據數字的值是正數、負數還是零，將不同的格式套用至數字。 若要產生這個行為，自訂格式字串可以包含多達三個以分號分隔的區段， 下表將說明這些區段。 
 
@@ -646,10 +647,5 @@ Console.WriteLine(value2)
 [如何：使用前置零填補數字](pad-number.md)
 
 [複合格式](composite-format.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

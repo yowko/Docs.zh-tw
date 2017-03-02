@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: be239871-10cc-4949-b548-200bb260630a
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 56da9671a0849b0f0a94d8881cdc28e70bcf8549
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f9247bae0d290db570b8cd8885e654524ea2f36b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -563,7 +564,7 @@ Console.WriteLine(dateOffset.ToUniversalTime.ToString("r"))
 
 "s" 標準格式規範表示由 [DateTimeFormatInfo.SortableDateTimePattern](xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern) 屬性所定義的自訂日期和時間格式字串。 此模式反映已定義的標準 (ISO 8601)，且屬性為唯讀。 因此，不論所使用的文化特性或提供的格式提供者為何，它一定會是相同的。 自訂格式字串為 "yyyy'-'MM'-'dd'T'HH':'mm':'ss"。
 
- "s" 格式規範的目的在於產生結果字串時，能夠根據日期和時間值，一致地以遞增或遞減順序排序。 如此一來，雖然 "s" 標準格式規範會以一致的格式來表示日期和時間值，但是格式設定操作不會修改日期和時間物件的值 (該值已進行可反映其 [DateTime.Kind](xref:System.DateTime.Kind) 屬性或其 [DateTimeOffset.Offset](xref:System.DateTimeOffset.Offset) 值的格式設定)。 例如，格式化日期和時間值 2014-11-15T18:32:17+00:00 和 2014-11-15T18:32:17+08:00 所產生的結果字串相同。 
+"s" 格式規範的目的在於產生結果字串時，能夠根據日期和時間值，一致地以遞增或遞減順序排序。 如此一來，雖然 "s" 標準格式規範會以一致的格式來表示日期和時間值，但是格式設定操作不會修改日期和時間物件的值 (該值已進行可反映其 [DateTime.Kind](xref:System.DateTime.Kind) 屬性或其 [DateTimeOffset.Offset](xref:System.DateTimeOffset.Offset) 值的格式設定)。 例如，格式化日期和時間值 2014-11-15T18:32:17+00:00 和 2014-11-15T18:32:17+08:00 所產生的結果字串相同。 
 
 使用這個標準格式規範時，格式或剖析作業一律使用不因文化特性而異。 
 
@@ -747,10 +748,5 @@ Console.WriteLine(date1.ToString("y", CultureInfo.CreateSpecificCulture("af-ZA")
 [格式化類型](formatting-types.md)
 
 [自訂日期與時間格式字串](custom-datetime.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

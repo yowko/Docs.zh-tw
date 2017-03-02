@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -145,7 +146,7 @@ project.json 中會參考套件。 下列範例是參考 [System.Runtime](https:
 
 .NET 標準 (TFM: `netstandard`) 架構代表由 [.NET 標準程式庫](../standard/library.md)所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET 標準相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET 標準版本，這取決於它們實作哪些 API 而定。 
 
-`NETStandard.Library` 中繼套件是以 `netstandard` 架構為目標。 若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 其中描述大約 40 種 .NET 程式庫和相關聯的 API (以定義 .NET 標準程式庫)，並提供存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
+`NETStandard.Library` 中繼套件是以 `netstandard` 架構為目標。 若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 其中描述大約&40; 種 .NET 程式庫和相關聯的 API (以定義 .NET 標準程式庫)，並提供存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
 
 特定 [NETStandard.Library 版本](versions/index.md)符合其公開的最高 `netstandard` 版本 (透過其結束方式來公開)。 您可使用 project.json 中的架構參考，從基礎套件中選取正確的資產。 在此情況下，相對於 `netstandard1.4` 或 `net46` 來看，`netstandard1.6` 是必要的資產。 
 
@@ -181,11 +182,6 @@ project.json 中的架構和中繼套件參考不需要相符。 例如，以下
 
 .NET Core 應用程式 (TFM: `netcoreapp`) 架構表示套件和相關聯的 API 是隨附於 .NET Core 散發套件和它所提供的主控台應用程式模型。 由於目標為主控台應用程式模型，因此 .NET Core 應用程式必須使用此架構，包括僅限於 .NET Core 中執行的程式庫也應如此。 使用此架構時，可限制應用程式和程式庫僅在 .NET Core 中執行。 
 
-`Microsoft.NETCore.App` 中繼套件是以 `netcoreapp` 架構為目標。 它提供約 60 種程式庫的存取權，其中 `NETStandard.Library` 套件提供約 40 種，另外再加上 20 多種。 若要存取其他 API，您可以參考其他目標為 `netcoreapp` 或相容架構的程式庫，例如 `netstandard`。 
+`Microsoft.NETCore.App` 中繼套件是以 `netcoreapp` 架構為目標。 它提供約&60; 種程式庫的存取權，其中 `NETStandard.Library` 套件提供約&40; 種，另外再加上&20; 多種。 若要存取其他 API，您可以參考其他目標為 `netcoreapp` 或相容架構的程式庫，例如 `netstandard`。 
 
 大部分由 `Microsoft.NETCore.App` 所提供的其他程式庫也會以 `netstandard` 為目標 (在其他 `netstandard` 程式庫滿足其相依性的情況下)。 這表示 `netstandard` 程式庫也可以將這些套件做為相依性參考。 
-
-
-<!--HONumber=Nov16_HO3-->
-
-
