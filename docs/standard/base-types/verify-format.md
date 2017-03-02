@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6d735520-4059-4754-b34c-d117299d36f1
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: bedd1d281256545776c874a38ccb71ad594467c2
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 077a09152ac23c986a751f42c893e1dcca858291
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -26,17 +27,17 @@ ms.openlocfilehash: bedd1d281256545776c874a38ccb71ad594467c2
 
 為了確認電子郵件地址是否有效，`IsValidEmail` 方法會以 `(@)(.+)$` 規則運算式模式呼叫 [Regex.Replace(String, String, MatchEvaluator)](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.Text.RegularExpressions.MatchEvaluator)) 方法，從電子郵件地址分離出網域名稱。 第三個參數是 [MatchEvaluator](xref:System.Text.RegularExpressions.MatchEvaluator) 委派，用於表示處理並取代相符文字的方法。 規則運算式模式解譯如下。 
 
-模式 | 說明
+模式 | 描述
 ------- | ----------- 
 `(@)` | 比對 @ 字元。 這是第一個擷取群組。
 `(.+)` | 比對出現一次或多次的任何字元。 這是第二個擷取群組。
 `$` | 在字串的結尾結束比對。
  
-網域名稱會連同 @ 字元一併傳遞給 `DomainMapper` 方法，而該方法會使用 [IdnMapping](xref:System.Globalization.IdnMapping) 類別將 US-ASCII 字元範圍以外的 Unicode 字元轉譯為 Punycode。 如果 [IdnMapping.GetAscii](xref:System.Globalization.IdnMapping.GetAscii(System.String)) 方法在網域名稱中偵測到任何無效字元，則該方法也會將 `invalid` 旗標設定為 `true`。 該方法會將前面加上 @ 符號的 Punycode 網域名稱回傳給 `IsValidEmail` 方法。 
+網域名稱會連同 @ 字元一併傳遞至 `DomainMapper` 方法，該方法會使用 [IdnMapping](xref:System.Globalization.IdnMapping) 類別將 US-ASCII 字元範圍以外的 Unicode 字元轉譯為 Punycode。 如果 [IdnMapping.GetAscii](xref:System.Globalization.IdnMapping.GetAscii(System.String)) 方法在網域名稱中偵測到任何無效字元，則方法也會將 `invalid` 旗標設定為 `true`。 方法會將前面加上 @ 符號的 Punycode 網域名稱傳回至 `IsValidEmail` 方法。 
 
 接著 `IsValidEmail` 方法會呼叫 [Regex.IsMatch(String, String)](xref:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.String)) 方法，確認位址符合規則運算式模式。 
 
-請注意，`IsValidEmail` 方法並不會驗證電子郵件地址的真實性。 它只會判斷電子郵件地址的格式是否有效。 此外，`IsValidEmail` 方法不會驗證最上層網域名稱是否為 [IANA 根區域資料庫](https://www.iana.org/domains/root/db)列出的有效網域名稱，這項驗證需要執行查閱作業。 規則運算式只會驗證最上層網域名稱是否包含介於 2 到 24 個英數 ASCII 字元，且第一個和最後一個為英數字元，而其餘字元為英數字元或連字號 (-)。 
+請注意，`IsValidEmail` 方法並不會驗證電子郵件地址的真實性。 它只會判斷電子郵件地址的格式是否有效。 此外，`IsValidEmail` 方法不會驗證最上層網域名稱是否為 [IANA 根區域資料庫](https://www.iana.org/domains/root/db)列出的有效網域名稱，這項驗證需要執行查閱作業。 規則運算式只會驗證最上層網域名稱是否包含介於&2; 到&24; 個英數 ASCII 字元，且第一個和最後一個為英數字元，而其餘字元為英數字元或連字號 (-)。 
 
 ```csharp
 using System;
@@ -141,22 +142,22 @@ Public Class RegexUtilities
 End Class
 ```
 
-在此範例中，規則運算式模式 `^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$` 會依下表所示解譯。 請注意，規則運算式是使用 [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) 旗標所編譯。
+在這個範例中，規則運算式模式 `^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^` \{ \} \|~ \w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z] [-\w]*[0-9a-z] *\.) [-a-za-z0-9] + [\-a-z0-9]{0,22}[a-z0-9]))$` 會依下表中所示的方式解譯。 請注意，規則運算式是使用 [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) 旗標所編譯。
 
 模式 | 描述
 ------- | ----------- 
 `^` | 在字串開頭開始比對。
 `(?(")` | 判斷第一個字元是否為引號。 `(?(")` 是替代建構的開頭。
-`(?("")("".+?(?<!\\)""@)` | 如果第一個字元是引號，則比對是否為開頭引號後面至少接著一個任何字元，然後再接著結尾引號。 結尾引號前面絕不能是字元 `(\). (?<!`。 此字串的結尾應為 (@). 記號
+`(?("")("".+?(?<!\\)""@)` | 如果第一個字元是引號，則比對是否為開頭引號後面至少接著一個任何字元，然後再接著結尾引號。 結尾引號前面絕不能是字元 `(\). (?<!`。 此字串應該以 @ 記號做為結束。
 `&#124;(([0-9a-z] | 如果第一個字元不是引號，則比對 a 到 z 或 A 到 Z 的任何字母字元 (此比較不區分大小寫) 或 0 到 9 的任何數字字元。
 `(\.(?!\.))` | 如果下一個字元是句號，則相符。 如果不是句號，則向右合樣下一個字元並繼續比對。 `(?!\.)` 是零寬度的右不合樣 (Negative Lookahead) 判斷提示，可防止電子郵件地址的本機部分出現兩個連續的句號。
 `&#124;[-!#\$%&'\*\+/=\?\^`\{\}\&#124;~\w] | 如果下一個字元不是句號，則比對任何文字字元或下列其中一個字元：-!#$%'*+=?^`{}&#124;~。 
 `((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^`\{\}\&#124;~\w])* | 比對替代模式 (句號後面接著非句號，或某個字元) 零次以上。
 `@` | 比對 @ 字元。
-`(?<=[0-9a-z])` | 若 @ 字元前的字元為 A 到 Z、a 到 z 或 0 到 9，將會繼續比對。 `(?<=[0-9a-z])` 建構可定義零寬度的左合樣 (Positive Lookbehind) 判斷提示。
-`(?(\[)` | 檢查 @ 後的字元是否為左括號。
-`(\[(\d{1,3}\.){3}\d{1,3}\])` | 如果是左括號，則比對左括號後面是否接著 IP 位址 (四組 1 至 3 位數的數字，而每組數字均以句號隔開) 與右括號。
-`&#124;(([0-9a-z][-\w]*[0-9a-z]*\.)+` | 若 @ 後的字元不是左括號，將會取一個英數字元與值 A-Z、a-z 或 0-9 進行比對，再比對出現零或多次的文字字元或連字號，再接著比對值為 A-Z、a-z 或 0-9 的零或一個英數字元，最後再比對句號。 此模式可以重複一或多次，且後面必須接最上層網域名稱。 
+`(?<=[0-9a-z])` | 如果位於 @ 字元前面的字元是 A 到 Z、a 到 z 或 0 到 9，則繼續比對。 `(?<=[0-9a-z])` 建構可定義零寬度的左合樣 (Positive Lookbehind) 判斷提示。
+`(?(\[)` | 檢查 @ 後面的字元是否為左括號。
+`(\[(\d{1,3}\.){3}\d{1,3}\])` | 如果是左括號，則比對左括號後面是否接著 IP 位址 (四組&1; 至&3; 位數的數字，而每組數字均以句號隔開) 與右括號。
+`&#124;(([0-9a-z][-\w]*[0-9a-z]*\.)+` | 如果 @ 後面的字元不是左括號，則比對一個值為 A-Z、a-z 或 0-9 的字母字元，該字母字元後面接著零個或多個文字字元或連字號，再接著值為 A-Z、a-z 或 0-9 的零個或一個英數字元，最後接著句號。 此模式可以重複一或多次，且後面必須接最上層網域名稱。 
 `[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))` | 最上層網域名稱必須以英數字元 (a-z、A-Z 和 0-9) 開頭和結尾。 其中也可以包含零到 22 個 ASCII 字元，英數字元或連字號皆可。 
 `$` | 在字串的結尾結束比對。
  
@@ -244,9 +245,4 @@ End Class
 [.NET 規則運算式](regular-expressions.md)
 
 [規則運算式範例](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -4,16 +4,16 @@ description: "規則運算式行為的詳細資訊"
 keywords: ".NET、.NET Core"
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6f11047f-45a4-4caf-a259-18abe08cc0d2
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: b217b59874ceafbb0e5e410878cc434974c5a863
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 5656cabb708dcfc311ac7a709446003951b97aa6
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -480,7 +480,7 @@ End Module
 
 如需非回溯子運算式的詳細資訊，請參閱[規則運算式中的群組建構](grouping.md)。
 
-### <a name="righttoleft-matching"></a>從右至左比對
+### <a name="right-to-left-matching"></a>從右至左比對
 
 從右至左比對，將 [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) 選項提供給 [Regex](xref:System.Text.RegularExpressions.Regex) 類別建構函式或靜態執行個體比對方法，即可指定此種比對。 當從右至左搜尋取代從左至右搜尋時，或在從右邊部分 (而非自左邊) 開始比對模式較有效率的情況中，這項功能很有用處。 如下例所示，使用由右至左比對會變更 Greedy (窮盡) 數量詞的行為。 此範例會搜尋兩次以數字結尾的句子。 使用 Greedy (窮盡) 數量詞 `+` 的由左至右搜尋，會比對句子中的六個數字其中一個，而由右至左搜尋會比對全部六個數字。 如需規則運算式模式的說明，請參閱本節前文說明 Lazy (最少) 數量詞的範例。
 
@@ -637,10 +637,5 @@ End Module
 ## <a name="reference"></a>參考資料
 
 [System.Text.RegularExpressions](xref:System.Text.RegularExpressions)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

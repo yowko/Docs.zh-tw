@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8e5124c4-20b5-4c57-ab68-301d1d7311c4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 79637972770d3ab5d954d40285dc4f07e58d233f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cd47cc351fb926bcf444bdcbd12f3cd61d9fb327
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -249,7 +250,7 @@ Next
 
 **{**_n_**,**_m_**}** 數量詞至少比對 *n* 次前置元素，但不超過 *m* 次，其中 *n* 和 *m* 都是整數。 **{**_n_**,**_m_**}** 是 Greedy (窮盡) 數量詞，其 Lazy (最少) 對等項目是 **{**_n_**,**_m_**}?**。
 
-在下例中，規則運算式 `(00\s){2,4}` 會嘗試比對 2 至 4 次兩個數字零後接空格的項目。 請注意，輸入字串有此模式的最後部分出現了五次，而非上限四次。 但只有這個子字串的初始部分 (最多到空格和第五對零) 符合規則運算式模式。
+在下例中，規則運算式 `(00\s){2,4}` 會嘗試比對&2; 至&4; 次兩個數字零後接空格的項目。 請注意，輸入字串有此模式的最後部分出現了五次，而非上限四次。 但只有這個子字串的初始部分 (最多到空格和第五對零) 符合規則運算式模式。
 
 ```csharp
 string pattern = @"(00\s){2,4}";
@@ -787,10 +788,5 @@ End Module
 [規則運算式語言 - 快速參考](quick-ref.md)
 
 [規則運算式中的回溯](backtracking.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 
