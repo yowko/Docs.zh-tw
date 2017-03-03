@@ -3,22 +3,23 @@ title: "如何：從 BlockingCollection 個別加入和擷取項目"
 description: "如何：從 BlockingCollection 個別加入和擷取項目"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2b9d39ab-0993-4453-b021-b04870098bf7
 translationtype: Human Translation
-ms.sourcegitcommit: c15f2da15c6448cf1c36dea2d5fd53e734bb6608
-ms.openlocfilehash: 4f73f3bf2000a0ff4cd600d72bb161206a58d23a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e560eb44f783aaa50ec335df4f3171090d238f32
+ms.lasthandoff: 03/03/2017
 
 ---
 
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：從 BlockingCollection 個別加入和擷取項目
 
-本範例示範如何利用封鎖方式和非封鎖方式，在 [BlockingCollection&lt;T&gt;]( https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.BlockingCollection-1) 中新增和移除項目。 如需 `BlockingCollection<T>` 的詳細資訊，請參閱 [BlockingCollection 概觀](blockingcollection-overview.md)。 
+本範例示範如何利用封鎖方式和非封鎖方式，在 [BlockingCollection&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.BlockingCollection-1) 中新增和移除項目。 如需 `BlockingCollection<T>` 的詳細資訊，請參閱 [BlockingCollection 概觀](blockingcollection-overview.md)。 
 
 如需如何列舉 `BlockingCollection<T>` 直到其為空的以及無法再新增元素的範例，請參閱[如何：使用 ForEach 來移除 BlockingCollection 中的項目](how-to-use-foreach-to-remove.md)。
 
@@ -218,12 +219,7 @@ class ProgramWithCancellation
 
 ## <a name="see-also"></a>另請參閱
 
-[System.Collections.Concurrent]( https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent)
+[System.Collections.Concurrent](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent)
 
 [BlockingCollection Overview](blockingcollection-overview.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

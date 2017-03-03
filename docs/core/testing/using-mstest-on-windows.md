@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
 translationtype: Human Translation
-ms.sourcegitcommit: 6795f1ace77e6f4d1b2fe07e6281f4acb6d21271
-ms.openlocfilehash: 11faa46347b18240e9ddf1c27f27a814103e2565
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 94304cd742b63e77126bfa40651faa6974e58853
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -68,9 +69,4 @@ ms.openlocfilehash: 11faa46347b18240e9ddf1c27f27a814103e2565
 11. 在 [測試] 功能表上，選擇 [Windows]、[測試總管]，然後在 [測試總管] 中選擇 [全部執行]。
    
    測試應該會順利通過。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

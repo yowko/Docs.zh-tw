@@ -3,16 +3,17 @@ title: ".NET 類別庫"
 description: ".NET 類別庫"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
-ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -26,7 +27,7 @@ ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
 *   **可攜式**類別庫可以存取 API 子集，並且可以供將目標設為多個平台的應用程式和程式庫使用。
 *   **.NET Core** 類別庫會將平台特定和可攜式程式庫概念合併到提供兼具兩者的單一模型。
 
-## <a name="platformspecific-class-libraries"></a>平台特定類別庫
+## <a name="platform-specific-class-libraries"></a>平台特定類別庫
 
 平台特定程式庫會繫結至單一 .NET 平台 (例如，Windows 上的 .NET Framework)，因此對已知執行環境具有重大相依性。 這類環境會公開一組已知 API (.NET 和 OS API)，並維護和公開預期狀態 (例如，Windows 登錄)。
 
@@ -61,9 +62,4 @@ ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
 ### <a name="mono-class-libraries"></a>Mono 類別庫
 
 Mono 上支援類別庫 (包含上述三種類型的程式庫)。 Mono 經常被 (正確) 視為 Microsoft .NET Framework 的跨平台實作。 在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。 在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
