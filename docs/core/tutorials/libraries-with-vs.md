@@ -1,30 +1,13 @@
 ---
-title: "使用 Visual Studio 開發 .NET Core 程式庫"
-description: "使用 Visual Studio 開發 .NET Core 程式庫"
-keywords: .NET, .NET Core
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 01b988ed-583f-48c8-a016-caeee282e0a6
+redirect_url: /dotnet/articles/csharp/getting-started/library-with-visual-studio-2017
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 1566fc3cca5ba03c95bd784c8ec4f898ed13a967
+ms.sourcegitcommit: 2bd5d04cf896db6f74a4e0651fb7bd6315e1af4a
+ms.openlocfilehash: a97c7fbefcab04ac817b77405755250079d6756b
+ms.lasthandoff: 01/18/2017
 
 ---
 
 # <a name="-developing-net-core-libraries-using-visual-studio"></a>🔧 使用 Visual Studio 開發 .NET Core 程式庫
 
-> **注意**
-> 
-> 本主題尚未開稿！ 
->
-> 歡迎您提供意見，協助擬定範圍和方向。
-> 
-> 深入了解如何參與 [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)。
->
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+## <a name="content-moved"></a>內容已移至新位置！
+這篇文章已移至[在 Visual Studio 2017 RC 中使用 C# 和 .NET Core 建置類別庫](../../csharp/getting-started/library-with-visual-studio-2017.md)主題。

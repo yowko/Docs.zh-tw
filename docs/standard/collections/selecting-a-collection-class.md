@@ -3,16 +3,17 @@ title: "選取集合類別"
 description: "選取集合類別"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0a60fca7-e082-48d4-9dda-30b0d3e67ec7
 translationtype: Human Translation
-ms.sourcegitcommit: cfe65fcba1b3fdc09ffcac704a760d8ce29ea60b
-ms.openlocfilehash: f00fedb70bddc184e5c6ea71213b2beb78594792
+ms.sourcegitcommit: 763433b00ae7d01cfa0c7fa250f51d23a95f6f15
+ms.openlocfilehash: d174d0cb910035340fb317521f3ad930d16853c2
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -70,7 +71,7 @@ ms.openlocfilehash: f00fedb70bddc184e5c6ea71213b2beb78594792
     
 ## <a name="linq-to-objects"></a>LINQ to Objects
 
-只要物件類型實作 [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) 或 [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1)，LINQ to Objects 就可讓開發人員使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 foreach 迴圈更精簡、可讀性更高，並提供篩選、排序和群組功能。 如需詳細資訊，請參閱 [Language Integrated Query (LINQ)](../../csharp/linq.md)。
+只要物件類型實作 [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) 或 [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1)，LINQ to Objects 就可讓開發人員使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 foreach 迴圈更精簡、可讀性更高，並提供篩選、排序和群組功能。 如需詳細資訊，請參閱 [Language Integrated Query (LINQ)](../../csharp/linq/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -81,9 +82,4 @@ ms.openlocfilehash: f00fedb70bddc184e5c6ea71213b2beb78594792
 [System.Collections.Generic](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
 
 [安全執行緒集合](threadsafe/index.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -3,16 +3,16 @@ title: "組織專案以支援 .NET Framework 及 .NET Core"
 description: "組織專案以支援 .NET Framework 及 .NET Core"
 keywords: ".NET、.NET Core"
 author: conniey
-manager: wpickett
+ms.author: mairaw
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -33,7 +33,7 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
   * 不允許您在相同的方案檔中，跨不同專案類型共用 .NET Core 程式庫。 若要支援此功能，[建立可攜式類別庫](#support-pcl)是較好的選擇。
   * 不允許 MSBuild 目標和工作支援的專案組建或負載修改。 若要支援此功能，[建立可攜式類別庫](#support-pcl)是較好的選擇。
 
-* <a name="support-vs"></a>[**將現有專案與新的 .NET Core 專案分開**][option-xproj-folder]
+* <a name="support-vs"></a>[**將現有的專案和新的 .NET Core 專案分開**][option-xproj-folder]
   
   *適用於︰*
   * 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2015 的開發人員/參與者。
@@ -69,7 +69,7 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 要注意的變更如下︰
 * 新增 `global.json`
 * 將 `packages.config` 和 `*.csproj` 替換成 `project.json` 和 `*.xproj`
-* [汽車 project.json][example-xproj-projectjson] 中的變更及其[測試專案][example-xproj-projectjson-test] 支援建置現有的 .NET Framework 以及其他
+* [Car's project.json][example-xproj-projectjson] 及其[測試專案][example-xproj-projectjson-test]中，支援建置現有 .NET Framework 以及其他架構的變更
 
 ## <a name="create-a-portable-class-library-pcl-to-target-net-core"></a>建立以 .NET Core 為目標的可攜式類別庫 (PCL)
 
@@ -89,7 +89,7 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 
 如果現有的專案以較舊的架構為目標，您可能想要保持這些專案不變，使用 .NET Core 專案以未來的架構為目標。
 
-![在不同資料夾中有現有 PCL 的 .NET core 專案][example-xproj-different-folder]
+![在不同資料夾中有現有 PCL 的 .NET Core 專案][example-xproj-different-folder]
 
 [**原始程式碼**][example-xproj-different-code]
 
@@ -98,12 +98,12 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
     * 這會避免前文中因為同一資料夾中有多個 project.json/package.config 檔案所造成的封裝還原問題。
     * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2015 (因 project.json 之故)。  您可以建立不同的解決方案只開啟舊的專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 如需移至 project.json 和 xproj 的詳細指引，請參閱 [.NET Core 移轉文件][porting-doc]。
 
 [porting-doc]: index.md
-[example-initial-project]: media/project-structure/project.png "現有的專案"
+[example-initial-project]: media/project-structure/project.png "現有專案"
 [example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
 
 [example-xproj]: media/project-structure/project.xproj.png "建立以多個架構為目標的 xproj"
@@ -122,9 +122,4 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 [option-xproj-folder]: #keep-existing-projects-and-create-a-net-core-project
 
 [how-to-multitarget]: ../tutorials/libraries.md#how-to-multitarget
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
