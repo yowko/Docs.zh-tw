@@ -1,22 +1,25 @@
 ---
-title: "project.json 參考"
+title: "project.json 參考 | Microsoft Docs"
 description: "project.json 參考"
 keywords: .NET, .NET Core, project.json
 author: aL3891
 ms.author: mairaw
-ms.date: 09/30/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ce3dbad938c01fd0f9d79cefb29884be986b8e1f
+ms.sourcegitcommit: 8fba5c76375763abf90e2e17d3bcc9d0039089f0
+ms.openlocfilehash: 2cdb43a9095217498c12c97548e4aa632b13a59c
 
 ---
 
 # <a name="projectjson-reference"></a>project.json 參考
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 如需 .NET Core 工具 RC4 說明文件，請參閱 [.NET Core 命令列介面工具 (.NET Core 工具 RC4)](../preview3/tools/index.md) 一節。
 
 project.json 檔案用於 .NET Core 專案中，用來定義專案中繼資料、編譯資訊和相依性。 在本參考主題中，您會看到可在 project.json 檔案中定義的所有屬性清單。
 
@@ -322,7 +325,7 @@ project.json 檔案用於 .NET Core 專案中，用來定義專案中繼資料�
 類型：Object
 
 定義專案套件相依性的物件，這個物件的每個索引鍵都是套件的名稱，而且每個值都包含版本資訊。
-如需詳細資訊，請參閱 NuGet 文件網站上的 [Dependency resolution](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3-x) 文章。
+如需詳細資訊，請參閱 NuGet 文件網站上的 [Dependency resolution](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3x) 文章。
 
 例如: 
 
@@ -344,7 +347,7 @@ project.json 檔案用於 .NET Core 專案中，用來定義專案中繼資料�
 ### <a name="version"></a>版本
 類型：String
 
-指定相依性的版本或版本範圍。 使用 \* 萬用字元來指定 [floating dependency version](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#floating-versions)。
+指定相依性的版本或版本範圍。 使用 \* 萬用字元來指定 [floating dependency version](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#floating-versions)。
 
 例如: 
 
@@ -518,7 +521,7 @@ project.json 檔案用於 .NET Core 專案中，用來定義專案中繼資料�
 }
 ```
 
-這會忽略警告 `The variable 'var' is assigned but its value is never used` 和 `The variable 'var' is assigned but its value is never used`
+這會忽略警告 `The variable 'var' is declared but never used` 和 `The variable 'var' is assigned but its value is never used`。
 
 ### <a name="additionalarguments"></a>additionalArguments
 類型：String[]
@@ -1643,7 +1646,7 @@ Object 範例：
 ## <a name="usersecretsid"></a>userSecretsId
 類型：String
 
-指定要在開發階段使用的使用者密碼識別碼。 如需詳細資訊，請參閱 [Safe storage of app secrets during development](https://docs.asp.net/en/latest/security/app-secrets.html) (在開發期間安全儲存應用程式密碼)。
+指定要在開發階段使用的使用者密碼識別碼。 如需詳細資訊，請參閱 [Safe storage of app secrets during development](https://docs.microsoft.com/aspnet/core/security/app-secrets) (在開發期間安全儲存應用程式密碼)。
 
 例如: 
 
@@ -1655,6 +1658,6 @@ Object 範例：
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

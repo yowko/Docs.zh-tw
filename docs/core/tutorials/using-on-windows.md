@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: 54da8aebd64e86c064214074bc261f72c3b0aedc
-ms.openlocfilehash: bf7bf944ebbf3c53ee6206f86e1a168111b54378
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 29019587d2d847c5184d07024fa763c8af805d50
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>在 Windows 上開始使用 .NET Core, 使用 Visual Studio 2015
 
-[Bertrand Le Roy](https://github.com/bleroy) 和 [Phillip Carter](https://github.com/cartermp) 撰
+> [!WARNING]
+> 此主題適用於 Visual Studio 2015 - .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱[使用 Visual Studio 2017 在 Windows 上開始使用 .NET Core](../preview3/tutorials/using-on-windows-vs-2017.md) 主題。
 
 Visual Studio 2015 提供功能完整的開發環境來開發 .NET Core 應用程式。 這份文件中的程序說明使用 Visual Studio 建立許多一般 .NET Core 方案，或包含 .NET Core 元件之方案的必要步驟。 案例包括測試以及使用未明確針對最新版本 .NET Core 建置的協力廠商程式庫。 
 
@@ -228,11 +229,11 @@ Visual Studio 2015 提供功能完整的開發環境來開發 .NET Core 應用�
 -------------------------------------
 可攜式類別庫工具可以自動修改您的 PCL，以 .NET 標準為目標。 
 
-1.  按兩下 [屬性] 節點，開啟專案屬性頁面
+1.    按兩下 [屬性] 節點，開啟專案屬性頁面
 
-2.  在 [目標] 標題下，按一下超連結 [以 .NET 平台標準為目標]
+2.    在 [目標] 標題下，按一下超連結 [以 .NET 平台標準為目標]
 
-3.  要求確認時按一下 [是]
+3.    要求確認時按一下 [是]
 
 這項工具會自動選取 .NET 標準的版本，其中包含所有您 PCL 最初設為目標的所有目標。 您可以在專案屬性頁中，使用 .NET 標準下拉式清單，將不同版本的 .NET 標準設為目標。
  
@@ -240,17 +241,17 @@ Visual Studio 2015 提供功能完整的開發環境來開發 .NET Core 應用�
 
 ### <a name="manually-edit-projectjson-to-target-net-standard-from-an-existing-portable-class-library"></a>手動編輯 project.json，以來自現有可攜式類別庫的 .NET 標準為目標
 
-1.  如果您的 project.json 在 “supports” 元素中包含 “dnxcore50”，請移除它。
+1.    如果您的 project.json 在 “supports” 元素中包含 “dnxcore50”，請移除它。
 
-2.  移除對 “Microsoft.NETCore” 的相依性
+2.    移除對 “Microsoft.NETCore” 的相依性
 
-3.  將對 “Microsoft.NETCore.Portable.Compatibility” “1.0.0” 版的相依性改為 “1.0.1” 版
+3.    將對 “Microsoft.NETCore.Portable.Compatibility” “1.0.0” 版的相依性改為 “1.0.1” 版
 
-4.  新增對 “NETStandard.Library” “1.6.0” 版的相依性
+4.    新增對 “NETStandard.Library” “1.6.0” 版的相依性
 
-5.  從 “frameworks” 元素，移除 “dotnet” 架構 (及其內的 “imports” 元素)
+5.    從 “frameworks” 元素，移除 “dotnet” 架構 (及其內的 “imports” 元素)
 
-6.  將 ` "netstandard1.x” : { } ` 新增至 frameworks 元素，其中 x 取代為您要設為目標的 .NET 標準版本
+6.    將 ` "netstandard1.x” : { } ` 新增至 frameworks 元素，其中 x 取代為您要設為目標的 .NET 標準版本
 
 ### <a name="example-projectjson"></a>範例 project.json
 
@@ -275,6 +276,6 @@ Visual Studio 2015 提供功能完整的開發環境來開發 .NET Core 應用�
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

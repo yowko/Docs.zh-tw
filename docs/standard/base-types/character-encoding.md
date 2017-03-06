@@ -4,16 +4,16 @@ description: ".NET 中的字元編碼"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bce54e41-e9dc-493a-8988-1cbadc340fe8
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6080f5fa12a2391dd138828e0afc2219f1e3a11b
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a8f42fa6a37f8de6f13186ea2ac17b2b2ced1601
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -592,7 +592,7 @@ End Module
 > [!IMPORTANT]
 > 編碼作業最常在 Unicode 字元無法對應至特定字碼頁編碼時發生問題。 解碼作業最常在無效的位元組序列無法轉譯為有效的 Unicode 字元時發生問題。 因此，您應該知道特定編碼物件所使用的後援策略。 您應該在執行個體化編碼物件時，盡可能指定該物件所使用的後援策略。
  
-### <a name="bestfit-fallback"></a>自動調整後援
+### <a name="best-fit-fallback"></a>自動調整後援
 
 當字元在目標編碼中沒有完全相符的字元時，編碼器可以嘗試將該字元對應至類似的字元 (自動調整後援大部分是針對編碼問題，而不是針對解碼問題。 很少有字碼頁包含無法成功對應至 Unicode 的字元)。自動調整後援是 [Encoding.GetEncoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) 和 [Encoding.GetEncoding(String)](xref:System.Text.Encoding.GetEncoding(System.String)) 多載所擷取之字碼頁和雙位元組字元集編碼的預設值。
 
@@ -1502,10 +1502,5 @@ End Module
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
 translationtype: Human Translation
-ms.sourcegitcommit: 300a0304e316cfa265634a3faf74c81c7a8a5e08
-ms.openlocfilehash: d863587fbfee2bf713f8566a3e5b294d49ae50e9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 657981a05e831ffb849d0cd5b3ea25c079cb4fc1
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -64,9 +65,4 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>請勿混淆 `dotnet pack` 與 `dotnet publish`
 
 請務必注意，和 `dotnet publish` 命令一點關係都沒有。  `dotnet publish` 命令是要使用相同組合中的所有相依性來部署應用程式，不是用來產生要透過 NuGet 散發及使用的 NuGet 封裝。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

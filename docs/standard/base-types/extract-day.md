@@ -4,16 +4,16 @@ description: "如何從特定日期擷取一星期的哪一日"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 88a8f8b9-f5c9-4503-b968-84468b52bb8e
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: f7ae17ac6dbc23e18d18561d5e5ae7efc037c63e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 1b9d1d497524e62e5758c9be7be7b586a421a258
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -65,65 +65,65 @@ End Module
 
     a. 若要擷取目前文化特性的工作日名稱縮寫，請呼叫日期和時間值的 [DateTime.ToString(String)](xref:System.DateTimeSystem.DateTime.ToString(System.String) 或 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 執行個體方法，並傳遞字串 "ddd" 作為 *format* 參數。 下列範例說明如何呼叫 `ToString(String)` 方法。
     
-    ```csharp
-    using System;
+```csharp
+using System;
 
-    public class Example
-    {
-       public static void Main()
-       {
-          DateTime dateValue = new DateTime(2008, 6, 11);
-          Console.WriteLine(dateValue.ToString("ddd"));   
-       }
-    }
-    // The example displays the following output:
-    //       Wed
-    ```
+public class Example
+{
+   public static void Main()
+   {
+  DateTime dateValue = new DateTime(2008, 6, 11);
+  Console.WriteLine(dateValue.ToString("ddd"));   
+   }
+}
+// The example displays the following output:
+//       Wed
+```
 
-    ```vb
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("ddd"))    
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       Wed
-    ```
+```vb
+Module Example
+   Public Sub Main()
+  Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("ddd"))    
+   End Sub
+End Module
+' The example displays the following output:
+'       Wed
+```
+
+    b. To extract the abbreviated weekday name for a specific culture, call the date and time value’s [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) or [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) instance method. Pass the string "ddd" as the *format* parameter. Pass either a [CultureInfo](xref:System.Globalization.CultureInfo) or a [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) object that represents the culture whose weekday name you want to retrieve as the *provider* parameter. The following code illustrates a call to the [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) method using a [CultureInfo](xref:System.Globalization.CultureInfo) object that represents the fr-FR culture.
     
-    b. 若要擷取特定文化特性的工作日名稱縮寫，請呼叫日期和時間值的 [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 或 [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) 執行個體方法。 傳遞字串 "ddd" 作為 *format* 參數。 傳遞 [CultureInfo](xref:System.Globalization.CultureInfo) 或 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 物件，其代表您想要將其工作日名稱當做 *provider* 參數來擷取的文化特性。 下列程式碼說明如何使用代表 fr-FR 文化特性的 [CultureInfo](xref:System.Globalization.CultureInfo) 物件，來呼叫 [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 方法。
-    
-    ```csharp
-    using System;
-    using System.Globalization;
+```csharp
+using System;
+using System.Globalization;
 
-    public class Example
-    {
+public class Example
+{
     public static void Main()
     {
         DateTime dateValue = new DateTime(2008, 6, 11);
         Console.WriteLine(dateValue.ToString("ddd", 
                             new CultureInfo("fr-FR")));    
     }
-    }
-    // The example displays the following output:
-    //       mer. 
-    ```
+}
+// The example displays the following output:
+//       mer. 
+```
 
-    ```vb
-    Imports System.Globalization
+```vb
+Imports System.Globalization
 
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("ddd", 
-                            New CultureInfo("fr-FR")))    
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       mer.
-    ```
-    
+Module Example
+   Public Sub Main()
+      Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("ddd", 
+                        New CultureInfo("fr-FR")))
+   End Sub
+End Module
+' The example displays the following output:
+'       mer.
+```
+
 ## <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>從特定日期擷取完整的工作日名稱。
 
 1. 如果您使用的是日期的字串表示，請使用靜態 [DateTime.Parse](xref:System.DateTime.Parse(System.String)) 或 [DateTimeOffset.Parse](xref:System.DateTimeOffset.Parse(System.String)) 方法，將它轉換成 [DateTime](xref:System.DateTime) 或 [DateTimeOffset](xref:System.DateTimeOffset) 值。
@@ -131,66 +131,66 @@ End Module
 2. 您可以擷取目前文化特性或特定文化特性的工作日名稱縮寫。
 
     a. 若要擷取目前文化特性的工作日名稱縮寫，請呼叫日期和時間值的 [DateTime.ToString(String)](xref:System.DateTimeSystem.DateTime.ToString(System.String) 或 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 執行個體方法，並傳遞字串 "ddd" 作為 *format* 參數。 下列範例說明如何呼叫 `ToString(String)` 方法。
-    
-    ```csharp
-    using System;
 
-    public class Example
-    {
+```csharp
+using System;
+
+public class Example
+{
     public static void Main()
     {
         DateTime dateValue = new DateTime(2008, 6, 11);
         Console.WriteLine(dateValue.ToString("dddd"));    
     }
-    }
-    // The example displays the following output:
-    //       Wednesday
-    ```
+}
+// The example displays the following output:
+//       Wednesday
+```
 
-    ```vb
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("dddd"))
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       Wednesday
-    ```
-    
-    b. 若要擷取特定文化特性的工作日名稱，請呼叫日期和時間值的 [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 或 [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) 執行個體方法。 傳遞字串 "dddd" 作為 *format* 參數。 傳遞 [CultureInfo](xref:System.Globalization.CultureInfo) 或 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 物件，其代表您想要將其工作日名稱當做 *provider* 參數來擷取的文化特性。 下列程式碼說明如何使用代表 es-ES 文化特性的 [CultureInfo](xref:System.Globalization.CultureInfo) 物件，來呼叫 [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 方法。
-    
-    ```csharp
-    using System;
-    using System.Globalization;
+```vb
+Module Example
+   Public Sub Main()
+      Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("dddd"))
+   End Sub
+End Module
+' The example displays the following output:
+'       Wednesday
+```
 
-    public class Example
-    {
+    b. To extract the weekday name for a specific culture, call the date and time value’s [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) or [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) instance method. Pass the string "dddd" as the *format* parameter. Pass either a [CultureInfo](xref:System.Globalization.CultureInfo) or a [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) object that represents the culture whose weekday name you want to retrieve as the *provider* parameter. The following code illustrates a call to the [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) method using a [CultureInfo](xref:System.Globalization.CultureInfo) object that represents the es-ES  culture.
+
+```csharp
+using System;
+using System.Globalization;
+
+public class Example
+{
     public static void Main()
     {
         DateTime dateValue = new DateTime(2008, 6, 11);
         Console.WriteLine(dateValue.ToString("dddd", 
                             new CultureInfo("es-ES")));    
     }
-    }
-    // The example displays the following output:
-    //       miércoles.
-    ```
+}
+// The example displays the following output:
+//       miércoles.
+```
 
-    ```vb
-    Imports System.Globalization
+```vb
+Imports System.Globalization
 
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("dddd", _
-                            New CultureInfo("es-ES")))     
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       miércoles.
-    ```
-    
+Module Example
+   Public Sub Main()
+      Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("dddd", _
+                        New CultureInfo("es-ES"))) 
+   End Sub
+End Module
+' The example displays the following output:
+'       miércoles.
+```
+
 ## <a name="example"></a>範例
 
 此範例說明如何呼叫 [Datetime.DayOfWeek](xref:System.DateTime.DayOfWeek) 和 [DateTimeOffset.DayOfWeek](xref:System.DateTimeOffset.DayOfWeek) 屬性以及 [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String) 或 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 方法，以針對特定日期擷取代表星期幾的數字、縮寫的工作日名稱，以及完整的工作日名稱。 
@@ -476,9 +476,4 @@ End Module
 
 [自訂日期與時間格式字串](custom-datetime.md)
     
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

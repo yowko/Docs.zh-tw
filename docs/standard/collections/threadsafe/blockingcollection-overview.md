@@ -3,16 +3,17 @@ title: "BlockingCollection 概觀"
 description: "BlockingCollection 概觀"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a1a867de-53c2-49ca-9a1a-e5770a942724
 translationtype: Human Translation
-ms.sourcegitcommit: e07788926a995b41571be276379ad9285747951d
-ms.openlocfilehash: 991b4b8389cc967881c2c39d29c387687047489f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 8a770fb7143a547031daf231d1a0863322c3cfaa
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -130,10 +131,5 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 [集合與資料結構](../index.md)
 
 [安全執行緒集合](index.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

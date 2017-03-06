@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 956a0766fe0171052983627f2cf2e8264d6b0365
-ms.openlocfilehash: f01c6521becb930923693a6b6867479f3b5d6df9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b752e23f37f83a68ef4a7a97108479f7736d53cd
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -53,17 +54,17 @@ CLI 工具會以兩種主要方式封裝，如[概觀文件](tools/index.md#inst
 下表顯示 DNX/DNU 命令和 CLI 對應項目之間的對應。
 
 
-| DNX 命令                       | CLI 命令       | 描述                                                                                                       |
-|--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
-| dnx run                           | dotnet run        | 從來源執行程式碼。                                                                                             |
-| dnu build                         | dotnet build      | 建置您程式碼的 IL 二進位檔。                                                                                  |
-| dnu pack                          | dotnet pack       | 封裝您程式碼的 NuGet 套件。                                                                          |
-| dnx \[command] (例如 "dnx web")   | N/A\*             | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                       |
-| dnu install                       | N/A\*             | 在 DNX 環境中，將套件安裝為相依性。                                                              |
-| dnu restore                       | dotnet restore    | 還原您在 project.json 中指定的相依性。                                                              |
-| dnu publish                       | dotnet publish    | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。    |
-| dnu wrap                          | N/A\*             | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                      |
-| dnu 命令                      | N/A\*             | 在 DNX 環境中，管理已全域安裝的命令。                                                             |
+| DNX 命令                        | CLI 命令        | 描述                                                                                                         |
+|--------------------------------    |----------------    |-----------------------------------------------------------------------------------------------------------------    |
+| dnx run                            | dotnet run         | 從來源執行程式碼。                                                                                               |
+| dnu build                          | dotnet build       | 建置您程式碼的 IL 二進位檔。                                                                                    |
+| dnu pack                           | dotnet pack        | 封裝您程式碼的 NuGet 套件。                                                                            |
+| dnx \[command] (例如 "dnx web")     | N/A\*              | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                         |
+| dnu install                        | N/A\*              | 在 DNX 環境中，將套件安裝為相依性。                                                                |
+| dnu restore                        | dotnet restore     | 還原您在 project.json 中指定的相依性。                                                                |
+| dnu publish                        | dotnet publish     | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。     |
+| dnu wrap                           | N/A\*              | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                        |
+| dnu 命令                       | N/A\*              | 在 DNX 環境中，管理已全域安裝的命令。                                                               |
 
 (\*) - CLI 的設計並不支援這些功能。 
 
@@ -118,7 +119,7 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 如果您的 `project.json` 中有「命令」區段，您可以將它移除。 如果某些命令原本是以 DNU 命令的形式存在 (例如 Entity Framework CLI 命令)，則這些命令會以每個專案擴充功能的形式移植至 CLI。 如果您要自行建立命令以在專案中使用，則需要將其取代為 CLI 擴充功能。 在此情況下，必須將 `project.json` 中的 `commands` 節點取代為 `tools` 節點，而且它必須列出工具相依性 (如 [CLI 擴充性區段](tools/index.md#extensibility)中所述)。 
 
-完成這些作業之後，您必須決定應用程式要具備哪種類型的可攜性。 我們對 .NET Core 所提供的可攜性選項範圍投注不少心力，以供您選擇。 比方說，您可能需要完全*可攜式*的應用程式，或希望擁有*獨立*的應用程式。 可攜式應用程式選項很像 .NET Framework 應用程式的運作方式：它需要共用元件以在目標電腦 (.NET Core) 上執行。 獨立的應用程式不需要在目標上安裝 .NET Core，但是您必須為每個想要支援的作業系統產生一個應用程式。  [應用程式可攜性類型](deploying/index.md)文件中會說明這些可攜性類型等相關資訊。 
+完成這些作業之後，您必須決定應用程式要具備哪種類型的可攜性。 我們對 .NET Core 所提供的可攜性選項範圍投注不少心力，以供您選擇。 比方說，您可能需要完全*可攜式*的應用程式，或希望擁有*獨立*的應用程式。 可攜式應用程式選項很像 .NET Framework 應用程式的運作方式：它需要共用元件以在目標電腦 (.NET Core) 上執行。 獨立的應用程式不需要在目標上安裝 .NET Core，但是您必須為每個想要支援的作業系統產生一個應用程式。 bpt id="p1" xmlns="urn:oasis:names:tc:xliff:document:1.2"> [</bpt>應用程式可攜性類型](deploying/index.md)文件中會說明這些可攜性類型等相關資訊。 
 
 一旦您決定要使用何種可攜性類型時，即需要變更目標架構。 如果您撰寫過 .NET Core 的應用程式，您很可能會使用 `dnxcore50` 做為目標架構。 若要使用 CLI 以及新 [.NET 標準程式庫](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/net-platform-standard.md)帶來的變更 ，架構必須是下列其中之一：
 
@@ -141,10 +142,5 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 執行 `dotnet build` 時，會將任何最終建置錯誤顯示出來，但不應該有太多錯誤。 建置好程式碼並順利執行後，您可以再使用執行器測試一下。 執行 `dotnet <path-to-your-assembly>`，並查看其執行狀況。
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

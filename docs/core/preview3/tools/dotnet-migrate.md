@@ -1,5 +1,5 @@
 ---
-title: "dotnet-migrate 命令 | .NET Core SDK"
+title: "dotnet-migrate 命令 | Microsoft Docs"
 description: "dotnet-migrate 命令會移轉專案及其所有相依性。"
 keywords: "dotnet-migrate, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -9,17 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 150d70e3f0a80f7f6e733abee3691a0fe420919f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 57ae01419c6f7a75970816e1245094c38c5247fa
 
 ---
 
 #<a name="dotnet-migrate"></a>dotnet-migrate
 
+[!INCLUDE[preview-warning](../../../includes/warning.md)]
+
 ## <a name="name"></a>名稱 
-dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 3 .NET Core 專案
+dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 RC4 .NET Core 專案
 
 ## <a name="synopsis"></a>概要
 
@@ -30,7 +32,7 @@ dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 3 .NET Core �
     [<arguments>]`
 
 ## <a name="description"></a>說明
-`dotnet migrate` 命令將會移轉有效的 Preview 2 `project.json` 專案至有效 Preview 3 `csproj` 專案。 根據預設，命令將會移轉根專案和根專案包含的任何專案參考。 此行為可使用 `--skip-project-references` 選項在執行階段停用。 
+`dotnet migrate` 命令會將有效的 Preview 2 `project.json` 專案移轉至有效的 RC4 `csproj` 專案。 根據預設，命令將會移轉根專案和根專案包含的任何專案參考。 此行為可使用 `--skip-project-references` 選項在執行階段停用。 
 
 移轉可在以下任一情況完成：
 
@@ -42,7 +44,7 @@ dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 3 .NET Core �
 
 根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。 如果您使用 `--report-file` 選項，輸出也會儲存到您指定的檔案。 
 
-截至 Preview 3 為止，`dotnet migrate` 命令只支援有效的 Preview 2 `project.json` 檔案。 這表示您無法使用它來將舊的 DNX 或 Preview 1 `project.json` 檔案直接移轉為 csproj；您必須先將它們移轉為 Preview 2 project.json 檔案，然後再移轉為 csproj 檔案。 在未來，我們將加入對 Preview 1 專案的支援。 
+截至 RC4 為止，`dotnet migrate` 命令只支援有效的 Preview 2 `project.json` 檔案。 這表示您無法使用它來將舊的 DNX 或 Preview 1 `project.json` 檔案直接移轉為 csproj；您必須先將它們移轉為 Preview 2 project.json 檔案，然後再移轉為 csproj 檔案。 在未來，我們將加入對 Preview 1 專案的支援。 
 
 ## <a name="options"></a>選項
 
@@ -90,11 +92,9 @@ dotnet-migrate -- 將 Preview 2 .NET Core 專案移轉至 Preview 3 .NET Core �
 
 只移轉目前的專案而不移轉專案對專案相依性，並使用特定的 SDK 版本：
 
-`dotnet migrate -s -v 1.0.0-preview3`
+`dotnet migrate -s -v 1.0.0-preview4`
 
 
-
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

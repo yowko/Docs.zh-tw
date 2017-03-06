@@ -1,26 +1,29 @@
 ---
-title: "dotnet-publish 命令 | .NET Core SDK"
+title: "dotnet-publish 命令 | Microsoft Docs"
 description: "dotnet-publish 命令會將 .NET Core 專案發行到目錄中。"
 keywords: "dotnet-publish, CLI, CLI 命令, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 2b00a2c6da73c2252997b63aca8fc475cac8999f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1cf1611ab83874ad44855521d21040d102206338
 
 ---
 
-#<a name="dotnetpublish"></a>dotnet-publish
+#<a name="dotnet-publish"></a>dotnet-publish
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-publish (.NET Core 工具 RC4)](../preview3/tools/dotnet-publish.md) 主題。
 
-`dotnet-publish` - 將應用程式及其所有相依性封裝到資料夾，以準備進行發行
+## <a name="name"></a>名稱
+
+`dotnet-publish` - 將應用程式及其所有相依性封裝到資料夾，以準備進行發行。
 
 ## <a name="synopsis"></a>概要
 
@@ -102,6 +105,6 @@ ms.openlocfilehash: 2b00a2c6da73c2252997b63aca8fc475cac8999f
 * [執行階段識別項 (RID) 目錄](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

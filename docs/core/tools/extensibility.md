@@ -1,5 +1,5 @@
 ---
-title: ".NET Core CLI 擴充性模型"
+title: ".NET Core CLI 擴充性模型 | Microsoft Docs"
 description: ".NET Core CLI 擴充性模型"
 keywords: "CLI, 擴充性, 自訂命令, .NET Core"
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: 4223f296224c9b62c88b72f0f643c8b8b6fc9f6b
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0a136e69e103994a69084b09f481489880d5df42
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 擴充性模型 
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [.NET Core CLI 擴充性模型 (.NET Core 工具 RC4)](../preview3/tools/extensibility.md) 主題。
 
 ## <a name="overview"></a>概觀
 本文件將涵蓋如何擴充 CLI 工具的主要方法，並說明驅動所有項目的案例。 它將會概述如何使用這些工具，以及提供如何建置這兩種工具的簡短附註。 
@@ -132,6 +135,6 @@ echo "Cleaning complete..."
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

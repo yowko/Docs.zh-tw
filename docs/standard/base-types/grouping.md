@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 05fcdadee5d932a53941386f97971c24cc912fd8
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -815,7 +816,7 @@ End Module
 
 零寬度左合樣 (Positive Lookbehind) 判斷提示通常會用在規則運算式開頭。 其定義的模式是比對的前置條件，但不包含在比對結果中。 
 
-例如，下列範例會比對 21 世紀年份的後兩位數 (也就是說，比對的字串前面需要有數字 "20")。
+例如，下列範例會比對&21; 世紀年份的後兩位數 (也就是說，比對的字串前面需要有數字 "20")。
 
 ```csharp
 using System;
@@ -1160,9 +1161,4 @@ End Module
 [規則運算式語言 - 快速參考](quick-ref.md)
 
 [規則運算式中的回溯](backtracking.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

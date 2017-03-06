@@ -1,23 +1,25 @@
 ---
-title: ".NET Core 命令列介面 (CLI) 工具"
+title: ".NET Core 命令列介面 (CLI) 工具 | Microsoft Docs"
 description: "何謂命令列介面 (CLI) 和其主要功能的概觀"
 keywords: "CLI, CLI 工具, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d9e689524a3100f1c5c129bdf13ed691a850ad2e
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb9e39ed400ad93ae9b38890caa6c579f4a1594
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>.NET Core 命令列介面工具
+# <a name="net-core-command-line-interface-tools-net-core-tools-rc4"></a>.NET Core 命令列介面工具 (.NET Core 工具 RC4)
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [.NET Core 命令列介面工具](../../tools/index.md)主題。
 
 .NET Core 命令列介面 (CLI) 是新的基礎跨平台工具鏈，適用於開發 .NET Core 應用程式。 它是「基礎」，原因是它是在其上建置其他較高階工具 (例如整合式開發環境 (IDE)、編輯器和建置 Orchestrator 的主要層。 
 
@@ -36,6 +38,7 @@ ms.openlocfilehash: d9e689524a3100f1c5c129bdf13ed691a850ad2e
 預設會安裝下列命令：
 
 * [new](dotnet-new.md)
+* [移轉](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -86,10 +89,11 @@ CLI 可透過兩種主要方式讓應用程式具有可攜性︰
 
 您可以在 [.NET Core 應用程式部署](../deploying/index.md)主題中深入了解這兩項。 
 
-## <a name="migration-from-preview-3projectjson"></a>從 Preview 3/project.json 移轉
+## <a name="migration-from-rc4projectjson"></a>從 RC4/project.json 移轉
 如果您使用 Preview 2 工具和 project.json 專案，您可以查閱 [dotnet migrate](dotnet-migrate.md) 命令文件以熟悉命令以及如何移轉專案。 
 
-> **注意：**`dotnet migrate` 命令目前不會移轉 Preview 2 之前版本的 project.json 檔案。 
+> [!NOTE]
+> `dotnet migrate` 命令目前不會移轉 Preview 2 之前版本的 project.json 檔案。 
 
 ## <a name="extensibility"></a>擴充性
 當然，並非您可以在工作流程中使用的工具都是核心 CLI 工具的一部分。 不過，.NET Core CLI 具有擴充性模型，可讓您指定專案的額外工具。 您可以在 [.NET Core CLI 擴充性模型](extensibility.md)主題中深入了解。
@@ -101,6 +105,6 @@ CLI 可透過兩種主要方式讓應用程式具有可攜性︰
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

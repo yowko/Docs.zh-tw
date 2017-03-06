@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 translationtype: Human Translation
-ms.sourcegitcommit: 1cb9e19ec9c9c0764244aeec5f62b812cbd91aef
-ms.openlocfilehash: 8cc784c267e9ca85ae110f8c92e0191f6fee6596
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
+ms.lasthandoff: 03/02/2017
 
 ---
  
@@ -219,10 +220,5 @@ api                 latest               ef17184c8de6        1 hour ago        2
 
 使用 Docker 產生器將必要的檔案新增至 Web API 應用程式，曾經讓建立開發和生產環境版本映像的程序變得簡單。  這項工具之所以能夠跨平台，是因為它也提供 PowerShell 指令碼來達成，在提供於容器內逐步偵錯應用程式的 Windows 和 Visual Studio 整合中達到相同的結果。 透過了解映像變體和目標案例，您可以最佳化內部迴圈開發程序，同時達到最佳化生產環境部署的映像。  
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

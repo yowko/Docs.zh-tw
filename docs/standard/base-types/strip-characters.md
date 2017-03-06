@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: f1df4967-7887-41d2-b60f-0da9be67c8fa
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 2d5b0756ab8c34cca0c4ca7c1eb73f81a7a10b70
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 59824a372405036c2ab6fac2730b67c9c2dfa7f4
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.openlocfilehash: 2d5b0756ab8c34cca0c4ca7c1eb73f81a7a10b70
 
 ## <a name="example"></a>範例
 
-您可以使用此範例中定義的 `CleanInput` 方法，去除使用者在文字欄位中可能已輸入的有害字元。 在此情況下，`CleanInput` 會去除句點 (.)、符號 ((@),) 及連字號 (-) 以外的所有非英數字元，並傳回剩餘的字串。 不過，您可以修改規則運算式模式，讓它去除輸入字串中不應包含的任何字元。
+您可以使用此範例中定義的 `CleanInput` 方法，去除使用者在文字欄位中可能已輸入的有害字元。 在此情況下，`CleanInput` 會去除句點 (.)、符號 (@) 以及連字號 (-) 以外的所有非英數字元，並傳回剩餘的字串。 不過，您可以修改規則運算式模式，讓它去除輸入字串中不應包含的任何字元。
 
 ```csharp
 using System;
@@ -70,9 +71,4 @@ End Module
 [.NET 規則運算式](regular-expressions.md)
 
 [規則運算式範例](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

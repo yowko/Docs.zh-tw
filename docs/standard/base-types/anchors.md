@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 96dff1be-3005-4ba5-af1b-323182a26085
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ef2a63115f1efbe2418c348a3379fe7dd2face86
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 53345ba6ffda09a21cf4c626124797a3818aa504
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -187,7 +188,7 @@ End Module
 `(\w+\s\w+)` | 比對一或多個文字字元，後面接空格，再接一或多個文字字元。 這是第四個擷取群組。
 `,` | 比對逗號。
 `\s\d{4}` | 比對後面接著四個十進位數字的空格。
-`(-(\d{4}`&#124;`present))?` |  比對出現零次或一次的連字號，後面接著四個十進位數字或字串 "present"。 這是第六個擷取群組。 它也包括第七個擷取群組。 
+`(-(\d{4}`&#124;`present))?` |    比對出現零次或一次的連字號，後面接著四個十進位數字或字串 "present"。 這是第六個擷取群組。 它也包括第七個擷取群組。 
 `,?` | 比對出現零次或一次的逗號。
 `(\s\d{4}(-(\d{4}`&#124;`present))?,?)+` | 比對出現一或多次的下列項目：空格、四個十進位數字、出現零或一次的連字號 (該連字號後面接著四個十進位數字或字串 "present")，以及零或一個逗號。 這是第五個擷取群組。
  
@@ -894,9 +895,4 @@ End Module
 
 [規則運算式選項](options.md)
  
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

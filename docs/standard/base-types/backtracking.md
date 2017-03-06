@@ -4,16 +4,16 @@ description: "規則運算式中的回溯"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8a3e6298-26b7-4c99-bd97-c9892f6c9418
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 00e324803cf5c57eab1cc71eb819949247131479
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 58925ce755e995432f3ff205793a192f34999e12
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -228,7 +228,7 @@ End Module
 
 * 它會返回之前儲存的符合結果 4。 然後判斷出有一個額外的 "a" 字元要指派至額外的擷取群組。 最後測試是否到達字串結尾。 由於字串中剩下一個額外的字串，因此比對失敗。 這個失敗的比對需要經過 4 次比較。 到目前為止，總共執行了 13 次比較。
 
-* 它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果 3，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。 
+* 它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果&3;，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。 
 
 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於巢狀數量詞的關係，這個比較是 O(2n) 或指數運算，其中 n 是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。
 
@@ -236,7 +236,7 @@ End Module
 
 回溯可讓您建立強大、靈活的規則運算式。 不過，如上一節所示，這些好處可能伴隨著令人敬謝不敏的低落效能。 為了避免大量回溯，當您具現化 [Regex](xref:System.Text.RegularExpressions.Regex) 物件或呼叫靜態規則運算式比對方法時，應該定義逾時間隔。 下一節將討論這個部分。 此外，.NET Core 支援三個規則運算式語言項目，可限制或隱藏回溯並支援複雜的規則運算式，而且對效能的影響微不足道：[非回溯子運算式](#nonbacktracking-subexpression)、[左合樣判斷提示](#lookbehind-assertions)和[右合樣判斷提示](#lookahead-assertions)。 如需各語言項目的詳細資訊，請參閱[規則運算式中的群組建構](grouping.md)。
 
-### <a name="defining-a-timeout-interval"></a>定義逾時間隔
+### <a name="defining-a-time-out-interval"></a>定義逾時間隔
 
 您可以設定逾時值，表示規則運算式引擎開始搜尋單一符合項目到放棄嘗試並擲回 [RegexMatchTimeoutException](xref:System.Text.RegularExpressions.RegexMatchTimeoutException) 例外狀況之前的最長間隔。 您可以提供執行個體規則運算式之 `Regex(String, RegexOptions, TimeSpan)` 建構函式的 [TimeSpan](xref:System.TimeSpan) 值，藉此指定逾時間隔。 此外，每一個靜態模式比對方法都有將 [TimeSpan](xref:System.TimeSpan) 值指派給 [Regex.Regex(String, RegexOptions, TimeSpan)] 參數的多載，可讓您指定逾時值。 根據預設，逾時間隔會設為 [Regex.InfiniteMatchTimeout](xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout)，表示規則運算式引擎不會逾時。 
 
@@ -683,10 +683,5 @@ End Module
 [規則運算式中的替代建構](alternation.md)
 
 [規則運算式中的群組建構](grouping.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

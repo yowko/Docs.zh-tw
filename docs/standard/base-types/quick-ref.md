@@ -4,20 +4,20 @@ description: "規則運算式語言 - 快速參考"
 keywords: ".NET、.NET Core"
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8c5dee8c-7bc7-4e6e-aff1-986965c4d98e
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ff1eef78985f9b5b428f3b696fb267b59f3cb283
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a6644fc2431beafa2128287eeac73bd598ee304a
+ms.lasthandoff: 03/02/2017
 
 ---
 
-# <a name="regular-expression-language-quick-reference"></a>規則運算式語言 - 快速參考
+# <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 
 規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。 如需簡介，請參閱[.NET 中的規則運算式](regular-expressions.md)。 
 
@@ -145,7 +145,7 @@ __*?__ | 比對上一個項目零次以上，但越少次越好。 | `\d*?\.\d` 
 
 反向參考建構 | 描述 | 模式 | 相符項
 ----------------------- | ----------- | ------- | -------
-**\**_number_ | 反向參考。 比對編號子運算式的值。 | `(\w)\1 ` | "seek" 中的 "ee"
+**\**_number_ | 反向參考。 比對編號子運算式的值。 | `(\w)\1    ` | "seek" 中的 "ee"
 **\k<**_name_**>** | 命名的反向參考。 比對具名運算式的值。 | `(?<char>\w)\k<char>` | "seek" 中的 "ee"
 
 ## <a name="alternation-constructs"></a>替代建構
@@ -221,9 +221,4 @@ __(?(__*expression*__)__*yes*__&#124;__*no*__)__ | 如果 *expression* 所指定
 [下載 Word (.docx) 格式](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
     
 [下載 PDF (.pdf) 格式](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

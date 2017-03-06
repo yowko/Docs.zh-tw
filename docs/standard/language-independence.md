@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -617,7 +618,7 @@ public class person
 
 * 接下來的字元可以來自和第一個字元相同的任何分類，而且也可以包含非間距記號、間距組合記號、十進位數字、連接子標點符號和格式化程式碼。 
 
-在您比較識別項之前，應該先篩掉格式化程式碼，並將識別項轉換為 Unicode 正規化表單 C，因為單一字元可由多個 UTF 16 編碼字碼單位表示。 產生和 Unicode 正規化表單 C 相同的字碼單位的字元順序不符合 CLS 標準。 下面範例會定義名為 `Å` 的屬性和名為 `Å` 的第二個屬性。前者包含 ANGSTROM SIGN 字元 (U+212B)，後者包含 LATIN CAPITAL LETTER A WITH RING ABOVE 字元 (U+00C5)。 C# 編譯器會將原始程式碼標示為不符合 CLS 標準。
+在您比較識別項之前，應該先篩掉格式化程式碼，並將識別項轉換為 Unicode 正規化表單 C，因為單一字元可由多個 UTF&16; 編碼字碼單位表示。 產生和 Unicode 正規化表單 C 相同的字碼單位的字元順序不符合 CLS 標準。 下面範例會定義名為 `Å` 的屬性和名為 `Å` 的第二個屬性。前者包含 ANGSTROM SIGN 字元 (U+212B)，後者包含 LATIN CAPITAL LETTER A WITH RING ABOVE 字元 (U+00C5)。 C# 編譯器會將原始程式碼標示為不符合 CLS 標準。
 
 ```csharp
 public class Size
@@ -781,7 +782,7 @@ Public Class [case]
 End Class
 ```
 
-下面 C# 範例可以使用 `case` 符號區分識別項與語言關鍵字，以具現化 @ 類別。 若沒有它，C# 編譯器會顯示兩個錯誤訊息：「必須是類型」和「無效的運算式詞彙 'case'」。 
+下面 C# 範例可以使用 @ 符號區分識別項與語言關鍵字，以具現化 `case` 類別。 若沒有它，C# 編譯器會顯示兩個錯誤訊息：「必須是類型」和「無效的運算式詞彙 'case'」。 
 
 ```csharp
 using System;
@@ -2951,10 +2952,5 @@ vbc example.vb /r:UtilityLib.dll
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

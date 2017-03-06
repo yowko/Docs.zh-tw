@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 translationtype: Human Translation
-ms.sourcegitcommit: 30175813af95911c8ab4f2f0e39c40bed49a23b3
-ms.openlocfilehash: e6212a63e74f2d1525e87480b092861be9f92379
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ec5619e164be44205060d790ba1dc66e261faf92
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -39,9 +40,4 @@ ms.openlocfilehash: e6212a63e74f2d1525e87480b092861be9f92379
 ## <a name="processing-the-assemblies"></a>處理組件
 
 可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 [System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx) 和 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目途之工具的不錯範例。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

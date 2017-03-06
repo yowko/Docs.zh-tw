@@ -4,16 +4,15 @@ description: "複合格式化"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a01efc8f-c242-4535-bd32-acd0032d9590
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 9bcf2ff74237f7e7faf2890849c2d68a0a602353
+ms.sourcegitcommit: 90ade65e167770bdbcbbf79707fe48e6fbc030c0
+ms.openlocfilehash: 5b61b4736880d57f02070150d8613d860505b268
 
 ---
 
@@ -25,7 +24,7 @@ ms.openlocfilehash: 9bcf2ff74237f7e7faf2890849c2d68a0a602353
 
 * [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))，傳回格式化的結果字串。 
 
-* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider, System.String, System.Object)，將格式化的結果字串附加至 [StringBuilder](xref:System.Text.StringBuilder) 物件。
+* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object))，其會將格式化的結果字串附加至 [StringBuilder](xref:System.Text.StringBuilder) 物件。
 
 * [Console](xref:System.Console) `WriteLine` 方法的部分多載，對主控台顯示格式化的結果字串。  
 
@@ -41,7 +40,7 @@ ms.openlocfilehash: 9bcf2ff74237f7e7faf2890849c2d68a0a602353
 
 複合格式字串和物件清單會當做支援複合格式功能之方法的引數來使用。 複合格式字串是由零個或更多段與一個或多個格式項目混合的固定文字所組成， 固定文字是您選擇的任何文字，而每個格式項目都會對應到清單內的一個物件或 boxed 結構。 複合格式功能將會傳回新的結果字串，其中每一個格式項目都會由清單內對應物件的字串表示來取代。
 
-請考慮下列 [Format](xref:System.String.Format(System.String.Format(System.IFormatProvider,System.String,System.Object)) 程式碼片段。
+請考慮下列 [Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) 程式碼片段。
 
 ```csharp
 string name = "Fred";
@@ -65,7 +64,7 @@ __{__*index*[,*alignment*][:*formatString*]__}__
  
 ### <a name="index-component"></a>索引元件
 
-強制的 *index* 元件 (也稱為參數規範) 是用以識別物件清單中對應項目的數字 (從 0 開始)。 也就是說，參數規範為 0 的格式項目會格式化清單中的第一個物件，而參數規範為 1 的格式項目會格式化清單中的第二個物件，依此類推。 下列範例包含四個參數規範 (編號為 0 到 3)，以表示小於 10 的質數： 
+強制的 *index* 元件 (也稱為參數規範) 是用以識別物件清單中對應項目的數字 (從 0 開始)。 也就是說，參數規範為 0 的格式項目會格式化清單中的第一個物件，而參數規範為 1 的格式項目會格式化清單中的第二個物件，依此類推。 下列範例包含四個參數規範 (編號為&0; 到&3;)，以表示小於&10; 的質數： 
 
 ```csharp
 string primes;
@@ -230,9 +229,9 @@ Console.WriteLine(output)
 
 3. 如果值實作 [IFormattable](xref:System.IFormattable) 介面，則會呼叫介面的 [ToString(String,IFormatProvider)](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) 方法。 如果格式項目中有 *formatString* 值的話，就會將該值傳遞給方法；如果沒有的話，則會傳遞 `null`。 [IFormatProvider](xref:System.IFormatProvider) 引數的判斷如下：
 
-    *   對於數值，如果呼叫具有非 null [IFormatProvider](xref:System.IFormatProvider) 引數的複合格式化方法，則執行階段會從其 [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) 方法要求 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式化方法沒有 [IFormatProvider](xref:System.IFormatProvider) 參數，則會使用目前執行緒文化特性的 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo 物件。 
+    *   對於數值，如果呼叫具有非 null [IFormatProvider](xref:System.IFormatProvider) 引數的複合格式化方法，則執行階段會從其 [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) 方法要求 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式化方法沒有 [IFormatProvider](xref:System.IFormatProvider) 參數，則會使用目前執行緒文化特性的 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 物件。 
     
-    * 對於日期和時間值，如果呼叫具有非 null [IFormatProvider](xref:System.IFormatProvider) 引數的複合格式化方法，則執行階段會從其 [IFormatProvider.GetFormat](xref:System.IFormatProvider._GetFormat(System.Type) 方法要求 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式化方法沒有 [IFormatProvider](xref:System.IFormatProvider) 參數，則會使用目前執行緒文化特性的 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 物件。 
+    * 對於日期和時間值，如果呼叫具有非 null [IFormatProvider](xref:System.IFormatProvider) 引數的複合格式化方法，則執行階段會從其 [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) 方法要求 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式化方法沒有 [IFormatProvider](xref:System.IFormatProvider) 參數，則會使用目前執行緒文化特性的 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 物件。 
     
     * 對於其他類型的物件，如果使用 [IFormatProvider](xref:System.IFormatProvider) 引數呼叫複合格式，其值 (包括未提供 [IFormatProvider](xref:System.IFormatProvider) 物件時的 `null`) 會直接傳遞至 [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) 實作。 否則，表示目前執行緒文化特性的 [CultureInfo](xref:System.Globalization.CultureInfo) 物件會傳遞至 [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) 實作。 
     
@@ -377,6 +376,6 @@ Console.WriteLine(FormatPrice)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

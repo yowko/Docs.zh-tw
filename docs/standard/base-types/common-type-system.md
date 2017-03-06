@@ -4,16 +4,16 @@ description: "深入了解一般型別系統"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: b5482a1d-7bdc-40fe-aa45-10df930ceb5b
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 7d7f869b07d7cf00ffa69da117aa199d1b6e8f20
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 6be672acc84a76106e25b82574acad16beb4a8ac
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -533,8 +533,3 @@ newslot 或 override | 全部 | 定義成員與具有相同簽章的繼承成員
 ## <a name="see-also"></a>請參閱
 
 [.NET Framework 中的類型轉換](type-conversion.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

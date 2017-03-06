@@ -1,26 +1,29 @@
 ---
-title: "dotnet-pack 命令 | .NET Core SDK"
+title: "dotnet-pack 命令 | Microsoft Docs"
 description: "dotnet-pack 命令會建立 .NET Core 專案的 NuGet 套件。"
 keywords: "dotnet-pack, CLI, CLI 命令, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: d439dc83cc4538b44634197f3dce1bf7ad2ad6c7
 
 ---
 
-#<a name="dotnetpack"></a>dotnet-pack
+#<a name="dotnet-pack"></a>dotnet-pack
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-pack (.NET Core 工具 RC4)](../preview3/tools/dotnet-pack.md) 主題。
 
-`dotnet-pack`- 將程式碼封裝到 NuGet 套件
+## <a name="name"></a>名稱
+
+`dotnet-pack` - 將程式碼封裝到 NuGet 套件。
 
 ## <a name="synopsis"></a>概要
 
@@ -90,6 +93,6 @@ ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
 `dotnet pack --version-suffix "ci-1234"`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

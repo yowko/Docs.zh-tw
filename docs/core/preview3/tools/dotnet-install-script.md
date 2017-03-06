@@ -1,5 +1,5 @@
 ---
-title: "dotnet-install 指令碼 | .NET Core SDK"
+title: "dotnet-install 指令碼 | Microsoft Docs"
 description: "了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。"
 keywords: "dotnet-install, dotnet-install 指令碼, .NET Core"
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
+ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 08a401abed36e68caa7172e05184d18469fef48f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0063ac1220a1f01eef6e7300b0907518863ee01e
 
 ---
 
-#<a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
+#<a name="dotnet-install-scripts-reference-net-core-tools-rc4"></a>dotnet-install 指令碼參考 (.NET Core 工具 RC4)
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 RC4。 .NET Core 工具 Preview 2 版本，請參閱 [dotnet-install 指令碼參考](../../tools/dotnet-install-script.md)主題。
 
 ## <a name="name"></a>名稱
 dotnet-install.ps1 | dotnet-install.sh - 用來安裝命令列介面 (CLI) 工具和共用執行階段的指令碼
@@ -126,6 +129,6 @@ macOS/Linux：
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

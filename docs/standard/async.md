@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
-ms.sourcegitcommit: 9abc4879533074e6830a7343123b139e912d239b
-ms.openlocfilehash: 033d5e8eb317a17a8f121ff37c2731c3d24999f0
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fb9940e56b5d0e8f4474584102f2e6167a79f291
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -39,10 +40,5 @@ ms.openlocfilehash: 033d5e8eb317a17a8f121ff37c2731c3d24999f0
 ## <a name="whats-next"></a>後續步驟
 
 若要深入探討非同步概念和程式設計，請參閱[深入了解非同步](async-in-depth.md)。
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

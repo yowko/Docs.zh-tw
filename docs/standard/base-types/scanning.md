@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d6484880-bdac-47cd-b5e5-9419c9ed14cd
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 494ceeb2cc3bbf77098d2b6145690e7229ed3b9f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7dfc48e03a275522a48a49dbb44ce1d0f8b05e75
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -132,10 +133,5 @@ End Sub
 [.NET 規則運算式](regular-expressions.md)
 
 [規則運算式範例](regex-examples.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

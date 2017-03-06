@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 translationtype: Human Translation
-ms.sourcegitcommit: 03193513706967a46f74bccdba08a56946dd67df
-ms.openlocfilehash: 274402bbd254e97d88771675daf07995983914aa
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -123,9 +124,4 @@ microsoft/aspnetcore       1.0.1               189ad4312ce7        5 days ago   
 ```
 
 不過，使用磁碟區對應，生產環境或發行映像的大小預期會比 **dev** 映像更小；偵錯工具和應用程式過去確實是從本機電腦執行，不是在容器內執行。 **最新的**映像已封裝在執行主機電腦應用程式所需的整個應用程式程式碼中，所以此差異是應用程式程式碼的大小。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

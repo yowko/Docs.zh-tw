@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: dc64b681-b3aa-4911-8e30-0764a8b6a852
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: ab71ad5ff9148f00f392fddd3c89acbcab874015
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 76cd207a9ff72f756a2fb48b9e02096507657cc0
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -29,10 +30,5 @@ ms.openlocfilehash: ab71ad5ff9148f00f392fddd3c89acbcab874015
 ## <a name="see-also"></a>另請參閱
 
 [.NET 規則運算式](regular-expressions.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

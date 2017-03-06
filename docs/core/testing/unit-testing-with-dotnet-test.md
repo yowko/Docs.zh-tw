@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 0c98084786408a285111ae724ed404ce32160aea
+ms.sourcegitcommit: 5687fc7ded899a478d1972ffea10a1e37d40124b
+ms.openlocfilehash: f1f08f550d7484869e67fe705dc789ca5dae8e2f
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -20,6 +21,9 @@ ms.openlocfilehash: 0c98084786408a285111ae724ed404ce32160aea
 作者 [Steve Smith](http://ardalis.com) 和 [Bill Wagner](https://github.com/BillWagner)
 
 [檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test)
+
+> [!NOTE]
+> 本主題適用於 .NET Core 1.0。
 
 ## <a name="creating-the-projects"></a>建立專案
 
@@ -106,10 +110,6 @@ namespace Prime.Services
 
 ```json
 "dependencies": {
-  "Microsoft.NETCore.App": {
-    "type":"platform",
-    "version": "1.0.0"
-  },
   "xunit":"2.1.0",
   "dotnet-test-xunit": "1.0.0-rc2-192208-24",
   "PrimeService": {
@@ -210,9 +210,4 @@ if(candidate < 2)
    
    > [!TIP]
    > 在 Windows 平台上，您可以使用 MSTest。 如需詳細資訊，請參閱[在 Windows 文件上使用 MSTest](./using-mstest-on-windows.md)。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -1,26 +1,28 @@
 ---
-title: "dotnet-install 指令碼 | .NET Core SDK"
+title: "dotnet-install 指令碼 | Microsoft Docs"
 description: "了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。"
 keywords: "dotnet-install, dotnet-install 指令碼, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 30e969c55d08b3ac276c6e7786fa96985dbb0a6b
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
 
 ---
 
-#<a name="dotnetinstall-scripts-reference"></a>dotnet-install 指令碼參考
+#<a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-install 指令碼參考 (.NET Core 工具 RC4)](../preview3/tools/dotnet-install-script.md) 主題。
 
 ## <a name="name"></a>名稱
-dotnet-install.ps1 | dotnet-install.sh - 用來安裝命令列介面 (CLI) 工具和共用執行階段的指令碼
+`dotnet-install.ps1` | `dotnet-install.sh` - 用來安裝命令列介面 (CLI) 工具和共用執行階段的指令碼。
 
 ## <a name="synopsis"></a>概要
 Windows：
@@ -64,7 +66,7 @@ macOS/Linux：
 
 `-InstallDir [DIR]`
 
-要在其中安裝的路徑。 如果目錄不存在，則會建立它。 預設值為 *%LocalAppData%\.dotnet*。
+要在其中安裝的路徑。 如果目錄不存在，則會建立它。 預設值是 *%LocalAppData%\Microsoft\dotnet*。
 
 `-Debug`
 
@@ -127,6 +129,6 @@ macOS/Linux：
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

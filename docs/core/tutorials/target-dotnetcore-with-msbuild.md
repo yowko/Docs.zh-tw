@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13c66464-4f14-4db6-aa8b-06f25e7ba894
 translationtype: Human Translation
-ms.sourcegitcommit: a04755da6417bb28bad5f28a18ead9feeba2d957
-ms.openlocfilehash: ee8f409bf11f4b4a7136b886114616b233bc2cc0
+ms.sourcegitcommit: 098cb31bb79e47ebb2ad2e8c2f56d2d5d6da4079
+ms.openlocfilehash: 6a992d985948a22da58db8317bc04d2f1828fc05
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -20,13 +21,16 @@ ms.openlocfilehash: ee8f409bf11f4b4a7136b886114616b233bc2cc0
 .NET Core 工具即將[從 project.json 移到 MSBuild 專案](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)。
 我們預期使用 MSBuild 的第一版 .NET Core 工具會與下一版 Visual Studio 一起出貨。  不過，您可以立即針對 .NET Core 專案使用 MSBuild，此頁面即顯示其方式。
 
-我們建議目前「新」專案以 .NET Core 為目標的大多數人，能使用預設的 project.json 工具經驗，原因如下︰
+建議您以 .NET Core 為目標的新專案使用預設工具與 *project.json*，原因如下︰
 
-- MSBuild 還不支援 project.json 的許多優點
-- 許多 ASP.NET 架構工具目前無法用於 MSBuild 專案
-- 當我們發行使用 MSBuild 的 .NET Core 工具時，將能夠自動從 project.json 轉換為 MSBuild 專案 
+- MSBuild 尚未支援 *project.json* 的許多功能。
+- 許多 ASP.NET 架構工具目前無法用於 MSBuild 專案。
+- 當 MSBuild 架構的 .NET Core 工具發行時，它會自動將 *project.json* 轉換為 MSBuild 架構。
 
-針對已經使用 MSBuild 且打算移植到 .NET Core 的現有專案，或者針對 project.json 專案不太支援的案例中，在組建使用 MSBuild 的擴充性時，您可能會想要使用 MSBuild 來設定 .NET Core 為目標。
+當有下列情況時，請考慮使用 MSBuild：
+
+ - 使用 MSBuild 的現有專案被移植到 .NET Core。
+ - 使用 MSBuild 擴充性的專案不受 *project.json* 完善支援。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -126,9 +130,4 @@ ms.openlocfilehash: ee8f409bf11f4b4a7136b886114616b233bc2cc0
     - 關閉 .csproj 檔案，並在 Visual Studio 中重新載入專案
 
 8. 您應該能夠在 Visual Studio 中使用 F5 執行程式，或從命令列的輸出資料夾中使用`dotnet MyApp.exe` 
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

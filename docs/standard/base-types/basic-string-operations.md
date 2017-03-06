@@ -3,16 +3,17 @@ title: "基本字串作業"
 description: "基本字串作業"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 9658098d-de60-4868-ba5b-0c278748a90f
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 23c32ef572086aa3bf5dd809a68c95197bd389e5
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b8bdbeccd226c412e725200fcaf81ec568afc5bc
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -42,10 +43,5 @@ ms.openlocfilehash: 23c32ef572086aa3bf5dd809a68c95197bd389e5
 
 [格式化類型](formatting-types.md) - 描述如何使用格式規範來格式化字串。
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

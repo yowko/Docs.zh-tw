@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 命令列介面 (CLI) 工具"
+title: ".NET Core 命令列介面 (CLI) 工具 | Microsoft Docs"
 description: "何謂命令列介面 (CLI) 和其主要功能的概觀"
 keywords: "CLI, CLI 工具, .NET, .NET Core"
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 96b7c02493d94b3c1d5fd112ca84ed25c35c4f90
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 
 ---
 
 # <a name="net-core-command-line-interface-tools"></a>.NET Core 命令列介面工具
+
+> [!WARNING]
+> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [.NET Core 命令列介面工具 (.NET Core 工具 RC4)](../preview3/tools/index.md) 主題。
 
 .NET Core 命令列介面 (CLI) 是新的基礎跨平台工具鏈，適用於開發 .NET Core 應用程式。 它是「基礎」，原因是它是在其上建置其他較高階工具 (例如整合式開發環境 (IDE)、編輯器和建置 Orchestrator 的主要層。 
 
@@ -98,6 +101,6 @@ CLI 可透過兩種主要方式讓應用程式具有可攜性︰
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

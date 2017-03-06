@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a1e611ec-c6a2-48c6-9c52-0ed845787621
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: becfe2624ad1ee1d03707ef48c780f518eb8eb28
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4e8744c6c7a42c3803bf9716a3ae271b7284be3d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -1116,10 +1117,5 @@ End Module
 [.NET 規則運算式](regular-expressions.md)
 
 [規則運算式語言 - 快速參考](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

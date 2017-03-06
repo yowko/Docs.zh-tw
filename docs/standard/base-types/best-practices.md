@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: d92549bf46f1c7a728bc6e2ac7cb183251115084
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cf9c83de791fa4990a991689a26d4bbdd84cfe7d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -1101,10 +1102,5 @@ End Module
 [規則運算式中的回溯](backtracking.md) | 說明何謂回溯以及回溯如何影響規則運算式的效能，並且檢查提供回溯之替代方式的語言項目。
 [規則運算式語言 - 快速參考](quick-ref.md) | 描述 .NET 中規則運算式語言的項目，並且提供每個語言項目之詳細文件的連結。
  
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

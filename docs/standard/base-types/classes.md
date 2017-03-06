@@ -4,16 +4,16 @@ description: "規則運算式中的字元類別"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c7a9305f-7144-4fe8-80e8-a727bf7d223f
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: f8ebb1db670669e2e8666cd5ef90f72237c105e4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ae677af2590636fd144d8978a3500c37f9d33615
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: f8ebb1db670669e2e8666cd5ef90f72237c105e4
 
 .NET 支援字元類別減法運算式，可讓您將一組字元定義為從某個字元類別中排除另一個字元類別的結果。 如需詳細資訊，請參閱[字元類別減法](#character-class-subtraction)。
 
-## <a name="positive-character-group-"></a>正字元群組：[ ]
+## <a name="positive-character-group--"></a>正字元群組：[ ]
 
 正字元群組會指定一份字元清單，其中任何字元都可出現在輸入字串中，以便出現相符項目。 這份字元清單可以個別指定，也可以依範圍指定，或同時依兩種方式指定。 
 
@@ -261,35 +261,35 @@ End Module
 
   下列範例說明 . 字元類別的預設行為與搭配 [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) 選項一起使用時的行為差異。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 **\r** 或 **\u000D**，但不會比對 **\n**。 由於 [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 **\n**。
 
-  ```csharp
-  using System;
-  using System.Text.RegularExpressions;
+```csharp
+using System;
+using System.Text.RegularExpressions;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        string pattern = "^.+";
-        string input = "This is one line and" + Environment.NewLine + "this is the second.";
-        foreach (Match match in Regex.Matches(input, pattern))
-           Console.WriteLine(Regex.Escape(match.Value));
+public class Example
+{
+   public static void Main()
+   {
+      string pattern = "^.+";
+      string input = "This is one line and" + Environment.NewLine + "this is the second.";
+      foreach (Match match in Regex.Matches(input, pattern))
+         Console.WriteLine(Regex.Escape(match.Value));
 
-        Console.WriteLine();
-        foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Singleline))
-           Console.WriteLine(Regex.Escape(match.Value));
-     }
-  }
-  // The example displays the following output:
-  //       This\ is\ one\ line\ and\r
-  //       
-  //       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
-  ```
+      Console.WriteLine();
+      foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Singleline))
+         Console.WriteLine(Regex.Escape(match.Value));
+   }
+}
+// The example displays the following output:
+//       This\ is\ one\ line\ and\r
+//       
+//       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
+```
 
-  ```vb
-  Imports System.Text.RegularExpressions
+```vb
+Imports System.Text.RegularExpressions
 
-  Module Example
-     Public Sub Main()
+Module Example
+    Public Sub Main()
         Dim pattern As String = "^.+"
         Dim input As String = "This is one line and" + vbCrLf + "this is the second."
         For Each match As Match In Regex.Matches(input, pattern)
@@ -305,46 +305,46 @@ End Module
   '       This\ is\ one\ line\ and\r
   '       
   '       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
-  ```
+```
 
   > [!NOTE]
   > 由於它會比對 **\n** 以外的任何字元，因此 . 字元類別也會比對 **\r** (歸位字元 **\u000D**)。
  
 * 在正或負字元群組中，句號會視為常值句號字元而非字元類別。 如需詳細資訊，請參閱本主題前文的[正字元群組](#positive-character-group--)及[負字元群組](#negative-character-group-)。 下列範例將進行示範，定義包含句號字元 (**.**) 作為字元類別以及作為正字元群組成員的規則運算式。 規則運算式 `\b.*[.?!;:](\s|\z)` 會從字邊界開始比對所有字元，直到遇到包括句號的四個標點符號其中之一，然後比對空白字元或字串結尾。
 
-  ```csharp
-  using System;
-  using System.Text.RegularExpressions;
+```csharp
+using System;
+using System.Text.RegularExpressions;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        string pattern = @"\b.*[.?!;:](\s|\z)";
-        string input = "this. what: is? go, thing.";
-        foreach (Match match in Regex.Matches(input, pattern))
-           Console.WriteLine(match.Value);
-     }
-  }
-  // The example displays the following output:
-  //       this. what: is? go, thing.
-  ```
+public class Example
+{
+   public static void Main()
+   {
+      string pattern = @"\b.*[.?!;:](\s|\z)";
+      string input = "this. what: is? go, thing.";
+      foreach (Match match in Regex.Matches(input, pattern))
+         Console.WriteLine(match.Value);
+   }
+}
+// The example displays the following output:
+//       this. what: is? go, thing.
+```
 
-  ```vb
-  Imports System.Text.RegularExpressions
+```vb
+Imports System.Text.RegularExpressions
 
-  Module Example
-     Public Sub Main()
-        Dim pattern As STring = "\b.*[.?!;:](\s|\z)"
-        Dim input As String = "this. what: is? go, thing."
-        For Each match As Match In Regex.Matches(input, pattern)
-           Console.WriteLine(match.Value)
-        Next   
-     End Sub
-  End Module
-  ' The example displays the following output:
-  '       this. what: is? go, thing.
-  ```
+Module Example
+   Public Sub Main()
+      Dim pattern As STring = "\b.*[.?!;:](\s|\z)"
+      Dim input As String = "this. what: is? go, thing."
+      For Each match As Match In Regex.Matches(input, pattern)
+         Console.WriteLine(match.Value)
+      Next   
+   End Sub
+End Module
+' The example displays the following output:
+'       this. what: is? go, thing.
+```
 
   > [!NOTE]
   > 由於它會比對任何字元， 因此如果規則運算式模式嘗試多次比對任何字元，. 語言項目就會經常與 Lazy 數量詞搭配使用。 如需詳細資訊，請參閱[規則運算式中的數量詞](quantifiers.md)。 
@@ -478,7 +478,7 @@ Pc | 標點符號、連接器。 這個分類包含十個字元，其中最常�
 如果指定了符合 ECMAScript 的行為，**\w** 就等於 `[a-zA-Z_0-9]`。 如需 ECMAScript 規則運算式的資訊，請參閱[規則運算式選項](options.md)中的 [ECMAScript 比對行為](options.md#ecmascript-matching-behavior)一節。 
 
 > [!NOTE]
-> 由於它會比對任何文字字元，因此如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，\w 語言項目就會經常與 Lazy 數量詞搭配使用。 如需詳細資訊，請參閱[規則運算式中的數量詞](quantifiers.md)。
+> 由於它會比對任何文字字元，因此如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，\w 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[規則運算式中的數量詞](quantifiers.md)。
 
 下列範例會使用 **\w** 語言項目比對文字中重複的字元。 這個範例會定義規則運算式模式 **(\w)\1**，該模式解譯如下。
 
@@ -550,7 +550,7 @@ End Module
 '       'nn' found in 'stunned' at position 3.
 ```
 
-## <a name="nonword-character-w"></a>非文字字元：\W
+## <a name="non-word-character-w"></a>非文字字元：\W
 
 **\W** 會比對任何非文字字元。 **\W** 語言項目相當於下列字元類別：
 
@@ -679,7 +679,7 @@ End Module
 
 由於第二個擷取群組的 `Group` 物件只包含單一擷取的非文字字元，因此這個範例會從 `CaptureCollection` 屬性所傳回之 `Group.Captures` 物件擷取所有擷取的非文字字元。
 
-## <a name="whitespace-character-s"></a>空白字元：\s
+## <a name="white-space-character-s"></a>空白字元：\s
 
 **\s** 會比對任何空白字元。 它相當於下表列出的逸出序列和 Unicode 分類。 
 
@@ -746,7 +746,7 @@ End Module
 '       leaves
 ```
 
-## <a name="nonwhitespace-character-s"></a>非空白字元：\S
+## <a name="non-white-space-character-s"></a>非空白字元：\S
 
 **\S** 會比對任何非空白字元。 它相當於 `[^\f\n\r\t\v\x85\p{Z}]` 規則運算式模式，或是規則運算式模式的相反模式，相當於會比對空白字元的 **\s**。 如需詳細資訊，請參閱上一節＜空白字元：\s＞。
 
@@ -922,7 +922,7 @@ End Module
 '       01 999-9999: match failed
 ```
 
-## <a name="nondigit-character-d"></a>非數字字元：\D
+## <a name="non-digit-character-d"></a>非數字字元：\D
 
 **\D** 會比對任何非數字字元。 它相當於 `\P{Nd}` 規則運算式模式。
 
@@ -1142,7 +1142,7 @@ FF00 - FFEF | **IsHalfwidthandFullwidthForms**
 FFF0 - FFFF | **IsSpecials**
  
 <a name="character-class-subtraction"></a>
-## <a name="character-class-subtraction-basegroup-excludedgroup"></a>字元類別減法：[base_group - [excluded_group]]
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a>字元類別減法：[base_group - [excluded_group]]
 
 字元類別會定義字元集， 字元類別減法會產生字元集，這個字元集是將某一個字元類別中的字元從另一個字元類別中排除的結果。 
 
@@ -1214,8 +1214,3 @@ End Module
 ## <a name="see-also"></a>請參閱
 
 [規則運算式選項](options.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

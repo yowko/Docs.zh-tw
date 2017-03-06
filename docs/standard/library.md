@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: f9ffbb2e300df2080276096095a7269736260ba1
-ms.openlocfilehash: d56ddc264d861081f0b808711cccd489a374c0b8
+ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
+ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
 
 ---
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: d56ddc264d861081f0b808711cccd489a374c0b8
 | 平台名稱 | Alias |  |  |  |  |  | | | |
 | :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
 |.NET Standard | netstandard | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 | 2.0 |
-|.NET 核心|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|vNext|
+|.NET 核心|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|2.0|
 |.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|vNext|4.6.1|
 |Mono/Xamarin 平台||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|vNext|
 |通用 Windows 平台|uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|&rarr;|&rarr;|vNext|
@@ -85,7 +85,7 @@ System.Runtime 等指定元件描述：
 
 NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET 標準程式庫套件是以 ".NET Standard" 架構為目標。 您可以使用 `netstandard` [Compact TFM](frameworks.md) (例如 `netstandard1.4`) 將 .NET 標準程式庫設為目標。 要在多個執行階段上執行的程式庫應以此架構為目標。 
 
-`NETStandard.Library` 中繼套件會參考定義 .NET 標準程式庫的一組完整 NuGet 套件。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 其中描述大約 40 種 .NET 程式庫和相關聯的 API (以定義 .NET 標準程式庫)，並提供存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。 
+`NETStandard.Library` 中繼套件會參考定義 .NET 標準程式庫的一組完整 NuGet 套件。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 其中描述大約&40; 種 .NET 程式庫和相關聯的 API (以定義 .NET 標準程式庫)，並提供存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。 
 
 ### <a name="versioning"></a>版本控制
 
@@ -134,6 +134,6 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET 標準
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
