@@ -1,24 +1,22 @@
 ---
-title: ".NET Core 應用程式部署"
+title: ".NET Core 應用程式部署 | Microsoft Docs"
 description: ".NET Core 應用程式部署"
 keywords: ".NET、.NET Core、.NET Core 部署"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/08/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>.NET Core 應用程式部署 #
-
-> [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [.NET Core 應用程式部署 (.NET Core 工具 RC4)](../preview3/deploying/index.md) 主題。
+# <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
 您可以建立兩種類型的 .NET Core 應用程式部署︰ 
 
@@ -50,7 +48,7 @@ ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。 此範例從命令列使用 [dotnet 公用程式](../tools/dotnet.md)，但您也可以使用開發環境，例如 Visual Studio 或 Visual Studio Code，來編譯、測試及發行範例。
 
-1. 建立專案目錄，並從命令列輸入 [dotnet new](../tools/dotnet-new.md) 來建立新的 C# 主控台專案。
+1. 建立專案目錄，並從命令列輸入 `[dotnet new console](../tools/dotnet-new.md)` 來建立新的 C# 主控台專案。
 
 2. 在編輯器中開啟 `Program.cs` 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，然後顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
@@ -93,9 +91,9 @@ ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 4. 使用 [dotnet build](../tools/dotnet-build.md) 命令建立應用程式的偵錯組置。
 
-5. 偵錯並測試程式之後，您可以使用 `dotnet publish -f netcoreapp1.0 -c release` 命令建立要隨應用程式一起部署的檔案。 這會建立應用程式的發行 (而非偵錯) 版本。
+5. 偵錯並測試程式之後，您可以使用 `dotnet publish -f netcoreapp1.1 -c release` 命令建立要隨應用程式一起部署的檔案。 這會建立應用程式的發行 (而非偵錯) 版本。
 
-   產生的檔案會放在名為 `publish` 的目錄中，位在您專案的 `.\bin\release\netcoreapp1.0` 子目錄的子目錄中。
+   產生的檔案會放在名為 `publish` 的目錄中，位在您專案的 `.\bin\release\netcoreapp1.1` 子目錄的子目錄中。
 
 6. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
 
@@ -107,17 +105,15 @@ ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 部署具有一或多個協力廠商相依性的 Framework 相依部署，包含三個額外的步驟，然後才能執行 `dotnet restore` 命令︰
 
-1. 將任何協力廠商程式庫參考加入您 `project.json` 檔案的 `dependencies` 區段。 下列 `dependencies` 區段會使用 Json.NET 當成協力廠商程式庫。
+1. 將任何協力廠商程式庫參考加入您 `csproj` 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段顯示 `<ItemGroup>` (包含預設專案中的相依性) 以及做為協力廠商程式庫的 Json.NET。
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": {
-        "type": "platform",
-        "version": "1.0.0"
-      },
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
+
+ 請注意，SDK 相依性仍維持在上述範例中。 這是依據設計，因為需要此相依性來還原所有需要的目標，才能讓命令列工具運作。  
 
 2. 如果尚未如此做，請下載包含協力廠商相依性的 NuGet 封裝。 若要下載封裝，請在加入相依性後執行 `dotnet restore` 命令。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
 
@@ -143,11 +139,11 @@ ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 - 將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。
 
-### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> 進行簡單的自封式部署 ###
+### <a name="simpleSelf"></a> 進行簡單的自封式部署 ###
 
-部署無任何協力廠商相依性的自封式部署，涉及建立專案、修改 project.json 檔案、建置、測試以及發行應用程式。  以 C# 撰寫的簡單範例會說明此程序。 此範例從命令列使用 `dotnet` 公用程式，但您也可以使用開發環境，例如 Visual Studio 或 Visual Studio Code，來編譯、測試及發行範例。
+部署無任何協力廠商相依性的自封式部署，涉及建立專案、修改 csproj 檔案、建置、測試以及發行應用程式。  以 C# 撰寫的簡單範例會說明此程序。 此範例從命令列使用 `dotnet` 公用程式，但您也可以使用開發環境，例如 Visual Studio 或 Visual Studio Code，來編譯、測試及發行範例。
 
-1. 建立專案目錄，並從命令列輸入 `dotnet new` 來建立新的 C# 主控台專案。
+1. 建立專案目錄，並從命令列輸入 `dotnet new console` 來建立新的 C# 主控台專案。
 
 2. 在編輯器中開啟 `Program.cs` 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，然後顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
@@ -185,121 +181,72 @@ ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
     }
     ```
 
-3. 開啟 `frameworks` 區段的 `project.json` 檔案，移除下行︰
+3. 在定義應用程式目標平台之 `csproj` 檔案中的 `<PropertyGroup>` 區段下建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
-   ```json
-   "type": "platform",
-   ```
-修改它後，Framework 區段應會出現，如下所示︰
-
-    ```json
-    "frameworks": {
-      "netcoreapp1.0": {
-        "dependencies": {
-          "Microsoft.NETCore.App": {
-             "version": "1.0.0"
-          }
-        }
-      }
-    }
+    ```xml
+        <PropertyGroup>
+          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        </PropertyGroup>
     ```
-移除 `"type": "platform"` 屬性指出 Framework 已提供為應用程式的一組本機元件，而非全系統的平台封裝。
+請注意，您也必須加上分號來分隔 RID。 此外，請注意 `<RuntimeIdentifier>` 元素可以移至您 `csproj` 檔案中的任何 `<PropertyGroup>`。 本節稍後會提供完整的範例 `csproj` 檔。
 
-4. 在定義應用程式目標平台的 `project.json` 檔案中建立 `runtimes` 區段，並指定每個目標平台的執行階段識別碼。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 例如，下列 `runtimes` 區段指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.10 作業系統上執行。
+4. 執行 `dotnet restore` 命令還原專案中指定的相依性。
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
-    ```
-請注意，您也需要加入逗號來分隔 `runtimes` 區段與上一個區段。
-本節稍後會提供完整的範例 `project.json` 檔。
-
-6. 執行 `dotnet restore` 命令還原專案中指定的相依性。
-
-7. 使用 `dotnet build` 命令在每個目標平台上建立應用程式的偵錯組建。 除非您指定想要建置的執行階段識別碼，否則 `dotnet build` 命令只會建立目前系統的執行階段識別碼。 您可以使用下列命令為兩個目標平台建置應用程式︰
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-針對每個平台的應用程式偵錯組建位於專案的 `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` 子目錄。
-
-8. 偵錯並測試完程式之後，您可以對兩個目標平台使用 `dotnet publish` 命令，建立針對每個目標平台要與應用程式一起部署的檔案，如下所示︰
+5. 偵錯並測試完程式之後，您可以對兩個目標平台使用 `dotnet publish` 命令，建立針對每個目標平台要與應用程式一起部署的檔案，如下所示︰
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
-這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\release\netcoreapp1.0\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
+這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\release\netcoreapp1.1\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
-9. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
+6. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
 
 您可以任何想要的方式部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 zip 檔案中，或與您選擇的任何安裝封裝一起部署。 
 
-下面是此專案的完整 `project.json` 檔案。
+下面是此專案的完整 `csproj` 檔案。
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "version": "1.0.0"
-        }
-      }
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+</Project>
 ```
+
 
 ### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>部署具有協力廠商相依性的自封式部署 ###
 
 部署具有一或多個協力廠商相依性的自封式部署，涉及新增協力廠商相依性︰
 
-1. 將任何協力廠商程式庫參考加入您 `project.json` 檔案的 `dependencies` 區段。 下列 `dependencies` 區段會使用 Json.NET 當成協力廠商程式庫。
+1. 將任何協力廠商程式庫參考加入您 `csproj` 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段會使用 Json.NET 當成協力廠商程式庫。
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": "1.0.0",
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
 2. 如果尚未如此做，請將包含協力廠商相依性的 NuGet 封裝下載至您的系統。 請在加入相依性後執行 `dotnet restore` 命令，讓應用程式取得相依性。 因為相依性是在發行時於本機 NuGet 快取外解析，所以必須能在系統中取得。
 
-下面是此專案的完整 project.json 檔案：
+下面是此專案的完整 csproj 檔案：
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0",
-    "Newtonsoft.Json": "9.0.1"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+</Project>
 ```
 
 當您部署應用程式時，應用程式中任何協力廠商相依性也包含在應用程式檔案中。 協力廠商程式庫尚未出現在應用程式執行所在的系統上。
@@ -308,92 +255,68 @@ ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 ### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>部署使用量較小的自封式部署 ###
 
-如果目標系統上無法取得足夠的儲存空間，您可以排除某些系統元件，以減少應用程式的整體使用量。 若要這樣做，您可以在 project.json 檔案中明確定義應用程式包含的 .NET Core 元件。
+如果目標系統上無法取得足夠的儲存空間，您可以排除某些系統元件，以減少應用程式的整體使用量。 若要這樣做，您可以在 csproj 檔案中明確定義應用程式包含的 .NET Core 元件。
 
-若要建立使用量較小的自封式部署，請從建立自封式部署的前兩個步驟開始。 一旦執行了 `dotnet new` 命令，並將 C# 原始程式碼加入到您的應用程式中，請執行下列動作︰
+若要建立使用量較小的自封式部署，請從建立自封式部署的前兩個步驟開始。 一旦執行了 `dotnet new console` 命令，並將 C# 原始程式碼加入到您的應用程式中，請執行下列動作︰
 
-1. 開啟 `project.json` 檔案，並以下列內容取代 `frameworks` 區段：
+1. 開啟 `csproj` 檔案，並以下列內容取代 `<TargetFramework>` 項目：
 
-    ```json
-    "frameworks": {
-      "netstandard1.6": { }
-    }
-    ```
-這會執行兩項作業︰
+  ```xml
+  <TargetFramework>netstandard1.6</TargetFramework>
+  ```
+此作業指出我們的應用程式只使用 .NET 標準程式庫，而不是使用整個 `netcoreapp1.0` 架構 (其中包括 .NET Core CLR、.NET Core 程式庫和幾個其他系統元件)。
 
-    * 它會指出，而不是使用整個 `netcoreapp1.0` Framework，哪些包括 .NET Core CLR、.NET Core 程式庫和幾個其他系統元件，而我們的應用程式只使用 .NET 標準庫。
+2. 將 `<ItemGroup>` 包含套件參考取代為下列︰
 
-    * 藉由移除 `"type": "platform"` 屬性，指出 Framework 已提供為應用程式的一組本機元件，而非全系統的平台封裝。
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+  ```
 
-2. 以下列內容取代 `dependencies` 區段：
-
-    ```json
-    "dependencies": {
-      "NETStandard.Library": "1.6.0",
-      "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-      "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-    },
-    ```
    這會定義我們應用程式所使用的系統元件。 與我們的應用程式一起封裝的系統元件，包括 .NET 標準程式庫、.NET Core 執行階段和 .NET Core 主應用程式。 這會產生使用量較小的自封式部署。
 
-3. 如您在[部署簡單的自封式部署](#simpleSelf)範例中所做的那樣，在定義應用程式目標平台的 `project.json` 檔案中建立 `runtimes` 區段，並指定每個目標平台的執行階段識別碼。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 例如，下列 `runtimes` 區段指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.10 作業系統上執行。
+3. 如您在[部署簡單的自封式部署](#simpleSelf)範例中所做的那樣，在定義應用程式目標平台之 `csproj` 檔案中的 `<PropertyGroup>` 內建立 `<RuntimeIdentifiers>` 元素，並指定每個目標平台的執行階段識別碼。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
+    ```xml
+    <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+    </PropertyGroup>
     ```
-請注意，您也需要加入逗號來分隔 `runtimes` 區段與上一個區段。
-本節稍後會提供完整的範例 `project.json` 檔。
+    
+   本節稍後會提供完整的範例 `csproj` 檔。
 
 4. 執行 `dotnet restore` 命令還原專案中指定的相依性。
 
-5. 使用 `dotnet build` 命令在每個目標平台上建立應用程式的偵錯組建。 除非您指定想要建置的執行階段識別碼，否則 `dotnet build` 命令只會建立目前系統的執行階段識別碼。 您可以使用下列命令為兩個目標平台建置應用程式︰
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-
-6. 偵錯並測試完程式之後，您可以對兩個目標平台使用 `dotnet publish` 命令，建立針對每個目標平台要與應用程式一起部署的檔案，如下所示︰
+5. 偵錯並測試完程式之後，您可以對兩個目標平台使用 `dotnet publish` 命令，建立針對每個目標平台要與應用程式一起部署的檔案，如下所示︰
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
 這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\release\netstandard1.6\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
-7. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
+6. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
 
 您可以任何想要的方式部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 zip 檔案中，或與您選擇的任何安裝封裝一起部署。 
 
-下面是此專案的完整 `project.json` 檔案。
+下面是此專案的完整 `csproj` 檔案。
 
-```json
-   {
-     "version": "1.0.0-*",
-     "buildOptions": {
-       "debugType": "portable",
-       "emitEntryPoint": true
-     },
-     "dependencies": {
-       "NETStandard.Library": "1.6.0",
-       "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-       "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-     },
-     "frameworks": {
-       "netstandard1.6": { }
-     },
-     "runtimes": {
-       "win10-x64": {},
-       "osx.10.10-x64": {}
-     }
-   }
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+</Project>
 ```
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 
