@@ -1,0 +1,5 @@
+# [使用委派](using-delegates.md)
+# [使用具名和匿名方法委派的比較](delegates-with-named-vs-anonymous-methods.md)
+# [委派](index.md)
+# [如何：宣告、產生和使用委派](how-to-declare-instantiate-and-use-a-delegate.md)
+# [如何：組合委派 (多點傳送委派)](how-to-combine-delegates-multicast-delegates.md)

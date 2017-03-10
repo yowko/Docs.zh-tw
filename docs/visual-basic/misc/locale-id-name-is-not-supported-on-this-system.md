@@ -1,0 +1,25 @@
+---
+title: "在此系統上不支援地區設定 ID &#39;&lt;名稱&gt;&#39; | Microsoft Docs"
+ms.date: "2015-07-20"
+ms.prod: ".net"
+ms.technology: 
+  - "devlang-visual-basic"
+ms.topic: "article"
+f1_keywords: 
+  - "vbrArgument_LCIDNotSupported1"
+ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
+caps.latest.revision: 10
+author: "stevehoag"
+ms.author: "shoag"
+caps.handback.revision: 10
+---
+# 在此系統上不支援地區設定 ID &#39;&lt;名稱&gt;&#39;
+您嘗試使用 `VbStrConv`，但您的系統不支援指定的地區設定。  
+  
+### 更正這個錯誤  
+  
+1.  請升級電腦以支援地區設定，或在支援指定地區設定的電腦上執行應用程式。  
+  
+## 請參閱  
+ <xref:System.Globalization>   
+ [以 .NET Framework 為基礎的國際應用程式簡介](/visual-studio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

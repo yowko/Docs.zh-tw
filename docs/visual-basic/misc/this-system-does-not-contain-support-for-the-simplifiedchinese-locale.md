@@ -1,0 +1,26 @@
+---
+title: "此系統沒有包含簡體中文地區設定的支援 | Microsoft Docs"
+ms.date: "2015-07-20"
+ms.prod: ".net"
+ms.technology: 
+  - "devlang-visual-basic"
+ms.topic: "article"
+f1_keywords: 
+  - "vbrArgument_SCNotSupported"
+ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
+caps.latest.revision: 8
+author: "stevehoag"
+ms.author: "shoag"
+caps.handback.revision: 8
+---
+# 此系統沒有包含簡體中文地區設定的支援
+您嘗試使用 `VbStrConv.SimplifiedChinese` 列舉成員，但您的系統不支援簡體中文地區設定。  
+  
+### 更正這個錯誤  
+  
+1.  請升級電腦以支援簡體中文地區設定，或在支援該地區設定的電腦上執行應用程式。  
+  
+## 請參閱  
+ <xref:System.Globalization>   
+ [NOTINBUILD VbStrConv 列舉](http://msdn.microsoft.com/zh-tw/59f83dd9-6361-47df-a836-02ba9d4cb936)   
+ [以 .NET Framework 為基礎的國際應用程式簡介](/visual-studio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

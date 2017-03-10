@@ -1,0 +1,7 @@
+# [如何：使用平台叫用播放 WAV 檔](how-to-use-platform-invoke-to-play-a-wave-file.md)
+# [互通性概觀](interoperability-overview.md)
+# [如何：在 COM Interop 程式設計中使用索引的屬性](how-to-use-indexed-properties-in-com-interop-rogramming.md)
+# [範例 COM 類別](example-com-class.md)
+# [逐步解說：Office 程式設計](walkthrough-office-programming.md)
+# [互通性](interoperability.md)
+# [如何：使用 Visual C#  功能存取 Office Interop 物件](how-to-access-office-onterop-objects.md)
