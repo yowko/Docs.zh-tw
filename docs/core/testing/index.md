@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
+ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -34,7 +34,9 @@ ms.lasthandoff: 03/02/2017
 
 進一步了解 .NET Core 專案的單元測試：
 
-請參閱這份[使用 xunit 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-dotnet-test.md)。
+請參閱這份[使用 xUnit 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-dotnet-test.md)。 
 
-XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Studio 中搭配使用 xunit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
+XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Studio 中搭配使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
+
+如果您偏好使用 MSTest，請參閱這份[使用 MSTest 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-mstest.md)。
 

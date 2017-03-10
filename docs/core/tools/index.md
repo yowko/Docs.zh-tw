@@ -4,22 +4,20 @@ description: "何謂命令列介面 (CLI) 和其主要功能的概觀"
 keywords: "CLI, CLI 工具, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/06/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 4e3137d8506342662d145481d5e9fde1d53b9ba3
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>.NET Core 命令列介面工具
-
-> [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [.NET Core 命令列介面工具 (.NET Core 工具 RC4)](../preview3/tools/index.md) 主題。
+# <a name="net-core-command-line-interface-tools-net-core-sdk-10-tools"></a>.NET Core 命令列介面工具 (.NET Core SDK 1.0 工具)
 
 .NET Core 命令列介面 (CLI) 是新的基礎跨平台工具鏈，適用於開發 .NET Core 應用程式。 它是「基礎」，原因是它是在其上建置其他較高階工具 (例如整合式開發環境 (IDE)、編輯器和建置 Orchestrator 的主要層。 
 
@@ -38,6 +36,7 @@ ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 預設會安裝下列命令：
 
 * [new](dotnet-new.md)
+* [移轉](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -52,7 +51,7 @@ ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 在更加深入之前，請先從一萬英尺的視野確認如何使用 CLI。 下列範例利用 CLI 標準安裝中的數個命令，來初始化新的簡單主控台應用程式、還原相依性、建置應用程式，然後執行它。 
 
 ```console
-dotnet new
+dotnet new console
 dotnet restore
 dotnet build --output /stuff
 dotnet /stuff/new.dll
@@ -88,8 +87,11 @@ CLI 可透過兩種主要方式讓應用程式具有可攜性︰
 
 您可以在 [.NET Core 應用程式部署](../deploying/index.md)主題中深入了解這兩項。 
 
-## <a name="migration-from-dnx"></a>從 DNX 移轉
-如果您已在 .NET Core 1.0 RC1 中使用 DNX，則可能會想要知道它發生什麼事以及這些新工具與 DNX 工具的關係。 簡言之，DNX 工具已取代為 .NET Core CLI 工具。 如果您有現有專案，或只想知道命令的對應方式，則可以使用 [DNX 到 CLI 移轉](../migrating-from-dnx.md)主題來取得所有詳細資料。 
+## <a name="migration-from-projectjson"></a>從 project.json 移轉
+如果您使用 Preview 2 工具和 *project.json* 專案，您可以查閱 [dotnet migrate](dotnet-migrate.md) 命令文件以熟悉命令以及如何移轉專案。 
+
+> [!NOTE]
+> `dotnet migrate` 命令目前不會移轉 Preview 2 之前版本的 *project.json* 檔案。 
 
 ## <a name="extensibility"></a>擴充性
 當然，並非您可以在工作流程中使用的工具都是核心 CLI 工具的一部分。 不過，.NET Core CLI 具有擴充性模型，可讓您指定專案的額外工具。 您可以在 [.NET Core CLI 擴充性模型](extensibility.md)主題中深入了解。
@@ -98,9 +100,4 @@ CLI 可透過兩種主要方式讓應用程式具有可攜性︰
 這是最重要 CLI 功能的簡短概觀。 您可以使用這個網站上的參考和概念性主題深入了解。 您也可以使用其他資源︰
 * [dotnet/CLI](https://github.com/dotnet/cli/) GitHub 存放庫
 * [使用者入門指示](https://aka.ms/dotnetcoregs/)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
