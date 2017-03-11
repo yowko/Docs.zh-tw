@@ -1,7 +1,0 @@
-# [事件 (C# 程式設計手冊)](index.md)
-## [如何：訂閱及取消訂閱事件 (C# 程式設計手冊)](how-to-subscribe-to-and-unsubscribe-from-events.md)
-## [如何：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)](how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-## [如何：在衍生類別中引發基底類別事件 (C# 程式設計手冊)](how-to-raise-base-class-events-in-derived-classes.md)
-## [如何：實作介面事件 (C# 程式設計手冊)](how-to-implement-interface-events.md)
-## [How to: Use a Dictionary to Store Event Instances](TocOutOfQuery)
-## [如何：實作自訂事件存取子 (C# 程式設計手冊)](how-to-implement-custom-event-accessors.md)

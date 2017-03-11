@@ -1,7 +1,0 @@
-# [函式 (Visual Basic)](index.md)
-## [Conversion Functions](TocOutOfQuery)
-## [數學函式 (Visual Basic)](math-functions.md)
-## [字串函式 (Visual Basic)](string-functions.md)
-## [Type Conversion Functions (Visual Basic)](type-conversion-functions.md)
-### [Return Values for the CStr Function](TocOutOfQuery)
-## [CType 函式 (Visual Basic)](ctype-function.md)

@@ -1,8 +1,0 @@
-# [如何：攔截非 CLS 例外狀況](how-to-catch-a-non-cls-exception.md)
-# [如何：使用 try/catch 處理例外狀況](how-to-handle-an-exception-using-try-catch.md)
-# [例外狀況處理](exception-handling.md)
-# [使用例外狀況](using-exceptions.md)
-# [建立和擲回例外狀況](creating-and-throwing-exceptions.md)
-# [編譯器所產生的例外狀況](compiler-generated-exceptions.md)
-# [如何：使用 finally 執行清除程式碼](how-to-execute-cleanup-code-using-finally.md)
-# [例外狀況和例外狀況處理](exceptions-and-exception-handling.md)
