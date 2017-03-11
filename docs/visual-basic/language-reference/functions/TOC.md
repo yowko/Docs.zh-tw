@@ -1,0 +1,7 @@
+# [字串函式](string-functions.md)
+# [CType 函式](ctype-function.md)
+# [Type Conversion Functions](type-conversion-functions.md)
+# [函式](index.md)
+# [Conversion Functions](conversion-functions.md)
+# [數學函式](math-functions.md)
+# [Return Values for the CStr Function](return-values-for-the-cstr-function.md)

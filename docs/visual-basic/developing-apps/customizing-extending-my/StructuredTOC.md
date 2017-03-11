@@ -1,0 +1,5 @@
+# [Customizing Projects and Extending My with Visual Basic](customizing-projects-and-extending-my.md)
+## [Extending the My Namespace in Visual Basic](TocOutOfQuery)
+## [Packaging and Deploying Custom My Extensions](TocOutOfQuery)
+## [Extending the Visual Basic Application Model](extending-the-visual-basic-application-model.md)
+## [Customizing Which Objects are Available in My](TocOutOfQuery)
