@@ -2,52 +2,24 @@
 title: "global.json 參考 | Microsoft Docs"
 description: "global.json 參考"
 keywords: .NET, .NET Core
-author: aL3891
+author: blackdwarf
 ms.author: mairaw
-ms.date: 11/02/2016
+ms.date: 03/06/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
+ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: a6b0ad546a8a121ad5ea4642c11842a8dccf7055
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 253b8642ae6fc5308d47552e9addfdbed6813ff1
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="globaljson-reference"></a>global.json 參考
 
-> [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [global.json 參考 (.NET Core 工具 RC4)](../preview3/tools/global-json.md) 主題。
-
-global.json 檔案用於 .NET Core 專案，以定義解決方案中繼資料。 當叫用 [dotnet-restore](dotnet-restore.md) 命令以還原 .NET Core 專案的相依性時，會使用此檔案。
-在本參考主題中，您會看到可在 global.json 檔案中定義的屬性清單。
-
-## <a name="projects"></a>專案
-類型：String[]
-
-指定在解析相依性時，建置系統應該搜尋專案的哪些資料夾。 建置系統只會搜尋最上層子資料夾。
-
-例如：
-
-```json
-{
-    "projects": [ "src", "test" ]
-}
-```
-
-## <a name="packages"></a>套件
-類型：String
-
-要還原套件的位置。
-
-例如：
-```json
-{
-    "packages": "packages-dir"
-}
-```
+global.json 檔案允許透過 `sdk` 屬性使用選定的 .NET Core 工具版本。 
 
 ## <a name="sdk"></a>SDK
 類型：Object
@@ -68,9 +40,3 @@ global.json 檔案用於 .NET Core 專案，以定義解決方案中繼資料。
     }
 }
 ```
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-
