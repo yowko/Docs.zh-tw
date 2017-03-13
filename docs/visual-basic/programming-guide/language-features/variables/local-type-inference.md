@@ -32,7 +32,7 @@ caps.handback.revision: 43
 
 Visual Basic 編譯器會使用「*型別推斷*」\(Type Inference\) 來判斷未使用 `As` 子句宣告之區域變數的資料型別。  編譯器是根據初始化運算式的型別推斷變數的型別。  這可以讓您宣告變數而不用明確陳述型別，如同下列範例所示。宣告的結果是，`num1` 和 `num2` 都會變成強型別的整數。  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
   
 > [!NOTE]
 >  如果您不要前述範例中 `num2` 的型別為 `Integer`，則可指定其他型別，方法是使用 `Dim num3 As Object = 3` 或 `Dim num4 As Double = 3` 之類的宣告。  
@@ -47,23 +47,23 @@ Visual Basic 編譯器會使用「*型別推斷*」\(Type Inference\) 來判斷�
 ## 範例  
  區域變數未使用 `As` 子句宣告並初始化時，便會發生型別推斷。  編譯器會使用所指派初始值的型別，做為變數的型別。  例如，以下每一行程式碼都會宣告一個 `String` 型別的變數。  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
   
  下列程式碼示範建立整數陣列的兩個對等方式。  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
   
  使用型別推斷來判斷迴圈控制變數的型別相當方便。  在下列程式碼中，編譯器推斷 `number` 是 `Integer`，因為前述範例的 `someNumbers2` 是整數陣列。  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
   
  區域型別推斷可以用在 `Using` 陳述式中，用來建立資源名稱的型別，如下列範例所示。  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
   
  變數的型別也可以根據函式的傳回值來推斷，如下列範例所示。  `pList1` 和 `pList2` 都是處理序陣列，因為 `Process.GetProcesses` 會傳回處理序陣列。  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## Option Infer  
  `Option Infer`可讓您指定特定的檔案是否允許區域型別推斷。  若要啟用或封鎖選項，請在檔案開頭輸入下列其中一個陳述式。  

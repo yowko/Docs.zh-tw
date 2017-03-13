@@ -20,7 +20,7 @@ caps.handback.revision: 28
   
  若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。  例如:  
   
- [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#8)]  
+ [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
   
  在這個範例中，`BaseC.Invoke` 是藉由 `DerivedC.Invoke` 隱藏。  `x` 欄位不受影響，因為它不是由類似的名稱所隱藏。  
   
@@ -39,12 +39,12 @@ caps.handback.revision: 28
 ## 範例  
  在這個範例中，基底類別 `BaseC` 以及衍生類別 `DerivedC` 會使用相同的欄位名稱 `x`，而該欄位名稱會隱藏繼承之欄位的值。  範例中將示範 `new` 修飾詞的用法。  另外還會示範如何使用完整限定名稱存取基底類別的隱藏成員。  
   
- [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#9)]  
+ [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
   
 ## 範例  
  在這個範例中，巢狀類別會隱藏在基底類別中具有相同名稱的類別。  這個範例將示範如何使用 `new` 修飾詞消除警告訊息，以及如何使用完整限定名稱存取隱藏的類別成員。  
   
- [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#10)]  
+ [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
   
  如果您移除 `new` 修飾詞，程式仍會進行編譯和執行，但是您會收到下列警告：  
   

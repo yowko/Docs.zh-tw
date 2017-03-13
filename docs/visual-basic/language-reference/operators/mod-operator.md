@@ -80,12 +80,12 @@ number1 Mod number2
 ## 範例  
  下列範例會使用 `Mod` 運算子，將兩數相除並只傳回餘數。  如果任一數值是浮點數值，則結果是代表餘數的浮點數值。  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## 範例  
  下列範例示範浮點數運算元的潛在不精確情況。  在第一個陳述式中，運算元是 `Double`，而 0.2 是預存值為 0.20000000000000001 的無限重複二進位小數。  在第二個陳述式中，常值型別字元 `D` 會將兩個運算元強制為 `Decimal`，而 0.2 具有精確表示。  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>   

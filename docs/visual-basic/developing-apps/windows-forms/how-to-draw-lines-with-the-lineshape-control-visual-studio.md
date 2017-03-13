@@ -52,8 +52,8 @@ caps.handback.revision: 14
   
 4.  在 `Event` 程序中，加入下列程式碼：  
   
-     [!code-cs[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerpacksLineCS/VbPowerpacksLine.cs#1)]
-     [!code-vb[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerpacksLine/VBPowerpacksLine.vb#1)]  
+     [!code-cs[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.PowerPacks.LineShape>   

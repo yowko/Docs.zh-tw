@@ -225,14 +225,14 @@ End Sub
 ## <a name="example"></a>範例  
  下列範例會使用 `Sub` 陳述式來定義名稱、 參數和程式碼，構成的主體 `Sub` 程序。  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>範例  
  在下列範例中， `DelayAsync` 是 `Async``Function` 具有傳回類型為 <xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此，函式宣告的 `DelayAsync` 的傳回型別必須 `Task(Of Integer)`。 因為傳回型別是 `Task(Of Integer)`, ，評估 `Await` 中的運算式 `DoSomethingAsync` 產生一個整數，下列陳述式所示︰ `Dim result As Integer = Await delayTask`。  
   
   `startButton_Click` 程序是範例 `Async Sub` 程序。 因為 `DoSomethingAsync` 是 `Async` 函式，呼叫工作 `DoSomethingAsync` 必須等候，下列陳述式所示︰ `Await DoSomethingAsync()`。  `startButton_Click``Sub` 程序都必須定義 `Async` 修飾詞因為它有 `Await` 運算式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
  [Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)   

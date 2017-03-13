@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例會呼叫 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.Environ%2A>，來擷取作業系統環境變數的值。  第一行會呼叫運算式內部的 `Environ`，第二行則會在指派陳述式中呼叫它。  `Environ` 採取變數名稱做為其獨有引數。  它會將變數值傳回至呼叫程式碼中。  
   
- [!code-vb[VbVbcnProcedures#7](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
 ## 請參閱  
  [函式程序](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   

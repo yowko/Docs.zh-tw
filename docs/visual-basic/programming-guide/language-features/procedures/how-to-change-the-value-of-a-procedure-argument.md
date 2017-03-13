@@ -66,11 +66,11 @@ caps.handback.revision: 16
 ## 範例  
  下列範例會顯示兩個取得陣列變數，並在其元素上作業的程序。  `increase` 程序只會將每個元素加一。  `replace` 程序會將新陣列指派給參數 `a()`，然後每個元素都加一。  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#36](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
   
  第一個 `MsgBox` 呼叫顯示 "After increase\(n\): 11, 21, 31, 41"。  因為陣列  `n`  是參考型別，所以  `replace`  可變更其成員，即使傳遞機制是 `ByVal` 也一樣。  
   

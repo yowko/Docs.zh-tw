@@ -109,7 +109,7 @@ result = string Like pattern
 ## 範例  
  這個範例會使用 `Like` 運算子，來比較字串與不同的模式。  結果是 `Boolean` 變數，指出每一個字串是否會符合模式。  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

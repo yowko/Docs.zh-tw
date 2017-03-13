@@ -25,15 +25,15 @@ Boxing 是將[實值類型](../../../csharp/language-reference/keywords/value-ty
   
  在下列範例中，整數變數 `i` 會經過 *Box* 處理並且指派給物件 `o`。  
   
- [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_1.cs)]  
+ [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
  接著就可以對物件 `o` 進行 Unbox 處理，並將該物件指派給整數變數 `i`：  
   
- [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_2.cs)]  
+ [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
  下列範例將說明在 C\# 中使用 boxing 的方式。  
   
- [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_3.cs)]  
+ [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## 效能  
  相對於單純的指派，boxing 和 unboxing 是會耗費大量運算資源的處理序。  當實值類型經過 Box 處理時，必須配置及建構新的物件。  Unboxing 所需的轉換雖然較為簡單，但也同樣需要大量運算資源。  如需詳細資訊，請參閱[效能](../Topic/.NET%20Performance%20Tips.md)。  
@@ -43,11 +43,11 @@ Boxing 是將[實值類型](../../../csharp/language-reference/keywords/value-ty
   
  請考慮下列實值類型變數的宣告：  
   
- [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_4.cs)]  
+ [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
  下列陳述式會以隱含方式對變數 `i` 套用 boxing 作業：  
   
- [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_5.cs)]  
+ [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
  這個陳述式的結果是在堆疊上建立物件參考 `o`，用於參考堆積中 `int` 類型的值。  這個值是指派給變數 `i` 之實值類型值的複本。  `i` 和 `o` 這兩個變數之間的差異如下圖所示。  
   
@@ -56,13 +56,13 @@ Boxing 轉換
   
  您也可以執行明確的 boxing 處理，如同下列範例中所示，但是明確的 boxing 處理並非必要：  
   
- [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_6.cs)]  
+ [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
 ## 描述  
  這個範例會使用 Boxing 將整數變數 `i` 轉換為物件 `o`。  接著，儲存在變數 `i` 中的值就會從 `123` 變更為 `456`。  這個範例顯示，原始實值類型以及經過 Box 處理的物件分別使用不同的記憶體位置，因此可以儲存不同的值。  
   
 ## 範例  
- [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_7.cs)]  
+ [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
 ## Unboxing  
  Unboxing 是將 `object` 類型明確轉換成[實值類型](../../../csharp/language-reference/keywords/value-types.md)，或將介面類型明確轉換成實作介面之實值類型的程序。  Unboxing 作業包含：  
@@ -73,7 +73,7 @@ Boxing 轉換
   
  下列陳述式將示範 boxing 和 unboxing 作業：  
   
- [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_8.cs)]  
+ [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
  下圖示範上述陳述式的結果。  
   
@@ -85,7 +85,7 @@ Unboxing 轉換
 ## 範例  
  下列範例將示範 Unboxing 無效且產生 `InvalidCastException` 的案例。  若使用 `try` 和 `catch`，則會在發生錯誤時顯示錯誤訊息。  
   
- [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_9.cs)]  
+ [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
  這個程式會輸出：  
   

@@ -27,7 +27,7 @@ caps.handback.revision: 6
 ## 擷取資源  
  您可以透過 `My.Resources` 物件擷取一些資源，例如音訊檔案、圖示、影像和字串。  例如，您可以存取應用程式的特定文化特性資源檔。  下列範例會將表單的圖示設為應用程式資源檔中所儲存的圖示 \(名為 `Form1Icon`\)。  
   
- [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/rapid-application-develo_1.vb)]  
+ [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
  `My.Resources` 物件只會公開 \(Expose\) 全域資源。  它不會提供與表單相關之資源檔的存取。  您必須從表單存取表單資源。  如需詳細資訊，請參閱[Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)。  
   

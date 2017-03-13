@@ -22,7 +22,7 @@ caps.handback.revision: 21
   
  使用可為 Null 的布林值時，運算式 `a != b` 不一定等於 `!(a == b)`，因為其中一個或兩者的值可能為 null。  您必須分別多載 `true` 和 `false` 運算子，以正確處理運算式中的 null 值。  在下列範例中，會說明如何多載及使用 `true` 和 `false` 運算子。  
   
- [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#16)]  
+ [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-operator_1.cs)]  
   
  多載 `true` 和 `false` 運算子的型別可用於控制 [if](../../../csharp/language-reference/keywords/if-else.md)、[do](../../../csharp/language-reference/keywords/do.md)、[while](../../../csharp/language-reference/keywords/while.md) 和 [for](../../../csharp/language-reference/keywords/for.md) 陳述式中的運算式與[條件運算式](../../../csharp/language-reference/operators/conditional-operator.md)中的運算式。  
   

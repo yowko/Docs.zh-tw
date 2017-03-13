@@ -21,7 +21,7 @@ caps.handback.revision: 10
 ## 範例  
  在下列程式碼範例中，<xref:System.Collections.Generic.Dictionary%602> 是以型別 `StudentName` 的執行個體進行初始化。  
   
- [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#34)]  
+ [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
  請注意，每個集合的項目中都有兩組括號。  最內層的括號會括住 `StudentName` 的物件初始設定式，最外層的括號會括住機碼值組，這組值會加入到 `students` <xref:System.Collections.Generic.Dictionary%602>。  最後，括號會括住目錄的整個集合初始設定式。  
   

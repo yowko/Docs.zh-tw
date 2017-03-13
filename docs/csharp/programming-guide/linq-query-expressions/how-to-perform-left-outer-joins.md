@@ -15,7 +15,7 @@ caps.handback.revision: 23
 > [!NOTE]
 >  參考型別的預設值是 `null`;因此，這個範例會檢查 null 參考在存取每個 `Pet` 集合中的每一個項目之前。  
   
- [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#7)]  
+ [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-left-outer-joins_1.cs)]  
   
 ## 編譯程式碼  
   

@@ -28,7 +28,7 @@ caps.handback.revision: 18
 這個範例顯示如何使用子項軸屬性存取 XML 項目中，所有具有指定名稱的 XML 子項目。  具體而言，它會使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來取得集合 \(由 `name` 子項軸屬性傳回\) 中第一個項目的值。  `name` 子項軸屬性會取得 `contact` 物件中所有名為 `phone` 的子項目。  這個範例也會使用 `phone` 子項軸屬性存取 `contact` 物件中所有名為 `phone` 的子項目。  
   
 ## 範例  
- [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-child-_1.vb)]  
+ [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-child-elements_1.vb)]  
   
 ## 編譯程式碼  
  這個範例需要：  

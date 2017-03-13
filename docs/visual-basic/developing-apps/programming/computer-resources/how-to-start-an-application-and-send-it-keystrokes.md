@@ -27,7 +27,7 @@ caps.handback.revision: 15
 這個範例會使用 `Shell` 函式啟動計算機應用程式，再使用 `My.Computer.Keyboard.SendKeys` 方法傳送按鍵輸入，將兩個數字相乘。  
   
 ## 範例  
- [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#25)]  
+ [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
   
 ## 穩固程式設計  
  如果找不到具有要求之處理序識別項的應用程式，則會引發 <xref:System.ArgumentException> 例外狀況。  

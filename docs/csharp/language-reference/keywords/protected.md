@@ -24,7 +24,7 @@ caps.handback.revision: 20
 ## 範例  
  只有當存取是透過衍生類別型別進行時，才可以存取衍生類別中基底類別 \(Base Class\) 的 protected 成員。  例如，請考量下列程式碼區段：  
   
- [!code-cs[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#11)]  
+ [!code-cs[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_1.cs)]  
   
  陳述式 `a.x = 10` 會產生錯誤，因為它位於靜態方法 Main，而不是類別 B 的執行個體。  
   
@@ -33,7 +33,7 @@ caps.handback.revision: 20
 ## 範例  
  在此範例中，類別 `DerivedPoint` 衍生自 `Point`。  因此，您可以直接從該衍生類別存取基底類別的 protected 成員。  
   
- [!code-cs[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#12)]  
+ [!code-cs[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_2.cs)]  
   
  如果您將 `x` 和 `y` 的存取層級更改為 [private](../../../csharp/language-reference/keywords/private.md)，編譯器會發出錯誤訊息：  
   

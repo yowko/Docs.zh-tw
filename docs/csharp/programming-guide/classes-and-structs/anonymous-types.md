@@ -41,7 +41,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  如果未在匿名類型中指定成員名稱，編譯器會為匿名類型成員指定與用於初始化類型之屬性相同的名稱。  您必須為以運算式初始化的屬性提供一個名稱，如上述範例所示。  在下列範例中，匿名類型的屬性名稱是 `Color` 和 `Price`。  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/anonymous-types_1.cs)]  
+ [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  一般而言，當您使用匿名類型初始化變數時，您可以使用 [var](../../../csharp/language-reference/keywords/var.md) 將變數宣告為隱含類型區域變數。  由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。  如需 `var` 的詳細資訊，請參閱 [隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   

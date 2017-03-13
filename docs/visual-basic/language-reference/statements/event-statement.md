@@ -91,7 +91,7 @@ End Event
 ## 備註  
  一旦已經宣告事件，使用 `RaiseEvent` 陳述式來引發事件。  一般事件可能會如下列片段所示宣告和引發：  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#13)]  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
 >  您可以宣告事件引數，就像宣告程序的引數一樣，但下列情況除外：事件不可擁有具名引數、`ParamArray` 引數或 `Optional` 引數。  事件沒有傳回值。  
@@ -115,11 +115,11 @@ End Event
   
  將 `WithEvents` 變數加入至 `Form1` 類別的宣告區段：  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
   
  將下列程式碼加入至 `Form1` 的程式碼。  取代可能存在的任何重複程序，例如 `Form_Load` 或 `Button_Click`。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
  按 F5 以執行上述範例，然後按一下 \[**開始**\] 按鈕。  第一個文字方塊會開始倒數計時。  在經過完整時間 \(10 秒\) 之後，第一個文字方塊會顯示 \[完成\]。  
   

@@ -46,7 +46,7 @@ caps.handback.revision: 54
 > [!NOTE]
 >  在 [專案設計工具、編譯頁 \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic)中，確定 \[**Option Infer**\] 設定為 \[**在**\]。  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  輸出：  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 54
   
  如果資料來源沒有實作 <xref:System.Collections.Generic.IEnumerable%601>， [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 提供者需要實作 *標準查詢運算子的* 功能該資料來源的。  例如，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] 會處理將 XML 文件載入至可查詢 <xref:System.Xml.Linq.XElement> 型別的工作，如下列範例所示。  如需標準查詢運算子的詳細資訊，請參閱[Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
  使用 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 時，請先在設計階段利用手動方式或[物件關聯式設計工具 \(O\/R 設計工具\)](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2)，建立物件關聯對應。  您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。  在下列範例中，`customers` 表示資料庫中的特定資料表，而 <xref:System.Data.Linq.Table%601> 則支援泛型 <xref:System.Linq.IQueryable%601>。  
   
@@ -79,7 +79,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  下列範例中的查詢在執行時會傳回整數陣列 `numbers` 中的所有偶數。  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  查詢運算式包含三個子句：`From`、`Where` 和 `Select`。  [基本查詢作業 \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) 中會討論這些查詢運算式子句的特定功能和用途。  如需詳細資訊，請參閱[Queries](../../../../visual-basic/language-reference/queries/queries.md)。  請注意，在 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 中，查詢定義通常會儲存在變數中，等稍後再執行。  查詢變數 \(例如，在上述範例中， `evensQuery` 必須是可查詢的型別。`evensQuery` 的型別是 `IEnumerable(Of Integer)`，會使用區域型別推斷的編譯器中指定。  
   
@@ -91,13 +91,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### 延後執行  
  典型的 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢與上一個範例中的查詢類似，而上一個範例中定義了 `evensQuery`。  它會建立查詢，但是不會立即執行。  相反地，它會將查詢定義儲存在查詢變數 `evensQuery` 中。  稍後您會再執行查詢，方法通常是使用會傳回一系列值的 `For Each` 迴圈，或是套用 `Count` 或 `Max` 等標準查詢運算子。  這個程序稱為「*延後執行*」\(Deferred Execution\)。  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
  如果有一系列值，則可以在 `For Each` 迴圈中使用反覆運算變數 \(在上一個範例中是 `number`\) 來存取擷取到的資料。  因為查詢變數 `evensQuery` 保存的是查詢定義，而不是查詢結果，所以您可以隨心所欲地多次使用查詢變數來執行查詢。  例如，有另一個應用程式會持續更新您應用程式中的資料庫。  建立從該資料庫擷取資料的查詢之後，您就可以使用 `For Each` 迴圈重複執行查詢，每次都擷取最新的資料。  
   
  下列範例示範延後執行的運作方式。  在定義 `evensQuery2` 並使用 `For Each` 迴圈加以執行之後 \(如上面範例所示\)，資料來源 `numbers` 中的部分項目有所變更。  於是又再次使用一個 `For Each` 迴圈執行 `evensQuery2`。  第二次的結果會不同，原因是再次執行查詢的 `For Each` 迴圈使用的是 `numbers` 中的新值。  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
  輸出：  
   
@@ -114,15 +114,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  下列查詢會傳回整數陣列中的偶數計數。  但不會儲存查詢定義，而 `numEvens` 是簡單 `Integer`。  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
  使用 `Aggregate` 方法可以達成相同的結果。  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
  您也可以在查詢 \(立即\) 或查詢變數 \(延後\) 上呼叫 `ToList` 或 `ToArray` 方法來強制執行查詢 \(如下列程式碼所示\)。  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
  在前述範例中，`evensQuery3` 是查詢變數，而 `evensList` 是清單，`evensArray` 是陣列。  
   

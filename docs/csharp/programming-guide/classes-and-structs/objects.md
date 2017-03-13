@@ -27,11 +27,11 @@ caps.handback.revision: 26
   
  類別的執行個體是使用 [new 運算子](../../../csharp/language-reference/keywords/new-operator.md)所建立。  在下列範例中，`Person` 為型別，而 `person1` 和 `person 2` 為該型別的執行個體或物件。  
   
- [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_1.cs)]  
+ [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
  由於結構是實值型別 \(Value Type\)，因此結構物件的變數會擁有整個物件的複本。  結構的執行個體也可以使用 `new` 運算子建立，但是並不是必要，如以下範例所示：  
   
- [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_2.cs)]  
+ [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
  `p1` 和 `p2` 的記憶體都配置在執行緒堆疊中。  該記憶體會與宣告它的型別或方法一起回收。  這就是在指派時複製結構的原因。  相較之下，配置給類別執行個體的記憶體則會在物件的所有參考都超出範圍時，由 Common Language Runtime 自動回收 \(記憶體回收\)。  因此無法如同在 C\+\+ 中一般，決定性地終結類別物件。  如需 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 中記憶體回收的詳細資訊，請參閱[Garbage Collection](../Topic/Garbage%20Collection.md)。  
   
@@ -45,7 +45,7 @@ caps.handback.revision: 26
   
 -   若要判斷兩個結構執行個體中的執行個體欄位是否擁有相同的值，請使用 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法。  由於所有結構都會隱含繼承自 <xref:System.ValueType?displayProperty=fullName>，因此您可在物件上直接呼叫這個方法，如以下範例所示：  
   
- [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_3.cs)]  
+ [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
  `Equals` 的 <xref:System.ValueType?displayProperty=fullName> 實作會使用反映，因為它必須能夠判斷任何結構中擁有的欄位。  建立您自己的結構時，請覆寫 `Equals` 方法以提供您的型別專屬的有效相等演算法。  
   

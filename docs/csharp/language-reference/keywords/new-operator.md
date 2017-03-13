@@ -54,7 +54,7 @@ int i = 0;
 ## 範例  
  在下列範例中，`struct` 物件與類別物件都是使用 `new` 運算子來建立與初始化，並隨後指派值。  預設值與指派的值都會顯示出來。  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#7)]  
+ [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  請注意範例裡字串的預設值為 `null`。  因此，並未顯示此值。  
   

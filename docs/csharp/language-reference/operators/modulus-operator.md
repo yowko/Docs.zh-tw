@@ -25,7 +25,7 @@ caps.handback.revision: 15
  使用者定義型別可多載 `%` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#9)]  
+ [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]  
   
 ## 註解  
  請注意與雙精度浮點數型別有關的捨入誤差 \(Round\-Off Error\)。  

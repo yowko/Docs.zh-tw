@@ -66,14 +66,14 @@ result = expression1 AndAlso expression2
 ## 範例  
  下列範例會使用 `AndAlso` 運算子，對兩個運算式執行邏輯交集。  結果是代表整個交集的運算式是否為 true 的 `Boolean` 值。  如果第一個運算式為 `False`，則不評估第二個運算式。  
   
- [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/andalso-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
   
  前一個範例分別產生 `True`、`False` 和 `False` 的結果。  計算 `secondCheck` 時，不會評估第二個運算式，因為第一個運算式已經是 `False`。  然而，計算 `thirdCheck` 時會評估第二個運算式。  
   
 ## 範例  
  下列範例會顯示 `Function` 程序，在陣列元素之間搜尋指定值。  如果陣列是空的，或陣列長度已超過，`While` 陳述式就不能根據搜尋值測試陣列元素。  
   
- [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/andalso-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
   
 ## 請參閱  
  [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   

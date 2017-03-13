@@ -27,7 +27,7 @@ caps.handback.revision: 12
 ## Visual Basic 語言和 .NET Framework  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 方法可當做語言本身的函式使用。  它們可以在程式碼中使用，沒有任何限制。  下列範例是 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 字串管理命令的典型使用方式：  
   
- [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_1.vb)]  
+ [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   
  在此範例中，`Mid` 函式會對 `aString` 執行指向作業，並將值指派給 `bString`。  
   
@@ -39,14 +39,14 @@ caps.handback.revision: 12
 #### 共用方法  
  共用方法是源自於 `String` 類別本身的方法，使用時不需要有此類別的執行個體。  這些方法可以用類別 \(`String`\) 的名稱加以限定，而不是用 `String` 類別的執行個體加以限定。  例如：  
   
- [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_2.vb)]  
+ [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
   
  在上述範例中，<xref:System.String.Copy%2A?displayProperty=fullName> 方法是靜態方法，它會作用於指定的運算式並將結果值指派給 `bString`。  
   
 #### 執行個體方法  
  相對地，執行個體方法則源自於 `String` 的特定執行個體，必須用執行個體名稱加以限定。  例如：  
   
- [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_3.vb)]  
+ [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
   
  在此範例中，<xref:System.String.Substring%2A?displayProperty=fullName> 方法是 `String` \(也就是 `aString`\) 的執行個體方法。  它會對 `aString` 執行作業並將值指派給 `bString`。  
   

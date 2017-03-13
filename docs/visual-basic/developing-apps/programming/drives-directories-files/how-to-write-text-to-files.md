@@ -32,7 +32,7 @@ caps.handback.revision: 19
   
 -   使用 `WriteAllText` 方法將文字寫入檔案，並指定要寫入的檔案與文字。  此範例會將 `"This is new text."` 這一行寫入名為 `test.txt` 的檔案，並將文字附加至檔案中現有的文字。  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
 #### 若要將連續的字串寫入檔案  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 19
   
      此範例會將 `Documents and Settings` 目錄中的檔案名稱寫入 `FileList.txt`，並在每個名稱之間插入歸位字元 \(Carriage Return\) 以增加可讀性。  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
 ## 穩固程式設計  
  下列情形可能會造成例外狀況 \(Exception\)：  

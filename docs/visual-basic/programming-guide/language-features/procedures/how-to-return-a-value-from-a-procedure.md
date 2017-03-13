@@ -35,11 +35,11 @@ caps.handback.revision: 12
   
      下列 `Function` 程序會計算直角三角形的最長邊 \(也稱為斜邊\)，並將它傳回給呼叫程式碼。  
   
-     [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
      下列範例示範 `hypotenuse` 的典型呼叫，其可儲存傳回的值。  
   
-     [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
 ### 若要使用 Exit Function 或 End Function 傳回值  
   

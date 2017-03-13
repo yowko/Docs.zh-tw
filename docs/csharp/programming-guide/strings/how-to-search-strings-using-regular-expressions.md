@@ -22,12 +22,12 @@ caps.handback.revision: 19
 ## 範例  
  下列程式碼是主控台應用程式，會在陣列中執行不區分大小寫的簡單字串搜尋。  <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=fullName> 靜態方法會執行搜尋 \(提供要搜尋的字串及包含搜尋模式的字串\)。  在上述情形中，會使用第三個引數表示應該忽略大小寫。  如需詳細資訊，請參閱<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>。  
   
- [!code-cs[csProgGuideStrings#17](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#17)]  
+ [!code-cs[csProgGuideStrings#17](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_1.cs)]  
   
 ## 範例  
  下列程式碼是一個主控台應用程式，會使用規則運算式驗證陣列中每個字串格式。  驗證需要每個字串都使用電話號碼的格式，其中三組數字之間都以破折號分隔，前兩組包含三個數字而第三組包含四個數字。  這可以使用規則運算式 `^\\d{3}-\\d{3}-\\d{4}$` 來完成。  如需詳細資訊，請參閱[規則運算式語言 \- 快速參考](../Topic/Regular%20Expression%20Language%20-%20Quick%20Reference.md)。  
   
- [!code-cs[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#18)]  
+ [!code-cs[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_2.cs)]  
   
 ## 請參閱  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>   

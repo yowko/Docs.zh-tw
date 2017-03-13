@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
 -   使用 `CreateDirectory` 方法，指定要建立目錄之位置的完整路徑。  這個範例會在 `C:\Documents and Settings\All Users\Documents` 中建立目錄 `NewDirectory`。  
   
-     [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-directory_1.vb)]  
   
 ## 穩固程式設計  
  下列情形可能會造成例外狀況 \(Exception\)：  

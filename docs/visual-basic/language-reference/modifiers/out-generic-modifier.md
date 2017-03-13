@@ -55,12 +55,12 @@ caps.handback.revision: 14
 ## 範例  
  下列範例示範如何宣告、擴充和實作 Covariant 泛型介面，  同時也示範如何對實作 Covariant 介面的類別使用隱含轉換。  
   
- [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/out-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## 範例  
  下列範例示範如何宣告、執行個體化和叫用 Covariant 泛型委派，  同時也示範如何對委派型別使用隱含轉換。  
   
- [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/out-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
 ## 請參閱  
  [泛型介面中的變異數](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   

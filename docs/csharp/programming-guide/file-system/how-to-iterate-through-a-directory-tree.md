@@ -44,14 +44,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  這裡所處理的特定例外狀況，以及對每個檔案和資料夾所執行的特定動作，都僅是提供做為範例用途。  您應該針對您的特定需求修改這個程式碼。  如需詳細資訊，請參閱程式碼中的註解。  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#1)]  
+ [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## 範例  
  下列範例會示範如何在不使用遞迴的情況下，逐一查看目錄樹狀結構中的檔案和資料夾。  這項技術使用泛型 <xref:System.Collections.Generic.Stack%601> 集合型別，這是屬於後進先出 \(LIFO\) 堆疊。  
   
  這裡所處理的特定例外狀況，以及對每個檔案和資料夾所執行的特定動作，都僅是提供做為範例用途。  您應該針對您的特定需求修改這個程式碼。  如需詳細資訊，請參閱程式碼中的註解。  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#2)]  
+ [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  藉由測試每個資料夾，判斷應用程式是否有權限開啟資料夾的作業，通常都非常耗時。  因此，程式碼範例只有在 `try/catch` 區塊中封入該部分的作業。  您可以修改 `catch` 區塊，好讓您在存取資料夾遭到拒絕時，可以嘗試升級權限，然後再次存取資料夾。  通常，您只需要攔截那些您可以處理的例外狀況，不要讓應用程式處於未知狀態。  
   

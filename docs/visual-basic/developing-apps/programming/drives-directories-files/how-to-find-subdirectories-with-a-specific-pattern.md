@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
 -   使用 `GetDirectories` 方法，以提供要搜尋之目錄的名稱和路徑。  下列範例會傳回在目錄結構中，名稱中含有 "Logs" 這個字的所有目錄，並將這些目錄加入至 `ListBox1` 中。  
   
-     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-subdirectori_1.vb)]  
+     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
   
 ## 穩固程式設計  
  下列情形可能會造成例外狀況 \(Exception\)：  

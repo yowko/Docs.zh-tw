@@ -18,14 +18,14 @@ caps.handback.revision: 17
 # 將陣列當做物件 (C# 程式設計手冊)
 在 C\# 中，陣列是實際物件，而不只是如 C 和 C\+\+ 中之連續記憶體的可定址區域。  <xref:System.Array> 是所有陣列型別的抽象基底型別。  您可以使用 <xref:System.Array> 的屬性和其他類別成員。  例如，可以使用 <xref:System.Array.Length%2A> 屬性取得陣列的長度。  下列程式碼將 `numbers` 陣列的長度 \(亦即 `5`\) 指派給變數 `lengthOfNumbers`：  
   
- [!code-cs[csProgGuideArrays#3](../../../csharp/programming-guide/arrays/codesnippet/csharp/arrays-as-objects_1.cs)]  
+ [!code-cs[csProgGuideArrays#3](../../../csharp/programming-guide/arrays/codesnippet/CSharp/arrays-as-objects_1.cs)]  
   
  <xref:System.Array> 類別還提供了許多其他有用的方法和屬性，例如，排序、搜尋和複製陣列。  
   
 ## 範例  
  本範例使用 <xref:System.Array.Rank%2A> 屬性顯示陣列的維度數目。  
   
- [!code-cs[csProgGuideArrays#2](../../../csharp/programming-guide/arrays/codesnippet/csharp/arrays-as-objects_2.cs)]  
+ [!code-cs[csProgGuideArrays#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/arrays-as-objects_2.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

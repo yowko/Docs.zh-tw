@@ -21,7 +21,7 @@ caps.handback.revision: 22
 # 轉換運算子 (C# 程式設計手冊)
 C\# 可讓程式設計人員宣告類別或結構轉換，使類別或結構能夠與其他的類別、結構或基本的型別相互轉換。  轉換定義的方式和運算子一樣，並且對轉換成的型別來命名。  在要轉換的型別引數或轉換所產生的型別中，必須有一個是包含型別，但不能兩者都是。  
   
- [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/conversion-operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
 ## 轉換運算子概觀  
  轉換運算子有下列屬性︰  

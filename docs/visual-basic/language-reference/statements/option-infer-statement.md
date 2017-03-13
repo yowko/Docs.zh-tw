@@ -96,12 +96,12 @@ Option Infer 關閉時的 IntelliSense
 ## 範例  
  下列範例示範 `Option Infer` 陳述式如何啟用區域類型推斷。  
   
- [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
 ## 範例  
  下列範例示範當變數被視為 `Object` 時，執行階段類型可能會不同。  
   
- [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## 請參閱  
  [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   

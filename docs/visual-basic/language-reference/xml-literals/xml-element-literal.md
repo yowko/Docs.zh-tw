@@ -128,7 +128,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>範例  
  下列範例示範如何建立簡單的 XML 項目具有兩個巢狀的空項目。  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
   
  此範例會顯示下列文字。 請注意，常值保留空白項目結構。  
   
@@ -142,7 +142,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>範例  
  下列範例示範如何使用內嵌的運算式來命名項目和建立屬性。  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
   
  此程式碼顯示下列文字：  
   
@@ -153,7 +153,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>範例  
  下列範例會宣告 `ns` 作為 XML 命名空間前置詞。 然後建立 XML 常值中使用的命名空間前置詞，並顯示項目的最終格式。  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
   
  此程式碼顯示下列文字：  
   

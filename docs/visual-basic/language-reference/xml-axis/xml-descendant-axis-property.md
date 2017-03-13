@@ -67,7 +67,7 @@ object...<descendant>
 ## 範例  
  下列範例顯示如何從 `contacts` 物件存取名為 `name` 之第一個子代節點的值，以及名為 `phone` 之所有子代節點的值。  
   
- [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_1.vb)]  
+ [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
  這個程式碼會顯示下列文字：  
   
@@ -78,7 +78,7 @@ object...<descendant>
 ## 範例  
  下列範例將 `ns` 宣告為 XML 命名空間前置字元。  然後使用這個命名空間前置字元建立 XML 常值，並以限定名稱 `ns:name` 存取第一個子節點的值。  
   
- [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_2.vb)]  
+ [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
  這個程式碼會顯示下列文字：  
   

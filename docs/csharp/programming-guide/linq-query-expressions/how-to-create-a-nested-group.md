@@ -6,7 +6,7 @@ caps.handback.revision: 12
 在下列範例中，會示範如何在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 查詢運算式中建立巢狀群組。  按照學年度或是學生年級所建立的每一個群組接著會根據個別學生的名字，進一步的分為子群組。  
   
 ## 範例  
- [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#24)]  
+ [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-create-a-nested-group_1.cs)]  
   
  請注意，需要三個巢狀 `foreach` 迴圈來反覆查看巢狀群組的內部項目。  
   

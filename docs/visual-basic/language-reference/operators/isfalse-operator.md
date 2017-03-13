@@ -35,7 +35,7 @@ caps.handback.revision: 14
 ## 範例  
  下列程式碼範例所定義的結構大綱包含 `IsFalse` 和 `IsTrue` 運算子的定義。  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/isfalse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
   
 ## 請參閱  
  [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   

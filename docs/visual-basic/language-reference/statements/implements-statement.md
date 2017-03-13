@@ -54,14 +54,14 @@ Implements interfacename.interfacemember [, ...]
 ## 範例  
  下列範例會顯示如何使用 `Implements` 陳述式實作介面的成員。  它會定義名為 `ICustomerInfo` 的介面，此介面具有一個事件、一個屬性和一個程序。  `customerInfo` 類別則會實作在介面中定義的所有成員。  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
  請注意，`customerInfo` 類別會在另一行原始程式碼中使用 `Implements` 陳述式，指出類別會實作 `ICustomerInfo` 介面的所有成員。  接著，類別中的每個成員都會使用 `Implements` 關鍵字，做為成員宣告的一部分，指出它會實作該介面成員。  
   
 ## 範例  
  以下兩個程序將顯示如何使用上述範例中所實作的介面。  若要測試實作，請將這些程序加入至您的專案中，並呼叫 `testImplements` 程序。  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
 ## 請參閱  
  [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   

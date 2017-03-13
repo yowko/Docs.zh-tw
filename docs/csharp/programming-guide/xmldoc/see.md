@@ -39,7 +39,7 @@ caps.handback.revision: 19
   
  下列範例顯示一個摘要區段中 \<see\> 標記。  
   
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/see_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

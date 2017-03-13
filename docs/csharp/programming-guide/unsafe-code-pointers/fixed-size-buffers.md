@@ -31,11 +31,11 @@ private fixed char name[30];
   
  例如，在 C\# 2.0 之前，下列 `struct` 的大小為 8 位元組。  `pathName` 陣列是對堆積 \(Heap\) 配置陣列的參考：  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#19)]  
+ [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  從 C\# 2.0 開始，`struct` 可以包含內嵌陣列。  在下列範例中，`fixedBuffer` 陣列有固定的大小。  若要存取陣列的項目，您可以使用 `fixed` 陳述式來建立第一個項目的指標。  `fixed` 陳述式會將 `fixedBuffer` 的執行個體固定至記憶體中的特定位置。  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#20)]  
+ [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  有 128 個元素的 `char` 陣列大小為 256 個位元組。  無論編碼方式為何，在固定大小的 [char](../../../csharp/language-reference/keywords/char.md) 緩衝區中，每個字元都需要兩個位元組。  即使當字元緩衝區用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構，算法也是一樣。  如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.CharSet>。  
   

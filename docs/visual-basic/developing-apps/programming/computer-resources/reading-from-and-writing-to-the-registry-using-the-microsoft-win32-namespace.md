@@ -42,11 +42,11 @@ caps.handback.revision: 20
 ## <a name="reading-a-value-from-the-registry"></a>讀取登錄中的值  
  下列程式碼示範如何讀取 HKEY_CURRENT_USER 中的字串。  
   
- [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/reading-from-and-writing_1.vb)]  
+ [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_1.vb)]  
   
  下列程式碼會依序讀取字串、遞增字串，以及將字串寫入 HKEY_CURRENT_USER。  
   
- [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/reading-from-and-writing_2.vb)]  
+ [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.SystemException>   

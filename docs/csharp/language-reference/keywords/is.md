@@ -38,7 +38,7 @@ if (obj is MyObject)
  `is` 運算子的左邊不允許使用匿名方法 \(Anonymous Method\)。  這個例外狀況包括 Lambda 運算式。  
   
 ## 範例  
- [!code-cs[csrefKeywordsOperator#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#4)]  
+ [!code-cs[csrefKeywordsOperator#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/is_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -30,11 +30,11 @@ caps.handback.revision: 16
   
 -   使用 `ReadAllBytes` 方法，會傳回檔案內容做為位元組陣列。  這個範例會讀取檔案 `C:/Documents and Settings/selfportrait.jpg`。  
   
-     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-binary-_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_1.vb)]  
   
 -   若是大型二進位檔案，您可以先使用 <xref:System.IO.FileStream> 物件的 <xref:System.IO.FileStream.Read%2A> 方法，只讀取檔案一段指定的時間。  接著限定每次讀取作業時，將檔案的多少部分載入記憶體。  下列程式碼範例會複製檔案，並允許呼叫端指定每次讀取作業要將檔案的多少部分載入記憶體。  
   
-     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-binary-_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_2.vb)]  
   
 ## 穩固程式設計  
  下列條件可能造成擲回例外狀況：  

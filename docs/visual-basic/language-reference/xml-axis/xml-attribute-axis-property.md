@@ -74,7 +74,7 @@ object.@<attribute>
 ## 範例  
  下列範例顯示如何從名為 `phone` 的 XML 項目集合中，取得名為 `type` 之 XML 屬性 \(Attribute\) 的值。  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_1.vb)]  
+ [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
   
  這個程式碼會顯示下列文字：  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ## 範例  
  下列範例顯示兩種為 XML 項目建立屬性 \(Attribute\) 的方法，一種是在 XML 中以宣告方式建立，一種是以動態方式將屬性 \(Attribute\) 加入至 <xref:System.Xml.Linq.XElement> 物件的執行個體 \(Instance\)。  `type` 屬性 \(Attribute\) 是以宣告方式建立，而 `owne`r 屬性 \(Attribute\) 是以動態方式建立。  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_2.vb)]  
+ [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
   
  這個程式碼會顯示下列文字：  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## 範例  
  下列範例會使用角括弧語法取得名為 `number-type` 之 XML 屬性 \(Attribute\) 的值，這個名稱在 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中不是有效的識別項。  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_3.vb)]  
+ [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   
  這個程式碼會顯示下列文字：  
   
@@ -109,7 +109,7 @@ object.@<attribute>
 ## 範例  
  下列範例將 `ns` 宣告為 XML 命名空間前置字元。  然後使用這個命名空間前置字元建立 XML 常值，並以限定名稱 "`ns:name` 存取第一個子節點。  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_4.vb)]  
+ [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
   
  這個程式碼會顯示下列文字：  
   

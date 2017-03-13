@@ -37,11 +37,11 @@ caps.handback.revision: 17
   
  註解可以跟隨在陳述式之後的同一行中，或者佔據一整行。  兩者皆會在以下程式碼中加以說明。  
   
- [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/comments-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_1.vb)]  
   
  如果需要有一行以上的註解，請在每一行中使用註解符號，如下列範例：  
   
- [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/comments-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## 註解方針  
  下表提供哪些註解類型可以出現在一段程式碼之前的一般方針。  這些都是建議，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 不會強制加入註解的規則。  撰寫對您自己與其他閱讀程式碼的人而言最有效的註解。  

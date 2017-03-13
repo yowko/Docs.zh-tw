@@ -37,7 +37,7 @@ caps.handback.revision: 48
 ## 範例  
  以下範例會定義 `MyCustomClass`，其中包含 `ProgrammingGuide` 命名空間最上層的三個成員。  `MyCustomClass` 的執行個體 \(物件\) 是在 `Program` 類別的 `Main` 方法中定義，且物件的方法和屬性可使用點標記法存取。  
   
- [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 ## 封裝  
  「*封裝*」\(Encapsulation\) 有時候被稱為物件導向程式設計的第一個支柱或原則。  根據封裝原則，類別或結構可以指定類別或結構外部的程式碼對於它們的每一個成員有多少存取範圍。  不計劃用在類別或組件 \(Assembly\) 外部的方法和變數可以加以隱藏，以降低程式碼錯誤或惡意擅用的可能。  

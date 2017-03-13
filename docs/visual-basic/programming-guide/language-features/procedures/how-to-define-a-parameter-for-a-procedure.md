@@ -45,7 +45,7 @@ caps.handback.revision: 15
   
      下列範例會定義含有三個參數之 `Sub` 程序的大綱。  前兩個是必要項，而第三個是選擇項。  參數清單中的參數宣告是用逗號隔開。  
   
-     [!code-vb[VbVbcnProcedures#33](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-paramete_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
      第一個參數會接受 \(Accept\)  `customer`  物件，而 `updateCustomer` 可直接更新傳遞給 `c` 的變數，因為引數是以 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 方式傳遞。  程序無法變更後兩個引數的值，因為它們是以 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 方式傳遞。  
   

@@ -50,9 +50,9 @@ caps.handback.revision: 21
   
  下列範例可說明多載解析的處理過程。  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
  在第一個呼叫中，因為第一個引數的型別 \(`Short`\) 會縮小對應參數的型別 \(`Byte`\)，所以編譯器會排除第一個多載。  然後，因為第二個多載中的每個引數型別 \(`Short` 和 `Single`\) 都擴展成第三個多載中的對應型別 \(`Integer` 和 `Single`\)，所以會排除第三個多載。  第二個多載需要較少的擴展，因此編譯器會將它用於呼叫。  
   

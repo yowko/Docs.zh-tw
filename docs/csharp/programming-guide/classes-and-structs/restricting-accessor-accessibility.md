@@ -23,7 +23,7 @@ caps.handback.revision: 26
 # 限制存取子的存取範圍 (C# 程式設計手冊)
 屬性或索引子的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分稱為「*存取子*」\(Accessor\)。  根據預設，這些存取子具有相同的可視性 \(或存取層級\)：即屬性或索引子所隸屬的層級。  如需詳細資訊，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。  不過，有時候限制對其中一個存取子的存取會很有用。  通常，這會涉及限制 `set` 存取子的存取範圍，但同時讓 `get` 存取子保持為可公用存取。  例如：  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_1.cs)]  
+ [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  在此範例中，名為 `Name` 的屬性會定義 `get` 和 `set` 存取子。  `get` 存取子會接收屬性本身的存取範圍層級 \(在此案例中為 `public`\)，同時套用 [protected](../../../csharp/language-reference/keywords/protected.md) 存取修飾詞至 `set` 存取子本身以明確限制此存取子。  
   
@@ -41,12 +41,12 @@ caps.handback.revision: 26
 ## 覆寫存取子的存取修飾詞  
  當您覆寫屬性或索引子時，覆寫程式碼必須能夠存取覆寫存取子。  同時，屬性\/索引子的存取範圍層級，以及存取子的存取層級，都必須與對應的被覆寫屬性\/索引子和存取子相符。  例如：  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_2.cs)]  
+ [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## 實作介面  
  當您使用存取子實作介面時，存取子不能有存取修飾詞。  不過，如果您使用如 `get` 的存取子實作介面，那麼另一個存取子便可以具有存取修飾詞，如下列範例所示：  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_3.cs)]  
+ [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## 存取子的存取範圍定義域  
  如果您在存取子上使用存取修飾詞，那麼存取子的[存取範圍定義域](../../../csharp/language-reference/keywords/accessibility-domain.md)即由該修飾詞決定。  
@@ -58,7 +58,7 @@ caps.handback.revision: 26
   
  這段程式碼同時也將示範限制存取修飾詞 \(例如 `private` 或 `protected`\) 套用在 `DerivedClass` 中 `Name` 屬性的 `set` 存取子時，會使存取子無法存取，並在指派時產生錯誤。  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_4.cs)]  
+ [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## 註解  
  請注意，如果您以 `new public string Id` 取代宣告 `new private string Id`，輸出就會變成：  

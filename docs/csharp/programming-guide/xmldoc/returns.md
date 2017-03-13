@@ -36,7 +36,7 @@ caps.handback.revision: 11
  使用 [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 進行編譯，將文件註解處理為檔案。  
   
 ## 範例  
- [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/returns_1.cs)]  
+ [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

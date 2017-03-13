@@ -29,7 +29,7 @@ caps.handback.revision: 35
   
 -   若要分割類別定義，請使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 關鍵字修飾詞 \(Modifier\)，如下所示：  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_1.cs)]  
+ [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  `partial` 關鍵字表示可定義於命名空間 \(Namespace\) 中之類別、結構或介面的其他組件。  所有組件都必須使用 `partial` 關鍵字。  所有的組件必須都可在編譯時期提供使用，才能夠形成最後的型別。  所有的組件都必須有相同的存取範圍，例如 `public`、`private` 及其他。  
   
@@ -42,15 +42,15 @@ caps.handback.revision: 35
   
  下列範例會示範巢狀型別可以是 partial，即使這些巢狀型別所包含其中的型別並非 partial。  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_2.cs)]  
+ [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  在編譯時期，會合併部分型別定義的屬性。  例如，請參考下列宣告：  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_3.cs)]  
+ [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  它們相當於下列宣告：  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_4.cs)]  
+ [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  以下是所有部分型別定義的合併結果：  
   
@@ -66,24 +66,24 @@ caps.handback.revision: 35
   
  例如，請參考下列宣告：  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_5.cs)]  
+ [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  它們相當於下列宣告：  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_6.cs)]  
+ [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### 限制  
  下面是要在使用部分類別定義時遵守的一些規則：  
   
 -   組成相同型別的所有部分型別定義，都必須由 `partial` 修飾。  例如，下列類別宣告將會產生錯誤：  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_7.cs)]  
+     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   `partial` 修飾詞只能緊接在關鍵字 `class`、`struct` 或 `interface` 前面。  
   
 -   巢狀的部分型別允許出現在部分型別定義中，如下列範例所示，  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_8.cs)]  
+     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   組成相同型別的所有部分型別定義，都必須在同一組件和模組 \(.exe 或 .dll 檔案\) 內定義。  部分定義無法跨多個模組。  
   
@@ -117,7 +117,7 @@ caps.handback.revision: 35
  在下列範例中，`CoOrds` 類別的欄位和建構函式 \(Constructor\) 會宣告於一個部分類別定義中，而其成員 `PrintCoOrds` 則宣告於另外一個部分類別定義中。  
   
 ### 程式碼  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_9.cs)]  
+ [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## 範例 2  
   
@@ -125,7 +125,7 @@ caps.handback.revision: 35
  下列範例顯示您也可以開發部分結構和介面。  
   
 ### 程式碼  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_10.cs)]  
+ [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## 部分方法  
  部分類別或結構可能會包含部分方法。  類別的其中一個部分會包含該方法的簽章。  在相同組件或其他組件中可能會定義選擇性的實作 \(Implementation\)。  如果沒有提供實作，該方法和該方法的所有呼叫便會在編譯時期移除。  

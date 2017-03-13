@@ -27,14 +27,14 @@ caps.handback.revision: 18
   
  下列是介面索引子存取子的範例：  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_1.cs)]  
+ [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
  索引子的簽章必須與宣告在相同介面的其他所有索引子的簽章不同。  
   
 ## 範例  
  下列範例將示範如何實作介面索引子。  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_2.cs)]  
+ [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
  在上述範例中，您可以以完整的介面成員名稱來使用明確介面成員實作。  例如：  
   

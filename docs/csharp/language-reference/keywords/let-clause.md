@@ -29,7 +29,7 @@ caps.handback.revision: 15
   
 2.  讓查詢只在範圍變數 `word` 上呼叫一次 `ToLower`。  如果未使用 `let`，就需要在 `where` 子句的每個述詞 \(Predicate\) 中呼叫 `ToLower`。  
   
- [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Let.cs#28)]  
+ [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

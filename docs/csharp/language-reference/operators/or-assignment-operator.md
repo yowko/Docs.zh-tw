@@ -39,7 +39,7 @@ x = x | y
  `|=` 運算子無法直接多載，但使用者定義型別可多載 [&#124; 運算子](../../../csharp/language-reference/operators/or-operator.md) \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#10)]  
+ [!code-cs[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

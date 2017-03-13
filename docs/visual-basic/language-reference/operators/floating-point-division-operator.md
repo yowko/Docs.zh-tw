@@ -85,7 +85,7 @@ expression1 / expression2
 ## 範例  
  這個範例會使用 `/` 運算子來執行浮點除法。  結果是兩個運算元的商數。  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/floating-point-division-_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
   
  上述範例中的運算式會傳回值 2.5 和 3.333333。  請注意，即使這兩個運算元都是整數常數，結果一律為浮點數 \(`Double`\)。  
   

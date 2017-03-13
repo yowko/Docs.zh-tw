@@ -44,9 +44,9 @@ caps.handback.revision: 16
 ## 範例  
  下列範例會覆寫 `ByRef` 參數宣告。  在強制 `ByVal` 的呼叫中，請注意兩種層次的括號。  
   
- [!code-vb[VbVbcnProcedures#39](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#40](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
  在將引數清單內的 `str` 以額外括號括起來時，`setNewString` 程序無法變更它在呼叫程式碼中的值，而 `MsgBox` 會顯示「如果以 ByVal 方式傳遞，則無法取代」。  若未以額外的括號將 `str` 括起來，則程序即可變更它，且 `MsgBox` 會顯示「這是新的 inString 引數值」。  
   

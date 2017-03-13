@@ -34,7 +34,7 @@ caps.handback.revision: 11
   
  類別中的所有事件都會使用 `Events` 欄位，追蹤處理每個事件的方法為何。  
   
- [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#22)]  
+ [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
   
 ## 請參閱  
  <xref:System.ComponentModel.EventHandlerList>   

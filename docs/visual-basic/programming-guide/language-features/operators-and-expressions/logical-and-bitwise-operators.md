@@ -43,7 +43,7 @@ caps.handback.revision: 22
 ## 一元邏輯運算子  
  [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md) 會對 `Boolean` 運算式執行邏輯「*負運算*」\(Negation\)。  它會產生與其運算元相反的邏輯。  如果運算式評估為 `True`，則 `Not` 會傳回 `False`。如果運算式評估為 `False`，則 `Not` 會傳回 `True`。  下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
   
 ## 二元邏輯運算子  
  [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md) 會對兩個 `Boolean` 運算式執行邏輯「*結合*」\(Conjunction\)。  如果兩個運算式都評估為 `True`，則 `And` 會傳回 `True`。  如果至少有一個運算式評估為 `False`，則 `And` 會傳回 `False`。  
@@ -54,7 +54,7 @@ caps.handback.revision: 22
   
  下列範例會說明 `And`、`Or` 和 `Xor` 運算子。  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
   
 ## 最少運算的邏輯運算  
  [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)非常類似於 `And` 運算子，因為前者也會對兩個 `Boolean` 運算式執行邏輯結合。  兩者的主要差異在於 `AndAlso` 會展現「*最少運算*」\(Short\-Circuiting\) 行為。  如果 `AndAlso` 運算式中的第一個運算式評估為 `False`，則不會評估第二個運算式，因為它無法變更最終結果，而且 `AndAlso` 會傳回 `False`。  
@@ -66,18 +66,18 @@ caps.handback.revision: 22
   
  下列範例會說明 `And`、`Or` 與其最少運算對應項之間的差異。  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
   
  在上述範例中，請注意在呼叫為最少運算時，不會執行 `checkIfValid()` 內的一些重要程式碼。  因為 `And` 不會進行最少運算，所以即使 `12 > 45` 會傳回 `False`，第一個 `If` 陳述式 \(Statement\) 也會呼叫 `checkIfValid()`。  當 `12 > 45` 傳回 `False` 時，`AndAlso` 會對第二個運算式進行最少運算，所以第二個 `If` 陳述式不會呼叫 `checkIfValid()`。  因為 `Or` 不會進行最少運算，所以即使 `12 < 45` 傳回 `True`，第三個 `If` 陳述式也會呼叫 `checkIfValid()`。  當 `12 < 45` 傳回 `True` 時，`OrElse` 會對第二個運算式進行最少運算，所以第四個 `If` 陳述式不會呼叫 `checkIfValid()`。  
   
 ## 位元運算  
  位元運算會以二進位 \(基底為 2\) 形式評估兩個整數值。  它們會比較位於對應位置的位元，然後根據比較結果來指派值。  下列範例會說明 `And` 運算子。  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/logical-and-bitwise-oper_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
   
  上述範例會將 `x` 的預設值設定為 1。  由於下列理由而發生這種情況：  
   

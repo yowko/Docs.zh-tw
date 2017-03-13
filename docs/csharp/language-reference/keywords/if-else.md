@@ -24,7 +24,7 @@ caps.handback.revision: 32
 # if-else (C# 參考)
 `if` 陳述式會根據運算式的 `Boolean` 值識別要執行的陳述式。 在下列範例中，`Boolean` 變數 `result` 設為 `true`，然後以 `if` 陳述式進行檢查。 輸出為 `The condition is true`。  
   
- [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
   
  您也可以將本主題中的範例放在主控台 App 的 `Main` 方法執行。  
   
@@ -43,28 +43,28 @@ caps.handback.revision: 32
   
  在 `then-statement` 和 `else-statement` 的陳述式可以是任何類型，包括其他在原始 `if` 陳述式內巢狀的 `if` 陳述式。 在巢狀 `if` 陳述式，每個 `else` 子句都隸屬於最後一個沒有相對應 `else` 的 `if`。 在下列範例中，如果 `Result1` 和 `m > 10` 都評估為 true，則會顯示 `n > 20`。 如果 `m > 10` 為 true，但 `n > 20` 是 false，則會顯示 `Result2`。  
   
- [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
   
  如果相反地，您希望 `Result2` 在 `(m > 10)` 為 false 時顯示，則可以使用大括弧指定關聯，以建立巢狀 `if` 陳述式的開頭和結尾，如下列範例所示。  
   
- [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
  如果條件 `(m > 10)` 評估為 false，就會顯示 `Result2`。  
   
 ## 範例  
  在下列範例中，將由鍵盤輸入字元，而程式會使用巢狀 `if` 陳述式判斷輸入字元是否為字母字元。 如果輸入字元是字母字元，程式就會檢查輸入的字元是大寫或小寫， 並顯示每一種情況的訊息。  
   
- [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_4.cs)]  
+ [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
   
 ## 範例  
  如下列程式碼片段所示，您也可以巢狀方式將 `if` 陳述式置於其他區塊內。 此範例將 `if` 以巢狀方式置於兩個 else 區塊和一個 then 區塊內部。 在每個區塊中，註解指定哪些條件為 true 或 false。  
   
- [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_5.cs)]  
+ [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
   
 ## 範例  
  下列範例會判斷輸入字元是否為小寫字母、大寫字母或數字。 如果這三個條件為 false，字元不是英數字元。 這個範例會顯示每一種情況的訊息。  
   
- [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_6.cs)]  
+ [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
  就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 您可以使用邏輯運算子，例如 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md)、[&](../../../csharp/language-reference/operators/and-operator.md)、[&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)、[&#124;](../../../csharp/language-reference/operators/or-operator.md) 和 [\!](../../../csharp/language-reference/operators/logical-negation-operator.md)，並撰寫複雜的條件。 下列程式碼顯示範例。  
   

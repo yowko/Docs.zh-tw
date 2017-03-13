@@ -23,7 +23,7 @@ caps.handback.revision: 15
 本範例介紹如何使用運算子多載化來建立一個定義複數加法的複數類別 `Complex`。  這個程式會顯示數值的虛數和實數部分，以及使用 `ToString` 方法之覆寫的加法運算結果。  
   
 ## 範例  
- [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-use-operator-over_1.cs)]  
+ [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

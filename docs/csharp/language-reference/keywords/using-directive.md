@@ -77,7 +77,7 @@ class Program
  下列範例示範如何定義和使用命名空間的 `using` 別名：  
   
 ### 程式碼  
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
 ### 註解  
  using alias 指示詞的右邊不能有開放式的泛型類型。  例如，您無法為 List\<T\> 建立 using alias，但是您可以為 List\<int\> 建立。  
@@ -88,7 +88,7 @@ class Program
  下列範例示範如何定義類別的 `using` 指示詞和 `using` 別名：  
   
 ### 程式碼  
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

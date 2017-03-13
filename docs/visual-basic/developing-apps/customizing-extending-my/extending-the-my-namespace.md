@@ -47,7 +47,7 @@ Visual Basic 中的 `My` 命名空間所公開的屬性和方法可以讓您輕�
   
  例如，假設您經常使用 `My.User` 物件來存取執行您的應用程式之使用者的目前安全性內容。  但是，您的公司使用自訂的使用者物件來公開其他資訊與功能供公司內的使用者使用。  在這個情況下，您可以使用自訂主體物件的執行個體，取代 `My.User.CurrentPrincipal` 屬性的預設值。  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
   
  設定 `My.User` 物件上的 `CurrentPrincipal` 屬性，會變更應用程式執行的識別。  `My.User` 物件會傳回新指定之使用者的相關資訊。  
   
@@ -56,7 +56,7 @@ Visual Basic 中的 `My` 命名空間所公開的屬性和方法可以讓您輕�
   
  例如，下列範例會將名為 `DnsServerIPAddresses` 的屬性加入至 `My.Computer` 物件。  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
   
 ##  <a name="addingcustom"></a> 將自訂物件加入至 My 命名空間  
  雖然 `My` 命名空間提供許多常見程式設計工作的方案，但是，您可能會遇到 `My` 命名空間無法處理的工作。  例如，您的應用程式可能會存取自訂目錄服務以取得使用者資料，或者您的應用程式可能會使用預設不會與 Visual Basic 一起安裝的組件。  您可以擴充 `My` 命名空間，將自訂方案納入您的環境特定的一般工作中。  您可以很容易地擴充 `My` 命名空間，以便加入新的成員來滿足不斷成長的應用程式需求。  此外，您可以將 `My` 命名空間擴充部署至其他開發程式，做為 Visual Basic 範本。  
@@ -64,20 +64,20 @@ Visual Basic 中的 `My` 命名空間所公開的屬性和方法可以讓您輕�
 ###  <a name="addingtonamespace"></a> 將成員加入至 My 命名空間  
  因為 `My` 命名空間和任何其他命名空間一樣，只要加入模組並指定 `My` 的 `Namespace`，就可以加入上層屬性。  為模組加上 `HideModuleName` 屬性的附註，如下列範例所示。  `HideModuleName` 屬性可確保 IntelliSense 在顯示 `My` 命名空間的成員時，不會顯示模組名稱。  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
   
  若要將成員加入至 `My` 命名空間，請視需要將屬性加入至模組中。  對每一個加入至 `My` 命名空間的屬性而言，加入型別為 `ThreadSafeObjectProvider(Of T)` 的私用欄位，這個型別就是您的自訂屬性所傳回的型別。  這個欄位是用於建立執行緒安全的物件執行個體，呼叫 `GetInstance` 方法可傳回這個執行個體。  因此，每一個存取擴充的屬性的執行緒，都會收到本身傳回之型別的執行個體。  下列範例會將型別為 `SampleExtension` 的屬性 \(名稱為 `SampleExtension`\) 加入至 `My` 命名空間：  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
   
 ##  <a name="addingevents"></a> 將事件加入至自訂的 My 物件  
  您可以使用 `My.Application` 物件，透過擴充 `My` 命名空間中的 `MyApplication` 部分類別，以公開您自訂 `My` 物件的事件。  如果是 Windows 架構專案，您可以在 \[**方案總管**\] 中的專案上，按兩下 \[**我的專案**\] 節點。  按一下 Visual Basic \[**專案設計工具**\] 中的 \[`Application`\] 索引標籤，然後按一下 \[`View Application Events`\] 按鈕。  隨即會建立名稱為 ApplicationEvents.vb 的新檔案。  檔案內含下列程式碼以擴充 `MyApplication` 類別。  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
   
  您可以將自訂事件處理常式加入至 `MyApplication` 類別，即可加入自訂的 `My` 物件之事件處理常式。  自訂事件可讓您加入程式碼，此程式碼會在加入、移除事件處理常式或引發事件時執行。  請注意，自訂事件的 `AddHandler` 程式碼只會在使用者將程式碼加入以處理事件時才會執行。  例如，假設上一節中的 `SampleExtension` 物件有 `Load` 事件，而您要為這個事件加入一個自訂事件處理常式。  下列程式碼範例顯示名稱為 `SampleExtensionLoad` 的自訂事件處理常式，這個事件處理常式會於 `My.SampleExtension.Load` 事件發生時叫用。  當加入程式碼以處理新的 `My.SampleExtensionLoad` 事件時，就會執行這個自訂事件程式碼的 `AddHandler` 部分。  `MyApplication_SampleExtensionLoad` 方法會包含在程式碼範例中，以顯示處理 `My.SampleExtensionLoad` 事件的事件處理常式範例。  請注意，當您編輯 ApplicationEvents.vb 檔案時，如果在 \[程式碼編輯器\] 上的下拉式清單中選取 \[**我的應用程式事件**\] 選項時，就可以使用 `SampleExtensionLoad` 事件。  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
   
 ##  <a name="design"></a> 設計方針  
  當您開發 `My` 命名空間的擴充時，請遵循下列方針以協助降低擴充元件的維護成本。  

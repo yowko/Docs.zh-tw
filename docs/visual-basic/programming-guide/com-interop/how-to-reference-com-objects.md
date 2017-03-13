@@ -39,7 +39,7 @@ caps.handback.revision: 13
   
 3.  為了簡化存取 Interop 組件，請將 `Imports` 陳述式加入至將使用 COM 物件的類別或模組的上方。  例如，下列程式碼範例會為 `Microsoft InkEdit Control 1.0` 程式庫中參考的物件匯入命名空間 `INKEDLib`。  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#40)]  
+     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
   
 ### 若要使用 Tlbimp 建立 Interop 組件  
   

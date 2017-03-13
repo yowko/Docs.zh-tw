@@ -19,7 +19,7 @@ caps.handback.revision: 21
 # 如何：覆寫 ToString 方法 (C# 程式設計手冊)
 C\# 中的每一個類別與結構 \(Struct\) 都會隱含繼承 <xref:System.Object> 類別。  所以，C\# 中的每一個物件都會取得 <xref:System.Object.ToString%2A> 方法，這個方法會傳回代表物件的字串。  例如，型別 `int` 的所有變數都有 `ToString` 方法，使其能夠以字串的形式傳回本身的內容：  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_1.cs)]  
+ [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  當您建立自訂的類別或結構 \(Struct\) 時，應該覆寫 <xref:System.Object.ToString%2A> 方法，以便提供與型別相關的資訊給用戶端程式碼。  
   
@@ -40,11 +40,11 @@ C\# 中的每一個類別與結構 \(Struct\) 都會隱含繼承 <xref:System.Ob
   
      除了此類別之特定執行個體 \(Instance\) 所特有的資料，下列範例也會傳回類別的名稱。  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_2.cs)]  
+     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      您可以測試 `ToString` 方法，如下列範例程式碼所示：  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_3.cs)]  
+     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## 請參閱  
  <xref:System.IFormattable>   

@@ -86,17 +86,17 @@ End Namespace
 ## 範例  
  下列範例會宣告兩個命名空間，其中一個會巢狀於另一個命名空間內。  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
 ## 範例  
  下列範例會在單行中宣告多個巢狀命名空間，這與上面的範例相同。  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
 ## 範例  
  下列範例會存取在上面範例中所定義的類別。  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
 ## 範例  
  下列範例定義新泛型清單類別的基本架構，並將它加入至 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間。  

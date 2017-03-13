@@ -37,14 +37,14 @@ caps.handback.revision: 14
 ## 範例  
  於此例中，基底類別 `Person` 和衍生類別 `Employee` 都有一個名為 `Getinfo` 的方法。  使用 `base` 關鍵字，就可以從衍生類別中呼叫基底類別的 `Getinfo` 方法。  
   
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/csharp/base_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
   
  如需其他範例，請參閱 [new](../../../csharp/language-reference/keywords/new.md)、[virtual](../../../csharp/language-reference/keywords/virtual.md) 和 [override](../../../csharp/language-reference/keywords/override.md)。  
   
 ## 範例  
  此範例顯示了在建立衍生類別的執行個體時，要如何指定被呼叫的基底類別建構函式。  
   
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/csharp/base_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

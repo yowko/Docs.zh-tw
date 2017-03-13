@@ -24,7 +24,7 @@ caps.handback.revision: 7
 ## 範例  
  下列範例示範如何使用 `global` 內容關鍵字，指定在全域命名空間中定義類別 `TestApp`：  
   
- [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/csharp/global_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
   
 ## 請參閱  
  [命名空間](../../../csharp/programming-guide/namespaces/index.md)

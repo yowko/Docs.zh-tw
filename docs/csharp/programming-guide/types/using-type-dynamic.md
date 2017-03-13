@@ -21,19 +21,19 @@ caps.handback.revision: 30
   
  例如，如果下列程式碼中的執行個體方法 `exampleMethod1` 只有一個參數，則編譯器會將第一個方法呼叫 `ec.exampleMethod1(10, 4)` 視同無效，因為呼叫中包含兩個引數。  此呼叫會造成編譯器錯誤。  編譯器不會檢查第二個方法呼叫 `dynamic_ec.exampleMethod1(10, 4)`，因為 `dynamic_ec` 的型別是 `dynamic`。  因此，不會報告編譯器錯誤。  但是這項錯誤並不是永遠不會被發現，  執行階段會攔截到錯誤，並產生執行階段例外狀況。  
   
- [!code-cs[CsProgGuideTypes#50](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_1.cs)]  
+ [!code-cs[CsProgGuideTypes#50](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_1.cs)]  
   
- [!code-cs[CsProgGuideTypes#56](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_2.cs)]  
+ [!code-cs[CsProgGuideTypes#56](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_2.cs)]  
   
  上述範例中的編譯器角色，就是將每個陳述式應該對型別為 `dynamic` 的物件或運算式所進行之動作的相關資訊包裝在一起。  到了執行階段會檢驗這些儲存資訊，如果有任何陳述式是無效的，便會產生執行階段例外狀況。  
   
  大部分動態作業的結果就是其本身 \(`dynamic`\)。  例如，在下列範例中，如果您將滑鼠指標停在 `testSum` 的使用用途上，IntelliSense 會顯示型別 \[**\(區域變數\) dynamic testSum**\]。  
   
- [!code-cs[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_3.cs)]  
+ [!code-cs[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
  結果不是 `dynamic` 的作業包括從 `dynamic` 轉換為其他型別，以及包括 `dynamic` 型別之引數的建構函式呼叫。  例如，下列宣告中 `testInstance` 的型別是 `ExampleClass`，不是 `dynamic`。  
   
- [!code-cs[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_4.cs)]  
+ [!code-cs[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   
  下一節＜轉換＞會顯示轉換範例。  
   
@@ -42,16 +42,16 @@ caps.handback.revision: 30
   
  所有物件都能隱含轉換為動態型別，如下列範例所示。  
   
- [!code-cs[CsProgGuideTypes#53](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_5.cs)]  
+ [!code-cs[CsProgGuideTypes#53](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_5.cs)]  
   
  相反的，隱含轉換可以動態套用至任何型別為 `dynamic` 的運算式。  
   
- [!code-cs[CsProgGuideTypes#54](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_6.cs)]  
+ [!code-cs[CsProgGuideTypes#54](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_6.cs)]  
   
 ## 具有 dynamic 型別引數的多載解析  
  如果方法中有一個或多個引數具有型別 `dynamic`，或如果方法呼叫的接收端是型別 `dynamic`，則多載解析會發生在執行階段，而非編譯時期。  在下列範例中，如果唯一可存取的 `exampleMethod2` 方法被定義為接受字串引數，則將 `d1` 做為引數傳送不會造成編譯器錯誤，但會引起執行階段例外狀況。  多載解析在執行階段會失敗，因為 `d1` 的執行階段型別是 `int`，但 `exampleMethod2` 需要的是字串。  
   
- [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_7.cs)]  
+ [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
 ## Dynamic Language Runtime  
  Dynamic Language Runtime \(DLR\) 是 [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net-v40-short-md.md)] 中的新 API。  它提供的基礎結構支援 C\# 中的 `dynamic` 型別，也支援實作 IronPython 和 IronRuby 之類的動態程式設計語言。  如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../Topic/Dynamic%20Language%20Runtime%20Overview.md)。  
@@ -61,9 +61,9 @@ caps.handback.revision: 30
   
  許多 COM 方法都允許針對引數型別和傳回型別進行變化，方法是將型別指定為 `object`。  但這需要對值進行明確轉型，才能與 C\# 中的強型別變數配合使用。  如果您使用 [\/link \(Link to COM Assembly\)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 選項進行編譯，則採用 `dynamic` 型別就能讓您將 COM 簽章中的 `object` 項目視同 `dynamic` 型別，如此就不用進行轉型。  例如，下列陳述式將比較使用 `dynamic` 型別和不使用 `dynamic` 型別存取 Microsoft Office Excel 試算表中的儲存格。  
   
- [!code-cs[csOfficeWalkthrough#12](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#12)]  
+ [!code-cs[csOfficeWalkthrough#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_8.cs)]  
   
- [!code-cs[csOfficeWalkthrough#13](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#13)]  
+ [!code-cs[csOfficeWalkthrough#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_9.cs)]  
   
 ## 相關主題  
   

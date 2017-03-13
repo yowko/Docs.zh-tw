@@ -37,9 +37,9 @@ p--;
 ## 範例  
  在這個範例中，您會依 `int` 的大小遞增指標，以逐步執行陣列。  陣列元素的位址和內容會隨著每個步驟顯示。  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_1.cs)]  
   
- [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#13)]  
+ [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_2.cs)]  
   
   **Value:0 @ Address:12860272**  
 **Value:1 @ Address:12860276**  

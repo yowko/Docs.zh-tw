@@ -42,7 +42,7 @@ caps.handback.revision: 53
   
  編譯器 \(Compiler\) 會使用類型資訊，確認程式碼中執行的所有作業是否符合「*類型安全*」\(Type Safe\)。  例如，如果變數的類型宣告為 [int](../../../csharp/language-reference/keywords/int.md)，編譯器就允許您將變數用來進行加減運算。  但如果嘗試對類型為 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行加減運算，編譯器就會產生錯誤，如下列範例所示：  
   
- [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  C 和 C\+\+ 開發人員請注意，C\# 中的 [bool](../../../csharp/language-reference/keywords/bool.md) 無法轉換為 [int](../../../csharp/language-reference/keywords/int.md)。  
@@ -52,11 +52,11 @@ caps.handback.revision: 53
 ### 在變數宣告中指定類型  
  在程式中宣告變數或常數時，必須指定其類型，或者是使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字讓編譯器推斷類型。  下列範例顯示的部分變數宣告，會使用內建數字類型 \(Numeric Type\) 以及複雜的使用者定義類型：  
   
- [!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_2.cs)]  
+ [!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
   
  方法參數和傳回值的類型是在方法簽章中指定的。  下列簽章會說明需要以 [int](../../../csharp/language-reference/keywords/int.md) 做為輸入引數，並且會傳回字串的方法：  
   
- [!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_3.cs)]  
+ [!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
   
  宣告變數後，就無法以新類型重新宣告，也不能指派與其宣告類型不相容的值給它。  例如，您不能宣告 [int](../../../csharp/language-reference/keywords/int.md)，然後將值為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。  然而，值可以轉換為其他類型，例如，為這些值指派新變數，或將這些值當做方法的引數傳遞。  編譯器會自動執行不會導致資料遺失的「*類型轉換*」\(Type Conversion\)。  可能會導致資料遺失的轉換需要在原始程式碼中使用「*轉型*」\(Cast\)。  
   
@@ -107,13 +107,13 @@ char c = 'Z';
   
  您可以使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字，建立專屬自訂實值類型。  結構通常都是用來做為一小組相關變數的容器，如下列範例所示：  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_4.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
   
  如需結構的詳細資訊，請參閱[結構](../../../csharp/programming-guide/classes-and-structs/structs.md)。  如需 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 中實值類型的詳細資訊，請參閱[一般類型系統](../../../standard/base-types/common-type-system.md)。  
   
  實值類型的另一個分類是[列舉](../../../csharp/language-reference/keywords/enum.md)。  列舉可以定義一組具名的整數常數。  例如，.NET Framework 類別庫中的<xref:System.IO.FileMode?displayProperty=fullName> 列舉類型，包含一組用於指定檔案開啟方式的具名常數整數。  其定義方式如下列範例所示：  
   
- [!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_5.cs)]  
+ [!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
  `System.IO.FileMode.Create` 常數的值為 2。  然而，對於我們閱讀原始程式碼而言，名稱比較具有意義，基於這個原因，最好是使用列舉類型取代常數常值數字。  如需詳細資訊，請參閱 <xref:System.IO.FileMode?displayProperty=fullName>。  
   
@@ -137,7 +137,7 @@ IMyInterface iface = new MyClass();
   
  所有的陣列都是參考類型，即使其元素為實值類型也一樣。  陣列是隱含衍生自 <xref:System.Array?displayProperty=fullName> 類別的，但會搭配 C\# 所提供的簡化語法加以宣告和使用，如下列範例所示：  
   
- [!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_6.cs)]  
+ [!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
   
  參考類型能夠完全支援繼承。  在您建立類別時，可以繼承自不是定義為[密封](../../../csharp/language-reference/keywords/sealed.md)的任何其他介面和類別，而其他的類別則可以繼承您的類別並覆寫您的虛擬方法。  如需如何建立自己的類別的詳細資訊，請參閱[類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)。  如需繼承和虛擬方法的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
@@ -146,7 +146,7 @@ IMyInterface iface = new MyClass();
   
  因為常值具有類型，而所有的類型最終都衍生自 <xref:System.Object?displayProperty=fullName>，所以您可以下列方式撰寫和編譯程式碼：  
   
- [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_7.cs)]  
+ [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
   
 ## 泛型類型  
  您可以使用一個或多個「*類型參數*」\(Type Parameter\) 做為實際類型的替代符號 \(「*具象類型*」\(Concrete Type\)\) 來宣告類型，用戶端程式碼將會在建立類型的執行個體時提供這些替代符號。  此類類型稱為「*泛型類型*」\(Generic Type\)。  例如，.NET Framework 類型 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 具有一個類型參數，按照慣例，會命名為 *T*。  當您建立該類型的執行個體時，就要指定清單中內含的物件類型，例如字串。  

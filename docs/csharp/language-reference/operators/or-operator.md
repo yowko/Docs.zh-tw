@@ -26,7 +26,7 @@ Binary        `|`  運算子已為整數類資料型別及 `bool` 預先定義�
  使用者定義型別可以多載           `|` 運算子 \(請參閱[運算子](../../../csharp/language-reference/keywords/operator.md)\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#31)]  
+ [!code-cs[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

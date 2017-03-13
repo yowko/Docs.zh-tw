@@ -26,7 +26,7 @@ caps.handback.revision: 16
 這個範例在 <xref:System.String> 物件上呼叫 <xref:System.String.IndexOf%2A> 方法，報告第一個出現的子字串索引。  
   
 ## 範例  
- [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-search-within-a-s_1.vb)]  
+ [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-search-within-a-string_1.vb)]  
   
 ## 編譯程式碼  
  這個範例需要：  

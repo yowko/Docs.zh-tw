@@ -44,7 +44,7 @@ caps.handback.revision: 13
 ## 範例  
  這個範例會使用 `<remarks>` 標記來解釋 `UpdateRecord` 方法的執行內容。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/remarks_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
   
 ## 請參閱  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

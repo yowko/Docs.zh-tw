@@ -23,7 +23,7 @@ caps.handback.revision: 17
   
  在下列範例中，會示範 null 關鍵字的某些行為：  
   
- [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/csharp/null_1.cs)]  
+ [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/null_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

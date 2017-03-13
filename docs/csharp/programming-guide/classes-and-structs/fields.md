@@ -26,15 +26,15 @@ caps.handback.revision: 29
   
  您必須依序指定欄位的存取層級、欄位型別和欄位名稱，以在類別區塊中宣告欄位。  例如：  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_1.cs)]  
+ [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  若要存取物件中的欄位，請在物件名稱後加上句號，再加上欄位的名稱，就像是 `objectname.fieldname`。  例如：  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_2.cs)]  
+ [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  您可以在宣告欄位時使用指派運算子指定欄位的初始值。  例如，若要將 `day` 欄位自動指派為 `"Monday"`，您應該宣告 `day`，如下列範例所示：  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_3.cs)]  
+ [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  在物件執行個體 \(Instance\) 的建構函式 \(Constructor\) 即將進行呼叫之前，欄位就會進行初始化。  當建構函式指派欄位的值時，它就會覆寫在欄位宣告期間所指定的任何值。  如需詳細資訊，請參閱 [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)。  
   

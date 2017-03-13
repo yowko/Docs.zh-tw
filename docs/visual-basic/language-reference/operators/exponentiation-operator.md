@@ -65,7 +65,7 @@ number ^ exponent
 ## 範例  
  下列範例使用 `^` 運算子以將數值與其指數做乘冪運算。  結果是第一運算元與第二運算元做乘冪運算。  
   
- [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
  前一個範例會產生以下結果：  
   

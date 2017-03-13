@@ -58,23 +58,23 @@ caps.handback.revision: 34
   
 2.  在程式碼檔案的頂端加入下列 `using` 指示詞。  
   
-     [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#4)]  
+     [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
   
 ### 若要在 Word 文件中顯示文字  
   
 1.  將下列方法加入至 Program.cs 的 `Program` 類別中，以便建立 Word 應用程式和 Word 文件。  [Add](http://go.microsoft.com/fwlink/?LinkId=145381) 方法有 4 個選擇性參數。  這個範例使用其預設值。  因此，呼叫陳述式中不需要引數。  
   
-     [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#6)]  
+     [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
 2.  將下列程式碼加入至方法的結尾，定義在文件何處顯示文字，以及顯示哪些文字。  
   
-     [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#7)]  
+     [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
   
 ### 若要執行應用程式  
   
 1.  將下列陳述式加入至 Main。  
   
-     [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#8)]  
+     [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
   
 2.  按 CTRL\+F5 執行專案。  會出現一個 Word 文件，包含所指定的文字。  
   
@@ -87,11 +87,11 @@ ConvertToTable 參數
   
      具名和選擇性引數讓您可以僅指定您要變更之參數的值。  將下列程式碼加入至 `DisplayInWord` 方法的結尾，建立簡單表格。  引數指定 `range` 中文字字串的逗號用於分隔資料表儲存格。  
   
-     [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#9)]  
+     [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
   
      在舊版 C\# 中呼叫 `ConvertToTable` 時，每個參數都需要參考引數，如以下程式碼所示。  
   
-     [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#14)]  
+     [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
   
 2.  按 CTRL\+F5 執行專案。  
   
@@ -99,16 +99,16 @@ ConvertToTable 參數
   
 1.  若要變更表格，讓它具有一欄和三列，請將 `DisplayInWord` 的最後一行改為下列陳述式，然後按 CTRL\+F5。  
   
-     [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#10)]  
+     [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
 2.  若要指定表格的預先定義格式，請將 `DisplayInWord` 的最後一行改為下列陳述式，然後按 CTRL\+F5。  格式可以是任一 [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) 常數。  
   
-     [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#11)]  
+     [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
 ## 範例  
  下列程式碼包含完整範例。  
   
- [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#12)]  
+ [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
 ## 請參閱  
  [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)

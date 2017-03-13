@@ -24,13 +24,13 @@ caps.handback.revision: 35
   
  下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。  括號括住的運算式就是 Lambda 運算式。  許多標準查詢運算子會將 Lambda 運算式當成參數，但是擴充方法不會強制這樣做。  如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  擴充方法會定義為靜態方法，但透過執行個體方法語法呼叫。  擴充方法的第一個參數會指定方法作業所在的類型，而且參數前面會加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。  您必須使用 `using` 指示詞將命名空間明確匯入至原始程式碼，擴充方法才會進入範圍中。  
   
  下列範例將示範針對 <xref:System.String?displayProperty=fullName> 類別定義的擴充方法。  請注意，擴充方法是定義在非巢狀且非泛型的靜態類別內：  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_2.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  使用這個 `using` 指示詞就可以將 `WordCount` 擴充方法帶入範圍中：  
   
@@ -70,7 +70,7 @@ using System.Linq;
   
  當編譯器找不到具有相符簽章的執行個體方法時，就會繫結至相符的擴充方法 \(如果有的話\)。  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_3.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## 一般方針  
  一般而言，建議您應謹慎地實作擴充方法，而且只有在必要時才實作。  當用戶端程式碼必須擴充現有的類型時，應該盡可能以建立衍生自現有類型的新類型來達成此目的。  如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  

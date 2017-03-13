@@ -28,7 +28,7 @@ caps.handback.revision: 15
   
  您可以用 `#If...Then...#Else` 指示詞來表示要有條件地編譯的程式碼區塊。  例如，若要從相同的原始程式碼建立同一個應用程式的法文和德文版本，您可以使用預先定義的常數 `FrenchVersion` 和 `GermanVersion`，在 `#If...Then` 陳述式 \(Statement\) 中嵌入特定平台的程式碼區段。  如下列範例所示：  
   
- [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/conditional-compilation_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
  如果您在編譯時期將 `FrenchVersion` 條件式編譯常數的值設定為 `True`，則會編譯法文版的條件式程式碼。  如果將 `GermanVersion` 常數的值設定為 `True`，編譯器就會使用德文版。  如果兩者都未設定為 `True`，則會執行最後一個 `Else` 區塊中的程式碼。  
   

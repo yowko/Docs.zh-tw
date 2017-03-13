@@ -71,14 +71,14 @@ caps.handback.revision: 23
   
  下列範例定義基底類別 `Payroll`，以及衍生類別 `BonusPayroll`，用以覆寫 `PayEmployee` 繼承方法。  程序 `RunPayroll` 會建立 `Payroll` 物件和 `BonusPayroll` 物件，並將它們傳遞至函式 `Pay`，該函式會執行這兩個物件的 `PayEmployee` 方法。  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#28)]  
+ [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
   
 ## MyBase 關鍵字  
  `MyBase` 關鍵字的行為就像參考類別目前執行個體之基底類別的物件變數。  `MyBase` 經常用於存取衍生類別中所覆寫或遮蔽的基底類別成員。  特別是，`MyBase.New` 用於從衍生類別建構函式 \(Constructor\) 明確地呼叫基底類別建構函式。  
   
  例如，假設您正在設計要覆寫繼承自基底類別方法的衍生類別。  覆寫方法可呼叫基底類別中的方法並且修改傳回值，下列程式碼片段顯示此項作業：  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#109)]  
+ [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
   
  下列清單說明有關使用 `MyBase` 的限制：  
   

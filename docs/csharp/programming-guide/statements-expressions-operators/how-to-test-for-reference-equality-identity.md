@@ -24,7 +24,7 @@ caps.handback.revision: 13
  範例同時顯示為何 <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> 一律對實值型別傳回 `false`，以及為何不應使用 <xref:System.Object.ReferenceEquals%2A> 來判斷字串相等。  
   
 ## 範例  
- [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-test-for-referenc_1.cs)]  
+ [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-test-for-reference-equality-identity_1.cs)]  
   
  在 <xref:System.Object?displayProperty=fullName> 通用基底類別中實作 `Equals` 也會執行參考相等檢查，但最好不要使用這個用法，因為如果類別覆寫了方法，產生的結果可能不是您想要的。  對 `==` 和 `!=` 運算子來說，這同樣是成立的。  \=\= 和 `!=` 在參考型別上操作時，其預設行為是執行參考相等檢查。  不過，衍生類別也可以多載運算子來執行實值相等檢查。  為了降低發生錯誤的可能，當您必須判斷兩個物件是否具有參考相等時，最好一律使用 <xref:System.Object.ReferenceEquals%2A>。  
   

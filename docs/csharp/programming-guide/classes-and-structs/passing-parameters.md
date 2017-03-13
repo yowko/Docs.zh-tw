@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  下列範例會說明值和參考參數之間的差異。  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-parameters_1.cs)]  
+ [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
   
  如需詳細資訊，請參閱下列主題：  
   

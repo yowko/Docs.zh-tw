@@ -75,7 +75,7 @@ caps.handback.revision: 23
  下列範例說明何時以傳值方式傳遞引數，何時以傳址方式傳遞引數。  程序 `Calculate` 同時擁有 `ByVal` 和 `ByRef`。  假設給予利率 `rate` 與金額 `debt`，程序的任務是要計算套用利率至原始 `debt` 後所產生的 `debt` 新值。  因為 `debt` 是 `ByRef` 參數，所以新的總數會反映在對應到 `debt` 之呼叫程式碼的引數值內。  至於參數 `rate` 則是 `ByVal` 參數，因為 `Calculate` 不應變更其值。  
   
 ### 程式碼  
- [!code-vb[VbVbcnProcedures#74](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-val_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

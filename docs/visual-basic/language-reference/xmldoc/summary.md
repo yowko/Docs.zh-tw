@@ -44,7 +44,7 @@ caps.handback.revision: 12
 ## 範例  
  這個範例會使用 `<summary>` 標記，來描述 `ResetCounter` 方法和 `Counter` 屬性。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/summary_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
   
 ## 請參閱  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

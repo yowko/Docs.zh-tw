@@ -62,7 +62,7 @@ caps.handback.revision: 21
   
  提供您自己的存取子後，您就可以指定這兩個事件會以類別內的相同事件還是不同事件來表示。  例如，如果根據介面的指定，事件應該在不同時間引發，您便可以讓每一個事件與類別內的各個實作產生關聯。  在下列範例中，訂閱者會藉由轉換 `IShape` 或 `IDrawingObject` 的圖案參考，以判斷將會接收到哪一個 `OnDraw` 事件。  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-implement-interfa_1.cs)]  
+ [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

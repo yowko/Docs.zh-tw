@@ -60,7 +60,7 @@ caps.handback.revision: 27
 ## 範例  
  下列 `Function` 程序會在已知其他兩邊值的情況下，計算直角三角形的最長邊 \(也稱為斜邊\)。  
   
- [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

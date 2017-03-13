@@ -38,14 +38,14 @@ caps.handback.revision: 12
   
 2.  在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 事件處理常式中，加入程式碼來設定屬性：  
   
-     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterAppearanceCS/VbPowerPacksDataRepeaterAppearance.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAppearance/VbPowerPacksDataRepeaterAppearance.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
 ## 範例  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的某些常用自訂包括以替代色彩的方式顯示資料列，以及根據條件變更欄位的色彩。  下列範例顯示如何執行這些自訂工作。  這個範例假設您有一個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項，而且這個控制項已繫結到 Northwind 資料庫中的 Products 資料表。  
   
- [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAlternateBackColor/AlternateBackColor.vb#1)]
- [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPwrPacksDataRepeaterAltBColorCS/AlternateBackColor.cs#1)]  
+ [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
+ [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
  請注意，針對這兩種自訂，您必須提供程式碼，以便設定正、反條件的屬性。  如果不指定 `Else` 條件，則在執行階段將看到意外的結果。  
   

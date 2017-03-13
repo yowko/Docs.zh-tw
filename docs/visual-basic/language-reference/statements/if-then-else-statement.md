@@ -101,17 +101,17 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 ## 範例  
  下列範例說明 `If`...`Then`...`Else` 陳述式多行語法的使用方式。  
   
- [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/if-then-else-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb)]  
   
 ## 範例  
  下列範例包含巢狀的 `If`...`Then`...`Else` 陳述式。  
   
- [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/if-then-else-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb)]  
   
 ## 範例  
  下列範例說明單行語法的使用方式。  
   
- [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/if-then-else-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   

@@ -46,13 +46,13 @@ caps.handback.revision: 18
 ## 範例  
  下列範例顯示 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 參數所定義的程序，然後顯示相等的多載程序集。  
   
- [!code-vb[VbVbcnProcedures#69](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
  對於這類擁有採用一維陣列當做參數陣列的參數清單之程序，您無法多載。  然而，您可以使用其他隱含多載的簽章。  下面宣告可說明這點。  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
  多載版本的程式碼不必測試呼叫程式碼是否提供一或多個 `ParamArray` 參數值；若提供則顯示數目。  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會將控制權傳遞給符合呼叫引數清單的版本。  
   

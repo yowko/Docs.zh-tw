@@ -55,7 +55,7 @@ caps.handback.revision: 43
 ## 範例  
  下列程式碼會實作本節中的範例。  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/program.cs#1)]  
+ [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
 ## 選擇性引數  
  方法、建構函式、索引子或委派的定義可以指定其參數是必要的或選擇性的。  任何呼叫都必須提供所有必要參數的引數，但可以省略選擇性參數的引數。  
@@ -70,7 +70,7 @@ caps.handback.revision: 43
   
  選擇性參數定義在參數清單的尾端，位在所有必要參數後面。  如果呼叫端想提供一連串選擇性參數其中一個的引數，則必須提供該參數前面所有選擇性參數的引數。  不支援在引數清單中使用逗號分隔的空格。  例如，在下列程式碼中，執行個體方法 `ExampleMethod` 以一個必要參數和兩個選擇性參數來定義。  
   
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#15)]  
+ [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
  下列對 `ExampleMethod` 的呼叫會造成編譯器錯誤，因為有提供引數給第三個參數，但未提供給第二個參數。  
   
@@ -91,7 +91,7 @@ ExampleMethod 中的選擇性參數
 ## 範例  
  在下列範例中，`ExampleClass` 的建構函式有一個選擇性參數。  執行個體方法 `ExampleMethod` 有一個必要參數 `required`，以及兩個選擇性參數 `optionalstr` 和 `optionalint`。  `Main` 中的程式碼顯示叫用建構函式和方法的不同方法。  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#2)]  
+ [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## COM 介面  
  具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅增強了與 COM API \(例如 Office Automation API\) 的互通性。  
@@ -103,11 +103,11 @@ AutoFormat 參數
   
  在 C\# 3.0 \(含\) 以前版本中，每個參數都需要引數，如以下範例所示。  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#3)]  
+ [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
  不過，您可以使用 C\# 4.0 引進的具名和選擇性引數，大幅簡化對 `AutoFormat` 的呼叫。  具名和選擇性引數可讓您在不想變更選擇性參數的預設值時，省略該參數的引數。  在下列呼叫中，只指定 7 個參數其中一個參數的值。  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#13)]  
+ [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
  如需詳細資訊與範例，請參閱 [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)與 [如何：使用 Visual C\#  功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
   

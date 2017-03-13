@@ -28,7 +28,7 @@ caps.handback.revision: 19
 這個範例顯示如何使用子代 \(Descendant\) 軸屬性存取具有指定名稱以及在 XML 項目下包含的所有 XML 項目。  具體而言，它會使用 `Value` 屬性來取得集合 \(由 `name` 子代軸屬性傳回\) 中第一個項目的值。  `name` 子代軸屬性會取得所有名為 `name`，且包含在 `contacts` 物件中的項目。  這個範例也會使用 `phone` 子代軸屬性存取 `contacts` 物件中所有名為 `phone` 的子代。  
   
 ## 範例  
- [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-descen_1.vb)]  
+ [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-descendant-elements_1.vb)]  
   
 ## 編譯程式碼  
  這個範例需要：  

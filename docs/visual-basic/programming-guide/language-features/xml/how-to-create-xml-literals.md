@@ -30,7 +30,7 @@ caps.handback.revision: 17
   
 -   使用 XML 常值語法建立內嵌 \(Inline\) XML，此語法相當於實際的 XML 語法。  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
      執行程式碼。  本程式碼的輸出為：  
   
@@ -48,7 +48,7 @@ caps.handback.revision: 17
   
 -   建立內嵌 XML 文件。  下列程式碼會建立一份具有常值語法的 XML 文件、一個 XML 宣告、一個處理指示、一個註解以及一個包含其他項目的項目。  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
      執行程式碼。  本程式碼的輸出為：  
   

@@ -26,11 +26,11 @@ caps.handback.revision: 20
 ## 備註  
  陣列型別是 `[]` 接在其後的型別：  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#43)]  
+ [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  若要存取陣列項目，便須將所需項目索引以方括弧括住。  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#44)]  
+ [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  若陣列的索引超出範圍，便會擲回例外狀況。  
   
@@ -38,15 +38,15 @@ caps.handback.revision: 20
   
  例如，.NET Framework 定義了 `Hashtable` 型別，這個型別會使任意型別的索引鍵和值產生關聯：  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#45)]  
+ [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  方括弧也用來指定[屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)：  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#46)]  
+ [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  您可以使用方括弧來指定指標的索引：  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#47)]  
+ [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  不執行範圍檢查。  
   

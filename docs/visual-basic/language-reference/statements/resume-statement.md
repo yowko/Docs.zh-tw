@@ -63,7 +63,7 @@ Resume [ Next | line ]
 ## 範例  
  這個範例會使用 `Resume` 陳述式結束程序中的錯誤處理，然後繼續執行造成錯誤的陳述式。  產生錯誤代碼 55，說明如何使用 `Resume` 陳述式。  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## 需求  
  **命名空間**：[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

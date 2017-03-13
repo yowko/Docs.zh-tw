@@ -21,11 +21,11 @@ C\# 程式設計師使用 [try](../../../csharp/language-reference/keywords/try-
   
  下列範例顯示 `try-catch` 陳述式、`try-finally` 陳述式和 `try-catch-finally` 陳述式。  
   
- [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_1.cs)]  
+ [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
   
- [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_2.cs)]  
+ [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
   
- [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_3.cs)]  
+ [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
   
  `try` 區塊若沒有`catch`或`finally`，會導致編譯器錯誤。  
   
@@ -40,11 +40,11 @@ C\# 程式設計師使用 [try](../../../csharp/language-reference/keywords/try-
   
 -   您可以建立並擲回較特定的新例外狀況。  
   
-     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_4.cs)]  
+     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
   
 -   您想要在傳遞例外狀況以進行其他處理之前，對該例外狀況進行部分處理。  在下列範例中，`catch` 區塊用來將項目增加至錯誤記錄檔，再重新擲回例外狀況。  
   
-     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_5.cs)]  
+     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
   
 ## Finally 區塊  
  `finally` 區塊可讓您清理在 `try` 區塊中執行的動作。  如果有，`finally` 區塊會在 `try` 區塊和任何相符的 `catch` 區塊之後最後執行。  `finally` 區塊永遠都會執行，不管是否擲回例外狀況，或是否找到與例外狀況型別相符的 `catch` 區塊。  
@@ -53,7 +53,7 @@ C\# 程式設計師使用 [try](../../../csharp/language-reference/keywords/try-
   
  下列範例中，`finally` 區塊用於關閉在 `try` 區塊中開啟的檔案。  請注意，在關閉檔案之前，會先檢查檔案控制代碼的狀態。  如果`try`區塊不能開啟檔案，檔案控制代碼仍然會有 `null` 值，且`finally` 區塊不會嘗試關閉它。  或者，如果成功在 `try`區塊開啟該檔案，`finally` 區塊會關閉開啟的檔案。  
   
- [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_6.cs)]  
+ [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

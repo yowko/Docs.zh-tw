@@ -29,7 +29,7 @@ caps.handback.revision: 12
   
 -   使用 <xref:System.Enum.GetNames%2A> 方法，擷取與列舉型別成員關聯的字串。  這個範例會宣告列舉型別 `flavorEnum`，然後使用 <xref:System.Enum.GetNames%2A> 方法來顯示與每個成員關聯的字串。  
   
-     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#2)]  
+     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]  
   
 ## 請參閱  
  <xref:System.Enum.GetValues%2A>   

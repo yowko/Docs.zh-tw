@@ -55,7 +55,7 @@ caps.handback.revision: 16
   
 -   使用 `Event` 關鍵字宣告 `Widget` 類別中的事件。  請注意，事件可以具有 `ByVal` 和 `ByRef` 引數，如 `Widget` 的 `PercentDone` 事件所示：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#1)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
   
  當呼叫物件收到 `PercentDone` 事件時，`Percent` 引數會包含已完成工作的百分比。  可以將 `Cancel` 引數設定為 `True`，取消引發事件的方法。  
   
@@ -68,11 +68,11 @@ caps.handback.revision: 16
   
 1.  若要簡化對此類別所使用之 `Timer` 屬性的存取，可以在 `Class Widget` 陳述式上方的類別模組宣告區段最上方，加入一個 `Imports` 陳述式。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#2)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
   
 2.  將下列程式碼加入至 `Widget` 類別：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#3)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
   
  當應用程式呼叫 `LongTask` 方法時，`Widget` 類別會每隔 `MinimumInterval` 秒引發 `PercentDone` 事件。  當事件傳回時，`LongTask` 會檢查 `Cancel` 引數是否設為 `True`。  
   

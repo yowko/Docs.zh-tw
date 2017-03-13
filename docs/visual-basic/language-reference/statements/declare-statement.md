@@ -141,14 +141,14 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## 範例  
  下列範例會宣告 `Function` 程序的外部參考，該程序會傳回目前使用者名稱。  接著，它會呼叫外部程序 `GetUserNameA` 做為 `getUser` 的一部分。  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
 ## 範例  
  <xref:System.Runtime.InteropServices.DllImportAttribute> 提供了在 Unmanaged 程式碼中使用函式的另一種方式。  下列範例會在不使用 `Declare` 陳述式的情況下宣告匯入函式。  
   
- [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   

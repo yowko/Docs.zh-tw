@@ -34,7 +34,7 @@ caps.handback.revision: 12
   
  程式碼引發 `Click` 事件時，`RaiseEvent` 存取子會使用 <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> 方法非同步叫用 \(Invoke\) 所有事件處理常式委派。  該方法會叫用背景工作執行緒 \(Worker Thread\) 上的每個處理常式並立即傳回，因此，處理常式無法互相封鎖。  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#27)]  
+ [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
   
 ## 請參閱  
  <xref:System.Collections.ArrayList>   

@@ -24,7 +24,7 @@ caps.handback.revision: 26
 ## 範例  
  在這個範例中，`Square` 類別 \(Class\) 必須提供 `Area` 的覆寫實作，因為 `Area` 是繼承自抽象的 `ShapesClass`：  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  `override` 方法提供繼承自基底類別 \(Base Class\) 的新成員實作。  由 `override` 宣告覆寫的方法，就是被覆寫的基底方法。  被覆寫的基底方法必須和 `override` 方法有相同的簽章。  如需繼承 \(Inheritance\) 的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 26
 ## 範例  
  這個範例會定義名為 `Employee` 的基底類別，以及名為 `SalesEmployee` 的衍生類別。  `SalesEmployee` 類別包含額外的屬性 `salesbonus`，並會覆寫 `CalculatePay` 以便將該方法列入考量。  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#9)]  
+ [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

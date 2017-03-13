@@ -27,7 +27,7 @@ caps.handback.revision: 17
  使用者定義型別可多載 `--` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  
   
 ## 範例  
- [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#8)]  
+ [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

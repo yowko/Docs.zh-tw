@@ -42,7 +42,7 @@ caps.handback.revision: 10
 ## 範例  
  這個範例會使用 `<value>` 標記，來說明 `Counter` 屬性要保存哪個值。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/value_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
 ## 請參閱  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

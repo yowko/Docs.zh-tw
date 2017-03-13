@@ -29,7 +29,7 @@ caps.handback.revision: 23
   
  使用 `From` 關鍵字，並在後面接著大括號 \(`{}`\)，即可識別集合初始設定式。  這類似於 [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)中所述的陣列常值語法。  在下列範例中，會示範以不同方式使用集合初始設定式來建立集合。  
   
- [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  C\# 也會提供集合初始設定式。  C\# 集合初始設定式提供的功能與 Visual Basic 集合初始設定式相同。  如需 C\# 集合初始設定式的詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
@@ -37,11 +37,11 @@ caps.handback.revision: 23
 ## 語法  
  集合初始設定式是由 `From` 關鍵字後面接著以大括號 \(`{}`\) 括住的逗點分隔值清單組成，如下列程式碼所示。  
   
- [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  當您建立如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Collections.Generic.Dictionary%602> 等集合時，必須在集合初始設定式之前提供集合型別，如下列程式碼所示。  
   
- [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
 > [!NOTE]
 >  您無法將集合初始設定式與物件初始設定式合併在一起，來初始化相同的物件集合。  您可以使用物件初始設定式，在集合初始設定式中初始化物件。  
@@ -57,11 +57,11 @@ caps.handback.revision: 23
   
  例如，下列程式碼範例示範如何使用集合初始設定式來建立 `List(Of Customer)` 集合。  當程式碼執行時，每個 `Customer` 物件就會傳遞至泛型清單的 `Add(Customer)` 方法。  
   
- [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  在下列程式碼範例中，會示範不使用集合初始設定式的對等程式碼。  
   
- [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  如果集合具有 `Add` 方法，而且方法的參數符合 `Customer` 物件的建構函式，則可以在集合初始設定式內巢狀化 `Add` 方法的參數值，這在下節將會討論。  如果集合沒有這樣的 `Add` 方法，您可以建立這個方法做為擴充方法。  如需如何建立 `Add` 方法做為集合擴充方法的範例，請參閱 [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)。  如需如何建立可搭配集合初始設定式使用之自訂集合的範例，請參閱 [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)。  
   
@@ -70,11 +70,11 @@ caps.handback.revision: 23
   
  當您使用巢狀值建立集合時，會將巢狀值清單的每個項目當做引數傳遞至對應項目型別的 `Add` 方法。  例如，下列程式碼範例會建立 <xref:System.Collections.Generic.Dictionary%602>，其中索引鍵的型別為 `Integer`，而值的型別則為 `String`。  每個巢狀值清單都符合 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 方法。  
   
- [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  前述程式碼範例相當於下列程式碼。  
   
- [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
  只有第一層巢狀化的巢狀值清單會傳送至集合型別的 `Add` 方法。  較深層次的巢狀化則視為陣列常值，而且巢狀值清單都不符合任何集合的 `Add` 方法。  
   

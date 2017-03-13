@@ -101,11 +101,11 @@ End Function
 ### 宣告和呼叫的說明  
  下列 `Function` 程序會在已知其他兩邊值的情況下，計算直角三角形的最長邊 \(也稱為斜邊\)。  
   
- [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
   
  下列範例示範 `hypotenuse` 的典型呼叫。  
   
- [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -32,7 +32,7 @@ caps.handback.revision: 19
  使用者定義型別可多載一元 `+` 和二元 `+` 運算子。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  如需詳細資訊，請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)。  
   
 ## 範例  
- [!code-cs[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#28)]  
+ [!code-cs[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

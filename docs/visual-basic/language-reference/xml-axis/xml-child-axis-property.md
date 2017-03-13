@@ -59,7 +59,7 @@ object.<child>
 ## 範例  
  下列範例示範如何從 `contact` 物件存取名為 `phone` 的子節點。  
   
- [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_1.vb)]  
   
  此程式碼顯示下列文字：  
   
@@ -68,7 +68,7 @@ object.<child>
 ## 範例  
  下列範例示範如何從 `contacts` 物件的 `contact` 子軸屬性傳回的集合存取名為 `phone` 的子節點。  
   
- [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
   
  此程式碼顯示下列文字：  
   
@@ -77,7 +77,7 @@ object.<child>
 ## 範例  
  下列範例會宣告 `ns` 作為 XML 命名空間前置詞。  然後它會使用命名空間的前置詞來建立 XML 常值，以及存取完整名稱為 `ns:name` 的第一個子節點。  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_3.vb)]  
   
  此程式碼顯示下列文字：  
   

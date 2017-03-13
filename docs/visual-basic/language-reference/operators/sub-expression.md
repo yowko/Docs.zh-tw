@@ -63,7 +63,7 @@ End Sub
 ## 範例  
  以下是會將值寫入至主控台的 Lambda 運算式範例。  下列範例同時顯示副程式的單行和多行 Lambda 運算式語法。  如需更多範例，請參閱 [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
 ## 請參閱  
  [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   

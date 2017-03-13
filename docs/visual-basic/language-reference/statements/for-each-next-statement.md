@@ -73,7 +73,7 @@ Next [ element ]
   
  在下列範例中， `For Each`…`Next` 陳述式將清單集合的所有項目的。  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
  如需更多範例，請參閱[集合](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md) 和[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
@@ -82,7 +82,7 @@ Next [ element ]
   
  下列範例示範巢狀的 `For Each`…`Next` 結構。  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
   
  當您巢狀迴圈時，每個迴圈必須具備唯一的 `element` 變數。  
   
@@ -95,7 +95,7 @@ Next [ element ]
   
  下列範例示範如何使用 `Continue For` 和 `Exit For` 陳述式。  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
   
  您可以將任意數目的 `Exit For` 陳述式放在 `For Each` 迴圈中。  用於巢狀的 `For Each` 迴圈內時，`Exit For` 會使程式執行退出最內層的迴圈，並將控制權轉移到下一個較高的巢狀層次。  
   
@@ -114,7 +114,7 @@ Next [ element ]
   
  下列範例會使用 Iterator 函式。  Iterator 函式具有 [對於 Each…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) 迴圈中的 `Yield` 陳述式。  在 `ListEvenNumbers` 方法， `For Each` 陳述式主體的每個反覆項目建立呼叫 Iterator 函式，執行下一個 `Yield` 陳述式。  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
  如需詳細資訊，請參閱 [迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)、[Yield 陳述式](../../../visual-basic/language-reference/statements/yield-statement.md)和[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
@@ -142,7 +142,7 @@ Next [ element ]
   
  在下列範例中， `m` 的指派做為 `n` 的原始值無法編譯 `Option Strict` 時開啟，因為 `Long` 轉換為 `Integer` 是縮小轉換。  但是在 `For Each` 陳述式中，即使需要進行從 `Long` 到 `Integer` 的相同轉換才能指派 `number`，也不會報告任何編譯器錯誤。  在數字很大的 `For Each` 陳述式中，將 <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> 套用至該數字時會發生執行階段錯誤。  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
   
 ### IEnumerator 呼叫  
  開始執行 `For Each`...`Next` 迴圈時，Visual Basic 會驗證 `group` 是否參考有效的集合物件。  如果沒有，會擲回例外狀況。  否則，會呼叫 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法和列舉值物件的 <xref:System.Collections.IEnumerator.Current%2A> 屬性，傳回第一個項目。  如果 `MoveNext` 指出沒有下一個項目，也就是說，集合是空的，則 `For Each` 迴圈會停止，且控制權會傳遞至 `Next` 陳述式隨後的陳述式。  否則，Visual Basic 會將 `element` 設為第一個項目，並執行陳述式區塊。  
@@ -170,7 +170,7 @@ End Sub
 ## 範例  
  下列範例會使用 <xref:System.IO.DirectoryInfo> 類別列出 C:\\ 目錄中的所有資料夾。  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
 ## 範例  
  下列範例說明如何排序集合的方法。  儲存於 <xref:System.Collections.Generic.List%601>中 `Car` 的範例排序執行個體分類。  `Car` 類別實作 <xref:System.IComparable%601> 介面，要求實作<xref:System.IComparable%601.CompareTo%2A> 方法。  
@@ -179,7 +179,7 @@ End Sub
   
  在 `ListCars` 方法， `cars.Sort()` 陳述式排序清單。  為 <xref:System.Collections.Generic.List%601> 的 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的呼叫會導致 `CompareTo` 方法對 `List`的 `Car` 物件自動呼叫。  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## 請參閱  
  [集合](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   

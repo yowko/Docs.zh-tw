@@ -36,13 +36,13 @@ caps.handback.revision: 27
   
 -   使用 `My.Computer.FileSystem` 物件的 `ReadAllText` 方法並提供路徑，將文字檔的內容讀取到字串中。  下列範例會將 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
   
-     [!code-vb[VbFileIORead#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_1_1.vb)]  
+     [!code-vb[VbFileIORead#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_1.vb)]  
   
 ### 若要從已編碼的文字檔讀取  
   
 -   使用 `My.Computer.FileSystem` 物件的 `ReadAllText` 方法，並且提供路徑和檔案編碼類型，將文字檔的內容讀取到字串中。  下列範例會將 UTF32 檔案 test.txt 的內容讀取到字串中，然後顯示於訊息方塊中。  
   
-     [!code-vb[VbFileIORead#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_1_2.vb)]  
+     [!code-vb[VbFileIORead#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_2.vb)]  
   
 ## 穩固程式設計  
  以下條件可能會造成例外狀況：  

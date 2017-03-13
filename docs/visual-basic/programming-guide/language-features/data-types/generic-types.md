@@ -64,7 +64,7 @@ caps.handback.revision: 45
   
  例如，您可能想要建立和使用佇列類別，而這些佇列類別作用於特定資料類型 \(如 `String`\)。 如下列範例所示，您可以從 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName> 宣告這類類別。  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
  您現在可以使用 `stringQ`，以獨佔方式使用 `String` 值。 因為 `stringQ` 是 `String` 特有的，而不是通用於 `Object` 值，所以您沒有晚期繫結或類型轉換。 這可以節省執行時間，並減少執行階段錯誤。  
   
@@ -73,15 +73,15 @@ caps.handback.revision: 45
 ## 泛型類別範例  
  下列範例顯示泛型類別的基本架構定義。  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
   
  在上述的基本架構中，`t` 是*「類型參數」*\(type parameter\)，即宣告類別時所提供資料類型的預留位置。 您可以在程式碼的其他位置，提供 `t` 的各種資料類型來宣告各種版本的 `classHolder`。 下列範例顯示兩個這類宣告。  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
   
  先前的陳述式宣告*「已建構類別」*\(constructed class\)，其中，特定類型會取代類型參數。 這項取代遍及已建構類別內的程式碼。 下列範例顯示 `processNewItem` 程序在 `integerClass` 中的外觀。  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
  如需更完整的範例，請參閱 [如何：定義可以在不同資料類型上提供完全相同功能的類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
@@ -119,7 +119,7 @@ caps.handback.revision: 45
 ### 條件約束範例  
  下列範例顯示條件約束需要有類型引數才能實作 <xref:System.IComparable> 之類別的基本架構定義。  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
   
  如果後續程式碼嘗試從提供未實作 <xref:System.IComparable> 之類型的 `itemManager` 來建構類別，則編譯器會發出發生錯誤訊號。  
   
@@ -141,7 +141,7 @@ caps.handback.revision: 45
 ### 多個條件約束範例  
  下列範例顯示類型參數上具有條件約束清單之泛型類別的基本架構定義。 在建立這個類別之執行個體的程式碼中，類型引數必須同時實作 <xref:System.IComparable> 和 <xref:System.IDisposable> 介面、為參考類型，並且公開可存取的無參數建構函式。  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
   
 ## 重要詞彙  
  泛型類型引進並使用下列詞彙：  

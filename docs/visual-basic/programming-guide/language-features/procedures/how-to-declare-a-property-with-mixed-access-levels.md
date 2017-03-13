@@ -39,7 +39,7 @@ caps.handback.revision: 16
   
 3.  請勿在其他屬性程序上指定存取層級。  它會假設使用 `Property` 陳述式中宣告的存取層級。  您可以限制僅能存取其中一個屬性程序。  
   
-     [!code-vb[VbVbcnProcedures#10](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-a-propert_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
      在前述範例中，`Get` 程序擁有與屬性本身相同的 `Protected` 存取權限，`Set` 程序則擁有 `Private` 存取權限。  `salary` 值可供衍生自 `employee` 的類別 \(Class\) 讀取，但這個類別只能由 `employee` 類別進行設定。  
   

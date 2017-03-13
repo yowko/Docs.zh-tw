@@ -19,19 +19,19 @@ caps.handback.revision: 11
 本範例定義兩個結構：`RomanNumeral` 和 `BinaryNumeral`，並說明它們之間的轉換。  
   
 ## 範例  
- [!code-cs[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-user-de_1.cs)]  
+ [!code-cs[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_1.cs)]  
   
 ## 穩固程式設計  
   
 -   在前面的範例中，陳述式：  
   
-     [!code-cs[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-user-de_2.cs)]  
+     [!code-cs[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_2.cs)]  
   
      會執行轉換，從 `RomanNumeral` 轉換為 `BinaryNumeral`。  因為 `RomanNumeral` 和 `BinaryNumeral` 之間並沒有直接轉換，所以使用型別轉換以將 `RomanNumeral` 轉換成 `int`，並且使用另一個型別轉換以將 `int` 轉換成 `BinaryNumeral`。  
   
 -   同時，陳述式  
   
-     [!code-cs[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-user-de_3.cs)]  
+     [!code-cs[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_3.cs)]  
   
      會執行轉換，從 `BinaryNumeral` 轉換為 `RomanNumeral`。  因為 `RomanNumeral` 定義了一個從 `BinaryNumeral` 轉換的隱含轉換，所以不需要轉換。  
   

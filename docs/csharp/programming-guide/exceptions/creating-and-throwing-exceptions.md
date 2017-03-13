@@ -27,19 +27,19 @@ caps.handback.revision: 28
   
      例如，方法的參數值無效：  
   
-     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_1.cs)]  
+     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
   
 -   在物件某種狀態下，對物件進行不當的呼叫。  
   
      例如可能會嘗試寫入唯讀檔案的範例。  在物件狀態不允許作業的狀況下，會擲回 <xref:System.InvalidOperationException> 的執行個體或依據此類別衍生的物件。  這是擲回 <xref:System.InvalidOperationException> 物件的方法範例：  
   
-     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_2.cs)]  
+     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
 -   當方法引數會造成例外狀況時。  
   
      在這種情況下，應攔截原始的例外狀況，並應建立 <xref:System.ArgumentException> 執行個體。  原始的例外狀況應該做為 <xref:System.Exception.InnerException%2A> 參數傳遞至 <xref:System.ArgumentException> 的建構函式 \(Constructor\)：  
   
-     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_3.cs)]  
+     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
  例外狀況會包含名為 <xref:System.Exception.StackTrace%2A> 的屬性。  這個字串包含目前呼叫堆疊上方法的名稱，以及針對每個方法擲回例外狀況所在的檔案名稱及行號。  Common Language Runtime \(CLR\) 會在出現 `throw` 陳述式 \(Statement\) 的位置自動建立 <xref:System.Exception.StackTrace%2A> 物件，因此例外狀況必須從堆疊追蹤應有的起始點擲回。  
   
@@ -61,7 +61,7 @@ caps.handback.revision: 28
 ## 定義例外狀況類別  
  程式可以擲回 <xref:System> 命名空間 \(Namespace\) 中的預先定義例外狀況類別 \(除了之前所註明者\)，或是從 <xref:System.Exception> 衍生以建立其本身的例外狀況類別。  衍生類別應至少定義四個建構函式：一個是預設建構函式、一個設定訊息屬性，一個則同時設定 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 屬性。  第四個建構函式則是用來序列化例外狀況。  新的例外狀況類別應該是可序列化的。  例如：  
   
- [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_4.cs)]  
+ [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   
  除非新屬性提供的資料有助於解析例外狀況，否則不應隨意將新屬性加入至例外狀況類別。  如果您將新屬性加入到衍生的例外狀況類別中，則應覆寫 `ToString()` 以傳回新增的資訊。  
   

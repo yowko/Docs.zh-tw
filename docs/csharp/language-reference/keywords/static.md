@@ -24,13 +24,13 @@ caps.handback.revision: 26
 ## 範例  
  下列類別是宣告為 `static`，而且只包含 `static` 方法：  
   
- [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#18)]  
+ [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
  常數或型別宣告隱含靜態成員。  
   
  靜態成員無法經由執行個體來參考。  相反地，它需要經由型別名稱來參考。  例如，請參考下列類別：  
   
- [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#19)]  
+ [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
  若要參考靜態成員 `x`，請使用完整的名稱 `MyBaseC.MyStruct.x`，除非它是從相同範圍來存取：  
   
@@ -54,12 +54,12 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 ## 範例  
  這個範例讀取新員工的名字和 ID、然後累加員工人數，並且顯示此新員工的資訊以及員工新人數。  為了簡化，這個程式從鍵盤讀取目前的員工人數。  在實際應用上，這項資訊應從檔案讀取。  
   
- [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#20)]  
+ [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
 ## 範例  
  這個範例會示範，雖然您可以使用其他尚未宣告的靜態欄位來初始化靜態欄位，但是在明確指派值給該靜態欄位之前，結果都會是未定義的。  
   
- [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#21)]  
+ [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

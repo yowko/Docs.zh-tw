@@ -50,7 +50,7 @@ caps.handback.revision: 15
 ## 範例  
  指定 `/imports:system` 時會編譯下列程式碼。  
   
- [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/imports_1.vb)]  
+ [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/imports_1.vb)]  
   
 ## 請參閱  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

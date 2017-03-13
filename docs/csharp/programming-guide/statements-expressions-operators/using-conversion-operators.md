@@ -29,12 +29,12 @@ caps.handback.revision: 20
 ## 範例  
  下面示範如何使用明確轉換運算子。  此運算子會從 <xref:System.Byte> 型別轉換至名為 `Digit` 的數值型別。  因為並非所有的位元都可以轉換成數字，所以轉換是明確的，意思就是必須使用轉型 \(Cast\)，如 `Main` 方法中所示。  
   
- [!code-cs[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-conversion-operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_1.cs)]  
   
 ## 範例  
  此範例示範隱含轉換運算子，方法為定義會復原先前範例所執行作業的轉換運算子：它會從名為 `Digit` 的數值類別轉換成整數 <xref:System.Byte> 型別。  因為任何數字都可轉換成 <xref:System.Byte>，所以不需要強制使用者明確轉換。  
   
- [!code-cs[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-conversion-operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_2.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

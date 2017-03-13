@@ -32,7 +32,7 @@ caps.handback.revision: 23
 ## Char 型別  
  `Char` 資料型別是一個雙位元組 \(16 位元\) 的 Unicode 字元。  如果某個變數只會儲存正好一個的字元，則請宣告為 `Char`。  例如：  
   
- [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
   
  `Char` 或 `String` 變數中的每個可能值都是 Unicode 字元集的「*字碼指標*」\(Code Point\) 或字元碼。  Unicode 字元包括基本 ASCII 字元集、其他各種字母字元、重音、貨幣符號、分數、變音符號 \(Diacritic\) 和數學及技術符號。  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 23
 ## String 型別  
  `String` 資料型別是零個或多個雙位元組 \(16 位元\) 的 Unicode 字元組成的序列 \(Sequence\)。  如果某個變數可以包含任何數目的字元，則請宣告為 `String`。  例如：  
   
- [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
   
  如需詳細資訊，請參閱 [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   

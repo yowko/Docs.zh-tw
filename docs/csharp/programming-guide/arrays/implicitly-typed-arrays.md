@@ -24,14 +24,14 @@ caps.handback.revision: 13
   
  下列範例顯示如何建立隱含型別陣列：  
   
- [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#37)]  
+ [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
  在前述範例中，請注意隱含型別陣列中，初始化陳述式的左側不會使用方括號。  同時請注意，不規則陣列是使用 `new []` 進行初始化，如同一維陣列。  
   
 ## 物件初始設定式中的隱含型別陣列  
  建立包含陣列的匿名型別時，在型別的物件初始設定式中陣列必須是隱含型別。  在下列範例中，`contacts` 是匿名型別的隱含型別陣列，每個都包含名為 `PhoneNumbers` 的陣列。  請注意，`var` 關鍵字不會在物件初始設定式內部使用。  
   
- [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#38)]  
+ [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

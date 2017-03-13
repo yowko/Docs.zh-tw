@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## 範例  
  下列範例顯示 `object` 型別的變數如何接受任何資料型別的值，以及 `object` 型別的變數可如何將方法使用在 .NET Framework 的 <xref:System.Object> 上。  
   
- [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/csharp/object_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

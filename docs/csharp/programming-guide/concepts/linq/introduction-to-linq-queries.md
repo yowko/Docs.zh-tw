@@ -35,7 +35,7 @@ caps.handback.revision: 45
   
  下列範例示範查詢作業的三個部分在原始程式碼中的表示方式。  為了方便起見，這個範例使用整數陣列做為資料來源；不過，相同的概念也適用於其他資料來源。  本主題其他部分都會參照到這個範例。  
   
- [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#1)]  
+ [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
  下圖顯示完整的查詢作業。  在 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 中，查詢的執行與查詢本身不同；也就是說，只建立查詢變數並不能擷取任何資料。  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 45
   
  可查詢類型不需要進行修改或特殊處理，就可以當成 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 資料來源。  如果來源資料還不是記憶體中的可查詢類型，[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 提供者必須將它表示為可查詢類型。  例如，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] 會將 XML 文件載入可查詢的 <xref:System.Xml.Linq.XElement> 類型中：  
   
- [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#2)]  
+ [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
  使用 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 時，請先在設計階段利用手動方式或[物件關聯式設計工具 \(O\/R 設計工具\)](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2)，建立物件關聯對應。  您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。  在下列範例中，`Customers` 代表資料庫中的特定資料表，而查詢結果的類型 <xref:System.Linq.IQueryable%601> 則衍生自 <xref:System.Collections.Generic.IEnumerable%601>。  
   
@@ -79,7 +79,7 @@ IQueryable<Customer> custQuery =
 ### 延後執行  
  如前面所述，查詢變數本身只會儲存查詢命令。  實際執行查詢的作業將會延後至您反覆查看 `foreach` 陳述式中的查詢變數為止。  這個概念稱為「*延後執行*」\(Deferred Execution\)，下列範例將加以示範：  
   
- [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#4)]  
+ [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
  `foreach` 陳述式也是擷取查詢變數的地方。  例如，在前述查詢中，反覆運算變數 `num` 會保留傳回序列中的每個值 \(一次一個\)。  
   
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
 ### 強制立即執行  
  針對某個來源項目範圍執行彙總函式的查詢必須先反覆查看這些項目。  這類查詢的範例包括 `Count`、`Max`、`Average` 和 `First`。  這些查詢執行時並未使用明確的 `foreach` 陳述式，因為查詢本身必須使用 `foreach` 才能傳回結果。  另外也請注意，這些查詢類型傳回的是單一的值，而不是 `IEnumerable` 集合。  下列查詢會傳回來源陣列中的偶數計數：  
   
- [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#5)]  
+ [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
  若要強制立即執行任何查詢並快取其結果，您可以呼叫 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法。  
   
- [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#6)]  
+ [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
  您也可以將 `foreach` 迴圈放在緊接著查詢運算式後方的位置，以強制執行查詢。  不過，透過呼叫 `ToList` 或 `ToArray`，您可同時快取單一集合物件中的所有資料。  
   

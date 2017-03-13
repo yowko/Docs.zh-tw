@@ -36,11 +36,11 @@ caps.handback.revision: 31
   
  如果不是可為 null 的實值型別的變數，指派`Nothing`到它將它設成預設值為其宣告的型別。  如果該型別包含變數成員，皆會設定為自己型別的預設值。  下列範例以純量型別來說明。  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
  如果變數是參考型別，指派`Nothing` ，此變數設為`null`的變數型別的參考。  此變數會設定為 \[ `null`的參考沒有任何物件相關聯。  以下範例就是示範這項作業。  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
  當檢查是否參考 \(或型別的可為 null 值\) 變數`null`，不會使用`= Nothing`或`<> Nothing`。  Always use `Is Nothing` or `IsNot Nothing`.  
   
@@ -48,7 +48,7 @@ caps.handback.revision: 31
   
  下列範例示範使用 `Is` 和 `IsNot` 運算子的比較。  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
  如果您宣告變數而未使用`As`子句，並且將其設定為`Nothing`，則該變數的類型會是`Object`.  其中一個範例是`Dim something = Nothing`。  將產生編譯時期錯誤就會發生這種情況下當`Option Strict`上和`Option Infer`已關閉。  
   

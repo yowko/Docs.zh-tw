@@ -71,7 +71,7 @@ End Function
 ## 範例  
  下列範例會示範如何依位置傳遞引數，並依名稱傳遞引數呼叫程序。  程序有兩個選擇性參數。  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/visualbasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## 請參閱  
  [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   

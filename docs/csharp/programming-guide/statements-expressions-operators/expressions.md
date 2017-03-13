@@ -42,13 +42,13 @@ System.Convert.ToInt32("35")
 ## 常值和簡單名稱  
  最簡單的兩種運算式類型為常值和簡單名稱。  常值是沒有名稱的常數值。  例如，在下列程式碼範例中，`5` 和 `"Hello World"` 都是常值︰  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_1.cs)]  
+ [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  如需常值的詳細資訊，請參閱[類型](../../../csharp/language-reference/keywords/types.md)。  
   
  在上述範例中，`i` 和 `s` 都是用來辨識區域變數的簡單名稱。  在運算式中使用這些變數時，變數名稱會評估為目前儲存在記憶體中變數位置上的值。  這會在下列範例中示範：  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_2.cs)]  
+ [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
   
 ## 叫用運算式  
  以下程式碼範例中，`DoWork` 的呼叫為叫用運算式。  

@@ -22,11 +22,11 @@ caps.handback.revision: 42
   
  下列 C\# 陳述式包含一個一元運算子和一個運算元。 遞增運算子 `++` 會修改運算元 `y` 的值。  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  下列 C\# 陳述式包含兩個二元運算子，這兩個運算子各有兩個運算元。 指派運算子 `=` 的運算元為整數變數 `y` 和運算式 `2 + 3`。 運算式 `2 + 3` 本身包含加法運算子和兩個運算元 `2` 和 `3`。  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## 運算子、評估和運算子優先順序  
  運算元可以是由任何長度的程式碼撰寫而成的有效運算式，而且可以包含任何數量的子運算式。 在包含多個運算子的運算式中，套用運算子的順序取決於「*運算子優先順序*」\(Operator Precedence\)、「*順序關聯性*」\(Associativity\) 以及括號。  

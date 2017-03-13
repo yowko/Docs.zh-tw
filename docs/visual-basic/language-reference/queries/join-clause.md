@@ -67,12 +67,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## 範例  
  下列程式碼範例會執行隱含聯結以將客戶清單及其訂單合併。  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#13)]  
+ [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
   
 ## 範例  
  下列程式碼範例會使用 `Join` 子句聯結兩個集合。  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples2.vb#12)]  
+ [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
  這個範例會產生類似如下的輸出：  
   
@@ -85,7 +85,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## 範例  
  下列程式碼範例會使用 `Join` 子句並搭配兩個索引鍵資料行聯結兩個集合。  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples3.vb#17)]  
+ [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
  這個範例會產生類似如下的輸出：  
   

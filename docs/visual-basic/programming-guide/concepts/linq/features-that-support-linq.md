@@ -30,7 +30,7 @@ caps.handback.revision: 49
 ## 查詢運算式  
  Visual Basic 中的查詢運算式可以透過類似 SQL 或 XQuery 的宣告式語法來表示。  編譯期間查詢語法會轉換為對 LINQ 提供者實作的標準查詢運算子擴充方法進行的方法呼叫。  應用程式可透過使用 `Imports` 陳述式 \(Statement\) 指定適當的命名空間 \(Namespace\)，控制哪些標準查詢運算子會在範圍之內。  Visual Basic 查詢運算式的語法與下面所示類似：  
   
- [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_1.vb)]  
+ [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
   
  如需詳細資訊，請參閱 [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
@@ -41,18 +41,18 @@ caps.handback.revision: 49
   
  下列範例說明區域型別推斷。  若要使用此範例，您必須將 `Option Infer` 設為 `On`。  
   
- [!code-vb[VbLINQVbFeatures#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_2.vb)]  
+ [!code-vb[VbLINQVbFeatures#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_2.vb)]  
   
  區域型別推斷也可以讓建立匿名型別，以便在本章節稍後說明，以及所需的 LINQ 查詢。  
   
  在下列 LINQ 範例中，型別推斷會在 `Option Infer` 為 `On` 或 `Off` 時發生。  如果 `Option Infer` 為 `Off` 且 `Option Strict` 為 `On`，則會發生編譯時期錯誤。  
   
- [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_3.vb)]  
+ [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
   
 ## 物件初始設定式  
  當您必須建立用來保存查詢結果的匿名型別時，可以在查詢運算式中使用物件初始設定式。  物件初始設定式也可以用來初始化查詢外部之具名型別的物件。  使用物件初始設定式，您可以在單行中初始化物件，而不需要明確呼叫建構函式。  假設您有一個名為 `Customer` 的類別具有公用的 `Name` 和 `Phone` 屬性，以及其他屬性，則可以透過下列方式來使用物件初始設定式：  
   
- [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_4.vb)]  
+ [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
  如需詳細資訊，請參閱[Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
@@ -61,7 +61,7 @@ caps.handback.revision: 49
   
  「*匿名型別*」\(Anonymous Type\) 是由編譯器以動態方式建構的型別。  型別的名稱由編譯器指定，而且可能隨著每次進行新的編譯而改變。  因此，您不能直接使用這個名稱。  匿名型別初始化的方式如下：  
   
- [!code-vb[VbLINQVbFeatures#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_5.vb)]  
+ [!code-vb[VbLINQVbFeatures#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_5.vb)]  
   
  如需詳細資訊，請參閱[Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
@@ -70,36 +70,36 @@ caps.handback.revision: 49
   
  下列擴充方法會將列印方法加入至 <xref:System.String> 類別。  
   
- [!code-vb[VbLINQVbFeatures#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_6.vb)]  
+ [!code-vb[VbLINQVbFeatures#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_6.vb)]  
   
  呼叫此方法的方式與 <xref:System.String> 的一般執行個體方法 \(Instance Method\) 相同：  
   
- [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_7.vb)]  
+ [!code-vb[VbLINQVbFeatures#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_7.vb)]  
   
  如需詳細資訊，請參閱 [擴充方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
   
 ## Lambda 運算式  
  「Lambda 運算式」\(Lambda Expression\) 是沒有名稱的函式，會計算並傳回單一值。  不同於具名函式，Lambda 運算式可以同時定義及執行。  下列範例顯示的是 4。  
   
- [!code-vb[VbLINQVbFeatures#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_8.vb)]  
+ [!code-vb[VbLINQVbFeatures#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_8.vb)]  
   
  您可以將 Lambda 運算式定義指派成變數名稱，然後使用該名稱來呼叫函式。  下列範例也會顯示 4。  
   
- [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_9.vb)]  
+ [!code-vb[VbLINQVbFeatures#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_9.vb)]  
   
  在 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 中，Lambda 運算式是許多標準查詢運算子的基礎。  編譯器會建立 Lambda 運算式以擷取基本查詢方法 \(例如 `Where`、`Select`、`Order By`、`Take While` 等等\) 中定義的計算。  
   
  例如，下列程式碼定義的查詢會從學生清單中傳回所有的高年級學生。  
   
- [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_10.vb)]  
+ [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
   
  查詢定義會編譯成與下列範例類似的程式碼，而範例中則使用兩個 Lambda 運算式來指定 `Where` 和 `Select` 的引數。  
   
- [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_11.vb)]  
+ [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
   
  這兩個版本都可以使用 `For Each` 迴圈 \(Loop\)：  
   
- [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/features-that-support-linq_12.vb)]  
+ [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
   
  如需詳細資訊，請參閱 [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   

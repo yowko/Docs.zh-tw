@@ -46,19 +46,19 @@ caps.handback.revision: 22
   
 -   請使用 `DownloadFile` 方法下載檔案，將目標檔案的位置指定為字串或 URI，並指定要存放檔案的位置。  這個範例會從 `http://www.cohowinery.com/downloads` 下載檔案 `WineList.txt`，並將該檔案儲存到 `C:\Documents and Settings\All Users\Documents`：  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
 ### 指定逾時間隔以下載檔案  
   
 -   請使用 `DownloadFile` 方法下載檔案，將目標檔案的位置指定為字串或 URI、指定要存放檔案的位置，並以毫秒為單位指定逾時間隔 \(預設值為 1000\)。  這個範例會從 `http://www.cohowinery.com/downloads` 下載檔案 `WineList.txt`，並將該檔案儲存到 `C:\Documents and Settings\All Users\Documents`，而指定的逾時間隔為 500 毫秒：  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
 ### 提供使用者名稱和密碼以下載檔案  
   
 -   請使用 `DownLoadFile` 方法下載檔案，將目標檔案的位置指定為字串或 URI，並指定要存放檔案的位置、使用者名稱和密碼。  這個範例會以使用者名稱 `anonymous` 和空白密碼，從 `http://www.cohowinery.com/downloads` 下載檔案 `WineList.txt`，並將該檔案儲存到 `C:\Documents and Settings\All Users\Documents`。  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
     >  `DownLoadFile` 方法所使用的 FTP 通訊協定會以純文字格式傳送資訊 \(包括密碼\)，因此不應該用於傳輸機密資訊。  

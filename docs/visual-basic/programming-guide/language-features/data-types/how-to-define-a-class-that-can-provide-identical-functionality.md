@@ -73,7 +73,7 @@ caps.handback.revision: 29
   
      下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items` 中，而 using 程式碼可以宣告清單項目的資料類型。 參數化建構函式可讓 using 程式碼設定 `items` 上限，而預設建構函式會將此項目設為 9 \(共 10 個項目\)。  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
   
      您可以從 `simpleList` 宣告一個類別來保留 `Integer` 值清單、另一個類別來保留 `String` 值清單，以及另一個類別來保留 `Date` 值。 除了清單成員的資料類型之外，從所有這些類別建立之物件的行為都相同。  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 29
   
      您可以使用下列程式碼測試 `simpleList` 類別。  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
 ## 請參閱  
  [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

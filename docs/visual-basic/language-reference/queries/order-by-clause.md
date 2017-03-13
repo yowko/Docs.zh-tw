@@ -46,17 +46,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## 範例  
  下列查詢運算式會使用 `From` 子句宣告 `books` 集合的範圍 \(Range\) 變數 `book`。  `Order By` 子句會依價格將查詢結果遞增 \(預設值\) 排序。  相同價格的書籍會依標題遞增排序。  `Select` 子句會選取 `Title` 和 `Price` 屬性做為查詢傳回的值。  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#24)]  
+ [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
 ## 範例  
  下列查詢運算式會使用 `Order By` 子句依價格將查詢結果遞減排序。  相同價格的書籍會依標題遞增排序。  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#25)]  
+ [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
 ## 範例  
  下列查詢運算式會使用 `Select` 子句選取書籍標題、價格、出版日期和作者。  然後針對新的範圍 \(Scope\) 填入 \(Populate\) 範圍 \(Range\) 變數的 `Title`、`Price`、`PublishDate` 和 `Author` 欄位。  `Order By` 子句會先依作者名稱，再依書籍標題，然後依價格排列新的範圍變數 \(Range Variable\)。  每個資料行都以預設順序 \(遞增\) 排序。  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#26)]  
+ [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
 ## 請參閱  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

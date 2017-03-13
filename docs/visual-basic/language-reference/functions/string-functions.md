@@ -58,27 +58,27 @@ caps.handback.revision: 8
 ## 範例  
  此範例使用 `UCase` 函式，傳回大寫字母版本的字串。  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
 ## 範例  
  此範例使用 `LTrim` 函式刪除字串變數中的前置空格，並使用 `RTrim` 函式刪除字串變數中的尾端空格。  它會使用 `Trim` 函式刪除這兩種類型的空格。  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
 ## 範例  
  此範例使用 `Mid` 函式，從字串中傳回指定數目的字元。  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
 ## 範例  
  這個範例使用 `Len` 傳回字串中的字元數。  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
 ## 範例  
  此範例使用 `InStr` 函式傳回某個字串在另一個字串中第一次出現的位置。  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
 ## 範例  
  此範例將示範 `Format` 函式的各種使用方式，以透過 `String` 格式及使用者定義的格式，將值格式化。  對於日期分隔符號 \(`/`\)、時間分隔符號 \(`:`\) 和 AM\/PM 指示器 \(`t` 和 `tt`\) 而言，系統顯示的實際格式化輸出需視程式碼使用的地區設定而定。  當時間和日期顯示在開發環境內時，會使用程式碼地區設定的簡短時間格式和簡短日期格式。  
@@ -86,7 +86,7 @@ caps.handback.revision: 8
 > [!NOTE]
 >  若為使用 24 小時制的地區設定，AM\/PM 指示器 \(`t` 和 `tt`\) 不會顯示任何內容。  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
 ## 請參閱  
  [關鍵字](../../../visual-basic/language-reference/keywords/index.md)   

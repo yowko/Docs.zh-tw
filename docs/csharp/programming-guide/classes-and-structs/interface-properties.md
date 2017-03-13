@@ -19,7 +19,7 @@ caps.handback.revision: 13
 # 介面屬性 (C# 程式設計手冊)
 屬性可以在 [interface](../../../csharp/language-reference/keywords/interface.md) 上宣告，  下列是介面索引子存取子的範例：  
   
- [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
  介面屬性的存取子沒有主體，  因此，存取子的目的是指示屬性是讀寫、唯讀或唯寫。  
   
@@ -28,19 +28,19 @@ caps.handback.revision: 13
   
  您可以使用屬性的完整名稱，這個屬性會參考成員宣告的介面。  例如：  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  這稱為[明確介面實作](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)。  例如，如果 `Employee` 類別實作 `ICitizen` 和 `IEmployee` 這兩個介面，而且兩個介面都有 `Name` 屬性，則將會需要明確介面成員實作，  即如下的屬性宣告：  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  在 `IEmployee` 介面上實作 `Name` 屬性，在下列宣告時：  
   
- [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
  在 `ICitizen` 介面上實作 `Name` 屬性。  
   
- [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   
   **`210 Hazem Abolrous`**    
 ## 範例輸出  

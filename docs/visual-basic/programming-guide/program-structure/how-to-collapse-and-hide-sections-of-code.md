@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
 -   將程式碼區段放在 `#Region` 和 `#End Region` 陳述式 \(Statement\) 之間，如下列範例所示：  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/how-to-collapse-and-hide_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
      `#Region` 區塊可在一個程式碼檔案中使用多次，因此使用者可以自行定義可依序摺疊的程序與類別區塊，  也可以將 `#Region` 區塊巢狀於另一個 `#Region` 區塊中。  
   

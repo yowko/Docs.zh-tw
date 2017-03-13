@@ -51,7 +51,7 @@ caps.handback.revision: 11
 ## 範例  
  這個範例會使用 `<include>` 標記，從 `commentFile.xml` 檔案匯入成員文件註解。  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
  `commentFile.xml` 的格式如下。  
   

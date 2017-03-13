@@ -84,14 +84,14 @@ result = expression1 And expression2
 ## 範例  
  下列範例會使用 `And` 運算子，對兩個運算式執行邏輯交集。  結果為 `Boolean` 值，代表兩個運算式是否都是 `True`。  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
   
  前一個範例會分別產生 `True` 和 `False` 的結果。  
   
 ## 範例  
  下列範例會使用 `And` 運算子，對兩個數值運算式的個別位元執行邏輯交集。  如果運算元中的對應位元都是設為 1，則會將結果模式中的對應位元設為 1。  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
   
  前一個範例會分別產生 8、2 和 0 的結果。  
   

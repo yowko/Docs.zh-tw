@@ -147,19 +147,19 @@ Option Strict { On | Off }
 ## 範例  
  下列範例示範縮小轉換的隱含型別轉換所造成的編譯時期錯誤。  這個錯誤分類對應至 \[**編譯**\] 頁上的 \[**隱含轉換**\] 條件。  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
   
 ## 範例  
  下列範例示範晚期繫結造成的編譯時期錯誤。  這個錯誤分類對應至 \[**編譯**\] 頁上的 \[**晚期繫結，執行階段時呼叫可能失敗**\] 條件。  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
   
 ## 範例  
  下列範例示範由 `Object` 隱含型別宣告的變數所造成的錯誤。  這個錯誤分類對應至 \[**編譯**\] 頁上的 \[**隱含型別，假設是 Object**\] 條件。  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
 ## 請參閱  
  [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   

@@ -45,15 +45,15 @@ caps.handback.revision: 12
 ## 以 Imports 陳述式使用別名  
  `Imports` 陳述式讓您不需要明確地輸入參考的完整名稱，就可以更容易地存取類別 \(Class\) 中的方法。  別名 \(Alias\) 可讓您只對命名空間的一部分指派較簡易的名稱。  例如，導致一段文字以多行顯示的歸位字元 \(Carriage Return\)\/換行字元 \(Line Feed\) 循序項 \(Sequence\)，是 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空間中 <xref:Microsoft.VisualBasic.ControlChars> 模組的一部分。  若不以別名在程式中使用這個常數，您需要輸入下列程式碼：  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
  `Imports` 陳述式必須緊接在模組中任何 `Option` 陳述式之後的第一行。  下列程式碼片段會顯示如何將別名匯入和指派給 <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName> 模組：  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
  未來對這個命名空間的參考可以非常簡短：  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
  如果 `Imports` 陳述式不包括別名名稱，該匯入命名空間內定義的項目不需完整名稱就可在模組中使用。  如果有指定別名名稱，就必須做為該命名空間內所含的名稱限定詞 \(Qualifier\)。  
   

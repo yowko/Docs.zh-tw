@@ -76,12 +76,12 @@ caps.handback.revision: 24
 ## 程序的多個版本  
  假設您根據客戶的收支來撰寫一個 `Sub` 程序以公佈其異動，而且您希望可以用名稱或帳號代表該客戶。  要做到這一點，您可以定義兩個不同的 `Sub` 程序，如下列範例所示：  
   
- [!code-vb[VbVbcnProcedures#73](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
 ### 多載版本  
  另一個替代方式是多載化單一程序名稱。  您可以使用 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 關鍵字來為每一個參數清單定義該程序的版本，如下所示：  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### 其他多載  
  如果您也想以 `Decimal` 或 `Single` 接受交易數量，可以進一步多載化 `post` 以允許這個變化。  如果您在上一個範例中對每一個多載化這麼做，就會得到四個有相同名稱，但不同簽章的 `Sub` 程序。  
@@ -89,9 +89,9 @@ caps.handback.revision: 24
 ## 多載化的優點  
  多載化一個程序的好處在於呼叫的彈性。  若要使用在上一個範例中宣告的 `post` 程序，呼叫程式碼可以用 `String` 或 `Integer` 取得客戶識別資訊，不論哪一種方式您都可以呼叫相同的程序。  下面這個範例可說明這點：  
   
- [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
- [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

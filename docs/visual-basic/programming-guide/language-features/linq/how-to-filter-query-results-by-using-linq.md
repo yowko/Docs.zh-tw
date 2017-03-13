@@ -78,13 +78,13 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
      將下列程式碼加入至 `Load` 事件以查詢公開 \(Expose\) 為資料內容屬性的表格。  查詢會篩選結果並只傳回位於 `London` 的客戶。  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#11)]  
+     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
   
 4.  按下 F5 執行專案並檢視結果。  
   
 5.  以下是您可以嘗試的一些其他篩選。  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#12)]  
+     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
 ## 請參閱  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

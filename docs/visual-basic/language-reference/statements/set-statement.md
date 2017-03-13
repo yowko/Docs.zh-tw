@@ -93,7 +93,7 @@ End Set
 ## 範例  
  下列範例會使用 `Set` 陳述式，設定屬性的值。  
   
- [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## 請參閱  
  [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md)   

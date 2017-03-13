@@ -35,21 +35,21 @@ caps.handback.revision: 24
   
 1.  撰寫一宣告，其中包括如下列範例中之程式碼存取層次、`Enum` 關鍵字及有效名稱，各者分別宣告不同的 `Enum`。  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#3)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
 2.  定義列舉型別中的常數。  依預設，列舉型別的第一個常數會初始化為 `0`，之後的常數則會初始化成前一個常數值加上 1。  例如，下列的列舉型別 `Days` 包含名為 `Sunday` 的常數 \(其值為 `0`\)、名為 `Monday` 的常數 \(其值為 `1`\)、名為 `Tuesday` 的常數 \(其值為 `2`\)，依此類推。  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#4)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
 3.  您可以使用指派陳述式明確地指派列舉型別中常數的值。  您可以指定任何整數值，包含負數。  例如，您可能希望其值小於零的常數代表錯誤狀態。  在下列的列舉型別中，已明確指派常數 `Invalid` 之值為 `–1`，且指派常數 `Sunday` 之值為 `0`。  由於它是列舉型別中的第一個常數，`Saturday` 也已初始化為值 `0`。  `Monday` 的值為 `1` \(為 `Sunday` 的值加 1\)；`Tuesday` 的值為 `2`，依此類推。  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#5)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
 ### 若要將列舉宣告為明確型別  
   
 -   使用 `As` 子句指定列舉的型別，如下列範例所示。  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#6)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
 ## 請參閱  
  [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

@@ -98,22 +98,22 @@ Loop { While | Until } condition
 ## 範例  
  在下列範例中，迴圈中的陳述式會繼續執行，直到 `index` 變數大小 10 為止。  `Until` 子句是在迴圈的結尾。  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
   
 ## 範例  
  下列範例會使用 `While` 子句而不使用 `Until` 子句，並且會在迴圈的開始處而不是結尾處測試 `condition`。  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
   
 ## 範例  
  在下列範例中，當 `index` 變數大於 100 時，`condition` 就會停止迴圈。  但是當索引變數大於 10 時，迴圈中的 `If` 陳述式會導致 `Exit Do` 陳述式停止迴圈。  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
   
 ## 範例  
  下列範例會讀取文字檔中的所有文字行。  <xref:System.IO.File.OpenText%2A> 方法會開啟檔案，並傳回讀取字元的 <xref:System.IO.StreamReader>。  在 `Do...Loop` 的情況下，`StreamReader` 的 <xref:System.IO.StreamReader.Peek%2A> 方法會判斷是否存在任何額外的字元。  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
   
 ## 請參閱  
  [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   

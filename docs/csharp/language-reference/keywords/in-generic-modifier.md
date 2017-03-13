@@ -32,12 +32,12 @@ caps.handback.revision: 17
 ## 範例  
  下列範例示範如何宣告、擴充和實作 Contravariant 泛型介面，  同時也示範如何在實作此介面的類別中使用隱含轉換。  
   
- [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/in-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
 ## 範例  
  下列範例示範如何宣告、執行個體化和叫用 Contravariant 泛型委派，  同時也示範如何才能隱含轉換委派型別。  
   
- [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/in-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

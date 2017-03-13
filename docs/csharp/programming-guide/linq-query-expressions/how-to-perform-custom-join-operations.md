@@ -23,12 +23,12 @@ caps.handback.revision: 13
   
  第二個方法會產生所有產品的序列，產品的分類 ID 列在左側的分類清單中。  使用 `let` 子句和 `Contains` 方法建立暫時陣列時請特別注意。  另外也可以在查詢和排除第一個 `from` 子句之前建立陣列。  
   
- [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#64)]  
+ [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_1.cs)]  
   
 ## 範例  
  在下列範例中，在 join 子句之前無法取得內部 \(右側\) 序列的情況下，查詢必須根據相符的索引鍵聯結兩個序列。  如果此聯結是使用 `join` 子句執行，則必須針對每個項目呼叫 `Split` 方法。  使用多個 `from` 子句可以讓查詢避免重複方法呼叫的負荷。  但是，由於 `join` 已最佳化，因此在這個特殊案例中，它的速度可能仍然比使用多個 `from` 子句快。  結果主要會依據方法呼叫耗費的資源而有所不同。  
   
- [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#13)]  
+ [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_2.cs)]  
   
 ## 編譯程式碼  
   

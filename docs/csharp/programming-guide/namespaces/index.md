@@ -19,19 +19,19 @@ caps.handback.revision: 27
 # 命名空間 (C# 程式設計手冊)
 C\# 程式設計大量使用命名空間的原因有兩個。  第一，.NET Framework 會使用命名空間組織其多種類別，如下所示：  
   
- [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#22)]  
+ [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
  `System` 是命名空間，而 `Console` 是該命名空間中的類別。  可以使用 `using` 關鍵字，因此就不需要完整名稱，如下列範例所示：  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
- [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#25)]  
+ [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
  如需詳細資訊，請參閱 [using 指示詞](../../../csharp/language-reference/keywords/using-directive.md)。  
   
  第二，宣告您自己的命名空間，將有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  請使用 [namespace](../../../csharp/language-reference/keywords/namespace.md) 關鍵字宣告命名空間，如下列範例所示：  
   
- [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#6)]  
+ [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
 ## 命名空間概觀  
  命名空間具有下列屬性：  

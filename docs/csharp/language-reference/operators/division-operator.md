@@ -27,7 +27,7 @@ caps.handback.revision: 21
  兩個整數相除時，結果永遠是整數。  比方說，結果為 7 \/ 3 是 2。  若要判斷 7 的其餘部分 \/ 3，使用於餘數運算子 \([%](../../../csharp/language-reference/operators/modulus-operator.md)\)。  若要取得商數做為有理數或分數，請將被除數或除數型別指定為 `float` 或 `double`。  如果您所放到小數點右邊的數字，如下列範例所示表示被除數或除數成小數，您可以隱含地指定型別。  
   
 ## 範例  
- [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#42)]  
+ [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

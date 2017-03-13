@@ -27,7 +27,7 @@ caps.handback.revision: 18
 ## 範例  
  在下列範例中，`A()` 方法會將變數 `Area` 當做 [double](../../../csharp/language-reference/keywords/double.md) 值傳回。  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/csharp/return_1.cs)]  
+ [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

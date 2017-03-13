@@ -31,7 +31,7 @@ caps.handback.revision: 13
   
  下列程序使用遞迴來計算原始引數的階乘：  
   
- [!code-vb[VbVbcnProcedures#51](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
 ## 遞迴程序的考量  
  **限制條件**：  您必須設計遞迴程序，測試至少有一個條件能終止遞迴，也必須能在合理的遞迴呼叫數目內都無法滿足此類條件時進行處理。  除非至少符合一個條件且不會發生失敗，否則程序就可能陷入無限迴圈的高風險。  

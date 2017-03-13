@@ -44,7 +44,7 @@ caps.handback.revision: 39
   
 6.  以下列程式碼取代 Program.cs 的內容。  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#21)]  
+     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  選擇 F5 鍵以執行專案。  命令提示字元視窗會出現，其中包含 `Hello World!` 一列。  
   
@@ -53,11 +53,11 @@ caps.handback.revision: 39
 ## 註解  
  第一行包含註解。  字元 `//` 可以將這行的後面部分轉換成註解。  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#32)]  
+ [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  您也可以藉由將文字區塊封入 `/*` 和 `*/` 字元，將該文字區塊標記為註解。  這在下列範例中顯示。  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#33)]  
+ [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## Main 方法  
  C\# 主控台應用程式必須包含 `Main` 方法，以便控制項在其中開始和結束。  您可以在 `Main` 方法中建立物件和執行其他方法。  
@@ -66,19 +66,19 @@ caps.handback.revision: 39
   
 -   它可以傳回 `void`。  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_4.cs)]  
+     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   它也可以傳回整數。  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_5.cs)]  
+     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   對於任一種傳回類型，都可使用引數。  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_6.cs)]  
+     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      \-或\-  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_7.cs)]  
+     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  `Main` 方法的參數 `args` 是 `string` 陣列，其中包含用來叫用程式的命令列引數。  不像在 C \+ \+，陣列並不包含可執行檔 \(exe\) 的名稱。  
   
@@ -89,9 +89,9 @@ caps.handback.revision: 39
 ## 輸入和輸出  
  C\# 程式通常使用由 .NET Framework 的執行階段程式庫所提供的輸入\/輸出服務。  `System.Console.WriteLine("Hello World!");` 陳述式使用 <xref:System.Console.WriteLine%2A> 方法。  這是執行階段程式庫中 <xref:System.Console> 類別的輸出方法之一。  它會在其後緊接新的一行之標準輸出資料流中，顯示它的字串參數。  其他 <xref:System.Console> 方法則可在不同的輸入和輸出作業使用。  如果您在程式的開頭加入 `using System;` 指示詞，就可以直接使用 <xref:System> 類別和方法，而無須指定完整的名稱。  例如，您可以呼叫 `Console.WriteLine` 而非 `System.Console.WriteLine`：  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#23)]  
+ [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  如需輸入\/輸出方法的詳細資訊，請參閱 <xref:System.IO>。  
   

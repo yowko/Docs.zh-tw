@@ -24,7 +24,7 @@ caps.handback.revision: 19
 ## 範例  
  以下是一個極為簡化的分數類別，  它會多載 \+ 和 \* 運算子，以便執行分數的加法和乘法運算，並提供一個可將分數 \(Fraction\) 型別轉換為雙精度浮點數 \(Double\) 型別的轉換運算子。  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/csharp/operator_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

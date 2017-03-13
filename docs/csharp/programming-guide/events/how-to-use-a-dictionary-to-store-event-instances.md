@@ -19,7 +19,7 @@ caps.handback.revision: 16
 `accessor-declarations` 的用法之一是公開大量的事件但不配置每個事件的欄位，而是改用字典來儲存事件執行個體。  不過，這只在您擁有大量的事件，但預期大多數事件都不會實作的情況下才有用。  
   
 ## 範例  
- [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-use-a-dictionary-_1.cs)]  
+ [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-use-a-dictionary-to-store-event-instances_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

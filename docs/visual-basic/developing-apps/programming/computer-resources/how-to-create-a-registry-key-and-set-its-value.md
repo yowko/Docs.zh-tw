@@ -36,22 +36,22 @@ caps.handback.revision: 30
   
 -   請使用 `CreateSubKey` 方法來指定要將機碼及機碼名稱存放在那個登錄區。  參數  `Subkey`  不需區分大小寫。  這個範例是將登錄機碼 `MyTestKey` 建立在 HKEY\_CURRENT\_USER 之下。  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 #### 若要建立登錄機碼並設定其值  
   
 1.  請使用 `CreateSubkey` 方法來指定要將機碼及機碼名稱存放在那個登錄區。  這個範例是將登錄機碼 `MyTestKey` 建立在 HKEY\_CURRENT\_USER 之下。  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 2.  使用 `SetValue` 方法來設定值。  這個範例會設定字串值： 「  MyTestKeyValue" 設為 "This is a test value"。  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_2.vb)]  
+     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
 ## 範例  
  這個範例是將登錄機碼 `MyTestKey` 建立在 HKEY\_CURRENT\_USER 之下，並將字串值 `MyTestKeyValue` 設為 `This is a test value`。  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_3.vb)]  
+ [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
 ## 穩固程式設計  
  檢查登錄結構以找出適合機碼 \(Key\) 的位置。  例如，您可能想要開啟目前使用者的 HKEY\_CURRENT\_USER\\Software 機碼，並使用您的公司名稱來建立機碼，  接著將登錄值加入至您的公司機碼。  

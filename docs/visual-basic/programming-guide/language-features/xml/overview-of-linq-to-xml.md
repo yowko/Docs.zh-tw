@@ -35,21 +35,21 @@ caps.handback.revision: 17
 ## 建立 XML  
  有兩種方式可以在 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中建立 XML 樹狀結構。  您可以直接在程式碼中宣告 XML 常值，也可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] API 建立樹狀結構。  這兩個處理序都可讓程式碼反映出 XML 樹狀結構的最終結構。  例如，下列程式碼範例會建立 XML 項目：  
   
- [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_1.vb)]  
+ [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
   
  如需詳細資訊，請參閱[Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)。  
   
 ## 存取和巡覽 XML  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 所提供的 XML 軸屬性可用以存取和巡覽 XML 結構。  這些屬性可讓您經由指定 XML 子項目名稱，存取 XML 項目和屬性。  此外，您也可以明確地呼叫用以巡覽及尋找項目和屬性的 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 方法。  例如，下列程式碼範例會使用 XML 軸屬性來參考 XML 項目的屬性和子項目。  此程式碼範例會使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢來擷取子項目並將其輸出為 XML 項目，也就是有效地執行轉換。  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_2.vb)]  
+ [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
   
  如需詳細資訊，請參閱[Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
   
 ## XML 命名空間  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 可讓您使用 `Imports` 陳述式，指定全域 XML 命名空間的別名。  下列範例顯示如何使用 `Imports` 陳述式來匯入 XML 命名空間：  
   
- [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_3.vb)]  
+ [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
   
  當您存取 XML 軸屬性並宣告 XML 文件和項目的 XML 常值時，可以使用 XML 命名空間別名。  
   
@@ -60,16 +60,16 @@ caps.handback.revision: 17
 ### 在 XML 常值中使用 XML 命名空間  
  下列範例顯示如何建立會使用全域命名空間 `ns` 的 <xref:System.Xml.Linq.XElement> 物件：  
   
- [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_4.vb)]  
+ [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 編譯器會使用 `xmlns` 屬性，將包含 XML 命名空間別名的 XML 常值轉譯成採用 XML 標記法的同等程式碼，以便使用 XML 命名空間。  編譯之後，上一節範例中的程式碼基本上會產生與下列範例相同的可執行程式碼：  
   
- [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_5.vb)]  
+ [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
   
 ### 在 XML 軸屬性中使用 XML 命名空間  
  在 XML 常值中宣告的 XML 命名空間無法用於 XML 軸屬性中。  但是，全域命名空間則可用於 XML 軸屬性。  使用冒號來分隔 XML 命名空間前置字元與區域項目名稱。  下列為範例：  
   
- [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_6.vb)]  
+ [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
 ## 請參閱  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   

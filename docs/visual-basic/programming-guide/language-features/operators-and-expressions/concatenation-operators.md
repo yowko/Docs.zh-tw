@@ -32,7 +32,7 @@ caps.handback.revision: 17
   
  這些運算子也可以串連 `String` 變數，如下列所示。  
   
- [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
   
 ## 兩種串連運算子之間的差異  
  [\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) 的主要目的是將兩個數字相加。  不過，它也可以串連數值運算元與字串運算元。  `+` 運算子有一組複雜的規則，可判斷是要相加、串連、通知編譯器錯誤，還是擲回執行階段 <xref:System.InvalidCastException> 例外狀況。  

@@ -35,9 +35,9 @@ caps.handback.revision: 21
 ## 範例  
  下列範例會存取 SQL 結構 <xref:System.Data.SqlTypes.SqlString>，會於 SQL 字串與 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 字串的兩個方向間定義轉換運算子 \([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)\)。  使用 `CType(`*SQL string expression*, `String)` 將 SQL 字串轉換成 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 字串，而 `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` 則可朝另一個方向轉換。  
   
- [!code-vb[VbVbcnProcedures#30](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#31](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
  <xref:System.Data.SqlTypes.SqlString> 結構會將轉換運算子 \([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)\) 定義成從 `String` 轉換成 <xref:System.Data.SqlTypes.SqlString>，另一個則是從 <xref:System.Data.SqlTypes.SqlString> 轉換成 `String`。  將 `title` 指派給 `jobTitle` 的陳述式會使用第一個運算子，而 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函式呼叫則會使用第二個。  
   

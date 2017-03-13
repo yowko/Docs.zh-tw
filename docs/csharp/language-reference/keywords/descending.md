@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## 範例  
  下列範例示範如何在 [orderby 子句](../../../csharp/language-reference/keywords/orderby-clause.md)中使用 `descending`。  
   
- [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/csharp/descending_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/descending_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

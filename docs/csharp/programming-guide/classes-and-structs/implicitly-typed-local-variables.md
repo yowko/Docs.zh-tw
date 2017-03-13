@@ -21,7 +21,7 @@ caps.handback.revision: 23
   
  下列範例顯示可以用 `var` 宣告區域變數的各種方法：  
   
- [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#43)]  
+ [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
   
  請務必了解 `var` 關鍵字不代表 "variant"，也不代表變數是不嚴格規定型別或晚期繫結的。  只代表編譯器會判斷並指派最適當的型別。  
   
@@ -54,7 +54,7 @@ caps.handback.revision: 23
   
  從原始程式碼的角度來看，匿名型別沒有名稱。  因此，如果已使用 `var` 初始化查詢變數，則可以存取傳回的物件序列中屬性的唯一方法，就是使用 `var` 做為 `foreach` 陳述式中反覆運算變數的型別。  
   
- [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#44)]  
+ [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
   
 ## 備註  
  下列限制會套用至隱含型別變數宣告：  
@@ -73,7 +73,7 @@ caps.handback.revision: 23
   
  當您不想要老是在鍵盤上輸入變數的特定型別、亦或特定型別十分明顯或未加入至程式碼的可讀性時，`var` 關鍵字也相當有用。  `var` 有用的其中一個範例是用於巢狀泛型型別時，例如用於群組作業的型別。  在下列查詢中，查詢變數的型別是 `IEnumerable<IGrouping<string, Student>>`。  只要您和其他必須維護程式碼的人了解，為求便利和簡潔而使用隱含型別就不會有問題。  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#13)]  
+ [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
   
  但是，使用 `var` 可能會使您的程式碼對其他開發人員來講更難以了解。  基於這個原因，C\# 文件通常只有在必要時才會使用 `var`。  
   

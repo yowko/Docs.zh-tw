@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例會顯示如何在類別 \(參考型別\) 內實作實值相等。  
   
- [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_1.cs)]  
+ [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
  在類別 \(參考型別\) 上，<xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法的預設實作都是執行參考相等比較，而非實值相等檢查。  當實作器覆寫虛擬方法時，其目的是提供實值相等語意。  
   
@@ -60,7 +60,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例顯示如何在結構 \(實值型別\) 內實作實值相等：  
   
- [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_2.cs)]  
+ [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
  對於結構，<xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 的預設實作 \(此為 <xref:System.ValueType?displayProperty=fullName> 中的受覆寫版本\) 會使用反映來比較型別中每個欄位的值，以便執行實值相等檢查。  當實作器覆寫結構中的虛擬 `Equals` 方法，其目的是要提供更有效的執行實值相等檢查方法，並可選擇根據結構之欄位或屬性的某個子集進行比較。  
   

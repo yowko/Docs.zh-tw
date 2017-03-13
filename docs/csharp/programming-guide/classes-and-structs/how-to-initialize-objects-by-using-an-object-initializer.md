@@ -26,12 +26,12 @@ caps.handback.revision: 20
 ## 範例  
  下列範例顯示如何使用物件初始設定式來初始化新的 `StudentName` 型別。  
   
- [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#35)]  
+ [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
 ## 範例  
  下列範例顯示如何使用集合初始設定式初始化 `StudentName` 型別的集合。  請注意，集合初始設定式是一系列以逗號分隔的物件初始設定式。  
   
- [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#36)]  
+ [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## 編譯程式碼  
  若要執行這個程式碼，請將該類別複製並貼上至在 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] 中所建立的 Visual C\# 主控台應用程式專案。  如需詳細資訊，請參閱[How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)。  

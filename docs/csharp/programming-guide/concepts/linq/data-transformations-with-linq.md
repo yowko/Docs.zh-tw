@@ -40,11 +40,11 @@ caps.handback.revision: 15
 ## 將多個輸入聯結成一個輸出序列  
  您可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢，建立項目來自多個輸入序列的輸出序列。  下列範例顯示如何合併兩個記憶體中資料結構，而相同的準則也適用於合併來自 XML 或 SQL 或 DataSet 來源的資料。  假設有下列兩個類別 \(Class\) 型別：  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#7)]  
+ [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  下列範例會顯示查詢：  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#8)]  
+ [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  如需詳細資訊，請參閱[join 子句](../../../../csharp/language-reference/keywords/join-clause.md)與[select 子句](../../../../csharp/language-reference/keywords/select-clause.md)。  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 15
 ## 將記憶體中物件轉換為 XML  
  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢簡化了在記憶體中資料結構、SQL 資料庫、[!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] Dataset 和 XML 資料流或文件之間的資料轉換。  下列範例會將記憶體中資料結構內的物件轉換為 XML 項目。  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#9)]  
+ [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  這個程式碼會產生下列 XML 輸出：  
   
@@ -102,7 +102,7 @@ caps.handback.revision: 15
 > [!NOTE]
 >  如果查詢會轉譯為另一個領域，則不支援在查詢運算式中呼叫方法。  例如，因為 SQL Server 沒有一般 C\# 方法所需的內容，所以不可以在 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 中呼叫一般 C\# 方法。  但可以將預存程序 \(Stored Procedure\) 對應至方法，再呼叫預存程序。  如需詳細資訊，請參閱[預存程序](../Topic/Stored%20Procedures.md)。  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#10)]  
+ [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## 請參閱  
  [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   

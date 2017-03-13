@@ -89,7 +89,7 @@ End Select
 ## 範例  
  下列範例會使用 `Select Case` 語法結構，寫入與 `number` 變數的值相對應的程式行。  第二個 `Case` 陳述式會包含與目前 `number` 之值相符合的值，所以會執行寫著 "Between 6 and 8, inclusive" 的陳述式。  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   

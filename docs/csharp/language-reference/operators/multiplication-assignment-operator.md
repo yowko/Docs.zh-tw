@@ -39,7 +39,7 @@ x = x * y
  `*=` 運算子無法直接被多載，但使用者定義型別可多載 [\* 運算子](../../../csharp/language-reference/operators/multiplication-operator.md) \(請參閱[運算子](../../../csharp/language-reference/keywords/operator.md)\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#13)]  
+ [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

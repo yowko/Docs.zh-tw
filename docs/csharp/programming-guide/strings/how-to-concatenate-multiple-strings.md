@@ -23,12 +23,12 @@ caps.handback.revision: 21
 ## 範例  
  在下列範例中，會示範如何將長字串常值分割成較小字串，以增加原始程式碼的易讀性。  在編譯時期，這些分割部分將串連成單一字串。  不管包含多少字串，都不會耗用任何執行階段效能。  
   
- [!code-cs[csProgGuideStrings#30](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#30)]  
+ [!code-cs[csProgGuideStrings#30](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-concatenate-multiple-strings_1.cs)]  
   
 ## 範例  
  若要串連字串變數，您可以使用 `+` 或 `+=` 運算子，或是 <xref:System.String.Concat%2A?displayProperty=fullName>、<xref:System.String.Format%2A?displayProperty=fullName> 或 <xref:System.Text.StringBuilder.Append%2A?displayProperty=fullName> 方法。  `+` 運算子很容易使用，有利於程式撰寫人員按照直覺來撰寫程式碼。  即使您在一個陳述式中使用數個 \+ 運算子，字串內容仍只會複製一次。  但如果您多次重複執行這種運算 \(例如在迴圈中\)，則可能會造成效率問題。  例如，請注意下列程式碼：  
   
- [!code-cs[csProgGuideStrings#23](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#23)]  
+ [!code-cs[csProgGuideStrings#23](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-concatenate-multiple-strings_2.cs)]  
   
 > [!NOTE]
 >  在字串的串連作業中，C\# 編譯器會將 null 字串視為與空字串相同，但不會轉換原始 null 字串的值。  
@@ -37,7 +37,7 @@ caps.handback.revision: 21
   
  不過，當效能很重要時，一定要使用 <xref:System.Text.StringBuilder> 類別 \(Class\) 來串連字串。  下列程式碼會使用 <xref:System.Text.StringBuilder> 類別的 <xref:System.Text.StringBuilder.Append%2A> 方法來串連字串，並沒有 `+` 運算子的鏈結效果。  
   
- [!code-cs[csProgGuideStrings#22](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#22)]  
+ [!code-cs[csProgGuideStrings#22](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-concatenate-multiple-strings_3.cs)]  
   
 ## 請參閱  
  <xref:System.String>   

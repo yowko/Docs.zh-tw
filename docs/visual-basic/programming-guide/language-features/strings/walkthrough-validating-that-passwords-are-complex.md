@@ -31,7 +31,7 @@ caps.handback.revision: 17
 ## 範例  
   
 ### 程式碼  
- [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/walkthrough-validating-t_1.vb)]  
+ [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
   
 ## 編譯程式碼  
  傳遞包含該密碼的字串，呼叫這個方法。  

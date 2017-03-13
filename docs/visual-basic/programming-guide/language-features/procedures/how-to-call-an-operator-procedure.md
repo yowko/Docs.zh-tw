@@ -53,7 +53,7 @@ caps.handback.revision: 16
 ## 範例  
  下列範例會建立兩個 <xref:System.TimeSpan> 結構、將它們加在一起，以及將結果儲存在第三個 <xref:System.TimeSpan> 結構中。  <xref:System.TimeSpan> 結構會定義運算子程序，以多載數個標準運算子。  
   
- [!code-vb[VbVbcnProcedures#29](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-operator-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
  因為 <xref:System.TimeSpan> 會多載標準 `+` 運算子，所以上述範例會在計算 `combinedSpan` 的值時呼叫運算子程序。  
   

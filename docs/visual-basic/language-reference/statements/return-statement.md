@@ -52,7 +52,7 @@ Return expression
 ## 範例  
  當程序不必執行其他工作時，下列範例會多次使用 `Return` 陳述式以返回至呼叫程式碼。  
   
- [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/return-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
 ## 請參閱  
  [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   

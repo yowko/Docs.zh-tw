@@ -30,12 +30,12 @@ caps.handback.revision: 7
 ## 範例  
  此範例會將字串分割為 `Char` 陣列，以及將字串分割為 Unicode 文字字元的 `String` 陣列。  這項區別的原因在於 Unicode 文字字元可以組成兩個以上的 `Char` 字元 \(例如 Surrogate 字組或組合字元順序\)。  如需詳細資訊，請參閱 <xref:System.Globalization.TextElementEnumerator> 和＜Unicode Standard＞，網址為 http:\/\/www.unicode.org。  
   
- [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_1.vb)]  
+ [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   
 ## 範例  
  將字串分割為 Unicode 文字字元較為困難，但如果您需要字串之視覺呈現的相關資訊，就必須這麼做。  此範例會使用 <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> 方法，取得構成字串之 Unicode 文字字元的相關資訊。  
   
- [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_2.vb)]  
+ [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
 ## 請參閱  
  <xref:System.String.Chars%2A>   

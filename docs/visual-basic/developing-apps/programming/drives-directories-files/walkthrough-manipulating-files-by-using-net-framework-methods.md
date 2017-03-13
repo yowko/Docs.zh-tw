@@ -67,32 +67,32 @@ caps.handback.revision: 18
   
 2.  因為應用程式會參考 <xref:System.IO> 命名空間，所以請將下列陳述式加在程式碼的起始處 \(需在以 `Public Class Form1` 開頭的表單類別宣告之前\)。  
   
-     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_1.vb)]  
   
      在寫入檔案之前，您必須建立 <xref:System.IO.StreamWriter> 類別的執行個體。  
   
 3.  從 \[**檢視**\] 功能表，選擇 \[**設計工具**\] 以返回 \[**Windows Form 設計工具**\]。  按兩下 \[`Submit`\] 按鈕，建立按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，然後加入下列程式碼。  
   
-     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_2.vb)]  
   
 > [!NOTE]
 >  Visual Studio 整合式開發環境 \(IDE\) 將會返回 \[程式碼編輯器\]，並且將插入點放在事件處理常式內您該加入程式碼的位置。  
   
 1.  若要寫入至檔案，請使用 <xref:System.IO.StreamWriter> 類別的 <xref:System.IO.StreamWriter.Write%2A> 方法。  將下列程式碼直接加到 `Dim fw As StreamWriter` 後方。  您不需要擔心如果找不到檔案會擲回例外狀況，因為如果檔案不存在，就會建立檔案。  
   
-     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_3.vb)]  
   
 2.  請將下列程式碼直接加在 `Dim ReadString As String` 之後，以便確定使用者無法送出空白項目。  
   
-     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_4.vb)]  
   
 3.  因為這是日記簿，所以使用者會想要指派每個項目的日期。  將下列程式碼插入到 `fw = New StreamWriter("C:\MyDiary.txt", True)` 之後，將變數 `Today` 設定為目前日期。  
   
-     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_5.vb)]  
   
 4.  最後，附加程式碼以清除 <xref:System.Windows.Forms.TextBox>。  將下列程式碼加入至 `Clear` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件。  
   
-     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_6.vb)]  
   
 ## 將顯示功能加入至日記簿  
  在本節中，您將加入一個可在 `DisplayEntry` <xref:System.Windows.Forms.TextBox> 中顯示最新項目的功能。  另外，也可以加入能顯示各種項目的 <xref:System.Windows.Forms.ComboBox>，使用者可以由此處選取要在 `DisplayEntry` <xref:System.Windows.Forms.TextBox> 中顯示的項目。  <xref:System.IO.StreamReader> 類別的執行個體會從 `MyDiary.txt` 讀取。  如同 <xref:System.IO.StreamWriter> 類別，<xref:System.IO.StreamReader> 主要用於文字檔。  
@@ -110,7 +110,7 @@ caps.handback.revision: 18
   
 1.  `PickEntries` <xref:System.Windows.Forms.ComboBox> 用於顯示使用者送出每個項目的日期，讓使用者可以從特定日期選取項目。  建立 `GetEntries` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。  
   
-     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_7.vb)]  
   
 2.  若要測試程式碼，請按 F5 編譯應用程式，然後按一下 \[**取得項目**\]。  按一下 <xref:System.Windows.Forms.ComboBox> 中的下拉箭頭，以顯示項目日期。  
   
@@ -118,7 +118,7 @@ caps.handback.revision: 18
   
 1.  建立 `Display` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並且加入下列程式碼。  
   
-     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_8.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_8.vb)]  
   
 2.  若要測試程式碼，請按 F5 編譯應用程式，然後送出項目。  按一下 \[**取得項目**\]，從 <xref:System.Windows.Forms.ComboBox> 選取項目，再按一下 \[**顯示**\]。  所選取項目的內容會顯示在 `DisplayEntry` <xref:System.Windows.Forms.TextBox> 中。  
   
@@ -137,23 +137,23 @@ caps.handback.revision: 18
   
 1.  將下列程式碼加入至 `Display` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件，放在 `DisplayEntry.Text = ReadString` 之後。  
   
-     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_9.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_9.vb)]  
   
 2.  建立 `DeleteEntry` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。  
   
-     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_10.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_10.vb)]  
   
 3.  當使用者顯示項目時，`EditEntry` 按鈕會變成可用狀態。  將下列程式碼加入至 `Display` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件，放在 `DisplayEntry.Text = ReadString` 之後。  
   
-     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_11.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_11.vb)]  
   
 4.  建立 `EditEntry` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。  
   
-     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_12.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_12.vb)]  
   
 5.  建立 `SubmitEdit` 按鈕的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，並加入下列程式碼。  
   
-     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_13.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_13.vb)]  
   
  若要測試程式碼，請按 F5 編譯應用程式。  按一下 \[**取得項目**\]、選取項目，再按一下 \[**顯示**\]。  項目會顯示在 `DisplayEntry` <xref:System.Windows.Forms.TextBox> 中。  按一下 \[**編輯項目**\]。  項目會顯示在 `Entry` <xref:System.Windows.Forms.TextBox> 中。  編輯 `Entry` <xref:System.Windows.Forms.TextBox> 中的項目，並且按一下 \[**送出編輯結果**\]。  開啟 `MyDiary.txt` 檔案以確認修正。  現在，選取項目並按一下 \[**刪除項目**\]。  當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 \[**確定**\]。  關閉應用程式並開啟 `MyDiary.txt` 以確認刪除。  
   

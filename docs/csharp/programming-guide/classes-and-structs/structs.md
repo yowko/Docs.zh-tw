@@ -19,7 +19,7 @@ caps.handback.revision: 31
 # 結構 (C# 程式設計手冊)
 結構 \(Struct\) 是使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字所定義，例如：  
   
- [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/structs_1.cs)]  
   
  結構與類別所使用的語法幾乎相同，不過結構的限制比類別多：  
   

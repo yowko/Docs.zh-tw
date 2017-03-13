@@ -38,7 +38,7 @@ caps.handback.revision: 17
  這個類別可以實作類別介面，它可以實作一個以上的介面，但是第一個實作的介面將做為預設的類別介面。  請在此實作要公開給 COM 的方法和屬性。  它們必須標記為公用並且符合類別介面內的宣告。  也請在此宣告由類別所引發的事件。  它們必須標記為公用並且符合事件介面內的宣告。  
   
 ## 範例  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/csharp/example-com-class_1.cs)]  
+ [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

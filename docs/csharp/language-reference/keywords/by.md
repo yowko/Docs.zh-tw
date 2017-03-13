@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## 範例  
  下列範例示範如何在 `group` 子句中使用 `by` 內容關鍵字，指定應根據每個學生姓氏的第一個字母將學生分組。  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/csharp/by_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
   
 ## 請參閱  
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)

@@ -68,7 +68,7 @@ Mid( _
 ## 範例  
  這個範例會使用 `Mid` 陳述式，以用另一個字串的字元來取代字串變數中指定數量的字元。  
   
- [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## 需求  
  **命名空間**：[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

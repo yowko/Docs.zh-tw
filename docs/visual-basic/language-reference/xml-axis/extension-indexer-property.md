@@ -59,7 +59,7 @@ object(index)
 ## 範例  
  下列範例顯示如何使用擴充索引子存取 <xref:System.Xml.Linq.XElement> 物件集合中的第二個子節點。  將使用子項軸屬性存取集合，該屬性會取得 `contact` 物件中名為 `phone` 的所有子項目。  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
  這個程式碼會顯示下列文字：  
   

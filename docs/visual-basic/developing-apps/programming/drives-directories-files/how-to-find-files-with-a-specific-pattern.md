@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
 -   使用 `GetFiles` 方法，提供要搜尋之目錄的名稱與路徑，並指定模式。  下列範例會傳回目錄中副檔名為 `.dll` 的所有檔案，並將它們加入至 `ListBox1`。  
   
-     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-files-with-a_1.vb)]  
+     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-files-with-a-specific-pattern_1.vb)]  
   
 ## .NET Framework 安全性  
  下列情形可能會造成例外狀況 \(Exception\)：  

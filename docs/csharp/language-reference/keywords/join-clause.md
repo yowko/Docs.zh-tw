@@ -33,14 +33,14 @@ caps.handback.revision: 29
 ## 內部聯結  
  下列範例顯示簡單的內部等聯結。  這個查詢會產生「產品名稱\/分類」配對的一般序列。  相同分類字串會顯示在多個項目中。  如果 `categories` 的項目沒有相符的 `products`，該分類不會顯示在結果中。  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#24)]  
+ [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  如需詳細資訊，請參閱 [如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)。  
   
 ## Group Join  
  具有 `into` 運算式的 `join` 子句稱為群組聯結。  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#25)]  
+ [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  群組聯結會產生階層式結果序列，使左側來源序列中的項目與右側來源序列中的一個或多個相符項目產生關聯。  群組聯結從關聯式角度來看沒有對等項目，它基本上是物件陣列的序列。  
   
@@ -50,14 +50,14 @@ caps.handback.revision: 29
   
  當然，您也可以使用群組聯結的結果做為其他子查詢的產生器：  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#26)]  
+ [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  如需詳細資訊，請參閱 [如何：執行群組連結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)。  
   
 ## 左外部聯結  
  在左外部聯結中，會傳回左來源序列中的所有項目，即使在右序列中沒有相符項目也是如此。  若要在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 中執行左外部聯結，請使用 `DefaultIfEmpty` 方法與群組聯結的組合，指定如果左側項目沒有相符項目時產生預設右側項目。  您可以使用 `null` 做為任何參考型別的預設值，或者可以指定使用者定義的預設型別。  在下列範例中，會顯示使用者定義的預設型別：  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#27)]  
+ [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  如需詳細資訊，請參閱 [如何：執行左外部連結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)。  
   
@@ -78,7 +78,7 @@ caps.handback.revision: 29
 ## 範例  
  下列範例使用相同的相符索引鍵，比較相同資料來源上的內部聯結、群組聯結及左外部聯結的結果。  部分額外程式碼會加入至這些範例以釐清主控台顯示中的結果。  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#23)]  
+ [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## 備註  
  後面沒有 `into` 的 `join` 子句會轉譯成 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。  後面有 `into` 的 `join` 子句會轉譯成 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  

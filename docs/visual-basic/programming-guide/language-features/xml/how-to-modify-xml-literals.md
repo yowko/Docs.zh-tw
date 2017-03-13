@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
      下列程式碼範例會更新 XML 文件中所有 \<Price\> 項目的值。  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#4)]  
+     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
   
      下列顯示範例來源 XML 和本程式碼範例中修改過的 XML。  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 11
   
 1.  若要將屬性 \(Attribute\) 加入至 XML 常值，請先取得 XML 常值的參考。  接著您可以加入新的 XML 屬性 \(Attribute\) 軸屬性 \(Property\)，即可加入屬性 \(Attribute\)。  您也可以使用 <xref:System.Xml.Linq.XContainer.Add%2A> 方法將新的 <xref:System.Xml.Linq.XAttribute> 物件加入至 XML 常值。  下列範例顯示這兩種選項。  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#5)]  
+     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
   
      下列顯示範例來源 XML 和本程式碼範例中修改過的 XML。  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 11
   
      下列範例顯示每項技巧的範例。  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#6)]  
+     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
   
      下列顯示範例來源 XML 和本程式碼範例中修改過的 XML。  
   
@@ -165,7 +165,7 @@ caps.handback.revision: 11
   
 1.  若要從 XML 常值移除項目或屬性 \(Attribute\)，請先取得該項目或屬性 \(Attribute\) 的參考，然後呼叫 `Remove` 方法，如下列範例所示。  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#7)]  
+     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
   
      下列顯示範例來源 XML 和本程式碼範例中修改過的 XML。  
   
@@ -213,7 +213,7 @@ caps.handback.revision: 11
   
      下列程式碼範例會將所有 \<Description\> 項目都取代為 \<Abstract\> 項目。  其中會使用 \<Description\> <xref:System.Xml.Linq.XElement> 物件的 <xref:System.Xml.Linq.XContainer.Nodes%2A> 屬性 \(Property\)，將 \<Description\> 項目的內容保留在新 \<Abstract\> 項目中。  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#8)]  
+     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
   
      下列顯示範例來源 XML 和本程式碼範例中修改過的 XML。  
   

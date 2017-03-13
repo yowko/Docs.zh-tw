@@ -23,7 +23,7 @@ caps.handback.revision: 7
 ## 範例  
  下列範例說明具有自訂 `add` 和 [remove](../../../csharp/language-reference/keywords/remove.md) 存取子的事件。  如需完整的範例，請參閱 [如何：實作介面事件](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)。  
   
- [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/csharp/add_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/add_1.cs)]  
   
  一般而言，您不需要提供自訂的事件存取子。  在大部分情況下，編譯器 \(Compiler\) 在您宣告事件時自動產生的存取子已經足夠。  
   

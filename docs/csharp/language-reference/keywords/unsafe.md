@@ -51,7 +51,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  要編譯 Unsafe 程式碼，您必須指定 [\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) 編譯器選項。  Unsafe 程式碼不能由 Common Language Runtime 來驗證。  
   
 ## 範例  
- [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#22)]  
+ [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

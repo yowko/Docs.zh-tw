@@ -20,7 +20,7 @@ caps.handback.revision: 44
 # 可為 Null 的類型 (C# 程式設計手冊)
 可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=fullName> 結構的執行個體。  可為 Null 的型別能夠代表其基礎實值型別的正確值範圍，加上其他 `null` 值。  例如，`Nullable<Int32>` \(念法是 "Nullable of Int32"\)，可以指派為從 \-2147483648 到 2147483647 的任何值，或是可以指派為 `null` 值。  `Nullable<bool>` 可以指派為 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 的值。  在處理資料庫以及包含並未指派值之項目的其他資料型別時，將 `null` 指派給數字和布林型別的功能就特別有用。  例如，資料庫中的布林欄位能夠儲存值 `true` 或 `false`，或者也可能未定義。  
   
- [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
  此範例將顯示輸出；  
   

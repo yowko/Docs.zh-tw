@@ -25,7 +25,7 @@ caps.handback.revision: 24
   
  常數必須初始化為宣告的型態。  例如：  
   
- [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
   
  在這個範例中，常數 `months` 永遠會是 12，而且即使是類別本身也不能加以改變。  實際上，當編譯器在 C\# 原始程式檔中遇到常數識別項 \(例如 `months`\) 時，會直接將常值取代為其產生的中繼語言 \(Intermediate Language，IL\) 程式碼。  由於在執行階段，常數沒有相關聯的變數位址，參考因此無法傳遞 `const` 欄位，且在運算式中不能顯示為左值 \(L\-Value\)。  
   
@@ -34,17 +34,17 @@ caps.handback.revision: 24
   
  您可以同時宣告同一型別的多個常數，例如：  
   
- [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_2.cs)]  
+ [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
   
  如果不會造成循環參考，用來初始化常數的運算式也可參考其他的常數。  例如：  
   
- [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_3.cs)]  
+ [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
  常數可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected` `internal`。  這些存取修飾詞將定義類別使用者如何存取常數。  如需詳細資訊，請參閱 [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  常數會當做[靜態](../../../csharp/language-reference/keywords/static.md)欄位存取，因為常數的值在型別的所有執行個體中都一樣。  您不能使用 `static` 關鍵字進行宣告。  不在定義常數之類別中的運算式，就必須使用類別名稱、句號和常數的名稱來存取常數。  例如：  
   
- [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_4.cs)]  
+ [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

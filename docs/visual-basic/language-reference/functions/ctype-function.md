@@ -64,7 +64,7 @@ CType(expression, typename)
 ## 範例  
  下列範例會使用 `CType` 函式來將運算式轉換為 `Single` 資料類型。  
   
- [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/ctype-function_1.vb)]  
+ [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
  如需其他範例，請參閱 [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
   

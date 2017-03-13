@@ -30,11 +30,11 @@ caps.handback.revision: 11
   
 1.  請宣告您要使用的特定型別參數，例如：  
   
-     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_1.vb)]  
+     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
   
 2.  如果呼叫的程序需要的是 `Void*`，請使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性 \(Attribute\) 指定 `As Any`。  
   
-     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_2.vb)]  
+     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
   
 ## 請參閱  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   

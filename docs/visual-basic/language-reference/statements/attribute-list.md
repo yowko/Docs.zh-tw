@@ -62,7 +62,7 @@ caps.handback.revision: 18
 ## 範例  
  下列範例會將 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性套用至 `Function` 程序的基本架構定義。  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> 表示屬性化程序代表 Unmanaged 動態連結程式庫 \(DLL\) 的進入點 \(Entry Point\)。  屬性會提供 DLL 名稱做為位置性引數，而將其他資訊做為變數初始設定式。  
   

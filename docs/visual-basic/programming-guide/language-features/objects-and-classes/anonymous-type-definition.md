@@ -26,7 +26,7 @@ caps.handback.revision: 21
 ## 編譯器產生的程式碼  
  根據下列 `product` 的定義，編譯器會建立新的類別定義，其中含有 `Name`、`Price` 和 `OnHand` 屬性。  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
  類別定義所含的屬性定義與下面類似。  請注意，索引鍵屬性沒有 `Set` 方法。  索引鍵屬性的值是唯讀的。  
   
@@ -75,13 +75,13 @@ End Class
   
      例如，下列範例中的 `Equals` 只有在遇到 `employee01` 和 `employee08` 時才傳回 `True`。  每行前面的註解會指出新執行個體不符合 `employee01` 的原因。  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
 -   `GetHashcode` 適當提供了唯一的 GetHashCode 演算法。  這個演算法只會使用索引鍵屬性來計算雜湊程式碼。  
   
 -   `ToString` 會傳回由屬性值串連而成的字串，如下列範例所示。  索引鍵屬性和非索引鍵屬性都會加至其中。  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
  匿名型別中明確命名的屬性不能與這些產生的方法衝突。  換句話說，您不能使用 `.Equals`、`.GetHashCode` 或 `.ToString` 來命名屬性。  
   

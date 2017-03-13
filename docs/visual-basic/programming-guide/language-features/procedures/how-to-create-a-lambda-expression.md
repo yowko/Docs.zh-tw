@@ -36,15 +36,15 @@ caps.handback.revision: 27
   
 3.  在參數清單之後，輸入單一運算式做為函式主體。  運算式計算的值是函式傳回的值。  您不能使用 `As` 子句指定傳回型別。  
   
-     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
      您可以藉由傳遞整數引數來呼叫 Lambda 運算式。  
   
-     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
   
 4.  或者，也可以透過下列範例來達到相同的結果：  
   
-     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
   
 ### 若要建立單行 Lambda 運算式副程式  
   
@@ -58,11 +58,11 @@ caps.handback.revision: 27
   
 3.  在參數清單之後，輸入單一陳述式做為副程式的主體。  
   
-     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#17)]  
+     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
   
      您可以藉由傳遞字串引數來呼叫 Lambda 運算式。  
   
-     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#18)]  
+     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
   
 ### 若要建立多行 Lambda 運算式函式  
   
@@ -78,11 +78,11 @@ caps.handback.revision: 27
   
 4.  在函式主體中，新增下列程式碼以建立運算式並傳回值。  您不能使用 `As` 子句指定傳回型別。  
   
-     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#19)]  
+     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
   
      您可以藉由傳遞整數引數來呼叫 Lambda 運算式。  
   
-     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#20)]  
+     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
   
 ### 若要建立多行 Lambda 運算式副程式  
   
@@ -98,20 +98,20 @@ caps.handback.revision: 27
   
 4.  在函式主體中，新增下列程式碼以在叫用副程式時加以執行。  
   
-     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#21)]  
+     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
   
      您可以藉由傳遞字串引數來呼叫 Lambda 運算式。  
   
-     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#22)]  
+     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## 範例  
  Lambda 運算式的一般用途是定義函式，該函式可以傳遞為參數的引數，其型別為 `Delegate`。  在下列範例中，<xref:System.Diagnostics.Process.GetProcesses%2A> 方法會傳回本機電腦上執行之處理序的陣列。  <xref:System.Linq.Enumerable> 類別 \(Class\) 的 <xref:System.Linq.Enumerable.Where%2A> 方法需要 `Boolean` 委派做為其引數。  範例中的 Lambda 運算式便是用於此目的。  它會針對只有一個執行緒的各個處理序以及在 `filteredList` 中選取的處理序傳回 `True`。  
   
- [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class4.vb#10)]  
+ [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
  上述範例相當於使用 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] 語法撰寫的下列程式碼：  
   
- [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class5.vb#11)]  
+ [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
 ## 請參閱  
  <xref:System.Linq.Enumerable>   

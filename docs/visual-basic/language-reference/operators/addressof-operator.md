@@ -45,12 +45,12 @@ AddressOf procedurename
 ## 範例  
  這個範例會使用 `AddressOf` 運算子，來指定要處理按鈕之 `Click` 事件的委派。  
   
- [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addressof-operator_1.vb)]  
+ [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_1.vb)]  
   
 ## 範例  
  下列範例會使用 `AddressOf` 運算子，來指定執行緒 \(Thread\) 的啟動函式。  
   
- [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addressof-operator_2.vb)]  
+ [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_2.vb)]  
   
 ## 請參閱  
  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)   

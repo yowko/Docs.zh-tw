@@ -75,17 +75,17 @@ Exit { Do | For | Function | Property | Select | Sub | Try | Whil
 ## 範例  
  在下列範例中，當 `index` 變數大於 100 時，迴圈條件就會停止迴圈。  但是當索引變數大於 10 時，迴圈中的 `If` 陳述式會導致 `Exit Do` 陳述式停止迴圈。  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
   
 ## 範例  
  下列範例會將傳回值指派給函式名稱 `myFunction`，然後使用 `Exit Function` 從函式返回。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_2.vb)]  
   
 ## 範例  
  下列範例使用 [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) 指派傳回值並結束函式。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
   
 ## 請參閱  
  [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md)   

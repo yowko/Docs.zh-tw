@@ -67,7 +67,7 @@ caps.handback.revision: 18
   
  數個運算子可以在單一運算式或陳述式中執行動作，如下列範例所述。  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
  在上述範例中，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會在指派運算子 \(`=`\) 右側的運算式中執行運算，然後將結果值指派給左側的變數 `x`。  可以結合為運算式的運算子數目並沒有實際的限制，但是必須了解 [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以確定您會取得預期的結果。  
   

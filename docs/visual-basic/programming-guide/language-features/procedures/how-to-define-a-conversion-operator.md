@@ -35,11 +35,11 @@ caps.handback.revision: 14
 ## 範例  
  下列範例會定義名為  `digit`  之結構與 `Byte` 間的轉換運算子。  
   
- [!code-vb[VbVbcnProcedures#27](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-conversi_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
   
  您可以使用下列程式碼來測試結構 `digit`。  
   
- [!code-vb[VbVbcnProcedures#28](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-conversi_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
   
 ## 請參閱  
  [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   

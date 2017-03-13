@@ -34,15 +34,15 @@ caps.handback.revision: 12
 ## 多載化使用方式  
  當物件模型規定您針對在不同資料型別上作業的程序採用相似的名稱時，多載化就特別有用。  例如，可顯示數種不同資料型別的類別，可具有類似於下列範例的 `Display` 程序：  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#64)]  
+ [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
   
  在不使用多載化的情況下，即使程序執行相同的作業，您也必須為每個程序建立不同的名稱，如下列範例所示：  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#65)]  
+ [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
   
  因為多載化提供可使用的資料型別的選擇，所以能夠更容易地使用屬性或方法。  例如，下列任何一行程式碼都可呼叫先前所討論的 `Display` 方法：  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#66)]  
+ [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
  在執行階段，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會依據您指定的參數資料型別來呼叫正確的程序。  
   
@@ -72,11 +72,11 @@ caps.handback.revision: 12
   
 2.  將下列程式碼加入至 `TaxClass` 類別。  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#67)]  
+     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
   
 3.  將下列程序加入至表單。  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#68)]  
+     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
   
 4.  將按鈕加入至表單，並從按鈕的 `Button1_Click` 事件來呼叫 `ShowTax` 程序。  
   

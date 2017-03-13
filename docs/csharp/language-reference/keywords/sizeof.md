@@ -58,7 +58,7 @@ int intSize = sizeof(int);
  至於所有其他型別，包括結構 \(Struct\)，`sizeof` 運算子只能用於 unsafe 程式碼區塊。  雖然您可以使用 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> 方法，但是這個方法傳回的值不一定等於 `sizeof` 傳回的值。  <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> 會傳回型別經過封送處理後的大小，而 `sizeof` 則傳回經過 Common Language Runtime 配置的大小，包括任何填補。  
   
 ## 範例  
- [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#11)]  
+ [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

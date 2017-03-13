@@ -64,7 +64,7 @@ caps.handback.revision: 16
 ## <a name="example"></a>範例  
  此範例中顯示的值 `Nickname` 設定。  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#14)]  
+ [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
   
  為了讓範例能夠運作，您的應用程式必須 `Nickname` 類型設定 `String`。  
   

@@ -28,11 +28,11 @@ caps.handback.revision: 32
   
  請注意，T 可用於巢狀 `Node` 類別。  當 `GenericList<T>` 以具象型別執行個體化時 \(例如執行個體化為 `GenericList<int>`\)，則每次出現的 `T` 項目都會以 `int` 取代。  
   
- [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
   
  下列程式碼範例示範用戶端程式碼如何使用泛型 `GenericList<T>` 類別建立整數清單。  您只要變更型別引數，就能輕鬆修改下列的程式碼來建立字串清單或其他任何自訂型別的清單：  
   
- [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
 ## 請參閱  
  <xref:System.Collections.Generic>   

@@ -62,7 +62,7 @@ caps.handback.revision: 30
   
 -   將 `Student` 類別和已初始化的學生名單加入至專案中的 `Program` 類別。  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#11)]  
+     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### 若要將新 Student 加入至 Students 清單  
   
@@ -76,7 +76,7 @@ caps.handback.revision: 30
   
      請注意，查詢的範圍變數 `student` 是做為來源中各個 `Student` 的參考，以提供每個物件的成員存取權。  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#12)]  
+ [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## 執行查詢  
   
@@ -90,7 +90,7 @@ caps.handback.revision: 30
   
 2.  在您加入這段程式碼之後，請按 Ctrl \+ F5 以建置並執行應用程式，並在 \[**主控台**\] 視窗中查看結果。  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#13)]  
+ [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### 若要加入其他篩選條件  
   
@@ -130,11 +130,11 @@ caps.handback.revision: 30
   
 1.  群組是查詢運算式中非常強大的一項功能。  內含 group 子句的查詢會產生群組序列，而且每個群組本身都包含 `Key`，以及由該群組所有成員組成的序列。  下面的新查詢使用學生姓氏的第一個字母當做索引鍵，將學生分組。  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#14)]  
+     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  請注意，查詢的型別現在已經變更。  它現在會產生使用 `char` 型別做為索引鍵的群組序列，以及 `Student` 物件的序列。  由於查詢的型別已經變更，因此下列程式碼也會變更 `foreach` 執行迴圈：  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#15)]  
+     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  按 Ctrl \+ F5 執行應用程式，並於 \[**主控台**\] 視窗檢視結果。  
   
@@ -144,7 +144,7 @@ caps.handback.revision: 30
   
 1.  明確撰寫 `IGroupings` 的 `IEnumerables` 程式碼可能很快就會變得非常瑣碎無聊。  這時候，您可以改用 `var`，以更便利的方式撰寫相同的查詢和 `foreach` 迴圈。  `var` 關鍵字不會變更物件的型別，只會指示編譯器推斷型別。  變更 `studentQuery` 的型別和反覆運算變數 `group`到 `var` 並重新執行查詢。  請注意，在內部 `foreach` 迴圈中，反覆運算變數的型別仍然是 `Student`，而且查詢的運作方式也和以前完全一樣。  請將 `s` 反覆運算變數變更為 `var`，然後重新執行查詢。  您將取得完全相同的結果。  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#16)]  
+     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      如需 [var](../../../../csharp/language-reference/keywords/var.md) 的詳細資訊，請參閱 [隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
@@ -152,7 +152,7 @@ caps.handback.revision: 30
   
 1.  執行前述查詢時，您應該會注意到群組並未依字母順序排列。  如果要變更這個狀況，您必須在 `group` 子句後面提供 `orderby` 子句。  但是您必須先取得識別項做為 `group` 子句所建立之群組的參考，才能使用 `orderby` 子句。  請使用 `into` 關鍵字提供這個識別項，如下所示：  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#17)]  
+     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      執行這項查詢時，您會發現群組現在已經按照字母順序排序。  
   
@@ -160,7 +160,7 @@ caps.handback.revision: 30
   
 1.  您可以使用 `let` 關鍵字，在查詢運算式中引入任何運算式結果的識別項。  如下列範例所示，這個識別項十分方便，它也可以儲存運算式的結果，如此一來就不需要進行多次計算，藉以提高效能。  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#18)]  
+     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      如需詳細資訊，請參閱[let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
   
@@ -168,17 +168,17 @@ caps.handback.revision: 30
   
 1.  如[Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) 所述，某些查詢作業只能使用方法語法來表示。  下列程式碼範例會計算來源序列中每個 `Student` 的總分數，然後對該項查詢的結果呼叫 `Average()` 方法，以計算該班級的平均分數。  請注意查詢運算式前後的括號位置。  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#19)]  
+     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### 若要在 select 子句中進行轉換或投影  
   
 1.  在查詢所產生的序列中，其項目經常與來源序列中的項目不同。  請刪除先前的查詢和執行迴圈標記或為它們加上註解，然後使用下列程式碼取代。  請注意，查詢會傳回字串序列 \(不是 `Students`\)，而且 `foreach` 迴圈中也會反映這個情況。  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#20)]  
+     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  本逐步解說前面的程式碼指出班級平均成績約為 334 分。  若要產生總分數高於班級平均的 `Students` 序列以及其 `Student ID`，您可以在 `select` 陳述式中使用匿名型別：  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#21)]  
+     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## 後續步驟  
  在您熟悉於 C\# 中使用查詢的基本概念之後，便可開始閱讀您想了解的特定 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 提供者類型的文件和範例。  

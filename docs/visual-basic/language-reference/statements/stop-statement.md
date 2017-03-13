@@ -47,7 +47,7 @@ Stop
 ## 範例  
  這個範例使用 `Stop` 陳述式，以在 `For...Next` 迴圈中每次重複時暫停執行。  
   
- [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/stop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
 ## 請參閱  
  [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)

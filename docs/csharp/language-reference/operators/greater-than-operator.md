@@ -25,7 +25,7 @@ caps.handback.revision: 16
  使用者定義型別可多載 `>` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  如果多載 `>`，則也必須多載 [\<](../../../csharp/language-reference/operators/less-than-operator.md)。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#29)]  
+ [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

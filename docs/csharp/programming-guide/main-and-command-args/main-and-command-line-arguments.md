@@ -7,7 +7,7 @@ caps.handback.revision: 30
   
  C\# 程式只能有一個進入點。  如果不只一個類別有 `Main` 方法，您就必須搭配 **\/main** 編譯器選項來編譯程式，以指定要做為進入點的 `Main` 方法。  如需詳細資訊，請參閱[\/main \(Specify Location of Main Method\)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。  
   
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-and-command-line-ar_1.cs)]  
+ [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
 ## 概觀  
   

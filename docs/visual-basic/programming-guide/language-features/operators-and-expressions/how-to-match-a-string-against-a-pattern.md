@@ -42,7 +42,7 @@ caps.handback.revision: 8
   
      下列範例會測試 `myString` 是否恰好由單一字元 `H` 所組成。  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
 ### 根據萬用字元比對字串運算式中的字元  
   
@@ -50,7 +50,7 @@ caps.handback.revision: 8
   
      下列範例會測試 `myString` 是否包含單一字元 `W`，且此字元後面恰好緊接著兩個字元 \(這兩個字元可以是任何值\)。  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
 ### 根據字元清單比對字串運算式中的字元  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 8
   
      下列範例會測試 `myString` 是否包含任何有效字元，且此字元後面恰好緊接著 `A`、`C` 或 `E` 其中一個字元。  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
      請注意，這項比對必須區分大小寫。  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 8
   
      下列範例會測試 `myString` 是否包含字元 `num`，此字元後面恰好緊接著 `i`、`j`、`k`、`l`、`m` 或 `n` 其中一個字元。  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
      請注意，這項比對必須區分大小寫。  
   
@@ -85,7 +85,7 @@ caps.handback.revision: 8
   
      下列範例會測試七位數的電話號碼 `phoneNum`，是否剛好為三位數字，之後緊接著空格、短破折號 \(`–`\)、句號 \(`.`\) 或全然沒有字元，再緊接著的剛好是四位數字。  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
 ## 請參閱  
  [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)   

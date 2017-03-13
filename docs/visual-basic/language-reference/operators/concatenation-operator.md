@@ -59,7 +59,7 @@ result = expression1 & expression2
 ## 範例  
  這個範例會使用 `&` 運算子以強制字串串連。  結果是代表兩個字串運算元串連的字串值。  
   
- [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
 ## 請參閱  
  [&\= Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

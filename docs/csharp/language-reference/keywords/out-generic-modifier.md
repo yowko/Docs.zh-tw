@@ -30,7 +30,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例示範如何宣告、擴充和實作 Covariant 泛型介面，  同時也示範如何對實作 Covariant 介面的類別使用隱含轉換。  
   
- [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
  在泛型介面中，如果型別參數滿足下列條件，您就可以將它宣告為 Covariant：  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例示範如何宣告、執行個體化和叫用 Covariant 泛型委派，  同時也示範如何隱含轉換委派型別。  
   
- [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
  在泛型委派中，如果型別只當做方法傳回型別，而不當做方法引數使用，就可以將它宣告為 Covariant。  
   

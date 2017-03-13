@@ -23,7 +23,7 @@ caps.handback.revision: 7
 ## 範例  
  在下列範例中，`Grades` 列舉型別 \(Enumeration\) 表示學生在班上可能會得到的成績 \(用字母表示\)。  擴充方法 `Passing` 會加入至 `Grades` 型別，這樣該型別的每個執行個體 \(Instance\) 現在會知道它代表的是否為及格分數。  
   
- [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-create-a-new-meth_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-create-a-new-method-for-an-enumeration_1.cs)]  
   
  請注意，`Extensions` 類別 \(Class\) 也包含動態更新的靜態變數，而且擴充方法的傳回值會反映該變數的目前值。  此範例示範如何在幕後於定義擴充方法的靜態類別上直接叫用 \(Invoke\) 擴充方法。  
   

@@ -41,7 +41,7 @@ caps.handback.revision: 18
   
      例如，以下程式碼行分別標記了 `Jump` 和 `120`：  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
 ## 請參閱  
  [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   

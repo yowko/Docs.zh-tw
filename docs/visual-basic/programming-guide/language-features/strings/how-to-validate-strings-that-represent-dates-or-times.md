@@ -25,7 +25,7 @@ caps.handback.revision: 11
 下列程式碼範例會設定 `Boolean` 值，指出代表日期或時間的字串是否有效。  
   
 ## 範例  
- [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/how-to-validate-strings-_1.vb)]  
+ [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
   
 ## 編譯程式碼  
  以想要驗證的日期和時間，分別取代 `("01/01/03")` 和 `"9:30 PM"`。  您可以使用另一個硬式編碼的字串、`String` 變數或會傳回字串的方法 \(例如，`InputBox`\)，取代上述字串。  

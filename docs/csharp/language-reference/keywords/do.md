@@ -24,7 +24,7 @@ caps.handback.revision: 22
 ## 範例  
  在下列範例中，只要變數 `x` 小於 5，就會執行 `do-while` 迴圈陳述式。  
   
- [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/csharp/do_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
   
  `do-while` 迴圈 \(Loop\) 會在評估條件運算式之前執行一次，與 [while](../../../csharp/language-reference/keywords/while.md) 陳述式不同。  
   

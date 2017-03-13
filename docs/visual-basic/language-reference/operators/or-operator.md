@@ -86,14 +86,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>範例  
  下列範例會使用 `Or` 運算子，對兩個運算式執行內含的邏輯分離。 結果是 `Boolean` 值，表示其中兩個運算式是否 `True`。  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
   
  上述範例產生的結果 `True`, ，`True`, ，和 `False`, 分別。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `Or` 運算子的兩個數值運算式的個別位元執行內含邏輯分離。 如果任一運算元的對應位元會設為 1，會設定結果模式中的位元。  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
   
  上述範例中會分別產生 10、 14 和 14 的結果。  
   

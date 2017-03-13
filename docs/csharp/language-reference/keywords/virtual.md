@@ -37,7 +37,7 @@ public virtual double Area()
   
  `virtual` 修飾詞 \(Modifier\) 不能與 `static`、`abstract, private` 或 `override` 等修飾詞一起使用。  下列範例說明虛擬屬性：  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#26)]  
+ [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
  除了宣告和引動過程語法的差異之外，虛擬屬性的行為就像抽象方法一樣。  
   
@@ -56,7 +56,7 @@ public Cylinder(double r, double h): base(r, h) {}
   
  下列程式會計算並顯示適當的區域，每一個圖形，藉由叫用適當的實作的`Area()`方法中，這個方法相關聯的物件。  
   
- [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#23)]  
+ [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

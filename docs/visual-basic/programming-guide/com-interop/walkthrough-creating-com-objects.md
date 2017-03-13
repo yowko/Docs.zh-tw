@@ -71,28 +71,28 @@ caps.handback.revision: 30
   
 3.  將下列常數加入至 `ComClass1`。  它們會儲存 COM 物件一定要有的全域唯一識別項 \(GUID\) 常數。  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#2)]  
+     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
   
 4.  在 \[**工具**\] 功能表上按一下 \[**建立 GUID**\]。  在 \[**建立 GUID**\] 對話方塊中，按一下 \[**登錄格式**\]，再按一下 \[**複製**\]。  按一下 \[**結束**\]。  
   
 5.  使用 GUID 取代 `ClassId` 的空白字串，且移除前後的大括號。  例如，如果 Guidgen 提供的 GUID 為 `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`，則程式碼應看起來如下。  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#3)]  
+     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
   
 6.  針對 `InterfaceId` 和 `EventsId` 常數，重複執行上述步驟 \(如下列範例所示\)。  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#4)]  
+     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
   
     > [!NOTE]
     >  確定 GUID 是新的且是唯一的，否則，COM 元件可能會與其他 COM 元件發生衝突。  
   
 7.  將 `ComClass` 屬性 \(Attribute\) 加入至 `ComClass1`，為類別 ID、介面 ID 和事件 ID 指定 GUID，如下列範例所示：  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#5)]  
+     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
   
 8.  COM 類別必須有無參數的 `Public Sub New()` 建構函式 \(Constructor\)，否則類別將無法正確註冊。  將無參數的建構函式加入至類別：  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#6)]  
+     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
 9. 將屬性、方法和事件加入至類別，並以 `End Class` 陳述式結尾。  從 \[**建置**\] 功能表中選取 \[**建置方案**\]。  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 便會建置組件，並向作業系統註冊 COM 物件。  
   

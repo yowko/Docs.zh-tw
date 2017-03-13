@@ -44,7 +44,7 @@ caps.handback.revision: 14
 ## 範例  
  下列範例包含兩個 XML 項目：外部及內部。  這兩個項目在其文字內容中都包含泛空白字元。  外部項目的泛空白字元是不顯著的，因為它只包含泛空白字元和 XML 項目。  內部項目的泛空白字元則是顯著的，因為它包含泛空白字元和文字。  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/white-space-in-xml-liter_1.vb)]  
+ [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
   
  當程式碼執行時，會顯示下列文字。  
   

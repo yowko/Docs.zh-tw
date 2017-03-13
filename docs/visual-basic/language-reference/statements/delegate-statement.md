@@ -71,7 +71,7 @@ caps.handback.revision: 27
 ## 範例  
  下列範例使用 `Delegate` 陳述式來宣告委派，以便在兩個數字上操作並傳回一個數字。  `DelegateTest` 方法會採用這個型別的委派執行個體，並用它在成對的數字上作業。  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
 ## 請參閱  
  [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   

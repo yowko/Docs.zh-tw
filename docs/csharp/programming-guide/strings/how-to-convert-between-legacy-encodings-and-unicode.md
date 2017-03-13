@@ -22,7 +22,7 @@ caps.handback.revision: 11
 ## 範例  
  在下列範例中，會示範如何轉換已編碼為 8 位元 ASCII 的文字檔，並按照 Windows 字碼頁 737 來解譯原始程式文字。  
   
- [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#34)]  
+ [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-between-legacy-encodings-and-unicode_1.cs)]  
   
 ## 請參閱  
  [字串](../../../csharp/programming-guide/strings/index.md)

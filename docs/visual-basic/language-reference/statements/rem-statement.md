@@ -53,7 +53,7 @@ REM comment
 ## 範例  
  下列範例會說明 `REM` 陳述式，此陳述式用於在程式中包含闡明註解。  同時顯示另一種使用單引號字元 \(`'`\) 而不用 `REM` 的方式。  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
 ## 請參閱  
  [Comments in Code](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)   

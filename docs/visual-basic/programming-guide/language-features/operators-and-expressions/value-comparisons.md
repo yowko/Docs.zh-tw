@@ -43,15 +43,15 @@ caps.handback.revision: 9
   
  比較數值的運算式最常用於 `If...Then` 語法結構中，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
  `=` 符號是比較運算子及指派運算子。  做為比較運算子使用時，它會評估左邊的值是否等於右邊的值，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
  您也可在任何需要 `Boolean` 值的地方使用比較運算式 \(例如，在 `If`、`While`、`Loop` 或 `ElseIf` 陳述式中\)，或是在將值指派或傳送至 `Boolean` 變數時使用比較運算式。  在下列範例中，會將比較運算式傳回的值指派給 `Boolean` 變數。  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
 ## 請參閱  
  [Boolean Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   

@@ -53,7 +53,7 @@ caps.handback.revision: 22
 ## 範例  
  這個範例會變更預設 `SidebarMenu` 表單的標題。  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
  若要成功使用這個範例，您的專案必須具有名為 `SidebarMenu` 的表單。  如需詳細資訊，請參閱 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/zh-tw/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
   

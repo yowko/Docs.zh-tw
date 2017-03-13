@@ -39,7 +39,7 @@ x = x & y
  `&=` 運算子無法直接多載，但是使用者定義型別可多載二元 [& 運算子](../../../csharp/language-reference/operators/and-operator.md) \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#34)]  
+ [!code-cs[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

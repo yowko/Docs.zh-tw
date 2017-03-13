@@ -50,7 +50,7 @@ AddHandler event, AddressOf eventhandler
 >  使用自訂事件時，`AddHandler` 陳述式會叫用事件的 `AddHandler` 存取子。  如需自訂事件的詳細資訊，請參閱[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## 範例  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
   
 ## 請參閱  
  [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md)   

@@ -47,7 +47,7 @@ caps.handback.revision: 19
 ## 範例  
  這是多重檔案的範例。  第一個檔案使用 \<include\>，列於下方：  
   
- [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/include_1.cs)]  
+ [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
   
  第二個檔案 \(xml\_include\_tag.doc\) 包含下列的文件註解。  
   

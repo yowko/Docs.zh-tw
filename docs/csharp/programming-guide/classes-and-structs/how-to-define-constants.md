@@ -27,7 +27,7 @@ caps.handback.revision: 7
  若要定義非整數常數，其中一個方法是將常數群組在名為 `Constants` 的單一靜態類別中。  這需要所有常數的參考前面都加上類別名稱，如下列範例所示。  
   
 ## 範例  
- [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
  使用類別名稱限定詞可以協助確保您和其他使用常數的人都了解它是常數且不能修改。  
   

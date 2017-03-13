@@ -21,7 +21,7 @@ caps.handback.revision: 30
   
  委派可以用來將方法當做引數傳遞給其他方法。  事件處理常式就是透過委派叫用的方法。  建立自訂方法後，像是 Windows 控制項這樣的類別就會在特定事件發生時呼叫您的方法。  下列範例將示範委派宣告：  
   
- [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#20)]  
+ [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
  來自符合委派類型之任何可存取類別或結構的任何方法都可以指派給委派。  方法可以是靜態或執行個體方法。  如此即可用程式設計的方式變更方法呼叫，也可將新的程式碼插入現有的類別中。  
   

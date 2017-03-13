@@ -66,11 +66,11 @@ caps.handback.revision: 68
   
 1.  在專案的 `Main` 方法中找到具有下列標記的位置：  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
      複製並貼上下列程式碼。  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
 2.  將滑鼠指標放在程式碼的 `studentQuery` 上，以確認編譯器指派的型別是 `IEnumerable(Of Student)`。  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 68
   
 1.  在專案的查詢下方加入下列 `For Each` 迴圈。  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
 2.  將滑鼠指標放在迴圈的控制項變數 `studentRecord` 上，以查看其資料型別。  因為 `studentQuery` 會傳回 `Student` 執行個體的集合，所以 `studentRecord` 的型別會推斷為 `Student`。  
   
@@ -112,7 +112,7 @@ caps.handback.revision: 68
   
 1.  加入本節中的程式碼，以在查詢運算式中引入區域識別項。  區域識別項會保留中繼結果。  在下列範例中，`name` 這個識別項會保留學生名稱和姓氏的串連結果。  區域識別項的使用十分方便，也可以儲存運算式的結果，省去多次進行計算的需要，藉以提高效能。  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
 2.  按下 CTRL\+F5 以建置和執行應用程式。  請注意主控台視窗中的結果。  
   
@@ -120,7 +120,7 @@ caps.handback.revision: 68
   
 1.  加入本節中的查詢和 `For Each` 迴圈來建立查詢，以產生所含項目與來源中的項目不同的序列。  在下列範例中，來源是 `Student` 物件的集合，但是每個物件只會傳回一個成員：姓 Garcia 的學生的名字。  因為 `currentStudent.First` 是字串，所以 `studentQuery3` 所傳回序列的資料型別是 `IEnumerable(Of String)`，即字串的序列。  如先前的範例所示，指派給 `studentQuery3` 的資料型別會由編譯器使用區域型別推斷來決定。  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
 2.  將滑鼠指標放在程式碼的 `studentQuery3` 上，以確認指派的型別是 `IEnumerable(Of String)`。  
   
@@ -132,14 +132,14 @@ caps.handback.revision: 68
   
      下列範例建立的查詢會傳回學術排名在 1 與 10 之間的高年級生的姓名和排名，依學術排名進行排序。  在這個範例中，因為 `Select` 子句會傳回匿名型別的執行個體，而匿名型別是沒有名稱的，所以必須推斷 `studentQuery4` 的型別。  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
 2.  按下 CTRL\+F5 以建置和執行應用程式。  請注意主控台視窗中的結果。  
   
 ## 其他範例  
  現在您已了解基本概念，下面將列出其他範例，以說明 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢的彈性和強大威力。  每個範例的前面都會簡短說明該範例的用途。  放在的查詢結果變數的滑鼠指標放在每項查詢的檢視推斷的型別。使用 `For Each` 迴圈來產生結果。  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## 其他資訊  
  在您熟悉查詢的基本使用概念之後，便可開始閱讀您想了解之特定 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 提供者類型的文件和範例：  

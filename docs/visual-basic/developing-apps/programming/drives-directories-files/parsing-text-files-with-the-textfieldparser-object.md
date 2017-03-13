@@ -28,11 +28,11 @@ caps.handback.revision: 20
 ## 剖析不同類型的文字檔  
  文字檔可能會具有各種寬度的欄位，並以字元分隔，例如逗號或定位鍵空格。  請定義 `TextFieldType` 和分隔符號 \(Delimiter\)，如以下範例所示，這個範例會使用 `SetDelimiters` 方法，定義以定位鍵分隔的文字檔：  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
   
  其他的文字檔可能會具有固定寬度的欄位。  在這種情況下，您必須將 `TextFieldType` 定義為 `FixedWidth`，並定義每個欄位的寬度，如以下範例所示。  這個範例會使用 `SetFieldWidths` 方法定義文字的資料行：第一個資料行為 5 個字元寬、第二個為 10 個字元寬、第三個為 11 個字元寬，而第四個資料行的寬度則是可變動的。  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
   
  定義格式之後，您就可以在檔案上執行迴圈 \(Loop\)，使用 `ReadFields` 方法依序處理每一行。  
   

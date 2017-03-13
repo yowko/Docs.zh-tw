@@ -63,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## 範例  
  下面是靜態類別的範例，該類別包含可來回換算攝氏溫度與華氏溫度的兩個方法：  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_1.cs)]  
+ [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## 靜態成員  
  非靜態類別能包含靜態方法、欄位、屬性或事件。  即使沒有建立類別的任何執行個體，還是可以在類別上呼叫靜態成員。  靜態成員永遠以類別名稱存取，而不以執行個體名稱存取。  不管一個類別建立多少個執行個體，還是只能有一個靜態成員的複本存在。  除非明確傳遞了方法參數，否則靜態方法和屬性不能在包含的型別中存取非靜態欄位與事件，也不能存取任何物件的執行個體變數。  
@@ -78,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  您要使用 `static` 關鍵字，在成員的傳回型別前宣告靜態類別成員，如下列範例所示：  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_2.cs)]  
+ [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  靜態成員會在第一次受到存取前，以及靜態建構函式 \(如果有\) 受到呼叫之前進行初始化。  若要存取靜態類別成員，請使用類別名稱 \(而非變數名稱\) 指定成員的位置，如下列範例所示：  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_3.cs)]  
+ [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  如果您的類別包含靜態欄位，請提供在類別載入時會將其初始化的靜態建構函式。  
   

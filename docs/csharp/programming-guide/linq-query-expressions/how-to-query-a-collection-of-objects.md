@@ -10,7 +10,7 @@ caps.handback.revision: 8
 ## 範例  
  下列查詢會傳回第一次考試分數高於 90 分的學生。  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-query-a-collection-of-objects_1.cs)]  
   
  這個查詢故意設計的如此簡單，好讓您可以自行學習。  例如，您可以在 `where` 子句中嘗試其他述詞 \(Predicate\)，或使用 `orderby` 子句來排序結果。  
   

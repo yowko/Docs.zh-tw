@@ -41,7 +41,7 @@ x & y
 ## 範例  
  在下列範例中，在第二個條件式運算式`if`陳述式只評估了第一個運算元運算元回傳因為`false`。  
   
- [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#48)]  
+ [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

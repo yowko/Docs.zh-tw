@@ -42,12 +42,12 @@ caps.handback.revision: 29
 ## 範例  
  下列範例將示範如何將公用欄位變數宣告為 `volatile`。  
   
- [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#24)]  
+ [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## 範例  
  下列範例會示範如何建立輔助執行緒或背景工作執行緒，以及使用它們和主要執行緒執行平行的處理過程。  如需多執行緒處理的背景資訊，請參閱 [Threading](../Topic/Managed%20Threading.md)和[執行緒](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)。  
   
- [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/csharp/volatile_2.cs)]  
+ [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

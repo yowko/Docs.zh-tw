@@ -32,7 +32,7 @@ caps.handback.revision: 9
 ## 範例  
  下列範例會取得 `My.Request` 物件的標頭集合，並使用 `My.Response` 物件將該集合寫入 ASP.NET 網頁。  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-response-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
 ## 請參閱  
  <xref:System.Web.HttpResponse>   

@@ -25,7 +25,7 @@ caps.handback.revision: 15
 這個範例會使用 <xref:System.IO.File> 類別 \(Class\) 中的 <xref:System.IO.File.Create%2A> 方法，在指定的路徑建立空的文字檔。  
   
 ## 範例  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-file_1.vb)]  
+ [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
   
 ## 編譯程式碼  
  請使用 `file` 變數寫入至檔案。  

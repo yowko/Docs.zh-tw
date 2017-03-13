@@ -23,11 +23,11 @@ caps.handback.revision: 24
   
  在 File1.cs 中：  
   
- [!code-cs[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-type_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_1.cs)]  
   
  在 File2.cs 中，下列宣告：  
   
- [!code-cs[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-type_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_2.cs)]  
   
 ## 備註  
  當使用大型專案或自動產生的程式碼 \(如 [Windows Forms Designer](http://msdn.microsoft.com/zh-tw/3c3d61f8-f36c-4d41-b9c3-398376fabb15)所提供的程式碼\) 時，將類別、結構 \(Struct\) 或介面型別 \(Interface Type\) 分割成數個檔案可能會非常實用。  部分型別可能包含[部分方法](../../../csharp/language-reference/keywords/partial-method.md)。  如需詳細資訊，請參閱 [部分類別和方法](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)。  

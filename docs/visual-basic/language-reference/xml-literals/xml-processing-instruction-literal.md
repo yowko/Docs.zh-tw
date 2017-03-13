@@ -66,7 +66,7 @@ caps.handback.revision: 19
 ## 範例  
  下列範例建立處理指示，會識別 XML 文件的樣式表。  
   
- [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-processing-instructi_1.vb)]  
+ [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-processing-instruction-literal_1.vb)]  
   
 ## 請參閱  
  <xref:System.Xml.Linq.XProcessingInstruction>   

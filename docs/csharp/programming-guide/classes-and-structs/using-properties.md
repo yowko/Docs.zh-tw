@@ -26,7 +26,7 @@ caps.handback.revision: 24
   
  屬性在類別區塊內宣告的方式是指定欄位存取層級、接著指定屬性的型別、再指定屬性的名稱，然後是宣告 `get` 存取子和 \(或\) `set` 存取子的程式碼區塊。  例如：  
   
- [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
  在此範例中，`Month` 被宣告為屬性，如此 `set` 存取子即可確保 `Month` 值會設定為 1 到 12 之間。  `Month` 屬性使用私用欄位來追蹤實際的值。  屬性資料的實際位置通常稱為屬性的「支援的存放區」， 屬性經常會使用私用欄位做為支援的存放區，  而欄位之所以標記為私用的原因，是要確保一定要透過呼叫屬性才能夠變更欄位。  如需公用和私用存取限制的詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
@@ -35,32 +35,32 @@ caps.handback.revision: 24
 ## get 存取子  
  `get` 存取子的主體就像方法的主體。  它必須傳回屬性型別的值。  執行 `get` 存取子的意思就是等於讀取欄位值；  例如，當您從 `get` 存取子傳回私用變數，並啟用最佳化時，編譯器就會內嵌對 `get` 存取子方法的呼叫，如此即可避免方法呼叫額外負荷。  然而，由於在編譯時期，編譯器不知道在執行階段可以確實呼叫哪些方法，因此，無法內嵌虛擬的 `get` 存取子方法。  下列是一個 `get` 存取子，它會傳回私用欄位 `name` 的值：  
   
- [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
  當您參考屬性時，除了指派的目標之外，還會叫用 `get` 存取子來讀取屬性值，  例如：  
   
- [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
  `get` 存取子必須在 [return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 陳述式結束，而且控制項不能超出存取子的主體。  
   
  使用 `get` 存取子來變更物件狀態是不好的程式設計作法，  例如，每一次存取 `number` 欄位時，下列存取子會造成物件狀態變更的不良結果。  
   
- [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
  `get` 存取子可以用於傳回欄位值，或予以計算並且傳回。  例如：  
   
- [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_5.cs)]  
+ [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
  在之前的程式碼片段中，如果您沒有將值指派給 `Name` 屬性，它會傳回 NA 值。  
   
 ## set 存取子  
  `set` 存取子就像傳回型別為 [void](../../../csharp/language-reference/keywords/void.md) 的方法。  它使用稱為 `value` 的隱含參數，其型別是屬性的型別。  在下列範例中，會將 `set` 存取子加入 `Name` 屬性：  
   
- [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_6.cs)]  
+ [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
  當您將值指派給屬性，會以提供新值的引數來叫用 `set` 存取子。  例如：  
   
- [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_7.cs)]  
+ [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  在 `set` 存取子中，區域變數宣告使用隱含參數名稱 `value` 是錯誤的。  
   
@@ -79,29 +79,29 @@ caps.handback.revision: 24
 ## 範例  
  這個範例示範執行個體、靜態和唯讀屬性；  該屬性會接受從鍵盤輸入的員工名稱、以 1 遞增 `NumberOfEmployees`，及顯示員工名稱和編號。  
   
- [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_8.cs)]  
+ [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
 ## 範例  
  這個範例示範如何存取基底類別中的屬性，該屬性被衍生類別中名稱相同的另一個屬性所隱藏。  
   
- [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_9.cs)]  
+ [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
   
  以下是上述範例中的重點：  
   
 -   衍生類別中的 `Name` 屬性會隱藏基底類別中的 `Name` 屬性，  在這種情況下，`new` 修飾詞是用於衍生類別裡的屬性宣告中：  
   
-     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_10.cs)]  
+     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
 -   轉換 `(Employee)` 是用來存取基底類別中的隱藏屬性：  
   
-     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_11.cs)]  
+     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
      如需隱藏成員的詳細資訊，請參閱 [new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)。  
   
 ## 範例  
  在這個範例裡，`Cube` 和 `Square` 兩個類別會實作 `Shape` 抽象類別 \(Abstract Class\)，並且覆寫它的抽象 `Area` 屬性。  請注意 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞在屬性上的用法。  該程式會接受邊長的輸入值，然後計算正方形和立方體的面積，  而且，還也會接受面積的輸入值，然後計算正方形和立方體的對應邊長。  
   
- [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_12.cs)]  
+ [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

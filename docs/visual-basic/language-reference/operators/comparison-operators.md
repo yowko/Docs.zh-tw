@@ -155,7 +155,7 @@ result = string Like pattern
 ## 範例  
  下列範例呈現用來比較運算式的各種關聯式比較運算子用法。  關聯式比較運算子傳回用來代表指定之運算式是否評估為 `True` 的 `Boolean` 結果。  當您將 `>` 和 `<` 運算子套用至字串時，可使用字串的一般字母排序次序進行比較。  此順序取決於您的地區設定。  排序是否區分大小寫是依據[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)的設定而定。  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  在前述範例中，第一個比較傳回 `False`，其餘比較則傳回 `True`。  
   

@@ -44,7 +44,7 @@ caps.handback.revision: 18
 ## 範例  
  下列範例中的 `b` 是 `Byte` 變數：  陳述式會說明變數的範圍，以及應用的位元移位運算子。  
   
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
   
 ## 請參閱  
  <xref:System.Byte?displayProperty=fullName>   

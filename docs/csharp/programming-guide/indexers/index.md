@@ -23,7 +23,7 @@ caps.handback.revision: 29
   
  在下列範例中，泛型類別由簡單的[取得](../../../csharp/language-reference/keywords/get.md)和[設定](../../../csharp/language-reference/keywords/set.md)存取子定義及提供，以作為指派和擷取值的方法。  `Program` 類別會建立此類別的執行個體以儲存字串。  
   
- [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  如需更多範例，請參閱[相關章節](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)。  

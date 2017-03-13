@@ -24,7 +24,7 @@ caps.handback.revision: 38
  在本範例中，`TimePeriod` 類別會儲存一個時段。  此類別在內部會儲存以秒為單位的時間，但名為 `Hours` 的屬性可讓用戶端指定以小時為單位的時間。  `Hours` 屬性的存取子會執行小時與秒之間的轉換。  
   
 ## 範例  
- [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/properties_1.cs)]  
   
 ## 運算式主體定義  
  使用直接隨運算式的結果立即傳回的屬性，是很常見的作法。  有個語法捷徑可以使用 `=>` 定義這些屬性：  

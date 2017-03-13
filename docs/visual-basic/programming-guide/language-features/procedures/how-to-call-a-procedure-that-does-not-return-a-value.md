@@ -35,7 +35,7 @@ caps.handback.revision: 17
   
      下列範例會呼叫 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 函式，以啟動應用程式視窗。  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 採取視窗標題做為其獨有引數。  它不會傳回值給呼叫程式碼。  若記事本處理序並未執行，這個範例就會產生 <xref:System.ArgumentException>。  `Shell` 程序會假設應用程式是在指定的路徑中。  
   
-     [!code-vb[VbVbalrCatRef#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_1_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   

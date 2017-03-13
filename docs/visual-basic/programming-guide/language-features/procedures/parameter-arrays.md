@@ -57,13 +57,13 @@ caps.handback.revision: 26
 ## 範例  
  下列範例會定義，並呼叫函式`calcSum`。  `ParamArray`參數的修飾詞`args`可以讓來接受不同數目引數的函式。  
   
- [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-arrays_1.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
   
  下列範例會定義具有參數陣列的程序，並將所有傳遞給參數陣列的陣列項目值輸出。  
   
- [!code-vb[VbVbcnProcedures#48](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_2.vb)]  
+ [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#49](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_3.vb)]  
+ [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>   

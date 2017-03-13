@@ -41,43 +41,43 @@ caps.handback.revision: 23
   
 3.  至少為屬性指定一個參數，  無法定義未包含任何引數的預設屬性。  
   
-     [!code-vb[VbVbcnProcedures#17](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
 ### 若要呼叫預設屬性  
   
 1.  宣告包含類別或結構型別 \(Structure Type\) 的變數。  
   
-     [!code-vb[VbVbcnProcedures#16](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
 2.  在您通常會包含屬性名稱的運算式中，單獨使用變數名稱。  
   
-     [!code-vb[VbVbcnProcedures#21](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
 3.  變數名稱後面緊跟著以括號括住的引數清單，  預設屬性至少必須取用一個引數。  
   
-     [!code-vb[VbVbcnProcedures#20](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
 4.  若要擷取預設屬性值，請在運算式中使用變數名稱 \(含引數清單\)，或在指派陳述式 \(Assignment Statement\) 的等號 \(`=`\) 後面使用變數名稱。  
   
-     [!code-vb[VbVbcnProcedures#15](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
 5.  若要設定預設屬性值，請在指派陳述式的左邊使用變數名稱 \(含引數清單\)。  
   
-     [!code-vb[VbVbcnProcedures#14](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
 6.  您永遠可同時指定預設屬性名稱與變數名稱，就像存取任何其他屬性一樣。  
   
-     [!code-vb[VbVbcnProcedures#19](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
 ## 範例  
  以下範例會在類別上宣告預設屬性：  
   
- [!code-vb[VbVbcnProcedures#12](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
 ## 範例  
  下列範例會示範如何在類別 `class1` 上呼叫預設屬性 `myProperty`。  這三個指派陳述式會將值儲存在 `myProperty` 中，而 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 呼叫會讀取這些值。  
   
- [!code-vb[VbVbcnProcedures#13](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
  預設屬性的最常見用法是各種集合類別 \(Collection Class\) 上的 <xref:Microsoft.VisualBasic.Collection.Item%2A> 屬性。  
   

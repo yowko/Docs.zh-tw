@@ -25,7 +25,7 @@ caps.handback.revision: 14
  使用者定義的實值型別可多載 `==` 運算子 \(請參閱[運算子](../../../csharp/language-reference/keywords/operator.md)\)。  雖然 `==` 對預先定義和使用者定義的參考型別之預設運作方法如上所述，但使用者定義的參考型別也可多載此運算子。  如果多載 `==`，則也必須多載 [\!\=](../../../csharp/language-reference/operators/not-equal-operator.md)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  
   
 ## 範例  
- [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#36)]  
+ [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

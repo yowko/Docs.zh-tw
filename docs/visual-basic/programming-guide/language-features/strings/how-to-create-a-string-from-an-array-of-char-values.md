@@ -25,7 +25,7 @@ caps.handback.revision: 10
 這個範例使用個別字元來建立字串 "abcd"。  
   
 ## 範例  
- [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-a-string-f_1.vb)]  
+ [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
 ## 編譯程式碼  
  這個方法沒有任何特殊的需求。  

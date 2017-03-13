@@ -29,7 +29,7 @@ caps.handback.revision: 9
 ## 範例  
  這個範例會使用 <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> 編碼類別的 <xref:System.Text.Encoding.GetString%2A> 方法，將位元組陣列的所有位元組轉換至字串。  
   
- [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-an-array-_1.vb)]  
+ [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-an-array-of-bytes-into-a-string_1.vb)]  
   
  您可以從數個編碼選項中選擇，將位元組陣列轉換成字串：  
   

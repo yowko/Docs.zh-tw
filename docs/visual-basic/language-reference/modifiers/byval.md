@@ -41,7 +41,7 @@ caps.handback.revision: 14
 ## 範例  
  下列範例示範如何使用 `ByVal` 參數傳遞機制以及參考型別引數。  在範例中，引數 `c1` 是 `Class1` 類別的執行個體。  `ByVal` 可避免程序中的程式碼變更參考引數 `c1` 的基礎值，但無法保護 `c1` 的可存取欄位和屬性。  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/visualbasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
 ## 請參閱  
  [關鍵字](../../../visual-basic/language-reference/keywords/index.md)   

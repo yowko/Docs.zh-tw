@@ -22,7 +22,7 @@ caps.handback.revision: 22
 您可以用程式設計方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，並在檔案中寫入資料。  
   
 ## 範例  
- [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#10)]  
+ [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
  如果資料夾已存在，<xref:System.IO.Directory.CreateDirectory%2A> 不會執行任何動作，也不會擲回例外狀況。  不過，<xref:System.IO.File.Create%2A?displayProperty=fullName> 會將現有檔案取代為新檔案。  範例會使用 `if`\-`else` 陳述式，防止現有檔案被取代。  
   

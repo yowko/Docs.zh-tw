@@ -48,12 +48,12 @@ caps.handback.revision: 11
 ## 範例  
  下列範例會示範一個 iterator 函式。  Iterator 函數語法包含`Yield`陳述式中[縮排樣式下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。  每個反覆項目中的[為每個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)中的陳述式主體`Main`建立呼叫`Power` iterator 函式。  每次呼叫 iterator 函式進行到下一步執行`Yield`陳述式，它的下一個反覆項目時，就會發生`For…Next`迴圈。  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
 ## 範例  
  下列範例會示範`Get`是 iterator 的存取子。  `Iterator`是在屬性宣告的修飾詞。  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
  如需其他範例，請參閱 [迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)。  
   

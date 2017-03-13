@@ -111,7 +111,7 @@ End Structure
 ## 範例  
  下列範例使用 `Structure` 陳述式定義員工的一組相關資料。  它顯示使用 `Public`、`Friend` 和 `Private` 成員，以反映資料項目的敏感度，  也顯示出程序、屬性和事件成員。  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## 請參閱  
  [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   

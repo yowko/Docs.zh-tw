@@ -36,7 +36,7 @@ private static extern void AVIFileInit();
 ## 範例  
  **範例 1**：在這個範例中，程式會接收來自使用者的字串並且在訊息方塊內顯示該字串。  程式會使用從 User32.dll 程式庫匯入的 `MessageBox` 方法。  
   
- [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#8)]  
+ [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
   
 ## 範例  
  **範例 2**：這個範例將示範呼叫 C 程式庫 \(原生 DLL\) 的 C\# 程式。  

@@ -24,7 +24,7 @@ caps.handback.revision: 20
 ## 範例  
  在本範例中，計數器被初始化為從 1 數到 10 。  使用與運算式 `(i < 9)`結合的 `continue` 陳述式，在 `continue` 和 `for` 主體結尾之間的陳述式略過。  
   
- [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/csharp/continue_1.cs)]  
+ [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

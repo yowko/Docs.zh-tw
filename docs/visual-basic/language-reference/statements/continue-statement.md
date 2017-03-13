@@ -45,7 +45,7 @@ Continue { Do | For | While }
 ## 範例  
  下列程式碼範例會使用 `Continue While` 陳述式，在除數為零時跳到陣列的下一行。  `Continue While` 會在 `For` 迴圈內。  它會轉移到 `While col < lastcol` 陳述式，這是包含 `For` 迴圈之最內層 `While` 迴圈的下一個反覆運算。  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
 ## 請參閱  
  [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

@@ -117,7 +117,7 @@ End Try
   
  由於 <xref:System.IO.TextWriter> 和 <xref:System.IO.TextReader> 類別實作介面 <xref:System.IDisposable> ，程式碼可以使用 `Using` 陳述式確保檔案在寫入和讀取作業之後正常關閉。  
   
- [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/using-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
 ## 請參閱  
  <xref:System.IDisposable>   

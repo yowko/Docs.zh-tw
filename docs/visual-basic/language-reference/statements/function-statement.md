@@ -201,11 +201,11 @@ End Function
   
   `Return` 陳述式同時指派傳回值，並結束函式，如下列範例所示。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
   
  下列範例將傳回值指派給函式名稱 `myFunction` ，然後使用 `Exit Function` 陳述式來傳回。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
   
   `Exit Function` 和 `Return` 陳述式會造成立即結束 `Function` 程序。 任何數目的 `Exit Function` 和 `Return` 陳述式可以出現在任何地方程序，且您可以混合 `Exit Function` 和 `Return` 陳述式。  
   
@@ -248,19 +248,19 @@ End Function
 ## <a name="example"></a>範例  
  下列範例會使用 `Function` 陳述式來宣告名稱、 參數和程式碼，構成的主體 `Function` 程序。  `ParamArray` 修飾詞會啟用要接受可變數目的引數的函式。  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
   
 ## <a name="example"></a>範例  
  下列範例會叫用前面範例中宣告的函式。  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>範例  
  在下列範例中， `DelayAsync` 是 `Async``Function` 具有傳回類型為 <xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有傳回整數的 `Return` 陳述式。 因此函式宣告的 `DelayAsync` 必須要有的傳回型別 `Task(Of Integer)`。 因為傳回型別是 `Task(Of Integer)`, ，評估 `Await` 中的運算式 `DoSomethingAsync` 會產生一個整數。 此陳述式所示︰ `Dim result As Integer = Await delayTask`。  
   
   `startButton_Click` 程序是範例 `Async Sub` 程序。 因為 `DoSomethingAsync` 是 `Async` 函式，呼叫工作 `DoSomethingAsync` 必須等候，如下列陳述式所示︰ `Await DoSomethingAsync()`。  `startButton_Click``Sub` 程序都必須定義 `Async` 修飾詞因為它有 `Await` 運算式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)   

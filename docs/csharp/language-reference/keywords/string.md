@@ -103,7 +103,7 @@ Console.WriteLine(a);
  如需 C\# 中字串的詳細資訊，請參閱[字串](../../../csharp/programming-guide/strings/index.md)。  
   
 ## 範例  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/csharp/string_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
  當 [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 為 `Off`，而 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 為 `On` 時，您必須明確宣告所有常數和資料型別。  在下列範例中，`MyByte` 資料型別明確地宣告為 `Byte` 資料型別：  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
  當 `Option Infer` 為 `On`，或 `Option Strict` 為 `Off` 時，您可以宣告常數，而不指定具有 `As` 子句的資料型別。  編譯器會從運算式的型別判斷常數的型別。  依預設值，數值整數常值會轉換成 `Integer` 資料型別。  浮點數值 \(Floating\-Point Number\) 的預設資料型別為 `Double`，關鍵字 `True` 和 `False` 則指定 `Boolean` 常數。  
   
@@ -48,11 +48,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  若要讓前面的範例可以正常運作，您可以將 `D` 型別字元附加到常值，這可以讓常值表示為 `Decimal`：  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
  下列的範例示範型別字元和封入字元的正確用法：  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
  下表說明 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中可用的封入字元和型別字元。  
   

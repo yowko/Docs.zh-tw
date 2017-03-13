@@ -19,7 +19,7 @@ caps.handback.revision: 15
 代表布林值 false。  
   
 ## 範例  
- [!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#3)]  
+ [!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-literal_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

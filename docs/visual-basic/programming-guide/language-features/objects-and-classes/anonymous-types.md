@@ -29,17 +29,17 @@ Visual Basic 支援匿名型別，這種型別可讓您不必撰寫資料型別�
   
  下列範例會宣告並建立 `product` 變數做為匿名型別的執行個體 \(Instance\)，並具有 `Name` 和 `Price` 兩個屬性。  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_1.vb)]  
   
  「*查詢運算式*」\(Query Expression\) 會使用匿名型別來合併查詢所選取的資料行。  因為您無法預測特定查詢會選取哪些資料行，所以無法事先定義結果的型別。  匿名型別可讓您撰寫查詢，以任意順序選取任意數目的資料行。  編譯器會建立符合所指定屬性和所指定順序的資料型別。  
   
  在下列範例中，`products` 是產品物件的清單，其中每個產品物件都具有多個屬性。  `namePriceQuery` 變數包含查詢的定義，這個查詢執行時會傳回某個匿名型別 \(具有 `Name` 和 `Price` 兩個屬性\) 的執行個體集合。  
   
- [!code-vb[VbVbalrAnonymousTypes#2](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_2.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#2](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_2.vb)]  
   
  `nameQuantityQuery` 變數包含查詢的定義，這個查詢執行時會傳回某個匿名型別 \(具有 `Name` 和 `OnHand` 兩個屬性\) 的執行個體集合。  
   
- [!code-vb[VbVbalrAnonymousTypes#3](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_3.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#3](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_3.vb)]  
   
  如需編譯器針對匿名型別建立之程式碼的詳細資訊，請參閱[Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)。  
   
@@ -49,13 +49,13 @@ Visual Basic 支援匿名型別，這種型別可讓您不必撰寫資料型別�
 ## 宣告匿名型別  
  匿名型別執行個體的宣告中會使用初始設定式清單來指定該型別的屬性。  當您宣告匿名型別時，只能指定屬性，而不能指定方法或事件等其他類別項目。  在下列範例中，`product1` 即為某個匿名型別的執行個體，具有 `Name` 和 `Price` 兩個屬性。  
   
- [!code-vb[VbVbalrAnonymousTypes#4](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_4.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#4](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_4.vb)]  
   
  如果您將一些屬性指定為索引鍵屬性，可以用它們來比較兩個匿名型別執行個體是否相等。  不過，索引鍵屬性的值無法變更。  如需詳細資訊，請參閱本主題稍後的＜索引鍵屬性＞一節。  
   
  請注意，宣告匿名型別的執行個體類似於使用物件初始設定式來宣告具名型別的執行個體：  
   
- [!code-vb[VbVbalrAnonymousTypes#5](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_5.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#5](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_5.vb)]  
   
  如需指定匿名型別屬性之其他方式的詳細資訊，請參閱 [如何：在匿名類型宣告中推斷屬性名稱和類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
   
@@ -81,35 +81,35 @@ Visual Basic 支援匿名型別，這種型別可讓您不必撰寫資料型別�
   
  沒有索引鍵屬性的匿名屬性執行個體只會與自己相等。  
   
- [!code-vb[VbVbalrAnonymousTypes#6](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_6.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#6](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_6.vb)]  
   
  同一匿名型別的兩個執行個體必須具有相同的索引鍵值，才算相等。  下列範例說明測試相等性的方法。  
   
- [!code-vb[VbVbalrAnonymousTypes#7](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_7.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#7](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_7.vb)]  
   
 ### 唯讀值  
  索引鍵屬性的值無法變更。  例如，在上一個範例的 `prod8` 中，`Name` 和 `Price` 欄位是 `read-only` 的，但 `OnHand` 是可以變更的。  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
   
 ## 查詢運算式中的匿名型別  
  使用查詢運算式時不一定需要建立匿名型別。  它們會盡量使用現有的型別來存放資料行資料。  當查詢傳回資料來源中的整筆記錄，或每筆記錄中的某個欄位時，就會發生這個情況。  在下列程式碼範例中，`customers` 是 `Customer` 類別之物件的集合。  這個類別具有許多屬性，您可以依任意順序將其中一個或多個屬性加入至查詢結果。  在前兩個範例中，查詢會選取具名型別的項目，因此不需要使用匿名型別：  
   
 -   `custs1` 包含字串的集合，原因是 `cust.Name` 是一個字串。  
   
-     [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
 -   `custs2` 包含 `Customer` 物件的集合，原因是 `customers` 中的每個項目都是一個 `Customer` 物件，而查詢選取了整個項目。  
   
-     [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   
  但是不一定總是有適當的具名型別。  您可能有時需要選取客戶姓名和地址，有時需要選取客戶 ID 編號和位置，而有時又需要選取客戶姓名、地址和訂單記錄。  匿名型別可讓您以任意順序選取任何屬性的組合，而不需先宣告新的具名型別來存放結果。  編譯器會在每次編譯屬性時自動建立匿名型別。  下列查詢只會從 `customers` 中的每個 `Customer` 選取客戶的姓名和 ID 編號。  因此，編譯器會建立只包含這兩個屬性的匿名型別。  
   
- [!code-vb[VbVbalrAnonymousTYpes#32](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_11.vb)]  
+ [!code-vb[VbVbalrAnonymousTYpes#32](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_11.vb)]  
   
  匿名型別中屬性的名稱和資料型別都是取自 `Select`、`cust.Name` 和 `cust.ID` 的引數。  查詢所建立之匿名型別中的屬性，一定是索引鍵屬性。  當執行下列 `For Each` 迴圈 \(Loop\) 中的 `custs3` 時，結果會產生某個匿名型別 \(具有 `Name` 和 `ID` 兩個屬性\) 之執行個體的集合。  
   
- [!code-vb[VbVbalrAnonymousTypes#33](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_12.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#33](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_12.vb)]  
   
  `custs3` 所表示之集合中的項目是強型別 \(Strongly Typed\)，您可以使用 IntelliSense 巡覽可用的屬性並確認它們的型別。  
   
@@ -118,11 +118,11 @@ Visual Basic 支援匿名型別，這種型別可讓您不必撰寫資料型別�
 ## 決定是否要使用匿名型別  
  在建立物件做為匿名類別 \(Anonymous Class\) 的執行個體之前，請先考慮這是否是最好的選擇。  例如，如果您想要建立暫存物件來存放相關資料，但是不需要完整類別所包含的其他欄位或方法，則匿名型別是不錯的選擇。  如果您想要針對每個宣告選取不同的屬性，或者想要變更屬性的順序，則匿名型別同樣也很方便。  但是，如果您的專案包含數個具有相同屬性 \(順序也固定\) 的物件，則搭配使用具名型別和類別建構函式 \(Constructor\) 來宣告這些物件，將會更容易。  例如，只要有適當的建構函式，宣告 `Product` 類別的數個執行個體會比宣告匿名型別的數個執行個體來得簡單。  
   
- [!code-vb[VbVbalrAnonymousTypes#9](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_13.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#9](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_13.vb)]  
   
  具名型別的另一項優點是編譯器可以攔截不小心設錯型別的屬性名稱。  在先前的範例中，`firstProd2`、`secondProd2` 和 `thirdProd2` 應該要是同一個匿名型別的執行個體。  不過，如果您不小心以下列方式之一宣告 `thirdProd2`，它的型別就會與 `firstProd2` 和 `secondProd2` 不同。  
   
- [!code-vb[VbVbalrAnonymousTypes#10](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-types_14.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#10](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_14.vb)]  
   
  更重要的是，匿名型別具有一些具名型別執行個體所沒有的使用限制。  `firstProd2`、`secondProd2` 和 `thirdProd2` 都是同一個匿名型別的執行個體。  不過，共用匿名型別的名稱無法使用，也不能用於程式碼中需要使用型別名稱的地方。  例如，匿名型別無法用來定義方法簽章、宣告另一個變數或欄位，也不能用於任何型別宣告 \(Type Declaration\) 中。  因此，當您需要讓多個方法共用資訊時，匿名型別就不適用。  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 39
 ## 範例  
  在下列範例中， `i` 的值寫入主控台 \(Console\) 和方法會將此屬性加入在每次反覆運算時。  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/csharp/for_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  在上述範例中的 `for` 陳述式會執行下列動作。  
   
@@ -101,11 +101,11 @@ for (initializer; condition; iterator)
   
  下列範例說明數個較不常見的選項:指派值給初始設定式部分的外部迴圈變數，叫用初始設定式和 Iterator 部分的 `Console.WriteLine` 方法和變更兩個變數的值在 Iterator 的部分。  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/csharp/for_2.cs)]  
+ [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  定義 `for` 陳述式的所有運算式都是選擇性的。  例如，下列陳述式建立無限迴圈。  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/csharp/for_3.cs)]  
+ [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

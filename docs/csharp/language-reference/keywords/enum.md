@@ -74,17 +74,17 @@ int x = (int)Days.Sun;
 ## 範例  
  在下列範例中，宣告了 `Days` 列舉。 兩個列舉程式已明確轉換成整數，並指派給整數變數。  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## 範例  
  在下列範例中，基底類型選項會用來宣告 `enum`，其成員類型是 `long`。 請注意，即使列舉的基礎類型是 `long`，列舉成員仍必須使用轉換來明確地轉換成 `long` 類型。  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## 範例  
  下列程式碼範例說明如何在 `enum` 宣告上使用 <xref:System.FlagsAttribute?displayProperty=fullName> 屬性與其效果。  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## 註解  
  如果您移除 `Flags`，此範例就會顯示下列值︰  

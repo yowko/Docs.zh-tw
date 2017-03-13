@@ -89,12 +89,12 @@ Option Compare { Binary | Text }
 ## 範例  
  下列範例會使用 `Option Compare` 陳述式來將二進位比較設為預設字串比較方法。  若要使用這段程式碼，請取消註解 `Option Compare Binary` 陳述式，並將其放置在原始程式檔的頂端。  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
   
 ## 範例  
  下列範例會使用 `Option Compare` 陳述式，將不區分大小寫文字排序順序設定為預設字串比較方法。  若要使用這段程式碼，請取消註解 `Option Compare Text` 陳述式，並將其放置在原始程式檔的頂端。  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

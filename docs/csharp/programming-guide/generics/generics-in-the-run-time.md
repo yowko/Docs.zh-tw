@@ -22,11 +22,11 @@ caps.handback.revision: 18
   
  舉例來說，假設程式的程式碼宣告以整數建構的堆疊：  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_1.cs)]  
+ [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
  此時，執行階段會產生 <xref:System.Collections.Generic.Stack%601> 類別的特殊版本，並會使用適當的整數取代其參數。  現在，當程式的程式碼使用整數堆疊時，執行階段就會重複利用所產生之特定的 <xref:System.Collections.Generic.Stack%601> 類別。  在下列程式碼範例中會建立兩個整數堆疊的執行個體，並且共用 `Stack<int>` 程式碼的單一執行個體：  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_2.cs)]  
+ [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
  然而，假設在程式碼中的其他地方，還有建立另一個具有不同的實值型別 \(例如 `long`\)，或是以使用者定義的結構當做其參數的  <xref:System.Collections.Generic.Stack%601> 類別。  在此情況下，執行階段便會產生另一個泛型型別的版本，並會替代 MSIL 中適當位置的 `long`。  因為每個特殊的泛型類別原本就包含實值型別，所以不再需要進行轉換。  
   
@@ -34,17 +34,17 @@ caps.handback.revision: 18
   
  例如，假設有兩個參考型別 \(`Customer` 類別和 `Order` 類別\)，並假設您已建立 `Customer` 型別的堆疊：  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_3.cs)]  
+ [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_4.cs)]  
+ [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
  此時，執行階段會產生 <xref:System.Collections.Generic.Stack%601> 類別的特殊版本，其中會存放稍後填滿的物件參考，而不是存放資料。  假設下一行程式碼會建立另一個參考型別的堆疊，稱為 `Order`：  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_5.cs)]  
+ [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
  與使用實值型別不同的是，不會建立 `Order` 型別的另一個 <xref:System.Collections.Generic.Stack%601> 類別特定版本，  而是建立 <xref:System.Collections.Generic.Stack%601> 類別之特殊版本的執行個體，並將 `orders` 變數設定為參考這個執行個體。  假設之後又遇到建立 `Customer` 型別之堆疊的程式碼行：  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_6.cs)]  
+ [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
  在搭配先前使用 <xref:System.Collections.Generic.Stack%601> 類別 \(使用 `Order` 型別所建立\) 之後，就會建立特殊 <xref:System.Collections.Generic.Stack%601> 類別的另一個執行個體。  包含於其中的指標會設定為參考 `Customer` 型別之大小的記憶體區域。  因為參考型別的數量會因程式而有很大不同，所以泛型的 C\# 實作 \(Implementation\) 會藉由縮小至編譯器為參考型別之泛型類別所建立的特殊類別數量，以大幅減少程式碼的數量。  
   

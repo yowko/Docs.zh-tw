@@ -52,7 +52,7 @@ caps.handback.revision: 19
 ## 範例  
  下列範例會測試各對 `Object` 變數，藉此檢查這些物件是否指向相同的類別執行個體。  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/visualbasic/how-to-determine-whether_1_1.vb)]  
+ [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
   
  上述範例會顯示下列輸出。  
   

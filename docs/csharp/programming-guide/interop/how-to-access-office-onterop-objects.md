@@ -63,17 +63,17 @@ Visual C\# 2010 開始採用可簡化 Office API 物件存取的新功能。  �
   
 2.  將下列 `using` 指示詞加入程式碼檔案頂端。  
   
-     [!code-cs[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#1)]  
+     [!code-cs[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
   
 ### 建立銀行帳戶清單  
   
 1.  將下列類別定義貼入 **Program.cs** 的 `Program` 類別下方。  
   
-     [!code-cs[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#2)]  
+     [!code-cs[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
   
 2.  將下列程式碼加入 `Main` 方法，以建立含有兩個帳戶的 `bankAccounts` 清單。  
   
-     [!code-cs[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#3)]  
+     [!code-cs[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
   
 ### 宣告將帳戶資訊匯出至 Excel 的方法  
   
@@ -81,23 +81,23 @@ Visual C\# 2010 開始採用可簡化 Office API 物件存取的新功能。  �
   
      方法 [Add](http://go.microsoft.com/fwlink/?LinkId=210910) \(英文\) 有選擇性參數，可指定特定範本。  如果您想要使用參數的預設值，則可利用選擇性參數 \([!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] 中的新功能\) 省略該參數的引數。  因為下列程式碼中未傳送引數，所以 `Add` 使用預設範本並建立新的活頁簿。  舊版 C\# 中對等的陳述式需要有預留位置引數：`ExcelApp.Workbooks.Add(Type.Missing)`。  
   
-     [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#4)]  
+     [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
 2.  在 `DisplayInExcel` 結尾，加入下列程式碼。  程式碼會將值插入工作表第一個資料列的前兩個資料行。  
   
-     [!code-cs[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#5)]  
+     [!code-cs[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
   
 3.  在 `DisplayInExcel` 結尾，加入下列程式碼。  `foreach` 迴圈會將帳戶清單中的資訊，放入工作表連續資料列的前兩個資料行。  
   
-     [!code-cs[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#7)]  
+     [!code-cs[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
   
 4.  在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
   
-     [!code-cs[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#13)]  
+     [!code-cs[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
      舊版 C\# 需要這些作業的明確轉型，因為 `ExcelApp.Columns[1]` 會傳回 `Object`，而 `AutoFit` 是 Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) \(英文\) 方法。  下列各行會顯示轉型。  
   
-     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#14)]  
+     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
      如果 [\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件，或者，同樣地，如果 Excel \[內嵌 Interop 類型\] 屬性設定為 true，則 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。  這個屬性的預設值為 True。  
   
@@ -105,7 +105,7 @@ Visual C\# 2010 開始採用可簡化 Office API 物件存取的新功能。  �
   
 1.  在 `Main` 結尾，加入下行。  
   
-     [!code-cs[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#8)]  
+     [!code-cs[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
   
 2.  按下 CTRL\+F5。  
   
@@ -121,19 +121,19 @@ Visual C\# 2010 開始採用可簡化 Office API 物件存取的新功能。  �
   
      `PasteSpecial` 方法會將內容插入剪貼簿。  此方法有七個參考參數，且都是選擇性參數。  下列程式碼指定其中兩個的引數：`Link` 可建立剪貼簿的內容的來源連結，以及 `DisplayAsIcon` 可將連結顯示為圖示。  在 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] 中，可以為這兩者使用具名引數，並省略其他引數。  雖然這些是參考參數，但是您不需要使用 `ref` 關鍵字，或建立傳送為引數的變數。  可以直接傳送值。  在 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] 和舊版本中，必須為每個參考參數傳送變數引數。  
   
-     [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#9)]  
+     [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
   
      在 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] 或舊版語言中，需要有下列更為複雜的程式碼。  
   
-     [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#10)]  
+     [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
   
 2.  在 `Main` 結尾，加入下列陳述式。  
   
-     [!code-cs[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#11)]  
+     [!code-cs[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
   
 3.  在 `DisplayInExcel` 結尾，加入下列陳述式。  `Copy` 方法會將工作表加入剪貼簿。  
   
-     [!code-cs[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#12)]  
+     [!code-cs[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
   
 4.  按下 CTRL\+F5。  
   
@@ -147,7 +147,7 @@ Visual C\# 2010 開始採用可簡化 Office API 物件存取的新功能。  �
   
      在 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp-dev10-long-md.md)] 中，預設行為是內嵌類型資訊，而非使用 PIA。  因為使用該預設值，已簡化了數個先前的範例，因為明確轉型已非必要。  例如，`DisplayInExcel` 中的 `worksheet` 宣告，撰寫為 `Excel._Worksheet workSheet = excelApp.ActiveSheet`，而非 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`。  如果沒有預設值，則相同方法中的 `AutoFit` 呼叫也需要明確轉型，因為 `ExcelApp.Columns[1]` 會傳回 `Object`，而 `AutoFit` 是 Excel 方法。  下列程式碼會顯示轉型。  
   
-     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#14)]  
+     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
 2.  若要變更預設值，並使用 PIA 而非內嵌類型資訊，請展開 \[方案總管\] 中的 \[參考\] 節點，然後選取 \[Microsoft.Office.Interop.Excel\] 或 \[Microsoft.Office.Interop.Word\]。  
   
@@ -159,22 +159,22 @@ Visual C\# 2010 開始採用可簡化 Office API 物件存取的新功能。  �
   
 1.  將 `DisplayInExcel` 中對兩個 `AutoFit` 的呼叫，取代為下列陳述式。  
   
-     [!code-cs[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#15)]  
+     [!code-cs[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
      [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) \(英文\) 方法具有七個實值參數，且全都是選擇性參數。  您可利用具名引數和選擇性引數，提供零個引數、數個引數或所有引數。  在前述陳述式中，只為其中一個參數 \(`Format`\) 提供引數。  因為 `Format` 是參數清單中的第一個參數，所以無須提供參數名稱。  但如果包含參數名稱，則可能較容易了解該陳述式，如下列程式碼所示。  
   
-     [!code-cs[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#16)]  
+     [!code-cs[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
 2.  按 CTRL \+ F5 鍵查看結果。  其他格式會列在 [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967) \(英文\) 列舉中。  
   
 3.  請比較步驟 1 中的陳述式與下列程式碼，這樣會顯示 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp-orcas-long-md.md)] 或舊版本中所需的引數。  
   
-     [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/program.cs#17)]  
+     [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   
 ## 範例  
  下列程式碼顯示完整範例。  
   
- [!code-cs[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/csharp/officeprogrammingwalkthrough/walkthrough.cs#18)]  
+ [!code-cs[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
 ## 請參閱  
  <xref:System.Type.Missing?displayProperty=fullName>   

@@ -46,7 +46,7 @@ caps.handback.revision: 23
 ## 範例  
  下列範例會示範 `DirectCast` 的兩種使用方法，其中一個會在執行階段失敗，而另一個會成功。  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/visualbasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
   
  在先前的範例中，`q` 的執行階段型別為 `Double`。  `CType` 會成功，因為 `Double` 可以轉換為 `Integer`。  不過，第一個 `DirectCast` 會在執行階段失敗，原因是 `Double` 的執行階段型別與 `Integer` 間沒有繼承關聯性，即使轉換存在也一樣。  第二個 `DirectCast` 會成功，原因是它會從型別 <xref:System.Windows.Forms.Form> 轉換成型別 <xref:System.Windows.Forms.Control> \(<xref:System.Windows.Forms.Form> 是由此繼承\)。  
   

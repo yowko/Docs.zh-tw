@@ -41,7 +41,7 @@ caps.handback.revision: 19
   
  當 `location` 是繼承自 <xref:System.Windows.Forms.Form> 的類別時，編譯器會提供預設的 `Main` 程序，在類別沒有 `Main` 程序時啟動應用程式。  這讓您可以在命令列中編譯於開發環境中建立的程式碼。  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
 ### 若要在 Visual Studio 整合式開發環境中設定 \/main  
   

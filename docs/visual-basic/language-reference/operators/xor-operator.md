@@ -87,14 +87,14 @@ result = expression1 Xor expression2
 ## 範例  
  下列範例會使用 `Xor` 運算子，對兩個運算式執行邏輯互斥 \(獨佔邏輯分離\)。  結果是代表兩個運算式中是否只有一個為 `True` 的 `Boolean` 值。  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
   
  前一個範例分別產生 `False`、`True` 和 `False` 的結果。  
   
 ## 範例  
  下列範例會使用 `Xor` 運算子，對兩個數值運算式的個別位元執行邏輯互斥 \(獨佔邏輯分離\)。  如果運算元中的對應位元只有其中一個是設為 1，則會將結果模式中的對應位元設為 1。  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
   
  前一個範例分別產生 2、12 和 14 的結果。  
   

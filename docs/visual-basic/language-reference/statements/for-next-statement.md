@@ -75,11 +75,11 @@ Next [ counter ]
   
  在下列範例中， `index` 變數是以值 1 並加入具有每次反覆運算迴圈，結束，在 `index` 到達 5. 之後的值。  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
  在下列範例中， `number` 變數從 2 開始減少 0.25 在每次反覆運算迴圈，結束，在 `number` 到達 0 後的值。  `-.25` 的 `Step` 引數減少值的 0.25 在每次反覆運算迴圈。  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
 >  [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) 或 [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) 很適合使用，當您事先不知道次數執行迴圈中的陳述式。  不過，若預期會執行特定次數的迴圈，則最好選用 `For`...`Next` 迴圈。  初次進入迴圈時，判斷反覆運算的次數。  
@@ -87,7 +87,7 @@ Next [ counter ]
 ## 巢狀迴圈  
  您可以將一個迴圈置於另一個迴圈內，使 `For` 迴圈套疊成巢狀。  下列範例示範具有不同間距值的巢狀 `For`...`Next` 結構。  外部迴圈會在迴圈的每次反覆運算中建立字串。  內部迴圈會在迴圈的每次反覆運算中遞減迴圈計數器變數。  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
  當巢狀迴圈，每個迴圈必須具備唯一的 `counter` 變數。  
   
@@ -100,7 +100,7 @@ Next [ counter ]
   
  下列範例說明 `Continue For` 和 `Exit For` 陳述式的用法。  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
  您可以將任意數目的 `Exit For` 陳述式放在 `For`…`Next` 迴圈中。  用於巢狀的 `For`…`Next` 迴圈內時，`Exit For` 會退出最內層的迴圈，並將控制權轉移到下一個較高的巢狀層次。  
   
@@ -168,17 +168,17 @@ Next [ counter ]
 ## 範例  
  下列範例會移除泛型清單中的所有項目。  而不是 [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)，這個範例會示範以遞減順序逐一查看的 `For`…`Next` 陳述式。  因為 `removeAt` 方法所移除的項目之後建立項目具有較低的索引值，這個範例會使用這個技術。  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
 ## 範例  
  下列範例會使用 [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)，宣告的逐一查看列舉型別。  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
 ## 範例  
  在下列範例中，陳述式參數會使用具有 `+`、`-`、`>=` 和 `<=` 運算子多載運算子的類別。  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
 ## 請參閱  
  <xref:System.Collections.Generic.List%601>   

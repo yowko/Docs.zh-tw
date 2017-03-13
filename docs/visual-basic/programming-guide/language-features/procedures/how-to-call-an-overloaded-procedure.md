@@ -37,9 +37,9 @@ caps.handback.revision: 12
   
      下列範例會呼叫 [How to: Define Multiple Versions of a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)中所宣告的 `post` 程序。  它會取得客戶識別、判斷它是 `String` 或 `Integer`，然後在上述任一狀況下呼叫相同程序。  
   
-     [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_1.vb)]  
+     [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_2.vb)]  
+     [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

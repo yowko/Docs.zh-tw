@@ -114,7 +114,7 @@ End Class
 ## 範例  
  下列範例會使用 `Class` 陳述式，定義類別和數個成員。  
   
- [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
 ## 請參閱  
  [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   

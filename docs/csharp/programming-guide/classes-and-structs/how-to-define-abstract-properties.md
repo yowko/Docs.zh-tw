@@ -36,7 +36,7 @@ caps.handback.revision: 13
 ## 範例  
  這個檔案會宣告 `Shape` 類別，其中包含型別為 `double` 的 `Area` 屬性。  
   
- [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_1.cs)]  
+ [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
 -   屬性的修飾詞會置於屬性宣告本身當中。  例如：  
   
@@ -49,12 +49,12 @@ caps.handback.revision: 13
 ## 範例  
  下列程式碼顯示 `Shape` 的三個子類別，以及這些子類別如何覆寫 `Area` 屬性以提供本身的實作。  
   
- [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_2.cs)]  
+ [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
 ## 範例  
  下列程式碼會顯示測試程式，用以建立數個 `Shape` 衍生物件並顯示它們的區域。  
   
- [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_3.cs)]  
+ [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

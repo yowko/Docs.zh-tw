@@ -56,7 +56,7 @@ variableorproperty ^= expression
 ## 範例  
  下列範例使用 `^=` 運算子，將 `Integer` 變數的第一個值乘冪第二個值，並將結果指派給第一個變數。  
   
- [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-assignmen_1.vb)]  
+ [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
   
 ## 請參閱  
  [^ Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md)   

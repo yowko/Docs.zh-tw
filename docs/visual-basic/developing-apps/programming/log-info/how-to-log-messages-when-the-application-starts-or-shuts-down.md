@@ -48,7 +48,7 @@ caps.handback.revision: 16
   
 3.  將 `My.Application.Log.WriteEntry` 方法加入 `Startup` 事件處理常式。  
   
-     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#1)]  
+     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_1.vb)]  
   
 ### 在應用程式關閉時記錄訊息  
   
@@ -60,12 +60,12 @@ caps.handback.revision: 16
   
 3.  將 `My.Application.Log.WriteEntry` 方法加入 `Shutdown` 事件處理常式。  
   
-     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#2)]  
+     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
   
 ## 範例  
  您可以使用 \[專案設計工具\] 在 \[程式碼編輯器\] 中存取應用程式事件。 如需詳細資訊，請參閱[應用程式頁面，專案設計工具 \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic)。  
   
- [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#3)]  
+ [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

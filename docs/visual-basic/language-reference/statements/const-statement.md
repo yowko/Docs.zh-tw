@@ -98,12 +98,12 @@ Const constantlist
 ## 範例  
  下列範例會利用 `Const` 陳述式，宣告用於取代常值的常數。  
   
- [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/const-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
 ## 範例  
  如果您定義一個資料型別為 `Object` 的常數，則 Visual Basic 編譯器會指定這個常數的型別為 `initializer`，而不是 `Object`。  在下列範例中，常數 `naturalLogBase` 具有執行階段型別 `Decimal`。  
   
- [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/const-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
  前一個範例會在 [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md)所傳回的 <xref:System.Type> 物件上使用 <xref:System.Type.ToString%2A> 方法，因為 <xref:System.Type> 無法使用 `CStr` 轉換為 `String`。  
   

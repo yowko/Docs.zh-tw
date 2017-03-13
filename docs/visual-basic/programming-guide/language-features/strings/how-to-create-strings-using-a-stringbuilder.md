@@ -27,7 +27,7 @@ caps.handback.revision: 9
 ## 範例  
  下列範例會建立 <xref:System.Text.StringBuilder> 類別的執行個體，將 1,000 個字串附加至該執行個體，然後傳回其字串表示。  
   
- [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-strings-us_1.vb)]  
+ [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
 ## 請參閱  
  [使用 StringBuilder 類別](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   

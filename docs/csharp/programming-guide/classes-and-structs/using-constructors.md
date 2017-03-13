@@ -20,7 +20,7 @@ caps.handback.revision: 26
   
  下列範例將使用簡單的建構函式來定義名為 `Taxi` 的類別。  然後再用 [new](../../../csharp/language-reference/keywords/new.md) 運算子執行個體化此類別。  為新物件配置記憶體之後，`new` 運算子會叫用 `Taxi` 建構函式。  
   
- [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
  不使用任何參數的建構函式稱為「*預設建構函式*」\(Default Constructor\)。  每當使用 `new` 運算子來具現化物件，而且未提供引數給 `new` 時，便會叫用預設建構函式。  如需詳細資訊，請參閱[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
   
@@ -28,7 +28,7 @@ caps.handback.revision: 26
   
  您可以將建構函式設為私用 \(Private\)，避免執行個體化類別，如下所示：  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
   
  如需詳細資訊，請參閱[私用建構函式](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)。  
   
@@ -59,33 +59,33 @@ Console.WriteLine("{0}, {1}", a, b);
   
  類別和 `structs` 都可以定義使用參數的建構函式。  必須透過 `new` 陳述式或[基底](../../../csharp/language-reference/keywords/base.md)陳述式來呼叫使用參數的建構函式。  類別和 `structs` 也可以定義多個建構函式，而且都不必定義預設建構函式。  例如：  
   
- [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
  使用下列其中一個陳述式即可建立這個類別：  
   
- [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_4.cs)]  
+ [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
  建構函式可以使用 `base` 關鍵字呼叫基底類別的建構函式。  例如：  
   
- [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_5.cs)]  
+ [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
  在這個範例中，執行建構函式的區塊之前，會先呼叫基底類別的建構函式。  無論是否有參數，都可以使用 `base` 關鍵字。  建構函式的任何參數都可以當做 `base` 的參數或運算式的一部分來使用。  如需詳細資訊，請參閱[base](../../../csharp/language-reference/keywords/base.md)。  
   
  在衍生類別 \(Derived Class\) 中，如果沒有使用 `base` 關鍵字明確呼叫基底類別建構函式，便會隱含呼叫基底類別建構函式 \(如果存在的話\)。  這表示下列建構函式宣告的作用相同：  
   
- [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_6.cs)]  
+ [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
   
- [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_7.cs)]  
+ [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
   
  如果基底類別未提供預設建構函式，衍生類別就必須使用 `base` 明確呼叫基底建構函式。  
   
  建構函式可以使用 [this](../../../csharp/language-reference/keywords/this.md) 關鍵字來叫用相同物件中的另一個建構函式。  如同 `base` 一樣，無論是否有參數，都可以使用 `this`，而且建構函式中的任何參數都可以當做 `this` 的參數或運算式的一部分。  例如，在先前範例中的第二個建構函式，可以使用 `this` 重新撰寫成：  
   
- [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_8.cs)]  
+ [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
   
  在上述範例中使用 `this` 關鍵字，會造成必須呼叫這個建構函式：  
   
- [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_9.cs)]  
+ [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
  建構函式可標示為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected` `internal`。  這些存取修飾詞 \(Modifier\) 將定義類別使用者如何建構類別。  如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   

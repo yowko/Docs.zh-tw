@@ -32,25 +32,25 @@ caps.handback.revision: 9
   
 1.  建立名為 `MathOperator` 的委派。  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
 2.  建立名為 `AddNumbers` 並具有參數和傳回值的程序，且這些參數和傳回值符合 `MathOperator` 的參數和傳回值，這樣簽章會相符。  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
 3.  建立名為 `SubtractNumbers` 且具有和 `MathOperator` 相符的簽章程序。  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
 4.  建立名為 `DelegateTest` 且將委派視為參數的程序。  
   
      此程序可接受 \(Accept\) `AddNumbers` 或 `SubtractNumbers` 的參考，因為它們的簽章符合 `MathOperator` 簽章。  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
 5.  建立名為 `Test` 且呼叫一次 `DelegateTest` 的程序，這個程序將 `AddNumbers` 的委派做為參數，然後重新將 `SubtractNumbers` 的委派做為參數。  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
      呼叫 `Test` 時，會先顯示 `5` 和 `3` 的 `AddNumbers` 結果 \(為 8\)。  然後會顯示 `9` 和 `3` 的 `SubtractNumbers` 結果 \(為 6\)。  
   

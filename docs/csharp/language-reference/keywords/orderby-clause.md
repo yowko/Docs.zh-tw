@@ -25,12 +25,12 @@ caps.handback.revision: 17
 ## 範例  
  在下列範例中，第一個查詢會從 A 開始以字母順序排序文字，第二個查詢會以遞減順序排序相同的文字   \(`ascending` 關鍵字是預設排序值，無法略過\)。  
   
- [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#20)]  
+ [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_1.cs)]  
   
 ## 範例  
  下列範例執行學生姓氏的主要排序，然後執行名字的次要排序。  
   
- [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#22)]  
+ [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
   
 ## 備註  
  在編譯時期，`orderby` 子句會轉譯成 <xref:System.Linq.Enumerable.OrderBy%2A> 方法的呼叫。  `orderby` 子句中的多個索引鍵會轉譯成 <xref:System.Linq.Enumerable.ThenBy%2A> 方法的呼叫。  

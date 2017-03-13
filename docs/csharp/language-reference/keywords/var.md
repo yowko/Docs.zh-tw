@@ -31,7 +31,7 @@ int i = 10; //explicitly typed
 ## 範例  
  下列範例顯示兩個查詢運算式。  在第一個運算式中，因為查詢結果的型別可以明確陳述為 `IEnumerable<string>`，所以允許使用 `var`，但不需要這麼做。  而在第二個運算式中，因為結果是匿名型別的集合，而且只有編譯器 \(Compiler\) 才可以存取該型別的名稱，所以必須使用 `var`。  請注意，在第二個範例中，`foreach` 反覆運算變數 `item` 也必須是隱含型別。  
   
- [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/csharp/var_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

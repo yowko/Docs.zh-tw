@@ -52,7 +52,7 @@ Throw [ expression ]
 ## 範例  
  下列程式碼使用 `Throw` 陳述式擲回例外狀況：  
   
- [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/throw-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/throw-statement_1.vb)]  
   
 ## 需求  
  **命名空間**：[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

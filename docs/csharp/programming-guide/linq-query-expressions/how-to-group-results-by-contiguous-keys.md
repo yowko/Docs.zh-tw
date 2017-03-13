@@ -35,7 +35,7 @@ caps.handback.revision: 11
 ## 範例  
  下列範例會顯示擴充方法，也一併顯示使用擴充方法的用戶端程式碼。  
   
- [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/how-to-group-results-by-_1.cs)]  
+ [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-group-results-by-contiguous-keys_1.cs)]  
   
  若要在專案中使用擴充方法，請將 `MyExtensions` 靜態類別複製到新的或現有的原始程式碼檔，並視需要在其所在位置處加入命名空間 \(Namespace\) 的 `using` 指示詞。  
   

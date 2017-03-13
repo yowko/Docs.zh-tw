@@ -22,7 +22,7 @@ caps.handback.revision: 23
 ## 範例  
  下列範例示範一個簡單的類別，其中包含一些自動實作的屬性：  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#28)]  
+ [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  在 C\# 6 及更新版本中，您可以初始化自動實作的屬性，就像欄位一樣：  
   

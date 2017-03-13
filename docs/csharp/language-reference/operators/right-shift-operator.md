@@ -31,7 +31,7 @@ caps.handback.revision: 15
  使用者定義型別可多載 `>>` 運算子；第一個運算元的型別必須為使用者定義型別，而第二個運算元的型別必須為 [int](../../../csharp/language-reference/keywords/int.md)。  如需詳細資訊，請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#26)]  
+ [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

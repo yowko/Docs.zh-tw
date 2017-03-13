@@ -52,7 +52,7 @@ caps.handback.revision: 20
   
 -   撰寫包含存取規範、`Const` 關鍵字及運算式的宣告，如以下範例所示：  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#8)]  
+     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
      當 [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 為 `Off`，而 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 為 `On` 時，您必須指定資料型別來明確宣告常數 \(`Boolean`、`Byte`、`Char`、`DateTime`、`Decimal`、`Double`、`Integer`、`Long`、`Short`、`Single` 或 `String`\)。  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 20
   
 -   撰寫包含 `As` 關鍵字和明確資料型別的宣告，如以下範例所示：  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#9)]  
+     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
      您可以在同一行中宣告多個常數，但是以程式碼的可讀性考量而言，在每一行應該只宣告一個常數。  如果您在同一行中宣告多個常數，它們必須要有相同的存取層級 \(`Public`、`Private`、`Friend`、`Protected` 或 `Protected Friend`\)。  
   

@@ -31,7 +31,7 @@ caps.handback.revision: 16
   
 -   使用 `WriteAllBytes` 方法，提供檔案路徑和名稱以及要寫入的位元組數。  這個範例會將資料陣列 `CustomerData` 附加至名為 `CollectedData.dat` 的檔案。  
   
-     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-to-binary-f_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
   
 ## 穩固程式設計  
  下列情況可能會導致例外狀況：  

@@ -58,7 +58,7 @@ float x = 3.5F;
 ## 範例  
  在下列程式碼範例的算術運算式中含有一個 [int](../../../csharp/language-reference/keywords/int.md)、一個 [short](../../../csharp/language-reference/keywords/short.md) 和一個 `float`，因此運算結果為 `float` \(請記住 `float` 是 <xref:System.Single?displayProperty=fullName> 型別的別名\)。 請注意，此運算式中並沒有 [double](../../../csharp/language-reference/keywords/double.md)。  
   
- [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/csharp/float_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

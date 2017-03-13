@@ -97,7 +97,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) 
 ## 範例  
  下列範例會將 `sampleClass` 類別的定義分割成兩個宣告，每個定義可定義不同的 `Sub` 程序。  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/visualbasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
   
  上述範例中的兩個部分定義可位於相同的原始程式檔或在兩個不同的原始程式檔中。  
   

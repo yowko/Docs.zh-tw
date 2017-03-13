@@ -42,7 +42,7 @@ caps.handback.revision: 14
 ## 範例  
  下列範例會定義 `Sub` 程序，以針對客戶平衡來張貼交易。  它會使用 `Overloads` 關鍵字來定義兩個版本的程序：一個是依名稱接受客戶，而另一個是依帳號接受客戶。  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-multiple-v_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
   
  呼叫程式碼可以 `String` 或 `Integer` 取得客戶識別，然後將相同的呼叫陳述式用於任一情況下。  
   

@@ -30,7 +30,7 @@ caps.handback.revision: 17
  ?? 運算子的結果不會視為常數，即使它的引數都是常數也一樣。  
   
 ## 範例  
- [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#53)]  
+ [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

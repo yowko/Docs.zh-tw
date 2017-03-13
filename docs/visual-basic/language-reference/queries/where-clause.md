@@ -46,12 +46,12 @@ Where condition
 ## 範例  
  下列查詢運算式使用 `From` 子句，為 `customers` 集合中每個 `Customer` 物件宣告範圍變數 `cust`。  接著 `Where` 子句使用範圍變數，將輸出限制在所指定區域的客戶。  `For Each` 迴圈則會顯示查詢結果中每個客戶的公司名稱。  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
 ## 範例  
  下列範例會使用`And`和`Or`中的邏輯運算子`Where`子句。  
   
- [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#31)]  
+ [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
 ## 請參閱  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

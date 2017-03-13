@@ -44,11 +44,11 @@ caps.handback.revision: 17
   
  假設您所加入的組件參考包含稱為 `MathClass` 的類別，而此類別又有稱為 `SquareRoot` 的新函式，如以下程式碼所示：  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#53)]  
+ [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
   
  您的應用程式可使用文字方塊控制項，以控制將要呼叫哪個方法及其引數。  例如，如果 `TextBox1` 包含要評估的運算式，而 `TextBox2` 用於輸入函式的名稱，則可使用以下程式碼來叫用 `TextBox1` 中運算式的 `SquareRoot` 函式：  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#54)]  
+ [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
   
  如果在 `TextBox1` 中輸入 "64"，在 `TextBox2` 中輸入 "SquareRoot"，然後呼叫 `CallMath` 程序，便會求出 `TextBox1` 中數字的平方根。  範例中的程式碼會叫用 `SquareRoot` 函式 \(使用的字串包含做為必要引數以求其值的運算式\)，並在 `TextBox1` 中傳回 "8" \(64 的平方根\)。  當然，如果使用者在 `TextBox2` 輸入無效字串，字串包含屬性的名稱而非方法的名稱，或是如果方法具有其他必要引數，則將會發生執行階段錯誤。  在預期會發生這些或任何其他錯誤的情況下，使用 `CallByName` 時必須加入穩固的錯誤處理程式碼。  
   

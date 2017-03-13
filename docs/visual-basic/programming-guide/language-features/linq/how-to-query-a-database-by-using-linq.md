@@ -76,14 +76,14 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
      將下列程式碼加入至 `Load` 事件以查詢公開 \(Expose\) 為資料內容屬性的表格。  
   
-     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#3)]  
+     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
   
 4.  按下 F5 執行專案並檢視結果。  
   
 5.  以下是您可以嘗試的一些額外查詢：  
   
-     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#4)]  
-    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#5)]  
+     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
+    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
 ## 請參閱  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

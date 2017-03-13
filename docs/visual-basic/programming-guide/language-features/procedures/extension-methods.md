@@ -36,17 +36,17 @@ caps.handback.revision: 41
 ### 描述  
  下列範例會為 <xref:System.String> 資料類型定義 `Print` 擴充方法。  該方法會使用 `Console.WriteLine` 來顯示字串。  `Print` 方法的 `aString` 參數會建立擴充 <xref:System.String> 類別的方法。  
   
- [!code-vb[VbVbalrExtensionMethods#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/StringExtensions.vb#1)]  
+ [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
  請注意，必須以擴充屬性 `<Extension()>` 標記擴充方法定義。  您可以選擇將其中包含已定義之方法的模組加上標記，但必須標記每個擴充方法。  必須匯入 <xref:System.Runtime.CompilerServices>，才能存取擴充屬性。  
   
  擴充方法只能在模組內宣告。  一般來說，在其中定義擴充方法的模組與擴充方法遭呼叫的模組不一樣。  必要時，而是會匯入包含擴充方法的模組，以在範圍內使用。  當包含 `Print` 的模組在範圍內之後，就可以將方法當做不使用任何引數的一般執行個體方法來呼叫，例如 `ToUpper`：  
   
- [!code-vb[VbVbalrExtensionMethods#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class1.vb#2)]  
+ [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
   
  下一個範例 `PrintAndPunctuate` 也是 <xref:System.String> 的擴充部分，這次是以兩個參數來定義。  第一個參數 `aString` 會建立擴充 <xref:System.String> 的擴充方法。  第二個參數 `punc` 則為標點符號字串，會在呼叫方法時當做引數傳入。  方法會顯示標點符號之前的字串。  
   
- [!code-vb[VbVbalrExtensionMethods#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class2.vb#3)]  
+ [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
  為 `punc` 傳送字串引數即可呼叫下列方法：`example.PrintAndPunctuate(".")`。  
   
@@ -120,7 +120,7 @@ End Module
   
  晚期繫結不會考慮擴充方法。  在下列範例中，陳述式 `anObject.PrintMe()` 會引發 <xref:System.MissingMemberException> 例外狀況，如果刪除第二個 `PrintMe` 擴充方法定義，也會引發這個例外狀況。  
   
- [!code-vb[VbVbalrExtensionMethods#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class6.vb#9)]  
+ [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
   
 ## 最佳作法  
  擴充方法可提供方便且功能強大的方法，讓您擴充現有的類型。  不過，若要順利使用這些方法，您必須考量幾個重點。  這些考量重點主要是針對類別庫的作者，但也可能影響使用擴充方法的應用程式。  
@@ -140,23 +140,23 @@ End Module
 ## 擴充方法、執行個體方法和屬性  
  當範圍內的執行個體方法具有與呼叫陳述式之引數相容的簽章時，會先選擇執行個體方法，再選擇任何擴充方法。  即使擴充方法更符合，但執行個體方法會優先適用。  在下列範例中，`ExampleClass` 包含名為 `ExampleMethod` 的執行個體方法，它有一個類型為 `Integer` 的參數。  擴充方法 `ExampleMethod` 則擴充 `ExampleClass`，並有一個類型為 `Long` 的參數。  
   
- [!code-vb[VbVbalrExtensionMethods#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class4.vb#4)]  
+ [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
   
  在下列程式碼中，`ExampleMethod` 的第一個呼叫會呼叫擴充方法，因為 `arg1` 是 `Long`，它只能與擴充方法中的 `Long` 參數相容。  `ExampleMethod` 的第二個呼叫有 `Integer` 引數 `arg2`，因此會呼叫執行個體方法。  
   
- [!code-vb[VbVbalrExtensionMethods#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class4.vb#5)]  
+ [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
   
  現在，將兩個方法中參數的資料類型互換：  
   
- [!code-vb[VbVbalrExtensionMethods#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class5.vb#6)]  
+ [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
   
  這時，`Main` 中的程式碼兩次都會呼叫執行個體方法。  這是因為 `arg1` 和 `arg2` 都可擴展轉換為 `Long`，因此在兩種情況下，執行個體方法都優先於擴充方法。  
   
- [!code-vb[VbVbalrExtensionMethods#7](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class5.vb#7)]  
+ [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
   
  因此，擴充方法無法取代現有的執行個體方法。  不過，當擴充方法與執行個體方法擁有相同的名稱，但簽章之間沒有衝突，就可存取這兩個方法。  例如，如果類別 `ExampleClass` 包含不接受引數的 `ExampleMethod` 方法，則允許使用具有相同名稱但不同簽章的擴充方法，如下列程式碼所示。  
   
- [!code-vb[VbVbalrExtensionMethods#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Module3.vb#8)]  
+ [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
   
  這個程式碼的輸出如下：  
   

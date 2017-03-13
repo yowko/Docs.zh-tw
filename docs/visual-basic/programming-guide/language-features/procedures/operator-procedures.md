@@ -82,11 +82,11 @@ caps.handback.revision: 17
 ### 宣告和呼叫的說明  
  下列結構會將帶有正負號的 128 位元整數值儲存成構成高序位 \(High Order\) 和低序位 \(Low Order\) 部分。  它會定義 `+` 運算子以相加兩個 `veryLong` 值，並產生結果 `veryLong` 值。  
   
- [!code-vb[VbVbcnProcedures#23](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
  下列範例會顯示在 `veryLong` 上所定義之 `+` 運算子的典型呼叫：  
   
- [!code-vb[VbVbcnProcedures#24](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
  如需詳細資訊和範例，請參閱 [Visual Basic 2005 中的運算子多載](http://go.microsoft.com/fwlink/?LinkId=101703) \(英文\)。  
   

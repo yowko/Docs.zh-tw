@@ -58,7 +58,7 @@ End
 ## 範例  
  下列範例會使用 `End` 陳述式，終止程式碼的執行 \(若使用者要求的話\)。  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVersHelp60Controls/Form1.vb#64)]  
+ [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
   
 ## 智慧型裝置開發人員注意事項  
  不支援此陳述式。  

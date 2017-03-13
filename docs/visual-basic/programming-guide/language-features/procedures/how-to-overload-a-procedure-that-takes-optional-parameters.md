@@ -47,11 +47,11 @@ caps.handback.revision: 17
   
      下列範例會顯示一個有定義選擇性參數的程序、兩個對等的多載程序，而最後是無效和有效多載版本的範例。  
   
-     [!code-vb[VbVbcnProcedures#59](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
   
-     [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
 ## 多個選擇性參數  
  若是有多個選擇性參數的程序，則一般需要兩個以上的多載版本。  例如，如果有兩個選擇性參數，且呼叫程式碼可單獨提供或略過每個參數，則需要四個多載版本，而所提供引數的每個可能組合都會有一個版本。  

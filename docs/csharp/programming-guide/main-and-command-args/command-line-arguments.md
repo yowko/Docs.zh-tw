@@ -18,16 +18,16 @@ caps.handback.revision: 27
 # 命令列引數 (C# 程式設計手冊)
 您可以透過下列其中一個方式定義方法，將引數傳遞給 `Main` 方法：  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_1.cs)]  
+ [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_2.cs)]  
+ [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
 >  若要啟用 Windows Form 應用程式之 `Main` 方法的命令列引數，您必須手動修改 program.cs 中 `Main` 的簽章。  Windows Form 設計工具所產生的程式碼會建立一個不含輸入參數的 `Main`。  您也可以使用 <xref:System.Environment.CommandLine%2A?displayProperty=fullName> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>，從主控台或 Windows 應用程式中的任何點來存取命令列引數。  
   
  `Main` 方法的參數是代表命令列引數的 <xref:System.String> 陣列。  通常您可以測試 `Length` 屬性來判斷引數是否存在，例如：  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_3.cs)]  
+ [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  您也可以使用 <xref:System.Convert> 類別或 `Parse` 方法將字串引數轉換成數字類型。  例如，下列陳述式會使用 <xref:System.Int64.Parse%2A> 方法，將 `string` 轉換成 `long` 值：  
   
@@ -56,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  將下列程式碼貼上到任何文字編輯器，然後將檔案儲存為名稱為 `Factorial.cs` 的文字檔。  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_4.cs)]  
+     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  從 \[**開始**\] 畫面或 \[**開始**\] 功能表，開啟 Visual Studio 的 \[**開發人員命令提示字元**\] 視窗，然後巡覽至包含您剛建立檔案的資料夾。  
   

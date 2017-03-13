@@ -52,7 +52,7 @@ variableorproperty = value
 ## 範例  
  下列範例示範指派運算子。  右邊的值會指派給左邊的變數。  
   
- [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/assignment-operator_1.vb)]  
   
 ## 請參閱  
  [&\= Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

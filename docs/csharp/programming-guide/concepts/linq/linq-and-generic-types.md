@@ -32,14 +32,14 @@ caps.handback.revision: 16
 ## LINQ 查詢中的 IEnumerable\<T\> 變數  
  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢變數的型別是 <xref:System.Collections.Generic.IEnumerable%601> 或諸如 <xref:System.Linq.IQueryable%601> 之類的衍生型別 \(Derived Type\)。  當您看到型別為 `IEnumerable<Customer>` 的查詢變數時，只表示查詢在執行時會產生由零個以上 `Customer` 物件組成的序列。  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#34)]  
+ [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  如需詳細資訊，請參閱[Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。  
   
 ## 讓編譯器處理泛型型別宣告  
  想要的話，您可以使用 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來避免使用泛型語法。  `var` 關鍵字會指示編譯器 \(Compiler\) 查看 `from` 子句中指定的資料來源，來推斷查詢變數的型別。  下列範例在編譯後會產生與上一個範例相同的程式碼：  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#35)]  
+ [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  `var` 關鍵字適用於當變數的型別很明顯，或不需要明確指定巢狀泛型型別 \(如群組查詢產生的型別\) 時。  一般而言，如果要使用 `var`，則建議您考慮到它會讓其他人更難看懂您的程式碼。  如需詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   

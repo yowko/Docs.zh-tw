@@ -67,19 +67,19 @@ End Function
 ## 範例  
  下列範例會示範建立簡單 Lambda 運算式的兩個方法。  第一個使用 `Dim` 提供函式的名稱。  若要呼叫函式，則傳送參數的值。  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+ [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+ [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
 ## 範例  
  或者，您可以同時宣告並執行函式。  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
 ## 範例  
  以下是會遞增其引數並傳回值的 Lambda 運算式範例。  下列範例同時顯示函式的單行和多行 Lambda 運算式語法。  如需更多範例，請參閱 [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## 範例  
  Lambda 運算式是許多 [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)] 中之查詢運算子的基礎，能明確用於方法架構查詢中。  下列範例示範了典型的 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 查詢，緊跟著則將查詢轉譯為方法格式。  

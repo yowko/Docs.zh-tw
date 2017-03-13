@@ -52,7 +52,7 @@ caps.handback.revision: 24
   
      下列範例使用相同的類別 (<xref:System.Collections.Generic.Queue%601?displayProperty=fullName>) 來建立保留不同資料類型之項目的兩個佇列物件。 它會將項目新增至每個佇列的結尾，然後移除，並顯示每個佇列前端的項目。  
   
-     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-use-a-generic-class_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
  [資料型別](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

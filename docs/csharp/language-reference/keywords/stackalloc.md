@@ -43,7 +43,7 @@ block = stackalloc int[100];
  下列範例會計算並顯示 Fibonacci 序列中的前 20 個數字。  每個數字都是前兩個數字的總和。  在程式碼中，足以容納 20 個 `int` 型別之項目的記憶體區塊會配置在堆疊上，而不是堆積中。  該區塊的位址會儲存於指標 `fib` 中。  這個記憶體不會進行記憶體回收，因此不須使用 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) 將記憶體固定住。  記憶體區塊的存留期 \(Lifetime\) 受限於定義該區塊之方法的存留期。  方法傳回之前，您無法釋放記憶體。  
   
 ## 範例  
- [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#15)]  
+ [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/stackalloc_1.cs)]  
   
 ## 安全性  
  Unsafe 程式碼的安全性不如 Safe 程式碼。  然而，使用 `stackalloc` 會自動啟用 Common Language Runtime \(CLR\) 的緩衝區滿溢偵測功能。  如果偵測到緩衝區滿溢，就會儘速中斷處理序，將執行惡意程式碼的機會降到最低。  

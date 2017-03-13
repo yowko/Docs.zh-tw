@@ -33,7 +33,7 @@ caps.handback.revision: 15
 ## 範例  
  下列程式碼會將 `sourcePath` 指定的目錄複製到 `destinationPath` 指定的目錄。  這個程式碼也提供標準對話方塊，顯示作業完成前的預估剩餘時間量。  
   
- [!code-cs[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#11)]  
+ [!code-cs[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
   
 ## 請參閱  
  [檔案系統和登錄](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)

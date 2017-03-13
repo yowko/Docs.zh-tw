@@ -10,7 +10,7 @@ caps.handback.revision: 11
 ## 範例  
  在下列範例中，第一個方法會將查詢當做傳回值傳回，第二個方法則會將查詢當做 `out` 參數傳回。  請注意，這兩種情況都是傳回查詢，而不是傳回查詢結果。  
   
- [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#80)]  
+ [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-a-query-from-a-method_1.cs)]  
   
 ## 編譯程式碼  
   

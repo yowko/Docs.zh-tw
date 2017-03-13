@@ -35,7 +35,7 @@ caps.handback.revision: 16
   
 -   下列範例顯示如何在 name 項目的開頭標記和結尾標記之間，插入 `contactName` 變數中包含的文字。  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_1.vb)]  
+     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
      這個範例會產生下列輸出：  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 16
   
 -   下列範例顯示如何插入 `phoneType` 變數中包含的文字，做為 `type` 屬性 \(Attribute\) 的值。  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_2.vb)]  
+     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
      這個範例會產生下列輸出：  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 16
   
      使用這個方法建立項目時，必須以 \<\/\> 標記做結尾。  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_3.vb)]  
+     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   
      這個範例會產生下列輸出：  
   

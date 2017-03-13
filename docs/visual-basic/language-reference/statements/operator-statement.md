@@ -176,7 +176,7 @@ End Operator
 ## 範例  
  下列程式碼範例使用 `Operator` 陳述式定義結構的大綱，這個結構包括 `And`、`Or`、`IsFalse` 和 `IsTrue` 運算子的運算子程序。  `And` 和 `Or` 各採用型別 `abc` 的兩個運算元並且傳回型別 `abc`。  `IsFalse` 和 `IsTrue` 各採用型別 `abc` 的單一運算元並且傳回型別 `Boolean`。  這些定義會允許呼叫程式碼使用 `And`、`AndAlso`、`Or` 和 `OrElse` 與型別 `abc` 的運算元搭配。  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
 ## 請參閱  
  [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)   

@@ -33,7 +33,7 @@ class SampleClass
 ## 範例  
  下列範例中，宣告兩個類別，`PointTest` 和 `MainClass`。  `PointTest` 的公用成員 `x` 與 `y` 可直接由 `MainClass` 存取。  
   
- [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#13)]  
+ [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
  如果您將 `public` 存取層級更改為 [private](../../../csharp/language-reference/keywords/private.md) 或 [protected](../../../csharp/language-reference/keywords/protected.md)，就會得到下列錯誤訊息：  
   

@@ -52,7 +52,7 @@ caps.handback.revision: 13
   
 -   您可以使用指派陳述式 \(Assignment Statement\)，將數值運算式所代表的值指派給變數，如下列範例所示。  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
      在上述範例中，等於運算子 \(`=`\) 右側的運算式值已指派給運算子左側的變數 `j`，所以 `j` 會計算為 276。  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 13
   
 -   使用括號，括住您想要先執行的運算。  下列範例會顯示兩個具有相同運算元和運算子的不同結果。  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
      在上述範例中，括住 `(67 + i)` 的括號會覆寫一般優先順序，所以 `j` 的計算會先執行加法運算子 \(`+`\)，因此指派給 `j` 的值為 276 \(4 乘以 69\)。  `k` 的計算會以一般優先順序 \(`*` 優先於 `+`\) 執行運算子，因此指派給 `k` 的值為 270 \(268 加 2\)。  
   

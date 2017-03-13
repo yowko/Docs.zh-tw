@@ -49,11 +49,11 @@ From element [ As type ] In collection [ _ ]
   
  您可以在查詢中指定多個 `From` 子句，以識別要聯結 \(Join\) 的多個集合。  指定多個集合時，這些集合會個別受到反覆查看，如果這些集合互相關聯，您也可以將它們聯結再反覆查看。  您可以使用 `Select` 子句隱含聯結集合，也可以使用 `Join` 或 `Group Join` 子句明確聯結集合。  或者，還可以在單一 `From` 子句中將每個相關的範圍變數和集合以逗號隔開，藉以指定多個範圍變數和集合。  下列程式碼範例顯示 `From` 子句的這兩種語法選項。  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#21)]  
+ [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
  `From` 子句會定義查詢的範圍，類似於 `For` 迴圈 \(Loop\) 的範圍。  因此，查詢的範圍中每個 `element` 範圍變數都必須具有唯一的名稱。  因為查詢中可以指定多個 `From` 子句，所以後續 `From` 子句可以參考該 `From` 子句中的範圍變數，也可以參考上一個 `From` 子句中的範圍變數。  例如，下列範例顯示一個巢狀 `From` 子句，其中第二個子句中的集合是根據第一個子句中的範圍變數屬性。  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#22)]  
+ [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
  每個 `From` 子句後面都可以接其他查詢子句的任意組合，以進一步限定查詢。  您可以利用下列方式限定查詢：  
   
@@ -76,7 +76,7 @@ From element [ As type ] In collection [ _ ]
 ## 範例  
  下列查詢運算式使用 `From` 子句，為 `customers` 集合中每個 `Customer` 物件宣告範圍變數 `cust`。  接著 `Where` 子句使用範圍變數，將輸出限制在所指定區域的客戶。  `For Each` 迴圈則會顯示查詢結果中每個客戶的公司名稱。  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## 請參閱  
  [Queries](../../../visual-basic/language-reference/queries/queries.md)   

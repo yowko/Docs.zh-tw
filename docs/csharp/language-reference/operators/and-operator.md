@@ -30,12 +30,12 @@ caps.handback.revision: 19
   
  `&` 運算子會同時評估兩個運算子，不管第一個運算子其值為何。  例如：  
   
- [!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#37)]  
+ [!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
  使用者定義型別可多載二進位 `&` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#38)]  
+ [!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

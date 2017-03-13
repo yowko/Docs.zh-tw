@@ -24,7 +24,7 @@ caps.handback.revision: 18
 ## 範例  
  下列範例顯示使用 `into` 關鍵字啟用暫時識別項 `fruitGroup`，其具有推斷型別 `IGrouping`。  使用識別項時，您就可以在每個群組上叫用 <xref:System.Linq.Enumerable.Count%2A> 方法，並且只選取包含兩個或多個文字的群組。  
   
- [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Into.cs#18)]  
+ [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/into_1.cs)]  
   
  只有當您要在每個群組上執行額外查詢作業時，才需要在 `group` 子句中使用 `into`。  如需詳細資訊，請參閱 [group 子句](../../../csharp/language-reference/keywords/group-clause.md)。  
   

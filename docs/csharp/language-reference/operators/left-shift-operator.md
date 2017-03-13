@@ -31,7 +31,7 @@ caps.handback.revision: 18
  使用者定義型別可多載 `<<` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)，第一個運算元的型別必須為使用者定義型別，而第二個運算元的型別必須為 `int`。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#14)]  
+ [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
 ## 註解  
  請注意，`i<<1` 和 `i<<33`  會得到相同的結果，因為 1 和 33 的低階層五個位元相同。  

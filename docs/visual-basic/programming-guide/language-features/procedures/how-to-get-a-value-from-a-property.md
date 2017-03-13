@@ -39,7 +39,7 @@ caps.handback.revision: 11
   
      下列範例會讀取 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] `Now` 屬性的值，隱含地呼叫其 `Get` 程序。  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
 2.  如果屬性有引數，請在屬性名稱之後緊接著括號，將引數清單括起來。  如果未提供引數，您也可以選擇省略括號。  
   

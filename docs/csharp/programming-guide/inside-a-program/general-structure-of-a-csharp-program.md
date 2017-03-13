@@ -18,7 +18,7 @@ caps.handback.revision: 21
 # C# 程式的一般結構 (C# 程式設計手冊)
 C\# 程式可以由一個或多個檔案組成。  每個檔案可以不包含命名空間，也可以包含多個命名空間。  一個命名空間除了可以包含其他的命名空間，還可以包含類別、結構、介面、列舉和委派等型別。  下面是一個包含所有這些項目的 C\# 程式基本架構。  
   
- [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/class2.cs#34)]  
+ [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
   
 ## 相關章節  
  如需詳細資訊，請參閱下列主題：  

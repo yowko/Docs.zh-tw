@@ -74,18 +74,18 @@ caps.handback.revision: 27
 ### 泛型介面  
  無法使用從 Interop 組件內嵌的泛型介面。  這在下列範例中顯示。  
   
- [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#1)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
 ### 具有泛型參數的型別  
  如果具有泛型參數的型別來自外部組件，且其參數的型別是從 Interop 組件內嵌的，則無法使用該型別。  這項限制不適用於介面。  例如，試想在 <xref:Microsoft.Office.Interop.Excel> 組件中定義的 <xref:Microsoft.Office.Interop.Excel.Range> 介面。  如果程式庫內嵌來自 <xref:Microsoft.Office.Interop.Excel> 組件的 Interop 型別，並公開傳回泛型型別的方法，但是此泛型型別具有型別為 <xref:Microsoft.Office.Interop.Excel.Range> 介面的參數，那麼這個方法就必須傳回泛型介面，如下列程式碼範例所示。  
   
- [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#2)]  
-[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#3)]  
-[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#4)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
  在下列範例中，用戶端程式碼可以呼叫傳回 <xref:System.Collections.IList> 泛型介面的方法，且不會發生錯誤。  
   
- [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#5)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## 範例  
  下列程式碼會編譯原始程式檔 `OfficeApp.vb`，並參考 `COMData1.dll` 和 `COMData2.dll` 中的組件來產生 `OfficeApp.exe`。  

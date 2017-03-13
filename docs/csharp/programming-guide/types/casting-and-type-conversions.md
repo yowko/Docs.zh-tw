@@ -41,7 +41,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 ## 隱含轉換  
  對於內建數字型別，如果要儲存的值能完全符合變數需求而不需捨去或進位，則可進行隱含轉換。  例如，[long](../../../csharp/language-reference/keywords/long.md) 型別的變數 \(8 位元組的整數\) 可以儲存 [int](../../../csharp/language-reference/keywords/int.md) \(32 位元電腦中的 4 個位元組\) 能夠儲存的任何值。  在下列範例中，編譯器會將右邊的值隱含轉換為 `long` 型別之後，才指派給 `bigNum`。  
   
- [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_1.cs)]  
+ [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
  如需隱含數值轉換的完整清單，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 ## 明確轉換  
  如果轉換可能會造成資料遺失，編譯器會要求您執行明確轉換，這稱為「*轉型*」\(Cast\)。  轉型是明確告知編譯器您打算進行轉換而且知道可能會造成資料遺失的一種方式。  若要執行轉型，請在要轉換的值或變數前面的括號內指定要轉換的目標型別。  下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為  [int](../../../csharp/language-reference/keywords/int.md)。  若沒有進行轉型，就無法編譯程式。  
   
- [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_2.cs)]  
+ [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
  如需可用的明確數值轉換清單，請參閱[明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)。  
   
@@ -80,7 +80,7 @@ Giraffe g2 = (Giraffe) a;
 ## 執行階段發生的型別轉換例外狀況  
  對於有些參考型別轉換，編譯器無法判斷轉型是否有效。  因此轉型作業編譯正確，但卻可能會在執行階段失敗。  如下列範例所示，型別轉換 \(Type Cast\) 在執行階段失敗將導致擲回 <xref:System.InvalidCastException>。  
   
- [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_3.cs)]  
+ [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C\# 提供 [is](../../../csharp/language-reference/keywords/is.md) 和 [as](../../../csharp/language-reference/keywords/as.md) 運算子，讓您可在實際執行轉型之前先測試相容性。  如需詳細資訊，請參閱 [如何：使用 as 和 is 運算子進行安全轉型](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。  
   

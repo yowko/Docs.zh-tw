@@ -49,7 +49,7 @@ caps.handback.revision: 14
 ## 範例  
  此範例使用 `#Region` 指示詞。  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
   
 ## 請參閱  
  [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)   

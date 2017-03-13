@@ -23,7 +23,7 @@ caps.handback.revision: 29
  如需詳細資訊與範例，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ## 範例  
- [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
   
  介面可以是命名空間 \(Namespace\) 或類別的成員，而且可以包含下列成員的簽章：  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 29
 ## 範例  
  下列範例示範了介面實作。  在這個範例中，介面包含屬性宣告，類別則包含實作。  實作 `IPoint` 之類別的任何執行個體，都有整數屬性 `x` 和 `y`。  
   
- [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

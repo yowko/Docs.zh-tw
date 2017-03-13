@@ -37,7 +37,7 @@ caps.handback.revision: 31
   
 -   請使用 `GetValue` 方法指定路徑和名稱，以從登錄機碼讀取值。  下列範例會從 `HKEY_CURRENT_USER\Software\MyApp` 讀取 `Name` 值，並顯示於訊息方塊中。  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_1.vb)]  
+     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
  這個程式碼範例也可做為 IntelliSense 程式碼片段。  在程式碼片段選擇器中，這個程式碼片段位於 \[**Windows 作業系統 \> 登錄**\] 中。  如需詳細資訊，請參閱 [程式碼片段](/visual-studio/ide/code-snippets)。  
   
@@ -45,7 +45,7 @@ caps.handback.revision: 31
   
 -   使用 `GetValue` 方法來擷取值。  下列程式碼會檢查值是否存在，並傳回一則訊息，如果不存在。  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_2.vb)]  
+     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
   
 ## 穩固程式設計  
  登錄會存放最上層或根目錄機碼，可用來儲存資料。  例如，HKEY\_LOCAL\_MACHINE 根目錄機碼是用來儲存所有使用者使用的電腦層級設定，而 HKEY\_CURRENT\_USER 則用來儲存個別使用者的特定資料。  

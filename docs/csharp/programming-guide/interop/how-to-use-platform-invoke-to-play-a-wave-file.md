@@ -26,9 +26,9 @@ caps.handback.revision: 30
   
  \[**開啟檔案**\] 對話方塊會透過篩選設定，只顯示副檔名為 .wav 的檔案：  
   
- [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_1.cs)]  
+ [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
   
- [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_2.cs)]  
+ [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
   
 ## 編譯程式碼  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 30
   
 3.  複製下列程式碼，然後將其貼在 `Form1.Designer.cs` 檔的 `InitializeComponent()` 方法中 \(在現有的任何程式碼後\)。  
   
-     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_3.cs)]  
+     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
   
 4.  編譯並執行程式碼。  
   

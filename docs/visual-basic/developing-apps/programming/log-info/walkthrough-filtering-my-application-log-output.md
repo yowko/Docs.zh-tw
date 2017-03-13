@@ -36,7 +36,7 @@ caps.handback.revision: 22
   
 3.  在 <xref:System.Windows.Forms.Control.Click> Button1 事件處理常式中加入下列程式碼︰  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbcnMyApplicationLogFiltering/Form1.vb#1)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  偵錯工具執行應用程式。  
   

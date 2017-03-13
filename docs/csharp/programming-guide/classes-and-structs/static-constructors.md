@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # 靜態建構函式 (C# 程式設計手冊)
 靜態建構函式可以用來初始化任何[靜態](../../../csharp/language-reference/keywords/static.md)資料，或執行只需執行一次的特定動作。  在建立第一個執行個體或參考任何靜態成員之前，會自動呼叫靜態建構函式。  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
  靜態建構函式有下列屬性：  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 23
 ## 範例  
  在這個範例中，類別 `Bus` 有一個靜態建構函式。  建立 `Bus` 的第一個執行個體 \(`bus1`\) 時，會呼叫此建構函式來初始化該類別。  這個範例輸出確認靜態建構函式只會執行一次，即使建立了兩個 `Bus` 的執行個體也是如此，並且確認該建構函式會在執行個體建構函式執行之前執行。  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

@@ -25,7 +25,7 @@ caps.handback.revision: 21
  如需重新擲回例外狀況的詳細資訊和範例，請參閱 [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) 和[擲回例外狀況](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md)。  如需有關`finally`區塊中，請參閱 [try 最後](../../../csharp/language-reference/keywords/try-finally.md)。  
   
 ## 範例  
- [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

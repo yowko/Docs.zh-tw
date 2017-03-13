@@ -91,12 +91,12 @@ Next
   
  Iterator 方法的傳回型別是 <xref:System.Collections.Generic.IEnumerable%601>， Iterator 介面型別。  當 Iterator 方法呼叫時，它會傳回可列舉的物件包含數字的階乘冪。  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
 ## 範例  
  下列範例示範是 Iterator 的 `Get` 存取子。  屬性宣告包含一個 `Iterator` 修飾詞。  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
  如需其他範例，請參閱 [迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)。  
   

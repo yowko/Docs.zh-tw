@@ -43,27 +43,27 @@ caps.handback.revision: 30
   
  型別參數和條件約束的規則有幾個泛型類別行為含意，尤其與繼承和成員存取範圍有關。  在繼續進行之前，您應該先了解某些詞彙。  若是泛型類別，`Node<T>,` 用戶端程式碼可以參考該類別，方法是藉由指定型別引數以建立封閉式建構型別 \(`Node<int>`\)，  或者，也可以不指定型別參數 \(例如在指定泛型基底類別時\) 以建立開放式的建構型別 \(`Node<T>`\)。  泛型類別可以繼承自具象、封閉式或開放式建構基底類別：  
   
- [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_1.cs)]  
+ [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
   
  非泛型 \(也就是具象\) 類別可以繼承自封閉式的建構基底類別，但是不能繼承自開放式建構類別或型別參數，因為在執行階段時用戶端程式碼無法提供產生基底類別時所需要的型別引數。  
   
- [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_2.cs)]  
+ [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
   
  繼承自開放式建構型別的泛型類別，必須提供任何基底類別型別參數的型別引數，並且引數不能與繼承類別共用，如同下列程式碼範例所示範：  
   
- [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_3.cs)]  
+ [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
   
  繼承自開放式建構型別的泛型類別必須指定 \(或代表\) 基底型別上條件約束的超集：  
   
- [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_4.cs)]  
+ [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
   
  泛型型別可以使用多個型別參數和條件約束，如下所示：  
   
- [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_5.cs)]  
+ [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
   
  開放式和封閉式的建構型別都可以用來當做方法參數：  
   
- [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_6.cs)]  
+ [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
   
  如果泛型類別會實作介面，則該類別的所有執行個體都可轉型為該介面。  
   

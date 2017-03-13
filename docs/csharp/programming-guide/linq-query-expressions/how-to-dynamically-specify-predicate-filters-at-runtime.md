@@ -15,7 +15,7 @@ caps.handback.revision: 22
   
 4.  將 `Program` 類別替換成下列程式碼。  
   
-     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#26)]  
+     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  在 `ids` 的宣告之下，將下列程式碼行加入至 `DynamicPredicates` 類別中的 `Main` 方法。  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 22
   
 2.  複製下列方法並將它貼入至 `DynamicPredicates` 類別中。  
   
-     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#27)]  
+     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  在 \[**命令列引數**\] 視窗中，使用介於 1 和 4 之間的整數值取代上一個程序中的 ID 編號。  
   

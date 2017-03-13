@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # :: 運算子 (C# 參考)
 命名空間別名限定詞 \(`::`\) 用於查詢識別項。  這個限定詞永遠都會放置在兩個識別項之間，如下列範例中所示：  
   
- [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#27)]  
+ [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## 備註  
  命名空間別名限定詞可以是 `global`。  這會在全域命名空間中 \(而不是在別名命名空間中\) 叫用 \(Invoke\) 查詢。  

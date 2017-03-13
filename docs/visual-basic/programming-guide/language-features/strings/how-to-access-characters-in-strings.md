@@ -27,7 +27,7 @@ caps.handback.revision: 8
 ## 範例  
  有時候擁有字串中的字元，以及這些字元在字串中位置的資料是非常有用的。  您可以將字串想成是字元 \(`Char` 執行個體\) 的陣列。可以透過 <xref:System.String.Chars%2A> 屬性，參考該字元的索引來擷取特定字元。  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-access-characters_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
  <xref:System.String.Chars%2A> 屬性的 `index` 參數是以零起始。  
   

@@ -28,7 +28,7 @@ caps.handback.revision: 14
  使用者定義實值型別可多載 `!=` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  雖然針對預先定義的參考型別和使用者定義的參考型別，`!=` 的預設運作方法如上所述，但使用者定義的參考型別也可多載。  若多載 `!=`，則也必須多載 [\=\=](../../../csharp/language-reference/operators/equality-comparison-operator.md)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  
   
 ## 範例  
- [!code-cs[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#33)]  
+ [!code-cs[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

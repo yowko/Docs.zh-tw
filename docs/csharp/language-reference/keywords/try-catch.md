@@ -136,7 +136,7 @@ static void Main()
 ## <a name="example"></a>範例  
  在下列範例中，`try` 區塊包含可能會造成例外狀況的對 `ProcessString` 方法的呼叫。 `catch` 子句包含只會在螢幕上顯示訊息的例外狀況處理常式。 從 `MyMethod` 內呼叫 `throw` 陳述式時 ，系統會尋找 `catch` 陳述式，並顯示訊息 `Exception caught`。  
   
- [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>範例  
  在下列範例中，使用了兩個 catch 區塊，並會攔截會先出現的最特定例外狀況。  
@@ -145,7 +145,7 @@ static void Main()
   
  如果您先在範例中放置最特定的 catch 區塊，會出現下列錯誤訊息：`A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`。  
   
- [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_2.cs)]  
+ [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>範例  
  下列範例說明非同步方法的例外狀況處理。 若要擷取非同步工作擲回的例外狀況，請將 `await` 運算式放置在 `try` 區塊中，並攔截 `catch` 區塊中的例外狀況。  
@@ -154,14 +154,14 @@ static void Main()
   
  取消註解 `throw new OperationCancelledException` 行來示範取消非同步程序時會發生的情況。 工作的 `IsCanceled` 屬性設定為 `true`，並在 `catch` 區塊攔截例外狀況。 在不適用這個範例的部分情況下，工作的 `IsFaulted` 屬性會設定為 `true` 而 `IsCanceled` 設為 `false`。  
   
- [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_3.cs)]  
+ [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>範例  
  下列範例說明多項工作可能會導致多個例外狀況的例外狀況處理。 `try`區塊等候呼叫所傳回的工作<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>。 當套用所有項目的三項工作都完成時，工作即完成。  
   
  這三個工作都會造成例外狀況。 `catch`區塊逐一查看的例外狀況中找到`Exception.InnerExceptions`屬性所傳回之工作<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>。  
   
- [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_4.cs)]  
+ [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

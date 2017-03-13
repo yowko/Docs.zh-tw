@@ -84,11 +84,11 @@ Visual Basic 中的 XML IntelliSense，可提供 XML 結構描述中所定義項
   
 2.  在程式碼檔案開始處，針對目標 XML 命名空間加入 `Imports` 陳述式，如下列範例所示。  
   
-     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_1.vb)]  
+     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_1.vb)]  
   
      若要匯入 XML 命名空間做為預設命名空間，也就是套用至沒有命名空間前置字元之 XML 項目及屬性的命名空間，請加入目標預設 XML 命名空間的 `Imports` 陳述式。  不要指定命名空間前置字元。  下列是 `Imports` 陳述式的範例。  
   
-     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_2.vb)]  
+     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_2.vb)]  
   
 #### 若要針對專案中的所有檔案匯入 XML 命名空間  
   

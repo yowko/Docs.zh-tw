@@ -28,11 +28,11 @@ caps.handback.revision: 17
   
 1.  撰寫宣告，此宣告內含程式碼存取層級、`Enum` 關鍵字和有效名稱。  此範例建立 `Private` 列舉型別 `temperatureValues`。  
   
-     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#21)]  
+     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
   
 2.  定義列舉型別中的常數。  此範例建立 `Public` 列舉型別 `temperatureValues`，並指定它的值。  
   
-     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#1)]  
+     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
   
 ## 請參閱  
  [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

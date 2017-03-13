@@ -32,9 +32,9 @@ caps.handback.revision: 17
 ## 範例  
  在下列範例中，會使用不同型別的指標存取型別 `char` 的變數。  請注意，由於配置至變數的實體位置可能改變，因此 `theChar` 的位址在每次執行時都會不同。  
   
- [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#5)]  
+ [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#6)]  
+ [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
   **Value of theChar \= Z**   
 **Address of theChar \= 12F718**  

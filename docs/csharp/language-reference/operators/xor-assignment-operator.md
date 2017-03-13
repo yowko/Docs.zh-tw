@@ -38,7 +38,7 @@ x = x ^ y
  不可直接多載 ^\= 運算子，但使用者定義的型別可以多載 [^ 運算子](../../../csharp/language-reference/operators/xor-operator.md) \(請參閱 [運算子](../../../csharp/language-reference/keywords/operator.md)\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#23)]  
+ [!code-cs[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

@@ -70,9 +70,9 @@ Option Explicit { On | Off }
 ## 範例  
  下列範例會使用 `Option Explicit` 陳述式，強制明確宣告所有的變數。  嘗試使用未宣告的變數會在編譯時期引發錯誤。  
   
- [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-explicit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  
   
- [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-explicit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
   
 ## 請參閱  
  [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   

@@ -81,7 +81,7 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
      將下列程式碼加入至 `Load` 事件。  此程式碼會查詢公開 \(Expose\) 為資料內容之屬性的表格，並且決定結果的最小值和最大值。  這個範例會使用 `Aggregate` 子句查詢單一結果，並使用 `Group By` 子句顯示群組結果的平均值。  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form7.vb#14)]  
+     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
   
 4.  按下 F5 執行專案並檢視結果。  
   

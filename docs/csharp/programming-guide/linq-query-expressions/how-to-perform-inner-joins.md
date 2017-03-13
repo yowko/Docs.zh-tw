@@ -20,7 +20,7 @@ caps.handback.revision: 25
 ## 簡單索引鍵聯結範例  
  下列範例建立兩個集合，包含兩個使用者定義型別 \(`Person` 和 `Pet`\) 的物件。  查詢會在 C\# 中使用 `join` 子句比對 `Person` 物件與 `Pet` 物件 \(其 `Owner` 就是該 `Person`\)。  C\# 中的 `select` 子句會定義結果物件的外觀。  在這個範例中，結果物件是匿名型別，由擁有者的名字和寵物的名稱組成。  
   
- [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#1)]  
+ [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_1.cs)]  
   
  請注意，`LastName` 為 "Huff" 的 `Person` 物件不會顯示在結果集中，因為沒有 `Pet` 物件的 `Pet.Owner` 等於 `Person`。  
   
@@ -31,7 +31,7 @@ caps.handback.revision: 25
   
  下列範例使用 `Employee` 物件清單和 `Student` 物件清單，判斷哪位員工同時也是學生。  這些型別都有型別為 <xref:System.String> 的 `FirstName` 和 `LastName` 屬性。  根據每個清單項目建立聯結索引鍵的函式會傳回匿名型別，該型別是由每個項目的 `FirstName` 和 `LastName` 屬性組成。  聯結作業會比較這些複合索引鍵的相等性，並且傳回每個清單之物件的配對，其中名字和姓氏都是相符的。  
   
- [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#2)]  
+ [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_2.cs)]  
   
 ## 範例  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 25
   
  C\# 中的第二個 `join` 子句會根據由型別 `Person` 的 `Owner` 屬性和動物名稱的第一個字母組成的複合索引鍵，使第一個聯結傳回之匿名型別與所提供狗清單中的 `Dog` 物件相互關聯。  傳回包含每個相符配對之 `Cat.Name` 和 `Dog.Name` 屬性的匿名型別序列。  因為這是內部聯結，只會傳回在第二個資料來源中有相符項目之第一個資料來源中的物件。  
   
- [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#3)]  
+ [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_3.cs)]  
   
 ## 範例  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 25
   
  `query1` 的結果等同於使用 `join` 子句而不使用 `into` 子句執行內部聯結所取得的結果集。  `query2` 變數示範此同等查詢。  
   
- [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#4)]  
+ [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_4.cs)]  
   
 ## 編譯程式碼  
   

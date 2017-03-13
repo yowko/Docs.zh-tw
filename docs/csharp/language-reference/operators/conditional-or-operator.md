@@ -42,7 +42,7 @@ x | y
 ## 範例  
  在下列範例中，使用的 `||` 運算式只評估第一個運算元。  使用的運算式 `|`評估的兩個運算元。  在第二個範例中，則為，如果兩個運算元都評估為，則會產生執行階段例外狀況時發生。  
   
- [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#52)]  
+ [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

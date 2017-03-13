@@ -23,9 +23,9 @@ caps.handback.revision: 21
  這個範例使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字，可讓您在 `Copy` 方法中使用指標。  [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) 陳述式是用於宣告指向來源和目標陣列的指標。  這會「*固定*」\(Pin\) 來源和目的地陣列在記憶體中的位置，如此一來就不會因記憶體回收而移動。  陣列的記憶體區塊會在 `fixed` 區塊完成時解除固定狀態。  由於這個範例中的 `Copy` 方法使用 `unsafe` 關鍵字，因此必須使用 **\/unsafe** 編譯器選項進行編譯。  若要在 Visual Studio 中設定選項，以滑鼠右鍵按一下專案名稱，然後按一下 \[**屬性**\]。  在 \[**建置**\] 索引標籤上，選取 \[**容許 Unsafe 程式碼**\]。  
   
 ## 範例  
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_1.cs)]  
   
- [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#18)]  
+ [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_2.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

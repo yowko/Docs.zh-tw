@@ -28,7 +28,7 @@ caps.handback.revision: 18
 這個範例顯示如何使用屬性 \(Attribute\) 軸屬性 \(Property\)，依名稱存取 XML 項目中的 XML 屬性 \(Attribute\)。  具體而言，它會使用 `type` 屬性 \(Attribute\) 軸屬性 \(Property\) 來存取 `phone` 物件中名為 `type` 的屬性 \(Attribute\)。  
   
 ## 範例  
- [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-attrib_1.vb)]  
+ [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-attributes_1.vb)]  
   
 ## 請參閱  
  <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>   

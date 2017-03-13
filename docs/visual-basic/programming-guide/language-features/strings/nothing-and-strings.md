@@ -26,7 +26,7 @@ caps.handback.revision: 8
 ## Visual Basic 執行階段和 .NET Framework  
  參考下列範例：  
   
- [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/nothing-and-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 執行階段通常會將 `Nothing` 評估為空字串 \(""\)。  但 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] 則不會，並會在嘗試對 `Nothing` 執行字串作業時擲回例外狀況。  
   

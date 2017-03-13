@@ -45,15 +45,15 @@ caps.handback.revision: 18
   
 -   停用可終止程式執行的 [End \<keyword\> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) 關鍵字。  下列程式可在不使用 `/netcf` 的情況下編譯和執行，但使用 `/netcf` 時，會在編譯時期失敗。  
   
-     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
 -   所有形式的晚期繫結都會停用。  當遭遇到辨識出的晚期繫結案例時，就會產生編譯時期錯誤。  下列程式可在不使用 `/netcf` 的情況下編譯和執行，但使用 `/netcf` 時，會在編譯時期失敗。  
   
-     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
 -   停用 [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、[Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) 和 [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) 修飾詞 \(Modifier\)。  也會將 [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) 陳述式的語法修改成 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。  下列的程式碼將顯示出使用 `/netcf` 編譯的效果。  
   
-     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
 -   使用自 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 移除的 Visual Basic 6.0 關鍵字時，會在使用 `/netcf` 時產生不同的錯誤。  這會影響在下列關鍵字中所看到的錯誤訊息：  
   

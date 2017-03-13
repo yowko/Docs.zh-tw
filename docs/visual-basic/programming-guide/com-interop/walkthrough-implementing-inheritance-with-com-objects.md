@@ -103,15 +103,15 @@ caps.handback.revision: 16
   
 6.  將下列程式碼加到 `MathClass` 的上方以繼承自 COM 類別。  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#31)]  
+     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
 7.  將下列程式碼加入至 `MathClass` 以多載基底類別的公用方法：  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#32)]  
+     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
 8.  將下列程式碼加入至 `MathClass` 來擴充繼承類別：  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#33)]  
+     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
  新的類別會繼承 COM 物件中基底類別的屬性、多載方法並定義新的方法來擴充類別。  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 16
   
 2.  在按鈕的 `Click` 事件處理常式程序中加入下列程式碼，以建立 `MathClass` 的執行個體並呼叫多載方法：  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#34)]  
+     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  按 F5 執行專案。  
   

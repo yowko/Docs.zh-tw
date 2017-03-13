@@ -21,7 +21,7 @@ caps.handback.revision: 14
 ## 參考相等  
  參考相等意指兩個物件參考全都參考到同一個基礎物件。  這只要用簡單的指派就可以做到，如下列範例所示。  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/equality-comparisons_1.cs)]  
+ [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  此程式碼會建立兩個物件，但在指派陳述式後，兩個參考都參考到同一物件。  因此這兩個物件具有參考相等。  使用 <xref:System.Object.ReferenceEquals%2A> 方法即可判斷兩個參考是否參考到相同的物件。  
   

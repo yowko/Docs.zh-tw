@@ -33,15 +33,15 @@ caps.handback.revision: 19
 ## Const 陳述式的使用方式  
  `Const` 陳述式可以表示數學或日期\/時間數量。  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#10)]  
+ [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
   
  它也可以定義 `String` 常數：  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#13)]  
+ [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
   
  等號 \(`=`\) 右邊的運算式通常是個數字或常值字串，但也可以是產生數字或字串的運算式 \(雖然運算式無法包含函式呼叫\)。  您甚至可以根據之前定義的常數來定義新的常數：  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#15)]  
+ [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
   
 ## 使用者定義常數的範圍  
  `Const` 陳述式的範圍和在相同位置所宣告的變數範圍一樣。  您可以用下列任一方式指定範圍：  
@@ -59,8 +59,8 @@ caps.handback.revision: 19
 ### 避免循環參考  
  由於可以根據其他常數定義常數，因此可能會不小心在兩個或多個常數間建立「*循環*」\(Cycle\) 或循環參考。  當您有兩個或多個公用常數，而每個都是根據其他常數而定義時，便會發生循環，如下列範例所示：  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#16)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#17)]  
+ [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
+[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
  發生循環時，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會產生編譯器錯誤。  
   

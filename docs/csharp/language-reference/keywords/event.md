@@ -26,7 +26,7 @@ caps.handback.revision: 28
 ## 範例  
  下列範例會示範如何宣告及引發使用 <xref:System.EventHandler> 當做基礎委派型別的事件。  如需取得示範如何使用泛型 <xref:System.EventHandler%601> 委派型別，以及如何訂閱事件並建立事件處理常式方法的完整程式碼範例，請參閱 [如何：發行符合 .NET Framework 方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#7)]  
+ [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  事件是特殊種類的多點傳送委派，只能從宣告它們的類別或結構 \(Struct\) 內叫用 \(即 Publisher 類別\)。  如果其他類別或結構訂閱該事件，則當 Publisher 類別引發該事件時，會叫用它們的事件處理常式方法。  如需詳細資訊與程式碼範例，請參閱[事件](../../../csharp/programming-guide/events/index.md) 和[委派](../../../csharp/programming-guide/delegates/index.md)。  
   

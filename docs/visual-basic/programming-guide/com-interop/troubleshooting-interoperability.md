@@ -66,11 +66,11 @@ caps.handback.revision: 21
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> 建立 .NET Framework 類別的執行個體  
  一般來說，您可以使用 `New` 陳述式搭配類別名稱，來建立 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 類別的執行個體。  要以 Interop 組件表示 COM 類別則可使用 `New` 陳述式搭配介面來這麼做。  除非您使用了包含 `Inherits` 陳述式的 COM 類別，否則就可像使用類別一樣來使用介面。  下列程式碼會示範如何在具有 Microsoft ActiveX Data Objects 2.8 Library COM 物件之參考的專案中，建立 `Command` 物件：  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#20)]  
+ [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
  不過，如果您將 COM 類別當做衍生類別的基礎使用的話，您就必須使用代表 COM 類別的 Interop 類別，如下列程式碼所示：  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#21)]  
+ [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
   
 > [!NOTE]
 >  Interop 組件會隱含實作代表 COM 類別的介面。  您不應該嘗試使用 `Implements` 陳述式實作這些介面，否則將會產生錯誤。  
@@ -90,19 +90,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] 會要求您在使用其方法之前，一定要先建立 COM 物件的執行個體。  若要使用 [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] 中的這些方法，請宣告所需類別的變數，並使用 new 關鍵字，將物件指定給物件變數。  當您要確定是否只建立了一個類別執行個體時，可以使用 `Shared` 關鍵字。  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#23)]  
+ [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> 事件處理常式中未處理的錯誤  
  處理常式內部錯誤是 Interop 的常見問題之一，這些處理常式是用來處理 COM 物件引發的事件。  這種錯誤會被忽略，除非您使用 `On Error` 或 `Try...Catch...Finally` 陳述式特別檢查錯誤。  例如，下列範例是來自具有 Microsoft ActiveX Data Objects 2.8 Library COM 物件之參考的 [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] 專案。  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#24)]  
+ [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
   
  這個範例如預期的引發錯誤。  然而，如果您嘗試在不使用 `Try...Catch...Finally` 區塊的情況下使用相同範例，則會忽略這個錯誤，就像您使用 `OnError Resume Next` 陳述式一般。  若沒有錯誤處理，則除以零會無訊息地失敗。  因為這個錯誤永遠不會引發未處理的例外狀況錯誤，您必須在處理 COM 物件事件的事件處理常式中使用某種形式的例外狀況處理。  
   
 ### 認識 COM Interop 錯誤  
  若沒有處理錯誤，Interop 呼叫產生的錯誤通常只能提供少量的資訊。  當問題發生時，請盡可能使用結構化的錯誤處理方式，提供更多問題相關資訊。  這在偵錯應用程式時特別有用，  例如：  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#25)]  
+ [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
  您可以藉由檢查例外狀況物件的內容，找出錯誤描述、HRESULT 和 COM 錯誤來源之類的資訊。  
   
@@ -122,11 +122,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  如果您可以存取正在呼叫的程序，便可以使用 `ByVal` 關鍵字宣告接受 `ReadOnly` 屬性的參數，來防止這個錯誤的發生。  例如：  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#26)]  
+ [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
  如果您不具有被呼叫程序的來源程式碼的存取權限，您可以經由在呼叫程序外新增一組額外的括號，來強制用傳值的方式傳遞屬性。  例如，在具有 Microsoft ActiveX Data Objects 2.8 Library COM 物件之參考的專案中，可以使用：  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#27)]  
+ [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> 部署公開 Interop 的組件  
  部署公開 COM 介面的組件會引發一些特殊的問題。  例如，當個別的應用程式參考相同的 COM 組件時會發生潛在的問題。  當安裝了新版本的組件，而其他應用程式仍然使用舊版本的組件時，常會發生這種情況。  解除安裝共用 DLL 檔的組件時，會無意間造成其他組件無法使用該解除安裝的組件。  

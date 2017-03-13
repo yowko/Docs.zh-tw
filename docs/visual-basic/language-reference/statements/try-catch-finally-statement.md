@@ -123,7 +123,7 @@ End Try
   
  您不一定需要使用 `Try…Catch` 陳述式來檢查很可能發生的條件。  下列範例會在嘗試開啟檔案之前檢查檔案是否存在。  這會減少對 <xref:System.IO.File.OpenText%2A> 方法所擲回例外狀況進行快取的需要。  
   
- [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_1.vb)]  
+ [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_1.vb)]  
   
  確保 `Catch` 區塊中的程式碼可以將例外狀況正確報告給使用者，不論是透過安全執行緒記錄還是透過適當的訊息。  否則，例外狀況可能仍是未知。  
   
@@ -148,31 +148,31 @@ End Try
 ## 部分信任情況  
  在部分信任的情況下，例如裝載在網路共用的應用程式，`Try...Catch...Finally` 不會攔截在叫用包含呼叫的方法前所發生的安全性例外狀況。  當置於伺服器共用並予以執行時，下列範例會產生錯誤："System.Security.SecurityException: Request Failed"。如需安全性例外狀況的詳細資訊，請參閱 <xref:System.Security.SecurityException> 類別。  
   
- [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_2.vb)]  
+ [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_2.vb)]  
   
  在此種部分信任的情況下，您必須將 `Process.Start` 陳述式放在個別的 `Sub` 中。  對 `Sub` 進行的初始呼叫將會失敗。  這會使得包含 `Process.Start` 的 `Sub` 開始之前，且在產生安全性例外狀況之前，讓 `Try...Catch` 攔截到這項錯誤。  
   
 ## 範例  
  下列範例說明 `Try...Catch...Finally` 陳述式的結構。  
   
- [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_3.vb)]  
+ [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
   
 ## 範例  
  在下列範例中，`CreateException` 方法會擲回 `NullReferenceException`。  產生例外狀況的程式碼不在 `Try` 區塊中。  因此 `CreateException` 方法不會處理例外狀況。  由於對 `CreateException` 方法的呼叫是在 `Try` 區塊中進行的，因此`RunSample` 方法不會處理例外狀況。  
   
  範例包含許多例外狀況類型的 `Catch` 陳述式，這些例外狀況依序從最特殊的類型排列到最常見的類型。  
   
- [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_4.vb)]  
+ [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
   
 ## 範例  
  下列範例示範如何使用 `Catch When` 陳述式來篩選條件運算式。  如果條件運算式評估為 `True`，`Catch` 區塊中的程式碼就會執行。  
   
- [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_5.vb)]  
+ [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
   
 ## 範例  
  下列範例含有包含在 `Try` 區塊中的 `Try…Catch` 陳述式。  內部 `Catch` 區塊會擲回 `InnerException` 屬性設為原始例外狀況的例外狀況。  外部 `Catch` 區塊會報告本身的例外狀況及內部的例外狀況。  
   
- [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_6.vb)]  
+ [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
   
 ## 範例  
  下列範例說明例外狀況處理非同步方法的。  若要攔截適用於非同步工作所擲回的例外狀況， `Await` 運算式在呼叫端的 `Try` 區塊，，而且已在 `Catch` 區塊會攔截。  
@@ -181,14 +181,14 @@ End Try
   
  取消註解中時會發生何種 `Throw New OperationCancelledException` 線條，當您取消非同步處理序。  例外狀況會在 `Catch` 區塊攔截，，和 `IsCanceled` 屬性設定為 `True`。  在某些情況下，不過這並不適用這個範例， `IsFaulted` 設為 `True` ，並 `IsCanceled` 設為 `False`。  
   
- [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/visualbasic/try-catch-finally-statem_7.vb)]  
+ [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
   
 ## 範例  
  下列範例說明例外狀況處理多項工作可能會導致多個例外狀況的位置。  `Try` 區塊有 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 傳回的工作 `Await` 運算式。  工作完成時， <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 套用時的三項工作已完成。  
   
  三個工作原因中每一個例外狀況。  `Catch` 區塊傳遞例外狀況，逐一查看工作中的 `Exception.InnerExceptions` 屬性中 `Task.WhenAll` 傳回。  
   
- [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/visualbasic/try-catch-finally-statem_8.vb)]  
+ [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Information.Err%2A>   

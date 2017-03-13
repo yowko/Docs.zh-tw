@@ -8,7 +8,7 @@ caps.handback.revision: 6
 ## 範例  
  這個查詢會建立群組聯結，並接著根據仍在範圍中的分類項目來排序這些群組。  在匿名型別初始設定式內，子查詢 \(Subquery\) 會排序產品序列中的所有相符項目。  
   
- [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#81)]  
+ [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-order-the-results-of-a-join-clause_1.cs)]  
   
 ## 編譯程式碼  
   

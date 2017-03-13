@@ -43,7 +43,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例會同時說明強制繼承和強制覆寫。  基底類別 `shape` 會定義變數 `acrossLine`。  類別 `circle` 和 `square` 衍生自 `shape`。  它們會繼承 `acrossLine` 的定義，但其必須定義函式 `area`，因為每種圖案都有不同的計算。  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/visualbasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
  您可以將 `shape1` 和 `shape2` 宣告成型別 `shape`。  然而，您無法從 `shape` 建立物件，因為它缺少函式 `area` 的功能，並已標記 `MustInherit`。  
   

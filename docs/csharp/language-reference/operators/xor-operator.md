@@ -25,7 +25,7 @@ caps.handback.revision: 19
  使用者定義型別可多載 `^` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  
   
 ## 範例  
- [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#30)]  
+ [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]  
   
  前一個範例中的 `0xf8 ^ 0x3f` 運算會執行下列兩個二進位值的 Exclusive\-OR 位元 \(Bitwise\)，這兩個值分對應 16 進位的 F8 與 3F：  
   

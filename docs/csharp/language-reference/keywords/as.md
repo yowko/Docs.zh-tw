@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # as (C# 參考)
 您可以使用 `as` 運算子執行轉換的某些型別在相容的參考型別或 [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)的。  下列程式碼示範一個範例。  
   
- [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#1)]  
+ [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_1.cs)]  
   
 ## 備註  
  `as` 運算子就像是轉型作業。  不過，，如果無法轉換的 `as` 傳回 `null` ，而不會引發例外狀況。  參考下列範例：  
@@ -40,7 +40,7 @@ expression is type ? (type)expression : (type)null
  請注意 `as` 運算子執行只參考轉換、可轉換及 Boxing 轉換。  `as` 運算子無法執行其他轉換方式，例如使用者定義的轉換，應該執行使用 cast 運算式。  
   
 ## 範例  
- [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#2)]  
+ [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

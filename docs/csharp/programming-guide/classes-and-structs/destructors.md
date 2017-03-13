@@ -34,7 +34,7 @@ caps.handback.revision: 24
   
  例如，下列是 `Car` 類別之解構函式的宣告：  
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
   
  解構函式會隱含呼叫物件之基底類別 \(Base Class\) 上的 <xref:System.Object.Finalize%2A>。  因此，前述的解構函式程式碼會隱含地轉譯為下列程式碼：  
   
@@ -78,7 +78,7 @@ protected override void Finalize()
 ## 範例  
  下列範例建立三個形成繼承鏈結的類別。  `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。  三個類別都有解構函式。  在 `Main()` 中，會建立衍生最多之類別的執行個體。  當程式執行時，請注意，將會依照從衍生最多的到衍生最少的順序，自動呼叫三個類別的解構函式。  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

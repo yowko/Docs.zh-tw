@@ -36,7 +36,7 @@ caps.handback.revision: 32
   
  以下範例示範如何指定型別和成員上的存取修飾詞：  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_1.cs)]  
+ [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  並非所有存取修飾詞在任何情況下都可供所有型別或成員使用，而且在某些情況下，型別成員的存取範圍會受到其包含型別的存取範圍限制。  以下章節提供更多關於存取範圍的詳細資訊。  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 32
   
  若要設定類別或結構成員的存取層級，請將適當的關鍵字加入至成員宣告中，如下列範例中所示。  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_2.cs)]  
+ [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
 >  protected internal 存取範圍層級的意義是 protected 或 internal，而不是 protected 且 internal。  換句話說，可以從相同組件中的任何類別存取受保護的內部成員，包括衍生類別。  若要將存取範圍限制為僅在相同組件中的衍生類別，請將類別本身宣告為 internal，並且將其成員宣告為 protected。  

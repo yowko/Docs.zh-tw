@@ -31,7 +31,7 @@ select student.ID;
 ## 範例  
  下列範例顯示如何使用匿名型別只傳回每個來源項目屬性的子集，該項目符合特定條件。  
   
- [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#31)]  
+ [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
   
  請注意，如果未指定名稱，匿名型別會針對來源項目的屬性使用其名稱。  若要給予匿名型別中的屬性新名稱，請寫入如下的 `select` 陳述式：  
   

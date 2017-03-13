@@ -37,7 +37,7 @@ caps.handback.revision: 38
   
  下列範例顯示如何以 C\# 表示上圖中示範的類別關聯性 \(Relationship\)。  這個範例也會顯示 `WorkItem` 如何覆寫虛擬方法 <xref:System.Object.ToString%2A?displayProperty=fullName> 以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作 \(Implementation\)。  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/inheritance_1.cs)]  
+ [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## 抽象和虛擬方法  
  當基底類別宣告方法為[虛擬](../../../csharp/language-reference/keywords/virtual.md)時，衍生類別可以用它自己的實作[覆寫](../../../csharp/language-reference/keywords/override.md)方法。  如果基底類別宣告成員為[抽象](../../../csharp/language-reference/keywords/abstract.md)，則在所有直接繼承自該類別的非抽象類別中，都必須覆寫該方法。  如果衍生類別本身就是抽象的，則會繼承抽象成員，不需進行實作。  抽象和虛擬成員是多型 \(Polymorphism\) 的基礎，多型是物件導向程式設計的第二個主要特性。  如需詳細資訊，請參閱 [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  

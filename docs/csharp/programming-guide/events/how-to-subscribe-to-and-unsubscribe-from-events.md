@@ -30,7 +30,7 @@ caps.handback.revision: 15
   
      [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] 會建立空白的事件處理常式方法，並將其加入程式碼中。  您也可以在 \[**程式碼**\] 檢視中手動加入程式碼。  例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-subscribe-to-and-_1.cs)]  
+     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      訂閱此事件所需的程式碼行也會在專案內的 Form1.Designer.cs 檔案中，於 `InitializeComponent` 方法內自動產生。  看起來像這樣：  
   

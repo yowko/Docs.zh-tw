@@ -66,14 +66,14 @@ result = expression1 OrElse expression2
 ## 範例  
  下列範例會使用 `OrElse` 運算子，對兩個運算式執行邏輯分離。  結果是代表兩個運算式的任一項是否為 True 的 `Boolean` 值。  如果第一個運算式為 `True`，則不評估第二個運算式。  
   
- [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/orelse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_1.vb)]  
   
  前一個範例分別產生 `True`、`True` 和 `False` 的結果。  在計算 `firstCheck` 時，不會評估第二個運算式，因為第一個運算式已經為 `True`。  不過，在計算 `secondCheck` 時會評估第二個運算式。  
   
 ## 範例  
  下列範例顯示包含兩個程序呼叫的 `If`...`Then` 陳述式。  如果第一個呼叫傳回 `True`，就不會呼叫第二個程序。  如果第二個程序執行了當這個程式碼區段執行時應一律執行的重要工作，這可能會產生無法預期的結果。  
   
- [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/orelse-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
   
 ## 請參閱  
  [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   

@@ -29,7 +29,7 @@ caps.handback.revision: 17
 >  這個範例中所用的檔案是在主題中 [如何：寫入文字檔](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)建立。  
   
 ## 範例  
- [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#4)]  
+ [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
 ## 編譯程式碼  
  將程式碼複製並貼至 C\# 主控台應用程式。  

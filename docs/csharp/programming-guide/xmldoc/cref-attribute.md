@@ -21,7 +21,7 @@ XML 文件標籤中的 `cref` 屬性 \(Attribute\) 意指「程式碼參考」�
 ## 範例  
  下列範例顯示使用於 [\<see\>](../../../csharp/programming-guide/xmldoc/see.md) 標記中的 `cref` 屬性。  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/cref-attribute_1.cs)]  
+ [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
  編譯之後，程式會產生下列 XML 檔案。  請注意，舉例來說，編譯器已將 `GetZero` 方法的`cref`屬性轉換為 `"M:TestNamespace.TestClass.GetZero"`。  "M:" 前置詞意指「方法」，而且是文件工具 \(例如，Sandcastle\) 所能辨識的慣例。  如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
   

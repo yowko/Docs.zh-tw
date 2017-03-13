@@ -19,7 +19,7 @@ caps.handback.revision: 18
 # 使用具名和匿名方法委派的比較 (C# 程式設計手冊)
 [delegate](../../../csharp/language-reference/keywords/delegate.md) 可以與具名方法產生關聯。  當您使用具名方法執行個體化委派時，方法會當做參數傳遞，例如：  
   
- [!code-cs[csProgGuideDelegates#1](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#1)]  
+ [!code-cs[csProgGuideDelegates#1](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_1.cs)]  
   
  這會使用具名方法呼叫。  使用具名方法建構的委派可封裝[靜態](../../../csharp/language-reference/keywords/static.md)方法或執行個體方法 \(Instance Method\)。  在舊版 C\# 中，要執行個體化委派只能使用具名方法。  不過，如果建立新方法會產生額外不必要的負荷，C\# 可讓您執行個體化委派，並立即指定呼叫委派時會處理的程式碼區塊。  區塊可以包含 Lambda 運算式或匿名方法。  如需詳細資訊，請參閱 [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
@@ -33,12 +33,12 @@ caps.handback.revision: 18
 ## 範例 1  
  下列是宣告和使用委派的簡單範例。  請注意，委派 `Del` 與關聯方法 `MultiplyNumbers` 擁有相同的簽章。  
   
- [!code-cs[csProgGuideDelegates#2](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#2)]  
+ [!code-cs[csProgGuideDelegates#2](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_2.cs)]  
   
 ## 範例 2  
  在下列範例裡，一個委派會同時對應到靜態和執行個體方法，並傳回兩者各自回傳的資訊。  
   
- [!code-cs[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#3)]  
+ [!code-cs[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

@@ -38,7 +38,7 @@ class Employee
 ## 範例  
  在這個範例中，`Employee` 類別包含兩個私用資料成員：`name` 和 `salary`。  做為私用成員，它們只能夠由成員方法加以存取。  因此會加入名為 `GetName` 和 `Salary` 的公用方法，以允許對這些私用成員的控制存取。  `name` 成員是透過公用方法存取，`salary` 成員則是透過公用唯讀屬性存取   \(如需詳細資訊，請參閱 [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)\)。  
   
- [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#10)]  
+ [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

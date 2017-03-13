@@ -8,14 +8,14 @@ caps.handback.revision: 6
 ## 範例  
  您可以用防禦方式來撰寫程式碼，以避免發生下列範例中所示的 null 參考例外狀況 \(Exception\)：  
   
- [!code-cs[csProgGuideLINQ#82](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#82)]  
+ [!code-cs[csProgGuideLINQ#82](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-null-values-in-query-expressions_1.cs)]  
   
  在上述範例中，`where` 子句會篩選掉分類序列 \(Sequence\) 中的所有 null 項目。  這項技巧與 join 子句中的 null 檢查無關。  在此範例中具有 null 值的條件運算式可以運作，因為 `Products.CategoryID` 的型別為 `int?`，而這是 `Nullable<int>` 的簡略表示法。  
   
 ## 範例  
  在 join 子句中，如果只有一個比較索引鍵是可為 Null 的實值型別，您就可以在查詢運算式中將另一個索引鍵轉型成可為 Null 的型別。  在下列範例中，假設 `EmployeeID` 是包含 `int?` 型別之值的資料行：  
   
- [!code-cs[csProgGuideLINQ#83](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#83)]  
+ [!code-cs[csProgGuideLINQ#83](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-null-values-in-query-expressions_2.cs)]  
   
 ## 請參閱  
  <xref:System.Nullable%601>   

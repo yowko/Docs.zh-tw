@@ -38,7 +38,7 @@ caps.handback.revision: 11
 ## 型別推斷  
  您可以呼叫泛型程序，但不提供任何型別引數。  如果您用這種方式呼叫，編譯器 \(Compiler\) 就會嘗試判斷適當的資料型別，以傳遞至程序的型別引數。  這就稱為「*型別推斷*」\(Type Inference\)。  下列程式碼將示範一則呼叫，其中編譯器會推斷出它應該傳遞型別 `String` 至型別參數 `t`。  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
  如果編譯器無法從呼叫的內容推斷型別引數，它就會回報錯誤。  發生這類錯誤的其中一個可能原因是陣列陣序不符。  例如，假設您將一般參數定義為型別參數的陣列。  如果您呼叫提供不同陣序 \(維度數目\) 之陣列的泛型程序，則此不符就會導致型別參考失敗。  下列程式碼將示範一則呼叫，其中二維陣列會傳遞至預期一維陣列的程序。  
   
@@ -64,14 +64,14 @@ caps.handback.revision: 11
  下列範例會定義泛型 `Function` 程序，以便找出陣列中的特定元素。  它會定義一個型別參數並使用此參數在參數清單中建構兩個參數。  
   
 ### 程式碼  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### 註解  
  上述範例需要能夠根據 `searchArray` 的每個元素比較 `searchValue`。  為了確保這項能力，它會約束型別參數 `T` 必須實作 <xref:System.IComparable%601> 介面。  此程式碼會使用 <xref:System.IComparable%601.CompareTo%2A> 方法而非 `=` 運算子，因為無法保證提供給 `T` 的型別引數可支援 `=` 運算子。  
   
  您可以使用下列程式碼測試 `findElement` 程序。  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
  上述對 `MsgBox` 的呼叫會分別顯示 "0"、"1" 和 "\-1"。  
   

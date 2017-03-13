@@ -34,7 +34,7 @@ caps.handback.revision: 18
   
 1.  將下列程式碼置於 `Form1` 中：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#4)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
   
      `WithEvents` 關鍵字指定使用變數 `mWidget` 來處理物件的事件。  藉由提供即將建立之物件的類別名稱，您可以指定物件類型。  
   
@@ -56,13 +56,13 @@ caps.handback.revision: 18
   
 3.  將下列程式碼加入至 `mWidget_PercentDone` 事件處理常式：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#5)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
      每次引發 `PercentDone` 事件時，事件程序就會在 `Label` 控制項中顯示完成百分比。  `DoEvents` 方法允許重新繪製標籤，並且還提供機會讓使用者按一下 \[**取消**\] 按鈕。  
   
 4.  將下列程式碼加入 `Button2_Click` 事件處理常式：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#6)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
   
  如果使用者在 `LongTask` 執行時按一下 \[**取消**\] 按鈕，一旦 `DoEvents` 陳述式允許發生事件處理，就會執行 `Button2_Click` 事件。  將類別層級變數 `mblnCancel` 設為 `True`，然後 `mWidget_PercentDone` 事件會進行測試，並將 `ByRef Cancel` 引數設為 `True`。  
   
@@ -79,7 +79,7 @@ caps.handback.revision: 18
   
 3.  將下列程式碼加入 `Form1_Load` 事件程序，即可建立 `Widget`：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#7)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
  在執行這個程式碼時，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會建立 `Widget` 物件，並將它的事件連接到與 `mWidget` 相關聯的事件程序。  從此以後，每當 `Widget` 引發它的 `PercentDone` 事件時，就會執行 `mWidget_PercentDone` 事件程序。  
   
@@ -87,7 +87,7 @@ caps.handback.revision: 18
   
 -   將下列程式碼加入至 `Button1_Click` 事件處理常式：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#8)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
  在呼叫 `LongTask` 方法之前，必須先初始化顯示完成百分比的標籤，而且用於取消方法的類別層級 `Boolean` 旗標必須設為 `False`。  
   
@@ -116,7 +116,7 @@ caps.handback.revision: 18
   
 -   將下一行的程式碼加入 `Button1_Click` 程序中，而且要放在 `mWidget.LongTask(12.2, 0.33)` 的前一行：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#9)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
   
  上述程式碼會在每次按一下按鈕時建立新的 `Widget`。  一旦 `LongTask` 方法完成後，就會釋放 `Widget` 的參考，然後終結 `Widget`。  
   

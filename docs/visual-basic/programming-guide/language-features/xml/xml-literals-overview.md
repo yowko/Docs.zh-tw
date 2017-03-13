@@ -36,11 +36,11 @@ caps.handback.revision: 27
 ## 簡單常值  
  您可以在 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 程式碼中建立 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] 物件，只需輸入或貼上有效的 XML 即可。  XML 項目常值會傳回 <xref:System.Xml.Linq.XElement> 物件。  如需詳細資訊，請參閱 [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)和 [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  下列範例會建立具有數個子項目的 XML 項目。  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
  您可以從 `<?xml version="1.0"?>` 開始建立 XML 常值，即可建立 XML 文件，如下列範例所示。  XML 文件常值會傳回 <xref:System.Xml.Linq.XDocument> 物件。  如需詳細資訊，請參閱 [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)。  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
 >  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中的 XML 常值語法與 XML 1.0 規格中的語法不盡相同。  如需詳細資訊，請參閱 [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
@@ -57,12 +57,12 @@ caps.handback.revision: 27
   
  例如，下列程式碼使用內嵌查詢，從 `phoneNumbers2` 陣列的成員建立 XML 項目，然後再將這些項目加入成為 `contact2` 的子系。  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
 ## 編譯器如何從 XML 常值建立物件  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 編譯器會將 XML 常值轉譯為對對等 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] 建構函式的呼叫，以建置 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] 物件。  例如，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 編譯器會將下列程式碼範例轉譯為呼叫 <xref:System.Xml.Linq.XProcessingInstruction> 建構函式以建置 XML 版本指示、呼叫 <xref:System.Xml.Linq.XElement> 建構函式以建置 `<contact>`、`<name>` 和 `<phone>`，以及呼叫 <xref:System.Xml.Linq.XAttribute> 建構函式以建置 `type` 屬性。  更精確地說，以下列範例中提供的屬性而言，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 編譯器會呼叫 <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> 建構函式兩次。  第一次呼叫會傳遞 `type` 值做為 `name` 參數，並傳遞 `home` 值做為 `value` 參數。  第二次呼叫同樣會傳遞 `type` 值做為 `name` 參數，但會傳遞 `work` 值做為 `value` 參數。  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 ## 請參閱  
  <xref:System.Xml.Linq.XElement>   

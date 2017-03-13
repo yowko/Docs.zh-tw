@@ -72,7 +72,7 @@ caps.handback.revision: 14
 ## 範例  
  下列範例會使用 `–` 運算子，來計算和傳回兩個數字間的差異，然後反轉數字的正負號。  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
   
  遵循這些陳述式的執行，`binaryResult` 會包含 124.45，`unaryResult` 則包含 –334.90。  
   

@@ -54,7 +54,7 @@ Windows API 是屬於 Windows 作業系統一部分的動態連結程式庫 \(DL
   
 4.  將下列 `Declare` 函式加入至要在其中使用 DLL 的類別或模組：  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#9)]  
+     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
   
 ### Declare 陳述式的組成部分  
  `Declare` 陳述式包含下列項目。  
@@ -88,7 +88,7 @@ Windows API 是屬於 Windows 作業系統一部分的動態連結程式庫 \(DL
   
 3.  在類別或模組中加入對等的 `Const` 陳述式，以便讓您的應用程式可使用這些常數。  例如：  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#11)]  
+     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
 ###### 若要呼叫 DLL 程序  
   
@@ -96,7 +96,7 @@ Windows API 是屬於 Windows 作業系統一部分的動態連結程式庫 \(DL
   
 2.  在剛加入按鈕的 `Click` 事件處理常式中加入程式碼，以呼叫程序並提供適當引數：  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#12)]  
+     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
   
 3.  按 F5 執行專案。  接著會顯示包含 \[**是**\] 和 \[**否**\] 回應按鈕的訊息方塊。  按一下其中一個按鈕。  
   
@@ -109,11 +109,11 @@ Windows API 是屬於 Windows 作業系統一部分的動態連結程式庫 \(DL
   
 2.  為了簡化存取 `MarshalAs` 屬性，將 `Imports` 陳述式加到類別或模組的程式碼上方，如下列範例所示：  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 3.  將匯入函式的函式原型加入至所使用的類別或模組，接著將 `MarshalAs` 屬性套用至參數或傳回值。  在下列範例中，API 呼叫預期會將 `void*` 型別封送處理為 `AsAny`：  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#14)]  
+     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## 使用 DllImport 的 API 呼叫  
  `DllImport` 屬性會提供第二種方法，來呼叫沒有型別程式庫之 DLL 中的函式。  `DllImport` 大致上等於使用 `Declare` 陳述式，但會對呼叫函式的方式提供較多的控制。  
@@ -132,23 +132,23 @@ Windows API 是屬於 Windows 作業系統一部分的動態連結程式庫 \(DL
   
 5.  為了簡化存取 `DllImport`，將 `Imports` 陳述式加入至啟動表單類別的程式碼上方：  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 6.  在表單的 `End Class` 陳述式之前宣告空函式，並將函式命名為 `MoveFile`。  
   
 7.  將 `Public` 和 `Shared` 修飾詞套用至函式宣告，並根據 Windows API 函式使用的引數設定 `MoveFile` 的參數：  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#16)]  
+     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
   
      您的函式可有任何有效的程序名稱，`DllImport` 屬性會在 DLL 中指定名稱。  它也會處理參數和傳回值的互通性封送處理，因此您可選擇與 API 所使用資料型別類似的 Visual Studio 資料型別。  
   
 8.  將 `DllImport` 屬性套用至空函式。  第一個參數是包含要呼叫函式之 DLL 的名稱和位置。  您不需要為位於 Windows 系統目錄中的檔案指定路徑。  第二個參數是指定 Windows API 中函式名稱的具名引數。  在這個範例中，`DllImport` 屬性會強制將 `MoveFile` 的呼叫轉送至 KERNEL32.DLL 中的 `MoveFileW`。  `MoveFileW` 方法可將檔案從路徑 `src` 複製到路徑 `dst`。  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#17)]  
+     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
   
 9. 將程式碼加入至 `Button2_Click` 事件處理常式來呼叫函式：  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#18)]  
+     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
   
 10. 建立名為 Test.txt 的檔案，並將其置於硬碟上的 C:\\Tmp 目錄中。  視需要建立 Tmp 目錄。  
   

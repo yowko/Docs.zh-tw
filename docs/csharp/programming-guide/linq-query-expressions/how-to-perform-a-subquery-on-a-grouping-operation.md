@@ -10,7 +10,7 @@ caps.handback.revision: 15
  如需接續的詳細資訊，請參閱 [into](../../../csharp/language-reference/keywords/into.md)。  下列範例使用記憶體中資料結構做為資料來源，但是相同的原則適用任何種類的 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 資料來源。  
   
 ## 範例  
- [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#23)]  
+ [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
   
 ## 編譯程式碼  
  這個範例內含在 [如何：查詢物件集合](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) 中的範例應用程式中所定義的物件之參考。  若要編譯和執行這個方法，請將方法貼上至該應用程式中的 `StudentClass` 類別，並加入來自 `Main` 方法的呼叫。  

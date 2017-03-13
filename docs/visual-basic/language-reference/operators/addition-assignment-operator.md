@@ -60,9 +60,9 @@ variableorproperty += expression
 ## 範例  
  下列範例使用 `+=` 運算子，將一個變數的值與另一個變數值結合。  第一個部分搭配使用 `+=` 與數值變數，將一個值加入至其他值。  第二個部分搭配使用 `+=` 與 `String` 變數來串連某個值與其他值。  在這兩個範例中，所得結果都會指派給第一個變數。  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
   
  `num1` 值目前為 13，`str1` 值目前則是 103。  
   

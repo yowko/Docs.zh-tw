@@ -82,7 +82,7 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
      將下列程式碼加入至 `Load` 事件，以查詢公開 \(Expose\) 為 <xref:System.Data.Linq.DataContext> 之屬性的表格，並計數、加總以及平均結果。  這個範例會使用 `Aggregate` 子句查詢單一結果，並使用 `Group By` 子句顯示群組結果的平均值。  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form6.vb#13)]  
+     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
   
 4.  按下 F5 執行專案並檢視結果。  
   

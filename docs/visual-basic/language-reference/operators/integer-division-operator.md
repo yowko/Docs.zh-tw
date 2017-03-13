@@ -73,7 +73,7 @@ expression1 \ expression2
 ## 範例  
  下列範例使用 `\` 運算子來執行整數除法。  結果是代表兩個運算元之整數商數的整數 \(捨棄餘數\)。  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
  上述範例中的運算式會分別傳回值 2、3、33 和 \-22。  
   

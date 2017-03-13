@@ -22,15 +22,15 @@ caps.handback.revision: 31
   
  基本上，建立匿名方法是將程式碼區塊當做委派參數傳遞的一種方式。  以下為兩個範例：  
   
- [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#6)]  
+ [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#5)]  
+ [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
  在使用匿名方法時，因為不需要建立個別的方法，所以您可以減少在具現化委派時所需要另外撰寫的程式碼。  
   
  例如，當需要建立似乎不太有必要的方法時，就可以指定程式碼區塊來替代委派。  啟動新執行緒時就是個好例子。  這個類別會建立執行緒，並會包含執行緒所執行的程式碼，而不需要為委派建立額外方法。  
   
- [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#7)]  
+ [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
 ## 備註  
  匿名方法之參數的範圍就是 *anonymous\-method\-block*。  
@@ -39,7 +39,7 @@ caps.handback.revision: 31
   
  若區域變數和參數的範圍包含匿名方法宣告，這些變數和參數便稱為匿名方法的 *outer* 變數。  例如，在下面一段程式碼中，`n` 即為外部變數：  
   
- [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#8)]  
+ [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
  外部變數的參考`n`即為*擷取*委派建立時。  與區域變數不同的是擷取變數的存留期會延伸直到參考匿名方法的委派可進行記憶體回收為止。  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 31
   
  該委派被叫用 \(Invoke\) 時都會顯示訊息。  
   
- [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#4)]  
+ [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

@@ -63,12 +63,12 @@ Inherits basetypenames
 ## 範例  
  下列範例會使用 `Inherits` 陳述式顯示名為 `thisClass` 的類別如何繼承名為 `anotherClass` 之基底類別的所有成員。  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
 ## 範例  
  下列範例會顯示多個介面的繼承。  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
  名為 `thisInterface` 的介面現在包含 <xref:System.IComparable>、<xref:System.IDisposable> 和 <xref:System.IFormattable> 介面中的所有定義。繼承的成員分別提供兩個物件的型別特有比較、釋放所配置的資源，以及以 `String` 表示物件的值。  實作 `thisInterface` 的類別必須實作每個基底介面的每個成員。  
   

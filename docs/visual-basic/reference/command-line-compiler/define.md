@@ -58,7 +58,7 @@ caps.handback.revision: 15
 ## 範例  
  下列程式碼會定義然後使用兩個條件式編譯器常數。  
   
- [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
   
 ## 請參閱  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

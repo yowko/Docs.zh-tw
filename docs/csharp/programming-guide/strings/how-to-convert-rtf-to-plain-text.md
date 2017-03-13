@@ -37,7 +37,7 @@ These characters are from the extended ASCII character set (Windows code page 12
   
 ```  
   
- [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#33)]  
+ [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-rtf-to-plain-text_1.cs)]  
   
  RTF 字元以八個位元來編碼，  不過，刪除指定的字碼頁，的延伸 ASCII 字元以外的使用者可以指定 Unicode 字元。  因為 <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> 屬性的型別是 [string](../../../csharp/language-reference/keywords/string.md)，因此會以 Unicode UTF\-16 來編碼字元。  原始碼 RTF 文件的任何延伸 ASCII 字元和 Unicode 字元在文字輸出中都可以正確編碼。  
   

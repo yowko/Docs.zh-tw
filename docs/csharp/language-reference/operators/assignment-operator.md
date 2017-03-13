@@ -24,7 +24,7 @@ caps.handback.revision: 14
  指派運算子不可被多載。  不過，您可以定義型別的隱含轉換運算子，如此可以讓您在這些型別中使用指派運算子。  如需詳細資訊，請參閱 [使用轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)。  
   
 ## 範例  
- [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#49)]  
+ [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

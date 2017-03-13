@@ -56,7 +56,7 @@ public int this [int index]   // Indexer declaration
  請注意，在評估索引子的存取時 \(例如，使用 `Console.Write` 陳述式\)，會叫用 [get](../../../csharp/language-reference/keywords/get.md) 存取子。  因此，如果沒有 `get` 存取子，便會發生編譯時期錯誤。  
   
 ### 程式碼  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_1.cs)]  
+ [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## 使用其他的值進行索引  
  C\# 並未將索引型別限制為整數。  例如，搭配索引子使用字串可能非常有用。  藉由在集合中搜尋字串，並傳回適當的值，即可實作這類的索引子。  存取子可以多載，因此字串和整數版本可以同時存在。  
@@ -67,7 +67,7 @@ public int this [int index]   // Indexer declaration
  在此範例中，會宣告儲存一週中每天的類別。  宣告的 `get` 存取子取得一個字串，也就是一天的名稱，並傳回對應的整數。  例如，Sunday \(星期日\) 會傳回 0，Monday \(星期一\) 會傳回 1，其他依此類推。  
   
 ### 程式碼  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_2.cs)]  
+ [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## 健全的程式設計  
  有兩種主要方式能夠改進索引子的安全性和可靠性：  

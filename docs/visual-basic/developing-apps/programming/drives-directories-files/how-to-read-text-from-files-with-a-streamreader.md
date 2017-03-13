@@ -30,7 +30,7 @@ caps.handback.revision: 18
   
 -   使用 `OpenTextFileReader` 方法，開啟 <xref:System.IO.TextReader> \(其中已指定檔案\)。  此範例會開啟名為 `testfile.txt` 的檔案、讀取該檔案中的行，然後在訊息方塊中顯示該行。  
   
-     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-text-from-fi_1.vb)]  
+     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
   
 ## 穩固程式設計  
  讀取的檔案必須是文字檔。  

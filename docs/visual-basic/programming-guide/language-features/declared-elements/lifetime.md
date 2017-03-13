@@ -67,7 +67,7 @@ caps.handback.revision: 14
  下列範例是使用 [Static](../../../../visual-basic/language-reference/modifiers/static.md) 關鍵字的變數宣告。  \(請注意，當 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) 使用如 `Static` 的修飾詞時，不需使用 `Dim` 關鍵字\)。  
   
 ### 程式碼  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/visualbasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
 ### 註解  
  在前述範例中，在程序 `runningTotal` 傳回呼叫程式碼後，變數 `applesSold` 仍會繼續存在。  下次呼叫 `runningTotal` 時，`applesSold` 會保留之前的計算值。  

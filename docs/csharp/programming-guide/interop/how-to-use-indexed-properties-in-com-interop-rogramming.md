@@ -22,29 +22,29 @@ caps.handback.revision: 20
   
  在舊版的 C\# 中，只有在 `get` 方法沒有參數而且 `set` 方法僅有一個值參數時，才可以像屬性一樣存取方法。  不過，並非所有 COM 屬性都符合這些限制。  例如，Excel [Range](http://go.microsoft.com/fwlink/?LinkId=166053) 屬性具有的 `get` 存取子需要範圍名稱的參數。  在過去，您因為無法直接存取 `Range` 屬性，而必須改用 `get_Range` 方法 \(如下列範例所示\)。  
   
- [!code-cs[csProgGuideIndexedProperties#1](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#1)]  
+ [!code-cs[csProgGuideIndexedProperties#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_1.cs)]  
   
  但是，索引的屬性可讓您撰寫下列程式碼：  
   
- [!code-cs[csProgGuideIndexedProperties#2](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#2)]  
+ [!code-cs[csProgGuideIndexedProperties#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_2.cs)]  
   
 > [!NOTE]
 >  上述範例也用到[選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)功能 \(Visual C\# 2010 引入的新功能\)，可讓您省略 `Type.Missing`。  
   
  同樣地，若要在 Visual C\# 2008 和較舊版本中設定 [Range](http://go.microsoft.com/fwlink/?LinkId=179211) 物件的 `Value` 屬性，則需要兩個引數。  一個提供引數給用於指定範圍值型別的選擇性參數。  另一個則提供 `Value` 屬性的值。  在 Visual C\# 2010 以前，C\# 只允許一個引數。  因此，您不能使用一般 set 方法，而必須使用 `set_Value` 方法或不同的屬性 [Value2](http://go.microsoft.com/fwlink/?LinkId=166050)。  下列範例將說明這些技巧。  兩個方法都會將 A1 儲存格的值設為 `Name`。  
   
- [!code-cs[csProgGuideIndexedProperties#3](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#3)]  
+ [!code-cs[csProgGuideIndexedProperties#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_3.cs)]  
   
  但是，索引的屬性可讓您撰寫下列程式碼。  
   
- [!code-cs[csProgGuideIndexedProperties#4](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#4)]  
+ [!code-cs[csProgGuideIndexedProperties#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_4.cs)]  
   
  您不能建立自己的索引屬性。  此功能僅支援使用現有的索引屬性。  
   
 ## 範例  
  下列程式碼顯示完整範例。  如需如何設定專案以存取 Office API 的詳細資訊，請參閱 [如何：使用 Visual C\#  功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
   
- [!code-cs[csProgGuideIndexedProperties#5](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#5)]  
+ [!code-cs[csProgGuideIndexedProperties#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_5.cs)]  
   
 ## 請參閱  
  [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   

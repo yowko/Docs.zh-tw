@@ -18,7 +18,7 @@ caps.handback.revision: 28
 # 使用結構 (C# 程式設計手冊)
 `struct` 類型很適合用於代表輕量型物件，例如 `Point`、`Rectangle` 和 `Color`。 雖然使用[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)可以輕鬆地將一個點表示為一個[類別](../../../csharp/language-reference/keywords/class.md)，但是在某些情節中[結構](../../../csharp/language-reference/keywords/struct.md)可能會更有效率。 例如，如果您宣告含有 1000 個 `Point` 物件的陣列，您會配置額外的記憶體來參考每個物件；在此案例下，結構所耗用的記憶體會較少。 因為 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 含有名為 <xref:System.Drawing.Point> 的物件，所以本範例中的結構會改稱為 "CoOrds"。  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
  為結構定義預設 \(無參數\) 的建構函式時會發生錯誤。 初始化結構主體中的執行個體欄位時也會發生錯誤。 您只能透過使用參數化建構函式，或在宣告結構後個別存取成員，來將結構成員初始化。 任何私用或其他無法存取的成員，只能在建構函式中初始化。  
   
@@ -38,9 +38,9 @@ caps.handback.revision: 28
  此範例示範如何使用預設和參數化建構函式進行 `struct` 初始化。  
   
 ### 程式碼  
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- [!code-cs[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_2.cs)]  
+ [!code-cs[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
   
 ## 範例 2  
   
@@ -48,9 +48,9 @@ caps.handback.revision: 28
  此範例示範結構特有的功能。 它在建立 CoOrds 物件時並未使用 `new` 運算子。 如果您以 `class` 一字取代 `struct` 一字，將不會編譯程式。  
   
 ### 程式碼  
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- [!code-cs[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_3.cs)]  
+ [!code-cs[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

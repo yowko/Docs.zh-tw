@@ -48,7 +48,7 @@ caps.handback.revision: 14
   
      下列範例會呼叫 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 函式。  
   
-     [!code-vb[VbVbcnProcedures#34](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-pass-arguments-to_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
      前面的範例會提供必要的第一個引數，這是要顯示的訊息字串。  它省略了第二個選擇性參數的引數，這個參數會指定要在訊息方塊上顯示的按鈕。  因為呼叫不提供值，所以 `MsgBox` 會使用預設值 `MsgBoxStyle.OKOnly`，只顯示 \[**確定**\] 按鈕。  
   

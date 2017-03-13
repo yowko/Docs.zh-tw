@@ -36,7 +36,7 @@ throw new MyException();
 ## 範例  
  這個範例將示範如何使用 `throw` 陳述式擲回例外狀況。  
   
- [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/csharp/throw_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/throw_1.cs)]  
   
 ## 程式碼範例  
  請參閱 [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) 和 [如何：明確擲回例外狀況](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md)中的範例。  

@@ -24,7 +24,7 @@ caps.handback.revision: 24
 >  請勿在基底類別中宣告虛擬事件，以及進而在衍生類別中覆寫它們。  C\#編譯器會控制代碼這些正確而且衍生的事件訂閱者 」 實際上訂閱基底類別事件是否發生無法預期。  
   
 ## 範例  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-raise-base-class-_1.cs)]  
+ [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

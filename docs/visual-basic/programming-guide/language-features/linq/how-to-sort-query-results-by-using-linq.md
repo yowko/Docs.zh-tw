@@ -78,7 +78,7 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
      將下列程式碼加入至 `Load` 事件，以查詢公開為資料內容之屬性的表格並將結果排序。  查詢會依照客戶訂單數目而以遞減順序排序結果。  具有相同訂單數目的客戶則會依照公司名稱以遞增順序排序 \(預設值\)。  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form4.vb#10)]  
+     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
   
 4.  按下 F5 執行專案並檢視結果。  
   

@@ -46,7 +46,7 @@ caps.handback.revision: 25
 ## 範例  
  下列類別會使用 `Friend` 修飾詞，以允許相同組件內的其他程式設計項目存取某些成員。  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
 ## 使用方式  
  您可以在這些內容使用 `Friend` 修飾詞:  

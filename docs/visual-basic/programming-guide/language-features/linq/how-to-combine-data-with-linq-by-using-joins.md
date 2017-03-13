@@ -38,8 +38,8 @@ Visual Basic 提供 `Join` 和 `Group Join` 查詢子句，可以讓您根據集
   
 2.  本主題中的範例使用 `Person` 和 `Pet` 型別，以及下列程式碼範例中的資料。  請將這個程式碼複製至 Visual Basic 建立的預設 `Module1` 模組中。  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#1)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#2)]  
+     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
+    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
 ## 使用 Join 子句執行內部聯結  
  INNER JOIN 會將兩個集合中的資料合併。  符合指定之索引鍵值的項目都會加入。  兩個集合中無法互相符合的項目則會遭排除。  
@@ -54,7 +54,7 @@ Visual Basic 提供 `Join` 和 `Group Join` 查詢子句，可以讓您根據集
   
 1.  將下列程式碼加入至您專案中的 `Module1` 模組，以查看隱含和明確內部聯結 \(Inner Join\) 的範例。  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#4)]  
+     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
 ## 使用 Group Join 子句執行左外部聯結  
  LEFT OUTER JOIN 會加入聯結左邊之集合中的所有項目，並且只加入聯結右邊之集合中相符的值。  聯結右邊之集合中的項目若在左邊之集合中沒有相符合的項目，就會自查詢結果中排除。  
@@ -67,7 +67,7 @@ Visual Basic 提供 `Join` 和 `Group Join` 查詢子句，可以讓您根據集
   
 1.  將下列程式碼加入至您專案中的 `Module1` 模組，以查看分組之左外部聯結 \(Left Outer Join\) 和未分組之左外部聯結的範例。  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#3)]  
+     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
 ## 使用複合索引鍵執行聯結  
  在比對要聯結之集合中的值時，您可以在 `Join` 或 `Group Join` 子句中使用 `And` 關鍵字，識別要使用的多個索引鍵欄位。  `And` 關鍵字會指定所有已指定的索引鍵欄位都必須相符，才能聯結項目。  
@@ -76,7 +76,7 @@ Visual Basic 提供 `Join` 和 `Group Join` 查詢子句，可以讓您根據集
   
 1.  將下列程式碼加入至您專案中的 `Module1` 模組，以查看使用複合索引鍵之聯結的範例。  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#5)]  
+     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
   
 ## 執行程式碼  
   
@@ -84,7 +84,7 @@ Visual Basic 提供 `Join` 和 `Group Join` 查詢子句，可以讓您根據集
   
 1.  將您專案中 `Module1` 模組內的 `Sub Main` 取代為下列程式碼，以執行本主題中的範例。  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#6)]  
+     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
   
 2.  按 F5 執行範例。  
   

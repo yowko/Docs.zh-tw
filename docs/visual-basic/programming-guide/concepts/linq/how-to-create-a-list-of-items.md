@@ -28,7 +28,7 @@ caps.handback.revision: 27
 ## 範例  
  如果您正在執行本逐步解說，可將此程式碼使用於在其中建立之專案的 Module1.vb 檔案。  使用本逐步解說中所提供的查詢和查詢執行，取代 `Main` 中標示 \*\*\*\* 的程式行。  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/how-to-create-a-list-of-_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
 ## 請參閱  
  [視訊作法：以 Visual Basic 撰寫查詢](http://msdn.microsoft.com/library/bb820884.aspx)   

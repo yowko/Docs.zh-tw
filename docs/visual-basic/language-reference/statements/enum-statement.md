@@ -146,37 +146,37 @@ End Enum
 ## <a name="example"></a>範例  
  下列範例示範如何使用 `Enum` 陳述式。 請注意，成員指 `EggSizeEnum.Medium`, ，而不是 `Medium`。  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#41)]  
+ [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
   
 ## <a name="example"></a>範例  
  下列範例中的方法已超出 `Egg` 類別。 因此， `EggSizeEnum` 完整限定為 `Egg.EggSizeEnum`。  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#42)]  
+ [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `Enum` 陳述式來定義一組相關的具名常數的值。 在此情況下，值會是您可以選擇設計資料庫的資料輸入表單的色彩。  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#30)]  
+ [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
   
 ## <a name="example"></a>範例  
  下列範例包含正數和負數的值。  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#31)]  
+ [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
   
 ## <a name="example"></a>範例  
  在下列範例中， `As` 子句用來指定 `datatype` 的列舉型別。  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#6)]  
+ [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用位元的列舉型別。 多個值可以指派給位元的列舉型別的執行個體。  `Enum` 宣告包含 <xref:System.FlagsAttribute> 屬性，表示列舉型別可以視為一組旗標。  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#61)]  
+ [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
   
 ## <a name="example"></a>範例  
  下列範例會逐一列舉型別。 它會使用 <xref:System.Enum.GetNames%2A> 方法來擷取列舉中的成員名稱的陣列和 <xref:System.Enum.GetValues%2A> 擷取成員值的陣列。  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#51)]  
+ [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Enum>   

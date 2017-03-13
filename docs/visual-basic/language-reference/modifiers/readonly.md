@@ -60,7 +60,7 @@ caps.handback.revision: 15
 ## 範例  
  下列範例針對員工的雇用日期定義 `ReadOnly` 屬性。  類別會在內部將屬性值儲存為 `Private` 變數，且只有類別的內部程式碼可變更該值。  然而，屬性是 `Public`，且可存取類別的所有程式碼都能讀取該屬性。  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/visualbasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
   
  `ReadOnly` 修飾詞可用於以下內容中：  
   

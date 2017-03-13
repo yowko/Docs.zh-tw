@@ -68,7 +68,7 @@ result = TypeOf objectexpression IsNot typename
 ## 範例  
  下列範例會使用 `TypeOf`...`Is` 運算式，測試兩個包含各種資料類型的物件參考變數的類型相容性。  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
   
  變數 `refInteger` 具有執行階段類型 `Integer`。  它相容 `Integer`，但不相容 `Double`。  變數 `refForm` 具有執行階段類型 <xref:System.Windows.Forms.Form>。  它相容 <xref:System.Windows.Forms.Form> \(因為那是其類型\)、相容 <xref:System.Windows.Forms.Control> \(因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.Windows.Forms.Control>\)，且具有 <xref:System.ComponentModel.IComponent> \(因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.ComponentModel.Component>，它會實作 <xref:System.ComponentModel.IComponent>\)。  不過，`refForm` 不相容 <xref:System.Windows.Forms.Label>。  
   

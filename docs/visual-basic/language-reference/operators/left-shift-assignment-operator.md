@@ -56,7 +56,7 @@ variableorproperty <<= amount
 ## 範例  
  下列範例會使用 `<<=` 運算子，依指定數量將 `Integer` 變數的位元模式向左移動，並將結果指派回該變數。  
   
- [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-assignment-op_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
 ## 請參閱  
  [\<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)   

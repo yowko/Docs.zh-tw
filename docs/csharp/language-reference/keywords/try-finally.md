@@ -29,11 +29,11 @@ caps.handback.revision: 25
 ## 範例  
  在下列範例中，無效的轉換陳述式會造成 `System.InvalidCastException` 例外狀況。  例外狀況為未處理。  
   
- [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
   
  在下列範例中，來自 `TryCast` 方法的例外狀況是在位於呼叫堆疊更上方的方法中攔截到。  
   
- [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_2.cs)]  
+ [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
   
  如需 `finally` 的詳細資訊，請參閱 [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)。  
   

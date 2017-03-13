@@ -23,7 +23,7 @@ caps.handback.revision: 17
 ## 範例  
  這個範例包含最上層型別，`T1`，和兩個巢狀類別，`M1` 和 `M2`。  這些類別包含具有不同宣告存取範圍的欄位。  `Main` 方法裡，每一個陳述式後會有註解指出每一個成員的存取範圍定義域。  請注意，嘗試參考無法存取之成員的陳述式都會標記為註解。  如果您要查看由參考無法存取之成員所造成的編譯器錯誤，請一次移除一個註解。  
   
- [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#4)]  
+ [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

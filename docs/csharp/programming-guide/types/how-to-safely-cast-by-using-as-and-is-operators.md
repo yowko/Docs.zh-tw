@@ -23,7 +23,7 @@ caps.handback.revision: 10
 ## 範例  
  在下列範例中，會示範如何使用 `is` 和 `as` 運算子，在無擲回例外狀況風險的情況下，從某一個參考型別 \(Reference Type\) 轉型成另一個型別。  此外，還會示範如何使用 `as` 運算子搭配可為 null 的實值型別 \(Nullable Type\)。  
   
- [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-safely-cast-by-us_1.cs)]  
+ [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
 ## 請參閱  
  [類型](../../../csharp/programming-guide/types/index.md)   

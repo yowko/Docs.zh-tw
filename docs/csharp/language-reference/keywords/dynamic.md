@@ -25,7 +25,7 @@ caps.handback.revision: 25
   
  下列範例會對比類型為 `dynamic` 的變數與類型為 `object` 的變數。  若要在編譯時期確認每個變數的型別，將滑鼠指標停在 `WriteLine` 陳述式中 的 `dyn` 或  `obj` 上方。  IntelliSense 會針對 `dyn` 顯示 \[**動態**\]，並針對 `obj` 顯示\[**物件**\]。  
   
- [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
   
  `WriteLine` 陳述式會顯示 `dyn` 和 `obj` 的執行階段型別。  在此時，兩者都具有相同的型別，也就是整數。  產生以下輸出：  
   
@@ -48,20 +48,20 @@ obj = obj + 3;
   
 -   在宣告中，做為屬性、欄位、索引子、參數、傳回值、本機變數或型別條件約束的型別。  下列類別定義在數個不同的宣告中使用 `dynamic`。  
   
-     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_2.cs)]  
+     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
   
 -   在明確的型別轉換中，做為轉換的目標型別  
   
-     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_3.cs)]  
+     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
   
 -   在將型別當做值的任何內容中，例如在 `is` 運算子的右邊，或是 `as` 運算子，或是做為 `typeof` 的引數以當做建構之型別的一部分。  例如，`dynamic` 可在下列運算式中使用。  
   
-     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_4.cs)]  
+     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
   
 ## 範例  
  下列範例會在數個宣告中使用 `dynamic`。  `Main` 方法也會以執行階段型別檢查來對比編譯時期型別檢查。  
   
- [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_5.cs)]  
+ [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
   
  如需詳細資訊與範例，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   

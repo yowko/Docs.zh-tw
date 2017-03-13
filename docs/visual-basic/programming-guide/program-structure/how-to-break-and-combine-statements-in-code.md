@@ -49,7 +49,7 @@ caps.handback.revision: 21
   
      在下列範例中，陳述式分成 4 行，除了最後一行外，其餘行都以行接續字元結束。  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
      使用這個序列能讓您的程式碼易於閱讀，不論是在線上或者列印出來。  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 21
   
 -   以冒號 \(`:`\) 將陳述式分隔，如下列範例所示。  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
 ## 請參閱  
  [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   

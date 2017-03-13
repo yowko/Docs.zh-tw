@@ -53,7 +53,7 @@ caps.handback.revision: 21
 ## 參數資料型別  
  您可以在參數宣告中使用 `As` 子句來定義參數的資料型別。  例如，下列函式可接受字串和整數。  
   
- [!code-vb[VbVbcnProcedures#32](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-parameters-and_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
  如果型別檢查參數 \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) 是 `Off,`，則 `As` 子句是選擇項，但若有任一參數使用此子句，則所有的參數都必須使用此子句。  如果型別檢查是 `On`，則所有的程序參數都必須使用 `As` 子句。  
   

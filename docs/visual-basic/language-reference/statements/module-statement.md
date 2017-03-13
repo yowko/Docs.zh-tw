@@ -102,7 +102,7 @@ End Module
 -   **限定性條件。** ：在專案中可以有多個模組，且可以在兩個以上的模組中宣告同名的成員。  然而，如果這類具有適當模組名稱之成員的任何參考是來自該模組的外部，則必須限定該參考。  如需詳細資訊，請參閱 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## 範例  
- [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/module-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
 ## 請參閱  
  [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   

@@ -27,7 +27,7 @@ caps.handback.revision: 14
 這個範例在 user32.dll 中定義並且呼叫 `MessageBox` 函式，接著將字串傳遞給該函式。  
   
 ## 範例  
- [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#1)]  
+ [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
 ## 編譯程式碼  
  這個範例需要：  

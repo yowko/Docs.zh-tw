@@ -68,7 +68,7 @@ Try 語法結構的有效和無效分支
 ## 範例  
  下列範例會使用 `GoTo` 陳述式，將程式分支到程序內的程式行標籤。  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
 ## 請參閱  
  [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

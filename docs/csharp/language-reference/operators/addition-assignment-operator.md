@@ -41,7 +41,7 @@ x = x + y
  `+=` 運算子也可以用來指定在回應事件時所要呼叫的方法，這類方法稱為事件處理常式。  在這段此內容中，使用 `+=` 運算子稱為「*訂閱事件*」。  如需詳細資訊，請參閱 [如何：訂閱及取消訂閱事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  和 [委派](../../../csharp/programming-guide/delegates/index.md)。  
   
 ## 範例  
- [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#35)]  
+ [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

@@ -38,7 +38,7 @@ LINQ 查詢的部分
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 實作了區域型推斷，也稱為「*隱含型別*」\(Implicit Type\)，使強型別作業更方便。  上一個範例中使用了這項功能，而且您也會在許多 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 範例和文件中看到它。  在 Visual Basic 中，區域型別推斷是透過不含 `As` 子句的單純 `Dim` 陳述式來完成。  在下列範例中，`city` 會強型別為字串。  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
 >  只有在 `Option Infer` 設定為 `On` 時，才可以進行區域型別推斷。  如需詳細資訊，請參閱 [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
@@ -47,16 +47,16 @@ LINQ 查詢的部分
   
  您可能需要為不符合資料來源所傳回型別的範圍變數，指定明確型別。  您可以使用 `As` 子句來指定範圍變數的型別。  不過，如果轉換是[縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)，且 `Option Strict` 設為 `On`，則會產生錯誤。  因此，建議您對從資料來源擷取的值執行轉換。  您可以使用 <xref:System.Linq.Enumerable.Cast%2A> 方法，將來自資料來源的值轉換為明確範圍變數型別。  您也可以將 `Select` 子句中選取的值，轉型為不同於範圍變數型別的明確型別。  以下程式碼會解釋這些重點。  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
 ## 傳回來源資料中之完整項目的查詢  
  下列範例顯示的 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢作業會傳回從來源資料中選取之項目的序列。  來源 \(`names`\) 包含的是字串陣列，而查詢輸出的序列則包含以 M 字母開頭的字串。  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
  這個效果相當於下列程式碼，但是比較簡短也比較容易撰寫。  依賴查詢中的區域型別推斷是 Visual Basic 的慣用風格。  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
  不論型別是以隱含還是明確的方式決定，前面兩個程式碼範例中都存在下列關聯性。  
   

@@ -104,7 +104,7 @@ End Interface
   
      如果您指派類別執行個體給變數，則成員的存取層級可視此變數的資料型別為基礎介面或實作類別而定。  下列範例將說明這點。  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
   
      如果您透過 `varAsInterface` 存取類別成員，則這些成員都具有公用存取。  不過，如果透過 `varAsClass` 存取成員，則 `Sub` 程序 `doSomething` 具有私用存取。  
   
@@ -117,7 +117,7 @@ End Interface
 ## 範例  
  下列範例會使用 `Interface` 陳述式定義名為 `thisInterface` 的介面，這個介面必須以 `Property` 陳述式和 `Function` 陳述式實作。  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
   
  請注意，`Property` 和 `Function` 陳述式不會引入介面中以 `End Property` 和 `End Function` 結尾的區塊。  介面只會定義成員的簽章。  完整的 `Property` 和 `Function` 區塊會出現在實作 `thisInterface` 的類別中。  
   

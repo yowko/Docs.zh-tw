@@ -65,7 +65,7 @@ result = pattern << amount
 ## 範例  
  這個範例會使用 `<<` 運算子執行整數值的算術左移位。  結果會有與已移位運算式相同的資料型別。  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
   
  前一個範例的結果如下：  
   

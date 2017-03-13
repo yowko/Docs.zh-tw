@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
 -   使用其中一個 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> 方法多載，並在 `directory` 參數中提供要搜尋的目錄名稱和路徑。  下列範例會傳回目錄中的所有檔案，並將它們新增到  `ListBox1`。  
   
-     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-get-the-collectio_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
   
 ## 穩固程式設計  
  以下條件可能會造成例外狀況：  

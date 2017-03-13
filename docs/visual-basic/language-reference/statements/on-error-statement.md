@@ -85,7 +85,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## Throw 陳述式  
  以 `Err.Raise` 方法引發的錯誤會將 `Exception` 屬性設為新建立之 <xref:System.Exception> 類別的執行個體。  為能支援引發之衍生例外狀況類型的例外狀況，這個語言中支援 `Throw` 陳述式。  如此，會採用所擲回之例外狀況執行個體的單一參數。  下列範例顯示這些功能如何配合現存的例外狀況處理支援使用：  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
  請注意，無論例外狀況類別為何，`On Error GoTo` 陳述式都會截獲所有錯誤。  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  若要在沒有發生錯誤時，避免執行錯誤處理程式碼，請將 `Exit Sub`、`Exit Function` 或 `Exit Property` 陳述式放在錯誤處理常式前面，如下列片段：  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
  此處的錯誤處理代碼接在 `Exit Sub` 陳述式之後，並在 `End Sub` 陳述式之前，以便將其與程序流程分開。  您可以將錯誤處理代碼放到程序中的任何位置。  
   
@@ -112,7 +112,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  如果您建立存取其他物件的物件，則應設法處理這些物件回傳的任何未處理錯誤。  如果無法處理，請將 `Err.Number` 中的錯誤碼對應到您所擁有錯誤中的一項，然後將它們傳回給物件的呼叫端。  您應該將錯誤碼加入至 `VbObjectError` 常數，以便指定您的錯誤。  例如，如果您的錯誤代碼是 1052，請依下述進行指派：  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
 >  呼叫 Windows 動態連結程式庫 \(DLL\) 時的系統錯誤並不會引發例外狀況發生，也無法隨著 Visual Basic 錯誤擷取被截獲。  呼叫 DLL 函式時，您應檢查每一個傳回值為成功或失敗 \(根據 API 規格\)，檢查結果若是失敗，請檢查 `Err` 物件的 `LastDLLError` 屬性值。  
@@ -120,7 +120,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## 範例  
  這個範例會先使用 `On Error GoTo` 陳述式指定錯誤處理常式在程序內的位置。  在範例中，除以零的嘗試會產生錯誤代碼 6。  會在錯誤處理常式中處理錯誤，再將控制項傳回造成錯誤的陳述式。  `On Error GoTo 0` 陳述式會關閉錯誤擷取。  接著使用 `On Error Resume Next` 陳述式來延遲錯誤設陷，如此可確定得知下一個陳述式產生的錯誤內容。  請注意，`Err.Clear` 是用於在處理錯誤之後清除 `Err` 物件的屬性。  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
 ## 需求  
  **命名空間**：[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

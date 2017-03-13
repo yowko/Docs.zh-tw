@@ -49,7 +49,7 @@ caps.handback.revision: 16
 ## 範例  
  下面程式碼顯示類別 \(Class\) 及其成員的 ID 字串產生方式。  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
 ## 請參閱  
  [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   

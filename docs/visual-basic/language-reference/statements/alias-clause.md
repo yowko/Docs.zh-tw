@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
  下列範例中的 `Alias` 關鍵字是用於提供 advapi32.dll 中函式的名稱 `GetUserNameA`，而 `getUserName` 是用於取代這個範例中的名稱。  函式 `getUserName` 是在 Sub `getUser` 中呼叫的，後者會顯示目前使用者的名稱。  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
   
 ## 請參閱  
  [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

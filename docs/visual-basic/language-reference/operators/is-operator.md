@@ -55,7 +55,7 @@ result = object1 Is object2
 ## 範例  
  下列範例會使用 `Is` 運算子，來比較物件參考的配對。  結果是指派給代表兩個物件是否完全一樣的 `Boolean` 值。  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
   
  如以上範例所示範，可使用 `Is` 運算子來測試早期繫結 \(Early Bound\) 和晚期繫結 \(Late Bound\) 物件。  
   

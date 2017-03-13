@@ -38,7 +38,7 @@ caps.handback.revision: 18
 > [!NOTE]
 >  輸出可能會因電腦架構的位元組順序而有所不同。  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_1.cs)]  
+ [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## 範例  
  在這個範例中，會呼叫 <xref:System.BitConverter> 類別的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，將 `int` 轉換為位元組陣列。  
@@ -46,7 +46,7 @@ caps.handback.revision: 18
 > [!NOTE]
 >  輸出可能會因電腦架構的位元組順序而有所不同。  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_2.cs)]  
+ [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## 請參閱  
  <xref:System.BitConverter>   

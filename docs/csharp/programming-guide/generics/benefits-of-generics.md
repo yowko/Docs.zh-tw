@@ -20,13 +20,13 @@ caps.handback.revision: 23
   
  使用非泛型集合類別的限制，可透過撰寫將會使用 .NET Framework 類別庫之 <xref:System.Collections.ArrayList> 集合類別的簡短程式來示範。  <xref:System.Collections.ArrayList> 是十分方便的集合類別，可以在不經修改下，用以儲存任何參考或實值型別。  
   
- [!code-cs[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/csharp/benefits-of-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_1.cs)]  
   
  但這種方便性是要付出代價的。  加入 <xref:System.Collections.ArrayList> 的任何參考或實值型別都會隱含向上轉型成 <xref:System.Object>。  如果項目屬於實值型別，加入清單時必須先經 boxed 處理，而擷取時則需經過 unboxed 處理。  轉型、boxing 和 unboxing 作業都會降低效能，因此，在必須逐一查看大型集合的案例中，boxing 和 unboxing 作業會對效能影響甚鉅。  
   
  另一個限制則是缺少編譯時期的型別檢查。由於 <xref:System.Collections.ArrayList> 會將所有項目都轉型成 <xref:System.Object>，所以在編譯時期並無法防止用戶端執行如下面這段的程式碼：  
   
- [!code-cs[csProgGuideGenerics#5](../../../csharp/programming-guide/generics/codesnippet/csharp/benefits-of-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#5](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_2.cs)]  
   
  雖然在建立異質性集合時是完全合於語法，而且有時是刻意這麼做，但在單一 <xref:System.Collections.ArrayList> 中結合使用字串和 `ints`，更有可能會視為程式設計錯誤，而且直到執行階段才會偵測出此錯誤。  
   
@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
  <xref:System.Collections.ArrayList> 及其他相似類別真正需要的是，可以讓用戶端程式碼視每個執行個體而定，指定要使用的特定資料型別。  如此就不再需要向上轉型成 `T:System.Object`，而編譯器也可以進行型別檢查。  換句話說，<xref:System.Collections.ArrayList> 需要型別參數。  這正好是泛型可以提供的。  在泛型 <xref:System.Collections.Generic.List%601> 集合的 `N:System.Collections.Generic` 命名空間中，同樣是將項目加入集合，但看起來會像這樣：  
   
- [!code-cs[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/csharp/benefits-of-generics_3.cs)]  
+ [!code-cs[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_3.cs)]  
   
  對用戶端程式碼來說，相較於 <xref:System.Collections.ArrayList>，<xref:System.Collections.Generic.List%601> 唯一增加的語法就是宣告和執行個體化中的型別引數。  雖然程式碼撰寫起來稍微複雜，但您所建立的清單不但比 <xref:System.Collections.ArrayList> 安全，同時也快速許多，特別是清單項目為實值型別時。  
   

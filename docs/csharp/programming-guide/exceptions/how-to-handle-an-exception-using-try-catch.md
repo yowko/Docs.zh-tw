@@ -23,7 +23,7 @@ caps.handback.revision: 14
 ## 範例  
  在此範例中，<xref:System.IndexOutOfRangeException> 不是最適當的例外狀況：<xref:System.ArgumentOutOfRangeException> 更適用於此方法，因為錯誤是由呼叫端傳入的 `index` 引數所導致。  
   
- [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-handle-an-excepti_1.cs)]  
+ [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
 ## 註解  
  造成例外狀況的程式碼位於 `try` 區塊中。  後面立即加入 `catch` 陳述式以處理 `IndexOutOfRangeException` \(如果發生的話\)。  `catch` 區塊會處理 `IndexOutOfRangeException`，然後改為擲回更適當的 `ArgumentOutOfRangeException` 例外狀況。  為了盡可能為呼叫端提供更多資訊，請考慮將原始的例外狀況指定為新例外狀況的 <xref:System.Exception.InnerException%2A>。  因為 <xref:System.Exception.InnerException%2A> 屬性為 [readonly](../../../csharp/language-reference/keywords/readonly.md)，所以您必須在新例外狀況的建構函式 \(Constructor\) 內指派它。  

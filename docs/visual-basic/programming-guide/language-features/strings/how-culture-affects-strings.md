@@ -53,7 +53,7 @@ caps.handback.revision: 20
   
  若要將日期轉換為文化特性的字串，請將 <xref:System.Globalization.CultureInfo> 物件傳遞至日期物件的 <xref:System.DateTime.ToString%28System.IFormatProvider%29> 方法。  例如，不論應用程式的文化特性設定為何，下列程式碼都會顯示為 "07\/04\/2005 00:00:00"。  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/how-culture-affects-stri_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
 >  日期常值 \(Literal\) 一律會根據英文文化特性解譯。  
@@ -69,11 +69,11 @@ caps.handback.revision: 20
   
  `StrComp` 函式會傳回一個整數，指出根據排序順序比較的兩個字串之間有何關聯性。  結果為正數表示第一個字串大於第二個字串。  負數結果則表示第一個字串較小，零表示兩個字串相等。  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
  您也可以使用 `StrComp` 函式的 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] 夥伴 \(<xref:System.String.Compare%2A?displayProperty=fullName> 方法\)。  這是個靜態 \(Static\)、多載的基底字串類別方法。  下列範例示範如何使用此方法：  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
  如需更精細地控制如何執行比較，您可以使用 <xref:System.String.Compare%2A> 方法的其他多載。  利用 <xref:System.String.Compare%2A?displayProperty=fullName> 方法，您可以使用 `comparisonType` 引數，指定要使用哪種比較方式。  
   

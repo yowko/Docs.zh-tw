@@ -38,7 +38,7 @@ Distinct
 ## 範例  
  下列查詢運算式會將客戶清單和客戶訂單清單建立聯結 \(Join\)。  其中加入 `Distinct` 子句，只傳回唯一客戶名稱和訂單日期的清單。  
   
- [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#20)]  
+ [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## 請參閱  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

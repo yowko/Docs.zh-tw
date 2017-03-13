@@ -75,11 +75,11 @@ caps.handback.revision: 21
 ### 宣告和呼叫的說明  
  下列 `Sub` 程序會告知電腦運算子，應用程式將要執行哪一項工作，也會顯示時間戳記。  應用程式不會在每項工作開始時複製此程式碼，而是會從各個位置呼叫  `tellOperator` 。  每個呼叫會在  `task`  引數中傳遞一個字串，來辨識已起始的工作。  
   
- [!code-vb[VbVbcnProcedures#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
  下列範例顯示  `tellOperator` 的典型呼叫。  
   
- [!code-vb[VbVbcnProcedures#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

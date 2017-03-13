@@ -49,7 +49,7 @@ caps.handback.revision: 13
 ## 範例  
  下列程式碼會顯示兩個範例， `Call`關鍵字是為了呼叫程序。  在這兩個範例中，被呼叫的運算式並不會啟動的識別項。  
   
- [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/call-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
 ## 請參閱  
  [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   

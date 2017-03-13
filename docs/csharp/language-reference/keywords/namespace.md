@@ -22,7 +22,7 @@ caps.handback.revision: 28
 # namespace (C# 參考)
 `namespace` 關鍵字是用來宣告包含一組相關物件的範圍。  您可以使用命名空間組織程式碼項目並建立全域唯一型別。  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## 備註  
  在命名空間裡，您可以宣告一個或多個下列型別：  
@@ -45,12 +45,12 @@ caps.handback.revision: 28
   
  命名空間可以定義在兩個或多重宣告裡。  例如，下列範例會將兩個類別定義為 `MyCompany` 命名空間的一部分：  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## 範例  
  下列範例顯示如何在巢狀命名空間裡呼叫靜態方法。  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## 如需詳細資訊  
  如需使用命名空間的詳細資訊，請參閱下列主題：  

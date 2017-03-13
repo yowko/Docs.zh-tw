@@ -24,7 +24,7 @@ caps.handback.revision: 24
 ## 範例  
  在這個範例中，`Square` 類別必須提供 `Area` 的實作，因為它衍生自 `ShapesClass`：  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  抽象類別有下列功能：  
   
@@ -66,12 +66,12 @@ caps.handback.revision: 24
   
  實作介面的抽象類別可能將介面方法對應到抽象方法。  例如：  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#2)]  
+ [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## 範例  
  在這個範例裡，類別 `DerivedClass` 衍生自抽象類別 `BaseClass`。  此抽象類別含有一個抽象方法 \(`AbstractMethod`\) 及兩個抽象屬性 \(`X` 和 `Y`\)。  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#3)]  
+ [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  上述範例裡，如果您嘗試使用這樣的陳述式來執行抽象類別的個體化：  
   

@@ -29,17 +29,17 @@ caps.handback.revision: 23
 ## 範例  
  在下列範例中，會針對其值不會根據使用者電腦的地區設定而改變的字串，示範如何正確比較這些字串。  此外，還會示範 C\# 的「*字串暫留*」\(String Interning\) 功能。  當程式宣告兩個以上完全相同的字串變數時，編譯器會將它們儲存至相同位置。  只要呼叫 <xref:System.Object.ReferenceEquals%2A> 方法，就能知道兩個字串實際上是參考到記憶體中的同一個物件。  <xref:System.String.Copy%2A?displayProperty=fullName> 方法可以用來避免暫留功能，如範例中所示。  
   
- [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#11)]  
+ [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_1.cs)]  
   
 ## 範例  
  在下列範例中，會示範如何透過可使用 <xref:System.StringComparison> 列舉型別的 <xref:System.String?displayProperty=fullName> 方法，以慣用方式來比較字串。  請注意，這裡不採用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 執行個體方法，因為沒有一個多載會使用 <xref:System.StringComparison>。  
   
- [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#31)]  
+ [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_2.cs)]  
   
 ## 範例  
  在下列範例中，會示範如何透過可使用 <xref:System.StringComparer?displayProperty=fullName> 參數的靜態 <xref:System.Array> 方法，以區分文化特性方式來排序及搜尋陣列中的字串。  
   
- [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#32)]  
+ [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_3.cs)]  
   
  當元素或索引鍵的型別為 `string` 時，集合類別 \(例如 <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 和 <xref:System.Collections.Generic.List%601?displayProperty=fullName>\) 都有可使用 <xref:System.StringComparer?displayProperty=fullName> 參數的建構函式 \(Constructor\)。  一般而言，您應該盡量使用這些建構函式，並指定 `Ordinal` 或 `OrdinalIgnoreCase`。  
   

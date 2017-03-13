@@ -108,11 +108,11 @@ End Property
 ### 宣告和呼叫的說明  
  下列屬性會將完整名稱儲存成兩個構成名稱：名字和姓氏。  在呼叫程式碼讀取 `fullName` 時，`Get` 程序會結合這兩個構成名稱，並傳回完整名稱。  在呼叫程式碼指派新的完整名稱時，`Set` 程序會嘗試將新名稱分割成兩個構成名稱。  如果找不到空格，則會將它整個儲存成名字。  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
  下列範例會示範 `fullName` 之屬性程序的典型呼叫。  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

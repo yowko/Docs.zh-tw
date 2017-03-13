@@ -26,7 +26,7 @@ caps.handback.revision: 13
  使用者定義型別可多載 `!` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  
   
 ## 範例  
- [!code-cs[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#7)]  
+ [!code-cs[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/CSharp/logical-negation-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

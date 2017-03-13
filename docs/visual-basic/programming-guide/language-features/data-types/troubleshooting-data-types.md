@@ -50,7 +50,7 @@ caps.handback.revision: 28
   
  下列範例是兩個 `Double` 值的不正確與正確比較。  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
  上述範例會使用 <xref:System.Double> 結構的 <xref:System.Double.ToString%2A> 方法，以便指定比 `CStr` 關鍵字所使用之精確度更好的精確度。  預設值為 15 位數，但 "G17" 格式會將它擴充為 17 位數。  
   
@@ -66,7 +66,7 @@ caps.handback.revision: 28
   
  下列範例示範浮點數運算元的潛在不精確情況。  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
  上述範例會使用 <xref:System.Double> 結構的 <xref:System.Double.ToString%2A> 方法，以便指定比 `CStr` 關鍵字所使用之精確度更好的精確度。  預設值為 15 位數，但 "G17" 格式會將它擴充為 17 位數。  
   
@@ -103,7 +103,7 @@ caps.handback.revision: 28
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
  因為縮小轉換可能會在執行階段失敗，所有使用縮小轉換一定會有風險。  舉例而言，如果 `String` 值包含一個以上的字元，則從 `String` 轉換成 `Char` 會失敗。  因此，將程式設計為使用 `C` 型別字元比較好。  
   

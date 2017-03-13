@@ -33,7 +33,7 @@ caps.handback.revision: 11
   
 -   繼承的事件處理常式中絕對不能包括 [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) 子句。  基底類別中的方法已經與事件相關，所以將隨之引發。  應該移除繼承方法中的 `Handles` 子句。  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#32)]  
+     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
 -   如果繼承的方法沒有 `Handles` 關鍵字，請驗證程式碼中未包括額外的 [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md)或任何處理相同事件的其他方法。  
   

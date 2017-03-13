@@ -46,7 +46,7 @@ caps.handback.revision: 11
   
  例如，下列程式碼會定義一個介面，其包含一個函式、一個屬性與一個事件。  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#17)]  
+ [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## 實作介面  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 保留字 `Implements` 用於兩種方式。  `Implements` 陳述式表示類別或結構實作介面。  `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
@@ -59,7 +59,7 @@ caps.handback.revision: 11
   
  例如，下列程式碼顯示如何宣告實作介面的方法、且名為 `Sub1` 的副程式：  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#69)]  
+ [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
   
  實作成員的參數類型和傳回類型，必須符合介面中的介面屬性或成員宣告。  最常見的實作介面項目的方式是使用與介面同名的成員，如上述範例所示。  
   
@@ -67,7 +67,7 @@ caps.handback.revision: 11
   
  使用 `Implements`，您也可以撰寫單一方法來實作一個介面中定義的多個方法，如下列範例所示：  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#70)]  
+ [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
   
  您可以使用私用成員來實作介面成員。  當私用成員實作介面的成員時，該成員會經由介面成為可用，即使不是直接在類別的物件變數上使用亦然。  
   
@@ -76,15 +76,15 @@ caps.handback.revision: 11
   
  下列範例會定義兩個介面。  第二個介面 `Interface2` 繼承 `Interface1`，並定義額外的屬性和方法。  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#39)]  
+ [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
   
  下一個範例會實作 `Interface1`，即上述範例中定義的介面：  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#40)]  
+ [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
   
  最後一個範例會實作 `Interface2`，包括繼承自 `Interface1` 的方法：  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#41)]  
+ [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
   
  您可以使用 readwrite 屬性來實作 readonly 屬性 \(也就是您不需要在實作類別中將它宣告為 readonly\)。  實作介面保證至少會實作此介面所宣告的成員，但是您可以提供更多功能，例如可讓您使用可寫入的屬性。  
   

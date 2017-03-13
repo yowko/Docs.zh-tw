@@ -29,19 +29,19 @@ caps.handback.revision: 7
 ## My.Application、My.Computer 和 My.User  
  下列範例將示範如何使用 `My` 擷取資訊。  
   
- [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_1.vb)]  
+ [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
   
- [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_2.vb)]  
+ [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
   
  除了擷取資訊以外，透過這三個物件公開的成員也能讓您執行與該物件相關的方法。  例如，您可以透過 `My.Computer`，存取各種管理檔案或更新登錄的方法。  
   
  透過 `My`，檔案 I\/O 明顯地變得更為容易且速度更快，包括管理檔案、目錄和磁碟的各種方法及屬性。  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您從具有分隔或固定寬度欄位的大型結構檔案讀取。  這個範例會開啟 `TextFieldParser` `reader`，並使用它讀取 `C:\TestFolder1\test1.txt`。  
   
- [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_3.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
  `My.Application` 可讓您變更應用程式的文化特性 \(Culture\)。  下列範例將示範如何呼叫這個方法。  
   
- [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_4.vb)]  
+ [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   

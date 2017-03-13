@@ -25,26 +25,26 @@ caps.handback.revision: 19
  在下面的範例中，`Person` 類別有兩個屬性，分別是 `Name` \(string\) 和 `Age` \(int\)。  兩個屬性都提供了 `get` 和 `set` 存取子，所以被視為讀取\/寫入屬性。  
   
 ## 範例  
- [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_1.cs)]  
+ [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_1.cs)]  
   
 ## 穩固程式設計  
  在先前的範例中，`Name` 和 `Age` 屬性為 [public](../../../csharp/language-reference/keywords/public.md)，且同時包含 `get` 和 `set` 存取子。  這可讓任何物件讀取和寫入這些屬性。  然而，有時候最好排除其中一個存取子。  例如，省略 `set` 存取子，讓屬性成為唯讀：  
   
- [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_2.cs)]  
+ [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_2.cs)]  
   
  或者，您可以將其中一個存取子公開為公用，但讓另一個成為私用或保護的。  如需詳細資訊，請參閱[非對稱存取子存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
   
  屬性一經宣告，它們可以用於做為是否為類別的欄位。  當同時取得和設定屬性值時，此允許一個非常自然的語法，如下列陳述式所示：  
   
- [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_3.cs)]  
+ [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_3.cs)]  
   
  請注意，屬性的 `set` 方法可以使用特殊的 `value` 變數。  例如，這個變數包含使用者指定的數值：  
   
- [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_4.cs)]  
+ [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_4.cs)]  
   
  注意 `Person` 物件中遞增 `Age` 屬性的簡潔語法：  
   
- [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_5.cs)]  
+ [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_5.cs)]  
   
  如果個別的 `set` 和 `get` 方法用於建構屬性，那麼作用相當的程式碼可能會看起來像這樣：  
   
@@ -54,7 +54,7 @@ person.SetAge(person.GetAge() + 1);
   
  這個範例會覆寫 `ToString` 方法：  
   
- [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_6.cs)]  
+ [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_6.cs)]  
   
  請注意，程式中並不是明確使用 `ToString`，  而是預設會由 `WriteLine` 呼叫來叫用。  
   

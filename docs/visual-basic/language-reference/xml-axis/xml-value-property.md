@@ -60,7 +60,7 @@ object.Value
 ## 範例  
  下列範例顯示如何使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性 \(Property\) 存取 <xref:System.Xml.Linq.XElement> 物件之集合中的第一個節點。  這個範例會使用子項軸屬性 \(Property\) 取得 `contact` 物件中所有名為 `phone` 之子節點的集合。  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
  這個程式碼會顯示下列文字：  
   
@@ -69,7 +69,7 @@ object.Value
 ## 範例  
  下列範例顯示如何從 <xref:System.Xml.Linq.XAttribute> 物件的集合中取得 XML 屬性 \(Attribute\) 的值。  這個範例會使用屬性 \(Attribute\) 軸屬性 \(Property\) 顯示所有 `phone` 項目之 `type` 屬性 \(Attribute\) 的值。  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
  這個程式碼會顯示下列文字：  
   

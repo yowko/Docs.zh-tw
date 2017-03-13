@@ -33,7 +33,7 @@ caps.handback.revision: 27
 ## 指派值  
  您可以使用指派陳述式 \(Assignment Statement\) 執行計算，然後將結果指派給變數，如下列範例所示。  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  這個範例中的等號 \(`=`\) 是一個指派運算子，而不是等號比較運算子。  此值已被指派給 `applesSold` 變數。  

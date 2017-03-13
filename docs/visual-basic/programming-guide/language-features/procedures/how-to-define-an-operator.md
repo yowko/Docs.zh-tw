@@ -39,11 +39,11 @@ caps.handback.revision: 15
 ## 範例  
  下列範例定義 `height` 結構的 `+` 運算子。  結構使用以英呎和英吋測量的高度。  一「*英吋*」\(Inch\) 是 2.54 公分，一「*英呎*」\(Foot\) 則是 12 英吋。  為了確保值標準化 \(英吋 \< 12.0\)，建構函式會執行 *modulo* 12 運算。  `+` 運算子可使用建構函式來產生標準化值。  
   
- [!code-vb[VbVbcnProcedures#25](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
   
  您可以使用下列程式碼測試結構 `height` 。  
   
- [!code-vb[VbVbcnProcedures#26](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
  如需詳細資訊和範例，請參閱 [Visual Basic 2005 中的運算子多載](http://go.microsoft.com/fwlink/?LinkId=101703) \(英文\)。  
   

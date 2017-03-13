@@ -26,7 +26,7 @@ caps.handback.revision: 11
 
 任何程式項目，例如變數、類別或成員，可以和限制的關鍵字具有相同的名稱。  例如，您可以建立一個名為 `Loop` 的變數。  然而，若要參考您自己版本的變數 \(它會與限制的 `Loop` 關鍵字擁有相同名稱\)，則必須在該變數前加上完整的限定字串，或者以方括弧 \(`[ ]`\) 括住它，如下列範例所示：  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/keywords-as-element-name_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
  如果您未做上述的任一項動作，則 Visual Basic 將假設為使用內建的 `Loop` 關鍵字並產生錯誤，如下列範例所示：  
   

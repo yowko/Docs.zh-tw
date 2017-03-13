@@ -27,7 +27,7 @@ caps.handback.revision: 28
 ## 標準查詢運算子擴充方法  
  下列範例顯示簡單的「*查詢運算式*」\(Query Expression\)，以及在語意上相等，以「*方法架構查詢*」\(Method\-Based Query\) 撰寫的對等查詢。  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#22)]  
+ [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  這兩個範例的輸出是相同的。  您可以看到在這兩種形式中查詢變數的型別都是相同的：<xref:System.Collections.Generic.IEnumerable%601>。  
   

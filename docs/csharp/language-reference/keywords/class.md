@@ -79,7 +79,7 @@ caps.handback.revision: 30
 ## 範例  
  下列範例示範類別欄位、建構函式和方法的宣告。  它也示範物件執行個體化 \(Instantiation\) 和列印執行個體資料。  在這個範例裡，宣告了兩個類別，其中 `Child` 類別包含兩個私用 \(Private\) 欄位 \(`name` 和 `age`\) 和兩個公用 \(Public\) 方法。  第二個類別 `StringTest` 是用來包含 `Main`。  
   
- [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/csharp/class_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]  
   
 ## 註解  
  請注意，在上述範例裡，私用欄位 \(`name` 和 `age`\) 只能經由 `Child` 類別的公用方法來存取。  例如，使用以下陳述式時，您就不能從 `Main` 方法中輸出小孩的名字：  

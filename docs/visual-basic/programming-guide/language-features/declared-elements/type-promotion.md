@@ -31,21 +31,21 @@ caps.handback.revision: 17
   
  下列範例說明模組的基本架構定義，以及該模組的兩個成員。  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
  在 `projModule` 中，在模組層級宣告的程式設計項目會提升至 `projNamespace`。  在前述範例中，僅提升了 `basicEnum` 和 `innerClass`，卻沒有提升 `numberSub`，因為其並未在模組層級中宣告。  
   
 ## 型別提升的效用  
  型別提升的效用是在模組名稱中，不需加入限定性條件字串 \(String\)。  下列範例將會對前述範例中的程序呼叫兩次。  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
  在前述範例中，第一次呼叫是使用完整的限定性條件字串。  但因為型別提升，其實並不需這麼做。  第二次呼叫也會存取模組成員，而不會在限定性條件字串中加入 `projModule`。  
   
 ## 型別提升失敗  
  如果命名空間中已經存在與模組成員名稱相同的成員，該模組成員的型別提升將無效。  下列範例說明列舉型別 \(Enumeration\) 及相同命名空間中模組的基本架構定義。  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
  在前述範例中，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 無法將類別 \(Class\) `abc` 提升至 `thisNameSpace`，因為命名空間層次中已經存在名稱相同的列舉型別。  若要存取 `abcSub`，您必須使用完整的限定性條件字串 `thisNamespace.thisModule.abc.abcSub`。  但是類別 `xyz` 仍會提升，而您可以使用較短的限定性條件字串 `thisNamespace.xyz.xyzSub` 來存取 `xyzSub`。  
   
@@ -54,7 +54,7 @@ caps.handback.revision: 17
   
  **結果** ：部分定義的型別提升失敗可能導致無法預期的結果，甚至產生編譯器錯誤。  下列範例說明類別的基本架構部分定義，其中一項位於模組內。  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
  在前述範例中，開發人員可能預期編譯器會合併 `sampleClass` 的兩個部分定義。  但是編譯器卻不會考慮提升 `sampleModule` 內的部分定義。  這使得編譯器嘗試編譯兩個獨立的不同類別，雖然名稱都是 `sampleClass`，但具備不同的完整路徑。  
   

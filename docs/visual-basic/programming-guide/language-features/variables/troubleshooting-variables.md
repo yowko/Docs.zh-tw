@@ -36,7 +36,7 @@ caps.handback.revision: 19
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/troubleshooting-variables_2.vb)]  
+ [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
   
  在此範例中，`p` 只能使用 <xref:System.Object> 類別本身的成員，其並未包含 `Left` 屬性。 另一方面，已宣告 `q` 屬於 <xref:System.Windows.Forms.Label> 類型，因此它可以使用 <xref:System.Windows.Forms> 命名空間中 <xref:System.Windows.Forms.Label> 類別的所有方法和屬性。  
   

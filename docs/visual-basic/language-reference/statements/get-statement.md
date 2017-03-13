@@ -80,16 +80,16 @@ End Get
   
      下列範例會說明兩種方法，唯讀屬性 `quoteForTheDay` 可以用於傳回私用變數 `quoteValue` 中所保留的值。  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_2.vb)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_3.vb)]  
   
 ## 範例  
  下列範例會使用 `Get` 陳述式，傳回屬性的值。  
   
- [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
 ## 請參閱  
  [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md)   

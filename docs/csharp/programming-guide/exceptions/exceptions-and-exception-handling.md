@@ -9,7 +9,7 @@ C\# 語言的例外狀況 \(Exception\) 處理功能可協助您處理任何在�
   
  在這個範例中，方法會測試除數為零的情形，並攔截錯誤。  如果沒有經過例外狀況處理，這個程式可能會因 \[為**DivideByZeroException 未處理**\] 的錯誤而終止。  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exceptions-and-exception_1.cs)]  
+ [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## 例外狀況概觀  
  例外狀況有下列特性：  

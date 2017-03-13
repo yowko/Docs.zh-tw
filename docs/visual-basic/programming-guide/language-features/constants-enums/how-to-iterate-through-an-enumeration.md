@@ -29,7 +29,7 @@ caps.handback.revision: 20
   
 -   首先宣告一陣列，然後使用 <xref:System.Enum.GetValues%2A> 方法將列舉型別轉換為該陣列，接著您就可以如同其他任何變數一般來傳遞陣列。  下列範例會顯示逐一查看列舉型別時，列舉型別 <xref:Microsoft.VisualBasic.FirstDayOfWeek> 的每個成員。  
   
-     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#7)]  
+     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
 ## 請參閱  
  [Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   

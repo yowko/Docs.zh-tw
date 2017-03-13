@@ -23,12 +23,12 @@ caps.handback.revision: 21
   
  在範例中，下列程式碼區段會使用 `Tokens` 類別將 "This is a sample sentence." 這個句子分成多個語彙基元 \(使用 ' ' 和 '\-' 做為分隔符號\)。  然後程式碼會使用 `foreach` 陳述式顯示這些語彙基元。  
   
- [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_1.cs)]  
+ [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## 範例  
  `Tokens` 類別會在內部使用陣列儲存語彙基元。  由於陣列會實作 <xref:System.Collections.IEnumerator> 和 <xref:System.Collections.IEnumerable>，因此這個程式碼範例可能使用了陣列的列舉方法 \(<xref:System.Collections.IEnumerable.GetEnumerator%2A>、<xref:System.Collections.IEnumerator.MoveNext%2A>、<xref:System.Collections.IEnumerator.Reset%2A> 和 <xref:System.Collections.IEnumerator.Current%2A>\)，而不是在 `Tokens` 類別中定義這些方法。  範例中會包含方法定義，用以釐清其定義方式及各自的功能。  
   
- [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_2.cs)]  
+ [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
  在 C\# 中，集合類別不一定要實作 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.IEnumerator>，也能與 `foreach` 相容。  如果類別具有必要的 <xref:System.Collections.IEnumerable.GetEnumerator%2A>、<xref:System.Collections.IEnumerator.MoveNext%2A>、<xref:System.Collections.IEnumerator.Reset%2A> 和 <xref:System.Collections.IEnumerator.Current%2A> 成員，就可以搭配 `foreach` 使用。  省略介面的優點是，您可以為 `Current` 定義比 <xref:System.Object> 更明確的傳回型別。  這樣就能提供型別安全。  
   

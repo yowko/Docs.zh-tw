@@ -30,7 +30,7 @@ caps.handback.revision: 27
 ## 常值  
  `char` 型別的常數可以寫成字元常值、十六進位逸出序列 \(Escape Sequence\) 或 Unicode 表示。  您也可以轉換整數字元碼。  在下列範例中，四個 `char` 變數是以相同字元 `X` 進行初始化：  
   
- [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/csharp/char_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/char_1.cs)]  
   
 ## 轉換  
  `char` 可以隱含地轉換成 [ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)。  然而，其他的型別不能隱含地轉換成 `char` 型別。  

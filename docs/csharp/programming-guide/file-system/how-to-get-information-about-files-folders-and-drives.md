@@ -41,7 +41,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## 範例  
  在下列範例中，會示範各種方法來存取檔案和資料夾的相關資訊。  
   
- [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#6)]  
+ [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
   
 ## 穩固程式設計  
  處理使用者指定的路徑字串時，也必須處理下列情形的例外狀況 \(Exception\)：  

@@ -30,19 +30,19 @@ caps.handback.revision: 24
   
 -   使用 `DeleteFile` 方法刪除檔案。  下列程式碼會示範如何刪除名為 `test.txt` 的檔案。  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
   
 ### 若要刪除文字檔並詢問使用者確認是否要刪除檔案  
   
 -   使用 `DeleteFile` 方法刪除檔案，並將 `showUI` 設為 `AllDialogs`。  下列程式碼會示範如何刪除名為 `test.txt` 的檔案，並讓使用者確認是否刪除檔案。  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
   
 ### 若要刪除文字檔並將它傳送到資源回收筒  
   
 -   使用 `DeleteFile` 方法刪除檔案，並指定 `SendToRecycleBin` 為 `recycle` 參數。  下列程式碼會示範如何刪除名為 `test.txt` 的檔案，並將它傳送到 \[**資源回收筒**\]。  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
   
 ## 穩固程式設計  
  下列情形可能會造成例外狀況 \(Exception\)：  

@@ -32,7 +32,7 @@ caps.handback.revision: 13
   
 -   在成員名稱前面加上列舉型別。  例如，下面的範例會將 `FirstDayOfWeek` 列舉型別的 `Saturday` 成員指派給變數 `DayValue`。  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#19)]  
+     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
   
 ## 請參閱  
  [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   

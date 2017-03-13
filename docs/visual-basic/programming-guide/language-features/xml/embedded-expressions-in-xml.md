@@ -30,7 +30,7 @@ caps.handback.revision: 22
   
  例如，您可以建立 XML 項目常值，將常值文字內容與內嵌運算式結合在一起。  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_1.vb)]  
+ [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
   
  如果 `isbnNumber` 包含整數 12345 且 `modifiedDate` 包含日期 3\/5\/2006，則當程式碼執行時，`book` 的值是：  
   
@@ -55,27 +55,27 @@ caps.handback.revision: 22
   
 -   XML 項目名稱中內嵌運算式的範例：  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_2.vb)]  
+     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
 -   XML 項目內容中內嵌運算式的範例：  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_3.vb)]  
+     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
 -   XML 項目屬性名稱中內嵌運算式的範例：  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_4.vb)]  
+     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
 -   XML 項目屬性值中內嵌運算式的範例：  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_5.vb)]  
+     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
 -   XML 項目屬性中內嵌運算式的範例：  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_6.vb)]  
+     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
   
 -   XML 文件根項目中內嵌運算式的範例：  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_7.vb)]  
+     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
  如果您啟用 `Option Strict`，編譯器 \(Compiler\) 會檢查每個內嵌運算式的型別是否擴展為所需型別。  唯一的例外狀況 \(Exception\) 是 XML 文件的根項目 \(Root Element\)，根項目是在程式碼執行時進行驗證。  如果編譯時不使用 `Option Strict`，則可內嵌型別 `Object` 的運算式，而其型別會在執行階段驗證。  
   

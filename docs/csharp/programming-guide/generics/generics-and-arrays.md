@@ -21,7 +21,7 @@ caps.handback.revision: 17
   
  下列程式碼範例會示範如何使用 <xref:System.Collections.Generic.IList%601> 輸入參數的單一泛型方法，逐一查看清單和陣列，在此案例中為整數陣列。  
   
- [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-arrays_1.cs)]  
+ [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-arrays_1.cs)]  
   
 ## 請參閱  
  <xref:System.Collections.Generic>   

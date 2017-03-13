@@ -92,7 +92,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## 範例  
  下列範例顯示了定義兩個參數的 `Function` 程序。  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
 ## 請參閱  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   

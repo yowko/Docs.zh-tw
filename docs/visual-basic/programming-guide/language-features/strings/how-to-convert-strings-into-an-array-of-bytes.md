@@ -30,7 +30,7 @@ caps.handback.revision: 8
 ## 範例  
  這個範例會使用 <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> 編碼類別的 <xref:System.Text.Encoding.GetBytes%2A> 方法，將字串轉換成位元組陣列。  
   
- [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-strings-i_1.vb)]  
+ [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-strings-into-an-array-of-bytes_1.vb)]  
   
  您可以從數個編碼選項中選擇，將字串轉換成位元組陣列：  
   

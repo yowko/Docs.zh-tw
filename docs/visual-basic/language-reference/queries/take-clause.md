@@ -48,7 +48,7 @@ Take count
 ## 範例  
  下列程式碼範例會搭配使用 `Take` 子句和 `Skip` 子句，以頁面為單位傳回查詢資料。  GetCustomers 函式會使用 `Skip` 子句一直略過清單中的客戶直到遇到所提供的起始索引值，然後使用 `Take` 子句自該索引值起傳回一頁的客戶。  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#1)]  
+ [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
 ## 請參閱  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

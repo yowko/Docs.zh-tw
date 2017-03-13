@@ -32,13 +32,13 @@ caps.handback.revision: 21
   
 -   請使用 `CopyFile` 方法，提供目標檔案和位置。  下列範例會建立名為 `test2.txt` 之 `test.txt` 的複本。  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
 ### 若要在相同的資料夾中建立檔案的複本，以覆寫現有的檔案  
   
 -   請使用 `CopyFile` 方法，提供目標檔案和位置，並將 `overwrite` 設定為 `True`。  下列範例會建立名為 `test2.txt` 之 `test.txt` 的複本，並以該名稱覆寫所有的現有檔案。  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
 ## 穩固程式設計  
  下列條件可能造成擲回例外狀況：  

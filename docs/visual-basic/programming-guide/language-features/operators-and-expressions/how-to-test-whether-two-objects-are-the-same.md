@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
 -   將這兩個變數當做運算元使用 [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) 或 [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)。  
   
-     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-test-whether-two-_1.vb)]  
+     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
   
  您可能想要視兩個物件是否參考同一個執行個體，採取特定的動作。  上述範例會比較控制項 `c` 與表單 `f` 上的使用中控制項。  如果沒有使用中控制項，或如果有使用中控制項但不是 `c` 的同一個控制項執行個體，則 `If` 陳述式 \(Statement\) 會失敗，並且程序會返回而不做進一步處理。  
   

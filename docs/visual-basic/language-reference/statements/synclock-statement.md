@@ -89,13 +89,13 @@ End SyncLock
  如果 `simpleMessageList` 類別在其所有執行個體間共用了一份訊息清單，則變數 `messagesList` 和 `messagesLast` 將宣告為 `Shared`。  在這種情況下，變數 `messagesLock` 也應該是 `Shared`，使得每個執行個體使用單一鎖定物件。  
   
 ### 程式碼  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
 ### 描述  
  下列的範例會使用執行緒與 `SyncLock`。  只要 `SyncLock` 陳述式存在，此陳述式區塊就是關鍵區段，而且 `balance` 永遠不會成為負數。  您可以取消 `SyncLock` 和 `End SyncLock` 陳述式的註解，以查看省略 `SyncLock` 關鍵字的效果。  
   
 ### 程式碼  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
 ### 註解  
   

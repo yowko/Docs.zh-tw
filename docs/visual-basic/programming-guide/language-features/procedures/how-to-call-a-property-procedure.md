@@ -39,7 +39,7 @@ caps.handback.revision: 16
   
      下列範例會讀取 <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> 屬性的值，隱含地呼叫其 `Get` 程序。  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-call-a-property-procedure_1.vb)]  
   
 2.  如果屬性有引數，請在屬性名稱之後緊接著括號，將引數清單括起來。  如果未提供引數，您也可以選擇省略括號。  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 16
   
      下列範例會設定 <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> 屬性的值，隱含呼叫 `Set` 程序。  
   
-     [!code-vb[VbVbcnProcedures#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-property-p_2.vb)]  
+     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-call-a-property-procedure_2.vb)]  
   
 2.  如果屬性有引數，請在屬性名稱之後緊接著括號，將引數清單括起來。  如果未提供引數，您也可以選擇省略括號。  
   

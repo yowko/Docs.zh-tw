@@ -35,29 +35,29 @@ caps.handback.revision: 20
 ## 算術運算  
  您可以在運算式中用 [\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) 將兩個數值相加，或是用 [\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md) 將某數值減另一數值，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
   
  負運算也會使用 [\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)，但只使用一個運算元，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
   
  乘法及除法分別會使用 [\* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) 及 [\/ Operator](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
   
  乘冪運算會使用 [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)，如下列範例所示。  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
   
  整數除法會使用 [\\ Operator](../../../../visual-basic/language-reference/operators/integer-division-operator.md)執行。  整數除法會傳回商數，也就是可以用除數對被除數進行分割的整數次數，而不考慮任何餘數。  對此運算子而言，除數和被除數都必須是整數類資料型別 \(Integral Type\) \(`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long` 和 `ULong`\)。  所有其他的型別都必須先轉換成整數型別。  下列為整數除法的範例。  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
   
  模數算術是使用 [Mod 運算子](../../../../visual-basic/language-reference/operators/mod-operator.md) 來執行。  這個運算子會在用除數對被除數進行整數次數分割後傳回餘數。  如果除數及被除數都是整數型別，則傳回值是整數。  如果除數及被除數都是浮點型別，則傳回值也會是浮點。  以下為這項行為的範例。  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
   
 ### 嘗試以零為除數  
  除數為零會因所涉及的資料型別而有不同的結果。  在整數除法 \(`SByte`、`Byte`、`Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`\) 中，[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] 會擲回 <xref:System.DivideByZeroException> 例外狀況。  在 `Decimal` 或 `Single` 資料型別上進行除法運算時，[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] 也會擲回 <xref:System.DivideByZeroException> 例外狀況。  
@@ -90,7 +90,7 @@ caps.handback.revision: 20
   
  下列範例會將 `Integer` 值往左移動和往右移動。  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
   
  算術移位不會產生溢位例外狀況。  
   

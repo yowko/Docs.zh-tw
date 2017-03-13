@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
      <xref:System.Convert.ToInt32%2A> 方法的第一個引數是要轉換的字串。  第二個引數會描述數字用以表示的基底，十六進位的基底為 16。  
   
-     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-hexadecim_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   

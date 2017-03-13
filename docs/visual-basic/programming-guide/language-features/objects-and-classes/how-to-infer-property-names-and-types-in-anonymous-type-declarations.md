@@ -25,7 +25,7 @@ caps.handback.revision: 19
 
 匿名類型未提供任何機制來直接指定屬性的資料類型。 所有屬性的類型都是推斷而來。 在下列範例中，透過用來初始化 `Name` 和 `Price` 類型的值，直接推斷這些類型。  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
   
  匿名類型也可以推斷其他來源的屬性名稱和類型。 以下章節提供可進行推斷的情況清單，以及不可進行推斷的狀況範例。  
   
@@ -35,19 +35,19 @@ caps.handback.revision: 19
   
 -   透過變數名稱。 匿名類型 `anonProduct` 會有兩個屬性：`productName` 和 `productPrice`。 其資料類型分別是下列原始變數：`String` 和 `Double`。  
   
-     [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_2.vb)]  
   
 -   透過其他物件的屬性或欄位名稱。 例如，考慮使用類型為 `CarClass` 且包含 `Name` 和 `ID` 屬性的 `car` 物件。 若要利用使用 `car` 物件值初始化的 `Name` 和 `ID` 屬性來建立新的匿名類型執行個體 \(`car1`\)，您可以撰寫下列項目：  
   
-     [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_3.vb)]  
   
      先前的宣告等同於定義匿名類型 `car2` 的較長程式碼行。  
   
-     [!code-vb[VbVbalrAnonymousTypes#35](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_4.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#35](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_4.vb)]  
   
 -   透過 XML 成員名稱。  
   
-     [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_5.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_5.vb)]  
   
      針對 `anon` 產生的屬性會有一個類型 <xref:System.Collections.IEnumerable>\(Of XElement\) 的屬性 `Book`。  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 19
   
      下列程式碼中的變數 `anon2` 是具有一個屬性 \(名稱為 `First` 的字元\) 的匿名類型。 此程式碼會顯示字母 "E" \(即函式 <xref:System.Linq.Enumerable.First%2A> 所傳回的字母\)。  
   
-     [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_6.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_6.vb)]  
   
 ## 推斷失敗  
   
@@ -87,7 +87,7 @@ caps.handback.revision: 19
   
      將運算式的結果指派給屬性名稱，即可解決錯誤。  
   
-     [!code-vb[VbVbalrAnonymousTypes#14](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_7.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#14](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_7.vb)]  
   
 -   多個屬性的推斷會產生兩個或多個同名的屬性。 推斷回先前範例中的宣告，無法將 `product.Name` 和 `car1.Name` 列為相同匿名類型的屬性。 原因是所有的推斷識別項都是 `Name`。  
   
@@ -97,7 +97,7 @@ caps.handback.revision: 19
   
      將值指派給不同的屬性名稱，即可解決問題。  
   
-     [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_8.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_8.vb)]  
   
      請注意，大小寫的變更 \(大寫與小寫字母之間的變更\) 並不會讓這兩個名稱不同。  
   
@@ -115,7 +115,7 @@ caps.handback.revision: 19
   
      在此範例中，您可以反轉屬性的宣告順序來修正問題。  
   
-     [!code-vb[VbVbalrAnonymousTypes#15](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#15](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_9.vb)]  
   
 -   匿名類型的屬性名稱與 <xref:System.Object> 成員的名稱相同。 例如，因為 `Equals` 是 <xref:System.Object> 的方法，所以下列宣告會失敗。  
   
@@ -127,7 +127,7 @@ caps.handback.revision: 19
   
      變更屬性名稱，即可修正問題：  
   
-     [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
 ## 請參閱  
  [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   

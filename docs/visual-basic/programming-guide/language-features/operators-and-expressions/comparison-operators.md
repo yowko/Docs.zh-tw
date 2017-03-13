@@ -70,17 +70,17 @@ caps.handback.revision: 13
 ## 比較物件  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會以 [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) 和 [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)比較兩個物件參考變數。  您可以使用這兩個運算子的其中一個，判斷這兩個參考變數是否會參考相同的物件執行個體。  下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  在先前範例中，因為 `x Is y` 中的這兩個變數都會參考相同的執行個體，所以會評估為 `True`。  請將此結果與下列範例進行比較。  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
  在先前範例中，雖然 `x Is y` 會因變數都參考相同類型的物件而評估為 `False`，但它們所參考的是該類型的不同執行個體。  
   
  當您想測試兩個不是指向相同執行個體的物件時，`IsNot` 運算子可讓您免除同時使用 `Not` 和 `Is` 語法上的不便之處。  下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
  在先前範例中，`If a IsNot b` 會等於 `If Not a Is b`。  
   
@@ -91,7 +91,7 @@ caps.handback.revision: 13
   
  當 `typename` 指定介面型別時，如果物件實作介面型別，則 `TypeOf`...`Is` 運算式便會傳回 `True`。  當 `typename` 是類別型別時，如果物件是指定類別的執行個體或是自指定類別衍生之類別的執行個體，運算式便會傳回 `True`。  下列範例將說明這點。  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
  在先前範例中，`TypeOf x Is Control` 運算式會評估為 `True`，是因為 `x` 的型別為 `Button`，而此型別是繼承自 `Control`。  
   

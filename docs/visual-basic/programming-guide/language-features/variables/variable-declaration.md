@@ -76,7 +76,7 @@ Dim l, m As Long, x, y As Single
 ## 區域型別推斷  
  「*型別推斷*」\(Type Inference\) 用於判斷未使用 `As` 子句宣告之區域變數的資料型別。  編譯器是根據初始化運算式的型別推斷變數的型別。  這可讓您宣告變數，而不需要明確陳述型別。  在下列範例中，`num1` 和 `num2` 都會強型別為整數。  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
  如果您要使用區域型別推斷，`Option Infer` 必須設定為 `On`。  如需詳細資訊，請參閱[Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)與[Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
   

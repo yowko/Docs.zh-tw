@@ -39,7 +39,7 @@ x = x / y
  `/=` 運算子無法直接多載，但使用者定義型別可多載 [\/ 運算子](../../../csharp/language-reference/operators/division-operator.md) \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  在所有複合指派運算子上，多載二元運算子即隱含多載對等的複合指派。  
   
 ## 範例  
- [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#5)]  
+ [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
   
 ## 請參閱  
  [C\# 參考](../../../csharp/language-reference/index.md)   

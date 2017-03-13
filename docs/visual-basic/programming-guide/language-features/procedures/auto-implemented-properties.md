@@ -30,15 +30,15 @@ caps.handback.revision: 20
   
  使用自動實作屬性、屬性 \(包括預設值\)，可以在單行中宣告。  下列範例顯示三個屬性宣告。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
   
  自動實作屬性相當於屬性值儲存在私用欄位的屬性。  下列程式碼範例顯示自動實作屬性。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
   
  下列程式碼範例顯示先前的自動實作屬性範例的對等程式碼。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
  下列程式碼會示範唯讀屬性實作：  
   
@@ -73,7 +73,7 @@ End Class
 ## 初始化自動實作屬性  
  任何可以用來初始化欄位的運算式，對初始化自動實作屬性都是有效的。  當您初始化自動實作屬性時，會評估運算式，並傳遞給屬性的 `Set` 程序。  下列程式碼範例會顯示一些包括起始值的自動實作屬性。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
  無法初始化 `Interface`，或標示為 `MustOverride` 的自動實作屬性。  
   
@@ -81,7 +81,7 @@ End Class
   
  當您將自動實作屬性宣告為陣列時，您無法指定明確的陣列界限。  不過，您可以使用陣列初始設定式來提供值，如下列範例所示。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## 需要標準語法的屬性定義  
  自動實作屬性很方便，並且支援許多程式設計案例。  不過，有很多情況下您不能使用自動實作屬性，並且必須改為使用標準或*已展開*屬性語法。  

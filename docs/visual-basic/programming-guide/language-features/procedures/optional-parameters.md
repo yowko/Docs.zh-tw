@@ -57,12 +57,12 @@ sub name(argument 1, , , argument 4)
   
  第一個對 `MsgBox` 的呼叫會依照 `MsgBox` 定義的引數順序提供這三個引數。  第二個呼叫只會提供必要引數。  第三個和第四個呼叫會提供第一個和第三個引數。  第三個呼叫會依位置執行這個動作，第四個呼叫則會依名稱執行。  
   
- [!code-vb[VbVbcnProcedures#47](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## 判斷是否有選擇性引數  
  程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。  如果您需要有所區別，可以將一個不常用的值設定為預設值。  下列程序定義選擇性參數  `office`，並測試其預設值  `QJZ`，以瞭解是否在呼叫中將其省略：  
   
- [!code-vb[VbVbcnProcedures#46](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
  如果選擇性參數是 `String` 之類的參考類型，您就可以用 `Nothing` 做為預設值，只要不是引數需要的值即可。  
   

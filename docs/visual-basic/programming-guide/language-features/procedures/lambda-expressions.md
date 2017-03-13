@@ -35,19 +35,19 @@ caps.handback.revision: 52
   
  下列範例是會遞增其引數並傳回值的 Lambda 運算式。  下列範例同時顯示函式的單行和多行 Lambda 運算式語法。  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
   
  下列範例是一個 Lambda 運算式，可以將值寫入至主控台。  下列範例同時顯示副程式的單行和多行 Lambda 運算式語法。  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
   
  請注意，上述範例中 Lambda 運算式已經指派給變數名稱。  因此每當參考該變數時，便會呼叫 Lambda 運算式。  您還可以同時宣告和叫用 Lambda 運算式，如下列範例所示。  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
   
  Lambda 運算式可以傳回做為函式呼叫 \(Function Call\) 的值 \(請見本主題稍後[內容](#context)章節中的範例\)，或傳遞做為使用委派型別之參數的引數，如下範例所示。  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class2.vb#8)]  
+ [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
   
 ## Lambda 運算式語法  
  Lambda 運算式的語法和標準函式或副程式語法類似。  其差異如下：  
@@ -125,7 +125,7 @@ End Class
   
  對於包含範圍中的區域變數和參數的存取權期，可以延伸超過該範圍的存留期 \(Lifetime\)。  只要委派 \(Delegate\) 參考無法進行記憶體回收的 Lambda 運算式，就會保留對於原始環境中變數的存取權。  在下列範例中，變數 `target` 是 `makeTheGame` 的本機變數，而後者是 Lambda 運算式 `playTheGame` 在其中定義的方法。  請注意，在 `Main` 中指派給 `takeAGuess` 的傳回 Lambda 運算式，仍然可以存取本機變數 `target`。  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class6.vb#12)]  
+ [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
   
  下列範例示範巢狀 Lambda 運算式的廣泛存取權限。  當傳回的 Lambda 運算式是從 `Main` 執行為 `aDel` 時，它會存取下列項目：  
   
@@ -139,16 +139,16 @@ End Class
   
 -   形成巢狀之 Lambda 運算式的參數：`level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class3.vb#9)]  
+ [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
 ## 轉換為委派型別  
  Lambda 運算式可以隱含地轉換為相容的委派型別。  如需一般相容性需求的詳細資訊，請參閱[Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  例如，下列程式碼範例顯示的 Lambda 運算式可隱含轉換為 `Func(Of Integer, Boolean)` 或相符的委派簽章。  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#16)]  
+ [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
   
  下列程式碼範例顯示的 Lambda 運算式可隱含轉換為 `Sub(Of Double, String, Double)` 或相符的委派簽章。  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/class7.vb#23)]  
+ [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
   
  當您將 Lambda 運算式指派為委派或者當做引數傳遞至程序時，可以指定參數名稱但略過其資料型別，以便從委派採用型別。  
   
@@ -156,11 +156,11 @@ End Class
   
 -   下列範例定義 Lambda 運算式，在可為 Null 的引數具有指派值時傳回 `True`，而其值為 `Nothing` 時傳回 `False`。  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#4)]  
+     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
   
 -   下列範例定義 Lambda 運算式，會傳回陣列中最後一個元素的索引。  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#5)]  
+     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
 ## 請參閱  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -96,7 +96,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## 範例  
  下列範例會增加動態陣列最後一個維度的大小，但不會遺失陣列現有的任何資料，再以遺失部分資料的方式減少大小。  最後，大小減少回其原始值，並重新初始化所有陣列項目。  
   
- [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/redim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
   
  `Dim` 陳述式會建立三維的新陣列。  每個維度都宣告界限為 10，所以每個維度的陣列索引範圍是 0 到 10。  在下列的討論中，三維稱為圖層、列和欄。  
   

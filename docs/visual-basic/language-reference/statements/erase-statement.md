@@ -43,7 +43,7 @@ Erase arraylist
 ## 範例  
  下列範例會使用 `Erase` 陳述式清除兩個陣列，並釋放它們的記憶體 \(分別有 1000 和 100 個儲存項目\)。  然後，`ReDim` 陳述式會將新的陣列執行個體指派給三維陣列。  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
 ## 請參閱  
  [Nothing](../../../visual-basic/language-reference/nothing.md)   

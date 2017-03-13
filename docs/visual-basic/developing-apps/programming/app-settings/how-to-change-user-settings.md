@@ -34,7 +34,7 @@ caps.handback.revision: 18
 ## 範例  
  這個範例會變更 `Nickname` 使用者設定的值。  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#7)]  
+ [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
   
  如果要使這個範例能夠運作，您的應用程式必須具有型別為 `String` 的 `Nickname` 使用者設定。  
   

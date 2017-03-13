@@ -45,28 +45,28 @@ caps.handback.revision: 13
   
  例如，下列的 `Sub` 程序採用三個引數：  
   
- [!code-vb[VbVbcnProcedures#41](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_1.vb)]  
+ [!code-vb[VbVbcnProcedures#41](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_1.vb)]  
   
  當您呼叫此程序時，可以依位置、名稱或兩者的混合提供引數。  
   
 ## 依位置傳遞引數  
  您可以用依位置傳遞、並以逗號分隔的引數呼叫  `studentInfo`  程序，如下列範例所示：  
   
- [!code-vb[VbVbcnProcedures#42](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_2.vb)]  
+ [!code-vb[VbVbcnProcedures#42](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_2.vb)]  
   
  如果您在位置引數清單中省略選擇性引數，必須用逗號保留它的位置。  下列範例會呼叫沒有  `age`  引數的  `studentInfo` ：  
   
- [!code-vb[VbVbcnProcedures#43](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_3.vb)]  
+ [!code-vb[VbVbcnProcedures#43](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_3.vb)]  
   
 ## 依名稱傳遞引數  
  此外，您可以用依名稱傳遞、同樣以逗號分隔的引數呼叫  `studentInfo` ，如下列範例所示：  
   
- [!code-vb[VbVbcnProcedures#44](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_4.vb)]  
+ [!code-vb[VbVbcnProcedures#44](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_4.vb)]  
   
 ## 依位置和名稱傳遞的混合引數  
  您可以在單一程序呼叫中同時依位置和名稱提供引數，如下列範例所示：  
   
- [!code-vb[VbVbcnProcedures#45](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_5.vb)]  
+ [!code-vb[VbVbcnProcedures#45](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_5.vb)]  
   
  在上一個範例中，不需要用多餘的逗號為已省略的  `age`  引數保留位置，因為  `birth`  是依名稱傳遞的。  
   

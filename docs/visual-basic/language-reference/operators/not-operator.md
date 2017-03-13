@@ -73,14 +73,14 @@ result = Not expression
 ## 範例  
  下列範例會使用 `Not` 運算子，對 `Boolean` 運算式執行邏輯否定。  結果為 `Boolean` 值，表示運算式的相反值。  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
   
  前述範例分別會產生 `False` 和 `True` 的結果。  
   
 ## 範例  
  下列範例會使用 `Not` 運算子，對數值運算式的個別位元執行邏輯否定。  會將結果模式中的對應位元設為運算元模式中對應位元的反向，包括正負號位元。  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
   
  前一個範例分別產生 \-11、\-9 和 \-7 的結果。  
   

@@ -34,11 +34,11 @@ caps.handback.revision: 23
   
  您可以在宣告陳述式 \(Declaration Statement\) 或指派陳述式中使用 `New` 子句。  當陳述式執行時，會呼叫指定類別的適當建構函式，並傳遞任何您所提供的引數。  下列範例會建立 `Customer` 類別的執行個體，其具有兩個建構函式，一個不採用參數，另一個採用字串參數，用以說明。  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
  由於陣列是類別，因此 `New` 可建立新的陣列執行個體，如以下範例所示。  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
  若記憶體不足，無法產生新的執行個體時，Common Language Runtime \(CLR\) 會擲回 <xref:System.OutOfMemoryException> 錯誤。  
   

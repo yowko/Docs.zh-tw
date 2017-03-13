@@ -16,7 +16,7 @@ caps.handback.revision: 13
  建議當您儲存查詢結果時，將傳回的集合物件指派給新變數，如下列範例所示：  
   
 ## 範例  
- [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#25)]  
+ [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-store-the-results-of-a-query-in-memory_1.cs)]  
   
 ## 編譯程式碼  
   

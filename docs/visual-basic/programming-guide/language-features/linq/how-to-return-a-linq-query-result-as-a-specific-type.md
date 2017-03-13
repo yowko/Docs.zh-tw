@@ -72,7 +72,7 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
 3.  在 Form1 類別的 `End Class` 陳述式之後加入下列程式碼，以為這個範例建立用來存放查詢結果的 `CustomerInfo` 型別。  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#16)]  
+     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
   
 4.  當您將資料表加入至 O\/R 設計工具時，設計工具會將 <xref:System.Data.Linq.DataContext> 物件加入至您的專案。  本物件內含的程式碼，您必須擁有才能存取這些資料表，以及個別物件和每一個資料表的集合。  專案的 <xref:System.Data.Linq.DataContext> 物件是根據 .dbml 檔案的名稱命名的。  在這個專案中，<xref:System.Data.Linq.DataContext> 物件命名為 `northwindDataContext`。  
   
@@ -80,7 +80,7 @@ Language\-Integrated Query \(LINQ\) 可讓您輕鬆地存取資料庫資訊和�
   
      在 Form1 類別的 `Load` 事件中加入下列程式碼，查詢以您的資料內容之屬性公開 \(Expose\) 的資料表。  查詢的 `Select` 子句會針對查詢結果中的每個項目建立新的 `CustomerInfo` 型別，而不是匿名型別。  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#15)]  
+     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
   
 5.  按下 F5 執行專案並檢視結果。  
   

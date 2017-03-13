@@ -23,7 +23,7 @@ caps.handback.revision: 45
   
  您會使用[介面](../../../csharp/language-reference/keywords/interface.md)關鍵字來定義介面，如下列範例所示。  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
  任何實作 <xref:System.IEquatable%601> 介面的類別或結構，必須包含 <xref:System.IEquatable%601.Equals%2A> 方法的定義，該方法符合介面指定的簽章。  如此一來，您可以倚賴實作 `IEquatable<T>` 的類別，以包含 `Equals` 方法，類別的執行個體可以使用該方法判斷它是否等於相同類別的另一個執行個體。  
   
@@ -39,7 +39,7 @@ caps.handback.revision: 45
   
  下列範例會示範 IEquatable\<T\> 介面的實作。  實作類別 `Car` 必須提供 <xref:System.IEquatable%601.Equals%2A> 方法的實作。  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_2.cs)]  
+ [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_2.cs)]  
   
  類別的屬性與索引子可以針對介面中定義的屬性或索引子定義額外的存取子。  例如，介面可能會宣告具有 [get](../../../csharp/language-reference/keywords/get.md) 存取子的屬性。  實作介面的類別可以宣告具有 `get` 和 [set](../../../csharp/language-reference/keywords/set.md) 存取子的相同屬性。  不過，如果屬性或索引子使用明確的實作，則存取子必須相符。  如需有關明確實作的詳細資訊，請參閱[明確介面實作](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)和[介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)。  
   

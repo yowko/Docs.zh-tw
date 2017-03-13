@@ -36,7 +36,7 @@ caps.handback.revision: 28
   
 -   使用 `DeleteSubKey` 方法來刪除登錄機碼。  此範例刪除了 CurrentUser 登錄區中的機碼 Software\/TestApp。  您可以在程式碼中，將此機碼變更成適當的字串，或採用使用者提供的資訊。  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-delete-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
 ## 穩固程式設計  
  如果機碼\/值組不存在，則 `DeleteSubKey` 方法會傳回空字串。  

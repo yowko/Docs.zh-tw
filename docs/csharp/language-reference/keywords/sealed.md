@@ -31,7 +31,7 @@ sealed class B : A {}
 ## 範例  
  在下列範例中，`Z` 繼承自 `Y`，但 `Z` 無法覆寫已在 `X` 中宣告，並在 `Y` 中密封的虛擬函式 `F`。  
   
- [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#16)]  
+ [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
  當您在類別中定義新方法或屬性時，可以不將這些方法或屬性宣告為 [virtual](../../../csharp/language-reference/keywords/virtual.md)，以防止衍生類別被它們所覆寫。  
   
@@ -46,7 +46,7 @@ sealed class B : A {}
  如需更多範例，請參閱 [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
 ## 範例  
- [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#17)]  
+ [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  在前一個範例中，您會使用下列陳述式從密封類別繼承：  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## 範例  
  在這個範例中，`year` 欄位的值無法在方法 `ChangeYear` 中改變，即使在此類別建構函式中已指定值給它：  
   
- [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#14)]  
+ [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
   
  您只能在下列內容裡對 `readonly` 欄位指定值：  
   
@@ -44,7 +44,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ```  
   
 ## 範例  
- [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#15)]  
+ [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
   
  上述範例裡，如果您使用像這樣的陳述式：  
   

@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
 -   要限定被類似名稱所隱藏的成員，例如：  
   
- [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/csharp/this_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
 -   要將物件做為參數傳遞到其他方法，例如：  
   
@@ -40,14 +40,14 @@ caps.handback.revision: 19
   
 -   要宣告索引子，例如：  
   
- [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/csharp/this_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
  因為靜態成員函式存在於類別層級，且非物件的一部分，所以不具有 `this` 指標。  在靜態方法中參考 `this` 是錯誤的。  
   
 ## 範例  
  這個範例使用 `this` 限定被類似名稱隱藏的 `Employee` 類別成員，`name` 和 `alias`。  它也用來將物件傳遞給 `CalcTax` 這個屬於其他類別的方法。  
   
- [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/csharp/this_3.cs)]  
+ [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

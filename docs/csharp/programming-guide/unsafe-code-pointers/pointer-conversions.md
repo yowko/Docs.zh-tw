@@ -38,9 +38,9 @@ caps.handback.revision: 17
 ## 範例  
  在下列程式碼中，`int` 的指標會轉換成 `byte` 的指標。  請注意，指標會指向變數的最低定址位元組。  當您連續遞增結果時，最大會到 `int` 的大小 \(4 個位元組\)，而您可以顯示變數的剩餘位元組。  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_1.cs)]  
   
- [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#4)]  
+ [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

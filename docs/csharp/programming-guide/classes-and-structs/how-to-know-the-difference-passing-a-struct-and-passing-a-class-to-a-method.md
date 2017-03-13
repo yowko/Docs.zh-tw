@@ -27,7 +27,7 @@ caps.handback.revision: 25
  下列範例的輸出會說明這項差異。  值為`willIChange`方法的呼叫會變更它的類別執行個體的欄位`ClassTaker`因為方法參數中使用的位址，以找出類別的執行個體指定的欄位。    `willIChange`方法的呼叫不會變更欄位的結構，呼叫的方法中`StructTaker`因為引數的值是一份結構本身，不是其地址的複本。    `StructTaker`變更複本中，而複本會遺失何時呼叫`StructTaker`完畢。  
   
 ## 範例  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-know-the-differen_1.cs)]  
+ [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

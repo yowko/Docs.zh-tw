@@ -23,7 +23,7 @@ caps.handback.revision: 23
   
  在不檢查 \(Unchecked\) 的內容中，如果運算式產生在目的型別範圍之外的值，不會以旗標標示溢位。  例如，因為下列範例中的計算會以 `unchecked` 區塊或運算式執行，所以，會忽略該結果對於整數而言太大的結果，同時，`int1` 會指派為值 \-2,147,483,639。  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_1.cs)]  
+ [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  如果移除環境 `unchecked`，則會發生編譯錯誤。  在編譯期間，因為運算式的所有條件都是固定的，所以可以偵測溢位。  
   
@@ -34,7 +34,7 @@ caps.handback.revision: 23
 ## 範例  
  這個範例顯示如何使用 `unchecked` 關鍵字。  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_2.cs)]  
+ [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

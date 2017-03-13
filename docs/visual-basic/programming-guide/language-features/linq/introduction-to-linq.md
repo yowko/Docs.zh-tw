@@ -35,7 +35,7 @@ Language\-Integrated Query \(LINQ\) 將查詢功能加入 [!INCLUDE[vbprvb](../.
   
  例如，下列程式碼範例顯示的 LINQ 查詢，會從集合中傳回一份客戶清單，並根據位置分組。  
   
- [!code-vb[VbVbalrIntroToLINQ#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_1.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
   
  在本主題中，您會找到有關下列領域的資訊：  
   
@@ -62,7 +62,7 @@ Language\-Integrated Query \(LINQ\) 將查詢功能加入 [!INCLUDE[vbprvb](../.
 ##  <a name="RunningtheExamples"></a> 執行範例  
  執行簡介和＜LINQ 查詢結構＞一節中的範例，包括下列程式碼，會傳回客戶和訂單清單。  
   
- [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_2.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
   
 ##  <a name="LINQProviders"></a> LINQ 提供者  
  *「LINQ 提供者」*\(LINQ provider\) 會對應 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] LINQ 查詢和查詢中的資料來源。  當您撰寫 LINQ 查詢時，提供者會接受該查詢，並將它轉譯成資料來源能夠執行的命令。  提供者也會將資料從來源轉換成組成查詢結果的物件。  最後，當您將更新傳送至資料來源時，它會將物件轉換成資料。  
@@ -82,23 +82,23 @@ Language\-Integrated Query \(LINQ\) 將查詢功能加入 [!INCLUDE[vbprvb](../.
   
  查詢運算式以 `From` 子句開頭。  這個子句會識別查詢和變數的來源資料，這些變數用於分別參考來源資料的每個項目。  這些變數稱為*「範圍變數」*\(range variables\) 或*「反覆運算變數」*\(iteration variables\)。  查詢一定要有 `From` 子句，`Aggregate` 查詢除外，因為 `From` 子句對這類查詢為選擇性項目。  識別出 `From` 或 `Aggregate` 子句中的查詢範圍和來源之後，您可以包含任何查詢子句組合以精簡查詢。  如需查詢子句的詳細資訊，請參閱本主題後文中的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] LINQ 查詢運算子。  例如，下列查詢會將客戶資料的來源集合識別為 `customers` 變數，而反覆運算變數則稱之為 `cust`。  
   
- [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_3.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
  這個範例本身就是個有效的查詢；但是當您加入更多的查詢子句來精簡結果時，查詢就會變得更強大。  例如，您可以加入 `Where` 子句，根據一或多個值來篩選結果。  查詢運算式是單行程式碼，您只可以將其他查詢子句附加至查詢結尾。  您可以使用底線 \(\_\) 行接續字元，將查詢分割成多行文字，以提高可讀性。  下列程式碼範例顯示的查詢範例，包含 `Where` 子句。  
   
- [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_4.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
  另一個功能強大的查詢子句是 `Select` 子句，可讓您只傳回從資料來源選取的欄位。  LINQ 查詢會傳回可列舉的強類型物件集合。  查詢可以傳回匿名類型或具名類型的集合。  您可以使用 `Select` 子句，只傳回資料來源的單一欄位。  當您這麼做時，傳回的集合類型就是該單一欄位的類型。  您也可以使用 `Select` 子句，傳回資料來源的多個欄位。  當您這麼做時，傳回的集合類型就是新的匿名類型。  您也可以比對查詢傳回的欄位和指定的具名類型欄位。  下列程式碼範例顯示傳回匿名類型集合的查詢運算式，該類型具有填入來自資料來源之選取欄位資料的成員。  
   
- [!code-vb[VbVbalrIntroToLINQ#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_5.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
   
  LINQ 查詢也可以用來結合多個資料來源，並傳回單一結果。  使用一或多個 `From` 子句，或使用 `Join` 或 `Group Join` 查詢子句，即可完成。  下列程式碼範例顯示的查詢運算式，結合了客戶和訂單資料，並傳回包含客戶和訂單資料的匿名類型集合。  
   
- [!code-vb[VbVbalrIntroToLINQ#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_6.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
   
  您可以使用 `Group Join` 子句建立階層式的查詢結果，其包含客戶物件的集合。  每個客戶物件都有一個屬性，包含該客戶所有訂單的集合。  下列程式碼範例顯示的查詢運算式，結合了階層式結果的客戶和訂單資料，並傳回匿名類型的集合。  查詢傳回的類型包含 `CustomerOrders` 屬性，內含客戶訂單資料的集合。  它也包含 `OrderTotal` 屬性，內含該客戶所有訂單小計的總和。  \(這個查詢相當於 LEFT OUTER JOIN\)。  
   
- [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_7.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
  另有幾個 LINQ 查詢運算子，可讓您建立功能強大的查詢運算式。  本主題的下一節，將討論查詢運算式中可包含的各種查詢子句。  如需 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 查詢子句的詳細資訊，請參閱[Queries](../../../../visual-basic/language-reference/queries/queries.md)。  
   
@@ -108,26 +108,26 @@ Language\-Integrated Query \(LINQ\) 將查詢功能加入 [!INCLUDE[vbprvb](../.
 |||  
 |-|-|  
 |詞彙|定義|  
-|[From Clause](../../../../visual-basic/language-reference/queries/from-clause.md)|查詢必須有 `From` 子句或 `Aggregate` 子句才能開始。  `From` 子句會指定查詢的來源集合和反覆運算變數。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_8.vb)]|  
-|[Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md)|選擇項。  宣告一組查詢的反覆運算變數。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_9.vb)]<br /><br /> 如果不指定 `Select` 子句，則查詢的反覆運算變數即由 `From` 或 `Aggregate` 子句指定的反覆運算變數組成。|  
-|[Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md)|選擇項。  指定查詢的篩選條件。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_10.vb)]|  
-|[Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md)|選擇項。  指定查詢的資料行排序。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_11.vb)]|  
-|[Join Clause](../../../../visual-basic/language-reference/queries/join-clause.md)|選擇項。  將兩個集合合併成單一集合。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_12.vb)]|  
-|[Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)|選擇項。  群組查詢結果的項目。  可用來將彙總函式套用至每個群組。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_13.vb)]|  
-|[Group Join Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)|選擇項。  將兩個集合合併成單一階層式集合。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_14.vb)]|  
-|[Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md)|查詢必須有 `From` 子句或 `Aggregate` 子句才能開始。  `Aggregate` 子句會將一或多個彙總函式套用至集合。  例如，您可以使用 `Aggregate` 子句計算查詢傳回的所有項目小計。<br /><br /> [!code-vb[VbVbalrIntroToLINQ#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_15.vb)]<br /><br /> 也可以使用 `Aggregate` 子句修改查詢。  例如，您可以使用 `Aggregate` 子句執行相關查詢集合的計算。<br /><br /> [!code-vb[VbVbalrIntroToLINQ#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_16.vb)]|  
-|[Let Clause](../../../../visual-basic/language-reference/queries/let-clause.md)|選擇項。  計算值，並將它指派給查詢中的新變數。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_17.vb)]|  
-|[Distinct Clause](../../../../visual-basic/language-reference/queries/distinct-clause.md)|選擇項。  限制目前反覆運算變數的值，以消除查詢結果中重複的值。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_18.vb)]|  
-|[Skip Clause](../../../../visual-basic/language-reference/queries/skip-clause.md)|選擇項。  略過集合中指定數目的項目，然後傳回其餘項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_19.vb)]|  
-|[Skip While Clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|選擇項。  只要指定的條件為 `true`，即略過集合中的項目，然後傳回其餘項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_20.vb)]|  
-|[Take Clause](../../../../visual-basic/language-reference/queries/take-clause.md)|選擇項。  從集合開頭傳回指定數目的連續項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_21.vb)]|  
-|[Take While Clause](../../../../visual-basic/language-reference/queries/take-while-clause.md)|選擇項。  只要指定的條件為 `true`，即包含集合中的項目，並略過其餘項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_22.vb)]|  
+|[From Clause](../../../../visual-basic/language-reference/queries/from-clause.md)|查詢必須有 `From` 子句或 `Aggregate` 子句才能開始。  `From` 子句會指定查詢的來源集合和反覆運算變數。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_8.vb)]|  
+|[Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md)|選擇項。  宣告一組查詢的反覆運算變數。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_9.vb)]<br /><br /> 如果不指定 `Select` 子句，則查詢的反覆運算變數即由 `From` 或 `Aggregate` 子句指定的反覆運算變數組成。|  
+|[Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md)|選擇項。  指定查詢的篩選條件。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_10.vb)]|  
+|[Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md)|選擇項。  指定查詢的資料行排序。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_11.vb)]|  
+|[Join Clause](../../../../visual-basic/language-reference/queries/join-clause.md)|選擇項。  將兩個集合合併成單一集合。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_12.vb)]|  
+|[Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)|選擇項。  群組查詢結果的項目。  可用來將彙總函式套用至每個群組。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_13.vb)]|  
+|[Group Join Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)|選擇項。  將兩個集合合併成單一階層式集合。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_14.vb)]|  
+|[Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md)|查詢必須有 `From` 子句或 `Aggregate` 子句才能開始。  `Aggregate` 子句會將一或多個彙總函式套用至集合。  例如，您可以使用 `Aggregate` 子句計算查詢傳回的所有項目小計。<br /><br /> [!code-vb[VbVbalrIntroToLINQ#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_15.vb)]<br /><br /> 也可以使用 `Aggregate` 子句修改查詢。  例如，您可以使用 `Aggregate` 子句執行相關查詢集合的計算。<br /><br /> [!code-vb[VbVbalrIntroToLINQ#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_16.vb)]|  
+|[Let Clause](../../../../visual-basic/language-reference/queries/let-clause.md)|選擇項。  計算值，並將它指派給查詢中的新變數。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_17.vb)]|  
+|[Distinct Clause](../../../../visual-basic/language-reference/queries/distinct-clause.md)|選擇項。  限制目前反覆運算變數的值，以消除查詢結果中重複的值。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_18.vb)]|  
+|[Skip Clause](../../../../visual-basic/language-reference/queries/skip-clause.md)|選擇項。  略過集合中指定數目的項目，然後傳回其餘項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_19.vb)]|  
+|[Skip While Clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|選擇項。  只要指定的條件為 `true`，即略過集合中的項目，然後傳回其餘項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_20.vb)]|  
+|[Take Clause](../../../../visual-basic/language-reference/queries/take-clause.md)|選擇項。  從集合開頭傳回指定數目的連續項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
+|[Take While Clause](../../../../visual-basic/language-reference/queries/take-while-clause.md)|選擇項。  只要指定的條件為 `true`，即包含集合中的項目，並略過其餘項目。  例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
   
  如需 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 查詢子句的詳細資訊，請參閱[Queries](../../../../visual-basic/language-reference/queries/queries.md)。  
   
  透過呼叫 LINQ 提供的可列舉和可查詢類型的成員，您可以使用其他的 LINQ 查詢功能。  透過呼叫查詢運算式結果上的特定查詢運算子，您可以使用這些額外的功能。  例如，下列程式碼範例使用 <xref:System.Linq.Enumerable.Union%2A> 方法，將兩個查詢結果合併成一個查詢結果。  它使用 <xref:System.Linq.Enumerable.ToList%2A> 方法傳回泛型清單的查詢結果。  
   
- [!code-vb[VbVbalrIntroToLINQ#22](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_23.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#22](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
   
  如需其他 LINQ 功能的詳細資訊，請參閱[Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
@@ -165,7 +165,7 @@ Language\-Integrated Query \(LINQ\) 將查詢功能加入 [!INCLUDE[vbprvb](../.
   
  下列程式碼範例示範如何建立 XML 項目、存取其子項目和屬性，以及使用 LINQ 查詢項目內容。  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/introduction-to-linq_24.vb)]  
+ [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
   
  如需詳細資訊，請參閱 [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。  
   

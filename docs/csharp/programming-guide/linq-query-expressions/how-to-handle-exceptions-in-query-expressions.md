@@ -10,14 +10,14 @@ caps.handback.revision: 15
 ## 範例  
  下列範例顯示如何移動查詢運算式外的例外狀況處理程式碼。  這只有在方法不依賴查詢的任何區域變數時可行。  
   
- [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#10)]  
+ [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_1.cs)]  
   
 ## 範例  
  在某些情況下，對於從查詢內擲回之例外狀況最好的回應可能是立即停止執行查詢。  下列範例顯示如何處理從查詢主體內擲回的例外狀況。  假設 `SomeMethodThatMightThrow` 可能會造成需要停止執行查詢的例外狀況。  
   
  請注意，`try` 區塊包含 `foreach` 迴圈，但不包含查詢本身。  這是因為 `foreach` 迴圈是查詢實際執行的點。  如需詳細資訊，請參閱[Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
- [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#12)]  
+ [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 ## 編譯程式碼  
   

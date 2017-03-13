@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # 泛型 (C# 程式設計手冊)
 泛型是在 C\# 語言和 Common Language Runtime \(CLR\) 的 2.0 版中加入的功能。  泛型將型別參數的概念引進 .NET Framework 中，使得類別和方法在設計時，可以先行擱置一個或多個型別規格，直到用戶端程式碼對類別或方法進行宣告或執行個體化時再行處理。  例如，您可以使用泛型型別參數 T，撰寫一個單一類別供其他用戶端程式碼使用，而不會在執行階段產生轉型或 boxing 作業的成本或風險，如下所示：  
   
- [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
 ## 泛型概觀  
   

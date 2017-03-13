@@ -38,7 +38,7 @@ caps.handback.revision: 15
  使用 [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 進行編譯，將文件註解處理為檔案。  若要依據編譯器產生的檔案建立最後的文件，您可以建立自訂工具，或者是使用 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 這類的工具。  
   
 ## 範例  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  前一個範例會產生下列 XML 檔案。  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 15
 ## 範例  
  下列程式碼範例示範如何建立泛型型別的 `cref` 參考。  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_2.cs)]  
+ [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
  前一個範例會產生下列 XML 檔案。  
   

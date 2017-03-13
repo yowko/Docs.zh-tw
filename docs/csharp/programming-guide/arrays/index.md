@@ -23,7 +23,7 @@ caps.handback.revision: 33
   
  下列範例會分別建立一維、多維和不規則陣列：  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## 陣列概觀  
  陣列有下列屬性：  

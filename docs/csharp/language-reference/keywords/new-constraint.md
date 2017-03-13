@@ -21,12 +21,12 @@ caps.handback.revision: 20
 ## 範例  
  當您的泛用類別建立型別的新執行個體時，將 `new` 條件約束套用至型別參數，如下列範例所示：  
   
- [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#5)]  
+ [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
   
 ## 範例  
  將 `new()` 條件約束與其他條件約束一起使用時，一定要將其指定為最後一個：  
   
- [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#6)]  
+ [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
   
  如需詳細資訊，請參閱 [類型參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。  
   

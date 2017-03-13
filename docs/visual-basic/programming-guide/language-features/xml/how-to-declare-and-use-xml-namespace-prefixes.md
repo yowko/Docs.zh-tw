@@ -26,7 +26,7 @@ caps.handback.revision: 11
 這個範例顯示如何匯入 XML 命名空間前置字元 `ns`，並在 XML 常值 \(Literal\) 和 XML 軸屬性中使用此前置字元。  
   
 ## 範例  
- [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-declare-and-use-x_1.vb)]  
+ [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-declare-and-use-xml-namespace-prefixes_1.vb)]  
   
 ## 編譯程式碼  
  這個範例需要：  

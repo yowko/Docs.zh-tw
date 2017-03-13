@@ -50,7 +50,7 @@ caps.handback.revision: 17
   
  **正確方法：**若要修改所傳回的陣列項目，請將內部陣列定義成區域變數。  下列範例會進行編譯，且不會發生錯誤。  
   
- [!code-vb[VbVbcnProcedures#66](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
 ## 程序呼叫並未修改引數的值  
  如果想要在呼叫程式碼中允許程序變更程式設計項目所對應的引數，則必須以傳址 \(By Reference\) 方式進行傳遞。  但即使是以傳值 \(By Value\) 方式傳遞程序，該程序仍可存取參考型別 \(Reference Type\) 引數的項目。  
@@ -61,13 +61,13 @@ caps.handback.revision: 17
   
  下列範例會定義兩個以傳值方式取得陣列變數，並在其項目上作業的程序。  `increase` 程序只會將每個項目加一。  程序 `replace` 會將新的陣列指派給參數 `a()`，然後每個項目都加一。  但是，重新指派並不會影響呼叫程式碼中的對應陣列變數，因為 `a()` 是以 `ByVal` 方式宣告。  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
  下列範例會進行 `increase` 和 `replace` 的呼叫：  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
  第一個 `MsgBox` 呼叫顯示 "After increase\(n\): 11, 21, 31, 41"。  因為 `n` 是參考型別，所以即使 `increase` 是以 `ByVal` 方式傳遞，仍可變更其成員。  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 17
   
  **正確方法：**若要修改基礎變數元素本身，請以傳址方式進行傳遞。  下列範例會顯示 `replace` 宣告中的變更，這個變更允許以呼叫程式碼中的另一個陣列來取代某個陣列。  
   
- [!code-vb[VbVbcnProcedures#64](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
 ## 無法定義多載  
  如果想要定義程序的多載版本，則必須使用相同名稱，但不同的簽章。  如果編譯器無法辨識您的宣告與具有相同簽章的多載，則會產生錯誤。  
@@ -117,9 +117,9 @@ caps.handback.revision: 17
   
  下列範例會說明多載解析 \(Overload Resolution\) 的處理過程。  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
  在第一個呼叫中，因為第一個引數的型別 \(`Short`\) 會縮小對應參數的型別 \(`Byte`\)，所以編譯器會排除第一個多載。  然後，因為第二個多載中的每個引數型別 \(`Short` 和 `Single`\) 都擴展成第三個多載中的對應型別 \(`Integer` 和 `Single`\)，所以會排除第三個多載。  第二個多載需要較少的擴展，因此編譯器會將它用於呼叫。  
   
@@ -127,7 +127,7 @@ caps.handback.revision: 17
   
  **正確方法：**若要明確呼叫多載程序，請使用 [CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)讓引數資料型別與參數型別相符。  下列範例會顯示對於 `z` 的呼叫，其可強制解析第二個多載。  
   
- [!code-vb[VbVbcnProcedures#65](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
 ### 具有選擇性和 ParamArray 引數的多載解析  
  如果程序的兩個多載擁有相同的簽章，但最後一個參數在某個程序中宣告為 [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)，而在另一個程序中宣告為 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)，則編譯器會依據最接近的符合項目來解析該程序的呼叫。  如需詳細資訊，請參閱[Overload Resolution](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)。  

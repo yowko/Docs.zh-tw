@@ -30,7 +30,7 @@ caps.handback.revision: 19
 ## 範例  
  此範例顯示傳遞至命令列應用程式的命令列引數。  所顯示的輸出是上表中的第一個輸入項目。  
   
- [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-display-command-l_1.cs)]  
+ [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
   
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   

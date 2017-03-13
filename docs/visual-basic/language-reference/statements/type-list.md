@@ -90,17 +90,17 @@ caps.handback.revision: 33
 ## 範例  
  下列範例會顯示泛型字典類別的基本架構定義，包括將新項目加入至字典的基本架構函式。  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
 ## 範例  
  因為 `dictionary` 是泛型的，所以使用它的程式碼可據以建立各種物件，且每個功能都相同，但可在不同資料型別上作用。  下列範例會顯示程式碼，用以建立具有 `String` 項目和 `Integer` 索引鍵的 `dictionary` 物件。  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
 ## 範例  
  下列範例會顯示以上範例所產生的對等基本架構定義。  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
 ## 請參閱  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)   

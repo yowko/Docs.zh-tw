@@ -81,12 +81,12 @@ End With
 ## 範例  
  在下列範例中，每個 `With` 區塊會在單一物件上執行一系列的陳述式。  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/vbwpfapp/mainwindow.xaml.vb#2)]  
+ [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
   
 ## 範例  
  下列範例會以巢狀方式處理 `With…End With` 陳述式。  在巢狀的 `With` 陳述式中，其語法會參考內部物件。  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/vbwpfapp/mainwindow.xaml.vb#1)]  
+ [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
 ## 請參閱  
  <xref:System.Collections.Generic.List%601>   

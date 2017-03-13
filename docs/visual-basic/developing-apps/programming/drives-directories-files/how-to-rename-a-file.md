@@ -28,7 +28,7 @@ caps.handback.revision: 21
   
 -   請使用 `My.Computer.FileSystem.RenameFile` 方法重新命名檔案。  這個範例會將名為 `Test.txt` 的檔案重新命名為 `SecondTest.txt`。  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
  這個程式碼範例也可做為 IntelliSense 程式碼片段。  在程式碼片段選擇器中，這個程式碼片段位於 \[**檔案系統 \- 處理磁碟、資料夾和檔案**\] 中。  如需詳細資訊，請參閱 [程式碼片段](/visual-studio/ide/code-snippets)。  
   

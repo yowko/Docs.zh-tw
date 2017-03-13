@@ -9,7 +9,7 @@ caps.handback.revision: 21
   
  下列範例顯示完整的查詢作業。  這套完整的作業包括建立資料來源、定義查詢運算式，以及在 `foreach` 陳述式中執行查詢。  
   
- [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#11)]  
+ [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
  如需 C\# 中 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 之基本概念的詳細資訊，請參閱 [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)。  
   

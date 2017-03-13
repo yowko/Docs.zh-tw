@@ -45,7 +45,7 @@ caps.handback.revision: 19
   
      下列範例會定義事件和 `WithEvents` 變數，這個變數會參考可引發該事件的類別。  事件處理 `Sub` 程序會使用 `Handles` 子句，指定它所處理的類別和事件。  
   
-     [!code-vb[VbVbcnProcedures#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
 ### 若要使用 AddHandler 呼叫事件處理常式  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 19
   
      下列範例會定義 `Sub` 程序，以處理表單的 <xref:System.Windows.Forms.Form.Closing> 事件。  然後，使用 [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md)將 `catchClose` 程序關聯成 <xref:System.Windows.Forms.Form.Closing> 的事件處理常式。  
   
-     [!code-vb[VbVbcnProcedures#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
      執行 [RemoveHandler Statement](../../../../visual-basic/language-reference/statements/removehandler-statement.md)，即可取消事件處理常式與事件的關聯。  
   

@@ -31,19 +31,19 @@ caps.handback.revision: 22
   
 -   請使用 `UploadFile` 方法上傳檔案，將原始程式檔 \(Source File\) 的位置和目標目錄的位置指定為字串或統一資源識別元 \(URI\)。此範例會將檔案 `Order.txt` 上傳到 `http://www.cohowinery.com/uploads.aspx`。  
   
-     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]  
   
 ### 若要上傳檔案並顯示作業進度  
   
 -   請使用 `UploadFile` 方法上傳檔案，將原始程式檔的位置和目標目錄的位置指定為字串或 URI。  此範例中將檔案 `Order.txt` 上傳到 `http://www.cohowinery.com/uploads.aspx` 時不需要提供使用者名稱或密碼，而且會顯示上傳進度並具有 500 毫秒的逾時間隔。  
   
-     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]  
   
 ### 若要提供使用者名稱和密碼以上傳檔案  
   
 -   請使用 `UploadFile` 方法上傳檔案，將原始程式檔的位置和目標目錄的位置指定為字串或 URI，並指定使用者名稱和密碼。  此範例會提供使用者名稱 `anonymous` 和空白的密碼，以便將檔案 `Order.txt` 上傳到 `http://www.cohowinery.com/uploads.aspx`。  
   
-     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]  
   
 ## 穩固程式設計  
  下列情形可能會擲回例外狀況：  

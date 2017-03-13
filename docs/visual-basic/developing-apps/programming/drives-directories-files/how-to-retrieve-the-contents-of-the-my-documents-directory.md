@@ -27,7 +27,7 @@ caps.handback.revision: 13
   
 -   使用 `ReadAllText` 方法，讀取特定目錄中每一個檔案的文字。  下列程式碼會指定目錄與檔案，然後使用 `ReadAllText` 將它們讀入名為 `patients` 的字串。  
   
-     [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-retrieve-the-cont_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-retrieve-the-contents-of-the-my-documents-directory_1.vb)]  
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>   

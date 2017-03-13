@@ -94,11 +94,11 @@ caps.handback.revision: 26
 ## 選擇性參數的隱含多載  
  有 [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) 參數的程序等於兩個多載化程序，其中一個有選擇性參數，另外一個則沒有。  您無法以對應至任一情況的參數清單來多載此類程序。  下面宣告可說明這點。  
   
- [!code-vb[VbVbcnProcedures#58](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
  對於擁有超過一個選擇性參數的程序而言，會有一組類似上述範例邏輯的隱含多載。  
   
@@ -113,13 +113,13 @@ caps.handback.revision: 26
   
  下列宣告可說明這些隱含多載：  
   
- [!code-vb[VbVbcnProcedures#68](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
  對於這類擁有採用一維陣列當做參數陣列的參數清單之程序，您無法多載。  然而，您可以使用其他隱含多載的簽章。  下面宣告可說明這點。  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
 ## 不具型別程式設計 \- 多載化的替代方案  
  如果您想要讓呼叫程式碼來將不同資料型別傳遞至參數，另一個方法是不具型別的程式設計。  您可以使用 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或 [\/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) 編譯器選項，將型別檢查參數設定為 `Off`。  之後即不需宣告參數的資料型別。  但是，與多載化比較之下，這個方法有下列缺點：  

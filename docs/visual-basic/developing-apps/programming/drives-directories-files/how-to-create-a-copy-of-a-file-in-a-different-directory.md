@@ -30,7 +30,7 @@ caps.handback.revision: 17
   
 -   使用 `CopyFile` 方法複製檔案，並且指定來源檔案和目標目錄。  `overwrite` 參數允許您指定是否覆寫現有的檔案。  下列程式碼範例會使用 `CopyFile`。  
   
-     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_1_1.vb)]  
+     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-a-different-directory_1.vb)]  
   
 ## 穩固程式設計  
  下列條件可能造成擲回例外狀況：  

@@ -38,7 +38,7 @@ public delegate int TestDelegate(MyType m, long num);
  委派必須以具有相容傳回型別和輸入參數的方法或 Lambda 運算式具現化。  如需方法簽章中可允許之變異數等級的詳細資訊，請參閱[委派中的變異數](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md)。  若要搭配匿名方法使用，就要同時宣告委派以及其相關聯的程式碼。  委派的這兩種具現化方法都將在此章節中討論。  
   
 ## 範例  
- [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/csharp/delegate_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
   
 ## C\# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

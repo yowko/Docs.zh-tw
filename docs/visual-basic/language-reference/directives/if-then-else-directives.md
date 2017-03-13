@@ -73,7 +73,7 @@ caps.handback.revision: 14
 ## 範例  
  這個範例使用 `#If...Then...#Else` 建構來決定是否要編譯某些陳述式。  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## 請參閱  
  [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)   
