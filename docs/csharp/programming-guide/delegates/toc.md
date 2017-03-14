@@ -1,0 +1,5 @@
+# [委派](index.md)
+## [使用委派](using-delegates.md)
+## [具名方法委派與匿名方法委派](delegates-with-named-vs-anonymous-methods.md)
+## [如何：組合委派 (多點傳送委派) (C# 程式設計指南)](how-to-combine-delegates-multicast-delegates.md)
+## [如何：宣告和使用委派及將其具現化](how-to-declare-instantiate-and-use-a-delegate.md)
