@@ -12,6 +12,7 @@ ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
 translationtype: Human Translation
 ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
 ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
+ms.lasthandoff: 02/07/2017
 
 ---
 
@@ -41,8 +42,3 @@ LTS 版本
 ### <a name="further-reading"></a>進一步閱讀
 * [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)
 * [目前支援的作業系統和版本](https://github.com/dotnet/core/blob/master/roadmap.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
-
