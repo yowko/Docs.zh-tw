@@ -97,8 +97,8 @@ ms.lasthandoff: 03/07/2017
 
 ```xml
 <PropertyGroup>
-  <Authors>Anne;Bob<Authors>
-  <Company>Contoso<Company>
+  <Authors>Anne;Bob</Authors>
+  <Company>Contoso</Company>
   <NeutralLanguage>en-US</NeutralLanguage>
   <AssemblyTitle>My library</AssemblyTitle>
   <Description>This is my library.
