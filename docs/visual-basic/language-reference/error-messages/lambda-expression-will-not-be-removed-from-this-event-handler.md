@@ -1,33 +1,49 @@
 ---
-title: "Lambda expression will not be removed from this event handler | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42326"
-  - "vbc42326"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42326"
+title: "Lambda 運算式不會移除此事件處理常式從 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42326
+- vbc42326
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Lambda expression will not be removed from this event handler
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: bdf7ad8f8a116c818e72d67150d72d0c96a4dc3b
+ms.lasthandoff: 03/13/2017
 
-Lambda 運算式將不會從這個事件處理常式中移除。請指派 Lambda 運算式給變數，然後使用變數來加入並移除該事件。  
+---
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Lambda 運算式將不會從這個事件處理常式中移除
+Lambda 運算式將不會從這個事件處理常式中移除。 Lambda 運算式指派給變數，並使用變數來加入和移除事件。  
   
- 當 Lambda 運算式和事件處理常式一起使用時，您可能看不到預期的行為。  編譯器會為每個 Lambda 運算式定義產生新方法，即使它們完全相同也一樣。  因此，下列程式碼會顯示 `False`。  
+ 當事件處理常式使用 lambda 運算式時，您可能無法看見預期的行為。 編譯器會產生新的方法，每個 lambda 運算式定義，即使他們完全相同。 因此，下列程式碼顯示`False`。  
   
-```vb#  
+```vb  
 Module Module1  
   
     Sub Main()  
@@ -41,9 +57,9 @@ Module Module1
 End Module  
 ```  
   
- 當 Lambda 運算式和事件處理常式一起使用時，可能會導致未預期的結果。  在下列範例中，`RemoveHandler` 陳述式不會移除由 `AddHandler` 加入的 Lambda 運算式。  
+ 當事件處理常式使用 lambda 運算式時，這可能會造成非預期的結果。 在下列範例中，lambda 運算式加入`AddHandler`不會移除`RemoveHandler`陳述式。  
   
-```vb#  
+```vb  
 Module Module1  
   
     Event ProcessInteger(ByVal x As Integer)  
@@ -62,37 +78,37 @@ Module Module1
 End Module  
 ```  
   
- 根據預設，這是一個警告訊息。  如需如何隱藏警告或將警告視為錯誤的詳細資訊，請參閱[在 Visual Basic 中設定警告](/visual-studio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需如何隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID**：BC42326  
+ **錯誤識別碼︰** BC42326  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   若要避免警告並移除 Lambda 運算式，請將 Lambda 運算式指派給變數，然後同時在 `AddHandler` 和 `RemoveHandler` 陳述式中使用該變數，如下列範例所示。  
+-   若要避免此警告，並移除 lambda 運算式，lambda 運算式指派給變數然後使用該變數在`AddHandler`和`RemoveHandler`陳述式，如下列範例所示。  
   
-    ```vb#  
-    Module Module1  
+```vb  
+Module Module1  
   
-        Event ProcessInteger(ByVal x As Integer)  
+    Event ProcessInteger(ByVal x As Integer)  
   
-        Dim PrintHandler As ProcessIntegerEventHandler  
+    Dim PrintHandler As ProcessIntegerEventHandler  
   
-        Sub Main()  
+    Sub Main()  
   
-            ' Assign the lambda expression to a variable.  
-            PrintHandler = Function(m As Integer) m  
+        ' Assign the lambda expression to a variable.  
+        PrintHandler = Function(m As Integer) m  
   
-            ' Use the variable to add the listener.  
-            AddHandler ProcessInteger, PrintHandler  
+        ' Use the variable to add the listener.  
+        AddHandler ProcessInteger, PrintHandler  
   
-            ' Use the variable again when you want to remove the listener.  
-            RemoveHandler ProcessInteger, PrintHandler  
+        ' Use the variable again when you want to remove the listener.  
+        RemoveHandler ProcessInteger, PrintHandler  
   
-        End Sub  
-    End Module  
-    ```  
+    End Sub  
+End Module  
+```  
   
-## 請參閱  
- [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Events](../../../visual-basic/programming-guide/language-features/events/events.md)
+## <a name="see-also"></a>另請參閱  
+ [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
+ [寬鬆的委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
+ [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

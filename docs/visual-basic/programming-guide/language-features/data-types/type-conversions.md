@@ -1,56 +1,72 @@
 ---
-title: "Type Conversions in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conversions, type"
-  - "data types [Visual Basic], changing"
-  - "variables [Visual Basic], changing data type"
-  - "type conversion"
-  - "conversions, data type"
-  - "changing data types"
-  - "data type conversion"
+title: "在 Visual Basic 型別轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- conversions, type
+- data types [Visual Basic], changing
+- variables [Visual Basic], changing data type
+- type conversion
+- conversions, data type
+- changing data types
+- data type conversion
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Type Conversions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b671fe0ded9bad75dbe6ecf98ccfdf8bc9fd8d87
+ms.lasthandoff: 03/13/2017
 
-將值從一種資料型別變更為另一種型別的過程，就稱為「*轉換*」\(Conversion\)。  根據相關型別的資料容量，轉換可能是「*擴大*」\(Widening\)，也可能是「*縮小*」\(Narrowing\)。  轉換也可能是「*隱含*」\(Implicit\) 或「*明確*」\(Explicit\) 的，這則是根據原始程式碼的語法而定。  
+---
+# <a name="type-conversions-in-visual-basic"></a>Visual Basic 中的類型轉換
+將值從一種資料類型變更為其他類型的程序稱為*轉換*。 轉換為*擴展*或*縮小*，取決於相關型別的資料容量。 它們也是*隱含*或*明確*，取決於在原始程式碼中的語法。  
   
-## 在本節中  
- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- 說明如何根據目的型別是否可存放資料來分類轉換。  
+## <a name="in-this-section"></a>本章節內容  
+ [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ 說明根據目的型別是否可以保存資料來分類轉換。  
   
- [Implicit and Explicit Conversions](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- 討論如何根據 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 是否能自動執行轉換來將它們分類。  
+ [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ 討論轉換分類是否[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]自動執行它們。  
   
- [Conversions Between Strings and Other Types](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- 說明如何在字串與數值、`Boolean` 或日期\/時間值之間進行轉換。  
+ [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ 說明如何轉換字串和數字、 `Boolean`，或日期/時間值。  
   
- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- 顯示如何將 `Object` 變數轉換為任何其他的資料型別。  
+ [如何︰ 將物件轉換成 Visual Basic 中的另一個型別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ 示範如何將轉換`Object`變數設為任何其他資料類型。  
   
- [Array Conversions](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- 逐步指引您如何在不同資料型別的陣列之間進行轉換。  
+ [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ 逐步解說的不同資料型別的陣列之間進行轉換程序。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- 介紹 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 資料型別並說明用法。  
+ 介紹[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]資料型別，並說明如何使用它們。  
   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- 列出 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 提供的基礎資料型別。  
+ [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ 列出所提供的基本資料型別[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- 討論使用資料型別時會發生的一些常見問題。
+ [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ 討論資料型別時可能發生的一些常見問題。

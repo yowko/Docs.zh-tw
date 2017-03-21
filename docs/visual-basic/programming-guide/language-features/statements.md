@@ -1,180 +1,194 @@
 ---
-title: "Statements in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], declaring"
-  - "colons (:)"
-  - "constants, defining"
-  - "underlines"
-  - "constants, statements"
-  - "blue underline"
-  - "procedures, statements"
-  - "variables [Visual Basic], assigning"
-  - "line breaks, in code"
-  - "executable statements"
-  - "variables [Visual Basic], defining"
-  - "statements [Visual Basic], about statements"
+title: "在 Visual Basic 中的陳述式 |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- variables [Visual Basic], declaring
+- colons (:)
+- constants, defining
+- underlines
+- constants, statements
+- blue underline
+- procedures, statements
+- variables [Visual Basic], assigning
+- line breaks, in code
+- executable statements
+- variables [Visual Basic], defining
+- statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
----
-# Statements in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 001ea1cb5e651b95f808eefd47fd468f556550a1
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中的陳述式是完整的指令。  它可包含關鍵字、運算子、變數、常數及運算式。  每個陳述式分別屬於下列分類的其中一種：  
+---
+# <a name="statements-in-visual-basic"></a>Visual Basic 中的陳述式
+中的陳述式[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]是完整的指示。 它可以包含關鍵字、 運算子、 變數、 常數和運算式。 每個陳述式分別屬於下列類別之一︰  
   
--   **宣告陳述式**：用以命名變數、常數或程序，並且也可以指定資料型別。  
+-   **宣告陳述式**，其中命名變數、 常數或程序，並也可以指定資料型別。  
   
--   **可執行的陳述式**：負責啟始動作。  這些陳述式可以呼叫方法或函式，並且可以在整個程式碼區塊內執行迴圈或分支的動作。  可執行的陳述式包括**指派陳述式** \(Assignment Statement\)，用以將值或運算式指派給變數或常數。  
+-   **可執行陳述式**，其中起始動作。 這些陳述式可以呼叫方法或函式，而且可以循環播放，或透過程式碼區塊的分支。 可執行陳述式包含**指派陳述式**，其指派給變數或常數的值或運算式。  
   
- 本主題說明每一種分類。  此外，本主題還說明如何將多個陳述式合併到一行，以及如何在多行繼續一個陳述式。  
+ 本主題說明每個類別目錄。 此外，本主題說明如何結合在單一行的多個陳述式，以及如何繼續多行陳述式。  
   
-## 宣告陳述式  
- 您可以使用宣告陳述式，進行程序、變數、屬性 \(Property\)、陣列及常數的命名和定義。  當您宣告程式設計項目時，也可以定義資料型別、存取層級及範圍。  如需詳細資訊，請參閱[Declared Element Characteristics](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)。  
+## <a name="declaration-statements"></a>宣告陳述式  
+ 您可以使用宣告陳述式來命名及定義程序、 變數、 屬性、 陣列和常數。 當您宣告的程式設計項目時，您也可以定義其資料類型、 存取層級，以及範圍。 如需詳細資訊，請參閱[宣告項目特性](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)。  
   
- 下列範例包含三種宣告。  
+ 下列範例包含三個宣告。  
   
- [!code-vb[VbVbalrStatements#80](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_1.vb)]  
+ [!code-vb[VbVbalrStatements #&80;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_1.vb)]  
   
- 第一種宣告為 `Sub` 陳述式。  它會和對應的 `End Sub` 陳述式一起宣告名為 `applyFormat` 的程序。  它也會指定 `applyFormat` 為 `Public`，這表示所有可以參考它的程式碼都可以呼叫它。  
+ 第一個宣告是`Sub`陳述式。 連同其比對`End Sub`陳述式，它會宣告名為程序`applyFormat`。 它也會指定`applyFormat`是`Public`，這表示可以參考它的任何程式碼可以呼叫它。  
   
- 第二種宣告為 `Const` 陳述式，它會宣告常數 `limit`，指定 `Integer` 資料型別及值 33。  
+ 第二個宣告都是`Const`陳述式來宣告常數`limit`，並指定`Integer`資料型別和值為 33。  
   
- 第三種宣告為 `Dim` 陳述式，它會宣告變數 `thisWidget`。  資料型別為特定物件，也就是從 `Widget` 類別建立的物件。  您可以將變數宣告為任何基礎資料型別 \(Elementary Data Type\)，或所使用之應用程式中公開 \(Expose\) 的任何物件型別。  
+ 第三個宣告都是`Dim`陳述式，宣告變數`thisWidget`。 資料類型的特定物件，也就是從建立物件`Widget`類別。 您可以宣告為任何基本資料型別或公開應用程式會將任何物件類型的變數。  
   
-### 初始值  
- 執行包含宣告陳述式的程式碼時，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會保留宣告項目所需的記憶體。  如果項目會儲存值，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 就會將該項目初始化為資料型別的預設值。  如需詳細資訊，請參閱 [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) 中的＜行為＞一節。  
+### <a name="initial-values"></a>初始值  
+ 包含宣告陳述式的程式碼執行時，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會保留宣告項目所需的記憶體。 如果項目會保存一個值，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]將其初始化為其資料類型的預設值。 如需詳細資訊，請參閱 「 行為 」 中[Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
- 您可以將初始值指派給變數做為宣告的一部分，如下列範例所示。  
+ 如下列範例所示，您可以指派給變數的宣告，做為初始值。  
   
- [!code-vb[VbVbalrStatements#81](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_2.vb)]  
+ [!code-vb[VbVbalrStatements #&81;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_2.vb)]  
   
- 如果變數是物件變數，當您使用 [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) 關鍵字進行宣告時，可以明確建立物件的類別執行個體，如下列範例所示。  
+ 如果變數是物件變數，您可以明確地建立其類別的執行個體時將它宣告使用[New 運算子](../../../visual-basic/language-reference/operators/new-operator.md)關鍵字，如下列範例說明。  
   
- [!code-vb[VbVbalrStatements#82](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_3.vb)]  
+ [!code-vb[VbVbalrStatements #&82;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_3.vb)]  
   
- 請注意，您在宣告陳述式中所指定的初始值要在執行到宣告陳述式之後，才會指派給變數。  在那之前，變數會包含資料型別的預設值。  
+ 請注意，您在宣告陳述式中指定的初始值不指派給變數之前執行到它的宣告陳述式。 屆時，變數會包含其資料類型的預設值。  
   
-## 可執行的陳述式  
- 可執行的陳述式會執行動作。  它可以呼叫程序、分支至程式碼中的另一個位置、對數個陳述式執行迴圈，或評估運算式。  指派陳述式 \(Assignment Statement\) 是可執行的陳述式的特殊案例。  
+## <a name="executable-statements"></a>可執行陳述式  
+ 可執行的陳述式執行的動作。 它可以呼叫的程序的程式碼，透過多個陳述式，迴圈中的其他位置的分支，或評估運算式。 在指派陳述式是可執行的陳述式的特殊案例。  
   
- 下列範例會使用 `If...Then...Else` 控制結構，依據變數值執行不同的程式碼區塊。  在每一個程式碼區塊內，`For...Next` 迴圈會執行指定的次數。  
+ 下列範例會使用`If...Then...Else`控制結構來執行不同的變數的值為基礎的程式碼區塊。 程式碼中，每個區塊內`For...Next`執行指定的次數的迴圈。  
   
- [!code-vb[VbVbalrStatements#83](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_4.vb)]  
+ [!code-vb[VbVbalrStatements #&83;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_4.vb)]  
   
- 上述範例中的 `If` 陳述式會檢查參數 `clockwise` 的值。  如果值為 `True`，它會呼叫 `aWidget` 的 `spinClockwise` 方法。  如果值為 `False`，它會呼叫 `aWidget` 的 `spinCounterClockwise` 方法。  `If...Then...Else` 控制結構會以 `End If` 結束。  
+ `If`在上述範例中的陳述式會檢查參數的值`clockwise`。 如果值為`True`，它會呼叫`spinClockwise`方法`aWidget`。 如果值為`False`，它會呼叫`spinCounterClockwise`方法`aWidget`。 `If...Then...Else`控制結構以結束`End If`。  
   
- 每一個區塊內的 `For...Next` 迴圈會呼叫適當的方法數次 \(等於 `revolutions` 參數值\)。  
+ `For...Next`迴圈內每個區塊會呼叫適當的方法數次的值等於`revolutions`參數。  
   
-## 指派陳述式  
- 指派陳述式會執行指派作業，此作業包含取得指派運算子 \(`=`\) 右邊的值，然後將此值存放在左邊的項目中，如下列範例所示。  
+## <a name="assignment-statements"></a>指派陳述式  
+ 指派陳述式執行設定作業，包括進行設定運算子右邊的值 (`=`) 並將其儲存在左邊，如下列範例所示的項目中。  
   
- [!code-vb[VbVbalrStatements#73](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_5.vb)]  
+ [!code-vb[VbVbalrStatements #&73;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_5.vb)]  
   
- 在上述範例中，指派陳述式會在變數 `v` 中存放常值 42。  
+ 在上述範例中，指派陳述式會儲存在變數中的常值 42 `v`。  
   
-### 適合的程式設計項目  
- 指派運算子左邊的程式設計項目必須可以接受和存放值。  這表示此項目必須是非 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) 的變數或屬性 \(Property\)，或者必須是陣列元素。  在指派陳述式的內容中，這類項目有時會稱為 *lvalue*，代表「左邊的值」。  
+### <a name="eligible-programming-elements"></a>合格的程式設計項目  
+ 指派運算子左邊的程式設計項目必須是可以接受和儲存的值。 這表示它必須是變數或屬性不是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，或者必須是陣列元素。 在指派陳述式的內容，這類項目有時稱為*左值*，如 「 左值 」。  
   
- 指派運算子右邊的值是由運算式所產生，這個值可以由常值 \(Literal\)、常數、變數、屬性、陣列元素、其他運算式或函式呼叫的任何一項組合所組成。  下列範例將說明這點。  
+ 指派運算子右邊的值是運算式，其中可包含的常值、 常數、 變數、 屬性、 陣列元素、 其他運算式或函式呼叫的任何組合所產生的。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrStatements#74](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_6.vb)]  
+ [!code-vb[VbVbalrStatements #&74;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_6.vb)]  
   
- 上述範例會將在變數 `y` 中保留的值加入在變數 `z` 中保留的值，再將呼叫傳回的值加入函式 `findResult`。  然後，這個運算式的總值會存放在變數 `x` 中。  
+ 上述範例中將保留在變數中的值`y`內變數的值來`z`，然後將函式的呼叫所傳回的值`findResult`。 此運算式的合計值然後儲存在變數中`x`。  
   
-### 指派陳述式中的資料型別  
- 除了數值以外，指派運算子還會指定 `String` 值，如下列範例所示。  
+### <a name="data-types-in-assignment-statements"></a>指派陳述式中的資料類型  
+ 除了數字的值，指派運算子也可以指派`String`值，如下列範例所示。  
   
- [!code-vb[VbVbalrStatements#75](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_7.vb)]  
+ [!code-vb[VbVbalrStatements #&75;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_7.vb)]  
   
- 您也可以使用 `Boolean` 常值或 `Boolean` 運算式指定 `Boolean` 值，如下列範例所示。  
+ 您也可以指派`Boolean`值，使用`Boolean`常值或`Boolean`運算式，如下列範例說明。  
   
- [!code-vb[VbVbalrStatements#76](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_8.vb)]  
+ [!code-vb[VbVbalrStatements #&76;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_8.vb)]  
   
- 同樣地，可以將適當的值指定給 `Char`、`Date` 或 `Object` 資料型別的程式設計項目。  也可以將物件執行個體 \(Instance\) 指定給項目，該項目會宣告為從中建立該執行個體的類別。  
+ 同樣地，您可以指派適當的值的程式設計項目`Char`， `Date`，或`Object`資料型別。 您也可以指派為該執行個體建立的類別宣告的項目物件執行個體。  
   
-### 複合指派陳述式  
- 「*複合指派陳述式*」\(Compound Assignment Statement\) 在將運算式指定給程式設計項目之前，會先在運算式上執行作業。  下列範例會說明其中一個運算子 `+=`，藉由右邊運算式的值遞增運算子左邊的變數值。  
+### <a name="compound-assignment-statements"></a>複合指派陳述式  
+ *複合指派陳述式*第一次執行運算式之後，再指派程式設計項目上的作業。 下列範例說明其中一個運算子， `+=`，其中增加右邊運算式的值的運算子左邊的變數值。  
   
- [!code-vb[VbVbalrStatements#77](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_9.vb)]  
+ [!code-vb[VbVbalrStatements #&77;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_9.vb)]  
   
- 上述範例會加 1 至 `n` 值，然後在 `n` 中存放該新值。  它是與下列陳述式相等的速寫法：  
+ 上述範例中的值增加 1 `n`，然後將儲存在該新值`n`。 它是速記相當於下列陳述式︰  
   
- [!code-vb[VbVbalrStatements#78](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_10.vb)]  
+ [!code-vb[VbVbalrStatements #&78;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_10.vb)]  
   
- 可使用此類型的運算子來執行各種複合式指派運算。  如需這些運算子的清單和它們的詳細資訊，請參閱[Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)。  
+ 使用此類型的運算子可以執行各種不同的複合指派作業。 如需這些運算子和其相關的詳細資訊，請參閱[指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)。  
   
- 串連指派運算子 \(`&=`\) 對於將字串加入已存在字串的結尾來說非常有用，如下列範例所示。  
+ 串連指派運算子 (`&=`) 可用於將字串新增至現有的結尾字串，如下列範例所示。  
   
- [!code-vb[VbVbalrStatements#79](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_11.vb)]  
+ [!code-vb[VbVbalrStatements #&79;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_11.vb)]  
   
-### 指派陳述式中的型別轉換  
- 指定給變數、屬性或陣列元素的值必須是適合該目的項目中的資料型別。  一般而言，您應該嘗試產生與該目的項目相同之資料型別的值。  不過，某些型別可在指派期間轉換為其他型別。  
+### <a name="type-conversions-in-assignment-statements"></a>指派陳述式中的型別轉換  
+ 您指派給變數、 屬性或陣列元素的值必須是適用於該目的項目資料型別。 一般情況下，您應該嘗試產生相同的資料類型的目的地元素的值。 不過，某些型別可以在指派期間轉換為其他型別。  
   
- 如需在資料型別之間轉換的詳細資訊，請參閱 [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。  簡單地說，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會自動將提供的型別值轉換為它擴展的其他型別。  「*擴展轉換*」\(Widening Conversion\) 一定會在執行階段順利完成，並且不會遺失任何資料。  例如，因為 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 將 `Integer` 擴展至 `Double`，因此會在適用時將 `Integer` 值轉換為 `Double`。  如需詳細資訊，請參閱[Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ 如需資料類型之間轉換，請參閱[Visual Basic 中的型別轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。 簡單地說，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會自動將特定類型的值轉換為它擴展的任何其他類型。 A*擴展轉換*是中，一律會在執行階段成功，而且不會遺失任何資料。 例如，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]轉換`Integer`值`Double`適當的時候，因為`Integer`擴展至`Double`。 如需詳細資訊，請參閱[擴大和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
- 「*縮小轉換*」\(Narrowing Conversion\) \(不是擴展的轉換\) 在執行階段會帶來失敗的風險，或造成資料遺失。  您可以使用型別轉換函式明確地執行縮小轉換，或者設定 `Option Strict Off`，將編譯器 \(Compiler\) 導向為隱含地執行所有轉換。  如需詳細資訊，請參閱[Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
+ *縮小轉換*（即未擴展） 執行的執行階段失敗或資料遺失的風險。 您可以使用類型轉換函式，明確地執行縮小轉換，或您可以指示編譯器隱含地執行所有轉換，藉由設定`Option Strict Off`。 如需詳細資訊，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
   
-## 在一行上放置多個陳述式  
- 您可以用冒號 \(`:`\) 字元分隔，在單行上撰寫多個陳述式。  下列範例將說明這點。  
+## <a name="putting-multiple-statements-on-one-line"></a>將多個陳述式放在同一行  
+ 您可以在同一行，以冒號分隔多個陳述式 (`:`) 字元。 下列範例將說明這點。  
   
- [!code-vb[VbVbalrStatements#70](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_12.vb)]  
+ [!code-vb[VbVbalrStatements #&70;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_12.vb)]  
   
- 儘管有時候很方便，但是此形式的語法會使您的程式碼難以閱讀及維護。  因此，建議您維持一行一個陳述式。  
+ 雖然有時候很方便，這種形式的語法可讓您的程式碼難以讀取和維護。 因此，建議您保留一個陳述式的一行。  
   
-## 在多行上繼續一個陳述式  
- 陳述式通常會撰寫在一行上，但是當太長時，您可以使用行接續字元 \(Line\-Continuation Character\) 在下一行繼續該陳述式，行接續字元是由底線字元 \(`_`\) 之後接著歸位字元 \(Carriage Return\) 所組成。  在下列範例中，會在兩行上繼續 `MsgBox` 可執行的陳述式。  
+## <a name="continuing-a-statement-over-multiple-lines"></a>多行繼續一個陳述式  
+ 陳述式通常符合在同一行，但它太長時，可以繼續到下一行使用行接續序列，其中包含空格，後面接著底線字元 (`_`) 後面接著歸位字元。 在下列範例中，`MsgBox`可執行陳述式會繼續在兩行。  
   
- [!code-vb[VbVbalrStatements#71](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_13.vb)]  
+ [!code-vb[VbVbalrStatements #&71;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_13.vb)]  
   
-### 隱含行接續  
- 在許多情況下，您可以將陳述式接續到下一個連續行而不必使用底線字元 \(\_\)。  下表列出將陳述式隱含接續到下一行程式碼的語法項目。  
+### <a name="implicit-line-continuation"></a>隱含行接續符號  
+ 在許多情況下，您可以繼續在下一個連續行陳述式而不使用底線字元 (_)。 下表列出以隱含方式繼續下一行程式碼陳述式的語法元素。  
   
-|||  
-|-|-|  
-|語法項目|範例|  
-|在逗號 \(`,`\) 之後。|[!code-vb[VbVbalrLineContinuation#1](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_14.vb)]|  
-|在左括號 \(`(`\) 之後，或在右括號 \(`)`\) 之前。|[!code-vb[VbVbalrLineContinuation#2](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_15.vb)]|  
-|在左大括號 \(`{`\) 之後，或在右大括號 \(`}`\) 之前。|[!code-vb[VbVbalrLineContinuation#3](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_16.vb)]<br /><br /> 如需詳細資訊，請參閱[Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)或[Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
-|於 XML 常值內，在左內嵌運算式 \(`<%=`\) 之後，或在右內嵌運算式 \(`%>`\) 之前。|[!code-vb[VbVbalrLineContinuation#4](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_17.vb)]<br /><br /> 如需詳細資訊，請參閱 [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
-|在串連運算子 \(`&`\) 之後。|[!code-vb[VbVbcnConventions#9](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_18.vb)]<br /><br /> 如需詳細資訊，請參閱[Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|在指派運算子 \(`=`、`&=`、`:=`、`+=`、`-=`、`*=`、`/=`、`\=`、`^=`、`<<=`、`>>=`\) 之後。|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br /><br /> 如需詳細資訊，請參閱[Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|於運算式內，在二元運算子 \(`+`, `-`、`/`、`*`、`Mod`、`<>`、`<`、`>`、`<=`、`>=`、`^`、`>>`、`<<`、`And`、`AndAlso`、`Or`、`OrElse`、`Like`、`Xor`\) 之後。|[!code-vb[VbVbalrLineContinuation#7](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_20.vb)]<br /><br /> 如需詳細資訊，請參閱[Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|在 `Is` 和 `IsNot` 運算子之後。|[!code-vb[VbVbalrLineContinuation#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_21.vb)]<br /><br /> 如需詳細資訊，請參閱[Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
-|在成員限定詞字元 \(`.`\) 之後以及在成員名稱之前。  不過，當您使用 `With` 陳述式或在初始設定清單中提供型別的值時，必須包含行接續字元 \(\_\)，後面接著成員限定詞字元。  使用 `With` 陳述式或物件初始設定清單時，可以考慮在指派 \(Assignment\) 運算子 \(例如，`=`\) 之後分行。|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br />[!code-vb[VbVbalrLineContinuation#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_22.vb)]<br /><br /> 如需詳細資訊，請參閱 [With...End With Statement](../../../visual-basic/language-reference/statements/with-end-with-statement.md) 或[Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。|  
-|在 XML 軸屬性限定詞 \(`.` 或 `.@` 或 `...`\) 之後。  不過，當您使用 `With` 關鍵字時，如果指定成員限定詞，則必須包含行接續字元 \(\_\)。|[!code-vb[VbVbalrLineContinuation#9](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_23.vb)]<br /><br /> 如需詳細資訊，請參閱 [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)。|  
-|指定屬性時，在小於符號 \(\<\) 之後，或者在大於符號 \(`>`\) 之前。  也可以在您指定屬性時，在大於符號 \(`>`\) 之後。  不過，當您指定組件層級或模組層級的屬性時，必須包括行接續字元 \(\_\)。|[!code-vb[VbVbalrLineContinuation#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_24.vb)]<br /><br /> 如需詳細資訊，請參閱 [屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)。|  
-|在查詢運算子 \(`Aggregate`、`Distinct`、`From`、`Group By`、`Group Join`、`Join`、`Let`、`Order By`、`Select`、`Skip`、`Skip While`、`Take`、`Take While`、`Where`、`In`、`Into`、`On`、`Ascending` 和 `Descending`\) 之前和之後。  您不可以在由多個關鍵字組成之查詢運算子的關鍵字 \(`Order By`、`Group Join`、`Take While` 和 `Skip While`\) 之間分行。|[!code-vb[VbVbalrLineContinuation#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_25.vb)]<br /><br /> 如需詳細資訊，請參閱[Queries](../../../visual-basic/language-reference/queries/queries.md)。|  
-|於 `For Each` 陳述式中，在 `In` 關鍵字之後。|[!code-vb[VbVbalrLineContinuation#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_26.vb)]<br /><br /> 如需詳細資訊，請參閱 [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。|  
-|於集合初始設定式中，在 `From` 關鍵字之後。|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> 如需詳細資訊，請參閱 [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
+|語法元素|範例|  
+|---|---|  
+|在逗號之後 (`,`)。|[!code-vb[VbVbalrLineContinuation #&1;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_14.vb)]|  
+|在左括號之後 (`(`) 或右括號之前 (`)`)。|[!code-vb[VbVbalrLineContinuation #&2;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_15.vb)]|  
+|在開啟的大括號之後 (`{`) 或右大括號之前 (`}`)。|[!code-vb[VbVbalrLineContinuation #&3;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_16.vb)]<br /><br /> 如需詳細資訊，請參閱[物件初始設定式︰ 具名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)或[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
+|在開啟之後內嵌運算式 (`<%=`) 或內嵌的運算式結尾之前 (`%>`) 在 XML 常值。|[!code-vb[VbVbalrLineContinuation #&4;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_17.vb)]<br /><br /> 如需詳細資訊，請參閱[XML 中內嵌的運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
+|串連運算子後面 (`&`)。|[!code-vb[VbVbcnConventions #&9;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_18.vb)]<br /><br /> 如需詳細資訊，請參閱[運算子依功能排列](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
+|After assignment operators (`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`).|[!code-vb[VbVbalrLineContinuation #&5;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br /><br /> 如需詳細資訊，請參閱[運算子依功能排列](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
+|After binary operators (`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`) within an expression.|[!code-vb[VbVbalrLineContinuation #&7;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_20.vb)]<br /><br /> 如需詳細資訊，請參閱[運算子依功能排列](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
+|之後`Is`和`IsNot`運算子。|[!code-vb[VbVbalrLineContinuation #&8;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_21.vb)]<br /><br /> 如需詳細資訊，請參閱[運算子依功能排列](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)。|  
+|成員限定詞字元之後 (`.`) 之前的成員名稱。 不過，您必須包含下列成員限定詞字元，當您使用行接續符號字元 (_)`With`陳述式或提供型別初始設定清單中的值。 請考慮將一行之後，指派運算子 (例如， `=`) 當您使用`With`陳述式或物件初始設定清單。|[!code-vb[VbVbalrLineContinuation #&5;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br />[!code-vb[VbVbalrLineContinuation #&14;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_22.vb)]<br /><br /> 如需詳細資訊，請參閱[與...With 陳述式](../../../visual-basic/language-reference/statements/with-end-with-statement.md)或[物件初始設定式︰ 具名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。|  
+|XML 軸屬性辨識符號之後 (`.`或`.@`或`...`)。 不過，您必須加入的行接續符號字元 (_) 時使用時，指定成員限定詞`With`關鍵字。|[!code-vb[VbVbalrLineContinuation #&9;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_23.vb)]<br /><br /> 如需詳細資訊，請參閱[XML 軸屬性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)。|  
+|之後小於位符號 (<) or="" before="" a="" greater-than="" sign=""></)>`>`) 時，您可指定屬性。 也之後大於-符號 (`>`) 時，您可指定屬性。 不過，您必須在指定組件層級或模組層級的屬性時，包含行接續符號字元 (_)。|[!code-vb[VbVbalrLineContinuation #&10;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_24.vb)]<br /><br /> 如需詳細資訊，請參閱[屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)。|  
+|Before and after query operators (`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending`, and `Descending`). 您無法中斷線組成的多個關鍵字的查詢運算子關鍵字 (`Order By`， `Group Join`， `Take While`，和`Skip While`)。|[!code-vb[VbVbalrLineContinuation #&11;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_25.vb)]<br /><br /> 如需詳細資訊，請參閱[查詢](../../../visual-basic/language-reference/queries/queries.md)。|  
+|之後`In`關鍵字`For Each`陳述式。|[!code-vb[VbVbalrLineContinuation #&12;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_26.vb)]<br /><br /> 如需詳細資訊，請參閱[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。|  
+|之後`From`集合初始設定式中的關鍵字。|[!code-vb[VbVbalrLineContinuation #&13;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
   
-## 加入註解  
- 來源程式碼不一定是自我闡明的，甚至於對撰寫來源程式碼的程式設計人員而言亦是如此。  因此，為了協助記錄程式碼文件，大部分的程式設計人員都會大量利用內嵌註解。  程式碼中的註解可以為稍後要閱讀或編寫程序或特定指令的使用者，提供說明。  由於編譯期間 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會忽略註解，因此註解並不會影響編譯的程式碼。  
+## <a name="adding-comments"></a>加入註解  
+ 原始碼不一定容易理解，甚至還可以撰寫它的程式設計人員。 因此，為了幫助他們的程式碼的文件，大部分的程式設計人員請盡量使用內嵌的註解。 在程式碼中的註解可以說明的程序或特殊指令，讓任何人讀取，或稍後使用它。 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]在編譯期間，會忽略註解，並不會影響已編譯的程式碼。  
   
- 註解行是以所有格符號 \(`'`\) 或 `REM` 做為開頭，後面接著一個空格。  它們可以加在程式碼的任何一處，但字串除外。  若要將註解附加至陳述式，請在陳述式之後插入所有格符號 \(Apostrophe\) 或在 `REM`，之後接著註解。  註解也可出現在自己的分隔行中。  下列範例為這些可能情況。  
+ 註解行是以單引號 (`'`) 或`REM`後接空格。 它們可以加入任何地方在程式碼，除了在字串內。 若要將註解附加至陳述式中，插入一個單引號或`REM`之後的陳述式，後面接著註解。 註解也可以在自己的個別行上移。 下列範例將示範這些可能性。  
   
- [!code-vb[VbVbalrStatements#72](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_28.vb)]  
+ [!code-vb[VbVbalrStatements #&72;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_28.vb)]  
   
-## 檢查編譯錯誤  
- 在輸入一行程式碼之後，如果此行與藍色波浪底線一起出現 \(也會顯示錯誤訊息\)，則表示陳述式中有語法錯誤。  您必須找出陳述式的錯誤 \(例如，藉由查看工作清單，或將滑鼠指標移到錯誤上並閱讀錯誤訊息\) 並更正錯誤。  除非您已修正了程式碼中所有的語法錯誤，否則您的程式將無法正確地編譯成功。  
+## <a name="checking-compilation-errors"></a>檢查編譯錯誤  
+ 如果在輸入程式碼行之後，線條的顯示 （可能會出現錯誤訊息以及） 的藍色波浪底線，則陳述式中有語法錯誤。 您必須了解何謂陳述式的錯誤 （藉由查看工作清單中，滑鼠游標停留於滑鼠指標的錯誤或讀取錯誤訊息），並加以更正。 等到您修正所有的語法錯誤程式碼中，您的程式將無法正確編譯。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
   
-|||  
-|-|-|  
 |詞彙|定義|  
-|[Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)|提供涵蓋指派運算子 \(例如，`=`、`*=` 和 `&=`\) 的語言參考網頁連結。|  
-|[Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|說明如何使用運算子結合項目來產生新的值。|  
-|[如何：在程式碼中中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|顯示如何將單一陳述式分成多行，以及如何將多個陳述式放置在同一行。|  
-|[How to: Label Statements](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|顯示如何標記一行程式碼。|
+|---|---|  
+|[指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|提供涵蓋指派運算子，例如語言參考頁面連結`=`， `*=`，和`&=`。|  
+|[運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|示範如何使用以產生新值的運算子結合項目。|  
+|[如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|示範如何在單一陳述式分成多行程式碼以及如何將多個陳述式放在同一行。|  
+|[如何：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|示範如何標示程式碼行。|

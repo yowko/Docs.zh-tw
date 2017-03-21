@@ -1,34 +1,50 @@
 ---
-title: "Working with Dynamic Objects (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "dynamic objects [Visual Basic]"
+title: "使用動態物件 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Working with Dynamic Objects (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 366b563764baaa39849356a782ecee264b2ae94f
+ms.lasthandoff: 03/13/2017
 
-動態物件提供除了 `Object` 型別以外，在執行階段晚期繫結至物件的另一種方法。  動態物件會使用 <xref:System.Dynamic> 命名空間中定義的動態介面，在執行階段公開屬性和方法等成員。  您可以使用 <xref:System.Dynamic> 命名空間中的類別來建立物件，以處理不符合靜態類型或格式的資料結構，  也可以使用以 IronPython 和 IronRuby 等動態語言定義的動態物件。  如需如何建立動態物件或使用動態語言中定義之動態物件的範例，請參閱[逐步解說：建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)、<xref:System.Dynamic.DynamicObject> 或 <xref:System.Dynamic.ExpandoObject>。  
+---
+# <a name="working-with-dynamic-objects-visual-basic"></a>使用動態物件 (Visual Basic)
+動態物件以外的其他提供另一種方式，`Object`類型，以在執行階段物件晚期繫結。 動態物件公開 （expose) 成員，例如屬性和方法在執行階段使用動態介面中定義的<xref:System.Dynamic>命名空間。</xref:System.Dynamic> 您可以使用中的類別<xref:System.Dynamic>命名空間來建立使用靜態型別或格式不相符的資料結構的物件。</xref:System.Dynamic> 您也可以使用諸如 IronPython 和 IronRuby 的動態語言中所定義的動態物件。 說明如何建立動態物件，或使用動態物件定義在動態語言的範例，請參閱[逐步解說︰ 建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)， <xref:System.Dynamic.DynamicObject>，或<xref:System.Dynamic.ExpandoObject>.</xref:System.Dynamic.ExpandoObject> </xref:System.Dynamic.DynamicObject>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 使用 <xref:System.Dynamic.IDynamicMetaObjectProvider> 介面，從 Dynamic Language Runtime 以及 IronPython 和 IronRuby 之類的動態語言繫結至物件。  實作 `IDynamicMetaObjectProvider` 介面的類別範例為 <xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject> 類別。  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]繫結至物件的動態語言執行階段和動態語言，例如 IronPython 和 IronRuby 使用<xref:System.Dynamic.IDynamicMetaObjectProvider>介面。</xref:System.Dynamic.IDynamicMetaObjectProvider> 實作的類別範例`IDynamicMetaObjectProvider`介面都是<xref:System.Dynamic.DynamicObject>和<xref:System.Dynamic.ExpandoObject>類別。</xref:System.Dynamic.ExpandoObject> </xref:System.Dynamic.DynamicObject>  
   
- 如果對實作 `IDynamicMetaObjectProvider` 介面的物件進行晚期繫結呼叫，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 就會使用該介面繫結至動態物件。  如果對未實作 `IDynamicMetaObjectProvider` 介面的物件進行晚期繫結呼叫，或是呼叫 `IDynamicMetaObjectProvider` 介面失敗，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 執行階段的晚期繫結功能繫結至該物件。  
+ 如果要實作的物件進行晚期繫結呼叫`IDynamicMetaObjectProvider`介面，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]繫結至動態的物件，使用該介面。 如果物件不會實作進行晚期繫結呼叫`IDynamicMetaObjectProvider`介面，或如果呼叫`IDynamicMetaObjectProvider`介面失敗，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]繫結至物件，使用晚期繫結功能[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]執行階段。  
   
-## 請參閱  
- <xref:System.Dynamic.DynamicObject>   
- <xref:System.Dynamic.ExpandoObject>   
- [逐步解說：建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)   
- [Early and Late Binding](../../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Dynamic.DynamicObject></xref:System.Dynamic.DynamicObject>   
+ <xref:System.Dynamic.ExpandoObject></xref:System.Dynamic.ExpandoObject>   
+ [逐步解說︰ 建立和使用動態物件](../../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)   
+ [早期和晚期繫結](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

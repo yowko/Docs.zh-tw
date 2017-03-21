@@ -1,33 +1,49 @@
 ---
-title: "Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30955"
-  - "bc30955"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30955"
+title: "類型的值 &quot;&lt;typename1&gt;&quot;無法轉換成&quot;&lt;typename2&gt;&quot; |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30955
+- bc30955
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c973d5e2aa03d423e1dea8053946172655f08490
+ms.lasthandoff: 03/13/2017
 
-'\<typename1\>' 型別的值無法轉換成 '\<typename2\>'。型別不相符的原因可能是因為混用檔案參考和組件 '\<assemblyname\>' 的專案參考。請嘗試將專案 '\<projectname1\>' 中 '\<filepath\>' 的檔案參考取代成 '\<projectname2\>' 的專案參考。  
+---
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>類型的值 '&lt;typename1&gt;'無法轉換成'&lt;typename2&gt;'
+類型的值 '\<typename1 >' 無法轉換成'\<typename2 >'。 型別不相符可能是因為混用了檔案參考和組件的專案參考 '\<assemblyname >'。 請嘗試更換檔案參考 '\<filepath >' 在專案中'\<projectname1 >' 的專案參考 '\<projectname2 >'。  
   
- 在專案同時產生專案參考和檔案參考的情況下，編譯器 \(Compiler\) 無法保證可以將某個型別轉換成另一個型別。  
+ 專案參考和檔案參考專案可讓的情況下，編譯器無法保證，可以轉換成另一種類型。  
   
- 下列虛擬程式碼說明會產生這個錯誤的情況。  
+ 下列虛擬程式碼將說明可能產生此錯誤的情況。  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -55,19 +71,19 @@ caps.handback.revision: 12
   
  `End Class`  
   
- 專案 `P1` 會透過專案 `P2` 產生專案 `P3` 的間接專案參考，也會產生 `P3` 的直接檔案參考。  `commonObject` 的宣告使用 `P3` 的檔案參考，而 `P2.getCommonClass` 的呼叫使用 `P3` 的專案參考。  
+ 專案`P1`會透過專案間接專案參考`P2`專案`P3`，以及也直接檔案參考`P3`。 宣告`commonObject`使用的檔案參考`P3`，而呼叫`P2.getCommonClass`會使用專案參考`P3`。  
   
- 這種情況的問題是檔案參考指定 `P3` 之輸出檔的檔案路徑和名稱 \(一般是 p3.dll\)，而專案參考則是依專案名稱來識別來源專案 \(`P3`\)。  因為這個原因，所以編譯器無法保證透過這兩個不同的參考，型別 `P3.commonClass` 還是來自相同原始程式碼。  
+ 這種情況的問題是檔案參考指定檔案路徑和名稱的輸出檔`P3`(通常 p3.dll)，在專案參考中找到原始碼專案時 (`P3`) 的專案名稱。 因此，編譯器無法保證類型`P3.commonClass`來自相同的原始程式碼，透過兩個不同的參考。  
   
- 一般是在混合使用專案參考和檔案參考時，才會發生此情況。  在前一個說明中，如果 `P1` 產生 `P3` 的直接專案參考，而不是檔案參考，就不會發生這個問題。  
+ 通常發生這種情況在混合檔案參考和專案的參考時。 在上圖中，問題就不會發生如果`P1`所做的直接專案參考`P3`而非檔案參考。  
   
- **錯誤 ID：**BC30955  
+ **錯誤識別碼︰** BC30955  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   將檔案參考變更為專案參考。  
+-   變更專案參考的檔案參考。  
   
-## 請參閱  
- [Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [管理專案中的參考](/visual-studio/ide/managing-references-in-a-project)   
- [如何：使用加入參考對話方塊加入或移除參考](http://msdn.microsoft.com/zh-tw/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a>另請參閱  
+ [在 Visual Basic 中的型別轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [管理專案中的參考](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
+ [NIB 如何：使用加入參考對話方塊加入或移除參考](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

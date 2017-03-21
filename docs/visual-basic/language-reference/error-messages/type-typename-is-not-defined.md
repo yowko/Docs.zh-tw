@@ -1,48 +1,64 @@
 ---
-title: "Type &#39;&lt;typename&gt;&#39; is not defined | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30002"
-  - "bc30002"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30002"
+title: "類型 &quot;&lt;typename&gt;&quot; 未定義 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30002
+- bc30002
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Type &#39;&lt;typename&gt;&#39; is not defined
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 09aa7c535fd5e17ddcd0e743fb5ec17ebadd4f7d
+ms.lasthandoff: 03/13/2017
 
-陳述式建立了未定義之型別的參考。  您可以在像是 `Enum`、`Structure`、`Class` 或 `Interface` 的宣告陳述式中定義型別。  
+---
+# <a name="type-39lttypenamegt39-is-not-defined"></a>類型 '&lt;typename&gt;' 未定義
+陳述式已參考未定義的型別。 您可以定義中宣告陳述式的類型例如`Enum`， `Structure`， `Class`，或`Interface`。  
   
- **錯誤 ID：**BC30002  
+ **錯誤識別碼︰** BC30002  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   確認型別定義與其參考是否都使用相同的拼字。  
+-   請確定型別定義和它的參考都使用相同的拼字。  
   
--   確認型別定義是否可讓參考存取。  例如，如果型別是在另一模組中且已被宣告為 `Private`，請將型別定義移到參考模組或宣告為 `Public`。  
+-   確定型別定義可存取的參考。 例如，如果型別是在另一個模組，而且已宣告`Private`、 將型別定義移至參考的模組，或將它宣告`Public`。  
   
--   確認型別的命名空間是否在專案中已重新定義。  如果已重新定義，請使用 `Global` 關鍵字完整限定型別名稱。  例如，如果專案定義名為 `System` 的命名空間，則除非使用 `Global` 關鍵字加以完整限定，否則無法存取 <xref:System.Object?displayProperty=fullName> 型別：`Global.System.Object`。  
+-   請確定型別的命名空間不會重新定義您專案中。 如果是，使用`Global`關鍵字來完整限定的型別名稱。 例如，如果專案定義的命名空間，且`System`、<xref:System.Object?displayProperty=fullName>無法存取型別，除非它是以完整限定`Global`關鍵字︰ `Global.System.Object`。</xref:System.Object?displayProperty=fullName>  
   
--   如果型別已定義，但是定義它的物件程式庫或型別程式庫尚未在 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中註冊，請按一下 \[**專案**\] 功能表的 \[**加入參考**\]，然後選取適當的物件程式庫或型別程式庫。  
+-   如果型別定義，但物件程式庫或在其中定義的型別程式庫未登錄在[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，按一下 [**加入參考**上**專案**] 功能表上，然後選取適當的物件程式庫或型別程式庫。  
   
--   確認型別位在屬於目標 .NET Framework 設定檔一部分的組件中。  如需詳細資訊，請參閱[疑難排解 .NET Framework 目標錯誤](/visual-studio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
+-   確定為目標的.NET Framework 設定檔的一部分的組件中的型別。 如需詳細資訊，請參閱[疑難排解.NET Framework 目標錯誤](https://docs.microsoft.com/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
   
-## 請參閱  
- [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [管理專案中的參考](/visual-studio/ide/managing-references-in-a-project)
+## <a name="see-also"></a>另請參閱  
+ [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
+ [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)   
+ [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)   
+ [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)   
+ [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)   
+ [管理專案中的參考](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)

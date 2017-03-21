@@ -1,67 +1,83 @@
 ---
-title: "Declared Element Names (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declared elements, case sensitivity"
-  - "names, Visual Basic rules"
-  - "naming conventions"
-  - "element names"
-  - "declared elements, identifiers"
-  - "declarations, elements"
-  - "declared elements, valid names"
-  - "[] escape characters [Visual Basic]"
-  - "names, elements"
-  - "declaration statements, declared elements"
-  - "declaring elements"
-  - "identifiers, declared elements"
-  - "case sensitivity, declared element names"
-  - "escape characters"
-  - "names, declared elements"
-  - "declared elements, about declared elements"
-  - "escaped names"
-  - "declared elements, names"
-  - "names, naming conventions"
-  - "identifiers, elements"
+title: "宣告項目名稱 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declared elements, case sensitivity
+- names, Visual Basic rules
+- naming conventions
+- element names
+- declared elements, identifiers
+- declarations, elements
+- declared elements, valid names
+- '[] escape characters [Visual Basic]'
+- names, elements
+- declaration statements, declared elements
+- declaring elements
+- identifiers, declared elements
+- case sensitivity, declared element names
+- escape characters
+- names, declared elements
+- declared elements, about declared elements
+- escaped names
+- declared elements, names
+- names, naming conventions
+- identifiers, elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
----
-# Declared Element Names (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 56ac0684e5176f33aa6f9600f20d9fe3fcf09416
+ms.lasthandoff: 03/13/2017
 
-每個宣告項目都有名稱，亦稱作「*識別項*」\(Identifier\)，可供程式碼參考之用。  
+---
+# <a name="declared-element-names-visual-basic"></a>宣告項目名稱 (Visual Basic)
+每個宣告的項目都有名稱，也稱為*識別碼*，這是程式碼使用來參考它。  
   
-## 規則  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中的項目名稱必須遵守下列規則：  
+## <a name="rules"></a>規則  
+ 中的元素名稱[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]必須遵守下列規則︰  
   
--   必須以字母字元或底線 \(`_`\) 開頭。  
+-   它必須以字母字元或底線 (`_`)。  
   
--   只能包含字母字元、十進位數字和底線。  
+-   它只能包含字母字元、 十進位數字和底線。  
   
--   如果是以底線開頭，必須含有至少一個字母順序字元或十進位數字。  
+-   如果它是以底線開頭，它必須包含至少一個字母字元或十進位數字。  
   
--   長度不可超過 1023 個字元。  
+-   它不能超過 1023年個字元。  
   
- 1023 個字元的長度限制也適用於完整名稱 \(Qualified Name\) 的整個字串，例如 `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。  
+ 1023 個字元的長度限制也適用於整個字串的完整名稱，例如`outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。  
   
- 下列範例顯示幾個有效的項目名稱。  
+ 下列範例顯示一些有效的項目名稱。  
   
  `aB123__45`  
   
  `_567`  
   
- 下列範例顯示幾個無效的項目名稱。  第一個名稱僅包含底線，第二個以十進位數字開頭，而第三個包含無效字元 \($\)。  
+ 下列範例顯示一些無效的項目名稱。 第一個包含僅底線、 十進位數字，開頭為第二個和第三個包含無效的字元 （$）。  
   
  `' Three INVALID element names`  
   
@@ -72,34 +88,34 @@ caps.handback.revision: 27
  `xyz$wv`  
   
 > [!CAUTION]
->  由於以底線 \(`_`\) 開頭的項目名稱不屬於 [語言獨立性以及與語言無關的元件](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) 的一部分，所以符合 CLS 標準的程式碼無法使用定義這類名稱的元件。  不過，在項目名稱中的任何其他位置使用底線則符合 CLS 標準。  
+>  項目名稱開頭是底線 (`_`) 是不屬於[語言獨立性以及與語言無關的元件](https://msdn.microsoft.com/library/12a7a7h3)(CLS)，所以符合 CLS 標準的程式碼不能使用的元件，定義這類名稱。 不過，任何其他項目名稱中的位置底線是符合 CLS 標準。  
   
-### 名稱長度方針  
- 依實用性而言，您的名稱應該盡可能簡短，但仍可清楚識別項目。  這可以提升程式碼的可讀性、縮短行的長度和減少原始程式檔 \(Source File\) 大小。  
+### <a name="name-length-guidelines"></a>名稱長度方針  
+ 事實上，您的名稱應該盡量縮短但仍可清楚識別的項目。 這可改善程式碼的可讀性，並減少線條長度和原始程式檔的大小。  
   
- 另一方面，您的名稱也不可短到無法充分描述項目代表的意義，以及它在程式碼中的用途。  這對程式碼的可讀性十分重要。  如果他人嘗試了解您的程式碼，或是您自己在撰寫之後很久再回頭查閱，適當的項目名稱可以節省大量的閱讀時間。  
+ 相反地，您的名稱不應該過短，無法正確地描述項目所代表的意義和您的程式碼如何使用它。 這是很重要的程式碼的可讀性。 如果有人試圖了解它，或您自己想要在您撰寫之後很長的時間，適當的項目名稱可以節省大量的時間。  
   
-## 逸出名稱  
- 一般來說，項目名稱不可與 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 保留的關鍵字相同，例如 `Case` 或 `Friend`。  但是您可定義一個放在中括號 \(`[ ]`\) 內的「*逸出名稱*」\(Escaped Name\)。  逸出名稱可與任何 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 關鍵字相同，因為該括號可解決模稜兩可 \(Ambiguity\) 的問題。  當您稍後在程式碼中參考該名稱時也必須加上中括號。  
+## <a name="escaped-names"></a>逸出的名稱  
+ 通常，項目名稱必須符合任何保留的關鍵字[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，例如`Case`或`Friend`。 不過，您可以定義*逸出名稱*，這以括弧括住 (`[ ]`)。 逸出的名稱比對任何[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]關鍵字，因為括號移除任何模稜兩可。 當您稍後在程式碼中參考名稱時，也可以使用方括號。  
   
- 一般而言，只有在下列情況中才需要使用逸出名稱：  
+ 一般情況下，您應該使用逸出的名稱時，才︰  
   
--   移轉自舊版本 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 的程式碼，而該版本並未將您使用的名稱保留為關鍵字；或  
+-   從舊版移轉您的程式碼[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，沒有不使用保留關鍵字做為名稱; 或  
   
--   使用以其他語言撰寫的程式碼，而指定關鍵字在這種語言中並未被保留。  
+-   您正在使用不會保留指定的關鍵字是另一種語言撰寫的程式碼。  
   
- 此外，項目名稱與關鍵字產生衝突時，您應考慮重新命名該項目。  整合式開發環境 \(IDE\) 提供您簡便的更名方式。  如需詳細資訊，請參閱 [重構和重新命名對話方塊](../../../../visual-basic/developing-apps/using-ide/refactoring-and-rename-dialog-box.md)。  
+ 否則，您應該考慮重新命名項目，如果其名稱與關鍵字衝突。 整合式的開發環境 (IDE) 提供簡單的方法。 如需詳細資訊，請參閱[重整](https://docs.microsoft.com/visualstudio/vb-ide/refactoring-vb)。  
   
-## 名稱區分大小寫  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中的項目名稱不區分大小寫。  這表示當編譯器比較兩個只有大小寫不同的名稱時，會將它們當做相同的名稱來解譯。  例如，編譯器會將 `ABC` 和 `abc` 視為相同的宣告項目。  
+## <a name="case-sensitivity-in-names"></a>在 名稱區分大小寫  
+ 中的項目名稱[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]不區分大小寫。 這表示，當編譯器比較兩個字母大小寫不同的名稱，它會將它們解譯為相同的名稱。 例如，它會將 `ABC` 和 `abc` 視為相同的宣告元素。  
   
- 然而，Common Language Runtime \(CLR\) 使用區分大小寫的繫結。  因此當您產生一個組件 \(Assembly\) 或 DLL 讓其他組件使用時，您的名稱將會區分大小寫。  例如，如果您使用名為 `ABC` 的項目來定義類別，而其他組件透過 Common Language Runtime 使用您的類別，則它們必須以 `ABC` 來表示該項目。  如果您隨後重新編譯類別，並將項目名稱更改為 `abc`，則其他使用這個類別的組件就無法再存取該項目。  因此，當您公佈組件的更新版本時，不應該更改任何公用項目的字母大小寫。  
+ 不過，common language runtime (CLR) 會使用區分大小寫的繫結。 因此，當您產生一個組件或 DLL 並讓其他組件使用時，您的名稱將會區分大小寫。 例如，如果您使用名為 `ABC`的元素來定義類別，而其他組件透過 Common Language Runtime 使用您的類別，則這些組件必須以 `ABC`來表示該元素。 如果您後續重新編譯類別，並變更的項目名稱`abc`，則使用您的類別的組件就無法再存取該項目。 因此，當您發行組件的更新版本時，不應該變更任何公用元素的字母大小寫。  
   
-## 名稱和地區設定  
- 名稱比較和地區設定無關。  如果兩個名稱在一個地區設定中相符，它們一定在所有的地區設定中都相符。  
+## <a name="names-and-locales"></a>名稱和地區設定  
+ 名稱的比較與地區設定無關。 如果兩個名稱符合一個地區，他們保證符合所有地區設定。  
   
-## 請參閱  
- [Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)   
- [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Statements](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>另請參閱  
+ [宣告項目](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)   
+ [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
+ [宣告項目參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
+ [陳述式](../../../../visual-basic/language-reference/statements/index.md)

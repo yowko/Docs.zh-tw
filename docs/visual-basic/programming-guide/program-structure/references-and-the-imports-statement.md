@@ -1,67 +1,83 @@
 ---
-title: "References and the Imports Statement (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "assemblies [Visual Basic], namespaces"
-  - "references, assembly"
-  - "namespaces, assemblies"
-  - "referencing assemblies"
-  - "Imports statement, referencing assemblies"
-  - "assemblies [Visual Basic], references"
+title: "參考和 Imports 陳述式 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- assemblies [Visual Basic], namespaces
+- references, assembly
+- namespaces, assemblies
+- referencing assemblies
+- Imports statement, referencing assemblies
+- assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# References and the Imports Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 283a27e7703b31a9aeed8f7e4104e89b7ff78525
+ms.lasthandoff: 03/13/2017
 
-您可在 \[**專案**\] 功能表中選擇 \[**加入參考**\] 命令，讓您的專案能夠使用外部物件。  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 中的參考可指向組件 \(Assembly\)，這些組件與型別程式庫 \(Type Library\) 類似，但包含更多的資訊。  
+---
+# <a name="references-and-the-imports-statement-visual-basic"></a>參考和 Imports 陳述式 (Visual Basic)
+您可以使用外部物件至您的專案選擇**加入參考**命令**專案**功能表。 在參考[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]可以指向組件，就像但包含型別程式庫的詳細資訊。  
   
-## Imports 陳述式  
- 組件包括一個或多個命名空間。  將參考加入組件中時，您也可以將 `Imports` 陳述式 \(Statement\) 加入控制模組內部組件命名空間的可見度的模組中。  `Imports` 陳述式提供的內容範圍設定，讓您能夠只使用必要的部分命名空間就能提供特別的參考。  
+## <a name="the-imports-statement"></a>Imports 陳述式  
+ 組件包含一或多個命名空間。 當您將加入組件的參考時，您也可以加入`Imports`陳述式，以控制可見性的模組內的組件的命名空間的模組。 `Imports`陳述式提供的內容範圍設定，可讓您使用只需要提供唯一的參考命名空間的一部分。  
   
- `Imports` 陳述式有下列語法：  
+ `Imports`陳述式的語法如下︰  
   
- `Imports` \[         `|` `Aliasname` \=\] `Namespace`  
+ `Imports` [`|``Aliasname` =] `Namespace`  
   
- `Aliasname` 是指您可在程式碼內使用以參考匯入之命名空間的簡短名稱。  `Namespace` 是透過專案參考、專案內的定義或上一個 `Imports` 陳述式取得的命名空間。  
+ `Aliasname`指的是簡短名稱，您可以使用程式碼中參考匯入的命名空間。 `Namespace`透過在專案中，定義或先前的專案參考是命名空間，可透過`Imports`陳述式。  
   
- 模組可包含任何數目的 `Imports` 陳述式。  它們必須出現在任何 `Option` 陳述式之後，但在任何其他程式碼之前。  
+ 模組可能包含任意數目的`Imports`陳述式。 它們必須出現在任何之後`Option`陳述式，如果存在，但在任何其他程式碼之前。  
   
 > [!NOTE]
->  不要將專案參考與 `Imports` 陳述式或 `Declare` 陳述式混淆。  專案參考可讓 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 專案使用外部物件，例如組件中的物件。  `Imports` 陳述式是用來簡化專案參考的存取，但不提供對這些物件的存取。  `Declare` 陳述式是用來宣告對動態連結程式庫 \(DLL\) 中外部程序的參考。  
+>  請勿混淆的專案參考`Imports`陳述式或`Declare`陳述式。 專案參考的組件中的物件等外部物件可讓以[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]專案。 `Imports`陳述式用來簡化專案參考的存取，但並不提供這些物件的存取權。 `Declare`陳述式用來宣告外部程序中的動態連結程式庫 (DLL) 的參考。  
   
-## 以 Imports 陳述式使用別名  
- `Imports` 陳述式讓您不需要明確地輸入參考的完整名稱，就可以更容易地存取類別 \(Class\) 中的方法。  別名 \(Alias\) 可讓您只對命名空間的一部分指派較簡易的名稱。  例如，導致一段文字以多行顯示的歸位字元 \(Carriage Return\)\/換行字元 \(Line Feed\) 循序項 \(Sequence\)，是 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空間中 <xref:Microsoft.VisualBasic.ControlChars> 模組的一部分。  若不以別名在程式中使用這個常數，您需要輸入下列程式碼：  
+## <a name="using-aliases-with-the-imports-statement"></a>使用 Imports 陳述式的別名  
+ `Imports`陳述式就可以更輕鬆地存取方法的類別而不必明確地輸入完整的參考名稱。 別名可讓您更易記的名稱為命名空間的一部分。 比方說，歸位/換會導致一段文字，以顯示多行的順序是一部分<xref:Microsoft.VisualBasic.ControlChars>中的模組<xref:Microsoft.VisualBasic?displayProperty=fullName>命名空間。</xref:Microsoft.VisualBasic?displayProperty=fullName> </xref:Microsoft.VisualBasic.ControlChars> 若要在程式中不含別名中使用這個常數，您必須輸入下列程式碼︰  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
+ [!code-vb[VbVbalrApplication #&3;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
- `Imports` 陳述式必須緊接在模組中任何 `Option` 陳述式之後的第一行。  下列程式碼片段會顯示如何將別名匯入和指派給 <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName> 模組：  
+ `Imports`陳述式必須是第一個程式碼行，並緊接著任何`Option`模組中的陳述式。 下列程式碼片段示範如何匯入並指派別名<xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>模組︰</xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
+ [!code-vb[VbVbalrApplication #&4;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
- 未來對這個命名空間的參考可以非常簡短：  
+ 未來參考此命名空間可以是非常簡短︰  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
+ [!code-vb[VbVbalrApplication #&5;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
- 如果 `Imports` 陳述式不包括別名名稱，該匯入命名空間內定義的項目不需完整名稱就可在模組中使用。  如果有指定別名名稱，就必須做為該命名空間內所含的名稱限定詞 \(Qualifier\)。  
+ 如果`Imports`陳述式不包含別名名稱，匯入的命名空間內定義的項目可以用於無限制的模組。 如果指定的別名名稱，則它必須當做限定詞，包含該命名空間內的名稱。  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.ControlChars>   
- <xref:Microsoft.VisualBasic>   
- [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](http://msdn.microsoft.com/zh-tw/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [組件和全域組件快取](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md)   
- [如何：使用命令列建立和使用組件](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md)   
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.ControlChars></xref:Microsoft.VisualBasic.ControlChars>   
+ <xref:Microsoft.VisualBasic></xref:Microsoft.VisualBasic>   
+ [NIB 如何：使用加入參考對話方塊加入或移除參考](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
+ [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
+ [組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
+ [如何︰ 建立和使用組件︰ 使用命令列](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)   
+ [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

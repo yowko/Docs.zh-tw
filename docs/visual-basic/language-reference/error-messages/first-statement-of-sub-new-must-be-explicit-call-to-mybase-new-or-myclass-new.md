@@ -1,41 +1,58 @@
 ---
-title: "First statement of this &#39;Sub New&#39; must be an explicit call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; because the &#39;&lt;constructorname&gt;&#39; in the base class &#39;&lt;baseclassname&gt;&#39; of &#39;&lt;derivedclassname&gt;&#39; is marked obsolete: &#39;&lt;errormessage&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30920"
-  - "bc30920"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30920"
+title: "這個 &quot;Sub New&quot; 的第一個陳述式必須明確呼叫 &quot;MyBase.New&quot; 或 &quot;MyClass.New&quot;，因為&quot;&lt;constructorname&gt;&quot;中的基底類別&quot;&lt;baseclassname&gt;&quot;的&quot;&lt;derivedclassname&gt;&quot;標記為過時:&quot;&lt;errormessage&gt;&quot; |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30920
+- bc30920
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# First statement of this &#39;Sub New&#39; must be an explicit call to &#39;MyBase.New&#39; or &#39;MyClass.New&#39; because the &#39;&lt;constructorname&gt;&#39; in the base class &#39;&lt;baseclassname&gt;&#39; of &#39;&lt;derivedclassname&gt;&#39; is marked obsolete: &#39;&lt;errormessage&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: feb04d426b7e050b7ad05cdfd4d481172dda3a49
+ms.lasthandoff: 03/13/2017
 
-類別建構函式 \(Constructor\) 不會明確呼叫基底類別 \(Base Class\) 建構函式，並且將以 <xref:System.ObsoleteAttribute> 屬性和指示詞標記隱含基底類別建構函式，將它視為錯誤處理。  
+---
+# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>這個 'Sub New' 的第一個陳述式必須明確呼叫 'MyBase.New' 或 'MyClass.New'，因為'&lt;constructorname&gt;'中的基底類別'&lt;baseclassname&gt;'的'&lt;derivedclassname&gt;'標記為過時:'&lt;errormessage&gt;'
+類別建構函式不會明確地呼叫基底類別建構函式，並會加上隱含基底類別建構函式<xref:System.ObsoleteAttribute>屬性並將其視為錯誤的指示詞。</xref:System.ObsoleteAttribute>  
   
- 當衍生類別建構函式未呼叫基底類別建構函式時，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會嘗試產生對無參數基底類別建構函式的隱含呼叫。  如果基底類別中沒有不需引數即可呼叫存取的建構函式，則 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 不會產生隱含呼叫。  在這個案例中，必要的建構函式會標記著 <xref:System.ObsoleteAttribute> 屬性，這樣 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 便不會呼叫它。  
+ 當在衍生的類別建構函式未呼叫基底類別建構函式，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會嘗試產生無參數的基底類別建構函式的隱含呼叫。 如果沒有引數，就無法呼叫基底類別中沒有可存取建構函式[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]不會產生隱含呼叫。 在此情況下，必要的建構函式會標示<xref:System.ObsoleteAttribute>屬性，因此[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]無法呼叫它。</xref:System.ObsoleteAttribute>  
   
- 您可以套用 <xref:System.ObsoleteAttribute>，標記任何將來不會再使用的程式設計項目。  如果這麼做，可以將屬性 \(attribute\) 的 <xref:System.ObsoleteAttribute.IsError%2A> 屬性 \(property\) 設定為 `True` 或 `False`。  如果將它設定為 `True`，嘗試使用此項目時，編譯器會將其視為錯誤。  如果將它設定為 `False`，或讓它預設值為 `False`，嘗試使用此項目時，編譯器會發出警告。  
+ 您可以將標記為不再使用<xref:System.ObsoleteAttribute>該</xref:System.ObsoleteAttribute>套用任何程式設計項目 如果您這麼做，您可以設定屬性的<xref:System.ObsoleteAttribute.IsError%2A>屬性設為`True`或`False`。</xref:System.ObsoleteAttribute.IsError%2A> 如果您將它設定為 `True`，則編譯器會將使用這個項目的嘗試視為錯誤。 如果您將它設定為 `False`，或讓它預設為 `False`，則在嘗試使用該項目時，編譯器會發出警告。  
   
- **錯誤 ID**：BC30920  
+ **錯誤識別碼︰** BC30920  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  檢查引號中的錯誤訊息，並進行必要的修正。  
+1.  請檢查引用的錯誤訊息，並採取適當的動作。  
   
-2.  包含對 `MyBase.New()` 或 `MyClass.New()` 的呼叫，做為衍生類別中 `Sub New` 的第一個陳述式。  
+2.  包含 `MyBase.New()` 或 `MyClass.New()` 的呼叫作為衍生類別中 `Sub New` 的第一個陳述式。  
   
-## 請參閱  
- [屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+ 

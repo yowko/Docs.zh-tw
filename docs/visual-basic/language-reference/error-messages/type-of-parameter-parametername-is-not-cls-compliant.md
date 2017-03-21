@@ -1,57 +1,73 @@
 ---
-title: "Type of parameter &#39;&lt;parametername&gt;&#39; is not CLS-compliant | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc40028"
-  - "bc40028"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40028"
+title: "參數的型別 &quot;&lt;parametername&gt;&quot; 不符合 CLS 標準 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc40028
+- bc40028
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
----
-# Type of parameter &#39;&lt;parametername&gt;&#39; is not CLS-compliant
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 75891a7268489b69e8d0c1bf91570a67fc004c6b
+ms.lasthandoff: 03/13/2017
 
-程序已標示為 `<CLSCompliant(True)>` 但會宣告型別已標示為 `<CLSCompliant(False)>` 的參數、未標示，或因為它是不符合標準的型別而不合格。  
+---
+# <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>參數的型別 '&lt;parametername&gt;' 不符合 CLS 標準
+程序會標示為`<CLSCompliant(True)>`但宣告參數的型別標示為`<CLSCompliant(False)>`、 未標記，或因為它是不相容的類型不符合。  
   
- 程序必須只使用符合 CLS 標準的型別，才能夠符合 [語言獨立性以及與語言無關的元件](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) 標準。  這適用於參數型別、傳回型別及其所有區域變數的型別。  
+ 程序必須只使用符合 CLS 規範的型別，才能夠符合[語言獨立性以及與語言無關的元件](https://msdn.microsoft.com/library/12a7a7h3) (CLS) 標準。 這適用於參數型別、傳回型別及其所有區域變數的型別。  
   
- 下列 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 資料型別並非 CLS 相容：  
+ 下列 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 資料類型不符合 CLS 規範：  
   
--   [SByte Data Type](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [SByte 資料類型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger Data Type](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [UInteger 資料類型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong Data Type](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [ULong 資料類型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort Data Type](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [UShort 資料類型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- 當您將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，可以將屬性的 `isCompliant` 參數設定為 `True` 或 `False`，表示符合標準或不符合標準。  這個參數沒有預設值，所以您必須提供預設值。  
+ 當您將套用<xref:System.CLSCompliantAttribute>程式設計項目，您可以設定屬性的`isCompliant`參數為`True`或`False`表示相容或不相容。</xref:System.CLSCompliantAttribute> 這個參數沒有預設值，您必須提供值。  
   
- 如果沒有將 <xref:System.CLSCompliantAttribute> 套用至項目，會被認為是不相容。  
+ 如果您不會套用<xref:System.CLSCompliantAttribute>的項目，它會被視為不相容。</xref:System.CLSCompliantAttribute>  
   
- 根據預設，這是一個警告訊息。  如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱[在 Visual Basic 中設定警告](/visual-studio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID：**BC40028  
+ **錯誤識別碼︰** BC40028  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   如果程序必須採用這個特殊型別的參數，請移除 <xref:System.CLSCompliantAttribute>。  程序不可符合 CLS 標準。  
+-   如果此程序必須採取這種特定的參數，移除<xref:System.CLSCompliantAttribute>.</xref:System.CLSCompliantAttribute> 程序不符合 CLS 規範。  
   
--   如果程序必須符合 CLS 標準，請將此參數的型別變更為最符合 CLS 標準的型別。  例如，如果數值範圍不需要超過 2,147,483,647，您可以使用 `Integer` 來取代 `UInteger`。  如果真的需要擴充的範圍，可以使用 `Long` 來取代 `UInteger`。  
+-   如果該程序必須符合 CLS 標準，此參數的型別變為最符合 CLS 標準的型別。 例如，如果您不需要 2,147,483,647 以上的值範圍，而且不使用 `UInteger` ，則可能可以使用 `Integer` 。 如果您需要擴充範圍，則可以將 `UInteger` 取代為 `Long`。  
   
--   如果要與 Automation 或 COM 物件進行互動，請記住，某些型別的資料寬度會與 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 不同。  例如，`int` 在其他環境中，通常是 16 位元。  如果您所接收的是來自這類元件的 16 位元整數，請在 Managed [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 程式碼中將它宣告為 `Short` 而不是 `Integer`。  
+-   如果您要與 Automation 或 COM 物件進行互動，請記住，某些型別的資料寬度會與在 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中的資料寬度不同。 例如，`int` 在其他環境中通常是 16 位元。 如果您所接收的是來自這類元件的 16 位元整數，請在您的 Managed [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 程式碼中將它宣告為 `Short` 而不是 `Integer`。  
   
-## 請參閱  
- [\<PAVE OVER\> Writing CLS\-Compliant Code](http://msdn.microsoft.com/zh-tw/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+## <a name="see-also"></a>另請參閱  
+ [\<PAVE OVER > 撰寫符合 CLS 標準的程式碼](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

@@ -1,37 +1,53 @@
 ---
-title: "Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc42026"
-  - "BC42026"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42026"
+title: "運算式會遞迴地呼叫包含的屬性 &quot;&lt;propertyname&gt;&quot; |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc42026
+- BC42026
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# Expression recursively calls the containing property &#39;&lt;propertyname&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ca20bf1a539f2727a80f8e781c1e9ebc5a4a253d
+ms.lasthandoff: 03/13/2017
 
-某個屬性定義的 `Set` 程序中的陳述式 \(Statement\)，將值存入屬性的名稱。  
+---
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>運算式會遞迴地呼叫包含的屬性 '&lt;propertyname&gt;'
+中的陳述式`Set`屬性定義的程序將值儲存到屬性的名稱。  
   
- 保留屬性值的建議方法是，在屬性的容器 \(Container\) 中定義 `Private` 變數，然後同時在 `Get` 和 `Set` 程序中使用它。  接著，`Set` 程序應該會將收到的值存入這個 `Private` 變數。  
+ 保留的屬性值的建議的方法是定義`Private`屬性的容器中的變數並將它用於兩者`Get`和`Set`程序。 `Set`程序應該然後將內送值儲存在這個`Private`變數。  
   
- `Get` 程序的行為與 `Function` 程序類似，所以它可以指派一值給屬性名稱，並在遇到 `End Get` 陳述式時傳回控制權。  然而，建議的方法是將 `Private` 變數當做值，併入 [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md)。  
+ `Get`程序的行為類似`Function`程序，以便將值指派給屬性的名稱並將控制權傳回所遇到`End Get`陳述式。 建議的方法，不過，是要包含`Private`變數中的值為[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
   
- `Set` 程序的行為與 `Sub` 程序類似，不會傳回值。  因此，程序或屬性名稱在 `Set` 程序內沒有任何特殊意義，所以您無法將值存入其中。  
+ `Set`程序的行為類似`Sub`程序，不會傳回值。 因此，程序或屬性名稱有內沒有特殊意義`Set`程序中，而且您無法將值儲存到其中。  
   
- 下列範例將說明可能會導致這個錯誤的方法，其後則為建議的處理方法。  
+ 下列範例說明可能會造成這個錯誤，後面接著的建議方法的方法。  
   
 ```  
 Public Class illustrateProperties  
@@ -63,15 +79,15 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- 根據預設，這是一個警告訊息。  如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱[在 Visual Basic 中設定警告](/visual-studio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID：**BC42026  
+ **錯誤識別碼︰** BC42026  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   重新撰寫屬性定義，採用上述範例中說明的建議方法。  
+-   請重寫的屬性定義，以使用建議的方法，在上述範例中所示。  
   
-## 請參閱  
- [屬性程序](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [Property 程序](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
+ [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)   
+ [Set 陳述式](../../../visual-basic/language-reference/statements/set-statement.md)

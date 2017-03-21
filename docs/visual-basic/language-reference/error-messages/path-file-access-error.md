@@ -1,36 +1,52 @@
 ---
-title: "Path/File access error | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID75"
-dev_langs: 
-  - "VB"
+title: "路徑檔案存取錯誤 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbrID75
+dev_langs:
+- VB
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Path/File access error
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ac730bac76540331206daebe600445ca54cc15a9
+ms.lasthandoff: 03/13/2017
 
-當進行檔案存取或磁碟存取作業時，作業系統無法建立路徑與檔案名稱之間的連接。  
+---
+# <a name="pathfile-access-error"></a>路徑/檔案存取錯誤
+在檔案存取或磁碟存取作業時，作業系統無法建立路徑和檔案名稱之間的連接。  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請確定檔案規格的格式正確。  檔案名稱可包含完整限定 \(絕對\) 或相對路徑。  完整限定路徑是由磁碟機名稱開始 \(如果該路徑位於其他磁碟機上\)，並從根目錄到檔案列出明確的路徑。  所有非完整的路徑對於目前磁碟機和目錄而言，都是相對的。  
+1.  請確定已正確格式化檔案規格。 檔案名稱可以包含完整 （絕對） 或相對路徑。 使用磁碟機名稱 （如果路徑是另一個磁碟機上） 開始的完整的路徑，並列出檔案從根的明確路徑。 任何不完整的路徑是相對於目前的磁碟機和目錄。  
   
-2.  請確定您並未嘗試儲存某一檔案，來取代現有之唯讀檔案。  如果是這樣，請變更目標檔案的唯讀屬性 \(Attribute\)，或者以不同的檔案名稱儲存該檔案。  
+2.  請確定您沒有不嘗試儲存檔案，來取代現有的唯讀檔案。 這種情況，如果變更唯讀屬性的目標檔案，或使用不同的檔案名稱儲存檔案。  
   
-3.  請確定您並未嘗試在循序的 `Output` 或 `Append` 模式中，開啟唯讀檔案。  如果有上述情形，請在 `Input` 模式中開啟檔案，或者變更檔案的唯讀屬性 \(Attribute\)。  
+3.  請確定您未嘗試開啟唯讀檔案中循序`Output`或`Append`模式。 如果這種情況，在檔案開啟`Input`模式或變更檔案的唯讀屬性。  
   
-4.  請確定您未嘗試在資料庫或文件中變更 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 專案。  
+4.  請確定您未嘗試變更[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]資料庫或文件中的專案。  
   
-## 請參閱  
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>另請參閱  
+ [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

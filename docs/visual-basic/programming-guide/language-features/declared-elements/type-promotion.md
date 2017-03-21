@@ -1,76 +1,92 @@
 ---
-title: "Type Promotion (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declared elements, scope"
-  - "visibility, declared elements"
-  - "Partial keyword, unexpected results with type promotion"
-  - "scope, declared elements"
-  - "scope, Visual Basic"
-  - "type promotion"
-  - "declared elements, visibility"
+title: "類型提升 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declared elements, scope
+- visibility, declared elements
+- Partial keyword, unexpected results with type promotion
+- scope, declared elements
+- scope, Visual Basic
+- type promotion
+- declared elements, visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# Type Promotion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d732e765fc28eaedc0deab477dbf9955a40e97c9
+ms.lasthandoff: 03/13/2017
 
-當您在模組中宣告一個程式設計項目時，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會將其範圍提升至包含該模組的命名空間。  這個過程稱為「*型別提升*」\(Type Promotion\)。  
+---
+# <a name="type-promotion-visual-basic"></a>類型提升 (Visual Basic)
+當您宣告程式設計項目在模組中，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提升其範圍包含模組的命名空間。 這稱為*輸入促銷*。  
   
- 下列範例說明模組的基本架構定義，以及該模組的兩個成員。  
+ 下列範例會顯示模組的基本架構定義，該模組的兩個成員。  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements #&1;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
- 在 `projModule` 中，在模組層級宣告的程式設計項目會提升至 `projNamespace`。  在前述範例中，僅提升了 `basicEnum` 和 `innerClass`，卻沒有提升 `numberSub`，因為其並未在模組層級中宣告。  
+ 內`projModule`、 程式設計在模組層級宣告的項目會提升至`projNamespace`。 在上述範例中，`basicEnum`和`innerClass`會升級，但`numberSub`不是，因為它不會在模組層級宣告。  
   
-## 型別提升的效用  
- 型別提升的效用是在模組名稱中，不需加入限定性條件字串 \(String\)。  下列範例將會對前述範例中的程序呼叫兩次。  
+## <a name="effect-of-type-promotion"></a>型別提升的效果  
+ 型別提升的效果是限定性條件字串不需要包含模組名稱。 下列範例會在上述範例中的兩個呼叫程序。  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements #&2;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
- 在前述範例中，第一次呼叫是使用完整的限定性條件字串。  但因為型別提升，其實並不需這麼做。  第二次呼叫也會存取模組成員，而不會在限定性條件字串中加入 `projModule`。  
+ 在上述範例中，第一次呼叫會使用完整限定性條件字串。 不過，這是不需要因為型別提升。 第二個呼叫，也存取模組成員但不包括`projModule`中限定性條件字串。  
   
-## 型別提升失敗  
- 如果命名空間中已經存在與模組成員名稱相同的成員，該模組成員的型別提升將無效。  下列範例說明列舉型別 \(Enumeration\) 及相同命名空間中模組的基本架構定義。  
+## <a name="defeat-of-type-promotion"></a>型別提升失敗  
+ 如果命名空間已經有具有相同名稱做為模組成員的成員，型別提升將無效的模組成員。 下列範例示範基本架構定義的列舉型別與相同的命名空間內的模組。  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements #&3;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- 在前述範例中，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 無法將類別 \(Class\) `abc` 提升至 `thisNameSpace`，因為命名空間層次中已經存在名稱相同的列舉型別。  若要存取 `abcSub`，您必須使用完整的限定性條件字串 `thisNamespace.thisModule.abc.abcSub`。  但是類別 `xyz` 仍會提升，而您可以使用較短的限定性條件字串 `thisNamespace.xyz.xyzSub` 來存取 `xyzSub`。  
+ 在上述範例中，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]無法升級類別`abc`至`thisNameSpace`因為已經有具有相同名稱的命名空間層級的列舉。 若要存取`abcSub`，您必須使用完整限定性條件字串`thisNamespace.thisModule.abc.abcSub`。 不過，類別`xyz`仍升級，而且您可以存取`xyzSub`使用較短的限定性條件字串`thisNamespace.xyz.xyzSub`。  
   
-### 部分型別的型別提升失敗  
- 如果模組內的類別或結構使用 [Partial](../../../../visual-basic/language-reference/modifiers/partial.md) 關鍵字，無論命名空間中是否具有名稱相同的成員，該類別或結構的型別提升會自動失敗。  模組中的其他項目仍可進行型別提升。  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>部分類型的型別提升失敗  
+ 如果類別或結構，在模組內使用[部分](../../../../visual-basic/language-reference/modifiers/partial.md)關鍵字、 型別提升會自動失效該類別或結構中，命名空間是否具有相同名稱的成員。 在模組中的其他項目是仍可進行型別提升。  
   
- **結果** ：部分定義的型別提升失敗可能導致無法預期的結果，甚至產生編譯器錯誤。  下列範例說明類別的基本架構部分定義，其中一項位於模組內。  
+ **結果。** 部分定義的型別提升失敗可能會造成非預期的結果，甚至是編譯器錯誤。 下列範例示範基本架構的部分定義的類別，一個是在模組內。  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements #&4;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
- 在前述範例中，開發人員可能預期編譯器會合併 `sampleClass` 的兩個部分定義。  但是編譯器卻不會考慮提升 `sampleModule` 內的部分定義。  這使得編譯器嘗試編譯兩個獨立的不同類別，雖然名稱都是 `sampleClass`，但具備不同的完整路徑。  
+ 在上述範例中，開發人員可能預期要合併兩個部分定義的編譯器`sampleClass`。 不過，編譯器不會考慮升級部分定義內`sampleModule`。 如此一來，它會嘗試編譯兩個個別且不同的類別，名為`sampleClass`但具有不同的限定性條件路徑。  
   
- 只有在完整路徑名稱 \(Fully Qualified Path\) 完全相同的情況下，編譯器才會合併部分定義。  
+ 只有在完整路徑相同時，編譯器才會合併部分定義。  
   
-## 建議事項  
- 下列建議表示良好的程式設計實務。  
+## <a name="recommendations"></a>建議  
+ 下列建議表示良好的程式設計作法。  
   
--   **唯一名稱** ：當您能完全控制程式設計項目的命名方式時，在所有的地方都使用唯一的名稱是很好的作法。  相同的名稱需要額外的限定性條件，會因而增加閱讀程式碼的難度。  這也可能導致小錯誤和無法預期的結果。  
+-   **唯一的名稱。** 當您的程式項目命名的完整控制權，永遠是最好各處使用唯一的名稱。 相同的名稱需要額外的限定性條件，而且可以讓您的程式碼更難閱讀。 它們也可能會導致難以察覺的錯誤和非預期的結果。  
   
--   **完整路徑名稱** ：處理相同命名空間中的模組和其他項目時，最安全的方法是所有的程式設計項目永遠使用完整路徑名稱。  如果某個模組成員的型別提升失敗，而且您沒有提供該成員的完整路徑名稱，可能會無意間存取到不同的程式設計項目。  
+-   **完整路徑名稱。** 當您正在使用模組和其他項目相同的命名空間中時，最安全的方法就是一律使用完整限定性條件的所有程式設計項目。 如果型別提升將無效的模組成員，且不完整限定該成員，您可能不小心存取不同的程式設計項目。  
   
-## 請參閱  
- [Module Statement](../../../../visual-basic/language-reference/statements/module-statement.md)   
- [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>另請參閱  
+ [Module 陳述式](../../../../visual-basic/language-reference/statements/module-statement.md)   
+ [Namespace 陳述式](../../../../visual-basic/language-reference/statements/namespace-statement.md)   
+ [部分](../../../../visual-basic/language-reference/modifiers/partial.md)   
+ [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
+ [如何︰ 控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
+ [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

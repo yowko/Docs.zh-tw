@@ -1,95 +1,111 @@
 ---
-title: "Structure of a Visual Basic Program | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conditional compilation, Visual Basic"
-  - "program structure, Visual Basic"
-  - "procedures, structure"
-  - "Visual Basic code, program structure"
+title: "Visual Basic 程式的結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- conditional compilation, Visual Basic
+- program structure, Visual Basic
+- procedures, structure
+- Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# Structure of a Visual Basic Program
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 64aab045538461d86946c870fa428bf8ad4ec15e
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 程式是從標準建置組塊 \(Building Blocks\) 建置而成。  一個「*方案*」可以包含一個或多個專案，  而一個「*專案*」可以包含一個或多個組件。  每個「*組件*」則是由一個或多個原始程式檔 \(Source File\) 編譯而來。  「*原始程式檔*」提供類別、結構、模組和介面的定義與實作，最後會包含所有的程式碼。  
+---
+# <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
+A[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]程式並建立從標準建置組塊。 A*方案*可以包含一或多個專案。 A*專案*」 可以包含一或多個組件。 每個*組件*編譯從一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含所有的程式碼。  
   
- 如需這些 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 程式建置組塊的詳細資訊，請參閱[專案和方案](/visual-studio/ide/solutions-and-projects-in-visual-studio)和[組件和全域組件快取](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md)。  
+ 如需有關這些建置組塊[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]程式，請參閱[方案和專案](https://docs.microsoft.com/visualstudio/ide/solutions-and-projects-in-visual-studio)和[組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
   
-## 檔案層級的程式設計項目  
- 啟動專案或檔案並開啟程式碼編輯器，您將會看到有些程式碼已出現在適當的位置並依照正確的順序排列。  您所撰寫的任何程式碼都應該依照下列順序：  
+## <a name="file-level-programming-elements"></a>檔案層級的程式設計項目  
+ 當您啟動專案或檔案，並開啟程式碼編輯器中時，您會看到一些程式碼已經位於正確位置，以及正確的順序。 您撰寫任何程式碼應該依照下列順序︰  
   
-1.  `Option` 陳述式  
+1.  `Option`陳述式  
   
-2.  `Imports` 陳述式  
+2.  `Imports`陳述式  
   
-3.  `Namespace` 陳述式和命名空間層級的項目  
+3.  `Namespace`陳述式和命名空間層級項目  
   
- 如果以不同的順序輸入陳述式，會導致編譯錯誤。  
+ 如果您在不同的順序輸入陳述式，會造成編譯錯誤。  
   
- 程式也可以包含條件式編譯陳述式。  您可以在原始程式檔中，將這些陳述式穿插在上述的陳述式順序之間。  
+ 程式也可以包含條件式編譯陳述式。 您可以顛倒這些原始程式檔之間的上述順序的陳述式中。  
   
-### Option 陳述式  
- `Option` 陳述式是用來為後續的程式碼建立基本規則，以協助避免語法以及邏輯錯誤。  [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md) 可以確保所有變數的宣告和拼寫都正確，減少偵錯時間。  當您使用不同資料型別的變數時，[Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)有助於將可能導致的邏輯錯誤與資料遺失降至最低。  [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md)則指定字串相互比較的方式，可以根據 `Binary` 值或 `Text` 值進行比較。  
+### <a name="option-statements"></a>選項陳述式  
+ `Option`陳述式會建立後續的程式碼，協助避免語法以及邏輯錯誤的基本規則。 [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)確保所有的變數會宣告和拼字是否正確，因此能減少偵錯的時間。 [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)可協助您減少可能會發生，當您使用不同的資料型別的變數之間的邏輯錯誤或資料遺失。 [選項比較陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)指定方法的字串會互相比較，根據其`Binary`或`Text`值。  
   
-### Imports 陳述式  
- 您可以納入 [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)，以匯入在專案外部定義的名稱。  `Imports` 陳述式允許您的程式碼不需檢查，即可參考匯入命名空間中所定義的類別與其他型別。  您可以使用多個 `Imports` 陳述式，數量視需求而定。  如需詳細資訊，請參閱 [References and the Imports Statement](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)。  
+### <a name="imports-statements"></a>Imports 陳述式  
+ 您可以包含[Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)匯入您的專案之外定義的名稱。 `Imports`陳述式可讓您的程式碼，來參考類別和其他類型的匯入的命名空間內定義而不需要加以限定。 您可以使用最大數量`Imports`視陳述式。 如需詳細資訊，請參閱[參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)。  
   
-### Namespace 陳述式  
- 命名空間可以協助您將程式設計項目進行組織和分類，讓群組和存取變得更容易。  使用 [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)時，可以將它後面的陳述式分類到特定命名空間。  如需詳細資訊，請參閱 [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
+### <a name="namespace-statements"></a>命名空間陳述式  
+ 命名空間可以協助您組織及分類以方便群組和存取程式設計項目。 您使用[命名空間陳述式](../../../visual-basic/language-reference/statements/namespace-statement.md)來分類特定命名空間內的下列陳述式。 如需詳細資訊，請參閱[在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
   
-### 條件式編譯陳述式  
- 條件式編譯陳述式幾乎可以出現在原始程式檔的任何地方。  它們會根據特定條件，在編譯時期納入或排除部分的程式碼。  您也可以使用這些陳述式為應用程式偵錯，因為條件式程式碼只能執行於偵錯模式中。  如需詳細資訊，請參閱 [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)。  
+### <a name="conditional-compilation-statements"></a>條件式編譯陳述式  
+ 條件式編譯陳述式可以出現在原始程式檔的幾乎任何地方。 它們會導致程式碼来包含或排除在編譯時期，根據特定條件的組件。 您也可以使用它們進行偵錯您的應用程式，因為條件式程式碼是偵錯模式中執行。 如需詳細資訊，請參閱[條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)。  
   
-## 命名空間層級的程式設計項目  
- 類別、結構和模組包含原始程式檔中的所有程式碼。  這些是「*命名空間層級*」項目，可以出現在命名空間中或原始程式檔層級。  它們會保留其他所有程式設計項目的宣告。  定義項目簽章 \(Signature\) 但不提供實作的介面，也會出現在模組層次。  如需模組層次項目的詳細資訊，請參閱下列主題：  
+## <a name="namespace-level-programming-elements"></a>命名空間層級的程式設計項目  
+ 類別、 結構和模組包含原始程式檔中的所有程式碼。 它們是*命名空間層級*項目，則可能會出現在命名空間或來源檔案層級。 它們會保存所有其他程式設計項目的宣告。 介面，可定義項目簽章，但不提供任何實作，也會出現在模組層級。 如需有關模組層級元素的詳細資訊，請參閱下列各項︰  
   
--   [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- 命名空間層級的資料項目是列舉型別 \(Enumeration\) 和委派。  
+ 命名空間層級的資料元素會列舉和委派。  
   
-## 模組層次的程式設計項目  
- 可以保留可執行程式碼 \(在執行階段執行動作的陳述式\) 的程式設計項目只有程序、運算子、屬性和事件。  這些是程式的「*模組層次*」項目。  如需程序層級項目的詳細資訊，請參閱下列主題：  
+## <a name="module-level-programming-elements"></a>模組層級的程式設計項目  
+ 程序、 運算子、 屬性和事件是唯一的程式設計項目可包含可執行程式碼 （陳述式會在執行階段執行的動作）。 它們是*模組層級*的程式項目。 如需有關程序層級元素的詳細資訊，請參閱下列各項︰  
   
--   [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- 模組層次的資料項目是變數、常數、列舉型別和委派。  
+ 在模組層級的資料元素是變數、 常數、 列舉和委派。  
   
-## 程序層級的程式設計項目  
- 「*程序層級*」項目大部分的內容都是可執行的陳述式，構成程式的執行階段程式碼。  所有可執行程式碼都必須位在某個程序中 \(`Function`、`Sub`、`Operator`、`Get`、`Set`、`AddHandler`、`RemoveHandler`、`RaiseEvent`\)。  如需詳細資訊，請參閱 [Statements](../../../visual-basic/programming-guide/language-features/statements.md)。  
+## <a name="procedure-level-programming-elements"></a>程序層級的程式設計項目  
+ 大部分的內容*程序層級*項目是構成您程式的執行階段程式碼的可執行陳述式。 所有的可執行程式碼必須在某些程序 (`Function`， `Sub`， `Operator`， `Get`， `Set`， `AddHandler`， `RemoveHandler`， `RaiseEvent`)。 如需詳細資訊，請參閱[陳述式](../../../visual-basic/programming-guide/language-features/statements.md)。  
   
- 程序層級的資料項目僅限於區域變數和常數。  
+ 在程序層級的資料元素僅限於本機變數和常數。  
   
-## Main 程序  
- `Main` 程序是當您的應用程式已載入時所執行的第一段程式碼。  `Main` 是您應用程式的起點，並具有整體控制的作用。  `Main` 共有四種形式：  
+## <a name="the-main-procedure"></a>主要程序  
+ `Main`程序是已載入您的應用程式時執行的第一個程式碼。 `Main`可做為起始點和應用程式的整體控制項。 有四種`Main`:  
   
 -   `Sub Main()`  
   
@@ -99,10 +115,9 @@ caps.handback.revision: 17
   
 -   `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- 這個程序最常見的形式是 `Sub Main()`。  如需詳細資訊，請參閱 [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。  
+ 此程序的最常見的各種不同的是`Sub Main()`。 如需詳細資訊，請參閱[Main 程序，在 Visual Basic 中](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。  
   
-## 請參閱  
- [NIB: Visual Basic Version of Hello, World](http://msdn.microsoft.com/zh-tw/9d030b60-e148-4366-a462-69532f02294c)   
- [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)   
- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Visual Basic Limitations](../../../visual-basic/programming-guide/program-structure/limitations.md)
+## <a name="see-also"></a>另請參閱  
+ [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)   
+ [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
+ [Visual Basic 的限制](../../../visual-basic/programming-guide/program-structure/limitations.md)

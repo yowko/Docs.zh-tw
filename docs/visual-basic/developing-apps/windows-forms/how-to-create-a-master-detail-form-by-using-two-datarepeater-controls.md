@@ -1,57 +1,73 @@
 ---
-title: "How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, master/detail tables"
+title: "如何︰ 使用兩個 DataRepeater 控制項 (Visual Studio) 建立主從式表單 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- DataRepeater, master/detail tables
 ms.assetid: eec43ae3-05d8-45a1-8d41-3803c6359dbe
 caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
----
-# How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
+ms.lasthandoff: 03/13/2017
 
-您可以使用兩個 \(含\) 以上的 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項建立主從式表單，藉以顯示相關資料。  例如，您可能想要在第一個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 中顯示客戶清單，而當使用者選取客戶時，在第二個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 中顯示客戶訂單清單。  
+---
+# <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>如何：使用兩個 DataRepeater 控制項建立主從式表單 (Visual Studio)
+您可以使用兩個或多個顯示相關的資料<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項建立主從式表單。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 比方說，您可能想要顯示一份客戶清單中其中一個<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，以及當使用者選取客戶時，顯示該客戶的訂單清單中第二個<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
- 您可以從 \[**資料來源**\] 視窗中把共用相同主資料表節點的詳細資料項目拖曳到 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項上，藉以顯示相關資料。  例如，如果資料來源有 Customers 資料表和相關的 Orders 資料表，則在 \[**資料來源**\] 視窗中，就會看到這兩個資料表在樹狀檢視中為最上層節點。  展開 Customers 節點即可看到資料行。  請注意，清單中的最後一個資料行是可展開的節點，此節點表示 Orders 資料表。  這個節點表示客戶的相關訂單。  
+ 您可以顯示相關的資料的詳細資料的項目共用相同的主要資料表節點，從**資料來源**視窗拖曳至<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 比方說，如果您有有客戶資料表和相關的 Orders 資料表的資料來源，您看到這兩個資料表中的樹狀檢視中的最上層節點**資料來源**視窗。 展開 [客戶] 節點，您可以看到資料行。 請注意，在清單中的最後一欄可展開的節點，表示 「 訂單 」 資料表。 此節點代表客戶的相關的訂單。  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### 若要在兩個 DataRepeater 控制項中顯示相關資料  
+### <a name="to-display-related-data-in-two-datarepeater-controls"></a>若要在兩個 DataRepeater 控制項中顯示相關的資料  
   
-1.  從 \[**工具箱**\] 的 \[**Visual Basic PowerPacks**\] 索引標籤中，將兩個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項拖曳到表單或容器控制項。  
+1.  拖放兩<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項從**Visual Basic PowerPacks**索引標籤中**工具箱**到表單或容器控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
-2.  拖曳縮放控點和位置控點以調整這兩個控制項的大小，並將它們左右並排。  
+2.  拖曳調整大小和位置控點，控制項的大小和位置的並行。  
   
-3.  按一下 \[**資料**\] 功能表上的 \[**顯示資料來源**\]。  
+3.  按一下 [ **資料** ] 功能表上的 [ **顯示資料來源**]。  
   
     > [!NOTE]
-    >  如果 \[**資料來源**\] 視窗是空的，請加入資料來源。  如需詳細資訊，請參閱[資料來源概觀](/visual-studio/data-tools/add-new-data-sources)。  
+    >  如果**資料來源**視窗是空的加入資料來源。 如需詳細資訊，請參閱[加入新的資料來源](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources)。  
   
-4.  在 \[**資料來源**\] 視窗中，選取主資料表的最上層節點。  
+4.  在**資料來源** 視窗中，選取主要資料表中的最上層節點。  
   
-5.  在資料表節點上，按一下下拉式清單中的 \[**詳細資料**\]，將主資料表的卸除型別變更為 \[詳細資料\]。  
+5.  卸除類型變更主要資料表的詳細資訊，即可**詳細資料**資料表節點的下拉式清單中。  
   
-6.  將主資料表節點拖曳到第一個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的項目樣板區域上。  
+6.  在主要資料表節點拖曳至第一個項目樣板區域<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
-7.  展開主資料表節點，並選取相關資料表的詳細資料節點。  
+7.  展開 [主資料表] 節點，然後選取相關資料表的詳細資料節點。  
   
-8.  在資料表節點上，按一下下拉式清單中的 \[**詳細資料**\]，將詳細資料表的卸除型別變更為 \[詳細資料\]。  
+8.  將詳細資料表的卸除類型變更為詳細資料，依序按一下**詳細資料**資料表節點的下拉式清單中。  
   
-9. 選取這個資料表節點並將它拖曳到第二個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項的項目樣板區域上。  
+9. 選取這個資料表節點，並將它拖曳到第二個項目樣板區域<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introduction to the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [How to: Display Bound Data in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [如何：在 Windows Form 應用程式中顯示相關的資料](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)   
- [How to: Change the Appearance of a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Troubleshooting the DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
+ [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
+ [如何︰ 在 DataRepeater 控制項中顯示繫結的資料](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
+ [如何︰ 顯示相關的資料在 Windows Form 應用程式](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)   
+ [如何︰ 變更 DataRepeater 控制項的外觀](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
+ [ DataRepeater 控制項進行疑難排解](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

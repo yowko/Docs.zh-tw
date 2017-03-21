@@ -1,55 +1,72 @@
 ---
-title: "屬性程序 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Set 陳述式，屬性程序"
-  - "Visual Basic 程式碼，程序"
-  - "傳回值，屬性程序"
-  - "程序，屬性程序"
-  - "程序，屬性"
-  - "Visual Basic 程式碼，屬性"
-  - "程序，呼叫"
-  - "屬性 [Visual Basic]，自訂"
-  - "屬性程序"
-  - "Get 陳述式，屬性程序"
+title: "Property 程序 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Set statement, Property procedures
+- Visual Basic code, procedures
+- return values, Property procedures
+- syntax, Property procedures
+- procedures, property
+- Visual Basic code, properties
+- procedures, calling
+- properties [Visual Basic], custom
+- property procedures
+- Get statement, property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# 屬性程序 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f21d4c7d9bd8f14bbe7284bc08399e7ba6b466c3
+ms.lasthandoff: 03/13/2017
 
-Property 程序是一系列的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 陳述式，可對模組、類別或結構操作自訂屬性。  Property 程序也稱為「*屬性存取子*」\(Property Accessor\)。  
+---
+# <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
+屬性程序是一系列的[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]管理模組、 類別或結構的自訂屬性的陳述式。 屬性的程序也稱為*屬性存取子*。  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 提供下列 Property 程序：  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供下列屬性程序︰  
   
--   `Get` 程序會傳回屬性的值。  當您存取運算式中的屬性時，會呼叫它。  
+-   A`Get`程序會傳回屬性的值。 存取在運算式中的屬性時呼叫。  
   
--   `Set` 程序會設定屬性的值 \(包括物件參考\)。  當您將值指派給屬性時，會呼叫它。  
+-   A`Set`程序設定的屬性值，包括物件參考。 您將值指派給屬性時呼叫。  
   
- 通常是使用 `Get` 和 `Set` 陳述式成對地定義 Property 程序，但如果屬性是唯讀 \([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)\) 或唯寫 \([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)\)，則可以只定義其中一個程序。  
+ 通常定義屬性程序中使用的組`Get`和`Set`陳述式，但是您可以定義單獨一種程序如果屬性是唯讀 ([Get 陳述式](../../../../visual-basic/language-reference/statements/get-statement.md)) 或唯寫 ([Set 陳述式](../../../../visual-basic/language-reference/statements/set-statement.md))。  
   
- 使用自動實作屬性時，可以省略 `Get` 和 `Set` 程序。  如需詳細資訊，請參閱[Auto\-Implemented Properties](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
+ 您可以省略`Get`和`Set`程序時使用自動實作的屬性。 如需詳細資訊，請參閱[Auto-Implemented 屬性](./auto-implemented-properties.md)。  
   
- 您可以在類別、結構和模組中定義屬性。  屬性預設值為 `Public`，這表示可從應用程式中任何可存取屬性容器 \(Container\) 的位置呼叫它們。  
+ 您可以在類別、 結構和模組中定義屬性。 屬性是`Public`根據預設，這表示您可以從任何位置呼叫它們可以存取屬性的容器應用程式中。  
   
- 如需屬性和變數的比較，請參閱 [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  
+ 如需屬性和變數的比較，請參閱[屬性之間的差異和 Visual Basic 中的變數](./differences-between-properties-and-variables.md)。  
   
-## 宣告語法  
- 屬性本身是由 [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)和 `End Property` 陳述式內封入的程式碼區塊所定義。  在這個區塊中，每一個 Property 程序會顯示為封入宣告陳述式 \(Declaration Statement\) \(`Get` 或 `Set`\) 和相對應 `End` 宣告中的內部區塊。  
+## <a name="declaration-syntax"></a>宣告語法  
+ 屬性本身定義所括住的程式碼區塊[屬性陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)和`End Property`陳述式。 在這個區塊中，每個屬性的程序會顯示為宣告陳述式括住的內部區塊 (`Get`或`Set`) 和比對`End`宣告。  
   
- 宣告屬性和其程序的語法如下：  
+ 宣告屬性和它的程序的語法如下所示︰  
   
 ```  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
@@ -68,60 +85,60 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- `Modifiers` 可指定多載化 \(Overloading\)、覆寫、共用和遮蔽的存取層級和相關資訊，以及屬性為唯讀或唯寫。  在 `Get` 或 `Set` 中的 `AccessLevel` 可以是要為屬性指定的存取層級更嚴格的所有層級。  如需詳細資訊，請參閱[Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)。  
+ `Modifiers`可以存取層級和多載、 覆寫、 共用、 和遮蔽的相關資訊，以及屬性是否為唯讀或唯寫的。 `AccessLevel`上`Get`或`Set`程序可以是任何比指定的屬性本身的存取層級更具限制性的層級。 如需詳細資訊，請參閱[屬性陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)。  
   
-### 資料型別  
- 屬性資料型別和主要存取層級是定義在 `Property` 陳述式中，而不是 Property 程序中。  屬性只可以有一個資料型別。  例如，不可將屬性定義成儲存 `Decimal` 值，但卻擷取 `Double` 值。  
+### <a name="data-type"></a>資料類型  
+ 屬性的資料型別和主體的存取層級會定義在`Property`陳述式，不是以屬性程序。 屬性可以有一種資料型別。 例如，您不能定義屬性，以便存放`Decimal`值，但擷取`Double`值。  
   
-### 存取層級  
- 不過，您可定義屬性的主要存取層級，進一步限制在它的其中一個 Property 程序中的存取層級。  例如，可定義 `Public` 屬性，然後定義 `Private Set` 程序。  `Get` 程序仍保持為 `Public`。  只可變更其中一個屬性程序的存取層級，且只可讓它變得比主要存取層級更多約束。  如需詳細資訊，請參閱[How to: Declare a Property with Mixed Access Levels](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)。  
+### <a name="access-level"></a>存取層級  
+ 不過，您可以定義主體的存取層級屬性，並在其中一個屬性程序的存取層級，進一步限制。 例如，您可以定義`Public`屬性，然後定義`Private Set`程序。 `Get`程序會維持`Public`。 您可以變更其中一個屬性的程序的存取層級，而且您只可讓它更具限制性的主體的存取層級。 如需詳細資訊，請參閱[如何︰ 宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)。  
   
-## 參數宣告  
- 使用與宣告 [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)的相同方式來宣告每個參數，但傳遞機制必須是 `ByVal`。  
+## <a name="parameter-declaration"></a>參數宣告  
+ 您每個參數宣告相同的方式就如同[Sub 程序](./sub-procedures.md)，差別只在於必須傳遞機制`ByVal`。  
   
- 參數清單中每一個參數的語法如下：  
+ 參數清單中的每個參數的語法如下所示︰  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- 如果為選擇性參數，您還必須提供預設值做為其宣告的一部分。  用於指定預設值的語法如下：  
+ 如果參數是選擇性的您也必須提供預設值，如其宣告的一部分。 指定預設值的語法如下所示︰  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
-## 屬性值  
- 在 `Get` 程序中，傳回值會做為屬性值提供給呼叫運算式。  
+## <a name="property-value"></a>屬性值  
+ 在`Get`程序中，傳回值提供給屬性的值呼叫運算式。  
   
- 在 `Set` 程序中，新的屬性值會傳遞到 `Set` 陳述式的參數。  如果您明確地宣告參數，則必須使用與屬性相同的資料型別來進行宣告。  如果您未宣告參數，編譯器會用隱含參數 `Value` 代表指派給該屬性的新值。  
+ 在`Set`程序中，新的屬性值傳遞給參數`Set`陳述式。 如果您明確宣告為參數，您必須使用相同的資料類型與屬性來進行宣告。 如果您未宣告的參數，編譯器會使用隱含參數`Value`來表示要指派給屬性的新值。  
   
-## 呼叫語法  
- 藉由參考該屬性，隱含地叫用 \(Invoke\) 屬性程序。  您使用屬性名稱的方式與您使用變數名稱的方式相同，除了您必須為所有非選擇性的引數提供值外，還必須將引數清單封入括弧中。  如果未提供引數，您也可以省略括號。  
+## <a name="calling-syntax"></a>呼叫語法  
+ 藉由參考屬性隱含地呼叫屬性程序。 使用屬性的名稱相同的方式，您會使用變數的名稱不同之處在於您必須提供值給所有引數不是選擇性的且您必須將引數清單括在括號中。 如果已不提供任何引數，您可以省略括號。  
   
- `Set` 程序的隱含呼叫語法如下：  
+ 語法隱含呼叫`Set`程序如下︰  
   
  `propertyname[(argumentlist)] = expression`  
   
- `Get` 程序的隱含呼叫語法如下：  
+ 語法隱含呼叫`Get`程序如下︰  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
-### 宣告和呼叫的說明  
- 下列屬性會將完整名稱儲存成兩個構成名稱：名字和姓氏。  在呼叫程式碼讀取 `fullName` 時，`Get` 程序會結合這兩個構成名稱，並傳回完整名稱。  在呼叫程式碼指派新的完整名稱時，`Set` 程序會嘗試將新名稱分割成兩個構成名稱。  如果找不到空格，則會將它整個儲存成名字。  
+### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
+ 下列屬性會將完整的名稱儲存為兩個構成名稱、 名字和姓氏。 當呼叫程式碼讀取`fullName`、`Get`程序結合了兩個構成的名稱，並傳回完整的名稱。 當呼叫程式碼會指派新的完整名稱，`Set`程序會嘗試將它切為兩個構成名稱。 如果找不到空間，它會儲存它做為第一個名稱。  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures #&8;](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
- 下列範例會示範 `fullName` 之屬性程序的典型呼叫。  
+ 下列範例示範一般呼叫屬性程序的`fullName`。  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures #&9;](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [函式程序](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [How to: Create a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)   
+ [Function 程序](./function-procedures.md)   
+ [運算子程序](./operator-procedures.md)   
+ [程序參數和引數](./procedure-parameters-and-arguments.md)   
+ [Visual Basic 中屬性和變數之間的差異](./differences-between-properties-and-variables.md)   
+ [如何︰ 建立屬性](./how-to-create-a-property.md)   
+ [如何︰ 呼叫屬性程序](./how-to-call-a-property-procedure.md)   
+ [如何︰ 宣告及呼叫預設屬性，在 Visual Basic 中](./how-to-declare-and-call-a-default-property.md)   
+ [如何︰ 將值置入屬性](./how-to-put-a-value-in-a-property.md)   
+ [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)

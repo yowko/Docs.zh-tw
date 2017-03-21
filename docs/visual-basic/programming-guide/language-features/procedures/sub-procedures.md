@@ -1,92 +1,108 @@
 ---
-title: "Sub Procedures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Sub procedures, about Sub procedures"
-  - "statement blocks"
-  - "Sub procedures, calling"
-  - "procedures, calling"
-  - "Sub procedures, syntax"
-  - "Sub procedures"
-  - "procedures, Sub"
-  - "syntax, Sub procedures"
+title: "Sub 程序 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Sub procedures, about Sub procedures
+- statement blocks
+- Sub procedures, calling
+- procedures, calling
+- Sub procedures, syntax
+- Sub procedures
+- procedures, Sub
+- syntax, Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Sub Procedures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d224fa3338ca707070ee431380578a8fdde47e07
+ms.lasthandoff: 03/13/2017
 
-`Sub` 程序是一組以 `Sub` 和 `End Sub` 陳述式前後括起來的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 陳述式。  `Sub` 程序會執行工作，然後將控制權傳回給呼叫程式碼，但它不會將值傳回給呼叫程式碼。  
+---
+# <a name="sub-procedures-visual-basic"></a>Sub 程序 (Visual Basic)
+A`Sub`程序是一系列的[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]陳述式括住`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，然後將控制權還給呼叫的程式碼，但它不會傳回呼叫程式碼的值。  
   
- 每次呼叫程序時，會執行其陳述式，以 `Sub` 陳述式之後的第一個可執行陳述式開始，而以它所遇到的第一個 `End Sub`、`Exit Sub` 或 `Return` 陳述式結束。  
+ 每次呼叫此程序時，其執行陳述式，從開始之後的第一個可執行陳述式`Sub`陳述式，直到第一個`End Sub`， `Exit Sub`，或`Return`陳述式時發生。  
   
- 您可以在模組、類別 \(Class\) 和結構中定義 `Sub` 程序。  其預設值會是 `Public`，這表示您可以從應用程式的任何位置呼叫它，但這個應用程式必須在定義它的模組、類別或結構中擁有權限。  「*方法*」\(Method\) 一詞是描述從它的定義模組、類別或結構外存取的 `Sub` 或 `Function` 程序。  如需詳細資訊，請參閱 [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)。  
+ 您可以定義`Sub`模組、 類別和結構中的程序。 根據預設，它是`Public`，這表示您可以呼叫從任何地方存取模組、 類別或結構定義它的應用程式中。 詞彙，*方法*，描述`Sub`或`Function`從其定義外部存取的程序模組、 類別或結構。 如需詳細資訊，請參閱[程序](./index.md)。  
   
- `Sub` 程序可以取得由呼叫程式碼傳遞給它的引數，例如常數、變數或運算式。  
+ A`Sub`程序可以取得引數，例如常數、 變數或運算式，則呼叫程式碼傳遞給它。  
   
-## 宣告語法  
- 宣告 `Sub` 程序的語法如下：  
+## <a name="declaration-syntax"></a>宣告語法  
+ 宣告的語法`Sub`程序如下︰  
   
- `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
+ `[`*modifiers* `] Sub`*subname* `[(` *parameterlist*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
  `End Sub`  
   
- `modifiers` 可以指定存取層級以及有關多載、覆寫、共用及遮蔽的資訊。  如需詳細資訊，請參閱 [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
+ `modifiers`可以指定存取層級和多載、 覆寫、 共用、 及遮蔽的相關資訊。 如需詳細資訊，請參閱[Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
-## 參數宣告  
- 宣告每個程序參數的方式與宣告變數的方式類似，即指定參數名稱和資料型別。  您也可以指定傳遞機制，以及參數為選擇項或參數陣列。  
+## <a name="parameter-declaration"></a>參數宣告  
+ 您可以宣告類似於如何宣告變數，指定參數名稱和資料類型的每個程序參數。 您也可以指定傳遞機制，以及是否為選擇性參數或參數陣列。  
   
- 參數清單中每一個參數的語法如下：  
+ 參數清單中的每個參數的語法如下所示︰  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*`As`*資料型別    *  
   
- 如果為選擇性參數，您還必須提供預設值做為其宣告的一部分。  用於指定預設值的語法如下：  
+ 如果參數是選擇性的您也必須提供預設值，如其宣告的一部分。 指定預設值的語法如下所示︰  
   
- `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
+ `Optional [ByVal | ByRef]`  *parametername*`As`*資料型別*`=`*預設值        *  
   
-### 做為區域變數的參數  
- 將控制權傳遞給程序時，會將每個程序視為區域變數。  這表示它的存留期 \(Lifetime\) 與程序的存留期相同，而且其範圍是整個程序。  
+### <a name="parameters-as-local-variables"></a>本機變數與參數  
+ 當控制權會傳遞至程序時，每個參數會被視為本機變數中。 這表示，其存留期相同的程序，且其範圍是整個程序。  
   
-## 呼叫語法  
- 您可以明確地用獨立的呼叫陳述式叫用 `Sub` 程序。  您無法在運算式中使用其名稱呼叫它。  您必須為所有非選擇性的引數提供值，也必須將引數清單用括號括起來。  如果未提供引數，您也可以省略括號。  `Call` 關鍵字的使用也是選擇性的，但不建議您使用。  
+## <a name="calling-syntax"></a>呼叫語法  
+ 您可以叫用`Sub`明確地用獨立呼叫的陳述式的程序。 您無法使用該名稱在運算式中呼叫它。 您必須提供值不是選擇性的所有引數，您必須將引數清單括在括號中。 如果已不提供任何引數，您可以省略括號。 使用`Call`關鍵字是選擇性的但不是建議使用。  
   
- 呼叫 `Sub` 程序的語法如下：  
+ 呼叫語法`Sub`程序如下︰  
   
- `[Call]`  *subname* `[(` *argumentlist* `)]`  
+ `[Call]`  *subname* `[(` *argumentlist*`)]`  
   
- 您可以從定義 `Sub` 方法的類別外呼叫此方法。  首先，您必須使用 `New` 關鍵字建立此類別的執行個體 \(Instance\)，或呼叫會傳回此類別執行個體的方法。  如需詳細資訊，請參閱 [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)。  然後，您可以使用下列語法呼叫該執行個體物件的 `Sub` 方法：  
+ 您可以呼叫`Sub`方法從其定義在類別之外。 首先，您必須使用`New`關鍵字來建立類別的執行個體或呼叫的方法會傳回類別的執行個體。 如需詳細資訊，請參閱[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)。 然後，您可以使用下列語法來呼叫`Sub`執行個體物件上的方法︰  
   
  *Object*.*methodname*`[(`*argumentlist*`)]`  
   
-### 宣告和呼叫的說明  
- 下列 `Sub` 程序會告知電腦運算子，應用程式將要執行哪一項工作，也會顯示時間戳記。  應用程式不會在每項工作開始時複製此程式碼，而是會從各個位置呼叫  `tellOperator` 。  每個呼叫會在  `task`  引數中傳遞一個字串，來辨識已起始的工作。  
+### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
+ 下列`Sub`程序會告知電腦運算子若要執行，應用程式的工作也會顯示時間戳記。 而不必重複此程式碼開頭的每項工作，應用程式只會呼叫`tellOperator`從不同位置。 每個呼叫會傳遞的字串`task`識別正在啟動工作的引數。  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures #&2;](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
- 下列範例顯示  `tellOperator` 的典型呼叫。  
+ 下列範例會示範一般呼叫`tellOperator`。  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures #&3;](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [函式程序](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [屬性程序](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [How to: Call a Procedure that Does Not Return a Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-does-not-return-a-value.md)   
- [How to: Call an Event Handler in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-event-handler.md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)   
+ [Function 程序](./function-procedures.md)   
+ [Property 程序](./property-procedures.md)   
+ [運算子程序](./operator-procedures.md)   
+ [程序參數和引數](./procedure-parameters-and-arguments.md)   
+ [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [如何︰ 呼叫不傳回值的程序](./how-to-call-a-procedure-that-does-not-return-a-value.md)   
+ [如何︰ 在 Visual Basic 中呼叫事件處理常式](./how-to-call-an-event-handler.md)

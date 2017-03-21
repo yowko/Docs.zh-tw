@@ -1,39 +1,56 @@
 ---
-title: "因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42358"
-  - "vbc42358"
-helpviewer_keywords: 
-  - "BC42358"
+title: "因為未等候此呼叫，目前會繼續執行方法呼叫完成之前 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42358
+- vbc42358
+helpviewer_keywords:
+- BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前方法
 因為未等候此呼叫，所以在呼叫完成之前會繼續執行目前的方法。 請考慮將 'Await' 運算子套用至呼叫的結果。  
   
- 目前的方法會呼叫傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 且不會將 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 運算子套用至結果的非同步方法。 非同步方法的呼叫會啟動非同步工作。 不過，由於不會套用任何 `Await` 運算子，因此程式會繼續執行，而不等候工作完成。 在大部分情況下，不應該有此行為。 通常呼叫方法的其他方面取決於呼叫的結果，或至少被呼叫的方法必須完成，才能從包含呼叫的方法傳回。  
+ 目前的方法會呼叫非同步方法會傳回<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>和不套用[Await](../../../visual-basic/language-reference/operators/await-operator.md)結果的運算子。</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> 非同步方法的呼叫會啟動非同步工作。 不過，由於不會套用任何 `Await` 運算子，因此程式會繼續執行，而不等候工作完成。 在大部分情況下，不應該有此行為。 通常呼叫方法的其他方面取決於呼叫的結果，或至少被呼叫的方法必須完成，才能從包含呼叫的方法傳回。  
   
- 同樣重要的問題是，在呼叫的非同步方法中引發的例外狀況會發生什麼情形。 在傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的方法中引發的例外狀況會儲存到傳回的工作中。 如果您未等候工作，也未明確檢查例外狀況，例外狀況就會遺失。 如果您等候工作，則其例外狀況會再次擲回。  
+ 同樣重要的問題是，在呼叫的非同步方法中引發的例外狀況會發生什麼情形。 傳回方法中引發的例外狀況<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>會儲存在傳回的工作。</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> 如果您未等候工作，也未明確檢查例外狀況，例外狀況就會遺失。 如果您等候工作，則其例外狀況會再次擲回。  
   
  因此最佳做法是一律等候呼叫。  
   
- 根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱[在 Visual Basic 中設定警告](/visual-studio/ide/configuring-warnings-in-visual-basic)。  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID︰**BC42358  
+ **錯誤 ID︰** BC42358  
   
-### 解決這個警告  
+### <a name="to-address-this-warning"></a>解決這個警告  
   
 -   只有在您確定不要等候非同步呼叫完成，而且被呼叫的方法不會引發任何例外狀況時，才應考慮隱藏警告。 在這種情況下，您可以藉由將呼叫的工作結果指定至變數來隱藏警告。  
   
@@ -88,7 +105,7 @@ caps.handback.revision: 8
   
     ```  
   
-     在此範例中，如果您選擇呼叫 \#1 或呼叫 \#2，則未等候的非同步方法 \(`CalledMethodAsync`\) 會在其呼叫端 \(`CallingMethodAsync`\) 和呼叫端的呼叫端 \(`StartButton_Click`\) 都完成之後才完成。 下列輸出的最後一行將顯示被呼叫的方法完成的時間。 輸入中會標記在完整範例中進入和結束呼叫 `CallingMethodAsync` 的事件處理常式。  
+     在此範例中，如果您選擇呼叫 #1 或呼叫 #2，則未等候的非同步方法 (`CalledMethodAsync`) 會在其呼叫端 (`CallingMethodAsync`) 和呼叫端的呼叫端 (`StartButton_Click`) 都完成之後才完成。 下列輸出的最後一行將顯示被呼叫的方法完成的時間。 輸入中會標記在完整範例中進入和結束呼叫 `CallingMethodAsync` 的事件處理常式。  
   
     ```  
   
@@ -100,16 +117,16 @@ caps.handback.revision: 8
         Task.Delay is finished--returning from called method.  
     ```  
   
-## 範例  
- 下列 Windows Presentation Foundation \(WPF\) 應用程式包含了前述範例的方法。 下列步驟將會設定應用程式。  
+## <a name="example"></a>範例  
+ 下列 Windows Presentation Foundation (WPF) 應用程式包含了前述範例的方法。 下列步驟將會設定應用程式。  
   
 1.  建立 WPF 應用程式，並將其命名為 `AsyncWarning`。  
   
-2.  在 Visual Studio 程式碼編輯器中，選擇 \[**MainWindow.xaml**\] 索引標籤。  
+2.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
   
-     如果未顯示索引標籤，請在 \[**方案總管**\] 中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 \[**檢視程式碼**\]。  
+     如果未顯示索引標籤，請在 [ **方案總管**] 中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [ **檢視程式碼**]。  
   
-3.  在 MainWindow.xaml 的 \[**XAML**\] 檢視中，將程式碼取代為下列程式碼。  
+3.  在 MainWindow.xaml 的 [ **XAML** ] 檢視中，將程式碼取代為下列程式碼。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -124,9 +141,9 @@ caps.handback.revision: 8
   
     ```  
   
-     包含按鈕和文字方塊的簡單視窗會出現在 MainWindow.xaml 的 \[**設計**\] 檢視中。  
+     包含按鈕和文字方塊的簡單視窗會出現在 MainWindow.xaml 的 [ **設計** ] 檢視中。  
   
-     如需 XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visual-studio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 如需如何建置您自己的簡單 UI 的資訊，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../Topic/Walkthrough:%20Accessing%20the%20Web%20by%20Using%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)的＜建立 WPF 應用程式＞和＜設計簡單的 WPF MainWindow＞這兩節。  
+     如需 XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 如何建置簡單的 UI 的相關資訊，請參閱 < 若要建立 WPF 應用程式 > 和 < 設計簡單的 WPF MainWindow > 的章節[逐步解說︰ 存取 Web 使用 Async 和 Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)。  
   
 4.  以下列程式碼取代 MainWindow.xaml.vb 中的程式碼。  
   
@@ -209,10 +226,10 @@ caps.handback.revision: 8
     ' Exiting the Click event handler.  
     ```  
   
-5.  選擇 F5 鍵以執行程式，然後選擇 \[**開始**\] 按鈕。  
+5.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
   
      預期的輸出會出現在程式碼結尾。  
   
-## 請參閱  
- [Await Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
- [使用 Async 和 Await 設計非同步程式](../Topic/Asynchronous%20Programming%20with%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [使用 Async 和 Await 進行非同步程式設計](../../../visual-basic/programming-guide/concepts/async/index.md)

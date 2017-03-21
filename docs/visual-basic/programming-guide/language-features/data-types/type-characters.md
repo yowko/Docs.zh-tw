@@ -1,67 +1,83 @@
 ---
-title: "Type Characters (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "&H prefix for hexadecimal values"
-  - "hexadecimal literals"
-  - "F literal type character"
-  - "& identifier type character"
-  - "type characters"
-  - "octal literals"
-  - "literals, hexadecimal"
-  - "&O prefix for octal values"
-  - "literals, default types"
-  - "defaults, literal types"
-  - "C literal type character"
-  - "type characters, literal"
-  - "$ identifier type character"
-  - "L literal type character"
-  - "UI literal type characters"
-  - "default literal types"
-  - "D literal type character"
-  - "literals, octal"
-  - "S literal type character"
-  - "! identifier type character"
-  - "US literal type characters"
-  - "% identifier type character"
-  - "data types [Visual Basic], type characters"
-  - "characters, identifier type"
-  - "type characters, identifier"
-  - "# identifier type character"
-  - "identifier type characters"
-  - "literal type characters"
-  - "I literal type character"
-  - "R literal type character"
-  - "@ identifier type character"
-  - "UL literal type characters"
-  - "literal types, default"
+title: "輸入字元 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- '&H prefix for hexadecimal values'
+- hexadecimal literals
+- F literal type character
+- '& identifier type character'
+- type characters
+- octal literals
+- literals, hexadecimal
+- '&O prefix for octal values'
+- literals, default types
+- defaults, literal types
+- C literal type character
+- type characters, literal
+- $ identifier type character
+- L literal type character
+- UI literal type characters
+- default literal types
+- D literal type character
+- literals, octal
+- S literal type character
+- '! identifier type character'
+- US literal type characters
+- '% identifier type character'
+- data types [Visual Basic], type characters
+- characters, identifier type
+- type characters, identifier
+- '# identifier type character'
+- identifier type characters
+- literal type characters
+- I literal type character
+- R literal type character
+- '@ identifier type character'
+- UL literal type characters
+- literal types, default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Type Characters (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6e112e7d221ef8e7a660094306bbb242c988e843
+ms.lasthandoff: 03/13/2017
 
-除了在宣告陳述式 \(Declaration Statement\) 中指定資料型別之外，您還可以利用「*型別字元*」\(Type Character\) 來強制一些程式設計項目的資料型別。  型別字元必須緊接在項目之後，中間不可有任何介入字元。  
+---
+# <a name="type-characters-visual-basic"></a>類型字元 (Visual Basic)
+除了宣告陳述式中指定的資料類型，您可以強制一些程式設計項目使用的資料型別*輸入字元*。 型別字元必須緊接元素中，但沒有任何種類的中介字元。  
   
- 型別字元不屬於項目名稱的一部分。  利用型別字元定義的項目，不需要型別字元就可用來做為參考。  
+ 型別字元不是項目的名稱的一部分。 定義型別字元的項目可以參考不含型別字元。  
   
-## 識別項型別字元  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 所提供的一組「*識別項型別字元*」\(Identifier Type Character\)，可讓您用來在宣告中指定變數或常數的資料型別。  下列資料表將說明可用的識別項型別字元並附用法範例。  
+## <a name="identifier-type-characters"></a>識別項類型字元  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供一組*識別項類型字元*，其中您可以使用宣告中指定變數或常數的資料型別。 下表顯示可用的識別項類型字元，與使用方式的範例。  
   
-|識別項型別字元|資料型別|範例|  
-|-------------|----------|--------|  
+|識別項類型字元|資料類型|範例|  
+|-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
 |`@`|`Decimal`|`Const W@ = 37.5`|  
@@ -69,31 +85,31 @@ caps.handback.revision: 22
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- `Boolean`、`Byte`、`Char`、`Date`、`Object`、`SByte`、`Short`、`UInteger`、`ULong` 或 `UShort` 資料型別或任何複合資料型別 \(例如陣列或結構\)，不會有識別項型別字元。  
+ 存在任何識別項類型字元`Boolean`， `Byte`， `Char`， `Date`， `Object`， `SByte`， `Short`， `UInteger`， `ULong`，或`UShort`資料型別，或任何複合資料類型，例如陣列或結構。  
   
- 某些情況下，您可以將 `$` 字元附加到 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 函式，例如使用 `Left$` 代替 `Left`，以取得型別 `String` 的傳回值。  
+ 在某些情況下，您可以附加`$`字元[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]函式，例如`Left$`而不是`Left`，以取得傳回的值型別為`String`。  
   
- 無論在任何情況下，識別項型別字元都必須緊接在識別項名稱之後。  
+ 在所有情況下，識別項類型字元必須緊接識別項名稱。  
   
-## 常值型別字元  
- 所謂「*常值*」\(Literal\) 指的是特定資料型別值的文字表示。  
+## <a name="literal-type-characters"></a>常值類型字元  
+ A*常值*是資料類型的特定值的文字表示。  
   
-### 預設常值型別  
- 通常在您的程式碼中所顯示的常值格式就能夠決定其資料型別。  下表顯示這些預設型別。  
+### <a name="default-literal-types"></a>預設常值類型  
+ 常值的形式通常出現在您的程式碼中決定其資料型別。 下表顯示這些預設型別。  
   
-|常值的文字格式|預設資料型別|範例|  
-|-------------|------------|--------|  
+|文字格式的常值|預設資料類型|範例|  
+|-----------------------------|-----------------------|-------------|  
 |數字，沒有小數部分|`Integer`|`2147483647`|  
-|數字，沒有小數部分，過大而不適合 `Integer`|`Long`|`2147483648`|  
-|數字，有小數部分|`Double`|`1.2`|  
-|放在雙引號中|`String`|`"A"`|  
-|以數字符號括住|`Date`|`#5/17/1993 9:32 AM#`|  
+|數字，沒有小數部分，太大`Integer`|`Long`|`2147483648`|  
+|數字，分數部分|`Double`|`1.2`|  
+|以雙引號括住|`String`|`"A"`|  
+|數字符號括住|`Date`|`#5/17/1993 9:32 AM#`|  
   
-### 強制常值型別  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 所提供的一組「*常值型別字元*」\(Literal Type Character\) 可讓您用來強制設定常值的資料型別，而不使用格式所指示的資料型別。  方式是將字元附加到常值之後。  下列資料表將說明可用的常值型別字元與用法的範例。  
+### <a name="forced-literal-types"></a>強制常值型別  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]提供一組*常值類型字元*，您可以使用強制常以外的資料類型的形式來表示。 您可以將字元附加到常值的結尾。 下表顯示可用的常值型別字元與用法的範例。  
   
-|常值型別字元|資料型別|範例|  
-|------------|----------|--------|  
+|常值類型字元|資料類型|範例|  
+|----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|  
 |`I`|`Integer`|`J = 347I`|  
 |`L`|`Long`|`K = 347L`|  
@@ -105,34 +121,34 @@ caps.handback.revision: 22
 |`UL`|`ULong`|`N = 347UL`|  
 |`C`|`Char`|`Q = "."C`|  
   
- `Boolean`、`Byte`、`Date`、`Object`、`SByte` 或 `String` 資料型別或任何複合資料型別 \(例如陣列或結構\)，不會有常值型別字元。  
+ 不常值類型字元存在`Boolean`， `Byte`， `Date`， `Object`， `SByte`，或`String`資料型別，或任何複合資料類型，例如陣列或結構。  
   
- 就如同變數、常數和運算式一般，常值也可以使用識別項型別字元 \(`%`、`&`、`@`、`!`、`#`、`$`\)。  然而，常值型別字元 \(`S`、`I`、`L`、`D`、`F`、`R`、`C`\) 卻只能用於常值。  
+ 常值也可以使用識別項類型字元 (`%`， `&`， `@`， `!`， `#`， `$`)，可能是變數、 常數和運算式。 不過，常值類型字元 (`S`， `I`， `L`， `D`， `F`， `R`， `C`) 可以僅能搭配常值。  
   
- 無論在任何情況下，常值型別字元都必須緊接在常值之後。  
+ 在所有情況下，常值類型字元必須緊接的常值。  
   
-## 十六進位和八進位常值  
- 編譯器 \(Compiler\) 通常會將整數常值推斷為十進位 \(基底 10\) 數字系統。  您可以使用 `&H` 前置字元將整數常值強制為十六進位 \(基底 16\)，也可以使用 `&O` 前置字元將整數常值強制為八進位 \(基底 8\)。  前置字元後跟隨的數字必須符合數字系統。  下表將可說明這點。  
+## <a name="hexadecimal-and-octal-literals"></a>十六進位和八進位常值  
+ 編譯器通常 construes 整數常值為十進位 (基底 10) 數字系統。 您可以強制整數常值是十六進位 (基底 16) 與`&H`前置詞，而且您可以強制為八進位 (基底 8) 與`&O`前置詞。 請依照下列前置詞的數字必須適用於數字系統。 下表將說明這點。  
   
-|數字基底|前置詞|有效數字值|範例|  
-|----------|---------|-----------|--------|  
-|十六進位 \(基底 16\)|`&H`|0\-9 和 A\-F|`&HFFFF`|  
-|八進位 \(基底 8\)|`&O`|0\-7|`&O77`|  
+|數字基底|前置詞|有效的數字值|範例|  
+|-----------------|------------|------------------------|-------------|  
+|十六進位 (基底 16)|`&H`|0-9 和 A-F|`&HFFFF`|  
+|八進位 (基底 8)|`&O`|0-7|`&O77`|  
   
- 您可以在前置的常值後加上常值型別字元。  以下範例說明這點。  
+ 您可以依照前置的常值與常值類型字元。 下列範例示範這點。  
   
 ```  
 Dim counter As Short = &H8000S  
 Dim flags As UShort = &H8000US  
 ```  
   
- 在前一個範例中，`counter` 的十進位值為 \-32768，`flags` 的十進位值則為 \+32768。  
+ 在上述範例中，`counter`的十進位值為-32768，和`flags`32768 十進位值。  
   
-## 請參閱  
- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料型別](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
+ [基本資料型別](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
+ [實值型別和參考型別](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
+ [在 Visual Basic 中的型別轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [資料類型疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
  [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)

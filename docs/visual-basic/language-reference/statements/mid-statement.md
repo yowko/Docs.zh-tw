@@ -1,34 +1,51 @@
 ---
-title: "Mid Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.MidB"
-  - "vb.Mid"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "substrings, Mid statement"
-  - "strings [Visual Basic], substrings"
-  - "Mid statement"
-  - "strings [Visual Basic], replacing"
+title: "Mid 陳述式 |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.MidB
+- vb.Mid
+dev_langs:
+- VB
+helpviewer_keywords:
+- substrings, Mid statement
+- strings [Visual Basic], substrings
+- Mid statement
+- strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Mid Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e385d6838daa16d45903c6b270fc47ad88797845
+ms.lasthandoff: 03/13/2017
 
-用另一字串的字元來取代 `String` 變數中指定數量的字元。  
+---
+# <a name="mid-statement"></a>Mid 陳述式
+取代指定的字元數`String`變數與另一個字串的字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Mid( _  
@@ -38,46 +55,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `Target`  
- 必要項。  所要修改的 `String` 變數名稱。  
+ 必要項。 名稱`String`若要修改的變數。  
   
  `Start`  
- 必要項。  `Integer` 運算式。  `Target` 中的字元位置，取代文字的開始處。  `Start` 使用以一為基底的索引。  
+ 必要項。 `Integer`運算式。 字元位置`Target`取代文字的開始位置。 `Start`使用起始的索引。  
   
  `Length`  
- 選擇項。  `Integer` 運算式。  要取代的字元長度。  如果省略，則使用所有的 `String`。  
+ 選擇項。 `Integer`運算式。 要取代的字元數。 如果省略，所有的`String`用。  
   
  `StringExpression`  
- 必要項。  取代 `Target` 之部分的 `String` 運算式。  
+ 必要項。 `String`取代部份的運算式`Target`。  
   
-## 例外狀況  
+## <a name="exceptions"></a>例外狀況  
   
 |例外狀況類型|條件|  
-|------------|--------|  
-|<xref:System.ArgumentException>|`Start` \<\= 0 或 `Length` \< 0。|  
+|--------------------|---------------|  
+|<xref:System.ArgumentException></xref:System.ArgumentException>|`Start`<= 0="" or=""></=>`Length`< 0.></ 0.>|  
   
-## 備註  
- 取代的字元數一律會小於或等於 `Target` 中的字元數。  
+## <a name="remarks"></a>備註  
+ 被取代的字元數目一律為小於或等於中的字元數`Target`。  
   
- Visual Basic 具有 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 函式和 `Mid` 陳述式 \(Statement\)。  這些項目都會在字串內指定數目的字元上運作，但是 `Mid` 函式會傳回字元，而 `Mid` 陳述式則是會取代字元。  如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
+ Visual Basic 也有<xref:Microsoft.VisualBasic.Strings.Mid%2A>函式和`Mid`陳述式。</xref:Microsoft.VisualBasic.Strings.Mid%2A> 這些項目都會運作指定的字串中的字元數，但`Mid`函式傳回的字元時`Mid`陳述式會取代字元。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Strings.Mid%2A>。</xref:Microsoft.VisualBasic.Strings.Mid%2A>  
   
 > [!NOTE]
->  在舊版的 Visual Basic 中，`MidB` 陳述式會以位元組為單位來取代子字串，而不是字元。  這項功能主要用來轉換雙位元組字元集 \(DBCS\) 應用程式中的字串。  所有的 Visual Basic 字串都是 Unicode，而且不再支援 `MidB`。  
+>  `MidB`舊版的 Visual Basic 的陳述式可以取代位元組，而不是字元的子字串。 它是主要用於轉換雙位元組字元集 (DBCS) 應用程式中的字串。 所有的 Visual Basic 字串是在 Unicode 中，和`MidB`不受支援。  
   
-## 範例  
- 這個範例會使用 `Mid` 陳述式，以用另一個字串的字元來取代字串變數中指定數量的字元。  
+## <a name="example"></a>範例  
+ 這個範例會使用`Mid`陳述式來取代指定的字串變數中的字元數，另一個字串的字元。  
   
- [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings #&5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## 需求  
- **命名空間**：[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>需求  
+ **命名空間︰** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **模組**︰`Strings`  
+ **Module:**`Strings`  
   
- **組件** \(Assembly\)：[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **組件︰**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>   
- [Strings](../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [Introduction to Strings in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
+ [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)   
+ [在 Visual Basic 中的字串簡介](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

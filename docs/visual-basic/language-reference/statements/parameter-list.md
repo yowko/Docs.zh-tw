@@ -1,105 +1,121 @@
 ---
-title: "Parameter List (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, procedures"
-  - "parameters, Visual Basic"
-  - "parameters, lists"
-  - "parameter lists"
-  - "Visual Basic code, parameter lists"
-  - "arguments [Visual Basic], Visual Basic"
-  - "procedures, parameter lists"
+title: "參數清單 (Visual Basic) |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- parameters, Visual Basic
+- parameters, lists
+- parameter lists
+- Visual Basic code, parameter lists
+- arguments [Visual Basic], Visual Basic
+- procedures, parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Parameter List (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: abadaa8e035bfa4c92acc30ab633d6a7e958676c
+ms.lasthandoff: 03/13/2017
 
-指定呼叫程序時所預期的參數。  參數之間以逗號來分隔。  下列是其中一個參數的語法。  
+---
+# <a name="parameter-list-visual-basic"></a>參數清單 (Visual Basic)
+指定呼叫時，必須要有一個程序的參數。 以逗號分隔多個參數。 以下是一個參數的語法。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
-parametername[( )] [ As parametertype ] [ = defaultvalue ]  
+[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
+parametername[( )] [ As parametertype ] [ = defaultvalue ]  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `attributelist`  
- 選擇項。  套用至這個參數的屬性 \(Attribute\) 清單。  您必須將[Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md)置於角括弧中 \("`<`" 和 "`>`"\)。  
+ 選擇項。 將套用至這個參數的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)角括弧括住 (「`<`"和"`>`")。  
   
  `Optional`  
- 選擇項。  指定呼叫程序時不需要這個參數。  
+ 選擇項。 指定在呼叫程序時不需要此參數。  
   
  `ByVal`  
- 選擇項。  指定程序不可以在呼叫程式碼中取代或重新指派引數所對應的變數項目。  
+ 選擇項。 指定的程序無法取代或重新指派對應的引數呼叫的程式碼中的變數項目。  
   
  `ByRef`  
- 選擇項。  指定程序可以透過呼叫程式碼本身進行修改的相同方式，修改對應的變數項目。  
+ 選擇項。 指定程序呼叫的程式碼本身的相同方式可以修改基礎的變數項目。  
   
  `ParamArray`  
- 選擇項。  指定參數清單中的最後一個參數是指定資料型別的選擇性項目陣列。  這可讓呼叫程式碼將任意數目的引數傳遞至程序。  
+ 選擇項。 指定參數清單中的最後一個參數是選擇性的項目指定的資料類型的陣列。 這可讓任意數目的引數傳遞至程序呼叫的程式碼。  
   
  `parametername`  
- 必要項。  表示參數的區域變數名稱。  
+ 必要項。 代表參數的本機變數的名稱。  
   
  `parametertype`  
- 如果 `Option Strict` 為 `On`，則為必要項。  代表參數之區域變數的資料型別。  
+ 只有在`Option Strict`是`On`。 代表參數的本機變數的資料型別。  
   
  `defaultvalue`  
- 對 `Optional` 參數而言為必要項。  任何評估為參數資料型別的常數或常數運算式。  若型別為 `Object` 或是類別、介面、陣列或結構，則預設值只能是 `Nothing`。  
+ 所需的`Optional`參數。 任何評估為參數的資料類型的常數或常數運算式。 如果類型是`Object`，或類別、 介面、 陣列、 或結構，預設值只能是`Nothing`。  
   
-## 備註  
- 參數是以括號括住且以逗號隔開。  參數可宣告為任何資料型別。  若未指定 `parametertype`，則會預設值為 `Object`。  
+## <a name="remarks"></a>備註  
+ 參數會以括號括住並以逗號分隔。 參數可以宣告任何資料類型。 如果您未指定`parametertype`，其預設值為`Object`。  
   
- 在呼叫程式碼呼叫程序時，會將「*引數*」傳遞給每個必要參數。  如需詳細資訊，請參閱[Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。  
+ 當呼叫程式碼呼叫的程序時，會傳遞*引數*至每個必要參數。 如需詳細資訊，請參閱[參數之間的差異和引數](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)。  
   
- 呼叫程式碼傳遞給每個參數的引數，就是呼叫程式碼中對應項目的指標。  如果這個項目為「*非變換*」\(Nonvariable\) \(常數、常值、列舉型別或運算式\)，則任何程式碼都無法予以變更。  如果它是「*變數*」項目 \(宣告的變數、欄位、屬性、陣列項目或結構項目\)，則呼叫程式碼可予以變更。  如需詳細資訊，請參閱 [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)。  
+ 呼叫的程式碼傳遞至每個參數的引數是在呼叫程式碼中對應項目的指標。 如果此項目是*非變換*（常數、 常值、 列舉型別或運算式），就無法變更它的任何程式碼。 如果是*變數*項目 （宣告的變數、 欄位、 屬性、 陣列元素或結構項目），呼叫程式碼可以變更它。 如需詳細資訊，請參閱[修改之間的差異和不可修改引數](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)。  
   
- 如果變數項目是以 `ByRef` 方式傳遞，則程序也可變更它。  如需詳細資訊，請參閱[Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)。  
+ 如果變數項目傳遞`ByRef`，程序可以變更它。 如需詳細資訊，請參閱[差異之間傳遞引數的值和傳址](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
-## 規則  
+## <a name="rules"></a>規則  
   
--   **括弧** ：如果您指定參數清單，則必須將它封入括號中。  如果沒有參數，您仍可使用封入空白清單的括號。  透過釐清該項目為程序，藉以提升程式碼的可讀性。  
+-   **括號括住。** 如果您指定的參數清單，您必須將它括在括號中。 如果不有任何參數，您仍然可以使用括號圍住空的清單。 這可以改善程式碼的可讀性釐清的項目是程序。  
   
--   **選擇性參數** 如果在參數上使用 `Optional` 修飾詞 \(Modifier\)，則清單中的所有後續參數也必須為選擇項，且必須使用 `Optional` 修飾詞進行宣告。  
+-   **選擇性參數。** 如果您使用`Optional`參數修飾詞，所有後續的參數清單中必須是選擇性的可以使用宣告`Optional`修飾詞。  
   
-     每個選擇性參數宣告都必須提供 `defaultvalue` 子句。  
+     每個選擇性參數宣告必須提供`defaultvalue`子句。  
   
-     如需詳細資訊，請參閱 [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。  
+     如需詳細資訊，請參閱[選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)。  
   
--   **參數陣列** 您必須對 `ParamArray` 參數指定 `ByVal`。  
+-   **參數陣列。** 您必須指定`ByVal`的`ParamArray`參數。  
   
-     您不能在同一個參數清單中同時使用 `Optional` 和 `ParamArray`。  
+     您無法同時使用`Optional`和`ParamArray`相同的參數清單中。  
   
-     如需詳細資訊，請參閱[Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
+     如需詳細資訊，請參閱[參數陣列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)。  
   
--   **傳遞機制** 每個引數的預設機制都是 `ByVal`，這表示程序不可變更基礎變數元素。  不過，如果項目是參考型別 \(Reference Type\)，即使程序無法取代或指派對應的物件本身，仍可修改對應物件的內容或成員。  
+-   **傳遞機制。** 每個引數的預設機制是`ByVal`，這表示程序無法變更對應的變數項目。 不過，如果項目是參考型別，此程序可以修改內容或成員的基礎物件，即使它無法取代或重新指派物件本身。  
   
--   **參數名稱** 如果參數的資料型別是陣列，請在 `parametername` 後面緊接著括號。  如需參數名稱的詳細資訊，請參閱[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+-   **參數名稱。** 如果參數的資料型別是陣列，請遵循`parametername`立即以括號。 如需有關參數名稱的詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
-## 範例  
- 下列範例顯示了定義兩個參數的 `Function` 程序。  
+## <a name="example"></a>範例  
+ 下列範例所示`Function`定義兩個參數的程序。  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements #&2;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
-## 請參閱  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)   
- [如何：在程式碼中中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute>   
+ [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)   
+ [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)   
+ [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)   
+ [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
+ [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
+ [如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

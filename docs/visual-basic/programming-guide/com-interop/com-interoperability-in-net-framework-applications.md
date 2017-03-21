@@ -1,49 +1,65 @@
 ---
-title: "COM Interoperability in .NET Framework Applications (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "interoperability, COM and .NET framework objects"
-  - "COM interop"
-  - "shared components"
+title: ".NET Framework 應用程式 (Visual Basic) 中的 COM 互通性 |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- interoperability, COM and .NET framework objects
+- COM interop
+- shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# COM Interoperability in .NET Framework Applications (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 308ee8e495efa9368ef55d781f6b6dc314db51ac
+ms.lasthandoff: 03/13/2017
 
-要在同一應用程式中使用 COM 物件和 .NET Framework 物件時，您需要解決物件在記憶體中以不同方式存在的問題。  .NET Framework 物件位於 Managed 記憶體 \(也就是由 Common Language Runtime 控制的記憶體\) 中，而且執行階段可視需要將其加以移動。  COM 物件則位於 Unmanaged 記憶體中，不會移到其他記憶體位置。  [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] 和 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 提供了工具，可讓您控制這些 Managed 和 Unmanaged 元件之間的互動。  如需 Managed 程式碼的詳細資訊，請參閱 [Common Language Runtime](../Topic/Common%20Language%20Runtime%20\(CLR\).md)。  
+---
+# <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 應用程式中的 COM 互通性 (Visual Basic)
+當您想要在相同的應用程式中使用 COM 物件和.NET Framework 物件時，您需要處理的物件存在於記憶體中的差異。 在.NET Framework 物件位於 managed 記憶體 — common language runtime 所控制的記憶體，視需要可由執行階段移。 COM 物件位於 unmanaged 記憶體中，而且不應該將移至另一個記憶體位置。 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]而[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]提供工具來控制這些互動 managed 和 unmanaged 元件。 如需 managed 程式碼的詳細資訊，請參閱[Common Language Runtime](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482)。  
   
- 除了在 .NET 應用程式中使用 COM 物件外，您也可能想使用 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]，開發可透過 COM，從 Unmanaged 程式碼中存取的物件。  
+ 除了.NET 應用程式中使用 COM 物件，您可能也想要使用[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]來開發可從 unmanaged 程式碼，透過 COM 存取的物件  
   
- 這個頁面上的連結提供 COM 與 .NET Framework 物件之間的詳細互動資料。  
+ 此頁面上的連結提供 COM 和.NET Framework 物件之間的互動的詳細資料。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- 提供涵蓋 Visual Basic 的 COM 互通性 \(Interoperability\) 主題的連結，包括 COM 物件、ActiveX 控制項、Win32 DLL、Managed 物件和 COM 物件的繼承 \(Inheritance\)。  
+ 提供連結，這些主題涵蓋在 Visual Basic 中，包括 COM 物件、 ActiveX 控制項、 Win32 Dll、 受管理的物件和 COM 物件的繼承的 COM 互通性。  
   
- [COM Interop Wrapper Error](/visual-cpp/misc/com-interop-wrapper-error)  
- 說明如果專案系統無法為特定元件建立 COM 互通性包裝函式時的後果和選項。  
+ [COM Interop 包裝函式錯誤](https://docs.microsoft.com/cpp/misc/com-interop-wrapper-error)  
+ 專案系統無法建立特定元件的 COM 互通性包裝函式所描述的後果和選項。  
   
- [與 Unmanaged 程式碼互通](../Topic/Interoperating%20with%20Unmanaged%20Code.md)  
- 簡要說明 Managed 和 Unmanaged 程式碼間互動的一些問題，並且提供詳細資訊的連結。  
+ [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)  
+ 簡短描述 managed 和 unmanaged 程式碼之間的互動問題，並提供連結，如需進一步的研究。  
   
- [COM 包裝函式](../Topic/COM%20Wrappers.md)  
- 討論允許 Managed 程式碼呼叫 COM 方法的執行階段可呼叫包裝函式，以及允許 COM 用戶端呼叫 .NET 物件方法的 COM 可呼叫包裝函式。  
+ [COM 包裝函式](http://msdn.microsoft.com/library/e56c485b-6b67-4345-8e66-fd21835a6092)  
+ 討論執行階段可呼叫包裝函式，可讓 managed 程式碼呼叫 COM 方法，以及 COM 可呼叫包裝函式，可讓 COM 用戶端呼叫.NET 物件的方法。  
   
- [Advanced COM Interoperability](http://msdn.microsoft.com/zh-tw/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- 提供主題的連結，涵蓋 COM 互通性的包裝函式、例外狀況 \(Exception\)、繼承、執行緒、事件、轉換和封送處理 \(Marshaling\) 等方面。  
+ [進階的 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ 提供連結，這些主題涵蓋與包裝函式、 例外狀況、 繼承、 執行緒、 事件、 轉換、 轉換和封送處理 COM 互通性。  
   
- [Tlbimp.exe \(Type Library Importer\)](../Topic/Tlbimp.exe%20\(Type%20Library%20Importer\).md)  
- 討論可用來將 COM 型別程式庫中找到的型別定義轉換為 Common Language Runtime 組件中對等定義的工具。
+ [Tlbimp.exe （類型程式庫匯入工具）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ 討論您可以使用轉換為通用語言執行階段組件中的等效定義 COM 類型程式庫中找到的類型定義的工具。

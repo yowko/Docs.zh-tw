@@ -1,57 +1,73 @@
 ---
-title: "Walkthrough: Implementing Inheritance with COM Objects (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "inheritance, COM reusability"
-  - "base classes, COM reusability"
-  - "inheritance, walkthroughs"
-  - "derived classes, COM reusability"
+title: "逐步解說︰ 實作 COM 物件 (Visual Basic) 的繼承 |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- inheritance, COM reusability
+- base classes, COM reusability
+- inheritance, walkthroughs
+- derived classes, COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Walkthrough: Implementing Inheritance with COM Objects (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: fa7753847619f14600c924cba01e55651c4f17c2
+ms.lasthandoff: 03/13/2017
 
-您可以從 COM 物件中的 `Public` 類別衍生 Visual Basic 類別，即使這些物件是使用舊版 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 建立的也一樣。  從 COM 物件中所繼承類別的屬性和方法可以遭覆寫或多載，就如同其他基底類別的屬性和方法一樣。  當您有個現有類別庫 \(Class Library\) 而又不要加以重新編譯時，從 COM 物件繼承 \(Inheritance\) 就相當有用。  
+---
+# <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件的繼承 (Visual Basic)
+您可以從 Visual Basic 類別來取得`Public`即使在舊版中建立的 COM 物件中的類別[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。 屬性和方法的類別繼承自 COM 物件可以覆寫或多載，就像屬性和任何其他基底類別的方法可以覆寫或多載。 從 COM 物件的繼承時，您有現有的類別程式庫不想重新編譯。  
   
- 下列程序將說明如何使用 Visual Basic 6.0 建立包含類別的 COM 物件，然後將其當做基底類別使用。  
+ 下列程序示範如何使用 Visual Basic 6.0 中建立的 COM 物件，包含類別，並以它做為基底類別。  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### 若要建立在本逐步解說中使用的 COM 物件  
+### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>若要建立這個逐步解說中所使用的 COM 物件  
   
-1.  在 Visual Basic 6.0 中，開啟新的 ActiveX DLL 專案。  名為 `Project1` 的專案隨即建立，  其中包含名為 `Class1` 的類別。  
+1.  在 Visual Basic 6.0 中，開啟新的 ActiveX DLL 專案。 專案，名為`Project1`建立。 它具有名為的類別`Class1`。  
   
-2.  在 \[**專案總管**\] 中，以滑鼠右鍵按一下 \[**Project1**\]，再按一下 \[**Project1 屬性**\]。  接著會顯示 \[**專案屬性**\] 對話方塊。  
+2.  在**專案總管] 中**，以滑鼠右鍵按一下**Project1**，然後按一下 [ **Project1 屬性**。 **專案屬性**對話方塊隨即出現。  
   
-3.  在 \[**專案屬性**\] 對話方塊的 \[**一般**\] 索引標籤中，在 \[**專案名稱**\] 欄位輸入 `ComObject1` 來變更專案名稱。  
+3.  在**一般** 索引標籤的**專案屬性**對話方塊方塊中，輸入變更專案名稱`ComObject1`中**專案名稱**欄位。  
   
-4.  在 \[**專案總管**\] 中，以滑鼠右鍵按一下 `Class1`，再按一下 \[**屬性**\]。  接著會顯示類別的 \[**屬性**\] 視窗。  
+4.  在**專案總管] 中**，以滑鼠右鍵按一下`Class1`，然後按一下 [**屬性**。 **屬性**類別 視窗隨即出現。  
   
-5.  將 `Name` 屬性變更為 `MathFunctions`。  
+5.  變更`Name`屬性`MathFunctions`。  
   
-6.  在 \[**專案總管**\] 中，以滑鼠右鍵按一下 `MathFunctions`，再按一下 \[**檢視程式碼**\]。  接著會顯示 \[**程式碼編輯器**\]。  
+6.  在**專案總管] 中**，以滑鼠右鍵按一下`MathFunctions`，然後按一下 [**檢視程式碼**。 **程式碼編輯器**隨即出現。  
   
-7.  加入區域變數來存放屬性值：  
+7.  加入區域變數來存放屬性值︰  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  加入 Property `Let` 和 Property `Get` 屬性程序：  
+8.  將屬性加入`Let`和屬性`Get`屬性程序︰  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -64,7 +80,7 @@ caps.handback.revision: 16
     End Property  
     ```  
   
-9. 加入一個函式：  
+9. 將函式︰  
   
     ```  
     Function AddNumbers(   
@@ -75,70 +91,70 @@ caps.handback.revision: 16
     End Function  
     ```  
   
-10. 按一下 \[**檔案**\] 功能表上的 \[**製作 ComObject1.dll**\] 建立並註冊 COM 物件。  
+10. 建立並註冊的 COM 物件，即可**讓 ComObject1.dll**上**檔案**功能表。  
   
     > [!NOTE]
-    >  雖然您也可以將 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 建立的類別當做 COM 物件公開 \(Expose\)，但它不是真正的 COM 物件，所以不適用於本逐步解說內容。  如需詳細資訊，請參閱 [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+    >  雖然您也可以公開類別，以建立[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]為 COM 物件，它不是真正的 COM 物件，並不能用在這個逐步解說。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
-## Interop 組件  
- 在下列程序中，您會建立 Interop 組件來當做 Unmanaged 程式碼 \(例如 COM 物件\) 和 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] 使用的 Managed 程式碼之間的連結橋樑。  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 建立的 Interop 組件會處理使用 COM 物件的許多細節，例如「*Interop 封送處理*」\(Interop Marshaling\)，此程序會在與 COM 物件之間往返資料時，將參數封裝 \(Package\) 起來並傳回對等資料型別的值。  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 應用程式中的參考會指向 Interop 組件，而不是實質的 COM 物件。  
+## <a name="interop-assemblies"></a>Interop 組件  
+ 在下列程序中，您將建立 interop 組件，可做為 unmanaged 程式碼 （例如 COM 物件） 和 managed 程式碼之間的橋樑[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]使用。 Interop 組件，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]建立控制代碼使用 COM 的詳細資料的許多物件，例如*interop 封送處理*，封裝參數和傳回值，對等資料的程序類型移動的 COM 物件。 在參考[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]應用程式指向 interop 組件，而不是實際的 COM 物件。  
   
-#### 若要搭配 Visual Basic 2005 \(含\) 以後版本來使用 COM 物件  
+#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>若要使用 Visual Basic 2005 和更新版本的 COM 物件  
   
-1.  開啟新的 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] Windows 應用程式專案。  
+1.  開啟新[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Windows 應用程式專案。  
   
-2.  在 \[**專案**\] 功能表上，按一下 \[**加入參考**\]。  
+2.  在**專案**] 功能表上，按一下 [**加入參考**。  
   
-     接著會顯示 \[**加入參考**\] 對話方塊。  
+     **加入參考**對話方塊隨即出現。  
   
-3.  在 \[**COM**\] 索引標籤內，按兩下 \[**元件名稱**\] 清單中的 `ComObject1`，然後按一下 \[**確定**\]。  
+3.  在**COM**索引標籤上，按兩下`ComObject1`中**元件名稱**清單中，按一下**確定**。  
   
-4.  在 \[**專案**\] 功能表上，按一下 \[**加入新項目**\]。  
+4.  在 [專案] **Walkthrough: Adding Controls to a Worksheet at Run Time in an VSTO Add-in project** 功能表中，按一下 [加入新項目] ****。  
   
-     接著會顯示 \[**加入新項目**\] 對話方塊。  
+     **加入新項目**對話方塊隨即出現。  
   
-5.  在 \[**範本**\] 窗格中，按一下 \[**類別**\]。  
+5.  在**範本**] 窗格中，按一下 [**類別**。  
   
-     在 \[**名稱**\] 欄位中出現預設檔名 `Class1.vb`。  將這個欄位變更為 MathClass.vb 並按一下 \[**加入**\]。  這會建立名為 `MathClass` 的類別並顯示它的程式碼。  
+     預設檔案名稱， `Class1.vb`，會出現在**名稱**欄位。 變更此欄位，然後按一下 MathClass.vb**新增**。 這會建立名為的類別`MathClass`，並顯示其程式碼。  
   
-6.  將下列程式碼加到 `MathClass` 的上方以繼承自 COM 類別。  
+6.  將下列程式碼加入至頂端`MathClass`從 COM 類別繼承。  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop #&31;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
-7.  將下列程式碼加入至 `MathClass` 以多載基底類別的公用方法：  
+7.  加入下列程式碼來多載基底類別的公用方法`MathClass`:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop #&32;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
-8.  將下列程式碼加入至 `MathClass` 來擴充繼承類別：  
+8.  加入下列程式碼來擴充繼承的類別`MathClass`:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop #&33;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
- 新的類別會繼承 COM 物件中基底類別的屬性、多載方法並定義新的方法來擴充類別。  
+ 新的類別會繼承基底類別中的 COM 物件的屬性、 多載方法，並定義新的方法來擴充類別。  
   
-#### 若要測試繼承的類別  
+#### <a name="to-test-the-inherited-class"></a>若要測試繼承的類別  
   
-1.  在啟動表單中加入一個按鈕，然後按兩下按鈕來檢視其程式碼。  
+1.  將按鈕加入至啟動表單，並按兩下來檢視其程式碼。  
   
-2.  在按鈕的 `Click` 事件處理常式程序中加入下列程式碼，以建立 `MathClass` 的執行個體並呼叫多載方法：  
+2.  在按鈕的`Click`事件處理常式的程序，新增下列程式碼建立的執行個體`MathClass`呼叫多載的方法︰  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop #&34;](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  按 F5 執行專案。  
   
- 當您按一下表單上的按鈕時，首先會呼叫內含 `Short` 資料型別數字的 `AddNumbers` 方法，然後 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會從基底類別選擇適當的方法。  對 `AddNumbers` 的第二次呼叫會導向至 `MathClass` 的多載方法。  第三次呼叫會呼叫擴充類別的 `SubtractNumbers` 方法。  接著就會設定基底類別中的屬性並顯示值。  
+ 當您按一下表單上的按鈕`AddNumbers`與第一次呼叫方法`Short`資料類型的數字和[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]從基底類別選擇適當的方法。 第二次呼叫`AddNumbers`導向至多載方法，從`MathClass`。 第三個呼叫呼叫`SubtractNumbers`方法，延伸類別。 設定基底類別中的屬性，並會顯示的值。  
   
-## 後續步驟  
- 您可能會注意到，多載 `AddNumbers` 函式的資料型別正好與繼承自 COM 物件中基底類別的方法相同。  這是因為基底類別方法的引數和參數在 Visual Basic 6.0 中是定義為 16 位元整數，但在 Visual Basic 的以後版本中則公開為 `Short` 型別的 16 位元整數。  新的函式接受 32 位元整數並且多載基底類別函式。  
+## <a name="next-steps"></a>後續步驟  
+ 您可能已經注意到，多載`AddNumbers`函式都會具有相同的資料類型繼承自基底類別的 COM 物件的方法。 這是因為引數和基底類別方法的參數會定義為 16 位元整數，在 Visual Basic 6.0 中，但它們會以 16 位元整數型別的`Short`在新版的 Visual Basic 中。 新的函式會接受 32 位元整數，而且會多載基底類別函式。  
   
- 當使用 COM 物件時，請確實驗證參數的大小和資料型別。  例如，當使用接受 Visual Basic 6.0 集合物件 \(Collection Object\) 當做引數的 COM 物件時，您就不能提供 Visual Basic 以後版本的集合。  
+ 當使用 COM 物件，請務必確認參數的大小和資料類型。 例如，當您使用 Visual Basic 6.0 集合物件做為引數會接受 COM 物件時，無法提供更新版本的 Visual Basic 中的集合。  
   
- 繼承自 COM 類別的屬性和方法可以被覆寫，這表示您可以宣告區域屬性或方法，以取代繼承自基底 COM 類別的屬性或方法。  覆寫繼承的 COM 屬性的規則和覆寫其他屬性和方法的規則相似，以下為不同處：  
+ 屬性和方法繼承自 COM 類別可以覆寫，這表示您可以宣告區域屬性或方法，以取代屬性或繼承自基底的 COM 類別的方法。 覆寫繼承的 COM 屬性的規則是類似的規則覆寫其他屬性和方法有下列例外︰  
   
--   如果您覆寫任何繼承自 COM 類別的屬性或方法，您必須覆寫所有其他繼承的屬性和方法。  
+-   如果您覆寫任何屬性或方法繼承自 COM 類別，您必須覆寫所有其他繼承的屬性和方法。  
   
--   無法覆寫使用 `ByRef` 參數的屬性。  
+-   使用屬性`ByRef`無法覆寫參數。  
   
-## 請參閱  
- [COM Interoperability in .NET Framework Applications](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)   
- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)   
- [Short Data Type](../../../visual-basic/language-reference/data-types/short-data-type.md)
+## <a name="see-also"></a>另請參閱  
+ [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)   
+ [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)   
+ [Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)

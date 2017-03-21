@@ -1,77 +1,93 @@
 ---
-title: "Yield 陳述式 (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Yield"
-helpviewer_keywords: 
-  - "迭代器，Yield 陳述式 [Visual Basic]"
-  - "迭代器 [Visual Basic]"
-  - "Yield 陳述式 [Visual Basic]"
+title: "Yield 陳述式 (Visual Basic) |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Yield
+helpviewer_keywords:
+- iterators, Yield statement [Visual Basic]
+- iterators [Visual Basic]
+- Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Yield 陳述式 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 393a9f4de3e801aed5932aef0e2b13d76b003965
+ms.lasthandoff: 03/13/2017
 
-傳送集合中的下一個元素為 `For Each...Next` 陳述式。  
+---
+# <a name="yield-statement-visual-basic"></a>Yield 陳述式 (Visual Basic)
+傳送至集合的下一個項目`For Each...Next`陳述式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Yield expression  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
-|||  
-|-|-|  
 |詞彙|定義|  
-|`expression`|必要項。  隱含地轉換為 Iterator 函式或 `Get` 存取子的型別包含 `Yield` 陳述式的運算式。|  
+|---|---|  
+|`expression`|必要項。 隱含轉換為迭代器函式類型的運算式或`Get`，其中包含存取子`Yield`陳述式。|  
   
-## 備註  
- `Yield` 陳述式一次傳回集合中的項目。  `Yield` 陳述式在 Iterator 函式或 `Get` 存取子中，對集合的自訂反覆項目。  
+## <a name="remarks"></a>備註  
+ `Yield`陳述式會傳回一個項目集合一次。 `Yield` Iterator 函式中包含陳述式或`Get`存取子，在集合上執行自訂的反覆項目。  
   
- 使用 [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 或 LINQ 查詢，您使用 Iterator 函式。  `For Each` 迴圈的每次查看呼叫 Iterator 函式。  執行 `Yield` 陳述式在 Iterator 函式時到達，則會傳回 `expression` ，因此，目前位置在程式碼中保留。  執行從該位置下次重新啟動 Iterator 函式呼叫。  
+ 您可以使用 iterator 函式使用[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)或 LINQ 查詢。 每個反覆項目`For Each`迴圈就會呼叫 iterator 函式。 當`Yield`陳述式為止 iterator 函式，`expression`傳回，並保留在程式碼中目前的位置。 下一次呼叫 Iterator 函式時，便會從這個位置重新開始執行。  
   
- 隱含轉換必須從 `expression` 型別在 `Yield` 陳述式的存在於 Iterator 的傳回型別。  
+ 型別必須有可隱含轉換`expression`中`Yield`陳述式，以迭代器傳回的型別。  
   
- 您可以使用 `Exit Function` 或 `Return` 陳述式結束反覆運算。  
+ 您可以使用`Exit Function`或`Return`陳述式結束反覆項目。  
   
- 只有在使用 `Iterator` 函式或 `Get` 存取子中， 「Yield」不是保留字而且具有特殊的意義。  
+ 「 產生 」 並不是保留的字，而且使用中時才具有特殊意義`Iterator`函式或`Get`存取子。  
   
- 如需 Iterator 函式和 `Get` 存取子的詳細資訊，請參閱 [迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)。  
+ 如需有關迭代器函式和`Get`存取子中，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
-## Iterator 函式和 Get 存取子  
- Iterator 函式或 `Get` 存取子的宣告必須符合下列需求:  
+## <a name="iterator-functions-and-get-accessors"></a>迭代器函式和 Get 存取子  
+ 迭代器函式宣告或`Get`存取子必須符合下列需求︰  
   
--   它必須包含 [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) 修飾詞。  
+-   它必須包含[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)修飾詞。  
   
--   傳回型別必須是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。  
+-   傳回類型必須是<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>， <xref:System.Collections.IEnumerator>，或<xref:System.Collections.Generic.IEnumerator%601>.</xref:System.Collections.Generic.IEnumerator%601> </xref:System.Collections.IEnumerator> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable>  
   
--   它不能有任何 `ByRef` 參數。  
+-   它不能有任何`ByRef`參數。  
   
- Iterator 函式在事件、執行個體建構函式、靜態建構函式或靜態解構函式不會發生。  
+ Iterator 函式不能出現在事件、 執行個體建構函式、 靜態建構函式或靜態的解構函式。  
   
- Iterator 函式可以是匿名函式。  如需詳細資訊，請參閱[迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)。  
+ Iterator 函式可以是匿名函式。 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
-## 例外狀況處理  
- `Yield` 陳述式可以是 [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)的 `Try` 區塊內。  具有 `Yield` 陳述式的 `Try` 區塊有 `Catch` 區塊，而且可以有 `Finally` 區塊。  
+## <a name="exception-handling"></a>例外狀況處理  
+ A`Yield`陳述式可以是內`Try`區塊[試...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 A`Try`區塊具有`Yield`陳述式可以有`Catch`區塊，而且可以有`Finally`區塊。  
   
- `Yield` 陳述式不可以在 `Catch` 區塊或 `Finally` 區塊內。  
+ A`Yield`陳述式不能在`Catch`區塊或`Finally`區塊。  
   
- 如果 `For Each` 主體 \(在 Iterator 函式之外\) 會擲回例外狀況，在 Iterator 函式的 `Catch` 區塊未執行，不過，在 Iterator 函式的 `Finally` 區塊執行。  在 Iterator 的函式中 `Catch` 區塊攔截發生在 Iterator 函式內的例外狀況。  
+ 如果`For Each`（之外 iterator 函式） 的主體擲回例外狀況， `Catch` iterator 函式中的區塊不會執行，但`Finally`就會執行 iterator 函式中的區塊。 A `Catch` iterator 函式區塊攔截函式迭代器內發生的例外狀況。  
   
-## 技術實作  
- 下列程式碼會從 Iterator 函式的 `IEnumerable (Of String)` 將 `IEnumerable (Of String)`的項目集合。  
+## <a name="technical-implementation"></a>技術實作  
+ 下列程式碼會傳回`IEnumerable (Of String)`從 iterator 函式，然後逐一查看的項目`IEnumerable (Of String)`。  
   
 ```vb  
 Dim elements As IEnumerable(Of String) = MyIteratorFunction()  
@@ -80,29 +96,29 @@ For Each element As String In elements
 Next  
 ```  
   
- 對 `MyIteratorFunction` 的呼叫不執行函式的主體。  反而呼叫傳回 `IEnumerable(Of String)` 加入至 `elements` 變數中。  
+ 若要呼叫`MyIteratorFunction`不會執行函式的主體。 呼叫會改為將 `IEnumerable(Of String)` 傳回至 `elements` 變數中。  
   
- 在 `For Each` 迴圈的反覆項目， <xref:System.Collections.IEnumerator.MoveNext%2A> 方法會呼叫 `elements`。  這稱為執行 `MyIteratorFunction` 主體，直到下一個 `Yield` 陳述式為止。  `Yield` 陳述式傳回迴圈主體判斷 `element` 變數的不僅值使用的，而且項目的 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 屬性，則為 `IEnumerable (Of String)`。  
+ 上的反覆項目`For Each`迴圈，<xref:System.Collections.IEnumerator.MoveNext%2A>方法會針對呼叫`elements`。</xref:System.Collections.IEnumerator.MoveNext%2A> 這個呼叫會執行 `MyIteratorFunction` 的主體，直到下一個 `Yield` 陳述式為止。 `Yield`陳述式傳回決定不使用的值的運算式，`element`迴圈主體所使用的變數，但也<xref:System.Collections.Generic.IEnumerator%601.Current%2A>屬性的項目，這是`IEnumerable (Of String)`。</xref:System.Collections.Generic.IEnumerator%601.Current%2A>  
   
- 在 `For Each` 迴圈的每個後續反覆項目， Iterator 主體的執行與繼續它停止的地方，再停止，並在到達 `Yield` 陳述式。  當 Iterator 函式或 `Return` 或 `Exit Function` 陳述式的結尾到達， `For Each` 迴圈完成。  
+ 在 `For Each` 迴圈的每個後續反覆項目上，迭代器主體會從上次停止的位置繼續執行，並且在到達 `Yield` 陳述式時再次停止。 `For Each`迴圈完成時 iterator 函式的結尾或`Return`或`Exit Function`陳述式為止。  
   
-## 範例  
- 下列範例會在 [對於 Each…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) 迴圈中的 `Yield` 陳述式。  [對於每個](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 陳述式主體的每個反覆項目在 `Main` 建立呼叫 `Power` Iterator 函式。  將 Iterator 函式的每個呼叫執行 `Yield` 陳述式的下執行，迴圈會出現在 `For…Next` 下一個反覆項目時。  
+## <a name="example"></a>範例  
+ 下列範例具有`Yield`陳述式內[For...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。 每個反覆項目[每個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)陳述式主體中的`Main`建立呼叫`Power`iterator 函式。 每次呼叫 Iterator 函式都會執行下一個 `Yield` 陳述式，這會在 `For…Next` 迴圈的下一個反覆項目期間發生。  
   
- Iterator 方法的傳回型別是 <xref:System.Collections.Generic.IEnumerable%601>， Iterator 介面型別。  當 Iterator 方法呼叫時，它會傳回可列舉的物件包含數字的階乘冪。  
+ Iterator 方法的傳回型別是<xref:System.Collections.Generic.IEnumerable%601>，iterator 介面類型。</xref:System.Collections.Generic.IEnumerable%601> 呼叫 Iterator 方法時，它會傳回包含數字乘冪的可列舉物件。  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements #&98;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
-## 範例  
- 下列範例示範是 Iterator 的 `Get` 存取子。  屬性宣告包含一個 `Iterator` 修飾詞。  
+## <a name="example"></a>範例  
+ 下列範例將示範本身為迭代器的 `Get` 存取子。 屬性宣告包含`Iterator`修飾詞。  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements #&99;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- 如需其他範例，請參閱 [迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)。  
+ 如需其他範例，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
-## 需求  
- [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs-dev11-long-md.md)]  
+## <a name="requirements"></a>需求  
+ [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)]  
   
-## 請參閱  
- [迭代器](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)   
- [Statements](../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>另請參閱  
+ [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)   
+ [陳述式](../../../visual-basic/language-reference/statements/index.md)

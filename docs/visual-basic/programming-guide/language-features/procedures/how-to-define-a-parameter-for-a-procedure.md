@@ -1,73 +1,89 @@
 ---
-title: "How to: Define a Parameter for a Procedure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedure parameters, defining data types for"
-  - "procedures, parameters"
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "procedure parameters, defining"
+title: "如何︰ 將參數定義程序 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedure parameters, defining data types for
+- procedures, parameters
+- procedures, defining
+- Visual Basic code, procedures
+- procedure parameters, defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# How to: Define a Parameter for a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9fb9ad244499039c1768ff97f071168e0a0842e4
+ms.lasthandoff: 03/13/2017
 
-「*參數*」\(Parameter\) 允許呼叫程式碼在呼叫程序時將值傳遞給該程序。  您可以利用指定參數名稱與資料型別，為程序宣告每一個參數，就像宣告一般變數的方式一樣。  而且，您也可以指定傳遞的機制，以及該參數是否為選擇性 \(Optional\)。  
+---
+# <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定義程序的參數 (Visual Basic)
+A*參數*可讓呼叫的程式碼呼叫它時，將值傳遞至程序。 宣告每個參數的程序相同的方式宣告變數，指定其名稱和資料型別。 您也可以指定傳遞機制，以及是否為選擇性參數。  
   
- 如需詳細資訊，請參閱[Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)。  
+ 如需詳細資訊，請參閱[程序參數和引數](./procedure-parameters-and-arguments.md)。  
   
-### 若要定義程序參數  
+### <a name="to-define-a-procedure-parameter"></a>若要定義程序參數  
   
-1.  在程序宣告中，將參數名稱加入至程序參數清單 \(用逗號隔開每個參數\)。  
+1.  在程序宣告中，新增至程序的參數清單，與其他參數分隔逗號分隔的參數名稱。  
   
 2.  決定參數的資料型別。  
   
-3.  在參數名稱後面緊接著 `As` 子句，以指定資料型別。  
+3.  參數名稱後面加上`As`子句來指定資料型別。  
   
-4.  決定要用於參數的傳遞機制。  一般而言，除非想讓程序可變更它在呼叫程式碼中的值，否則會以傳值 \(By Value\) 方式傳遞參數。  
+4.  決定您想要將參數傳遞機制。 通常您傳遞參數值，除非您想要能夠變更其值在呼叫程式碼中的程序。  
   
-5.  在參數名稱前面加上 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 或 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，以指定傳遞機制。  如需詳細資訊，請參閱[Differences Between Passing an Argument By Value and By Reference](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)。  
+5.  參數名稱前加[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)指定的傳遞機制。 如需詳細資訊，請參閱[差異之間傳遞引數的值和傳址](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
-6.  如果是選擇性參數，請在傳遞機制前面加上 [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)，且在參數資料型別後面緊接著等號 \(`=`\) 和預設值。  
+6.  如果參數是選擇性的在之前的傳遞機制，與[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)，並遵循參數資料類型，以等號 (`=`) 和預設值。  
   
-     下列範例會定義含有三個參數之 `Sub` 程序的大綱。  前兩個是必要項，而第三個是選擇項。  參數清單中的參數宣告是用逗號隔開。  
+     下列範例會定義的外框`Sub`使用三個參數的程序。 前兩個所需，且第三個為選用。 參數宣告會以逗號分隔的參數清單中。  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures #&33;](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
-     第一個參數會接受 \(Accept\)  `customer`  物件，而 `updateCustomer` 可直接更新傳遞給 `c` 的變數，因為引數是以 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 方式傳遞。  程序無法變更後兩個引數的值，因為它們是以 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 方式傳遞。  
+     第一個參數接受`customer`物件，和`updateCustomer`可以直接更新變數傳遞至`c`因為引數傳遞[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)。 此程序無法變更的最後兩個引數的值，因為它們會傳遞[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。  
   
-     如果呼叫程式碼未提供  `level`  參數的值，則 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會將它設為預設值 0。  
+     如果呼叫程式碼沒有提供的值`level`參數，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]將它設定為預設值為 0。  
   
-     如果型別檢查 \(Type Checking\) 參數 \([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) 為 `Off`，則在定義參數時，`As` 子句為選擇性的。  然而，如果任一參數會使用 `As` 子句，則所有參數就必須使用它。  如果型別檢查參數是 `On`，則每個參數定義都要有 `As` 子句。  
+     如果型別檢查切換 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`Off`、`As`子句是選擇性的當您定義的參數。 不過，如果任何一個參數使用`As`子句，全部都必須使用它。 如果檢查參數的型別`On`、`As`子句是針對每個參數定義必要的。  
   
-     指定所有程式項目的資料型別稱為「*強式型別*」\(Strong Typing\)。  設定 `Option Strict On` 時，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 會強制使用強式型別。  因為下列理由，所以強烈建議您這麼做：  
+     指定資料類型的所有程式設計項目稱為*強型別*。 當您設定`Option Strict On`，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會強制執行強型別。 強烈建議使用這個，原因如下︰  
   
-    -   讓 IntelliSense 能夠支援變數和參數。  這能讓您在輸入程式碼時看到其屬性和其他成員。  
+    -   它可讓您的變數和參數的 IntelliSense 支援。 這可讓您查看其所有屬性和其他成員，當您輸入程式碼中。  
   
-    -   讓編譯器能夠執行型別檢查。  這有助於找出因為錯誤 \(例如溢位\) 而導致執行階段發生失敗的陳述式。  這也能夠偵測在不支援變數的物件上所進行的方法呼叫。  
+    -   它可讓編譯器執行類型檢查。 這有助於找出可能會在執行階段，因為例如溢位錯誤而失敗的陳述式。 也會對方法的呼叫攔截並不支援的物件。  
   
-    -   執行程式碼的速度較快。  其中一個理由是，如果未指定程式設計項目的資料型別，則 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 編譯器會將它指派為 `Object` 型別。  編譯的程式碼可能必須在 `Object` 與其他資料型別之間進行來回轉換，因而會降低效能。  
+    -   這樣可以更快地執行您的程式碼。 原因是，如果您未指定資料類型的程式設計項目，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]編譯器將其指派`Object`型別。 可能需要編譯的程式碼之間來回轉換`Object`和其他資料類型，這會降低效能。  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [函式程序](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [How to: Pass Arguments to a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Passing Arguments by Value and by Reference](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Recursive Procedures](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [物件導向程式設計](../Topic/Object-Oriented%20Programming%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)   
+ [Sub 程序](./sub-procedures.md)   
+ [Function 程序](./function-procedures.md)   
+ [如何︰ 將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)   
+ [傳遞引數以傳值或傳址](./passing-arguments-by-value-and-by-reference.md)   
+ [遞迴程序](./recursive-procedures.md)   
+ [多載化程序](./procedure-overloading.md)   
+ [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
+ [物件導向程式設計](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

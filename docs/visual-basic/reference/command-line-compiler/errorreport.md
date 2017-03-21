@@ -1,65 +1,81 @@
 ---
-title: "/errorreport | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "-errorreport compiler option [Visual Basic]"
-  - "/errorreport compiler option [Visual Basic]"
-  - "errorreport compiler option [Visual Basic]"
+title: "/errorreport |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- -errorreport compiler option [Visual Basic]
+- /errorreport compiler option [Visual Basic]
+- errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# /errorreport
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2ebe5646256926f68a1a900b91c25a1768505785
+ms.lasthandoff: 03/13/2017
 
-指定 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 編譯器應如何報告編譯器內部錯誤。  
+---
+# <a name="errorreport"></a>/errorreport
+指定 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 編譯器報告編譯器內部錯誤的方式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /errorreport:{ prompt | queue | send | none }  
 ```  
   
-## 備註  
- 這個選項提供便利的方式，向 Microsoft 的 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 團隊報告 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 內部編譯器錯誤 \(ICE\)。  編譯器預設並不會將任何資訊傳送給 Microsoft。  然而，如果真的遇到編譯器內部錯誤，則這個選項可以讓您向 Microsoft 報告錯誤。  該資訊會協助 Microsoft 工程師找出原因，也有助於改善下一版 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]。  
+## <a name="remarks"></a>備註  
+ 此選項提供便利的方式來報告[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]編譯器內部錯誤 (ICE) [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Microsoft 小組。 根據預設，編譯器會將任何資訊傳送到 Microsoft。 不過，如果發生編譯器內部錯誤，此選項可讓您向 Microsoft 回報錯誤。 這項資訊可協助 Microsoft 工程師找出原因，而且可能有助於改善的下一個版本[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
   
- 使用者是否能夠傳送報告，完全是依電腦和使用者的原則權限而定。  
+ 傳送報表的使用者的能力取決於電腦和使用者原則權限。  
   
- 下表彙總 `/errorreport` 選項的效果。  
+ 下表摘要說明的效果`/errorreport`選項。  
   
-|||  
-|-|-|  
 |選項|行為|  
-|`prompt`|如果發生編譯器內部錯誤，則會出現對話方塊，您就可以檢視編譯器所收集的實際資料。  可以判斷錯誤報告中是否有任何敏感性資訊，並決定是否將它傳送給 Microsoft。  如果決定傳送，而且機器和使用者原則設定也都允許的情況下，則編譯器會將資料傳送給 Microsoft。|  
-|`queue`|將錯誤報告排成佇列。  當您以系統管理員權限登入時，您可以報告自上次登入後的任何失敗 \(傳送失敗報告的提示不會超過每三天一次\)。  如果沒有指定 `/errorreport` 選項，這就是預設行為。|  
-|`send`|如果發生編譯器內部錯誤，且機器和使用者原則設定也都允許的情況下，則編譯器會將資料傳送給 Microsoft。<br /><br /> `/errorReport:send` 選項會嘗試將錯誤資訊自動傳送給 Microsoft。  這個選項取決於登錄。  如需在登錄中設定適當值的詳細資訊，請參閱[如何在 Visual Studio 2008 命令列工具中開啟自動錯誤報告](http://go.microsoft.com/fwlink/?LinkID=184695) \(英文\)。|  
-|`none`|如果發生編譯器內部錯誤，則不會進行收集或傳送給 Microsoft。|  
+|---|---|  
+|`prompt`|如果發生編譯器內部錯誤，對話方塊隨即出現，讓您可以檢視編譯器所收集的確切資料。 您可以判斷是否有任何錯誤報表中的機密資訊，並決定是否要傳送給 Microsoft。 如果您決定要傳送，而且電腦和使用者原則設定可讓它，編譯器會將資料傳送給 Microsoft。|  
+|`queue`|錯誤報告排入佇列。 當您登入系統管理員權限時，您可以在上次登入報告任何失敗 （將不會提示您要傳送報告的失敗一次以上每隔三天）。 這是預設行為時`/errorreport`未指定選項。|  
+|`send`|如果發生編譯器內部錯誤，而且電腦和使用者原則設定可讓它，編譯器會將資料傳送給 Microsoft。<br /><br /> 選擇`/errorReport:send`會嘗試自動傳送給 Microsoft 的資訊時發生錯誤。 此選項取決於登錄中。 如需在登錄中設定適當的值的詳細資訊，請參閱[如何開啟自動錯誤報告在 Visual Studio 2008 命令列工具](http://go.microsoft.com/fwlink/?LinkID=184695)。|  
+|`none`|發生內部編譯器錯誤時，它將不會收集或傳送到 Microsoft。|  
   
- 編譯器傳送的資料包含發生錯誤時的堆疊，並且通常包含一些原始程式碼。  如果將 `/errorreport` 與 [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) 選項搭配使用，則會傳送整個原始程式檔。  
+ 編譯器會傳送資料，包括堆疊時的錯誤，通常包括一些原始程式碼。 如果`/errorreport`搭配[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)選項，則會傳送整個原始程式檔。  
   
- 這個選項最好是與 [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) 選項搭配使用，因為它會讓 Microsoft 工程師更容易重現該錯誤。  
+ 這個選項最適合搭配[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)選項，因為它可讓 Microsoft 工程師更輕鬆地重現錯誤。  
   
 > [!NOTE]
->  `/errorreport` 選項無法在 Visual Studio 開發環境內使用，只有在命令列編譯時才能使用。  
+>  `/errorreport`選項不是從 Visual Studio 開發環境中使用，可從命令列編譯時，才。  
   
-## 範例  
- 下列程式碼會嘗試編譯 `T2.vb`，如果編譯器發生編譯器內部錯誤，則會提示您將錯誤報告傳送給 Microsoft。  
+## <a name="example"></a>範例  
+ 下列程式碼會嘗試編譯`T2.vb`，而且如果編譯器遇到內部編譯器錯誤，它會提示您傳送錯誤報告給 Microsoft。  
   
 ```  
 vbc /errorreport:prompt t2.vb  
 ```  
   
-## 請參閱  
- [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)   
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+ [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

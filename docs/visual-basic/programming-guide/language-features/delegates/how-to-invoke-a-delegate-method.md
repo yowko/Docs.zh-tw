@@ -1,35 +1,51 @@
 ---
-title: "How to: Invoke a Delegate Method (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "How to︰ 叫用委派方法 (Visual Basic) |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# How to: Invoke a Delegate Method (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 29b20eb6089886c8111711388472004bbacea312
+ms.lasthandoff: 03/13/2017
 
-這個範例顯示如何使方法與委派 \(Delegate\) 產生關聯，然後再透過委派來叫用 \(Invoke\) 方法。  
+---
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：叫用委派方法 (Visual Basic)
+這個範例示範如何將方法和委派，並接著叫用委派透過該方法。  
   
-### 建立委派和相對應的程序  
+### <a name="create-the-delegate-and-matching-procedures"></a>建立委派和比對程序  
   
-1.  建立名為 `MySubDelegate` 的委派。  
+1.  建立名為委派`MySubDelegate`。  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  宣告類別，其中包含的方法具有和委派相同的簽章。  
+2.  宣告類別，其中包含具有相同的簽章與委派的方法。  
   
     ```  
     Class class1  
@@ -39,7 +55,7 @@ caps.handback.revision: 10
     End Class  
     ```  
   
-3.  定義方法來建立委派的執行個體，並藉由呼叫內建的 `Invoke` 方法來叫用與委派關聯的方法。  
+3.  定義的方法建立委派的執行個體，並叫用方法呼叫內建和委派關聯`Invoke`方法。  
   
     ```  
     Protected Sub DelegateTest()  
@@ -51,8 +67,8 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-## 請參閱  
- [Delegate Statement](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Delegates](../../../../visual-basic/programming-guide/language-features/delegates/delegates.md)   
- [Events](../../../../visual-basic/programming-guide/language-features/events/events.md)   
- [多執行緒應用程式](../Topic/Multithreaded%20Applications%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
+ [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
+ [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)   
+ [多執行緒應用程式](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
