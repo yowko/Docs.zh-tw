@@ -56,7 +56,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 指定範圍內的類型通常會在方法完成之後移出範圍，此時可加以收集。 不過，您可以在方法結束之前，使用 `using` 陳述式對 GC 指出特定物件超出範圍：
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L6-L9)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 `using` 區塊完成之後，GC 就會知道先前範例中的 `stream` 物件可加以收集，並回收其記憶體。
 
@@ -68,7 +68,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 下列範例會擲回例外狀況，以作為記憶體安全的結果。
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L11-L12)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="type-safety"></a>型別安全
 
