@@ -39,11 +39,11 @@ ms.lasthandoff: 03/07/2017
 - `dotnet restore`
 - `dotnet run`
 
-##<a name="behavior"></a>行為
+## <a name="behavior"></a>行為
 
 預設會啟用 .NET Core 工具遙測功能。 您可以將 DOTNET_CLI_TELEMETRY_OPTOUT 環境變數 (例如，macOS/Linux 上的 `export`、Windows 上的 `set`) 設定為 true (例如，“true”, 1)，來選擇遙測功能。
 
-##<a name="data-points"></a>資料點
+## <a name="data-points"></a>資料點
 
 這個功能會收集下列資料部分︰
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/07/2017
 
 這個功能不會收集任何個人資料 (例如使用者名稱或電子郵件)。 它將不會掃描您的程式碼，也不會擷取可視為機密的任何專案層級資料，例如名稱、存放庫或作者 (如果您在 project.json 中進行設定)。 我們想要知道工具的用途，而不是您正在使用工具所建置的項目。 如果您發現收集的是機密資料，則是錯誤。 請[提出問題](https://github.com/dotnet/cli/issues)，將會進行修正。
 
-##<a name="license"></a>使用權
+## <a name="license"></a>使用權
 
 Microsoft 的 .NET Core 散發是使用 [MICROSOFT .NET LIBRARY EULA](https://aka.ms/dotnet-core-eula) 所授權。 這包含下面重新列印的 “DATA” 區段以啟用遙測。
 
@@ -97,3 +97,4 @@ A command is running to initially populate your local package cache, to
 improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
+
