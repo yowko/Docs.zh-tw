@@ -1,0 +1,7 @@
+# [共變數和反變數](index.md)
+## [泛型介面中的變異數](variance-in-generic-interfaces.md)
+### [建立 Variant 泛型介面](creating-variant-generic-interfaces.md)
+### [針對泛型集合使用介面中的變異數](using-variance-in-interfaces-for-generic-collections.md)
+## [委派中的變異數](variance-in-delegates.md)
+### [在委派中使用變異數](using-variance-in-delegates.md)
+### [針對 Func 與 Action 泛型委派使用變異數](using-variance-for-func-and-action-generic-delegates.md)

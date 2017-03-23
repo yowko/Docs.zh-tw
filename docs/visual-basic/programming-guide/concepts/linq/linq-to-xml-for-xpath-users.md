@@ -1,0 +1,55 @@
+---
+title: "LINQ to XML (Visual Basic) 的 XPath 使用者適用的 |Microsoft 文件"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
+caps.latest.revision: 3
+author: stevehoag
+ms.author: shoag
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 376e7d67edf1719dc1a020974b38e3600831d660
+ms.lasthandoff: 03/13/2017
+
+
+---
+# <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML 的 XPath 使用者 (Visual Basic)
+這組主題顯示多個 XPath 運算式及其 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 對等用法。  
+  
+ 所有範例使用 XPath 功能中的[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，可使用<xref:System.Xml.XPath.Extensions?displayProperty=fullName>.</xref:System.Xml.XPath.Extensions?displayProperty=fullName>中的擴充方法 這些範例會同時執行 XPath 運算式與 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 運算式。 接著，每個範例都會比較兩個查詢的結果，以驗證 XPath 運算式在功能上等同於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢。 由於兩種類型的查詢都會從相同的 XML 樹狀結構傳回節點，因此會使用參考識別進行查詢結果比較。  
+  
+## <a name="in-this-section"></a>本章節內容  
+  
+|主題|描述|  
+|-----------|-----------------|  
+|[XPath 和 LINQ to XML 的比較](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|提供 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 之間的相同處與相異處概觀。|  
+|[如何︰ 尋找子項目 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|比較 XPath 子項目座標軸與[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<xref:System.Xml.Linq.XContainer.Element%2A>方法。</xref:System.Xml.Linq.XContainer.Element%2A><br /><br /> 相關聯的 XPath 運算式為：`"DeliveryNotes"`。|  
+|[如何︰ 尋找子項目 (XPATH-LINQ to XML) 的清單 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|比較 XPath 子項目座標軸與[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<xref:System.Xml.Linq.XContainer.Elements%2A>軸。</xref:System.Xml.Linq.XContainer.Elements%2A><br /><br /> 相關聯的 XPath 運算式為：`"./*"`|  
+|[如何︰ 尋找根項目 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 取得根項目。<br /><br /> 相關聯的 XPath 運算式為：`"/PurchaseOrders"`|  
+|[如何︰ 尋找子代項目 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 取得具有特定名稱的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"//Name"`|  
+|[如何︰ 篩選屬性 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 取得具有指定之名稱以及具有指定值之屬性的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`".//Address[@Type='Shipping']"`|  
+|[如何︰ 尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 取得在另一個項目值參考的屬性上選取的項目。<br /><br /> 相關聯的 XPath 運算式為：`".//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]"`|  
+|[如何︰ 尋找命名空間 (XPATH-LINQ to XML) 中的項目 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-in-a-namespace.md)|比較 XPath 使用<xref:System.Xml.XmlNamespaceManager>類別[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<xref:System.Xml.Linq.XName.Namespace%2A>屬性<xref:System.Xml.Linq.XName>類別來使用 XML 命名空間。</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName.Namespace%2A> </xref:System.Xml.XmlNamespaceManager><br /><br /> 相關聯的 XPath 運算式為：`"./aw:*"`|  
+|[如何︰ 尋找前一個同層級項目 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md)|比較 XPath`preceding-sibling`座標軸[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]子<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>軸。</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName><br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*"`|  
+|[如何︰ 尋找子項目 (XPATH-LINQ to XML) 的子系 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 取得具有特定名稱之子項目的子代項目。<br /><br /> 相關聯的 XPath 運算式為：`"./Paragraph//Text/text()"`|  
+|[如何︰ 尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|比較等位運算子的用法`&#124;`，在使用 XPath<xref:System.Linq.Enumerable.Concat%2A>標準查詢運算子在[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]。</xref:System.Linq.Enumerable.Concat%2A><br /><br /> 相關聯的 XPath 運算式為：`"//Category&#124;//Price"`|  
+|[如何︰ 尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 尋找具有特定名稱之節點的所有同層級。<br /><br /> 相關聯的 XPath 運算式為：`"../Book"`|  
+|[如何︰ 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 導覽到父項目並尋找相關聯的屬性。<br /><br /> 相關聯的 XPath 運算式為：`"../@id"`|  
+|[如何︰ 尋找具有特定名稱 (XPATH-LINQ to XML) 的同層級的屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|比較如何利用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 尋找內容節點之同層級的特定屬性。<br /><br /> 相關聯的 XPath 運算式為：`"``../Book/@id``"`|  
+|[如何︰ 尋找具有特定屬性 (XPATH-LINQ to XML) 項目 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 尋找包含特定屬性的所有項目。<br /><br /> 相關聯的 XPath 運算式為：`"./*[@Select]"`|  
+|[如何︰ 尋找子項目 (XPATH-LINQ to XML) 的位置為基礎 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，根據其相對位置尋找項目。<br /><br /> 相關聯的 XPath 運算式為：`"Test[position() >= 2 and position() <= 4]"`|  
+|[如何︰ 尋找正前面的同層級 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  
+  
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Xml.XPath?displayProperty=fullName></xref:System.Xml.XPath?displayProperty=fullName>   
+ [查詢 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)   
+ [使用 XPath 資料模型處理 XML 資料](http://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081)

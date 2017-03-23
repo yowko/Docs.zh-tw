@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
+ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 0363bdfcb75f51789393e1459d23fcb644c7fb11
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
-
-> [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱[在持續整合 (CI) 中使用 .NET Core SDK 和工具 (.NET Core 工具 RC4)](../preview3/tools/using-ci-with-cli.md) 主題。
 
 ## <a name="overview"></a>概觀
 本文件概述如何在組建伺服器上使用 .NET Core SDK 和其工具。 一般而言，在 CI 組建伺服器上，您會想要透過某種方式自動化安裝。 在理想狀況下，自動化應該不需要系統管理權限。 
@@ -89,10 +87,3 @@ install:
   - ps: $url = "https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/$($env:CLI_VERSION)/dotnet-dev-win-x64.$($env:CLI_VERSION.ToLower()).zip"
   # follow normal installation from binaries
 ```
-
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

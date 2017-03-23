@@ -3,17 +3,17 @@ title: "針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行
 description: "本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 類別。"
 keywords: .NET, .NET Core, .NET Framework
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: d6ce9e3dd3c1189f35d147d140bb45095b3d77a5
-ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
+ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
+ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
+ms.lasthandoff: 02/23/2017
 
 ---
 
@@ -50,13 +50,13 @@ ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
 
 如果您擁有微服務導向的系統，該系統是由多個獨立、可動態擴充、具狀態或無狀態的微服務所組成，則 .NET Core 是最佳候選項目。 .NET Core 是輕量型的，而且可將其 API 介面最小化到微服務的範圍。 微服務架構也可讓您跨越服務界限混用技術，從而能夠基於新的微服務逐漸接受 .NET Core，新的微服務可以與利用 .NET Framework、Java、Ruby 或其他整合型技術所開發的其他微服務或服務同時存留。
 
-您可以使用的基礎結構平台有很多。 對於大型且複雜的微服務系統，您可以使用 [Azure Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/)。 針對無狀態的微服務，您也可以使用其他像是 [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/) 的產品。 以 Docker 為依據的微服務替代方案也符合任何一種微服務方法，如下所述。 所有的這些平台均支援 .NET Core，並使其更適合用來裝載您的微服務。
+您可以使用的基礎結構平台有很多。 對於大型且複雜的微服務系統，您可以使用 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)。 針對無狀態的微服務，您也可以使用其他像是 [Azure App Service](https://azure.microsoft.com/services/app-service/) 的產品。 以 Docker 為依據的微服務替代方案也符合任何一種微服務方法，如下所述。 所有的這些平台均支援 .NET Core，並使其更適合用來裝載您的微服務。
 
 ### <a name="containers"></a>容器
 
-儘管容器也可以用來將 Web 應用程式或服務裝入容器中 (其會遵循任何架構模式)，但它們通常會與微服務架構搭配使用。 您可以使用適用於 Windows 的 .NET Framework容器，但是 .NET Core 的模組化和輕量型性質可使容器更加完美。  建立和部署容器時，使用 .NET Core 的映像大小遠小於 .NET Framework。  舉例來說，因為它是跨平台的，您可以將伺服器應用程式部署到 Linux Docker 容器。
+儘管容器也可以用來將 Web 應用程式或服務裝入容器中 (其會遵循任何架構模式)，但它們通常會與微服務架構搭配使用。 您可以使用適用於 Windows 的 .NET Framework容器，但是 .NET Core 的模組化和輕量型性質可使容器更加完美。 建立和部署容器時，使用 .NET Core 的映像大小遠小於 .NET Framework。 舉例來說，因為它是跨平台的，您可以將伺服器應用程式部署到 Linux Docker 容器。
 
-您接著可在自己的 Linux 或 Windows 基礎結構中裝載 Docker 容器，或使用雲端服務 (例如 [Azure Container Service](https://azure.microsoft.com/en-us/services/container-service/))，其可在雲端中管理、協調及調整您的容器型應用程式。
+您接著可在自己的 Linux 或 Windows 基礎結構中裝載 Docker 容器，或使用雲端服務 (例如 [Azure Container Service](https://azure.microsoft.com/services/container-service/))，其可在雲端中管理、協調及調整您的容器型應用程式。
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>需要高效能且可調整的系統
 
@@ -108,8 +108,4 @@ ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
 * [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
 * [Docker 上的 .NET Framework 指南](../framework/index.md)
 * [.NET 偵錯概觀](components.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
-ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7c9ccd455bf0d14122c0547177cc29ace6ebde42
+ms.lasthandoff: 02/17/2017
 
 ---
 
@@ -57,14 +58,14 @@ Object
 | ------------- | ----------- |
 | @System.Exception.Data | @System.Collections.IDictionary 會將任意資料保存在索引鍵/值組。 |
 | @System.Exception.HelpLink | 可保留說明檔的 URL (或 URN)，以提供有關例外狀況原因的廣泛資訊。 |
-| @System.Exception.InnerException | 您可以在例外狀況處理期間，使用此屬性來建立及保留一系列的例外狀況。 您可以使用此屬性來建立新的例外狀況，其中包含先前攔截例外狀況。 @System.Exception.InnerException 屬性中的第二個例外狀況可以擷取原始的例外狀況，讓程式碼可以處理第二個例外狀況，以檢視其他額外的資訊。 例如，假設您有一個方法會接收格式不正確的引數。  此程式碼會嘗試讀取引數，但擲回例外狀況。 此方法會攔截例外狀況，並擲回 @System.FormatException.。為改善呼叫端判斷例外狀況擲回原因的能力，有時會需要方法攔截協助程式常式擲回的例外狀況，然後再擲回例外狀況更清楚地指出所發生的錯誤。 您可以建立全新且更有意義的例外狀況，其中的內部例外狀況參考可設定為原始例外狀況。 這個更有意義的例外狀況接著會擲回給呼叫端。 請注意，透過這項功能，您可以建立一系列的連結例外狀況，每個例外狀況後面接著先前擲回的例外狀況。 |
+| @System.Exception.InnerException | 您可以在例外狀況處理期間，使用此屬性來建立及保留一系列的例外狀況。 您可以使用此屬性來建立新的例外狀況，其中包含先前攔截例外狀況。 @System.Exception.InnerException 屬性中的第二個例外狀況可以擷取原始的例外狀況，讓程式碼可以處理第二個例外狀況，以檢視其他額外的資訊。 例如，假設您有一個方法會接收格式不正確的引數。  此程式碼會嘗試讀取引數，但擲回例外狀況。 此方法會攔截例外狀況並擲回 @System.FormatException。 為了改善呼叫端判斷所擲回例外狀況原因的能力，有時需要讓方法攔截 Helper 常式所擲回的例外狀況，再擲回更清楚指出所發生錯誤的例外狀況。 您可以建立全新且更有意義的例外狀況，其中的內部例外狀況參考可設定為原始例外狀況。 這個更有意義的例外狀況接著會擲回給呼叫端。 請注意，透過這項功能，您可以建立一系列的連結例外狀況，每個例外狀況後面接著先前擲回的例外狀況。 |
 | @System.Exception.Message | 提供有關例外狀況原因的詳細資料。
 | @System.Exception.Source | 取得或設定造成錯誤的應用程式或物件的名稱。 |
 | @System.Exception.StackTrace | 包含可用來判斷發生錯誤位置的堆疊追蹤。 堆疊追蹤包括原始程式檔名稱和程式行號 (若有偵錯資訊的話)。 |
 
-大部分繼承自 @System.Exception 的類別都不會實作其他成員，也不會提供其他功能，而只會繼承 @System.Exception.。因此可以在例外狀況類別階層、例外狀況名稱及例外狀況內含的資訊中，找到例外狀況最重要的資訊。
+大部分繼承自 @System.Exception 的類別不會實作其他成員或提供其他功能；它們只會繼承自 @System.Exception。 因此，您可以在例外狀況類別階層架構、例外狀況名稱和例外狀況所包含的資訊中，找到例外狀況的最重要資訊。
 
-建議只擲回及攔截衍生自 @System.Exception, 的物件，但您可以擲回任何衍生自 @System.Object 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 @System.Exception. 的物件。
+建議只擲回及攔截衍生自 @System.Exception, 的物件，但您可以擲回任何衍生自 @System.Object 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 @System.Exception 的物件。
 
 ## <a name="common-exceptions"></a>常見的例外狀況
 
@@ -112,7 +113,7 @@ public class ProcessFile
 Common Language Runtime 會攔截 catch 區塊未攔截的例外狀況。 根據執行階段的設定方式，可能會發生下列其中一種情況：顯示偵錯對話方塊、程式停止執行並顯示內含例外狀況資訊的對話方塊，或錯誤印出至 STDERR。
 
 > [!NOTE] 
-> 幾乎所有程式碼行都能引發例外狀況，特別是 Common Language Runtime 本身擲回的例外狀況，例如 @System.OutOfMemoryException.。大部分應用程式無須處理這些例外狀況，但在撰寫供他人使用的程式庫，應留意此可能性。 如需何時在 Try 區塊中設定程式碼的建議，請參閱[例外狀況的最佳做法](#best-practices-for-exceptions)。
+> 幾乎任何一行程式碼都可能造成例外狀況，尤其是 Common Language Runtime 本身擲回的例外狀況，例如 @System.OutOfMemoryException。 大多數應用程式都不需要處理這些例外狀況，但您應該在撰寫供他人使用的程式庫時留意這點可能性。 如需何時在 Try 區塊中設定程式碼的建議，請參閱[例外狀況的最佳做法](#best-practices-for-exceptions)。
  
 ## <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>如何使用 Catch 區塊中的特定例外狀況
 
@@ -120,7 +121,7 @@ Common Language Runtime 會攔截 catch 區塊未攔截的例外狀況。 根據
 
 發生例外狀況時，該例外狀況會在堆疊中向上傳遞，讓每個 catch 區塊都有機會處理。 Catch 陳述式的順序很重要。 請將針對特定例外狀況的 catch 區塊放在一般例外狀況的 catch 區塊之前，否則編譯器可能會發出錯誤。 藉由比對 catch 區塊中指定的例外狀況類型與例外狀況名稱，即可決定正確的 catch 區塊。 如果沒有特定 catch 區塊，則會由一般 catch 區塊 (如果有的話) 攔截例外狀況。
 
-下列程式碼範例使用 `try`/`catch` 區塊攔截 @System.InvalidCastException.。此範例會建立名為的類別 `Employee` 並只具有員工層級一個屬性 (`Emlevel`) 的類別。 `PromoteEmployee` 方法會採用一個物件並遞增員工層級。 @System.InvalidCastException 會在 @System.DateTime 執行個體傳遞給 `PromoteEmployee` 方法時發生。
+下列程式碼範例使用 `try`/`catch` 區塊來攔截 @System.InvalidCastException。 此範例會建立具有員工層級 (`Emlevel`) 之單一屬性的類別，稱為 `Employee`。 `PromoteEmployee` 方法會採用一個物件並遞增員工層級。 @System.InvalidCastException 會在 @System.DateTime 執行個體傳遞給 `PromoteEmployee` 方法時發生。
 
 C#
 ```
@@ -177,7 +178,7 @@ public class Ex13
 
 發生例外狀況時，執行會停止，並將控制權交給適當的例外狀況處理常式。 這通常表示會略過您預期要執行的程式碼行。 某些資源清除作業 (例如關閉檔案) 即使擲回例外狀況也必須執行。 若要這樣做，您可以使用 `finally` 區塊。 `finally` 區塊永遠會執行，而不論是否擲回例外狀況。
 
-下列程式碼範例使用 `try`/`catch` 區塊攔截 @System.ArgumentOutOfRangeException.。`Main` 方法會建立兩個陣列，並嘗試從其中一個複製到另一個。 此動作會產生 @System.ArgumentOutOfRangeException，並會將錯誤寫入主控台。 不論複製動作的結果為何，`finally` 區塊都會執行。
+下列程式碼範例使用 `try`/`catch` 區塊來攔截 @System.ArgumentOutOfRangeException。 `Main` 方法會建立兩個陣列，並嘗試將其中一個陣列複製到另一個陣列。 此動作會產生 @System.ArgumentOutOfRangeException，並會將錯誤寫入主控台。 不論複製動作的結果為何，`finally` 區塊都會執行。
 
 C#
 ```
@@ -210,7 +211,7 @@ class ArgumentOutOfRangeExample
 
 您可以使用 `throw` 陳述式，明確擲回例外狀況。 您也可以使用 `throw` 陳述式，再次擲回所攔截的例外狀況。 建議您撰寫程式碼，將資訊加入要重新擲回的例外狀況，以在偵錯時提供更多資訊。
 
-下列程式碼範例使用 `try`/`catch` 區塊攔截可能的 @System.IO.FileNotFoundException.。下列 `try` 區塊是 `catch` 區塊，會攔截 @System.IO.FileNotFoundException，並會在找不到資料檔案時，寫入一則訊息到主控台。 下一個陳述式是 `throw` 陳述式，會擲回新的 @System.IO.FileNotFoundException ，並將文字資訊新增到例外狀況。
+下列程式碼範例使用 `try`/`catch` 區塊來攔截可能的 @System.IO.FileNotFoundException。 `try` 區塊後面會接著 `catch` 區塊，該區塊可在找不到資料檔案時攔截 @System.IO.FileNotFoundException，並將訊息寫入主控台。 下一個陳述式是 `throw` 陳述式，會擲回新的 @System.IO.FileNotFoundException ，並將文字資訊新增到例外狀況。
 
 C#
 ```
@@ -249,7 +250,7 @@ public class ProcessFile
 
 ## <a name="how-to-create-user-defined-exceptions"></a>如何建立使用者定義的例外狀況
 
-.NET 提供的例外狀況類別階層最終由基底類別 @System.Exception. 衍生而出。倘若沒有任何預先定義的例外狀況符合您的需求，您可以從 @System.Exception衍生建立您自己的例外狀況類別。
+.NET 提供基本上衍生自基底類別 @System.Exception 之例外狀況類別的階層架構。 不過，如果沒有預先定義的例外狀況符合您的需求，您可以藉由衍生自 @System.Exception 類別，建立您自己的例外狀況類別。
 
 建立您自己的例外狀況時，以文字 "Exception" 作為使用者定義例外狀況類別名稱的結尾，並實作三種常見的建構函式，如下列範例所示。 此範例會定義名為 `EmployeeListNotFoundException` 的新例外狀況類別。 此類別衍生自 @System.Exception，包含三個建構函式。
 
@@ -506,9 +507,4 @@ catch (Exception ex)
 ## <a name="see-also"></a>請參閱
 
 若要深入了解 .NET 中例外狀況的運作方式，請參閱 [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

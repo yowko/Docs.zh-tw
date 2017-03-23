@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
-ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -110,7 +111,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET 標準
 
 [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet 套件提供設定檔型 PCL 相容性。 參考包含設定檔型 PCL 的 NuGet 套件時需要此相依性。
 
-封裝成 `netstandard` 的設定檔型 PCL，會比一般封裝在 project.json 中的設定檔型 PCL 更容易使用。 現有的使用者可以使用 `netstandard` 封裝。
+封裝成 `netstandard` 的設定檔型 PCL，會比一般封裝的設定檔型 PCL 更容易使用。 現有的使用者可以使用 `netstandard` 封裝。
 
 您會看到與 .NET Standard 相容的 PCL 設定檔集合： 
 
@@ -131,9 +132,4 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET 標準
 ## <a name="targeting-net-standard-library"></a>以 .NET 標準程式庫為目標
 
 您可以搭配使用 `netstandard` 架構和 NETStandard.Library 中繼套件，來[建置 .NET 標準程式庫](../core/tutorials/libraries.md)。 您可以看到[使用 .NET Core 工具將 .NET 標準程式庫設為目標](../core/packages.md)的範例 。
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -1,0 +1,93 @@
+---
+title: "運算式會遞迴地呼叫包含的屬性 &quot;&lt;propertyname&gt;&quot; |Microsoft 文件"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc42026
+- BC42026
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42026
+ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
+caps.latest.revision: 10
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ca20bf1a539f2727a80f8e781c1e9ebc5a4a253d
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>運算式會遞迴地呼叫包含的屬性 '&lt;propertyname&gt;'
+中的陳述式`Set`屬性定義的程序將值儲存到屬性的名稱。  
+  
+ 保留的屬性值的建議的方法是定義`Private`屬性的容器中的變數並將它用於兩者`Get`和`Set`程序。 `Set`程序應該然後將內送值儲存在這個`Private`變數。  
+  
+ `Get`程序的行為類似`Function`程序，以便將值指派給屬性的名稱並將控制權傳回所遇到`End Get`陳述式。 建議的方法，不過，是要包含`Private`變數中的值為[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)。  
+  
+ `Set`程序的行為類似`Sub`程序，不會傳回值。 因此，程序或屬性名稱有內沒有特殊意義`Set`程序中，而且您無法將值儲存到其中。  
+  
+ 下列範例說明可能會造成這個錯誤，後面接著的建議方法的方法。  
+  
+```  
+Public Class illustrateProperties  
+' The code in the following property causes this error.  
+    Public Property badProp() As Char  
+        Get  
+            Dim charValue As Char  
+            ' Insert code to update charValue.  
+            badProp = charValue  
+        End Get  
+        Set(ByVal Value As Char)  
+            ' The following statement causes this error.  
+            badProp = Value  
+            ' The value stored in the local variable badProp  
+            ' is not used by the Get procedure in this property.  
+        End Set  
+    End Property  
+' The following code uses the recommended approach.  
+    Private propValue As Char  
+    Public Property goodProp() As Char  
+        Get  
+            ' Insert code to update propValue.  
+            Return propValue  
+        End Get  
+        Set(ByVal Value As Char)  
+            propValue = Value  
+        End Set  
+    End Property  
+End Class  
+```  
+  
+ 根據預設，這個訊息是一個警告。 如需隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+  
+ **錯誤識別碼︰** BC42026  
+  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
+  
+-   請重寫的屬性定義，以使用建議的方法，在上述範例中所示。  
+  
+## <a name="see-also"></a>另請參閱  
+ [Property 程序](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
+ [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)   
+ [Set 陳述式](../../../visual-basic/language-reference/statements/set-statement.md)

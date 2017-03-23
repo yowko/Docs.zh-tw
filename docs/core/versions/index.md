@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -129,33 +129,28 @@ GitHub 上的 .NET Core 儲存機制每天都有認可和 PR，進而產生許�
 
 .NET Core v1.0.0 穩定版本出貨之後，新的 API 新增至 .NET Core 程式庫，以啟用新案例。 各種中繼套件會更新，參考更新過的 .NET Core 程式庫套件。 中繼套件的版本建立為修補程式更新 (x.y) 以符合較高的架構版本。 各種架構已更新為說明新的 API。 新的 .NET Core 散發套件發行時，版本號碼會與 `Microsoft.NETCore.App` 中繼套件相符。
 
-您可以在下列 project.json 範例中看到示範的次要更新。
+您可以在下列專案檔中看到示範的次要更新：
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
-  "frameworks": {
-    "netcoreapp1.1": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
 ### <a name="shipping-a-major-release"></a>主要版本出貨
 
 對於 .NET Core v1.y.z 穩定版本，新的 API 已新增至 .NET Core 程式庫，以啟用主要的新案例。 或許，不再支援某個平台。 各種中繼套件會更新，參考更新過的 .NET Core 程式庫套件。 `Microsoft.NETCore.App` 中繼套件和 `netcore` 架構的版本建立為主要更新 (x.)。 `NETStandard.Library` 中繼套件的版本可能建立為次要更新 (x.y)，因為它適用於多個 .NET 實作。 新的 .NET Core 散發套件發行時，版本號碼會與 `Microsoft.NETCore.App` 中繼套件相符。
 
-您可以在下列範例中的 project.json 中繼套件參考看到示範的主要更新。
+您可以在下列專案檔中看到示範的主要更新 (請注意，`netcoreapp2.0` 尚未發行)。
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "2.0.0"
-  },
-  "frameworks": {
-    "netcoreapp2.0": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
 ```
 

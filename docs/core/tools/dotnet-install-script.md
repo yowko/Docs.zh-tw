@@ -4,41 +4,42 @@ description: "了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI
 keywords: "dotnet-install, dotnet-install 指令碼, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/12/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
+ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
+ms.sourcegitcommit: 99254f84873003496ee00214d55ff908f9fd47d3
+ms.openlocfilehash: 6301fb61be27d7dac6ead57159c0d9461b3eacb5
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
-> [!WARNING]
-> 本主題適用於 .NET Core 工具 Preview 2。 .NET Core 工具 RC4 版本，請參閱 [dotnet-install 指令碼參考 (.NET Core 工具 RC4)](../preview3/tools/dotnet-install-script.md) 主題。
-
 ## <a name="name"></a>名稱
-`dotnet-install.ps1` | `dotnet-install.sh` - 用來安裝命令列介面 (CLI) 工具和共用執行階段的指令碼。
+
+`dotnet-install.ps1` | `dotnet-install.sh` - 用來安裝 .NET Core 命令列介面 (CLI) 工具和共用執行階段的指令碼。
 
 ## <a name="synopsis"></a>概要
 Windows：
 
-`dotnet-install.ps1 [-Channel] [-Version]
-    [-InstallDir] [-Debug] [-NoPath] 
-    [-SharedRuntime]`
+```
+dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture]
+    [-SharedRuntime] [-DebugSymbols] [-DryRun] [-NoPath] [-AzureFeed] [-ProxyAddress]
+```
 
 macOS/Linux：
 
-`dotnet-install.sh [--channel] [--version]
-    [--install-dir] [--debug] [--no-path] 
-    [--shared-runtime]`
+```
+dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture]
+    [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]
+```
 
 ## <a name="description"></a>描述
-`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。 您可以從 [CLI GitHub 存放庫](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/scripts/obtain)下載指令碼。 
+`dotnet-install` 指令碼用來執行 CLI 工具鏈和共用執行階段的非 Admin 安裝。 您可以從 [CLI GitHub 存放庫](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain)下載指令碼。 
 
 其主要使用案例是要協助自動化案例和非 Admin 安裝。 有兩個指令碼，一個適用於在 Windows 上運作的 PowerShell，以及在 Linux/OS X 上運作的 Bash 指令碼。兩者的行為相同。 Bash 指令碼也會「了解」PowerShell 參數，讓您可以跨面板使用它們。 
 
@@ -62,48 +63,97 @@ macOS/Linux：
 
 `-Version [VERSION]`
 
-要安裝的 CLI 版本；您需要將版本指定為 3 部分的版本 (例如，1.0.0-13232)。 省略時，將預設為包含 `version` 屬性的第一個 [global.json](global-json.md)；如果不存在，則會使用最新版本。     
+要安裝的 CLI 版本。 您需要將版本指定為 3 部分的版本 (例如 1.0.0-13232)。 省略時，將預設為包含 `version` 屬性的第一個 [global.json](global-json.md)。 如果不存在，則會使用最新版本。
 
 `-InstallDir [DIR]`
 
-要在其中安裝的路徑。 如果目錄不存在，則會建立它。 預設值是 *%LocalAppData%\Microsoft\dotnet*。
+要在其中安裝的路徑。 如果目錄不存在，則會建立它。 預設值為 *%LocalAppData%\.dotnet*。
 
-`-Debug`
+`-Architecture [ARCH]`
 
-`true` 表示應該使用包含偵錯符號的較大套件；否則為 `false`。 預設值是 `false`。
-
-`-NoPath`
-
-`true` 表示 prefix/installdir 未匯出至目前工作階段的路徑；否則為 `false`。 預設值是 `false`，即已修改 PATH。 如此可讓 CLI 工具在安裝之後立即可用。 
+要安裝的 .NET Core 二進位檔架構。 可能的值為 &lt;auto&gt;、x64 和 x86。 預設值為 &lt;auto&gt;，代表目前正在執行的 OS 架構。
 
 `-SharedRuntime`
 
-`true` 僅安裝共用執行階段位元；`false` 則安裝整個 SDK。 預設值是 `false`。
+如果設定，則僅安裝共用執行階段位元，而不是整個 SDK。
+
+`-DebugSymbols`
+
+如果設定，安裝程式會在安裝中包含偵錯符號。
+
+> [!NOTE]
+> 此參數目前沒有作用。
+
+`-DryRun`
+
+如果設定，指令碼將不會執行安裝，而是會顯示以一致的方式安裝目前要求的 .NET CLI 版本時所要使用的命令列。 例如，如果您指定 `latest` 版本，則會顯示特定版本的連結，以便可在建置指令碼中明確使用此命令。
+如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。
+
+`-NoPath`
+
+如果設定，則不會將 prefix/installdir 匯出至目前工作階段的路徑。 根據預設，指令碼將會修改此路徑，以在安裝後立即提供 CLI 工具。
+
+`-AzureFeed`
+
+可供此安裝程式使用的 Azure 摘要 URL。 不建議變更。 預設為 `https://dotnetcli.azureedge.net/dotnet`。
+
+`-ProxyAddress`
+
+如果設定，安裝程式將會使用此 Proxy 進行 Web 要求。
 
 ### <a name="bash-macoslinux"></a>Bash (macOS/Linux)
+
+`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture]
+    [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]
+`
+
 `--channel [CHANNEL]`
 
-從中安裝的通道 (例如 "future"、"preview"、"production")。 預設值是 "Production"。
+從中安裝的通道 (例如 "future"、"dev"、"production")。 預設值是 "Production"。
 
 `--version [VERSION]`
 
-要安裝的 CLI 版本；您需要將版本指定為 3 部分的版本 (例如，1.0.0-13232)。 省略時，將預設為包含 `version` 屬性的第一個 [global.json](global-json.md)；如果不存在，則會使用最新版本。     
+要安裝的 CLI 版本。 您需要將版本指定為 3 部分的版本 (例如 1.0.0-13232)。 省略時，將預設為包含 `version` 屬性的第一個 [global.json](global-json.md)。 如果不存在，則會使用最新版本。
 
 `--install-dir [DIR]`
 
 要在其中安裝的路徑。 如果目錄不存在，則會建立它。 預設值是 `$HOME/.dotnet`。
 
-`--debug`
+`--architecture [ARCH]`
 
-`true` 表示應該使用包含偵錯符號的較大套件；否則為 `false`。 預設值是 `false`。
-
-`--no-path`
-
-`true` 表示 prefix/installdir 未匯出至目前工作階段的路徑；否則為 `false`。 預設值是 `false`，即已修改 PATH。 如此可讓 CLI 工具在安裝之後立即可用。  
+要安裝的 .NET 二進位檔架構。 可能的值為 &lt;auto&gt;、x64 和 amd64。 預設值為 &lt;auto&gt;，代表目前正在執行的 OS 架構。
 
 `--shared-runtime`
 
-`true` 僅安裝共用執行階段位元；`false` 則安裝整個 SDK。 預設值是 `false`。
+如果設定，則僅安裝共用執行階段位元，而不是整個 SDK。
+
+`--debug-symbols`
+
+如果設定，安裝程式會在安裝中包含偵錯符號。
+
+> [!NOTE]
+> 此參數目前沒有作用。
+
+`--dry-run`
+
+如果設定，指令碼將不會執行安裝，而是會顯示以一致的方式安裝目前要求的 .NET CLI 版本時所要使用的命令列。 例如，如果您指定 `latest` 版本，則會顯示特定版本的連結，以便可在建置指令碼中明確使用此命令。
+如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。
+
+`--no-path`
+
+如果設定，則不會將 prefix/installdir 匯出至目前工作階段的路徑。 根據預設，指令碼將會修改此路徑，以在安裝後立即提供 CLI 工具。
+
+`--verbose`
+
+顯示診斷資訊。
+
+`--azure-feed`
+
+可供此安裝程式使用的 Azure 摘要 URL。 不建議變更。 預設為 `https://dotnetcli.azureedge.net/dotnet`。
+
+`--help`
+
+印出指令碼的說明。
 
 ## <a name="examples"></a>範例
 
@@ -126,9 +176,3 @@ Windows：
 macOS/Linux：
 
 `./dotnet-install.sh --channel preview --install-dir ~/cli`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-
