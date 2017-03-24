@@ -29,7 +29,7 @@ ms.lasthandoff: 03/02/2017
 
 以下是一個小程式，說明如何有效率地得知執行階段的資料結構類型：
 
-```cs
+```csharp
   using System;
   using System.Collections;
   using System.Collections.Generic;

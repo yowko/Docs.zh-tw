@@ -38,7 +38,7 @@ P/Invoke 是一種技術，可讓您從 Managed 程式碼存取結構、回撥�
 
 讓我們從最常見的範例中著手，像是在 Managed 程式碼中呼叫 Unmanaged 函式。 現在從命令列應用程式顯示訊息方塊︰
 
-```cs
+```csharp
 using System.Runtime.InteropServices;
 
 public class Program {
@@ -66,7 +66,7 @@ public class Program {
 
 此範例和 macOS 上的方法類似。 當然，其中有一個項目有所不同，此項目為 `DllImport` 屬性中程式庫的名稱，因為 macOS 命名動態程式庫有不同的配置。 下列範例使用 `getpid(2)` 函式，以取得應用程式的處理序識別碼，並將其列印至主控台。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -89,7 +89,7 @@ namespace PInvokeSamples {
 
 當然，這和在 Linux 上的處理方式類似。 函式名稱相同，是因為 `getpid(2)` 為 [POSIX](https://en.wikipedia.org/wiki/POSIX) 系統呼叫。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -116,7 +116,7 @@ namespace PInvokeSamples {
 
 使用這項功能的方式和上述將 Managed 轉換至原生程序類似。 針對指定的回撥，您可定義符合簽章的委派，並將它傳遞至外部方法。 執行階段會處理其他項目。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -160,7 +160,7 @@ namespace ConsoleApplication1 {
 
 Linux 和 macOS 的範例如下所示。 針對這些作業系統，我們使用 `ftw` 函式，其可在 C 程式庫 `libc` 中找到。 此函式用來周遊目錄階層，並會將函式指標作為其參數之一。 此函式具有下列簽章：`int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -213,7 +213,7 @@ namespace PInvokeSamples {
 
 macOS 範例使用相同的函式，而唯一的差別在於 `DllImport` 屬性的引數，macOS 將 `libc` 放置於不同位置。
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -272,7 +272,7 @@ namespace PInvokeSamples {
 
 因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 比方說，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的、ASCII 等等。依預設，P/Invoke 子系統會嘗試執行以預設行為為基礎的正確動作，您可以在 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) 查看這些動作。 不過，在您需要進行額外控制的情況下，您可以運用 `MarshalAs` 屬性來指定 Unmanaged 這一端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
 
-```cs
+```csharp
 [DllImport("somenativelibrary.dll"]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
@@ -282,7 +282,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 封送處理類型的另一個層面是如何將結構傳遞給 Unmanaged 方法。 比方說，有些 Unmanaged 方法需要結構以作為參數。 在這些情況下，我們需要建立對應的結構或類別，以將它作為 Managed 項目中的參數。 不過，只定義類別是不夠的，我們也必須指示封送處理器如何將類別中的欄位對應至 Unmanaged 結構。 這正是 `StructLayout` 屬性派上用場的時候。
 
-```cs
+```csharp
 [DllImport("kernel32.dll")]
 static extern void GetSystemTime(SystemTime systemTime);
 
@@ -324,7 +324,7 @@ typedef struct _SYSTEMTIME {
 
 我們已經在上述範例中看到了此步驟的 Linux 和 macOS 範例。 下方會再示範一次。
 
-```cs
+```csharp
 [StructLayout(LayoutKind.Sequential)]
 public class StatClass {
         public uint DeviceID;

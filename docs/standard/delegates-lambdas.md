@@ -21,7 +21,7 @@ ms.lasthandoff: 03/02/2017
 
 委派可定義指定特定方法簽章的類型。 符合此簽章的方法 (靜態或執行個體) 可指派給該類型的變數，然後直接呼叫 (使用適當的引數)，或當做引數本身傳遞至另一個方法，再進行呼叫。 下列範例示範委派的用法。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -55,7 +55,7 @@ public class Program
 
 我們現在可以使用 `Func<>` 委派取代自訂類型，針對上述範例進行重寫。 程式會以完全相同的方式繼續執行。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -78,7 +78,7 @@ public class Program
 
 例如，我們將切換設定，並使用匿名委派篩選出只有偶數的清單，然後列印至主控台。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -115,7 +115,7 @@ Lambda 運算式 (簡稱 “Lambda”) 最先是在 C# 3.0 中，當做 Language
 
 因為 Lambda 運算式不過是指定委派的另一種方式，所以我們應該能夠重寫上述範例，使用 Lambda 運算式取代匿名委派。
 
-```cs
+```csharp
 public class Program
 {
 
@@ -143,7 +143,7 @@ public class Program
 
 同樣地，Lambda 就是委派，這表示它們可當做事件處理常式使用，而不會有任何問題，如下列程式碼片段所示。
 
-```cs
+```csharp
 public MainWindow()
 {
     InitializeComponent();
