@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
+ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 03/07/2017
 
 正式規格是一組定義 API 的 .cs 檔案，這些 API 是標準的一部分。 每個[元件](https://github.com/dotnet/corefx/tree/master/src)的 [ref 目錄](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref)會定義 .NET 標準程式庫 API。 雖然參考成品位於 [CoreFX 儲存機制](https://github.com/dotnet/corefx)，但不是 .NET Core 的特定成品。
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 中繼套件 ([原始程式碼](https://github.com/dotnet/corefx/blob/master/pkg/NETStandard.Library/NETStandard.Library.packages.targets)) 描述定義 (部分) 一個或多個 .NET 標準程式庫版本的程式庫集合。
+[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 中繼套件 ([原始程式碼](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) 描述定義 (部分) 一個或多個 .NET 標準程式庫版本的程式庫集合。
 
 System.Runtime 等指定元件描述：
 

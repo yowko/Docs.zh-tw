@@ -3,17 +3,17 @@ title: ".NET 教學課程"
 description: ".NET 平台某些重要功能的逐步導覽。"
 keywords: ".NET, .NET Core, 教學課程, 程式設計語言, 不安全, 記憶體管理, 型別安全, 非同步處理"
 author: cartermp
-manager: wpickett
-ms.author: phcart
-ms.date: 11/16/2016
+ms.author: wiwagn
+ms.date: 02/09/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 2c57b5cebd63b1d94b127cd269e3b319fb24dd97
-ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
+ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
+ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -34,7 +34,7 @@ ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
 
 ## <a name="programming-languages"></a>程式語言
 
-.NET 支援多種程式設計語言。  .NET 執行階段實作[通用語言基礎結構 (CLI)](https://www.visualstudio.com/en-us/mt639507)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。  這表示您可以選擇任何 .NET 語言，在 .NET 上建置 App 與服務。
+.NET 支援多種程式設計語言。  .NET 執行階段實作[通用語言基礎結構 (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。  這表示您可以選擇任何 .NET 語言，在 .NET 上建置 App 與服務。
 
 Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic .NET。 
 
@@ -54,21 +54,27 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 沒有類似的關鍵字可取消配置記憶體，因為當記憶體回收行程透過其排程執行回收記憶體時，就會自動取消配置。
 
-指定範圍內的類型通常會在方法完成之後移出範圍，此時可加以收集。 不過，您可以在方法結束之前，使用 `using` 陳述式對 GC 指出特定物件超出範圍：
+記憶體回收行程只是服務之一，可確保*記憶體安全*。  確保記憶體永遠安全並不困難︰如果程式只存取已配置的記憶體 (而不是釋放的記憶體)，就是記憶體安全。  例如，執行階段可確保程式在編製索引時不會偏離陣列結尾，也不會存取物件結尾以外之處的虛設項目欄位。
+
+在下列範例中，執行階段將會擲回執行階段`InvalidIndexException`例外狀況來確保記憶體安全。
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
-`using` 區塊完成之後，GC 就會知道先前範例中的 `stream` 物件可加以收集，並回收其記憶體。
+## <a name="working-with-unmanaged-resources"></a>使用 Unmanaged 資源
 
-此規則在 F# 中的語意稍有不同。  若要深入了解 F# 中的資源管理，請參閱[資源管理：`use` 關鍵字](../fsharp/language-reference/resource-management-the-use-keyword.md)
+有一些物件會參考 *Unmanaged 資源*。 Unmanaged 的資源是指 .NET 執行階段不會自動維護的資源。  例如檔案控制代碼就是 Unmanaged 資源。  @System.IO.FileStream 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。  當您結束使用 FileStream 之後，必須釋放檔案控制代碼。
 
-記憶體回收行程會啟用一項較不明顯、但具有深遠影響的功能，那就是記憶體安全。 確保記憶體永遠安全並不困難︰如果程式只存取已配置的記憶體 (而不是釋放的記憶體)，就是記憶體安全。 懸置的指標一律是錯誤，而追蹤其來源通常很困難。
+在.NET 中，參考 Unmanaged 資源的物件會實作 @System.IDisposable 介面。  當您完成使用此物件，您可以呼叫物件的 @System.IDisposable.Dispose 方法來釋放任何 Unmanaged 資源。  .NET 語言為這類物件提供了 `using` 語法，此語法十分方便，如下列範例所示︰
 
-.NET 執行階段提供其他服務，來達成記憶體安全的承諾 (GC 原本並未提供)。 它可確保程式不會從陣列結尾編製索引，也不會從物件結尾取出虛設項目欄位。
+[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-下列範例會擲回例外狀況，以作為記憶體安全的結果。
+當 `using` 區塊完成後，.NET 執行階段會自動呼叫 `stream` 物件的 @System.IDisposable.Dispose 方法來釋放檔案控制代碼。  當例外狀況造成控制項離開區塊時，執行階段也會執行此作業。
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+如需詳細資料，請參閱下列頁面︰
+
+* C#：[sing 陳述式](../csharp/language-reference/keywords/using-statement.md)
+* F #：[資源管理︰`use` 關鍵字](../fsharp/language-reference/resource-management-the-use-keyword.md)
+* Visual Basic：[Using 陳述式](../visual-basic/language-reference/statements/using-statement.md)
 
 ## <a name="type-safety"></a>型別安全
 
@@ -102,7 +108,7 @@ F# 提供比 C# 和 Visual Basic 中的方法內部型別推斷更進步的型�
 
 新增泛型功能是為了協助程式設計師實作泛型資料結構。 在此功能之前，若要讓 `List` 型別成為泛型，您必須使用 `object` 類型的元素。 這樣做會有各種效能及語意問題，更別提可能會有難以解決的執行階段錯誤。 後者最糟的情況是當資料結構同時包含整數與字串時，而且會在使用清單的成員時擲回 `InvalidCastException`。
 
-下列範例顯示使用 @System.Collections.Generic.List%601 型別執行個體的基本程式正在執行。
+下列範例示範使用 @System.Collections.Generic.List%601 類型之執行個體執行的基本程式。
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
@@ -147,8 +153,4 @@ CLR 可讓您透過 `unsafe` 程式碼存取原生記憶體及執行指標算術
 若要開始撰寫自己的程式碼，請參閱[入門](getting-started.md)。
 
 若要了解重要的 .NET 元件，請參閱 [.NET 架構元件](components.md)。
-
-
-<!--HONumber=Nov16_HO3-->
-
 
