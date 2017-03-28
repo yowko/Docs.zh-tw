@@ -1,38 +1,64 @@
 ---
 title: "get (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "get_CSharpKeyword"
-  - "get"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "get 關鍵字 [C#]"
+ms.date: 2017-03-10
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- get_CSharpKeyword
+- get
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: cdd3107a9e23e2f41a412390c8a723d4366e3952
+ms.lasthandoff: 03/13/2017
+
 ---
-# get (C# 參考)
-`get` 關鍵字會在擷取屬性或索引子項目值的屬性或索引子中定義「*存取子*」\(Accessor\) 方法。  如需詳細資訊，請參閱 [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
+# <a name="get-c-reference"></a>get (C# 參考)
+
+`get` 關鍵字會在屬性或索引子中定義「存取子」**方法，以傳回屬性值或索引子項目。 如需詳細資訊，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
   
- 下列是名為 `Seconds` 之屬性的 `get` 存取子範例：  
+下列範例會為名為 `Seconds` 的屬性定義 `get` 和 `set` 存取子。 它使用名為 `_seconds` 的私用欄位來支援屬性值。  
+ 
+ [!code-cs[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
- [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_1.cs)]  
+`get` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7 開始，您可以將 `get` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
+
+ [!code-cs[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
+ 
+如果屬性的 `get` 和 `set` 存取子只會設定或擷取私用支援欄位中的值，而不會執行其他作業，在此簡單的情況下，您可以利用 C# 編譯器的自動實作屬性支援。 下列程式碼範例將 `Hours` 實作為自動實作屬性。 
   
- 這是自動實作屬性中 `get` 存取子的範例：  
+ [!code-cs[get#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
   
- [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_2.cs)]  
+## <a name="c-language-specification"></a>C# 語言規格
+
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
-  
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+ [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+
