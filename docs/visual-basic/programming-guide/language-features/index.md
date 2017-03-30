@@ -1,94 +1,110 @@
 ---
-title: "Visual Basic Language Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, elements of"
-  - "Visual Basic code"
+title: "Visual Basic 語言功能 | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, elements of
+- Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Visual Basic Language Features
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
+ms.lasthandoff: 03/13/2017
 
-下列主題將介紹並討論物件導向程式設計語言 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 的基本元件。  在使用表單和控制項為應用程式建立使用者介面後，您將需要撰寫定義應用程式行為的程式碼。  與現代的程式設計語言一樣，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 支援多種通用的程式設計建構和語言項目。  
+---
+# <a name="visual-basic-language-features"></a>Visual Basic 語言功能
+下列主題介紹及討論 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] (一種物件導向的程式設計語言) 的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 和任何新式的程式設計語言一樣，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 支援許多通用的程式設計建構和語言元素。  
   
- 如果您曾以其他語言進行程式設計，則本章節所包含的大多數內容對您而言可能會似曾相識。  雖然多數建構與其他語言的建構類似，但 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 的事件驅動 \(Event\-Driven\) 特性還是會造成些許的差異。  
+ 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的建構類似於其他語言中的建構，但 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 的事件導向本質還是引進了部分些微差異。  
   
- 如果您是第一次設計程式，本章節的資料可當做撰寫程式碼之基本建置組塊 \(Building Block\) 的簡介。  一旦了解基本概念之後，您就能夠使用 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 建立功能強大的應用程式。  
+ 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念之後，就可以使用 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 來建立功能強大的應用程式。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- 討論如何藉由宣告和使用陣列 \(其中保存多個相關的值\)，讓程式碼更為簡潔有力。  
+ 討論如何宣告和使用陣列來保留多個相關聯的值，藉以讓您的程式碼更精簡且功能更強大。  
   
  [集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- 說明集合初始設定式，可讓您建立的集合並填入一組初始的值。  
+ 說明集合初始設定式，可讓您建立集合，並填入一組初始值。  
   
  [常數和列舉](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- 討論如何儲存不變的值以便重複使用，包括相關常數值的集合。  
+ 討論儲存不會變動的值以便重複使用，包括相關常數值的集合。  
   
  [控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- 顯示如何調整程式的執行流程。  
+ 示範如何規範程式的執行流程。  
   
- [資料型別](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- 說明程式設計項目可以保存哪些資料類型，以及如何儲存該資料。  
+ [資料類型](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ 說明程式設計元素可保存的資料種類，以及該資料的儲存方式。  
   
  [宣告項目](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- 內容涵蓋您可以宣告的程式設計項目、這些項目的名稱和特性，以及編譯器 \(Compiler\) 如何解析這些項目的參考。  
+ 涵蓋您可以宣告的程式設計元素、它們的名稱和特性，以及編譯器如何解析對它們的參考。  
   
- [委派](../../../visual-basic/programming-guide/language-features/delegates/delegates.md)  
- 提供委派和其在 Visual Basic 中用法的簡介。  
+ [委派](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ 提供委派的簡介，以及在 Visual Basic 中的使用方法。  
   
- [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md)  
- 描述繫結，也就是編譯器 \(Compiler\) 在物件指派給物件變數時執行的動作，另外也說明早期繫結物件與晚期繫結物件間的差異。  
+ [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ 說明繫結 (將物件指派給物件變數時，會由編譯器執行)，以及早期繫結和晚期繫結物件之間的差異。  
   
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)  
- 提供語法錯誤、執行階段錯誤和邏輯錯誤等概觀。  
+ [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ 提供語法錯誤、執行階段錯誤和邏輯錯誤的概觀。  
   
- [事件](../../../visual-basic/programming-guide/language-features/events/events.md)  
- 顯示如何宣告和使用事件。  
+ [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ 示範如何宣告和使用事件。  
   
  [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- 描述介面以及在應用程式中的用法簡介。  
+ 說明何謂介面，以及如何在應用程式中使用它們。  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- 提供主題連結，介紹 [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)] 的功能和程式設計。  
+ 提供主題連結來介紹 [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)] 功能和程式設計。  
   
  [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- 提供物件和類別的概觀、使用的方式、彼此之間的關係，以及所公開的屬性、方法和事件。  
+ 提供物件和類別的概觀、它們的使用方式、其彼此間的關聯性，以及它們所公開的屬性、方法和事件。  
   
  [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- 說明管理保存值之項目的程式碼項目、如何有效使用這些項目，以及如何結合這些項目以產生新的值。  
+ 說明處理保存值元素的核心元素、如何有效地使用它們，以及如何結合它們來產生新值。  
   
  [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- 描述 `Sub`、`Function`、`Property` 和 `Operator`，以及遞迴和多載程序等進階主題。  
+ 說明 `Sub`、`Function`、`Property` 及 `Operator` 程序，以及像是遞迴和多載程序等進階主題。  
   
  [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)  
- 說明宣告和可執行陳述式。  
+ 說明宣告和可執行的陳述式。  
   
  [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- 提供如何在 Visual Basic 中使用字串之基本概念的說明主題連結。  
+ 提供主題連結來描述有關在 Visual Basic 中使用字串的基本概念。  
   
  [變數](../../../visual-basic/programming-guide/language-features/variables/index.md)  
- 介紹變數並說明在 Visual Basic 中的用法。  
+ 介紹變數，並說明如何在 Visual Basic 中使用它們。  
   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
- 提供說明如何在 Visual Basic 中使用 XML 的主題連結。  
+ 提供主題連結來說明如何在 Visual Basic 中使用 XML。  
   
-## 相關章節  
- [集合](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)  
- 說明部份的集合所提供的類型。NET Framework。  示範如何使用簡單的集合和集合的索引鍵\/值組。  
+## <a name="related-sections"></a>相關章節  
+ [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ 說明部分由 .NET Framework 提供的集合型別。 示範如何使用簡單集合及金鑰/值組集合。  
   
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
- 針對 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 程式設計的各種層面，提供參考資訊。
+ [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
+ 提供 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 程式設計各種層面的參考資訊。

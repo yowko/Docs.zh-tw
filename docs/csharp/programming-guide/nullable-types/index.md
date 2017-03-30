@@ -1,75 +1,94 @@
 ---
-title: "可為 Null 的類型 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 可為 null 的類型"
-  - "可為 null 的類型 [C#]"
-  - "類型 [C#], 可為 null 的"
+title: "可為 Null 的型別 (C# 程式設計指南) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- nullable types [C#]
+- C# language, nullable types
+- types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 caps.latest.revision: 44
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 44
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 75726b9864abc0c9b556085e5215c6692d80fb12
+ms.lasthandoff: 03/13/2017
+
 ---
-# 可為 Null 的類型 (C# 程式設計手冊)
-可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=fullName> 結構的執行個體。  可為 Null 的型別能夠代表其基礎實值型別的正確值範圍，加上其他 `null` 值。  例如，`Nullable<Int32>` \(念法是 "Nullable of Int32"\)，可以指派為從 \-2147483648 到 2147483647 的任何值，或是可以指派為 `null` 值。  `Nullable<bool>` 可以指派為 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 的值。  在處理資料庫以及包含並未指派值之項目的其他資料型別時，將 `null` 指派給數字和布林型別的功能就特別有用。  例如，資料庫中的布林欄位能夠儲存值 `true` 或 `false`，或者也可能未定義。  
+# <a name="nullable-types-c-programming-guide"></a>可為 Null 的類型 (C# 程式設計手冊)
+可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=fullName> 結構的執行個體。 可為 Null 的型別可以代表其基礎值型別的正確值範圍，再加上額外的 `null` 值。 例如，您可以將範圍從 -2147483648 到 2147483647 的任何值指派給 `Nullable<Int32>` (發音為「Nullable of Int32」)，或為它指派 `null` 值。 您可以為 `Nullable<bool>` 指派下列值：[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md)。 當您正在處理包含可能不會指派值之元素的資料庫和其他資料型別時，將 `null` 指派為數字或布林值型別的功能特別有用。 例如，資料庫中的布林值欄位可以儲存 `true` 或 `false` 的值，而它也可能是未定義的。  
   
  [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
- 此範例將顯示輸出；  
+ 此範例將顯示下列輸出：  
   
  `num = Null`  
   
  `Nullable object must have a value.`  
   
- 如需更多範例，請參閱 [用可為 Null 的類型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+ 如需詳細資訊，請參閱[使用可為 Null 的型別](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
-## 可為 Null 的型別概觀  
- 可為 Null 的型別有下列特性：  
+## <a name="nullable-types-overview"></a>可為 Null 的型別概觀  
+ 可為 Null 的型別特色如下：  
   
--   可為 Null 的型別代表能夠指派 `null` 值的實值型別變數。  您無法根據參考型別建立可為 Null 的型別   \(參考型別已支援 `null` 值\)  
+-   可為 Null 的型別代表可指派 `null` 值的實值型別變數。 您無法根據參考型別建立可為 Null 的型別。 (參考型別已經支援 `null` 值)。  
   
--   語法 `T?` 是 <xref:System.Nullable%601> 的簡略表示法，其中 `T` 是實值型別。  兩種格式可以互相變更  
+-   語法 `T?` 是 <xref:System.Nullable%601> 的縮寫，其中 `T` 是實值型別。 這兩種格式是可互換的。  
   
--   就像針對一般實值型別一樣，將值指派至可為 Null 的型別，例如 `int? x = 10;` 或 `double? d = 4.108`。  可為 Null 的型別亦可獲派 `null`: `int? x = null.` 值  
+-   將值指派給可為 Null 的型別，就像您針對一般實值型別所做的一樣，例如 `int? x = 10;` 或 `double? d = 4.108`。 您也可以為可為 Null 的型別指派值 `null`: `int? x = null.`  
   
--   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName> 方法傳回指派的值；若值為 `null`，則傳回基礎型別的預設值，例如  `int j = x.GetValueOrDefault();`  
+-   使用 <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName> 方法來傳回指定的值，或者，如果值為 `null`，則傳回基礎型別的預設值，例如 `int j = x.GetValueOrDefault();`  
   
--   使用 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 唯讀屬性測試 null 並擷取值，如下列範例中所示：`if(x.HasValue) j = x.Value;`  
+-   使用 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 唯讀屬性來測試是否為 Null 並擷取值，如下列範例所示︰`if(x.HasValue) j = x.Value;`  
   
-    -   如果該變數包含值，則 `HasValue` 屬性傳回 `true`，如果是 `null` 則傳回 `false`。  
+    -   如果變數包含值，`HasValue` 屬性就會傳回 `true`，或者，如果它是 `null`，則會傳回 `false`。  
   
-    -   如果有指派值，`Value` 屬性便會傳回值。  否則，會擲回 <xref:System.InvalidOperationException?displayProperty=fullName>。  
+    -   如果指派了其中一個，則 `Value` 屬性會傳回值。 否則，會擲回 <xref:System.InvalidOperationException?displayProperty=fullName>。  
   
-    -   `HasValue` 的預設值為 `false`。  `Value` 屬性沒有預設值。  
+    -   `HasValue` 的預設值為 `false`。 `Value` 屬性沒有預設值。  
   
-    -   您也可以將 `==` 和 `!=` 運算子使用於可為 Null 的型別，如下列範例所示：`if (x != null) y = x;`  
+    -   您也可以使用 `==` 和 `!=` 運算子搭配可為 Null 的型別，如下列範例所示︰`if (x != null) y = x;`  
   
--   當目前值為 `null` 的可為 Null 型別指派至不可為 Null 的型別時，請使用 `??` 運算子指派將套用的預設值，例如 `int? x = null; int y = x ?? -1;`  
+-   使用 `??` 運算子來指派預設值，在將目前值為 `null` 之可為 Null 的型別指派給非可為 Null 的型別時，將會套用此預設值，例如 `int? x = null; int y = x ?? -1;`  
   
--   不允許巢狀式可為 Null 的型別。  不會編譯下列程式碼行：`Nullable<Nullable<int>> n;`  
+-   不允許巢狀可為 Null 的型別。 系統將不會編譯下列這一行：`Nullable<Nullable<int>> n;`  
   
-## 相關章節  
- 如需詳細資訊，請參閱下列主題：  
+## <a name="related-sections"></a>相關章節  
+ 如需詳細資訊：  
   
--   [用可為 Null 的類型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+-   [使用可為 Null 的型別](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
--   [Box 處理可為 Null 的類型](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
+-   [對可為 Null 的型別進行 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
   
--   [?? 運算子](../../../csharp/language-reference/operators/null-conditional-operator.md)  
+-   [??運算子](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Nullable>   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\#](../../../csharp/csharp.md)   
- [哪些完全「被列舉的」方法?](http://go.microsoft.com/fwlink/?LinkId=112382)
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
+ [C#](../../../csharp/csharp.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [「增益」(Lift) 的真正意義是什麼？(英文)](http://go.microsoft.com/fwlink/?LinkId=112382)
+
