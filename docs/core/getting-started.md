@@ -28,7 +28,7 @@ ms.lasthandoff: 03/06/2017
 
 * [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](../csharp/getting-started/with-visual-studio-2017.md) - 了解如何使用 Visual Studio 2017 建置、偵錯和發行簡單的 .NET Core 主控台應用程式。
 * [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](../csharp/getting-started/library-with-visual-studio-2017.md) - 了解如何使用 Visual Studio 2017 建置以 C# 撰寫的類別庫
-* [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) (在 Windows 上使用 C# 和 .NET Core 開始使用 Visual Studio Code) - 此 [Channel&9;](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs)，建立您第一個 .NET Core 主控台應用程式。
+* [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) (在 Windows 上使用 C# 和 .NET Core 開始使用 Visual Studio Code) - 此 [Channel 9;](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs)，建立您第一個 .NET Core 主控台應用程式。
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
 
 如需支援的 Windows 版本清單，請參閱 [Prerequisites for Windows development](windows-prerequisites.md) (Windows 開發的必要條件) 主題。 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/06/2017
 
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
-* [Get started with VS Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) (在 macOS 上使用 C# 和 .NET Core 開始使用 VS Code) - 此 [Channel&9;](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs)，建立您第一個 .NET Core 主控台應用程式。 
+* [Get started with VS Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) (在 macOS 上使用 C# 和 .NET Core 開始使用 VS Code) - 此 [Channel 9;](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs)，建立您第一個 .NET Core 主控台應用程式。 
 * [Getting started with .NET Core on macOS, using Visual Studio Code](tutorials/using-on-macos.md) (在 macOS 上開始使用 .NET Core，使用 Visual Studio Code)：這是使用 VS Code 建立 .NET Core 解決方案的教學步驟和工作流程，所用的 VS Code 包括了單元測試、協力廠商程式庫及偵錯工具的使用方法。
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
 
