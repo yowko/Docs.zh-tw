@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d9efc2b1b8ad38a6444e7362da13ce3838476abd
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
+ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
+ms.lasthandoff: 03/28/2017
 
 ---
 
@@ -27,7 +27,7 @@ C# 指南提供與 C# 語言相關的豐富資訊。 此網站適用於許多不
     - 如果您之前已經完成開發，但剛接觸 C#，請閱讀 [C# 語言教學](tour-of-csharp/index.md)。 您將了解此語言的基本語法和結構，而您可以使用此語言教學來對比 C# 與您曾用過的其他語言。 您也可以瀏覽[教學課程](tutorials/index.md)以嘗試基本的 C# 程式。 或者，查看 [C# 概念](concepts.md)，以深入了解 C# 語言的功能。
 
 * 有經驗的 C# 開發人員：
-    - 如果您之前曾用過 C#，您一開始應該先閱讀語言最新版本的新功能。 查看 [C# 6 的新功能](csharp-6.md)，以了解目前版本的新功能。 然後，探索 [C# 的概念](concepts.md)以進行深入探討。
+    - 如果您之前曾用過 C#，您一開始應該先閱讀語言最新版本的新功能。 查看 [C# 的新功能](whats-new/index.md)，以了解目前版本的新功能。 然後，探索 [C# 的概念](concepts.md)以進行深入探討。
  
 ## <a name="how-the-c-guide-is-organized"></a>C# 指南的編排方式
 
@@ -42,7 +42,7 @@ C# 指南含有七個章節。 您可以按順序閱讀，或直接跳至您最�
 * [C# 的教學課程](tour-of-csharp/index.md)： 
     - 本節提供了此語言的摡觀。 您將了解組成 C# 程式的元素以及此語言的功能。 您將看到 C# 的所有語法元素的小型範例，以及對於主要 C# 語言主題的討論。 
 
-* [最新功能](whats-new.md)：
+* [最新功能](whats-new/index.md)：
     - 了解此語言的新功能。 了解像是 C# Interactive (C# 的 REPL) 的新工具以及 .NET 編譯器平台 SDK。 您將了解語言發展過程。 您將看到新工具如何讓您在探索語言以及將工作自動化的過程中更具生產力。 
 
 * [C# Interactive](interactive/index.md)：
