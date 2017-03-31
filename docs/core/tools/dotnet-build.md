@@ -1,22 +1,23 @@
 ---
-title: "dotnet-build 命令 | Microsoft Docs"
+title: "dotnet-build 命令 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-build 命令會建置專案和其所有相依性。"
 keywords: "dotnet-build, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 17c2db54f871795c370a6475c21e36736a6b46c3
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-build"></a>dotnet-build
+
+# <a name="dotnet-build"></a>dotnet-build
 
 ## <a name="name"></a>名稱
 
@@ -24,24 +25,21 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>概要
 
-```
-dotnet build [project] [-o|--output] [-f|--framework] [-c|--configuration] [-r|--runtime] [--version-suffix] [--no-incremental] [--no-dependencies] [-v|--verbosity]
-dotnet build [--help]
-```
+`dotnet build [<PROJECT>] [-o|--output] [-f|--framework] [-c|--configuration] [-r|--runtime] [--version-suffix] [--no-incremental] [--no-dependencies] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>描述
-`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 這些二進位檔包括用於偵錯的符號檔 (具有 `*.pdb` 副檔名)，以及中繼語言 (IL) 中的專案程式碼 (副檔名為 `*.dll`)。 另外會產生 JSON 檔案，該檔案會列出應用程式的所有相依性 (副檔名為 `*.deps.json`)。 最後，還會產生 `runtime.config.json` 檔案。 此檔案會指定所建置之程式碼將執行的共用執行階段和版本。 
 
-如果專案具有協力廠商相依性 (例如來自 NuGet 的程式庫)，這些相依性將會從 NuGet 快取解析，而不會透過專案的建置輸出提供。 因此，`dotnet build` 的結果尚未準備好轉移到另一部電腦開始執行。 這與 .NET Framework 的行為相反；在 .NET Framework 中，建置可執行檔專案 (應用程式) 將會產生可在任何已安裝 .NET Framework 的電腦上執行的輸出。 若要在 .NET Core 中取得類似體驗，您必須使用 [dotnet publish](dotnet-publish.md) 命令。 您可以在 [.NET Core 應用程式部署](../deploying/index.md)文件中找到詳細資訊。 
+`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔將專案程式碼包含在副檔名為 *.dll* 的中繼語言 (IL) 檔案中，以及副檔名為 *.pdb* 且用於偵錯的符號檔。 產生相依性的 JSON 檔案 (*\*.deps.json*)，其中列出應用程式的相依性。 產生 *\*.runtimeconfig.json* 檔案，其中指定應用程式的共用執行階段及其版本。
 
-建置會要求 *assets.json* 檔案 (列出應用程式所有相依性的檔案) 確實存在，這表示您必須先執行 [`dotnet restore`](dotnet-restore.md)，才能建置專案。 缺乏資產檔案表示工具無法解析發生錯誤的參考組件。 
+如果專案對於第三方有相依性 (例如來自 NuGet 的程式庫)，這些相依性將會從 NuGet 快取解析，而不會透過專案的建置輸出提供。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 這與 .NET Framework 的行為相反。在 .NET Framework 中，建置可執行檔專案 (應用程式) 所產生的輸出，可在任何已安裝 .NET Framework 的電腦上執行。 若要在 .NET Core 中擁有類似體驗，您可以使用 [dotnet publish](dotnet-publish.md) 命令。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。 
 
-`dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行組建和累加組建。 請參閱 [MSBuild 文件](https://docs.microsoft.com/visualstudio/msbuild/msbuild)以取得這些主題的詳細資訊。 
+建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在您建置專案前執行 [`dotnet restore`](dotnet-restore.md) 的時候建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。
 
-除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `/p`，以及用於定義記錄器的 `/l`。 您可以在 [`dotnet msbuild`](dotnet-msbuild.md) 命令文件中深入了解這些選項。 如果您想要知道何時 
+`dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行和累加建置。 如需詳細資訊，請參閱[累加建置](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds)。 
 
-專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示將產生可執行程式碼的專案： 
+除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `/p`，以及用於定義記錄器的 `/l`。 請參閱 [MSBuild 命令列參考](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference)，以深入了解這些選項。 
 
+專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示將產生可執行程式碼的專案：
 
 ```xml
 <PropertyGroup>
@@ -49,14 +47,13 @@ dotnet build [--help]
 </PropertyGroup>
 ```
 
-若要產生程式庫，只要省略該屬性即可。 輸出中的主要差異在於程式庫的 IL DLL 將不會包含任何進入點，而且無法執行。 
+若要產生程式庫，只要省略 `<OutputType>` 屬性即可。 建置輸出的主要差別在於，程式庫的 IL DLL 不包含進入點，而且無法執行。 
 
 ## <a name="arguments"></a>引數
 
-`project`
+`PROJECT`
 
-要建置的專案檔。
-如果未指定專案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 `proj` 的檔案，並使用該檔案。
+要建置的專案檔。 如果未指定專案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 的檔案，並使用該檔案。
 
 ## <a name="options"></a>選項
 
@@ -70,29 +67,29 @@ dotnet build [--help]
 
 `-f|--framework <FRAMEWORK>`
 
-針對特定架構進行編譯。 架構必須定義於[專案檔](csproj.md)中。
+針對特定[架構](../../standard/frameworks.md)進行編譯。 架構必須定義於[專案檔](csproj.md)中。
 
-`-c|--configuration [Debug|Release]`
+`-c|--configuration <CONFIGURATION>`
 
-定義用來建置的組態。 如果省略，會預設為 `Debug`。
+定義組建組態。 如果省略，則組建組態的預設值為 `Debug`。 使用 `Release` 建置發行組態。
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
-要建置的目標執行階段。 如需您可以使用的執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
-定義專案檔的 version 欄位中應該取代的 `*`。 格式遵循 NuGet 的版本指導方針。
+定義專案檔版本欄位中星號 (`*`) 的版本尾碼。 格式遵循 NuGet 的版本指導方針。
 
 `--no-incremental`
 
-針對累加建置，將建置標示為不安全。 這會關閉累加編譯，並強制全新重建專案相依性圖形。
+針對累加建置，將建置標示為不安全。 這會關閉累加編譯，並強制全新重建專案的相依性關係圖。
 
 `--no-dependencies`
 
-忽略專案對專案參考，並且只會建置指定要建置的根專案。
+忽略專案對專案 (P2P) 參考，並且只建置指定要建置的根專案。
 
-`-v|--verbosity`
+`-v|--verbosity <LEVEL>`
 
 設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
@@ -109,3 +106,4 @@ dotnet build [--help]
 針對特定執行階段，建置專案和其相依性 (在此範例中為 Ubuntu 16.04)：
 
 `dotnet build --runtime ubuntu.16.04-x64`
+

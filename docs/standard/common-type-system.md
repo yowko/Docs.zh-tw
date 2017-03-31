@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 58c0d68b6840a07c9e5eb1848b3531181f14e973
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: 1680934b40c3055d2c33ed7457d8734dccbd0a8c
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/02/2017
 *   建立跨語言執行的架構。
 *   提供物件導向模型，以支援在 .NET 平台上實作各種語言。
 *   定義所有語言在需要處理類型時必須遵循的一組規則。
-*   提供包含應用程式開發時使用之基本原始類型 (即 `Boolean`、`Byte`、`Char` 等) 的程式庫。
+*   提供包含基礎基本型別 (例如 `Boolean`、`Byte`、`Char` 等) 的程式庫，以便用於應用程式開發。
 
 CTS 定義應該支援的兩種主要類型︰參考和實值類型。 它們的名稱會指向其定義。
 

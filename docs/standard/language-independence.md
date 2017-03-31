@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -195,7 +195,7 @@ Members | [一般類型成員](#type-members-in-general) | vararg 條件約束�
 多載化 | -- | 如果在有相同名稱的類型中宣告兩個或更多符合 CLS 標準的方法，則對一組特定的類型具現化來說，它們具有相同的參數和傳回型別，而且所有這些方法在語意上與這些類型具現化相等。 | 48
 屬性 | [屬性](#properties) | 實作屬性之 getter 和 setter 方法的方法在中繼資料中應標記為 `SpecialName`。 | 24
 屬性 | [屬性](#properties) | 屬性的存取子必須全部為 static、全部為 virtual 或全部為 instance。 | 26
-屬性 | [屬性](#properties) | 屬性的類型應是 getter 的傳回型別和 setter 最後一個引數的類型。 屬性參數的類型必須是 getter 參數的類型和 setter 除了最後一個參數之外的所有參數類型。 所有這些類型都必須符合 CLS 標準，而且不能是 Managed 指標 (也就是，不能以傳址方式傳遞)。 | 27
+屬性 | [屬性](#properties) | 屬性的類型應是 getter 的傳回型別和 setter 最後一個引數的類型。 屬性參數的類型必須是 getter 參數的類型和 setter 除了最後一個參數之外的所有參數類型。 所有這些類型都必須符合 CLS 規範，而且不能是 Managed 指標 (也就是，不能以傳址方式傳遞)。 | 27
 屬性 | [屬性](#properties) | 屬性必須遵守特定的命名模式。 在適當的名稱比較中應忽略 CLS 第 24 條規則中所提及的 `SpecialName` 屬性，並且應遵循識別項規則。 屬性必須有 getter 方法、setter 方法或兩者皆有。 | 28
 類型轉換 | [類型轉換](#type-conversion) | 如果有提供 op_Implicit 或 op_Explicit，則必須提供替代方式來提供強制型轉。 | 39
 類型 | [類型及類型成員簽章](#types-and-type-member-signatures) | Boxed 實值類型不符合 CLS 標準。 | 3
@@ -346,7 +346,7 @@ End Class
  
  .NET Framework 類別庫或其他類別庫可能包含不符合 CLS 標準的其他類型，例如： 
  
- * Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int`* 的公用屬性，名為 `Value`。由於 `int`* 為 Boxed 實值型別，因此編譯器將其標示為不符合 CLS 標準。
+ * Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int`*的公用屬性，名為 `Value`。由於 `int`* 為 Boxed 實值型別，因此編譯器將其標示為不符合 CLS 標準。
 
   ```csharp
   using System;
@@ -618,7 +618,7 @@ public class person
 
 * 接下來的字元可以來自和第一個字元相同的任何分類，而且也可以包含非間距記號、間距組合記號、十進位數字、連接子標點符號和格式化程式碼。 
 
-在您比較識別項之前，應該先篩掉格式化程式碼，並將識別項轉換為 Unicode 正規化表單 C，因為單一字元可由多個 UTF&16; 編碼字碼單位表示。 產生和 Unicode 正規化表單 C 相同的字碼單位的字元順序不符合 CLS 標準。 下面範例會定義名為 `Å` 的屬性和名為 `Å` 的第二個屬性。前者包含 ANGSTROM SIGN 字元 (U+212B)，後者包含 LATIN CAPITAL LETTER A WITH RING ABOVE 字元 (U+00C5)。 C# 編譯器會將原始程式碼標示為不符合 CLS 標準。
+在您比較識別項之前，應該先篩掉格式化程式碼，並將識別項轉換為 Unicode 正規化表單 C，因為單一字元可由多個 UTF 16 編碼字碼單位表示。 產生和 Unicode 正規化表單 C 相同的字碼單位的字元順序不符合 CLS 標準。 下面範例會定義名為 `Å` 的屬性和名為 `Å` 的第二個屬性。前者包含 ANGSTROM SIGN 字元 (U+212B)，後者包含 LATIN CAPITAL LETTER A WITH RING ABOVE 字元 (U+00C5)。 C# 編譯器會將原始程式碼標示為不符合 CLS 標準。
 
 ```csharp
 public class Size

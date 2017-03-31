@@ -4,21 +4,21 @@ description: "了解在 Windows 電腦上開發及執行 .NET Core 應用程式�
 keywords: ".NET Core, Windows, 必要條件, 相依性, Visual Studio"
 author: mairaw
 ms.author: mairaw
-ms.date: 01/05/2017
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation
-ms.sourcegitcommit: e374b924bf78d62227cb9607641130dfd9128186
-ms.openlocfilehash: 6383a0ce253f6f7000ed8a81b29b9e1d58914acc
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: 13947fd81940c1ccb606cb4cd765dc230fe95c0f
+ms.lasthandoff: 03/20/2017
 
 ---
 
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
-此文章將說明您在 Windows 電腦上部署與執行 .NET Core 應用程式，以及使用 Visual Studio 來開發時，您需要哪些相依性。
+本文將說明您在 Windows 電腦上部署與執行 .NET Core 應用程式，以及使用 Visual Studio 來開發時，您需要哪些相依性。
 
 ## <a name="supported-windows-versions"></a>支援的 Windows 版本
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/06/2017
 * Windows Server 2012 R2 SP1 (完整伺服器或 Server Core)
 * Windows Server 2016 (完整伺服器、Server Core 或 Nano Server)
 
-您可以在 [.NET Core 1.0.0 版本資訊 (英文)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md) 中查看完整的[支援的作業系統 (英文)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md#rtm-platform-support)。
+如需完整的支援作業系統，請參閱 [.NET Core 版本資訊](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)。
 
 ## <a name="net-core-dependencies"></a>.NET Core 的相依性
 
@@ -46,9 +46,17 @@ ms.lasthandoff: 03/06/2017
 
 您可以使用 .NET Core SDK 以使用您選擇的任何編輯器來開發 .NET Core 應用程式。 不過，如果您想要在整合式開發環境中於 Windows 上開發 .NET Core 應用程式，您可以使用 [Visual Studio 2017](#visual-studio-2017)。
 
-若要使用 Visual Studio 2017 開發 .NET Core 應用程式，您必須安裝最新版本的 Visual Studio 並選取 [.NET Core 跨平台開發] 工具組 (在 [其他工具組] 區段中)。
+> [!IMPORTANT]
+> 即使如此，您還是可以使用 Visual Studio 2015 搭配預覽版本的 .NET Core 工具來開發，但這些專案將以 *project.json* 為基礎，而這目前已被取代。 Visual Studio 2017 使用以 MSBuild 為基礎的專案檔案。 如需格式變更的詳細資訊，請參閱[變更的高階概觀](./tools/cli-msbuild-architecture.md)。
 
-Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Community 2017](https://www.visualstudio.com/vs/visual-studio-2017/#downloadvs) 開始使用。  若要深入了解 Visual Studio 安裝程序，請參閱 [Install Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) (安裝 Visual Studio 2017)。
+若要使用 Visual Studio 2017 開發 .NET Core 應用程式，您必須安裝最新版本的 Visual Studio 並選取 [.NET Core 跨平台開發] 工具組 (在 [其他工具組] 區段中)。
+![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs_workloads.jpg)
+
+Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) 開始使用。  若要深入了解 Visual Studio 安裝程序，請參閱 [Install Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) (安裝 Visual Studio 2017)。
+
++若要確認您是否正在執行最新版本的 Visual Studio 2017，請執行下列動作︰
+ +
+ +*在 [說明]** 功能表上，選擇 [關於 Microsoft Visual Studio]**。+* 在 [關於 Microsoft Visual Studio] 對話方塊中，版本號碼應為 15.0.26228.4 或更高版本。
 
 您可以在[版本資訊](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)中，進一步了解 Visual Studio 2017 的變更。
 

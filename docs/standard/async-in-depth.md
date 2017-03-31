@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 4c66c1dc6fb1d51eb2a7d6566fbf62b5f19b556b
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -88,7 +88,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 要求完成並透過裝置驅動程式傳回資料之後，它會通知 CPU 透過插斷收到的新資料。  此插斷的處理方式會因 OS 而有所不同，但最後會將資料傳遞通過 OS，直到抵達系統 Interop 呼叫 (例如在 Linux 中，插斷處理常式會排程 IRQ 的後半部，以非同步方式將資料上傳通過 OS)。  請注意，這「也是」以非同步方式進行！  此結果會排入佇列，等候下一個可用的執行緒能夠執行非同步方法並將已完成 Task 的結果「解除包裝」。
 
-這整個過程的重點是**沒有專門用來執行 Task 的執行緒**。  雖然在某些情況下會執行工作 (例如 OS 必須將資料傳遞給裝置驅動程式並回應插斷)，但沒有專門用來「等候」所要求資料傳回的執行緒。  比起等候一些 I/O 呼叫完成，這樣做可讓系統處理更大量的工作。
+這整個過程的重點是**沒有專門用來執行 Task 的執行緒**。  雖然在某些情況下會執行工作 (也就是，OS 必須將資料傳遞給裝置驅動程式並回應插斷)，但沒有專門用來「等候」所要求資料傳回的執行緒。  比起等候一些 I/O 呼叫完成，這樣做可讓系統處理更大量的工作。
 
 雖然上述做法似乎需要完成許多工作，但以時鐘時間測量時，它所花費的時間相較於實際 I/O 工作簡直是小巫見大巫。 雖然不完全精確，但這類呼叫的時間軸可能類似如下：
 

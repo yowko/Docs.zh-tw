@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
-ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
+ms.openlocfilehash: 7151c87d373afce88c83239499ba33980383ab98
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -93,6 +93,8 @@ ms.lasthandoff: 02/23/2017
 * WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 使用 WCF 服務，但截至 2016 年 6 月，WCF 伺服器實作還是只能在 .NET Framework 上使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 
 * 工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework，目前並未計劃將其帶入 .NET Core。
+
+* Windows Presentation Foundation (WPF) 和 Windows Forms：WPF 與 Windows Forms 應用程式只能在 .NET Framework 上使用。 沒有計畫要將它們移植到 .NET Core。 
 
 * 語言支援︰Visual Basic 和 F# 目前並未擁有任何支援 .NET Core 的工具，但將於 Visual Studio 2017 和更新版本的 Visual Studio 中支援這兩者。
 

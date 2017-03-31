@@ -4,15 +4,15 @@ description: "將 .NET Core project.json 移轉至 csproj"
 keywords: ".NET, .NET Core, .NET Core 移轉"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/04/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 translationtype: Human Translation
-ms.sourcegitcommit: f829714f545314daaa218b241008b5a2955ec589
-ms.openlocfilehash: 5872201f705c07bf692d0dc7f962068632f6b540
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: fae5eabac7d1aac577c5c7a27e306c8c7ea8b418
+ms.openlocfilehash: 73ab5a9bdd957e6d9394a3be0aa55f554ee7a86a
+ms.lasthandoff: 03/16/2017
 
 ---
 
@@ -54,6 +54,8 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 > [!NOTE]
 > 如果您使用 VS Code，`dotnet migrate` 命令不會修改 VS Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。 這也適用於使用 Project Ryder 或是 Visual Studio 以外的任何編輯器或整合式開發環境 (IDE) 的情況。 
 
+如需 project.json 和 csproj 格式的比較，請參閱 [project.json 與 csproj 屬性的對應](../tools/project-json-to-csproj.md)。
+
 ### <a name="common-issues"></a>常見問題
 
 - 如果您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
@@ -79,7 +81,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 * 移除專案頂端和底部的 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 和 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 陳述式。 這些 import 陳述式是由 SDK 所隱含，因此專案中不需要有這些陳述式。 
 * 如果您的專案中有 `Microsoft.NETCore.App` 或 `NETStandard.Library` `<PackageReference>` 項目，則應該加以移除。 這些套件參考是[由 SDK 所隱含](https://aka.ms/sdkimplicitrefs)。 
 * 移除 `Microsoft.NET.Sdk` `<PackageReference>` 項目 (如果存在的話)。 SDK 參考是來自 `<Project>` 項目上的 `Sdk` 屬性。 
-* 移除[由 SDK 所隱含](https://aka.ms/sdkimplicititems) 的 glob。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。 
+* 移除 [SDK 所隱含](../tools/csproj.md#default-compilation-includes-in-net-core-projects)的 [glob](https://en.wikipedia.org/wiki/Glob_(programming))。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。 
 
 完成這些步驟之後，您的專案應該會與 RTM .NET Core csproj 格式完全相容。 
 

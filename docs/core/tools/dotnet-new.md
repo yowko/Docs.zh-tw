@@ -1,48 +1,50 @@
 ---
-title: "dotnet-new 命令 | Microsoft Docs"
+title: "dotnet-new 命令 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-new 命令會在目前的目錄中建立新的 .NET Core 專案。"
 keywords: "dotnet-new, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 translationtype: Human Translation
-ms.sourcegitcommit: 99254f84873003496ee00214d55ff908f9fd47d3
-ms.openlocfilehash: f0df2efe732912abbdb2d63e918b7ee1a4178b07
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 14e6b4a2ffe5145a6d5d856c2149569b9ae39ff9
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-new"></a>dotnet-new
+
+# <a name="dotnet-new"></a>dotnet-new
 
 ## <a name="name"></a>名稱
+
 `dotnet-new` - 根據指定的範本建立新的專案、組態檔或方案。
 
 ## <a name="synopsis"></a>概要
+
 ```
-dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template arguments]
+dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
 
-## <a name="description"></a>說明
-`dotnet new` 命令提供便利的方式來初始化有效的 .NET Core 專案和範例原始程式碼，以試用命令列介面 (CLI) 工具組。 
+## <a name="description"></a>描述
 
-叫用時，命令會呼叫[範本引擎](https://github.com/dotnet/templating)，以根據指定的範本和選項在磁碟上建立成品。
+`dotnet new` 命令提供便利的方式來初始化有效的 .NET Core 專案。 
+
+命令會呼叫[範本引擎](https://github.com/dotnet/templating)，以根據指定的範本和選項在磁碟上建立成品。
 
 ## <a name="arguments"></a>引數
 
-`<TEMPLATE>`
+`TEMPLATE`
 
 要在叫用命令時具現化的範本。 每個範本可能會有您可以傳遞的特定選項。 如需詳細資訊，請參閱[範本選項](#template-options)。
 
-此命令包含預設的範本清單。 使用 `dotnet new -all` 可查看全部。
-
-下表顯示隨 SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內，例如 `[C#]`。
+此命令包含預設的範本清單。 使用 `dotnet new -all` 以取得可用範本的清單。 下表顯示隨 SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。
 
 |範本描述  | 範本名稱  | 語言 |
 |----------------------|----------------|-----------|
@@ -65,16 +67,15 @@ dotnet new [-h|--help]
 
 `-l|--list`
 
-列出包含指定名稱的範本。 如果針對 `dotnet new` 命令本身叫用，則會列出可能用於指定目錄的範本。
-例如，如果目錄中已有專案，則不會列出所有專案範本。
+列出包含指定名稱的範本。 如果針對 `dotnet new` 命令叫用，則會列出指定目錄可能可用的範本。 例如，如果目錄中已包含專案，則不會列出所有專案範本。
 
-`-lang|--language <C#|F#>`
+`-lang|--language {C#|F#}`
 
 要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
 `-n|--name <OUTPUT_NAME>`
 
-正在建立輸出的名稱。 如果未指定名稱，則會使用目前目錄的名稱。
+所建立輸出的名稱。 如果未指定名稱，則會使用目前目錄的名稱。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -82,26 +83,27 @@ dotnet new [-h|--help]
 
 `-all|--show-all`
 
-單獨在 `dotnet new` 命令的內容中執行時，顯示特定專案類型的所有範本。 在特定範本的內容中執行時 (例如 `dotnet new web -all`)，`-all` 會解譯為強制建立旗標。 當輸出目錄中已有專案時，就可能發生此情況。
+單獨在 `dotnet new` 命令的內容中執行時，顯示特定專案類型的所有範本。 在特定範本的內容中執行時 (例如 `dotnet new web -all`)，`-all` 會解譯為強制建立旗標。 當輸出目錄中已包含專案時，這是必要選項。
 
 ## <a name="template-options"></a>範本選項
+
 每個專案範本都可能會有其他可用的選項。 核心範本會有下列選項：
 
-**console、xunit、mstest、web、webapi **
+**console、xunit、mstest、web、webapi**
 
-`-f|--framework` - 指定要將哪個架構當成目標。 值：netcoreapp1.0 或 netcoreapp1.1 (預設值：netcoreapp1.0)
+`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1` (預設值：`netcoreapp1.0`)
 
 **mvc**
 
-`-f|--framework` - 指定要將哪個架構當成目標。 值：netcoreapp1.0 或 netcoreapp1.1 (預設值：netcoreapp1.0)
+`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1` (`Default: netcoreapp1.0`)
 
-`-au|--authentication` -  要使用的驗證類型。 值︰無或個別 (預設值︰ 無)
+`-au|--authentication` - 要使用的驗證類型。 值：`None` 或 `Individual` (預設值：`None`)
 
-`-uld|--use-local-db` - 是否要使用 LocalDB，而不是 SQLite。 值：true 或 false (預設值：false)
+`-uld|--use-local-db` - 指定是否要使用 LocalDB，而不是 SQLite。 值：`true` 或 `false` (預設值：`false`)
 
 **classlib**
 
-`-f|--framework` - 指定要將哪個架構當成目標。 值︰netcoreapp1.0、netcoreapp1.1 及 netstandard1.0 - 1.6 (預設值︰netstandard1.4)。
+`-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0`、`netcoreapp1.1`，或從 `netstandard1.0` 到 `netstandard1.6` (預設值：`netstandard1.4`)
 
 ## <a name="examples"></a>範例
 
@@ -113,7 +115,7 @@ dotnet new [-h|--help]
 
 `dotnet new mvc -au None -f netcoreapp1.0`
  
-建立以 .NET Core 1.1 為目標的新 XUnit 應用程式：
+建立以 .NET Core 1.1 為目標的新 xUnit 應用程式：
 
 `dotnet new xunit --Framework netcoreapp1.1`
 

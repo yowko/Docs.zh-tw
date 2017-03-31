@@ -10,8 +10,9 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: c10736e81d4f43d6ba70b71c25878dc4068a4a10
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -86,6 +87,14 @@ ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 
 此教學課程示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。 您將建立之程式碼的完成版本位於 [GitHub 上的 core-docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)。
 
+**[使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
+
+本教學課程會示範如何使用 Visual Studio for Mac 建置簡單 .NET Core 主控台應用程式。
+
+**[使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
+
+本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
+
 ## <a name="deploying-to-containers"></a>部署至容器
 
 **[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](../framework/docker/aspnetmvc.md)**
@@ -96,8 +105,3 @@ ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 **[在 Windows 容器中執行 .NET Framework 主控台應用程式](../framework/docker/console.md)**
 
 此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 您將建立之程式碼的完成版本位於 [GitHub 上的 core-docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)。
-
-
-<!--HONumber=Jan17_HO3-->
-
-
