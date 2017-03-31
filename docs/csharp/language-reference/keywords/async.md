@@ -61,7 +61,7 @@ string contents = await contentsTask;
  `async` 關鍵字與內容相關，它只有在修改方法、Lambda 運算式或匿名方法時，才是關鍵字。 在所有其他內容中，它會解譯為識別項。  
   
 ## <a name="example"></a>範例  
- 下列範例將示範非同步事件處理常式 `StartButton_Click` 與非同步方法 `ExampleMethodAsync` 之間的控制結構與流程。 非同步方法產生的結果是所下載網站的長度。 此程式碼適用於您在 [!INCLUDE[vs_dev12](../../../csharp/getting-started/includes/vs_dev12_md.md)] 中建立的 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。請參閱有關設定應用程式的程式碼註解。  
+ 下列範例將示範非同步事件處理常式 `StartButton_Click` 與非同步方法 `ExampleMethodAsync` 之間的控制結構與流程。 非同步方法產生的結果是所下載網站的長度。 此程式碼適用於您在 Visual Studio 中建立的 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。請參閱有關設定應用程式的程式碼註解。  
   
 ```csharp  
 // You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
