@@ -1,54 +1,72 @@
 ---
 title: "delegate (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "delegate_CSharpKeyword"
-  - "delegate"
-  - "CS0123"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "delegate 關鍵字 [C#]"
-  - "函式指標 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- delegate_CSharpKeyword
+- delegate
+- CS0123
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- delegate keyword [C#]
+- function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: cf100a5ad3adf001d5435ef6f67e2aa670456649
+ms.lasthandoff: 03/13/2017
+
 ---
-# delegate (C# 參考)
-委派型別的宣告與方法簽章類似。  它有傳回值和任何型別的任何參數數目：  
+# <a name="delegate-c-reference"></a>delegate (C# 參考)
+委派類型的宣告類似方法簽章。 它具有傳回值以及任意類型之任何數目的參數：  
   
 ```  
 public delegate void TestDelegate(string message);  
 public delegate int TestDelegate(MyType m, long num);  
 ```  
   
- `delegate` 是可用來封裝具名方法或匿名方法的參考型別。  委派大致類似 C\+\+ 的函式指標，但是，委派型別安全 \(Type\-Safe\) 又具有安全性。  如需委派的應用程式，請參閱[委派](../../../csharp/programming-guide/delegates/index.md)和[泛型委派](../../../csharp/programming-guide/generics/generic-delegates.md)。  
+ `delegate` 是可用來封裝具名或匿名方法的參考型別。 委派類似 C++ 中的函式指標，但委派是型別安全而且安全的。 如需委派的應用程式，請參閱[委派](../../../csharp/programming-guide/delegates/index.md)和[泛型委派](../../../csharp/programming-guide/generics/generic-delegates.md)。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  委派是[事件](../../../csharp/programming-guide/events/index.md)的基礎。  
   
- 將委派與具名方法或匿名方法建立關聯，即可具現化 \(Instantiated\) 委派。  如需詳細資訊，請參閱[具名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)和[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。  
+ 委派的具現化方式是將它與具名或匿名方法建立關聯。 如需詳細資訊，請參閱[具名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)和[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)。  
   
- 委派必須以具有相容傳回型別和輸入參數的方法或 Lambda 運算式具現化。  如需方法簽章中可允許之變異數等級的詳細資訊，請參閱[委派中的變異數](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md)。  若要搭配匿名方法使用，就要同時宣告委派以及其相關聯的程式碼。  委派的這兩種具現化方法都將在此章節中討論。  
+ 委派必須使用具有相容傳回型別和輸入參數的方法或 Lambda 運算式進行具現化。 如需方法簽章中所允許變異程度的詳細資訊，請參閱 [Variance in Delegates](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) (委派中的變異數)。 若與匿名方法搭配使用，則會一起宣告要與它建立關聯的委派和程式碼。 本節討論兩種具現化委派的方式。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [參考類型](../../../csharp/language-reference/keywords/reference-types.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
+ [參考型別](../../../csharp/language-reference/keywords/reference-types.md)   
  [委派](../../../csharp/programming-guide/delegates/index.md)   
  [事件](../../../csharp/programming-guide/events/index.md)   
- [使用具名和匿名方法委派的比較](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)   
+ [具名方法委派與匿名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)   
  [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)

@@ -1,52 +1,70 @@
 ---
 title: "where 子句 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereclause_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where 子句 [C#]"
-  - "where 關鍵字 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereclause_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where keyword [C#]
+- where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
+ms.lasthandoff: 03/13/2017
+
 ---
-# where 子句 (C# 參考)
-在查詢運算式中，`where` 子句是用來指定資料來源的哪個項目將會在查詢運算式中傳回。  它會將布林值 \(Boolean\) 條件 \(「*述詞*」\(Predicate\)\) 套用到每個來源項目 \(由範圍變數參考\)，並傳回指定條件為 True 的項目。  單一查詢運算式可能包含多個 `where` 子句，而且單一子句可能包含多個述詞子運算式 \(Subexpression\)。  
+# <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
+`where` 子句用於查詢運算式中，以指定將在查詢運算式中傳回資料來源中的項目。 它會將布林值條件 (*predicate*) 套用到每個來源項目 (透過範圍變數所參考)，並傳回所指定條件為 true 的項目。 單一查詢運算式可能會包含多個 `where` 子句，而單一子句可能會包含多個述詞子運算式。  
   
-## 範例  
- 在下列範例中，`where` 子句會篩選掉不小於 5 的所有數字。  如果您移除 `where` 子句，便會傳回資料來源的所有數字。  運算式 `num < 5` 就是套用至每個項目的述詞。  
+## <a name="example"></a>範例  
+ 在下列範例中，`where` 子句會篩選掉不小於五的所有數字。 如果您移除 `where` 子句，則會傳回資料來源中的所有數字。 `num < 5` 運算式是套用至每個項目的述詞。  
   
  [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
-## 範例  
- 在單一 `where` 子句內，您可以使用 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) 和 [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) 運算子，指定任何所需要的述詞。  在下列範例中，查詢會指定兩個述詞，以便只選取小於 5 的偶數。  
+## <a name="example"></a>範例  
+ 在單一 `where` 子句內，您可以使用 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) 和 [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) 運算子來指定所需數目的述詞。 在下列範例中，查詢會指定兩個述詞，只選取小於五的偶數。  
   
  [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
-## 範例  
- `where` 子句可能包含一個或多個傳回布林值的方法。  在下列範例中，`where` 子句會使用一個方法來判斷範圍變數的目前值為偶數或奇數。  
+## <a name="example"></a>範例  
+ `where` 子句可能包含一個或多個傳回布林值的方法。 在下列範例中，`where` 子句使用方法來判斷範圍變數的目前值是偶數還是奇數。  
   
  [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
-## 備註  
- `where` 子句是一項篩選機制。  它可以放置在查詢運算式的絕大多數位置，除了不能放置在第一個或最後一個子句中。  `where` 子句會根據需要在來源項目完成分組之前或之後篩選來源項目，而出現在 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句的之前或之後。  
+## <a name="remarks"></a>備註  
+ `where` 子句是篩選機制。 它幾乎可以放在查詢運算式中的任何位置，但不能是第一個或最後一個子句。 `where` 子句可能出現在 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句之前或之後，取決於必須在分組來源項目之前還是之後進行篩選。  
   
- 如果指定的述詞對於資料來源中的項目無效，便會造成編譯時期錯誤。  這是 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 所提供強型別檢查的其中一項優點。  
+ 如果指定的述詞不適用於資料來源中的項目，則會產生編譯時期錯誤。 這是 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 所提供的強類型檢查的其中一個優點。  
   
- 在編譯時期，`where` 關鍵字便會轉換成對 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法的呼叫。  
+ 在編譯時期，`where` 關鍵字會轉換為 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法呼叫。  
   
-## 請參閱  
- [查詢關鍵字 \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
+## <a name="see-also"></a>另請參閱  
+ [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [from 子句](../../../csharp/language-reference/keywords/from-clause.md)   
  [select 子句](../../../csharp/language-reference/keywords/select-clause.md)   
- [Filtering Data](../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)   
+ [篩選資料](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -1,45 +1,63 @@
 ---
 title: "文件標籤的分隔符號 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 文件標記的 /** */ 分隔符號"
-  - "C# 文件的 /// 分隔符號"
-  - "XML [C#], 分隔符號"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- XML [C#], delimiters
+- /** */ delimiters for C# documentation tags
+- /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.lasthandoff: 03/13/2017
+
 ---
-# 文件標籤的分隔符號 (C# 程式設計手冊)
-使用 XML 文件註解時會需要分隔符號，讓編譯器知道文件註解從何處開始和結束。  您可以使用下列幾種分隔符號，以搭配 XML 文件標記使用：  
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文件標籤的分隔符號 (C# 程式設計手冊)
+使用 XML 文件註解時需要分隔符號，以向編譯器指出文件註解的開始和結束位置。 您可以搭配使用下列類型的分隔符號與 XML 文件標記︰  
   
  `///`  
- 單行分隔符號。  這是顯示在文件範例中並且為 Visual C\# 專案範本所使用的形式。  如果在分隔符號之後有空白字元，該字元就不會包含在 XML 輸出中。  
+ 單行分隔符號。 這是顯示在文件範例中並供 Visual C# 專案範本使用的表單。 如果分隔符號後面有空白字元，則該字元不會包括在 XML 輸出中。  
   
 > [!NOTE]
->  Visual Studio IDE 提供一種稱為智慧型註解編輯的功能，當您在程式碼編輯器中輸入 `///` 分隔符號之後，會自動插入 \<summary\> 和 \<\/summary\> 標記，並將游標移到這兩個標記之間。  請從專案屬性頁中的[格式、C\#、文字編輯器、選項](/visual-studio/ide/reference/options-text-editor-csharp-formatting)存取這項功能。  
+>  Visual Studio IDE 有一項稱為「智慧註解編輯」的功能，可自動插入 \<summary> 和 \</summary> 標記，並在程式碼編輯器中輸入 `///` 分隔符號之後，將游標移至這些標記內。 從專案屬性頁面的[選項、文字編輯器、C#、格式](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting)中，存取這項功能。  
   
  `/** */`  
  多行分隔符號。  
   
- 當您使用 `/** */` 分隔符號時，有一些必須遵循的格式化規則。  
+ 使用 `/** */` 分隔符號時，可遵循一些格式規則。  
   
--   在包含 `/**` 分隔符號的程式碼行上，如果該行的其餘部分是空白字元，就不會以註解方式處理。  如果 `/**`  分隔符號後的第一個字元是空白字元，該字元就會被忽略，並會處理該程式碼行的其他內容。  否則，在 `/**` 分隔符號之後的所有內容，都會當做註解的一部分來處理。  
+-   在包含 `/**` 分隔符號的行上，如果該行的其餘部分是空白字元，則不會處理該行的註解。 如果 `/**` 分隔符號後面的第一個字元是空白字元，則會忽略該空白字元，並處理該行的其餘部分。 否則，會將 `/**` 分隔符號後面的整行文字處理為註解的一部分。  
   
--   在包含 `*/` 分隔符號的程式碼行上，如果 `*/` 分隔符號之前只有空白字元，就會忽略該行。  否則，在 `*/` 分隔符號之前，程式碼行的文字將會當做註解的一部分來處理，並受制於下列項目符號中所描述的模式比對規則。  
+-   在包含 `*/` 分隔符號的行上，如果到 `*/` 分隔符號為止都只是空白字元，則會忽略該行。 否則，根據下列項目符號中所述的模式比對規則，會將到 `*/` 分隔符號為止的整行文字都處理為註解的一部分。  
   
--   對於以 `/**` 分隔符號開頭一行之後的各行，編譯器都會在每一行的開頭尋找常見模式。  模式可以由選擇性的空白字元和星號 \(`*`\)，後接更多選擇性空白字元所組成。  如果編譯器發現每一行開頭的常見模式不是以 `/**` 分隔符號或 `*/` 分隔符號開始，就會忽略每一行的模式。  
+-   針對在開頭為 `/**` 分隔符號之行後面的行，編譯器會尋找每行開頭的常見模式。 模式可以包含選擇性空白字元和星號 (`*`)，後面接著更多選擇性空白字元。 如果編譯器在開頭不是 `/**` 分隔符號或 `*/` 分隔符號的行開頭發現常見模式，則會忽略每行的該模式。  
   
  下列範例說明這些規則。  
   
--   下列註解中唯一會進行處理的部分，是以 `<summary>` 開頭的那行程式碼。  這三個標籤式會產生相同的註解。  
+-   下列註解中唯一會處理的部分是開頭為 `<summary>` 的那一行。 三個標記格式會產生相同的註解。  
   
     ```  
     /** <summary>text</summary> */   
@@ -54,7 +72,7 @@ caps.handback.revision: 21
   
     ```  
   
--   編譯器會識別第二列和第三列開頭的 " \* " 常用模式。  此模式不包含在輸出中。  
+-   編譯器會識別第二行和第三行開頭的一般模式 "*"。 模式不會包括在輸出中。  
   
     ```  
     /**   
@@ -62,7 +80,7 @@ caps.handback.revision: 21
      * text </summary>*/   
     ```  
   
--   編譯器在下列註解中找不到常用模式，因為第三列的第二個字元不是星號。  因此，第二列和第三列上的所有文字，都會被處理為註解的一部分。  
+-   因為第三行的第二個字元不是星號，所以編譯器在下列註解中找不到常見模式。 因此，會將第二行和第三行的所有文字都處理為註解的一部分。  
   
     ```  
     /**   
@@ -71,7 +89,7 @@ caps.handback.revision: 21
     */   
     ```  
   
--   因為兩個原因，編譯器無法在下列註解中找到任何模式。  首先，星號之前的空格數並不一致。  其次，第五行程式碼以標籤做為開頭，與空白字元不相符。  因此，從第二列到第五列的所有文字會被處理為註解的一部分。  
+-   基於兩個原因，編譯器在下列註解中找不到任何模式。 首先，星號前面的空格數目不一致。 其次，第五行的開頭是 Tab，這與空白字元不符。 因此，會將第二行到第五行的所有文字都處理為註解的一部分。  
   
     ```  
     /**   
@@ -82,8 +100,8 @@ caps.handback.revision: 21
     */   
     ```  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [\/doc \(Process Documentation Comments\)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

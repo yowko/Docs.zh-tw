@@ -1,63 +1,59 @@
 ---
 title: "=&gt; 運算子 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "=>_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lambda 運算子 [C#]"
-  - "=> 運算子 [C#]"
-  - "Lambda 運算式 [C#]，=> 運算子"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- =>_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lambda operator [C#]
+- => operator [C#]
+- lambda expressions [C#], => operator
 ms.assetid: 8c899251-dafa-4594-bec7-243b39072880
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a75967e61d2c674e87e321de1fb6e4062cca4f19
+ms.lasthandoff: 03/13/2017
+
 ---
-# =&gt; 運算子 (C# 參考)
-`=>` 語彙基元又稱為 Lambda 運算子。  它會在「*Lambda 運算式*」\(Lambda Expression\) 中使用，以分開右邊的 Lambda 主體和左邊的輸入變數。  Lambda 運算式是類似匿名方法 \(Anonymous Method\) 的內嵌 \(Inline\) 運算式，但更有彈性。它會在以方法語法所表示的 LINQ 查詢中大量使用。  如需詳細資訊，請參閱[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+# <a name="gt-operator-c-reference"></a>=&gt; 運算子 (C# 參考)
+`=>` 語彙基元又稱為 Lambda 運算子。 它會在「Lambda 運算式」**中使用，以分開右邊的 Lambda 主體和左邊的輸入變數。 Lambda 運算式是類似匿名方法的內嵌運算式，但更有彈性；它會在以方法語法所表示的 LINQ 查詢中大量使用。 如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
- 下列範例顯示兩種尋找並顯示較短的字串長度陣列中的字串。  此範例的第一部分將 Lambda 運算式 \(`w => w.Length`\) 的 `words` 陣列中的每個項目會使用 <xref:System.Linq.Enumerable.Min%2A> 方法來尋找最小長度。  對於比較時，這個範例的第二部分顯示較長的方案使用查詢語法執行相同的動作。  
+ 下列範例顯示兩種方法來尋找及顯示字串陣列中最短字串的長度。 此範例的第一個部分會將 Lambda 運算式 (`w => w.Length`) 套用至 `words` 陣列的每個項目，然後使用 <xref:System.Linq.Enumerable.Min%2A> 方法來尋找最小長度。 相較之下，此範例的第二個部分會顯示使用查詢語法執行相同動作的較長方案。  
   
-```c#  
-string[] words = { "cherry", "apple", "blueberry" };  
+<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+## <a name="remarks"></a>備註  
+ `=>` 運算子與指派運算子 (`=`) 具有相同的優先順序，而且為右向關聯。  
   
-// Use method syntax to apply a lambda expression to each element  
-// of the words array.   
-int shortestWordLength = words.Min(w => w.Length);  
-Console.WriteLine(shortestWordLength);  
+ 您可以明確指定輸入變數的類型，或讓編譯器推斷類型；不論是哪種情況，此變數在編譯時都屬於強型別。 當您指定類型時，您必須以括號括住類型名稱和變數名稱，如下列範例所示。  
   
-// Compare the following code that uses query syntax.  
-// Get the lengths of each word in the words array.  
-var query = from w in words  
-            select w.Length;  
-// Apply the Min method to execute the query and get the shortest length.  
-int shortestWordLength2 = query.Min();  
-Console.WriteLine(shortestWordLength2);  
+<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+## <a name="example"></a>範例  
+ 下列範例示範如何為接受兩個引數的標準查詢運算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 多載，撰寫 Lambda 運算式。 因為 Lambda 運算式有多個參數，所以必須以括號括住這些參數。 第二個參數 `index` 表示集合中目前項目的索引。 `Where` 運算式會傳回長度小於其陣列索引位置的所有字串。  
   
-// Output:   
-// 5  
-// 5  
-```  
-  
-## 備註  
- `=>` 運算子和指派運算子 \(`=`\) 具有相同的優先順序，而且是右向關聯的。  
-  
- 您可以明確指定項目變數的型別或讓編譯器推斷;在任何情況下，變數是強型別在編譯時間。  當您指定型別時，您必須將型別括住名稱和這個變數名稱，，如下列範例所示。  
-  
-```  
-int shortestWordLength = words.Min((string w) => w.Length);  
-```  
-  
-## 範例  
- 下列範例顯示如何為採用兩個引數的標準查詢運算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 的多載將 Lambda 運算式。  因為 Lambda 運算式有多個參數，必須以括號括住參數。  第二個參數，則為 `index`，表示目前項目在集合中的索引。  `Where` 運算式傳回長度小於其陣列索引位置的字串。  
-  
-```c#  
+```cs  
 static void Main(string[] args)  
 {  
     string[] digits = { "zero", "one", "two", "three", "four", "five",   
@@ -70,29 +66,8 @@ static void Main(string[] args)
         Console.WriteLine(sD);  
     }  
   
-    // Compare the following code, which arrives at the same list of short  
-    // digits but takes more work to get there.  
-    Console.WriteLine("\nExample that uses a for loop:");  
-    List<string> shortDigits2 = new List<string>();  
-    for (var i = 0; i < digits.Length; i++)  
-    {  
-        if (digits[i].Length < i)  
-            shortDigits2.Add(digits[i]);  
-    }  
-  
-    foreach (var d in shortDigits2)  
-    {  
-        Console.WriteLine(d);  
-    }  
     // Output:  
     // Example that uses a lambda expression:  
-    // five  
-    // six  
-    // seven  
-    // eight  
-    // nine  
-  
-    // Example that uses a for loop:  
     // five  
     // six  
     // seven  
@@ -101,7 +76,7 @@ static void Main(string[] args)
 }  
 ```  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

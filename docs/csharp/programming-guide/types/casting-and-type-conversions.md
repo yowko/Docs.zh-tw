@@ -1,67 +1,85 @@
 ---
-title: "轉型和類型轉換 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "轉型 [C#]"
-  - "轉換 [C#], 類型"
-  - "轉換類型 [C#]"
-  - "資料類型轉換 [C#]"
-  - "數值轉換 [C#]"
-  - "類型轉換 [C#]"
+title: "轉換和類型轉換 (C# 程式設計手冊) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- type conversion [C#]
+- data type conversion [C#]
+- numeric conversions [C#]
+- conversions [C#], type
+- casting [C#]
+- converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 caps.latest.revision: 52
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 52
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 28c6b9da6d94bd402e720db48d5c7a2977344f05
+ms.lasthandoff: 03/13/2017
+
 ---
-# 轉型和類型轉換 (C# 程式設計手冊)
-因為 C\# 在編譯時期採用靜態型別，所以變數在經過宣告之後，就無法再次宣告或用來儲存任何其他型別的值，除非該型別可以轉換為變數的型別。  例如，整數和任意字串間不能轉換。  因此，在您將 `i` 宣告為整數之後，便無法指派字串 "Hello" 給它，如下列程式碼中所示。  
+# <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計手冊)
+因為 C# 在編譯時期是靜態類型，所以宣告變數之後，除非該類型可轉換為變數的類型，否則無法再次宣告或用來儲存另一個類型的值。 例如，沒有從整數到任何任意字串的轉換。 因此，將 `i` 宣告為整數之後，無法對其指派字串 "Hello"，如下列程式碼所示。  
   
-```c#  
+```csharp  
 int i;  
 i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
 ```  
   
- 不過，您有時可能需要將值複製到其他型別的變數或方法參數中。  例如，您必須將整數變數傳遞至參數型別為 `double` 的方法。  或者，您可能需要將類別變數指派給介面型別 \(Interface Type\) 的變數。  此類作業稱為「*型別轉換*」\(Type Conversion\)。  在 C\# 中，您可以執行以下類型的轉換：  
+ 不過，您有時可能需要將值複製至另一種類型的變數或方法參數。 例如，您的整數變數可能需要傳遞給參數類型為 `double` 的方法。 或者，您可能需要將類別變數指派給介面類型的變數。 這些類型的作業稱為「類型轉換」**。 在 C# 中，您可以執行下列類型的轉換：  
   
--   **隱含轉換**：不必使用特殊語法，因為這類轉換屬於型別安全轉換，而且不會遺失資料。  這類範例包括從小型到大型整數型別的轉換，以及從衍生類別 \(Derived Class\) 到基底類別 \(Base Class\) 的轉換。  
+-   **隱含轉換**︰因為轉換為型別安全，所以不需要特殊語法，因此將不會造成資料遺失。 範例包括從較小到較大整數型別的轉換，以及從衍生類別到基底類別的轉換。  
   
--   **明確轉換 \(轉型\)**：明確轉換需要使用轉型運算子。  當資料可能在轉換中遺失，或轉換可能因故無法成功時，進行轉換 \(Cast\) 有其必要。例如，對精確度較低或範圍較小型別的數值轉換以及基底類別對衍生類別的轉換都是常見的轉換。  
+-   **明確轉換 (轉換)**：明確轉換需要轉換運算子。 如果資訊可能會在轉換時遺失，或轉換因其他原因而失敗，則需要轉換。  一般範例包括將數字轉換為較少有效位數或較小範圍的類型，以及將基底類別執行個體轉換為衍生類別。  
   
--   **使用者定義轉換**：使用者定義轉換是由特殊方法執行，您可以定義這些特殊方法，以啟用自訂型別 \(不具有基底類別與衍生類別的關聯性\) 之間的明確和隱含轉換。  如需詳細資訊，請參閱 [轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)。  
+-   **使用者定義的轉換**：使用者定義的轉換是透過特殊方法所執行，而您可以定義特殊方法來啟用沒有基底類別/衍生類別關聯性之自訂類型間的明確和隱含轉換。 如需詳細資訊，請參閱[轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)。  
   
--   **使用 Helper 類別的轉換**：為了在不相容型別 \(例如整數與 <xref:System.DateTime?displayProperty=fullName> 物件或十六進位字串與位元組陣列\) 之間進行轉換，您可以使用 <xref:System.BitConverter?displayProperty=fullName> 類別、<xref:System.Convert?displayProperty=fullName> 類別和內建數字型別 \(Numeric Type\) 的 `Parse` 方法，例如 <xref:System.Int32.Parse%2A?displayProperty=fullName>。  如需詳細資訊，請參閱 [如何：將位元組陣列轉換成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)和[如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
+-   **使用協助程式類別進行轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=fullName> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=fullName> 類別、<xref:System.Convert?displayProperty=fullName> 類別，以及內建數字類型的 `Parse` 方法 (例如 <xref:System.Int32.Parse%2A?displayProperty=fullName>)。 如需詳細資訊，請參閱[如何：將位元組陣列轉換為整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)、[如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)和[如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
   
-## 隱含轉換  
- 對於內建數字型別，如果要儲存的值能完全符合變數需求而不需捨去或進位，則可進行隱含轉換。  例如，[long](../../../csharp/language-reference/keywords/long.md) 型別的變數 \(8 位元組的整數\) 可以儲存 [int](../../../csharp/language-reference/keywords/int.md) \(32 位元電腦中的 4 個位元組\) 能夠儲存的任何值。  在下列範例中，編譯器會將右邊的值隱含轉換為 `long` 型別之後，才指派給 `bigNum`。  
+## <a name="implicit-conversions"></a>隱含轉換  
+ 針對內建數字類型，如果要儲存的值可以放入變數中，而不需進行截斷或四捨五入，則可以進行隱含轉換。 例如，[long](../../../csharp/language-reference/keywords/long.md) (8 位元組整數) 類型的變數可以儲存 [int](../../../csharp/language-reference/keywords/int.md) (32 位元電腦上的 4 個位元組) 可儲存的任何值。 在下列範例中，編譯器會先將右側的值隱含地轉換為類型 `long`，再將它指派給 `bigNum`。  
   
  [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
- 如需隱含數值轉換的完整清單，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
+ 如需所有隱含數值轉換的完整清單，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
- 針對參考型別 \(Reference Type\)，將類別轉換為其任何直接或間接基底類別或介面時，一律會使用隱含轉換。  不必使用特殊語法，因為衍生類別一定包含基底類別的所有成員。  
+ 針對參考型別，一律會執行從某個類別到其任何一個直接或間接基底類別或介面的隱含轉換。 因為衍生類別一律會包含基底類別的所有成員，所以不需要特殊語法。  
   
 ```  
 Derived d = new Derived();  
 Base b = d; // Always OK.  
 ```  
   
-## 明確轉換  
- 如果轉換可能會造成資料遺失，編譯器會要求您執行明確轉換，這稱為「*轉型*」\(Cast\)。  轉型是明確告知編譯器您打算進行轉換而且知道可能會造成資料遺失的一種方式。  若要執行轉型，請在要轉換的值或變數前面的括號內指定要轉換的目標型別。  下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為  [int](../../../csharp/language-reference/keywords/int.md)。  若沒有進行轉型，就無法編譯程式。  
+## <a name="explicit-conversions"></a>明確轉換  
+ 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」**的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為 [int](../../../csharp/language-reference/keywords/int.md)。 沒有轉型，就不會編譯程式。  
   
  [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
- 如需可用的明確數值轉換清單，請參閱[明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)。  
+ 如需允許的明確數值轉換清單，請參閱[明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)。  
   
- 針對參考型別，如果需要從基底型別轉換成衍生型別，就必須進行明確轉換：  
+ 針對參考型別，如果您需要將基底類型轉換為衍生類型，則需要明確轉換︰  
   
-```c#  
+```csharp  
 // Create a new derived type.  
 Giraffe g = new Giraffe();  
   
@@ -75,28 +93,28 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- 參考型別之間的轉型作業並不會變更基礎物件的執行階段型別，只會變更做為該物件參考之值的型別。  如需詳細資訊，請參閱 [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+ 參考型別之間的轉型作業不會變更基礎物件的執行階段類型；它只會變更將用作該物件之參考值的類型。 如需詳細資訊，請參閱[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
   
-## 執行階段發生的型別轉換例外狀況  
- 對於有些參考型別轉換，編譯器無法判斷轉型是否有效。  因此轉型作業編譯正確，但卻可能會在執行階段失敗。  如下列範例所示，型別轉換 \(Type Cast\) 在執行階段失敗將導致擲回 <xref:System.InvalidCastException>。  
+## <a name="type-conversion-exceptions-at-run-time"></a>執行階段的類型轉換例外狀況  
+ 在某些參考型別轉換中，編譯器無法判斷轉換是否有效。 正確編譯的轉型作業可能會在執行階段失敗。 如下列範例所示，在執行階段失敗的類型轉型將會導致擲回 <xref:System.InvalidCastException>。  
   
  [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
- C\# 提供 [is](../../../csharp/language-reference/keywords/is.md) 和 [as](../../../csharp/language-reference/keywords/as.md) 運算子，讓您可在實際執行轉型之前先測試相容性。  如需詳細資訊，請參閱 [如何：使用 as 和 is 運算子進行安全轉型](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。  
+ C# 提供 [is](../../../csharp/language-reference/keywords/is.md) 和 [as](../../../csharp/language-reference/keywords/as.md) 運算子，可讓您先測試相容性，再實際執行轉型。 如需詳細資訊，請參閱[如何：使用 as 和 is 運算子進行安全轉型](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)。  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 精選書籍章節  
- [更多關於變數](完整.嗎？LinkId%20=%20221230) 在 [開頭 2010 視覺化 C\#](完整.嗎？LinkId%20=%20221214)  
+## <a name="featured-book-chapter"></a>精選書籍章節  
+ [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) (初探 Visual C# 2010) 中的 [More About Variables](http://go.microsoft.com/fwlink/?LinkId=221230) (深入了解變數)  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類型](../../../csharp/programming-guide/types/index.md)   
- [\(\) 運算子](../../../csharp/language-reference/operators/invocation-operator.md)   
+ [() 運算子](../../../csharp/language-reference/operators/invocation-operator.md)   
  [explicit](../../../csharp/language-reference/keywords/explicit.md)   
- [隱含](../../../csharp/language-reference/keywords/implicit.md)   
+ [implicit](../../../csharp/language-reference/keywords/implicit.md)   
  [轉換運算子](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)   
- [Generalized Type Conversion](../Topic/Generalized%20Type%20Conversion.md)   
- [Exported Type Conversion](http://msdn.microsoft.com/zh-tw/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)   
+ [產生的類型轉換](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)   
+ [匯出的類型轉換](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)   
  [如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

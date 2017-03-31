@@ -1,47 +1,63 @@
 ---
-title: "Parsing Text Files with the TextFieldParser Object (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "TextFieldParser object, using"
-  - "I/O [Visual Basic], parsing files"
-  - "files, parsing"
+title: "使用 TextFieldParser 物件剖析文字檔 (Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- TextFieldParser object, using
+- I/O [Visual Basic], parsing files
+- files, parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Parsing Text Files with the TextFieldParser Object (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 570a5218ce2d750eb5f3a1a1b57e1e05f7fc0cbd
+ms.lasthandoff: 03/13/2017
 
-`TextFieldParser` 物件可讓您剖析和處理非常大的檔案 \(而此種檔案的結構為以寬度分隔的文字資料行\)，例如記錄檔或舊版資料庫資訊。  以 `TextFieldParser` 剖析文字檔類似於逐一查看文字檔內容，而用於擷取文字欄位的剖析方法，則類似用於語彙基元化已分隔字串的字串操作方法。  
+---
+# <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>使用 TextFieldParser 物件剖析文字檔 (Visual Basic)
+`TextFieldParser` 物件可讓您剖析和處理非常大的檔案，以文字分隔欄寬為結構，例如記錄檔或舊版資料庫資訊。 使用 `TextFieldParser` 剖析文字檔案類似逐一查看文字檔案，而擷取文字欄位的剖析方法則類似用來語彙基元化分隔字串的字串操作方法。  
   
-## 剖析不同類型的文字檔  
- 文字檔可能會具有各種寬度的欄位，並以字元分隔，例如逗號或定位鍵空格。  請定義 `TextFieldType` 和分隔符號 \(Delimiter\)，如以下範例所示，這個範例會使用 `SetDelimiters` 方法，定義以定位鍵分隔的文字檔：  
+## <a name="parsing-different-types-of-text-files"></a>剖析不同型別的文字檔  
+ 文字檔欄位可有各種寬度，以逗點或定位點空格等字元分隔。 定義 `TextFieldType` 和分隔符號，如下例使用 `SetDelimiters` 方法來定義定位點分隔的文字檔︰  
   
  [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
   
- 其他的文字檔可能會具有固定寬度的欄位。  在這種情況下，您必須將 `TextFieldType` 定義為 `FixedWidth`，並定義每個欄位的寬度，如以下範例所示。  這個範例會使用 `SetFieldWidths` 方法定義文字的資料行：第一個資料行為 5 個字元寬、第二個為 10 個字元寬、第三個為 11 個字元寬，而第四個資料行的寬度則是可變動的。  
+ 其他文字檔可能有固定的欄位寬度。 在這種情況下，您需要將 `TextFieldType` 定義為 `FixedWidth`，並定義每個欄位的寬度，如下例所示。 本例使用 `SetFieldWidths` 方法來定義文字資料行︰第一個資料行是 5 個字元寬、第二個 10 個字元寬、第三個 11 個字元寬，第四個則為可變寬度。  
   
  [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
   
- 定義格式之後，您就可以在檔案上執行迴圈 \(Loop\)，使用 `ReadFields` 方法依序處理每一行。  
+ 格式一旦定義，您就可以使用 `ReadFields` 方法循環往復處理檔案中的每一行。  
   
- 如果欄位和指定的格式不相符，則會擲回 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> 例外狀況。  擲回這類例外狀況時，`ErrorLine` 和 `ErrorLineNumber` 屬性會保留造成例外狀況的文字和該文字的行號。  
+ 如果欄位不符合指定的格式，則擲回例外狀況 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>。 擲回這類例外狀況時，`ErrorLine` 和 `ErrorLineNumber` 屬性會保留造成例外狀況及文字以及該文字的行號。  
   
-## 剖析具有多種格式的檔案  
- 開始讀取欄位之前，可以先用 `TextFieldParser` 物件的 `PeekChars` 方法進行檢查，這讓您可以為欄位定義多種格式，據以做出適當回應。  如需詳細資訊，請參閱 [How to: Read From Text Files with Multiple Formats](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
+## <a name="parsing-files-with-multiple-formats"></a>剖析有多種格式的檔案  
+ `TextFieldParser` 物件的 `PeekChars` 方法可用來先檢查，然後再讀取每個欄位，讓您定義多種欄位格式，並據以採取動作。 如需詳細資訊，請參閱[如何：讀取多種格式的文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>   
@@ -56,5 +72,4 @@ caps.handback.revision: 20
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TrimWhiteSpace%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A>   
- [疑難排解例外狀況：Microsoft.VisualBasic.FileIO.TextFieldParser.MalformedLineException](../Topic/Troubleshooting%20Exceptions:%20Microsoft.VisualBasic.FileIO.TextFieldParser.MalformedLineException.md)
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A>

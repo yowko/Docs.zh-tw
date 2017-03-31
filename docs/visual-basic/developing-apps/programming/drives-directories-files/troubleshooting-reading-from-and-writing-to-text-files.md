@@ -1,47 +1,63 @@
 ---
-title: "Troubleshooting: Reading from and Writing to Text Files (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "troubleshooting file I/O"
-  - "writing text to files, troubleshooting"
-  - "troubleshooting Visual Basic, text files"
-  - "I/O [Visual Basic], troubleshooting text files"
-  - "writing to files, troubleshooting"
-  - "reading text files, troubleshooting"
+title: "疑難排解：讀取和寫入文字檔 (Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- troubleshooting file I/O
+- writing text to files, troubleshooting
+- troubleshooting Visual Basic, text files
+- I/O [Visual Basic], troubleshooting text files
+- writing to files, troubleshooting
+- reading text files, troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# Troubleshooting: Reading from and Writing to Text Files (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d4051975bf11bd65aad1535c40e7eb091c791efd
+ms.lasthandoff: 03/13/2017
 
-這個主題會討論使用文字檔時遇到的常見問題，並針對每個問題建議處理方法。  
+---
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>疑難排解：讀取和寫入文字檔 (Visual Basic)
+本主題討論處理文字檔時所遇到的常見問題，並建議每個問題的處理方法。  
   
-## 常見問題  
- 使用文字檔時遇到最常見的問題，包括安全性例外狀況、檔案編碼方式或路徑無效。  
+## <a name="common-problems"></a>常見問題  
+ 處理文字檔時所遇到的最常見問題包括安全性例外狀況、檔案編碼方式或無效路徑。  
   
-### 安全性例外狀況  
- 發生安全性的錯誤時，就會擲回 <xref:System.Security.SecurityException>。  這通常是因為使用者缺少必要的使用權限所導致，可藉由加入使用權限或在隔離儲存區 \(Isolated Storage\) 中使用檔案解決。  如需詳細資訊，請參閱[疑難排解例外狀況：System.Security.SecurityException](../Topic/Troubleshooting%20Exceptions:%20System.Security.SecurityException.md)。  
+### <a name="security-exceptions"></a>安全性例外狀況  
+ 發生安全性錯誤時，會擲回 <xref:System.Security.SecurityException>。 這通常是使用者缺乏必要權限所造成，而解決方法可能是新增權限，或處理隔離儲存空間中的檔案。  
   
-### 檔案編碼方式  
- 檔案編碼方式 \(也稱為字元編碼方式\) 會指定在處理文字時字元的表示方式。  編碼方式不正確可能會導致文字檔中產生未預期的字元。  對於大部分的檔案而言，雖然通常會偏好 Unicode，但是仍然以是否能處理語言字元而偏好某一種編碼方式。  如需詳細資訊，請參閱[File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)和 <xref:System.Text.Encoding>。  
+### <a name="file-encodings"></a>檔案編碼方式  
+ 檔案編碼方式，也稱為字元編碼方式，指定在處理文字時如何代表字元。 文字檔中的未預期字元可能是編碼方式不正確所造成。 針對大部分的檔案，就可以或無法處理的語言字元部分而言，可能會偏好使用某種編碼，但是通常偏好使用 Unicode。 如需詳細資訊，請參閱[檔案編碼方式](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)和 <xref:System.Text.Encoding>。  
   
-### 不正確的路徑  
- 剖析檔案路徑時 \(特別是相對路徑\)，很容易就提供錯誤資料。  確定您所提供的路徑正確，即可更正許多問題。  如需詳細資訊，請參閱 [如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)。  
+### <a name="incorrect-paths"></a>路徑不正確  
+ 剖析檔案路徑時，特別是相對路徑，很容易就會提供錯誤資料。 確認您所提供的路徑正確，即可更正許多問題。 如需詳細資訊，請參閱[如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- [Reading from Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [Writing to Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)   
- [Parsing Text Files with the TextFieldParser Object](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+ [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
+ [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)   
+ [使用 TextFieldParser 物件剖析文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

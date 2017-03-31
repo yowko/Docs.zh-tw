@@ -1,46 +1,64 @@
 ---
 title: "範例 COM 類別 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "COM, 將 Visual C# 物件公開給"
-  - "範例 [C#], COM 類別"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- examples [C#], COM classes
+- COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2525d322bf3284c82356253d1383edbcd3928084
+ms.lasthandoff: 03/13/2017
+
 ---
-# 範例 COM 類別 (C# 程式設計手冊)
-下列是一個類別範例，您會將這個類別公開為 COM 物件。  將程式碼放入 .cs 檔並加入專案後，請將 \[**註冊 COM Interop**\] 屬性設定為 \[**True**\]。  如需詳細資訊，請參閱 [NIB: How to: Register a Component for COM Interop](http://msdn.microsoft.com/zh-tw/4de7d474-56e8-4027-994d-d47ca4725c5e)。  
+# <a name="example-com-class-c-programming-guide"></a>範例 COM 類別 (C# 程式設計手冊)
+以下是公開為 COM 物件類別的範例。 在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。 如需詳細資訊，請參閱 [NIB：如何：登錄 COM Interop 元件](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e)。  
   
- 將 Visual C\# 物件公開為 COM 需要宣告一個類別介面、事件介面 \(如果必要時\) 和類別本身。  類別成員必須遵循以下規則，才可見於 COM：  
+ 將 Visual C# 物件公開給 COM 需要宣告類別介面和類別本身，以及事件介面 (若需要)。 類別成員必須遵守下列規則才能為 COM 所見︰  
   
--   類別必須是公用的  
+-   類別必須是公用的。  
   
--   屬性、方法和事件必須是公用的  
+-   屬性、方法及事件必須是公用的。  
   
--   屬性和方法必須宣告於類別介面  
+-   必須在類別介面上宣告屬性和方法。  
   
--   事件必須在事件介面內宣告過  
+-   必須在事件介面中宣告事件。  
   
- 類別中其他未在此介面內宣告的公用成員將不可見於 COM，但可見於其他 .Net Framework 物件。  
+ 未在這些介面中宣告的類別其他公用成員不會為 COM 所見，但會向其他 .NET Framework 物件顯示。  
   
- 若要將屬性和方法公開給 COM，您必須將它們宣告在類別介面上、使用一個 `DispId` 屬性將它們標記起來，並且在類別中予以實作。  介面中宣告成員的順序即是 COM vtable 所使用的順序。  
+ 若要向 COM 公開屬性和方法，您必須在類別介面上宣告它們，並以 `DispId` 屬性標記它們，然後在類別中實作它們。 成員在介面中的宣告順序是 COM vtable 使用的順序。  
   
- 若要由您的類別公開事件，必須將它們宣告在事件介面上，並且使用一個 `DispId` 屬性將它們標記起來。  這個類別不可用來實作事件介面。  
+ 若要從您的類別公開事件，您必須在事件介面上宣告它們，並使用 `DispId` 屬性標記它們。 此類別不應該實作這個介面。  
   
- 這個類別可以實作類別介面，它可以實作一個以上的介面，但是第一個實作的介面將做為預設的類別介面。  請在此實作要公開給 COM 的方法和屬性。  它們必須標記為公用並且符合類別介面內的宣告。  也請在此宣告由類別所引發的事件。  它們必須標記為公用並且符合事件介面內的宣告。  
+ 類別會實作類別介面，它可以實作多個介面，但首次實作是在預設類別介面。 實作此處向 COM 公開的方法和屬性。 它們必須標示為公用，且必須符合類別介面中的宣告。 此外，宣告類別在此引發的事件。 它們必須標示為公用，且必須符合事件介面中的宣告。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [互通性](../../../csharp/programming-guide/interop/interoperability.md)   
- [專案設計工具、建置頁 \(C\#\)](/visual-studio/ide/reference/build-page-project-designer-csharp)
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [互通性](../../../csharp/programming-guide/interop/index.md)   
+ [專案設計工具、建置頁面 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)

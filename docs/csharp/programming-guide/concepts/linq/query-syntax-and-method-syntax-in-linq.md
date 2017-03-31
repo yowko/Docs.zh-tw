@@ -1,53 +1,72 @@
 ---
-title: "Query Syntax and Method Syntax in LINQ (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], query syntax vs. method syntax"
-  - "queries [LINQ in C#], syntax comparisons"
+title: "LINQ 中的查詢語法及方法語法 (C#) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], query syntax vs. method syntax
+- queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
 caps.latest.revision: 30
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 28
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 687741ed357fd13424c4e2f9eeda3d2b531fd129
+ms.lasthandoff: 03/13/2017
+
 ---
-# Query Syntax and Method Syntax in LINQ (C#)
-在簡介語言整合查詢 \([!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]\) 使用 LINQ 宣告式查詢語法，文件的大部分撰寫查詢。  不過，，編譯程式碼時，必須轉譯查詢語法成方法呼叫 .NET Common Language Runtime \(CLR\)。  這些方法會叫用標準查詢運算子的名稱，例如 `Where`、 `Select`、 `GroupBy`、 `Join`、 `Max`和 `Average`。  您可以呼叫它們直接使用方法語法 \(而不是查詢語法。  
+# <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查詢語法及方法語法 (C#)
+介紹性 Language Integrated Query ([!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]) 文件中的大多數查詢都是使用 LINQ 宣告式查詢語法所撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  
   
- 查詢語法與方法語法在語意上是相同的，不過，許多人尋找查詢語法更簡單且更容易讀取。  必須表示查詢時呼叫方法。  例如，您必須使用呼叫方法以擷取元素數目符合指定條件的查詢。  您也必須使用方法呼叫擷取項目具有最大值位於來源序列的查詢。  <xref:System.Linq> 命名空間 \(Namespace\) 中標準查詢運算子的相關參考文件一般是使用方法語法。  因此，即使是撰寫 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢的新手，熟悉如何在查詢和查詢運算式本身中使用方法語法還是十分有用的。  
+ 查詢語法和方法語法的語意相同，但許多人都發現查詢語法較為簡單且更容易閱讀。 某些查詢必須以方法呼叫形式表示。 例如，您必須使用方法呼叫，來表示可擷取符合所指定條件的項目數的查詢。 您也必須針對擷取來源序列中具有最大值的項目的查詢，使用方法呼叫。 <xref:System.Linq> 命名空間中標準查詢運算子的參考文件一般會使用方法語法。 因此，即使開始撰寫 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢時，最好還是熟悉如何在查詢和查詢運算式本身中使用方法語法。  
   
-## 標準查詢運算子擴充方法  
- 下列範例顯示簡單的「*查詢運算式*」\(Query Expression\)，以及在語意上相等，以「*方法架構查詢*」\(Method\-Based Query\) 撰寫的對等查詢。  
+## <a name="standard-query-operator-extension-methods"></a>標準查詢運算子擴充方法  
+ 下列範例示範簡單「查詢運算式」**以及撰寫為「方法查詢」**的語意對等查詢。  
   
  [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
- 這兩個範例的輸出是相同的。  您可以看到在這兩種形式中查詢變數的型別都是相同的：<xref:System.Collections.Generic.IEnumerable%601>。  
+ 這兩個範例的輸出完全相同。 您可以看到查詢變數的類型在兩種形式中都相同：<xref:System.Collections.Generic.IEnumerable%601>。  
   
- 為了了解方法架構查詢，讓我們更仔細地看看它。  在運算式右邊，您會發現 `where` 子句現在是以 `numbers` 物件上的執行個體方法 \(instance method\) 表示，這個物件的型別就是剛剛的 `IEnumerable<int>`。  如果您熟悉泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，就會知道這個介面並沒有 `Where` 方法。  不過，如果在 Visual Studio IDE 中叫用 \(Invoke\) IntelliSense 完成清單，就會不只看到 `Where` 方法，還會看到其他許多方法，例如 `Select`、`SelectMany`、`Join` 和 `Orderby`\)。  這些都是標準查詢運算子。  
+ 若要了解方法查詢，讓我們更深入進行探討。 在運算式右側，請注意，`where` 子句會立即表示為 `numbers` 物件上的執行個體方法，您應該記得有一種 `IEnumerable<int>` 的類型。 如果您熟悉泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，則會知道它沒有 `Where` 方法。 不過，如果您在 Visual Studio IDE 中叫用 IntelliSense 完成清單，則不只會看到 `Where` 方法，還會看到許多其他方法，例如 `Select`、`SelectMany`、`Join` 和 `Orderby`。 這些都是標準查詢運算子。  
   
  ![Intellisense 中的標準查詢運算子](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
   
- 雖然看起來像是已將 <xref:System.Collections.Generic.IEnumerable%601> 重新定義為包含這些額外方法，但是實際上並非如此。  標準查詢運算子是以稱為「*擴充方法*」\(Extension Method\) 的一種新方法來實作。  擴充方法會「擴充」現有的型別，而您可以把它們當做型別上的執行個體方法一樣呼叫。  標準查詢運算子會擴充 <xref:System.Collections.Generic.IEnumerable%601>，這就是為何您可以寫 `numbers.Where(...)` 的原因。  
+ 雖然看起來就像已重新定義 <xref:System.Collections.Generic.IEnumerable%601> 以包含這些額外方法，但是實際上卻不是。 標準查詢運算子會實作為一種稱為「擴充方法」**的新方法。 擴充方法會「擴充」現有類型，其呼叫方式就像它們是類型上的執行個體方法一樣。 標準查詢運算子可擴充 <xref:System.Collections.Generic.IEnumerable%601>，這就是為什麼您可以撰寫 `numbers.Where(...)` 的原因。  
   
- 若要開始使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]，在擴充方法方面您只需要知道如何使用正確的 `using` 指示詞，將擴充方法帶入應用程式的範圍內。  這在 [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)中會有額外說明。  對應用程式而言，擴充方法和一般執行個體方法是相同的。  
+ 若要開始使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]，您真正只需要知道擴充方法的是如何使用正確的 `using` 指示詞，將它們帶入您應用程式的範圍內。 從您應用程式的觀點來看，擴充方法和一般執行個體方法都相同。  
   
- 如需擴充方法的詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。  如需標準查詢運算子的詳細資訊，請參閱[Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  部分 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 提供者 \(Provider\) \(例如 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]\) 除了針對 <xref:System.Collections.Generic.IEnumerable%601> 之外，還會針對其他型別實作自己的標準查詢運算子和其他擴充方法。  
+ 如需擴充方法的詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。 部分 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 提供者 (例如 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]) 會實作自己的標準查詢運算子以及 <xref:System.Collections.Generic.IEnumerable%601> 以外的其他類型的其他擴充方法。  
   
-## Lambda 運算式  
- 在上述範例中，請注意條件運算式 \(`num % 2 == 0`\) 會當做內嵌引數傳遞給 `Where` 方法: `Where(num => num % 2 == 0).`的這個內嵌運算式呼叫 Lambda 運算式。  用這個方式撰寫程式碼很方便，原因是不需要撰寫冗長的匿名方法 \(Anonymous Method\)、泛型委派或運算式樹狀架構。  在 C\# 中，`=>` 是 Lambda 運算子，意思為「移至」。  運算子左邊的 `num` 是輸入變數，對應至查詢運算式中的 `num`。  編譯器 \(Compiler\) 因為知道 `numbers` 是泛型 <xref:System.Collections.Generic.IEnumerable%601> 型別，所以可以推斷 `num` 的型別。  Lambda 主體與在查詢語法或其他任何 C\# 運算式或陳述式中表示的運算式相同，可以包含方法呼叫和其他複雜邏輯。  而「傳回值」就是運算式結果。  
+## <a name="lambda-expressions"></a>Lambda 運算式  
+ 在上述範例中，請注意，條件運算式 (`num % 2 == 0`) 會傳遞為 `Where` 方法的內嵌引數︰`Where(num => num % 2 == 0).` 這個內嵌運算式稱為 Lambda 運算式。 它方便您撰寫程式碼，而這些程式碼之前必須以更難處理的形式撰寫為匿名方法、泛型委派或運算式樹狀結構。 在 C# 中，`=>` 是 Lambda 運算子，視為「到」。 運算子左側的 `num` 是對應到查詢運算式中 `num` 的輸入變數。 編譯器可以推斷 `num` 的類型，因為它知道 `numbers` 為泛型 <xref:System.Collections.Generic.IEnumerable%601> 類型。 Lambda 的主體就與查詢語法或任何 C# 運算式或陳述式中的運算式相同，它可以包含方法呼叫和其他複雜邏輯。 「傳回值」就是運算式結果。  
   
- 開始使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 時，並不需要廣泛使用 Lambda。  不過，某些查詢只能以方法語法表示，而其中有些又需要使用 Lambda 運算式。  在更熟悉 Lambda 之後，您會發現它們是您 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 工具箱中強大而有彈性的工具。  如需詳細資訊，請參閱[Lambda 運算式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+ 若要開始使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]，您不需要廣泛使用 Lambda。 不過，只能在方法語法中表示特定查詢，而其中有一部分需要 Lambda 運算式。 更熟悉 Lambda 之後，您會發現它們是您 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 工具箱中功能強大且靈活的工具。 如需詳細資訊，請參閱 [Lambda 運算式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
-## 查詢撰寫性  
- 在上一個程式碼範例中，請注意 `OrderBy` 方法是在 `Where` 的呼叫中使用點運算子來呼叫。  `Where` 會產生篩選後的序列，然後 `Orderby` 就會將該序列進行排序。  因為查詢會傳回 `IEnumerable`，所以撰寫查詢時，必須以方法語法將方法呼叫鏈結在一起。  這就是當您使用查詢語法撰寫查詢時，編譯器在幕後執行的作業。  而且，因為查詢變數不會儲存查詢的結果，所以您隨時可以修改查詢變數或將它當做新查詢的基礎，即使已經執行查詢變數也一樣。  
+## <a name="composability-of-queries"></a>查詢的編寫性  
+ 在上述程式碼範例，請注意，在 `Where` 呼叫上使用點運算子來叫用 `OrderBy` 方法。 `Where` 會產生已篩選的序列，而 `Orderby` 接著會透過排序來運作於該序列。 因為查詢會傳回 `IEnumerable`，所以您可以將方法呼叫鏈結在一起，以在方法語法中撰寫它們。 當您使用查詢語法來撰寫查詢時，這是編譯器在幕後執行的作業。 因為查詢變數不會儲存查詢的結果，所以您隨時都可以修改它，或使用它作為新查詢的基礎，即使已經執行之後也是一樣。  
   
-## 請參閱  
- [Getting Started with LINQ in C\#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>另請參閱  
+ [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

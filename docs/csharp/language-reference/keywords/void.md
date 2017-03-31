@@ -1,27 +1,45 @@
 ---
 title: "void (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "void_CSharpKeyword"
-  - "void"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "void 關鍵字 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- void_CSharpKeyword
+- void
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b4aa3c7c54e5e4d53975262adbbd9b54c701a69e
+ms.lasthandoff: 03/13/2017
+
 ---
-# void (C# 參考)
-做為傳回型別為 `void` 方法，指定方法不會傳回值。  
+# <a name="void-c-reference"></a>void (C# 參考)
+當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。  
   
- `void` 在方法的參數清單不允許。  沒有使用參數而且不會傳回值之方法的宣告如下：  
+ 方法的參數清單中不允許 `void`。 如果某方法不採用任何參數，且不傳回任何值，其宣告方法如下所示：  
   
 ```  
 public void SampleMethod()  
@@ -31,18 +49,18 @@ public void SampleMethod()
   
 ```  
   
- `void` 也用於在不安全的內容中，宣告未知型別的指標。  如需詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。  
+ `void` 也可用於不安全的內容中，以宣告未知類型的指標。 如需詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。  
   
- `void` 是 .NET Framework <xref:System.Void?displayProperty=fullName> 型別的別名。  
+ `void` 是 .NET Framework <xref:System.Void?displayProperty=fullName> 類型的別名。  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [參考類型](../../../csharp/language-reference/keywords/reference-types.md)   
- [實值類型](../../../csharp/language-reference/keywords/value-types.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
+ [參考型別](../../../csharp/language-reference/keywords/reference-types.md)   
+ [實值型別](../../../csharp/language-reference/keywords/value-types.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

@@ -1,69 +1,84 @@
 ---
 title: "where (泛型類型條件約束) (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereconstraint"
-  - "whereconstraint_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where (泛型類型條件約束) [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereconstraint
+- whereconstraint_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where (generic type constraint) [C#]
 ms.assetid: d7aa871b-0714-416a-bab2-96f87ada4310
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
+ms.lasthandoff: 03/13/2017
+
 ---
-# where (泛型類型條件約束) (C# 參考)
-在泛型型別定義中，`where` 子句的用途是針對泛型宣告中所定義的型別參數，為其指定引數的型別條件約束。  例如，您可以宣告泛型類別 `MyGenericClass`，其中指定由型別參數 `T` 來實作 <xref:System.IComparable%601> 介面：  
+# <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
+在泛型類型定義中，`where` 子句是用來指定類型的條件約束，而這些類型可以用作泛型宣告中所定義類型參數的引數。 例如，您可以宣告泛型類別 `MyGenericClass`，讓類型參數 `T` 實作 <xref:System.IComparable%601> 介面：  
   
-```  
-public class MyGenericClass<T> where T:IComparable { }  
-```  
-  
+<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
 > [!NOTE]
 >  如需查詢運算式中 where 子句的詳細資訊，請參閱 [where 子句](../../../csharp/language-reference/keywords/where-clause.md)。  
   
- 除了介面條件約束，`where` 子句還可包含基底類別條件約束，此條件約束陳述了型別必須有指定類別做為基底類別 \(或該類別本身\)，才能用來當做該泛用型別的型別引數。  使用這種條件約束時，它必須出現於該型別參數任何其他條件約束之前。  
+ 除了介面條件約束之外，`where` 子句可以包含基底類別條件約束，說明類型必須將指定的類別作為基底類別 (或該類別本身)，才能用作該泛型類型的類型引數。 如果使用這類條件約束，則它必須出現在該類型參數的任何其他條件約束之前。  
   
  [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
- `where` 子句也可以包括建構函式 \(Constructor\) 條件約束。  使用者可以使用新的運算子來建立型別參數的執行個體，但是若要這樣做，必須透過建構函式條件約束 `new()`，來限制該型別參數。  [new\(\) 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)可讓編輯器知道，所提供的任何型別引數必須具有可存取的無參數 \(或預設\) 建構函式。  例如：  
+ `where` 子句也可能包含建構函式條件約束。 您可以建立使用新運算子的類型參數執行個體，但若要這樣做，類型參數必須受限於建構函式條件約束 `new()`。 [new() 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)可讓編譯器知道提供的任何類型引數都必須有可存取的無參數或預設建構函式。 例如:   
   
  [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
- `new()` 條件約束會出現在 `where` 子句中的最後面。  
+ `new()` 條件約束會出現在 `where` 子句中的最後。  
   
- 如果是多重型別參數，則每個型別參數都要有一個 `where` 子句，例如：  
+ 若有多個類型參數，請對每個類型參數使用一個 `where` 子句，例如：  
   
  [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
- 您也可以將條件約束附加到泛型方法的型別參數，如以下所示：  
+ 您也可以將條件約束附加至泛型方法的類型參數，如下所示︰  
   
 ```  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
- 請注意，描述委派型別參數條件約束的語法與方法型別參數的語法相同：  
+ 請注意，描述委派類型參數條件約束的語法與方法的語法相同︰  
   
 ```  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
- 如需泛型委派的詳細資訊，請參閱[泛型委派](../../../csharp/programming-guide/generics/generic-delegates.md)。  
+ 如需泛型委派的資訊，請參閱[泛型委派](../../../csharp/programming-guide/generics/generic-delegates.md)。  
   
- 如需語法和條件約束用法的詳細資訊，請參閱[型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。  
+ 如需條件約束語法和用法的詳細資料，請參閱[類型參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)。  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)   
- [類型參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+ [型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

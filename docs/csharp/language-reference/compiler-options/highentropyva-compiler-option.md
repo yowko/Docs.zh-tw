@@ -1,40 +1,56 @@
 ---
-title: "/highentropyva (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/highentropyva"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/highentropyva compiler option [C#]"
-  - "-highentropyva compiler option [C#]"
-  - "highentropyva compiler option [C#]"
+title: "-highentropyva (C# 編譯器選項) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /highentropyva
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /highentropyva compiler option [C#]
+- -highentropyva compiler option [C#]
+- highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
 caps.latest.revision: 8
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 8
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c1b49faa2fb388b330c24bdff28d00872828b110
+ms.lasthandoff: 03/13/2017
+
 ---
-# /highentropyva (C# Compiler Options)
-**\/highentropyva** 編譯器選項會通知視窗核心特定可執行檔是否支援高熵位址空間隨機載入 \(ASLR\)。  
+# <a name="highentropyva-c-compiler-options"></a>/highentropyva (C# 編譯器選項)
+[/highentropyva]**** 編譯器選項會通知 Windows 核心某一特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /highentropyva[+ | -]  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>引數  
  `+` &#124; `-`  
- 這個選項指定一個 64 位元的可執行檔或由 [\/platform: anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md) 編譯器選項所指示的可執行檔，支援一個高熵虛擬位址空間。  此選項預設為停用。  使用 **\/highentropyva\+** 或 **\/highentropyva** 啟用它。  
+ 此選項會指定，64 位元可執行檔或 [/platform:anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md) 編譯器選項所標記的可執行檔支援高熵虛擬位址空間。 此選項預設為停用。 使用 [/highentropyva+]**** 或 [/highentropyva]**** 予以啟用。  
   
-## 備註  
- 當隨機化處理序的位址空間配置做為 ASLR 一部分時， **\/highentropyva** 選項可讓視窗核心的相容版本使用高度 Entropy。  使用 Height Entropy 表示位址的數目可配置給記憶體區域，例如堆疊和堆積。  因此，猜測特定記憶體區域的位置更是困難。  
+## <a name="remarks"></a>備註  
+ 當隨機化處理序的位址空間配置作為 ASLR 一部分時，[/highentropyva]**** 選項可讓相容的 Windows 核心版本使用較高程度的高熵。 使用較高程度的高熵表示可將大量位址配置到記憶體區域，例如堆疊和堆積， 因此更難猜測特定記憶體區域的位置。  
   
- 當指定 **\/highentropyva** 編譯器選項、以 64 位元處理序執行時時，目標可執行檔和它所依賴的任何模組必須能夠處理大於 4 GB 的指標值 \(GB\)。  
-  
- 如需要ASLR的詳細資訊，請參閱 [緩和軟體漏洞](http://go.microsoft.com/fwlink/?LinkId=226234)。
+ 指定 [/highentropyva]**** 編譯器選項時，目標可執行檔以及作為其依據的任何模組在作為 64 位元處理序執行時，都必須能夠處理大於 4 GB 的指標值。

@@ -1,51 +1,69 @@
 ---
 title: "如何：比較字串 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "比較字串 [C#]"
-  - "字串 [C#], 比較"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- strings [C#], comparison
+- comparing strings [C#]
 ms.assetid: e1268e28-ee98-4695-98e9-92280f1c33c0
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 164d84a1e241572a1545c6fc2d3d1e9f0821cfcb
+ms.lasthandoff: 03/13/2017
+
 ---
-# 如何：比較字串 (C# 程式設計手冊)
-比較字串時，產生的結果會說明某一個字串大於或小於另一個字串，或是兩個字串相等。  用來判斷結果的規則需視執行的是「*序數比較*」\(Ordinal Comparison\) 還是「*區分文化特性比較*」\(Culture\-Sensitive Comparison\) 而定。  針對特定工作使用正確的比較類型很重要。  
+# <a name="how-to-compare-strings-c-programming-guide"></a>如何：比較字串 (C# 程式設計手冊)
+當您比較字串時，您產生的結果會顯示一個字串是大於或小於另一個，或兩個字串相等。 決定結果的規則會隨您執行「序數比較」**或「區分文化特性比較」**而異。 特定工作請務必使用正確的比較類型。  
   
- 在不考慮語言慣例的情況下，需要比較或排序兩個字串的值時，請使用基本序數比較。  基本序數比較 \(`System.StringComparison.Ordinal`\) 必須區分大小寫，也就是說兩個字串的字元必須完全相符："and" 不等同於 "And" 或 "AND"。  最常用的變化是 `System.StringComparison.OrdinalIgnoreCase`，亦即 "and"、"And" 和 "AND" 都視為相符。  `StringComparison.OrdinalIgnoreCase` 通常用來比較檔案名稱、路徑名稱、網路路徑，以及其值不會根據使用者電腦的地區設定而改變的任何其他字串。  如需詳細資訊，請參閱<xref:System.StringComparison?displayProperty=fullName>。  
+ 當您必須比較或排序兩個字串的值，但不考慮語言慣例時，請使用基本的序數比較。 基本的序數比較 (`System.StringComparison.Ordinal`) 會區分大小寫，這表示兩個字串必須逐字元比對："and" 不等於 "And" 或 "AND"。 常用的變化是 `System.StringComparison.OrdinalIgnoreCase`，它會比對 "and"、"And" 和 "AND"。 `StringComparison.OrdinalIgnoreCase` 通常用來比較檔案名稱、路徑名稱、網路路徑，以及不會隨使用者電腦的地區設定而變更其值的任何其他字串。 如需詳細資訊，請參閱 <xref:System.StringComparison?displayProperty=fullName>。  
   
- 區分文化特性比較通常用來比較及排序使用者輸入的字串，因為這類字串的字元和排序慣例可能會根據使用者電腦的地區設定而改變。  即便字串包含完全相同的字元，也可能會根據目前執行緒的文化特性而有不同的排序方式。  
+ 區分文化特性比較通常用於比較和排序使用者輸入的字串，因為這些字串的字元和排序慣例可能會隨使用者電腦的地區設定而異。 即使包含完全相同字元的字串，也可能因目前執行緒的文化特性而改變排序。  
   
 > [!NOTE]
->  比較字串時，應該使用明確指定要執行何種比較的方法，  這樣就能讓程式碼更容易維護及供人們閱讀。  請盡可能使用 <xref:System.String?displayProperty=fullName> 和 <xref:System.Array?displayProperty=fullName> 類別 \(可使用 <xref:System.StringComparison> 列舉型別 \(Enumeration\) 參數\) 之方法的多載，方便指定要執行的比較類型。  比較字串時，最好避免使用 `==` 和 `!=` 運算子。  同時，也應避免使用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 執行個體 \(Instance\) 方法，因為沒有一個多載會使用 <xref:System.StringComparison>。  
+>  當您比較字串時，您應該使用明確指定打算執行比較類型的方法。 這可讓程式碼更容易維護及閱讀。 請盡可能使用 <xref:System.String?displayProperty=fullName> 和 <xref:System.Array?displayProperty=fullName> 類別的方法多載，這些類別接受 <xref:System.StringComparison> 列舉參數，讓您可以指定要執行的比較類型。 比較字串時，最好避免使用 `==` 和 `!=` 運算子。 亦請避免使用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 執行個體方法，因為沒有任何多載會採用 <xref:System.StringComparison>。  
   
-## 範例  
- 在下列範例中，會針對其值不會根據使用者電腦的地區設定而改變的字串，示範如何正確比較這些字串。  此外，還會示範 C\# 的「*字串暫留*」\(String Interning\) 功能。  當程式宣告兩個以上完全相同的字串變數時，編譯器會將它們儲存至相同位置。  只要呼叫 <xref:System.Object.ReferenceEquals%2A> 方法，就能知道兩個字串實際上是參考到記憶體中的同一個物件。  <xref:System.String.Copy%2A?displayProperty=fullName> 方法可以用來避免暫留功能，如範例中所示。  
+## <a name="example"></a>範例  
+ 下例示範如何正確比較不隨使用者電腦的地區設定而變更其值的字串。 此外，它也會示範 C# 的「字串暫留」**功能。 當程式宣告兩個或多個相同的字串變數時，編譯器會將它們全部儲存在相同的位置。 藉由呼叫 <xref:System.Object.ReferenceEquals%2A> 方法，您會看到兩個字串實際上參考記憶體中的相同物件。 使用 <xref:System.String.Copy%2A?displayProperty=fullName> 方法來避免暫留，如範例中所示。  
   
  [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_1.cs)]  
   
-## 範例  
- 在下列範例中，會示範如何透過可使用 <xref:System.StringComparison> 列舉型別的 <xref:System.String?displayProperty=fullName> 方法，以慣用方式來比較字串。  請注意，這裡不採用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 執行個體方法，因為沒有一個多載會使用 <xref:System.StringComparison>。  
+## <a name="example"></a>範例  
+ 下例示範如何使用採用 <xref:System.StringComparison> 列舉的 <xref:System.String?displayProperty=fullName> 方法，以慣用方式比較字串。 請注意，此處未使用 <xref:System.String.CompareTo%2A?displayProperty=fullName> 執行個體方法，因為沒有任何多載會採用 <xref:System.StringComparison>。  
   
  [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_2.cs)]  
   
-## 範例  
- 在下列範例中，會示範如何透過可使用 <xref:System.StringComparer?displayProperty=fullName> 參數的靜態 <xref:System.Array> 方法，以區分文化特性方式來排序及搜尋陣列中的字串。  
+## <a name="example"></a>範例  
+ 下例示範如何使用採用 <xref:System.StringComparer?displayProperty=fullName> 參數的靜態 <xref:System.Array> 方法，在陣列中以區分文化特性的方式排序及搜尋字串。  
   
  [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_3.cs)]  
   
- 當元素或索引鍵的型別為 `string` 時，集合類別 \(例如 <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 和 <xref:System.Collections.Generic.List%601?displayProperty=fullName>\) 都有可使用 <xref:System.StringComparer?displayProperty=fullName> 參數的建構函式 \(Constructor\)。  一般而言，您應該盡量使用這些建構函式，並指定 `Ordinal` 或 `OrdinalIgnoreCase`。  
+ 當項目或索引鍵的類型是 `string` 時，<xref:System.Collections.Hashtable?displayProperty=fullName>、<xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 和 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 等集合類別都具有採用 <xref:System.StringComparer?displayProperty=fullName> 參數的建構函式。 通常應該盡可能使用這些建構函式，並指定 `Ordinal` 或 `OrdinalIgnoreCase`。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Globalization.CultureInfo?displayProperty=fullName>   
  <xref:System.StringComparer?displayProperty=fullName>   
  [字串](../../../csharp/programming-guide/strings/index.md)   
- [比較字串](../Topic/Comparing%20Strings%20in%20the%20.NET%20Framework.md)   
- [全球化和當地語系化應用程式](/visual-studio/ide/globalizing-and-localizing-applications)
+ [比較字串](http://msdn.microsoft.com/library/977dc094-fe19-4955-98ec-d2294d04a4ba)   
+ [全球化和當地語系化應用程式](https://docs.microsoft.com/visualstudio/ide/globalizing-and-localizing-applications)
