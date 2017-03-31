@@ -36,7 +36,7 @@ ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 和 Visual Basic)
-[!INCLUDE[vs_dev10_long](../../../csharp/programming-guide/interop/includes/vs_dev10_long_md.md)] 在 C# 和 Visual Basic 中開始採用改善 Microsoft Office 程式設計的新功能。 每一種語言都已經加入其他語言的現有功能。  
+Visual Studio 在 C# 和 Visual Basic 中開始採用改善 Microsoft Office 程式設計的新功能。 每一種語言都已經加入其他語言的現有功能。  
   
  C# 中的新功能包含具名及選擇性引數、類型為 `dynamic` 的傳回值，以及 COM 程式設計中省略 `ref` 關鍵字以及存取已編製索引之屬性的能力。 Visual Basic 中的新功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。  
   
