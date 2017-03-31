@@ -97,7 +97,7 @@ dotnet new [-h|--help]
 
 `-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1` (`Default: netcoreapp1.0`)
 
-`-au|--authentication` - 要使用的驗證類型。 值：`None` 或 `Individual` (預設值：`None`)
+-au|--authentication` -  要使用的驗證類型。 值︰None 或 Individual (預設值︰Individual)
 
 `-uld|--use-local-db` - 指定是否要使用 LocalDB，而不是 SQLite。 值：`true` 或 `false` (預設值：`false`)
 
