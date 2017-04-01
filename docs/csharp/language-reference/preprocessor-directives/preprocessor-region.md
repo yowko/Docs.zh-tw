@@ -39,8 +39,7 @@ ms.lasthandoff: 03/13/2017
 `#region` 可讓您指定程式碼區塊，當您使用 Visual Studio 程式碼編輯器的[大綱](https://docs.microsoft.com/visualstudio/ide/outlining)時，可以展開或摺疊該程式碼區塊。 在較長的程式碼檔案中，能夠摺疊或隱藏一或多個區域是很方便的，如此您可以專注於目前處理的檔案部分。 下例示範如何定義區域：  
   
 ```  
-  
-      #region MyClass definition  
+#region MyClass definition  
 public class MyClass   
 {  
     static void Main()   
@@ -59,3 +58,4 @@ public class MyClass
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
+
