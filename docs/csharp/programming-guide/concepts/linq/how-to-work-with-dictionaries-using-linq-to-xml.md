@@ -1,0 +1,82 @@
+---
+title: "如何：利用 LINQ to XML 使用字典 (C#) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1570e4bb0be707d1c27e8bdfc1ef853413d70784
+ms.lasthandoff: 03/13/2017
+
+
+---
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>如何：利用 LINQ to XML 使用字典 (C#)
+將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。 本主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。  
+  
+## <a name="example"></a>範例  
+ 此範例會使用查詢投影新 <xref:System.Xml.Linq.XElement> 物件之函數式建構的形式，並將產生的集合當做 <xref:System.Xml.Linq.XElement> 根物件之建構函式的引數傳遞。  
+  
+```csharp  
+Dictionary<string, string> dict = new Dictionary<string, string>();  
+dict.Add("Child1", "Value1");  
+dict.Add("Child2", "Value2");  
+dict.Add("Child3", "Value3");  
+dict.Add("Child4", "Value4");  
+XElement root = new XElement("Root",  
+    from keyValue in dict  
+    select new XElement(keyValue.Key, keyValue.Value)  
+);  
+Console.WriteLine(root);  
+```  
+  
+ 此程式碼會產生下列輸出：  
+  
+```xml  
+<Root>  
+  <Child1>Value1</Child1>  
+  <Child2>Value2</Child2>  
+  <Child3>Value3</Child3>  
+  <Child4>Value4</Child4>  
+</Root>  
+```  
+  
+## <a name="example"></a>範例  
+ 下列程式碼會從 XML 建立字典。  
+  
+```csharp  
+XElement root = new XElement("Root",  
+    new XElement("Child1", "Value1"),  
+    new XElement("Child2", "Value2"),  
+    new XElement("Child3", "Value3"),  
+    new XElement("Child4", "Value4")  
+);  
+  
+Dictionary<string, string> dict = new Dictionary<string, string>();  
+foreach (XElement el in root.Elements())  
+    dict.Add(el.Name.LocalName, el.Value);  
+foreach (string str in dict.Keys)  
+    Console.WriteLine("{0}:{1}", str, dict[str]);  
+```  
+  
+ 此程式碼會產生下列輸出：  
+  
+```  
+Child1:Value1  
+Child2:Value2  
+Child3:Value3  
+Child4:Value4  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -1,0 +1,6 @@
+# [Visual Basic 中的陣列](index.md)
+## [陣列維度](array-dimensions.md)
+## [如何：初始化陣列變數](how-to-initialize-an-array-variable.md)
+## [如何：排序陣列](how-to-sort-an-array.md)
+## [如何：指派一個陣列至另一個陣列](how-to-assign-one-array-to-another-array.md)
+## [陣列的疑難排解](troubleshooting-arrays.md)

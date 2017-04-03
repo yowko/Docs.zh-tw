@@ -1,119 +1,137 @@
 ---
 title: "for (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-  - "for_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "for 關鍵字 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- for
+- for_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
 caps.latest.revision: 39
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 39
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f2f32dd4bde376dd241cf168a4f034ba8f6e9b50
+ms.lasthandoff: 03/13/2017
+
 ---
-# for (C# 參考)
-使用 `for` 迴圈中，您可以重複執行陳述式或陳述式區塊，直到指定的運算式評估為 `false`。  這個迴圈是用來逐一查看陣列以及您事先知道的其他應用程式多少次要迴圈會逐一查看。  
+# <a name="for-c-reference"></a>for (C# 參考)
+透過 `for` 迴圈，您可以重複執行陳述式或陳述式區塊，直到指定的運算式評估為 `false` 為止。 這種迴圈對於逐一查看陣列很有用，也適用於您事先知道迴圈要反覆運算幾次的其他應用。  
   
-## 範例  
- 在下列範例中， `i` 的值寫入主控台 \(Console\) 和方法會將此屬性加入在每次反覆運算時。  
+## <a name="example"></a>範例  
+ 在下列範例中，`i` 值會寫入至主控台，並在迴圈每次反覆運算就加 1。  
   
  [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
- 在上述範例中的 `for` 陳述式會執行下列動作。  
+ 上述範例中的 `for` 陳述式會執行下列動作。  
   
-1.  首先，變數 `i` 的初始值建立。  這個步驟中只出現一次，不論次數重複迴圈。  您可以將這個初始化為發生的外部迴圈的流程。  
+1.  首先，請建立變數 `i` 的初始值。 不論迴圈重複幾次，此步驟只會發生一次。 您可以將此初始化視為在迴圈程序之外進行。  
   
-2.  要評估這個情況 \(`i <= 5`\)， `i` 的值與的 . 比較。  
+2.  為了評估條件 (`i <= 5`)，`i` 值會與 5 進行比較。  
   
-    -   如果 `i` 小於或等於引數，這個條件評估為 `true`，此外，也會發生下列動作。  
+    -   如果 `i` 小於或等於 5，則條件會評估為 `true`，而且會執行下列動作。  
   
-        1.  在迴圈主體的 `Console.WriteLine` 陳述式顯示 `i`的值。  
+        1.  迴圈主體中的 `Console.WriteLine` 陳述式會顯示 `i` 值。  
   
-        2.  `i` 的值長達 . 加入。  
+        2.  此 `i` 值會加 1。  
   
-        3.  迴圈回到開始 2D 步驟重新評估條件。  
+        3.  迴圈會回到步驟 2 的開頭，以重新評估條件。  
   
-    -   如果 `i` 比五大，條件評估為， `false`，而且您結束迴圈。  
+    -   如果 `i` 大於 5，則條件會評估為`false`，而且您會結束迴圈。  
   
- 請注意，則為，否則 `i` 的初始值比五大，迴圈的主體甚至一次不會執行。  
+ 請注意，如果 `i` 的初始值大於 5，則迴圈主體一次也不會執行。  
   
- 每 `for` 陳述式定義初始設定式、條件和 Iterator 部分。  這些部分通常會判斷有多少個迴圈會逐一查看。  
+ 每個 `for` 陳述式都會定義初始設定式、條件和迭代器區段。 這些區段通常會決定迴圈的反覆運算次數。  
   
-```c#  
+```csharp  
 for (initializer; condition; iterator)  
     body  
 ```  
   
- 下列章節提供用途。  
+ 這些區段有下列用途。  
   
--   初始設定式部分設定初始條件。  在只執行一次的這個部分的陳述式，，在進入迴圈之前。  這個章節只可以包含下列兩個選項。  
+-   初始設定式區段會設定初始條件。 此區段中的陳述式只會執行一次，之後就會進入迴圈。 此區段只能包含下列兩個選項的其中之一。  
   
-    -   本機路徑環境變數的宣告和初始化，做為第一個範例顯示 \(`int i = 1`\)。  變數是在本機迴圈，無法從迴圈外存取。  
+    -   區域迴圈變數的宣告和初始化，如第一個範例所示 (`int i = 1`)。 這是迴圈的區域變數，無法從迴圈外部存取。  
   
-    -   請從下列清單中的零個或多個陳述式 expressons，以逗號分隔。  
+    -   下列清單中的零個或多個陳述式運算式，並以逗號分隔。  
   
-        -   [指派](../../../csharp/language-reference/operators/assignment-operator.md) 陳述式  
+        -   [指派](../../../csharp/language-reference/operators/assignment-operator.md)陳述式  
   
         -   方法的引動過程  
   
-        -   重新命名或後置 [加入](../../../csharp/language-reference/operators/increment-operator.md) 運算式前置字元，例如 `++i` 或 `i++`  
+        -   前置或後置[遞增](../../../csharp/language-reference/operators/increment-operator.md)運算式，例如 `++i` 或 `i++`  
   
-        -   重新命名或後置 [遞減](../../../csharp/language-reference/operators/decrement-operator.md) 運算式前置字元，例如 `--i` 或 `i--`  
+        -   前置或後置[遞減](../../../csharp/language-reference/operators/decrement-operator.md)運算式，例如 `--i` 或 `i--`  
   
-        -   物件的建立使用 [新](../../../csharp/language-reference/keywords/new-operator.md)的  
+        -   使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 建立物件  
   
-        -   表示[等候](../../../csharp/language-reference/keywords/await.md)  
+        -   [await](../../../csharp/language-reference/keywords/await.md) 運算式  
   
--   條件部分包含評估判斷的一個布林運算式迴圈是否應該結束或應該再次執行。  
+-   條件區段包含布林運算式，以評估判斷迴圈應該結束或重新執行。  
   
--   Iterator 部分定義要在迴圈主體的每次反覆運算後發生。  Iterator 部分包含零或多個下列陳述式表示，以逗號分隔:  
+-   迭代器區段會定義迴圈主體每次反覆運算之後的狀況。 迭代器區段包含下列零個或多個陳述式運算式，並以逗號分隔：  
   
-    -   [指派](../../../csharp/language-reference/operators/assignment-operator.md) 陳述式  
+    -   [指派](../../../csharp/language-reference/operators/assignment-operator.md)陳述式  
   
     -   方法的引動過程  
   
-    -   重新命名或後置 [加入](../../../csharp/language-reference/operators/increment-operator.md) 運算式前置字元，例如 `++i` 或 `i++`  
+    -   前置或後置[遞增](../../../csharp/language-reference/operators/increment-operator.md)運算式，例如 `++i` 或 `i++`  
   
-    -   重新命名或後置 [遞減](../../../csharp/language-reference/operators/decrement-operator.md) 運算式前置字元，例如 `--i` 或 `i--`  
+    -   前置或後置[遞減](../../../csharp/language-reference/operators/decrement-operator.md)運算式，例如 `--i` 或 `i--`  
   
-    -   物件的建立使用 [新](../../../csharp/language-reference/keywords/new-operator.md)的  
+    -   使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 建立物件  
   
-    -   表示[等候](../../../csharp/language-reference/keywords/await.md)  
+    -   [await](../../../csharp/language-reference/keywords/await.md) 運算式  
   
--   迴圈的主體包含陳述式，則會傳回空的陳述式或陳述式區塊，可以放在括號的零或多個陳述式建立。  
+-   迴圈主體包含陳述式、空白陳述式或陳述式區塊，您可以用括號括住零個或多個陳述式來建立。  
   
-     使用 [中斷](../../../csharp/language-reference/keywords/break.md) 關鍵字，您可以產生 `for` 迴圈，使用 [繼續](../../../csharp/language-reference/keywords/continue.md) 關鍵字，或者您可以逐步執行至下一個反覆運算。  使用 [定位](../../../csharp/language-reference/keywords/goto.md)、或 [擲回。](../../../csharp/language-reference/keywords/throw.md)[return](../../../csharp/language-reference/keywords/return.md)陳述式，您也可以關閉所有迴圈。  
+     您可以使用 [break](../../../csharp/language-reference/keywords/break.md) 關鍵字跳出 `for` 迴圈，或使用 [continue](../../../csharp/language-reference/keywords/continue.md) 關鍵字逐步執行到下一個反覆運算。 您也可以使用 [goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md) 或 [throw](../../../csharp/language-reference/keywords/throw.md) 陳述式結束任何迴圈。  
   
- 本主題中的第一個範例顯示最常見的 `for` 迴圈，做出部分的下列選項。  
+ 本主題中的第一個範例示範最典型的 `for` 迴圈，並在各區段中進行下列選擇。  
   
--   初始設定式宣告並初始化本機路徑環境變數， `i`，維護迴圈的反覆項目計數。  
+-   初始設定式會宣告並初始化區域迴圈變數 `i`，以維護迴圈的反覆運算計數。  
   
--   狀態檢查迴圈變數的值對已知的最終值，如同 . 的。  
+-   條件會根據已知的最後一個值 5 來檢查迴圈變數的值。  
   
--   Iterator 部分使用後置遞增陳述式， `i++`相符，迴圈的每個反覆項目。  
+-   迭代器區段使用後置遞增陳述式 `i++`，來合計迴圈的每個反覆運算。  
   
- 下列範例說明數個較不常見的選項:指派值給初始設定式部分的外部迴圈變數，叫用初始設定式和 Iterator 部分的 `Console.WriteLine` 方法和變更兩個變數的值在 Iterator 的部分。  
+ 下列範例描述幾個較少見的選項︰將值指派給初始設定式區段中的外部迴圈變數、在初始設定式和迭代器區段中叫用 `Console.WriteLine` 方法，以及在迭代器區段中變更兩個變數的值。  
   
  [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
- 定義 `for` 陳述式的所有運算式都是選擇性的。  例如，下列陳述式建立無限迴圈。  
+ 所有定義 `for` 陳述式的運算式都是選擇性的。 例如，下列陳述式會建立一個無限迴圈。  
   
  [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [for 陳述式 \(C\+\+\)](/visual-cpp/cpp/for-statement-cpp)   
+ [for 陳述式 (C++)](https://docs.microsoft.com/cpp/cpp/for-statement-cpp)   
  [反覆運算陳述式](../../../csharp/language-reference/keywords/iteration-statements.md)

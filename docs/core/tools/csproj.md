@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e67270cf713857a5fea16ebdd0abab774f555808
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -36,9 +36,9 @@ ms.lasthandoff: 03/07/2017
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 專案中包含預設編譯
 隨著改為使用最新 SDK 版本中的 *csproj* 格式，編譯項目的預設包含項目和排除項目以及內嵌資源都已移至 SDK 屬性檔。 這表示您不再需要於專案檔中指定這些項目。 
 
-這樣做的主要原因是為了減少專案檔中的雜亂內容。 SDK 中的預設值應該涵蓋最常見的使用案例，而不需要在每個建立的專案中重複這些項目。 這會產生較小的專案檔，而更容易了解及視需要手動編輯。 
+這樣做的主要原因是為了讓專案檔更為簡潔。 SDK 中的預設值應該涵蓋最常見的使用案例，而不需要在每個建立的專案中重複這些項目。 這會產生較小的專案檔，而更容易了解及視需要手動編輯。 
 
-下表顯示有哪些項目，以及 SDK 中會包含及排除哪些 Glob： 
+下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))： 
 
 | 項目              | 包含 Glob                               | 排除 Glob                                                     | 移除 Glob                  |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/07/2017
 這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
 ### <a name="recommendation"></a>建議
-使用 csproj 時，建議您從專案中移除預設 Glob，並只新增您的應用程式/程式庫在各種情況下所需之成品 (執行階段、NuGet 套件等) 的 Glob 檔案路徑。
+使用 csproj 時，建議您從專案中移除預設 Glob，並只使用 Glob 新增您的應用程式/程式庫在各種情況下 (執行階段、NuGet 套件等) 所需之成品的檔案路徑。
 
 
 ## <a name="additions"></a>新增項目
@@ -109,11 +109,11 @@ ms.lasthandoff: 03/07/2017
 * `None` – 未使用任何資產。
 * `All` – 會使用所有資產。
 
-### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
-`<DotnetCliToolReference>` 項目指定使用者想要在專案內容中還原的 CLI 工具。 它會取代 *project.json* 中的 `tools` 節點。 
+### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+`<DotNetCliToolReference>` 項目指定使用者想要在專案內容中還原的 CLI 工具。 它會取代 *project.json* 中的 `tools` 節點。 
 
 ```xml
-<DotnetCliToolReference Include="<package-id>" Version="" />
+<DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>版本
@@ -243,3 +243,4 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 以分號分隔的索引鍵=值組清單。
+

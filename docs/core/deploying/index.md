@@ -4,15 +4,15 @@ description: ".NET Core 應用程式部署"
 keywords: ".NET、.NET Core、.NET Core 部署"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 03/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 24bca179bc153a6bb469e38067e457fa61a9d2b3
+ms.openlocfilehash: ef742b932a3a76359e3f06129dce0bf127a1977e
+ms.lasthandoff: 03/14/2017
 
 ---
 
@@ -48,11 +48,11 @@ ms.lasthandoff: 03/07/2017
 
 部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。 此範例從命令列使用 [dotnet 公用程式](../tools/dotnet.md)，但您也可以使用開發環境，例如 Visual Studio 或 Visual Studio Code，來編譯、測試及發行範例。
 
-1. 建立專案目錄，並從命令列輸入 `[dotnet new console](../tools/dotnet-new.md)` 來建立新的 C# 主控台專案。
+1. 建立專案目錄，並從命令列輸入 [`dotnet new console`](../tools/dotnet-new.md) 來建立新的 C# 主控台專案。
 
 2. 在編輯器中開啟 `Program.cs` 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，然後顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -89,11 +89,11 @@ ms.lasthandoff: 03/07/2017
 
 3. 執行 [dotnet restore](../tools/dotnet-restore.md) 命令還原專案中指定的相依性。
 
-4. 使用 [dotnet build](../tools/dotnet-build.md) 命令建立應用程式的偵錯組置。
+4. 使用 [dotnet build](../tools/dotnet-build.md) 命令建立應用程式的偵錯組建。
 
-5. 偵錯並測試程式之後，您可以使用 `dotnet publish -f netcoreapp1.1 -c release` 命令建立要隨應用程式一起部署的檔案。 這會建立應用程式的發行 (而非偵錯) 版本。
+5. 偵錯並測試程式之後，您可以使用 `dotnet publish -f netcoreapp1.1 -c Release` 命令建立要隨應用程式一起部署的檔案。 這會建立應用程式的發行 (而非偵錯) 版本。
 
-   產生的檔案會放在名為 `publish` 的目錄中，位在您專案的 `.\bin\release\netcoreapp1.1` 子目錄的子目錄中。
+   產生的檔案會放在名為 `publish` 的目錄中，位在您專案的 `.\bin\Release\netcoreapp1.1` 子目錄的子目錄中。
 
 6. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
 
@@ -103,7 +103,7 @@ ms.lasthandoff: 03/07/2017
 
 ### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>部署具有協力廠商相依性的 Framework 相依部署 ###
 
-部署具有一或多個協力廠商相依性的 Framework 相依部署，包含三個額外的步驟，然後才能執行 `dotnet restore` 命令︰
+部署具有一或多個協力廠商相依性的 Framework 相依部署，包含兩個額外的步驟，然後才能執行 `dotnet restore` 命令︰
 
 1. 將任何協力廠商程式庫參考加入您 `csproj` 檔案的 `<ItemGroup>` 區段。 下列 `<ItemGroup>` 區段顯示 `<ItemGroup>` (包含預設專案中的相依性) 以及做為協力廠商程式庫的 Json.NET。
 
@@ -147,7 +147,7 @@ ms.lasthandoff: 03/07/2017
 
 2. 在編輯器中開啟 `Program.cs` 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，然後顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -195,24 +195,22 @@ ms.lasthandoff: 03/07/2017
 5. 偵錯並測試完程式之後，您可以對兩個目標平台使用 `dotnet publish` 命令，建立針對每個目標平台要與應用程式一起部署的檔案，如下所示︰
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\release\netcoreapp1.1\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
+這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\Release\netcoreapp1.1\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
 6. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
 
 您可以任何想要的方式部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 zip 檔案中，或與您選擇的任何安裝封裝一起部署。 
 
-下面是此專案的完整 `csproj` 檔案。
+下面是此專案的完整 `csproj` 檔案：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -239,8 +237,6 @@ ms.lasthandoff: 03/07/2017
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -292,24 +288,22 @@ ms.lasthandoff: 03/07/2017
 5. 偵錯並測試完程式之後，您可以對兩個目標平台使用 `dotnet publish` 命令，建立針對每個目標平台要與應用程式一起部署的檔案，如下所示︰
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\release\netstandard1.6\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
+這會建立每個目標平台的應用程式發行 (而非偵錯) 版本。 產生的檔案會放在名為 `publish` 的子目錄中，位在您專案的 `.\bin\Release\netstandard1.6\<runtime_identifier>` 子目錄的子目錄中。 請注意，每個子目錄都包含啟動應用程式所需的一組完整檔案 (應用程式檔案和所有的 .NET Core 檔案)。
 
 6. 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 檔案主要用於偵錯例外狀況，您可以選擇應用程式檔案不封裝它。
 
 您可以任何想要的方式部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 zip 檔案中，或與您選擇的任何安裝封裝一起部署。 
 
-下面是此專案的完整 `csproj` 檔案。
+下面是此專案的完整 `csproj` 檔案：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

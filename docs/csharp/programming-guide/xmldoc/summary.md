@@ -1,46 +1,65 @@
 ---
 title: "&lt;summary&gt; (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "<summary>"
-  - "summary"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<summary> C# XML 標記"
-  - "summary C# XML 標記"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- <summary>
+- summary
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <summary> C# XML tag
+- summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b74e5bf964ff82f88fe2822257a64eccb5697535
+ms.lasthandoff: 03/13/2017
+
 ---
-# &lt;summary&gt; (C# 程式設計手冊)
-## 語法  
+# <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt; (C# 程式設計手冊)
+## <a name="syntax"></a>語法  
   
 ```  
 <summary>description</summary>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `description`  
- 為物件的摘要。  
+ 物件的摘要。  
   
-## 備註  
- \<summary\> 標記應用於描述型別或型別成員。  使用 [\<remarks\>](../../../csharp/programming-guide/xmldoc/remarks.md) 為型別描述加入補充資訊。  使用 [cref 屬性](../../../csharp/programming-guide/xmldoc/cref-attribute.md) \(Attribute\) 可以啟用如 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 的文件工具，以建立程式碼項目說明頁面的內部超連結。  
+## <a name="remarks"></a>備註  
+ \<summary> 標記應該用來描述類型或類型成員。 使用 [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) 新增類型描述的補充資訊。 使用 [cref 屬性](../../../csharp/programming-guide/xmldoc/cref-attribute.md)，讓 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 這類文件工具建立程式碼項目之文件頁面的內部超連結。  
   
- \<summary\> 標記的內容會是 IntelliSense 中有關型別資訊的唯一來源，也會在[Object Browser Window](http://msdn.microsoft.com/zh-tw/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda)中顯示。  
+ \<summary> 標記的文字是 IntelliSense 中類型的唯一資訊來源，也會顯示在 [物件瀏覽器] 視窗中。  
   
- 使用 [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 進行編譯，將文件註解處理為檔案。  若要依據編譯器產生的檔案建立最後的文件，您可以建立自訂工具，或者是使用 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 這類的工具。  
+ 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 這類工具。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
- 前一個範例會產生下列 XML 檔案。  
+ 上述範例會產生下列 XML 檔案。  
   
 ```  
 <?xml version="1.0"?>  
@@ -65,12 +84,12 @@ caps.handback.revision: 15
 </doc>  
 ```  
   
-## 範例  
- 下列程式碼範例示範如何建立泛型型別的 `cref` 參考。  
+## <a name="example"></a>範例  
+ 下列範例示範如何設定泛型型別的 `cref` 參考。  
   
  [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
- 前一個範例會產生下列 XML 檔案。  
+ 上述範例會產生下列 XML 檔案。  
   
 ```  
 <?xml version="1.0"?>  
@@ -97,6 +116,6 @@ caps.handback.revision: 15
   
 ```  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

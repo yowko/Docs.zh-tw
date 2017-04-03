@@ -1,22 +1,40 @@
 ---
 title: "Null 條件運算子 (C# 和 Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
 caps.latest.revision: 3
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0ecdf3c610bb09d1ecdf01e25b75c8f01802e852
+ms.lasthandoff: 03/13/2017
+
 ---
-# Null 條件運算子 (C# 和 Visual Basic)
-在執行成員存取 \(`?.`\) 或對 \(`?[`\) 作業編製索引之前，可用來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  
+# <a name="null-conditional-operators-c-and-visual-basic"></a>Null 條件運算子 (C# 和 Visual Basic)
+在執行成員存取 (`?.`) 或對 (`?[`) 作業編製索引之前，可用來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  
   
-```c#  
+```csharp  
 int? length = customers?.Length; // null if customers is null   
 Customer first = customers?[0];  // null if customers is null  
 int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
@@ -40,7 +58,7 @@ A?.B?.C?[0] == E
   
  Null 條件成員存取的另一個用法是，使用更少的程式碼以執行緒安全的方式叫用委派。  舊方法需要如下的程式碼：  
   
-```c#  
+```csharp  
 var handler = this.PropertyChanged;  
 if (handler != null)  
     handler(…)  
@@ -65,13 +83,14 @@ PropertyChanged?.Invoke(e)
   
  由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。  有太多模稜兩可剖析的情況可能會導致無法呼叫。  
   
-## 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="language-specifications"></a>語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
- 如需詳細資訊，請參閱 [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)。  
+ 如需詳細資訊，請參閱 [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)。  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)   
- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>另請參閱  
+ [?? (Null 聯合運算子)](null-conditional-operator.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)   
+ [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)

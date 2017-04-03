@@ -1,42 +1,60 @@
 ---
 title: "解構函式 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "~ [C#], 解構函式中"
-  - "C# 語言, 解構函式"
-  - "解構函式 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- ~ [C#], in destructors
+- C# language, destructors
+- destructors [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6940be34b6cc15f006901e6d14d2a38ebb5d012a
+ms.lasthandoff: 03/13/2017
+
 ---
-# 解構函式 (C# 程式設計手冊)
+# <a name="destructors-c-programming-guide"></a>解構函式 (C# 程式設計手冊)
 解構函式是用來解構類別的執行個體。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
--   結構中無法定義解構函式。  它們只能與類別一起使用。  
+-   無法在結構中定義建構函式。 它們只能與類別搭配使用。  
   
 -   一個類別只能有一個解構函式。  
   
--   解構函式不能被繼承或多載。  
+-   無法繼承或多載解構函式。  
   
--   解構函式不能被呼叫。  它們會被自動叫用。  
+-   無法呼叫解構函式。 會自動呼叫它們。  
   
--   解構函式不使用修飾詞或參數。  
+-   解構函式不會接受修飾詞，也不會包含參數。  
   
- 例如，下列是 `Car` 類別之解構函式的宣告：  
+ 例如，下列是 `Car` 類別的解構函式宣告：  
   
  [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
   
- 解構函式會隱含呼叫物件之基底類別 \(Base Class\) 上的 <xref:System.Object.Finalize%2A>。  因此，前述的解構函式程式碼會隱含地轉譯為下列程式碼：  
+ 解構函式會對物件的基底類別隱含地呼叫 <xref:System.Object.Finalize%2A>。 因此，會將先前的解構函式程式碼隱含地轉譯為下列程式碼︰  
   
 ```  
 protected override void Finalize()  
@@ -52,39 +70,39 @@ protected override void Finalize()
 }  
 ```  
   
- 這表示繼承鏈結中的所有執行個體都會遞迴地呼叫 `Finalize` 方法 \(從最具衍生性的到最低衍生性的\)。  
+ 這表示，會依最高衍生性到最低衍生性的順序，對繼承鏈結中的所有執行個體遞迴呼叫 `Finalize` 方法。  
   
 > [!NOTE]
->  您不應使用空的解構函式。  當類別包含解構函式時，便會在 `Finalize` 佇列中建立一個項目。  當呼叫解構函式時，即會叫用記憶體回收行程處理佇列。  如果解構函式是空的，則只會導致不必要的效能損失。  
+>  不應該使用空的解構函式。 類別包含解構函式時，會在 `Finalize` 佇列中建立一個項目。 呼叫解構函式時，會叫用記憶體回收行程來處理佇列。 如果解構函式是空的，則這只會導致不必要的效能損失。  
   
- 程式設計人員無法控制呼叫解構函式的時間，因為這是由記憶體回收行程所決定的。  記憶體回收行程會檢查不再被應用程式使用的物件。  如果它將物件視為符合解構資格，便會呼叫解構函式 \(如果存在\)，並且回收用來儲存該物件的記憶體。  當程式結束時，解構函式也會被呼叫。  
+ 因為這是由記憶體回收行程所決定，所以程式設計人員無法控制解構函式的呼叫時機。 記憶體回收行程會檢查應用程式不再使用的物件。 如果它認為物件適合進行解構，則會呼叫解構函式 (如果有的話)，並回收用來儲存物件的記憶體。 程式結束時，也會呼叫解構函式。  
   
- 呼叫 <xref:System.GC.Collect%2A> 即可強制記憶體回收，但在多數情況下，都應該避免這種情形，因為這樣可能會形成效能問題。  
+ 呼叫 <xref:System.GC.Collect%2A> 可能會強制執行記憶體回收，但在大部分的情況下，這種情況可能會造成效能問題，因此應該予以避免。  
   
-## 使用解構函式來釋放資源  
- 一般來說，與透過並未針對執行階段使用記憶體回收的語言進行開發相較之下，C\# 並不需要太多的記憶體管理動作。  這是因為 .NET Framework 記憶體回收行程隱含管理您物件的記憶體配置和釋放。  但是，當您的應用程式封裝 Unmanaged 資源 \(例如視窗、檔案和網路連線\) 時，則您應使用解構函式來釋放這些資源。  當物件符合解構資格時，記憶體回收行程便會執行該物件的 `Finalize` 方法。  
+## <a name="using-destructors-to-release-resources"></a>使用解構函式來釋放資源  
+ 一般而言，C# 所需要的記憶體管理，會少於使用不以具有記憶體回收的執行階段為目標之語言進行開發所需的記憶體管理。 這是因為 .NET Framework 記憶體回收行程會隱含地管理您物件的記憶體配置和釋放。 不過，您的應用程式封裝視窗、檔案和網路連線這類未受管理資源時，應該使用解構函式來釋放這些資源。 適合解構物件時，記憶體回收行程會執行物件的 `Finalize` 方法。  
   
-## 明確釋放資源  
- 如果您的應用程式使用過多的外部資源，我們也建議您在記憶體回收行程釋放該物件之前，提供明確釋放資源的方法。  實作對於物件執行必要清除之 <xref:System.IDisposable> 介面中的 `Dispose` 方法，即可做到這點。  這會顯著提升應用程式的效能。  雖然使用此方法明確控制資源，但是當呼叫 `Dispose` 方法失敗時，解構函式仍將成為清除資源的防護措施。  
+## <a name="explicit-release-of-resources"></a>明確釋放資源  
+ 如果您的應用程式使用過多的外部資源，則也建議您提供一種方式，以在記憶體回收行程釋放物件之前明確釋放資源。 做法是從對物件執行必要清除的 <xref:System.IDisposable> 介面實作 `Dispose` 方法。 這可以大幅改善應用程式效能。 即使對資源使用這個明確控制，如果 `Dispose` 方法呼叫失敗，解構函式還是會成為清除資源的保護措施。  
   
- 如需清除資源的詳細資料，請參閱下列主題：  
+ 如需清除資源的詳細資訊，請參閱下列主題︰  
   
--   [Cleaning Up Unmanaged Resources](../Topic/Cleaning%20Up%20Unmanaged%20Resources.md)  
+-   [清除 Unmanaged 資源](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)  
   
--   [Implementing a Dispose Method](../Topic/Implementing%20a%20Dispose%20Method.md)  
+-   [實作 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)  
   
--   [Using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)  
+-   [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)  
   
-## 範例  
- 下列範例建立三個形成繼承鏈結的類別。  `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。  三個類別都有解構函式。  在 `Main()` 中，會建立衍生最多之類別的執行個體。  當程式執行時，請注意，將會依照從衍生最多的到衍生最少的順序，自動呼叫三個類別的解構函式。  
+## <a name="example"></a>範例  
+ 下列範例會建立三個產生繼承鏈結的類別。 `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。 這三個都具有解構函式。 在 `Main()` 中，會建立最高衍生性類別的執行個體。 程式執行時，請注意，會依最高衍生性到最低衍生性的順序，自動呼叫這三個類別的解構函式。  
   
  [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IDisposable>   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Garbage Collection](../Topic/Garbage%20Collection.md)
+ [記憶體回收](../../../standard/garbagecollection/index.md)

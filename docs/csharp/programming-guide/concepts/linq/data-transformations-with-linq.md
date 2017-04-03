@@ -1,78 +1,97 @@
 ---
 title: "使用 LINQ 轉換資料 (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#]，資料轉換"
-  - "來源項目 [C# 中的 LINQ]"
-  - "聯結多個輸入 [C# 中的 LINQ]"
-  - "多個輸入用於一個輸出序列 [C# 中的 LINQ]"
-  - "來源項目的子集 [C# 中的 LINQ]"
-  - "資料來源 [C# 中的 LINQ]，資料轉換"
-  - "資料轉換 [C# 中的 LINQ]"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], data transformations
+- source elements [LINQ in C#]
+- joining multiple inputs [LINQ in C#]
+- multiple outputs for one output sequence [LINQ in C#]
+- subset of source elements [LINQ in C#]
+- data sources [LINQ in C#], data transformations
+- data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0b7f8874e9a22ca14bee009cab98e13d96bd9621
+ms.lasthandoff: 03/13/2017
+
 ---
-# 使用 LINQ 轉換資料 (C#)
-[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] 不只可以擷取資料，  它同時還是強大的資料轉換工具。  使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢，您可以使用來源序列做為輸入，並且用許多方式來修改來源序列，以建立新的輸出序列。  您可以修改序列，而不用修改項目將排序和群組。可能是 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] ，但是查詢最強的功能可能是建立新的。  這項作業是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。  例如，您可以進行下列工作：  
+# <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)
+[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 不只是關於擷取資料。 它也是功能強大的資料轉換工具。 使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但或許 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 最強大的功能查詢就是能夠建立新的類型。 這是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
   
--   將多個輸入序列合併成具有新型別的單一輸出序列。  
+-   將多個輸入序列合併為具有新類型的單一輸出序列。  
   
--   建立輸出序列，其中的項目只由來源序列中每個項目的一個或多個屬性組成。  
+-   建立輸出序列，使其項目只包含來源序列中每個項目的一或多個屬性。  
   
--   建立輸出序列，其中的項目只由對來源資料執行作業後的結果組成。  
+-   建立輸出序列，使其項目包含對來源資料執行的作業結果。  
   
--   建立不同格式的輸出序列。  例如，您可以將資料從 SQL 資料列或文字檔轉換為 XML。  
+-   以不同格式建立輸出序列。 比方說，您可以將資料從 SQL 資料列或文字檔轉換成 XML。  
   
- 以下提供一些範例。  當然，這些轉換也可以用各種方式合併至相同查詢中。  甚至，某個查詢的輸出序列可以當成新查詢的輸入序列。  
+ 這些只是一些範例。 當然，這些轉換可以用各種方式結合在相同的查詢中。 此外，一個查詢的輸出序列也可用作新查詢的輸入序列。  
   
-## 將多個輸入聯結成一個輸出序列  
- 您可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢，建立項目來自多個輸入序列的輸出序列。  下列範例顯示如何合併兩個記憶體中資料結構，而相同的準則也適用於合併來自 XML 或 SQL 或 DataSet 來源的資料。  假設有下列兩個類別 \(Class\) 型別：  
+## <a name="joining-multiple-inputs-into-one-output-sequence"></a>將多個輸入聯結成一個輸出序列  
+ 您可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢來建立輸出序列，其中包含來自多個輸入序列的項目。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
- 下列範例會顯示查詢：  
+ 下列範例顯示查詢：  
   
  [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
- 如需詳細資訊，請參閱[join 子句](../../../../csharp/language-reference/keywords/join-clause.md)與[select 子句](../../../../csharp/language-reference/keywords/select-clause.md)。  
+ 如需詳細資訊，請參閱 [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)。  
   
-## 選取每個來源項目的子集  
- 有兩種主要方式可以用來選取來源序列中每個項目的子集。  
+## <a name="selecting-a-subset-of-each-source-element"></a>選取每個來源項目的子集  
+ 有兩種主要方式，可選取來源序列中每個項目的子集︰  
   
-1.  若只要選取來源項目的一個成員，請使用點運算。  在下列範例中，假設 `Customer` 物件含有多個公用 \(Public\) 屬性 \(包括名為 `City` 的字串\)。  執行時，這個查詢會產生字串的輸出序列。  
+1.  若只要選取來源項目的一個成員，請使用點運算。 在下列範例中，假設 `Customer` 物件包含數個公用屬性，包括名為 `City` 的字串。 在執行時，此查詢會產生字串的輸出序列。  
   
     ```  
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  若要建立的項目包含多個來自來源項目的屬性，則可以將物件初始設定式與具名物件或匿名型別搭配使用。  下列範例顯示如何使用匿名型別來封裝每個 `Customer` 項目的兩個屬性：  
+2.  若要建立包含來自來源項目之多個屬性的項目，您可以使用物件初始設定式與具名物件或匿名型別。 下列範例示範如何使用匿名型別封裝來自每個 `Customer` 項目的兩個屬性︰  
   
     ```  
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- 如需詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)與[匿名類型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
+ 如需詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
-## 將記憶體中物件轉換為 XML  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 查詢簡化了在記憶體中資料結構、SQL 資料庫、[!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] Dataset 和 XML 資料流或文件之間的資料轉換。  下列範例會將記憶體中資料結構內的物件轉換為 XML 項目。  
+## <a name="transforming-in-memory-objects-into-xml"></a>將記憶體中的物件轉換成 XML  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
- 這個程式碼會產生下列 XML 輸出：  
+ 該程式碼會產生下列 XML 輸出：  
   
 ```  
 < Root>  
@@ -94,21 +113,20 @@ caps.handback.revision: 15
 </Root>  
 ```  
   
- 如需詳細資訊，請參閱[在 C\# 中建立 XML 樹狀結構](../Topic/Creating%20XML%20Trees%20in%20C%23%20\(LINQ%20to%20XML\)1.md)。  
+ 如需詳細資訊，請參閱[在 C# 中建立 XML 樹狀結構 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)。  
   
-## 在來源項目上執行作業  
- 輸出序列可能不會包含來源序列的任何項目或項目屬性。  輸出序列可能只是使用來源項目做為輸入引數計算而得的值序列。  下列簡單查詢在執行時會輸出字串序列，其中的值是根據 `double` 型別的來源項目序列計算而得的結果。  
+## <a name="performing-operations-on-source-elements"></a>對來源項目執行作業  
+ 輸出序列可能不會包含來自來源序列的任何項目或項目屬性。 輸出可能會是使用來源項目作為輸入引數而計算的值序列。 下列簡單的查詢在執行時，會輸出字串的序列，這些字串的值代表了以 `double` 類型之項目的來源序列為基礎的計算。  
   
 > [!NOTE]
->  如果查詢會轉譯為另一個領域，則不支援在查詢運算式中呼叫方法。  例如，因為 SQL Server 沒有一般 C\# 方法所需的內容，所以不可以在 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] 中呼叫一般 C\# 方法。  但可以將預存程序 \(Stored Procedure\) 對應至方法，再呼叫預存程序。  如需詳細資訊，請參閱[預存程序](../Topic/Stored%20Procedures.md)。  
+>  如果查詢會轉譯成某個其他領域，則不支援在查詢運算式中呼叫方法。 例如，您無法在 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 呼叫一般 C# 方法，因為 SQL Server 沒有它的內容。 不過，您可以將預存程序對應至方法，並呼叫它們。 如需詳細資訊，請參閱[預存程序](http://msdn.microsoft.com/library/4d23dd7a-a85f-44ff-a717-af7d0950c0fc)。  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
-## 請參閱  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)   
+## <a name="see-also"></a>另請參閱  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)   
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
  [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)   
- [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+ [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)

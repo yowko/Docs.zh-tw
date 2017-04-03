@@ -4,16 +4,16 @@ description: "查看 project.json 與 csproj 項目的對應。"
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
 ms.author: mairaw
-ms.date: 03/02/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: beaae03add6f90692189325c0e1cff5ab761abb5
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -612,7 +612,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 ```
 
 > [!NOTE]
-> .NET Core SDK 會自動新增許多預設萬用字元模式。
+> .NET Core SDK 會自動新增許多預設 [Glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。
 > 如需詳細資訊，請參閱 [Default Compile Item Values](https://aka.ms/sdkimplicititems) (預設編譯項目值)。
 
 所有 MSBuild `ItemGroup` 項目都支援 `Include`、`Exclude` 和 `Remove`。

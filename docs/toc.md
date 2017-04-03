@@ -129,9 +129,12 @@
 # [.NET Core 指南](core/index.md)
 ## [快速入門](core/getting-started.md)
 ## [Windows 必要條件](core/windows-prerequisites.md)
+## [macOS 先決條件](core/macos-prerequisites.md)
 ## [教學課程](core/tutorials/index.md)
 ### [使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案](core/tutorials/using-on-windows-full-solution.md)
 ### [在 macOS 上開始使用 .NET Core](core/tutorials/using-on-macos.md)
+### [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
+### [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [從使用 CLI 工具開始使用 .NET Core](core/tutorials/using-with-xplat-cli.md)
 #### [使用 .NET Core 命令列組織和測試專案](core/tutorials/testing-with-cli.md)
 ### [使用跨平台工具開發程式庫](core/tutorials/libraries.md)
@@ -139,8 +142,12 @@
 ### [如何管理 .NET Core 1.0 的套件相依性版本](core/tutorials/managing-package-dependency-versions.md)
 ### [從機器碼裝載 .NET Core](core/tutorials/netcore-hosting.md)
 ## [套件、中繼套件和架構](core/packages.md)
+## [CLI 中的變更概觀](core/tools/cli-msbuild-architecture.md)
+### [相依性管理](core/tools/dependencies.md)
+### [csproj 格式的新增項目](core/tools/csproj.md)
 ## 移轉
 ### [移轉至 csproj 格式](core/migration/index.md)
+### [project.json 與 csproj 的對應](core/tools/project-json-to-csproj.md)
 ### [從 DNX 移轉](core/migration/from-dnx.md)
 ## [應用程式部署](core/deploying/index.md)
 ### [使用跨平台工具建立 NuGet 套件](core/deploying/creating-nuget-packages.md)
@@ -148,18 +155,13 @@
 ### [建置 .NET Core 應用程式的 Docker 映像](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools for Docker](core/docker/visual-studio-tools-for-docker.md)
 ## [單元測試](core/testing/index.md)
-### [使用 dotnet 測試及 xUnit 執行單元測試](core/testing/unit-testing-with-dotnet-test.md)
-### [使用 dotnet 測試及 MSTest 執行單元測試](core/testing/unit-testing-with-mstest.md)
+### [使用 dotnet test 及 xUnit 執行單元測試](core/testing/unit-testing-with-dotnet-test.md)
+### [使用 dotnet test 及 MSTest 執行單元測試](core/testing/unit-testing-with-mstest.md)
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支援](core/versions/lts-current.md)
 ### [🔧 服務](core/versions/servicing.md)
 ## [執行階段識別項目錄](core/rid-catalog.md)
-## [.NET Core 工具](core/tools/index.md)
-### [CLI 中的變更概觀](core/tools/cli-msbuild-architecture.md)
-### [相依性管理](core/tools/dependencies.md)
-### [部署應用程式](core/deploying/index.md)
-### [csproj 格式的新增項目](core/tools/csproj.md)
-### [project.json 與 csproj 的對應](core/tools/project-json-to-csproj.md)
+## [.NET Core CLI 工具](core/tools/index.md)
 ### [遙測](core/tools/telemetry.md)
 ### [擴充性模型](core/tools/extensibility.md)
 ### [持續整合](core/tools/using-ci-with-cli.md)
@@ -179,6 +181,7 @@
 ### [dotnet-run](core/tools/dotnet-run.md)
 ### [dotnet-sln](core/tools/dotnet-sln.md)
 ### [dotnet-test](core/tools/dotnet-test.md)
+### [dotnet-vstest](core/tools/dotnet-vstest.md)
 ### 專案修改命令
 #### 參考
 ##### [dotnet-add-reference](core/tools/dotnet-add-reference.md)
@@ -193,13 +196,13 @@
 ### [分析協力廠商相依性](core/porting/third-party-deps.md)
 ### [移植程式庫](core/porting/libraries.md)
 ### [🔧 NuGet 套件](core/porting/nuget-packages.md)
+## [VS 2015/project.json 文件](project-json.md)
 <!-- End .NET Core Content -->
 
 <!-- .NET Framework Content -->
 # [Docker 上的 .NET Framework 指南](framework/index.md)
 ## [Docker](framework/docker/index.md)
 ### [在容器中執行主控台應用程式](framework/docker/console.md)
-### [在容器中執行 ASP.NET MVC 應用程式](framework/docker/aspnetmvc.md)
 <!-- End .NET Framework Content -->
 
 <!-- Start of C# Content -->
@@ -408,14 +411,6 @@
 
 ## [開發應用程式](visual-basic/developing-apps/index.md)
 
-### [使用 Visual Basic 開發環境](visual-basic/developing-apps/using-ide/using-the-visual-basic-development-environment.md)
-#### [Visual Basic 設定](visual-basic/developing-apps/using-ide/settings.md)
-#### [Visual Basic IntelliSense 程式碼片段](visual-basic/developing-apps/using-ide/intellisense-code-snippets.md)
-#### [重構](https://docs.microsoft.com/en-us/visualstudio/vb-ide/refactoring-vb)
-#### [程式碼產生](https://docs.microsoft.com/en-us/visualstudio/vb-ide/code-generation-vb)
-#### [Visual Basic 程式碼中事件處理常式的說明](visual-basic/developing-apps/using-ide/help-for-event-handlers.md)
-#### [如何：在 Visual Basic 中編譯並執行專案](visual-basic/developing-apps/using-ide/how-to-compile-and-run-a-project.md)
-
 ### [Visual Basic 中的程式設計](visual-basic/developing-apps/programming/index.md)
 #### [存取電腦資源](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
 #### [記錄來自應用程式的資訊](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
@@ -434,7 +429,6 @@
 #### [My 如何相依於專案類型](visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 
 ### [存取資料](visual-basic/developing-apps/accessing-data.md)
-### [偵錯](visual-basic/developing-apps/debugging.md)
 ### [建立和使用元件](visual-basic/developing-apps/creating-and-using-components.md)
 
 ### [列印和報告](visual-basic/developing-apps/printing/printing-and-reporting.md)

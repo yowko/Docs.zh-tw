@@ -1,19 +1,19 @@
 ---
-title: "dotnet-test 命令 | Microsoft Docs"
+title: "dotnet-test 命令 - .NET Core CLI | Microsoft Docs"
 description: "`dotnet test` 命令是用來在指定的專案中執行單元測試。"
 keywords: "dotnet-test, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -21,26 +21,23 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="name"></a>名稱
 
-`dotnet-test` - .NET 測試驅動程式
+`dotnet-test` - 用來執行單元測試的 .NET 測試驅動程式。
 
 ## <a name="synopsis"></a>概要
 
-```
-dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
-dotnet test [-h|--help]
-```
+`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令是用來在指定的專案中執行單元測試。 單元測試是與單元測試架構 (例如 NUnit 或 xUnit) 具有相依性的類別庫專案，以及該單元測試架構的 dotnet test 執行器。 這些會封裝為 NuGet 套件，並還原為專案的一般相依性。
+`dotnet test` 命令是用來在指定的專案中執行單元測試。 單元測試是與單元測試架構 (例如 MSText、NUnit 或 xUnit) 具有相依性的類別庫專案，以及該單元測試架構的 dotnet 測試執行器。 這些會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
-測試專案也需要指定測試執行器。 這是使用一般 `<PackageReference>` 元素所指定，如下列範例專案檔中所示：
+測試專案也必須指定測試執行器。 這是使用一般 `<PackageReference>` 元素所指定，如下列範例專案檔中所示：
 
 [!code-xml[XUnit 基本範本](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>選項
 
-`project`
+`PROJECT`
     
 指定測試專案的路徑。 如果省略，則會預設為目前目錄。
 
@@ -68,13 +65,13 @@ dotnet test [-h|--help]
 
 指定測試結果的記錄器。 
 
-`-c|--configuration <Debug|Release>`
+`-c|--configuration <CONFIGURATION>`
 
 用來建置的組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
 
 `-f|--framework <FRAMEWORK>`
 
-尋找特定架構的測試二進位檔。
+尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -98,12 +95,11 @@ dotnet test [-h|--help]
 
 `dotnet test` 
 
-執行 test1 專案中的測試︰
+執行 `test1` 專案中的測試︰
 
 `dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>請參閱
 
-[架構](../../standard/frameworks.md)
-
-[執行階段識別項 (RID) 目錄](../rid-catalog.md)
+* [目標架構](../../standard/frameworks.md)
+* [執行階段識別項 (RID) 目錄](../rid-catalog.md)

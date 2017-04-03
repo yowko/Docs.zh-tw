@@ -31,7 +31,7 @@ C# 中的 `using` 陳述式和 Visual Basic 中的 `Using` 陳述式可簡化建
 
 下列範例會使用 `using` 陳述式建立和發行 [System.IO.StreamReader](xref:System.IO.StreamReader) 物件。
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -77,7 +77,7 @@ End Module
 
 請注意，雖然 [StreamReader](xref:System.IO.StreamReader) 類別會實作 [IDisposable](xref:System.IDisposable) 介面，指出它使用的是 Unmanaged 資源，但是這個範例並不會明確呼叫 [StreamReader.Dispose](xref:System.IO.StreamReader.Dispose(System.Boolean)) 方法。 當 C# 或 Visual Basic 編譯器遇到 `using` 陳述式時，會發出相當於下列明確包含 `try/finally` 區塊之程式碼的中繼語言 (IL)。 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -134,7 +134,7 @@ End Module
 
 C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部相當於巢狀的 using 陳述式。 下列範例會具現化兩個 [StreamReader](xref:System.IO.StreamReader) 物件，以便讀取兩個不同檔案的內容。 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -171,7 +171,7 @@ public class Example
 
 下列範例類似上述範例，不過它會使用 `try/catch/finally` 區塊具現化、使用和處置 [StreamReader](xref:System.IO.StreamReader) 物件，以及處理 [StreamReader](xref:System.IO.StreamReader) 建構函式和其 [ReadToEnd](xref:System.IO.StreamReader.ReadToEnd) 方法擲回的所有例外狀況。 請注意，在 `finally` 中的程式碼會先確認實作 [IDisposable](xref:System.IDisposable) 的物件不是 `null`，再呼叫 [Dispose](xref:System.IDisposable.Dispose) 方法。 若未這樣做，可能導致執行階段產生 [NullReferenceException](xref:System.NullReferenceException) 例外狀況。 
 
-```cs
+```csharp
 using System;
 using System.Globalization;
 using System.IO;

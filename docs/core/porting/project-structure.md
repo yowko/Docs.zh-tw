@@ -10,13 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
-ms.lasthandoff: 01/18/2017
+ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
+ms.openlocfilehash: b86693b1d6eed0ff5b8d1831e324354241f29806
+ms.lasthandoff: 03/15/2017
 
 ---
 
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
+
+> [!WARNING]
+> 本主題尚未針對最新版工具進行更新。
 
 本文是為了協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。  它提供數個選項，組織專案以協助開發人員達成此目標。  以下是當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。  它們不一定涵蓋您想要的所有項目，專案需求決定優先順序。
 

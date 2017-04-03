@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: fb9940e56b5d0e8f4474584102f2e6167a79f291
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: db4c9721381a9675b06f0fc6b5381d987816e9a4
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 03/02/2017
 
 不久之前，只要購買較新的電腦或伺服器，應用程式的執行速度就會更快，然後逐漸停止。 這事實上相反。 具有 1ghz 單一核心 ARM 晶片和伺服器工作負載的行動電話已轉換為 VM。 使用者仍然想要回應式 UI，而且企業擁有者想要擁有隨其業務調整的伺服器。 行動和雲端以及已連接網際網路母體 >3B 使用者的轉換已導致新的一組軟體模式。 
 
-* 用戶端應用程式應該是一律開啟、一律連線並持續回應與具有高應用程式存放區評等的使用者互動 (例如觸控)！
+* 用戶端應用程式應該一律啟動、一律連線，並持續回應使用者互動 (例如觸控)，而且在應用程式市集具有高評價！
 * 服務應該透過正常相應增加和相應減少來處理流量暴增情況。 
 
 非同步程式設計是一項重要技術，可讓您更容易處理對多個核心的封鎖 I/O 和並行作業。 .NET 提供使用 C#、VB 和 F# 的易用語言層級非同步程式設計模型，讓應用程式和服務具備回應性與彈性的功能。

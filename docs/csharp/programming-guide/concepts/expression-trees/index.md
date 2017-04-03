@@ -41,7 +41,7 @@ ms.lasthandoff: 03/17/2017
   
  下列程式碼範例示範如何讓 C# 編譯器建立代表 Lambda 運算式 `num => num < 5` 的運算式樹狀架構。  
   
-```cs  
+```csharp  
 Expression<Func<int, bool>> lambda = num => num < 5;  
 ```  
   
@@ -50,7 +50,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
   
  下列程式碼範例示範如何使用 API 建立代表 Lambda 運算式 `num => num < 5` 的運算式樹狀架構。  
   
-```cs  
+```csharp  
 // Add the following using directive to your code file:  
 // using System.Linq.Expressions;  
   
@@ -67,7 +67,7 @@ Expression<Func<int, bool>> lambda1 =
   
  在.NET Framework 4 或更新版中，運算式樹狀架構 API 也可用於指派及控制流程運算式，例如迴圈、條件式區塊及 `try-catch` 區塊。 使用 API 建立的運算式樹狀架構，可以比使用 C# 編譯器從 Lambda 運算式建立的運算式樹狀架構更加複雜。 下列範例示範如何建立可計算數字階乘的運算式樹狀架構。  
   
-```cs  
+```csharp  
 // Creating a parameter expression.  
 ParameterExpression value = Expression.Parameter(typeof(int), "value");  
   
@@ -112,7 +112,7 @@ Console.WriteLine(factorial);
 ## <a name="parsing-expression-trees"></a>剖析運算式樹狀架構  
  下列程式碼範例示範如何將代表 Lambda 運算式 `num => num < 5` 的運算式樹狀架構分解成各部組件。  
   
-```cs  
+```csharp  
 // Add the following using directive to your code file:  
 // using System.Linq.Expressions;  
   
@@ -141,7 +141,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
   
  下列程式碼範例示範如何編譯運算式樹狀架構，並執行產生的程式碼。  
   
-```cs  
+```csharp  
 // Creating an expression tree.  
 Expression<Func<int, bool>> expr = num => num < 5;  
   

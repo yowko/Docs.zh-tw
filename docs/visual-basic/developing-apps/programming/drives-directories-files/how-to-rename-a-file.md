@@ -1,63 +1,79 @@
 ---
-title: "How to: Rename a File in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "I/O [Visual Basic], renaming files"
-  - "files, renaming"
+title: "如何：在 Visual Basic 中重新命名檔案 | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- I/O [Visual Basic], renaming files
+- files, renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# How to: Rename a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a0a31353ce3ee0c48907f9550f6961260f92b64a
+ms.lasthandoff: 03/13/2017
 
-使用 `My.Computer.FileSystem` 物件的 `RenameFile` 方法，提供目前位置、檔案名稱和新的檔案名稱，即可重新命名檔案。  這個方法無法用於移動檔案。若要移動和重新命名檔案，請使用 `MoveFile`。  
+---
+# <a name="how-to-rename-a-file-in-visual-basic"></a>如何：在 Visual Basic 中重新命名檔案
+您可以使用 `My.Computer.FileSystem` 物件的 `RenameFile` 方法，藉由提供目前的位置、檔案名稱和新的檔案名稱，來重新命名檔案。 這個方法無法用來移動檔案，請使用 `MoveFile` 方法來移動並重新命名檔案。  
   
-### 若要重新命名檔案  
+### <a name="to-rename-a-file"></a>重新命名檔案  
   
--   請使用 `My.Computer.FileSystem.RenameFile` 方法重新命名檔案。  這個範例會將名為 `Test.txt` 的檔案重新命名為 `SecondTest.txt`。  
+-   使用 `My.Computer.FileSystem.RenameFile` 方法來重新命名檔案。 此範例會將名為 `Test.txt` 的檔案重新命名為 `SecondTest.txt`。  
   
      [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
- 這個程式碼範例也可做為 IntelliSense 程式碼片段。  在程式碼片段選擇器中，這個程式碼片段位於 \[**檔案系統 \- 處理磁碟、資料夾和檔案**\] 中。  如需詳細資訊，請參閱 [程式碼片段](/visual-studio/ide/code-snippets)。  
+ 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，該程式碼片段會位於 [檔案系統 - 處理磁碟、資料夾和檔案]**** 中。 如需詳細資訊，請參閱[程式碼片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
-## 穩固程式設計  
- 下列情形可能會造成例外狀況 \(Exception\)：  
+## <a name="robust-programming"></a>穩固程式設計  
+ 以下條件可能會造成例外狀況：  
   
--   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 \(開頭為 \\\\.  \\\) \(<xref:System.ArgumentException>\).  
+-   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (開頭為 \\\\.\\) (<xref:System.ArgumentException>)。  
   
--   `newName` 含有路徑資訊 \(<xref:System.ArgumentException>\)。  
+-   `newName` 含有路徑資訊 (<xref:System.ArgumentException>)。  
   
--   路徑無效，因為它是 `Nothing` \(<xref:System.ArgumentNullException>\)。  
+-   路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   `newName` 為 `Nothing` 或空字串 \(<xref:System.ArgumentNullException>\)。  
+-   `newName` 為 `Nothing` 或空字串 (<xref:System.ArgumentNullException>)。  
   
--   原始程式檔無效或不存在 \(<xref:System.IO.FileNotFoundException>\)。  
+-   原始程式檔無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   已有 `newName` 中所指定之名稱的檔案或目錄 \(<xref:System.IO.IOException>\)。  
+-   已有 `newName` 中所指定之名稱的檔案或目錄 (<xref:System.IO.IOException>)。  
   
--   路徑超過系統定義的最大長度 \(<xref:System.IO.PathTooLongException>\)。  
+-   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或目錄名稱含有冒號 \(:\)，或者是無效的格式 \(<xref:System.NotSupportedException>\)。  
+-   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者缺乏必要的使用權限來檢視路徑 \(<xref:System.Security.SecurityException>\)。  
+-   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
   
--   使用者未具備必要的使用權限 \(<xref:System.UnauthorizedAccessException>\)。  
+-   使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>   
  [如何：移動檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)   
- [Creating, Deleting, and Moving Files and Directories](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
- [How to: Create a Copy of a File in the Same Directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
- [How to: Create a Copy of a File in a Different Directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+ [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
+ [如何：在相同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
+ [如何：於不同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

@@ -1,37 +1,45 @@
 ---
-title: "dotnet-nuget-delete 命令 | Microsoft Docs"
+title: "dotnet-nuget-delete 命令 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-nuget-delete 命令會從伺服器刪除或取消列出套件。"
 keywords: "dotnet-nuget-delete, CLI, CLI 命令, .NET Core"
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 2ce157e3f32f3e899245e38bb4520b17be3e0b32
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 4b8694b83089d85646c9abd7e7f598cdb5879162
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-nuget-delete"></a>dotnet-nuget-delete
+
+# <a name="dotnet-nuget-delete"></a>dotnet-nuget delete
 
 ## <a name="name"></a>名稱
 
-`dotnet-nuget-delete` - 從伺服器刪除或取消列出套件。 
+`dotnet-nuget-delete` - 從伺服器刪除或取消列出套件。
 
 ## <a name="synopsis"></a>概要
 
-```
-dotnet nuget delete [<package_name> <package_version>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output]
-dotnet nuget delete [-h|--help]
-```
+`dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output] [-h|--help]`
 
 ## <a name="description"></a>說明
 
-`dotnet nuget delete` 命令會從伺服器刪除或取消列出套件。 對於 NuGet.org，該動作是取消列出套件。
+`dotnet nuget delete` 命令會從伺服器刪除或取消列出套件。 對於 [nuget.org](https://www.nuget.org/)，該動作是取消列出套件。
+
+## <a name="arguments"></a>引數
+
+`PACKAGE_NAME`
+
+要刪除的套件。
+
+`PACKAGE_VERSION`
+
+要刪除的套件版本。
 
 ## <a name="options"></a>選項
 
@@ -57,11 +65,11 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="examples"></a>範例
 
-刪除 MyPackage 套件 1.0 版：
+刪除 `Microsoft.AspNetCore.Mvc` 套件 1.0 版：
 
-`dotnet nuget delete MyPackage 1.0` 
+`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0` 
 
-刪除 MyPackage 套件 1.0 版，不提示使用者輸入認證或其他輸入：
+刪除 `Microsoft.AspNetCore.Mvc` 套件 1.0 版，不提示使用者輸入認證或其他輸入：
 
-`dotnet nuget delete MyPackage 1.0 --non-interactive`
+`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
 
