@@ -46,6 +46,7 @@ dotnet new [-h|--help]
 
 此命令包含預設的範本清單。 使用 `dotnet new -all` 以取得可用範本的清單。 下表顯示隨 SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。
 
+
 |範本描述  | 範本名稱  | 語言 |
 |----------------------|----------------|-----------|
 | 主控台應用程式  | 主控台        | [C#]、F#  |
@@ -67,13 +68,16 @@ dotnet new [-h|--help]
 
 `-l|--list`
 
+
 列出包含指定名稱的範本。 如果針對 `dotnet new` 命令叫用，則會列出指定目錄可能可用的範本。 例如，如果目錄中已包含專案，則不會列出所有專案範本。
 
 `-lang|--language {C#|F#}`
 
+
 要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
 `-n|--name <OUTPUT_NAME>`
+
 
 所建立輸出的名稱。 如果未指定名稱，則會使用目前目錄的名稱。
 
@@ -105,6 +109,7 @@ dotnet new [-h|--help]
 
 `-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0`、`netcoreapp1.1`，或從 `netstandard1.0` 到 `netstandard1.6` (預設值：`netstandard1.4`)
 
+
 ## <a name="examples"></a>範例
 
 在目前的目錄中建立 F# 主控台應用程式專案：
@@ -116,6 +121,7 @@ dotnet new [-h|--help]
 `dotnet new mvc -au None -f netcoreapp1.0`
  
 建立以 .NET Core 1.1 為目標的新 xUnit 應用程式：
+
 
 `dotnet new xunit --Framework netcoreapp1.1`
 

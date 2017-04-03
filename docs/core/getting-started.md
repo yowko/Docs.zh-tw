@@ -13,7 +13,6 @@ translationtype: Human Translation
 ms.sourcegitcommit: 43c0fe740cbb593cfdb51cce864b86a70362570e
 ms.openlocfilehash: 75109a2afaf9c5685a2864360169d52e09366861
 ms.lasthandoff: 03/23/2017
-
 ---
 
 # <a name="getting-started-with-net-core"></a>.NET Core 使用者入門
@@ -63,4 +62,3 @@ ms.lasthandoff: 03/23/2017
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
 * [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](tutorials/using-on-mac-vs.md) - 本教學課程會示範如何使用 Visual Studio for Mac 建置一個簡單 .NET Core 主控台應用程式。
 * [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](tutorials/using-on-mac-vs-full-solution.md) - 本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
-
