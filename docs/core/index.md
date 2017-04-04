@@ -1,6 +1,6 @@
 ---
-title: ".NET Core"
-description: ".NET Core"
+title: .NET Core
+description: .NET Core
 keywords: ".NET、.NET Core"
 author: richlander
 ms.author: mairaw
@@ -25,10 +25,10 @@ ms.lasthandoff: 03/02/2017
 下列特性最能定義 .NET Core：
 
 - **彈性的部署︰**可以包含在應用程式內，或任何人、任何機器都可並行安裝。
-- **跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。 Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、CPU 和應用程式案例，會隨著時間成長。
+- **跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。 Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、Cpu 和應用程式案例，會隨著時間成長。
 - **命令列工具︰**所有產品案例都可以在命令列操作。 
 - **相容︰**.NET Core 透過 [.NET Standard Library](../standard/library.md) (.NET 標準程式庫) 與 .NET Framework、Xamarin 及 Mono 相容。
-- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](http://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET Core 是 [.NET Foundation](http://www.dotnetfoundation.org/) 專案。
+- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](http://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](http://www.dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。
 
 ## <a name="composition"></a>組合
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/02/2017
 - 一個 [.NET 執行階段](https://github.com/dotnet/coreclr)，提供類型系統、組件載入、記憶體回收行程、原生 Interop 及其他基本服務。 
 - 一組 [Framework 程式庫](https://github.com/dotnet/corefx)，提供基本資料類型、應用程式組合類型及基本的公用程式。 
 - [SDK 工具組](https://github.com/dotnet/cli)及[語言編譯器](https://github.com/dotnet/roslyn)，提供基本的開發人員體驗，可在 [.NET Core SDK](sdk.md) 中取得。
-- 'dotnet' 應用程式主機，用來啟動 .NET Core 應用程式。 它會選取執行階段及裝載執行階段、提供組件載入原則，然後啟動應用程式。 您也可以差不多的方式用相同的主機啟動 SDK 工具。
+- 'Dotnet' 應用程式主機，用來啟動 .NET Core 應用程式。 它會選取執行階段及裝載執行階段、提供組件載入原則，然後啟動應用程式。 您也可以差不多的方式用相同的主機啟動 SDK 工具。
 
 ### <a name="languages"></a>語言
 
