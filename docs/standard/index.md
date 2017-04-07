@@ -11,17 +11,15 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: be44dce8181be45f6d73fcf498a873fb94aa56a6
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
+ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
+ms.lasthandoff: 04/06/2017
 
 ---
 
 # <a name="net-platform-guide"></a>.NET 平台指南
 
 > [!NOTE]
-此文章將會改寫。
-
 > 如需了解如何建立簡單的 .NET Core 應用程式，請參閱[＜.NET Core 使用者入門＞教學課程](../core/getting-started.md)。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
 
 .NET 是一般用途開發平台。 它可用於使用一般用途方案的任何應用程式類型或工作負載。 它包含幾項對許多開發人員而言具吸引力的重要功能，包括自動記憶體管理和現代程式語言，可讓您更輕鬆且有效率地建置高品質應用程式。 .NET 支援具有許多便利功能的高層級程式設計環境，同時提供原生記憶體和 API 的低層級存取。
