@@ -20,9 +20,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 401ac8986dee5f9f1504fb6c4e1f627d87f0f236
-ms.openlocfilehash: 4c30202de9524f276050d77320da79748817cdf0
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 87195c8936aba485919d6c717fcbfaa1b282bddc
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="expression-trees-c"></a>運算式樹狀架構 (C#)
@@ -105,9 +105,9 @@ int factorial = Expression.Lambda<Func<int, int>>(block, value).Compile()(5);
   
 Console.WriteLine(factorial);  
 // Prints 120.  
-```  
-  
- 如需詳細資訊，請參閱 [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (or later)](http://go.microsoft.com/fwlink/?LinkId=169513) (使用 Visual Studio 2010 (或更新版) 的運算式樹狀架構產生動態方法)。  
+```
+
+如需詳細資訊，請參閱[在 Visual Studio 2010 中使用運算式樹狀架構產生動態方法 (英文)](http://go.microsoft.com/fwlink/p/?LinkId=169513)，這也適用於更新版本的 Visual Studio。
   
 ## <a name="parsing-expression-trees"></a>剖析運算式樹狀架構  
  下列程式碼範例示範如何將代表 Lambda 運算式 `num => num < 5` 的運算式樹狀架構分解成各部組件。  
