@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d4fb156e095d4cec9a0e690a516414282359356a
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: c29504e18aa716cbe106dbbe00c608fd465d9ac2
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/13/2017
  說明要在 C# Managed 程式碼和 Unmanaged 程式碼之間相互操作的方法。  
   
  [如何：使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
- 說明在 Visual C# 2010 中引進以利 Office 程式設計的功能。  
+ 說明在 Visual C# 中引進以利 Office 程式設計的功能。  
   
  [如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  說明如何使用已索引的屬性來存取具有參數的 COM 屬性。  

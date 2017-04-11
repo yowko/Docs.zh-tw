@@ -212,9 +212,9 @@
 ## [C# 的教學課程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# 的新功能](csharp/whats-new.md) 
-### [C# 7 的新功能](csharp/csharp-7.md)
-### [C# 6 的新功能](csharp/csharp-6.md)
+## [C# 的新功能](csharp/whats-new/index.md) 
+### [C# 7 的新功能](csharp/whats-new/csharp-7.md)
+### [C# 6 的新功能](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
 ## [🔧 C# Interactive](csharp/interactive/)
 <!-- Do this section later, once master redirects are in place -->

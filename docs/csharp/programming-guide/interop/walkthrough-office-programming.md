@@ -155,9 +155,7 @@ Visual Studio 在 C# 和 Visual Basic 中開始採用改善 Microsoft Office 程
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
      這個程式碼將會示範 C# 中的數個新功能：省略 COM 程式設計中 `ref` 關鍵字、具名引數和選擇性引數的能力。 Visual Basic 中已有這些功能。 [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) 方法有七個參數，全部都定義為選擇性參考參數。 在 Visual C# 2010 之前，您必須定義物件變數以用做為七個參數的引數，即使您沒有要傳入任何有意義的值也是一樣。 您可利用具名引數和選擇性引數，指定想要依名稱存取的參數，以及將引數只傳送給那些參數。 在這個範例中會傳送引數，表示應建立剪貼簿上的活頁簿連結 (參數 `Link`)，且連結會以圖示形式顯示在 Word 文件中 (參數 `DisplayAsIcon`)。 在 Visual C# 2010 中也可省略這些引數的 `ref` 關鍵字。 請比對 Visual C# 2008 中的下列程式碼片段與 Visual C# 2010 中所需的單一行：  
-  
-     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_11.cs)]  
-  
+ 
 ### <a name="to-run-the-application"></a>若要執行應用程式  
   
 1.  按 F5 執行應用程式。 隨即會啟動 Excel，並會顯示含有 `bankAccounts` 中兩個帳戶資訊的資料表。 然後，會出現包含 Excel 資料表連結的 Word 文件。  

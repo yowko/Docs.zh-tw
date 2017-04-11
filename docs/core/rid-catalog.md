@@ -88,11 +88,6 @@ RID 是*執行階段識別項*的縮寫。 RID 可用來識別執行應用程式
 
 * Red Hat Enterprise Linux
     * `rhel.7-x64`
-    * `rhel.7.0-x64`
-    * `rhel.7.1-x64`
-    * `rhel.7.2-x64`
-    * `rhel.7.3-x64`
-    * `rhel.7.4-x64`
 * Ubuntu
     * `ubuntu.14.04-x64`
     * `ubuntu.14.10-x64`
