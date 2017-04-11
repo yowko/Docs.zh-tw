@@ -25,7 +25,7 @@ ms.lasthandoff: 03/02/2017
 
 * [C# 使用者入門](../csharp/getting-started/index.md)文章和 [C# 教學課程](../csharp/tutorials/index.md)可提供數種方式，利用以 C# 為中心的方法來開始使用。
 
-* [F# 使用者入門](../fsharp/tutorials/getting-started/index.md)教學課程提供您可以使用 F# 的三種主要方式︰使用 Visual Studio、Visual Studio 程式碼或命令列工具。
+* [F# 使用者入門](../fsharp/tutorials/getting-started/index.md)教學課程提供您可以使用 F# 的三種主要方式︰使用 Visual Studio、Visual Studio Code 或命令列工具。
 
 * [Visual Basic 使用者入門](../visual-basic/getting-started/index.md)文章提供在 Visual Studio 中使用 Visual Basic 的指南，並提供一些其他學習資源。
 
