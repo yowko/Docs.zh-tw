@@ -2,7 +2,7 @@
 title: "將查詢結果分組"
 description: "如何分組結果。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

@@ -2,7 +2,7 @@
 title: "在執行階段動態指定述詞篩選"
 description: "如何在執行階段動態指定述詞篩選。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

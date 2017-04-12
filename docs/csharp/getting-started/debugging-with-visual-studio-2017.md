@@ -2,8 +2,8 @@
 title: "使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯"
 description: "了解如何使用 Visual Studio 2017 對以 C# 撰寫的 Hello World 應用程式進行偵錯"
 keywords: ".NET Core, .NET Core 主控台應用程式, .NET Core 偵錯"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

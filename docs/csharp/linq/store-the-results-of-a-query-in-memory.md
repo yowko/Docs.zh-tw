@@ -2,7 +2,7 @@
 title: "將查詢的結果儲存在記憶體中"
 description: "如何儲存結果。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

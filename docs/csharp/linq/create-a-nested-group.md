@@ -2,7 +2,7 @@
 title: "建立巢狀群組"
 description: "如何建立巢狀群組。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

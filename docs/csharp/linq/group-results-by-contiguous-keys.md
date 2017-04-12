@@ -2,7 +2,7 @@
 title: "以相鄰索引鍵將結果分組"
 description: "如何以相鄰索引鍵將結果分組。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

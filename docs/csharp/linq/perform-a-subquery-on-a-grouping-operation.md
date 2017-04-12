@@ -2,7 +2,7 @@
 title: "在分組作業上執行子查詢"
 description: "如何在分組作業上執行子查詢。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

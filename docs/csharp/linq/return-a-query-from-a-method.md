@@ -2,7 +2,7 @@
 title: "從方法傳回查詢"
 description: "如何傳回查詢。"
 keywords: ".NET、.NET Core、C#"
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

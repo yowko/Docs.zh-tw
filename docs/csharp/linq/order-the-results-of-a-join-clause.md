@@ -2,7 +2,7 @@
 title: "排序 join 子句的結果"
 description: "如何排序 join 子句的結果。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

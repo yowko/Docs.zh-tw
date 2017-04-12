@@ -2,7 +2,7 @@
 title: "執行自訂的聯結作業"
 description: "如何執行自訂的聯結作業。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

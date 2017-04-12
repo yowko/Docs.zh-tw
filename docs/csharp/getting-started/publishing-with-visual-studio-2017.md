@@ -2,8 +2,8 @@
 title: "使用 Visual Studio 2017 發行您的 Hello World 應用程式"
 description: "使用 Visual Studio 2017 發行您的 Hello World 應用程式"
 keywords: ".NET, .NET Core, .NET Core 主控台應用程式, 發行 (.NET Core), 部署 (.NET Core)"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

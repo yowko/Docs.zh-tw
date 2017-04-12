@@ -2,7 +2,7 @@
 title: "查詢運算式基本概念"
 description: "介紹查詢運算式的相關概念"
 keywords: ".NET、.NET Core、C#"
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
