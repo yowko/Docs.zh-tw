@@ -40,13 +40,13 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 * C# 很簡單、強大、型別安全且物件導向，同時保留 C 樣式語言的易讀性與簡潔性。 熟悉 C 和類似語言的任何人在適應 C# 方面很少有問題。  若要深入了解 C#，請參閱 [C# 指南](../csharp/index.md)。
 
-* F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。  若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.md)。
+* F# 是跨平台、函數優先的程式語言，也支援傳統物件導向和命令式程式設計。  若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.md)。
 
 * Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。
 
 ## <a name="automatic-memory-management"></a>自動記憶體管理
 
-.NET 使用[記憶體回收](garbagecollection/index.md)為程式提供自動記憶體管理。  GC 採用 lazy 方法來管理記憶體，優先考慮應用程式輸送量，而不是立即收集記憶體。  若要深入了解 .NET GC，請參閱[記憶體回收 (GC) 的基本概念](garbagecollection/fundamentals.md)。
+.NET 使用[記憶體回收](garbagecollection/index.md)為程式提供自動記憶體管理。  GC 採用 lazy 方法來管理記憶體，優先考慮應用程式工作量，而不是立即收集記憶體。  若要深入了解 .NET GC，請參閱[記憶體回收 (GC) 的基本概念](garbagecollection/fundamentals.md)。
 
 下列兩行會配置記憶體：
 
@@ -62,33 +62,33 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 ## <a name="working-with-unmanaged-resources"></a>使用 Unmanaged 資源
 
-有一些物件會參考 *Unmanaged 資源*。 Unmanaged 的資源是指 .NET 執行階段不會自動維護的資源。  例如檔案控制代碼就是 Unmanaged 資源。  @System.IO.FileStream 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。  當您結束使用 FileStream 之後，必須釋放檔案控制代碼。
+有一些物件會參考 *Unmanaged 資源*。 Unmanaged 的資源是指 .NET 執行階段不會自動維護的資源。  例如檔案控制程式碼就是 Unmanaged 資源。  @System.IO.FileStream 物件是Managed 物件，但會 Unmanaged 檔檔案控制程式碼。  當您結束使用 FileStream 之後，必須釋放檔案控制程式碼。
 
 在.NET 中，參考 Unmanaged 資源的物件會實作 @System.IDisposable 介面。  當您完成使用此物件，您可以呼叫物件的 @System.IDisposable.Dispose 方法來釋放任何 Unmanaged 資源。  .NET 語言為這類物件提供了 `using` 語法，此語法十分方便，如下列範例所示︰
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-當 `using` 區塊完成後，.NET 執行階段會自動呼叫 `stream` 物件的 @System.IDisposable.Dispose 方法來釋放檔案控制代碼。  當例外狀況造成控制項離開區塊時，執行階段也會執行此作業。
+當 `using` 區塊完成後，.NET 執行階段會自動呼叫 `stream` 物件的 @System.IDisposable.Dispose 方法來釋放檔案控制程式碼。  當例外狀況造成控制項離開區塊時，執行階段也會執行此作業。
 
 如需詳細資料，請參閱下列頁面︰
 
-* C#：[sing 陳述式](../csharp/language-reference/keywords/using-statement.md)
+* C#：[using 陳述式](../csharp/language-reference/keywords/using-statement.md)
 * F #：[資源管理︰`use` 關鍵字](../fsharp/language-reference/resource-management-the-use-keyword.md)
 * Visual Basic：[Using 陳述式](../visual-basic/language-reference/statements/using-statement.md)
 
 ## <a name="type-safety"></a>型別安全
 
-物件會依照類型配置。 物件的類型會決定該物件所允許的唯一作業，以及所使用的記憶體。 `Dog` 類型可能會有 `Jump` 和 `WagTail` 方法，但不太可能會有 `SumTotal` 方法。 程式只能呼叫指定類型的宣告方法。 所有其他呼叫會導致編譯時期錯誤，或執行階段例外狀況 (如果使用動態功能或 `object`)。
+物件會依照型別配置。 物件的型別會決定該物件所允許的唯一作業，以及所使用的記憶體。 `Dog` 類型可能會有 `Jump` 和 `WagTail` 方法，但不太可能會有 `SumTotal` 方法。 程式只能呼叫指定類型的宣告方法。 所有其他呼叫會導致編譯時期錯誤，或執行階段例外狀況 (如果使用動態功能或 `object`)。
 
-.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 `object` 類型。
+.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種型別都是衍生自基底 `object` 型別。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L18-L23)]
 
-此外也會使用型別安全，藉由確保存取子關鍵字的精確度，來協助強制執行封裝。 存取子關鍵字是控制其他程式碼存取指定類型成員的成品。 這些關鍵字通常會用於某種類型中用來管理其行為的各種資料。
+此外也會使用型別安全，藉由確保存取子關鍵字的精確度，來協助強制執行封裝。 存取子關鍵字是控制其他程式碼存取指定型別成員的成品。 這些關鍵字通常會用於某種型別中用來管理其行為的各種資料。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#、Visual Basic 與 F# 支援本機**型別推斷**。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式類型。 這並不會破壞或規避型別安全。 產生的類型**具有**強類型，其中包含其所指的所有項目。 讓我們重寫上一個範例中的前兩行，以引入型別推斷。 請注意，此範例的其餘部分完全相同。
+C#、Visual Basic 與 F# 支援本機**型別推斷**。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式型別。 這並不會破壞或規避型別安全。 產生的型別**具有**強型別，其中包含其所指的所有項目。 讓我們重寫上一個範例中的前兩行，以引入型別推斷。 請注意，此範例的其餘部分完全相同。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
@@ -106,9 +106,9 @@ F# 提供比 C# 和 Visual Basic 中的方法內部型別推斷更進步的型�
 
 泛型是 .NET Framework 2.0 中新增的功能。 簡單來說，泛型可讓程式設計師在設計其類別時引入「型別參數」，如此即可讓用戶端程式碼 (型別的使用者) 指定正確型別來取代型別參數。
 
-新增泛型功能是為了協助程式設計師實作泛型資料結構。 在此功能之前，若要讓 `List` 型別成為泛型，您必須使用 `object` 類型的元素。 這樣做會有各種效能及語意問題，更別提可能會有難以解決的執行階段錯誤。 後者最糟的情況是當資料結構同時包含整數與字串時，而且會在使用清單的成員時擲回 `InvalidCastException`。
+新增泛型功能是為了協助程式設計師實作泛型資料結構。 在此功能之前，若要讓 `List` 型別成為泛型，您必須使用 `object` 型別的元素。 這樣做會有各種效能及語意問題，更別提可能會有難以解決的執行階段錯誤。 後者最糟的情況是當資料結構同時包含整數與字串時，而且會在使用清單的成員時擲回 `InvalidCastException`。
 
-下列範例示範使用 @System.Collections.Generic.List%601 類型之執行個體執行的基本程式。
+下列範例示範使用 @System.Collections.Generic.List%601 型別之執行個體執行的基本程式。
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
