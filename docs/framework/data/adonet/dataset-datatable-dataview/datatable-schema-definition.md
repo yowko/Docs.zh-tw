@@ -1,0 +1,47 @@
+---
+title: "DataTable 結構描述定義 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
+caps.latest.revision: 4
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 4
+---
+# DataTable 結構描述定義
+資料表的結構描述 \(或結構\) 是由資料行或條件約束來表示。  您可以使用 <xref:System.Data.DataColumn> 物件以及 <xref:System.Data.ForeignKeyConstraint> 和 <xref:System.Data.UniqueConstraint> 物件來定義 <xref:System.Data.DataTable> 的結構描述。  資料表的資料行可對應到資料來源中的資料行、包含運算式所得的值、自動累加其值或包含主索引鍵值。  
+  
+ 依名稱參考資料表的資料行、關聯和條件約束時必須區分大小寫。  兩個或兩個以上名稱相同的資料行、關聯或條件約束可因此存在於同一個資料表中，但其大小寫必須不同。  例如，您可以同時使用 **Col1** 與 **col1**。  在這種情況下，依名稱參考其中一個資料行時，必須與資料行名稱的大小寫完全相符，否則將發生例外狀況。  例如，如果資料表 **myTable** 含有資料行 **Col1** 和 **col1**，您將依名稱使用 **myTable.Columns\["Col1"\]** 參考 **Col1**，和使用 **myTable.Columns\["col1"\]** 參考 **col1**。  嘗試使用 **myTable.Columns\["COL1"\]** 來參考其中任何一個資料行將產生一則例外狀況。  
+  
+ 如果只有一個資料行、關聯和條件約束使用特定的名稱，則不適用區分大小寫的規則。  也就是說，如果資料表中沒有其他的資料行、關聯和條件約束物件與該特定資料行、關聯或條件約束物件的名稱相符，您在依名稱參考物件時就不需區分大小寫，而且也不會發生任何例外狀況。  例如，如果資料表只有 **Col1**，您可以使用 **my.Columns\["COL1"\]** 來參考它。  
+  
+> [!NOTE]
+>  **DataTable** 的 <xref:System.Data.DataTable.CaseSensitive%2A> 屬性不會影響這個行為。  **CaseSensitive** 屬性適用於資料表中的資料，可影響排序、搜尋、篩選和條件約束的強制執行等，但不會參考資料行、關聯與條件約束。  
+  
+## 在本節中  
+ [將資料行加入至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ 說明如何使用 **DataColumn** 物件定義資料表的資料行。  
+  
+ [建立運算式資料行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ 說明如何使用資料行的 **Expression** 屬性，根據資料列中的其他資料行值來計算數值。  
+  
+ [建立 AutoIncrement 資料行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ 說明如何將資料行設定為自動累加數值，以確保每個資料列都有唯一的資料行值。  
+  
+ [定義主索引鍵](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ 說明如何從一或多個 **DataColumn** 物件指定資料表的主索引鍵。  
+  
+ [DataTable 條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ 說明如何在資料表中定義資料行的外部索引鍵條件約束和唯一的條件約束。  
+  
+## 請參閱  
+ [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
+ [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

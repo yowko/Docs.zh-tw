@@ -1,35 +1,44 @@
 ---
-title: "使用基底類型"
-description: "使用基底類型"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: e53e414f-e0b6-4076-a6ab-189ba93e23cd
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2be90e0a3e6627152532ff607768dbbb333045d7
-ms.lasthandoff: 04/05/2017
-
+title: "在 .NET Framework 中使用基底類型 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "類型，基底"
+  - "基底類型"
+  - "類型系統，基底類型"
+ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
+caps.latest.revision: 14
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 14
 ---
-
-# <a name="working-with-base-types"></a>使用基底類型
-
-本節說明 .NET 基底類型作業，包括格式化、轉換和一般作業。
-
-## <a name="in-this-section"></a>本章節內容
-
-[類型轉換](type-conversion.md) - 描述如何將一個類型轉換為另一個類型。
-
-[格式化類型](formatting-types.md) - 描述如何使用格式規範來格式化字串。
-
-[操作字串](manipulating-strings.md) - 描述如何操作和格式化字串。
-
-[剖析字串](parsing-strings.md) - 描述如何將字串轉成類型。
-
-[一般型別系統](common-type-system.md) - 描述 .NET 所使用的類型。
-
+# 在 .NET Framework 中使用基底類型
+本章節將描述 .NET Framework 的基底型別 \(Base Type\) 作業，包括格式化、轉換和其他常見作業。  
+  
+## 在本節中  
+ [.NET Framework 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)  
+ 描述如何從一個型別轉換為另一個型別。  
+  
+ [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+ 描述如何使用字串格式規範來格式化字串。  
+  
+ [操作字串](../../../docs/standard/base-types/manipulating-strings.md)  
+ 描述如何操作和格式化字串。  
+  
+ [剖析字串](../../../docs/standard/base-types/parsing-strings.md)  
+ 描述如何將字串轉換成 .NET Framework 型別。  
+  
+## 相關章節  
+ [一般類型系統](../../../docs/standard/base-types/common-type-system.md)  
+ 描述 .NET Framework 所使用的型別。  
+  
+ [日期、時間和時區](../../../docs/standard/datetime/index.md)  
+ 描述如何使用時區感知應用程式中的時區及時區轉換。

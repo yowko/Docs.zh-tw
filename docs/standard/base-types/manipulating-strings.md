@@ -1,40 +1,43 @@
 ---
-title: "操作字串"
-description: "操作字串"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: da3c277e-b06e-48bd-ae1f-1e7e4240b93e
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 0ad6a7ef456e7967b3c23e58cd7afa97a4b786de
-ms.lasthandoff: 03/02/2017
-
+title: "在 .NET Framework 中操作字串 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "操作字串"
+  - "字串 [.NET Framework], 操作"
+ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
+caps.latest.revision: 11
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 11
 ---
-
-# <a name="manipulating-strings"></a>操作字串
-
-.NET 提供大量的常式集合，讓您能夠有效率建立、比較和修改字串，並迅速剖析大量文字和資料以搜尋、移除和取代文字模式。
-
-## <a name="in-this-section"></a>本節內容
-
-[使用字串的最佳做法](best-practices-strings.md) - 檢查 .NET 中的字串排序、比較與大小寫方法，並提供選取字串處理方法的建議。 
-
-[規則運算式](regular-expressions.md) - 提供有關 .NET 規則運算式的詳細資訊，包括語言項目、規則運算式行為及範例。
-
-[基本字串作業](basic-string-operations.md) - 說明 @System.String 及 @System.Text.StringBuilder 類別所提供的字串作業，包括如何從位元組陣列建立新的字串、比較字串值，以及修改現有的字串。
-
-[.NET 中的字元編碼](character-encoding.md) - 說明如何編碼及解碼字元格式，例如 Unicode。
-
-[類型轉換](type-conversion.md) - 描述如何將一個類型轉換為另一個類型。
-
-[格式化類型](formatting-types.md) - 描述如何使用格式規範來格式化字串。
-
-[剖析字串](parsing-strings.md) - 說明如何將字串轉成類型。
-
-
+# 在 .NET Framework 中操作字串
+.NET Framework 提供大量的常式集合，讓您能夠有效率建立、比較和修改字串，並迅速剖析大量文字和資料以搜尋、移除和取代文字比對模式。  
+  
+## 在本節中  
+ [使用字串的最佳作法](../../../docs/standard/base-types/best-practices-strings.md)  
+ 檢查 .NET Framework 中的字串排序、比較和大小寫方法，並且提供選取字串處理方法的建議。  
+  
+ [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)  
+ 提供有關 .NET Framework 規則運算式的詳細資訊，包括語言項目、規則運算式行為和範例。  
+  
+ [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)  
+ 說明 <xref:System.String?displayProperty=fullName> 和 <xref:System.Text.StringBuilder?displayProperty=fullName> 類別提供的字串作業，包括從位元組陣列建立新字串、比較字串值和修改現有字串。  
+  
+## 相關章節  
+ [.NET Framework 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)  
+ 說明使用 .NET Framework 轉換型別時所使用的技巧和規則。  
+  
+ [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
+ 提供如何使用基底類別庫 \(Class Library\) 實作格式化、如何格式化數字型別 \(Numeric Type\)、如何格式化字串型別，和如何替特定文化特性 \(Culture\) 進行格式化。  
+  
+ [剖析字串](../../../docs/standard/base-types/parsing-strings.md)  
+ 說明如何將物件初始化為這些物件的字串表示所描述的值。  剖析是格式化的反向作業。

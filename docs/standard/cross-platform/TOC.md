@@ -1,0 +1,7 @@
+# [WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法](windowsruntimestreamextensions-asrandomaccessstream-method.md)
+# [可攜式類別庫](cross-platform-development-with-the-portable-class-library.md)
+# [進行多平台開發](index.md)
+# [以多平台為目標之函式庫的應用程式資源](app-resources-for-libraries-that-target-multiple-platforms.md)
+# [適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](support-for-windows-store-apps-and-windows-runtime.md)
+# [搭配 MVVM 使用可攜式類別庫](using-portable-class-library-with-model-view-view-model.md)
+# [傳遞 URI 給 Windows 執行階段](passing-a-uri-to-the-windows-runtime.md)

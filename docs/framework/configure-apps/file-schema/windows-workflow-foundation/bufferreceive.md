@@ -1,0 +1,54 @@
+---
+title: "&lt;bufferReceive&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
+caps.latest.revision: 3
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 3
+---
+# &lt;bufferReceive&gt;
+讓服務可以使用緩衝接收處理的服務行為，該處理可讓工作流程服務處理失序的訊息。  
+  
+## 語法  
+  
+```  
+  
+<behaviors>  
+  <serviceBehaviors>  
+    <behavior name=String">  
+      <bufferReceive maxPendingMessagesPerChannel=”Integer” />  
+    </behavior>  
+  </serviceBehaviors>  
+</behaviors>  
+  
+```  
+  
+## 屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
+  
+### 屬性  
+  
+|屬性|描述|  
+|--------|--------|  
+|maxPendingMessagesPerChannel|整數，可指定每個通道允許的暫止訊息數目上限。  預設值為 512。  這個屬性會限制工作流程服務所能接收的失序訊息數目。|  
+  
+### 子項目  
+ 無。  
+  
+### 父項目  
+  
+|項目|描述|  
+|--------|--------|  
+|[\<serviceBehaviors\> 的 \<behavior\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行為項目。|  
+  
+## 請參閱  
+ <xref:System.ServiceModel.Activities.Description.BufferReceiveServiceBehavior>   
+ <xref:System.ServiceModel.Activities.Configuration.BufferedReceiveElement>
