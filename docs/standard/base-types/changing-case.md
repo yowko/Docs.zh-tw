@@ -49,7 +49,7 @@ caps.handback.revision: 15
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。  若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 物件提供給 *culture* 參數。  如需示範如何使用 <xref:System.String.ToUpper%2A> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。  若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 物件提供給 *culture* 參數。  如需示範如何使用 <xref:System.String.ToUpper%2A> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## ToLower  
  <xref:System.String.ToLower%2A?displayProperty=fullName> 方法類似於前一個方法，但會改將字串中的所有字元轉換成小寫。  下列範例會將字串 "Hello World\!" 轉換成小寫。  
@@ -57,7 +57,7 @@ caps.handback.revision: 15
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。  若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 物件提供給 *culture* 參數。  如需示範如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。  若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 物件提供給 *culture* 參數。  如需示範如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> 會將每個字的第一個字元轉換成大寫，並將其餘字元轉換成小寫。  不過，全部大寫的字會假設為縮略字，而且不會轉換。  
@@ -73,4 +73,4 @@ caps.handback.revision: 15
   
 ## 請參閱  
  [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)   
- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [執行不區分文化特性的字串作業](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

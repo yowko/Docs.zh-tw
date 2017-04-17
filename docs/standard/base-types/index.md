@@ -40,5 +40,5 @@ caps.handback.revision: 14
  [一般類型系統](../../../docs/standard/base-types/common-type-system.md)  
  描述 .NET Framework 所使用的型別。  
   
- [日期、時間和時區](../../../docs/standard/datetime/index.md)  
+ [日期、時間和時區](../../../ml/index.xml)  
  描述如何使用時區感知應用程式中的時區及時區轉換。

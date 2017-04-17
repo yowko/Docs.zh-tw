@@ -282,7 +282,7 @@ caps.handback.revision: 24
   
 <a name="Events"></a>   
 ### 事件  
- 事件 \(Event\) 會定義可以回應的事件 \(Incident\)，並且定義用於訂閱、取消訂閱和產生事件 \(Event\) 的方法。  事件通常是用來通知其他型別有狀態變更。  如需詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
+ 事件 \(Event\) 會定義可以回應的事件 \(Incident\)，並且定義用於訂閱、取消訂閱和產生事件 \(Event\) 的方法。  事件通常是用來通知其他型別有狀態變更。  如需詳細資訊，請參閱[事件](../../../ml/index.xml)。  
   
 <a name="NestedTypes"></a>   
 ### 巢狀類型  
@@ -323,5 +323,5 @@ caps.handback.revision: 24
   
 ## 請參閱  
  [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=217856)   
- [Common Language Runtime](../../../docs/standard/clr.md)   
+ [Common Language Runtime](../../../ocs/standard/clr.md)   
  [.NET Framework 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)
