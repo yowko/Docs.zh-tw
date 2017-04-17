@@ -74,8 +74,8 @@ caps.handback.revision: 20
   
  `</x:Array>`  
   
- 針對做為陣列元素的自訂型別，此類別也必須支援在 XAML 中執行個體化為物件項目的需求。  如需詳細資訊，請參閱 [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
+ 針對做為陣列元素的自訂型別，此類別也必須支援在 XAML 中執行個體化為物件項目的需求。  如需詳細資訊，請參閱 [WPF 的 XAML 和自訂類別](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   
 ## 請參閱  
- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
+ [標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

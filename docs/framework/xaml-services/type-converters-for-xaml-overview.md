@@ -67,7 +67,7 @@ caps.handback.revision: 14
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是服務查詢 <xref:System.ComponentModel.TypeConverter> 實作之功能時所使用的支援方法。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true`。 基於 XAML，這通常表示 <xref:System.String> 類型。  
   
 ### XAML 的文化特性資訊和類型轉換器  
- 每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需這項限制之設計原因的詳細資訊，請參閱 XAML 語言規格 \([\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\) 或 [WPF 全球化和當地語系化概觀](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)。  
+ 每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需這項限制之設計原因的詳細資訊，請參閱 XAML 語言規格 \([\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\) 或 [WPF 全球化和當地語系化概觀](../../../ocs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)。  
   
  在文化特性可能是問題的範例中，某些文化特性會使用逗號 \(而非句號\) 做為字串形式中數字的小數點分隔符號。 這項使用與許多現有類型轉換器的行為衝突，後者是使用逗號做為分隔符號。 在周圍 XAML 中透過 `xml:lang` 傳遞文化特性並不能解決問題。  
   
@@ -117,4 +117,4 @@ caps.handback.revision: 14
 ## 請參閱  
  <xref:System.ComponentModel.TypeConverterAttribute>   
  [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)   
- [XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

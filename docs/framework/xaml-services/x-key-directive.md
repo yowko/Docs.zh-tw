@@ -55,7 +55,7 @@ caps.handback.revision: 25
 |`markupExtensionUsage`|在標記延伸分隔符號 {} 內部，提供物件以用來做為索引鍵的標記延伸使用方式。  請參閱＜備註＞。|  
   
 ## 備註  
- `x:Key` 支援 XAML 資源字典概念。  XAML 語言不定義資源字典實作，而是保留給特定 UI 架構。  若要進一步了解 XAML 資源字典如何在 WPF 中實作，請參閱[XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ `x:Key` 支援 XAML 資源字典概念。  XAML 語言不定義資源字典實作，而是保留給特定 UI 架構。  若要進一步了解 XAML 資源字典如何在 WPF 中實作，請參閱[XAML 資源](../../../ocs/framework/wpf/advanced/xaml-resources.md)。  
   
  在 XAML 2006 和 WPF 中，必須提供 `x:Key` 做為屬性。  您依然可以使用非字串索引鍵，但這需要標記延伸使用方式，才能在屬性表單中提供非字串值。  如果使用的是 XAML 2009，則可以將 `x:Key` 指定為項目，以明確支援依非字串的物件類型索引的字典，而不需要標記延伸中繼。  請參閱本主題中的＜XAML 2009＞一節。  「備註」區段的其餘部分專門適用於 XAML 2006 實作。  
   
@@ -70,19 +70,19 @@ caps.handback.revision: 25
   
 -   一些 WPF 類型宣告字典使用方式的隱含索引鍵。  例如，具有 <xref:System.Windows.Style.TargetType%2A> 的 <xref:System.Windows.Style>，或是具有 <xref:System.Windows.DataTemplate.DataType%2A> 的 <xref:System.Windows.DataTemplate>，都可位在 <xref:System.Windows.ResourceDictionary> 中，並使用隱含機碼。  
   
--   WPF 支援合併的資源字典概念。  索引鍵可以在合併的字典之間共用，而且可以使用 <xref:System.Windows.FrameworkContentElement.FindResource%2A> 來存取共用的索引鍵行為。  如需詳細資訊，請參閱[合併的資源字典](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
+-   WPF 支援合併的資源字典概念。  索引鍵可以在合併的字典之間共用，而且可以使用 <xref:System.Windows.FrameworkContentElement.FindResource%2A> 來存取共用的索引鍵行為。  如需詳細資訊，請參閱[合併的資源字典](../../../ocs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
   
  在整體 WPF XAML 實作和應用程式模型中，XAML 標記編譯器不會檢查索引鍵唯一性。  反之，缺少或非唯一`x:Key`值會導致載入時間 XAML 剖析器錯誤。  然而，[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 處理 WPF 字典往往會在設計階段注意到這樣的錯誤。  
   
- 請注意，在以下語法中，在 WPF XAML 處理器產生集合以填入 <xref:System.Windows.FrameworkElement.Resources%2A> 集合的過程中，<xref:System.Windows.ResourceDictionary> 物件是隱含的。  <xref:System.Windows.ResourceDictionary> 通常不會在標記中明確提供為項目，雖然在某些情況下，可以於必要時提供以避免困擾 \(它會是 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性項目與其內部填入字典的項目之間的集合物件項目\)。  如需集合物件在標記中幾乎必定為隱含項目之原因的詳細資訊，請參閱 [XAML 語法詳細資料](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 請注意，在以下語法中，在 WPF XAML 處理器產生集合以填入 <xref:System.Windows.FrameworkElement.Resources%2A> 集合的過程中，<xref:System.Windows.ResourceDictionary> 物件是隱含的。  <xref:System.Windows.ResourceDictionary> 通常不會在標記中明確提供為項目，雖然在某些情況下，可以於必要時提供以避免困擾 \(它會是 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性項目與其內部填入字典的項目之間的集合物件項目\)。  如需集合物件在標記中幾乎必定為隱含項目之原因的詳細資訊，請參閱 [XAML 語法詳細資料](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
  在 WPF XAML 的實作中，資源字典索引鍵的處理是由 <xref:System.Windows.ResourceKey> 抽象類別所定義。  不過，WPF XAML 處理器會根據索引鍵的使用方式，產生不同的基礎擴充類型。  例如，<xref:System.Windows.DataTemplate> 或任何衍生類別的索引鍵都是分開處理的，並會產生不同的 <xref:System.Windows.DataTemplateKey> 物件。  
   
- 索引鍵和名稱使用基本 XAML 定義中的不同指示詞和語言項目 \( `x:Key` 與 `x:Name` 的比較\)。  索引鍵和名稱也會在不同的情況下，由 WPF 定義和這些概念的應用程式所使用。  如需詳細資訊，請參閱 [WPF XAML 名稱範圍](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ 索引鍵和名稱使用基本 XAML 定義中的不同指示詞和語言項目 \( `x:Key` 與 `x:Name` 的比較\)。  索引鍵和名稱也會在不同的情況下，由 WPF 定義和這些概念的應用程式所使用。  如需詳細資訊，請參閱 [WPF XAML 名稱範圍](../../../ocs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
   
- 如先前所述，機碼的值可以透過標記延伸提供，並成為字串值以外的值。  例如，`x:Key` 值可能為 [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)，即是一種 WPF 情節。  某些控制項會針對影響控制項之外觀及行為部分，而不取代樣式的自訂樣式資源，公開該類型的樣式索引鍵。  這類索引鍵的範例有 <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>。  
+ 如先前所述，機碼的值可以透過標記延伸提供，並成為字串值以外的值。  例如，`x:Key` 值可能為 [ComponentResourceKey](../../../ocs/framework/wpf/advanced/componentresourcekey-markup-extension.md)，即是一種 WPF 情節。  某些控制項會針對影響控制項之外觀及行為部分，而不取代樣式的自訂樣式資源，公開該類型的樣式索引鍵。  這類索引鍵的範例有 <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>。  
   
- WPF 合併字典功能對於索引鍵唯一性和索引鍵查閱行為，引入了額外的考量。  如需詳細資訊，請參閱[合併的資源字典](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
+ WPF 合併字典功能對於索引鍵唯一性和索引鍵查閱行為，引入了額外的考量。  如需詳細資訊，請參閱[合併的資源字典](../../../ocs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
   
 ## XAML 2009  
  XAML 2009 放寬了 `x:Key` 必須以屬性形式提供的限制。  
@@ -118,6 +118,6 @@ caps.handback.revision: 25
  Silverlight 的 `x:Key` 會在其他篇幅中做說明。  如需詳細資訊，請參閱 [XAML 命名空間 \(x:\) 語言功能 \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=199081) \(英文\)。  
   
 ## 請參閱  
- [XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [資源和程式碼](../../../docs/framework/wpf/advanced/resources-and-code.md)   
- [StaticResource 標記延伸](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+ [XAML 資源](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
+ [資源和程式碼](../../../ocs/framework/wpf/advanced/resources-and-code.md)   
+ [StaticResource 標記延伸](../../../ocs/framework/wpf/advanced/staticresource-markup-extension.md)

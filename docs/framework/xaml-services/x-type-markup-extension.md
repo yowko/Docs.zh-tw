@@ -68,7 +68,7 @@ caps.handback.revision: 27
 ## WPF 使用注意事項  
   
 ### 預設 XAML 命名空間和型別對應  
- WPF 程式設計的預設 XAML 命名空間包含您在一般 XAML 案例所需要的大多數 XAML 型別，因此您通常可以在參考 XAML 型別值時避免使用前置詞。  如果您所參考的型別來自於自訂組件，或是當型別存在於 WPF 組件中，卻位於沒有對應至預設 XAML 命名空間的 CLR 命名空間內，就可能需要對應前置詞。  如需前置詞、XAML 命名空間和對應 CLR 命名空間的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ WPF 程式設計的預設 XAML 命名空間包含您在一般 XAML 案例所需要的大多數 XAML 型別，因此您通常可以在參考 XAML 型別值時避免使用前置詞。  如果您所參考的型別來自於自訂組件，或是當型別存在於 WPF 組件中，卻位於沒有對應至預設 XAML 命名空間的 CLR 命名空間內，就可能需要對應前置詞。  如需前置詞、XAML 命名空間和對應 CLR 命名空間的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ### 支援以字串形式表示之型別名稱的型別屬性  
  WPF 支援指定 <xref:System.Type> 型別的一些屬性的值，而不需要 `x:Type` 標記延伸使用方式的技術。  您可以改成將值指定為命名型別的字串。  此項的範例為 <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> 和 <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>。  沒有透過型別轉換子或標記延伸提供這項行為的支援。  而是透過 <xref:System.Windows.FrameworkElementFactory> 所實作的延遲行為。  
@@ -88,6 +88,6 @@ caps.handback.revision: 27
   
 ## 請參閱  
  <xref:System.Windows.Style>   
- [設定樣式和範本](../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [設定樣式和範本](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
+ [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -134,7 +134,7 @@ caps.handback.revision: 8
   
  您可以將 <xref:System.ComponentModel.TypeConverterAttribute> 屬性套用至您的型別，以參考您的型別轉換器實作。  您可以對類別、結構或介面定義 XAML 的型別轉換器。  您無須為列舉提供型別轉換，該轉換原本即已啟用。  
   
- 您的型別轉換器應能夠從標記中的屬性或初始化文字所使用的字串，轉換成您所需的目的型別。  如需詳細資訊，請參閱 [TypeConverter 和 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ 您的型別轉換器應能夠從標記中的屬性或初始化文字所使用的字串，轉換成您所需的目的型別。  如需詳細資訊，請參閱 [TypeConverter 和 XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
   
  除了套用至型別的所有值以外，XAML 的型別轉換器行為也可以建立於特定屬性上。  在此情況下，您會將 <xref:System.ComponentModel.TypeConverterAttribute> 套用至屬性定義 \(外部定義，而非特定的 `get` 與 `set` 定義\)。  
   

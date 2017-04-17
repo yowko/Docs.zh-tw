@@ -72,7 +72,7 @@ caps.handback.revision: 13
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- 雖然 System.Xaml 可能沒有特定支援類別，但處理 XAML 語言的語言功能時所需的一般邏輯，現已常駐於 System.Xaml 以及其實作的 XAML 讀取器和 XAML 寫入器中。 例如，`x:TypeArguments` 是由 XAML 讀取器和 XAML 寫入器透過 System.Xaml 實作處理的屬性。該屬性可在 XAML 節點資料流中標註、在預設 \(CLR 型\) XAML 結構描述內容中有處理邏輯、具有 XAML 類型系統表示等。 因此，所有 XAML 語言層級功能的參考文件，都會是 [XAML Services](../../../docs/framework/xaml-services/index.md) 和 .NET Framework 文件集該一般區域的子主題，而不會是 WPF 文件集中[進階 \(Windows Presentation Foundation\)](../../../docs/framework/wpf/advanced/index.md) 的子主題 \(在 3.5 文件集中仍為如此\)。  
+ 雖然 System.Xaml 可能沒有特定支援類別，但處理 XAML 語言的語言功能時所需的一般邏輯，現已常駐於 System.Xaml 以及其實作的 XAML 讀取器和 XAML 寫入器中。 例如，`x:TypeArguments` 是由 XAML 讀取器和 XAML 寫入器透過 System.Xaml 實作處理的屬性。該屬性可在 XAML 節點資料流中標註、在預設 \(CLR 型\) XAML 結構描述內容中有處理邏輯、具有 XAML 類型系統表示等。 因此，所有 XAML 語言層級功能的參考文件，都會是 [XAML Services](../../../docs/framework/xaml-services/index.md) 和 .NET Framework 文件集該一般區域的子主題，而不會是 WPF 文件集中[進階 \(Windows Presentation Foundation\)](../../../ml/index.xml) 的子主題 \(在 3.5 文件集中仍為如此\)。  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## ValueSerializer 和支援類別  

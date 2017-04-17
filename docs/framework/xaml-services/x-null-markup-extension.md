@@ -44,14 +44,14 @@ caps.handback.revision: 20
   
  與所有的 XAML 標記延伸一樣，`x:Null` 標記延伸會使用大括號 \(`{,}`\) 將屬性值的處理逸出為常值或處理常式參考以外的值。  屬性語法是最常配合這個標記延伸使用的語法。  物件項目語法 `<x:Null />` 在技術上可能，但是很少使用，因為 `x:Null` 標記延伸並沒有位置參數或建構引數。  
   
- 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
  在 .NET Framework XAML Services 中，這個標記延伸的處理是由 <xref:System.Windows.Markup.NullExtension> 類別所定義。  
   
 ## WPF 使用注意事項  
- 請注意，`null` 不一定是參考型別相依性屬性的初始未設定值。  每個相依性屬性的初始預設值都有所不同，而且可能取決於屬性特定的中繼資料。  由於其驗證回呼 \(Callback\) 實作 \(Implementation\) 的原因，許多相依性屬性都不會接受 `null` 做為值，不論是透過標記或程式碼都一樣。  如需相依性屬性的詳細資訊，請參閱[相依性屬性概觀](../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ 請注意，`null` 不一定是參考型別相依性屬性的初始未設定值。  每個相依性屬性的初始預設值都有所不同，而且可能取決於屬性特定的中繼資料。  由於其驗證回呼 \(Callback\) 實作 \(Implementation\) 的原因，許多相依性屬性都不會接受 `null` 做為值，不論是透過標記或程式碼都一樣。  如需相依性屬性的詳細資訊，請參閱[相依性屬性概觀](../../../ocs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
 ## 請參閱  
  <xref:System.Windows.DependencyProperty.UnsetValue>   
- [XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

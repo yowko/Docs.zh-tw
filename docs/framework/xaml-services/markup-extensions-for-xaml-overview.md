@@ -164,4 +164,4 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## 請參閱  
  <xref:System.Windows.Markup.MarkupExtension>   
  [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)   
- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [標記延伸和 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

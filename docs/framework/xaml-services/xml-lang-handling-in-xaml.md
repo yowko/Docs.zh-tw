@@ -51,4 +51,4 @@ caps.handback.revision: 15
  若項目是 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 的衍生類別，您可以使用對等的 <xref:System.Windows.FrameworkElement.Language%2A> 相依性屬性 \(Property\)，而非 `xml:lang` 屬性 \(Attribute\)。 根據預設，如果沒有透過屬性 \(Property\) 或是透過處理 `xml:lang` 屬性 \(Attribute\) 另外設定，則 <xref:System.Windows.FrameworkElement.Language%2A> 屬性會使用 "en\-US"。  
   
 ## 請參閱  
- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

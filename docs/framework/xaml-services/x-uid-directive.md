@@ -46,9 +46,9 @@ caps.handback.revision: 12
  藉由將 <xref:System.Windows.Markup.UidPropertyAttribute> 屬性套用至定義的型別，架構可以將其專案模型中的特定屬性指定為 `x:Uid` 的別名。  如果框架指定一個特定的屬性，則在相同的物件上指定`x:Uid`和別名成員就無效。  如果指定 `x:Uid` 和別名成員，.NET Framework XAML Services API 通常會擲回此案例的 <xref:System.Xaml.XamlDuplicateMemberException>。  
   
 ## WPF 使用注意事項  
- 如需 WPF 當地語系化流程中和 XAML 之 BAML 形式中 `x:Uid` 之角色的詳細資訊，請參閱 [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) 或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>。  
+ 如需 WPF 當地語系化流程中和 XAML 之 BAML 形式中 `x:Uid` 之角色的詳細資訊，請參閱 [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md) 或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>。  
   
 ## 請參閱  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
  <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF 的全球化](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

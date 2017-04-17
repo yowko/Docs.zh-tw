@@ -64,7 +64,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML 定義有第二個文法 DottedXamlName，以用於屬性、事件限定參考以及附加成員。  如需詳細資訊，請參閱<xref:System.Windows.DependencyProperty>與[XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+ XAML 定義有第二個文法 DottedXamlName，以用於屬性、事件限定參考以及附加成員。  如需詳細資訊，請參閱<xref:System.Windows.DependencyProperty>與[XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)。  
   
  屬於型別 DottedXamlName 的字串值必須符合下列文法：  
   

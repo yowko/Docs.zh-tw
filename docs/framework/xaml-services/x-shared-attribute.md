@@ -40,7 +40,7 @@ caps.handback.revision: 16
   
  修改透過資源 API 傳回的物件，例如 <xref:System.Windows.FrameworkElement.FindResource%2A>，或是在 <xref:System.Windows.ResourceDictionary> 內直接修改物件，變更原始資源。  如果該資源的參考是動態資源參考，該資源的消費者會取得變更的資源  
   
- 如果該資源的參考是靜態資源參考，則 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理時間過後的資源變更就無關緊要。  如需靜態與動態資源參考的詳細資訊，請參閱[XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ 如果該資源的參考是靜態資源參考，則 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 處理時間過後的資源變更就無關緊要。  如需靜態與動態資源參考的詳細資訊，請參閱[XAML 資源](../../../ocs/framework/wpf/advanced/xaml-resources.md).  
   
  很少明確指定`x:Shared="true"`，因為這已經是預設值。  在 WPF 物件模型沒有 `x:Shared` 的直接對等程式碼。它只能以 XAML 使用方式來指定，而且必須由預設的 WPF 行為處理，或者如果使用 .NET Framework XAML Services 及其 XAML 讀取器處理，則必須位於載入路徑上的中繼 XAML 節點資料流中。  
   
@@ -58,5 +58,5 @@ caps.handback.revision: 16
   
 ## 請參閱  
  <xref:System.Windows.ResourceDictionary>   
- [XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [基底項目](../../../docs/framework/wpf/advanced/base-elements.md)
+ [XAML 資源](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
+ [基底項目](../../../ocs/framework/wpf/advanced/base-elements.md)

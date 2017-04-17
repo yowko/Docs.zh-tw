@@ -79,9 +79,9 @@ caps.handback.revision: 25
   
 -   您從自訂組件 \(Assembly\) 參考型別。  
   
--   您參考存在於 WPF 組件中的型別，但該型別位於 CLR 命名空間內，而此命名空間未對應為 WPF 預設 XAML 命名空間的一部分。  CLR 命名空間到 WPF 預設 XAML 命名空間的對應是由不同 WPF 組件中的定義所執行 \(如需此概念的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)\)。  如果 CLR 命名空間的絕大部分都由通常不為 XAML 所用的類別定義組成，例如 <xref:System.Windows.Threading>，就不能存在非對應的 CLR 命名空間。  
+-   您參考存在於 WPF 組件中的型別，但該型別位於 CLR 命名空間內，而此命名空間未對應為 WPF 預設 XAML 命名空間的一部分。  CLR 命名空間到 WPF 預設 XAML 命名空間的對應是由不同 WPF 組件中的定義所執行 \(如需此概念的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)\)。  如果 CLR 命名空間的絕大部分都由通常不為 XAML 所用的類別定義組成，例如 <xref:System.Windows.Threading>，就不能存在非對應的 CLR 命名空間。  
   
- 如需如何使用 WPF 之前置詞和 XAML 命名空間的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 如需如何使用 WPF 之前置詞和 XAML 命名空間的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ## 請參閱  
  [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   

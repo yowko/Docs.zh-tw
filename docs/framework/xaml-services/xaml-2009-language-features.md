@@ -26,7 +26,7 @@ XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語�
 ## WPF 和 Visual Studio 中的 XAML 2009 支援  
  在 WPF 中，您可以使用 XAML 2009 功能，但只能針對未編譯 WPF 標記的 XAML。 編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 語言關鍵字和功能。  
   
- 請注意，對於 CLR 類型和類型系統，在 WPF 中載入鬆散 XAML 的現有技術，可能也會有比編譯標記的 XAML 更嚴格的安全性和存取限制。 如需詳細資訊，請參閱[安全性 \(WPF\)](../../../docs/framework/wpf/security-wpf.md) 或 [WPF 安全性策略 \- 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)。  
+ 請注意，對於 CLR 類型和類型系統，在 WPF 中載入鬆散 XAML 的現有技術，可能也會有比編譯標記的 XAML 更嚴格的安全性和存取限制。 如需詳細資訊，請參閱[安全性 \(WPF\)](../../../ocs/framework/wpf/security-wpf.md) 或 [WPF 安全性策略 \- 平台安全性](../../../ocs/framework/wpf/wpf-security-strategy-platform-security.md)。  
   
  XAML 2009 也引進了額外的功能，可修改先前的 XAML 2006 建構或修改基本標記形式。  
   
@@ -40,4 +40,4 @@ XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語�
  針對事件所支援的屬性，XAML 2006 會假定標記編譯與將事件送出到標記編譯有關。 XAML 2009 支援類似標記延伸的標記形式，這會將事件連接延遲到 XAML 的執行階段剖析和載入。 不過，WPF 應用程式和 WPF UI 的 XAML 情節通常不會使用這項功能。 WPF 及其 XAML 2006 實作會使用事件處理常式連接組合進行在 <xref:System.Windows.UIElement> 層級定義的路由事件，並使用其標記編譯器步驟進行大部分的事件屬性處理。 標記編譯器也會前置處理在 XAML 中找到的任何事件屬性，建置動作會在此 XAML 中宣告使用標記編譯器。  
   
 ## 請參閱  
- [XAML 概觀 \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

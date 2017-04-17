@@ -46,7 +46,7 @@ caps.handback.revision: 11
 ## 列舉  
  列舉具有 XAML 原生型別轉換行為。  XAML 中所指定的列舉常數名稱會根據基礎列舉型別進行解析，並將列舉值傳回給 XAML 物件寫入器。  
   
- XAML 支援在套用 <xref:System.FlagsAttribute> 的情況下，對列舉使用旗標樣式。  如需詳細資訊，請參閱 [XAML 語法詳細資料](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  \([XAML 語法詳細資料](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) 是針對 WPF 使用者而撰寫的，但該主題中的資訊大多是有關於並非專屬於特定實作架構的 XAML。\)  
+ XAML 支援在套用 <xref:System.FlagsAttribute> 的情況下，對列舉使用旗標樣式。  如需詳細資訊，請參閱 [XAML 語法詳細資料](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  \([XAML 語法詳細資料](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md) 是針對 WPF 使用者而撰寫的，但該主題中的資訊大多是有關於並非專屬於特定實作架構的 XAML。\)  
   
 ## 成員定義  
  型別可以定義 XAML 用法的成員。  即使型別本身不適用於 XAML，該型別仍可定義適用於 XAML 的成員。  可以這麼做是因為 CLR 繼承。  只要有部分繼承成員的型別支援以 XAML 用法做為型別，且該成員支援以 XAML 用法做為其基礎型別，或具有可用的原生 XAML 語法，則該成員適用於 XAML。  

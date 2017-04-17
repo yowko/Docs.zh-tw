@@ -58,8 +58,8 @@ caps.handback.revision: 14
  根項目的部分類別預設是公用的，但可以使用 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)設定為非公用。  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)也會影響根項目類別執行個體的存取層級。  您可以同時在根項目上放置 `x:Name` 和 `x:FieldModifier`，但這只會建立根項目的公用欄位複本，而真正的根項目類別存取層級仍然是由 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)所控制。  
   
 ## 請參閱  
- [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [WPF 的 XAML 和自訂類別](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [WPF 中的程式碼後置和 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [建置 WPF 應用程式 \(WPF\)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
+ [建置 WPF 應用程式 \(WPF\)](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

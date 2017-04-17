@@ -52,11 +52,11 @@ caps.handback.revision: 17
 ## WPF 使用注意事項  
  `x:XData` 物件主要用來當做 <xref:System.Windows.Data.XmlDataProvider> 的子物件，或是當做 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 屬性 \(在 XAML 中，這通常會以屬性項目語法表示\) 的子物件。  
   
- 資料通常會將資料島內的基底 XML 命名空間重新定義成新的預設 XML 命名空間 \(設定為空字串\)。  這是處理簡單資料島最容易的方法，因為用來參考和繫結至資料的 <xref:System.Windows.Data.Binding.XPath%2A> 運算式可以避免包含前置字元。  較為複雜的資料島可能為資料定義多個前置字元，並在根項目中使用 XML 命名空間的特定前置字元。  在這種情況下，所有的 <xref:System.Windows.Data.Binding.XPath%2A> 運算式參考都應該包含適當的命名空間對應前置字元。  如需詳細資訊，請參閱[資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 資料通常會將資料島內的基底 XML 命名空間重新定義成新的預設 XML 命名空間 \(設定為空字串\)。  這是處理簡單資料島最容易的方法，因為用來參考和繫結至資料的 <xref:System.Windows.Data.Binding.XPath%2A> 運算式可以避免包含前置字元。  較為複雜的資料島可能為資料定義多個前置字元，並在根項目中使用 XML 命名空間的特定前置字元。  在這種情況下，所有的 <xref:System.Windows.Data.Binding.XPath%2A> 運算式參考都應該包含適當的命名空間對應前置字元。  如需詳細資訊，請參閱[資料繫結概觀](../../../ocs/framework/wpf/data/data-binding-overview.md)。  
   
  技術上來說，`x:XData` 可以當做型別為 <xref:System.Xml.Serialization.IXmlSerializable> 之任何屬性的內容。  然而，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 是唯一的重要實作。  
   
 ## 請參閱  
  <xref:System.Windows.Data.XmlDataProvider>   
- [資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)   
- [繫結標記延伸](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+ [資料繫結概觀](../../../ocs/framework/wpf/data/data-binding-overview.md)   
+ [繫結標記延伸](../../../ocs/framework/wpf/advanced/binding-markup-extension.md)

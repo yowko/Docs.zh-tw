@@ -65,4 +65,4 @@ caps.handback.revision: 20
   
 ## 請參閱  
  [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [WPF 的 XAML 和自訂類別](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
