@@ -1,0 +1,1 @@
+Microsoft Windows 圖形裝置介面 (GDI)
