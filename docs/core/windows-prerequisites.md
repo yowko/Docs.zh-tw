@@ -54,9 +54,10 @@ ms.lasthandoff: 03/20/2017
 
 Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) 開始使用。  若要深入了解 Visual Studio 安裝程序，請參閱 [Install Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) (安裝 Visual Studio 2017)。
 
-+若要確認您是否正在執行最新版本的 Visual Studio 2017，請執行下列動作︰
- +
- +*在 [說明]** 功能表上，選擇 [關於 Microsoft Visual Studio]**。+* 在 [關於 Microsoft Visual Studio] 對話方塊中，版本號碼應為 15.0.26228.4 或更高版本。
+若要確認您是否正在執行最新版本的 Visual Studio 2017，請執行下列動作︰
+
+* 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]**。
+* 在 **[關於 Microsoft Visual Studio]** 對話方塊中，版本號碼應為 15.0.26228.4 或更高版本。
 
 您可以在[版本資訊](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)中，進一步了解 Visual Studio 2017 的變更。
 
