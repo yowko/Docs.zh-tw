@@ -1,0 +1,1 @@
+JPEG 格式 (JPEG)

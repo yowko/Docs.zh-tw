@@ -1,0 +1,54 @@
+---
+title: "參考 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
+caps.latest.revision: 3
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 3
+---
+# 參考
+本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
+  
+ 同時建議您在 MSDN Library 中搜尋特定問題，尤其建議您參加 [LINQ 論壇](http://go.microsoft.com/fwlink/?LinkId=76488) \(英文\)，您可以在此與專家詳細討論更多複雜的主題。  此外，您還可以研讀詳述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的白皮書，其中包含 Visual Basic 和 C\# 程式碼範例。  如需詳細資訊，請參閱 [LINQ to SQL：關聯式資料的 .NET Language\-Integrated Query](http://go.microsoft.com/fwlink/?LinkId=93205)。  
+  
+## 在本節中  
+ [資料型別和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+ 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何在轉譯引擎中明確提供轉換，Common Language Runtime \(CLR\) 建構在 SQL 中才會具有對應運算式。  
+  
+ [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 以屬性 \(Attribute\) 為基礎的方法，用以將 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型 \(Object Model\) 對應至 SQL Server 資料庫。  
+  
+ [LINQ to SQL 的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何從資料庫取得中繼資訊，然後產生程式碼檔。  
+  
+ [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 外部對應方法，用以將 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件模型對應至 SQL Server 資料庫。  提供對應檔的 XSD 結構描述定義。  
+  
+ [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
+ 提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相關常見問題的答案。  
+  
+ [SQL Server Compact 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
+ 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中的 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 和 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 有何不同。  
+  
+ [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ 描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何將標準查詢運算子轉譯成 SQL 命令。  
+  
+## 相關章節  
+ [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ 提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的入口網站。  
+  
+ [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
+ 提供 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 主題的入口網站。  
+  
+ [LinqDataSource 技術概觀](http://msdn.microsoft.com/zh-tw/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ 描述 <xref:System.Web.UI.WebControls.LinqDataSource> 控制項如何透過 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] 資料來源控制項架構，將 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 公開給 Web 程式開發人員。

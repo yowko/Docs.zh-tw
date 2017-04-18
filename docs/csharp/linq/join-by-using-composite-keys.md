@@ -2,7 +2,7 @@
 title: "使用複合索引鍵執行聯結"
 description: "如何使用複合索引鍵執行聯結。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

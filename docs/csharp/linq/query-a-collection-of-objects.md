@@ -2,7 +2,7 @@
 title: "查詢物件的集合"
 description: "如何查詢集合。"
 keywords: ".NET、.NET Core、C#"
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

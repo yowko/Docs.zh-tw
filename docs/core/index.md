@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 26210b19de4f7bf70c085735771b0175945f38d4
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 132551673f97142a90513d43d7690867c3d00295
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/02/2017
 - **跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。 Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、Cpu 和應用程式案例，會隨著時間成長。
 - **命令列工具︰**所有產品案例都可以在命令列操作。 
 - **相容︰**.NET Core 透過 [.NET Standard Library](../standard/library.md) (.NET 標準程式庫) 與 .NET Framework、Xamarin 及 Mono 相容。
-- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](http://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](http://www.dotnetfoundation.org/) 專案。
+- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。
 
 ## <a name="composition"></a>組合
@@ -62,13 +62,13 @@ C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯�
 
 .NET Core 本身就包含單一的應用程式模型：主控台應用程式，對工具、本機服務和文字型遊戲都極有幫助。 其他應用程式模型早已建置在 .NET Core 以擴充其功能，例如︰
 
-- [ASP.NET Core](http://asp.net)
+- [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
 - [Xamarin.Forms](https://www.xamarin.com/forms)
 
 ### <a name="open-source"></a>開啟原始檔
 
-[.NET Core](https://github.com/dotnet/core) 是開放原始碼 (MIT 授權)，Microsoft 已於 2014 年提供給 [.NET Foundation](http://dotnetfoundation.org)。 它現在是最常使用的 .NET Foundation 專案之一。 可供個人和公司行號自由運用於個人、學術或商業用途。 很多公司將 .NET Core 用為應用程式、工具、新平台及裝載服務的一部分。 這些公司有些在 GitHub 上對 .NET Core 貢獻良多，為產品方向提供指引，成為 [.NET Foundation Technical Steering Group](http://www.dotnetfoundation.org/blog/tsg-welcome) 的一部分。
+[.NET Core](https://github.com/dotnet/core) 是開放原始碼 (MIT 授權)，Microsoft 已於 2014 年提供給 [.NET Foundation](https://dotnetfoundation.org)。 它現在是最常使用的 .NET Foundation 專案之一。 可供個人和公司行號自由運用於個人、學術或商業用途。 很多公司將 .NET Core 用為應用程式、工具、新平台及裝載服務的一部分。 這些公司有些在 GitHub 上對 .NET Core 貢獻良多，為產品方向提供指引，成為 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome) 的一部分。
 
 ## <a name="acquisition"></a>擷取
 

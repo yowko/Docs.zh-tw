@@ -2,7 +2,7 @@
 title: "執行群組聯結"
 description: "如何執行群組聯結。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

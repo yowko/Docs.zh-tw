@@ -2,7 +2,7 @@
 title: "處理查詢運算式中的例外狀況"
 description: "如何處理查詢運算式中的例外狀況。"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

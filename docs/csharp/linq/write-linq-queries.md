@@ -2,7 +2,7 @@
 title: "在 C 中撰寫 LINQ 查詢#"
 description: "如何撰寫查詢。"
 keywords: ".NET、.NET Core、C#"
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

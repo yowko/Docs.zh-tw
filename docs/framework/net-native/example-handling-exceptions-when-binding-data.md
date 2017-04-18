@@ -1,0 +1,73 @@
+---
+title: "範例：處理繫結資料時所發生的例外狀況 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
+caps.latest.revision: 7
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 7
+---
+# 範例：處理繫結資料時所發生的例外狀況
+> [!NOTE]
+>  本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。  您可以從 [Microsoft Connect 網站](http://go.microsoft.com/fwlink/?LinkId=394611) 下載預覽 \(需要註冊\)。  
+  
+ 下列範例顯示如何解決當以 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈編譯的應用程式嘗試繫結資料時，所擲回的 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況。  以下是例外狀況資訊：  
+  
+```  
+  
+This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
+App.ViewModels.MainPageVM  
+  
+```  
+  
+ 以下是相關聯的呼叫堆疊：  
+  
+```  
+  
+Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
+Reflection::Core::ReflectionDomain.CreateNonInvokabilityException+0x2e  
+Reflection::Core::Execution::ExecutionEnvironment.+0x316  
+System::Reflection::Runtime::PropertyInfos::RuntimePropertyInfo.GetValue+0x1cb  
+System::Reflection::PropertyInfo.GetValue+0x22  
+System::Runtime::InteropServices::WindowsRuntime::CustomPropertyImpl.GetValue+0x42  
+App!$66_Interop::McgNative.Func_IInspectable_IInspectable+0x158  
+App!$66_Interop::McgNative::__vtable_Windows_UI_Xaml_Data__ICustomProperty.GetValue__STUB+0x46  
+Windows_UI_Xaml!DirectUI::PropertyProviderPropertyAccess::GetValue+0x3f   
+Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31   
+Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
+  
+```  
+  
+## 應用程式做了什麼？  
+ 在堆疊的基底，[Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) 命名空間中的框架會指出 XAML 轉譯引擎正在執行中。  使用 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=fullName> 方法會指出，在已移除中繼資料的類型上，以反映方式查閱屬性的值。  
+  
+ 提供中繼資料指示詞的第一個步驟，就是為該類型加入 `serialize` 中繼資料，讓它的所有屬性皆可供存取：  
+  
+```  
+<Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
+```  
+  
+## 這是個案嗎？  
+ 在這個案例中，如果資料繫結中有一個 `ViewModel` 的中繼資料不完整，其他的可能也一樣。  如果程式碼的結構化方式是應用程式的檢視模型全都在 `App.ViewModels` 命名空間中，您可以使用較為普遍的執行階段指示詞：  
+  
+```  
+<Namespace Name="App.ViewModels " Serialize="Required Public" />  
+```  
+  
+## 可以將程式碼改寫為不使用反映嗎？  
+ 因為資料繫結是是反映密集作業，所以變更程式碼來避免反映並不可行。  
+  
+ 不過，有一些方法可以將 `ViewModel` 指定至 XAML 頁面，讓工具鏈可以在編譯時將屬性繫結與正確的類型建立關聯，並且在不使用執行階段指示詞的情況下保留中繼資料。  例如，您可以在屬性 \(property\) 上套用 [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) 屬性 \(attribute\)。  這會導致 XAML 編譯器產生必要的查閱資訊，並避免 Default.rd.xml 檔案中需要執行階段指示詞。  
+  
+## 請參閱  
+ [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [範例：動態程式設計疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

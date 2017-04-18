@@ -11,7 +11,6 @@
 ## [索引子](indexers/)
 ## [介面](interfaces/)
 ## [互通性](interop/)
-## [LINQ 查詢運算式](linq-query-expressions/)
 ## [Main() 和命令列引數](main-and-command-args/)
 ## [命名空間](namespaces/)
 ## [可為 Null 的型別](nullable-types/)

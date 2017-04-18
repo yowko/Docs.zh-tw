@@ -2,8 +2,8 @@
 title: "結構 | C# 手冊"
 description: "了解結構類型和其建立方式"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net

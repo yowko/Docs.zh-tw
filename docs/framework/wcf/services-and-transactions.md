@@ -1,0 +1,101 @@
+---
+title: "服務與交易 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "服務合約 [WCF], 設計服務與交易"
+ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
+caps.latest.revision: 10
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 10
+---
+# 服務與交易
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式可以初始化用戶端內的交易，並協調服務作業中的交易。用戶端可以初始化交易並叫用數個服務作業，同時確保服務作業已認可，或是復原為單一單位。  
+  
+ 對於需要用戶端交易的服務作業，您可以指定 <xref:System.ServiceModel.ServiceBehaviorAttribute> 並設定服務合約的 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 和 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性，藉此啟用服務合約中的交易行為。<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 參數指定如果沒有發生未處理的例外狀況，方法執行的交易是否會自動完成。[!INCLUDE[crabout](../../../includes/crabout-md.md)]這些屬性的詳細資訊，請參閱 [ServiceModel 交易屬性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
+  
+ 在服務作業中執行並由資源管理員所管理的工作 \(例如記錄資料庫更新\)，屬於用戶端交易的一部分。  
+  
+ 下列範例示範如何使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性來控制服務端的交易行為。  
+  
+```  
+[ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
+public class CalculatorService: ICalculatorLog  
+{  
+    [OperationBehavior(TransactionScopeRequired = true,  
+                           TransactionAutoComplete = true)]  
+    public double Add(double n1, double n2)  
+    {  
+        recordToLog(String.Format("Added {0} to {1}", n1, n2));  
+        return n1 + n2;  
+    }  
+  
+    [OperationBehavior(TransactionScopeRequired = true,   
+                               TransactionAutoComplete = true)]  
+    public double Subtract(double n1, double n2)  
+    {  
+        recordToLog(String.Format("Subtracted {0} from {1}", n1, n2));  
+        return n1 - n2;  
+    }  
+  
+    [OperationBehavior(TransactionScopeRequired = true,   
+                                       TransactionAutoComplete = true)]  
+    public double Multiply(double n1, double n2)  
+    {  
+        recordToLog(String.Format("Multiplied {0} by {1}", n1, n2));  
+        return n1 * n2;  
+    }  
+  
+    [OperationBehavior(TransactionScopeRequired = true,   
+                                       TransactionAutoComplete = true)]  
+    public double Divide(double n1, double n2)  
+    {  
+        recordToLog(String.Format("Divided {0} by {1}", n1, n2));  
+        return n1 / n2;  
+    }  
+  
+}  
+```  
+  
+ 您可以設定用戶端與服務繫結使用 WS\-AtomicTransaction 通訊協定，並將 [\<transactionFlow\>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) 項目設定為 `true` 來啟用交易與交易流程，如下列範例組態所示。  
+  
+```  
+<client>  
+    <endpoint address="net.tcp://localhost/ServiceModelSamples/service"   
+          binding="netTcpBinding"   
+          bindingConfiguration="netTcpBindingWSAT"   
+          contract="Microsoft.ServiceModel.Samples.ICalculatorLog" />  
+</client>  
+  
+<bindings>  
+    <netTcpBinding>  
+        <binding name="netTcpBindingWSAT"  
+                transactionFlow="true"  
+                transactionProtocol="WSAtomicTransactionOctober2004" />  
+     </netTcpBinding>  
+</bindings>  
+```  
+  
+ 用戶端可以藉由建立 <xref:System.Transactions.TransactionScope> 並叫用交易範圍內的服務作業來開始交易。  
+  
+```  
+using (TransactionScope ts = new TransactionScope(TransactionScopeOption.RequiresNew))  
+{  
+    //Do work here  
+    ts.Complete();  
+}  
+```  
+  
+## 請參閱  
+ [System.ServiceModel 中的交易式支援](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)   
+ [交易模型](../../../docs/framework/wcf/feature-details/transaction-models.md)   
+ [WS 交易流程](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
