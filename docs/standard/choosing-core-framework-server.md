@@ -13,7 +13,7 @@ ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
 ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
 ms.openlocfilehash: 7151c87d373afce88c83239499ba33980383ab98
-ms.lasthandoff: 03/15/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/15/2017
 
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>需要使用的協力廠商的 .NET 程式庫或 NuGet 套件不適用 .NET Core
 
-程式庫會快速採行 .NET Standard，以便跨所有 .NET 類別 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，這甚至更加簡單，因為 .NET Core API 介面將明顯變大，而 .NET Core 應用程式可以直接使用現有的 .NET Framework 程式庫。 但此轉換不是即時的，因此我們建議您先檢查應用程式所需的特定程式庫，然後再以其他方式進行決策。
+程式庫會快速採行 .NET 標準，以便跨所有 .NET 類別 (包括 .NET Core) 共用程式碼。 透過 .NET 標準 2.0，這甚至更加簡單，因為 .NET Core API 介面將明顯變大，而 .NET Core 應用程式可以直接使用現有的 .NET Framework 程式庫。 但此轉換不是即時的，因此我們建議您先檢查應用程式所需的特定程式庫，然後再以其他方式進行決策。
 
 ### <a name="a-need-to-use-net-technologies-not-available-for-net-core"></a>需要使用的 .NET 技術不適用 .NET Core
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 03/15/2017
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>必須使用不支援 .NET Core 的平台
 
-某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，某些 Azure 服務 (例如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors) 需要 .NET Framework。 部分其他服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
+某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，某些 Azure 服務 (例如 Service Fabric 具狀態可靠服務和 Service Fabric Reliable Actors) 需要 .NET Framework。 部分其他服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
 
 ## <a name="further-resources"></a>其他資源
 
