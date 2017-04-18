@@ -1,34 +1,37 @@
 ---
-title: "Asynchronous Programming Patterns | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "asynchronous design patterns, .NET Framework"
-  - ".NET Framework, asynchronous design patterns"
+title: "非同步程式設計模式 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- asynchronous design patterns, .NET Framework
+- .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 5
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 26d5c4da21671c0f4ce37bf08c28ae82213f4374
+ms.lasthandoff: 04/08/2017
+
 ---
-# Asynchronous Programming Patterns
+# <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 .NET Framework 提供三種模式來執行非同步作業：  
   
--   非同步程式設計模型 \(APM\) 模式 \(也稱為 <xref:System.IAsyncResult> 模式\)，其中非同步作業需要 `Begin` 和 `End` 方法 \(例如，適用於非同步寫入作業的 `BeginWrite` 和 `EndWrite`\)。  在新的程式開發時，不建議使用此模式。  如需詳細資訊，請參閱[Asynchronous Programming Model \(APM\)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。  
+-   非同步程式設計模型 (APM) 模式 (也稱為 called the <xref:System.IAsyncResult> 模式)，其中非同步作業需要 `Begin` 和 `End` 方法 (例如，適用於非同步寫入作業的 `BeginWrite` 和 `EndWrite`)。 在新的程式開發時，不建議使用此模式。 如需詳細資訊，請參閱[非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。  
   
--   事件架構非同步模式 \(EAP\)，它需要具有 `Async` 尾碼的方法，並且要求一或多個事件、事件處理常式的委派類型，以及 `EventArg` 衍生類型。  在 .NET Framework 2.0 中採用了 EAP。  在新的程式開發時，不建議使用它。  如需詳細資訊，請參閱[Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  
+-   事件架構非同步模式 (EAP)，它需要具有 `Async` 尾碼的方法，並且要求一或多個事件、事件處理常式的委派類型，以及 `EventArg` 衍生類型。 在 .NET Framework 2.0 中採用了 EAP。 在新的程式開發時，不建議使用它。 如需詳細資訊，請參閱[事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  
   
--   工作架構非同步模式 \(TAP\)，它使用單一方法來代表非同步作業的起始與完成。  在 .NET Framework 4 中使用了 TAP，且此為在 .NET Framework 中進行非同步程式設計時的建議方法。  C\# 中的 [async](../Topic/async%20\(C%23%20Reference\).md) 和 [await](../Topic/await%20\(C%23%20Reference\).md) 關鍵字，以及 Visual Basic 語言中的 [Async](../Topic/Async%20\(Visual%20Basic\).md) 和 [Await](../Topic/Await%20Operator%20\(Visual%20Basic\).md) 運算子，新增了 TAP 的語言支援。  如需詳細資訊，請參閱[Task\-based Asynchronous Pattern \(TAP\)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)。  
+-   工作架構非同步模式 (TAP)，它使用單一方法來代表非同步作業的起始與完成。 在 .NET Framework 4 中使用了 TAP，且此為在 .NET Framework 中進行非同步程式設計時的建議方法。 C# 中的 [async](~/docs/csharp/language-reference/keywords/async.md) 和 [await](~/docs/csharp/language-reference/keywords/await.md) 關鍵字，以及 Visual Basic 語言中的 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 和 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 運算子，新增 TAP 的語言支援。 如需詳細資訊，請參閱[以工作為基礎的非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
   
-## 比較模式  
+## <a name="comparing-patterns"></a>比較模式  
  若要快速比較三個模式如何建立非同步作業的模型，請考慮 `Read` 方法，它會將指定的資料量讀取到所提供的緩衝區，並且在指定的位移處開始：  
   
 ```csharp  
@@ -71,10 +74,10 @@ public class MyClass
   
  如需 TAP、APM 和 EAP 的完整討論，請參閱下節中所提供的連結。  
   
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |標題|描述|  
-|--------|--------|  
-|[Asynchronous Programming Model \(APM\)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|描述使用 <xref:System.IAsyncResult> 介面以提供非同步行為的傳統模型。  在新的程式開發時，不建議使用此模型。|  
-|[Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)|描述提供非同步行為的事件架構舊版模型。  在新的程式開發時，不建議使用此模型。|  
-|[Task\-based Asynchronous Pattern \(TAP\)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|說明新的非同步模式，其根據 <xref:System.Threading.Tasks> 命名空間。  這個模型是在 .NET Framework 4 和更新版本中進行非同步程式設計的建議方法。|
+|-----------|-----------------|  
+|[非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|描述使用 <xref:System.IAsyncResult> 介面以提供非同步行為的傳統模型。 在新的程式開發時，不建議使用此模型。|  
+|[事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)|描述提供非同步行為的事件架構舊版模型。 在新的程式開發時，不建議使用此模型。|  
+|[工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述以 <xref:System.Threading.Tasks> 命名空間為基礎的新的非同步模式。 這個模型是在 .NET Framework 4 和更新版本中進行非同步程式設計的建議方法。|
