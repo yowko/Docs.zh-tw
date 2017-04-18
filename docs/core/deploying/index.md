@@ -20,9 +20,9 @@ ms.lasthandoff: 03/14/2017
 
 您可以建立兩種類型的 .NET Core 應用程式部署︰ 
 
-- 與 Framework 相依的部署。 正如其名，與 Framework 相依的部署 (FDD) 要仰賴全系統共用的 .NET Core 版本才能存在於目標系統上。 因為 .NET Core 已存在，所以應用程式也可以在 .NET Core 安裝之間攜帶。 您的應用程式僅包含其自有程式碼和 .NET Core 程式庫以外的所有協力廠商相依性。 FDD 包含的 .dll 檔案，可以使用 [dotnet 公用程式](../tools/dotnet.md)從命令列啟動。 例如，`dotnet app.dll` 執行名為 `app` 的應用程式。
+- 與 Framework 相依的部署。 正如其名，與 Framework 相依的部署 (framework-dependent deployment, FDD) 要仰賴全系統共用的 .NET Core 版本才能存在於目標系統上。 因為 .NET Core 已存在，所以應用程式也可以在 .NET Core 安裝之間攜帶。 您的應用程式僅包含其自有程式碼和 .NET Core 程式庫以外的所有協力廠商相依性。 FDD 包含的 .dll 檔案，可以使用 [dotnet 公用程式](../tools/dotnet.md)從命令列啟動。 例如，`dotnet app.dll` 執行名為 `app` 的應用程式。
 
-- 自封式部署。 不同於 FDD，自封式部署 (SCD) 不仰賴任何共用的元件就能存在於目標系統上。 所有的元件，包括 .NET Core 程式庫和 .NET Core 執行階段，都隨附於應用程式，並與其他 .NET Core 應用程式隔離。 SCD 包含可執行檔 (例如，Windows 平台上 `app` 應用程式的 `app.exe`)，這是重新命名的特定平台 .NET Core 主應用程式版本，以及實際的應用程式 .dll 檔案 (例如 `app.dll`)。
+- 自封式部署。 不同於 FDD，自封式部署 (self-contained deployment, SCD) 不仰賴任何共用的元件就能存在於目標系統上。 所有的元件，包括 .NET Core 程式庫和 .NET Core 執行階段，都隨附於應用程式，並與其他 .NET Core 應用程式隔離。 SCD 包含可執行檔 (例如，Windows 平台上 `app` 應用程式的 `app.exe`)，這是重新命名的特定平台 .NET Core 主應用程式版本，以及實際的應用程式 .dll 檔案 (例如 `app.dll`)。
 
 ## <a name="framework-dependent-deployments-fdd"></a>與 Framework 相依的部署 (FDD) ##
 
@@ -121,7 +121,7 @@ ms.lasthandoff: 03/14/2017
 
 ## <a name="self-contained-deployments-scd"></a>自封式部署 (SCD) ##
 
-針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台上的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身在 (例如，macOS 上的 OpenSSL)，所以您要先安裝這些，才能執行應用程式。 
+針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台上本身 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (例如，macOS 上的 OpenSSL)，所以您要在執行應用程式之前安裝。 
 
 ### <a name="why-deploy-a-self-contained-deployment"></a>為什麼要部署自封式部署？ ###
 
@@ -260,7 +260,7 @@ ms.lasthandoff: 03/14/2017
   ```xml
   <TargetFramework>netstandard1.6</TargetFramework>
   ```
-此作業指出我們的應用程式只使用 .NET 標準程式庫，而不是使用整個 `netcoreapp1.0` 架構 (其中包括 .NET Core CLR、.NET Core 程式庫和幾個其他系統元件)。
+此作業指出我們的應用程式只使用 .NET Standard 程式庫，而不是使用整個 `netcoreapp1.0` 架構 (其中包括 .NET Core CLR、.NET Core 程式庫和幾個其他系統元件)。
 
 2. 將 `<ItemGroup>` 包含套件參考取代為下列︰
 
@@ -271,7 +271,7 @@ ms.lasthandoff: 03/14/2017
   </ItemGroup>
   ```
 
-   這會定義我們應用程式所使用的系統元件。 與我們的應用程式一起封裝的系統元件，包括 .NET 標準程式庫、.NET Core 執行階段和 .NET Core 主應用程式。 這會產生使用量較小的自封式部署。
+   這會定義我們應用程式所使用的系統元件。 與我們的應用程式一起封裝的系統元件，包括 .NET Standard 程式庫、.NET Core 執行階段和 .NET Core 主應用程式。 這會產生使用量較小的自封式部署。
 
 3. 如您在[部署簡單的自封式部署](#simpleSelf)範例中所做的那樣，在定義應用程式目標平台之 `csproj` 檔案中的 `<PropertyGroup>` 內建立 `<RuntimeIdentifiers>` 元素，並指定每個目標平台的執行階段識別碼。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。 例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
