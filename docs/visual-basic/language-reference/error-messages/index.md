@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e22d81efef735f4b6619054cb15f21790efabf5e
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
+ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>錯誤訊息 (Visual Basic)
@@ -57,6 +57,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="compile-time-errors"></a>編譯時期錯誤  
  如果 Visual Basic 編譯器遇到程式碼中的問題時，就會發生編譯時期錯誤。 在程式碼編輯器中，您可以輕鬆識別造成錯誤的程式碼行，因為該行程式碼下方會顯示波浪線。 如果您指向該波浪底線或是開啟 [錯誤清單]，將會顯示錯誤訊息 (這也會顯示其他訊息)。  
   
- 如果識別碼具有波浪底線，且在最右邊的字元底下顯示短底線，您可以針對類別、建構函式、方法、屬性、欄位或列舉產生虛設常式。 如需詳細資訊，請參閱[使用時產生](https://docs.microsoft.com/cpp/misc/generate-from-usage)。  
+ 如果識別碼具有波浪底線，且在最右邊的字元底下顯示短底線，您可以針對類別、建構函式、方法、屬性、欄位或列舉產生虛設常式。 如需詳細資訊，請參閱[使用時產生](https://docs.microsoft.com/visualstudio/ide/visual-csharp-intellisense#generate-from-usage)。
   
  透過解決 Visual Basic 編譯器的警告，您可能可以撰寫出執行速度較快且具有較少錯誤 (bug) 的程式碼。 這些警告會識別在應用程式執行時可能造成錯誤的程式碼。 例如，如果您嘗試叫用未指派物件變數的成員、在沒有設定傳回值的情況下從函式傳回，或是執行具有邏輯錯誤的 `Try` 區塊以攔截例外狀況，編譯器都會警告您。 如需有關警告的詳細資訊 (包括如何開啟與關閉警告)，請參閱[在 Visual Basic 中設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。
+
