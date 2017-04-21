@@ -50,7 +50,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1/TargetFramework>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
 
   <!-- The tools reference -->
@@ -77,7 +77,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 ### <a name="custom-targets"></a>自訂目標
 NuGet 現在已具備封裝自訂 MSBuild 目標和 props 檔案的功能，您可以在 [NuGet 文件網站](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)上找到相關的官方文件。 隨著在 CLI 中改為使用 MSBuild，相同的擴充機制也適用於 .NET Core 專案。 當您想要擴充建置程序或者想要在建置程序中存取任何構件 (例如產生的檔案或檢查呼叫建置的組態等)，您可以使用這種類型的擴充性。 
 
-下面包含範例目標的專案檔，以供參考。 它示範如何使用新的 `csproj` 語法來指示 `dotnet pack` 命令要封裝的項目，以將目標檔案以及組件放入套件內的 `build` 資料夾。 請記錄下面將 `Label` 屬性設定為「dotnet 組件指示」的 `<ItemGroup>`。 
+下面包含範例目標的專案檔，以供參考。 它示範如何使用新的 `csproj` 語法來指示 `dotnet pack` 命令要封裝的項目，以將目標檔案以及組件放入套件內的 `build` 資料夾。 請記錄下面將 `Label` 屬性設定為「`dotnet pack instructions`」的 `<ItemGroup>`。 
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -128,7 +128,7 @@ PATH 擴充性通常用於開發電腦，而在開發電腦中，您需要有概
 
 這種模式的 CLI 工具組擴充性十分簡單。 如 [.NET Core CLI 概觀](index.md)中所涵蓋，`dotnet` 驅動程式可以執行任何在 `dotnet-<command>` 慣例後面命名的命令。 預設解析邏輯會先探查數個位置，最後再轉到系統 PATH。 如果要求的命令存在於系統 PATH 中，而且是可叫用的二進位檔，`dotnet` 驅動程式將會叫用它。 
 
-二進位檔幾乎是作業系統可以執行的任何項目。 在 Unix 系統上，這表示任何透過 `chmod +x` 設定執行位元的項目。 在 Windows 上，這表示 Windows 知道如何執行的任何項目。 
+二進位檔幾乎是作業系統可以執行的任何項目。 在 Unix 系統上，這表示任何透過 `chmod +x` 設定為可執行位元項目。 在 Windows 上，這表示 Windows 知道如何執行的任何項目。 
 
 例如，讓我們查看十分簡單的 `dotnet clean` 命令實作。 我們將使用 `bash` 來實作這個命令。 這個命令只會刪除目前目錄中的 `bin/` 和 `obj/` 目錄。 如果將 `--lock` 引數傳遞給它，則也會刪除 `project.lock.json` 檔案。 這個命令的全部內容如下。 
 
