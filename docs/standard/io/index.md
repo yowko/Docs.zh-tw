@@ -21,9 +21,9 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 887ddf85b1da556feee211c4b29f0a08550c84ad
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/08/2017
   
 -   無法使用以路徑為基礎的壓縮類型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions>。 因此，請改用 [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 命名空間中的類型。  
   
- 如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 <xref:System.IO.WindowsRuntimeStreamExtensions>。  
+ 如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 [System.IO.WindowsRuntimeStreamExtensions (英文)](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)。 <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  如需 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱 Windows 開發人員中心的[快速入門：讀取和寫入檔案](http://go.microsoft.com/fwlink/p/?LinkId=243072)。  
   
@@ -182,3 +182,4 @@ ms.lasthandoff: 04/08/2017
 -   [記憶體對應檔案](../../../docs/standard/io/memory-mapped-files.md)  
   
  描述記憶體對應檔案，這些檔案包含磁碟檔案在虛擬記憶體中的內容。 您可以使用記憶體對應檔案來編輯超大的檔案，以及建立供處理序間通訊使用的共用記憶體。
+

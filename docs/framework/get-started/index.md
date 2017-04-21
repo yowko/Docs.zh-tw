@@ -18,9 +18,9 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 404c69662c992bfba3399225fdca12376f33baa9
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 8571258a2fa4e7bd5180301e30e0fea8117eede6
+ms.openlocfilehash: 83ffd29d4301ae8848cc01de8e7def045b24a0ca
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="getting-started-with-the-net-framework"></a>.NET Framework 使用者入門
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/08/2017
   
  若要開發 .NET Framework 應用程式或元件，請執行下列步驟：  
   
-1.  如果作業系統上未預先安裝，請安裝將作為應用程式目標的 .NET Framework 版本。 最新的產品版本是 .NET Framework 4.7，已預先安裝於 Windows 10 Creative Update，但舊版 Windows 作業系統並未提供。 如需 .NET Framework 系統需求，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。 另外還有非常態 (Out of Band) 發行的其他 .NET Framework 套件。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
+1.  如果作業系統上未預先安裝，請安裝將作為應用程式目標的 .NET Framework 版本。 最新的產品版本是 .NET Framework 4.7，已預先安裝於 Windows 10 Creators Update，但在舊版 Windows 作業系統上並未提供。 如需 .NET Framework 系統需求，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。 如需安裝其他 .NET Framework 版本的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。 另外還有非常態 (Out of Band) 發行的其他 .NET Framework 套件。 如需這些套件的資訊，請參閱 [.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
   
 2.  選取您要用來開發應用程式的 .NET Framework 語言。 有多種語言可供選擇，包括 Microsoft 的 Visual Basic、C#、Visual F# 和 C++  (可讓您開發 .NET Framework 應用程式的程式語言會遵循[通用語言基礎結構 (CLI) 規格](http://go.microsoft.com/fwlink/?LinkId=199862))。  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 04/08/2017
  [新功能](../../../docs/framework/whats-new/index.md)   
  [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkId=227195)   
  [開發指南](../../../docs/framework/development-guide.md)
+

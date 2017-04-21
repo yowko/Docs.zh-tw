@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 4.6 和 4.5 移轉手冊 | Microsoft Docs"
+title: ".NET Framework 4.7、4.6 和 4.5 移轉手冊 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,12 +18,12 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 9004e102dac346e7d7d627f5adc573a18a53952e
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d745ff3729fed78cdaf7402d8e8847e95a4ed400
+ms.openlocfilehash: aa587b7ca0beaabae8eb44f83355427579241b47
+ms.lasthandoff: 04/13/2017
 
 ---
-# <a name="migration-guide-to-the-net-framework-46-and-45"></a>.NET Framework 4.6 和 4.5 移轉手冊 
+# <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7、4.6 和 4.5 移轉手冊 
 如果您使用舊版的 .NET Framework 建立應用程式，通常可以輕鬆地將它升級到 .NET Framework 4.5 及其點發行版本 (4.5.1 和 4.5.2)、.NET Framework 4.6 及其點發行版本 (4.6.1 和 4.6.2) 或 .NET Framework 4.7。 在 Visual Studio 中開啟專案。 如果您的專案是使用舊版所建立，則 [專案相容性] 對話方塊會自動開啟。 如需升級 Visual Studio 專案的詳細資訊，請參閱[移植、移轉及升級 Visual Studio 專案](https://docs.microsoft.com/en-us/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目標及相容性](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs)。  
   
  不過，.NET Framework 中的某些變更需要變更您的程式碼。 您可能也會想要利用 .NET Framework 4.5 及其點發行版本、.NET Framework 4.6 及其點發行版本或 .NET Framework 4.7 中的某些新功能。 針對新版 .NET Framework 對您應用程式所做之這些類型的變更通常稱為「移轉」。 如果您的應用程式不必移轉，您可以在 .NET Framework 4.5 或更新版本中執行而不需重新編譯。  
