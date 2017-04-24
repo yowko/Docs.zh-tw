@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # 立體轉換概觀
 本主題描述在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形系統中如何將轉換套用至立體模型。  轉換允許開發人員重新定位、重新調整大小和旋轉模型，而不需要變更定義它們的基底值。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 立體座標空間  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的立體圖形內容是封裝在 <xref:System.Windows.Controls.Viewport3D> 項目中，這個項目可以參與二維項目結構。  圖形系統會將 Viewport3D 視為二維視覺化項目，就和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的其他項目一樣。  Viewport3D 的運作方式與視窗 \(檢視區 \(Viewport\)\) 相同，但是使用的是三維場景。  較正確地說，它是投影立體場景的平面。  雖然您可以在相同場景圖形中搭配使用 Viewport3D 與其他 2D 繪圖物件，但是無法貫穿 Viewport3D 內的 2D 和立體物件。  在下列討論中，Viewport3D 項目會包含描述的座標空間 \(Coordinate Space\)。  

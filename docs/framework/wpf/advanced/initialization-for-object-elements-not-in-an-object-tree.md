@@ -24,7 +24,7 @@ caps.handback.revision: 14
 # 初始化物件樹狀結構以外的物件項目
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始設定的某些部分已延後到某些處理序，而這些處理序通常依賴連接至[邏輯樹狀結構](GTMT)或[視覺化樹狀結構](GTMT)的項目。  本主題說明為了初始化未連接到這兩個樹狀目錄的項目，您可能需要採取的步驟。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 項目和邏輯樹狀結構  
  在程式碼中建立 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的執行個體時，您應該了解，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的物件初始設定有幾個層面並不屬於呼叫類別建構函式時所執行之程式碼的一部分。  特別是控制項類別，該控制項的視覺化呈現大都不是由建構函式定義，  而是由控制項的樣板定義。  樣板可能來自各種不同的來源，但通常是從主題佈景樣式取得。  樣板實際上是晚期繫結 \(Late\-Binding\)；必須等到相關控制項可以開始配置時，必要的樣板才會附加到該控制項，  而控制項則必須等到附加至邏輯樹狀結構 \(連接到根目錄的呈現介面\) 之後才可以開始配置。  其於邏輯樹狀結構中定義的所有子項目都是由該根層級項目加以啟始。  

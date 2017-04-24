@@ -26,7 +26,7 @@ caps.handback.revision: 27
 # 使用影像、繪圖和視覺效果繪製
 本主題說明如何使用 <xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush> 與 <xref:System.Windows.Media.VisualBrush> 物件，以影像 <xref:System.Windows.Media.Drawing> 或 <xref:System.Windows.Media.Visual> 繪製區域。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereqs"></a>   
 ## 必要條件  

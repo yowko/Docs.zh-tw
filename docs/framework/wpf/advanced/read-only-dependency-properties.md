@@ -22,7 +22,7 @@ caps.handback.revision: 7
 # 唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及建立自訂唯讀相依性屬性的案例和技巧。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

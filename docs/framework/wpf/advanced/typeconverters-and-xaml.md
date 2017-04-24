@@ -23,7 +23,7 @@ caps.handback.revision: 12
 # TypeConverter 和 XAML
 本主題介紹從字串進行型別轉換，做為一般 XAML 語言功能的目的。  在 .NET Framework 中，若 Managed 自訂類別可當做 XAML 屬性 \(Attribute\) 使用方式中的屬性 \(Property\) 值，<xref:System.ComponentModel.TypeConverter> 類別所提供的特定用途即可充當此種自訂類別的實作一部分。  撰寫自訂類別時，如果要將類別的執行個體當做 XAML 的可設定屬性 \(Attribute\) 值使用，您可能必須將 <xref:System.ComponentModel.TypeConverterAttribute> 套用至類別、撰寫自訂 <xref:System.ComponentModel.TypeConverter> 類別，或同時進行這兩個動作。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 型別轉換概念  
   

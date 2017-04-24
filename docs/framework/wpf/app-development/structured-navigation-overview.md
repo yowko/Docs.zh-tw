@@ -25,7 +25,7 @@ caps.handback.revision: 36
   
  <xref:System.Windows.Controls.Page> 類別不會實作結構化巡覽的支援。  相反地，<xref:System.Windows.Navigation.PageFunction%601> 類別會衍生自 <xref:System.Windows.Controls.Page>，並擴充加入結構化巡覽所需的基本建構。  本主題顯示如何使用 <xref:System.Windows.Navigation.PageFunction%601> 建立結構化巡覽。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Structured_Navigation"></a>   
 ## 結構化巡覽  

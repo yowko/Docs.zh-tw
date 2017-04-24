@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  下列各節說明雙向功能，並提供用以說明如何達到雙向內容最佳顯示的範例。  大部分範例使用 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]，不過您可以輕易地將概念運用到 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 或 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 程式碼。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="FlowDirection"></a>   
 ## FlowDirection  

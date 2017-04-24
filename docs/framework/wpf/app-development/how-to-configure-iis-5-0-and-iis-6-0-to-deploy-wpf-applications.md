@@ -32,7 +32,7 @@ caps.handback.revision: 17
   
  本主題說明如何設定 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 以部署 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 > [!NOTE]
 >  您可以在登錄中檢查 *UserAgent* 字串，判斷系統是否安裝有 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。  如需詳細資訊和檢查用於判斷系統是否有安裝 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的 *UserAgent* 字串的指令碼，請參閱 [偵測有無安裝 .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)。  

@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # WPF 增益集概觀
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 包含的增益集模型可以讓開發人員用來建立支援增益集擴充性的應用程式。  這個增益集模型可以讓建立的增益集與應用程式功能進行整合，並擴充應用程式功能。  在某些案例中，應用程式也需要顯示增益集所提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。  本主題顯示 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何擴大 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 增益集模型以促成這些案例、其背後的架構、所帶來的優點以及限制。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Requirements"></a>   
 ## 必要條件  

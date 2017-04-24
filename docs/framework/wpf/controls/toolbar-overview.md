@@ -22,7 +22,7 @@ caps.handback.revision: 27
 # 工具列概觀
 <xref:System.Windows.Controls.ToolBar> 控制項是包含一組命令或控制項的容器，這些命令或控制項通常與其功能相關。  <xref:System.Windows.Controls.ToolBar> 通常包含會叫用 \(Invoke\) 命令的按鈕。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="ToolBarControl"></a>   
 ## 工具列控制項  

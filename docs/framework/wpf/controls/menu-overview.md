@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # 功能表概觀
 <xref:System.Windows.Controls.Menu>類別可讓您組織命令和事件處理常式，以階層順序相關聯的項目。 每個<xref:System.Windows.Controls.Menu>項目包含集合<xref:System.Windows.Controls.MenuItem>項目。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Menu 控制項  

@@ -29,7 +29,7 @@ caps.handback.revision: 28
 # 路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的路由事件概念。  本主題會定義路由事件的術語、說明路由事件是如何透過項目樹狀結構路由傳送的、摘要說明如何處理路由事件，以及簡介說明如何建立自己的自訂路由事件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

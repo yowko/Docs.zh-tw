@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # TextElement 內容模型概觀
 本內容模型概觀說明 <xref:System.Windows.Documents.TextElement> 支援的內容。  <xref:System.Windows.Documents.Paragraph> 類別屬於 <xref:System.Windows.Documents.TextElement> 型別。  內容模型可說明其他物件\/項目可包含的物件\/項目。  本概觀將摘要說明衍生自 <xref:System.Windows.Documents.TextElement> 的物件所適用的內容模型。  如需詳細資訊，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="text_element_classes"></a>   
 ## 內容模型圖表  

@@ -22,7 +22,7 @@ caps.handback.revision: 29
 # 控制項撰寫概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項模型由於具有擴充性，大幅減少了建立新控制項的需求。  不過，在某些情況下，您可能還是需要建立自訂控制項。  本主題將說明一些功能使建立自訂控制項的需求減至最少，以及 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的不同控制項撰寫模型。  本主題也將示範如何建立新的控制項。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="when_to_write_a_new_control"></a>   
 ## 撰寫新控制項的替代方案  

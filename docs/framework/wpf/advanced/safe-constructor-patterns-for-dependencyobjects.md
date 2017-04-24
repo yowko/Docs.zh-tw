@@ -23,7 +23,7 @@ caps.handback.revision: 11
 # DependencyObject 的安全建構函式模式
 一般來說，類別建構函式不應呼叫像是虛擬方法或委派之類的回呼，因為建構函式可以呼叫做為衍生類別之建構函式的基底初始設定。  進入虛擬方法可在任何指定物件還在未完成初始設定的狀態時完成。  不過，屬性系統本身會在內部呼叫和公開回呼，以做為相依性屬性系統的一部分。  簡單如使用 <xref:System.Windows.DependencyObject.SetValue%2A> 呼叫設定相依性屬性的作業，都可能在決定的某個部分包含回呼。  因此，在建構函式主體內設定相依性屬性時應小心，如果將型別當做基底類別使用，就可能會發生問題。  有一種實作 <xref:System.Windows.DependencyObject> 建構函式的特殊模式可避免相依性屬性狀態和內建回呼的問題，這裡將說明此模式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## 屬性系統虛擬方法  

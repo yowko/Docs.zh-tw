@@ -32,7 +32,7 @@ caps.handback.revision: 18
 # WPF XAML 名稱範圍
 XAML 名稱範圍 \(Namescope\) 是一種概念，用來識別在 XAML 中定義的物件。  XAML 名稱範圍中的名稱可以用來在 XAML 定義的物件名稱，與物件在物件樹狀結構中的對應執行個體之間建立關聯性。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Managed 程式碼中的 XAML 名稱範圍，通常是在載入 XAML 應用程式的個別 XAML 頁面根項目時建立。  XAML 名稱範圍如同程式設計物件，是由 <xref:System.Windows.Markup.INameScope> 介面所定義，而且是由實用類別 <xref:System.Windows.NameScope> 所實作。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## 載入之 XAML 應用程式中的命名範圍  

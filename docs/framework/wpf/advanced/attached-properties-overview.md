@@ -21,7 +21,7 @@ caps.handback.revision: 27
 # 附加屬性概觀
 「附加屬性」\(Aattached Property\) 是 XAML 所定義的概念。  附加屬性主要是當做一種全域屬性使用，可在任何物件上設定。  在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、 附加屬性通常會定義為特定形式的沒有傳統屬性 「 包裝函式 」 的相依性屬性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

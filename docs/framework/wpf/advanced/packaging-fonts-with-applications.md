@@ -27,7 +27,7 @@ caps.handback.revision: 25
 > [!NOTE]
 >  與大部分類型的軟體一樣，字型檔是經由授權而非販售的。  控制字型使用的授權隨著各家廠商而異，但一般大部分的授權 \(包含 [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] 隨附應用程式和 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 所提供字型的授權\)，都不允許將字型內嵌在應用程式中或是以其他方式轉散發。  因此，身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權利。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="introduction_to_packaging_fonts"></a>   
 ## 封裝字型簡介  

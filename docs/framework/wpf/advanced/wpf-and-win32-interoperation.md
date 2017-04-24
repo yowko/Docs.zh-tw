@@ -24,7 +24,7 @@ caps.handback.revision: 25
 # WPF 和 Win32 互通
 此主題會提供如何讓 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 與 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼交互操作的概觀。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。  不過，如果已開發了大量的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，更有效的方式是重複使用其中部分的程式碼。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="basics"></a>   
 ## WPF 和 Win32 互通性基本概念  

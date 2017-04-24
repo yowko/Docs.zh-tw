@@ -48,13 +48,13 @@ caps.handback.revision: 41
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在組態中定義端點位址  
  若要在組態檔中定義的端點，使用[ <> \> ](http://msdn.microsoft.com/zh-tw/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
   
- [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
   
  當<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時 （亦即，當裝載應用程式會嘗試啟動服務），系統會尋找[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md)項目名稱屬性來指定 「 UE。Samples.HelloService 」。 如果[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到項目，系統會載入指定的類別，並建立使用組態檔中提供的端點定義的端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。  
   
  選擇性標頭中宣告[ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來指定組態檔中服務端點的項目範例，此指定組態檔會區分以下兩個標頭的不同：來自 http://tempuri1.org/ 的 "Gold" 用戶端和來自 http://tempuri2.org/ 的 "Standard" 用戶端。 呼叫此服務的用戶端必須有適當[ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
   
- [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
   
  如先前所示，您也可以在個別訊息上設定標頭，而不是在某個端點的所有訊息上設定標頭。 這由使用<xref:System.ServiceModel.OperationContextScope>若要將自訂標頭新增至傳出的訊息，用戶端應用程式中建立新的內容，如下列範例所示。  
   

@@ -25,7 +25,7 @@ caps.handback.revision: 19
 # 對齊、邊界和填補概觀
 <xref:System.Windows.FrameworkElement> 類別會公開數個可用來精確定位子項目的屬性。  本主題將討論四個最重要的屬性：<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、<xref:System.Windows.FrameworkElement.Margin%2A>、<xref:System.Windows.Controls.Border.Padding%2A> 和 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。  請務必了解這些屬性的作用，因為它們是控制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中之項目位置的基礎。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## 項目定位簡介  

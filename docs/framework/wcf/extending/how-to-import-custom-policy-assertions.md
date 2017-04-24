@@ -50,9 +50,9 @@ caps.handback.revision: 8
   
 1.  新增匯入工具型別的`<extensions>`項目內[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)用戶端組態檔中的項目。  
   
-     [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]
-     [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
-     [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  
+     <!-- TODO: review snippet reference [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  -->  
   
 2.  在用戶端應用程式中，使用<xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName>或<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName>解析中繼資料匯入工具會自動叫用。  
   

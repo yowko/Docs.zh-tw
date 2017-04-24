@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  <xref:System.Windows.Input.Keyboard> 類別主要與鍵盤焦點相關，而 <xref:System.Windows.Input.FocusManager> 則主要與邏輯焦點相關，但這並不是絕對的分際。  具有鍵盤焦點的項目也會具有邏輯焦點，但具有邏輯焦點的項目則不一定會具有鍵盤焦點。  這在使用 <xref:System.Windows.Input.Keyboard> 類別設定具有鍵盤焦點的項目時可明顯看出，因為它也會在項目上設定邏輯焦點。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Keyboard_Focus"></a>   
 ## 鍵盤焦點  

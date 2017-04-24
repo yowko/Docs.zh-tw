@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # 集合類型相依性屬性
 本主題提供如何實作屬性型別為集合型別之[相依性屬性](GTMT)的方針與建議模式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## 實作集合型別相依性屬性  
@@ -36,7 +36,7 @@ caps.handback.revision: 7
   
  參考下列範例：  下列範例區段顯示 `Aquarium` 類別的定義。  此類別定義集合型別相依性屬性 `AquariumObjects`，這個屬性使用具有 <xref:System.Windows.FrameworkElement> 型別條件約束的泛型 <xref:System.Collections.Generic.List%601> 型別。  在相依性屬性的 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 呼叫中，中繼資料會將預設值建立為新的泛型 <xref:System.Collections.Generic.List%601>。  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]
+ <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
  [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
 [!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
 [!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  

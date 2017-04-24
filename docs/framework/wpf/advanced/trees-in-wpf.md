@@ -23,7 +23,7 @@ caps.handback.revision: 19
 # WPF 中的樹狀結構
 在許多技術中，項目和元件都會組織成樹狀結構，開發人員可直接操作樹狀結構中的物件節點來影響應用程式的轉譯或行為。  此外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 還會使用數個樹狀結構比喻來定義程式項目之間的關係。  在大部分情形下，WPF 開發人員在概念上思考物件樹狀結構比喻時，可以使用程式碼建立應用程式或使用 XAML 定義應用程式的部分，但在進行這些作業時將會呼叫特定 API 或使用特定標記，而不是進行某些一般的物件樹狀結構管理 API，就像您在 XML DOM 中可能會使用的方式。  WPF 有公開 \(Expose\) 兩種用於提供樹狀結構比喻檢視的協助程式類別：<xref:System.Windows.LogicalTreeHelper> 和 <xref:System.Windows.Media.VisualTreeHelper>。  在 WPF 說明文件中也會使用視覺化樹狀結構和邏輯樹狀結構這兩個用語，因為這些樹狀結構在了解某些 WPF 的主要功能時是非常好用的。  本主題會定義視覺化樹狀結構和邏輯樹狀結構的代表意義、討論樹狀結構與整體物件樹狀結構概念的關聯性，並介紹 <xref:System.Windows.LogicalTreeHelper> 和 <xref:System.Windows.Media.VisualTreeHelper>。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="element_tree"></a>   
 ## WPF 中的樹狀結構  

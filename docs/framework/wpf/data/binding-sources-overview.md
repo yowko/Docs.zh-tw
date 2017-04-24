@@ -23,7 +23,7 @@ caps.handback.revision: 24
 # 繫結來源概觀
 在資料繫結中，[繫結來源](GTMT)物件是指您取得資料的來源物件。  本主題討論可以當做繫結來源的物件類型。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="binding_sources"></a>   
 ## 繫結來源類型  

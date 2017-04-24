@@ -68,7 +68,7 @@ caps.handback.revision: 15
   
  例如，請試想下列結構描述。  
   
- [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  -->  
   
  下列範例是使用 `Namespaces` 屬性，將 "http://schemas.contoso.com/carSchema" 命名空間對應至 "Contoso.Cars"。  
   
@@ -98,18 +98,18 @@ caps.handback.revision: 15
 ### <a name="import-options-choosing-collection-types"></a>匯入選項：選擇集合型別  
  XML 中有兩種特殊模式表示項目的集合：項目的清單以及兩個項目之間的關聯。 以下是字串清單的範例。  
   
- [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  -->  
   
  以下是字串和整數之間關聯的範例 (`city name` 和 `population`)。  
   
- [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  -->  
   
 > [!NOTE]
 >  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 由於並沒有方法可以區分清單和關聯，因此這類模式永遠會被視為是清單，除非結構描述中有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的特別附註。 附註會指出指定的模式表示關聯。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  一般來說，會匯入清單做為衍生自泛型清單的集合資料合約或做為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列，視結構描述是否遵循集合的標準命名樣式而定。 這更詳細地描述[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 關聯是通常被匯入做<xref:System.Collections.Generic.Dictionary%602>或衍生自目錄物件的集合資料合約。\</TKey, TValue> 例如，請試想下列結構描述。  
   
- [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  -->  
   
  其匯入如下所示 (顯示欄位而非屬性以具可讀性)。  
   

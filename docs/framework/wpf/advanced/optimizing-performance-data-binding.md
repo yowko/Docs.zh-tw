@@ -24,7 +24,7 @@ caps.handback.revision: 7
   
  本主題提供資料繫結的效能建議。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## 資料繫結參考的解析方式  

@@ -31,8 +31,8 @@ caps.handback.revision: 19
   
  <xref:System.Windows.Controls.Label> 控制項不支援自動換行。  如果您需要能夠自動換行的標籤，可以在標籤內巢狀嵌入另一個支援自動換行的項目。  下列範例顯示如何使用 <xref:System.Windows.Controls.TextBlock>，讓標籤能夠自動換行多行文字。  
   
- [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]
- [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
   
  **將便捷鍵和自動換行加入到標籤**  
   
@@ -42,8 +42,8 @@ caps.handback.revision: 19
   
  下列範例顯示如何建立具有便捷鍵並支援自動換行的 <xref:System.Windows.Controls.Label>。  為啟用自動換行，此範例設定了 <xref:System.Windows.Controls.AccessText.TextWrapping%2A> 屬性並使用底線字元指定便捷鍵   \(緊接在底線字元後面的字元就是便捷鍵\)。  
   
- [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]
- [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
   
 ## 請參閱  
  [How to: Set the Target Property of a Label](http://msdn.microsoft.com/zh-tw/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

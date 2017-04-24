@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # WPF 的 XAML 和自訂類別
 在中實作時的 XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]架構支援能夠定義自訂的類別或結構中任何[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]語言中，然後存取該類別使用 XAML 標記。  您可以在同一個標記檔內混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所定義的類型以及您的自訂類型，通常可藉由將自訂類型對應至 XAML 命名空間前置字元的方式達到此目的。  本主題討論自訂類別才能做為 XAML 項目都必須滿足的需求。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## 應用程式或組件中的自訂類別  
