@@ -59,7 +59,7 @@ caps.handback.revision: 8
          下列程式碼範例會定義名稱為 `MyResourceType` 的自訂資源類型。  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
-         [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  
+         <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  -->  
   
     3.  選擇 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的權限，或者用於自訂權限的唯一值。  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 8
          下列程式碼範例建立自訂宣告的宣告型別`http://example.org/claims/complexcustomclaim`，自訂資源類型的`MyResourceType`，與<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>右。  
   
      [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)]
-     [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  
+     <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  -->  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會示範如何使用基本資源類型和非基本資源類型建立自訂宣告。  

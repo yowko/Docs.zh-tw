@@ -26,7 +26,7 @@ caps.handback.revision: 18
 # 使用純色和漸層繪製的概觀
 本主題說明如何使用 <xref:System.Windows.Media.SolidColorBrush>、<xref:System.Windows.Media.LinearGradientBrush> 及 <xref:System.Windows.Media.RadialGradientBrush> 物件以純色、線形漸層及放射狀漸層繪製。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="solidcolor"></a>   
 ## 使用純色繪製區域  

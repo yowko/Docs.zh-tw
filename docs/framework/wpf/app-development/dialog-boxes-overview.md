@@ -38,7 +38,7 @@ caps.handback.revision: 24
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]可讓您建立數種類型的對話方塊，包括訊息方塊、 通用對話方塊，以及自訂對話方塊。 本主題將討論每個，而[對話方塊範例](http://go.microsoft.com/fwlink/?LinkID=159984)提供相符的範例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>訊息方塊  

@@ -106,7 +106,7 @@ caps.handback.revision: 16
  下列程式碼範例會顯示以命令方式設定 `WSFederationHttpBinding` 的程式碼。  
   
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)]
- [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
+ <!-- TODO: review snippet reference [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  -->  
   
 ## 請參閱  
  [聯合](../../../../docs/framework/wcf/feature-details/federation.md)   

@@ -30,7 +30,7 @@ caps.handback.revision: 35
   
  從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，在集合<xref:System.Collections.Concurrent>命名空間提供了有效率的安全執行緒作業，從多個執行緒存取集合項目。 System.Collections.Immutable 命名空間中的不可變的集合類別 ([nuget](https://www.nuget.org/packages/System.Collections.Immutable)) 是原本就是執行緒安全，因為原始集合的複本上執行作業，而且無法修改原始集合。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>常見集合功能  

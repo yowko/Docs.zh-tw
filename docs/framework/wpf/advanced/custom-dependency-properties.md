@@ -28,7 +28,7 @@ caps.handback.revision: 24
 # 自訂相依性屬性
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式開發人員和元件作者會想要建立自訂的[相依性屬性](GTMT)的原因，並描述實作步驟，以及可以加強屬性的效能、可用性和全面性的一些實作選項。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

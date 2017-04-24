@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  例如，針對前面範例中使用的 `ISampleService` 所產生的組態檔會包含下列端點資訊。  
   
- [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
+ <!-- TODO: review snippet reference [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  -->  
   
  這個組態檔會在 `<client>` 元素中指定目標端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用多個目標端點，請參閱<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=fullName>或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=fullName>建構函式。  
   

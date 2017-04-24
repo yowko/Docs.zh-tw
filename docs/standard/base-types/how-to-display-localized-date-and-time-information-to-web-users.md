@@ -83,8 +83,8 @@ caps.handback.revision: 8
 ## 範例  
  以下範例同時包含 HTML 原始檔和 ASP.NET Web Form 的程式碼，會要求使用者輸入日期和時間值。  用戶端指令碼也會將使用者要求的本地日期和時間資訊，以及使用者時區與 UTC 之間的位移寫入隱藏欄位中。  伺服器會接著剖析這項資訊，並傳回顯示使用者輸入的網頁。  此外還會利用使用者的本地時間、伺服器上的時間及 UTC，顯示使用者要求的日期和時間。  
   
- [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
- [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  
+ <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
   
  用戶端指令碼會呼叫 JavaScript `toLocaleString` 方法。  如此會產生一個字串，該字串符合使用者地區設定的格式設定慣例，這可增加在伺服器上剖析該字串的成功率。  
   

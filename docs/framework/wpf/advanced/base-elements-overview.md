@@ -21,7 +21,7 @@ caps.handback.revision: 18
 # 基底項目概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的類別大多都是衍生自 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文件中通稱為基底項目類別的四個類別。  這些類別包括 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>、<xref:System.Windows.ContentElement> 和 <xref:System.Windows.FrameworkContentElement>。  <xref:System.Windows.DependencyObject> 類別也有關聯，因為它是 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 兩者的通用基底類別。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="base_apis"></a>   
 ## WPF 類別中的基底項目 API  

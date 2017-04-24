@@ -25,7 +25,11 @@ ms.lasthandoff: 04/08/2017
 # <a name="controls"></a>控制項
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 隨附許多幾乎在每個 Windows 應用程式中都使用的常見 UI 元件，例如              <xref:System.Windows.Controls.Button>、              <xref:System.Windows.Controls.Label>、              <xref:System.Windows.Controls.TextBox>、              <xref:System.Windows.Controls.Menu> 及              <xref:System.Windows.Controls.ListBox>。 在過去，這些物件是稱為控制項。 雖然              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK 繼續使用「控制項」一詞來泛指任何在應用程式中代表可見物件的類別，但請務必注意，一個類別並不需要從              <xref:System.Windows.Controls.Control> 類別繼承，即可顯示出來。 從              <xref:System.Windows.Controls.Control> 類別繼承的類別會包含              <xref:System.Windows.Controls.ControlTemplate>，可讓控制項的取用者不須建立新的子類別，即可完全變更控制項的外觀。  本主題討論控制項 (同時包括從              <xref:System.Windows.Controls.Control> 類別繼承及不從該類別繼承的控制項) 在              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的常見使用方式。  
   
+<<<<<<< HEAD
  
+=======
+   
+>>>>>>> 3f8246b... fix build errors
   
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>建立控制項的執行個體  

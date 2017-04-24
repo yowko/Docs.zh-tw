@@ -110,7 +110,7 @@ caps.handback.revision: 73
   
 1.  建立<xref:System.Windows.Media.Animation.Storyboard>並將動畫加入做為其子系。 下圖顯示如何建立<xref:System.Windows.Media.Animation.Storyboard>在 XAML 中。  
   
-     [!code-xml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]  
+     <!-- TODO: review snippet reference [!code-xml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]  -->  
   
      若要建立<xref:System.Windows.Media.Animation.Storyboard>在程式碼中，宣告<xref:System.Windows.Media.Animation.Storyboard>類別層級變數。  
   

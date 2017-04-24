@@ -25,7 +25,7 @@ caps.handback.revision: 16
   
  本主題將回顧幾種常見的附註類型 \(特別是自黏便箋和醒目提示\)，並說明 [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 如何透過 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 文件檢視控制項，在應用程式中使用這幾種附註類型。  支援附註的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 文件檢視控制項包括 <xref:System.Windows.Controls.FlowDocumentReader> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>，以及衍生自 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 的控制項，例如 <xref:System.Windows.Controls.DocumentViewer> 和 <xref:System.Windows.Controls.FlowDocumentPageViewer>。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="caf1_type_stickynotes"></a>   
 ## 自黏便箋  

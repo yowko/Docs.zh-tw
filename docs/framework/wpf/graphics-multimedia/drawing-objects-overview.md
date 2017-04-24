@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # 繪圖物件概觀
 本主題將介紹 <xref:System.Windows.Media.Drawing> 物件，並描述如何使用這些物件有效地繪製圖案、點陣圖、文字和媒體。  當您建立美工圖案、用 <xref:System.Windows.Media.DrawingBrush> 繪圖，或使用 <xref:System.Windows.Media.Visual> 物件時，請使用 <xref:System.Windows.Media.Drawing> 物件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatisadrawingsection"></a>   
 ## 什麼是繪圖物件？  

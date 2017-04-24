@@ -25,7 +25,7 @@ caps.handback.revision: 11
 # 最佳化效能：物件行為
 了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件的內建行為可以協助您在功能與效能之間做正確的取捨。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Not_Removing_Event_Handlers"></a>   
 ## 不移除物件的事件處理常式可以保持物件持續運作  

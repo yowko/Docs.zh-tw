@@ -27,7 +27,7 @@ A<xref:System.Windows.Controls.Primitives.Popup>控制項會漂浮在應用程�
 > [!NOTE]
 >  <xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ContextMenu>類別也定義這五個屬性，並具有類似的行為。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>定位快顯視窗  

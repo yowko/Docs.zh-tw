@@ -23,7 +23,7 @@ caps.handback.revision: 25
 # GridView 概觀
 <xref:System.Windows.Controls.GridView> 檢視模式是 <xref:System.Windows.Controls.ListView> 控制項的其中一種檢視模式。  <xref:System.Windows.Controls.GridView> 類別及其支援類別可以讓您和使用者在資料表中檢視項目集合；資料表會通常使用按鈕做為互動資料行行首。  本主題簡介 <xref:System.Windows.Controls.GridView> 類別並概述其用法。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## 什麼是 GridView 檢視  

@@ -26,7 +26,7 @@ caps.handback.revision: 34
   
  當地語系化是指針對應用程式支援的特定文化特性，將應用程式資源轉譯成當地語系化的版本。  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中進行當地語系化時，您可以使用 <xref:System.Windows.Markup.Localizer> 命名空間中的 API。這些 API 是 [LocBaml 工具範例](http://go.microsoft.com/fwlink/?LinkID=160016)命令列工具背後的動力。  如需如何建置 \(Build\) 及使用 LocBaml 的詳細資訊，請參閱 [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## WPF 全球化和當地語系化的最佳做法  
  您可以遵照本節提供的 UI 設計與當地語系化相關秘訣，充分利用已內建在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的全球化和當地語系化功能。  
