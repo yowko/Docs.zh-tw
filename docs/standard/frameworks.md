@@ -23,9 +23,9 @@ ms.lasthandoff: 03/02/2017
 
 ## <a name="framework-versions"></a>架構版本
 
-下表定義一組您可以使用的架構、其參考方式，以及其實作的 [.NET 標準程式庫](library.md)版本。
+下表定義一組您可以使用的架構、其參考方式，以及其實作的 [.NET Standard 程式庫](library.md)版本。
 
-| 架構 | 最新的版本 | 目標 Framework Moniker (TFM) | Compact 目標 Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
+| 架構 | 最新的版本 | Target Framework Moniker (TFM) | Compact Target Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
 |:--------: | :--: | :--: | :--: | :--: | :--: | :--: |
 | .NET Standard | 1.6 | .NETStandard,Version=1.6 | netstandard1.6 | N/A | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)|
 | .NET Core 應用程式 | 1.0.1 | .NETCoreApp,Version=1.0 | netcoreapp1.0 | 1.6 | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App)|
