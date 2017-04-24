@@ -48,7 +48,7 @@ caps.handback.revision: 19
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ 的詳細資訊，請參閱[Message Queuing \(MSMQ\)](http://msdn.microsoft.com/zh-tw/ff917e87-05d5-478f-9430-0f560675ece1)。  
   
 ### NetMsmqBinding  
- [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) [!INCLUDE[indigo2 是]()] [!INCLUDE[indigo2 為兩個]()] 端點提供的佇列繫結，以便使用 MSMQ 進行通訊。  因此，繫結會公開特定用於 MSMQ 的屬性。  不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。  精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
+ [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) <!-- TODO: review token reference in CAPS [!INCLUDE[indigo2 是]()] [!INCLUDE[indigo2 為兩個]()]  --> 端點提供的佇列繫結，以便使用 MSMQ 進行通訊。  因此，繫結會公開特定用於 MSMQ 的屬性。  不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。  精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
   
  `NetMsmqBinding` 闡述了到目前為止以繫結屬性為形式討論的核心佇列概念。  這些屬性接著會向 MSMQ 傳達傳輸及傳送訊息的方式。  下列章節討論屬性分類。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]更完整說明特定屬性的概念主題。  
   
