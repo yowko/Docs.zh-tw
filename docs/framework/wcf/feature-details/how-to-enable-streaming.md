@@ -52,7 +52,7 @@ caps.handback.revision: 13
   
     1.  範例中的下列組態片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
-         [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  
+         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
   
     2.  下列程式碼片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   

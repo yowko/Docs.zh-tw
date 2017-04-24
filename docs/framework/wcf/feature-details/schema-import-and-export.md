@@ -53,7 +53,7 @@ caps.handback.revision: 14
   
  例如，下列結構描述片段無法使用預設的匯入設定來進行匯入。  
   
- [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  -->  
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果結構描述不符合資料合約規則，請使用不同的序列化引擎。 例如， <xref:System.Xml.Serialization.XmlSerializer>會使用自己的另一個結構描述匯入機制。 另外，還有一種可用來擴充受支援結構描述之範圍的特殊匯入模式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]產生的小節<xref:System.Xml.Serialization.IXmlSerializable>中的型別[匯入結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   

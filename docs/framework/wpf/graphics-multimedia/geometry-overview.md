@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # 幾何概觀
 本概觀會說明如何使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 類別描述圖案。  本主題也會比較 <xref:System.Windows.Media.Geometry> 物件與 <xref:System.Windows.Shapes.Shape> 項目之間的差異。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## 什麼是 Geometry？  

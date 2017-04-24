@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  本主題會逐步說明裝載 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 清單方塊控制項的應用程式[在 WPF 中裝載 Win32 ListBox 控制項範例](http://go.microsoft.com/fwlink/?LinkID=159998) \(英文\)。  您可延伸應用這個通用程序，以裝載任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## 需求  

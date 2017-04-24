@@ -35,7 +35,7 @@ caps.handback.revision: 23
 # 標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸的概念，包括其語法規則、目的以及類別物件模型基礎。  標記延伸是 XAML 語言和 .NET XAML 服務實作的一般功能。  本主題專門說明在 WPF XAML 中使用的標記延伸。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## XAML 處理器和標記延伸  

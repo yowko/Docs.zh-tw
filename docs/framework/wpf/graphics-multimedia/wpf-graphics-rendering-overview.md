@@ -22,7 +22,7 @@ caps.handback.revision: 48
 # WPF 圖形轉譯概觀
 本主題將概要說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層。  並著重於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模型中轉譯支援的 <xref:System.Windows.Media.Visual> 類別角色。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="role_of_visual_object"></a>   
 ## 視覺物件的角色  

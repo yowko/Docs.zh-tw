@@ -27,7 +27,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供數個圖形和呈現服務的存取層級。  在最上層，<xref:System.Windows.Shapes.Shape> 物件十分容易使用，而且提供許多可用功能 \(如配置和參與 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 事件系統\)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="shapes"></a>   
 ## 圖案物件  

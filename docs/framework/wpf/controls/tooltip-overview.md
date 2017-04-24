@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # 工具提示概觀
 工具提示是一個小型快顯視窗，會在使用者將滑鼠指標暫停在某個項目 \(如 <xref:System.Windows.Controls.Button>\) 上時出現。  本主題將介紹工具提示，並說明如何建立和自訂工具提示內容。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_tooltip"></a>   
 ## 什麼是工具提示？  

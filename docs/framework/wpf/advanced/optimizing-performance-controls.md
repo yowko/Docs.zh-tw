@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # 最佳化效能：控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含大部分 Windows 應用程式所使用的許多常見使用者介面 \(UI\) 元件。  本主題包含用於改善 UI 效能的技術。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Displaying"></a>   
 ## 顯示大量資料集  

@@ -35,7 +35,7 @@ caps.handback.revision: 26
   
  本主題的其餘部分會針對每一層安全性功能當中，與 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 特別有關的功能進行討論。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Operating_System_Security"></a>   
 ## 作業系統安全性  

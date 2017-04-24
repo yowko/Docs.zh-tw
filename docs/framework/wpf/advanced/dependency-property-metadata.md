@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # 相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統包含中繼資料報告系統，其針對屬性所報告的內容比透過反映 \(Reflection\) 或一般 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性報告的還多。  [相依性屬性](GTMT)的中繼資料也可由定義[相依性屬性](GTMT)的類別唯一指派，也可在[相依性屬性](GTMT)加入到不同類別時變更，而且從定義的基底類別繼承[相依性屬性](GTMT)的所有衍生類別都可以明確加以覆寫。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

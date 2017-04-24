@@ -49,7 +49,7 @@ caps.handback.revision: 11
   
 4.  Svcutil.exe 也會產生使用用戶端組態<xref:System.ServiceModel.BasicHttpBinding>類別。 使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 時，將這個檔案命名為 App.config。 請注意，服務的實作內部並未指定位址和繫結資訊。 同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。  
   
-     [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  -->  
   
 5.  在應用程式內建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。  
   

@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
  本主題摘要說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項和類似控制項的類型所適用的內容模型。  內容模型描述控制項中可使用的內容。本主題同時列出每一個內容模型的內容屬性。  內容屬性是一種用於儲存物件內容的屬性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## 包含任意內容的類別  

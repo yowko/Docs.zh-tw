@@ -31,7 +31,7 @@ caps.handback.revision: 29
 > [!NOTE]
 >  我們非常不建議您在 Windows 服務中使用 WPF 型別。  如果您嘗試在 Windows 服務中使用 WPF 型別，服務可能無法如預期般運作。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## WPF 4 圖形和多媒體的新功能  

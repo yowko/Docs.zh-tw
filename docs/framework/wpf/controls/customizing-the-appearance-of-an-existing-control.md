@@ -36,7 +36,7 @@ caps.handback.revision: 11
  ![具有紅色外框的按鈕。](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
 使用自訂控制項樣板且上方有滑鼠指標的按鈕  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

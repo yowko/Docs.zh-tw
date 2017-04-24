@@ -22,7 +22,7 @@ caps.handback.revision: 14
 # 當地語系化屬性和註解
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性 \(Property\)，由開發人員提供做為當地語系化的規則及提示之用。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊：可當地語系化屬性 \(Attribute\) 和自由格式的當地語系化註解。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 會使用可當地語系化屬性 \(Attribute\) 指出要當地語系化的資源。  自由格式註解則可以是應用程式作者想要包含的任何資訊。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Localizer_Comments_"></a>   
 ## 當地語系化註解  

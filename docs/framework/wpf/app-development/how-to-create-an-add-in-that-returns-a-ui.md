@@ -36,7 +36,7 @@ caps.handback.revision: 5
 ## 範例  
  若要建立傳回 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的增益集，每個管線區段、增益集和主應用程式都需要特定的程式碼。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Contract"></a>   
 ## 實作合約管線區段  

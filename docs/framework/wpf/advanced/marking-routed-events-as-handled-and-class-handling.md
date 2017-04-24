@@ -34,7 +34,7 @@ caps.handback.revision: 18
 # 將路由事件標記為已處理以及類別處理
 路由事件的處理常式可以在事件資料內將事件標記為已處理。  處理事件將有效縮短路由。  類別處理是路由事件支援的一種程式設計概念。  類別處理常式有機會在叫用類別的任何執行個體處理常式之前，在類別層級處理特定的路由事件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

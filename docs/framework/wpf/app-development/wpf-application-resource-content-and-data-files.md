@@ -43,7 +43,7 @@ caps.handback.revision: 21
   
  本主題說明如何設定及使用應用程式資料檔案。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resource_Files"></a>   
 ## 資源檔  

@@ -30,8 +30,8 @@ caps.handback.revision: 12
   
  您可以使用 <xref:System.Windows.Data.XmlNamespaceMapping> 項目將命名空間對應至 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>，如同下列範例所示。  然後可以使用 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 參考 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空間。  這個範例中的 <xref:System.Windows.Controls.ListBox> 會顯示每個 *item* 的 *title* 和 *dc:date*。  
   
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]  -->
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  -->  
   
  請注意，您指定的 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 不需要符合 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 來源中使用的前置字元，如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 來源中的前置字元變更，您的對應仍然有效。  
   

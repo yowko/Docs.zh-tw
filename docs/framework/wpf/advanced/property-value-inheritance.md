@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # 屬性值繼承
 屬性值繼承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的功能。  屬性值繼承可以讓項目樹狀結構中的子項目從父項目取得特定屬性的值，繼承的值就如同在最近的父項目上設定的值。  而父項目也可能是透過屬性值繼承而取得值的，所以系統很可能會一路遞迴到頁面根項目。  屬性值繼承並不是預設的屬性系統行為，屬性必須使用特定的中繼資料設定來建立，才能讓該屬性啟始子項目的屬性值繼承。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## 屬性值繼承是內含項目繼承  

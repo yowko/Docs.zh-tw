@@ -97,7 +97,7 @@ caps.handback.revision: 25
   
 4.  使用用戶端組態<xref:System.ServiceModel.NetTcpBinding>也會透過 Svcutil.exe 所產生。 使用 Visual Studio 時，此檔案應該命名為 App.config。  
   
-     [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
   
 5.  在應用程式中建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。  
   

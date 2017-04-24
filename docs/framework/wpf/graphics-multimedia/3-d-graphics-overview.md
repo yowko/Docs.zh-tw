@@ -22,7 +22,7 @@ caps.handback.revision: 20
 # 立體圖形概觀
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]功能可讓開發人員以標記和程序性程式碼繪製、轉換立體圖形，以及建立立體圖形的動畫。  開發人員可以結合 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]圖形建立出豐富的控制項、提供複雜的資料示範，或增強使用者對應用程式介面的體驗。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]支援並不是設計來做為全功能的遊戲開發平台。本主題概要說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統中的[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]功能。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="threed_in_2d"></a>   
 ## 2\-D 容器中的立體  

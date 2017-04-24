@@ -38,7 +38,7 @@ caps.handback.revision: 32
   
  不論如何良好的架構設計，不過，沒有[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]framework 曾經可以提供每種問題的單一執行緒的解決方案。              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是關閉的但仍有多個執行緒，改善的情況下[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]回應能力或應用程式的效能。 討論過一些背景資料之後, 本文將進一步說明這些情況下，並討論一些較低層級詳細資料的目的。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 > [!NOTE]
 >  本主題討論使用執行緒<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>非同步呼叫的方法。 您也可以藉由呼叫來進行非同步呼叫<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法，採取<xref:System.Action>或<xref:System.Func%601>做為參數。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>方法會傳回<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，其具有<xref:System.Windows.Threading.DispatcherOperation.Task%2A>屬性。 您可以使用`await`關鍵字使用<xref:System.Windows.Threading.DispatcherOperation>或相關聯<xref:System.Threading.Tasks.Task>。 如果您需要同步等候<xref:System.Threading.Tasks.Task>所傳回的<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，呼叫<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>擴充方法。  呼叫<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName>會造成死結。 如需有關使用<xref:System.Threading.Tasks.Task>執行非同步作業，請參閱工作平行處理原則。  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法也會有多載會接受<xref:System.Action>或<xref:System.Func%601>做為參數。  您可以使用<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法來進行同步呼叫的委派，傳入<xref:System.Action>或<xref:System.Func%601>。  

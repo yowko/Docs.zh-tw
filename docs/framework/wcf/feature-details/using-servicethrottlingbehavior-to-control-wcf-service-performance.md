@@ -28,7 +28,7 @@ caps.handback.revision: 8
   
  下列程式碼範例示範使用<xref:System.ServiceModel.Description.ServiceThrottlingBehavior>類別從應用程式組態檔設定<xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>， <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>，和<xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>屬性設為 1 簡單。 至於特定應用程式的最佳設定，則需要透過實際經驗來判斷。  
   
- [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  
+ <!-- TODO: review snippet reference [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  -->  
   
  確切的執行階段行為的值取決於<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>和<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>屬性，以控制多少訊息可在執行的作業以及服務的存留期<xref:System.ServiceModel.InstanceContext>相對於傳入通道工作階段，分別。  
   
