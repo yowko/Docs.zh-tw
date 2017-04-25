@@ -39,11 +39,7 @@ ms.lasthandoff: 04/08/2017
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作多項服務，以建置這組應用程式。 本主題提供這些服務的概觀，並說明何處可以找到更多資訊。  
   
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> 3f8246b... fix build errors
   
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>應用程式管理  
