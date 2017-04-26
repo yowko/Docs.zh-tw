@@ -19,7 +19,7 @@ ms.lasthandoff: 04/10/2017
 
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
-.NET Core 命令列介面 (CLI) 是新的跨平台工具鏈，適用於開發 .NET 應用程式。 CLI 是整合式開發環境 (IDE)、編輯器和建置 Orchestrator 等高層級工具所依靠的基礎。
+.NET Core 命令列介面 (Command-Line Interface, CLI) 是新的跨平台工具鏈，適用於開發 .NET 應用程式。 CLI 是整合式開發環境 (IDE)、編輯器和建置 Orchestrator 等高層級工具所依靠的基礎。
 
 ## <a name="installation"></a>安裝
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/10/2017
 * 原生安裝程式主要用於開發人員的電腦，並且使用每個受支援平台的原生安裝機制，例如 Ubuntu 上的 DEB 套件，或 Windows 上的 MSI 套件組合。 這些安裝程式安裝及設定的環境可供開發人員立即使用，但他們會需要電腦的系統管理權限。 您可以檢視 [.NET Core 安裝指南 (英文)](https://aka.ms/dotnetcoregs) 上的安裝指示。
 * 殼層指令碼主要用於設定組建伺服器，或者當您想要安裝工具，但沒有系統管理權限時也可以使用。 安裝指令碼不會在電腦上安裝必要的項目，所以您必須手動安裝這些項目。 如需詳細資訊，請參閱[安裝指令碼參考主題](dotnet-install-script.md)。 如需如何在持續整合 (CI) 組建伺服器上設定 CLI 的詳細資訊，請參閱[在持續整合 (CI) 中使用 .NET Core SDK 和工具](using-ci-with-cli.md)。
 
-根據預設，CLI 會以並存 (SxS) 的形式安裝，因此一部電腦上可以同時存在多個版本的 CLI 工具。 [驅動子](#driver)一節詳細說明如何在已安裝多個版本的電腦上判斷所使用的版本。
+根據預設，CLI 會以並存 (Side-By-Side, SxS) 的形式安裝，因此一部電腦上可以同時存在多個版本的 CLI 工具。 [驅動器](#driver)一節詳細說明如何在已安裝多個版本的電腦上判斷所使用的版本。
 
 ## <a name="cli-commands"></a>CLI 命令
 
@@ -68,7 +68,7 @@ CLI 採用擴充性模型，可讓您為專案指定額外工具。 如需詳細
 
 ## <a name="command-structure"></a>命令結構
 
-CLI 命令結構的組成要素有[驅動子 ("dotnet")](#driver)、[命令 (或「動詞」)](#command-verb)，以及可能的命令[引數](#arguments)和[選項](#options)。 您可以在大部分的 CLI 作業中看到此模式，例如從名稱為 *my_app* 的目錄執行以下命令，以建立新的主控台應用程式並從命令列執行它：
+CLI 命令結構的組成要素有[驅動器 ("dotnet")](#driver)、[命令 (或「動詞」)](#command-verb)，以及可能的命令[引數](#arguments)和[選項](#options)。 您可以在大部分的 CLI 作業中看到此模式，例如從名稱為 *my_app* 的目錄執行以下命令，以建立新的主控台應用程式並從命令列執行它：
 
 ```console
 dotnet new console
@@ -77,13 +77,13 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-### <a name="driver"></a>驅動子
+### <a name="driver"></a>驅動器
 
-驅動子的名稱是 [dotnet](dotnet.md)，且有兩個責任：執行[相依於架構的應用程式](../deploying/index.md)或執行命令。 唯獨啟動應用程式時會不搭配命令使用 `dotnet`。
+驅動器的名稱是 [dotnet](dotnet.md)，且有兩個責任：執行[相依於架構的應用程式](../deploying/index.md)或執行命令。 唯獨啟動應用程式時會不搭配命令使用 `dotnet`。
 
-若要執行相依於架構的應用程式，請在驅動子之後指定應用程式，例如 `dotnet /path/to/my_app.dll`。 從應用程式的 DLL 所在的資料夾執行該命令時，只要執行 `dotnet my_app.dll` 即可。
+若要執行相依於架構的應用程式，請在驅動器之後指定應用程式，例如 `dotnet /path/to/my_app.dll`。 從應用程式的 DLL 所在的資料夾執行該命令時，只要執行 `dotnet my_app.dll` 即可。
 
-當您提供命令給驅動子時，`dotnet.exe` 會啟動 CLI 命令執行程序。 首先，驅動子會決定要使用之工具的版本。 如果命令選項中未指定版本，則驅動子會使用可用的最新版本。 若要指定已安裝之最新版本以外的版本，請使用 `--fx-version <VERSION>` 選項 (請參閱 [dotnet 命令](dotnet.md)參考)。 決定 SDK 版本之後，驅動子會執行命令。
+當您提供命令給驅動器時，`dotnet.exe` 會啟動 CLI 命令執行程序。 首先，驅動器會決定要使用之工具的版本。 如果命令選項中未指定版本，則驅動器會使用可用的最新版本。 若要指定已安裝之最新版本以外的版本，請使用 `--fx-version <VERSION>` 選項 (請參閱 [dotnet 命令](dotnet.md)參考)。 決定 SDK 版本之後，驅動器會執行命令。
 
 ### <a name="command-verb"></a>命令 (「動詞」)
 

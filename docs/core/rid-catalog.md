@@ -19,9 +19,9 @@ ms.lasthandoff: 03/02/2017
 # <a name="net-core-runtime-identifier-rid-catalog"></a>.NET Core 執行階段識別項 (RID) 目錄
 
 ## <a name="what-are-rids"></a>什麼是 RID？
-RID 是*執行階段識別項*的縮寫。 RID 可用來識別執行應用程式或資產 (亦即組件) 的目標作業系統。 它們看起來類似："ubuntu.14.04-x64"、"win7-x64"、"osx.10.11-x64"。 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。 
+RID 是*執行階段識別項*(Runtime IDentifier)的縮寫。 RID 可用來識別執行應用程式或資產 (亦即組件) 的目標作業系統。 它們看起來類似："ubuntu.14.04-x64"、"win7-x64"、"osx.10.11-x64"。 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。 
 
-請務必注意，RID 是不透明的字串。 這表示它們必須完全相符，使用這些項目的作業才能正常運作。 舉例來說，讓我們來看看[基礎作業系統](https://elementary.io/)的案例，這個作業系統是 Ubuntu 14.04 的直接複製品。 雖然 .NET Core 和 CLI 可在該版本的 Ubuntu 上運作，但如果您不經任何修改就嘗試在基礎作業系統中加以使用，任何套件的還原作業將會失敗。 這是因為我們目前沒有任何 RID 指定將基礎作業系統做為平台。 
+請務必注意，RID 是不透明的字串。 這表示它們必須完全相符，使用這些項目的作業才能正常運作。 舉例來說，讓我們來看看[基礎作業系統](https://elementary.io/)的案例，這個作業系統是 Ubuntu 14.04 的直接複製品。 雖然 .NET Core 和 CLI 可在該版本的 Ubuntu 上運作，但如果您不經任何修改就嘗試在基礎作業系統中加以使用，任何套件的還原作業將會失敗。 這是因為我們目前沒有任何 RID 指定將基礎作業系統做為平台。
 
 代表具體作業系統的 RID 通常遵循 `[os].[version]-[arch]` 這個模式，其中：
 - `ubuntu` 是作業系統 Moniker，例如 `[os]`。
@@ -29,7 +29,7 @@ RID 是*執行階段識別項*的縮寫。 RID 可用來識別執行應用程式
   - 此項目**不應為**行銷版本，因為行銷版本通常代表多個作業系統個別版本，且搭配不同平台 API 介面區。
 - `[arch]` 是處理器架構，例如 `x86`、`x64`、`arm`、`arm64` 等。
 
-`Microsoft.NETCore.Platforms` 套件的 `runtime.json` 檔案中有定義 RID 圖形，您可以在 [CoreFX 存放庫](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json)中看到這個檔案。 使用此檔案時，您會發現部分 RID 當中有 `"#import"` 陳述式。 這些陳述式是相容性陳述式。 這表示如果某個 RID 包含匯入的 RID，它就可能是該 RID 還原套件的目標。 聽起來有點令人困惑，讓我們來看看範例。 舉 macOS 來說：
+`Microsoft.NETCore.Platforms` 套件的 `runtime.json` 檔案中有定義 RID 圖表，您可以在 [CoreFX 存放庫](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json)中看到這個檔案。 使用此檔案時，您會發現部分 RID 當中有 `"#import"` 陳述式。 這些陳述式是相容性陳述式。 這表示如果某個 RID 包含匯入的 RID，它就可能是該 RID 還原套件的目標。 聽起來有點令人困惑，讓我們來看看範例。 舉 macOS 來說：
 
 ```json
 "osx.10.11-x64": {
@@ -38,7 +38,7 @@ RID 是*執行階段識別項*的縮寫。 RID 可用來識別執行應用程式
 ```
 上述 RID 指定 `osx.10.11-x64` 匯入 `osx.10.10-x64`。 這表示，如果套件指定在 `osx.10.11-x64` 上需具備 `osx.10.10-x64`，則在還原套件時 NuGet 可順利還原這些套件。
 
-稍大的 RID 圖形範例：  
+稍大的 RID 圖表範例：  
 
 - `win10-arm`
   - `win10`
