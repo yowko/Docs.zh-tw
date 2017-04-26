@@ -3,7 +3,6 @@ title: "在 Docker 中執行主控台應用程式"
 description: "了解如何擷取現有的 .NET Framework 主控台應用程式並在 Windows Docker 容器中執行。"
 author: spboyer
 keywords: ".NET, 容器, 主控台, 應用程式"
-manager: wpickett
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework-4.6
@@ -11,8 +10,9 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: fd610bdba56679dd522149d8e91dc91858c7f7ed
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: fd610bdba56679dd522149d8e91dc91858c7f7ed
 
 除了答案之外，也已將 `Environment.MachineName` 加入回應，以顯示在本機執行應用程式與在 Windows 容器中執行應用程式之間的差異。 在本機執行應用程式時，應該傳回您的本機電腦名稱；在 Windows 容器中執行時，則會傳回容器的工作階段識別碼。
 
-完整範例可在 [GitHub 上的 dotnet/core-docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)取得。
+[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 儲存機制取得。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 您必須先熟悉一些 Docker 術語，才能開始將應用程式移至容器的工作。
 
@@ -51,7 +51,7 @@ Docker 映像的一個重要特性是這些映像會從基礎映像組成。 每
 Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-us/software-download/windows10/)或 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) 的支援。
 
 > [!NOTE]
->如果您使用 Windows Server 2016，您必須手動啟用容器，因為 Docker for Windows 安裝程式不會啟用此功能。 請務必對作業系統執行所有更新，然後遵循[容器主機部署](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment)一文中的指示來安裝容器和 Docker 功能。
+>如果您使用 Windows Server 2016，您必須手動啟用容器，因為 Docker for Windows 安裝程式不會啟用此功能。 請務必對作業系統執行所有更新，然後遵循[容器主機部署](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment)一文中的指示來安裝容器和 Docker 功能。
 
 您需要有 Docker for Windows 1.12 Beta 26 版或更高版本，才能支援 Windows 容器。 Docker 預設會啟用 Linux 容器；請以滑鼠右鍵按一下系統匣中的 Docker 圖示，然後選取 [切換至 Windows 容器]，以切換至 Windows 容器。 Docker 將會執行變更程序，而且可能需要重新啟動。
 
@@ -60,7 +60,7 @@ Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-u
 ## <a name="building-the-application"></a>建置應用程式
 主控台應用程式通常是透過安裝程式、FTP 或檔案共用部署來散發。 部署至容器時，這些資產必須加以編譯並暫存到建立 Docker 映像時可使用的位置。
 
-在 *build.ps1* 中，指令碼會使用 [MSBuild](https://msdn.microsoft.com/en-us/library/dd393574.aspx) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
+在 *build.ps1* 中，指令碼會使用 [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
 
 在 `Invoke-MSBuild` 的呼叫中，`OutputPath` 會設定為 **publish**，而 `Configuration` 會設定為 [發行]。 
 
@@ -144,9 +144,4 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>總結
 只要加入 Dockerfile 並發行應用程式，您就可以容器化 .NET Framework 主控台應用程式，並立即利用執行多個執行個體、正常啟動和停止及更多 Windows Server 2016 功能，完全不需要對應用程式程式碼進行任何變更。
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
