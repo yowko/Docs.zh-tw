@@ -1,6 +1,6 @@
 ---
 title: "dotnet 命令 - .NET Core CLI | Microsoft Docs"
-description: "了解 dotnet 命令 (.NET Core CLI 工具的泛型驅動程式) 和其用法。"
+description: "了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。"
 keywords: "dotnet, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
@@ -21,7 +21,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="name"></a>名稱
 
-`dotnet` - 用於執行命令列命令的一般驅動程式。
+`dotnet` - 用於執行命令列命令的一般驅動器。
 
 ## <a name="synopsis"></a>概要
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>說明
 
-`dotnet` 是命令列介面 (CLI) 工具鏈的泛型驅動程式。 它會自行叫用，提供簡短的使用方式指示。
+`dotnet` 是命令列介面 (CLI) 工具鏈的通用驅動器。 它會自行叫用，提供簡短的使用方式指示。
 
 每個特定功能都是當成命令來實作。 若要使用這個功能，請在 `dotnet` 之後指定這個命令 (例如 [`dotnet build`](dotnet-build.md))。 這個命令後面的所有引數都是它自己的引數。
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 03/22/2017
 
 ### <a name="general"></a>一般
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet-build](dotnet-build.md) | 建置 .NET Core 應用程式。
 [dotnet-clean](dotnet-clean.md) | 清除建置輸出。
@@ -85,7 +85,7 @@ ms.lasthandoff: 03/22/2017
 
 ### <a name="project-references"></a>專案參考
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet-add reference](dotnet-add-reference.md) | 新增專案參考。
 [dotnet-list reference](dotnet-list-reference.md) | 列出專案參考。
@@ -93,14 +93,14 @@ ms.lasthandoff: 03/22/2017
 
 ### <a name="nuget-packages"></a>NuGet 套件
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet-add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet-remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
 ### <a name="nuget-commands"></a>NuGet 命令
 
-命令 | 函式
+命令 | 功能
 --- | ---
 [dotnet-nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet-nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
