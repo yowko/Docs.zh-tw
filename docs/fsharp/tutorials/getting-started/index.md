@@ -1,6 +1,6 @@
 ---
-title: "開始使用 F##"
-description: "開始使用 F##"
+title: "開始使用 F#"
+description: "開始使用 F#"
 keywords: "Visual F#, F#, 函式程式設計, .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -17,7 +17,7 @@ ms.lasthandoff: 04/05/2017
 
 ---
 
-# <a name="getting-started-with-f"></a>開始使用 F## #
+# <a name="getting-started-with-f"></a>開始使用 F# #
 
 開始使用 F# 的主要方法有三種：
 
