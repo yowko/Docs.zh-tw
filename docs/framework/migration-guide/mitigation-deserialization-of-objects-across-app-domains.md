@@ -1,36 +1,40 @@
 ---
-title: "緩和：在應用程式定義域之間還原序列化物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "風險降低：在應用程式定義域之間還原序列化物件 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 5
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
+ms.lasthandoff: 04/18/2017
+
 ---
-# 緩和：在應用程式定義域之間還原序列化物件
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
   
-## 診斷問題  
+## <a name="diagnosing-the-issue"></a>診斷問題  
  下面這些情況會引發問題：  
   
 1.  應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域。  
   
-2.  某些類型透過呼叫 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 這類方法明確加入至 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>。  這些類型並未標示為可序列化，而且未儲存在全域組件快取中。  
+2.  藉由呼叫 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 或 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName> 等方法，將某些類型明確加入 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 中。 這些類型並未標示為可序列化，而且未儲存在全域組件快取中。  
   
 3.  在非預設應用程式定義域中執行的程式碼之後就會嘗試從組態檔讀取值，或使用 XML 將物件還原序列化。  
   
 4.  為了要從組態檔讀取或將物件還原序列化，<xref:System.Xml.XmlReader> 物件會嘗試存取組態系統。  
   
-5.  如果組態系統尚未初始化，則必須先完成初始化。  這表示，除此之外執行階段還必須為組態系統建立穩定的路徑，它會這樣做：  
+5.  如果組態系統尚未初始化，則必須先完成初始化。 這表示，除此之外執行階段還必須為組態系統建立穩定的路徑，它會這樣做：  
   
     1.  它會尋找非預設應用程式定義域的辨識項。  
   
@@ -42,10 +46,10 @@ caps.handback.revision: 5
   
 6.  由於邏輯呼叫內容中的類型無法在預設應用程式定義域中解析，因此會擲回例外狀況。  
   
-## 緩和  
+## <a name="mitigation"></a>緩和  
  若要解決這個問題，請執行下列動作  
   
-1.  尋找擲回例外狀況時，在呼叫堆疊上的 `get_Evidence` 呼叫。  例外狀況可以是例外狀況的任一個大型子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
+1.  尋找擲回例外狀況時，在呼叫堆疊上的 `get_Evidence` 呼叫。 例外狀況可以是任一例外狀況的大型子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
   
 2.  找出應用程式中沒有任何物件加入至邏輯呼叫內容的位置，並且加入下列程式碼：  
   
@@ -53,5 +57,5 @@ caps.handback.revision: 5
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
