@@ -1,12 +1,11 @@
 ---
-title: "在 .NET Framework 中使用基底類型 | Microsoft Docs"
+title: "在 .NET 中使用基底類型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-4.6
+ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,13 +18,13 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 57d672e45e5b316f155f4bdb05320a4a6c4129db
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 9169510da6b6d5022b59a3a520b79933c783ce05
+ms.openlocfilehash: 490a09798518b3750ff5ae2fc19259f201ffc964
+ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="working-with-base-types-in-the-net-framework"></a>在 .NET Framework 中使用基底類型
-本節說明 .NET Framework 基底類型作業，包括格式化、轉換和一般作業。  
+# <a name="working-with-base-types-in-net"></a>在 .NET 中使用基底類型
+本節說明 .NET 基底類型作業，包括格式化、轉換和一般作業。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [.NET Framework 中的型別轉換](../../../docs/standard/base-types/type-conversion.md)  
