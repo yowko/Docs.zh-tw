@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 7cb3ed91b4dd80286035f8f445e7bbb43641e4e9
-ms.openlocfilehash: b0fd29de1879990dada25cd50df83f6675bf85d9
-ms.lasthandoff: 04/20/2017
+ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
+ms.openlocfilehash: 0a37c8dd2e1264d0b1b946ef9fe479ce4cf828fb
+ms.lasthandoff: 04/26/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/20/2017
 
 ## <a name="self-contained-deployments-scd"></a>自封式部署 (SCD)
 
-針對自封式部署，您需要部署自己的應用程式和所有協力廠商相依性，以及建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台上的 [.NET Core 原生相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (例如，macOS 上的 OpenSSL)，這些必須存在，才能執行應用程式。
+針對自封式部署，您需要部署自己的應用程式和所有需要的協力廠商相依性，以及建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台上的 [.NET Core 原生相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (例如，macOS 上的 OpenSSL)，這些必須存在，才能執行應用程式。
 
 ### <a name="why-deploy-a-self-contained-deployment"></a>為什麼要部署自封式部署？
 
@@ -80,3 +80,4 @@ ms.lasthandoff: 04/20/2017
 [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)   
 [套件、中繼套件和架構](../packages.md)   
 [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+
