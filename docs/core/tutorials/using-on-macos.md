@@ -32,7 +32,7 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="getting-started"></a>快速入門
 
-本教學課程中的來源位於 [GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。
+本教學課程中的原始碼來源位於 [GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。
 
 啟動 Visual Studio Code。 按 Ctrl + '\`' (後引號字元)，在 VS Code 中開啟內嵌的終端機。 (或者，您想要的話，可以使用不同的終端機視窗。)
 
@@ -70,7 +70,7 @@ dotnet sln add library/library.csproj
 </Project>
 ```
 
-此程式庫專案將會利用物件的 JSON 表示法，因此請新增 `Newtonsoft.Json` NuGet 套件的參考。 `dotnet add` 命令會新增項目至專案。 若要將參考新增至 NuGet 套件，您可以使用 `package` 命令並指定套件的名稱。 
+此程式庫專案將會利用 JSON 的物件表示法，因此請新增 `Newtonsoft.Json` NuGet 套件的參考。 `dotnet add` 命令會新增項目至專案。 若要將參考新增至 NuGet 套件，您可以使用 `package` 命令並指定套件的名稱。 
 
 ```
 dotnet add library package Newtonsoft.Json
@@ -81,14 +81,14 @@ dotnet add library package Newtonsoft.Json
 ```xml
 <ItemGroup>
   <PackageReference Include="Newtonsoft.Json">
-    <Version>9.0.1</Version>
+    <Version>10.0.1</Version>
   </PackageReference>
 </ItemGroup>
 ```
 
 完成新增這些相依性之後，您需要將這些套件安裝到工作區。 執行 `dotnet restore` 命令來更新所有相依性，並在專案目錄下撰寫 *obj/project.assets.json* 檔案。 這個檔案包含專案中所有相依性的完整相依性樹狀結構。 您不需要讀取這個檔案，它是由 .NET Core SDK 中的工具所使用。
 
-現在，讓我們更新 C# 程式碼。 讓我們建立 `Thing` 類別，其中包含一個公用的方法。 這個方法會傳回兩個數字的總和，但其作法是將該數字轉換成 JSON 字串，然後再還原序列化。 將檔案 *Class1.cs* 重新命名為 *Thing.cs*。 然後，使用下列內容取代現有的程式碼 (適用於範本產生的類別&1;)：
+現在，讓我們更新 C# 程式碼。 讓我們建立 `Thing` 類別，其中包含一個公用的方法。 這個方法會傳回兩個數字的總和，但其作法是將該數字轉換成 JSON 字串，然後再還原序列化。 將檔案 *Class1.cs* 重新命名為 *Thing.cs*。 然後，使用下列內容取代現有的程式碼 (適用於範本產生的類別)：
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;

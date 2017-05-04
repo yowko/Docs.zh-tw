@@ -169,4 +169,5 @@ Windows：
 
 macOS/Linux：
 
+
 `./dotnet-install.sh --channel preview --install-dir ~/cli`

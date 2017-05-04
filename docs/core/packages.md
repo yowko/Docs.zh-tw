@@ -149,3 +149,4 @@ ms.lasthandoff: 03/07/2017
 
 大部分由 `Microsoft.NETCore.App` 所提供的其他程式庫也會以 `netstandard` 為目標 (在其他 `netstandard` 程式庫滿足其相依性的情況下)。 這表示 `netstandard` 程式庫也可以將這些套件做為相依性參考。 
 
+
