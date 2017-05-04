@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # 文件序列化與儲存
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 提供強大的環境來建立和顯示高品質的文件。  增強的功能包括同時支援固定文件和非固定格式文件、進階檢視控制項，再加上強大的 2D 和 3D 圖形功能，可將 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 應用程式帶往更高品質和使用者經驗的全新境界。  彈性管理記憶體中的文件呈現，是 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的一項重要功能，而有效儲存和載入資料存放區中的文件則幾乎是每一項應用程式都需要的功能。  將文件從內部記憶體中呈現轉換至外部資料儲存區的程序，稱為[序列化](GTMT) \(Serialization\)。  反之，讀取資料存放區再重新建立原始記憶體中執行個體的程序，則稱為還原序列化 \(Deserialization\)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AboutSerialization"></a>   
 ## 關於文件序列化  

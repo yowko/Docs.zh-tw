@@ -21,7 +21,7 @@ caps.handback.revision: 34
 # 裝飾項概觀
 裝飾項是特殊類型的 <xref:System.Windows.FrameworkElement>，可用來為使用者提供視覺化提示。  至於其他的用途，裝飾項還可用於將功能控點加入至項目，或提供有關控制項的狀態資訊。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="about_Adorners"></a>   
 ## 關於裝飾項  

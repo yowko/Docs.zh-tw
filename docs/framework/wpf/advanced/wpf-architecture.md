@@ -54,7 +54,7 @@ caps.handback.revision: 16
 # WPF 架構
 本主題提供 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 類別階層架構的導覽，  其中涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述它們的互動方式。  同時也詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所做的一些選擇。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="System_Object"></a>   
 ## System.Object  

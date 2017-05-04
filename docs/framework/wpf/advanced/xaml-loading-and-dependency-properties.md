@@ -23,7 +23,7 @@ caps.handback.revision: 7
 # XAML 載入和相依性屬性
 目前 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作其 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器的方式在本質上可以感知相依性屬性。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在載入二進位 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 及處理本身為相依性屬性 \(Property\) 的屬性 \(Attribute\) 時，都會使用相依性屬性 \(Property\) 的屬性 \(Property\) 系統方法。  這可有效略過屬性包裝函式。  當您實作自訂相依性屬性時，必須說明這個行為，而且除了屬性系統方法 <xref:System.Windows.DependencyObject.GetValue%2A> 和 <xref:System.Windows.DependencyObject.SetValue%2A> 以外，您應該避免將其他任何程式碼放在屬性包裝函式中。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

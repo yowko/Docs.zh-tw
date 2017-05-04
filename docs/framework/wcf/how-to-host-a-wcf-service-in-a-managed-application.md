@@ -64,7 +64,7 @@ caps.handback.revision: 42
 8.  建立 <xref:System.ServiceModel.ServiceHost> 類別的執行個體，並將代表服務類型與基底位址統一資源識別元 \(URI\) 的 <xref:System.Type> 傳入 [ServiceHost\(Type, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>。啟用中繼資料發行，然後呼叫 <xref:System.ServiceModel.ServiceHost> 的 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 方法初始化服務並準備接收訊息。  
   
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
-     [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  
+     <!-- TODO: review snippet reference [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  -->  
   
     > [!NOTE]
     >  本範例將使用預設端點，所以這項服務不需要組態檔。如果沒有設定端點，執行階段就會針對服務所實作的每份服務合約，為每個基底位址各建立一個端點。[!INCLUDE[crabout](../../../includes/crabout-md.md)]預設端點的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  

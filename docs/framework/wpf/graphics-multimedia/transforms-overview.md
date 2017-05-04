@@ -29,7 +29,7 @@ caps.handback.revision: 20
 # 轉換概觀
 本主題說明如何使用 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 類別旋轉、縮放、移動 \(轉換\) 和傾斜 <xref:System.Windows.FrameworkElement> 物件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatIsATransformSection"></a>   
 ## 什麼是轉換  

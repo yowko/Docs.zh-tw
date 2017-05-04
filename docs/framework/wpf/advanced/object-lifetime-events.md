@@ -45,7 +45,7 @@ caps.handback.revision: 18
 # 物件存留期事件
 本主題說明通知物件存留期當中建立、使用和解構各階段的特定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

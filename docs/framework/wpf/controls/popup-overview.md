@@ -22,7 +22,7 @@ caps.handback.revision: 33
 # 快顯功能表概觀
 <xref:System.Windows.Controls.Primitives.Popup> 控制項提供一種方式，在目前視窗上浮動的另一個視窗 \(座標相對於指定項目或螢幕座標\) 中顯示內容。  本主題將介紹 <xref:System.Windows.Controls.Primitives.Popup> 控制項，並提供其用途的相關資訊。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="What_Is_a_Popup_"></a>   
 ## 什麼是快顯功能表  

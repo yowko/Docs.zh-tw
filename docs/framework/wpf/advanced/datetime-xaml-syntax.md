@@ -26,7 +26,7 @@ caps.handback.revision: 9
 # DateTime XAML 語法
 一些控制項，如<xref:System.Windows.Controls.Calendar>和<xref:System.Windows.Controls.DatePicker> 含有使用<xref:System.DateTime>類型的屬性。  雖然您通常可以在執行階段在後置程式碼中指定這些控制項的初始日期或時間，但您也可以在 XAML 中指定初始日期或時間。  WPF XAML 剖析器會使用內建的 XAML 文字語法處理 <xref:System.DateTime> 值的剖析。  本主題描述 <xref:System.DateTime> XAML 文字語法的細節。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## 何時使用 DateTime XAML 語法  

@@ -46,7 +46,7 @@ caps.handback.revision: 60
 > [!NOTE]
 >  由瀏覽器裝載的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式 \(包含 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 和鬆散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 頁面\) 不提供自己的視窗。  而是會裝載於 [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] 所提供的視窗中。  請參閱 [WPF XAML 瀏覽器應用程式概觀](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="TheWindowClass"></a>   
 ## Window 類別  
@@ -136,7 +136,7 @@ caps.handback.revision: 60
 ## 視窗存留期  
  如同任何的類別，視窗的存留期是在第一次具現化開始、接著歷經視窗的開啟、啟動和停用，最終會關閉。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Opening_a_Window"></a>   
 ### 開啟視窗  
@@ -414,7 +414,7 @@ caps.handback.revision: 60
   
  您也可以變更非工作區框線的外觀和行為，方法是藉由設定視窗的調整大小模式、視窗樣式，以及是否要在桌面工作列顯示為按鈕。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resize_Mode"></a>   
 ### 調整大小模式  

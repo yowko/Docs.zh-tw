@@ -46,8 +46,7 @@ ms.lasthandoff: 03/13/2017
  雖然 `string` 是參考型別，但是定義等號比較運算子 (`==` 和 `!=`) 來比較 `string` 物件的值，而不是參考。 這樣會以更直覺的方式來測試字串是否相等。 例如：  
   
 ```csharp  
-  
-      string a = "hello";  
+string a = "hello";  
 string b = "h";  
 // Append to contents of 'b'  
 b += "ello";  
@@ -60,7 +59,6 @@ Console.WriteLine((object)a == (object)b);
  + 運算子會串連字串：  
   
 ```csharp  
-  
 string a = "good " + "morning";  
 ```  
   
@@ -68,17 +66,15 @@ string a = "good " + "morning";
   
  字串是「不可變的」**；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 b。 字串 "h" 接著會適合進行記憶體回收。  
   
-```csharp  
-  
-      string b = "h";  
+```csharp
+string b = "h";  
 b += "ello";  
 ```  
   
  [] 運算子可以用於唯讀存取 `string` 的個別字元：  
   
 ```csharp  
-  
-      string str = "test";  
+string str = "test";  
 char x = str[2];  // x = 's';  
 ```  
   
@@ -91,8 +87,7 @@ char x = str[2];  // x = 's';
  字串常值可以包含任何字元常值。 包含逸出序列。 下列範例使用逸出序列 `\\` 表示反斜線、`\u0066` 表示字母 f，而 `\n` 表示新行字元。  
   
 ```  
-  
-      string a = "\\\u0066\n";  
+string a = "\\\u0066\n";  
 Console.WriteLine(a);  
 ```  
   
@@ -138,3 +133,4 @@ Console.WriteLine(a);
  [基本字串作業](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
  [建立新字串](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
  [格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+

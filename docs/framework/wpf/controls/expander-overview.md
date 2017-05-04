@@ -22,7 +22,7 @@ caps.handback.revision: 19
 # Expander 概觀
 <xref:System.Windows.Controls.Expander> 控制項這個方法可以在可展開的區域中提供內容，而這個區域類似視窗且會包含標頭。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="CreatinganExpanderinXAML"></a>   
 ## 建立簡單的 Expander  

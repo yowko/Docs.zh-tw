@@ -32,7 +32,7 @@ caps.handback.revision: 23
  <xref:System.ServiceModel.BasicHttpBinding>類別主要是用來與現有的 Web 服務互通，且這些服務有許多裝載網際網路資訊服務 (IIS)。 因此，這個繫結的傳輸安全性是設計成可用來與 IIS 站台進行流暢的互通。 這是藉由將安全性模式設定為<xref:System.ServiceModel.BasicHttpSecurityMode>並接著設定用戶端認證類型。 認證類型值會對應至 IIS 目錄安全性機制。 下列程式碼會示範所設定的模式以及設定為 Windows 的認證類型。 您可以在用戶端和伺服器都位於相同的 Windows 網域時使用這個組態。  
   
  [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)]
- [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
+ <!-- TODO: review snippet reference [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  -->  
   
  或者，使用下列組態：  
   

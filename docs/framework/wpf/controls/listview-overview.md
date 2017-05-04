@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # ListView 概觀
 <xref:System.Windows.Controls.ListView> 控制項可提供基礎結構，以在不同的版面配置或檢視顯示一組資料項目。  例如，使用者可能會想在資料表中顯示資料項目，並以資料行排序。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="WhatisaListView"></a>   
 ## 什麼是 ListView  

@@ -26,7 +26,7 @@ caps.handback.revision: 10
 # 附加事件概觀
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 會定義語言元件和稱為「*附加事件*」\(Attached Event\) 的事件類型。  附加事件的概念可以讓您將特定事件的處理常式加入到任意項目中，而非實際定義或繼承該事件的項目中。  在這種情況下，事件並非由可能引發事件的物件或是處理事件的目的執行個體所定義或擁有。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

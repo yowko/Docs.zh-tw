@@ -28,7 +28,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  對「*混合控制項*」\(Hybrid Control\) 要有特殊的考量。  混合控制項是指一種技術的控制項中有另一種技術的控制項，  這也稱為「*巢狀互通*」\(Nested Interoperation\)。  「*多層混合控制項*」\(Multilevel Hybrid Control\) 具有一個以上的混合控制項巢狀層級。  多層巢狀互通的範例是 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，而這個控制項又包含另一個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。  不支援多層混合控制項。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## 將 Windows Form 控制項裝載在 WPF 中  

@@ -28,7 +28,7 @@ caps.handback.revision: 75
   
  本主題會先討論 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結的基本概念，然後再說明 <xref:System.Windows.Data.Binding> 類別的使用方式和資料繫結的其他功能。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_data_binding"></a>   
 ## 資料繫結是什麼  
@@ -64,7 +64,7 @@ caps.handback.revision: 75
   
 <a name="basic_data_binding_concepts"></a>   
 ## 基本資料繫結概念  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  不管您的繫結項目是什麼，也不論資料來源的本質，每個繫結一定會遵循下圖所說明的模型：  
   
@@ -128,7 +128,7 @@ caps.handback.revision: 75
   
 <a name="creating_a_binding"></a>   
 ## 建立繫結  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  若要重現上面幾節所討論的一些概念，您可以使用 <xref:System.Windows.Data.Binding> 物件建立繫結，且每個繫結通常要有四個元件：繫結目標、目標屬性、繫結來源，以及要使用的來源值路徑。  本節討論如何設定繫結。  
   
@@ -220,7 +220,7 @@ caps.handback.revision: 75
   
 <a name="binding_to_collections"></a>   
 ## 繫結至集合  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  繫結來源物件可以視為其屬性包含資料的單一物件，或是通常會群組在一起的多型物件的資料集合 \(例如資料庫查詢的結果\)。  目前為止，我們只討論到單一物件的繫結，然而，繫結到資料集合是常見的案例。  舉例來說，有個常見案例是使用 <xref:System.Windows.Controls.ItemsControl> \(例如 <xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ListView> 或 <xref:System.Windows.Controls.TreeView>\) 顯示資料集合，例如[資料繫結是什麼](#what_is_data_binding)一節中的應用程式。  
   
@@ -242,7 +242,7 @@ caps.handback.revision: 75
 ### 集合檢視  
  一旦 <xref:System.Windows.Controls.ItemsControl> 繫結到資料集合，您可能會想要排序、篩選或群組資料。  若要這樣做，您可以使用集合檢視，這是實作 <xref:System.ComponentModel.ICollectionView> 介面的類別。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_are_collection_views"></a>   
 #### 集合檢視是什麼  
@@ -369,7 +369,7 @@ caps.handback.revision: 75
   
 <a name="data_validation"></a>   
 ## 資料驗證  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  大部分會採用使用者輸入的應用程式都需要驗證邏輯，以確保使用者輸入的是預期的資訊。  驗證會依據類型、範圍、格式或其他應用程式特定的需求而進行檢查。  本節討論 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的資料驗證運作方式。  
   

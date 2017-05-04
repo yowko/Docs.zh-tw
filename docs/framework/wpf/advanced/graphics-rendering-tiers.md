@@ -25,7 +25,7 @@ caps.handback.revision: 43
 # 圖形轉譯層
 轉譯層會定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的裝置所能達到的圖形硬體能力和效能等級。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="graphics_hardware"></a>   
 ## 圖形硬體  

@@ -26,7 +26,7 @@ caps.handback.revision: 25
 # 混合應用程式疑難排解
 <a name="introduction"></a> 本主題會列出撰寫同時使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術的混合應用程式時，所發生的一些常見問題。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overlapping_controls"></a>   
 ## 重疊控制項  

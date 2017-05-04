@@ -84,7 +84,7 @@ caps.handback.revision: 9
   
  在下列範例中，將會定義 <xref:System.Activities.NativeActivity> 型自訂 `ParallelForEach` 活動的 <xref:System.Activities.NativeActivity.Cancel%2A> 覆寫。當取消活動時，這個覆寫會處理該活動的取消邏輯。這個範例屬於[非泛型 ParallelForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md) 範例的一部分。  
   
- [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  
+ <!-- TODO: review snippet reference [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  -->  
   
  <xref:System.Activities.NativeActivity> 衍生活動可以檢查 <xref:System.Activities.NativeActivityContext.IsCancellationRequested%2A> 屬性來判斷是否已經要求取消，並呼叫 <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> 方法來將其本身標示為已取消。呼叫 <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> 不會立即完成活動。通常執行階段會在沒有其他待處理工作時完成此活動，但是如果呼叫 <xref:System.Activities.NativeActivityContext.MarkCanceled%2A>，最終的狀態將會是 <xref:System.Activities.ActivityInstanceState> 而不是 <xref:System.Activities.ActivityInstanceState>。  
   

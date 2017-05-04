@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
  本主題提供的文字呈現的效能建議。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>轉譯文字圖像 （glyph） 層級  

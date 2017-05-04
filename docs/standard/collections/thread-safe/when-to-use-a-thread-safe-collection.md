@@ -1,72 +1,75 @@
 ---
 title: "使用安全執行緒集合的時機 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "安全執行緒集合，升級時機"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 87898a4a6ba3d3ef4c53fd1c6b8f94ff353f10e4
+ms.lasthandoff: 04/18/2017
+
 ---
-# 使用安全執行緒集合的時機
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入了五個新的集合型別，而這些型別是特別針對支援多執行緒加入和移除作業所設計的。  為了達到執行緒安全性，這些新的型別會使用各種有效率的鎖定和無鎖定同步處理機制。  但是，同步處理會增加作業的額外負荷。  額外負荷量取決於所使用的同步處理種類、所執行的作業種類，以及其他因素，例如嘗試以並行方式存取集合的執行緒數目。  
+# <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
+[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 引進五種悉的集合類型，特別設計來支援多執行緒新增和移除作業。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
   
- 在某些案例中，同步處理額外負荷可忽略而且可讓多執行緒型別的執行速度和延展性超過其非安全執行緒對等項目 \(受到外部鎖定所保護時\)。  在其他案例中，額外負荷可能會導致安全執行緒型別的執行速度和延展性與此型別的外部鎖定且非安全執行緒版本相同，甚至更低。  
+ 在某些情況下，同步處理負荷會顯得微不足道，並且在受到外部鎖定保護時，讓多執行緒類型執行速度大幅加快，而且擴充的狀況遠優於其非安全執行緒對等項目。 在其他情況下，負荷可能會讓安全執行緒類型的執行和擴充速度等於甚於比外部鎖定之非安全執行緒版本的類型還要慢。  
   
- 下列各節將針對安全執行緒集合與其非安全執行緒對等項目 \(在其讀取和寫入作業周圍具有使用者提供的鎖定\) 的使用時機提供一般指引。  因為效能可能會根據許多因素而不同，所以指引並非特定而且不一定適用於所有情況。  如果效能非常重要，則判斷要使用哪個集合型別的最佳方式，就是根據代表性電腦組態和負載測量效能。  本文將使用下列詞彙：  
+ 下列各節所提供的一般指引是有關何時使用安全執行緒集合，與其具有使用者所提供之讀取和寫入作業鎖定的非安全執行緒對等項目。 因為效能可能會因許多因素而不同，所以本指南不是特定的，也不一定適用於所有情況。 如果效能十分重要，則決定要使用之集合類型的最佳方式是根據代表性電腦組態和負載來測量效能。 本範例使用下列詞彙：  
   
- *單純的生產者\-消費者案例*  
- 任何給定的執行緒都會加入或移除項目，但不會同時進行。  
+ *單純生產者-消費者案例*  
+ 任何指定的執行緒都是新增或移除元素，而非同時執行兩項作業。  
   
- *混合的生產者\-消費者案例*  
- 任何給定的執行緒都會同時加入和移除項目。  
+ *混合生產者-消費者案例*  
+ 任何指定的執行緒都是新增和移除元素。  
   
  *加速*  
- 在相同案例中，速度較快的演算法效能相對於另一個型別而言。  
+ 相對於相同案例中的另一種類型，具有較快速的演算法效能。  
   
- *延展性*  
- 與電腦上核心數目成正比的效能提升。  可延展的演算法在八個核心上執行的速度會超過在兩個核心上執行的速度。  
+ *擴充性*  
+ 效能會隨著電腦上的核心數目等比例地增加。 在八個核心上進行擴充之演算法的執行速度，比兩個核心還要快。  
   
-## ConcurrentQueue\(T\) vs. Queue\(T\)  
- 在單純的生產者\-消費者案例中，如果每個項目的處理時間非常少 \(少數指令\)，則 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName> 所提供的適度效能優勢可能會超過具有外部鎖定的 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>。  在這個案例中，當某個專屬執行緒正排入佇列而另一個專屬執行緒正清除佇列時，<xref:System.Collections.Concurrent.ConcurrentQueue%601> 的執行效能最好。  如果您沒有強制執行此規則，在具有多個核心的電腦上，<xref:System.Collections.Generic.Queue%601> 的執行速度可能會稍微超過 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。  
+## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 與 Queue(T) 的比較  
+ 在每個元素的處理時間都很小 (幾個指示) 的單純生產者-消費者案例中，<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName> 可以透過具有外部鎖定的 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName> 提供適度的效能優點。 在此案例中，如果一個專用執行緒正在置入佇列，而且一個專用執行緒正在移出佇列，則 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 的執行效果最好。 如果您未強制執行此規則，則 <xref:System.Collections.Generic.Queue%601> 的執行速度甚至會略高於具有多個核心之電腦上的 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。  
   
- 當處理時間大約為 500 FLOPS \(浮點運算\) 或以上時，雙執行緒規則就不會套用至 <xref:System.Collections.Concurrent.ConcurrentQueue%601>，因而具有非常好的延展性。  在這個案例中，<xref:System.Collections.Generic.Queue%601> 不會有效延展。  
+ 處理時間約 500 個 FLOPS (浮點作業) 或以上時，雙執行緒規則不適用於 <xref:System.Collections.Concurrent.ConcurrentQueue%601>，因此具有極佳的擴充性。 在此案例中，<xref:System.Collections.Generic.Queue%601> 不會加以適當調整。  
   
- 在混合的生產者\-消費者案例中，當處理時間非常少時，具有外部鎖定之 <xref:System.Collections.Generic.Queue%601> 的延展性會超過 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。  不過，當處理時間大約為 500 FLOPS 或以上時，<xref:System.Collections.Concurrent.ConcurrentQueue%601> 的延展性較佳。  
+ 在混合生產者-消費者案例中，處理時間很小時，具有外部鎖定的 <xref:System.Collections.Generic.Queue%601> 所進行的擴充優於 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。 不過，處理時間大約 500 FLOPS 或以上時，則 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 會進行較佳的擴充。  
   
-## ConcurrentStack vs. Stack  
- 在單純的生產者\-消費者案例中，當處理時間非常少時，則具有外部鎖定之<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> 和 <xref:System.Collections.Generic.Stack%601?displayProperty=fullName> 的執行效能可能會大約與單一專屬推送執行緒和單一專屬提取執行緒相同。  不過，隨著執行緒數目增加，這兩個型別的執行速度會由於爭用增加而降低，而且 <xref:System.Collections.Generic.Stack%601> 的效能可能會優於 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  當處理時間大約為 500 FLOPS 或以上時，這兩個型別的延展性大約相同。  
+## <a name="concurrentstack-vs-stack"></a>ConcurrentStack 與堆疊  
+ 在處理時間很小的單純生產者-消費者案例中，<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> 和具有外部鎖定的 <xref:System.Collections.Generic.Stack%601?displayProperty=fullName> 所執行的作業可能會與使用一個專用推送執行緒和一個專用彈出執行緒相同。 不過，執行緒數目增加時，兩種類型都會因競爭增加而變慢，而且 <xref:System.Collections.Generic.Stack%601> 的執行效果可能會優於 <xref:System.Collections.Concurrent.ConcurrentStack%601>。 處理時間大約 500 FLOPS 或以上時，兩種類型幾乎會以相同的速率進行擴充。  
   
- 在混合的生產者\-消費者案例中，不論工作負載高低，<xref:System.Collections.Concurrent.ConcurrentStack%601> 的速度都比較快。  
+ 在混合生產者-消費者案例中，針對大型和小型工作負載， <xref:System.Collections.Concurrent.ConcurrentStack%601> 較為快速。  
   
- 使用 <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> 可能會大幅加快存取速度。  
+ 使用 <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> 可能會大幅加速存取時間。  
   
-## ConcurrentDictionary vs. Dictionary  
- 一般而言，當您要以並行方式從多個執行緒加入和更新機碼或值時，請使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>。  在包含經常更新和相當少讀取的案例中，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 通常會提供適度的優勢。  在包含許多讀取和許多更新的案例中，在具有任何核心數目的電腦上，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的執行速度通常比較快。  
+## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary 與字典  
+ 一般而言，<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> 是用於同時從多個執行緒新增和更新索引鍵或值時。 在經常更新且讀取相對較少的情況下，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 一般會提供適度優點。 在進行許多讀取和更新的情況下，<xref:System.Collections.Concurrent.ConcurrentDictionary%602> 在具有任意數目之核心的電腦上明顯較快。  
   
- 在包含經常更新的案例中，您可以在 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中提高並行程度，然後進行測量，以便查看具有更多核心的電腦效能是否提升。  如果您變更並行層級，請盡可能避免進行全域作業。  
+ 在需要經常更新的情況下，您可以增加 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的並行程度，然後測量以查看具有更多核心之電腦的效能是否增加。 如果您變更並行層級，請盡可能避免全域作業。  
   
- 如果您只要讀取機碼或值，而且字典沒有被任何執行緒修改，<xref:System.Collections.Generic.Dictionary%602> 的速度比較快，因為不需要進行同步處理。  
+ 如果您只是要讀取索引鍵或值，則 <xref:System.Collections.Generic.Dictionary%602> 的速度會較快，原因是沒有任何執行緒修改字典時就不需要進行同步處理。  
   
-## ConcurrentBag  
- 在單純的生產者\-消費者案例中，<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName> 的執行速度可能會比其他並行集合型別更慢。  
+## <a name="concurrentbag"></a>ConcurrentBag  
+ 在單純生產者-消費者案例中，<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName> 的執行速度可能會比其他並行集合類型還要慢。  
   
- 在混合的生產者\-消費者案例中，不論工作負載高低，<xref:System.Collections.Concurrent.ConcurrentBag%601> 的執行速度和延展性通常會超過任何其他並行集合型別。  
+ 在混合生產者-消費者案例中，針對大型和小型工作負載，<xref:System.Collections.Concurrent.ConcurrentBag%601> 一般都會比任何其他並行集合類型更為快速也更具擴充性。  
   
-## BlockingCollection  
- 需要使用界限和封鎖語意時，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> 的執行速度可能會超過任何自訂實作。  它也支援豐富的取消、列舉和例外狀況處理。  
+## <a name="blockingcollection"></a>BlockingCollection  
+ 需要界限和封鎖語意時，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> 的執行速度可能會比任何自訂實作還要快。 它也支援大量取消、列舉和例外狀況處理。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)   
- [Parallel Programming](../../../../docs/standard/parallel-programming/index.md)
+ [Thread-Safe Collections](../../../../docs/standard/collections/thread-safe/index.md)   
+ [平行程式設計](../../../../docs/standard/parallel-programming/index.md)

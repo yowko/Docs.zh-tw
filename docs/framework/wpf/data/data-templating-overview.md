@@ -24,7 +24,7 @@ caps.handback.revision: 24
 # 資料範本化概觀
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資料範本化模型會將您提供更多的彈性來定義資料的呈現方式。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項具有內建功能來支援自訂資料的呈現。 本主題會先示範如何定義<xref:System.Windows.DataTemplate> ，則會介紹其他資料範本化功能，例如選取的範本為基礎的自訂邏輯以及支援的階層式資料的顯示。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
@@ -36,7 +36,7 @@ caps.handback.revision: 24
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>資料範本化基本概念  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  為了示範為什麼<xref:System.Windows.DataTemplate>很重要，現在就來逐一查看資料繫結範例。 在此範例中，我們<xref:System.Windows.Controls.ListBox> ，繫結至一份`Task`物件。 每個`Task`物件具有`TaskName`（字串）， `Description` （字串）、 `Priority` (int)，和型別的屬性`TaskType`，也就是`Enum`值`Home`和`Work`。  
   

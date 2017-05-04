@@ -25,7 +25,7 @@ caps.handback.revision: 16
 # 相依性屬性回呼和驗證
 本主題說明如何使用屬性相關功能 \(例如有效性驗證\) 的替代自訂實作、每次屬性有效值變更時叫用 \(Invoke\) 的回呼 \(Callback\)，以及對值決策的覆寫可能外在影響，建立相依性屬性。  這個主題也討論適合使用這些技巧來擴大預設屬性系統行為的案例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

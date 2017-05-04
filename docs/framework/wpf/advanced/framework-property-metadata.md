@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # 架構屬性中繼資料
 若系統認為物件項目的屬性位於 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [WPF 架構層級](GTMT)，便會針對這些屬性回報架構屬性中繼資料選項。  [WPF 架構層級](GTMT)的指定通常代表呈現、資料繫結和屬性系統更新這類功能，都是由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡報、[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可執行檔負責處理。  這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的功能相關特性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

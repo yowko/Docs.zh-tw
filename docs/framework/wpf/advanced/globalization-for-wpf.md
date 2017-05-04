@@ -24,7 +24,7 @@ caps.handback.revision: 31
 # WPF 的全球化
 本主題介紹當您針對全球市場撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式時應該注意的問題。  全球化程式設計項目是定義於 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 的 `System.Globalization` 中。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="xaml_globalization"></a>   
 ## XAML 全球化  

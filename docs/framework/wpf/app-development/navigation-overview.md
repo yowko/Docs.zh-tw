@@ -43,7 +43,7 @@ caps.handback.revision: 65
 > [!NOTE]
 >  本主題中的「瀏覽器」一詞僅代表可以裝載 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的瀏覽器，目前包含 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 和 Firefox。  當中特定的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能僅會受到特定瀏覽器的支援，即所指出的瀏覽器版本。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAMLBrowserApplications"></a>   
 ## 在 WPF 應用程式中巡覽  

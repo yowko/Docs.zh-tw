@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # 設計可設定樣式控制項的方針
 本文件摘要說明在設計控制項時，若希望能很容易地設定控制項的樣式並且可做成樣板，要考量的一套最佳做法。  我們是在處理內建 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，歷經許多的嘗試和錯誤，最後得出這一套最佳做法。  我們學到，成功的樣式設定不僅取決於樣式本身，還要有良好的物件模型設計。  本文件的目標對象是控制項的作者，不是樣式的作者。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Terminology"></a>   
 ## 用語  
