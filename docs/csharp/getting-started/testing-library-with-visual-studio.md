@@ -19,21 +19,21 @@ ms.lasthandoff: 03/13/2017
 
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試類別庫 #
 
-在[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio-2017.md)中，我們已建立一個將擴充方法加入 @System.String類別的簡易類別庫。 現在我們將建立單元測試，確定它如預期般運作。 我們會將我們的單元測試專案加入在上一個主題中建立的方案。
+在[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio-2017.md)中，我們已建立一個將擴充方法加入  @System.String 類別的簡易類別庫。 現在我們將建立單元測試，確定它如預期般運作。 我們會將我們的單元測試專案加入在上一個主題中建立的方案。
 
 ## <a name="creating-a-unit-test-project"></a>建立單元測試專案 ##
 
 若要建立單元測試專案，請執行下列作業︰
 
-1. 在 [方案總管] 中，開啟 **ClassLibraryProject** 方案節點的操作功能表，然後依序選擇 [加入]****、[新增專案]****。
+1. 在 **[方案總管]** 中，開啟 **ClassLibraryProject** 方案節點的操作功能表，然後依序選擇 **[加入]**、**[新增專案]**。
 
    <!-- Need a VS 2017 version  [!NOTE] In addition to a Unit Test project, you can also use Visual Studio to create an XUnit test project for .NET Core. For a walkthrough that includes an XUnit test project, see [Getting started with .NET Core on Windows, using Visual Studio 2015](../../core/tutorials/using-on-windows.md). --> 
 
-1. 在 [加入新專案]**** 對話方塊方塊中，展開 **Visual C#** 節點和 **.NET Core** 節點，然後選擇 [單元測試專案 (.NET Core)]**** 專案範本，並命名為 `StringLibraryTest`，如下圖所示。
+1. 在 **[加入新專案]** 對話方塊方塊中，展開 **Visual C#** 節點和 **.NET Core** 節點，然後選擇 **[單元測試專案 (.NET Core)]** 專案範本，並**命名**為 `StringLibraryTest`，如下圖所示。
 
    ![Image](./media/testproject.jpg)
 
-1. 選擇 [確定]**** 按鈕以建立專案。 Visual Studio 就會建立專案，並在程式碼視窗中開啟 `UnitTest1.cs` 檔案，如下圖所示。
+1. 選擇 **[確定]** 按鈕以建立專案。 Visual Studio 就會建立專案，並在程式碼視窗中開啟 `UnitTest1.cs` 檔案，如下圖所示。
 
    ![Image](./media/unit_test_code_window.jpg)
 
@@ -45,13 +45,13 @@ ms.lasthandoff: 03/13/2017
 
    - 它會套用 [ \[TestMethod\] ](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
 
-1. 在 [方案總管] 中，開啟 **StringLibraryTest** 專案的 [相依性]**** 節點的操作功能表，然後選擇 [加入參考]****。 這會在我們的類別庫專案 `StringLibrary`中加入參考。 
+1. 在 **[方案總管]** 中，開啟 **StringLibraryTest** 專案的 **[相依性]** 節點的操作功能表，然後選擇 **[加入參考]**。 這會在我們的類別庫專案 `StringLibrary` 中加入參考。 
 
-1. 在 [參考管理員]**** 對話方塊中，展開 [專案]**** 節點，選擇 [方案]****，然後選擇 **StringLibrary** 旁的核取方塊，如下圖所示。 將參考加入 `StringLibrary` 組件，可讓編譯器解析 **StringLibrary** 方法的呼叫。
+1. 在 **[參考管理員]** 對話方塊中，展開 **[專案]** 節點，選擇 **[方案]**，然後選擇 **StringLibrary** 旁的核取方塊，如下圖所示。 將參考加入 `StringLibrary` 組件，可讓編譯器解析 **StringLibrary** 方法的呼叫。
 
    ![Image](./media/add_reference.jpg)
 
-1. 按一下 [確定]**** 按鈕以關閉 [參考管理員]**** 對話方塊。
+1. 按一下 **[確定]** 按鈕以關閉 **[參考管理員]** 對話方塊。
 
 ## <a name="adding-and-running-unit-test-methods"></a>新增和執行單元測試方法 ##
 
@@ -83,15 +83,15 @@ Visual Studio 執行單元測試時，它會執行單元測試 (即套用 [\[Tes
 
    請注意，我們在 `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 alpha (U+0391) 和斯拉夫文大寫字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 alpha (U+03B1) 和斯拉夫文小寫字母 Ghe (U+0433)。
 
-1. 在功能表列上，選擇 [檔案]****、[將 UnitTest1.cs As 另存為]****。 在 [另存新檔]**** 對話方塊中，選擇 [儲存]**** 按鈕旁的箭號，然後選擇 [以編碼方式儲存]*****。
+1. 在功能表列上，選擇 **[檔案]**、**[將 UnitTest1.cs As 另存為]**。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]**。
 
-1. 在 [確認另存新檔] 對話方塊中，選擇 [是]**** 按鈕以儲存檔案。
+1. 在 **[確認另存新檔]** 對話方塊中，選擇 **[是]** 按鈕以儲存檔案。
 
-1. 從 [進階儲存選項]**** 對話方塊的 [編碼]**** 下拉式清單中選擇 [Unicode (UTF-8 有簽章) - 字碼頁 65001]****，然後選擇 [確定]****。
+1. 從 **[進階儲存選項]** 對話方塊的 **[編碼]** 下拉式清單中選擇 **[Unicode (UTF-8 有簽章) - 字碼頁 65001]**，然後選擇 **[確定]**。
 
    如果您無法將您的原始程式碼儲存為 UTF8 編碼檔案，Visual Studio 可能會將它儲存為 ASCII 檔案。 在此情況下，執行階段將無法正確解碼 ASCII 範圍之外的字元，因此測試結果將不精確。
 
-1. 在功能表列上，選擇 [測試]****、[執行]****、[所有測試]****。 [測試總管]**** 視窗應該會開啟，並顯示這兩個測試都執行成功，如下圖所示。 請注意，這三項測試都會列在 [通過的測試]**** 區段中，而 [摘要]**** 區段則報告測試回合的結果。
+1. 在功能表列上，選擇 **[測試]**、**[執行]**、**[所有測試]**。 **[測試總管]** 視窗應該會開啟，並顯示這兩個測試都執行成功，如下圖所示。 請注意，這三項測試都會列在 **[通過的測試]** 區段中，而 **[摘要]** 區段則報告測試回合的結果。
 
    ![Image](./media/first_test.jpg)
 
@@ -106,15 +106,15 @@ Visual Studio 執行單元測試時，它會執行單元測試 (即套用 [\[Tes
                       "1234", ".", ";", " " };
    ```
 
-1. 選擇 [測試]****、[執行]****、[所有測試]**** 以執行測試。 [測試總管]**** 視窗現在會指出兩項測試成功，一項測試失敗，如下圖所示。
+1. 選擇 **[測試]**、**[執行]**、**[所有測試]** 以執行測試。 **[測試總管]** 視窗現在會指出兩項測試成功，一項測試失敗，如下圖所示。
 
    ![Image](./media/failed_test.jpg)
 
-1. 在 [失敗的測試]**** 區段中選擇失敗的測試 `TestDoesNotStartWith`。 [測試總管]**** 下方的窗格會顯示判斷提示產生的訊息：「Assert.IsFalse 失敗。 預期為 'Error': false; 實際為: True」，如 [測試總管]**** 的下圖所示。 因為發生失敗，陣列中 "Error" 之後的所有字串並未經過測試。
+1. 在 **[失敗的測試]** 區段中選擇失敗的測試 `TestDoesNotStartWith`。 **[測試總管]** 下方的窗格會顯示判斷提示產生的訊息：「Assert.IsFalse 失敗。 預期為 'Error': false; 實際為: True」，如 **[測試總管]** 的下圖所示。 因為發生失敗，陣列中 "Error" 之後的所有字串並未經過測試。
 
    ![Image](./media/failed_test2.jpg)
 
-1. 移除已加入的程式碼 (`"Error", `)，然後重新執行測試。 它現在應該會傳遞。
+1. 移除已加入的程式碼 (`"Error", `)，然後重新執行測試。 它現在應該會通過。
 
 ## <a name="testing-the-release-version-of-the-library"></a>測試程式庫的發行版本 ##
 
@@ -122,13 +122,13 @@ Visual Studio 執行單元測試時，它會執行單元測試 (即套用 [\[Tes
 
 測試發行組建︰
 
-1. 在 Visual Studio 工具列中，將組建組態從 [偵錯]**** 變更為 [發行]****。 下圖顯示工具列的一部分。
+1. 在 Visual Studio 工具列中，將組建組態從 **[Debug]** 變更為 **[Release]**。 下圖顯示工具列的一部分。
 
    ![Image](./media/lib_release.jpg)
 
-1. 在 [方案總管]**** 中，開啟 **StringLibrary** 專案節點的操作功能表，然後選擇 [建置]**** 以重新編譯程式庫。
+1. 在 **[方案總管]** 中，開啟 **StringLibrary** 專案節點的操作功能表，然後選擇 **[建置]** 以重新編譯程式庫。
 
-1. 從 Visual Studio 功能表中選擇 [測試]****、[執行]****、[所有測試]**** 以重新執行單元測試。 測試應該會通過。
+1. 從 Visual Studio 功能表中選擇 **[測試]**、**[執行]**、**[所有測試]** 以重新執行單元測試。 測試應該會通過。
 
-既然您已經完成程式庫測試，下一步是將它提供給呼叫端。 您可以將它與一或多個應用程式搭售，或是將將它發佈為 NuGet 套件。 如需如何執行的詳細資訊，請參閱[使用 .NET 標準類別庫](./consuming-library-with-visual-studio-2017.md)。
+既然您已經完成程式庫測試，下一步是將它提供給呼叫端。 您可以將它與一或多個應用程式搭售，或是將將它發佈為 NuGet 套件。 如需如何執行的詳細資訊，請參閱[使用 .NET Standard 類別庫](./consuming-library-with-visual-studio-2017.md)。
 
