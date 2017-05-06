@@ -40,7 +40,7 @@
 ### [使用 dotnet test 及 MSTest 執行單元測試](core/testing/unit-testing-with-mstest.md)
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支援](core/versions/lts-current.md)
-### [🔧 服務](core/versions/servicing.md)
+<!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [執行階段識別項目錄](core/rid-catalog.md)
 ## [.NET Core CLI 工具](core/tools/index.md)
 ### [遙測](core/tools/telemetry.md)
@@ -76,7 +76,7 @@
 ### [針對 .NET Core 組織專案](core/porting/project-structure.md)
 ### [分析協力廠商相依性](core/porting/third-party-deps.md)
 ### [移植程式庫](core/porting/libraries.md)
-### [🔧 NuGet 套件](core/porting/nuget-packages.md)
+<!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [VS 2015/project.json 文件](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -130,9 +130,8 @@
 ### [C# 7 的新功能](csharp/whats-new/csharp-7.md)
 ### [C# 6 的新功能](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
-## [🔧 C# Interactive](csharp/interactive/)
+<!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
-## [C# 的概念](csharp/concepts.md)
 ### [C# 型別系統](csharp/programming-guide/types/index.md)
 ### [命名空間](csharp/programming-guide/namespaces/index.md)
 ### [基本類型](csharp/basic-types.md)
@@ -140,7 +139,7 @@
 ### [結構](csharp/structs.md)
 ### [元組](csharp/tuples.md)
 ### [介面](csharp/programming-guide/interfaces/index.md)
-### [方法和 Lambda 運算式](csharp/methods-lambda-expressions.md)
+<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
 #### [方法](csharp/methods.md)
 #### [Lambda 運算式](csharp/lambda-expressions.md)
 ### [屬性](csharp/properties.md)
@@ -158,7 +157,7 @@
 #### [區別委派和事件](csharp/distinguish-delegates-events.md)
 ### [Language-Integrated Query (LINQ)](csharp/linq/)
 ### [非同步程式設計](csharp/async.md)
-### [🔧 平行程式設計](csharp/parallel.md)
+<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [模式比對](csharp/pattern-matching.md)
 ### [運算式樹狀結構](csharp/expression-trees.md)
 #### [說明運算式樹狀架構](csharp/expression-trees-explained.md)
@@ -169,11 +168,11 @@
 #### [轉譯運算式](csharp/expression-trees-translating.md)
 #### [摘要](csharp/expression-trees-summary.md)
 ### [原生互通性](csharp/programming-guide/interop/index.md)
-### [🔧 反映和程式碼產生](csharp/reflection.md)
+<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [加入程式碼註解](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-## [🔧 使用 .NET 編譯器平台](csharp/roslyn/index.md)
+<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
 ## [C# 程式設計指南](csharp/programming-guide/)
 ## [語言參考](csharp/language-reference/)
 ## [逐步解說](csharp/walkthroughs.md)
@@ -184,10 +183,10 @@
 
 ## [F 的教學課程](fsharp/tour.md)
 
-## [函數式程式設計簡介](fsharp/introduction-to-functional-programming/index.md)
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
 ### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
-## [教學課程](fsharp/tutorials/index.md)
+<!--## [Tutorials](fsharp/tutorials/index.md)-->
 ### [快速入門](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 使用者入門](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
 #### [Visual Studio Code 和 Ionide 使用者入門](fsharp/tutorials/getting-started/getting-started-vscode.md)
@@ -204,10 +203,10 @@
 #### [建立類型提供者](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [類型提供者安全性](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [類型提供者疑難排解](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-### [非同步和並行程式設計](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)
+<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
 #### [非同步程式設計](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
-## [在 Visual Studio 中使用 F#](fsharp/using-fsharp-in-visual-studio/index.md)
+<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
 ### [Visual F# 開發環境功能](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
 ### [設定專案](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
 ### [以舊版 .NET 為目標](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
@@ -217,7 +216,7 @@
 ### [開始使用 F# 來使用 Azure 檔案儲存體](fsharp/using-fsharp-on-azure/file-storage.md)
 ### [開始使用 F# 來使用 Azure 佇列儲存體](fsharp/using-fsharp-on-azure/queue-storage.md)
 ### [開始使用 F# 來使用 Azure 資料表儲存體](fsharp/using-fsharp-on-azure/table-storage.md)
-### [在 Azure Service Fabric 上使用 F#](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)
+<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
 ### [F# Azure 相依性的套件管理](fsharp/using-fsharp-on-azure/package-management.md)
 
 ## [F# 語言參考](fsharp/language-reference/index.md)
