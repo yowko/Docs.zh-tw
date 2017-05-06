@@ -23,5 +23,6 @@
 ### [結構變數](structure-variables.md)
 ### [結構和其他程式設計項目](structures-and-other-programming-elements.md)
 ### [結構和類別](structures-and-classes.md)
+## [元組](tuples.md)
 ## [有效率地使用資料類型](efficient-use-of-data-types.md)
 ## [資料類型的疑難排解](troubleshooting-data-types.md)
