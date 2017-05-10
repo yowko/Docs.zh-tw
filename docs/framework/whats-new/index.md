@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: ec57b79f67f826dbe61aa81bb5f82e20d61db2e3
 ms.openlocfilehash: cec16529ea93773362715cac7694b451ce3dddfe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
