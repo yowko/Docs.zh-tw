@@ -19,10 +19,11 @@ caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
+ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -56,7 +57,8 @@ ms.lasthandoff: 04/08/2017
 [快速入門](../../docs/framework/get-started/index.md)  
 提供 .NET Framework 的完整概觀與其他資源的連結。  
   
-[移轉指南](../../docs/framework/migration-guide/index.md)提供將應用程式移轉至新版 .NET Framework 時所需考量的資源和變更清單。  
+[移轉手冊](../../docs/framework/migration-guide/index.md)   
+提供將應用程式移轉至新版 .NET Framework 時所需考量的資源和變更清單。  
   
 [開發指南](../../docs/framework/development-guide.md)  
 提供應用程式開發所有主要技術領域和工作的指引，包括建立、設定、偵錯、保護及部署您的應用程式，以及有關動態程式設計、互通性、擴充性、記憶體管理和執行緒的資訊。  
@@ -64,7 +66,8 @@ ms.lasthandoff: 04/08/2017
 [工具](../../docs/framework/tools/index.md)  
 說明透過使用 .NET Framework 技術，可協助您開發、設定及部署應用程式的工具。  
   
-[.NET Framework Class Library](/dotnet/api/?view=netframework-4.7) 為每個包含在 .NET Framework 命名空間的類別提供語法、程式碼範例和相關資訊。  
+[.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)   
+為每個包含在 .NET Framework 命名空間的類別提供語法、程式碼範例和相關資訊。  
   
 [其他類別庫和 API](../../docs/framework/additional-apis/index.md)  
 提供頻外 (OOB) 版本中所包含類別的文件，以及針對特定平台或 .NET Framework 實作之類別的文件。
