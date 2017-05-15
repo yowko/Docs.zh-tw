@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a97cdc61caf2cd9d1f71a6763e4903bb5a5fdc54
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 65e882db800d51c69f6f135b4d4529af0bc86653
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -50,16 +51,16 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
   
 -   做為撰寫 LINQ 查詢的規則，我們建議您優先使用查詢語法，且只有在必要時才使用方法語法。 這兩個形式之間並沒有語意或效能上的差異。 相較於以方法語法撰寫的對等運算式，查詢運算式通常更容易閱讀。  
   
--   某些查詢作業 (例如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>) 沒有對等的查詢運算式子句，因此必須以方法呼叫來表示。 方法語法能以數種方式來與查詢語法結合。 如需詳細資訊，請參閱 [LINQ 中的查詢語法和方法語法](query-syntax-and-method-syntax-in-linq.md)。  
+-   某些查詢作業 (例如 <xref:System.Linq.Enumerable.Count%2A> 或 <xref:System.Linq.Enumerable.Max%2A>) 沒有同等的查詢運算式子句，因此必須以方法呼叫來表示。 方法語法能以數種方式來與查詢語法結合。 如需詳細資訊，請參閱 [LINQ 中的查詢語法和方法語法](query-syntax-and-method-syntax-in-linq.md)。  
   
--   根據查詢所套用的型別，可將查詢運算式編譯為運算式樹狀結構或委派。 <xref:System.Collections.Generic.IEnumerable%601> 查詢會編譯為委派。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查詢會編譯為運算式樹狀結構。 如需詳細資訊，請參閱[運算式樹狀結構](../../../expression-trees.md)。  
+-   根據查詢所套用的型別，可將查詢運算式編譯為運算式樹狀結構或委派。 <xref:System.Collections.Generic.IEnumerable%601> 查詢會編譯成委派。 <xref:System.Linq.IQueryable> 和 <xref:System.Linq.IQueryable%601> 查詢會編譯成運算式樹狀架構。 如需詳細資訊，請參閱[運算式樹狀結構](../../../expression-trees.md)。  
 
 ## <a name="next-steps"></a>後續步驟
 
 若要深入了解 LINQ 的詳細資料，請先參閱[查詢運算式基本概念](../../../linq/query-expression-basics.md)以熟悉基本概念，然後閱讀您感興趣的 LINQ 技術文件：   
 -   XML 文件：[LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework：[LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d)  
+-   ADO.NET Entity Framework：[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
 -   .NET 集合、檔案、字串等等：[LINQ to Objects](linq-to-objects.md)
 
