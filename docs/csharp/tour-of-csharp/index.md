@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7249f1bed4395671cc294d5db83e83844782736a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: d09d4c8696447ff83fe66f9376413345f369ca99
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/14/2017
 
 ---
 
 # <a name="a-tour-of-the-c-language"></a>C# 語言教學課程  
 
-C# (唸成 “See Sharp”) 是簡單、現代、物件導向且型別安全的程式設計語言。 C# 源自於是 C 系列語言，使用 C、C++、Java 和 JavaScript 的程式設計人員會立即感到熟悉。
+C# (發音為 "See Sharp") 是簡單、物件導向、型別安全的現代化程式設計語言。 C# 源自於是 C 系列語言，使用 C、C++、Java 和 JavaScript 的程式設計人員會立即感到熟悉。
 
 C# 是物件導向的語言，但 C# 更進一步支援「元件導向」程式設計。 現代軟體設計逐漸依賴功能性上獨立與屬於自我描述套件的軟體元件。 這類元件的關鍵在於它們呈現含有屬性、方法和事件的程式設計模型；它們提供元件相關宣告資訊的屬性，且併入自己的文件。 C# 提供語言建構來直接支援這些概念，使 C# 成為對建立及使用軟體元件都非常自然的語言。
 
@@ -31,11 +32,11 @@ C# 有***統一的型別系統***。 所有的 C# 型別 (包括 `int` 和 `doub
 
 ## <a name="hello-world"></a>Hello World
 
-“Hello, World” 程式通常用來介紹某個程式設計語言。 以下是以 C# 撰寫的：
+“Hello, World” 程式通常用來介紹程式設計語言。 以下是以 C# 撰寫的：
 
 [!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
 
-C# 原始程式檔的副檔名通常是 `.cs`。 假設 “Hello, World” 程式儲存在 `hello.cs` 檔案中，該程式可以使用命令列編譯：
+C# 原始程式檔的副檔名通常是 `.cs`。 假設 “Hello, World” 程式儲存在檔案 `hello.cs` 之中，該程式可以使用下列命令列編譯：
 
 ```console
 csc hello.cs
@@ -51,9 +52,9 @@ Hello, World
 > `csc` 命令會針對完整架構進行編譯，而且可能不是在所有平台上都能取得。
 
 
-“Hello, World” 程式的開頭是參考 `System` 命名空間的 `using` 指示詞。 命名空間提供組織 C# 程式和程式庫的階層式方法。 命名空間包含型別和其他命名空間，例如 `System` 命名空間包含數個型別 (如程式中參考的 `Console` 類別)，和數個其他命名空間 (如 `IO` 和 `Collections`)。 使用 `using` 指示詞參考指定的命名空間，就能以非限定的方式使用屬於該命名空間成員的型別。 因為 `using` 指示詞的緣故，該程式可以使用 `Console.WriteLine` 當作 `System.Console.WriteLine` 的縮寫。
+“Hello, World” 程式的開頭為 `using` 指示詞，會參考 `System` 命名空間。 命名空間提供組織 C# 程式和程式庫的階層式方法。 命名空間包含型別和其他命名空間，例如 `System` 命名空間包含數個型別 (如程式中參考的 `Console` 類別)，和數個其他命名空間 (如 `IO` 和 `Collections`)。 使用 `using` 指示詞參考指定的命名空間，就能以非限定的方式使用屬於該命名空間成員的型別。 因為 `using` 指示詞的緣故，該程式可以使用 `Console.WriteLine` 當作 `System.Console.WriteLine` 的縮寫。
 
-“Hello, World” 程式宣告的 `Hello` 類別具有單一成員 (名稱為 `Main` 的方法)。 `Main` 方法是使用 static 修飾詞來宣告。 執行個體方法可以使用關鍵字 `this` 參考特定的封入物件執行個體，但靜態方法卻不需要參考特定物件即可運作。 依照慣例，會使用名為 `Main` 的靜態方法做為程式的進入點。
+“Hello, World” 程式宣告的 `Hello` 類別包含單一成員，即名為 `Main` 的方法。 `Main` 方法是使用 static 修飾詞來宣告。 執行個體方法可以使用關鍵字 `this` 參考特定的封入物件執行個體，但靜態方法卻不需要參考特定物件即可運作。 依照慣例，會使用名為 `Main` 的靜態方法做為程式的進入點。
 
 程式的輸出是由 `System` 命名空間中 `Console` 類別的 `WriteLine` 方法產生。 此類別是由標準類別程式庫提供，根據預設，編譯器會自動參考此程式庫。
 

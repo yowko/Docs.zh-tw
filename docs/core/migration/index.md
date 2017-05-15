@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-translationtype: Human Translation
-ms.sourcegitcommit: fae5eabac7d1aac577c5c7a27e306c8c7ea8b418
-ms.openlocfilehash: 73ab5a9bdd957e6d9394a3be0aa55f554ee7a86a
-ms.lasthandoff: 04/11/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 7ee369e62027aaf59e4c1a340bbdd30a643e2b75
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -58,7 +59,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 
 ### <a name="common-issues"></a>常見問題
 
-- 如果您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
+- 若您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
 
 執行 `dotnet --version` 以查看您所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md) 需要 .NET Core CLI RC3 或更高版本。
 如果您目前的目錄或父目錄中有 *global.json* 檔案且 `sdk` 版本設定為舊版，則會收到此錯誤。
