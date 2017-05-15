@@ -1,10 +1,10 @@
 # [快速入門](index.md)
 ## [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](with-visual-studio.md)
-### [使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯](debugging-with-visual-studio-2017.md)
-### [使用 Visual Studio 2017 發行您的 Hello World 應用程式](publishing-with-visual-studio-2017.md)
-## [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio-2017.md)
+### [使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)
+### [使用 Visual Studio 2017 發行您的 Hello World 應用程式](publishing-with-visual-studio.md)
+## [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中使用 .NET Core 測試類別庫](testing-library-with-visual-studio.md)
-### [在 Visual Studio 2017 中透過 .NET Core 使用類別庫](consuming-library-with-visual-studio-2017.md)
+### [在 Visual Studio 2017 中透過 .NET Core 使用類別庫](consuming-library-with-visual-studio.md)
 ## [Visual Studio Code 使用者入門](with-visual-studio-code.md)
-## [🔧 開始使用跨平台工具](with-cross-platform-tools.md)
-## [🔧 開始使用 C# Interactive](with-csharp-interactive.md)
+<!--## [🔧 Getting started with cross-platform tools](with-cross-platform-tools.md)-->
+<!--## [🔧 Getting started with C# Interactive](with-csharp-interactive.md)-->

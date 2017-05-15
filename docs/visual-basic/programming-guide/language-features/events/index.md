@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 625f4b24dde4200187e1339983d89b9ce92609c9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 59851175865939243260702470955fe0dea38495
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
@@ -129,6 +130,6 @@ ms.lasthandoff: 03/13/2017
 |[如何：宣告自訂事件以避免封鎖](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|示範如何定義自訂事件，以非同步方式呼叫它的事件處理常式。|  
 |[如何：宣告自訂事件以節省記憶體](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|示範如何定義只有在處理事件時才會使用記憶體的自訂事件。|  
 |[Visual Basic 中的繼承事件處理常式疑難排解](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|列出繼承元件中的事件處理常式所引發的常見問題。|  
-|[事件](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)|提供 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中事件模型的概觀。|  
+|[事件](../../../../standard/events/index.md)|提供 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中事件模型的概觀。|  
 |[在 Windows Form 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4.aspx)|描述如何使用與 Windows Form 物件相關聯的事件。|  
 |[委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|提供 Visual Basic 中的委派概觀。|
