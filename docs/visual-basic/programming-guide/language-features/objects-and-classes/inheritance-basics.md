@@ -46,9 +46,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 58aee9f8c348eb06daec2b8c9e332f3f2775bcb6
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -133,7 +134,7 @@ ms.lasthandoff: 03/13/2017
   
  下列範例會比較`Me`和`MyClass`。  
   
-```  
+```vb
 Class baseClass  
     Public Overridable Sub testMethod()  
         MsgBox("Base class string")  
@@ -170,3 +171,4 @@ End Class
 ## <a name="see-also"></a>另請參閱  
  [Inherits 陳述式](../../../../visual-basic/language-reference/statements/inherits-statement.md)   
  [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+
