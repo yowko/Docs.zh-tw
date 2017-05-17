@@ -23,7 +23,7 @@ ms.lasthandoff: 03/07/2017
 
 此文件說明新的參考型別。 它也會說明如何使用這個新的參考型別，將套件相依性新增至您的專案。 
 
-## <a name="the-new-packagereference-element"></a>新 <PackageReference> 元素
+## <a name="the-new-packagereference-element"></a><PackageReference> 新元素
 `<PackageReference>` 具有下列基本結構︰
 
 ```xml
