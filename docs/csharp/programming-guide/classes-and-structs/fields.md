@@ -34,13 +34,13 @@ ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
-「欄位」**是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」**。  
+*「欄位」*是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的*「成員」*。  
   
  類別或結構可能會有執行個體欄位或靜態欄位，或者兩者都有。 執行個體欄位是專屬於某種類型的執行個體。 如果您有搭配執行個體欄位 F 的類別 T，您可以建立兩個類型 T 的物件，然後修改每個物件中的 F 值，而不會影響另一個物件中的值。 相較之下，靜態欄位屬類別本身所擁有，並在該類別的所有執行個體之間共用。 對執行個體 A 所做的變更，執行個體 B 和 C 只要存取該欄位就會立即看到。  
   
- 一般而言，您應該只針對具有 private 或 protected 存取範圍的變數使用欄位。 您的類別公開給用戶端程式碼的資料應透過[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)、[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)來提供。 藉由使用這些建構來間接存取內部欄位，即可防範無效的輸入值。 儲存由公用屬性公開之資料的私用欄位稱為「備份存放區」**或「支援欄位」**。  
+ 一般而言，您應該只針對具有 private 或 protected 存取範圍的變數使用欄位。 您的類別公開給用戶端程式碼的資料應透過[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)、[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)來提供。 藉由使用這些建構來間接存取內部欄位，即可防範無效的輸入值。 儲存由公用屬性公開之資料的私用欄位稱為*「備份存放區」*或*「支援欄位」*。  
   
- 這些欄位通常會儲存必須可供多個類別方法存取的資料，以及其儲存時間必須比任何一個方法的存留期都還要長的資料。 例如，表示行事曆日期的類別可能會有三個整數欄位，分別代表月、日和年。 未在單一方法以外範圍使用的變數，應在方法主體本身內宣告為「區域變數」**。  
+ 這些欄位通常會儲存必須可供多個類別方法存取的資料，以及其儲存時間必須比任何一個方法的存留期都還要長的資料。 例如，表示行事曆日期的類別可能會有三個整數欄位，分別代表月、日和年。 未在單一方法以外範圍使用的變數，應在方法主體本身內宣告為*「區域變數」*。  
   
  請依序指定欄位的存取層級、欄位的類型和欄位的名稱，以在類別區塊中宣告欄位。 例如:   
   
