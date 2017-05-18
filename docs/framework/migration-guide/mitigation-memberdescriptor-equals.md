@@ -15,9 +15,10 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 409f06f4dfbe7be50dd2c487e49d3d4d8a477539
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/18/2017
 ```xml  
   
 <runtime>  
-    \<AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
+    <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
   
 ```  
@@ -80,3 +81,4 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>另請參閱  
  [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)   
  [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
+
