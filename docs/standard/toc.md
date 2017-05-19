@@ -1,4 +1,4 @@
-# [開始使用 .NET](getting-started.md)
+# [開始使用 .NET](get-started.md)
 # [.NET 教學課程](tour.md)
 # [.NET 架構元件](components.md)
 # [.NET 標準程式庫](library.md)

@@ -1,23 +1,24 @@
 ---
-title: "使用者入門 | C# 指南"
-description: "簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。"
-keywords: "C#, 使用者入門, 取得, 安裝"
+
+title: "開始使用 | C# 指南"
+description: "開始使用 C#"
+keywords: "C#, 開始使用 , 取得, 安裝"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/17/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
-translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 9728e449abbac2530faba84516b8591b178180ee
-ms.lasthandoff: 05/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 0e3341434ef8ac354e8bc47a4c2a72cf019bd2ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/14/2017
 
 ---
-
-# <a name="getting-started-with-c"></a>C 使用者入門#
+# <a name="get-started-with-c"></a>開始使用 C# #
 
 本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 本節內容涵蓋適用於 Visual Studio 2017 和 Visual Studio Code 的使用者入門主題。 您可以建置一個簡單的 Hello World 應用程式，或者，如果您擁有 Visual Studio 2017，則能建置可供其他應用程式使用的簡單類別庫。
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2017
 
    類別庫讓您能夠定義可從另一個應用程式呼叫的型別和型別成員。 此主題可讓您建立具有單一方法的類別庫，來決定字串是否要以大寫字元為開頭。 當您完成建置類別庫之後，可以開發[單元測試](testing-library-with-visual-studio.md)以確保該類別庫可如預期般運作，然後您可以讓[想要取用它的應用程式](consuming-library-with-visual-studio.md)能夠使用該類別庫。
 
-* [Visual Studio Code 使用者入門](with-visual-studio-code.md)
+- [開始使用 Visual Studio Code](with-visual-studio-code.md)
 
    Visual Studio Code 這個免費的程式碼編輯器已經過最佳化，可用於建置新式 Web 和雲端應用程式並為其偵錯。 支援 IntelliSense 並適用於 Linux、macOS 和 Windows。
 

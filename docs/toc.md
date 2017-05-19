@@ -6,7 +6,7 @@
 
 <!-- .NET Core Content -->
 # [.NET Core 指南](core/index.md)
-## [快速入門](core/getting-started.md)
+## [開始使用](core/get-started.md)
 ## [Windows 必要條件](core/windows-prerequisites.md)
 ## [macOS 先決條件](core/macos-prerequisites.md)
 ## [教學課程](core/tutorials/index.md)
@@ -83,7 +83,7 @@
 <!-- .NET Framework Content -->
 # [.NET Framework 指南](framework/index.md)
 ## [新功能](framework/whats-new/)
-## [快速入門](framework/get-started/)
+## [開始使用](framework/get-started/)
 ## [移轉手冊](framework/migration-guide/)
 ## [Docker 上的 .NET Framework 指南](framework/docker/index.md)
 ### [在容器中執行主控台應用程式](framework//docker/console.md)
@@ -121,7 +121,7 @@
 
 <!-- Start of C# Content -->
 # [C# 指南](csharp/index.md)
-## [快速入門](csharp/getting-started/)
+## [開始使用](csharp/getting-started/)
 ## [教學課程](csharp/tutorials/)
 ## [C# 的教學課程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
@@ -187,10 +187,10 @@
 ### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
-### [快速入門](fsharp/tutorials/getting-started/index.md)
+### [開始使用](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 使用者入門](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
-#### [Visual Studio Code 和 Ionide 使用者入門](fsharp/tutorials/getting-started/getting-started-vscode.md)
-#### [命令列工具使用者入門](fsharp/tutorials/getting-started/getting-started-command-line.md)
+#### [Visual Studio Code 和 Ionide 開始使用](fsharp/tutorials/getting-started/getting-started-vscode.md)
+#### [命令列工具開始使用](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 #### [F# Interactive 選項](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [類型提供者](fsharp/tutorials/type-providers/index.md)
