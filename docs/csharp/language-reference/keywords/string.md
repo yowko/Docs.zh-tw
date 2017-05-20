@@ -34,14 +34,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="string-c-reference"></a>string (C# 參考)
-`string` 類型代表零或多個 Unicode 字元序列。 `string` 是 .NET Framework 中 <xref:System.String> 的別名。  
+`string` 類型代表零或多個 Unicode 字元序列。 `string` 是 <xref:System.String> 在 .NET Framework 中的別名。  
   
  雖然 `string` 是參考型別，但是定義等號比較運算子 (`==` 和 `!=`) 來比較 `string` 物件的值，而不是參考。 這樣會以更直覺的方式來測試字串是否相等。 例如：  
   
@@ -64,7 +65,7 @@ string a = "good " + "morning";
   
  這會建立包含 "good morning" 的字串物件。  
   
- 字串是「不可變的」**；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 b。 字串 "h" 接著會適合進行記憶體回收。  
+ 字串是「不可變的」；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 b。 字串 "h" 接著會適合進行記憶體回收。  
   
 ```csharp
 string b = "h";  
@@ -100,7 +101,7 @@ Console.WriteLine(a);
 @"good morning"  // a string literal  
 ```  
   
- 逐字字串的優點是「不」**會處理逸出序列，例如，這可讓您輕鬆地撰寫完整檔案名稱︰  
+ 逐字字串的優點是「不」會處理逸出序列，例如，這可讓您輕鬆地撰寫完整檔案名稱︰  
   
 ```csharp  
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"  
@@ -125,12 +126,12 @@ Console.WriteLine(a);
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [使用字串的最佳做法](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7)   
+ [使用字串的最佳做法](../../../standard/base-types/best-practices-strings.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [參考型別](../../../csharp/language-reference/keywords/reference-types.md)   
  [實值型別](../../../csharp/language-reference/keywords/value-types.md)   
- [基本字串作業](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
- [建立新字串](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
+ [基本字串作業](../../../standard/base-types/basic-string-operations.md)   
+ [建立新字串](../../../standard/base-types/creating-new.md)   
  [格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
 

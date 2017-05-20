@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7de999848870de80996f308affde088088e32e52
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 76dc6ebe2cc2489d83a2693a3143d36d46c8ef82
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>如何：使用運算式樹狀架構建立動態查詢 (C#)
@@ -39,7 +40,79 @@ ms.lasthandoff: 03/13/2017
   
  <xref:System.Linq.Expressions> 命名空間中的 Factory 方法可用於建立運算式樹狀架構，來代表組成整體查詢的運算式。 代表標準查詢運算子方法呼叫的運算式會參考這些方法的 <xref:System.Linq.Queryable> 實作。 最後一個運算式樹狀架構會傳遞至 `IQueryable` 資料來源的 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 實作，以建立 `IQueryable` 類型的可執行檔查詢。 藉由列舉查詢變數可取得結果。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+// Add a using directive for System.Linq.Expressions.  
+  
+string[] companies = { "Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",  
+                   "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",  
+                   "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",  
+                   "Blue Yonder Airlines", "Trey Research", "The Phone Company",  
+                   "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee" };  
+  
+// The IQueryable data to query.  
+IQueryable<String> queryableData = companies.AsQueryable<string>();  
+  
+// Compose the expression tree that represents the parameter to the predicate.  
+ParameterExpression pe = Expression.Parameter(typeof(string), "company");  
+  
+// ***** Where(company => (company.ToLower() == "coho winery" || company.Length > 16)) *****  
+// Create an expression tree that represents the expression 'company.ToLower() == "coho winery"'.  
+Expression left = Expression.Call(pe, typeof(string).GetMethod("ToLower", System.Type.EmptyTypes));  
+Expression right = Expression.Constant("coho winery");  
+Expression e1 = Expression.Equal(left, right);  
+  
+// Create an expression tree that represents the expression 'company.Length > 16'.  
+left = Expression.Property(pe, typeof(string).GetProperty("Length"));  
+right = Expression.Constant(16, typeof(int));  
+Expression e2 = Expression.GreaterThan(left, right);  
+  
+// Combine the expression trees to create an expression tree that represents the  
+// expression '(company.ToLower() == "coho winery" || company.Length > 16)'.  
+Expression predicateBody = Expression.OrElse(e1, e2);  
+  
+// Create an expression tree that represents the expression  
+// 'queryableData.Where(company => (company.ToLower() == "coho winery" || company.Length > 16))'  
+MethodCallExpression whereCallExpression = Expression.Call(  
+    typeof(Queryable),  
+    "Where",  
+    new Type[] { queryableData.ElementType },  
+    queryableData.Expression,  
+    Expression.Lambda<Func<string, bool>>(predicateBody, new ParameterExpression[] { pe }));  
+// ***** End Where *****  
+  
+// ***** OrderBy(company => company) *****  
+// Create an expression tree that represents the expression  
+// 'whereCallExpression.OrderBy(company => company)'  
+MethodCallExpression orderByCallExpression = Expression.Call(  
+    typeof(Queryable),  
+    "OrderBy",  
+    new Type[] { queryableData.ElementType, queryableData.ElementType },  
+    whereCallExpression,  
+    Expression.Lambda<Func<string, string>>(pe, new ParameterExpression[] { pe }));  
+// ***** End OrderBy *****  
+  
+// Create an executable query from the expression tree.  
+IQueryable<string> results = queryableData.Provider.CreateQuery<string>(orderByCallExpression);  
+  
+// Enumerate the results.  
+foreach (string company in results)  
+    Console.WriteLine(company);  
+  
+/*  This code produces the following output:  
+  
+    Blue Yonder Airlines  
+    City Power & Light  
+    Coho Winery  
+    Consolidated Messenger  
+    Graphic Design Institute  
+    Humongous Insurance  
+    Lucerne Publishing  
+    Northwind Traders  
+    The Phone Company  
+    Wide World Importers  
+*/  
+```  
+  
  此程式碼在傳遞至 `Queryable.Where` 方法的述詞中，使用固定數目的運算式。 不過，您可以撰寫一個應用程式，以根據使用者輸入合併可變數目的述詞運算式。 您也可以根據使用者輸入，更改查詢中所呼叫的標準查詢運算子。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  

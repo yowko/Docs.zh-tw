@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c23c17967474af0f91c0dda6d071073234736c6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
@@ -105,10 +106,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
  如需詳細資訊，請參閱 <xref:System.Enum?displayProperty=fullName>。  
   
  您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：建立列舉的新方法 ](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。  
-  
-## <a name="featured-book-chapter"></a>精選書籍章節  
- [初探 Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) 中的[深入了解變數](http://go.microsoft.com/fwlink/?LinkId=221230)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Enum?displayProperty=fullName>   
  [C# 程式設計手冊](../../csharp/programming-guide/index.md)   

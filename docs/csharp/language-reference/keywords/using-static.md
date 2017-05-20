@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c072d365b4ecffb524b57c2328217da05a8af3ed
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f111ba3db26f247cbc56ee296b652bc04efb837d
+ms.openlocfilehash: 66c68530f5684e4d75b9aaa21334e54dde5b64b6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指示詞 (C# 參考)
@@ -46,7 +47,7 @@ using static <fully-qualified-type-name>
 
 `using static` 指示詞是在 C# 6 中引進。
 
-## <a name="reamrks"></a>備註
+## <a name="remarks"></a>備註
  
 一般而言，當您呼叫靜態成員時，您會提供類型名稱及成員名稱。 重複輸入相同的類型名稱來叫用類型的成員，可能會導致冗長且難以理解的程式碼。 例如，`Circle` 類別的下列定義參考了 @System.Math 類別的一些成員。
   
