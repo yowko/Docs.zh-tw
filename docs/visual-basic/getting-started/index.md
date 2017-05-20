@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 使用者入門 | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
-ms.lasthandoff: 05/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
   
 ## <a name="in-this-section"></a>本節內容  
- [Visual Studio 中 Visual Basic 的重大變更](breaking-changes-in-visual-studio.md)  
+
+[Visual Basic 的新功能](whats-new.md)   
+列出每個 Visual Basic .NET 版本的新功能。
+
+[Visual Studio 中 Visual Basic 的重大變更](breaking-changes-in-visual-studio.md)  
  列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
   
  [Visual Basic 程式設計人員的其他資源](../../visual-basic/getting-started/additional-resources.md)  

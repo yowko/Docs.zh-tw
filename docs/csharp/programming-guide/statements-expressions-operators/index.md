@@ -1,34 +1,55 @@
 ---
 title: "陳述式、運算式和運算子 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 運算式"
-  - "C# 語言, 運算子"
-  - "C# 語言, 陳述式"
-  - "運算式 [C#]"
-  - "運算子 [C#]"
-  - "陳述式 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- expressions [C#]
+- operators [C#]
+- C# language, statements
+- C# language, operators
+- C# language, expressions
+- statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d7c648786e7f507fe2ca58ffd2480da6b204aafa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
+
 ---
-# 陳述式、運算式和運算子 (C# 程式設計手冊)
-組成應用程式的 C\# 程式碼是由包含關鍵字、運算式和運算子的陳述式所構成。  本節將說明 C\# 程式的這些基本項目。  
+# <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
+組成應用程式的 C# 程式碼是由包含關鍵字、運算式和運算子的陳述式所構成。 本節包含有關 C# 程式中這些基本項目的資訊。  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱:  
   
 -   [陳述式](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
   
 -   [運算式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
+    -   [運算式主體成員](expression-bodied-members.md)
+ 
 -   [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 -   [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
@@ -45,9 +66,9 @@ caps.handback.revision: 22
   
 -   [相等比較](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [轉型和類型轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
+ [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

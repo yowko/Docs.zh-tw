@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25c2bf8830d80f0f41855d0fa9e292b0edcbe052
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 9a580d0426038036f2e64167de8c540041c0a6b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
@@ -43,13 +44,13 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
- 任何實作 <xref:System.IEquatable%601> 介面的類別或結構都必須包含 <xref:System.IEquatable%601.Equals%2A> 方法的定義，該方法符合介面指定的特徵標記。 如此一來，您可以倚賴實作 `IEquatable<T>` 的類別，以包含 `Equals` 方法，類別的執行個體可以使用該方法判斷它是否等於相同類別的另一個執行個體。  
+ 任何實作 <xref:System.IEquatable%601> 介面的類別或結構，必須包含 <xref:System.IEquatable%601.Equals%2A> 方法的定義，該方法符合介面指定的簽章。 如此一來，您可以倚賴實作 `IEquatable<T>` 的類別，以包含 `Equals` 方法，類別的執行個體可以使用該方法判斷它是否等於相同類別的另一個執行個體。  
   
  `IEquatable<T>` 的定義不提供 `Equals` 的實作。 介面只會定義簽章。 如此一來，在 C# 中的介面類似於抽象類別，其中的所有方法都是抽象的。 不過，類別或結構可以實作多個介面，但類別只會繼承單一類別抽象或不繼承。 因此，您可以藉由使用介面，在類別中包含多個來源的行為。  
   
  如需抽象類別的詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
- 介面可以包含方法、屬性、事件、索引子，或以上四個成員類型的組合。 如需範例的連結，請參閱[相關章節](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections)。 介面不能包含常數、欄位、運算子、執行個體建構函式、解構函式或類型。 介面成員會自動變成公用，且它們不能包含任何存取修飾詞。 成員也不能是 [static](../../../csharp/language-reference/keywords/static.md)。  
+ 介面可以包含方法、屬性、事件、索引子，或以上四個成員類型的組合。 如需範例的連結，請參閱[相關章節](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections)。 介面不能包含常數、欄位、運算子、執行個體建構函式、完成項或類型。 介面成員會自動變成公用，且它們不能包含任何存取修飾詞。 成員也不能是 [static](../../../csharp/language-reference/keywords/static.md)。  
   
  若要實作介面成員，實作類別的對應成員必須是公用、非靜態，且具有與介面成員相同的名稱和簽章。  
   
