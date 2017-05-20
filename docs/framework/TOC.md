@@ -1,4 +1,4 @@
-# [.NET Framework 開發指南](development-guide.md)
+# [開發指南](development-guide.md)
 ## [應用程式基本概念](../standard/application-essentials.md)
 ## [資料與模型化](data/index.md)
 ## [用戶端應用程式](develop-client-apps.md)
@@ -15,4 +15,3 @@
 ## [進行多平台開發](../standard/cross-platform/index.md)
 ## [部署](deployment/index.md)
 ## [效能](performance/index.md)
-
