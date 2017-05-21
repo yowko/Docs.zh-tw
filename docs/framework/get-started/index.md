@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 5713faed77786a87dc349a1c7e02ec9703b3700d
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
@@ -82,11 +82,11 @@ ms.lasthandoff: 05/03/2017
 |標題|描述|
 |-----------|-----------------|
 |[概觀](../../../docs/framework/get-started/overview.md)|為建置目標為 .NET Framework 之應用程式的開發人員提供詳細資訊。|
+|[安裝指南 (英文)](../../../docs/framework/install/index.md)|提供安裝 .NET Framework 的相關資訊。|  
 |[.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|描述 .NET Framework 不定期發行以及如何在您的應用程式中使用它們。|
 |[系統需求](../../../docs/framework/get-started/system-requirements.md)|列出執行 .NET Framework 的硬體與軟體需求。|
 |[.NET Core 和開放原始碼](../../../docs/framework/get-started/net-core-and-open-source.md)|描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。|
 |[.NET Core 文件](https://docs.microsoft.com/dotnet/)|.NET Core 的概念和 API 參考文件。|
-|[安裝指南](../../../docs/framework/install/guide-for-developers.md)|提供安裝 .NET Framework 的相關資訊。|
 
 ## <a name="see-also"></a>另請參閱
  [.NET Framework 指南](../../../docs/framework/index.md)   
