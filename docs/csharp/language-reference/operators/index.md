@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>C# 運算子
@@ -66,9 +67,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) – 函式引動過程。  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) – 彙總物件索引化。  
-  
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md) – null 條件索引化。  如果左運算元為 `null`，則傳回 `null`。  
-  
+   
  [x++](../../../csharp/language-reference/operators/increment-operator.md) – 後置遞增。  傳回 x 的值，然後利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。  
   
  [x--](../../../csharp/language-reference/operators/decrement-operator.md) – 後置遞減。  傳回 x 的值，然後利用小於 x 值的值 (通常會減去整數 1) 更新儲存位置。  
@@ -222,7 +221,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 ## <a name="arithmetic-overflow"></a>算術溢位  
  算術運算子 ([+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[*](../../../csharp/language-reference/operators/multiplication-operator.md)、[/](../../../csharp/language-reference/operators/division-operator.md)) 可產生數值型別所涉及之可能值範圍以外的結果。 您應該參考特定運算子一節以取得詳細資料，但一般而言：  
   
-- 整數算術溢位可能會擲回 <xref:System.OverflowException> 或者捨棄結果 的最高有效位元。 整數除以零一定會擲回 @System.DivideByZeroException。  
+- 整數算術溢位可能會擲回 <xref:System.OverflowException> 或捨棄結果的最高有效位元。 整數除以零一定會擲回 @System.DivideByZeroException。  
 
    發生整數溢位時，會發生的事取決於執行內容，可以是 [checked 或 unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)。 在 checked 內容中，會擲回 <xref:System.OverflowException>。 在 unchecked 內容中，會捨棄結果的最高有效位元並繼續執行。 因此，C# 可讓您選擇處理或忽略溢位。 根據預設，*unchecked* 內容中會發生算術運算。 
 
@@ -230,7 +229,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
    
 -   浮點算術溢位或除以零永遠不會擲回例外狀況，因為浮點類型以 IEEE 754 為基礎，所以具有代表無限與 NaN (而非數字) 的佈建。  
   
--   [十進位](../../../csharp/language-reference/keywords/decimal.md)算術溢位一律會擲回 <xref:System.OverflowException>。 十進位除以零一律會擲回 <xref:System.DivideByZeroException>。  
+-   [十進位](../../../csharp/language-reference/keywords/decimal.md)算術溢位一律會擲回 <xref:System.OverflowException>。 十進位除以零一定會擲回 <xref:System.DivideByZeroException>。  
   
   
 ## <a name="see-also"></a>另請參閱  
