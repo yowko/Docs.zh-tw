@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5c3012ce057387497f97e713eb625ac2f2a7d1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
+ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="c-reference"></a>C# 參考
@@ -64,9 +65,10 @@ ms.lasthandoff: 03/13/2017
  提供有關 Microsoft Word 格式之最新版 C# 語言規格的指示。  
   
 ## <a name="related-sections"></a>相關章節  
- [C# 常見問題集](http://go.microsoft.com/fwlink/?LinkId=70367)  
- 提供 C# 開發人員中心之 C# 常見問題集的不斷增長清單。  
-  
+<!--
+ [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
+ Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
+-->  
  [Microsoft 知識庫中的 C# KB 文件](http://go.microsoft.com/fwlink/?LinkId=70368)  
  開啟 Microsoft 搜尋網頁，以尋找 MSDN 上可用的知識庫文件。  
   
@@ -78,3 +80,4 @@ ms.lasthandoff: 03/13/2017
   
  [C# 程式設計指南](../../csharp/programming-guide/index.md)  
  包含如何使用 C# 程式設計語言的相關資訊。
+
