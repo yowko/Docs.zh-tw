@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 14e6b4a2ffe5145a6d5d856c2149569b9ae39ff9
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/05/2017
 
 ---
 
@@ -46,7 +47,6 @@ dotnet new [-h|--help]
 
 此命令包含預設的範本清單。 使用 `dotnet new -all` 以取得可用範本的清單。 下表顯示隨 SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。
 
-
 |範本描述  | 範本名稱  | 語言 |
 |----------------------|----------------|-----------|
 | 主控台應用程式  | 主控台        | [C#]、F#  |
@@ -68,16 +68,13 @@ dotnet new [-h|--help]
 
 `-l|--list`
 
-
 列出包含指定名稱的範本。 如果針對 `dotnet new` 命令叫用，則會列出指定目錄可能可用的範本。 例如，如果目錄中已包含專案，則不會列出所有專案範本。
 
 `-lang|--language {C#|F#}`
 
-
 要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
 `-n|--name <OUTPUT_NAME>`
-
 
 所建立輸出的名稱。 如果未指定名稱，則會使用目前目錄的名稱。
 
@@ -101,14 +98,13 @@ dotnet new [-h|--help]
 
 `-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0` 或 `netcoreapp1.1` (`Default: netcoreapp1.0`)
 
--au|--authentication` -  要使用的驗證類型。 值︰None 或 Individual (預設值︰Individual)
+`-au|--auth` - 要使用的驗證類型。 值：`None` 或 `Individual` (預設值：`None`)
 
 `-uld|--use-local-db` - 指定是否要使用 LocalDB，而不是 SQLite。 值：`true` 或 `false` (預設值：`false`)
 
 **classlib**
 
 `-f|--framework` - 指定要當成目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp1.0`、`netcoreapp1.1`，或從 `netstandard1.0` 到 `netstandard1.6` (預設值：`netstandard1.4`)
-
 
 ## <a name="examples"></a>範例
 
@@ -121,7 +117,6 @@ dotnet new [-h|--help]
 `dotnet new mvc -au None -f netcoreapp1.0`
  
 建立以 .NET Core 1.1 為目標的新 xUnit 應用程式：
-
 
 `dotnet new xunit --Framework netcoreapp1.1`
 
