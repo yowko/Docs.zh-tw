@@ -41,7 +41,7 @@
 ### [私用建構函式](private-constructors.md)
 ### [靜態建構函式](static-constructors.md)
 ### [如何：撰寫複製建構函式](how-to-write-a-copy-constructor.md)
-## [解構函式](destructors.md)
+## [完成項](destructors.md)
 ## [物件和集合初始設定式](object-and-collection-initializers.md)
 ### [如何：使用物件初始設定式將物件初始化](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [如何：使用集合初始設定式將字典初始化](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
