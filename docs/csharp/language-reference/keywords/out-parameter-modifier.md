@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af1f16016053d3c1b3cae34ff0cb6a3ce8cee9e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a2f2e9b9239836b051820bda66523822e95cdf52
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 參數修飾詞 (C# 參考)
@@ -66,7 +67,7 @@ class CS0663_Example
   
  您不能將 `ref` 和 `out` 關鍵字用於下列幾種方法：  
   
--   使用 [async](../../../csharp/language-reference/keywords/async.md) 修飾詞定義的非同步方法。  
+-   使用 [async](../../../csharp/language-reference/keywords/async.md) 修飾詞定義的 async 方法。  
   
 -   迭代器方法，其包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 陳述式。  
 

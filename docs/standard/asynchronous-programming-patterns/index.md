@@ -16,16 +16,17 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 26d5c4da21671c0f4ce37bf08c28ae82213f4374
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a8a89b8987eaff4d94f5e620c45b551b7be682d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 .NET Framework 提供三種模式來執行非同步作業：  
   
--   非同步程式設計模型 (APM) 模式 (也稱為 called the <xref:System.IAsyncResult> 模式)，其中非同步作業需要 `Begin` 和 `End` 方法 (例如，適用於非同步寫入作業的 `BeginWrite` 和 `EndWrite`)。 在新的程式開發時，不建議使用此模式。 如需詳細資訊，請參閱[非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。  
+-   非同步程式設計模型 (APM) 模式 (也稱為 <xref:System.IAsyncResult> 模式)，其中非同步作業需要 `Begin` 和 `End` 方法 (例如，適用於非同步寫入作業的 `BeginWrite` 和 `EndWrite`)。 在新的程式開發時，不建議使用此模式。 如需詳細資訊，請參閱[非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)。  
   
 -   事件架構非同步模式 (EAP)，它需要具有 `Async` 尾碼的方法，並且要求一或多個事件、事件處理常式的委派類型，以及 `EventArg` 衍生類型。 在 .NET Framework 2.0 中採用了 EAP。 在新的程式開發時，不建議使用它。 如需詳細資訊，請參閱[事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  
   
@@ -80,4 +81,4 @@ public class MyClass
 |-----------|-----------------|  
 |[非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|描述使用 <xref:System.IAsyncResult> 介面以提供非同步行為的傳統模型。 在新的程式開發時，不建議使用此模型。|  
 |[事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)|描述提供非同步行為的事件架構舊版模型。 在新的程式開發時，不建議使用此模型。|  
-|[工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述以 <xref:System.Threading.Tasks> 命名空間為基礎的新的非同步模式。 這個模型是在 .NET Framework 4 和更新版本中進行非同步程式設計的建議方法。|
+|[工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|說明新的非同步模式，其根據 <xref:System.Threading.Tasks> 命名空間。 這個模型是在 .NET Framework 4 和更新版本中進行非同步程式設計的建議方法。|

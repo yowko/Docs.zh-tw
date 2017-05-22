@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
-ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 50e5b333f892cf469e9f3fe57a0325ac6d8e641f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/18/2017
 
 ## <a name="how-to-run-the-code-samples"></a>如何執行程式碼範例
 
-若要了解如何設定開發環境以執行程式碼範例，請參閱[入門](getting-started.md)。  您可以從此頁面將程式碼複製並貼入您的環境中來執行它們。 
+若要了解如何設定開發環境以執行程式碼範例，請參閱[入門](get-started.md)。  您可以從此頁面將程式碼複製並貼入您的環境中來執行它們。 
 
 > [!NOTE]
 在未來，此文件網站將能在您的瀏覽器中執行這些程式碼範例。
@@ -41,7 +41,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 * C# 很簡單、強大、型別安全且物件導向，同時保留 C 樣式語言的易讀性與簡潔性。 熟悉 C 和類似語言的任何人在適應 C# 方面很少有問題。  若要深入了解 C#，請參閱 [C# 指南](../csharp/index.md)。
 
-* F# 是跨平台、函數優先的程式語言，也支援傳統物件導向和命令式程式設計。  若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.md)。
+* F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。  若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.md)。
 
 * Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。
 
@@ -151,7 +151,7 @@ CLR 可讓您透過 `unsafe` 程式碼存取原生記憶體及執行指標算術
 
 若您對 F# 功能的教學課程感興趣，請參閱 [F# 教學課程](../fsharp/tour.md)。
 
-若要開始撰寫自己的程式碼，請參閱[入門](getting-started.md)。
+若要開始撰寫自己的程式碼，請參閱[入門](get-started.md)。
 
 若要了解重要的 .NET 元件，請參閱 [.NET 架構元件](components.md)。
 

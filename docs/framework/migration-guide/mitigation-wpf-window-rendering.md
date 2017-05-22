@@ -14,10 +14,11 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c911513551e9629a4a6975762c1952c73c50f733
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-wpf-window-rendering"></a>風險降低：WPF 視窗呈現
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/18/2017
   
     -   若要在呈現期間，停用將視窗裁剪至監視器界限的行為，即為 `false`。  
   
--   將應用程式啟動時的 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 屬性設為 `true`。  
+-   方法是在應用程式啟動時，將 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 屬性設定為 `true`。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

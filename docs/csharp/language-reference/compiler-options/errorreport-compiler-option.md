@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 34e7e3b8c6a9f645ec1b359095c2d289afd1370a
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (C# 編譯器選項)
@@ -75,15 +76,15 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性]**** 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1.  開啟專案的 [屬性] 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2.  按一下 [建置]**** 屬性頁面。  
+2.  按一下 [建置] 屬性頁面。  
   
 3.  按一下 [ **進階** ] 按鈕。  
   
 4.  修改**報告編譯器內部錯誤**屬性。  
   
- 如需如何以程式設計方式設定此編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>。  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ac8a0f8f3889a9de9fbb6a43241c5ab855e938ab
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 692e0a53391556c6327e493d3d45e811db4cfdb7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Visual Basic 程式設計人員的其他資源
@@ -94,7 +95,7 @@ ms.lasthandoff: 03/13/2017
 |詞彙|定義|  
 |----------|----------------|  
 |[Microsoft 說明和支援](http://go.microsoft.com/fwlink/?LinkID=108287)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|  
-|[Microsoft Connect](http://connect.microsoft.com/)|可讓您提報 Visual Studio 相關的 Bug 給 Microsoft，或提供建議。 選擇 [說明]**** 功能表上的 [呈報錯誤]****，也可以呈報錯誤。|  
+|[Microsoft Connect](http://connect.microsoft.com/)|可讓您提報 Visual Studio 相關的 Bug 給 Microsoft，或提供建議。 選擇 [說明] 功能表上的 [呈報錯誤]，也可以呈報錯誤。|  
   
 ## <a name="third-party-resources"></a>協力廠商資源  
  MSDN 網站提供目前協力廠商網站和您可能會感興趣的新聞群組的資訊。 如需最新的可用資源清單，請參閱 [MSDN Visual Basic 社群網站](http://go.microsoft.com/fwlink/?LinkID=77372)。  

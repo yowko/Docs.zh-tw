@@ -21,10 +21,11 @@ caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d6313cea51b98b3b19363f3c465e5adf241ab3d4
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 46a0ccb9db4d468e68b1e8d1d278308e6e87e85e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>全球化和當地語系化 .NET Framework 應用程式

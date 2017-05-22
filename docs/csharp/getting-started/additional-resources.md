@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7810948b8ee549d05d7e795f89822db2fdfd1648
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="additional-resources-for-visual-c-programmers"></a>Visual C# 程式設計人員的其他資源
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
  提供 C# IDE 相關討論的論壇。  
   
  [MSDN 論壇](http://go.microsoft.com/fwlink/?LinkId=157697)  
- 提供論壇相關資訊，您可以在這些論壇中張貼問題和解答，也可以檢視和搜尋現有使用者產生的說明內容。 您也可以透過按一下 [說明]**** 功能表中的 [MSDN 論壇]****，存取 MSDN 論壇。  
+ 提供論壇相關資訊，您可以在這些論壇中張貼問題和解答，也可以檢視和搜尋現有使用者產生的說明內容。 您也可以透過按一下 **[說明]** 功能表中的 **[MSDN 論壇]**，存取 MSDN 論壇。  
   
 ### <a name="chats-and-discussion-groups"></a>聊天室和討論群組  
  [MSDN 討論群組](http://go.microsoft.com/fwlink/?LinkId=145961)  
@@ -79,7 +80,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="support"></a>支援  
  [提報 Bug 或建議](http://go.microsoft.com/fwlink/?LinkID=79804)  
- 可讓您提報 Visual Studio 相關的 Bug 給 Microsoft，或提供建議。 按一下 [說明]**** 功能表中的 [報告錯誤]****，也可以回報 Bug。  
+ 可讓您提報 Visual Studio 相關的 Bug 給 Microsoft，或提供建議。 按一下 **[說明]** 功能表中的 **[報告錯誤]**，也可以回報 Bug。  
   
 ## <a name="third-party-resources"></a>協力廠商資源  
  MSDN 網站提供目前協力廠商網站和您可能會感興趣的新聞群組的資訊。 如需最新的可用資源清單，請參閱 [MSDN C# 社群網站](http://go.microsoft.com/fwlink/?LinkId=165945)。  

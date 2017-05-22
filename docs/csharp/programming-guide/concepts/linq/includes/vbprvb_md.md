@@ -14,9 +14,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b133c07b3eae0749f5e67021fb33e0bea40c1f41
+ms.sourcegitcommit: b828bb1d6c8fb750ad9ef34f8a7a1b7d2574f4c6
+ms.openlocfilehash: ebd596585bb442b739f73854040c5e1b881562b7
 ms.contentlocale: zh-tw
 
 ---
-Visual C# 2010
+Visual Basic

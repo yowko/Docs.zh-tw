@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/18/2017
   
 1.  應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域。  
   
-2.  藉由呼叫 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 或 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName> 等方法，將某些類型明確加入 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 中。 這些類型並未標示為可序列化，而且未儲存在全域組件快取中。  
+2.  某些類型透過呼叫 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 這類方法明確加入至 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>。 這些類型並未標示為可序列化，而且未儲存在全域組件快取中。  
   
 3.  在非預設應用程式定義域中執行的程式碼之後就會嘗試從組態檔讀取值，或使用 XML 將物件還原序列化。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="mitigation"></a>緩和  
  若要解決這個問題，請執行下列動作  
   
-1.  尋找擲回例外狀況時，在呼叫堆疊上的 `get_Evidence` 呼叫。 例外狀況可以是任一例外狀況的大型子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
+1.  尋找擲回例外狀況時，在呼叫堆疊上的 `get_Evidence` 呼叫。 例外狀況可以是例外狀況的任一個大型子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
   
 2.  找出應用程式中沒有任何物件加入至邏輯呼叫內容的位置，並且加入下列程式碼：  
   

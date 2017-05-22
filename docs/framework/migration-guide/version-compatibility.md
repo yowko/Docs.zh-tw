@@ -18,10 +18,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 09f682d9c3a1cf5d42bba878676d84b9328a1a81
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本相容性
