@@ -9,19 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-translationtype: Human Translation
-ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
-ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 1bef3c8b36218d0cb228e85ef2ccdffd9a2a1bd7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="unit-testing-in-net-core"></a>.NET Core 的單元測試
 
-作者 [Steve Smith](http://ardalis.com) 和 [Bill Wagner](https://github.com/BillWagner)
-
-.NET Core 在設計時就已將可測試性納入考量，因此您可以更輕鬆地針對應用程式建立單元測試。 這篇文章簡短介紹單元測試，以及它們和其他種類測試之間的差異。
-連結的資源會示範如何將測試專案新增至您的解決方案，然後使用命令列或 Visual Studio 來執行單元測試。
+.NET Core 在設計時就已將可測試性納入考量，因此您可以更輕鬆地針對應用程式建立單元測試。 這篇文章簡短介紹單元測試，以及它們和其他種類測試之間的差異。 連結的資源會示範如何將測試專案新增至您的解決方案，然後使用命令列或 Visual Studio 來執行單元測試。
 
 ## <a name="getting-started-with-testing"></a>開始測試
  
@@ -34,9 +32,8 @@ ms.lasthandoff: 04/05/2017
 
 進一步了解 .NET Core 專案的單元測試：
 
-請參閱這份[使用 xUnit 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-dotnet-test.md)。 
-
-XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Studio 中搭配使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
-
-如果您偏好使用 MSTest，請參閱這份[使用 MSTest 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-mstest.md)。
+* 請參閱這份[使用 xUnit 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-dotnet-test.md)。 
+* XUnit 小組已撰寫本教學課程以說明[如何在 .NET Core 和 Visual Studio 中搭配使用 xUnit](http://xunit.github.io/docs/getting-started-dotnet-core.html)。
+* 如果您偏好使用 MSTest，請參閱這份[使用 MSTest 和 .NET CLI 建立單元測試的逐步解說](unit-testing-with-mstest.md)。
+* 如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 

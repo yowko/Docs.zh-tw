@@ -38,6 +38,7 @@
 ## [單元測試](core/testing/index.md)
 ### [使用 dotnet test 及 xUnit 執行單元測試](core/testing/unit-testing-with-dotnet-test.md)
 ### [使用 dotnet test 及 MSTest 執行單元測試](core/testing/unit-testing-with-mstest.md)
+### [執行選擇性單元測試](core/testing/selective-unit-tests.md)
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支援](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
@@ -132,6 +133,7 @@
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
+## C# 概念
 ### [C# 型別系統](csharp/programming-guide/types/index.md)
 ### [命名空間](csharp/programming-guide/namespaces/index.md)
 ### [基本類型](csharp/basic-types.md)
@@ -184,11 +186,14 @@
 ## [F 的教學課程](fsharp/tour.md)
 
 <!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## 函式程式設計簡介
 ### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
+## 教學課程
 ### [開始使用](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 使用者入門](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+#### [開始使用 Visual Studio for Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
 #### [Visual Studio Code 和 Ionide 開始使用](fsharp/tutorials/getting-started/getting-started-vscode.md)
 #### [命令列工具開始使用](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
@@ -204,6 +209,7 @@
 #### [類型提供者安全性](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [類型提供者疑難排解](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+### 非同步和並行程式設計
 #### [非同步程式設計](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
 <!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
