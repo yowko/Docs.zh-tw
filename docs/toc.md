@@ -85,6 +85,7 @@
 # [.NET Framework 指南](framework/index.md)
 ## [新功能](framework/whats-new/)
 ## [開始使用](framework/get-started/)
+## [安裝指南 (英文)](framework/install/)
 ## [移轉手冊](framework/migration-guide/)
 ## [Docker 上的 .NET Framework 指南](framework/docker/index.md)
 ### [在容器中執行主控台應用程式](framework//docker/console.md)
@@ -185,10 +186,6 @@
 
 ## [F 的教學課程](fsharp/tour.md)
 
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## 函式程式設計簡介
-### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## 教學課程
 ### [開始使用](fsharp/tutorials/getting-started/index.md)
@@ -208,6 +205,11 @@
 #### [建立類型提供者](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [類型提供者安全性](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [類型提供者疑難排解](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
+
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## 函式程式設計簡介
+### [作為優先使用值的函式](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
 ### 非同步和並行程式設計
 #### [非同步程式設計](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
