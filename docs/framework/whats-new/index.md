@@ -17,31 +17,33 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: e36d3523a52def454e7ed0233f2179ab88ab3bcb
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/19/2017
 
 ---
+
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
-<a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：
+<a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
+ 
+[.NET Framework 4.7](#v47)   
+[.NET Framework 4.6.2](#v462)   
+[.NET Framework 4.6.1](#v461)   
+[.NET 2015 和 .NET Framework 4.6](#v46)   
+[.NET Framework 4.5.2](#v452)   
+[.NET Framework 4.5.1](#v451)   
+[.NET Framework 4.5](#core)   
 
- [.NET Framework 4.7](#v47)   
- [.NET Framework 4.6.2](#v462)   
- [.NET Framework 4.6.1](#v461)   
- [.NET 2015 和 .NET Framework 4.6](#v46)   
- [.NET Framework 4.5.2](#v452)   
- [.NET Framework 4.5.1](#v451)   
- [.NET Framework 4.5](#core)   
-
- 此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。 如需 .NET Framework 的一般資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。 若要了解支援的平台，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md)。 如需下載連結和安裝指示，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。
+此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。 如需 .NET Framework 的一般資訊，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。 若要了解支援的平台，請參閱[系統需求](~/docs/framework/get-started/system-requirements.md)。 如需下載連結和安裝指示，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。
 
 > [!NOTE]
->  .NET Framework 小組也會不定期隨著 NuGet 發行相關功能，以擴充平台支援並引進新功能，例如不可變的集合和支援 SIMD 的向量類型。 如需詳細資訊，請參閱[其他類別庫和 API](../additional-apis/index.md) 以及 [.NET Framework 和不定期發行](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 請參閱 .NET Framework 的 [NuGet 套件完整清單](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或訂閱[我們的摘要](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
+> .NET Framework 小組也會不定期隨著 NuGet 發行相關功能，以擴充平台支援並引進新功能，例如不可變的集合和支援 SIMD 的向量類型。 如需詳細資訊，請參閱[其他類別庫和 API](../additional-apis/index.md) 以及 [.NET Framework 和不定期發行](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。 請參閱 .NET Framework 的 [NuGet 套件完整清單](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)，或訂閱[我們的摘要](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。
 
 <a name="v47"></a> 
 ## <a name="introducing-the-net-framework-47"></a>.NET Framework 4.7 簡介
- .NET Framework 4.7 建置於 .NET Framework 4.6、4.6.1 和 4.6.2 的基礎上，加入許多新的修正和多項新功能，同時保有產品的高穩定性。
+
+.NET Framework 4.7 建置於 .NET Framework 4.6、4.6.1 和 4.6.2 的基礎上，加入許多新的修正和多項新功能，同時保有產品的高穩定性。
 
 ### <a name="downloading-and-installing-the-net-framework-47"></a>下載並安裝 .NET Framework 4.7
  
@@ -159,7 +161,8 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=fullName> 類別中的�
 
 <a name="v462"></a> 
 ## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 的新功能
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包含下列領域的新功能：
+
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包含下列領域的新功能：
 
 - [ASP.NET](#ASPNET462)
 
@@ -219,9 +222,9 @@ End Class
 
  然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。 檔案必須位於 `App.LocalResources` 資料夾中。 例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰
 
-|名稱|值|
-|----------|-----------|
-|The rating must be between 1 and 10.|La note doit être comprise entre 1 et 10.|
+| 名稱                                 | 值                                     |
+| ------------------------------------ | ----------------------------------------- |
+| The rating must be between 1 and 10. | La note doit être comprise entre 1 et 10. |
 
  此檔案即可
 
@@ -231,12 +234,10 @@ End Class
  ASP.NET 現在可允許使用工作傳回方法，搭配工作階段狀態存放區提供者，藉此可讓 ASP.NET 應用程式獲得非同步處理的延展性優勢。 為了支援工作階段狀態存放區提供者的非同步作業，ASP.NET 包含新介面 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>，它繼承自 <xref:System.Web.IHttpModule>，可讓開發人員實作自己的工作階段狀態模組和非同步工作階段存放區提供者。 介面定義如下：
 
 ```csharp
-
 public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
-
 ```
 
  此外，<xref:System.Web.SessionState.SessionStateUtility> 類別包含兩個新方法：<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 和 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>，它們可用來支援非同步作業。
