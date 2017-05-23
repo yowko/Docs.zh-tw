@@ -34,19 +34,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 362745101d1a8f7dd61b5e3aabe1c27190c46c07
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ea4f6ebfaf06a8b2b5d161d9986eebd28f50d5b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>如何：在 Visual Basic 中從文字檔讀取
-`My.Computer.FileSystem` 物件的 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 方法可讓您從文字檔讀取。 如果檔案的內容是使用 ASCII 或 UTF-8 之類的編碼方式，則可以指定檔案編碼方式。  
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 物件的 `My.Computer.FileSystem` 方法允許您從文字檔讀取。 如果檔案的內容是使用 ASCII 或 UTF-8 之類的編碼方式，則可以指定檔案編碼方式。  
   
  如果您是從含擴充字元的檔案讀取，您將需要指定檔案的編碼方式。  
   
 > [!NOTE]
->  若要一次讀取檔案中的一行文字，請使用 `My.Computer.FileSystem` 物件的 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> 方法。 `OpenTextFileReader` 方法會傳回 <xref:System.IO.StreamReader> 物件。 您可以使用 `StreamReader` 物件的 <xref:System.IO.StreamReader.ReadLine%2A> 方法一次讀取檔案中的一行。 您可以使用 `StreamReader` 物件的 <xref:System.IO.StreamReader.EndOfStream%2A> 方法測試檔案的結尾。  
+>  若要一次讀取檔案中的一行文字，請使用 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> 物件的 `My.Computer.FileSystem` 方法。 `OpenTextFileReader` 方法會傳回 <xref:System.IO.StreamReader> 物件。 您可以使用 <xref:System.IO.StreamReader.ReadLine%2A> 物件的 `StreamReader` 方法，以一次讀取檔案中的一行。 您可以使用 <xref:System.IO.StreamReader.EndOfStream%2A> 物件的 `StreamReader` 方法測試檔案的結尾。  
   
 ### <a name="to-read-from-a-text-file"></a>若要從文字檔讀取  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 03/13/2017
   
 -   檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   另一個處理序正在使用檔案，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
+-   檔案正由另一個程序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 03/13/2017
   
 -   沒有足夠的記憶體可將字串寫入緩衝區 (<xref:System.OutOfMemoryException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
  請勿根據檔案名稱來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 原始程式檔 (Source File)。  
   
