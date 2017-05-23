@@ -14,9 +14,10 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 783dd4fb28f1590722833ce9a456b9c2c76ecd80
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -36,15 +37,14 @@ Memory gates checking failed because the free memory (nnnn bytes) is less than n
  若要還原成忽略 [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 設定的前一個行為，請依照下列方式修改 web.config 檔案：  
   
 ```  
-  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"   
                            minFreeMemoryPercentageToActivateService="0">  
    <serviceActivations>  
    ...  
    </serviceActivations>  
 </serviceHostingEnvironment>  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+

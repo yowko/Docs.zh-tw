@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 09489e2dabd34da0446a623e91cd85de35c3c70b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -29,10 +30,8 @@ ms.lasthandoff: 03/13/2017
 使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../../csharp/language-reference/keywords/from-clause.md) 看起來應該如下：  
   
 ```  
-  
 var query = from Student s in arrList  
 ...  
-  
 ```  
   
  藉由指定範圍變數的類型，您就可以將 <xref:System.Collections.ArrayList> 中的每個項目轉換為 `Student`。  
@@ -103,3 +102,4 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

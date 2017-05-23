@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: afedd3d99aea9f73d175fd2957a7d586ebce6d72
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,6 @@ ms.lasthandoff: 03/13/2017
  您可以在類型或成員的宣告中使用 `unsafe` 修飾詞。 類型或成員的整個文字範圍因此視為不安全內容。 例如，下列是使用 `unsafe` 修飾詞所宣告的方法︰  
   
 ```  
-  
       unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
@@ -52,14 +52,12 @@ ms.lasthandoff: 03/13/2017
  不安全內容的範圍是從參數清單延伸到方法結尾，因此也可以在參數清單中使用指標︰  
   
 ```  
-  
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
 ```  
   
  您也可以使用不安全區塊，以在這個區塊內使用不安全程式碼。 例如:   
   
 ```  
-  
       unsafe  
 {  
     // Unsafe context: can use pointers here.  
@@ -81,3 +79,4 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [不安全的程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [固定大小的緩衝區](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+

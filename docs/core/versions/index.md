@@ -9,9 +9,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
 ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/05/2017
 
 ---
@@ -151,6 +152,5 @@ GitHub 上的 .NET Core 儲存機制每天都有認可和 PR，進而產生許�
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 </Project>
-
 ```
 

@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3eee008f737bf625023b6e4d58e1df7d282148d3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -64,10 +65,10 @@ Namespace StringUtility
         End Sub  
     End Module  
 End Namespace  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
  [擴充方法](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
  [Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md)
+

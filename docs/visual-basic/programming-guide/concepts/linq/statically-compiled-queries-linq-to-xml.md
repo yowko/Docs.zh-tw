@@ -15,9 +15,10 @@ ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2ea8e71acf861b93a21296c74254b3ca4d977d0a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 
@@ -43,7 +44,6 @@ Dim list1 = From el In po.Descendants("Address")
 For Each el In list1  
     Console.WriteLine(el)  
 Next  
-  
 ```  
   
  這則範例中的查詢運算式由編譯器重新撰寫成以方法為基礎的查詢語法。 下列範例 (使用以方法為基礎的查詢語法所撰寫) 會與先前的範例產生相同的結果：  
@@ -87,7 +87,6 @@ For Each n As Xml.XmlNode In nl
     Console.WriteLine(n.OuterXml)  
 Next  
 reader.Close()  
-  
 ```  
   
  此查詢會傳回相同的輸出做為使用 LINQ to XML; 範例唯一的差異是 LINQ to XML 縮排列印的 XML，而<xref:System.Xml.XmlDocument>則否。</xref:System.Xml.XmlDocument>  
@@ -106,3 +105,4 @@ reader.Close()
   
 ## <a name="see-also"></a>另請參閱  
  [效能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

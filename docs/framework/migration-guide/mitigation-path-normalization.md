@@ -15,9 +15,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 0579bb975a62e512062b10d39c2967cdcd23438f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -57,22 +58,19 @@ ms.lasthandoff: 04/18/2017
  以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本為目標的應用程式可透過在應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段加入下列內容來選擇退出此變更，以使用舊版正規化：  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
 </runtime>  
-  
 ```  
   
  以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 或舊版為目標但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更新版本上執行的應用程式，只要在應用程式組態檔的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段加入下列程式行，就能啟用路徑正規化的變更：  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+

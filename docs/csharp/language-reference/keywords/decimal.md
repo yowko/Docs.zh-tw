@@ -48,7 +48,6 @@ ms.lasthandoff: 05/10/2017
  如果要將數值實數常值視為 `decimal` 處理，請使用後置字元 m 或 M，例如：  
   
 ```  
-  
 decimal myMoney = 300.5m;  
 ```  
   
@@ -58,14 +57,12 @@ decimal myMoney = 300.5m;
  整數類資料類型會隱含轉換成 `decimal`，而且結果會判斷值為 `decimal`。 因此，您可以使用整數常值來初始化 Decimal 變數，而不需要後置字元，如下所示：  
   
 ```  
-  
 decimal myMoney = 300;  
 ```  
   
  浮點類型和 `decimal` 類型之間沒有隱含轉換，因此，這兩種類型之間必須使用轉型進行轉換。 例如：  
   
 ```  
-  
       decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
@@ -92,7 +89,6 @@ Console.WriteLine(dec + dub);
 // You can fix the error by using explicit casting of either operand.  
 Console.WriteLine(dec + (decimal)dub);  
 Console.WriteLine((double)dec + dub);  
-  
 ```  
   
  結果會是下列錯誤：  
@@ -121,3 +117,4 @@ Console.WriteLine((double)dec + dub);
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
+

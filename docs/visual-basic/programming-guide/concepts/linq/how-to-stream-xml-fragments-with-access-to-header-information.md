@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -218,7 +219,6 @@ Public Class StreamCustomerItemEnumerator
 #End Region  
   
 End Class  
-  
 ```  
   
  此程式碼會產生下列輸出：  
@@ -250,3 +250,4 @@ End Class
   
 ## <a name="see-also"></a>另請參閱  
  [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b4aa3c7c54e5e4d53975262adbbd9b54c701a69e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ public void SampleMethod()
 {  
     // Body of the method.  
 }  
-  
 ```  
   
  `void` 也可用於不安全的內容中，以宣告未知類型的指標。 如需詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)。  
@@ -64,3 +64,4 @@ public void SampleMethod()
  [實值型別](../../../csharp/language-reference/keywords/value-types.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

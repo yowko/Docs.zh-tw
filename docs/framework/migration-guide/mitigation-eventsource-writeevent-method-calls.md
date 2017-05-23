@@ -14,9 +14,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: cde809989d89c10caeb97ec853c8649a108cd72d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -27,13 +28,11 @@ ms.lasthandoff: 04/18/2017
  以下列方式定義的 ETW 事件方法會中斷協定：  
   
 ```  
-  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info2(string message)  
 {  
    base.WriteEvent(2, message, "-");  
 }  
-  
 ```  
   
  違反此協定時，如果 <xref:System.Diagnostics.Tracing.EventListener> 物件讀取處理中 <xref:System.Diagnostics.Tracing.EventSource> 資料時，在執行階段會擲回 <xref:System.IndexOutOfRangeException> 例外狀況。  
@@ -41,13 +40,11 @@ public void Info2(string message)
  這個 ETW 事件方法的定義應該遵循這個模式：  
   
 ```  
-  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info2(string message)  
 {  
    base.WriteEvent(2, message);  
 }  
-  
 ```  
   
 ## <a name="mitigation"></a>緩和  
@@ -56,7 +53,6 @@ public void Info2(string message)
  您必須定義兩個用於呼叫 <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 方法的方法，將需要變更的程式碼數量降到最低，如下所示：  
   
 ```  
-  
 [NonEvent]  
 public void Info2(string message)  
 {  
@@ -67,8 +63,8 @@ public void Info2Internal(string message, string prefix)
 {  
    WriteEvent(2, message, prefix);  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+

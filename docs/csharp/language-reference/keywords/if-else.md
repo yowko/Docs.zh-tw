@@ -34,9 +34,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e4016ee35ed487fd2ca48074d2e483778719dff3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -50,7 +51,6 @@ ms.lasthandoff: 03/13/2017
  如下列範例所示， `if` 陳述式在 C# 中可能有兩種形式。  
   
 ```csharp  
-  
 // if-else statement  
 if (condition)  
 {  
@@ -160,3 +160,4 @@ if (!(m >= n || m >= p))
  [?: 運算子](../../../csharp/language-reference/operators/conditional-operator.md)   
  [if-else Statement (C++)](https://docs.microsoft.com/cpp/cpp/if-else-statement-cpp) (if-else 陳述式 (C++))   
  [switch](../../../csharp/language-reference/keywords/switch.md)
+

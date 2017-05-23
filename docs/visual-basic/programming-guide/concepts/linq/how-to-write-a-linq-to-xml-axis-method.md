@@ -15,9 +15,10 @@ ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 6749c2eee72cdc24c5dc3957e00a8bab54ce226b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 
@@ -213,7 +214,6 @@ Public Module MyExtensions
     End Function  
   
 End Module  
-  
 ```  
   
  此程式碼會產生下列輸出：  
@@ -231,3 +231,4 @@ End Module
   
 ## <a name="see-also"></a>另請參閱  
  [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

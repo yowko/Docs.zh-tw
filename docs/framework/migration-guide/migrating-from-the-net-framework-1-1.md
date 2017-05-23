@@ -17,9 +17,10 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -37,7 +38,6 @@ ms.lasthandoff: 04/18/2017
           <supportedRuntime version="v4.0"/>  
        </startup>  
     </configuration>  
-  
     ```  
   
 -   您可以使用以 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯您的方案，您可以在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 中開啟此方案，並且使用 [專案相容性] 對話方塊來將此方案和專案檔從 Visual Studio 2003 使用的格式轉換成 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 使用的 Microsoft Build Engine (MSBuild) 格式。  
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/18/2017
       <CompatSortNLSVersion enabled="4096"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
  但是在某些情況下，您可能必須修改原始程式碼及重新編譯應用程式。  
@@ -76,3 +75,4 @@ ms.lasthandoff: 04/18/2017
  對於重新設定目標的應用程式和重新編譯的應用程式而言，已被取代的型別和成員的影響有些不同。 使用過時的型別和成員將不會影響重新設定目標的應用程式，除非已經從其組件中實際移除過時的型別或成員。 重新編譯使用過時型別或成員的應用程式通常會產生編譯器警告，而不是編譯器錯誤。 但是在某些情況下，它會產生編譯器錯誤，而且使用過時型別或成員的程式碼無法成功編譯。 在此情況下，您必須重新撰寫呼叫過時型別或成員的原始程式碼，然後重新編譯應用程式。 如需過時類型和成員的詳細資訊，請參閱[類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)。  
   
  若要評估自從 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 發行之後已被取代之類型和成員的影響，請參閱[類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)。 針對 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 檢閱過時的型別和成員清單。
+

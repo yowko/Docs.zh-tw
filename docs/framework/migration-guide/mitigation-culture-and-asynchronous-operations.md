@@ -15,9 +15,10 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c2dbf60cacf47be3c448b5683b771840ef85ddaf
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -35,13 +36,11 @@ ms.lasthandoff: 04/18/2017
 -   在應用程式的組態檔中加入下列 `AppContextSwitchOverrides` 元素，以選擇加入不要流動 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 的舊有行為：  
   
     ```xml  
-  
     <configuration>  
         <runtime>  
             <AppContextSwitchOverrides value="Switch.System.Globalization.NoAsyncCurrentCulture=true" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   以程式設計方式設定下列相容性參數，以選擇加入不要流動 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 的舊有行為：  
@@ -56,3 +55,4 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>另請參閱  
  [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

@@ -50,7 +50,6 @@ ms.lasthandoff: 03/24/2017
  在下列程式碼中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 會傳回 `Task\<byte[]>`、`getContentsTask`。 這個工作可保證工作完成時，一定會產生實際位元組陣列。 `await` 運算子會套用至 `getContentsTask` 以暫停在 `SumPageSizesAsync` 中執行，直到 `getContentsTask` 完成。 同時，控制權會返回 `SumPageSizesAsync` 的呼叫端。 當 `getContentsTask` 完成之後，`await` 運算式會評估為位元組陣列。  
   
 ```csharp  
-  
 private async Task SumPageSizesAsync()  
 {  
     // To use the HttpClient type in desktop apps, you must include a using directive and add a   
@@ -64,7 +63,6 @@ private async Task SumPageSizesAsync()
     //byte[] urlContents = await client.GetByteArrayAsync(url);  
     // . . .  
 }  
-  
 ```  
   
 > [!IMPORTANT]
@@ -78,7 +76,6 @@ TResult result = await AsyncMethodThatReturnsTaskTResult();
   
 // Keyword await used with a method that returns a Task.  
 await AsyncMethodThatReturnsTask();  
-  
 ```  
   
  `await` 運算式不會封鎖其執行所在的執行緒。 但是它會造成編譯器將其餘非同步方法註冊為所等候工作的接續。 控制權接著會返回非同步方法的呼叫端。 當工作完成時，它會叫用其接續，並從中斷處繼續執行非同步方法。  
@@ -100,7 +97,6 @@ await AsyncMethodThatReturnsTask();
  下列 Windows Form 範例說明如何在非同步方法 `WaitAsynchronouslyAsync` 中使用 `await`。 請對照該方法的行為與 `WaitSynchronously` 的行為。 若未將 `await` 運算子套用至工作，儘管在定義中使用 `async` 修飾詞並在主體中呼叫 <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>，`WaitSynchronously` 仍會以同步方式執行。  
   
 ```csharp  
-  
 private async void button1_Click(object sender, EventArgs e)  
 {  
     // Call the method that runs asynchronously.  
@@ -137,3 +133,4 @@ public async Task<string> WaitSynchronously()
  [使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)   
  [逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [async](../../../csharp/language-reference/keywords/async.md)
+

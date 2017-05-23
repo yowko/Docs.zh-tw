@@ -42,7 +42,6 @@ ms.lasthandoff: 05/15/2017
 使用 `class` 關鍵字宣告類別，如下列範例所示︰  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -122,3 +121,4 @@ Console.Write(child1.name);   // Error
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
+

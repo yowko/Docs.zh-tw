@@ -41,7 +41,6 @@ ms.lasthandoff: 04/18/2017
      下列組態檔示範如何進行：  
   
     ```xml  
-  
     <configuration>  
         <system.serviceModel>  
             <bindings>  
@@ -58,7 +57,6 @@ ms.lasthandoff: 04/18/2017
             </bindings>  
         </system.ServiceModel>  
     </configuration>  
-  
     ```  
   
 -   如果繫結在原始程式碼中不是以動態方式設定，請更新原始程式碼中的 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性，以使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) 或舊版的通訊協定。  

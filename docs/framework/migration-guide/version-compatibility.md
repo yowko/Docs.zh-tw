@@ -35,14 +35,12 @@ ms.lasthandoff: 05/22/2017
  若要定義應用程式執行所在的特定版本，請將一個或多個 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 項目新增至應用程式的組態檔。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。  
   
 ```xml  
-  
 <configuration>  
    <startup>  
       <supportedRuntime version="v2.0.50727" />  
       <supportedRuntime version="v4.0" />  
    </startup>  
 </configuration>  
-  
 ```  
   
  如需詳細資訊，請參閱[如何：設定應用程式以支援 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
@@ -98,3 +96,4 @@ ms.lasthandoff: 05/22/2017
  [應用程式相容性](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Microsoft .NET Framework 支援週期原則](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
  [.NET Framework 4 移轉問題](http://go.microsoft.com/fwlink/p/?LinkId=248212)
+

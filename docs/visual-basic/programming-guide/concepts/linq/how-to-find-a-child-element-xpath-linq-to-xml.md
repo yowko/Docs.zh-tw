@@ -15,9 +15,10 @@ ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b54bc8a2b7821399857f716c35a651c24de10f3f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 
@@ -50,7 +51,6 @@ Else
     Console.WriteLine("Results differ")  
 End If  
 Console.WriteLine(el1)  
-  
 ```  
   
  這個範例會產生下列輸出：  
@@ -62,3 +62,4 @@ Results are identical
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to XML 的 XPath 使用者 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

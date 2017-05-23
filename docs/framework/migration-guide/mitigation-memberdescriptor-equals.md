@@ -36,17 +36,14 @@ ms.lasthandoff: 04/18/2017
 -   您可以將下列內容加入至 app.config 檔案的 [\<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇退出這項變更而不修改您的原始程式碼：  
   
     ```xml  
-  
     <runtime>  
         <AppContextSwitchOverrides value = "Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />  
      </runtime>  
-  
     ```  
   
 -   您可以修改原始程式碼以還原舊版的行為，方法是在呼叫 <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> 方法後，透過手動方式來比較 <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> 與 <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> 屬性，如以下的程式碼片段所示。  
   
     ```csharp  
-  
     if (memberDescriptor1.Equals(memberDescriptor2) &   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)) {  
           // Code to execute if true.  
@@ -54,28 +51,23 @@ ms.lasthandoff: 04/18/2017
     else {  
           // Code to execute if false.     
     }  
-  
     ```  
   
     ```  
-  
     If memberDescriptor1.Equals(memberDescriptor2) And   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)  
           // Code to execute if True.  
     Else  
           // Code to execute if False.     
     End If  
-  
     ```  
   
  對於以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和舊版本為目標的應用程式，您可以在 app.config 檔案中加入下列值以啟用這項變更︰  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

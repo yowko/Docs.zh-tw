@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7be76ad572be522071d9e8c2ae9cf8c770fd1fd0
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -319,7 +320,6 @@ TOTAL bytes returned:  890591
  下列輸出顯示當使用者只選擇 [開始]**** 按鈕一次時的結果。 字母標籤 A，表示第一次選擇 [開始]**** 按鈕時的結果。 數字顯示下載目標清單中的 URL 順序。  
   
 ```  
-  
 #Starting group A.  
 #Task assigned for group A.  
   
@@ -391,7 +391,6 @@ C-8. msdn.microsoft.com/library/ff730837.aspx               148010
 TOTAL bytes returned:  920526  
   
 #Group C is complete.  
-  
 ```  
   
  群組 B 和 C 在群組 A 完成前啟動，但每個群組的輸出會單獨顯示。 先顯示群組 A 的所有輸出，接著是群組 B 的所有輸出，然後是群組 C 的所有輸出。應用程式一律依序顯示群組，且對每個群組，一律會根據 URL 在 URL 清單中的出現順序，顯示個別網站的相關資訊。  
@@ -732,3 +731,4 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 ## <a name="see-also"></a>另請參閱  
  [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+
