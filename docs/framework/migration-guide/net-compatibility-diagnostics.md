@@ -479,7 +479,7 @@ ms.lasthandoff: 05/22/2017
 |範圍|Edge|  
 |版本|4.5|  
 |類型|執行階段|  
-|受影響的 API|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|受影響的 API|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |分析器|CD0043|  
   
 <a name="diagnostic44"></a>   
