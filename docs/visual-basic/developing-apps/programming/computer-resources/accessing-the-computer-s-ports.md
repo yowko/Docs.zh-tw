@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 20e04ca70444de99076d3d59f98f19ee862a244a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>存取電腦的連接埠 (Visual Basic)
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
  描述 `SerialPortNames` 屬性，取得電腦上序列埠名稱的集合。  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- 描述 `OpenSerialPort` 方法，以建立和開啟 <xref:System.IO.Ports.SerialPort?displayProperty=fullName> 物件。  
+ 描述 `OpenSerialPort` 方法，此方法會建立並開啟 <xref:System.IO.Ports.SerialPort?displayProperty=fullName> 物件。  
   
 ## <a name="related-sections"></a>相關章節  
  <xref:System.IO.Ports.SerialPort>  
