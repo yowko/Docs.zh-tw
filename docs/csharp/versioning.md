@@ -10,9 +10,10 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: bfa94e6d994f63adb13bdeea9b23f7130799b438
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---

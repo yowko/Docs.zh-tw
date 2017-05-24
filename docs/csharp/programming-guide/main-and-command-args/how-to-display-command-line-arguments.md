@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e46860ecc2f5062abb440a764443ecee19c5153d
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---

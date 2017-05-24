@@ -11,9 +11,10 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 0ee055b8e65f8aa48f1211871719b9e638e71ed1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
