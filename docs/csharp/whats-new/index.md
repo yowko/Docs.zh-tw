@@ -1,5 +1,5 @@
 ---
-title: "C# 的新功能 | C# 指南"
+title: "C# 的新功能 - C# 指南 | Microsoft Docs"
 description: "C# 語言的進化方式"
 keywords: "C#, 最新功能, 新功能, Roslyn"
 author: BillWagner
@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 4ff34455c7cc6135f7324b18d3aebca576d70edf
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: f337a916f0a15c6e81b228ec378a34e97055f68e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
