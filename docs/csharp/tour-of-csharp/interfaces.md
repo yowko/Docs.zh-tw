@@ -20,9 +20,9 @@ ms.lasthandoff: 03/13/2017
 
 # <a name="interfaces"></a>介面
 
-「介面」******定義可由類別和結構實作的合約。 介面可以包含方法、屬性、事件和索引子。 介面不提供它所定義之成員的實作 (它只會指定必須由類別提供的成員或實作介面的結構)。
+***「介面」*** 定義可由類別和結構實作的合約。 介面可以包含方法、屬性、事件和索引子。 介面不提供它所定義之成員的實作 (它只會指定必須由類別提供的成員或實作介面的結構)。
 
-介面可以採用「多重繼承」******。 在下列範例中，介面 `IComboBox` 同時繼承自 `ITextBox` 和 `IListBox`。
+介面可以採用 ***「多重繼承」***。 在下列範例中，介面 `IComboBox` 同時繼承自 `ITextBox` 和 `IListBox`。
 
 [!code-csharp[InterfacesOne](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L5-L17)]
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/13/2017
 
 [!code-csharp[InterfacesFour](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L40-L42)]
 
-在上一個 `EditBox` 類別中，來自 `IControl` 介面的 `Paint` 方法和來自 `IDataBound` 介面的 `Bind` 方法，都使用公用成員來實作。 C# 也支援明確「介面成員實作」******，啟用類別或結構以避免將成員設為公用。 明確介面成員實作是使用介面成員完整名稱來撰寫。 例如，`EditBox` 類別可以使用明確介面成員實作來實作 `IControl.Paint` 和 `IDataBound.Bind` 方法，如下所示。
+在上一個 `EditBox` 類別中，來自 `IControl` 介面的 `Paint` 方法和來自 `IDataBound` 介面的 `Bind` 方法，都使用公用成員來實作。 C# 也支援明確***「介面成員實作」***，啟用類別或結構以避免將成員設為公用。 明確介面成員實作是使用介面成員完整名稱來撰寫。 例如，`EditBox` 類別可以使用明確介面成員實作來實作 `IControl.Paint` 和 `IDataBound.Bind` 方法，如下所示。
 
 [!code-csharp[InterfacesFive](../../../samples/snippets/csharp/tour/interfaces/Program.cs#L60-L64)]
 

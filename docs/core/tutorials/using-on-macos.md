@@ -34,27 +34,27 @@ ms.lasthandoff: 03/07/2017
 
 本教學課程中的原始碼來源位於 [GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。
 
-啟動 Visual Studio Code。 按 Ctrl + '\`' (後引號字元)，在 VS Code 中開啟內嵌的終端機。 (或者，您想要的話，可以使用不同的終端機視窗。)
+啟動 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (後引號字元)，在 VS Code 中開啟內嵌的終端機。 (或者，您想要的話，可以使用不同的終端機視窗。)
 
 在我們完成時，您將建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 
 
-現在就開始建立這些資料夾。 在終端機中，建立 'golden' 目錄。 在 VS Code 中，開啟 *golden* 目錄。 這個目錄是您方案的根目錄。 執行 [`dotnet new`](../tools/dotnet-new.md) 命令，建立新的方案：
+現在就開始建立這些資料夾。 在終端機中，建立 *golden* 目錄並切換至 *golden* 目錄。 在 VS Code 中，開啟 *golden* 目錄。 這個目錄是您方案的根目錄。 執行 [`dotnet new`](../tools/dotnet-new.md) 命令，建立新的方案：
 
-```
+```console
 dotnet new sln
 ```
 
 此命令會建立整個方案的 *golden.sln* 檔案。
 
-您的下一個工作是建立程式庫。 在終端機視窗 (VS Code 中的內嵌終端機，或另一部終端機) 中，切換至 *golden/*，然後輸入命令：
+您的下一個工作是建立程式庫。 在終端機視窗 (VS Code 中的內嵌終端機，或另一部終端機) 中，然後輸入命令：
 
-```
+```console
 dotnet new classlib -o library
 ```
 
 這會在 *library* 目錄中建立一個程式庫專案，其中包含兩個檔案︰*library.csproj* 和 *Class1.cs*。 您想要在方案中包含該程式庫專案。 執行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，將新建立的 *library.csproj* 專案新增至方案：
 
-```
+```console
 dotnet sln add library/library.csproj
 ```
 
@@ -72,7 +72,7 @@ dotnet sln add library/library.csproj
 
 此程式庫專案將會利用 JSON 的物件表示法，因此請新增 `Newtonsoft.Json` NuGet 套件的參考。 `dotnet add` 命令會新增項目至專案。 若要將參考新增至 NuGet 套件，您可以使用 `package` 命令並指定套件的名稱。 
 
-```
+```console
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -115,7 +115,7 @@ namespace Library
 
 您必須為上述步驟中所撰寫的程式庫新增相依性節點。 `dotnet add reference` 命令可達成目的：
 
-```
+```console
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -157,7 +157,7 @@ xUnit 主控台測試執行器會執行一項測試，並回報它通過。
 
 您的主控台應用程式會依賴您在先前步驟中建置和測試的程式庫。 您需要藉由再次執行 `dotnet add reference` 來表示這點：
 
-```
+```console
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -180,13 +180,13 @@ using Library;
 ### <a name="debugging-your-application"></a>偵錯應用程式
 
 您可以在 VS Code 中使用 C# 延伸模組偵錯您的程式碼。
-按下 `F1` 開啟 VS Code 調色盤以安裝此延伸模組。 輸入 `ext install` 查看延伸模組的清單。 選取 C# 延伸模組。 (更多詳細資料位於 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) 頁面。)
+按下 <kbd>F1</kbd> 開啟 VS Code palette 以安裝此延伸模組。 輸入 `ext install` 查看延伸模組的清單。 選取 C# 延伸模組。 (更多詳細資料位於 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) 頁面。)
 
 安裝延伸模組之後，VS Code 將要求您重新啟動應用程式以載入新的延伸模組。 安裝延伸模組之後，您可以開啟 [偵錯工具] 索引標籤 (請參閱圖)。
 
 ![VS Code 偵錯工具](./media/using-on-macos/vscodedebugger.png)
 
-在 `Main` 中的 `WriteLine` 陳述式設定中斷點。 您可以按 `F9` 鍵，或在您要設定中斷點的該行左邊界按一下滑鼠按鈕。 在 VS Code 畫面左邊按 [偵錯] 圖示，開啟偵錯工具 (請參閱圖)。 然後，按下 [播放] 按鈕在偵錯工具中啟動應用程式。
+在 `Main` 中的 `WriteLine` 陳述式設定中斷點。 您可以按 <kbd>F9</kbd> 鍵，或在您要設定中斷點的該行左邊界按一下滑鼠按鈕。 在 VS Code 畫面左邊按 [偵錯] 圖示，開啟偵錯工具 (請參閱圖)。 然後，按下 [播放] 按鈕在偵錯工具中啟動應用程式。
 
 您應該會遇到中斷點。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確定實際答案為 42。
 

@@ -212,4 +212,3 @@ stringList.Add(4);
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
  [XML 資料型別轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)   
  [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
-
