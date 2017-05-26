@@ -43,7 +43,7 @@ ms.lasthandoff: 05/22/2017
   
  如需更多的介紹性概念範例，請參閱 [Visual C# 和 Visual Basic 使用者入門](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-and-run-a-console-application"></a>建立並執行主控台應用程式  
   

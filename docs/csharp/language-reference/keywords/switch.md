@@ -209,7 +209,7 @@ case null:
 請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
 
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 

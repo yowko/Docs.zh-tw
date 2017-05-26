@@ -68,7 +68,7 @@ ms.lasthandoff: 03/13/2017
  在泛型委派中，如果型別只用為方法傳回型別，不用於方法引數，則可以宣告為 Covariant。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [泛型介面中的變異數](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   

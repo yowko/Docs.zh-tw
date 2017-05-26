@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
   
  如需如何在 C# 中設定錯誤和警告選項的相關資訊，請參閱[專案設計工具、建置頁 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   

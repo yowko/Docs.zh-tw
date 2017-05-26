@@ -93,7 +93,7 @@ ms.lasthandoff: 05/22/2017
 -   [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

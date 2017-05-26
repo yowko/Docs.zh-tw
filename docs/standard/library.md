@@ -34,7 +34,7 @@ ms.lasthandoff: 05/11/2017
 
 下表列出所有 .NET Standard 版本和支援的平台：
 
-[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 若要尋找可作為您目標的最新 .NET Standard 版本，請執行下列操作：
 1. 尋找指出要作為您執行位置之 .NET 平台的資料列。

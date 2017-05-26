@@ -35,26 +35,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2acce259722005c5ef5a8fa54011ccb93aa1b369
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: bd37b52d12876dad6ec4b2a1bb34f4987f933c08
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>如何：在 Visual Basic 中下載檔案
-<xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。 根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。  
+<xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可用來下載遠端檔案，然後將它儲存至特定位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。 根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。  
   
  以下條件可能會造成例外狀況：  
   
 -   磁碟機名稱無效 (<xref:System.ArgumentException>)。  
   
--   未提供必要驗證 (<xref:System.UnauthorizedAccessException> 或 <xref:System.Security.SecurityException>)。  
+-   尚未提供必要的驗證 (<xref:System.UnauthorizedAccessException> 或 <xref:System.Security.SecurityException>)。  
   
 -   伺服器在指定的 `connectionTimeout` 內沒有回應 (<xref:System.TimeoutException>)。  
   
--   要求被網站拒絕 (<xref:System.Net.WebException>)。  
+-   網站拒絕此要求 (<xref:System.Net.WebException>)。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 > [!IMPORTANT]
 >  請勿根據檔案名稱來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。 檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。  
