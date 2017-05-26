@@ -17,10 +17,11 @@ caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: aa6ebe6c4ddc9b5cdec267cb2fc114440c189f0c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="application-development"></a>應用程式開發
@@ -87,9 +88,9 @@ ms.lasthandoff: 04/08/2017
   
  <xref:System.Windows.Window> 可建立一種特殊的視窗類型，稱為對話方塊。 您可以建立強制回應和非強制回應類型的對話方塊。  
   
- 為了方便、能重複使用以及跨應用程式提供一致的使用者體驗，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公開三個常用的 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 對話方塊︰<xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog> 和 <xref:System.Windows.Controls.PrintDialog>。  
+ 為了方便起見，以及能重複使用並跨應用程式提供一致的使用者體驗，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會公開三個常見的 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 對話方塊：<xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog> 和 <xref:System.Windows.Controls.PrintDialog>。  
   
- 訊息方塊是一種特殊的對話方塊類型，可將重要的文字資訊顯示給使用者，以及詢問簡單的「是/否/確定/取消」問題。 您可以使用 <xref:System.Windows.MessageBox> 類別，建立及顯示訊息方塊。  
+ 訊息方塊是一種特殊的對話方塊類型，可將重要的文字資訊顯示給使用者，以及詢問簡單的「是/否/確定/取消」問題。 您可以使用 <xref:System.Windows.MessageBox> 類別來建立及顯示訊息方塊。  
   
  如需詳細資訊，請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 04/08/2017
   
 -   編譯成獨立應用程式並由瀏覽視窗 (<xref:System.Windows.Navigation.NavigationWindow>) 裝載的頁面。  
   
--   由框架 (<xref:System.Windows.Controls.Frame>) 裝載並可能裝載於獨立頁面的頁面，或是編譯成 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或獨立應用程式的頁面。  
+-   由框架 (<xref:System.Windows.Controls.Frame>) 裝載的頁面，框架本身可以裝載於獨立頁面，或是編譯成 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 或獨立應用程式的頁面。  
   
  為了加速瀏覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作下列項目：  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 04/08/2017
   
  如需相關資訊，請參閱[瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也支援一種特殊的瀏覽類型，稱為結構化瀏覽。 結構化瀏覽可用來呼叫一或多個頁面，這些頁面會以與呼叫函式一致的結構化且可預期方式傳回資料。 此功能相依於 <xref:System.Windows.Navigation.PageFunction%601> 類別，[結構化瀏覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)中將進一步說明。 <xref:System.Windows.Navigation.PageFunction%601> 也可用來簡化瀏覽拓撲的建立，[瀏覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)中將進行說明。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也支援一種特殊的瀏覽類型，稱為結構化瀏覽。 結構化瀏覽可用來呼叫一或多個頁面，這些頁面會以與呼叫函式一致的結構化且可預期方式傳回資料。 此功能相依於 <xref:System.Windows.Navigation.PageFunction%601> 類別，這在[結構化巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)中將進一步說明。 <xref:System.Windows.Navigation.PageFunction%601> 也可用來簡化複雜瀏覽拓撲的建立，這在[巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)中將進行說明。  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>架設  
@@ -135,7 +136,7 @@ ms.lasthandoff: 04/08/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)|提供 <xref:System.Windows.Application> 類別的概觀，包括管理應用程式存留期、視窗、應用程式資源和瀏覽。|  
-|[WPF 中的視窗](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|提供有關在應用程式中管理視窗的詳細資訊，包括如何使用 <xref:System.Windows.Window> 類別和對話方塊。|  
+|[WPF 中的視窗](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|提供在應用程式中管理視窗的詳細資料，包括如何使用 <xref:System.Windows.Window> 類別和對話方塊。|  
 |[瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)|提供有關管理在應用程式頁面之間瀏覽的概觀。|  
 |[裝載](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|提供 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 的概觀。|  
 |[建置和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|描述如何建置及部署 WPF 應用程式。|  

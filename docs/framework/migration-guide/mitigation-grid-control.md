@@ -17,10 +17,11 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>風險降低：方格控制項對 Star-columns 的空間配置
@@ -63,7 +64,7 @@ D. 以上所述是就「理想」的版面配置而言。 當版面配置進位�
 
 在以下幾種狀況下，新的演算法會使指派給 \*-columns 的實際寬度產生變化︰
 
-- 當一或多個 \*-columns 也具有寬度下限或上限，因而會覆寫該資料行的按比例配置時。 (寬度下限可能衍生自明確的 <xref:System.Windows.FrameworkElement.MinWidth%2A> 宣告，或衍生自從資料行的內容取得的隱含下限。 寬度上限只能透過 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 宣告明確地定義。)
+- 當一或多個 \*-columns 也具有寬度下限或上限，因而會覆寫該資料行的按比例配置時。 (寬度下限可能衍生自明確的 <xref:System.Windows.FrameworkElement.MinWidth%2A> 宣告，或衍生自從資料行的內容取得的隱含下限。 寬度上限僅能明確地從 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 宣告定義)。
 
 - 當一或多個 \*-columns 宣告極大的 \*-weight 時 (大於 10^298)。
 

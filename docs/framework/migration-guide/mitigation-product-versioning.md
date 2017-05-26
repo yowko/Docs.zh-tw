@@ -14,10 +14,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: a6bf9656dee0e6074a8341997abb0e73dc3666f5
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-product-versioning"></a>風險降低：產品版本
@@ -30,9 +31,9 @@ ms.lasthandoff: 04/18/2017
   
 -   .NET Framework 檔案的檔案和產品版本已從舊版配置 `4.0.30319.x` 變更為 `4.6.X.0` (.NET Framework 4.6 及其點發行版本)，以及 `4.7.X.0` (.NET Framework 4.7 及其點發行版本)。 當您以滑鼠右鍵按一下檔案後再檢視檔案的 [屬性] 時，會看到這些新值。  
   
--   Managed 組件的 <xref:System.Reflection.AssemblyFileVersionAttribute> 和 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性具有 `4.6.X.0` (.NET Framework 4.6 及其點發行版本) 以及 `4.7.X.0` (.NET Framework 4.7) 格式的 <xref:System.Version> 值。  
+-   Managed 組件的 <xref:System.Reflection.AssemblyFileVersionAttribute> 和 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性，對於 .NET Framework 4.6 及其點版本，其 <xref:System.Version> 值的格式為 `4.6.X.0`，對於 .NET Framework 4.7，格式則為 `4.7.X.0`。  
   
--   在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 和 4.7 中，<xref:System.Environment.Version%2A?displayProperty=fullName> 屬性會傳回固定的版本字串 `4.0.30319.42000`。 在 .NET Framework 4、4.5、4.5.1 和 4.5.2 中，其會以 `4.0.30319.xxxxx` 格式傳回版本字串 (例如 "4.0.30319.18010")。 請注意，不建議應用程式程式碼與 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性有任何新的相依性。  
+-   在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 和 4.7 中，<xref:System.Environment.Version%2A?displayProperty=fullName> 屬性會傳回固定的版本字串 `4.0.30319.42000`。 在 .NET Framework 4、4.5、4.5.1 和 4.5.2 中，其會以 `4.0.30319.xxxxx` 格式傳回版本字串 (例如 "4.0.30319.18010")。 請注意，建議應用程式程式碼與 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性有任何新的相依性。  
   
 ### <a name="handling-the-product-versioning-changes"></a>處理產品版本變更  
  一般而言，應用程式需要具備可偵測 .NET Framework 的執行階段版本和安裝目錄等項目的建議技術：  

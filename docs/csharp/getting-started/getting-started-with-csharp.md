@@ -33,10 +33,10 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
 ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="getting-started-with-c"></a>C 使用者入門#
+# <a name="getting-started-with-c"></a>C# 使用者入門
 下列主題可協助您使用 C# 來開始開發應用程式。 這些主題也將介紹 Visual Studio 和 C# 語言內的許多新功能。  
   
 ## <a name="in-this-section"></a>本章節內容  

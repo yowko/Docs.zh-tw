@@ -28,11 +28,11 @@ ms.lasthandoff: 05/22/2017
 ## <a name="impact"></a>影響  
  重新編譯為以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式和先前因為路徑超過 260 個字元而自動擲回 <xref:System.IO.PathTooLongException> 的應用程式，現在只有在下列情況下才會擲回 <xref:System.IO.PathTooLongException>：  
   
--   路徑的長度超過 <xref:System.Int16.MaxValue?displayProperty=fullName> (32,767) 個字元。  
+-   路徑的長度大於 <xref:System.Int16.MaxValue?displayProperty=fullName> (32,767) 個字元。  
   
 -   作業系統傳回 `COR_E_PATHTOOLONG` 或其對應項。  
   
- 以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]和更舊版本為目標之應用程式的舊行為，是每當路徑超過 260 個字元時，執行階段就會自動擲回 <xref:System.IO.PathTooLongException>。  
+ 以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和更舊版本為目標之應用程式的舊行為，是每當路徑超過 260 個字元時，執行階段就會自動擲回 <xref:System.IO.PathTooLongException>。  
   
 ## <a name="mitigation"></a>緩和  
  對於以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式，如果不需要長路徑支援，您可以透過將下列內容加入至 app.config 檔案的 [\<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段以選擇退出︰  

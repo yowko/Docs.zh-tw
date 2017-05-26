@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8ac37ce1a225a66069e34abedd2ee0c273b8f8a9
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
   
  不過，XSLT 不會使用許多開發人員已經具備的 C# 和 Visual Basic 知識。 它需要開發人員以不同而且複雜的程式設計語言撰寫程式碼。 使用兩個非整合式開發系統 (例如，C# (或 Visual Basic) 和 XSLT) 會使軟體系統難以開發與維護。  
   
- 在您熟練 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢運算式後，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 轉換即可成為功能強大且易於使用的技術。 基本上，您可以使用功能結構、從各種來源納入資料、動態建構 <xref:System.Xml.Linq.XElement> 物件，然後全部組合成一個新的 XML 樹狀結構，以形成自己的 XML 文件。 轉換可以產生全新的文件。 在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中進行建構轉換是相當容易與直覺化的作業，並會產生可讀的程式碼。 這會降低開發與維護的成本。  
+ 在您熟練 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢運算式後，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 轉換即可成為功能強大且易於使用的技術。 基本上，您可以形成自己的 XML 文件，方法是，使用功能結構、從各種來源納入資料、動態建構 <xref:System.Xml.Linq.XElement> 物件，然後將全部組合成一個新的 XML 樹狀結構。 轉換可以產生全新的文件。 在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中進行建構轉換是相當容易與直覺化的作業，並會產生可讀的程式碼。 這會降低開發與維護的成本。  
   
  [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 並不是要取代 XSLT。 XSLT 仍然是複雜的文件中心 XML 轉換的最佳工具選擇，特別是在沒有正確定義文件結構時。  
   
