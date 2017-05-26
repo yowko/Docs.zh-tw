@@ -20,19 +20,19 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
-ms.openlocfilehash: 50f027408357a5d98ef1bfe305ab675fc97abba8
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: a2ef49f9192c7fa414b02e7e41a270606f52bb3c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
 > [!NOTE]
->  此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其點發行版以及 .NET Framework 4.7 的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
+> 此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 和 4.7 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其點發行版以及 .NET Framework 4.7 的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
 
- .NET Framework 這套開發平台可用於建置可在網路、Windows、Windows Phone、Windows Server 及 Microsoft Azure 上使用的 App。 這是由通用語言執行平台 (CLR) 和 .NET Framework 類別庫 (包括各種功能且支援許多產業標準) 所組成。
+.NET Framework 這套開發平台可用於建置可在網路、Windows、Windows Phone、Windows Server 及 Microsoft Azure 上使用的 App。 這是由通用語言執行平台 (CLR) 和 .NET Framework 類別庫 (包括各種功能且支援許多產業標準) 所組成。
 
 .NET Framework 提供許多服務，包括記憶體管理、類型與記憶體安全、安全性、網路及應用程式部署。 它提供了簡單好用的資料結構和 API，以抽取出較低層級的 Windows 作業系統。 您可以使用各種程式設計語言與 .NET Framework 一起搭配使用，包括 C#、F# 及 Visual Basic。  
 
@@ -46,9 +46,10 @@ ms.lasthandoff: 05/17/2017
 
 請參閱[修復 .NET Framework](./install/repair.md)，以了解如何在遇到 .NET Framework 安裝錯誤時修復 .NET Framework 安裝。
 
-如需下載 .NET Framework 的詳細資訊，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。  
+如需下載 .NET Framework 的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../docs/framework/install/guide-for-developers.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本章節內容
+
 [新功能](../../docs/framework/whats-new/index.md)  
 描述最新版 .NET Framework 中重要的新功能與變更。 包含過時類型及成員的清單，並提供從舊版 .NET Framework 移轉您的應用程式的指南。  
   
