@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3e60516d1f443528c357eb12612b6149f34c1f7e
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="-operator-c-reference"></a>?: 運算子 (C# 參考)
@@ -54,7 +55,6 @@ condition ? first_expression : second_expression;
  你可以使用條件運算子更精確地表示可能需要 `if-else` 建構的計算。 例如，下列程式碼會先使用 `if` 陳述式，再使用條件運算子將整數分類為正數或負數。  
   
 ```  
-  
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -66,7 +66,6 @@ else
   
 // ?: conditional operator.  
 classify = (input > 0) ? "positive" : "negative";  
-  
 ```  
   
  條件運算子是右向關聯。 運算式 `a ? b : c ? d : e` 會判斷值為 `a ? b : (c ? d : e)`，而不是 `(a ? b : c) ? d : e`。  
@@ -83,3 +82,4 @@ classify = (input > 0) ? "positive" : "negative";
  [if-else](../../../csharp/language-reference/keywords/if-else.md)   
  [?. 和 ? 運算子](../../../csharp/language-reference/operators/null-conditional-operators.md)   
  [??運算子](../../../csharp/language-reference/operators/null-conditional-operator.md)
+

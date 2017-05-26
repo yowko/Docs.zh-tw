@@ -1,109 +1,112 @@
 ---
 title: "控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "控制項 [WPF], 關於 WPF 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7652a2e64cdc107546ac3ea51178a3542606bd43
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
+
 ---
-# 控制項
-<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 隨附許多幾乎每個 Windows 應用程式都會使用的常見 UI 元件，如 <xref:System.Windows.Controls.Button>、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.TextBox>、<xref:System.Windows.Controls.Menu> 和 <xref:System.Windows.Controls.ListBox>。  在過去，這些物件稱為控制項。  儘管 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK 仍會繼續使用「控制項」一詞來概括任何代表應用程式中可見物件的類別，但要注意，類別不必繼承自 <xref:System.Windows.Controls.Control> 類別，就可以顯現外觀。  繼承自 <xref:System.Windows.Controls.Control> 類別的類別會包含 <xref:System.Windows.Controls.ControlTemplate>，控制項的取用者可以用它將控制項的外觀完全改變，而不需要建立新的子類別 \(Subclass\)。  本主題討論在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中常見之控制項 \(包括繼承自和非繼承自 <xref:System.Windows.Controls.Control> 類別的控制項\) 的用法。  
+# <a name="controls"></a>控制項
+<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 隨附許多在幾乎每個 Windows 應用程式中都會使用的常見 UI 元件，例如              <xref:System.Windows.Controls.Button>、              <xref:System.Windows.Controls.Label>、              <xref:System.Windows.Controls.TextBox>、              <xref:System.Windows.Controls.Menu> 及              <xref:System.Windows.Controls.ListBox>。 在過去，這些物件是稱為控制項。 雖然              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK 繼續使用「控制項」一詞來泛指在應用程式中代表可見物件的任何類別，但請務必注意，類別並不需要繼承自              <xref:System.Windows.Controls.Control> 類別才能具有可見的存在。 從              <xref:System.Windows.Controls.Control> 類別繼承的類別會包含              <xref:System.Windows.Controls.ControlTemplate>，可讓控制項的取用者在不須建立新子類別的情況下，大幅變更控制項的外觀。  本主題討論控制項 (包括從              <xref:System.Windows.Controls.Control> 類別繼承的控制向，以及不是從該類別繼承的控制項) 在              [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的常見使用方式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+ 
   
 <a name="creating_an_instance_of_a_control"></a>   
-## 建立控制項的執行個體  
- 您可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 或程式碼將控制項加入至應用程式。  下列範例顯示如何建立一個會詢問使用者姓氏和名字的簡單應用程式。  這個範例會在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中建立六個控制項：兩個標籤 \(Label\)、兩個文字方塊和兩個按鈕。  所有控制項的建立方式都類似。  
+## <a name="creating-an-instance-of-a-control"></a>建立控制項的執行個體  
+ 您可以藉由使用                  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 或程式碼，將控制項新增到應用程式。  下列範例示範如何建立一個要求使用者輸入其名字和姓氏的簡單應用程式。  此範例會以                  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 建立六個控制項：兩個標籤、兩個文字方塊，以及兩個按鈕。 您可以用類似的方式建立所有控制項。  
   
  [!code-xml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- 下列範例會以程式碼建立相同的應用程式。  為求簡潔，範例中已經排除建立 <xref:System.Windows.Controls.Grid> `grid1` 的步驟。  `grid1` 具有與如前述 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 範例所示的相同欄和列定義。  
+ 下列範例會以程式碼建立相同的應用程式。 為求簡潔，此範例中不包含                  <xref:System.Windows.Controls.Grid> (                  `grid1`) 的建立。                   `grid1` 的資料行和資料列定義與上述                  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 範例中顯示的相同。  
   
- [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
- [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
+ [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)] [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
   
 <a name="changing_the_appearance_of_a_control"></a>   
-## 變更控制項的外觀  
- 變更控制項的外觀，使其更符合您應用程式的整體外觀及操作，這是很常見的。  您可以依據想要達成的效果，執行下列其中一項動作來變更控制項的外觀：  
+## <a name="changing-the-appearance-of-a-control"></a>變更控制項的外觀  
+ 變更控制項的外觀以符合您應用程式的外觀及操作，是很常見的做法。 您可以根據想要達成的目的，執行下列其中一項操作來變更控制項的外觀：  
   
 -   變更控制項的屬性值。  
   
--   建立控制項的 <xref:System.Windows.Style>。  
+-   為控制項建立                          <xref:System.Windows.Style>。  
   
--   建立控制項的新 <xref:System.Windows.Controls.ControlTemplate>。  
+-   為控制項建立新的                          <xref:System.Windows.Controls.ControlTemplate>。  
   
-### 變更控制項的屬性值  
- 許多控制項都有數個屬性可以用來變更控制項的外觀，如 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A>。  您可同時在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 以及程式碼中設定屬性的值。  下列範例會設定 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中 <xref:System.Windows.Controls.Button> 上的 <xref:System.Windows.Controls.Control.Background%2A>、<xref:System.Windows.Controls.Control.FontSize%2A> 和<xref:System.Windows.Controls.Control.FontWeight%2A> 屬性。  
+### <a name="changing-a-controls-property-value"></a>變更控制項的屬性值  
+ 許多控制項都有可讓您變更控制項外觀的屬性，例如                          <xref:System.Windows.Controls.Button> 的                          <xref:System.Windows.Controls.Control.Background%2A>。 您可以在                          [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和程式碼中都設定值屬性。 下列範例會在                          [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的                          <xref:System.Windows.Controls.Button> 上設定                           <xref:System.Windows.Controls.Control.Background%2A>、                          <xref:System.Windows.Controls.Control.FontSize%2A> 及                          <xref:System.Windows.Controls.Control.FontWeight%2A> 屬性。  
   
  [!code-xml[ControlsOverview#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#3)]  
   
- 下列範例會以程式碼設定相同屬性。  
+ 下列範例會以程式碼設定相同的屬性。  
   
- [!code-csharp[ControlsOverview#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#4)]
- [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
+ [!code-csharp[ControlsOverview#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#4)] [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
-### 建立控制項的樣式  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以讓您藉由建立 <xref:System.Windows.Style> 來指定整批控制項的外觀，而不必逐一設定應用程式中每一個執行個體的屬性。  下列範例建立的 <xref:System.Windows.Style> 會套用至應用程式中的每一個 <xref:System.Windows.Controls.Button>。<xref:System.Windows.Style> 的定義通常是在 <xref:System.Windows.ResourceDictionary> 中以 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 定義，如 <xref:System.Windows.FrameworkElement> 的 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性。  
+### <a name="creating-a-style-for-a-control"></a>為控制項建立樣式  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您透過建立                          <xref:System.Windows.Style> 來大批指定控制項的外觀，而不需在應用程式中的每個執行個體上設定屬性。                           下列範例                          會建立要套用至應用程式中每個                          <xref:System.Windows.Controls.Button> 的                          <xref:System.Windows.Style>。                          <xref:System.Windows.Style> 定義通常是以                          [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 在                          <xref:System.Windows.ResourceDictionary> 中定義，例如                          <xref:System.Windows.FrameworkElement> 的                          <xref:System.Windows.FrameworkElement.Resources%2A> 屬性。  
   
  [!code-xml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- 您也可以將索引鍵指派給樣式，然後在控制項的 `Style` 屬性中指定該索引鍵，藉此只將樣式套用至特定型別的特定控制項。  如需樣式的詳細資訊，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 您也可以透過指派樣式索引鍵並在控制項的                          `Style` 屬性中指定該索引鍵，將樣式只套用到某些特定型別的控制項。  如需有關樣式的詳細資訊，請參閱                          [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
-### 建立 ControlTemplate  
- <xref:System.Windows.Style> 可以讓您同時設定數個控制項的屬性，但有時候您想自訂的 <xref:System.Windows.Controls.Control> 外觀，可能就不是藉由建立 <xref:System.Windows.Style> 所能做到的。  繼承自 <xref:System.Windows.Controls.Control> 類別的類別會有 <xref:System.Windows.Controls.ControlTemplate>，可定義 <xref:System.Windows.Controls.Control> 的結構和外觀。  <xref:System.Windows.Controls.Control> 的 <xref:System.Windows.Controls.Control.Template%2A> 屬性是公用的，所以您可以給與 <xref:System.Windows.Controls.Control> 一個不同於其預設值的 <xref:System.Windows.Controls.ControlTemplate>。  您通常可以替 <xref:System.Windows.Controls.Control> 指定新的 <xref:System.Windows.Controls.ControlTemplate> 來自訂 <xref:System.Windows.Controls.Control> 的外觀，而不是繼承自控制項。  
+### <a name="creating-a-controltemplate"></a>建立 ControlTemplate  
+                          <xref:System.Windows.Style> 可讓您一次在多個控制項上設定屬性，但有時您想要對                          <xref:System.Windows.Controls.Control> 外觀進行的自訂可能會超出建立                          <xref:System.Windows.Style> 所能達到的效果。 從                          <xref:System.Windows.Controls.Control> 類別繼承的類別會具有                          <xref:System.Windows.Controls.ControlTemplate>，可用來定義                          <xref:System.Windows.Controls.Control> 的結構和外觀。                          <xref:System.Windows.Controls.Control> 的                          <xref:System.Windows.Controls.Control.Template%2A> 屬性是公用屬性，因此您可以為                          <xref:System.Windows.Controls.Control> 提供一個與其預設值不同的                          <xref:System.Windows.Controls.ControlTemplate>。 您通常會為                          <xref:System.Windows.Controls.Control> 指定一個新的                          <xref:System.Windows.Controls.ControlTemplate>，而不從控制項繼承以自訂                          <xref:System.Windows.Controls.Control> 的外觀。  
   
- 以最常用的控制項 <xref:System.Windows.Controls.Button> 為例。  <xref:System.Windows.Controls.Button> 的主要行為是在使用者按下它的時候讓應用程式做一些動作。  根據預設，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中出現的 <xref:System.Windows.Controls.Button> 是突起的矩形。  當您在開發應用程式時，可能會想利用 <xref:System.Windows.Controls.Button> 的行為 \(也就是處理按下按鈕的事件\)，但是想要變更按鈕的外觀，可是想要的外觀無法藉由變更按鈕的屬性來達到，  在這個情況下，您可以建立新的 <xref:System.Windows.Controls.ControlTemplate>。  
+ 以相當常見的控制項                          <xref:System.Windows.Controls.Button> 作為例子。                           <xref:System.Windows.Controls.Button> 的主要行為是讓應用程式能夠在使用者按一下按鈕時採取某個動作。  根據預設，                          [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的                          <xref:System.Windows.Controls.Button> 會顯示為凸起的矩形。  開發應用程式時，您可能會想要利用                          <xref:System.Windows.Controls.Button> 的行為 (亦即透過處理按鈕的點選事件)，但您對按鈕外觀進行的變更可能超出變更按鈕屬性所能達到的效果。  在此情況下，您可以建立一個新的                          <xref:System.Windows.Controls.ControlTemplate>。  
   
- 下列範例會建立 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.ControlTemplate>。  這個 <xref:System.Windows.Controls.ControlTemplate> 建立的 <xref:System.Windows.Controls.Button> 具有圓角和漸層背景。  <xref:System.Windows.Controls.ControlTemplate> 中包含 <xref:System.Windows.Controls.Border>，其 <xref:System.Windows.Controls.Border.Background%2A> 是具有兩個 <xref:System.Windows.Media.GradientStop> 物件的 <xref:System.Windows.Media.LinearGradientBrush>。  第一個 <xref:System.Windows.Media.GradientStop> 會以資料繫結方式將 <xref:System.Windows.Media.GradientStop> 的 <xref:System.Windows.Media.GradientStop.Color%2A> 屬性繫結至按鈕的背景色彩。  當您設定 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 屬性時，這個值的色彩就會做為第一個 <xref:System.Windows.Media.GradientStop>。  如需資料繫結的詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  這個範例也會建立 <xref:System.Windows.Trigger>，它會在 <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> 為 `true` 時變更 <xref:System.Windows.Controls.Button> 的外觀。  
+ 下列範例將為                          <xref:System.Windows.Controls.Button> 建立                          <xref:System.Windows.Controls.ControlTemplate>。                           <xref:System.Windows.Controls.ControlTemplate> 會建立一個具有圓角和漸層背景的                          <xref:System.Windows.Controls.Button>。                           <xref:System.Windows.Controls.ControlTemplate> 包含                          <xref:System.Windows.Controls.Border>，它的                          <xref:System.Windows.Controls.Border.Background%2A> 是具有兩個                          <xref:System.Windows.Media.GradientStop> 物件的                          <xref:System.Windows.Media.LinearGradientBrush>。  第一個                          <xref:System.Windows.Media.GradientStop> 會使用資料繫結將                          <xref:System.Windows.Media.GradientStop> 的                          <xref:System.Windows.Media.GradientStop.Color%2A> 屬性繫結至按鈕背景的色彩。  當您設定                          <xref:System.Windows.Controls.Button> 的                          <xref:System.Windows.Controls.Control.Background%2A> 屬性時，該值的色彩將會用來作為第一個                          <xref:System.Windows.Media.GradientStop>。 如需有關資料繫結的詳細資訊，請參閱                          [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。 此範例也會建立一個                          <xref:System.Windows.Trigger>，可在                          <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> 為                          `true` 時變更                          <xref:System.Windows.Controls.Button> 的外觀。  
   
  [!code-xml[ControlsOverview#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#6)]  
 [!code-xml[ControlsOverview#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 屬性必須設定為 <xref:System.Windows.Media.SolidColorBrush>，這個範例才能正常運作。  
+>                               <xref:System.Windows.Controls.Button> 的                              <xref:System.Windows.Controls.Control.Background%2A> 屬性必須設定為                              <xref:System.Windows.Media.SolidColorBrush>，此範例才能正確運作。  
   
 <a name="subscribing_to_events"></a>   
-## 訂閱事件  
- 您可以使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 或程式碼訂閱控制項的事件，但只能用程式碼處理事件。  下列範例顯示如何訂閱 <xref:System.Windows.Controls.Button> 的 `Click` 事件。  
+## <a name="subscribing-to-events"></a>訂閱事件  
+ 您可以使用                  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 或程式碼來訂閱控制項的事件，但只能在程式碼中處理事件。  下列範例示範如何訂閱                  <xref:System.Windows.Controls.Button> 的                  `Click` 事件。  
   
  [!code-xml[ControlsOverview#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#10)]  
   
- [!code-csharp[ControlsOverview#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#8)]
- [!code-vb[ControlsOverview#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#8)]  
+ [!code-csharp[ControlsOverview#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#8)] [!code-vb[ControlsOverview#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#8)]  
   
- 下列範例會處理 <xref:System.Windows.Controls.Button> 的 `Click` 事件。  
+ 下列範例會處理                  <xref:System.Windows.Controls.Button> 的                  `Click` 事件。  
   
- [!code-csharp[ControlsOverview#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#9)]
- [!code-vb[ControlsOverview#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#9)]  
+ [!code-csharp[ControlsOverview#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#9)] [!code-vb[ControlsOverview#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#9)]  
   
 <a name="rich_content_in_controls"></a>   
-## 擁有豐富內容的控制項  
- 大部分繼承自 <xref:System.Windows.Controls.Control> 類別的類別都具有包含豐富內容的能力。  例如，<xref:System.Windows.Controls.Label> 可以包含任何物件，例如字串、<xref:System.Windows.Controls.Image> 或 <xref:System.Windows.Controls.Panel>。  下列類別可支援豐富內容，而且可做為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中大部分控制項的基底類別。  
+## <a name="rich-content-in-controls"></a>控制項中的多格式內容  
+ 大多數會從                  <xref:System.Windows.Controls.Control> 類別繼承的類別都能夠包含多格式內容。 例如，                  <xref:System.Windows.Controls.Label> 便可以包含任何物件，像是字串、                  <xref:System.Windows.Controls.Image> 或                  <xref:System.Windows.Controls.Panel>。  下列類別會提供對多格式內容的支援，並可作為                  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中大多數控制項的基底類別。  
   
--   <xref:System.Windows.Controls.ContentControl>\-\- <xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.Button> 和 <xref:System.Windows.Controls.ToolTip> 都是自這個類別繼承之類別的範例。  
+-   <xref:System.Windows.Controls.ContentControl>-- 從此類別繼承的一些類別範例包括                          <xref:System.Windows.Controls.Label>、                          <xref:System.Windows.Controls.Button> 及                          <xref:System.Windows.Controls.ToolTip>。  
   
--   <xref:System.Windows.Controls.ItemsControl>\-\- <xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.Menu> 和 <xref:System.Windows.Controls.Primitives.StatusBar> 都是自這個類別繼承之類別的範例。  
+-   <xref:System.Windows.Controls.ItemsControl>-- 從此類別繼承的一些類別範例包括                          <xref:System.Windows.Controls.ListBox>、                          <xref:System.Windows.Controls.Menu> 及                          <xref:System.Windows.Controls.Primitives.StatusBar>。  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>\-\- <xref:System.Windows.Controls.TabItem>、<xref:System.Windows.Controls.GroupBox> 和 <xref:System.Windows.Controls.Expander> 都是自這個類別繼承之類別的範例。  
+-   <xref:System.Windows.Controls.HeaderedContentControl>-- 從此類別繼承的一些類別範例包括                          <xref:System.Windows.Controls.TabItem>、                          <xref:System.Windows.Controls.GroupBox> 及                          <xref:System.Windows.Controls.Expander>。  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>\-\- <xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Controls.TreeViewItem> 和 <xref:System.Windows.Controls.ToolBar> 都是自這個類別繼承之類別的範例。  
+-   <xref:System.Windows.Controls.HeaderedItemsControl>-- 從此類別繼承的一些類別範例包括                          <xref:System.Windows.Controls.MenuItem>、                          <xref:System.Windows.Controls.TreeViewItem> 及                          <xref:System.Windows.Controls.ToolBar>。  
   
- 如需這些基底類別庫的詳細資訊，請參閱 [WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
+-  
   
-## 請參閱  
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+ 如需有關這些基底類別的詳細資訊，請參閱                  [WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
  [按分類區隔控制項](../../../../docs/framework/wpf/controls/controls-by-category.md)   
  [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)   
  [資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)   

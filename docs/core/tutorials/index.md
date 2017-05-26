@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 教學課程"
+title: ".NET Core 教學課程 | Microsoft Docs"
 description: ".NET Core 教學課程"
 keywords: .NET, .NET Core
 author: richlander
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: 3f8c62a6a3b179e146874761465ad2665c20a6dd
-ms.lasthandoff: 04/11/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/23/2017
 
 ---
 
@@ -23,11 +24,11 @@ ms.lasthandoff: 04/11/2017
 ## <a name="building-applications-with-visual-studio-2017"></a>使用 Visual Studio 2017 建置應用程式
 
 - [建置 C# Hello World 應用程式](../../csharp/getting-started/with-visual-studio.md)
-- [對您的 C# Hello World 應用程式進行偵錯](../../csharp/getting-started/debugging-with-visual-studio-2017.md)
-- [發行您的 C# Hello World 應用程式](../../csharp/getting-started/publishing-with-visual-studio-2017.md)
-- [建置 C# 類別庫](../../csharp/getting-started/library-with-visual-studio-2017.md)
+- [對您的 C# Hello World 應用程式進行偵錯](../../csharp/getting-started/debugging-with-visual-studio.md)
+- [發行您的 C# Hello World 應用程式](../../csharp/getting-started/publishing-with-visual-studio.md)
+- [建置 C# 類別庫](../../csharp/getting-started/library-with-visual-studio.md)
 - [測試 C# 類別庫](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [使用 .NET Core 取用 C# 類別庫](../../csharp/getting-started/consuming-library-with-visual-studio-2017.md)
+- [使用 .NET Core 取用 C# 類別庫](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [在 Windows 上建置完整的 C# .NET Core 方案](using-on-windows-full-solution.md)
 - [NoSQL 教學課程：在 .NET Core 上建置 DocumentDB C# 主控台應用程式](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
 

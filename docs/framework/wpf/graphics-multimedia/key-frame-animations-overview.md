@@ -52,8 +52,8 @@ caps.handback.revision: 24
   
  下列範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 以動畫方式將 <xref:System.Windows.Shapes.Rectangle> 項目變換到四個不同的位置。  
   
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
   
  如同 From\/To\/By 動畫，在標記和程式碼中使用 <xref:System.Windows.Media.Animation.Storyboard> 或在程式碼中使用 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法，即可將主要畫面格動畫套用至屬性。  您也可以使用主要畫面格動畫建立 <xref:System.Windows.Media.Animation.AnimationClock>，然後將它套用至一個或多個屬性。  如需套用動畫之不同方法的詳細資訊，請參閱[建立屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
   
@@ -130,8 +130,8 @@ caps.handback.revision: 24
   
 -   因為動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 屬性已設定為 10 秒，所以動畫會在最後的值停留 2 秒，然後在時間等於 0:0:10 時結束。  
   
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
   
 <a name="interpolationmethods"></a>   
 ## 插補方法  
@@ -173,8 +173,8 @@ caps.handback.revision: 24
 ### 曲線插補  
  曲線插補可以達到更逼真的時間效果。  因為動畫經常會用於模擬真實世界中發生的效果，因此開發人員需要精確控制物件的加速和減速情形，並且仔細操控時間區段。  曲線主要畫面格可讓您使用曲線插補來建立動畫。  使用其他主要畫面格時，您必須指定 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 和 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>。  使用曲線主要畫面格時，則還必須指定 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>。  下列範例顯示 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 的單一曲線主要畫面格。  請注意 <xref:System.Windows.Media.Animation.KeySpline> 屬性，就是這個屬性使曲線主要畫面格與其他類型的主要畫面格有所不同。  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
   
  [三次方貝茲曲線](GTMT)是由一個起始點、一個結束點和兩個控制點所定義。  曲線主要畫面格的 <xref:System.Windows.Media.Animation.KeySpline> 屬性會定義從 \(0,0\) 延伸至 \(1,1\) 之貝茲曲線的兩個控制點。  第一個控制點控制貝茲曲線前半段的曲率，第二個控制點則控制貝茲線段後半段的曲率。  產生的曲線即描述該曲線主要畫面格的變化速率。  曲線越陡峭，主要畫面格變更值的速度就越快。  曲線越平滑，主要畫面格變更值的速度就越慢。  
   
@@ -185,8 +185,8 @@ caps.handback.revision: 24
  ![貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm\_keyspline\_0\_1\_1\_0")  
 控制點位於 \(0.0, 1.0\) 和 \(1.0, 0.0\) 的關鍵 Spline  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
   
  這個主要畫面格在開始時會急速顯示動畫、而後減慢，然後在結束之前再次加速。  
   
@@ -195,15 +195,15 @@ caps.handback.revision: 24
  ![貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm\_keyspline\_025\_050\_075\_10")  
 控制點位於 \(0.25, 0.5\) 和 \(0.75, 1.0\) 的關鍵 Spline  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->  
   
  因為貝茲曲線的曲率變化很小，所以這個主要畫面格幾乎是以不變的速率顯示動畫，而在結束之前會稍微減慢。  
   
  下列範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 以動畫的方式變換矩形的位置。  因為 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 會使用 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> 物件，所以每個主要畫面格值之間的轉換都會使用曲線插補。  
   
- [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]
- [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->  
   
  曲線插補的概念可能不好懂，試試不同的設定會有所幫助。  [關鍵 Spline 動畫範例](http://go.microsoft.com/fwlink/?LinkID=160011) \(英文\) 可讓您變更關鍵 Spline 值，並查看它在動畫上的效果。  
   
@@ -213,8 +213,8 @@ caps.handback.revision: 24
   
  在下列範例中，會建立使用線性、曲線及離散插補的 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。  
   
- [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]
- [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->  
   
 <a name="keytimes"></a>   
 ## 深入了解持續期間和關鍵時間  
@@ -235,8 +235,8 @@ caps.handback.revision: 24
   
 -   第四個主要畫面格會從 500 展示動畫至 600。  它會在第三個主要畫面格結束 \(時間等於 9 秒\) 時開始播放 1 秒，並且在時間等於 0:0:10 時結束。  
   
- [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]
- [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  -->  
   
 ### 百分比值  
  百分比值，指定主要畫面格在動畫到達 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 的某個百分比時結束。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，百分比的指定方式為在數字後面加上 `%` 符號。  在程式碼中，則需將使用 <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> 方法並將表示百分比 <xref:System.Double> 傳遞給它。  此值必須大於或等於 0，並且小於或等於 100%。  下列範例顯示的動畫具有 10 秒的持續期間和四個主要畫面格，其中每個主要畫面格的關鍵時間都是以百分比指定。  
@@ -249,8 +249,8 @@ caps.handback.revision: 24
   
 -   第四個主要畫面格會從 500 展示動畫至 600。  它會在第三個主要畫面格結束 \(時間等於 9 秒\) 時開始播放 1 秒，並且在時間等於 0:0:10 \(1 \* 10 \= 10\) 時結束。  
   
- [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]
- [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  -->  
   
 ### Uniform 特殊值  
  當您希望每個主要畫面格都使用相同的時間量時，請使用 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 時間。  
@@ -265,16 +265,16 @@ caps.handback.revision: 24
   
 -   第四個主要畫面格會從 500 展示動畫至 600。  它會在第二個主要畫面格結束 \(時間等於 7.5 秒\) 時開始播放 2.5 秒，並且在時間等於 0:0:1 時結束。  
   
- [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]
- [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  -->  
   
 ### Paced 特殊值  
  當您要以不變的速率顯示動畫時，請使用 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 時間。  
   
  <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 關鍵時間會根據每個主要畫面格的長度來配置可用時間，以決定每個畫面格的持續期間。  這樣會使動畫的速度或步調維持不變。  下列範例顯示的動畫具有 10 秒的持續期間和三個主要畫面格，其中每個主要畫面格的關鍵時間都是以 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 指定。  
   
- [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]
- [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  -->  
   
  請注意，如果最後一個主要畫面格的關鍵時間為 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 或 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>，其解析後的關鍵時間將會設定 100%。  如果多格動畫中的第一個主要畫面格已設定速度，其解析後的關鍵時間將會設定 0。  如果主要畫面格集合僅包含單一主要畫面格，而且是已設定速度的主要畫面格，其解析後的關鍵時間將會設定為 100%。  
   

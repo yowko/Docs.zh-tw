@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f640bd288c677954bae189c2e86ef096e7a73a2b
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -47,7 +48,6 @@ ms.lasthandoff: 03/13/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 variableorproperty -= expression  
 ```  
   

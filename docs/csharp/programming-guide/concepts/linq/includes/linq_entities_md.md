@@ -13,9 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 22b19152b013d20e7549d35c941a3766269af69a
+ms.contentlocale: zh-tw
 
 ---
 LINQ to Entities

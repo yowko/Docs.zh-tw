@@ -14,9 +14,10 @@ ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 652ea21bab0bf32e71e270c75d50d53a3a2bbac7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 

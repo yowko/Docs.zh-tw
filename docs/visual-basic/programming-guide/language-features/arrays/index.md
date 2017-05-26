@@ -34,14 +34,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1eeccc9b4f1cb00d434b1af61656b64bb860dbb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 324055a730b977faad637a14362b5c906931c721
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
-「陣列」是一組值，這些值在邏輯上彼此相關，就像文法學校中，各年級的學生總數一樣。  如果您在尋找 Visual Basic for Applications (VBA) 陣列的說明，請參閱[語言參考 (英文)](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx)。  
+「陣列」是一組值，這些值在邏輯上彼此相關，就像文法學校中，各年級的學生總數一樣。  如果您在尋找 Visual Basic for Applications (VBA) 陣列的說明，請參閱 [語言參考](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx)。  
   
  藉由使用陣列，您可以透過相同名稱參考這些相關值，並使用稱為索引或註標的數字來加以區分。 這些個別值稱為陣列的項目。 它們是從索引 0 到最高索引值的連續值。  
   
@@ -50,7 +51,6 @@ ms.lasthandoff: 03/13/2017
  開始說明前，先提供一些簡單的範例：  
   
 ```vb  
-  
 'Declare a single-dimension array of 5 values  
 Dim numbers(4) As Integer   
   
@@ -75,7 +75,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  **本主題內容**  
   
--   [簡單陣列中的陣列元素](#BKMK_ArrayElements)  
+-   [簡單陣列中的陣列項目](#BKMK_ArrayElements)  
   
 -   [建立陣列](#BKMK_CreatingAnArray)  
   
@@ -95,11 +95,11 @@ Dim sales()() As Double = New Double(11)() {}
   
 -   [陣列大小](#BKMK_ArraySize)  
   
--   [陣列型別及其他型別](#BKMK_ArrayTypes)  
+-   [陣列類型及其他類型](#BKMK_ArrayTypes)  
   
 -   [使用集合取代陣列](#BKMK_Collections)  
   
-##  <a name="BKMK_ArrayElements"></a> 簡單陣列中的陣列元素  
+##  <a name="BKMK_ArrayElements"></a> 簡單陣列中的陣列項目  
  下列範例宣告含有文法學校中每一年級學生數目的陣列變數。  
   
  [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
@@ -121,7 +121,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  您可以只使用沒有索引的陣列變數名稱，用來當做整個陣列的參考。  
   
- 前述範例中的陣列 `students` 使用了一個索引，所以是一維陣列。 使用一個以上的索引或註標則稱為多維。 如需詳細資訊，請參閱本主題的其他部分以及 [Visual Basic 中的陣列維度](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)。  
+ 前述範例中的陣列 `students` 使用了一個索引，所以是一維陣列。 使用一個以上的索引或註標則稱為多維。 如需詳細資訊，請參閱本主題和 [Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)中的其他部分。  
   
 ##  <a name="BKMK_CreatingAnArray"></a> 建立陣列  
  您可以使用數種方式來定義陣列的大小。 您可以在宣告陣列時提供大小，如下列範例所示。  
@@ -154,7 +154,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
- 使用類型推斷時，陣列的類型是由提供當做陣列常值之值清單中的主類型決定。 在陣列常值中，只有主類型是其他類型皆可擴展而成的類型。 如果無法決定此唯一類型，則主類型將成為陣列中其他類型皆可縮小而成的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 例如，如果提供給陣列常值的值清單含有類型值 `Integer`、 `Long`和 `Double`，則結果陣列的類型是 `Double`。 `Integer` 和 `Long` 都只會擴展為 `Double`。 因此， `Double` 是主類型。 如需詳細資訊，請參閱[擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。 這些推斷規則適用於針對類別成員中定義之陣列 (即區域變數) 進行的類型推斷。 雖然您可以在建立類別層級的變數時使用陣列常值，但無法在該類別層級使用類型推斷。 因此，在類別層級指定的陣列常值，會將提供當做陣列常值之值的類型推斷為 `Object`。  
+ 使用類型推斷時，陣列的類型是由提供當做陣列常值之值清單中的主類型決定。 在陣列常值中，只有主類型是其他類型皆可擴展而成的類型。 如果無法決定此唯一類型，則主類型將成為陣列中其他類型皆可縮小而成的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 例如，如果提供給陣列常值的值清單含有類型值 `Integer`、 `Long`和 `Double`，則結果陣列的類型是 `Double`。 `Integer` 和 `Long` 都只會擴展為 `Double`。 因此， `Double` 是主類型。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。 這些推斷規則適用於針對類別成員中定義之陣列 (即區域變數) 進行的類型推斷。 雖然您可以在建立類別層級的變數時使用陣列常值，但無法在該類別層級使用類型推斷。 因此，在類別層級指定的陣列常值，會將提供當做陣列常值之值的類型推斷為 `Object`。  
   
  您可以明確指定使用陣列常值建立之陣列的項目類型。 在這種情況下，陣列常值中的值必須擴展為陣列項目類型。 下列程式碼範例將從整數清單建立類型為 `Double` 的陣列。  
   
@@ -185,7 +185,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
- 下列範例會使用 `For...Next` 逐一查看多維陣列。 <xref:System.Array.GetUpperBound%2A> 方法具有指定維度的參數。 `GetUpperBound(0)` 會傳回第一個維度的最大索引值，而 `GetUpperBound(1)` 會傳回第二個維度的最大索引值。  
+ 下列範例會使用 `For...Next` 逐一查看多維陣列。 <xref:System.Array.GetUpperBound%2A> 方法具有可指定維度的參數。 `GetUpperBound(0)` 會傳回第一個維度的最高索引值，而 `GetUpperBound(1)` 則傳回第二個維度的最高索引值。  
   
  [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
@@ -224,7 +224,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  在下列情況中，您可能需要建立長度為零的陣列：  
   
--   如果不要承擔發生 <xref:System.NullReferenceException> 例外狀況的風險，您的程式碼必須存取 <xref:System.Array> 類別的成員 (例如 <xref:System.Array.Length%2A> 或 <xref:System.Array.Rank%2A>)，或呼叫 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 函式 (例如 <xref:Microsoft.VisualBasic.Information.UBound%2A>)。  
+-   為了避免發生 <xref:System.NullReferenceException> 例外狀況，程式碼必須存取 <xref:System.Array> 類別的成員 (例如 <xref:System.Array.Length%2A> 或 <xref:System.Array.Rank%2A>)，或者呼叫 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 函式 (例如 <xref:Microsoft.VisualBasic.Information.UBound%2A>)。  
   
 -   您希望不需檢查 `Nothing` (以特殊情況處理)，讓取用程式碼更簡單。  
   
@@ -241,7 +241,7 @@ Dim prices(3, 4, 5) As Long
   
  `prices` 變數中陣列的整體大小為 (3 + 1) x (4 + 1) x (5 + 1) = 120。  
   
- 您可以使用 <xref:System.Array.Length%2A> 屬性，來尋找陣列的大小。 您可以使用 <xref:System.Array.GetLength%2A> 方法，來尋找多維陣列中每個維度的長度。  
+ 您可以使用 <xref:System.Array.Length%2A> 屬性來尋找陣列的大小。 您可以使用 <xref:System.Array.GetLength%2A> 方法來尋找多維陣列中每一維度的長度。  
   
  您可以指派新的陣列物件或者使用 `ReDim` 陳述式來調整陣列變數的大小。  
   
@@ -250,22 +250,22 @@ Dim prices(3, 4, 5) As Long
 |||  
 |---|---|  
 |維度長度|每個維度的索引都以 0 為起點，也就是它的範圍是由 0 到它的上限為止。 因此，指定維度的長度會比該維度的宣告上限多 1。|  
-|長度限制|陣列的每個維度長度都受限於 `Integer` 資料型別的最大值，也就是 (2 ^ 31) - 1。 然而，陣列之總大小也同時受限於系統可用的記憶體。 若您試圖對超過可用 RAM 數量的陣列進行初始化，Common Language Runtime 就會擲回 <xref:System.OutOfMemoryException> 例外狀況。|  
+|長度限制|陣列的每個維度長度都受限於 `Integer` 資料型別的最大值，也就是 (2 ^ 31) - 1。 然而，陣列之總大小也同時受限於系統可用的記憶體。 若您嘗試將超過 RAM 可用量的陣列初始化，通用語言執行平台會擲回 <xref:System.OutOfMemoryException> 例外狀況。|  
 |大小及項目大小|陣列大小與其項目的資料類型無關。 大小一律是指項目的總數，而不是它們於儲存體中所佔的位元組。|  
 |記憶體消耗量|對陣列在記憶體中的儲存方式做任何假設都是不安全的。 儲存體會因不同資料寬度的平台而有差異，所以相同陣列於 64 位元系統上所佔記憶體將較 32 位元系統來的多。 當您初始化陣列時，隨著系統組態不同，通用語言執行平台 (CLR) 會指派儲存體盡可能將項目存放在一起，或是根據實體硬體界限全部加以調整。 同時，陣列需要耗用儲存體以供其控制資訊使用，此消耗量會隨著維度增加而增加。|  
   
-##  <a name="BKMK_ArrayTypes"></a> 陣列型別及其他型別  
+##  <a name="BKMK_ArrayTypes"></a> 陣列類型及其他類型  
  每個陣列都具有其資料類型，但此資料類型不同於陣列項目的資料類型。 沒有任何單一的資料類型適用於所有的陣列。 陣列的類型反而是由陣列的維度數目，或稱為 *「順位」*(rank) 以及陣列項目的資料類型所決定。 只要兩個陣列變數具有相同的順位且其項目具有相同的資料類型，就視為具有相同的資料類型。 陣列中維度的長度不會影響陣列的資料類型。  
   
- 每個陣列均繼承自 <xref:System.Array?displayProperty=fullName> 類別，而您可以將變數宣告為 `Array` 型別，但您不能建立型別為 `Array` 的陣列。 此外，[ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)無法在宣告為 `Array` 型別的變數上運作。 由於這些原因及類型安全，建議您將每個陣列宣告為特定類型，如前述範例中的 `Integer` 。  
+ 每個陣列都繼承自 <xref:System.Array?displayProperty=fullName> 類別，而您可以將變數宣告為類型 `Array`，但不能建立類型為 `Array` 的陣列。 此外，[ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)無法在宣告為 `Array` 型別的變數上運作。 由於這些原因及類型安全，建議您將每個陣列宣告為特定類型，如前述範例中的 `Integer` 。  
   
  有幾個方法可以找出陣列或其項目的資料類型。  
   
--   您可以在變數上呼叫 <xref:System.Object.GetType%2A?displayProperty=fullName> 方法，來接收適用於變數執行階段型別的 <xref:System.Type> 物件。 <xref:System.Type> 物件在其屬性和方法中保留了大量資訊。  
+-   您可以在變數呼叫 <xref:System.Object.GetType%2A?displayProperty=fullName> 方法，為變數的執行階段類型接收 <xref:System.Type> 物件。 <xref:System.Type> 物件在其屬性和方法中保留了大量的資訊。  
   
--   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函式，以接收包含執行階段型別名稱的 `String`。  
+-   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函式，以接收包含執行階段類型名稱的 `String`。  
   
--   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函式，以接收代表變數型別分類的 `VariantType` 值。  
+-   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函式，以接收代表變數類型類別的 `VariantType` 值。  
   
  下列範例呼叫 `TypeName` 函式來判斷陣列的類型以及陣列中項目的類型。 陣列類型為 `Integer(,)` ，陣列中項目的類型為 `Integer`。  
   
@@ -278,12 +278,12 @@ Dim prices(3, 4, 5) As Long
   
  對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。  
   
- 如果集合包含只有一個資料型別的元素，則可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
+ 如果集合包含只有一個資料類型的元素，則可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
   
  如需集合的詳細資訊，請參閱[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
   
 ### <a name="example"></a>範例  
- 下列範例使用 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 泛型類別 <xref:System.Collections.Generic.List%601?displayProperty=fullName>，來建立 `Customer` 物件的清單集合。  
+ 下列範例使用 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 泛型類別 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 來建立 `Customer` 物件的清單集合。  
   
  [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   
@@ -293,7 +293,7 @@ Dim prices(3, 4, 5) As Long
   
 |詞彙|定義|  
 |----------|----------------|  
-|[Visual Basic 中的陣列維度](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|說明陣列中的順位和維度。|  
+|[Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|說明陣列中的順位和維度。|  
 |[如何：在 Visual Basic 中初始化陣列變數](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)|描述如何在陣列中填入初始值。|  
 |[如何：在 Visual Basic 中排序陣列](../../../../visual-basic/programming-guide/language-features/arrays/how-to-sort-an-array.md)|示範如何依字母順序排列陣列中的項目。|  
 |[如何：指派一個陣列至另一個陣列](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|描述將陣列指派給另一個陣列變數的規則和步驟。|  
@@ -303,3 +303,4 @@ Dim prices(3, 4, 5) As Long
  <xref:System.Array>   
  [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)   
  [ReDim 陳述式](../../../../visual-basic/language-reference/statements/redim-statement.md)
+

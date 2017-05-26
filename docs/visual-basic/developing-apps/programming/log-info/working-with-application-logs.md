@@ -33,17 +33,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 497f4ea3dfd175248ff733cceb691b2aa0c758e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>在 Visual Basic 中使用應用程式記錄檔
 `My.Applicaton.Log` 和 `My.Log` 物件讓您輕鬆地將記錄和追蹤資訊寫入記錄檔。  
   
 ## <a name="how-messages-are-logged"></a>記錄訊息的方式  
- 首先，會使用記錄檔之 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 屬性的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性來檢查訊息嚴重性。 根據預設，只有嚴重性為「資訊」和更高等級的訊息會傳遞至追蹤接聽項 (該追蹤接聽項於記錄檔的 `TraceListener` 集合中指定)。 然後，每個接聽程式都會將訊息嚴重性和接聽程式的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性進行比較。 如果訊息的嚴重性夠高，接聽程式會寫出訊息。  
+ 首先，會以記錄檔之 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 屬性中的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性檢查訊息的嚴重性。 根據預設，只有嚴重性為「資訊」和更高等級的訊息會傳遞至追蹤接聽項 (該追蹤接聽項於記錄檔的 `TraceListener` 集合中指定)。 然後，每個接聽程式會將訊息嚴重性和接聽程式的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性進行比較。 如果訊息的嚴重性夠高，接聽程式會寫出訊息。  
   
  下列圖表顯示寫入至 `WriteEntry` 方法的訊息如何傳遞至記錄檔追蹤接聽項的 `WriteLine` 方法︰  
   
@@ -54,9 +55,9 @@ ms.lasthandoff: 03/13/2017
  ![My 記錄檔組態](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>記錄訊息的位置  
- 如果組件沒有設定檔，`My.Application.Log` 和 `My.Log` 物件會寫入至應用程式的偵錯輸出 (透過 <xref:System.Diagnostics.DefaultTraceListener> 類別)。 此外，`My.Application.Log` 物件寫入至組件的記錄檔 (透過 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別)，而 `My.Log` 物件寫入至 ASP.NET 網頁的輸出 (透過 <xref:System.Web.WebPageTraceListener> 類別)。  
+ 如果組件沒有組態檔，`My.Application.Log` 和 `My.Log` 物件會寫入應用程式的偵錯輸出 (透過 <xref:System.Diagnostics.DefaultTraceListener> 類別)。 此外，`My.Application.Log` 物件會寫入組件的記錄檔 (透過 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別)，而 `My.Log` 物件會寫入 ASP.NET 網頁的輸出 (透過 <xref:System.Web.WebPageTraceListener> 類別)。  
   
- 以偵錯模式執行應用程式時，您可以在 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] [輸出]**** 視窗中檢視偵錯輸出。 若要開啟 [輸出] **** 視窗，請按一下 [偵錯] **** 功能表項目並指向 [Windows] ****，然後按一下 [輸出] ****。 在 [輸出] **** 視窗中，從 [顯示輸出來源] **** 方塊中選取 [偵錯] **** 。  
+ 以偵錯模式執行應用程式時，您可以在 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] [輸出] 視窗中檢視偵錯輸出。 若要開啟 [輸出] 視窗，請按一下 [偵錯] 功能表項目並指向 [Windows] ，然後按一下 [輸出] 。 在 [輸出] 視窗中，從 [顯示輸出來源] 方塊中選取 [偵錯]。  
   
  根據預設， `My.Application.Log` 寫入至位於使用者應用程式資料路徑中的記錄檔。 您可以從 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 物件的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 屬性取得路徑。 該路徑的格式如下所示︰  
   
@@ -68,10 +69,10 @@ ms.lasthandoff: 03/13/2017
   
  `CompanyName`、 `ProductName`和 `ProductVersion` 的值都來自應用程式的組件資訊。 記錄檔名稱的格式為 *AssemblyName*.log，其中 *AssemblyName* 為不含副檔名的組件檔案名稱。 若需要多個記錄檔 (像是當應用程式嘗試寫入至記錄檔而原始記錄檔無法使用時)，記錄檔名稱的格式為 *AssemblyName*-*iteration*.log，其中 `iteration` 為正 `Integer`。  
   
- 您可以藉由加入或變更電腦和應用程式的組態檔以覆寫預設行為。 如需詳細資訊，請參閱[逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
+ 您可以藉由加入或變更電腦和應用程式的組態檔以覆寫預設行為。 如需詳細資訊，請參閱 [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。  
   
 ## <a name="configuring-log-settings"></a>設定記錄檔設定  
- `Log` 物件具有不需應用程式組態檔 app.config 即可運作的預設實作。 若要變更預設，您必須加入具有新設定的組態檔。 如需詳細資訊，請參閱[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
+ `Log` 物件具有不需應用程式組態檔 app.config 即可運作的預設實作。 若要變更預設，您必須加入具有新設定的組態檔。 如需詳細資訊，請參閱 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。  
   
  記錄檔組態區段位於 app.config 檔案主 `<system.diagnostics>` 節點的 `<configuration>` 節點中。 記錄檔資訊在數個節點內定義︰  
   

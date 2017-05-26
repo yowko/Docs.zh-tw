@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: eb358daf212b171acd998a1aa74fe2ecd82a239a
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,7 +45,6 @@ var myTask = someWebAccessMethodAsync(url);
   
 // The application of await suspends the rest of this method until the task is complete.  
 var result = await myTask;  
-  
 ```  
   
  從工作啟動到等候完成的這段期間，您可以啟動其他工作。 其他工作會以隱含方式平行執行，但不會建立其他任何執行緒。  
@@ -247,3 +247,4 @@ namespace AsyncExample_MultipleTasks
  [逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+

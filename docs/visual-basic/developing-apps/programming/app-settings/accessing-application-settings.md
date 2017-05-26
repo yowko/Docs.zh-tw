@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c9759ffb68c9068c14b3aa507535e2dfb56e47b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3864089caaf24eb61a3db9a97c674dc42e40a3cd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="accessing-application-settings-visual-basic"></a>存取應用程式設定 (Visual Basic)
 本節包含描述可讓您完成的 `My.Settings` 物件和工作的主題。  
   
 ## <a name="mysettings"></a>My.Settings  
- `My.Settings` 物件的屬性可存取您應用程式的設定。 若要新增或移除設定，請使用 [專案設計工具]**** 的 [設定]**** 窗格。  
+ `My.Settings` 物件的屬性可存取您應用程式的設定。 若要新增或移除設定，請使用 [專案設計工具] 的 [設定] 窗格。  
   
  `My.Settings` 物件的方法可讓您儲存目前使用者設定，或將使用者設定還原為上次儲存的值。  
   

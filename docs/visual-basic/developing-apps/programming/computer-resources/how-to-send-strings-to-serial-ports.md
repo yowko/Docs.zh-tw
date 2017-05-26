@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f0a66d19e2677ee67672c0e26945fd555fed07d2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 14c5de8d0fa8195129b7ae65c1d373834307488a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中將字串傳送至序列埠
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  此範例會將字串傳送至 COM1 序列埠。 您可能需要使用電腦上不同的序列埠。  
   
- 請使用 `My.Computer.Ports.OpenSerialPort` 方法取得連接埠的參考。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+ 請使用 `My.Computer.Ports.OpenSerialPort` 方法取得連接埠的參考。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
  `Using` 區塊允許應用程式即使產生例外狀況，也可關閉序列埠。 所有管理序列埠的程式碼都應該出現在此區塊或 `Try...Catch...Finally` 區塊內。  
   

@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 413b8c3bfbfd70c91edeebece07833874db06334
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/13/2017
   
  例如，請考慮下列程式碼，有兩個類別和兩個委派︰泛型和非泛型。  
   
-```cs  
+```csharp  
 public class First { }  
 public class Second : First { }  
 public delegate First SampleDelegate(Second a);  
@@ -39,7 +40,7 @@ public delegate R SampleGenericDelegate<A, R>(A a);
   
  當您建立 `SampleDelegate` 或 `SampleGenericDelegate<A, R>` 型別的委派時，您可以指派下列任一方法給這些委派。  
   
-```cs  
+```csharp  
 // Matching signature.  
 public static First ASecondRFirst(Second first)  
 { return new First(); }  
@@ -60,7 +61,7 @@ public static Second AFirstRSecond(First first)
   
  下列程式碼範例會示範方法簽章與委派型別之間的隱含轉換。  
   
-```cs  
+```csharp  
 // Assigning a method with a matching signature   
 // to a non-generic delegate. No conversion is necessary.  
 SampleDelegate dNonGeneric = ASecondRFirst;  
@@ -87,7 +88,7 @@ SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;
   
  下列程式碼範例示範如何建立具有 Covariant 泛型型別參數的委派。  
   
-```cs  
+```csharp  
 // Type T is declared covariant by using the out keyword.  
 public delegate T SampleGenericDelegate <out T>();  
   
@@ -105,7 +106,7 @@ public static void Test()
   
  在下列程式碼範例中，`SampleGenericDelegate<String>` 無法明確地轉換成 `SampleGenericDelegate<Object>`，雖然 `String` 繼承 `Object`。 您可以使用 `out` 關鍵字標記泛型參數 `T`，修正這個問題。  
   
-```cs  
+```csharp  
 public delegate T SampleGenericDelegate<T>();  
   
 public static void Test()  
@@ -141,34 +142,55 @@ public static void Test()
  如需詳細資訊及更多範例，請參閱[針對 Func 與 Action 泛型委派使用差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>宣告泛型委派中的 Variant 型別參數  
- 如果泛型委派具有 Covariant 或 Contravariant 泛型型別參數，它可以稱之為「Variant 泛型委派」**。  
+ 如果泛型委派具有 Covariant 或 Contravariant 泛型型別參數，它可以稱之為「Variant 泛型委派」。  
   
  您可以使用 `out` 關鍵字將泛型委派中的泛型型別參數宣告為 Covariant。 Covariant 型別僅可用為方法傳回型別，不能用為方法引數的型別。 以下程式碼範例會示範如何宣告 Covariant 泛型委派。  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+```csharp  
+public delegate R DCovariant<out R>();  
+```  
+  
  您可以使用 `in` 關鍵字將泛型委派中的泛型型別參數宣告為 Contravariant。 Contravariant 型別僅可用為方法引數的型別，不能用為方法傳回型別。 以下程式碼範例會示範如何宣告 Contravariant 泛型委派。  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+public delegate void DContravariant<in A>(A a);  
+```  
+  
 > [!IMPORTANT]
 > C# 中的  `ref` 和 `out` 參數不能標示為 Variant。  
   
  您也可以支援相同委派中不同型別參數的差異和共變數。 這在下列範例中顯示。  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+public delegate R DVariant<in A, out R>(A a);  
+```  
+  
 ### <a name="instantiating-and-invoking-variant-generic-delegates"></a>具現化及叫用 Variant 泛型委派  
  您可以具現化及叫用 Variant 委派，一如您具現化及叫用非變異委派。 在下例中，委派是由 lambda 運算式具現化。  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+DVariant<String, String> dvariant = (String str) => str + " ";  
+dvariant("test");  
+```  
+  
 ### <a name="combining-variant-generic-delegates"></a>結合 Variant 泛型委派  
  您不應該組合 Variant 委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的型別必須完全一致。 當您使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 運算子組合委派時，這會導致執行階段例外狀況，如以下程式碼範例所示。  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```csharp  
+Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
+Action<string> actStr = x => Console.WriteLine("string: {0}", x);  
+// All of the following statements throw exceptions at run time.  
+// Action<string> actCombine = actStr + actObj;  
+// actStr += actObj;  
+// Delegate.Combine(actStr, actObj);  
+```  
+  
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>實值型別和參考型別的泛型型別參數中的差異  
  僅參考型別支援泛型型別參數的差異。 例如，因為整數是實值型別，所以 `DVariant<int>` 無法以隱含方式轉換成`DVariant<Object>` 或 `DVariant<long>`。  
   
  下例示範實值型別不支援的泛型型別參數的差異。  
   
-```cs  
+```csharp  
 // The type T is covariant.  
 public delegate T DVariant<out T>();  
   

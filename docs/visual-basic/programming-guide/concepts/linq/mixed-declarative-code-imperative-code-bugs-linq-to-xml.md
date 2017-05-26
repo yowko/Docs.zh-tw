@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,7 +62,6 @@ Dim root As XElement = _
 For Each e As XElement In root.Elements()  
     root.Add(New XElement(e.Name, e.Value))  
 Next  
-  
 ```  
   
  這個程式碼會進入無限的迴圈。 `foreach` 陳述式會逐一查看 `Elements()` 座標軸，並將新的項目加入到 `doc` 項目。 它也會透過剛才加入的項目結束反覆運算。 而且它會利用迴圈的每次反覆運算配置新物件，因此最終會消耗所有可用的記憶體。  
@@ -79,7 +79,6 @@ For Each e As XElement In root.Elements().ToList()
     root.Add(New XElement(e.Name, e.Value))  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  現在，這個程式碼可以運作了。 所產生的 XML 樹狀結構如下所示：  
@@ -109,7 +108,6 @@ For Each e As XElement In root.Elements()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  不過，這不會執行您想要的動作。 在這個情況下，當您移除第一個項目 A 後，該項目就會從根目錄中所包含的 XML 樹狀結構移除，而負責進行反覆運算之 Elements 方法中的程式碼則找不到下一個項目。  
@@ -136,7 +134,6 @@ For Each e As XElement In root.Elements().ToList()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  這會產生下列輸出：  
@@ -156,7 +153,6 @@ Dim root As XElement = _
     </Root>  
 root.RemoveAll()  
 Console.WriteLine(root)  
-  
 ```  
   
 ## <a name="why-cant-linq-automatically-handle-this"></a>為什麼 LINQ 無法自動處理這個情況？  
@@ -169,7 +165,6 @@ Dim z = _
     From e In root.Elements() _  
     Where (TestSomeCondition(e)) _  
     Select DoMyProjection(e)  
-  
 ```  
   
  此類分析程式碼必須分析 TestSomeCondition 和 DoMyProjection 方法，而且這些方法呼叫的所有方法都必須判斷任何程式碼是否有副作用。 但是，分析程式碼無法只尋找具有副作用的任何程式碼。 在此情況下，此分析程式碼必須僅針對 `root` 的子項目上，具有副作用的程式碼進行選取。  
@@ -197,8 +192,8 @@ Dim root As XElement = _
 Dim newRoot As XElement = New XElement("Root", _  
     root.Elements(), root.Elements())  
 Console.WriteLine(newRoot)  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

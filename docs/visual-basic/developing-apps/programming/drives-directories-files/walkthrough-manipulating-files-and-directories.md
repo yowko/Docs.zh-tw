@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89137b3c927a7ac8ed126f2be3695c4aa72a85fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
@@ -56,15 +57,15 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  按一下 [檔案]**** 功能表上的 [新增專案]****。  
+1.  按一下 [檔案] 功能表上的 [新增專案]。  
   
      [ **新增專案** ] 對話方塊隨即出現。  
   
-2.  在 [已安裝的範本]**** 窗格中，展開 [Visual Basic]****，然後按一下 [Windows]****。 在中間的 [範本]**** 窗格中，按一下 [Windows Forms 應用程式]****。  
+2.  在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。 在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。  
   
-3.  在 [名稱]**** 方塊中，輸入 `FileExplorer` 以設定專案名稱，然後按一下 [確定]****。  
+3.  在 [名稱] 方塊中，輸入 `FileExplorer` 以設定專案名稱，然後按一下 [確定]。  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 即會將專案新增到方案總管****中，並開啟 Windows Forms 設計工具。  
+     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 即會將專案新增到方案總管中，並開啟 Windows Forms 設計工具。  
   
 4.  將下表的控制項新增至表單，並設定其屬性的對應值。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     `FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾]**** 對話方塊。 在使用者按一下 [確定]**** 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，其會在下一個步驟中新增。  
+     `FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾] 對話方塊。 使用者按一下 [確定] 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，以在下一個步驟中加入。  
   
 3.  新增下列 `ListFiles` 方法。  
   
@@ -92,11 +93,11 @@ ms.lasthandoff: 03/13/2017
   
      此程式碼會先清除 **ListBox**。  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 方法即會擷取字串集合；目錄中的每個檔案都有一個集合。 `GetFiles` 方法可接受搜尋模式引數，以擷取符合特定模式的檔案。 在此範例中，僅會傳回副檔名為 .txt 的檔案。  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 方法接著會擷取一組字串，目錄中每個檔案一個字串。 `GetFiles` 方法可接受搜尋模式引數，以擷取符合特定模式的檔案。 在此範例中，僅會傳回副檔名為 .txt 的檔案。  
   
      隨即將 `GetFiles` 方法所傳回的字串新增至 **ListBox**。  
   
-4.  執行應用程式。 按一下 [瀏覽]**** 按鈕。 在 [瀏覽資料夾]**** 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]****。  
+4.  執行應用程式。 按一下 [瀏覽] 按鈕。 在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。  
   
      `ListBox` 包含所選資料夾中的 .txt 檔案清單。  
   
@@ -118,13 +119,13 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     程式碼會使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法，以取得檔案參數。 系統會將檔案參數新增至 <xref:System.Text.StringBuilder>。  
+     程式碼使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法來取得檔案參數。 檔案參數會新增至 <xref:System.Text.StringBuilder>。  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀取至 <xref:System.IO.StreamReader> 當中。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
   
-4.  執行應用程式。 按一下 [瀏覽]****，並瀏覽至包含 .txt 檔案的資料夾。 按一下 [確定]****。  
+4.  執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。 按一下 [確定]。  
   
-     選取 `ListBox` 中的檔案，然後按一下 [檢查]****。 `MessageBox` 隨即顯示檔案資訊。  
+     選取 `ListBox` 中的檔案，然後按一下 [檢查]。 `MessageBox` 隨即顯示檔案資訊。  
   
 5.  停止執行應用程式。  
   
@@ -136,9 +137,9 @@ ms.lasthandoff: 03/13/2017
   
      程式碼會將記錄檔路徑設為將記錄檔放入所選檔案的相同目錄中。 記錄項目的文字則會設為目前的日期和時間，後面接著檔案資訊。  
   
-     您可將 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法的 `append` 引數設為 `True`，以用來建立記錄項目。  
+     將 `append` 引數設定為 `True` 的 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法用來建立記錄項目。  
   
-2.  執行應用程式。 瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果]**** 核取方塊，然後按一下 [檢查]****。 確認記錄項目已寫入 `log.txt` 檔案。  
+2.  執行應用程式。 瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果] 核取方塊，然後按一下 [檢查]。 確認記錄項目已寫入 `log.txt` 檔案。  
   
 3.  停止執行應用程式。  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 03/13/2017
   
      此程式碼會將資料夾瀏覽器的預設目錄設為目前的目錄。  
   
-3.  執行應用程式。 當您首次按一下 [瀏覽]**** 時，[瀏覽資料夾]**** 對話方塊即會開啟至目前目錄。  
+3.  執行應用程式。 當您首次按一下 [瀏覽] 時，[瀏覽資料夾] 對話方塊即會開啟至目前目錄。  
   
 4.  停止執行應用程式。  
   
@@ -172,7 +173,7 @@ ms.lasthandoff: 03/13/2017
   
 5.  在 `Form1_Load` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
   
-6.  執行應用程式。 如果 `ListBox` 中未選取項目，則會停用 [儲存結果]**** 核取方塊和 [檢查]**** 按鈕。  
+6.  執行應用程式。 如果 `ListBox` 中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整範例  
  下列是完整範例。  
@@ -180,7 +181,7 @@ ms.lasthandoff: 03/13/2017
  [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
 ## <a name="full-example-using-systemio"></a>使用 System.IO 的完整範例  
- 下列對等範例會使用來自 <xref:System.IO> 命名空間的類別，而不是使用 `My.Computer.FileSystem` 物件。  
+ 下列對等範例使用來自 <xref:System.IO> 命名空間的類別，而不是使用 `My.Computer.FileSystem` 物件。  
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   

@@ -23,7 +23,7 @@ caps.handback.revision: 20
   
  本教學課程說明如何撰寫範例應用程式：[在 Win32 視窗中裝載 WPF 內容的範例](http://go.microsoft.com/fwlink/?LinkID=160004)，以在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容。  您可以擴充這個範例，以裝載任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗。  因為這牽涉到混合 Managed 和 Unmanaged程式碼，所以是以 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 撰寫應用程式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## 需求  

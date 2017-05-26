@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c5f8c23a86c7a09d6f8d0b8c6f1684a38d0336a3
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---

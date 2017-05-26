@@ -28,7 +28,7 @@ caps.handback.revision: 12
 > [!NOTE]
 >  本文件中的所有程式碼範例都可在[進階文字格式化範例](http://go.microsoft.com/fwlink/?LinkID=159965) \(英文\) 中找到。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereq"></a>   
 ## 必要條件  

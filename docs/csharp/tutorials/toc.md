@@ -1,10 +1,9 @@
 # [教學課程](index.md)
-## [🔧 使用 Visual Studio 建立、部署應用程式並對其進行偵錯](create-debug-deploy.md)
-## [🔧 使用 C# Interactive 探索和實驗](exploring-with-csharp-interactive.md)
-## [🔧 建立可攜式程式庫](creating-portable-libraries.md)
-## [🔧 非同步 UI 程式設計](asynchronous-ui-programming.md)
-## [🔧 非同步伺服器程式設計](asynchronous-server-programming.md)
-## [🔧 並行程式設計](concurrent-programming.md)
+<!--## [🔧 Using C# Interactive to explore and experiment](exploring-with-csharp-interactive.md)-->
+<!--## [🔧 Creating portable libraries](creating-portable-libraries.md)-->
+<!--## [🔧 Asynchronous UI programming](asynchronous-ui-programming.md)-->
+<!--## [🔧 Asynchronous server programming](asynchronous-server-programming.md)-->
+<!--## [🔧 Concurrent programming](concurrent-programming.md)-->
 ## [C# 和 .NET 中的繼承](inheritance.md)
 ## [主控台應用程式](console-teleprompter.md)
 ## [REST 用戶端](console-webapiclient.md)

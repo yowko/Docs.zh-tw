@@ -13,9 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 6185a0195deb4d33a909fb44cbb26373c5b615f8
+ms.contentlocale: zh-tw
 
 ---
 實體資料模型

@@ -21,7 +21,7 @@ caps.handback.revision: 26
 # WPF 中的印刷樣式
 本主題介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。  這些功能包含改善的文字呈現品質和效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、增強型國際文字、增強型字型支援和全新的文字應用程式開發介面 \(API\)。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## 改善的文字品質和效能  

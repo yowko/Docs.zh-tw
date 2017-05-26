@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 版本控制"
+title: ".NET Core 版本設定 | Microsoft Docs"
 description: ".NET Core 版本控制"
 keywords: .NET, .NET Core
 author: richlander
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3cdd3ff040bfd9d307f0d0c0a07fbd0d972cbd3e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/23/2017
 
 ---
 
@@ -110,7 +111,7 @@ GitHub 上的 .NET Core 儲存機制每天都有認可和 PR，進而產生許�
 
 ### <a name="shipping-a-patch-release"></a>修補程式版本出貨
 
-.NET Core v1.0.0 穩定版本出貨之後，會針對 .NET Core 程式庫進行修補程式層級的變更 (沒有新的 API)，以修正 Bug 並改善效能和可靠性。 各種中繼套件會更新，參考更新過的 .NET Core 程式庫套件。 中繼套件的版本建立是作為修補程式的更新 (x.y.z)。 不會更新架構。 新的 .NET Core 散發套件發行時，版本號碼會與 `Microsoft.NETCore.App` 中繼套件相符。
+.NET Core 1.0.0 版穩定版本出貨之後，會針對 .NET Core 程式庫進行修補程式層級的變更 (沒有新的 API)，以修正 Bug 並改善效能和可靠性。 各種中繼套件會更新，參考更新過的 .NET Core 程式庫套件。 中繼套件的版本建立是作為修補程式的更新 (x.y.z)。 不會更新架構。 新的 .NET Core 散發套件發行時，版本號碼會與 `Microsoft.NETCore.App` 中繼套件相符。
 
 您可以在下列 project.json 範例中看到示範的修補程式更新。
 
@@ -151,6 +152,5 @@ GitHub 上的 .NET Core 儲存機制每天都有認可和 PR，進而產生許�
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 </Project>
-
 ```
 

@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e91cc4fea9fbe57b257e17915cd28b3b82f12f6e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -71,7 +72,6 @@ class Program
         WriteLine(Sqrt(3*3 + 4*4));   
     }   
 }  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -110,3 +110,4 @@ class Program
  [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
  [命名空間](../../../csharp/programming-guide/namespaces/index.md)   
  [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)
+

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1ce67620d96a35ccf1223cc4de9d34ca1aaa722
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f0cd02a26be70d2d3272ecd56b11e31e3d26f83a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>如何：在 Visual Basic 中從固定寬度的文字檔讀取
@@ -71,15 +72,15 @@ ms.lasthandoff: 03/13/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
--   無法使用指定的格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 此例外狀況訊息會指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性會指派給此行內含的文字。  
+-   無法使用指定格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 例外狀況訊息指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性被指派至包含於該文字行中的文字。  
   
 -   指定的檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)。  
+-   發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)  
   
 -   路徑太長 (<xref:System.IO.PathTooLongException>)。  
   
--   使用者的權限不足，無法存取檔案 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   

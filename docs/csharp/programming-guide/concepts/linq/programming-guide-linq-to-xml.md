@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 5e1e95d92123b2874aace0c36005a8a07a6203fc
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>程式設計手冊 (LINQ to XML) (C#)

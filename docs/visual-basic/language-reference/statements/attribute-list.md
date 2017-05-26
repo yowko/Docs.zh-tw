@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e360794ad217784e2358967bfbcc03959cd043b1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -87,3 +88,4 @@ ms.lasthandoff: 03/13/2017
  [模組\<關鍵字 >](../../../visual-basic/language-reference/modifiers/module-keyword.md)   
  [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
  [如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+

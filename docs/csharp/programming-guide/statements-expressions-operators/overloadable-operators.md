@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 217819732147cd8ccfa74d55565c6cdb3202f4b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 1d3f942dca761c4425ed8c2129b752dec349a40f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可多載的運算子 (C# 程式設計手冊)
@@ -58,7 +59,6 @@ public static Complex operator +(Complex c1, Complex c2)
     {  
         Return new Complex(c1.real + c2.real, c1.imaginary + c2.imaginary);  
     }  
-  
 ```  
   
  通常會有定義，只會立即傳回運算式的結果。  在這些情況中，有一個使用 `=>` 的語法捷徑。  
@@ -70,7 +70,6 @@ public static Complex operator +(Complex c1, Complex c2) =>
     // Override ToString() to display a complex number   
     // in the traditional format:  
     public override string ToString() => $"{this.real} + {this.imaginary}";  
-  
 ```  
   
  如需詳細資訊，請參閱[如何：使用運算子多載建立複數類別](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md)。  

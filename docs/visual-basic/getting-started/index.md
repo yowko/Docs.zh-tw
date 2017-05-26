@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 使用者入門 | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d94b01f24ea1c45ecbf6b14ecfdf164d8b8b10c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
   
 ## <a name="in-this-section"></a>本節內容  
- [Visual Studio 2015 中 Visual Basic 的重大變更](../../visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)  
+
+[Visual Basic 的新功能](whats-new.md)   
+列出每個 Visual Basic .NET 版本的新功能。
+
+[Visual Studio 中 Visual Basic 的重大變更](breaking-changes-in-visual-studio.md)  
  列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
   
  [Visual Basic 程式設計人員的其他資源](../../visual-basic/getting-started/additional-resources.md)  
@@ -48,7 +53,7 @@ ms.lasthandoff: 03/13/2017
  [了解 Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  提供學習如何使用 Visual Basic 進行程式設計的資源連結。  
   
- [取得 Visual Basic](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)  
+ [取得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -64,7 +69,7 @@ ms.lasthandoff: 03/13/2017
  [告訴我們](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  說明如何接受支援和提供意見。  
   
- [Visual Studio](http://msdn.microsoft.com/en-us/06ddebea-2c83-4a45-bb48-6264c797ed93)  
+ [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  提供 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 文件的連結。  
   
  [C#](../../csharp/csharp.md)  

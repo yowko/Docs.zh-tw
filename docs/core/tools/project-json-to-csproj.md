@@ -10,16 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/30/2017
 
 ---
 
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
-作者：[Nate McMaster](http://github.com/natemcmaster)
+作者：[Nate McMaster](https://github.com/natemcmaster)
 
 在 .NET Core 工具開發期間，有項重要的設計變更導致不再支援 *project.json* 檔案，相反地，.NET Core 專案會改為使用 MSBuild/csproj 格式。
 
@@ -323,7 +324,7 @@ csproj 中沒有對應項。
 
 ```xml
 <PropertyGroup>
-  <RuntimeIdentifiers>win7-x64;osx.10-11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+  <RuntimeIdentifiers>win7-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
 
@@ -664,7 +665,6 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 ```
 
 ## <a name="see-also"></a>另請參閱
-[project.json 參考](project-json.md)
 
 [CLI 中變更的高階概觀](../tools/cli-msbuild-architecture.md)
 

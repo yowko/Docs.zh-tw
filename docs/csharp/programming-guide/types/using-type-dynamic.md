@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f9ee1f0cae90120692fa4f41d2f432551281ab6d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 7e2310df174a7c38fafba3fed4e4bd3de4fa377a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用動態類型 (C# 程式設計手冊)
@@ -72,7 +73,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
 ## <a name="dynamic-language-runtime"></a>Dynamic Language Runtime  
- Dynamic Language Runtime (DLR) 是 [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net_v40_short_md.md)] 中的新 API。 它提供的基礎結構支援 C# 中的 `dynamic` 類型，也支援實作 IronPython 和 IronRuby 之類的動態程式設計語言。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](http://msdn.microsoft.com/library/f769a271-8aff-4bea-bfab-6160217ce23d)。  
+ Dynamic Language Runtime (DLR) 是 [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net_v40_short_md.md)] 中的新 API。 它提供的基礎結構支援 C# 中的 `dynamic` 類型，也支援實作 IronPython 和 IronRuby 之類的動態程式設計語言。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
 ## <a name="com-interop"></a>COM Interop  
  [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
@@ -88,6 +89,6 @@ ms.lasthandoff: 03/13/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|說明如何使用 `dynamic` 關鍵字。|  
-|[Dynamic Language Runtime 概觀](http://msdn.microsoft.com/library/f769a271-8aff-4bea-bfab-6160217ce23d)|提供 DLR 概觀，DLR 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。|  
+|[Dynamic Language Runtime 概觀](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供 DLR 概觀，DLR 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。|  
 |[逐步解說：建立和使用動態物件](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|針對建立自訂動態物件及建立存取 `IronPython` 程式庫的專案，提供逐步指示。|  
 |[如何：使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|示範如何建立使用具名和選擇性引數、`dynamic` 類型，以及其他可簡化 Office API 物件存取之增強功能的專案。|

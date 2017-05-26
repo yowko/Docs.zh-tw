@@ -25,7 +25,7 @@ caps.handback.revision: 17
 # 圖形轉譯登錄設定
 本主題提供會對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式造成影響之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形轉譯登錄設定的概觀。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## 使用圖形轉譯登錄設定的時機  

@@ -14,10 +14,11 @@ ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f15f1b6b55a4cb7d036a89d1636aab166740037d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9e16daec1c830f4541229beaa10b079e683914fe
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -25,9 +26,9 @@ ms.lasthandoff: 03/13/2017
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>功能性程式設計與命令式程式設計  
- 明確建立「功能性程式設計」**開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」**。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」**(程序性) 程式設計。  
+ 明確建立「功能性程式設計」開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」(程序性) 程式設計。  
   
- 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」**程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
+ 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
   
 |特性|命令性方法|功能性方法|  
 |--------------------|-------------------------|-------------------------|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/13/2017
  雖然多數語言的設計在於支援特定的程式設計開發架構，但許多一般的語言還是有足夠的彈性，可以支援多種開發架構。 例如，包含函式指標的多數語言可用於確實支援功能性程式設計。 此外，C# 加入明確的語言擴充功能，以支援功能性程式設計，包括 Lambda 運算式與型別推斷。 LINQ 技術是一種宣告式功能性程式設計。  
   
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的功能性程式設計  
- 許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (除非執行程序性程式碼的溢出機制可以產生導致非純功能性的副作用)。 不過，雖然 XSLT 是一個有效的工具，但是有些特性並不是最好的。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 同時，大量依賴流量控制遞迴可能會使程式碼難以讀取。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)。  
+ 許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (除非執行程序性程式碼的溢出機制可以產生導致非純功能性的副作用)。 不過，雖然 XSLT 是一個有效的工具，但是有些特性並不是最好的。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 同時，大量依賴流量控制遞迴可能會使程式碼難以讀取。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)。  
   
  不過，XSLT 已經證明使用純功能性方法將 XML 從一個組織結構轉換為另一個組織結構的值。 包含 LINQ to XML 的純功能性程式設計類似於 XSLT 的許多方法。 不過，LINQ to XML 和 C# 所引進的程式設計建構可讓您撰寫比 XSLT 更容易讀取與維護的純功能性轉換。  
   
@@ -64,5 +65,5 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT 轉換](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
+ [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)   
  [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

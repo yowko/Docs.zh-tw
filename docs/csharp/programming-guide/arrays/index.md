@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: ada8ff44630118ce0e8b8d71668e2c56ebef4bbb
-ms.lasthandoff: 03/31/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="arrays-c-programming-guide"></a>陣列 (C# 程式設計手冊)
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/31/2017
   
 -   陣列元素可以是任何類型，包含陣列類型。  
   
--   陣列類型是衍生自抽象基底類型 <xref:System.Array> 的[參考類型](../../../csharp/language-reference/keywords/reference-types.md)。 因為這個類型會實作 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，您可以在 C# 中的所有陣列上使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 反覆項目。  
+-   陣列類型是衍生自抽象基底類型 <xref:System.Array> 的[參考類型](../../../csharp/language-reference/keywords/reference-types.md)。 由於這個類型會實作 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.Generic.IEnumerable%601>，您可以在所有以 C# 撰寫的陣列上使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 反覆項目。  
   
 ## <a name="related-sections"></a>相關章節  
   

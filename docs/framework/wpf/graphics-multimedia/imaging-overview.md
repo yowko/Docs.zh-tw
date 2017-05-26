@@ -34,7 +34,7 @@ caps.handback.revision: 29
 # 影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]讓開發人員可以顯示、轉換及格式化影像。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="_wpfImaging"></a>   
 ## WPF 影像處理元件  

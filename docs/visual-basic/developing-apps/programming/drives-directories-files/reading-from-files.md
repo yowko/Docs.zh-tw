@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a21629921a04f26aa8cb6d18acdf923888d32ef9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>在 Visual Basic 中讀取檔案
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/13/2017
  示範如何從二進位檔案讀取。  
   
  [如何：以 StreamReader 從檔案讀取文字](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
- 示範如何使用 <xref:System.IO.StreamReader> 讀取檔案。  
+ 示範如何使用 <xref:System.IO.StreamReader> 以從檔案讀取。  
   
 ## <a name="reference"></a>參考資料  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

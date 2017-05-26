@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e5ad120e52896476447d892438ed9a5d2979da8c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 39c98f4fa461d037f5a0c551b5c1ea089f25451d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>如何：在 Visual Basic 中讀取應用程式設定
 您可以藉由存取 `My.Settings` 物件上的設定屬性，來讀取使用者設定。  
   
- `My.Settings` 物件會將每個設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設定的 [範圍]**** 指出屬性是否為唯讀；[應用程式]**** 範圍設定的屬性為唯讀，而 [使用者]**** 範圍設定的屬性為讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+ `My.Settings` 物件會將每個設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設定的 [範圍] 指出屬性是否為唯讀；[應用程式] 範圍設定的屬性為唯讀，而 [使用者] 範圍設定的屬性為讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
 ## <a name="example"></a>範例  
  此範例會顯示 `Nickname` 設定的值。  

@@ -26,7 +26,7 @@ caps.handback.revision: 33
 # 繫結宣告概觀
 本主題討論可以用來宣告繫結的不同方法。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prereq"></a>   
 ## 必要條件  

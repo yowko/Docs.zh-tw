@@ -49,7 +49,7 @@ caps.handback.revision: 13
   
  下列範例說明類別 \(`LibraryPatron`\)，其中包含了特定型別的集合 \(`LibraryItem`\)。 第二個類別定義了 `LibraryItem` 型別。 第三與第四個類別 \(`Book` 和 `Newspaper`\) 則繼承了 `LibraryItem` 類別。  
   
- [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]
+ <!-- TODO: review snippet reference [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]  -->
  [!code-vb[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#3)]  
   
  下列程式碼會透過 `knownTypes` 參數來建構序列化程式的執行個體。  

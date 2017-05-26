@@ -46,7 +46,7 @@ caps.handback.revision: 31
   
  為了提供一致的機制，供使用者從這些位置識別及載入這些檔案類型，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 利用了「*Pack URI 配置*」\(Pack URI Scheme\) 的擴充性。  本主題提供這種配置的概觀，內容涵蓋如何針對各種案例建構 Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，並討論絕對和相對 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 以及 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 解析，最後再說明如何從標記和程式碼使用 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="The_Pack_URI_Scheme"></a>   
 ## Pack URI 配置  

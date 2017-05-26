@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 570a5218ce2d750eb5f3a1a1b57e1e05f7fc0cbd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a686058d97d499b3baf32b20b56834162200f346
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>使用 TextFieldParser 物件剖析文字檔 (Visual Basic)
@@ -52,7 +53,7 @@ ms.lasthandoff: 03/13/2017
   
  格式一旦定義，您就可以使用 `ReadFields` 方法循環往復處理檔案中的每一行。  
   
- 如果欄位不符合指定的格式，則擲回例外狀況 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>。 擲回這類例外狀況時，`ErrorLine` 和 `ErrorLineNumber` 屬性會保留造成例外狀況及文字以及該文字的行號。  
+ 如果欄位不符合指定的格式，將會擲回 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> 例外狀況。 擲回這類例外狀況時，`ErrorLine` 和 `ErrorLineNumber` 屬性會保留造成例外狀況及文字以及該文字的行號。  
   
 ## <a name="parsing-files-with-multiple-formats"></a>剖析有多種格式的檔案  
  `TextFieldParser` 物件的 `PeekChars` 方法可用來先檢查，然後再讀取每個欄位，讓您定義多種欄位格式，並據以採取動作。 如需詳細資訊，請參閱[如何：讀取多種格式的文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  

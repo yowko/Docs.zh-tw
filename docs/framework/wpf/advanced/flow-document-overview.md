@@ -24,7 +24,7 @@ caps.handback.revision: 29
 # 非固定格式文件概觀
 非固定格式文件 \(Flow Document\) 是設計來最佳化檢視和可讀性。  非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 \(如視窗大小、裝置解析度和選擇性的使用者偏好設定\)，動態調整及重新排列其內容。  此外，非固定格式文件提供進階的文件功能，例如分頁和欄位。  本主題提供非固定格式文件的概觀及建立的方式。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_flow_document"></a>   
 ## 什麼是非固定格式文件  

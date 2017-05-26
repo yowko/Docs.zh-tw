@@ -33,9 +33,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ab7d69c34a58dc898553868258c4fdf6b81db343
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,7 +62,6 @@ Class Customer
   
     End Sub  
 End Class  
-  
 ```  
   
  根據預設，這個訊息是一個警告。 隱藏警告的方式或如何將警告視為錯誤的相關資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
@@ -114,3 +114,4 @@ End Class
  [如何︰ 參考物件的目前執行個體](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
  [區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+

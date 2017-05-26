@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b20c4816582ef3e4d36512c38947f64e86d26541
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---

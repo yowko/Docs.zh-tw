@@ -30,15 +30,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 6f4d2bf3ad04fedafb44f8fed63f7234d48af63b
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
-屬性是提供彈性機制以讀取、寫入或計算私人欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」**的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
+屬性是提供彈性機制以讀取、寫入或計算私人欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
 
 ## <a name="properties-overview"></a>屬性概觀  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/13/2017
 - [get](../../../csharp/language-reference/keywords/get.md) 屬性存取子可用來傳回屬性值，而 [set](../../../csharp/language-reference/keywords/set.md) 屬性存取子則用來指派新值。 這些存取子可以有不同的存取層級。 如需詳細資訊，請參閱[限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
   
 - [value`set` 關鍵字是用來定義 ](../../../csharp/language-reference/keywords/value.md) 存取子要指派的值。  
-- 屬性可以是「讀寫」**(同時具有 `get` 和 `set` 存取子)、「唯讀」**(具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」**(具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
+- 屬性可以是「讀寫」(同時具有 `get` 和 `set` 存取子)、「唯讀」(具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」(具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
 
 - 不需要自訂存取子程式碼的簡單屬性，則可以實作為運算式主體定義或[自動實作屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。
  

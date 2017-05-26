@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2856fe19ddc48a14385aaae7b1c331fcb96c0554
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ ms.lasthandoff: 03/13/2017
 1.  中宣告變數`Dim`陳述式。  
   
     ```  
-  
     Dim newCustomer  
     ```  
   
@@ -91,3 +91,4 @@ ms.lasthandoff: 03/13/2017
  [陳述式](../../../../visual-basic/language-reference/statements/index.md)   
  [區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+

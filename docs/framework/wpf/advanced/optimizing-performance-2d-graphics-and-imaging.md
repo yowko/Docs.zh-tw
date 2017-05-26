@@ -26,7 +26,7 @@ caps.handback.revision: 7
 # 最佳化效能：2D 圖形和影像處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供大範圍的 2D 圖形和影像處理功能，可予以最佳化以符合應用程式的需求。  本主題提供那些區域的效能最佳化資訊。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drawing_and_Shapes"></a>   
 ## 繪圖和圖案  

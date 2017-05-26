@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,14 +45,12 @@ ms.lasthandoff: 03/13/2017
  根據預設，第一個列舉程式的值是 0，而每個後續列舉程式的值會遞增 1。 例如，在下列的列舉中， `Sat` 是 `0`， `Sun` 是 `1`， `Mon` 是 `2`，依此類推。  
   
 ```  
-  
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  列舉程式可使用初始設定式覆寫預設值，如下列範例所示。  
   
 ```  
-  
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -60,7 +59,6 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](../../../csharp/language-reference/keywords/char.md) 除外。 預設的列舉項目基礎類型是 [int](../../../csharp/language-reference/keywords/int.md)。 若要宣告另一個整數型別的列舉，例如 [byte](../../../csharp/language-reference/keywords/byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。  
   
 ```  
-  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -76,7 +74,6 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  基礎類型指定為每個列舉程式配置的儲存體數量。 不過，從 `enum` 類型轉換為整數類型需要明確轉換。 例如，下列陳述式會指派列舉程式 `Sun` 為 [int](../../../csharp/language-reference/keywords/int.md) 類型的變數，方法是使用轉換從 `enum` 轉換成 `int`。  
   
 ```  
-  
 int x = (int)Days.Sun;  
 ```  
   
@@ -122,3 +119,4 @@ int x = (int)Days.Sun;
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

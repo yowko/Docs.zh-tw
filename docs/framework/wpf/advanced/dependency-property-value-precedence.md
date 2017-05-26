@@ -24,7 +24,7 @@ caps.handback.revision: 26
 # 相依性屬性值優先順序
 <a name="introduction"></a> 本主題將說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響[相依性屬性](GTMT)的值，並描述屬性系統套用到屬性有效值的優先順序。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a11d48146c14f62190c45de78b52310218e79df4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 8423e19047d3c967a69566ebd863f677d11a0898
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [上一個課程 -- 支援運算式樹狀架構的架構類型](expression-classes.md)
 
-「運算式樹狀架構」**是一種表示特定程式碼的資料結構。
+「運算式樹狀架構」是一種表示特定程式碼的資料結構。
 它不是已編譯且可執行的程式碼。 如果您想要執行由運算式樹狀架構表示的 .NET 程式碼，您必須將它轉換成可執行 IL 指令。 
 ## <a name="lambda-expressions-to-functions"></a>將 Lambda 運算式轉換成函式
 您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 是否有任何用處？)任何 `LamdbaExpression` 的運算式樹狀架構或衍生自 `LambdaExpression` 的類型，都可以轉換成 IL。

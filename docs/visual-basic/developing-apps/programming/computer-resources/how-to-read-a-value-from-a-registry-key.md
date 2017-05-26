@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e68cde6d56d4de584861b8bcf29e072a5fc18928
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中讀取登錄機碼的值
@@ -55,7 +56,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
- 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows 作業系統] > [登錄]**** 中。 如需詳細資訊，請參閱[程式碼片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+ 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows 作業系統] > [登錄] 中。 如需詳細資訊，請參閱[程式碼片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>判斷登錄機碼中是否有一個值  
   
@@ -68,14 +69,14 @@ ms.lasthandoff: 03/13/2017
   
  以下條件可能會造成例外狀況：  
   
--   機碼的名稱為 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   機碼的名稱是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
 -   使用者沒有讀取登錄機碼的權限 (<xref:System.Security.SecurityException>)。  
   
 -   機碼名稱超過 255 個字元的限制 (<xref:System.ArgumentException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要執行此程序，您的組件需要 <xref:System.Security.Permissions.RegistryPermission> 類別所授與的權限等級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
+ 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

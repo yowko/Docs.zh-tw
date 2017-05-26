@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: de78bfda263071817535157522430de080d4f6a4
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -220,7 +221,6 @@ Task returnedTask = Task_MethodAsync()
 Await returnedTask  
 ' or, in a single statement  
 Await Task_MethodAsync()  
-  
 ```  
   
  每項傳回的工作都代表進行中的工作。 工作會封裝這個非同步處理序狀態的相關資訊，以及處理序的最終結果，或是處理序不成功時，則會封裝處理序引發的例外狀況。  
@@ -334,3 +334,4 @@ End Class
 ## <a name="see-also"></a>另請參閱  
  [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)   
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+

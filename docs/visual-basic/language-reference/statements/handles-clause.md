@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7c79935e7f15f31abca7efddbc443239d5db2f58
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,7 +45,6 @@ ms.lasthandoff: 03/13/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 proceduredeclaration Handles eventlist  
 ```  
   
@@ -86,3 +86,4 @@ proceduredeclaration Handles eventlist
  [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)   
  [RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+

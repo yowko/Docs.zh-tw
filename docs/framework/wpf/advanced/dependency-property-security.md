@@ -27,7 +27,7 @@ caps.handback.revision: 7
 # 相依性屬性的安全性
 相依性屬性通常應該視為公用屬性。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AccessSecurity"></a>   
 ## 包裝函式和相依性屬性的存取和安全性  

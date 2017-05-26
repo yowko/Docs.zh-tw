@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: c76168d1c9ae65ef0d17c55aab156a4f16ecea52
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 03/20/2017
 
 Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本主題會逐步引導您建置一個包含可重複使用之程式庫和單元測試的 .NET Core 解決方案。
 
-本教學課程會示範如何建立能接受來自使用者的搜尋文字和文字字串、使用類別庫中的方法計算搜尋文字出現在字串中的次數，並將結果傳回給使用者的應用程式。 解決方案也會包含針對類別庫的單元測試，做為測試驅動開發 (TDD) 概念的簡介。 如果您偏好使用完整範例來進行教學課程，請下載[範例解決方案 (英文)](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。
+本教學課程會示範如何建立能接受來自使用者的搜尋文字和文字字串、使用類別庫中的方法計算搜尋文字出現在字串中的次數，並將結果傳回給使用者的應用程式。 解決方案也會包含針對類別庫的單元測試，做為測試驅動開發 (TDD) 概念的簡介。 如果您偏好使用完整範例來進行教學課程，請下載[範例解決方案 (英文)](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 > [!NOTE]
 > Visual Studio for Mac 是預覽版軟體。 與所有 Microsoft 產品的預覽版本相同，我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：

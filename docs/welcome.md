@@ -1,62 +1,67 @@
 ---
 title: "歡迎使用 .NET"
-description: "使用者入門"
-keywords: .NET
+description: "開始使用 .NET 系列的技術。"
+keywords: ".NET, .NET Core, getting started, news, 使用者入門, 新聞"
 author: richlander
-manager: wpickett
-ms.date: 10/12/2016
+ms.author: mairaw
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-technologies
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: dac380e7c493abc733c136f022d3634b807d8836
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 315b24896797badd0a7540477f79f3f220e5c300
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
-> 如需了解如何建立簡單的 .NET Core 應用程式，請參閱[＜.NET Core 使用者入門＞教學課程](core/getting-started.md)。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
+請參閱 [.NET Core 使用者入門](core/get-started.md)以了解如何建立 .NET Core 應用程式。
 
-歡迎使用 .NET！ 您可以使用 .NET 建置想要的任何一種應用程式，從雲端、IoT 到遊戲。 您可以立即開始建置下一個應用程式，適用於 Windows、Linux、Android、macOS 及 iOS。 有數百萬的開發人員使用 .NET 來運作關鍵任務應用程式、個人應用程式和擬真遊戲。 您可以撰寫下一個。
-
-您可以在 Windows、macOS 及 Linux 上開發應用程式和遊戲。 有一些免費工具可讓您用來建置應用程式或遊戲，並將它們部署在伺服器或桌上型電腦上，或將它們發行至應用程式市集。 世界各地的學生都能存取，且大型企業也都在使用。
+使用免費的跨平台工具，透過 .NET 建置多種類型的應用程式，例如雲端、IoT 和遊戲。 您的應用程式可以在 Android、iOS、Linux、macOS 及 Windows 上執行。 將應用程式部署到伺服器或桌上型電腦，並發行至應用程式市集，以部署到行動裝置上。 學生和業餘愛好者皆可以輕鬆使用 .NET，而我們也歡迎所有人參與這個氣氛熱絡的國際開發人員社群，並對眾多 .NET 技術直接做出貢獻。
 
 ## <a name="news"></a>新聞
 
-在 .NET 社群中隨時都會有新事物可學習或探索。 以下是您可能想要查看的最新消息。
-
 - [.NET Standard 簡介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
-- [.NET Core 1.0.1 公告](https://blogs.msdn.microsoft.com/dotnet/2016/09/13/announcing-september-2016-updates-for-net-core-1-0/)
-- [宣佈 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)
-- [宣佈 .NET Core 1.0](https://blogs.msdn.microsoft.com/dotnet/announcing-net-core-1-0)
-- [宣佈 ASP.NET Core 1.0](https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0/)
+- [宣佈 .NET Core 2.0 Preview 1 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/05/10/announcing-net-core-2-0-preview-1/)
+- [宣佈 ASP.NET 2.0 Preview 1 和適用於 .NET 網頁開發人員的更新 (英文)](https://blogs.msdn.microsoft.com/webdev/2017/05/10/aspnet-2-preview-1/)
+- [針對 Visual Studio 2017 的全新更新和下一個預覽 (英文)](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)
+- [Visual Studio for Mac：現已正式運作 (英文)](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
+- [宣佈 .NET Core 工具 1.0 (.NET Core 1.0.4、.NET Core 1.1.1、.NET Core SDK 1.0.1) (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)
+- [宣佈 Visual Studio 2017 正式運作 (英文)](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
+- [.NET Core 和 Visual Studio 2017 的新功能 (影片) (英文)](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
+- [宣佈 .NET Framework 4.7 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
+- [C# 7.0 的新功能 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/)
+- [宣佈 F# 4.1 和適用於 Visual Studio 2017 的 Visual F# 工具 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/)
 - [開放原始碼 Xamarin，為您準備就緒！](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/)
 - [.NET 一週大事](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
-- [感謝您觀賞 dotnetConf 2016！](https://blogs.msdn.microsoft.com/dotnet/2016/06/09/thank-you-for-watching-dotnetconf-2016/)
+- [Channel 9 上的 Build 2017 - Microsoft 最新技術和新聞的相關影片！(英文)](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
 ## <a name="documentation"></a>文件
 
-本文件將示範如何從頭建置應用程式，或完成您已經著手的應用程式。 您應該查看的重要小節︰
+這份文件涵蓋各種平台和語言的 .NET 範圍。  您可以在下列任何各節中開始使用 .NET 和其語言：
 
+- [.NET 平台指南](standard/index.md)
+- [.NET Core 指南](core/index.md)
+- [.NET Framework 指南](framework/index.md)
 - [C# 指南](csharp/index.md)
 - [F# 指南](fsharp/index.md)
-- [.NET Core API](../api/index.md)
-- [.NET Core 指南](core/index.md)
-- [.NET Standard 指南](standard/index.md)
+- [Visual Basic 指南](visual-basic/index.md)
+
+此外，您可以瀏覽 [.NET API 參考](https://docs.microsoft.com/dotnet/api)。
 
 ## <a name="open-source"></a>開啟原始檔
 
-.NET 中的許多部分是由開放原始碼參與者所建置。 您可以參與這份 [.NET 文件](https://github.com/dotnet/core-docs)。 您也可以閱讀原始碼，並為 .NET 產品貢獻一己之力，包括 [.NET Core](https://github.com/dotnet/core) 和 [Xamarin](http://open.xamarin.com)。 Microsoft 的重要專案已貢獻給 [.NET Foundation](http://dotnetfoundation.org)。
+這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。  您可以透過任何想要的方式參與，包括建立文件撰寫問題。  此外，.NET 本身大部分都是開放原始碼︰
 
-## <a name="community"></a>社群
+- [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
+- [.NET Libraries](https://github.com/dotnet/corefx) (.NET 程式庫)
+- [.NET Core Runtime](https://github.com/dotnet/coreclr) (.NET Core 執行階段)
+- [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
+- [F# Compiler and IDE Tools](https://github.com/microsoft/visualfsharp) (F# 編譯器和 IDE 工具)
 
-歡迎使用 .NET 社群。 您可以加入已活躍於 [.NET 社群](https://www.microsoft.com/net/community)的其他人，了解最新消息或尋求協助。
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+您可以加入已活躍於 [.NET 社群 (英文)](https://www.microsoft.com/net/community) 的其他人，了解最新消息或尋求協助。
 

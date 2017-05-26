@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d31ba6dd73ec4f5abcb34dc481144b154301f1af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 801187b1fcc25a1eea1f40ec8ac4c67af42e5880
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="volatile-c-reference"></a>volatile (C# 參考)
@@ -63,7 +64,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。 如需多執行緒的背景資訊，請參閱 [Managed 執行緒處理](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87)和[執行緒](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
+ 下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。 如需多執行緒的背景資訊，請參閱 [Managed 執行緒處理](../../../standard/threading/index.md)和[執行緒](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
   
  [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   

@@ -29,19 +29,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f84c40950d2a23681094e06118ae2e1bdbd5a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="getting-started-with-c"></a>C 使用者入門#
+# <a name="getting-started-with-c"></a>C# 使用者入門
 下列主題可協助您使用 C# 來開始開發應用程式。 這些主題也將介紹 Visual Studio 和 C# 語言內的許多新功能。  
   
 ## <a name="in-this-section"></a>本章節內容  
- [Visual Studio 2013 中 Visual C# 的重大變更](../../csharp/getting-started/breaking-changes-in-visual-studio-2013.md)  
- 列出 C# 編譯器從前一個版本之後的重大變更。  
-  
  [C# 語言和 .NET Framework 簡介](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
  提供 C# 語言和.NET 平台的概觀。  
   

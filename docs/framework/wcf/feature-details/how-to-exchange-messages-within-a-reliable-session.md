@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  建立 Web.config 檔案為 `CalculatorService` 設定端點，這個端點會使用已啟用可靠工作階段並要求訊息依序傳遞的 <xref:System.ServiceModel.WSHttpBinding>。  
   
-     [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  -->  
   
 4.  建立包含此行的 Service.svc 檔案：  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  Svcutil.exe 也會為使用 <xref:System.ServiceModel.WSHttpBinding> 類別的用戶端產生組態。使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 時，此檔案應該命名為 App.config。  
   
-     [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  -->  
   
 5.  在應用程式中建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。  
   

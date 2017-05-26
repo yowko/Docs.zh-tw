@@ -30,7 +30,7 @@ ms.lasthandoff: 03/02/2017
 
 使用 [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) 工具檢查 NuGet 封裝資料夾非常簡單。  以下為作法。
 
-1. 下載並開啟 [NuGet Package Explorer] (NuGet 封裝總管)。
+1. 下載並開啟 [NuGet Package Explorer] \(NuGet 封裝總管)。
 2. 按一下 「Open package from online feed」 (從線上摘要開啟封裝)。
 3. 搜尋封裝的名稱。
 4. 展開右手邊的 "lib" 資料夾，並查看資料夾名稱。

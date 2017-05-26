@@ -27,7 +27,7 @@ caps.handback.revision: 29
 # 相依性屬性概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組服務，可以用於擴充 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性的功能。  這些服務通常合稱為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統。  受到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統支援的屬性稱為[相依性屬性](GTMT)。本概觀將說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統和[相依性屬性](GTMT)的功能。這包括如何在 XAML 和程式碼中使用現有的[相依性屬性](GTMT)。  本概觀也會介紹相依性屬性的特製化觀點，例如相依性屬性中繼資料，以及如何在自訂類別中建立您自己的相依性屬性。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 必要條件  

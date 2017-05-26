@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e50593e76afecfe8807c3cb5bac479245d2feaef
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -108,7 +109,6 @@ Public Class Form1
     End Function  
   
 End Class  
-  
 ```  
   
  您可以使用非同步 lambda 中的新增相同的事件處理常式[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)。 若要加入這個處理常式，請將 `Async` 修飾詞加入至 Lambda 參數清單前面，如下列範例所示。  
@@ -131,7 +131,6 @@ Public Class Form1
     End Function  
   
 End Class  
-  
 ```  
   
  如需如何建立和使用非同步方法的詳細資訊，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -188,3 +187,4 @@ End Class
  [如何︰ 將傳遞至另一個程序，在 Visual Basic 中的程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)   
  [如何︰ 建立 Lambda 運算式](./how-to-create-a-lambda-expression.md)   
  [寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+

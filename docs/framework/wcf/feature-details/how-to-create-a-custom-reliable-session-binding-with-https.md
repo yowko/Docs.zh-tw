@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  建立 Web.config 檔，以便使用名為 "reliableSessionOverHttps" \(使用可靠工作階段和 HTTPS 傳輸\) 的自訂繫結來設定 `CalculatorService` 端點。  
   
-     [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
   
 4.  建立包含此行的 Service.svc 檔案：  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  將名為 "reliableSessionOverHttps" 的自訂繫結設定成使用 HTTPS 傳輸和可靠的工作階段。  
   
-     [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
   
 5.  在應用程式中建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。  
   

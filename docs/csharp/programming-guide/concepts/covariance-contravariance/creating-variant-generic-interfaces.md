@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a3dcc75151a3cff601869b4f8a3a4de698d2dc47
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -131,7 +132,7 @@ SampleImplementation<Button> button = new SampleImplementation<Button>();
  當您擴充 Variant 泛型介面時，必須使用 `in` 和 `out` 關鍵字明確指定衍生的介面是否支援變異數。 編譯器不會從要擴充的介面推斷變異數。 例如，請參考下列介面。  
   
 ```csharp  
-nterface ICovariant<out T> { }  
+interface ICovariant<out T> { }  
 interface IInvariant<T> : ICovariant<T> { }  
 interface IExtCovariant<out T> : ICovariant<T> { }  
 ```  
@@ -204,3 +205,4 @@ class Program
 ## <a name="see-also"></a>另請參閱  
  [泛型介面中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+

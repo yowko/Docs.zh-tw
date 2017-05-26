@@ -24,7 +24,7 @@ caps.handback.revision: 13
 # 繪製格式化的文字
 本主題概要說明 <xref:System.Windows.Media.FormattedText> 物件的功能。  這個物件提供在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中繪製文字的低階控制項。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="technology_overview"></a>   
 ## 技術概觀  

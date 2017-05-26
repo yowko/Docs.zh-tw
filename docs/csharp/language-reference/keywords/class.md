@@ -31,17 +31,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92750040466914389abc3e8bf1de84c44bb0987c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 02491e64813f84d031debdca09161d88aab1b94c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 使用 `class` 關鍵字宣告類別，如下列範例所示︰  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -71,12 +71,12 @@ ms.lasthandoff: 03/13/2017
   
 -   [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [常數](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
 -   [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
+-   [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+
 -   [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
@@ -121,3 +121,4 @@ Console.Write(child1.name);   // Error
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
+

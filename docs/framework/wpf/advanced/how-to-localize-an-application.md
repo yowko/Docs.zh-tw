@@ -26,7 +26,7 @@ caps.handback.revision: 33
 > [!NOTE]
 >  LocBaml 工具不是可實際執行的應用程式。  這只是個範例，示範如何使用一些當地語系化的 API，並說明如何撰寫當地語系化工具。  
 >   
->  [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+>    
   
 <a name="Introduction"></a>   
 ## 概觀  

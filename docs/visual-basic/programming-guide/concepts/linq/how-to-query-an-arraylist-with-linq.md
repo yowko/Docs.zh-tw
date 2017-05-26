@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -30,10 +31,8 @@ ms.lasthandoff: 03/13/2017
 當您使用 LINQ 查詢的非泛型時<xref:System.Collections.IEnumerable>集合，例如<xref:System.Collections.ArrayList>，您必須明確宣告的範圍變數，以反映在集合中物件的特定類型的類型。</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> 例如，如果您有<xref:System.Collections.ArrayList>的`Student`物件，您[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)應該看起來像這樣︰</xref:System.Collections.ArrayList>  
   
 ```  
-  
 Dim query = From student As Student In arrList   
 ...  
-  
 ```  
   
  藉由指定的範圍變數的類型，您正在轉換中的每個項目<xref:System.Collections.ArrayList>到`Student`。</xref:System.Collections.ArrayList>  
@@ -97,3 +96,4 @@ End Module
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+

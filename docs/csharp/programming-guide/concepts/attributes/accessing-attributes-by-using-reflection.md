@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfbcdccd8c648fcb3f989e2ee551ed33709ba784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: d268f237c4feab964c64b2d2843d5b9b539d7535
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>使用反射存取屬性 (C#)
-您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱 <xref:System.Attribute>。  
+您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱<xref:System.Attribute>。  
   
  屬性規格，例如︰  
   
@@ -133,7 +134,7 @@ class TestAuthorAttribute
  <xref:System.Reflection>   
  <xref:System.Attribute>   
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)   
- [擷取儲存於屬性中的資訊](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)   
+ [擷取儲存於屬性中的資訊](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)   
  [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

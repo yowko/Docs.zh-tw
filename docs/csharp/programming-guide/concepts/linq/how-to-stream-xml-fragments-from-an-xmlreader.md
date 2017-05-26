@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4bb11e120a123b701e45916b983032797c0ea8b6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 06e2cf4b350fecf8e8310519c573ac140f05267a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何：從 XmlReader 串流 XML 片段 (C#)
@@ -41,10 +42,61 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  這個範例會建立自訂座標軸方法。 您可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢進行查詢。 自訂座標軸方法  `StreamRootChildDoc` 是一種方法，特別針對讀取具有重複 `Child` 項目的文件而設計。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
+{  
+    using (XmlReader reader = XmlReader.Create(stringReader))  
+    {  
+        reader.MoveToContent();  
+        // Parse the file and display each of the nodes.  
+        while (reader.Read())  
+        {  
+            switch (reader.NodeType)  
+            {  
+                case XmlNodeType.Element:  
+                    if (reader.Name == "Child") {  
+                        XElement el = XElement.ReadFrom(reader) as XElement;  
+                        if (el != null)  
+                            yield return el;  
+                    }  
+                    break;  
+            }  
+        }  
+    }  
+}  
+  
+static void Main(string[] args)  
+{  
+    string markup = @"<Root>  
+      <Child Key=""01"">  
+        <GrandChild>aaa</GrandChild>  
+      </Child>  
+      <Child Key=""02"">  
+        <GrandChild>bbb</GrandChild>  
+      </Child>  
+      <Child Key=""03"">  
+        <GrandChild>ccc</GrandChild>  
+      </Child>  
+    </Root>";  
+  
+    IEnumerable<string> grandChildData =  
+        from el in StreamRootChildDoc(new StringReader(markup))  
+        where (int)el.Attribute("Key") > 1  
+        select (string)el.Element("GrandChild");  
+  
+    foreach (string str in grandChildData) {  
+        Console.WriteLine(str);  
+    }  
+}  
+```  
+  
  這個範例會產生下列輸出：  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```  
+bbb  
+ccc  
+```  
+  
  在此範例中，來源文件很小。 但是，即使有數百萬的 `Child` 元素，此範例的記憶體使用量還是很小。  
   
 ## <a name="see-also"></a>另請參閱  

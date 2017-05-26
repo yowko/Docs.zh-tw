@@ -1,4 +1,4 @@
-# [組件和全域組件快取 (Visual Basic)](index.md)
+# [組件與 GAC](index.md)
 ## [Friend 組件](friend-assemblies.md)
 ### [如何：建立未簽署的 Friend 組件](how-to-create-unsigned-friend-assemblies.md)
 ### [如何：建立簽署的 Friend 組件](how-to-create-signed-friend-assemblies.md)

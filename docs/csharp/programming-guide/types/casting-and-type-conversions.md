@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c6b9da6d94bd402e720db48d5c7a2977344f05
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: d421f0115642efa73dbeb893dba912b96d5f4dc6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計手冊)
@@ -46,7 +47,7 @@ int i;
 i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
 ```  
   
- 不過，您有時可能需要將值複製至另一種類型的變數或方法參數。 例如，您的整數變數可能需要傳遞給參數類型為 `double` 的方法。 或者，您可能需要將類別變數指派給介面類型的變數。 這些類型的作業稱為「類型轉換」**。 在 C# 中，您可以執行下列類型的轉換：  
+ 不過，您有時可能需要將值複製至另一種類型的變數或方法參數。 例如，您的整數變數可能需要傳遞給參數類型為 `double` 的方法。 或者，您可能需要將類別變數指派給介面類型的變數。 這些類型的作業稱為「類型轉換」。 在 C# 中，您可以執行下列類型的轉換：  
   
 -   **隱含轉換**︰因為轉換為型別安全，所以不需要特殊語法，因此將不會造成資料遺失。 範例包括從較小到較大整數型別的轉換，以及從衍生類別到基底類別的轉換。  
   
@@ -71,7 +72,7 @@ Base b = d; // Always OK.
 ```  
   
 ## <a name="explicit-conversions"></a>明確轉換  
- 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」**的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為 [int](../../../csharp/language-reference/keywords/int.md)。 沒有轉型，就不會編譯程式。  
+ 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將 [double](../../../csharp/language-reference/keywords/double.md) 轉型為 [int](../../../csharp/language-reference/keywords/int.md)。 沒有轉型，就不會編譯程式。  
   
  [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
@@ -104,10 +105,7 @@ Giraffe g2 = (Giraffe) a;
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
-  
-## <a name="featured-book-chapter"></a>精選書籍章節  
- [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) (初探 Visual C# 2010) 中的 [More About Variables](http://go.microsoft.com/fwlink/?LinkId=221230) (深入了解變數)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類型](../../../csharp/programming-guide/types/index.md)   

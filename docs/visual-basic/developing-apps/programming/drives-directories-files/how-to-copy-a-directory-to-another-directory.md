@@ -33,14 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b2d59f347df075e3f8c4f952b62e8ad7fa1643f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 59efea23743d126e9b1d5a842fc7655ad3350acd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>如何：在 Visual Basic 中將目錄複製到另一個目錄
-使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 方法將目錄複製到另一個目錄。 這個方法會複製目錄內容以及目錄本身。 如果目標目錄不存在，則會予以建立。 如果目標位置存在同名的目錄且 `overwrite` 設為 `False`，即合併兩個目錄的內容。 您可以在作業期間指定目錄的新名稱。  
+使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 方法可將目錄複製到另一個目錄。 這個方法會複製目錄內容以及目錄本身。 如果目標目錄不存在，則會予以建立。 如果目標位置存在同名的目錄且 `overwrite` 設為 `False`，即合併兩個目錄的內容。 您可以在作業期間指定目錄的新名稱。  
   
  複製目錄內的檔案時，可能會因為特定的檔案而擲回例外狀況，例如合併期間存在檔案，而 `overwrite` 設為 `False`。 當這類例外狀況被擲回時，它們會合併成單一例外狀況，其 `Data` 屬性保留項目中的檔案或目錄路徑是索引鍵，而特定的例外狀況訊息則包含在對應值中。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [檔案系統 - 處理磁碟、資料夾和檔案]**** 中。 如需詳細資訊，請參閱[程式碼片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+     這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [檔案系統 - 處理磁碟、資料夾和檔案] 中。 如需詳細資訊，請參閱[程式碼片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
   
 -   來源目錄不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   來源目錄是根目錄 (<xref:System.IO.IOException>)。  
+-   來源目錄不是根目錄 (<xref:System.IO.IOException>)。  
   
 -   合併路徑指向現有的檔案 (<xref:System.IO.IOException>)。  
   
@@ -79,11 +80,11 @@ ms.lasthandoff: 03/13/2017
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或資料夾名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+-   路徑中的檔案或資料夾名稱包含冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
--   目的地檔案存在但無法存取 (<xref:System.UnauthorizedAccessException>)。  
+-   目的地檔案存在，但無法存取 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   

@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3434dc4b13295101970fd4aadb69d56ddbca7142
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: fa0a35df3c2038859a8c2861780fd8dfa98d4429
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>當其中一項工作完成時，取消剩餘的非同步工作 (C#)
@@ -38,11 +39,11 @@ ms.lasthandoff: 03/13/2017
   
 1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
-2.  在功能表列上，依序選擇 [檔案] ****、[開啟舊檔] ****及 [專案/方案] ****。  
+2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在 [開啟專案]**** 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。  
+3.  在 [開啟專案] 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。  
   
-4.  在方案總管****中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。  
+4.  在方案總管中，開啟 **CancelAfterOneTask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
 5.  選擇 F5 鍵以執行專案。  
   
@@ -53,13 +54,13 @@ ms.lasthandoff: 03/13/2017
  如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。  
   
 ## <a name="building-the-example"></a>建置範例  
- 本主題中的範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的專案來取消工作清單。 雖然未明確地使用 [取消]**** 按鈕，但是此範例會使用相同的 UI。  
+ 本主題中的範例會新增至[取消一項非同步工作或工作清單 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 中所開發的專案來取消工作清單。 雖然未明確地使用 [取消] 按鈕，但是此範例會使用相同的 UI。  
   
- 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks]**** 作為 [啟始專案]****。 將本主題中的變更新增至該專案。  
+ 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAListOfTasks] 作為 [啟始專案]。 將本主題中的變更新增至該專案。  
   
  在 **CancelAListOfTasks** 專案的 MainWindow.xaml.cs 檔案中，將每個網站的處理步驟從 `AccessTheWebAsync` 中的迴圈移至下列非同步方法即可開始轉換。  
   
-```cs  
+```csharp  
 / ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
@@ -81,13 +82,22 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 2.  建立查詢，而查詢在執行時會產生一組泛型工作。 每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Create a query that, when executed, returns a collection of tasks.  
+    IEnumerable<Task<int>> downloadTasksQuery =  
+        from url in urlList select ProcessURLAsync(url, client, ct);  
+    ```  
+  
 3.  呼叫 `ToArray` 來執行查詢，並開始工作。 在下一個步驟中套用 `WhenAny` 方法會執行查詢並啟動工作，而不使用 `ToArray`，但其他方法可能為否。 最安全的做法是明確地強制執行查詢。  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Use ToArray to execute the query and start the download tasks.   
+    Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
+    ```  
+  
 4.  對這組工作呼叫 `WhenAny`。 `WhenAny` 會傳回 `Task(Of Task(Of Integer))` 或 `Task<Task<int>>`。  亦即，`WhenAny` 會傳回評估為單一 `Task(Of Integer)` 或 `Task<int>` 的等候中工作。 該單一工作是完成集合中的第一項工作。 先完成的工作會指派給 `firstFinishedTask`。 `firstFinishedTask` 的類型是 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>，因為這是 `ProcessURLAsync` 的傳回型別。  
   
-    ```cs  
+    ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
     // first is assigned to firstFinishedTask.  
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
@@ -95,14 +105,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 5.  在此範例中，您只想要知道先完成的工作。 因此，請使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 取消其餘的工作。  
   
-    ```cs  
+    ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
 6.  最後，等候 `firstFinishedTask` 擷取所下載內容的長度。  
   
-    ```cs  
+    ```csharp  
     var length = await firstFinishedTask;  
     resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
     ```  
@@ -116,7 +126,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  您可以從 [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (非同步範例：微調應用程式) 下載專案。  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ca42afd69e814ce448bfea97c2dbf480830a74a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
@@ -48,17 +49,17 @@ ms.lasthandoff: 03/13/2017
   
 1.  啟動 Visual Studio。  
   
-2.  在功能表列上，選擇 [檔案] ****、[新增] ****、[專案] ****。  
+2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  依序展開 [已安裝]****、[範本]**** 和 [Visual C#]****，然後選擇 [主控台應用程式]****。  
+3.  依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
   
-4.  在 [名稱]**** 文字方塊中指定專案名稱，然後選擇 [確定]**** 按鈕。  
+4.  在 [名稱] 文字方塊中指定專案名稱，然後選擇 [確定] 按鈕。  
   
-     新的專案隨即會出現在方案總管****中。  
+     新的專案隨即會出現在方案總管中。  
   
-5.  如果 [程式碼編輯器]**** 中未開啟 Program.cs，請在方案總管****中開啟 **Program.cs** 的捷徑功能表，然後選擇 [檢視程式碼]****。  
+5.  如果 [程式碼編輯器] 中未開啟 Program.cs，請在方案總管中開啟 **Program.cs** 的捷徑功能表，然後選擇 [檢視程式碼]。  
   
 6.  以下列程式碼取代 Program.cs 的內容。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 03/13/2017
   
  如需如何使用命令列引數的詳細資訊，請參閱 [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)以及[如何：使用命令列建立和使用組件](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
   
- 按下 F5 在 `Main` 方法的結尾呼叫 <xref:System.Console.ReadKey%2A>，當您在偵錯模式中執行程式時，可防止主控台視窗在您有機會讀取輸出之前關閉。  
+ 在 `Main` 方法的結尾呼叫 <xref:System.Console.ReadKey%2A>，可讓您在按下 F5 以於偵錯模式中執行程式時，防止主控台視窗在您有機會讀取輸出之前關閉。  
   
 ## <a name="input-and-output"></a>輸入和輸出  
  C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/輸出服務。 陳述式 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。 這是執行階段程式庫中 <xref:System.Console> 類別的其中一個輸出方法。 它會在標準輸出資料流中顯示其字串參數，後面接著新行。 其他 <xref:System.Console> 方法可供不同的輸入和輸出作業使用。 如果您在程式開始處包含 `using System;` 指示詞，就可以直接使用 <xref:System> 類別和方法，而不必完整限定它們。 例如，您可以呼叫 `Console.WriteLine` 而不用呼叫 `System.Console.WriteLine`：  
@@ -122,11 +123,11 @@ ms.lasthandoff: 03/13/2017
   
 2.  執行下列步驟之一來開啟命令提示字元視窗︰  
   
-    -   在 Windows 8 的 [開始]**** 畫面中搜尋 `Developer Command Prompt`，然後點選或選擇 [適用於 VS2012 的開發人員命令提示字元]****。  
+    -   在 Windows 8 的 [開始] 畫面中搜尋 `Developer Command Prompt`，然後點選或選擇 [適用於 VS2012 的開發人員命令提示字元]。  
   
          [開發人員命令提示字元] 視窗隨即出現。  
   
-    -   開啟 Windows 7 的 [開始]**** 功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [適用於 VS2012 的開發人員命令提示字元]****。  
+    -   開啟 Windows 7 的 [開始] 功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [適用於 VS2012 的開發人員命令提示字元]。  
   
          [開發人員命令提示字元] 視窗隨即出現。  
   
@@ -146,10 +147,7 @@ ms.lasthandoff: 03/13/2017
   
      `Hello`  
   
- 如需 C# 編譯器及其選項的詳細資訊，請參閱[C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)。  
-  
-## <a name="featured-book-chapter"></a>精選書籍章節  
- [初探 Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) 中的[撰寫 C# 程式](http://go.microsoft.com/fwlink/?LinkId=221227)  
+ 如需 C# 編譯器及其選項的詳細資訊，請參閱[C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)。
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

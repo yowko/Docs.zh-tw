@@ -22,7 +22,7 @@ caps.handback.revision: 10
 # RichTextBox 概觀
 <xref:System.Windows.Controls.RichTextBox> 控制項可讓您顯示或編輯非固定格式內容，包括段落、影像、表格等等。  本主題介紹 <xref:System.Windows.Controls.TextBox> 類別，並提供如何在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 和 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] 中使用的範例。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## TextBox 或是 RichTextBox  

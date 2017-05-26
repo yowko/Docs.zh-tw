@@ -22,7 +22,7 @@ caps.handback.revision: 41
 # 視覺分層中的點擊測試
 本主題概要說明視覺分層所提供的點擊測試 \(Hit Testing\) 功能。  點擊測試支援可讓您判斷幾何圖案或點值是否在 <xref:System.Windows.Media.Visual> 的呈現內容範圍內，使您可以實作使用者介面行為 \(例如選取矩形\) 來選取多個物件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="hit_testing_scenarios"></a>   
 ## 點擊測試案例  

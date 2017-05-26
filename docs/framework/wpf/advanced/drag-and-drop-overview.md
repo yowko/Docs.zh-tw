@@ -26,7 +26,7 @@ caps.handback.revision: 30
 # 拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。  拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 \(或其他一些指標裝置\) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drag_and_Drop_Support"></a>   
 ## WPF 中的拖放功能支援  

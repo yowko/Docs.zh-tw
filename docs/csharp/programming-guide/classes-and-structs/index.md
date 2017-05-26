@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6023f09a9a355c9ab00252f9e2ac6cc45abf42ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/13/2017
   
  類別是參考型別。 當建立類別的物件時，物件指派至的變數僅會保留該記憶體的參考。 當物件參考指派至新的變數時，新的變數會參考到原始物件。 透過某個變數所做的變更會反映在其他變數中，因為它們都參考相同的資料。  
   
- 結構是實值型別。 當建立結構時，結構指派至的變數會保留結構的實際資料。 當結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。  
+ 結構是實值型別。 當建立結構時，結構指派至的變數會保留結構的實際資料。 將結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。  
   
  一般情況下，類別會用來建立更複雜行為的模型，或是要在建立類別物件後修改之資料的模型。 結構最適合小型資料結構，該結構主要包含不會在結構建立後修改的資料。  
   
@@ -76,9 +77,9 @@ ms.lasthandoff: 03/13/2017
   
 -   [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [事件](../../../csharp/programming-guide/events/index.md)  
+  
+-   [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [索引子](../../../csharp/programming-guide/indexers/index.md)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/13/2017
  有些方法和屬性必須從類別或結構以外的程式碼呼叫或存取，它們稱為「用戶端程式碼」。 其他方法和屬性可能只會在類別或結構本身中使用。 請務必限制程式碼的可存取性，以確保只有目標用戶端程式碼可以存取。 您可以使用存取修飾詞 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、`protected internal` 和 [private](../../../csharp/language-reference/keywords/private.md)，來指定用戶端程式碼可以存取您的型別及其成員的程度。 預設可存取性為 `private`。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
 ### <a name="inheritance"></a>繼承  
- 類別 (而不是結構) 支援繼承的概念。 衍生自另一個類別 (「基底類別」) 的類別，會自動包含基底類別的所有 public、protected 和 internal 成員 (其建構函式和解構函式除外)。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)和[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
+ 類別 (而不是結構) 支援繼承的概念。 衍生自另一個類別 (「基底類別」) 的類別，會自動包含基底類別的所有 public、protected 和 internal 成員 (其建構函式和完成項除外)。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)和[多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  
   
  類別可宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)，這表示其一或多個方法沒有任何實作。 雖然抽象類別無法直接具現化，但是它們可以做為其他能提供遺失實作之類別的基底類別。 類別也可以宣告為[密封](../../../csharp/language-reference/keywords/sealed.md)，以防止其他類別繼承它們。 如需詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 03/13/2017
  類別和結構可以繼承多個介面。 繼承介面表示型別會實作介面中定義的所有方法。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ### <a name="generic-types"></a>泛型型別  
- 類別和結構可以使用一或多個型別參數加以定義。 當用戶端程式碼建立型別的執行個體時，便會提供型別。 例如，<xref:System.Collections.Generic> 命名空間中的 <xref:System.Collections.Generic.List%601> 類別是以一個型別參數來定義。 用戶端程式碼會建立 `List<string>` 或 `List<int>` 的執行個體，以指定清單將保留的型別。 如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。  
+ 類別和結構可以使用一或多個型別參數加以定義。 當用戶端程式碼建立型別的執行個體時，便會提供型別。 例如， <xref:System.Collections.Generic> 命名空間中的 <xref:System.Collections.Generic.List%601> 類別是以一個型別參數來定義。 用戶端程式碼會建立 `List<string>` 或 `List<int>` 的執行個體，以指定清單將保留的型別。 如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。  
   
 ### <a name="static-types"></a>靜態型別  
  類別 (而不是結構) 可以宣告為[靜態](../../../csharp/language-reference/keywords/static.md)。 靜態類別僅可以包含靜態成員，且無法使用新的關鍵字具現化。 類別的其中一個複本會在程式載入時載入至記憶體，其成員會透過類別名稱存取。 類別和結構都可以包含靜態成員。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  

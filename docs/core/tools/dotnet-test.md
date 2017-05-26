@@ -4,16 +4,17 @@ description: "`dotnet test` 命令是用來在指定的專案中執行單元測�
 keywords: "dotnet-test, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
 ---
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令是用來在指定的專案中執行單元測試。 單元測試是與單元測試架構 (例如 MSText、NUnit 或 xUnit) 具有相依性的類別庫專案，以及該單元測試架構的 dotnet 測試執行器。 這些會封裝為 NuGet 套件，並還原為專案的一般相依性。
+`dotnet test` 命令是用來在指定的專案中執行單元測試。 單元測試是與單元測試架構 (例如 MSTest、NUnit 或 xUnit) 具有相依性的主控台應用程式專案，以及該單元測試架構的 dotnet 測試執行器。 這些會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
 測試專案也必須指定測試執行器。 這是使用一般 `<PackageReference>` 元素所指定，如下列範例專案檔中所示：
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 03/22/2017
 
 `--filter <EXPRESSION>`
 
-使用指定的運算式篩選出目前專案中的測試。 如需有關篩選支援的詳細資訊，請參閱[使用 TestCaseFilter 在 Visual Studio 中執行選擇性單元測試 (英文)](https://aka.ms/vstest-filtering)。
+使用指定的運算式篩選出目前專案中的測試。 如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。 如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -97,9 +98,46 @@ ms.lasthandoff: 03/22/2017
 
 執行 `test1` 專案中的測試︰
 
-`dotnet test ~/projects/test1/test1.csproj` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>篩選選項詳細資料
+
+`--filter <EXPRESSION>`
+
+`<Expression>` 的格式為 `<property><operator><value>[|&<Expression>]`。
+
+`<property>` 為 `Test Case` 的屬性。 以下為熱門單元測試架構所支援的屬性：
+
+| 測試架構 | 支援的屬性                                                                                      |
+| :------------: | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>名稱</li><li>ClassName</li><li>優先權</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特性</li></ul>                                   |
+
+`<operator>` 描述屬性和值之間的關聯性：
+
+| 運算子 | 函式        |
+| :------: | --------------- |
+| `=`      | 完全相符     |
+| `!=`     | 不完全相符 |
+| `~`      | 包含        |
+
+`<value>` 為字串。 所有的查閱皆不區分大小寫。
+
+沒有 `<operator>` 的運算式會自動被視為 `FullyQualifiedName` 屬性上的 `contains` (例如，`dotnet test --filter xyz` 等同於 `dotnet test --filter FullyQualifiedName~xyz`)。
+
+運算式可以使用條件運算子聯結：
+
+| 運算子 | 函式 |
+| :------: | :------: |
+| `|`      | 或       |
+| `&`      | AND      |
+
+使用條件運算子時，您可以用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
+
+如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
 ## <a name="see-also"></a>請參閱
 
-* [目標架構](../../standard/frameworks.md)
-* [執行階段識別項 (RID) 目錄](../rid-catalog.md)
+[架構與目標](../../standard/frameworks.md)   
+[.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+

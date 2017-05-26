@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ac24019390be8501e32b944fb1f9527636815eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
@@ -41,7 +42,11 @@ ms.lasthandoff: 03/13/2017
   
  下列範例將示範兩種形式的 `yield` 陳述式。  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+yield return <expression>;  
+yield break;  
+```  
+  
 ## <a name="remarks"></a>備註  
  您可以使用 `yield return` 陳述式一次傳回一個元素。  
   
@@ -76,7 +81,14 @@ ms.lasthandoff: 03/13/2017
 ## <a name="technical-implementation"></a>技術實作  
  下列程式碼會從 Iterator 方法傳回 `IEnumerable<string>`，然後逐一查看其元素。  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<string> elements = MyIteratorMethod();  
+foreach (string element in elements)  
+{  
+   ...  
+}  
+```  
+  
  對 `MyIteratorMethod` 的呼叫不會執行方法的主體。 呼叫會改為將 `IEnumerable<string>` 傳回至 `elements` 變數中。  
   
  反覆運算 `foreach` 迴圈時，會針對 `elements` 呼叫 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法。 這個呼叫會執行 `MyIteratorMethod` 的主體，直到下一個 `yield return` 陳述式為止。 `yield return` 陳述式所傳回的運算式不僅會判斷迴圈主體所使用之 `element` 變數的值，也會判斷元素的 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 屬性，其為 `IEnumerable<string>`。  

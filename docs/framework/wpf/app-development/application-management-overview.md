@@ -21,7 +21,7 @@ caps.handback.revision: 52
 # 應用程式管理概觀
 所有的應用程式會共用常見的一組適用於應用程式實作和管理的功能。  本主題提供的功能，在<xref:System.Windows.Application>來建立和管理應用程式的類別。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Application 類別  
  在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，應用程式範圍的一般功能封裝在<xref:System.Windows.Application>類別。  <xref:System.Windows.Application>類別還包含下列功能：  
@@ -133,7 +133,7 @@ caps.handback.revision: 52
 ## 應用程式存留期  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式的存留期是由 <xref:System.Windows.Application> 引發的幾個事件標記，讓您知道應用程式何時啟動、何時啟用並停用，以及何時關閉。  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Splash_Screen"></a>   
 ### 開頭顯示畫面  
