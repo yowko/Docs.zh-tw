@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ef53fb9439159c94bb3894c233977088edc8872
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：判斷 My.Application.Log 寫入資訊的位置 (Visual Basic)
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>判斷 My.Application.Log 的接聽程式  
   
-1.  找出組件的組態檔。 如果您要開發組件，可以從方案總管****來存取 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 中的 app.config。 否則組態檔名稱會是組件的名稱加上 ".config"，而且會位於與組件相同的目錄內。  
+1.  找出組件的組態檔。 如果您要開發組件，可以從方案總管來存取 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 中的 app.config。 否則組態檔名稱會是組件的名稱加上 ".config"，而且會位於與組件相同的目錄內。  
   
     > [!NOTE]
     >  並非每個組件都有組態檔。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/13/2017
   
      如果這些區段不存在，則電腦的組態檔可能會設定 `My.Application.Log` 記錄接聽程式。 下列步驟描述如何判斷電腦組態檔能夠定義哪些事︰  
   
-    1.  找出電腦的 machine.config 檔案。 一般而言，它位於 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目錄中，其中 `SystemRoot` 為作業系統的目錄，而 `frameworkVersion` 為 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 的版本。  
+    1.  找出電腦的 machine.config 檔案。 一般而言，它位於 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* 目錄中，其中 `SystemRoot` 為作業系統的目錄，而 `frameworkVersion` 為 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]的版本。  
   
          machine.config 中的設定可以由應用程式組態檔覆寫。  
   
@@ -80,9 +81,9 @@ ms.lasthandoff: 03/13/2017
   
     -   如簡介中所述，<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 接聽程式會寫入檔案記錄檔。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 接聽程式會將資訊寫入 `initializeData` 參數所指定的電腦事件記錄檔中。 若要檢視事件記錄檔，您可以使用 [伺服器總管] **** 或 [Windows 事件檢視器] ****。 如需詳細資訊，請參閱 [.NET Framework 中的 ETW 事件](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 接聽程式會將資訊寫入由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 接聽程式會寫入 `initializeData` 參數所指定的檔案中。  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 接聽程式會寫入 `initializeData` 參數中指定的檔案。  
   
     -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 接聽程式會寫入命令列主控台。  
   

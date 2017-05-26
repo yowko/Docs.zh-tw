@@ -1,48 +1,67 @@
 ---
-title: "傳遞實值類型的參數 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "方法參數 [C#], 實值類型"
-  - "參數 [C#], value"
+title: "傳遞實值型別的參數 (C# 程式設計手冊) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- method parameters [C#], value types
+- parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: b0735f9a42fad01695c1ad64cfb937dce8e3cb93
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
+
 ---
-# 傳遞實值類型的參數 (C# 程式設計手冊)
-[實值型別](../../../csharp/language-reference/keywords/value-types.md)變數直接包含其資料，這點相對於[參考型別](../../../csharp/language-reference/keywords/reference-types.md)變數包含其資料的參考。  傳值方式傳遞實值型別變數的方法，以表示該變數的複本傳遞給方法。  給參數的方法內發生的任何變更會對不會影響到原本的資料儲存在引數的變數。  如果您想要變更參數的值被呼叫的方法，您必須傳送它所參考，使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或[出](../../../csharp/language-reference/keywords/out.md)關鍵字。  為了簡化，下列範例使用 `ref`。  
+# <a name="passing-value-type-parameters-c-programming-guide"></a>傳遞實值類型的參數 (C# 程式設計手冊)
+相對於[參考型別](../../../csharp/language-reference/keywords/reference-types.md)變數 (包含對其資料的參考)，[實值型別](../../../csharp/language-reference/keywords/value-types.md)變數會直接包含資料。 以傳值方式將實值型別變數傳遞至方法，意味著將變數的複本傳遞至方法。 任何發生於方法內部的參數變更都不會影響儲存於引數變數中的原始資料。 如果您想要讓呼叫的方法變更參數值，就必須使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 關鍵字，以傳址方式來傳遞它。 為求簡化，下列範例使用 `ref`。  
   
-## 以傳值方式傳遞實值型別  
- 下列範例說明以傳值方式傳遞實值型別。  變數 `n` 是以傳值方式傳遞到方法 `SquareIt`。  在方法中對參數的任何變更並不會影響到變數原本的值。  
+## <a name="passing-value-types-by-value"></a>以傳值方式傳遞實值型別  
+ 下列範例示範以傳值方式傳遞實值型別參數。 `n` 變數會以傳值方式傳遞至 `SquareIt` 方法。 任何發生在方法內部的變更都不會影響變數的原始值。  
   
  [!code-cs[csProgGuideParameters#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_1.cs)]  
   
- 將變數`n`實值型別。  它包含它的資料，值`5`。  在叫用 \(Invoke\) `SquareIt` 時，`n` 的內容便會複製到方法括號內的 `x` 參數。  在`Main`，然而，值`n`之後相同電話`SquareIt`發生之前的方法。  發生在方法內的變更只會影響區域變數`x`。  
+ `n` 變數是實值型別。 它包含值為 `5` 的資料。 叫用 `SquareIt` 時，會將 `n` 的內容複製到 `x` 參數，並在方法內部將其平方。 不過，在 `Main` 中，`n` 的值在呼叫`SquareIt` 方法前後是一樣的。 發生在方法內部的變更只會影響區域變數 `x`。  
   
-## 以傳遞參考的方式傳遞實值型別  
- 下列範例等同於先前的範例中，不同之處在於引數傳遞為`ref`參數。  基礎的引數，值`n`，何時變更`x`方法中發生變更。  
+## <a name="passing-value-types-by-reference"></a>以傳址方式傳遞實值型別  
+ 下列範例與上述範例相同，差別在於引數是以 `ref` 參數來傳遞。 當方法中的 `x` 變更時，基礎引數的值 (`n`) 也會變更。  
   
  [!code-cs[csProgGuideParameters#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_2.cs)]  
   
- 在本範例中，並非傳遞 `n` 的值；而是傳遞 `n` 的參考。  參數 `x` 不是 [int](../../../csharp/language-reference/keywords/int.md)，而是 `int` 的參考。在此情況下為 `n` 的參考。  因此，當`x`求取平方時的方法，什麼實際上就是`x`指的是， `n`。  
+ 在此範例中，它不是所傳遞之 `n` 的值；而是傳遞對 `n` 的參考。 `x` 參數不是 [int](../../../csharp/language-reference/keywords/int.md)；它是對 `int` 的參考，在此案例中，為對 `n` 的參考。 因此，在方法內部將 `x` 平方時，實際平方的是 `x` 所參考的目標，即 `n`。  
   
-## 交換實值型別  
- 變更引數的值的常見例子為 swap 方法，其中您將兩個變數傳遞至方法，而此方法交換它們的內容。  您必須引數 swap 方法以傳址方式傳遞。  否則，您切換至方法中，參數的本機複本，並不會變更在呼叫的方法。  下列範例將交換的整數值。  
+## <a name="swapping-value-types"></a>交換實值型別  
+ 變更引數值的常見範例是 swap 方法，您會在其中將兩個變數傳遞至方法，而此方法會交換它們的內容。 您必須以傳址方式將引數傳遞至 swap 方法。 否則，您會交換方法內部參數的區域複本，而不會在呼叫方法中發生任何變更。 下例會交換整數值。  
   
  [!code-cs[csProgGuideParameters#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_3.cs)]  
   
- 當您呼叫`SwapByRef`方法中使用`ref`在呼叫時，如下列範例所示的關鍵字。  
+ 當您呼叫 `SwapByRef` 方法時，請在呼叫中使用 `ref` 關鍵字，如下列範例所示。  
   
  [!code-cs[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
- [傳遞參考類型參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)
+ [傳遞參考型別參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)

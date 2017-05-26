@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
@@ -96,14 +96,14 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- 如需在使用 <xref:System.FlagsAttribute?displayProperty=fullName> 屬性定義列舉類型時有何考慮的詳細資訊，請參閱 <xref:System.Enum?displayProperty=fullName>。  
+ 如需在定義含有 <xref:System.FlagsAttribute?displayProperty=fullName> 屬性之列舉類型時需考量事項的詳細資訊，請參閱 <xref:System.Enum?displayProperty=fullName>。  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>使用 System.Enum 方法來探索和操作列舉值  
- 所有列舉都是 <xref:System.Enum?displayProperty=fullName> 類型的執行個體。 您不能從 <xref:System.Enum?displayProperty=fullName> 衍生新的類別，但可以使用其方法來探索相關資訊以及操作列舉執行個體的值。  
+ 所有列舉都是 <xref:System.Enum?displayProperty=fullName> 類型的執行個體。 您不能從 <xref:System.Enum?displayProperty=fullName> 衍生新的類別，但可以使用其方法來探索相關資訊以及操作列舉執行個體中的值。  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
- 如需詳細資訊，請參閱 <xref:System.Enum?displayProperty=fullName>。  
+ 如需詳細資訊，請參閱<xref:System.Enum?displayProperty=fullName>。  
   
  您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：建立列舉的新方法 ](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。  
 

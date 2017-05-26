@@ -1,90 +1,109 @@
 ---
 title: "處理 XML 檔案 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "XML [C#], 處理"
-  - "XML 處理 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- XML processing [C#]
+- XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: 3a585025063847f93dc2c3b3747bd3406f89eae4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
+
 ---
-# 處理 XML 檔案 (C# 程式設計手冊)
-編譯器會為每一個加上標記的程式碼的建構產生一個 ID 字串，用來產生文件   \(如需將程式碼加上標記的詳細資訊，請參閱[建議的文件註解標記](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)\)。 ID 字串會將建構獨一無二地識別出來。  處理 XML 檔案的程式可以使用 ID 字串來識別文件也適用之 .NET Framework 中對應的中繼資料\/反映項目。  
+# <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
+編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
   
- XML 檔案並不是程式碼的階層架構表示，它是一個平面圖式的清單，其中每個項目都有一個 ID。  
+ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個元素所產生之識別碼的一般清單。  
   
- 在產生 ID 字串時，編譯器會遵守下列的規則：  
+ 編譯器在產生識別碼字串時會遵守下列規則：  
   
--   字串中不能有空白。  
+-   字串中不能有空格。  
   
--   ID 字串的第一個部分 \(單一字元後接著一個分號\) 識別了成員的種類。  下面是使用的成員型別：  
+-   識別碼字串的第一個部分會識別所識別的成員類型，格式為單一字元後面接著一個冒號。 使用的成員類型如下：  
   
     |字元|描述|  
-    |--------|--------|  
-    |N|namespace<br /><br /> 您不能將文件註解加入命名空間裡，但是可以讓 cref 參考這些文件註解 \(如果有支援這項功能\)|  
-    |T|型別：類別、介面、結構、列舉、委派|  
-    |F|欄位|  
-    |P|屬性 \(包括索引工具或其他索引屬性\)|  
-    |M|方法 \(包括如建構函式、運算子等特別的方法\)|  
-    |E|event|  
-    |\!|錯誤字串<br /><br /> 字串的其餘部分會提供該錯誤的相關資訊。  C\# 編譯器對於無法解析的連結會產生錯誤資訊|  
+    |---------------|-----------------|  
+    |N|namespace<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|  
+    |T|型別︰類別、介面、建構、列舉、委派|  
+    |F|Field - 欄位|  
+    |P|屬性 (包括索引子或其他索引屬性)|  
+    |M|方法 (包括像是建構函式、運算子之類的特殊方法)|  
+    |E|Event - 事件|  
+    |!|錯誤字串<br /><br /> 字串的其餘部分提供錯誤的相關資訊。 C# 編譯器會針對無法解析的連結產生錯誤資訊。|  
   
--   字串的第二個部分是該項目的完整名稱 \(開始於命名空間的根\)。  該項目的名稱、它的封入型別以及命名空間由句號分開。  若該項目的名稱本身含有句號，則句號會被井字號 \(\#\) 所替換。  一般假設在項目名稱中不會直接出現井字號 \(\#\)。  例如，字串建構函式的完整名稱為 "System.String.\#ctor"。  
+-   字串的第二個部分是項目的完整名稱 (從命名空間的根開始)。 項目名稱、其封入類型及命名空間會以句號來分隔。 如果項目名稱本身包含句點，則會以雜湊符號 ('#') 來取代它們。 假設沒有項目的名稱中直接含有雜湊符號。 例如，String 建構函式的完整名稱會是 "System.String.#ctor"。  
   
--   對於屬性和方法，若方法有引數，則後面會接著由括號括起來的引數清單。  如果沒有引數，就不會有括弧出現。  引數間是以逗號來分隔。  每個引數的編碼直接遵照 .NET Framework 簽章中的編碼方式：  
+-   針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼方式都會直接遵循它在 .NET Framework 簽章中的編碼方式：  
   
-    -   基底型別。  標準型別 \(ELEMENT\_TYPE\_CLASS 或 ELEMENT\_TYPE\_VALUETYPE\) 以該型別的完整名稱表示。  
+    -   基底類型。 一般類型 (ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE) 會表示為類型的完整名稱。  
   
-    -   內建型別 \(例如，ELEMENT\_TYPE\_I4、ELEMENT\_TYPE\_OBJECT、ELEMENT\_TYPE\_STRING、ELEMENT\_TYPE\_TYPEDBYREF。  和 ELEMENT\_TYPE\_VOID\) 表示為對應之完整型別的完整名稱。  例如，System.Int32 或 System.TypedReference。  
+    -   內建類型 (例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID) 會表示為對應之完整類型的完整名稱。 例如，System.Int32 或 System.TypedReference。  
   
-    -   ELEMENT\_TYPE\_PTR 於修改的型別後以 '\*' 表示。  
+    -   ELEMENT_TYPE_PTR 會表示為 '*'，緊接在已修改的類型之後。  
   
-    -   ELEMENT\_TYPE\_BYREF 於修改的型別後以 '@' 表示。  
+    -   ELEMENT_TYPE_BYREF 會表示為 '@'，緊接在已修改的類型之後。  
   
-    -   ELEMENT\_TYPE\_PINNED 於修改的型別後以 '^' 表示。  C\# 編譯器永遠不會產生這個。  
+    -   ELEMENT_TYPE_PINNED 會表示為 '^'，緊接在已修改的類型之後。 C# 編譯器永遠都不會產生這個。  
   
-    -   ELEMENT\_TYPE\_CMOD\_REQ 於修改的型別後以 '&#124;' 和修飾詞類別的完整名稱表示。  C\# 編譯器永遠不會產生這個。  
+    -   ELEMENT_TYPE_CMOD_REQ 會表示為 '&#124;' 和修飾詞類別的完整名稱，緊接在已修改的類型之後。 C# 編譯器永遠都不會產生這個。  
   
-    -   ELEMENT\_TYPE\_CMOD\_OPT 於修改的型別後以 '\!' 和修飾詞類別的完整名稱表示。  
+    -   ELEMENT_TYPE_CMOD_OPT 會表示為 '!' 和修飾詞類別的完整名稱，緊接在已修改的類型之後。  
   
-    -   ELEMENT\_TYPE\_SZARRAY 在陣列的項目型別後以 "\[\]" 表示。  
+    -   ELEMENT_TYPE_SZARRAY 會表示為 "[]"，緊接在陣列的元素類型之後。  
   
-    -   ELEMENT\_TYPE\_GENERICARRAY 在陣列的項目型別後以 "\[?\]" 表示。  C\# 編譯器永遠不會產生這個。  
+    -   ELEMENT_TYPE_GENERICARRAY 會表示為 "[?]"，緊接在陣列的元素類型之後。 C# 編譯器永遠都不會產生這個。  
   
-    -   ELEMENT\_TYPE\_ARRAY 以 \[*lowerbound*:`size`，*lowerbound*:`size`\] 表示，其中逗號的數目為陣序規範 \-1，若已知每個維度的下限與大小，則以十進位表示。  若沒有指定下限或大小，則會被忽略。  若省略了特定維度的下限及大小，則 ":" 也會被省略。  例如，一個沒有指定大小的二維陣列的下限是 1，則會以 \[1:,1:\] 表示。  
+    -   ELEMENT_TYPE_ARRAY 會表示為 [*lowerbound*:`size`,*lowerbound*:`size`]，其中逗號數目的順位是 -1，而每個維度的下限和大小 (如果已知) 會以十進位格式表示。 如果未指定下限或大小，就會加以省略。 如果省略了特定維度的下限和大小，也會省略 ':'。 例如，下限為 1 且未指定大小的 2 維度陣列是 [1:,1:]。  
   
-    -   ELEMENT\_TYPE\_FNPTR 以「\=FUNC:`type`\(*signature*\)」表示，其中 `type` 為傳回型別，而 *signature* 為方法的引數。  如果沒有引數的話，就會省略括弧。  C\# 編譯器永遠不會產生這個。  
+    -   ELEMENT_TYPE_FNPTR 會表示為 "=FUNC:`type`(*signature*)"，其中 `type` 是傳回類型，而 *signature* 是方法的引數。 如果沒有任何引數，就會省略括弧。 C# 編譯器永遠都不會產生這個。  
   
-     將不顯示下列的簽章元件，因為它們從不用來區分多載的方法。  
+     下列簽章元件不會出現，因為絕對不會使用它們來區別多載方法：  
   
     -   呼叫慣例  
   
-    -   傳回型別  
+    -   傳回類型  
   
-    -   ELEMENT\_TYPE\_SENTINEL  
+    -   ELEMENT_TYPE_SENTINEL  
   
--   方法的傳回值僅會對轉換運算子 \(op\_Implicit 和 op\_Explicit\) 編碼成 '~' 後面接傳回型別，如同上述的編碼一樣。  
+-   僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。  
   
--   泛型型別的名稱後面會有一個反勾號，然後是表示泛型型別參數數目的數字。  例如：  
+-   針對泛型類型，類型的名稱後面將接著反引號，然後是表示泛型類型參數數目的數字。  例如：  
   
-     `<member name="T:SampleClass`2">` 是定義為 `public class SampleClass\<T, U>` 之型別的標記。  
+     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`。  
   
-     若為使用泛型型別做為參數的方法，會將泛型型別參數指定為前面加上反勾號的數字 \(例如 \`0、\`1\)。  每個數字都代表型別泛型參數以零起始的陣列。  
+     針對接受泛型類型做為參數的方法，會將泛型類型參數指定為前面加上反引號的數字 (例如\`0、`1)。  每個數字都表示類型泛型參數之以零為起始的陣列標記法。  
   
-## 範例  
- 下面的範例說明了類別與其成員的 ID 字串如何產生：  
+## <a name="examples"></a>範例  
+ 下列範例顯示針對類別及其成員產生識別碼字串的方式：  
   
  [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [\/doc \(Process Documentation Comments\)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

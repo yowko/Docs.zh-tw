@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12e99815d1fd1b9c57706653e41a360802a6d80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 94842349ae1c0fa3ccbdb2279b05a0faeb2f5d30
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>如何：在應用程式啟動或關閉時記錄訊息 (Visual Basic)
@@ -49,19 +50,19 @@ ms.lasthandoff: 03/13/2017
   
 1.  在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。  
   
-2.  按一下 [應用程式] **** 索引標籤。  
+2.  按一下 [應用程式] 索引標籤。  
   
-3.  按一下 [檢視應用程式事件] **** 按鈕以開啟 [程式碼編輯器]。  
+3.  按一下 [檢視應用程式事件] 按鈕以開啟 [程式碼編輯器]。  
   
      這會開啟 ApplicationEvents.vb 檔案。  
   
 ### <a name="to-log-messages-when-the-application-starts"></a>在應用程式啟動時記錄訊息  
   
-1.  在 [程式碼編輯器] 中開啟 ApplicationEvents.vb 檔案。 在 [一般] **** 功能表上，選擇 [MyApplication 事件] ****。  
+1.  在 [程式碼編輯器] 中開啟 ApplicationEvents.vb 檔案。 在 [一般] 功能表上，選擇 [MyApplication 事件]。  
   
-2.  在 [宣告] **** 功能表上，選擇 [啟動] ****。  
+2.  在 [宣告] 功能表上，選擇 [啟動]。  
   
-     應用程式會在主應用程式執行之前引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 事件。  
+     應用程式在主應用程式執行之前，引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 事件。  
   
 3.  將 `My.Application.Log.WriteEntry` 方法加入 `Startup` 事件處理常式。  
   
@@ -69,18 +70,18 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-log-messages-when-the-application-shuts-down"></a>在應用程式關閉時記錄訊息  
   
-1.  在 [程式碼編輯器] 中開啟 ApplicationEvents.vb 檔案。 在 [一般] **** 功能表上，選擇 [MyApplication 事件] ****。  
+1.  在 [程式碼編輯器] 中開啟 ApplicationEvents.vb 檔案。 在 [一般] 功能表上，選擇 [MyApplication 事件] 。  
   
-2.  在 [宣告] **** 功能表上，選擇 [關機] ****。  
+2.  在 [宣告] 功能表上，選擇 [關機]。  
   
-     應用程式會在主應用程式執行之後，但在主應用程式關閉之前引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 事件。  
+     應用程式在主應用程式執行後，但在關閉前引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 事件。  
   
 3.  將 `My.Application.Log.WriteEntry` 方法加入 `Shutdown` 事件處理常式。  
   
      [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
   
 ## <a name="example"></a>範例  
- 您可以使用 [專案設計工具] **** 在 [程式碼編輯器] 中存取應用程式事件。 如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
+ 您可以使用 [專案設計工具] 在 [程式碼編輯器] 中存取應用程式事件。 如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
  [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
   
