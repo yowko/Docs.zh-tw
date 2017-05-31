@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f63f4a2189848f8d12ae09eab215c7e15a57863
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: e2ac39bc642cf5379d4a8e8f9c74068b93b0b5b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="private-constructors-c-programming-guide"></a>私用建構函式 (C# 程式設計手冊)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
  宣告空的建構函式可防止自動產生預設建構函式。 請注意，如果您未搭配建構函式使用存取修飾詞，預設仍會是私用的。 不過，通常會明確使用 [private](../../../csharp/language-reference/keywords/private.md) 修飾詞來指出無法具現化類別。  
   
- 當類別沒有執行個體欄位或方法，或是呼叫方法以取得類別的執行個體時，私用建構函式可用來防止建立類別的執行個體 (例如 <xref:System.Math> 類別)。 如果類別中的所有方法都是靜態的，請考慮將整個類別變為靜態。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+ 當類別沒有執行個體欄位或方法 (例如 <xref:System.Math> 類別)，或是您要呼叫方法以取得類別的執行個體時，可以使用私用建構函式來防止建立類別的執行個體。 如果類別中的所有方法都是靜態的，請考慮將整個類別變為靜態。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
 ## <a name="example"></a>範例  
  以下是使用私用建構函式的類別範例。  
@@ -53,12 +54,12 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [public](../../../csharp/language-reference/keywords/public.md)

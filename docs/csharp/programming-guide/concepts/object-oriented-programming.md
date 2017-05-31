@@ -16,20 +16,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74872957345de77f43f3ac649ed6f809aea5f784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 3f3e6aa047e0de279d15298408c4593c5fb17666
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。  
   
- 「封裝」**指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。  
+ 「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。  
   
- 「繼承」**則是描述依據現有類別來建立新類別的能力。  
+ 「繼承」則是描述依據現有類別來建立新類別的能力。  
   
- 「多型」**指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。  
+ 「多型」指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。  
   
  本節將說明下列概念：  
   
@@ -43,7 +44,7 @@ C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完�
   
          [建構函式](#Constructors)  
   
-         [解構函式](#Destructors)  
+         [完成項](#Finalizers)  
   
          [事件](#Events)  
   
@@ -68,7 +69,7 @@ C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完�
 -   [委派](#Delegates)  
   
 ##  <a name="Classes"></a>類別與物件  
- 「類別」**和「物件」**有時會交換使用，但事實上，類別說的是物件的「型別」**，而物件則是類別之可使用的「執行個體」**。 因此，建立物件的動作稱為「具現化」**。 再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。  
+ 「類別」和「物件」有時會交換使用，但事實上，類別說的是物件的「型別」，而物件則是類別之可使用的「執行個體」。 因此，建立物件的動作稱為「具現化」。 再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。  
   
  若要定義類別：  
   
@@ -78,7 +79,7 @@ class SampleClass
 }  
 ```  
   
- C# 也會提供輕量版的類別，稱為「結構」**，當您必須建立龐大物件陣列而不想要使用太多記憶體時，這個結構會很有用。  
+ C# 也會提供輕量版的類別，稱為「結構」，當您必須建立龐大物件陣列而不想要使用太多記憶體時，這個結構會很有用。  
   
  若要定義結構：  
   
@@ -95,7 +96,7 @@ struct SampleStruct
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
 ###  <a name="Members"></a> 類別成員  
- 每個類別都有不同的「類別成員」**，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。  
+ 每個類別都有不同的「類別成員」，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。  
   
 ####  <a name="Properties"></a> 屬性與欄位  
  欄位和屬性表示物件包含的資訊。 欄位就像是變數，可直接讀取或設定。  
@@ -147,7 +148,7 @@ class SampleClass
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
 ####  <a name="Methods"></a> 方法  
- 「方法」**是物件可執行的動作。  
+ 「方法」是物件可執行的動作。  
   
  若要定義類別的方法：  
   
@@ -161,7 +162,7 @@ class SampleClass
 }  
 ```  
   
- 類別可以有同一個方法的多個實作或「多載」**，但是這些實作的參數個數和參數類型並不相同。  
+ 類別可以有同一個方法的多個實作或「多載」，但是這些實作的參數個數和參數類型並不相同。  
   
  若要多載方法：  
   
@@ -170,7 +171,7 @@ public int sampleMethod(string sampleParam) {};
 public int sampleMethod(int sampleParam) {}  
 ```  
   
- 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」**，允許您在現有類別的實際定義之外將方法新增至類別。  
+ 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」，允許您在現有類別的實際定義之外將方法新增至類別。  
   
  如需詳細資訊，請參閱:  
   
@@ -197,13 +198,13 @@ public class SampleClass
   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)。  
   
-####  <a name="Destructors"></a> 解構函式  
- 解構函式是用來解構類別的執行個體。 在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。 不過，您可能仍然需要解構函式來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個解構函式。  
+####  <a name="Finalizers"></a> 完成項  
+ 完成項是用來解構類別的執行個體。 在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。 不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個完成項。  
   
- 如需 .NET Framework 中之解構函式和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbagecollection/index.md)。  
+ 如需 .NET Framework 的完成項和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
   
 ####  <a name="Events"></a> 事件  
- 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」**，而接收 (或處理) 事件的類別則稱為「訂閱者」**。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)。  
+ 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」，而接收 (或處理) 事件的類別則稱為「訂閱者」。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。  
   
 -   若要宣告類別中的事件，請使用 [event](../../../csharp/language-reference/keywords/event.md) 關鍵字。  
   
@@ -212,7 +213,7 @@ public class SampleClass
 -   若要訂閱事件，請使用 `+=` 運算子；若要取消訂閱事件，則使用 `-=` 運算子。  
   
 ####  <a name="NestedClasses"></a>巢狀類別  
- 在類別中定義的另一個類別即稱為「巢狀」**類別。 巢狀類別預設為私用。  
+ 在類別中定義的另一個類別即稱為「巢狀」類別。 巢狀類別預設為私用。  
   
 ```csharp  
 class Container  
@@ -231,7 +232,7 @@ Container.Nested nestedInstance = new Container.Nested()
 ```  
   
 ###  <a name="AccessModifiers"></a> 存取修飾詞與存取層級  
- 所有類別及類別成員都可以使用「存取修飾詞」**，指定要提供給其他類別的存取層級。  
+ 所有類別及類別成員都可以使用「存取修飾詞」，指定要提供給其他類別的存取層級。  
   
  下列為可用的存取修飾詞：  
   
@@ -311,7 +312,7 @@ var sampleObject =
  如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ##  <a name="Inheritance"></a> 繼承  
- 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」**，而繼承這種成員的類別即稱為「衍生類別」**。 不過，C# 中的所有類別都隱含繼承自 <xref:System.Object> 類別，這個類別支援 .NET 類別階層架構，並為所有類別提供低階服務。  
+ 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 不過，C# 中的所有類別都隱含繼承 <xref:System.Object> 類別，這個類別會支援 .NET 類別階層架構，並為所有類別提供低階服務。  
   
 > [!NOTE]
 >  C# 不支援多重繼承。 也就是說，您只能為衍生類別指定一個基底類別。  
@@ -385,7 +386,7 @@ class SampleClass : ISampleInterface
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
 ##  <a name="Generics"></a> 泛型  
- .NET Framework 中的類別、結構、介面和方法可以包括「型別參數」**，這些參數會定義可儲存或使用之物件的類型。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。  
+ .NET Framework 中的類別、結構、介面和方法可以包括「型別參數」，這些參數會定義可儲存或使用之物件的類型。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。  
   
  若要定義泛型類別：  
   
@@ -410,10 +411,10 @@ sampleObject.Field = "Sample string";
 -   [泛型](../../../csharp/programming-guide/generics/index.md)  
   
 ##  <a name="Delegates"></a> 委派  
- 「委派」**是定義方法簽章的類型，可以提供任何具有相容簽章之方法的參考。 您可以透過委派叫用 (Invoke) 或呼叫方法。 委派可以用來將方法當做引數傳遞給其他方法。  
+ 「委派」是定義方法簽章的類型，可以提供任何具有相容簽章之方法的參考。 您可以透過委派叫用 (Invoke) 或呼叫方法。 委派可以用來將方法當做引數傳遞給其他方法。  
   
 > [!NOTE]
->  事件處理常式就是透過委派叫用的方法。 如需使用委派處理事件的詳細資訊，請參閱[處理和引發事件](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)。  
+>  事件處理常式就是透過委派叫用的方法。 如需使用委派處理事件的詳細資訊，請參閱[處理和引發事件](../../../standard/events/index.md)。  
   
  若要建立委派：  
   

@@ -1,29 +1,48 @@
 ---
 title: "cref 屬性 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "cref [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 781efb81acab79dfbcd72c24761aa3dfdd79940c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
+
 ---
-# cref 屬性 (C# 程式設計手冊)
-XML 文件標籤中的 `cref` 屬性 \(Attribute\) 意指「程式碼參考」， 指出標籤的內部文字是程式碼項目，例如型別、方法或屬性 \(Property\)。  像 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) \(英文\) 這樣的文件工具會使用 `cref` 屬性，自動產生記載型別或成員之頁面的超連結。  
+# <a name="cref-attribute-c-programming-guide"></a>cref 屬性 (C# 程式設計手冊)
+`cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
   
-## 範例  
- 下列範例顯示使用於 [\<see\>](../../../csharp/programming-guide/xmldoc/see.md) 標記中的 `cref` 屬性。  
+## <a name="example"></a>範例  
+ 下例示範在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 標記中使用的 `cref` 屬性。  
   
  [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- 編譯之後，程式會產生下列 XML 檔案。  請注意，舉例來說，編譯器已將 `GetZero` 方法的`cref`屬性轉換為 `"M:TestNamespace.TestClass.GetZero"`。  "M:" 前置詞意指「方法」，而且是文件工具 \(例如，Sandcastle\) 所能辨識的慣例。  如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
+ 編譯時，此程式會產生下列 XML 檔案。 請注意，以 `GetZero` 方法的 `cref` 屬性為例，已被編譯器轉換成 `"M:TestNamespace.TestClass.GetZero"`。 "M:" 前置詞表示「方法」，而且是能為 Sandcastle 等文件工具識別的慣例。 如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
   
 ```  
 <?xml version="1.0"?>  
@@ -39,12 +58,12 @@ XML 文件標籤中的 `cref` 屬性 \(Attribute\) 意指「程式碼參考」�
         </member>  
         <member name="M:TestNamespace.TestClass.#ctor">  
             <summary>  
-            This sample shows how to specify the <see cref="T:TestNamespace.TestClass"/> constructor as a cref attribute.   
+            This sample shows how to specify the <see cref="T:TestNamespace.TestClass"/> constructor as a cref attribute.   
             </summary>  
         </member>  
         <member name="M:TestNamespace.TestClass.#ctor(System.Int32)">  
             <summary>  
-            This sample shows how to specify the <see cref="M:TestNamespace.TestClass.#ctor(System.Int32)"/> constructor as a cref attribute.   
+            This sample shows how to specify the <see cref="M:TestNamespace.TestClass.#ctor(System.Int32)"/> constructor as a cref attribute.   
             </summary>  
         </member>  
         <member name="M:TestNamespace.TestClass.GetZero">  
@@ -122,6 +141,7 @@ XML 文件標籤中的 `cref` 屬性 \(Attribute\) 意指「程式碼參考」�
 </doc>  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

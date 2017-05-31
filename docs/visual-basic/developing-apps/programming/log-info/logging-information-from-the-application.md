@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
  `Log` 物件可提供將資訊寫入應用程式記錄檔接聽程式的方法，而 `Log` 物件的進階 `TraceSource` 屬性則提供詳細組態資訊。 `Log` 物件是由應用程式的組態檔進行設定。  
   
- `My.Log` 物件僅適用於 ASP.NET 應用程式。 若是用戶端應用程式，請使用 `My.Application.Log`。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log>。  
+ `My.Log` 物件僅適用於 ASP.NET 應用程式。 若是用戶端應用程式，請使用 `My.Application.Log`。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log>。  
   
 ## <a name="tasks"></a>工作  
   

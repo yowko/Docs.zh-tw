@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>物件集合上的聯結與關聯式資料表的比較  
  在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查詢運算式中，聯結作業是在物件集合上執行。 物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。 在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 中，只有在兩個來源序列未透過任何關聯性繫結時，才需要明確的 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。 例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。 當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。 實際上已為您完成此聯結。  
   
- 如需在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af)。  
+ 如需在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
   
 ## <a name="composite-keys"></a>複合索引鍵  
  您可以使用複合索引鍵來測試多個值是否相等。 如需詳細資訊，請參閱[如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)。 複合索引鍵也可用於 `group` 子句。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>備註  
- 後面沒有 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 後面接著 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
+ 如果 `join` 子句沒有後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 如果 `join` 子句後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   

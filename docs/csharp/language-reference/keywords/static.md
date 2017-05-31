@@ -30,14 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9126a882984799a5c726ecc5d82b3f3db707858a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 36c9fd396914f2d958615b9f62666a0d0cc47fc1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="static-c-reference"></a>static (C# 參考)
-使用 `static` 修飾詞來宣告靜態成員，而靜態成員屬於類型本身，而不是特定物件。 `static` 修飾詞可以與類別、欄位、方法、屬性、運算子、事件和建構函式搭配使用，但不能與索引子、解構函式或類別以外的類型搭配使用。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+使用 `static` 修飾詞來宣告靜態成員，而靜態成員屬於類型本身，而不是特定物件。 `static` 修飾詞可以與類別、欄位、方法、屬性、運算子、事件和建構函式搭配使用，但不能與索引子、完成項或類別以外的類型搭配使用。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
 ## <a name="example"></a>範例  
  下列類別宣告為 `static`，並且只包含 `static` 方法：  
@@ -65,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  類別和靜態類別可能會有靜態建構函式。 在啟動程式時與具現化類別時之間的某個點，會呼叫靜態建構函式。  
   
 > [!NOTE]
->  `static` 關鍵字的使用方式比在 C++ 中受到更多限制。 若要與 C++ 關鍵字進行比較，請參閱[靜態](https://docs.microsoft.com/cpp/misc/static-cpp)。  
+>  `static` 關鍵字的使用方式比在 C++ 中受到更多限制。 若要與 C++ 關鍵字進行比較，請參閱[儲存類別 (C++)](https://docs.microsoft.com/cpp/cpp/storage-classes-cpp#static)。
   
  若要示範靜態成員，請考慮使用代表公司員工的類別。 假設此類別包含可計算員工人數的方法以及可儲存員工人數的欄位。 方法和欄位都不屬於任何執行個體員工。 相反地，它們屬於公司類別。 因此，它們應該宣告為類別的靜態成員。  
   
@@ -80,7 +81,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   
@@ -88,3 +89,4 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
  [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+

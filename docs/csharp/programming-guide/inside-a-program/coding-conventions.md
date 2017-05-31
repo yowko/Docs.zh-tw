@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3a51c6778127c7d2faf9a10b799875308d2850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
@@ -215,8 +216,8 @@ ms.lasthandoff: 03/13/2017
      [!code-cs[csProgGuideCodingConventions#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_26.cs)]  
   
 ## <a name="security"></a>安全性  
- 請遵循[安全程式碼撰寫方針](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)中的指引。  
+ 請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
- [安全程式碼撰寫方針](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)
