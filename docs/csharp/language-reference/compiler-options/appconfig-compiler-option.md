@@ -41,7 +41,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /appconfig:file  
 ```  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>範例  
  下例示範的 app.config 檔案，可讓應用程式同時參考存在於兩個實作中之任何 .NET Framework 組件的 .NET Framework 實作和 .NET Framework for Silverlight 實作。 **/appconfig** 編譯器選項會指定此 app.config 檔案的位置。  
   
-```  
+```xml  
 <configuration>  
       <runtime>  
       <assemblyBinding>  

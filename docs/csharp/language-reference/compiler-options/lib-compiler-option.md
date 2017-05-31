@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>範例  
  編譯 t2.cs 以建立 .exe 檔。 編譯器會在工作目錄和 C 磁碟機的根目錄中尋找組件參考。  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   

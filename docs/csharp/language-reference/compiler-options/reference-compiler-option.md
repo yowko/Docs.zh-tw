@@ -48,7 +48,7 @@ ms.lasthandoff: 03/31/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/31/2017
   
  這會設定 "GridV1" 和 "GridV2" 外部別名，您可透過 extern 陳述式以在程式中使用這些別名：  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  完成之後，您可以在 GridV1 前面加上控制項名稱，以參照 grid.dll 的方格控制項，如下所示：  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  此外，您可以在 GridV2 前面加上控制項名稱，以參照 grid20.dll 的方格控制項，如下所示：  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>範例  
  將偵錯資訊放入輸出檔案 `app.pdb` 中：  
   
-```  
+```console  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   
