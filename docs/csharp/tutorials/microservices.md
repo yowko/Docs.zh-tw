@@ -36,7 +36,7 @@ ms.lasthandoff: 05/22/2017
 * 如何處理傳入 HTTP 要求和產生 HTTP 回應
 * 如何使用可為 Null 的實值型別
 
-您可以[檢視或下載本主題的範例應用程式 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+您可以[檢視或下載範例應用程式](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)來了解此主題。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="why-docker"></a>為何要使用 Docker？
 
