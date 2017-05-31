@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41e8976e7b133380687a65265fd5ebe9a810a4ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="prerequisites"></a>必要條件
 您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 
 ## <a name="create-the-application"></a>建立應用程式
-第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 “Hello World” 應用程式的起始檔案。
+第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。
 
 在您開始進行修改之前，讓我們先將執行簡單 Hello World 應用程式的所有步驟執行一遍。 在建立應用程式之後，請在命令提示字元處輸入 `dotnet restore`。 此命令會執行 NuGet 套件還原程序。 NuGet 是一個 .NET 套件管理員。 此命令會為您的專案下載任何遺漏的相依性。 由於這是一個新專案，因此沒有任何現有的相依性，所以第一次執行時將會下載 .NET Core 架構。 在這個初始步驟之後，當您新增新的相依套件或更新任何相依性的版本時，將只需要執行 `dotnet restore`。 此程序也會在您的專案目錄中建立專案鎖定檔 (project.lock.json)。 此檔案可協助管理專案相依性。 它包含所有專案相依性的本機位置。 您不需要將此檔案放在原始檔控制中；當您執行 `dotnet restore` 時，就會建立它。 
 
@@ -53,7 +54,7 @@ namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>讀取及回應檔案
-要新增的第一個功能是讀取文字檔，並對主控台顯示該文字全部。 首先，讓我們新增一個文字檔。 請從 GitHub 儲存機制將此[範例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)的 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 檔案複製到您的專案目錄中。 這將作為您應用程式的指令碼。
+要新增的第一個功能是能夠讀取文字檔，並對主控台顯示該全部文字。 首先，讓我們新增一個文字檔。 請從 GitHub 儲存機制將此[範例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)的 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 檔案複製到您的專案目錄中。 這將作為您應用程式的指令碼。 如果您想要如何下載本主題之範例應用程式的資訊，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)主題中的指示。
 
 接著，在您的 Program 類別 (就在 `Main` 方法下方) 中新增下列方法：
 
@@ -80,11 +81,11 @@ using System.IO;
 
 `IEnumerable<T>` 介面是在 `System.Collections.Generic` 命名空間中定義。 @System.IO.File 類別是在 `System.IO` 命名空間中定義。
 
-此方法是 C# 方法的特殊型別，稱為「列舉程式方法」**。 列舉程式方法會傳回延遲評估的序列。 這意謂著序列中的每個項目會在取用序列的程式碼要求該項目時產生。 列舉程式方法是包含一或多個 `yield return` 陳述式的方法。 `ReadFrom` 方法所傳回的物件包含用來產生序列中每個項目的程式碼。 在此範例中，這牽涉到從原始程式檔讀取下一行文字，並傳回該字串。 每次呼叫程式碼要求序列中的下一個項目時，程式碼都會從檔案讀取下一行文字，並傳回該文字。 當已完全讀取檔案時，序列會指出已沒有任何其他項目。
+此方法是 C# 方法的特殊型別，稱為「列舉程式方法」。 列舉程式方法會傳回延遲評估的序列。 這意謂著序列中的每個項目會在取用序列的程式碼要求該項目時產生。 列舉程式方法是包含一或多個 `yield return` 陳述式的方法。 `ReadFrom` 方法所傳回的物件包含用來產生序列中每個項目的程式碼。 在此範例中，這牽涉到從原始程式檔讀取下一行文字，並傳回該字串。 每次呼叫程式碼要求序列中的下一個項目時，程式碼都會從檔案讀取下一行文字，並傳回該文字。 當已完全讀取檔案時，序列會指出已沒有任何其他項目。
 
 有兩個其他 C# 語法元素可能是您不熟悉的。 此方法中的 `using` 陳述式會管理資源清除。 在 `using` 陳述式中初始化的變數 (在此範例中為 `reader`) 必須實作 `IDisposable` 介面。 @System.IDisposable 介面會定義單一方法 `Dispose`，在應該釋出資源時，便應該呼叫此方法。 編譯器會在執行到達 `using` 陳述式的結尾大括號時產生該呼叫。 編譯器產生的程式碼會確保即使 using 陳述式所定義區塊中的程式碼擲回例外狀況，也會釋出資源。
 
-定義 `reader` 變數時，是使用 `var` 關鍵字來定義。 `var` 會定義一個「隱含型別區域變數」**。 這意謂著變數的型別取決於指派給該變數之物件的編譯階段型別。 在這裡，這是來自 @System.IO.File.OpenText 的傳回值，是一個 @System.IO.StreamReader 物件。
+定義 `reader` 變數時，是使用 `var` 關鍵字來定義。 `var` 會定義一個「隱含型別區域變數」。 這意謂著變數的型別取決於指派給該變數之物件的編譯階段型別。 在這裡，這是來自 @System.IO.File.OpenText 的傳回值，是一個 @System.IO.StreamReader 物件。
  
 現在，讓我們在 `Main` 方法中填入可讀取檔案的程式碼： 
 
