@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e30573a60e27314466822935249e2b1b119a9259
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +106,7 @@ CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；
 ```
 
 ### <a name="migrating-the-project-file"></a>移轉專案檔
-CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系統。 專案檔語法和語意基本上維持不變，僅有不同案例的小差異。 結構描述也有一些變更；您可在[結構描述檔案](http://json.schemastore.org/project)或更易記的 [project.json 參考](../tools/project-json.md)中查看這些變更。 
+CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系統。 專案檔語法和語意基本上維持不變，僅有不同案例的小差異。 結構描述也有一些變更，而您可在[結構描述檔案](http://json.schemastore.org/project)中查看這些變更。
 
 如果您要建置主控台應用程式，則需要將下列程式碼片段新增至您的專案檔：
 

@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 007d96cf7d174e7849a2b9c8439cfac893c7aa5c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
  
@@ -97,7 +98,7 @@ npm install -g yo generator-aspnet generator-docker
 
 針對參考點，在將應用程式放入容器前，要先在本機執行應用程式。 
 
-完成的應用程式位於 [GitHub 上的 dotnet/core-docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)。
+完成的應用程式位於 [GitHub 上的 dotnet/docs 儲存機制](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 建立應用程式的目錄。
 
@@ -145,7 +146,6 @@ $ yo docker
 ❯ .NET Core
   Golang
   Node.js
-
 ```
 
 - 選取 `.NET Core` 作為專案類型

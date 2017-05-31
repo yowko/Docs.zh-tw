@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e0ba4886bd954c8e772a85a677775167e7c4bc53
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -37,12 +38,12 @@ ms.lasthandoff: 03/07/2017
 
 以下是 .NET Core 的主要 NuGet 套件清單：
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 最基本的 .NET Core 套件，包括[物件](http://docs.microsoft.com/dotnet/core/api/System.Object)、[字串](http://docs.microsoft.com/dotnet/core/api/System.String)、[陣列](http://docs.microsoft.com/dotnet/core/api/System.Array)、[動作](http://docs.microsoft.com/dotnet/core/api/System.Action) 和 [IList&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1)。
-- [System.Collections](https://www.nuget.org/packages/System.Collections) - 一組 (主要的) 泛型集合，包括 [List&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) 和 [Dictionary&lt;K,V&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2)。
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - 一組 HTTP 網路通訊類型，包括 [HttpClient](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpClient) 和 [HttpResponseMessage](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpResponseMessage)。
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 一組用來讀取和寫入本機或網路磁碟型儲存裝置的型別，包括[檔案](http://docs.microsoft.com/dotnet/core/api/System.IO.File)和[目錄](http://docs.microsoft.com/dotnet/core/api/System.IO.Directory)。
-- [System.Linq](https://www.nuget.org/packages/System.Linq) - 一組用來查詢物件的型別，包括 Enumerable 和 [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2)。
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 一組用來載入、檢查和啟動型別的型別，包括[組件](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly)、[TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) 和 [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo)。
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 最基本 .NET Core 套件，包括 <xref:System.Object>、<xref:System.String>、<xref:System.Array>、<xref:System.Action> 和 <xref:System.Collections.Generic.IList%601>。
+- [System.Collections](https://www.nuget.org/packages/System.Collections) - 一組 (主要) 泛型集合，包括 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602>。
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - 一組 HTTP 網路通訊類型，包括 <xref:System.Net.Http.HttpClient> 和 <xref:System.Net.Http.HttpResponseMessage>。
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 一組用來讀取和寫入本機或網路磁碟型儲存體的類型，包括 <xref:System.IO.File> 和 <xref:System.IO.Directory>。
+- [System.Linq](https://www.nuget.org/packages/System.Linq) - 一組用來查詢物件的類型，包括 `Enumerable` 和 <xref:System.Linq.ILookup%602>。
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 一組載入、檢查和啟動類型，包括 <xref:System.Reflection.Assembly>、<xref:System.Reflection.TypeInfo> 和 <xref:System.Reflection.MethodInfo>。
 
 一般而言，與其在您的專案中逐一加入套件，加入「中繼套件」(一組經常使用的套件) 是更輕鬆的做法。 (如需中繼套件的詳細資訊，請參閱下一節)。不過，當您需要單一套件時，您可以如下列範例所示將它加入，該範例參考 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 套件。 
 
@@ -148,5 +149,4 @@ ms.lasthandoff: 03/07/2017
 `Microsoft.NETCore.App` 中繼套件是以 `netcoreapp` 架構為目標。 它提供約 60 種程式庫的存取權，其中 `NETStandard.Library` 套件提供約 40 種，另外再加上 20 多種。 若要存取其他 API，您可以參考其他目標為 `netcoreapp` 或相容架構的程式庫，例如 `netstandard`。 
 
 大部分由 `Microsoft.NETCore.App` 所提供的其他程式庫也會以 `netstandard` 為目標 (在其他 `netstandard` 程式庫滿足其相依性的情況下)。 這表示 `netstandard` 程式庫也可以將這些套件做為相依性參考。 
-
 

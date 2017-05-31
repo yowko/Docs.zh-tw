@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 7ef4ce7a953265816cd36a0ad08b77c227280bde
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -33,7 +34,7 @@ SaaS CI 方案有數個選項。 本文件涵蓋兩個極常用的選項：[Trav
 
 針對 Windows 平台，您可以使用 MSI。 
 
-您可以在指向最新穩定版本的 [.NET Core 入門頁面](https://aka.ms/dotnetcoregs)中找到所有二進位檔。 如果您想要使用較新 (但可能不穩定) 版本或最新版本，則可以使用 [CLI 存放庫](https://github.com/dotnet/cli)中的連結。 
+您可以在指向最新穩定版本的 [.NET Core installation guide](https://aka.ms/dotnetcoregs) (.NET Core 安裝指南) 中找到所有二進位檔。 如果您想要使用較新 (但可能不穩定) 版本或最新版本，則可以使用 [CLI 存放庫](https://github.com/dotnet/cli)中的連結。 
 
 ## <a name="using-the-installer-script"></a>使用安裝程式指令碼
 使用安裝程式指令碼可以在您的組建伺服器上進行非系統管理安裝。 它也可以極為輕鬆地自動化。 指令碼本身將會下載所需的 ZIP/tarball 檔案，並將其解壓縮；它也會將本機電腦上的安裝位置新增至 PATH，因此可在安裝後立即叫用工具。 
@@ -62,12 +63,12 @@ Travis 可以在建置矩陣中執行 `osx` (OS X 10.11) 和 `linux` (Ubuntu 14.
 
 ### <a name="appveyor"></a>AppVeyor
 
-[appveyor.com ci](https://www.appveyor.com/) 已將 .NET Core SDK preview2 安裝在建置背景工作映像 `Visual Studio 2015` 中。
+[appveyor.com ci](https://www.appveyor.com/) 已將 .NET Core SDK 1.0.1 安裝在建置背景工作映像 `Visual Studio 2017` 中。
 
 只要使用：
 
 ```yaml
-os: Visual Studio 2015
+os: Visual Studio 2017
 ```
 
 可以安裝特定版本的 .NET Core SDK，如需詳細資訊，請參閱[範例 appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml)。 
