@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c7dd6ed1875abd37e72baf97950d21a110c5a6a8
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
@@ -46,11 +46,11 @@ ms.lasthandoff: 05/22/2017
   
 #### <a name="to-create-the-listener"></a>若要建立接聽程式  
   
--   在應用程式中，建立一個繼承自 <xref:System.Diagnostics.TraceListener>，且命名為 `SimpleListener` 的類別。  
+-   在應用程式中，建立一個繼承自 <xref:System.Diagnostics.TraceListener> 的類別，並將其命名為 `SimpleListener`。  
   
      [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     基底類別所需的 <xref:System.Diagnostics.TraceListener.Write%2A> 和 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 方法會呼叫 `MsgBox` 來顯示其輸入。  
+     <xref:System.Diagnostics.TraceListener.Write%2A> 和 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 方法是基底類別的必備項目，其會呼叫 `MsgBox` 以顯示其輸入。  
   
      <xref:System.Security.Permissions.HostProtectionAttribute> 屬性會套用至 <xref:System.Diagnostics.TraceListener.Write%2A> 和 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 方法，使其屬性符合基底類別方法。 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性可讓執行程式碼的主機決定讓程式碼公開主機保護同步處理。  
   
@@ -65,19 +65,19 @@ ms.lasthandoff: 05/22/2017
   
 1.  在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。 如需詳細資訊，請參閱[專案設計工具簡介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
   
-2.  按一下 [簽署]索引標籤。  
+2.  按一下 [簽署]**** 索引標籤。  
   
-3.  選取 [簽署組件]方塊。  
+3.  選取 [簽署組件]**** 方塊。  
   
-4.  在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [\<新增…>]。  
+4.  在 [選擇強式名稱金鑰檔]**** 下拉式清單中，選取 [\<新增…>]****。  
   
-     隨即開啟 [建立強式名稱金鑰]對話方塊。  
+     隨即開啟 [建立強式名稱金鑰]**** 對話方塊。  
   
-5.  在 [金鑰檔案名稱]方塊中，提供金鑰檔名稱。  
+5.  在 [金鑰檔案名稱]**** 方塊中，提供金鑰檔名稱。  
   
-6.  將密碼輸入 [輸入密碼] 和 [確認密碼] 方塊。  
+6.  將密碼輸入 [輸入密碼]**** 和 [確認密碼]**** 方塊。  
   
-7.  按一下 [確定]。  
+7.  按一下 [確定]****。  
   
 8.  重建應用程式。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/22/2017
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>若要將接聽程式新增至 My.Application.Log  
   
-1.  在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
+1.  在方案總管****中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]****。  
   
      -或-  
   
@@ -108,15 +108,15 @@ ms.lasthandoff: 05/22/2017
   
     1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。  
+    2.  在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。  
   
-    3.  按一下 [加入]。  
+    3.  按一下 [加入] ****。  
   
 2.  在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。  
   
 3.  將此項目新增至 `<listeners>` 區段：  
   
-    ```  
+    ```xml  
     <add name="SimpleLog" />  
     ```  
   
@@ -124,7 +124,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  將此項目加入至該 `<sharedListeners>` 區段︰  
   
-    ```  
+    ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   

@@ -59,7 +59,7 @@ ms.lasthandoff: 04/18/2017
   
 2.  將 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

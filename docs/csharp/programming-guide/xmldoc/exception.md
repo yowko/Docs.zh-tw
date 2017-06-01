@@ -41,7 +41,7 @@ ms.lasthandoff: 03/13/2017
 # <a name="ltexceptiongt-c-programming-guide"></a>&lt;例外狀況&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
   
-```  
+```xml  
 <exception cref="member">description</exception>  
 ```  
   
