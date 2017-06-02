@@ -60,7 +60,7 @@ ms.lasthandoff: 05/22/2017
 
 [!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
 
-如果整數常值超出 `sbyte` 範圍 (也就是說，如果它小於 <xref:System.SByte.MinValue?displayProperty=fullName> 或大於 <xref:System.SByte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。 這表示，此範例會將數值常值 `0x9A` 和 `0b10011010` 解譯為 32 位元帶正負號的整數值 156，而該值已超過 <xref:System.SByte.MaxValue?displayProperty=fullName>。 因此，您需要使用轉型運算子，且作業必須發生在 [unchecked](unchecked.md) 內容中。 
+如果整數常值超出 `sbyte` 的範圍 (亦即，如果小於 <xref:System.SByte.MinValue?displayProperty=fullName> 或大於 <xref:System.SByte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。 這表示，此範例會將數值常值 `0x9A` 和 `0b10011010` 解譯為 32 位元帶正負號的整數值 156，而該值已超過 <xref:System.SByte.MaxValue?displayProperty=fullName>。 因此，您需要使用轉型運算子，且作業必須發生在 [unchecked](unchecked.md) 內容中。 
 
 ## <a name="compiler-overload-resolution"></a>編譯器多載解析
 

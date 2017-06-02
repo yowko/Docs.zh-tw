@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>如何：在 Visual Basic 中上載檔案
-<xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法可以用來上傳檔案，並將它儲存至遠端位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。  
+<xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法可以用於上傳檔案，並將其存放到遠端位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。  
   
 ### <a name="to-upload-a-file"></a>上傳檔案  
   

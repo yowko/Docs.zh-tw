@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中刪除登錄機碼
-<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法可以用來刪除登錄機碼。  
+<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法可用來刪除登錄機碼。  
   
 ## <a name="procedure"></a>程序  
   
@@ -60,9 +60,9 @@ ms.lasthandoff: 05/22/2017
   
  以下條件可能會造成例外狀況：  
   
--   機碼的名稱為 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   機碼的名稱是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   使用者無權刪除登錄機碼 (<xref:System.Security.SecurityException>)。  
+-   使用者沒有權限，無法刪除登錄機碼 (<xref:System.Security.SecurityException>)。  
   
 -   機碼名稱超過 255 個字元的限制 (<xref:System.ArgumentException>)。  
   

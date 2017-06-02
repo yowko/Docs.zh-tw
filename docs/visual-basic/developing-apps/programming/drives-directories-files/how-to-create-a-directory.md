@@ -58,13 +58,13 @@ ms.lasthandoff: 05/22/2017
   
 -   目錄名稱為 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   路徑名稱太長 (<xref:System.IO.PathTooLongException>)。  
+-   目錄名稱太長 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑包含冒號 ":" (<xref:System.NotSupportedException>)。  
+-   目錄名稱為冒號 ":" (<xref:System.NotSupportedException>)。  
   
--   使用者沒有建立目錄的權限 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者沒有權限，無法建立目錄 (<xref:System.UnauthorizedAccessException>)。  
   
--   使用者在部分信任情況下沒有權限 (<xref:System.Security.SecurityException>)。  
+-   使用者在部分信任狀況下的權限不足 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   

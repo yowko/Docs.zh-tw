@@ -62,19 +62,19 @@ ms.lasthandoff: 05/22/2017
   
 -   `destinationFileName` 為 `Nothing` 或空字串 (<xref:System.ArgumentNullException>)。  
   
--   原始程式檔無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
+-   來源檔案無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   合併的路徑指向現有目錄、目的地檔案已存在，以及 `overwrite` 設定為 `False`、正在使用目標目錄中同名的檔案，或使用者的權限不足無法存取檔案 (<xref:System.IO.IOException>)。  
+-   合併的路徑指向現有目錄、目的地檔案存在且 `overwrite` 設定為 `False`、正在使用目標目錄中同名的檔案，或使用者沒有足夠權限以存取檔案 (<xref:System.IO.IOException>)。  
   
 -   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   `showUI` 設定為 `True`、`onUserCancel` 設定為 `ThrowException`，以及使用者已取消作業，或發生未指定的 I/O 錯誤 (<xref:System.OperationCanceledException>)。  
+-   `showUI` 設定為 `True`、`onUserCancel` 設定為 `ThrowException`，而且使用者已取消作業，或發生未指定的 I/O 錯誤 (<xref:System.OperationCanceledException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
--   使用者沒有必要權限 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>   

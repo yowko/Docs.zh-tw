@@ -84,15 +84,15 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
--   無法使用指定的格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 此例外狀況訊息會指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性會指派給此行內含的文字。  
+-   無法使用指定格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 例外狀況訊息指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性被指派至包含於該文字行中的文字。  
   
 -   指定的檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)。  
+-   發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)  
   
 -   路徑太長 (<xref:System.IO.PathTooLongException>)。  
   
--   使用者的權限不足，無法存取檔案 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   

@@ -81,10 +81,10 @@ ms.lasthandoff: 05/22/2017
 group person by new {name = person.surname, city = person.city};  
 ```  
   
- 如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 使用索引鍵的自動實作屬性來建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何：使用自動實作的屬性來實作輕量型類別](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查詢目錄樹狀結構中的重複檔案](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 第二個主題的程式碼範例示範如何使用含有具名類型的複合索引鍵。  
+ 如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何：使用自動實作的屬性來實作輕量型類別](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何：查詢目錄樹狀結構中的重複檔案](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 第二個主題的程式碼範例示範如何使用含有具名類型的複合索引鍵。  
   
 ## <a name="example"></a>範例  
- 下列範例示範未將任何其他查詢邏輯套用到群組時，將來源資料排序成群組的標準模式。 這稱為無接續群組。 字串陣列中的項目是根據其第一個字母進行分組。 查詢的結果是包含 `char` 類型之公用 `Key` 屬性的 <xref:System.Linq.IGrouping%602> 類型，以及包含群組中每個項目的 <xref:System.Collections.Generic.IEnumerable%601> 集合。  
+ 下列範例示範未將任何其他查詢邏輯套用到群組時，將來源資料排序成群組的標準模式。 這稱為無接續群組。 字串陣列中的項目是根據其第一個字母進行分組。 查詢的結果是包含 `char` 類型之公用 `Key` 屬性的 <xref:System.Linq.IGrouping%602> 類型，以及包含群組中各個項目的 <xref:System.Collections.Generic.IEnumerable%601> 集合。  
   
  `group` 子句的結果是一連串的序列。 因此，若要存取每個所傳回群組內的個別項目，請在重複執行群組索引鍵的迴圈內使用巢狀 `foreach` 迴圈，如下列範例所示。  
   
@@ -96,7 +96,7 @@ group person by new {name = person.surname, city = person.city};
  [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## <a name="remarks"></a>備註  
- 在編譯時期，`group` 子句會轉譯成 <xref:System.Linq.Enumerable.GroupBy%2A> 方法呼叫。  
+ 在編譯時期，`group` 子句會轉譯成 <xref:System.Linq.Enumerable.GroupBy%2A> 方法的呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Linq.IGrouping%602>   

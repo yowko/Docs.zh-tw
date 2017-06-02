@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>如何：在 Visual Basic 中附加至文字檔
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可以用來附加至文字檔，方法是指定 `append` 參數設定為 `True`。  
+您可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法來附加至文字檔，方法是指定將 `append` 參數設定為 `True`。  
   
 ### <a name="to-append-to-a-text-file"></a>附加至文字檔  
   
@@ -59,13 +59,13 @@ ms.lasthandoff: 05/22/2017
   
 -   `File` 指向不存在的路徑 (<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>)。  
   
--   另一個處理序正在使用檔案，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
+-   檔案正由另一個處理序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
 -   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   

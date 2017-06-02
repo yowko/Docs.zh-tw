@@ -41,7 +41,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="how-to-log-exceptions-in-visual-basic"></a>如何：在 Visual Basic 中記錄例外狀況
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之例外狀況的相關資訊。 下列範例示範如何使用 `My.Application.Log.WriteException` 方法，以記錄您明確攔截到的例外狀況和未處理的例外狀況。  
   
- 如需記錄追蹤資訊，請使用 `My.Application.Log.WriteEntry` 方法。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>。  
+ 如需記錄追蹤資訊，請使用 `My.Application.Log.WriteEntry` 方法。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>。  
   
 ### <a name="to-log-a-handled-exception"></a>記錄已處理的例外狀況  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  將可產生例外狀況的程式碼放在 `Try` 區塊中。  
   
-     將 `Dim` 和 `MsgBox` 行取消註解，會導致 <xref:System.NullReferenceException> 例外狀況。  
+     取消 `Dim` 和 `MsgBox` 行的註解，造成 <xref:System.NullReferenceException> 例外狀況。  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  在 [宣告] 功能表上，選擇 [未處理的例外狀況]。  
   
-     應用程式會在主應用程式執行之前引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。  
+     應用程式在主應用程式執行之前，引發 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 事件。  
   
 6.  將 `My.Application.Log.WriteException` 方法加入 `UnhandledException` 事件處理常式。  
   

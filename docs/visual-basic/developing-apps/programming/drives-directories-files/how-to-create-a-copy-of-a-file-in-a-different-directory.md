@@ -58,17 +58,17 @@ ms.lasthandoff: 05/22/2017
   
 -   路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   原始程式檔無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
+-   來源檔案無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   合併路徑指向現有目錄 (<xref:System.IO.IOException>)。  
+-   合併的路徑指向現有目錄 (<xref:System.IO.IOException>)。  
   
--   目的地檔案存在，而且 `overwrite` 設定為 `False` (<xref:System.IO.IOException>)。  
+-   目的地檔案存在且 `overwrite` 設定為 `False` (<xref:System.IO.IOException>)。  
   
--   使用者的權限不足，無法存取檔案 (<xref:System.IO.IOException>)。  
+-   使用者沒有足夠權限以存取檔案 (<xref:System.IO.IOException>)。  
   
--   同名目標資料夾中的檔案正在使用中 (<xref:System.IO.IOException>)。  
+-   正在使用目標資枓夾中同名的檔案 (<xref:System.IO.IOException>)。  
   
--   路徑中的檔案或資料夾名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+-   路徑中的檔案或資料夾名稱包含冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
 -   `ShowUI` 設定為 `True`、`onUserCancel` 設定為 `ThrowException`，而且使用者已取消作業 (<xref:System.OperationCanceledException>)。  
   
@@ -76,9 +76,9 @@ ms.lasthandoff: 05/22/2017
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   使用者沒有必要權限 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   

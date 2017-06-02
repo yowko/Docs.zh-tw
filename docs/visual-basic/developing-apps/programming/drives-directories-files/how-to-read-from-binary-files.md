@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
 -   檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   另一個處理序正在使用檔案，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
+-   檔案正由另一個處理序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/22/2017
   
 -   沒有足夠的記憶體可將字串寫入緩衝區 (<xref:System.OutOfMemoryException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
  請勿根據檔案名稱來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。  
   

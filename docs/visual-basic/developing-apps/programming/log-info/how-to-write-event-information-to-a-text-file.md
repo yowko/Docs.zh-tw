@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  將此項目加入至該 `<listeners>` 區段︰  
   
-    ```xml  
+    ```  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  將此項目加入至該 `<sharedListeners>` 區段︰  
   
-    ```xml  
+    ```  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/22/2017
      將 `customlocation` 屬性的值變更為記錄檔目錄。  
   
     > [!NOTE]
-    >  若要設定 listener 屬性的值，請使用與屬性 (property) 同名的屬性 (attribute)，而名稱中的所有字母都是小寫。 例如，`location` 和 `customlocation` 屬性 (attribute) 設定 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 屬性 (property) 的值。  
+    >  若要設定 listener 屬性的值，請使用與屬性 (property) 同名的屬性 (attribute)，而名稱中的所有字母都是小寫。 例如，`location` 和 `customlocation` 屬性會設定 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 屬性的值。  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>將事件資訊寫入檔案記錄檔  
   

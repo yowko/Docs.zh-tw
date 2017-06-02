@@ -75,26 +75,26 @@ ms.lasthandoff: 05/22/2017
   
  從 Web 應用程式讀取登錄時，目前使用者取決於 Web 應用程式中所實作的驗證和模擬。  
   
- 將資料寫入使用者資料夾 (<xref:Microsoft.Win32.Registry.CurrentUser>)，會比寫入本機電腦 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更為安全。  
+ 將資料寫入使用者資料夾 (<xref:Microsoft.Win32.Registry.CurrentUser>) 比寫入本機電腦 (<xref:Microsoft.Win32.Registry.LocalMachine>) 更安全。  
   
- 當您建立登錄值時，您需要決定如果該值已經存在該怎麼辦。 另一個可能是惡意的處理序，可能已建立值並具有其存取權。 當您將資料放在登錄值中時，資料可供其他處理序使用。 若要避免這個問題，請使用 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 方法。 如果機碼尚未存在，則會傳回 `Nothing`。  
+ 當您建立登錄值時，您需要決定如果該值已經存在該怎麼辦。 另一個可能是惡意的處理序，可能已建立值並具有其存取權。 當您將資料放在登錄值中時，資料可供其他處理序使用。 為避免此問題，請使用 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 方法。 如果機碼尚未存在，則會傳回 `Nothing`。  
   
  即使使用 ACL (存取控制清單) 來保護登錄機碼，將密碼等機密資料以純文字儲存在登錄中也不安全。  
   
  以下條件可能會造成例外狀況：  
   
--   機碼的名稱為 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   機碼的名稱是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   使用者無權建立登錄機碼 (<xref:System.Security.SecurityException>)。  
+-   使用者沒有權限，無法建立登錄機碼 (<xref:System.Security.SecurityException>)。  
   
 -   機碼名稱超過 255 個字元的限制 (<xref:System.ArgumentException>)。  
   
--   已關閉機碼 (<xref:System.IO.IOException>)。  
+-   機碼已關閉 (<xref:System.IO.IOException>)。  
   
 -   登錄機碼為唯讀 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要執行此程序，您的組件需要 <xref:System.Security.Permissions.RegistryPermission> 類別所授與的權限等級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
+ 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

@@ -58,7 +58,7 @@ ms.lasthandoff: 05/22/2017
  示範如何在 [我的文件] 目錄中建立和寫入新的文字檔。  
   
  [如何：以 StreamWriter 將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- 示範如何寫入有 <xref:System.IO.StreamWriter?displayProperty=fullName> 物件的檔案。  
+ 示範如何使用 <xref:System.IO.StreamWriter?displayProperty=fullName> 物件寫入檔案。  
   
 ## <a name="reference"></a>參考資料  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

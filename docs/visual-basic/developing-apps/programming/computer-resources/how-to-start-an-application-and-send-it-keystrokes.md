@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
  如果找不到具有所要求處理序識別碼的應用程式，則會引發 <xref:System.ArgumentException> 例外狀況。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- `Shell` 函式呼叫需要完全信任 (<xref:System.Security.SecurityException> 類別)。  
+ 呼叫 `Shell` 函式需要完全信任 (<xref:System.Security.SecurityException> 類別)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   

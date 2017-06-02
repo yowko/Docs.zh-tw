@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
   
-     如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
+     如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

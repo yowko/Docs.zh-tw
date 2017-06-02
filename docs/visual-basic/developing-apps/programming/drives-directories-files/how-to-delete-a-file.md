@@ -70,11 +70,11 @@ ms.lasthandoff: 05/22/2017
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或資料夾名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+-   路徑中的檔案或資料夾名稱包含冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
 -   檔案正在使用中 (<xref:System.IO.IOException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
 -   檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   

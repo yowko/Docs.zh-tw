@@ -60,15 +60,15 @@ ms.lasthandoff: 05/22/2017
   
 -   `directory` 不存在 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   `directory` 指向現有的檔案 (<xref:System.IO.IOException>)。  
+-   `directory` 指向現有檔案 (<xref:System.IO.IOException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或資料夾名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+-   路徑中的檔案或資料夾名稱包含冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
--   使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>   

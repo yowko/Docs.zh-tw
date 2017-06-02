@@ -48,7 +48,7 @@ ms.lasthandoff: 05/22/2017
   
  您不應將登錄變數儲存在記憶體位置，因為不具備 <xref:System.Security.Permissions.RegistryPermission> 的程式碼亦可存取這個位置。 同樣地，當授與權限時，請授與完成工作所需的最低權限。  
   
- 登錄權限存取值是由 <xref:System.Security.Permissions.RegistryPermissionAccess> 列舉來定義。 下表會詳細說明其成員。  
+ 登錄權限存取值是由 <xref:System.Security.Permissions.RegistryPermissionAccess> 列舉定義。 下表會詳細說明其成員。  
   
 |值|登錄變數的存取權|  
 |-----------|----------------------------------|  

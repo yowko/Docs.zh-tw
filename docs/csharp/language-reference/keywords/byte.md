@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="literals"></a>常值  
 
- 您可以指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以宣告和初始化 `byte` 變數。 如果整數常值超出 `byte` 範圍 (也就是說，如果它小於 <xref:System.Byte.MinValue?displayProperty=fullName> 或大於 <xref:System.Byte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
+ 您可以針對 `byte` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 如果整數常值超出 `byte` 的範圍 (亦即，如果小於 <xref:System.Byte.MinValue?displayProperty=fullName> 或大於 <xref:System.Byte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 201 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 隱含轉換成 `byte` 值。    
   
@@ -66,7 +66,6 @@ ms.lasthandoff: 05/22/2017
  您無法將較大儲存大小的非常值數字類型隱含轉換為 `byte`。 如需整數型別儲存大小的詳細資訊，請參閱[整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)。 例如，請考慮使用下列兩個 `byte` 變數 `x` 和 `y`：  
   
 ```  
-  
 byte x = 10, y = 20;  
 ```  
   
@@ -133,3 +132,4 @@ SampleMethod((byte)5);
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

@@ -41,7 +41,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>如何：在 Visual Basic 中將文字寫入檔案
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可以用來將文字寫入檔案。 如果指定的檔案不存在，則會建立該檔案。  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可用來將文字寫入檔案。 如果指定的檔案不存在，則會建立該檔案。  
   
 ## <a name="procedure"></a>程序  
   
@@ -68,15 +68,15 @@ ms.lasthandoff: 05/22/2017
   
 -   `File` 指向不存在的路徑 (<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>)。  
   
--   另一個處理序正在使用檔案，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
+-   檔案正由另一個處理序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
 -   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者沒有檢視路徑所需的權限 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
--   磁碟已滿，且 `WriteAllText` 呼叫失敗 (<xref:System.IO.IOException>)。  
+-   磁碟已滿，且 `WriteAllText` 的呼叫失敗 (<xref:System.IO.IOException>)。  
   
  如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
   

@@ -40,19 +40,19 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>如何：在 Visual Basic 中剖析檔案路徑
-剖析檔案路徑時，<xref:Microsoft.VisualBasic.FileIO.FileSystem> 物件會提供一些有用的方法。  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem> 物件提供剖析檔案路徑時的數種有用方法。  
   
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> 方法接受兩個路徑，並傳回格式正確的合併路徑。  
+-   <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> 方法會採用兩個路徑，並傳回格式正確的合併路徑。  
   
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> 方法會傳回所提供路徑之父代的絕對路徑。  
+-   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> 方法會傳回所提供路徑之上層的絕對路徑。  
   
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法會傳回 <xref:System.IO.FileInfo> 物件，而對其進行查詢可判斷檔案內容，例如其名稱和路徑。  
+-   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法會傳回 <xref:System.IO.FileInfo> 物件，這個物件可以進行查詢來判斷檔案的屬性 (例如其名稱和路徑)。  
   
  請不要根據副檔名來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。  
   
 ### <a name="to-determine-a-files-name-and-path"></a>判斷檔案的名稱和路徑  
   
--   使用 <xref:System.IO.FileInfo> 物件的 <xref:System.IO.FileInfo.DirectoryName%2A> 和 <xref:System.IO.FileInfo.Name%2A> 屬性，以判斷檔案的名稱和路徑。 這個範例會判斷名稱和路徑，並予以顯示。  
+-   使用 <xref:System.IO.FileInfo> 物件的 <xref:System.IO.FileInfo.DirectoryName%2A> 和 <xref:System.IO.FileInfo.Name%2A> 屬性來判斷檔案的名稱和路徑。 這個範例會判斷名稱和路徑，並予以顯示。  
   
      [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   
