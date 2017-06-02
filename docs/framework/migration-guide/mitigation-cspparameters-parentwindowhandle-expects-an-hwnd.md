@@ -46,7 +46,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>緩和
 
-開發人員如已發現正確值是 `form.Handle` 值所在之記憶體位置的位址，可以藉由將 <xref:System.Security.AppContext> 參數 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 設為 `true` 以選擇退出此行為變更：
+開發人員如已發現正確值是 `form.Handle` 值所在之記憶體位置的位址，可以藉由將 <xref:System.Security.AppContext> 參數 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 設為 `true` 以退出此行為變更：
 
 - 以程式設計方式設定 <xref:System.Security.AppContext> 執行個體上的相容性參數。
 
@@ -58,7 +58,7 @@ cspParameters.ParentWindowHandle = form.Handle;
    </runtime>
    ```
 
-相反地，若使用者想針對執行 .NET Framework 4.7 但以舊版 .NET Framework 為目標的應用程式選擇加入新的行為，可以將 <xref:System.Security.AppContext> 參數設為 `false`。
+相反地，若使用者想針對執行 .NET Framework 4.7 但以舊版 .NET Framework 為目標的應用程式加入新的行為，可以將 <xref:System.Security.AppContext> 參數設為 `false`。
  
 ## <a name="see-also"></a>請參閱
 

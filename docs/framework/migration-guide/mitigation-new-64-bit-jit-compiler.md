@@ -41,9 +41,9 @@ ms.lasthandoff: 05/22/2017
   
 -   某些狀況下，發行組建中傳遞至方法的結構會被視為參考型別而非實值型別。 這個問題的其中一種表現，就是集合中的個別項目會以非預期的順序出現。  
   
--   某些狀況下，如果啟用最佳化，<xref:System.UInt16> 的值在設定高位元時的比較會不正確。  
+-   在某些情況下，如果啟用最佳化，<xref:System.UInt16> 的值在設定高位元時的比較會不正確。  
   
--   某些狀況下，尤其是初始化陣列值時，使用 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 指令初始化記憶體，可能會以不正確的值初始化記憶體。 這會造成未處理的例外狀況或不正確的輸出。  
+-   在某些情況下，尤其是初始化陣列值時，使用 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 指令初始化記憶體，可能會以不正確的值初始化記憶體。 這會造成未處理的例外狀況或不正確的輸出。  
   
 -   在少數情況下，如果啟用編譯器最佳化，條件式位元測試可能會傳回不正確的 <xref:System.Boolean> 值或擲回例外狀況。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
   
 -   升級至 .NET Framework 4.6.2。 隨附於 .NET Framework 4.6.2 中的新版 64 位元編譯器可以解決這些已知問題。  
   
--   執行 Windows Update，確定您的 Windows 已更新至最新版本。 .NET Framework 4.6 和 4.6.1 的服務更新可解決上述問題中除了 Unboxing 作業的 <xref:System.NullReferenceException> 以外的所有問題。  
+-   執行 Windows Update，確定您的 Windows 已更新至最新版本。 .NET Framework 4.6 和 4.6.1 的服務更新可解決上述問題中除了 Unboxing 作業之 <xref:System.NullReferenceException> 以外的所有問題。  
   
 -   使用舊版 64 位元 JIT 編譯器編譯。 如需如何進行的詳細資訊，請參閱[降低其他問題的風險](#Other)一節。  
   

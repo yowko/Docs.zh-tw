@@ -18,47 +18,48 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 64f5f4cb54990c3090ec5e755bbab6de34d40959
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 24a8d7b017160d5cb28b7478200b8623a1dc4818
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
-使用者可以在電腦上安裝及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 請注意，.NET Framework 包含兩個主要元件，這兩個元件的版本控制會分開處理：
-
-- 組件集合，這是為應用程式提供功能的類型與資源集合。 .NET Framework 和組件會共用相同的版本號碼。
-
-- 通用語言執行平台 (CLR)，負責管理和執行應用程式的程式碼。 CLR 是透過自己的版本號碼加以識別 (請參閱[版本和相依性](~/docs/framework/migration-guide/versions-and-dependencies.md))。
-
- 若要取得電腦上安裝之 .NET Framework 版本的正確清單，您可以檢視登錄或查詢程式碼中的登錄：
-
- [檢視登錄 (1-4 版)](#net_a)
- [檢視登錄 (4.5 版及更新版本)](#net_b)
- [使用程式碼查詢登錄 (1-4 版)](#net_c)
- [使用程式碼查詢登錄 (4.5 版及更新版本)](#net_d)
-
- 若要尋找 CLR 版本，您可以使用工具或程式碼：
-
- [使用 Clrver 工具](#clr_a)
- [使用程式碼查詢 System.Environment 類別](#clr_b)
-
- 如需偵測每一版 .NET Framework 已安裝之更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。
-
-<a name="net_a"></a> 
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>藉由檢視登錄尋找 .NET Framework 版本 (.NET Framework 1-4)
-
-1. 在 [開始] 功能表中選擇 [執行]。
-
-2. 在 [開啟] 方塊中輸入 **regedit.exe**。
-
-     您必須具有系統管理認證才能執行 regedit.exe。
-
-3. 在 [登錄編輯程式] 中，開啟下列子機碼：
-
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`
-
-     安裝的版本會在 [NDP] 子機碼底下列出。 版本號碼是儲存在 [Version] 項目中。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，[Version] 項目位於 [Client] 或 [Full] 子機碼底下 (在 [NDP] 底下)，或是同時在這兩個子機碼底下。
+使用者可以在電腦上安裝及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 請注意，.NET Framework 包含兩個主要元件，這兩個元件的版本控制會分開處理：  
+  
+-   組件集合，這是為應用程式提供功能的類型與資源集合。 .NET Framework 和組件會共用相同的版本號碼。  
+  
+-   通用語言執行平台 (CLR)，負責管理和執行應用程式的程式碼。 CLR 是透過自己的版本號碼加以識別 (請參閱[版本和相依性](~/docs/framework/migration-guide/versions-and-dependencies.md))。  
+  
+ 若要取得電腦上安裝之 .NET Framework 版本的正確清單，您可以檢視登錄或查詢程式碼中的登錄：  
+  
+ [檢視登錄 (1-4 版)](#net_a)  
+ [檢視登錄 (4.5 版及更新版本)](#net_b)  
+ [使用程式碼查詢登錄 (1-4 版)](#net_c)  
+ [使用程式碼查詢登錄 (4.5 版及更新版本)](#net_d)  
+  
+ 若要尋找 CLR 版本，您可以使用工具或程式碼：  
+  
+ [使用 Clrver 工具](#clr_a)  
+ [使用程式碼查詢 System.Environment 類別](#clr_b)  
+  
+ 如需偵測每一版 .NET Framework 已安裝之更新的資訊，請參閱[如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
+  
+<a name="net_a"></a>   
+#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>藉由檢視登錄尋找 .NET Framework 版本 (.NET Framework 1-4)  
+  
+1.  在 [開始] 功能表中選擇 [執行]。  
+  
+2.  在 [開啟] 方塊中輸入 **regedit.exe**。  
+  
+     您必須具有系統管理認證才能執行 regedit.exe。  
+  
+3.  在 [登錄編輯程式] 中，開啟下列子機碼：  
+  
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`  
+  
+     安裝的版本會在 [NDP] 子機碼底下列出。 版本號碼是儲存在 [Version] 項目中。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，[Version] 項目位於 [Client] 或 [Full] 子機碼底下 (在 [NDP] 底下)，或是同時在這兩個子機碼底下。  
+  
 
     > [!NOTE]
     > 登錄中的 [NET Framework Setup] 資料夾不是以英文句號開頭。
@@ -101,15 +102,14 @@ ms.lasthandoff: 05/04/2017
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>藉由查詢程式碼中的登錄尋找 .NET Framework 版本 (.NET Framework 1-4)
 
-- 使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> 類別存取 Windows 登錄中 HKEY_LOCAL_MACHINE 底下的 Software\Microsoft\NET Framework Setup\NDP\ 子機碼。
+- 使用 <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> 類別存取 Windows 登錄中，HKEY_LOCAL_MACHINE 底下的 Software\Microsoft\NET Framework Setup\NDP\ 子機碼。
 
      下列程式碼將示範此查詢的範例。
 
     > [!NOTE]
     > 這個程式碼不會顯示如何偵測 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。 檢查 `Release` DWORD 即可偵測這些版本，如上一節所述。 如需偵測 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本的程式碼，請參閱本文中的下一節。
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
      這個範例產生的輸出類似下面所述：
 
@@ -146,8 +146,7 @@ ms.lasthandoff: 05/04/2017
 
      下列範例會檢查登錄中的 `Release` 值，以判斷是否安裝 .NET Framework 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
-     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]   [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
      此範例遵循版本檢查的建議做法：
 
@@ -173,17 +172,16 @@ ms.lasthandoff: 05/04/2017
 <a name="clr_b"></a> 
 #### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>若要藉由查詢程式碼中的 Environment 類別尋找目前的執行階段版本
 
-- 查詢 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性，以擷取識別目前執行程式碼之執行階段版本的 <xref:System.Version> 物件。 您可以使用 <xref:System.Version.Major%2A?displayProperty=fullName> 屬性取得主要版本識別碼 (例如 "4" 代表 4.0 版)；使用 <xref:System.Version.Minor%2A?displayProperty=fullName> 屬性取得次要版本識別碼 (例如 "0" 代表 4.0 版)；或使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法取得整個版本字串 (例如 "4.0.30319.18010"，如下列程式碼所示)。 這個屬性會傳回單一值，反映出目前執行程式碼的執行階段版本，但是不會傳回電腦上可能已安裝的組件版本或其他執行階段版本。
+- 查詢 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性，以擷取可識別目前執行程式碼的執行階段版本的 <xref:System.Version>。 您可以使用 <xref:System.Version.Major%2A?displayProperty=fullName> 屬性取得主要版本識別項 (例如，"4" 代表 4.0 版)，使用 <xref:System.Version.Minor%2A?displayProperty=fullName> 屬性取得次要版本識別項 (例如，"0" 代表 4.0 版)，或者使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法取得整個版本字串 (例如 "4.0.30319.18010"，如下列程式碼所示)。 這個屬性會傳回單一值，反映出目前執行程式碼的執行階段版本，但是不會傳回電腦上可能已安裝的組件版本或其他執行階段版本。
 
      針對 .NET Framework 4、4.5、4.5.1 和 4.5.2 版，<xref:System.Environment.Version%2A?displayProperty=fullName> 屬性會傳回 <xref:System.Version> 物件，其字串表示的格式為 `4.0.30319.xxxxx`。 針對 .NET Framework 4.6 和更新版本，其格式為 `4.0.30319.42000`。
 
     > [!IMPORTANT]
-    > 針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和更新版本，不建議使用 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性來偵測執行階段版本。 相反地，建議您查詢登錄，如本文稍早的[藉由查詢程式碼中的登錄尋找 .NET Framework 版本 (.NET Framework 4.5 及更新版本)](#net_d) 一節中所述。
+    > 針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和更新版本，不建議使用 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性來偵測執行階段的版本。 相反地，建議您查詢登錄，如本文稍早的[藉由查詢程式碼中的登錄尋找 .NET Framework 版本 (.NET Framework 4.5 及更新版本)](#net_d) 一節中所述。
 
      以下是查詢 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性取得執行階段版本資訊的範例：
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
      這個範例產生的輸出類似下面所述：
 
@@ -193,5 +191,5 @@ ms.lasthandoff: 05/04/2017
 
 ## <a name="see-also"></a>另請參閱
  [如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
+ [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
  [版本和相依性](~/docs/framework/migration-guide/versions-and-dependencies.md)
