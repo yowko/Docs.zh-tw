@@ -22,11 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ffe0b574b00e3ce420d83658f5844f26c3f8ea72
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 3bbfaf3272444fbd2127f01ae4d5c9ca0db7bd39
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>桌面應用程式中的資源
@@ -51,23 +51,23 @@ ms.lasthandoff: 06/02/2017
  如需詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)文章。  
   
 ## <a name="retrieving-resources"></a>擷取資源  
- 在執行階段，應用程式會根據 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 屬性所指定的文化特性，針對每個執行緒載入適當的當地語系化資源。 這個屬性值被衍生，如下所示︰  
+ 在執行階段，應用程式會在每個執行緒載入適當的當地語系化資源，根據 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 屬性指定的文化特性。 這個屬性值被衍生，如下所示︰  
   
 -   藉由直接將代表當地語系化文化特性的 <xref:System.Globalization.CultureInfo> 物件指派至 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> 屬性。  
   
--   如果未明確指派文化特性，則會從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName> 屬性擷取預設執行緒 UI 文化特性。  
+-   如果未明確指派文化特性，從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName> 屬性擷取預設執行緒 UI。  
   
 -   如果未明確指派預設執行緒 UI 文化特性，為本機電腦上的目前使用者呼叫 Windows `GetUserDefaultUILanguage` 函式來擷取文化特性。  
   
  如需如何設定目前 UI 文化特性的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 參考頁面。  
   
- 然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=fullName> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取傳統型應用程式中的資源，<xref:System.Resources?displayProperty=fullName> 命名空間包含您可以用來擷取資源的額外類型。 這些活動包括：  
+ 然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=fullName> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取桌面應用程式中的資源，<xref:System.Resources?displayProperty=fullName> 命名空間包含您可以用來擷取資源的額外型別。 它們包括：  
   
--   <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。  
+-   <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中的資源，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。  
   
 -   <xref:System.Resources.ResXResourceReader> 類別，可讓您從 XML (.resx) 檔擷取資源。  
   
--   <xref:System.Resources.ResourceSet> 類別，可讓您擷取特定文化特性的資源，而不需要觀察後援規則。 資源可以儲存在組件或獨立二進位 .resources 檔中。 您也可以開發 <xref:System.Resources.IResourceReader> 實作，以使用 <xref:System.Resources.ResourceSet> 類別從其他來源擷取資源。  
+-   <xref:System.Resources.ResourceSet> 類別，可讓您擷取特定文化特性的資源，而不需要觀察後援規則。 資源可以儲存在組件或獨立二進位 .resources 檔中。 您也可以開發 <xref:System.Resources.IResourceReader> 實作，讓您使用 <xref:System.Resources.ResourceSet> 類別從一些其他來源擷取資源。  
   
 -   <xref:System.Resources.ResXResourceSet> 類別，可讓您將 XML 資源檔中的所有項目擷取至記憶體。  
   
