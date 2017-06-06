@@ -1,40 +1,42 @@
 ---
 title: "如何：設定應用程式定義域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式定義域, 設定"
-  - "ApplicationBase 屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application domains, configuring
+- ApplicationBase property
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 22da4e19b3103892f42e5afee02c6b3ffa2d0581
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/02/2017
+
 ---
-# 如何：設定應用程式定義域
-您可以使用 <xref:System.AppDomainSetup> 類別提供 Common Language Runtime 新的應用程式定義域組態資訊。  建立自己的應用程式定義域時，最重要的屬性就是 <xref:System.AppDomainSetup.ApplicationBase%2A>。  其他 **AppDomainSetup** 屬性主要是由執行階段主應用程式用來組態特定的應用程式定義域。  
+# <a name="how-to-configure-an-application-domain"></a>如何：設定應用程式定義域
+您可以使用 <xref:System.AppDomainSetup> 類別向 Common Language Runtime 提供新應用程式定義域的設定資訊。 建立您自己的應用程式定義域時，最重要的屬性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。 其他 **AppDomainSetup** 屬性主要是執行階段主機用來設定特定的應用程式定義域。  
   
- **ApplicationBase** 屬性定義應用程式的根目錄。  當執行階段必須滿足型別要求時，它必須在 **ApplicationBase** 屬性指定的目錄中檢查含有該型別的組件。  
+ **ApplicationBase** 屬性會定義應用程式的根目錄。 當執行階段需要滿足類型要求時，它會探查組件在 **ApplicationBase** 屬性指定的目錄中是否包含該類型。  
   
 > [!NOTE]
->  新的應用程式定義域只會繼承建立者的 **ApplicationBase** 屬性。  
+>  新的應用程式定義域只繼承建立者的 **ApplicationBase** 屬性。  
   
- 下列範例建立 **AppDomainSetup** 類別的執行個體 \(Instance\)、使用該類別建立新的應用程式定義域、撰寫資訊到主控台，然後卸載應用程式定義域。  
+ 以下範例會建立 **AppDomainSetup** 類別的執行個體、使用此類別建立新的應用程式定義域、將資訊寫入主控台，再卸載應用程式定義域。  
   
-## 範例  
- [!code-cpp[ADApplicationBase#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADApplicationBase/CPP/source2.cpp#2)]
- [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
- [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
+## <a name="example"></a>範例  
+ [!code-cpp[ADApplicationBase#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADApplicationBase/CPP/source2.cpp#2)] [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)] [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## 請參閱  
- [Hosting Overview](http://msdn.microsoft.com/zh-tw/ea527626-99e3-4995-81c4-c8f3e60eb6d5)   
- [Programming with Application Domains](http://msdn.microsoft.com/zh-tw/bd36055b-56bd-43eb-b4d8-820c37172131)   
+## <a name="see-also"></a>另請參閱  
+ [使用應用程式定義域設計程式](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
