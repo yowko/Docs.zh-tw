@@ -32,7 +32,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 11ea4186a77a600d1645fe334ba9fd704fe728b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="garbage-collection"></a>記憶體回收

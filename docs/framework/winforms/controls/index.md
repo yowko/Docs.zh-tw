@@ -20,11 +20,11 @@ caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 5bfd408e2c96260690814aae56a34519f627034b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: e92fd440f0afd265a65395a715b08df44cf37f9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="windows-forms-controls"></a>Windows Form 控制項
