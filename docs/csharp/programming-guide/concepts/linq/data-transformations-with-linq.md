@@ -88,7 +88,7 @@ ms.lasthandoff: 05/10/2017
  如需詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>將記憶體中的物件轉換成 XML  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
