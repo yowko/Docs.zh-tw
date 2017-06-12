@@ -32,7 +32,7 @@ ms.lasthandoff: 03/13/2017
 
 當物件不再可供存取時，系統會自動回收物件所佔用的記憶體。 在 C# 中，既沒有必要也不可能明確地將物件解除配置。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 類別的成員不是靜態成員，就是執行個體成員。 靜態成員隸屬於類別，而執行個體成員則隸屬於物件 (類別的執行個體)。
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 03/13/2017
 
 [!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
 
-泛型型別若已有提供的型別參數 (如上述的 `Pair<int,string>`)，即稱為「建構的型別」**。
+泛型型別若已有提供的型別參數 (如上述的 `Pair<int,string>`)，即稱為「建構型別」。
 
 ## <a name="base-classes"></a>基底類別
 
