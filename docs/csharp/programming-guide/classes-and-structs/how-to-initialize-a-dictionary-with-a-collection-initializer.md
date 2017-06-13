@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 60443456be4b4fbb13dad6cb9c372a1af332c2fd
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6c6f15772f098618d63a48ada122b1e98ef5e62d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>如何：使用集合初始設定式來初始化字典 (C# 程式設計手冊)
@@ -43,10 +43,10 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
- 請注意，該集合的每個項目中都有兩組括號。 最內層的括號會括住 `StudentName` 的物件初始設定式，最外層的括號會括住機碼值組，這組值會新增至 `students`<xref:System.Collections.Generic.Dictionary`2>。 最後，會以括號括住目錄的整個集合初始設定式。  
+ 請注意，該集合的每個項目中都有兩組括號。 最內層的大括號括住的物件初始設定式`StudentName`，和最外層的大括號括住的初始設定式的索引鍵/值組加入至`students` <xref:System.Collections.Generic.Dictionary`2>。 最後，會以括號括住目錄的整個集合初始設定式。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要執行此程式碼，請將該類別複製並貼到 [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)] 中所建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 using 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
+ 若要執行此程式碼，請將該類別複製並貼到 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中所建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 using 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

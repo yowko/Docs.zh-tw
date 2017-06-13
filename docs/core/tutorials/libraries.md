@@ -1,5 +1,5 @@
 ---
-title: "使用跨平台工具開發程式庫"
+title: "開發程式庫與跨平台工具 |Microsoft 文件"
 description: "使用跨平台工具開發程式庫"
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
+ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/02/2017
 
 在該文中，有一張將 .NET Standard 版本對應至各種實作的表格︰
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 以下是這個資料表在建立程式庫時的意義︰
 
@@ -237,7 +237,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>如何測試 .NET Core 上的程式庫
 
-重要的是一定要可以跨平台進行測試。  您可以使用現成的 [xUnit](http://xunit.github.io/) 或 MSTest。  兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。  如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。  下列範例假設測試及來源目錄位於相同的最上層目錄中。
+重要的是一定要可以跨平台進行測試。  您可以使用現成的 [xUnit](http://xunit.github.io/) 或 MSTest。  兩者都完全適用於單元測試程式庫.NET Core 上。  如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。  下列範例假設測試] 和 [來源目錄位於相同的最上層目錄。
 
 > [!INFO] 這會使用一些 [.NET CLI 命令](../tools/index.md)。  如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
 
@@ -319,12 +319,13 @@ let doWork data = async {
 這類使用案例表示針對 C# 和 F#，正在存取的 API 必須具有不同的結構。  完成這項作業的常見方法將程式庫的所有邏輯都納入核心專案，而且 C# 和 F# 專案定義呼叫該核心專案的 API 層。  區段的其餘部分將使用下列名稱︰
 
 * **AwesomeLibrary.Core** - 核心專案，內含程式庫的所有邏輯
-* **AwesomeLibrary.CSharp** - 專案，具有公用 API 可供在 C 中使用#
-* **AwesomeLibrary.FSharp** - 專案，具有公用 API 可供在 F 中使用#
+* **AwesomeLibrary.CSharp**位在專案中使用適用於 C# 中的耗用量的公用 Api
+* **AwesomeLibrary.FSharp** -預定在 F # 中的公用 Api 的專案
 
 您可以在終端機中執行下列命令，以產生與本指南相同的結構︰
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 這會新增上方的三個專案以及將它們連結在一起的方案檔。  建立方案檔及連結專案可讓您從最上層還原與建置專案。
@@ -344,7 +345,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
 參考專案的最佳方式是使用 .NET CLI 來新增專案參考。  從 **AwesomeLibrary.CSharp** 及 **AwesomeLibrary.FSharp** 專案目錄中，您可以執行下列命令︰
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 **AwesomeLibrary.CSharp** 及 **AwesomeLibrary.FSharp** 的專案檔現在參考 **AwesomeLibrary.Core** 作為 `ProjectReference` 目標。  檢查專案檔並查看其中的下列內容，即可確認這項作業︰
@@ -360,3 +361,4 @@ $ dotnet add reference ../AwesomeLibrary.Core.csproj
 ### <a name="structuring-a-solution"></a>建構方案
 
 多專案方案的另一個重要部分是建立不錯的整體專案結構。 不過，您可以視需要組織程式碼，而且只要您使用 `dotnet sln add` 將每個專案連結至方案檔，就可以在方案層級執行 `dotnet restore` 及 `dotnet build`。
+
