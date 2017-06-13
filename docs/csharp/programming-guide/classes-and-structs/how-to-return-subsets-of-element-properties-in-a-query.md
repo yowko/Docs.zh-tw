@@ -28,10 +28,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3849d26506278fede6642530c60b6ec418f39464
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 99768c4b486dd6e8a25af22ab187c673c548ece9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
@@ -66,7 +66,7 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   若要執行此程式碼，請將該類別複製並貼到 [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)] 中所建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 3.5 版為目標，而且會有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
+-   若要執行此程式碼，請將該類別複製並貼到 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中所建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，而且會有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
