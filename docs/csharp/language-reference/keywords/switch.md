@@ -40,7 +40,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
