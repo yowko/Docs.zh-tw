@@ -122,7 +122,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。 (.NET Foundation 的 gitHub 識別碼是 'dotnet')。 首先，您需建立新的 @System.Net.Http.HttpClient。 此物件會處理要求和回應。 接下來幾行會設定此要求的 @System.Net.Http.HttpClient。 首先，會將它設定為接受 GitHub JSON 回應。
+第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。 (.NET Foundation 的 gitHub 識別碼是 'dotnet')。 首先，您需建立新的 @System.Net.Http.HttpClient 。 此物件會處理要求和回應。 接下來幾行會設定此要求的 @System.Net.Http.HttpClient 。 首先，會將它設定為接受 GitHub JSON 回應。
 此格式就是 JSON。 下一行會將「使用者代理程式」標頭新增到來自此物件的所有要求。 這兩個標頭會受到 GitHub 伺服器程式碼檢查，並且是從 GitHub 擷取資訊的必要標頭。
 
 設定 @System.Net.Http.HttpClient 之後，您需提出 Web 要求並擷取回應。 在這個第一版中，您會使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 便利方法。 這個便利方法會啟動一個提出 Web 要求的工作，然後當要求返回時，它會讀取回應資料流並從該資料流擷取內容。 回應本文會以 @System.String 的形式傳回。 當工作完成時，就會提供該字串。 
