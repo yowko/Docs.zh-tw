@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 99768c4b486dd6e8a25af22ab187c673c548ece9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)

@@ -33,7 +33,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: acb554a757886d1924fa7ef69814b98b3b440871
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)

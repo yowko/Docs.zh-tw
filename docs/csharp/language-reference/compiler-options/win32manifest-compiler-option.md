@@ -35,7 +35,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: bb28bf28c3d8a426322e1c1795941de7e9aa4bf6
 ms.openlocfilehash: fd8c0a9a398c8f8d6c589ffcf0426a375a82a6a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (C# 編譯器選項)

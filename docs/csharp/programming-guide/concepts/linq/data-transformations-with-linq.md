@@ -41,7 +41,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: b97d55045a999f3714a5af41fc4247e87684b6c3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)

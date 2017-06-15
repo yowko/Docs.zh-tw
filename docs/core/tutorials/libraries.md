@@ -1,5 +1,5 @@
 ---
-title: "開發程式庫與跨平台工具 |Microsoft 文件"
+title: "使用跨平台工具開發程式庫| Microsoft Docs"
 description: "使用跨平台工具開發程式庫"
 keywords: .NET, .NET Core
 author: cartermp
@@ -14,7 +14,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
 ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 
@@ -237,7 +237,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>如何測試 .NET Core 上的程式庫
 
-重要的是一定要可以跨平台進行測試。  您可以使用現成的 [xUnit](http://xunit.github.io/) 或 MSTest。  兩者都完全適用於單元測試程式庫.NET Core 上。  如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。  下列範例假設測試] 和 [來源目錄位於相同的最上層目錄。
+重要的是一定要可以跨平台進行測試。  您可以使用現成的 [xUnit](http://xunit.github.io/) 或 MSTest。  兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。  如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。  下列範例假設測試及來源目錄位於相同的最上層目錄中。
 
 > [!INFO] 這會使用一些 [.NET CLI 命令](../tools/index.md)。  如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
 
@@ -319,8 +319,8 @@ let doWork data = async {
 這類使用案例表示針對 C# 和 F#，正在存取的 API 必須具有不同的結構。  完成這項作業的常見方法將程式庫的所有邏輯都納入核心專案，而且 C# 和 F# 專案定義呼叫該核心專案的 API 層。  區段的其餘部分將使用下列名稱︰
 
 * **AwesomeLibrary.Core** - 核心專案，內含程式庫的所有邏輯
-* **AwesomeLibrary.CSharp**位在專案中使用適用於 C# 中的耗用量的公用 Api
-* **AwesomeLibrary.FSharp** -預定在 F # 中的公用 Api 的專案
+* **AwesomeLibrary.CSharp** - 專案，具有公用 API 可供在 C# 中使用
+* **AwesomeLibrary.FSharp** - 專案，具有公用 API 可供在 F# 中使用
 
 您可以在終端機中執行下列命令，以產生與本指南相同的結構︰
 

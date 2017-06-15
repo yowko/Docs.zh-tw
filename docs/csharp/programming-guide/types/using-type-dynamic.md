@@ -32,7 +32,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf8206e856a31882f5f30ee61d965ad5672f518e
 ms.openlocfilehash: 4bc2cd0e4fc165ef68338c2cda3b8c57c1bf18b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用動態類型 (C# 程式設計手冊)

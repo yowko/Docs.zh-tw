@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: dd0e67a0c01fdf0a08a2a57fa4c196e726f575bd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (入口網站頁面)
