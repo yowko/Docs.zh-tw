@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -38,18 +39,16 @@ Class LinqRegExVB
   
         ' Root folder to query, along with all subfolders.  
         ' Modify this path as necessary so that it accesses your Visual Studio folder.  
-        Dim startFolder As String = "C:\program files\Microsoft Visual Studio 9.0\"  
+        Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio 14.0\"
         ' One of the following paths may be more appropriate on your computer.  
-        'string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 9.0\";  
-        'string startFolder = @"c:\program files\Microsoft Visual Studio 10.0\";  
-        'string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 10.0\";  
+        'Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
   
         ' Take a snapshot of the file system.  
         Dim fileList As IEnumerable(Of System.IO.FileInfo) = GetFiles(startFolder)  
   
         ' Create a regular expression to find all things "Visual".  
         Dim searchTerm As System.Text.RegularExpressions.Regex =   
-            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|J#|SourceSafe|Studio)")  
+            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|Studio)")  
   
         ' Search the contents of each .htm file.  
         ' Remove the where clause to find even more matches!  
@@ -106,3 +105,4 @@ End Class
 ## <a name="see-also"></a>另請參閱  
  [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
  [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+
