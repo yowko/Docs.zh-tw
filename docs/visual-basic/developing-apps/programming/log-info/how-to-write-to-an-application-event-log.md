@@ -71,7 +71,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  將此項目加入至該 `<listeners>` 區段︰  
   
-    ```xml  
+    ```  
     <add name="EventLog"/>  
     ```  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  將此項目加入至該 `<sharedListeners>` 區段︰  
   
-    ```xml  
+    ```  
     <add name="EventLog"  
         type="System.Diagnostics.EventLogTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
          initializeData="APPLICATION_NAME"/>  
