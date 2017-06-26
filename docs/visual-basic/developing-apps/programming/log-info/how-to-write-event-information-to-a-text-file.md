@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2701f634332acdfaa81a6bf4e1d1309968366d7f
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: ac7256c333c375a0deb8ffe5c31c02fdca09f9b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/26/2017
 
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：將事件資訊寫入至文字檔 (Visual Basic)
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  將此項目加入至該 `<listeners>` 區段︰  
   
-    ```  
+    ```xml  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  將此項目加入至該 `<sharedListeners>` 區段︰  
   
-    ```  
+    ```xml  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
