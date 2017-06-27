@@ -1,39 +1,58 @@
 ---
-title: "委派 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 委派"
-  - "委派 [C#]"
+title: "委派 (C# 程式設計指南) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 caps.latest.revision: 30
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ae5591bcd17a4b7afcdcdfb36717801819f2311f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/26/2017
+
 ---
-# 委派 (C# 程式設計手冊)
-[委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單和傳回類型的方法參考。  當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回類型的方法產生關聯。  您可以透過委派執行個體叫用 \(或呼叫\) 方法。  
+# <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
+[委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
   
- 委派可以用來將方法當做引數傳遞給其他方法。  事件處理常式就是透過委派叫用的方法。  建立自訂方法後，像是 Windows 控制項這樣的類別就會在特定事件發生時呼叫您的方法。  下列範例將示範委派宣告：  
+ 委派可以用來將方法當做引數傳遞給其他方法。 事件處理常式就是透過委派叫用的方法。 建立自訂方法後，像是 Windows 控制項這樣的類別就會在特定事件發生時呼叫您的方法。 下列範例將示範委派宣告：  
   
  [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
- 來自符合委派類型之任何可存取類別或結構的任何方法都可以指派給委派。  方法可以是靜態或執行個體方法。  如此即可用程式設計的方式變更方法呼叫，也可將新的程式碼插入現有的類別中。  
+ 來自符合委派類型之任何可存取類別或結構的任何方法都可以指派給委派。 方法可以是靜態或執行個體方法。 如此即可用程式設計的方式變更方法呼叫，也可將新的程式碼插入現有的類別中。  
   
 > [!NOTE]
->  在方法多載的內容中，方法的簽章並不包括傳回值。  不過在委派的內容中，簽章卻包含傳回值。  換句話說，方法必須與委派擁有相同的傳回類型。  
+>  在方法多載的內容中，方法的簽章並不包括傳回值。 不過在委派的內容中，簽章卻包含傳回值。 換句話說，方法必須與委派擁有相同的傳回類型。  
   
- 由於委派能夠將方法當做參數來參考，因此很適合用來定義回呼方法。  例如，可以將比較兩個物件的方法參考當成引數傳遞至排序演算法。  因為比較程式碼是在獨立的程序中，因此排序演算法可以用較普通的方式撰寫。  
+ 由於委派能夠將方法當做參數來參考，因此很適合用來定義回呼方法。 例如，可以將比較兩個物件的方法參考當成引數傳遞至排序演算法。 因為比較程式碼是在獨立的程序中，因此排序演算法可以用較普通的方式撰寫。  
   
-## 委派概觀  
+## <a name="delegates-overview"></a>委派概觀  
  委派包含下列屬性：  
   
--   委派與 C\+\+ 函式指標類似，但為類型安全。  
+-   委派與 C++ 函式指標類似，但為類型安全。  
   
 -   委派允許將方法當做參數傳遞。  
   
@@ -41,35 +60,35 @@ caps.handback.revision: 30
   
 -   您可將委派鏈結在一起，例如，可在單一事件上呼叫多個方法。  
   
--   方法不需要完全符合委派類型。  如需詳細資訊，請參閱[在委派中使用變異數](../Topic/Using%20Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md)。  
+-   方法不需要完全符合委派類型。 如需詳細資訊，請參閱[在委派中使用差異](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)。  
   
--   C\# 2.0 版引進了[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)的概念，能夠將程式碼區塊當做參數傳遞，以取代個別定義的方法。  C\# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 \(Inline\) 程式碼區塊撰寫方式。  匿名方法與 Lambda 運算式 \(在特定內容中\) 都會編譯為委派類型。  現在，這些功能合稱為「匿名函式」\(Anonymous Function\)。  如需 Lambda 運算式的詳細資訊，請參閱 [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
+-   C# 2.0 版開始引進[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)的概念。此方法能夠以參數的方式傳遞程式碼區塊，取代了個別定義方法的作法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 -   [使用委派](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [When to Use Delegates Instead of Interfaces \(C\# Programming Guide\)](http://msdn.microsoft.com/zh-tw/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [何時應使用委派，而不使用介面 （C# 程式設計指南）](http://msdn.microsoft.com/en-us/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
   
--   [使用具名和匿名方法委派的比較](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [具名方法委派與匿名方法委派](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
 -   [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
--   [在委派中使用變異數](../Topic/Using%20Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md)  
+-   [在委派中使用變異數](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
--   [如何：組合委派 \(多點傳送委派\)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+-   [如何：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [如何：宣告、產生和使用委派](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+-   [如何：宣告和使用委派及將其具現化](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
   
-## C\# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## 精選書籍章節  
- [C\# 3.0 Cookbook, Third Edition: More than 250 solutions for C\# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369) 中的[Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395)  
+## <a name="featured-book-chapters"></a>精選書籍章節  
+ [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
- [Learning C\# 3.0: Master the fundamentals of C\# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) 中的[Delegates and Events](http://go.microsoft.com/fwlink/?LinkId=195418)  
+ [Delegates and Events](http://go.microsoft.com/fwlink/?LinkId=195418) in [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Delegate>   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [事件](../../../csharp/programming-guide/events/index.md)
