@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
-ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/15/2017
 
 ## <a name="how-to-target-the-net-standard"></a>如何將目標設為 .NET Standard
 
-如果您不是很熟悉 .NET Standard，請參閱 [.NET Standard 程式庫](../../standard/library.md)來深入了解。
+如果您不是很熟悉 .NET Standard，請參閱 [.NET Standard 程式庫](../../standard/net-standard.md)來深入了解。
 
 在該文中，有一張將 .NET Standard 版本對應至各種實作的表格︰
 

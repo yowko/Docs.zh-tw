@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: acb554a757886d1924fa7ef69814b98b3b440871
+ms.sourcegitcommit: 7acce171d3867512997d3c6fc3b42c4fc92dda18
+ms.openlocfilehash: f11f6ad4206fc4c83b91da2e6e7ca0be71783134
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
