@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 815f459a651adf98dfb78a8444f4b873dece8283
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 76055b9c0a611fa3688e5bada1dd8e7d426765e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 進行開發 (Visual Basic)
@@ -59,7 +60,7 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  描述 `My.Resources` 和 `My.Settings` 物件，它們提供對應用程式資源和設定的存取。  
   
  [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 描述 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 應用程式啟動/關機模型。  
+ 描述 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 應用程式啟動/關機模型。  
   
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  提供有關 `My` 功能可在不同專案型別中使用的詳細資料。  

@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>錯誤訊息 (Visual Basic)
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/17/2017
  如需有關如何針對特定錯誤進行疑難排解的詳細資訊，請參閱[Visual Basic 程式設計人員的其他資源](../../../visual-basic/getting-started/additional-resources.md)。  
   
 ## <a name="run-time-errors"></a>執行階段錯誤  
- 如果 Visual Basic 應用程式嘗試執行系統無法執行的動作，則會發生執行階段錯誤，且 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 會擲回 `Exception` 物件。 透過使用 `Throw` 陳述式，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 可以產生任何資料型別 (包括 `Exception` 物件) 的自訂錯誤。 應用程式可以透過顯示已攔截例外狀況的錯誤碼和訊息來識別錯誤。 如果未攔截到錯誤，應用程式便會結束。  
+ 如果 Visual Basic 應用程式嘗試執行系統無法執行的動作，則會發生執行階段錯誤，且 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會擲回 `Exception` 物件。 透過使用 `Throw` 陳述式，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 可以產生任何資料型別 (包括 `Exception` 物件) 的自訂錯誤。 應用程式可以透過顯示已攔截例外狀況的錯誤碼和訊息來識別錯誤。 如果未攔截到錯誤，應用程式便會結束。  
   
  程式碼可以攔截並檢查執行階段錯誤。 如果您將產生錯誤的程式碼包含在 `Try` 區塊中，您可以攔截相對應 `Catch` 區塊內的所有擲回錯誤。 如需有關如何在程式碼中於執行階段攔截錯誤並加以回應的詳細資訊，請參閱 [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   

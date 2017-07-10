@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
-「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 陳述式區塊。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中所有的可執行陳述式都必須在某個程序內。  
+「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 陳述式區塊。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中所有的可執行陳述式都必須在某個程序內。  
   
 ## <a name="calling-a-procedure"></a>呼叫程序  
  您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/15/2017
  在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
   
 ## <a name="types-of-procedures"></a>程序類型  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 使用數種程序類型：  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 使用數種程序類型：  
   
 -   [Sub 程序](./sub-procedures.md)會執行動作，但不會傳回值給呼叫程式碼。  
   

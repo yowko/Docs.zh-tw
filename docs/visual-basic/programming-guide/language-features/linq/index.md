@@ -31,18 +31,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 26d2ceac051905f5ac46b59f6fd2598e924355c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: cdfd19e9df6ec107c1195e7555ce07aea8967588
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
-本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]。  
+本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- 提供 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 提供者、運算子、查詢結構及語言功能的簡介。  
+ 提供 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者、運算子、查詢結構及語言功能的簡介。  
   
  [如何：查詢資料庫](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  提供如何使用 LINQ 連線到 SQL Server 資料庫並執行查詢的範例。  

@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
+ms.sourcegitcommit: 9fc099a7ec490250204c7d7d3ddce37b62c3165e
+ms.openlocfilehash: 0c6ce1020dbd1488f4abd51e13b887eab0068521
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](http://gutithub.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣佈推出 .NET Framework 4.7 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。
+如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣佈推出 .NET Framework 4.7 (英文)](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。
 
 <a name="Core47" />
 #### <a name="core"></a>核心

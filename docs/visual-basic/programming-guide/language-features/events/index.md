@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 59851175865939243260702470955fe0dea38495
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e4e92b4e47d7cc743233aff3aaa77232a74e789f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
-雖然您可以視覺化方式將 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 專案顯示為一系列依序執行的程序，但實際上，大部分程式都是事件驅動的，亦即執行的流程是由稱為「事件」的外部發生項目所判斷。  
+雖然您可以視覺化方式將 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 專案顯示為一系列依序執行的程序，但實際上，大部分程式都是事件驅動的，亦即執行的流程是由稱為「事件」的外部發生項目所判斷。  
   
  事件是通知應用程式發生重要事件的信號。 例如，當使用者按一下表單上的控制項時，表單可以引發 `Click` 事件，並呼叫處理事件的程序。 事件也允許個別工作進行通訊。 例如，假設您的應用程式與主應用程式個別執行排序工作。 如果使用者取消排序，則您的應用程式可以傳送取消事件，以指示排序處理序停止。  
   
 ## <a name="event-terms-and-concepts"></a>事件詞彙和概念  
- 本節描述的詞彙和概念可與 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中的事件搭配使用。  
+ 本節描述的詞彙和概念可與 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的事件搭配使用。  
   
 ### <a name="declaring-events"></a>宣告事件  
  您可以在類別、結構、模組和介面內，使用 `Event` 關鍵字宣告事件，如下列範例所示：  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/10/2017
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>引發事件  
- 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 在 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中，您可以利用 `RaiseEvent` 陳述式引發事件，如下列範例所示：  
+ 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，您可以利用 `RaiseEvent` 陳述式引發事件，如下列範例所示：  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/10/2017
 ### <a name="event-handlers"></a>事件處理常式  
  「事件處理常式」是在發生相對應事件時所呼叫的程序。 您可以使用具有相符簽章的任何有效副程式，做為事件處理常式。 不過，您無法使用函式做為事件處理常式，因為它無法將值傳回事件來源。  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 會針對結合了事件傳送者名稱、底線和事件名稱的事件處理常式使用標準命名慣例。 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會針對結合了事件傳送者名稱、底線和事件名稱的事件處理常式使用標準命名慣例。 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
   
 > [!NOTE]
 >  我們建議您在為自己的事件定義事件處理常式時，使用此命名慣例，但這並非必要；您可以使用任何有效的副程式名稱。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/10/2017
   
  雖然 `Handles` 子句是建立事件與事件處理常式之關聯的標準方式，但它只能在編譯時期建立事件與事件處理常式的關聯。  
   
- 在某些情況下 (例如，與表單或控制項相關聯的事件)，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 會自動 Stub 出空的事件處理常式，並將它關聯至事件。 例如，當您在設計模式中按兩下表單上的命令按鈕時，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 會為該命令按鈕建立空的事件處理常式和 `WithEvents` 變數，如下列程式碼所示：  
+ 在某些情況下 (例如，與表單或控制項相關聯的事件)，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會自動 Stub 出空的事件處理常式，並將它關聯至事件。 例如，當您在設計模式中按兩下表單上的命令按鈕時，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會為該命令按鈕建立空的事件處理常式和 `WithEvents` 變數，如下列程式碼所示：  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
@@ -130,6 +130,6 @@ ms.lasthandoff: 05/10/2017
 |[如何：宣告自訂事件以避免封鎖](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|示範如何定義自訂事件，以非同步方式呼叫它的事件處理常式。|  
 |[如何：宣告自訂事件以節省記憶體](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|示範如何定義只有在處理事件時才會使用記憶體的自訂事件。|  
 |[Visual Basic 中的繼承事件處理常式疑難排解](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|列出繼承元件中的事件處理常式所引發的常見問題。|  
-|[事件](../../../../standard/events/index.md)|提供 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 中事件模型的概觀。|  
+|[事件](../../../../standard/events/index.md)|提供 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中事件模型的概觀。|  
 |[在 Windows Form 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4.aspx)|描述如何使用與 Windows Form 物件相關聯的事件。|  
 |[委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|提供 Visual Basic 中的委派概觀。|
