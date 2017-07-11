@@ -18,18 +18,20 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 6237bdaf1d12743bee71633acf8cef69c21b414e
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 6a6e4c9c2bdacc01f82d3a53aec706809bcfaa5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>如何：判斷安裝的 .NET Framework 更新
+<a id="how-to-determine-which-net-framework-updates-are-installed" class="xliff"></a>
+# 如何：判斷安裝的 .NET Framework 更新
 電腦上所安裝之每一版 .NET Framework 已安裝的更新都會列在 Windows 登錄中。 您可以使用登錄編輯程式 (regedit.exe) 檢視這項資訊。  
   
- 在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。  
+ 在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
-### <a name="to-find-installed-updates"></a>尋找已安裝的更新  
+<a id="to-find-installed-updates" class="xliff"></a>
+### 尋找已安裝的更新  
   
 1.  開啟 **regedit.exe** 程式。 在 Windows 8 (含) 以上版本中，開啟 [開始] 畫面，然後輸入名稱。 在舊版 Windows 中，於 [開始] 功能表上選擇 [執行]，然後在 [開啟] 方塊中輸入 **regedit.exe**。  
   
@@ -41,7 +43,8 @@ ms.lasthandoff: 05/15/2017
   
      已安裝的更新會列於子機碼下，這些子機碼可識別套用更新的 .NET Framework 版本。 每個更新都是透過知識庫 (KB) 號碼加以識別。  
   
-## <a name="example"></a>範例  
+<a id="example" class="xliff"></a>
+## 範例  
  下列程式碼以程式設計方式判斷電腦上所安裝的 .NET Framework 更新。 您必須具有系統管理認證才能執行這個範例。  
   
  [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
@@ -49,7 +52,6 @@ ms.lasthandoff: 05/15/2017
  這個範例產生的輸出類似下面所述：  
   
 ```  
-  
 Microsoft .NET Framework 3.5 SP1  
   KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
   SP1  
@@ -73,11 +75,12 @@ Microsoft .NET Framework 4 Extended
   KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
   KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+<a id="see-also" class="xliff"></a>
+## 請參閱
+
+[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[安裝 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
 

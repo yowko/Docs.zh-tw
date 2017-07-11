@@ -21,20 +21,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: ec4594343c5a78649d7d7a4d151545612da9138b
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/20/2017
 
 ---
-# <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
+<a id="net-framework-system-requirements" class="xliff"></a>
+# .NET Framework 系統需求
 本主題中的表格提供 .NET Framework 4.5 及其點發行版本 (4.5.1 和 4.5.2)、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其點發行版本 (4.6.1 和 4.6.2) 以及 .NET Framework 4.7 的硬體、作業系統和軟體需求。 您用以開發 .NET Framework 應用程式的開發環境，則會有另一組不同的需求。
 
- 如需下載資訊和連結，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。
+ 如需下載資訊和連結，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
 
  如需 .NET Framework 版本支援週期的資訊，請參閱 [Microsoft 支援週期](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)。
 
-## <a name="hardware-requirements"></a>硬體需求
+<a id="hardware-requirements" class="xliff"></a>
+## 硬體需求
 
 |||
 |-|-|
@@ -44,11 +46,13 @@ ms.lasthandoff: 05/11/2017
 |32 位元|4.5 GB|
 |64 位元|4.5 GB|
 
-## <a name="installation-requirements"></a>安裝需求
+<a id="installation-requirements" class="xliff"></a>
+## 安裝需求
 
 - 必須有系統管理員權限才能安裝 .NET Framework。 如果您在要安裝 .NET Framework 的電腦上沒有系統管理員權限，請連絡您的網路系統管理員。
 
-## <a name="supported-client-operating-systems"></a>支援的用戶端作業系統
+<a id="supported-client-operating-systems" class="xliff"></a>
+## 支援的用戶端作業系統
 
 |作業系統|支援的版本|與作業系統一起預先安裝|可個別安裝|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -58,7 +62,7 @@ ms.lasthandoff: 05/11/2017
 |Windows 10|32 位元和 64 位元|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
 |[!INCLUDE[win81](../../../includes/win81-md.md)]|32 位元、64 位元和 ARM|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |[!INCLUDE[win8](../../../includes/win8-md.md)]|32 位元、64 位元和 ARM|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-|Windows 7 SP1|32 位元和 64 位元|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|
+|Windows 7 SP1|32 位元和 64 位元|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |Windows Vista SP2|32 位元和 64 位元|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
 |Windows XP|32 位元和 64 位元|--|.NET Framework 4|
 
@@ -74,7 +78,8 @@ ms.lasthandoff: 05/11/2017
 
 - 在 64 位元作業系統上，.NET Framework 同時支援 WOW64 (在 64 位元電腦上進行 32 位元處理) 和原生 64 位元處理。
 
-## <a name="supported-server-operating-systems"></a>支援的伺服器作業系統
+<a id="supported-server-operating-systems" class="xliff"></a>
+## 支援的伺服器作業系統
 
 |作業系統|支援的版本|與作業系統一起預先安裝|可個別安裝|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -96,7 +101,9 @@ ms.lasthandoff: 05/11/2017
 
 - 在 64 位元作業系統上，.NET Framework 同時支援 WOW64 (在 64 位元電腦上進行 32 位元處理) 和原生 64 位元處理。
 
-## <a name="see-also"></a>另請參閱
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
+<a id="see-also" class="xliff"></a>
+## 另請參閱
+ [安裝指南](../../../docs/framework/install/index.md)   
  [快速入門](../../../docs/framework/get-started/index.md)   
- [疑難排解](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+ [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+

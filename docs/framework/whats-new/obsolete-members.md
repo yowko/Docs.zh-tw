@@ -19,13 +19,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: 3a6101e6e2c99ff8321e90dd616230636753d844
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d7f9c49fbe771e7ac7a5f346129e04c3b4932e3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
+<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
+# .NET Framework 中過時的成員
 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] \(包括其點版本，例如 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) 以及 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \(包括其點版本\) 中過時的類型成員，並依組件分組。 請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。 本主題不會列出過時的類型成員。 如需過時的類型清單，請參閱[過時的類型](../../../docs/framework/whats-new/obsolete-types.md)。  
   
 -   [系統組件中過時的成員](#SystemMembers)  
@@ -95,11 +96,13 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-## <a name="obsolete-members-in-system-assemblies"></a>系統組件中過時的成員  
+<a id="obsolete-members-in-system-assemblies" class="xliff"></a>
+## 系統組件中過時的成員  
  下表列出系統組件中過時的成員。 這些組件是用於以 .NET Framework 為目標的一般用途應用程式開發。  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>組件：mscorlib.dll  
+<a id="assembly-mscorlibdll" class="xliff"></a>
+### 組件：mscorlib.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -111,9 +114,9 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.AppendPrivatePath%2A>|<xref:System.AppDomain.AppendPrivatePath%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 的用法。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ClearPrivatePath%2A>|<xref:System.AppDomain.ClearPrivatePath%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 的用法。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ClearShadowCopyPath%2A>|<xref:System.AppDomain.ClearShadowCopyPath%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName> 的用法。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstance%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.CreateInstance%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceAndUnwrap%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceFrom%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstance%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.CreateInstance%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceAndUnwrap%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceFrom%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 多載。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.CreateInstanceFromAndUnwrap%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.CreateInstanceFromAndUnwrap%2A?displayProperty=fullName> 多載。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.Security.Policy.Evidence%29>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.Security.Policy.Evidence%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%29>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|  
@@ -123,23 +126,23 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.Policy.Evidence%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Boolean%29>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.Policy.Evidence%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Boolean%2CSystem.Collections.Generic.IEnumerable%7BSystem.Reflection.Emit.CustomAttributeBuilder%7D%29>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.DefineDynamicAssembly%28System.Reflection.AssemblyName%2CSystem.Reflection.Emit.AssemblyBuilderAccess%2CSystem.String%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%2CSystem.Security.PermissionSet%29>|組件層級宣告式安全性已過期，CLR 預設不再強制使用。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|[\], Byte\<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 多載。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.ExecuteAssemblyByName%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.String%5B%5D%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName> 多載。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.GetCurrentThreadId%2A>|<xref:System.AppDomain.GetCurrentThreadId%2A> 已被取代，因為當 Managed 執行緒在 Fiber (也稱為輕量型執行緒) 上執行時，它無法提供固定識別碼。 若要取得 Managed 執行緒的穩定識別碼，請使用                                          <xref:System.Threading.Thread.ManagedThreadId%2A?displayProperty=fullName> 屬性。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.Load%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.Load%2A?displayProperty=fullName> 多載。|  
-|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.Load%28System.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.Load%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.Load%28System.Reflection.AssemblyName%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.Load%2A?displayProperty=fullName> 多載。|  
+|<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.Load%28System.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                           <xref:System.AppDomain.Load%2A?displayProperty=fullName> 多載。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.Load%28System.String%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.AppDomain.Load%2A?displayProperty=fullName> 多載。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetAppDomainPolicy%2A>|<xref:System.AppDomain> 原則層級已經過時，將在未來的 .NET Framework 版本中移除。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetCachePath%2A>|<xref:System.AppDomain.SetCachePath%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.CachePath%2A?displayProperty=fullName> 的用法。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetDynamicBase%2A>|<xref:System.AppDomain.SetDynamicBase%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.DynamicBase%2A?displayProperty=fullName> 的用法。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetShadowCopyFiles%2A>|<xref:System.AppDomain.SetShadowCopyFiles%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=fullName> 的用法。|  
 |<xref:System.AppDomain?displayProperty=fullName>|<xref:System.AppDomain.SetShadowCopyPath%2A>|<xref:System.AppDomain.SetShadowCopyPath%2A> 已被取代。 請改為查看                                          <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName> 的用法。|  
-|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%28System.IFormatProvider%29>|不再使用 `provider` 引數。 請使用                                          <xref:System.Enum.ToString?displayProperty=fullName>。|  
-|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%28System.String%2CSystem.IFormatProvider%29>|不再使用 `provider` 引數。 請使用                                          <xref:System.Enum.ToString?displayProperty=fullName>。|  
+|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString(System.IFormatProvider)>|不再使用 `provider` 引數。 請使用                                          <xref:System.Enum.ToString%2A?displayProperty=fullName>。|  
+|<xref:System.Enum?displayProperty=fullName>|<xref:System.Enum.ToString%2A>|不再使用 `provider` 引數。 請使用                                          <xref:System.Enum.ToString%2A?displayProperty=fullName>。|  
 |<xref:System.LoaderOptimization?displayProperty=fullName>|<xref:System.LoaderOptimization>|這個方法已被取代。 請改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>。|  
 |<xref:System.LoaderOptimization?displayProperty=fullName>|<xref:System.LoaderOptimization>|這個方法已被取代。 請改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>。|  
 |<xref:System.Collections.Hashtable?displayProperty=fullName>|<xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|請改用 <xref:System.Collections.Hashtable.%23ctor%28System.Collections.IDictionary%2CSystem.Collections.IEqualityComparer%29?displayProperty=fullName>。|  
@@ -265,7 +268,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|請改用                                          <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName> 屬性。|  
   
 <a name="PresentationCore"></a>   
-### <a name="assembly-presentationcoredll"></a>組件：PresentationCore.dll  
+<a id="assembly-presentationcoredll" class="xliff"></a>
+### 組件：PresentationCore.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -300,7 +304,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|點陣圖效果已被取代而不再有效。 請考慮                                          在適當的情況下改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName>。|  
   
 <a name="PresFW"></a>   
-### <a name="assembly-presentationframeworkdll"></a>組件：PresentationFramework.dll  
+<a id="assembly-presentationframeworkdll" class="xliff"></a>
+### 組件：PresentationFramework.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -310,7 +315,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|取代成                                          <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>。|  
   
 <a name="Act"></a>   
-### <a name="assembly-systemactivitiesdll"></a>組件：System.Activities.dll  
+<a id="assembly-systemactivitiesdll" class="xliff"></a>
+### 組件：System.Activities.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -318,22 +324,24 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個建構函式。 請改用                                          <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> 或                                          <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>。|  
   
 <a name="ActPres"></a>   
-### <a name="assembly-systemactivitiespresentationdll"></a>組件：System.Activities.Presentation.dll  
+<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>
+### 組件：System.Activities.Presentation.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用                                           <!--zz <xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Collections.Generic.IEnumerable%7BSystem.Activities.Presentation.WorkflowViewElement%7D%2CSystem.Windows.Point%29> -->   `System.Activities.Presentation.DragDropHelper.DoDragMove`。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|這個方法不支援拖曳多個項目。|  
 |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用                                          <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請考慮改用                                          <xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements%28System.Windows.DragEventArgs%2CSystem.Collections.Generic.IEnumerable%7BSystem.Activities.Presentation.WorkflowViewElement%7D%29>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItem%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用                                          <xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItems%2A>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDroppedObject%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用                                          <xref:System.Activities.Presentation.DragDropHelper.GetDroppedObjects%2A>。|  
-|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請考慮用                                           <!--zz <xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements%2A> --> `xref:System.Activities.Presentation.DragDropHelper.SetDragDropMovedViewElements` 替代。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDragDropCompletedEffects%2A>|這個方法不支援拖曳多個項目。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItem%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用 <xref:System.Activities.Presentation.DragDropHelper.GetDraggedModelItems%2A>。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.GetDroppedObject%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用 <xref:System.Activities.Presentation.DragDropHelper.GetDroppedObjects%2A>。|  
+|<xref:System.Activities.Presentation.DragDropHelper?displayProperty=fullName>|<xref:System.Activities.Presentation.DragDropHelper.SetDragDropCompletedEffects%2A>|這個方法不支援拖曳多個項目。|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsAdded%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個屬性。 請改用                                          <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsRemoved%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個屬性。 請改用                                          <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個屬性。 請改用                                          <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>。|  
   
 <a name="core"></a>   
-### <a name="assembly-systemcoredll"></a>組件：System.Core.dll  
+<a id="assembly-systemcoredll" class="xliff"></a>
+### 組件：System.Core.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -376,7 +384,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|使用這個成員會產生編譯器錯誤。<br /><br /> 請勿使用這個方法。|  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>組件：System.Data.dll  
+<a id="assembly-systemdatadll" class="xliff"></a>
+### 組件：System.Data.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -398,7 +407,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> 已被取代。 請使用                                          <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>。|  
   
 <a name="entity"></a>   
-### <a name="assembly-systemdataentitydll"></a>組件：System.Data.Entity.dll  
+<a id="assembly-systemdataentitydll" class="xliff"></a>
+### 組件：System.Data.Entity.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -408,7 +418,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|請改用                                          <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>。|  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>組件：System.Data.OracleClient.dll  
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>
+### 組件：System.Data.OracleClient.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -417,7 +428,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> 已被取代。 請使用                                          <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>。|  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>組件：System.Design.dll  
+<a id="assembly-systemdesigndll" class="xliff"></a>
+### 組件：System.Design.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -470,7 +482,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|這個方法已被取代。 請改用                                          <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>。|  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>組件：System.dll  
+<a id="assembly-systemdll" class="xliff"></a>
+### 組件：System.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -492,7 +505,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Uri?displayProperty=fullName>|<xref:System.Uri.%23ctor%28System.String%2CSystem.Boolean%29>|這個建構函式已被取代。 請使用                                          <xref:System.Uri.%23ctor%28System.String%29>。 `dontEscape` 參數已被取代，而且一律為 `false`。|  
 |<xref:System.Uri?displayProperty=fullName>|<xref:System.Uri.%23ctor%28System.Uri%2CSystem.String%2CSystem.Boolean%29>|這個建構函式已被取代。 請使用                                          <xref:System.Uri.%23ctor%28System.Uri%2CSystem.String%29>。 `dontEscape` 參數已被取代，而且一律為 `false`。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|呼叫端不應該使用                                          <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 介面，而是改為直接在                                          <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 類別上使用方法。 繼承自                                          <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
-|<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator>|呼叫端不應該使用                                          <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 介面，而是改為直接在                                          <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 類別上使用方法。 繼承自                                          <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
+|<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|呼叫端不應該使用                                          <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=fullName> 介面，而是改為直接在                                          <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 類別上使用方法。 繼承自                                          <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
 |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|呼叫端不應該使用                                          <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=fullName> 介面，而是改為直接在                                          <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 類別上使用方法。 繼承自                                          <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別仍必須實作這個介面，而且應該排除這個警告，或是同時淘汰這個方法。|  
 |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 原則已經過時，將在未來的 .NET Framework 版本中移除。 如需詳細資訊，請參閱 [.NET Framework 4 版中的安全性變更](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
 |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=fullName>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 原則已經過時，將在未來的 .NET Framework 版本中移除。 如需詳細資訊，請參閱 [.NET Framework 4 版中的安全性變更](http://go2.microsoft.com/fwlink/?LinkId=131738)。|  
@@ -582,7 +595,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個成員會產生編譯器錯誤。<br /><br /> 請使用                                          <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName> 將宣告加入                                          <xref:System.Security.Claims.ClaimsIdentity>。|  
   
 <a name="drawing"></a>   
-### <a name="assembly-systemdrawingdll"></a>組件：System.Drawing.dll  
+<a id="assembly-systemdrawingdll" class="xliff"></a>
+### 組件：System.Drawing.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -590,7 +604,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個建構函式已被取代。 請使用                                          <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>。|  
   
 <a name="messaging"></a>   
-### <a name="assembly-systemmessagingdll"></a>組件：System.Messaging.dll  
+<a id="assembly-systemmessagingdll" class="xliff"></a>
+### 組件：System.Messaging.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -598,7 +613,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|這個方法會傳回未正確實作                                          <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName> 系列方法的                                          <xref:System.Messaging.MessageEnumerator?displayProperty=fullName>。 請改用 <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>。|  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>組件：System.ServiceModel.dll  
+<a id="assembly-systemservicemodeldll" class="xliff"></a>
+### 組件：System.ServiceModel.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -610,7 +626,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|這個屬性已被取代，僅針對回溯相容性而保留。 本機電腦原則將用來判斷是否應該使用 NTLM。|  
   
 <a name="smDisc"></a>   
-### <a name="assembly-systemservicemodeldiscoverydll"></a>組件：System.ServiceModel.Discovery.dll  
+<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>
+### 組件：System.ServiceModel.Discovery.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -618,14 +635,16 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> 屬性已經過時。 請考慮使用                                          <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName> 來設定傳輸屬性。|  
   
 <a name="datavisualization"></a>   
-### <a name="assembly-systemwebdatavisualizationdll"></a>組件：System.Web.DataVisualization.dll  
+<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>
+### 組件：System.Web.DataVisualization.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> 已被取代。 請改為查看                                          <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>。|  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>組件：System.Web.dll  
+<a id="assembly-systemwebdll" class="xliff"></a>
+### 組件：System.Web.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -660,20 +679,22 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|建議的替代做法是使用                                          <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName> 屬性。 請建立                                          <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName> 並呼叫                                          <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName> 來建立                                          <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>。|  
   
 <a name="dynamicdata"></a>   
-### <a name="assembly-systemwebdynamicdatadll"></a>組件：System.Web.DynamicData.dll  
+<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>
+### 組件：System.Web.DynamicData.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|請使用資料繫結控制項 (例如                                          <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> 或                                          <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>) 上的                                          `EnablePersistedSelection` 屬性。|  
   
 <a name="extensions"></a>   
-### <a name="assembly-systemwebextensionsdll"></a>組件：System.Web.Extensions.dll  
+<a id="assembly-systemwebextensionsdll" class="xliff"></a>
+### 組件：System.Web.Extensions.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=fullName>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|請使用                                          <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>。|  
-|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|這個屬性已經過時。 請改為設定每個個別                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 上的                                          <!--zz <xref:System.Web.UI.ScriptReference.Path%2A>--> `System.Web.UI.ScriptReference.Path` 屬性。|  
-|<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|這個屬性已經過時。 請改為設定每個個別                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 上的                                          <xref:System.Web.UI.ScriptReference.Path%2A> 屬性，而不是使用                                          <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName>。|  
+|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|這個屬性已經過時。 請改為設定每個個別                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 的                                           [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 屬性。|  
+|<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|這個屬性已經過時。 請改為設定每個個別                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> 的                                          [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 屬性，而不是使用                                          <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName>。|  
 |<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|請使用                                          <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>。|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|請使用                                          <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=fullName>。|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|指令碼參考已不再需要 <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>。|  
@@ -681,7 +702,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|這個屬性已經過時。 請改用                                          <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>。|  
   
 <a name="services"></a>   
-### <a name="assembly-systemwebservicesdll"></a>組件：System.Web.Services.dll  
+<a id="assembly-systemwebservicesdll" class="xliff"></a>
+### 組件：System.Web.Services.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -689,7 +711,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|這個屬性將從未來的版本中移除。 不再強制要求 SOAP 訊息中一定要有特定標頭。|  
   
 <a name="forms"></a>   
-### <a name="assembly-systemwindowsformsdll"></a>組件：System.Windows.Forms.dll  
+<a id="assembly-systemwindowsformsdll" class="xliff"></a>
+### 組件：System.Windows.Forms.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -706,7 +729,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|這個屬性已被取代。 請改用                                          <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName> 屬性。|  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>組件：System.Xaml.dll  
+<a id="assembly-systemxamldll" class="xliff"></a>
+### 組件：System.Xaml.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -714,7 +738,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 剖析器不再使用 `expressionType` 引數。 若要指定預期的傳回型別，請使用                                          <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>。 若要指定運算式類型的自訂處理方式，請使用                                          <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>。|  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>組件：System.Xml.dll  
+<a id="assembly-systemxmldll" class="xliff"></a>
+### 組件：System.Xml.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -736,22 +761,26 @@ ms.lasthandoff: 05/22/2017
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|這個方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 參數的                                          <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName> 多載。|  
   
 <a name="MicrosoftMembers"></a>   
-## <a name="obsolete-members-in-microsoft-assemblies"></a>Microsoft 組件中過時的成員  
+<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>
+## Microsoft 組件中過時的成員  
  下表列出 Microsoft 組件中過時的成員。 這些是特殊用途的組件，包含以個別語言 (例如 Microsoft.VisualBasic.dll) 或建置系統 (例如 Microsoft.Build.Engine.dll) 為目標的組件。  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>組件：IEHost.dll 和 IEExec.exe  
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>
+### 組件：IEHost.dll 和 IEExec.exe  
  IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有類型和成員都已經過時，而且在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中不再支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 這項技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。  
   
 <a name="isymwrapper"></a>   
-### <a name="assembly-isymwrapperdll"></a>組件：ISymWrapper.dll  
+<a id="assembly-isymwrapperdll" class="xliff"></a>
+### 組件：ISymWrapper.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建議的替代做法是 <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>。                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName> 會接受匯入工具介面指標當做                                          <xref:System.IntPtr?displayProperty=fullName> 而不是                                          <xref:System.Int32?displayProperty=fullName>，因此可同時在 32 位元和 64 位元架構上運作。|  
   
 <a name="conversion"></a>   
-### <a name="assembly-microsoftbuildconversionv40dll"></a>組件：Microsoft.Build.Conversion.v4.0.dll  
+<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>
+### 組件：Microsoft.Build.Conversion.v4.0.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -761,7 +790,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|請改用無參數的                                          <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName> 方法。|  
   
 <a name="engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>組件：Microsoft.Build.Engine.dll  
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>
+### 組件：Microsoft.Build.Engine.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -769,28 +799,32 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|如果您只要傳入 .NET Framework 位置當做                                         <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>，只要變更為無參數的                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 建構函式即可。 否則，您可以在登錄或設定檔中定義自訂工具組，或將元素加入引擎的                                          <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName>。 然後，請改用                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 或                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName> 建構函式。|  
   
 <a name="BuildFW"></a>   
-### <a name="assembly-microsoftbuildframeworkdll"></a>組件：Microsoft.Build.Framework.dll  
+<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>
+### 組件：Microsoft.Build.Framework.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個成員會產生編譯器錯誤。<br /><br /> 請改用                                          <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName> 屬性。|  
   
 <a name="BuildUtil4"></a>   
-### <a name="assembly-microsoftbuildutilitiesv40dll"></a>組件：Microsoft.Build.Utilities.v4.0.dll  
+<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>
+### 組件：Microsoft.Build.Utilities.v4.0.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|請使用                                          <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName> 屬性。|  
   
 <a name="data_entity_tasks"></a>   
-### <a name="assembly-microsoftdataentitybuildtasksdll"></a>組件：Microsoft.Data.Entity.Build.Tasks.dll  
+<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>
+### 組件：Microsoft.Data.Entity.Build.Tasks.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|在 .NET Framework 4.5 中首先被取代。<br /><br /> 僅用於 3.5 版回溯相容性。|  
   
 <a name="visualbasic"></a>   
-### <a name="assembly-microsoftvisualbasicdll"></a>組件：Microsoft.VisualBasic.dll  
+<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>
+### 組件：Microsoft.VisualBasic.dll  
   
 |類型|成員|訊息|  
 |----------|------------|-------------|  
@@ -807,6 +841,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|使用這個成員會產生編譯器錯誤。<br /><br /> 請勿使用這個方法。|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 登錄機碼僅適用於 Win9x，不再受到這個 .NET Framework 版本的支援。 請改用 `PerformanceData` 登錄機碼。 這個屬性將從未來的 Framework 版本中移除。|  
   
-## <a name="see-also"></a>另請參閱  
+<a id="see-also" class="xliff"></a>
+## 另請參閱  
  [類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)   
  [過時的類型](../../../docs/framework/whats-new/obsolete-types.md)

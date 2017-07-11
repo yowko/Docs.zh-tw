@@ -16,19 +16,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4c2156087ca168bafb1b7333310066cef73f3334
+ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
+ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>風險降低︰WCF 服務和憑證驗證
+<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
+# 風險降低︰WCF 服務和憑證驗證
 .NET Framework 4.6 新增了 TLS 1.1 和 TLS 1.2 至 WCF SSL 的通訊協定預設清單。 當用戶端和伺服器電腦安裝 .NET Framework 4.6 或更新版本時，會使用 TLS 1.2 進行交涉。  
   
-## <a name="impact"></a>影響  
+<a id="impact" class="xliff"></a>
+## 影響  
  TLS 1.2 不支援 MD5 憑證驗證。 因此，如果客戶使用的 SSL 憑證使用 MD5 執行雜湊演算法，WCF 用戶端就無法連線到 WCF 服務。 如需詳細資訊，請參閱[風險降低︰WCF 服務和憑證驗證](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)。  
   
-## <a name="mitigation"></a>緩和  
+<a id="mitigation" class="xliff"></a>
+## 緩和  
  您可以執行下列其中一項動作來解決這個問題，使 WCF 用戶端可以連線到 WCF 伺服器︰  
   
 -   更新憑證為不使用 MD5 演算法。 這是建議的解決方案。  
@@ -59,11 +62,12 @@ ms.lasthandoff: 04/18/2017
     </configuration>  
     ```  
   
--   如果繫結在原始程式碼中不是以動態方式設定，請更新原始程式碼中的 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性，以使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) 或舊版的通訊協定。  
+-   如果繫結在原始程式碼中是以動態方式設定，請更新 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性，以在原始程式碼中使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) 或舊版的通訊協定。  
   
     > [!CAUTION]
     >  我們不建議採取這項因應措施，因為使用 MD5 雜湊演算法的憑證並不安全。  
   
-## <a name="see-also"></a>另請參閱  
+<a id="see-also" class="xliff"></a>
+## 另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 
