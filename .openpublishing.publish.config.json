@@ -6,7 +6,7 @@
       "docset_name": "core-docs",
       "build_source_folder": ".",
       "build_output_subfolder": ".",
-      "locale": "fr-fr",
+      "locale": "zh-tw",
       "monikers": [
         "netframework-4.5.1",
         "netframework-4.5.2",
@@ -43,14 +43,14 @@
     }
   ],
   "notification_subscribers": [ ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.fr-fr",
+  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.zh-tw",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.fr-fr",
+      "url": "https://github.com/Microsoft/templates.docs.msft.zh-tw",
       "branch": "master"
     },
     {
