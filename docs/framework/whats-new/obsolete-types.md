@@ -25,7 +25,8 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
+# .NET Framework 中過時的類型
+<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
 <a name="introduction"></a> 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](../../../docs/framework/whats-new/obsolete-members.md)。  
   
 -   [系統組件中的過時類型](#obsolete_types_in_system_assemblies)  
@@ -81,11 +82,13 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## <a name="obsolete-types-in-system-assemblies"></a>系統組件中的過時型別  
+## 系統組件中的過時型別
+<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
  下列表格將列出已經在系統組件中宣告為過時的型別。 這些組件是用於以 .NET Framework 為目標的一般用途應用程式開發。  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>組件：mscorlib.dll  
+### 組件：mscorlib.dll
+<a id="assembly-mscorlibdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -150,7 +153,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="Core"></a>   
-### <a name="assembly-systemcoredll"></a>組件：System.Core.dll  
+### 組件：System.Core.dll
+<a id="assembly-systemcoredll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -159,7 +163,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>組件：System.Data.dll  
+### 組件：System.Data.dll
+<a id="assembly-systemdatadll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -171,7 +176,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>組件：System.Data.OracleClient.dll  
+### 組件：System.Data.OracleClient.dll
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -187,7 +193,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>組件：System.Design.dll  
+### 組件：System.Design.dll
+<a id="assembly-systemdesigndll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -209,7 +216,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>組件：System.dll  
+### 組件：System.dll
+<a id="assembly-systemdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -224,7 +232,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>組件：System.EnterpriseServices.dll  
+### 組件：System.EnterpriseServices.dll
+<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -233,7 +242,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="net"></a>   
-### <a name="assembly-systemnetdll"></a>組件：System.Net.dll  
+### 組件：System.Net.dll
+<a id="assembly-systemnetdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -250,7 +260,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>組件：System.ServiceModel.dll  
+### 組件：System.ServiceModel.dll
+<a id="assembly-systemservicemodeldll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -266,7 +277,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>組件：System.Web.dll  
+### 組件：System.Web.dll
+<a id="assembly-systemwebdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -287,7 +299,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>組件：System.Web.Mobile.dll  
+### 組件：System.Web.Mobile.dll
+<a id="assembly-systemwebmobiledll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -487,7 +500,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="workflow_activities"></a>   
-### <a name="assembly-systemworkflowactivitiesdll"></a>組件：System.Workflow.Activities.dll  
+### 組件：System.Workflow.Activities.dll
+<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -500,7 +514,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>組件：System.Workflow.ComponentModel.dll  
+### 組件：System.Workflow.ComponentModel.dll
+<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -518,7 +533,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### <a name="assembly-systemworkflowruntimedll"></a>組件：System.Workflow.Runtime.dll  
+### 組件：System.Workflow.Runtime.dll
+<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------| 
@@ -533,7 +549,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="workflowservices"></a>   
-### <a name="assembly-systemworkflowservicesdll"></a>組件：System.WorkflowServices.dll  
+### 組件：System.WorkflowServices.dll
+<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -562,7 +579,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>組件：System.Xaml.dll  
+### 組件：System.Xaml.dll
+<a id="assembly-systemxamldll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -571,7 +589,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>組件：System.Xml.dll  
+### 組件：System.Xml.dll
+<a id="assembly-systemxmldll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -584,7 +603,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="WindowsBase"></a>   
-### <a name="assembly-windowsbasedll"></a>組件：WindowsBase.dll  
+### 組件：WindowsBase.dll
+<a id="assembly-windowsbasedll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -593,17 +613,20 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## <a name="obsolete-types-in-microsoft-assemblies"></a>Microsoft 組件中的過時型別  
+## Microsoft 組件中的過時型別
+<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
  下列章節將列出 Microsoft 組件中的過時型別。 這些組件是特殊用途的組件，例如以個別語言 (例如 Microsoft.JScript.dll 或 Microsoft.VisualC.dll) 為目標的組件。  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>組件：IEHost.dll 和 IEExec.exe  
+### 組件：IEHost.dll 和 IEExec.exe
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
  IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有型別和成員都已經過時，而且 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中不再支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 建議的替代方案包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。  
   
  [回到頁首](#introduction)  
   
 <a name="Engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>組件：Microsoft.Build.Engine.dll  
+### 組件：Microsoft.Build.Engine.dll
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -613,7 +636,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="jscript"></a>   
-### <a name="assembly-microsoftjscriptdll"></a>組件：Microsoft.JScript.dll  
+### 組件：Microsoft.JScript.dll
+<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -639,7 +663,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="VBCompat"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件：Microsoft.VisualBasic.Compatibility.dll  
+### 組件：Microsoft.VisualBasic.Compatibility.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -714,7 +739,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="VBCompatData"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>組件：Microsoft.VisualBasic.Compatibility.Data.dll  
+### 組件：Microsoft.VisualBasic.Compatibility.Data.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -771,7 +797,8 @@ ms.lasthandoff: 05/22/2017
  [回到頁首](#introduction)  
   
 <a name="visualc"></a>   
-### <a name="assembly-microsoftvisualcdll"></a>組件：Microsoft.VisualC.dll  
+### 組件：Microsoft.VisualC.dll
+<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
   
 |類型|訊息|  
 |----------|-------------|  
@@ -786,7 +813,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [類別庫中的過時功能](../../../docs/framework/whats-new/whats-obsolete.md)   
  [過時的成員](../../../docs/framework/whats-new/obsolete-members.md)
 
