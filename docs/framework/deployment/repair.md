@@ -1,5 +1,5 @@
 ---
-title: "修復 .NET Framework"
+title: "修復 .NET Framework | Microsoft Docs"
 description: "了解如何修復 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -10,14 +10,16 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cdb1d5-c5g8-8af9-93e8-5f478de07ff7
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: 5ad2b51bff437de49cc0e3c9e20d33702da867e1
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 28ceca84493cbc92a5a7f91c2c1c8eb3d0f8e6b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="repair-the-net-framework"></a>修復 .NET Framework
+<a id="repair-the-net-framework" class="xliff"></a>
+
+# 修復 .NET Framework
 
 在某些情況下，您的 .NET Framework 安裝可能會受損而需要修復。 如果應用程式在您嘗試啟動它時立即當機，或您無法安裝較新的 .NET Framework 版本時，就可能是這種情況。
 

@@ -1,5 +1,5 @@
 ---
-title: "在 Windows 10 上安裝 .NET Framework"
+title: "在 Windows 10 上安裝 .NET Framework | Microsoft Docs"
 description: "了解如何在 Windows 10 上安裝 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,33 +9,41 @@ ms.prod: .net-framework-4.6
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: c98f9aa88b40cce7787e11633daf7a374796f90c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 0c43b98fb805a4e0d803de283392b053b5babb0c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="installing-the-net-framework-on-windows-10"></a>在 Windows 10 上安裝 .NET Framework
+<a id="install-the-net-framework-on-windows-10" class="xliff"></a>
+
+# 在 Windows 10 上安裝 .NET Framework
 
 您可能需要 .NET Framework，才能在 Windows 10 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
 
-## <a name="net-framework-462"></a>.NET Framework 4.6.2
+<a id="net-framework-462" class="xliff"></a>
+
+## .NET Framework 4.6.2
 
 .NET Framework 4.6.2 隨附於「Windows 10 年度更新」。 
 
-如果您使用較舊的 Windows 10 版本，將必須升級至 [Windows 10 年度更新](https://www.microsoft.com/software-download/windows10)，才能取得 .NET Framework 4.6.2。 
+如果您使用較舊的 Windows 10 版本，將必須升級至 [Windows 10 年度更新](https://www.microsoft.com/software-download/windows10)，才能取得 .NET Framework 4.6.2。
 
 .NET Framework 4.6.2 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+<a id="net-framework-35" class="xliff"></a>
 
-請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。 
+## .NET Framework 3.5
+
+請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。
 
 .NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
-## <a name="help"></a>說明
+<a id="help" class="xliff"></a>
+
+## 說明
 
 如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)。
 

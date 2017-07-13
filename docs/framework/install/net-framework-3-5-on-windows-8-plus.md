@@ -1,7 +1,7 @@
 ---
-title: "在 Windows 8、Windows 8.1 及 Windows 10 上安裝 .NET Framework 3.5 | Microsoft Docs"
+title: "針對在 Windows 8、Windows 8.1 及 Windows 10 上的 .NET Framework 3.5 安裝進行疑難排解 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 04/20/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -17,14 +17,17 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f48ef7a29e05824834395fdd9fd850a017a5f7e6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
-# <a name="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a>在 Windows 8、Windows 8.1 及 Windows 10 上安裝 .NET Framework 3.5
+
+<a id="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10" class="xliff"></a>
+
+# 在 Windows 8、Windows 8.1 及 Windows 10 上安裝 .NET Framework 3.5
 .NET Framework 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對於開發人員而言，.NET Framework 提供一個一致的程式設計模型，以便建置應用程式。 如果您使用的是 Windows 作業系統，您的電腦上可能已經安裝了 .NET Framework。 具體來說， [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會隨附於 [!INCLUDE[win8](../../../includes/win8-md.md)]、 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 會隨附於 [!INCLUDE[win81](../../../includes/win81-md.md)] ，而 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 會隨附於 Windows 10。  
   
  不過，.NET Framework 3.5 不會隨 [!INCLUDE[win8](../../../includes/win8-md.md)]、 [!INCLUDE[win81](../../../includes/win81-md.md)] 或 Windows 10 自動安裝，而必須個別啟用才能執行與其相依的應用程式。 這必須透過 Windows Update (可使用三種方法的其中一種來呼叫) 進行。 所有這些項目都需要網際網路連線：  
@@ -52,13 +55,17 @@ ms.lasthandoff: 05/11/2017
 -   由於 .NET Framework 3.5 安裝方式的複雜性，因而無法提供可與 Windows Update 分開執行的個別獨立安裝程式。 同樣地，如果所有其他方法都失敗，就必須求助於安裝媒體 (如前所述)。  
   
 <a name="OnDemand"></a>   
-## <a name="install-the-net-framework-35-on-demand"></a>視需要安裝 .NET Framework 3.5  
+<a id="install-the-net-framework-35-on-demand" class="xliff"></a>
+
+## 視需要安裝 .NET Framework 3.5  
  如果應用程式需要 .NET Framework 3.5，但電腦上找不到已啟用的這個版本，則會在安裝期間或您第一次執行應用程式時顯示下列訊息方塊。 在訊息方塊中，選擇 [ **安裝此功能** ] 啟用 .NET Framework 3.5。 這個選項需要網際網路連線。  
   
  ![在 Windows 8 上安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
   
 <a name="ControlPanel"></a>   
-## <a name="enable-the-net-framework-35-in-control-panel"></a>在控制台中啟用 .NET Framework 3.5  
+<a id="enable-the-net-framework-35-in-control-panel" class="xliff"></a>
+
+## 在控制台中啟用 .NET Framework 3.5  
  您可以透過 [控制台] 自行啟用 .NET Framework 3.5。 這個選項需要網際網路連線。  
   
 1.  按下鍵盤上的 Windows 鍵 ![Windows 標誌](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")，輸入「Windows 功能」，然後按 Enter 鍵。 這會開啟 [開啟或關閉 Windows 功能]  對話方塊。 或者，開啟 [控制台]，並按一下 [程式] 項目，然後按一下 [程式和功能] 下的 [開啟或關閉 Windows 功能]。  
@@ -71,5 +78,8 @@ ms.lasthandoff: 05/11/2017
   
  ![在 Windows 8 或 8.1 上安裝 .NET Framework](../../../docs/framework/get-started/media/clr-net35-win8.png "CLR_NET35_Win8")  
   
-## <a name="see-also"></a>另請參閱  
+<a id="see-also" class="xliff"></a>
+
+## 另請參閱  
  [安裝指南](../../../docs/framework/get-started/index.md)
+
