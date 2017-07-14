@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Tools for Docker
+title: Visual Studio Tools for Docker | Microsoft Docs
 description: "使用 Visual Studio Tools for Docker"
 keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio
 author: spboyer
@@ -11,23 +11,26 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: dd1a0dc226d6ac9af5a474da54ac14094855fe31
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="visual-studio-tools-for-docker"></a>Visual Studio Tools for Docker
+# Visual Studio Tools for Docker
+<a id="visual-studio-tools-for-docker" class="xliff"></a>
 
 [Microsoft Visual Studio 2017](https://www.visualstudio.com/) (含 [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)) 支援使用 Windows 和 Linux 容器來建置、偵錯與執行 .NET Framework 及 .NET Core Web 和主控台應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 
 - [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
 - [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
-## <a name="installation-and-setup"></a>安裝和設定
+## 安裝和設定
+<a id="installation-and-setup" class="xliff"></a>
 
 安裝含 .NET Core 工作負載的 [Microsoft Visual Studio 2017](https://www.visualstudio.com/)。 檢閱 [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker for Windows：安裝前應該知道的事項) 的資訊，並安裝 [Docker For Windows](https://docs.docker.com/docker-for-windows/install/)。
 
@@ -37,7 +40,8 @@ ms.lasthandoff: 05/01/2017
 
 ![共用磁碟機](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
-## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>建立 ASP.NET Web 應用程式並新增 Docker 支援
+## 建立 ASP.NET Web 應用程式並新增 Docker 支援
+<a id="create-an-aspnet-web-application-and-add-docker-support" class="xliff"></a>
 
 使用 Visual Studio 建立新的 ASP.NET Core Web 應用程式。 載入應用程式時，從 [專案] 功能表選取 「Add Docker Support」 (新增 Docker 支援)，或在方案總管中的專案上按一下滑鼠右鍵，選取 [新增] > [Docker Support] 「Docker 支援」。
 
@@ -75,7 +79,8 @@ services:
 
 如果您打算將映像推送至登錄，您會想要將 `user` 變更為您的 Docker Hub 使用者名稱。 例如，`spboyer/hellodockertools`，或變更為私用登錄 URL `privateregistry.domain.com/`，視您的設定而定。
 
-### <a name="debugging"></a>偵錯
+### 偵錯
+<a id="debugging" class="xliff"></a>
 
 從工具列的 [偵錯] 下拉式清單中選取 [Docker]，再使用 F5 開始偵錯應用程式。 
 
@@ -101,7 +106,8 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   4 minutes ago       Up 4 minutes        0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-### <a name="edit-and-continue"></a>編輯後繼續
+### 編輯後繼續
+<a id="edit-and-continue" class="xliff"></a>
 
 靜態檔案和/或 Razor 範本檔案 (.cshtml) 的變更會自動更新，不需要編譯步驟。 進行變更，儲存並點選瀏覽器的 [重新整理] 檢視更新。  
 
@@ -112,7 +118,8 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   10 minutes ago      Up 10 minutes       0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-### <a name="publishing-docker-images"></a>發佈 Docker 映像
+### 發佈 Docker 映像
+<a id="publishing-docker-images" class="xliff"></a>
 
 只要完成應用程式的開發和偵錯循環，Visual Studio Tools for Docker 就會協助您建立應用程式的生產環境映像。 將 [偵錯] 下拉式清單變更為 [發行] 並建置應用程式。 這項工具會產生附有 `:latest` 標記的映像，這個標記可以推送至您的私用登錄或 Docker Hub。 
 

@@ -10,33 +10,36 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 6c08f16690a8c081ac17484c6bc7a331d9041356
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
+# 在 macOS 上開始使用 .NET Core
+<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
 
 本文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
 
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](http://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 
 安裝 [.NET Core SDK (英文)](https://www.microsoft.com/net/core)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
-安裝 [Visual Studio Code (英文)](http://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝 VS Code 延伸模組，其改善 .NET Core 開發體驗。
+安裝 [Visual Studio Code (英文)](http://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
 
-藉由開啟 VS Code 來安裝 VS Code C# 延伸模組，並按下 <kbd>F1</kbd> 來開啟 VS Code 選擇區。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 VS Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="getting-started"></a>使用者入門
+## 使用者入門
+<a id="getting-started" class="xliff"></a>
 
 在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/docs 存放庫[檢視或下載來源](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號或反引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 VS Code 開啟內嵌終端機。 如果您想要在 VS Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
+啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 Visual Studio Code 開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
 
 請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，建立 *golden* 資料夾，然後開啟該資料夾。 這個資料夾是您方案的根資料夾。 執行 [`dotnet new`](../tools/dotnet-new.md) 命令，建立新方案 *golden.sln*：
 
@@ -111,7 +114,8 @@ namespace Library
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a>建立測試專案
+## 建立測試專案
+<a id="create-the-test-project" class="xliff"></a>
 
 建置程式庫的測試專案。 從 *golden* 資料夾中，建立新的測試專案︰
 
@@ -174,7 +178,8 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a>建立主控台應用程式
+## 建立主控台應用程式
+<a id="create-the-console-app" class="xliff"></a>
 
 您透過下列步驟所建立的主控台應用程式依存於您先前建立的程式庫專案，並在它執行時呼叫它的程式庫方法。 使用這種模式的開發，您會看到如何建立多個專案的可重複使用程式庫。
 
@@ -215,13 +220,14 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a>進行應用程式偵錯
+## 進行應用程式偵錯
+<a id="debug-the-application" class="xliff"></a>
 
 在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 做法是在游標位於 `WriteLine` 行上方時按下 <kbd>F9</kbd> 鍵，或在您要設定中斷點之行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
 
-開啟偵錯工具索引標籤，方法是選取 VS Code 工具列中的偵錯圖示、選取功能表列中的 [檢視] > [偵錯]，或使用鍵盤快速鍵 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
+開啟偵錯工具索引標籤，方法是選取 Visual Studio Code 工具列中的偵錯圖示、選取功能表列中的 [檢視] > [偵錯]，或使用鍵盤快速鍵 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
 
-![VS Code 偵錯工具](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code 偵錯工具](./media/using-on-macos/vscodedebugger.png)
 
 按下 [播放] 按鈕，在偵錯工具中啟動應用程式。 應用程式會開始執行，並執行至中斷點，然後停止。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確認答案是 42。
 

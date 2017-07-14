@@ -1,5 +1,5 @@
 ---
-title: "移轉到 .NET Core - 分析協力廠商相依性"
+title: "移轉到 .NET Core - 分析協力廠商相依性 | Microsoft Docs"
 description: "移轉到 .NET Core - 分析協力廠商相依性"
 keywords: ".NET、.NET Core"
 author: cartermp
@@ -9,22 +9,26 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 5b7bbc0718817365df63db4d8ca7e4cf8871abae
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>移轉到 .NET Core - 分析協力廠商相依性
+# 移轉到 .NET Core - 分析協力廠商相依性
+<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
 
 移轉程序的第一個步驟是了解您的協力廠商相依性。  您需要找出他們哪些尚未執行 .NET Core (如有)，並針對不執行 .NET Core 的開發應變計劃。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 
 本文假設您使用 Windows 和 Visual Studio，並且目前有在 .NET Framework 上執行的程式碼。
 
-## <a name="analyzing-nuget-packages"></a>分析 NuGet 封裝
+## 分析 NuGet 封裝
+<a id="analyzing-nuget-packages" class="xliff"></a>
 
 分析 NuGet 封裝的可攜性很簡單。  因為 NuGet 封裝本身是一組包含特定平台組件的資料夾，所以您只需要查看是否有包含 .NET Core 組件的資料夾即可。
 
@@ -54,7 +58,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-這些是對應 [.NET 標準程式庫](../../standard/library.md) 版本的目標 Framework Moniker (TFM) 版本，以及與 .NET Core 相容的傳統可攜式類別庫 (PCL) 設定檔。  請注意，當 `netcoreapp1.0` 相容時，是用於應用程式，不是程式庫。  雖然使用 `netcoreapp1.0` 型的程式庫沒有錯，但該程式庫可能原本只打算提供其他 `netcoreapp1.0` 應用程式使用。
+這些是對應 [.NET 標準程式庫](../../standard/net-standard.md) 版本的目標 Framework Moniker (TFM) 版本，以及與 .NET Core 相容的傳統可攜式類別庫 (PCL) 設定檔。  請注意，當 `netcoreapp1.0` 相容時，是用於應用程式，不是程式庫。  雖然使用 `netcoreapp1.0` 型的程式庫沒有錯，但該程式庫可能原本只打算提供其他 `netcoreapp1.0` 應用程式使用。
 
 還有在 .NET Core 發行前版本中使用的一些舊版 TFM 也可能是相容的：
 
@@ -73,7 +77,8 @@ dotnet5.5
 > [!NOTE]
 > 若要使用以傳統 PCL 或發行前版本 .NET Core 目標為目標的封裝，`project.json` 檔案中必須使用 `imports` 指示詞。
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 封裝相依性在 .NET Core 上不執行時該怎麼辦
+### NuGet 封裝相依性在 .NET Core 上不執行時該怎麼辦
+<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
 
 如果您依賴的 NuGet 封裝在 .NET Core 上不執行，您可以做幾件事。
 
@@ -89,11 +94,13 @@ dotnet5.5
 
 .NET 小組希望知道哪些程式庫最重要，是 .NET Core 接下來要支援的對象。 您也可以傳送電子郵件至 dotnet@microsoft.com 討論您想使用的程式庫。
 
-## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>分析不是 NuGet 封裝的相依性
+## 分析不是 NuGet 封裝的相依性
+<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
 
 您可能有不是 NuGet 封裝的相依性，例如檔案系統中的 DLL。  判斷該相依性可攜性的唯一方法，是執行 [ApiPort 工具](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)。
 
-## <a name="next-steps"></a>後續步驟
+## 後續步驟
+<a id="next-steps" class="xliff"></a>
 
 如要移轉程式庫，請參閱 [Porting to .NET Core - Libraries](libraries.md) (移轉至 .NET Core - 程式庫)。
 

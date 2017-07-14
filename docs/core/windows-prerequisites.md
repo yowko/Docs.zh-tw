@@ -4,24 +4,26 @@ description: "了解在 Windows 電腦上開發及執行 .NET Core 應用程式�
 keywords: ".NET Core, Windows, 必要條件, 相依性, Visual Studio"
 author: mairaw
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 582b7d7f00b939493cea6d8cb4055b6779118c14
+ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
+ms.openlocfilehash: 22f7acab3ffbe2d3af587f7af2bfaad204f8e259
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 06/29/2017
 
 ---
 
-# <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
+# Windows 上 .NET Core 的必要條件
+<a id="prerequisites-for-net-core-on-windows" class="xliff"></a>
 
 本文將說明您在 Windows 電腦上部署與執行 .NET Core 應用程式，以及使用 Visual Studio 來開發時，您需要哪些相依性。
 
-## <a name="supported-windows-versions"></a>支援的 Windows 版本
+## 支援的 Windows 版本
+<a id="supported-windows-versions" class="xliff"></a>
 
 下列 Windows 版本支援 .NET Core：
 
@@ -30,20 +32,22 @@ ms.lasthandoff: 04/10/2017
 * Windows 10
 * Windows Server 2008 R2 SP1 (完整伺服器或 Server Core)
 * Windows Server 2012 SP1 (完整伺服器或 Server Core)
-* Windows Server 2012 R2 SP1 (完整伺服器或 Server Core)
+* Windows Server 2012 R2 (完整伺服器或 Server Core)
 * Windows Server 2016 (完整伺服器、Server Core 或 Nano Server)
 
 如需完整的支援作業系統，請參閱 [.NET Core 版本資訊](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)。
 
-## <a name="net-core-dependencies"></a>.NET Core 的相依性
+## .NET Core 的相依性
+<a id="net-core-dependencies" class="xliff"></a>
 
-在 Windows 10 和 Windows Server 2016 之前的 Windows 版本上執行時，.NET Core 需要 Visual C++ 可轉散發套件。 如果您使用 .NET Core 安裝程式，會自動為您安裝此相依性。 不過，如果您是透過[安裝程式指令碼](./tools/dotnet-install-script.md)安裝 .NET Core 或部署獨立的 .NET Core 應用程式，則需要手動安裝 [Microsoft Visual C++ 2015 可轉散發套件 Update 3](https://www.microsoft.com/download/details.aspx?id=53840)。
+在 Windows 10 和 Windows Server 2016 之前的 Windows 版本上執行時，.NET Core 需要 Visual C++ 可轉散發套件。 如果您使用 .NET Core 安裝程式，會自動為您安裝此相依性。 不過，如果您是透過[安裝程式指令碼](./tools/dotnet-install-script.md)安裝 .NET Core 或部署獨立的 .NET Core 應用程式，則需要手動安裝 [Microsoft Visual C++ 2015 可轉散發套件 Update 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685)。
 
 > [!NOTE]
 > <em>僅適用於 Windows 7 和 Windows Server 2008 電腦：</em><br>
 > 確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 Hotfix [KB2533623](https://support.microsoft.com/help/2533623)。
 
-## <a name="prerequisites-with-visual-studio-2017"></a>使用 Visual Studio 2017 的必要條件
+## 使用 Visual Studio 2017 的必要條件
+<a id="prerequisites-with-visual-studio-2017" class="xliff"></a>
 
 您可以使用 .NET Core SDK 以使用您選擇的任何編輯器來開發 .NET Core 應用程式。 不過，如果您想要在整合式開發環境中於 Windows 上開發 .NET Core 應用程式，您可以使用 [Visual Studio 2017](#visual-studio-2017)。
 
@@ -61,3 +65,4 @@ Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Co
  * 在 [關於 Microsoft Visual Studio] 對話方塊中，版本號碼應為 15.0.26228.4 或更高版本。
 
 您可以在[版本資訊](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)中，進一步了解 Visual Studio 2017 的變更。
+

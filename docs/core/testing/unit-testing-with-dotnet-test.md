@@ -1,5 +1,5 @@
 ---
-title: "使用 dotnet test 的 .NET Core 單元測試 | Microsoft Docs"
+title: "使用 dotnet test 和 xUnit 的 .NET Core 單元測試 | Microsoft Docs"
 description: "使用 dotnet test 的 .NET Core 單元測試"
 keywords: .NET, .NET Core
 author: ardalis
@@ -10,18 +10,19 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: cc2e823be1a3d1c0267d98c95b25126bd7d048d4
+ms.sourcegitcommit: 06e1ecc181847f87df9ed3a527638008ca6857fc
+ms.openlocfilehash: b5c6d162adf363da41c4c60fdd9fe38e1d58d27a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/22/2017
 
 ---
-
-# <a name="unit-testing-in-net-core-using-dotnet-test"></a>使用 dotnet test 的 .NET Core 單元測試
+# 使用 dotnet test 和 xUnit 的 .NET Core 單元測試
+<a id="unit-testing-in-net-core-using-dotnet-test-and-xunit" class="xliff"></a>
 
 本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-### <a name="creating-the-source-project"></a>建立來源專案
+### 建立來源專案
+<a id="creating-the-source-project" class="xliff"></a>
 
 開啟 Shell 視窗。 建立名稱為 *unit-testing-using-dotnet-test* 的目錄來放置方案。 在這個新目錄中建立 *PrimeService* 目錄。 到目前為止的目錄結構如下所示：
 
@@ -47,7 +48,8 @@ namespace Prime.Services
 }
 ```
 
-### <a name="creating-the-test-project"></a>建立測試專案
+### 建立測試專案
+<a id="creating-the-test-project" class="xliff"></a>
 
 將目錄變更回 *unit-testing-using-dotnet-test* 目錄，然後建立 *PrimeService.Tests* 目錄。 目錄結構如下所示：
 
@@ -97,7 +99,8 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-## <a name="creating-the-first-test"></a>建立第一個測試
+## 建立第一個測試
+<a id="creating-the-first-test" class="xliff"></a>
 
 建置程式庫或測試之前，先在 *PrimeService.Tests* 目錄中執行 [`dotnet restore`](../tools/dotnet-restore.md)。 此命令會還原每個專案的所有必要 NuGet 套件。
 
@@ -146,7 +149,8 @@ public bool IsPrime(int candidate)
 
 在 *PrimeService.Tests* 目錄中，重新執行 `dotnet test`。 `dotnet test` 命令會依序執行 `PrimeService` 專案和 `PrimeService.Tests` 專案的建置。 建置這兩個專案之後，它將會執行此單一測試。 測試通過。
 
-### <a name="adding-more-features"></a>新增更多功能
+### 新增更多功能
+<a id="adding-more-features" class="xliff"></a>
 
 現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 `[Fact]` 屬性將這些項目新增為新測試，但很快就會單調乏味。 因此，還有其他 xUnit 屬性，可讓您撰寫類似的測試套件。  `[Theory]` 屬性代表執行相同程式碼但有不同輸入引數的測試套件。 您可以使用 `[InlineData]` 屬性來指定這些輸入值。 
  

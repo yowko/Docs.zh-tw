@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 使用者入門"
+title: ".NET Core 使用者入門 | Microsoft Docs"
 description: "尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 .NET Core 應用程式。"
 keywords: .NET, .NET Core
 author: mairaw
@@ -10,18 +10,20 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
-ms.openlocfilehash: 983a015557cdf09f660e84b32306662b924695aa
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="get-started-with-net-core"></a>.NET Core 使用者入門
+# .NET Core 使用者入門
+<a id="get-started-with-net-core" class="xliff"></a>
 
 .NET Core 可在 [Windows](#windows)、[Linux](#linux) 和 [macOS / OS X](#os-x--macos) 上執行。
 
-## <a name="windows"></a>Windows
+## Windows
+<a id="windows" class="xliff"></a>
 
 在 [Windows](https://www.microsoft.com/net/core#windows) 上安裝 .NET Core。 
 
@@ -35,7 +37,8 @@ ms.lasthandoff: 05/14/2017
 
 如需支援的 Windows 版本清單，請參閱 [Prerequisites for Windows development](windows-prerequisites.md) (Windows 開發的必要條件) 主題。 
 
-## <a name="linux"></a>Linux
+## Linux
+<a id="linux" class="xliff"></a>
 
 在您的散發/版本上安裝 .NET Core：
 
@@ -49,18 +52,19 @@ ms.lasthandoff: 05/14/2017
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
-* [Get started with VS Code using C# and .NET Core on Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) (在 Ubuntu 上使用 C# 和 .NET Core 開始使用 VS Code) - 此 [Channel 9](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://code.visualstudio.com/)，在 Ubuntu 14.04 上建立您第一個 .NET Core 主控台應用程式。
+* [在 Ubuntu 上使用 C# 和 .NET Core 開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) \(英文\)：此 [Channel 9](https://channel9.msdn.com) \(英文\) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)，在 Ubuntu 14.04 上建立您第一個 .NET Core 主控台應用程式。
 
 上列安裝連結中列出的 Linux 散發及版本都支援 .NET Core。
 
-## <a name="os-x--macos"></a>OS X / macOS
+## OS X / macOS
+<a id="os-x--macos" class="xliff"></a>
 
 安裝 .NET Core for [macOS](https://www.microsoft.com/net/core#macos)。 OS X El Capitan (10.11 版) 及 macOS Sierra (10.12 版) 支援 .NET Core。
 
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
-* [Get started with VS Code using C# and .NET Core on macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) (在 macOS 上使用 C# 和 .NET Core 開始使用 VS Code) - 此 [Channel 9](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://code.visualstudio.com/)，建立您第一個 .NET Core 主控台應用程式。 
-* [Getting started with .NET Core on macOS, using Visual Studio Code](tutorials/using-on-macos.md) (在 macOS 上開始使用 .NET Core，使用 Visual Studio Code)：這是使用 VS Code 建立 .NET Core 解決方案的教學步驟和工作流程，所用的 VS Code 包括了單元測試、協力廠商程式庫及偵錯工具的使用方法。
+* [在 macOS 上使用 C# 和 .NET Core 開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) \(英文\)：此 [Channel 9](https://channel9.msdn.com) \(英文\) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)，建立您第一個 .NET Core 主控台應用程式。 
+* [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core](tutorials/using-on-macos.md)：使用 Visual Studio Code 建立 .NET Core 解決方案的教學步驟和工作流程，其中包括單元測試、協力廠商程式庫，以及偵錯工具的使用方法。
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
 * [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](tutorials/using-on-mac-vs.md) - 本教學課程會示範如何使用 Visual Studio for Mac 建置一個簡單 .NET Core 主控台應用程式。
 * [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](tutorials/using-on-mac-vs-full-solution.md) - 本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。

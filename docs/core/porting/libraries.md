@@ -1,5 +1,5 @@
 ---
-title: "移轉到 .NET Core - 程式庫"
+title: "移轉到 .NET Core - 程式庫 | Microsoft Docs"
 description: "移轉到 .NET Core - 程式庫"
 keywords: ".NET、.NET Core"
 author: cartermp
@@ -10,28 +10,31 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 883745ca26a9c0d4bd1db805da603aa6e2c41972
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: 271720298d6432e9fed9ef757df2000c5b7d2482
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
+# 移轉到 .NET Core - 程式庫
+<a id="porting-to-net-core---libraries" class="xliff"></a>
 
 使用 .NET Core 1.0 版本時，有機會移轉現有的程式庫程式碼，讓它可以跨平台執行。 本文討論 .NET 標準程式庫、無法使用的技術、如何說明 .NET Core 1.0 上提供的較少 API、如何使用 .NET Core SDK Preview 2 隨附的工具，以及移轉程式碼的建議作法。
 
 移轉可能需要一些時間，尤其是當您有大型的程式碼基底時。 您也應該在此視需要準備採用最適合您程式碼的指引。 每個程式碼基底都不相同，因此本文嘗試以彈性的方式規範項目，但您可能會發現自己需要偏離規定的指引。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 
 本文假設您在 Windows 上使用 Visual Studio 2017 或更新版本。 舊版 Visual Studio 不提供建置 .NET Core 程式碼所需的位元。
 
 本文也假設您了解[建議移轉程序](index.md)，並已解決所有[協力廠商相依性](third-party-deps.md)問題。
 
-## <a name="targeting-the-net-standard-library"></a>以 .NET 標準程式庫為目標
+## 以 .NET 標準程式庫為目標
+<a id="targeting-the-net-standard-library" class="xliff"></a>
 
-建置 .NET Core 跨平台程式庫的最佳辦法，是以 [.NET 標準程式庫](../../standard/library.md)為目標。 .NET 標準程式庫是計劃提供所有 .NET 執行階段使用的 .NET API 正式規格。 受 .NET Core 執行階段支援。
+建置 .NET Core 跨平台程式庫的最佳辦法，是以 [.NET Standard](../../standard/net-standard.md) 為目標。 .NET 標準程式庫是計劃提供所有 .NET 執行階段使用的 .NET API 正式規格。 受 .NET Core 執行階段支援。
 
 這表示，您必須在可以使用的 API 與可以支援的平台之間作出取捨，並挑選最適合所要取捨的 .NET Standard 平台版本。
 
@@ -54,23 +57,27 @@ ms.lasthandoff: 05/01/2017
 
 建議您選擇可能的最低 .NET Standard 版本，整個專案都使用這個版本。
 
-深入了解 [.NET 平台標準程式庫](../../standard/library.md)。
+深入了解 [.NET 平台標準程式庫](../../standard/net-standard.md)。
 
-## <a name="key-technologies-not-yet-available-on-the-net-standard-or-net-core"></a>.NET Standard 或 .NET Core 尚未提供關鍵技術
+## .NET Standard 或 .NET Core 尚未提供關鍵技術
+<a id="key-technologies-not-yet-available-on-the-net-standard-or-net-core" class="xliff"></a>
 
 您使用的某些技術可能是 .NET Framework 提供，但目前 .NET Core 不提供。 下列小節各自對應其中一項技術。 可以採用的替代選項就會列出。
 
-### <a name="app-domains"></a>應用程式定義域
+### 應用程式定義域
+<a id="app-domains" class="xliff"></a>
 
 AppDomain 在 .NET Framework 上可用於不同用途。 若要隔離程式碼，建議選擇使用不同的程序及/或容器。 若要以動態方式載入組件，建議使用新的 @System.Runtime.Loader.AssemblyLoadContext 類別。
 
-### <a name="remoting"></a>遠端處理
+### 遠端處理
+<a id="remoting" class="xliff"></a>
 
 若要跨處理序通訊，可以使用處理序間通訊 (IPC) 機制替代遠端處理，例如[管道](https://docs.microsoft.com/dotnet/core/api/system.io.pipes)或[記憶體對應檔案](https://docs.microsoft.com/dotnet/core/api/system.io.memorymappedfiles.memorymappedfile)。
 
 跨電腦可以選擇使用網路型解決方案，最好是低額外負荷的純文字通訊協定，如 HTTP。 在此可以選擇 ASP.NET Core 使用的 Web 伺服器 [KestrelHttpServer](https://github.com/aspnet/KestrelHttpServer)。 也可以考慮選擇透過 [Castle.Core](https://github.com/castleproject/Core) 產生遠端 Proxy。
 
-### <a name="binary-serialization"></a>二進位序列化
+### 二進位序列化
+<a id="binary-serialization" class="xliff"></a>
 
 若要替代二進位序列化，有多種不同的序列化技術可供選擇。 您應該選擇一種適合您格式和使用量目標的技術。 熱門選項包括︰
 
@@ -81,11 +88,13 @@ AppDomain 在 .NET Framework 上可用於不同用途。 若要隔離程式碼�
 
 請參閱連結資源，以了解它們的優點，並選擇符合您需求的項目。 另有許多其他序列化格式與技術，其中有許多是開放原始碼。
 
-### <a name="sandboxes"></a>沙箱
+### 沙箱
+<a id="sandboxes" class="xliff"></a>
 
 沙箱的替代方案可以使用作業系統提供的安全性界限，例如以最少權限組執行處理序的使用者帳戶。
 
-## <a name="overview-of-projectjson"></a>`project.json` 概觀
+## `project.json` 概觀
+<a id="overview-of-projectjson" class="xliff"></a>
 
 [project.json 專案模型](../tools/project-json.md)是隨附於 .NET Core SDK 1.0 Preview 2 的專案模型。 您現在可能想要利用它的某些優勢︰
 
@@ -96,7 +105,8 @@ AppDomain 在 .NET Framework 上可用於不同用途。 若要隔離程式碼�
 
 > 雖然最終會淘汰 `project.json`，但現在仍可用來在 .NET Standard 上建置程式庫。
 
-### <a name="the-project-file-projectjson"></a>專案檔：`project.json`
+### 專案檔：`project.json`
+<a id="the-project-file-projectjson" class="xliff"></a>
 
 .NET Core 專案是由包含 `project.json` 檔案的目錄所定義。 這個檔案是各層面皆宣告的專案，如封裝相依性、編譯器設定、執行階段設定等等。
 
@@ -104,7 +114,8 @@ AppDomain 在 .NET Framework 上可用於不同用途。 若要隔離程式碼�
 
 若要深入了解 `project.json` 檔案，請參閱 [project.json 參考](../tools/project-json.md)。
 
-### <a name="the-solution-file-globaljson"></a>方案檔：`global.json`
+### 方案檔：`global.json`
+<a id="the-solution-file-globaljson" class="xliff"></a>
 
 `global.json` 檔案是選擇性檔案，以納入包含多個專案的方案。 它通常位在專案集的根目錄中。 它可用來通知組建系統可包含專案的不同子目錄。 這適合由數個專案組成的較大型系統。
 
@@ -118,7 +129,8 @@ AppDomain 在 .NET Framework 上可用於不同用途。 若要隔離程式碼�
 
 然後，將多個 `project.json` 檔案放在 `/src` 和 `/test` 自己的子資料夾內。
 
-### <a name="how-to-multitarget-with-projectjson"></a>如何使用 `project.json` 設定多目標
+### 如何使用 `project.json` 設定多目標
+<a id="how-to-multitarget-with-projectjson" class="xliff"></a>
 
 有許多程式庫設定多目標以盡可能廣伸觸角。 使用 .NET Core，設定多目標是「一等公民」，表示您可以使用單一組建輕鬆產生特定平台的組件。
 
@@ -210,7 +222,8 @@ using System.Threading.Tasks;
 
 如上所述，如果您的目標是 PCL，則必須指定編譯器了解的組建定義。 沒有編譯器可以使用的任何預設定義。
 
-### <a name="using-projectjson-in-visual-studio"></a>在 Visual Studio 中使用 `project.json`
+### 在 Visual Studio 中使用 `project.json`
+<a id="using-projectjson-in-visual-studio" class="xliff"></a>
 
 在 Visual Studio 中使用 `project.json` 有兩個選項︰
 
@@ -219,7 +232,8 @@ using System.Threading.Tasks;
 
 各有優缺點。
 
-#### <a name="when-to-pick-an-xproj-project"></a>挑選 Xproj 專案的時機
+#### 挑選 Xproj 專案的時機
+<a id="when-to-pick-an-xproj-project" class="xliff"></a>
 
 Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的各種功能，在現有的專案類型上提供兩大功能︰組建多個組件以順暢設定多目標，以及能夠直接在組建上產生 NuGet 封裝。
 
@@ -237,7 +251,8 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 3. 選取 Visual C# 下的 ".NET Core"。
 4. 選取 "Class Library (.NET Core)" 範本。 
 
-#### <a name="when-to-pick-a-pcl-project"></a>挑選 PCL 專案的時機
+#### 挑選 PCL 專案的時機
+<a id="when-to-pick-a-pcl-project" class="xliff"></a>
 
 藉由建立可攜式類別庫 (PCL)，並在 [專案組態] 對話方塊中選取 [.NET Core]，您可以在 Visual Studio 中設定使用傳統專案系統的 .NET Core 為目標。 然後，您必須在 .NET Standard 上將用作基礎的專案重新設定為目標︰
 
@@ -246,7 +261,8 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 
 如有進階的專案系統需求，這應該就是您的選擇。 請注意，如果想要透過產生特定平台組件來設定多目標，像使用 `xproj` 專案系統，您需要建立「誘導轉向」PCL，如 [How to Make Portable Class Libraries Work for You](https://blogs.msdn.microsoft.com/dsplaisted/2012/08/27/how-to-make-portable-class-libraries-work-for-you/) (如何讓可攜式類別庫為您工作) 中所述。
 
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>將 .NET Framework 程式碼重定目標為 .NET Framework 4.6.2
+## 將 .NET Framework 程式碼重定目標為 .NET Framework 4.6.2
+<a id="retargeting-your-net-framework-code-to-net-framework-462" class="xliff"></a>
 
 如果您的程式碼目標不是 .NET Framework 4.6.2，建議您重新設定目標。 這可確保當 .NET Standard 不支援現有的 API 時，您能使用最新的 API 替代項目。
 
@@ -258,13 +274,15 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 
 就是這麼容易！ 因為您的專案現在是以 .NET Framework 4.6.2 為目標，所以您可以使用該版 .NET Framework 作為基礎移轉程式碼。
 
-## <a name="determining-the-portability-of-your-code"></a>判斷程式碼的可攜性
+## 判斷程式碼的可攜性
+<a id="determining-the-portability-of-your-code" class="xliff"></a>
 
 下一個步驟是執行 API 可攜性分析器 (ApiPort)，以產生可以開始分析的可攜性報告。
 
 您必須確定您了解 [API 可攜性工具 (ApiPort)](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)，而且可以產生以 .NET Core 為目標的可攜性報告。 作法因個人需求及品味而異。 下面是幾個不同的方法，您可能會發現自己混用了各種方法，視您的程式碼結構而定。
 
-### <a name="dealing-primarily-with-the-compiler"></a>主要以編譯器處理
+### 主要以編譯器處理
+<a id="dealing-primarily-with-the-compiler" class="xliff"></a>
 
 這個方法大概最適合小型專案或不使用太多 .NET Framework API 的專案。 方法很簡單︰
 
@@ -276,7 +294,8 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 
 雖然此方法不夠有條理，但以程式碼為主的方法可以快速解決任何問題，而且可能是最適合小型專案或程式庫的方法。 只包含資料模型的專案可能是理想的選項。
 
-### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>留在 .NET Framework 直到可攜性問題解決
+### 留在 .NET Framework 直到可攜性問題解決
+<a id="staying-on-the-net-framework-until-portability-issues-are-resolved" class="xliff"></a>
 
 如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。 方法如下所示︰
 
@@ -289,7 +308,8 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 
 這個謹慎的方法比只處理編譯器錯誤更有條理，但仍相當著重在程式碼，其優點是永遠有可編譯的程式碼。 某些換個 API 無法解決的問題，其解決方式差異極大。 您可能現某些專案需要開發更完善的方案，下個方法中會加以說明。
 
-### <a name="developing-a-comprehensive-plan-of-attack"></a>開發全面的攻擊計劃
+### 開發全面的攻擊計劃
+<a id="developing-a-comprehensive-plan-of-attack" class="xliff"></a>
 
 這個方法可能最適合大型且更複雜的專案，因為可能必須重新建構程式碼或重寫特定區域才能支援 .NET Core。 方法如下所示︰
 
@@ -323,11 +343,13 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
 
 您的計劃可能涉及在對程式碼基底進行重大變更時仍要以 .NET Framework 4.6.2 為目標，讓它成為前一種方法更有條理的版本。 如何執行計劃，視程式碼基底而定。
 
-### <a name="mixing-approaches"></a>混合方法
+### 混合方法
+<a id="mixing-approaches" class="xliff"></a>
 
 您可能會根據每個專案混用上述各種方法。 您應該做對您和程式碼基底而言最有意義的事。
 
-## <a name="porting-your-tests"></a>移轉測試
+## 移轉測試
+<a id="porting-your-tests" class="xliff"></a>
 
 移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。 若要這樣做，您必須使用會建置及執行 .NET Core 測試的測試架構。 目前有三個選項︰
 
@@ -339,7 +361,8 @@ Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的�
   - [關於從 MSTest 移轉至 NUnit 的部落格文章](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 * [MSTest](https://msdn.microsoft.com/library/ms243147.aspx)
 
-## <a name="recommended-approach-to-porting"></a>建議的移轉方法
+## 建議的移轉方法
+<a id="recommended-approach-to-porting" class="xliff"></a>
 
 最後，移轉程式碼！ 最終的移轉代價主要取決於 .NET Framework 程式碼的結構方式。 以下是建議的方法，非常適合您的程式碼基底。
 

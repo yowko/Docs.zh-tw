@@ -9,18 +9,21 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 515c4d4914fd2a967b4bd9d9947d6835e678388a
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 10e565af67056dee1ea51e4949f32e1e1de54600
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
+# .NET Core 工具中變更的高階概觀
+<a id="high-level-overview-of-changes-in-the-net-core-tools" class="xliff"></a>
 
 此文件將以高階方式說明從 *project.json* 改為使用 MSBuild 和 *.csproj* 專案系統帶來的變更。 它將概述工具總分層的新方式，以及可以使用的新項目還有它們在整體狀況中的位置。 閱讀本文後，您應該會對改為使用 MSBuild 和 *.csproj* 之後，組成 .NET Core 工具之所有項目有進一步了解。 
 
-## <a name="moving-away-from-projectjson"></a>從 project.json 移開
+## 從 project.json 移開
+<a id="moving-away-from-projectjson" class="xliff"></a>
 .NET Core 的工具中最大的變更，絕對是將專案系統[從 project.json 改為使用 csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)。 命令列工具的最新版本不支援 *project.json* 檔案。 這表示它無法用來建置、執行或發佈以 project.json 為基礎的應用程式與程式庫。 若要使用此版本的工具，您必須移轉您現有的專案，或開始新的專案。 
 
 做為移動的一部分，開發用來建置 project.json 專案的自訂建置引擎會以成熟且功能完整、名稱為 [MSBuild](https://github.com/Microsoft/msbuild) 的建置引擎取代。 MSBuild 是 .NET 社群中眾所周知的引擎，因為它從該平台首次發行以來一直就是關鍵技術。 當然，因為它需要建置 .NET Core 應用程式，MSBuild 已經移植到 .NET Core，且可以在執行 .NET Core 的任何平台上使用。 .NET Core 其中一個主要承諾就是跨平台開發堆疊，而我們也以確認此移動不會中斷該承諾。
@@ -28,14 +31,15 @@ ms.lasthandoff: 03/07/2017
 > [!NOTE]
 > 如果您不熟悉 MSBuild 且希望深入了解它，您可以透過閱讀 [MSBuild 概念](https://docs.microsoft.com/visualstudio/msbuild/msbuild-concepts)一文開始。 
 
-## <a name="the-tooling-layers"></a>工具分層
+## 工具分層
+<a id="the-tooling-layers" class="xliff"></a>
 離開現有的專案系統以及轉換建置引擎，接下來很自然的問題就是這些變更是否會變更完整 .NET Core 工具生態系統的整體「分層」呢？ 有新的項目和元件嗎？
 
 讓我們開始快速複習 Preview 2 分層，如下列圖片所示︰
 
 ![Preview 2 工具高階架構](media/cli-msbuild-architecture/p2-arch.png)
 
-這些工具的分層相當簡單。 在底部我們有 .NET Core 命令列工具做為基礎。 所有其他的高階工具 (例如 Visual Studio 或 VS Code) 則依存並仰賴 CLI 來建置專案、還原相依性等。 舉例來說，這表示如果 Visual Studio 希望執行還原作業，它會呼叫 CLI 中的 `dotnet restore` 命令。 
+這些工具的分層相當簡單。 在底部我們有 .NET Core 命令列工具做為基礎。 所有其他的高階工具 (例如 Visual Studio 或 Visual Studio Code) 則依存並仰賴 CLI 來建置專案、還原相依性等。 舉例來說，這表示如果 Visual Studio 希望執行還原作業，它會呼叫 CLI 中的 `dotnet restore` 命令。 
 
 隨著移動到新的專案系統，之前的圖表有所變更： 
 
@@ -48,7 +52,8 @@ ms.lasthandoff: 03/07/2017
 
 所有工具組現在使用共用的 SDK 元件及其目標，包含 CLI。 例如，下一版 Visual Studio 將不會呼叫 `dotnet restore` 命令來還原 .NET Core 專案的相依性，它會直接使用「還原」目標。 由於這些都是 MSBuild 目標，您也可以使用原始的 MSBuild 來使用 [dotnet msbuild](dotnet-msbuild.md) 命令執行它們。 
 
-### <a name="cli-commands"></a>CLI 命令
+### CLI 命令
+<a id="cli-commands" class="xliff"></a>
 共用的 SDK 元件表示大部分現有的 CLI 命令已經重新實作為 MSBuild 工作和目標。 這對 CLI 命令和您的工具組的使用方式有什麼意義？ 
 
 從使用方式觀點來看，它不會變更您使用 CLI 的方式。 CLI 仍然具備存在於 Preview 2 版本中的核心命令：
