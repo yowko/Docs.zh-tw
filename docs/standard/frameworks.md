@@ -18,7 +18,8 @@ ms.lasthandoff: 05/11/2017
 
 ---
 
-# <a name="target-frameworks"></a>目標 Framework
+# 目標 Framework
+<a id="target-frameworks" class="xliff"></a>
 
 「架構」定義了您用來建立應用程式和程式庫的物件、方法及工具。 .NET Framework 可用來建立應用程式和程式庫，這些應用程式和程式庫主要用來在執行 Windows 作業系統的系統上執行。 .NET Core 包含一個可讓您建置在各種作業系統上執行之應用程式和程式庫的架構。
 
@@ -28,7 +29,8 @@ ms.lasthandoff: 05/11/2017
 
 當您「以某個架構為目標」或以數個架構為目標時，即已決定好要使用哪幾組 API 及這些 API 的哪些版本。 參考架構的方式有數種：依產品名稱、依完整或簡短格式架構名稱，以及依系列。
 
-## <a name="referring-to-frameworks"></a>參考架構
+## 參考架構
+<a id="referring-to-frameworks" class="xliff"></a>
 
 您可以使用數種方式來參考架構，大多數這些方式都已在 .NET Core 的文件中使用。 以 .NET Framework 4.6.2 為例，會使用下列格式：
 
@@ -53,17 +55,19 @@ ms.lasthandoff: 05/11/2017
 * `.NETFramework`
 * `net`
 
-## <a name="latest-framework-versions"></a>最新架構版本
+## 最新架構版本
+<a id="latest-framework-versions" class="xliff"></a>
 
 下表定義一組您可以使用的架構、其參考方式，以及它們所實作的 [.NET Standard 程式庫](library.md)版本。 這些架構版本是最新穩定版本。 不顯示發行前版本。
 
-| 架構             | 最新的版本 | 目標 Framework Moniker (TFM) | Compact 目標 Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
+| 架構             | 最新的版本 | Target Framework Moniker (TFM) | Compact Target Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
 | :-------------------: | :------------: | :----------------------------: | :------------------------------------: | :-------------------: | :---------: |
 | .NET Standard         | 1.6.1          | .NETStandard,Version=1.6       | netstandard1.6                         | N/A                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
 | .NET Core 應用程式 | 1.1.1          | .NETCoreApp,Version=1.1        | netcoreapp1.1                          | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
 | .NET Framework        | 4.6.2          | .NETFramework,Version=4.6.2    | net462                                 | 1.5                   | N/A |
 
-## <a name="supported-frameworks"></a>支援的架構
+## 支援的架構
+<a id="supported-frameworks" class="xliff"></a>
 
 架構通常會由簡短的目標架構 Moniker 或 *TFM* 參考。 在 .NET Standard 中，這也會一般化為 *TxM*，以允許對多個架構的單一參考。 NuGet 用戶端支援下列架構。 對等項目會顯示在括號 (`[]`) 內。
 
@@ -104,7 +108,8 @@ ms.lasthandoff: 05/11/2017
 | 通用 Windows 平台 | uap          | uap [uap10.0]                                |
 |                            |              | uap10.0 [win10] [netcore50]                  |
 
-## <a name="deprecated-frameworks"></a>已被取代的架構
+## 已被取代的架構
+<a id="deprecated-frameworks" class="xliff"></a>
 
 下列架構已被取代。 以這些架構為目標的套件應該移轉至所指出的取代項目。
 
@@ -132,7 +137,8 @@ ms.lasthandoff: 05/11/2017
 | win10                | uap10.0     |
 | winrt                | netcore45   |
 
-## <a name="precedence"></a>優先順序
+## 優先順序
+<a id="precedence" class="xliff"></a>
 
 有一些架構彼此相關且相容，但未必相等：
 
@@ -144,13 +150,15 @@ ms.lasthandoff: 05/11/2017
 | win (Windows 市集)              | winrt     |
 |                                  | winrt45   |
 
-## <a name="net-standard"></a>.NET Standard
+## .NET Standard
+<a id="net-standard" class="xliff"></a>
 
 [.NET Standard](https://github.com/dotnet/standard) 可簡化二進位相容架構之間的參考，讓單一目標架構參考其他項目的組合。 如需詳細資訊，請參閱 [.NET Standard 程式庫](library.md)主題。
 
 [NuGet 工具的取得最接近的架構工具](http://nugettoolsdev.azurewebsites.net/)會模擬 NuGet 邏輯，此邏輯可用來根據專案的架構從套件中的許多可用架構資產選取一個架構。 若要使用此工具，請輸入一個專案架構和一或多個套件架構。 選取 [送出] 按鈕。 此工具會指出您列出的套件架構是否與您提供的專案架構相容。
 
-## <a name="portable-class-libraries"></a>可攜式類別庫
+## 可攜式類別庫
+<a id="portable-class-libraries" class="xliff"></a>
 
 如需有關「可攜式類別庫」的資訊，請參閱 NuGet 文件中＜目標架構＞主題的[可攜式類別庫](https://docs.microsoft.com/nuget/schema/target-frameworks#portable-class-libraries)一節。 Stephen Cleary 已建立一個列出所支援之 PCL 的工具。 如需詳細資訊，請參閱 [.NET 中的架構設定檔 (英文)](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)。
 
