@@ -30,13 +30,15 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
 ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/08/2017
 
 ---
-# <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
+# 部署 .NET Framework 和應用程式
+<a id="deploying-the-net-framework-and-applications" class="xliff"></a>
 本文將協助您開始在應用程式上部署 .NET Framework。 大部分資訊的目標對象是開發人員、OEM 和企業系統管理員。 想要在電腦上安裝 .NET Framework 的使用者應閱讀[安裝 .NET Framework](~/docs/framework/install/index.md)。  
   
-## <a name="key-deployment-resources"></a>主要部署資源  
+## 主要部署資源
+<a id="key-deployment-resources" class="xliff"></a>  
  使用下列連結連接至其他 MSDN 主題，了解有關 .NET Framework 部署和服務的特定資訊。  
   
  **安裝和部署**  
@@ -85,7 +87,8 @@ ms.lasthandoff: 06/02/2017
   
 -   [偵測 Service Pack 和更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
   
-## <a name="features-that-simplify-deployment"></a>簡化部署的功能  
+## 簡化部署的功能
+<a id="features-that-simplify-deployment" class="xliff"></a>  
  .NET Framework 提供了一些基本功能，讓部署應用程式更為容易：  
   
 -   不受影響的應用程式。  
@@ -128,10 +131,12 @@ ms.lasthandoff: 06/02/2017
   
      識別的依據是程式碼而非使用者，而且不會出現憑證對話方塊。  
   
-## <a name="packaging-and-distributing-net-framework-applications"></a>封裝和散發 .NET Framework 應用程式  
+## 封裝和散發 .NET Framework 應用程式
+<a id="packaging-and-distributing-net-framework-applications" class="xliff"></a>  
  文件的其他章節將說明 .NET Framework 的一些封裝和部署資訊。 那些小節針對下列內容提供相關資訊：稱為[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)的自我描述單位 (不需要登錄項目)、[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md) (能確保名稱唯一性並防止名稱冒用)，以及[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md) (能處理許多與 DLL 衝突相關的問題)。 下列章節提供封裝和散發 .NET Framework 應用程式的相關資訊。  
   
-### <a name="packaging"></a>封裝  
+### 封裝
+<a id="packaging" class="xliff"></a>  
  .NET Framework 提供下列封裝應用程式的選項：  
   
 -   當做單一組件或組件集合。  
@@ -146,7 +151,8 @@ ms.lasthandoff: 06/02/2017
   
      使用這個選項時，您將會建立搭配 Windows Installer 使用的 .msi 檔，或封裝您的應用程式以搭配另一個安裝程式使用。  
   
-### <a name="distribution"></a>散發  
+### 散發
+<a id="distribution" class="xliff"></a>  
  .NET Framework 提供下列散發應用程式的選項：  
   
 -   使用 XCOPY 或 FTP。  
@@ -161,12 +167,14 @@ ms.lasthandoff: 06/02/2017
   
      Windows Installer 2.0 可以在全域組件快取和私人目錄中安裝、修復或移除 .NET Framework 組件。  
   
-### <a name="installation-location"></a>安裝位置  
+### 安裝位置
+<a id="installation-location" class="xliff"></a>  
  若要決定應用程式的組件應該部署在哪裡，使執行階段能夠找到它們，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
  安全性考量也可能影響您部署應用程式的方式。 在對 Managed 程式碼授與安全性權限時，依據的是程式碼的位置。 如果將應用程式或元件部署到信任度極低的位置 (例如網際網路)，應用程式或元件所能執行的工作則會受限。 如需部署和安全性考量的詳細資訊，請參閱[程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)。  
   
-## <a name="related-topics"></a>相關主題  
+## 相關主題
+<a id="related-topics" class="xliff"></a>  
   
 |標題|描述|  
 |-----------|-----------------|  
@@ -181,6 +189,7 @@ ms.lasthandoff: 06/02/2017
 |[部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)|描述如何交付及安裝 Interop 應用程式，這類應用程式通常包含 .NET Framework 用戶端組件、代表各種不同 COM 類型程式庫的一或多個 Interop 組件，以及一或多個已註冊的 COM 元件。|  
 |[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何以無訊息模式啟動並追蹤 .NET Framework 安裝程序，並同時顯示您自己的安裝進度檢視。|  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [開發指南](../../../docs/framework/development-guide.md)
 

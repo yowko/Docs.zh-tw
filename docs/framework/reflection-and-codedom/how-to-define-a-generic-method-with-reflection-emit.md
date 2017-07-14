@@ -22,10 +22,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: f69e3d0959412ccedd6e1926832533371185acd5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/06/2017
 
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：使用反映發出定義泛型方法
+# 如何：使用反映發出定義泛型方法
+<a id="how-to-define-a-generic-method-with-reflection-emit" class="xliff"></a>
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。  
   
  第二個程序示範如何發出方法主體，以及如何使用泛型方法的類型參數建立泛型型別的執行個體並呼叫其方法。  
@@ -35,7 +36,8 @@ ms.lasthandoff: 06/02/2017
 > [!IMPORTANT]
 >  方法不是只因為屬於泛型型別並使用該類型的類型參數，而成為泛型。 方法只有在有自己的類型參數清單時，才會是泛型。 泛型方法可以出現在非泛型型別中，如本例所示。 如需泛型型別的非泛型方法範例，請參閱[如何︰使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
   
-### <a name="to-define-a-generic-method"></a>定義泛型方法  
+### 定義泛型方法
+<a id="to-define-a-generic-method" class="xliff"></a>  
   
 1.  開始之前，最好先查看使用高階語言撰寫時的泛型方法顯示方式。 下列程式碼和呼叫泛型方法的程式碼一起包含在本主題的範例程式碼中。 方法有兩個類型參數 `TInput`和`TOutput`，第二個必須是參考型別 (`class`)，必須有無參數建構函式 (`new`)，且必須實作 `ICollection(Of TInput)` (C# 為 `ICollection<TInput>`)。 此介面條件約束確保 <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=fullName> 方法可用來將項目新增至該方法所建立的 `TOutput` 集合。 方法具有一個型式參數 `input`，這是一個 `TInput` 陣列。 此方法會建立類型 `TOutput` 的集合，並將 `input` 的項目複製至集合。  
   
@@ -83,7 +85,8 @@ ms.lasthandoff: 06/02/2017
      [!code-csharp[GenericMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#14)]  [!code-vb[GenericMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#14)]  
   
 <a name="procedureSection1"></a>   
-### <a name="to-emit-the-method-body"></a>發出方法主體  
+### 發出方法主體
+<a id="to-emit-the-method-body" class="xliff"></a>  
   
 1.  取得程式碼產生器，並宣告區域變數和標籤。 宣告區域變數是使用 <xref:System.Reflection.Emit.ILGenerator.DeclareLocal%2A> 方法。 `Factory` 方法有四個區域變數︰`retVal` 保留方法傳回的新 `TOutput`，`ic` 在投射到 `ICollection(Of TInput)` 時保留 `TOutput` (C# 為`ICollection<TInput>`)，`input` 保留 `TInput` 物件的輸入陣列，而 `index` 則逐一查看陣列。 此方法也有兩個標籤，一個是進入迴圈 (`enterLoop`)，另一個用於迴圈的頂端 (`loopAgain`)，使用 <xref:System.Reflection.Emit.ILGenerator.DefineLabel%2A> 方法所定義。  
   
@@ -118,7 +121,8 @@ ms.lasthandoff: 06/02/2017
      [!code-csharp[GenericMethodHowTo#33](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#33)]  [!code-vb[GenericMethodHowTo#33](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#33)]  
   
 <a name="procedureSection2"></a>   
-### <a name="to-invoke-the-generic-method"></a>叫用泛型方法。  
+### 叫用泛型方法。
+<a id="to-invoke-the-generic-method" class="xliff"></a>  
   
 1.  `Factory` 是泛型方法定義。 為叫用它，您必須將類型指派給其泛型型別參數。 請使用 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> 方法完成此作業。 下列程式碼會建立建構泛型方法，為 `TInput` 指定 <xref:System.String>，為 `TOutput` 指定 `List(Of String)` (C# 為 `List<string>`)，並顯示代表方法的字串。  
   
@@ -134,7 +138,8 @@ ms.lasthandoff: 06/02/2017
   
 4.  您也可以從指向已儲存組件的程式呼叫發出的方法。  
   
-## <a name="example"></a>範例  
+## 範例
+<a id="example" class="xliff"></a>  
  下列程式碼範例會建立具有泛型方法 `Factory` 的非泛型型別 `DemoType`。 此方法有兩個泛型型別參數：`TInput` 指定輸入類型，而 `TOutput` 指定輸出類型。 `TOutput` 類型參數受限實作 `ICollection<TInput>` (Visual Basic 為 `ICollection(Of TInput)`)、為參考型別，且具有無參數建構函式。  
   
  方法具有一個型式參數，這是一個 `TInput` 陣列。 此方法會傳回 `TOutput` 的執行個體，包含該輸入陣列的所有項目。 `TOutput` 可以是任何實作 <xref:System.Collections.Generic.ICollection%601> 泛型介面的泛型集合類型。  
@@ -148,7 +153,8 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[GenericMethodHowTo #1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1) ] [!code-vb [GenericMethodHowTo #1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## 編譯程式碼
+<a id="compiling-the-code" class="xliff"></a>  
   
 -   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
@@ -156,6 +162,7 @@ ms.lasthandoff: 06/02/2017
   
 -   在命令列使用 csc.exe、 vbc.exe 或 cl.exe 程式碼編譯。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  <xref:System.Reflection.Emit.MethodBuilder>   
  [操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

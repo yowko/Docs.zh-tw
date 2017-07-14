@@ -26,10 +26,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 95f0a049db17d8aa2d55200c184be2b2f2ec45fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/06/2017
 
 ---
-# <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
+# .NET Framework 系統管理員部署手冊
+<a id="net-framework-deployment-guide-for-administrators" class="xliff"></a>
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
   
 > [!NOTE]
@@ -49,7 +50,8 @@ ms.lasthandoff: 06/02/2017
 [疑難排解](#troubleshooting)  
   
 <a name="the_deployment_process"></a>   
-## <a name="the-deployment-process"></a>部署程序  
+## 部署程序
+<a id="the-deployment-process" class="xliff"></a>  
  一旦您備妥提供支援的基礎結構之後，便可以用 System Center 2012 Configuration Manager 將 .NET Framework 可轉散發套件部署到網路上的電腦。 建置基礎結構包括建立和定義五個主要部分：集合、軟體套件和程式、發佈點以及部署。  
   
 -   **集合**：集合是指例如使用者、使用者群組或電腦等 Configuration Manager 資源的群組，也就是 .NET Framework 部署的目標。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的集合](http://technet.microsoft.com/library/gg682169.aspx)。  
@@ -64,7 +66,8 @@ ms.lasthandoff: 06/02/2017
 >  本主題中的程序包含建立和部署套件與程式的一般設定，不過可能無法涵蓋所有可能的設定。 如需其他 Configuration Manager 部署選項，請參閱 [Configuration Manager 文件庫](http://technet.microsoft.com/library/gg682041.aspx)。  
   
 <a name="deploying_in_a_test_environment"></a>   
-## <a name="deploying-the-net-framework"></a>部署 .NET Framework  
+## 部署 .NET Framework
+<a id="deploying-the-net-framework" class="xliff"></a>  
  您可以使用 System Center 2012 Configuration Manager 部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的無訊息安裝，也就是說使用者不會與安裝程序互動。 請依照下列步驟：  
   
 1.  [建立集合](#creating_a_collection)。  
@@ -76,7 +79,8 @@ ms.lasthandoff: 06/02/2017
 4.  [部署套件](#deploying_package)。  
   
 <a name="creating_a_collection"></a>   
-### <a name="create-a-collection"></a>建立集合  
+### 建立集合
+<a id="create-a-collection" class="xliff"></a>  
  在這個步驟中，您將選取部署套件和程式的目標電腦，並將它們組成裝置集合。 若要在 Configuration Manager 中建立集合，您可以使用直接成員資格規則 (也就是手動指定集合成員) 或查詢規則 (也就是 Configuration Manager 根據您指定的準則決定集合成員)。 如需包括查詢和直接規則的成員資格規則詳細資訊，請參閱 Configuration Manager 文件庫中的[介紹 Configuration Manager 中的集合](http://technet.microsoft.com/library/gg682177.aspx)。  
   
  若要建立集合：  
@@ -102,7 +106,8 @@ ms.lasthandoff: 06/02/2017
  如需有關集合的詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的集合](http://technet.microsoft.com/library/bb693730.aspx)。  
   
 <a name="creating_a_package"></a>   
-### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>建立 .NET Framework 可轉散發套件的套件和程式  
+### 建立 .NET Framework 可轉散發套件的套件和程式
+<a id="create-a-package-and-program-for-the-net-framework-redistributable-package" class="xliff"></a>  
  下列步驟會手動建立 .NET Framework 可轉散發套件的封裝。 套件包含指定的 .NET Framework 安裝參數，以及要從中將套件散發至目標電腦的來源位置。  
   
  若要建立封裝：  
@@ -148,7 +153,8 @@ ms.lasthandoff: 06/02/2017
  這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱 MSDN Library 中的[取得安裝套件的進度資訊](http://go.microsoft.com/fwlink/?LinkId=179606)。  
   
 <a name="select_dist_point"></a>   
-### <a name="select-a-distribution-point"></a>選取發佈點  
+### 選取發佈點
+<a id="select-a-distribution-point" class="xliff"></a>  
  若要從伺服器將套件和程式散發到用戶端電腦，您必須先將站台系統指定為發佈點，然後再將套件散發至發佈點。  
   
  利用下列步驟為您在上一節中建立的 .NET Framework 4.5 套件選取發佈點：  
@@ -172,7 +178,8 @@ ms.lasthandoff: 06/02/2017
  套件會包含 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上，請參閱 Configuration Manager 文件庫中[在 Configuration Manager 中進行內容管理的操作和維護](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)的＜監視內容＞一節。  
   
 <a name="deploying_package"></a>   
-### <a name="deploy-the-package"></a>部署套件  
+### 部署套件
+<a id="deploy-the-package" class="xliff"></a>  
  若要部署 .NET Framework 4.5 套件和程式：  
   
 1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫]。  
@@ -203,7 +210,8 @@ ms.lasthandoff: 06/02/2017
  現在套件將會部署至目標集合，而且 .NET Framework 4.5 的無訊息安裝將開始進行。 如需 .NET Framework 4.5 安裝錯誤碼的詳細資訊，請參閱本主題稍後的[傳回碼](#return_codes)一節。  
   
 <a name="resources"></a>   
-## <a name="resources"></a>資源  
+## 資源
+<a id="resources" class="xliff"></a>  
  如需有關測試和部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發套件之基礎結構的詳細資訊，請參閱下列資源。  
   
  **Active Directory、DNS、DHCP：**  
@@ -231,9 +239,11 @@ ms.lasthandoff: 06/02/2017
 -   [部署 System Center 2012 Configuration Manager 的用戶端](http://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
-## <a name="troubleshooting"></a>疑難排解  
+## 疑難排解
+<a id="troubleshooting" class="xliff"></a>  
   
-### <a name="log-file-locations"></a>記錄檔位置  
+### 記錄檔位置
+<a id="log-file-locations" class="xliff"></a>  
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝過程中會產生下列記錄檔：  
   
  %temp%\Microsoft .NET Framework 4.5*.txt   
@@ -242,7 +252,8 @@ ms.lasthandoff: 06/02/2017
  您可以使用[記錄收集工具](http://www.microsoft.com/download/details.aspx?id=12493)來收集 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 記錄檔並建立縮減檔案大小的壓縮封包檔 (.cab)。  
   
 <a name="return_codes"></a>   
-### <a name="return-codes"></a>傳回碼  
+### 傳回碼
+<a id="return-codes" class="xliff"></a>  
  下表列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發安裝程式最常見的傳回碼。 所有版本的安裝程式的傳回碼都相同。  
   
  如需詳細資訊的連結，請參閱下一節：[下載錯誤碼](#additional_error_codes)。  
@@ -257,7 +268,8 @@ ms.lasthandoff: 06/02/2017
 |5100|使用者的電腦不符合系統需求。|  
   
 <a name="additional_error_codes"></a>   
-### <a name="download-error-codes"></a>下載錯誤碼  
+### 下載錯誤碼
+<a id="download-error-codes" class="xliff"></a>  
   
 -   [背景智慧型傳送服務 (BITS) 錯誤碼](http://msdn.microsoft.com/library/aa362823.aspx)  
   
@@ -271,6 +283,7 @@ ms.lasthandoff: 06/02/2017
   
 -   [Windows Update 代理程式結果碼](http://technet.microsoft.com/library/cc720442.aspx)  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [系統需求](../../../docs/framework/get-started/system-requirements.md)

@@ -24,14 +24,15 @@ caps.latest.revision: 65
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 792ffdaefdd3379673df7789bd499eade26b0a6d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: baaf365a21661b377f8151e5d97ac16542aa2c36
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 06/08/2017
 
 ---
-# <a name="net-framework-tools"></a>.NET Framework 工具
+# .NET Framework 工具
+<a id="net-framework-tools" class="xliff"></a>
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
   
  本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝  (如需安裝資訊，請參閱 [Visual Studio 下載](http://go.microsoft.com/fwlink/?LinkID=325532))。  
@@ -43,7 +44,8 @@ ms.lasthandoff: 04/08/2017
 > [!NOTE]
 >  某些工具為 32 位元電腦或 64 位元電腦專用。 請務必執行電腦適用的工具版本。  
   
-## <a name="in-this-section"></a>本章節內容  
+## 本章節內容
+<a id="in-this-section" class="xliff"></a>  
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  從模組或資源檔中產生一個包含組件資訊清單的檔案。  
   
@@ -143,7 +145,8 @@ ms.lasthandoff: 04/08/2017
  [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  幫助您當地語系化 Windows Forms 所使用的使用者介面 (UI) 資源 (.resx 或 .resources 檔案)。 您可以解譯字串，然後調整大小、移動和隱藏控制項來容納當地語系化的字串。  
   
-## <a name="related-sections"></a>相關章節  
+## 相關章節
+<a id="related-sections" class="xliff"></a>  
  [工具](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  包括 isXPS Conformance 工具 (isXPS.exe) 和效能程式碼剖析工具這類工具。  
   

@@ -26,10 +26,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: caa06be840f0612e94742e7ea167f02b8b8d657d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
+# Mage.exe (資訊清單產生和編輯工具)
+<a id="mageexe-manifest-generation-and-editing-tool" class="xliff"></a>
 「資訊清單產生和編輯工具」(Mage.exe) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 Mage.exe 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 (包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式) 中執行。  
   
  您也可以使用 MageUI.exe 這個圖形應用程式來取代 Mage.exe。 如需詳細資訊，請參閱 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
@@ -40,13 +41,15 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-## <a name="syntax"></a>語法  
+## 語法
+<a id="syntax" class="xliff"></a>  
   
 ```  
 Mage [commands] [commandOptions]  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### 參數
+<a id="parameters" class="xliff"></a>  
  下表顯示 Mage.exe 所支援的命令。 如需這些命令所支援選項的詳細資訊，請參閱 [新的和更新的命令選項](#NewUpdate) 和 [Sign 命令選項](#Sign)。  
   
 |命令|描述|  
@@ -58,7 +61,8 @@ Mage [commands] [commandOptions]
 |**-h, -?, -Help** *[verbose]*|描述所有可用命令及其選項。 指定 `verbose` 可取得詳細的說明。|  
   
 <a name="NewUpdate"></a>   
-## <a name="new-and-update-command-options"></a>新的和更新的命令選項  
+## 新的和更新的命令選項
+<a id="new-and-update-command-options" class="xliff"></a>  
  下表顯示 `-New` 和 `-Update` 命令支援的選項。  
   
 |選項|預設值|適用於|描述|  
@@ -87,7 +91,8 @@ Mage [commands] [commandOptions]
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|應用程式資訊清單。<br /><br /> 部署資訊清單。|只有在應用程式是裝載在 Internet Explorer 內的 Windows Presentation Foundation (WPF) 應用程式，且不是獨立的可執行檔時，才使用這個旗標。 有效值為 "true" (或 "t") 和 "false" (或 "f")。<br /><br /> 若為應用程式資訊清單，會在應用程式資訊清單的 `hostInBrowser` 項目底下插入 `entryPoint` 屬性。<br /><br /> 若為部署資訊清單，會將 `install` 項目上的 `deployment` 屬性設為 false，並將部署資訊清單儲存成副檔名為 .xbap 的檔案。 這個引數與 **-Install** 引數一起指定時會產生錯誤，因為瀏覽器裝載的應用程式不能是已安裝的離線應用程式。|  
   
 <a name="Sign"></a>   
-## <a name="sign-command-options"></a>Sign 命令選項  
+## Sign 命令選項
+<a id="sign-command-options" class="xliff"></a>  
  下表顯示 `-Sign` 命令支援的選項，這些選項可以套用至所有類型的檔案。  
   
 |選項|描述|  
@@ -97,7 +102,8 @@ Mage [commands] [commandOptions]
 |**-pwd, -Password** `passwd`|以數位憑證替資訊清單簽章時所使用的密碼。 必須與 **-CertFile** 選項搭配使用。|  
 |**-t, -ToFile** `filePath`|指定已建立或已修改之檔案的輸出路徑。|  
   
-## <a name="remarks"></a>備註  
+## 備註
+<a id="remarks" class="xliff"></a>  
  Mage.exe 的所有引數都不區分大小寫。 命令和選項可以使用破折號 (-) 或正斜線 (/) 當做前置字元。  
   
  搭配 **-Sign** 命令使用的所有引數，也隨時都能搭配 **-New** 或 **-Update** 命令使用。 下列命令是相同的。  
@@ -152,7 +158,8 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />  
 ```  
   
-## <a name="examples"></a>範例  
+## 範例
+<a id="examples" class="xliff"></a>  
  下列範例會開啟 Mage (MageUI.exe) 的使用者介面。  
   
 ```  
@@ -209,7 +216,8 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
  [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)   

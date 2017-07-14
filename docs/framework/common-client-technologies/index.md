@@ -14,17 +14,19 @@ caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 25bf2fef9936a3b685ccedb479c941cb7e3f499b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 33735d01f33adc5fc2299c0a83a4208a28fc6b2d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 06/08/2017
 
 ---
-# <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework 中常見的用戶端技術
+# .NET Framework 中常見的用戶端技術
+<a id="common-client-technologies-in-the-net-framework" class="xliff"></a>
 本節描述可以在用戶端應用程式中使用的不同技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## 本章節內容
+<a id="in-this-section" class="xliff"></a>  
  [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  描述如何將操作和慣性處理器類別用於不同的 UI 架構，例如 Microsoft Windows Presentation Foundation (WPF) 或 Microsoft XNA。  
   

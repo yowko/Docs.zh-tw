@@ -33,10 +33,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 4b20c589622526fd973700ed5b8bdd6f86d9b2ff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
+# Lc.exe (授權編譯器)
+<a id="lcexe-license-compiler" class="xliff"></a>
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
   
  每當將授權控制項加入至表單時，Windows Form 設計工具便會自動產生或更新 .licx 文字檔。 專案系統會將 .licx 文字檔轉換為可支援 .NET 控制項授權的 .licenses 二進位資源，當做編譯的一部分。 接著此二進位資源將嵌入專案輸出。  
@@ -47,7 +48,8 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-## <a name="syntax"></a>語法  
+## 語法
+<a id="syntax" class="xliff"></a>  
   
 ```  
       lc /target:  
@@ -67,7 +69,8 @@ ms.lasthandoff: 06/02/2017
 |**@** file|指定回應檔 (.rsp)。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-## <a name="example"></a>範例  
+## 範例
+<a id="example" class="xliff"></a>  
   
 1.  如果您要使用名為 `HostApp.exe` 之應用程式中 `Samples.DLL` 所包含的授權控制項 `MyCompany.Samples.LicControl1`，可以建立包含下列程式碼的 `HostAppLic.txt`。  
   
@@ -93,7 +96,8 @@ ms.lasthandoff: 06/02/2017
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
-## <a name="response-file-example"></a>回應檔範例  
+## 回應檔範例
+<a id="response-file-example" class="xliff"></a>  
  下列清單顯示回應檔 `response.rsp` 的範例。 如需回應檔的詳細資訊，請參閱[回應檔](/visualstudio/msbuild/msbuild-response-files)。  
   
 ```  
@@ -109,7 +113,8 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [工具](../../../docs/framework/tools/index.md)   
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

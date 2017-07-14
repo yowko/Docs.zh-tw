@@ -1,7 +1,7 @@
 ---
 title: ".NET 架構元件"
-description: "說明主要的 .NET 架構元件，例如，.NET 標準程式庫、.NET 執行階段和工具。"
-keywords: ".NET, .NET 標準程式庫, .NET 標準, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 編譯器"
+description: "說明主要的 .NET 架構元件，例如，.NET Standard 程式庫、.NET 執行階段和工具。"
+keywords: ".NET, .NET Standard 程式庫, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 編譯器"
 author: cartermp
 ms.author: mairaw
 ms.date: 11/16/2016
@@ -32,13 +32,13 @@ ms.lasthandoff: 04/18/2017
 ## .NET Standard 程式庫
 <a id="net-standard-library" class="xliff"></a>
 
-.NET 標準程式庫是一組由 .NET 執行階段所實作的 API。
+.NET Standard 程式庫是一組由 .NET 執行階段所實作的 API。
 
 更正式的說法是，它是一個 .NET API 的規格，其構成了一組您據以編譯程式碼的制式協定。  這些協定必須具有適用於每個 .NET 執行階段的基礎實作。  這會跨不同的 .NET 執行階段啟用可攜性，如此一來，您的程式碼便能有效地「在任何地方執行」。
 
-.NET 標準程式庫也是一個建置目標 (即為 .NET 標準)。  您目前可將目標設定為 .NET 標準 1.0-1.6。  如果您的程式碼目標為某一個 .NET 標準版本，就保證其一定可在實作該版本的任何 .NET 執行階段上執行。
+.NET Standard程式庫也是一個建置目標 (即為 .NET 標準)。  您目前可將目標設定為 .NET Standard 1.0-1.6。  如果您的程式碼目標為某一個 .NET Standard版本，就保證其一定可在實作該版本的任何 .NET 執行階段上執行。
 
-若要深入了解 .NET 標準程式庫以及如何將目標設為 .NET 標準，請參閱 [.NET 標準程式庫](library.md)。
+若要深入了解.NET Standard 程式庫以及如何將目標設為 .NET Standard，請參閱 [.NET Standard 程式庫](library.md)。
 
 ## .NET 執行階段
 <a id="net-runtimes" class="xliff"></a>
@@ -48,21 +48,21 @@ Microsoft 會主動開發和維護的主要 .NET 執行階段有 3 個︰.NET Co
 ### .NET Core
 <a id="net-core" class="xliff"></a>
 
-.NET Core 是已針對伺服器工作負載最佳化的跨平台執行階段。  它會實作 .NET 標準程式庫，這表示任何目標為 .NET 標準的程式碼都可以在 .NET Core 上執行。  它是由 ASP.NET Core 和通用 Windows 平台 (UWP) 所使用的執行階段。  它是新式且高效率的，而其設計目的是為了處理大規模的伺服器與雲端工作負載。
+.NET Core 是已針對伺服器工作負載最佳化的跨平台執行階段。  它會實作 .NET Standard 程式庫，這表示任何目標為 .NET Standard 的程式碼都可以在 .NET Core 上執行。  它是由 ASP.NET Core 和通用 Windows 平台 (UWP) 所使用的執行階段。  它是新式且高效率的，而其設計目的是為了處理大規模的伺服器與雲端工作負載。
 
 若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)。
 
 ### .NET Framework
 <a id="net-framework" class="xliff"></a>
 
-.NET Framework 是自 2002年以來已存在的歷史性 .NET 執行階段。  它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。  它會實作 .NET 標準程式庫，這表示任何目標為 .NET 標準的程式碼都可以在 .NET Framework 上執行。  它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。  .NET Framework 最適合用來建置 Windows 傳統型應用程式。
+.NET Framework 是自 2002年以來已存在的歷史性 .NET 執行階段。  它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。  它會實作 .NET Standard 程式庫，這表示任何目標為 .NET Standard 的程式碼都可以在 .NET Framework 上執行。  它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。  .NET Framework 最適合用來建置 Windows 傳統型應用程式。
 
 若要深入了解 .NET Framework，請參閱 [.NET Framework 指南](../framework/index.md)。
 
 ### 適用於 Xamarin 的 Mono
 <a id="mono-for-xamarin" class="xliff"></a>
 
-Mono 是 Xamarin 應用程式所使用的執行階段。  它會實作 .NET 標準程式庫，這表示任何目標為 .NET 標準的程式碼都可以在 Xamarin 應用程式上執行。  它包含適用於 iOS、Android、Xamarin.Forms 和 Xamarin.Mac 的其他 API。  它最適合用來在 iOS 和 Android 上建置行動應用程式。
+Mono 是 Xamarin 應用程式所使用的執行階段。  它會實作 .NET Standard 程式庫，這表示任何目標為 .NET Standard的程式碼都可以在 Xamarin 應用程式上執行。  它包含適用於 iOS、Android、Xamarin.Forms 和 Xamarin.Mac 的其他 API。  它最適合用來在 iOS 和 Android 上建置行動應用程式。
 
 若要深入了解 Mono，請參閱 [Mono 文件](http://www.mono-project.com/docs/)。
 

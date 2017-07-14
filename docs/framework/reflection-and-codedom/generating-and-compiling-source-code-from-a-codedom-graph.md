@@ -38,13 +38,15 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6805c4a98c1a3f4d62984435da708a813f92dde4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/06/2017
 
 ---
-# <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>從 CodeDOM 圖表產生和編譯原始程式碼
+# 從 CodeDOM 圖表產生和編譯原始程式碼
+<a id="generating-and-compiling-source-code-from-a-codedom-graph" class="xliff"></a>
 <xref:System.CodeDom.Compiler> 命名空間提供的介面，可從 CodeDOM 物件圖形產生原始程式碼以及使用支援的編譯器管理編譯。 程式碼提供者可根據 CodeDOM 圖表以特定的程式設計語言產生原始程式碼。 衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別一般會針對提供者支援的語言，提供產生及編譯程式碼的方法。  
   
-## <a name="using-a-codedom-code-provider-to-generate-source-code"></a>使用 CodeDOM 程式碼提供者產生原始程式碼  
+## 使用 CodeDOM 程式碼提供者產生原始程式碼
+<a id="using-a-codedom-code-provider-to-generate-source-code" class="xliff"></a>  
  若要以特定語言產生原始程式碼，您需要能代表要產生的原始程式碼結構的 CodeDOM 圖表。  
   
  以下範例示範如何建立 <xref:Microsoft.CSharp.CSharpCodeProvider> 的執行個體：  
@@ -55,7 +57,8 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)] [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)] [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
-## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>使用 CodeDOM 程式碼提供者編譯組件  
+## 使用 CodeDOM 程式碼提供者編譯組件
+<a id="using-a-codedom-code-provider-to-compile-assemblies" class="xliff"></a>  
  **叫用編譯**  
   
  若要使用 CodeDom 提供者編譯組件，您必須有可以編譯器語言進行編譯的原始程式碼，或有可以產生要編譯之原始程式碼的 CodeDOM 圖表。  
@@ -90,10 +93,12 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)] [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)] [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
-## <a name="languages-with-initial-support"></a>初期支援的語言  
+## 初期支援的語言
+<a id="languages-with-initial-support" class="xliff"></a>  
  .NET Framework 提供下列語言的程式碼編譯器和程式碼產生器：C#、Visual Basic、C++ 和 JScript。 實作特定語言的程式碼產生器和程式碼編譯器，即可擴充 CodeDOM 對其他語言的支援。  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  <xref:System.CodeDom>   
  <xref:System.CodeDom.Compiler>   
  [產生和編譯動態原始程式碼](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   

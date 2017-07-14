@@ -27,16 +27,18 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 808b01ae8965de70ac7b141b049b3f6a9f7d94d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/06/2017
 
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>如何：建立公開/私密金鑰組
+# 如何：建立公開/私密金鑰組
+<a id="how-to-create-a-public-private-key-pair" class="xliff"></a>
 若要使用強式名稱簽署組件，您必須擁有公開/私密金鑰組。 這個公用和私密的密碼編譯金鑰組將在編譯期間用來建立強式名稱的組件。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 來建立金鑰組。 金鑰組檔案通常會有 .snk 副檔名。  
   
 > [!NOTE]
 >  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，C# 和 Visual Basic 專案屬性頁包含 [簽署] 索引標籤，可讓您選取現有的金鑰檔或產生新的金鑰檔，而不必使用 Sn.exe。 在 Visual C++ 中，您可以在 [屬性頁] 視窗的 [組態屬性] 區段之 [連結器] 區段的 [進階] 屬性頁中，指定現有金鑰檔的位置。 使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 屬性識別金鑰檔組，自 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 開始已過時。  
   
-### <a name="to-create-a-key-pair"></a>建立金鑰組  
+### 建立金鑰組
+<a id="to-create-a-key-pair" class="xliff"></a>  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -70,5 +72,6 @@ sn -p keypair.snk public.snk
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)] [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)] [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
-## <a name="see-also"></a>另請參閱  
+## 另請參閱
+<a id="see-also" class="xliff"></a>  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
