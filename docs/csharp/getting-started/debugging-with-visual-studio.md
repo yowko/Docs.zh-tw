@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯"
+title: "使用 Visual Studio 2017 偵錯 C# Hello World 應用程式 | Microsoft Docs"
 description: "了解如何使用 Visual Studio 2017 對以 C# 撰寫的 Hello World 應用程式進行偵錯。"
 keywords: ".NET Core, .NET Core 主控台應用程式, .NET Core 偵錯"
 author: BillWagner
@@ -11,18 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: a3ed6572d0c8f64f89f77527aa21df454b30982c
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 026158029bfc843bd6cd171933091dc9ac6d4dbe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="debugging-your-c-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯
+# 使用 Visual Studio 2017 針對您的 C# Hello World 應用程式進行偵錯
+<a id="debugging-your-c-hello-world-application-with-visual-studio-2017" class="xliff"></a>
 
 到目前為止，您已遵循[在 Visual Studio 2017 中使用 .NET Core 組置 C# Hello World 應用程式](.\with-visual-studio.md)中的步驟來建立和執行簡單的主控台應用程式。 在您撰寫並編譯應用程式之後，便可以開始測試它。 Visual Studio 包含一組完整的偵錯工具，可供您在針對應用程式進行測試和疑難排解時使用。
 
-## <a name="debugging-in-debug-mode"></a>在偵錯模式下進行偵錯
+## 在偵錯模式下進行偵錯
+<a id="debugging-in-debug-mode" class="xliff"></a>
 
 [偵錯] 和 [發行] 是 Visual Studio 其中兩個預設的組建組態。 目前的組建組態會顯示在工具列上。 下列工具列影像顯示 Visual Studio 已設定為在 [偵錯] 模式下編譯您的應用程式。
 
@@ -30,7 +32,8 @@ ms.lasthandoff: 05/03/2017
 
 您應該一律從在 [偵錯] 模式下進行程式測試開始。 [偵錯] 模式會關閉大多數的編譯器最佳化，並可在組置程序期間提供更豐富的資訊。
 
-## <a name="setting-a-breakpoint"></a>設定中斷點
+## 設定中斷點
+<a id="setting-a-breakpoint" class="xliff"></a>
 
 請在 [偵錯] 模式下執行程式並嘗試幾個偵錯功能：
 
@@ -62,7 +65,8 @@ ms.lasthandoff: 05/03/2017
 
 1. 按任意鍵以結束應用程式並結束 [偵錯] 模式。
 
-## <a name="setting-a-conditional-breakpoint"></a>設定條件中斷點
+## 設定條件中斷點
+<a id="setting-a-conditional-breakpoint" class="xliff"></a>
 
 您的程式會顯示使用者輸入的字串。 如果使用者未進行任何輸入時，會發生什麼情況？ 您可以利用有用的「條件中斷點」偵錯功能來測試此情況，以在一或多個條件成立時中斷程式執行。
 
@@ -104,7 +108,8 @@ ms.lasthandoff: 05/03/2017
 
 1. 按一下程式碼視窗左邊界中的點，或在已選取資料列的情況下選擇 [偵錯] > [切換中斷點] 功能表項目，以清除中斷點。
 
-## <a name="stepping-through-a-program"></a>逐步執行程式
+## 逐步執行程式
+<a id="stepping-through-a-program" class="xliff"></a>
 
 Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常，您會設定中斷點，然後使用此功能來依循程式流程執行您程式碼的一小部分。 由於您的程式相當小，因此您可以透過執行下列操作將整個程式執行一遍：
 
@@ -132,7 +137,8 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 
 1. 按任意鍵以關閉主控台視窗並結束 [偵錯] 模式。
 
-## <a name="building-a-release-version"></a>組置發行版本
+## 組置發行版本
+<a id="building-a-release-version" class="xliff"></a>
 
 在對應用程式偵錯組建進行測試之後，您還應該編譯和測試發行版本。 發行版本會納入編譯器最佳化，這些最佳化有時會對應用程式的行為造成負面影響。 例如，設計來提升效能的編譯器最佳化可能會在非同步或多執行緒應用程式中，建立競爭條件。
 

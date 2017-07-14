@@ -1,5 +1,5 @@
 ---
-title: "C# 中的繼承"
+title: "C# 中的繼承 | Microsoft Docs"
 description: "了解如何使用 C# 程式庫和應用程式中的繼承。"
 keywords: "繼承 (C#), 基底類別, 衍生類別, 抽象基底類別"
 author: rpetrusha
@@ -12,23 +12,27 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承 #
+# C# 和 .NET 中的繼承
+<a id="inheritance-in-c-and-net" class="xliff"></a> #
 
-## <a name="introduction"></a>簡介 ##
+## 簡介
+<a id="introduction" class="xliff"></a> ##
 
 本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
 
-## <a name="prerequisites"></a>必要條件 ##
+## 必要條件
+<a id="prerequisites" class="xliff"></a> ##
 
 本教學課程假設您已安裝 .NET Core。 如需安裝指示，請參閱[.NET Core 安裝指南 (英文)](https://www.microsoft.com/net/core)。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
-## <a name="running-the-examples"></a>執行範例 ##
+## 執行範例
+<a id="running-the-examples" class="xliff"></a> ##
 
 若要建立和執行本教學課程中的範例，請您從命令列使用 [DotNet](../../core/tools/dotnet.md) 公用程式。 每個範例都依照下列步驟執行︰
 
@@ -42,7 +46,8 @@ ms.lasthandoff: 05/15/2017
 
 1. 輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。
 
-## <a name="background-what-is-inheritance"></a>背景︰什麼是繼承？ ##
+## 背景︰什麼是繼承？
+<a id="background-what-is-inheritance" class="xliff"></a> ##
 
 「繼承」是物件導向程式設計的其中一個基本屬性。 它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。 其成員可供繼承的類別稱為「基底類別」。 繼承基底類別成員的類別則稱為「衍生類別」。
 
@@ -117,7 +122,8 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
    }
    ```
 
-## <a name="implicit-inheritance"></a>隱含繼承 ##
+## 隱含繼承
+<a id="implicit-inheritance" class="xliff"></a> ##
 
 除了透過單一繼承而繼承自的任何型別以外，@System.Object 或從中衍生的型別都會是 .NET 型別系統中所有型別的隱含繼承來源。 這樣可確保任何型別都可以使用一般功能。
 
@@ -156,7 +162,8 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 | enum | @System.Enum、System.ValueType、@System.Object |
 | 委派 | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>繼承和「是」關聯性 ##
+## 繼承和「是」關聯性
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a> ##
 
 在正常情況下，繼承用來表示基底類別與一或多個衍生類別之間的「是」關聯性，其中的衍生類別是基底類別的特殊版本；衍生類別是基底類別的一種型別。 例如，`Publication` 類別代表任何類型的發行物，而 `Book` 和 `Magazine` 類別代表特定發行物型別。
 
@@ -172,11 +179,13 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 
 以繼承為基礎的是關聯性，最適合用於基底類別，以及會對基底類別新增額外成員或其需要的額外功能是基底類別所沒有的衍生類別。
 
-## <a name="designing-the-base-class-and-derived-classes"></a>設計基底類別和衍生類別 ##
+## 設計基底類別和衍生類別
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a> ##
 
 讓我們來看設計基底類別和其衍生類別的流程。 在本節中，我們會定義基底類別 `Publication`，其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。我們也會定義衍生自 `Book` 類別的類別 `Publication`。 我們可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
 
-### <a name="the-base-publication-class"></a>基底 `Publication` 類別 ###
+### 基底 `Publication` 類別
+<a id="the-base-publication-class" class="xliff"></a> ###
 
 在設計 `Publication` 類別時，我們需要做出幾個設計決策︰
 
@@ -245,7 +254,8 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 
 ![物件和發行物類別](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>`Book` 類別 ###
+### `Book` 類別
+<a id="the-book-class" class="xliff"></a> ###
 
 `Book` 類別代表特殊的發行物型別：書籍。 下列範例顯示 `Book` 類別的原始程式碼。
 
@@ -301,7 +311,8 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 
 [!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>請參閱 ##
+## 請參閱
+<a id="see-also" class="xliff"></a> ##
 
 [類別與物件](../tour-of-csharp/classes-and-objects.md)</br>
 [繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)

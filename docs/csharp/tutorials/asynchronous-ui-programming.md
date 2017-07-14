@@ -1,5 +1,5 @@
 ---
-title: "非同步 UI 程式設計 | C# 指南"
+title: "非同步 UI 程式設計 - C# 指南 | Microsoft Docs"
 description: "了解在非同步作業中進行程式設計時保留 UI 回應的技巧"
 keywords: C#, UWP, XAML
 ms.date: 08/24/2016
@@ -10,14 +10,15 @@ ms.devlang: csharp
 ms.assetid: 7402b29b-1093-456d-be4c-f60ecb8926bb
 redirect_url: /dotnet/articles/csharp/tutorials/index
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d544740b2a172e08f333b55fb29c5a5f8782200
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 58cac34daca4199562ced9575212ad18fd8e03c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="-asynchronous-ui-programming"></a>🔧非同步 UI 程式設計
+# 🔧非同步 UI 程式設計
+<a id="-asynchronous-ui-programming" class="xliff"></a>
 
 > **注意**
 > 

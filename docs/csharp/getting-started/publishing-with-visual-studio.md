@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio 2017 發行您的 Hello World 應用程式"
+title: "使用 Visual Studio 2017 發佈 Hello World 應用程式 | Microsoft Docs"
 description: "發行會建立一組執行您的應用程式所需的檔案。"
 keywords: ".NET, .NET Core, 主控台應用程式, 發行, 部署"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 1c4fbefb23fc47cf035085f76ec1c10d5422a6f5
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 49fdae2ada3473463dcb120a35cfc8649a38a14d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="publishing-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 發行您的 Hello World 應用程式
+# 使用 Visual Studio 2017 發行您的 Hello World 應用程式
+<a id="publishing-your-hello-world-application-with-visual-studio-2017" class="xliff"></a>
 
 [在 Visual Studio 2017 中使用 .NET Core 建 置 C# Hello World 應用程式](with-visual-studio.md)中，您已組置 Hello World 主控台應用程式。 在[使用 Visual Studio 2017 針對 C# Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)中，您已使用 Visual Studio 偵錯工具加以測試。 現在，您確定它會如預期般地運作，您可以發行，讓其他使用者也可以執行它。 發行會建立一組執行您的應用程式所需的檔案，您可以將這些檔案複製到目標電腦來加以部署。
 
@@ -52,3 +53,4 @@ ms.lasthandoff: 05/03/2017
 發行程序會建立與 Framework 相依的部署，在這種部署類型中，只要 .NET Core 安裝在系統上，發行的應用程式即可以在 .NET Core 支援的任何平台上執行。 使用者可以從主控台視窗發出 `dotnet HelloWorld.dll` 命令來執行您的應用程式。
 
 如需有關發行和部署 .NET Core 應用程式的詳細資訊，請參閱 [.NET Core 應用程式部署](../../core/deploying/index.md)。
+

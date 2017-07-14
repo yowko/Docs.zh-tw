@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Studio 2017 中使用 .NET Core 測試類別庫"
+title: "在 Visual Studio 2017 中使用 .NET Core 測試類別庫 | Microsoft Docs"
 description: "了解如何使用 Visual Studio 2017 測試以 C# 撰寫的類別庫"
 keywords: ".NET Core, .NET 標準類別庫, Visual Studio 2017, 單元測試"
 author: BillWagner
@@ -11,18 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 629af913bb5172b890161bb82f45a65e6bb6498d
+ms.sourcegitcommit: 61c1c57fc0910fc2f4ce34da2975d181c40ed5cb
+ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試類別庫
+# 在 Visual Studio 2017 中使用 .NET Core 測試類別庫
+<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
 [在 Visual Studio 2017 中使用 C# 和 .NET Core 組置類別庫](library-with-visual-studio.md)中，您已建立一個將擴充方法新增至 @System.String 類別的簡易類別庫。 現在您將建立單元測試，確定它如預期般運作。 您會將您的單元測試專案新增至上一個主題中所建立的方案。
 
-## <a name="creating-a-unit-test-project"></a>建立單元測試專案
+## 建立單元測試專案
+<a id="creating-a-unit-test-project" class="xliff"></a>
 
 若要建立單元測試專案，請執行下列作業︰
 
@@ -54,7 +56,8 @@ ms.lasthandoff: 05/03/2017
 
    ![參考管理員](./media/testing-library-with-visual-studio/referencemanager.png)
 
-## <a name="adding-and-running-unit-test-methods"></a>新增和執行單元測試方法
+## 新增和執行單元測試方法
+<a id="adding-and-running-unit-test-methods" class="xliff"></a>
 
 Visual Studio 執行單元測試時，它會執行單元測試類別 (即套用 [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) 屬性的類別) 中標示 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性的每個方法。 測試方法會在發生第一次失敗時或方法中包含的所有測試均成功時結束。
 
@@ -98,7 +101,8 @@ Assert 方法 | 函式
 
    ![[測試總管] 視窗](./media/testing-library-with-visual-studio/firsttest.png)
 
-## <a name="handling-test-failures"></a>處理測試失敗
+## 處理測試失敗
+<a id="handling-test-failures" class="xliff"></a>
 
 您的測試回合未失敗，但將它稍微變更，使其中一個測試方法失敗：
 
@@ -119,7 +123,8 @@ Assert 方法 | 函式
 
 1. 移除已新增的程式碼 (`"Error", `)，然後重新執行測試。 測試將通過。
 
-## <a name="testing-the-release-version-of-the-library"></a>測試程式庫的發行版本
+## 測試程式庫的發行版本
+<a id="testing-the-release-version-of-the-library" class="xliff"></a>
 
 您已針對偵錯版本的程式庫執行測試。 既然您的測試全部通過，並已充分測試過您的程式庫，您應針對程式庫的發行組建執行更多時間的測試。 許多因素 (包括編譯器最佳化) 有時會在偵錯和發行組建之間導致不同的行為。
 

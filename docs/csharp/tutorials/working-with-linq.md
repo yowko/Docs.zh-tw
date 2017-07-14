@@ -1,5 +1,5 @@
 ---
-title: "處理 LINQ"
+title: "使用 LINQ | Microsoft Docs"
 description: "本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,18 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="working-with-linq"></a>處理 LINQ
+# 處理 LINQ
+<a id="working-with-linq" class="xliff"></a>
 
-## <a name="introduction"></a>簡介
+## 簡介
+<a id="introduction" class="xliff"></a>
 
 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
 
@@ -36,17 +38,20 @@ ms.lasthandoff: 05/22/2017
 
 本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/docs GitHub 存放機制中查看[完整範例](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 
 您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Ubuntu Linux、OS X 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
-## <a name="create-the-application"></a>建立應用程式
+## 建立應用程式
+<a id="create-the-application" class="xliff"></a>
 
 第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。
 
 如果您從未使用過 C#，[此教學課程](console-teleprompter.md)會說明 C# 程式的結構。 您可以閱讀該教學課程，然後再回到這裡以深入了解 LINQ。 
 
-## <a name="creating-the-data-set"></a>建立資料集
+## 建立資料集
+<a id="creating-the-data-set" class="xliff"></a>
 
 讓我們從建立一疊紙牌開始。 您將會使用具有兩個來源 (一個針對四個花色，另一個針對十三個值) 的 LINQ 查詢來進行。 您會將那些來源結合為 52 張紙牌的牌堆。 `foreach` 迴圈內的 `Console.WriteLine` 陳述式可顯示紙牌。
 
@@ -100,7 +105,8 @@ static IEnumerable<string> Ranks()
 
 ![主控台視窗顯示寫出 52 張紙牌的應用程式](./media/working-with-linq/console.png)
 
-## <a name="manipulating-the-order"></a>操作順序
+## 操作順序
+<a id="manipulating-the-order" class="xliff"></a>
 
 接下來，我們將建置可執行洗牌的公用程式方法。 第一個步驟是將牌堆一分為二。 包含於 LINQ API 的`Take()` 和 `Skip()` 方法可以為我們提供該功能：
 
@@ -173,7 +179,8 @@ public static void Main(string[] args)
 }
 ```
 
-## <a name="comparisons"></a>比較
+## 比較
+<a id="comparisons" class="xliff"></a>
 
 讓我們來看看需要洗牌多少次，才能將牌堆還原為原始的順序。 您必須撰寫判斷兩個序列是否相等的方法。 在您完成該方法後，您需要將洗牌的程式碼放入迴圈中，然後看看牌堆何時會回到原始順序。
 
@@ -207,7 +214,8 @@ Console.WriteLine(times);
 
 執行範例，然後查看牌堆於每次洗牌時的重新排列方式，直到它在反覆運算 8 次後回到其原始設定。
 
-## <a name="optimizations"></a>最佳化
+## 最佳化
+<a id="optimizations" class="xliff"></a>
 
 您目前建置的範例會執行「內部洗牌」，牌堆頂端和底部的紙牌，在每次執行時會保持不變。 讓我們來做個變化並執行「外部洗牌」，這會變更全部 52 張紙牌的位置。 對於外部洗牌而言，您要交錯牌堆，讓下半部的第一張紙牌變為牌堆的第一張紙牌。 這表示上半部的最後一張紙牌會變為底部的排。 這只需要一行變更。 更新洗牌的呼叫以變更牌堆上下半部的順序：
 
@@ -285,7 +293,8 @@ public static void Main(string[] args)
 
 實際上，某些演算法會較適合使用立即評估，而其他演算法則較適合使用延遲評估。 (一般而言，資料來源為獨立程序 (例如資料庫引擎) 的狀況，比較適合延遲評估。 在那些情況下，延遲評估可讓更複雜的查詢，僅需針對資料庫程序執行單次反覆查詢)。LINQ 可使用延遲評估和立即評估。 請評量，然後挑選最佳選擇。
 
-## <a name="preparing-for-new-features"></a>準備使用新功能
+## 準備使用新功能
+<a id="preparing-for-new-features" class="xliff"></a>
 
 您針對此範例所撰寫的程式碼，是建立能完成工作之簡單原型的範例。 這是探索問題範圍的絕佳方法，而對許多功能來說，它可能是最好的永久解決方案。 您對紙牌利用了「匿名型別」，而每張紙牌都會以字串表示。
 
@@ -329,7 +338,8 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 編譯並再次執行。 輸出會變的更簡潔，程式碼也會更清楚，而且更容易擴充。
 
-## <a name="conclusion"></a>結論
+## 結論
+<a id="conclusion" class="xliff"></a>
 
 這個範例為您示範了一些用於 LINQ 的方法，以及如何建立可輕鬆搭配啟用 LINQ 的程式碼使用的方法。 範例同時示範延遲評估和立即評估的差異，以及兩者對效能可能會產生的影響。
 

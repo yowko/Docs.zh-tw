@@ -1,5 +1,5 @@
 ---
-title: "C# 結構 | C# 語言教學課程"
+title: "C# 結構 - C# 語言教學課程 | Microsoft Docs"
 description: "了解 C# 實值型別 (稱為結構) 的基本概念"
 keywords: ".NET, C#, 結構, 實值型別"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 38ce3cdf3aaa033d84bb2c1a421cb04c6f928ab4
-ms.openlocfilehash: 04b1784b461961496856d62aa6cb70b5978e2437
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="structs"></a>結構
+# 結構
+<a id="structs" class="xliff"></a>
 
 和類別一樣，***結構***是可包含資料成員和函式成員的資料結構，但不同於類別，結構是實值型別，不需要堆積配置。 結構型別的變數直接儲存結構的資料，而類別型別的變數則儲存動態配置物件的參考。 結構類型不支援使用者指定的繼承，且所有結構類型都隱含地繼承自 <xref:System.ValueType> 類型，而該類型又隱含地繼承自 `object`。
 

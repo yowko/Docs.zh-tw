@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫"
+title: "在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫 | Microsoft Docs"
 description: "了解如何使用 Visual Studio 2017 建置以 C# 撰寫的類別庫"
 keywords: ".NET Core, .NET 標準類別庫, Visual Studio 2017"
 author: BillWagner
@@ -11,23 +11,25 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 1ecccb03bc28da51a580b790b5ba8dd594bb7f18
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: c29c4d2d1332fbf9e9e162e671200384a930aff1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫
+# 在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫
+<a id="building-a-class-library-with-c-and-net-core-in-visual-studio-2017" class="xliff"></a>
 
 「類別庫」會定義應用程式所呼叫的類型和方法。 使用 .NET Core 開發的類別庫支援 .NET 標準程式庫，其允許支援該 .NET 標準程式庫版本的任何 .NET 平台呼叫您的類別庫。 當您完成類別庫時，您可以決定要將它散發為協力廠商元件，還是要將它併入作為一或多個應用程式隨附的元件。
 
 > [!NOTE]
-> 如需 .NET 標準版本與所支援平台的清單，請參閱 [.NET 標準程式庫](../../standard/library.md)。
+> 如需 .NET 標準版本與所支援平台的清單，請參閱 [.NET 標準](../../standard/net-standard.md)。
 
 在本主題中，您將建立含有單一字串處理方法的簡單公用程式類別庫。 您將它實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，以便可以如同 @System.String 類別的成員一般來進行呼叫。
 
-## <a name="creating-a-class-library-solution"></a>建立類別庫方案
+## 建立類別庫方案
+<a id="creating-a-class-library-solution" class="xliff"></a>
 
 請開始建立類別庫專案和其相關專案的方案。 Visual Studio 方案只能做為一個或多個專案的容器。 建立方案：
 
@@ -37,7 +39,8 @@ ms.lasthandoff: 05/03/2017
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/newproject.png)
 
-## <a name="creating-the-class-library-project"></a>建立類別庫專案
+## 建立類別庫專案
+<a id="creating-the-class-library-project" class="xliff"></a>
 
 建立您的類別庫專案：
 
@@ -59,7 +62,8 @@ ms.lasthandoff: 05/03/2017
 
    ![輸出窗格顯示組建成功](./media/library-with-visual-studio/buildsucceeds.png)
 
-## <a name="next-step"></a>後續步驟
+## 後續步驟
+<a id="next-step" class="xliff"></a>
 
 您已成功組建類別庫。 因為您尚未呼叫它的任何方法，所以它能否正常運作還不得而知。 開發類別庫的下一個步驟是使用 [C# 單元測試專案](testing-library-with-visual-studio.md)來加以測試。
 

@@ -1,5 +1,5 @@
 ---
-title: "字串插補 |C#"
+title: "字串插值 - C# | Microsoft Docs"
 description: "了解字串插補在 C# 6 中如何運作"
 keywords: ".NET, .NET Core, C#, 字串"
 author: mgroves
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41afad1c1148319eb8d7d1c3066424eea431649d
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 8396be84d229563973011470d0333af017302dc9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="string-interpolation-in-c"></a>C 中的字串插補# #
+# C# 中的字串插值
+<a id="string-interpolation-in-c" class="xliff"></a> #
 
 「字串插補」是以字串變數的值取代字串中預留位置的方式。 在 C# 6 之前，是透過 `System.String.Format` 來執行這項操作。 這個運作方式還行，但由於它使用已編號的預留位置，因此更難以閱讀也更冗長。
 
@@ -32,11 +33,13 @@ echo "My name is $name.";
 
 在 C# 6 中，我們終於也有該樣式的字串插補。 您可以在字串前使用 `$` 來指出它應該以變數/運算式來替代其值。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。
 您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
-## <a name="create-the-application"></a>建立應用程式
+## 建立應用程式
+<a id="create-the-application" class="xliff"></a>
 
 現在您已安裝完所有工具，請建立新的 .NET Core 應用程式。 若要使用命令列產生器，請為您的專案建立一個目錄 (例如 `interpolated`)，然後在您慣用的殼層中執行下列命令︰
 
@@ -48,7 +51,8 @@ dotnet new console
 
 若要執行這個程式，請使用 `dotnet run`。 您應該會在主控台看到 "Hello, World" 輸出。
 
-## <a name="intro-to-string-interpolation"></a>字串插補簡介
+## 字串插補簡介
+<a id="intro-to-string-interpolation" class="xliff"></a>
 
 使用 `System.String.Format` 時，您需指定要由字串後的參數取代的字串中「預留位置」。 若是執行個體：
 
@@ -74,7 +78,8 @@ This is line number 4
 This is line number 5
 ```
 
-## <a name="how-string-interpolation-works"></a>字串插補如何運作
+## 字串插補如何運作
+<a id="how-string-interpolation-works" class="xliff"></a>
 
 在幕後，會由編譯器將這個字串插補轉譯成 String.Format。 因此，您可以執行[之前對 String.Format 所進行的相同型別操作](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx)。
 
@@ -107,10 +112,11 @@ Console.WriteLine(localizeMe);
 
 如果編譯它，您將會收到錯誤：
  
-* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」**才宣告 `adj` 變數。
+* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」才宣告 `adj` 變數。
 * `The name 'otheranimal' does not exist in the current context` - 從未宣告名為 `otheranimal` 的變數
 
-## <a name="localization-and-internationalization"></a>當地語系化和國際化
+## 當地語系化和國際化
+<a id="localization-and-internationalization" class="xliff"></a>
 
 插補字串支援 `IFormattable` 和 `FormattableString`，這對國際化相當有用。
 
@@ -120,7 +126,8 @@ Console.WriteLine(localizeMe);
 
 [!code-csharp[插補國際化範例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
-## <a name="conclusion"></a>結論 
+## 結論
+<a id="conclusion" class="xliff"></a> 
 
 在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。
 

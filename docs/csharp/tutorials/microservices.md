@@ -1,5 +1,5 @@
 ---
-title: "在 Docker 中裝載的微服務 | C#"
+title: "Docker 裝載的微服務 - C# | Microsoft Docs"
 description: "了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務"
 keywords: ".NET, .NET Core, Docker, C#, ASP.NET, 微服務"
 author: BillWagner
@@ -11,16 +11,18 @@ ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ed747cf589e1f4731d78af7cc206ff3674d666b2
-ms.openlocfilehash: b2ce10b3c079ff2c881f6dbe297ead33b8254476
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 40d81a161e6be06a32fb559b70a4e7eeca41e4da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
+# 在 Docker 中裝載的微服務
+<a id="microservices-hosted-in-docker" class="xliff"></a>
 
-##<a name="introduction"></a>簡介
+## 簡介
+<a id="introduction" class="xliff"></a>
 
 本教學課程詳細說明在 Docker 容器中建置和部署 ASP.NET Core 微服務所需的工作。 您將在本教學課程中了解︰
 
@@ -36,16 +38,18 @@ ms.lasthandoff: 05/22/2017
 * 如何處理傳入 HTTP 要求和產生 HTTP 回應
 * 如何使用可為 Null 的實值型別
 
-您可以[檢視或下載範例應用程式](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)來了解此主題。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+您可以[檢視或下載本主題的範例應用程式 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-### <a name="why-docker"></a>為何要使用 Docker？
+### 為何要使用 Docker？
+<a id="why-docker" class="xliff"></a>
 
 Docker 可讓您輕鬆地建立標準的機器映像，在資料中心或公用雲端裝載您的服務。 Docker 可讓您設定映像，並視需要複製來調整應用程式的安裝。
 
 本教學課程中的所有程式碼可在任何 .NET Core 環境中運作。
 Docker 安裝的其他工作均適用於 ASP.NET Core 應用程式。 
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。
 您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
@@ -62,7 +66,8 @@ Docker 可以安裝在許多 Linux 發行版本、macOS 或 Windows。 上述的
 
 `npm install -g generator-aspnet`
 
-## <a name="create-the-application"></a>建立應用程式
+## 建立應用程式
+<a id="create-the-application" class="xliff"></a>
 
 現在您已安裝完所有工具，請建立新的 ASP.NET Core 應用程式。 若要使用命令列產生器，請在您慣用的殼層中執行下列 Yeoman 命令︰
 
@@ -103,7 +108,8 @@ dotnet run
 
 預設組態會接聽 http://localhost:5000。 您可以開啟瀏覽器，然後瀏覽至該頁面，就會看到「Hello World!」 訊息。
 
-### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 應用程式的結構
+### ASP.NET Core 應用程式的結構
+<a id="anatomy-of-an-aspnet-core-application" class="xliff"></a>
 
 既然您已經建置應用程式，現在讓我們來看看如何實作這項功能。 此時，產生的檔案當中有兩個特別有趣︰project.json 和 Startup.cs。 
 
@@ -116,7 +122,8 @@ Project.json 包含該專案的相關資訊。 您會經常使用的兩個節點
 
 ASP.NET Core 基礎結構會呼叫這兩個方法，來設定和執行應用程式。 `ConfigureServices` 方法描述此應用程式所需的服務。 您正在建置精簡的微服務，因此它不需要設定任何相依性。 `Configure` 方法會設定傳入 HTTP 要求的處理常式。 範本會產生能以「Hello World!」文字回應任何要求的簡單處理常式。
 
-## <a name="build-a-microservice"></a>建置微服務
+## 建置微服務
+<a id="build-a-microservice" class="xliff"></a>
 
 您即將建置的服務可提供世界上任何地方的氣象報告。 在實際執行應用程式中，您會呼叫某些服務來擷取氣象資料。 對我們的範例而言，則將會產生隨機的氣象預報。 
 
@@ -130,7 +137,8 @@ ASP.NET Core 基礎結構會呼叫這兩個方法，來設定和執行應用程�
 
 下一節將逐步說明每一個步驟。
 
-### <a name="parsing-the-query-string"></a>剖析查詢字串。
+### 剖析查詢字串。
+<a id="parsing-the-query-string" class="xliff"></a>
 
 一開始要先剖析查詢字串。 服務會接受下列格式查詢字串的 'lat' 和 'long' 引數：
 
@@ -170,7 +178,8 @@ bool TryParse(string s, out double result);
 
 此時，您可以執行 Web 應用程式，並查看您的剖析程式碼是否可以正常運作。 將值加入至瀏覽器中的 Web 要求後，您應該會看到更新的結果。
 
-### <a name="build-a-random-weather-forecast"></a>建立隨機的氣象預報
+### 建立隨機的氣象預報
+<a id="build-a-random-weather-forecast" class="xliff"></a>
 
 您的下一個工作是建立隨機的氣象預報。 讓我們從保存您所想要氣象預報值的資料容器開始︰
 
@@ -202,7 +211,8 @@ public class WeatherReport
 
 [!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "產生隨機的氣象報告")]
 
-### <a name="build-the-json-response"></a>建立 JSON 回應。
+### 建立 JSON 回應。
+<a id="build-the-json-response" class="xliff"></a>
 
 伺服器上最後的程式碼工作是將 WeatherReport 陣列轉換為 JSON 封包，並傳送回用戶端。 現在就開始建立 JSON 封包。 您要將 NewtonSoft JSON 序列化程式加入至相依性清單。 您可以使用 `dotnet` CLI 來完成：
 
@@ -218,7 +228,8 @@ dotnet add package Newtonsoft.Json
 
 應用程式現在會執行，並傳回隨機的預測。
 
-## <a name="build-a-docker-image"></a>建置 Docker 映像
+## 建置 Docker 映像
+<a id="build-a-docker-image" class="xliff"></a>
 
 最後一項工作是在 Docker 中執行應用程式。 我們會建立 Docker 容器，執行代表應用程式的 Docker 映像。
 
@@ -268,7 +279,8 @@ ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.
 
 此設定的連接埠是參考 Dockerfile 最後一行 `dotnet` 的 `--server.urls` 引數。 `ENTRYPOINT` 命令會通知 Docker 哪些命令和命令列選項啟動該服務。 
 
-## <a name="building-and-running-the-image-in-a-container"></a>建置和執行容器中的映像。
+## 建置和執行容器中的映像。
+<a id="building-and-running-the-image-in-a-container" class="xliff"></a>
 
 讓我們在 Docker 容器內建置映像並執行服務。 不建議將本機目錄中的所有檔案複製到映像中。 相反地，您要在容器中建置應用程式。 您會建立 `.dockerignore` 檔案，以指定不要複製到映像中的目錄。 不建議複製任何的組建資產。 請在 `.dockerignore` 檔案中指定組建和發行目錄：
 
@@ -308,7 +320,8 @@ docker ps
 http://localhost/?lat=35.5&long=40.75
 ```
 
-## <a name="attaching-to-a-running-container"></a>附加至執行中的容器
+## 附加至執行中的容器
+<a id="attaching-to-a-running-container" class="xliff"></a>
 
 當您在命令視窗中執行服務時，您可以看到為每個要求印出的診斷資訊。 當您的容器在中斷連結模式中執行時，您看不到該資訊。 Docker attach 命令可讓您附加至執行中的容器，以便查看記錄資訊。  請從命令視窗執行這個命令︰
 
@@ -343,7 +356,8 @@ docker rm hello-docker
 docker rmi weather-microservice
 ```
 
-## <a name="conclusion"></a>結論 
+## 結論
+<a id="conclusion" class="xliff"></a> 
 
 在本教學課程中，您已建置 ASP.NET Core 微服務，並加入一些簡單的功能。
 

@@ -1,5 +1,5 @@
 ---
-title: "使用 .NET Core 來建立 REST 用戶端"
+title: "建立使用 .NET Core 的 REST 用戶端 | Microsoft Docs"
 description: "本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,18 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: e39e4f606d4bd1f17f5cb84940a48ef4bd53bd2d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="rest-client"></a>REST 用戶端
+# REST 用戶端
+<a id="rest-client" class="xliff"></a>
 
-## <a name="introduction"></a>簡介
+## 簡介
+<a id="introduction" class="xliff"></a>
 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
 *    「.NET Core 命令列介面」(CLI) 的基本概念。
 *   「C# 語言」功能的概觀。
@@ -35,16 +37,19 @@ ms.lasthandoff: 05/14/2017
 
 如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件
+## 必要條件
+<a id="prerequisites" class="xliff"></a>
 您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
-## <a name="create-the-application"></a>建立應用程式
+## 建立應用程式
+<a id="create-the-application" class="xliff"></a>
 第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。
 
 在您開始進行修改之前，讓我們先將執行簡單 Hello World 應用程式的所有步驟執行一遍。 在建立應用程式之後，請在命令提示字元處輸入 `dotnet restore`。 此命令會執行 NuGet 套件還原程序。 NuGet 是一個 .NET 套件管理員。 此命令會為您的專案下載任何遺漏的相依性。 由於這是一個新專案，因此沒有任何現有的相依性，所以第一次執行時將會下載 .NET Core 架構。 在這個初始步驟之後，當您新增新的相依套件或更新任何相依性的版本時，將只需要執行 `dotnet restore`。  
 
 還原套件之後，您需執行 `dotnet build`。 這會執行建置引擎並建立您的應用程式。 最後，您需執行 `dotnet run` 來執行您的應用程式。
 
-## <a name="adding-new-dependencies"></a>新增新的相依性
+## 新增新的相依性
+<a id="adding-new-dependencies" class="xliff"></a>
 .NET Core 的其中一個主要設計目標就是將 .NET Framework 安裝大小縮減到最小。 .NET Core 應用程式架構只包含 .NET 完整架構的最常見元素。 如果應用程式的某些功能需要額外的程式庫，您可以將這些相依性新增到 C# 專案檔 (*.csproj) 中。 就我們的範例而言，您將必須新增 `System.Runtime.Serialization.Json` 套件，以便讓您的應用程式能夠處理 JSON 回應。
 
 請開啟您的 `csproj` 專案檔。 檔案的第一行程應該顯示如下：
@@ -64,7 +69,8 @@ ms.lasthandoff: 05/14/2017
 
 在您進行這些變更之後，應該重新執行 `dotnet restore`，以將該套件安裝在您的系統上。
 
-## <a name="making-web-requests"></a>提出 Web 要求
+## 提出 Web 要求
+<a id="making-web-requests" class="xliff"></a>
 現在您已經準備好開始從 Web 接收資料。 在此應用程式中，您將從 [GitHub API](https://developer.github.com/v3/) 讀取資訊。 讓我們在 [.NET Foundation](http://www.dotnetfoundation.org/) 的庇護下讀取專案的相關資訊。 您將從對 GitHub API 提出要求以擷取專案相關資訊著手。 您將使用的端點為：[https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 您想要擷取這些專案的所有相關資訊，因此您將使用 HTTP GET 要求。
 您的瀏覽器也會使用 HTTP GET 要求，因此您可以將該 URL 貼到瀏覽器中，以查看您將接收和處理的資訊。
 
@@ -130,7 +136,8 @@ using System.Net.Http.Headers;
 此方法的最後兩行會等候該工作，然後將回應顯示在主控台中。
 請建置應用程式並執行它。 建置警告現在已消失，因為 `ProcessRepositories` 現在確實包含 `await` 運算子。 您將會看到一長串顯示的 JSON 格式文字。   
 
-## <a name="processing-the-json-result"></a>處理 JSON 結果
+## 處理 JSON 結果
+<a id="processing-the-json-result" class="xliff"></a>
 
 此時，您已撰寫程式碼來從 Web 伺服器擷取回應，並顯示包含在該回應中的文字。 接著，讓我們將該 JSON 回應轉換成 C# 物件。
 
@@ -192,7 +199,8 @@ foreach (var repo in repositories)
 
 編譯並執行應用程式。 它將會列印出隸屬於 .NET Foundation 的儲存機制名稱。
 
-## <a name="controlling-serialization"></a>控制序列化
+## 控制序列化
+<a id="controlling-serialization" class="xliff"></a>
 
 在您新增更多功能之前，讓我們先處理 `repo` 型別並讓它符合更標準的 C# 慣例。 您將透過在 `repo` 型別上加註控制「JSON 序列化程式」運作方式的「屬性」，來進行這項操作。 在您的案例中，您將使用這些屬性來定義 JSON 機碼名稱與 C# 類別及成員名稱之間的對應。 所使用的兩個屬性為 `DataContract` 屬性和 `DataMember` 屬性。 透過轉換，所有屬性類別都會以後置詞 `Attribute` 結尾。 不過，當您套用屬性時，並不需要使用該後置詞。 
 
@@ -289,7 +297,8 @@ public static void Main(string[] args)
 
 系統會封鎖存取工作之 `Result` 屬性的行為，直到工作完成為止。 通常，您會偏好 `await` 工作完成，就像在 `ProcessRepositories` 方法中一樣，但在 `Main` 方法中並不允許這樣做。
 
-## <a name="reading-more-information"></a>讀取更多資訊
+## 讀取更多資訊
+<a id="reading-more-information" class="xliff"></a>
 
 讓我們再多處理 GitHub API 所傳送之 JSON 封包中的幾個屬性，來結束這個部分。 您不會想要全盤了解，但新增幾個屬性將可示範更多一些的 C# 語言功能。
 
@@ -366,7 +375,8 @@ Console.WriteLine(repo.LastPush);
 
 您的版本現在應該與[完成範例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)相符。
  
-## <a name="conclusion"></a>結論
+## 結論
+<a id="conclusion" class="xliff"></a>
 
 本教學課程示範了如何提出 Web 要求、剖析結果，以及顯示這些結果的屬性。 您也在專案中新增了新的套件作為相依性。 您已了解一些支援物件導向技術的 C# 語言功能。
 

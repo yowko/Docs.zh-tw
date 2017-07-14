@@ -1,5 +1,5 @@
 ---
-title: "C# 委派 | C# 語言教學課程"
+title: "C# 委派 - C# 語言教學課程 | Microsoft Docs"
 description: "了解使用 C# 委派進行的晚期繫結"
 keywords: ".NET, csharp, 委派, lambda, 晚期繫結"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: 9cfefa5f781944b41828ebb61004f960e6cf3d59
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 217fd974f547a4a84b328979ee94ee634038b213
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="delegates"></a>委派
+# 委派
+<a id="delegates" class="xliff"></a>
 
 「委派型別」代表對方法的參考，其中含有特定參數清單與傳回型別。 委派讓您可將方法視為實體，而實體能指派給變數或當作參數來傳遞。 委派就類似其他程式設計語言中的函式指標，但與函式指標的不同之處是，委派是物件導向且為型別安全。
 

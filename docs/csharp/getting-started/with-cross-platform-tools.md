@@ -1,5 +1,5 @@
 ---
-title: "開始使用 C# 與跨平台工具 | C# 指南"
+title: "開始使用 C# 與跨平台工具 - C# 指南 | Microsoft Docs"
 description: "開始使用 C# 與跨平台工具"
 keywords: "C#, 使用者入門, 取得, 跨平台"
 ms.date: 08/23/2016
@@ -10,14 +10,15 @@ ms.devlang: csharp
 ms.assetid: 48cac496-2dc2-4dc7-b8fd-b9ade0fcdfd2
 redirect_url: /dotnet/articles/csharp/getting-started/index
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a769400bb037ce98c20896dfda17928a4028c144
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: a3604e3e0dbe5783d1d177d9f8b1423b1dd4c299
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="-getting-started-with-c-using-the-cross-platform-command-line-tools"></a>🔧 使用跨平台命令列工具開始使用 C#
+# 🔧 使用跨平台命令列工具開始使用 C#
+<a id="-getting-started-with-c-using-the-cross-platform-command-line-tools" class="xliff"></a>
 
 > **注意**
 > 

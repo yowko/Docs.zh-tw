@@ -1,5 +1,5 @@
 ---
-title: "C# 程式結構 | C# 語言教學課程"
+title: "C# 程式結構 - C# 語言教學課程 | Microsoft Docs"
 description: "了解 C# 程式的基本建置區塊"
 keywords: .NET .NET Core
 author: BillWagner
@@ -11,16 +11,17 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ef19d7fa2164990edd5e27651d28aa085ec90ad
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3642b6525691d6179eca66f11d5002377323cdf3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="program-structure"></a>程式結構
+# 程式結構
+<a id="program-structure" class="xliff"></a>
 
-C# 語言的重要組織概念如下：程式******、命名空間******、型別******、成員******及組件******。 C# 程式包含一個或多個原始程式檔。 程式宣告型別，其中包含成員並可以依據命名空間分組。 類別和介面都是型別的範例。 欄位、方法、屬性及事件都是成員的範例。 在編譯 C# 語言時，會將它們實際封裝為組件。 組件通常具有副檔名 `.exe` 或 `.dll`，其分別在於實作「應用程式」******或「程式庫」******。
+C# 語言的重要組織概念如下：程式、命名空間、型別、成員及組件。 C# 程式包含一個或多個原始程式檔。 程式宣告型別，其中包含成員並可以依據命名空間分組。 類別和介面都是型別的範例。 欄位、方法、屬性及事件都是成員的範例。 在編譯 C# 語言時，會將它們實際封裝為組件。 組件通常具有副檔名 `.exe` 或 `.dll`，其分別在於實作「應用程式」或「程式庫」。
 
 此範例會在名為 `Acme.Collections` 的命名空間中，宣告稱為 `Stack` 的類別：
 

@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Studio 2017 中透過 .NET Core 使用類別庫"
+title: "在 Visual Studio 2017 中使用 .NET Core 使用類別庫 | Microsoft Docs"
 description: "了解如何使用 Visual Studio 2017 來呼叫類別庫中的成員。"
 keywords: ".NET Core, .NET Core 類別庫, .NET Standard, .NET Standard 類別庫散發"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中透過 .NET Core 使用類別庫
+# 在 Visual Studio 2017 中透過 .NET Core 使用類別庫
+<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
 在您遵循[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)和[在 Visual Studio 2017 中使用 .NET Core 測試類別庫](testing-library-with-visual-studio.md)中的步驟操作來組置和測試您的類別庫，並且也已組置該類別庫的發行版本之後，下一個步驟就是讓它可供呼叫端使用。 執行這項作業的方法有兩種：
 
@@ -26,7 +27,8 @@ ms.lasthandoff: 05/03/2017
 
 * 如果該類別庫將可供一般存取，則可藉由 NuGet 套件的形式來散發它。
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>將類別庫以專案形式包含在方案中
+## 將類別庫以專案形式包含在方案中
+<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
 
 就像您將單元測試包含在與類別庫相同的方案中一樣，您也可以將應用程式包含在該方案中。 例如，您可以在提示使用者輸入字串並回報其第一個字元是否為大寫的主控台應用程式中，使用您的類別庫：
 
@@ -62,7 +64,8 @@ ms.lasthandoff: 05/03/2017
 
 您可以遵循[使用 Visual Studio 2017 針對 C# Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 發行 Hello World 應用程式](publishing-with-visual-studio.md)中的步驟操作，對使用此類別庫的應用程式進行偵錯並加以發行。
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>以 NuGet 套件散發類別庫
+## 以 NuGet 套件散發類別庫
+<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
 
 您可以藉由 NuGet 套件的形式發行類別庫，讓您的類別庫可供廣泛使用。 Visual Studio 不支援建立 NuGet 套件。 若要建立該套件，您需使用 [`dotnet` 命令列公用程式](../../core/tools/dotnet.md)：
 
