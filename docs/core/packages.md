@@ -74,9 +74,9 @@ ms.lasthandoff: 06/20/2017
 - 讓參考大量細部套件的使用者體驗更方便。 
 - 其中所定義的套件組 (包括特定版本)，均經過測試且適合共同運作。
 
-.NET 標準程式庫中繼套件包括：
+.NET Standard 程式庫中繼套件包括：
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - 描述「.NET 標準程式庫」中所包含的程式庫。 適用於所有支援 .NET 標準程式庫的 .NET 實作 (例如，.NET Framework、.NET Core 和 Mono)。 可建立 'netstandard' 架構。
+- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - 描述「.NET Standard 程式庫」中所包含的程式庫。 適用於所有支援 .NET Standard 程式庫的 .NET 實作 (例如，.NET Framework、.NET Core 和 Mono)。 可建立 'netstandard' 架構。
 
 主要的 .NET Core 中繼套件包括：
 
@@ -119,9 +119,9 @@ ms.lasthandoff: 06/20/2017
 ### .NET Standard
 <a id="net-standard" class="xliff"></a>
 
-.NET Standard (目標 Framework Moniker：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET 標準相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET 標準版本，這取決於它們實作哪些 API 而定。 
+.NET Standard (目標 Framework Moniker：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET Standard 相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET Standard 版本，這取決於它們實作哪些 API 而定。 
 
-`netstandard` 架構會隱含參考 `NETStandard.Library` 中繼套件。 例如，下列 MSBuild 專案檔指出專案是以 `netstandard1.6` 為目標，而該版本參考 .NET 標準程式庫 1.6 版的中繼套件。 
+`netstandard` 架構會隱含參考 `NETStandard.Library` 中繼套件。 例如，下列 MSBuild 專案檔指出專案是以 `netstandard1.6` 為目標，而該版本參考 .NET Standard 程式庫 1.6 版的中繼套件。 
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -153,7 +153,7 @@ ms.lasthandoff: 06/20/2017
 
 .NET Core 應用程式 (TFM: `netcoreapp`) 架構表示套件和相關聯的 API 是隨附於 .NET Core 散發套件和它所提供的主控台應用程式模型。 由於目標為主控台應用程式模型，因此 .NET Core 應用程式必須使用此架構，包括僅限於 .NET Core 中執行的程式庫也應如此。 使用此架構時，可限制應用程式和程式庫僅在 .NET Core 中執行。 
 
-`Microsoft.NETCore.App` 中繼套件是以 `netcoreapp` 架構為目標。 它提供約 60 種程式庫的存取權，其中 `NETStandard.Library` 套件提供約 40 種，另外再加上 20 多種。 若要存取其他 API，您可以參考其他目標為 `netcoreapp` 或相容架構的程式庫，例如 `netstandard`。 
+`Microsoft.NETCore.App` 中繼套件是以 `netcoreapp` 架構為目標。 它提供約 ~60 種程式庫的存取權，其中 `NETStandard.Library` 套件提供約 ~40 種，另外再加上 ~20 多種。 若要存取其他 API，您可以參考其他目標為 `netcoreapp` 或相容架構的程式庫，例如 `netstandard`。 
 
 大部分由 `Microsoft.NETCore.App` 所提供的其他程式庫也會以 `netstandard` 為目標 (在其他 `netstandard` 程式庫滿足其相依性的情況下)。 這表示 `netstandard` 程式庫也可以將這些套件做為相依性參考。 
 
