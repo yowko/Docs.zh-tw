@@ -10,31 +10,36 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
 ms.openlocfilehash: 978dd62d655d0168b5a9c1c9732bc69ca9b256eb
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/10/2017
 
 ---
 
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
+# .NET Core 命令列介面 (CLI) 工具
+<a id="net-core-command-line-interface-cli-tools" class="xliff"></a>
 
-.NET Core 命令列介面 (Command-Line Interface, CLI) 是新的跨平台工具鏈，適用於開發 .NET 應用程式。 CLI 是整合式開發環境 (IDE)、編輯器和建置 Orchestrator 等高層級工具所依靠的基礎。
+.NET Core 命令列介面 (CLI) 是新的跨平台工具鏈，適用於開發 .NET 應用程式。 CLI 是整合式開發環境 (IDE)、編輯器和建置 Orchestrator 等高層級工具所依靠的基礎。
 
-## <a name="installation"></a>安裝
+## 安裝
+<a id="installation" class="xliff"></a>
 
 使用原生安裝程式或使用安裝殼層指令碼：
 
 * 原生安裝程式主要用於開發人員的電腦，並且使用每個受支援平台的原生安裝機制，例如 Ubuntu 上的 DEB 套件，或 Windows 上的 MSI 套件組合。 這些安裝程式安裝及設定的環境可供開發人員立即使用，但他們會需要電腦的系統管理權限。 您可以檢視 [.NET Core 安裝指南 (英文)](https://aka.ms/dotnetcoregs) 上的安裝指示。
 * 殼層指令碼主要用於設定組建伺服器，或者當您想要安裝工具，但沒有系統管理權限時也可以使用。 安裝指令碼不會在電腦上安裝必要的項目，所以您必須手動安裝這些項目。 如需詳細資訊，請參閱[安裝指令碼參考主題](dotnet-install-script.md)。 如需如何在持續整合 (CI) 組建伺服器上設定 CLI 的詳細資訊，請參閱[在持續整合 (CI) 中使用 .NET Core SDK 和工具](using-ci-with-cli.md)。
 
-根據預設，CLI 會以並存 (Side-By-Side, SxS) 的形式安裝，因此一部電腦上可以同時存在多個版本的 CLI 工具。 [驅動器](#driver)一節詳細說明如何在已安裝多個版本的電腦上判斷所使用的版本。
+根據預設，CLI 會以並存 (SxS) 的形式安裝，因此一部電腦上可以同時存在多個版本的 CLI 工具。 [驅動器](#driver)一節詳細說明如何在已安裝多個版本的電腦上判斷所使用的版本。
 
-## <a name="cli-commands"></a>CLI 命令
+## CLI 命令
+<a id="cli-commands" class="xliff"></a>
 
 預設會安裝下列命令：
 
-### <a name="basic-commands"></a>基本命令
+### 基本命令
+<a id="basic-commands" class="xliff"></a>
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
@@ -48,7 +53,8 @@ ms.lasthandoff: 04/10/2017
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 
-### <a name="project-modification-commands"></a>專案修改命令
+### 專案修改命令
+<a id="project-modification-commands" class="xliff"></a>
 
 * [add package](dotnet-add-package.md)
 * [add reference](dotnet-add-reference.md)
@@ -56,7 +62,8 @@ ms.lasthandoff: 04/10/2017
 * [remove reference](dotnet-remove-reference.md)
 * [list reference](dotnet-list-reference.md)
 
-### <a name="advanced-commands"></a>進階命令
+### 進階命令
+<a id="advanced-commands" class="xliff"></a>
 
 * [nuget delete](dotnet-nuget-delete.md)
 * [nuget locals](dotnet-nuget-locals.md)
@@ -66,7 +73,8 @@ ms.lasthandoff: 04/10/2017
 
 CLI 採用擴充性模型，可讓您為專案指定額外工具。 如需詳細資訊，請參閱 [.NET Core CLI 擴充性模型](extensibility.md)主題。
 
-## <a name="command-structure"></a>命令結構
+## 命令結構
+<a id="command-structure" class="xliff"></a>
 
 CLI 命令結構的組成要素有[驅動器 ("dotnet")](#driver)、[命令 (或「動詞」)](#command-verb)，以及可能的命令[引數](#arguments)和[選項](#options)。 您可以在大部分的 CLI 作業中看到此模式，例如從名稱為 *my_app* 的目錄執行以下命令，以建立新的主控台應用程式並從命令列執行它：
 
@@ -77,7 +85,8 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-### <a name="driver"></a>驅動器
+### 驅動器
+<a id="driver" class="xliff"></a>
 
 驅動器的名稱是 [dotnet](dotnet.md)，且有兩個責任：執行[相依於架構的應用程式](../deploying/index.md)或執行命令。 唯獨啟動應用程式時會不搭配命令使用 `dotnet`。
 
@@ -85,23 +94,28 @@ dotnet /build_output/my_app.dll
 
 當您提供命令給驅動器時，`dotnet.exe` 會啟動 CLI 命令執行程序。 首先，驅動器會決定要使用之工具的版本。 如果命令選項中未指定版本，則驅動器會使用可用的最新版本。 若要指定已安裝之最新版本以外的版本，請使用 `--fx-version <VERSION>` 選項 (請參閱 [dotnet 命令](dotnet.md)參考)。 決定 SDK 版本之後，驅動器會執行命令。
 
-### <a name="command-verb"></a>命令 (「動詞」)
+### 命令 (「動詞」)
+<a id="command-verb" class="xliff"></a>
 
 命令 (或「動詞」) 只是執行動作的命令。 例如，`dotnet build` 會建置程式碼。 `dotnet publish` 會發行程式碼。 命令是使用 `dotnet-{verb}` 慣例實作為主控台應用程式。 
 
-### <a name="arguments"></a>引數
+### 引數
+<a id="arguments" class="xliff"></a>
 
 您在命令列上傳遞的引數即為叫用命令的引數。 例如當您執行 `dotnet publish my_app.csproj` 時，`my_app.csproj` 引數表示要發佈的專案，並且會傳遞給 `publish` 命令。
 
-### <a name="options"></a>選項
+### 選項
+<a id="options" class="xliff"></a>
 
 您在命令列上傳遞的選項即為叫用命令的選項。 例如當您執行 `dotnet publish --output /build_output`，`--output` 選項及其值會傳遞給 `publish` 命令。 
 
-## <a name="migration-from-projectjson"></a>從 project.json 移轉
+## 從 project.json 移轉
+<a id="migration-from-projectjson" class="xliff"></a>
 
 如果您使用 Preview 2 工具來產生 *project.json* 型專案，請參閱 [dotnet migrate](dotnet-migrate.md) 主題，來取得移轉專案至 MSBuild/*.csproj* 以搭配發行工具使用的詳細資訊。 針對在 Preview 2 工具發行之前建立的 .NET Core 專案，可以遵循[從 DNX 移轉到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指導方針來手動更新，然後使用 `dotnet migrate`，或者直接升級您的專案。
 
-## <a name="additional-resources"></a>其他資源
+## 其他資源
+<a id="additional-resources" class="xliff"></a>
 
 * [dotnet/CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/)
 * [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)
