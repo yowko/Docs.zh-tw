@@ -8,7 +8,7 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0f8b42de-858a-44a3-87d9-998211f26377
-redirect_url: /dotnet/articles/csharp/tutorials/index
+redirect_url: /dotnet/csharp/tutorials/index
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
 ms.openlocfilehash: d192086137b4efeaf6cf90af538a620282711bab
@@ -17,8 +17,7 @@ ms.lasthandoff: 05/23/2017
 
 ---
 
-# 🔧 並行程式設計
-<a id="-concurrent-programming" class="xliff"></a>
+# <a name="-concurrent-programming"></a>🔧 並行程式設計
 
 > **注意**
 > 

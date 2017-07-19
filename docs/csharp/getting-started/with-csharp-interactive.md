@@ -8,7 +8,7 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a6907ffe-7920-4813-984f-6001d9e44756
-redirect_url: /dotnet/articles/csharp/getting-started/index
+redirect_url: /dotnet/csharp/getting-started/index
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
 ms.openlocfilehash: 608f7f2b2143ece7aabc09cd0d56b6b33fdba32f
@@ -17,8 +17,7 @@ ms.lasthandoff: 05/23/2017
 
 ---
 
-# 🔧 開始使用 C# Interactive
-<a id="-getting-started-with-c-interactive" class="xliff"></a>
+# <a name="-getting-started-with-c-interactive"></a>🔧 開始使用 C# Interactive
 
 > **注意**
 > 

@@ -5,7 +5,7 @@ author: rlander
 keywords: ".NET Framework, 安裝"
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cdb1d5-c5g8-8af9-93e8-5f478de07ff7
@@ -17,9 +17,7 @@ ms.lasthandoff: 06/02/2017
 
 ---
 
-<a id="repair-the-net-framework" class="xliff"></a>
-
-# 修復 .NET Framework
+# <a name="repair-the-net-framework"></a>修復 .NET Framework
 
 在某些情況下，您的 .NET Framework 安裝可能受損而需要修復。 如果應用程式在您嘗試啟動它時立即當機，或您無法安裝較新的 .NET Framework 版本時，就可能是這種情況。
 
