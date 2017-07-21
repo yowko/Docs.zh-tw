@@ -34,38 +34,30 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: bddd19b348bf1eb5b03341c216d5c37033e69abe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="installutilexe-installer-tool" class="xliff"></a>
-
-# Installutil.exe (安裝程式工具)
+# <a name="installutilexe-installer-tool"></a>Installutil.exe (安裝程式工具)
 安裝程式工具是一種命令列公用程式，可讓您透過執行指定之組件中的安裝程式元件，來安裝和解除安裝伺服器資源。 這個工具可以與 <xref:System.Configuration.Install> 命名空間中的類別一起使用。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 installutil [/u[ninstall]] [options] assembly [[options] assembly] ...  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|描述|  
 |--------------|-----------------|  
 |`assembly`|要執行安裝程式元件之組件的檔案名稱。 如果您要使用 `/AssemblyName` 選項指定組件的強式名稱，請略過此參數。|  
   
 <a name="options"></a>   
-<a id="options" class="xliff"></a>
-
-## 選項  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  
@@ -79,9 +71,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |`/u`[`ninstall`]|解除安裝指定的組件。 不同於其他選項，`/u` 會套用至所有組件 (與選項出現在命令列上的位置無關)。|  
   
 <a name="cmdline"></a>   
-<a id="additional-installer-options" class="xliff"></a>
-
-## 其他安裝程式選項  
+## <a name="additional-installer-options"></a>其他安裝程式選項  
  組件中使用的個別安裝程式可能會辨識列在[選項](#options)區段以外的選項。 若要了解這些選項，請在命令列上使用組件路徑搭配 `/?` 或 `/help` 選項以執行 InstallUtil.exe。 若要指定這些選項，請在命令列上將這些選項與 InstallUtil.exe 辨識的選項包含在一起。  
   
 > [!NOTE]
@@ -92,9 +82,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 > [!IMPORTANT]
 >  在某些情況下，傳遞給安裝程式的參數可能包含機密或可識別個人身分的資訊，這些資訊預設是寫入到純文字的記錄檔。 若要防止這個行為，您可以在命令列上的 Installutil.exe 後面指定 `/LogFile=` (不含 *filename* 引數) 以隱藏記錄檔。  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  .NET Framework 應用程式由傳統的程式檔和關聯的資源組成，例如訊息佇列、事件記錄檔，以及部署應用程式時所必須建立的效能計數器。 安裝應用程式時，您可以使用組件的安裝元件來建立這些資源，並在解除安裝應用程式時移除它們。 Installutil.exe 會偵測並執行這些安裝程式元件。  
   
  您可以在相同命令列上指定多個組件。 任何出現在組件名稱之前的選項都會套用到該組件的安裝。 除了 `/u` 和 `/AssemblyName` 之外，選項可以累積但不可覆寫。 也就是說，除非以新的值指定選項，否則為一個組件指定的選項會套用到所有後續的組件。  
@@ -115,9 +103,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
  您不能使用 Installutil.exe 部署使用 C++ 建立的 Windows 服務，因為 Installutil.exe 無法辨識由 C++ 編譯器產生的內嵌機器碼。 如果您嘗試使用 Installutil.exe 部署 C++ Windows 服務，就會擲回類似 <xref:System.BadImageFormatException> 的例外狀況。 若要處理這種案例，請將服務程式碼移至 C++ 模組，然後以 C# 或 Visual Basic 撰寫安裝程式物件。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會顯示 InstallUtil.exe 命令語法及選項的描述。  
   
 ```  
@@ -190,9 +176,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Configuration.Install>   
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

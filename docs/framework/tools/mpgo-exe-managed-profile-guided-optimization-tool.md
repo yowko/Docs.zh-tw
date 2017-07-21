@@ -32,8 +32,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/30/2017
 
 ---
-# Mpgo.exe (Managed 特性指引最佳化工具)
-<a id="mpgoexe-managed-profile-guided-optimization-tool" class="xliff"></a>
+# <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Managed 特性指引最佳化工具)
 Managed 特性指引最佳化工具 (Mpgo.exe) 是一項命令列工具，它會使用常見的使用者情節最佳化[原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 所建立的原生映像組件。 此工具可讓您執行產生分析資料的訓練情節。 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 會使用這項資料最佳化其產生的原生映像應用程式組件。 訓練情節是指嘗試執行應用程式的預期使用方式。 Mpgo.exe 會隨 Visual Studio Ultimate 2012 (含) 以後版本提供。 從 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 開始，您也可以使用 Mpgo.exe 最佳化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式。  
   
  特性指引最佳化會從訓練情節收集資料並使用該資料最佳化原生映像的配置，藉此改善應用程式啟動時間、記憶體使用率 (工作組大小) 以及輸送量。  
@@ -50,15 +49,13 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
   
  針對 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式：  
   
-## 語法
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>語法  
   
 ```  
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
-#### 參數
-<a id="parameters" class="xliff"></a>  
+#### <a name="parameters"></a>參數  
  Mpgo.exe 的所有引數都不區分大小寫。 命令前面會加上虛線。  
   
 > [!NOTE]
@@ -82,8 +79,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-LeaveNativeImages`|指定執行情節之後不應移除檢測的原生映像。 此選項主要是在您要取得針對執行的情節指定的應用程式時使用。 它會防止 Mpgo.exe 後續執行後重新建立原生映像。 如果您指定此選項，當您完成執行應用程式時，可能會有失去關聯的原生映像留在快取中。 在這種情況下，請使用相同的案例與組件清單執行 Mpgo.exe，並使用 `–RemoveNativeImages` 參數移除這些原生映像。|  
 |`-RemoveNativeImages`|從已指定 `–LeaveNativeImages` 的回合進行清理。 如果指定了 `-RemoveNativeImages`，Mpgo.exe 就會忽略除了 `-64bit` 和 `–AssemblyList` 以外的所有引數，並會在移除所有已檢測的原生映像之後結束。|  
   
-## 備註
-<a id="remarks" class="xliff"></a>  
+## <a name="remarks"></a>備註  
  您可以在命令列上多次使用 `–AssemblyList` 和 `- AssemblyListFile`。  
   
  如果您在指定組件時未指定完整路徑名稱，Mpgo.exe 將在目前目錄中尋找。 如果您指定了不正確的路徑，Mpgo.exe 就會顯示錯誤訊息，但仍繼續產生其他組件的資料。 如果您指定的組件不是在訓練情節期間載入，則不會產生該組件的訓練資料。  
@@ -95,8 +91,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 > [!NOTE]
 >  不建議您將 Ngen.exe 和 Mpgo.exe 用於 ASP.NET 應用程式和 Windows Communication Foundation (WCF) 服務。  
   
-## 若要使用 Mpgo.exe
-<a id="to-use-mpgoexe" class="xliff"></a>  
+## <a name="to-use-mpgoexe"></a>若要使用 Mpgo.exe  
   
 1.  使用已安裝 Visual Studio Ultimate 2012 和您的應用程式的電腦。  
   
@@ -108,8 +103,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 4.  應用程式設定 (使用 Mpgo.exe 提供的映像) 將安裝最佳化的原生映像。  
   
-## 建議的工作流程
-<a id="suggested-workflow" class="xliff"></a>  
+## <a name="suggested-workflow"></a>建議的工作流程  
   
 1.  使用 Mpgo.exe 與 `–Scenario` 參數建立一組最佳化的 IL 組件。  
   
@@ -119,8 +113,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
  這個程序可確保所有組件都擁有最佳化資料。 如果您經常簽入更新的最佳化組件 (步驟 1 和 2)，則產品開發期間的整體效能數字將會更一致。  
   
-## 從 Visual Studio 使用 Mpgo.exe
-<a id="using-mpgoexe-from-visual-studio" class="xliff"></a>  
+## <a name="using-mpgoexe-from-visual-studio"></a>從 Visual Studio 使用 Mpgo.exe  
  您可以從 Visual Studio 執行 Mpgo.exe (請參閱[如何：指定建置事件 (C#)](http://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335) 一文)，但有下列限制：  
   
 -   因為 Visual Studio 巨集預設也會使用結尾斜線標記，所以您無法使用前後加上引號且包含結尾斜線標記的路徑  (例如，`–OutDir "C:\Output Folder\"` 無效。)若要解決此限制，您可以逸出結尾斜線  (例如，請改用 `-OutDir "$(OutDir)\"`。)  
@@ -128,8 +121,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 -   根據預設，Mpgo.exe 不在 Visual Studio 組建路徑上。 您必須將路徑加入至 Visual Studio，或是在 Mpgo 命令列上指定完整路徑。 您可以在 Visual Studio 的建置後事件中使用 `–Scenario` 或 `–Import` 參數。 但一般的程序會從 Visual Studio 開發人員命令提示字元中使用一次 `–Scenario`，然後在每次建置之後，再使用 `–Import` 更新最佳化組件。例如：`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`。  
   
 <a name="samples"></a>   
-## 範例
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>範例  
  下列 Visual Studio 開發人員命令提示字元中的 Mpgo.exe 命令會最佳化稅務應用程式：  
   
 ```  
@@ -148,8 +140,7 @@ mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" �
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
  [Improving Launch Performance for your Desktop Applications](http://go.microsoft.com/fwlink/p/?LinkId=248943)  (改善桌面應用程式的啟動效能)  

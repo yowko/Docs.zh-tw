@@ -29,23 +29,20 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/02/2017
 
 ---
-# SignTool.exe (簽署工具)
-<a id="signtoolexe-sign-tool" class="xliff"></a>
+# <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-## 語法
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>語法  
   
 ```  
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### 參數
-<a id="parameters" class="xliff"></a>  
+#### <a name="parameters"></a>參數  
   
 |引數|說明|  
 |--------------|-----------------|  
@@ -71,8 +68,7 @@ signtool [command] [options] [file_name | ...]
 |**/debug**|顯示偵錯資訊。|  
   
 <a name="catdb"></a>   
-## catdb 命令選項
-<a id="catdb-command-options" class="xliff"></a>  
+## <a name="catdb-command-options"></a>catdb 命令選項  
  下表列出可以搭配 `catdb` 命令使用的選項。  
   
 |Catdb 選項|說明|  
@@ -83,8 +79,7 @@ signtool [command] [options] [file_name | ...]
 |`/u`|指定為加入的目錄檔自動產生一個唯一的名稱。 必要時，目錄檔會重新命名，以避免與現有的目錄檔發生名稱衝突。 如果沒有指定這個選項，簽署工具會覆寫具有與所要加入之目錄相同名稱的所有現有目錄。|  
   
 <a name="sign"></a>   
-## Sign 命令選項
-<a id="sign-command-options" class="xliff"></a>  
+## <a name="sign-command-options"></a>Sign 命令選項  
  下表列出可以搭配 `sign` 命令使用的選項。  
   
 |Sign 命令選項|說明|  
@@ -120,8 +115,7 @@ signtool [command] [options] [file_name | ...]
  如需使用方式範例，請參閱[使用 SignTool 簽署檔案](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx)。  
   
 <a name="TimeStamp"></a>   
-## TimeStamp 命令選項
-<a id="timestamp-command-options" class="xliff"></a>  
+## <a name="timestamp-command-options"></a>TimeStamp 命令選項  
  下表列出可以搭配 `TimeStamp` 命令使用的選項。  
   
 |TimeStamp 選項|說明|  
@@ -135,8 +129,7 @@ signtool [command] [options] [file_name | ...]
  如需使用範例，請參閱[新增時間戳記至先前已簽署的檔案](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx)。  
   
 <a name="Verify"></a>   
-## 驗證命令選項
-<a id="verify-command-options" class="xliff"></a>  
+## <a name="verify-command-options"></a>驗證命令選項  
   
 |Verify 選項|說明|  
 |-------------------|-----------------|  
@@ -161,8 +154,7 @@ signtool [command] [options] [file_name | ...]
   
  如需使用方式範例，請參閱[使用 SignTool 驗證檔案簽章](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx)。  
   
-## 傳回值
-<a id="return-value" class="xliff"></a>  
+## <a name="return-value"></a>傳回值  
  簽署工具終止時會傳回下列其中一個結束代碼。  
   
 |結束代碼|描述|  
@@ -171,8 +163,7 @@ signtool [command] [options] [file_name | ...]
 |1|執行失敗。|  
 |2|執行已完成，但出現警告。|  
   
-## 範例
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>範例  
  下列命令會將目錄檔 MyCatalogFileName.cat 加入至系統元件和驅動程式資料庫。 如有必要防止取代名為 `/v` 的現有目錄檔案，`MyCatalogFileName.cat` 選項會產生一個唯一的名稱。  
   
 ```  
@@ -233,8 +224,7 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

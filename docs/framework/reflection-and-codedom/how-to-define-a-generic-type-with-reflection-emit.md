@@ -22,20 +22,16 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 4f4711df8c95e32756d58a83e1e65375450786de
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-define-a-generic-type-with-reflection-emit" class="xliff"></a>
-
-# 如何：使用反映發出定義泛型類型
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反映發出定義泛型類型
 本主題示範如何建立具有兩個型別參數的簡單泛型類型、如何將類別條件約束、介面條件約束及特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數作為參數類型及傳回類型。  
   
 > [!IMPORTANT]
 >  方法不是只因為屬於泛型型別並使用該類型的型別參數，而成為泛型。 方法只有在有自己的型別參數清單時，才會是泛型。 泛型型別上的大部分方法不是泛型，如本例所示。 如需發出泛型方法的範例，請參閱[如何︰使用反映發出定義泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
   
-<a id="to-define-a-generic-type" class="xliff"></a>
-
-### 定義泛型型別  
+### <a name="to-define-a-generic-type"></a>定義泛型型別  
   
 1.  定義名為 `GenericEmitExample1` 的動態組件。 在本例中，組件在執行後會儲存到磁碟，因此指定 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=fullName>。  
   
@@ -96,9 +92,7 @@ ms.lasthandoff: 06/02/2017
   
      [!code-cpp[EmitGenericType#10](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#10)]  [!code-csharp[EmitGenericType#10](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#10)]  [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例會定義名為 `Sample` 的類別，以及一個基底類別和兩個介面。 程式會為 `Sample` 定義兩個泛型型別參數，將它轉換成泛型型別。 型別參數是唯一可將類型變成泛型的物件。 程式會顯示定義型別參數之前和之後的測試訊息，以顯示此變化。  
   
  使用基底類別和介面的型別參數 `TSecond` 用於示範類別和介面條件約束，而型別參數 `TFirst` 用於示範特殊條件約束。  
@@ -113,9 +107,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)] [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)] [!code-vb[EmitGenericType#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#1)]  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
@@ -123,9 +115,7 @@ ms.lasthandoff: 06/02/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>   
  [使用反映發出](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
  [反映發出動態組件案例](http://msdn.microsoft.com/en-us/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

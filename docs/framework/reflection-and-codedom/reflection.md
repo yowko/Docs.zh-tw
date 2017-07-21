@@ -37,12 +37,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 176d818ab7d7bcad93c9bd7d6debe43631e43c89
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="reflection-in-the-net-framework" class="xliff"></a>
-
-# .NET Framework 中的反映
+# <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反映
 <xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=fullName>，可讓您取得已載入[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9)、[介面](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5)和[實值型別](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。  
   
  [Common Language Runtime](../../../docs/standard/clr.md) 載入器會管理[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
@@ -73,9 +71,7 @@ ms.lasthandoff: 06/02/2017
   
  反映還有其他用途。 JScript 之類的語言編譯器會使用反映來建構符號表。 <xref:System.Runtime.Serialization> 命名空間中的類別會使用反映來存取資料，並決定要保存哪個欄位。 <xref:System.Runtime.Remoting> 命名空間中的類別在序列化時會間接使用反映。  
   
-<a id="runtime-types-in-reflection" class="xliff"></a>
-
-## 反映中的執行階段類型  
+## <a name="runtime-types-in-reflection"></a>反映中的執行階段類型  
  反映會提供類別，例如 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo>，表示類型、成員、參數和其他程式碼實體。 不過，當您使用反映時不直接搭配類別使用，則其中大部分都會是抽象的 (在 Visual Basic 中為 `MustInherit`)。 您可改用 Common Language Runtime (CLR) 所提供的類型。  
   
  例如，當您使用 C# `typeof` 運算子 (在 Visual Basic 中為 `GetType`) 來取得 <xref:System.Type> 物件時，該物件確實為 `RuntimeType`。 `RuntimeType` 衍生自 <xref:System.Type>，並提供所有抽象方法的實作。  
@@ -83,9 +79,7 @@ ms.lasthandoff: 06/02/2017
  這些執行階段類別是 `internal` (在 Visual Basic 中為 `Friend`)。 它們不會分別從其基底類別記錄，因為它們的行為由基底類別的文件所描述。  
   
 <a name="related_topics"></a>   
-<a id="related-topics" class="xliff"></a>
-
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |標題|說明|  
 |-----------|-----------------|  
@@ -99,9 +93,7 @@ ms.lasthandoff: 06/02/2017
 |[如何：使用反映連結委派](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
 |[發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|說明如何產生動態組件和動態方法。|  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.Type?displayProperty=fullName>  
   
  <xref:System.Reflection>  

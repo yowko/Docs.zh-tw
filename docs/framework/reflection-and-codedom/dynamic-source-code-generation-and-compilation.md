@@ -26,12 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 86483858b93f58b22d8c8440baa76d68250745dd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="dynamic-source-code-generation-and-compilation" class="xliff"></a>
-
-# 動態原始程式碼的產生和編譯
+# <a name="dynamic-source-code-generation-and-compilation"></a>動態原始程式碼的產生和編譯
 .NET Framework 包含稱為程式碼文件物件模型 (CodeDOM) 的機制，它可讓發出原始程式碼的程式開發人員在執行階段，根據代表要呈現之程式碼的單一模型，產生多種程式語言的原始程式碼。  
   
  為了代表原始程式碼，CodeDOM 項目會彼此連結，形成稱為 CodeDOM 圖形的資料結構，它會建立一些原始程式碼結構的模型。  
@@ -42,9 +40,7 @@ ms.lasthandoff: 06/02/2017
   
  .NET Framework 包含 <xref:Microsoft.CSharp.CSharpCodeProvider>、<xref:Microsoft.JScript.JScriptCodeProvider> 和 <xref:Microsoft.VisualBasic.VBCodeProvider> 的程式碼產生器和程式碼編譯器。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
  說明常見的用法，並示範使用 CodeDOM 建置簡單的物件圖形。  
   
@@ -57,17 +53,13 @@ ms.lasthandoff: 06/02/2017
  [如何：使用 CodeDOM 建立類別](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
  描述如何使用 CodeDOM 產生包含欄位、屬性、方法、建構函式和進入點的類別。  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.CodeDom>  
  定義元素，代表以 Common Language Runtime 為目標之程式設計語言中的程式碼元素。  
   
  <xref:System.CodeDom.Compiler>  
  定義介面以便在執行階段產生和編譯程式碼。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [CodeDOM 快速參考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  提供快速方法，讓開發人員尋找代表原始程式碼元素的 CodeDOM 元素。

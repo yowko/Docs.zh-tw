@@ -22,19 +22,15 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 3aa6a381d7c6017e27deac642f23b68c50af7509
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="using-application-domains" class="xliff"></a>
-
-# 使用應用程式定義域
+# <a name="using-application-domains"></a>使用應用程式定義域
 應用程式定義域為 Common Language Runtime 提供隔離單位。 它們是在處理序內建立和執行。 應用程式定義域通常是由執行階段主機所建立，這是負責將執行階段載入處理序以及在應用程式定義域中執行使用者程式碼的應用程式。 執行階段主機會建立處理序和預設的應用程式定義域，在內部執行 Managed 程式碼。 執行階段主機包括 ASP.NET、Microsoft Internet Explorer 和 Windows 殼層。  
   
  大部分的應用程式不需要建立自己的應用程式定義域，執行階段主機會為您建立任何必要的應用程式定義域。 但如果您的應用程式需要隔離程式碼或使用及卸載 DLL，您可以建立及設定其他應用程式定義域。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [操作說明：建立應用程式定義域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  描述如何以程式設計方式建立應用程式定義域。  
   
@@ -62,15 +58,11 @@ ms.lasthandoff: 06/02/2017
  [解析組件載入](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
  提供使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件解析組件載入失敗的指引。  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.AppDomain>  
  代表應用程式定義域。 提供建立及控制應用程式定義域的方法。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  提供組件執行函式的概觀。  
   

@@ -31,8 +31,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/08/2017
 
 ---
-# .NET Framework 工具
-<a id="net-framework-tools" class="xliff"></a>
+# <a name="net-framework-tools"></a>.NET Framework 工具
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
   
  本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝  (如需安裝資訊，請參閱 [Visual Studio 下載](http://go.microsoft.com/fwlink/?LinkID=325532))。  
@@ -44,8 +43,7 @@ ms.lasthandoff: 06/08/2017
 > [!NOTE]
 >  某些工具為 32 位元電腦或 64 位元電腦專用。 請務必執行電腦適用的工具版本。  
   
-## 本章節內容
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>本章節內容  
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  從模組或資源檔中產生一個包含組件資訊清單的檔案。  
   
@@ -145,8 +143,7 @@ ms.lasthandoff: 06/08/2017
  [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  幫助您當地語系化 Windows Forms 所使用的使用者介面 (UI) 資源 (.resx 或 .resources 檔案)。 您可以解譯字串，然後調整大小、移動和隱藏控制項來容納當地語系化的字串。  
   
-## 相關章節
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>相關章節  
  [工具](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  包括 isXPS Conformance 工具 (isXPS.exe) 和效能程式碼剖析工具這類工具。  
   

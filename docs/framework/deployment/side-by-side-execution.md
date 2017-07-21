@@ -25,12 +25,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: 460471cceda60697382d770e1b95be75ff3cfc8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="side-by-side-execution-in-the-net-framework" class="xliff"></a>
-
-# .NET Framework 並存執行
+# <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
   
  下圖顯示在同一台電腦上有幾個應用程式使用執行階段的兩個不同版本。 應用程式 A、B 和 C 使用 Runtime 1.0 版，而應用程式 D 則使用 Runtime 1.1 版。  
@@ -47,9 +45,7 @@ ms.lasthandoff: 06/02/2017
   
  並存執行提供更多控制權，供您控制應用程式所繫結之元件版本，以及應用程式所使用的執行階段版本。  
   
-<a id="benefits-of-side-by-side-execution" class="xliff"></a>
-
-## 並存執行的優點  
+## <a name="benefits-of-side-by-side-execution"></a>並存執行的優點  
  在 Windows XP 和 .NET Framework 推出之前，由於應用程式無法辨別相同程式碼的不相容版本，因此會發生 DLL 衝突的狀況。 DLL 中包含的類型資訊只繫結至檔案名稱， 故應用程式無從得知 DLL 中包含的類型是否與應用程式建置時所用的類型相同。 因此，新版元件可能會覆寫舊版元件並破壞應用程式。  
   
  並存執行和 .NET Framework 提供下列功能以消除 DLL 的衝突：  
@@ -66,44 +62,32 @@ ms.lasthandoff: 06/02/2017
   
      使用 .NET Framework，您可以建立隔離執行的應用程式和元件。 這種隔離執行的功能是並存執行的基本構成要素。 隔離的主要因素在於能夠掌握您要使用的資源，並且能放心地在應用程式或元件的多個版本之間共用資源。 隔離也包括使用版本特定的方式儲存檔案。 如需隔離的詳細資訊，請參閱[建立並存執行元件的方針](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
-<a id="version-compatibility" class="xliff"></a>
-
-## 版本相容性  
+## <a name="version-compatibility"></a>版本相容性  
  .NET Framework 的 1.0 和 1.1 版設計成可彼此相容。 用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。 但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。 以 2.0 版建立的應用程式僅能在 2.0 版上執行。 2.0 版的應用程式在 1.1 或之前的版本上無法執行。  
   
  .NET Framework 的版本被視為一個由執行階段及其關聯的 .NET Framework 組件組成的單一單位 (這個概念稱為「組件的版本對應轉換」)。 您可以將組件繫結重新導向，以包含 .NET Framework 組件的其他版本，但是覆寫預設組件繫結可能會有風險，因此部署之前必須經過棈密的測試。  
   
-<a id="locating-runtime-version-information" class="xliff"></a>
-
-## 找出執行階段版本資訊  
+## <a name="locating-runtime-version-information"></a>找出執行階段版本資訊  
  編譯應用程式或元件時所使用的執行階段版本資訊，以及應用程式執行所需的執行階段版本資訊，會分開儲存在兩個位置。 編譯應用程式或元件時所使用的執行階段版本資訊會儲存在 Managed 可執行檔中； 而應用程式或元件所需的執行階段版本資訊則儲存在應用程式組態檔中。  
   
-<a id="runtime-version-information-in-the-managed-executable" class="xliff"></a>
-
-### Managed 可執行檔中的執行階段版本資訊  
+### <a name="runtime-version-information-in-the-managed-executable"></a>Managed 可執行檔中的執行階段版本資訊  
  每個 Managed 應用程式和元件的可攜式執行檔 (PE) 標頭會包含建置時所使用的執行階段版本資訊。 Common Language Runtime 使用這項資訊來決定應用程式執行時最有可能需要的執行階段版本。  
   
-<a id="runtime-version-information-in-the-application-configuration-file" class="xliff"></a>
-
-### 應用程式組態檔中的執行階段版本資訊  
+### <a name="runtime-version-information-in-the-application-configuration-file"></a>應用程式組態檔中的執行階段版本資訊  
  除了 PE 檔標頭中的資訊之外，還可使用提供執行階段版本資訊的應用程式組態檔來部署應用程式。 應用程式組態檔是以 XML 為基礎的檔案，它是由應用程式開發人員所設計，並與應用程式一起發行。 如果這個檔案中有 [\<startup> 區段](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)的 [\<requiredRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)，則會指定該應用程式支援哪個版本的執行階段和元件。 您也可以在測試中使用這個檔案測試應用程式與各種執行階段版本的相容性。  
   
  Unmanaged 程式碼 (包括 COM 和 COM+ 應用程式) 可以有應用程式組態檔，以供執行階段用來與 Managed 程式碼互動。 應用程式組態檔會影響您透過 COM 啟動的任何 Managed 程式碼。 這個檔案可以指定程式碼支援的執行階段版本，以及組件重新導向。 根據預設，呼叫 Managed 程式碼的 COM Interop 應用程式會使用電腦上安裝的最新版執行階段。  
   
  如需應用程式組態檔的詳細資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)。  
   
-<a id="determining-which-version-of-the-runtime-to-load" class="xliff"></a>
-
-## 決定要載入的執行階段版本  
+## <a name="determining-which-version-of-the-runtime-to-load"></a>決定要載入的執行階段版本  
  Common Language Runtime 使用下列資訊來決定要為應用程式載入的執行階段版本：  
   
 -   可用的執行階段版本。  
   
 -   應用程式支援的執行階段版本。  
   
-<a id="supported-runtime-versions" class="xliff"></a>
-
-### 支援的執行階段版本  
+### <a name="supported-runtime-versions"></a>支援的執行階段版本  
  執行階段使用應用程式組態檔和可攜式執行檔 (PE) 標頭，來決定應用程式支援的執行階段版本。 如果應用程式組態檔不存在，執行階段會載入應用程式的 PE 檔標頭中指定的執行階段版本 (如果該版本可用的話)。  
   
  如果應用程式組態檔存在，執行階段會根據下列程序的結果來決定要載入的適當執行階段版本：  
@@ -120,9 +104,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  載入執行階段版本之後，組件繫結重新導向可以指定載入個別 .NET Framework 組件的不同版本。 這些繫結重新導向只會影響被重新導向的特定組件。  
   
-<a id="partially-qualified-assembly-names-and-side-by-side-execution" class="xliff"></a>
-
-## 部分限定的組件名稱和並存執行  
+## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>部分限定的組件名稱和並存執行  
  由於不完整的組件參考可能會造成並存問題，因此只能用來繫結至應用程式目錄中的組件。 請避免在您的程式碼中使用不完整的組件參考。  
   
  若要減少程式碼中不完整的組件參考，您可以在應用程式組態檔中使用 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 項目，讓程式碼中不完整的組件參考變完整。 請使用 **\<qualifyAssembly>** 項目，只指定不完整參考中未設定的欄位。 以 **fullName** 屬性列出的組件識別必須包含使組件名稱完整的所有必要資訊：組件名稱、公開金鑰、文化特性和版本。  
@@ -144,9 +126,7 @@ publicKeyToken=...,
 > [!NOTE]
 >  您可以使用 **LoadWithPartialName** 方法，略過禁止從全域組件快取載入不完整參考組件的 Common Language Runtime 限制。 這個方法只能用於遠端處理案例，因為它很容易造成並存執行的問題。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |標題|說明|  
 |-----------|-----------------|  
@@ -156,7 +136,5 @@ publicKeyToken=...,
 |[Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|提供組件的概觀。|  
 |[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)|提供應用程式定義域的概觀。|  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

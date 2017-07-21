@@ -31,30 +31,24 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="winresexe-windows-forms-resource-editor" class="xliff"></a>
-
-# Winres.exe (Windows Form 資源編輯器)
+# <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Form 資源編輯器)
 Windows Form 資源編輯器 (Winres.exe) 是一項視覺化配置工具，可以幫助當地語系化專家將表單所使用的 Windows Form 使用者介面 (UI) 資源當地語系化。 做為 Winres.exe 輸入內容的 .resx 或 .resources 檔案，可以利用視覺化設計環境 (例如 Microsoft Visual Studio) 建立。 如需在 .NET Framework 應用程式中部署資源的資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 winres resourceFile   
 winres /?   
 ```  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
   
 |引數|說明|  
 |--------------|-----------------|  
@@ -80,18 +74,14 @@ winres /?
   
  如果 Winres.exe 無法解析控制項的類型，它會在已當地語系化的 .resx 或 .resources 檔案中建立預留位置控制項。 預留位置控制項在 Windows Form 表單上會顯示為規劃視窗。 規劃視窗的大小和位置與實際控制項的大小和位置相符。 預留位置控制項可使用的所有可當地語系化屬性都會出現在 [屬性] 視窗中。 您對預留位置控制項所做的任何變更都會儲存起來，供實際的控制項使用。  
   
-<a id="winresexe-versus-visual-studio" class="xliff"></a>
-
-## Winres.exe 與 Visual Studio 比較  
+## <a name="winresexe-versus-visual-studio"></a>Winres.exe 與 Visual Studio 比較  
  一般說來，在開始將應用程式的 Windows Form 表單當地語系化之前，應該先決定要使用 Visual Studio 或 Winres.exe 做為當地語系化工具。 由於版本相容性 (稍後說明) 的緣故，您可能無法在這兩種工具之間切換。  
   
  Visual Studio 的優點就是您可以用它來開發應用程式，並且將應用程式當地語系化。 若要在開發完成後將表單當地語系化，請將表單的 <xref:System.ComponentModel.LocalizableAttribute> (屬性編輯器中的 **Localizable** 屬性) 設定為 `true`，並將其 **Language** 屬性變更為所要的目標文化特性。 然後編輯字串並調整控制項的位置和大小，以容納目標文化特性的字串。 當您儲存當地語系化的 .resx 檔案時，Visual Studio 只會將可當地語系化的屬性 (也就是在目標文化特性中會改變的屬性) 寫入檔案中。 Visual Studio 會在正確的目錄位置中，自動為當地語系化的 .resx 檔案建立附屬組件。  另請參閱[逐步解說：將 Windows Forms 當地語系化](http://msdn.microsoft.com/library/y99d1cd3\(v=vs.110\))。  
   
  雖然 Visual Studio 提供整合式開發和當地語系化環境，但是，如果當地語系化工作是由協力廠商的當地語系化人員執行，則建議您使用 Winres.exe 工具。 由於 Winres.exe 只是一個當地語系化工具，因此可以讓應用程式的程式碼與要當地語系化的表單更清楚劃分開來，在管理大型專案時，這樣的功能非常實用。  
   
-<a id="using-winresexe" class="xliff"></a>
-
-## 使用 Winres.exe  
+## <a name="using-winresexe"></a>使用 Winres.exe  
  若要使用 Winres.exe 進行當地語系化，您必須先使用像是 Visual Studio 的表單設計工具這類視覺化設計工具來開發應用程式。 開發完成時，請將表單的 <xref:System.ComponentModel.LocalizableAttribute> (屬性編輯器中的 **Localizable** 屬性) 設定為 `true`，然後將預設文化特性的 .resx 檔案交給協力廠商的當地語系化人員。 這個 .resx 檔案包含 Winres.exe 重新建立原始表單的設計階段版本所使用的額外資訊。  
   
 > [!CAUTION]
@@ -107,9 +97,7 @@ winres /?
   
 -   可以使用熱鍵來檢查是否有重複：從 [格式] 功能表，按一下 [檢查熱鍵] 命令。  
   
-<a id="version-compatibility" class="xliff"></a>
-
-## 版本相容性  
+## <a name="version-compatibility"></a>版本相容性  
  由於 Visual Studio .NET 2002 和 Visual Studio 2005 的資源檔格式不同，Winres.exe 也做了相對的改變以求相容。 因此，通常您應該使用要用來建立應用程式的 .NET Framework 隨附的 Winres.exe 版本。 下表列出相容的版本。  
   
 |Visual Studio|.NET Framework|Winres.exe|  
@@ -127,13 +115,9 @@ winres /?
 > [!NOTE]
 >  雖然 VSFM 有和 Visual Studio 相容的優點，但由於它只儲存資源檔中變更過的值，因此 Winres.exe 要求目前資源檔的父代必須位於相同的目錄內。 例如，編輯 `TestApp.de-DE.resources` 德文 (德國) 資源檔時，必須要有預設資源檔 `TestApp.resx`，而且可能也需要文化特性中性資源檔 `TestApp.de.resources`。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
   
-<a id="to-localize-a-resx-or-resources-file-associated-with-a-form" class="xliff"></a>
-
-#### 將與表單相關聯的 .resx 或 .resources 檔案當地語系化  
+#### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>將與表單相關聯的 .resx 或 .resources 檔案當地語系化  
   
 1.  在開發人員命令提示字元中輸入 `winres`，執行 Winres.exe。  
   
@@ -164,9 +148,7 @@ winres /?
   
 5.  選取適當的文化特性和檔案模式，然後按一下 [確定]。 工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 [CultureInfo 類別](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.LocalizableAttribute>   
  <xref:System.Globalization.CultureInfo>   
  <xref:System.Resources.ResourceManager>   

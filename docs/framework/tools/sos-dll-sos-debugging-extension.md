@@ -27,28 +27,22 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 98109bdd2261fce22bdb00679d0822223363c2be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="sosdll-sos-debugging-extension" class="xliff"></a>
-
-# SOS.dll (SOS 偵錯擴充功能)
+# <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
 SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯 Managed 程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
   
 > [!NOTE]
 >  如果您使用的是 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]，Visual Studio 中的 Windows 偵錯工具支援 SOS.dll，但是 Visual Studio 偵錯工具的即時運算視窗中則不支援。  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 ![command] [options]   
 ```  
   
-<a id="commands" class="xliff"></a>
-
-## 命令  
+## <a name="commands"></a>命令  
   
 |命令|說明|  
 |-------------|-----------------|  
@@ -117,9 +111,7 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 |**VMMap**|周遊虛擬位址空間，並顯示每個區域所套用的保護類型。|  
 |**VMStat**|提供虛擬位址空間的摘要檢視，並依據套用至該記憶體的各種保護類型 (無限制、保留、認可、私用、對應、影像) 進行排列。 TOTAL 資料行會顯示 AVERAGE 資料行乘以 BLK COUNT 資料行的結果。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  SOS 偵錯擴充功能讓您能夠檢視在通用語言執行平台內執行之程式碼的相關資訊。 例如，您可以使用 SOS 偵錯擴充功能來顯示 Managed 堆積的相關資訊、尋找堆積損毀、顯示執行階段所使用的內部資料類型，並檢視在執行階段內執行之所有 Managed 程式碼的資訊。  
   
  若要在 Visual Studio 中使用 SOS 偵錯擴充功能，請安裝 [Windows 驅動程式套件 (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。 如需 Visual Studio 的整合式偵錯環境的詳細資訊，請參閱 Windows 開發人員中心內的[Debugging Environments](http://msdn.microsoft.com/library/windows/hardware/hh406268.aspx)(偵錯環境)。  
@@ -142,9 +134,7 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 .load <full path to sos.dll>  
 ```  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會顯示在位址 `00ad28d0` 之陣列的內容。  顯示會從第二個元素開始，然後連續顯示五個元素。  
   
 ```  
@@ -229,8 +219,6 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 !token2ee unittest.exe 02000003  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -21,19 +21,15 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 5839e2f596d31faf4843a03f1a34d4f1aeafe144
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-examine-and-instantiate-generic-types-with-reflection" class="xliff"></a>
-
-# 如何：使用反映檢視和執行個體化泛型類型
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>如何：使用反映檢視和執行個體化泛型類型
 取得泛型型別相關資訊的方式和取得其他類型相關資訊的方式一樣：檢查代表泛型型別的 <xref:System.Type> 物件。 主要差異是泛型型別有代表其泛型型別參數的 <xref:System.Type> 物件清單。 本節的第一個程序是檢查泛型型別。  
   
  您可以將型別引數繫結至泛型型別定義的型別參數，建立代表建構類型的 <xref:System.Type> 物件。 第二個程序即示範此作業。  
   
-<a id="to-examine-a-generic-type-and-its-type-parameters" class="xliff"></a>
-
-### 檢查泛型型別及其型別參數  
+### <a name="to-examine-a-generic-type-and-its-type-parameters"></a>檢查泛型型別及其型別參數  
   
 1.  取得表示泛型型別的 <xref:System.Type> 執行個體。 在下列程式碼中，類型是使用 C# `typeof` 運算子取得 (Visual Basic 為 `GetType`，Visual C++ 為 `typeid`)。 請參閱 <xref:System.Type> 類別主題了解取得 <xref:System.Type> 物件的其他方法。 請注意，在此程序的其餘部分中，類型是包含在名為 `t` 的方法參數中。  
   
@@ -67,14 +63,10 @@ ms.lasthandoff: 06/02/2017
   
      [!code-cpp[HowToGeneric#9](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#9)]  [!code-csharp[HowToGeneric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#9)]  [!code-vb[HowToGeneric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#9)]  
   
-<a id="constructing-an-instance-of-a-generic-type" class="xliff"></a>
-
-## 建構泛型型別的執行個體  
+## <a name="constructing-an-instance-of-a-generic-type"></a>建構泛型型別的執行個體  
  泛型型別就像範本。 除非指定其泛型型別參數的真實類型，否則無法建立它的執行個體。 若要在執行階段使用反映執行這項操作，需要 <xref:System.Type.MakeGenericType%2A> 方法。  
   
-<a id="to-construct-an-instance-of-a-generic-type" class="xliff"></a>
-
-#### 建構泛型型別的執行個體  
+#### <a name="to-construct-an-instance-of-a-generic-type"></a>建構泛型型別的執行個體  
   
 1.  取得表示泛型型別的 <xref:System.Type> 物件。 下列程式碼以兩種方式取得泛型型別 <xref:System.Collections.Generic.Dictionary%602>：使用 <xref:System.Type.GetType%28System.String%29?displayProperty=fullName> 方法多載及描述類型的字串，以及在建構的類型 `Dictionary\<String, Example>`(Visual Basic 為 `Dictionary(Of String, Example)`) 上呼叫 <xref:System.Type.GetGenericTypeDefinition%2A> 方法。 <xref:System.Type.MakeGenericType%2A> 方法需要泛型型別定義。  
   
@@ -92,9 +84,7 @@ ms.lasthandoff: 06/02/2017
   
      [!code-cpp[HowToGeneric#13](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#13)]  [!code-csharp[HowToGeneric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#13)]  [!code-vb[HowToGeneric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#13)]  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例會定義 `DisplayGenericType` 方法，檢查程式碼中的泛型型別定義和建構的類型，並顯示其相關資訊。 `DisplayGenericType` 方法示範如何使用 <xref:System.Type.IsGenericType%2A>、<xref:System.Type.IsGenericParameter%2A> 和 <xref:System.Type.GenericParameterPosition%2A> 屬性以及 <xref:System.Type.GetGenericArguments%2A> 方法。  
   
  此範例也會定義 `DisplayGenericParameter` 方法，檢查泛型型別參數，並顯示其條件約束。  
@@ -105,9 +95,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[HowToGeneric#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#1)] [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)] [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
@@ -115,9 +103,7 @@ ms.lasthandoff: 06/02/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Type>   
  <xref:System.Reflection.MethodInfo>   
  [反映和泛型型別](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)   

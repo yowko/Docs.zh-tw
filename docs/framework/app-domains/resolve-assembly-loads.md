@@ -24,20 +24,16 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 71dfb65710a536c5cc470681285073a21da4c770
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="resolving-assembly-loads" class="xliff"></a>
-
-# 解析組件載入
+# <a name="resolving-assembly-loads"></a>解析組件載入
 .NET Framework 提供需要更能控制組件載入之應用程式的 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
   
 > [!NOTE]
 >  若要解析僅限反映內容中的組件載入，請改為使用 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=fullName> 事件。  
   
-<a id="how-the-assemblyresolve-event-works" class="xliff"></a>
-
-## AssemblyResolve 事件運作方式  
+## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve 事件運作方式  
  當您註冊 <xref:System.AppDomain.AssemblyResolve> 事件的處理常式時，只要執行階段無法依名稱繫結至組件，就會叫用處理常式。 例如，從使用者程式碼呼叫下列方法可能會引發 <xref:System.AppDomain.AssemblyResolve> 事件：  
   
 -   第一個引數是字串的 <xref:System.AppDomain.Load%2A?displayProperty=fullName> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法多載，可代表要載入之組件的顯示名稱 (即 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName> 屬性所傳回的字串)。  
@@ -48,9 +44,7 @@ ms.lasthandoff: 06/02/2017
   
 -   執行個體化另一個應用程式定義域中物件的 <xref:System.AppDomain.CreateInstance%2A?displayProperty=fullName> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName> 方法多載。  
   
-<a id="what-the-event-handler-does" class="xliff"></a>
-
-### 事件處理常式執行的作業  
+### <a name="what-the-event-handler-does"></a>事件處理常式執行的作業  
  <xref:System.AppDomain.AssemblyResolve> 事件的處理常式會在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=fullName> 屬性中接收要載入之組件的顯示名稱。 如果處理常式無法辨識組件名稱，則會傳回 Null (在 Visual Basic 中為 `Nothing`，在 Visual C++ 中則為 `nullptr`)。  
   
  如果處理常式可辨識組件名稱，則可以載入並傳回滿足要求的組件。 下列清單描述一些範例情節。  
@@ -80,9 +74,7 @@ ms.lasthandoff: 06/02/2017
   
  相同組件的多個版本可以載入相同的應用程式定義域。 不建議這種做法，因為它可能會導致類型指派問題。 請參閱[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)。  
   
-<a id="what-the-event-handler-should-not-do" class="xliff"></a>
-
-### 事件處理常式不應該執行的作業  
+### <a name="what-the-event-handler-should-not-do"></a>事件處理常式不應該執行的作業  
  處理 <xref:System.AppDomain.AssemblyResolve> 事件的主要規則是您不應該嘗試傳回無法辨識的組件。 當您撰寫處理常式時，應該知道哪些組件可能會引發此事件。 針對其他組件，您的處理常式應該傳回 Null。  
   
 > [!IMPORTANT]
@@ -92,8 +84,6 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[AssemblyResolveRecursive#1](../../../samples/snippets/cpp/VS_Snippets_CLR/assemblyresolverecursive/cpp/example.cpp#1)] [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)] [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

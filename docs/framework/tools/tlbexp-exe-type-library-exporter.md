@@ -29,29 +29,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 9de397b715aa340f0b84ba0be645feb5fef21568
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="tlbexpexe-type-library-exporter" class="xliff"></a>
-
-# Tlbexp.exe (類型程式庫匯出工具)
+# <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 tlbexp assemblyName [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|說明|  
 |--------------|-----------------|  
@@ -77,9 +71,7 @@ tlbexp assemblyName [options]
 > [!NOTE]
 >  Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如，**/n** 相當於 **/nologo**，而 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  Tlbexp.exe 會產生一個類型程式庫，其含有組件中所定義的類型定義。 應用程式 (例如 Visual Basic 6.0) 可以使用產生的類型程式庫來繫結至組件中所定義的 .NET 類型。  
   
 > [!IMPORTANT]
@@ -119,9 +111,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Microsoft Windows 2000 (含) 以後版本都支援類型程式庫匯出工具。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會產生一個和 `myTest.dll` 中組件同名的類型程式庫。  
   
 ```  
@@ -154,9 +144,7 @@ CSC Sample.cs /reference:myLib.dll /out:Sample.dll
 tlbexp Sample.dll  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>   
  [工具](../../../docs/framework/tools/index.md)   
  [Regasm.exe (組件註冊工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   

@@ -21,17 +21,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c8126900918edb0c4cd701b4e613fbe735106dcb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-define-and-execute-dynamic-methods" class="xliff"></a>
-
-# 如何：定義和執行動態方法
+# <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定義和執行動態方法
 下列程序顯示如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。 如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[反映發出動態方法案例](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)。  
   
-<a id="to-define-and-execute-a-dynamic-method" class="xliff"></a>
-
-### 定義和執行動態方法  
+### <a name="to-define-and-execute-a-dynamic-method"></a>定義和執行動態方法  
   
 1.  宣告委派類型來執行方法。 請考慮使用泛型委派，將您需要宣告的委派類型數目降到最低。 下列程式碼會宣告兩個可用於 `SquareIt` 方法的委派類型，其中之一是泛型。  
   
@@ -60,9 +56,7 @@ ms.lasthandoff: 06/02/2017
   
      [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]  [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]  [!code-vb[DynamicMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#6)]  
   
-<a id="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object" class="xliff"></a>
-
-### 定義及執行繫結至物件的動態方法  
+### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>定義及執行繫結至物件的動態方法  
   
 1.  宣告委派類型來執行方法。 請考慮使用泛型委派，將您需要宣告的委派類型數目降到最低。 下列程式碼會宣告泛型委派類型，其可用於執行任何具有一個參數和傳回值的方法，如果委派繫結至物件，則可為具有兩個參數和傳回值的方法。  
   
@@ -93,9 +87,7 @@ ms.lasthandoff: 06/02/2017
   
      [!code-cpp[DynamicMethodHowTo#16](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#16)]  [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]  [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例會示範簡單的動態方法及繫結至類別執行個體的動態方法。  
   
  簡單的動態方法接受一個 32 位元整數的引數，並傳回該整數的 64 位元平方。 使用泛型委派叫用方法。  
@@ -106,9 +98,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)] [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)] [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
@@ -116,9 +106,7 @@ ms.lasthandoff: 06/02/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.Emit.DynamicMethod>   
  [使用反映發出](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
  [反映發出動態方法案例](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

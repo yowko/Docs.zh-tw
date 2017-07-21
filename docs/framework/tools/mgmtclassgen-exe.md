@@ -29,17 +29,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 964f4826a9a4527ddc2a86d14d441d302e20a09e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="mgmtclassgenexe-management-strongly-typed-class-generator" class="xliff"></a>
-
-# Mgmtclassgen.exe (管理強類型類別產生器)
+# <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)
 [管理強類型類別產生器] 工具可快速地為指定的 Windows Management Instrumentation (WMI) 類別產生早期繫結 Managed 類別。 產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 mgmtclassgen   
@@ -61,9 +57,7 @@ WMIClass [options]
 |**/u**  <使用者名稱>|透過 **/m** 選項指定登入電腦時要使用的使用者名稱。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  Mgmtclassgen.exe 會使用 <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName> 方法。 因此，您可以使用任何自訂程式碼提供者來產生 Managed 語言 (不是 C#、Visual Basic 和 JScript) 的程式碼。  
   
  請注意，產生的類別會繫結至為其所產生的結構描述。 當基礎結構描述改變時，若要反映結構描述的這些改變就必須重新產生類別。  
@@ -111,9 +105,7 @@ WMIClass [options]
   
  如需 WMI 的詳細資訊，請參閱 Platform SDK 說明文件中的 **Windows Management Instrumentation** 主題。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會在 **Root\cimv2** 命名空間中產生 **Win32_LogicalDisk** WMI 類別的 Managed 類別 (以 C# 程式碼撰寫)。 工具會將 Managed 類別寫入 c:\disk.cs 的原始程式檔，放在 **ROOT.CIMV2.Win32** 命名空間中。  
   
 ```  
@@ -170,9 +162,7 @@ public class App
 }  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Management>   
  <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>   
  <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>   

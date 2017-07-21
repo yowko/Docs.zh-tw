@@ -38,29 +38,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 006048026503c8a3e9d1f1a62a1ae67ff2c03ae9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="gacutilexe-global-assembly-cache-tool" class="xliff"></a>
-
-# Gacutil.exe (全域組件快取工具)
+# <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (全域組件快取工具)
 全域組件快取工具可以讓您檢視和操作全域組件快取和下載快取的內容。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|說明|  
 |--------------|-----------------|  
@@ -90,9 +84,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|從全域組件快取解除安裝指定之組件的參考。 若要移除組件的參考，您必須在指定安裝組件時使用與 */i* 和 */r* (或 */ir*) 選項指定的相同 **scheme**、**id** 和 **description** 參數。 如需可以為這些參數指定之有效值的描述，請參閱 **/r** 選項。<br /><br /> 指定這個選項相當於同時指定 **/u** 和 **/r** 選項。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
   
 > [!NOTE]
 >  您必須擁有系統管理員權限才能使用 Gacutil.exe。  
@@ -117,9 +109,7 @@ myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會將 `mydll.dll` 組件安裝到全域組件快取中。  
   
 ```  
@@ -174,9 +164,7 @@ gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert 
 gacutil /l  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [Regasm.exe (組件登錄工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   

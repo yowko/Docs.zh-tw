@@ -31,29 +31,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 0dd040788c71e725e2a6b0b6f26026ffd972c296
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="tlbimpexe-type-library-importer" class="xliff"></a>
-
-# Tlbimp.exe (類型程式庫匯入工具)
+# <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 tlbimp tlbFile [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|描述|  
 |--------------|-----------------|  
@@ -94,9 +88,7 @@ tlbimp tlbFile [options]
 > [!NOTE]
 >  Tlbimp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 因此，**/n** 相當於 **/nologo**，而 **/ou:** *outfile.dll* 相當於 **/out:** *outfile.dll*。  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  Tlbimp.exe 會一次執行整個類型程式庫的轉換。 您無法使用這個工具針對單一類型程式庫中定義的類型子集產生類型資訊。  
   
  將[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)指派給組件的功能通常十分實用，甚至是必要的。 因此，Tlbimp.exe 包含了提供產生以強式名稱命名之組件所需資訊的選項。 **/keyfile:** 和 **/keycontainer:** 這兩個選項都會以強式名稱簽署組件。 所以邏輯上來說，一次只需要提供其中一個選項。  
@@ -105,9 +97,7 @@ tlbimp tlbFile [options]
   
  從包含多個類型程式庫的模組匯入類型程式庫時，可以選擇性地將資源 ID 附加至類型程式庫檔案。 只有在這個檔案是位於目前的目錄中，或者您指定了完整路徑時，Tlbimp.exe 才能夠找到這個檔案。 請參閱本主題稍後的範例。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會產生與 `myTest.tlb` 中所找到的類型程式庫同名且副檔名為 .dll 的組件。  
   
 ```  
@@ -150,9 +140,7 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
  [匯入類型程式庫作為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   

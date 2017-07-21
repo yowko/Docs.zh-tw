@@ -23,12 +23,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="dynamic-language-runtime-overview" class="xliff"></a>
-
-# Dynamic Language Runtime 概觀
+# <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
 「動態語言執行階段」(DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。 DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。  
   
  動態語言可以在執行階段識別物件的類型，而在靜態類型語言，例如 C# 和 Visual Basic 中 (當您使用 `Option Explicit On` 時)，您必須在設計階段指定物件類型。 動態語言的範例包括 Lisp、Smalltalk、JavaScript、PHP、Ruby、Python、ColdFusion、Lua、Cobra 和 Groovy。  
@@ -66,39 +64,25 @@ ms.lasthandoff: 06/02/2017
   
 -   IronRuby。 以開放原始碼軟體於 [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。  
   
-<a id="primary-dlr-advantages" class="xliff"></a>
-
-## 主要的 DLR 優點  
+## <a name="primary-dlr-advantages"></a>主要的 DLR 優點  
  DLR 提供下列優點。  
   
-<a id="simplifies-porting-dynamic-languages-to-the-net-framework" class="xliff"></a>
-
-### 簡化將動態語言移轉至 .NET Framework  
+### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>簡化將動態語言移轉至 .NET Framework  
  DLR 可讓語言實作人員避免建立語彙分析器、剖析器、語意分析器、程式碼產生器以及他們以往都會需要自己建立的其他工具。 若要使用 DLR，語言需要產生*運算式樹狀架構*，它代表樹狀結構中的語言層級程式碼、執行階段 helper 常式，和實作 <xref:System.Dynamic.IDynamicMetaObjectProvider> 介面的選擇性動態物件。 DLR 和 .NET Framework 會自動執行大量的程式碼分析和程式碼產生工作。 這讓語言實作人員能專注於獨特的語言功能。  
   
-<a id="enables-dynamic-features-in-statically-typed-languages" class="xliff"></a>
-
-### 啟用靜態類型語言中的動態功能  
+### <a name="enables-dynamic-features-in-statically-typed-languages"></a>啟用靜態類型語言中的動態功能  
  現有的 .NET Framework 語言，例如 C# 和 Visual Basic，可以建立動態物件，並使用它們搭配靜態類型物件。 例如，C# 和 Visual Basic 可以使用動態物件進行 HTML、文件物件模型 (DOM) 和 .NET 反映。  
   
-<a id="provides-future-benefits-of-the-dlr-and-net-framework" class="xliff"></a>
-
-### 提供 DLR 和 .NET Framework 的未來優點  
+### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>提供 DLR 和 .NET Framework 的未來優點  
  使用 DLR 實作的語言可以受益於未來的 DLR 和 .NET Framework 增強功能。 比方說，如果 .NET Framework 發行已改善記憶體回收行程或更快組件載入的新版本，使用 DLR 實作的語言會立即獲得相同的優點。 如果 DLR 新增例如更佳編譯的最佳化作業，使用 DLR 實作的所有語言效能也會改善。  
   
-<a id="enables-sharing-of-libraries-and-objects" class="xliff"></a>
-
-### 啟用程式庫和物件的共用  
+### <a name="enables-sharing-of-libraries-and-objects"></a>啟用程式庫和物件的共用  
  實作在一種語言中的物件和程式庫可以由其他語言使用。 DLR 也可啟用靜態類型和動態語言之間的交互操作。 例如，C# 可以宣告使用以動態語言所撰寫之程式庫的動態物件。 在此同時，動態語言都可以使用 .NET Framework 的程式庫。  
   
-<a id="provides-fast-dynamic-dispatch-and-invocation" class="xliff"></a>
-
-### 提供快速動態分派和叫用  
+### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>提供快速動態分派和叫用  
  DLR 藉由支援進階的多型快取而提供動態作業的快速執行。 DLR 會建立規則，以便將使用物件的作業繫結到必要的執行階段實作，然後再快取這些規則，以避免在對相同物件類型連續執行相同程式碼期間發生耗盡資源的繫結計算。  
   
-<a id="dlr-architecture" class="xliff"></a>
-
-## DLR 架構  
+## <a name="dlr-architecture"></a>DLR 架構  
  下圖顯示動態語言執行階段的架構。  
   
  ![Dynamic Language Runtime 架構概觀](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
@@ -114,14 +98,10 @@ DLR 架構
   
  DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framework，也與其他基礎結構和服務通訊，包括 Silverlight 和 COM。 繫結器會封裝語言的語意，並指定如何使用運算式樹狀架構在呼叫站台執行作業。 這樣可讓動態語言和使用 DLR 的靜態類型語言共用程式庫，以及存取 DLR 所支援的所有技術。  
   
-<a id="dlr-documentation" class="xliff"></a>
-
-## DLR 文件  
+## <a name="dlr-documentation"></a>DLR 文件  
  如需如何使用 DLR 開放原始碼版本將動態行為加入至語言，或是如何使用動態語言搭配 .NET Framework 的詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Dynamic.ExpandoObject>   
  <xref:System.Dynamic.DynamicObject>   
  [Common Language Runtime](../../../docs/standard/clr.md)   

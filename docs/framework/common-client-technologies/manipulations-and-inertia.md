@@ -18,24 +18,18 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: ece2a4ecf25d361ab6d3dd627f5730c302be24a6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="manipulations-and-inertia" class="xliff"></a>
-
-# 操作和慣性
+# <a name="manipulations-and-inertia"></a>操作和慣性
 「操作」和和「慣性」處理器類別可協助應用程式以自然且直覺的方式移動螢幕上的使用者介面 (UI) 項目。 「操作」可讓使用者使用操作工具移動、旋轉以及調整元件大小，例如滑鼠裝置、手寫筆或在觸控式情況下使用手指。 「慣性」藉由在項目上模擬摩擦力，可模擬移動的 UI 項目在真實世界中的行為。 這可讓項目在停止前逐漸減緩移動 (直線和有角度的方向)。  
   
  操作和慣性處理可以用於不同的 UI 架構，例如 Microsoft Windows Presentation Foundation (WPF) 或 Microsoft XNA。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)  
   
  [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Input.Manipulations>

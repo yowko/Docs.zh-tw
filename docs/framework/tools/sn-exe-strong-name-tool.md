@@ -31,12 +31,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 18a8df92bac23e417cc1b78fdb8099413d284baa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="snexe-strong-name-tool" class="xliff"></a>
-
-# Sn.exe (強式名稱工具)
+# <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
   
  如需強式命名和強式名稱組件的詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)和[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
@@ -48,17 +46,13 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |選項|說明|  
 |------------|-----------------|  
@@ -97,17 +91,13 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  所有 Sn.exe 選項都區分大小寫，而且必須完全依照顯示的方式輸入，工具才能夠辨認。  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  **-R** 和 **–Rc** 選項搭配已延遲簽署的組件時非常實用。 在此情節中，在編譯時期只會設定公開金鑰，並且在稍後知道私密金鑰時才進行簽署。  
   
 > [!NOTE]
 >  若為寫入像是登錄這類受保護資源的參數 (例如，–**Vr)**，請以系統管理員身分執行 SN.exe。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會建立新的隨機金鑰組，並將它存放到 `keyPair.snk` 中。  
   
 ```  
@@ -144,9 +134,7 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)   

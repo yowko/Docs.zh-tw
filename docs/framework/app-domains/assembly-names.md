@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: b284ae993f7d61a6228f8425e0834a53a4366f8c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="assembly-names" class="xliff"></a>
-
-# 組件名稱
+# <a name="assembly-names"></a>組件名稱
 組件的名稱儲存在中繼資料內，而且對組件範圍具有重大影響，並供應用程式使用。 強式名稱組件的完整名稱包括組件的名稱、文化特性、公開金鑰和版本號碼。 這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得載入的組件。  
   
  執行階段會使用這項資訊來尋找組件，並區別它與其他同名的組件。 例如，稱為 `myTypes` 的強式名稱組件的完整名稱可能如下：  
@@ -59,9 +57,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  繫結至組件時，執行階段會將組件名稱視為不區分大小寫，但會保留組件名稱中所使用的大小寫。 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中的數個工具會將組件名稱處理為區分大小寫。 為了獲得最佳結果，請如同其區分大小寫一樣地管理組件名稱。  
   
-<a id="naming-application-components" class="xliff"></a>
-
-## 命名應用程式元件  
+## <a name="naming-application-components"></a>命名應用程式元件  
  判斷組件的身分識別時，執行階段不會考慮檔案名稱。 執行階段必須知道包含組件名稱、版本、文化特性和強式名稱的組件身分識別。  
   
  例如，如果您有稱為 myAssembly.exe 的組件可參考稱為 myAssembly.dll 的組件，則會在執行 myAssembly.exe 時正確地進行繫結。 不過，如果另一個應用程式使用 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 方法執行 myAssembly.exe，則執行階段會判斷在 myAssembly.exe 要求繫結至 "myAssembly" 時已經載入 "myAssembly"。 在此情況下，永遠不會載入 myAssembly.dll。 因為 myAssembly.exe 未包含所要求的類型，所以會發生 <xref:System.TypeLoadException>。  
@@ -71,9 +67,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  如果您將強式名稱組件放入全域組件快取中，組件的檔案名稱必須符合組件名稱 (不包括副檔名，例如 .exe 或 .dll)。 例如，如果組件的檔案名稱是 myAssembly.dll，則組件名稱必須是 myAssembly。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：決定組件的完整名稱](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)   

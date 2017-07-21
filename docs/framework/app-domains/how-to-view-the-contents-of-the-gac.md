@@ -27,17 +27,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 9f51fbaddf7de524a0025e87aa598726fc6f1db4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-view-the-contents-of-the-global-assembly-cache" class="xliff"></a>
-
-# 如何：檢視全域組件快取的內容
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>如何：檢視全域組件快取的內容
 您可以使用[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。  
   
-<a id="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache" class="xliff"></a>
-
-### 若要檢視全域組件快取中的組件清單  
+### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a>若要檢視全域組件快取中的組件清單  
   
 1.  在 [Visual Studio 命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)中，鍵入下列命令：  
   
@@ -47,8 +43,6 @@ ms.lasthandoff: 06/02/2017
   
  在舊版 .NET Framework 中，[Shfusion.dll](http://msdn.microsoft.com/en-us/0d9464cf-ddba-4ca9-bbec-f678fb58f380) Windows Shell Extension 可讓您在 [檔案總管] 中檢視全域組件快取。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，Shfusion.dll 已過時。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

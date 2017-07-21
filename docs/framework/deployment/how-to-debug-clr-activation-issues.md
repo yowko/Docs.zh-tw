@@ -25,25 +25,19 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 2df9b03603c5df6bd803187bd1299f5d730bc32c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-debug-clr-activation-issues" class="xliff"></a>
-
-# 如何：偵錯 CLR 啟用問題
+# <a name="how-to-debug-clr-activation-issues"></a>如何：偵錯 CLR 啟用問題
 如果以正確的通用語言執行平台 (CLR) 版本執行應用程式時發生問題，您可以檢視並偵錯 CLR 啟用記錄。 當您的應用程式載入不符預期的 CLR 版本，或完全不載入 CLR 時，這些記錄檔對判斷啟動問題的根本原因非常有幫助。 [NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) 會討論應用程式找不到任何 CLR 時的經驗。  
   
  使用 HKEY_LOCAL_MACHINE 登錄機碼或系統環境變數可以啟用全系統的 CLR 啟動記錄。 登錄項目或環境變數移除之前會一直產生記錄檔。 或者，您可以使用使用者或處理序本機環境變數，啟用不同範圍和持續時間的記錄。  
   
  CLR 啟動記錄檔不應該與[assembly binding logs組件繫結記錄檔](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)相混淆，兩者截然不同。  
   
-<a id="to-enable-clr-activation-logging" class="xliff"></a>
-
-## 啟用 CLR 啟動記錄  
+## <a name="to-enable-clr-activation-logging"></a>啟用 CLR 啟動記錄  
   
-<a id="using-the-registry" class="xliff"></a>
-
-#### 使用登錄  
+#### <a name="using-the-registry"></a>使用登錄  
   
 1.  在登錄編輯器中瀏覽至 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework (32 位元電腦) 或 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 資料夾 (64 位元電腦)。  
   
@@ -51,9 +45,7 @@ ms.lasthandoff: 06/02/2017
   
  啟動記錄會一直保持啟用，直到您移除字串值為止。  
   
-<a id="using-an-environment-variable" class="xliff"></a>
-
-#### 使用環境變數  
+#### <a name="using-an-environment-variable"></a>使用環境變數  
   
 -   將 `COMPLUS_CLRLoadLogDir` 環境變數設為字串，代表現有目錄的完整路徑，這是您要儲存 CLR 啟動記錄的目錄。  
   
@@ -73,9 +65,7 @@ ms.lasthandoff: 06/02/2017
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs  
     ```  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  CLR 啟動記錄檔會提供大量有關 CLR 啟動的資料和裝載 API 的 CLR 用法。 此資料大部分是由 Microsoft 內部使用，但某些部分也對開發人員很有用，如本文所述。  
   
  記錄會反映裝載 API 之 CLR 的呼叫順序。 它也包含電腦上偵測到有關已安裝執行階段組的有用資料。 CLR 啟動記錄格式不是其本身的記錄，但可用來協助需要解決 CLR 啟動問題的開發人員。  
@@ -141,9 +131,7 @@ ms.lasthandoff: 06/02/2017
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3  
     ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署](../../../docs/framework/deployment/index.md)   
  [操作說明：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 

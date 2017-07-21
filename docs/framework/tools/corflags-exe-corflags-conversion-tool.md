@@ -27,29 +27,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 49906f2e9416f1e6cccda5de7f657f10acaaab5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="corflagsexe-corflags-conversion-tool" class="xliff"></a>
-
-# CorFlags.exe (CorFlags 轉換工具)
+# <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 CorFlags.exe assembly [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |必要參數|說明|  
 |------------------------|-----------------|  
@@ -70,14 +64,10 @@ CorFlags.exe assembly [options]
 |**/RevertCLRHeader**|將 CLR 標頭版本還原為 2.0。|  
 |**/UpgradeCLRHeader**|將 CLR 標頭版本升級到 2.5。 **注意：**組件的 CLR 標頭必須是 2.5 (含) 以上版本，才能以原本的形式執行。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  如果未指定任何選項，則 CorFlags 轉換工具會針對所指定組件顯示旗標。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [64 位元應用程式](../../../docs/framework/64-bit-apps.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

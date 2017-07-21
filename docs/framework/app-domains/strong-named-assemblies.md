@@ -21,17 +21,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 51f0e61faf6d83f7020c09e6b7a431be49d9b913
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="strong-named-assemblies" class="xliff"></a>
-
-# 強式名稱的組件
+# <a name="strong-named-assemblies"></a>強式名稱的組件
 強式命名組件會為組件建立唯一識別，並可防止發生組件衝突。  
   
-<a id="what-makes-a-strong-named-assembly" class="xliff"></a>
-
-## 構成強式名稱的組件之項目為何？  
+## <a name="what-makes-a-strong-named-assembly"></a>構成強式名稱的組件之項目為何？  
  強式名稱的組件是透過私密金鑰所產生，該私密金鑰對應至隨組件或當做組件本身散發的公開金鑰。 該組件包含組件資訊清單，其中包含構成組件之所有檔案的名稱和雜湊。 具有相同強式名稱的組件應該是相同的。  
   
  您可以使用 Visual Studio 或命令列工具強式命名組件。 如需詳細資訊，請參閱[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)或 [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)。  
@@ -41,9 +37,7 @@ ms.lasthandoff: 06/02/2017
 > [!WARNING]
 >  請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。  
   
-<a id="why-strong-name-your-assemblies" class="xliff"></a>
-
-## 為什麼需要強式命名您的組件？  
+## <a name="why-strong-name-your-assemblies"></a>為什麼需要強式命名您的組件？  
  當您參考強式名稱的組件時，您會希望取得某些優點，例如版本控制和命名保護。 強式名稱的組件可安裝在全域組件快取中，在某些情況下您必須這麼做。  
   
  強式名稱的組件在下列情況下很實用：  
@@ -58,9 +52,7 @@ ms.lasthandoff: 06/02/2017
   
  如果您是開放原始碼開發人員並需要強式名稱組件的識別優點，請考慮將與組件相關聯的私密金鑰簽入原始檔控制系統中。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   

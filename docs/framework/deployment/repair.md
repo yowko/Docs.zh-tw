@@ -13,13 +13,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
 ms.openlocfilehash: 28ceca84493cbc92a5a7f91c2c1c8eb3d0f8e6b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
 
-<a id="repair-the-net-framework" class="xliff"></a>
-
-# 修復 .NET Framework
+# <a name="repair-the-net-framework"></a>修復 .NET Framework
 
 在某些情況下，您的 .NET Framework 安裝可能會受損而需要修復。 如果應用程式在您嘗試啟動它時立即當機，或您無法安裝較新的 .NET Framework 版本時，就可能是這種情況。
 

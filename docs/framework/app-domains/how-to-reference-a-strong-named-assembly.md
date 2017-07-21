@@ -23,12 +23,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: dcdf967312cdcb700b89a4e75d86c451e67eebab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-reference-a-strong-named-assembly" class="xliff"></a>
-
-# 如何：參考強式名稱簽署組件
+# <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱簽署組件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
  當您對編譯器指出您的組件明確參考另一個組件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。  
@@ -36,9 +34,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的安全性將會受到危害。  
   
-<a id="to-make-a-compile-time-reference-to-a-strong-named-assembly" class="xliff"></a>
-
-### 建立強式名稱組件的編譯時間參考  
+### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的編譯時間參考  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -52,9 +48,7 @@ ms.lasthandoff: 06/02/2017
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
   
-<a id="to-make-a-run-time-reference-to-a-strong-named-assembly" class="xliff"></a>
-
-### 建立強式名稱組件的執行階段參考  
+### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的執行階段參考  
   
 1.  當您建立強式名稱組件的執行階段參考時 (例如，使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 方法)，必須使用所參考之強式名稱組件的顯示名稱。 顯示名稱的語法如下：  
   
@@ -80,7 +74,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn -tp \<**組件**>**  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

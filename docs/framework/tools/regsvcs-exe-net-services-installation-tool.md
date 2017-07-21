@@ -30,12 +30,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 2c2820c265dc5c81dce638d533316a48f4972c6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="regsvcsexe-net-services-installation-tool" class="xliff"></a>
-
-# Regsvcs.exe (.NET 服務安裝工具)
+# <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
   
 -   載入和註冊組件。  
@@ -48,9 +46,7 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/02/2017
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|說明|  
 |--------------|-----------------|  
@@ -85,9 +79,7 @@ ms.lasthandoff: 06/02/2017
 |**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  Regsvcs.exe 需要由 *assemblyFile.dll* 所指定的來源組件檔。 這個組件必須使用強式名稱簽署。 如需強式名稱簽署的詳細資訊，請參閱[以強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。 目標應用程式和類型程式庫檔案的名稱是選擇項。 如果 *applicationName* 引數已經不存在，則可以從來源組件檔中產生，並且將會由 Regsvcs.exe 建立。 *typelibraryfile* 引數可以指定型別程式庫名稱。 如果您沒有指定類型程式庫名稱，Regsvcs.exe 會使用組件名稱做為預設值。  
   
  當 Regsvcs.exe 註冊元件的方法時，它會受制於這些方法上的[要求](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48)和[連結要求](../../../docs/framework/misc/link-demands.md)。 因為這個工具是在完全信任的環境中執行，所以大部分的使用權限需求都會成功。 不過，Regsvcs.exe 無法註冊方法受到 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的需求或連結要求保護的元件。  
@@ -96,9 +88,7 @@ ms.lasthandoff: 06/02/2017
   
  在執行任何這些動作時，如果 Regsvcs.exe 失敗，會顯示對應的錯誤訊息。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會將 `myTest.dll` 中包含的所有公用類別加入 `myTargetApp` (現有的 COM+ 應用程式)，並產生 `myTest.tlb` 類型程式庫。  
   
 ```  
@@ -111,9 +101,7 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

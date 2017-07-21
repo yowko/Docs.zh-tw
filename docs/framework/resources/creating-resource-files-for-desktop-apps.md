@@ -23,12 +23,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: 16312edacc43a5adc5504e36eec597d85b626077
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="creating-resource-files-for-desktop-apps" class="xliff"></a>
-
-# 建立桌面應用程式的資源檔
+# <a name="creating-resource-files-for-desktop-apps"></a>建立桌面應用程式的資源檔
 您可以在資源檔中包括資源 (例如字串、影像或物件資料)，以讓應用程式輕鬆地使用它們。 .NET Framework 提供五種方式來建立資源檔：  
   
 -   建立包含字串資源的文字檔。 您必須使用[資源檔產生器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 將文字檔轉換成二進位資源 (.resources) 檔案。 您接著可以使用語言編譯器將二進位資源檔內嵌在應用程式可執行檔或應用程式程式庫中，或使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。 如需詳細資訊，請參閱[文字檔中的資源](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#TextFiles)一節。  
@@ -42,9 +40,7 @@ ms.lasthandoff: 06/02/2017
 -   使用 Visual Studio 建立資源檔，並將它包含在專案中。 Visual Studio 提供可讓您新增、刪除和修改資源的資源編輯器。 在編譯時間，資源檔會自動轉換成二進位 .resources 檔案，並內嵌在應用程式組件或附屬組件中。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)一節。  
   
 <a name="TextFiles"></a>   
-<a id="resources-in-text-files" class="xliff"></a>
-
-## 文字檔中的資源  
+## <a name="resources-in-text-files"></a>文字檔中的資源  
  您可以使用文字檔 (.txt 或 .restext) 只儲存字串資源；針對非字串資源，使用 .resx 檔案，或以程式設計方式建立它們。 包含字串資源的文字檔的格式如下：  
   
 ```  
@@ -138,9 +134,7 @@ greeting=Hello, {0}!
  **csc greeting.cs /resource:GreetingResources.resources**  
   
 <a name="ResxFiles"></a>   
-<a id="resources-in-resx-files" class="xliff"></a>
-
-## .resx 檔案中的資源  
+## <a name="resources-in-resx-files"></a>.resx 檔案中的資源  
  與只能儲存字串資源的文字檔不同，XML 資源檔 (.resx) 可以儲存字串；影像、圖示和音訊剪輯這類二進位資料，以及程式化物件。 .resx 檔案包含描述資源項目格式的標準標頭，並指定用來剖析資料之 XML 的版本資訊。 資源檔資料接在 XML 標頭後面。 每個資料項目都會包含 `data` 標記中所含的名稱/值配對。 其 `name` 屬性定義資源名稱，而巢狀 `value` 標記包含資源值。 針對字串資料，`value` 標記會包含字串。  
   
  例如，下列 `data` 標記會定義名為 `prompt` 且其值為 "Enter your name:" 的字串資源。  
@@ -179,9 +173,7 @@ greeting=Hello, {0}!
 >  因為 .resx 檔案必須包含具有預先定義格式的格式正確 XML，所以不建議手動使用 .resx 檔案，特別是 .resx 檔案包含字串以外的資源時。 Visual Studio 會改為提供透明的介面來建立及操作 .resx 檔。如需詳細資訊，請參閱 [Visual Studio 中的資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)一節。 您也可以透過程式設計方式建立和操作 .resx 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](../../../docs/framework/resources/working-with-resx-files-programmatically.md)。  
   
 <a name="ResourcesFiles"></a>   
-<a id="resources-in-resources-files" class="xliff"></a>
-
-## .resources 檔案中的資源  
+## <a name="resources-in-resources-files"></a>.resources 檔案中的資源  
  您可以使用 <xref:System.Resources.ResourceWriter?displayProperty=fullName> 類別，以程式設計方式直接從程式碼建立二進位資源檔 (.resources)。 您也可以使用[資源檔產生器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，從文字檔或 .resx 檔案建立 .resources 檔案。 除了字串資料之外，.resources 檔案還可以包含二進位資料 (位元組陣列) 和物件資料。 以程式設計方式建立 .resources 檔案，需要下列步驟：  
   
 1.  建立具有唯一檔案名稱的 <xref:System.Resources.ResourceWriter> 物件。 做法是將檔案名稱或檔案資料流指定給 <xref:System.Resources.ResourceWriter> 類別建構函式。  
@@ -200,18 +192,14 @@ greeting=Hello, {0}!
  當您建立 .resources 檔案之後，可以包括語言編譯器的 `/resource` 切換參數以將它內嵌在執行階段可執行檔或程式庫中，或是使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。  
   
 <a name="VSResFiles"></a>   
-<a id="resource-files-in-visual-studio" class="xliff"></a>
-
-## Visual Studio 中的資源檔  
+## <a name="resource-files-in-visual-studio"></a>Visual Studio 中的資源檔  
  當您將資源檔新增至 Visual Studio 專案時，Visual Studio 會在專案目錄中建立 .resx 檔案。 Visual Studio 提供可讓您新增字串、影像和二進位物件的資源編輯器。 因為編輯器設計成只處理靜態資料，所以無法使用它們來儲存程式化物件；您必須以程式設計方式將物件資料寫入 .resx 檔案或 .resources 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](../../../docs/framework/resources/working-with-resx-files-programmatically.md)主題和 [.resources 檔案中的資源](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)一節。  
   
  如果您要新增當地語系化資源，則應該將與主要資源檔相同的根檔案名稱指定給它們，也應該在檔案名稱中指定其文化特性。 例如，如果您新增名為 Resources.resx 的資源檔，也可能會建立名為 Resources.en-US.resx 和 Resources.fr-FR.resx 的資源檔，來分別保留英文 (美國) 和法文 (法國) 文化特性的當地語系化資源。 您也應該指定應用程式的預設文化特性。 如果找不到特定文化特性的當地語系化資源，則這是使用其資源的文化特性。 若要指定預設文化特性，請在 Visual Studio 的方案總管中以滑鼠右鍵按一下專案名稱、指向 [應用程式]、按一下 [組件資訊]，然後在 [中性語言] 清單中選取適當語言/文化特性。  
   
  在編譯時間，Visual Studio 先將專案中的 .resx 檔案轉換成二進位資源檔 (.resources)，並將它們儲存在專案之 obj 目錄的子目錄中。 Visual Studio 會將未包含當地語系化資源的任何資源檔內嵌在專案所產生的主要組件中。 如果任何資源檔包含當地語系化資源，Visual Studio 會將其內嵌在每個當地語系化文化特性的個別附屬組件中。 它接著會將每個附屬組件儲存在名稱對應至當地語系化文化特性的目錄中。 例如，當地語系化的英文 (美國) 資源會儲存在 en-US 子目錄的附屬組件中。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Resources>   
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)   
  [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

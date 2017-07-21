@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c319b668becd6a5b3e4077ea709835bb42cafb44
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="programming-with-assemblies" class="xliff"></a>
-
-# 使用組件設計程式
+# <a name="programming-with-assemblies"></a>使用組件設計程式
 組件是 .NET Framework 的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 它是建置來共同運作及構成一個功能邏輯單位的類型與資源集合。 對於執行階段而言，型別不會存在於組件的內容以外。  
   
  本節描述如何建立模組、從模組建立組件、建立金鑰組並使用強式名稱來簽署組件，以及將組件安裝到全域組件快取中。 此外，本節還會描述如何使用 [MSIL 反組譯工具 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視組件資訊清單資訊。  
@@ -34,9 +32,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  從 .NET Framework 2.0 版開始，執行階段不會載入使用 .NET Framework 版本所編譯的組件，而這個版本的版本號碼高於目前載入的執行階段。 這適用於版本號碼的主要與次要元件組合。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  提供單一檔案和多檔案組件的概觀。  
   
@@ -79,15 +75,11 @@ ms.lasthandoff: 06/02/2017
  [Common Language Runtime 中的類型轉送](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
  描述如何使用類型轉送將類型移至不同組件，而不會中斷現有應用程式。  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Assembly>  
  代表組件的 .NET Framework 類別。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [操作說明：從組件中取得類型和成員資訊](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  描述如何以程式設計方式從組件中取得類型和其他資訊。  
   

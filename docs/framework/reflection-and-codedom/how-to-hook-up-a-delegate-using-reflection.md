@@ -22,20 +22,16 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: ca3143752c5a9774b88420a853ebac78d9bc2f43
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-hook-up-a-delegate-using-reflection" class="xliff"></a>
-
-# 如何：使用反映連結委派
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
   
 > [!NOTE]
 >  如需連結事件處理委派的另一種方式，請參閱 <xref:System.Reflection.EventInfo> 類別之 <xref:System.Reflection.EventInfo.AddEventHandler%2A> 方法的程式碼範例。  
   
-<a id="to-hook-up-a-delegate-using-reflection" class="xliff"></a>
-
-### 使用反映連結委派  
+### <a name="to-hook-up-a-delegate-using-reflection"></a>使用反映連結委派  
   
 1.  載入包含引發事件之類型的組件。 通常會使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法載入組件。 為了簡化此範例，會使用目前組件中的衍生形式，因此使用 <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> 方法來載入目前組件。  
   
@@ -66,9 +62,7 @@ ms.lasthandoff: 06/02/2017
      [!code-cpp[HookUpDelegate#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#12)]  [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]  [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>   
-<a id="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method" class="xliff"></a>
-
-### 使用動態方法以在執行階段產生事件處理常式  
+### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>使用動態方法以在執行階段產生事件處理常式  
   
 1.  使用輕量型動態方法和反映發出，可以在執行階段產生事件處理常式方法。 若要建構事件處理常式，您需要委派的傳回型別和參數類型。 這些可以透過檢查委派的 `Invoke` 方法取得。 下列程式碼使用 `GetDelegateReturnType` 和 `GetDelegateParameterTypes` 方法來取得這項資訊。 這些方法的程式碼位於本主題稍後的＜範例＞一節中。  
   
@@ -88,16 +82,12 @@ ms.lasthandoff: 06/02/2017
   
      [!code-cpp[HookUpDelegate#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#12)]  [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]  [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例示範如何使用反映以將現有方法連結至事件，同時示範如何使用 <xref:System.Reflection.Emit.DynamicMethod> 類別以在執行階段發出方法，並將它連結至事件。  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)] [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)] [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
@@ -105,9 +95,7 @@ ms.lasthandoff: 06/02/2017
   
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
  <xref:System.Reflection.Emit.DynamicMethod>   
  <xref:System.Activator.CreateInstance%2A>   

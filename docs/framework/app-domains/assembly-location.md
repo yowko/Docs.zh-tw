@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 4ee16bb622b03a5c9975a896aab951ae74d184a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="assembly-location" class="xliff"></a>
-
-# 組件位置
+# <a name="assembly-location"></a>組件位置
 組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。 您可以在下列位置中部署組件：  
   
 -   應用程式的目錄或子目錄。  
@@ -41,9 +39,7 @@ ms.lasthandoff: 06/02/2017
   
      HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   

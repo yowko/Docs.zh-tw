@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 63e1c2273e85117fd5419e63e823da6d2137726a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-install-an-assembly-into-the-global-assembly-cache" class="xliff"></a>
-
-# 如何：將組件安裝到全域組件快取
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>如何：將組件安裝到全域組件快取
 有兩種方式可以將強式名稱組件安裝到全域組件快取 (GAC) 中：  
   
 > [!IMPORTANT]
@@ -51,9 +49,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  在舊版 .NET Framework 中，可利用 Shfusion.dll Windows Shell Extension 將組件拖曳到 [檔案總管] 中，藉此安裝組件。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，Shfusion.dll 已過時。  
   
-<a id="to-use-the-global-assembly-cache-tool-gacutilexe" class="xliff"></a>
-
-### 若要使用全域組件快取工具 (Gacutil.exe)  
+### <a name="to-use-the-global-assembly-cache-tool-gacutilexe"></a>若要使用全域組件快取工具 (Gacutil.exe)  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -69,9 +65,7 @@ gacutil -i hello.dll
   
  如需詳細資訊，請參閱[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
   
-<a id="to-use-an-installshield-limited-edition-project" class="xliff"></a>
-
-### 若要使用 InstallShield Limited Edition 專案  
+### <a name="to-use-an-installshield-limited-edition-project"></a>若要使用 InstallShield Limited Edition 專案  
   
 1.  開啟方案的捷徑功能表，然後依序選擇 [新增] 和 [新專案]，以將安裝和部署套件新增至方案。  
   
@@ -93,9 +87,7 @@ gacutil -i hello.dll
   
     4.  將步驟 c 中的檔案拖曳至 [目的電腦的檔案] 窗格中 (或使用檔案的捷徑功能表上的 [複製] 和 [貼上] 命令)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [如何：從全域組件快取移除組件](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)   
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   

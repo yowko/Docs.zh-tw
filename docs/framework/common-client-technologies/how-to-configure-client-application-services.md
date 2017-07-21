@@ -20,21 +20,17 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: e943e6784adb85194bf4ae272627f9772a91e35e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-configure-client-application-services" class="xliff"></a>
-
-# 如何：設定用戶端應用程式服務
+# <a name="how-to-configure-client-application-services"></a>如何：設定用戶端應用程式服務
 本主題說明如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [專案設計工具] 啟用及設定用戶端應用程式服務。 您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。 設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
  您可以在 [專案設計工具] 的 [服務] 頁面上，啟用及設定用戶端應用程式服務。 [服務] 頁面會更新專案之 App.config 檔中的值。 若要存取 [專案設計工具]，請使用 [專案] 功能表上的 [屬性] 命令。 如需 [服務] 頁面的詳細資訊，請參閱[專案設計工具、服務頁](https://msdn.microsoft.com/library/bb398109)。  
   
  下列程序說明如何執行用戶端應用程式服務的基本組態。 進階組態選項會在稍後的章節中進行說明。  
   
-<a id="to-configure-client-application-services" class="xliff"></a>
-
-### 設定用戶端應用程式服務  
+### <a name="to-configure-client-application-services"></a>設定用戶端應用程式服務  
   
 1.  在 [方案總管] 中，選取專案節點，然後在 [專案] 功能表上按一下 [屬性]。  
   
@@ -68,14 +64,10 @@ ms.lasthandoff: 06/02/2017
   
 8.  或者，按一下 [進階] 修改進階設定，例如本機快取行為。 如需詳細資訊，請參閱下一個程序。  
   
-<a id="advanced-configuration" class="xliff"></a>
-
-## 進階組態  
+## <a name="advanced-configuration"></a>進階組態  
  下列程序說明如何為較不常見的案例，設定用戶端應用程式服務。 例如，您可以針對部署在公用位置的應用程式使用這些組態選項，或使用加密的 SQL Server Compact 資料庫做為本機資料快取。  
   
-<a id="to-configure-advanced-settings-for-client-application-services" class="xliff"></a>
-
-#### 設定用戶端應用程式服務的進階設定  
+#### <a name="to-configure-advanced-settings-for-client-application-services"></a>設定用戶端應用程式服務的進階設定  
   
 1.  在 [專案設計工具] 的 [服務] 頁面上，按一下 [進階]。  
   
@@ -97,9 +89,7 @@ ms.lasthandoff: 06/02/2017
   
 5.  選取或清除 [使用自訂連接字串]。 如需詳細資訊，請參閱下一個程序。  
   
-<a id="to-configure-client-application-services-to-use-a-database-for-the-local-cache" class="xliff"></a>
-
-#### 設定用戶端應用程式服務使用資料庫做為本機快取  
+#### <a name="to-configure-client-application-services-to-use-a-database-for-the-local-cache"></a>設定用戶端應用程式服務使用資料庫做為本機快取  
   
 1.  在 [專案設計工具] 的 [服務] 頁面上，按一下 [進階]。  
   
@@ -133,16 +123,12 @@ ms.lasthandoff: 06/02/2017
         PropertyStoredAs nvarchar(1), PropertyValue nvarchar(2048))  
     ```  
   
-<a id="using-custom-providers" class="xliff"></a>
-
-## 使用自訂提供者  
+## <a name="using-custom-providers"></a>使用自訂提供者  
  根據預設，用戶端應用程式服務功能會使用 <xref:System.Web.ClientServices.Providers?displayProperty=fullName> 命名空間中的提供者。 當您使用 [專案設計工具] 的 [服務] 頁面設定應用程式時，會將這些提供者的參考新增至您的 App.config 檔。 這些預設提供者會存取伺服器上的對應提供者。 Web 服務通常會設定為透過 <xref:System.Web.Security.SqlMembershipProvider> 和 <xref:System.Web.Security.SqlRoleProvider> 等提供者存取使用者資料。  
   
  如果您想要使用自訂服務提供者，通常會在伺服器端變更提供者，以便影響存取該伺服器的所有用戶端應用程式。 但是，您也可以選擇在用戶端使用非預設的提供者。 您可以在專案的 App.config 檔中指定自訂驗證或角色提供者，如下列程序所示。 如需如何建立自訂驗證和角色提供者的相關資訊，請參閱[實作成員資格提供者](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)和[實作角色提供者](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)。 您也可以修改專案的 `Settings` 類別 (在 C# 中是當做 `Properties.Settings.Default` 存取，而在 `My.Settings` 中是當做 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 存取)，以使用自訂設定提供者。 如需詳細資訊，請參閱[應用程式設定架構](../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
   
-<a id="to-configure-client-application-services-to-use-non-default-providers" class="xliff"></a>
-
-#### 設定用戶端應用程式服務使用非預設的提供者  
+#### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>設定用戶端應用程式服務使用非預設的提供者  
   
 1.  若要使用非預設的驗證或角色服務提供者，請先使用 [服務] 頁面完成其他所有組態設定。  
   
@@ -166,9 +152,7 @@ ms.lasthandoff: 06/02/2017
     <roleManager enabled="true" defaultProvider="MyCustomRoleProvider">  
     ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)   
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
  [專案設計工具、服務頁](https://msdn.microsoft.com/library/bb398109)   

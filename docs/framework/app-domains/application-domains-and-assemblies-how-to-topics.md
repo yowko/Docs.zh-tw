@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: afbedbf1565f698d0bda2afe6e75d68c610f2aa2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="application-domains-and-assemblies-how-to-topics" class="xliff"></a>
-
-# 應用程式定義域和組件 HOW TO 主題
+# <a name="application-domains-and-assemblies-how-to-topics"></a>應用程式定義域和組件 HOW TO 主題
 下列各節包含使用應用程式定義域和組件設計程式之概念文件中所有「如何」主題的連結。  
   
  **應用程式定義域**  
@@ -65,7 +63,5 @@ ms.lasthandoff: 06/02/2017
   
 -   [操作說明：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [應用程式定義域和組件](../../../docs/framework/app-domains/index.md)

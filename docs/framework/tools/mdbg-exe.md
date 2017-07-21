@@ -26,29 +26,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 99cf844513e7264d9542cd3502613b5e2b90da76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="mdbgexe-net-framework-command-line-debugger" class="xliff"></a>
-
-# MDbg.exe (.NET Framework 命令列偵錯工具)
+# <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework 命令列偵錯工具)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。 目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
   
  此工具會透過 NuGet 提供。 如需安裝資訊，請參閱 [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0)。 若要執行此工具，請使用 Package Manager Console。 如需如何使用 [套件管理員主控台] 的詳細資訊，請參閱 [Using the Package Manager Console](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console) (使用套件管理員主控台)。  
   
  在 Package Manager 命令提示字元中，輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 MDbg [ProgramName[arguments]] [options]  
 ```  
   
-<a id="commands" class="xliff"></a>
-
-## 命令  
+## <a name="commands"></a>命令  
  當您在偵錯工具中時 (例如顯示 **mdbg>** 提示時)，請輸入下一節中所述的其中一個命令：  
   
  **command** [*arguments*]  
@@ -106,9 +100,7 @@ MDbg [ProgramName[arguments]] [options]
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|顯示有關堆疊框架的偵錯資訊。<br /><br /> -   `-v` 選項提供有關各個所顯示堆疊框架的詳細資訊。<br />-   指定 `depth` 的數字，限制所顯示的框架數目。 使用 **all** 命令，顯示所有框架。 預設值為 100。<br />-   如果指定 *threadID* 參數，您可以控制與堆疊相關聯的執行緒。 預設只有目前的執行緒。 使用 **all** 命令，取得所有執行緒。|  
 |**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|顯示與模組 `pattern` 相符的函式。<br /><br /> 如果指定 *numSymbols*，則輸出僅限在指定的數目以內。 如果未指定 *pattern* 的 `!` (指示規則運算式)，則顯示所有功能。 如果未提供 *module*，則顯示所有載入的模組。 符號 (*~#*) 可透過使用 **break** 命令，用來設定中斷點。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  使用編譯器專用旗標編譯要偵錯的應用程式，會讓編譯器產生偵錯符號。 如需這些旗標的詳細資訊，請參閱編譯器的文件。 您可以偵錯最佳化的應用程式，但是有些偵錯資訊將會遺失。 例如，許多區域變數將不可見，而原始程式行也會不準確。  
   
  編譯應用程式之後，請在命令提示字元鍵入 **mdbg** 來啟動偵錯工作階段，如下列範例所示。  
@@ -127,12 +119,8 @@ mdbg>
   
  進入偵錯工具後，請使用上一節使用的指令和引數。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

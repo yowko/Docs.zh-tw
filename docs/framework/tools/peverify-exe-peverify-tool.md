@@ -31,29 +31,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 0cde5d4daeac4990dd9d1641120b19ea2413a204
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="peverifyexe-peverify-tool" class="xliff"></a>
-
-# Peverify.exe (PEVerify 工具)
+# <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 peverify filename [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|描述|  
 |--------------|-----------------|  
@@ -77,9 +71,7 @@ peverify filename [options]
 |**/verbose**|在 .NET Framework 2.0 版中，使用 MSIL 驗證訊息顯示其他資訊。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  通用語言執行平台透過以類型安全的方式執行應用程式程式碼，協助強制執行安全性和隔離機制。 正常情況下，不是[可驗證型別安全](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)的程式碼無法執行，但是您可以設定安全性原則，讓受信任但無法驗證的程式碼執行。  
   
  如果 **/md** 和 **/il** 兩個選項都未指定，則 Peverify.exe 會執行這兩種檢查。 Peverify.exe 會先執行 **/md** 檢查。 如果沒有任何錯誤，則會執行 **/il** 檢查。 如果您同時指定 **/md** 和 **/il**，則即使中繼資料有錯誤，還是會執行 **/il** 檢查。 因此，如果中繼資料沒有錯誤，**peverify** *filename* 就相當於 **peverify** *filename* **/md** **/il**。  
@@ -88,9 +80,7 @@ peverify filename [options]
   
  請注意，.NET Framework 2.0 版 (含) 以後版本支援傳回使用下列 MSIL 指令指定的可驗證 `byref`：`dup`、`ldsflda`、`ldflda`、`ldelema`、`call` 和 `unbox`。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會對 `myAssembly.exe` 組件中實作的方法，執行中繼資料驗證檢查和 MSIL 類型安全驗證檢查。  
   
 ```  
@@ -145,9 +135,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [NIB：撰寫可驗證的型別安全程式碼](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)   
  [型別安全和安全性](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)   

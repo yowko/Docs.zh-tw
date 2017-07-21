@@ -29,8 +29,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/06/2017
 
 ---
-# 如何：建置單一檔案組件
-<a id="how-to-build-a-single-file-assembly" class="xliff"></a>
+# <a name="how-to-build-a-single-file-assembly"></a>如何：建置單一檔案組件
 單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。 您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。 編譯器預設會建立副檔名為 .exe 的組件檔案。  
   
 > [!NOTE]
@@ -38,8 +37,7 @@ ms.lasthandoff: 06/06/2017
   
  下列程序示範如何使用命令列編譯器建立單一檔案組件。  
   
-### 建立副檔名為 .exe 的組件
-<a id="to-create-an-assembly-with-an-exe-extension" class="xliff"></a>  
+### <a name="to-create-an-assembly-with-an-exe-extension"></a>建立副檔名為 .exe 的組件  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -57,8 +55,7 @@ csc myCode.cs
 vbc myCode.vb  
 ```  
   
-#### 建立副檔名為 .exe 的組件並指定輸出檔名稱
-<a id="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name" class="xliff"></a>  
+#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>建立副檔名為 .exe 的組件並指定輸出檔名稱  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -76,12 +73,10 @@ csc /out:myAssembly.exe myCode.cs
 vbc /out:myAssembly.exe myCode.vb  
 ```  
   
-## 建立程式庫組件
-<a id="creating-library-assemblies" class="xliff"></a>  
+## <a name="creating-library-assemblies"></a>建立程式庫組件  
  程式庫組件類似類別庫。 它包含其他組件會參考的類型，但沒有可開始執行的進入點。  
   
-#### 建立程式庫組件
-<a id="to-create-a-library-assembly" class="xliff"></a>  
+#### <a name="to-create-a-library-assembly"></a>建立程式庫組件  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -99,8 +94,7 @@ csc /out:myCodeLibrary.dll /t:library myCode.cs
 vbc /out:myCodeLibrary.dll /t:library myCode.vb  
 ```  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   

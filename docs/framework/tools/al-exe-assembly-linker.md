@@ -28,12 +28,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 2bbb13d5a885cca264ebb29edd5f97799630601e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="alexe-assembly-linker" class="xliff"></a>
-
-# Al.exe (組件連結器)
+# <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 組件連結器 (Assembly Linker) 會從一個或多個模組或資源檔中產生一個包含組件資訊清單的檔案。 模組是不包含組件資訊清單的中繼語言 (IL) 檔案。  
   
 > [!NOTE]
@@ -43,17 +41,13 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 al sources options  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
  您可以指定一個或多個下列 `sources`。  
   
 |來源|描述|  
@@ -98,16 +92,12 @@ al sources options
 |`@filename`|指定包含 Al.exe 命令的回應檔。<br /><br /> 回應檔中的命令可顯示為一行一個，也可以全部顯示在同一行，並以一個或多個空格加以分隔。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  所有 Visual Studio 編譯器都會產生組件。 但是，如果您有一個或多個模組 (不含資訊清單的中繼資料)，就可以使用 Al.exe 在另一個檔案中建立包含資料清單的組件。  
   
  若要在快取中安裝組件、從快取中移除組件，或是列出快取的內容，請使用[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
   
-<a id="errors-and-warnings" class="xliff"></a>
-
-## 錯誤和警告  
+## <a name="errors-and-warnings"></a>錯誤和警告  
  下表列出 Al.exe 所產生的錯誤。  
   
 |錯誤|描述|  
@@ -186,18 +176,14 @@ al sources options
 |al1076|類型 'type' 會轉送至多個組件: 'assembly' 和 'assembly'。<br /><br /> 類型只能轉送至一個組件。|  
 |al1077|公用類型 'type' 定義於 'assembly' 中並轉送至 'assembly'。<br /><br /> 所產生的組件中有重複的公用類型。 其中一個是有效的類型定義，另一個是類型轉送子。|  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列命令會使用 `t2a.exe` 模組中的組件建立可執行檔 `t2.netmodule`。 進入點是 `Main` 中的 `MyClass` 方法。  
   
 ```  
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   

@@ -35,23 +35,20 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/02/2017
 
 ---
-# Ilasm.exe (IL 組譯工具)
-<a id="ilasmexe-il-assembler" class="xliff"></a>
+# <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) (如需 IL 的詳細資訊，請參閱 [Managed 執行程序](../../../docs/standard/managed-execution-process.md))。您可以執行產生的可執行檔 (包含 IL 和所需的中繼資料)，來判斷 IL 是否如預期般地執行。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-## 語法
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>語法  
   
 ```  
 ilasm [options] filename [[options]filename...]  
 ```  
   
-#### 參數
-<a id="parameters" class="xliff"></a>  
+#### <a name="parameters"></a>參數  
   
 |引數|描述|  
 |--------------|-----------------|  
@@ -98,8 +95,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 >  所有 Ilasm.exe 的選項都不區分大小寫，並且是以前三個字母識別。 例如， **/lis** 相當於 **/listing** ，且 **/res:**myresfile.res 相當於 **/resource:**myresfile.res。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output:** *file.ext* 等同於 **/output=** *file.ext*。  
   
-## 備註
-<a id="remarks" class="xliff"></a>  
+## <a name="remarks"></a>備註  
  IL 組譯工具可協助工具廠商設計及實作 IL 產生器。 使用 Ilasm.exe，工具與編譯器開發人員可以專注於 IL 和中繼資料的產生，而不需考慮以 PE 檔格式發出的 IL。  
   
  類似其他以執行階段為目標的編譯器 (例如 C# 和 Visual Basic)，Ilasm.exe 並不會產生中繼目的檔，而且不需要連結階段來形成 PE 檔。  
@@ -123,8 +119,7 @@ ilasm [options] filename [[options]filename...]
   
  如需 IL 文法的詳細資訊，請參閱 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]中的 asmparse.grammar 檔。  
   
-## 版本資訊
-<a id="version-information" class="xliff"></a>  
+## <a name="version-information"></a>版本資訊  
  從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始，您可以使用類似下列的程式碼附加自訂屬性至介面實作：  
   
 ```  
@@ -156,8 +151,7 @@ ilasm [options] filename [[options]filename...]
   
  如需 IL 文法的詳細資訊，請參閱 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]中的 asmparse.grammar 檔。  
   
-## 範例
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>範例  
  下列命令會組譯 IL 檔 `myTestFile.il` ，並產生可執行檔 `myTestFile.exe.`。  
   
 ```  
@@ -243,8 +237,7 @@ public class Hello
 } // end of class Hello  
 ```  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)   
  [Managed 執行程序](../../../docs/standard/managed-execution-process.md)   

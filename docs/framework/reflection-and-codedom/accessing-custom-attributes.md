@@ -22,22 +22,16 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: fbbc83b6aafdd5f2cbf554de66bc19f49d635aff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="accessing-custom-attributes" class="xliff"></a>
-
-# 存取自訂屬性
+# <a name="accessing-custom-attributes"></a>存取自訂屬性
 建立屬性與程式項目的關聯之後，就可以使用反映來查詢其存在狀況和值。 在 .NET Framework 1.0 和 1.1 版中，會檢查執行內容中的自訂屬性。 .NET Framework 2.0 版提供新的載入內容，就是僅限反映的內容，這可以用來檢查無法載入來執行的程式碼。  
   
-<a id="the-reflection-only-context" class="xliff"></a>
-
-## 僅限反映的內容  
+## <a name="the-reflection-only-context"></a>僅限反映的內容  
  無法執行載入僅限反映內容的程式碼。 這表示無法建立自訂屬性的執行個體，因為這將需要執行其建構函式。 若要載入和檢查僅限反映內容中的自訂屬性，請使用 <xref:System.Reflection.CustomAttributeData> 類別。 您可以使用靜態 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> 方法的適當多載，以取得此類別的執行個體。 請參閱[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
-<a id="the-execution-context" class="xliff"></a>
-
-## 執行內容  
+## <a name="the-execution-context"></a>執行內容  
  查詢執行內容中屬性的主要反映方法是 <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=fullName> 和 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>。  
   
  會檢查自訂屬性有關附加組件的存取性。 這相當於檢查附加自訂屬性中組件內之類型的方法是否可以呼叫自訂屬性的建構函式。  
@@ -82,9 +76,7 @@ public class LocalizationExtenderProvider
   
  [!code-cpp[CustomAttributeData#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source2.cpp#2)] [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)] [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=fullName>   
  <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   

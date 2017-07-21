@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: d5d3cd1e19d8a8156c4ee7968cb06770dcae58d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-receive-first-chance-exception-notifications" class="xliff"></a>
-
-# 如何：接收第一個可能發生的例外狀況通知
+# <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一個可能發生的例外狀況通知
 <xref:System.AppDomain> 類別的 <xref:System.AppDomain.FirstChanceException> 事件可讓您在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。  
   
  這個事件是在應用程式定義域層級引發。 執行的執行緒可以通過多個應用程式定義域；因此，在另一個應用程式定義域中無法處理某個應用程式定義域中未處理的例外狀況。 在應用程式定義域處理例外狀況之前，通知都會發生在每個已新增事件之處理常式的應用程式定義域中。  
@@ -35,14 +33,10 @@ ms.lasthandoff: 06/02/2017
   
  如需跨數個應用程式定義域的更複雜範例，請參閱 <xref:System.AppDomain.FirstChanceException> 事件的範例。  
   
-<a id="receiving-first-chance-exception-notifications-in-the-default-application-domain" class="xliff"></a>
-
-## 接收預設應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
+## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>接收預設應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
  在下列程序中，應用程式的進入點 (`Main()` 方法) 會在預設應用程式定義域中執行。  
   
-<a id="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain" class="xliff"></a>
-
-#### 示範預設應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
+#### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>示範預設應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
   
 1.  使用 Lambda 函式定義 <xref:System.AppDomain.FirstChanceException> 事件的事件處理常式，並將它附加至事件。 在此範例中，事件處理常式會列印已處理事件之應用程式定義域的名稱以及例外狀況的 <xref:System.Exception.Message%2A> 屬性。  
   
@@ -60,14 +54,10 @@ ms.lasthandoff: 06/02/2017
   
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#5)]  [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]  
   
-<a id="receiving-first-chance-exception-notifications-in-another-application-domain" class="xliff"></a>
-
-## 接收另一個應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
+## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>接收另一個應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
  如果您的程式包含多個應用程式定義域，您可以選擇哪些應用程式網域會收到通知。  
   
-<a id="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create" class="xliff"></a>
-
-#### 接收您所建立之應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
+#### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>接收您所建立之應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
   
 1.  定義 <xref:System.AppDomain.FirstChanceException> 事件的事件處理常式。 此範例使用 `static` 方法 (在 Visual Basic 中為 `Shared` 方法)，這個方法會列印已處理事件之應用程式定義域的名稱以及例外狀況的 <xref:System.Exception.Message%2A> 屬性。  
   
@@ -79,9 +69,7 @@ ms.lasthandoff: 06/02/2017
   
      您可以使用相同的方式在預設應用程式定義域中處理此事件。 在 `Main()` 中使用 `static` (在 Visual Basic 中為 `Shared`) <xref:System.AppDomain.CurrentDomain%2A?displayProperty=fullName> 屬性，以取得預設應用程式定義域的參考。  
   
-<a id="to-demonstrate-first-chance-exception-notifications-in-the-application-domain" class="xliff"></a>
-
-#### 示範應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
+#### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>示範應用程式定義域中第一個可能發生傳回型別的例外狀況通知  
   
 1.  在您於上一個程序建立的應用程式定義域中建立 `Worker` 物件。 `Worker` 類別必須是公用，而且必須衍生自 <xref:System.MarshalByRefObject>，如本文結尾的完整範例所示。  
   
@@ -95,9 +83,7 @@ ms.lasthandoff: 06/02/2017
   
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]  [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列範例會建立名為 `AD1` 的應用程式定義域，並將事件處理常式新增至應用程式定義域的 <xref:System.AppDomain.FirstChanceException> 事件。 此範例會在應用程式定義域中建立 `Worker` 類別的執行個體，並呼叫名為 `Thrower` 且擲回 <xref:System.ArgumentException> 的方法。 根據其引數的值，方法會攔截例外狀況或無法處理它。  
   
  每次 `Thrower` 方法在 `AD1` 中擲回例外狀況時，都會在 `AD1` 中引發 <xref:System.AppDomain.FirstChanceException> 事件，而且事件處理常式會顯示訊息。 執行階段接著會尋找例外狀況處理常式。 在第一個案例中，例外狀況處理常式位於 `AD1` 中。 在第二個案例中，此例外狀況未在 `AD1` 中處理，而是改為在預設應用程式定義域中攔截。  
@@ -109,13 +95,9 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)] [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   這個範例是命令列應用程式。 若要在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 中編譯和執行此程式碼，請在 `Main()` 結尾新增 C# 程式碼 `Console.ReadLine();` (在 Visual Basic 中，為 `Console.ReadLine()`)，防止在您讀取輸出之前關閉命令視窗。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomain.FirstChanceException>

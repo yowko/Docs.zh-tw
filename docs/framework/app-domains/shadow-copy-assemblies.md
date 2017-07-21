@@ -22,12 +22,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: e451c7f15026b06db98d1922e06183a06e42d982
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="shadow-copying-assemblies" class="xliff"></a>
-
-# 陰影複製組件
+# <a name="shadow-copying-assemblies"></a>陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。 這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
   
 > [!IMPORTANT]
@@ -49,9 +47,7 @@ ms.lasthandoff: 06/02/2017
 -   [已淘汰的方法](#ObsoleteMethods)描述對於 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中控制陰影複製之屬性和方法的變更。  
   
 <a name="EnablingAndUsing"></a>   
-<a id="enabling-and-using-shadow-copying" class="xliff"></a>
-
-## 啟用及使用陰影複製  
+## <a name="enabling-and-using-shadow-copying"></a>啟用及使用陰影複製  
  您可以使用 <xref:System.AppDomainSetup> 類別的屬性，如下所示，設定用於陰影複製的應用程式定義域：  
   
 -   將 <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 屬性設為字串值 `"true"` 來啟用陰影複製。  
@@ -80,9 +76,7 @@ ms.lasthandoff: 06/02/2017
     >  目錄路徑不可包含分號，因為分號是分隔符號字元。 分號沒有逸出字元。  
   
 <a name="StartupPerformance"></a>   
-<a id="startup-performance" class="xliff"></a>
-
-## 啟動效能  
+## <a name="startup-performance"></a>啟動效能  
  當使用陰影複製的應用程式定義域啟動時，複製應用程式目錄中的組件到陰影複製目錄會有延遲；或當組件已經在該位置時，驗證組件也會有延遲。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，會複製所有組件到暫存目錄。 會開啟每個組件來確認組件名稱，且會驗證強式名稱。 會檢查每個組件，以查看它是否已更新為比陰影複製目錄中的複本還要新。 若是如此，則將它複製到陰影複製目錄中。 最後會捨棄暫時複本。  
   
  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，預設啟動行為會直接比較應用程式目錄中每個組件的檔案日期和時間以及陰影複製目錄中複本的檔案日期和時間。 如果已更新組件，便會使用和舊版 .NET Framework 相同的程序複製組件；否則會載入陰影複製目錄中的複本。  
@@ -90,14 +84,10 @@ ms.lasthandoff: 06/02/2017
  對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將 [\<shadowCopyVerifyByTimestamp> 項目](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) (並設定 `enabled="false"`) 新增至組態檔，還原舊版 .NET Framework 的啟動行為。  
   
 <a name="ObsoleteMethods"></a>   
-<a id="obsolete-methods" class="xliff"></a>
-
-## 已淘汰的方法  
+## <a name="obsolete-methods"></a>已淘汰的方法  
  <xref:System.AppDomain> 類別有幾種方法，例如 <xref:System.AppDomain.SetShadowCopyFiles%2A> 和 <xref:System.AppDomain.ClearShadowCopyPath%2A>，可用來控制應用程式定義域上的陰影複製，但這些已經在 .NET Framework 2.0 版中標記為已淘汰。 建議使用 <xref:System.AppDomainSetup> 類別的屬性來設定用於陰影複製的應用程式定義域。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=fullName>   
  <xref:System.AppDomainSetup.CachePath%2A?displayProperty=fullName>   
  <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=fullName>   

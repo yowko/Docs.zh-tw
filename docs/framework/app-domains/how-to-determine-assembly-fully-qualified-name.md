@@ -22,12 +22,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 28fb4d677be7a9387863798dc34b091abc24efa0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-determine-an-assembly39s-fully-qualified-name" class="xliff"></a>
-
-# 如何：決定組件的完整名稱
+# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>如何：決定組件的完整名稱
 若要在全域組件快取中找到組件的完整名稱，請使用全域組件快取工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 請參閱[如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
   
  對於不在全域組件快取的組件，您可以使用數種方式取得完整組件名稱：可以使用程式碼輸出資訊至主控台或至變數，或者您可使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 以檢查組件中繼資料，其中包含完整名稱。  
@@ -42,16 +40,12 @@ ms.lasthandoff: 06/02/2017
   
  如需有關設定組件屬性的詳細資訊，如版本、文化特性及組件名稱，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。 如需有關給予組件強式名稱的詳細資訊，請參閱[建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)。  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例示範如何顯示含有指定類別組件的完整名稱至主控台。 因為它會擷取應用程式已載入組件的名稱，所以組件是否在 GAC 中並不重要。  
   
  [!code-cpp[Assembly.Fullname#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.FullName/CPP/example2.cpp#2)] [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)] [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [組件名稱](../../../docs/framework/app-domains/assembly-names.md)   
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)   

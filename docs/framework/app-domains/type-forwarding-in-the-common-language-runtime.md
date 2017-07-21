@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
 ms.openlocfilehash: 3515a15432d2b7ff68c19dbd966806d0df3be7a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="type-forwarding-in-the-common-language-runtime" class="xliff"></a>
-
-# Common Language Runtime 中的類型轉送
+# <a name="type-forwarding-in-the-common-language-runtime"></a>Common Language Runtime 中的類型轉送
 型別轉送可讓您將型別移至另一個組件，而無須重新編譯使用原始組件的應用程式。  
   
  例如，假設應用程式在名為 `Utility.dll` 的組件中使用 `Example`類別。 `Utility.dll` 的開發人員可能會決定重構組件，在流程中可能會將 `Example` 類別移至另一個組件。 如果舊版的 `Utility.dll` 被新版的 `Utility.dll` 和其隨附組件取代，使用 `Example` 類別的應用程式會失敗，因為它在新版 `Utility.dll` 中找不到 `Example` 類別。  
@@ -36,9 +34,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  在 .NET Framework 2.0 版中，您無法從在 Visual Basic 中撰寫的組件轉送型別。 不過，在 Visual Basic 中撰寫的應用程式可以使用轉送型別。 也就是說，如果應用程式使用以 C# 或 C++ 編碼的組件，且來自該組件的型別轉送至另一個組件，則 Visual Basic 應用程式可以使用轉送型別。  
   
-<a id="forwarding-types" class="xliff"></a>
-
-## 轉送型別  
+## <a name="forwarding-types"></a>轉送型別  
  轉送型別有四個步驟︰  
   
 1.  將型別的原始程式碼從原始組件移至目的地組件。  
@@ -57,9 +53,7 @@ ms.lasthandoff: 06/02/2017
   
 4.  重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您正在從命令列編譯 C# 檔案，請使用 [/reference (C# 編譯器選項) ](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 選項來指定包含型別的組件。 在 C++ 中，在來源檔案中使用 [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 指示詞以指定包含型別的組件。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
  [型別轉送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)   
  [#using 指示詞](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)

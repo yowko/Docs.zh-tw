@@ -28,12 +28,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 07064975c0deb878b1bf2be6c2d1429c1718725f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="assemblies-in-the-common-language-runtime" class="xliff"></a>
-
-# Common Language Runtime 中的組件
+# <a name="assemblies-in-the-common-language-runtime"></a>Common Language Runtime 中的組件
 組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。 組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。 組件為通用語言執行平台提供了感知型別實作所需的資訊。 對於執行階段而言，型別不會存在於組件的內容以外。  
   
  組件可以執行以下功能：  
@@ -56,9 +54,7 @@ ms.lasthandoff: 06/02/2017
   
  您可以使用幾種方式建立組件。 您可以使用過去用來建立 .dll 或 .exe 檔案的開發工具，例如 Visual Studio。 您可以使用 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的工具，搭配其他開發環境中建立的模組來建立組件。 您也可以使用 Common Language Runtime API (例如 <xref:System.Reflection.Emit?displayProperty=fullName>) 來建立動態組件。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |標題|描述|  
 |-----------|-----------------|  
@@ -74,7 +70,5 @@ ms.lasthandoff: 06/02/2017
 |[發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|描述如何建立動態組件。|  
 |[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 .NET Framework 如何在執行階段中解析組件參考。|  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Assembly?displayProperty=fullName>

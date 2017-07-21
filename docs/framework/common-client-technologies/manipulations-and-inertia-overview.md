@@ -18,19 +18,15 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 27c81420829bab6a460aad3ad257c4053d976e69
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="manipulations-and-inertia-overview" class="xliff"></a>
-
-# 操作和慣性概觀
+# <a name="manipulations-and-inertia-overview"></a>操作和慣性概觀
 「操作」可讓使用者使用「操作工具」來移動、旋轉和調整使用者介面 (UI) 項目大小。 操作工具代表滑鼠或 (在觸控式的情況下) 手寫筆或手指。  
   
  「慣性」藉由在項目上模擬摩擦力，可模擬移動的 UI 項目在真實世界中的行為。 這可讓項目在停止前逐漸減緩移動 (直線和有角度的方向)。 本文提供 .NET Framework 操作和慣性的簡介。  
   
-<a id="manipulations" class="xliff"></a>
-
-## 操作  
+## <a name="manipulations"></a>操作  
  操作視操作工具的集合為複合物件。 應用程式可以追蹤複合物件的變更，而非個別元件的變更。  
   
  請考慮下圖中的影像。 使用者可以使用兩個操作工具來移動、旋轉和縮放影像。 對每個操作工具的變更會與其他操作工具一同被解譯。  
@@ -47,9 +43,7 @@ ms.lasthandoff: 06/02/2017
   
  操作專為二維 (2-D) [仿射轉換](http://msdn.microsoft.com/library/ms533810\(VS.85\).aspx) (affine transformation) 所設計。 這些轉換包含平移、旋轉和縮放。  
   
-<a id="parts-of-a-manipulation" class="xliff"></a>
-
-### 操作的各部分  
+### <a name="parts-of-a-manipulation"></a>操作的各部分  
  操作是 <xref:System.Windows.Input.Manipulations.Manipulator2D> 物件的集合。 此彙總的操作會由原點和橢圓形呈現。 原點是操控項目的所有操作工具的平均位置。 此橢圓形的半徑為從原點到每個 <xref:System.Windows.Input.Manipulations.Manipulator2D> 物件的平均距離。  
   
  ![操作的各部分。](../../../docs/framework/common-client-technologies/media/manipulation-definition.png "Manipulation_Definition")  
@@ -71,9 +65,7 @@ ms.lasthandoff: 06/02/2017
   
  從 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 物件中移除最後一個與操作相關聯的操作工具時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件。  
   
-<a id="the-manipulation-processing-model" class="xliff"></a>
-
-### 操作處理模型  
+### <a name="the-manipulation-processing-model"></a>操作處理模型  
  操作處理器會使用直接使用方式模型。 藉由這個簡單的模型，應用程式必須將任何輸入事件的詳細資料傳遞給操作處理器。 輸入的事件可能會由任何基本輸入所引發，例如滑鼠裝置、手寫筆或手指。 這個程序提供直接的篩選機制以及簡單的使用模型，讓應用程式在必要時可以批次輸入事件。  
   
  對於要在操作程序中包含基本輸入的應用程式，它會從基本輸入的詳細資料建立 <xref:System.Windows.Input.Manipulations.Manipulator2D> 結構，並使用 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 方法將結構傳遞給操作處理器。 操作處理器接著會引發事件，其中應用程式必須適當地處理視覺化元件的更新。  
@@ -82,9 +74,7 @@ ms.lasthandoff: 06/02/2017
   
  操作處理模型  
   
-<a id="inertia" class="xliff"></a>
-
-## 慣性  
+## <a name="inertia"></a>慣性  
  慣性處理器可讓應用程式模擬真實世界行為，來外推位置、方向與其他 UI 項目的屬性。  
   
  例如，當使用者撥動項目，它可以繼續移動、減速，並慢慢停止。 慣性處理器會實作此行為，讓仿射 2D 值 (原點、縮放、轉譯和旋轉) 在指定時間內以指定減速速率變更。  
@@ -93,7 +83,5 @@ ms.lasthandoff: 06/02/2017
   
  慣性處理和操作處理通常一起使用。 其介面很類似，而且它們所引發的事件 (在某些情況下) 完全相同。 一般而言，當 UI 項目操作完成時，就會開始慣性處理。 這透過接聽 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件和從事件處理常式啟動慣性處理而完成。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Input.Manipulations>

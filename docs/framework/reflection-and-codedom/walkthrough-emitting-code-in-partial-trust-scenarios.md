@@ -27,12 +27,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 73618a140daa4146f80472872a54884b7032da9a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="walkthrough-emitting-code-in-partial-trust-scenarios" class="xliff"></a>
-
-# 逐步解說：在部分信任案例中發出程式碼
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任案例中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
   
 > [!NOTE]
@@ -54,25 +52,19 @@ ms.lasthandoff: 06/02/2017
  如需這些程序所示範程式碼的完整清單，請參閱本逐步解說結尾的[範例](#Example)一節。  
   
 <a name="Setting_up"></a>   
-<a id="setting-up-partially-trusted-locations" class="xliff"></a>
-
-## 設定部分信任的位置  
+## <a name="setting-up-partially-trusted-locations"></a>設定部分信任的位置  
  下列兩項程序會示範如何從您可以測試部分信任程式碼的位置設定位置。  
   
 -   第一項程序示範如何建立沙箱應用程式定義域，程式碼在其中會獲授與網際網路權限。  
   
 -   第二項程序顯示如何將有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>，新增至部分信任的應用程式定義域，以便存取相同或較低信任組件中的私用資料。  
   
-<a id="creating-sandboxed-application-domains" class="xliff"></a>
-
-### 建立沙箱應用程式定義域  
+### <a name="creating-sandboxed-application-domains"></a>建立沙箱應用程式定義域  
  若要建立可用部分信任執行組件的應用程式定義域，您必須使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=fullName> 方法多載來建立應用程式定義域，指定將權限集授與這些組件。 指定授權集最簡單的方式，是從安全性原則擷取具名權限集。  
   
  下列程序會建立沙箱應用程式定義域，用部分信任的執行程式碼，測試發出的程式碼只能存取公用類型公用成員的案例。 後續程序示範如何新增 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>，測試發出的程式碼可以存取非公用類型和成員的案例，而這些類型和成員所在組件具有相同或較低的權限。  
   
-<a id="to-create-an-application-domain-with-partial-trust" class="xliff"></a>
-
-##### 建立部份信任的應用程式定義域  
+##### <a name="to-create-an-application-domain-with-partial-trust"></a>建立部份信任的應用程式定義域  
   
 1.  建立權限集，以授與沙箱應用程式定義域中的組件。 在此情況下，會使用網際網路區域的權限集。  
   
@@ -91,9 +83,7 @@ ms.lasthandoff: 06/02/2017
   
      <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=fullName> 方法多載的最後一個參數可讓您指定組件集合，授與完全信任，而不是應用程式定義域的授權集。 因為這些組件位於全域組件快取，所以您不必指定應用程式使用的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件。 全域組件快取中的組件一律為完全信任。 您可以使用這個參數指定不在全域組件快取中的強式名稱組件。  
   
-<a id="adding-restrictedmemberaccess-to-sandboxed-domains" class="xliff"></a>
-
-### 將 RestrictedMemberAccess 新增至沙箱定義域  
+### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>將 RestrictedMemberAccess 新增至沙箱定義域  
  主應用程式可以允許匿名裝載的動態方法，存取組件中的私用資料，這些組件的信任層級都等於或低於發出程式碼的組件信任層級。 若要啟用此有限功能以略過 Just-In-Time (JIT) 可視性檢查，主應用程式會將具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> (RMA) 旗標的 <xref:System.Security.Permissions.ReflectionPermission> 物件新增至授權集。  
   
  例如，主機可能會授與網際網路應用程式加上 RMA 的網際網路權限，讓網際網路應用程式可以發出程式碼，存取自己組件中的私用資料。 因為限制存取相同或較低信任的組件，所以網際網路應用程式無法存取完全信任組件的成員，例如 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件。  
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  為防止提高權限，建構匿名裝載的動態方法時，會包含發出組件的堆疊資訊。 叫用方法時會檢查堆疊資訊。 因此，從完全信任程式碼叫用的匿名裝載動態方法，其信任層級仍限於發出組件的信任層級。  
   
-<a id="to-create-an-application-domain-with-partial-trust-plus-rma" class="xliff"></a>
-
-##### 建立加上 RMA 的部份信任應用程式定義域  
+##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>建立加上 RMA 的部份信任應用程式定義域  
   
 1.  建立具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 旗標的新 <xref:System.Security.Permissions.ReflectionPermission> 物件，並使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=fullName> 方法將權限新增至授權集。  
   
@@ -119,14 +107,10 @@ ms.lasthandoff: 06/02/2017
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]  [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
   
 <a name="Running_code"></a>   
-<a id="running-code-in-sandboxed-application-domains" class="xliff"></a>
-
-## 在沙箱應用程式定義域中執行程式碼  
+## <a name="running-code-in-sandboxed-application-domains"></a>在沙箱應用程式定義域中執行程式碼  
  下列程序說明如何使用可在應用程式定義域中執行的方法來定義類別、如何在定義域中建立類別的執行個體，以及如何執行其方法。  
   
-<a id="to-define-and-execute-a-method-in-an-application-domain" class="xliff"></a>
-
-#### 在應用程式定義域中定義及執行方法  
+#### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>在應用程式定義域中定義及執行方法  
   
 1.  定義衍生自 <xref:System.MarshalByRefObject> 的類別。 這可讓您在其他的應用程式定義域中建立類別的執行個體，以及跨應用程式定義域界限進行方法呼叫。 本例中的類別名為 `Worker`。  
   
@@ -156,9 +140,7 @@ ms.lasthandoff: 06/02/2017
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]  [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
   
 <a name="Using_methods"></a>   
-<a id="using-anonymously-hosted-dynamic-methods" class="xliff"></a>
-
-## 使用匿名裝載的動態方法  
+## <a name="using-anonymously-hosted-dynamic-methods"></a>使用匿名裝載的動態方法  
  匿名裝載動態方法與系統提供的透明組件相關聯。 因此，它們所包含的程式碼是透明的。 另一方面，一般的動態方法必須與現有的模組相關聯 (不論是直接指定或推斷的相關聯類型)），並接受該模組的安全性層級。  
   
 > [!NOTE]
@@ -168,9 +150,7 @@ ms.lasthandoff: 06/02/2017
   
  為防止提高權限，建構匿名裝載的動態方法時，會包含發出組件的堆疊資訊。 叫用方法時會檢查堆疊資訊。 從完全信任程式碼叫用的匿名裝載動態方法，其信任層級仍限於發出組件的信任層級。  
   
-<a id="to-use-anonymously-hosted-dynamic-methods" class="xliff"></a>
-
-#### 使用匿名裝載的動態方法  
+#### <a name="to-use-anonymously-hosted-dynamic-methods"></a>使用匿名裝載的動態方法  
   
 -   使用不指定相關聯模組或類型的建構函式，建立匿名裝載的動態方法。  
   
@@ -197,13 +177,9 @@ ms.lasthandoff: 06/02/2017
     >  有限略過可視性檢查是匿名裝載動態方法的功能。 當一般的動態方法略過 JIT 可見度檢查時，它們必須獲授與完全信任。  
   
 <a name="Example"></a>   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
   
-<a id="description" class="xliff"></a>
-
-### 描述  
+### <a name="description"></a>描述  
  下列程式碼範例示範如何使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 旗標允許匿名裝載動態方法略過 JIT 可見度檢查，但僅限於所在信任層級與發出程式碼的組件信任層級相同或較低的目標成員。  
   
  此範例會定義 `Worker` 類別，可跨應用程式定義域界限封送處理。 此類別有兩個 `AccessPrivateMethod` 方法多載，可以發出和執行動態方法。 第一個多載會發出動態方法，呼叫 `Worker` 類別的私用 `PrivateMethod`方法，而且可以發出包含或不含 JIT 可見度檢查的動態方法。 第二個多載會發出動態方法，存取 <xref:System.String> 類別的 `internal` 屬性 (Visual Basic 為 `Friend` 屬性)。  
@@ -222,19 +198,13 @@ ms.lasthandoff: 06/02/2017
   
  這項比較會示範 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName> 如何啟用部分信任的程式碼，略跳過其他部分信任程式碼的可見度檢查，卻不危及信任程式碼的安全性。  
   
-<a id="code" class="xliff"></a>
-
-### 程式碼  
+### <a name="code"></a>程式碼  
  [!code-csharp[HowToEmitCodeInPartialTrust#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#1)] [!code-vb[HowToEmitCodeInPartialTrust#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#1)]  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   如果您在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中建置此程式碼範例，當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，即必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
  [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

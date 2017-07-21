@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="delay-signing-an-assembly" class="xliff"></a>
-
-# 延遲簽署組件
+# <a name="delay-signing-an-assembly"></a>延遲簽署組件
 組織可能會有開發人員無法每日存取的嚴密保護金鑰組。 公開金鑰經常都可以使用，但只有少數人才能存取私密金鑰。 在以強式名稱開發組件時，每個參考強式名稱目標組件的組件都包含用來指定目標組件的強式名稱的公開金鑰語彙基元。 這需要可在開發程序期間使用公開金鑰。  
   
  您可以在建置階段中使用延遲或部分簽署，以便在可攜式執行檔 (PE) 中保留強式名稱簽章的空間，但延後到之後的某個階段 (通常是就在傳送組件之前) 才實際簽署。  
@@ -78,9 +76,7 @@ ms.lasthandoff: 06/02/2017
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   

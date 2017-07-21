@@ -26,12 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 43db8eb6101454344a0b9515929e21c49a512acd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="security-considerations-for-reflection" class="xliff"></a>
-
-# 反映的安全性考量
+# <a name="security-considerations-for-reflection"></a>反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 (也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等)。 不限制使用反映來取得類型和成員的相關資訊。 所有程式碼都可以使用反映來執行下列工作：  
   
 -   列舉類型和成員，並檢查其中繼資料。  
@@ -59,9 +57,7 @@ ms.lasthandoff: 06/02/2017
  (選擇性) 沙箱應用程式定義域可以授權有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>，本文稍後的[存取通常無法存取的成員](#accessingNormallyInaccessible)一節將會說明。  
   
 <a name="accessingSecurityCritical"></a>   
-<a id="accessing-security-critical-members" class="xliff"></a>
-
-## 存取安全性關鍵成員  
+## <a name="accessing-security-critical-members"></a>存取安全性關鍵成員  
  如果成員有 <xref:System.Security.SecurityCriticalAttribute>、屬於具有 <xref:System.Security.SecurityCriticalAttribute> 的類型，或位於安全性關鍵組件中，就是安全性關鍵成員。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，存取安全性關鍵成員的規則如下：  
   
 -   透明程式碼無法使用反映來存取安全性關鍵成員，即使是完全受信任的程式碼也一樣。 會擲回 <xref:System.MethodAccessException>、<xref:System.FieldAccessException> 或 <xref:System.TypeAccessException>。  
@@ -74,9 +70,7 @@ ms.lasthandoff: 06/02/2017
   
  如需 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中安全性模型的詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
-<a id="reflection-and-transparency" class="xliff"></a>
-
-## 反映和透明度  
+## <a name="reflection-and-transparency"></a>反映和透明度  
  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，Common Language Runtime 可以從數個因素來決定類型或成員的透明度，包括組件的信任層級和應用程式定義域的信任層級。 反映提供 <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A> 和 <xref:System.Type.IsSecurityTransparent%2A> 屬性，可讓您探索類型的透明度。 下表顯示這些屬性的有效組合。  
   
 |安全性層級|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
@@ -90,9 +84,7 @@ ms.lasthandoff: 06/02/2017
  <xref:System.Reflection.MethodBase>、<xref:System.Reflection.FieldInfo>、<xref:System.Reflection.Emit.TypeBuilder>、<xref:System.Reflection.Emit.MethodBuilder> 和 <xref:System.Reflection.Emit.DynamicMethod> 類別上有類似的屬性。 (針對其他反映和反映發出抽象，安全性屬性 (security attribute) 會套用至相關聯的方法；例如，以屬性 (property) 來說，安全性屬性會套用至屬性存取子 (property accessor)。  
   
 <a name="accessingNormallyInaccessible"></a>   
-<a id="accessing-members-that-are-normally-inaccessible" class="xliff"></a>
-
-## 存取通常無法存取的成員  
+## <a name="accessing-members-that-are-normally-inaccessible"></a>存取通常無法存取的成員  
  若要使用反映來叫用無法存取的成員 (根據 Common Language Runtime 的存取範圍規則)，您的程式碼必須被授與下列兩個權限之一：  
   
 -   若要允許程式碼叫用任何非公用成員：您的程式碼必須被授與具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
@@ -108,19 +100,13 @@ ms.lasthandoff: 06/02/2017
   
 -   組件 A 無法使用反映來存取 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件的私用成員，例如 mscorlib.dll，因為 mscorlib.dll 是完全受信任，因此擁有尚未授與組件 A 的權限。當程式碼存取安全性查核執行階段的堆疊時，會擲回 <xref:System.MemberAccessException>。  
   
-<a id="serialization" class="xliff"></a>
-
-## 序列化  
+## <a name="serialization"></a>序列化  
  進行序列化時，不論存取範圍為何，具有 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.SecurityPermission> 都可讓您取得或設定可序列化類型的成員。 此權限可讓程式碼探索及變更執行個體的私用狀態。 (除了授與適當的權限，也必須在中繼資料中將該類型[標示](../../../docs/standard/attributes/applying-attributes.md)為可序列化。)  
   
-<a id="parameters-of-type-methodinfo" class="xliff"></a>
-
-## MethodInfo 類型的參數  
+## <a name="parameters-of-type-methodinfo"></a>MethodInfo 類型的參數  
  避免撰寫採用 <xref:System.Reflection.MethodInfo> 參數的公用成員，特別是針對受信任的程式碼。 這類成員比較容易受到惡意程式碼攻擊。 例如，請考慮採用 <xref:System.Reflection.MethodInfo> 參數之高度信任程式碼中的公用成員。 假設公用成員在所提供的參數上間接呼叫 <xref:System.Reflection.MethodBase.Invoke%2A> 方法。 如果公用成員沒有執行必要的權限檢查，呼叫 <xref:System.Reflection.MethodBase.Invoke%2A> 方法一定會成功，因為安全性系統會判定呼叫者是受高度信任。 即使惡意程式碼沒有直接叫用方法的權限，它還是可以藉由呼叫公用成員來間接執行。  
   
-<a id="version-information" class="xliff"></a>
-
-## 版本資訊  
+## <a name="version-information"></a>版本資訊  
   
 -   從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，透明程式碼無法使用反映來存取安全性關鍵的成員。  
   
@@ -128,9 +114,7 @@ ms.lasthandoff: 06/02/2017
   
 -   從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，使用反映來取得非公用類型和成員的相關資訊時，不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Security.Permissions.ReflectionPermissionFlag>   
  <xref:System.Security.Permissions.ReflectionPermission>   
  <xref:System.Security.Permissions.SecurityPermission>   

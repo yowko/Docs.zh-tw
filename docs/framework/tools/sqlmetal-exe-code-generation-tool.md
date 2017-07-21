@@ -30,12 +30,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: b4f700a285017e5e759b4e9b8e840a893592e7f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="sqlmetalexe-code-generation-tool" class="xliff"></a>
-
-# SqlMetal.exe (程式碼產生工具)
+# <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 之 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]元件的程式碼和對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
   
 -   從資料庫產生原始程式碼和對應屬性或對應檔。  
@@ -51,17 +49,13 @@ SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecd
   
  若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 sqlmetal [options] [<input file>]  
 ```  
   
-<a id="options" class="xliff"></a>
-
-## 選項  
+## <a name="options"></a>選項  
  若要檢視最新的選項清單，請進入安裝位置，並在命令提示字元輸入 `sqlmetal /?` 。  
   
  **連接選項**  
@@ -108,9 +102,7 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**\<輸入檔>**|指定 SQL Server Express .mdf 檔、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 檔或是 .dbml 中繼檔。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  SqlMetal 功能實際上包含兩個步驟：  
   
 -   將資料庫的中繼資料擷取至 .dbml 檔。  
@@ -133,9 +125,7 @@ sqlmetal [options] [<input file>]
   
  若要指定輸入檔案名稱，請將名稱以輸入檔案加入命令列。 不支援將檔案名稱包含在連接字串中 (使用 **/conn** 選項)。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  產生 .dbml 檔，其中包含擷取的 SQL 中繼資料：  
   
  **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  
@@ -159,9 +149,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  當您使用 **/pluralize** 選項搭配 Northwind 範例資料庫時，請注意以下行為： 當 SqlMetal 提供資料表的資料列類型名稱時，資料表名稱會是單數。 當它為資料表提供 <xref:System.Data.Linq.DataContext> 屬性時，資料表名稱會是複數。 碰巧的是，Northwind 範例資料庫中的資料表已經是複數。 因此您不會看見該部分的運作情形。 雖然一般會將資料庫資料表的名稱設為單數，在 .NET 中仍然常會把集合名稱設為複數。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：在 Visual Basic 或 C# 中產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
  [LINQ to SQL 中的程式碼產生](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
  [外部對應](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

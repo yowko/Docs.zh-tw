@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: d8e4c5bb677be7e20f6571ea6eb53831027ade27
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="emitting-dynamic-methods-and-assemblies" class="xliff"></a>
-
-# 發出動態方法和組件
+# <a name="emitting-dynamic-methods-and-assemblies"></a>發出動態方法和組件
 本節說明 <xref:System.Reflection.Emit> 命名空間中的一組 Managed 類型，它可讓編譯器或工具在執行階段發出中繼資料和 Microsoft 中繼語言 (MSIL)，以及選擇性地在磁碟上產生可攜式執行檔 (PE)。 指令碼引擎和編譯器是此命名空間的主要使用者。 在本節中，<xref:System.Reflection.Emit> 命名空間所提供的功能稱為反映發出。  
   
  反映發出提供下列功能：  
@@ -50,15 +48,11 @@ ms.lasthandoff: 06/02/2017
   
  另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 您可以在 [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) 以及 [Ecma 網站](http://go.microsoft.com/fwlink/?LinkId=116487)上，線上取得這份文件。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  說明有關使用反映發出來建立動態組件的安全性問題。  
   
-<a id="reference" class="xliff"></a>
-
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Emit.OpCodes>  
  將可用來建置方法主體的 MSIL 指令碼編製目錄。  
   
@@ -71,9 +65,7 @@ ms.lasthandoff: 06/02/2017
  <xref:System.Reflection>  
  包含用來探索中繼資料和 Managed 程式碼的 Managed 類別。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
  說明如何探索中繼資料和 Managed 程式碼。  
   

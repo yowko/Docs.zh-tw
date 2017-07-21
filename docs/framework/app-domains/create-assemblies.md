@@ -23,12 +23,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c131e82e2312e2c1b7fe1b6b2b6d0a6dfb626209
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="creating-assemblies" class="xliff"></a>
-
-# 建立組件
+# <a name="creating-assemblies"></a>建立組件
 您可以使用 IDE (例如 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]) 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 所提供的編譯器和工具來建立單一檔案或多檔案組件。 最簡單的組件是單一檔案，其具有簡單名稱並載入到單一應用程式定義域。 這個組件無法供應用程式目錄外部的其他組件參考，而且不會進行版本檢查。 若要解除安裝構成組件的應用程式，您只需要刪除其所在的目錄。 對許多開發人員而言，具有這些功能的組件就是部署應用程式所需的項目。  
   
  您可以從數個程式碼模組和資源檔建立多檔案組件。 您也可以建立可供多個應用程式共用的組件。 共用組件必須有強式名稱，而且可以部署在全域組件快取中。  
@@ -57,9 +55,7 @@ ms.lasthandoff: 06/02/2017
   
  讓 Unmanaged COM 應用程式使用 Common Language Runtime 組件時，必須進行特殊考量。 如需使用 Unmanaged 程式碼的詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)   
  [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)   
  [如何：建置單一檔案組件](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   

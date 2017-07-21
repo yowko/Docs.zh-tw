@@ -18,31 +18,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 318a2d3407d36b16137517a9735299027bceddea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="creating-the-gamepiece-class" class="xliff"></a>
-
-# 建立 GamePiece 類別
+# <a name="creating-the-gamepiece-class"></a>建立 GamePiece 類別
 **GamePiece** 類別包含下列作業需要的所有功能：載入 Microsoft XNA 遊戲片段映像、追蹤與遊戲片段相關的滑鼠狀態、捕捉滑鼠、提供操作和慣性處理，以及提供當遊戲片段達到檢視區限制時的彈回功能。  
   
-<a id="private-members" class="xliff"></a>
-
-## 私用成員  
+## <a name="private-members"></a>私用成員  
  在 **GamePiece** 類別頂端，會宣告數個私用成員。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privatemembers)]  
   
-<a id="public-properties" class="xliff"></a>
-
-## 公用屬性  
+## <a name="public-properties"></a>公用屬性  
  其中三個私用成員會透過公用屬性公開。 **Scale** 和 **PieceColor** 屬性分別可讓應用程式指定比例和片段的色彩。 **Bounds** 屬性的出現可讓一個片段利用另一個片段的界限來呈現其本身，例如當一個片段應重疊另一個片段時。 下列程式碼範例顯示公用屬性的宣告。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PublicProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_publicproperties)]  
   
-<a id="class-constructor" class="xliff"></a>
-
-## 類別建構函式  
+## <a name="class-constructor"></a>類別建構函式  
  **GamePiece** 類別的建構函式可接受下列參數：  
   
 -   [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 類型。 傳遞到這裡的參考會指派給私用成員 `spriteBatch`，並且在遊戲片段呈現其本身時，用來存取 [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 方法。 此外，還會使用 [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 屬性來建立與遊戲片段建立關聯的 [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 物件，以及取得檢視區大小，以偵測遊戲片段何時遇到視窗界限，讓片段可以彈開。  
@@ -55,9 +47,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[ManipulationXNA#_GamePiece_Constructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_constructor)]  
   
-<a id="capturing-mouse-input" class="xliff"></a>
-
-## 捕捉滑鼠輸入  
+## <a name="capturing-mouse-input"></a>捕捉滑鼠輸入  
  **UpdateFromMouse** 方法負責偵測當滑鼠位於遊戲片段界限內時，何時按下滑鼠按鈕，以及偵測何時放開滑鼠按鈕。  
   
  按下滑鼠左鍵時 (當滑鼠位於片段界限)，這個方法會設定旗標，指出這個遊戲片段已捕捉滑鼠，並開始操作處理。  
@@ -72,9 +62,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[ManipulationXNA#_GamePiece_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_updatefrommouse)]  
   
-<a id="processing-manipulations" class="xliff"></a>
-
-## 處理操作  
+## <a name="processing-manipulations"></a>處理操作  
  操作開始時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 事件。 此事件的處理常式會在慣性處理發生時加以停止，並將 *processInertia* 旗標設為 `false`。  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationStarted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationstarted)]  
@@ -87,9 +75,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationcompleted)]  
   
-<a id="processing-inertia" class="xliff"></a>
-
-## 處理慣性  
+## <a name="processing-inertia"></a>處理慣性  
  當慣性處理針對角度和線性速度、位置 (轉譯) 座標以及旋轉外推新的值時，會引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。 此事件的處理常式會使用以事件引數傳遞的差異值，來修改遊戲片段的位置和旋轉。  
   
  如果新的座標導致遊戲片段移到檢視區界限之外，慣性處理的速度會反轉。 這會使遊戲片段從其遇到的檢視區界限彈開。  
@@ -112,9 +98,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   
-<a id="additional-properties" class="xliff"></a>
-
-## 其他屬性  
+## <a name="additional-properties"></a>其他屬性  
  **GamePiece** 類別使用三個私用屬性。  
   
 1.  **Timestamp** – 取得操作和慣性處理器所要使用的時間戳記值。  
@@ -125,9 +109,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
  [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
  [建立 GamePieceCollection 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   

@@ -26,12 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: 0abc314673f995c57cc7d139ebeb0ee0c558f0c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="configuring-assembly-binding-redirection" class="xliff"></a>
-
-# 設定組件繫結重新導向
+# <a name="configuring-assembly-binding-redirection"></a>設定組件繫結重新導向
 根據預設，應用程式會使用執行階段版本 (用來編譯應用程式) 隨附的 .NET Framework 組件集。 您可以使用應用程式組態檔中 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 項目上的 **appliesTo** 屬性，來重新導向組件繫結參考至特定版本的 .NET Framework 組件。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它會套用至哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。  
   
  在 .NET Framework 1.1 版中引進了 **appliesTo** 屬性；而 .NET Framework 1.0 版則會忽略它。 這表示在使用 .NET Framework 1.0 版時，會套用所有 **\<assemblyBinding>** 項目，即使已指定 **appliesTo** 屬性時也是如此。  
@@ -69,14 +67,10 @@ ms.lasthandoff: 06/02/2017
 </assemblyBinding>  
 ```  
   
-<a id="debugging-configuration-file-errors" class="xliff"></a>
-
-## 偵錯組態檔錯誤  
+## <a name="debugging-configuration-file-errors"></a>偵錯組態檔錯誤  
  一旦建立應用程式定義域，並載入程式碼至應用程式定義域中，執行階段就會剖析組態檔。 Common Language Runtime 會忽略此項目，以處理組態檔中的錯誤。 如果它包含格式不正確的 XML，則執行階段會略過整個組態檔案。 對於無效的 XML，則會忽略無效的區段。  
   
  您可判斷組態檔是否用於決定正在進行組件繫結重新導向。 使用[組件繫結記錄檔檢視器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 來查看正在載入哪些組件。 若要查看所有組件繫結，您必須在登錄中設定 **ForceLog** 項目。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

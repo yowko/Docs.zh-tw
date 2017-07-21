@@ -27,12 +27,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 5d2d814989564dfd4c2d49ebb4b44e5964cf031f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="security-issues-in-reflection-emit" class="xliff"></a>
-
-# 反映發出中的安全性問題
+# <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
   
 -   [動態組件](#Dynamic_Assemblies)  
@@ -47,9 +45,7 @@ ms.lasthandoff: 06/02/2017
 >  反映在程式碼上以及發出程式碼所需的權限已在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的後續發行中變更。 請參閱本主題稍後的[版本資訊](#Version_Information)。  
   
 <a name="Dynamic_Assemblies"></a>   
-<a id="dynamic-assemblies" class="xliff"></a>
-
-## 動態組件  
+## <a name="dynamic-assemblies"></a>動態組件  
  使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=fullName> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，這個方法的大部分多載已在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中遭取代。 (請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。)無論信任層級為何，剩餘的多載可由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
   
 > [!NOTE]
@@ -62,9 +58,7 @@ ms.lasthandoff: 06/02/2017
   
  暫時性動態組件會在記憶體中建立，並永遠不會儲存到磁碟，所以它們不需要檔案存取權限。 儲存動態組件至磁碟需要具有適當旗標的 <xref:System.Security.Permissions.FileIOPermission>。  
   
-<a id="generating-dynamic-assemblies-from-partially-trusted-code" class="xliff"></a>
-
-### 從部分信任的程式碼產生動態組件  
+### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>從部分信任的程式碼產生動態組件  
  請考慮具有網際網路權限的組件可產生暫時性動態組件並執行其程式碼的條件：  
   
 -   動態組件只會使用公用類型和其他組件的成員。  
@@ -76,9 +70,7 @@ ms.lasthandoff: 06/02/2017
 -   不會產生偵錯符號。 (`Internet` 和 `LocalIntranet` 權限集合不包含必要的權限。)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
-<a id="anonymously-hosted-dynamic-methods" class="xliff"></a>
-
-## 匿名裝載的動態方法  
+## <a name="anonymously-hosted-dynamic-methods"></a>匿名裝載的動態方法  
  匿名裝載的動態方法可用兩個 <xref:System.Reflection.Emit.DynamicMethod> 建構函式建立，該函式並未指定相關聯的類型或模組、<xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> 和 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>。 這些建構函式會將動態方法置於系統提供、完全受信任的安全性透明組件中。 使用這些建構函式，或發出動態方法的程式碼不需要權限。  
   
  相反地，當建立匿名裝載的動態方法時，會擷取呼叫堆疊。 當建構方法時，會對已擷取的呼叫堆疊提出安全性要求。  
@@ -100,9 +92,7 @@ ms.lasthandoff: 06/02/2017
   
  如需詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別。  
   
-<a id="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code" class="xliff"></a>
-
-### 從部分信任的程式碼產生匿名裝載的動態方法  
+### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>從部分信任的程式碼產生匿名裝載的動態方法  
  請考慮具有網際網路權限的組件可產生匿名裝載的動態方法並予以執行的條件：  
   
 -   動態方法只會使用公用類型和成員。 如果其授權集包含 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>，則它可以使用授權集為發出組件授權集子集或與其相等的任何組件之非公用類型與成員。  
@@ -113,9 +103,7 @@ ms.lasthandoff: 06/02/2017
 >  動態方法並不支援偵錯符號。  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
-<a id="dynamic-methods-associated-with-existing-assemblies" class="xliff"></a>
-
-## 與現有組件相關聯的動態方法  
+## <a name="dynamic-methods-associated-with-existing-assemblies"></a>與現有組件相關聯的動態方法  
  若要將動態方法和現有組件中的類型或模組相關聯，請使用任何一種指定相關聯的類型或模組的 <xref:System.Reflection.Emit.DynamicMethod> 建構函式。 呼叫這些建構函式所需的權限有所不同，因為將動態方法與現有類型或模組產生關聯會讓動態方法存取非公用類型和成員：  
   
 -   與類型相關聯的動態方法可以存取所有該類型的成員，甚至是私用成員，且能存取包含相關聯的類型之組件中的所有內部類型和成員。  
@@ -141,9 +129,7 @@ ms.lasthandoff: 06/02/2017
   
  如需詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別。  
   
-<a id="generating-dynamic-methods-from-partially-trusted-code" class="xliff"></a>
-
-### 從部分信任的程式碼產生動態方法  
+### <a name="generating-dynamic-methods-from-partially-trusted-code"></a>從部分信任的程式碼產生動態方法  
   
 > [!NOTE]
 >  從部分信任的程式碼產生動態方法的建議方式是使用[匿名裝載的動態方法](#Anonymously_Hosted_Dynamic_Methods)。  
@@ -162,9 +148,7 @@ ms.lasthandoff: 06/02/2017
 >  動態方法並不支援偵錯符號。  
   
 <a name="Version_Information"></a>   
-<a id="version-information" class="xliff"></a>
-
-## 版本資訊  
+## <a name="version-information"></a>版本資訊  
  從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，淘汰全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。  
   
  從 [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 在所有舊版 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中需要此旗標。  
@@ -176,13 +160,9 @@ ms.lasthandoff: 06/02/2017
   
  最後，[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 導入了匿名裝載的方法。  
   
-<a id="obtaining-information-on-types-and-members" class="xliff"></a>
-
-### 取得類型和成員資訊  
+### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
  從 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 開始，取得非公用類型和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 舊版的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)   
  [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

@@ -26,12 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
 ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="net-framework-deployment-guide-for-developers" class="xliff"></a>
-
-# .NET Framework 開發人員部署手冊
+# <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 這個主題為想要與自己的應用程式一起安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 或 .NET Framework 4.7 的開發人員提供相關資訊。
 
 如需下載連結，請參閱[可轉散發套件](#redistributable-packages)一節。 您也可以從下列 Microsoft 下載中心頁面下載可轉散發套件和語言套件：
@@ -73,9 +71,7 @@ ms.lasthandoff: 06/02/2017
 
  如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)。
 
-<a id="deployment-options-for-your-app" class="xliff"></a>
-
-## 應用程式的部署選項
+## <a name="deployment-options-for-your-app"></a>應用程式的部署選項
  當您準備將應用程式發行到 Web 伺服器或其他集中位置供使用者進行安裝時，有數種部署方法可供您選擇。 其中有些方法是 Visual Studio 所提供。 下表列出應用程式的部署選項，並指定支援每個選項的 .NET Framework 可轉散發套件。 除了這些選項之外，您還可以為應用程式撰寫自訂安裝程式，如需詳細資訊，請參閱 [將 .NET Framework 安裝鏈結至您的應用程式安裝](#chaining)一節。
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
@@ -84,9 +80,7 @@ ms.lasthandoff: 06/02/2017
 |從光碟安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[離線安裝程式](#redistributable-packages)|
 |從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment)) 或 [離線安裝程式](#redistributable-packages)|
 
-<a id="redistributable-packages" class="xliff"></a>
-
-## 可轉散發套件
+## <a name="redistributable-packages"></a>可轉散發套件
  .NET Framework 可透過兩種可轉散發套件提供：Web 安裝程式 (啟動載入器) 和離線安裝程式 (獨立可轉散發套件)。 下表將比較這兩種套件。
 
 ||Web 安裝程式|離線安裝程式|
@@ -102,9 +96,7 @@ ms.lasthandoff: 06/02/2017
 
  ** 如果您使用 Web 安裝程式搭配自訂安裝程式，則可以使用以使用者的多語系使用者介面 (MUI) 設定為基礎的預設語言設定，或是使用命令列的 `/LCID` 選項指定另一個語言套件。 例如，請參閱 [使用預設的 .NET Framework UI 進行鏈結](#chaining_default) 一節。
 
-<a id="deployment-methods" class="xliff"></a>
-
-## 部署方法
+## <a name="deployment-methods"></a>部署方法
  可用的部署方法有三種：
 
 - 您可以設定 .NET Framework 的相依性。 您可以使用下列其中一種方法，在應用程式安裝中將 .NET Framework 指定為必要條件：
@@ -125,14 +117,10 @@ ms.lasthandoff: 06/02/2017
 
  以下各節將詳細討論這些部署方法。
 
-<a id="setting-a-dependency-on-the-net-framework" class="xliff"></a>
-
-## 設定 .NET Framework 的相依性
+## <a name="setting-a-dependency-on-the-net-framework"></a>設定 .NET Framework 的相依性
 如果您使用 ClickOnce、InstallShield 或 WiX 部署應用程式，可以加入 .NET Framework 的相依性，讓它隨應用程式一併安裝。
 
-<a id="clickonce-deployment" class="xliff"></a>
-
-### ClickOnce 部署
+### <a name="clickonce-deployment"></a>ClickOnce 部署
  ClickOnce 部署適用於以 Visual Basic 和 Visual C# 建立的專案，但不適用於 Visual C++ 建立的專案。
 
  在 Visual Studio 中，選擇 ClickOnce 部署並加入 .NET Framework 的相依性：
@@ -155,9 +143,7 @@ ms.lasthandoff: 06/02/2017
 
 8.  在 [ **屬性頁** ] 對話方塊中，選擇 [ **確定**]。
 
-<a id="installshield-deployment" class="xliff"></a>
-
-### InstallShield 部署
+### <a name="installshield-deployment"></a>InstallShield 部署
  在 Visual Studio 中，選擇 InstallShield 部署並加入 .NET Framework 的相依性：
 
 1.  在 Visual Studio 功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
@@ -175,21 +161,15 @@ ms.lasthandoff: 06/02/2017
 7.  開啟安裝專案的捷徑功能表，然後選擇 [ **建置**]。
 
 <a name="wix"></a> 
-<a id="windows-installer-xml-wix-deployment" class="xliff"></a>
-
-### Windows Installer XML (WiX) 部署
+### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) 部署
  Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows 安裝套件。 WiX 支援命令列環境，該環境可整合至您的建置程序中，用來建置 MSI 與 MSM 安裝封裝。 您可以使用 WiX [將 .NET Framework 指定為必要條件](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)，或是 [建立 Chainer](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) ，以便完全掌控 .NET Framework 部署經驗。 如需 WiX 的詳細資訊，請參閱 [Windows Installer XML (WiX) 工具組](http://wixtoolset.org/) 網站。
 
 <a name="installing_manually"></a> 
-<a id="installing-the-net-framework-manually" class="xliff"></a>
-
-## 手動安裝 .NET Framework
+## <a name="installing-the-net-framework-manually"></a>手動安裝 .NET Framework
  在某些情況下，隨應用程式自動安裝 .NET Framework 並不是那麼實際。 在這種情況下，您可以讓使用者自己安裝 .NET Framework。 可轉散發套件可隨[兩種套件](#redistributable-packages)提供。 所以請在安裝過程中提供指示，讓使用者知道應該如何找到和安裝 .NET Framework。
 
 <a name="chaining"></a> 
-<a id="chaining-the-net-framework-installation-to-your-apps-setup" class="xliff"></a>
-
-## 將 .NET Framework 安裝鏈結至您的應用程式安裝
+## <a name="chaining-the-net-framework-installation-to-your-apps-setup"></a>將 .NET Framework 安裝鏈結至您的應用程式安裝
  如果您要為應用程式建立自訂安裝程式，則可以在應用程式的安裝程序中鏈結 (包含) .NET Framework 安裝程序。 鏈結提供了兩個用於安裝 .NET Framework 的 UI 選項：
 
 - 使用 .NET Framework 安裝程式所提供的預設 UI。
@@ -203,9 +183,7 @@ ms.lasthandoff: 06/02/2017
 - 如果您使用離線安裝程式，您可以將一組完整的 .NET Framework 安裝套件包含在您的轉散發媒體中，如此使用者就不需要在安裝過程中從 Web 下載任何其他檔案。
 
 <a name="chaining_default"></a> 
-<a id="chaining-by-using-the-default-net-framework-ui" class="xliff"></a>
-
-### 使用預設的 .NET Framework UI 進行鏈結
+### <a name="chaining-by-using-the-default-net-framework-ui"></a>使用預設的 .NET Framework UI 進行鏈結
  若要以無訊息模式鏈結 .NET Framework 安裝程序並且讓 .NET Framework 安裝程式提供 UI，請將下列命令加入至您的安裝程式：
 
 ```
@@ -244,9 +222,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
  如需常見的傳回碼，請參閱[傳回碼](#return-codes)一節。
 
 <a name="chaining_custom"></a>
-<a id="chaining-by-using-a-custom-ui" class="xliff"></a>
-
-### 使用自訂 UI 進行鏈結
+### <a name="chaining-by-using-a-custom-ui"></a>使用自訂 UI 進行鏈結
  如果您有自訂安裝套件，您可能想要以無訊息模式啟動並追蹤 .NET Framework 安裝程式，同時顯示您自己的安裝進度檢視。 如果您想要這樣做，請確定您的程式碼涵蓋下列內容：
 
 - 檢查 [.NET Framework 的硬體和軟體需求](../../../docs/framework/get-started/system-requirements.md)。
@@ -267,9 +243,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 - [疑難排解](#troubleshooting)。
 
 <a name="detect_net"></a>
-<a id="detecting-the-net-framework" class="xliff"></a>
-
-### 偵測 .NET Framework
+### <a name="detecting-the-net-framework"></a>偵測 .NET Framework
  .NET Framework 安裝程式會在安裝成功時寫入登錄機碼。 您可以測試是否已安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本，方法是檢查登錄中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 資料夾是否有名為 `Release` 的 `DWORD` 值。 (請注意，"NET Framework Setup" 不是以句號開頭。)若這個機碼存在，表示該電腦上已安娤 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。 `Release` 的值會指出所安裝的 .NET Framework 版本。
 
 > [!IMPORTANT]
@@ -290,9 +264,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 安裝在 [!INCLUDE[win8](../../../includes/win8-md.md)]、Windows 7|378758|
 |[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|
 
-<a id="detecting-the-language-packs" class="xliff"></a>
-
-### 刪除語言套件
+### <a name="detecting-the-language-packs"></a>刪除語言套件
  您可以測試是否安裝特定的語言套件，方法是檢查登錄中 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 資料夾內名為 `Release` 的 DWORD 值。 (請注意，"NET Framework Setup" 不是以句號開頭。)*LCID* 可指定地區設定識別碼，請參閱[支援的語言](#supported-languages)，以取得這些項目的清單。
 
  例如，若要檢查是否安裝了完整的日文語言套件 (LCID=1041)，請檢查登錄中的下列值：
@@ -306,9 +278,7 @@ Type: DWORD
  若要判斷是否已針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 安裝最終發行的語言套件版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 所述。
 
 <a name="chain_langpack"></a> 
-<a id="chaining-the-language-packs-to-your-app-setup" class="xliff"></a>
-
-### 將語言套件鏈結至您的應用程式安裝
+### <a name="chaining-the-language-packs-to-your-app-setup"></a>將語言套件鏈結至您的應用程式安裝
  .NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 語言套件可從 Microsoft 下載中心取得：
 
 - [.NET Framework 4.7 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=825306)
@@ -340,13 +310,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
  如需命令列選項的完整清單，請參閱[命令列選項](#command-line-options)一節。
 
-<a id="troubleshooting" class="xliff"></a>
+### <a name="troubleshooting"></a>疑難排解
 
-### 疑難排解
-
-<a id="return-codes" class="xliff"></a>
-
-#### 傳回碼
+#### <a name="return-codes"></a>傳回碼
  下表列出 .NET Framework 可轉散發安裝程式最常見的傳回碼。 所有版本的安裝程式的傳回碼都相同。 如需詳細資訊的連結，請參閱下一節。
 
 |傳回碼|描述|
@@ -358,9 +324,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3010|需要重新開機才能完成安裝。 這個訊息表示成功。|
 |5100|使用者的電腦不符合系統需求。|
 
-<a id="download-error-codes" class="xliff"></a>
-
-#### 下載錯誤碼
+#### <a name="download-error-codes"></a>下載錯誤碼
  請參閱 MSDN Library 中的下列內容：
 
 - [背景智慧型傳送服務 (BITS) 錯誤碼](http://go.microsoft.com/fwlink/?LinkId=180946)
@@ -369,30 +333,22 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
 - [WinHttp 錯誤碼](http://go.microsoft.com/fwlink/?LinkId=180948)
 
-<a id="other-error-codes" class="xliff"></a>
-
-#### 其他錯誤碼
+#### <a name="other-error-codes"></a>其他錯誤碼
  請參閱 MSDN Library 中的下列內容：
 
 - [Windows 安裝程式錯誤碼](http://go.microsoft.com/fwlink/?LinkId=180949)
 
 - [Windows Update 代理程式結果碼](http://go.microsoft.com/fwlink/?LinkId=180951)
 
-<a id="uninstalling-the-net-framework" class="xliff"></a>
-
-## 解除安裝 .NET Framework
+## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
  從 [!INCLUDE[win8](../../../includes/win8-md.md)] 開始，您可以使用 [控制台] 中的 [開啟或關閉 Windows 功能] 解除安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式] 解除安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7。
 
 > [!IMPORTANT]
 > 在 Windows 7 和舊版作業系統上，解除安裝 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2 或 4.7 並不會還原 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 檔案，而解除安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 也不會還原 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
 
-<a id="appendix" class="xliff"></a>
+## <a name="appendix"></a>附錄
 
-## 附錄
-
-<a id="command-line-options" class="xliff"></a>
-
-### 命令列選項
+### <a name="command-line-options"></a>命令列選項
  下表列出您將 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發套件鏈結至您的應用程式安裝時，可以包含的選項。
 
 |選項|描述|
@@ -413,9 +369,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |**/showrmui**|只可搭配 **/passive** 選項使用。 顯示訊息方塊，提示使用者關閉目前正在執行的 .NET Framework 應用程式。 此訊息方塊在被動與非被動模式中的行為相同。|
 |**/uninstall**|解除安裝 .NET Framework 可轉散發套件。|
 
-<a id="supported-languages" class="xliff"></a>
-
-### 支援的語言
+### <a name="supported-languages"></a>支援的語言
 下表列出可供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本使用的 .NET Framework 語言套件。
 
 |LCID|語言 – 國家/地區|culture|
@@ -444,9 +398,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |2070|葡萄牙文 (葡萄牙)|pt-PT|
 |3082|西班牙文 - 西班牙 (現代排序)|es|
 
-<a id="see-also" class="xliff"></a>
-
-## 請參閱
+## <a name="see-also"></a>請參閱
  [系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)   
  [系統需求](../../../docs/framework/get-started/system-requirements.md)   
  [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   

@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 5a3312180542df8d59e30c6fc803d7ba24c7757e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="working-with-assemblies-and-the-global-assembly-cache" class="xliff"></a>
-
-# 使用組件和全域組件快取
+# <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
 如果您想要在數個應用程式之間共用組件，可以將它安裝到全域組件快取。 每部安裝 Common Language Runtime 的電腦都有這個全機器程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。 組件必須有強式名稱，才能安裝在全域組件快取中。  
   
 > [!NOTE]
@@ -57,9 +55,7 @@ ms.lasthandoff: 06/02/2017
   
  請注意，有些情況下您明確不想要將組件安裝到全域組件快取中。 如果您將構成應用程式的其中一個組件放入全域組件快取中，則可以使用 XCOPY 複製應用程式目錄，以不再複寫或安裝應用程式。 在此情況下，您也必須將組件移至全域組件快取。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [操作說明：將組件安裝到全域組件快取](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  描述將組件安裝到全域組件快取中的方式。  
   
@@ -72,9 +68,7 @@ ms.lasthandoff: 06/02/2017
  [使用 Serviced 元件和全域組件快取](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
  說明 Serviced 元件 (Managed COM+ 元件) 為何應該放在全域組件快取中。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
  提供建立組件的概觀。  
   

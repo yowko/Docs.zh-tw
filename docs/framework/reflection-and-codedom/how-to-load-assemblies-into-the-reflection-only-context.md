@@ -24,17 +24,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
 ms.openlocfilehash: b61d75598572857e8d7b28547a5b94f3fe07faa5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-load-assemblies-into-the-reflection-only-context" class="xliff"></a>
-
-# 如何：將組件載入僅限反映的內容
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>如何：將組件載入僅限反映的內容
 僅限反映的載入內容可讓您檢查針對其他平台或其他 .NET Framework 版本所編譯的組件。 只能檢查載入至此內容的程式碼，而無法執行。 這表示無法建立物件，因為無法執行建構函式。 因為無法執行程式碼，所以不會自動載入相依性。 如果您需要檢查它們，則必須自行載入。  
   
-<a id="to-load-an-assembly-into-the-reflection-only-load-context" class="xliff"></a>
-
-### 將組件載入僅限反映的載入內容  
+### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>將組件載入僅限反映的載入內容  
   
 1.  使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> 方法多載來載入組件並提供其顯示名稱，或 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法來載入組件並提供其路徑。 如果組件是二進位映像，請使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> 方法多載。  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/02/2017
     > [!NOTE]
     >  套用至組件或其內容的屬性可能定義於組件中，或可能定義於另一個載入僅限反映內容的組件中。 沒有方法事先知道定義屬性的位置。  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例示範如何檢查套用至載入僅限反映內容之組件的屬性。  
   
  此程式碼範例會定義具有兩個建構函式和一個屬性 (property) 的自訂屬性 (attribute)。 屬性會套用至組件、組件中宣告的類型、類型的方法，以及方法的參數。 執行時，組件會將它自己載入僅限反映的內容，並顯示已套用至它以及它所含類型和成員之自訂屬性的相關資訊。  
@@ -62,9 +56,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)] [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)] [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
  <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
  <xref:System.Reflection.CustomAttributeData>

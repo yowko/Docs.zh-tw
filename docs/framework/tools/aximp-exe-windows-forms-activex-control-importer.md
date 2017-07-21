@@ -29,12 +29,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 892e289b59326a545348abe5432fd0932a43960f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="aximpexe-windows-forms-activex-control-importer" class="xliff"></a>
-
-# Aximp.exe (Windows Form ActiveX 控制項匯入工具)
+# <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Form ActiveX 控制項匯入工具)
 ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
   
  Windows Form 只能裝載 Windows Form 控制項，也就是衍生自 <xref:System.Windows.Forms.Control> 的類別。 Aximp.exe 會產生 ActiveX 控制項的包裝函式類別，可以在 Windows Form 上裝載。 這可讓您使用相同的設計階段支援和程式設計方法論，以適用於其他 Windows Form 控制項。  
@@ -45,17 +43,13 @@ ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫�
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
   
 |引數|說明|  
 |--------------|-----------------|  
@@ -93,17 +87,13 @@ aximp [options]{file.dll | file.ocx}
   
  使用 Aximp.exe 搭配 shdocvw.dll 來建立用於應用程式開發的 .NET 組件時，可能也會導致問題。 在這種情況下，您的應用程式將會載入 shdocvw.dll 的系統版本和產生的版本，而且系統版本具有優先權。 在這個情況下，當您試圖將 Web 網頁載入到 WebBrowser ActiveX 控制項內部時，系統會以 [開啟/儲存] 對話方塊提示使用者。 當使用者按一下 [開啟] 時，將會在 Internet Explorer 中開啟網頁。 這種情形只會在使用執行 Internet Explorer 第 6 版 (含) 以前版本的電腦上發生。 若要避免這個問題，請使用 Managed <xref:System.Windows.Forms.WebBrowser> 控制項或使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 來產生 Managed shdocvw.dll，如[如何：將參考新增至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)中所述。  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列命令會產生 Media Player 控制項 `msdxm.ocx` 的 MediaPlayer.dll 和 AxMediaPlayer.dll。  
   
 ```  
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

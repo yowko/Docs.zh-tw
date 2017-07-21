@@ -29,8 +29,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/05/2017
 
 ---
-# MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
-<a id="mageuiexe-manifest-generation-and-editing-tool-graphical-client" class="xliff"></a>
+# <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
 MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
@@ -40,8 +39,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 > [!NOTE]
 >  如果 MageUI.exe 要儲存的應用程式資訊清單已使用 MageUI.exe 透過憑證簽署，則不支援 [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) 項目。 您必須改用 [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
-## UIElement 清單
-<a id="uielement-list" class="xliff"></a>  
+## <a name="uielement-list"></a>UIElement 清單  
  下表列出可用的功能表和工具列項目。  
   
 |命令|功能表|快速鍵|描述|  
@@ -62,8 +60,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**全部關閉**|**視窗**||關閉 MageUI.exe 中目前開啟的所有檔案。 如果其中一個或多個檔案需要儲存，MageUI.exe 會提示您將它們儲存。 MageUI.exe 也會提示您為每個未簽署或變更過的檔案選取簽署金鑰。|  
 |**關於**|**說明**||顯示有關 MageUI.exe 的版本和著作權資訊。|  
   
-## 偏好設定對話方塊
-<a id="preferences-dialog-box" class="xliff"></a>  
+## <a name="preferences-dialog-box"></a>偏好設定對話方塊  
  [偏好設定] 對話方塊包含下列項目。  
   
 |UI 項目|描述|  
@@ -72,8 +69,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**使用預設簽署憑證**|使用 [憑證檔] 文字方塊中輸入的金鑰簽署所有檔案。 這樣一來就不會顯示通常在您儲存檔案而且已選取 [於儲存時簽署] 的情況下會出現的簽署提示。 請使用 [憑證檔] 文字方塊旁的省略符號 (**…**) 按鈕選取金鑰檔。|  
 |摘要演算法|指定產生相依性摘要的演算法。 值必須是 "sha256RSA" 或 "sha1RSA"。 預設為使用 SHA1。 兩種都會在應用程式和部署資訊清單中使用。 如果使用者在儲存資訊清單時提供憑證，請使用憑證中的演算法產生相依性摘要。|  
   
-## 簽署選項對話方塊
-<a id="signing-options-dialog-box" class="xliff"></a>  
+## <a name="signing-options-dialog-box"></a>簽署選項對話方塊  
  當您初次儲存資訊清單或信任授權，或是變更資訊清單或信任授權時，[簽署選項] 對話方塊就會出現。 只有在 [偏好設定] 對話方塊中的 [於儲存時簽署] 選項為選取狀態時，它才會出現。 若您簽署的資訊清單會在 [時間戳記 URI] 文字方塊中指定值，則必須連線到網際網路。  
   
  這個對話方塊包含下列項目。  
@@ -89,12 +85,10 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**時間戳記 URI**|顯示數位時間戳記服務的統一資源定位器 (URI)。 在資訊清單加上時間戳記之後，若數位憑證在您部署應用程式的下一個版本之前到期，就無須重新簽署資訊清單。 如需詳細資訊，請參閱 [Windows 根憑證計劃成員](http://go.microsoft.com/fwlink/?LinkId=159000)和 [ClickOnce 和 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)。|  
 |**不簽署**|可讓您儲存資訊清單，而不需要從數位憑證加入簽章。|  
   
-## 索引標籤和面板描述
-<a id="tab-and-panel-descriptions" class="xliff"></a>  
+## <a name="tab-and-panel-descriptions"></a>索引標籤和面板描述  
  當您使用 MageUI.exe 開啟文件時，文件會出現在自己的索引標籤頁內。 每個索引標籤都包含一組屬性面板。 面板中包含一組文件資料的子集。  
   
-### 應用程式資訊清單索引標籤
-<a id="application-manifest-tab" class="xliff"></a>  
+### <a name="application-manifest-tab"></a>應用程式資訊清單索引標籤  
  [應用程式資訊清單] 索引標籤會顯示應用程式資訊清單的內容。 應用程式資訊清單描述使用部署時，所包含的所有檔案和用戶端上執行應用程式所需的權限。  
   
  [應用程式資訊清單] 索引標籤包含下列索引標籤。  
@@ -107,8 +101,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**檔案**|指定所有構成這個部署的檔案。|  
 |**必要的使用權限**|指定要在用戶端上執行的應用程式所需的最低權限集合。|  
   
-### 名稱索引標籤
-<a id="name-tab" class="xliff"></a>  
+### <a name="name-tab"></a>名稱索引標籤  
  當您第一次建立或開啟應用程式資訊清單時，[名稱] 索引標籤會顯示。 它會唯一識別部署，並選擇性地指定有效的目標平台。  
   
 |UI 項目|描述|  
@@ -119,8 +112,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**文化特性**|選擇項。 此應用程式執行的兩部分 ISO 國家及區域代碼。 預設為 `neutral`。|  
 |**公開金鑰語彙基元**|選擇項。 已簽署此應用程式資訊清單的公開金鑰。 如果這是新的或不帶正負號的資訊清單，此欄位會顯示為 `Unsigned`。|  
   
-### 描述索引標籤
-<a id="description-tab" class="xliff"></a>  
+### <a name="description-tab"></a>描述索引標籤  
  部署資訊清單內通常會提供此資訊。 當選取 [應用程式選項] 索引標籤上的 [使用應用程式資訊清單信任資訊] 核取方塊時，才能修改這些欄位。  
   
 |UI 項目|描述|  
@@ -129,16 +121,14 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**產品**|完整的產品名稱。 如果您選取部署資訊清單中 [部署選項] 索引標籤上之 [應用程式類型] 項目的 [本機安裝]，此應用程式的 [開始] 功能表連結和 [新增或移除程式] 中顯示的名稱即為產品的名稱。|  
 |**支援位置**|客戶可以從 URL 取得應用程式說明及支援。|  
   
-### 應用程式選項索引標籤
-<a id="application-options-tab" class="xliff"></a>  
+### <a name="application-options-tab"></a>應用程式選項索引標籤  
   
 |UI 項目|描述|  
 |----------------|-----------------|  
 |**Windows Presentation Foundation 瀏覽器應用程式**|指定是否是會在瀏覽器中以 XAML 瀏覽器應用程式 (XBAP) 執行的 WPF 應用程式。|  
 |**使用應用程式資訊清單的信任資訊**|指定此資訊清單是否包含信任資訊。|  
   
-### 檔案索引標籤
-<a id="files-tab" class="xliff"></a>  
+### <a name="files-tab"></a>檔案索引標籤  
   
 |UI 項目|說明|  
 |----------------|-----------------|  
@@ -149,8 +139,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**Optional**|標示為選擇性的檔案不會在初始安裝或更新時下載，但是可能會在執行階段使用系統部署隨選 API 下載。 如需詳細資訊，請參閱[逐步解說：下載組件隨選與 ClickOnce 部署應用程式開發介面使用設計工具](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)。|  
 |**群組**|一組選擇性檔案的標籤。 您可以將群組標籤套用至一組檔案，並使用隨選應用程式開發介面，透過單一應用程式開發介面呼叫來下載批次檔案。|  
   
-### 所需權限索引標籤
-<a id="permissions-required-tab" class="xliff"></a>  
+### <a name="permissions-required-tab"></a>所需權限索引標籤  
  使用 [所需權限] 索引標籤，如果您要授與您的應用程式到本機電腦比預設更多的存取權。 如需詳細資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
   
 |UI 項目|描述|  
@@ -158,8 +147,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**使用權限集合類型**|指定要在用戶端上執行的應用程式所需的最低權限集合。 如需這些權限集合的描述和其所會要求的權限，請參閱 [NIB：具名使用權限集合](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
 |**詳細資料**|建立應用程式資訊清單的 XML 來表示權限設定。 除非您有充分的了解應用程式資訊清單 XML 格式，否則您應該手動編輯此 XML。 如需詳細資訊，請參閱 [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)。|  
   
-### 部署資訊清單索引標籤
-<a id="deployment-manifest-tab" class="xliff"></a>  
+### <a name="deployment-manifest-tab"></a>部署資訊清單索引標籤  
  [部署資訊清單] 索引標籤包含下列索引標籤。  
   
 |UI 項目|描述|  
@@ -170,8 +158,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**更新選項**|指定多久 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應該檢查應用程式更新。|  
 |**應用程式參考**|指定此部署的應用程式資訊清單。|  
   
-### 名稱索引標籤
-<a id="name-tab" class="xliff"></a>  
+### <a name="name-tab"></a>名稱索引標籤  
  當您第一次建立或開啟部署資訊清單時，[名稱] 索引標籤會顯示。 它會唯一識別部署，並選擇性地指定有效的目標平台。  
   
 |UI 項目|描述|  
@@ -182,8 +169,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**文化特性**|選擇項。 此應用程式執行的兩部分 ISO 國家/區域代碼。 預設為 `neutral`。|  
 |**公開金鑰語彙基元**|選擇項。 已簽署此部屬資訊清單的公開金鑰。 如果這是新的或不帶正負號的資訊清單，此欄位會顯示為 `Unsigned`。|  
   
-### 描述索引標籤
-<a id="description-tab" class="xliff"></a>  
+### <a name="description-tab"></a>描述索引標籤  
   
 |UI 項目|描述|  
 |----------------|-----------------|  
@@ -191,8 +177,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**產品**|必要項。 完整的產品名稱。 如果您選取 [部署選項] 索引標籤上之 [應用程式類型] 項目的 [本機安裝]，此應用程式的 [開始] 功能表連結和 [新增或移除程式] 中顯示的名稱即為產品的名稱。|  
 |**支援位置**|選擇項。 客戶可以從 URL 取得應用程式說明及支援。|  
   
-### 部署選項索引標籤
-<a id="deployment-options-tab" class="xliff"></a>  
+### <a name="deployment-options-tab"></a>部署選項索引標籤  
   
 |UI 項目|說明|  
 |----------------|-----------------|  
@@ -203,8 +188,7 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**允許 URL 參數傳遞至應用程式**|必要項。 允許參數資料傳輸到 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式，透過查詢字串附加至部署資訊清單的 URL。 這個核取方塊預設為已清除。|  
 |**使用 .deploy 副檔名**|必要項。 選取時，應用程式資訊清單中的所有檔案必須都有 .deploy 副檔名。 這個核取方塊預設為已清除。|  
   
-### 更新選項索引標籤
-<a id="update-options-tab" class="xliff"></a>  
+### <a name="update-options-tab"></a>更新選項索引標籤  
  [更新選項] 索引標籤只會包含此處提到的選項 (當 [應用程式類型] 上的選取方塊 [名稱] 索引標籤設定為 [本機安裝])。  
   
 |UI 項目|描述|  
@@ -215,16 +199,14 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |**指定此應用程式的最小必要的版本**|選擇項。 指定您應用程式的特定版本是必要的安裝，防止您的使用者使用較舊的版本。|  
 |**版本**|若選取 [指定此應用程式的最小必要的版本] 核取方塊，則為必要項。 提供的版本號碼的格式必須是 N.N.N.N。 只需要第一個主要組建編號。 例如，應用程式版本 1.0，有效的值會包含 `1`、`1.0`、`1.0.0` 和 `1.0.0.0`。|  
   
-### 應用程式參考索引標籤
-<a id="application-reference-tab" class="xliff"></a>  
+### <a name="application-reference-tab"></a>應用程式參考索引標籤  
  [應用程式參考] 索引標籤包含本主題稍早所述與 [名稱] 索引標籤相同的欄位。 唯一例外的是下列欄位。  
   
 |UI 項目|描述|  
 |----------------|-----------------|  
 |**選取資訊清單**|可讓您選擇應用程式資訊清單。 當您選擇應用程式資訊清單時，將填入此頁面上的所有其他欄位。|  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
  [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

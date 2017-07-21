@@ -36,8 +36,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/05/2017
 
 ---
-# 用戶端應用程式服務
-<a id="client-application-services" class="xliff"></a>
+# <a name="client-application-services"></a>用戶端應用程式服務
 用戶端應用程式服務可讓您輕鬆建立 Windows 應用程式，這些應用程式使用 Microsoft ASP.NET 2.0 AJAX 擴充功能隨附的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔應用程式服務。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。 例如，您可以使用這些服務執行下列工作：  
   
 -   驗證使用者。 您可以使用驗證服務來確認使用者的身分識別。  
@@ -50,8 +49,7 @@ ms.lasthandoff: 06/05/2017
   
  如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
-## 本章節內容
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>本章節內容  
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  描述可透過用戶端應用程式服務提供者取得的功能。  
   
@@ -64,8 +62,7 @@ ms.lasthandoff: 06/05/2017
  [逐步解說：使用用戶端應用程式服務](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  描述如何將單一應用程式中的所有用戶端應用程式服務功能結合在一起。 這個逐步解說將提供端對端指引。 例如，其包含有關如何建立 ASP.NET Web 服務應用程式的指示，您可以使用這個應用程式來測試用戶端應用程式服務。  
   
-## 參考資料
-<a id="reference" class="xliff"></a>  
+## <a name="reference"></a>參考資料  
  <xref:System.Web.ClientServices.ClientFormsIdentity>  
  <xref:System.Web.ClientServices.ClientRolePrincipal>  
  <xref:System.Web.ClientServices.ConnectivityStatus>  
@@ -78,8 +75,7 @@ ms.lasthandoff: 06/05/2017
  <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs>  
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)   
  [透過 Microsoft Ajax 使用表單驗證](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)   
  [透過 Microsoft Ajax 使用角色資訊](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)   

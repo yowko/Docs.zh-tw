@@ -23,19 +23,16 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/06/2017
 
 ---
-# 如何：建立應用程式定義域
-<a id="how-to-create-an-application-domain" class="xliff"></a>
+# <a name="how-to-create-an-application-domain"></a>如何：建立應用程式定義域
 Common Language Runtime Host 會在有需要時自動建立應用程式定義域。 不過，您可以建立自己的應用程式定義域，將它們載入您想要自行管理的組件中。 您也可以建立要從中執行程式碼的應用程式定義域。  
   
  使用 <xref:System.AppDomain?displayProperty=fullName> 類別的其中一個多載 **CreateDomain** 方法，建立新的應用程式定義域。 您可以提供應用程式定義域的名稱，並依該名稱參考它。  
   
  以下範例會建立新的應用程式定義域並指派名稱 `MyDomain`，然後將主機網域和新建子應用程式定義域的名稱列印至主控台。  
   
-## 範例
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>範例  
  [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)] [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)] [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [使用應用程式定義域設計程式](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)

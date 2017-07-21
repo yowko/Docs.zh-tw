@@ -21,44 +21,34 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 18014d340178651ddcfc024f881ca1479698d05e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="enhanced-strong-naming" class="xliff"></a>
-
-# 進階強式命名
+# <a name="enhanced-strong-naming"></a>進階強式命名
 強式名稱簽章是 .NET Framework 中的身分識別機制，用來識別組件。 它是公開金鑰數位簽章，通常用來驗證從建立者 (簽署者) 傳遞給收件者 (驗證者) 的資料完整性。 此簽章用來當作組件的唯一身分識別，並可確保對組件的參考不會模稜兩可。 組件在建置程序的一部分簽署，然後在載入時加以驗證。  
   
  強式名稱簽章可協助防止惡徒竄改組件，然後使用原始簽署者的金鑰重新簽署組件。 不過，強式名稱金鑰並不包含關於發行者的任何可靠資訊，也不包含憑證階層。 強式名稱簽章不保證簽署組件之人的可信度，或指出該人是否為金鑰的合法擁有者；它僅指出金鑰的擁有者簽署了該組件。 因此，我們不建議使用強式名稱簽章作為安全性驗證而來信任協力廠商程式碼。 Microsoft Authenticode 是驗證程式碼的建議方式。  
   
-<a id="limitations-of-conventional-strong-names" class="xliff"></a>
-
-## 傳統強式名稱的限制  
+## <a name="limitations-of-conventional-strong-names"></a>傳統強式名稱的限制  
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前的版本所使用的強式命名技術有下列缺點：  
   
 -   金鑰經常受到攻擊，改善的技術和硬體能夠更輕鬆從公開金鑰推斷私密金鑰。 為了防範攻擊，必須使用較大的金鑰。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前的 .NET Framework 版本，可讓您以任何大小的金鑰 (預設大小為 1024 位元) 簽署，但使用新的金鑰簽署組件會中斷參考組件較舊身分識別的所有二進位檔。 因此，如果您想要維護相容性，很難升級簽署金鑰的大小。  
   
 -   強式名稱簽署只支援 SHA-1 演算法。 最近已發現 SHA-1 不足以應付安全雜湊應用程式。 因此，必須使用更強的演算法 (SHA-256 或以上)。 很可能 SHA-1 會失去其與 FIPS 相容的地位，如此對於選擇只使用與 FIPS 相容的軟體和演算法的人會造成問題。  
   
-<a id="advantages-of-enhanced-strong-names" class="xliff"></a>
-
-## 增強強式名稱的優點  
+## <a name="advantages-of-enhanced-strong-names"></a>增強強式名稱的優點  
  增強強式名稱的主要優點是與預先存在的強式名稱相容，以及能夠宣告一個身分識別相當於另一個身分識別：  
   
 -   有預先存在的已簽署組件的開發人員，可以將他們的身分識別移轉至 SHA-2 演算法，同時維持與參考舊身分識別的組件相容性。  
   
 -   建立新組件而且不在意預先存在的強式名稱簽章的開發人員，可以使用更安全的 SHA-2 演算法，並如往常般簽署組件。  
   
-<a id="using-enhanced-strong-names" class="xliff"></a>
-
-## 使用進階強式名稱  
+## <a name="using-enhanced-strong-names"></a>使用進階強式名稱  
  強式名稱金鑰包含簽章金鑰和身分識別金鑰。 組件以簽章金鑰簽署，而以身分識別金鑰識別。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，這兩個金鑰完全相同。 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，身分識別金鑰保留與較早 .NET Framework 版本中的相同，但簽章金鑰已經使用更強的雜湊演算法增強。 此外，簽章金鑰以身分識別金鑰簽署，以便建立副署。  
   
  <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性讓組件中繼資料能使用預先存在的公開金鑰處理組件身分識別，如此能讓舊組件參考繼續運作。  <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性使用副署來確保新簽章金鑰的擁有者也是舊身分識別金鑰的擁有者。  
   
-<a id="signing-with-sha-2-without-key-migration" class="xliff"></a>
-
-### 使用 SHA-2 簽署，而不需要金鑰移轉  
+### <a name="signing-with-sha-2-without-key-migration"></a>使用 SHA-2 簽署，而不需要金鑰移轉  
  從命令提示字元視窗中執行下列命令簽署組件，而不移轉強式名稱簽章：  
   
 1.  (如有必要) 產生新的身分識別金鑰。  
@@ -85,9 +75,7 @@ ms.lasthandoff: 06/02/2017
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-<a id="signing-with-sha-2-with-key-migration" class="xliff"></a>
-
-### 使用 SHA-2 簽署，並且進行金鑰移轉  
+### <a name="signing-with-sha-2-with-key-migration"></a>使用 SHA-2 簽署，並且進行金鑰移轉  
  從命令提示字元視窗中執行下列命令，使用移轉的強式名稱簽章來簽署組件。  
   
 1.  (如有必要) 產生身分識別與簽章金鑰組。  
@@ -127,8 +115,6 @@ ms.lasthandoff: 06/02/2017
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 

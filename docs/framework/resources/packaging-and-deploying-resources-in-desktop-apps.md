@@ -39,12 +39,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: 8f77d86ba453389b8fc5f52797a3ce43377176ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="packaging-and-deploying-resources-in-desktop-apps" class="xliff"></a>
-
-# 在桌面應用程式中封裝和部署資源
+# <a name="packaging-and-deploying-resources-in-desktop-apps"></a>在桌面應用程式中封裝和部署資源
 應用程式會依賴 <xref:System.Resources.ResourceManager> 類別所代表的 .NET Framework Resource Manager，來擷取當地語系化的資源。 Resource Manager 假設使用中樞和支點模型來封裝和部署資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；如果找不到當地語系化的資源，則它是使用其資源的文化特性。 每個支點都會連線至附屬組件，其中包含單一文化特性但未包含任何程式碼的資源。  
   
  這個模型有數個優點：  
@@ -61,18 +59,14 @@ ms.lasthandoff: 06/02/2017
   
 -   因為您必須測試數個組態，所以測試應用程式的初始成本會增加。 請注意，長期而言，測試一個具有數個附屬的核心應用程式，與測試並維護數個平行國際版本相較之下，較為簡單且費用較少。  
   
-<a id="resource-naming-conventions" class="xliff"></a>
-
-## 資源命名慣例  
+## <a name="resource-naming-conventions"></a>資源命名慣例  
  當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 如需文化特性名稱的完整清單，請參閱全球化開發人員中心上的[國家語言支援 (NLS) API 參考](http://go.microsoft.com/fwlink/?LinkId=200048)。  
   
 > [!NOTE]
 >  如需建立資源檔的資訊，請參閱 MSDN Library 中的[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)和[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)。  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
-<a id="the-resource-fallback-process" class="xliff"></a>
-
-## 資源後援處理序  
+## <a name="the-resource-fallback-process"></a>資源後援處理序  
  封裝和部署資源的中樞和支點模型會使用後援程序來找出適當的資源。 如果應用程式要求的當地語系化資源無法使用，通用語言執行平台 (CLR) 就會在文化特性的階層架構中搜尋最接近使用者應用程式所要求的適當後援資源，而擲回例外狀況只會做為最後手段。 在階層的每個層級，如果找到適當的資源，則執行階段會使用它。 如果找不到資源，則會繼續搜尋下一個層級。  
   
  若要改善查閱效能，請將 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性套用至主要組件，並將使用主要組件之中性語言的名稱傳遞給它。  
@@ -114,9 +108,7 @@ ms.lasthandoff: 06/02/2017
  例如，假設應用程式要求墨西哥西班牙文 (es-MX 文化特性) 的當地語系化資源。 執行階段會先搜尋符合 es-MX 之組件的全域組件快取，但找不到它。 執行階段接著會搜尋目前執行中組件的目錄是否有 es-MX 目錄。 如果失敗，則執行階段會重新搜尋全域組件快取中是否有父組件可反映適當的後援文化特性；在此情況下為 es (西班牙文)。 如果找不到父組件，執行階段會搜尋 es-MX 文化特性之父組件的所有可能層級，直到找到對應的資源。 如果找不到資源，執行階段會使用預設文化特性的資源。  
   
 <a name="Optimizing"></a>   
-<a id="optimizing-the-resource-fallback-process" class="xliff"></a>
-
-### 最佳化資源後援處理序  
+### <a name="optimizing-the-resource-fallback-process"></a>最佳化資源後援處理序  
  在下列情況中，您可以最佳化執行階段用來搜尋附屬組件中資源的程序。  
   
 -   附屬組件會部署在與程式碼組件相同的位置中。 如果程式碼組件安裝在[全域組件快取](../../../docs/framework/app-domains/gac.md)中，則也會將附屬組件安裝在全域組件快取中。 如果程式碼組件安裝在目錄中，則附屬組件會安裝在該目錄的文化特性特定資料夾中。  
@@ -143,9 +135,7 @@ ms.lasthandoff: 06/02/2017
   
 -   如果探查特定資源組件失敗，則執行階段不會引發 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。  
   
-<a id="ultimate-fallback-to-satellite-assembly" class="xliff"></a>
-
-### 附屬組件的最終後援  
+### <a name="ultimate-fallback-to-satellite-assembly"></a>附屬組件的最終後援  
  您可以選擇性地從主要組件中移除資源，並指定執行階段應該從對應至特定文化特性的附屬組件中載入最終後援資源。 若要控制後援程序，請使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=fullName> 建構函式，並提供 <xref:System.Resources.UltimateResourceFallbackLocation> 參數的值，而此參數指定 Resource Manager 應該從主要組件還是附屬組件擷取後援資源。  
   
  下列範例會使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性，將應用程式的後援資源儲存在法文 (fr) 語言的附屬組件中。  此範例有兩個文字型資源檔案定義名為 `Greeting` 的單一字串資源。 首先，resources.fr.txt 包含法文語言資源。  
@@ -196,14 +186,10 @@ Greeting=Добрый день
 Bon jour!  
 ```  
   
-<a id="suggested-packaging-alternative" class="xliff"></a>
-
-## 建議的封裝替代方式  
+## <a name="suggested-packaging-alternative"></a>建議的封裝替代方式  
  時間或預算限制可能會讓您無法針對應用程式所支援的每個子文化特性建立一組資源。 相反地，您可以建立所有相關子文化特性可使用之父文化特性的單一附屬組件。 例如，您可以提供要求地區特定英文資源之使用者所擷取的單一英文附屬組件 (en)，以及要求地區特定德文資源之使用者的單一德文附屬組件 (de)。 例如，德國德文 (de-DE)、奧地利德文 (de-AT) 和瑞士德文 (de-CH) 的要求會改為使用德文附屬組件 (de)。 預設資源是最終後援，因此應該是大部分應用程式使用者所要求的資源，請小心選擇這些資源。 這種方式所部署的資源具有較少的特定文化特性，但可以大幅減少您應用程式的當地語系化成本。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)   
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   

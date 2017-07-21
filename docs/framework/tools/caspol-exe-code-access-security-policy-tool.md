@@ -36,12 +36,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 4217677bc011d4708a7ff5a2d44a7a897bc9057a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="caspolexe-code-access-security-policy-tool" class="xliff"></a>
-
-# Caspol.exe (程式碼存取安全性原則工具)
+# <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
   
 > [!IMPORTANT]
@@ -54,17 +52,13 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 caspol [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |選項|描述|  
 |------------|-----------------|  
@@ -123,23 +117,17 @@ caspol [options]
 |**-levelfinal** {**on**&#124;**off**}|設為 **on** 時，表示不會考慮新增或修改程式碼群組所在層級之下的原則層級。 這個選項通常於電腦原則層級使用。 例如，如果您在電腦層級為程式碼群組設定這個旗標，而某個程式碼符合這個程式碼群組的成員資格條件，Caspol.exe 將不會為這個程式碼計算或套用使用者層級原則。|  
 |**-name "** *name* **"**|如果搭配 **–addgroup** 選項使用，可指定要新增之程式碼群組的指令碼名稱。 如果搭配 **-chggroup** 選項使用，可指定要編輯之程式碼群組的指令碼名稱。 *name* 引數必須括在雙引號中。 *name* 引數不能以數字開頭，而且只能包含 A-Z、0-9 和底線字元。 您可以藉由這個 *name* 來參考程式碼群組，而不是藉由其數值標籤。 *name* 對於編寫指令碼也非常有用。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  安全性原則是使用三個原則層級表示：電腦原則、使用者原則和企業原則。 組件收到的權限集合是由這三種原則層級允許的權限集合交集所決定。 每個原則層級是以程式碼群組的階層結構表示。 每個程式碼群組都具有成員資格條件，用以判斷哪一個程式碼是該群組的成員。 具名權限集合也會與每個程式碼群組相關聯。 這個權限集合會指定執行階段允許符合成員資格條件的程式碼具備的權限。 程式碼群組階層架構與相關聯的具名權限集合一起定義並維護每一個層級的安全性原則。 您可以使用 **–user**、**-customuser**、**–machine** 和 **-enterprise** 選項來設定安全性原則的層級。  
   
  如需安全性原則以及執行階段如何決定要授與程式碼之權限的詳細資訊，請參閱[安全性原則管理](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
-<a id="referencing-code-groups-and-permission-sets" class="xliff"></a>
-
-## 參考程式碼群組和權限集合  
+## <a name="referencing-code-groups-and-permission-sets"></a>參考程式碼群組和權限集合  
  為了簡化階層架構中程式碼群組的參考，**-list** 選項會以縮排方式顯示程式碼群組清單與其數字標籤 (1、1.1、1.1.1，以此類推)。 其他以程式碼群組為目標的命令列作業也會使用數字標籤參考特定程式碼群組。  
   
  具名權限集合是藉由其名稱參考。 **–list** 選項會顯示程式碼群組清單，後接該原則中可用的具名權限集合清單。  
   
-<a id="caspolexe-behavior" class="xliff"></a>
-
-## Caspol.exe 行為  
+## <a name="caspolexe-behavior"></a>Caspol.exe 行為  
  **-s**[**ecurity**] {**on** &#124; **off**} 以外的所有選項都會使用安裝 Caspol.exe 的 .NET Framework 版本。 如果您執行的 Caspol.exe 是使用 *X* 版的執行階段進行安裝，則變更只會套用至該版本。 其他並存的執行階段安裝 (如果有的話) 則不受影響。 如果您從命令列執行 Caspol.exe，而不是在特定執行階段版本的目錄中執行，則該工具會從路徑中的第一個執行階段版本目錄執行 (通常是安裝的最新執行階段版本)。  
   
  **-s**[**ecurity**] {**on** &#124; **off**} 選項是整個電腦的作業。 關閉程式碼存取安全性會終止電腦上所有 Managed 程式碼和所有使用者的安全性檢查。 如果已安裝並存的 .NET Framework 版本，這個命令會關閉電腦上安裝之所有版本的安全性。 雖然 **-list** 選項會顯示安全性已關閉，但是不會對其他使用者清楚指出安全性已關閉。  
@@ -149,16 +137,12 @@ caspol [options]
  Caspol.exe 必須具有與 **Everything** 權限集合對等的權限才能運作。 此工具有保護機制，可防止原則遭到修改，而造成 Caspol.exe 無法獲得執行所需的權限。 如果您嘗試進行這類變更，Caspol.exe 會通知您要求的原則變更將中斷工具，並且拒絕原則變更。 您可以使用 **–force** 選項，針對特定命令關閉這項保護機制。  
   
 <a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>   
-<a id="manually-editing-the-security-configuration-files" class="xliff"></a>
-
-## 手動編輯安全性設定檔  
+## <a name="manually-editing-the-security-configuration-files"></a>手動編輯安全性設定檔  
  三個安全性設定檔分別對應 Caspol.exe 支援的三個原則層級：一個對應到電腦原則、一個對應到所指使用者的原則，還有一個對應到企業原則。 只有在使用 Caspol.exe 變更電腦、使用者或企業原則時，才會在磁碟上建立這些檔案。 如有需要，您可以在 Caspol.exe 中使用 **–reset** 選項，將預設的安全性原則儲存到磁碟中。  
   
  在大部分狀況下，不建議手動編輯安全性設定檔。 不過，有些情況下會需要修改這些檔案，例如系統管理員想要編輯特定使用者的安全性設定檔。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  **-addfulltrust**  
   
  假設已將包含自訂權限的權限集合加入至電腦原則。 這個自訂權限是在 `MyPerm.exe` 中實作，而 `MyPerm.exe` 會參考 `MyOther.exe` 中的類別。 這兩個組件都必須加入至完全信任組件清單。 下列命令會將 `MyPerm.exe` 組件加入至電腦原則的完全信任清單。  
@@ -277,9 +261,7 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

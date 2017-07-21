@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: 73e27a6a1cb58a410bf3c1601e5a5412762242c7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-disable-the-strong-name-bypass-feature" class="xliff"></a>
-
-# 如何：停用強式名稱略過功能
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：停用強式名稱略過功能
 從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，當組件載入到完全信任的 <xref:System.AppDomain> 物件 (例如適用於 `MyComputer` 區域的預設 <xref:System.AppDomain>) 時，不會驗證強式名稱簽章。 這是指強式名稱略過功能。 在完全信任環境中，不論簽章為何，已簽署、完全信任的組件要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 一律會成功。 唯一的限制是組件必須是完全受信任的，因為它的區域是完全信任的。 因為強式名稱不是這些情況下的決定因素，所以不需要進行驗證。 略過強式名稱簽章驗證可大幅提升效能。  
   
  略過功能適用於任何完全信任的組件，該組件非延遲簽署，且已從其 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性指定的目錄載入至所有完全信任的 <xref:System.AppDomain>。  
@@ -38,17 +36,13 @@ ms.lasthandoff: 06/02/2017
 > [!IMPORTANT]
 >  能否強制執行強式名稱驗證，視登錄機碼而定，如下列程序所述。 如果在沒有存取控制清單 (ACL) 權限的帳戶下，執行應用程式存取該登錄機碼，則設定為無效。 您必須確定此機碼已設定 ACL 權限，它才能為所有組件讀取。  
   
-<a id="to-disable-the-strong-name-bypass-feature-for-all-applications" class="xliff"></a>
-
-### 停用所有應用程式的強式名稱略過功能  
+### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>停用所有應用程式的強式名稱略過功能  
   
 -   在 32 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。  
   
 -   在 64 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 和 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。  
   
-<a id="to-disable-the-strong-name-bypass-feature-for-a-single-application" class="xliff"></a>
-
-### 停用單一應用程式的強式名稱略過功能  
+### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>停用單一應用程式的強式名稱略過功能  
   
 1.  開啟或建立應用程式組態檔。  
   
@@ -69,9 +63,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  只有啟用電腦的略過功能，您才可以開啟或關閉應用程式的強式名稱驗證。 如已關閉電腦的略過功能，即會驗證所有應用程式的強式名稱，而您無法略過單一應用程式的驗證。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [\<bypassTrustedAppStrongNames> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)   
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

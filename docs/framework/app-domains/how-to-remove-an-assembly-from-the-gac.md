@@ -27,21 +27,17 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: b36a1d27937e87138db1dcb6bcab569941938ebc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-remove-an-assembly-from-the-global-assembly-cache" class="xliff"></a>
-
-# 如何：從全域組件快取移除組件
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：從全域組件快取移除組件
 從全域組件快取 (GAC) 移除組件的方式有兩種：  
   
 -   使用[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)。 若要解除安裝開發和測試期間放在 GAC 中的組件，可使用這個選項。  
   
 -   使用 [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx)。 若要解除安裝測試安裝套件時及針對生產系統所使用的組件，則應該使用這個選項。  
   
-<a id="removing-an-assembly-with-gacutilexe" class="xliff"></a>
-
-### 使用 Gacutil.exe 移除組件  
+### <a name="removing-an-assembly-with-gacutilexe"></a>使用 Gacutil.exe 移除組件  
   
 1.  在命令提示字元中輸入下列命令：  
   
@@ -58,18 +54,14 @@ ms.lasthandoff: 06/02/2017
 gacutil -u hello  
 ```  
   
-<a id="removing-an-assembly-with-windows-installer" class="xliff"></a>
-
-### 使用 Windows Installer 移除組件  
+### <a name="removing-an-assembly-with-windows-installer"></a>使用 Windows Installer 移除組件  
   
 1.  從 [控制台] 中的 [程式和功能] 應用程式，選取您要解除安裝的應用程式。 如果安裝套件將組件放在 GAC 中，Windows Installer 會在其他應用程式未使用這些組件時，將組件移除。  
   
     > [!NOTE]
     >  Windows Installer 會維護安裝在 GAC 中之組件的參考計數。 只有在組件的參考計數到達零時 (表示 Windows Installer 套件所安裝的任何應用程式都未使用這個組件)，才能從 GAC 中移除組件。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [如何：將組件安裝到全域組件快取](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

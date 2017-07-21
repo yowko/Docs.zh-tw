@@ -25,9 +25,7 @@ ms.lasthandoff: 06/02/2017
 
 ---
 
-<a id="troubleshoot-blocked-net-framework-installations-and-uninstallations" class="xliff"></a>
-
-# 針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
+# <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
 
 當您執行 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 的 [Web 或離線安裝程式](../../../docs/framework/install/guide-for-developers.md)時，可能會遇到導致無法進行或封鎖 .NET Framework 安裝的問題。 下面表格列出可能造成阻礙的問題並且提供疑難排解資訊。
 
@@ -67,9 +65,7 @@ ms.lasthandoff: 06/02/2017
 |這個安裝程式需要 x64 或 x86 電腦， 無法安裝在 IA64 電腦上。|請參閱 MSDN Library 中的[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
 
 <a name="compat"></a>
-<a id="program-compatibility-issues" class="xliff"></a>
-
-### 程式相容性問題
+### <a name="program-compatibility-issues"></a>程式相容性問題
 
 在 Windows 程式相容性模式中執行時，.NET Framework 4.5 或其點發行版本安裝會因為 1603 錯誤碼或封鎖而失敗。 [程式相容性助理] 會指出 .NET Framework 可能沒有正確安裝，並提示您使用建議的設定 (程式相容性模式) 來重新安裝。 也有可能先前試圖執行 .NET Framework 安裝程式時失敗或取消了，而已經由「程式相容性助理」設定了程式相容性模式。
 
@@ -89,9 +85,7 @@ ms.lasthandoff: 06/02/2017
 
 1. 請重新執行 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 版的 .NET Framework 安裝程式。
 
-<a id="see-also" class="xliff"></a>
-
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
 [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   

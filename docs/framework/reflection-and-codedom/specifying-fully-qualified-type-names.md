@@ -31,17 +31,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: e1bceed0f95170f9dc11ebc28217b9e8a7dc891c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="specifying-fully-qualified-type-names" class="xliff"></a>
-
-# 指定完整的類型名稱
+# <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
 您必須指定具有各種反映作業有效輸入的類型名稱。 完整的類型名稱包括組件名稱規格、命名空間規格和類型名稱。 方法使用的類型名稱規格如 <xref:System.Type.GetType%2A?displayProperty=fullName>、<xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>。  
   
-<a id="backus-naur-form-grammar-for-type-names" class="xliff"></a>
-
-## 類型名稱的巴克斯格式文法  
+## <a name="backus-naur-form-grammar-for-type-names"></a>類型名稱的巴克斯格式文法  
  巴克斯格式 (BNF) 會定義形式語言的語法。 下表列出 BNF 語彙規則，說明如何辨識有效的輸入。 終端項 (不會進一步縮減的那些項目) 全部以大寫字母顯示。 非終端項 (會進一步縮減的那些項目) 會以大小寫混合或單引號括住的字串顯示，但單引號 (') 不是語法本身的一部分。 縱線字元 (&#124;) 表示具有子規則的規則。  
   
 |完整類型名稱的 BNF 文法|  
@@ -62,9 +58,7 @@ ms.lasthandoff: 06/02/2017
 |AssemblyProperties            :=   AssemblyProperty<br /><br /> &#124;     AssemblyProperties ',' AssemblyProperty|  
 |AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue|  
   
-<a id="specifying-special-characters" class="xliff"></a>
-
-## 指定特殊字元  
+## <a name="specifying-special-characters"></a>指定特殊字元  
  類型名稱中的 IDENTIFIER 是語言規則判定的任何有效名稱。  
   
  將反斜線 (\\) 用作逸出字元，分隔下列作為 IDENTIFIER 一部分的權杖。  
@@ -88,9 +82,7 @@ ms.lasthandoff: 06/02/2017
   
  如果以前的命名空間是 `Ozzy.Out+Back`，則反斜線前面必須有加號。 否則，剖析器會將它解譯為巢狀分隔符號。 反映將此字串發出為 `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`。  
   
-<a id="specifying-assembly-names" class="xliff"></a>
-
-## 指定組件名稱  
+## <a name="specifying-assembly-names"></a>指定組件名稱  
  組件名稱規格中的基本資訊是組件的文字名稱 (IDENTIFIER)。 您可以按照逗號分隔的屬性/值組清單理解 IDENTIFIER，如下表所述。 IDENTIFIER 的命名應依照檔案命名的規則。 IDENTIFIER 不區分大小寫。  
   
 |屬性名稱|描述|允許的值|  
@@ -137,19 +129,13 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
     Version=1.0.0.0  
 ```  
   
-<a id="specifying-pointers" class="xliff"></a>
-
-## 指定指標  
+## <a name="specifying-pointers"></a>指定指標  
  SimpleTypeSpec* 表示 Unmanaged 指標。 例如，若要取得類型 MyType 的指標，請使用 `Type.GetType("MyType*")`。 若要取得類型 MyType 指標的指標，請使用 `Type.GetType("MyType**")`。  
   
-<a id="specifying-references" class="xliff"></a>
-
-## 指定參考  
+## <a name="specifying-references"></a>指定參考  
  SimpleTypeSpec & 代表 Managed 指標或參考。 例如，若要取得類型 MyType 的參考，請使用 `Type.GetType("MyType &")`。 請注意，參考與指標不同，僅限一個層級。  
   
-<a id="specifying-arrays" class="xliff"></a>
-
-## 指定陣列  
+## <a name="specifying-arrays"></a>指定陣列  
  在 BNF 文法中，ReflectionEmitDimension 只適用於使用 <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> 擷取的不完整類型定義。 不完整的類型定義是使用 <xref:System.Reflection.Emit?displayProperty=fullName> 建構卻未呼叫 <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=fullName> 的 <xref:System.Reflection.Emit.TypeBuilder> 物件。 ReflectionDimension 可以用來擷取任何已完成的類型定義，也就是已載入的類型。  
   
  指定陣列陣序即可存取反映中的陣列：  
@@ -166,9 +152,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  對 **ModuleBuilder.GetType** 而言，`MyArray[0..5]` 表示大小 6、下限 0 的一維陣列。 `MyArray[4…]` 表示大小不明、下限 4 的一維陣列。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.AssemblyName>   
  <xref:System.Reflection.Emit.ModuleBuilder>   
  <xref:System.Reflection.Emit.TypeBuilder>   

@@ -36,20 +36,16 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: b4ae5474ebf910389148745105adbe9a0ae608bb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="creating-satellite-assemblies-for-desktop-apps" class="xliff"></a>
-
-# 建立桌面應用程式的附屬組件
+# <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式中扮演重要角色。 它們可讓應用程式以使用者自己的語言和文化特性顯示字串、影像和其他資料，以及在使用者自己的語言或文化特性的資源無法使用時提供替代資料。 .NET Framework 會使用中樞和支點模型來尋找並擷取當地語系化的資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；當地語系化的資源無法使用時會使用它。 您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性來指定應用程式之預設文化特性的文化特性。 每個支點都會連線至附屬組件，其中包含單一當地語系化文化特性但未包含任何程式碼的資源。 因為附屬組件不是主要組件的一部分，所以您可以輕鬆地更新或取代對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  
   
 > [!NOTE]
 >  應用程式之預設文化特性的資源也可以儲存在附屬組件中。 若要這樣做，請將 <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=fullName> 的值指派給 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性。  
   
-<a id="satellite-assembly-name-and-location" class="xliff"></a>
-
-## 附屬組件名稱和位置  
+## <a name="satellite-assembly-name-and-location"></a>附屬組件名稱和位置  
  中樞和支點模型需要您將資源放入特定位置，以輕鬆地找到和使用它們。 如果您未如預期編譯和命名資源，或未將它們放在正確位置，則 Common Language Runtime 會找不到它們，並改為使用預設文化特性的資源。 以 <xref:System.Resources.ResourceManager> 物件代表的 .NET Framework Resource Manager 是用來自動存取當地語系化資源。 Resource Manager 需要下列各項：  
   
 -   單一附屬組件必須包括特定文化特性的所有資源。 換句話說，您應該將多個 .txt 或 .resx 檔案編譯成單一二進位 .resources 檔案。  
@@ -68,9 +64,7 @@ ms.lasthandoff: 06/02/2017
  ![Satellite assemblies](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 附屬組件目錄  
   
-<a id="compiling-satellite-assemblies" class="xliff"></a>
-
-## 編譯附屬組件  
+## <a name="compiling-satellite-assemblies"></a>編譯附屬組件  
  您使用[資源檔產生器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將包含資源的文字檔或 XML (.resx) 檔案編譯成二進位 .resources 檔案。 您接著使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將 .resources 檔案編譯成附屬組件。 Al.exe 會從您指定的 .resources 檔案建立組件。 附屬組件只能包含資源，而不能包含任何可執行程式碼。  
   
  下列 Al.exe 命令會從德文資源檔 strings.de.resources 建立應用程式 `Example` 的附屬組件。  
@@ -97,9 +91,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  如需 Al.exe 的完整可用選項清單，請參閱[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)。  
   
-<a id="satellite-assemblies-an-example" class="xliff"></a>
-
-## 附屬組件：範例  
+## <a name="satellite-assemblies-an-example"></a>附屬組件：範例  
  下列簡單 "Hello world" 範例會顯示包含當地語系化問候語的訊息方塊。 此範例包括英文 (美國)、法文 (法國) 和俄文 (俄國) 文化特性的資源，而其後援文化特性是英文。 若要建立範例，請執行下列動作：  
   
 1.  建立名為 Greeting.resx 或 Greeting.txt 的資源檔，以包含預設文化特性的資源。 將名為 `HelloString` 且其值為 "Hello world!" 的單一字串儲存 在此檔案中。  
@@ -159,18 +151,14 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
  您接著可以執行此範例。 它會隨機讓其中一個支援的文化特性成為目前文化特性，並顯示當地語系化的問候語。  
   
 <a name="SN"></a>   
-<a id="installing-satellite-assemblies-in-the-global-assembly-cache" class="xliff"></a>
-
-## 在全域組件快取中安裝附屬組件  
+## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>在全域組件快取中安裝附屬組件  
  您可以將組件安裝在全域組件快取中，而不是在本機應用程式子目錄中安裝組件。 如果您有供多個應用程式使用的類別庫和類別庫資源組件，則這特別有用。  
   
  在全域組件快取中安裝組件時，需要組件具有強式名稱。 強式名稱組件會使用有效的公開/私密金鑰組進行簽署。 它們包含執行階段用來判斷要用來滿足繫結要求之組件的版本資訊。 如需強式名稱和版本控制的詳細資訊，請參閱[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。 如需強式名稱的詳細資訊，請參閱[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)。  
   
  當您開發應用程式時，可能無法存取最終公開/私密金鑰組。 若要在全域組件快取中安裝附屬組件，並確認它的運作正常，您可以使用稱為延遲簽署的技術。 當您延遲簽署組件時，請在建置時間於檔案中保留強式名稱簽章的空間。 有最終公開/私密金鑰組可用時，會將實際簽署延遲到稍後。 如需延遲簽署的詳細資訊，請參閱[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)。  
   
-<a id="obtaining-the-public-key" class="xliff"></a>
-
-### 取得公開金鑰  
+### <a name="obtaining-the-public-key"></a>取得公開金鑰  
  若要延遲簽署組件，您必須具有公開金鑰的存取權。 您可以從公司中進行最後簽署的組織中取得實際公開金鑰，或使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 建立公開金鑰。  
   
  下列 Sn.exe 命令會建立測試公開/私密金鑰組。 **–k** 選項會指定 Sn.exe 應該建立新的金鑰組，並將它儲存在名為 TestKeyPair.snk 的檔案中。  
@@ -185,9 +173,7 @@ sn –k TestKeyPair.snk
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
-<a id="delay-signing-an-assembly" class="xliff"></a>
-
-### 延遲簽署組件  
+### <a name="delay-signing-an-assembly"></a>延遲簽署組件  
  在您取得或建立公開金鑰之後，請使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 編譯組件，並指定延遲簽署。  
   
  下列 Al.exe 命令會從 strings.ja.resources 檔案建立應用程式 StringLibrary 的強式名稱附屬組件：  
@@ -198,9 +184,7 @@ al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resour
   
  **/delay+** 選項指定組件連結器應該延遲簽署組件。 **/keyfile** 選項指定金鑰檔名稱，其中包含要用來延遲簽署組件的公開金鑰。  
   
-<a id="re-signing-an-assembly" class="xliff"></a>
-
-### 重新簽署組件  
+### <a name="re-signing-an-assembly"></a>重新簽署組件  
  部署您的應用程式之前，必須使用實際金鑰組來重新簽署延遲簽署的附屬組件。 您可以使用 Sn.exe 完成這項動作。  
   
  下列 Sn.exe 命令會使用 RealKeyPair.snk 檔案中所儲存的金鑰組來簽署 StringLibrary.resources.dll。 **–R** 選項指定要重新簽署先前簽署的組件還是延遲簽署的組件。  
@@ -209,9 +193,7 @@ al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resour
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
-<a id="installing-a-satellite-assembly-in-the-global-assembly-cache" class="xliff"></a>
-
-### 在全域組件快取中安裝附屬組件  
+### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>在全域組件快取中安裝附屬組件  
  執行階段在資源後援程序中搜尋資源時，會先尋找[全域組件快取](../../../docs/framework/app-domains/gac.md) (如需詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)主題的＜資源後援程序＞一節)。只要附屬組件是使用強式名稱進行簽署，就可以使用[全域組件快取工具 (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 將它安裝在全域組件快取中。  
   
  下列 Gacutil.exe 命令會在全域組件快取中安裝 StringLibrary.resources.dll：  
@@ -222,9 +204,7 @@ gacutil /i:StringLibrary.resources.dll
   
  **/i** 選項指定 Gacutil.exe 應該將指定的組件安裝到全域組件快取。 在快取中安裝附屬組件之後，其所含的資源可供設計成使用附屬組件的所有應用程式使用。  
   
-<a id="resources-in-the-global-assembly-cache-an-example" class="xliff"></a>
-
-### 全域組件快取中的資源：範例  
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>全域組件快取中的資源：範例  
  下列範例會使用 .NET Framework 類別庫中的方法，從資源檔擷取並傳回當地語系化的問候。 程式庫和其資源都會註冊在全域組件快取中。 此範例包括英文 (美國)、法文 (法國)、俄文 (俄國) 和英文文化特性的資源。 英文是預設文化特性；其資源儲存在主要組件中。 此範例一開始會使用公開金鑰來延遲簽署程式庫和其附屬組件，然後使用公開/私密金鑰組來重新簽署它們。 若要建立範例，請執行下列動作：  
   
 1.  如果您未使用 Visual Studio，請使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 ResKey.snk 的公開/私密金鑰組：  
@@ -330,9 +310,7 @@ gacutil /i:StringLibrary.resources.dll
   
 14. 執行 Example.exe。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
  [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)   
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)   

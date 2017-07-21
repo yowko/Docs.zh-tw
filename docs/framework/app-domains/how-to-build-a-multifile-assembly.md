@@ -32,15 +32,13 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/06/2017
 
 ---
-# 如何：建置多檔案組件
-<a id="how-to-build-a-multifile-assembly" class="xliff"></a>
+# <a name="how-to-build-a-multifile-assembly"></a>如何：建置多檔案組件
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。  
   
 > [!NOTE]
 >  適用於 C# 和 Visual Basic 的 Visual Studio IDE 只能用來建立單一檔案組件。 如果您想建立多檔案組件，則必須使用命令列編譯器或搭配 Visual C++ 使用 Visual Studio。  
   
-### 若要建立多檔案組件
-<a id="to-create-a-multifile-assembly" class="xliff"></a>  
+### <a name="to-create-a-multifile-assembly"></a>若要建立多檔案組件  
   
 1.  將所有檔案編譯為程式碼模組，該檔案所包含的命名空間將由組件的其他模組參考。 程式碼模組的預設副檔名為 .netmodule。  
   
@@ -92,8 +90,7 @@ ms.lasthandoff: 06/06/2017
   
      您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢查組件的內容，或判斷檔案為組件或模組。  
   
-## 另請參閱
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [如何：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   

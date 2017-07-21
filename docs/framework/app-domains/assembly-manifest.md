@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 58098e2107fcab96f82677094e50529fafba98e5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="assembly-manifest" class="xliff"></a>
-
-# 組件資訊清單
+# <a name="assembly-manifest"></a>組件資訊清單
 每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以存放在具有 Microsoft Intermediate Language (MSIL) 程式碼的可移植執行檔 (PE) (.exe 或 .dll) 中，或者存放在只包含組件資訊清單的獨立 PE 檔中。  
   
  下圖所示為儲存資訊清單的不同方式。  
@@ -51,9 +49,7 @@ ms.lasthandoff: 06/02/2017
   
 -   轉譯組件的自我描述  
   
-<a id="assembly-manifest-contents" class="xliff"></a>
-
-## 組件資訊清單內容  
+## <a name="assembly-manifest-contents"></a>組件資訊清單內容  
  下表所示為組件資訊清單中包含的資訊。 前四個項目 - 組件名稱、版本號碼、文化特性 (Culture) 和強式名稱 (Strong Name) 資訊 - 構成組件的識別。  
   
 |資訊|描述|  
@@ -68,9 +64,7 @@ ms.lasthandoff: 06/02/2017
   
  您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 如需完整的組件屬性清單，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [組件內容](../../../docs/framework/app-domains/assembly-contents.md)   
  [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)   
  [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   

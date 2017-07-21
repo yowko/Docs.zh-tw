@@ -28,29 +28,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 545a73dfb2568d0ce146e57e16724abffe4036a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="regasmexe-assembly-registration-tool" class="xliff"></a>
-
-# Regasm.exe (組件登錄工具)
+# <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 組件註冊工具會讀取組件內的中繼資料，並將必要的項目加入至登錄，這樣可讓 COM 用戶端順利地建立 .NET Framework 類別。 註冊類別之後，任何 COM 用戶端都可以將它當做 COM 類別使用。 類別只會在安裝組件時註冊一次。 在實際註冊類別之後，才能從 COM 建立組件內類別的執行個體。  
   
  若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 regasm assemblyFile [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |參數|說明|  
 |---------------|-----------------|  
@@ -72,9 +66,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 >  Regasm.exe 命令列選項不區分大小寫。 您只需要提供足夠的選項資訊，就可唯一識別該選項。 例如，**/n** 相當於 **/nologo**，且 **/t:** *outfile.tlb* 相當於 **/tlb:** *outfile.tlb*。  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  您可以使用 **/regfile** 選項產生包含登錄項目的 .reg 檔，而不是直接變更登錄。 您可以使用登錄編輯程式工具 (Regedit.exe) 匯入 .reg 檔，藉此更新電腦上的登錄。 請注意，.reg 檔並不包含任何可以藉由使用者定義的註冊功能處理的登錄更新。  請注意，**/regfile** 選項只會發出 Managed 類別的登錄項目。  這個選項不會發出 `TypeLibID` 或 `InterfaceID` 的項目。  
   
  當您指定 **/tlb** 選項時，Regasm.exe 會產生及註冊型別程式庫，描述組件中找到的類型。 Regasm.exe 會將產生的類型程式庫放入目前的工作目錄中，或是為輸出檔指定的目錄中。 為參考其他組件的組件產生類型程式庫可能導致一次產生多個類型程式庫。 您可以使用類型程式庫提供類型資訊給 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 這類開發工具。 如果您要註冊的組件是由型別程式庫匯入工具 ([Tlbimp.exe](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)) 所產生，則不應該使用 **/tlb** 選項。 您無法從原本自類型程式庫匯入的組件匯出類型程式庫。 使用 **/tlb** 選項與使用類型程式庫匯出工具 ([Tlbexp.exe](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)) 和 Regasm.exe 的效果相同，但是有一點除外，就是 Tlbexp.exe 不會註冊本身所產生的類型資料庫。  如果您使用 **/tlb** 選項註冊型別程式庫，就可以使用 **/tlb** 選項搭配 **/unregister** 選項將型別程式庫的註冊移除。 這兩個選項一起使用時，將會移除類型程式庫和介面項目的註冊，因而大幅清除登錄。  
@@ -85,9 +77,7 @@ regasm assemblyFile [options]
   
  使用 Regasm.exe 註冊組件之後，您可以將它安裝在[全域組件快取](../../../docs/framework/app-domains/gac.md)中，以便可以從任何 COM 用戶端將它啟用。 如果組件將只會由單一應用程式啟用，您可以將它放置到該應用程式的目錄中。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會註冊所有包含在 `myTest.dll` 中的公用類別。  
   
 ```  
@@ -106,9 +96,7 @@ regasm myTest.dll /regfile:myTest.reg
 regasm myTest.dll /tlb:myTest.tlb  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
  [Tlbimp.exe (型別程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   

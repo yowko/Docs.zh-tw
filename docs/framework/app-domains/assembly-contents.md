@@ -23,12 +23,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: e1268744a8a5334fafb2c40c111c480dd30ddd9b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="assembly-contents" class="xliff"></a>
-
-# 組件內容
+# <a name="assembly-contents"></a>組件內容
 一般而言，靜態組件可包含四個項目：  
   
 -   [組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)，其中含有組件中繼資料。  
@@ -60,9 +58,7 @@ ms.lasthandoff: 06/02/2017
   
  目前在設計原始程式碼時，您必須明確決定要如何將應用程式的功能分割在一個或多個檔案中。 在設計 .NET Framework 程式碼時，您也必須做出如何將功能分割為一個或多個組件的類似決定。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [通用語言執行平台中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)   
  [組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)

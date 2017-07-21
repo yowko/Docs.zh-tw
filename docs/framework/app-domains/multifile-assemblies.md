@@ -26,12 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 0521e3bcfc7ed4e58434bacf36b43840647ddf50
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="multifile-assemblies" class="xliff"></a>
-
-# 多檔案組件
+# <a name="multifile-assemblies"></a>多檔案組件
 您可以搭配使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 與 Visual C++，來建立多個組件。 組件中的一個檔案必須包含組件資訊清單。 啟動應用程式的組件也必須包含進入點，例如 Main 或 WinMain 方法。  
   
  例如，假設您的應用程式包含兩個程式碼模組：Client.cs 和 Stringer.cs。 Stringer.cs 會建立 Client.cs 中程式碼所參考的 `myStringer` 命名空間。 Client.cs 包含 `Main` 方法，而此方法是應用程式進入點。 在此範例中，您會編譯這兩個程式碼模組，然後建立包含組件資訊清單的第三個檔案，而組件資訊清單可啟動應用程式。 組件資訊清單同時參考 `Client` 和 `Stringer` 模組。  
@@ -52,8 +50,6 @@ ms.lasthandoff: 06/02/2017
   
  在您建立組件之後，可以簽署包含組件資訊清單 (因此包含組件) 的檔案，也可以指定檔案 (和組件) 的強式名稱，並將它放在全域組件快取中。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -26,17 +26,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: 09044e2f604ba9b1b87850eea001492c111d45c9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="in-process-side-by-side-execution" class="xliff"></a>
-
-# 同處理序並存執行
+# <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
   
-<a id="background" class="xliff"></a>
-
-## 背景  
+## <a name="background"></a>背景  
  .NET Framework 一律會提供 Managed 程式碼應用程式的並存裝載，但在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 之前，未針對 Managed COM 元件提供該功能。 過去，載入至程序的 Managed COM 元件是與已載入的執行階段版本或 .NET Framework 的最新已安裝版本一起執行。 如果此版本與 COM 元件不相容，元件就會失敗。  
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供新的方式進行並存裝載，以確保下列各項：  
@@ -45,9 +41,7 @@ ms.lasthandoff: 06/02/2017
   
 -   應用程式會針對用來建置的 .NET Framework 版本執行。 除非明確指示，否則它們不會使用新版 .NET Framework。 不過，應用程式較容易轉換成使用新版 .NET Framework。  
   
-<a id="effects-on-users-and-developers" class="xliff"></a>
-
-## 使用者和開發人員的影響  
+## <a name="effects-on-users-and-developers"></a>使用者和開發人員的影響  
   
 -   **一般使用者和系統管理員**. 這些使用者現在可以更有信心，在單獨或與應用程式一起安裝新版執行階段時，不會對其電腦造成任何影響。 現有應用程式會繼續與之前一樣地執行。  
   
@@ -69,9 +63,7 @@ ms.lasthandoff: 06/02/2017
 >  .NET Framework 3.0 和 3.5 版是根據 2.0 版透過累加方式所建置，不需要並存執行。 這些本質上是相同的版本。  
   
 <a name="scenarios"></a>   
-<a id="common-side-by-side-hosting-scenarios" class="xliff"></a>
-
-## 常見並存裝載案例  
+## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
 -   **情節 1：**使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
   
@@ -108,9 +100,7 @@ ms.lasthandoff: 06/02/2017
     </configuration>  
     ```  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列範例示範執行 Managed COM 元件的 Unmanaged COM 主機，方法是使用編譯元件使用的 .NET Framework 版本。  
   
  若要執行下列範例，請編譯並註冊下列使用 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Managed COM 元件。 若要註冊元件，請在 [專案] 功能表上按一下 [屬性]，再按一下 [組建] 索引標籤，然後選取 [註冊 COM Interop] 核取方塊。  
@@ -198,9 +188,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<startup> 項目](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
 

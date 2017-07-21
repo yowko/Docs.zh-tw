@@ -26,12 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c274d1b9cdb0e9bf96a79d89f2f75b7f57dee25a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="secannotateexe-net-security-annotator-tool" class="xliff"></a>
-
-# SecAnnotate.exe (.NET Security Annotator 工具)
+# <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator 工具)
 .NET Security Annotator 工具 (SecAnnotate.exe) 是識別一個或多個組件之 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令列應用程式。  
   
  Visual Studio 延伸模組 ([Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007)) 提供 SecAnnotate.exe 的圖形化使用者介面，讓您能夠從 Visual Studio 執行該工具。  
@@ -40,17 +38,13 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下鍵入以下內容，*parameters* 會在下一節中說明，而 *assemblies* 則包含以空格分隔的一或多個組件名稱：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |選項|說明|  
 |------------|-----------------|  
@@ -70,13 +64,9 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/x`<br /><br /> 或<br /><br /> `/verbose`|指定標註提供詳細輸出。|  
 |`/y:` *directory*<br /><br /> 或<br /><br /> `/symbolpath:` *directory*|註釋期間搜尋符號檔時包含指定的目錄。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  在命令列指定且前面加上一個 at 符號 (@) 的回應檔也可能會提供參數和組件。 回應檔中的每一行應該包含單一參數或組件名稱。  
   
  如需 .NET Security Annotator 的詳細資訊，請參閱 .NET Security 部落格中的項目[使用 SecAnnotate 分析您的組件是否發生透明度違規](http://go.microsoft.com/fwlink/?LinkId=187648)。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例
+## <a name="examples"></a>範例

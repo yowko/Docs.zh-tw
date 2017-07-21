@@ -26,29 +26,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 2a3f1cf4d82aefc171d256dec166f0441e4fd57e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="clrverexe-clr-version-tool" class="xliff"></a>
-
-# Clrver.exe (CLR 版本工具)
+# <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
 CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言執行平台 (CLR) 版本。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 clrver [option]  
 ```  
   
-<a id="options" class="xliff"></a>
-
-## 選項  
+## <a name="options"></a>選項  
   
 |選項|說明|  
 |------------|-----------------|  
@@ -56,9 +50,7 @@ clrver [option]
 |*pid*|顯示具有指定處理序 ID (PID) 的處理序所使用的 CLR 版本。|  
 |`-?`|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  如果您呼叫 Clrver.exe 時未使用任何選項，則會顯示所有已安裝的 CLR 版本。 如果您指定另一個使用者的 PID，則必須具有系統管理權限才能取得版本資訊。  
   
 > [!NOTE]
@@ -66,9 +58,7 @@ clrver [option]
   
  若您嘗試判斷 SYSTEM、LOCAL SERVICE 和 NETWORK SERVICE 處理序的 CLR 版本，系統會顯示一則訊息，表示 PID 不存在。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會顯示電腦上安裝的所有 CLR 版本。  
   
  `clrver`  
@@ -81,9 +71,7 @@ clrver [option]
   
  `Clrver -all`  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

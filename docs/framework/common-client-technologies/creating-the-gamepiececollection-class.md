@@ -18,17 +18,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 672d2717905195084c381ea692aa426b5e3ca09c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="creating-the-gamepiececollection-class" class="xliff"></a>
-
-# 建立 GamePieceCollection 類別
+# <a name="creating-the-gamepiececollection-class"></a>建立 GamePieceCollection 類別
 **GamePieceCollection** 類別衍生自泛型清單類別，並引入可更輕鬆管理多個 **GamePiece** 物件的方法。  
   
-<a id="creating-the-code" class="xliff"></a>
-
-## 建立程式碼  
+## <a name="creating-the-code"></a>建立程式碼  
  **GamePieceCollection** 類別的建構函式會初始化 *capturedIndex* 私用成員。 這個欄位用來追蹤目前滑鼠捕捉到的遊戲片段。  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
@@ -43,9 +39,7 @@ ms.lasthandoff: 06/02/2017
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_updatefrommouse)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
  [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
  [建立 GamePiece 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   

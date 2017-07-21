@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: a2498ed46a7c1f059a7c3a354036e3f2d474149a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="dynamically-loading-and-using-types" class="xliff"></a>
-
-# 動態載入和使用類型
+# <a name="dynamically-loading-and-using-types"></a>動態載入和使用類型
 反映會提供語言編譯器所使用的基礎結構，例如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript，以實作隱含晚期繫結。 繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。 當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 helper 方法，它會使用反映來取得物件類型。 傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。 這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。  
   
  在下列範例中，Visual Basic 編譯器會隱含地使用反映，對一個在編譯階段不知道其類型的物件呼叫方法。 **HelloWorld** 類別具有 **PrintHello** 方法，它會列印出 "Hello World" 並串連傳遞給 **PrintHello** 方法的部分文字。 在此範例中呼叫的 **PrintHello** 方法實際上是 <xref:System.Type.InvokeMember%2A?displayProperty=fullName>；Visual Basic 程式碼允許叫用 **PrintHello** 方法，就彷彿已在編譯階段知道物件 (helloObj) 的類型 (早期繫結)，而不是執行階段知道 (晚期繫結)。  
@@ -49,9 +47,7 @@ Module Hello
 End Module  
 ```  
   
-<a id="custom-binding" class="xliff"></a>
-
-## 自訂繫結  
+## <a name="custom-binding"></a>自訂繫結  
  除了編譯器隱含地用來進行晚期繫結，反映也可明確地用於程式碼，來完成晚期繫結。  
   
  [Common Language Runtime](../../../docs/standard/clr.md) 支援多種程式設計語言，而這些語言的繫結規則不同。 在早期繫結案例中，程式碼產生器可以完全控制這個繫結。 不過，在透過反映的晚期繫結中，繫結必須受自訂繫結控制。 <xref:System.Reflection.Binder> 類別會提供成員選取和叫用的自訂控制。  
@@ -62,9 +58,7 @@ End Module
   
  [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)] [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)] [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
-<a id="invokemember-and-createinstance" class="xliff"></a>
-
-### InvokeMember 和 CreateInstance  
+### <a name="invokemember-and-createinstance"></a>InvokeMember 和 CreateInstance  
  使用 <xref:System.Type.InvokeMember%2A?displayProperty=fullName> 來叫用類型的成員。 各種類別的 **CreateInstance** 方法，例如 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 和 <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=fullName>，是 **InvokeMember** 的特殊形式，會建立指定類型的新執行個體。 **Binder** 類別用來在這些方法中進行多載解析和引數強制型轉。  
   
  下列範例顯示引數強制型轉 (類型轉換) 和成員選取的三種可能組合。 案例 1 中不需要任何引數強制型轉或成員選取。 案例 2 中只需要成員選取。 案例 3 中只需要引數強制型轉。  
@@ -107,9 +101,7 @@ End Module
   
  <xref:System.Type> 類別具有 **Get** 方法，使用類型 **Binder** 的參數來解析對特定成員的參考。 <xref:System.Type.GetConstructor%2A?displayProperty=fullName>、<xref:System.Type.GetMethod%2A?displayProperty=fullName> 和 <xref:System.Type.GetProperty%2A?displayProperty=fullName> 會搜尋目前類型的特定成員，方法是提供該成員的簽章資訊。 接著回來呼叫 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=fullName> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=fullName>，選取適當方法的指定簽章資訊。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Type.InvokeMember%2A?displayProperty=fullName>   
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   

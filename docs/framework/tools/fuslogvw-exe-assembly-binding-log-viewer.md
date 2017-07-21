@@ -30,12 +30,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
 ms.openlocfilehash: 249e07461a0b96ba3a9afddbc812cabfe05c37c2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="fuslogvwexe-assembly-binding-log-viewer" class="xliff"></a>
-
-# Fuslogvw.exe (組件繫結記錄檔檢視器)
+# <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。 這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。 這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。 通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。  
   
 > [!IMPORTANT]
@@ -51,9 +49,7 @@ fuslogvw
   
  檢視器會針對每一個失敗的組件繫結顯示一個項目。 針對每一項失敗，檢視器會描述啟始該繫結的應用程式、所要繫結的組件 (包括名稱、版本、文化特性和公開金鑰)，以及失敗的日期和時間。  
   
-<a id="to-change-the-log-location-view" class="xliff"></a>
-
-### 若要變更記錄檔位置檢視  
+### <a name="to-change-the-log-location-view"></a>若要變更記錄檔位置檢視  
   
 1.  選取 [預設值] 選項按鈕，可檢視所有應用程式類型的繫結失敗。 根據預設，記錄項目會存放在 wininet 快取中磁碟上的每個使用者目錄中。  
   
@@ -62,9 +58,7 @@ fuslogvw
     > [!NOTE]
     >  預設繫結位置要比自訂繫結位置更合適。 執行階段會將預設繫結位置存放到 wininet 快取中，因此會自動將它清除。 如果您指定自訂繫結位置，則必須負責將它清除。  
   
-<a id="to-view-details-about-a-specific-failure" class="xliff"></a>
-
-### 若要檢視特定失敗的詳細資料  
+### <a name="to-view-details-about-a-specific-failure"></a>若要檢視特定失敗的詳細資料  
   
 1.  在檢視器中選取所需項目的應用程式名稱。  
   
@@ -118,46 +112,32 @@ LOG: Attempting download of new URL file:///C:/Program Files/Microsoft.NET/Frame
 LOG: All probing URLs attempted and failed.  
 ```  
   
-<a id="to-delete-a-single-entry-from-the-log" class="xliff"></a>
-
-### 若要從記錄檔刪除單一項目  
+### <a name="to-delete-a-single-entry-from-the-log"></a>若要從記錄檔刪除單一項目  
   
 1.  在檢視器中選取項目。  
   
 2.  按一下 [刪除項目] 按鈕。  
   
-<a id="to-delete-all-entries-from-the-log" class="xliff"></a>
-
-### 若要從記錄檔刪除所有項目  
+### <a name="to-delete-all-entries-from-the-log"></a>若要從記錄檔刪除所有項目  
   
 -   按一下 [全部刪除] 按鈕。  
   
-<a id="to-refresh-the-user-interface" class="xliff"></a>
-
-### 若要重新整理使用者介面  
+### <a name="to-refresh-the-user-interface"></a>若要重新整理使用者介面  
   
 -   按一下 [重新整理] 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理] 按鈕才能顯示新項目。  
   
-<a id="to-change-the-log-settings" class="xliff"></a>
-
-### 若要變更記錄檔設定  
+### <a name="to-change-the-log-settings"></a>若要變更記錄檔設定  
   
 -   按一下 [設定] 按鈕，開啟 [記錄檔設定] 對話方塊。  
   
-<a id="to-view-the-about-dialog" class="xliff"></a>
-
-### 若要檢視關於對話方塊  
+### <a name="to-view-the-about-dialog"></a>若要檢視關於對話方塊  
   
 -   按一下 [關於] 按鈕。  
   
-<a id="binding-logs-for-native-images" class="xliff"></a>
-
-## 原生映像的繫結記錄檔  
+## <a name="binding-logs-for-native-images"></a>原生映像的繫結記錄檔  
  根據預設，Fuslogvw.exe 會記錄正常的組件繫結要求。 或者，您可以記錄使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 所建立之原生映像的組件繫結。  
   
-<a id="to-log-assembly-binds-for-native-images" class="xliff"></a>
-
-#### 若要記錄原生映像的組件繫結  
+#### <a name="to-log-assembly-binds-for-native-images"></a>若要記錄原生映像的組件繫結  
   
 -   在 [記錄檔分類] 群組中，選取 [原生映像] 選項按鈕。  
   
@@ -215,36 +195,26 @@ Rejecting native image because it failed the security check. The assembly's perm
 Discarding native image.  
 ```  
   
-<a id="the-log-settings-dialog" class="xliff"></a>
-
-## [記錄檔設定] 對話方塊  
+## <a name="the-log-settings-dialog"></a>[記錄檔設定] 對話方塊  
  您可以使用 [記錄檔設定] 對話方塊執行下列動作。  
   
-<a id="to-disable-logging" class="xliff"></a>
-
-#### 若要停用記錄  
+#### <a name="to-disable-logging"></a>若要停用記錄  
   
 -   選取 [停用記錄] 選項按鈕。  請注意，這個選項預設為選取狀態。  
   
-<a id="to-log-assembly-binds-in-exceptions" class="xliff"></a>
-
-#### 若要記錄例外狀況中的組件繫結  
+#### <a name="to-log-assembly-binds-in-exceptions"></a>若要記錄例外狀況中的組件繫結  
   
 -   選取 [在例外狀況文字中記錄] 選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。  
   
      請參閱有關以定義域中性方式載入之組件的＜重要事項＞。  
   
-<a id="to-log-assembly-bind-failures" class="xliff"></a>
-
-#### 若要記錄組件繫結失敗  
+#### <a name="to-log-assembly-bind-failures"></a>若要記錄組件繫結失敗  
   
 -   選取 [在磁碟中記錄失敗的繫結] 選項按鈕。  
   
      請參閱有關以定義域中性方式載入之組件的＜重要事項＞。  
   
-<a id="to-log-all-assembly-binds" class="xliff"></a>
-
-#### 若要記錄所有組件繫結  
+#### <a name="to-log-all-assembly-binds"></a>若要記錄所有組件繫結  
   
 -   選取 [在磁碟中記錄所有繫結] 選項按鈕。  
   
@@ -253,9 +223,7 @@ Discarding native image.
 > [!IMPORTANT]
 >  以定義域中性方式載入組件時 (例如，將 <xref:System.AppDomainSetup.LoaderOptimization%2A> 屬性設定為 <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> 或 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>)，開啟記錄功能在某些情況下可能會造成記憶體流失。 如果在將定義域中性模組載入至應用程式定義域時加入一筆記錄項目，稍後卸載應用程式定義域時，便可能發生這種情況。 在處理序結束之前，可能都不會發行這個記錄項目。 有些偵錯工具會自動開啟記錄功能。  
   
-<a id="to-enable-a-custom-log-path" class="xliff"></a>
-
-#### 若要啟用自訂記錄檔路徑  
+#### <a name="to-enable-a-custom-log-path"></a>若要啟用自訂記錄檔路徑  
   
 1.  選取 [啟用自訂的記錄檔路徑] 選項按鈕。  
   
@@ -266,9 +234,7 @@ Discarding native image.
 >   
 >  如果 Unmanaged 應用程式藉由實作 `IHostAssemblyManager` 和 `IHostAssemblyStore` 介面裝載 Common Language Runtime，則無法將記錄項目儲存在 wininet 快取中。  若要檢視實作這些介面之自訂主機的記錄項目，則必須指定替代的記錄檔路徑。  
   
-<a id="to-enable-logging-for-apps-running-in-the-windows-app-container" class="xliff"></a>
-
-#### 若要啟用在 Windows 應用程式容器中執行的應用程式記錄功能  
+#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>若要啟用在 Windows 應用程式容器中執行的應用程式記錄功能  
   
 1.  啟用自訂的記錄檔路徑，如上述程序所述。 根據預設，在 Windows 應用程式容器中執行的應用程式對硬碟的存取權會受到限制。 您指定的目錄將可以對應用程式容器中的所有應用程式進行讀取/寫入。  
   
@@ -277,9 +243,7 @@ Discarding native image.
     > [!NOTE]
     >  只有在 Windows 8 (含) 以後版本中才會啟用這個方塊。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.TypeLoadException>   
  [工具](../../../docs/framework/tools/index.md)   
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   

@@ -24,12 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 1e6c2e433b5520e0720511c483f1378df8977f13
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="assembly-versioning" class="xliff"></a>
-
-# 組件版本控制
+# <a name="assembly-versioning"></a>組件版本控制
 使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。 組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。 Runtime 的預設版本原則為，除非被組態檔 (應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。  
   
 > [!NOTE]
@@ -52,18 +50,14 @@ ms.lasthandoff: 06/02/2017
   
  如需設定應用程式的詳細資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)。 如需繫結原則的詳細資訊，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
-<a id="version-information" class="xliff"></a>
-
-## 版本資訊  
+## <a name="version-information"></a>版本資訊  
  每一組件有兩種表示版本資訊的不同方式：  
   
 -   組件的版本號碼以及組件名稱和文化特性資訊，都是組件識別的一部分。 這個號碼是執行階段用來強制執行版本原則的，也是在執行階段時的型別解析過程中非常重要的一部分。  
   
 -   資訊版本，為表示其他版本資訊的字串，它隨附於組件僅做為資訊用途。  
   
-<a id="assembly-version-number" class="xliff"></a>
-
-### 組件版本號碼  
+### <a name="assembly-version-number"></a>組件版本號碼  
  每一組件都有一個版本號碼做為其識別的一部分。 因此，兩個版本號碼不同的組件會被執行階段視為完全不同的組件。 這個版本號碼實際上會以下列格式表示為四個部分的字串：  
   
  \<主要版本>.\<次要版本>.\<組建編號>.\<修訂>  
@@ -78,9 +72,7 @@ ms.lasthandoff: 06/02/2017
   
  如需指定版本繫結原則的資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)。 如需執行階段如何使用版本資訊找到特定組件的資訊，請參閱[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
-<a id="assembly-informational-version" class="xliff"></a>
-
-### 組件資訊版本  
+### <a name="assembly-informational-version"></a>組件資訊版本  
  資訊版本是個將其他版本資訊附加到組件僅供資訊用途的字串；這項資訊不會在執行階段時使用。 文字架構的資訊版本會對應到該產品的行銷刊物、包裝或產品名稱，並且不會被執行階段使用。 例如，資訊版本可以是 "Common Language Runtime Version 1.0" 或 "NET Control SP 2"。 在 Microsoft Windows 中檔案 [內容] 對話方塊的 [版本] 索引標籤上，這項資訊會出現在 [產品版本] 項目之中。  
   
 > [!NOTE]
@@ -88,9 +80,7 @@ ms.lasthandoff: 06/02/2017
   
  資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName> 表示。 如需資訊版本屬性的詳細資訊，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [設定應用程式](../../../docs/framework/configure-apps/index.md)   
  [設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)   

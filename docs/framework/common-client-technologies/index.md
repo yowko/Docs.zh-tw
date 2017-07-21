@@ -21,12 +21,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/08/2017
 
 ---
-# .NET Framework 中常見的用戶端技術
-<a id="common-client-technologies-in-the-net-framework" class="xliff"></a>
+# <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework 中常見的用戶端技術
 本節描述可以在用戶端應用程式中使用的不同技術。  
   
-## 本章節內容
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>本章節內容  
  [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  描述如何將操作和慣性處理器類別用於不同的 UI 架構，例如 Microsoft Windows Presentation Foundation (WPF) 或 Microsoft XNA。  
   

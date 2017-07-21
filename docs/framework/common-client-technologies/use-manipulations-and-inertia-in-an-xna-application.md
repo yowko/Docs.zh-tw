@@ -18,19 +18,15 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6f58c4ff726e297e1ec64ceb74f957496f58f065
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="using-manipulations-and-inertia-in-an-xna-application" class="xliff"></a>
-
-# 在 XNA 應用程式中使用操作和慣性
+# <a name="using-manipulations-and-inertia-in-an-xna-application"></a>在 XNA 應用程式中使用操作和慣性
 本文說明如何在 Microsoft XNA 應用程式中使用操作和慣性處理，來控制遊戲個件的移動。 在閱讀本文之前，您應該先熟悉[操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)主題和基本 XNA 程式設計概念。  
   
  若要執行本文描述的工作，您的 XNA 專案必須參考 <xref:System.Windows.Input.Manipulations> 組件，而您的電腦上必須安裝 [XNA Game Studio](http://msdn.microsoft.com/library/bb200104.aspx) ([下載](http://www.microsoft.com/downloads/details.aspx?FamilyId=7D70D6ED-1EDD-4852-9883-9A33C0AD8FEE&displaylang=en))，以便專案可以參考 XNA 組件。  
   
-<a id="overview-of-functionality" class="xliff"></a>
-
-## 功能概觀  
+## <a name="overview-of-functionality"></a>功能概觀  
  本文示範如何建立代表使用操作和慣性處理之遊戲個件的自訂類別。 這個類別可讓您透過使用滑鼠拖曳再放開的方式，在畫面上操作遊戲個件。 放開滑鼠之後，慣性處理會讓遊戲個件保持移動，但速度會逐漸變慢。 移動方式包括線性移動和角度移動。  
   
  ![簡單的操作和慣性應用。](../../../docs/framework/common-client-technologies/media/ndp-gamexna.jpg "NDP_GameXna")  
@@ -45,8 +41,6 @@ ms.lasthandoff: 06/02/2017
   
  [完整程式碼清單](../../../docs/framework/common-client-technologies/full-code-listings.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Input.Manipulations>   
  [操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)

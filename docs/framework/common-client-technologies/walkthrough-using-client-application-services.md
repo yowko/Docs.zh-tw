@@ -21,12 +21,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: c5c36c371c43e6cba8875c0b6bea98c228438218
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="walkthrough-using-client-application-services" class="xliff"></a>
-
-# 逐步解說：使用用戶端應用程式服務
+# <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
 本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。  
   
  在這個逐步解說中，您將執行下列工作：  
@@ -45,21 +43,15 @@ ms.lasthandoff: 06/02/2017
   
 -   啟用離線模式。 您會提供核取方塊，讓使用者指定其連接狀態。 然後使用這個值指定用戶端應用程式服務提供者，是否使用本機快取資料而不是存取其 Web 服務。 最後當應用程式返回線上模式時，再重新驗證目前的使用者。  
   
-<a id="prerequisites" class="xliff"></a>
-
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成這個逐步解說：  
   
 -   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
-<a id="creating-the-client-application" class="xliff"></a>
-
-## 建立用戶端應用程式  
+## <a name="creating-the-client-application"></a>建立用戶端應用程式  
  首先您必須建立 Windows Form 專案。 本逐步解說使用 Windows Form，因為很多人已熟悉這項功能，而且其程序類似 Windows Presentation Foundation (WPF) 專案。  
   
-<a id="to-create-a-client-application-and-enable-client-application-services" class="xliff"></a>
-
-#### 建立用戶端應用程式並啟用用戶端應用程式服務  
+#### <a name="to-create-a-client-application-and-enable-client-application-services"></a>建立用戶端應用程式並啟用用戶端應用程式服務  
   
 1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，選取 [檔案 &#124; 新增 &#124; 專案] 功能表選項。  
   
@@ -85,16 +77,12 @@ ms.lasthandoff: 06/02/2017
   
  此時，應用程式會設定為從相同的主機存取這三種服務。 在下一節中，您將建立以簡單 Web 服務應用程式呈現的主機，以便您測試用戶端組態。  
   
-<a id="creating-the-application-services-host" class="xliff"></a>
-
-## 建立應用程式服務主機  
+## <a name="creating-the-application-services-host"></a>建立應用程式服務主機  
  在本節中，您將建立簡單的 Web 服務應用程式，以便從本機 SQL Server Compact 資料庫檔案存取使用者資料。 接下來，您將會使用 [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)植入資料庫。 這個簡單的組態可讓您快速地測試用戶端應用程式。 除此之外，您還可以設定 Web 服務主機，以便從完整的 SQL Server 資料庫存取使用者資料，或透過自訂 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 類別來存取使用者資料。 如需詳細資訊，請參閱[建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
   
  在下列程序中，您將建立並設定 AppServices Web 服務。  
   
-<a id="to-create-and-configure-the-application-services-host" class="xliff"></a>
-
-#### 建立並設定應用程式服務主機  
+#### <a name="to-create-and-configure-the-application-services-host"></a>建立並設定應用程式服務主機  
   
 1.  在 [方案總管] 中，選取 ClientAppServicesDemo 解決方案，然後在 [檔案] 功能表上，選取 [新增 &#124; 新增專案]。  
   
@@ -158,9 +146,7 @@ ms.lasthandoff: 06/02/2017
   
  在下列程序中，您將使用 [ASP.NET 網站管理工具] 來完成服務組態，並填入本機資料庫檔案。 您將加入兩位使用者，並將其命名為 `employee` 及 `manager` 。兩者會分屬兩個同名的角色。 使用者密碼各為 `employee!` 及 `manager!` 。  
   
-<a id="to-configure-membership-and-roles" class="xliff"></a>
-
-#### 設定成員資格和角色  
+#### <a name="to-configure-membership-and-roles"></a>設定成員資格和角色  
   
 1.  在 [方案總管] 中，選取 AppServices 專案，然後在 [專案]  功能表上，選取 [ASP.NET 組態] 。  
   
@@ -253,14 +239,10 @@ ms.lasthandoff: 06/02/2017
   
  若要手動停止伺服器，請以滑鼠右鍵按一下工作列上通知區域中的 ASP.NET 程式開發伺服器圖示，然後按一下 [停止] 。 有時候在確定是否完全重新啟動時會很有用。  
   
-<a id="adding-forms-authentication" class="xliff"></a>
-
-## 加入表單驗證  
+## <a name="adding-forms-authentication"></a>加入表單驗證  
  在下列程序中，您會將程式碼加入主要表單，以嘗試驗證使用者，並在使用者提供無效的認證時拒絕存取。 您會使用硬式編碼的使用者名稱和密碼測試服務。  
   
-<a id="to-validate-the-user-in-your-application-code" class="xliff"></a>
-
-#### 在應用程式程式碼中驗證使用者  
+#### <a name="to-validate-the-user-in-your-application-code"></a>在應用程式程式碼中驗證使用者  
   
 1.  在 [方案總管] 中，於 ClientAppServicesDemo 專案中加入 System.Web 組件的參考。  
   
@@ -291,16 +273,12 @@ ms.lasthandoff: 06/02/2017
   
  若要改為查看錯誤訊息，請變更 <xref:System.Web.Security.Membership.ValidateUser%2A> 參數。 例如，以不正確的密碼 (像是 `"MANAGER"`) 取代第二個 `"manager!"` 參數。  
   
-<a id="adding-a-login-form-as-a-credentials-provider" class="xliff"></a>
-
-## 加入登入表單當做認證提供者  
+## <a name="adding-a-login-form-as-a-credentials-provider"></a>加入登入表單當做認證提供者  
  您可以在應用程式程式碼中取得使用者認證，並將其傳遞給 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法。 不過，如果您稍後想要進行變更，將取得認證的程式碼與應用程式程式碼分開通常會很有用。  
   
  在下列程序中，您會將應用程式設定為使用認證提供者，然後變更您的 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法呼叫，同時針對兩個參數傳遞 <xref:System.String.Empty>。 空字串會對 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法發出訊號，使其呼叫已設定之認證提供者的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 方法。  
   
-<a id="to-configure-your-application-to-use-a-credentials-provider" class="xliff"></a>
-
-#### 將應用程式設定為使用認證提供者  
+#### <a name="to-configure-your-application-to-use-a-credentials-provider"></a>將應用程式設定為使用認證提供者  
   
 1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案，然後在 [專案]  功能表上，選取 [ClientAppServicesDemo 屬性] 。  
   
@@ -326,16 +304,12 @@ ms.lasthandoff: 06/02/2017
   
      [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]  [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
-<a id="creating-a-login-form" class="xliff"></a>
-
-### 建立登入表單  
+### <a name="creating-a-login-form"></a>建立登入表單  
  認證提供者是實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 介面的類別。 這個介面具有名為 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的單一方法，可傳回 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 物件。 下列程序說明如何建立實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的 [登入] 對話方塊，以顯示本身並傳回使用者指定的認證。  
   
  針對 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C# 所提供的程序不同，因為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 提供 [登入表單] 範本。 這可以節省一些時間和撰寫程式碼的工作。  
   
-<a id="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic" class="xliff"></a>
-
-##### 建立 [登入] 對話方塊當做 Visual Basic 中的認證提供者  
+##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>建立 [登入] 對話方塊當做 Visual Basic 中的認證提供者  
   
 1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案，然後在 [專案]  功能表上，選取 [加入新項目] 。  
   
@@ -367,9 +341,7 @@ ms.lasthandoff: 06/02/2017
   
  下列 C# 程序提供簡單 [登入] 對話方塊的完整程式碼清單。 這個對話方塊的配置有一點粗糙，但是重點是 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 實作。  
   
-<a id="to-create-a-login-dialog-box-as-a-credentials-provider-in-c" class="xliff"></a>
-
-##### 建立 [登入] 對話方塊當做 C# 中的認證提供者  
+##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-c"></a>建立 [登入] 對話方塊當做 C# 中的認證提供者  
   
 1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案，然後在 [專案] 功能表上，選取 [加入類別]。  
   
@@ -386,14 +358,10 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  請勿在此時選取 [記住我]  ，否則在本逐步解說稍後實作登出之前，您都無法以其他使用者身分登入。  
   
-<a id="adding-role-based-functionality" class="xliff"></a>
-
-## 加入以角色為基礎的功能  
+## <a name="adding-role-based-functionality"></a>加入以角色為基礎的功能  
  在下列程序中，您會加入一個按鈕到表單，並只針對 manager 角色的使用者顯示該按鈕。  
   
-<a id="to-change-the-user-interface-based-on-user-role" class="xliff"></a>
-
-#### 根據使用者角色變更使用者介面  
+#### <a name="to-change-the-user-interface-based-on-user-role"></a>根據使用者角色變更使用者介面  
   
 1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 設計工具]。  
   
@@ -428,14 +396,10 @@ ms.lasthandoff: 06/02/2017
   
  您現在可以執行應用程式並以 employee 身分登入，您會發現按鈕並未顯示；然後再以 manager 身分登入，則會看到按鈕。  
   
-<a id="accessing-web-settings" class="xliff"></a>
-
-## 存取 Web 設定  
+## <a name="accessing-web-settings"></a>存取 Web 設定  
  在下列程序中，您會將文字方塊加入表單並繫結至 Web 設定。 如同先前使用驗證和角色的程式碼，您的設定程式碼不會直接存取設定提供者， 而是會使用 `Settings` 針對專案所產生的強類型 `Properties.Settings.Default` 類別 (在 C# 中是當做 `My.Settings` 存取，而在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中則是當做 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]存取)。  
   
-<a id="to-use-web-settings-in-your-user-interface" class="xliff"></a>
-
-#### 在使用者介面中使用 Web 設定  
+#### <a name="to-use-web-settings-in-your-user-interface"></a>在使用者介面中使用 Web 設定  
   
 1.  檢查工作列的通知區域，確定 [ASP.NET Web 程式開發伺服器]  仍在執行中。 如果您已停止伺服器，請重新啟動應用程式 (這會自動啟動伺服器)，然後關閉 [登入] 對話方塊。  
   
@@ -500,14 +464,10 @@ ms.lasthandoff: 06/02/2017
   
  此時若要測試應用程式，請同時使用 employee 和 manager 身分執行數次，並在文字方塊中輸入不同的值。 這些值會保存在每個使用者的工作階段中。  
   
-<a id="implementing-logout" class="xliff"></a>
-
-## 實作登出  
+## <a name="implementing-logout"></a>實作登出  
  如果使用者在登入時選取 [記住我]  核取方塊，應用程式在後續執行時會自動驗證使用者。 當應用程式在離線模式時，自動驗證仍然會繼續執行直到驗證 Cookie 過期為止。 不過，有時候多個使用者會需要同時存取應用程式，或是單一使用者可能會偶爾使用不同的認證登入。 若要實現這類案例，您必須實作登出功能，如同下列程序所述。  
   
-<a id="to-implement-logout-functionality" class="xliff"></a>
-
-#### 實作登出功能  
+#### <a name="to-implement-logout-functionality"></a>實作登出功能  
   
 1.  在 Form1 設計工具中，從 [工具箱] 將 <xref:System.Windows.Forms.Button> 控制項新增表單。  
   
@@ -527,16 +487,12 @@ ms.lasthandoff: 06/02/2017
   
  若要測試登出功能，請執行應用程式，然後在 [登入] 對話方塊中選取 [記住我]。 接著，關閉再重新啟動應用程式以確認不再需要登入。 最後，按一下 [登出] 重新啟動應用程式。  
   
-<a id="enabling-offline-mode" class="xliff"></a>
-
-## 啟用離線模式  
+## <a name="enabling-offline-mode"></a>啟用離線模式  
  在下列程序中，您會將核取方塊加入表單，讓使用者能夠進入離線模式。 您的應用程式可透過將 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> 屬性設定為 `true` 來進入離線模式。 離線狀態會儲存在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 屬性所表示的本機硬碟位置。 這表示離線狀態是以個別使用者和個別應用程式為基礎來儲存。  
   
  在離線模式中，所有用戶端應用程式服務要求會從本機快取擷取資料，而不是嘗試存取服務。 在預設組態中，本機資料包含以加密格式儲存的使用者密碼。 這可讓使用者在應用程式處於離線模式時仍能登入。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
-<a id="to-enable-offline-mode-in-your-application" class="xliff"></a>
-
-#### 在應用程式中啟用離線模式  
+#### <a name="to-enable-offline-mode-in-your-application"></a>在應用程式中啟用離線模式  
   
 1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 設計工具]。  
   
@@ -565,21 +521,15 @@ ms.lasthandoff: 06/02/2017
   
  如此即完成範例應用程式。 若要測試離線功能，請執行應用程式，以 employee 或 manager 的身分登入，然後選取 [離線工作] 。 修改文字方塊中的值，然後關閉應用程式。 重新啟動應用程式。 登入前，以滑鼠右鍵按一下工作列上通知區域中的 ASP.NET 程式開發伺服器圖示，然後按一下 [停止] 。 接著以正常的方式登入。 即使伺服器不在執行中，您仍然可以登入。 修改文字方塊的值、結束，然後再重新啟動，以查看修改過的值。  
   
-<a id="summary" class="xliff"></a>
-
-## 摘要  
+## <a name="summary"></a>摘要  
  在本逐步解說中，您已了解如何在 Windows Form 應用程式中啟用及使用用戶端應用程式服務。 設定測試伺服器之後，您可以將程式碼加入應用程式以驗證使用者，並從伺服器擷取使用者角色和應用程式設定。 您也了解如何啟用離線模式，以便讓應用程式在無法連接時，使用本機資料快取而不是遠端服務。  
   
-<a id="next-steps" class="xliff"></a>
-
-## 後續步驟  
+## <a name="next-steps"></a>後續步驟  
  在真實世界應用程式中，您會從遠端伺服器存取許多使用者的資料，而遠端伺服器並非隨時都能使用，或是可能會在未告知的情況下離線。 為了讓應用程式更強固，您必須能夠適當地回應服務無法使用的各種情況。 本逐步解說包含 try/catch 區塊，可攔截 <xref:System.Net.WebException>，並在服務無法使用時顯示錯誤訊息。 在實際執行的程式碼中，您可能想要藉由切換至離線模式、結束應用程式，或拒絕存取特定功能的方式處理這種情況。  
   
  為了加強應用程式的安全性，請務必在部署前徹底測試應用程式和伺服器。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)   
  [用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
  [如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   

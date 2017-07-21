@@ -22,17 +22,13 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
 ms.openlocfilehash: f9f90a91511b846a9ade9dc197c49caed082d57b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="how-to-create-an-xml-documentation-file-using-codedom" class="xliff"></a>
-
-# 如何：使用 CodeDOM 建立 XML 文件檔案
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 建立 XML 文件檔案
 CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建立包含 XML 文件註解的 CodeDOM 圖表、產生程式碼，以及編譯可建立 XML 文件輸出的以編譯器選項產生的程式碼。  
   
-<a id="to-create-a-codedom-graph-that-contains-xml-documentation-comments" class="xliff"></a>
-
-### 建立包含 XML 文件註解的 CodeDOM 圖表  
+### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>建立包含 XML 文件註解的 CodeDOM 圖表  
   
 1.  為範例應用程式建立包含 CodeDOM 圖形的 <xref:System.CodeDom.CodeCompileUnit>。  
   
@@ -40,25 +36,19 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
   
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]  [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-<a id="to-generate-the-code-from-the-codecompileunit" class="xliff"></a>
-
-### 從 CodeCompileUnit 產生程式碼  
+### <a name="to-generate-the-code-from-the-codecompileunit"></a>從 CodeCompileUnit 產生程式碼  
   
 1.  使用 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 方法來產生程式碼，並建立要編譯的來源檔案。  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]  [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
-<a id="to-compile-the-code-and-generate-the-documentation-file" class="xliff"></a>
-
-### 若要編譯程式碼，並產生文件檔案  
+### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>若要編譯程式碼，並產生文件檔案  
   
 1.  將 **/doc** 編譯器選項新增至 <xref:System.CodeDom.Compiler.CompilerParameters> 物件的 <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> 屬性，並在編譯程式碼時將物件傳送至 <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> 方法建立 XML 文件檔。  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]  [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
-<a id="example" class="xliff"></a>
-
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例會建立有文件註解的 CodeDOM 圖表、從圖表產生程式碼檔案，以及編譯檔案並建立相關聯的 XML 文件檔案。  
   
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
@@ -88,15 +78,11 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
 </doc>  
 ```  
   
-<a id="compiling-the-code" class="xliff"></a>
-
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 XML 加入程式碼註解](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)   
  [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [XML 文件](/cpp/ide/xml-documentation-visual-cpp)

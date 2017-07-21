@@ -31,8 +31,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/05/2017
 
 ---
-# 建立和使用強式名稱的組件
-<a id="creating-and-using-strong-named-assemblies" class="xliff"></a>
+# <a name="creating-and-using-strong-named-assemblies"></a>建立和使用強式名稱的組件
 <a name="top"></a> 強式名稱是由組件的識別，也就是其簡單文字名稱、版本號碼及文化特性資訊 (如果有提供)，加上公開金鑰和數位簽章所組成的。 這是使用對應的私密金鑰，從組件檔案所產生  (組件檔案包含附屬組件資訊清單，而資訊清單則包含組件中所有檔案的名稱和雜湊)。  
   
  強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的安全性將會受到危害。  
@@ -46,8 +45,7 @@ ms.lasthandoff: 06/05/2017
 -   [相關主題](#related_topics)  
   
 <a name="strong_name_scenario"></a>   
-## 強式名稱案例
-<a id="strong-name-scenario" class="xliff"></a>  
+## <a name="strong-name-scenario"></a>強式名稱案例  
  下列案例概述處理序如何使用強式名稱簽署組件，然後再使用該名稱參考該組件。  
   
 1.  組件 A 是以下列方法之一，使用強式名稱所建立：  
@@ -68,8 +66,7 @@ ms.lasthandoff: 06/05/2017
  [回到頁首](#top)  
   
 <a name="bypassing_signature_verification"></a>   
-## 略過信任組件的簽章驗證
-<a id="bypassing-signature-verification-of-trusted-assemblies" class="xliff"></a>  
+## <a name="bypassing-signature-verification-of-trusted-assemblies"></a>略過信任組件的簽章驗證  
  從 [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] 開始，當組件載入到完全信任的應用程式網域 (例如適用於 `MyComputer` 區域的預設應用程式網域) 時，不會驗證強式名稱簽章。 這是指強式名稱略過功能。 在完全信任環境中，不論簽章為何，已簽署、完全信任的組件要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 一律會成功。 強式名稱略過功能可以避免在這種狀況中不必要的額外負荷，也就是完全信任組件的強式名稱簽章驗證，讓組件能夠更快載入。  
   
  略過功能適用於任何以強式名稱簽署並具有下列特性的組件：  
@@ -87,8 +84,7 @@ ms.lasthandoff: 06/05/2017
  [回到頁首](#top)  
   
 <a name="related_topics"></a>   
-## 相關主題
-<a id="related-topics" class="xliff"></a>  
+## <a name="related-topics"></a>相關主題  
   
 |標題|描述|  
 |-----------|-----------------|  

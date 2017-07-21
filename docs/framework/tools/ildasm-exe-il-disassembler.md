@@ -30,29 +30,23 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 743e08d41ad414e4d14a208555623798ebc67754
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="ildasmexe-il-disassembler" class="xliff"></a>
-
-# Ildasm.exe (IL 反組譯工具)
+# <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 反組譯工具)
 IL 反組譯工具是 IL 組譯工具 (Ilasm.exe) 的附屬工具。 Ildasm.exe 會使用一個包含中繼語言 (IL) 程式碼的可攜式執行檔 (PE)，並建立適合輸入至 Ilasm.exe 的文字檔。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 ildasm [options] [PEfilename] [options]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
  下列選項可用於 .exe、.dll、.obj、.lib 和 .winmd 檔。  
   
 |選項|說明|  
@@ -110,9 +104,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 >  所有 Ildasm.exe 的選項都不區分大小寫，並且是以前三個字母識別。 例如，**/quo** 相當於 **/quoteallnames**。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如，**/output:** <檔案名稱> 相當於 **/output=** <檔案名稱>。  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  Ildasm.exe 只在磁碟上的 PE 檔上作業。 它無法在安裝於全域組件快取中的檔案上作業。  
   
  Ildasm.exe 所產生的文字檔可以用來做為 IL 組譯工具 (Ilasm.exe) 的輸入。 這非常有用，例如在不支援所有執行階段中繼資料屬性的程式語言中編譯程式碼時。 在編譯程式碼並透過 Ildasm.exe 執行其輸出之後，可以手動編輯產生的 IL 文字檔來加入遺漏的屬性。 然後可以透過 IL 組譯工具執行這個文字檔來產生最後的可執行檔。  
@@ -129,9 +121,7 @@ ildasm [options] [PEfilename] [options]
   
  您可以對 .exe 或 .dll 檔執行 Ildasm.exe 來判斷該檔案是否為 Managed。 如果檔案不是 Managed，工具便會顯示一則訊息，說明該檔案沒有有效的通用語言執行平台標頭而且無法進行反組譯。 如果檔案是 Managed，工具就會成功執行。  
   
-<a id="version-information" class="xliff"></a>
-
-## 版本資訊  
+## <a name="version-information"></a>版本資訊  
  從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，Ildasm.exe 會藉由顯示原始二進位內容的方式處理無法辨認的封送處理 BLOB (二進位大型物件)。 例如，下列程式碼將示範如何顯示 C# 程式所產生的封送處理 BLOB：  
   
 ```  
@@ -156,9 +146,7 @@ ildasm [options] [PEfilename] [options]
       …  
 ```  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會讓 PE 檔 `MyHello.exe` 的中繼資料和反組譯程式碼顯示於 Ildasm.exe 的預設 GUI 中。  
   
 ```  
@@ -206,9 +194,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
   
  巢狀類型的前面必須加上它的包含類別，並以正斜線分隔。 例如，如果 `MyNamespace.MyClass` 類別包含名為 `NestedClass` 的巢狀類別，則該巢狀類別的識別方式如下：`class MyNamespace.MyClass/NestedClass`。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Ilasm.exe (IL 組譯工具)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)   
  [Managed 執行程序](../../../docs/standard/managed-execution-process.md)   

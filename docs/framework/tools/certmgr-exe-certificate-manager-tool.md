@@ -31,12 +31,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: cf9cc6db470d85d765d95a1aba2fd205764ee3b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-<a id="certmgrexe-certificate-manager-tool" class="xliff"></a>
-
-# Certmgr.exe (憑證管理員工具)
+# <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)
 憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。  
   
  憑證管理員會隨 Visual Studio 自動安裝。 若要啟動工具，請使用[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
@@ -50,9 +48,7 @@ ms.lasthandoff: 06/02/2017
   
  在命令提示字元下輸入下列命令：  
   
-<a id="syntax" class="xliff"></a>
-
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
       certmgr [/add | /del | /put] [options]  
@@ -60,9 +56,7 @@ ms.lasthandoff: 06/02/2017
 [/s[/r registryLocation]] [destinationStorename]  
 ```  
   
-<a id="parameters" class="xliff"></a>
-
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |引數|描述|  
 |--------------|-----------------|  
@@ -90,9 +84,7 @@ ms.lasthandoff: 06/02/2017
 |**/7**|將目的存放區儲存成 PKCS #7 物件。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
-<a id="remarks" class="xliff"></a>
-
-## 備註  
+## <a name="remarks"></a>備註  
  Certmgr.exe 會執行下列幾種基本功能：  
   
 -   將憑證、CTL 和 CRL 顯示到主控台。  
@@ -113,9 +105,7 @@ ms.lasthandoff: 06/02/2017
   
  如需憑證的詳細資訊，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
-<a id="examples" class="xliff"></a>
-
-## 範例  
+## <a name="examples"></a>範例  
  下列命令會顯示叫做 `my` 且具有詳細資訊輸出的預設系統存放區。  
   
 ```  
@@ -158,9 +148,7 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [Makecert.exe (憑證建立工具)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
