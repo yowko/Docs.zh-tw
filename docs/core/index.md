@@ -1,6 +1,6 @@
 ---
 title: .NET Core | Microsoft Docs
-description: ".NET 核心"
+description: .NET Core
 keywords: ".NET、.NET Core"
 author: richlander
 ms.author: mairaw
@@ -17,9 +17,7 @@ ms.lasthandoff: 06/29/2017
 
 ---
 
-<a id="net-core" class="xliff"></a>
-
-# .NET Core
+# <a name="net-core"></a>.NET Core
 
 > 簽出[「入門」教學課程](get-started.md)以了解如何建立簡單的 .NET Core 應用程式。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
 
@@ -34,9 +32,7 @@ ms.lasthandoff: 06/29/2017
 - **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。
 
-<a id="composition" class="xliff"></a>
-
-## 組合
+## <a name="composition"></a>組合
 
 .NET Core 由下列部分組成：
 
@@ -45,33 +41,25 @@ ms.lasthandoff: 06/29/2017
 - [SDK 工具組](https://github.com/dotnet/cli)及[語言編譯器](https://github.com/dotnet/roslyn)，提供基本的開發人員體驗，可在 [.NET Core SDK](sdk.md) 中取得。
 - 'Dotnet' 應用程式主機，用來啟動 .NET Core 應用程式。 它會選取執行階段及裝載執行階段、提供組件載入原則，然後啟動應用程式。 您也可以差不多的方式用相同的主機啟動 SDK 工具。
 
-<a id="languages" class="xliff"></a>
-
-### 語言
+### <a name="languages"></a>語言
 
 C# 和 F# 語言 (Visual Basic 即將加入) 可用來撰寫 .NET Core 應用程式和程式庫。 在 .NET Core 上執行的編譯器，讓您在可以執行 .NET Core 的任何地方進行開發。 一般情況下，您不會直接使用編譯器，而是使用 SDK 工具間接使用它。
 
 C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim，讓 .NET Core 開發成為您最愛的編碼環境和作業系統的選項。 這項整合有部分是由 [OmniSharp 專案](http://www.omnisharp.net/)的熱心人士提供。
 
-<a id="net-apis-and-compatibility" class="xliff"></a>
-
-### .NET API 和相容性
+### <a name="net-apis-and-compatibility"></a>.NET API 和相容性
 
 .NET Core 可以視為 .NET Framework 基底類別庫 (BCL) 層的 .NET Framework 跨平台版本。 它會實作 [.NET Standard](../standard/net-standard.md) 規格。 .NET Core 提供可在 .NET Framework 或 Mono/Xamarin 中取得的 API 子集。 在某些情況下不會實作全部類型 (某些成員不提供或已搬遷)。
 
 若要深入了解 .NET Core API 藍圖，請參閱 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)。
 
-<a id="relationship-to-the-net-standard-library" class="xliff"></a>
-
-### .NET 標準程式庫的關聯性
+### <a name="relationship-to-the-net-standard-library"></a>.NET 標準程式庫的關聯性
 
 [.NET Standard](../standard/net-standard.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。 .NET 實作必須實作此規格，才會被視為符合 .NET 標準程式庫，可以支援以 .NET 標準程式庫為目標的程式庫。 
 
 .NET Core 因為實作 .NET 標準程式庫，所以可以支援 .NET 標準程式庫。
 
-<a id="workloads" class="xliff"></a>
-
-### 工作負載
+### <a name="workloads"></a>工作負載
 
 .NET Core 本身就包含單一的應用程式模型：主控台應用程式，對工具、本機服務和文字型遊戲都極有幫助。 其他應用程式模型早已建置在 .NET Core 以擴充其功能，例如︰
 
@@ -79,21 +67,15 @@ C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯�
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
 - [以 UWP 為目標時的 Xamarin.Forms](https://www.xamarin.com/forms)
 
-<a id="open-source" class="xliff"></a>
-
-### 開啟原始檔
+### <a name="open-source"></a>開啟原始檔
 
 [.NET Core](https://github.com/dotnet/core) 是開放原始碼 (MIT 授權)，Microsoft 已於 2014 年提供給 [.NET Foundation](https://dotnetfoundation.org)。 它現在是最常使用的 .NET Foundation 專案之一。 可供個人和公司行號自由運用於個人、學術或商業用途。 很多公司將 .NET Core 用為應用程式、工具、新平台及裝載服務的一部分。 這些公司有些在 GitHub 上對 .NET Core 貢獻良多，為產品方向提供指引，成為 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome) 的一部分。
 
-<a id="acquisition" class="xliff"></a>
-
-## 擷取
+## <a name="acquisition"></a>擷取
 
 .NET Core 有兩大散發方式，一種是 NuGet.org 的封裝，一種是獨立散發。
 
-<a id="distributions" class="xliff"></a>
-
-### 分佈
+### <a name="distributions"></a>分佈
 
 您可以在 [.NET Core 快速入門](https://www.microsoft.com/net/core)頁面下載 .NET Core。
 
@@ -102,22 +84,16 @@ C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯�
 
 通常您會先安裝 .NET Core SDK 開始使用 .NET Core 開發。 您可以選擇安裝其他的 .NET Core (或許是發行前版本) 組建。
 
-<a id="packages" class="xliff"></a>
-
-### 封裝
+### <a name="packages"></a>封裝
 
 - [.NET Core 封裝](packages.md)包含 .NET Core 執行階段和程式庫 (參考組件和實作)。 例如，[System.Net.Http](https://www.nuget.org/packages/System.Net.Http/)。
 - [.NET Core 中繼套件](packages.md)藉由參考適當的建立版本的程式庫封裝集合，描述各種層級和應用程式模型。
 
-<a id="architecture" class="xliff"></a>
-
-## 架構
+## <a name="architecture"></a>架構
 
 .NET Core 是跨平台的 .NET 實作。 .NET Core 唯一的主要架構考量，是關於為支援的平台提供特定平台的實作。
 
-<a id="environments" class="xliff"></a>
-
-### 環境
+### <a name="environments"></a>環境
 
 Microsoft 在 Windows、macOS 及 Linux 上都支援 .NET Core。 在 Linux 上，Microsoft 主要支援 .NET Core 在running on Red Hat Enterprise Linux (RHEL) 及 Debian 散發系列上執行。
 
@@ -127,9 +103,7 @@ Microsoft 在 Windows、macOS 及 Linux 上都支援 .NET Core。 在 Linux 上�
 
 其他公司或群組可能支援其他應用程式類型和環境的 .NET Core。
 
-<a id="designed-for-adaptability" class="xliff"></a>
-
-### 可適性設計
+### <a name="designed-for-adaptability"></a>可適性設計
 
 .NET Core 近似其他 .NET 產品，但保有獨特性。 它的設計使它具有最大的可適性，能夠適應新的平台、新的工作負載和新的編譯器工具鏈。 目前正在建構數個作業系統和 CPU 連接埠，可能會移轉更多。 [LLILC](https://github.com/dotnet/llilc) 專案即為一例，這是透過 [LLVM](http://llvm.org/) 編譯器的 .NET Core 原生編譯早期原型。
 
@@ -150,15 +124,11 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 - [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定平台型，設儲存體和密碼編譯 API 在每個作業系統上有巨大差異。 
 - [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。
 
-<a id="comparisons-to-other-net-platforms" class="xliff"></a>
-
-## 其他 .NET 平台的比較
+## <a name="comparisons-to-other-net-platforms"></a>其他 .NET 平台的比較
 
 比較 .NET Core 和現有的 .NET 平台，可能最容易了解 .NET Core 的大小和形態。 
 
-<a id="comparison-with-net-framework" class="xliff"></a>
-
-### 與 .NET Framework 的比較
+### <a name="comparison-with-net-framework"></a>與 .NET Framework 的比較
 
 .NET 平台最早由 Microsoft 於 2000 年散發，從此開始發展。 .NET Framework 是 Microsoft 在 15 來年間生產的主要 .NET 產品。 
 
@@ -172,9 +142,7 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 
 雖然 .NET Core 具有唯一性，且與 .NET Framework 及其他 .NET 平台有顯著差異，卻可以直接共用程式碼，使用來源或二進位共用技術。 
 
-<a id="comparison-with-mono" class="xliff"></a>
-
-### 與 Mono 的比較
+### <a name="comparison-with-mono"></a>與 Mono 的比較
 
 [Mono](http://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。
 
