@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bba53c8d175d95aa3b89ba458517d439a8d2bb11
+ms.translationtype: HT
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 95b35941e18d22e2d484017262d9adbe8a081a8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何：建立檔案或資料夾 (C# 程式設計手冊)
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- 如果已有此資料夾，<xref:System.IO.Directory.CreateDirectory%2A> 不會執行任何動作，也不會擲回任何例外狀況。 不過，<xref:System.IO.File.Create%2A?displayProperty=fullName> 會使用新檔案取代現有的檔案。 此例使用 `if` - `else` 陳述式防止現有的檔案被取代。  
+ 若資料夾已經存在，<xref:System.IO.Directory.CreateDirectory%2A> 不會採取任何動作，也不會擲回任何例外狀況。 但 <xref:System.IO.File.Create%2A?displayProperty=fullName> 會以新的檔案取代現有的檔案。 此例使用 `if` - `else` 陳述式防止現有的檔案被取代。  
   
  透過在範例中進行下列變更，您可以根據是否已有具特定名稱的檔案來指定不同的結果。 如果沒有這類檔案，程式碼會建立一個。 如果有這類檔案，程式碼會將資料附加至該檔案。  
   
@@ -55,7 +55,6 @@ ms.lasthandoff: 03/13/2017
   
     // Replace that line with the following assignment.  
     string fileName = "MyNewFile.txt";  
-  
     ```  
   
 -   請在下列程式碼中以 `using` 陳述式取代 `if`-`else` 陳述式。  
@@ -68,31 +67,31 @@ ms.lasthandoff: 03/13/2017
             fs.WriteByte(i);  
         }  
     }  
-  
     ```  
   
  執行數次範例以確認資料是否每次都新增至檔案。  
   
- 如需更多可以嘗試的 `FileMode` 值，請參 <xref:System.IO.FileMode>。  
+ 若要取得更多可以嘗試的 `FileMode` 值，請參考 <xref:System.IO.FileMode>。  
   
  以下條件可能會造成例外狀況：  
   
--   資料夾名稱的格式不正確。 例如，它包含不合法的字元，或只有空白 (<xref:System.ArgumentException> 類別)。 使用 <xref:System.IO.Path> 類別建立有效的路徑名稱。  
+-   資料夾名稱的格式不正確。 舉例來說，其可能包含非法的字元，或是只有空白字元 (<xref:System.ArgumentException> 類別)。 請使用 <xref:System.IO.Path> 類別建立有效的路徑名稱。  
   
--   要建立之資料夾的父資料夾是唯讀的 (<xref:System.IO.IOException> 類別)。  
+-   要建立之資料夾的父資料夾為唯讀 (<xref:System.IO.IOException> 類別)。  
   
 -   資料夾名稱為 `null` (<xref:System.ArgumentNullException> 類別)。  
   
--   資料夾名稱太長 (<xref:System.IO.PathTooLongException> 類別)。  
+-   資料夾名稱過長 (<xref:System.IO.PathTooLongException> 類別)。  
   
--   資料夾名稱只有冒號 ":" (<xref:System.IO.PathTooLongException> 類別)。  
+-   資料夾名稱只是一個冒號 ":" (<xref:System.IO.PathTooLongException> 類別)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 部分信任情況下可能會擲回 <xref:System.Security.SecurityException> 類別的執行個體。  
+ 在部分信任的狀況下，可能會擲回 <xref:System.Security.SecurityException> 類別的執行個體。  
   
- 如果您沒有建立資料夾的權限，範例會擲回 <xref:System.UnauthorizedAccessException> 類別的執行個體。  
+ 若您沒有權限可建立資料夾，則範例會擲回 <xref:System.UnauthorizedAccessException> 類別的執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IO?displayProperty=fullName>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
  [檔案系統和登錄 (C# 程式設計手冊)](../../../csharp/programming-guide/file-system/index.md)
+
