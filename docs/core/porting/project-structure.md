@@ -1,5 +1,5 @@
 ---
-title: "組織專案以支援 .NET Framework 及 .NET Core | Microsoft Docs"
+title: "組織專案以支援 .NET Framework 及 .NET Core"
 description: "協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。"
 keywords: ".NET, .NET Core, .NET Framework, 專案配置, 多個架構"
 author: conniey
@@ -10,15 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6565ccd42180a37eba52c286becfecb5bef1890d
+ms.sourcegitcommit: 9fd4e033a5f33d4f560b12e23950abd62c7825c5
+ms.openlocfilehash: d83378b094fbae16c788c04269b833a4ecae3608
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 04/07/2017
 
 ---
 
-# 組織專案以支援 .NET Framework 及 .NET Core
-<a id="organizing-your-project-to-support-net-framework-and-net-core" class="xliff"></a>
+# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
 
 本文可協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。 它提供數個選項，組織專案以協助開發人員達成此目標。 下列清單提供當您決定如何使用 .NET Core 設定專案配置時，要考量的一些典型案例。 此清單不一定涵蓋您想要的所有項目，根據專案需求決定優先順序。
 
@@ -39,8 +38,7 @@ ms.lasthandoff: 05/23/2017
   * 繼續支援現有專案的開發，但不必升級可能沒有 Visual Studio 2017 的開發人員/參與者。
   * 減少現有專案中製造新Bug 的可能性，因為這些專案不需要任何程式碼變換。
 
-## 範例
-<a id="example" class="xliff"></a>
+## <a name="example"></a>範例
 
 請考慮以下的儲存機制︰
 
@@ -50,8 +48,7 @@ ms.lasthandoff: 05/23/2017
 
 下列描述幾種方式以新增這個存放庫的 .NET Core 支援，視現有專案的條件約束和複雜性而定。
 
-## 使用多目標 .NET Core 專案取代現有的專案
-<a id="replace-existing-projects-with-a-multi-targeted-net-core-project" class="xliff"></a>
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>使用多目標 .NET Core 專案取代現有的專案
 
 重新組織存放庫，以便移除任何現有的 *\*.csproj* 檔案，並建立以多個架構為目標的單一 *\*.csproj* 檔案。 這是很不錯的選擇，因為單一專案能夠編譯不同的架構。 它也可以處理個別目標架構的不同編譯選項及相依性。
 
@@ -62,8 +59,7 @@ ms.lasthandoff: 05/23/2017
 要注意的變更如下︰
 * 將 *packages.config* 和 *\*.csproj* 取代為新的 [.NET Core *\*.csproj*][example-csproj-netcore]。 NuGet 套件是使用 `<PackageReference> ItemGroup` 所指定。
 
-## 保留現有的專案並建立 .NET Core 專案
-<a id="keep-existing-projects-and-create-a-net-core-project" class="xliff"></a>
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留現有的專案並建立 .NET Core 專案
 
 如果現有的專案以較舊的架構為目標，您可能想要保持這些專案不變，使用 .NET Core 專案以未來的架構為目標。
 
@@ -75,8 +71,7 @@ ms.lasthandoff: 05/23/2017
 * .NET Core 和現有的專案保存在不同的資料夾中。
     * 將專案放在不同的資料夾中，可避免強迫使用 Visual Studio 2017。 您可以建立不同的解決方案只開啟舊的專案。
 
-## 另請參閱
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>另請參閱
 
 如需移轉至 .NET Core 的詳細指引，請參閱 [.NET Core 移植文件][porting-doc]。
 

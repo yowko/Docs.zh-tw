@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 服務 | Microsoft Docs"
+title: ".NET Core 服務"
 description: ".NET Core 服務"
 keywords: .NET, .NET Core
 ms.date: 06/20/2016
@@ -9,10 +9,10 @@ ms.devlang: dotnet
 ms.assetid: 48682290-4fd7-40dc-8a7b-bac528eba361
 redirect_url: /dotnet/core/versions/index
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: b3ec4e85dac45d5f724a3e38de2873358ec2c3ae
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c3eb33d28f8bb0296c083705c137702cae2cf8d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 03/02/2017
 
 ---
 

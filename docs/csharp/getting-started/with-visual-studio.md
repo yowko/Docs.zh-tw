@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式 | Microsoft Docs"
+title: "在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式"
 description: "了解如何使用 Visual Studio 2017 建置簡單的 .NET Core 主控台應用程式。"
 keywords: ".NET Core, .NET Core 主控台應用程式, Visual Studio 2017"
 author: BillWagner
@@ -11,27 +11,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 08c8e18a95c25477eb81bd6df10cf593b284bf64
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
-<a id="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017" class="xliff"></a>
+# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
 
 本主題提供使用 Visual Studio 2017 針對簡單 .NET Core 主控台應用程式進行建置、偵錯及發行的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
 
-## 必要條件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要條件
 
 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 (英文)](https://www.visualstudio.com/downloads/)。 
 
 如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](../../core/windows-prerequisites.md)。
 
-## 簡單的 Hello World 應用程式
-<a id="a-simple-hello-world-application" class="xliff"></a>
+## <a name="a-simple-hello-world-application"></a>簡單的 Hello World 應用程式
 
 請開始建立簡單的 "Hello World" 主控台應用程式。 請依照下列步驟：
 
@@ -61,8 +58,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 按任意鍵以關閉主控台視窗。
 
-## 增強 Hello World 應用程式
-<a id="enhancing-the-hello-world-application" class="xliff"></a>
+## <a name="enhancing-the-hello-world-application"></a>增強 Hello World 應用程式
 
 增強您的應用程式以提示使用者輸入其名稱，並將其與日期和時間一起顯示。 若要修改並測試程式，請執行下列動作︰
 
@@ -88,8 +84,7 @@ ms.lasthandoff: 05/23/2017
 
 - 如需開發和發行應用程式可散發版本的資訊，請參閱[使用 Visual Studio 2017 發行 Hello World 應用程式](publishing-with-visual-studio.md)。
 
-## 相關主題
-<a id="related-topics" class="xliff"></a>
+## <a name="related-topics"></a>相關主題
 
 除了主控台應用程式之外，您也可以使用 .NET Core 和 Visual Studio 2017 建置類別庫。 如需逐步介紹，請參閱[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)。
 

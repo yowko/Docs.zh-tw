@@ -1,5 +1,5 @@
 ---
-title: "建立使用 .NET Core 的 REST 用戶端 | Microsoft Docs"
+title: "使用 .NET Core 來建立 REST 用戶端"
 description: "本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: e39e4f606d4bd1f17f5cb84940a48ef4bd53bd2d
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,9 +22,9 @@ ms.lasthandoff: 05/23/2017
 
 ## <a name="introduction"></a>簡介
 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
-*    「.NET Core 命令列介面」(CLI) 的基本概念。
+*   「.NET Core 命令列介面」(CLI) 的基本概念。
 *   「C# 語言」功能的概觀。
-*    使用 NuGet 來管理相依性
+*   使用 NuGet 來管理相依性
 *   HTTP 通訊
 *   處理 JSON 資訊
 *   使用「屬性」來管理組態。 
@@ -122,7 +122,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。 (.NET Foundation 的 gitHub 識別碼是 'dotnet')。 首先，您需建立新的 @System.Net.Http.HttpClient  。 此物件會處理要求和回應。 接下來幾行會設定此要求的 @System.Net.Http.HttpClient  。 首先，會將它設定為接受 GitHub JSON 回應。
+第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。 (.NET Foundation 的 gitHub 識別碼是 'dotnet')。 首先，您需建立新的 @System.Net.Http.HttpClient 。 此物件會處理要求和回應。 接下來幾行會設定此要求的 @System.Net.Http.HttpClient 。 首先，會將它設定為接受 GitHub JSON 回應。
 此格式就是 JSON。 下一行會將「使用者代理程式」標頭新增到來自此物件的所有要求。 這兩個標頭會受到 GitHub 伺服器程式碼檢查，並且是從 GitHub 擷取資訊的必要標頭。
 
 設定 @System.Net.Http.HttpClient 之後，您需提出 Web 要求並擷取回應。 在這個第一版中，您會使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 便利方法。 這個便利方法會啟動一個提出 Web 要求的工作，然後當要求返回時，它會讀取回應資料流並從該資料流擷取內容。 回應本文會以 @System.String 的形式傳回。 當工作完成時，就會提供該字串。 
