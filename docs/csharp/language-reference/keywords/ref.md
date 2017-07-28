@@ -46,17 +46,17 @@ ms.lasthandoff: 03/13/2017
   
  若要使用 `ref` 參數，方法定義和呼叫方法都必須明確使用 `ref` 關鍵字，如下列範例所示。  
   
- [!code-cs[csrefKeywordsMethodParams#6](../../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_1.cs)]  
+[!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
   
  傳遞至 `ref` 參數的引數，在傳遞之前必須先初始化。 這點與 `out` 參數不同，其引數不需要在傳遞之前先明確初始化。 如需詳細資訊，請參閱 [out](../../../csharp/language-reference/keywords/out.md)。  
   
  類別的成員不能擁有僅在 `ref` 和 `out` 方面不同的簽章。 如果類型的兩個成員之間唯一的區別在於其中一個具有 `ref` 參數，而另一個具有 `out` 參數，則編譯器會發生錯誤。 例如，下列程式碼不會進行編譯。  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)] 
   
  不過，當一種方法具有 `ref` 或 `out` 參數，而另一種方法具有實值參數時，可以完成多載，如下列範例所示。  
   
- [!code-cs[csrefKeywordsMethodParams#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_3.cs)]  
+ [!code-cs[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
   
  在需要簽章比對的其他情況 (如隱藏或覆寫) 下，`ref` 和 `out` 是簽章的一部分，而且彼此不相符。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  前一個範例會示範當您由參考傳遞實值類型時，會發生什麼事。 您也可以使用 `ref` 關鍵字，來傳遞參考類型。 由參考傳遞參考類型，可讓被呼叫的方法取代該參考參數所參考之呼叫方法中的物件。 物件的儲存位置會以參考參數值的方式，傳遞至方法。 如果您變更參數儲存位置中的值 (指向新的物件)，則也會變更呼叫端所參考的儲存位置。 下列範例會以 `ref` 參數，傳遞參考類型的執行個體。 如需如何依傳值和依傳址方式來傳遞參考類型的詳細資訊，請參閱[傳遞參考類型參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)。  
   
- [!code-cs[csrefKeywordsMethodParams#8](../../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_4.cs)]  
+ [!code-cs[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
