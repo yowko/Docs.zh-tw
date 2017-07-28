@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的變數 | Microsoft Docs"
+title: "Visual Basic 中的變數"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,28 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 9a19838abed2d947e8e7ebf96fa4603feb208012
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2fdc670bf4f17000809e75e32c32edb39abf0fed
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="variables-in-visual-basic" class="xliff"></a>
-
-# Visual Basic 中的變數
+# <a name="variables-in-visual-basic"></a>Visual Basic 中的變數
 當您使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 執行計算時，通常需要儲存值。 例如，您可能想要計算和比較數個值，並根據比較結果，對它們執行不同的作業。 如果您想要比較值，則必須保留值。  
   
-<a id="usage" class="xliff"></a>
-
-## 使用方式  
+## <a name="usage"></a>使用方式  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，就像大多數的程式設計語言，都會使用變數來儲存值。 「變數」具有名稱 (您用來參考該變數所含值的字組)。 變數也具有資料類型 (可判斷該變數可儲存的資料類型)。 如果陣列必須儲存一組編製過索引的緊密相關資料項目，則變數可以代表陣列。  
   
  區域型別推斷可讓您宣告變數，而不需要明確陳述資料類型。 相反地，編譯器是根據初始化運算式的類型來推斷變數的類型。 如需詳細資訊，請參閱[區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)和 [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
   
-<a id="assigning-values" class="xliff"></a>
-
-## 指派值  
+## <a name="assigning-values"></a>指派值  
  您可以使用指派陳述式來執行計算，並將結果指派給變數，如下列範例所示。  
   
  [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
@@ -63,17 +57,14 @@ ms.lasthandoff: 05/26/2017
   
  如需詳細資訊，請參閱[如何：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)。  
   
-<a id="variables-and-properties" class="xliff"></a>
-
-## 變數和屬性  
+## <a name="variables-and-properties"></a>變數和屬性  
  與變數類似，「屬性」代表您可存取的值。 不過，它比變數更為複雜。 屬性會使用程式碼區塊來控制如何設定和擷取其值。 如需詳細資訊，請參閱 [Visual Basic 中屬性和變數的差異](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
  [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
  [為變數進行疑難排解](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
  [如何：移入和移出變數資料](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
  [Visual Basic 中屬性和變數的差異](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
  [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+

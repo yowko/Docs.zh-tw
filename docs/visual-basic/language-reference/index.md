@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 語言參考 | Microsoft Docs"
+title: "Visual Basic 語言參考"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Visual Basic 語言參考
+# <a name="visual-basic-language-reference"></a>Visual Basic 語言參考
 本節提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言各種層面的參考資訊。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [印刷樣式與程式碼慣例](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  摘要說明用來格式化 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中語言的關鍵字、預留位置和其他項目的方式。  
   
@@ -108,11 +104,10 @@ ms.lasthandoff: 05/26/2017
  [錯誤訊息](../../visual-basic/language-reference/error-messages/index.md)  
  提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器和執行階段錯誤訊息的清單，以及其處理方式的說明。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [Visual Basic](../../visual-basic/index.md)  
  提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言所有區域的完整說明。  
   
  [Visual Basic 命令列編譯器](../../visual-basic/reference/command-line-compiler/index.md)  
  描述如何使用命令列編譯器作為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 編譯程式的替代方法。
+

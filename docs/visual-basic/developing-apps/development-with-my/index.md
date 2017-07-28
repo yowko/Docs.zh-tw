@@ -1,5 +1,5 @@
 ---
-title: "使用 My 進行開發 (Visual Basic) | Microsoft Docs"
+title: "使用 My 進行開發 (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 76055b9c0a611fa3688e5bada1dd8e7d426765e3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3dae5e12baeb82c238381fb9e144c434816dcfb4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 進行開發 (Visual Basic)
@@ -72,3 +72,4 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)   
  [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)   
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+

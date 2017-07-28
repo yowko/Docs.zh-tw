@@ -1,5 +1,5 @@
 ---
-title: "類別和結構 (C# 程式設計指南) | Microsoft Docs"
+title: "類別和結構 (C# 程式設計手冊)"
 description: "說明類別和結構 (structs) 在 C# 中的用途。"
 keywords: "類別 (C#), 結構 (C#), 結構 (structs) (C#), 參考型別 (C#), 實值型別 (C#)"
 ms.date: 2016-01-17
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
@@ -127,3 +127,4 @@ ms.lasthandoff: 05/15/2017
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

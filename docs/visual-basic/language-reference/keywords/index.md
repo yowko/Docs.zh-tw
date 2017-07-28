@@ -1,5 +1,5 @@
 ---
-title: "關鍵字 (Visual Basic) | Microsoft Docs"
+title: "關鍵字 (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# 關鍵字 (Visual Basic)
+# <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 下列各表列出所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言關鍵字。  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## 保留關鍵字  
+## <a name="reserved-keywords"></a>保留關鍵字  
  下列是「保留」關鍵字，表示您無法使用它們作為名稱，對變數或程序這類項目進行程式設定。 您可以用方括弧 (`[``]`) 括住名稱來略過這項限制。 如需詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的＜逸出名稱＞。  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ ms.lasthandoff: 05/26/2017
 > [!NOTE]
 >  `EndIf`、`GoSub`、`Variant` 和 `Wend` 都是保留為保留關鍵字，雖然它們不再用於 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## 未保留關鍵字  
+## <a name="unreserved-keywords"></a>未保留關鍵字  
  下列不是保留關鍵字，表示您可以使用它們作為程式設計項目的名稱。 不過，不建議這麼做，因為它會讓程式碼很難讀取，而且可能會導致難以察覺的細微錯誤。  
   
 |||||  
@@ -126,9 +120,7 @@ ms.lasthandoff: 05/26/2017
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |標題|說明|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ ms.lasthandoff: 05/26/2017
 |[登錄摘要](../../../visual-basic/language-reference/keywords/registry-summary.md)|列出函式，可用來讀取、儲存和刪除程式設定。|  
 |[字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出用來操作字串的函式。|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "檔案系統和登錄 (C# 程式設計指南) | Microsoft Docs"
+title: "檔案系統和登錄 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df97127bb3c018cd361217505dbc88e2268cfac9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a9130fa666f8b2bce7762c5bd4a8b263d619aba
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>檔案系統和登錄 (C# 程式設計手冊)
@@ -62,3 +63,4 @@ ms.lasthandoff: 03/13/2017
  [檔案、資料夾和磁碟機](../../../csharp/programming-guide/file-system/index.md)  
   
  <xref:System.IO?displayProperty=fullName>
+

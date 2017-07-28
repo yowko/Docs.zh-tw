@@ -1,5 +1,5 @@
 ---
-title: "介面 (Visual Basic) | Microsoft Docs"
+title: "介面 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,16 +33,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: a95f3cfc8213c6a34953ae3ce87c6f5da9c0f8ca
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1da2458f39886a5d5f0bbf17fd9e63550ed80adf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="interfaces-visual-basic" class="xliff"></a>
-
-# 介面 (Visual Basic)
+# <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  
   
  另有幾個原因，會讓您想要使用介面而非類別繼承：  
@@ -55,9 +53,7 @@ ms.lasthandoff: 05/26/2017
   
 -   當您無法使用類別繼承時，介面相當有用。 例如，結構不能從類別繼承，但它們可以實作介面。  
   
-<a id="declaring-interfaces" class="xliff"></a>
-
-## 宣告介面  
+## <a name="declaring-interfaces"></a>宣告介面  
  介面定義內含於 `Interface` 和 `End Interface` 陳述式之間。 遵循 `Interface` 陳述式，您可以新增選擇性的 `Inherits` 陳述式，其中列出一或多個繼承的介面。 `Inherits` 陳述式必須在宣告中所有其他陳述式之前 (註解除外)。 介面定義中剩餘的陳述式應該是 `Event`、`Sub`、`Function`、`Property`、`Interface`、`Class`、`Structure` 和 `Enum` 陳述式。 介面不能包含任何實作程式碼，或實作程式碼相關聯的陳述式，例如 `End Sub` 或 `End Property`。  
   
  在命名空間中，介面陳述式預設為 `Friend`，但它們也可以明確宣告為 `Public` 或 `Friend`。 類別、模組、介面和結構中定義的介面預設為 `Public`，但它們也可以明確宣告為 `Public`、`Friend`、`Protected` 或 `Private`。  
@@ -69,19 +65,13 @@ ms.lasthandoff: 05/26/2017
   
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
-<a id="implementing-interfaces" class="xliff"></a>
-
-## 實作介面  
+## <a name="implementing-interfaces"></a>實作介面  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 保留字 `Implements` 用於兩種方式。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
   
-<a id="implements-statement" class="xliff"></a>
-
-### Implements 陳述式  
+### <a name="implements-statement"></a>Implements 陳述式  
  如果類別或結構實作一或多個介面，它在 `Class` 或 `Structure` 陳述式後面必須緊接著 `Implements` 陳述式。 `Implements` 陳述式需要由類別實作的介面清單 (以逗號分隔)。 類別或結構必須使用 `Implements` 關鍵字實作所有介面成員。  
   
-<a id="implements-keyword" class="xliff"></a>
-
-### Implements 關鍵字  
+### <a name="implements-keyword"></a>Implements 關鍵字  
  `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 實作介面成員的成員名稱可以使用任何合法的識別項，並不限於舊版 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用的 `InterfaceName_MethodName` 慣例 。  
   
  例如，下列程式碼顯示如何宣告實作介面的方法、且名為 `Sub1` 的副程式：  
@@ -98,9 +88,7 @@ ms.lasthandoff: 05/26/2017
   
  您可以使用私用成員來實作介面成員。 當私用成員實作介面的成員時，該成員會經由介面成為可用，即使不是直接在類別的物件變數上使用亦然。  
   
-<a id="interface-implementation-examples" class="xliff"></a>
-
-### 介面實作範例  
+### <a name="interface-implementation-examples"></a>介面實作範例  
  實作介面的類別必須實作其所有屬性、方法和事件。  
   
  下列範例會定義兩個介面。 第二個介面 `Interface2` 繼承 `Interface1`，並定義額外的屬性和方法。  
@@ -117,11 +105,10 @@ ms.lasthandoff: 05/26/2017
   
  您可以使用 readwrite 屬性來實作 readonly 屬性 (也就是您不需要在實作類別中將它宣告為 readonly)。  實作介面保證至少會實作此介面所宣告的成員，但是您可以提供更多功能，例如可讓您使用可寫入的屬性。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |標題|說明|  
 |-----------|-----------------|  
 |[逐步解說：建立和實作介面](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供詳細的程序，引導您定義和實作您自己的介面之程序。|  
 |[泛型介面中的變異數](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|
+

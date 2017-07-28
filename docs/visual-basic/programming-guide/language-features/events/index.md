@@ -1,5 +1,5 @@
 ---
-title: "事件 (Visual Basic) | Microsoft Docs"
+title: "事件 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e4e92b4e47d7cc743233aff3aaa77232a74e789f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
@@ -133,3 +133,4 @@ ms.lasthandoff: 05/26/2017
 |[事件](../../../../standard/events/index.md)|提供 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中事件模型的概觀。|  
 |[在 Windows Form 中建立事件處理常式](https://msdn.microsoft.com/library/dacysss4.aspx)|描述如何使用與 Windows Form 物件相關聯的事件。|  
 |[委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|提供 Visual Basic 中的委派概觀。|
+

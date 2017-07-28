@@ -1,5 +1,5 @@
 ---
-title: "C# 關鍵字 | Microsoft Docs"
+title: "C# 關鍵字"
 ms.date: 2017-03-07
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cfae4842e5b2b8e95db8bdf5e54f2e0946b7eb25
-ms.openlocfilehash: bd10bfedb1bf54d5b61348baae4329dea1e7281d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 406579d833b2b3fbd3dbf510c38a69793ea8711f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-keywords"></a>C# 關鍵字

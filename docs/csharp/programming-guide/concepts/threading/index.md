@@ -1,5 +1,5 @@
 ---
-title: "執行緒 (C#) | Microsoft Docs"
+title: "執行緒 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e3f213b43c2f05a5afef1db7aec8b9c2695df989
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45ffa38254717c9aee29c3922bf801f6a90c716e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="threading-c"></a>執行緒 (C#)
@@ -62,3 +62,4 @@ C# 程式可以透過執行緒執行並行處理，讓您可以一次執行多�
 |[執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|說明如何使用系統管理的背景工作執行緒集區。|  
 |[如何：使用執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|示範如何同步執行緒集區中多執行緒的使用。|  
 |[執行緒處理](https://msdn.microsoft.com/library/3e8s7xdd)|說明如何在.NET Framework 中實作執行緒。|
+

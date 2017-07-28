@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的控制流程 | Microsoft Docs"
+title: "Visual Basic 中的控制流程"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,23 +34,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 86ac374a3c2378d7ac167823ceee008260a4deb0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a764732919c32499a062c9136c261539334688cb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="control-flow-in-visual-basic" class="xliff"></a>
-
-# Visual Basic 中的控制流程
+# <a name="control-flow-in-visual-basic"></a>Visual Basic 中的控制流程
 如果處於不受控制的狀態，則程式會從頭到尾執行其陳述式。 只要使用這種單向流程，就可以撰寫一些極簡單的程式。 不過，任何程式設計語言的大部分功能和效用都是來自於它們能夠使用控制陳述式和迴圈來變更執行順序。  
   
  控制結構可讓您規範程式的執行流程。 使用控制結構，您可以撰寫用於進行決策或重複動作的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式碼。 其他控制結構可讓您確保資源的處置，或在相同的物件參考上執行一系列的陳述式。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [決策結構](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  描述用於分支的控制結構。  
   
@@ -63,8 +59,7 @@ ms.lasthandoff: 05/26/2017
  [巢狀控制結構](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  將控制結構涵蓋在其他控制結構內。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [控制流程摘要](../../../../visual-basic/language-reference/keywords/control-flow-summary.md)  
  提供此主題上語言參考頁面的連結。
+

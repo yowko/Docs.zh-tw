@@ -1,5 +1,5 @@
 ---
-title: "可為 Null 的型別 (C# 程式設計指南) | Microsoft Docs"
+title: "可為 Null 的類型 (C# 程式設計手冊)"
 ms.date: 2017-05-15
 ms.prod: .net
 ms.technology:
@@ -29,25 +29,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d13005e3151058dfe1651b965d6dc6055b26210
-ms.openlocfilehash: 2d13fdbef24ee16855261a3c1e26d7fca4f986f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="nullable-types-c-programming-guide" class="xliff"></a>
-
-# 可為 Null 的類型 (C# 程式設計手冊)
+# <a name="nullable-types-c-programming-guide"></a>可為 Null 的類型 (C# 程式設計手冊)
 可為 Null 的型別是 <xref:System.Nullable%601?displayProperty=fullName> 結構的執行個體。 可為 Null 的型別可以代表其基礎值型別的正確值範圍，再加上額外的 `null` 值。 例如，您可以將範圍從 -2147483648 到 2147483647 的任何值指派給 `Nullable<Int32>` (發音為「Nullable of Int32」)，或為它指派 `null` 值。 您可以為 `Nullable<bool>` 指派下列值：[true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md)。 當您正在處理包含可能不會指派值之元素的資料庫和其他資料型別時，將 `null` 指派為數字或布林值型別的功能特別有用。 例如，資料庫中的布林值欄位可以儲存 `true` 或 `false` 的值，而它也可能是未定義的。 
   
 [!code-cs[可為 Null 的型別](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 如需詳細資訊，請參閱[使用可為 Null 的型別](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
-<a id="nullable-types-overview" class="xliff"></a>
-
-## 可為 Null 的型別概觀  
+## <a name="nullable-types-overview"></a>可為 Null 的型別概觀  
  可為 Null 的型別特色如下：  
   
 -   可為 Null 的型別代表可指派 `null` 值的實值型別變數。 您無法根據參考型別建立可為 Null 的型別。 (參考型別已經支援 `null` 值)。  
@@ -72,9 +68,7 @@ ms.lasthandoff: 06/06/2017
   
 -   不允許巢狀可為 Null 的型別。 系統將不會編譯下列這一行：`Nullable<Nullable<int>> n;`  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  如需詳細資訊：  
   
 -   [使用可為 Null 的型別](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
@@ -83,14 +77,10 @@ ms.lasthandoff: 06/06/2017
   
 -   [??運算子](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 語言規格  
+## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Nullable>   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C#](../../../csharp/csharp.md)   

@@ -1,5 +1,5 @@
 ---
-title: "參考 (Visual Basic) | Microsoft Docs"
+title: "參考 (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: c730caa8b3beaa3e26e63b324a5394a4a0c46d64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c341ec68a12019814d0185cab9b89ad5928d171
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-visual-basic"></a>參考 (Visual Basic)
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/26/2017
  [.NET Framework 參考資訊](../../visual-basic/reference/net-framework-reference-information.md)  
  提供使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫之相關資訊的連結。  
   
- [Visual Basic 語言規格](../../visual-basic/reference/language-specification.md)  
+ [Visual Basic 語言規格](../../visual-basic/reference/language-specification/index.md)  
  提供完整 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言規格的連結，該規格包含有關語言所有層面的詳細資訊。  
   
 ## <a name="reference"></a>參考資料  
@@ -59,11 +59,12 @@ ms.lasthandoff: 05/26/2017
  這個命名空間提供一種元件，可讓您以表單出現在螢幕上的樣子列印表單的傳真。  
   
 ## <a name="related-sections"></a>相關章節  
- [一般使用者介面項目 (Visual Studio)](https://docs.microsoft.com/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ [一般使用者介面項目 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  包含 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中使用的對話方塊和視窗的主題。  
   
- [Visual Studio 中的 XML 工具](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中可用的各種 XML 工具的相關主題連結。  
   
  [Automation 與擴充性參考](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  提供涵蓋 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中共用及語言特定元件的自動化和擴充性主題連結。
+

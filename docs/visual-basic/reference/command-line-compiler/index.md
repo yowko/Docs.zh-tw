@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 命令列編譯器 | Microsoft Docs"
+title: "Visual Basic 命令列編譯器"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7c62eb47ba748cb119855e9a3987cab8c6a5b74b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 850aac4098dc22bacd377362f7886fa70219d365
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-command-line-compiler" class="xliff"></a>
-
-# Visual Basic 命令列編譯器
+# <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令列編譯器
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器提供從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。 本節包含 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器選項的說明。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
  說明 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器，其提供做為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE 內編譯程式的替代方法。  
   
@@ -57,11 +53,10 @@ ms.lasthandoff: 05/26/2017
  [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
  在功能群組中顯示編譯器選項。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [NIB：使用專案設計工具管理專案屬性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
  討論如何使用專案設計工具來指定專案的全域設定。  
   
  [Visual Basic](../../../visual-basic/index.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 說明的起點。
+

@@ -1,5 +1,5 @@
 ---
-title: COM Interop (Visual Basic) | Microsoft Docs
+title: COM Interop (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6aaa083c7d668659d2e68638b677a20ce22fa214
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="com-interop-visual-basic" class="xliff"></a>
-
-# COM Interop (Visual Basic)
+# <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 建立和使用 COM 物件建立關聯的問題。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  提供 COM 互通性的概觀。  
   
@@ -76,9 +72,7 @@ ms.lasthandoff: 05/26/2017
  [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  描述如何使用現有 COM 物件作為新物件的基礎。  
   
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)  
  描述 Common Language Runtime 提供的互通性服務。  
   
@@ -90,3 +84,4 @@ ms.lasthandoff: 05/26/2017
   
  [套用 Interop 屬性](https://msdn.microsoft.com/library/d4w8x20h)  
  涵蓋您可以在處理 Unmanaged 程式碼時使用的屬性。
+

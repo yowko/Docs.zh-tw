@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的運算子和運算式 | Microsoft Docs"
+title: "Visual Basic 中的運算子和運算式"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,23 +36,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 069178fe753c3e09116c8a4845f96faf13eb72ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3675af3ac8a0a80b5fb5f208c1679dc28ab77acf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="operators-and-expressions-in-visual-basic" class="xliff"></a>
-
-# Visual Basic 中的運算子和運算式
+# <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的運算子和運算式
 「運算子」是一種程式碼項目，可對保留值的一或多個程式碼項目執行運算。 值項目包含 `Function` 與 `Operator` 程序和運算式的變數、常數、常值、屬性、傳回值。  
   
  「運算式」是一系列與運算子合併的值項目，可產生新的值。 運算子透過執行計算、比較或其他作業來當成值項目。  
   
-<a id="types-of-operators" class="xliff"></a>
-
-## 運算子類型  
+## <a name="types-of-operators"></a>運算子類型  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供下列運算子類型：  
   
 -   [算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)可對數值執行類似的計算，包括移位其位元模式。  
@@ -65,9 +61,7 @@ ms.lasthandoff: 05/26/2017
   
  與運算子合併使用的值項目稱為該運算子的「運算元」。 與值項目合併使用的運算子可形成運算式，但不含可形成「陳述式」的指派運算子。 如需詳細資訊，請參閱[陳述式](../../../../visual-basic/programming-guide/language-features/statements.md)。  
   
-<a id="evaluation-of-expressions" class="xliff"></a>
-
-## 運算式評估  
+## <a name="evaluation-of-expressions"></a>運算式評估  
  運算式的最終結果代表值，通常是熟悉的資料類型，例如 `Boolean`、`String` 或數值類型。  
   
  下列是運算式範例。  
@@ -96,9 +90,8 @@ ms.lasthandoff: 05/26/2017
   
  如需詳細資訊和範例，請參閱 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703) (Visual Basic 2005 中的運算子多載)。  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子](../../../../visual-basic/language-reference/operators/index.md)   
  [有效的運算子組合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
  [陳述式](../../../../visual-basic/language-reference/statements/index.md)
+

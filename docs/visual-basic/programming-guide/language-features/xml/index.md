@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的 XML | Microsoft Docs"
+title: "Visual Basic 中的 XML"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5dd44fb1d3efe53ce37d17d91d522aeed7442ef9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7cfa2abbc5ec68f26561813552d491a4131d54b0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="xml-in-visual-basic" class="xliff"></a>
-
-# Visual Basic 中的 XML
+# <a name="xml-in-visual-basic"></a>Visual Basic 中的 XML
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供整合式語言支援，讓它與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 互動。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  此節中的主題介紹如何搭配使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與 Visual Basic。  
   
 |主題|說明|  
@@ -56,10 +52,9 @@ ms.lasthandoff: 05/26/2017
 |[在 Visual Basic 中存取 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|描述可存取 XML 項目和屬性的 XML 軸屬性和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方法。|  
 |[Visual Basic 中的 XML IntelliSense](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md)|描述 Visual Basic 所提供的 IntelliSense 功能。|  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Linq>   
  [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)   
  [XML 軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+

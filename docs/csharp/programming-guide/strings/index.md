@@ -1,5 +1,5 @@
 ---
-title: "字串 (C# 程式設計手冊) | Microsoft Docs"
+title: "字串 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,26 +28,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4f1f23bd4d95e617fadc64f4d3a30c5fa1fda85b
-ms.openlocfilehash: 699e9291400797ed1bedcb3686fdfe7848305726
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e41a7b68d890aa7a96aeddd660e0dca90596d998
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-c-programming-guide" class="xliff"></a>
-
-# 字串 (C# 程式設計手冊)
+# <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
   
-<a id="string-vs-systemstring" class="xliff"></a>
-
-## 字串與System.String  
+## <a name="string-vs-systemstring"></a>字串與System.String  
  在 C# 中，`string` 關鍵字是 <xref:System.String> 的別名。 因此 `String` 和 `string` 為相等，而您可以使用您偏好的命名慣例。 `String` 類別提供許多方法來安全地建立、操作和比較字串。 此外，C# 語言會多載一些運算子，以簡化常見的字串作業。 如需關鍵字的詳細資訊，請參閱[字串](../../../csharp/language-reference/keywords/string.md)。 如需類型和其方法的詳細資訊，請參閱 <xref:System.String>。  
   
-<a id="declaring-and-initializing-strings" class="xliff"></a>
-
-## 宣告並初始化字串  
+## <a name="declaring-and-initializing-strings"></a>宣告並初始化字串  
  您可以透過多種方式宣告並初始化字串，如下列範例所示：  
   
  [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
@@ -56,9 +50,7 @@ ms.lasthandoff: 05/30/2017
   
  使用 <xref:System.String.Empty> 常數值初始化字串，以建立字串長度為零的新 <xref:System.String> 物件。 零長度字串的字串常值表示法是 ""。 使用 <xref:System.String.Empty> 值初始化字串，而非 [null](../../../csharp/language-reference/keywords/null.md)，即可降低發生 <xref:System.NullReferenceException> 的機會。 使用靜態 <xref:System.String.IsNullOrEmpty%28System.String%29> 方法，先驗證字串的值，再嘗試進行存取。  
   
-<a id="immutability-of-string-objects" class="xliff"></a>
-
-## 字串物件的不變性  
+## <a name="immutability-of-string-objects"></a>字串物件的不變性  
  字串物件為「不可變」：它們在建立之後將無法變更。 所有看似會修改字串的 <xref:System.String> 方法和 C# 運算子，實際上會以新的字串物件傳回結果。 在下列範例中，當 `s1` 和 `s2` 的內容串連以組成單一字串時，兩個原始字串將不會被修改。 `+=` 運算子會建立新的字串，其中包含結合的內容。 新的物件會指派給變數 `s1`，而先前指派給 `s1` 的原始物件將會被釋放以進行記憶體回收，因為已經沒有其他具有其參考的變數。  
   
  [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
@@ -69,9 +61,7 @@ ms.lasthandoff: 05/30/2017
   
  如需如何建立以修改為基礎 (例如原始字串上的搜尋與取代作業) 之新字串的詳細資訊，請參閱[如何：修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
   
-<a id="regular-and-verbatim-string-literals" class="xliff"></a>
-
-## 一般和逐字字串常值  
+## <a name="regular-and-verbatim-string-literals"></a>一般和逐字字串常值  
  當您必須內嵌由 C# 所提供的逸出字元時，請使用一般字串常值，如下列範例所示︰  
   
  [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
@@ -80,9 +70,7 @@ ms.lasthandoff: 05/30/2017
   
  [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
   
-<a id="string-escape-sequences" class="xliff"></a>
-
-## 字串逸出序列  
+## <a name="string-escape-sequences"></a>字串逸出序列  
   
 |逸出序列|字元名稱|Unicode 編碼|  
 |---------------------|--------------------|----------------------|  
@@ -104,25 +92,19 @@ ms.lasthandoff: 05/30/2017
 > [!NOTE]
 >  在編譯時期，逐字字串會轉換為具有所有相同逸出序列的一般字串。 因此，如果您在偵錯工具監看式視窗中檢視逐字字串，您會看到由編譯器新增的逸出字元，而非來自於您原始程式碼的逐字版本。 例如，逐字字串 @"C:\files.txt" 會在監看式視窗中顯示為 "C:\\\files.txt"。  
   
-<a id="format-strings" class="xliff"></a>
-
-## 格式字串  
+## <a name="format-strings"></a>格式字串  
  格式字串是可在執行階段動態決定其內容的字串。 您可以使用靜態 <xref:System.String.Format%2A> 方法，並以大括弧內嵌將於執行階段由其他值取代的預留位置，來建立格式字串。 下列範例會使用格式字串輸出迴圈每個反覆項目的結果︰  
   
  [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
   
  <xref:System.Console.WriteLine%2A> 方法的其中一個多載會採用格式字串作為參數。 因此，您可以僅內嵌格式字串常值，而不需要明確呼叫方法。 不過，如果您使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法，以在 Visual Studio [輸出] 視窗中顯示偵錯輸出，則必須明確呼叫 <xref:System.String.Format%2A> 方法，因為 <xref:System.Diagnostics.Trace.WriteLine%2A> 只接受字串，而不接受格式字串。 如需格式字串的詳細資訊，請參閱[格式化類型](../../../standard/base-types/formatting-types.md)。  
   
-<a id="substrings" class="xliff"></a>
-
-## 子字串  
+## <a name="substrings"></a>子字串  
  子字串是包含在字串中的任何字元序列。 使用 <xref:System.String.Substring%2A> 方法，來從原始字串的一部分建立新的字串。 您可以使用 <xref:System.String.IndexOf%2A> 方法，來搜尋子字串的一或多個出現位置。 使用 <xref:System.String.Replace%2A> 方法，以新字串取代所有指定的子字串。 與 <xref:System.String.Substring%2A> 方法類似，<xref:System.String.Replace%2A> 實際上會傳回新字串，並不會修改原始字串。 如需詳細資訊，請參閱[如何︰使用字串方法搜尋字串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)以及[如何︰修改字串內容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
   
  [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
-<a id="accessing-individual-characters" class="xliff"></a>
-
-## 存取個別字元  
+## <a name="accessing-individual-characters"></a>存取個別字元  
  您可以搭配索引值使用陣列標記法來取得個別字元的唯讀存取權，如下列範例所示：  
   
  [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
@@ -131,9 +113,7 @@ ms.lasthandoff: 05/30/2017
   
  [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
   
-<a id="null-strings-and-empty-strings" class="xliff"></a>
-
-## Null 字串和空字串  
+## <a name="null-strings-and-empty-strings"></a>Null 字串和空字串  
  空字串是 <xref:System.String?displayProperty=fullName> 物件的執行個體，其中包含零個字元。 空字串經常用於各種程式設計案例中，來表示空白的文字欄位。 您可以對空字串呼叫方法，因為它們是有效的 <xref:System.String?displayProperty=fullName> 物件。 空字串會以下列方式初始化︰  
   
 ```  
@@ -144,9 +124,7 @@ string s = String.Empty;
   
  [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
   
-<a id="using-stringbuilder-for-fast-string-creation" class="xliff"></a>
-
-## 使用 StringBuilder 進行快速字串建立  
+## <a name="using-stringbuilder-for-fast-string-creation"></a>使用 StringBuilder 進行快速字串建立  
  .NET 中的字串作業已高度最佳化，在大部分的情況下不會大幅影響效能。 不過，在部分案例中 (例如執行數百或數千次的緊密迴圈)，字串作業可能會影響效能。 <xref:System.Text.StringBuilder> 類別會建立一個字串緩衝區，能在您的程式執行許多字串操作的情況下提供較佳的效能。 <xref:System.Text.StringBuilder> 字串也可讓您重新指派內建字串資料類型所不支援的個別字元。 例如，下列程式碼能在不建立新字串的情況下變更字串內容：  
   
  [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
@@ -155,14 +133,10 @@ string s = String.Empty;
   
  [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
-<a id="strings-extension-methods-and-linq" class="xliff"></a>
-
-## 字串、擴充方法和 LINQ  
+## <a name="strings-extension-methods-and-linq"></a>字串、擴充方法和 LINQ  
  因為 <xref:System.String> 類型會實作 <xref:System.Collections.Generic.IEnumerable%601>，所以您可以對字串使用 <xref:System.Linq.Enumerable> 類別中所定義的擴充方法。 為了避免視覺雜亂，這些方法會從 <xref:System.String> 類型的 IntelliSense 中排除，不過您還是可以使用它們。 您也可以在字串上使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。 如需詳細資訊，請參閱 [LINQ 和字串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。  
   
-<a id="related-topics" class="xliff"></a>
-
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 |主題|描述|  
 |-----------|-----------------|  

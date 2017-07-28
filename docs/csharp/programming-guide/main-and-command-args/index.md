@@ -1,5 +1,5 @@
 ---
-title: "Main() 和命令列引數 (C# 程式設計指南) | Microsoft Docs"
+title: "Main() 和命令列引數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,25 +35,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: eb1d380ee4dfd64081d8fe36880a06e3a450f639
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="main-and-command-line-arguments-c-programming-guide" class="xliff"></a>
-
-# Main() 和命令列引數 (C# 程式設計手冊)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計手冊)
 `Main` 方法是 C# 主控台應用程式或 Windows 應用程式的進入點 (程式庫和服務不需要使用 `Main` 方法做為進入點)。 啟動應用程式時，`Main` 方法是第一個叫用的方法。  
   
  C# 程式中只能有一個進入點。 如果您具有多個含 `Main` 方法的類別，就必須使用 **/main** 編譯器選項來編譯您的程式，以指定要使用哪一個 `Main` 方法做為進入點。 如需詳細資訊，請參閱 [/main (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。  
   
  [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
-<a id="overview" class="xliff"></a>
-
-## 概觀  
+## <a name="overview"></a>概觀  
   
 -   `Main` 方法是 .exe 程式的進入點；它是程式控制開始和結束的位置。  
   
@@ -63,9 +59,7 @@ ms.lasthandoff: 05/26/2017
   
 -   `Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。 使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 來建立 Windows Forms 應用程式時，您可以手動新增參數，或使用 <xref:System.Environment> 類別來取得命令列引數。 參數會讀入來做為以零為基礎的命令列引數。 不同於 C 和 C++，程式的名稱不會被視為第一個命令列引數。  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 -   [命令列引數](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
   
@@ -75,16 +69,13 @@ ms.lasthandoff: 05/26/2017
   
 -   [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 語言規格  
+## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)   
  [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+

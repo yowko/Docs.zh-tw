@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 使用者入門 | Microsoft Docs"
+title: "Visual Basic 使用者入門"
 ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
@@ -66,17 +66,18 @@ ms.lasthandoff: 05/26/2017
  [逐步解說](../../visual-basic/walkthroughs.md)  
  提供示範 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言相關方面的 [說明] 頁清單。  
   
- [告訴我們](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
+ [告訴我們](/visualstudio/ide/talk-to-us)  
  說明如何接受支援和提供意見。  
   
- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
+ [Visual Studio](/visualstudio/)  
  提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。  
   
  [C#](../../csharp/csharp.md)  
  提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
   
- [Visual C++](https://docs.microsoft.com/cpp/)  
+ [Visual C++](/cpp/)  
  提供 Visual C++ 文件的連結。  
   
  [Office 和 SharePoint 開發](https://msdn.microsoft.com/library/d2tx7z6d)  
  提供有關使用 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 做為您商務應用程式的資訊。
+

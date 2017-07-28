@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的 LINQ | Microsoft Docs"
+title: "Visual Basic 中的 LINQ"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: cdfd19e9df6ec107c1195e7555ce07aea8967588
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 33327e5baa9c17613f35d0007ed156c07b3e1814
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
@@ -77,3 +77,4 @@ ms.lasthandoff: 05/26/2017
  [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
  [LINQ to DataSet 概觀](https://msdn.microsoft.com/library/bb399399)   
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)
+
