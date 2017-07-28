@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: cbdc12b72de5d8943cd193195d6f382dfc4a496f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式

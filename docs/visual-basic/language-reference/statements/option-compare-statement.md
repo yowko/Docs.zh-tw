@@ -43,9 +43,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8b1b077a8818315e52ada6b08ff1e1ced9bbd17c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -85,7 +86,7 @@ Option Compare { Binary | Text }
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare 陳述式不存在時  
  如果原始程式碼不包含`Option Compare`陳述式，**選項比較**上設定[編譯的頁面上，專案設計工具 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)用。 如果您使用命令列編譯器時，所指定的設定[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)編譯器選項使用。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 #### <a name="to-set-option-compare-in-the-ide"></a>在 IDE 中設定選項比較  
   

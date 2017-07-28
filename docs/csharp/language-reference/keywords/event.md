@@ -66,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  事件可使用 [virtual](../../../csharp/language-reference/keywords/virtual.md) 關鍵字標示為虛擬事件。 這可讓衍生類別使用 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字覆寫事件行為。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。 事件覆寫虛擬事件也可以 [sealed](../../../csharp/language-reference/keywords/sealed.md)，指定它對衍生類別不再是虛擬。 最後，您可以宣告事件為 [abstract](../../../csharp/language-reference/keywords/abstract.md)，也就是編譯器不會產生 `add` 和 `remove` 事件存取子區塊。 因此，衍生類別必須提供自己的實作。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

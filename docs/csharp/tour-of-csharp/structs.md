@@ -1,5 +1,5 @@
 ---
-title: "C# 結構 | C# 語言教學課程"
+title: "C# 結構 - C# 語言教學課程 | Microsoft Docs"
 description: "了解 C# 實值型別 (稱為結構) 的基本概念"
 keywords: ".NET, C#, 結構, 實值型別"
 author: BillWagner
@@ -10,16 +10,18 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 321e2456c5f82f80c825f84ef2b7c0754a6a4e1e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="structs"></a>結構
+# 結構
+<a id="structs" class="xliff"></a>
 
-和類別一樣，***結構***是可包含資料成員和函式成員的資料結構，但不同於類別，結構是實值型別，不需要堆積配置。 結構型別的變數直接儲存結構的資料，而類別型別的變數則儲存動態配置物件的參考。 結構型別不支援使用者指定的繼承，且所有結構型別都隱含地繼承自 `object` 型別。
+和類別一樣，***結構***是可包含資料成員和函式成員的資料結構，但不同於類別，結構是實值型別，不需要堆積配置。 結構型別的變數直接儲存結構的資料，而類別型別的變數則儲存動態配置物件的參考。 結構類型不支援使用者指定的繼承，且所有結構類型都隱含地繼承自 <xref:System.ValueType> 類型，而該類型又隱含地繼承自 `object`。
 
 結構特別適用於含有實值語意的小型資料結構。 複數、座標系統中的點或字典中的索引鍵/值組都是結構的良好範例。 針對小型資料結構使用結構而不使用類別，在應用程式執行的記憶體配置數目上有很大的差別。 比方說，下列程式會建立並初始化 100 個點的陣列。 使用 `Point` 做為類別，會具現化 101 個不同的物件 — 一個代表陣列，剩下的每個代表 100 個元素。
 

@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c2a9740a23ff370c1376dfa737b7e2dcd33def7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3814213389119f1fb6692fd57b0f5636a81025bb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>如何：使用執行緒集區 (C#)
-「執行緒共用」**是一種多執行緒處理，其中的工作會加入佇列，並在建立執行緒時自動啟動。 如需詳細資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)。  
+「執行緒共用」是一種多執行緒處理，其中的工作會加入佇列，並在建立執行緒時自動啟動。 如需詳細資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)。  
   
  下列範例使用 .NET Framework 執行緒集區來計算 20 到 40 之間十個數字的 `Fibonacci` 結果。 每個 `Fibonacci` 結果都會以 `Fibonacci` 類別表示，該類別提供一個執行計算的方法，稱為 `ThreadPoolCallback`。 這會建立代表每個 `Fibonacci` 值的物件，並將 `ThreadPoolCallback` 方法傳遞至 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>，以指派集區中的可用執行緒來執行此方法。  
   
@@ -159,4 +160,4 @@ Fibonacci(27) = 196418
  [執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
  [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  @System.Threading.Monitor   
- [安全性](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ [安全性](../../../../standard/security/index.md)

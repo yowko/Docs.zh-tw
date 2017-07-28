@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
 ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O

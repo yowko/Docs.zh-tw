@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
 ms.openlocfilehash: e92fd440f0afd265a65395a715b08df44cf37f9e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="windows-forms-controls"></a>Windows Form 控制項

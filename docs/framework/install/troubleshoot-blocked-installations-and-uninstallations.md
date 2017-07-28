@@ -1,5 +1,5 @@
 ---
-title: "疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題 | Microsoft Docs"
+title: "針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,25 +17,27 @@ caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 55228928d5d3d95cf28384e5179a43bfb0f598e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0d2d657a44c813fc94f8342ba1e6c33b330dfdb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="troubleshooting-blocked-net-framework-installations-and-uninstallations"></a>疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題
-當您執行 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 的 [Web 或離線安裝程式](../../../docs/framework/install/guide-for-developers.md)時，可能會遇到導致無法進行或封鎖 .NET Framework 安裝的問題。 下面表格列出可能造成阻礙的問題並且提供疑難排解資訊。  
-  
- 在 Windows 8 (含) 以上版本中，.NET Framework 是作業系統元件，無法單獨解除安裝。 .NET Framework 的更新會出現在 [控制台] 之 [程式和功能] 應用程式的 [已安裝更新] 索引標籤中。 若是未預先安裝 .NET Framework 的作業系統，.NET Framework 會出現在 主控台 之 程式和功能 應用程式的 解除安裝或​​變更程式 索引標籤 (或 新增/移除程式 索引標籤) 中。 如需預先安裝 .NET Framework 之 Windows 版本的資訊，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
+
+# <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
+
+當您執行 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 的 [Web 或離線安裝程式](../../../docs/framework/install/guide-for-developers.md)時，可能會遇到導致無法進行或封鎖 .NET Framework 安裝的問題。 下面表格列出可能造成阻礙的問題並且提供疑難排解資訊。
+
+在 Windows 8 (含) 以上版本中，.NET Framework 是作業系統元件，無法單獨解除安裝。 .NET Framework 的更新會出現在 [控制台] 之 [程式和功能] 應用程式的 [已安裝更新] 索引標籤中。 若是未預先安裝 .NET Framework 的作業系統，.NET Framework 會出現在 主控台 之 程式和功能 應用程式的 解除安裝或​​變更程式 索引標籤 (或 新增/移除程式 索引標籤) 中。 如需預先安裝 .NET Framework 之 Windows 版本的資訊，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。
 
 > [!IMPORTANT]
-> 因為 .NET Framework 4.x 版是就地更新，所以您無法在已安裝更新版本的系統上安裝舊版 .NET framework 4.x。 例如，在 Windows 10 Creators Update 系統上，您無法安裝 .NET Framework 4.6.2，因為作業系統已預先安裝 .NET Framework 4.7。  
-  
- 您可以判斷系統上所安裝之 .NET Framework 的版本。 如需詳細資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
-  
- 下表中的 4.5.*x* 是指 .NET Framework 4.5 及其點發行版本 4.5.1 和 4.5.2，4.6.*x*是指 .NET Framework 4.6 及其點發行版本 4.6.1 和 4.6.2，而 4.7 是指 .NET Framework 4.7。  
-  
+> 因為 .NET Framework 4.x 版是就地更新，所以您無法在已安裝更新版本的系統上安裝舊版 .NET framework 4.x。 例如，在 Windows 10 Creators Update 系統上，您無法安裝 .NET Framework 4.6.2，因為作業系統已預先安裝 .NET Framework 4.7。
+
+您可以判斷系統上所安裝之 .NET Framework 的版本。 如需詳細資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+
+下表中的 4.5.*x* 是指 .NET Framework 4.5 及其點發行版本 4.5.1 和 4.5.2，4.6.*x*是指 .NET Framework 4.6 及其點發行版本 4.6.1 和 4.6.2，而 4.7 是指 .NET Framework 4.7。
+
 |封鎖訊息|如需詳細資訊或解決這個問題|  
 |----------------------|--------------------------------------------------|  
 |解除安裝 Microsoft .NET Framework 可能會導致某些應用程式停止運作。|一般而言，您不應該解除安裝電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能相依於特定的 .NET Framework 版本。 如需詳細資訊，請參閱*使用者入門*指南中的[適用於使用者的 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)。|  
@@ -61,28 +63,32 @@ ms.lasthandoff: 05/11/2017
 |.NET Framework 4.5.*x* 已是這個作業系統的一部分，但目前處於關閉狀態 (僅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)])。|請參閱 Windows 網站上的[開啟或關閉 Windows 功能](http://go.microsoft.com/fwlink/p/?LinkId=248438)。|  
 |這個安裝程式需要 x86 電腦， 無法安裝在 x64 或 IA64 電腦上。|請參閱 MSDN Library 中的[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
 |這個安裝程式需要 x64 或 x86 電腦， 無法安裝在 IA64 電腦上。|請參閱 MSDN Library 中的[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
-  
-<a name="compat"></a>   
-### <a name="program-compatibility-issues"></a>程式相容性問題  
- 在 Windows 程式相容性模式中執行時，.NET Framework 4.5 或其點發行版本安裝會因為 1603 錯誤碼或封鎖而失敗。 [程式相容性助理] 會指出 .NET Framework 可能沒有正確安裝，並提示您使用建議的設定 (程式相容性模式) 來重新安裝。 也有可能先前試圖執行 .NET Framework 安裝程式時失敗或取消了，而已經由「程式相容性助理」設定了程式相容性模式。  
-  
- .NET Framework 安裝程式無法在程式相容性模式中執行。 若要解決這個封鎖問題，您必須確保未在 [登錄編輯程式] 中啟用全系統的相容性模式設定：  
-  
-1.  選擇 [開始] 按鈕，然後選擇 [執行]。  
-  
-2.  在 [執行] 對話方塊中輸入 `regedit`，然後選擇 [確定]。  
-  
-3.  在 [登錄編輯程式] 中，瀏覽至下列子機碼：  
-  
-    -   HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted  
-  
-    -   HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers  
-  
-4.  在 [名稱] 欄中，根據安裝的版本尋找 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1 或 4.6.2 下載名稱，然後刪除這些項目。 如需下載名稱，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)文章。  
-  
-5.  請重新執行 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 版的 .NET Framework 安裝程式。  
-  
-## <a name="see-also"></a>另請參閱  
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
- [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+
+<a name="compat"></a>
+### <a name="program-compatibility-issues"></a>程式相容性問題
+
+在 Windows 程式相容性模式中執行時，.NET Framework 4.5 或其點發行版本安裝會因為 1603 錯誤碼或封鎖而失敗。 [程式相容性助理] 會指出 .NET Framework 可能沒有正確安裝，並提示您使用建議的設定 (程式相容性模式) 來重新安裝。 也有可能先前試圖執行 .NET Framework 安裝程式時失敗或取消了，而已經由「程式相容性助理」設定了程式相容性模式。
+
+.NET Framework 安裝程式無法在程式相容性模式中執行。 若要解決這個封鎖問題，您必須確保未在 [登錄編輯程式] 中啟用全系統的相容性模式設定：
+
+1. 選擇 [開始] 按鈕，然後選擇 [執行]。
+
+1. 在 [執行] 對話方塊中，鍵入 "regedit"，然後選擇 [確定]。
+
+1. 在 [登錄編輯程式] 中，瀏覽至下列子機碼：
+
+   - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted
+
+   - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
+
+1. 在 [名稱] 欄中，根據安裝的版本尋找 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1 或 4.6.2 下載名稱，然後刪除這些項目。 如需下載名稱，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)一文。
+
+1. 請重新執行 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 版的 .NET Framework 安裝程式。
+
+## <a name="see-also"></a>請參閱
+
+[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "風險降低：預設的 AuthorizationContext | Microsoft Docs"
+title: "風險降低：預設的 AuthorizationContext"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,10 +14,11 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d2cffc531efc0f0be841956d3a09e1ab253d8fbd
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 48363d0f8e515b703e49761a763379566e217844
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-default-authorizationcontext"></a>風險降低：預設的 AuthorizationContext
@@ -33,9 +34,10 @@ ms.lasthandoff: 04/18/2017
   
 -   將下列行加入 app.config 檔案中的 `<appSettings>` 區段：  
   
-    ```  
+    ```xml  
     <add key="appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext" value="true" />  
     ```  
   
 ## <a name="see-also"></a>另請參閱  
  [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

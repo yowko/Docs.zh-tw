@@ -1,5 +1,5 @@
 ---
-title: "減少與 project.json 的封裝相依性"
+title: "減少與 project.json 的套件相依性 | Microsoft Docs"
 description: "減少與 project.json 的封裝相依性"
 keywords: ".NET、.NET Core"
 author: cartermp
@@ -9,24 +9,28 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的封裝相依性
+# 減少與 project.json 的封裝相依性
+<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
 
 本文涵蓋撰寫 `project.json` 程式庫時，您需要了解的降低封裝相依性的內容。 在本文的最後，您會了解如何撰寫程式庫，令它只使用需要的相依性。 
 
-## <a name="why-its-important"></a>為何重要
+## 為何重要
+<a id="why-its-important" class="xliff"></a>
 
 .NET Core 是由 NuGet 封裝組成的產品。  必要的封裝是 [.NET 標準程式庫中繼封裝](https://www.nuget.org/packages/NETStandard.Library)，由 NuGet 封裝組成的其他封裝。  它提供的一組封裝，保證都能在多個 .NET 實作上運作，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
 
 不過，您的程式庫有極大的可能不會使用其包含的每個單一封裝。  在撰寫程式庫並透過 NuGet 散發時，最佳的作法是將相依性「修剪」至實際使用的封裝。  這會減少 NuGet 封裝的整體使用量。
 
-## <a name="how-to-do-it"></a>作法
+## 作法
+<a id="how-to-do-it" class="xliff"></a>
 
 目前沒有任何修剪封裝參考的正式 `dotnet` 命令。  您必須改以手動作業。  一般程序如下所示︰
 
@@ -42,7 +46,8 @@ ms.lasthandoff: 03/02/2017
 1. 試驗與錯誤。  這牽涉到移除封裝、還原、查看程式庫是否仍在編譯，以及重複此程序。
 2. 使用諸如 [ILSpy](http://ilspy.net) 或 [.NET 反射程式](http://www.red-gate.com/products/dotnet-development/reflector)等工具預覽參考，查看程式碼實際使用的參考。  接著移除與所用類型不對應的封裝。
 
-## <a name="example"></a>範例 
+## 範例
+<a id="example" class="xliff"></a> 
 
 假設您撰寫的程式庫提供了泛型集合類型的額外功能。  這類程式庫需要依賴如 `System.Collections` 的封裝，但可能完全不依賴如 `System.Net.Http` 的封裝。  如此，將封裝相依性修剪至此程式庫所需就很好！
 

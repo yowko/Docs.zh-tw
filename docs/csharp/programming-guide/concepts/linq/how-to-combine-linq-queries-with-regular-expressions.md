@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51cce0d7ffd4806365600ee93d57806af96f08a8
+ms.translationtype: HT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 9ba49d25f9e31fc0fcceff5f213a6df703fd41e2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>如何：使用規則運算式合併 LINQ 查詢 (C#)
-本例示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別為文字字串中更複雜的比對建立規則運算式。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。  
+此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。  
   
 ## <a name="example"></a>範例  
   
@@ -37,18 +37,16 @@ class QueryWithRegEx
     public static void Main()  
     {  
         // Modify this path as necessary so that it accesses your version of Visual Studio.  
-        string startFolder = @"c:\program files\Microsoft Visual Studio 9.0\";  
+        string startFolder = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\";  
         // One of the following paths may be more appropriate on your computer.  
-        //string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 9.0\";  
-        //string startFolder = @"c:\program files\Microsoft Visual Studio 10.0\";  
-        //string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 10.0\";  
+        //string startFolder = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\";  
   
         // Take a snapshot of the file system.  
         IEnumerable<System.IO.FileInfo> fileList = GetFiles(startFolder);  
   
         // Create the regular expression to find all things "Visual".  
         System.Text.RegularExpressions.Regex searchTerm =  
-            new System.Text.RegularExpressions.Regex(@"Visual (Basic|C#|C\+\+|J#|SourceSafe|Studio)");  
+            new System.Text.RegularExpressions.Regex(@"Visual (Basic|C#|C\+\+|Studio)");  
   
         // Search the contents of each .htm file.  
         // Remove the where clause to find even more matchedValues!  
@@ -112,7 +110,7 @@ class QueryWithRegEx
 }  
 ```  
   
- 請注意，您也可以查詢 `RegEx` 搜尋傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件。 在本例中，結果只會產生每個相符項目的值。 不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。 因為 <xref:System.Text.RegularExpressions.MatchCollection> 是非泛型的 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確指出範圍變數的類型。  
+ 請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。 在本例中，結果只會產生每個相符項目的值。 不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。 因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
@@ -120,3 +118,4 @@ class QueryWithRegEx
 ## <a name="see-also"></a>另請參閱  
  [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

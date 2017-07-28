@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9940012829038f585ad78a10b70fe2941753e40e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: c8d870feccd1fe44caf566ce45349818b6ddf6e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="access-modifiers-c-programming-guide"></a>存取修飾詞 (C# 程式設計手冊)
@@ -76,7 +77,7 @@ ms.lasthandoff: 03/13/2017
   
  使用者定義的運算子一律必須宣告為 public。 如需詳細資訊，請參閱 [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)。  
   
- 解構函式不能有存取範圍修飾詞。  
+ 完成項不能有存取範圍修飾詞。  
   
  若要設定類別或結構成員的存取層級，請在成員宣告中新增適當的關鍵字，如下列範例所示。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 03/13/2017
  委派的行為類似類別和結構。 根據預設，它們在直接在命名空間內宣告時會具有 internal 存取，而且在巢狀時會具有 private 存取。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

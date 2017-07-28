@@ -1,5 +1,5 @@
 ---
-title: "C# 編譯器選項 | Microsoft Docs"
+title: "C# 編譯器選項"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c355f42106cfb7790591108b9b0f0938c34fdb32
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-options"></a>C# 編譯器選項
@@ -63,11 +64,12 @@ ms.lasthandoff: 03/13/2017
  依字母順序列出編譯器選項。  
   
 ## <a name="related-sections"></a>相關章節  
- [專案設計工具、建置頁](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)  
+ [專案設計工具、建置頁](/visualstudio/ide/reference/build-page-project-designer-csharp)  
  設定可控制如何編譯專案、建置及偵錯的屬性。 包含有關在 Visual C# 專案中自訂建置步驟的資訊。  
   
- [預設和自訂建置](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [預設和自訂建置](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  有關建置類型和組態的資訊。  
   
- [準備和管理建置](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
+ [準備和管理建置](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
  在 Visual Studio 開發環境內建置的程序。
+

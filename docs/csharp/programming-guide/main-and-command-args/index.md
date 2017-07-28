@@ -1,5 +1,5 @@
 ---
-title: "Main() 和命令列引數 (C# 程式設計指南) | Microsoft Docs"
+title: "Main() 和命令列引數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f6934a09c5f980f845e19b28e462cc601e154512
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計手冊)
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/13/2017
   
 -   `Main` 可以具有 `void` 或 `int` 傳回型別。  
   
--   `Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。 使用 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 來建立 Windows Form 應用程式時，您可以手動加入參數，或使用 <xref:System.Environment> 類別來取得命令列引數。 參數會讀入來做為以零為基礎的命令列引數。 不同於 C 和 C++，程式的名稱不會被視為第一個命令列引數。  
+-   `Main` 方法不一定要使用包含命令列引數的 `string[]` 參數來宣告。 使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 來建立 Windows Forms 應用程式時，您可以手動新增參數，或使用 <xref:System.Environment> 類別來取得命令列引數。 參數會讀入來做為以零為基礎的命令列引數。 不同於 C 和 C++，程式的名稱不會被視為第一個命令列引數。  
   
 ## <a name="in-this-section"></a>本章節內容  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 03/13/2017
 -   [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
@@ -77,3 +78,4 @@ ms.lasthandoff: 03/13/2017
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)   
  [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+

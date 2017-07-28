@@ -32,14 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa2d21352763a4becbc432766f095226ee005869
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: e793e0b7f21948d16da4dcb618d73c4c3114adcb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
-Visual C# 2010 開始採用可簡化 Office API 物件存取的新功能。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。  
+Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。  
   
  在本主題中，您將使用新的功能撰寫可建立及顯示 Microsoft Office Excel 工作表的程式碼。 接著，您將要撰寫可加入 Office Word 文件的程式碼，而該文件包含連結至 Excel 工作表的圖示。  
   
@@ -53,31 +54,31 @@ Visual C# 2010 開始採用可簡化 Office API 物件存取的新功能。 新�
   
 1.  啟動 Visual Studio。  
   
-2.  在 [檔案] **** 功能表中，指向 [新增] ****，然後按一下 [專案] ****。 [ **新增專案** ] 對話方塊隨即出現。  
+2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。 [ **新增專案** ] 對話方塊隨即出現。  
   
-3.  在 [已安裝的範本]**** 窗格中，展開 [Visual C#]****，然後按一下 [Windows]****。  
+3.  在 [已安裝的範本] 窗格中，展開 [Visual C#]，然後按一下 [Windows]。  
   
-4.  查看 [新增專案]**** 對話方塊頂端，確定已選取 [.NET Framework 4]**** (或更新版本) 作為目標架構。  
+4.  查看 [新增專案] 對話方塊頂端，確定已選取 [.NET Framework 4] (或更新版本) 作為目標架構。  
   
-5.  按一下 [範本]**** 窗格中的 [主控台應用程式]****。  
+5.  按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-6.  在 [名稱]**** 欄位中鍵入專案的名稱。  
+6.  在 [名稱] 欄位中鍵入專案的名稱。  
   
-7.  按一下 [確定]****。  
+7.  按一下 [確定]。  
   
-     新的專案隨即會出現在方案總管****中。  
+     新的專案隨即會出現在方案總管中。  
   
 ### <a name="to-add-references"></a>加入參考  
   
-1.  在方案總管****中，於專案名稱上按一下滑鼠右鍵，然後按一下 [加入參考]****。 [加入參考]**** 對話方塊隨即出現。  
+1.  在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [加入參考] 對話方塊隨即出現。  
   
-2.  在 [組件]**** 頁面的 [元件名稱]**** 清單中，選取 [Microsoft.Office.Interop.Word]****，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]****。  如果看不到組件，則可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](http://msdn.microsoft.com/library/92948fcc-76c6-4b08-ba63-cab59dd60eb1))。  
+2.  在 [組件] 頁面的 [元件名稱] 清單中，選取 [Microsoft.Office.Interop.Word]，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]。  如果看不到組件，則可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
   
-3.  按一下 [確定]****。  
+3.  按一下 [確定]。  
   
 ### <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞  
   
-1.  在方案總管****中，以滑鼠右鍵按一下 **Program.cs** 檔案，然後按一下 [檢視程式碼]****。  
+1.  在方案總管中，以滑鼠右鍵按一下 **Program.cs** 檔案，然後按一下 [檢視程式碼]。  
   
 2.  將下列 `using` 指示詞加入程式碼檔案頂端。  
   
@@ -167,11 +168,11 @@ Visual C# 2010 開始採用可簡化 Office API 物件存取的新功能。 新�
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-2.  若要變更預設值，並使用 PIA 而非內嵌類型資訊，請展開方案總管****中的 [參考]**** 節點，然後選取 **Microsoft.Office.Interop.Excel** 或 **Microsoft.Office.Interop.Word**。  
+2.  若要變更預設值，並使用 PIA 而非內嵌類型資訊，請展開方案總管中的 [參考] 節點，然後選取 **Microsoft.Office.Interop.Excel** 或 **Microsoft.Office.Interop.Word**。  
   
-3.  如果看不到 [屬性]**** 視窗，請按 **F4** 鍵。  
+3.  如果看不到 [屬性] 視窗，請按 **F4** 鍵。  
   
-4.  在屬性清單中尋找 [內嵌 Interop 類型]****，並將其值變更為 **False**。 同樣地，也可以在命令提示字元處使用 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，而非 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 進行編譯。  
+4.  在屬性清單中尋找 [內嵌 Interop 類型]，並將其值變更為 **False**。 同樣地，也可以在命令提示字元處使用 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，而非 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 進行編譯。  
   
 ### <a name="to-add-additional-formatting-to-the-table"></a>加入表格的其他格式  
   

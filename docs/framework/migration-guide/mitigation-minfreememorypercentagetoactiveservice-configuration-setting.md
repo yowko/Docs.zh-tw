@@ -29,14 +29,14 @@ ms.lasthandoff: 04/18/2017
   
  但在某些情況下，之前順利啟動的服務可能無法啟動。 在這種情況下，會顯示詳細的錯誤訊息：  
   
-```Output  
-Memory gates checking failed because the free memory (nnnn bytes) is less than nn% of total memory. As a result, the service will not be available for incoming requests. To resolve this, either reduce the load on the machine or adjust the value of minFreeMemoryPercentageToActivateService on the serviceHostingEnvironment config element.  
-```  
+```console
+Memory gates checking failed because the free memory (nnnn bytes) is less than nn% of total memory. As a result, the service will not be available for incoming requests. To resolve this, either reduce the load on the machine or adjust the value of minFreeMemoryPercentageToActivateService on the serviceHostingEnvironment config element.
+```
   
 ## <a name="mitigation"></a>緩和  
  若要還原成忽略 [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 設定的前一個行為，請依照下列方式修改 web.config 檔案：  
   
-```  
+```xml
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"   
                            minFreeMemoryPercentageToActivateService="0">  
    <serviceActivations>  

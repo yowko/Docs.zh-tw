@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d014ddcdfabae83343de6b1e9338ae38fe2b22d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 4d73428cd2a896309f90af45fef682186c470417
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同步程式中的控制流程 (C#)
@@ -37,14 +38,13 @@ ms.lasthandoff: 03/13/2017
   
 -   `startButton_Click`，其呼叫 `AccessTheWebAsync` 並顯示結果。  
   
--   `AccessTheWebAsync`，會將網站的內容下載為字串，並傳回字串的長度。 `AccessTheWebAsync` 會使用非同步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 下載內容。  
+-   `AccessTheWebAsync`，會將網站的內容下載為字串，並傳回字串的長度。 `AccessTheWebAsync`使用非同步的 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 來下載內容。  
   
  編號的顯示行會出現在程式中的策略點，協助您了解程式的執行方式，以及說明每個標記點所發生的情況。 顯示行會標上 "ONE" 到 "SIX"。 標籤代表程式到達這些程式碼行的順序。  
   
  下列程式碼示範程式的大綱。  
   
-```cs  
-  
+```csharp  
 public partial class MainWindow : Window  
 {  
     // . . .  
@@ -75,13 +75,11 @@ public partial class MainWindow : Window
         return urlContents.Length;  
     }  
 }  
-  
 ```  
   
  每個標記位置 "ONE" 到 "SIX" 都會顯示程式目前狀態的資訊。 會產生下列輸出。  
   
 ```  
-  
 ONE:   Entering startButton_Click.  
            Calling AccessTheWebAsync.  
   
@@ -120,7 +118,7 @@ Length of the downloaded string: 33946.
   
 1.  解壓縮下載的檔案，然後啟動 Visual Studio。  
   
-2.  在功能表列上，依序選擇 [檔案] ****、[開啟舊檔] ****及 [專案/方案] ****。  
+2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
 3.  巡覽至保存解壓縮之範例程式碼的資料夾，並開啟方案 (.sln) 檔案，然後選擇 F5 鍵來建置和執行專案。  
   
@@ -131,23 +129,23 @@ Length of the downloaded string: 33946.
   
 1.  啟動 Visual Studio。  
   
-2.  在功能表列上，選擇 [檔案] ****、[新增] ****、[專案] ****。  
+2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  在 [已安裝的範本]**** 窗格中，選擇 [Visual C#]****，然後從專案類型清單中選擇 [WPF 應用程式]****。  
+3.  在 [已安裝的範本] 窗格中，選擇 [Visual C#]，然後從專案類型清單中選擇 [WPF 應用程式]。  
   
-4.  輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定]**** 按鈕。  
+4.  輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定] 按鈕。  
   
-     新的專案隨即出現在方案總管****中。  
+     新的專案隨即出現在方案總管中。  
   
 5.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
   
-     如未顯示索引標籤，請在方案總管****中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]****。  
+     如未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]。  
   
-6.  在 MainWindow.xaml 的 [XAML]**** 檢視中，以下列程式碼取代程式碼。  
+6.  在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。  
   
-    ```cs  
+    ```csharp  
     <Window  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -159,18 +157,17 @@ Length of the downloaded string: 33946.
             <TextBox x:Name="resultsTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="576" Height="265" FontFamily="Lucida Console" FontSize="10" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="3"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
-     包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計]**** 檢視中。  
+     包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。  
   
-7.  新增 <xref:System.Net.Http> 的參考。  
+7.  加入 <xref:System.Net.Http> 的參考。  
   
-8.  在方案總管****中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]****。  
+8.  在方案總管中開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。  
   
 9. 在 MainWindow.xaml.cs 中，將程式碼取代為下列程式碼。  
   
-    ```cs  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Linq;  
@@ -290,26 +287,37 @@ Length of the downloaded string: 33946.
 ## <a name="trace-the-program"></a>追蹤程式  
   
 ### <a name="steps-one-and-two"></a>步驟一和二  
- 前兩個顯示行會追蹤路徑，因為 `startButton_Click` 會呼叫 `AccessTheWebAsync`，而 `AccessTheWebAsync` 會呼叫非同步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>。 下圖概述不同方法的呼叫。  
+ 前兩個顯示當 `startButton_Click` 呼叫 `AccessTheWebAsync`，以及 `AccessTheWebAsync` 呼叫非同步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 時，追蹤路徑的程式碼行。 下圖概述不同方法的呼叫。  
   
  ![步驟一和二](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")  
   
- `AccessTheWebAsync` 和 `client.GetStringAsync` 的傳回型別都是 <xref:System.Threading.Tasks.Task%601>。 針對 `AccessTheWebAsync`，TResult 是整數。 針對 `GetStringAsync`，TResult 是字串。 如需非同步方法傳回型別的詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+ `AccessTheWebAsync` 和 `client.GetStringAsync` 傳回的類型都是 <xref:System.Threading.Tasks.Task%601>。 針對 `AccessTheWebAsync`，TResult 是整數。 針對 `GetStringAsync`，TResult 是字串。 如需非同步方法傳回型別的詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
  控制權返回呼叫端時，工作傳回非同步方法會傳回工作執行個體。 在被呼叫的方法中發現 `await` 運算子時，或被呼叫的方法結束時，控制權會從非同步方法返回其呼叫端。 標上 "THREE" 到 "SIX" 的顯示行會追蹤處理程序的這個部分。  
   
 ### <a name="step-three"></a>步驟三  
- 在 `AccessTheWebAsync` 中，會呼叫非同步方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>，以下載目標網頁的內容。 傳回 `client.GetStringAsync` 時，控制項會從 `client.GetStringAsync` 返回 `AccessTheWebAsync`。  
+ 在 `AccessTheWebAsync` 中，呼叫非同步方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 以下載目標網頁的內容。 傳回 `client.GetStringAsync` 時，控制項會從 `client.GetStringAsync` 返回 `AccessTheWebAsync`。  
   
  `client.GetStringAsync` 方法會傳回指派給 `AccessTheWebAsync` 中 `getStringTask` 變數的字串工作。 範例程式中的下行示範 `client.GetStringAsync` 呼叫和指派。  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+```csharp  
+Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");  
+```  
+  
  您可以透過 `client.GetStringAsync` 將工作視為承諾，最後產生實際字串。 同時，如果 `AccessTheWebAsync` 的工作未依存於來自 `client.GetStringAsync` 的承諾字串，則該工作可以在 `client.GetStringAsync` 等候時繼續進行。 在此範例中，下列數行的輸出 (標上 "THREE”) 代表執行獨立工作的機會。  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```  
+THREE: Back in AccessTheWebAsync.  
+           Task getStringTask is started.  
+           About to await getStringTask & return a Task<int> to startButton_Click.  
+```  
+  
  下列陳述式會在等候 `getStringTask` 時暫止 `AccessTheWebAsync` 中的進度。  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+string urlContents = await getStringTask;  
+```  
+  
  下圖顯示從 `client.GetStringAsync` 到指派給 `getStringTask` 以及從建立 `getStringTask` 到套用 await 運算子的控制流程。  
   
  ![步驟三](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")  
@@ -326,13 +334,24 @@ Length of the downloaded string: 33946.
   
  下列陳述式會將這個工作指派給 `getLengthTask` 變數。  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+Task<int> getLengthTask = AccessTheWebAsync();  
+```  
+  
  如同 `AccessTheWebAsync`，除非等候非同步工作 (`getLengthTask`)，否則 `startButton_Click` 可以繼續執行未依存於該工作結果的工作。 下列輸出行代表該工作。  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```  
+FOUR:  Back in startButton_Click.  
+           Task getLengthTask is started.  
+           About to await getLengthTask -- no caller to return to.  
+```  
+  
  等候 `getLengthTask` 時，會暫止 `startButton_Click` 中的進度。 除非 `AccessTheWebAsync` 完成，否則下列指派陳述式會暫止 `startButton_Click`。  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
+```csharp  
+int contentLength = await getLengthTask;  
+```  
+  
  在下圖中，除非等候 `getLengthTask`，否則箭頭會顯示從 `AccessTheWebAsync` 中的 await 運算式到將值指派給 `getLengthTask` (後接 `startButton_Click` 中的正常處理) 的控制流程。  
   
  ![步驟四](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")  
@@ -340,7 +359,13 @@ Length of the downloaded string: 33946.
 ### <a name="step-five"></a>步驟五  
  `client.GetStringAsync` 指出完成時，會取消暫止 `AccessTheWebAsync` 中的處理，而且可以繼續略過 await 陳述式。 下列數行的輸出代表繼續處理。  
   
-<CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
+```  
+FIVE:  Back in AccessTheWebAsync.  
+           Task getStringTask is complete.  
+           Processing the return statement.  
+           Exiting from AccessTheWebAsync.  
+```  
+  
  return 陳述式的運算元 `urlContents.Length` 儲存在 `AccessTheWebAsync` 所傳回的工作中。 await 運算式會從 `startButton_Click` 中的 `getLengthTask` 擷取該值。  
   
  下圖顯示 `client.GetStringAsync` (和 `getStringTask`) 完成後的控制權轉移。  
@@ -354,16 +379,26 @@ Length of the downloaded string: 33946.
   
  下列數行的輸出代表在 `startButton_Async` 中繼續處理：  
   
-<CodeContentPlaceHolder>12</CodeContentPlaceHolder>  
+```  
+SIX:   Back in startButton_Click.  
+           Task getLengthTask is finished.  
+           Result from AccessTheWebAsync is stored in contentLength.  
+           About to display contentLength and exit.  
+```  
+  
  await 運算式會從 `getLengthTask` 擷取整數值，而整數值是 `AccessTheWebAsync` 中 return 陳述式的運算元。 下列陳述式會將該值指派給 `contentLength` 變數。  
   
-<CodeContentPlaceHolder>13</CodeContentPlaceHolder>  
+```csharp  
+int contentLength = await getLengthTask;  
+```  
+  
  下圖顯示從 `AccessTheWebAsync` 到 `startButton_Click` 的控制項返回。  
   
  ![步驟六](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
+ [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
  [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285) (非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic))
+

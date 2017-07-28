@@ -1,6 +1,6 @@
 ---
 title: .NET Core | Microsoft Docs
-description: ".NET 核心"
+description: .NET Core
 keywords: ".NET、.NET Core"
 author: richlander
 ms.author: mairaw
@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: cd99aa47233f855ac6da37ff93b981a941ee416a
+ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
+ms.openlocfilehash: 168ebcd1ad5bff5802c188ebfd06c08f4bdd13b1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 06/29/2017
 
 ---
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/23/2017
 - **彈性的部署︰**可以包含在應用程式內，或任何人、任何機器都可並行安裝。
 - **跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。 Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、Cpu 和應用程式案例，會隨著時間成長。
 - **命令列工具︰**所有產品案例都可以在命令列操作。 
-- **相容︰**.NET Core 透過 [.NET Standard Library](../standard/library.md) (.NET 標準程式庫) 與 .NET Framework、Xamarin 及 Mono 相容。
+- **相容︰**.NET Core 透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
 - **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。
 
@@ -49,13 +49,13 @@ C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯�
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 和相容性
 
-.NET Core 可以視為 .NET Framework 基底類別庫 (BCL) 層的 .NET Framework 跨平台版本。 它會實作 [.NET 標準程式庫](../standard/library.md) 規格。 .NET Core 提供可在 .NET Framework 或 Mono/Xamarin 中取得的 API 子集。 在某些情況下不會實作全部類型 (某些成員不提供或已搬遷)。
+.NET Core 可以視為 .NET Framework 基底類別庫 (BCL) 層的 .NET Framework 跨平台版本。 它會實作 [.NET Standard](../standard/net-standard.md) 規格。 .NET Core 提供可在 .NET Framework 或 Mono/Xamarin 中取得的 API 子集。 在某些情況下不會實作全部類型 (某些成員不提供或已搬遷)。
 
 若要深入了解 .NET Core API 藍圖，請參閱 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)。
 
 ### <a name="relationship-to-the-net-standard-library"></a>.NET 標準程式庫的關聯性
 
-[.NET 標準程式庫](../standard/library.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。 .NET 實作必須實作此規格，才會被視為符合 .NET 標準程式庫，可以支援以 .NET 標準程式庫為目標的程式庫。 
+[.NET Standard](../standard/net-standard.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。 .NET 實作必須實作此規格，才會被視為符合 .NET 標準程式庫，可以支援以 .NET 標準程式庫為目標的程式庫。 
 
 .NET Core 因為實作 .NET 標準程式庫，所以可以支援 .NET 標準程式庫。
 
@@ -65,7 +65,7 @@ C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯�
 
 - [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
-- [Xamarin.Forms](https://www.xamarin.com/forms)
+- [以 UWP 為目標時的 Xamarin.Forms](https://www.xamarin.com/forms)
 
 ### <a name="open-source"></a>開啟原始檔
 
@@ -135,7 +135,7 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 .NET Core 和 .NET Framework 的主要差異︰ 
 
 - **應用程式模型**：.NET Core 不支援所有的 .NET Framework 應用程式模型，部分是因為其中大部分是建置在 Windows 技術上，例如 WPF (以 DirectX 為建置基礎)。 .NET Core 和 .NET Framework 都支援主控台和 ASP.NET Core 應用程式模型。 
-- **API**：.NET Core 包含許多和 .NET Framework 相同但較少的 API，且有不同的分解 (組件名稱不同，重要案例的類型圖案不同)。 這些差異目前通常需要變更 .NET Core 的移轉來源。 .NET Core 實作 [.NET 標準程式庫](../standard/library.md) API，隨著時間會成長到能包含更多的 .NET Framework BCL API。
+- **API**：.NET Core 包含許多和 .NET Framework 相同但較少的 API，且有不同的分解 (組件名稱不同，重要案例的類型圖案不同)。 這些差異目前通常需要變更 .NET Core 的移轉來源。 .NET Core 實作 [.NET Standard](../standard/net-standard.md) API，隨著時間會成長到能包含更多的 .NET Framework BCL API。
 - **子系統**：.NET Core 在 .NET Framework 中實作子系統的子集，目標是更簡單的實作和程式設計模型。 例如，不支援程式碼存取安全性 (CAS)，但支援反映。
 - **平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。
 - **開放原始碼**：.NET Core 是開放原始碼，同時[唯讀的 .NET Framework 子集](https://github.com/microsoft/referencesource)也是開放原始碼。

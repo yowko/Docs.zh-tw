@@ -43,7 +43,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/22/2017
 ## <a name="example"></a>範例  
  下列命令會編譯 `t2.cs`。 在命令中使用 `/checked` 會指定檔案中不在 `checked` 或 `unchecked` 關鍵字範圍內且產生超出該資料型別範圍之值的任何整數算術陳述式，都會在執行階段導致例外狀況。  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

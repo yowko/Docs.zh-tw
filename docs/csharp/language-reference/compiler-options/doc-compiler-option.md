@@ -47,7 +47,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /doc:file  
 ```  
   

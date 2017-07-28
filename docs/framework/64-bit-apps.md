@@ -1,5 +1,5 @@
 ---
-title: "64 位元應用程式 | Microsoft Docs"
+title: "64 位元應用程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="64-bit-applications"></a>64 位元應用程式
@@ -74,3 +74,4 @@ ms.lasthandoff: 05/10/2017
  若要判斷 .exe 檔或 .dll 檔案是否只能在特定平台上或在 WOW64 下執行，請使用不含選項的 [CorFlags.exe (CorFlags 轉換工具)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)。 您也可以使用 CorFlags.exe 來變更 .exe 檔或 .dll 檔的平台狀態。 Visual Studio 組件的 CLR 標頭中的執行階段主要版本號碼設為 2，而執行階段次要版本號碼設為 5。 將次要執行階段版本設定為 0 的應用程式會被視為舊版應用程式，並一律在 WOW64 下執行。  
   
  若要以程式設計方式查詢 .exe 或 .dll 以查看其是否只在特定平台上或在 WOW64 下執行，請使用 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> 方法。
+

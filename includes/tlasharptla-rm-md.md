@@ -1,1 +1,1 @@
-Microsoft Windows Rights Management \(RM\)
+Microsoft Windows Rights Management (RM)

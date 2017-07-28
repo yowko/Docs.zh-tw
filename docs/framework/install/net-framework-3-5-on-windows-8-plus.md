@@ -1,7 +1,7 @@
 ---
-title: "在 Windows 8、Windows 8.1 及 Windows 10 上安裝 .NET Framework 3.5 | Microsoft Docs"
+title: "針對在 Windows 8、Windows 8.1 及 Windows 10 上的 .NET Framework 3.5 安裝進行疑難排解 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 04/20/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -17,13 +17,14 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f48ef7a29e05824834395fdd9fd850a017a5f7e6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
+
 # <a name="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a>在 Windows 8、Windows 8.1 及 Windows 10 上安裝 .NET Framework 3.5
 .NET Framework 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對於開發人員而言，.NET Framework 提供一個一致的程式設計模型，以便建置應用程式。 如果您使用的是 Windows 作業系統，您的電腦上可能已經安裝了 .NET Framework。 具體來說， [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會隨附於 [!INCLUDE[win8](../../../includes/win8-md.md)]、 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 會隨附於 [!INCLUDE[win81](../../../includes/win81-md.md)] ，而 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 會隨附於 Windows 10。  
   
@@ -73,3 +74,4 @@ ms.lasthandoff: 05/11/2017
   
 ## <a name="see-also"></a>另請參閱  
  [安裝指南](../../../docs/framework/get-started/index.md)
+

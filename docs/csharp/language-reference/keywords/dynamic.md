@@ -1,71 +1,89 @@
 ---
 title: "dynamic (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "dynamic_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "動態 [C#]"
-  - "dynamic 關鍵字 [C#]"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- dynamic_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- dynamic [C#]
+- dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
 caps.latest.revision: 25
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 25
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 7cec26e59a865e78bf02a84cfe2d3b5177fa55af
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
+
 ---
-# dynamic (C# 參考)
-`dynamic` 型別可讓它發生所在的作業略過編譯時期型別檢查。  這些作業會改在執行階段解析。  `dynamic` 型別可簡化對 COM API \(例如 Office 自動化 API\)、動態 API \(例如 IronPython 程式庫\) 及 HTML 文件物件模型 \(DOM\) 的存取。  
+# <a name="dynamic-c-reference"></a>dynamic (C# 參考)
+`dynamic` 類型可讓發生它的作業略過編譯時期類型檢查。 相反地，這些作業會在執行階段解決。 `dynamic` 類型會簡化 Office Automation API 這類 COM API 的存取、IronPython 程式庫這類動態 API 的存取，以及 HTML 文件物件模型 (DOM) 的存取。  
   
- 在大多數情況下，型別 `dynamic` 的行為就像 `object` 型別一樣。  不過，包含 `dynamic` 型別之運算式的作業沒有解析，或是由編譯器進行型別檢查。  編譯器將作業的相關資訊封裝在一起，而且可在之後使用該資訊來評估執行階段的作業。  做為程序的一部分，`dynamic` 型別的變數都會編譯為 `object` 型別的變數。  因此，類型 `dynamic` 只存在於編譯時間，而不存在於執行階段。  
+ 在大多數情況下，`dynamic` 類型的行為與 `object` 類型類似。 不過，不會解決包含 `dynamic` 類型之運算式的作業，或編譯器不會對其進行類型檢查。 編譯器會將作業資訊封裝在一起，而且稍後在執行階段會使用這項資訊來評估作業。 在此程序期間，會將 `dynamic` 類型的變數編譯為 `object` 類型的變數。 因此，`dynamic` 類型只存在於編譯時期，而非執行階段。  
   
- 下列範例會對比類型為 `dynamic` 的變數與類型為 `object` 的變數。  若要在編譯時期確認每個變數的型別，將滑鼠指標停在 `WriteLine` 陳述式中 的 `dyn` 或  `obj` 上方。  IntelliSense 會針對 `dyn` 顯示 \[**動態**\]，並針對 `obj` 顯示\[**物件**\]。  
+ 下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。 IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。  
   
  [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
   
- `WriteLine` 陳述式會顯示 `dyn` 和 `obj` 的執行階段型別。  在此時，兩者都具有相同的型別，也就是整數。  產生以下輸出：  
+ `WriteLine` 陳述式會顯示執行階段類型 `dyn` 和 `obj`。 此時，兩者都有相同的類型：整數。 會產生下列輸出：  
   
  `System.Int32`  
   
  `System.Int32`  
   
- 若要查看 `dyn` 和 `obj` 在編譯時期的差異，請在前一個範例的宣告和 `WriteLine` 陳述式之間加入下列兩行。  
+ 若要查看 `dyn` 與 `obj` 在編譯時期的差異，請在上述範例的宣告與 `WriteLine` 陳述式之間新增下列兩行。  
   
-```c#  
+```csharp  
 dyn = dyn + 3;  
 obj = obj + 3;  
-  
 ```  
   
- 對於嘗試加入的整數和運算式 `obj + 3` 中的物件，會有編譯器錯誤的報告。  然而，沒有 `dyn + 3` 的錯誤報告。  由於 `dyn` 的類型是 `dynamic`，因此編譯時期不會檢查包含 `dyn` 的運算式。  
+ 嘗試新增運算式 `obj + 3` 中的整數和物件時報告編譯器錯誤。 不過，不會回報 `dyn + 3` 的錯誤。 在編譯時期不會檢查包含 `dyn` 的運算式，因為 `dyn` 的類型是 `dynamic`。  
   
-## 內容  
- `dynamic` 關鍵字可以直接出現，或是做為建構之型別的元件，在下列狀況出現：  
+## <a name="context"></a>內容  
+ 在下列情況下，`dynamic` 關鍵字可能會直接出現，或作為建構類型的元件︰  
   
--   在宣告中，做為屬性、欄位、索引子、參數、傳回值、本機變數或型別條件約束的型別。  下列類別定義在數個不同的宣告中使用 `dynamic`。  
+-   在宣告中，作為屬性、欄位、索引子、參數、傳回值、區域變數或類型條件約束的類型。 下列類別定義在數個不同宣告中使用 `dynamic`。  
   
      [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
   
--   在明確的型別轉換中，做為轉換的目標型別  
+-   在明確類型轉換中，作為轉換的目標類型。  
   
      [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
   
--   在將型別當做值的任何內容中，例如在 `is` 運算子的右邊，或是 `as` 運算子，或是做為 `typeof` 的引數以當做建構之型別的一部分。  例如，`dynamic` 可在下列運算式中使用。  
+-   在任何內容中，其中類型作為值 (例如 `is` 運算子或 `as` 運算子右側) 或作為部分建構類型之 `typeof` 的引數。 例如，`dynamic` 可以用於下列運算式中。  
   
      [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
   
-## 範例  
- 下列範例會在數個宣告中使用 `dynamic`。  `Main` 方法也會以執行階段型別檢查來對比編譯時期型別檢查。  
+## <a name="example"></a>範例  
+ 下列範例會在數個宣告中使用 `dynamic`。 `Main` 方法也會對照編譯時期類型檢查與執行階段類型檢查。  
   
  [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
   
- 如需詳細資訊與範例，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
+ 如需詳細資訊和範例，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Dynamic.ExpandoObject?displayProperty=fullName>   
  <xref:System.Dynamic.DynamicObject?displayProperty=fullName>   
  [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)   
@@ -73,5 +91,5 @@ obj = obj + 3;
  [is](../../../csharp/language-reference/keywords/is.md)   
  [as](../../../csharp/language-reference/keywords/as.md)   
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [如何：使用 as 和 is 運算子進行安全轉型](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)   
+ [如何：使用 as 和 is 運算子進行安全轉換](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)   
  [逐步解說：建立和使用動態物件](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

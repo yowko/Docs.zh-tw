@@ -29,14 +29,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 7e2310df174a7c38fafba3fed4e4bd3de4fa377a
+ms.sourcegitcommit: cf8206e856a31882f5f30ee61d965ad5672f518e
+ms.openlocfilehash: 4bc2cd0e4fc165ef68338c2cda3b8c57c1bf18b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用動態類型 (C# 程式設計手冊)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 引進一種新類型 `dynamic`。 此類型是靜態類型，但 `dynamic` 類型的物件會略過靜態類型檢查。 在大多數情況下，其運作會像是具有 `object` 類型。 在編譯時期，會假設類型為 `dynamic` 的項目能夠支援所有作業。 因此，您無須考慮物件是從 COM API、動態語言 (例如 IronPython)、HTML 文件物件模型 (DOM)、反映或是程式其他地方取得其值。 不過，如果程式碼無效，則會在執行階段攔截到錯誤。  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 引進一種新類型 `dynamic`。 此類型是靜態類型，但 `dynamic` 類型的物件會略過靜態類型檢查。 在大多數情況下，其運作會像是具有 `object` 類型。 在編譯時期，會假設類型為 `dynamic` 的項目能夠支援所有作業。 因此，您無須考慮物件是從 COM API、動態語言 (例如 IronPython)、HTML 文件物件模型 (DOM)、反映或是程式其他地方取得其值。 不過，如果程式碼無效，則會在執行階段攔截到錯誤。  
   
  例如，如果下列程式碼中的執行個體方法 `exampleMethod1` 只有一個參數，則編譯器會將 `ec.exampleMethod1(10, 4)` 方法的第一個呼叫視為無效，因為它包含兩個引數。 呼叫會造成編譯器錯誤。 編譯器不會檢查 `dynamic_ec.exampleMethod1(10, 4)` 方法的第二個呼叫，因為 `dynamic_ec` 的類型為 `dynamic`。 因此，不會報告編譯器錯誤。 不過，這項錯誤並不是永遠不會被發現。 它會在執行階段被攔截，並造成執行階段例外狀況。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/10/2017
  Dynamic Language Runtime (DLR) 是 [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] 中的新 API。 它提供的基礎結構支援 C# 中的 `dynamic` 類型，也支援實作 IronPython 和 IronRuby 之類的動態程式設計語言。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
 ## <a name="com-interop"></a>COM Interop  
- [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
+ [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
   
  許多 COM 方法允許針對引數類型和傳回型別進行變化，方法是將類型指定為 `object`。 這需要對值進行明確轉型，才能與 C# 中的強型別變數配合使用。 如果您使用 [/link (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 選項進行編譯，則引進 `dynamic` 類型可讓您將 COM 簽章中出現的 `object` 項目視為具有 `dynamic` 類型，藉此避免大部分的轉型。 例如，下列陳述式將比較使用 `dynamic` 類型和不使用 `dynamic` 類型存取 Microsoft Office Excel 試算表中儲存格的方式。  
   

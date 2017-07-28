@@ -1,6 +1,6 @@
 ---
-title: "C# 屬性 | C# 語言教學課程"
-description: "了解在 C 中使用屬性的宣告式程式設計#"
+title: "C# 屬性 - C# 語言教學課程 | Microsoft Docs"
+description: "了解在 C# 中使用屬性的宣告式程式設計"
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ef8b93bf0a2cf98c5251b888b61db9ab12d9a71
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="attributes"></a>屬性
+# 屬性
+<a id="attributes" class="xliff"></a>
 
 C# 程式中的型別、成員和其他實體支援控制其某方面行為的修飾詞。 例如，方法的協助工具是使用 `public`、`protected`、`internal` 和 `private` 修飾詞控制。 C# 將此能力一般化，宣告式資訊的使用者定義型別才能附加至程式實體，並在執行階段擷取。 程式是透過定義和使用***屬性***指定這項額外的宣告式資訊。
 

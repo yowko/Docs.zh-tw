@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="managed-threading"></a>Managed 執行緒處理

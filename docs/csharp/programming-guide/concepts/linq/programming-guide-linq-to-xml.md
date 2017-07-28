@@ -41,7 +41,7 @@ ms.lasthandoff: 05/24/2017
 |主題|說明|  
 |-----------|-----------------|  
 |[LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|提供 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 類別的概觀，以及關於其中三個最重要類別的詳細資訊：<xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XDocument>。|  
-|[建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|提供有關使用 XML 樹狀的概念性與工作型資訊。 您可以使用功能結構，或從字串或檔案剖析 XML 文字，藉以建立 XML 樹狀。 您也可以使用 <xref:System.Xml.XmlReader> 來填入 XML 樹狀結構。|  
+|[建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|提供有關使用 XML 樹狀的概念性與工作型資訊。 您可以使用功能結構，或從字串或檔案剖析 XML 文字，藉以建立 XML 樹狀結構。 您也可以使用 <xref:System.Xml.XmlReader> 來填入 XML 樹狀結構。|  
 |[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|提供有關建立使用命名空間之 XML 樹狀的詳細資訊。|  
 |[序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|描述多個序列化 XML 樹狀的方法，並提供要使用哪個方法的指引。|  
 |[LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|列舉並描述 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 座標軸方法，您必須在撰寫 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢之前了解這些方法。|  

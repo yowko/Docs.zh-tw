@@ -29,23 +29,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a7d66be3ce0a4a24fd95d5b77787dcad5598f4d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
-「類別」**是一種建構，可讓您將其他類型、方法和事件的變數群組在一起，以建立您自己的自訂類型。 類別就像藍圖。 它會定義類型的資料和行為。 如果類別未宣告為 static，則用戶端程式碼可以使用它，方法是建立指派給變數的「物件」**或「執行個體」**。 除非變數的所有參考都超出範圍，否則變數會保留在記憶體中。 此時，CLR 會將它標記為適合進行記憶體回收。 如果類別宣告為 [static](../../../csharp/language-reference/keywords/static.md)，則記憶體中只會有一個複本，而且用戶端程式碼只能透過類別本身存取它，而非「執行個體變數」**。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
+「類別」是一種建構，可讓您將其他類型、方法和事件的變數群組在一起，以建立您自己的自訂類型。 類別就像藍圖。 它會定義類型的資料和行為。 如果類別未宣告為 static，則用戶端程式碼可以使用它，方法是建立指派給變數的「物件」或「執行個體」。 除非變數的所有參考都超出範圍，否則變數會保留在記憶體中。 此時，CLR 會將它標記為適合進行記憶體回收。 如果類別宣告為 [static](../../../csharp/language-reference/keywords/static.md)，則記憶體中只會有一個複本，而且用戶端程式碼只能透過類別本身存取它，而非「執行個體變數」。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
- 與結構不同，類別支援「繼承」**，這是物件導向程式設計的基礎特性。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
+ 與結構不同，類別支援「繼承」，這是物件導向程式設計的基礎特性。 如需詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
 ## <a name="declaring-classes"></a>宣告類別  
  使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字宣告類別，如下列範例所示︰  
   
  [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
- `class` 關鍵字的前面會加上存取層級。 因為在此情況下使用 [public](../../../csharp/language-reference/keywords/public.md)，所以所有人都可以從這個類別建立物件。 類別的名稱遵循 `class` 關鍵字。 定義的其餘部分是定義行為和資料的類別主體。 類別上的欄位、屬性、方法和事件統稱為「類別成員」**。  
+ `class` 關鍵字的前面會加上存取層級。 因為在此情況下使用 [public](../../../csharp/language-reference/keywords/public.md)，所以所有人都可以從這個類別建立物件。 類別的名稱遵循 `class` 關鍵字。 定義的其餘部分是定義行為和資料的類別主體。 類別上的欄位、屬性、方法和事件統稱為「類別成員」。  
   
 ## <a name="creating-objects"></a>建立物件  
  雖然它們有時會交換使用，但是類別和物件不同。 類別會定義一種類型的物件，但不是物件本身。 物件是根據類別的具體實體，而且有時稱為類別的執行個體。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  這個程式碼會建立同時參照相同物件的兩個物件參考。 因此，任何透過 `object3` 進行的物件變更都會反映在後續使用 `object4` 時。 因為以傳址方式參照根據類別的物件，所以類別稱為參考型別。  
   
 ## <a name="class-inheritance"></a>類別繼承  
- 使用「衍生」**可完成繼承，這表示使用從中繼承資料和行為的「基底類別」**來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
+ 使用「衍生」可完成繼承，這表示使用從中繼承資料和行為的「基底類別」來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
   
  [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
@@ -84,14 +85,14 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [物件導向程式設計](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)   
+ [物件導向程式設計](../concepts/object-oriented-programming.md)   
  [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
  [成員](../../../csharp/programming-guide/classes-and-structs/members.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [物件](../../../csharp/programming-guide/classes-and-structs/objects.md)

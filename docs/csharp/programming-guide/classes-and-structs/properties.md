@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
-屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。
+屬性是提供彈性機制以讀取、寫入或計算私人欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
 
 ## <a name="properties-overview"></a>屬性概觀  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/22/2017
 -   [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
@@ -101,4 +101,5 @@ ms.lasthandoff: 05/22/2017
  [索引子](../../../csharp/programming-guide/indexers/index.md)   
  [get 關鍵字](../../../csharp/language-reference/keywords/get.md)    
  [set 關鍵字](../../../csharp/language-reference/keywords/set.md)    
+
 

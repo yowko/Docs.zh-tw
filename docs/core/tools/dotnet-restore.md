@@ -4,16 +4,17 @@ description: "了解如何使用 dotnet restore 命令來還原相依性和專�
 keywords: "dotnet-restore, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 92da0806eb6c365a4622668242edc28d9966ed26
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
+ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/29/2017
 
 ---
 
@@ -37,6 +38,8 @@ ms.lasthandoff: 03/22/2017
 
 針對專案特定工具，`dotnet restore` 會先還原在其中封裝工具的套件，然後繼續還原其專案檔中所指定的工具相依性。
 
+*Nuget.Config* 檔案中的一些設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *NuGet.Config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於指定的資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [NuGet.Config 參考](https://docs.microsoft.com/nuget/schema/nuget-config-file)。
+
 ## <a name="arguments"></a>引數
 
 `ROOT` 
@@ -57,7 +60,7 @@ ms.lasthandoff: 03/22/2017
 
 指定套件還原的執行階段。 這用來針對 *.csproj* 檔案內 `<RuntimeIdentifiers>` 標記中未明確列出的執行階段還原套件。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 多次指定這個選項來提供多個 RID。
 
-`--packages <PACKAGES_DIRECTORY]`
+`--packages <PACKAGES_DIRECTORY>`
 
 指定已還原套件的目錄。 
 
@@ -103,7 +106,7 @@ ms.lasthandoff: 03/22/2017
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
 
-還原目前目錄中專案的相依性和工具，並且只在輸出中顯示錯誤︰
+還原目前目錄中專案的相依性和工具，並且只顯示最小輸出：
 
-`dotnet restore --verbosity Error`
+`dotnet restore --verbosity minimal`
 

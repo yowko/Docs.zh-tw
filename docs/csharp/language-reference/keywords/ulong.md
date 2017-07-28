@@ -1,6 +1,6 @@
 ---
 title: "ulong (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36de0add1d7fdf58745c65d231f3789c532ab69f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (C# 參考)
+
 `ulong` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數類型。  
   
 |類型|範圍|大小|.NET Framework 類型|  
@@ -44,44 +46,43 @@ ms.lasthandoff: 03/13/2017
 |`ulong`|0 到 18,446,744,073,709,551,615|不帶正負號的 64 位元整數|<xref:System.UInt64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
- 您可以宣告並初始化 `ulong` 變數，如下列範例所示：  
+
+您可以將十進位常值、十六進位常值，或二進位常值 (自 C# 7 起) 指派給 `ulong` 變數，以將其宣告和初始化。  如果整數常值超出 `ulong` 範圍 (也就是說，如果它小於 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt64.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 7,934,076,125 整數，會指派給 `ulong` 值。  
   
-```  
-  
-ulong uLong = 9223372036854775808;  
-```  
-  
- 整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、`ulong`。 在上述範例中，它是 `ulong` 類型。  
-  
- 您也可以使用後置詞，以根據下列規則來指定常值的類型︰  
-  
--   如果您使用 L 或 l，則根據常值整數的大小，常值整數的類型為 [long](../../../csharp/language-reference/keywords/long.md) 或 `ulong`。  
-  
-    > [!NOTE]
-    >  您可以使用小寫字母 "l" 作為後置詞。 不過，因為字母 "l" 很容易與數字 "1" 混淆，所以這會產生編譯器警告。 為了清楚起見，請使用 "L"。  
-  
--   如果您使用 `U` 或 `u`，則根據常值整數的大小，常值整數的類型為 [uint](../../../csharp/language-reference/keywords/uint.md) 或 `ulong`。  
-  
--   如果您使用 UL、ul、Ul、uL、LU、lu、Lu 或 lU，則常值整數的類型會是 `ulong`。  
-  
-     例如，下列三個陳述式的輸出會是系統類型 `UInt64`，其對應至別名 `ulong`：  
-  
-    ```  
-    Console.WriteLine(9223372036854775808L.GetType());  
-    Console.WriteLine(123UL.GetType());  
-    Console.WriteLine((123UL + 456).GetType());  
-    ```  
+[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+
+> [!NOTE] 
+> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
+
+自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ 整數常值亦可包含後置詞以表示類型。 `UL` 或 `ul` 後置詞明確地將數值常值識別為 `ulong` 值。 如果常值超過 <xref:System.Int64.MaxValue?displayProperty=fullName><xref:System.Int64.MaxValue?displayProperty=fullName>，則 `L` 後置詞表示 `ulong`。 但是，如果常值超過 <xref:System.UInt32.MaxValue?displayProperty=fullName>，則 `U` 或 `u` 後置詞表示 `ulong`。 下列範例會使用 `ul` 後置詞來表示長整數：
+ 
+[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+
+如果整數常值沒有後置詞，其類型會是下列類型中可表示其值的第一個類型： 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](long.md)
+4. `ulong`
+
+## <a name="compiler-overload-resolution"></a>編譯器多載解析
   
  後置詞的常見用法是搭配呼叫多載方法。 例如，請考慮使用下列使用 `ulong` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  搭配使用後置詞與 `ulong` 參數時，可以保證呼叫正確的類型，例如：  
   
-```  
+```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -91,7 +92,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  沒有從 `ulong` 轉換為任意整數類型的隱含轉換。 例如，下列陳述式會在未明確轉換的情況下產生編譯器錯誤：  
   
-```  
+```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -99,7 +100,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  同時，沒有從浮點類型轉換為 `ulong` 的隱含轉換。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  

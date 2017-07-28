@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
-ms.lasthandoff: 05/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/02/2017
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-請參閱 [ASP.NET Core 教學課程 (英文)](https://docs.microsoft.com/aspnet/core/tutorials/)。 ASP.NET Core 文件中的許多文章都有針對它們所撰寫的範例連結。
+請參閱 [ASP.NET Core 教學課程 (英文)](/aspnet/core/tutorials/)。 ASP.NET Core 文件中的許多文章都有針對它們所撰寫的範例連結。
 
 ## <a name="c-language"></a>C# 語言
 

@@ -5,7 +5,7 @@ author: spboyer
 keywords: ".NET, 容器, 主控台, 應用程式"
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
@@ -86,7 +86,7 @@ Docerkfile 中的第一行會使用 [`FROM`](https://docs.docker.com/engine/refe
 ## <a name="creating-the-image"></a>建立映像
 若要建立 Docker 映像，請將下列程式碼加入 *build.ps1* 指令碼。 執行指令碼時，會使用從 MSBuild 編譯的資產來建立 `console-random-answer-generator` 映像，如[建置應用程式](#building-the-application)一節中所定義。
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {

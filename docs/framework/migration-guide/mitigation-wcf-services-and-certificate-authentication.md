@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰WCF 服務和憑證驗證 | Microsoft Docs"
+title: "風險降低︰WCF 服務和憑證驗證"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,11 +15,11 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4c2156087ca168bafb1b7333310066cef73f3334
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>風險降低︰WCF 服務和憑證驗證
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/18/2017
     </configuration>  
     ```  
   
--   如果繫結在原始程式碼中不是以動態方式設定，請更新原始程式碼中的 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性，以使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) 或舊版的通訊協定。  
+-   如果繫結在原始程式碼中是以動態方式設定，請更新 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性，以在原始程式碼中使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) 或舊版的通訊協定。  
   
     > [!CAUTION]
     >  我們不建議採取這項因應措施，因為使用 MD5 雜湊演算法的憑證並不安全。  
