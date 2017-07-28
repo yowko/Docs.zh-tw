@@ -1,5 +1,5 @@
 ---
-title: "在 Windows XP 上安裝 .NET Framework | Microsoft Docs"
+title: "在 Windows XP 上安裝 .NET Framework"
 description: "了解如何在 Windows XP 上安裝 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3ae323580496e86c45c8bff962f42cca4b0201cd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7a4bf14ad57495c5d6cd2ba40e2bd63b91551e33
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

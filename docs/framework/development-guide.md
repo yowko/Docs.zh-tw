@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 開發指南 | Microsoft Docs"
+title: ".NET Framework 開發指南"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,10 +16,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: b630f2dc91068168b1d57b37ad80d79f5e3d1738
-ms.openlocfilehash: 88219e428409a71eb2706c97dca31ccde38bb918
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/18/2017
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>參考資料  
- [.NET Framework 類別庫](https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7)  
+ [.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)  
  為每個包含在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間的類別提供語法、程式碼範例和用法資訊。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -93,3 +94,4 @@ ms.lasthandoff: 04/18/2017
   
  [.NET Framework 範例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  提供 MSDN 程式碼範例庫中之範例應用程式的連結，以示範 .NET Framework 技術。
+

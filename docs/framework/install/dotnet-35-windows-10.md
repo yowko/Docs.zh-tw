@@ -1,5 +1,5 @@
 ---
-title: "在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5 | Microsoft Docs"
+title: "在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
 description: "了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 137436a073c050ed431b231204a3aca31c98c01a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64ba9cb408e565b20a001382c3b39a41602b6e55
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

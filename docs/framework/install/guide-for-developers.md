@@ -1,5 +1,5 @@
 ---
-title: "安裝適用於開發人員的 .NET Framework | Microsoft Docs"
+title: "安裝適用於開發人員的 .NET Framework"
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 165
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0248602661b93eb0372e12fbea1055515a9abca3
-ms.openlocfilehash: b7b7cb8d8f10d8d7f437b7bcf91f99237003ca74
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: da0e9bd789068d94feda3c2a6ab0d35606d423a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

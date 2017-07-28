@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰CspParameters.ParentWindowHandle 應該有 HWND |Microsoft 文件"
+title: "風險降低︰CspParameters.ParentWindowHandle 應該有 HWND"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
-ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b65aaf7149ca29b2af3efdf44ee9489a04c73a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>風險降低︰CspParameters.ParentWindowHandle 應該有 HWND

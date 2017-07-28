@@ -1,5 +1,5 @@
 ---
-title: "在 Windows 10 上安裝 .NET Framework | Microsoft Docs"
+title: "在 Windows 10 上安裝 .NET Framework"
 description: "了解如何在 Windows 10 上安裝 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 0c43b98fb805a4e0d803de283392b053b5babb0c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 32e701e5e29b30923a55c96e131b0aa33bbe3b83
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

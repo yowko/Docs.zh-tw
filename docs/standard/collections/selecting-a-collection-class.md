@@ -1,5 +1,5 @@
 ---
-title: "選取集合類別 | Microsoft Docs"
+title: "選取集合類別"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 403a78e3fc1496b91403b3c42494e34d12607b70
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 26467141e5f7537efddd79e0b04af6203e4a6994
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
@@ -92,3 +92,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.Collections.Specialized>   
  <xref:System.Collections.Generic>   
  [安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)
+

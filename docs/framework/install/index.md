@@ -1,5 +1,5 @@
 ---
-title: "安裝指南 | Microsoft Docs"
+title: "安裝指南"
 description: "了解如何在 Windows 上安裝 .NET Framework。"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cda1d5-c5g8-8eb9-93e8-5f478de07ff7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 8168ff99ea4fd12504bcfeffc0bdccf7c29b437a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b88bb367afb2fc481b7d9b7da619b2b7fe2ca6e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

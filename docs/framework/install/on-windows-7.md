@@ -1,5 +1,5 @@
 ---
-title: "在 Windows 7 SP1 上安裝 .NET Framework | Microsoft Docs"
+title: "在 Windows 7 SP1 上安裝 .NET Framework"
 description: "了解如何在 Windows 7 SP1 上安裝 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cda1d5-c9a4-4eb5-93e6-4f878de07fd7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: cd104f5771f356fd284d6dee0dc3fc0da9d34f00
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b5f9dd3fc636bbb6dbec6be43288e34028aaa1f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

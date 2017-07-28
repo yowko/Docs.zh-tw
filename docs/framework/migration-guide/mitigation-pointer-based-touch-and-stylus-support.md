@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰以指標為基礎的觸控及手寫筆支援 | Microsoft Docs"
+title: "風險降低︰以指標為基礎的觸控及手寫筆支援"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -17,10 +17,11 @@ caps.latest.revision: 2
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: f93c914e0c1d285cc0f6117e5ae7a0f6338bc549
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 053ff4c5fba7b4f2b5a4c29a35c954e888cb095a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>風險降低︰以指標為基礎的觸控及手寫筆支援

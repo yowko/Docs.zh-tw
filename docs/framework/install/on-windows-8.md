@@ -1,5 +1,5 @@
 ---
-title: "在 Windows 8 上安裝 .NET Framework | Microsoft Docs"
+title: "在 Windows 8 上安裝 .NET Framework"
 description: "了解如何在 Windows 8 上安裝 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cda1d5-c9a4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3746f31c316d5c79f9672c4e785fc2bb82411db9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3271254ce60a0ac882510eae7c91b9aa64865b22
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
