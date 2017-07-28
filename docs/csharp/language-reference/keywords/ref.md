@@ -47,6 +47,7 @@ ms.lasthandoff: 03/13/2017
  若要使用 `ref` 參數，方法定義和呼叫方法都必須明確使用 `ref` 關鍵字，如下列範例所示。  
   
 [!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+
   
  傳遞至 `ref` 參數的引數，在傳遞之前必須先初始化。 這點與 `out` 參數不同，其引數不需要在傳遞之前先明確初始化。 如需詳細資訊，請參閱 [out](../../../csharp/language-reference/keywords/out.md)。  
   
@@ -84,3 +85,4 @@ ms.lasthandoff: 03/13/2017
  [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
  [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+ 

@@ -74,3 +74,4 @@ ms.lasthandoff: 05/17/2017
 ## <a name="removing-a-dependency-from-the-project"></a>從專案移除相依性
 從專案檔移除相依性只牽涉到從專案檔移除 `<PackageReference>`。
 
+
