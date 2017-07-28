@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 支援 | Microsoft Docs"
+title: ".NET Core 支援"
 description: "了解適用於 .NET Core 的不同版本序列的支援 (LTS 和目前)"
 keywords: ".NET, .NET Core, lts, 目前, fts, 支援, 支援train, 支援追蹤, 週期, release train"
 author: kendrahavens
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-translationtype: Human Translation
-ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
-ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
-ms.lasthandoff: 02/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -42,3 +43,4 @@ LTS 版本
 ### <a name="further-reading"></a>進一步閱讀
 * [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)
 * [目前支援的作業系統和版本](https://github.com/dotnet/core/blob/master/roadmap.md)
+

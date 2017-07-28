@@ -1,5 +1,5 @@
 ---
-title: ".NET Core CLI 擴充性模型 | Microsoft Docs"
+title: ".NET Core CLI 擴充性模型"
 description: "了解如何擴充命令列介面 (CLI) 工具。"
 keywords: "CLI, 擴充性, 自訂命令, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5a9c7ba999e278f4c5fbec51fa547b3e35828f88
-ms.openlocfilehash: 7e5cfdf644b3f4c6c5cc4f4e6f77ec72910b1f47
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +50,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 ### <a name="consuming-per-project-tools"></a>使用個別專案工具
 使用這些工具，需要您針對要使用的每個工具在專案檔中新增 `<DotNetCliToolReference>` 項目。 在 `<DotNetCliToolReference>` 項目內部，您會參考工具所在的套件，並指定您需要的版本。 執行 [`dotnet restore`](dotnet-restore.md) 之後，會還原工具和其相依性。
 
-針對需要載入專案建置輸出來執行的工具，通常在專案檔中的一般相依性下方會列出另一個相依性。 因為 CLI 使用 MSBuild 作為其建置引擎，所以建議您將工具的這些部分撰寫為自訂 MSBuild [目標](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)及[工作](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks)，這樣它們就可以參與整體建置程序。 此外，它們可以輕鬆取得透過建置所產生的任何與全部資料，例如輸出檔的位置、目前正在建置的組態等。這項資訊全部會變成一組可從任何目標讀取的 MSBuild 屬性。 您稍後會在此文件中看到如何使用 NuGet 新增自訂目標。
+針對需要載入專案建置輸出來執行的工具，通常在專案檔中的一般相依性下方會列出另一個相依性。 因為 CLI 使用 MSBuild 作為其建置引擎，所以建議您將工具的這些部分撰寫為自訂 MSBuild [目標](/visualstudio/msbuild/msbuild-targets)及[工作](/visualstudio/msbuild/msbuild-tasks)，這樣它們就可以參與整體建置程序。 此外，它們可以輕鬆取得透過建置所產生的任何與全部資料，例如輸出檔的位置、目前正在建置的組態等。這項資訊全部會變成一組可從任何目標讀取的 MSBuild 屬性。 您稍後會在此文件中看到如何使用 NuGet 新增自訂目標。
 
 讓我們檢閱在簡單專案中新增僅限簡單工具的工具的範例。 假設有一個稱為 `dotnet-api-search` 的範例命令可讓您搜尋 NuGet 套件以尋找指定的 API，則以下是使用該工具的主控台應用程式專案檔：
 
@@ -85,7 +85,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 您也可以在相同的存放庫中查看[所使用工具的實作](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages)。
 
 ### <a name="custom-targets"></a>自訂目標
-NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 隨著 .NET Core CLI 改為使用 MSBuild，相同的擴充機制現在也適用於 .NET Core 專案。 如果您想要擴充建置程序，或想要在建置程序中存取任何成品 (例如產生的檔案或檢查叫用建置的組態等)，可以使用這種類型的擴充性。
+NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 隨著 .NET Core CLI 改為使用 MSBuild，相同的擴充機制現在也適用於 .NET Core 專案。 如果您想要擴充建置程序，或想要在建置程序中存取任何成品 (例如產生的檔案或檢查叫用建置的組態等)，可以使用這種類型的擴充性。
 
 在下列範例中，您可以使用 `csproj` 語法看到目標的專案檔。 這會指示 [`dotnet pack`](dotnet-pack.md) 命令要封裝的內容，並將目標檔案及組件放入套件內的 *build* 資料夾。 請注意，`<ItemGroup>` 項目的 `Label` 屬性設定為 `dotnet pack instructions`，並具有其下定義的 [目標]。
 

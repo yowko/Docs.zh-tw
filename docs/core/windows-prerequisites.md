@@ -1,5 +1,5 @@
 ---
-title: "Windows 上 .NET Core 的必要條件 | Microsoft Docs"
+title: "Windows 上 .NET Core 的必要條件"
 description: "了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。"
 keywords: ".NET Core, Windows, 必要條件, 相依性, Visual Studio"
 author: mairaw
@@ -9,21 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
-ms.openlocfilehash: 22f7acab3ffbe2d3af587f7af2bfaad204f8e259
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e414af0edbafed5b7f540eda6de2e5078eac789
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Windows 上 .NET Core 的必要條件
-<a id="prerequisites-for-net-core-on-windows" class="xliff"></a>
+# <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
 本文將說明您在 Windows 電腦上部署與執行 .NET Core 應用程式，以及使用 Visual Studio 來開發時，您需要哪些相依性。
 
-## 支援的 Windows 版本
-<a id="supported-windows-versions" class="xliff"></a>
+## <a name="supported-windows-versions"></a>支援的 Windows 版本
 
 下列 Windows 版本支援 .NET Core：
 
@@ -37,8 +35,7 @@ ms.lasthandoff: 06/29/2017
 
 如需完整的支援作業系統，請參閱 [.NET Core 版本資訊](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md)。
 
-## .NET Core 的相依性
-<a id="net-core-dependencies" class="xliff"></a>
+## <a name="net-core-dependencies"></a>.NET Core 的相依性
 
 在 Windows 10 和 Windows Server 2016 之前的 Windows 版本上執行時，.NET Core 需要 Visual C++ 可轉散發套件。 如果您使用 .NET Core 安裝程式，會自動為您安裝此相依性。 不過，如果您是透過[安裝程式指令碼](./tools/dotnet-install-script.md)安裝 .NET Core 或部署獨立的 .NET Core 應用程式，則需要手動安裝 [Microsoft Visual C++ 2015 可轉散發套件 Update 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685)。
 
@@ -46,8 +43,7 @@ ms.lasthandoff: 06/29/2017
 > <em>僅適用於 Windows 7 和 Windows Server 2008 電腦：</em><br>
 > 確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 Hotfix [KB2533623](https://support.microsoft.com/help/2533623)。
 
-## 使用 Visual Studio 2017 的必要條件
-<a id="prerequisites-with-visual-studio-2017" class="xliff"></a>
+## <a name="prerequisites-with-visual-studio-2017"></a>使用 Visual Studio 2017 的必要條件
 
 您可以使用 .NET Core SDK 以使用您選擇的任何編輯器來開發 .NET Core 應用程式。 不過，如果您想要在整合式開發環境中於 Windows 上開發 .NET Core 應用程式，您可以使用 [Visual Studio 2017](#visual-studio-2017)。
 
@@ -57,7 +53,7 @@ ms.lasthandoff: 06/29/2017
 若要使用 Visual Studio 2017 開發 .NET Core 應用程式，您必須安裝最新版本的 Visual Studio 並選取 [.NET Core 跨平台開發] 工具組 (在 [其他工具組] 區段中)。
 ![已選取 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 安裝螢幕擷取畫面](./media/windows-prerequisites/vs_workloads.jpg)
 
-Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) 開始使用。  若要深入了解 Visual Studio 安裝程序，請參閱 [Install Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) (安裝 Visual Studio 2017)。
+Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) 開始使用。  若要深入了解 Visual Studio 安裝程序，請參閱 [Install Visual Studio 2017](/visualstudio/install/install-visual-studio) (安裝 Visual Studio 2017)。
 
 若要確認您是否正在執行最新版本的 Visual Studio 2017，請執行下列動作︰
 

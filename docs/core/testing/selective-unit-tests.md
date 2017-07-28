@@ -1,5 +1,5 @@
 ---
-title: "執行多樣化選擇的單位測試 | Microsoft Docs"
+title: "執行多樣化選擇的單元測試"
 description: "示範如何使用篩選運算式搭配 dotnet 測試命令執行多樣化選擇的單元測試。"
 keywords: ".NET, .NET Core, 單元測試, 多樣化選擇的測試"
 author: smadala
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: aceb0dc92b6c355a2b36a541d59cf1cd3cf4d0d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

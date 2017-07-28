@@ -1,5 +1,5 @@
 ---
-title: "建置 .NET Core Docker 映像 | Microsoft Docs"
+title: "建置 .NET Core Docker 映像"
 description: "了解 Docker 映像和 .NET Core"
 keywords: ".NET、.NET Core、Docker"
 author: spboyer
@@ -10,22 +10,20 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7f6be5a87923a12eef879b2f5acdafc1347588e3
-ms.openlocfilehash: a8ade58a9ff1f5e68865506d91c200681cec2aeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
  
 
-#建置 .NET Core 應用程式的 Docker 映像
-<a id="building-docker-images-for-net-core-applications" class="xliff"></a>
+#<a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
 
 為了解如何同時使用 .NET Core 和 Docker，我們必須先了解取得的不同 Docker 映像，以及正確的使用時機。 在此，我們會逐步解說所獲得的變化、建置 ASP.NET Core Web API、使用 Yeoman Docker 工具建立可偵錯的容器，以及預覽 Visual Studio Code 如何在程序中提供協助。 
 
-## Docker 映像最佳化
-<a id="docker-image-optimizations" class="xliff"></a>
+## <a name="docker-image-optimizations"></a>Docker 映像最佳化
 
 在建置開發人員的 Docker 映像時，我們會著重在三個主要案例︰
 
@@ -41,8 +39,7 @@ ms.lasthandoff: 06/26/2017
 
 雖然有多種版本的 .NET Core 映像，但它們全都共用一或多個圖層。 儲存所需的磁碟空間量，或從登錄提取的差異，遠小於整體，因為所有的映像共用相同的基底層，可能還有其他層。  
 
-## Docker 映像變化
-<a id="docker-image-variations" class="xliff"></a>
+## <a name="docker-image-variations"></a>Docker 映像變化
 
 為達成上述目標，我們在 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) 下提供映像變體。
 
@@ -50,8 +47,7 @@ ms.lasthandoff: 06/26/2017
 
 - `microsoft/dotnet:<version>-core`︰也就是 **microsoft/dotnet:1.0.0-core**，此映像會執行[可攜式 .NET Core 應用程式](../deploying/index.md)，並為了在**生產環境**中執行應用程式而經過最佳化。 它不包含 SDK，且表示要採用最佳化的 `dotnet publish` 輸出。 可攜式執行階段非常適合 Docker 容器案例，因為執行多個容器可從共用的映像圖層中得益。  
 
-## 替代的映像
-<a id="alternative-images" class="xliff"></a>
+## <a name="alternative-images"></a>替代的映像
 
 除了開發、建置和生產環境的最佳化案例，我們還提供其他映像︰
 
@@ -80,8 +76,7 @@ microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
 microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
 ```
 
-## 必要條件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要條件
 
 若要建置並執行，您需要安裝幾個項目︰
 
@@ -100,8 +95,7 @@ npm install -g yo generator-aspnet generator-docker
 > [!NOTE]
 > 這個範例會使用 [Visual Studio Code](http://code.visualstudio.com) 當作編輯器。
 
-## 建立 Web API 應用程式
-<a id="creating-the-web-api-application" class="xliff"></a>
+## <a name="creating-the-web-api-application"></a>建立 Web API 應用程式
 
 針對參考點，在將應用程式放入容器前，要先在本機執行應用程式。 
 
@@ -132,8 +126,7 @@ dotnet restore
 
 使用 `Ctrl+C` 停止應用程式。
 
-## 新增 Docker 支援
-<a id="adding-docker-support" class="xliff"></a>
+## <a name="adding-docker-support"></a>新增 Docker 支援
 
 使用來自 Microsoft 的 Yeoman 產生器可將 Docker 支援加入專案。 目前，它透過建立協助在容器內建置和執行專案的 Dockerfile 和指令碼，支援 .NET Core、Node.js 和 Go 專案。 也會加入 Visual Studio Code 特定檔案 (launch.json、tasks.json) 供編輯器偵錯和命令調色盤支援。
 
@@ -182,8 +175,7 @@ $ yo docker
 
 **Dockerfile**：此映像是以 **microsoft/dotnet:1.0.0-core** 為基礎的發行映像，應該用於生產環境。 此映像在建置時約為 253 MB。
 
-### 建立 Docker 映像
-<a id="creating-the-docker-images" class="xliff"></a>
+### <a name="creating-the-docker-images"></a>建立 Docker 映像
 使用 `dockerTask.sh` 或 `dockerTask.ps1` 指令碼，我們可以針對特定的環境建置或撰寫 **api** 應用程式的映像和容器。 執行下列命令以建置**偵錯**映像。
 
 ```bash
@@ -225,8 +217,7 @@ api                 debug                70e89fbc5dbe        1 hour ago        7
 api                 latest               ef17184c8de6        1 hour ago        260.7 MB
 ```
 
-## 總結
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>總結
 
 使用 Docker 產生器將必要的檔案新增至 Web API 應用程式，曾經讓建立開發和生產環境版本映像的程序變得簡單。  這項工具之所以能夠跨平台，是因為它也提供 PowerShell 指令碼來達成，在提供於容器內逐步偵錯應用程式的 Windows 和 Visual Studio 整合中達到相同的結果。 透過了解映像變體和目標案例，您可以最佳化內部迴圈開發程序，同時達到最佳化生產環境部署的映像。  
 

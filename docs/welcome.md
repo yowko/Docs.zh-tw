@@ -1,5 +1,5 @@
 ---
-title: "歡迎使用 .NET | Microsoft Docs"
+title: "歡迎使用 .NET"
 description: "開始使用 .NET 系列的技術。"
 keywords: ".NET, .NET Core, getting started, news, 使用者入門, 新聞"
 author: richlander
@@ -9,23 +9,21 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 歡迎使用 .NET
-<a id="welcome-to-net" class="xliff"></a>
+# <a name="welcome-to-net"></a>歡迎使用 .NET
 
 請參閱 [.NET Core 使用者入門](core/get-started.md)以了解如何建立 .NET Core 應用程式。
 
 使用免費的跨平台工具，透過 .NET 建置多種類型的應用程式，例如雲端、IoT 和遊戲。 您的應用程式可以在 Android、iOS、Linux、macOS 及 Windows 上執行。 將應用程式部署到伺服器或桌上型電腦，並發行至應用程式市集，以部署到行動裝置上。 學生和業餘愛好者皆可以輕鬆使用 .NET，而我們也歡迎所有人參與這個氣氛熱絡的國際開發人員社群，並對眾多 .NET 技術直接做出貢獻。
 
-## 新聞
-<a id="news" class="xliff"></a>
+## <a name="news"></a>新聞
 
 - [.NET Standard 簡介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
 - [宣佈 .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/) \(英文\)
@@ -42,8 +40,7 @@ ms.lasthandoff: 07/06/2017
 - [.NET 一週大事](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
 - [Channel 9 上的 Build 2017 - Microsoft 最新技術和新聞的相關影片！(英文)](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
-## 文件
-<a id="documentation" class="xliff"></a>
+## <a name="documentation"></a>文件
 
 這份文件涵蓋各種平台和語言的 .NET 範圍。  您可以在下列任何各節中開始使用 .NET 和其語言：
 
@@ -54,10 +51,9 @@ ms.lasthandoff: 07/06/2017
 - [F# 指南](fsharp/index.md)
 - [Visual Basic 指南](visual-basic/index.md)
 
-此外，您可以瀏覽 [.NET API 參考](https://docs.microsoft.com/dotnet/api)。
+此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
 
-## 開啟原始檔
-<a id="open-source" class="xliff"></a>
+## <a name="open-source"></a>開啟原始檔
 
 這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。  您可以透過任何想要的方式參與，包括建立文件撰寫問題。  此外，.NET 本身大部分都是開放原始碼︰
 

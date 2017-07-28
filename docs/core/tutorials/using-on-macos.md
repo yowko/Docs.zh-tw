@@ -1,5 +1,5 @@
 ---
-title: "在 macOS 上開始使用 .NET Core | Microsoft Docs"
+title: "在 macOS 上開始使用 .NET Core"
 description: "本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。"
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
@@ -9,24 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 在 macOS 上開始使用 .NET Core
-<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
+# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
 
 本文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
 
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](http://code.visualstudio.com)。
 
-## 必要條件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要條件
 
 安裝 [.NET Core SDK (英文)](https://www.microsoft.com/net/core)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
@@ -34,8 +32,7 @@ ms.lasthandoff: 05/27/2017
 
 請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## 使用者入門
-<a id="getting-started" class="xliff"></a>
+## <a name="getting-started"></a>使用者入門
 
 在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/docs 存放庫[檢視或下載來源](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
@@ -114,8 +111,7 @@ namespace Library
 dotnet build
 ```
 
-## 建立測試專案
-<a id="create-the-test-project" class="xliff"></a>
+## <a name="create-the-test-project"></a>建立測試專案
 
 建置程式庫的測試專案。 從 *golden* 資料夾中，建立新的測試專案︰
 
@@ -178,8 +174,7 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-## 建立主控台應用程式
-<a id="create-the-console-app" class="xliff"></a>
+## <a name="create-the-console-app"></a>建立主控台應用程式
 
 您透過下列步驟所建立的主控台應用程式依存於您先前建立的程式庫專案，並在它執行時呼叫它的程式庫方法。 使用這種模式的開發，您會看到如何建立多個專案的可重複使用程式庫。
 
@@ -220,8 +215,7 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-## 進行應用程式偵錯
-<a id="debug-the-application" class="xliff"></a>
+## <a name="debug-the-application"></a>進行應用程式偵錯
 
 在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 做法是在游標位於 `WriteLine` 行上方時按下 <kbd>F9</kbd> 鍵，或在您要設定中斷點之行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
 

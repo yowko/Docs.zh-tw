@@ -1,5 +1,5 @@
 ---
-title: "C# 語言和 .NET Framework 簡介 | Microsoft Docs"
+title: "C# 語言和 .NET Framework 簡介"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
@@ -64,7 +64,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  下列是一些其他 C# 資源：  
   
--   如需此語言的一般簡介，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification.md)的第 1 章。  
+-   如需此語言的一般簡介，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)的第 1 章。  
   
 -   如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。  
   
@@ -89,4 +89,5 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="see-also"></a>另請參閱  
  [C#](../../csharp/csharp.md)   
- [Visual C# 和 Visual Basic 使用者入門](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

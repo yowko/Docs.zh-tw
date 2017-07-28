@@ -1,5 +1,5 @@
 ---
-title: "裝載 .NET Core | Microsoft Docs"
+title: "裝載 .NET Core"
 description: "從機器碼裝載 .NET Core 執行階段"
 keywords: ".NET, .NET Core, 裝載, 裝載 .NET Core"
 author: mjrousos
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
-ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61c321b512b1920718196319d367f467f9291b2a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -110,9 +110,9 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
   domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",    // Target managed assembly
+  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
   L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                    // Target entry point (static method)
+  L"Main",                                  // Target entry point (static method)
   (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);
