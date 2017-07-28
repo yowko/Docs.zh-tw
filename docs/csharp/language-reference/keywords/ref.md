@@ -52,7 +52,7 @@ ms.lasthandoff: 03/13/2017
   
  類別的成員不能擁有僅在 `ref` 和 `out` 方面不同的簽章。 如果類型的兩個成員之間唯一的區別在於其中一個具有 `ref` 參數，而另一個具有 `out` 參數，則編譯器會發生錯誤。 例如，下列程式碼不會進行編譯。  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)] 
+ [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
   
  不過，當一種方法具有 `ref` 或 `out` 參數，而另一種方法具有實值參數時，可以完成多載，如下列範例所示。  
   
