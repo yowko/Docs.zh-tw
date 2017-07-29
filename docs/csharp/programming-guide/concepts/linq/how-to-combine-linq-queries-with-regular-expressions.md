@@ -1,5 +1,5 @@
 ---
-title: "如何：使用規則運算式合併 LINQ 查詢 (C#) | Microsoft Docs"
+title: "如何：使用規則運算式合併 LINQ 查詢 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: 9ba49d25f9e31fc0fcceff5f213a6df703fd41e2
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0acf66885765148b668897716d6fe1f8ad0a2fcf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>如何：使用規則運算式合併 LINQ 查詢 (C#)

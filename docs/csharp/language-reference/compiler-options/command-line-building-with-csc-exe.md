@@ -1,5 +1,5 @@
 ---
-title: "使用 csc.exe 建置命令列 | Microsoft Docs"
+title: "使用 csc.exe 建置命令列"
 ms.date: 2017-04-19
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d90dc35fd985cbe35cfe86f7c299bd12aed11365
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/10/2017
 
 如果您使用標準 [命令提示字元] 視窗，則必須先調整路徑，才能在電腦上的任何子目錄中叫用 *csc.exe*。 您也必須執行 *vsvars32.bat* 來設定適當的環境變數，以便支援命令列組建。 如需 *vsvars32.bat* 的詳細資訊，包括如何尋找和執行的指示，請參閱[如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
-如果您是在只有 [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong_md.md)] 的電腦上工作，則可以在 [SDK 命令提示字元] (可從 [Microsoft .NET Framework SDK] 功能表選項開啟) 中使用 C# 編譯器。
+如果您是在只有 [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] 的電腦上工作，則可以在 [SDK 命令提示字元] (可從 [Microsoft .NET Framework SDK] 功能表選項開啟) 中使用 C# 編譯器。
 
 您也可以使用 MSBuild 以程式設計的方式建置 C# 程式。 如需詳細資訊，請參閱 [MSBuild](/visualstudio/msbuild/msbuild)。
 
@@ -81,37 +81,37 @@ C# 編譯器會在解譯作業系統命令列所指定的引數時使用下列�
 
 - 編譯可產生 *File.exe* 的 *File.cs*：
 
-```
+```console
 csc File.cs 
 ```
 
 - 編譯可產生 *File.dll* 的 *File.cs*：
 
-```
+```console
 csc /target:library File.cs
 ```
 
 - 編譯 *File.cs* 並建立 *My.exe*：
 
-```
+```console
 csc /out:My.exe File.cs
 ```
 
 - 在啟用最佳化的情況下編譯目前目錄中的所有 C# 檔案，並定義 DEBUG 符號。 輸出為 *File2.exe*：
 
-```
+```console
 csc /define:DEBUG /optimize /out:File2.exe *.cs
 ```
 
 - 編譯產生 *File2.dll* 偵錯版本之目前目錄中的所有 C# 檔案。 不會顯示標誌和警告：
 
-```
+```console
 csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
 ```
 
 - 將目前目錄中的所有 C# 檔案都編譯為 *Something.xyz* (DLL)：
 
-```
+```console
 csc /target:library /out:Something.xyz *.cs
 ```
 

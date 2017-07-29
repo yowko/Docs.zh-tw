@@ -1,5 +1,5 @@
 ---
-title: "如何：修改 Office Open XML 文件 (C#) | Microsoft Docs"
+title: "如何：修改 Office Open XML 文件 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 73cf5130ee4d08398251764bbe4a953f2fde917c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>如何：修改 Office Open XML 文件 (C#)
@@ -30,7 +29,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  這個範例會尋找文件中的第一個段落元件。 它會從段落擷取文字，然後刪除段落中的所有文字執行。 它所建立的新文字執行包含已轉換為大寫的第一個段落文字。 接著，它會將變更的 XML 序列化為 Open XML 封裝並加以關閉。  
   
- 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的類型。  
+ 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
   
 ```csharp  
 public static class LocalExtensions  
@@ -162,3 +161,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>另請參閱  
  [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

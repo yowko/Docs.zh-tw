@@ -1,5 +1,5 @@
 ---
-title: "如何：變更整個 XML 樹狀結構的命名空間 (C#) | Microsoft Docs"
+title: "如何：變更整個 XML 樹狀結構的命名空間 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce710355e410e123fb9c4129e8d7bf339d5beff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ffebf1bda275eb815ff3e15538fd69de6d3b0c1a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>如何：變更整個 XML 樹狀結構的命名空間 (C#)
-您有時候必須以程式設計的方式，變更項目或屬性的命名空間。 LINQ to XML 可以簡化這個程序。 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> 屬性可被設定。 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> 屬性無法設定，但您可以輕鬆將屬性複製到 <xref:System.Collections.Generic.List%601?displayProperty=fullName>、移除現有的屬性，然後新增所需新命名空間中的新屬性。  
+您有時候必須以程式設計的方式，變更項目或屬性的命名空間。 LINQ to XML 可以簡化這個程序。 您可以設定 <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> 屬性。 您無法設定 <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> 屬性 (Property)，但是您可以輕易地將屬性 (Attribute) 複製到 <xref:System.Collections.Generic.List%601?displayProperty=fullName>、移除現有的屬性 (Attribute)，然後加入所需之新命名空間中的新屬性 (Attribute)。  
   
  如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
@@ -92,3 +91,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>另請參閱  
  [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

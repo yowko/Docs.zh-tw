@@ -1,5 +1,5 @@
 ---
-title: "如何：聯結兩個集合 (LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：聯結兩個集合 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30e68bb1fef31d9ef8f4ea6ea5262ae9efe466a1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ca088637629453b9d9f801b576ff195844c0bd1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>如何：聯結兩個集合 (LINQ to XML) (C#)
@@ -27,7 +26,7 @@ XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如
   
  [範例 XSD 檔：客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)主題包含可用於驗證此文件的 XSD。 它會使用 XSD 的 `xs:key` 和 `xs:keyref` 功能來建立 `CustomerID` 項目的 `Customer` 屬性為索引鍵，並在每個 `CustomerID` 項目中的 `Order` 項目和每個 `CustomerID` 項目中的 `Customer` 屬性之間建立關聯性。  
   
- 利用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，您可以使用 `join` 子句來利用此關聯性。  
+ 利用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以使用 `join` 子句來利用此關聯性。  
   
  請注意，因為沒有可用的索引，所以這種聯結的執行階段效能會比較差。  
   
@@ -139,3 +138,4 @@ Attempting to validate, custOrdDoc validated
   
 ## <a name="see-also"></a>另請參閱  
  [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

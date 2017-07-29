@@ -1,5 +1,5 @@
 ---
-title: "如何：在 Visual Basic 中記錄例外狀況 | Microsoft Docs"
+title: "如何：在 Visual Basic 中記錄例外狀況"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 8a5233f5e39c5e6c423a453cd241be40877d2ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: adf2dc683a139d21f24379efc779d4510a2057eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>如何：在 Visual Basic 中記錄例外狀況
@@ -71,9 +71,9 @@ ms.lasthandoff: 05/22/2017
   
 1.  在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。  
   
-2.  按一下 [應用程式] 索引標籤。  
+2.  按一下 [應用程式]  索引標籤。  
   
-3.  按一下 [檢視應用程式事件] 按鈕以開啟 [程式碼編輯器]。  
+3.  按一下 [檢視應用程式事件]  按鈕以開啟 [程式碼編輯器]。  
   
      這會開啟 ApplicationEvents.vb 檔案。  
   
@@ -99,3 +99,4 @@ ms.lasthandoff: 05/22/2017
  [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
  [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+
