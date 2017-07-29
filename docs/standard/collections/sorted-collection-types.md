@@ -1,5 +1,5 @@
 ---
-title: "排序集合類型 | Microsoft Docs"
+title: "排序集合類型"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,15 +19,14 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 375babff42f13c41852651811f92f6bdda91b1e2
-ms.openlocfilehash: 7b4a762e3021e80a15d66b15589eec2e269a2888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="sorted-collection-types" class="xliff"></a>
-# 排序集合類型
+# <a name="sorted-collection-types"></a>排序集合類型
 <xref:System.Collections.SortedList?displayProperty=fullName> 類別、<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> 泛型類別和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> 泛型類別，類似於實作 <xref:System.Collections.IDictionary> 介面的 <xref:System.Collections.Hashtable> 類別和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，但它們會依索引鍵的排序次序維持其項目，沒有 O(1) 插入和雜湊資料表的擷取特性。 三個類別有數個共用功能︰  
   
 -   這三個類別都實作 <xref:System.Collections.IDictionary?displayProperty=fullName> 介面。 兩個泛型類別還會實作 <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName> 泛型介面。  
@@ -57,8 +56,7 @@ ms.lasthandoff: 06/15/2017
   
  自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，<xref:System.Collections.Generic.SortedSet%601> 類別會提供自我平衡樹狀目錄，以在插入、刪除和搜尋之後依排序次序維護資料。 這個類別和 <xref:System.Collections.Generic.HashSet%601> 類別會實作 <xref:System.Collections.Generic.ISet%601> 介面。  
   
-<a id="see-also" class="xliff"></a>
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.IDictionary?displayProperty=fullName>   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
