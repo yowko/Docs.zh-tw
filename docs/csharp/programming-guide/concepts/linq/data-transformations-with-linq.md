@@ -38,14 +38,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: b97d55045a999f3714a5af41fc4247e87684b6c3
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f8db095447a2360f275215c5190f479d11288d3c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 不只是關於擷取資料。 它也是功能強大的資料轉換工具。 使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但或許 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 最強大的功能查詢就是能夠建立新的類型。 這是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
+[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 不只是關於擷取資料。 它也是功能強大的資料轉換工具。 使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但或許 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 最強大的功能查詢就是能夠建立新的類型。 這是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
   
 -   將多個輸入序列合併為具有新類型的單一輸出序列。  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 07/03/2017
  這些只是一些範例。 當然，這些轉換可以用各種方式結合在相同的查詢中。 此外，一個查詢的輸出序列也可用作新查詢的輸入序列。  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>將多個輸入聯結成一個輸出序列  
- 您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢來建立輸出序列，其中包含來自多個輸入序列的項目。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
+ 您可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢來建立輸出序列，其中包含來自多個輸入序列的項目。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
@@ -88,14 +88,14 @@ ms.lasthandoff: 07/03/2017
  如需詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>將記憶體中的物件轉換成 XML  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  該程式碼會產生下列 XML 輸出：  
   
-```xml  
-<Root>  
+```  
+< Root>  
   <student>  
     <First>Svetlana</First>  
     <Last>Omelchenko</Last>  
@@ -120,7 +120,7 @@ ms.lasthandoff: 07/03/2017
  輸出序列可能不會包含來自來源序列的任何項目或項目屬性。 輸出可能會是使用來源項目作為輸入引數而計算的值序列。 下列簡單的查詢在執行時，會輸出字串的序列，這些字串的值代表了以 `double` 類型之項目的來源序列為基礎的計算。  
   
 > [!NOTE]
->  如果查詢會轉譯成某個其他領域，則不支援在查詢運算式中呼叫方法。 例如，您無法在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 呼叫一般 C# 方法，因為 SQL Server 沒有它的內容。 不過，您可以將預存程序對應至方法，並呼叫它們。 如需詳細資訊，請參閱[預存程序](../../../../framework/data/adonet/sql/linq/stored-procedures.md)。  
+>  如果查詢會轉譯成某個其他領域，則不支援在查詢運算式中呼叫方法。 例如，您無法在 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 呼叫一般 C# 方法，因為 SQL Server 沒有它的內容。 不過，您可以將預存程序對應至方法，並呼叫它們。 如需詳細資訊，請參閱[預存程序](../../../../framework/data/adonet/sql/linq/stored-procedures.md)。  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   

@@ -43,7 +43,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="how-to-check-connection-status-in-visual-basic"></a>如何：在 Visual Basic 中檢查連接狀態
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A> 屬性可用來判斷電腦具有工作中的網路或網際網路連線。  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
 ### <a name="to-check-whether-a-computer-has-a-working-connection"></a>檢查電腦是否有工作中的連線  
   

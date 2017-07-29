@@ -1,5 +1,5 @@
 ---
-title: "緩和：在應用程式定義域之間還原序列化物件"
+title: "風險降低：在應用程式定義域之間還原序列化物件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f86ddcb86f3361665498ca0e34bf9147338551
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
@@ -60,4 +60,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
-

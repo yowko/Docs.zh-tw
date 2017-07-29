@@ -1,5 +1,5 @@
 ---
-title: "風險降低：WPF 視窗呈現"
+title: "風險降低：WPF 視窗呈現 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 57d4cc56cc8d3a4dc3614043779eb09d7a8b8e25
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c911513551e9629a4a6975762c1952c73c50f733
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-wpf-window-rendering"></a>風險降低：WPF 視窗呈現
@@ -34,7 +34,7 @@ ms.lasthandoff: 07/28/2017
   
 -   您可將 `<EnableMultiMonitorDisplayClipping>` 項目加入應用程式組態檔的 `<appSettings>` 區段，以針對在 Windows 8 或更新版本中執行的應用程式停用或啟用此行為。 例如，下列組態區段會停用呈現時不裁剪的行為：  
   
-    ```xml  
+    ```  
     <appSettings>  
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>  
       </appSettings>  

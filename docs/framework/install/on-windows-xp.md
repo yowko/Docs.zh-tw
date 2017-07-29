@@ -5,22 +5,22 @@ author: rlander
 keywords: ".NET Framework, 安裝"
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: .net-framework
+ms.prod: .net-framework-4.6
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a4bf14ad57495c5d6cd2ba40e2bd63b91551e33
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
+ms.openlocfilehash: 1355f8d70d9b256e3b0b9bf00ef80889aa35fb69
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 05/11/2017
 
 ---
 
-# <a name="install-the-net-framework-on-windows-xp"></a>在 Windows XP 上安裝 .NET Framework
+# <a name="installing-the-net-framework-on-windows-xp"></a>在 Windows XP 上安裝 .NET Framework
 
-> [!NOTE]
-> Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且支援最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。
+> [!NOTE] 
+> Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且支援最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。 
 
 您可能需要 .NET Framework，才能在 Windows XP 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
 

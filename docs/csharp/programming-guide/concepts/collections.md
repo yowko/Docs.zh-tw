@@ -16,11 +16,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 6ce347ec50378590946c756b3adbf64fe855874d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8fb5101eabd95dd6574caf344a428afcd4bf648c
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="collections-c"></a>集合 (C#)
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/10/2017
   
  集合是類別，因此您必須在將項目加入該集合之前，宣告類別的執行個體。  
   
- 如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
+ 如果集合包含只有一個資料型別的項目，則可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間中的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
   
 > [!NOTE]
 >  在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞。  
@@ -81,7 +80,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye  
 ```  
   
- 如果預先知道集合的內容，即可使用「集合初始設定式」來初始化集合。 如需詳細資訊，請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ 如果預先知道集合的內容，即可使用「集合初始設定式」**來初始化集合。 如需詳細資訊，請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
   
  下列範例與前一個範例相同，但有一點除外，就是集合初始設定式是用來將項目加入集合中。  
   
@@ -157,7 +156,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8  
 ```  
   
- 如需 <xref:System.Collections.Generic.List%601> 中的項目類型，您也可以定義自己的類別。 在下列範例中，<xref:System.Collections.Generic.List%601> 使用的 `Galaxy` 類別是在程式碼中定義的。  
+ 針對 <xref:System.Collections.Generic.List%601> 中項目的類型，您也可以定義自己的類別。 在下列範例中，<xref:System.Collections.Generic.List%601> 所使用的 `Galaxy` 類別定義於程式碼中。  
   
 ```csharp  
 private static void IterateThroughList()  
@@ -207,7 +206,7 @@ public class Galaxy
   
  下表列出 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間的一些常用類別：  
 
-|類別|描述| 
+|類別|說明| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示根據索引鍵所整理的索引鍵/值組集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可以依照索引存取的物件清單。 提供搜尋、排序和修改清單的方法。|  
@@ -219,28 +218,28 @@ public class Galaxy
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 類別  
- 在 .NET Framework 4 或更新版本中，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。  
+ 在 .NET Framework 4 或更新版本中，<xref:System.Collections.Concurrent> 命名空間中的集合提供有效率的安全執行緒作業，可從多個執行緒存取集合項目。  
   
- 每當有多個執行緒同時存取集合時，應該使用 <xref:System.Collections.Concurrent> 命名空間中的類別來代替 <xref:System.Collections.Generic?displayProperty=fullName> 和 <xref:System.Collections?displayProperty=fullName> 命名空間中的對應類型。 如需詳細資訊，請參閱[安全執行緒集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。  
+ 每當有多個執行緒同時存取集合時，應該使用 <xref:System.Collections.Concurrent> 命名空間中的類別來代替 <xref:System.Collections.Generic?displayProperty=fullName> 和 <xref:System.Collections?displayProperty=fullName> 命名空間中的對應類型。 如需詳細資訊，請參閱[安全執行緒集合](../../../standard/collections/threadsafe/index.md)和 <xref:System.Collections.Concurrent>。  
   
- <xref:System.Collections.Concurrent> 命名空間中包含一些類別，包括 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
+ <xref:System.Collections.Concurrent> 命名空間中包含的一些類別為 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections 類別  
- <xref:System.Collections?displayProperty=fullName> 命名空間中的類別不會將項目儲存為特別類型物件，而是會儲存為 `Object` 類型的物件。  
+ <xref:System.Collections?displayProperty=fullName> 命名空間中的類別不會將項目儲存為特別類型物件，而是儲存為 `Object` 類型的物件。  
   
  可能的話，您應該使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間或 <xref:System.Collections.Concurrent> 命名空間中的泛型集合，而非 `System.Collections` 命名空間中的傳統類型。  
   
  下表列出 `System.Collections` 命名空間的一些常用類別：  
   
-|類別|描述|  
+|類別|說明|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|代表會視需要動態增加大小的物件陣列。|  
 |<xref:System.Collections.Hashtable>|代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。|  
 |<xref:System.Collections.Queue>|表示物件的先進先出 (FIFO) 集合。|  
 |<xref:System.Collections.Stack>|表示物件的後進先出 (LIFO) 集合。|  
   
- <xref:System.Collections.Specialized> 命名空間會提供特製化類型和強型別集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。  
+ <xref:System.Collections.Specialized> 命名空間會提供特殊類型和強型別集合類別，例如只有字串的集合，以及連結清單和 Hybrid 字典。  
 
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>實作索引鍵/值組集合。  
@@ -314,7 +313,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }  
 ```  
   
- 下列範例會使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 屬性來依索引鍵快速尋找項目。 藉由使用 C# 中的 `elements[symbol]`，`Item` 屬性可讓您存取 `elements` 集合中的項目。  
+ 下列範例會使用 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 屬性，依索引鍵快速尋找項目。 藉由使用 C# 中的 `elements[symbol]`，`Item` 屬性可讓您存取 `elements` 集合中的項目。  
   
 ```csharp  
 private static void FindInDictionary(string symbol)  
@@ -333,7 +332,7 @@ private static void FindInDictionary(string symbol)
 }  
 ```  
   
- 下列範例會使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法依索引鍵來快速尋找項目。  
+ 下列範例會改為使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法，依索引鍵快速尋找項目。  
   
 ```csharp  
 private static void FindInDictionary2(string symbol)  
@@ -397,11 +396,11 @@ public class Element
 
 <a name="BKMK_Sorting"></a>
 ## <a name="sorting-a-collection"></a>為集合排序  
- 下列範例說明排序集合的程序。 此範例排序儲存在 <xref:System.Collections.Generic.List%601> 中的 `Car` 類別執行個體。 `Car` 類別實作 <xref:System.IComparable%601> 介面，而這個介面要求實作 <xref:System.IComparable%601.CompareTo%2A> 方法。  
+ 下列範例說明排序集合的程序。 此範例排序儲存在 <xref:System.Collections.Generic.List%601> 中的 `Car` 類別執行個體。 `Car` 類別會實作 <xref:System.IComparable%601> 介面，而此介面需要實作 <xref:System.IComparable%601.CompareTo%2A> 方法。  
   
- 每次對 <xref:System.IComparable%601.CompareTo%2A> 方法的呼叫都會進行用於排序的單一比較。 當目前物件和另一個物件比較時，在 `CompareTo` 方法中的使用者撰寫程式碼會傳回值。 如果目前物件比另一個物件小則傳回的值小於零，如果目前物件比另一個物件大則傳回的值大於零，如果它們相等則傳回零。 這可讓您以程式碼定義大於、小於、等於的準則。  
+ 每個 <xref:System.IComparable%601.CompareTo%2A> 方法呼叫都會進行用於排序的單一比較。 當目前物件和另一個物件比較時，在 `CompareTo` 方法中的使用者撰寫程式碼會傳回值。 如果目前物件比另一個物件小則傳回的值小於零，如果目前物件比另一個物件大則傳回的值大於零，如果它們相等則傳回零。 這可讓您以程式碼定義大於、小於、等於的準則。  
   
- 在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。 對 <xref:System.Collections.Generic.List%601> 之 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的這個呼叫，會導致 `CompareTo` 方法對 `List` 的 `Car` 物件自動呼叫。  
+ 在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。 <xref:System.Collections.Generic.List%601> 的這個 <xref:System.Collections.Generic.List%601.Sort%2A> 方法呼叫，會針對 `List` 中的 `Car` 物件自動呼叫 `CompareTo` 方法。  
   
 ```csharp  
 private static void ListCars()  
@@ -475,13 +474,13 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>定義自訂集合  
- 您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。 如需其他資訊，請參閱[如何：使用 foreach 存取集合類別](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)。  
+ 您可以實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。 如需其他資訊，請參閱[如何：使用 foreach 存取集合類別](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)。  
   
  雖然您可以定義自訂集合，但是使用包含在 .NET Framework 中的集合 (本主題稍早在[集合的種類](#BKMK_KindsOfCollections)中所述) 通常會比較好。  
   
- 下列範例會定義名為 `AllColors` 的自訂集合類別。 這個類別實作 <xref:System.Collections.IEnumerable> 介面，該介面要求實作 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。  
+ 下列範例會定義名為 `AllColors` 的自訂集合類別。 這個類別會實作 <xref:System.Collections.IEnumerable> 介面，而此介面需要實作 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。  
   
- `GetEnumerator` 方法會傳回 `ColorEnumerator` 類別的執行個體。 `ColorEnumerator` 實作 <xref:System.Collections.IEnumerator> 介面，而此介面會要求實作 <xref:System.Collections.IEnumerator.Current%2A> 屬性、<xref:System.Collections.IEnumerator.MoveNext%2A> 方法和 <xref:System.Collections.IEnumerator.Reset%2A> 方法。  
+ `GetEnumerator` 方法會傳回 `ColorEnumerator` 類別的執行個體。 `ColorEnumerator` 會實作 <xref:System.Collections.IEnumerator> 介面，而此介面需要實作 <xref:System.Collections.IEnumerator.Current%2A> 屬性、<xref:System.Collections.IEnumerator.MoveNext%2A> 方法和 <xref:System.Collections.IEnumerator.Reset%2A> 方法。  
   
 ```csharp  
 private static void ListColors()  
@@ -556,7 +555,7 @@ public class Color
 
 <a name="BKMK_Iterators"></a> 
 ##  <a name="iterators"></a>Iterator  
- 「迭代器」是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。  
+ 「迭代器」**是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。  
   
  您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。 `foreach` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
   
@@ -594,7 +593,7 @@ private static IEnumerable<int> EvenSequence(
  [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)   
  [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
+ [平行 LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
  [集合和資料結構](../../../standard/collections/index.md)   
  [建立和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
  [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)   

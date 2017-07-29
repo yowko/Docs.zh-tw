@@ -1,5 +1,5 @@
 ---
-title: "C# 運算子"
+title: "C# 運算子 | Microsoft Docs"
 ms.date: 2017-03-09
 ms.prod: .net
 ms.technology:
@@ -41,11 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>C# 運算子

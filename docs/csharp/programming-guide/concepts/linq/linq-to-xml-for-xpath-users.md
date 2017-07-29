@@ -14,18 +14,17 @@ ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: db09a2438df5592f4afa0b3882d7b8d5de6fa1c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ff9490d7eb89e1503763060dbd123d59308a512d
+ms.lasthandoff: 03/13/2017
 
 
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>XPath 使用者適用的 LINQ to XML (C#)
 這組主題顯示多個 XPath 運算式及其 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 對等用法。  
   
- 所有範例都使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中，<xref:System.Xml.XPath.Extensions?displayProperty=fullName> 的擴充方法所提供的 XPath 功能。 這些範例會同時執行 XPath 運算式與 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 運算式。 接著，每個範例都會比較兩個查詢的結果，以驗證 XPath 運算式在功能上等同於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢。 由於兩種類型的查詢都會從相同的 XML 樹狀結構傳回節點，因此會使用參考識別進行查詢結果比較。  
+ 所有範例都會使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 的 XPath 功能，該功能是由 <xref:System.Xml.XPath.Extensions?displayProperty=fullName> 的擴充方法所提供。 這些範例會同時執行 XPath 運算式與 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 運算式。 接著，每個範例都會比較兩個查詢的結果，以驗證 XPath 運算式在功能上等同於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢。 由於兩種類型的查詢都會從相同的 XML 樹狀結構傳回節點，因此會使用參考識別進行查詢結果比較。  
   
 ## <a name="in-this-section"></a>本章節內容  
   
@@ -52,4 +51,4 @@ ms.lasthandoff: 05/10/2017
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.XPath?displayProperty=fullName>   
  [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)   
- [使用 XPath 資料模型處理 XML 資料](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+ [使用 XPath 資料模型處理 XML 資料](http://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081)

@@ -70,7 +70,7 @@ string s = method.ReturnType.GetInterface
  [!code-cs[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Type?displayProperty=fullName>   

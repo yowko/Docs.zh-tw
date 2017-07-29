@@ -10,11 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 27c39f8c67a3f8288883a37025797a461c50f940
+ms.lasthandoff: 03/13/2017
 
 ---
 
@@ -113,9 +112,9 @@ calculateButton.Clicked += async (o, e) =>
 
     如果您的答案為「是」，則工作是 **CPU 繫結**。
     
-如果您的工作是「I/O 繫結」，請使用「沒有」`Task.Run` 的 `async` 和 `await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
+如果您的工作是「I/O 繫結」****，請使用「沒有」**`Task.Run` 的 `async` 和 `await`。  您「不應該」**使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
 
-如果您的工作是「CPU 繫結」，而且您關心回應性，請使用 `async` 和 `await`，但在「含」`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您也應該考慮使用 Task Parallel Library。
+如果您的工作是「CPU 繫結」****，而且您關心回應性，請使用 `async` 和 `await`，但在「含」**`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您也應該考慮使用 Task Parallel Library。
 
 此外，您應該一律測量程式碼的執行。  例如，您可能會發現，在進行多執行緒處理時，與內容切換的負擔相較之下，CPU 繫結工作較不耗費資源。  每個選項都有其取捨，您應該挑選適用於您情況的正確取捨。
 
@@ -230,7 +229,7 @@ public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
 
 這是需要記住的重要事項。  如果 `await` 未用於 `async` 方法的主體中，C# 編譯器將會產生警告，但程式碼的編譯和執行就像一般方法一樣。  請注意，因為 C# 編譯器針對非同步方法所產生的狀態機器不會完成任何作業，所以這也非常沒有效率。
 
-*   **您應該新增 “Async” 作為所撰寫之每個非同步方法名稱的尾碼。**
+*   **您應該新增 “Async” 作為所撰寫的每個非同步方法名稱的尾碼。**
 
 這是 .NET 中所使用的慣例，可更容易區分同步與非同步方法。 請注意，不一定會套用程式碼未明確呼叫的特定方法 (例如事件處理常式或 Web 控制器方法)。 因為您的程式碼未明確呼叫這些方法，則明確命名並不重要。
 

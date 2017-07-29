@@ -52,7 +52,7 @@ ms.lasthandoff: 03/13/2017
  將類別、結構或介面型別分割成數個檔案在處理大型專案，或者處理自動產生的程式碼，例如 [Windows Forms 設計工具](http://msdn.microsoft.com/en-us/3c3d61f8-f36c-4d41-b9c3-398376fabb15)提供的程式碼時，會很有用。 部分類別可包含[部分方法](../../../csharp/language-reference/keywords/partial-method.md)。 如需詳細資訊，請參閱[部分類別與方法](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

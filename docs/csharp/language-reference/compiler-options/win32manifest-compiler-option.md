@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bb28bf28c3d8a426322e1c1795941de7e9aa4bf6
-ms.openlocfilehash: fd8c0a9a398c8f8d6c589ffcf0426a375a82a6a8
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b9a5c7c994644d512d4049dbc5aab3fbea70d6ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (C# 編譯器選項)
@@ -43,7 +43,7 @@ ms.lasthandoff: 07/03/2017
   
 ## <a name="syntax"></a>語法  
   
-```console  
+```  
 /win32manifest: filename  
 ```  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 07/03/2017
  自訂資訊清單檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，[!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
+ 根據預設，[!INCLUDE[csharp_current_short](../../../csharp/language-reference/compiler-options/includes/csharp_current_short_md.md)] 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
   
 > [!NOTE]
 >  此選項與 [/win32res (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 選項互斥。 如果您嘗試在相同的命令列中使用這兩個選項，則會收到建置錯誤。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 07/03/2017
   
 -   您可以提供未指定所要求執行層級的自訂資訊清單。  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以在任何文字編輯器中建立自訂資訊清單，然後將檔案新增至專案，來新增自訂資訊清單。 或者，您可以使用滑鼠右鍵按一下方案總管中的 [專案] 圖示，並按一下 [新增項目]，然後按一下 [應用程式資訊清單檔案]。 新增全新或現有資訊清單檔案之後，它將會顯示在 [資訊清單] 下拉式清單中。 如需詳細資訊，請參閱[專案設計工具、應用程式頁面 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp)。  
+ [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以在任何文字編輯器中建立自訂資訊清單，然後將檔案新增至專案，來新增自訂資訊清單。 或者，您可以使用滑鼠右鍵按一下方案總管****中的 [專案]**** 圖示，並按一下 [新增項目]****，然後按一下 [應用程式資訊清單檔案]****。 新增全新或現有資訊清單檔案之後，它將會顯示在 [資訊清單]**** 下拉式清單中。 如需詳細資訊，請參閱[專案設計工具、應用程式頁面 (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp)。  
   
  您可以使用 [/nowin32manifest (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md) 選項，提供應用程式資訊清單作為自訂建置後步驟或 Win32 資源檔的一部分。 如果您想要應用程式受制於 Windows Vista 上的檔案或登錄虛擬化，請使用這個相同的選項。 這會防止編譯器在可攜式執行檔 (PE) 中建立和內嵌預設資訊清單。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  編譯器會將標準應用程式名稱 " MyApplication.app " 插入至 xml。 這是讓應用程式在 Windows Server 2003 Service Pack 3 上執行的因應措施。  
   
-```xml  
+```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
   <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>  

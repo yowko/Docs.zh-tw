@@ -31,7 +31,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="mitigation"></a>緩和  
  如果不想要這種行為，您可以將應用程式組態檔中的 `Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity` 參數設為 `true` 來還原舊版行為。 您會需要將下列內容加入 web.config 檔案的 [\<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段︰  
   
-```xml  
+```  
 <configuration>  
    <runtime>  
       <AppContextSwitchOverrides value="Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity=true" />  

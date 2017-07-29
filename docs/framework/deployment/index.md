@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3dbadeec14ce9c023af39ae4ff95d0183826e7c1
+ms.openlocfilehash: eb0f0636abb39eabb387388fcdd39df8aca88c34
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
@@ -57,13 +57,13 @@ ms.lasthandoff: 06/08/2017
   
     -   [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   在用戶端應用程式上部署 .NET Framework (適用於開發人員)：  
   
-    -   在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)  
+    -   在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield)  
   
-    -   [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
+    -   [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
   
     -   [建立 WiX 安裝套件](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -171,12 +171,12 @@ ms.lasthandoff: 06/08/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|  
-|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|  
+|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論可以避免能導致 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 及其他錯誤之類型識別問題的方法。|  
 |[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|  
 |[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|  
 |[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|  
 |[部署應用程式、服務和元件](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。| 
-|[發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|  
+|[發行 ClickOnce 應用程式](http://msdn.microsoft.com/library/eb6dfe79-f54c-4331-8e36-073688e70973)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|  
 |[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用來封裝及部署資源的中樞和輪輻模型；內容涵蓋資源命名慣例、後援程序和封裝替代方式。|  
 |[部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)|描述如何交付及安裝 Interop 應用程式，這類應用程式通常包含 .NET Framework 用戶端組件、代表各種不同 COM 類型程式庫的一或多個 Interop 組件，以及一或多個已註冊的 COM 元件。|  
 |[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何以無訊息模式啟動並追蹤 .NET Framework 安裝程序，並同時顯示您自己的安裝進度檢視。|  

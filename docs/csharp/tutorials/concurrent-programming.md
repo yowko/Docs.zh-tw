@@ -1,5 +1,5 @@
 ---
-title: "並行程式設計 - C# 指南 | Microsoft Docs"
+title: "並行程式設計 | C# 指南"
 description: "了解平行執行 (可能會受到 CPU 的限制) 工作的技術"
 keywords: "C#, 非同步, 受到 CPU 限制, 受到網路限制"
 ms.date: 08/24/2016
@@ -8,12 +8,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0f8b42de-858a-44a3-87d9-998211f26377
-redirect_url: /dotnet/csharp/tutorials/index
+redirect_url: /dotnet/articles/csharp/tutorials/index
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: d192086137b4efeaf6cf90af538a620282711bab
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 86546cc00abcb1279a0cd4c8cb6003ae412b2df7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 

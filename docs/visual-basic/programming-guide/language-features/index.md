@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 語言功能"
+title: "Visual Basic 語言功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,19 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3594e6622e8bc76839a15739a31ad27d17de8455
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
-下列主題介紹及討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] (一種物件導向的程式設計語言) 的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 和任何新式的程式設計語言一樣，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支援許多通用的程式設計建構和語言元素。  
+下列主題介紹及討論 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] (一種物件導向的程式設計語言) 的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 和任何新式的程式設計語言一樣，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 支援許多通用的程式設計建構和語言元素。  
   
- 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的建構類似於其他語言中的建構，但 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的事件導向本質還是引進了部分些微差異。  
+ 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的建構類似於其他語言中的建構，但 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 的事件導向本質還是引進了部分些微差異。  
   
- 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念之後，就可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 來建立功能強大的應用程式。  
+ 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念之後，就可以使用 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 來建立功能強大的應用程式。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -80,7 +79,7 @@ ms.lasthandoff: 07/28/2017
  說明何謂介面，以及如何在應用程式中使用它們。  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- 提供主題連結來介紹 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 功能和程式設計。  
+ 提供主題連結來介紹 [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)] 功能和程式設計。  
   
  [物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  提供物件和類別的概觀、它們的使用方式、其彼此間的關聯性，以及它們所公開的屬性、方法和事件。  
@@ -108,5 +107,4 @@ ms.lasthandoff: 07/28/2017
  說明部分由 .NET Framework 提供的集合型別。 示範如何使用簡單集合及金鑰/值組集合。  
   
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
- 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式設計各種層面的參考資訊。
-
+ 提供 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 程式設計各種層面的參考資訊。
