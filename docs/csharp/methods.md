@@ -10,11 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
-ms.openlocfilehash: 42ded63bacfb6ff2ceadde6fa37c7bddb413a933
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1418bfc7b40a8ce11f3294b571722ee6ca0c1393
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="methods"></a>方法 #
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 - [運算式主體成員](#expr)
 - [迭代器](#iterators)
 
-<a name="signatures"></a>
+<a name="簽章" /a>
 ## <a name="method-signatures"></a>方法簽章 ##
 
 指定下列項目以 `class` 或 `struct` 宣告方法：
@@ -58,80 +57,80 @@ ms.lasthandoff: 04/11/2017
 
 下例定義名為 `Motorcycle` 的類別，包含五個方法：
 
-[!code-csharp[csSnippets.Methods#40](../../samples/snippets/csharp/concepts/methods/methods40.cs#40)]
+[!CODE [csSnippets.Methods#40](../../samples/snippets/csharp/concepts/methods/methods40.cs#40)]
 
 請注意，`Motorcycle` 類別包含多載方法 `Drive`。 兩種方法有相同的名稱，但是必須依其參數型別區別。
 
-<a name="invocation"></a>
+<a name="invocation" />
 ## <a name="method-invocation"></a>方法引動過程 ##
 
-方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬型別的名稱來叫用靜態方法，靜態方法運作不會在執行個體資料上操作。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
+方法可以是「執行個體」**或「靜態」**。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬型別的名稱來叫用靜態方法，靜態方法運作不會在執行個體資料上操作。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
 
 呼叫方法就像是存取欄位。 在物件名稱後 (如果呼叫的是執行個體方法) 或型別名稱後 (如果呼叫的是 `static` 方法)，加上句點、方法名稱及括弧。 引數會在括號中列出，並以逗號分隔。
 
 方法定義會指定所需的任何參數的名稱和類型。 在呼叫端叫用方法時，它會針對每個參數提供具體值及呼叫的引數。 引數必須與參數型別相容，但在呼叫程式碼中使用的引數，其引數名稱不需要與方法中定義的具名參數相同。 在下例中，`Square` 方法包含名為 *i* 之 `int` 型別的單一參數。 第一個方法呼叫會傳遞給 `Square` 方法型別 `int` 的 *num* 變數，第二個傳遞數值常數，第三個傳遞運算式。
 
-[!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
+[!CODE [csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
 最常見的方法引動過程形式過去使用位置引數，現在則依方法參數的順序來提供引數。 因此可以如下列範例所示呼叫 `Motorcycle` 類別的方法。 例如，呼叫 `Drive` 方法包含兩個引數，它們會對應至方法語法的兩個參數。 第一個成為 `miles` 參數的值，第二個是 `speed` 參數的值。
 
-[!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
+[!CODE [csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-叫用方法時，您也可以使用「具名引數」，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
+叫用方法時，您也可以使用「具名引數」**，而不是使用位置引數。 使用具名引數時，您指定參數名稱，後面接著冒號 (":") 和引數。 方法的引數會以任意順序出現，只要有所有必要的引數。 下例使用具名引數來叫用 `TestMotorcycle.Drive` 方法。 本例中，具名引數的傳遞順序與方法參數清單的順序相反。
 
-[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
+[!CODE [csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
 您可以使用位置引數和具名引數來叫用方法。 但位置引數不能接在具名引數後面。 下例會使用一個位置引數和一個具名引數，從前一個範例叫用 `TestMotorcycle.Drive` 方法。
 
-[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
+[!CODE [csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
+ <a name="inherited" />
  ##<a name="inherited-and-overridden-methods"></a>繼承和覆寫方法 ##
 
 除了在型別中明確定義的成員外，型別會繼承在其基底類別中定義的成員。 因為 Managed 型別系統中的所有型別都是直接或間接繼承自 @System.Object 類別，所以所有的型別都會繼承其成員，例如 @System.Object.Equals(System.Object)、@System.Object.GetType 和 @System.Object.ToString。 下例定義 `Person` 類別、具現化兩個 `Person` 物件，並呼叫 `Person.Equals` 方法以判斷兩個物件是否相等。 但是 `Equals` 方法不是在 `Person` 類別中定義，它繼承自 @System.Object。
 
-[!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
+[!CODE [csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
 型別可以使用 `override` 關鍵字並提供覆寫方法的實作，來覆寫繼承的成員。 方法簽章必須和覆寫方法的簽章相同。 下例與前一例相似，不同之處在於它會覆寫 @Object.Equals(System.Object) 方法。 (它也會覆寫 @Object.GetHashCode 方法，因為兩種方法都是為了提供一致的結果。)
 
-[!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
+[!CODE [csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
-<a name="passing"></a>
+<a name="passing" />
 ## <a name="passing-parameters"></a>傳遞參數 ##
 
-C# 中的類型為「實值型別」「參考型別」。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
+C# 中的類型為「實值型別」**「參考型別」**。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
-<a name="byval"></a>
+<a name="byval" />
 ### <a name="passing-parameters-by-value"></a>以傳值方式傳遞參數 ###
 
 以傳值方式將實值型別傳遞至方法時，會將物件複本而不是物件本身傳遞至方法。 因此，當控制回到呼叫端時，呼叫的方法中的物件變更不會影響原始物件。
 
 下例會以傳值方式將實值型別傳遞至方法，而呼叫的方法會嘗試變更實值型別的值。 它會定義 `int` 型別的變數 (它是實值型別)、將其值初始化為 20，再將它傳遞給名為 `ModifyValue` 的方法，此方法會將變數值變更為 30。 但傳回方法時，變數的值會維持不變。
 
-[!code-csharp[csSnippets.Methods#10](../../samples/snippets/csharp/concepts/methods/byvalue10.cs#10)]
+[!CODE [csSnippets.Methods#10](../../samples/snippets/csharp/concepts/methods/byvalue10.cs#10)]
 
 當參考型別的物件以傳值方式傳遞至方法時，就會以傳值方式傳遞物件參考。 也就是說，此方法接收的不是物件本身，而是指出物件位置的引數。 如果您使用此參考來變更物件成員，當控制回到呼叫方法時，變更即會反映在物件中。 不過，當控制回到呼叫端時，取代傳遞至方法的物件不會影響原始物件。
 
 下例會定義名為`SampleRefType` 的類別 (此為參考型別)。 它會具現化 `SampleRefType` 物件、將 44 指派給其 `value` 欄位，再將物件傳遞至 `ModifyObject` 方法。 本例會執行基本上與上一個範例相同的動作，依傳值方式將引數傳遞至方法。 但因為使用了參考型別，所以結果會不同。 在 `ModifyObject` 中對 `obj.value` 欄位的修改，也會將 `Main` 方法中引數 `rt` 的 `value` 欄位變更成 33，如範例輸出所示。
 
-[!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
+[!CODE [csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
-<a name="byref"></a>
+<a name="byref" />
 ### <a name="passing-parameters-by-reference"></a>以傳址方式傳遞參數 ###
 
 當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映這項變更，您要以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 `ref` 或 `out` 關鍵字。
 
 下例與前例相同，唯一差異是值以傳址方式傳遞至 `ModifyValue` 方法。 在 `ModifyValue` 方法中修改參數值時，當控制回到呼叫端時會反映值的變更。
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref106.cs#106)]
+[!CODE [csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref106.cs#106)]
 
 依 ref 參數使用的常見模式包含交換變數值。 您以傳址方式將兩個變數傳遞至方法，且該方法會交換其內容。 下例會交換整數值。
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/swap107.cs#107)]
+[!CODE [csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/swap107.cs#107)]
 
 傳遞參考型別參數可讓您變更參考本身的值，而不是其個別項目或欄位的值。
 
-<a name="paramarray"></a>
+<a name="paramarray" />
 ### <a name="parameter-arrays"></a>參數陣列 ###
 
 有時候，指定方法之引數確切數目的需求會有限制。 使用 `params` 關鍵字指出某參數是參數陣列，可使用數目可變的引數來呼叫方法。 以 `params` 關鍵字標記的參數必須是陣列型別，而且必須是方法參數清單中的最後一個參數。
@@ -144,9 +143,9 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 下例定義名為 `DoStringOperation` 的方法，其執行其第一個參數所指定的字串作業 `StringOperation` 列舉成員。 參數陣列會在字串開始執行作業時即定義字串。 `Main` 方法會示範這三種叫用方法的方式。 請注意，以 `params` 關鍵字標記的方法必須準備好處理參數陣列中無任何提供引數的情況，因此其值是 `null`。
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!CODE [csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
-<a name="optional"></a>
+<a name="optional" />
 ## <a name="optional-parameters-and-arguments"></a>選擇性參數和引數 ##
 
 方法定義可以指定其參數為必要項目或選擇項目。 根據預設，參數為必要項目。 在方法定義中包含參數的預設值即可指定選擇性參數。 呼叫此方法時，如不為選擇性參數提供任何引數，則改用預設值。
@@ -161,7 +160,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 下例會定義 `ExampleMethod` 方法，它有一個必要參數和兩個選擇性參數。
 
-[!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
+[!CODE [csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
 如果使用位置引數叫用了有多個選擇性引數的方法，則呼叫端必須為所有選擇性參數提供引數，從第一個到最後一個。 以 `ExampleMethod` 方法為例，當呼叫端為 `description` 參數提供引數時，它也必須為 `optionalInt` 參數提供一個引數。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是有效的方法呼叫，而 `opt.ExampleMethod(2, , "Addition of 2 and 0);` 會產生「引數遺失」編譯器錯誤。
 
@@ -169,15 +168,15 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 下例呼叫三次 `ExampleMethod` 方法。  前兩個方法呼叫使用位置引數。 第一個省略了這兩個選擇性引數，而第二個省略了最後一個引數。 第三個方法呼叫提供了必要參數的位置引數，但在使用具名引數將值提供給 `description` 參數時省略 `optionalInt` 引數。
 
-[!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
+[!CODE [csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-使用選擇性參數會影響「多載解析」，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
+使用選擇性參數會影響「多載解析」**，或 C# 編譯器判斷依方法呼叫應叫用哪個特定多載的方式，如下所示︰
 
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。
 - 如果找到多個候選項目，則慣用轉換的多載解析規則會套用至明確指定的引數。 會忽略選擇性參數的省略引數。
 - 如果兩個候選項目的評斷結果一樣好，則偏向沒有選擇性參數的候選項目，其會在呼叫中省略引數。 這是多載解析一般偏好參數較少之候選項目的結果。
 
- <a name="return"></a>
+ <a name="return" />
  ## <a name="return-values"></a>傳回值 ##
 
 方法可以傳回值給呼叫者。 針對傳回型別，如果列在方法名稱前面的型別不是 `void`，則方法可以使用 `return` 關鍵字傳回值。 在 `return` 關鍵字後面接著符合傳回型別的變數、常數或運算式的陳述式，會將該值傳回給方法呼叫端。 具有非 void 傳回類型的方法需要使用 `return` 關鍵字以傳回值。 `return` 關鍵字也會停止執行方法。
@@ -186,17 +185,17 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 例如，這兩種方法使用 `return` 關鍵字傳回整數：
 
-[!code-csharp[csSnippets.Methods#44](../../samples/snippets/csharp/concepts/methods/return44.cs#44)]
+[!CODE [csSnippets.Methods#44](../../samples/snippets/csharp/concepts/methods/return44.cs#44)]
 
 若要使用從方法傳回的值，呼叫方法可以在使用相同類型值的任意位置使用方法呼叫本身即已足夠。 您也可以指派傳回值給變數。 例如，下列兩個程式碼範例會達到相同的目標：
 
-[!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/return44.cs#45)]
+[!CODE [csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/return44.cs#45)]
 
-[!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]
+[!CODE [csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/return44.cs#46)]
 
 使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。
 
-有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」和「Tuple 常值」輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下例中，`(string, string, string, int)` 會定義 `GetPersonalInfo` 方法傳回的 Tuple 型別。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
+有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」**和「Tuple 常值」**輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下例中，`(string, string, string, int)` 會定義 `GetPersonalInfo` 方法傳回的 Tuple 型別。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -240,9 +239,9 @@ if (person != null)
 
 如果方法將陣列當作引數傳遞並修改個別項目的值，方法就不需要傳回陣列，雖然您可選擇這樣做以取得良好的值樣式或功能性流程。  這是因為 C# 會以傳值方式傳遞所有的參考型別，而陣列參考的值是陣列的指標。 在下例中，以 `DoubleValues` 方法完成的 `values` 陣列內容變更，都可透過任何具有陣列參考的程式碼觀察到。
 
-[!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
+[!CODE [csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="exten"></a>
+ <a name="exten" />
  ## <a name="extension-methods"></a>擴充方法 ##
 
 一般來說，有兩種方式可將方法加入至現有的型別︰
@@ -254,7 +253,7 @@ if (person != null)
 
 如需詳細資訊，請參閱[擴充方法](https://msdn.microsoft.com/library/bb383977.aspx)。
 
-<a name="async"></a>
+<a name="async" />
 ## <a name="async-methods"></a>非同步方法 ##
 
 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。
@@ -268,13 +267,13 @@ if (person != null)
 
 在下例中，`DelayAsync` 是包含會傳回整數之 return 陳述式的非同步方法。 因為它是非同步方法，所以其方法宣告必須有傳回型別 `Task<int>`。 因為傳回型別是 `Task<int>`，所以 `DoSomethingAsync` 中 `await` 運算式的評估會產生整數，如下列 `int result = await delayTask` 陳述式所示。
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+[!CODE [csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
 非同步方法不可以宣告任何 [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) 或 [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) 參數，但是可以呼叫具有這類參數的方法。
 
  如需非同步方法的詳細資訊，請參閱 [Asynchronous Programming with async and await (C#)](https://msdn.microsoft.com/library/mt674882.aspx) (使用 Async 和 Await 進行非同步程式設計 (C#))、[Control Flow in Async Programs (C#)](https://msdn.microsoft.com/library/mt674892.aspx) (非同步程式中的控制流程 (C#)) 和 [Async Return Types (C#)](https://msdn.microsoft.com/library/mt674893.aspx) (非同步傳回型別 (C#))。
 
-<a name="expr"></a>
+<a name="expr" />
 ## <a name="expression-bodied-members"></a>運算式主體成員 ##
 
 方法定義只是立即傳回運算式的結果，或是具有單一陳述式做為方法的主體是很常見的。  使用 `=>`定義這類方法有個語法捷徑：
@@ -292,7 +291,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如果方法傳回 `void` 或為非同步方法，則方法的主體必須是陳述式運算式 (如同 Lambda)。  針對屬性和索引子，它們必須是唯讀，而且您不會使用 `get` 存取子關鍵字。
 
-<a name="iterators"></a>
+<a name="iterators" />
 ## <a name="iterators"></a>Iterator ##
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) 陳述式一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。

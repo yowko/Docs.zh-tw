@@ -31,11 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: e7f4cfa81de3c4db41d9303abf65cfd0edc926a4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/01/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8734f639e45f12ddd987a1c34e7f3ac38aa7d73f
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
@@ -65,7 +64,7 @@ string contents = await contentsTask;
  下列範例將示範非同步事件處理常式 `StartButton_Click` 與非同步方法 `ExampleMethodAsync` 之間的控制結構與流程。 非同步方法產生的結果是所下載網站的長度。 此程式碼適用於您在 Visual Studio 中建立的 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。請參閱有關設定應用程式的程式碼註解。  
   
 ```csharp  
-// You can run this code in Visual Studio as a WPF app or a Windows Store app.  
+// You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
 // You need a button (StartButton) and a textbox (ResultsTextBox).  
 // Remember to set the names and handler so that you have something like this:  
 // <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  

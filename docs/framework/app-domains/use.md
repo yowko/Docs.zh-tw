@@ -1,44 +1,39 @@
 ---
 title: "使用應用程式定義域 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- application domains, about
-- common language runtime, application domains
-- runtime, application domains
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-bcl"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "應用程式定義域，關於"
+  - "通用語言執行平台，應用程式定義域"
+  - "執行階段，應用程式定義域"
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 caps.latest.revision: 15
-author: rpetrusha
-ms.author: ronpet
-manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3aa6a381d7c6017e27deac642f23b68c50af7509
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
-
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 15
 ---
-# <a name="using-application-domains"></a>使用應用程式定義域
-應用程式定義域為 Common Language Runtime 提供隔離單位。 它們是在處理序內建立和執行。 應用程式定義域通常是由執行階段主機所建立，這是負責將執行階段載入處理序以及在應用程式定義域中執行使用者程式碼的應用程式。 執行階段主機會建立處理序和預設的應用程式定義域，在內部執行 Managed 程式碼。 執行階段主機包括 ASP.NET、Microsoft Internet Explorer 和 Windows 殼層。  
+# 使用應用程式定義域
+應用程式定義域是可供 Common Language Runtime 運用的隔離單位。  應用程式定義域是在處理序之內建立和執行的。  應用程式定義域通常是由執行階段主應用程式所建立，這個主應用程式的用途，是負責將執行階段載入處理序，以及在應用程式定義域中執行使用者程式碼。  Runtime 主應用程式會建立處理序和預設應用程式定義域，並在該應用程式定義域中執行 Managed 程式碼。  Runtime 主應用程式包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。  
   
- 大部分的應用程式不需要建立自己的應用程式定義域，執行階段主機會為您建立任何必要的應用程式定義域。 但如果您的應用程式需要隔離程式碼或使用及卸載 DLL，您可以建立及設定其他應用程式定義域。  
+ 對於大部分的應用程式而言，您不需要建立自己的應用程式定義域；Runtime 主應用程式會建立所有您需要的應用程式定義域。  但是，如果應用程式需要隔離程式碼或是使用及卸載 DLL，您可以建立及設定其他的應用程式定義域。  
   
-## <a name="in-this-section"></a>本章節內容  
- [操作說明：建立應用程式定義域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- 描述如何以程式設計方式建立應用程式定義域。  
+## 在本節中  
+ [如何：建立應用程式定義域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ 說明如何利用程式來建立應用程式定義域。  
   
- [操作說明：卸載應用程式定義域](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
- 描述如何以程式設計方式卸載應用程式定義域。  
+ [如何：卸載應用程式定義域](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ 說明如何利用程式卸載應用程式定義域。  
   
- [操作說明：設定應用程式定義域](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
- 提供設定應用程式定義域的簡介。  
+ [如何：設定應用程式定義域](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ 介紹如何設定應用程式定義域。  
   
  [從應用程式定義域擷取安裝資訊](../../../docs/framework/app-domains/retrieve-setup-information.md)  
  說明如何從應用程式定義域擷取安裝資訊。  
@@ -46,34 +41,34 @@ ms.lasthandoff: 07/13/2017
  [如何：將組件載入應用程式定義域](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  說明如何將組件載入應用程式定義域。  
   
- [操作說明：從組件中取得類型和成員資訊](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [如何：從組件中取得類型和成員資訊](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  說明如何擷取組件的相關資訊。  
   
  [陰影複製組件](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
- 說明陰影複製如何在使用組件時更新組件，以及如何設定陰影複製。  
+ 說明陰影複製如何在組件使用中時更新組件，以及如何設定陰影複製。  
   
- [操作說明：接收第一個可能發生的例外狀況通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
- 說明您如何在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。  
+ [如何：接收第一個可能發生的例外狀況通知](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ 說明如何在 Common Language Runtime 開始搜尋例外處理常式之前，接收擲回例外狀況的通知。  
   
  [解析組件載入](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- 提供使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件解析組件載入失敗的指引。  
+ 提供使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件解決組件載入失敗的指引。  
   
-## <a name="reference"></a>參考資料  
+## 參考  
  <xref:System.AppDomain>  
- 代表應用程式定義域。 提供建立及控制應用程式定義域的方法。  
+ 表示應用程式定義域；  提供方法來建立及控制應用程式定義域。  
   
-## <a name="related-sections"></a>相關章節  
+## 相關章節  
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- 提供組件執行函式的概觀。  
+ 提供組件所執行之函式的概觀。  
   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- 描述如何建立和簽署組件，以及如何設定組件屬性。  
+ 說明如何建立、簽名和設定組件上的屬性。  
   
  [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- 描述如何建立動態組件。  
+ 說明如何建立動態組件。  
   
  [應用程式定義域](../../../docs/framework/app-domains/application-domains.md)  
  提供應用程式定義域的概觀。  
   
  [反映概觀](../../../docs/framework/reflection-and-codedom/reflection.md)  
- 描述如何使用「反映」類別，以取得組件的相關資訊。
+ 說明如何使用 **Reflection** 類別取得組件的資訊。

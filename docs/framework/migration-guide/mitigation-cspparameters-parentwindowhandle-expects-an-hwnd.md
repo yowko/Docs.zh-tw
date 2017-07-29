@@ -1,8 +1,7 @@
 ---
-title: "風險降低︰CspParameters.ParentWindowHandle 應該有 HWND"
+title: "風險降低︰CspParameters.ParentWindowHandle 應該有 HWND |Microsoft 文件"
 ms.custom: 
 ms.date: 04/07/2017
-ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -17,11 +16,10 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b65aaf7149ca29b2af3efdf44ee9489a04c73a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
+ms.openlocfilehash: 22c258b06a5cc8fa3fec72665d7e413b0cdd11ee
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>風險降低︰CspParameters.ParentWindowHandle 應該有 HWND
@@ -46,9 +44,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>緩和
 
-開發人員如已發現正確值是 `form.Handle` 值所在之記憶體位置的位址，可以藉由將 <xref:System.AppContext> 參數 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 設為 `true` 以退出此行為變更：
+開發人員如已發現正確值是 `form.Handle` 值所在之記憶體位置的位址，可以藉由將 <xref:System.Security.AppContext> 參數 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` 設為 `true` 以選擇退出此行為變更：
 
-- 以程式設計方式設定 <xref:System.AppContext> 執行個體上的相容性參數。
+- 以程式設計方式設定 [AppContext](assetID:///T:System.Security.AppContext) 執行個體上的相容性參數。
 
 - 將下列程式行加入至 app.config 檔案的 `<runtime>` 區段：
    
@@ -58,7 +56,7 @@ cspParameters.ParentWindowHandle = form.Handle;
    </runtime>
    ```
 
-相反地，若使用者想針對執行 .NET Framework 4.7 但以舊版 .NET Framework 為目標的應用程式加入新的行為，可以將 <xref:System.AppContext> 參數設為 `false`。
+相反地，若使用者想針對執行 .NET Framework 4.7 但以舊版 .NET Framework 為目標的應用程式選擇加入新的行為，可以將 <xref:System.Security.AppContext> 參數設為 `false`。
  
 ## <a name="see-also"></a>請參閱
 

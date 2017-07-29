@@ -41,7 +41,7 @@ ms.lasthandoff: 03/13/2017
 # <a name="ltremarksgt-c-programming-guide"></a>&lt;remarks&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
   
-```xml  
+```  
 <remarks>description</remarks>  
 ```  
   

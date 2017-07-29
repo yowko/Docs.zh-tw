@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 使用者入門"
+title: ".NET Framework 使用者入門 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5c2441148ba869629a88ab2fcc83131f5205493
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
@@ -86,11 +86,10 @@ ms.lasthandoff: 07/28/2017
 |[.NET Framework 和不定期發行](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|描述 .NET Framework 不定期發行以及如何在您的應用程式中使用它們。|
 |[系統需求](../../../docs/framework/get-started/system-requirements.md)|列出執行 .NET Framework 的硬體與軟體需求。|
 |[.NET Core 和開放原始碼](../../../docs/framework/get-started/net-core-and-open-source.md)|描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。|
-|[.NET Core 文件](/dotnet/)|.NET Core 的概念和 API 參考文件。|
+|[.NET Core 文件](https://docs.microsoft.com/dotnet/)|.NET Core 的概念和 API 參考文件。|
 
 ## <a name="see-also"></a>另請參閱
  [.NET Framework 指南](../../../docs/framework/index.md)   
  [新增功能](../../../docs/framework/whats-new/index.md)   
  [.NET API 瀏覽器](/dotnet/api/)   
  [開發指南](../../../docs/framework/development-guide.md)
-

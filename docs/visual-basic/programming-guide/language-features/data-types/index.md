@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的資料類型"
+title: "Visual Basic 中的資料類型 | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b90a5e58d135a3769761ca431fd0c05f79e045f
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c86e1bfacbe06d10915bd476a5c6f528fcebe70d
+ms.openlocfilehash: 2642145e496469eb8bcb382408fda2147f48b0d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 04/30/2017
 
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic 中的資料類型
@@ -73,4 +73,3 @@ ms.lasthandoff: 07/28/2017
  [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
  [資料類型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
  [有效率地使用資料類型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-

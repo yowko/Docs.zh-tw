@@ -55,7 +55,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="c-language-specification"></a>C# 語言規格
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

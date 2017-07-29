@@ -1,5 +1,5 @@
 ---
-title: "如何：設定應用程式以支援 .NET Framework 4 或 4.5"
+title: "如何：設定應用程式以支援 .NET Framework 4 或 4.5 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 14
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fea03fd2b660368b72ad111effffe7a64e381f2
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 86dce70e92c0e424b169b6fc58e87c5652ebcb69
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>如何：設定應用程式以支援 .NET Framework 4 或 4.5
@@ -59,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  將 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：  
   
-    ```xml  
+    ```  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

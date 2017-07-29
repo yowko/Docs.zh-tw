@@ -31,17 +31,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 363a20c0fce05566b61e764d05932a9dfb779f90
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>如何：在 Visual Basic 中建立 XML 文件
 這個範例示範如何將 XML 文件註解加入至您的程式碼。  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>若要建立 XML 文件類型或成員  
   

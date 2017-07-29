@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
 ms.openlocfilehash: 84935c04856e9d72a8305d9d215acbab5090234a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-settings-schema"></a>執行階段設定結構描述

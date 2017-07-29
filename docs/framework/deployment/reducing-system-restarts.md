@@ -1,55 +1,50 @@
 ---
 title: "在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- .NET Framework, reducing system restarts
-- installing .NET Framework
-- installation [.NET Framework]
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - ".NET Framework, 減少系統重新啟動"
+  - "安裝 [.NET Framework]"
+  - "安裝 .NET Framework"
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 caps.latest.revision: 18
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0b39f793d2bc3b3fb73594320d533ebb411fa128
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
-
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 18
 ---
-# <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式會使用[重新啟動管理員](http://go.microsoft.com/fwlink/?LinkId=231425)，盡可能在安裝時防止系統重新啟動。 如果您的應用程式安裝程式安裝 .NET Framework，則可以與 [重新啟動管理員] 互動來利用這項功能。 如需詳細資訊，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
+# 在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝程式使用 [重新啟動管理員](http://go.microsoft.com/fwlink/?LinkId=231425) ，盡可能在安裝時防止系統重新啟動。  如果應用程式安裝程式以安裝 .NET Framework，它可能正在使用重新啟動管理員使用這項功能。  如需詳細資訊，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
   
-## <a name="reasons-for-a-restart"></a>重新啟動的原因  
- 如果在安裝期間正在使用 .NET Framework 4 應用程式，則 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝需要重新啟動系統。 這是因為 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會取代 .NET Framework 4 檔案，並且需要這些檔案可在安裝期間使用。 在許多情況下，事先偵測和關閉正在使用的 .NET Framework 4 應用程式，即可避免重新啟動。 不過，不應該關閉部分系統應用程式。 在這些情況下，無法避免重新啟動。  
+## 重新啟動電腦的原因  
+ 假如 .NET Framework 4 應用程式在安裝過程中被使用，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝需要系統重新啟動。  這是因為在安裝時 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 取代 .NET Framework 4 檔案並需要這些檔案。  透過先偵測和關閉仍在使用中的 .NET Framework 4 應用程式，在大部分情況下重新啟動可以被防止。  不過，有些系統應用程式應該不會關閉。  在這些情況下，就無法避免重新啟動電腦。  
   
-## <a name="end-user-experience"></a>一般使用者體驗  
- 如果安裝程式偵測到正在使用 .NET Framework 4 應用程式，執行完整 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝的一般使用者就有機會可以避免重新啟動系統。 訊息會列出所有執行中 .NET Framework 4 應用程式，並提供選項來關閉這些應用程式，再進行安裝。 如果使用者確認，則安裝程式會關閉這些應用程式，並避免重新啟動系統。 如果使用者在一段時間內未回應訊息，則會繼續安裝，而不需要關閉任何應用程式。  
+## 使用者經驗  
+ 如果安裝程式偵測到現用 .NET Framework 4 為目標的應用程式，執行 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的完整安裝所提供的使用者也能避免系統重新啟動。  訊息列出所有執行中的 .NET Framework 4 應用程式並提供會在安裝之前關閉這些應用程式的選項。  如果使用者確定，安裝程式會關閉這些應用程式，並能避免重新啟動系統。  如果使用者在很多時間內沒有回應訊息，安裝會繼續，並不關閉任何應用程式。  
   
- 如果 [重新啟動管理員] 偵測到即使關閉執行中應用程式也需要重新啟動系統的情況，則不會顯示訊息。  
+ 如果重新啟動管理員偵測項系統重新啟動，即使執行中的應用程式關閉的條件，就不會顯示任何訊息。  
   
- ![[關閉應用程式] 對話方塊](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
-提示關閉正在使用的 .NET Framework 應用程式  
+ ![&#91;關閉應用程式&#93; 對話方塊](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
+提示仍在使用中的結尾 .NET Framework 應用程式  
   
-## <a name="using-a-chained-installer"></a>使用鏈結的安裝程式  
- 如果您想要轉散發 .NET Framework 與應用程式，但想要使用自己的安裝程式和 UI，則可以在安裝程序中包括 (鏈結) .NET Framework 安裝程序。 如需鏈結之安裝的詳細資訊，請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。 為了減少在鏈結的安裝中重新啟動系統，.NET Framework 安裝程式會將要關閉的應用程式清單提供給安裝程式。 安裝程式必須透過使用者介面 (例如訊息方塊) 將這項資訊提供給使用者，並取得使用者的回應，然後將回應傳遞回 .NET Framework 安裝程式。 如需所鏈結安裝程式的範例，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)一文。  
+## 使用鍊結安裝程式  
+ 如果您想要重新佈署 .NET Framework 與您的應用程式，使用您自己的安裝程式和 UI，則您可以加入 \(鍊結\) .NET Framework 安裝程序 \(chainer\) 的設定程序。  如需這類安裝的詳細資訊，請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。  在鏈結安裝中若要減少系統重新啟動， .NET Framework 安裝程式提供您將應用程式的清單中的安裝程式加入至已關閉。  安裝程式必須透過使用者介面 \(UI\)提供這項資訊提供給使用者，例如訊息方塊取得使用者的回應，然後將回應傳回 .NET Framework 安裝程式。  如需已繫結的安裝程式的範例，請參閱本文 [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。  
   
- 如果您要使用鏈結的安裝程式，但不想要提供關閉應用程式的專屬訊息方塊，則可以在鏈結 .NET Framework 安裝程序時，於命令列上使用 `/showrmui` 和 `/passive` 選項。 當您一起使用這些選項時，安裝程式會顯示關閉可關閉之應用程式的訊息方塊，以避免重新啟動系統。 被動模式下之這個訊息方塊的行為與完整使用者介面的作用相同。 如需 .NET Framework 可轉散發套件的完整一組命令列選項，請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。  
+ 如果您使用已繫結的安裝程式，但是您不想提供擁有訊息方塊右邊的應用程式，您可以在命令列 的`/showrmui` 和 `/passive` 選項，將其繫結至 .NET Framework 安裝程序。  當您一起使用這些選項時，安裝程式會顯示關閉的訊息方塊，結束應用程式以避免系統的重新啟動。  此對話方塊的行為與被動模式中使用相同完整的使用者介面下運作。  請參閱[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)的 .NET Framework 可轉散發套件完整命令列選項。  
   
-## <a name="see-also"></a>另請參閱  
- [部署](../../../docs/framework/deployment/index.md)   
+## 請參閱  
+ [部署](../../../docs/framework/deployment/net-framework-and-applications.md)   
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

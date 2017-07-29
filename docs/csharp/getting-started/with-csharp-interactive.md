@@ -1,5 +1,5 @@
 ---
-title: "開始使用 C# Interactive - C# 指南 | Microsoft Docs"
+title: "開始使用 C# Interactive | C# 指南"
 description: "開始使用 C# Interactive"
 keywords: "C#, 使用者入門, REPL, 跨平台"
 ms.date: 08/23/2016
@@ -8,12 +8,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a6907ffe-7920-4813-984f-6001d9e44756
-redirect_url: /dotnet/csharp/getting-started/index
+redirect_url: /dotnet/articles/csharp/getting-started/index
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 608f7f2b2143ece7aabc09cd0d56b6b33fdba32f
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 81ee3d6c21307c79525cebe111df7a709c333636
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 

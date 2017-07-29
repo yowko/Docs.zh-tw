@@ -32,30 +32,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 4ad15bc57b3ec3b6b06f671f560dce426af64ccc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4590130fed9606f0f0592895de548c4bd7865db7
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
 
-繼承是物件導向程式設計的三個主要特性之一，另外兩個是封裝和多型。 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 衍生類別只能有一個基底類別。 不過，繼承是可轉移的。 如果 ClassC 衍生自 ClassB，而 ClassB 衍生自 ClassA，則 ClassC 會繼承在 ClassB 和 ClassA 中宣告的所有成員。  
+繼承是物件導向程式設計的三個主要特性之一，另外兩個是封裝和多型。 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」**，而繼承這種成員的類別即稱為「衍生類別」**。 衍生類別只能有一個基底類別。 不過，繼承是可轉移的。 如果 ClassC 衍生自 ClassB，而 ClassB 衍生自 ClassA，則 ClassC 會繼承在 ClassB 和 ClassA 中宣告的所有成員。  
   
 > [!NOTE]
 >  結構不支援繼承，但可以實作介面。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
  就概念而言，衍生類別是基底類別的特製化項目。 例如，如果您有一個基底類別 `Animal`，您可能會有一個名為 `Mammal` 的衍生類別，以及另一個名為 `Reptile` 的衍生類別。 `Mammal` 是 `Animal`，`Reptile` 也是 `Animal`，但這兩個衍生類別各代表不同的基底類別特製化項目。  
   
- 當您將某個類別定義為要從另一個類別衍生時，衍生類別會隱含取得基底類別的所有成員，但建構函式和完成項則除外。 因此，衍生類別可以重複使用基底類別中的程式碼，而不需要重新實作。 您可以在衍生類別中新增更多成員。 透過這種方式，衍生類別等於是擴充了基底類別的功能。  
+ 當您定義一個類別以從另一個類別衍生時，衍生類別會隱含取得基底類別的所有成員，但建構函式和解構函式則除外。 因此，衍生類別可以重複使用基底類別中的程式碼，而不需要重新實作。 您可以在衍生類別中新增更多成員。 透過這種方式，衍生類別等於是擴充了基底類別的功能。  
   
- 下圖顯示 `WorkItem` 類別，代表某些商務程序中的工作項目。 它和所有類別一樣，會衍生自 <xref:System.Object?displayProperty=fullName> 並繼承其所有方法。 `WorkItem` 會新增自己的五個成員。 由於不會繼承建構函式，因此這些成員會包含一個建構函式。 `ChangeRequest` 類別繼承自 `WorkItem`，並代表特定類型的工作項目。 `ChangeRequest` 會在繼承自 `WorkItem` 和 <xref:System.Object> 的成員中，另外新增兩個成員。 它必須新增自己的建構函式，也會新增 `originalItemID`。 `originalItemID` 屬性可讓 `ChangeRequest` 執行個體與套用變更要求的原始 `WorkItem` 產生關聯。  
+ 下圖顯示 `WorkItem` 類別，代表某些商務程序中的工作項目。 如同所有類別，它會衍生自 <xref:System.Object?displayProperty=fullName> 並繼承其所有方法。 `WorkItem` 會新增自己的五個成員。 由於不會繼承建構函式，因此這些成員會包含一個建構函式。 `ChangeRequest` 類別繼承自 `WorkItem`，並代表特定類型的工作項目。 `ChangeRequest` 會在繼承自 `WorkItem` 和 <xref:System.Object> 的成員中，另外新增兩個成員。 它必須新增自己的建構函式，也會新增 `originalItemID`。 `originalItemID` 屬性可讓 `ChangeRequest` 執行個體與套用變更要求的原始 `WorkItem` 產生關聯。  
   
  ![類別繼承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 類別繼承  
   
- 下列範例示範如何以 C# 表示上圖所示範的類別關聯性。 此範例也會示範 `WorkItem` 如何覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 虛擬方法，以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作。  
+ 下列範例示範如何以 C# 表示上圖所示範的類別關聯性。 此範例也會示範 `WorkItem` 如何覆寫虛擬方法 <xref:System.Object.ToString%2A?displayProperty=fullName>，以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作。  
   
  [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/15/2017
  如果您想要使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字來防止直接具現化，您可以將類別宣告為[抽象](../../../csharp/language-reference/keywords/abstract.md)。 如果這麼做，只有在新類別衍生自此類別時，才能使用此類別。 抽象類別可以包含一或多個本身宣告為抽象的方法簽章。 這些簽章可指定參數和傳回值，但沒有實作 (方法主體)。 抽象類別不需要包含抽象成員；但如果某個類別包含抽象成員，則該類別本身必須宣告為抽象。 本身不是抽象的衍生類別，必須為來自抽象基底類別的所有抽象方法提供實作。 如需詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
 ## <a name="interfaces"></a>介面  
- 「介面」是一種參考型別，某些方面與只包含抽象成員的抽象基底類別類似。 當類別實作介面時，必須為介面的所有成員提供實作。 一個類別可以實作多個介面，但只能衍生自單一直接基底類別。  
+ 「介面」**是一種參考型別，某些方面與只包含抽象成員的抽象基底類別類似。 當類別實作介面時，必須為介面的所有成員提供實作。 一個類別可以實作多個介面，但只能衍生自單一直接基底類別。  
   
  介面可用來為不一定有「是」關聯性的類別，定義其特定功能。 例如，所有必須啟用用戶端程式碼的類別或結構，都可以實作 <xref:System.IEquatable%601?displayProperty=fullName> 介面來判斷屬於該類型的兩個物件是否對等 (不過其類型會定義等價)。 <xref:System.IEquatable%601> 不表示基底類別和衍生類別之間存在「是」這類的關聯性 (例如 `Mammal` 是 `Animal`)。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
