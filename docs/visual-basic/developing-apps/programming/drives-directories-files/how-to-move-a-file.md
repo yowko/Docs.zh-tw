@@ -1,5 +1,5 @@
 ---
-title: "如何：在 Visual Basic 中移動檔案 | Microsoft Docs"
+title: "如何：在 Visual Basic 中移動檔案"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e0e81a28d1475a3f3cf6bcb7372b05eb8037bf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a2623ec7e440e8fdf85138cd0b3de9ab18b773c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>如何：在 Visual Basic 中移動檔案
@@ -64,11 +64,11 @@ ms.lasthandoff: 05/22/2017
   
 -   來源檔案無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
   
--   合併的路徑指向現有目錄、目的地檔案存在且 `overwrite` 設定為 `False`、正在使用目標目錄中同名的檔案，或使用者沒有足夠權限以存取檔案 (<xref:System.IO.IOException>)。  
+-   合併的路徑指向現有目錄、目的地檔案已存在，以及 `overwrite` 設為 `False`、正在使用目標目錄中同名的檔案，或使用者的權限不足無法存取檔案 (<xref:System.IO.IOException>)。  
   
 -   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   `showUI` 設定為 `True`、`onUserCancel` 設定為 `ThrowException`，而且使用者已取消作業，或發生未指定的 I/O 錯誤 (<xref:System.OperationCanceledException>)。  
+-   `showUI` 設為 `True`、 `onUserCancel` 設為 `ThrowException`，以及使用者已取消作業，或發生未指定的 I/O 錯誤 (<xref:System.OperationCanceledException>)。  
   
 -   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
@@ -81,3 +81,4 @@ ms.lasthandoff: 05/22/2017
  [如何：重新命名檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
  [如何：於不同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
  [如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+

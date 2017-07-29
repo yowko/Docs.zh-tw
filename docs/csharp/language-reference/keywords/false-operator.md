@@ -1,5 +1,5 @@
 ---
-title: "false 運算子 (C# 參考) | Microsoft Docs"
+title: "false 運算子 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 22aaef73efc1d3327774336bf5b2c5475950ce25
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e12de403ca31952837913fdaaa8b221986f0e5fe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="false-operator-c-reference"></a>false 運算子 (C# 參考)
 若運算元為 `false` 即傳回 [bool](../../../csharp/language-reference/keywords/bool.md) 值 `true`；否則傳回 `false`。  
   
- 在 C# 2.0 之前，`true` 和 `false` 運算子是用來建立使用者定義之可為 Null 的實值型別，該類型與 `SqlBool` 等類型相容。 不過，該語言現在針對可為 Null 的型別提供內建支援，因此您應盡可能使用這些類型，而不是多載 `true` 和 `false` 運算子。 如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。  
+ 在 C# 2.0 之前，`true` 和 `false` 運算子是用來建立使用者定義之可為 Null 的實值型別，該類型與 `SqlBool` 等類型相容。 不過，該語言現在針對可為 Null 的實值型別提供內建支援，因此您應盡可能使用這些類型，而不是多載 `true` 和 `false` 運算子。 如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。  
   
  使用可為 Null 的布林值時，運算式 `a != b` 不一定等於 `!(a == b)`，因為其中一個或兩個值可能為 Null。 您必須分別多載 `true` 和 `false` 運算子，以正確處理運算式中的 Null 值。 下列範例示範如何多載和使用 `true` 和 `false` 運算子。  
   
@@ -58,3 +58,4 @@ ms.lasthandoff: 03/13/2017
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [C# 運算子](../../../csharp/language-reference/operators/index.md)   
  [true](../../../csharp/language-reference/keywords/true.md)
+

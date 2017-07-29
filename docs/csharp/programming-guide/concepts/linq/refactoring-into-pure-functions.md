@@ -1,5 +1,5 @@
 ---
-title: "重構為純虛擬函式 (C#) | Microsoft Docs"
+title: "重構為純虛擬函式 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d0243dbc1a884cb48eeebd71079c3b17bc520553
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e3bb704cab77d4ad9895624bf7f721920000378
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
@@ -127,3 +126,4 @@ class Program
 ## <a name="see-also"></a>另請參閱  
  [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
  [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+

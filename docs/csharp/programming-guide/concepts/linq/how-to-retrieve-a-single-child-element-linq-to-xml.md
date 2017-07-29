@@ -1,5 +1,5 @@
 ---
-title: "如何：擷取單一子項目 (LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：擷取單一子項目 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,17 @@ ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8cc212a91e4646ef7001d41ba9bb5486cc60052
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 11a53104f73325a905ef5144aabddf8c270fd024
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>如何：擷取單一子項目 (LINQ to XML) (C#)
 這個主題會說明如何擷取單一子項目 (如果有子項目的名稱)。 當您知道子項目的名稱，而且只有一個項目擁有這個名稱，只擷取一個項目 (而不是擷取一個集合) 可能很方便。  
   
- <xref:System.Xml.Linq.XContainer.Element%2A> 方法會使用指定的 <xref:System.Xml.Linq.XName>，傳回第一個子系 <xref:System.Xml.Linq.XElement>。  
+ <xref:System.Xml.Linq.XContainer.Element%2A> 方法會使用指定的 <xref:System.Xml.Linq.XElement>，傳回第一個子系 <xref:System.Xml.Linq.XName>。  
   
  如果您要在 Visual Basic 中擷取單一子項目，常用的方法是使用 XML 屬性，然後使用陣列索引子標記法擷取第一個項目。  
   

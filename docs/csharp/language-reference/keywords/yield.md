@@ -1,5 +1,5 @@
 ---
-title: "yield (C# 參考) | Microsoft Docs"
+title: "yield (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb55fd5b1ade48316516cda83633935abbf8dcf9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
-在陳述式中使用 `yield` 關鍵字時，您會表示關鍵字所在的方法、運算子或 `get` 存取子是迭代器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.IEnumerable> 和 <xref:System.Collections.IEnumerator> 模式時，就不需要明確額外類別 (保存列舉狀態的類別，請參閱 <xref:System.Collections.Generic.IEnumerator%601> 中的範例)。  
+在陳述式中使用 `yield` 關鍵字時，您會表示關鍵字所在的方法、運算子或 `get` 存取子是迭代器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。  
   
  下列範例將示範兩種形式的 `yield` 陳述式。  
   
@@ -63,7 +63,7 @@ yield break;
   
 -   宣告不可包含任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 參數。  
   
- 傳回 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.IEnumerator> 之迭代器的 `yield` 類型是 `object`。  如果迭代器傳回 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.Generic.IEnumerator%601>，則必須從 `yield return` 陳述式中的運算式類型隱含地轉換為泛型類型參數。  
+ 傳回 `yield` 或 <xref:System.Collections.IEnumerable> 的 <xref:System.Collections.IEnumerator> 類型迭代器為 `object`。  如果迭代器傳回 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.Generic.IEnumerator%601>，則 `yield return` 陳述式中必須進行從運算式類型轉換成泛型類型參數的隱含轉換。  
   
  具有下列特性的方法中不可包含 `yield return` 或 `yield break` 陳述式：  
   
@@ -91,14 +91,14 @@ foreach (string element in elements)
   
  對 `MyIteratorMethod` 的呼叫不會執行方法的主體。 呼叫會改為將 `IEnumerable<string>` 傳回至 `elements` 變數中。  
   
- 反覆運算 `foreach` 迴圈時，會針對 `elements` 呼叫 <xref:System.Collections.IEnumerator.MoveNext%2A> 方法。 這個呼叫會執行 `MyIteratorMethod` 的主體，直到下一個 `yield return` 陳述式為止。 `yield return` 陳述式所傳回的運算式不僅會判斷迴圈主體所使用之 `element` 變數的值，也會判斷元素的 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 屬性，其為 `IEnumerable<string>`。  
+ 在 `foreach` 迴圈的反覆項目上，會針對 <xref:System.Collections.IEnumerator.MoveNext%2A> 呼叫 `elements` 方法。 這個呼叫會執行 `MyIteratorMethod` 的主體，直到下一個 `yield return` 陳述式為止。 `yield return` 陳述式所傳回的運算式不僅會判斷迴圈主體所使用之 `element` 變數的值，也會判斷元素的 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 屬性，該屬性會是 `IEnumerable<string>`。  
   
  在 `foreach` 迴圈的每個後續反覆項目上，迭代器主體會從上次停止的位置繼續執行，並且在到達 `yield return` 陳述式時再次停止。 當 Iterator 方法結束或到達 `foreach` 陳述式時，`yield break` 迴圈便完成。  
   
 ## <a name="example"></a>範例  
  下列範例中的陳述式 `yield return` 位於 `for` 迴圈內。 `foreach` 中 `Process` 陳述式主體的每個反覆項目都會建立對 `Power` Iterator 函式的呼叫。 每次呼叫 Iterator 函式都會執行下一個 `yield return` 陳述式，這會在 `for` 迴圈的下一個反覆項目期間發生。  
   
- iterator 方法的傳回類型是 <xref:System.Collections.IEnumerable>，其為 iterator 介面類型。 呼叫 Iterator 方法時，它會傳回包含數字乘冪的可列舉物件。  
+ Iterator 方法的傳回類型是 <xref:System.Collections.IEnumerable>，其為 Iterator 介面類型。 呼叫 Iterator 方法時，它會傳回包含數字乘冪的可列舉物件。  
   
  [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
   
@@ -115,3 +115,4 @@ foreach (string element in elements)
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+

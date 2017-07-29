@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: e793e0b7f21948d16da4dcb618d73c4c3114adcb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ed3716e5c0d8cd143148522a2fb3aed5ec433ab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
@@ -46,9 +46,9 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
  若要完成這個逐步解說，電腦上必須安裝 Microsoft Office Excel 2007 和 Microsoft Office Word 2007 或更新版本。  
   
- 如果您使用 [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)] 以前的作業系統，請確定已安裝 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]。  
+ 如果您使用 [!INCLUDE[windowsver](~/includes/windowsver-md.md)] 以前的作業系統，請確定已安裝 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-new-console-application"></a>建立新的主控台應用程式  
   
@@ -98,7 +98,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 1.  將下列方法加入 `Program` 類別，以設定 Excel 試算表。  
   
-     [新增](http://go.microsoft.com/fwlink/?LinkId=210910)方法具有指定特定範本的選擇性參數。 如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 中的新功能) 省略該參數的引數。 因為下列程式碼中未傳送引數，所以 `Add` 使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`ExcelApp.Workbooks.Add(Type.Missing)`。  
+     [新增](http://go.microsoft.com/fwlink/?LinkId=210910)方法具有指定特定範本的選擇性參數。 如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中的新功能) 省略該參數的引數。 因為下列程式碼中未傳送引數，所以 `Add` 使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`ExcelApp.Workbooks.Add(Type.Missing)`。  
   
      [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -118,7 +118,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     如果 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel **內嵌 Interop 類型**屬性設定為 true，則 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。  
+     如果 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel **內嵌 Interop 類型**屬性設定為 true，則 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。  
   
 ### <a name="to-run-the-project"></a>執行專案  
   
@@ -132,17 +132,17 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 ### <a name="to-add-a-word-document"></a>加入 Word 文件  
   
-1.  為了說明 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 和更新版本中加強 Office 程式設計的其他方法，下列程式碼會開啟 Word 應用程式，並建立 Excel 工作表連結的圖示。  
+1.  為了說明 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 和更新版本中加強 Office 程式設計的其他方法，下列程式碼會開啟 Word 應用程式，並建立 Excel 工作表連結的圖示。  
   
-     將本步驟稍後提供的 `CreateIconInWordDoc` 方法，貼入 `Program` 類別。 `CreateIconInWordDoc` 使用具名和選擇性引數來降低 [Documents.Add](http://go.microsoft.com/fwlink/?LinkId=210937) 和 [Selection.PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) 方法呼叫的複雜性。 這些呼叫採用 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 引進的兩個其他新功能，簡化了具有參考參數之 COM 方法的呼叫。 首先，您可以將引數以實值參數的形式傳送到參考參數。 也就是說，可以直接傳送值而無須建立每個參考參數的變數。 編譯器會產生暫存變數來保存引數值，並在從呼叫返回時捨棄變數。 其次，您可以省略引數清單中的 `ref` 關鍵字。  
+     將本步驟稍後提供的 `CreateIconInWordDoc` 方法，貼入 `Program` 類別。 `CreateIconInWordDoc` 使用具名和選擇性引數來降低 [Documents.Add](http://go.microsoft.com/fwlink/?LinkId=210937) 和 [Selection.PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) 方法呼叫的複雜性。 這些呼叫採用 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 引進的兩個其他新功能，簡化了具有參考參數之 COM 方法的呼叫。 首先，您可以將引數以實值參數的形式傳送到參考參數。 也就是說，可以直接傳送值而無須建立每個參考參數的變數。 編譯器會產生暫存變數來保存引數值，並在從呼叫返回時捨棄變數。 其次，您可以省略引數清單中的 `ref` 關鍵字。  
   
-     `Add` 方法有四個參考參數，而且都是選擇性參數。 在 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 或更新版本中，如果想要使用其預設值，可以省略任何或所有參數的引數。 在 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] 和舊版本中，必須為每個參數提供引數，且引數必須是變數，因為參數是參考參數。  
+     `Add` 方法有四個參考參數，而且都是選擇性參數。 在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 或更新版本中，如果想要使用其預設值，可以省略任何或所有參數的引數。 在 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 和舊版本中，必須為每個參數提供引數，且引數必須是變數，因為參數是參考參數。  
   
-     `PasteSpecial` 方法會將內容插入剪貼簿。 此方法有七個參考參數，且都是選擇性參數。 下列程式碼指定其中兩個的引數：`Link` 可建立剪貼簿的內容的來源連結，以及 `DisplayAsIcon` 可將連結顯示為圖示。 在 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 中，可以為這兩者使用具名引數，並省略其他引數。 雖然這些是參考參數，但是您不需要使用 `ref` 關鍵字，或建立傳送為引數的變數。 可以直接傳送值。 在 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] 和舊版本中，必須為每個參考參數傳送變數引數。  
+     `PasteSpecial` 方法會將內容插入剪貼簿。 此方法有七個參考參數，且都是選擇性參數。 下列程式碼指定其中兩個的引數：`Link` 可建立剪貼簿的內容的來源連結，以及 `DisplayAsIcon` 可將連結顯示為圖示。 在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中，可以為這兩者使用具名引數，並省略其他引數。 雖然這些是參考參數，但是您不需要使用 `ref` 關鍵字，或建立傳送為引數的變數。 可以直接傳送值。 在 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 和舊版本中，必須為每個參考參數傳送變數引數。  
   
      [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
   
-     在 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] 或舊版語言中，需要有下列更為複雜的程式碼。  
+     在 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 或舊版語言中，需要有下列更為複雜的程式碼。  
   
      [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
   
@@ -164,7 +164,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
      此外，程式設計會更為容易，因為 COM 方法所需和所傳回的類型可以使用類型 `dynamic` 而非 `Object` 加以呈現。 除非處於執行階段，否則不會評估類型為 `dynamic` 的變數，如此即無須明確轉型。 如需詳細資訊，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
   
-     在 [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 中，預設行為是內嵌類型資訊，而非使用 PIA。 因為使用該預設值，已簡化了數個先前的範例，因為明確轉型已非必要。 例如，`worksheet` 中的 `DisplayInExcel` 宣告，撰寫為 `Excel._Worksheet workSheet = excelApp.ActiveSheet`，而非 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`。 如果沒有預設值，則相同方法中的 `AutoFit` 呼叫也需要明確轉型，因為 `ExcelApp.Columns[1]` 會傳回 `Object`，而 `AutoFit` 是 Excel 方法。 下列程式碼會顯示轉型。  
+     在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中，預設行為是內嵌類型資訊，而非使用 PIA。 因為使用該預設值，已簡化了數個先前的範例，因為明確轉型已非必要。 例如，`worksheet` 中的 `DisplayInExcel` 宣告，撰寫為 `Excel._Worksheet workSheet = excelApp.ActiveSheet`，而非 `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`。 如果沒有預設值，則相同方法中的 `AutoFit` 呼叫也需要明確轉型，因為 `ExcelApp.Columns[1]` 會傳回 `Object`，而 `AutoFit` 是 Excel 方法。 下列程式碼會顯示轉型。  
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
@@ -186,7 +186,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 2.  按 CTRL + F5 鍵查看結果。 其他格式會列在 [XlRangeAutoFormat ](http://go.microsoft.com/fwlink/?LinkId=210967) 列舉中。  
   
-3.  請比較步驟 1 中的陳述式與下列程式碼，這樣會顯示 [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] 或舊版本中所需的引數。  
+3.  請比較步驟 1 中的陳述式與下列程式碼，這樣會顯示 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 或舊版本中所需的引數。  
   
      [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   
@@ -201,3 +201,4 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
  [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
  [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+

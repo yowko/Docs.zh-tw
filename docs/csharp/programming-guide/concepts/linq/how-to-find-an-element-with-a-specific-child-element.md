@@ -1,5 +1,5 @@
 ---
-title: "如何：尋找具有特定子項目的項目 (C#) | Microsoft Docs"
+title: "如何：尋找具有特定子項目的項目 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89dc7e1ee8ae6c7ec8ce207fb3dad9caa83c5dd8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dcbfe8efb16dd5e672deeac2fffea109689dacc5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何：尋找具有特定子項目的項目 (C#)
@@ -76,3 +75,4 @@ foreach (XElement el in tests)
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+

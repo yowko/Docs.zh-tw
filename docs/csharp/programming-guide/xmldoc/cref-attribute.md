@@ -1,5 +1,5 @@
 ---
-title: "cref 屬性 (C# 程式設計手冊) | Microsoft Docs"
+title: "cref 屬性 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,15 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 781efb81acab79dfbcd72c24761aa3dfdd79940c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 屬性 (C# 程式設計手冊)
-`cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
+`cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [Sandcastle](https://github.com/EWSoftware/SHFB) 等文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。  
   
 ## <a name="example"></a>範例  
  下例示範在 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 標記中使用的 `cref` 屬性。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/15/2017
   
  編譯時，此程式會產生下列 XML 檔案。 請注意，以 `GetZero` 方法的 `cref` 屬性為例，已被編譯器轉換成 `"M:TestNamespace.TestClass.GetZero"`。 "M:" 前置詞表示「方法」，而且是能為 Sandcastle 等文件工具識別的慣例。 如需前置詞的完整清單，請參閱[處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)。  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <doc>  
     <assembly>  

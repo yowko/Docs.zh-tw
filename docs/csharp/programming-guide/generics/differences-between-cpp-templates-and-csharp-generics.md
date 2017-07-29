@@ -1,5 +1,5 @@
 ---
-title: "C++ 範本和 C# 泛型之間的差異 (C# 程式設計手冊) | Microsoft Docs"
+title: "C++ 樣板和 C# 泛型之間的差異 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d3171b1e3f48907778be6e256780e06bad36481f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 483d33531141127e083c5b75789f405427e46890
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ 樣板和 C# 泛型之間的差異 (C# 程式設計手冊)
@@ -58,4 +58,5 @@ C# 泛型和 C++ 範本都是支援參數化型別的語言功能。 不過，�
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [範本](https://docs.microsoft.com/cpp/cpp/templates-cpp)
+ [範本](/cpp/cpp/templates-cpp)
+

@@ -1,5 +1,5 @@
 ---
-title: "擷取段落及其樣式 (C#) | Microsoft Docs"
+title: "擷取段落及其樣式 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fddaa5e25befc40278888c0b401ad39a61e8e9d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db420c0aca9edadb8009556ebf476f196ee7641a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>擷取段落及其樣式 (C#)
@@ -36,7 +35,7 @@ ms.lasthandoff: 03/13/2017
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- 這個運算式類似上述範例 ([尋找預設段落樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)) 中的查詢來源。 主要差異在於它使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸，而不是 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。 該查詢使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸的原因是在具有章節的文件中，段落將不會是本文項目的直接子系，而會在階層中的兩個層級下。 藉由使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸，不管文件是否使用章節，程式碼都可以運作。  
+ 這個運算式類似上述範例 ([尋找預設段落樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)) 中的查詢來源。 主要差異在於，這個運算式使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸而非 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。 該查詢使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸是因為在具有章節的文件中，段落將不會是本文項目的直接子系，而會在階層中的兩個層級下。 藉由使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸，不管文件是否使用章節，程式碼都可以運作。  
   
 ## <a name="example"></a>範例  
  此查詢使用 `let` 子句來判斷包含樣式節點的項目。 如果沒有項目，則 `styleNode` 會設定為 `null`：  
@@ -45,7 +44,7 @@ xDoc.Root.Element(w + "body").Descendants(w + "p")
 let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()  
 ```  
   
- `let` 子句會先使用 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸來尋找名為 `pPr` 的所有項目，然後使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 擴充方法來尋找名為 `pStyle` 的所有子項目，最後使用 <xref:System.Linq.Enumerable.FirstOrDefault%2A> 標準查詢運算子，將集合轉換為單一子句。 如果集合是空的，`styleNode` 會設定為 `null`。 若要尋找 `pStyle` 下階節點，這是相當實用的慣用句。 請注意，如果 `pPr` 子節點不存在，擲出例外狀況不會讓程式碼失敗；但是，`styleNode` 會設定為 `null`，這是此 `let` 子句所需的行為。  
+ `let` 子句會先使用 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸來尋找名稱為 `pPr` 的所有項目，然後使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 擴充方法來尋找名稱為 `pStyle` 的所有子項目，最後使用 <xref:System.Linq.Enumerable.FirstOrDefault%2A> 標準查詢運算子，將集合轉換為單一子句。 如果集合是空的，`styleNode` 會設定為 `null`。 若要尋找 `pStyle` 下階節點，這是相當實用的慣用句。 請注意，如果 `pPr` 子節點不存在，擲出例外狀況不會讓程式碼失敗；但是，`styleNode` 會設定為 `null`，這是此 `let` 子句所需的行為。  
   
  此查詢會使用兩個成員 (`StyleName` 和 `ParagraphNode`) 規劃一組匿名型別。  
   
@@ -54,7 +53,7 @@ let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()
   
  您可以在[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中找到建立此範例之來源文件的指示。  
   
- 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的類型。  
+ 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -147,3 +146,4 @@ StyleName:Code
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

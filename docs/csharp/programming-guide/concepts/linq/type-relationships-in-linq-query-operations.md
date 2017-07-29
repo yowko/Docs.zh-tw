@@ -1,5 +1,5 @@
 ---
-title: "LINQ 查詢作業中的類型關聯性 (C#) | Microsoft Docs"
+title: "LINQ 查詢作業中的類型關聯性 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -39,22 +39,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad52663fb54ee1adc06a084d26abb3e6ce46e2af
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e33936ce2398cea782ec1f4272f22d9c3fc049e8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查詢作業中的類型關聯性 (C#)
-若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。 如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 範例和程式碼範例。 此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。  
+若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。 如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 範例和程式碼範例。 此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。  
   
- 在資料來源、查詢本身和查詢執行中，[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢作業都是強型別。 查詢中的變數類型必須與資料來源中的項目類型以及 `foreach` 陳述式中的反覆運算變數類型相容。 如果類型錯誤可以在使用者遇到它們之前進行更正，則這個強型別可確保在編譯時期攔截到它們。  
+ 在資料來源、查詢本身和查詢執行中，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業都是強型別。 查詢中的變數類型必須與資料來源中的項目類型以及 `foreach` 陳述式中的反覆運算變數類型相容。 如果類型錯誤可以在使用者遇到它們之前進行更正，則這個強型別可確保在編譯時期攔截到它們。  
   
  為了示範這些類型關聯性，後面的大部分範例都會使用所有變數的明確類型。 最後一個範例示範即使使用隱含類型時，還是如何使用 [var](../../../../csharp/language-reference/keywords/var.md) 來套用相同原則。  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>未轉換來源資料的查詢  
- 下圖顯示未對資料執行任何轉換的 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] to Objects 查詢作業。 來源包含一系列的字串，而且查詢輸出也是一系列的字串。  
+ 下圖顯示未對資料執行任何轉換的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 查詢作業。 來源包含一系列的字串，而且查詢輸出也是一系列的字串。  
   
  ![LINQ 查詢中資料類型的關聯性](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/13/2017
 3.  在 `foreach` 陳述式中，會逐一查看查詢變數。 因為查詢變數是一序列的字串，所以反覆運算變數也是字串。  
   
 ## <a name="queries-that-transform-the-source-data"></a>轉換來源資料的查詢  
- 下圖顯示對資料執行簡單轉換的 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] 查詢作業。 查詢會接受一系列的 `Customer` 物件作為輸出，並只選取結果中的 `Name` 屬性。 因為 `Name` 是字串，所以查詢會產生一系列的字串作為輸出。  
+ 下圖顯示對資料執行簡單轉換的 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 查詢作業。 查詢會接受一系列的 `Customer` 物件作為輸出，並只選取結果中的 `Name` 屬性。 因為 `Name` 是字串，所以查詢會產生一系列的字串作為輸出。  
   
  ![轉換資料類型的查詢](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
   
@@ -94,3 +94,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

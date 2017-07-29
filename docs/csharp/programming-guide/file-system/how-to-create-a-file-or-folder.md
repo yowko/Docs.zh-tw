@@ -1,5 +1,5 @@
 ---
-title: "如何：建立檔案或資料夾 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：建立檔案或資料夾 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 95b35941e18d22e2d484017262d9adbe8a081a8a
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 150190eeef829bd0431eeea7789025b9905553e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何：建立檔案或資料夾 (C# 程式設計手冊)

@@ -1,7 +1,7 @@
 ---
 title: "將查詢的結果儲存在記憶體中"
 description: "如何儲存結果。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 644db94bc739d0ae465e28315f0ec43ef6ac241e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 35d908bde06ef55ba2dc93a73211f7be33b9332c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>將查詢的結果儲存在記憶體中
@@ -38,3 +38,4 @@ ms.lasthandoff: 03/13/2017
 
 ## <a name="see-also"></a>另請參閱  
  [LINQ 查詢運算式](index.md)
+

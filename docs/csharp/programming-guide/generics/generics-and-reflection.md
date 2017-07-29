@@ -1,5 +1,5 @@
 ---
-title: "泛型和反映 (C# 程式設計手冊) | Microsoft Docs"
+title: "泛型和反映 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,17 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 2eeb2f0b833d3b5cc658ec96570d95c2d167b40b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 201806cca08be0633d41e10ecb7641a0f03c975b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反映 (C# 程式設計手冊)
 由於 Common Language Runtime (CLR) 可在執行階段存取泛型型別資訊，因此您可以使用反映取得泛型型別的相關資訊，方法和取得非泛型型別的資訊相同。 如需詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
   
- 在 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] 中，<xref:System.Type> 類別已新增幾個新成員，以允許泛型型別的執行階段資訊。 如需使用這些方法和屬性的詳細資訊，請參閱這些類別的文件。 <xref:System.Reflection.Emit> 命名空間也包含支援泛型的新成員。 請參閱[如何：使用反映發出定義泛型型別](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
+ 在 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 中，<xref:System.Type> 類別已新增幾個新成員，以允許泛型型別的執行階段資訊。 如需使用這些方法和屬性的詳細資訊，請參閱這些類別的文件。 <xref:System.Reflection.Emit> 命名空間也包含支援泛型的新成員。 請參閱[如何：使用反映發出定義泛型型別](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
   
  如需泛型反映中所使用之規範的恆成立條件清單，請參閱 <xref:System.Type.IsGenericType%2A> 屬性備註。  
   
@@ -71,4 +71,5 @@ ms.lasthandoff: 05/10/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [泛型](../../../csharp/programming-guide/generics/index.md)   
  [反映和泛型型別](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)   
- [泛型](https://msdn.microsoft.com/library/ms172192)
+ [泛型](~/docs/standard/generics/index.md)
+

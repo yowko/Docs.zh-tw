@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：在 Visual Studio 中保存物件 (#C) | Microsoft Docs"
+title: "逐步解說：在 Visual Studio 中保存物件 (#C)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f76e40e2503bf857922490d728c3a9f3432aa31f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中保存物件 (#C)
@@ -38,16 +38,16 @@ ms.lasthandoff: 03/13/2017
 >  這個範例會使用二進位格式檔案來儲存資料。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具] **** 功能表上按一下 [匯入和匯出設定] **** 。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="creating-the-loan-object"></a>建立 Loan 物件  
  第一個步驟是建立 `Loan` 類別，以及使用該類別的測試應用程式。  
   
 ### <a name="to-create-the-loan-class"></a>若要建立 Loan 類別  
   
-1.  建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
+1.  建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](/visualstudio/ide/creating-solutions-and-projects)。  
   
-2.  在方案總管****中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] ****。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
+2.  在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] 。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
   
 3.  將下列 Public 成員新增至類別：  
   
@@ -89,21 +89,21 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-create-a-test-application"></a>若要建立測試應用程式  
   
-1.  若要將 Windows Forms 應用程式專案新增至方案，請在 [檔案]**** 功能表上，選擇 [新增專案]********。  
+1.  若要將 Windows Forms 應用程式專案新增至方案，請在 [檔案] 功能表上，選擇 [新增專案]。  
   
-2.  在 [新增專案]**** 對話方塊中，選擇 [Windows Forms 應用程式]****，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定]**** 以關閉對話方塊。  
+2.  在 [新增專案] 對話方塊中，選擇 [Windows Forms 應用程式]，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定] 以關閉對話方塊。  
   
-3.  在方案總管****中，選擇 LoanApp 專案。  
+3.  在方案總管中，選擇 LoanApp 專案。  
   
-4.  在 [專案]**** 功能表上，選擇 [設定為啟始專案]****。  
+4.  在 [專案] 功能表上，選擇 [設定為啟始專案]。  
   
-5.  在 [專案] **** 功能表上，選擇 [加入參考] ****。  
+5.  在 [專案]  功能表上，選擇 [加入參考] 。  
   
-6.  在 [新增參考]**** 對話方塊中，依序選擇 [專案]**** 索引標籤和 LoanClass 專案。  
+6.  在 [新增參考] 對話方塊中，依序選擇 [專案] 索引標籤和 LoanClass 專案。  
   
-7.  按一下 [確定] **** 關閉對話方塊。  
+7.  按一下 [確定]  關閉對話方塊。  
   
-8.  在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項新增至表單。  
+8.  在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
   
 9. 在程式碼編輯器中，加入下列程式碼：  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 03/13/2017
     public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
     ```  
   
- 下一個步驟是將序列化程式碼新增至 LoanApp 應用程式。 若要序列化類別並將其寫入檔案，請使用 <xref:System.IO> 和 <xref:System.Xml.Serialization> 命名空間。 若要避免輸入完整的名稱，您可以新增必要類別庫的參考。  
+ 下一個步驟是將序列化程式碼新增至 LoanApp 應用程式。 若要序列化類別並將它寫入檔案，您必須使用 <xref:System.IO> 和 <xref:System.Xml.Serialization> 命名空間。 若要避免輸入完整的名稱，您可以新增必要類別庫的參考。  
   
 ### <a name="to-add-references-to-namespaces"></a>若要新增命名空間的參考  
   
@@ -204,7 +204,7 @@ ms.lasthandoff: 03/13/2017
     }  
     ```  
   
-     請注意，您必須先檢查檔案是否存在。 如果存在的話，請建立 <xref:System.IO.Stream> 類別以讀取二進位檔案，並建立 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類別以轉譯檔案。 您也需要將資料流類型轉換成 Loan 物件類型。  
+     請注意，您必須先檢查檔案是否存在。 如果存在的話，請建立 <xref:System.IO.Stream> 類別以讀取二進位檔案，並建立 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類別來轉譯該檔案。 您也需要將資料流類型轉換成 Loan 物件類型。  
   
  然後，您必須新增程式碼，以將文字方塊中輸入的資料儲存到 `Loan` 類別，接著必須將類別序列化至檔案。  
   

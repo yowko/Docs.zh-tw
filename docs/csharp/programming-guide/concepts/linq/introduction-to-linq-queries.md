@@ -1,5 +1,5 @@
 ---
-title: "LINQ 查詢簡介 (C#) | Microsoft Docs"
+title: "LINQ 查詢簡介 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8427a0f439516cbba0b38db25f48b0083a337b1b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查詢簡介 (C#)
@@ -68,7 +68,7 @@ ms.lasthandoff: 07/03/2017
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，請先在設計階段以手動方式或使用 [Visual Studio 中的 LINQ to SQL 工具](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)，來建立物件關聯式對應。 您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。 在下列範例中，`Customers` 代表資料庫中特定的資料表，而查詢結果 <xref:System.Linq.IQueryable%601> 的類型則衍生自 <xref:System.Collections.Generic.IEnumerable%601>。  
+ 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，請先在設計階段以手動方式或使用 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)，來建立物件關聯式對應。 您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。 在下列範例中，`Customers` 代表資料庫中特定的資料表，而查詢結果 <xref:System.Linq.IQueryable%601> 的類型則衍生自 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  

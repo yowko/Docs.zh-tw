@@ -1,5 +1,5 @@
 ---
-title: "using 陳述式 (C# 參考) | Microsoft Docs"
+title: "using 陳述式 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 49d7f0dc14f6595ed1e96e5072766dc119f22127
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 201dde951b4f92d92b7d78b3d71a3f3cfb559507
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-statement-c-reference"></a>using 陳述式 (C# 參考)
@@ -69,3 +69,4 @@ ms.lasthandoff: 05/10/2017
  [using 指示詞](../../../csharp/language-reference/keywords/using-directive.md)   
  [記憶體回收](../../../standard/garbage-collection/index.md)   
  [實作 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)
+

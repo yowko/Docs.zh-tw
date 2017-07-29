@@ -1,5 +1,5 @@
 ---
-title: "$ (C# 參考) | Microsoft Docs"
+title: "$ (C# 參考)"
 ms.date: 2017-02-09
 ms.prod: .net
 ms.technology:
@@ -30,16 +30,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b6afd7d9839f6d86f7fcfa3f097053ba4f418ff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 65dfc7b28059c4d41dd9113fd60c6a64987bfc2b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-c-reference"></a>$ (C# 參考)
 
-將字串常值識別為[字串插值](../keywords/interpolated-strings.md)。 字串插值是類似範本的字串，其中包含常值文字及「插入運算式」**。 解析字串插值時 (例如在指派陳述式或方法呼叫中)，其插入運算式會以運算式在結果字串中的字串表示取代。 字串插值會以 .NET Framework 支援的[複合格式字串](../../../standard/base-types/composite-format.md)取代。
+將字串常值識別為[字串插值](../keywords/interpolated-strings.md)。 字串插值是類似範本的字串，其中包含常值文字及「插入運算式」。 解析字串插值時 (例如在指派陳述式或方法呼叫中)，其插入運算式會以運算式在結果字串中的字串表示取代。 字串插值會以 .NET Framework 支援的[複合格式字串](../../../standard/base-types/composite-format.md)取代。
 
 下列範例使用 `$` 字元來定義字串插值。
 

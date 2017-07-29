@@ -1,5 +1,5 @@
 ---
-title: "Main() 傳回值 (C# 程式設計手冊) | Microsoft Docs"
+title: "Main() 傳回值 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 846c52b7d5429a23f354dd6a732ddb62563a55bf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a24a0db126945d122db7a0c8d373d0c91e5da8a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]  
   
 ## <a name="example"></a>範例  
- 由於此範例使用批次檔，因此最好透過命令提示字元編譯程式碼。 遵循[如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)中的指示執行，以啟用命令列組建，或使用 Visual Studio 命令提示字元 (可從 [Visual Studio Tools]**** 下方的 [啟動]**** 功能表取得)。 從命令提示字元中，瀏覽至您之前儲存程式的資料夾。 下列命令會編譯 MainReturnValTest.cs，並產生可執行檔 MainReturnValTest.exe。  
+ 由於此範例使用批次檔，因此最好透過命令提示字元編譯程式碼。 遵循[如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)中的指示執行，以啟用命令列組建，或使用 Visual Studio 命令提示字元 (可從 [Visual Studio Tools] 下方的 [啟動] 功能表取得)。 從命令提示字元中，瀏覽至您之前儲存程式的資料夾。 下列命令會編譯 MainReturnValTest.cs，並產生可執行檔 MainReturnValTest.exe。  
   
  `csc MainReturnValTest.cs`  
   
@@ -89,3 +89,4 @@ MainReturnValTest
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+

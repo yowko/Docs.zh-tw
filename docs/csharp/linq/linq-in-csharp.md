@@ -1,7 +1,7 @@
 ---
-title: "C 中的 LINQ#"
+title: "C# 中的 LINQ"
 description: "LINQ 詳細資訊的主題連結。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,14 +11,14 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ebd7bf01396a89d1d2c2c2065b78a611dd36183a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8b005ae43816e852c3af7c014f994af30af1e2d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="linq-in-c"></a>C 中的 LINQ#
+# <a name="linq-in-c"></a>C# 中的 LINQ
 本節包含 LINQ 詳細資訊的主題連結。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -47,3 +47,4 @@ ms.lasthandoff: 03/13/2017
  [標準查詢運算子概觀](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
  說明 LINQ 使用的標準方法。  
   
+

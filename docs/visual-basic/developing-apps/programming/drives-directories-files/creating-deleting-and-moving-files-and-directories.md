@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Basic 中建立、刪除和移動檔案和目錄 | Microsoft Docs"
+title: "在 Visual Basic 中建立、刪除和移動檔案和目錄"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -48,11 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6484c8233c2834732aefb270323723b6c9757f05
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00144ca80e267ef2f24df0bdaa1c9f689a43af77
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>在 Visual Basic 中建立、刪除和移動檔案和目錄
@@ -147,3 +147,4 @@ ms.lasthandoff: 05/22/2017
   
  [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  列出有關寫入檔案的工作。
+

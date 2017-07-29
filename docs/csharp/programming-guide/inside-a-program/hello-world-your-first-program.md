@@ -1,5 +1,5 @@
 ---
-title: "Hello World -- 您的第一個程式 (C# 程式設計手冊) | Microsoft Docs"
+title: "Hello World -- 您的第一個程式 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,17 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
 下列程序會建立 C# 版本的傳統 "Hello World!" 程式。 此程式會顯示字串 `Hello World!`  
   
- 如需更多的介紹性概念範例，請參閱 [Visual C# 和 Visual Basic 使用者入門](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。  
+ 如需更多的介紹性概念範例，請參閱 [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -156,4 +156,5 @@ ms.lasthandoff: 05/22/2017
  [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
  [C# 參考](../../../csharp/language-reference/index.md)   
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Visual C# 和 Visual Basic 使用者入門](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

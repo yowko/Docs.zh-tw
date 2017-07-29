@@ -1,5 +1,5 @@
 ---
-title: "分割資料 (C#) | Microsoft Docs"
+title: "分割資料 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8bab82ff0921871e610eef37650d1aa52e16006c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1690dac93d5e74f1305bd457f8bc749bec5449
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="partitioning-data-c"></a>分割資料 (C#)
@@ -47,3 +47,4 @@ LINQ 中的分割是指將輸入序列分成兩個區段的作業，不用重新
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Linq>   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+

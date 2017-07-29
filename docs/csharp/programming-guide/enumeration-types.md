@@ -1,5 +1,5 @@
 ---
-title: "列舉類型 (C# 程式設計手冊) | Microsoft Docs"
+title: "列舉類型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 677de7c6e0c0f72b600ce8ee5a8bad265725f6d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
@@ -64,7 +64,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
 -   清楚指定用戶端程式碼的哪些值對變數有效。  
   
--   在 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 中，IntelliSense 會列出已定義的值。  
+-   在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中，IntelliSense 會列出已定義的值。  
   
  當您不為列舉程式清單中的項目指定值時，值會自動遞增 1。 在上例中，`Days.Sunday` 的值為 0，`Days.Monday` 的值為 1，依此類推。 當您建立新的 `Days` 物件時，如未明確指定其值，則它會有預設值 `Days.Sunday` (0)。 當您建立列舉時，請選取最符合邏輯的預設值，並指定其值為零。 這會造成所有的列舉都是預設值，如果它們在建立時未明確指派值。  
   
@@ -111,3 +111,4 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
  <xref:System.Enum?displayProperty=fullName>   
  [C# 程式設計手冊](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)
+

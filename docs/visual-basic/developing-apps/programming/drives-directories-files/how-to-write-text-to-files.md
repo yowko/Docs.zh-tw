@@ -1,5 +1,5 @@
 ---
-title: "如何：在 Visual Basic 中將文字寫入檔案 | Microsoft Docs"
+title: "如何：在 Visual Basic 中將文字寫入檔案"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 8febfbb5d4fb9042f2d9153a81aa18bd279cf3dc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dc6f02d6092a30113b8cb973be225e140eca19ad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>如何：在 Visual Basic 中將文字寫入檔案
@@ -84,3 +84,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
  [如何：從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic) | Microsoft Docs"
+title: "用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)
 下列各表列出 .NET Framework 檔案 I/O 的常用類別、分類為檔案 I/O 類別的檔案、用於建立資料流的類別，以及用來讀取和寫入至資料流的類別。  
   
- 若要輸入 [!INCLUDE[dnprdnlong](../../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] 文件，並尋找更完整的清單，請參閱[類別庫概觀](https://msdn.microsoft.com/library/hfa3fa08)。  
+ 若要輸入 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 文件，並尋找更完整的清單，請參閱[類別庫概觀](https://msdn.microsoft.com/library/hfa3fa08)。  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>檔案、磁碟機和目錄的基本 I/O 類別  
  下表列出並描述用於檔案 I/O 的主要類別。  
@@ -87,3 +87,4 @@ ms.lasthandoff: 05/22/2017
  [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)   
  [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)   
  [.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+

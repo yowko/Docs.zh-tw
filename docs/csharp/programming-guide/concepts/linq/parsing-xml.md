@@ -1,5 +1,5 @@
 ---
-title: "剖析 XML (C#) | Microsoft Docs"
+title: "剖析 XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbbe2c5d37d06292ef251428eb1da157de1a9b49
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 13807e57b3616d51bd88b37d0acc703a18445a02
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="parsing-xml-c"></a>剖析 XML (C#)
@@ -34,11 +34,12 @@ ms.lasthandoff: 03/13/2017
 |主題|描述|  
 |-----------|-----------------|  
 |[如何：剖析字串 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md)|顯示如何剖析字串以建立 XML 樹狀。|  
-|[如何：從檔案載入 XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|示範如何使用 <xref:System.Xml.Linq.XElement.Load%2A> 方法從 URI 載入 XML。|  
-|[載入或剖析 XML 時保留空白字元](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md)|描述如何在載入 XML 樹狀結構時，控制 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 的空白字元行為。|  
+|[如何：從檔案載入 XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|顯示如何使用 <xref:System.Xml.Linq.XElement.Load%2A> 方法，從 URI 載入 XML。|  
+|[載入或剖析 XML 時保留空白字元](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md)|描述如何在載入 XML 樹狀結構時，控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白字元行為。|  
 |[如何：攔截剖析錯誤 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|顯示如何偵測格式錯誤或無效的 XML。|  
 |[如何：從 XmlReader 建立樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|顯示如何從 <xref:System.Xml.XmlReader> 直接建立 XML 樹狀結構。|  
-|[如何：從 XmlReader 串流 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|示範如何使用 <xref:System.Xml.XmlReader> 串流 XML 片段。<br /><br /> 當您必須處理非常大的 XML 檔案時，可能無法將整個 XML 樹狀結構載入記憶體中。 但是，您可以串流 XML 片段。|  
+|[如何：從 XmlReader 串流 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|顯示如何使用 <xref:System.Xml.XmlReader> 串流 XML 片段。<br /><br /> 當您必須處理非常大的 XML 檔案時，可能無法將整個 XML 樹狀結構載入記憶體中。 但是，您可以串流 XML 片段。|  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

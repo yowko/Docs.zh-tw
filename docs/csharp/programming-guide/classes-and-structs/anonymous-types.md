@@ -1,5 +1,5 @@
 ---
-title: "匿名型別 (C# 程式設計手冊) | Microsoft Docs"
+title: "匿名類型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 6a6950680a733b3d99edd54fc9a9cfd0338e513c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
@@ -75,7 +75,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  您無法將欄位、屬性、事件或方法的傳回類型，宣告為具有匿名類型。 同樣地，您無法將方法、屬性、建構函式或索引子的型式參數宣告為具有匿名類型。 若要以方法引數的形式來傳遞匿名類型或含有匿名類型的集合，您可以將參數宣告為類型物件。 但是，這樣做將失去強式類型的目的。 如果您必須在方法界限外儲存或傳遞查詢結果，請考慮使用一般具名結構或類別來取代匿名類型。  
   
- 由於匿名型別上的 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法會以屬性的 `Equals` 和 `GetHashCode` 方法來定義，相同匿名型別的兩個執行個體僅在其所有屬性都相等時，這兩個執行個體才相等。  
+ 由於匿名類型上的 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法會以屬性的 `Equals` 和 `GetHashCode` 方法來定義，相同匿名類型的兩個執行個體僅在其所有屬性都相等時，這兩個執行個體才相等。  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)   

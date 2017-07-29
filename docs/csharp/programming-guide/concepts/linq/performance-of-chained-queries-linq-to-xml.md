@@ -1,5 +1,5 @@
 ---
-title: "已鏈結之查詢的效能 (LINQ to XML) (C#) | Microsoft Docs"
+title: "已鏈結之查詢的效能 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3429da268df07900ebe59ed206b927d209b1cf7f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c72c4eebd29152ed4fb95f2ee42075797c60b8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>已鏈結之查詢的效能 (LINQ to XML) (C#)
@@ -55,11 +54,11 @@ foreach (var i in query2)
   
  這個鏈結查詢會與逐一查看連結串列 (Linked List) 提供相同的效能設定檔。  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A> 軸基本上與逐一查看連結串列具有相同的效能。 <xref:System.Xml.Linq.XContainer.Elements%2A> 實作為延後執行迭代器。 這表示，除了逐一查看連結串列以外，它會執行一些工作，例如配置 Iterator 物件和追蹤執行狀態。 這項工作可分成兩個分類：在設定 Iterator 時完成的工作，以及在每次反覆運算期間完成的工作。 設定工作是小型且固定的工作量，而在每次反覆運算期間完成的工作則與來源集合中的項目數成正比。  
+-   <xref:System.Xml.Linq.XContainer.Elements%2A> 軸基本上與逐一查看連結串列具有相同的效能。 <xref:System.Xml.Linq.XContainer.Elements%2A> 會實作成延後執行的 Iterator。 這表示，除了逐一查看連結串列以外，它會執行一些工作，例如配置 Iterator 物件和追蹤執行狀態。 這項工作可分成兩個分類：在設定 Iterator 時完成的工作，以及在每次反覆運算期間完成的工作。 設定工作是小型且固定的工作量，而在每次反覆運算期間完成的工作則與來源集合中的項目數成正比。  
   
 -   在 `query1` 中，`where` 子句會讓查詢呼叫 <xref:System.Linq.Enumerable.Where%2A> 方法。 這個方法也會實作成 Iterator。 設定工作包含具現化將參考 Lambda 運算式的委派 (Delegate)，以及進行 Iterator 的一般設定。 進行每次反覆運算時，系統會呼叫此委派來執行述詞 (Predicate)。 設定工作以及在每次反覆運算期間完成的工作與逐一查看軸時完成的工作很相似。  
   
--   在 `query1` 中，select 子句會讓查詢呼叫 <xref:System.Linq.Enumerable.Select%2A> 方法。 這個方法和 <xref:System.Linq.Enumerable.Where%2A> 方法有相同的效能設定檔。  
+-   在 `query1` 中，select 子句會讓查詢呼叫 <xref:System.Linq.Enumerable.Select%2A> 方法。 這個方法與 <xref:System.Linq.Enumerable.Where%2A> 方法具有相同的效能設定檔。  
   
 -   在 `query2` 中，`where` 子句和 `select` 子句都具有相同的效能設定檔，如同 `query1`。  
   
@@ -71,3 +70,4 @@ foreach (var i in query2)
   
 ## <a name="see-also"></a>另請參閱  
  [效能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

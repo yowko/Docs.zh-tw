@@ -1,5 +1,5 @@
 ---
-title: "using (C# 參考) | Microsoft Docs"
+title: "using (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12405bfede8707bfce0711928ddfc879fefe5f36
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6aaa2837e0c6850956f51b7ded979cc46f9b3a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-c-reference"></a>using (C# 參考)
@@ -53,3 +53,4 @@ ms.lasthandoff: 03/13/2017
  [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
  [命名空間](../../../csharp/programming-guide/namespaces/index.md)   
  [extern](../../../csharp/language-reference/keywords/extern.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：撰寫複製建構函式 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：撰寫複製建構函式 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 1f137b21ff66a2acb58427ccd234c48e2d1b9aff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 712d9d5e792d025dd7c91d4c1809eeba96759757
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>如何：撰寫複製建構函式 (C# 程式設計手冊)
@@ -49,3 +49,4 @@ C# 未提供物件的複製建構函式，但您可以自行撰寫一個。
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

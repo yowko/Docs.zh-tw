@@ -1,5 +1,5 @@
 ---
-title: C# | Microsoft Docs
+title: C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8470043d266275cd70d48299be96f1ee6f50682
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9a46179f25c166923f702b745e874406adfdeac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c"></a>C#
@@ -45,10 +45,10 @@ C# (唸成 C sharp) 是一種程式語言，設計用來建置可在 .NET Framew
   
 ## <a name="in-this-section"></a>本章節內容  
  [C++ 使用者入門](../csharp/getting-started/getting-started-with-csharp.md)  
- 為此語言的新手程式設計人員，或是 [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)] 的新使用者介紹 C# 的功能，並且提供尋找 [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)] 相關 [說明] 的指示。  
+ 為此語言的新手程式設計人員，或是 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 的新使用者介紹 C# 的功能，並且提供尋找 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 相關 [說明] 的指示。  
   
- [使用 C# 的 Visual Studio 開發環境](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- 簡介 [!INCLUDE[csprcs](../csharp/includes/csprcs_md.md)] 開發環境。  
+ [使用 C# 的 Visual Studio 開發環境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ 簡介 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 開發環境。  
   
  [C# 程式設計指南](../csharp/programming-guide/index.md)  
  提供如何使用 C# 語言建構的詳細資訊和實際範例。  
@@ -63,9 +63,10 @@ C# (唸成 C sharp) 是一種程式語言，設計用來建置可在 .NET Framew
  提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [C# 語言規格](../csharp/language-reference/language-specification.md)  
+ [C# 語言規格](../csharp/language-reference/language-specification/index.md)  
  Microsoft Word 格式之最新版本 C# 規格的連結。  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual C# 和 Visual Basic 使用者入門](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [.NET 程式開發](https://msdn.microsoft.com/library/ff361664)
+

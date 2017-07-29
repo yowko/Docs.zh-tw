@@ -1,5 +1,5 @@
 ---
-title: "如何：在 Visual Basic 中剖析檔案路徑 | Microsoft Docs"
+title: "如何：在 Visual Basic 中剖析檔案路徑"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a23fb13e99e94d6fa144c82edffca7afaaef96b3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6327d661c6f1fe7647cc64b56d7f72f1f3455467
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>如何：在 Visual Basic 中剖析檔案路徑
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-determine-a-files-name-and-path"></a>判斷檔案的名稱和路徑  
   
--   使用 <xref:System.IO.FileInfo> 物件的 <xref:System.IO.FileInfo.DirectoryName%2A> 和 <xref:System.IO.FileInfo.Name%2A> 屬性來判斷檔案的名稱和路徑。 這個範例會判斷名稱和路徑，並予以顯示。  
+-   使用 <xref:System.IO.FileInfo.DirectoryName%2A> 物件的 <xref:System.IO.FileInfo.Name%2A> 和 <xref:System.IO.FileInfo> 屬性來判斷檔案的名稱和路徑。 這個範例會判斷名稱和路徑，並予以顯示。  
   
      [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   
@@ -68,3 +68,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.IO.FileInfo>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>   
  [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+

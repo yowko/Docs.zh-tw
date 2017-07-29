@@ -1,5 +1,5 @@
 ---
-title: "C# 應用程式的部署 | Microsoft Docs"
+title: "C# 應用程式的部署"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,19 +31,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3aa401ae0f44fe7904f1d426ce0051c452078b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fe9c4d38836821364bec3fea746676cd1df4ba8e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deployment-of-c-applications"></a>C# 應用程式的部署
 完成 C# 應用程式的建置之後，下一個步驟就是進行散發。 C# 是一種 .NET 語言；因此，將任何 C# 可執行檔散發到其他電腦，則需要將 .NET Framework 安裝在每部執行電腦上 (可能有您應用程式特有的其他相依性)。 您有各種選項可用來散發 .NET Framework。 如需概觀，請參閱[開發人員部署指南](https://msdn.microsoft.com/library/ee942965)。  
   
- 將已完成的應用程式移至其他電腦，通常稱為「部署」。 Microsoft 開發環境提供部署機制；如需詳細資訊，請參閱 [Deploying Applications and Components](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components) (部署應用程式和元件)。  
+ 將已完成的應用程式移至其他電腦，通常稱為「部署」。 Microsoft 開發環境提供部署機制；如需詳細資訊，請參閱 [Deploying Applications and Components](/visualstudio/deployment/deploying-applications-services-and-components) (部署應用程式和元件)。  
   
  如果您主要從命令列建置和散發，則可能需要考慮其他部署和轉散發相依性的方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 csc.exe 建置命令列](command-line-building-with-csc-exe.md)
+

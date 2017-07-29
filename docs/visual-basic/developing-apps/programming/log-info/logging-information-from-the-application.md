@@ -1,5 +1,5 @@
 ---
-title: "記錄來自應用程式的資訊 (Visual Basic) | Microsoft Docs"
+title: "記錄來自應用程式的資訊 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 25bf4e1d8b9b87c1545272c0d2746dc808d3fa4b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58f21df20425b0164586143ad5af6f363a90c3ef
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>記錄來自應用程式的資訊 (Visual Basic)
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
  `Log` 物件可提供將資訊寫入應用程式記錄檔接聽程式的方法，而 `Log` 物件的進階 `TraceSource` 屬性則提供詳細組態資訊。 `Log` 物件是由應用程式的組態檔進行設定。  
   
- `My.Log` 物件僅適用於 ASP.NET 應用程式。 若是用戶端應用程式，請使用 `My.Application.Log`。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log>。  
+ `My.Log` 物件僅適用於 ASP.NET 應用程式。 若是用戶端應用程式，請使用 `My.Application.Log`。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log>。  
   
 ## <a name="tasks"></a>工作  
   
@@ -67,3 +67,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [疑難排解：記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "函數式建構 (LINQ to XML) (C#) | Microsoft Docs"
+title: "函數式建構 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,23 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa522bb2c9d1c570aff237a76fc745bad52c8bfc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fc5dd9ba35ab226b944f8d73593c7351bb5ef224
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>函數式建構 (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」**。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 程式介面有數種主要功能可以使用功能結構：  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 程式介面有數種主要功能可以使用功能結構：  
   
--   <xref:System.Xml.Linq.XElement> 建構函式會針對內容採用各種引數類型。 例如，您可以傳遞變成子項目的其他 <xref:System.Xml.Linq.XElement> 物件。 您可以傳遞變成元素屬性的 <xref:System.Xml.Linq.XAttribute> 物件。 或者，您可以傳遞轉換成字串的其他類物件型，然後變成項目的文字內容。  
+-   <xref:System.Xml.Linq.XElement> 建構函式會針對內容採用各種引數類型。 例如，您可以傳遞變成子項目的其他 <xref:System.Xml.Linq.XElement> 物件。 您可以傳遞變成項目屬性的 <xref:System.Xml.Linq.XAttribute> 物件。 或者，您可以傳遞轉換成字串的其他類物件型，然後變成項目的文字內容。  
   
--   <xref:System.Xml.Linq.XElement> 建構函式會採用 <xref:System.Object> 類型的 `params` 陣列，讓您可以將任何數目的物件傳遞到建構函式。 這可讓您建立包含複雜內容的項目。  
+-   <xref:System.Xml.Linq.XElement> 建構函式會採用 `params` 類型的 <xref:System.Object> 陣列，讓您可以將任何數目的物件傳遞到建構函式。 這可讓您建立包含複雜內容的項目。  
   
--   如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統會列舉物件中的集合，並新增集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件，則會個別新增集合中的每個項目。 這是非常重要的，因為這可讓您將 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢的結果傳遞到建構函式中。  
+-   如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 這是非常重要的，因為這可讓您將 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的結果傳遞到建構函式中。  
   
  這些功能可讓您撰寫程式碼來建立 XML 樹狀結構。 以下是一個範例：  
   
@@ -55,7 +55,7 @@ XElement contacts =
     );  
 ```  
   
- 建立 XML 樹狀結構時，這些功能也可讓您撰寫使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢結果的程式碼，如下所示：  
+ 建立 XML 樹狀結構時，這些功能也可讓您撰寫使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢結果的程式碼，如下所示：  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -89,3 +89,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>另請參閱  
  [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "反映 (C#) | Microsoft Docs"
+title: "反映 (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,11 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: ceba1f9e17e6adc94ec25401bc2ddd4ea7c610ba
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa0aee4a0580ea28e3f0c70528dabaaf6f635f71
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reflection-c"></a>反映 (C#)
@@ -81,3 +81,4 @@ System.Console.WriteLine(info);
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [Common Language Runtime 中的組件](https://msdn.microsoft.com/library/k3677y81)
+

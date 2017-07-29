@@ -1,5 +1,5 @@
 ---
-title: "goto (C# 參考) | Microsoft Docs"
+title: "goto (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 700376096d969052a9f4633f565f9d9fd4dfec46
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd298809ab883f425f3bb88239f2951ab98cc03e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="goto-c-reference"></a>goto (C# 參考)
@@ -61,5 +61,6 @@ ms.lasthandoff: 05/22/2017
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [goto Statement](https://docs.microsoft.com/cpp/cpp/goto-statement-cpp) (goto 陳述式)   
+ [goto Statement](/cpp/cpp/goto-statement-cpp) (goto 陳述式)   
  [跳躍陳述式](../../../csharp/language-reference/keywords/jump-statements.md)
+

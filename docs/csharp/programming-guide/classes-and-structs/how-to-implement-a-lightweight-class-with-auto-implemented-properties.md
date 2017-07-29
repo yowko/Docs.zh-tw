@@ -1,5 +1,5 @@
 ---
-title: "如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 78f84351910ff542df13697005a0257882cae623
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)

@@ -1,5 +1,5 @@
 ---
-title: "如何：在 Visual Basic 中從二進位檔案讀取 | Microsoft Docs"
+title: "如何：在 Visual Basic 中從二進位檔案讀取"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 501257c051e0cba4d867acc4d32cdd5d891e950b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f5c0a093073b9a064629ae13a52a2295ad184b81
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中從二進位檔案讀取
@@ -82,3 +82,4 @@ ms.lasthandoff: 05/22/2017
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
  [如何：以多種格式從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
  [在剪貼簿儲存和讀取資料](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)
+

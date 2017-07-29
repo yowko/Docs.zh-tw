@@ -1,5 +1,5 @@
 ---
-title: "set (C# 參考) | Microsoft Docs"
+title: "set (C# 參考)"
 ms.date: 2017-03-10
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7111483ac2c939830560e8aad61078da5190684a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de10e3978d768aab34efa675fe00cfd059ff55df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="set-c-reference"></a>set (C# 參考)
-`set` 關鍵字會在屬性或索引子中定義「存取子」**方法，以將值指派給屬性或索引子項目。 如需詳細資訊和範例，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
+`set` 關鍵字會在屬性或索引子中定義「存取子」方法，以將值指派給屬性或索引子項目。 如需詳細資訊和範例，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
   
 下列範例會為名為 `Seconds` 的屬性定義 `get` 和 `set` 存取子。 它使用名為 `_seconds` 的私用欄位來支援屬性值。  
  
@@ -60,3 +60,4 @@ ms.lasthandoff: 03/13/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "#區域 (C# 參考) | Microsoft Docs"
+title: "#<a name=\"region-c-reference\"></a>區域 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,17 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2924daffcdc44c8f5ba5cf97c5b141c0dd07ca4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f7685d23bc1d40a0d0b6c9ac9a644019e1186eb7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="region-c-reference"></a>#區域 (C# 參考)
-`#region` 可讓您指定程式碼區塊，當您使用 Visual Studio 程式碼編輯器的[大綱](https://docs.microsoft.com/visualstudio/ide/outlining)時，可以展開或摺疊該程式碼區塊。 在較長的程式碼檔案中，能夠摺疊或隱藏一或多個區域是很方便的，如此您可以專注於目前處理的檔案部分。 下例示範如何定義區域：  
+# <a name="region-c-reference"></a>#region (C# 參考)
+`#region` 可讓您指定程式碼區塊，當您使用 Visual Studio 程式碼編輯器的[大綱](/visualstudio/ide/outlining)時，可以展開或摺疊該程式碼區塊。 在較長的程式碼檔案中，能夠摺疊或隱藏一或多個區域是很方便的，如此您可以專注於目前處理的檔案部分。 下例示範如何定義區域：  
   
-```  
+```csharp
 #region MyClass definition  
 public class MyClass   
 {  

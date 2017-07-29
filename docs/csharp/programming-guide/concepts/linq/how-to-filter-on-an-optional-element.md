@@ -1,5 +1,5 @@
 ---
-title: "如何：篩選選擇性項目 (C#) | Microsoft Docs"
+title: "如何：篩選選擇性項目 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bc732e029b1548a551128b7f8daca5f10dc19c03
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d0d849bb8c6174408810f2d2192faea6db6afd5b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>如何：篩選選擇性項目 (C#)
@@ -115,3 +114,4 @@ Child Four Text
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+

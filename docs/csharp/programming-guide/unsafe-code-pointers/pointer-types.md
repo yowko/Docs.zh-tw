@@ -1,5 +1,5 @@
 ---
-title: "指標類型 (C# 程式設計手冊) | Microsoft Docs"
+title: "指標類型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 100fa20e69c9a1cd6133437c29d1d5955e871656
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a4ebc69762f18dc630100b544c18df0f43734ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
@@ -82,7 +82,7 @@ int* myVariable;
   
  這個運算式 `*myVariable` 表示位於 `int` 所包含之位址的 `myVariable` 變數。  
   
- [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)和[指標轉換](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)主題中有數個指標範例。  下列範例將示範 `unsafe` 關鍵字和 `fixed` 陳述式的需求，以及如何讓內部指標遞增。  您可以將這個程式碼貼入主控台應用程式的 Main 函式中來執行它  (記得在 [專案設計工具]**** 中啟用 Unsafe 程式碼、在功能表列上選擇 [專案]****、[屬性]****，然後選取 [組建]**** 索引標籤上的 [容許 Unsafe 程式碼]****)。  
+ [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)和[指標轉換](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)主題中有數個指標範例。  下列範例將示範 `unsafe` 關鍵字和 `fixed` 陳述式的需求，以及如何讓內部指標遞增。  您可以將這個程式碼貼入主控台應用程式的 Main 函式中來執行它  (記得在 [專案設計工具] 中啟用 Unsafe 程式碼、在功能表列上選擇 [專案]、[屬性]，然後選取 [組建] 索引標籤上的 [容許 Unsafe 程式碼])。  
   
 ```  
 // Normal pointer to an object.  

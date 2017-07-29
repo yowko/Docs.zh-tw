@@ -1,5 +1,5 @@
 ---
-title: "進階 LINQ to XML 程式設計 (C#) | Microsoft Docs"
+title: "進階 LINQ to XML 程式設計 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,22 +14,21 @@ ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 067a3ded1b5ec7f15bf9100eeab6434c72b7807e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4419d05874f8e4883711d0f4abb98bc4a416b7fd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>進階 LINQ to XML 程式設計 (C#)
-本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 案例中的進階開發人員。  
+本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 案例中的進階開發人員。  
   
 ## <a name="in-this-section"></a>本章節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
-|[LINQ to XML 註釋](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|描述如何將附註加入到 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 節點和屬性。|  
+|[LINQ to XML 註釋](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|描述如何將附註加入到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 節點和屬性。|  
 |[LINQ to XML 事件 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|描述如何針對改變 XML 樹狀時發生的事件，撰寫事件處理常式。|  
 |[搭配節點進行程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/programming-with-nodes.md)|描述如何以比項目和屬性還要細微的位移單位等級來查詢與管理節點。|  
 |[混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|描述您混用宣告式程式碼 (查詢) 與命令性程式碼 (修改 XML 樹狀結構的程式碼) 時所出現的問題。|  
@@ -39,7 +38,8 @@ ms.lasthandoff: 03/13/2017
 |[使用 XSLT 轉換 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|描述如何使用 XSLT 轉換 XML 樹狀。|  
 |[如何：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|描述如何使用附註來簡化 XML 樹狀的轉換。|  
 |[序列化包含 XElement 物件的物件圖形 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|描述如何序列化包含 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 物件的物件圖形。|  
-|[WPF 資料繫結與 LINQ to XML](https://docs.microsoft.com/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|描述如何使用 LINQ to XML 做為 Windows Presentation Foundation 應用程式中資料繫結的資料來源。|  
+|[WPF 資料繫結與 LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|描述如何使用 LINQ to XML 做為 Windows Presentation Foundation 應用程式中資料繫結的資料來源。|  
   
 ## <a name="see-also"></a>另請參閱  
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

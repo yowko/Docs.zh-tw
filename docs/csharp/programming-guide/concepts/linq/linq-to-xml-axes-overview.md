@@ -1,5 +1,5 @@
 ---
-title: "LINQ to XML 座標軸概觀 (C#) | Microsoft Docs"
+title: "LINQ to XML 座標軸概觀 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b43d3cb5cc7154c1133c5fa17e5bdacca97a38c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 座標軸概觀 (C#)
@@ -27,9 +26,9 @@ ms.lasthandoff: 05/22/2017
   
  如 [XElement 類別概觀](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec)中所述，<xref:System.Xml.Linq.XElement> 物件代表單一元素節點。 項目的內容可能很複雜 (有時候稱為結構化的內容)，或者，它可能是簡單的項目。 簡單的項目可以是空的，也可以包含值。 如果節點包含結構化的內容，您可以使用各種座標軸方法來擷取子代項目的列舉。 最常使用的座標軸方法為 <xref:System.Xml.Linq.XContainer.Elements%2A> 和 <xref:System.Xml.Linq.XContainer.Descendants%2A>。  
   
- 除了會傳回集合的座標軸方法之外，還有其他兩個常用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢的方法。 <xref:System.Xml.Linq.XContainer.Element%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XAttribute>。  
+ 除了會傳回集合的座標軸方法之外，還有其他兩個常用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的方法。 <xref:System.Xml.Linq.XContainer.Element%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.Linq.XElement.Attribute%2A> 方法會傳回單一的 <xref:System.Xml.Linq.XAttribute>。  
   
- 就許多用途而言，[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢會提供最強大的方式來檢查樹狀結構、從其中擷取資料並加以轉換。 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢會在實作 <xref:System.Collections.Generic.IEnumerable%601> 的物件上運作，而 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 軸會傳回 <xref:System.Xml.Linq.XElement> 集合的 <xref:System.Collections.Generic.IEnumerable%601> 以及 <xref:System.Xml.Linq.XAttribute> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。 您需要這些集合，才能執行您的查詢。  
+ 就許多用途而言，[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會提供最強大的方式來檢查樹狀結構、從其中擷取資料並加以轉換。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢會在實作 <xref:System.Collections.Generic.IEnumerable%601> 的物件上運作，而 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸會傳回 <xref:System.Xml.Linq.XElement> 集合的 <xref:System.Collections.Generic.IEnumerable%601> 以及 <xref:System.Xml.Linq.XAttribute> 集合的 <xref:System.Collections.Generic.IEnumerable%601>。 您需要這些集合，才能執行您的查詢。  
   
  除了擷取項目和屬性之集合的座標軸方法之外，還有其他座標軸方法可讓您仔細逐一查看樹狀結構。 例如，您可以使用樹狀結構的節點，而不是處理項目和屬性。 這些節點是比項目和屬性還要細微的位移單位等級。 使用節點時，您可以檢查 XML 註解、文字節點、處理指示等等。 這個功能對於撰寫字組處理器與想要將文件另存為 XML 之類的人而言，相當重要。 不過，多數的 XML 程式設計人員關心的都是項目、屬性及其值。  
   
@@ -69,3 +68,4 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

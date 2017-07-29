@@ -1,5 +1,5 @@
 ---
-title: "join 子句 (C# 參考) | Microsoft Docs"
+title: "join 子句 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/10/2017
  如需詳細資訊，請參閱[如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)。  
   
 ## <a name="left-outer-join"></a>左外部聯結  
- 在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。 若要在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 中執行左方外部聯結，請搭配群組聯結使用 `DefaultIfEmpty` 方法，以指定在左側項目沒有相符項目時所要產生的預設右側項目。 您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。 在下列範例中，會顯示使用者定義的預設類型：  
+ 在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。 若要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中執行左方外部聯結，請搭配群組聯結使用 `DefaultIfEmpty` 方法，以指定在左側項目沒有相符項目時所要產生的預設右側項目。 您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。 在下列範例中，會顯示使用者定義的預設類型：  
   
  [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
@@ -87,9 +87,9 @@ ms.lasthandoff: 05/10/2017
  您可以使用多個 `from` 子句單獨將新的序列引入查詢，以執行非等聯結、交叉聯結及其他自訂聯結作業。 如需詳細資訊，請參閱[如何：執行自訂聯結作業](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。  
   
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>物件集合上的聯結與關聯式資料表的比較  
- 在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查詢運算式中，聯結作業是在物件集合上執行。 物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。 在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 中，只有在兩個來源序列未透過任何關聯性繫結時，才需要明確的 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。 例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。 當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。 實際上已為您完成此聯結。  
+ 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中，聯結作業是在物件集合上執行。 物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，只有在兩個來源序列未透過任何關聯性繫結時，才需要明確的 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。 例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。 當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。 實際上已為您完成此聯結。  
   
- 如需在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
+ 如需在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
   
 ## <a name="composite-keys"></a>複合索引鍵  
  您可以使用複合索引鍵來測試多個值是否相等。 如需詳細資訊，請參閱[如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)。 複合索引鍵也可用於 `group` 子句。  
@@ -113,3 +113,4 @@ ms.lasthandoff: 05/10/2017
  [如何：排序 Join 子句的結果](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
  [如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
  [如何：安裝範例資料庫](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+

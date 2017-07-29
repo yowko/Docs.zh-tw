@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：Office 程式設計 (C# 和 Visual Basic) | Microsoft Docs"
+title: "逐步解說：Office 程式設計 (C# 和 Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 和 Visual Basic)
@@ -47,9 +47,9 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
 電腦上必須安裝 Microsoft Office Excel 和 Microsoft Office Word 才能完成此逐步解說。  
   
- 如果您使用 [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)] 以前的作業系統，請確定已安裝 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]。  
+ 如果您使用 [!INCLUDE[windowsver](~/includes/windowsver-md.md)] 以前的作業系統，請確定已安裝 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>設定 Excel 增益集應用程式  
   
@@ -73,7 +73,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
 1.  在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [新增參考] 對話方塊隨即出現。  
   
-2.  在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，您可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
+2.  在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，您可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
   
 3.  按一下 [確定]。  
   
@@ -105,7 +105,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
   
      在這個方法中，使用了兩個新的 C# 功能。 這兩個功能已存在於 Visual Basic 中。  
   
-    -   [Add](http://go.microsoft.com/fwlink/?LinkId=210910) 方法提供用來指定特定範本的選擇性參數。 如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 中的新功能) 省略該參數的引數。 因為上一個範例中未傳送引數，所以 `Add` 會使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`excelApp.Workbooks.Add(Type.Missing)`。  
+    -   [Add](http://go.microsoft.com/fwlink/?LinkId=210910) 方法提供用來指定特定範本的選擇性參數。 如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中的新功能) 省略該參數的引數。 因為上一個範例中未傳送引數，所以 `Add` 會使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`excelApp.Workbooks.Add(Type.Missing)`。  
   
          如需詳細資訊，請參閱[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
   
@@ -215,3 +215,4 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
  [逐步解說：建立 Excel 的第一個 VSTO 增益集](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)   
  [互通性](../../../csharp/programming-guide/interop/index.md)
+

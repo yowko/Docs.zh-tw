@@ -1,5 +1,5 @@
 ---
-title: "使用動態類型 (C# 程式設計手冊) | Microsoft Docs"
+title: "使用動態類型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf8206e856a31882f5f30ee61d965ad5672f518e
-ms.openlocfilehash: 4bc2cd0e4fc165ef68338c2cda3b8c57c1bf18b2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36e10ef6a63aae2e901be50b9286370caec50e6a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用動態類型 (C# 程式設計手冊)
@@ -92,3 +92,4 @@ ms.lasthandoff: 07/03/2017
 |[Dynamic Language Runtime 概觀](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供 DLR 概觀，DLR 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。|  
 |[逐步解說：建立和使用動態物件](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|針對建立自訂動態物件及建立存取 `IronPython` 程式庫的專案，提供逐步指示。|  
 |[如何：使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|示範如何建立使用具名和選擇性引數、`dynamic` 類型，以及其他可簡化 Office API 物件存取之增強功能的專案。|
+

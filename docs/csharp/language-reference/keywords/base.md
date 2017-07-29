@@ -1,5 +1,5 @@
 ---
-title: "base (C# 參考) | Microsoft Docs"
+title: "base (C# 參考)"
 description: "base 關鍵字 (C#)"
 keywords: "base (C#), base 關鍵字 (C#), base 關鍵字 (C# 參考), base 關鍵字 (C# 語言參考)"
 ms.custom: 
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adebe9f77cf1fe40a4aa8b00a2ef65c499d27ad3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c875ca834fc66e0bf6cd596f376773badca757e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="base-c-reference"></a>base (C# 參考)
@@ -74,3 +74,4 @@ ms.lasthandoff: 03/13/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [this](../../../csharp/language-reference/keywords/this.md)
+

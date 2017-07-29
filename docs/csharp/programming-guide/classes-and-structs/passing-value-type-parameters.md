@@ -1,5 +1,5 @@
 ---
-title: "傳遞實值型別的參數 (C# 程式設計手冊) | Microsoft Docs"
+title: "傳遞實值類型的參數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: b0735f9a42fad01695c1ad64cfb937dce8e3cb93
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3377630fc4294831f6b9d66a69377aa42d973f1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>傳遞實值類型的參數 (C# 程式設計手冊)
@@ -65,3 +65,4 @@ ms.lasthandoff: 05/22/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
  [傳遞參考型別參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)
+

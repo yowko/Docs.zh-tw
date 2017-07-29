@@ -1,5 +1,5 @@
 ---
-title: "將標準查詢運算子鏈結在一起 (C#) | Microsoft Docs"
+title: "將標準查詢運算子鏈結在一起 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e9da047fcc224176d028f8caef8b57bc134dc21
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>將標準查詢運算子鏈結在一起 (C#)
@@ -28,9 +27,9 @@ ms.lasthandoff: 03/13/2017
  標準的查詢運算子也可以鏈結在一起。 例如，您可以插入 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 運算子，也可以用延遲的方式操作。 但該運算子不會具體化任何中繼結果。  
   
 ## <a name="example"></a>範例  
- 在此範例中，呼叫 `ConvertCollectionToUpperCase` 前，會先呼叫 <xref:System.Linq.Enumerable.Where%2A> 方法。 <xref:System.Linq.Enumerable.Where%2A> 方法會使用與本教學課程之前範例、`ConvertCollectionToUpperCase` 和 `AppendString` 中所使用之延遲方法幾乎完全相同的方式操作。  
+ 在此範例中，呼叫 <xref:System.Linq.Enumerable.Where%2A> 前，會先呼叫 `ConvertCollectionToUpperCase` 方法。 <xref:System.Linq.Enumerable.Where%2A> 方法會使用與本教學課程之前範例、`ConvertCollectionToUpperCase` 和 `AppendString` 中所使用之延遲方法幾乎完全相同的方式操作。  
   
- 其中一種差異是，在這種情況下，<xref:System.Linq.Enumerable.Where%2A> 方法會逐一查看其來源集合，並判斷第一個項目未傳遞述詞，然後取得下一個會傳遞述詞的項目。 它接著會產生第二個項目。  
+ 其中一種差異是，在這種情況下，<xref:System.Linq.Enumerable.Where%2A> 方法會逐一查看其來源集合、判斷第一個項目沒有傳遞述詞，然後取得下一個有傳遞的項目。 它接著會產生第二個項目。  
   
  不過，基本概念是一樣的：除非必要，否則系統不會具體化中繼集合。  
   
@@ -101,3 +100,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+

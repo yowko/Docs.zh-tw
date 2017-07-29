@@ -1,5 +1,5 @@
 ---
-title: "文件標籤的分隔符號 (C# 程式設計手冊) | Microsoft Docs"
+title: "文件標籤的分隔符號 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3e31f0c3d815c0454a9be6813ff9a04e5fa4c7de
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文件標籤的分隔符號 (C# 程式設計手冊)
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/13/2017
  單行分隔符號。 這是顯示在文件範例中並供 Visual C# 專案範本使用的表單。 如果分隔符號後面有空白字元，則該字元不會包括在 XML 輸出中。  
   
 > [!NOTE]
->  Visual Studio IDE 有一項稱為「智慧註解編輯」的功能，可自動插入 \<summary> 和 \</summary> 標記，並在程式碼編輯器中輸入 `///` 分隔符號之後，將游標移至這些標記內。 從專案屬性頁面的[選項、文字編輯器、C#、格式](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting)中，存取這項功能。  
+>  Visual Studio IDE 有一項稱為「智慧註解編輯」的功能，可自動插入 \<summary> 和 \</summary> 標記，並在程式碼編輯器中輸入 `///` 分隔符號之後，將游標移至這些標記內。 從專案屬性頁面的[選項、文字編輯器、C#、格式](/visualstudio/ide/reference/options-text-editor-csharp-formatting)中，存取這項功能。  
   
  `/** */`  
  多行分隔符號。  

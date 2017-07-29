@@ -1,5 +1,5 @@
 ---
-title: "迭代器 (C#) | Microsoft Docs"
+title: "迭代器 (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,11 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
@@ -53,7 +53,7 @@ public static System.Collections.IEnumerable SomeNumbers()
   
  迭代器方法或 `get` 存取子的傳回型別可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
- 您可以使用 `yield break` 陳述式結束反覆運算。  
+ 您可以使用 `yield break` 陳述式結束反覆項目。  
   
  迭代器是在 Visual Studio 2005 的 C# 中引進。  
   
@@ -368,7 +368,7 @@ public class Stack<T> : IEnumerable<T>
   
  迭代器不支援 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName> 方法。 若要從頭開始逐一查看，您必須取得新的迭代器。  
   
- 如需其他資訊，請參閱 [C# 語言規格](../../../csharp/language-reference/language-specification.md)。  
+ 如需其他資訊，請參閱 [C# 語言規格](../../../csharp/language-reference/language-specification/index.md)。  
   
 ##  <a name="BKMK_UseOfIterators"></a> 迭代器的使用  
  當您需要使用複雜的程式碼來填入清單序列時，迭代器可讓您維持 `foreach` 迴圈的簡潔性。 當您想要執行下列作業時，這會很有用：  
@@ -386,3 +386,4 @@ public class Stack<T> : IEnumerable<T>
  [yield](../../../csharp/language-reference/keywords/yield.md)   
  [搭配陣列使用 foreach](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
  [泛型](../../../csharp/programming-guide/generics/index.md)
+

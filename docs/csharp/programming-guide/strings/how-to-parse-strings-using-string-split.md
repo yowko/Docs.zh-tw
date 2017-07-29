@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 String.Split 剖析字串 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：使用 String.Split 剖析字串 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,15 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 1f5f15c305619c538aa276396c31296f42c8f40a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0ef96f1cb074c32208457c192d53c69d95a102d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-programming-guide"></a>如何：使用 String.Split 剖析字串 (C# 程式設計手冊)
-下列程式碼範例示範如何使用 <xref:System.String.Split%2A?displayProperty=fullName> 方法來剖析字串。 輸入時，<xref:System.String.Split%2A> 接受字元陣列以表示用來分隔目標字串之有趣子字串的字元。  該函式會傳回子字串的陣列。  
+下列程式碼範例示範如何使用 <xref:System.String.Split%2A?displayProperty=fullName> 方法剖析字串。 當輸入時， <xref:System.String.Split%2A> 會採用字元陣列以表示用來分隔目標字串之有趣子字串的字元。  該函式會傳回子字串的陣列。  
   
  這個範例會使用空格、逗號、句號、冒號和定位點，全部以包含這些分隔符號的陣列傳遞至 <xref:System.String.Split%2A>。  目標字串句子中的每個文字都會使用字串結果陣列來個別顯示。  
   

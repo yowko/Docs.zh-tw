@@ -1,5 +1,5 @@
 ---
-title: "如何：使用群組將檔案分割成許多檔案 (LINQ) (C#) | Microsoft Docs"
+title: "如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 229645a63c9bbf166d2e29d89ed5e92cd4a4814f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f49cd82b0e6fecc2e4459dbe31656db0aa5f42ee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)
@@ -142,8 +142,9 @@ class SplitWithGroups
  此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

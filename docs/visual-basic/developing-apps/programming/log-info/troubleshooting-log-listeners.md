@@ -1,5 +1,5 @@
 ---
-title: "疑難排解：記錄檔接聽程式 (Visual Basic) | Microsoft 文件"
+title: "疑難排解：記錄檔接聽程式 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b651902563a60a68443f7d3f3b917a9c1ae085bc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0542aef4dc60821939e85760e6fadf0dfb528dec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>疑難排解：記錄檔接聽程式 (Visual Basic)
@@ -64,7 +64,8 @@ ms.lasthandoff: 05/22/2017
   
      如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：寫入應用程式事件記錄檔 (Visual Basic) | Microsoft Docs"
+title: "如何：寫入應用程式事件記錄檔 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: f35229004c0b4c2ed75714ee43e5513bed5e0435
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7cc73b0644003f8231a7792b0b62d143159da075
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>如何：寫入應用程式事件記錄檔 (Visual Basic)
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/26/2017
   
     1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。  
+    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
     3.  按一下 [加入] 。  
   
@@ -103,3 +103,4 @@ ms.lasthandoff: 06/26/2017
  [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
  [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+

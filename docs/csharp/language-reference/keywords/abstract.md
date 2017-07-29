@@ -1,5 +1,5 @@
 ---
-title: "abstract (C# 參考) | Microsoft Docs"
+title: "abstract (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: acb9c5748addd75f741e97688fca707910b042a0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a109a8e37f84a2e91229bfce789a69cdc26adba9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
@@ -110,3 +110,4 @@ BaseClass bc = new BaseClass();   // Error
  [virtual](../../../csharp/language-reference/keywords/virtual.md)   
  [override](../../../csharp/language-reference/keywords/override.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+

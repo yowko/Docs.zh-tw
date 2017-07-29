@@ -1,5 +1,5 @@
 ---
-title: "如何：使用物件初始設定式初始化物件 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：使用物件初始設定式初始化物件 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d6537332b4ddcca185a0ac3039a925e0b3fcef2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01f2391680d9236b42f0d015b944b8f12455d0c8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>如何：使用物件初始設定式初始化物件 (C# 程式設計手冊)
@@ -53,8 +53,9 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要執行此程式碼，請將該類別複製並貼到 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 中所建立的 Visual C# 主控台應用程式專案。   
+ 若要執行此程式碼，請將該類別複製並貼到 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中所建立的 Visual C# 主控台應用程式專案。   
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+

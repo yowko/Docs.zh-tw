@@ -1,5 +1,5 @@
 ---
-title: "XML 文件註解 (C# 程式設計手冊) | Microsoft Docs"
+title: "XML 文件註解 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 59f8c164acba31ac76387614b5603bb518417800
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 408b2de29b15158499067da05dbb2f89eb1ba22f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文件註解 (C# 程式設計手冊)
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/14/2017
 public class MyClass{}  
 ```  
   
- 當您使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 選項編譯時，編譯器將會搜尋原始程式碼中的所有 XML 標記，然後建立 XML 文件檔。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 這類工具。  
+ 當您使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 選項編譯時，編譯器將會搜尋原始程式碼中的所有 XML 標記，然後建立 XML 文件檔。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具。  
   
  若要參考 XML 項目，例如，您的函式處理要在 XML 文件註解中描述的特定 XML 項目，您可以使用標準引號機制 (`<` 和 `>`)。  若要參照程式碼參考 (`cref`) 項目中的泛型識別碼，您可以使用逸出字元 (例如 `cref="List<T>"`) 或大括號 (`cref="List{T}"`)。  視為特殊案例的情形是，編譯器將大括號剖析為角括號，如此在參考泛型識別項時，文件註解撰寫起來就變得不那麼複雜。  
   
@@ -74,7 +74,8 @@ public class MyClass{}
 -   [/doc (處理文件註解)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 的新功能 | Microsoft Docs"
+title: "Visual Basic 的新功能"
 ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
@@ -105,7 +105,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 例如，以 C# 撰寫的下列 `Sentence` 類別包含 `FindNext` 方法，它可以在句子中尋找以指定子字串開頭的下一個文字。 字串會以參考傳回值傳回，而參考所傳遞至方法的 `Boolean` 變數會指出搜尋是否成功。 這表示，呼叫端不只可以讀取傳回值，還可以修改它，再將修改結果反映在 `Sentence` 類別中。
 
-[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+[!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
 在最簡單的格式中，您可以使用類似下列的程式碼，修改句子中找到的字。 請注意，您不是將值指派給方法，而是指派給方法傳回的運算式，也就是參考傳回值。
 
@@ -191,5 +191,5 @@ End Interface
  現在，編譯器會使用一般多載解析規則來選擇要呼叫的最適合 `GetDetails`，而且您可以在 Visual Basic 中宣告介面關聯性 (如範例所示)。  
   
 ## <a name="see-also"></a>請參閱  
- [Visual Studio 2017 的新功能](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+ [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-in-visual-studio)
 
