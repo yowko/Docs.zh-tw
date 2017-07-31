@@ -1,5 +1,5 @@
 ---
-title: "可多載的運算子 (C# 程式設計手冊) | Microsoft Docs"
+title: "可多載的運算子 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 1d3f942dca761c4425ed8c2129b752dec349a40f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c7b5515e60060727b6f5c34ae34bbead4c70a376
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可多載的運算子 (C# 程式設計手冊)
@@ -43,7 +43,7 @@ C# 允許使用者定義的類型使用 [operator](../../../csharp/language-refe
 |[+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[!](../../../csharp/language-reference/operators/logical-negation-operator.md)、[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)、[++](../../../csharp/language-reference/operators/increment-operator.md)、[--](../../../csharp/language-reference/operators/decrement-operator.md), [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md)|可多載這些一元運算子。|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md), [%](../../../csharp/language-reference/operators/modulus-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md), [^](../../../csharp/language-reference/operators/xor-operator.md), [<\<](../../../csharp/language-reference/operators/left-shift-operator.md), [>>](../../../csharp/language-reference/operators/right-shift-operator.md)|可多載這些二元運算子。|  
 |[==](../../../csharp/language-reference/operators/equality-comparison-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [\<](../../../csharp/language-reference/operators/less-than-operator.md), [>](../../../csharp/language-reference/operators/greater-than-operator.md), [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md), [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md)|可多載比較運算子 (但請參閱本表後面的注意事項)。|  
-|[&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)|條件式邏輯運算子無法多載，但它們可以使用可多載的 `&` 和 `&#124;` 評估。|  
+|[&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)|條件式邏輯運算子無法多載，但它們可以使用可多載的 `&` 和 <code>&#124;</code> 評估。|  
 |[&#91;&#93;](../../../csharp/language-reference/operators/index-operator.md)|陣列索引運算子無法多載，但您可以定義索引子。|  
 |[(T)x](../../../csharp/language-reference/operators/invocation-operator.md)|雖然轉換運算子無法多載，但您可以定義新的轉換運算子 (請參閱[明確](../../../csharp/language-reference/keywords/explicit.md)和[隱含](../../../csharp/language-reference/keywords/implicit.md))。|  
 |[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|雖然指派運算子無法多載，但比方說，`+=` 是使用 `+` 進行評估 (可多載)。|  
@@ -57,7 +57,7 @@ C# 允許使用者定義的類型使用 [operator](../../../csharp/language-refe
 ```csharp  
 public static Complex operator +(Complex c1, Complex c2)  
     {  
-        Return new Complex(c1.real + c2.real, c1.imaginary + c2.imaginary);  
+        return new Complex(c1.real + c2.real, c1.imaginary + c2.imaginary);  
     }  
 ```  
   
