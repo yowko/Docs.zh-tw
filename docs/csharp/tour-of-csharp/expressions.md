@@ -1,5 +1,5 @@
 ---
-title: "C# 運算式 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 運算式 - C# 語言教學課程"
 description: "運算式、運算元及運算子是 C# 語言的構成要素"
 keywords: ".NET, csharp, 運算式, 運算子, 運算元"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 運算式
-<a id="expressions" class="xliff"></a>
+# <a name="expressions"></a>運算式
 
 「運算式」是由「運算元」和「運算子」建構而成。 運算式的運算子會指出要將哪些運算套用到運算元。 運算子範例包括 `+`、`-`、`*`、`/` 及 `new`。 運算元範例包括常值、欄位、區域變數及運算式。
 
@@ -27,8 +26,8 @@ ms.lasthandoff: 05/23/2017
 
 當兩個優先順序相同的運算子之間有運算元時，運算子的「關聯性」會控制執行運算的順序：
 
-*    除了指派運算子之外，所有二元運算子都具有「左關聯性」，亦即會由左到右執行運算。 例如，`x + y + z` 會判斷值為 `(x + y) + z`。
-*    指派運算子和條件運算子 (`?:`) 具有「右關聯性」，亦即會由右到左執行運算。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
+*   除了指派運算子之外，所有二元運算子都具有「左關聯性」，亦即會由左到右執行運算。 例如，`x + y + z` 會判斷值為 `(x + y) + z`。
+*   指派運算子和條件運算子 (`?:`) 具有「右關聯性」，亦即會由右到左執行運算。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
 
 您可以使用括弧來控制優先順序和關聯性。 例如，`x + y * z` 會先將 `y` 乘以 `z`，然後再將結果加到 `x`，而 `(x + y) * z` 則會先將 `x` 與 `y` 相加，然後再將結果乘以 `z`。
 
