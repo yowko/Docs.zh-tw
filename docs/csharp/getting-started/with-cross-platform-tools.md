@@ -1,5 +1,5 @@
 ---
-title: "開始使用 C# 與跨平台工具 - C# 指南 | Microsoft Docs"
+title: "開始使用 C# 與跨平台工具 - C# 指南"
 description: "開始使用 C# 與跨平台工具"
 keywords: "C#, 使用者入門, 取得, 跨平台"
 ms.date: 08/23/2016
@@ -9,11 +9,11 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 48cac496-2dc2-4dc7-b8fd-b9ade0fcdfd2
 redirect_url: /dotnet/csharp/getting-started/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: a3604e3e0dbe5783d1d177d9f8b1423b1dd4c299
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77d5ffa73281eaa34c7dbb10de42a9355f8586ea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

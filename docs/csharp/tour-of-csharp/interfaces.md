@@ -1,5 +1,5 @@
 ---
-title: "C# 介面 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 介面 - C# 語言教學課程"
 description: "介面會定義 C# 中由類型實作的合約"
 keywords: ".NET, csharp, 介面, 多重繼承, 多型"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6c18de7a4aa86a321b65b4ce65e07c48ca1dbc24
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673ac56f3f5732fcda02d313b6f4273708ae365f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 介面
-<a id="interfaces" class="xliff"></a>
+# <a name="interfaces"></a>介面
 
 「介面」定義可由類別和結構實作的合約。 介面可以包含方法、屬性、事件和索引子。 介面不提供它所定義之成員的實作 (它只會指定必須由類別提供的成員或實作介面的結構)。
 

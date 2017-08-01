@@ -1,5 +1,5 @@
 ---
-title: "C# 類型和變數 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 型別和變數 - C# 語言教學課程"
 description: "了解如何在 C# 中定義類型和宣告變數"
 keywords: ".NET, csharp, 型別, 參考型別, 實值型別"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 型別與變數
-<a id="types-and-variables" class="xliff"></a>
+# <a name="types-and-variables"></a>型別與變數
 
 C# 中有兩種型別：*實值型別*和*參考型別*。 實值型別的變數直接包含其資料，而參考型別的變數則將參考儲存到其資料，後者即是物件。 使用參考型別時，這兩種變數可以參考相同的物件，因此對其中一個變數進行的作業可能會影響另一個變數所參考的物件。 使用實值型別時，變數各有自己的資料複本，因此在某一個變數上進行的作業不可能會影響其他變數 (但 `ref` 和 `out` 參數變數除外)。
 

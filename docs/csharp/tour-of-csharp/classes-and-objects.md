@@ -1,5 +1,5 @@
 ---
-title: "C# 中的類別和物件 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 中的類別和物件 - C# 語言教學課程"
 description: "第一次接觸 C#？ 請閱讀此類別、物件及繼承概觀"
 keywords: ".NET, csharp, 類別, 執行個體, 物件, 繼承, 多型"
 author: BillWagner
@@ -10,15 +10,14 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: e4af598747b991757912880102cb18bf1835cc56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# 類別與物件
-<a id="classes-and-objects" class="xliff"></a>
+# <a name="classes-and-objects"></a>類別與物件
 
 「類別」是 C# 最基本的型別。 類別是以單一單位結合狀態 (欄位) 和動作 (方法及其他函式成員) 的資料結構。 類別可以為動態建立的類別「執行個體」(稱為「物件」) 提供定義。 類別支援「繼承」和「多型」，這些是可供「衍生類別」將「基底類別」延伸及特製化的機制。
 
@@ -34,8 +33,7 @@ ms.lasthandoff: 05/23/2017
 
 當物件不再可供存取時，系統會自動回收物件所佔用的記憶體。 在 C# 中，既沒有必要也不可能明確地將物件解除配置。
 
-## 成員
-<a id="members" class="xliff"></a>
+## <a name="members"></a>成員
 
 類別的成員不是靜態成員，就是執行個體成員。 靜態成員隸屬於類別，而執行個體成員則隸屬於物件 (類別的執行個體)。
 
@@ -62,8 +60,7 @@ ms.lasthandoff: 05/23/2017
 * 型別
     - 類別所宣告的巢狀型別
 
-## 協助工具選項
-<a id="accessibility" class="xliff"></a>
+## <a name="accessibility"></a>協助工具選項
 
 類別的每個成員都有關聯的存取能力，用來控制能夠存取成員的程式文字區域。 存取能力有五種可能的形式。 以下為摘要說明。
 
@@ -78,8 +75,7 @@ ms.lasthandoff: 05/23/2017
 * `private`
     - 存取僅限於此類別
 
-## 型別參數
-<a id="type-parameters" class="xliff"></a>
+## <a name="type-parameters"></a>型別參數
 
 類別定義可以在類別名稱後面以角括弧括住型別參數名稱清單，來定義一組型別參數。 接著，就可以在類別宣告的主體中使用這些型別參數，來定義類別的成員。 在下列範例中，`Pair` 的型別參數是 `TFirst` 和 `TSecond`：
 
@@ -92,8 +88,7 @@ ms.lasthandoff: 05/23/2017
 
 泛型型別若已有提供的型別參數 (如上述的 `Pair<int,string>`)，即稱為「建構的型別」。
 
-## 基底類別
-<a id="base-classes" class="xliff"></a>
+## <a name="base-classes"></a>基底類別
 
 類別宣告可以在類別名稱和型別參數後面加上冒號和基底類別的名稱，來指定基底類別。 省略基底類別規格即等同於衍生自類型 `object`。 在下列範例中，`Point3D` 的基底類別是 `Point`，而 `Point` 的基底類別是 `object`：
 
@@ -105,8 +100,7 @@ ms.lasthandoff: 05/23/2017
 
 [!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## 欄位
-<a id="fields" class="xliff"></a>
+## <a name="fields"></a>欄位
 
 「欄位」是與類別或類別執行個體關聯的變數。
 
@@ -120,8 +114,7 @@ ms.lasthandoff: 05/23/2017
 
 如先前的範例所示，可以使用 `readonly` 修飾詞來宣告「唯讀欄位」。 只有在欄位的宣告或在相同類別的建構函式中，才能對 `readonly` 欄位進行指派。
 
-## 方法
-<a id="methods" class="xliff"></a>
+## <a name="methods"></a>方法
 
 「方法」是實作物件或類別所能執行之計算或動作的成員。 存取「靜態方法」時，是透過類別來存取。 存取「執行個體方法」時，是透過類別的執行個體來存取。
 
@@ -131,8 +124,7 @@ ms.lasthandoff: 05/23/2017
 
 在宣告方法的類別中，方法的「簽章」必須是唯一的。 方法的簽章是由方法的名稱、型別參數的數目以及其參數的數目、修飾詞和型別所組成。 方法的簽章並不包括傳回型別。
 
-### 參數
-<a id="parameters" class="xliff"></a>
+### <a name="parameters"></a>參數
 
 參數是用來將值或變數參考傳遞給方法。 方法的參數會從叫用方法時所指定的「引數」取得其實際值。 參數有四種：值參數、參考參數、輸出參數，以及參數陣列。
 
@@ -160,8 +152,7 @@ ms.lasthandoff: 05/23/2017
 
 [!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
-### 方法主體和區域變數
-<a id="method-body-and-local-variables" class="xliff"></a>
+### <a name="method-body-and-local-variables"></a>方法主體和區域變數
 
 方法的主體會指定叫用方法時所要執行的陳述式。
 
@@ -173,8 +164,7 @@ C# 要求必須「明確指派」區域變數，才能取得其值。 例如，�
 
 方法可以使用 `return` 陳述式將控制權交還給其呼叫端。 在傳回 `void` 的方法中，`return` 陳述式不能指定運算式。 在傳回非 void 的方法中，`return` 陳述式必須包含會計算傳回值的運算式。
 
-### 靜態和執行個體方法
-<a id="static-and-instance-methods" class="xliff"></a>
+### <a name="static-and-instance-methods"></a>靜態和執行個體方法
 
 使用 static 修飾詞來宣告的方法即為「靜態方法」。 靜態方法不會在特定的執行個體上運作，並且只能直接存取靜態成員。
 
@@ -194,8 +184,7 @@ C# 要求必須「明確指派」區域變數，才能取得其值。 例如，�
 
 請注意，`SetNextSerialNo` 和 `GetNextSerialNo` 靜態方法的叫用位置是在類別上，而 `GetSerialNo` 執行個體方法的叫用位置則是在類別的執行個體上。
 
-### 虛擬、覆寫及抽象方法
-<a id="virtual-override-and-abstract-methods" class="xliff"></a>
+### <a name="virtual-override-and-abstract-methods"></a>虛擬、覆寫及抽象方法
 
 當執行個體方法宣告包含 `virtual` 修飾詞時，該方法即稱為「虛擬方法」。 當沒有任何 virtual 修飾詞存在時，該方法則稱為「非虛擬方法」。
 
@@ -221,8 +210,7 @@ C# 要求必須「明確指派」區域變數，才能取得其值。 例如，�
 
 [!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
-### 方法多載
-<a id="method-overloading" class="xliff"></a>
+### <a name="method-overloading"></a>方法多載
 
 方法「多載」可允許相同類別中的多個方法擁有相同的名稱，只要它們的簽章是唯一的即可。 編譯多載方法的叫用時，編譯器會使用「多載解析」來判斷要叫用的特定方法。 多載解析會尋找一個與引數最相符的方法，或者，如果找不到任何一個最相符的方法，則會回報錯誤。 下列範例示範多載解析的實際運作情況。 `Main` 方法中每項叫用的註解會顯示實際叫用的方法是哪一個。
 
@@ -230,8 +218,7 @@ C# 要求必須「明確指派」區域變數，才能取得其值。 例如，�
 
 如範例所示，透過將引數明確轉換成確切的參數型別和 (或) 明確提供型別引數，即一律可以選取特定的方法。
 
-## 其他函式成員
-<a id="other-function-members" class="xliff"></a>
+## <a name="other-function-members"></a>其他函式成員
 
 包含可執行程式碼的成員統稱為類別的「函式成員」。 上節中所述的方法是主要的函式成員類型。 本節將說明 C# 所支援的其他函式成員類型：建構函式、屬性、索引子、事件、運算子及完成項。
 
@@ -239,8 +226,7 @@ C# 要求必須「明確指派」區域變數，才能取得其值。 例如，�
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
-### 建構函式
-<a id="constructors" class="xliff"></a>
+### <a name="constructors"></a>建構函式
 
 C# 同時支援執行個體建構函式和靜態建構函式。 「執行個體建構函式」是實作將類別執行個體初始化所需之動作的成員。 「靜態建構函式」是實作第一次將類別本身載入時將其初始化所需之動作的成員。
 
@@ -252,8 +238,7 @@ C# 同時支援執行個體建構函式和靜態建構函式。 「執行個體�
 
 與其他成員不同，類別並不會繼承執行個體建構函式，而且除了類別中實際宣告的執行個體建構函式以外，類別即不會再有任何執行個體建構函式。 如果沒有為類別提供任何執行個體建構函式，則會自動提供一個沒有任何參數的空建構函式。
 
-### 屬性
-<a id="properties" class="xliff"></a>
+### <a name="properties"></a>屬性
 
 「屬性」是欄位的自然延伸。 兩者都是具有關聯型別的具名成員，並且用來存取欄位和屬性的語法是相同的。 不過，與欄位不同的是，屬性並不會指示儲存位置。 取而代之的是，屬性會有「存取子」，這些存取子會指定讀取或寫入其值時要執行的陳述式。
 
@@ -271,8 +256,7 @@ set 存取子會與具有單一參數具名值且沒有任何傳回型別的方�
 
 屬性的存取子可以是虛擬的。 當屬性宣告包含 `virtual`、`abstract` 或 `override` 修飾詞時，會套用至該屬性的存取子。
 
-### 索引子
-<a id="indexers" class="xliff"></a>
+### <a name="indexers"></a>索引子
 
 「索引子」是可讓物件以和陣列相同的方式進行索引編製的成員。 索引子的宣告方式與屬性類似，不同之處在於成員的名稱是 this 後面接著在 `[` 與 `]` 分隔符號之間撰寫的參數清單。 索引子的存取子中會提供參數。 與屬性類似，索引子可以是讀寫、唯讀及唯寫的，而索引子的存取子可以是虛擬的。
 
@@ -282,8 +266,7 @@ set 存取子會與具有單一參數具名值且沒有任何傳回型別的方�
 
 索引子可被多載，這意謂著類別可以宣告多個索引子，只要其參數的號碼或型別不同即可。
 
-### 事件
-<a id="events" class="xliff"></a>
+### <a name="events"></a>事件
 
 「事件」是可讓類別或物件提供通知的成員。 事件的宣告方式與欄位類似，不同之處在於其宣告包含事件關鍵字，並且型別必須是委派型別。
 
@@ -297,8 +280,7 @@ set 存取子會與具有單一參數具名值且沒有任何傳回型別的方�
 
 針對需要控制事件之基礎儲存的進階案例，事件宣告可以明確提供 `add` 和 `remove` 存取子，這有些類似於屬性的 `set` 存取子。
 
-### 運算子
-<a id="operators" class="xliff"></a>
+### <a name="operators"></a>運算子
 
 「運算子」是定義將特定運算式運算子套用到類別執行個體之意義的成員。 可定義的運算子有三種：一元運算子、二元運算子及轉換運算子。 所有運算子都必須宣告為 `public` 和 `static`。
 
@@ -308,8 +290,7 @@ set 存取子會與具有單一參數具名值且沒有任何傳回型別的方�
 
 第一個 `Console.WriteLine` 會輸出 `True`，因為兩個清單所包含物件的數目相同、值相同且順序相同。 如果 `List<T>` 並未定義 `operator ==`，則第一個 `Console.WriteLine` 所輸出的會是 `False`，因為 `a` 和 `b` 參考不同的 `List<int>` 執行個體。
 
-### 完成項
-<a id="finalizers" class="xliff"></a>
+### <a name="finalizers"></a>完成項
 
 「完成項」是實作將類別執行個體完成所需之動作的成員。 完成項不能有參數、不能有存取能力修飾詞，也不能以明確方式來叫用。 系統會在記憶體回收期間自動叫用執行個體的完成項。
 

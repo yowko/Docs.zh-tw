@@ -1,5 +1,5 @@
 ---
-title: "屬性 - C# | Microsoft Docs"
+title: "屬性 - C#"
 description: "了解 C# 中屬性的運作方式。"
 keywords: ".NET, .NET Core, C#, 屬性"
 author: mgroves
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 512a222a727e3e6a032848b87463dda0ae8f7362
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cc8f38d96f7f1c41f04d64c2acc2f53805b6b012
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 在 C# 中使用屬性
-<a id="using-attributes-in-c" class="xliff"></a> #
+# <a name="using-attributes-in-c"></a>在 C# 中使用屬性 #
 
 屬性提供以宣告方式將資訊與程式碼相關聯的方法。 它們也可提供可重複使用的元素，以套用至各種不同的目標。
 
@@ -27,13 +26,11 @@ ms.lasthandoff: 05/23/2017
 
 在本教學課程中，將介紹如何將屬性加入您的程式碼、如何建立及使用您自己的屬性，以及如何使用一些內建到 .NET Core 的屬性。
 
-## 必要條件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要條件
 您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。
 您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
-## 建立應用程式
-<a id="create-the-application" class="xliff"></a>
+## <a name="create-the-application"></a>建立應用程式
 
 現在您已安裝完所有工具，請建立新的 .NET Core 應用程式。 若要使用命令列產生器，請在您慣用的殼層中執行下列命令︰
 
@@ -43,8 +40,7 @@ ms.lasthandoff: 05/23/2017
 
 若要執行這個程式，請使用 `dotnet run`。 您應該會在主控台看到 "Hello, World" 輸出。
 
-## 如何將屬性加入至程式碼
-<a id="how-to-add-attributes-to-code" class="xliff"></a>
+## <a name="how-to-add-attributes-to-code"></a>如何將屬性加入至程式碼
 
 在 C# 中，屬性是繼承自 `Attribute` 基底類別的類別。 繼承自 `Attribute` 的任何類別都能在其他程式碼片段上做為一種「標記」。
 比方說，有一種稱為 `ObsoleteAttribute` 的屬性。 這用來表示程式碼已經過時，而且不應再使用。 您可以將此屬性放在類別上，例如透過使用方括弧。
@@ -63,8 +59,7 @@ ms.lasthandoff: 05/23/2017
 傳遞到屬性建構函式的參數僅限於簡單型別/常值︰`bool, int, double, string, Type, enums, etc` 和這些型別的陣列。
 您不能使用運算式或變數。 您可以自由使用位置或具名參數。
 
-## 如何建立您自己的屬性
-<a id="how-to-create-your-own-attribute" class="xliff"></a>
+## <a name="how-to-create-your-own-attribute"></a>如何建立您自己的屬性
 
 建立屬性很簡單，只要繼承自 `Attribute` 基底類別。
 
@@ -86,8 +81,7 @@ ms.lasthandoff: 05/23/2017
 
 上述程式碼會造成編譯器錯誤，例如：`Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
-## 如何限制屬性使用方式
-<a id="how-to-restrict-attribute-usage" class="xliff"></a>
+## <a name="how-to-restrict-attribute-usage"></a>如何限制屬性使用方式
 
 屬性可用在許多「目標」上。 上述範例顯示它們使用於類別，但也可以用在：
 
@@ -115,8 +109,7 @@ ms.lasthandoff: 05/23/2017
 
 [!code-csharp[使用您自己的屬性](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
-## 如何使用附加至程式碼元素的屬性
-<a id="how-to-use-attributes-attached-to-a-code-element" class="xliff"></a>
+## <a name="how-to-use-attributes-attached-to-a-code-element"></a>如何使用附加至程式碼元素的屬性
 
 屬性是做為中繼資料。 在無外力介入的情況下，它們不會實際執行任何動作。
 
@@ -140,8 +133,7 @@ ms.lasthandoff: 05/23/2017
 務必注意的是，這些 `Attribute` 物件會延遲具現化。 也就是說，在您使用 `GetCustomAttribute` 或 `GetCustomAttributes` 之前，它們將不會具現化。
 它們也會每次具現化。 在一個資料列中呼叫 `GetCustomAttributes` 兩次，將會傳回兩個不同的 `ObsoleteAttribute` 執行個體。
 
-## 基底類別庫 (BCL) 中的通用屬性
-<a id="common-attributes-in-the-base-class-library-bcl" class="xliff"></a>
+## <a name="common-attributes-in-the-base-class-library-bcl"></a>基底類別庫 (BCL) 中的通用屬性
 
 許多工具和架構都會使用屬性。 NUnit 使用 NUnit 測試執行器使用的屬性 (例如 `[Test]` 和 `[TestFixture]`)。 ASP.NET MVC 使用 `[Authorize]` 之類的屬性，並提供動作篩選架構來執行關於 MVC 動作的交叉關注。 [PostSharp](https://www.postsharp.net) 使用屬性語法以允許 C# 中的層面導向程式設計。
 
@@ -158,8 +150,7 @@ ms.lasthandoff: 05/23/2017
 
 在上述程式碼中，您不必使用常值 `"Name"` 字串。 這有助於避免打字錯誤相關的問題，也可使重構/重新命名更順暢。
 
-## 總結
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>總結
 
 屬性能為 C# 提供宣告式能力。 但它們是做為中繼資料的一種程式碼，無法自行運作。
 
