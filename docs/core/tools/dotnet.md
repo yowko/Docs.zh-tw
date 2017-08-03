@@ -1,5 +1,5 @@
 ---
-title: "dotnet 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet 命令 - .NET Core CLI"
 description: "了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。"
 keywords: "dotnet, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -10,29 +10,25 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 02779e1ac5db1a7a68ddede6d30063366270dc50
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f377ea55278ae382f56a0dc0cbcf1bb99f49eca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# dotnet 命令
-<a id="dotnet-command" class="xliff"></a>
+# <a name="dotnet-command"></a>dotnet 命令
 
-## 名稱
-<a id="name" class="xliff"></a>
+## <a name="name"></a>名稱
 
 `dotnet` - 用於執行命令列命令的一般驅動器。
 
-## 概要
-<a id="synopsis" class="xliff"></a>
+## <a name="synopsis"></a>概要
 
 `dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose] [--fx-version] [--additionalprobingpath] [-h|--help]`
 
-## 說明
-<a id="description" class="xliff"></a>
+## <a name="description"></a>說明
 
 `dotnet` 是命令列介面 (CLI) 工具鏈的通用驅動器。 它會自行叫用，提供簡短的使用方式指示。
 
@@ -40,8 +36,7 @@ ms.lasthandoff: 04/10/2017
 
 `dotnet` 唯一自行作為命令使用的時機是執行[與 Framework 相依的應用程式](../deploying/index.md)。 在 `dotnet` 動詞之後指定應用程式 DLL，以執行應用程式 (例如，`dotnet myapp.dll`)。
 
-## 選項
-<a id="options" class="xliff"></a>
+## <a name="options"></a>選項
 
 `-v|--verbose`
 
@@ -71,11 +66,9 @@ ms.lasthandoff: 04/10/2017
 
 印出命令的簡短說明。 如果與 `dotnet` 搭配使用，則也會列印一份可用的命令清單。
 
-## dotnet 命令
-<a id="dotnet-commands" class="xliff"></a>
+## <a name="dotnet-commands"></a>dotnet 命令
 
-### 一般
-<a id="general" class="xliff"></a>
+### <a name="general"></a>一般
 
 命令 | 功能
 --- | ---
@@ -91,8 +84,7 @@ ms.lasthandoff: 04/10/2017
 [dotnet-sln](dotnet-sln.md) | 要在方案檔中新增、移除及列出專案的選項。
 [dotnet-test](dotnet-test.md) | 使用測試執行器執行測試。
 
-### 專案參考
-<a id="project-references" class="xliff"></a>
+### <a name="project-references"></a>專案參考
 
 命令 | 功能
 --- | ---
@@ -100,16 +92,14 @@ ms.lasthandoff: 04/10/2017
 [dotnet-list reference](dotnet-list-reference.md) | 列出專案參考。
 [dotnet-remove reference](dotnet-remove-reference.md) | 移除專案參考。
 
-### NuGet 套件
-<a id="nuget-packages" class="xliff"></a>
+### <a name="nuget-packages"></a>NuGet 套件
 
 命令 | 功能
 --- | ---
 [dotnet-add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet-remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
-### NuGet 命令
-<a id="nuget-commands" class="xliff"></a>
+### <a name="nuget-commands"></a>NuGet 命令
 
 命令 | 功能
 --- | ---
@@ -117,8 +107,7 @@ ms.lasthandoff: 04/10/2017
 [dotnet-nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
 [dotnet-nuget push](dotnet-nuget-push.md) | 將套件推送至伺服器並發行。
 
-## 範例
-<a id="examples" class="xliff"></a>
+## <a name="examples"></a>範例
 
 初始化可編譯和執行的範例 .NET Core 主控台應用程式：
 
@@ -136,8 +125,7 @@ ms.lasthandoff: 04/10/2017
 
 `dotnet myapp.dll`
 
-## 環境變數
-<a id="environment-variables" class="xliff"></a>
+## <a name="environment-variables"></a>環境變數
 
 `DOTNET_PACKAGES`
 

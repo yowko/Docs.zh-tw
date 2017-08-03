@@ -1,5 +1,5 @@
 ---
-title: "dotnet-restore 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-restore 命令 - .NET Core CLI"
 description: "了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。"
 keywords: "dotnet-restore, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
-ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9e471bd1d66d68703b025cd3eaa009cb296a9fb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/29/2017
 
 針對專案特定工具，`dotnet restore` 會先還原在其中封裝工具的套件，然後繼續還原其專案檔中所指定的工具相依性。
 
-*Nuget.Config* 檔案中的一些設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *NuGet.Config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於指定的資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [NuGet.Config 參考](https://docs.microsoft.com/nuget/schema/nuget-config-file)。
+*Nuget.Config* 檔案中的一些設定 (如果有的話) 會影響 `dotnet restore` 命令的行為。 例如，在 *NuGet.Config* 中設定 `globalPackagesFolder` 會將還原的 NuGet 套件置於指定的資料夾。 這是在 `dotnet restore` 命令上指定 `--packages` 選項的替代方式。 如需詳細資訊，請參閱 [NuGet.Config 參考](/nuget/schema/nuget-config-file)。
 
 ## <a name="arguments"></a>引數
 

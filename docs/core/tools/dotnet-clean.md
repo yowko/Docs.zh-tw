@@ -1,5 +1,5 @@
 ---
-title: "dotnet-clean 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-clean 命令 - .NET Core CLI"
 description: "dotnet-clean 命令會清除目前的目錄。"
 keywords: "dotnet-clean, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 0bdd8b9ab133ca92e414618412d95d8136d6234a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>描述
 
-`dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
+`dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 
 ## <a name="arguments"></a>引數
 

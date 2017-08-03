@@ -1,5 +1,5 @@
 ---
-title: "dotnet-nuget-locals 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-nuget-locals 命令 - .NET Core CLI"
 description: "dotnet-nuget-locals 命令會清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。"
 keywords: "dotnet-nuget-locals, CLI, CLI 命令, .NET Core"
 author: karann-msft
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d0acfaa6ff1a11f49a0d3751b675ea94bd6ae3a3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -95,5 +96,5 @@ list 選項是用來顯示指定之快取類型的位置。
 
 ## <a name="troubleshooting"></a>疑難排解
 
-如需使用 `dotnet nuget locals` 命令時常見的問題與錯誤資訊，請參閱[管理 NuGet 快取](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache)。
+如需使用 `dotnet nuget locals` 命令時常見的問題與錯誤資訊，請參閱[管理 NuGet 快取](/nuget/consume-packages/managing-the-nuget-cache)。
 

@@ -1,5 +1,5 @@
 ---
-title: "管理 .NET Core 工具中的相依性 | Microsoft Docs"
+title: "管理 .NET Core 工具中的相依性"
 description: "說明如何利用 .NET Core 工具來管理相依性。"
 keywords: "CLI, 擴充性, 自訂命令, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 25847dd6921e547074f4501d34d865dfb1b98b59
-ms.openlocfilehash: de496d96120df1ec275bb4a69f01b6266b0b5a89
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b982d72b92cefb015c584ea6827dc60999ca9a00
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 05/17/2017
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-如果您熟悉 MSBuild，它看起來會類似其他已經存在的參考型別。 索引鍵是 `Include` 陳述式，它指定了您希望新增至專案的套件識別碼。 `<Version>` 子項目指定要取得的版本。 版本是依各 [NuGet 版本規則](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges)指定。
+如果您熟悉 MSBuild，它看起來會類似其他已經存在的參考型別。 索引鍵是 `Include` 陳述式，它指定了您希望新增至專案的套件識別碼。 `<Version>` 子項目指定要取得的版本。 版本是依各 [NuGet 版本規則](/nuget/create-packages/dependency-versions#version-ranges)指定。
 
 > [!NOTE]
-> 如果您不熟悉整體的 `csproj` 語法，您可以使用 [MSBuild 專案參考](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference)文件來取得詳細資訊。  
+> 如果您不熟悉整體的 `csproj` 語法，您可以使用 [MSBuild 專案參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)文件來取得詳細資訊。  
 
 您可以使用下例中條件來新增只能在特定目標中使用的相依性：
 

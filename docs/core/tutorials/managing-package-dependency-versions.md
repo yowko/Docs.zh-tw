@@ -1,6 +1,6 @@
 ---
-title: "如何管理 .NET Core 1.0 的套件相依性版本 | Microsoft Docs"
-description: "如何管理 .NET Core 1.0 的套件相依性版本"
+title: "如何管理 .NET Core 1.0 的套件相依性版本"
+description: "了解您的 .NET Core 程式庫和應用程式的套件相依性版本管理。"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,21 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3576fecfd4964bc0a4ca9482888cd61e6ac44350
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 如何管理 .NET Core 1.0 的套件相依性版本
-<a id="how-to-manage-package-dependency-versions-for-net-core-10" class="xliff"></a>
+# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>如何管理 .NET Core 1.0 的套件相依性版本
 
 本文章涵蓋您需要知道有關 .NET Core 程式庫和應用程式套件版本的資訊。
 
-## 字彙表
-<a id="glossary" class="xliff"></a>
+## <a name="glossary"></a>字彙表
 
 **修正** - 修正相依性表示，您會使用在 NuGet 上發行、適用於 .NET Core 1.0 的相同系列套件。
 
@@ -31,8 +29,7 @@ ms.lasthandoff: 05/23/2017
 
 **修剪** - 從中繼套件移除不依賴之套件的動作。  這與 NuGet 套件作者有關。  如需詳細資訊，請參閱[減少與 project.json 的套件相依性](../deploying/reducing-dependencies.md)。 
 
-## 將相依性固定為 .NET Core 1.0
-<a id="fix-your-dependencies-to-net-core-10" class="xliff"></a>
+## <a name="fix-your-dependencies-to-net-core-10"></a>將相依性固定為 .NET Core 1.0
 
 若要可靠地還原套件，並撰寫可靠的程式碼，很重要的一點是將相依性固定為與 .NET Core 1.0 一起出貨的套件版本。  這表示每個套件應該有單一版本，而且不含任何額外的限定詞。
 
@@ -52,13 +49,11 @@ ms.lasthandoff: 05/23/2017
 
 `"System.Text.RegularExpressions":"4.0.10-rc3-24021-00"`
 
-### 這為什麼重要？
-<a id="why-does-this-matter" class="xliff"></a>
+### <a name="why-does-this-matter"></a>這為什麼重要？
 
 我們保證如果您將相依性固定為與 .NET Core 1.0 一起出貨者時，那些套件將一起運作。  如果您使用未以此方式固定的套件，則沒有這種保證。
 
-### 案例
-<a id="scenarios" class="xliff"></a>
+### <a name="scenarios"></a>案例
 
 雖然與 .NET Core 1.0 一起發行的所有套件和其版本清單冗長，但如果您的程式碼落在特定狀況下，可能不必看完整份清單。
 
@@ -78,17 +73,15 @@ ms.lasthandoff: 05/23/2017
 
 如果是，您需要將其他相依性固定為 1.0。  如需正確的套件版本和組建號碼，請參閱在本文結尾。
 
-### 版本控制時，使用 splat 字串 (\*) 的注意事項
-<a id="a-note-on-using-a-splat-string--when-versioning" class="xliff"></a>
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>版本控制時，使用 splat 字串 (\*) 的注意事項
 
 您採用的版本控制模式可能是使用 splat (\*) 字串，就像這樣︰`"System.Collections":"4.0.11-*"`。
 
 **您不應該這麼做**。  使用 splat 字串可能會導致從不同的組建還原套件，這些組建有些可能比 .NET Core 1.0 更遠。  這可能導致某些套件不相容。
 
-## 依中繼套件組織的套件和版本號碼
-<a id="packages-and-version-numbers-organized-by-metapackage" class="xliff"></a>
+## <a name="packages-and-version-numbers-organized-by-metapackage"></a>依中繼套件組織的套件和版本號碼
 
-[所有標準 .NET 程式庫套件和其適用於 1.0 的版本清單](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt)。
+[所有 .NET Standard 套件和其適用於 1.0 的版本清單](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt)。
 
 [所有執行階段套件和其適用於 1.0 的版本清單](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt)。
 

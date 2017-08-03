@@ -1,5 +1,5 @@
 ---
-title: "dotnet-build 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-build 命令 - .NET Core CLI"
 description: "dotnet-build 命令會建置專案和其所有相依性。"
 keywords: "dotnet-build, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2006b15978f384e53e43a0a2562e81d10582abd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -35,9 +36,9 @@ ms.lasthandoff: 03/22/2017
 
 建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在您建置專案前執行 [`dotnet restore`](dotnet-restore.md) 的時候建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。
 
-`dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行和累加建置。 如需詳細資訊，請參閱[累加建置](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds)。 
+`dotnet build` 使用 MSBuild 來建置專案，因此同時支援平行和累加建置。 如需詳細資訊，請參閱[累加建置](/visualstudio/msbuild/incremental-builds)。 
 
-除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `/p`，以及用於定義記錄器的 `/l`。 請參閱 [MSBuild 命令列參考](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference)，以深入了解這些選項。 
+除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `/p`，以及用於定義記錄器的 `/l`。 請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)，以深入了解這些選項。 
 
 專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示將產生可執行程式碼的專案：
 

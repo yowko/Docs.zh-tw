@@ -1,5 +1,5 @@
 ---
-title: "dotnet-test 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-test 命令 - .NET Core CLI"
 description: "`dotnet test` 命令是用來在指定的專案中執行單元測試。"
 keywords: "dotnet-test, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -10,33 +10,25 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3308488672df2621c04de40f642c732f81284019
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="dotnet-test" class="xliff"></a>
+#<a name="dotnet-test"></a>dotnet-test
 
-#dotnet-test
-
-<a id="name" class="xliff"></a>
-
-## 名稱
+## <a name="name"></a>名稱
 
 `dotnet-test` - 用來執行單元測試的 .NET 測試驅動程式。
 
-<a id="synopsis" class="xliff"></a>
-
-## 概要
+## <a name="synopsis"></a>概要
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-<a id="description" class="xliff"></a>
-
-## 描述
+## <a name="description"></a>描述
 
 `dotnet test` 命令是用來在指定的專案中執行單元測試。 單元測試是與單元測試架構 (例如 MSTest、NUnit 或 xUnit) 具有相依性的主控台應用程式專案，以及該單元測試架構的 dotnet 測試執行器。 這些會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
@@ -44,9 +36,7 @@ ms.lasthandoff: 06/20/2017
 
 [!code-xml[XUnit 基本範本](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-<a id="options" class="xliff"></a>
-
-## 選項
+## <a name="options"></a>選項
 
 `PROJECT`
     
@@ -100,9 +90,7 @@ ms.lasthandoff: 06/20/2017
 
 設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-<a id="examples" class="xliff"></a>
-
-## 範例
+## <a name="examples"></a>範例
 
 執行目前目錄之專案中的測試：
 
@@ -112,9 +100,7 @@ ms.lasthandoff: 06/20/2017
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-<a id="filter-option-details" class="xliff"></a>
-
-## 篩選選項詳細資料
+## <a name="filter-option-details"></a>篩選選項詳細資料
 
 `--filter <EXPRESSION>`
 
@@ -150,9 +136,7 @@ ms.lasthandoff: 06/20/2017
 
 如需如何使用選擇性單元測試篩選的其他資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-<a id="see-also" class="xliff"></a>
-
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 [架構與目標](../../standard/frameworks.md)   
 [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

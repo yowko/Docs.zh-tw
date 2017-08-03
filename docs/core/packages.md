@@ -1,6 +1,6 @@
 ---
-title: "套件、中繼套件和架構 | Microsoft Docs"
-description: "套件、中繼套件和架構"
+title: "套件、中繼套件和架構"
+description: "了解套件、中繼套件和架構的術語。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,23 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 6a8f57de57e3470b0312b0d248d91d14f613ae94
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 套件、中繼套件和架構
-<a id="packages-metapackages-and-frameworks" class="xliff"></a>
+# <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
 .NET Core 是由 NuGet 套件構成的平台。 有些產品體驗可獲益於細部定義的套件，有些則更適合廣泛定義的套件。 為了滿足這類雙重特性，產品會以細部套件組的形式散發，並以廣泛區塊的形式來描述，而這類套件類型俗稱為「中繼套件」。
 
 每個 .NET Core 套件可支援在多個 .NET 執行階段 (以架構來代表) 上執行。 這些架構有些是傳統的架構，例如 `net46` 即表示 .NET Framework。 其他還有可以視為「套件型架構」的全新架構，該架構可以建立新的模型來定義架構。 這些套件型架構完全是以套件形式構成與定義，並在套件和架構之間形成強式關聯。
 
-## 封裝
-<a id="packages" class="xliff"></a>
+## <a name="packages"></a>封裝
 
 .NET Core 分割成各個套件組，以提供基本、較高層級的資料類型、應用程式組合類型與一般公用程式。 其中的每個套件皆代表具有相同名稱的單一組件。 例如，[System.Runtime](https://www.nuget.org/packages/System.Runtime) 包含 System.Runtime.dll。 
 
@@ -60,8 +58,7 @@ ms.lasthandoff: 06/20/2017
 </Project>
 ```
 
-## 中繼套件
-<a id="metapackages" class="xliff"></a>
+## <a name="metapackages"></a>中繼套件
 
 中繼套件一種 NuGet 套件慣例，其用來描述可合理搭配的一組套件。 中繼套件可將套件設為具有相依性，以代表這組套件。 中繼套件也可以選擇性地指定架構，以為這組套件建立架構。 
 
@@ -74,17 +71,16 @@ ms.lasthandoff: 06/20/2017
 - 讓參考大量細部套件的使用者體驗更方便。 
 - 其中所定義的套件組 (包括特定版本)，均經過測試且適合共同運作。
 
-.NET Standard 程式庫中繼套件包括：
+.NET Standard 中繼套件是：
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - 描述「.NET Standard 程式庫」中所包含的程式庫。 適用於所有支援 .NET Standard 程式庫的 .NET 實作 (例如，.NET Framework、.NET Core 和 Mono)。 可建立 'netstandard' 架構。
+- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - 描述 ".NET Standard" 中所包含的程式庫。 適用於所有支援 .NET Standard 的 .NET 實作 (例如，.NET Framework、.NET Core 和 Mono)。 可建立 'netstandard' 架構。
 
 主要的 .NET Core 中繼套件包括：
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - 描述屬於 .NET Core 散發套件的程式庫。 建立 [`.NETCoreApp` 架構](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)。 仰賴較小的 `NETStandard.Library`。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - 一組相容性 facade，其可啟用以 mscorlib 為基礎的可攜式類別庫 (PCL)，以在 .NET Core 上執行。
 
-## 架構
-<a id="frameworks" class="xliff"></a>
+## <a name="frameworks"></a>架構
 
 每個 .NET Core 套件都會支援一組執行階段架構。 架構也說明了具有特定架構目標時可以仰賴的可用 API 集 (和其他可能的特性)。 當有新的 API 加入時，就會為其建立版本。
 
@@ -100,8 +96,7 @@ ms.lasthandoff: 06/20/2017
 
 `.NETStandard,Version=1.3` 架構是以套件為基礎的架構。 它需仰賴以架構為目標的套件，並根據該架構來定義並公開 API。
 
-## 以套件為基礎的架構
-<a id="package-based-frameworks" class="xliff"></a>
+## <a name="package-based-frameworks"></a>以套件為基礎的架構
 
 架構和套件之間沒有雙向關聯性。 第一個部分要定義特定架構可用的 API，例如 `netstandard1.3`。 目標為 `netstandard1.3` (或 `netstandard1.0` 這類相容架構) 的套件會定義 `netstandard1.3` 可用的 API。 這乍聽之下像是循環定義，其實不然。 由於是「以套件為基礎」，因此架構的 API 定義也來自套件。 架構本身並不會定義任何 API。
 
@@ -116,12 +111,11 @@ ms.lasthandoff: 06/20/2017
 - `netstandard`
 - `netcoreapp`
 
-### .NET Standard
-<a id="net-standard" class="xliff"></a>
+### <a name="net-standard"></a>.NET Standard
 
-.NET Standard (目標 Framework Moniker：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET Standard 相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET Standard 版本，這取決於它們實作哪些 API 而定。 
+.NET Standard (目標 Framework Moniker：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET Standard 相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET Standard 版本，這取決於它們實作哪些 API 而定。
 
-`netstandard` 架構會隱含參考 `NETStandard.Library` 中繼套件。 例如，下列 MSBuild 專案檔指出專案是以 `netstandard1.6` 為目標，而該版本參考 .NET Standard 程式庫 1.6 版的中繼套件。 
+`netstandard` 架構會隱含參考 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 中繼套件。 例如，下列 MSBuild 專案檔指出專案是以 `netstandard1.6` 為目標，而該版本參考 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)的中繼套件。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -148,8 +142,7 @@ ms.lasthandoff: 06/20/2017
 
 若是使用 `NETStandard.Library` 1.3.0 版但目標為 `netstandard1.6`，這種反向情況無效。 由於較低版本的中繼套件不會公開較高架構的任何資產，因此使用較低的中繼套件時，您不能將目標設為更高的架構。 中繼套件的版本配置會判斷提示中繼套件應符合所描述架構的最高版本。 由於版本配置的特性，假設第一個 `NETStandard.Library` 版本包含 `netstandard1.6` 資產，該版本即為 v1.6.0。 上述範例使用 v1.3.0 是為了在範例中保持對稱，但實際上不存在這種情況。
 
-### .NET Core 應用程式
-<a id="net-core-application" class="xliff"></a>
+### <a name="net-core-application"></a>.NET Core 應用程式
 
 .NET Core 應用程式 (TFM: `netcoreapp`) 架構表示套件和相關聯的 API 是隨附於 .NET Core 散發套件和它所提供的主控台應用程式模型。 由於目標為主控台應用程式模型，因此 .NET Core 應用程式必須使用此架構，包括僅限於 .NET Core 中執行的程式庫也應如此。 使用此架構時，可限制應用程式和程式庫僅在 .NET Core 中執行。 
 

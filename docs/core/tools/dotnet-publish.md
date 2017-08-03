@@ -1,5 +1,5 @@
 ---
-title: "dotnet-publish 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-publish 命令 - .NET Core CLI"
 description: "dotnet-publish 命令會將 .NET Core 專案發行到目錄中。"
 keywords: "dotnet-publish, CLI, CLI 命令, .NET Core"
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 48bfe6c77ee6c5d905069f47da5512ac63a24b2a
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8a37b1eacab13682d4f4a2bea2f9ea248cdd9eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/22/2017
 * *\*.runtime.config.json* 檔案，指定應用程式預期的共用執行階段，以及執行階段的其他組態選項 (例如記憶體回收類型)。
 * 應用程式的相依性。 這些相依性會從 NuGet 快取複製到輸出資料夾。
 
-`dotnet publish` 命令的輸出已準備好部署至主機系統 (例如，伺服器、電腦、Mac、膝上型電腦) 以執行，且是準備要進行部署之應用程式的唯一正式支援方式。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。 針對已發行應用程式的目錄結構，請參閱[目錄結構 (英文)](https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure)。
+`dotnet publish` 命令的輸出已準備好部署至主機系統 (例如，伺服器、電腦、Mac、膝上型電腦) 以執行，且是準備要進行部署之應用程式的唯一正式支援方式。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。 針對已發行應用程式的目錄結構，請參閱[目錄結構 (英文)](/aspnet/core/hosting/directory-structure)。
 
 ## <a name="arguments"></a>引數
 
@@ -96,3 +97,4 @@ ms.lasthandoff: 03/22/2017
 
 * [目標架構](../../standard/frameworks.md)
 * [執行階段識別項 (RID) 目錄](../rid-catalog.md)
+

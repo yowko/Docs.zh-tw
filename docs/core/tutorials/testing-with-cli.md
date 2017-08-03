@@ -1,7 +1,7 @@
 ---
-title: "使用 .NET Core 命令列組織和測試專案 | Microsoft Docs"
+title: "使用 .NET Core 命令列組織和測試專案"
 description: "本教學課程說明如何從命令列組織和測試 .NET Core 專案。"
-keywords: ".NET, .NET Core, 單元測試, .NET CLI, xUnit"
+keywords: ".NET, .NET Core, 單元測試, .NET Core CLI, xUnit"
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -260,3 +260,4 @@ Test execution time: 1.6634 Seconds
 通過測試。 與擁有者交談時，寵物類型的方法會傳回正確值。
 
 您已了解使用 xUnit 來組織及測試專案的技術。 繼續使用這些技術，以將它們套用至您自己的專案。 *祝各位程式撰寫愉快！*
+

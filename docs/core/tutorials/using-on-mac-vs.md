@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core | Microsoft Docs"
+title: "使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core"
 description: "本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Core 建置簡單主控台應用程式。"
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
@@ -9,42 +9,34 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
-ms.openlocfilehash: c377d0669efed9abb50965652d286ceb6fad3299
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e11515031716a66ead866e52504137cb4e1df137
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="getting-started-with-net-core-on-macos-using-visual-studio-for-mac" class="xliff"></a>
-
-# 使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
+# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 
 Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Core 建置簡單主控台應用程式。
 
 > [!NOTE]
-> Visual Studio for Mac 是預覽版軟體。 與所有 Microsoft 產品的預覽版本相同，我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
-> * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。
-> * 若要提出建議，從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac UserVoice 網頁 (英文)](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。
+> 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
+> * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
+> * 若要提出建議，從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac UserVoice 網頁](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac) \(英文\)。
 
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要條件
 
-## 必要條件
+請參閱 [Mac 上 .NET Core 的先決條件](../../core/macos-prerequisites.md)主題。
 
-如需必要條件的詳細資訊，請參閱 [Mac 上 .NET Core 的先決條件](../../core/macos-prerequisites.md)。
-
-<a id="getting-started" class="xliff"></a>
-
-## 使用者入門
+## <a name="getting-started"></a>使用者入門
 
 如果您已經安裝必要條件和 Visual Studio for Mac，請略過本節並移至[建立專案](#creating-a-project)。 請遵循下列步驟來安裝必要條件和 Visual Studio for Mac：
 
 下載 [Visual Studio for Mac 安裝程式](https://www.visualstudio.com/vs/visual-studio-mac/)。 執行安裝程式。 閱讀並接受授權合約。 安裝過程中，系統會詢問您是否要安裝 Xamarin，這是一個跨平台的行動應用程式開發技術。 針對 .NET Core 開發，安裝 Xamarin 和其相關元件為選擇性。 如需 Visual Studio for Mac 安裝程序的逐步解說，請參閱 [Visual Studio for Mac 簡介 (英文)](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安裝完成後，請啟動 Visual Studio for Mac IDE。
 
-<a id="creating-a-project" class="xliff"></a>
-
-## 建立專案
+## <a name="creating-a-project"></a>建立專案
 
 1. 選取歡迎畫面上的 [新增專案]。
 
@@ -62,17 +54,13 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    ![開啟 Program.cs 檔案的主視窗](./media/using-on-mac-vs/vsmac4.png)
 
-<a id="run-the-application" class="xliff"></a>
-
-## 執行應用程式
+## <a name="run-the-application"></a>執行應用程式
 
 使用 <kbd>F5</kbd> 以偵錯模式執行應用程式，或使用 <kbd>CTRL</kbd>+<kbd>F5</kbd> 以發行模式執行應用程式。
 
 ![[應用程式輸出] 窗格顯示 Hello World!](./media/using-on-mac-vs/vsmac5.png)
 
-<a id="next-step" class="xliff"></a>
-
-## 後續步驟
+## <a name="next-step"></a>後續步驟
 
 [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](using-on-mac-vs-full-solution.md)主題，能說明如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
 
