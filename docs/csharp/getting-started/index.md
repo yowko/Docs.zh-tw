@@ -1,6 +1,5 @@
 ---
-
-title: "使用者入門 - C# 指南 | Microsoft Docs"
+title: "開始使用 - C# 指南"
 description: "開始使用 C#"
 keywords: "C#, 開始使用 , 取得, 安裝"
 author: rpetrusha
@@ -11,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 0878fb6328d406ae3456a740e6e806f3ebbdbbb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 09415f996c9dd03c34a74cfe2d2d030f2b4b6fe8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-started-with-c"></a>開始使用 C# #

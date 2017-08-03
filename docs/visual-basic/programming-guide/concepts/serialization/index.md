@@ -1,5 +1,5 @@
 ---
-title: "序列化 (Visual Basic) | Microsoft Docs"
+title: "序列化 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fb4404bf648f108a3b98952234d29e2bc1d4189
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b88f78b86e79802238b78cfe097a0ccc73bfe778
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serialization-visual-basic"></a>序列化 (Visual Basic)
@@ -42,11 +43,11 @@ ms.lasthandoff: 03/13/2017
 ### <a name="making-an-object-serializable"></a>讓物件可序列化  
  若要將物件序列化，您需要將要序列化的物件、將包含序列化物件的資料流，以及 <xref:System.Runtime.Serialization.Formatter>。 <xref:System.Runtime.Serialization> 包含序列化及還原序列化物件所需的類別。  
   
- 將 <xref:System.SerializableAttribute> 屬性套用到某個型別，以表示此型別的執行個體是可序列化的。 當您嘗試序列化但該型別沒有 <xref:System.SerializableAttribute> 屬性時，系統會擲回 <xref:System.Runtime.Serialization.SerializationException> 例外狀況。  
+ 將 <xref:System.SerializableAttribute> 屬性套用至某個類型，以表示此類型的執行個體為可序列化。 如果您嘗試序列化但該類型沒有 <xref:System.SerializableAttribute> 屬性，則會擲回 <xref:System.Runtime.Serialization.SerializationException> 例外狀況。  
   
  如果您不要將類別中的某個欄位序列化，請套用 <xref:System.NonSerializedAttribute> 屬性。 如果可序列化型別的欄位包含指標、控制代碼，或一些其他特定環境專屬的資料結構，且無法以有意義的方式在不同環境中重新建構該欄位，則您可能想要讓它成為不可序列化的。  
   
- 如果序列化類別包含對其他類別之物件的參照，且該類別標記為 <xref:System.SerializableAttribute>，則系統也會將那些物件序列化。  
+ 如果序列化類別包含對其他類別之物件的參考，且該類別標記為 <xref:System.SerializableAttribute>，則系統也會將那些物件序列化。  
   
 ## <a name="binary-and-xml-serialization"></a>二進位與 XML 序列化  
  二進位或 XML 序列化都能使用。 在二進位序列化中，系統會序列化所有成員 (即使是唯讀的成員)，且效能會增強。 XML 序列化提供可讀性較高的程式碼，也會基於互通性目的為物件共用和使用方式提供更大的彈性。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 03/13/2017
 ### <a name="xml-serialization"></a>XML 序列化  
  XML 序列化會將物件的公用欄位和屬性，或是方法的參數和傳回值，序列化為與特定 XML 結構描述定義語言 (XSD) 文件相符的 XML 資料流。 XML 序列化會產生強型別的類別，其中包含的公用屬性和欄位都會轉換成 XML。 <xref:System.Xml.Serialization> 包含序列化及還原序列化 XML 所需的類別。  
   
- 您可以將屬性套用到類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別之執行個體的方式。  
+ 您可以將屬性套用至類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別執行個體的方式。  
   
 ## <a name="basic-and-custom-serialization"></a>基本和自訂序列化  
  有兩種方式可以執行序列化：基本和自訂。 基本序列化使用 .NET Framework 來自動序列化物件。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 03/13/2017
  如果使用基本序列化，物件的版本控制可能會產生問題，這種情況則較適合使用自訂序列化。 基本序列化是執行序列化最簡單的方式，但它對該程序提供的控制機制並不多。  
   
 ### <a name="custom-serialization"></a>自訂序列化  
- 在自訂序列化中，您可以明確指定要序列化的物件，以及序列化的方式。 類別必須標上 <xref:System.SerializableAttribute>，並且實作 <xref:System.Runtime.Serialization.ISerializable> 介面。  
+ 在自訂序列化中，您可以明確指定要序列化的物件，以及序列化的方式。 類別必須標記為 <xref:System.SerializableAttribute> 並實作 <xref:System.Runtime.Serialization.ISerializable> 介面。  
   
  如果您也想讓物件以自訂方式還原序列化，就必須使用自訂建構函式。  
   
@@ -80,7 +81,8 @@ ms.lasthandoff: 03/13/2017
  示範序列化能如何用來保存物件在執行個體之間的資料，可讓您儲存值，並且在下次物件具現化時擷取它們。  
   
  [如何：從 XML 檔案讀取物件資料 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- 示範如何讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別寫入 XML 的物件資料。  
+ 示範如何讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
   
  [如何：將物件資料寫入 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
  示範如何使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。
+

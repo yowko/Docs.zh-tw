@@ -1,6 +1,6 @@
 ---
-title: "C# 教學課程 | Microsoft Docs"
-description: "C# 教學課程"
+title: "C# 教學課程"
+description: "探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: bda4350a2a39676f39b5d5660fcde7ab3bee9377
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43d6efd6535e4002be79af1c51dd58e6d26d218d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

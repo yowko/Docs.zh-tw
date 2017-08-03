@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的陣列 | Microsoft Docs"
+title: "Visual Basic 中的陣列"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
@@ -224,7 +224,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  在下列情況中，您可能需要建立長度為零的陣列：  
   
--   為了避免發生 <xref:System.NullReferenceException> 例外狀況，程式碼必須存取 <xref:System.Array> 類別的成員 (例如 <xref:System.Array.Length%2A> 或 <xref:System.Array.Rank%2A>)，或者呼叫 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 函式 (例如 <xref:Microsoft.VisualBasic.Information.UBound%2A>)。  
+-   為了避免發生 <xref:System.NullReferenceException> 例外狀況，程式碼必須存取 <xref:System.Array> 類別的成員 (例如 <xref:System.Array.Length%2A> 或 <xref:System.Array.Rank%2A>)，或者呼叫 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Basic 函式 (例如 <xref:Microsoft.VisualBasic.Information.UBound%2A>)。  
   
 -   您希望不需檢查 `Nothing` (以特殊情況處理)，讓取用程式碼更簡單。  
   
@@ -235,13 +235,13 @@ Dim sales()() As Double = New Double(11)() {}
   
  下列範例宣告一個三維陣列︰  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   
  `prices` 變數中陣列的整體大小為 (3 + 1) x (4 + 1) x (5 + 1) = 120。  
   
- 您可以使用 <xref:System.Array.Length%2A> 屬性來尋找陣列的大小。 您可以使用 <xref:System.Array.GetLength%2A> 方法來尋找多維陣列中每一維度的長度。  
+ 您可以使用 <xref:System.Array.Length%2A> 屬性來尋找陣列的大小。 您也可以使用 <xref:System.Array.GetLength%2A> 方法來尋找多維陣列中每一維的長度。  
   
  您可以指派新的陣列物件或者使用 `ReDim` 陳述式來調整陣列變數的大小。  
   
@@ -250,7 +250,7 @@ Dim prices(3, 4, 5) As Long
 |||  
 |---|---|  
 |維度長度|每個維度的索引都以 0 為起點，也就是它的範圍是由 0 到它的上限為止。 因此，指定維度的長度會比該維度的宣告上限多 1。|  
-|長度限制|陣列的每個維度長度都受限於 `Integer` 資料型別的最大值，也就是 (2 ^ 31) - 1。 然而，陣列之總大小也同時受限於系統可用的記憶體。 若您嘗試將超過 RAM 可用量的陣列初始化，通用語言執行平台會擲回 <xref:System.OutOfMemoryException> 例外狀況。|  
+|長度限制|陣列的每個維度長度都受限於 `Integer` 資料型別的最大值，也就是 (2 ^ 31) - 1。 然而，陣列之總大小也同時受限於系統可用的記憶體。 若您試圖對總大小超過可用的 RAM 之陣列進行初始化，通用語言執行平台將擲回 <xref:System.OutOfMemoryException> 例外狀況。|  
 |大小及項目大小|陣列大小與其項目的資料類型無關。 大小一律是指項目的總數，而不是它們於儲存體中所佔的位元組。|  
 |記憶體消耗量|對陣列在記憶體中的儲存方式做任何假設都是不安全的。 儲存體會因不同資料寬度的平台而有差異，所以相同陣列於 64 位元系統上所佔記憶體將較 32 位元系統來的多。 當您初始化陣列時，隨著系統組態不同，通用語言執行平台 (CLR) 會指派儲存體盡可能將項目存放在一起，或是根據實體硬體界限全部加以調整。 同時，陣列需要耗用儲存體以供其控制資訊使用，此消耗量會隨著維度增加而增加。|  
   
@@ -261,11 +261,11 @@ Dim prices(3, 4, 5) As Long
   
  有幾個方法可以找出陣列或其項目的資料類型。  
   
--   您可以在變數呼叫 <xref:System.Object.GetType%2A?displayProperty=fullName> 方法，為變數的執行階段類型接收 <xref:System.Type> 物件。 <xref:System.Type> 物件在其屬性和方法中保留了大量的資訊。  
+-   您可以在變數上呼叫 <xref:System.Object.GetType%2A?displayProperty=fullName> 方法，以接收變數之執行階段類型的 <xref:System.Type> 物件。 <xref:System.Type> 物件在其屬性和方法中保留了大量的資訊。  
   
--   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函式，以接收包含執行階段類型名稱的 `String`。  
+-   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.TypeName%2A> 函式，以接收包含執行階段類型名稱的 `String` 。  
   
--   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函式，以接收代表變數類型類別的 `VariantType` 值。  
+-   您可以將變數傳遞給 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函式，以接收表示變數類型類別的 `VariantType` 值。  
   
  下列範例呼叫 `TypeName` 函式來判斷陣列的類型以及陣列中項目的類型。 陣列類型為 `Integer(,)` ，陣列中項目的類型為 `Integer`。  
   
@@ -278,7 +278,7 @@ Dim prices(3, 4, 5) As Long
   
  對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。  
   
- 如果集合包含只有一個資料類型的元素，則可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
+ 如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。  
   
  如需集合的詳細資訊，請參閱[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)。  
   

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic | Microsoft Docs
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -47,8 +47,7 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  [快速入門](../visual-basic/getting-started/index.md)   
  列出產品各種版本的新功能和可用項目，協助您開始進行。  
    
- [程式設計概念](../visual-basic/programming-guide/concepts/index.md) 
- 提供對 Visual Basic 程式設計人員最有用的語言概念。
+ [程式設計概念](../visual-basic/programming-guide/concepts/index.md)提供對 Visual Basic 程式設計人員最有用的語言概念。
 
  [程式結構和程式碼慣例](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  包含關於 Visual Basic 基本結構和程式碼慣例的文件，例如命名慣例、程式碼中的註解，以及 Visual Basic 內的限制。  
@@ -72,8 +71,9 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  提供常見案例的逐步指示連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [Visual Studio 使用者開發入門](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Visual Studio 使用者開發入門](/visualstudio/ide/get-started-developing-with-visual-studio)  
  提供主題連結，協助您了解 Visual Studio 的基本概念。  
   
  [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  
  讓您使用程式庫，內含 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK 中的類別、介面和實值類型。
+

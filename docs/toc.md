@@ -1,7 +1,7 @@
 # [歡迎](welcome.md)
 
-<!-- Start of .NET Platform Guide -->
-# [.NET 平台指南](standard/index.md)
+<!-- Start of .NET Guide -->
+# [.NET 指南](standard/index.md)
 ## [開始使用 .NET](standard/get-started.md)
 ## [.NET 教學課程](standard/tour.md)
 ## [.NET 微服務：容器化 .NET 應用程式的架構](standard/microservices-architecture/)
@@ -48,7 +48,7 @@
 ## [平行程式設計](standard/parallel-programming/)
 ## [安全性](standard/security/)
 ## [進行多平台開發](standard/cross-platform/)
-<!-- End of .NET Platform Guide -->
+<!-- End of .NET Guide -->
 
 <!-- .NET Core Content -->
 # [.NET Core 指南](core/index.md)
@@ -124,6 +124,8 @@
 ### [分析協力廠商相依性](core/porting/third-party-deps.md)
 ### [移植程式庫](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
+## [從原始檔建置 .NET Core](core/build/index.md)
+### [.NET Core 發佈封裝](core/build/distribution-packaging.md)
 ## [VS 2015/project.json 文件](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -201,7 +203,7 @@
 #### [強型別委派](csharp/delegates-strongly-typed.md)
 #### [委派的一般模式](csharp/delegates-patterns.md)
 #### [事件簡介](csharp/events-overview.md)
-#### [.NET 事件模式](csharp/event-pattern.md)
+#### [標準的 .NET 事件模式](csharp/event-pattern.md)
 #### [更新的 .NET 事件模式](csharp/modern-events.md)
 #### [區別委派和事件](csharp/distinguish-delegates-events.md)
 ### [Language-Integrated Query (LINQ)](csharp/linq/)
@@ -231,14 +233,13 @@
 # [F# 指南](fsharp/index.md)
 
 ## [F 的教學課程](fsharp/tour.md)
-
+## [開始使用](fsharp/get-started/index.md)
+### [Visual Studio 使用者入門](fsharp/get-started/get-started-visual-studio.md)
+### [開始使用 Visual Studio for Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
+### [Visual Studio Code 和 Ionide 開始使用](fsharp/get-started/get-started-vscode.md)
+### [開始使用 .NET Core CLI](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## 教學課程
-### [開始使用](fsharp/tutorials/getting-started/index.md)
-#### [Visual Studio 使用者入門](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
-#### [開始使用 Visual Studio for Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
-#### [Visual Studio Code 和 Ionide 開始使用](fsharp/tutorials/getting-started/getting-started-vscode.md)
-#### [命令列工具開始使用](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 #### [F# Interactive 選項](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [類型提供者](fsharp/tutorials/type-providers/index.md)
@@ -1058,7 +1059,7 @@
 ##### [/win32resource](visual-basic/reference/command-line-compiler/win32resource.md)
 #### [依分類排列的編譯器選項](visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 ### [.NET Framework 參考資訊](visual-basic/reference/net-framework-reference-information.md)
-### [語言規格](visual-basic/reference/language-specification.md)
+### [語言規格](visual-basic/reference/language-specification/)
 ## [範例應用程式](visual-basic/sample-applications.md)
 ## [逐步解說](visual-basic/walkthroughs.md)
 

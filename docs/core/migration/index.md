@@ -1,25 +1,23 @@
 ---
-title: "將 .NET Core 移轉至 csproj 格式 | Microsoft Docs"
+title: "將 .NET Core 移轉至 csproj 格式"
 description: "將 .NET Core project.json 移轉至 csproj"
 keywords: ".NET, .NET Core, .NET Core 移轉"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/13/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: ac870aa302c3e56b59cbfdfd0fc88e06bbaad5fb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="migrating-net-core-projects-to-the-csproj-format" class="xliff"></a>
-
-# 將 .NET Core 專案移轉至 .csproj 格式
+# <a name="migrating-net-core-projects-to-the-csproj-format"></a>將 .NET Core 專案移轉至 .csproj 格式
 
 本文將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
 
@@ -27,9 +25,7 @@ ms.lasthandoff: 05/27/2017
 2. [從 DNX 移轉至 csproj](#migration-from-dnx-to-csproj)
 3. [從 RC3 和舊版 .NET Core csproj 專案移轉至最終格式](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-<a id="migration-from-projectjson-to-csproj" class="xliff"></a>
-
-## 從 project.json 移轉至 csproj
+## <a name="migration-from-projectjson-to-csproj"></a>從 project.json 移轉至 csproj
 您可以使用下列其中一種方法從 *project.json* 移轉至 *.csproj*：
 
 - [Visual Studio 2017](#visual-studio-2017)
@@ -37,24 +33,20 @@ ms.lasthandoff: 05/27/2017
  
 這兩種方法使用相同的基礎引擎來移轉專案，因此結果會相同。 在大部分情況下，您只需要使用這兩種方式之一即可將 *project.json* 移轉至 *csproj*，而不需要進一步手動編輯專案檔。 所產生的 *.csproj* 檔案將會以包含目錄的相同名稱命名。
 
-<a id="visual-studio-2017" class="xliff"></a>
-
-### Visual Studio 2017
+### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 當您開啟 *.xproj* 檔或參考 *.xproj* 檔的方案檔時，[單向升級] 對話方塊會隨即出現。 此對話方塊會顯示要移轉的專案。 如果您開啟方案檔，則會列出方案檔中指定的所有專案。 檢閱要移轉的專案清單，然後選取 [確定]。
 
 ![[單向升級] 對話方塊顯示要移轉的專案清單](media/one-way-upgrade.jpg)
 
-Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您未選擇所有專案，則會出現相同的對話方塊，請您升級該方案中的其餘專案。
+Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您未選擇所有專案，則會出現相同的對話方塊，請您升級該方案中的其餘專案。 移轉專案之後，您可以用滑鼠右鍵按一下方案總管視窗中的專案，然後選取 [編輯\<專案名稱>.csproj] 來查看及修改其內容。
 
 已移轉的檔案 (*project.json*、*global.json*、*.xproj* 和方案檔) 將會移至「備份」資料夾。 移轉的方案檔將會升級為 Visual Studio 2017，您將無法在舊版 Visual Studio 中開啟該方案檔。 此外，也會儲存並自動開啟名為 *UpgradeLog.htm* 的檔案，其中包含移轉報告。
 
 > [!IMPORTANT]
 > Visual Studio 2015 中未提供此新工具，因此您無法使用該版 Visual Studio 來移轉專案。
 
-<a id="dotnet-migrate" class="xliff"></a>
-
-### dotnet migrate
+### <a name="dotnet-migrate"></a>dotnet migrate
 
 在命令列案例中，您可以使用 [`dotnet migrate`](../tools/dotnet-migrate.md) 命令。 它將會根據找到的先後順序，依序移轉專案、方案或一組資料夾。 當您移轉專案時，會移轉專案及其所有相依性。
 
@@ -65,18 +57,14 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 
 如需 project.json 和 csproj 格式的比較，請參閱 [project.json 與 csproj 屬性的對應](../tools/project-json-to-csproj.md)。
 
-<a id="common-issues" class="xliff"></a>
-
-### 常見問題
+### <a name="common-issues"></a>常見問題
 
 - 若您收到錯誤：「找不到符合命令 dotnet-migrate 的可執行檔」：
 
 執行 `dotnet --version` 以查看您所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md) 需要 .NET Core CLI RC3 或更高版本。
 如果您目前的目錄或父目錄中有 *global.json* 檔案且 `sdk` 版本設定為舊版，則會收到此錯誤。
 
-<a id="migration-from-dnx-to-csproj" class="xliff"></a>
-
-## 從 DNX 移轉至 csproj
+## <a name="migration-from-dnx-to-csproj"></a>從 DNX 移轉至 csproj
 如果您仍使用 DNX 進行 .NET Core 程式開發，則應分兩階段完成您的移轉程序：
 
 1. 使用[現有的 DNX 移轉指引](from-dnx.md)，從 DNX 移轉至啟用 project-json 的 CLI。
@@ -85,9 +73,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 > [!NOTE]
 > DNX 已在 .NET Core CLI 的 Preview 1 版期間正式被取代。 
 
-<a id="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj" class="xliff"></a>
-
-## 從舊版 .NET Core csproj 格式移轉至 RTM csproj
+## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a>從舊版 .NET Core csproj 格式移轉至 RTM csproj
 每次工具有新的發行前版本，都會變更及改進 .NET Core csproj 格式。 目前沒有工具可將您的專案檔從舊版 csproj 移轉至最新版本，因此您必須手動編輯專案檔。 實際步驟取決於您要移轉的專案檔版本。 以下是根據版本間所發生之變更所要考量的一些指引：
 
 * 從 `<Project>` 項目移除工具版本屬性 (如果存在的話)。 
@@ -101,4 +87,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 完成這些步驟之後，您的專案應該會與 RTM .NET Core csproj 格式完全相容。 
 
 如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
+
+## <a name="see-also"></a>請參閱
+[移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
 

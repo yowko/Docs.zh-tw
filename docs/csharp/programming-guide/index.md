@@ -1,5 +1,5 @@
 ---
-title: "C# 程式設計指南 | Microsoft Docs"
+title: "C# 程式設計手冊"
 ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
@@ -32,33 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d13005e3151058dfe1651b965d6dc6055b26210
-ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 073c0600840ccc802b0481bf0023a6099821bec3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="c-programming-guide" class="xliff"></a>
-
-# C# 程式設計手冊
+# <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
   
- 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是程式設計或 C# 的新手，可造訪 [C# 開發人員中心](http://go.microsoft.com/fwlink/?linkid=95125)，您可以在其中找到許多可協助您開始使用的教學課程、範例和影片。  
+ 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是 C# 程式設計或 C# 的新手，您可能想要瀏覽 [C# 使用者入門](https://www.microsoft.com/net/tutorials/csharp/getting-started)互動式教學課程，而不需要事先具備程式設計知識。  
   
- 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification.md)。  
+ 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)。  
   
-<a id="program-sections" class="xliff"></a>
-
-## 程式區段
+## <a name="program-sections"></a>程式區段
 
 [C# 程式內部](../../csharp/programming-guide/inside-a-program/index.md)  
   
 [Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
  
-<a id="language-sections" class="xliff"></a>
-
-## 語言章節  
+## <a name="language-sections"></a>語言章節  
 [陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
  [型別](../../csharp/programming-guide/types/index.md)  
@@ -97,9 +91,7 @@ ms.lasthandoff: 06/06/2017
   
  [XML 文件註解](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-<a id="platform-sections" class="xliff"></a>
-
-## 平台章節  
+## <a name="platform-sections"></a>平台章節  
  [應用程式定義域 (C# 和 Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [組件和全域組件快取](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
@@ -116,8 +108,7 @@ ms.lasthandoff: 06/06/2017
   
  [反映](../../csharp/programming-guide/concepts/reflection.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [C# 參考](../../csharp/language-reference/index.md)   
  [C#](../../csharp/csharp.md)
+

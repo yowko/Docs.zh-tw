@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 教學課程 | Microsoft Docs"
-description: ".NET Core 教學課程"
+title: ".NET Core 教學課程"
+description: "遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux 和 Windows 上建置應用程式和程式庫。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/23/2017
 - [測試 C# 類別庫](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [使用 .NET Core 取用 C# 類別庫](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [在 Windows 上建置完整的 C# .NET Core 方案](using-on-windows-full-solution.md)
-- [NoSQL 教學課程：在 .NET Core 上建置 DocumentDB C# 主控台應用程式](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [NoSQL 教學課程：在 .NET Core 上建置 DocumentDB C# 主控台應用程式](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 建置應用程式
 
@@ -55,5 +55,5 @@ ms.lasthandoff: 05/23/2017
 - [如何管理 .NET Core 1.0 的套件相依性版本](managing-package-dependency-versions.md)
 - [從機器碼裝載 .NET Core](netcore-hosting.md)
 
-如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](https://docs.microsoft.com/aspnet/core/)。
+如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](/aspnet/core/)。
 
