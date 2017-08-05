@@ -2,13 +2,12 @@
 title: "安裝指南"
 description: "了解如何在 Windows 上安裝 .NET Framework。"
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, 安裝"
-ms.date: 04/27/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
 ms.devlang: dotnet
-ms.assetid: 87cda1d5-c5g8-8eb9-93e8-5f478de07ff7
 ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b88bb367afb2fc481b7d9b7da619b2b7fe2ca6e4
