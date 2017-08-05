@@ -15,10 +15,13 @@
         ]
       },
       {
-        "files": [ "**/*.md" ],
+        "files": [ 
+          "**/*.md" 
+        ],
         "src": "docs",
         "dest": ".",
         "exclude": [
+          "toc.md",
           "**/includes/**",
           "***/contributing.md",
           "framework/add-ins/**",
