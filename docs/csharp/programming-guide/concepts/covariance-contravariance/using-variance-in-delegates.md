@@ -73,7 +73,7 @@ class Program
 ### <a name="code"></a>程式碼  
   
 ```csharp  
-// Event hander that accepts a parameter of the EventArgs type.  
+// Event handler that accepts a parameter of the EventArgs type.  
 private void MultiHandler(object sender, System.EventArgs e)  
 {  
     label1.Text = System.DateTime.Now.ToString();  
