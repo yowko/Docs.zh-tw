@@ -1,5 +1,5 @@
 ---
-title: "風險降低：minFreeMemoryPercentageToActiveService 組態設定 | Microsoft Docs"
+title: "風險降低：minFreeMemoryPercentageToActiveService 組態設定"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 783dd4fb28f1590722833ce9a456b9c2c76ecd80
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f7f228890476d45517a21bc09806538139c5e389
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-minfreememorypercentagetoactiveservice-configuration-setting"></a>風險降低：minFreeMemoryPercentageToActiveService 組態設定

@@ -1,5 +1,5 @@
 ---
-title: "針對在 Windows 8、Windows 8.1 及 Windows 10 上的 .NET Framework 3.5 安裝進行疑難排解 | Microsoft Docs"
+title: "針對在 Windows 8、Windows 8.1 及 Windows 10 上的 .NET Framework 3.5 安裝進行疑難排解"
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 32f036ad290645e2ddf6bd4fff865b9ef61d64b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
