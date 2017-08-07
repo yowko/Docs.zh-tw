@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 09415f996c9dd03c34a74cfe2d2d030f2b4b6fe8
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="get-started-with-c"></a>開始使用 C# #
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/28/2017
 
    類別庫讓您能夠定義可從另一個應用程式呼叫的型別和型別成員。 此主題可讓您建立具有單一方法的類別庫，來決定字串是否要以大寫字元為開頭。 當您完成建置類別庫之後，可以開發[單元測試](testing-library-with-visual-studio.md)以確保該類別庫可如預期般運作，然後您可以讓[想要取用它的應用程式](consuming-library-with-visual-studio.md)能夠使用該類別庫。
 
-- [開始使用 Visual Studio Code](with-visual-studio-code.md)
+- [C# 與 Visual Studio Code 使用者入門](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code 這個免費的程式碼編輯器已經過最佳化，可用於建置新式 Web 和雲端應用程式並為其偵錯。 支援 IntelliSense 並適用於 Linux、macOS 和 Windows。
 

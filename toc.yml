@@ -65,9 +65,12 @@
             - name: 以 .NET Framework 進行平行程式設計
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
-            - name: .NET Framework 中的安全性
+            - name: .NET 的安全性
               tocHref: /dotnet/standard/security/
               topicHref: /dotnet/standard/security/index
+            - name: .NET 的序列化
+              tocHref: /dotnet/standard/serialization/
+              topicHref: /dotnet/standard/serialization/index
             - name: Managed 執行緒處理
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
@@ -211,9 +214,6 @@
             - name: .NET Framework 中的安全性
               tocHref: /dotnet/framework/security/
               topicHref: /dotnet/framework/security/index
-            - name: .NET Framework 中的序列化
-              tocHref: /dotnet/framework/serialization/
-              topicHref: /dotnet/framework/serialization/index
             - name: .NET Framework 工具
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
@@ -363,7 +363,7 @@
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
               items:
-                - name: 'C# 程式內部'
+                - name: 'C# 程式深入解析'
                   tocHref: /dotnet/csharp/programming-guide/inside-a-program/
                   topicHref: /dotnet/csharp/programming-guide/inside-a-program/index
                 - name: 陣列

@@ -116,5 +116,6 @@
 ### [建議的標記](../../../../_vblang/spec/documentation-comments.md#recommended-tags)
 ### [識別碼字串](../../../../_vblang/spec/documentation-comments.md#id-strings)
 ### [文件註解範例](../../../../_vblang/spec/documentation-comments.md#documentation-comments-example)
-## 文法：[vb.html](http://ljw1004.github.io/vbspec/vb.html)。 或以 ANTLR 格式下載：[vb.g4](vb.g4?raw=true)。
-
+## 文法
+### [vb.html](http://ljw1004.github.io/vbspec/vb.html)
+### [vb.g4 - ANTLR 格式](http://ljw1004.github.io/vbspec/vb.g4?raw=true)
