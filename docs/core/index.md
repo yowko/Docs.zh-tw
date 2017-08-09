@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 51f21e49623231f08d2c4a72e9b99c1141563e5e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -124,13 +124,13 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 - [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定平台型，設儲存體和密碼編譯 API 在每個作業系統上有巨大差異。 
 - [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。
 
-## <a name="comparisons-to-other-net-platforms"></a>其他 .NET 平台的比較
+## <a name="comparisons-to-other-net-implementations"></a>與其他 .NET 實作的比較
 
-比較 .NET Core 和現有的 .NET 平台，可能最容易了解 .NET Core 的大小和形態。 
+比較 .NET Core 和現有的 .NET 實作，可能最容易了解 .NET Core 的大小和形態。 
 
 ### <a name="comparison-with-net-framework"></a>與 .NET Framework 的比較
 
-.NET 平台最早由 Microsoft 於 2000 年散發，從此開始發展。 .NET Framework 是 Microsoft 在 15 來年間生產的主要 .NET 產品。 
+.NET 最早由 Microsoft 於 2000 年發表，從此不斷演進。 .NET Framework 在超過 15 年來始終是 Microsoft 生產的主要 .NET 實作。 
 
 .NET Core 和 .NET Framework 的主要差異︰ 
 
@@ -140,7 +140,7 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 - **平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。
 - **開放原始碼**：.NET Core 是開放原始碼，同時[唯讀的 .NET Framework 子集](https://github.com/microsoft/referencesource)也是開放原始碼。
 
-雖然 .NET Core 具有唯一性，且與 .NET Framework 及其他 .NET 平台有顯著差異，卻可以直接共用程式碼，使用來源或二進位共用技術。 
+雖然 .NET Core 很獨特，與 .NET Framework 及其他 .NET 實作有顯著差異，卻可以使用原始碼或二進位共用技術，直接共用程式碼。 
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 

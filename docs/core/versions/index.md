@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 4708abcbd14f47089859ea1dba143a6648c845e5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -83,7 +83,7 @@ PATCH 的時機︰
 
 - 截至 .NET Core 1.0 為 1.6 版 (這些版本通常不會相符，或是不會蓄意地相符)。
 - 對應至 `netstandard` 架構。 
-- 描述被視為現代化應用程式開發所需的套件，而且 .NET 平台必須實作這些套件才會被視為 [.NET Standard](../../standard/net-standard.md) 平台。
+- 描述被視為新式應用程式開發必備項目的套件，而且 .NET 實作必須加以實作才會被視為 [.NET Standard](../../standard/net-standard.md) 平台。
 
 **Microsoft.NETCore.App**
 
@@ -97,7 +97,7 @@ PATCH 的時機︰
 
 新增 API 時，會更新架構版本。 它們有沒有修補程式版本的概念，因為它們代表 API 圖形，而不是實作考量。 主要和次要版本控制會依照稍早指定的 SemVer 規則。
 
-`netcoreapp` 架構會繫結至 .NET Core 散發套件。 它會遵循 .NET Core 所使用的版本號碼。 例如，.NET Core 2.0 發行時，它將以 `netcoreapp2.0` 為目標。 `netstandard` 架構不會符合任何 .NET 執行階段的版本控制配置，假設全部都同樣適用的話。
+`netcoreapp` 架構會繫結至 .NET Core 散發套件。 它會遵循 .NET Core 所使用的版本號碼。 例如，.NET Core 2.0 發行時，它將以 `netcoreapp2.0` 為目標。 假設 `netstandard` 架構即對所有 .NET 實作的版本設定配置都同樣適用，則不會與任何一個相符。
 
 ## <a name="versioning-in-practice"></a>版本控制實踐
 
