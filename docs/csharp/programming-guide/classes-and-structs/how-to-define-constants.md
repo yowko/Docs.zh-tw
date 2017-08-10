@@ -17,7 +17,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 7
 ---
 # 如何：在 C# 中定義常數
-常數是欄位，其值是在編譯時期設定並且絕對不能變更。  使用常數提供有意義的名稱，而不是特殊值的數字常值 \(「識別常數」\)。  
+常數是欄位，其值是在編譯時期設定並且絕對不能變更。  使用常數需提供有意義的名稱，而不是特殊值的數字常值 \(「魔術數字 (magic numbers)」\)。  
   
 > [!NOTE]
 >  在 C\# 中，[\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 前置處理器指示詞 \(Preprocessor Directive\) 無法用於以通常在 C 和 C\+\+ 使用的方式定義常數。  
