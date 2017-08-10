@@ -57,8 +57,8 @@ Visual Studio 2017 有許多種版本。 您可以免費下載 [Visual Studio Co
 
 若要確認您是否正在執行最新版本的 Visual Studio 2017，請執行下列動作︰
 
- * 在 [說明] 功能表上，選擇 [關於 Microsoft Visual Studio]。
- * 在 [關於 Microsoft Visual Studio] 對話方塊中，版本號碼應為 15.0.26228.4 或更高版本。
+ * 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]**。
+ * 在 **[關於 Microsoft Visual Studio]** 對話方塊中，版本號碼應為 15.0.26228.4 或更高版本。
 
 您可以在[版本資訊](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)中，進一步了解 Visual Studio 2017 的變更。
 
