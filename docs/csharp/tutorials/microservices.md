@@ -101,7 +101,7 @@ dotnet build
 dotnet run
 ```
 
-預設組態會接聽 http://localhost:5000。 您可以開啟瀏覽器，然後瀏覽至該頁面，就會看到「Hello World!」 訊息。
+預設組態會接聽 http://localhost:5000 。 您可以開啟瀏覽器，然後瀏覽至該頁面，就會看到「Hello World!」 訊息。
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 應用程式的結構
 
