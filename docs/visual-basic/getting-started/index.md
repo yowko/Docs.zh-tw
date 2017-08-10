@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 使用者入門"
-ms.date: 2017-05-01
+ms.date: 2017-08-07
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
+ms.sourcegitcommit: 168d37a4e4ada31b09ea68b6e0ef5eb41fb1e55f
+ms.openlocfilehash: 5b8a13e850369affe203440c79496047b24053f0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
@@ -45,18 +45,17 @@ ms.lasthandoff: 07/28/2017
 列出每個 Visual Basic .NET 版本的新功能。
 
 [Visual Studio 中 Visual Basic 的重大變更](breaking-changes-in-visual-studio.md)  
- 列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
+列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
   
- [Visual Basic 程式設計人員的其他資源](../../visual-basic/getting-started/additional-resources.md)  
- 提供網站和新聞群組清單，協助您找到常見問題的解答。  
+[Visual Basic 程式設計人員的其他資源](additional-resources.md)  
+提供網站和新聞群組清單，協助您找到常見問題的解答。  
   
- [了解 Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
- 提供學習如何使用 Visual Basic 進行程式設計的資源連結。  
-  
+## <a name="see-also"></a>請參閱
  [取得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。  
-  
-## <a name="related-sections"></a>相關章節  
+
+ [Visual Basic 基礎新手入門](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) \(英文\) 這是 Microsoft Virtual Academy 的課程，介紹 Visual Basic 程式設計的基礎。
+
  [物件導向程式設計](../programming-guide/concepts/object-oriented-programming.md)  
  提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。  
   
