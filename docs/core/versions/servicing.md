@@ -8,11 +8,11 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 48682290-4fd7-40dc-8a7b-bac528eba361
 redirect_url: /dotnet/core/versions/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: c3eb33d28f8bb0296c083705c137702cae2cf8d3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 37935a0ca04672e2a0d367b8f26d99d6571842eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 
