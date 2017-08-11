@@ -62,7 +62,7 @@ catch ExceptionType [e] when (expr)
 從 7 開始，`case` 標籤不再需要互斥，而且 `case` 標籤在 `switch` 陳述式中的出現順序可以判斷要執行的 switch 區塊。 `when` 關鍵字可以用來指定篩選條件，使其相關聯的 case 標籤只有在篩選條件也是為 true 時才為 true。 它的語法為：
 
 ```csharp
-case (expr) where (when-condition):
+case (expr) when (when-condition):
 ```
 其中，*expr* 是與比對運算式進行比較的常數模式或類型模式，而 *when-condition* 是任何布林運算式。 
 
