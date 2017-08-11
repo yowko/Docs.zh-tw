@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d95d281655c33927030666f101570da2d3e42ca
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/28/2017
 
 以下是這個資料表在建立程式庫時的意義︰
 
-您選擇的 .NET Standard 平台版本將會在最新 API 的存取與將目標設為多個 .NET 平台和 Framework 版本的能力之間進行取捨。 您可以控制可設為目標之平台和版本的範圍，方法是選擇 `netstandardX.X` 版本 (其中 `X.X` 是版本號碼)，並將它新增至專案檔 (`.csproj` 或 `.fsproj`)。
+您選擇的 .NET Standard 版本將會在下列兩者間進行取捨：存取最新的 API，以及以多個 .NET 實作和 .NET Standard 版本為目標的能力。 您可以控制可設為目標之平台和版本的範圍，方法是選擇 `netstandardX.X` 版本 (其中 `X.X` 是版本號碼)，並將它新增至專案檔 (`.csproj` 或 `.fsproj`)。
 
 將目標設為 .NET Standard 時，會有三個主要選項 (視需求而定)。
 

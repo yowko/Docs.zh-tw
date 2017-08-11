@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/01/2017
 
 必要的設定是在 Docker for Windows 中安裝**[共用磁碟機](https://docs.docker.com/docker-for-windows/#shared-drives)**。 這對磁碟區對應及偵錯支援是必要的設定。
 
-以滑鼠右鍵按一下系統匣中的 Docker 圖示，按一下 [設定] 並選取 [共用磁碟機]。
+以滑鼠右鍵按一下系統匣中的 Docker 圖示，按一下 [設定] 並選取 [共用磁碟機]。 選取 Docker 儲存檔案所在的磁碟機，並套用變更。
 
 ![共用磁碟機](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
@@ -48,6 +48,8 @@ ms.lasthandoff: 05/01/2017
 [專案] 內容功能表
 
 ![以滑鼠右鍵按一下 「Add Docker Support」 (新增 Docker 支援)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+
+將 Docker 支援加入您的專案時，可以選擇 Windows 或 Linux 容器。 (Docker 主機必須執行相同的容器類型。 如果您需要變更執行中 Docker 執行個體內的容器類型，請以滑鼠右鍵按一下系統匣中的 [Docker] 圖示，選擇 [切換到 Windows 容器] 或 [切換至 Linux 容器])。 
 
 下列檔案即會加入專案中。
 

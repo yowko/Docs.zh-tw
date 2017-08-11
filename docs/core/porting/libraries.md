@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ ms.lasthandoff: 07/28/2017
 您也應該進一步熟悉下列主題的內容：
 
 [.NET Standard](~/docs/standard/net-standard.md)   
-本主題描述計畫在所有 .NET 執行階段上提供的正式 .NET API 規格。
+本主題描述計畫在所有 .NET 實作上提供的正式 .NET API 規格。
 
 [套件、中繼套件和架構](~/docs/core/packages.md)   
-本文討論 .NET Core 如何定義及使用套件，以及套件如何支援在多個 .NET 執行階段上執行的程式碼。
+本文討論 .NET Core 如何定義及使用套件，以及套件如何支援在多個 .NET 實作上執行的程式碼。
 
 [使用跨平台工具開發程式庫](~/docs/core/tutorials/libraries.md)   
 本主題說明如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。
