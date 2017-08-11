@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f88dc299bdc503ae83740e4c1259aa1896481760
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="getting-started-with-c"></a>C# 使用者入門
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="in-this-section"></a>本章節內容  
  [C# 語言和 .NET Framework 簡介](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
- 提供 C# 語言和.NET 平台的概觀。  
+ 提供 C# 語言和 .NET 的概觀。  
   
  [Visual C# 程式設計人員的其他資源](../../csharp/getting-started/additional-resources.md)  
  提供網站與新聞群組的連結，協助您找到常見問題的解答。  

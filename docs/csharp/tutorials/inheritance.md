@@ -12,16 +12,13 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3004d84e9a87fcf86737b18fe58bb200eefd33b
+ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
+ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
-
-## <a name="introduction"></a>簡介
 
 本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
 
@@ -122,13 +119,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-我們接下來可以使用反映 (可讓我們檢查型別的中繼資料以取得該型別的相關資訊) 來取得一份屬於 `SimpleClass` 型別的成員清單。 雖然我們尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。 其中之一是 C# 編譯器為 `SimpleClass` 型別自動提供的無參數 (或預設) 建構函式。 當中八七個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。
+我們接下來可以使用反映 (可讓我們檢查型別的中繼資料以取得該型別的相關資訊) 來取得一份屬於 `SimpleClass` 型別的成員清單。 雖然我們尚未在 `SimpleClass` 類別中定義任何成員，但此範例的輸出指出它實際上有九個成員。 其中之一是 C# 編譯器為 `SimpleClass` 型別自動提供的無參數 (或預設) 建構函式。 其餘八個成員都屬於 <xref:System.Object>，該型別是 .NET 型別系統中所有類別與介面最終的隱含繼承來源。
 
 [!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 隱含繼承自 <xref:System.Object> 類別讓以下方法可以使用 `SimpleClass` 類別：
 
-- 公用 `ToString` 方法會將 `SimpleClass` 物件轉換為其字串表示，亦即完整型別名稱。 在此情況下，`ToString` 方法會傳回字串 "SimpleClass"。
+- 將 `SimpleClass` 物件轉換為其字串表示的公用 `ToString` 方法會傳回完整型別名稱。 在此情況下，`ToString` 方法會傳回字串 "SimpleClass"。
 
 - 測試兩個物件是否相等的三種方法︰ 公用執行個體 `Equals(Object)` 方法、公用靜態 `Equals(Object, Object)` 方法以及公用靜態 `ReferenceEquals(Object, Object)` 方法。 根據預設，這些方法會測試參考是否相等。也就是說，兩個物件必須都參考相同的物件才會相等。
 
@@ -160,7 +157,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 > [!NOTE]
 > 類別或結構可以再實作另一個介面。 介面實作通常以單一繼承的因應措施或搭配結構使用繼承的方式呈現，但其目的在表達介面與其實作型別之間和繼承不同的關聯性 (「可以執行」關聯性)。 介面會定義一組其實作型別可以使用的功能子集 (例如測試相等、比較或排序物件，或支援區分文化特性剖析和格式化的能力)。
 
-請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Moke`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 此 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
+請注意，「是」也在表達型別與其特定具現化型別之間的關聯性。 在下列範例中，`Automobile` 類別有三個唯一的唯讀屬性︰ `Make`為汽車製造商、`Model`為汽車種類以及 `Year`為其製造年份。 此 `Automobile` 類別還有一個建構函式，會將其引數指派給屬性值，並會覆寫 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法以產生可唯一識別 `Automobile` 執行個體的字串，而不是 `Automobile` 類別。
 
 [!code-csharp[繼承](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
