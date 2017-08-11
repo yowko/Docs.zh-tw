@@ -1,10 +1,7 @@
 ---
 title: "介面 (Visual Basic)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -34,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1da2458f39886a5d5f0bbf17fd9e63550ed80adf
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 0b3f13cd69564a61da1a961e35c5319e4c2d79aa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
@@ -110,5 +107,5 @@ ms.lasthandoff: 07/28/2017
 |標題|說明|  
 |-----------|-----------------|  
 |[逐步解說：建立和實作介面](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供詳細的程序，引導您定義和實作您自己的介面之程序。|  
-|[泛型介面中的變異數](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|
+|[泛型介面中的變異數](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|
 
