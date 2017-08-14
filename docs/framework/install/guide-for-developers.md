@@ -1,7 +1,7 @@
 ---
 title: "安裝適用於開發人員的 .NET Framework"
 ms.custom: 
-ms.date: 04/28/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da0e9bd789068d94feda3c2a6ab0d35606d423a1
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 844b3e40b816d324ca4ba22d6884be5a7e3a2ec1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
-.NET 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對開發人員而言，.NET Framework 提供全方位且一致的程式撰寫模型，可建置具有令人視覺震撼之使用者經驗及順暢且安全之通訊的應用程式。  
+.NET 是在 Windows 上執行之許多應用程式不可或缺的一部分，提供應用程式執行所需的常見功能。 對開發人員而言，.NET Framework 提供全方位且一致的程式撰寫模型，可建置具有令人視覺震撼之使用者體驗及順暢且安全之通訊的應用程式。  
 
 本文提供在電腦上安裝 .NET Framework 4.5、其小數點版本 (4.5.1、4.5.2)、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、其小數點版本 (4.6.1、4.6.2) 及 .NET Framework 4.7 的連結。 如果您是開發人員，也可以使用這些連結下載 .NET Framework 並隨應用程式轉散發。
 

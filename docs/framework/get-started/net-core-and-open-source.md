@@ -15,10 +15,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="net-core-and-open-source"></a>.NET 的核心和開放原始碼
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/28/2017
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>什麼是 .NET Core？  
- .NET Core 是 .NET 平台的一般用途、模組化、跨平台和開放原始碼實作。 它包含與 .NET Framework 相同的許多 API (但 .NET Core 是較小的集合)，並包含支援各種作業系統和晶片目標的執行階段、架構、編譯器和工具元件。 .NET Core 實作主要是由 ASP.NET Core 工作負載所驅動，但若需要及想要更新的執行階段，也會驅動此實作。 它可用於裝置、雲端和內嵌/IoT 情節。  
+ .NET Core 是 .NET Standard 的一般用途、模組化、跨平台和開放原始碼實作。 它包含與 .NET Framework 相同的許多 API (但 .NET Core 是較小的集合)，並包含支援各種作業系統和晶片目標的執行階段、架構、編譯器和工具元件。 .NET Core 實作主要是由 ASP.NET Core 工作負載所驅動，但若需要及想要更新的實作，也會驅動此實作。 它可用於裝置、雲端和內嵌/IoT 情節。  
   
  若要開始使用 .NET Core，請前往 [.NET Core 首頁](https://www.microsoft.com/net/core)。  
   

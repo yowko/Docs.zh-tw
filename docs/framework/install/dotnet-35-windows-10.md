@@ -1,19 +1,20 @@
 ---
 title: "在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
-description: "了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
+description: "了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。"
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, 安裝"
-ms.date: 04/20/2017
+ms.date: 05/26/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64ba9cb408e565b20a001382c3b39a41602b6e55
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 
 1. 按下鍵盤上的 Windows 鍵 ![Windows 標誌](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)，鍵入「Windows 功能」，然後按 Enter 鍵。 [開啟或關閉 Windows 功能] 對話方塊隨即出現。
 
-2. 選取 [.NET Framework 3.5 (包括 .NET 2.0 和 3.0)] 核取方塊，並選取 [確定]，然後在出現提示時重新啟動電腦。
+2. 選取 [.NET Framework 3.5 (包括 .NET 2.0 和 3.0)] 核取方塊，選取 [確定]，然後在出現提示時重新啟動電腦。
 
    ![使用控制台來安裝 .NET](./media/dotnet-control-panel.png)
 
