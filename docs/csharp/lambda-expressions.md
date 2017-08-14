@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -58,7 +58,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-請注意，在上面的範例中，運算式 Lambda 的主體可以包含方法呼叫。 不過，如果您要建立在 .NET Framework 外部 (例如在 SQL Server 或 Entity Framework (EF) 中) 評估的運算式樹狀架構，則不應在 Lambda 運算式中使用方法呼叫，因為這些方法在 .NET 執行階段內容之外可能不具任何意義。 如果您在此情況下確實選擇使用方法呼叫，請務必徹底測試，以確保可成功解析方法呼叫。
+請注意，在上面的範例中，運算式 Lambda 的主體可以包含方法呼叫。 不過，如果您要建立在 .NET Framework 外部 (例如在 SQL Server 或 Entity Framework (EF) 中) 評估的運算式樹狀架構，則不應在 Lambda 運算式中使用方法呼叫，因為這些方法在 .NET 實作內容之外可能不具任何意義。 如果您在此情況下確實選擇使用方法呼叫，請務必徹底測試，以確保可成功解析方法呼叫。
 
 ## <a name="statement-lambdas"></a>陳述式 Lambda ##
 

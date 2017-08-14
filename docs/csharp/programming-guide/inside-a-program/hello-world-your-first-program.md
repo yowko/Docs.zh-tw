@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
@@ -123,11 +123,11 @@ ms.lasthandoff: 07/28/2017
   
 2.  執行下列步驟之一來開啟命令提示字元視窗︰  
   
-    -   在 Windows 8 的 [開始] 畫面中搜尋 `Developer Command Prompt`，然後點選或選擇 [適用於 VS2012 的開發人員命令提示字元]。  
+    -   在 Windows 10 的 [開始] 功能表中搜尋 `Developer Command Prompt`，然後點選或選擇 [VS 2017 開發人員命令提示字元]。  
   
          [開發人員命令提示字元] 視窗隨即出現。  
   
-    -   開啟 Windows 7 的 [開始] 功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [適用於 VS2012 的開發人員命令提示字元]。  
+    -   開啟 Windows 7 的 [開始] 功能表，展開最新版 Visual Studio 的資料夾，開啟 **Visual Studio Tools** 的捷徑功能表，然後選擇 [VS 2017 開發人員命令提示字元]。  
   
          [開發人員命令提示字元] 視窗隨即出現。  
   
