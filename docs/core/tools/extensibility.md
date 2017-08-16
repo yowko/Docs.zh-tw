@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
+ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
+ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -162,7 +162,7 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-在 macOS 上，我們可以將這個指令碼儲存為 `dotnet-hello`，並使用 `chmod +x dotnet-hello` 設定其可執行位元。 我們接著可以使用 `ln -s dotnet-hello /usr/local/bin/` 命令，以在 `/usr/local/bin` 中建立其符號連結。 這可能會使用 `dotnet hello` 語法來叫用此命令。
+在 macOS 上，我們可以將這個指令碼儲存為 `dotnet-hello`，並使用 `chmod +x dotnet-hello` 設定其可執行位元。 我們接著可以使用 `ln -s <full_path>/dotnet-hello /usr/local/bin/` 命令，以在 `/usr/local/bin` 中建立其符號連結。 這可能會使用 `dotnet hello` 語法來叫用此命令。
 
 在 Windows 中，可以將這個指令碼儲存為 `dotnet-hello.cmd`，並將它放在系統路徑中的位置 (也可以將它新增至已在路徑中的資料夾)。 在此之後，您只要使用 `dotnet hello`，就能執行這個範例。
 
