@@ -1,6 +1,6 @@
 ---
-title: "Visual Basic 使用者入門"
-ms.date: 2017-08-07
+title: "開始使用 Visual Basic"
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -30,13 +30,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 168d37a4e4ada31b09ea68b6e0ef5eb41fb1e55f
-ms.openlocfilehash: 5b8a13e850369affe203440c79496047b24053f0
+ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
+ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/11/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
+# <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -54,7 +54,8 @@ ms.lasthandoff: 08/08/2017
  [取得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。  
 
- [Visual Basic 基礎新手入門](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) \(英文\) 這是 Microsoft Virtual Academy 的課程，介紹 Visual Basic 程式設計的基礎。
+ [適合無基礎新手參加的 Visual Basic 基礎課程](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ Microsoft Virtual Academy 課程介紹 Visual Basic 程式設計的基礎。
 
  [物件導向程式設計](../programming-guide/concepts/object-oriented-programming.md)  
  提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。  
