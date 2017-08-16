@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -23,12 +23,13 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="building-applications-with-visual-studio-2017"></a>使用 Visual Studio 2017 建置應用程式
 
-- [建置 C# Hello World 應用程式](../../csharp/getting-started/with-visual-studio.md)
-- [對您的 C# Hello World 應用程式進行偵錯](../../csharp/getting-started/debugging-with-visual-studio.md)
-- [發行您的 C# Hello World 應用程式](../../csharp/getting-started/publishing-with-visual-studio.md)
-- [建置 C# 類別庫](../../csharp/getting-started/library-with-visual-studio.md)
-- [測試 C# 類別庫](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [使用 .NET Core 取用 C# 類別庫](../../csharp/getting-started/consuming-library-with-visual-studio.md)
+- [建置 C# Hello World 應用程式](with-visual-studio.md)
+- [對您的 C# Hello World 應用程式進行偵錯](debugging-with-visual-studio.md)
+- [發行您的 C# Hello World 應用程式](publishing-with-visual-studio.md)
+- [建置 C# 類別庫](library-with-visual-studio.md)
+- [使用 Visual Basic 建立類別庫](vb-library-with-visual-studio.md)
+- [測試類別庫](testing-library-with-visual-studio.md)
+- [使用類別庫](consuming-library-with-visual-studio.md)
 - [在 Windows 上建置完整的 C# .NET Core 方案](using-on-windows-full-solution.md)
 - [NoSQL 教學課程：在 .NET Core 上建置 DocumentDB C# 主控台應用程式](/azure/documentdb/documentdb-dotnetcore-get-started)
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 
 - [使用 .NET Core CLI 工具在 Windows/Linux/MacOS 上開始使用 .NET Core](using-with-xplat-cli.md)
 - [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)
-- [F# 使用者入門](../../fsharp/tutorials/getting-started/getting-started-command-line.md)
+- [開始使用 F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>其他
 - [使用 dotnet test 的 .NET Core 單元測試](../testing/unit-testing-with-dotnet-test.md)
@@ -54,6 +55,7 @@ ms.lasthandoff: 08/03/2017
 - [使用跨平台工具開發程式庫](libraries.md)
 - [如何管理 .NET Core 1.0 的套件相依性版本](managing-package-dependency-versions.md)
 - [從機器碼裝載 .NET Core](netcore-hosting.md)
+- [建立適用於 dotnet new 的自訂範本](create-custom-template.md)
 
 如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](/aspnet/core/)。
 
