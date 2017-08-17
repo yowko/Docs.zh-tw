@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40d2c13ad4218952b143e6403851a1027bd7c161
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: a560a0307723d32750a7e26ad4ee1afec360a849
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (泛型修飾詞) (C# 參考)
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/28/2017
   
  Covariant 委派可以指派給同型別的另一個委派，但具有衍生程度較大的泛型型別參數。  
   
- 如需詳細資訊，請參閱 [Covariance and Contravariance](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8) (共變數和反變數 (C# 和 Visual Basic))。  
+ 如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數 (C# 和 Visual Basic))。  
   
 ## <a name="example"></a>範例  
  下例會示範如何宣告、擴充及實作 Covariant 泛型介面。 它也會示範如何針對實作 Covariant 介面的類別使用隱含轉換。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [泛型介面中的變異數](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   
+ [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [in](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
  [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
 
