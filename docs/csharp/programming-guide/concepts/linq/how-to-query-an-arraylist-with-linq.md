@@ -20,10 +20,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5aece8a49762898f4ea3af41a9290daa22bfe96d
+ms.sourcegitcommit: 77d7bbaa99f7b8becf53244211ad480736d9ffab
+ms.openlocfilehash: 3ef12d014715237fe752038466be85c4b47437eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>如何：使用 LINQ 查詢 ArrayList (C#)
