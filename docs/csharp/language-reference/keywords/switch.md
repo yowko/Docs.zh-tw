@@ -1,5 +1,5 @@
 ---
-title: "switch 關鍵字 (C# 參考) | Microsoft Docs"
+title: "switch 關鍵字 (C# 參考)"
 ms.date: 2017-03-07
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
+ms.translationtype: HT
+ms.sourcegitcommit: 4609c30a03c835b9b1338ea6bc9672f7445cfd25
+ms.openlocfilehash: ebbfb5818c8f2a07df7a8cb4724e99b1b9268b03
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
@@ -221,3 +221,4 @@ case null:
  
 
  
+
