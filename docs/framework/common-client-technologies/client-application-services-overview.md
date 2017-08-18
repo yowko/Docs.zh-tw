@@ -1,5 +1,5 @@
 ---
-title: "用戶端應用程式服務概觀 | Microsoft Docs"
+title: "用戶端應用程式服務概觀"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3ec7d3a3cf4c43349f0a10cac95cff507b59cfc5
-ms.openlocfilehash: a519f85a30d13e631f7003e935533f7d071ab6d2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed6264230579fa48903b26896c814d478950e184
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="client-application-services-overview"></a>用戶端應用程式服務概觀
@@ -101,3 +101,4 @@ ms.lasthandoff: 07/13/2017
  [ASP.NET 驗證](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)   
  [使用角色管理授權](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)   
  [建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+

@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：使用用戶端應用程式服務 | Microsoft Docs"
+title: "逐步解說：使用用戶端應用程式服務"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: c5c36c371c43e6cba8875c0b6bea98c228438218
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
@@ -78,7 +78,7 @@ ms.lasthandoff: 07/13/2017
  此時，應用程式會設定為從相同的主機存取這三種服務。 在下一節中，您將建立以簡單 Web 服務應用程式呈現的主機，以便您測試用戶端組態。  
   
 ## <a name="creating-the-application-services-host"></a>建立應用程式服務主機  
- 在本節中，您將建立簡單的 Web 服務應用程式，以便從本機 SQL Server Compact 資料庫檔案存取使用者資料。 接下來，您將會使用 [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)植入資料庫。 這個簡單的組態可讓您快速地測試用戶端應用程式。 除此之外，您還可以設定 Web 服務主機，以便從完整的 SQL Server 資料庫存取使用者資料，或透過自訂 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 類別來存取使用者資料。 如需詳細資訊，請參閱[建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
+ 在本節中，您將建立簡單的 Web 服務應用程式，以便從本機 SQL Server Compact 資料庫檔案存取使用者資料。 接下來，您將會使用 [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)植入資料庫。 這個簡單的組態可讓您快速地測試用戶端應用程式。 除此之外，您還可以設定 Web 服務主機，以便從完整的 SQL Server 資料庫存取使用者資料，或透過自訂 <xref:System.Web.Security.MembershipProvider> 和 <xref:System.Web.Security.RoleProvider> 類別來存取使用者資料。 如需詳細資訊，請參閱 [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)。  
   
  在下列程序中，您將建立並設定 AppServices Web 服務。  
   
@@ -254,7 +254,7 @@ ms.lasthandoff: 07/13/2017
   
 4.  在 [方案總管] 中，按兩下 Form1 以顯示設計工具。  
   
-5.  在設計工具中，按兩下表單介面以產生名為 `Form1_Load` 的 <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> 事件處理常式。  
+5.  在設計工具中，按兩下表單介面以產生名為 <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> 的 `Form1_Load`事件處理常式。  
   
      程式碼編輯器隨即出現，並將游標置於 `Form1_Load` 方法中。  
   
@@ -262,7 +262,7 @@ ms.lasthandoff: 07/13/2017
   
      這段程式碼會以結束應用程式的方式，來拒絕未經驗證之使用者的存取。 或者，您可以允許未經驗證的使用者存取表單，但拒絕其存取特定功能。 您通常不會以這種方式硬式編碼使用者名稱和密碼，但是基於測試目的就很有用。 在下一節中，您將會使用更強固的程式碼來取代這段程式碼，以顯示 [登入] 對話方塊並包含例外狀況處理。  
   
-     請注意，`static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法是在 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 中。 這個方法會將其工作委派給已設定的驗證提供者，然後在驗證成功時傳回 `true`。 您的應用程式不需要直接參考用戶端驗證提供者。  
+     請注意， `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法是在 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]中。 這個方法會將其工作委派給已設定的驗證提供者，然後在驗證成功時傳回 `true` 。 您的應用程式不需要直接參考用戶端驗證提供者。  
   
      [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]  [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
   
@@ -271,12 +271,12 @@ ms.lasthandoff: 07/13/2017
 > [!NOTE]
 >  如果您無法執行應用程式，請嘗試停止 ASP.NET 程式開發伺服器。 當伺服器重新啟動時，請確認通訊埠設定為 55555。  
   
- 若要改為查看錯誤訊息，請變更 <xref:System.Web.Security.Membership.ValidateUser%2A> 參數。 例如，以不正確的密碼 (像是 `"MANAGER"`) 取代第二個 `"manager!"` 參數。  
+ 若要改為查看錯誤訊息，請變更 <xref:System.Web.Security.Membership.ValidateUser%2A> 參數。 例如，以不正確的密碼 (像是 `"manager!"` ) 取代第二個 `"MANAGER"`參數。  
   
 ## <a name="adding-a-login-form-as-a-credentials-provider"></a>加入登入表單當做認證提供者  
  您可以在應用程式程式碼中取得使用者認證，並將其傳遞給 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法。 不過，如果您稍後想要進行變更，將取得認證的程式碼與應用程式程式碼分開通常會很有用。  
   
- 在下列程序中，您會將應用程式設定為使用認證提供者，然後變更您的 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法呼叫，同時針對兩個參數傳遞 <xref:System.String.Empty>。 空字串會對 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法發出訊號，使其呼叫已設定之認證提供者的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 方法。  
+ 在下列程序中，您會將應用程式設定為使用認證提供者，然後變更您的 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法呼叫，同時針對兩個參數傳遞 <xref:System.String.Empty> 。 空字串會對 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法發出訊號，使其呼叫已設定之認證提供者的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 方法。  
   
 #### <a name="to-configure-your-application-to-use-a-credentials-provider"></a>將應用程式設定為使用認證提供者  
   
@@ -298,7 +298,7 @@ ms.lasthandoff: 07/13/2017
   
 4.  將下列方法加入 `Form1_Load` 方法之後。  
   
-     這個方法會將空字串傳遞給 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法，而出現 [登入] 對話方塊。 如果驗證服務無法使用，<xref:System.Web.Security.Membership.ValidateUser%2A> 方法會擲回 <xref:System.Net.WebException>。 在這種情況下，`ValidateUsingCredentialsProvider` 方法會顯示警告訊息，並詢問使用者是否要在離線模式中再試一次。 此功能需要 **將密碼雜湊儲存在本機，以便能使用離線登入功能** ，如 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)所述。 新專案預設會啟用這項功能。  
+     這個方法會將空字串傳遞給 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法，而出現 [登入] 對話方塊。 如果驗證服務無法使用， <xref:System.Web.Security.Membership.ValidateUser%2A> 方法會擲回 <xref:System.Net.WebException>。 在這種情況下， `ValidateUsingCredentialsProvider` 方法會顯示警告訊息，並詢問使用者是否要在離線模式中再試一次。 此功能需要 **將密碼雜湊儲存在本機，以便能使用離線登入功能** ，如 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)所述。 新專案預設會啟用這項功能。  
   
      如果使用者未經過驗證， `ValidateUsingCredentialsProvider` 方法會顯示錯誤訊息並結束應用程式。 最後，這個方法會傳回驗證嘗試的結果。  
   
@@ -307,7 +307,7 @@ ms.lasthandoff: 07/13/2017
 ### <a name="creating-a-login-form"></a>建立登入表單  
  認證提供者是實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 介面的類別。 這個介面具有名為 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的單一方法，可傳回 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 物件。 下列程序說明如何建立實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的 [登入] 對話方塊，以顯示本身並傳回使用者指定的認證。  
   
- 針對 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C# 所提供的程序不同，因為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 提供 [登入表單] 範本。 這可以節省一些時間和撰寫程式碼的工作。  
+ 針對 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C# 所提供的程序不同，因為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 提供 [登入表單]  範本。 這可以節省一些時間和撰寫程式碼的工作。  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>建立 [登入] 對話方塊當做 Visual Basic 中的認證提供者  
   
@@ -343,7 +343,7 @@ ms.lasthandoff: 07/13/2017
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-c"></a>建立 [登入] 對話方塊當做 C# 中的認證提供者  
   
-1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案，然後在 [專案] 功能表上，選取 [加入類別]。  
+1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案，然後在 [專案]  功能表上，選取 [加入類別] 。  
   
 2.  在 [加入新項目]  對話方塊中，將 [名稱]  變更為 `Login.cs`，然後按一下 [加入] 。  
   
@@ -367,7 +367,7 @@ ms.lasthandoff: 07/13/2017
   
 2.  在設計工具中，從 [工具箱] 將 <xref:System.Windows.Forms.Button> 控制項新增表單。  
   
-3.  在 [屬性] 視窗中，設定按鈕的下列屬性。  
+3.  在 [屬性]  視窗中，設定按鈕的下列屬性。  
   
   	|屬性|值|  
   	|--------------|-----------|  
@@ -385,10 +385,10 @@ ms.lasthandoff: 07/13/2017
   
      這個方法會呼叫 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 屬性所傳回之 <xref:System.Security.Principal.IPrincipal> 的 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法。 針對設定為使用用戶端應用程式服務的應用程式，這個屬性會傳回 <xref:System.Web.ClientServices.ClientRolePrincipal>。 因為這個類別會實作 <xref:System.Security.Principal.IPrincipal> 介面，所以您不需要明確地參考它。  
   
-     如果使用者的角色為 "manager"，`DisplayButtonForManagerRole` 方法會將 `managerOnlyButton` 的 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設定為 `true`。 如果擲回 <xref:System.Net.WebException> 表示角色服務無法使用，這個方法也會顯示錯誤訊息。  
+     如果使用者的角色為 "manager"， `DisplayButtonForManagerRole` 方法會將 <xref:System.Windows.Forms.Control.Visible%2A> 的 `managerOnlyButton` 屬性設定為 `true`。 如果擲回 <xref:System.Net.WebException> 表示角色服務無法使用，這個方法也會顯示錯誤訊息。  
   
     > [!NOTE]
-    >  如果使用者登入已過期，<xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法一律會傳回 `false`。 如果應用程式在驗證後很短的時間內呼叫一次 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 (如本逐步解說的範例程式碼所示)，則不會發生這種情況。 如果應用程式必須在其他時間點擷取使用者角色，您可能會想要加入程式碼，以重新驗證登入已過期的使用者。 如果所有有效的使用者都獲派角色，您可以呼叫 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> 方法以判斷登入是否過期。 如果沒有角色傳回，則表示登入已過期。 如需這項功能的範例，請參閱 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入] 時，才需要這項功能。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+    >  如果使用者登入已過期， <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法一律會傳回 `false` 。 如果應用程式在驗證後很短的時間內呼叫一次 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法 (如本逐步解說的範例程式碼所示)，則不會發生這種情況。 如果應用程式必須在其他時間點擷取使用者角色，您可能會想要加入程式碼，以重新驗證登入已過期的使用者。 如果所有有效的使用者都獲派角色，您可以呼叫 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> 方法以判斷登入是否過期。 如果沒有角色傳回，則表示登入已過期。 如需這項功能的範例，請參閱 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才需要這項功能。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]  [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
@@ -419,7 +419,7 @@ ms.lasthandoff: 07/13/2017
   
 6.  在設計工具中，將 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
   
-7.  在 [屬性] 視窗中，指定 `webSettingsTestTextBox` 的 [(名稱)] 值。  
+7.  在 [屬性]  視窗中，指定 **的 [(名稱)]**`webSettingsTestTextBox`值 。  
   
 8.  在程式碼編輯器中，將下列程式碼加入 `Form1_Load` 方法的結尾。  
   
@@ -429,7 +429,7 @@ ms.lasthandoff: 07/13/2017
   
 9. 將下列方法加入 Form1 類別的結尾。  
   
-     這個方法會將 `webSettingsTestTextBox` 的 <xref:System.Windows.Forms.TextBox.Text%2A> 屬性，繫結至本程序稍早所產生之 `Settings` 類別的 `WebSettingsTestText` 屬性。 如果擲回 <xref:System.Net.WebException> 表示 Web 設定無法使用，這個方法也會顯示錯誤訊息。  
+     這個方法會將 <xref:System.Windows.Forms.TextBox.Text%2A> 的 `webSettingsTestTextBox` 屬性，繫結至本程序稍早所產生之 `WebSettingsTestText` 類別的 `Settings` 屬性。 如果擲回 <xref:System.Net.WebException> 表示 Web 設定無法使用，這個方法也會顯示錯誤訊息。  
   
      [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]   [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
@@ -444,9 +444,9 @@ ms.lasthandoff: 07/13/2017
   
 12. 以下列程式碼取代所產生的方法。  
   
-     <xref:System.Windows.Forms.Form.FormClosing> 事件處理常式會呼叫 `SaveSettings` 方法，下一節將加入的登出功能也會使用這個方法。 `SaveSettings` 方法會先確認使用者尚未登出， 作法是檢查目前主體所傳回之 <xref:System.Security.Principal.IIdentity> 的 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 屬性。 目前的主體是透過 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 屬性所擷取。 如果使用者已經過驗證可使用用戶端應用程式服務，驗證類型將會是 "ClientForms"。 `SaveSettings` 方法不能只檢查 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> 屬性，因為使用者在登出後可能仍擁有有效的 Windows 識別。  
+     <xref:System.Windows.Forms.Form.FormClosing> 事件處理常式會呼叫 `SaveSettings` 方法，下一節將加入的登出功能也會使用這個方法。 `SaveSettings` 方法會先確認使用者尚未登出， 作法是檢查目前主體所傳回之 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 的 <xref:System.Security.Principal.IIdentity> 屬性。 目前的主體是透過 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 屬性所擷取。 如果使用者已經過驗證可使用用戶端應用程式服務，驗證類型將會是 "ClientForms"。 `SaveSettings` 方法不能只檢查 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> 屬性，因為使用者在登出後可能仍擁有有效的 Windows 識別。  
   
-     如果使用者尚未登出，`SaveSettings` 方法會呼叫在這個程序稍早所產生之 `Settings` 類別的 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 方法。 如果驗證 Cookie 已過期，這個方法會擲回 <xref:System.Net.WebException>。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入] 時，才會發生這種情況。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法會透過呼叫 <xref:System.Web.Security.Membership.ValidateUser%2A> 顯示 [登入] 對話方塊的方式，處理 Cookie 過期。 如果使用者成功登入，`SaveSettings` 方法會呼叫本身以嘗試再次儲存設定。  
+     如果使用者尚未登出， `SaveSettings` 方法會呼叫在這個程序稍早所產生之 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 類別的 `Settings` 方法。 如果驗證 Cookie 已過期，這個方法會擲回 <xref:System.Net.WebException> 。 只有在應用程式組態中已選取 [要求使用者在伺服器 Cookie 過期時必須再次登入]  時，才會發生這種情況。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法會透過呼叫 <xref:System.Web.Security.Membership.ValidateUser%2A> 顯示 [登入] 對話方塊的方式，處理 Cookie 過期。 如果使用者成功登入， `SaveSettings` 方法會呼叫本身以嘗試再次儲存設定。  
   
      如同先前的程式碼，如果遠端服務無法使用， `SaveSettings` 方法會顯示錯誤訊息。 如果設定提供者無法存取遠端服務，則設定仍然會儲存在本機快取中，然後在應用程式重新啟動時重新載入。  
   
@@ -454,7 +454,7 @@ ms.lasthandoff: 07/13/2017
   
 13. 將下列方法加入 Form1 類別的結尾。  
   
-     這段程式碼會處理 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> 事件，並在無法儲存任何設定時顯示警告。 如果設定服務無法使用或驗證 Cookie 已過期，則不會發生 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件。 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件發生時機的其中一個範例是如果使用者已經登出。 您可以在呼叫 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 方法之前，將登出程式碼直接加入 `SaveSettings` 方法以測試這個事件處理常式。 下一節將說明您可以使用的登出程式碼。  
+     這段程式碼會處理 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> 事件，並在無法儲存任何設定時顯示警告。 如果設定服務無法使用或驗證 Cookie 已過期，則不會發生 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件。 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件發生時機的其中一個範例是如果使用者已經登出。 您可以在呼叫 `SaveSettings` 方法之前，將登出程式碼直接加入 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 方法以測試這個事件處理常式。 下一節將說明您可以使用的登出程式碼。  
   
      [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]  [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
@@ -479,7 +479,7 @@ ms.lasthandoff: 07/13/2017
   
 4.  以下列程式碼取代所產生的 `logoutButton_Click` 方法。  
   
-     這個事件處理常式會先呼叫在上一節中加入的 `SaveSettings` 方法。 接著，事件處理常式會呼叫 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> 方法。 如果驗證服務無法使用，<xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> 方法會擲回 <xref:System.Net.WebException>。 在這種情況下，`logoutButton_Click` 方法會顯示警告訊息，並暫時切換至離線模式將使用者登出。 下一節將說明離線模式。  
+     這個事件處理常式會先呼叫在上一節中加入的 `SaveSettings` 方法。 接著，事件處理常式會呼叫 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> 方法。 如果驗證服務無法使用， <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> 方法會擲回 <xref:System.Net.WebException>。 在這種情況下， `logoutButton_Click` 方法會顯示警告訊息，並暫時切換至離線模式將使用者登出。 下一節將說明離線模式。  
   
      登出會刪除本機驗證 Cookie，因此當重新啟動應用程式時就需要登入。 在登出後，事件處理常式會重新啟動應用程式。 應用程式重新啟動時，會在歡迎訊息後顯示 [登入] 對話方塊。 歡迎訊息清楚表示應用程式已重新啟動。 如果使用者必須登入才能儲存設定，而且之後由於應用程式重新啟動又必須再登入一次，歡迎訊息可避免可能發生的混淆情況。  
   
@@ -488,7 +488,7 @@ ms.lasthandoff: 07/13/2017
  若要測試登出功能，請執行應用程式，然後在 [登入] 對話方塊中選取 [記住我]。 接著，關閉再重新啟動應用程式以確認不再需要登入。 最後，按一下 [登出] 重新啟動應用程式。  
   
 ## <a name="enabling-offline-mode"></a>啟用離線模式  
- 在下列程序中，您會將核取方塊加入表單，讓使用者能夠進入離線模式。 您的應用程式可透過將 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> 屬性設定為 `true` 來進入離線模式。 離線狀態會儲存在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 屬性所表示的本機硬碟位置。 這表示離線狀態是以個別使用者和個別應用程式為基礎來儲存。  
+ 在下列程序中，您會將核取方塊加入表單，讓使用者能夠進入離線模式。 您的應用程式可透過將 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> 屬性設定為 `true`來進入離線模式。 離線狀態會儲存在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 屬性所表示的本機硬碟位置。 這表示離線狀態是以個別使用者和個別應用程式為基礎來儲存。  
   
  在離線模式中，所有用戶端應用程式服務要求會從本機快取擷取資料，而不是嘗試存取服務。 在預設組態中，本機資料包含以加密格式儲存的使用者密碼。 這可讓使用者在應用程式處於離線模式時仍能登入。 如需詳細資訊，請參閱 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
@@ -525,7 +525,7 @@ ms.lasthandoff: 07/13/2017
  在本逐步解說中，您已了解如何在 Windows Form 應用程式中啟用及使用用戶端應用程式服務。 設定測試伺服器之後，您可以將程式碼加入應用程式以驗證使用者，並從伺服器擷取使用者角色和應用程式設定。 您也了解如何啟用離線模式，以便讓應用程式在無法連接時，使用本機資料快取而不是遠端服務。  
   
 ## <a name="next-steps"></a>後續步驟  
- 在真實世界應用程式中，您會從遠端伺服器存取許多使用者的資料，而遠端伺服器並非隨時都能使用，或是可能會在未告知的情況下離線。 為了讓應用程式更強固，您必須能夠適當地回應服務無法使用的各種情況。 本逐步解說包含 try/catch 區塊，可攔截 <xref:System.Net.WebException>，並在服務無法使用時顯示錯誤訊息。 在實際執行的程式碼中，您可能想要藉由切換至離線模式、結束應用程式，或拒絕存取特定功能的方式處理這種情況。  
+ 在真實世界應用程式中，您會從遠端伺服器存取許多使用者的資料，而遠端伺服器並非隨時都能使用，或是可能會在未告知的情況下離線。 為了讓應用程式更強固，您必須能夠適當地回應服務無法使用的各種情況。 本逐步解說包含 try/catch 區塊，可攔截 <xref:System.Net.WebException> ，並在服務無法使用時顯示錯誤訊息。 在實際執行的程式碼中，您可能想要藉由切換至離線模式、結束應用程式，或拒絕存取特定功能的方式處理這種情況。  
   
  為了加強應用程式的安全性，請務必在部署前徹底測試應用程式和伺服器。  
   

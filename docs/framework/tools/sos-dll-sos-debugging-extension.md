@@ -1,5 +1,5 @@
 ---
-title: "SOS.dll (SOS 偵錯延伸模組) | Microsoft Docs"
+title: "SOS.dll (SOS 偵錯擴充功能)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 55
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 98109bdd2261fce22bdb00679d0822223363c2be
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41338111c92cb4af7f175c00c8ec87e48dc9c228
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS 偵錯擴充功能)
@@ -222,3 +222,4 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 ## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

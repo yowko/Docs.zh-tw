@@ -1,5 +1,5 @@
 ---
-title: "部署 .NET Framework 和應用程式 | Microsoft Docs"
+title: "部署 .NET Framework 和應用程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
@@ -175,7 +175,7 @@ ms.lasthandoff: 06/08/2017
 |[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|  
 |[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|  
 |[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|  
-|[部署應用程式、服務和元件](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。| 
+|[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。| 
 |[發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|  
 |[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|描述 .NET Framework 用來封裝及部署資源的中樞和輪輻模型；內容涵蓋資源命名慣例、後援程序和封裝替代方式。|  
 |[部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)|描述如何交付及安裝 Interop 應用程式，這類應用程式通常包含 .NET Framework 用戶端組件、代表各種不同 COM 類型程式庫的一或多個 Interop 組件，以及一或多個已註冊的 COM 元件。|  

@@ -1,5 +1,5 @@
 ---
-title: "應用程式定義域 | Microsoft Docs"
+title: "應用程式定義域"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -24,11 +24,11 @@ caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: f52b5593587dfd3044998e37f0ff873ebc7a1098
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="application-domains"></a>應用程式定義域

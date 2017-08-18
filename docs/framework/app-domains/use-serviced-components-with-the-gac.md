@@ -1,5 +1,5 @@
 ---
-title: "使用 Serviced 元件和全域組件快取 | Microsoft Docs"
+title: "使用 Serviced 元件和全域組件快取"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b94461096bfcf72d2a7ee8bc8b0847e2f753161b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 493ca9a2da4a06528eab9b87db78a5b7a49a2f1d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>使用 Serviced 元件和全域組件快取
@@ -38,3 +38,4 @@ Serviced 元件 (Managed 程式碼 COM+ 元件) 都應該放在全域組件快�
 ## <a name="see-also"></a>另請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+

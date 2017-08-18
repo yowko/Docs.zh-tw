@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 開發人員部署手冊 Microsoft Docs"
+title: ".NET Framework 開發人員部署手冊"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
@@ -76,9 +76,9 @@ ms.lasthandoff: 07/13/2017
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|從 Web 安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web 安裝程式](#redistributable-packages)|
-|從光碟安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[離線安裝程式](#redistributable-packages)|
-|從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment)) 或 [離線安裝程式](#redistributable-packages)|
+|從 Web 安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web installer](#redistributable-packages)|
+|從光碟安裝|- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Offline installer](#redistributable-packages)|
+|從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>可轉散發套件
  .NET Framework 可透過兩種可轉散發套件提供：Web 安裝程式 (啟動載入器) 和離線安裝程式 (獨立可轉散發套件)。 下表將比較這兩種套件。
@@ -92,7 +92,7 @@ ms.lasthandoff: 07/13/2017
 |部署方法|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
 |下載 ClickOnce 部署的位置|Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|您的伺服器或 Microsoft 下載中心：<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
- \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果用來建立應用程式安裝程式的工具 (例如，[InstallShield](#installshield-deployment)) 提供了安裝程式檔案資料夾，而這個資料夾會在安裝完成後移除，則可藉由將離線安裝程式放入安裝程式資料夾的方式將它自動刪除。
+ \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果用來建立應用程式安裝程式的工具 (例如， [InstallShield](#installshield-deployment)) 提供了安裝程式檔案資料夾，而這個資料夾會在安裝完成後移除，則可藉由將離線安裝程式放入安裝程式資料夾的方式將它自動刪除。
 
  ** 如果您使用 Web 安裝程式搭配自訂安裝程式，則可以使用以使用者的多語系使用者介面 (MUI) 設定為基礎的預設語言設定，或是使用命令列的 `/LCID` 選項指定另一個語言套件。 例如，請參閱 [使用預設的 .NET Framework UI 進行鏈結](#chaining_default) 一節。
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 07/13/2017
 
 <a name="installing_manually"></a> 
 ## <a name="installing-the-net-framework-manually"></a>手動安裝 .NET Framework
- 在某些情況下，隨應用程式自動安裝 .NET Framework 並不是那麼實際。 在這種情況下，您可以讓使用者自己安裝 .NET Framework。 可轉散發套件可隨[兩種套件](#redistributable-packages)提供。 所以請在安裝過程中提供指示，讓使用者知道應該如何找到和安裝 .NET Framework。
+ 在某些情況下，隨應用程式自動安裝 .NET Framework 並不是那麼實際。 在這種情況下，您可以讓使用者自己安裝 .NET Framework。 可轉散發套件可隨 [兩種套件](#redistributable-packages)提供。 所以請在安裝過程中提供指示，讓使用者知道應該如何找到和安裝 .NET Framework。
 
 <a name="chaining"></a> 
 ## <a name="chaining-the-net-framework-installation-to-your-apps-setup"></a>將 .NET Framework 安裝鏈結至您的應用程式安裝
@@ -217,9 +217,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!NOTE]
     > 不同語言套件的發行日期可能不同。 如果下載中心未提供您指定的語言套件，安裝程式將會安裝不含語言套件的 .NET Framework。 如果使用者電腦上已安裝 .NET Framework，則安裝程式只會安裝語言套件。
 
- 如需選項的完整清單，請參閱[命令列選項](#command-line-options)一節。
+ 如需選項的完整清單，請參閱 [命令列選項](#command-line-options) 一節。
 
- 如需常見的傳回碼，請參閱[傳回碼](#return-codes)一節。
+ 如需常見的傳回碼，請參閱 [傳回碼](#return-codes) 一節。
 
 <a name="chaining_custom"></a>
 ### <a name="chaining-by-using-a-custom-ui"></a>使用自訂 UI 進行鏈結
@@ -232,13 +232,13 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!IMPORTANT]
     > 在判斷是否已安裝正確版本的 .NET Framework 時，您應該檢查是否已安裝目標版本「或」  更新的版本，而不是是否已安裝您的目標版本。 換句話說，您應該評估從登錄擷取的版本機碼是否大於或等於您的目標版本的版本機碼，而「不是」  它是否等於目標版本的版本機碼。
 
-- [偵測](#detecting-the-language-packs)使用者電腦上是否已安裝語言套件。
+- [偵測](#detecting-the-language-packs) 使用者電腦上是否已安裝語言套件。
 
 - 如果您想要控制部署，請以無訊息模式啟動並追蹤 .NET Framework 安裝程序 (請參閱 [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md))。
 
 - 如果您要部署離線安裝程式，請 [分別鏈結語言套件](#chain_langpack)。
 
-- 使用[命令列選項](#command-line-options)自訂部署。 例如，如果您要鏈結 .NET Framework Web 安裝程式，但是想要覆寫預設語言套件，請使用 `/LCID` 選項，如前一節所述。
+- 使用 [命令列選項](#command-line-options)自訂部署。 例如，如果您要鏈結 .NET Framework Web 安裝程式，但是想要覆寫預設語言套件，請使用 `/LCID` 選項，如前一節所述。
 
 - [疑難排解](#troubleshooting)。
 
@@ -298,7 +298,7 @@ Type: DWORD
 > [!IMPORTANT]
 > 語言套件並不包含執行應用程式所需的 .NET Framework 元件，因此在安裝語言套件之前，必須先使用 Web 或離線安裝程式安裝 .NET Framework。
 
- 從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 開始，套件名稱會採用 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe 的格式，其中 `version` 是 .NET Framework 的版本號碼、`number` 是 Microsoft 知識庫文章編號，而 `culture` 則指定[國家/地區](#supported-languages)。 `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`就是其中一個套件的範例。 套件名稱列在本文章稍早的[可轉散發套件](#redistributable-packages)一節。
+ 從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 開始，套件名稱會採用 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe 的格式，其中 `version` 是 .NET Framework 的版本號碼、`number` 是 Microsoft 知識庫文章編號，而 `culture` 則指定[國家/地區](#supported-languages)。 `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`就是其中一個套件的範例。 封裝名稱列在本文章稍早的 [Redistributable Packages](#redistributable-packages) 一節。
 
  若要隨 .NET Framework 離線安裝程式安裝語言套件，您必須將它鏈結至您的應用程式安裝。 例如，若要同時部署 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 離線安裝程式與日文語言套件，請使用下列命令：
 
@@ -308,7 +308,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
  如果您使用 Web 安裝程式，則不需要鏈結語言套件，安裝程式將會安裝符合使用者 MUI 設定的語言套件。 如果您要安裝不同的語言，可以使用 `/LCID` 選項指定語言套件。
 
- 如需命令列選項的完整清單，請參閱[命令列選項](#command-line-options)一節。
+ 如需命令列選項的完整清單，請參閱 [命令列選項](#command-line-options) 一節。
 
 ### <a name="troubleshooting"></a>疑難排解
 
@@ -355,11 +355,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
 |**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需鏈結套件的範例，請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](http://go.microsoft.com/fwlink/?LinkId=181926) 。|
-|**/LCID**  `LCID`<br /><br /> 其中，`LCID` 可指定地區設定識別碼 (請參閱[支援的語言](#supported-languages))|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：**此選項只適用於 Web 安裝程式。|
+|**/LCID**  `LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：**此選項只適用於 Web 安裝程式。|
 |**/log** `file` &#124; `folder`|指定記錄檔的位置。 預設為程序的暫存資料夾，而預設檔案名稱將會根據套件。 如果副檔名是 .txt，則會產生文字記錄檔。 如果您指定其他副檔名或未指定副檔名，則會建立 HTML 記錄檔。|
 |**/msioptions**|指定針對 .msi 和 .msp 項目傳遞的選項，例如： `/msioptions "PROPERTY1='Value'"`。|
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則鏈結應用程式必須擷取傳回碼並處理重新開機 (請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](http://go.microsoft.com/fwlink/?LinkId=179606) )。|
-|**/passive**|設定被動模式。 顯示進度列，表示安裝正在進行，但不會對使用者顯示任何提示或錯誤訊息。 在此模式中，當安裝程式進行鏈結時，鏈結套件必須處理[傳回碼](#return-codes)。|
+|**/passive**|設定被動模式。 顯示進度列，表示安裝正在進行，但不會對使用者顯示任何提示或錯誤訊息。 在此模式中，當安裝程式進行鏈結時，鏈結套件必須處理 [傳回碼](#return-codes)。|
 |**/pipe**|建立通訊通道，讓鏈結套件能夠取得進度。|
 |**/promptrestart**|(僅限被動模式) 如果安裝程式需要重新啟動，則會提示使用者。 如果需要重新啟動，此選項會需要使用者互動。|
 |**/q**|設定無訊息模式。|
@@ -405,3 +405,4 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
  [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)   
  [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

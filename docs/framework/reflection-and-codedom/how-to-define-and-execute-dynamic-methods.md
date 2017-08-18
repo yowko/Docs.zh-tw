@@ -1,5 +1,5 @@
 ---
-title: "如何：定義和執行動態方法 | Microsoft Docs"
+title: "如何：定義和執行動態方法"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c8126900918edb0c4cd701b4e613fbe735106dcb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67e909a7b64500bba533290061652e82ffde07a5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>如何：定義和執行動態方法
@@ -110,3 +110,4 @@ ms.lasthandoff: 07/13/2017
  <xref:System.Reflection.Emit.DynamicMethod>   
  [使用反映發出](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
  [反映發出動態方法案例](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+

@@ -1,5 +1,5 @@
 ---
-title: "以程式設計方式使用 .resx 檔案 | Microsoft Docs"
+title: "以程式設計方式使用 .resx 檔案"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c74a79b06503e105dd9ba47cc8079019e038b11f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 361559ab3ea5b09e5568a94692ca6cf374fe5ecf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-resx-files-programmatically"></a>以程式設計方式使用 .resx 檔案
@@ -35,13 +35,13 @@ ms.lasthandoff: 07/13/2017
 ## <a name="creating-a-resx-file"></a>建立 .resx 檔  
  您可以使用 <xref:System.Resources.ResXResourceWriter?displayProperty=fullName> 類別執行下列步驟，以程式設計方式建立 .resx 檔：  
   
-1.  呼叫 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=fullName> 方法並提供 .resx 檔的名稱，具現化 <xref:System.Resources.ResXResourceWriter> 物件。 檔案名稱必須包含 .resx 這個副檔名。 如果您是在 `using` 區塊中具現化 <xref:System.Resources.ResXResourceWriter> 物件，則您不必非得呼叫步驟 3 的 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法。  
+1.  呼叫 <xref:System.Resources.ResXResourceWriter> 方法並提供 .resx 檔的名稱，具現化 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=fullName> 物件。 檔案名稱必須包含 .resx 這個副檔名。 如果您是在 <xref:System.Resources.ResXResourceWriter> 區塊中具現化 `using` 物件，則您不必非得呼叫步驟 3 的 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法。  
   
 2.  針對您要加入檔案的每個資源呼叫 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 方法。 使用此方法的多載功能加入字串、物件和二進位檔 (位元組陣列) 資料。 如果資源是物件，它必須可以序列化。  
   
 3.  呼叫 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 方法以產生資源檔並釋放所有資源。 如果 <xref:System.Resources.ResXResourceWriter> 物件是在 `using` 區塊中建立，則資源會寫入 .resx 檔，且 <xref:System.Resources.ResXResourceWriter> 物件所使用的資源會在 `using` 區塊的結尾釋放。  
   
- 產生的 .resx 檔具有適當的標頭以及 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 方法所加入之每個資源的 `data` 標記。  
+ 產生的 .resx 檔具有適當的標頭以及 `data` 方法所加入之每個資源的 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 標記。  
   
 > [!WARNING]
 >  請勿使用資源檔儲存密碼、安全機密資訊或私用資料。  
@@ -92,3 +92,4 @@ ms.lasthandoff: 07/13/2017
  [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
  [Resgen.exe (資源檔產生器)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)   
  [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+

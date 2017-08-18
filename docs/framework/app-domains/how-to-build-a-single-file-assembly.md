@@ -1,5 +1,5 @@
 ---
-title: "如何：建置單一檔案組件 | Microsoft Docs"
+title: "如何：建置單一檔案組件"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0ddf25f1d588c0972381a54ee0da4b35e3c0dc33
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：建置單一檔案組件
@@ -99,3 +99,4 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

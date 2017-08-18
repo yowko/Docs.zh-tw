@@ -1,5 +1,5 @@
 ---
-title: "如何：使用強式名稱簽署組件 | Microsoft Docs"
+title: "如何：使用強式名稱簽署組件"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 548cc4ffd0f894c4f522552c5f032be4c94d3585
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署組件
@@ -108,3 +108,4 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
  [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)   
  [管理組件和資訊清單簽署](/visualstudio/ide/managing-assembly-and-manifest-signing)   
  [專案設計工具、簽署頁面](https://msdn.microsoft.com/library/0k50fs3b)
+

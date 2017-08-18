@@ -1,5 +1,5 @@
 ---
-title: "Mage.exe (資訊清單產生和編輯工具) | Microsoft Docs"
+title: "Mage.exe (資訊清單產生和編輯工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 68
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: caa06be840f0612e94742e7ea167f02b8b8d657d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (資訊清單產生和編輯工具)
@@ -215,3 +215,4 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
  [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)   
  [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：停用強式名稱略過功能 | Microsoft Docs"
+title: "如何：停用強式名稱略過功能"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 30
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 73e27a6a1cb58a410bf3c1601e5a5412762242c7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0af565c6d27be6a5a22bfb0fd1f90e4e46deec33
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：停用強式名稱略過功能
@@ -67,3 +67,4 @@ ms.lasthandoff: 07/13/2017
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [\<bypassTrustedAppStrongNames> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)   
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Resgen.exe (資源檔產生器) | Microsoft Docs"
+title: "Resgen.exe (資源檔產生器)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 46
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 6729ba927ee4beba2dc500f9ef1b1a293f262f2a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dcafccd1046bd47616ae42c6ce8a117f341a83f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)

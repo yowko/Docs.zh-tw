@@ -1,5 +1,5 @@
 ---
-title: "建立桌面應用程式的資源檔 | Microsoft Docs"
+title: "建立桌面應用程式的資源檔"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 16312edacc43a5adc5504e36eec597d85b626077
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>建立桌面應用程式的資源檔

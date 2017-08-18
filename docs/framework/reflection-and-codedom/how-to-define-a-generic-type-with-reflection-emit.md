@@ -1,5 +1,5 @@
 ---
-title: "如何：使用反映發出定義泛型類型 | Microsoft Docs"
+title: "如何：使用反映發出定義泛型類型"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 4f4711df8c95e32756d58a83e1e65375450786de
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 85e5bc1cdbd9d90597864c75a5bd33109e4ae783
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反映發出定義泛型類型
@@ -119,3 +119,4 @@ ms.lasthandoff: 07/13/2017
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>   
  [使用反映發出](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
  [反映發出動態組件案例](http://msdn.microsoft.com/en-us/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+

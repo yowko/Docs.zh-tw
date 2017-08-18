@@ -1,5 +1,5 @@
 ---
-title: "使用組件設計程式 | Microsoft Docs"
+title: "使用組件設計程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c319b668becd6a5b3e4077ea709835bb42cafb44
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 368021062a3ad49d2c63f92797c59b8c0f1cddfc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-with-assemblies"></a>使用組件設計程式
@@ -94,3 +94,4 @@ ms.lasthandoff: 07/13/2017
   
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
  描述如何使用「反映」類別，以取得組件的相關資訊。
+

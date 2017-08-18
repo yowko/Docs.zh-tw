@@ -1,13 +1,9 @@
 ---
-title: "延遲簽署組件 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: "延遲簽署組件"
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>延遲簽署組件
@@ -62,8 +58,8 @@ ms.lasthandoff: 07/13/2017
   
      使用 **-Vr** 或 **– Vk** 選項時，您可以選擇性地包含測試金鑰簽署的 .snk 檔案。  
   
-    > [!CAUTION]
-    >  **-Vr** 或 **–Vk** 選項僅供開發期間使用。 將組件加入至略過驗證清單會使安全性變弱。 具有惡意的組件可能使用加入至略過驗證清單之組件的完全指定組件名稱 (組件名稱、版本、文化特性和公開金鑰語彙基元)，以偽裝其識別 (Identity)。 這會使具有惡意的組件也略過驗證。  
+    > [!WARNING]
+    > 請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。
   
     > [!NOTE]
     >  如果您在 64 位元電腦上，使用 Visual Studio 進行開發期間使用延遲簽署，並且編譯**任何 CPU** 的組件，您可能要套用 **-Vr** 選項兩次。 (在 Visual Studio 中，**任何 CPU** 是**平台目標**建置屬性的值，當您從命令列編譯時，它是預設值。)若要從命令列或檔案總管執行您的應用程式，請使用 64 位元版本的 [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 套用 **-Vr** 選項給組件。 若要在設計階段將組件載入到 Visual Studio (例如，如果組件包含您應用程式中其他組件使用的元件)，請使用 32 位元版本的強式名稱工具。 這是因為當組件是從命令列執行時，just-in-time (JIT) 編譯器會將組件編譯為 64 位元原生程式碼，而當載入到設計階段環境時，編譯為 32 位元原生程式碼。  
@@ -81,3 +77,4 @@ ms.lasthandoff: 07/13/2017
  [如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

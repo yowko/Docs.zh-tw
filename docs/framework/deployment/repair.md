@@ -1,5 +1,5 @@
 ---
-title: "修復 .NET Framework | Microsoft Docs"
+title: "修復 .NET Framework"
 description: "了解如何修復 .NET Framework"
 author: rlander
 keywords: ".NET Framework, 安裝"
@@ -10,10 +10,10 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cdb1d5-c5g8-8af9-93e8-5f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: c844ef1a62f65421c894aa258d64dbe4b51f4cc7
-ms.openlocfilehash: 1e74fbda49f4e4107d561499dffd3b1bc029c8fb
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 31de82bed90ff499959991827a96ad3f877f5428
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

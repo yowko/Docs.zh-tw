@@ -1,5 +1,5 @@
 ---
-title: "解析組件載入 | Microsoft Docs"
+title: "解析組件載入"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 71dfb65710a536c5cc470681285073a21da4c770
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0fe3347c640b7e99487d630cbfac97e774bda7bb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="resolving-assembly-loads"></a>解析組件載入
@@ -87,3 +87,4 @@ ms.lasthandoff: 07/13/2017
 ## <a name="see-also"></a>另請參閱  
  [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+

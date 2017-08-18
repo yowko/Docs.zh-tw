@@ -1,5 +1,5 @@
 ---
-title: "如何：建立公開/私密金鑰組 | Microsoft Docs"
+title: "如何：建立公開/私密金鑰組"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 808b01ae8965de70ac7b141b049b3f6a9f7d94d9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 772bcae9c3467553e4ca90989a82798155ee034c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>如何：建立公開/私密金鑰組
@@ -72,3 +72,4 @@ sn -p keypair.snk public.snk
   
 ## <a name="see-also"></a>另請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：檢視全域組件快取的內容 | Microsoft Docs"
+title: "如何：檢視全域組件快取的內容"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9f51fbaddf7de524a0025e87aa598726fc6f1db4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 55ed52873b6fa944c3dd5d95066432f593719c2e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>如何：檢視全域組件快取的內容
@@ -46,3 +46,4 @@ ms.lasthandoff: 07/13/2017
 ## <a name="see-also"></a>另請參閱  
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+

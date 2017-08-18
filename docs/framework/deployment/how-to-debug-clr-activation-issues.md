@@ -1,5 +1,5 @@
 ---
-title: "如何：偵錯 CLR 啟用問題 | Microsoft Docs"
+title: "如何：偵錯 CLR 啟用問題"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,11 +21,11 @@ caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 2df9b03603c5df6bd803187bd1299f5d730bc32c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1f1f3393457c783fe8f73d987a287f1afb18f40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何：偵錯 CLR 啟用問題

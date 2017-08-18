@@ -1,5 +1,5 @@
 ---
-title: "反映的安全性考量 | Microsoft Docs"
+title: "反映的安全性考量"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 43db8eb6101454344a0b9515929e21c49a512acd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 653b91f899da5962132577fba0df6ecfcdfde4ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
@@ -124,3 +124,4 @@ ms.lasthandoff: 07/13/2017
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
  [套用屬性](../../../docs/standard/attributes/applying-attributes.md)   
  [存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+

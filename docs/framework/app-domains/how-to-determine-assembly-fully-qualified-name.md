@@ -1,5 +1,5 @@
 ---
-title: "如何：決定組件的完整名稱 | Microsoft Docs"
+title: "如何：決定組件的完整名稱"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 28fb4d677be7a9387863798dc34b091abc24efa0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673c836ea761c24e2627e97ab3bcb5dd3c35d141
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>如何：決定組件的完整名稱
@@ -52,3 +52,4 @@ ms.lasthandoff: 07/13/2017
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

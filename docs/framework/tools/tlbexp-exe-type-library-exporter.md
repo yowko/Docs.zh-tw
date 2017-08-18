@@ -1,5 +1,5 @@
 ---
-title: "Tlbexp.exe (型別程式庫匯出工具) | Microsoft Docs"
+title: "Tlbexp.exe (類型程式庫匯出工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -25,11 +25,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 9de397b715aa340f0b84ba0be645feb5fef21568
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aca6756baf6ee4673e73876d9c95f007fbe01b48
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)

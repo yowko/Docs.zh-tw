@@ -1,5 +1,5 @@
 ---
-title: "Clrver.exe (CLR 版本工具) | Microsoft Docs"
+title: "Clrver.exe (CLR 版本工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 2a3f1cf4d82aefc171d256dec166f0441e4fd57e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f8bef6f85f9e4b7d35e60c613a12ad87a26b70ab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)

@@ -1,5 +1,5 @@
 ---
-title: "Mgmtclassgen.exe (管理強型別類別產生器) | Microsoft Docs"
+title: "Mgmtclassgen.exe (管理強類型類別產生器)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -25,11 +25,11 @@ caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 964f4826a9a4527ddc2a86d14d441d302e20a09e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f83136265c4002f3ea4872b370b856bfacf4db3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)

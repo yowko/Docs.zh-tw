@@ -1,5 +1,5 @@
 ---
-title: "Ngen.exe (原生映像產生器) | Microsoft Docs"
+title: "Ngen.exe (原生映像產生器)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -31,11 +31,11 @@ caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 65ecfdf69d739e76e386ed334c95f31ad266b904
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)

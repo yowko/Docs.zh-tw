@@ -1,5 +1,5 @@
 ---
-title: "部署 .NET Framework | Microsoft Docs"
+title: "部署 .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 36810aa7c94960810bb9c69c1f9af9571c7bf61b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd06e38413d7a7fc666743938d0f03067717b6f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
@@ -53,3 +53,4 @@ ms.lasthandoff: 07/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [開發指南](../../../docs/framework/development-guide.md)
+

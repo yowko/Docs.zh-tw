@@ -1,5 +1,5 @@
 ---
-title: "在完全信任環境下執行內部網路應用程式 | Microsoft Docs"
+title: "在完全信任環境下執行內部網路應用程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: f80832a0c0220183a7386bb0273e5a11d9eee6df
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58eeda82c66ecda6ffd714e808b006634ccba804
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任環境下執行內部網路應用程式
@@ -46,3 +46,4 @@ ms.lasthandoff: 07/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

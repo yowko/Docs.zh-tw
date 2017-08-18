@@ -1,5 +1,5 @@
 ---
-title: "操作和慣性 | Microsoft Docs"
+title: "操作和慣性"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ece2a4ecf25d361ab6d3dd627f5730c302be24a6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45f36483477c9f6f670de0ac3f44a446f7ae4ee4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="manipulations-and-inertia"></a>操作和慣性
@@ -33,3 +33,4 @@ ms.lasthandoff: 07/13/2017
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Input.Manipulations>
+

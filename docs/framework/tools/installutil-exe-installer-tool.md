@@ -1,5 +1,5 @@
 ---
-title: "Installutil.exe (安裝程式工具) | Microsoft Docs"
+title: "Installutil.exe (安裝程式工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -30,11 +30,11 @@ caps.latest.revision: 40
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: bddd19b348bf1eb5b03341c216d5c37033e69abe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (安裝程式工具)

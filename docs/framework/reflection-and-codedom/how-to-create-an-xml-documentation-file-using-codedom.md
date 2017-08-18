@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 CodeDOM 建立 XML 文件檔案 | Microsoft Docs"
+title: "如何：使用 CodeDOM 建立 XML 文件檔案"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: f9f90a91511b846a9ade9dc197c49caed082d57b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7d5569fd22cc8469052cc318fd50a5f8ef94c1a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 建立 XML 文件檔案
@@ -86,3 +86,4 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
  [使用 XML 加入程式碼註解](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)   
  [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [XML 文件](/cpp/ide/xml-documentation-visual-cpp)
+

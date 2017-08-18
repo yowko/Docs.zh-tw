@@ -1,5 +1,5 @@
 ---
-title: "Regasm.exe (組件登錄工具) | Microsoft Docs"
+title: "Regasm.exe (組件登錄工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -24,11 +24,11 @@ caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 545a73dfb2568d0ce146e57e16724abffe4036a2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 553b7725d2e0fe8fc197805d8e4b444567c33040
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)

@@ -1,5 +1,5 @@
 ---
-title: "Certmgr.exe (憑證管理員工具) | Microsoft Docs"
+title: "Certmgr.exe (憑證管理員工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 27
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: cf9cc6db470d85d765d95a1aba2fd205764ee3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd5d1011a8f8aeadfc7729c3a4f6f56a033110a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)

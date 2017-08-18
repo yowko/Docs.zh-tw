@@ -1,5 +1,5 @@
 ---
-title: "如何：使用反映發出定義泛型方法 | Microsoft Docs"
+title: "如何：使用反映發出定義泛型方法"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: f69e3d0959412ccedd6e1926832533371185acd5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 655ec9d5c53de10e6044cacc0eb8239fefe36489
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：使用反映發出定義泛型方法
@@ -152,10 +152,11 @@ ms.lasthandoff: 06/06/2017
   
 -   此程式碼包含編譯所需的 C# `using` 陳述式 (Visual Basic 為 `Imports`)。  
   
--   需要的任何其他組件參考不。  
+-   不需要任何其他組件參考。  
   
--   在命令列使用 csc.exe、 vbc.exe 或 cl.exe 程式碼編譯。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
+-   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.Emit.MethodBuilder>   
  [操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+

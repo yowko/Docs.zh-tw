@@ -1,5 +1,5 @@
 ---
-title: "設定組件屬性 | Microsoft Docs"
+title: "設定組件屬性"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9dd77aff85a810f462d2af77f1bfbe13b77e35dd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="setting-assembly-attributes"></a>設定組件屬性
@@ -91,3 +91,4 @@ ms.lasthandoff: 07/13/2017
 ## <a name="see-also"></a>另請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

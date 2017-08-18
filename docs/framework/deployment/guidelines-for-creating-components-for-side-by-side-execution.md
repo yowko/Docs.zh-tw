@@ -1,5 +1,5 @@
 ---
-title: "建立並存執行元件的方針 | Microsoft Docs"
+title: "建立並存執行元件的方針"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4e303fb9994b6cc3d53839dbbbe0433abd129eeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 246cd565cd9ab981a993fcbee588783ec4e4e8fb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
@@ -80,3 +80,4 @@ ms.lasthandoff: 07/13/2017
 ## <a name="see-also"></a>另請參閱  
  [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)   
  [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+

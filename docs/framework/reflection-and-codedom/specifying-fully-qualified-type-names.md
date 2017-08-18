@@ -1,5 +1,5 @@
 ---
-title: "指定完整的類型名稱 | Microsoft Docs"
+title: "指定完整的類型名稱"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e1bceed0f95170f9dc11ebc28217b9e8a7dc891c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 966bc0883cf29774ab6f52f6f3207241c129159c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
@@ -160,3 +160,4 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  <xref:System.Type.GetType%2A?displayProperty=fullName>   
  <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+

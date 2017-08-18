@@ -1,5 +1,5 @@
 ---
-title: "建立 Game1 類別 | Microsoft Docs"
+title: "建立 Game1 類別"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0872b782902fb4e5a1d4db214ec042d067251684
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9c6d0bdfd21f431ae6da38e3868386f91d5b725b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-the-game1-class"></a>建立 Game1 類別
@@ -51,3 +51,4 @@ ms.lasthandoff: 07/13/2017
  [建立 GamePiece 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
  [建立 GamePieceCollection 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
  [完整程式碼清單](../../../docs/framework/common-client-technologies/full-code-listings.md)
+

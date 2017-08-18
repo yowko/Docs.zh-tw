@@ -1,5 +1,5 @@
 ---
-title: "如何：檢視組件內容 | Microsoft Docs"
+title: "如何：檢視組件內容"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 38ed309c8d1ef7467b235eb2e751ffb9016a83ab
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3583e69e90080eb830bb61a5e0c7b6e944f7d654
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：檢視組件內容
