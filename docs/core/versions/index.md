@@ -3,16 +3,16 @@ title: ".NET Core 版本控制"
 description: "了解 .NET Core 的版本控制運作方式。"
 author: bleroy
 ms.author: mairaw
-ms.date: 08/10/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 94614e436734389df7bf3a6e2df2abe49593021a
+ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
+ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
@@ -154,6 +154,10 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ### <a name="preview-versions"></a>預覽版本
 
 預覽版本將 `-preview-[number]-([build]|"final")` 附加至版本。 例如，`2.0.0-preview-1-final`。
+
+### <a name="servicing-versions"></a>服務版本
+
+版本發行之後，版本分支通常會停止產生每日組建，改為開始產生服務組建。 服務版本會將 `-servicing-[number]` 附加至版本。 例如，`2.0.1-servicing-006924`。
 
 ### <a name="lts-vs-current"></a>LTS 與目前的
 
