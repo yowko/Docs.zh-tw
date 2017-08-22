@@ -1,7 +1,8 @@
 ---
-title: Windows Identity Foundation | Microsoft Docs
+title: Windows Identity Foundation
 ms.custom: 
 ms.date: 03/30/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,11 +14,11 @@ caps.latest.revision: 15
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 8f8a9661cbb15f583ed6b1dbde307c9b8cb51675
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92f070a919363e373cd898682c37ac7a199d2463
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/02/2017
   
     -   [操作說明：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
   
-    -   [操作說明︰使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
+    -   [操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
   
     -   [操作說明：使用 WIF 顯示登入的狀態](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
   
@@ -86,3 +87,4 @@ ms.lasthandoff: 05/02/2017
 -   [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)  
   
     -   [WIF 組態結構描述慣例](../../../docs/framework/security/wif-configuration-schema-conventions.md)
+
