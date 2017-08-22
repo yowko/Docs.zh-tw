@@ -1,5 +1,5 @@
 ---
-title: "在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數 | Microsoft Docs"
+title: "在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0b39f793d2bc3b3fb73594320d533ebb411fa128
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d3f54e3794d1595ed120685a452478791e0ad37c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/13/2017
   
  如果 [重新啟動管理員] 偵測到即使關閉執行中應用程式也需要重新啟動系統的情況，則不會顯示訊息。  
   
- ![[關閉應用程式] 對話方塊](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
+ ![關閉應用程式對話方塊](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
 提示關閉正在使用的 .NET Framework 應用程式  
   
 ## <a name="using-a-chained-installer"></a>使用鏈結的安裝程式  
@@ -53,3 +53,4 @@ ms.lasthandoff: 07/13/2017
  [部署](../../../docs/framework/deployment/index.md)   
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [如何：取得 .NET Framework 4.5 安裝程式的進度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

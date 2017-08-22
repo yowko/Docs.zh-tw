@@ -1,5 +1,5 @@
 ---
-title: "組件資訊清單 | Microsoft Docs"
+title: "組件資訊清單"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 58098e2107fcab96f82677094e50529fafba98e5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assembly-manifest"></a>組件資訊清單
@@ -69,3 +69,4 @@ ms.lasthandoff: 07/13/2017
  [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)   
  [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)
+

@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 初始化錯誤：管理使用者體驗 | Microsoft Docs"
+title: ".NET Framework 初始化錯誤：管理使用者經驗"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 70f0515b2b4219dcb7e143b0c81f91d3855fd433
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者經驗
@@ -91,7 +91,7 @@ Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應�
 ## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)] 行為和 UI  
  CLR 啟用系統在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供的行為和 UI 與其他 Windows 作業系統版本相同，但載入 CLR 2.0 時發生問題時除外。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包括使用 CLR 4.5 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 不過，[!INCLUDE[win8](../../../includes/win8-md.md)] 不會包括全都使用 CLR 2.0 的 .NET Framework 2.0、3.0 或 3.5。 因此，相依於 CLR 2.0 的應用程式預設不會在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上執行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md) 文章討論這兩個選項。  
   
- ![在 Windows 8 安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
+ ![在 Windows 8 上安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
 視需要提示安裝 .NET Framework 3.5  
   
 > [!NOTE]
@@ -106,3 +106,4 @@ Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應�
  [如何：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
  [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
  [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)
+

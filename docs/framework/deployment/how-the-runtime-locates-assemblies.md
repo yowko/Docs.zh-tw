@@ -1,5 +1,5 @@
 ---
-title: "執行階段如何找出組件 | Microsoft Docs"
+title: "執行階段如何找出組件"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 78805f7139bff90127885af267c8ade9090fbd62
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
@@ -46,9 +46,9 @@ ms.lasthandoff: 07/13/2017
   
  參考組件時，最好是使用完整參考，包括組件名稱、版本、文化特性和公開金鑰語彙基元 (如果有的話)。 執行階段會使用此資訊來尋找組件 (依照本節稍後說明的步驟)。 不論是靜態或動態組件的參考，執行階段都會使用相同的解析程序。  
   
- 您也可以只提供組件的部分資訊給呼叫方法 (例如只指定組件名稱)，以對組件進行動態參考。 在此情況下，只會搜尋組件的應用程式目錄，而不會進行任何其他檢查。 您可以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.AppDomain.Load%2A?displayProperty=fullName> 等各種方法來載入組件，以進行部分參考。  
+ 您也可以只提供組件的部分資訊給呼叫方法 (例如只指定組件名稱)，以對組件進行動態參考。 在此情況下，只會搜尋組件的應用程式目錄，而不會進行任何其他檢查。 您可以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.AppDomain.Load%2A?displayProperty=fullName>等各種方法來載入組件，以進行部分參考。  
   
- 最後，您可使用 [System.Reflection.Assembly.Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) 等方法建立動態參考，只提供部分資訊；然後使用應用程式組態檔中的 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 項目審查參考。 這個項目可讓您在應用程式組態檔中，而不是在您的程式碼中，提供完整的參考資訊 (名稱、版本、文化特性和 (適用的話) 公開金鑰語彙基元)。 如果您想要完整限定參考外部應用程式目錄中的組件，或者如果您想要參考全域組件快取中的組件，但又想要在組態檔中 (而不是在您的程式碼中) 指定完整參考的方便性，您就會使用這項技術。  
+ 最後，您可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> 等方法建立動態參考，並且只提供部分資訊；然後使用應用程式組態檔中的 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素授與參考資格。 這個項目可讓您在應用程式組態檔中，而不是在您的程式碼中，提供完整的參考資訊 (名稱、版本、文化特性和 (適用的話) 公開金鑰語彙基元)。 如果您想要完整限定參考外部應用程式目錄中的組件，或者如果您想要參考全域組件快取中的組件，但又想要在組態檔中 (而不是在您的程式碼中) 指定完整參考的方便性，您就會使用這項技術。  
   
 > [!NOTE]
 >  這種類型的部分參考不應該用於數個應用程式之間共用的組件。 因為組態設定是依各應用程式來套用，而且依各組件，所以使用這種部分參考的共用組件，會要求使用共用組件的每個應用程式，在其組態檔中都要有合格的資訊。  
@@ -193,7 +193,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   名稱，這是所參考之組件的名稱。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomain.AppendPrivatePath%2A> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath`，後面接著應用程式組態檔中指定的路徑。  
+-   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomain.AppendPrivatePath%2A> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>探查應用程式基底和文化特性目錄  
  執行階段一定會從應用程式的基底開始探查，該基底可以是 URL，或是應用程式在電腦上的根目錄。 如果在應用程式基底中找不到參考的組件，而且沒有提供任何文化特性資訊，執行階段會搜尋具有該組件名稱的任何子目錄。 所探查的目錄包括：  
@@ -258,10 +258,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>探查的其他位置  
- 組件位置也可以使用目前的繫結內容來決定。 當使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法時，以及在 COM Interop 案例中，最常發生這個情況。 如果組件使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法來參考另一個組件，呼叫組件的位置會被視為有關在哪裡可以找到參考組件的提示。 如果找到相符項目，就會載入該組件。 如果沒有找到相符項目，執行階段會繼續進行其搜尋語意，然後查詢 Windows Installer，以提供組件。 如果沒有提供符合繫結要求的組件，則會擲回例外狀況。 如果有參考類型，此例外狀況是 Managed 程式碼中的 <xref:System.TypeLoadException>，如果找不到要載入的組件，則為 <xref:System.IO.FileNotFoundException>。  
+ 組件位置也可以使用目前的繫結內容來決定。 當使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法時，以及在 COM Interop 案例中，最常發生這個情況。 如果組件使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法來參考另一個組件，呼叫組件的位置會被視為有關在哪裡可以找到參考組件的提示。 如果找到相符項目，就會載入該組件。 如果沒有找到相符項目，執行階段會繼續進行其搜尋語意，然後查詢 Windows Installer，以提供組件。 如果沒有提供符合繫結要求的組件，則會擲回例外狀況。 如果有參考類型，此例外狀況是 Managed 程式碼中的 <xref:System.TypeLoadException> ，如果找不到要載入的組件，則為 <xref:System.IO.FileNotFoundException> 。  
   
  比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 http://www.code.microsoft.com/utils 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 然後，執行階段會在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探查該組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
   
 ## <a name="see-also"></a>另請參閱  
  [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [部署](../../../docs/framework/deployment/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Language Runtime 概觀 | Microsoft Docs"
+title: "Dynamic Language Runtime 概觀"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
@@ -60,7 +60,7 @@ ms.lasthandoff: 07/13/2017
   
  使用 DLR 語言開發的範例包括下列各項：  
   
--   IronPython。 以開放原始碼軟體於 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040) 網站上提供。  
+-   IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。  
   
 -   IronRuby。 以開放原始碼軟體於 [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。  
   
@@ -107,3 +107,4 @@ DLR 架構
  [Common Language Runtime](../../../docs/standard/clr.md)   
  [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [逐步解說：建立和使用動態物件](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

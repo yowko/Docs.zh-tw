@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中的並存執行 | Microsoft Docs"
+title: ".NET Framework 並存執行"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 460471cceda60697382d770e1b95be75ff3cfc8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1628d75ab7f842c6b7486a1d57f490b4d876ee28
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
@@ -138,3 +138,4 @@ publicKeyToken=...,
   
 ## <a name="reference"></a>參考資料  
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

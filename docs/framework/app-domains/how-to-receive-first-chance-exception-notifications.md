@@ -1,5 +1,5 @@
 ---
-title: "如何：接收第一個可能發生的例外狀況通知 | Microsoft Docs"
+title: "如何：接收第一個可能發生的例外狀況通知"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d5d3cd1e19d8a8156c4ee7968cb06770dcae58d0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd906fa2d45331082b9dc86c972e5630361e2653
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一個可能發生的例外狀況通知
@@ -91,7 +91,7 @@ ms.lasthandoff: 07/13/2017
 > [!NOTE]
 >  預設應用程式定義域的名稱與可執行檔的名稱相同。  
   
- 如果您將 <xref:System.AppDomain.FirstChanceException> 事件的處理常式新增至預設應用程式定義域，則會引發事件，並在預設應用程式定義域處理例外狀況之前處理事件。 若要進行查看，請在 `Main()` 開頭新增 C# 程式碼 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (在 Visual Basic 中，為 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`n)。  
+ 如果您將 <xref:System.AppDomain.FirstChanceException> 事件的處理常式新增至預設應用程式定義域，則會引發事件，並在預設應用程式定義域處理例外狀況之前處理事件。 若要查看其運作，請在 `Main()` 開頭新增 C# 程式碼 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (在 Visual Basic 中，為 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`)。  
   
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)] [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
   
@@ -101,3 +101,4 @@ ms.lasthandoff: 07/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomain.FirstChanceException>
+

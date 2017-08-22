@@ -1,5 +1,5 @@
 ---
-title: "如何：將組件載入應用程式定義域 | Microsoft Docs"
+title: "如何：將組件載入應用程式定義域"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,17 +17,17 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7caaa27fed13c33508b7decde1d87e723167d96b
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: c319da0f8e6f3cdfb83e659a778136d668699834
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：將組件載入應用程式定義域
-有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 [System.Reflection.Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  
+有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 <xref:System.Reflection.Assembly?displayProperty=fullName> 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  
   
--   [Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) 類別的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法會載入組件並指定其檔案位置。 使用這種方法載入組件會使用不同的載入內容。  
+-   <xref:System.Reflection.Assembly> 類別的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法會載入已指定其檔案位置的組件。 使用這種方法載入組件會使用不同的載入內容。  
   
 -   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法將組件載入僅限反映的內容。 可以檢查但不會執行載入此內容的組件，以允許檢查以其他平台為目標的組件。 請參閱[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
@@ -57,3 +57,4 @@ ms.lasthandoff: 07/10/2017
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)   
  [如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)   
  [應用程式定義域和組件](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+

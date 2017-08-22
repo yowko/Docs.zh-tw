@@ -1,5 +1,5 @@
 ---
-title: "Winres.exe (Windows Forms 資源編輯器) | Microsoft Docs"
+title: "Winres.exe (Windows Form 資源編輯器)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Form 資源編輯器)
@@ -146,7 +146,7 @@ winres /?
   
 4.  若要儲存 .resx 或 .resources 檔案的當地語系化版本，請按一下**儲存**圖示或 [檔案] 功能表上的相同命令。 工具會顯示 [選取文化特性] 視窗。  
   
-5.  選取適當的文化特性和檔案模式，然後按一下 [確定]。 工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 [CultureInfo 類別](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)。  
+5.  選取適當的文化特性和檔案模式，然後按一下 [確定]。 工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -157,3 +157,4 @@ winres /?
  [工具](../../../docs/framework/tools/index.md)   
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)   
  [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
+

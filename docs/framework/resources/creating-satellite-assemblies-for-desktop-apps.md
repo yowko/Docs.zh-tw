@@ -1,5 +1,5 @@
 ---
-title: "建立桌面應用程式的附屬組件 | Microsoft Docs"
+title: "建立桌面應用程式的附屬組件"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b4ae5474ebf910389148745105adbe9a0ae608bb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
@@ -61,7 +61,7 @@ ms.lasthandoff: 07/13/2017
   
  下圖顯示未在[全域組件快取](../../../docs/framework/app-domains/gac.md)中安裝之應用程式的範例目錄結構和位置需求。 副檔名為 .txt 和 .resources 的項目將不會隨附最終應用程式。 這些是用來建立最終附屬資源組件的中繼資源檔。 在此範例中，您可以將 .resx 檔案取代為 .txt 檔案。 如需詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  
   
- ![Satellite assemblies](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
+ ![附屬組件](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 附屬組件目錄  
   
 ## <a name="compiling-satellite-assemblies"></a>編譯附屬組件  
