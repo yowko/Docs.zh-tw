@@ -13,10 +13,10 @@ author: rpetrusha
 ms.author: mariaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2766edd72d7f0ebb03692ef50be96ffc3c676270
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: b70c0a7291cf8569781ffc6b67632f93c5627e8b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 
@@ -262,8 +262,8 @@ ms.lasthandoff: 07/28/2017
 | ------- | ------------------------ | ------------------- |
 | **繫結命令執行個體** | 為了提供機制將檢視模型命令執行個體繫結至檢視輸入手勢，<xref:System.Windows.Input.InputBinding> 類別現在繼承自 <xref:System.Windows.Freezable>，而不是 <xref:System.Windows.DependencyObject>。 下列屬性現在是相依性屬性：<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>這項變更會導致下列各項：<br><br>* <xref:System.Windows.Input.InputBinding> 物件現在在註冊後會予以凍結，而不是保持可變動。<br>* 因為 <xref:System.Windows.DependencyObject> 類別的限制，所以您無法從多個執行緒存取執行個體層級 <xref:System.Windows.Input.InputBinding> 物件。<br>* 因為 <xref:System.Windows.Freezable> 類別的限制，所以您無法在註冊之後變動類別層級輸入繫結。<br>* 您無法在檢視模型中所建立的命令執行個體上指定輸入繫結。 | 如果繫結是可變動的，或要凍結它們，請在個別執行緒上建立不同的 <xref:System.Windows.Input.InputBinding> 類別執行個體。 類別層級靜態 <xref:System.Windows.Input.InputBinding> 在註冊之後，就請不要進行變動。 |
 | **瀏覽器應用程式** | WPF 瀏覽器應用程式 (.XBAP) 現在會處理獨立 WPF 應用程式這類重要事件，因此物件會依正確順序接收已路由傳送的重要事件。 | 無。 |
-| **廢鍵組合** | WPF 會讓廢鍵模糊，因此不產生任何可見字元，而是改成指出按鍵是要與下一個字母鍵合併使用以產生一個字元。 [KeyDown](https://msdn.microsoft.com/library/system.windows.input.keyboard.keydown(v=vs.100).aspx) 事件這類按鍵輸入事件，透過將 <xref:System.Windows.Input.KeyEventArgs.Key> 屬性設定為 <xref:System.Windows.Input.Key> 值報告按鍵是廢鍵時。 因為應用程式通常不想要回應可建立合併字元的鍵盤輸入，所以這通常是預期行為。 | 預期會讀取屬於組合字元之按鍵的應用程式可以使用 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 屬性來取得現在的模糊按鍵。 |
-| **焦點管理員** | 將 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope(v=vs.100).aspx) 附加屬性設定為 `true` 的項目傳遞給 [FocusManager.GetFocusedElement](https://msdn.microsoft.com/library/ms604088(v=vs.100).aspx) 方法時，此方法會傳回為該焦點範圍內最後一個鍵盤聚焦項目的項目，而且只有在所傳回的項目屬於與傳遞給方法的項目相同的 <xref:System.Windows.PresentationSource> 物件時。 | 無。 |
+| **廢鍵組合** | WPF 會讓廢鍵模糊，因此不產生任何可見字元，而是改成指出按鍵是要與下一個字母鍵合併使用以產生一個字元。 <xref:System.Windows.Input.Keyboard.KeyDownEvent> 事件這類按鍵輸入事件，透過將 <xref:System.Windows.Input.KeyEventArgs.Key> 屬性設定為 <xref:System.Windows.Input.Key> 值報告按鍵何時是廢鍵。 因為應用程式通常不想要回應可建立合併字元的鍵盤輸入，所以這通常是預期行為。 | 預期會讀取屬於組合字元之按鍵的應用程式可以使用 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 屬性來取得現在的模糊按鍵。 |
+| **焦點管理員** | 將 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 附加屬性設定為 `true` 的項目傳遞給 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> 方法時，此方法會傳回為該焦點範圍內最後一個鍵盤聚焦項目的項目，而且只有在所傳回的項目屬於與傳遞給方法的項目相同的 <xref:System.Windows.PresentationSource> 物件時。 | 無。 |
 
 ### <a name="ui-automation"></a>UI 自動化
 
@@ -298,7 +298,7 @@ ms.lasthandoff: 07/28/2017
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **Chameleon 結構描述** | 為了避免資料損毀，現在，Chameleon 結構描述隨附於多個結構描述時會正確地進行複製。<br><br>Chameleon 結構描述是沒有目標命名空間的結構描述，而且它們包含於其他 XSD 時，會採用匯入結構描述的目標命名空間。 它們通常用來將一般類型併入結構描述中。 |
-| **ID 函式** | 將 <xref:System.Xml.XmlReader> 物件傳遞給 XLST 時，XSLT [id 函式](https://msdn.microsoft.com/library/ms190915.aspx)現在會傳回正確值，而不是 Null。<br><br>如果使用者已使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 方法從 LINQ to XML 類別建立 <xref:System.Xml.XmlReader> 物件，並且這個 <xref:System.Xml.XmlReader> 物件會傳遞至 XSLT，在過去，XSLT 中 `id` 函式的任何執行個體會傳回 Null。 這不是 `id` 函式的允許傳回值。 |
+| **ID 函式** | 將 <xref:System.Xml.XmlReader> 物件傳遞給 XLST 時，XSLT [id 函式](/sql/xquery/functions-on-sequences-id)現在會傳回正確值，而不是 Null。<br><br>如果使用者已使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 方法從 LINQ to XML 類別建立 <xref:System.Xml.XmlReader> 物件，並且這個 <xref:System.Xml.XmlReader> 物件會傳遞至 XSLT，在過去，XSLT 中 `id` 函式的任何執行個體會傳回 Null。 這不是 `id` 函式的允許傳回值。 |
 | **Namespace 屬性** | 為了避免資料損毀，<xref:System.Xml.XPath.XPathNavigator> 物件現在會正確地傳回 `x:xmlns` 屬性的本機名稱。 |
 | **命名空間宣告** | 子樹上的 <xref:System.Xml.XmlReader> 物件不再於一個 XML 項目內建立重複的命名空間宣告。 |
 | **結構描述驗證** | 為了防止錯誤的結構描述驗證，<xref:System.Xml.Schema.XmlSchemaSet> 類別允許正確且一致地編譯 XSD 結構描述。 這些結構描述可以包含其他結構描述；例如，`A.xsd` 可以包含 `B.xsd`，而後者可以包含 `C.xsd`。 編譯任何其中一個可周遊這個相依性圖表。 |

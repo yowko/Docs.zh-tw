@@ -1,13 +1,9 @@
 ---
 title: "如何：判斷安裝的 .NET Framework 版本"
-ms.custom: 
-ms.date: 04/07/2017
+ms.date: 08/09/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions, determining for .NET Framework
@@ -18,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cddee407d1245568054871d71f2840f463859535
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: afb01fd47ed2ce3b9c5838f3a8f61c8d34147378
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
@@ -37,6 +33,7 @@ ms.lasthandoff: 07/28/2017
  [檢視登錄 (4.5 版及更新版本)](#net_b)  
  [使用程式碼查詢登錄 (1-4 版)](#net_c)  
  [使用程式碼查詢登錄 (4.5 版及更新版本)](#net_d)  
+ [使用 PowerShell 查詢登錄 (4.5 版及更新版本)](#ps_a)  
   
  若要尋找 CLR 版本，您可以使用工具或程式碼：  
   
@@ -153,6 +150,27 @@ ms.lasthandoff: 07/28/2017
     - 它會檢查 `Release` 項目的值「大於或等於」已知版本機碼的值。
 
     - 它會從最新版本依序檢查到最舊版本。
+
+<a name="ps_a"></a> 
+#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>藉由查詢 PowerShell 的登錄來檢查所需的最低 .NET Framework 版本 (.NET Framework 4.5 及更新版本)
+
+- 下列範例會檢查 `Release` 關鍵字的值，判斷是否安裝 .NET Framework 4.6.2 或更高版本，無論 Windows 作業系統版本為何 (如果是，傳回 `True`；否則傳回 `False`)。
+
+    ```PowerShell
+    Get-ChildItem "hklm:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | % { $_ -ge 394802 } 
+    ```
+
+    您可以使用下表的其他值取代上例中的 `394802` 來檢查是否有不同的所需最低 .NET Framework 版本。
+  
+    |版本|DWORD 版本的最低值|
+    |-------------|--------------------------------|
+    |.NET Framework 4.5|378389|
+    |.NET Framework 4.5.1|378675|
+    |.NET Framework 4.5.2|379893|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
+    |.NET Framework 4.7|460798|
 
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>使用 Clrver 工具尋找目前的執行階段版本
