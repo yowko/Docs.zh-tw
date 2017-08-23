@@ -1,26 +1,24 @@
 ---
-title: "dotnet-vstest 命令"
-description: "dotnet-vstest 命令會建置專案和其所有相依性。"
-keywords: "dotnet-vstest, CLI, CLI 命令, .NET Core"
+title: "dotnet vstest 命令 - .NET Core CLI"
+description: "dotnet vstest 命令會建置專案和其所有相依性。"
 author: guardrex
 ms.author: mairaw
-ms.date: 03/09/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0e36c070-2242-41d3-96f1-aea0aca48d4d
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 740e0e002b8fde1c5bfd1eb8e53be54b4113c74d
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-vstest"></a>dotnet vstest
 
-# <a name="dotnet-vstest"></a>dotnet-vstest
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
 `dotnet-vstest` - 從指定的檔案執行測試。
 

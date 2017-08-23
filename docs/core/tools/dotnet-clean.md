@@ -1,34 +1,42 @@
 ---
-title: "dotnet-clean 命令 - .NET Core CLI"
-description: "dotnet-clean 命令會清除目前的目錄。"
-keywords: "dotnet-clean, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+title: "dotnet clean 命令 - .NET Core CLI"
+description: "dotnet clean 命令會清除目前的目錄。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="dotnet-clean"></a>dotnet-clean
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>名稱
 
-`dotnet-clean` - 清除專案的輸出。 
+`dotnet clean` - 清除專案的輸出。
 
 ## <a name="synopsis"></a>概要
 
-`dotnet clean [<PROJECT>] [-o|--output] [-f|--framework] [-c|--configuration] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
+dotnet clean [-h|--help]
+```
+---
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 
@@ -40,6 +48,16 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="options"></a>選項
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+定義組建組態。 預設值是 `Debug`。 如果在建置階段指定此選項，清除時才需要使用它。
+
+`-f|--framework <FRAMEWORK>`
+
+在建置時間指定的[架構](../../standard/frameworks.md)。 架構必須定義於[專案檔](csproj.md)中。 如果在建置階段指定架構，則您必須在清除時指定該架構。
+
 `-h|--help`
 
 印出命令的簡短說明。
@@ -48,17 +66,37 @@ ms.lasthandoff: 07/28/2017
 
 在其中放置建置輸出的目錄。 如果您在建置專案時指定架構，請搭配輸出目錄參數來指定 `-f|--framework <FRAMEWORK>` 參數。
 
-`-f|--framework <FRAMEWORK>`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
-在建置時間指定的[架構](../../standard/frameworks.md)。 架構必須定義於[專案檔](csproj.md)中。 如果在建置階段指定架構，則您必須在清除時指定該架構。
-
-`-c|--configuration <CONFIGURATION>`
-
-定義組態。 如果省略，會預設為 `Debug`。 如果在建置階段指定此屬性，清除時才需要使用它。
+清除指定執行階段的輸出資料夾。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。
 
 `-v|--verbosity <LEVEL>`
 
 設定命令的詳細資訊層級。 允許的層級為 q[uiet]、m[inimal]、n[ormal]、d[etailed] 和 diag[nostic]。
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+定義組建組態。 預設值是 `Debug`。 如果在建置階段指定此選項，清除時才需要使用它。
+
+`-f|--framework <FRAMEWORK>`
+
+在建置時間指定的[架構](../../standard/frameworks.md)。 架構必須定義於[專案檔](csproj.md)中。 如果在建置階段指定架構，則您必須在清除時指定該架構。
+
+`-h|--help`
+
+印出命令的簡短說明。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+在其中放置建置輸出的目錄。 如果您在建置專案時指定架構，請搭配輸出目錄參數來指定 `-f|--framework <FRAMEWORK>` 參數。
+
+`-v|--verbosity <LEVEL>`
+
+設定命令的詳細資訊層級。 允許的層級為 q[uiet]、m[inimal]、n[ormal]、d[etailed] 和 diag[nostic]。
+
+---
 
 ## <a name="examples"></a>範例
 

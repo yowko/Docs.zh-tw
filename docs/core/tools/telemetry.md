@@ -1,39 +1,39 @@
 ---
-title: ".NET Core 工具遙測"
-description: "探索收集使用量資訊以進行分析的 .NET Core 工具遙測功能。"
-keywords: .NET, .NET Core
+title: ".NET Core CLI 工具遙測"
+description: "探索收集使用量資訊以進行分析的 .NET Core 工具遙測功能，它會收集哪些資料以及如何停用。"
+keywords: ".NET, .NET Core, 遙測"
 author: richlander
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1816b9fbad1f671820c9f970674c8af2147a230e
+ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
+ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 
-# <a name="net-core-tools-telemetry"></a>.NET Core 工具遙測
+# <a name="net-core-cli-tools-telemetry"></a>.NET Core CLI 工具遙測
 
-.NET Core 工具包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/pull/2145)。 .NET 小組必須了解如何使用這些工具，讓我們可以進行改善。
+[.NET Core SDK](index.md) 包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/pull/2145)。 .NET 小組必須了解使用者如何使用這些工具，以便進行改善。 如需詳細資訊，請參閱 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)。
 
-所收集的資料是匿名的，而且將會以彙總形式發行，讓 Microsoft 和社群工程師根據 [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) 來使用。
+所收集的資料是匿名的，而且將會以彙總形式發行，供 Microsoft 和社群工程師根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)使用。 
 
 ## <a name="scope"></a>範圍
 
-`dotnet` 命令用來啟動應用程式和 .NET Core 工具。 `dotnet` 命令本身不會收集遙測資料。 它是透過收集遙測資料的 `dotnet` 命令所執行的 .NET Core 工具。
+`dotnet` 命令用來啟動應用程式和 .NET Core CLI。 `dotnet` 命令本身不會收集遙測。 `dotnet` 命令執行的 .NET Core CLI 命令會收集遙測。
 
-.NET Core 命令 (未啟用遙測)：
+使用 `dotnet` 命令本身，沒有任何附加命令時，「不啟用」遙測：
 
 - `dotnet`
 - `dotnet [path-to-app]`
 
-.NET Core 工具[命令](index.md) (已啟用遙測)，例如：
+使用 [.NET Core CLI 命令](index.md) 時會「啟用」遙測，例如：
 
 - `dotnet build`
 - `dotnet pack`
@@ -42,48 +42,97 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="behavior"></a>行為
 
-預設會啟用 .NET Core 工具遙測功能。 您可以將 DOTNET_CLI_TELEMETRY_OPTOUT 環境變數 (例如，macOS/Linux 上的 `export`、Windows 上的 `set`) 設定為 true (例如，"true", 1)，來選擇遙測功能。
+預設會啟用 .NET Core CLI 工具遙測功能。 將 `DOTNET_CLI_TELEMETRY_OPTOUT` 環境變數設成 `1` 或 `true`，退出遙測功能。
 
 ## <a name="data-points"></a>資料點
 
-這個功能會收集下列資料部分︰
+這個功能會收集下列資料︰
 
-- 正在使用的命令 (例如，"build"、"restore")
-- 命令的 ExitCode
-- 針對測試專案，是正在使用的測試執行器
-- 叫用的時間戳記
-- 使用的架構
+- 叫用時間戳記&#8224;
+- 已叫用的命令 (例如 "build")&#8224;
+- 用來判斷地理位置的三個八位元 IP 位址&#8224;
+- 命令的 `ExitCode`
+- 測試執行器 (用於測試專案)
+- 作業系統和版本&#8224;
 - 執行階段識別碼是否存在於 "runtimes" 節點中
-- 正在使用的 CLI 版本
+- .NET Core SDK 版本&#8224;
 
-這個功能不會收集任何個人資料 (例如使用者名稱或電子郵件)。 它將不會掃描您的程式碼，也不會擷取可視為機密的任何專案層級資料，例如名稱、存放庫或作者 (如果您在 project.json 中進行設定)。 我們想要知道工具的用途，而不是您正在使用工具所建置的項目。 如果您發現收集的是機密資料，則是錯誤。 請[提出問題](https://github.com/dotnet/cli/issues)，將會進行修正。
+&#8224;此計量已發行。
+
+從 .NET Core SDK 2.0 開始，收集新的資料點：
+
+- `dotnet` 命令引數和選項：只收集已知的引數和選項 (不是任意字串)。
+- SDK 是否正在容器中執行。
+- 目標 Framework。
+- 雜湊 MAC 位址：機器以密碼編譯 (SHA256) 的匿名和唯一識別碼。 此計量未發行。
+- 雜湊的目前工作目錄。
+
+這個功能不收集個人資料，例如使用者名稱或電子郵件地址。 它不會掃描您的程式碼，也不會擷取機密的專案層級資料，例如名稱、存放庫或作者。 資料會使用 [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 技術安全傳送至 Microsoft 伺服器、保留在限制存取權下，以及以安全的 [Azure 儲存體](https://azure.microsoft.com/services/storage/)系統的嚴格安全性控制項發佈。
+
+我們想要知道您如何使用工具，以及它們是不是好用，而不是您用這些工具建置了什麼。 如果您懷疑遙測收集敏感性資料或我們以不安全或不適當地方式處理資料，請[在 dotnet/cli 存放庫問題中提出問題](https://github.com/dotnet/cli/issues)以進行調查。
+
+## <a name="published-data"></a>發行資料
+
+發行為每季提供，並列於 [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md) (.NET Core SDK 使用方式資料)。 資料檔的資料行包括：
+- 時間戳記
+- 發生次數&#8224;
+- 命令
+- 地理位置&#8225;
+- OSFamily
+- RuntimeID
+- OSVersion
+- SDKVersion
+
+&#8224;「發生次數」資料行顯示該命令該日用於該資料列計量的彙總計數。 
+
+&#8225;一般而言，「地理位置」資料行會顯示國家/地區的名稱。 在某些情況下，南極大陸會出現在這個資料行，因為研究人員在南極大陸使用 .NET Core 或不正確的位置資料。
+
+### <a name="example"></a>範例
+
+| 時間戳記      | 發生次數 | 命令 | 地理位置 | OSFamily | RuntimeID     | OSVersion | SDKVersion |
+| -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
+| 4/16/2017 0:00 | 8           | 回合     | 烏干達    | 達爾文   | osx.10.12-x64 | 10.12     | 1.0.1      |
+
+### <a name="datasets"></a>資料集
+
+[2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
+[2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
+[2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
+[2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+
+使用標準的 URL 格式張貼額外的資料集。 以年取代 `<YEAR>`，以一年的季取代 `<QUARTER>` (使用 `1`、`2`、`3` 或 `4`)。 這些檔案使用定位字元分隔值 (*TSV*) 格式。 
+
+```
+https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv
+```
 
 ## <a name="license"></a>使用權
 
-Microsoft 的 .NET Core 散發是使用 [MICROSOFT .NET LIBRARY EULA](https://aka.ms/dotnet-core-eula) 所授權。 這包含下面重新列印的 "DATA" 區段以啟用遙測。
+Microsoft 的 .NET Core 散發是使用 [MICROSOFT .NET LIBRARY EULA](https://aka.ms/dotnet-core-eula) 所授權。 此授權包含 "DATA" 區段以啟用遙測 (如下所示)。
 
-[.NET NuGet 套件](https://www.nuget.org/profiles/dotnetframework)使用這個相同的授權，但未啟用遙測 (請參閱上方的[範圍](#scope))。
+[.NET NuGet 套件](https://www.nuget.org/profiles/dotnetframework)使用相同的授權，但不啟用遙測 (請參閱[範圍](#scope))。
 
 > 2. 資料。 軟體可能會收集和您及您使用軟體之方式有關的資訊，並將該資訊傳送給 Microsoft。 Microsoft 可能會使用此資訊以改善產品與服務。 您可以前往 http://go.microsoft.com/fwlink/?LinkId=528096，以在說明文件及隱私權聲明中深入了解資料收集和使用方式的相關資訊。 使用軟體即代表您同意這些做法。
 
 ## <a name="disclosure"></a>公開
 
-.NET Core 工具會在您第一次執行其中一個命令時顯示下列文字 (例如，`dotnet restore`)。 這個「第一次執行」經驗是 Microsoft 如何通知您有關資料收集。 這個相同的體驗一開始也會將 .NET Core SDK 中的程式庫填入 NuGet 快取，避免要求這些程式庫的 NuGet.org (或其他 NuGet 摘要)。
+.NET Core CLI 工具會在您第一次執行其中一個命令時顯示下列文字 (例如，`dotnet restore`)。 文字可能略有不同，視執行中的 SDK 版本而定。 這個「第一次執行」經驗是 Microsoft 如何通知您有關資料收集。
 
 ```console
 Welcome to .NET Core!
 ---------------------
 Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
-
+ 
 Telemetry
 --------------
-The .NET Core tools collect usage data in order to improve your experience.
-The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
+The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
 You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
 You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
-
-Configuring...
--------------------
-A command is running to initially populate your local package cache, to improve restore speed and enable offline access. This command will take up to a minute to complete and will only happen once.
 ```
+
+## <a name="see-also"></a>另請參閱
+
+[What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)  
+[Telemetry reference source (dotnet/cli repo; release/2.0.0 branch)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)  (遙測參考來源 (dotnet/cli 存放庫，版本/2.0.0 分支))  
+[.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md) (.NET Core SDK 使用方式資料)
 
