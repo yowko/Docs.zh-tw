@@ -1,6 +1,6 @@
 ---
 title: "區域函式與 Lambda 運算式的比較"
-description: "區域函式可能比 Lambda 運算式更適用的原因"
+description: "了解區域函式可能比 Lambda 運算式更適用的原因。"
 keywords: "C#, .NET, .NET Core, 最新功能, 新功能, 區域函式, Lambda 運算式"
 author: BillWagner
 ms.author: wiwagn
@@ -11,16 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 315d4c5ee1f16c4fe59599c3a37437b112b784f6
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 366d7465433f2786960e22418b8aa46ba10e1fd1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 
 ### <a name="local-functions-compared-to-lambda-expressions"></a>區域函式與 Lambda 運算式的比較
 
-第一眼，[區域函式](programming-guide/classes-and/structs/local-functions.md)和 [Lambda 運算式](lambda-expressions.md)十分類似。
+第一眼，[區域函式](programming-guide/classes-and-structs/local-functions.md)和 [Lambda 運算式](lambda-expressions.md)十分類似。
 根據您的需求，區域函式可能是較好且更簡單的方案。
 
 讓我們檢查階乘演算法的區域函式與 Lambda 運算式實作差異。 首先是使用區域函式的版本：

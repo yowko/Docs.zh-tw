@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 4609c30a03c835b9b1338ea6bc9672f7445cfd25
-ms.openlocfilehash: ebbfb5818c8f2a07df7a8cb4724e99b1b9268b03
+ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
+ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
@@ -100,7 +100,7 @@ switch (caseSwitch)
   
  [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
- 在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。  
+ 在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
 
 ## <a name="case-labels"></a>case 標籤
 
