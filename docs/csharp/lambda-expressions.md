@@ -22,7 +22,7 @@ ms.lasthandoff: 08/04/2017
 
 「Lambda 運算式」是當做物件處理的程式碼區塊 (運算式或陳述式區塊)。 它可當做方法的引數傳遞，也可由方法呼叫傳回。 Lambda 運算式可大量用於：
 
-- 將要執行的程式碼傳遞至非同步方法，例如 @System.Threading.Tasks.Task.Run(System.Action)。
+- 將要執行的程式碼傳遞至非同步方法，例如 @System.Threading.Tasks.Task.Run (System.Action)。
 
 - 撰寫 [LINQ 查詢運算式](linq/index.md)。
 
