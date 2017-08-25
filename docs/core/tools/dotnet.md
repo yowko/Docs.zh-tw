@@ -8,10 +8,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: d08c6794acd450556a5f97fced229eb7289b6d58
+ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
+ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dotnet-command"></a>dotnet 命令
@@ -25,9 +25,13 @@ ms.lasthandoff: 08/14/2017
 ## <a name="synopsis"></a>概要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-`dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]`
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-`dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]`
+```
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+```
 ---
 
 ## <a name="description"></a>說明
@@ -114,7 +118,7 @@ ms.lasthandoff: 08/14/2017
 
 ### <a name="general"></a>一般
 
-# <a name="net-core-2xtabnetcore1x"></a>[.NET Core 2.x](#tab/netcore1x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 | 命令                             | 函式                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |

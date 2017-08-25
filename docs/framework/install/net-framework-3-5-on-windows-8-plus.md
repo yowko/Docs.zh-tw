@@ -13,10 +13,10 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 ms.translationtype: HT
-ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
-ms.openlocfilehash: 8a0395e28c01363eed27f327ea623feb4832c844
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/08/2017
   
 - [下載 .NET Framework 3.5 安裝程式](http://www.microsoft.com/en-us/download/details.aspx?id=21) (注意：這不會直接下載 .NET Framework；它是叫用 Windows Update 的安裝程式)。  
   
-在安裝過程中，您可能會遇到錯誤 0x800f0906、0x800f0907 或 0x800f081f，如果發生這種情況，請參考 [.NET Framework 3.5 安裝錯誤：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/en-us/kb/2734782)。 請注意，安裝 [安全性更新 3005628](https://support.microsoft.com/kb/3005628)可能會解決這些問題。  
+在安裝過程中，您可能會遇到錯誤 0x800f0906、0x800f0907 或 0x800f081f，如果發生這種情況，請參考 [.NET Framework 3.5 安裝錯誤：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)。 請注意，安裝 [安全性更新 3005628](https://support.microsoft.com/kb/3005628)可能會解決這些問題。  
   
 如果上述任何方法失敗，或者您沒有網際網路連線，則必須使用 Windows 安裝媒體。 如需詳細資訊，請參閱 [.NET Framework 3.5 安裝錯誤文章](https://support.microsoft.com/en-us/kb/2734782)中錯誤 0x800f0906 的方法 3。 如果您沒有安裝媒體，請參閱[建立 Windows 8.1 的安裝媒體](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0)。  
   

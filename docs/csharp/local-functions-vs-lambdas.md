@@ -6,7 +6,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: visual-studio-dev-15
+ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
@@ -17,8 +17,7 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 08/16/2017
 
 ---
-
-### <a name="local-functions-compared-to-lambda-expressions"></a>區域函式與 Lambda 運算式的比較
+# <a name="local-functions-compared-to-lambda-expressions"></a>區域函式與 Lambda 運算式的比較
 
 第一眼，[區域函式](programming-guide/classes-and-structs/local-functions.md)和 [Lambda 運算式](lambda-expressions.md)十分類似。
 根據您的需求，區域函式可能是較好且更簡單的方案。

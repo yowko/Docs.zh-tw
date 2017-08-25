@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中的數值 | Microsoft Docs"
+title: ".NET Framework 中的數值"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,11 +21,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: 9b62cffb136abde67ab6952e7849e5681ec99a24
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 087c1cc56abf2a00544e22023ce72fae670df369
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的數值
@@ -87,3 +87,4 @@ ms.lasthandoff: 05/11/2017
   
 ## <a name="see-also"></a>另請參閱  
  [應用程式基本概念](../../docs/standard/application-essentials.md)
+
