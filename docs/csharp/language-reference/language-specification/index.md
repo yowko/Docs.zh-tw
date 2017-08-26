@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿語言規格
@@ -47,7 +47,8 @@ C# 語言規格是 C# 語法和用法的限定來源。 此規格包含語言各
 草稿規格的相關問題應該在 [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) 存放庫中建立。 或者，如果您有興趣修正所發現的任何錯誤，您可以提交[提取要求](https://github.com/dotnet/csharplang/pulls)至相同的存放庫。
 
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../language-reference/index.md) [C# 程式設計手冊](../../programming-guide/index.md)
+ [C# 參考](../../language-reference/index.md)  
+ [C# 程式設計指南](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [下一步](../../../../_csharplang/spec/lexical-structure.md)
