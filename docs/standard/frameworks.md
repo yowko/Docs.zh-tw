@@ -1,164 +1,146 @@
 ---
-title: "目標架構 | Microsoft Docs"
-description: "以 .NET Core 應用程式和程式庫的目標架構為中心的資訊。"
+title: "目標 Framework"
+description: "了解 .NET Core 應用程式和程式庫的目標 Framework。"
 keywords: ".NET, .NET Core, 架構, TFM"
 author: richlander
 ms.author: mairaw
-ms.date: 04/27/2017
+ms.date: 07/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 45835eb80642253f80ea630ae9db1ac766b72b9c
-ms.openlocfilehash: 11c1f11e4f8354b7573d03e680cf4a8a16fa26d9
+ms.translationtype: HT
+ms.sourcegitcommit: cf480ffd8e791e3416433f2d13b364743ba42938
+ms.openlocfilehash: 7f1189239f61bc55c5f517ee797e5148082ebbab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# 目標 Framework
-<a id="target-frameworks" class="xliff"></a>
+# <a name="target-frameworks"></a>目標 Framework
 
-「架構」定義了您用來建立應用程式和程式庫的物件、方法及工具。 .NET Framework 可用來建立應用程式和程式庫，這些應用程式和程式庫主要用來在執行 Windows 作業系統的系統上執行。 .NET Core 包含一個可讓您建置在各種作業系統上執行之應用程式和程式庫的架構。
+當您以應用程式或程式庫中的架構為目標時，您將指定要提供給應用程式或程式庫的一組 API。 您可以在專案檔中使用目標 Framework Moniker (TFM) 來指定目標 Framework。
 
-「架構」和「平台」這兩個詞有時在措辭中的使用方式會造成混淆。 讓解釋變得更糟的是，「平台」一詞在不同的內容中有不同的意義。 例如，您會看到 ".NET Core" 在建置應用程式和程式庫的內容中被描述成「.NET Core 架構」，而在執行應用程式和程式庫程式碼的內容中則也被描述成「.NET Core 平台」。 「計算平台」描述應用程式的執行「位置與方式」。 由於 .NET Core 會使用 [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr) 來執行程式碼，因此它也是一個平台。 .NET Framework 也是如此，具有 [Common Language Runtime (CLR)](clr.md) 來執行使用 .NET Framework 的架構物件、方法及工具開發的應用程式和程式庫程式碼。 經常在文件中出現的「跨平台」一詞，應該解釋為「跨作業系統和跨架構 (x86、x64、arm)」，因為這是作者通常想要傳達的意思。
+應用程式或程式庫可以將目標設為某個版本的 [.NET Standard](~/docs/standard/net-standard.md)。 .NET Standard 版本代表跨所有 .NET 實作的標準化 API 集合。 例如，程式庫可以將目標設為 .NET Standard 1.6，以存取跨 .NET Core 和 .NET Framework (兩者使用相同的程式碼基底) 運作的 API。
 
-架構的物件和方法稱為「應用程式開發介面」(API)。 架構 API 是在 [Visual Studio](https://www.visualstudio.com/)、[Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)、[Visual Studio Code](https://code.visualstudio.com/) 及其他「整合式開發環境」(IDE) 和編輯器中用來提供您一組正確的開發物件和方法。 架構也可供 [NuGet](https://www.nuget.org/) 用來產生和取用 NuGet 套件，以確保您針對在應用程式或程式庫中作為目標的架構，產生及使用正確的套件。
+應用程式或程式庫也可以將目標設為特定 .NET 實作，以存取實作特定的 API。 例如，以 Xamarin.iOS (例如 `Xamarin.iOS10`) 為目標的應用程式可以存取 iOS 10 之 Xamarin 提供的 iOS API 包裝函式；或者，以通用 Windows 平台 (UWP，`uap10.0`) 為目標的應用程式可以存取針對執行 Windows 10 的裝置所編譯的 API。
 
-當您「以某個架構為目標」或以數個架構為目標時，即已決定好要使用哪幾組 API 及這些 API 的哪些版本。 參考架構的方式有數種：依產品名稱、依完整或簡短格式架構名稱，以及依系列。
+針對某些目標 Framework (例如 .NET Framework)，API 是由該架構安裝在系統上的組件所定義，而且可能包含應用程式架構 API (例如 ASP.NET)。
 
-## 參考架構
-<a id="referring-to-frameworks" class="xliff"></a>
+針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，API 是由包含在應用程式或程式庫中的套件所定義。 「中繼套件」是 NuGet 套件，本身沒有任何內容，而是一份相依性 (其他專案) 清單。 以 NuGet 套件為基礎的目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
 
-您可以使用數種方式來參考架構，大多數這些方式都已在 .NET Core 的文件中使用。 以 .NET Framework 4.6.2 為例，會使用下列格式：
+## <a name="latest-target-framework-versions"></a>最新目標 Framework 版本
 
-**參考產品**
+下表定義最常用的目標 Framework、其參考方式，以及它們所實作的 [.NET Standard](~/docs/standard/net-standard.md) 版本。 這些目標 Framework 版本是最新穩定版本。 不顯示發行前版本。 目標 Framework Moniker (TFM) 是用於指定 .NET 應用程式或程式庫之目標 Framework 的標準化語彙基元格式。 
 
-您可以參考 .NET 平台或執行階段。 這兩者同樣有效。
+| 目標 Framework      | 最新的版本 | Target Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
+| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
+| .NET Standard         | 1.6.1          | netstandard1.6                 | N/A                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
+| .NET Core 應用程式 | 1.1.2          | netcoreapp1.1                  | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| .NET Framework        | 4.7            | net47                          | 1.5                   | N/A |
 
-* .NET Framework 4.6.2
-* .NET 4.6.2
+## <a name="supported-target-framework-versions"></a>支援的目標 Framework 版本
 
-**參考某個架構**
+目標 Framework 通常會由 TFM 參考。 下表顯示 .NET Core SDK 和 NuGet 用戶端所支援的目標 Framework。 對等項目會顯示在括弧內。 例如，`win81` 是 `netcore451` 的對等 TFM。
 
-您可以使用完整格式或簡短形式的 TFM，來參考架構或架構的目標。 這兩者同樣有效。
+| 目標 Framework           | TFM |
+| -------------------------- | --- |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6 |
+| .NET 核心                  | netcoreapp1.0<br>netcoreapp1.1 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| Windows 市集              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
+| .NET Micro Framework       | netmf |
+| Silverlight                | sl4<br>sl5 |
+| Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
+| 通用 Windows 平台 | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-* `.NETFramework,Version=4.6.2`
-* `net462`
+## <a name="how-to-specify-target-frameworks"></a>如何指定目標 Framework
 
-**參考一系列的架構**
+目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 下列主控台應用程式專案檔會示範如何將目標設為 .NET Core 1.1：
 
-您可以使用完整格式或簡短形式的架構識別碼，來參考一系列的架構。 這兩者同樣有效。
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-* `.NETFramework`
-* `net`
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
 
-## 最新架構版本
-<a id="latest-framework-versions" class="xliff"></a>
+</Project>
+```
 
-下表定義一組您可以使用的架構、其參考方式，以及它們所實作的 [.NET Standard 程式庫](library.md)版本。 這些架構版本是最新穩定版本。 不顯示發行前版本。
+當您指定多個目標 Framework 時，您可以有條件地參考每個目標 Framework 的組件。 在您的程式碼中，您可以使用前置處理器符號搭配 *if-then-else* 邏輯，有條件地對這些組件進行編譯。
 
-| 架構             | 最新的版本 | Target Framework Moniker (TFM) | Compact Target Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
-| :-------------------: | :------------: | :----------------------------: | :------------------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 1.6.1          | .NETStandard,Version=1.6       | netstandard1.6                         | N/A                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| .NET Core 應用程式 | 1.1.1          | .NETCoreApp,Version=1.1        | netcoreapp1.1                          | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.6.2          | .NETFramework,Version=4.6.2    | net462                                 | 1.5                   | N/A |
+下列程式庫專案檔是以 .NET Standard 的 API (`netstandard1.4`) 以及 .NET Framework 的 API (`net40` 和 `net45`) 為目標。 使用具有多個目標 Framework 的複數 **TargetFrameworks** 項目。 當針對兩個 .NET Framework TFM 編譯程式庫時，注意 `Condition` 屬性如何包含實作特定的套件：
 
-## 支援的架構
-<a id="supported-frameworks" class="xliff"></a>
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-架構通常會由簡短的目標架構 Moniker 或 *TFM* 參考。 在 .NET Standard 中，這也會一般化為 *TxM*，以允許對多個架構的單一參考。 NuGet 用戶端支援下列架構。 對等項目會顯示在括號 (`[]`) 內。
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+  </PropertyGroup>
 
-| 名稱                       | 縮寫 | TFM/TxM                                    |
-| -------------------------- | ------------ | -------------------------------------------- |
-| .NET Standard              | netstandard  | netstandard1.0                               |
-|                            |              | netstandard1.1                               |
-|                            |              | netstandard1.2                               |
-|                            |              | netstandard1.3                               |
-|                            |              | netstandard1.4                               |
-|                            |              | netstandard1.5                               |
-|                            |              | netstandard1.6                               |
-| .NET 核心                  | netcoreapp   | netcoreapp1.0                                |
-|                            |              | netcoreapp1.1                                |
-| .NET Framework             | net          | net11                                        |
-|                            |              | net20                                        |
-|                            |              | net35                                        |
-|                            |              | net40                                        |
-|                            |              | net403                                       |
-|                            |              | net45                                        |
-|                            |              | net451                                       |
-|                            |              | net452                                       |
-|                            |              | net46                                        |
-|                            |              | net461                                       |
-|                            |              | net462                                       |
-| Windows 市集              | netcore      | netcore [netcore45]                          |
-|                            |              | netcore45 [win, win8]                        |
-|                            |              | netcore451 [win81]                           |
-| .NET Micro Framework       | netmf        | netmf                                        |
-| Silverlight                | sl           | sl4                                          |
-|                            |              | sl5                                          |
-| Windows Phone              | wp           | wp [wp7]                                     |
-|                            |              | wp7                                          |
-|                            |              | wp75                                         |
-|                            |              | wp8                                          |
-|                            |              | wp81                                         |
-|                            |              | wpa81                                        |
-| 通用 Windows 平台 | uap          | uap [uap10.0]                                |
-|                            |              | uap10.0 [win10] [netcore50]                  |
+  <!-- Conditionally obtain references for the .NET Framework 4.0 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Net" />
+  </ItemGroup>
 
-## 已被取代的架構
-<a id="deprecated-frameworks" class="xliff"></a>
+  <!-- Conditionally obtain references for the .NET Framework 4.5 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
 
-下列架構已被取代。 以這些架構為目標的套件應該移轉至所指出的取代項目。
+</Project>
+```
 
-| 已被取代的架構 | Replacement |
-| -------------------- | ----------- |
-| aspnet50             | netcoreapp  |
-| aspnetcore50         |             |
-| dnxcore50            |             |
-| dnx                  |             |
-| dnx45                |             |
-| dnx451               |             |
-| dnx452               |             |
-| dotnet               | netstandard |
-| dotnet50             |             |
-| dotnet51             |             |
-| dotnet52             |             |
-| dotnet53             |             |
-| dotnet54             |             |
-| dotnet55             |             |
-| dotnet56             |             |
-| netcore50            | uap10.0     |
-| win                  | netcore45   |
-| win8                 | netcore45   |
-| win81                | netcore451  |
-| win10                | uap10.0     |
-| winrt                | netcore45   |
+您可以在程式庫或應用程式中撰寫條件程式碼，為每個目標 Framework 進行編譯：
 
-## 優先順序
-<a id="precedence" class="xliff"></a>
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        Console.WriteLine("Target framework: .NET Framework 4.0");
+#elif NET45  
+        Console.WriteLine("Target framework: .NET Framework 4.5");
+#else
+        Console.WriteLine("Target framework: .NET Standard 1.4");
+#endif
+    }
+}
+```
 
-有一些架構彼此相關且相容，但未必相等：
+組建系統知道代表目標 Framework 的前置處理器符號，如[支援的目標 Framework 版本](#supported-target-framework-versions)表格中所示。 使用代表 .NET Standard 或 .NET Core TFM 的符號時，請以底線取代點，並將小寫字母變更為大寫 (例如 `netstandard1.4` 的符號是 `NETSTANDARD1_4`)。
 
-| 架構                        | 可使用   |
-| -------------------------------- | --------- |
-| uap (通用 Windows 平台) | win81     |
-|                                  | wpa81     |
-|                                  | netcore50 |
-| win (Windows 市集)              | winrt     |
-|                                  | winrt45   |
+.NET Core 目標 Framework 之前置處理器符號的完整清單如下：
 
-## .NET Standard
-<a id="net-standard" class="xliff"></a>
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-[.NET Standard](https://github.com/dotnet/standard) 可簡化二進位相容架構之間的參考，讓單一目標架構參考其他項目的組合。 如需詳細資訊，請參閱 [.NET Standard 程式庫](library.md)主題。
+## <a name="deprecated-target-frameworks"></a>已被取代的目標 Framework
 
-[NuGet 工具的取得最接近的架構工具](http://nugettoolsdev.azurewebsites.net/)會模擬 NuGet 邏輯，此邏輯可用來根據專案的架構從套件中的許多可用架構資產選取一個架構。 若要使用此工具，請輸入一個專案架構和一或多個套件架構。 選取 [送出] 按鈕。 此工具會指出您列出的套件架構是否與您提供的專案架構相容。
+下列目標 Framework 已被取代。 以這些目標 Framework 為目標的套件應該移轉至所指出的取代項目。
 
-## 可攜式類別庫
-<a id="portable-class-libraries" class="xliff"></a>
+| 已被取代的 TFM                                                                             | Replacement |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
+| dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
+| netcore50                                                                                  | uap10.0     |
+| win                                                                                        | netcore45   |
+| win8                                                                                       | netcore45   |
+| win81                                                                                      | netcore451  |
+| win10                                                                                      | uap10.0     |
+| winrt                                                                                      | netcore45   |
 
-如需有關「可攜式類別庫」的資訊，請參閱 NuGet 文件中＜目標架構＞主題的[可攜式類別庫](https://docs.microsoft.com/nuget/schema/target-frameworks#portable-class-libraries)一節。 Stephen Cleary 已建立一個列出所支援之 PCL 的工具。 如需詳細資訊，請參閱 [.NET 中的架構設定檔 (英文)](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)。
+## <a name="see-also"></a>請參閱
+
+[套件、中繼套件和架構](~/docs/core/packages.md)  
+[使用跨平台工具開發程式庫](~/docs/core/tutorials/libraries.md)  
+[.NET Standard](~/docs/standard/net-standard.md)  
+[.NET Core 版本控制](~/docs/core/versions/index.md)  
+[dotnet/standard GitHub 存放庫](https://github.com/dotnet/standard)  
+[NuGet 工具 GitHub 存放庫](https://github.com/joelverhagen/NuGetTools)  
+[Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (.NET 中的 Framework 設定檔)
 

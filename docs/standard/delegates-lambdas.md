@@ -1,6 +1,6 @@
 ---
 title: "委派和 Lambda"
-description: "委派和 Lambda"
+description: "了解委派如何定義指定特定方法簽章的類型，可直接呼叫，或傳遞至另一個方法，再進行呼叫。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -39,7 +40,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   在第 4 行，我們建立特定簽章的委派類型，在本例中是接受字串參數再傳回字串參數的方法。
@@ -71,7 +71,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 在這個簡單的範例中，在 Main() 方法外定義方法似乎有點多餘。 因此，.NET Framework 2.0 引入**匿名委派**的概念。 在此支援下，您可以建立「內嵌」委派，而不需要指定任何其他類型或方法。 只要在需要的地方內嵌委派的定義即可。
@@ -104,14 +103,13 @@ public class Program
     }
   }
 }
-
 ```
 
 注意醒目提示的程式碼行。 如您所見，委派的主體只是一組運算式，與任何其他委派相同。 但這並不是不同的定義，而是當做_「臨機操作」_ 引入 `List<T>` 類型的 `FindAll()` 方法呼叫中。
 
 不過，即使使用此方法，還是有許多程式碼可以捨棄。 此時就需要 **Lambda 運算式**。
 
-Lambda 運算式 (簡稱 “Lambda”) 最先是在 C# 3.0 中，當做 Language Integrated Query (LINQ) 的其中一個核心建置組塊所引入。 這是更方便使用委派的語法。 這些運算式可宣告簽章和方法主體，但除非指派給委派，否則並沒有自己的正式身分識別。 不同於委派，這些運算式可在事件註冊左邊，或在各種 LINQ 子句和方法中直接指派。
+Lambda 運算式 (簡稱 "Lambda") 最先是在 C# 3.0 中，當作 Language Integrated Query (LINQ) 的其中一個核心建置組塊所引入。 這是更方便使用委派的語法。 這些運算式可宣告簽章和方法主體，但除非指派給委派，否則並沒有自己的正式身分識別。 不同於委派，這些運算式可在事件註冊左邊，或在各種 LINQ 子句和方法中直接指派。
 
 因為 Lambda 運算式不過是指定委派的另一種方式，所以我們應該能夠重寫上述範例，使用 Lambda 運算式取代匿名委派。
 
@@ -136,7 +134,6 @@ public class Program
     }
   }
 }
-
 ```
 
 如果您看一下醒目提示的程式碼行，就能了解 Lambda 運算式看起來如何。 同樣地，它只是對於使用委派**非常**方便的語法，因此實際上的使用狀況會類似於使用匿名委派的狀況。
@@ -153,7 +150,6 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>延伸閱讀和資源

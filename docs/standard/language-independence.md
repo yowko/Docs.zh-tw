@@ -1,26 +1,26 @@
 ---
 title: "語言獨立性以及與語言無關的元件"
-description: "語言獨立性以及與語言無關的元件"
+description: "了解如何使用 .NET 中支援的許多語言之一進行開發，例如 C#、C++/CLI、F#、IronPython、VB、Visual COBOL 和 PowerShell。"
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/10/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
-.NET 平台與語言無關。 這表示，身為開發人員，您可以使用以 .NET 平台為目標的許多語言之一進行開發，例如 C#、F# 和 Visual Basic。 您可以存取為 .NET 平台開發之類別庫的類型和成員，而不必知道原始撰寫的語言，也不必遵循原始語言的任何慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET 應用程式存取。
+.NET 與語言無關。 這表示，身為開發人員，您可以使用以 .NET 實作為目標的許多語言之一進行開發，例如 C#、F# 和 Visual Basic。 您可以存取為 .NET 實作開發之類別庫的類型和成員，而不必知道原始撰寫的語言，也不必遵循原始語言的任何慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET 應用程式存取。
 
 > [!NOTE]
 > 本文第一個部分將討論如何建立與語言無關的元件，也就是以任何語言撰寫的應用程式都可以使用的元件。 您也可以從以多種語言撰寫的原始程式碼建立單一元件或應用程式。請參閱本文第二部分的[跨語言互通性](#cross-language-interoperability)。 
@@ -347,7 +347,7 @@ End Class
  
  .NET Framework 類別庫或其他類別庫可能包含不符合 CLS 標準的其他類型，例如： 
  
- * Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int` *的公用屬性，名為 `Value`。由於 `int`* 為 Boxed 實值型別，因此編譯器將其標示為不符合 CLS 標準。
+ * Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int`* 且名為 `Value` 的公用屬性。 由於 `int`* 為 Boxed 實值型別，因此編譯器將其標示為不符合 CLS 標準。
 
   ```csharp
   using System;
@@ -1110,7 +1110,7 @@ End Structure
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>介面
 
@@ -1660,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 如果泛型類型是衍生自泛型基底類型，就必須重新宣告任何限制式，才能保證同時符合基底類型上的限制式。 下面範例會定義可代表任何數字類型的 `Number<T>`。 它也會定義表示浮點值的 `FloatingPoint<T>` 類別。 不過，因為未將 `Number<T>` (其中 T 必須是實值類型) 的限制式套用至 `FloatingPoint<T>`，所以無法編譯原始程式碼。
@@ -1938,7 +1937,7 @@ End Class
 
 * 衍生類別的建構函式必須先呼叫基底類別的建構函式，才能存取繼承的執行個體資料。 因為衍生類別不會繼承基底類別建構函式，所以才有這項需求。 此規則不會套用至結構，因為結構不支援直接繼承。 
 
-  通常，編譯器會獨立強制執行此規則，而不需考慮 CLS 符合性，如下面範例所示。 它會建立衍生自 `Person` 類別的 `Doctor` 類別，但是 `Doctor` 類別無法呼叫 `Person` 類別建構函式來初始化繼承的執行個體欄位。 
+  通常，編譯器會獨立強制執行此規則，而不需考慮 CLS 符合性，如下面範例所示。 它會建立衍生自 `Doctor` 類別的 `Person` 類別，但是 `Doctor` 類別無法呼叫 `Person` 類別建構函式來初始化繼承的執行個體欄位。 
 
     ```csharp
     using System;
