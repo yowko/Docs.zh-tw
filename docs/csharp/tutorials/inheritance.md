@@ -5,17 +5,17 @@ keywords: "繼承 (C#), 基底類別, 衍生類別, 抽象基底類別"
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
@@ -216,13 +216,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 兩個發行物相關的屬性
 
-  `Title` 是唯讀 <xref:System.String> 屬性，其值是透過呼叫 `Publication` 建構函式提供，該值會儲存在名為 `pubTitle` 的私用欄位中。
+  `Title` 是唯讀 <xref:System.String> 屬性，其值是透過呼叫 `Publication` 建構函式提供。
 
   `Pages` 是可讀寫 <xref:System.Int32> 屬性，指出發行物的總頁數。 該值會儲存在名為 `totalPages` 的私用欄位中。 它必須為正數，否則會擲回 <xref:System.ArgumentOutOfRangeException>。
 
 - 發行者相關的成員
 
-  `Publisher` 和 `Type` 這兩個唯讀屬性會傳回私用 `pubName` 和 `pubType` 欄位的值。 這些值就是原先呼叫 `Publication` 類別建構函式所提供的值。
+  兩個唯讀屬性 `Publisher` 和 `Type`。 這些值就是原先呼叫 `Publication` 類別建構函式所提供的值。
 
 - 與發佈相關的成員
 
@@ -230,7 +230,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 著作權相關的成員
 
-  `Copyright` 方法會將著作權所有人的名稱和著作權年份做為引數，並將它們指派給私用 `copyrName` 和 `copyrDate` 欄位。 您可以從 `CopyrightName` 與 `CopyrightDate` 屬性來擷取值。
+  `Copyright` 方法會將著作權所有人的名稱和著作權年份作為引數，並將它們指派給 `CopyrightName` 和 `CopyrightDate` 屬性。
 
 - 覆寫 `ToString` 方法
 
@@ -250,13 +250,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 兩個建構函式
 
-  這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至私用 `authorName` 欄位。 一個建構函式包含 *isbn* 參數，其會儲存至私用 `id` 欄位。
+  這兩個 `Book` 建構函式共用三個常見參數。 *title* 和 *publisher* 這兩個會對應至 `Publication` 建構函式的參數。 第三個為 *author*，其會儲存至私用 `authorName` 欄位。 一個建構函式包含 *isbn* 參數，其會儲存在 `ISBN` Auto 屬性中。
 
-  第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 這是定義建構函式的常見模式。呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
+  第一個建構函式會使用 [this](../language-reference/keywords/this.md) 關鍵字來呼叫另一個建構函式。 這是定義建構函式的常見模式。 呼叫參數個數最多的建構函式時，參數個數較少的建構函式會提供預設值。
 
   第二個建構函式使用 [base](../language-reference/keywords/base.md) 關鍵字，來將標題和發行者名稱傳遞給基底類別建構函式。 如果您在原始程式碼中沒有明確呼叫基底類別建構函式，C# 編譯器會自動呼叫基底類別的預設或無參數建構函式。
 
-- 唯讀 `ISBN` 屬性，會傳回 `Book` 物件的國際標準書號，一組有 10 或 13 位數的唯一數字。 ISBN 會做為引數提供給其中一個 `Book` 建構函式，並會儲存在私用 `id` 欄位。
+- 唯讀 `ISBN` 屬性，會傳回 `Book` 物件的國際標準書號，一組有 10 或 13 位數的唯一數字。 ISBN 會作為引數提供給其中一個 `Book` 建構函式。 ISBN 會儲存在由編譯器自動產生的私用支援欄位中。
 
 - 唯讀 `Author` 屬性。 作者名稱會做為引數提供給那兩個 `Book` 建構函式，並會儲存在私用 `authorName` 欄位。
 
