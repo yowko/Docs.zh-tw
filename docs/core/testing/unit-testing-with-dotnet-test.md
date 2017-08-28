@@ -1,26 +1,23 @@
 ---
 title: "使用 dotnet test 和 xUnit 的 .NET Core 單元測試"
-description: "使用 dotnet test 的 .NET Core 單元測試"
-keywords: .NET, .NET Core
+description: "透過逐步使用 dotnet 測試和 xUnit 建置範例方案的互動式體驗，了解 .NET Core 中的單元測試概念。"
 author: ardalis
 ms.author: wiwagn
 ms.date: 03/21/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6bb539231e7c0101755193d612e15893f9637fe1
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: d989ee731d7ffd0439bac69afe1458e2aa10733a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 的 .NET Core 單元測試
 
 本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-### <a name="creating-the-source-project"></a>建立來源專案
+## <a name="creating-the-source-project"></a>建立來源專案
 
 開啟 Shell 視窗。 建立名稱為 *unit-testing-using-dotnet-test* 的目錄來放置方案。 在這個新目錄中建立 *PrimeService* 目錄。 到目前為止的目錄結構如下所示：
 
@@ -46,7 +43,7 @@ namespace Prime.Services
 }
 ```
 
-### <a name="creating-the-test-project"></a>建立測試專案
+## <a name="creating-the-test-project"></a>建立測試專案
 
 將目錄變更回 *unit-testing-using-dotnet-test* 目錄，然後建立 *PrimeService.Tests* 目錄。 目錄結構如下所示：
 
@@ -145,7 +142,7 @@ public bool IsPrime(int candidate)
 
 在 *PrimeService.Tests* 目錄中，重新執行 `dotnet test`。 `dotnet test` 命令會依序執行 `PrimeService` 專案和 `PrimeService.Tests` 專案的建置。 建置這兩個專案之後，它將會執行此單一測試。 測試通過。
 
-### <a name="adding-more-features"></a>新增更多功能
+## <a name="adding-more-features"></a>新增更多功能
 
 現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 `[Fact]` 屬性將這些項目新增為新測試，但很快就會單調乏味。 因此，還有其他 xUnit 屬性，可讓您撰寫類似的測試套件。  `[Theory]` 屬性代表執行相同程式碼但有不同輸入引數的測試套件。 您可以使用 `[InlineData]` 屬性來指定這些輸入值。 
  

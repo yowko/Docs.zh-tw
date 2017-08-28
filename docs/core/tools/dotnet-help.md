@@ -3,15 +3,15 @@ title: "dotnet help 命令 - .NET Core CLI"
 description: "dotnet help 命令會顯示指定命令更詳細的線上文件。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: b33d21d7578bb4c1b33c655103f720b32aaf2203
+ms.sourcegitcommit: ca7c88675d54d99fdb3526244daaeffe32f32d45
+ms.openlocfilehash: 0d43db0bb0a62bb598f7db50c3b8e37936451550
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="synopsis"></a>概要
 
-`dotnet list <COMMAND_NAME> [-h|--help]`
+`dotnet help <COMMAND_NAME> [-h|--help]`
 
 ## <a name="description"></a>說明
 
@@ -44,11 +44,7 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="examples"></a>範例
 
-列出指定專案的專案參考：
+開啟 [dotnet new](dotnet-new.md) 命令的文件頁面：
 
-`dotnet list app/app.csproj reference`
-
-列出目前目錄中專案的專案參考：
-
-`dotnet list reference`
+`dotnet help new`
 

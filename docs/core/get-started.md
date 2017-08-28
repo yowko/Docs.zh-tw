@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.translationtype: HT
-ms.sourcegitcommit: 6500a14839b14d75d09d8d807c943553dbe09b47
-ms.openlocfilehash: 05525ef03c6eac6e2b89386c475e15178e4e3065
+ms.sourcegitcommit: 0dc28adab90f56befc925eb895d00a3cd5966928
+ms.openlocfilehash: 8e3e53c4febd05d8dcd970cea9429a8cce95b7b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
@@ -26,8 +26,10 @@ ms.lasthandoff: 08/15/2017
 
 遵循這些逐步教學課程就可以開始開發 .NET Core 應用程式。
 
-* [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](./tutorials/with-visual-studio.md) - 了解如何使用 Visual Studio 2017 建置、偵錯和發行簡單的 .NET Core 主控台應用程式。
+* [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](./tutorials/with-visual-studio.md) - 了解如何使用 C# 和 Visual Studio 2017 建置、偵錯和發行簡單的 .NET Core 主控台應用程式。
 * [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](./tutorials/library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 建置以 C# 撰寫的類別庫。
+* [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](./tutorials/vb-with-visual-studio.md) - 了解如何使用 Visual Basic 和 Visual Studio 2017 建置、偵錯和發行簡單的 .NET Core 主控台應用程式。 
+* [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](./tutorials/vb-library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 建置以 Visual Basic 撰寫的類別庫。
 * [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) (在 Windows 上使用 C# 和 .NET Core 開始使用 Visual Studio Code) - 此 [Channel 9](https://channel9.msdn.com) 影片會示範如何安裝和使用 Microsoft 的輕量型跨平台程式碼編輯器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs)，建立您第一個 .NET Core 主控台應用程式。
 * [開始使用 .NET Core 和 Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - 這個 [Channel9](https://channel9.msdn.com) 影片會示範如何安裝與使用 [Visual Studio 2017](https://www.visualstudio.com/) (Microsoft 完整功能的 IDE)，以 .NET Core 建立您的第一個跨平台主控台應用程式。
 * [Getting started with .NET Core using the command-line](tutorials/using-with-xplat-cli.md) (使用命令列開始使用 .NET Core)：使用任何程式碼編輯器與 [.NET Core 跨平台命令列介面 (CLI)](tools/index.md)。
