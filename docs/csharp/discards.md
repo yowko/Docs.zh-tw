@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/16/2017
 - 以 `out` 參數進行的方法呼叫。
 - 範圍內沒有 `_` 時的獨立 `_`。
 
-當 `_` 是有效的 discard 時，嘗試擷取其值或用於指派作業會產生編譯器錯誤 CS0301：「目前內容中不存在名稱 '_'」。 這是因為 `_` 未指派值，可能甚至未指派儲存位置。 如果它原本是實際變數，可能無法像上述範例一樣捨棄多個值。
+當 `_` 是有效的捨棄時，嘗試擷取其值或用於指派作業會產生編譯器錯誤 CS0301：「目前內容中不存在名稱 '\_'」。 這是因為 `_` 未指派值，可能甚至未指派儲存位置。 如果它原本是實際變數，可能無法像上述範例一樣捨棄多個值。
 
 ## <a name="tuple-and-object-deconstruction"></a>元組和物件解構
 

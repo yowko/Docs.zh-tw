@@ -32,16 +32,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fb4e78fc7d8b292d36e548ece9f6efab0d8d6323
+ms.sourcegitcommit: 710c1a8031a9f598b1879ebb6306ba3a072a7de1
+ms.openlocfilehash: bcd8e7ad1b60f520536653cdcb67192da470699a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="out-c-reference"></a>out (C# 參考)
 您可以在兩個內容中使用 `out` 內容關鍵字︰
 
-- 作為[參數修飾詞](../../../csharp/language-reference/keywords/out-parameter-modifier.md)，會以傳址方式而非傳值方式讓引數傳遞至方法。
+- 用作[參數修飾詞](../../../csharp/language-reference/keywords/out-parameter-modifier.md)，讓您以傳址方式而非傳值方式將引數傳遞到方法。
 
 - 在介面及委派的[泛型型別參數宣告](../../../csharp/language-reference/keywords/out-generic-modifier.md)中，指定型別參數是 Covariant。
    
