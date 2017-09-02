@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4899b3604343925e7e4e0535929d041b1a1f1081
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: de81058173b0985577474e8601aa84d4e83336a5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="generics-c-programming-guide"></a>泛型 (C# 程式設計手冊)
@@ -72,8 +72,6 @@ ms.lasthandoff: 07/28/2017
 -   [泛型方法](../../../csharp/programming-guide/generics/generic-methods.md)  
   
 -   [泛型委派](../../../csharp/programming-guide/generics/generic-delegates.md)  
-  
--   [default 關鍵字](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md)  
   
 -   [C++ 範本和 C# 泛型之間的差異](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   

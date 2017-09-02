@@ -3,16 +3,16 @@ title: ".NET Core 版本控制"
 description: "了解 .NET Core 的版本控制運作方式。"
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
@@ -103,7 +103,7 @@ Microsoft 以外的其他實體也可以散佈 .NET Core。 特別是，Linux �
 
 ##### <a name="preview-versions"></a>預覽版本
 
-套件維護人員可能會決定要包含執行階段和 SDK 的預覽版本。 不包含未建立版本的 `dotnet-sdk` 套件中的預覽版本，但可以作為已建立版本的套件發佈，且將其他預覽標記附加到名稱的主要版本和次要版本區段。 例如，可能會有 `dotnet-sdk-2.0-preview-1-final` 套件。
+套件維護人員可能會決定要包含執行階段和 SDK 的預覽版本。 不包含未建立版本的 `dotnet-sdk` 套件中的預覽版本，但可以作為已建立版本的套件發佈，且將其他預覽標記附加到名稱的主要版本和次要版本區段。 例如，可能會有 `dotnet-sdk-2.0-preview1-final` 套件。
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>預覽版本
 
-預覽版本將 `-preview-[number]-([build]|"final")` 附加至版本。 例如，`2.0.0-preview-1-final`。
+預覽版本將 `-preview[number]-([build]|"final")` 附加至版本。 例如，`2.0.0-preview1-final`。
 
 ### <a name="servicing-versions"></a>服務版本
 
