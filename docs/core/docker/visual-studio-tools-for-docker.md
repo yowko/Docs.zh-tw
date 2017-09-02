@@ -11,10 +11,10 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 ms.translationtype: HT
-ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
-ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 113d470a55fd92704de0e6def392a6e0a1a3a118
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
@@ -24,12 +24,14 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="prerequisites"></a>必要條件
 
-- [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
+- 含 .NET Core 工作負載的 [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
 - [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="installation-and-setup"></a>安裝和設定
 
-安裝含 .NET Core 工作負載的 [Microsoft Visual Studio 2017](https://www.visualstudio.com/)。 檢閱 [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker for Windows：安裝前應該知道的事項) 的資訊，並安裝 [Docker For Windows](https://docs.docker.com/docker-for-windows/install/)。
+安裝含 .NET Core 工作負載的 [Microsoft Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)。
+
+若要安裝 Docker，請檢閱 [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker for Windows：安裝須知) 的資訊，並安裝 [Docker For Windows](https://docs.docker.com/docker-for-windows/install/)。
 
 必要的設定是在 Docker for Windows 中安裝**[共用磁碟機](https://docs.docker.com/docker-for-windows/#shared-drives)**。 這對磁碟區對應及偵錯支援是必要的設定。
 

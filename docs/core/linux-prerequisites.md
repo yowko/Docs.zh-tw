@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: HT
-ms.sourcegitcommit: dd1557d3a43a13c8103c82dfa467aa889fcf3bbb
-ms.openlocfilehash: 2ee303424721b7e1ecb8473c5f957ca929a8742f
+ms.sourcegitcommit: c30888895275ce18628ea341fee2d5a77080b8f6
+ms.openlocfilehash: ff2b85372208e76c6c3becb551c41cdfb275d272
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -82,7 +82,7 @@ CentOS 發行版本需要安裝下列程式庫：
 受支援的 Linux 發行版本/版本可使用 .NET Core 原生安裝程式。 原生安裝程式需要伺服器的管理員 (sudo) 存取權。 使用原生安裝程式的優點在於它會安裝所有的 .NET Core 原生相依性。 原生安裝程式也會安裝 .NET Core SDK 全系統。
 
 Linux 上有兩個安裝程式套件選擇： 
-* 使用摘要架構的套件管理員，例如 Ubuntu 的 apt get 或 CentOS 的 yum。 
+* 使用摘要型套件管理員，例如 Ubuntu 的 apt get 或 CentOS/RHEL 的 yum。
 * 使用套件本身，DEB 或 RPM。 
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>指令碼安裝與 .NET Core 安裝程式指令碼 
@@ -94,15 +94,11 @@ Linux 上有兩個安裝程式套件選擇：
 > [!IMPORTANT]
 > 執行指令碼之前，請安裝所有必要的[相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。
 
-## <a name="install-net-core-dependencies-for-red-hat-enterprise-linux-rhel-7-server"></a>安裝 Red Hat Enterprise Linux (RHEL) 7 伺服器的 .NET Core 相依性
+## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>安裝 Red Hat Enterprise Linux (RHEL) 7 的 .NET Core
 
-> [!Warning]
-> 開始之前，請先移除系統中所有舊版的 .NET Core。
+若要在 RHEL 7 上安裝 .NET Core：
 
-### <a name="verify-and-enable-the-net-channel-for-rhel-7-server"></a>驗證並啟用 RHEL 7 伺服器的 .NET 通道
-在 RHEL 伺服器上安裝 .NET Core 相依性：
-
-1. 啟用 Red Hat .NET 通道，位於 RHEL 7 伺服器訂閱底下。 
+1. 啟用 Red Hat .NET 通道，位於 RHEL 7 訂閱底下。
     * Red Hat Enterprise 7 伺服器請使用：
          ```bash
         subscription-manager repos --enable=rhel-7-server-dotnet-rpms
@@ -120,11 +116,42 @@ Linux 上有兩個安裝程式套件選擇：
     ```bash
     yum install scl-utils
     ```
-3. 安裝 .NET Core 1.1 (以及所有相依性)：
-    ```bash
-    yum install rh-dotnetcore11
-    scl enable rh-dotnetcore11 bash
-    ```
+3. 安裝 .NET Core
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+安裝 .NET Core 2.0 SDK 及執行階段：
+```bash
+yum install rh-dotnet20
+```
+為環境啟用 .NET Core 2.0 SDK/執行階段：
+```bash
+scl enable rh-dotnet20 bash
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**.NET Core 1.1**
+
+安裝 .NET Core 1.1 SDK 及執行階段：
+```bash
+yum install rh-dotnetcore11
+```
+為環境啟用 .NET Core 1.1 SDK 及執行階段：
+```bash
+scl enable rh-dotnetcore11 bash
+```
+
+**.NET Core 1.0**
+
+安裝 .NET Core 1.0 SDK 及執行階段：
+```bash
+yum install rh-dotnetcore10
+```
+為環境啟用 .NET Core 1.0 SDK 及執行階段：
+```bash
+scl enable rh-dotnetcore10 bash
+```
+---
 4. 執行 `dotnet --help` 命令，以證明安裝成功。
 
      ```bash
