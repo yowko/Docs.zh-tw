@@ -1,5 +1,5 @@
 ---
-title: "ulong (C# 參考) | Microsoft Docs"
+title: "ulong (C# 參考)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (C# 參考)
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>常值  
 
-您可以將十進位常值、十六進位常值，或二進位常值 (自 C# 7 起) 指派給 `ulong` 變數，以將其宣告和初始化。  如果整數常值超出 `ulong` 範圍 (也就是說，如果它小於 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt64.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+您可以針對 `ulong` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `ulong` 的範圍 (亦即，如果小於 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt64.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 7,934,076,125 整數，會指派給 `ulong` 值。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/24/2017
 
 [!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- 整數常值亦可包含後置詞以表示類型。 `UL` 或 `ul` 後置詞明確地將數值常值識別為 `ulong` 值。 如果常值超過 <xref:System.Int64.MaxValue?displayProperty=fullName><xref:System.Int64.MaxValue?displayProperty=fullName>，則 `L` 後置詞表示 `ulong`。 但是，如果常值超過 <xref:System.UInt32.MaxValue?displayProperty=fullName>，則 `U` 或 `u` 後置詞表示 `ulong`。 下列範例會使用 `ul` 後置詞來表示長整數：
+ 整數常值亦可包含後置詞以表示類型。 `UL` 或 `ul` 後置詞明確地將數值常值識別為 `ulong` 值。 如果常值超出 <xref:System.Int64.MaxValue?displayProperty=fullName>，則 `L` 後置詞表示 `ulong`。 如果常值超出 <xref:System.UInt32.MaxValue?displayProperty=fullName>，則 `U` 或 `u` 後置詞表示 `ulong`。 下列範例會使用 `ul` 後置詞來表示長整數：
  
 [!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
@@ -112,7 +112,7 @@ ulong y = (ulong)3.0;
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.UInt64>   
@@ -123,3 +123,4 @@ ulong y = (ulong)3.0;
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

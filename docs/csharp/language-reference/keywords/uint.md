@@ -1,5 +1,5 @@
 ---
-title: "uint (C# 參考) | Microsoft Docs"
+title: "uint (C# 參考)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint (C# 參考)
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>常值  
 
-您可以將十進位常值、十六進位常值，或二進位常值 (自 C# 7 起) 指派給 `uint` 變數，以將其宣告和初始化。 如果整數常值超出 `uint` 範圍 (也就是說，如果它小於 <xref:System.UInt32.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
+您可以針對 `uint` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 如果整數常值超出 `uint` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `uint` 值。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/24/2017
 
 [!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- 整數常值亦可包含後置詞以表示類型。 `U` 或 'u' 後置詞表示 `uint` 或 `ulong`，視常值的數值而定。 下列範例會使用 `u` 後置詞來表示這兩種類型的不帶正負號整數。 請注意，第一個常值是 `uint`，因為其值小於 <xref:System.UInt32.MaxValue?displayProperty=fullName>，而第二個是 `ulong`，因為其值大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>。
+ 整數常值亦可包含後置詞以表示類型。 `U` 或 'u' 後置詞表示 `uint` 或 `ulong`，視常值的數值而定。 下列範例會使用 `u` 後置詞來表示這兩種類型的不帶正負號整數。 請注意，第一個常值是 `uint`，因為其值小於 <xref:System.UInt32.MaxValue?displayProperty=fullName>而第二個是 `ulong`，因為其值大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>。
 
 [!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
@@ -104,7 +104,7 @@ uint y = (uint)3.0;
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.UInt32>   
@@ -115,3 +115,4 @@ uint y = (uint)3.0;
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+
