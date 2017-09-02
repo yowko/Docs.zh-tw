@@ -1,5 +1,5 @@
 ---
-title: "委派 (Visual Basic)"
+title: "委派 (Visual Basic) | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,20 +31,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0fad74980e3c8cf66b9909b50bdaa3f9f4f567a1
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="delegates-visual-basic"></a>委派 (Visual Basic)
-委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。 但不同於函式指標，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 委派是以 <xref:System.Delegate?displayProperty=fullName> 類別為基礎的參考型別。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。  
+委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。 但不同於函式指標，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 委派是以類別 <xref:System.Delegate?displayProperty=fullName> 為基礎的參考型別。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。  
   
 ## <a name="delegates-and-events"></a>委派和事件  
- 當您在呼叫程序與被呼叫程序之間需要一個媒介時，委派就很有用。 例如，您想要讓引發事件的物件能夠在不同環境下呼叫不同的事件處理常式。 不過，引發事件的物件無法事先知道哪一個事件處理常式正在處理特定事件。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 可讓您藉由在使用 `AddHandler` 陳述式時建立自己的委派，以動態方式建立事件處理常式與事件的關聯。 在執行階段，委派會將呼叫轉送到適當的事件處理常式。  
+ 當您在呼叫程序與被呼叫程序之間需要一個媒介時，委派就很有用。 例如，您想要讓引發事件的物件能夠在不同環境下呼叫不同的事件處理常式。 不過，引發事件的物件無法事先知道哪一個事件處理常式正在處理特定事件。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 可讓您藉由在使用 `AddHandler` 陳述式時建立自己的委派，以動態方式建立事件處理常式與事件的關聯。 在執行階段，委派會將呼叫轉送到適當的事件處理常式。  
   
- 雖然您可以建立自己的委派，但在大部分情況下，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會建立委派，並為您處理細節。 例如，`Event` 陳述式會隱含定義名為 `<EventName>EventHandler` 的委派類別做為包含 `Event` 陳述式之類別的巢狀類別，並包含與事件相同的簽章。 `AddressOf` 陳述式會隱含建立參考特定程序之委派的執行個體。 下兩行程式碼的用法相同。 在第一行中，您會看到明確建立了 `Eventhandler` 的執行個體，其中包含對傳送為引數之 `Button1_Click` 方法的參考。 第二行則是可執行相同動作的更便捷方法。  
+ 雖然您可以建立自己的委派，但在大部分情況下，[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 會建立委派，並為您處理細節。 例如，`Event` 陳述式會隱含定義名為 `<EventName>EventHandler` 的委派類別做為包含 `Event` 陳述式之類別的巢狀類別，並包含與事件相同的簽章。 `AddressOf` 陳述式會隱含建立參考特定程序之委派的執行個體。 下兩行程式碼的用法相同。 在第一行中，您會看到明確建立了 `Eventhandler` 的執行個體，其中包含對傳送為引數之 `Button1_Click` 方法的參考。 第二行則是可執行相同動作的更便捷方法。  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   
@@ -91,4 +90,3 @@ ms.lasthandoff: 07/28/2017
 |[如何：在 Visual Basic 中將程序傳遞至其他程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|示範如何使用委派，將一個程序傳遞至另一個程序。|  
 |[寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|描述即便是 Sub 和函式的簽章不同，如何將它們指派給委派或處理常式。|  
 |[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)|提供 Visual Basic 中的事件概觀。|
-

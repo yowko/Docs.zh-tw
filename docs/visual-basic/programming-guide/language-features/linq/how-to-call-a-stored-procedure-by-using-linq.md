@@ -33,10 +33,9 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: abc3970fc5ab6f4a2f4b67b5efa2b19afb07337b
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -47,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
  本主題中的範例使用 Northwind 範例資料庫。 如果您的開發電腦上沒有 Northwind 範例資料庫，您可以下載從[Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=98088)網站。 如需指示，請參閱[下載範例資料庫](https://msdn.microsoft.com/library/bb399411)。  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
 ### <a name="to-create-a-connection-to-a-database"></a>若要建立資料庫的連接  
   

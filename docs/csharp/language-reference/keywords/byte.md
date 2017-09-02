@@ -1,6 +1,6 @@
 ---
 title: "byte (C# 參考) | Microsoft Docs"
-ms.date: 2017-03-14
+ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,42 +30,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 57c4b1c7ead9386ff4067da5915a55a79f5e562e
-ms.openlocfilehash: fce94687cbf055219913758d49642c8e4a999db3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7c522506b4541edb2a81036e93e8872711f849b9
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="byte-c-reference"></a>byte (C# 參考)
-
-`byte` 表示用來儲存下表所指出值的整數型別。  
+`byte` 關鍵字表示用來儲存下表所指出值的整數型別。  
   
 |類型|範圍|大小|.NET Framework 類型|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 到 255|不帶正負號的 8 位元整數|<xref:System.Byte?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
-
- 您可以針對 `byte` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 如果整數常值超出 `byte` 的範圍 (亦即，如果小於 <xref:System.Byte.MinValue?displayProperty=fullName> 或大於 <xref:System.Byte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
-
-在下列範例中，以十進位、十六進位和二進位常值表示的 201 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 隱含轉換成 `byte` 值。    
+ 您可以宣告並初始化 `byte` 變數，如下列範例所示：  
   
-[!code-cs[位元組](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
-
-> [!NOTE] 
-> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。
-
-自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
-
-[!code-cs[位元組](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
- 
+```  
+byte myByte = 255;  
+```  
+  
+ 在上述宣告中，整數常值 `255` 會從 [int](../../../csharp/language-reference/keywords/int.md) 隱含地轉換為 `byte`。 如果整數常值超出 `byte` 範圍，就會發生編譯錯誤。  
+  
 ## <a name="conversions"></a>轉換  
  有一項從 `byte` 轉換為 [short](../../../csharp/language-reference/keywords/short.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。  
   
  您無法將較大儲存大小的非常值數字類型隱含轉換為 `byte`。 如需整數型別儲存大小的詳細資訊，請參閱[整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)。 例如，請考慮使用下列兩個 `byte` 變數 `x` 和 `y`：  
   
 ```  
+  
 byte x = 10, y = 20;  
 ```  
   
@@ -128,8 +121,7 @@ SampleMethod((byte)5);
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

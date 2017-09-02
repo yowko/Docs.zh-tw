@@ -1,5 +1,5 @@
 ---
-title: "使用跨平台工具建立 NuGet 套件 | Microsoft Docs"
+title: "使用跨平台工具建立 NuGet 封裝"
 description: "使用跨平台工具建立 NuGet 封裝"
 keywords: ".NET、.NET Core、NuGet"
 author: cartermp
@@ -10,16 +10,14 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 2b2081bce1725fb4a019881521604e4171b85028
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 657981a05e831ffb849d0cd5b3ea25c079cb4fc1
+ms.lasthandoff: 03/02/2017
 
 ---
 
-# 如何使用跨平台工具建立 NuGet 封裝
-<a id="how-to-create-a-nuget-package-with-cross-platform-tools" class="xliff"></a>
+# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>如何使用跨平台工具建立 NuGet 封裝
 
 > [!NOTE]
 > 下圖顯示使用 Unix 的命令列範例。  此處顯示的 `dotnet pack` 命令，運作運作方式與在 Windows 上如出一轍。
@@ -64,8 +62,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 現在您有發行 NuGet 封裝所需的檔案！
 
-## 請勿混淆 `dotnet pack` 與 `dotnet publish`
-<a id="dont-confuse-dotnet-pack-with-dotnet-publish" class="xliff"></a>
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>請勿混淆 `dotnet pack` 與 `dotnet publish`
 
 請務必注意，和 `dotnet publish` 命令一點關係都沒有。  `dotnet publish` 命令是要使用相同組合中的所有相依性來部署應用程式，不是用來產生要透過 NuGet 散發及使用的 NuGet 封裝。
 

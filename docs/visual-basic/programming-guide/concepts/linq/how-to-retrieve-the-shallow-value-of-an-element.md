@@ -15,10 +15,9 @@ ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
 caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 39a0648bb3fd09b9e323560b447be3cc445d5b7f
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  下列文字檔 Report.xml 是此範例的原始檔。  
   
-```xml  
+```  
 <?xml version="1.0" encoding="utf-8" ?>  
 <Report>  
   <Section>  

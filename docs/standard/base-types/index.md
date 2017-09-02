@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: e1451f41b463e28a5fa305f23f3790bcfc066c30
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="working-with-base-types-in-net"></a>在 .NET 中使用基底類型

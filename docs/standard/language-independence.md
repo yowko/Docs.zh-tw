@@ -10,10 +10,9 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
+translationtype: Human Translation
 ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
 ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/10/2017
 
 ---
@@ -125,7 +124,7 @@ using System;
 
 public class Person
 {
-   private Int16 personAge = 0;
+   private UInt16 personAge = 0;
 
    public Int16 Age 
    { get { return personAge; } }
@@ -347,7 +346,7 @@ End Class
  
  .NET Framework 類別庫或其他類別庫可能包含不符合 CLS 標準的其他類型，例如： 
  
- * Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int` *的公用屬性，名為 `Value`。由於 `int`* 為 Boxed 實值型別，因此編譯器將其標示為不符合 CLS 標準。
+ * Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int`*的公用屬性，名為 `Value`。由於 `int`* 為 Boxed 實值型別，因此編譯器將其標示為不符合 CLS 標準。
 
   ```csharp
   using System;
@@ -2953,6 +2952,5 @@ vbc example.vb /r:UtilityLib.dll
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
 
 

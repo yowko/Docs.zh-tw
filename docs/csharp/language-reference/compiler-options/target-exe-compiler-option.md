@@ -43,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>語法  
   
-```console  
+```  
 /target:exe  
 ```  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  下列每個命令列都會建立 `in.exe` 來編譯 `in.cs`：  
   
-```console  
+```  
 csc /target:exe in.cs  
 csc in.cs  
 ```  

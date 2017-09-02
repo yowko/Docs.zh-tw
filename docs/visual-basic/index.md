@@ -29,11 +29,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/26/2017
+translationtype: Human Translation
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -60,7 +59,7 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  包含 Visual Basic 語言和編譯器資訊。  
 
  [使用 Visual Basic 開發應用程式](../visual-basic/developing-apps/index.md)  
- 討論 Visual Basic 中開發的各種層面，例如安全性、例外狀況處理、以及使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫。
+ 討論 Visual Basic 中開發的各種層面，例如安全性、例外狀況處理、以及使用 [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] 類別庫。
 
  [COM Interop](../visual-basic/programming-guide/com-interop/index.md)  
  解釋與利用 Visual Basic 建立和使用元件物件模型 (COM) 物件相關的互通性問題。  
@@ -76,4 +75,4 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  提供主題連結，協助您了解 Visual Studio 的基本概念。  
   
  [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  
- 讓您使用程式庫，內含 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK 中的類別、介面和實值類型。
+ 讓您使用程式庫，內含 Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] SDK 中的類別、介面和實值類型。

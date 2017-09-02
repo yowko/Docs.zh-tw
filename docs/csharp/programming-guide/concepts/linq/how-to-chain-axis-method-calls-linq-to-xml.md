@@ -46,7 +46,7 @@ foreach (XElement e in names)
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
 <Name>Cristian Osorio</Name>  
@@ -95,7 +95,7 @@ foreach (XElement cp in configParameters)
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
 <ConfigParameter>SecondConfigParameter</ConfigParameter>  
 ```  
@@ -120,7 +120,7 @@ foreach (XElement e in names)
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Tai Yee</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Cristian Osorio</aw:Name>  

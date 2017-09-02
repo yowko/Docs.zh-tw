@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f2563a334248740ff1bd4fc49662229d8f3bf27e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：變更 My.Application.Log 寫入資訊的位置 (Visual Basic)
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-add-listeners"></a>加入接聽程式  
   
-1.  在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟] ****。  
+1.  在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。  
   
      \-或-  
   
@@ -57,15 +57,15 @@ ms.lasthandoff: 03/13/2017
   
     1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目] **** 對話方塊中，選取 [應用程式組態檔] ****。  
+    2.  在 [加入新項目] 對話方塊中，選取 [應用程式組態檔]。  
   
-    3.  按一下 [加入] ****。  
+    3.  按一下 [加入]。  
   
 2.  找出 `<listeners>` 區段，其位於 `<source>` 區段中具有 `name` 屬性 "DefaultSource" 的 `<sources>` 區段下。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段。  
   
 3.  將這些項目加入至該 `<listeners>` 區段。  
   
-    ```xml  
+    ```  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/13/2017
   
 6.  將這些項目加入至該 `<sharedListeners>` 區段。  
   
-    ```xml  
+    ```  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -115,7 +115,7 @@ ms.lasthandoff: 03/13/2017
   
 7.  App.config 檔案的內容應該類似下列 XML：  
   
-    ```xml  
+    ```  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  
@@ -180,13 +180,13 @@ ms.lasthandoff: 03/13/2017
   
      您可以使用的類型如下︰  
   
-    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 接聽程式，以寫入檔案記錄檔。  
+    -   寫入檔案記錄檔的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 接聽程式。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 接聽程式，以將資訊寫入 `initializeData` 參數所指定的電腦事件記錄檔中。  
+    -   將資訊寫入由 `initializeData` 參數指定之電腦事件記錄檔的 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 接聽程式。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 接聽程式，以寫入 `initializeData` 參數所指定的檔案中。  
+    -   寫入由 `initializeData` 參數中指定之檔案的 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 接聽程式。  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 接聽程式，以寫入命令列主控台。  
+    -   寫入命令列主控台的 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 接聽程式。  
   
      如需其他記錄檔接聽程式類型在何處寫入資訊的相關資訊，請查閱該類型的文件。  
   
@@ -213,5 +213,5 @@ ms.lasthandoff: 03/13/2017
  <xref:System.Diagnostics.TraceListener>   
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [如何：將事件資訊寫入至文字檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [如何：寫入應用程式事件記錄檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
