@@ -1,23 +1,19 @@
 ---
 title: ".NET 架構元件"
 description: "描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NET 執行階段和工具。"
-keywords: ".NET, .NET Standard, .NET Core, .NET Framework, Mono, Xamarin, MSBuild, C#, F#, VB, 編譯器"
 author: cartermp
 ms.author: mairaw
-ms.date: 08/10/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.translationtype: HT
-ms.sourcegitcommit: 14522f165b22a7b1bb2a717a7c9f293a265f4eb0
-ms.openlocfilehash: 8934febe77b30fb318b06e4d8d297282368438a5
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-
 # <a name="net-architectural-components"></a>.NET 架構元件
 
 .NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
@@ -43,9 +39,9 @@ Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.
 
 ### <a name="net-core"></a>.NET 核心
 
-.NET Core 是已針對伺服器工作負載最佳化的 .NET 跨平台實作。 它是新式且具有效率，而其設計目的是為了處理大規模的伺服器與雲端工作負載。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 ASP.NET Core 會在 .NET Core 上執行。
+.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 可在 Windows、macOS 及 Linux 執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 ASP.NET Core 會在 .NET Core 上執行。 
 
-若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)。
+若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -91,7 +87,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 - 開放原始碼建置協調流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>請參閱
-
+[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
 [.NET Standard](net-standard.md)  
 [.NET Core 指南](../core/index.md)  
 [.NET Framework 指南](../framework/index.md)  

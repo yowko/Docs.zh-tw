@@ -11,10 +11,10 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
-ms.openlocfilehash: 88492a5db66977f3b914123aa8489c079aff59c5
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -29,7 +29,7 @@ Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org
 *   `Task` 代表不會傳回值的單一作業。
 *   `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
 
-您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇性地明確要求透過 `Task.Run` API 在個別執行緒上執行 Task。
+您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇明確要求透過 `Task.Run` API 在個別執行緒上執行工作。
 
 Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 (如果是 `Task<T>`)。 與 `await` 關鍵字的語言整合提供更高層級的抽象層來使用 Task。 
 

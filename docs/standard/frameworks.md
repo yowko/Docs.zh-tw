@@ -4,17 +4,17 @@ description: "了解 .NET Core 應用程式和程式庫的目標 Framework。"
 keywords: ".NET, .NET Core, 架構, TFM"
 author: richlander
 ms.author: mairaw
-ms.date: 07/23/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 ms.translationtype: HT
-ms.sourcegitcommit: cf480ffd8e791e3416433f2d13b364743ba42938
-ms.openlocfilehash: 7f1189239f61bc55c5f517ee797e5148082ebbab
+ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
+ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
@@ -36,8 +36,8 @@ ms.lasthandoff: 08/21/2017
 
 | 目標 Framework      | 最新的版本 | Target Framework Moniker (TFM) | .NET Standard 版本 | 中繼套件 |
 | :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 1.6.1          | netstandard1.6                 | N/A                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| .NET Core 應用程式 | 1.1.2          | netcoreapp1.1                  | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| .NET Standard         | 2.0.0          | netstandard2.0                 | N/A                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
+| .NET Core 應用程式 | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
 | .NET Framework        | 4.7            | net47                          | 1.5                   | N/A |
 
 ## <a name="supported-target-framework-versions"></a>支援的目標 Framework 版本
@@ -46,8 +46,8 @@ ms.lasthandoff: 08/21/2017
 
 | 目標 Framework           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6 |
-| .NET 核心                  | netcoreapp1.0<br>netcoreapp1.1 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| .NET 核心                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
 | Windows 市集              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -57,14 +57,14 @@ ms.lasthandoff: 08/21/2017
 
 ## <a name="how-to-specify-target-frameworks"></a>如何指定目標 Framework
 
-目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 下列主控台應用程式專案檔會示範如何將目標設為 .NET Core 1.1：
+目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 下列主控台應用程式專案檔會示範如何將目標設為 .NET Core 2.0：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
