@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>桌面應用程式中的資源
