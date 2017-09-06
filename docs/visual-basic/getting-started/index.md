@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
-ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="get-started-with-visual-basic-and-net-core"></a>開始使用 Visual Basic 和.NET Core
+
+[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](../../core/tutorials/vb-with-visual-studio.md)
+
+[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>其他資訊
 
 [Visual Basic 的新功能](whats-new.md)   
 列出每個 Visual Basic .NET 版本的新功能。
@@ -49,7 +55,13 @@ ms.lasthandoff: 08/11/2017
   
 [Visual Basic 程式設計人員的其他資源](additional-resources.md)  
 提供網站和新聞群組清單，協助您找到常見問題的解答。  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>使用 Visual Basic 開發 .NET Core 應用程式
+
+[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](../../core/tutorials/vb-with-visual-studio.md) 
+
+[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>請參閱
  [取得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。  
@@ -72,8 +84,7 @@ ms.lasthandoff: 08/11/2017
  [Visual Studio](/visualstudio/)  
  提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。  
   
- [C#](../../csharp/csharp.md)  
- 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
+ [C#](../../csharp/index.md) 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
   
  [Visual C++](/cpp/)  
  提供 Visual C++ 文件的連結。  

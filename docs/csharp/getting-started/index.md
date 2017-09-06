@@ -2,18 +2,21 @@
 title: "開始使用 - C# 指南"
 description: "搜尋片長短、內容簡單扼要的教學課程，介紹 C# 概念及如何撰寫.NET Core 應用程式，協助您快速進入狀況。"
 keywords: "C#, 開始使用 , 取得, 安裝"
+helpviewer_keywords:
+- Visual C#, getting started
+- getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/02/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
-ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: c2e2408b2d7a02a1a75965f32888d240bafae0f0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="get-started-with-c"></a>開始使用 C# #
@@ -21,6 +24,10 @@ ms.lasthandoff: 08/17/2017
 本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 本節內容涵蓋適用於 Visual Studio 2017 和 Visual Studio Code 的使用者入門主題。 您可以建置一個簡單的 Hello World 應用程式，或者，如果您擁有 Visual Studio 2017，則能建置可供其他應用程式使用的簡單類別庫。
 
 我們將提供下列主題：
+
+* [C# 語言和 .NET Framework 簡介](introduction-to-the-csharp-language-and-the-net-framework.md)
+
+     提供 C# 語言和 .NET 的概觀。
 
 * [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
 
@@ -37,4 +44,33 @@ ms.lasthandoff: 08/17/2017
    Visual Studio Code 這個免費的程式碼編輯器已經過最佳化，可用於建置新式 Web 和雲端應用程式並為其偵錯。 支援 IntelliSense 並適用於 Linux、macOS 和 Windows。
 
    此主題說明如何使用 Visual Studio Code 和 .NET Core，來建立並執行簡單的 Hello World 應用程式。
+
+* [Visual C# 程式設計人員的其他資源](additional-resources.md)
+
+   提供網站與新聞群組的連結，協助您找到常見問題的解答。
+
+## <a name="related-sections"></a>相關章節
+
+* [使用 C# 的 Visual Studio 開發環境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+
+    提供使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 整合式開發環境的指南。
+
+* [C# 程式設計指南](../../csharp/programming-guide/index.md)
+
+    提供 C# 程式設計概念的資訊，並說明如何在 C# 中執行各種工作。
+
+* [C# 參考](../../csharp/language-reference/index.md)
+
+    提供 C# 關鍵字、運算子、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的詳細參考資訊。
+
+* [Visual Studio 範例](/visualstudio/ide/visual-studio-samples)
+
+    提供有關如何存取線上範例的資訊。
+
+* [逐步解說](../../csharp/walkthroughs.md)
+
+    提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。
+
+## <a name="see-also"></a>請參閱
+ [使用 Visual Studio 的 Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) [新手開發人員學習中心](http://go.microsoft.com/fwlink/?LinkId=123826)
 

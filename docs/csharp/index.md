@@ -3,17 +3,23 @@ title: "C# 指南"
 description: "了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。"
 keywords: .NET, .NET Core
 author: BillWagner
-ms.date: 08/03/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
+helpviewer_keywords:
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18e26035e41c97af135f0075075bd2441182f157
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 
@@ -32,7 +38,7 @@ C# 指南提供與 C# 語言相關的豐富資訊。 此網站適用於許多不
  
 ## <a name="how-the-c-guide-is-organized"></a>C# 指南的編排方式
 
-C# 指南含有七個章節。 您可以按順序閱讀，或直接跳至您最感興趣的部分。 某些章節大量著重於語言本身。 其他章節則提供端對端案例，來示範數個您可以使用 C# 和 .NET Framework 建立的程式類型。
+C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最感興趣的部分。 某些章節大量著重於語言本身。 其他章節則提供端對端案例，來示範數個您可以使用 C# 和 .NET Framework 建立的程式類型。
 
 * [快速入門](getting-started/index.md)：
     - 本節涵蓋您需要在慣用的平台上針對 C# 開發環境進行安裝的項目。 本節中的不同主題會說明如何在不同的支援環境中建立您的第一個 C# 程式。
@@ -52,6 +58,25 @@ C# 指南含有七個章節。 您可以按順序閱讀，或直接跳至您最�
 <!--* [.NET Compiler Platform SDK](roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
 -->
+* [使用 C# 的 Visual Studio 開發環境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+    - 簡介 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 開發環境。  
+
+* [C# 程式設計指南](../csharp/programming-guide/index.md)  
+    - 提供如何使用 C# 語言建構的詳細資訊和實際範例。  
+
+* [C# 範例](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+    - 為 C# 篩選的 MSDN 程式碼庫。  
+  
+* [逐步解說](../csharp/walkthroughs.md)  
+    - 提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。  
+
 * [語言參考](language-reference/index.md)：
-    - 本節包含有關 C# 語言的參考資料。 此資料將協助您了解 C# 的語法和語意。 
+    - 本節包含有關 C# 語言的參考資料。 此資料將協助您了解 C# 的語法和語意。 它同時提供型別、運算子、屬性、前置處理器指示詞、編譯器參數、編譯器錯誤和編譯器警告的參考資訊。
+  
+* [C# 語言規格](../csharp/language-reference/language-specification/index.md)  
+    - Microsoft Word 格式之最新版本 C# 規格的連結。  
+  
+## <a name="see-also"></a>另請參閱  
+ [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [.NET 程式開發](https://msdn.microsoft.com/library/ff361664)
 
