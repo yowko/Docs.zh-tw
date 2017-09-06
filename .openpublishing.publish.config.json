@@ -43,7 +43,7 @@
       ]
     }
   ],
-  "notification_subscribers": [ ],
+  "notification_subscribers": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.zh-tw",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
@@ -93,5 +93,8 @@
     "Pdf": {
       "template_folder": "_themes.pdf"
     }
-  }
+  },
+  "branches_to_filter": [
+    "live-sxs"
+  ]
 }
