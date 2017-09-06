@@ -40,7 +40,7 @@ caps.handback.revision: 19
  [例外狀況](../../docs/standard/exceptions/index.md)  
  說明 .NET Framework 提供的錯誤處理機制，以及處理例外狀況的基礎。  
   
- [檔案和資料流我-O](../../docs/standard/io/index.md)  
+ [檔案和資料流I-O](../../docs/standard/io/index.md)  
  說明如何執行同步和非同步檔案及資料流存取，以及如何使用隔離儲存區。  
   
  [日期、 時間和時區](../../docs/standard/datetime/index.md)  
