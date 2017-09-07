@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中的安全性 | Microsoft Docs"
+title: ".NET Framework 中的安全性"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,11 +23,11 @@ caps.latest.revision: 37
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: a1914325966fc1b65cf4677328a165fbe1e0f776
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework 中的安全性

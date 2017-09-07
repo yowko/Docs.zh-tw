@@ -55,10 +55,15 @@
 <!-- .NET Core Content -->
 # [.NET Core 指南](core/index.md)
 ## [開始使用](core/get-started.md)
-## [.NET Core 的新功能](core/whats-new/index.md)
+### [C# 與 Visual Studio Code 使用者入門](core/tutorials/with-visual-studio-code.md)
+### [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](core/tutorials/with-visual-studio.md)
+### [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](core/tutorials/vb-with-visual-studio.md)
+### [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](core/tutorials/library-with-visual-studio.md)
+### [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](core/tutorials/vb-library-with-visual-studio.md)
 ## [Windows 必要條件](core/windows-prerequisites.md)
 ## [macOS 先決條件](core/macos-prerequisites.md)
 ## [Linux 必要條件](core/linux-prerequisites.md)
+## [.NET Core 的新功能](core/whats-new/index.md)
 ## [教學課程](core/tutorials/index.md)
 ### [使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案](core/tutorials/using-on-windows-full-solution.md)
 ### [C# 與 Visual Studio Code 使用者入門](core/tutorials/with-visual-studio-code.md)
@@ -187,6 +192,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [C# 的新功能](csharp/whats-new/index.md) 
+### [C# 7.1 的新功能](csharp/whats-new/csharp-7-1.md)
 ### [C# 7 的新功能](csharp/whats-new/csharp-7.md)
 ### [C# 6 的新功能](csharp/whats-new/csharp-6.md)
 ### [語言和架構之間的關係](csharp/whats-new/relationships-between-language-and-library.md)

@@ -1,5 +1,5 @@
 ---
-title: "以 .NET Framework 進行平行程式設計 | Microsoft Docs"
+title: "以 .NET Framework 進行平行程式設計"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,10 +15,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 6a163776f358691c0f61c90dce98c15bebe4052a
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3509229efc57b1f6b1244671df65b2f21964e65
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="parallel-programming-in-the-net-framework"></a>以 .NET Framework 進行平行程式設計
@@ -30,10 +31,10 @@ ms.lasthandoff: 04/08/2017
   
 |技術|描述|  
 |----------------|-----------------|  
-|[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 類別的文件，此類別包含 `For` 和 `ForEach` 迴圈的平行版本，也提供 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 類別的文件，此類別表示表達非同步作業的慣用方法。|  
+|[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 類別 (包含平行版本的 `For` 和 `ForEach` 迴圈) 及 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 類別 (表示表達非同步作業較好的方式) 的文件。|  
 |[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|平行實作的 LINQ to Objects，在許多情節中可大幅改善效能。|  
 |[適用於平行程式設計的資料結構](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|提供安全執行緒集合類別、輕量型同步處理類型和延遲初始設定類型的文件連結。|  
-|[平行診斷工具](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|提供 Visual Studio 偵錯工具視窗 (適用於工作和平行堆疊) 和[並行視覺化檢視](http://msdn.microsoft.com/library/ae5879a0-1e1a-455a-ba72-148e57f59289) (由 [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] 分析工具中一組可供您進行偵錯和微調平行程式碼效能的檢視所組成) 的文件連結。|  
+|[平行診斷工具](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|提供 Visual Studio 偵錯工具視窗 (適用於工作和平行堆疊) 和[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer) (由 [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] 分析工具中一組可供您進行偵錯和微調平行程式碼效能的檢視所組成) 的文件連結。|  
 |[PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|說明 Partitioner 的運作方式，以及如何設定預設 Partitioner 或建立新的 Partitioner。|  
 |[工作排程器](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|說明排程器的運作方式以及如何設定預設排程器。|  
 |[PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|提供 C# 和 Visual Basic 中之 Lambda 運算式的簡短概觀，並且顯示如何在 PLINQ 和工作平行程式庫中使用這些運算式。|  
@@ -42,3 +43,4 @@ ms.lasthandoff: 04/08/2017
 ## <a name="see-also"></a>另請參閱  
  [平行程式設計模式：了解及套用使用 .NET Framework 4 的平行模式 (英文)](http://go.microsoft.com/fwlink/?LinkID=185142)   
  [使用 .NET Framework 進行平行程式設計的範例](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+

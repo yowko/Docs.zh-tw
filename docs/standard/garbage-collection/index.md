@@ -1,5 +1,5 @@
 ---
-title: "記憶體回收 | Microsoft Docs"
+title: "記憶體回收"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -28,11 +28,11 @@ caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 11ea4186a77a600d1645fe334ba9fd704fe728b4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be94a3e0dee4cb27aee4d5c98ebc1d6ef0704ac9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="garbage-collection"></a>記憶體回收
@@ -71,3 +71,4 @@ ms.lasthandoff: 06/08/2017
   
 ## <a name="see-also"></a>另請參閱  
  [清除 Unmanaged 資源](../../../docs/standard/garbage-collection/unmanaged.md)
+
