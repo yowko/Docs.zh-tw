@@ -21,10 +21,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1c77754efcfa626c2907fd57740133a0db4737d4
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 和 Dictionary 集合類型

@@ -23,16 +23,16 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a3ac4cbdee87e71f9a0de8aae701d84bfc96137
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: dfdfea20aeb8d0002ef22b9649afc09f80caeae2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  
   
- 集合取決於 <xref:System.Collections.ICollection> 介面、<xref:System.Collections.IList> 介面、<xref:System.Collections.IDictionary> 介面或其泛型對應項目。 <xref:System.Collections.IList> 介面和 <xref:System.Collections.IDictionary> 介面都衍生自 <xref:System.Collections.ICollection> 介面；因此，所有集合都直接或間接地以 <xref:System.Collections.ICollection> 介面為依據。 在依據 <xref:System.Collections.IList> 介面的集合中 (例如 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>) 或直接依據 <xref:System.Collections.ICollection> 介面的集合中 (例如 <xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>)，每個項目都只包含一個值。 在依據 <xref:System.Collections.IDictionary> 介面的集合中 (例如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 類別、<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別)，或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別中，每個項目都會包含索引鍵和值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 類別的獨特之處在於它是將索引鍵內嵌於值的值清單，因此它的行為類似於清單和字典。  
+ 集合取決於 <xref:System.Collections.ICollection> 介面、<xref:System.Collections.IList> 介面、<xref:System.Collections.IDictionary> 介面或其泛型對應項目。 <xref:System.Collections.IList> 介面和 <xref:System.Collections.IDictionary> 介面都衍生自 <xref:System.Collections.ICollection> 介面；因此，所有集合都直接或間接地以 <xref:System.Collections.ICollection> 介面為依據。 在依據 <xref:System.Collections.IList> 介面的集合中 (例如 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>) 或直接依據 <xref:System.Collections.ICollection> 介面的集合中 (例如 <xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>)，每個項目都只包含一個值。 在依據 <xref:System.Collections.IDictionary> 介面的集合中 (例如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 類別、<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別)，或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別中，每個項目都包含索引鍵和值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 類別的獨特之處在於它是將索引鍵內嵌於值的值清單，因此它的行為類似於清單和字典。  
   
  泛型集合是強式類型的最佳解決方案。 不過，如果您的語言不支援泛型，<xref:System.Collections> 命名空間就會包含基底集合，例如 <xref:System.Collections.CollectionBase>、<xref:System.Collections.ReadOnlyCollectionBase> 和 <xref:System.Collections.DictionaryBase>，這些是可以延伸以建立強式類型之集合類別的抽象基底類別。 需要有效率的多執行緒集合存取時，請在 <xref:System.Collections.Concurrent> 命名空間中使用泛型集合。  
   
