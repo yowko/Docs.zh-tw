@@ -1,187 +1,182 @@
 ---
-title: "組件載入的最佳做法 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- assemblies,binding
-- LoadFrom method
-- default load context
-- TypeLoadException class,causes
-- assembly loading errors
-- load contexts
-- assemblies,loading
-- LoadWithPartialName method
-- load-from context
+title: "組件載入的最佳作法 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "組件, 繫結"
+  - "組件, 載入"
+  - "組件載入錯誤"
+  - "預設載入內容"
+  - "載入內容"
+  - "載入來源內容"
+  - "LoadFrom 方法"
+  - "LoadWithPartialName 方法"
+  - "TypeLoadException 類別, 原因"
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 caps.latest.revision: 10
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: f7df4873cf0a1a7329642762534b7e762866de34
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
-
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 10
 ---
-# <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
-本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
+# 組件載入的最佳作法
+本文將討論避免出現可造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之型別識別問題的方法。  本文會討論下列建議：  
   
 -   [了解載入內容的優缺點](#load_contexts)  
   
--   [避免部分組件名稱上的繫結](#avoid_partial_names)  
+-   [避免部分組件名稱繫結](#avoid_partial_names)  
   
--   [避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)  
+-   [避免將組件載入多個內容中](#avoid_loading_into_multiple_contexts)  
   
--   [避免將多個版本的組件載入相同的內容](#avoid_loading_multiple_versions)  
+-   [避免將組件的多個版本載入相同的內容中](#avoid_loading_multiple_versions)  
   
--   [考慮切換成預設載入內容](#switch_to_default)  
+-   [考量切換至預設載入內容](#switch_to_default)  
   
- 第一個建議 ([了解載入內容的優缺點](#load_contexts)) 提供其他建議的背景資訊，因為它們都取決於載入內容的知識。  
+ 第一個建議 \([了解載入內容的優缺點](#load_contexts)\) 會為其他建議提供背景資訊，原因是所有其他建議都取決於對載入內容的了解。  
   
 <a name="load_contexts"></a>   
-## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>了解載入內容的優缺點  
- 在應用程式定義域內，可以將組件載入三個內容之一，或是載入時沒有內容：  
+## 了解載入內容的優缺點  
+ 在應用程式定義域內，可以將組件載入三個內容的其中一個中，也可以在沒有內容的情況下載入：  
   
--   預設載入內容包含探查全域組件快取時所找到的組件、裝載執行階段時的主機組件存放區 (例如，在 SQL Server 中)，以及應用程式定義域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。 <xref:System.Reflection.Assembly.Load%2A> 方法的大部分多載都會將組件載入此內容中。  
+-   預設載入內容包含探查全域組件快取時找到的組件：執行階段已裝載時的主機組件存放區 \(例如，在 SQL Server 中\)，以及應用程式定義域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>。  大多數的 <xref:System.Reflection.Assembly.Load%2A> 方法多載會將組件載入到這個內容中。  
   
--   載入來源內容包含從載入器未搜尋的位置中載入的組件。 例如，增益集可能安裝在不在應用程式路徑下的目錄。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 是依路徑載入之方法的範例。  
+-   載入來源內容包含一些組件，這些組件是從未經載入器搜尋的位置載入的。  例如，增益集可能會安裝在非應用程式路徑下的目錄中。  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 都是根據路徑所載入之方法的範例。  
   
--   僅限反映的內容包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法所載入的組件。 無法執行此內容中的程式碼，因此此處不予討論。 如需詳細資訊，請參閱[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+-   僅限反映內容包含利用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 與 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法載入的組件。  由於無法執行此內容中的程式碼，因此在此先不做討論。  如需詳細資訊，請參閱 [如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
--   如果您已使用反映發出來產生暫時性動態組件，則組件不會在任何內容中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法所載入的大部分組件在載入時都沒有內容，而且從位元組陣列載入的組件在載入時沒有內容，除非它們在套件原則之後所建立的身分識別位於全域組件快取中。  
+-   如果您透過使用反映發出產生暫時性動態組件，則該組件不在任何內容中。  此外，透過使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法載入的大部分組件都是在沒有內容的狀況下載入的，從位元組陣列中載入的組件也是在沒有內容的狀況下載入的，除非其身分識別 \(套用原則之後\) 表明它們位於全域組件快取中。  
   
- 執行內容具有優缺點，如下列各節所討論。  
+ 執行內容具有其優缺點，如下列各節中所述。  
   
-### <a name="default-load-context"></a>預設載入內容  
- 將組件載入預設載入內容時，會自動載入其相依性。 針對預設載入內容或載入來源內容中的組件，自動找到載入到預設載入內容的相依性。 藉由確保未使用未知版本的組件，依組件身分識別載入可增加應用程式的穩定性 (請參閱[避免部分組件名稱上的繫結](#avoid_partial_names)節)。  
+### 預設載入內容  
+ 將組件載入預設載入內容中時，會自動載入其相依性。  對於預設載入內容或載入來源內容中的組件，會自動尋找已載入預設載入內容的相依性。  透過組件識別進行的載入可確保不會使用未知版本的組件，從而增加應用程式的穩定性 \(請參閱[避免部分組件名稱繫結](#avoid_partial_names)一節\)。  
   
- 使用預設載入內容的缺點如下：  
+ 使用預設載入內容具有下列優點：  
   
--   無法使用載入至其他內容的相依性。  
+-   無法使用載入其他內容中的相依性。  
   
--   您無法將組件從探查路徑外部的位置載入預設載入內容。  
+-   無法將組件從探查路徑外的位置載入預設載入內容。  
   
-### <a name="load-from-context"></a>載入來源內容  
- 載入來源內容可讓您從不在應用程式路徑下的路徑中載入組件，因此不會納入探查。 它可以從該路徑尋找和載入相依性，因為是透過內容來維護路徑資訊。 此外，此內容中的組件可以使用載入預設載入內容的相依性。  
+### 載入來源內容  
+ 載入來源內容可讓您從非應用程式路徑下的路徑中載入組件，因而其未包含在探查中。  因為路徑資訊由內容來維護，所以可從該路徑尋找和載入相依性。  此外，此內容中的組件可以使用載入預設載入內容中的相依性。  
   
- 使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法或依路徑載入的其他一個方法來載入組件，其缺點如下：  
+ 透過使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法或按路徑載入的其中一種其他方法載入的組件具有下列缺點：  
   
--   如果已載入具有相同身分識別的組件，<xref:System.Reflection.Assembly.LoadFrom%2A> 會傳回載入的組件，即使指定不同的路徑也是一樣。  
+-   如果已經載入具有相同識別的組件，則即使指定不同的路徑，<xref:System.Reflection.Assembly.LoadFrom%2A> 也會傳回載入的組件。  
   
--   如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，之後預設載入內容中的組件卻嘗試依顯示名稱載入相同組件，則載入嘗試會失敗。 還原序列化組件時，也可能發生這種情況。  
+-   如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入了組件，然後預設載入內容中的組件嘗試根據顯示名稱載入相同的組件時，載入嘗試會失敗。  當組件已還原序列化時，就會發生這種情形。  
   
--   如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，而且探查路徑包括具有相同身分識別但在不同位置的組件，則可能會發生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 或其他非預期的行為。  
+-   如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入了組件，而探查路徑包括具有相同識別但不同位置的組件，則可能會發生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 或其他無法預期的行為。  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> 要求所指定路徑上的 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=fullName> 和 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=fullName> 或 <xref:System.Net.WebPermission>。  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A> 會針對指定的路徑要求 <xref:System.Security.Permissions.FileIOPermissionAccess?displayProperty=fullName> 和 <xref:System.Security.Permissions.FileIOPermissionAccess?displayProperty=fullName> 或 <xref:System.Net.WebPermission>。  
   
--   如果組件有原生映像，則不會使用它。  
+-   如果存在組件的原生映像，則不會使用它。  
   
--   組件無法以定義域中性方式載入。  
+-   組件無法當做定義域中性載入。  
   
 -   在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
   
-### <a name="no-context"></a>沒有內容  
- 沒有內容的載入是使用反映發出所產生之暫時性組件的唯一選項。 沒有內容的載入是將多個具有相同身分識別的組件載入到一個應用程式定義域的唯一方法。 會避免發生探查成本。  
+### 無內容  
+ 無內容載入是利用反映發出所產生暫時性組件的唯一選項。  無內容載入是將具有相同識別的多個組件載入一個應用程式定義域的唯一方法。  這可避免探查成本。  
   
- 從位元組陣列載入的組件在載入時沒有內容，除非在套用規則時所建立之組件的身分識別符合全域組件快取中組件的身分識別；在該情況下，會從全域組件快取中載入組件。  
+ 除非在套用原則時建立的組件識別與全域組件快取中的組件識別相符 \(在該情況下，組件載入自全域組件快取\)，否則從位元組陣列載入的組件將採用無內容形式載入。  
   
- 載入沒有內容之組件的缺點如下：  
+ 無內容載入組件具有下列缺點：  
   
--   除非您處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件，否則其他組件無法繫結至載入時沒有內容的組件。  
+-   除非您處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件，否則無法將其他組件繫結至無內容載入的組件。  
   
--   不會自動載入相依性。 您可以預先載入它們但沒有內容、將它們預先載入至預設載入內容，或者處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件來載入它們。  
+-   不會自動載入相依性。  您可以採用無內容形式預先載入它們、將其預先載入至預設載入內容，或者透過處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件載入它們。  
   
--   載入具有相同身分識別但沒有內容的多個組件可能會造成類型身分識別問題，而這些問題與將具有相同身分識別的組件載入多個內容所造成的問題類似。 請參閱[避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)。  
+-   無內容載入具有相同識別的多個組件可能會造成型別識別問題，該問題與將具有相同識別的組件載入多個內容而造成的問題類似。  請參閱[避免將組件載入多個內容中](#avoid_loading_into_multiple_contexts)。  
   
--   如果組件有原生映像，則不會使用它。  
+-   如果存在組件的原生映像，則不會使用它。  
   
--   組件無法以定義域中性方式載入。  
+-   組件無法當做定義域中性載入。  
   
 -   在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
   
 <a name="avoid_partial_names"></a>   
-## <a name="avoid-binding-on-partial-assembly-names"></a>避免部分組件名稱上的繫結  
- 如果您在載入組件時指定組件顯示名稱的唯一部分，就會發生部分名稱繫結 (<xref:System.Reflection.Assembly.FullName%2A>)。 例如，您可能會呼叫只具有組件簡單名稱的 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，並省略版本、文化特性和公開金鑰權杖。 或者，您可能會呼叫 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法，此方法會先呼叫 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，並在找不到組件時搜尋全域組件快取，並載入組件的最新可用版本。  
+## 避免部分組件名稱繫結  
+ 載入組件期間，當您僅指定部分組件顯示名稱 \(<xref:System.Reflection.Assembly.FullName%2A>\) 時，會發生部分名稱繫結。  例如，您可能會僅利用組件的簡單名稱來呼叫 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，而省略組件的版本、文化特性及公開金鑰語彙基元。  或者您可能會呼叫 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法：首先呼叫 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，如果找不到組件，則會搜尋全域組件快取並載入組件的最新可用版本。  
   
- 部分名稱繫結會造成許多問題，包括下列：  
+ 部分名稱繫結可能會造成許多問題，包括：  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法可能會載入具有相同簡單名稱的不同組件。 例如，兩個應用程式可能會將兩個具有簡單名稱 `GraphicsLibrary` 的完全不同組件安裝到全域組件快取中。  
+-   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> 方法可能會載入具有相同簡單名稱的不同組件。  例如，兩個應用程式可能會將具有簡單名稱 `GraphicsLibrary` 的兩個完全不同組件安裝至全域組件快取中。  
   
--   實際載入的組件可能無法與舊版相容。 例如，未指定版本可能會導致載入的版本，比一開始撰寫成使用之程式的版本還會新。 更新版本中的變更可能導致應用程式發生錯誤。  
+-   實際載入的組件可能不具有回溯相容性。  例如，如果未指定版本，則可能會導致載入比原本撰寫程式所使用的版本更新的版本。  更新版本中的變更可能會造成應用程式發生錯誤。  
   
--   實際載入的組件可能不正向相容。 例如，您可能已使用最新版本的組件來建置並測試應用程式，但部分繫結可能會載入缺乏應用程式所使用功能的更早版本。  
+-   實際載入的組件可能不具有向前相容性。  例如，您可能已利用最新版本的組件建置並測試您的應用程式，但是部分繫結可能會載入缺少應用程式所使用功能的更早版本。  
   
--   安裝新的應用程式可能會中斷現有應用程式。 安裝更新且不相容版本的共用組件，可能會中斷使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法的應用程式。  
+-   安裝新的應用程式可能會中斷現有的應用程式。  安裝更新且不相容版本的共用組件可能會中斷使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法的應用程式。  
   
--   可能會載入非預期的相依性。 如果您載入兩個共用相依性的組件，則使用部分繫結載入它們可能會導致一個組件，而此組件使用未用來建置或測試它的元件。  
+-   可能會發生非預期的相依性載入問題。  如果您載入共用相依性的兩個組件，則利用部分繫結載入它們可能會導致一個組件使用非建置或測試時所使用的元件。  
   
- <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法可能會導致問題，因此已標示為過時。 建議您改用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，並指定完整組件顯示名稱。 請參閱[了解載入內容的優缺點](#load_contexts)和[考慮切換成預設載入內容](#switch_to_default)。  
+ 由於 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法可能造成問題，因此已將該方法標記為過時。  我們建議您改為使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，並指定完整的組件顯示名稱。  請參閱[了解載入內容的優缺點](#load_contexts)與[考量切換至預設載入內容](#switch_to_default)。  
   
- 如果您因可以更輕鬆地載入組件而想要使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法，請考慮讓應用程式失敗時具有識別遺漏組件的錯誤訊息，而其提供的使用者體驗可能優於自動使用未知版本的組件，這可能會造成無法預期的行為和安全性漏洞。  
+ 如果您想要使用易於載入組件的 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法，請考量在應用程式失敗時顯示錯誤訊息，用於確定遺漏組件可能會提供比自動使用未知版本組件更佳的使用者體驗，但可能會造成無法預期的行為與安全性漏洞。  
   
 <a name="avoid_loading_into_multiple_contexts"></a>   
-## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>避免將組件載入多個內容  
- 將載入組件多個內容，可能會造成類型身分識別問題。 如果將相同類型從相同的組件載入兩個不同的內容，就像已載入具有相同名稱的兩個不同類型一樣。 如果您嘗試將某種類型轉換為另一種類型，則會擲回 <xref:System.InvalidCastException>，以及讓人混淆的訊息：無法將 `MyType` 類型轉換為 `MyType` 類型。  
+## 避免將組件載入多個內容中  
+ 將組件載入多個內容可能會造成型別識別問題。  如果將相同的型別從相同的組件載入兩個不同的內容中，就好像載入了具有相同名稱的兩個不同型別。  如果您嘗試將一種型別轉換成另一種型別，則會擲回 <xref:System.InvalidCastException>，並會顯示無法將型別 `MyType` 轉換成型別 `MyType` 的混淆訊息。  
   
- 例如，假設在名為 `Utility` 的組件中宣告 `ICommunicate` 介面，而您的程式和您程式所載入的其他組件都參考此組件。 這些其他組件包含實作 `ICommunicate` 介面的類型，讓您的程式可以使用它們。  
+ 例如，假設 `ICommunicate` 介面在名為 `Utility` 的組件中進行宣告，該組件由您的程式同時也由程式所載入的其他組件參考。  其他這些組件包含會實作 `ICommunicate` 介面的型別，可讓您的程式使用這些組件。  
   
- 現在，請考慮您的程式執行時會發生什麼事。 您程式所參考的組件會載入預設載入內容。 如果您是依身分識別來載入目標組件，並使用 <xref:System.Reflection.Assembly.Load%2A> 方法，則該組件和其相依性都會在預設載入內容中。 您的程式和目標組件都會使用相同 `Utility` 組件。  
+ 現在請考量執行程式時會發生哪些狀況。  程式參考的組件會載入預設載入內容中。  如果您使用 <xref:System.Reflection.Assembly.Load%2A> 方法依識別載入目標組件，則該目標組件及其相依性都會位於預設載入內容中。  您的程式與目標組件將會使用相同的 `Utility` 組件。  
   
- 不過，假設您依檔案路徑載入目標組件，並使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法。 組件在載入時沒有任何內容，因此不會自動載入其相依性。 您可能有 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件的處理常式來提供相依性，而且它可能會使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法載入沒有內容的 `Utility` 組件。 現在，如果您建立目標組件中所含類型的執行個體，並嘗試將它指派給 `ICommunicate` 類型的變數，則會擲回 <xref:System.InvalidCastException>，因為執行階段會將 `Utility` 組件之兩個複本中的 `ICommunicate` 介面視為不同類型。  
+ 然而，假設您使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法依檔案路徑載入目標組件。  這時會在無內容的情況下載入組件，因此不會自動載入其相依性。  您可能會使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件的處理常式來提供相依性，該處理常式會使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法在沒有內容的情況下載入 `Utility` 組件。  現在，當您建立目標組件中所含型別的執行個體並嘗試將其指派給型別為 `ICommunicate` 的變數時，會擲回 <xref:System.InvalidCastException>，原因是執行階段將 `Utility` 組件兩個複本中的 `ICommunicate` 介面視為不同的型別。  
   
- 有許多其他情況可以將組件載入多個內容。 最佳方式是將目標組件重新放置在應用程式路徑中，並搭配使用 <xref:System.Reflection.Assembly.Load%2A> 方法與完整顯示名稱，以避免衝突。 組件接著會載入預設載入內容，而且兩個組件都使用相同 `Utility` 組件。  
+ 還有許多其他情節，可以將組件載入多個內容中。  最佳方法是在應用程式路徑中重新尋找目標組件並使用 <xref:System.Reflection.Assembly.Load%2A> 方法與完整顯示名稱，來避免衝突。  然後組件會載入預設載入內容中，且兩個組件會使用相同的 `Utility` 組件。  
   
- 如果目標組件必須保留在應用程式路徑外部，您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法，以將它載入到載入來源內容。 如果目標組件編譯成具有應用程式 `Utility` 組件的參考，則會使用應用程式已載入預設載入內容的 `Utility` 組件。 請注意，如果目標組件相依於位在應用程式路徑外部之 `Utility` 組件的複本，則可能會發生問題。 如果在應用程式載入 `Utility` 組件之前將該組件載入到載入來源內容，您應用程式的載入將會失敗。  
+ 如果目標組件必須保留在您的應用程式路徑之外，則您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法將其載入至載入來源內容中。  如果目標組件是利用您應用程式 `Utility` 組件的參考進行編譯的，則其會使用應用程式已載入預設載入內容中的 `Utility` 組件。  請注意，如果目標組件對應用程式路徑之外的 `Utility` 組件複本具有相依性，則可能會發生問題。  如果在您的應用程式載入 `Utility` 組件之前該組件已載入至載入來源內容中，則您應用程式的載入會失敗。  
   
- [考慮切換成預設載入內容](#switch_to_default)一節討論使用 <xref:System.Reflection.Assembly.LoadFile%2A> 和 <xref:System.Reflection.Assembly.LoadFrom%2A> 這類檔案路徑載入的替代方式。  
+ [考量切換至預設載入內容](#switch_to_default)一節會討論使用檔案路徑載入的替代方法，例如 <xref:System.Reflection.Assembly.LoadFile%2A> 與 <xref:System.Reflection.Assembly.LoadFrom%2A>。  
   
 <a name="avoid_loading_multiple_versions"></a>   
-## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>避免將多個版本的組件載入相同的內容  
- 將組件的多個版本載入一個載入內容可能會造成類型身分識別問題。 如果從相同組件的兩個版本載入相同類型，就像已載入具有相同名稱的兩個不同類型一樣。 如果您嘗試將某種類型轉換為另一種類型，則會擲回 <xref:System.InvalidCastException>，以及讓人混淆的訊息：無法將 `MyType` 類型轉換為 `MyType` 類型。  
+## 避免將組件的多個版本載入相同的內容中  
+ 將組件的多個版本載入一個載入內容中可能會造成型別識別問題。  如果從相同組件的兩個版本載入相同的型別，就好像載入了具有相同名稱的兩個不同型別。  如果您嘗試將一種型別轉換成另一種型別，則會擲回 <xref:System.InvalidCastException>，並會顯示無法將型別 `MyType` 轉換成型別 `MyType` 的混淆訊息。  
   
- 例如，您的程式可能會直接載入 `Utility` 組件的一個版本，之後可能會載入另一個載入 `Utility` 組件之不同版本的組件。 或者，程式碼錯誤可能會在應用程式中產生兩個不同的程式碼路徑，以載入組件的不同版本。  
+ 例如，您的程式可能會直接載入一個版本的 `Utility` 組件，且稍後可能會載入另一個組件，該組件載入不同版本的 `Utility` 組件。  或者，程式碼錯誤可能會造成您應用程式中兩個不同的程式碼路徑載入不同版本的組件。  
   
- 在預設載入內容中，如果您使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，並指定包括不同版本號碼的完整組件顯示名稱，則會發生此問題。 針對載入時沒有內容的組件，使用 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName> 方法以從不同路徑載入相同組件時可能會發生問題。 執行階段會將兩個從不同路徑載入的組件視為不同組件，即使其身分識別相同也是一樣。  
+ 在預設載入內容中，當您使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法並指定包括不同版本號碼的完整組件顯示名稱時，可能會發生此問題。  若為無內容載入的組件，使用 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName> 方法從不同路徑載入相同組件可能會造成問題。  執行階段會將從不同路徑載入的兩個組件視為不同的組件，無論其識別是否相同。  
   
- 除了類型身分識別問題之外，如果將從某個版本的組件載入的類型傳遞給預期來自不同版本之該類型的程式碼，則組件的多個版本可能還會導致 <xref:System.MissingMethodException>。 例如，程式碼可能預期已新增至較新版本的方法。  
+ 除了型別識別問題之外，如果將從一個組件版本載入的型別傳遞給預期從其他版本載入型別的程式碼時，多個組件版本會造成 <xref:System.MissingMethodException>。  例如，該程式碼可能預期已新增至更新版本的方法。  
   
- 如果版本之間的類型行為變更，可能會發生更細微的錯誤。 例如，方法可能會擲回未預期的例外狀況，或傳回未預期的值。  
+ 如果版本之間的型別行為變更，則可能會發生更多不明顯的錯誤。  例如，方法可能會擲回非預期的例外狀況或者傳回非預期的值。  
   
- 請仔細檢閱您的程式碼，確保只載入組件的一個版本。 您可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=fullName> 方法，判斷在任何指定時間載入的組件。  
+ 仔細檢閱程式碼，以確定僅載入一個版本的組件。  您隨時可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=fullName> 方法判斷載入哪些組件。  
   
 <a name="switch_to_default"></a>   
-## <a name="consider-switching-to-the-default-load-context"></a>考慮切換成預設載入內容  
- 檢查您應用程式的組件載入和部署模式。 您可以排除從位元組陣列載入的組件嗎？ 您可以將組件移到探查路徑嗎？ 如果組件位在全域組件快取或應用程式定義域的探查路徑中 (即其 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>)，您可以依其身分識別來載入組件。  
+## 考量切換至預設載入內容  
+ 請檢查應用程式的組件載入與部署模式。  您可以去除從位元組陣列載入的組件嗎？  您可以將組件移至探查路徑嗎？  如果組件位於全域組件快取或應用程式定義域的路徑中 \(也就是其 <xref:System.AppDomainSetup.ApplicationBase%2A> 與 <xref:System.AppDomainSetup.PrivateBinPath%2A>\)，則您可以依其識別載入組件。  
   
- 如果不可能將您的所有組件放在探查路徑中，請考慮使用替代項目，例如使用 .NET Framework 增益集模型、將組件放入全域組件快取中，或建立應用程式定義域。  
+ 如果無法將所有組件放置到探查路徑中，請考量替代方法，例如使用 .NET Framework 增益集模型，將組件放置在全域組件快取中或者建立應用程式定義域。  
   
-### <a name="consider-using-the-net-framework-add-in-model"></a>考慮使用 .NET Framework 增益集模型  
- 如果您使用載入來源內容來實作通常不會安裝在應用程式基底中的增益集，請使用 .NET Framework 增益集模型。 此模型會提供應用程式定義域或處理序層級的隔離，而不需要您自行管理應用程式定義域。 如需增益集模型的資訊，請參閱[增益集和擴充性](../../../docs/framework/add-ins/index.md)。  
+### 考量使用 .NET Framework 增益集模型  
+ 如果您使用載入來源內容實作通常未安裝在應用程式基底中的增益集，請使用 .NET Framework 增益集模型。  此模型會隔離應用程式定義域或處理程序等級，而不需要您自行管理應用程式定義域。  如需增益集模型的詳細資訊，請參閱[增益集和擴充性](../../../ml/index.xml)。  
   
-### <a name="consider-using-the-global-assembly-cache"></a>考慮使用全域組件快取  
- 將組件放入全域組件快取以受益於應用程式基底外部的共用組件路徑，而不會遺失預設載入內容的優點或造成其他內容的缺點。  
+### 考量使用全域組件快取  
+ 將組件放置在全域組件快取中，可以獲得應用程式基底之外共用組件路徑的優勢，同時不會失去預設載入內容的優勢也不會有其他內容的缺點。  
   
-### <a name="consider-using-application-domains"></a>考慮使用應用程式定義域  
- 如果您判斷無法在應用程式的探查路徑中部署部分組件，請考慮針對這些組件建立新的應用程式定義域。 使用 <xref:System.AppDomainSetup> 建立新的應用程式定義域，並使用 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> 屬性指定包含您想要載入之組件的路徑。 如果您有多個要探查的目錄，則可以將 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定為根目錄，並使用 <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 屬性來識別要探查的子目錄。 或者，您可以建立多個應用程式定義域，並將每個應用程式定義域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定為其組件的適當路徑。  
+### 考量使用應用程式定義域  
+ 如果您判斷部分組件無法在應用程式探查路徑中進行部署，請考量為那些組件建立新的應用程式定義域。  使用 <xref:System.AppDomainSetup> 來建立新的應用程式定義域，並使用 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> 屬性來指定包含您想要載入之組件的路徑。  如果您有多個要探查的目錄，則可以將 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定為根目錄，並使用 <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> 屬性來識別要探查的子目錄。  此外，您也可以建立多個應用程式定義域，並將每一個應用程式定義域的 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定為組件的適當路徑。  
   
- 請注意，您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法來載入這些組件。 因為它們現在是在探查路徑中，所以會將其載入到預設載入內容，而非載入來源內容。 不過，建議您切換成 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，並提供完整組件顯示名稱，確保一律使用正確版本。  
+ 請注意，您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 方法來載入這些組件。  由於現在它們位於探查路徑中，因此它們會載入預設載入內容而非載入來源內容。  然而，我們建議您切換至 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法並提供完整的組件顯示名稱，以確定始終使用正確的版本。  
   
-## <a name="see-also"></a>另請參閱  
+## 請參閱  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>   
  <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName>   
  <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>   
- [增益集和擴充性](../../../docs/framework/add-ins/index.md)
+ [增益集和擴充性](../../../ml/index.xml)

@@ -1,97 +1,148 @@
 ---
-title: ".NET Framework 中的應用程式相容性"
+title: ".NET Framework 中的應用程式相容性 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/19/2017
+ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
-- app-compat
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 8d4409b2bce36fe056d61633b056c1eac6ff290a
+ms.openlocfilehash: 076a603a6ea9f22ae7d1c554091506efae8b36eb
+ms.lasthandoff: 04/18/2017
 
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的應用程式相容性
+下列文章描述最新版 .NET Framework 的應用程式相容性問題：  
+  
+-   在版本 4 與 4.5 之間：[4.5 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
+  
+-   在版本 4.5 與 4.5.1 之間：[4.5.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
+  
+-   在版本 4.5.1 與 4.5.2 之間：[4.5.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
+  
+-   在版本 4.5.2 與 4.6 之間：[4.6 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+  
+-   在版本 4.6 與 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 之間：[4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   在版本 4.6.1 與 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之間：[4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-## <a name="introduction"></a>簡介
+- 在版本 4.6.2 與 .NET Framework 4.7 之間：[4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)  
 
-相容性是每個 .NET 版本都極為重視的目標。 相容性可確保每個版本都能累加，讓舊版仍能運作。 另一方面，舊版功能的變更 (為改善效能、處理安全性問題，或修正 Bug) 會造成現有程式碼或現有應用程式中在更新版本下執行的相容性問題。 .NET Framework 可辨識重定目標變更及執行階段變更。 重定目標變更會影響以 .NET Framework 特定版本為目標，但在更新版本上執行的應用程式。 執行階段變更會影響在特定版本上執行的所有應用程式。
+一般而言，我們已嘗試維護不同 .NET Framework 版本之間的高度回溯相容性，因此您不需要在更新版本上進行修改，即可執行以特定舊版為目標的應用程式。 大多數應用程式相容性問題的影響並不大，而且大多數問題不需要對您的應用程式進行程式設計修改。 對於需要修改的變更，請參閱這些連結中表格的 [影響] 一欄。  
+  
+## <a name="migrating-from-versions-before-the-net-framework-4"></a>從 .NET Framework 4 以前版本移轉
+  
+ 如果您想從 .NET Framework 4 以前的 .NET Framework 版本移轉，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：  
+  
+-   [.NET Framework 4 移轉問題](http://msdn.microsoft.com/library/ee941656\(v=vs.100\).aspx)  
+  
+-   [4.5 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
+  
+-   [4.5.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
+  
+-   [4.5.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
+  
+-   [4.6 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+  
+-   [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-每個應用程式都有特定版本的 .NET Framework 目標，可以下列方式指定：
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
+  
+## <a name="migrating-from-the-net-framework-4"></a>從 .NET Framework 4 移轉  
 
-- 在 Visual Studio 中定義目標架構。
-- 在專案檔中指定目標架構。
-- 將 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 套用至原始程式碼。
+如果您想從 .NET Framework 4 移轉至更新版本，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：  
+  
+-   [4.5 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
+  
+-   [4.5.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
+  
+-   [4.5.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
+  
+-   [4.6 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+  
+-   [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-在比目標版本更新的版本上執行時，.NET Framework 會使用古怪的行為，模擬較舊的目標版本。 換句話說，應用程式會在較新的 Framework 版本上執行，但表現出的行為如同在較舊的版本上執行。 .NET Framework 版本間的許多相容性問題是透過這種古怪的模型而降低。
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
+  
+## <a name="migrating-from-the-net-framework-45"></a>從 .NET Framework 4.5 移轉  
+ 如果您想從 .NET Framework 4.5 移轉至更新版本，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：  
+  
+-   [4.5.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
+  
+-   [4.5.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
+  
+-   [4.6 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+  
+-   [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-## <a name="runtime-changes"></a>執行階段變更
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
+  
+## <a name="migrating-from-the-net-framework-451"></a>從 .NET Framework 4.5.1 移轉  
 
-執行階段問題是在電腦上進行新的執行階段，而相同的二進位檔案也在執行時，會看到不同的行為。 如果二進位檔已針對 .NET Framework 4.0 編譯，它就可以在 4.5 或更新版本中以 .NET Framework 4.0 相容性模式執行。 許多影響 4.5 的變更不會影響針對 4.0 所編譯的二進位檔。 這是 AppDomain 特有的功能，視項目組件的設定而定。
+ 如果您想從 .NET Framework 4.5.1 移轉至更新版本，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：  
+  
+-   [4.5.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
+  
+-   [4.6 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+  
+-   [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-## <a name="retargeting-changes"></a>重定目標變更
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
+  
+## <a name="migrating-from-the-net-framework-452"></a>從 .NET Framework 4.5.2 移轉  
+ 如果您想從 .NET Framework 4.5.2 移轉至更新版本，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：  
+  
+-   [4.6 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
+  
+-   [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-重定目標問題，是當以 4.0 為目標的組件現在設定為以 4.5 為目標時發生的問題。 現在，組件選擇加入新功能並成為可能的舊功能相容性問題。 這同樣受項目組件支配，所以主控台應用程式會使用組件，或網站會參考組件。
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
+  
+## <a name="migrating-from-the-net-framework-46"></a>從 .NET Framework 4.6 移轉  
+ 如果您想從 .NET Framework 4.6 移轉至更新版本，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：  
+  
+-   [4.6.1 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
+  
+-   [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-## <a name="net-compatibility-diagnostics"></a>.NET 相容性診斷
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
+  
+## <a name="migrating-from-the-net-framework-461"></a>從 .NET Framework 4.6.1 移轉  
+ 如果您想從 .NET Framework 4.6.1 移轉，請檢閱下列主題中可能影響應用程式的應用程式相容性問題：
+ 
+- [4.6.2 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
 
-.NET 相容性診斷是由 Roslyn 提供的分析器，可協助您識別各版 .NET Framework 之間的應用程式相容性問題。 此清單包含所有可用的分析器，但只有一部分會套用至任何特定的移轉。 分析器會判斷適用於規劃之移轉的問題，並且只會呈現這些問題。
+- [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)  
 
-每個問題包含下列資訊：
+## <a name="migrating-from-the-net-framework-462"></a>從 .NET Framework 4.6.2 移轉
 
--   舊版中已變更的內容描述。
+如果您想從 .NET Framework 4.6.2 移轉，請檢閱 [4.7 中的應用程式相容性](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)中可能影響應用程式的應用程式相容性問題。  
 
--   變更如何影響客戶，以及是否有任何因應措施可保留版本間的相容性。
-
--   變更的重要性評估。 應用程式相容性問題可分類如下：
-
-    |   |   |
-    |---|---|
-    |主要|影響大量應用程式或需要大幅修改程式碼的重大變更。|
-    |次要|影響少量應用程式或需要稍微修改程式碼的變更。|
-    |邊緣案例|在非常特定 (罕見) 的情況下影響應用程式的變更。|
-    |透明|對應用程式的開發人員或使用者影響的不明顯變更。|
-
--   第一次出現此變更的 Framework 版本。 也指出某些變更會引入到特定版本，然後在更新版本中還原。
-
--   變更類型：
-
-    |   |   |
-    |---|---|
-    |正在重定目標|此變更會影響為了以新版 .NET Framework 為目標而重新編譯的應用程式。|
-    |執行階段|此變更會影響以舊版 .NET Framework 為目標但在新版上執行的現有應用程式。|
-
--   受影響的 API (如果有的話)。
-
--   可用診斷的識別碼
-
-## <a name="usage"></a>使用方式
-
-若要開始，請選取以下的相容性變更類型：
-
-- [重定目標變更](./retargeting/index.md)
-- [執行階段變更](./runtime/index.md)
-
-
-## <a name="see-also"></a>請參閱
-
-[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[新功能](../../../docs/framework/whats-new/index.md)   
-[類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
+## <a name="see-also"></a>另請參閱  
+ [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
+ [新功能](../../../docs/framework/whats-new/index.md)   
+ [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
 

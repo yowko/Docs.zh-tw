@@ -1,6 +1,6 @@
 ---
 title: "C# 程式設計指南 | Microsoft Docs"
-ms.date: 2017-05-02
+ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -32,52 +32,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d13005e3151058dfe1651b965d6dc6055b26210
-ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4a4c3f5dbe375f723b70f62ccee1a91d577f4949
+ms.lasthandoff: 03/13/2017
 
 ---
-<a id="c-programming-guide" class="xliff"></a>
-
-# C# 程式設計手冊
+# <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
   
  本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是程式設計或 C# 的新手，可造訪 [C# 開發人員中心](http://go.microsoft.com/fwlink/?linkid=95125)，您可以在其中找到許多可協助您開始使用的教學課程、範例和影片。  
   
  如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification.md)。  
   
-<a id="program-sections" class="xliff"></a>
-
-## 程式區段
-
-[C# 程式內部](../../csharp/programming-guide/inside-a-program/index.md)  
+## <a name="language-sections"></a>語言章節  
+ [C# 程式內部](../../csharp/programming-guide/inside-a-program/index.md)  
   
-[Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
- 
-<a id="language-sections" class="xliff"></a>
-
-## 語言章節  
-[陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
-
+ [Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
+  
  [型別](../../csharp/programming-guide/types/index.md)  
-
- [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
   
- [介面](../../csharp/programming-guide/interfaces/index.md)  
-
- [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
-  
- [委派](../../csharp/programming-guide/delegates/index.md)  
- 
  [陣列](../../csharp/programming-guide/arrays/index.md)  
   
  [字串](../../csharp/programming-guide/strings/index.md)  
   
+ [陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+  
+ [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
+  
  [屬性](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
+ [介面](../../csharp/programming-guide/interfaces/index.md)  
+  
  [索引子](../../csharp/programming-guide/indexers/index.md)  
+  
+ [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
+  
+ [委派](../../csharp/programming-guide/delegates/index.md)  
   
  [事件](../../csharp/programming-guide/events/index.md)  
   
@@ -97,9 +88,7 @@ ms.lasthandoff: 06/06/2017
   
  [XML 文件註解](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-<a id="platform-sections" class="xliff"></a>
-
-## 平台章節  
+## <a name="platform-sections"></a>平台章節  
  [應用程式定義域 (C# 和 Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [組件和全域組件快取](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
@@ -116,8 +105,9 @@ ms.lasthandoff: 06/06/2017
   
  [反映](../../csharp/programming-guide/concepts/reflection.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
+## <a name="featured-book-chapter"></a>精選書籍章節  
+ [Nutshell 第三版中的 C# 3.0：桌面快速參考 (英文)](http://go.microsoft.com/fwlink/?LinkId=195406) 中的[進階 C#](http://go.microsoft.com/fwlink/?LinkId=195407)  
+  
+## <a name="see-also"></a>另請參閱  
  [C# 參考](../../csharp/language-reference/index.md)   
  [C#](../../csharp/csharp.md)

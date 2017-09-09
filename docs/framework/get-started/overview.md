@@ -19,15 +19,13 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/19/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bed74cee6db01a38bc0bc3c6eeffa33b682bbd80
+ms.lasthandoff: 04/18/2017
 
 ---
-<a id="overview-of-the-net-framework" class="xliff"></a>
-# .NET Framework 的概觀
+# <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 .NET Framework 是支援建置和執行新一代應用程式及 XML Web Services 的技術。 .NET Framework 是專為實現以下目標所設計的：  
   
 -   提供一致的物件導向程式設計環境，不論目的碼 (Object Code) 是在本機中儲存及執行、在本機執行但分散至網際網路或在遠端執行。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 05/19/2017
 -   根據業界標準建置所有通訊，確保以 .NET Framework 為基礎的程式碼能夠與其他程式碼整合。  
   
 > [!NOTE]
->  如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。  
+>  如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](../../../docs/framework/get-started/index.md)。 若要下載 .NET Framework，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。  
   
  .NET Framework 是由 Common Language Runtime 和 .NET Framework 類別庫所組成。 Common Language Runtime 是 .NET Framework 的基礎。 您可以將執行階段視為在執行時間管理程式碼的代理程式，提供類似像記憶體管理、執行緒管理和遠端處理等核心服務，同時執行嚴格的型別安全 (Type Safety) 以及加強安全性和強固性的其他形式的程式碼正確率。 事實上，程式碼管理的概念是此執行階段的基本原則。 以此執行階段為目標的程式碼，被稱為 Managed 程式碼，而不以此執行階段為目標的程式碼，則被稱為 Unmanaged 程式碼。 類別庫是範圍廣泛、物件導向、可重複使用類型的集合，您可用它來開發的應用程式，範圍從傳統命令列或圖形使用者介面 (GUI) 應用程式到以 ASP.NET 所提供最新創新方式為基礎的應用程式，例如 Web Form 和 XML Web Services，都包括在內。  
   
@@ -60,8 +58,7 @@ ms.lasthandoff: 05/19/2017
   
  下列章節將更詳細說明 .NET Framework 的主要功能。  
   
-<a id="features-of-the-common-language-runtime" class="xliff"></a>
-## Common Language Runtime 的功能  
+## <a name="features-of-the-common-language-runtime"></a>Common Language Runtime 的功能  
  Common Language Runtime 負責管理記憶體、執行緒執行、程式碼執行、程式碼安全驗證、編譯 (Compilation) 和其他系統服務。 這些功能都內建到在 Common Language Runtime 上執行的 Managed 程式碼中。  
   
  就安全性而言，Managed 元件會根據若干因素而被授予不同程度的信任，這些因素包括元件的原始出處 (例如網際網路、企業網路或本機電腦)。 這表示即使是在相同作用中的應用程式中使用，Managed 元件可能可以也可能無法執行檔案存取作業、註冊存取作業或其他易受影響的功能。  
@@ -80,8 +77,7 @@ ms.lasthandoff: 05/19/2017
   
  最後，執行階段可由高效能、伺服器端的應用程式裝載，例如 Microsoft SQL Server 和 Internet Information Services (IIS)。 這個基礎架構讓您使用 Managed 程式碼撰寫商務邏輯的同時，仍能夠享受到由業界最佳、可支援執行階段主應用程式的企業伺服器所提供的超高效能。  
   
-<a id="net-framework-class-library" class="xliff"></a>
-## .NET Framework 類別庫  
+## <a name="net-framework-class-library"></a>.NET Framework 類別庫  
  .NET Framework 類別庫是與 Common Language Runtime 緊密整合的可重複使用型別的集合。 這種類別庫為物件導向，可提供您個人 Managed 程式碼從中衍生出功能的型別。 這不僅使得 .NET Framework 型別易於使用，更減少學習 .NET Framework 新功能所花費的時間。 此外，協力廠商元件可完美地與 .NET Framework 中的類別整合。  
   
  例如，.NET Framework 集合類別 (Collection Class) 實作您可用來開發您個人集合類別的一組介面。 您的集合類別將完美地與 .NET Framework 中的類別混合在一起。  
@@ -104,10 +100,9 @@ ms.lasthandoff: 05/19/2017
   
  例如，Windows Form 類別是範圍廣泛、可重複使用的一組型別，可大幅簡化 Windows GUI 的開發。 如果您撰寫 ASP.NET Web Form 應用程式，您可以使用 Web Form 類別。  
   
-<a id="see-also" class="xliff"></a>
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統需求](../../../docs/framework/get-started/system-requirements.md)   
- [安裝指南](../../../docs/framework/install/index.md)   
+ [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
  [開發指南](../../../docs/framework/development-guide.md)   
  [工具](../../../docs/framework/tools/index.md)   
  [.NET Framework 範例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   

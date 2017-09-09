@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 中的程式設計"
+title: "Visual Basic 中的程式設計 | Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -29,11 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cabdb8b0b297f92f3ff323a989a812cc822c2ad5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1aed5aa95d9c7177ea52c28b2a169fdde8dc5ec4
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 中的程式設計
@@ -66,4 +65,3 @@ ms.lasthandoff: 07/28/2017
  [程式設計概念](../../../visual-basic/programming-guide/concepts/index.md)   
  [集合](../../../visual-basic/programming-guide/concepts/collections.md)   
  [使用 Visual Basic 開發應用程式](../../../visual-basic/developing-apps/index.md)
-

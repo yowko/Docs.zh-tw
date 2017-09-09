@@ -19,11 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 9aaf49c685498bce451eb53a35a56d8a8fde928c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 67b30a93fd046a76dca4cc6abe273426d818aaf5
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="using-async-for-file-access-c"></a>使用非同步方式存取檔案 (C#)
@@ -58,7 +57,7 @@ using System.Threading.Tasks;
 ## <a name="use-of-the-filestream-class"></a>使用 FileStream 類別  
  本主題中的範例使用 <xref:System.IO.FileStream> 類別，其所包含的一個選項會導致在作業系統層級發生非同步 I/O。 您可以在許多情況下，使用此選項來避免封鎖 ThreadPool 執行緒。 若要啟用此選項，請在建構函式呼叫中指定 `useAsync=true` 或 `options=FileOptions.Asynchronous` 引數。  
   
- 如果您藉由指定檔案路徑來直接開啟它們，就無法搭配使用這個選項與 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>。 不過，如果您提供它們已開啟 <xref:System.IO.FileStream> 類別的 <xref:System.IO.Stream>，則可以使用此選項。 請注意，即使已封鎖 ThreadPool 執行緒，非同步呼叫在 UI 應用程式中還是更快，因為在等候期間不會封鎖 UI 執行緒。  
+ 如果藉由指定檔案路徑直接將它們開啟，則無法搭配 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter> 使用此選項。 不過，如果為它們提供了已開啟 <xref:System.IO.FileStream> 類別的 <xref:System.IO.Stream>，則可以使用此選項。 請注意，即使已封鎖 ThreadPool 執行緒，非同步呼叫在 UI 應用程式中還是更快，因為在等候期間不會封鎖 UI 執行緒。  
   
 ## <a name="writing-text"></a>寫入文字  
  下列範例會將文字寫入檔案。 在每個 await 陳述式中，此方法會立即結束。 當檔案 I/O 完成時，此方法會在 await 陳述式後面的陳述式繼續進行。 請注意，使用 await 陳述式的方法定義中會有 async 修飾詞。  
@@ -95,7 +94,7 @@ await theTask;
  第一個陳述式會傳回一個工作並開始處理檔案。 第二個陳述式具有 await，會立即結束方法並傳回其他工作。 稍後完成處理檔案之後，則會回到 await 後面的陳述式繼續執行。 如需詳細資訊，請參閱[非同步程式中的控制流程 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
   
 ## <a name="reading-text"></a>讀取文字  
- 下列範例會從檔案讀取文字。 此文字已經過緩衝處理，在本例中已置於 <xref:System.Text.StringBuilder>。 不同於上一個範例，await 的評估會產生一個值。 <xref:System.IO.Stream.ReadAsync%2A> 方法會傳回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在作業完成之後，await 的評估會產生 `Int32` 值 (`numRead`)。 如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+ 下列範例會從檔案讀取文字。 此文字已經過緩衝處理，在本例中已置於 <xref:System.Text.StringBuilder>。 不同於上一個範例，await 的評估會產生一個值。 <xref:System.IO.Stream.ReadAsync%2A> 方法會傳回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此作業完成後，await 的評估會產生 `Int32` 值 (`numRead`)。 如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ```csharp  
 public async void ProcessRead()  
@@ -189,7 +188,7 @@ public async void ProcessWriteMult()
 }  
 ```  
   
- 使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法時，您可以指定 <xref:System.Threading.CancellationToken>，這可用來在中途取消作業。 如需詳細資訊，請參閱[微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) 和 [Managed 執行緒中的取消作業](../../../../standard/threading/cancellation-in-managed-threads.md)。  
+ 使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法時，您可以指定 <xref:System.Threading.CancellationToken>，以便在中途用來取消作業。 如需詳細資訊，請參閱[微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) 和 [Managed 執行緒中的取消作業](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   

@@ -1,5 +1,5 @@
 ---
-title: "C# 陳述式 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 陳述式 | C# 語言教學課程"
 description: "您將使用陳述式來建立 C# 程式的動作"
 keywords: ".NET, csharp, 陳述式, 語法"
 author: BillWagner
@@ -11,29 +11,28 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: a6389d041fd9e464a40a86c4c7a4075086d05e9b
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b5849264844a28ba02fb1f539de06b207be9cd26
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 
-# 陳述式
-<a id="statements" class="xliff"></a>
+# <a name="statements"></a>陳述式
 
 程式的動作是藉由*陳述式*來表達。 C# 支援數種不同類型的陳述式，其中一些是以內嵌陳述式來定義。
 
-「區塊」可允許在許可單一陳述式的內容中撰寫多個陳述式。 區塊是由在 `{` 與 `}` 分隔符號之間撰寫的陳述式清單所組成。
+*「區塊」*可允許在許可單一陳述式的內容中撰寫多個陳述式。 區塊是由在 `{` 與 `}` 分隔符號之間撰寫的陳述式清單所組成。
 
-「宣告陳述式」可用來宣告區域變數和常數。
+*「宣告陳述式」*可用來宣告區域變數和常數。
 
-「運算式陳述式」可用來評估運算式。 可用來作為陳述式的運算式包括方法叫用、使用 `new` 運算子的物件配置、使用 `=` 和複合指派運算子的指派、使用 `++` 和 `--` 運算子的遞增和遞減運算，以及 `await` 運算。
+*「運算式陳述式」*可用來評估運算式。 可用來作為陳述式的運算式包括方法叫用、使用 `new` 運算子的物件配置、使用 `=` 和複合指派運算子的指派、使用 `++` 和 `--` 運算子的遞增和遞減運算，以及 `await` 運算。
 
-「選取範圍陳述式」可用來選取一些可能陳述式的其中之一，以根據某個運算式的值來執行。 在此群組中的是 `if` 和 `switch` 陳述式。
+*「選取範圍陳述式」*可用來選取一些可能陳述式的其中之一，以根據某個運算式的值來執行。 在此群組中的是 `if` 和 `switch` 陳述式。
 
-「反覆運算陳述式」可用來重複執行內嵌的陳述式。 在此群組中的是 `while`、`do`、`for` 及 `foreach` 陳述式。
+*「反覆運算陳述式」*可用來重複執行內嵌的陳述式。 在此群組中的是 `while`、`do`、`for` 及 `foreach` 陳述式。
 
-「跳躍陳述式」可用來轉移控制項。 在此群組中的是 `break`、`continue`、`goto`、`throw`、`return` 及 `yield` 陳述式。
+*「跳躍陳述式」*可用來轉移控制項。 在此群組中的是 `break`、`continue`、`goto`、`throw`、`return` 及 `yield` 陳述式。
 
 `try`...`catch` 陳述式可用來攔截在執行區塊時發生的例外狀況，而 `try`...`finally` 陳述式則可用來指定不論是否發生例外狀況都一律會執行的最終處理程式碼。
 
@@ -120,5 +119,4 @@ ms.lasthandoff: 05/23/2017
 >[!div class="step-by-step"]
 [上一頁](expressions.md)
 [下一頁](classes-and-objects.md)
-
 

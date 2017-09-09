@@ -59,14 +59,14 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
- 常數可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected``internal`。 這些存取修飾詞定義類別使用者如何存取常數。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 常數可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected internal`。 這些存取修飾詞定義類別使用者如何存取常數。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
- 因為類型之所有執行個體的常數值都會相同，所以常數的存取方式就像它們是 [static](../../../csharp/language-reference/keywords/static.md) 欄位一樣。 您未使用 `static` 關鍵字來宣告它們。 不在定義常數之類別中的運算式必須使用類別名稱、句號以及存取常數的常數名稱。 例如:   
+ 因為類型之所有執行個體的常數值都會相同，所以常數的存取方式就像它們是 [static](../../../csharp/language-reference/keywords/static.md) 欄位一樣。 您不用使用 `static` 關鍵字來宣告它們。 不在定義常數之類別中的運算式必須使用類別名稱、句號以及存取常數的常數名稱。 例如: 
   
  [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

@@ -29,11 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8c4c52096803ff0cbf311afb2a0e38a7f37cf86c
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
@@ -44,7 +43,7 @@ ms.lasthandoff: 03/28/2017
 ## <a name="in-this-section"></a>本章節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- 說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 建立非同步解決方案。  
+ 說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) (已在 [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)] 中引入) 建立非同步方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  顯示如何建立 [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]類型，並將其封裝為 [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]元件，然後從 [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)]應用程式呼叫元件，而應用程式使用 JavaScript 針對 Windows 所建置。  

@@ -10,17 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/26/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f2c81b7e18f36bde5b46c0c6df5c8122cd303931
+ms.lasthandoff: 03/13/2017
 
 ---
 
 # <a name="c-tuple-types"></a>C# Tuple 類型 #
 
-C# Tuple 是您使用輕量型語法所定義的類型。 優點包括更簡單的語法、根據欄位數目 (稱為 "arity") 和類型的轉換規則，以及複製和指派的一致規則。 折衷方式是，Tuple 不支援與繼承建立關聯的一些物件導向慣用語。 您可以在 [C# 7 之新功能中的 Tuple](whats-new/csharp-7.md#tuples) 主題的一節中取得概觀。
+C# Tuple 是您使用輕量型語法所定義的類型。 優點包括更簡單的語法、根據欄位數目 (稱為 "arity") 和類型的轉換規則，以及複製和指派的一致規則。 折衷方式是，Tuple 不支援與繼承建立關聯的一些物件導向慣用語。 您可以在 [C# 7 之新功能中的 Tuple](csharp-7.md#tuples) 主題的一節中取得概觀。
 
 在本主題中，您將了解在 C# 7 中控管 Tuple 的語言規則、不同的 Tuple 使用方式，以及使用 Tuple 的初始指導。
 
@@ -37,18 +36,18 @@ C# Tuple 是您使用輕量型語法所定義的類型。 優點包括更簡單�
 Tuple 的新語言功能與架構中的一組新類別一起使用，可解決這些缺點。 這些新的 Tuple 使用新的 `ValueTuple` 泛型結構。 如名稱所示，此類型是 `struct`，而非 `class`。 這個結構有不同的版本，可支援具有不同數目的欄位的 Tuple。 新的語言支援提供 Tuple 類型之欄位的語意名稱，以及可更較鬆地建構或存取 Tuple 欄位的功能。
 
 語言功能和 `ValueTuple` 泛型結構會強制執行您無法將任何行為 (方法) 新增至這些 Tuple 類型的規則。
-所有 `ValueTuple` 類型都是「可變動結構」。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
+所有 `ValueTuple` 類型都是「可變動結構」**。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
 
 Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容器。 讓我們來探索這些差異。
 
 ## <a name="named-and-unnamed-tuples"></a>具名和未具名 Tuple
 
 `ValueTuple` 結構具有名為 `Item1`、`Item2`、`Item3` 等等的欄位，而這些欄位與現有 `Tuple` 類型中所定義的屬性類似。
-這些名稱只是您可用於「未具名 Tuple」的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
+這些名稱只是您可用於「未具名 Tuple」**的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple " Tuple")]
 
-不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」。
+不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」**。
 具名 Tuple 仍然會有名為 `Item1`、`Item2`、`Item3` 等等的欄位。
 但它們也擁有任何具名欄位的同義字。
 您可以指定每個欄位的名稱，以建立具名 Tuple。 其中一個方式是在 Tuple 初始化期間指定名稱：
@@ -66,7 +65,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 ## <a name="assignment-and-tuples"></a>指派和 Tuple
 
-語言支援在欄位數目相同且所有這些欄位都具有隱含轉換的 Tuple 類型間的指派。 不會考慮對指派進行其他轉換。 讓我們看看 Tuple 類型之間允許的指派類型。
+語言支援在欄位數目相同且所有這些欄位都具有相同類型的 Tuple 類型間的指派。 這些類型必須是完全相同的編譯時期相符項目。 不會考慮對指派進行其他轉換。 讓我們看看 Tuple 類型之間允許的指派類型。
 
 請考慮在下列範例中使用的這些參數：
 
@@ -167,7 +166,7 @@ Tuple 可能十分有用的另一個慣用語是編寫 LINQ 查詢時，而在�
 
 ## <a name="deconstruction"></a>解構
 
-您可以「解構」方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有兩種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立 Tuple 中每個欄位的離散變數：
+您可以「解構」**方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有兩種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立 Tuple 中每個欄位的離散變數：
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -182,7 +181,7 @@ Tuple 可能十分有用的另一個慣用語是編寫 LINQ 查詢時，而在�
 ```
 請注意，您無法在括弧外部使用特定類型，即使 Tuple 中的每個欄位都有相同的類型也是一樣。
 
-### <a name="deconstructing-user-defined-types"></a>解構使用者定義型別
+### <a name="deconstring-user-defined-types"></a>解構使用者定義型別
 
 任何 Tuple 類型都可以如上進行解構。 也很容易在任何使用者定義型別 (類別、結構，甚至是介面) 上啟用解構。
 

@@ -1,5 +1,5 @@
 ---
-title: "使用 dotnet test 和 xUnit 的 .NET Core 單元測試"
+title: "使用 dotnet test 的 .NET Core 單元測試 | Microsoft Docs"
 description: "使用 dotnet test 的 .NET Core 單元測試"
 keywords: .NET, .NET Core
 author: ardalis
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6bb539231e7c0101755193d612e15893f9637fe1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
+ms.openlocfilehash: 3ca312509d7ba7a7759d1ac294f79cc359419c52
+ms.lasthandoff: 03/22/2017
 
 ---
-# <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 的 .NET Core 單元測試
 
-本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+# <a name="unit-testing-in-net-core-using-dotnet-test"></a>使用 dotnet test 的 .NET Core 單元測試
+
+本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/)。
 
 ### <a name="creating-the-source-project"></a>建立來源專案
 
@@ -48,7 +48,7 @@ namespace Prime.Services
 
 ### <a name="creating-the-test-project"></a>建立測試專案
 
-將目錄變更回 *unit-testing-using-dotnet-test* 目錄，然後建立 *PrimeService.Tests* 目錄。 目錄結構如下所示：
+將目錄變更回 *unit-testing-using-dotnet-test* 目錄，然後建立 *PrimeServices.Tests* 目錄。 目錄結構如下所示：
 
 ```
 /unit-testing-using-dotnet-test

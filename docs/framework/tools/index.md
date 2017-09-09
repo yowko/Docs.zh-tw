@@ -28,7 +28,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: baaf365a21661b377f8151e5d97ac16542aa2c36
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具

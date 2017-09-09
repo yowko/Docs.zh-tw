@@ -19,11 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 9565d0af978f1a1bc3744db127ac75911b519ab2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4de303da9215fb07ecbb6bfff78d18dcd246aad3
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>如何：判斷檔案是否為組件 (C#)
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/10/2017
   
 2.  載入要測試的檔案。  
   
-3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)主題。  
+3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱[如何：檢視組件內容](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709)主題。  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以程式設計方式判斷檔案是否為組件  
   
@@ -81,7 +80,7 @@ class TestAssembly
 */  
 ```  
   
- <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。  
+ <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊後將其釋出。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.AssemblyName>   

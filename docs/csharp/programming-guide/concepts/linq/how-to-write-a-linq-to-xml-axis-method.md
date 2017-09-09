@@ -15,10 +15,10 @@ caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: afaaaa497a16c1dbf0f3e0e81351f5c614732d44
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9d85a92fc4d9f1d2ed53ff01e23c20877b3952b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/30/2017
 ## <a name="example"></a>範例  
  下列範例使用兩種擴充方法。 第一個擴充方法 `GetXPath` 會在 <xref:System.Xml.Linq.XObject> 上運算，並在接受評估時，傳回將傳回節點或屬性的 XPath 運算式。 第二個擴充方法 `Find` 會在 <xref:System.Xml.Linq.XElement> 上運算。 該擴充方法會傳回包含某些指定之文字的 <xref:System.Xml.Linq.XAttribute> 物件集合和 <xref:System.Xml.Linq.XElement> 物件集合。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 public static class MyExtensions  

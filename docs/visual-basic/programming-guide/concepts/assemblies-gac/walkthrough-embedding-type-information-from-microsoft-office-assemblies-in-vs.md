@@ -20,17 +20,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>逐步解說︰ 將從 Microsoft Office 組件的類型資訊內嵌在 Visual Studio (Visual Basic)
 如果您參考的 COM 物件的應用程式中內嵌類型資訊，您可以不需要主要 interop 組件 (PIA)。 此外，內嵌的類型資訊可讓您達成版本獨立應用程式。 也就是您的程式可以寫入使用 COM 程式庫的多個版本的型別，而不需要特定的 PIA，每個版本。 這是與 Microsoft Office 文件庫中使用物件的應用程式的常見案例。 內嵌類型資訊，可讓相同組建的程式以使用不同版本的 Microsoft Office，而不需要重新部署的程式或每個版本的 Microsoft Office PIA 的不同電腦上。  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
 ## <a name="prerequisites"></a>必要條件  
  本逐步解說需要下列項目：  

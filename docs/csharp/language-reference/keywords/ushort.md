@@ -1,6 +1,6 @@
 ---
 title: "ushort (C# 參考) | Microsoft Docs"
-ms.date: 2017-03-14
+ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,15 +30,13 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort (C# 參考)
-
 `ushort` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數資料類型。  
   
 |類型|範圍|大小|.NET Framework 類型|  
@@ -46,32 +44,25 @@ ms.lasthandoff: 03/24/2017
 |`ushort`|0 到 65,535|不帶正負號的 16 位元整數|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
-
-您可以將十進位常值、十六進位常值，或二進位常值 (自 C# 7 起) 指派給 `ushort` 變數，以將其宣告和初始化。 如果整數常值超出 `ushort` 範圍 (也就是說，如果它小於 <xref:System.UInt16.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt16.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
-
-在下列範例中，以十進位、十六進位和二進位常值表示的 65,034 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 隱含轉換成 `ushort` 值。    
+ 您可以宣告並初始化 `ushort` 變數，如下列範例所示：  
   
-[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
-
-> [!NOTE] 
-> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。
-
-自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
-
-[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
- 
-## <a name="compiler-overload-resolution"></a>編譯器多載解析
+```  
+  
+ushort myShort = 65535;  
+```  
+  
+ 在上述宣告中，整數常值 `65535` 會從 [int](../../../csharp/language-reference/keywords/int.md) 隱含地轉換為 `ushort`。 如果整數常值超出 `ushort` 範圍，就會發生編譯錯誤。  
   
  當您呼叫多載方法時，必須使用轉換。 例如，請考慮使用下列使用 `ushort` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
-```csharp  
+```  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
- 
- 使用 `ushort` 轉型時，可以保證呼叫正確的類型，例如：  
   
-```csharp  
+ 使用 `ushort` 轉換時，可以保證呼叫正確的類型，例如：  
+  
+```  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -83,39 +74,42 @@ SampleMethod((ushort)5);
   
  有一項從 [byte](../../../csharp/language-reference/keywords/byte.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 轉換為 `ushort` 之預先定義的隱含轉換。 否則必須使用轉換來執行明確轉換。 例如，請考慮使用下列兩個 `ushort` 變數 `x` 和 `y`：  
   
-```csharp 
+```  
+  
 ushort x = 5, y = 12;  
 ```  
   
  因為指派運算子右邊的算術運算式預設會評估為 `int`，所以下列指派陳述式將會產生編譯錯誤。  
   
-```csharp  
+```  
+  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  若要修正這個問題，請使用轉換：  
   
-```csharp 
+```  
+  
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  不過，可以使用目的地變數具有相同或較大儲存大小的下列陳述式：  
   
-```csharp
+```  
 int m = x + y;  
 long n = x + y;  
 ```  
   
- 另請注意，不會從浮點類型隱含地轉換為 `ushort`。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
+ 另請注意，沒有從浮點類型轉換為 `ushort` 的隱含轉換。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
   
-```csharp  
+```  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  
 ushort y = (ushort)3.0;  
 ```  
   
- 如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
+ 如需混合浮點類型和整數型別之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
   
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
@@ -127,7 +121,7 @@ ushort y = (ushort)3.0;
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

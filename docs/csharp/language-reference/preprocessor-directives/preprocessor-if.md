@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"if-c-reference--microsoft-docs\"></a>if (C# 參考) | Microsoft Docs"
+title: "#if (C# 參考) | Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="if-c-reference"></a>#if (C# 參考)
 當 C# 編譯器遇到 `#if` 指示詞 (最後面接著 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 指示詞) 時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。  不同於 C 和 C++，您無法將數值指派給符號；C# 中的 #if 陳述式是布林值，只會測試是否已定義符號。 例如：  
   
-```csharp
+```  
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="example"></a>範例  
   
-```csharp
+```  
 // preprocessor_if.cs  
 #define DEBUG#define MYTEST  
 using System;  
@@ -90,4 +90,3 @@ public class MyClass
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
-

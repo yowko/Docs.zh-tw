@@ -43,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>語法  
   
-```console  
+```  
 /main:class  
 ```  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  編譯 `t2.cs` 和 `t3.cs`，將 **Main** 方法的位置指定在 `Test2` 中：  
   
-```console  
+```  
 csc t2.cs t3.cs /main:Test2  
 ```  
   

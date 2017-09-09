@@ -28,15 +28,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
-ms.openlocfilehash: 21180ce100f81e38b327347e548929a47a2e029d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/25/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 59bb61d8dd530e87f342d38acb131fab5e25febf
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
-您可以宣告區域變數而不提供明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需如何使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
+您可以為區域變數指定 `var` 的推斷「類型」，而不是明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需如何使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
   
  下列範例顯示可以使用 `var` 宣告區域變數的各種方法：  
   
@@ -108,4 +107,3 @@ ms.lasthandoff: 04/25/2017
  [for](../../../csharp/language-reference/keywords/for.md)   
  [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)
-

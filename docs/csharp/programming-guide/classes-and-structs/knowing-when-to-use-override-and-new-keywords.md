@@ -1,47 +1,28 @@
 ---
 title: "了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: 2015-07-20
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- override keyword [C#]
-- new keyword [C#]
-- polymorphism [C#], using override and new [C#]
+ms.date: "2015-07-20"
+ms.prod: ".net"
+ms.technology: 
+  - "devlang-csharp"
+ms.topic: "article"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "new 關鍵字 [C#]"
+  - "override 關鍵字 [C#]"
+  - "多型 [C#], 使用 Override 和 New [C#]"
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
 caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 4e7d42f65ec8e7a3d9246d801d5efe074f0714b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
-
+author: "BillWagner"
+ms.author: "wiwagn"
+caps.handback.revision: 16
 ---
-# <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊)
-在 C# 中，衍生類別的方法名稱可以與基底類別的方法名稱相同。 您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字來指定方法的互動方式。 `override` 修飾詞可「擴充」基底類別方法，而 `new` 修飾詞會「隱藏」基底類別方法。 本主題的範例會說明其間的差異。  
+# 了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊)
+在 C\# 中，衍生類別中的方法可以與基底類別中的方法同名。  您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字來指定方法互動的方式。  `override` 修飾詞會「*擴充*」\(Extend\) 基底類別方法，而 `new` 修飾詞則加以「*隱藏*」\(Hide\)。  本主題中的範例會說明此差異。  
   
- 在主控台應用程式中，宣告 `BaseClass` 和 `DerivedClass` 這兩個類別。 `DerivedClass` 繼承自 `BaseClass`。  
+ 在主控台應用程式中，宣告下列兩個類別：`BaseClass`和`DerivedClass`.  `DerivedClass` 繼承自 `BaseClass`。  
   
-```csharp  
+```c#  
 class BaseClass  
 {  
     public void Method1()  
@@ -57,19 +38,20 @@ class DerivedClass : BaseClass
         Console.WriteLine("Derived - Method2");  
     }  
 }  
+  
 ```  
   
- 在 `Main` 方法中，宣告 `bc`、`dc` 和 `bcdc` 變數。  
+ 在`Main`方法中，宣告變數`bc`，`dc`，和`bcdc`.  
   
--   `bc` 屬於 `BaseClass` 類型，而其值為 `BaseClass` 類型。  
+-   `bc` 屬於 `BaseClass`，而且其值的型別為 `BaseClass`。  
   
--   `dc` 屬於 `DerivedClass` 類型，而其值為 `DerivedClass` 類型。  
+-   `dc` 屬於 `DerivedClass`，而且其值的型別為 `DerivedClass`。  
   
--   `bcdc` 屬於 `BaseClass` 類型，而其值為 `DerivedClass` 類型。 這是值得注意的變數。  
+-   `bcdc` 屬於 `BaseClass`，而且其值的型別為 `DerivedClass`。  這是要注意的變數。  
   
- 由於 `bc` 和 `bcdc` 具有 `BaseClass` 類型，因此只能直接存取 `Method1` (除非您使用轉型)。 `dc` 變數可以同時存取 `Method1` 和 `Method2`。 下列程式碼顯示這些關聯性。  
+ 因為`bc`和`bcdc`具有類型`BaseClass`，除非您使用廣播，否則它們只能直接存取 `Method1`。  變數 `dc` 可以存取 `Method1` 和 `Method2`。  這些關聯性顯示在下列程式碼中。  
   
-```csharp  
+```c#  
 class Program  
 {  
     static void Main(string[] args)  
@@ -89,33 +71,36 @@ class Program
     // Derived - Method2  
     // Base - Method1  
 }  
+  
 ```  
   
- 接下來，將下列 `Method2` 方法新增至 `BaseClass`。 此方法的簽章與 `DerivedClass` 的 `Method2` 方法簽章相符。  
+ 接下來，將下列 `Method2` 方法加入至 `BaseClass` 中。  此方法的簽章與 `DerivedClass` 中的 `Method2` 方法簽章相符。  
   
-```csharp  
+```c#  
 public void Method2()  
 {  
     Console.WriteLine("Base - Method2");  
 }  
+  
 ```  
   
- 由於 `BaseClass` 現已具備 `Method2` 方法，因此您可以為 `BaseClass` 的 `bc` 和 `bcdc` 變數新增第二個呼叫陳述式，如下列程式碼所示。  
+ 因為`BaseClass`現在有`Method2`方法，可以加入 `BaseClass`變數`bc`和`bcdc` 的第二個呼叫陳述式，如下列程式碼所示。  
   
-```csharp  
+```c#  
 bc.Method1();  
 bc.Method2();  
 dc.Method1();  
 dc.Method2();  
 bcdc.Method1();  
 bcdc.Method2();  
+  
 ```  
   
- 在建置專案時，您會發現在新增 `BaseClass` 的 `Method2` 方法時會產生警告。 警告指出，`DerivedClass` 的 `Method2` 方法會隱藏 `BaseClass` 的 `Method2` 方法。 如果您想要這種結果，建議您在 `Method2` 定義中使用 `new` 關鍵字。 或者，您可以重新命名其中一個 `Method2` 方法來解決警告，但不一定總是可行。  
+ 當您產生專案時，您將看到，在 `BaseClass` 中加入 `Method2` 方法會產生警告。  警告表示，`DerivedClass` 中的 `Method2` 方法將 `Method2` 方法隱藏在 `BaseClass` 中。  如果想要產生這種結果，建議您使用 `Method2` 定義中的 `new` 關鍵字。  或者，您可以重新命名其中一個 `Method2`方法來解決警告，但這個方法並不實用。  
   
- 請先執行程式並查看其他呼叫陳述式所產生的輸出，之後再加入 `new`。 即會顯示下列結果。  
+ 加入 `new` 前，請執行程式以查看其他呼叫陳述式所產生的輸出。  將顯示下列結果。  
   
-```csharp  
+```c#  
 // Output:  
 // Base - Method1  
 // Base - Method2  
@@ -123,42 +108,46 @@ bcdc.Method2();
 // Derived - Method2  
 // Base - Method1  
 // Base - Method2  
+  
 ```  
   
- `new` 關鍵字會保留產生該輸出的關聯性，但是它會隱藏警告。 如果變數具有 `BaseClass` 類型，其會繼續存取 `BaseClass` 的成員，而含 `DerivedClass` 類型的變數則會繼續優先存取 `DerivedClass` 中的成員，然後才考慮繼承自 `BaseClass` 的成員。  
+ `new` 關鍵字保留產生該輸出的關聯性，但會隱藏警告。  型別為 `BaseClass` 的變數會繼續存取 `BaseClass` 的成員，而型別為 `DerivedClass` 的變數則首先繼續存取 `DerivedClass` 的成員，然後再考慮繼承自 `BaseClass` 的成員。  
   
- 若要隱藏警告，請將 `new` 修飾詞新增至 `DerivedClass` 中的 `Method2` 定義，如下列程式碼所示。 您可在 `public` 之前或之後的位置新增修飾詞。  
+ 若要隱藏此警告，請在 `DerivedClass` 中將 `new` 修飾詞加入至 `Method2` 的定義，如下列程式碼所示。  可在 `public` 之前或之後加入的修飾詞。  
   
-```csharp  
+```c#  
 public new void Method2()  
 {  
     Console.WriteLine("Derived - Method2");  
 }  
+  
 ```  
   
- 再次執行程式，確認輸出尚未變更， 另請確認警告已不再顯示。 使用 `new` 時，即表示您了解此關鍵字所修改的成員，會隱藏繼承自基底類別的成員。 如需透過繼承隱藏名稱的詳細資訊，請參閱 [new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)。  
+ 再次執行程式以確認輸出沒有改變。  同時驗證不會再出現警告。  使用 `new` 就明確表示您知道它所修改的成員會隱藏繼承自基底類別的成員  如需關於透過繼承隱藏名稱的詳細資訊，請參閱[new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md).  
   
- 若要比較這項行為與使用 `override` 的效果，請將下列方法新增至 `DerivedClass`。 您可在 `public` 之前或之後的位置新增 `override` 修飾詞。  
+ 若要將這個行為與使用 `override` 的影響進行對比，請將下列方法加入至 `DerivedClass`。  可在 `public` 之前或之後加入的 `override` 修飾詞。  
   
-```csharp  
+```c#  
 public override void Method1()  
 {  
     Console.WriteLine("Derived - Method1");  
 }  
+  
 ```  
   
- 請將 `virtual` 修飾詞新增至 `BaseClass` 的 `Method1` 定義。 您可在 `public` 之前或之後的位置新增 `virtual` 修飾詞。  
+ 將 `virtual` 修飾詞新增至`Method1` \(`BaseClass` 中\) 的定義。  可在 `public` 之前或之後加入的 `virtual` 修飾詞。  
   
-```csharp  
+```c#  
 public virtual void Method1()  
 {  
     Console.WriteLine("Base - Method1");  
 }  
+  
 ```  
   
- 重新執行專案。 請特別注意下列輸出的最後兩行。  
+ 再次執行專案。  請特別注意下列輸出的最後兩行。  
   
-```csharp  
+```c#  
 // Output:  
 // Base - Method1  
 // Base - Method2  
@@ -166,13 +155,14 @@ public virtual void Method1()
 // Derived - Method2  
 // Derived - Method1  
 // Base - Method2  
+  
 ```  
   
- 使用 `override` 修飾詞時，可讓 `bcdc` 存取 `DerivedClass` 中所定義的 `Method1` 方法。 一般而言，這是繼承階層架構所要的結果。 您希望物件的值都是從衍生類別所建立，以使用衍生類別中定義的方法。 您可以使用 `override` 來擴充基底類別方法，進而實現這種結果。  
+ 使用 `override` 修飾詞可讓 `bcdc` 存取 `DerivedClass` 中定義的 `Method1` 方法。  這通常是在繼承階層架構中所需的行為。  您需要具有從衍生類別建立之值的物件，才能使用衍生類別中定義的方法。  您可以使用 `override` 擴充基底類別方法，達成該行為。  
   
  下列程式碼包含完整的範例。  
   
-```csharp  
+```c#  
 using System;  
 using System.Text;  
   
@@ -238,11 +228,12 @@ namespace OverrideAndNew
         }  
     }  
 }  
+  
 ```  
   
- 下列範例說明不同內容中的類似行為。 此範例會定義下列三個類別：名為 `Car` 的基底類別，以及兩個由此衍生的 `ConvertibleCar` 和 `Minivan` 類別。 基底類別包含 `DescribeCar` 方法。 此方法會顯示車輛的基本描述，然後呼叫 `ShowDetails` 來提供其他資訊。 這三個類別都會定義 `ShowDetails` 方法。 `new` 修飾詞可用來定義 `ConvertibleCar` 類別中的 `ShowDetails`。 `override` 修飾詞可用來定義 `Minivan` 類別中的 `ShowDetails`。  
+ 下列範例說明不同內容中的類似行為。  此範例定義了三個類別：名為 `Car` 的基底類別和兩個衍生自此基底類別的類別 `ConvertibleCar` 和 `Minivan`。  基底類別包含`DescribeCar`方法。  此方法會顯示汽車的基本描述，然後呼叫 `ShowDetails` 提供其他資訊。  三個類別中，每一個都定義一個`ShowDetails`方法。  `new` 修飾詞用於定義 `ConvertibleCar` 類別中的 `ShowDetails`。  `override` 修飾詞用於定義 `Minivan` 類別中的 `ShowDetails`。  
   
-```csharp  
+```c#  
 // Define the base class, Car. The class defines two methods,  
 // DescribeCar and ShowDetails. DescribeCar calls ShowDetails, and each derived  
 // class also defines a ShowDetails method. The example tests which version of  
@@ -282,11 +273,12 @@ class Minivan : Car
         System.Console.WriteLine("Carries seven people.");  
     }  
 }  
+  
 ```  
   
- 此範例會測試哪個版本的 `ShowDetails` 受到呼叫。 下列 `TestCars1` 方法會宣告每個類別的執行個體，然後呼叫每個執行個體上的 `DescribeCar`。  
+ 此範例測試 `ShowDetails` 呼叫的是哪個版本。  下列方法 `TestCars1` 會宣告每個類別的執行個體，然後呼叫每個執行個體上的 `DescribeCar`。  
   
-```csharp  
+```c#  
 public static void TestCars1()  
 {  
     System.Console.WriteLine("\nTestCars1");  
@@ -308,11 +300,13 @@ public static void TestCars1()
     car3.DescribeCar();  
     System.Console.WriteLine("----------");  
 }  
+  
 ```  
   
- `TestCars1` 會產生下列輸出。 請特別注意，`car2` 的結果可能與您所預期的不同。 物件的類型是 `ConvertibleCar`，但 `DescribeCar` 不會存取 `ConvertibleCar` 類別中所定義的 `ShowDetails` 版本，因為該方法是使用 `new` 修飾詞來進行宣告，而不是 `override` 修飾詞。 如此一來，`ConvertibleCar` 物件顯示的描述會與 `Car` 物件相同。 `car3` (也就是 `Minivan` 物件) 的結果則相反。 在此情況下，`Minivan` 類別中所宣告的 `ShowDetails` 方法會覆寫 `Car` 類別中所宣告的 `ShowDetails` 方法，而且顯示的描述為休旅車。  
+ `TestCars1`會產生下列輸出。  請特別注意 `car2` 的結果，可能不是您所預期的。  物件的型別是 `ConvertibleCar`，但 `DescribeCar` 不會存取定義於 `ConvertibleCar` 類別之 `ShowDetails` 的版本，因為該方法是使用 `new` 修飾詞而非 `override` 修飾詞所宣告。  因此，`ConvertibleCar`物件會顯示與 `Car`物件相同的描述。  與 `car3` \(這是 `Minivan` 物件\) 的結果進行比較。  在這種情況下，在 `Minivan` 類別中宣告的 `ShowDetails`方法會覆寫在 `Car` 類別中宣告的 `ShowDetails`方法，所顯示的描述說明小型貨車。  
   
-```csharp  
+```c#  
+  
 // TestCars1  
 // ----------  
 // Four wheels and an engine.  
@@ -324,11 +318,12 @@ public static void TestCars1()
 // Four wheels and an engine.  
 // Carries seven people.  
 // ----------  
+  
 ```  
   
- `TestCars2` 會建立具有 `Car` 類型的物件清單。 物件的值是從 `Car`、`ConvertibleCar` 和 `Minivan` 類別具現化而得。 清單上的每個項目都會呼叫 `DescribeCar`。 下列程式碼顯示 `TestCars2` 的定義。  
+ `TestCars2` 會建立具有型別 `Car` 的物件清單。  物件的值是從 `Car`、`ConvertibleCar` 和 `Minivan` 類別具現化而來。  在清單的每個項目呼叫 `DescribeCar`。  下列程式碼顯示 `TestCars2` 的定義。  
   
-```csharp  
+```c#  
 public static void TestCars2()  
 {  
     System.Console.WriteLine("\nTestCars2");  
@@ -343,11 +338,12 @@ public static void TestCars2()
         System.Console.WriteLine("----------");  
     }  
 }  
+  
 ```  
   
- 隨即顯示下列輸出。 請注意，此輸出與 `TestCars1` 顯示的輸出相同。 不論物件的類型是 `ConvertibleCar` (如 `TestCars1` 中)，或 `Car` (如 `TestCars2` 中)，系統均不會呼叫 `ConvertibleCar` 類別的 `ShowDetails` 方法。 相反地，`car3` 會從 `Minivan` 呼叫這兩種類別的 `ShowDetails` 方法，不論其為 `Minivan` 類型或 `Car` 類型。  
+ 將顯示以下輸出。  請注意，這與 `TestCars1` 所顯示的輸出相同。  不論物件的型別是 `TestCars1` 中的 `ConvertibleCar`，還是 `TestCars2` 中的 `Car`，都不會呼叫 `ConvertibleCar` 類別的 `ShowDetails` 方法。  相反的，無論 `car3` 的型別是 `Minivan` 還是 `Car`，它在這兩種情況下都會呼叫 `Minivan` 類別中的 `ShowDetails` 方法。  
   
-```csharp  
+```c#  
 // TestCars2  
 // ----------  
 // Four wheels and an engine.  
@@ -359,11 +355,13 @@ public static void TestCars2()
 // Four wheels and an engine.  
 // Carries seven people.  
 // ----------  
+  
 ```  
   
- `TestCars3` 和 `TestCars4` 方法會完成範例。 這些方法會先從宣告為具有 `ConvertibleCar` 和 `Minivan` 類型的物件 (`TestCars3`)，再從物件宣告為具有 `Car` 類型的物件 (`TestCars4`) 直接呼叫 `ShowDetails`。 下列程式碼會定義這兩種方法。  
+ 下列範例使用了 `TestCars3` 和 `TestCars4` 方法。  這些方法會先從型別宣告為 `ConvertibleCar` 和 `Minivan` \(`TestCars3`\) 的物件，然後再從型別宣告為 `Car` \(`TestCars4`\) 的物件直接呼叫 `ShowDetails`。  下列程式碼會定義這兩個方法。  
   
-```csharp  
+```c#  
+  
 public static void TestCars3()  
 {  
     System.Console.WriteLine("\nTestCars3");  
@@ -383,11 +381,12 @@ public static void TestCars4()
     car2.ShowDetails();  
     car3.ShowDetails();  
 }  
+  
 ```  
   
- 這些方法會產生下列輸出，並與本主題中的第一個範例結果對應。  
+ 此方法會產生下列輸出，這對應至本主題中第一個範例的結果。  
   
-```csharp  
+```c#  
 // TestCars3  
 // ----------  
 // A roof that opens up.  
@@ -397,11 +396,12 @@ public static void TestCars4()
 // ----------  
 // Standard transportation.  
 // Carries seven people.  
+  
 ```  
   
- 下列程式碼顯示完整專案和其輸出。  
+ 下列程式碼顯示完整的專案及其輸出。  
   
-```csharp  
+```c#  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -562,12 +562,12 @@ namespace OverrideAndNew2
     }  
   
 }  
+  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## 請參閱  
+ [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)   
+ [使用 Override 和 New 關鍵字的進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)   
  [base](../../../csharp/language-reference/keywords/base.md)   
  [abstract](../../../csharp/language-reference/keywords/abstract.md)
-

@@ -28,11 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: a8c29002ae2287df60996ed2b23068eec1e2739b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8a4bbb2f6d8060cd9196dd510cd89c827c9d697d
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="using-exceptions-c-programming-guide"></a>使用例外狀況 (C# 程式設計手冊)
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/15/2017
   
  擲回例外狀況之後，如果在呼叫堆疊中找不到相容的 `catch` 區塊，則會發生下列三種情況的其中一種：  
   
--   如果例外狀況在完成項內，就會中止完成項並呼叫基底完成項 (如果有)。  
+-   如果例外狀況在解構函式內，解構函式會中止，並呼叫基底解構函式 (如果有)。  
   
 -   如果呼叫堆疊包含靜態建構函式或靜態欄位初始設定式，則會擲回 <xref:System.TypeInitializationException>，同時將原始例外狀況指派給新例外狀況的 <xref:System.Exception.InnerException%2A> 屬性。  
   

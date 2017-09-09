@@ -4,22 +4,20 @@ description: "本主題會逐步引導您建置一個包含可重複使用之程
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 06/12/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
-ms.openlocfilehash: a54100a4eda6997b73b60d88b583e290973acb8e
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 
-<a id="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac" class="xliff"></a>
-
-# 使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
+# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
 
 Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本主題會逐步引導您建置一個包含可重複使用之程式庫和單元測試的 .NET Core 解決方案。
 
@@ -30,23 +28,21 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 > * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。
 > * 若要提出建議，請從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac UserVoice 網頁 (英文)](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)。
 
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要條件
 
-## 必要條件
+[.NET Core 和 OpenSSL (英文)](https://www.microsoft.com/net/core#macos)
 
 如需必要條件的詳細資訊，請參閱 [Mac 上 .NET Core 的先決條件](../../core/macos-prerequisites.md)。
 
-<a id="getting-started" class="xliff"></a>
-
-## 使用者入門
+## <a name="getting-started"></a>使用者入門
 
 如果您已經安裝必要條件和 Visual Studio for Mac，請略過本節並移至[建置程式庫](#building-a-library)。 請遵循下列步驟來安裝必要條件和 Visual Studio for Mac：
 
-下載 [Visual Studio for Mac 安裝程式](https://www.visualstudio.com/vs/visual-studio-mac/)。 執行安裝程式。 閱讀並接受授權合約。 安裝過程中，系統會詢問您是否要安裝 Xamarin，這是一個跨平台的行動應用程式開發技術。 針對 .NET Core 開發，安裝 Xamarin 和其相關元件為選擇性。 如需 Visual Studio for Mac 安裝程序的逐步解說，請參閱 [Visual Studio for Mac 簡介 (英文)](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安裝完成後，請啟動 Visual Studio for Mac IDE。
+1. 下載並安裝 [.NET Core 和 OpenSSL (英文)](https://www.microsoft.com/net/core#macos)。
 
-<a id="building-a-library" class="xliff"></a>
+1. 下載 [Visual Studio for Mac 安裝程式](https://www.visualstudio.com/vs/visual-studio-mac/)。 執行安裝程式。 閱讀並接受授權合約。 安裝過程中，系統會詢問您是否要安裝 Xamarin，這是一個跨平台的行動應用程式開發技術。 針對 .NET Core 開發，安裝 Xamarin 和其相關元件為選擇性。 如需 Visual Studio for Mac 安裝程序的逐步解說，請參閱 [Visual Studio for Mac 簡介 (英文)](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安裝完成後，請啟動 Visual Studio for Mac IDE。
 
-## 建置程式庫
+## <a name="building-a-library"></a>建置程式庫
 
 1. 選取歡迎畫面上的 [新增專案]。 在 [多平台] 節點下的 [新增專案] 對話方塊中，選取 [.NET 標準程式庫] 範本。 選取 [下一步]。
 
@@ -74,9 +70,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    ![[錯誤] 面板的 [建置輸出] 窗格，顯示「建置成功」訊息](./media/using-on-mac-vs-full-solution/vsmacfull04.png)
 
-<a id="creating-a-test-project" class="xliff"></a>
-
-## 建立測試專案
+## <a name="creating-a-test-project"></a>建立測試專案
 
 單元測試能在開發與發佈期間提供自動化的軟體測試。 您將在本教學課程中使用的測試架構為 [xUnit (英文)](https://xunit.github.io/)。
 
@@ -164,9 +158,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    ![主控台視窗中的測試通過。 總測試數: 4 已通過: 4 已失敗: 0。 測試回合通過。](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
 
-<a id="adding-a-console-app" class="xliff"></a>
-
-## 新增主控台應用程式
+## <a name="adding-a-console-app"></a>新增主控台應用程式
 
 1. 在 [解決方案] 提要欄位中，以滑鼠右鍵按一下 `WordCounter` 解決方案。 從 [.NET Core] > [應用程式] 範本中選取範本，來新增 [主控台應用程式] 專案。 選取 [下一步]。 將專案命名為 **WordCounterApp**。 選取 [建立] 以在解決方案中建立專案。
 
@@ -202,9 +194,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
    ![應用程式輸出中的搜尋文字計數已變更為 999 的值](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
 
-<a id="next-steps" class="xliff"></a>
-
-## 後續步驟
+## <a name="next-steps"></a>後續步驟
 
 * 於 Xamarin 開發人員網站的 [Visual Studio for Mac 簡介 (英文)](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) 中探索 Visual Studio for Mac 的其他功能。
 * 如需 Visual Studio for Mac 功能的深度檢閱，請參閱 [Xamarin Studio 導覽 (英文)](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/ide-tour/) 指南。
