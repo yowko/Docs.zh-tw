@@ -26,21 +26,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 969e02ea7a560a18f8c0f79ada089fd791362808
+ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
+ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
-您可以透過許多方式，使用 .NET Framework 開發在使用者電腦或裝置上本機執行的 Windows 應用程式。 本節中的主題說明如何使用 Windows Presentation Foundation (WPF) 或 Windows Form 建立 Windows 應用程式。 不過，您也可以使用 .NET Framework 建立用戶端應用程式，並透過電腦或裝置的 Windows 市集和 Windows Phone 市集將這些應用程式提供給使用者；這些應用程式是可在瀏覽器中檢視的 Web 應用程式。  
+您可以透過許多方式，使用 .NET Framework 開發在使用者電腦或裝置上本機執行的 Windows 應用程式。 本節中的主題說明如何使用 Windows Presentation Foundation (WPF) 或 Windows Forms 建立 Windows 應用程式。 不過，您也可以使用 .NET Framework 來建立 Web 應用程式，以及適用於您透過「Windows 市集」或「Windows Phone 市集」提供之電腦或裝置上的用戶端應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
  提供使用 WPF 開發應用程式的相關資訊。  
   
  [Windows Forms](../../docs/framework/winforms/index.md)  
- 提供使用 Windows Form 開發應用程式的相關資訊。  
+ 提供使用 Windows Forms 開發應用程式的相關資訊。  
   
  [常見的用戶端技術](../../docs/framework/common-client-technologies/index.md)  
  提供可在開發用戶端應用程式時使用之其他技術的相關資訊。  
