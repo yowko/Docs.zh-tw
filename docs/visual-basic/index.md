@@ -30,13 +30,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Visual Basic 指南
+
 Visual Basic 設計用來有效率地建置型別安全且以物件為導向的應用程式。 Visual Basic 讓開發人員可將 Windows、Web 和行動裝置作為目標。 以 Visual Basic 撰寫的程式就如同目標為 Microsoft .NET Framework 的所有語言一樣，受益於安全性及語言的互通性。  
   
  這一代的 Visual Basic 延續傳統，依舊讓您快速輕易地建立 .NET Framework 應用程式。  
