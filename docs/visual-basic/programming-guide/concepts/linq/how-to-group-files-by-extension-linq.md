@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f78785b4da3ae3b362603eea34d81207ed48a657
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b78cbaf8b0f20c6b7ab14640dffd61e9657dc9b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何︰ 依副檔名 (LINQ) (Visual Basic) 的檔案群組
-此範例顯示如何使用 LINQ，若要執行進階的分組和排序作業清單上的檔案或資料夾。 它也示範如何使用網頁在主控台視窗輸出<xref:System.Linq.Enumerable.Skip%2A>和<xref:System.Linq.Enumerable.Take%2A>方法。</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A>  
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a><span data-ttu-id="378b8-102">如何︰ 依副檔名 (LINQ) (Visual Basic) 的檔案群組</span><span class="sxs-lookup"><span data-stu-id="378b8-102">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="378b8-103">此範例顯示如何使用 LINQ，若要執行進階的分組和排序作業清單上的檔案或資料夾。</span><span class="sxs-lookup"><span data-stu-id="378b8-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="378b8-104">它也示範如何使用網頁在主控台視窗輸出<xref:System.Linq.Enumerable.Skip%2A>和<xref:System.Linq.Enumerable.Take%2A>方法。</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A></span><span class="sxs-lookup"><span data-stu-id="378b8-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a>範例  
- 下列查詢會示範如何依副檔名分組指定的目錄樹狀結構的內容。  
+## <a name="example"></a><span data-ttu-id="378b8-105">範例</span><span class="sxs-lookup"><span data-stu-id="378b8-105">Example</span></span>  
+ <span data-ttu-id="378b8-106">下列查詢會示範如何依副檔名分組指定的目錄樹狀結構的內容。</span><span class="sxs-lookup"><span data-stu-id="378b8-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```vb  
 Module GroupByExtension  
@@ -108,11 +109,11 @@ Module GroupByExtension
 End Module  
 ```  
   
- 此程式的輸出可以很長的根據本機檔案系統，以及詳細資料`startFolder`設為。 若要啟用 檢視所有結果，此範例會示範如何將結果分頁。 相同的技巧可以套用至 Windows 和 Web 應用程式中。 請注意，因為字碼頁的巢狀群組中的項目`For Each`迴圈是必要。 另外還有一些額外的邏輯來計算目前的位置，在清單中，並讓使用者停止分頁並結束程式。 在此案例中，分頁查詢針對快取的結果從執行原始查詢。 在其他內容，例如 LINQ to SQL，這類不需要快取。  
+ <span data-ttu-id="378b8-107">此程式的輸出可以很長的根據本機檔案系統，以及詳細資料`startFolder`設為。</span><span class="sxs-lookup"><span data-stu-id="378b8-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="378b8-108">若要啟用 檢視所有結果，此範例會示範如何將結果分頁。</span><span class="sxs-lookup"><span data-stu-id="378b8-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="378b8-109">相同的技巧可以套用至 Windows 和 Web 應用程式中。</span><span class="sxs-lookup"><span data-stu-id="378b8-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="378b8-110">請注意，因為字碼頁的巢狀群組中的項目`For Each`迴圈是必要。</span><span class="sxs-lookup"><span data-stu-id="378b8-110">Notice that because the code pages the items in a group, a nested `For Each` loop is required.</span></span> <span data-ttu-id="378b8-111">另外還有一些額外的邏輯來計算目前的位置，在清單中，並讓使用者停止分頁並結束程式。</span><span class="sxs-lookup"><span data-stu-id="378b8-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="378b8-112">在此案例中，分頁查詢針對快取的結果從執行原始查詢。</span><span class="sxs-lookup"><span data-stu-id="378b8-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="378b8-113">在其他內容，例如 LINQ to SQL，這類不需要快取。</span><span class="sxs-lookup"><span data-stu-id="378b8-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+## <a name="compiling-the-code"></a><span data-ttu-id="378b8-114">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="378b8-114">Compiling the Code</span></span>  
+ <span data-ttu-id="378b8-115">建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="378b8-115">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="378b8-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="378b8-116">See Also</span></span>  
+ <span data-ttu-id="378b8-117">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="378b8-117">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="378b8-118"> [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="378b8-118"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

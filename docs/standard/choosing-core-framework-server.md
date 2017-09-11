@@ -1,127 +1,116 @@
 ---
 title: "針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇"
-description: "本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 類別。"
-keywords: .NET, .NET Core, .NET Framework
+description: "本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。"
 author: cartermp
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
-ms.openlocfilehash: 7151c87d373afce88c83239499ba33980383ab98
+ms.translationtype: HT
+ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
+ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 08/21/2017
 
 ---
+# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a><span data-ttu-id="9fa05-103">針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇</span><span class="sxs-lookup"><span data-stu-id="9fa05-103">Choosing between .NET Core and .NET Framework for server apps</span></span>
 
-# 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
-<a id="choosing-between-net-core-and-net-framework-for-server-apps" class="xliff"></a>
+<span data-ttu-id="9fa05-104">有兩個支援的實作，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-104">There are two supported implementations for building server-side applications with .NET: .NET Framework and .NET Core.</span></span> <span data-ttu-id="9fa05-105">這兩者共用許多相同的元件，而您可以在這兩者間共用程式碼。</span><span class="sxs-lookup"><span data-stu-id="9fa05-105">Both share many of the same components and you can share code across the two.</span></span> <span data-ttu-id="9fa05-106">不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。</span><span class="sxs-lookup"><span data-stu-id="9fa05-106">However, there are fundamental differences between the two and your choice depends on what you want to accomplish.</span></span>  <span data-ttu-id="9fa05-107">本文提供有關每一個選項使用時機的指引。</span><span class="sxs-lookup"><span data-stu-id="9fa05-107">This article provides guidance on when to use each.</span></span>
 
-有兩個支援的執行階段選項，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及.NET Core。 這兩者共用許多相同的 .NET 平台元件，而您可以在這兩者間共用程式碼。 不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。  本文提供有關每一個選項使用時機的指引。
+<span data-ttu-id="9fa05-108">在下列情況中，請針對伺服器應用程式使用 .NET Core：</span><span class="sxs-lookup"><span data-stu-id="9fa05-108">Use .NET Core for your server application when:</span></span>
 
-在下列情況中，您應該針對伺服器應用程式使用 .NET Core：
+* <span data-ttu-id="9fa05-109">您有跨平台需求。</span><span class="sxs-lookup"><span data-stu-id="9fa05-109">You have cross-platform needs.</span></span>
+* <span data-ttu-id="9fa05-110">您的目標為微服務。</span><span class="sxs-lookup"><span data-stu-id="9fa05-110">You are targeting microservices.</span></span>
+* <span data-ttu-id="9fa05-111">您正在使用 Docker 容器。</span><span class="sxs-lookup"><span data-stu-id="9fa05-111">You are using Docker containers.</span></span>
+* <span data-ttu-id="9fa05-112">您需要高效能且可調整的系統。</span><span class="sxs-lookup"><span data-stu-id="9fa05-112">You need high-performance and scalable systems.</span></span>
+* <span data-ttu-id="9fa05-113">您需要依應用程式讓 .NET 版本並存。</span><span class="sxs-lookup"><span data-stu-id="9fa05-113">You need side-by-side .NET versions per application.</span></span>
 
-* 您有跨平台需求。
-* 您的目標為微服務。
-* 您正在使用 Docker 容器。
-* 您需要高效能且可調整的系統。
-* 您需要依應用程式讓 .NET 版本並存。
+<span data-ttu-id="9fa05-114">在下列情況中，請針對伺服器應用程式使用 .NET Framework：</span><span class="sxs-lookup"><span data-stu-id="9fa05-114">Use .NET Framework for your server application when:</span></span>
 
-在下列情況中，您應該針對伺服器應用程式使用 .NET Framework：
+* <span data-ttu-id="9fa05-115">您的應用程式目前使用 .NET Framework (建議進行擴充，而不是移轉)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-115">Your app currently uses .NET Framework (recommendation is to extend instead of migrating).</span></span>
+* <span data-ttu-id="9fa05-116">您的應用程式使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="9fa05-116">Your app uses third-party .NET libraries or NuGet packages not available for .NET Core.</span></span>
+* <span data-ttu-id="9fa05-117">您的應用程式使用不適用於 .NET Core 的 .NET 技術。</span><span class="sxs-lookup"><span data-stu-id="9fa05-117">Your app uses .NET technologies that aren't available for .NET Core.</span></span>
+* <span data-ttu-id="9fa05-118">您的應用程式使用不支援 .NET Core 的平台。</span><span class="sxs-lookup"><span data-stu-id="9fa05-118">Your app uses a platform that doesn’t support .NET Core.</span></span>
 
-* 您的應用程式目前使用的是 .NET Framework (建議為擴充，而不是移轉)
-* 您需要使用的協力廠商 .NET 程式庫或 NuGet 套件不適用 .NET Core。
-* 您需要使用的 .NET 技術不適用 .NET Core。
-* 您需要使用不支援 .NET Core 的平台。
+## <a name="when-to-choose-net-core"></a><span data-ttu-id="9fa05-119">選擇 .NET Core 的時機</span><span class="sxs-lookup"><span data-stu-id="9fa05-119">When to choose .NET Core</span></span>
 
-## 選擇 .NET Core 的時機
-<a id="when-to-choose-net-core" class="xliff"></a>
+<span data-ttu-id="9fa05-120">下列各節將更詳盡說明先前所述之挑選 .NET Core 的理由。</span><span class="sxs-lookup"><span data-stu-id="9fa05-120">The following sections give a more detailed explanation of the previously stated reasons for picking .NET Core.</span></span>
 
-以下將更詳盡說明先前所述之挑選 .NET Core 的理由。
+### <a name="cross-platform-needs"></a><span data-ttu-id="9fa05-121">跨平台需求</span><span class="sxs-lookup"><span data-stu-id="9fa05-121">Cross-platform needs</span></span>
 
-### 跨平台需求
-<a id="cross-platform-needs" class="xliff"></a>
+<span data-ttu-id="9fa05-122">如果您的應用程式 (Web/服務) 必須在多個平台 (Windows、Linux 和 macOS) 上執行，請使用 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-122">If your application (web/service) needs to run on multiple platforms (Windows, Linux, and macOS), use .NET Core.</span></span>
 
-很明顯地，如果您的目標是讓應用程式 (Web/服務) 應該能夠跨平台 (Windows、Linux 和 macOS) 執行，最好的選擇就是使用 .NET Core。
+<span data-ttu-id="9fa05-123">.NET Core 支援先前所述的作業系統作為您的開發工作站。</span><span class="sxs-lookup"><span data-stu-id="9fa05-123">.NET Core supports the previously mentioned operating systems as your development workstation.</span></span> <span data-ttu-id="9fa05-124">Visual Studio 提供適用於 Windows 和 Mac 的整合式開發環境 (IDE)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-124">Visual Studio provides an Integrated Development Environment (IDE) for Windows and Mac.</span></span> <span data-ttu-id="9fa05-125">您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。</span><span class="sxs-lookup"><span data-stu-id="9fa05-125">You can also use Visual Studio Code, which runs on macOS, Linux, and Windows.</span></span> <span data-ttu-id="9fa05-126">Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。</span><span class="sxs-lookup"><span data-stu-id="9fa05-126">Visual Studio Code supports .NET Core, including IntelliSense and debugging.</span></span> <span data-ttu-id="9fa05-127">大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-127">Most third-party editors, such as Sublime, Emacs, and VI, work with .NET Core.</span></span> <span data-ttu-id="9fa05-128">這些協力廠商編輯器會透過 [Omnisharp](http://www.omnisharp.net/) 取得編輯器 IntelliSense。</span><span class="sxs-lookup"><span data-stu-id="9fa05-128">These third-party editors get editor IntelliSense using [Omnisharp](http://www.omnisharp.net/).</span></span> <span data-ttu-id="9fa05-129">您也可以避免使用任何程式碼編輯器，並直接使用 [.NET Core CLI 工具](../core/tools/index.md) (適用於所有支援的平台)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-129">You can also avoid any code editor and directly use the [.NET Core CLI tools](../core/tools/index.md), available for all supported platforms.</span></span>
 
-.NET Core 也支援先前所述的作業系統做為您的開發工作站。 Visual Studio 提供適用於 Windows 的整合式開發環境 (IDE)。  您也可以在 macOS、Linux 和 Windows 上使用 Visual Studio 程式碼，其完全支援 .NET Core (包括 IntelliSense 和偵錯)。 您還可以使用大多數的協力廠商編輯器 (例如 Sublime、Emacs、VI) 來將目標設定為 .NET Core，而且可以使用開放原始碼的 [Omnisharp](http://www.omnisharp.net/) 專案來取得編輯器 IntelliSense。 您也可以避免使用任何程式碼編輯器，並直接使用 .NET Core 的命令列工具 (適用於所有支援的平台)。
+### <a name="microservices-architecture"></a><span data-ttu-id="9fa05-130">微服務架構</span><span class="sxs-lookup"><span data-stu-id="9fa05-130">Microservices architecture</span></span>
 
-### 微服務架構
-<a id="microservices-architecture" class="xliff"></a>
+<span data-ttu-id="9fa05-131">微服務架構可讓您跨越服務界限混用技術。</span><span class="sxs-lookup"><span data-stu-id="9fa05-131">A microservices architecture allows a mix of technologies across a service boundary.</span></span> <span data-ttu-id="9fa05-132">此技術混合可讓新的微服務逐步採用 .NET Core，以便與其他微服務或服務搭配使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-132">This technology mix enables a gradual embrace of .NET Core for new microservices that work with other microservices or services.</span></span> <span data-ttu-id="9fa05-133">例如，您可以混合使用 .NET Framework、Java、Ruby 或其他單一技術所開發的微服務或服務。</span><span class="sxs-lookup"><span data-stu-id="9fa05-133">For example, you can mix microservices or services developed with .NET Framework, Java, Ruby, or other monolithic technologies.</span></span>
 
-如果您擁有微服務導向的系統，該系統是由多個獨立、可動態擴充、具狀態或無狀態的微服務所組成，則 .NET Core 是最佳候選項目。 .NET Core 是輕量型的，而且可將其 API 介面最小化到微服務的範圍。 微服務架構也可讓您跨越服務界限混用技術，從而能夠基於新的微服務逐漸接受 .NET Core，新的微服務可以與利用 .NET Framework、Java、Ruby 或其他整合型技術所開發的其他微服務或服務同時存留。
+<span data-ttu-id="9fa05-134">您可以使用的基礎結構平台有很多。</span><span class="sxs-lookup"><span data-stu-id="9fa05-134">There are many infrastructure platforms available.</span></span> <span data-ttu-id="9fa05-135">[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 是針對大型且複雜的微服務系統所設計。</span><span class="sxs-lookup"><span data-stu-id="9fa05-135">[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) is designed for large and complex microservice systems.</span></span> <span data-ttu-id="9fa05-136">[Azure App Service](https://azure.microsoft.com/services/app-service/) 是無狀態微服務的理想選擇。</span><span class="sxs-lookup"><span data-stu-id="9fa05-136">[Azure App Service](https://azure.microsoft.com/services/app-service/) is a good choice for stateless microservices.</span></span> <span data-ttu-id="9fa05-137">以 Docker 為依據的微服務替代方案符合任何一種微服務方法，如[容器](#containers)一節中所述。</span><span class="sxs-lookup"><span data-stu-id="9fa05-137">Microservices alternatives based on Docker fit any kind of microservices approach, as explained in the [Containers](#containers) section.</span></span> <span data-ttu-id="9fa05-138">所有的這些平台均支援 .NET Core，並使其更適合用來裝載您的微服務。</span><span class="sxs-lookup"><span data-stu-id="9fa05-138">All these platforms support .NET Core and make them ideal for hosting your microservices.</span></span>
 
-您可以使用的基礎結構平台有很多。 對於大型且複雜的微服務系統，您可以使用 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)。 針對無狀態的微服務，您也可以使用其他像是 [Azure App Service](https://azure.microsoft.com/services/app-service/) 的產品。 以 Docker 為依據的微服務替代方案也符合任何一種微服務方法，如下所述。 所有的這些平台均支援 .NET Core，並使其更適合用來裝載您的微服務。
+<span data-ttu-id="9fa05-139">如需微服務架構的詳細資訊，請參閱 [.NET 微服務：容器化 .NET 應用程式的架構](microservices-architecture/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-139">For more information about microservices architecture, see [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md).</span></span>
 
-### 容器
-<a id="containers" class="xliff"></a>
+### <a name="containers"></a><span data-ttu-id="9fa05-140">容器</span><span class="sxs-lookup"><span data-stu-id="9fa05-140">Containers</span></span>
 
-儘管容器也可以用來將 Web 應用程式或服務裝入容器中 (其會遵循任何架構模式)，但它們通常會與微服務架構搭配使用。 您可以使用適用於 Windows 的 .NET Framework容器，但是 .NET Core 的模組化和輕量型性質可使容器更加完美。 建立和部署容器時，使用 .NET Core 的映像大小遠小於 .NET Framework。 舉例來說，因為它是跨平台的，您可以將伺服器應用程式部署到 Linux Docker 容器。
+<span data-ttu-id="9fa05-141">容器通常會與微服務架構搭配使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-141">Containers are commonly used in conjunction with a microservices architecture.</span></span> <span data-ttu-id="9fa05-142">容器也可用來將遵循任何架構模式的 Web 應用程式或服務容器化。</span><span class="sxs-lookup"><span data-stu-id="9fa05-142">Containers can also be used to containerize web apps or services that follow any architectural pattern.</span></span> <span data-ttu-id="9fa05-143">.NET Framework 可用於 Windows 容器，但 .NET Core 的模組化和輕量型本質讓它成為容器的更佳選擇。</span><span class="sxs-lookup"><span data-stu-id="9fa05-143">.NET Framework can be used on Windows containers, but the modularity and lightweight nature of .NET Core makes it a better choice for containers.</span></span> <span data-ttu-id="9fa05-144">建立和部署容器時，使用 .NET Core 的映像大小遠小於 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="9fa05-144">When creating and deploying a container, the size of its image is much smaller with .NET Core than with .NET Framework.</span></span> <span data-ttu-id="9fa05-145">舉例來說，因為它是跨平台的，您可以將伺服器應用程式部署到 Linux Docker 容器。</span><span class="sxs-lookup"><span data-stu-id="9fa05-145">Because it's cross-platform, you can deploy server apps to Linux Docker containers, for example.</span></span>
 
-您接著可在自己的 Linux 或 Windows 基礎結構中裝載 Docker 容器，或使用雲端服務 (例如 [Azure Container Service](https://azure.microsoft.com/services/container-service/))，其可在雲端中管理、協調及調整您的容器型應用程式。
+<span data-ttu-id="9fa05-146">您可以在自己的 Linux 或 Windows 基礎結構中，或在 [Azure Container Service](https://azure.microsoft.com/services/container-service/) 等雲端服務中裝載 Docker 容器。</span><span class="sxs-lookup"><span data-stu-id="9fa05-146">Docker containers can be hosted in your own Linux or Windows infrastructure, or in a cloud service such as [Azure Container Service](https://azure.microsoft.com/services/container-service/).</span></span> <span data-ttu-id="9fa05-147">Azure Container Service 可在雲端中管理、協調及調整容器型應用程式。</span><span class="sxs-lookup"><span data-stu-id="9fa05-147">Azure Container Service can manage, orchestrate, and scale container-based applications in the cloud.</span></span>
 
-### 需要高效能且可調整的系統
-<a id="a-need-for-high-performance-and-scalable-systems" class="xliff"></a>
+### <a name="a-need-for-high-performance-and-scalable-systems"></a><span data-ttu-id="9fa05-148">需要高效能且可調整的系統</span><span class="sxs-lookup"><span data-stu-id="9fa05-148">A need for high-performance and scalable systems</span></span>
 
-當您的系統需要最佳效能和延展性時，.NET Core 和 ASP.NET Core 就是最好的選擇。 ASP.NET Core 的功能勝過 ASP.NET 10 倍，並且在像 Java servlets、Go 和 node.js 等微服務領域中領先其他熱門的業界技術。
+<span data-ttu-id="9fa05-149">當您的系統需要最佳效能和延展性時，.NET Core 和 ASP.NET Core 就是最好的選擇。</span><span class="sxs-lookup"><span data-stu-id="9fa05-149">When your system needs the best possible performance and scalability, .NET Core and ASP.NET Core are your best options.</span></span> <span data-ttu-id="9fa05-150">Windows Server 和 Linux 的高效能伺服器執行階段讓 .NET 成為 [TechEmpower 基準測試](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext)中效能最高的 Web 架構。</span><span class="sxs-lookup"><span data-stu-id="9fa05-150">High-performance server runtime for Windows Server and Linux makes .NET a top performing web framework on [TechEmpower benchmarks](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext).</span></span>
 
-這對於微服務架構特別重要，您可以在其中執行數百個微服務。 透過 ASP.NET Core，您就能使用較低數目的伺服器/VM 來執行系統，最終能省下基礎結構與裝載的相關成本。
+<span data-ttu-id="9fa05-151">效能和延展性對於微服務架構特別重要，其中可執行數百個微服務。</span><span class="sxs-lookup"><span data-stu-id="9fa05-151">Performance and scalability are especially relevant for microservices architectures, where hundreds of microservices may be running.</span></span> <span data-ttu-id="9fa05-152">透過 ASP.NET Core，您就能使用較低數目的伺服器/虛擬機器 (VM) 來執行系統。</span><span class="sxs-lookup"><span data-stu-id="9fa05-152">With ASP.NET Core, systems run with a much lower number of servers/Virtual Machines (VM).</span></span> <span data-ttu-id="9fa05-153">減少的伺服器/VM 能省下基礎結構與裝載的相關成本。</span><span class="sxs-lookup"><span data-stu-id="9fa05-153">The reduced servers/VMs save costs in infrastructure and hosting.</span></span>
 
-### 需要針對每個應用程式層級並存各個 .NET 版本
-<a id="a-need-for-side-by-side-of-net-versions-per-application-level" class="xliff"></a>
+### <a name="a-need-for-side-by-side-of-net-versions-per-application-level"></a><span data-ttu-id="9fa05-154">需要針對每個應用程式層級並存各個 .NET 版本</span><span class="sxs-lookup"><span data-stu-id="9fa05-154">A need for side by side of .NET versions per application level</span></span>
 
-如果您想要能夠在 .NET 的各種架構版本上安裝具有相依性的應用程式，您需要使用 .NET Core，以提供 100% 的並存。 在同一部電腦上輕易並存安裝不同版本的 .NET Core，可讓您在相同伺服器上擁有多個服務，每個均位於它自己的 .NET Core 版本上，以消除有關應用程式升級和 IT 操作人員的風險並節省相關開支。
+<span data-ttu-id="9fa05-155">若要在不同版本的 .NET 上安裝具有相依性的應用程式，建議使用 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-155">To install applications with dependencies on different versions of .NET, we recommend .NET Core.</span></span> <span data-ttu-id="9fa05-156">.NET Core 可在相同電腦上並存安裝不同版本的 .NET Core 執行階段。</span><span class="sxs-lookup"><span data-stu-id="9fa05-156">.NET Core offers side-by-side installation of different versions of the .NET Core runtime on the same machine.</span></span> <span data-ttu-id="9fa05-157">此並存安裝可讓您在相同伺服器上擁有多個服務，每個服務在各自的 .NET Core 版本上。</span><span class="sxs-lookup"><span data-stu-id="9fa05-157">This side-by-side installation allows multiple services on the same server, each of them on its own version of .NET Core.</span></span> <span data-ttu-id="9fa05-158">它也會在應用程式升級和 IT 作業方面降低風險並省下成本。</span><span class="sxs-lookup"><span data-stu-id="9fa05-158">It also lowers risks and saves money in application upgrades and IT operations.</span></span>
 
-## 選擇 .NET Framework 的時機
-<a id="when-to-choose-net-framework" class="xliff"></a>
+## <a name="when-to-choose-net-framework"></a><span data-ttu-id="9fa05-159">選擇 .NET Framework 的時機</span><span class="sxs-lookup"><span data-stu-id="9fa05-159">When to choose .NET Framework</span></span>
 
-儘管 .NET Core 可為新的應用程式和應用程式模式提供顯著的優點，但 .NET Framework 仍將持續為許多現有案例的首選，也就是 .NET Core 將不會取代它來用於所有的伺服器應用程式。
+<span data-ttu-id="9fa05-160">.NET Core 可為新的應用程式和應用程式模式提供顯著的優點。</span><span class="sxs-lookup"><span data-stu-id="9fa05-160">.NET Core offers significant benefits for new applications and application patterns.</span></span> <span data-ttu-id="9fa05-161">不過，.NET Framework 會持續為許多現有案例的自然選擇。</span><span class="sxs-lookup"><span data-stu-id="9fa05-161">However, the .NET Framework continues to be the natural choice for many existing scenarios and as such.</span></span> <span data-ttu-id="9fa05-162">因此，.NET Core 不會取代 .NET Framework 用於所有伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="9fa05-162">The .NET Framework isn't replaced by .NET Core for all server applications.</span></span>
 
-### 目前的 .NET Framework 應用程式
-<a id="current-net-framework-applications" class="xliff"></a>
+### <a name="current-net-framework-applications"></a><span data-ttu-id="9fa05-163">目前的 .NET Framework 應用程式</span><span class="sxs-lookup"><span data-stu-id="9fa05-163">Current .NET Framework applications</span></span>
 
-在大多數的情況中，您不需將現有的應用程式移轉到 .NET Core， 而是建議您在擴充現有的應用程式時使用 .NET Core，例如，在 ASP.NET Core 中寫入新的 Web 服務。
+<span data-ttu-id="9fa05-164">在大多數的情況中，您不需將現有的應用程式移轉到 .NET Core，</span><span class="sxs-lookup"><span data-stu-id="9fa05-164">In most cases, you don’t need to migrate your existing applications to .NET Core.</span></span> <span data-ttu-id="9fa05-165">而是建議您在擴充現有的應用程式時使用 .NET Core，例如，在 ASP.NET Core 中寫入新的 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="9fa05-165">Instead, a recommended approach is to use .NET Core as you extend an existing application, such as writing a new web service in ASP.NET Core.</span></span>
 
-### 需要使用的協力廠商的 .NET 程式庫或 NuGet 套件不適用 .NET Core
-<a id="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core" class="xliff"></a>
+### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a><span data-ttu-id="9fa05-166">需要使用的協力廠商的 .NET 程式庫或 NuGet 套件不適用 .NET Core</span><span class="sxs-lookup"><span data-stu-id="9fa05-166">A need to use third-party .NET libraries or NuGet packages not available for .NET Core</span></span>
 
-程式庫會快速採行 .NET Standard，以便跨所有 .NET 類別 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，這甚至更加簡單，因為 .NET Core API 介面將明顯變大，而 .NET Core 應用程式可以直接使用現有的 .NET Framework 程式庫。 但此轉換不是即時的，因此我們建議您先檢查應用程式所需的特定程式庫，然後再以其他方式進行決策。
+<span data-ttu-id="9fa05-167">程式庫會快速採用 .NET Standard。</span><span class="sxs-lookup"><span data-stu-id="9fa05-167">Libraries are quickly embracing .NET Standard.</span></span> <span data-ttu-id="9fa05-168">.NET Standard 可跨所有 .NET 實作 (包括 .NET Core) 共用程式碼。</span><span class="sxs-lookup"><span data-stu-id="9fa05-168">.NET Standard enables sharing code across all .NET implementations including .NET Core.</span></span> <span data-ttu-id="9fa05-169">透過 .NET Standard 2.0，甚至會更容易達成：</span><span class="sxs-lookup"><span data-stu-id="9fa05-169">With .NET Standard 2.0, this is even easier:</span></span>
+- <span data-ttu-id="9fa05-170">API 介面變得更大。</span><span class="sxs-lookup"><span data-stu-id="9fa05-170">The API surface became much larger.</span></span> 
+- <span data-ttu-id="9fa05-171">引入了 .NET Framework 相容性模式。</span><span class="sxs-lookup"><span data-stu-id="9fa05-171">Introduced a .NET Framework compatibility mode.</span></span> <span data-ttu-id="9fa05-172">此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 程式庫。</span><span class="sxs-lookup"><span data-stu-id="9fa05-172">This compatibility mode allows .NET Standard/.NET Core projects to reference .NET Framework libraries.</span></span> <span data-ttu-id="9fa05-173">若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-173">To learn more about the compatibility mode, see [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).</span></span>
 
-### 需要使用的 .NET 技術不適用 .NET Core
-<a id="a-need-to-use-net-technologies-not-available-for-net-core" class="xliff"></a>
+<span data-ttu-id="9fa05-174">因此，只有在程式庫或 NuGet 套件使用的技術不適用於 .NET Standard/.NET Core 時，才需要使用 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="9fa05-174">So only in cases where the libraries or NuGet packages use technologies that aren't available in .NET Standard/.NET Core, you need to use the .NET Framework.</span></span>
 
-某些 .NET Framework 技術無法在 .NET Core 中使用。 這其中有一些可在更新的 .NET Core 版本中使用，但其他的則不適用於由 .NET Core 設為目標的應用程式模式，且可能永遠無法使用。 下列清單顯示 .NET Core 1.0 中找不到的最常見技術：
+### <a name="a-need-to-use-net-technologies-not-available-for-net-core"></a><span data-ttu-id="9fa05-175">需要使用的 .NET 技術不適用 .NET Core</span><span class="sxs-lookup"><span data-stu-id="9fa05-175">A need to use .NET technologies not available for .NET Core</span></span>
 
-* ASP.NET Web Form 應用程式：ASP.NET Web Form 僅適用於 .NET Framework，因此您無法針對此案例使用 ASP.NET Core /.NET Core。 目前並未規劃將 ASP.NET Web Form 帶入 .NET Core。
+<span data-ttu-id="9fa05-176">某些 .NET Framework 技術無法在 .NET Core 中使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-176">Some .NET Framework technologies aren't available in .NET Core.</span></span> <span data-ttu-id="9fa05-177">這其中有一些技術可在更新的 .NET Core 版本中使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-177">Some of them might be available in later .NET Core releases.</span></span> <span data-ttu-id="9fa05-178">其他技術則不適用於由 .NET Core 設為目標的新應用程式模式，且可能永遠無法使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-178">Others don’t apply to the new application patterns targeted by .NET Core and may never be available.</span></span> <span data-ttu-id="9fa05-179">下列清單顯示 .NET Core 中找不到的最常見技術：</span><span class="sxs-lookup"><span data-stu-id="9fa05-179">The following list shows the most common technologies not found in .NET Core:</span></span>
 
-* ASP.NET Web Pages 應用程式：雖然已規劃將其隨附於未來版本中 (如 [.NET Core 藍圖](https://github.com/aspnet/Home/wiki/Roadmap)所述)，但 ASP.NET Core 1.0 中並未隨附 ASP.NET Web Pages。
+* <span data-ttu-id="9fa05-180">ASP.NET Web Forms 應用程式：ASP.NET Web Forms 只能在 .NET Framework 中使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-180">ASP.NET Web Forms applications: ASP.NET Web Forms are only available in the .NET Framework.</span></span> <span data-ttu-id="9fa05-181">ASP.NET Core 無法用於 ASP.NET Web Forms。</span><span class="sxs-lookup"><span data-stu-id="9fa05-181">ASP.NET Core cannot be used for ASP.NET Web Forms.</span></span> <span data-ttu-id="9fa05-182">目前並未規劃將 ASP.NET Web Forms 帶入 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-182">There are no plans to bring ASP.NET Web Forms to .NET Core.</span></span>
 
-* ASP.NET SignalR 伺服器/用戶端實作。 在 .NET Core 1.0 版本發行時程 (2016 年 6 月) 中，儘管已規劃要將其隨附於未來版本中 (如 [.NET Core 藍圖](https://github.com/aspnet/Home/wiki/Roadmap)所述)，但 ASP.NET SignalR 不適用於 ASP.NET Core (不論是用戶端或伺服器)。 預覽狀態適用於[伺服器端](https://github.com/aspnet/SignalR-Server)和[用戶端程式庫](https://github.com/aspnet/SignalR-Client-Net) GitHub 儲存機制。
+* <span data-ttu-id="9fa05-183">ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。</span><span class="sxs-lookup"><span data-stu-id="9fa05-183">ASP.NET Web Pages applications: ASP.NET Web Pages aren't included in ASP.NET Core.</span></span> <span data-ttu-id="9fa05-184">ASP.NET Core [Razor 頁面](/aspnet/core/mvc/razor-pages/)與 Web Pages 有許多相似處。</span><span class="sxs-lookup"><span data-stu-id="9fa05-184">ASP.NET Core [Razor Pages](/aspnet/core/mvc/razor-pages/) have many similarities with Web Pages.</span></span>
 
-* WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 使用 WCF 服務，但截至 2016 年 6 月，WCF 伺服器實作還是只能在 .NET Framework 上使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
+* <span data-ttu-id="9fa05-185">ASP.NET SignalR 伺服器/用戶端實作。</span><span class="sxs-lookup"><span data-stu-id="9fa05-185">ASP.NET SignalR server/client implementation.</span></span> <span data-ttu-id="9fa05-186">目前，ASP.NET SignalR 不適用於 ASP.NET Core (不是用戶端或伺服器)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-186">Currently, ASP.NET SignalR isn't available for ASP.NET Core (not client or server).</span></span> <span data-ttu-id="9fa05-187">ASP.NET Core 2.1 預定將使用 ASP.NET Core SignalR。</span><span class="sxs-lookup"><span data-stu-id="9fa05-187">ASP.NET Core SignalR is scheduled for ASP.NET Core 2.1.</span></span> <span data-ttu-id="9fa05-188">請參閱 [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap) (ASP.NET Core 排程和藍圖)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-188">See the [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap).</span></span> <span data-ttu-id="9fa05-189">預覽狀態適用於[伺服器端](https://github.com/aspnet/SignalR-Server)和[用戶端程式庫](https://github.com/aspnet/SignalR-Client-Net) GitHub 儲存機制。</span><span class="sxs-lookup"><span data-stu-id="9fa05-189">Preview state is available at the [Server-side](https://github.com/aspnet/SignalR-Server) and [Client Library](https://github.com/aspnet/SignalR-Client-Net) GitHub repositories.</span></span>
 
-* 工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework，目前並未計劃將其帶入 .NET Core。
+* <span data-ttu-id="9fa05-190">WCF 服務實作。</span><span class="sxs-lookup"><span data-stu-id="9fa05-190">WCF services implementation.</span></span> <span data-ttu-id="9fa05-191">即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-191">Even when there’s a [WCF-Client library](https://github.com/dotnet/wcf) to consume WCF services from .NET Core, WCF server implementation is currently only available in the .NET Framework.</span></span> <span data-ttu-id="9fa05-192">此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。</span><span class="sxs-lookup"><span data-stu-id="9fa05-192">This scenario is not part of the current plan for .NET Core but it’s being considered for the future.</span></span>
 
-* Windows Presentation Foundation (WPF) 和 Windows Forms：WPF 與 Windows Forms 應用程式只能在 .NET Framework 上使用。 沒有計畫要將它們移植到 .NET Core。 
+* <span data-ttu-id="9fa05-193">工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="9fa05-193">Workflow-related services: Windows Workflow Foundation (WF), Workflow Services (WCF + WF in a single service) and WCF Data Services (formerly known as "ADO.NET Data Services") are only available in the .NET Framework.</span></span>  <span data-ttu-id="9fa05-194">目前並未規劃將 WF/WCF+WF/WCF Data Services 帶入 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-194">There are no plans to bring WF/WCF+WF/WCF Data Services to .NET Core.</span></span>
 
-* 語言支援︰Visual Basic 和 F# 目前並未擁有任何支援 .NET Core 的工具，但將於 Visual Studio 2017 和更新版本的 Visual Studio 中支援這兩者。
+* <span data-ttu-id="9fa05-195">Windows Presentation Foundation (WPF) 和 Windows Forms：WPF 與 Windows Forms 應用程式只能在 .NET Framework 中使用。</span><span class="sxs-lookup"><span data-stu-id="9fa05-195">Windows Presentation Foundation (WPF) and Windows Forms: WPF and Windows Forms applications are only available in the .NET Framework.</span></span> <span data-ttu-id="9fa05-196">沒有計畫要將它們移植到 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-196">There are no plans to port them to .NET Core.</span></span>
 
-除了官方藍圖，還有一些其他要移植到 .NET Core 的架構 - 如需完整清單，請參閱標記為 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 問題。 請注意，這份清單並不代表 Microsoft 承諾要將這些元件帶入 .NET Core - 它們只是代表社群的期望。 話雖如此，如果您關心上方所列的任何元件，請考慮參與 GitHub 上的討論，讓我們可以聽到您的心聲。 如果您認為缺少了什麼，請[在 CoreFX 儲存機制中提問新的問題](https://github.com/dotnet/corefx/issues/new)。
+* <span data-ttu-id="9fa05-197">語言支援：.NET Core 目前支援 Visual Basic 和 F #，但不是所有專案類型都提供支援。</span><span class="sxs-lookup"><span data-stu-id="9fa05-197">Language support: Visual Basic and F# are currently supported in .NET Core, but not for all project types.</span></span> <span data-ttu-id="9fa05-198">如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。</span><span class="sxs-lookup"><span data-stu-id="9fa05-198">For a list of supported project templates, see [Template options for dotnet new](../core/tools/dotnet-new.md#arguments).</span></span>
 
-### 必須使用不支援 .NET Core 的平台
-<a id="a-need-to-use-a-platform-that-doesnt-support-net-core" class="xliff"></a>
+<span data-ttu-id="9fa05-199">除了官方藍圖，還有其他要移植到 .NET Core 的架構。</span><span class="sxs-lookup"><span data-stu-id="9fa05-199">In addition to the official roadmap, there are other frameworks to be ported to .NET Core.</span></span> <span data-ttu-id="9fa05-200">如需完整清單，請參閱標記為 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 問題。</span><span class="sxs-lookup"><span data-stu-id="9fa05-200">For a full list, see the CoreFX issues marked as [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core).</span></span> <span data-ttu-id="9fa05-201">這份清單並不代表 Microsoft 承諾要將這些元件帶入 .NET Core，</span><span class="sxs-lookup"><span data-stu-id="9fa05-201">This list doesn’t represent a commitment from Microsoft to bring those components to .NET Core.</span></span> <span data-ttu-id="9fa05-202">而是代表社群想要這樣做的期望。</span><span class="sxs-lookup"><span data-stu-id="9fa05-202">They're simply capturing the desire from the community to do so.</span></span> <span data-ttu-id="9fa05-203">如果您很重視標記為 `port-to-core` 的任何元件，請參與 GitHub 上的討論。</span><span class="sxs-lookup"><span data-stu-id="9fa05-203">If you care about any of the components marked as `port-to-core`, participate in the discussions on GitHub.</span></span> <span data-ttu-id="9fa05-204">如果您認為缺少了什麼，請在 [CoreFX 存放庫](https://github.com/dotnet/corefx/issues/new)中提問新的問題。</span><span class="sxs-lookup"><span data-stu-id="9fa05-204">And if you think something is missing, file a new issue in the [CoreFX repository](https://github.com/dotnet/corefx/issues/new).</span></span>
 
-某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，某些 Azure 服務 (例如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors) 需要 .NET Framework。 部分其他服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
+### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a><span data-ttu-id="9fa05-205">必須使用不支援 .NET Core 的平台</span><span class="sxs-lookup"><span data-stu-id="9fa05-205">A need to use a platform that doesn’t support .NET Core</span></span>
 
-## 其他資源
-<a id="further-resources" class="xliff"></a>
+<span data-ttu-id="9fa05-206">某些 Microsoft 或協力廠商平台不支援 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-206">Some Microsoft or third-party platforms don’t support .NET Core.</span></span> <span data-ttu-id="9fa05-207">例如，某些 Azure 服務 (例如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors) 需要 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="9fa05-207">For example, some Azure services such as Service Fabric Stateful Reliable Services and Service Fabric Reliable Actors require .NET Framework.</span></span> <span data-ttu-id="9fa05-208">部分其他服務提供尚無法在 .NET Core 上使用的 SDK。</span><span class="sxs-lookup"><span data-stu-id="9fa05-208">Some other services provide an SDK not yet available for consumption on .NET Core.</span></span> <span data-ttu-id="9fa05-209">這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="9fa05-209">This is a transitional circumstance, as all of Azure services use .NET Core.</span></span> <span data-ttu-id="9fa05-210">在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。</span><span class="sxs-lookup"><span data-stu-id="9fa05-210">In the meantime, you can always use the equivalent REST API instead of the client SDK.</span></span>
 
-* [.NET Core 指南](../core/index.md)
-* [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
-* [Docker 上的 .NET Framework 指南](../framework/index.md)
-* [.NET 偵錯概觀](components.md)
+## <a name="see-also"></a><span data-ttu-id="9fa05-211">請參閱</span><span class="sxs-lookup"><span data-stu-id="9fa05-211">See also</span></span>
+ <span data-ttu-id="9fa05-212">[在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework) </span><span class="sxs-lookup"><span data-stu-id="9fa05-212">[Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework) </span></span>  
+ <span data-ttu-id="9fa05-213">[.NET Core 指南](../core/index.md) </span><span class="sxs-lookup"><span data-stu-id="9fa05-213">[.NET Core Guide](../core/index.md) </span></span>  
+ <span data-ttu-id="9fa05-214">[從 .NET Framework 移植到 .NET Core](../core/porting/index.md) </span><span class="sxs-lookup"><span data-stu-id="9fa05-214">[Porting from .NET Framework to .NET Core](../core/porting/index.md) </span></span>  
+ <span data-ttu-id="9fa05-215">[Docker 上的 .NET Framework 指南](../framework/docker/index.md) </span><span class="sxs-lookup"><span data-stu-id="9fa05-215">[.NET Framework on Docker Guide](../framework/docker/index.md) </span></span>  
+ <span data-ttu-id="9fa05-216">[.NET 元件概觀](components.md) </span><span class="sxs-lookup"><span data-stu-id="9fa05-216">[.NET Components Overview](components.md) </span></span>  
+ [<span data-ttu-id="9fa05-217">.NET 微服務：容器化 .NET 應用程式的架構</span><span class="sxs-lookup"><span data-stu-id="9fa05-217">.NET Microservices. Architecture for Containerized .NET Applications</span></span>](microservices-architecture/index.md)
 

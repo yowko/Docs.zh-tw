@@ -1,1 +1,1 @@
-http://schemas.microsoft.com/winfx/2006/xaml
+<span data-ttu-id="d28a4-101">http://schemas.microsoft.com/winfx/2006/xaml</span><span class="sxs-lookup"><span data-stu-id="d28a4-101">http://schemas.microsoft.com/winfx/2006/xaml</span></span>

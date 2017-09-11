@@ -1,5 +1,5 @@
 ---
-title: "如何︰剖析字串 (C#) | Microsoft Docs"
+title: "如何：剖析字串 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9cb39ce280775b255089bd97f1fe25618331e37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8aa6e0235a5a9e834167b74897121a1ab003078b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-parse-a-string-c"></a>如何：剖析字串 (C#)
-本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="db048-102">如何：剖析字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="db048-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="db048-103">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="db048-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a>範例  
- 下列 C# 程式碼顯示如何剖析字串。  
+## <a name="example"></a><span data-ttu-id="db048-104">範例</span><span class="sxs-lookup"><span data-stu-id="db048-104">Example</span></span>  
+ <span data-ttu-id="db048-105">下列 C# 程式碼顯示如何剖析字串。</span><span class="sxs-lookup"><span data-stu-id="db048-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -62,5 +62,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="db048-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db048-106">See Also</span></span>  
+ [<span data-ttu-id="db048-107">剖析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="db048-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

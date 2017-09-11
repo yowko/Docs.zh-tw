@@ -1,5 +1,5 @@
 ---
-title: "false 常值 (C# 參考) | Microsoft Docs"
+title: "false 常值 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,24 +27,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 683adbea6856c5dab1ea50c675fe452dfee386ca
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fe506961bc0679c64fd4b56417031a4b3f5dd4b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="false-literal-c-reference"></a>false 常值 (C# 參考)
-代表布林值 false。  
+# <a name="false-literal-c-reference"></a><span data-ttu-id="9e28f-102">false 常值 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9e28f-102">false Literal (C# Reference)</span></span>
+<span data-ttu-id="9e28f-103">代表布林值 false。</span><span class="sxs-lookup"><span data-stu-id="9e28f-103">Represents the boolean value false.</span></span>  
   
-## <a name="example"></a>範例  
- [!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-literal_1.cs)]  
+## <a name="example"></a><span data-ttu-id="9e28f-104">範例</span><span class="sxs-lookup"><span data-stu-id="9e28f-104">Example</span></span>  
+ <span data-ttu-id="9e28f-105">[!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-literal_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="9e28f-105">[!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-literal_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="9e28f-106">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="9e28f-106">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [true](../../../csharp/language-reference/keywords/true.md)
+## <a name="see-also"></a><span data-ttu-id="9e28f-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e28f-107">See Also</span></span>  
+ <span data-ttu-id="9e28f-108">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9e28f-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9e28f-109">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9e28f-109">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="9e28f-110">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="9e28f-110">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="9e28f-111">true</span><span class="sxs-lookup"><span data-stu-id="9e28f-111">true</span></span>](../../../csharp/language-reference/keywords/true.md)
+

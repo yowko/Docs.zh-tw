@@ -1,35 +1,34 @@
 ---
-title: "dotnet-add reference 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-add reference 命令提供方便的選項，以新增專案對專案參考。"
-keywords: "dotnet-add, CLI, CLI 命令, .NET Core"
-author: spboyer
+title: "dotnet-add reference 命令 - .NET Core CLI"
+description: "dotnet add reference 命令提供方便的選項，以新增專案對專案參考。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 5e2a3efd-443c-4f23-a1b1-a662a5387879
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 1b342f0aea19c01d7bdae94552019f4c171fd1a2
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-add-reference"></a><span data-ttu-id="9bd19-103">dotnet-add reference</span><span class="sxs-lookup"><span data-stu-id="9bd19-103">dotnet-add reference</span></span>
 
-# <a name="dotnet-add-reference"></a>dotnet-add reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a><span data-ttu-id="9bd19-104">名稱</span><span class="sxs-lookup"><span data-stu-id="9bd19-104">Name</span></span>
 
-`dotnet-add reference` - 新增專案對專案 (P2P) 參考。
+<span data-ttu-id="9bd19-105">`dotnet add reference` - 新增專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="9bd19-105">`dotnet add reference` - Adds project-to-project (P2P) references.</span></span>
 
-## <a name="synopsis"></a>概要
+## <a name="synopsis"></a><span data-ttu-id="9bd19-106">概要</span><span class="sxs-lookup"><span data-stu-id="9bd19-106">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a><span data-ttu-id="9bd19-107">說明</span><span class="sxs-lookup"><span data-stu-id="9bd19-107">Description</span></span>
 
-`dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。 執行命令之後，系統就會將 [`<ProjectReference>`](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) 元素新增至專案檔。
+<span data-ttu-id="9bd19-108">`dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。</span><span class="sxs-lookup"><span data-stu-id="9bd19-108">The `dotnet add reference` command provides a convenient option to add project references to a project.</span></span> <span data-ttu-id="9bd19-109">執行命令之後，系統就會將 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素新增至專案檔。</span><span class="sxs-lookup"><span data-stu-id="9bd19-109">After running the command, the [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) elements are added to the project file.</span></span>
 
 ```xml
 <ItemGroup>
@@ -39,37 +38,36 @@ ms.lasthandoff: 03/22/2017
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a><span data-ttu-id="9bd19-110">引數</span><span class="sxs-lookup"><span data-stu-id="9bd19-110">Arguments</span></span>
 
 `PROJECT`
 
-指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個方案檔。
+<span data-ttu-id="9bd19-111">指定專案檔。</span><span class="sxs-lookup"><span data-stu-id="9bd19-111">Specifies the project file.</span></span> <span data-ttu-id="9bd19-112">如果未指定，命令會在目前的目錄中搜尋一個方案檔。</span><span class="sxs-lookup"><span data-stu-id="9bd19-112">If not specified, the command will search the current directory for one.</span></span>
 
 `PROJECT_REFERENCES`
 
-要新增的專案對專案 (P2P) 參考。 指定一個或多個專案。 Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
+<span data-ttu-id="9bd19-113">要新增的專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="9bd19-113">Project-to-project (P2P) references to add.</span></span> <span data-ttu-id="9bd19-114">指定一個或多個專案。</span><span class="sxs-lookup"><span data-stu-id="9bd19-114">Specify one or more projects.</span></span> <span data-ttu-id="9bd19-115">Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="9bd19-115">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux-based systems.</span></span>
 
-## <a name="options"></a>選項
+## <a name="options"></a><span data-ttu-id="9bd19-116">選項</span><span class="sxs-lookup"><span data-stu-id="9bd19-116">Options</span></span>
 
 `-h|--help`
 
-印出命令的簡短說明。
+<span data-ttu-id="9bd19-117">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="9bd19-117">Prints out a short help for the command.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。
+<span data-ttu-id="9bd19-118">只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。</span><span class="sxs-lookup"><span data-stu-id="9bd19-118">Adds project references only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
-## <a name="examples"></a>範例
+## <a name="examples"></a><span data-ttu-id="9bd19-119">範例</span><span class="sxs-lookup"><span data-stu-id="9bd19-119">Examples</span></span>
 
-新增專案參考：
+<span data-ttu-id="9bd19-120">新增專案參考：</span><span class="sxs-lookup"><span data-stu-id="9bd19-120">Add a project reference:</span></span>
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-新增多個專案參考：
+<span data-ttu-id="9bd19-121">新增多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="9bd19-121">Add multiple project references:</span></span>
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 
-在 Linux/Unix 上使用 Glob 模式新增多個專案參考：
+<span data-ttu-id="9bd19-122">在 Linux/Unix 上使用 Glob 模式新增多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="9bd19-122">Add multiple project references using a globbing pattern on Linux/Unix:</span></span>
 
 `dotnet add app/app.csproj reference **/*.csproj`
-

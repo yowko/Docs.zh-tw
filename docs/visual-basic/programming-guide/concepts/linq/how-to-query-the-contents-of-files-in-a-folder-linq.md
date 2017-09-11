@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d77806190b55d418ec8672913a73fb475ebb5f22
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ed108cbde07788390d6d094685034714745c1229
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>如何︰ 查詢資料夾 (LINQ) (Visual Basic) 中的檔案的內容
-這個範例示範如何查詢指定的目錄樹狀結構中的所有檔案、 開啟每個檔案，並檢查其內容。 這類技巧可用來建立索引，或反向索引樹狀目錄的內容。 在此範例中，執行簡單的字串搜尋。 不過，可以執行更複雜類型的模式比對規則運算式。 如需詳細資訊，請參閱[How to︰ 使用規則運算式 (Visual Basic) 結合 LINQ 查詢](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。  
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="c721e-102">如何︰ 查詢資料夾 (LINQ) (Visual Basic) 中的檔案的內容</span><span class="sxs-lookup"><span data-stu-id="c721e-102">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="c721e-103">這個範例示範如何查詢指定的目錄樹狀結構中的所有檔案、 開啟每個檔案，並檢查其內容。</span><span class="sxs-lookup"><span data-stu-id="c721e-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="c721e-104">這類技巧可用來建立索引，或反向索引樹狀目錄的內容。</span><span class="sxs-lookup"><span data-stu-id="c721e-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="c721e-105">在此範例中，執行簡單的字串搜尋。</span><span class="sxs-lookup"><span data-stu-id="c721e-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="c721e-106">不過，可以執行更複雜類型的模式比對規則運算式。</span><span class="sxs-lookup"><span data-stu-id="c721e-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="c721e-107">如需詳細資訊，請參閱[How to︰ 使用規則運算式 (Visual Basic) 結合 LINQ 查詢](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="c721e-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="c721e-108">範例</span><span class="sxs-lookup"><span data-stu-id="c721e-108">Example</span></span>  
   
 ```vb  
 Module Module1  
@@ -87,9 +88,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+## <a name="compiling-the-code"></a><span data-ttu-id="c721e-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c721e-109">Compiling the Code</span></span>  
+ <span data-ttu-id="c721e-110">建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="c721e-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="c721e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c721e-111">See Also</span></span>  
+ <span data-ttu-id="c721e-112">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="c721e-112">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="c721e-113"> [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="c721e-113"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

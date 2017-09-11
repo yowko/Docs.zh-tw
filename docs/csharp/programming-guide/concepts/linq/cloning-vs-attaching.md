@@ -1,5 +1,5 @@
 ---
-title: "複製與附加 (C#) | Microsoft Docs"
+title: "複製與附加 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 784c3b92ce10878b244ae5d965f5033a6ee6f9ae
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 672bea849949ecfbf0aef3390556950356b5caff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cloning-vs-attaching-c"></a>複製與附加 (C#)
-將 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件新增至新的樹狀結構時，如果新內容沒有父代，則這些物件只會附加至 XML 樹狀結構。 如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。 然後，新複製的內容會附加到新的 XML 樹狀結構。  
+# <a name="cloning-vs-attaching-c"></a><span data-ttu-id="0f50a-102">複製與附加 (C#)</span><span class="sxs-lookup"><span data-stu-id="0f50a-102">Cloning vs. Attaching (C#)</span></span>
+<span data-ttu-id="0f50a-103">將 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件加入到新的樹狀結構時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="0f50a-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="0f50a-104">如果新內容已經成為父代，而且屬於其他 XML 樹狀結構的一部分，則會複製新內容。</span><span class="sxs-lookup"><span data-stu-id="0f50a-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="0f50a-105">然後，新複製的內容會附加到新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="0f50a-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼示範將成為父代的項目加入到樹狀結構時，以及將沒有父代的項目加入樹狀結構時的行為。  
+## <a name="example"></a><span data-ttu-id="0f50a-106">範例</span><span class="sxs-lookup"><span data-stu-id="0f50a-106">Example</span></span>  
+ <span data-ttu-id="0f50a-107">下列程式碼示範將成為父代的項目加入到樹狀結構時，以及將沒有父代的項目加入樹狀結構時的行為。</span><span class="sxs-lookup"><span data-stu-id="0f50a-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -58,12 +58,13 @@ Console.WriteLine("Child2 was {0}",
     "attached" : "cloned");  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="0f50a-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0f50a-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="0f50a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f50a-109">See Also</span></span>  
+ [<span data-ttu-id="0f50a-110">建立 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="0f50a-110">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

@@ -1,1 +1,1 @@
-Microsoft AJAX Library
+<span data-ttu-id="cb3d9-101">Microsoft AJAX Library</span><span class="sxs-lookup"><span data-stu-id="cb3d9-101">Microsoft Ajax Library</span></span>

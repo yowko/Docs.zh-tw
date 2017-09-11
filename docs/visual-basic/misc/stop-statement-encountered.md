@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9849428343d130bd363b8b53c8d143c4b8bf996a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 45edd22788c6e93efe335dec45c818cbcf233847
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="stop-statement-encountered"></a>出現 Stop 陳述式
-遇到暫停執行的 `Stop` 陳述式。  
+# <a name="stop-statement-encountered"></a><span data-ttu-id="a05bd-102">出現 Stop 陳述式</span><span class="sxs-lookup"><span data-stu-id="a05bd-102">Stop statement encountered</span></span>
+<span data-ttu-id="a05bd-103">遇到暫停執行的 `Stop` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="a05bd-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a05bd-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="a05bd-104">To correct this error</span></span>  
   
-1.  請移除 `Stop` 陳述式。  
+1.  <span data-ttu-id="a05bd-105">請移除 `Stop` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="a05bd-105">Remove the `Stop` statement.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Stop 陳述式](../../visual-basic/language-reference/statements/stop-statement.md)   
- [控制流程摘要](../../visual-basic/language-reference/keywords/control-flow-summary.md)   
- [Visual Basic 中的 Stop 陳述式](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)
+## <a name="see-also"></a><span data-ttu-id="a05bd-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a05bd-106">See Also</span></span>  
+ <span data-ttu-id="a05bd-107">[Stop 陳述式](../../visual-basic/language-reference/statements/stop-statement.md) </span><span class="sxs-lookup"><span data-stu-id="a05bd-107">[Stop Statement](../../visual-basic/language-reference/statements/stop-statement.md) </span></span>  
+<span data-ttu-id="a05bd-108"> [控制流程摘要](../../visual-basic/language-reference/keywords/control-flow-summary.md) </span><span class="sxs-lookup"><span data-stu-id="a05bd-108"> [Control Flow Summary](../../visual-basic/language-reference/keywords/control-flow-summary.md) </span></span>  
+<span data-ttu-id="a05bd-109"> [Visual Basic 中的 Stop 陳述式](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)</span><span class="sxs-lookup"><span data-stu-id="a05bd-109"> [Stop Statements in Visual Basic](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)</span></span>

@@ -1,1 +1,1 @@
-Microsoft Windows XP Service Pack 2 (SP2)
+<span data-ttu-id="dc739-101">Microsoft Windows XP Service Pack 2 (SP2)</span><span class="sxs-lookup"><span data-stu-id="dc739-101">Microsoft Windows XP Service Pack 2 (SP2)</span></span>

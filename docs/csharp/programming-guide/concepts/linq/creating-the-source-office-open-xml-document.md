@@ -1,5 +1,5 @@
 ---
-title: "建立來源 Office Open XML 文件 (C#) | Microsoft Docs"
+title: "建立來源 Office Open XML 文件 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,28 +14,27 @@ ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8ec165719341b946055fc89c2e54482320e92a98
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ea055d35982e364a6b77281aca1d1b03474aa0b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="creating-the-source-office-open-xml-document-c"></a>建立來源 Office Open XML 文件 (C#)
-這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
+# <a name="creating-the-source-office-open-xml-document-c"></a><span data-ttu-id="dd0b0-102">建立來源 Office Open XML 文件 (C#)</span><span class="sxs-lookup"><span data-stu-id="dd0b0-102">Creating the Source Office Open XML Document (C#)</span></span>
+<span data-ttu-id="dd0b0-103">這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="dd0b0-104">如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  
   
- 不過，本教學課程中的範例將會使用任何有效的 WordprocessingML 文件。  
+ <span data-ttu-id="dd0b0-105">不過，本教學課程中的範例將會使用任何有效的 WordprocessingML 文件。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-105">However, the examples in this tutorial will work with any valid WordprocessingML document.</span></span>  
   
- 若要建立本教學課程使用的文件，您必須已經安裝 Microsoft Office 2007 或更新版本；或者，您必須安裝 Microsoft Office 2003 與適用於 Word、Excel 和 PowerPoint 2007 檔案格式的 Microsoft Office 相容性套件。  
+ <span data-ttu-id="dd0b0-106">若要建立本教學課程使用的文件，您必須已經安裝 Microsoft Office 2007 或更新版本；或者，您必須安裝 Microsoft Office 2003 與適用於 Word、Excel 和 PowerPoint 2007 檔案格式的 Microsoft Office 相容性套件。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-106">To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
   
-## <a name="creating-the-wordprocessingml-document"></a>建立 WordprocessingML 文件  
+## <a name="creating-the-wordprocessingml-document"></a><span data-ttu-id="dd0b0-107">建立 WordprocessingML 文件</span><span class="sxs-lookup"><span data-stu-id="dd0b0-107">Creating the WordprocessingML Document</span></span>  
   
-#### <a name="to-create-the-wordprocessingml-document"></a>若要建立 WordprocessingML 文件  
+#### <a name="to-create-the-wordprocessingml-document"></a><span data-ttu-id="dd0b0-108">若要建立 WordprocessingML 文件</span><span class="sxs-lookup"><span data-stu-id="dd0b0-108">To create the WordprocessingML document</span></span>  
   
-1.  建立新的 Microsoft Word 文件。  
+1.  <span data-ttu-id="dd0b0-109">建立新的 Microsoft Word 文件。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-109">Create a new Microsoft Word document.</span></span>  
   
-2.  將下列文字貼到新的文件中：  
+2.  <span data-ttu-id="dd0b0-110">將下列文字貼到新的文件中：</span><span class="sxs-lookup"><span data-stu-id="dd0b0-110">Paste the following text into the new document:</span></span>  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -55,16 +54,17 @@ ms.lasthandoff: 03/13/2017
     Hello World  
     ```  
   
-3.  將第一行的格式設定為「標題 1」樣式。  
+3.  <span data-ttu-id="dd0b0-111">將第一行的格式設定為「標題 1」樣式。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-111">Format the first line with the style "Heading 1".</span></span>  
   
-4.  選取包含 C# 程式碼的行。 第一行開頭為 `using` 關鍵字。 最後一行是最後一個右邊的大括號。 利用 Courier 字型設定這幾行的格式。 以新樣式設定格式，然後將新樣式命名為 "Code"。  
+4.  <span data-ttu-id="dd0b0-112">選取包含 C# 程式碼的行。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-112">Select the lines that contain the C# code.</span></span> <span data-ttu-id="dd0b0-113">第一行開頭為 `using` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-113">The first line starts with the `using` keyword.</span></span> <span data-ttu-id="dd0b0-114">最後一行是最後一個右邊的大括號。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-114">The last line is the last closing brace.</span></span> <span data-ttu-id="dd0b0-115">利用 Courier 字型設定這幾行的格式。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-115">Format the lines with the courier font.</span></span> <span data-ttu-id="dd0b0-116">以新樣式設定格式，然後將新樣式命名為 "Code"。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-116">Format them with a new style, and name the new style "Code".</span></span>  
   
-5.  最後，選取包含輸出的整行，然後使用 `Code` 樣式設定其格式。  
+5.  <span data-ttu-id="dd0b0-117">最後，選取包含輸出的整行，然後使用 `Code` 樣式設定其格式。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-117">Finally, select the entire line that contains the output, and format it with the `Code` style.</span></span>  
   
-6.  儲存文件，然後將其命名為 SampleDoc.docx。  
+6.  <span data-ttu-id="dd0b0-118">儲存文件，然後將其命名為 SampleDoc.docx。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-118">Save the document, and name it SampleDoc.docx.</span></span>  
   
     > [!NOTE]
-    >  如果您要使用 Microsoft Word 2003，在 [存檔類型]**** 下拉式清單中選取 [Word 2007 文件]****。  
+    >  <span data-ttu-id="dd0b0-119">如果您要使用 Microsoft Word 2003，在 [存檔類型] 下拉式清單中選取 [Word 2007 文件]。</span><span class="sxs-lookup"><span data-stu-id="dd0b0-119">If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="dd0b0-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd0b0-120">See Also</span></span>  
+ [<span data-ttu-id="dd0b0-121">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="dd0b0-121">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

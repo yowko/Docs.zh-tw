@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Basic 應用程式中存取資料 | Microsoft Docs"
+title: "在 Visual Basic 應用程式中存取資料"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,56 +28,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 227aaf74dff0ae16fc5030ac8031ffa0f9ddf632
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4ff9885f66171ee0454bff058b342d1b5683d3e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。  
+# <a name="accessing-data-in-visual-basic-applications"></a><span data-ttu-id="4f538-102">在 Visual Basic 應用程式中存取資料</span><span class="sxs-lookup"><span data-stu-id="4f538-102">Accessing data in Visual Basic applications</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="4f538-103"> 包括數個新功能，以協助開發可存取資料的應用程式。</span><span class="sxs-lookup"><span data-stu-id="4f538-103"> includes several new features to assist in developing applications that access data.</span></span> <span data-ttu-id="4f538-104">將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。</span><span class="sxs-lookup"><span data-stu-id="4f538-104">Data-bound forms for Windows applications are created by dragging items from the [Data Sources Window](/visualstudio/data-tools/add-new-data-sources) onto the form.</span></span> <span data-ttu-id="4f538-105">將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。</span><span class="sxs-lookup"><span data-stu-id="4f538-105">You bind controls to data by dragging items from the **Data Sources Window** onto existing controls.</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- [存取 Visual Studio 中的資料](https://docs.microsoft.com/visualstudio/data-tools/)  
- 提供頁面的連結，這些頁面討論如何將資料存取功能納入應用程式。
+## <a name="related-sections"></a><span data-ttu-id="4f538-106">相關章節</span><span class="sxs-lookup"><span data-stu-id="4f538-106">Related sections</span></span>  
+ [<span data-ttu-id="4f538-107">存取 Visual Studio 中的資料</span><span class="sxs-lookup"><span data-stu-id="4f538-107">Accessing Data in Visual Studio</span></span>](/visualstudio/data-tools/)  
+ <span data-ttu-id="4f538-108">提供頁面的連結，這些頁面討論如何將資料存取功能納入應用程式。</span><span class="sxs-lookup"><span data-stu-id="4f538-108">Provides links to pages that discuss incorporating data access functionality into your applications.</span></span>
 
- [適用於 .NET 的 Visual Studio Data Tools](https://docs.microsoft.com/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- 提供頁面的連結，這些頁面與使用 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 建立可處理資料的應用程式相關。  
+ [<span data-ttu-id="4f538-109">適用於 .NET 的 Visual Studio Data Tools</span><span class="sxs-lookup"><span data-stu-id="4f538-109">Visual Studio data tools for .NET</span></span>](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
+ <span data-ttu-id="4f538-110">提供頁面的連結，這些頁面與使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 建立可處理資料的應用程式相關。</span><span class="sxs-lookup"><span data-stu-id="4f538-110">Provides links to pages on creating applications that work with data, using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
- [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
- 提供主題的連結，這些主題描述如何搭配使用 LINQ 與 Visual Basic。  
+ [<span data-ttu-id="4f538-111">LINQ</span><span class="sxs-lookup"><span data-stu-id="4f538-111">LINQ</span></span>](../../visual-basic/programming-guide/language-features/linq/index.md)  
+ <span data-ttu-id="4f538-112">提供主題的連結，這些主題描述如何搭配使用 LINQ 與 Visual Basic。</span><span class="sxs-lookup"><span data-stu-id="4f538-112">Provides links to topics that describe how to use LINQ with Visual Basic.</span></span>  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
- 提供 [!INCLUDE[vbtecdlinq](../../csharp/includes/vbtecdlinq_md.md)] 的相關資訊。 包括程式設計範例。  
+ [<span data-ttu-id="4f538-113">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="4f538-113">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
+ <span data-ttu-id="4f538-114">提供 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="4f538-114">Provides information about [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="4f538-115">包括程式設計範例。</span><span class="sxs-lookup"><span data-stu-id="4f538-115">Includes programming examples.</span></span>  
   
- [LINQ to SQL Tools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)  
- 提供主題的連結，這些主題與如何在應用程式中建立 [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) 物件模型相關。  
+ <span data-ttu-id="4f538-116">[LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)</span><span class="sxs-lookup"><span data-stu-id="4f538-116">[LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)</span></span>  
+ <span data-ttu-id="4f538-117">提供主題的連結，這些主題與如何在應用程式中建立 [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) 物件模型相關。</span><span class="sxs-lookup"><span data-stu-id="4f538-117">Provides links to topics about how to create a [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) object model in applications.</span></span>  
   
- [使用多層式架構 (N-Tier) 應用程式中的資料集](https://docs.microsoft.com/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
- 提供主題的連結，這些主題與如何建立多層資料應用程式相關。  
+ [<span data-ttu-id="4f538-118">使用多層式架構 (N-Tier) 應用程式中的資料集</span><span class="sxs-lookup"><span data-stu-id="4f538-118">Work with datasets in n-tier applications</span></span>](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+ <span data-ttu-id="4f538-119">提供主題的連結，這些主題與如何建立多層資料應用程式相關。</span><span class="sxs-lookup"><span data-stu-id="4f538-119">Provides links to topics about how to create multitiered data applications.</span></span>  
      
- [新增連線](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)  
- 提供頁面的連結，這些頁面與使用 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 以利用設計階段工具和 ADO.NET 連線物件將應用程式連線至資料相關。  
+ [<span data-ttu-id="4f538-120">新增連線</span><span class="sxs-lookup"><span data-stu-id="4f538-120">Add new connections</span></span>](/visualstudio/data-tools/add-new-connections)  
+ <span data-ttu-id="4f538-121">提供頁面的連結，這些頁面與使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 以利用設計階段工具和 ADO.NET 連線物件將應用程式連線至資料相關。</span><span class="sxs-lookup"><span data-stu-id="4f538-121">Provides links to pages on connecting your application to data with design-time tools and ADO.NET connection objects, using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
 
- [Visual Studio 中的資料集工具](https://docs.microsoft.com/visualstudio/data-tools/dataset-tools-in-visual-studio)  
- 提供頁面的連結，這些頁面描述如何將資料載入資料集以及如何執行 SQL 陳述式和預存程序。  
+ [<span data-ttu-id="4f538-122">Visual Studio 中的資料集工具</span><span class="sxs-lookup"><span data-stu-id="4f538-122">Dataset Tools in Visual Studio</span></span>](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+ <span data-ttu-id="4f538-123">提供頁面的連結，這些頁面描述如何將資料載入資料集以及如何執行 SQL 陳述式和預存程序。</span><span class="sxs-lookup"><span data-stu-id="4f538-123">Provides links to pages describing how to load data into datasets and how to execute SQL statements and stored procedures.</span></span>  
   
- [將控制項繫結至 Visual Studio 中的資料](https://docs.microsoft.com/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
- 提供頁面的連結，這些頁面說明如何透過資料繫結控制項在 Windows Forms 上顯示資料。  
+ [<span data-ttu-id="4f538-124">將控制項繫結至 Visual Studio 中的資料</span><span class="sxs-lookup"><span data-stu-id="4f538-124">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
+ <span data-ttu-id="4f538-125">提供頁面的連結，這些頁面說明如何透過資料繫結控制項在 Windows Forms 上顯示資料。</span><span class="sxs-lookup"><span data-stu-id="4f538-125">Provides links to pages that explain how to display data on Windows Forms through data-bound controls.</span></span>  
   
- [編輯資料集中的資料](https://docs.microsoft.com/visualstudio/data-tools/edit-data-in-datasets)  
- 提供頁面的連結，這些頁面描述如何操作資料集之資料表中的資料。  
+ [<span data-ttu-id="4f538-126">編輯資料集中的資料</span><span class="sxs-lookup"><span data-stu-id="4f538-126">Edit Data in Datasets</span></span>](/visualstudio/data-tools/edit-data-in-datasets)  
+ <span data-ttu-id="4f538-127">提供頁面的連結，這些頁面描述如何操作資料集之資料表中的資料。</span><span class="sxs-lookup"><span data-stu-id="4f538-127">Provides links to pages describing how to manipulate the data in the data tables of a dataset.</span></span>  
   
- [驗證資料集中的資料](https://docs.microsoft.com/visualstudio/data-tools/validate-data-in-datasets)  
- 提供頁面的連結，這些頁面描述如何在資料行和資料列變更期間將驗證新增至資料集。  
+ [<span data-ttu-id="4f538-128">驗證資料集中的資料</span><span class="sxs-lookup"><span data-stu-id="4f538-128">Validate data in datasets</span></span>](/visualstudio/data-tools/validate-data-in-datasets)  
+ <span data-ttu-id="4f538-129">提供頁面的連結，這些頁面描述如何在資料行和資料列變更期間將驗證新增至資料集。</span><span class="sxs-lookup"><span data-stu-id="4f538-129">Provides links to pages describing how to add validation to a dataset during column and row changes.</span></span>  
   
- [將資料儲存回資料庫](https://docs.microsoft.com/visualstudio/data-tools/save-data-back-to-the-database)  
- 提供頁面的連結，這些頁面說明如何將已更新資料從應用程式傳送至資料庫。  
+ [<span data-ttu-id="4f538-130">將資料儲存回資料庫</span><span class="sxs-lookup"><span data-stu-id="4f538-130">Save data back to the database</span></span>](/visualstudio/data-tools/save-data-back-to-the-database)  
+ <span data-ttu-id="4f538-131">提供頁面的連結，這些頁面說明如何將已更新資料從應用程式傳送至資料庫。</span><span class="sxs-lookup"><span data-stu-id="4f538-131">Provides links to pages explaining how to send updated data from an application to the database.</span></span>  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
- 描述 ADO.NET 類別，此類別會將資料存取服務公開給 .NET Framework 程式設計人員。
+ [<span data-ttu-id="4f538-132">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4f538-132">ADO.NET</span></span>](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ <span data-ttu-id="4f538-133">描述 ADO.NET 類別，此類別會將資料存取服務公開給 .NET Framework 程式設計人員。</span><span class="sxs-lookup"><span data-stu-id="4f538-133">Describes the ADO.NET classes, which expose data-access services to the .NET Framework programmer.</span></span>
 
- [Office 方案的資料](https://msdn.microsoft.com/library/xx069ybh)  
- 包含頁面的連結，這些頁面說明資料在 Office 方案中的運作方式，包括結構描述導向的程式設計、資料快取，以及伺服器端的資料存取。
+ [<span data-ttu-id="4f538-134">Office 方案的資料</span><span class="sxs-lookup"><span data-stu-id="4f538-134">Data in Office Solutions</span></span>](https://msdn.microsoft.com/library/xx069ybh)  
+ <span data-ttu-id="4f538-135">包含頁面的連結，這些頁面說明資料在 Office 方案中的運作方式，包括結構描述導向的程式設計、資料快取，以及伺服器端的資料存取。</span><span class="sxs-lookup"><span data-stu-id="4f538-135">Contains links to pages that explain how data works in Office solutions, including information about schema-oriented programming, data caching, and server-side data access.</span></span>
 

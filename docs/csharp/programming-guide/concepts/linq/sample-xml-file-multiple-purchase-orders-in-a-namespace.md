@@ -26,10 +26,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>範例 XML 檔：命名空間中的多份採購訂單
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 這個檔案包含數個採購訂單。 XML 位於命名空間中。  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="72728-102">範例 XML 檔：命名空間中的多份採購訂單</span><span class="sxs-lookup"><span data-stu-id="72728-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="72728-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="72728-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="72728-104">這個檔案包含數個採購訂單。</span><span class="sxs-lookup"><span data-stu-id="72728-104">This file contains several purchase orders.</span></span> <span data-ttu-id="72728-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="72728-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="72728-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="72728-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -126,5 +126,5 @@ ms.lasthandoff: 03/13/2017
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="72728-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72728-107">See Also</span></span>  
+ [<span data-ttu-id="72728-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="72728-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

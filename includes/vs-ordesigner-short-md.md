@@ -1,1 +1,1 @@
-O/R 設計工具
+<span data-ttu-id="991a7-101">O/R 設計工具</span><span class="sxs-lookup"><span data-stu-id="991a7-101">O/R Designer</span></span>

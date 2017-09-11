@@ -1,5 +1,5 @@
 ---
-title: "override (C# 參考) | Microsoft Docs"
+title: "override (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,48 +30,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44874332454d73da712a228c3eeeb58b0343e7e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f5a87eaa5894b61187c379c92ad785336aa79b2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="override-c-reference"></a>override (C# 參考)
-需要 `override` 修飾詞才能夠擴充或修改繼承方法、屬性、索引子或事件的抽象或虛擬實作。  
+# <a name="override-c-reference"></a><span data-ttu-id="c6346-102">override (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c6346-102">override (C# Reference)</span></span>
+<span data-ttu-id="c6346-103">需要 `override` 修飾詞才能夠擴充或修改繼承方法、屬性、索引子或事件的抽象或虛擬實作。</span><span class="sxs-lookup"><span data-stu-id="c6346-103">The `override` modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.</span></span>  
   
-## <a name="example"></a>範例  
- 在本例中，`Square` 類別必須提供 `Area` 的覆寫實作，因為 `Area` 繼承自抽象的 `ShapesClass`：  
+## <a name="example"></a><span data-ttu-id="c6346-104">範例</span><span class="sxs-lookup"><span data-stu-id="c6346-104">Example</span></span>  
+ <span data-ttu-id="c6346-105">在本例中，`Square` 類別必須提供 `Area` 的覆寫實作，因為 `Area` 繼承自抽象的 `ShapesClass`：</span><span class="sxs-lookup"><span data-stu-id="c6346-105">In this example, the `Square` class must provide an overridden implementation of `Area` because `Area` is inherited from the abstract `ShapesClass`:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
+ <span data-ttu-id="c6346-106">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="c6346-106">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]</span></span>  
   
- `override` 方法提供繼承自基底類別的成員新實作。 `override` 宣告覆寫的方法稱之為覆寫基底方法。 覆寫基底方法必須和 `override` 方法有相同的簽章。 如需繼承的資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
+ <span data-ttu-id="c6346-107">`override` 方法提供繼承自基底類別的成員新實作。</span><span class="sxs-lookup"><span data-stu-id="c6346-107">An `override` method provides a new implementation of a member that is inherited from a base class.</span></span> <span data-ttu-id="c6346-108">`override` 宣告覆寫的方法稱之為覆寫基底方法。</span><span class="sxs-lookup"><span data-stu-id="c6346-108">The method that is overridden by an `override` declaration is known as the overridden base method.</span></span> <span data-ttu-id="c6346-109">覆寫基底方法必須和 `override` 方法有相同的簽章。</span><span class="sxs-lookup"><span data-stu-id="c6346-109">The overridden base method must have the same signature as the `override` method.</span></span> <span data-ttu-id="c6346-110">如需繼承的資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。</span><span class="sxs-lookup"><span data-stu-id="c6346-110">For information about inheritance, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span>  
   
- 您無法覆寫非虛擬或靜態方法。 覆寫基底方法必須是 `virtual`、`abstract` 或 `override`。  
+ <span data-ttu-id="c6346-111">您無法覆寫非虛擬或靜態方法。</span><span class="sxs-lookup"><span data-stu-id="c6346-111">You cannot override a non-virtual or static method.</span></span> <span data-ttu-id="c6346-112">覆寫基底方法必須是 `virtual`、`abstract` 或 `override`。</span><span class="sxs-lookup"><span data-stu-id="c6346-112">The overridden base method must be `virtual`, `abstract`, or `override`.</span></span>  
   
- `override` 宣告不能變更 `virtual` 方法的存取範圍。 `override` 方法和 `virtual` 方法都必須具有相同的[存取層級修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。  
+ <span data-ttu-id="c6346-113">`override` 宣告不能變更 `virtual` 方法的存取範圍。</span><span class="sxs-lookup"><span data-stu-id="c6346-113">An `override` declaration cannot change the accessibility of the `virtual` method.</span></span> <span data-ttu-id="c6346-114">`override` 方法和 `virtual` 方法都必須具有相同的[存取層級修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="c6346-114">Both the `override` method and the `virtual` method must have the same [access level modifier](../../../csharp/language-reference/keywords/access-modifiers.md).</span></span>  
   
- 您不能使用 `new`、`static` 或 `virtual` 修飾詞來修改 `override` 方法。  
+ <span data-ttu-id="c6346-115">您不能使用 `new`、`static` 或 `virtual` 修飾詞來修改 `override` 方法。</span><span class="sxs-lookup"><span data-stu-id="c6346-115">You cannot use the `new`, `static`, or `virtual` modifiers to modify an `override` method.</span></span>  
   
- 要覆寫的屬性宣告必須指定和繼承屬性完全相同的存取修飾詞、型別和名稱，而覆寫的屬性必須是 `virtual`、`abstract` 或 `override`。  
+ <span data-ttu-id="c6346-116">要覆寫的屬性宣告必須指定和繼承屬性完全相同的存取修飾詞、型別和名稱，而覆寫的屬性必須是 `virtual`、`abstract` 或 `override`。</span><span class="sxs-lookup"><span data-stu-id="c6346-116">An overriding property declaration must specify exactly the same access modifier, type, and name as the inherited property, and the overridden property must be `virtual`, `abstract`, or `override`.</span></span>  
   
- 如需如何使用 `override` 關鍵字的詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
+ <span data-ttu-id="c6346-117">如需如何使用 `override` 關鍵字的詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。</span><span class="sxs-lookup"><span data-stu-id="c6346-117">For more information about how to use the `override` keyword, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing when to use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="example"></a>範例  
- 本例會定義名為 `Employee` 的基底類別，以及名為 `SalesEmployee` 的衍生類別。 `SalesEmployee` 類別包含額外的屬性 `salesbonus`，並會覆寫方法 `CalculatePay` 以將其納入考量。  
+## <a name="example"></a><span data-ttu-id="c6346-118">範例</span><span class="sxs-lookup"><span data-stu-id="c6346-118">Example</span></span>  
+ <span data-ttu-id="c6346-119">本例會定義名為 `Employee` 的基底類別，以及名為 `SalesEmployee` 的衍生類別。</span><span class="sxs-lookup"><span data-stu-id="c6346-119">This example defines a base class named `Employee`, and a derived class named `SalesEmployee`.</span></span> <span data-ttu-id="c6346-120">`SalesEmployee` 類別包含額外的屬性 `salesbonus`，並會覆寫方法 `CalculatePay` 以將其納入考量。</span><span class="sxs-lookup"><span data-stu-id="c6346-120">The `SalesEmployee` class includes an extra property, `salesbonus`, and overrides the method `CalculatePay` in order to take it into account.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
+ <span data-ttu-id="c6346-121">[!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="c6346-121">[!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="c6346-122">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="c6346-122">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
- [abstract](../../../csharp/language-reference/keywords/abstract.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
- [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)
+## <a name="see-also"></a><span data-ttu-id="c6346-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6346-123">See Also</span></span>  
+ <span data-ttu-id="c6346-124">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-124">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="c6346-125">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-125">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="c6346-126">[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-126">[Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md) </span></span>  
+ <span data-ttu-id="c6346-127">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-127">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="c6346-128">[修飾詞](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-128">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ <span data-ttu-id="c6346-129">[abstract](../../../csharp/language-reference/keywords/abstract.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-129">[abstract](../../../csharp/language-reference/keywords/abstract.md) </span></span>  
+ <span data-ttu-id="c6346-130">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-130">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span></span>  
+ <span data-ttu-id="c6346-131">[new](../../../csharp/language-reference/keywords/new.md) </span><span class="sxs-lookup"><span data-stu-id="c6346-131">[new](../../../csharp/language-reference/keywords/new.md) </span></span>  
+ [<span data-ttu-id="c6346-132">多型</span><span class="sxs-lookup"><span data-stu-id="c6346-132">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)
+

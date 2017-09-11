@@ -1,5 +1,5 @@
 ---
-title: "如何：尋找相關項目 (XPath-LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：尋找相關項目 (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,27 +14,26 @@ ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dab5d995920728450d0d318af8c5bbb157b11397
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3cc73ab69adb66fd1158637a8a3c67008d8e8663
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何：尋找相關項目 (XPath-LINQ to XML) (C#)
-本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="52156-102">如何：尋找相關項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="52156-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="52156-103">本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。</span><span class="sxs-lookup"><span data-stu-id="52156-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- XPath 運算式為：  
+ <span data-ttu-id="52156-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="52156-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a>範例  
- 此範例會尋找第 12 個 `Order` 項目，然後尋找該順序的客戶。  
+## <a name="example"></a><span data-ttu-id="52156-105">範例</span><span class="sxs-lookup"><span data-stu-id="52156-105">Example</span></span>  
+ <span data-ttu-id="52156-106">此範例會尋找第 12 個 `Order` 項目，然後尋找該順序的客戶。</span><span class="sxs-lookup"><span data-stu-id="52156-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- 請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
+ <span data-ttu-id="52156-107">請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。</span><span class="sxs-lookup"><span data-stu-id="52156-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="52156-108">在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。</span><span class="sxs-lookup"><span data-stu-id="52156-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="52156-109">此範例會反映這個差異。</span><span class="sxs-lookup"><span data-stu-id="52156-109">This example reflects this difference.</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ <span data-ttu-id="52156-110">此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="52156-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -77,7 +76,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="52156-111">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="52156-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -97,5 +96,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="52156-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52156-112">See Also</span></span>  
+ [<span data-ttu-id="52156-113">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="52156-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

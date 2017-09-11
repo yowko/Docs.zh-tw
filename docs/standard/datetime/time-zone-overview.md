@@ -1,77 +1,64 @@
 ---
-title: "時區概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "調整規則 [.NET Framework]"
-  - "模稜兩可的時間 [.NET Framework]"
-  - "日光節約時期 [.NET Framework]"
-  - "固定規則 [.NET Framework]"
-  - "浮動規則 [.NET Framework]"
-  - "無效的時間 [.NET Framework]"
-  - "時區 [.NET Framework], 關於時區"
-  - "時區 [.NET Framework], 建立"
-  - "時區 [.NET Framework], 用語"
-  - "TimeZoneInfo 類別, 關於 TimeZoneInfo 類別"
-  - "轉換時間 [.NET Framework]"
-ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+title: "時區概觀"
+description: "時區概觀"
+keywords: .NET, .NET Core
+author: stevehoag
+ms.author: shoag
+ms.date: 08/16/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.devlang: dotnet
+ms.assetid: e3a10f62-d403-4441-8621-adc964e32c07
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 200d502d12750a28d2a54058f53b4bbef78973c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/02/2017
+
 ---
-# 時區概觀
-<xref:System.TimeZoneInfo> 類別會簡化時區感知應用程式的建立過程。  <xref:System.TimeZone> 類別支援使用當地時區及 Coordinated Universal Time \(UTC\)。  <xref:System.TimeZoneInfo> 類別支援這兩種時區，以及任何相關資訊已預先定義於登錄中的時區。  您也可以使用 <xref:System.TimeZoneInfo> 定義系統中沒有相關資訊的自訂時區。  
-  
-## 時區基本功能  
- 時區是一個地理區域，在此區域中的時間都相同。  通常，但不是絕對，相鄰的時區相差一個小時。  全球任何時區的時間，都可以表示成 Coordinated Universal Time \(UTC\) 的位移。  
-  
- 全世界有許多時區都支援日光節約時間。  在春季或夏季初期將時間往前撥一小時，並在夏末或秋季調整回一般 \(即標準\) 時間，以延長白晝的時間，稱為日光節約時間。  標準時間的來回變動就是調整規則。  
-  
- 特定時區的日光節約時間來回轉換，可以使用固定或浮動調整規則加以定義。  固定調整規則就是設定一個特定日期，並在每年此時來回轉換日光節約時間。  例如，日光節約時間轉換回標準時間，是在每年的 10 月 25 日，所遵循的就是固定調整規則。  較為常見的是浮動調整規則，這些規則會設定在特定月份的特定星期的特定日期來回轉換日光節約時間。  例如，從標準時間轉換成日光節約時間設定在三月的第三個星期日，就會遵循浮動調整規則。  
-  
- 對於支援調整規則的時區，來回轉換日光節約時間會產生兩種異常時間：無效時間及模稜兩可的時間。  無效的時間就是來回轉換標準時間和日光節約時間而造成的不存在的時間。  例如，如果轉換發生在某一日的 2:00 A.M. 而造成時間變成 3:00 A.M.，每次在 2:00 A.M. 到2:59:99 A.M. 之間的間隔無效。  模稜兩可的時間就是單一時區內，時間可以對應至兩個不同的時間。  這是從日光節約時間轉換成標準時間所造成的。  例如，如果轉換發生在某一日的 2:00 A.M. 而造成時間變成 1:00 A.M.，每次在 1:00 A.M. 1:59:99 A.M. 之間的間隔可以解譯為標準時間或日光節約時間。  
-  
-## 時區用語  
- 下表定義使用時區及開發時區感知應用程式時，常見的詞彙。  
-  
-|詞彙|定義|  
-|--------|--------|  
-|調整規則|定義何時從標準時間轉換成日光節約時間，以及從日光節約時間轉換回標準時間的規則。  每一個調整規則都有開始及結束時間，定義規則生效的時間 \(例如，調整規則從 1986 年 1 月開始到 2006 年 12 月 31 日\)、時間差異 \(套用調整規則使標準時間變更的時間長度\)，以及在調整期間發生轉換的特定日期與時間之相關資訊。  轉換可以採用固定規則或浮動規則。|  
-|模稜兩可的時間|單一時區內，時間可以對應至兩個不同的時間。  這會發生在時間及時調回時，例如從某個時區的日光節約時間轉換回標準時間時。  例如，如果轉換發生在某一日的 2:00 A.M. 而造成時間變成 1:00 A.M.，每次在 1:00 A.M. 1:59:99 A.M. 之間的間隔可以解譯為標準時間或日光節約時間。|  
-|固定規則|設定特定日期以來回轉換日光節約時間的調整規則。  例如，日光節約時間轉換回標準時間，是在每年的 10 月 25 日，所遵循的就是固定調整規則。|  
-|浮動規則|設定月份的特定週的特定日，來回轉換日光節約時間的調整規則。  例如，從標準時間轉換成日光節約時間設定在三月的第三個星期日，就會遵循浮動調整規則。|  
-|無效的時間|因來回轉換標準時間和日光節約時間而造成的不存在的時間。  當時間及時向前調整，例如，從某個時區的標準時間轉換成日光節約時間，就會發生這種情形。  例如，如果轉換發生在某一日的 2:00 A.M. 而造成時間變成 3:00 A.M.，每次在 2:00 A.M. 到2:59:99 A.M. 之間的間隔無效。|  
-|轉換時間|有關特定時區中特定時間變更 \(例如從日光節約時間變為標準時間，反之亦然\) 的資訊。|  
-  
-## 時區與 TimeZoneInfo 類別  
- 在 .NET Framework 中，<xref:System.TimeZoneInfo> 物件代表時區。  <xref:System.TimeZoneInfo> 類別包含 <xref:System.TimeZoneInfo.GetAdjustmentRules%2A> 方法，會傳回 <xref:System.TimeZoneInfo.AdjustmentRule> 物件陣列。  陣列的每一個項目都會提供有關特定時段的日光節約時間來回轉換資訊 \(如果是不支援日光節約時間的時區，這個方法會傳回空的陣列\)。每一個 <xref:System.TimeZoneInfo.AdjustmentRule> 物件都有一個 <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> 和 <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> 屬性，定義來回轉換日光節約時間的特定日期與時間。  <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> 屬性指定採用固定或浮動轉換。  
-  
- .NET Framework 需要由 Windows 作業系統所提供，並儲存在登錄中的時區資訊。  由於全球的時區數量眾多，登錄中並沒有所有現有時區。  此外，因為登錄是一種動態結構，所以結構中可以新增或刪除預先定義的時區。  最後，登錄並不一定內含歷史時區資料。  例如，在 Windows XP 中，登錄內只有一組時區調整的資料。  Windows Vista 支援動態時區資料，表示單一時區可以有多個調整規則，套用至特定的年度間隔。  但是，Windows Vista 登錄中所定義及支援日光節約時間的大部分時區，都只有一或兩個預先定義的調整規則。  
-  
- 登錄中的 <xref:System.TimeZoneInfo> 類別的相依性，表示時區感知應用程式無法確定特定時區是否已定義於登錄中。  因此，嘗試將特定時區 \(除了當地時區或代表 UTC 的時區\) 具現化就必須使用例外狀況處理。  也必須提供方法，當必要的 <xref:System.TimeZoneInfo> 物件無法從登錄中具現化時，仍能讓應用程式繼續執行。  
-  
- 為了處理缺少的必要時區，<xref:System.TimeZoneInfo> 類別包含一個 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法，您可以用這個方法建立登錄中沒有的自訂時區。  如需建立自訂時區的詳細資訊，請參閱 [如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)及 [如何：建立有調整規則的時區](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。  此外，您可以使用 <xref:System.TimeZoneInfo.ToSerializedString%2A> 方法，將新建立的時區轉換成字串並儲存在資料存放區中 \(例如資料庫、文字檔、登錄或應用程式資源\)。  然後您就可以使用 <xref:System.TimeZoneInfo.FromSerializedString%2A> 方法，將這個字串轉換回 <xref:System.TimeZoneInfo> 物件。  如需詳細資訊，請參閱 [如何：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)及 [如何：從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。  
-  
- 因為每一個時區都可以由 UTC 基本位移表示，以及反映任何現有調整規則的 UTC 位移來表示，時區的時間可以很容易就轉換成其他時區的時間。  因此，<xref:System.TimeZoneInfo> 物件內含幾個轉換方法，包括：  
-  
--   <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>，將 UTC 轉換成指定時區的時間。  
-  
--   <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>，將指定時區的時間轉換成 UTC。  
-  
--   <xref:System.TimeZoneInfo.ConvertTime%2A>，將指定時區的時間轉換成另一個指定時區的時間。  
-  
--   <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>，使用時區識別項 \(而非 <xref:System.TimeZoneInfo> 物件\) 做為參數，將指定時區的時間轉換成另一個指定時區的時間。  
-  
- 如需時區的時間轉換詳細資訊，請參閱[在各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。  
-  
-## 請參閱  
- [日期、時間和時區](../../../docs/standard/datetime/index.md)
+
+# <a name="time-zone-overview"></a><span data-ttu-id="ebc1c-104">時區概觀</span><span class="sxs-lookup"><span data-stu-id="ebc1c-104">Time zone overview</span></span>
+
+<span data-ttu-id="ebc1c-105">[System.TimeZoneInfo](xref:System.TimeZoneInfo) 類別可簡化時區感知應用程式的建立。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-105">The [System.TimeZoneInfo](xref:System.TimeZoneInfo) class simplifies the creation of time zone-aware applications.</span></span> <span data-ttu-id="ebc1c-106">[TimeZoneInfo](xref:System.TimeZoneInfo) 類別支援處理當地時區和國際標準時間 (UTC)，以及登錄中預先定義之資訊的任何時區。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-106">The [TimeZoneInfo](xref:System.TimeZoneInfo) class supports working with the local time zone and Coordinated Universal Time (UTC), as well as any time zone about which information is predefined in the registry.</span></span> <span data-ttu-id="ebc1c-107">您也可以使用 [TimeZoneInfo](xref:System.TimeZoneInfo) 來定義系統沒有相關資訊的自訂時區。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-107">You can also use [TimeZoneInfo](xref:System.TimeZoneInfo) to define custom time zones that the system has no information about.</span></span>
+
+## <a name="time-zone-essentials"></a><span data-ttu-id="ebc1c-108">時區基本功能</span><span class="sxs-lookup"><span data-stu-id="ebc1c-108">Time Zone Essentials</span></span>
+
+<span data-ttu-id="ebc1c-109">時區是使用相同時間的地理區域。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-109">A time zone is a geographical region in which the same time is used.</span></span> <span data-ttu-id="ebc1c-110">相鄰時區一般但不一定會相差一個小時。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-110">Typically, but not always, adjacent time zones are one hour apart.</span></span> <span data-ttu-id="ebc1c-111">任何全世界時區的時間可以表示為與國際標準時間 (UTC) 的位移。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-111">The time in any of the world's time zones can be expressed as an offset from Coordinated Universal Time (UTC).</span></span>
+
+<span data-ttu-id="ebc1c-112">許多全世界的時區都支援日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-112">Many of the world's time zones support daylight saving time.</span></span> <span data-ttu-id="ebc1c-113">日光節約時間會嘗試將日光時數延到最長，方法是將春天或夏初的時間前進一個小時，並在夏末或秋天回復正常 (或標準) 時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-113">Daylight saving time tries to maximize daylight hours by advancing the time forward by one hour in the spring or early summer, and returning to the normal (or standard) time in the late summer or fall.</span></span> <span data-ttu-id="ebc1c-114">這些標準時間的變更稱為調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-114">These changes to and from standard time are known as adjustment rules.</span></span>
+
+<span data-ttu-id="ebc1c-115">透過固定或浮動調整規則，可以定義轉換至及轉換自特定時區的日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-115">The transition to and from daylight saving time in a particular time zone can be defined either by a fixed or a floating adjustment rule.</span></span> <span data-ttu-id="ebc1c-116">固定調整規則會設定每年轉換至或轉換自日光節約時間的特定日期。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-116">A fixed adjustment rule sets a particular date on which the transition to or from daylight saving time occurs each year.</span></span> <span data-ttu-id="ebc1c-117">例如，每年在 10 月 25 日從日光節約時間到標準時間的轉換會遵循固定調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-117">For example, a transition from daylight saving time to standard time that occurs each year on October 25 follows a fixed adjustment rule.</span></span> <span data-ttu-id="ebc1c-118">更常見的是浮動調整規則，可設定在特定月份特定週特定一天轉換至或轉換自日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-118">Much more common are floating adjustment rules, which set a particular day of a particular week of a particular month for the transition to or from daylight saving time.</span></span> <span data-ttu-id="ebc1c-119">例如，在三月第三個星期日從標準時間到日光節約時間的轉換會遵循浮動調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-119">For example, a transition from standard time to daylight saving time that occurs on the third Sunday of March follows a floating adjustment rule.</span></span>
+
+<span data-ttu-id="ebc1c-120">對於支援調整規則的時區，轉換至和轉換自日光節約時間會建立兩種異常時間︰無效的時間和不明確的時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-120">For time zones that support adjustment rules, the transition to and from daylight saving time creates two kinds of anomalous times: invalid times and ambiguous times.</span></span> <span data-ttu-id="ebc1c-121">無效時間是從標準時間轉換到日光節約時間所建立的不存在時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-121">An invalid time is a nonexistent time created by the transition from standard time to daylight saving time.</span></span> <span data-ttu-id="ebc1c-122">例如，如果這項轉換發生在特定日的凌晨 2:00，</span><span class="sxs-lookup"><span data-stu-id="ebc1c-122">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ebc1c-123">並將時間變更為凌晨 3:00，則凌晨 2:00</span><span class="sxs-lookup"><span data-stu-id="ebc1c-123">and causes the time to change to 3:00 A.M., each time interval between 2:00 A.M.</span></span> <span data-ttu-id="ebc1c-124">與凌晨 2:59:99 之間的每個時間間隔</span><span class="sxs-lookup"><span data-stu-id="ebc1c-124">and 2:59:99 A.M.</span></span> <span data-ttu-id="ebc1c-125">無效。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-125">is invalid.</span></span> <span data-ttu-id="ebc1c-126">不明確的時間是可以對應至單一時區中兩個不同時間的時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-126">An ambiguous time is a time that can be mapped to two different times in a single time zone.</span></span> <span data-ttu-id="ebc1c-127">它是透過從日光節約時間轉換到標準時間所建立。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-127">It is created by the transition from daylight saving time to standard time.</span></span> <span data-ttu-id="ebc1c-128">例如，如果這項轉換發生在特定日的凌晨 2:00，</span><span class="sxs-lookup"><span data-stu-id="ebc1c-128">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ebc1c-129">並將時間變更為凌晨 1:00，則凌晨 1:00</span><span class="sxs-lookup"><span data-stu-id="ebc1c-129">and causes the time to change to 1:00 A.M., each time interval between 1:00 A.M.</span></span> <span data-ttu-id="ebc1c-130">與凌晨 1:59:99 之間的每個時間間隔</span><span class="sxs-lookup"><span data-stu-id="ebc1c-130">and 1:59:99 A.M.</span></span> <span data-ttu-id="ebc1c-131">可以解譯為標準時間或日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-131">can be interpreted as either a standard time or a daylight saving time.</span></span> 
+
+## <a name="time-zone-terminology"></a><span data-ttu-id="ebc1c-132">時區術語</span><span class="sxs-lookup"><span data-stu-id="ebc1c-132">Time Zone Terminology</span></span>
+
+<span data-ttu-id="ebc1c-133">下表定義在使用時區以及開發時區感知應用程式時常用的詞彙。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-133">The following table defines terms commonly used when working with time zones and developing time zone-aware applications.</span></span>
+
+<span data-ttu-id="ebc1c-134">詞彙</span><span class="sxs-lookup"><span data-stu-id="ebc1c-134">Term</span></span> | <span data-ttu-id="ebc1c-135">定義</span><span class="sxs-lookup"><span data-stu-id="ebc1c-135">Definition</span></span>
+---- | ----------
+<span data-ttu-id="ebc1c-136">調整規則</span><span class="sxs-lookup"><span data-stu-id="ebc1c-136">Adjustment rule</span></span> | <span data-ttu-id="ebc1c-137">一種規則，定義何時從標準時間轉換為日光節約時間，以及何時從日光節約時間轉換回標準時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-137">A rule that defines when the transition from standard time to daylight saving time and back from daylight saving time to standard time occurs.</span></span> <span data-ttu-id="ebc1c-138">每個調整規則都會有定義規則何時就緒的開始和結束日期 (例如，調整規則是從 1986 年 1 月 1 日到 2020 年 12 月 31 日就緒)、差異 (標準時間因套用調整規則而變更的時間量)，以及調整期間進行轉換之特定日期和時間的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-138">Each adjustment rule has a start and end date that defines when the rule is in place (for example, the adjustment rule is in place from January 1, 1986, to December 31, 2020), a delta (the amount of time by which the standard time changes as a result of the application of the adjustment rule), and information about the specific date and time that the transitions are to occur during the adjustment period.</span></span> <span data-ttu-id="ebc1c-139">轉換可以遵循固定規則或浮動規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-139">Transitions can follow either a fixed rule or a floating rule.</span></span>
+<span data-ttu-id="ebc1c-140">不明確的時間</span><span class="sxs-lookup"><span data-stu-id="ebc1c-140">Ambiguous time</span></span> | <span data-ttu-id="ebc1c-141">可以對應至單一時區中兩個不同時間的時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-141">A time that can be mapped to two different times in a single time zone.</span></span> <span data-ttu-id="ebc1c-142">發生時機是往回調整時鐘時間，例如從時區的日光節約時間轉換到其標準時間期間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-142">It occurs when the clock time is adjusted back in time, such as during the transition from a time zone's daylight saving time to its standard time.</span></span> <span data-ttu-id="ebc1c-143">例如，如果這項轉換發生在特定日的凌晨 2:00，</span><span class="sxs-lookup"><span data-stu-id="ebc1c-143">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ebc1c-144">並將時間變更為凌晨 1:00，則凌晨 1:00</span><span class="sxs-lookup"><span data-stu-id="ebc1c-144">and causes the time to change to 1:00 A.M., each time interval between 1:00 A.M.</span></span> <span data-ttu-id="ebc1c-145">與凌晨 1:59:99 之間的每個時間間隔</span><span class="sxs-lookup"><span data-stu-id="ebc1c-145">and 1:59:99 A.M.</span></span> <span data-ttu-id="ebc1c-146">可以解譯為標準時間或日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-146">can be interpreted as either a standard time or a daylight saving time.</span></span> 
+<span data-ttu-id="ebc1c-147">固定規則</span><span class="sxs-lookup"><span data-stu-id="ebc1c-147">Fixed rule</span></span> | <span data-ttu-id="ebc1c-148">設定在特定日期轉換至或轉換自日光節約時間的調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-148">An adjustment rule that sets a particular date for the transition to or from daylight saving time.</span></span> <span data-ttu-id="ebc1c-149">例如，每年在 10 月 25 日從日光節約時間到標準時間的轉換會遵循固定調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-149">For example, a transition from daylight saving time to standard time that occurs each year on October 25 follows a fixed adjustment rule.</span></span>
+<span data-ttu-id="ebc1c-150">浮動規則</span><span class="sxs-lookup"><span data-stu-id="ebc1c-150">Floating rule</span></span> | <span data-ttu-id="ebc1c-151">設定在特定月份特定週特定一天轉換至或轉換自日光節約時間的調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-151">An adjustment rule that sets a particular day of a particular week of a particular month for the transition to or from daylight saving time.</span></span> <span data-ttu-id="ebc1c-152">例如，在三月第三個星期日從標準時間到日光節約時間的轉換會遵循浮動調整規則。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-152">For example, a transition from standard time to daylight saving time that occurs on the third Sunday of March follows a floating adjustment rule.</span></span>
+<span data-ttu-id="ebc1c-153">無效時間</span><span class="sxs-lookup"><span data-stu-id="ebc1c-153">Invalid time</span></span> | <span data-ttu-id="ebc1c-154">不存在時間是從標準時間轉換到日光節約時間的成品。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-154">A nonexistent time that is an artifact of the transition from standard time to daylight saving time.</span></span> <span data-ttu-id="ebc1c-155">發生時機是往前調整時鐘時間，例如從時區標準時間轉換到其日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-155">It occurs when the clock time is adjusted forward in time, such as during the transition from a time zone's standard time to its daylight saving time.</span></span> <span data-ttu-id="ebc1c-156">例如，如果這項轉換發生在特定日的凌晨 2:00，</span><span class="sxs-lookup"><span data-stu-id="ebc1c-156">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ebc1c-157">並將時間變更為凌晨 3:00，則凌晨 2:00</span><span class="sxs-lookup"><span data-stu-id="ebc1c-157">and causes the time to change to 3:00 A.M., each time interval between 2:00 A.M.</span></span> <span data-ttu-id="ebc1c-158">與凌晨 2:59:99 之間的每個時間間隔</span><span class="sxs-lookup"><span data-stu-id="ebc1c-158">and 2:59:99 A.M.</span></span> <span data-ttu-id="ebc1c-159">無效。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-159">is invalid.</span></span>
+<span data-ttu-id="ebc1c-160">轉換時間</span><span class="sxs-lookup"><span data-stu-id="ebc1c-160">Transition time</span></span> | <span data-ttu-id="ebc1c-161">特定時區中特定時間變更的相關資訊，例如從日光節約時間變更為標準時間，或從標準時間變更為日光節約時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-161">Information about a specific time change, such as the change from daylight saving time to standard time or vice versa, in a particular time zone.</span></span>
+
+## <a name="time-zones-and-the-timezoneinfo-class"></a><span data-ttu-id="ebc1c-162">時區和 TimeZoneInfo 類別</span><span class="sxs-lookup"><span data-stu-id="ebc1c-162">Time Zones and the TimeZoneInfo Class</span></span>
+
+<span data-ttu-id="ebc1c-163">在 .NET 中，[System.TimeZoneInfo](xref:System.TimeZoneInfo) 物件根據作業系統所提供的資訊來代表時區。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-163">In .NET, a [System.TimeZoneInfo](xref:System.TimeZoneInfo) object represents a time zone, based on information provided by the operating system.</span></span> <span data-ttu-id="ebc1c-164">[TimeZoneInfo](xref:System.TimeZoneInfo) 類別與作業系統的相依性表示時區感知應用程式不能是所有作業系統上定義的特定時區。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-164">The dependence of the [TimeZoneInfo](xref:System.TimeZoneInfo) class on the operating system means that a time zone-aware application cannot be certain that a particular time zone is defined on all operating systems.</span></span> <span data-ttu-id="ebc1c-165">因此，嘗試具現化特定時區 (非當地時區或代表 UTC 的時區) 應該使用例外狀況處理。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-165">As a result, the attempt to instantiate a specific time zone (other than the local time zone or the time zone that represents UTC) should use exception handling.</span></span> <span data-ttu-id="ebc1c-166">如果無法具現化必要 [TimeZoneInfo](xref:System.TimeZoneInfo) 物件，則它也應該提供某種方法來繼續應用程式。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-166">It should also provide some method of letting the application to continue if a required [TimeZoneInfo](xref:System.TimeZoneInfo) object cannot be instantiated.</span></span>
+
+<span data-ttu-id="ebc1c-167">因為每個時區都會具備與 UTC 的基底位移，以及具備反映任何現有調整規則之與 UTC 的位移，所以某個時區的時間可以輕鬆地轉換為另一個時區的時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-167">Because each time zone is characterized by a base offset from UTC, as well as by an offset from UTC that reflects any existing adjustment rules, a time in one time zone can be easily converted to the time in another time zone.</span></span> <span data-ttu-id="ebc1c-168">基於此目的，[TimeZoneInfo](xref:System.TimeZoneInfo) 物件包含數種轉換方法，包含︰</span><span class="sxs-lookup"><span data-stu-id="ebc1c-168">For this purpose, the [TimeZoneInfo](xref:System.TimeZoneInfo) object includes several conversion methods, including:</span></span>
+
+* <span data-ttu-id="ebc1c-169">[ConvertTime(DateTime, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo))，會將 [System.DateTime](xref:System.DateTime) 轉換為特定時區的時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-169">[ConvertTime(DateTime, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)), which converts a [System.DateTime](xref:System.DateTime) to the time in a particular time zone.</span></span>
+
+* <span data-ttu-id="ebc1c-170">[ConvertTime(DateTime, TimeZoneInfo, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo,System.TimeZoneInfo))，會將 [DateTime](xref:System.DateTime) 從某個時區轉換為另一個時區。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-170">[ConvertTime(DateTime, TimeZoneInfo, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo,System.TimeZoneInfo)), which converts a [DateTime](xref:System.DateTime) from one time zone to another.</span></span>
+
+* <span data-ttu-id="ebc1c-171">[ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo))，會將 [System.DateTimeOffset](xref:System.DateTimeOffset) 轉換為特定時區的時間。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-171">[ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)), which converts a [System.DateTimeOffset](xref:System.DateTimeOffset) to the time in a particular time zone.</span></span> 
+
+<span data-ttu-id="ebc1c-172">如需各時區間轉換時間的詳細資訊，請參閱[在各時區間轉換時間](converting-between-time-zones.md)。</span><span class="sxs-lookup"><span data-stu-id="ebc1c-172">For details on converting times between time zones, see [Converting times between time zones](converting-between-time-zones.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ebc1c-173">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ebc1c-173">See Also</span></span>
+
+[<span data-ttu-id="ebc1c-174">日期、時間及時區</span><span class="sxs-lookup"><span data-stu-id="ebc1c-174">Dates, times, and time zones</span></span>](index.md)

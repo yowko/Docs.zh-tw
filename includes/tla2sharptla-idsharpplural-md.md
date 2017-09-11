@@ -1,1 +1,1 @@
-識別碼
+<span data-ttu-id="0ce6c-101">識別碼</span><span class="sxs-lookup"><span data-stu-id="0ce6c-101">IDs</span></span>

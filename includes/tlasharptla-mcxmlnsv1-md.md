@@ -1,1 +1,1 @@
-http://schemas.openxmlformats.org/markup-compatibility/2006
+<span data-ttu-id="a52b2-101">http://schemas.openxmlformats.org/markup-compatibility/2006</span><span class="sxs-lookup"><span data-stu-id="a52b2-101">http://schemas.openxmlformats.org/markup-compatibility/2006</span></span>

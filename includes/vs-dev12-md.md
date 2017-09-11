@@ -1,1 +1,1 @@
-Visual Studio 2013
+<span data-ttu-id="e6712-101">Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="e6712-101">Visual Studio 2013</span></span>

@@ -1,5 +1,5 @@
 ---
-title: "部署 .NET Framework 應用程式 | Microsoft Docs"
+title: "部署 .NET Framework 應用程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,22 +22,23 @@ caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b83e40bfe0e156f46ad06742af31c7ab77e29141
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 93447e46eccc6753191a2311400f4597c549ac90
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="deploying-net-framework-applications"></a>部署 .NET Framework 應用程式
-.NET Framework 文件的本章節提供部署 .NET Framework 應用程式的重要資訊，包括下列方針：載入組件、解析組件參考，以及透過產生原生映像 (NGen) 改善應用程式的效能。  
+# <a name="deploying-net-framework-applications"></a><span data-ttu-id="03d5f-102">部署 .NET Framework 應用程式</span><span class="sxs-lookup"><span data-stu-id="03d5f-102">Deploying .NET Framework Applications</span></span>
+<span data-ttu-id="03d5f-103">.NET Framework 文件的本章節提供部署 .NET Framework 應用程式的重要資訊，包括下列方針：載入組件、解析組件參考，以及透過產生原生映像 (NGen) 改善應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="03d5f-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- 說明 Common Language Runtime 如何找出並繫結至構成您應用程式的組件。  
+## <a name="in-this-section"></a><span data-ttu-id="03d5f-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="03d5f-104">In This Section</span></span>  
+ [<span data-ttu-id="03d5f-105">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="03d5f-105">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ <span data-ttu-id="03d5f-106">說明 Common Language Runtime 如何找出並繫結至構成您應用程式的組件。</span><span class="sxs-lookup"><span data-stu-id="03d5f-106">Describes how the common language runtime locates and binds to the assemblies that make up your application.</span></span>  
   
- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- 討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。  
+ [<span data-ttu-id="03d5f-107">組件載入的最佳做法</span><span class="sxs-lookup"><span data-stu-id="03d5f-107">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ <span data-ttu-id="03d5f-108">討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。</span><span class="sxs-lookup"><span data-stu-id="03d5f-108">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [開發指南](../../../docs/framework/development-guide.md)
+## <a name="see-also"></a><span data-ttu-id="03d5f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03d5f-109">See Also</span></span>  
+ [<span data-ttu-id="03d5f-110">開發指南</span><span class="sxs-lookup"><span data-stu-id="03d5f-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
+

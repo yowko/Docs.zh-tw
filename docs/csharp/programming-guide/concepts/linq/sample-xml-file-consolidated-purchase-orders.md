@@ -26,10 +26,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>範例 XML 檔：合併的採購訂單
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 此檔案是一組不同於多個公司之組織結構的採購訂單。 每個公司的採購訂單都位於個別的命名空間中。  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="f4b76-102">範例 XML 檔：合併的採購訂單</span><span class="sxs-lookup"><span data-stu-id="f4b76-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="f4b76-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="f4b76-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="f4b76-104">此檔案是一組不同於多個公司之組織結構的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="f4b76-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="f4b76-105">每個公司的採購訂單都位於個別的命名空間中。</span><span class="sxs-lookup"><span data-stu-id="f4b76-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="f4b76-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="f4b76-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -161,5 +161,5 @@ ms.lasthandoff: 03/13/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f4b76-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f4b76-107">See Also</span></span>  
+ [<span data-ttu-id="f4b76-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f4b76-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

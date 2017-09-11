@@ -1,5 +1,5 @@
 ---
-title: "如何：根據多個索引鍵排序項目 (C#) | Microsoft Docs"
+title: "如何：根據多個索引鍵排序項目 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,21 +14,20 @@ ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7314b1cd5bde932b90318e51240b47e920a70031
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7292687693c206024a13062dc558ea2ef24d103d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何：根據多個索引鍵排序項目 (C#)
-這個主題顯示如何在多個索引鍵上排序。  
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="9e003-102">如何：根據多個索引鍵排序項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="9e003-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
+<span data-ttu-id="9e003-103">這個主題顯示如何在多個索引鍵上排序。</span><span class="sxs-lookup"><span data-stu-id="9e003-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a>範例  
- 在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。  
+## <a name="example"></a><span data-ttu-id="9e003-104">範例</span><span class="sxs-lookup"><span data-stu-id="9e003-104">Example</span></span>  
+ <span data-ttu-id="9e003-105">在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。</span><span class="sxs-lookup"><span data-stu-id="9e003-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ <span data-ttu-id="9e003-106">此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="9e003-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -47,7 +46,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="9e003-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9e003-107">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -74,10 +73,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a>範例  
- 下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+## <a name="example"></a><span data-ttu-id="9e003-108">範例</span><span class="sxs-lookup"><span data-stu-id="9e003-108">Example</span></span>  
+ <span data-ttu-id="9e003-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="9e003-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="9e003-110">如需詳細資訊，請參閱[處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="9e003-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。  
+ <span data-ttu-id="9e003-111">此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的客戶和訂單](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="9e003-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");  
@@ -98,7 +97,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="9e003-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9e003-112">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -125,5 +124,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9e003-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e003-113">See Also</span></span>  
+ [<span data-ttu-id="9e003-114">基本查詢 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9e003-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

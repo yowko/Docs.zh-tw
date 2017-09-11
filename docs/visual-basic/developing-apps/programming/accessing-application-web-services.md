@@ -37,16 +37,16 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="accessing-application-web-services-visual-basic"></a>存取應用程式 Web 服務 (Visual Basic)
-`My.WebServices` 物件會提供目前專案所參考之每個 Web 服務的執行個體。 每個執行個體都是依需要具現化。 您可以透過 `My.WebServices` 物件的屬性來存取這些 Web 服務。 屬性名稱和屬性存取的 Web 服務名稱相同。 任何繼承自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 的類別都是 Web 服務。  
+# <a name="accessing-application-web-services-visual-basic"></a><span data-ttu-id="456da-102">存取應用程式 Web 服務 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="456da-102">Accessing Application Web Services (Visual Basic)</span></span>
+<span data-ttu-id="456da-103">`My.WebServices` 物件會提供目前專案所參考之每個 Web 服務的執行個體。</span><span class="sxs-lookup"><span data-stu-id="456da-103">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="456da-104">每個執行個體都是依需要具現化。</span><span class="sxs-lookup"><span data-stu-id="456da-104">Each instance is instantiated on demand.</span></span> <span data-ttu-id="456da-105">您可以透過 `My.WebServices` 物件的屬性來存取這些 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="456da-105">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="456da-106">屬性名稱和屬性存取的 Web 服務名稱相同。</span><span class="sxs-lookup"><span data-stu-id="456da-106">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="456da-107">任何繼承自 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> 的類別都是 Web 服務。</span><span class="sxs-lookup"><span data-stu-id="456da-107">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span>  
   
-## <a name="tasks"></a>工作  
- 下表列出存取應用程式所參考之 Web 服務的可能方式。  
+## <a name="tasks"></a><span data-ttu-id="456da-108">工作</span><span class="sxs-lookup"><span data-stu-id="456da-108">Tasks</span></span>  
+ <span data-ttu-id="456da-109">下表列出存取應用程式所參考之 Web 服務的可能方式。</span><span class="sxs-lookup"><span data-stu-id="456da-109">The following table lists possible ways to access Web services referenced by an application.</span></span>  
   
-|以|請參閱|  
+|<span data-ttu-id="456da-110">以</span><span class="sxs-lookup"><span data-stu-id="456da-110">To</span></span>|<span data-ttu-id="456da-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="456da-111">See</span></span>|  
 |---|---|   
-|呼叫 Web 服務|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
-|以非同步方式呼叫 Web 服務並於完成時處理事件|[操作說明：非同步呼叫 Web 服務](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  
+|<span data-ttu-id="456da-112">呼叫 Web 服務</span><span class="sxs-lookup"><span data-stu-id="456da-112">Call a Web service</span></span>|[<span data-ttu-id="456da-113">My.WebServices 物件</span><span class="sxs-lookup"><span data-stu-id="456da-113">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|<span data-ttu-id="456da-114">以非同步方式呼叫 Web 服務並於完成時處理事件</span><span class="sxs-lookup"><span data-stu-id="456da-114">Call a Web service asynchronously and handle an event when it completes</span></span>|[<span data-ttu-id="456da-115">操作說明：非同步呼叫 Web 服務</span><span class="sxs-lookup"><span data-stu-id="456da-115">How to: Call a Web Service Asynchronously</span></span>](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  
   
-## <a name="see-also"></a>另請參閱  
- [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="456da-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="456da-116">See Also</span></span>  
+ [<span data-ttu-id="456da-117">My.WebServices 物件</span><span class="sxs-lookup"><span data-stu-id="456da-117">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)

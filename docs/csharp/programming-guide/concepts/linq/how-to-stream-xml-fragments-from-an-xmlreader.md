@@ -1,5 +1,5 @@
 ---
-title: "如何：從 XmlReader 串流 XML 片段 (C#) | Microsoft Docs"
+title: "如何：從 XmlReader 串流 XML 片段 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,28 +19,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 06e2cf4b350fecf8e8310519c573ac140f05267a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84b2c4f9726a552fa60cc68266c418b25dbf0408
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何：從 XmlReader 串流 XML 片段 (C#)
-當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。 這個主題示範如何使用 <xref:System.Xml.XmlReader> 串流片段。  
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a><span data-ttu-id="2f8ac-102">如何：從 XmlReader 串流 XML 片段 (C#)</span><span class="sxs-lookup"><span data-stu-id="2f8ac-102">How to: Stream XML Fragments from an XmlReader (C#)</span></span>
+<span data-ttu-id="2f8ac-103">當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-103">When you have to process large XML files, it might not be feasible to load the whole XML tree into memory.</span></span> <span data-ttu-id="2f8ac-104">這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-104">This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.</span></span>  
   
- 使用 <xref:System.Xml.XmlReader> 讀取 <xref:System.Xml.Linq.XElement> 物件的其中一個最有效方式，就是撰寫您自己的自訂座標軸方法。 座標軸方法通常會傳回集合，例如 <xref:System.Xml.Linq.XElement> 的 <xref:System.Collections.Generic.IEnumerable%601>，如本主題的範例中所示。 在自訂座標軸方法中，呼叫 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法來建立 XML 片段後，使用 `yield return` 傳回集合。 這會將延後執行語意 (Semantics) 提供給您自訂的座標軸方法。  
+ <span data-ttu-id="2f8ac-105">使用 <xref:System.Xml.XmlReader> 讀取 <xref:System.Xml.Linq.XElement> 物件的其中一個最有效方式為，撰寫您自己自訂的座標軸方法。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-105">One of the most effective ways to use an <xref:System.Xml.XmlReader> to read <xref:System.Xml.Linq.XElement> objects is to write your own custom axis method.</span></span> <span data-ttu-id="2f8ac-106">座標軸方法通常會傳回集合，例如，<xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，如本主題的範例中所示。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-106">An axis method typically returns a collection such as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, as shown in the example in this topic.</span></span> <span data-ttu-id="2f8ac-107">在自訂座標軸方法中，呼叫 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法來建立 XML 片段後，使用 `yield return` 傳回集合。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-107">In the custom axis method, after you create the XML fragment by calling the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method, return the collection using `yield return`.</span></span> <span data-ttu-id="2f8ac-108">這會將延後執行語意 (Semantics) 提供給您自訂的座標軸方法。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-108">This provides deferred execution semantics to your custom axis method.</span></span>  
   
- 當您從 <xref:System.Xml.XmlReader> 物件建立 XML 樹狀結構時，<xref:System.Xml.XmlReader> 必須置放在某個項目上。 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法在讀取項目的結尾標記前不會傳回。  
+ <span data-ttu-id="2f8ac-109">當您從 <xref:System.Xml.XmlReader> 物件建立 XML 樹狀結構時，<xref:System.Xml.XmlReader> 必須定位在項目上。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-109">When you create an XML tree from an <xref:System.Xml.XmlReader> object, the <xref:System.Xml.XmlReader> must be positioned on an element.</span></span> <span data-ttu-id="2f8ac-110"><xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法在讀取項目的關閉標記前不會傳回。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-110">The <xref:System.Xml.Linq.XNode.ReadFrom%2A> method does not return until it has read the close tag of the element.</span></span>  
   
- 如果您想要建立部分樹狀結構，您可以具現化 <xref:System.Xml.XmlReader>、將讀取器置放在您要轉換成 <xref:System.Xml.Linq.XElement> 樹狀結構的節點上，然後建立 <xref:System.Xml.Linq.XElement> 物件。  
+ <span data-ttu-id="2f8ac-111">如果您要建立部分樹狀結構，您可以具現化 <xref:System.Xml.XmlReader>、將讀取器定位在您要轉換為 <xref:System.Xml.Linq.XElement> 樹狀結構的節點上，然後建立 <xref:System.Xml.Linq.XElement> 物件。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-111">If you want to create a partial tree, you can instantiate an <xref:System.Xml.XmlReader>, position the reader on the node that you want to convert to an <xref:System.Xml.Linq.XElement> tree, and then create the <xref:System.Xml.Linq.XElement> object.</span></span>  
   
- [如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 主題包含如何串流更複雜文件的資訊與範例。  
+ <span data-ttu-id="2f8ac-112">[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 主題包含如何串流更複雜文件的資訊與範例。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-112">The topic [How to: Stream XML Fragments with Access to Header Information (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contains information and an example on how to stream a more complex document.</span></span>  
   
- [如何：執行大型 XML 文件的串流轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) 主題包含使用 LINQ to XML 轉換非常大的 XML 文件，同時維護小的記憶體使用量的範例。  
+ <span data-ttu-id="2f8ac-113">[如何：執行大型 XML 文件的串流轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) 主題包含使用 LINQ to XML 轉換非常大的 XML 文件，同時維護小的記憶體使用量的範例。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-113">The topic [How to: Perform Streaming Transform of Large XML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contains an example of using LINQ to XML to transform extremely large XML documents while maintaining a small memory footprint.</span></span>  
   
-## <a name="example"></a>範例  
- 這個範例會建立自訂座標軸方法。 您可以使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢進行查詢。 自訂座標軸方法  `StreamRootChildDoc` 是一種方法，特別針對讀取具有重複 `Child` 項目的文件而設計。  
+## <a name="example"></a><span data-ttu-id="2f8ac-114">範例</span><span class="sxs-lookup"><span data-stu-id="2f8ac-114">Example</span></span>  
+ <span data-ttu-id="2f8ac-115">這個範例會建立自訂座標軸方法。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-115">This example creates a custom axis method.</span></span> <span data-ttu-id="2f8ac-116">您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢進行查詢。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-116">You can query it by using a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span></span> <span data-ttu-id="2f8ac-117">自訂座標軸方法  `StreamRootChildDoc` 是一種方法，特別針對讀取具有重複 `Child` 項目的文件而設計。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-117">The custom axis method, `StreamRootChildDoc`, is a method that is designed specifically to read a document that has a repeating `Child` element.</span></span>  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
@@ -90,14 +90,15 @@ static void Main(string[] args)
 }  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="2f8ac-118">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2f8ac-118">This example produces the following output:</span></span>  
   
 ```  
 bbb  
 ccc  
 ```  
   
- 在此範例中，來源文件很小。 但是，即使有數百萬的 `Child` 元素，此範例的記憶體使用量還是很小。  
+ <span data-ttu-id="2f8ac-119">在此範例中，來源文件很小。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-119">In this example, the source document is very small.</span></span> <span data-ttu-id="2f8ac-120">但是，即使有數百萬的 `Child` 元素，此範例的記憶體使用量還是很小。</span><span class="sxs-lookup"><span data-stu-id="2f8ac-120">However, even if there were millions of `Child` elements, this example would still have a small memory footprint.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2f8ac-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2f8ac-121">See Also</span></span>  
+ [<span data-ttu-id="2f8ac-122">剖析 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="2f8ac-122">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

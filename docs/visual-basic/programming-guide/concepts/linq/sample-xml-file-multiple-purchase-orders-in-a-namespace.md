@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81e6e6319fd8d5f1bcb7065cda6b8eb652a99b55
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 02ea88ee2b2d088cd1f0c5e896210619f8bf8144
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>範例 XML 檔：命名空間中的多份採購訂單
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 這個檔案包含數個採購訂單。 XML 位於命名空間中。  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="5bdf5-102">範例 XML 檔：命名空間中的多份採購訂單</span><span class="sxs-lookup"><span data-stu-id="5bdf5-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="5bdf5-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="5bdf5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="5bdf5-104">這個檔案包含數個採購訂單。</span><span class="sxs-lookup"><span data-stu-id="5bdf5-104">This file contains several purchase orders.</span></span> <span data-ttu-id="5bdf5-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="5bdf5-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="5bdf5-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="5bdf5-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -126,5 +127,5 @@ ms.lasthandoff: 03/13/2017
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="5bdf5-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5bdf5-107">See Also</span></span>  
+ [<span data-ttu-id="5bdf5-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5bdf5-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

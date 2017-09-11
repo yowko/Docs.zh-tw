@@ -16,26 +16,26 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3dfb4e7f41e484e99292a2883f8f0fe91ed2c57b
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: e7e5bfc249e0bdeeeefd56508354ac62e5c73465
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>如何︰ 尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
-本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="c06de-102">如何︰ 尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c06de-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="c06de-103">本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。</span><span class="sxs-lookup"><span data-stu-id="c06de-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- XPath 運算式為：  
+ <span data-ttu-id="c06de-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="c06de-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a>範例  
- 此範例會尋找第 12 個 `Order` 項目，然後尋找該順序的客戶。  
+## <a name="example"></a><span data-ttu-id="c06de-105">範例</span><span class="sxs-lookup"><span data-stu-id="c06de-105">Example</span></span>  
+ <span data-ttu-id="c06de-106">此範例會尋找第 12 個 `Order` 項目，然後尋找該順序的客戶。</span><span class="sxs-lookup"><span data-stu-id="c06de-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- 請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
+ <span data-ttu-id="c06de-107">請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。</span><span class="sxs-lookup"><span data-stu-id="c06de-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="c06de-108">在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。</span><span class="sxs-lookup"><span data-stu-id="c06de-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="c06de-109">此範例會反映這個差異。</span><span class="sxs-lookup"><span data-stu-id="c06de-109">This example reflects this difference.</span></span>  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ <span data-ttu-id="c06de-110">這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="c06de-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -67,7 +67,7 @@ End If
 Console.WriteLine(customer1)  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="c06de-111">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="c06de-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -87,6 +87,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML 的 XPath 使用者 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="c06de-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c06de-112">See Also</span></span>  
+ [<span data-ttu-id="c06de-113">LINQ to XML 的 XPath 使用者 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c06de-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

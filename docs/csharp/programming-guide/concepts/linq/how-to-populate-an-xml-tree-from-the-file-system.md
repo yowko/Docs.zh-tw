@@ -1,5 +1,5 @@
 ---
-title: "如何：從檔案系統填入 XML 樹狀結構 (C#) | Microsoft Docs"
+title: "如何：從檔案系統填入 XML 樹狀結構 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,19 +14,18 @@ ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f81e4888e32fb05c207100484d2e1b33876fde90
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2a25025c97575d4631ba2f55f72a31386619ead
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何：從檔案系統填入 XML 樹狀結構 (C#)
-XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。 您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。 在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。 反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="f1feb-102">如何：從檔案系統填入 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="f1feb-102">How to: Populate an XML Tree from the File System (C#)</span></span>
+<span data-ttu-id="f1feb-103">XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。</span><span class="sxs-lookup"><span data-stu-id="f1feb-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="f1feb-104">您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。</span><span class="sxs-lookup"><span data-stu-id="f1feb-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="f1feb-105">在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。</span><span class="sxs-lookup"><span data-stu-id="f1feb-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="f1feb-106">反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。</span><span class="sxs-lookup"><span data-stu-id="f1feb-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會使用遞迴，從本機檔案系統填入 XML 樹狀。 接著，它會查詢樹狀結構，計算樹狀結構中，所有檔案大小的總數。  
+## <a name="example"></a><span data-ttu-id="f1feb-107">範例</span><span class="sxs-lookup"><span data-stu-id="f1feb-107">Example</span></span>  
+ <span data-ttu-id="f1feb-108">下列範例會使用遞迴，從本機檔案系統填入 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="f1feb-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="f1feb-109">接著，它會查詢樹狀結構，計算樹狀結構中，所有檔案大小的總數。</span><span class="sxs-lookup"><span data-stu-id="f1feb-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -59,7 +58,7 @@ class Program
 }  
 ```  
   
- 此範例會產生與下列類似的輸出：  
+ <span data-ttu-id="f1feb-110">此範例會產生與下列類似的輸出：</span><span class="sxs-lookup"><span data-stu-id="f1feb-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -129,5 +128,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f1feb-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1feb-111">See Also</span></span>  
+ [<span data-ttu-id="f1feb-112">進階查詢技術 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f1feb-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

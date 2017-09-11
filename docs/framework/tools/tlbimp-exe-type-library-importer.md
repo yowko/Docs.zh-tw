@@ -1,5 +1,5 @@
 ---
-title: "Tlbimp.exe (類型程式庫匯入工具) | Microsoft Docs"
+title: "Tlbimp.exe (類型程式庫匯入工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,127 +27,127 @@ caps.latest.revision: 29
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 0dd040788c71e725e2a6b0b6f26026ffd972c296
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b0505ccd193b4fa3868953d3f07f8ba8cc5946
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
-類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
+# <a name="tlbimpexe-type-library-importer"></a><span data-ttu-id="69d8f-102">Tlbimp.exe (類型程式庫匯入工具)</span><span class="sxs-lookup"><span data-stu-id="69d8f-102">Tlbimp.exe (Type Library Importer)</span></span>
+<span data-ttu-id="69d8f-103">類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。</span><span class="sxs-lookup"><span data-stu-id="69d8f-103">The Type Library Importer converts the type definitions found within a COM type library into equivalent definitions in a common language runtime assembly.</span></span> <span data-ttu-id="69d8f-104">Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。</span><span class="sxs-lookup"><span data-stu-id="69d8f-104">The output of Tlbimp.exe is a binary file (an assembly) that contains runtime metadata for the types defined within the original type library.</span></span> <span data-ttu-id="69d8f-105">您可以使用像是 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。</span><span class="sxs-lookup"><span data-stu-id="69d8f-105">You can examine this file with tools such as [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ <span data-ttu-id="69d8f-106">此工具會自動與 Visual Studio 一起安裝。</span><span class="sxs-lookup"><span data-stu-id="69d8f-106">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="69d8f-107">若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。</span><span class="sxs-lookup"><span data-stu-id="69d8f-107">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="69d8f-108">如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="69d8f-108">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- 在命令提示字元下輸入下列命令：  
+ <span data-ttu-id="69d8f-109">在命令提示字元下輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="69d8f-109">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="69d8f-110">語法</span><span class="sxs-lookup"><span data-stu-id="69d8f-110">Syntax</span></span>  
   
 ```  
 tlbimp tlbFile [options]  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a><span data-ttu-id="69d8f-111">參數</span><span class="sxs-lookup"><span data-stu-id="69d8f-111">Parameters</span></span>  
   
-|引數|描述|  
+|<span data-ttu-id="69d8f-112">引數</span><span class="sxs-lookup"><span data-stu-id="69d8f-112">Argument</span></span>|<span data-ttu-id="69d8f-113">描述</span><span class="sxs-lookup"><span data-stu-id="69d8f-113">Description</span></span>|  
 |--------------|-----------------|  
-|*tlbFile*|任何包含 COM 類型程式庫之檔案的名稱。|  
+|<span data-ttu-id="69d8f-114">*tlbFile*</span><span class="sxs-lookup"><span data-stu-id="69d8f-114">*tlbFile*</span></span>|<span data-ttu-id="69d8f-115">任何包含 COM 類型程式庫之檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="69d8f-115">The name of any file that contains a COM type library.</span></span>|  
   
-|選項|描述|  
+|<span data-ttu-id="69d8f-116">選項</span><span class="sxs-lookup"><span data-stu-id="69d8f-116">Option</span></span>|<span data-ttu-id="69d8f-117">描述</span><span class="sxs-lookup"><span data-stu-id="69d8f-117">Description</span></span>|  
 |------------|-----------------|  
-|**/asmversion:** *versionnumber*|指定要產生之組件的版本號碼。 以 *major.minor.build.revision* 格式指定 *versionnumber*。|  
-|**/company:** `companyinformation`|將公司資訊加入至輸出組件。|  
-|**/copyright:** `copyrightinformation`|將著作權資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
-|**/delaysign**|指定由 Tlbimp.exe 使用延遲簽署以強式名稱簽署產生的組件。 您必須指定這個選項來配合 **/keycontainer:**、**/keyfile:** 或 **/publickey:** 選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)。|  
-|**/help**|顯示工具的命令語法和選項。|  
-|**/keycontainer:** *containername*|使用 *containername* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的組件。|  
-|**/keyfile:** *filename*|使用 *filename* 中發行者的正式公開/私密金鑰組，以強式名稱簽署產生的組件。|  
-|**/machine:** `machinetype`|建立以所指定電腦類型 (微處理器) 為目標的組件。 支援的電腦類型：x86、x64、Itanium 和 Agnostic。|  
-|**/namespace:** *namespace*|指定要在其中產生組件的命名空間。|  
-|**/noclassmembers**|防止 Tlbimp.exe 將成員加入至類別。 這樣做可避免可能發生的 <xref:System.TypeLoadException>。|  
-|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
-|**/out:** *filename*|指定要在其中寫入中繼資料定義的輸出檔、組件及命名空間名稱。 如果類型程式庫指定可明確控制組件命名空間的介面定義語言 (IDL) 自訂屬性，則 **/out** 選項不會影響組件的命名空間。 如果未指定這個選項，Tlbimp.exe 會將中繼資料寫入與輸入檔所定義之實際類型程式庫同名的檔案中，並指派 .dll 做為其副檔名。 如果輸出檔與輸入檔同名，則工具將會產生錯誤以防止覆寫類型程式庫。|  
-|**/primary**|為指定的類型程式庫產生主要 Interop 組件。 組件中會加入資訊，指出類型程式庫的發行者產生該組件。 藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。 如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。 請注意，您必須以[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署主要 Interop 組件。 如需詳細資訊，請參閱[主要 Interop 組件](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)。|  
-|**/product:** `productinformation`|將產品資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
-|**/productversion:** `productversioninformation`|將產品版本資訊加入至輸出組件。 沒有格式限制。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
-|**/publickey:** *filename*|指定包含公開金鑰的檔案，用來簽署產生的組件。 如果您指定 **/keyfile:** 或 **/keycontainer:** 選項而不是 **/publickey:**，Tlbimp.exe 將會從 **/keyfile:** 或 **/keycontainer:** 提供的公開/私密金鑰組產生公開金鑰。 **/publickey:** 選項支援測試金鑰和延遲簽署情節。 檔案會採用 Sn.exe 產生的格式。 如需詳細資訊，請參閱[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 中 Sn.exe 的 **-p** 選項。|  
-|**/reference:** *filename*|指定組件檔案，用來解析在目前類型程式庫外定義之類型的參考。 如果您未指定 **/reference** 選項，Tlbimp.exe 會自動以遞迴方式匯入所匯入之類型程式庫參考的任何外部類型程式庫。 如果您指定 **/reference** 選項，則工具在匯入其他類型程式庫之前，會先嘗試解析所參考組件中的外部類型。|  
-|**/silence:** `warningnumber`|隱藏顯示指定的警告。 此選項無法搭配 **/silent** 使用。|  
-|**/silent**|隱藏顯示成功訊息。 此選項無法搭配**/silence** 使用。|  
-|**/strictref**|如果工具無法解析目前組件中、以 **/reference** 選項指定的組件中，或是已登錄的主要 Interop 組件 (PIA) 中的所有參考，則不匯入類型程式庫。|  
-|**/strictref:nopia**|與 **/strictref** 相同，但是會忽略 PIA。|  
-|**/sysarray**|指定由這個工具匯入 COM 樣式的 SafeArray 作為 Managed <xref:System.Array> 類型。|  
-|**/tlbreference:** *filename*|指定用來解析類型程式庫參考的類型程式庫檔案，而不需要查閱登錄。<br /><br /> 請注意，這個選項將不會載入某些較舊的類型程式庫格式。  但是，您仍然可以透過登錄或目前的目錄，以隱含方式載入較舊的類型程式庫格式。|  
-|**/trademark:** `trademarkinformation`|將商標資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
-|**/transform:** *transformname*|依照 *transformname* 參數所指定，轉換中繼資料。<br /><br /> 為 *transformname* 參數指定 **dispret**，以便將分配介面 (Dispinterface) 上方法的 [out, retval] 參數轉換為傳回值。<br /><br /> 如需有關這個選項的詳細資訊，請參閱本主題後段的範例。|  
-|**/unsafe**|不經過 .NET Framework 安全性檢查即產生介面。 呼叫以這種方式公開的方法可能會造成安全性風險。 除非您很清楚公開這類程式碼的風險，否則不應該使用這個選項。|  
-|**/verbose**|指定詳細資訊模式，顯示有關匯入之類型程式庫的其他資訊。|  
-|**/VariantBoolFieldToBool**|將結構中的 `VARIANT_BOOL` 欄位轉換為 <xref:System.Boolean>。|  
-|**/?**|顯示工具的命令語法和選項。|  
+|<span data-ttu-id="69d8f-118">**/asmversion:** *versionnumber*</span><span class="sxs-lookup"><span data-stu-id="69d8f-118">**/asmversion:** *versionnumber*</span></span>|<span data-ttu-id="69d8f-119">指定要產生之組件的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="69d8f-119">Specifies the version number of the assembly to produce.</span></span> <span data-ttu-id="69d8f-120">以 *major.minor.build.revision* 格式指定 *versionnumber*。</span><span class="sxs-lookup"><span data-stu-id="69d8f-120">Specify *versionnumber* in the format *major.minor.build.revision*.</span></span>|  
+|<span data-ttu-id="69d8f-121">**/company:** `companyinformation`</span><span class="sxs-lookup"><span data-stu-id="69d8f-121">**/company:** `companyinformation`</span></span>|<span data-ttu-id="69d8f-122">將公司資訊加入至輸出組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-122">Adds company information to the output assembly.</span></span>|  
+|<span data-ttu-id="69d8f-123">**/copyright:** `copyrightinformation`</span><span class="sxs-lookup"><span data-stu-id="69d8f-123">**/copyright:** `copyrightinformation`</span></span>|<span data-ttu-id="69d8f-124">將著作權資訊加入至輸出組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-124">Adds copyright information to the output assembly.</span></span> <span data-ttu-id="69d8f-125">這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。</span><span class="sxs-lookup"><span data-stu-id="69d8f-125">This information can be viewed in the **File Properties** dialog box for the assembly.</span></span>|  
+|<span data-ttu-id="69d8f-126">**/delaysign**</span><span class="sxs-lookup"><span data-stu-id="69d8f-126">**/delaysign**</span></span>|<span data-ttu-id="69d8f-127">指定由 Tlbimp.exe 使用延遲簽署以強式名稱簽署產生的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-127">Specifies to Tlbimp.exe to sign the resulting assembly with a strong name using delayed signing.</span></span> <span data-ttu-id="69d8f-128">您必須指定這個選項來配合 **/keycontainer:**、**/keyfile:** 或 **/publickey:** 選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-128">You must specify this option with either the **/keycontainer:**, **/keyfile:**, or **/publickey:** option.</span></span> <span data-ttu-id="69d8f-129">如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="69d8f-129">For more information on the delayed signing process, see [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).</span></span>|  
+|<span data-ttu-id="69d8f-130">**/help**</span><span class="sxs-lookup"><span data-stu-id="69d8f-130">**/help**</span></span>|<span data-ttu-id="69d8f-131">顯示工具的命令語法和選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-131">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="69d8f-132">**/keycontainer:** *containername*</span><span class="sxs-lookup"><span data-stu-id="69d8f-132">**/keycontainer:** *containername*</span></span>|<span data-ttu-id="69d8f-133">使用 *containername* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-133">Signs the resulting assembly with a strong name using the public/private key pair found in the key container specified by *containername*.</span></span>|  
+|<span data-ttu-id="69d8f-134">**/keyfile:** *filename*</span><span class="sxs-lookup"><span data-stu-id="69d8f-134">**/keyfile:** *filename*</span></span>|<span data-ttu-id="69d8f-135">使用 *filename* 中發行者的正式公開/私密金鑰組，以強式名稱簽署產生的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-135">Signs the resulting assembly with a strong name using the publisher's official public/private key pair found in *filename*.</span></span>|  
+|<span data-ttu-id="69d8f-136">**/machine:** `machinetype`</span><span class="sxs-lookup"><span data-stu-id="69d8f-136">**/machine:** `machinetype`</span></span>|<span data-ttu-id="69d8f-137">建立以所指定電腦類型 (微處理器) 為目標的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-137">Creates an assembly that targets the specified machine type (microprocessor).</span></span> <span data-ttu-id="69d8f-138">支援的電腦類型：x86、x64、Itanium 和 Agnostic。</span><span class="sxs-lookup"><span data-stu-id="69d8f-138">Supported machine types: x86, x64, Itanium, and Agnostic.</span></span>|  
+|<span data-ttu-id="69d8f-139">**/namespace:** *namespace*</span><span class="sxs-lookup"><span data-stu-id="69d8f-139">**/namespace:** *namespace*</span></span>|<span data-ttu-id="69d8f-140">指定要在其中產生組件的命名空間。</span><span class="sxs-lookup"><span data-stu-id="69d8f-140">Specifies the namespace in which to produce the assembly.</span></span>|  
+|<span data-ttu-id="69d8f-141">**/noclassmembers**</span><span class="sxs-lookup"><span data-stu-id="69d8f-141">**/noclassmembers**</span></span>|<span data-ttu-id="69d8f-142">防止 Tlbimp.exe 將成員加入至類別。</span><span class="sxs-lookup"><span data-stu-id="69d8f-142">Prevents Tlbimp.exe from adding members to classes.</span></span> <span data-ttu-id="69d8f-143">這樣做可避免可能發生的 <xref:System.TypeLoadException>。</span><span class="sxs-lookup"><span data-stu-id="69d8f-143">This avoids a potential <xref:System.TypeLoadException>.</span></span>|  
+|<span data-ttu-id="69d8f-144">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="69d8f-144">**/nologo**</span></span>|<span data-ttu-id="69d8f-145">隱藏 Microsoft 程式啟始資訊顯示。</span><span class="sxs-lookup"><span data-stu-id="69d8f-145">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="69d8f-146">**/out:** *filename*</span><span class="sxs-lookup"><span data-stu-id="69d8f-146">**/out:** *filename*</span></span>|<span data-ttu-id="69d8f-147">指定要在其中寫入中繼資料定義的輸出檔、組件及命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="69d8f-147">Specifies the name of the output file, assembly, and namespace in which to write the metadata definitions.</span></span> <span data-ttu-id="69d8f-148">如果類型程式庫指定可明確控制組件命名空間的介面定義語言 (IDL) 自訂屬性，則 **/out** 選項不會影響組件的命名空間。</span><span class="sxs-lookup"><span data-stu-id="69d8f-148">The **/out** option has no effect on the assembly's namespace if the type library specifies the Interface Definition Language (IDL) custom attribute that explicitly controls the assembly's namespace.</span></span> <span data-ttu-id="69d8f-149">如果未指定這個選項，Tlbimp.exe 會將中繼資料寫入與輸入檔所定義之實際類型程式庫同名的檔案中，並指派 .dll 做為其副檔名。</span><span class="sxs-lookup"><span data-stu-id="69d8f-149">If you do not specify this option, Tlbimp.exe writes the metadata to a file with the same name as the actual type library defined within the input file and assigns it a .dll extension.</span></span> <span data-ttu-id="69d8f-150">如果輸出檔與輸入檔同名，則工具將會產生錯誤以防止覆寫類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="69d8f-150">If the output file is the same name as the input file, the tool generates an error to prevent overwriting the type library.</span></span>|  
+|<span data-ttu-id="69d8f-151">**/primary**</span><span class="sxs-lookup"><span data-stu-id="69d8f-151">**/primary**</span></span>|<span data-ttu-id="69d8f-152">為指定的類型程式庫產生主要 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-152">Produces a primary interop assembly for the specified type library.</span></span> <span data-ttu-id="69d8f-153">組件中會加入資訊，指出類型程式庫的發行者產生該組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-153">Information is added to the assembly indicating that the publisher of the type library produced the assembly.</span></span> <span data-ttu-id="69d8f-154">藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-154">By specifying a primary interop assembly, you differentiate a publisher's assembly from any other assemblies that are created from the type library using Tlbimp.exe.</span></span> <span data-ttu-id="69d8f-155">如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-155">You should only use the **/primary** option if you are the publisher of the type library that you are importing with Tlbimp.exe.</span></span> <span data-ttu-id="69d8f-156">請注意，您必須以[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署主要 Interop 組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-156">Note that you must sign a primary interop assembly with a [strong name](../../../docs/framework/app-domains/strong-named-assemblies.md).</span></span> <span data-ttu-id="69d8f-157">如需詳細資訊，請參閱[主要 Interop 組件](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)。</span><span class="sxs-lookup"><span data-stu-id="69d8f-157">For more information, see [Primary Interop Assemblies](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).</span></span>|  
+|<span data-ttu-id="69d8f-158">**/product:** `productinformation`</span><span class="sxs-lookup"><span data-stu-id="69d8f-158">**/product:** `productinformation`</span></span>|<span data-ttu-id="69d8f-159">將產品資訊加入至輸出組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-159">Adds product information to the output assembly.</span></span> <span data-ttu-id="69d8f-160">這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。</span><span class="sxs-lookup"><span data-stu-id="69d8f-160">This information can be viewed in the **File Properties** dialog box for the assembly.</span></span>|  
+|<span data-ttu-id="69d8f-161">**/productversion:** `productversioninformation`</span><span class="sxs-lookup"><span data-stu-id="69d8f-161">**/productversion:** `productversioninformation`</span></span>|<span data-ttu-id="69d8f-162">將產品版本資訊加入至輸出組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-162">Adds product version information to the output assembly.</span></span> <span data-ttu-id="69d8f-163">沒有格式限制。</span><span class="sxs-lookup"><span data-stu-id="69d8f-163">There are no format restrictions.</span></span> <span data-ttu-id="69d8f-164">這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。</span><span class="sxs-lookup"><span data-stu-id="69d8f-164">This information can be viewed in the **File Properties** dialog box for the assembly.</span></span>|  
+|<span data-ttu-id="69d8f-165">**/publickey:** *filename*</span><span class="sxs-lookup"><span data-stu-id="69d8f-165">**/publickey:** *filename*</span></span>|<span data-ttu-id="69d8f-166">指定包含公開金鑰的檔案，用來簽署產生的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-166">Specifies the file containing the public key to use to sign the resulting assembly.</span></span> <span data-ttu-id="69d8f-167">如果您指定 **/keyfile:** 或 **/keycontainer:** 選項而不是 **/publickey:**，Tlbimp.exe 將會從 **/keyfile:** 或 **/keycontainer:** 提供的公開/私密金鑰組產生公開金鑰。</span><span class="sxs-lookup"><span data-stu-id="69d8f-167">If you specify the **/keyfile:** or **/keycontainer:** option instead of **/publickey:**, Tlbimp.exe generates the public key from the public/private key pair supplied with **/keyfile:** or **/keycontainer:**.</span></span> <span data-ttu-id="69d8f-168">**/publickey:** 選項支援測試金鑰和延遲簽署情節。</span><span class="sxs-lookup"><span data-stu-id="69d8f-168">The **/publickey:** option supports test key and delay signing scenarios.</span></span> <span data-ttu-id="69d8f-169">檔案會採用 Sn.exe 產生的格式。</span><span class="sxs-lookup"><span data-stu-id="69d8f-169">The file is in the format generated by Sn.exe.</span></span> <span data-ttu-id="69d8f-170">如需詳細資訊，請參閱[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 中 Sn.exe 的 **-p** 選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-170">For more information, see the **-p** option of Sn.exe in [Strong Name Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).</span></span>|  
+|<span data-ttu-id="69d8f-171">**/reference:** *filename*</span><span class="sxs-lookup"><span data-stu-id="69d8f-171">**/reference:** *filename*</span></span>|<span data-ttu-id="69d8f-172">指定組件檔案，用來解析在目前類型程式庫外定義之類型的參考。</span><span class="sxs-lookup"><span data-stu-id="69d8f-172">Specifies the assembly file to use to resolve references to types defined outside the current type library.</span></span> <span data-ttu-id="69d8f-173">如果您未指定 **/reference** 選項，Tlbimp.exe 會自動以遞迴方式匯入所匯入之類型程式庫參考的任何外部類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="69d8f-173">If you do not specify the **/reference** option, Tlbimp.exe automatically recursively imports any external type library that the type library being imported references.</span></span> <span data-ttu-id="69d8f-174">如果您指定 **/reference** 選項，則工具在匯入其他類型程式庫之前，會先嘗試解析所參考組件中的外部類型。</span><span class="sxs-lookup"><span data-stu-id="69d8f-174">If you specify the **/reference** option, the tool attempts to resolve external types in the referenced assemblies before it imports other type libraries.</span></span>|  
+|<span data-ttu-id="69d8f-175">**/silence:** `warningnumber`</span><span class="sxs-lookup"><span data-stu-id="69d8f-175">**/silence:** `warningnumber`</span></span>|<span data-ttu-id="69d8f-176">隱藏顯示指定的警告。</span><span class="sxs-lookup"><span data-stu-id="69d8f-176">Suppresses the display of the specified warning.</span></span> <span data-ttu-id="69d8f-177">此選項無法搭配 **/silent** 使用。</span><span class="sxs-lookup"><span data-stu-id="69d8f-177">This option cannot be used with **/silent**.</span></span>|  
+|<span data-ttu-id="69d8f-178">**/silent**</span><span class="sxs-lookup"><span data-stu-id="69d8f-178">**/silent**</span></span>|<span data-ttu-id="69d8f-179">隱藏顯示成功訊息。</span><span class="sxs-lookup"><span data-stu-id="69d8f-179">Suppresses the display of success messages.</span></span> <span data-ttu-id="69d8f-180">此選項無法搭配**/silence** 使用。</span><span class="sxs-lookup"><span data-stu-id="69d8f-180">This option cannot be used with **/silence**.</span></span>|  
+|<span data-ttu-id="69d8f-181">**/strictref**</span><span class="sxs-lookup"><span data-stu-id="69d8f-181">**/strictref**</span></span>|<span data-ttu-id="69d8f-182">如果工具無法解析目前組件中、以 **/reference** 選項指定的組件中，或是已登錄的主要 Interop 組件 (PIA) 中的所有參考，則不匯入類型程式庫。</span><span class="sxs-lookup"><span data-stu-id="69d8f-182">Does not import a type library if the tool cannot resolve all references within the current assembly, the assemblies specified with the **/reference** option, or registered primary interop assemblies (PIAs).</span></span>|  
+|<span data-ttu-id="69d8f-183">**/strictref:nopia**</span><span class="sxs-lookup"><span data-stu-id="69d8f-183">**/strictref:nopia**</span></span>|<span data-ttu-id="69d8f-184">與 **/strictref** 相同，但是會忽略 PIA。</span><span class="sxs-lookup"><span data-stu-id="69d8f-184">Same as **/strictref**, but ignores PIAs.</span></span>|  
+|<span data-ttu-id="69d8f-185">**/sysarray**</span><span class="sxs-lookup"><span data-stu-id="69d8f-185">**/sysarray**</span></span>|<span data-ttu-id="69d8f-186">指定由這個工具匯入 COM 樣式的 SafeArray 作為 Managed <xref:System.Array> 類型。</span><span class="sxs-lookup"><span data-stu-id="69d8f-186">Specifies to the tool to import a COM style SafeArray as a managed <xref:System.Array> type.</span></span>|  
+|<span data-ttu-id="69d8f-187">**/tlbreference:** *filename*</span><span class="sxs-lookup"><span data-stu-id="69d8f-187">**/tlbreference:** *filename*</span></span>|<span data-ttu-id="69d8f-188">指定用來解析類型程式庫參考的類型程式庫檔案，而不需要查閱登錄。</span><span class="sxs-lookup"><span data-stu-id="69d8f-188">Specifies the type library file to use to resolve type library references without consulting the registry.</span></span><br /><br /> <span data-ttu-id="69d8f-189">請注意，這個選項將不會載入某些較舊的類型程式庫格式。</span><span class="sxs-lookup"><span data-stu-id="69d8f-189">Note that this option will not load some older type library formats.</span></span>  <span data-ttu-id="69d8f-190">但是，您仍然可以透過登錄或目前的目錄，以隱含方式載入較舊的類型程式庫格式。</span><span class="sxs-lookup"><span data-stu-id="69d8f-190">However, you can still load older type library formats implicitly through the registry or current directory.</span></span>|  
+|<span data-ttu-id="69d8f-191">**/trademark:** `trademarkinformation`</span><span class="sxs-lookup"><span data-stu-id="69d8f-191">**/trademark:** `trademarkinformation`</span></span>|<span data-ttu-id="69d8f-192">將商標資訊加入至輸出組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-192">Adds trademark information to the output assembly.</span></span> <span data-ttu-id="69d8f-193">這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。</span><span class="sxs-lookup"><span data-stu-id="69d8f-193">This information can be viewed in the **File Properties** dialog box for the assembly.</span></span>|  
+|<span data-ttu-id="69d8f-194">**/transform:** *transformname*</span><span class="sxs-lookup"><span data-stu-id="69d8f-194">**/transform:** *transformname*</span></span>|<span data-ttu-id="69d8f-195">依照 *transformname* 參數所指定，轉換中繼資料。</span><span class="sxs-lookup"><span data-stu-id="69d8f-195">Transforms metadata as specified by the *transformname* parameter.</span></span><br /><br /> <span data-ttu-id="69d8f-196">為 *transformname* 參數指定 **dispret**，以便將分配介面 (Dispinterface) 上方法的 [out, retval] 參數轉換為傳回值。</span><span class="sxs-lookup"><span data-stu-id="69d8f-196">Specify **dispret** for the *transformname* parameter to transform [out, retval] parameters of methods on dispatch-only interfaces (dispinterfaces) into return values.</span></span><br /><br /> <span data-ttu-id="69d8f-197">如需有關這個選項的詳細資訊，請參閱本主題後段的範例。</span><span class="sxs-lookup"><span data-stu-id="69d8f-197">For more information about this option, see the examples later in this topic.</span></span>|  
+|<span data-ttu-id="69d8f-198">**/unsafe**</span><span class="sxs-lookup"><span data-stu-id="69d8f-198">**/unsafe**</span></span>|<span data-ttu-id="69d8f-199">不經過 .NET Framework 安全性檢查即產生介面。</span><span class="sxs-lookup"><span data-stu-id="69d8f-199">Produces interfaces without .NET Framework security checks.</span></span> <span data-ttu-id="69d8f-200">呼叫以這種方式公開的方法可能會造成安全性風險。</span><span class="sxs-lookup"><span data-stu-id="69d8f-200">Calling a method that is exposed in this way might pose a security risk.</span></span> <span data-ttu-id="69d8f-201">除非您很清楚公開這類程式碼的風險，否則不應該使用這個選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-201">You should not use this option unless you are aware of the risks of exposing such code.</span></span>|  
+|<span data-ttu-id="69d8f-202">**/verbose**</span><span class="sxs-lookup"><span data-stu-id="69d8f-202">**/verbose**</span></span>|<span data-ttu-id="69d8f-203">指定詳細資訊模式，顯示有關匯入之類型程式庫的其他資訊。</span><span class="sxs-lookup"><span data-stu-id="69d8f-203">Specifies verbose mode; displays additional information about the imported type library.</span></span>|  
+|<span data-ttu-id="69d8f-204">**/VariantBoolFieldToBool**</span><span class="sxs-lookup"><span data-stu-id="69d8f-204">**/VariantBoolFieldToBool**</span></span>|<span data-ttu-id="69d8f-205">將結構中的 `VARIANT_BOOL` 欄位轉換為 <xref:System.Boolean>。</span><span class="sxs-lookup"><span data-stu-id="69d8f-205">Converts `VARIANT_BOOL` fields in structures to <xref:System.Boolean>.</span></span>|  
+|<span data-ttu-id="69d8f-206">**/?**</span><span class="sxs-lookup"><span data-stu-id="69d8f-206">**/?**</span></span>|<span data-ttu-id="69d8f-207">顯示工具的命令語法和選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-207">Displays command syntax and options for the tool.</span></span>|  
   
 > [!NOTE]
->  Tlbimp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 因此，**/n** 相當於 **/nologo**，而 **/ou:** *outfile.dll* 相當於 **/out:** *outfile.dll*。  
+>  <span data-ttu-id="69d8f-208">Tlbimp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。</span><span class="sxs-lookup"><span data-stu-id="69d8f-208">The command-line options for Tlbimp.exe are case-insensitive and can be supplied in any order.</span></span> <span data-ttu-id="69d8f-209">您只需要指定足夠的選項來唯一識別它。</span><span class="sxs-lookup"><span data-stu-id="69d8f-209">You only need to specify enough of the option to uniquely identify it.</span></span> <span data-ttu-id="69d8f-210">因此，**/n** 相當於 **/nologo**，而 **/ou:** *outfile.dll* 相當於 **/out:** *outfile.dll*。</span><span class="sxs-lookup"><span data-stu-id="69d8f-210">Therefore, **/n** is equivalent to **/nologo** and **/ou:** *outfile.dll* is equivalent to **/out:** *outfile.dll*.</span></span>  
   
-## <a name="remarks"></a>備註  
- Tlbimp.exe 會一次執行整個類型程式庫的轉換。 您無法使用這個工具針對單一類型程式庫中定義的類型子集產生類型資訊。  
+## <a name="remarks"></a><span data-ttu-id="69d8f-211">備註</span><span class="sxs-lookup"><span data-stu-id="69d8f-211">Remarks</span></span>  
+ <span data-ttu-id="69d8f-212">Tlbimp.exe 會一次執行整個類型程式庫的轉換。</span><span class="sxs-lookup"><span data-stu-id="69d8f-212">Tlbimp.exe performs conversions on an entire type library at one time.</span></span> <span data-ttu-id="69d8f-213">您無法使用這個工具針對單一類型程式庫中定義的類型子集產生類型資訊。</span><span class="sxs-lookup"><span data-stu-id="69d8f-213">You cannot use the tool to generate type information for a subset of the types defined within a single type library.</span></span>  
   
- 將[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)指派給組件的功能通常十分實用，甚至是必要的。 因此，Tlbimp.exe 包含了提供產生以強式名稱命名之組件所需資訊的選項。 **/keyfile:** 和 **/keycontainer:** 這兩個選項都會以強式名稱簽署組件。 所以邏輯上來說，一次只需要提供其中一個選項。  
+ <span data-ttu-id="69d8f-214">將[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)指派給組件的功能通常十分實用，甚至是必要的。</span><span class="sxs-lookup"><span data-stu-id="69d8f-214">It is often useful or necessary to be able to assign [strong names](../../../docs/framework/app-domains/strong-named-assemblies.md) to assemblies.</span></span> <span data-ttu-id="69d8f-215">因此，Tlbimp.exe 包含了提供產生以強式名稱命名之組件所需資訊的選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-215">Therefore, Tlbimp.exe includes options for supplying the information necessary to generate strongly named assemblies.</span></span> <span data-ttu-id="69d8f-216">**/keyfile:** 和 **/keycontainer:** 這兩個選項都會以強式名稱簽署組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-216">Both the **/keyfile:** and **/keycontainer:** options sign assemblies with strong names.</span></span> <span data-ttu-id="69d8f-217">所以邏輯上來說，一次只需要提供其中一個選項。</span><span class="sxs-lookup"><span data-stu-id="69d8f-217">Therefore, it is logical to supply only one of these options at a time.</span></span>  
   
- 您可以多次使用 **/reference** 選項指定多個參考組件。  
+ <span data-ttu-id="69d8f-218">您可以多次使用 **/reference** 選項指定多個參考組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-218">You can specify multiple reference assemblies by using the **/reference** option multiple times.</span></span>  
   
- 從包含多個類型程式庫的模組匯入類型程式庫時，可以選擇性地將資源 ID 附加至類型程式庫檔案。 只有在這個檔案是位於目前的目錄中，或者您指定了完整路徑時，Tlbimp.exe 才能夠找到這個檔案。 請參閱本主題稍後的範例。  
+ <span data-ttu-id="69d8f-219">從包含多個類型程式庫的模組匯入類型程式庫時，可以選擇性地將資源 ID 附加至類型程式庫檔案。</span><span class="sxs-lookup"><span data-stu-id="69d8f-219">A resource ID can optionally be appended to a type library file when importing a type library from a module containing multiple type libraries.</span></span> <span data-ttu-id="69d8f-220">只有在這個檔案是位於目前的目錄中，或者您指定了完整路徑時，Tlbimp.exe 才能夠找到這個檔案。</span><span class="sxs-lookup"><span data-stu-id="69d8f-220">Tlbimp.exe is able to locate this file only if it is in the current directory or if you specify the full path.</span></span> <span data-ttu-id="69d8f-221">請參閱本主題稍後的範例。</span><span class="sxs-lookup"><span data-stu-id="69d8f-221">See the example later in this topic.</span></span>  
   
-## <a name="examples"></a>範例  
- 下列命令會產生與 `myTest.tlb` 中所找到的類型程式庫同名且副檔名為 .dll 的組件。  
+## <a name="examples"></a><span data-ttu-id="69d8f-222">範例</span><span class="sxs-lookup"><span data-stu-id="69d8f-222">Examples</span></span>  
+ <span data-ttu-id="69d8f-223">下列命令會產生與 `myTest.tlb` 中所找到的類型程式庫同名且副檔名為 .dll 的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-223">The following command generates an assembly with the same name as the type library found in `myTest.tlb` and with the .dll extension.</span></span>  
   
 ```  
 tlbimp myTest.tlb   
 ```  
   
- 下列命令會產生名稱為 `myTest.dll` 的組件。  
+ <span data-ttu-id="69d8f-224">下列命令會產生名稱為 `myTest.dll` 的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-224">The following command generates an assembly with the name `myTest.dll`.</span></span>  
   
 ```  
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
- 下列命令會產生與 `MyModule.dll\1` 所指定類型程式庫同名且副檔名為 .dll 的組件。 `MyModule.dll\1` 必須位於目前的目錄中。  
+ <span data-ttu-id="69d8f-225">下列命令會產生與 `MyModule.dll\1` 所指定類型程式庫同名且副檔名為 .dll 的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-225">The following command generates an assembly with the same name as the type library specified by `MyModule.dll\1` and with the .dll extension.</span></span> <span data-ttu-id="69d8f-226">`MyModule.dll\1` 必須位於目前的目錄中。</span><span class="sxs-lookup"><span data-stu-id="69d8f-226">`MyModule.dll\1` must be located in the current directory.</span></span>  
   
 ```  
 tlbimp MyModule.dll\1  
 ```  
   
- 下列命令會針對 `myTestLib.dll` 類型程式庫產生名稱為 `TestLib.dll` 的組件。 **/transform:dispret** 選項會將類型程式庫中分配介面上之方法的所有 [out, retval] 參數，轉換為 Managed 程式庫中的傳回值。  
+ <span data-ttu-id="69d8f-227">下列命令會針對 `myTestLib.dll` 類型程式庫產生名稱為 `TestLib.dll` 的組件。</span><span class="sxs-lookup"><span data-stu-id="69d8f-227">The following command generates an assembly with the name `myTestLib.dll` for the type library `TestLib.dll`.</span></span> <span data-ttu-id="69d8f-228">**/transform:dispret** 選項會將類型程式庫中分配介面上之方法的所有 [out, retval] 參數，轉換為 Managed 程式庫中的傳回值。</span><span class="sxs-lookup"><span data-stu-id="69d8f-228">The **/transform:dispret** option transforms any [out, retval] parameters of methods on dispinterfaces in the type library into return values in the managed library.</span></span>  
   
 ```  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
 ```  
   
- 前一個範例中的 `TestLib.dll` 類型程式庫包括名為 `SomeMethod` 的分配介面方法，該方法會傳回 void 並具有 [out, retval] 參數。 以下程式碼是 `SomeMethod` 中 `TestLib.dll` 的輸入類型程式庫方法簽章。  
+ <span data-ttu-id="69d8f-229">前一個範例中的 `TestLib.dll` 類型程式庫包括名為 `SomeMethod` 的分配介面方法，該方法會傳回 void 並具有 [out, retval] 參數。</span><span class="sxs-lookup"><span data-stu-id="69d8f-229">The type library `TestLib.dll`, in the preceding example, includes a dispinterface method named `SomeMethod` that returns void and has an [out, retval] parameter.</span></span> <span data-ttu-id="69d8f-230">以下程式碼是 `SomeMethod` 中 `TestLib.dll` 的輸入類型程式庫方法簽章。</span><span class="sxs-lookup"><span data-stu-id="69d8f-230">The following code is the input type library method signature for `SomeMethod` in `TestLib.dll`.</span></span>  
   
 ```  
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   
- 指定 **/transform:dispret** 選項會使 Tlbimp.exe 將 `SomeMethod` 的 `[out, retval]` 參數轉換為 `bool` 傳回值。 以下是在指定 **/transform:dispret** 選項時，Tlbimp.exe 為 `myTestLib.dll` Managed 程式庫中的 `SomeMethod` 所產生的方法簽章。  
+ <span data-ttu-id="69d8f-231">指定 **/transform:dispret** 選項會使 Tlbimp.exe 將 `SomeMethod` 的 `[out, retval]` 參數轉換為 `bool` 傳回值。</span><span class="sxs-lookup"><span data-stu-id="69d8f-231">Specifying the **/transform:dispret** option causes Tlbimp.exe to transform the `[out, retval]` parameter of `SomeMethod` into a `bool` return value.</span></span> <span data-ttu-id="69d8f-232">以下是在指定 **/transform:dispret** 選項時，Tlbimp.exe 為 `myTestLib.dll` Managed 程式庫中的 `SomeMethod` 所產生的方法簽章。</span><span class="sxs-lookup"><span data-stu-id="69d8f-232">The following is the method signature that Tlbimp.exe produces for `SomeMethod` in the managed library `myTestLib.dll` when the **/transform:dispret** option is specified.</span></span>  
   
 ```csharp  
 bool SomeMethod();  
 ```  
   
- 如果您使用 Tlbimp.exe 為 `TestLib.dll` 產生 Managed 程式庫，而未指定 **/transform:dispret**，則工具會在 `myTestLib.dll` Managed 程式庫中為 `SomeMethod` 產生下列方法簽章。  
+ <span data-ttu-id="69d8f-233">如果您使用 Tlbimp.exe 為 `TestLib.dll` 產生 Managed 程式庫，而未指定 **/transform:dispret**，則工具會在 `myTestLib.dll` Managed 程式庫中為 `SomeMethod` 產生下列方法簽章。</span><span class="sxs-lookup"><span data-stu-id="69d8f-233">If you use Tlbimp.exe to produce a managed library for `TestLib.dll` without specifying the **/transform:dispret**, the tool produces the following method signature for `SomeMethod` in the managed library `myTestLib.dll`.</span></span>  
   
 ```csharp  
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [工具](../../../docs/framework/tools/index.md)   
- [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
- [匯入類型程式庫作為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [類型程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)   
- [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [將類型程式庫匯入 Interop 組件的屬性](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)   
- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="69d8f-234">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69d8f-234">See Also</span></span>  
+ <span data-ttu-id="69d8f-235">[工具](../../../docs/framework/tools/index.md) </span><span class="sxs-lookup"><span data-stu-id="69d8f-235">[Tools](../../../docs/framework/tools/index.md) </span></span>  
+ <span data-ttu-id="69d8f-236">[Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) </span><span class="sxs-lookup"><span data-stu-id="69d8f-236">[Tlbexp.exe (Type Library Exporter)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) </span></span>  
+ <span data-ttu-id="69d8f-237">[匯入類型程式庫作為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) </span><span class="sxs-lookup"><span data-stu-id="69d8f-237">[Importing a Type Library as an Assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md) </span></span>  
+ <span data-ttu-id="69d8f-238">[類型程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) </span><span class="sxs-lookup"><span data-stu-id="69d8f-238">[Type Library to Assembly Conversion Summary](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) </span></span>  
+ <span data-ttu-id="69d8f-239">[Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) </span><span class="sxs-lookup"><span data-stu-id="69d8f-239">[Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) </span></span>  
+ <span data-ttu-id="69d8f-240">[Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) </span><span class="sxs-lookup"><span data-stu-id="69d8f-240">[Sn.exe (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) </span></span>  
+ <span data-ttu-id="69d8f-241">[強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md) </span><span class="sxs-lookup"><span data-stu-id="69d8f-241">[Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md) </span></span>  
+ <span data-ttu-id="69d8f-242">[將類型程式庫匯入 Interop 組件的屬性](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd) </span><span class="sxs-lookup"><span data-stu-id="69d8f-242">[Attributes for Importing Type Libraries into Interop Assemblies](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd) </span></span>  
+ [<span data-ttu-id="69d8f-243">命令提示字元</span><span class="sxs-lookup"><span data-stu-id="69d8f-243">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

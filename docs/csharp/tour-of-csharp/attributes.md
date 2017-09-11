@@ -1,5 +1,5 @@
 ---
-title: "C# 屬性 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 屬性 - C# 語言教學課程"
 description: "了解在 C# 中使用屬性的宣告式程式設計"
 keywords: .NET, csharp
 author: BillWagner
@@ -10,31 +10,30 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f290b2cb7074d0b442d5971e5e08a0f6cac55ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# 屬性
-<a id="attributes" class="xliff"></a>
+# <a name="attributes"></a><span data-ttu-id="6cbef-104">屬性</span><span class="sxs-lookup"><span data-stu-id="6cbef-104">Attributes</span></span>
 
-C# 程式中的型別、成員和其他實體支援控制其某方面行為的修飾詞。 例如，方法的協助工具是使用 `public`、`protected`、`internal` 和 `private` 修飾詞控制。 C# 將此能力一般化，宣告式資訊的使用者定義型別才能附加至程式實體，並在執行階段擷取。 程式是透過定義和使用***屬性***指定這項額外的宣告式資訊。
+<span data-ttu-id="6cbef-105">C# 程式中的型別、成員和其他實體支援控制其某方面行為的修飾詞。</span><span class="sxs-lookup"><span data-stu-id="6cbef-105">Types, members, and other entities in a C# program support modifiers that control certain aspects of their behavior.</span></span> <span data-ttu-id="6cbef-106">例如，方法的協助工具是使用 `public`、`protected`、`internal` 和 `private` 修飾詞控制。</span><span class="sxs-lookup"><span data-stu-id="6cbef-106">For example, the accessibility of a method is controlled using the `public`, `protected`, `internal`, and `private` modifiers.</span></span> <span data-ttu-id="6cbef-107">C# 將此能力一般化，宣告式資訊的使用者定義型別才能附加至程式實體，並在執行階段擷取。</span><span class="sxs-lookup"><span data-stu-id="6cbef-107">C# generalizes this capability such that user-defined types of declarative information can be attached to program entities and retrieved at run-time.</span></span> <span data-ttu-id="6cbef-108">程式是透過定義和使用***屬性***指定這項額外的宣告式資訊。</span><span class="sxs-lookup"><span data-stu-id="6cbef-108">Programs specify this additional declarative information by defining and using ***attributes***.</span></span>
 
-下列範例宣告的 `HelpAttribute` 屬性可置於程式實體，以提供其相關文件的連結。
+<span data-ttu-id="6cbef-109">下列範例宣告的 `HelpAttribute` 屬性可置於程式實體，以提供其相關文件的連結。</span><span class="sxs-lookup"><span data-stu-id="6cbef-109">The following example declares a `HelpAttribute` attribute that can be placed on program entities to provide links to their associated documentation.</span></span>
 
-[!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]
+<span data-ttu-id="6cbef-110">[!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]</span><span class="sxs-lookup"><span data-stu-id="6cbef-110">[!code-csharp[AttributeDefined](../../../samples/snippets/csharp/tour/attributes/Program.cs#L3-L20)]</span></span>
 
-所有屬性類別均衍生自標準程式庫提供的 @System.Attribute 基底類別。 在相關聯的宣告之前，於方括弧中提供屬性的名稱 (及任何引數) 即可套用屬性。 如果屬性名稱的結尾是 `Attribute`，則參考該屬性時可以省略該部分名稱。 例如，`HelpAttribute` 屬性可以下列方式使用。
+<span data-ttu-id="6cbef-111">所有屬性類別均衍生自標準程式庫提供的 @System.Attribute 基底類別。</span><span class="sxs-lookup"><span data-stu-id="6cbef-111">All attribute classes derive from the @System.Attribute base class provided by the standard library.</span></span> <span data-ttu-id="6cbef-112">在相關聯的宣告之前，於方括弧中提供屬性的名稱 (及任何引數) 即可套用屬性。</span><span class="sxs-lookup"><span data-stu-id="6cbef-112">Attributes can be applied by giving their name, along with any arguments, inside square brackets just before the associated declaration.</span></span> <span data-ttu-id="6cbef-113">如果屬性名稱的結尾是 `Attribute`，則參考該屬性時可以省略該部分名稱。</span><span class="sxs-lookup"><span data-stu-id="6cbef-113">If an attribute’s name ends in `Attribute`, that part of the name can be omitted when the attribute is referenced.</span></span> <span data-ttu-id="6cbef-114">例如，`HelpAttribute` 屬性可以下列方式使用。</span><span class="sxs-lookup"><span data-stu-id="6cbef-114">For example, the `HelpAttribute` attribute can be used as follows.</span></span>
 
-[!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]
+<span data-ttu-id="6cbef-115">[!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]</span><span class="sxs-lookup"><span data-stu-id="6cbef-115">[!code-csharp[AttributeApplied](../../../samples/snippets/csharp/tour/attributes/Program.cs#L22-L28)]</span></span>
 
-這個範例會將 `HelpAttribute` 附加至 `Widget` 類別。 它會在類別的 `Display` 方法中加入另一個 `HelpAttribute`。 屬性類別的公用建構函式控制將屬性附加至程式實體時必須提供的資訊。 透過參考屬性類別的公用讀寫屬性可提供其他資訊 (例如先前對 `Topic` 的參考 )。
+<span data-ttu-id="6cbef-116">這個範例會將 `HelpAttribute` 附加至 `Widget` 類別。</span><span class="sxs-lookup"><span data-stu-id="6cbef-116">This example attaches a `HelpAttribute` to the `Widget` class.</span></span> <span data-ttu-id="6cbef-117">它會在類別的 `Display` 方法中加入另一個 `HelpAttribute`。</span><span class="sxs-lookup"><span data-stu-id="6cbef-117">It adds another `HelpAttribute` to the `Display` method in the class.</span></span> <span data-ttu-id="6cbef-118">屬性類別的公用建構函式控制將屬性附加至程式實體時必須提供的資訊。</span><span class="sxs-lookup"><span data-stu-id="6cbef-118">The public constructors of an attribute class control the information that must be provided when the attribute is attached to a program entity.</span></span> <span data-ttu-id="6cbef-119">透過參考屬性類別的公用讀寫屬性可提供其他資訊 (例如先前對 `Topic` 的參考 )。</span><span class="sxs-lookup"><span data-stu-id="6cbef-119">Additional information can be provided by referencing public read-write properties of the attribute class (such as the reference to the `Topic` property previously).</span></span>
 
-透過反射要求特定的屬性時，會以程式來源中提供的資訊叫用屬性類別的建構函式，並傳回產生的屬性執行個體。 如果是透過屬性提供其他資訊，傳回屬性執行個體之前，這些屬性會設為指定的值。
+<span data-ttu-id="6cbef-120">透過反射要求特定的屬性時，會以程式來源中提供的資訊叫用屬性類別的建構函式，並傳回產生的屬性執行個體。</span><span class="sxs-lookup"><span data-stu-id="6cbef-120">When a particular attribute is requested through reflection, the constructor for the attribute class is invoked with the information provided in the program source, and the resulting attribute instance is returned.</span></span> <span data-ttu-id="6cbef-121">如果是透過屬性提供其他資訊，傳回屬性執行個體之前，這些屬性會設為指定的值。</span><span class="sxs-lookup"><span data-stu-id="6cbef-121">If additional information was provided through properties, those properties are set to the given values before the attribute instance is returned.</span></span>
 
 >[!div class="step-by-step"]
-[上一步](delegates.md)
+[<span data-ttu-id="6cbef-122">上一步</span><span class="sxs-lookup"><span data-stu-id="6cbef-122">Previous</span></span>](delegates.md)
 

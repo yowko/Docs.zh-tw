@@ -1,5 +1,5 @@
 ---
-title: "checked (C# 參考) | Microsoft Docs"
+title: "checked (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,39 +30,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5826c8e6f99352c730824bb504a168226b9e6600
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: abe34772c0f07b0a43f7299088bf5ea9a1d2aa78
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="checked-c-reference"></a>checked (C# 參考)
-`checked` 關鍵字是用來明確啟用整數型別算術運算和轉換的溢位檢查。  
+# <a name="checked-c-reference"></a><span data-ttu-id="ffb42-102">checked (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ffb42-102">checked (C# Reference)</span></span>
+<span data-ttu-id="ffb42-103">`checked` 關鍵字是用來明確啟用整數型別算術運算和轉換的溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="ffb42-103">The `checked` keyword is used to explicitly enable overflow checking for integral-type arithmetic operations and conversions.</span></span>  
   
- 根據預設，如果運算式產生超出目的地類型範圍的值，則只包含常數值的運算式會導致編譯器錯誤。 如果運算式包含一或多個非常數值，則編譯器偵測不到溢位。 評估下列範例中指派給 `i2` 的運算式不會導致編譯器錯誤。  
+ <span data-ttu-id="ffb42-104">根據預設，如果運算式產生超出目的地類型範圍的值，則只包含常數值的運算式會導致編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="ffb42-104">By default, an expression that contains only constant values causes a compiler error if the expression produces a value that is outside the range of the destination type.</span></span> <span data-ttu-id="ffb42-105">如果運算式包含一或多個非常數值，則編譯器偵測不到溢位。</span><span class="sxs-lookup"><span data-stu-id="ffb42-105">If the expression contains one or more non-constant values, the compiler does not detect the overflow.</span></span> <span data-ttu-id="ffb42-106">評估下列範例中指派給 `i2` 的運算式不會導致編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="ffb42-106">Evaluating the expression assigned to `i2` in the following example does not cause a compiler error.</span></span>  
   
- [!code-cs[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]  
+ <span data-ttu-id="ffb42-107">[!code-cs[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ffb42-107">[!code-cs[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]</span></span>  
   
- 根據預設，不會檢查這些非常數運算式是否在執行階段溢位，而且它們不會引發溢位例外狀況。 先前的範例會顯示 -2,147,483,639 作為兩個正整數的總和。  
+ <span data-ttu-id="ffb42-108">根據預設，不會檢查這些非常數運算式是否在執行階段溢位，而且它們不會引發溢位例外狀況。</span><span class="sxs-lookup"><span data-stu-id="ffb42-108">By default, these non-constant expressions are not checked for overflow at run time either, and they do not raise overflow exceptions.</span></span> <span data-ttu-id="ffb42-109">先前的範例會顯示 -2,147,483,639 作為兩個正整數的總和。</span><span class="sxs-lookup"><span data-stu-id="ffb42-109">The previous example displays -2,147,483,639 as the sum of two positive integers.</span></span>  
   
- 可以透過編譯器選項、環境設定或使用 `checked` 關鍵字來啟用溢位檢查。 下列範例示範如何使用 `checked` 運算式或 `checked` 區塊，來偵測先前的總和在執行階段所產生的溢位。 這兩個範例都會引發溢位例外狀況。  
+ <span data-ttu-id="ffb42-110">可以透過編譯器選項、環境設定或使用 `checked` 關鍵字來啟用溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="ffb42-110">Overflow checking can be enabled by compiler options, environment configuration, or use of the `checked` keyword.</span></span> <span data-ttu-id="ffb42-111">下列範例示範如何使用 `checked` 運算式或 `checked` 區塊，來偵測先前的總和在執行階段所產生的溢位。</span><span class="sxs-lookup"><span data-stu-id="ffb42-111">The following examples demonstrate how to use a `checked` expression or a `checked` block to detect the overflow that is produced by the previous sum at run time.</span></span> <span data-ttu-id="ffb42-112">這兩個範例都會引發溢位例外狀況。</span><span class="sxs-lookup"><span data-stu-id="ffb42-112">Both examples raise an overflow exception.</span></span>  
   
- [!code-cs[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]  
+ <span data-ttu-id="ffb42-113">[!code-cs[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="ffb42-113">[!code-cs[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]</span></span>  
   
- [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 關鍵字可以用來防止溢位檢查。  
+ <span data-ttu-id="ffb42-114">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) 關鍵字可以用來防止溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="ffb42-114">The [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword can be used to prevent overflow checking.</span></span>  
   
-## <a name="example"></a>範例  
- 這個範例示範如何使用 `checked`，以在執行階段啟用溢位檢查。  
+## <a name="example"></a><span data-ttu-id="ffb42-115">範例</span><span class="sxs-lookup"><span data-stu-id="ffb42-115">Example</span></span>  
+ <span data-ttu-id="ffb42-116">這個範例示範如何使用 `checked`，以在執行階段啟用溢位檢查。</span><span class="sxs-lookup"><span data-stu-id="ffb42-116">This sample shows how to use `checked` to enable overflow checking at run time.</span></span>  
   
- [!code-cs[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]  
+ <span data-ttu-id="ffb42-117">[!code-cs[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="ffb42-117">[!code-cs[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="ffb42-118">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="ffb42-118">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [Checked 與 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)   
- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+## <a name="see-also"></a><span data-ttu-id="ffb42-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ffb42-119">See Also</span></span>  
+ <span data-ttu-id="ffb42-120">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ffb42-120">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ffb42-121">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ffb42-121">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ffb42-122">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="ffb42-122">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="ffb42-123">[Checked 與 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) </span><span class="sxs-lookup"><span data-stu-id="ffb42-123">[Checked and Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md) </span></span>  
+ [<span data-ttu-id="ffb42-124">unchecked</span><span class="sxs-lookup"><span data-stu-id="ffb42-124">unchecked</span></span>](../../../csharp/language-reference/keywords/unchecked.md)
+

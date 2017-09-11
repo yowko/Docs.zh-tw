@@ -20,17 +20,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 2f81e7f8b87db58958faf29f34598d44c3f671c6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 ---
-# <a name="thread-timers-c"></a>執行緒計時器 (C#)
-<xref:System.Threading.Timer?displayProperty=fullName> 類別適用於在個別執行緒上定期執行工作。 例如，您可以使用執行緒計時器來檢查資料庫的狀態和完整性，或備份重要檔案。  
+# <a name="thread-timers-c"></a><span data-ttu-id="699e6-102">執行緒計時器 (C#)</span><span class="sxs-lookup"><span data-stu-id="699e6-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="699e6-103"><xref:System.Threading.Timer?displayProperty=fullName> 類別適用於在個別執行緒上定期執行工作。</span><span class="sxs-lookup"><span data-stu-id="699e6-103">The <xref:System.Threading.Timer?displayProperty=fullName> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="699e6-104">例如，您可以使用執行緒計時器來檢查資料庫的狀態和完整性，或備份重要檔案。</span><span class="sxs-lookup"><span data-stu-id="699e6-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>執行緒計時器範例  
- 下列範例會每隔兩秒鐘啟動一次工作，並使用旗標來起始會停止計時器的 <xref:System.IDisposable.Dispose%2A> 方法。 這個範例會將狀態公佈至輸出視窗。  
+## <a name="thread-timer-example"></a><span data-ttu-id="699e6-105">執行緒計時器範例</span><span class="sxs-lookup"><span data-stu-id="699e6-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="699e6-106">下列範例會每隔兩秒鐘啟動一次工作，並使用旗標來起始會停止計時器的 <xref:System.IDisposable.Dispose%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="699e6-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="699e6-107">這個範例會將狀態公佈至輸出視窗。</span><span class="sxs-lookup"><span data-stu-id="699e6-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -84,8 +84,8 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- <xref:System.Windows.Forms.Timer?displayProperty=fullName> 物件無法使用時，執行緒計時器特別有用，例如開發主控台應用程式時。  
+ <span data-ttu-id="699e6-108"><xref:System.Windows.Forms.Timer?displayProperty=fullName> 物件無法使用時，執行緒計時器特別有用，例如開發主控台應用程式時。</span><span class="sxs-lookup"><span data-stu-id="699e6-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=fullName> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Threading>   
- [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="699e6-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="699e6-109">See Also</span></span>  
+ <span data-ttu-id="699e6-110"><xref:System.Threading></span><span class="sxs-lookup"><span data-stu-id="699e6-110"><xref:System.Threading></span></span>   
+<span data-ttu-id="699e6-111"> [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)</span><span class="sxs-lookup"><span data-stu-id="699e6-111"> [Multithreaded Applications (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)</span></span>

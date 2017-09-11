@@ -16,18 +16,18 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4216ba0ab8c8026705a82f505807fb4b1f31e424
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 8ec8acfc576434dd8d48ae4dd9133ba7fbb43959
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何︰ 尋找命名空間 (Visual Basic) 中的所有節點
-您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="cb1c2-102">如何︰ 尋找命名空間 (Visual Basic) 中的所有節點</span><span class="sxs-lookup"><span data-stu-id="cb1c2-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
+<span data-ttu-id="cb1c2-103">您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。</span><span class="sxs-lookup"><span data-stu-id="cb1c2-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會使用兩個命名空間建立 XML 樹狀。 接著，它會逐一查看樹狀結構，並在這些其中一個命名空間中，列印所有項目和屬性的名稱。  
+## <a name="example"></a><span data-ttu-id="cb1c2-104">範例</span><span class="sxs-lookup"><span data-stu-id="cb1c2-104">Example</span></span>  
+ <span data-ttu-id="cb1c2-105">下列範例會使用兩個命名空間建立 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="cb1c2-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="cb1c2-106">接著，它會逐一查看樹狀結構，並在這些其中一個命名空間中，列印所有項目和屬性的名稱。</span><span class="sxs-lookup"><span data-stu-id="cb1c2-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -57,7 +57,7 @@ Module Module1
 End Module  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="cb1c2-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cb1c2-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -65,10 +65,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a>範例  
- 下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。 此查詢只會使用其中一個命名空間中的項目建立新的樹狀。  
+## <a name="example"></a><span data-ttu-id="cb1c2-108">範例</span><span class="sxs-lookup"><span data-stu-id="cb1c2-108">Example</span></span>  
+ <span data-ttu-id="cb1c2-109">下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="cb1c2-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="cb1c2-110">此查詢只會使用其中一個命名空間中的項目建立新的樹狀。</span><span class="sxs-lookup"><span data-stu-id="cb1c2-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 合併的採購單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
+ <span data-ttu-id="cb1c2-111">這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 合併的採購單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="cb1c2-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -87,7 +87,7 @@ Module Module1
 End Module  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="cb1c2-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cb1c2-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -123,6 +123,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cb1c2-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb1c2-113">See Also</span></span>  
+ [<span data-ttu-id="cb1c2-114">基本查詢 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb1c2-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

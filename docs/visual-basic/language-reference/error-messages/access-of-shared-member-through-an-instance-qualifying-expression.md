@@ -31,28 +31,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 39be3c95d5acc20afe3a33be9d4db48c09f99a9c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 49dc785131e257b19d0d1d57627ccb6cf8a3c63e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>透過執行個體存取共用成員。將不會評估合格的運算式
-類別或結構的執行個體變數用來存取`Shared`變數、 屬性、 程序或該類別或結構中定義的事件。 如果執行個體變數用來存取類別或結構，例如常數或列舉型別或巢狀的類別或結構的隱含共用的成員，也會發生這個警告。  
+# <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a><span data-ttu-id="c975c-102">透過執行個體存取共用成員。將不會評估合格的運算式</span><span class="sxs-lookup"><span data-stu-id="c975c-102">Access of shared member through an instance; qualifying expression will not be evaluated</span></span>
+<span data-ttu-id="c975c-103">類別或結構的執行個體變數用來存取`Shared`變數、 屬性、 程序或該類別或結構中定義的事件。</span><span class="sxs-lookup"><span data-stu-id="c975c-103">An instance variable of a class or structure is used to access a `Shared` variable, property, procedure, or event defined in that class or structure.</span></span> <span data-ttu-id="c975c-104">如果執行個體變數用來存取類別或結構，例如常數或列舉型別或巢狀的類別或結構的隱含共用的成員，也會發生這個警告。</span><span class="sxs-lookup"><span data-stu-id="c975c-104">This warning can also occur if an instance variable is used to access an implicitly shared member of a class or structure, such as a constant or enumeration, or a nested class or structure.</span></span>  
   
- 共用成員的用途是建立該成員的單一複本，並使用類別或結構宣告它的每個執行個體的單一複本。 若要存取此用途與一致`Shared`成員透過其類別或結構的名稱，而不是透過保留該類別或結構的個別執行個體的變數。  
+ <span data-ttu-id="c975c-105">共用成員的用途是建立該成員的單一複本，並使用類別或結構宣告它的每個執行個體的單一複本。</span><span class="sxs-lookup"><span data-stu-id="c975c-105">The purpose of sharing a member is to create only a single copy of that member and make that single copy available to every instance of the class or structure in which it is declared.</span></span> <span data-ttu-id="c975c-106">若要存取此用途與一致`Shared`成員透過其類別或結構的名稱，而不是透過保留該類別或結構的個別執行個體的變數。</span><span class="sxs-lookup"><span data-stu-id="c975c-106">It is consistent with this purpose to access a `Shared` member through the name of its class or structure, rather than through a variable that holds an individual instance of that class or structure.</span></span>  
   
- 存取`Shared`透過執行個體變數的成員可以讓程式碼更難以了解藉由模糊的成員是事實`Shared`。 此外，如果這類存取運算式的一部分，以執行其他動作，例如`Function`傳回共用成員的執行個體的程序[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會略過的運算式，否則它會執行任何其他動作。  
+ <span data-ttu-id="c975c-107">存取`Shared`透過執行個體變數的成員可以讓程式碼更難以了解藉由模糊的成員是事實`Shared`。</span><span class="sxs-lookup"><span data-stu-id="c975c-107">Accessing a `Shared` member through an instance variable can make your code more difficult to understand by obscuring the fact that the member is `Shared`.</span></span> <span data-ttu-id="c975c-108">此外，如果這類存取運算式的一部分，以執行其他動作，例如`Function`傳回共用成員的執行個體的程序[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]會略過的運算式，否則它會執行任何其他動作。</span><span class="sxs-lookup"><span data-stu-id="c975c-108">Furthermore, if such access is part of an expression that performs other actions, such as a `Function` procedure that returns an instance of the shared member, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] bypasses the expression and any other actions it would otherwise perform.</span></span>  
   
- 如需詳細資訊和範例，請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
+ <span data-ttu-id="c975c-109">如需詳細資訊和範例，請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。</span><span class="sxs-lookup"><span data-stu-id="c975c-109">For more information and an example, see [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span>  
   
- 根據預設，這個訊息是一個警告。 如需隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ <span data-ttu-id="c975c-110">根據預設，這個訊息是一個警告。</span><span class="sxs-lookup"><span data-stu-id="c975c-110">By default, this message is a warning.</span></span> <span data-ttu-id="c975c-111">如需隱藏警告，或將警告視為錯誤的詳細資訊，請參閱[Visual Basic 中的 設定警告](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="c975c-111">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **錯誤識別碼︰** BC42025  
+ <span data-ttu-id="c975c-112">**錯誤識別碼︰** BC42025</span><span class="sxs-lookup"><span data-stu-id="c975c-112">**Error ID:** BC42025</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c975c-113">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="c975c-113">To correct this error</span></span>  
   
--   使用類別或結構，定義的名稱`Shared`成員，才能存取它，如下列範例所示。  
+-   <span data-ttu-id="c975c-114">使用類別或結構，定義的名稱`Shared`成員，才能存取它，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="c975c-114">Use the name of the class or structure that defines the `Shared` member to access it, as shown in the following example.</span></span>  
   
 ```vb  
 Public Class testClass  
@@ -76,8 +77,8 @@ End Module
 ```  
   
 > [!NOTE]
->  當兩個程式設計項目具有相同的名稱範圍的效果是警示。 在上述範例中，如果您使用宣告執行個體`Dim testClass as testClass = Nothing`，編譯器會將呼叫`testClass.sayHello()`透過類別名稱，並沒有警告的方法存取發生時。  
+>  <span data-ttu-id="c975c-115">當兩個程式設計項目具有相同的名稱範圍的效果是警示。</span><span class="sxs-lookup"><span data-stu-id="c975c-115">Be alert for the effects of scope when two programming elements have the same name.</span></span> <span data-ttu-id="c975c-116">在上述範例中，如果您使用宣告執行個體`Dim testClass as testClass = Nothing`，編譯器會將呼叫`testClass.sayHello()`透過類別名稱，並沒有警告的方法存取發生時。</span><span class="sxs-lookup"><span data-stu-id="c975c-116">In the previous example, if you declare an instance by using `Dim testClass as testClass = Nothing`, the compiler treats a call to `testClass.sayHello()` as an access of the method through the class name, and no warning occurs.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [共用](../../../visual-basic/language-reference/modifiers/shared.md)   
- [在 Visual Basic 中的範圍](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a><span data-ttu-id="c975c-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c975c-117">See Also</span></span>  
+ <span data-ttu-id="c975c-118">[共用](../../../visual-basic/language-reference/modifiers/shared.md) </span><span class="sxs-lookup"><span data-stu-id="c975c-118">[Shared](../../../visual-basic/language-reference/modifiers/shared.md) </span></span>  
+<span data-ttu-id="c975c-119"> [在 Visual Basic 中的範圍](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)</span><span class="sxs-lookup"><span data-stu-id="c975c-119"> [Scope in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)</span></span>

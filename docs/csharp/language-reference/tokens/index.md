@@ -1,5 +1,5 @@
 ---
-title: "特殊字元 (C# 參考) | Microsoft Docs"
+title: "特殊字元 (C# 參考)"
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -33,23 +33,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 03242440226552c5e4125446c453cf657137e403
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 50a6fd688ff86936ceee410e4aa7440d5a6900c9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="c-special-characters"></a>C# 特殊字元
+# <a name="c-special-characters"></a><span data-ttu-id="d4443-102">C# 特殊字元</span><span class="sxs-lookup"><span data-stu-id="d4443-102">C# Special Characters</span></span>
 
-特殊字元是預先定義的內容字元，這類字元會修改將它們加在前面的程式元素 (常值字串、識別項或屬性名稱)。 C# 支援下列特殊字元： 
+<span data-ttu-id="d4443-103">特殊字元是預先定義的內容字元，這類字元會修改將它們加在前面的程式元素 (常值字串、識別項或屬性名稱)。</span><span class="sxs-lookup"><span data-stu-id="d4443-103">Special characters are predefined, contextual characters that modifies the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="d4443-104">C# 支援下列特殊字元：</span><span class="sxs-lookup"><span data-stu-id="d4443-104">C# supports the following special characters:</span></span> 
 
-- [@](../../../csharp/language-reference/tokens/verbatim.md)，逐字識別項字元。 
+- <span data-ttu-id="d4443-105">[@](../../../csharp/language-reference/tokens/verbatim.md)，逐字識別項字元。</span><span class="sxs-lookup"><span data-stu-id="d4443-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- [$](../../../csharp/language-reference/tokens/interpolated.md)，內插字串字元。
+- <span data-ttu-id="d4443-106">[$](../../../csharp/language-reference/tokens/interpolated.md)，內插字串字元。</span><span class="sxs-lookup"><span data-stu-id="d4443-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="d4443-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d4443-107">See Also</span></span>  
+ <span data-ttu-id="d4443-108">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="d4443-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="d4443-109">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="d4443-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
 
 

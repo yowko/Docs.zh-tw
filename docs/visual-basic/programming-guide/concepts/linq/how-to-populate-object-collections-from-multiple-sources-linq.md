@@ -20,24 +20,25 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ab75113ca2609385db8be9d79563e7b71dfd0b5b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何︰ 填入物件集合，從多個來源 (LINQ) (Visual Basic)
-這個範例示範如何從不同來源的資料合併到一系列新的型別。  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="d1db8-102">如何︰ 填入物件集合，從多個來源 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1db8-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="d1db8-103">這個範例示範如何從不同來源的資料合併到一系列新的型別。</span><span class="sxs-lookup"><span data-stu-id="d1db8-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  請勿嘗試在檔案系統仍在資料庫中的資料加入記憶體中的資料。 這類的跨網域聯結會產生未定義的結果，因為不同的方式，可以針對資料庫查詢和其他類型的來源定義中的聯結作業。 此外，也有這類作業可能導致記憶體不足例外狀況，如果資料庫中的資料量夠大的風險。 若要加入資料庫至記憶體中資料的資料，第一次呼叫`ToList`或`ToArray`資料庫查詢和則傳回的集合上執行聯結。  
+>  <span data-ttu-id="d1db8-104">請勿嘗試在檔案系統仍在資料庫中的資料加入記憶體中的資料。</span><span class="sxs-lookup"><span data-stu-id="d1db8-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="d1db8-105">這類的跨網域聯結會產生未定義的結果，因為不同的方式，可以針對資料庫查詢和其他類型的來源定義中的聯結作業。</span><span class="sxs-lookup"><span data-stu-id="d1db8-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="d1db8-106">此外，也有這類作業可能導致記憶體不足例外狀況，如果資料庫中的資料量夠大的風險。</span><span class="sxs-lookup"><span data-stu-id="d1db8-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="d1db8-107">若要加入資料庫至記憶體中資料的資料，第一次呼叫`ToList`或`ToArray`資料庫查詢和則傳回的集合上執行聯結。</span><span class="sxs-lookup"><span data-stu-id="d1db8-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a>建立資料檔  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="d1db8-108">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="d1db8-108">To create the data file</span></span>  
   
--   Names.csv 和 scores.csv 將檔案複製到您的專案資料夾中所述[How to︰ 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。  
+-   <span data-ttu-id="d1db8-109">Names.csv 和 scores.csv 將檔案複製到您的專案資料夾中所述[How to︰ 將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="d1db8-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用具名型別`Student`儲存合併的資料，從兩個記憶體中集合的模擬試算表資料存成.csv 格式的字串。 第一個集合的字串表示的學生名稱和識別碼，而第二個集合表示學生識別碼 （在第一個資料行中） 和四個測驗分數。 識別碼做為外部索引鍵。  
+## <a name="example"></a><span data-ttu-id="d1db8-110">範例</span><span class="sxs-lookup"><span data-stu-id="d1db8-110">Example</span></span>  
+ <span data-ttu-id="d1db8-111">下列範例示範如何使用具名型別`Student`儲存合併的資料，從兩個記憶體中集合的模擬試算表資料存成.csv 格式的字串。</span><span class="sxs-lookup"><span data-stu-id="d1db8-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="d1db8-112">第一個集合的字串表示的學生名稱和識別碼，而第二個集合表示學生識別碼 （在第一個資料行中） 和四個測驗分數。</span><span class="sxs-lookup"><span data-stu-id="d1db8-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="d1db8-113">識別碼做為外部索引鍵。</span><span class="sxs-lookup"><span data-stu-id="d1db8-113">The ID is used as the foreign key.</span></span>  
   
 ```vb  
 Class Student  
@@ -112,9 +113,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- 在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，物件初始設定式用來具現化每個新`Student`使用兩個來源的資料物件。  
+ <span data-ttu-id="d1db8-114">在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句，物件初始設定式用來具現化每個新`Student`使用兩個來源的資料物件。</span><span class="sxs-lookup"><span data-stu-id="d1db8-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- 如果您沒有儲存查詢的結果，匿名型別可以更方便比具名型別。 如果您傳遞查詢結果執行查詢的方法之外，會需要具名型別。 下列範例會執行與前一個範例中，相同的工作，但會使用匿名型別，而不是具名型別︰  
+ <span data-ttu-id="d1db8-115">如果您沒有儲存查詢的結果，匿名型別可以更方便比具名型別。</span><span class="sxs-lookup"><span data-stu-id="d1db8-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="d1db8-116">如果您傳遞查詢結果執行查詢的方法之外，會需要具名型別。</span><span class="sxs-lookup"><span data-stu-id="d1db8-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="d1db8-117">下列範例會執行與前一個範例中，相同的工作，但會使用匿名型別，而不是具名型別︰</span><span class="sxs-lookup"><span data-stu-id="d1db8-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -140,8 +141,8 @@ For Each s In queryNamesScores2
 Next  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+## <a name="compiling-the-code"></a><span data-ttu-id="d1db8-118">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d1db8-118">Compiling the Code</span></span>  
+ <span data-ttu-id="d1db8-119">建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="d1db8-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="d1db8-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d1db8-120">See Also</span></span>  
+ [<span data-ttu-id="d1db8-121">LINQ 和字串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1db8-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

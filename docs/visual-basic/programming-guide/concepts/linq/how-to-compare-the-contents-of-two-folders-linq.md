@@ -20,27 +20,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce4f89c88fd856d3471e4f32c4f69d15e8ccb4c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 48571deff37bf4adfcbddbb1f4cc6630cb96303e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何︰ 比較兩個資料夾內容 (LINQ) (Visual Basic)
-此範例示範三種方式來比較兩個檔案清單︰  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="8a525-102">如何︰ 比較兩個資料夾內容 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a525-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="8a525-103">此範例示範三種方式來比較兩個檔案清單︰</span><span class="sxs-lookup"><span data-stu-id="8a525-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
--   藉由查詢的布林值，指定是否兩個檔案清單完全相同。  
+-   <span data-ttu-id="8a525-104">藉由查詢的布林值，指定是否兩個檔案清單完全相同。</span><span class="sxs-lookup"><span data-stu-id="8a525-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
--   藉由查詢交集，以擷取這兩個資料夾中的檔案。  
+-   <span data-ttu-id="8a525-105">藉由查詢交集，以擷取這兩個資料夾中的檔案。</span><span class="sxs-lookup"><span data-stu-id="8a525-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
--   若要擷取的檔案，但未在另一個資料夾中的集合差異查詢。  
+-   <span data-ttu-id="8a525-106">若要擷取的檔案，但未在另一個資料夾中的集合差異查詢。</span><span class="sxs-lookup"><span data-stu-id="8a525-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    >  這裡顯示的方法可適用於比較的任何類型的物件序列。  
+    >  <span data-ttu-id="8a525-107">這裡顯示的方法可適用於比較的任何類型的物件序列。</span><span class="sxs-lookup"><span data-stu-id="8a525-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- `FileComparer`類別如下所示將示範如何使用自訂比較子類別以及標準查詢運算子。 此類別不適合在真實案例中使用。 它只會使用名稱和長度以位元組為單位，每個檔案來判斷每個資料夾的內容是否為相同。 在真實世界的案例中，您應該修改這個比較子來執行更嚴格的相等檢查。  
+ <span data-ttu-id="8a525-108">`FileComparer`類別如下所示將示範如何使用自訂比較子類別以及標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="8a525-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="8a525-109">此類別不適合在真實案例中使用。</span><span class="sxs-lookup"><span data-stu-id="8a525-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="8a525-110">它只會使用名稱和長度以位元組為單位，每個檔案來判斷每個資料夾的內容是否為相同。</span><span class="sxs-lookup"><span data-stu-id="8a525-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="8a525-111">在真實世界的案例中，您應該修改這個比較子來執行更嚴格的相等檢查。</span><span class="sxs-lookup"><span data-stu-id="8a525-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="8a525-112">範例</span><span class="sxs-lookup"><span data-stu-id="8a525-112">Example</span></span>  
   
 ```vb  
 Module CompareDirs  
@@ -130,9 +131,9 @@ Module CompareDirs
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+## <a name="compiling-the-code"></a><span data-ttu-id="8a525-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8a525-113">Compiling the Code</span></span>  
+ <span data-ttu-id="8a525-114">建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="8a525-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="8a525-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8a525-115">See Also</span></span>  
+ <span data-ttu-id="8a525-116">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="8a525-116">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="8a525-117"> [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="8a525-117"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

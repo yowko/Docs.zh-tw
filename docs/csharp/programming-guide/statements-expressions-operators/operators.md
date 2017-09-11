@@ -1,5 +1,5 @@
 ---
-title: "運算子 (C# 程式設計手冊) | Microsoft Docs"
+title: "運算子 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,128 +30,128 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 45f474983747f3b14fac85b8ed00e01fb50853e4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
-在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。 只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。 使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。 還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。  
+# <a name="operators-c-programming-guide"></a><span data-ttu-id="dd555-102">運算子 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="dd555-102">Operators (C# Programming Guide)</span></span>
+<span data-ttu-id="dd555-103">在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。</span><span class="sxs-lookup"><span data-stu-id="dd555-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="dd555-104">只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。</span><span class="sxs-lookup"><span data-stu-id="dd555-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="dd555-105">使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。</span><span class="sxs-lookup"><span data-stu-id="dd555-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="dd555-106">還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。</span><span class="sxs-lookup"><span data-stu-id="dd555-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  
   
- 下列 C# 陳述式包含一個一元運算子和一個運算元。 遞增運算子 `++`會修改運算元 `y`的值。  
+ <span data-ttu-id="dd555-107">下列 C# 陳述式包含一個一元運算子和一個運算元。</span><span class="sxs-lookup"><span data-stu-id="dd555-107">The following C# statement contains a single unary operator and a single operand.</span></span> <span data-ttu-id="dd555-108">遞增運算子 `++`會修改運算元 `y`的值。</span><span class="sxs-lookup"><span data-stu-id="dd555-108">The increment operator, `++`, modifies the value of the operand `y`.</span></span>  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ <span data-ttu-id="dd555-109">[!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="dd555-109">[!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]</span></span>  
   
- 下列 C# 陳述式包含兩個二元運算子，這兩個運算子各有兩個運算元。 指派運算子 `=`的運算元為整數變數 `y` 和運算式 `2 + 3` 。 運算式 `2 + 3` 本身包含加法運算子和兩個運算元 `2` 和 `3`。  
+ <span data-ttu-id="dd555-110">下列 C# 陳述式包含兩個二元運算子，這兩個運算子各有兩個運算元。</span><span class="sxs-lookup"><span data-stu-id="dd555-110">The following C# statement contains two binary operators, each with two operands.</span></span> <span data-ttu-id="dd555-111">指派運算子 `=`的運算元為整數變數 `y` 和運算式 `2 + 3` 。</span><span class="sxs-lookup"><span data-stu-id="dd555-111">The assignment operator, `=`, has the integer variable `y` and the expression `2 + 3` as operands.</span></span> <span data-ttu-id="dd555-112">運算式 `2 + 3` 本身包含加法運算子和兩個運算元 `2` 和 `3`。</span><span class="sxs-lookup"><span data-stu-id="dd555-112">The expression `2 + 3` itself consists of the addition operator and two operands, `2` and `3`.</span></span>  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ <span data-ttu-id="dd555-113">[!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="dd555-113">[!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]</span></span>  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>運算子、評估和運算子優先順序  
- 運算元可以是由任何長度的程式碼撰寫而成的有效運算式，而且可以包含任何數量的子運算式。 在包含多個運算子的運算式中，套用運算子的順序取決於「 *運算子優先順序*」(Operator Precedence)、「 *順序關聯性*」(Associativity) 以及括號。  
+## <a name="operators-evaluation-and-operator-precedence"></a><span data-ttu-id="dd555-114">運算子、評估和運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="dd555-114">Operators, Evaluation, and Operator Precedence</span></span>  
+ <span data-ttu-id="dd555-115">運算元可以是由任何長度的程式碼撰寫而成的有效運算式，而且可以包含任何數量的子運算式。</span><span class="sxs-lookup"><span data-stu-id="dd555-115">An operand can be a valid expression that is composed of any length of code, and it can comprise any number of sub expressions.</span></span> <span data-ttu-id="dd555-116">在包含多個運算子的運算式中，套用運算子的順序取決於「 *運算子優先順序*」(Operator Precedence)、「 *順序關聯性*」(Associativity) 以及括號。</span><span class="sxs-lookup"><span data-stu-id="dd555-116">In an expression that contains multiple operators, the order in which the operators are applied is determined by *operator precedence*, *associativity*, and parentheses.</span></span>  
   
- 每個運算子都有定義的優先順序。 在包含多個運算子且運算子具有不同優先順序層級的運算式中，運算子的優先順序決定評估運算子的順序。 例如，下列陳述式會將 3 指派給 `n1`。  
+ <span data-ttu-id="dd555-117">每個運算子都有定義的優先順序。</span><span class="sxs-lookup"><span data-stu-id="dd555-117">Each operator has a defined precedence.</span></span> <span data-ttu-id="dd555-118">在包含多個運算子且運算子具有不同優先順序層級的運算式中，運算子的優先順序決定評估運算子的順序。</span><span class="sxs-lookup"><span data-stu-id="dd555-118">In an expression that contains multiple operators that have different precedence levels, the precedence of the operators determines the order in which the operators are evaluated.</span></span> <span data-ttu-id="dd555-119">例如，下列陳述式會將 3 指派給 `n1`。</span><span class="sxs-lookup"><span data-stu-id="dd555-119">For example, the following statement assigns 3 to `n1`.</span></span>  
   
  `n1 = 11 - 2 * 4;`  
   
- 因為乘法的優先順序高於減法，所以會先執行乘法。  
+ <span data-ttu-id="dd555-120">因為乘法的優先順序高於減法，所以會先執行乘法。</span><span class="sxs-lookup"><span data-stu-id="dd555-120">The multiplication is executed first because multiplication takes precedence over subtraction.</span></span>  
   
- 下表根據運算子所執行的運算類型，將運算子加以分類。 分類是依照優先順序列出。  
+ <span data-ttu-id="dd555-121">下表根據運算子所執行的運算類型，將運算子加以分類。</span><span class="sxs-lookup"><span data-stu-id="dd555-121">The following table separates the operators into categories based on the type of operation they perform.</span></span> <span data-ttu-id="dd555-122">分類是依照優先順序列出。</span><span class="sxs-lookup"><span data-stu-id="dd555-122">The categories are listed in order of precedence.</span></span>  
   
- **主要運算子**  
+ <span data-ttu-id="dd555-123">**主要運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-123">**Primary Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-124">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-124">Expression</span></span>|<span data-ttu-id="dd555-125">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-125">Description</span></span>|  
 |----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|成員存取<br /><br /> 條件式成員存取|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|方法和委派叫用|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|陣列和索引子存取<br /><br /> 條件式陣列和索引子存取|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|後置遞增|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|後置遞減|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|建立物件和委派|  
-|`new` T(...){...}|使用初始設定式建立物件。 請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。|  
-|`new` {...}|匿名物件初始設定式。 請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。|  
-|`new` T[...]|建立陣列。 請參閱[陣列](../../../csharp/programming-guide/arrays/index.md)。|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|取得 T 的 System.Type 物件|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|在核取的內容中評估運算式|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|在未核取的內容中評估運算式|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|取得類型 T 的預設值|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|匿名函式 (匿名方法)|  
+|<span data-ttu-id="dd555-126">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span><span class="sxs-lookup"><span data-stu-id="dd555-126">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span></span><br /><br /> <span data-ttu-id="dd555-127">x?.y</span><span class="sxs-lookup"><span data-stu-id="dd555-127">x?.y</span></span>|<span data-ttu-id="dd555-128">成員存取</span><span class="sxs-lookup"><span data-stu-id="dd555-128">Member access</span></span><br /><br /> <span data-ttu-id="dd555-129">條件式成員存取</span><span class="sxs-lookup"><span data-stu-id="dd555-129">Conditional member access</span></span>|  
+|<span data-ttu-id="dd555-130">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-130">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span></span>|<span data-ttu-id="dd555-131">方法和委派叫用</span><span class="sxs-lookup"><span data-stu-id="dd555-131">Method and delegate invocation</span></span>|  
+|<span data-ttu-id="dd555-132">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-132">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span></span><br /><br /> <span data-ttu-id="dd555-133">a?[x]</span><span class="sxs-lookup"><span data-stu-id="dd555-133">a?[x]</span></span>|<span data-ttu-id="dd555-134">陣列和索引子存取</span><span class="sxs-lookup"><span data-stu-id="dd555-134">Array and indexer access</span></span><br /><br /> <span data-ttu-id="dd555-135">條件式陣列和索引子存取</span><span class="sxs-lookup"><span data-stu-id="dd555-135">Conditional array and indexer access</span></span>|  
+|<span data-ttu-id="dd555-136">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-136">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span></span>|<span data-ttu-id="dd555-137">後置遞增</span><span class="sxs-lookup"><span data-stu-id="dd555-137">Post-increment</span></span>|  
+|<span data-ttu-id="dd555-138">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-138">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span></span>|<span data-ttu-id="dd555-139">後置遞減</span><span class="sxs-lookup"><span data-stu-id="dd555-139">Post-decrement</span></span>|  
+|<span data-ttu-id="dd555-140">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span><span class="sxs-lookup"><span data-stu-id="dd555-140">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span></span>|<span data-ttu-id="dd555-141">建立物件和委派</span><span class="sxs-lookup"><span data-stu-id="dd555-141">Object and delegate creation</span></span>|  
+|<span data-ttu-id="dd555-142">`new` T(...){...}</span><span class="sxs-lookup"><span data-stu-id="dd555-142">`new` T(...){...}</span></span>|<span data-ttu-id="dd555-143">使用初始設定式建立物件。</span><span class="sxs-lookup"><span data-stu-id="dd555-143">Object creation with initializer.</span></span> <span data-ttu-id="dd555-144">請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。</span><span class="sxs-lookup"><span data-stu-id="dd555-144">See [Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>|  
+|<span data-ttu-id="dd555-145">`new` {...}</span><span class="sxs-lookup"><span data-stu-id="dd555-145">`new` {...}</span></span>|<span data-ttu-id="dd555-146">匿名物件初始設定式。</span><span class="sxs-lookup"><span data-stu-id="dd555-146">Anonymous object initializer.</span></span> <span data-ttu-id="dd555-147">請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="dd555-147">See [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>|  
+|<span data-ttu-id="dd555-148">`new` T[...]</span><span class="sxs-lookup"><span data-stu-id="dd555-148">`new` T[...]</span></span>|<span data-ttu-id="dd555-149">建立陣列。</span><span class="sxs-lookup"><span data-stu-id="dd555-149">Array creation.</span></span> <span data-ttu-id="dd555-150">請參閱[陣列](../../../csharp/programming-guide/arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="dd555-150">See [Arrays](../../../csharp/programming-guide/arrays/index.md).</span></span>|  
+|<span data-ttu-id="dd555-151">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span><span class="sxs-lookup"><span data-stu-id="dd555-151">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span></span>|<span data-ttu-id="dd555-152">取得 T 的 System.Type 物件</span><span class="sxs-lookup"><span data-stu-id="dd555-152">Obtain System.Type object for T</span></span>|  
+|<span data-ttu-id="dd555-153">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="dd555-153">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span></span>|<span data-ttu-id="dd555-154">在核取的內容中評估運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-154">Evaluate expression in checked context</span></span>|  
+|<span data-ttu-id="dd555-155">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="dd555-155">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span></span>|<span data-ttu-id="dd555-156">在未核取的內容中評估運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-156">Evaluate expression in unchecked context</span></span>|  
+|<span data-ttu-id="dd555-157">[default](../../../csharp/language-reference/keywords/default.md) (T)</span><span class="sxs-lookup"><span data-stu-id="dd555-157">[default](../../../csharp/language-reference/keywords/default.md) (T)</span></span>|<span data-ttu-id="dd555-158">取得類型 T 的預設值</span><span class="sxs-lookup"><span data-stu-id="dd555-158">Obtain default value of type T</span></span>|  
+|<span data-ttu-id="dd555-159">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span><span class="sxs-lookup"><span data-stu-id="dd555-159">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span></span>|<span data-ttu-id="dd555-160">匿名函式 (匿名方法)</span><span class="sxs-lookup"><span data-stu-id="dd555-160">Anonymous function (anonymous method)</span></span>|  
   
- **一元運算子**  
+ <span data-ttu-id="dd555-161">**一元運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-161">**Unary Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-162">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-162">Expression</span></span>|<span data-ttu-id="dd555-163">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-163">Description</span></span>|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|識別|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|邏輯否定|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|位元否定|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|前置遞增|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|前置遞減|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x 明確轉換成類型 T|  
+|<span data-ttu-id="dd555-164">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-164">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span></span>|<span data-ttu-id="dd555-165">識別</span><span class="sxs-lookup"><span data-stu-id="dd555-165">Identity</span></span>|  
+|<span data-ttu-id="dd555-166">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-166">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span></span>|<span data-ttu-id="dd555-167">否定</span><span class="sxs-lookup"><span data-stu-id="dd555-167">Negation</span></span>|  
+|[!]<span data-ttu-id="dd555-168">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-168">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span></span>|<span data-ttu-id="dd555-169">邏輯否定</span><span class="sxs-lookup"><span data-stu-id="dd555-169">Logical negation</span></span>|  
+|<span data-ttu-id="dd555-170">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-170">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span></span>|<span data-ttu-id="dd555-171">位元否定</span><span class="sxs-lookup"><span data-stu-id="dd555-171">Bitwise negation</span></span>|  
+|<span data-ttu-id="dd555-172">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-172">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span></span>|<span data-ttu-id="dd555-173">前置遞增</span><span class="sxs-lookup"><span data-stu-id="dd555-173">Pre-increment</span></span>|  
+|<span data-ttu-id="dd555-174">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-174">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span></span>|<span data-ttu-id="dd555-175">前置遞減</span><span class="sxs-lookup"><span data-stu-id="dd555-175">Pre-decrement</span></span>|  
+|<span data-ttu-id="dd555-176">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="dd555-176">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span></span>|<span data-ttu-id="dd555-177">x 明確轉換成類型 T</span><span class="sxs-lookup"><span data-stu-id="dd555-177">Explicitly convert x to type T</span></span>|  
   
- **乘法類運算子**  
+ <span data-ttu-id="dd555-178">**乘法類運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-178">**Multiplicative Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-179">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-179">Expression</span></span>|<span data-ttu-id="dd555-180">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-180">Description</span></span>|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|乘法|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|除號|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|餘數|  
+|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|<span data-ttu-id="dd555-181">乘法</span><span class="sxs-lookup"><span data-stu-id="dd555-181">Multiplication</span></span>|  
+|[/](../../../csharp/language-reference/operators/division-operator.md)|<span data-ttu-id="dd555-182">除號</span><span class="sxs-lookup"><span data-stu-id="dd555-182">Division</span></span>|  
+|[%](../../../csharp/language-reference/operators/modulus-operator.md)|<span data-ttu-id="dd555-183">餘數</span><span class="sxs-lookup"><span data-stu-id="dd555-183">Remainder</span></span>|  
   
- **加法類運算子**  
+ <span data-ttu-id="dd555-184">**加法類運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-184">**Additive Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-185">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-185">Expression</span></span>|<span data-ttu-id="dd555-186">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-186">Description</span></span>|  
 |----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|加法、字串串連、委派組合|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|減法、委派移除|  
+|<span data-ttu-id="dd555-187">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-187">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span></span>|<span data-ttu-id="dd555-188">加法、字串串連、委派組合</span><span class="sxs-lookup"><span data-stu-id="dd555-188">Addition, string concatenation, delegate combination</span></span>|  
+|<span data-ttu-id="dd555-189">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-189">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span></span>|<span data-ttu-id="dd555-190">減法、委派移除</span><span class="sxs-lookup"><span data-stu-id="dd555-190">Subtraction, delegate removal</span></span>|  
   
- **移位運算子**  
+ <span data-ttu-id="dd555-191">**移位運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-191">**Shift Operators**</span></span>  
   
-|運算式|說明|  
+|<span data-ttu-id="dd555-192">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-192">Expression</span></span>|<span data-ttu-id="dd555-193">說明</span><span class="sxs-lookup"><span data-stu-id="dd555-193">Description</span></span>|  
 |----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
+|<span data-ttu-id="dd555-194">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-194">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span></span>|<span data-ttu-id="dd555-195">左移</span><span class="sxs-lookup"><span data-stu-id="dd555-195">Shift left</span></span>|  
+|<span data-ttu-id="dd555-196">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-196">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span></span>|<span data-ttu-id="dd555-197">右移</span><span class="sxs-lookup"><span data-stu-id="dd555-197">Shift right</span></span>|  
   
- **關係和型別運算子**  
+ <span data-ttu-id="dd555-198">**關係和型別運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-198">**Relational and Type Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-199">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-199">Expression</span></span>|<span data-ttu-id="dd555-200">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-200">Description</span></span>|  
 |----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|小於|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|大於|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|小於或等於|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|大於或等於|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|如果 x 為 T 則傳回 true，否則傳回 false|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|傳回類型 T 的 x，如果 x 不是 T 則傳回 null|  
+|<span data-ttu-id="dd555-201">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-201">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span></span>|<span data-ttu-id="dd555-202">小於</span><span class="sxs-lookup"><span data-stu-id="dd555-202">Less than</span></span>|  
+|<span data-ttu-id="dd555-203">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-203">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span></span>|<span data-ttu-id="dd555-204">大於</span><span class="sxs-lookup"><span data-stu-id="dd555-204">Greater than</span></span>|  
+|<span data-ttu-id="dd555-205">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-205">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span></span>|<span data-ttu-id="dd555-206">小於或等於</span><span class="sxs-lookup"><span data-stu-id="dd555-206">Less than or equal</span></span>|  
+|<span data-ttu-id="dd555-207">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-207">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span></span>|<span data-ttu-id="dd555-208">大於或等於</span><span class="sxs-lookup"><span data-stu-id="dd555-208">Greater than or equal</span></span>|  
+|<span data-ttu-id="dd555-209">x [is](../../../csharp/language-reference/keywords/is.md) T</span><span class="sxs-lookup"><span data-stu-id="dd555-209">x [is](../../../csharp/language-reference/keywords/is.md) T</span></span>|<span data-ttu-id="dd555-210">如果 x 為 T 則傳回 true，否則傳回 false</span><span class="sxs-lookup"><span data-stu-id="dd555-210">Return true if x is a T, false otherwise</span></span>|  
+|<span data-ttu-id="dd555-211">x [as](../../../csharp/language-reference/keywords/as.md) T</span><span class="sxs-lookup"><span data-stu-id="dd555-211">x [as](../../../csharp/language-reference/keywords/as.md) T</span></span>|<span data-ttu-id="dd555-212">傳回類型 T 的 x，如果 x 不是 T 則傳回 null</span><span class="sxs-lookup"><span data-stu-id="dd555-212">Return x typed as T, or null if x is not a T</span></span>|  
   
- **等號比較運算子**  
+ <span data-ttu-id="dd555-213">**等號比較運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-213">**Equality Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-214">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-214">Expression</span></span>|<span data-ttu-id="dd555-215">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-215">Description</span></span>|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|等於|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|不相等|  
+|<span data-ttu-id="dd555-216">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-216">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span></span>|<span data-ttu-id="dd555-217">等於</span><span class="sxs-lookup"><span data-stu-id="dd555-217">Equal</span></span>|  
+|<span data-ttu-id="dd555-218">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-218">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span></span>|<span data-ttu-id="dd555-219">不相等</span><span class="sxs-lookup"><span data-stu-id="dd555-219">Not equal</span></span>|  
   
- **邏輯、條件和 Null 運算子**  
+ <span data-ttu-id="dd555-220">**邏輯、條件和 Null 運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-220">**Logical, Conditional, and Null Operators**</span></span>  
   
-|分類|運算式|描述|  
+|<span data-ttu-id="dd555-221">分類</span><span class="sxs-lookup"><span data-stu-id="dd555-221">Category</span></span>|<span data-ttu-id="dd555-222">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-222">Expression</span></span>|<span data-ttu-id="dd555-223">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-223">Description</span></span>|  
 |--------------|----------------|-----------------|  
-|邏輯 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整數位元 AND、布林邏輯 AND|  
-|邏輯 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整數位元 XOR、布林邏輯 XOR|  
-|邏輯 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整數位元 OR、布林邏輯 OR|  
-|條件式 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|只有在 x 為 true 時評估 y|  
-|條件式 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|只有在 x 為 false 時評估 y|  
-|Null 聯合|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) Y|如果 x 為 null 則判斷值為 y，否則判斷值為 x|  
-|條件式|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 為 true 則判斷值為 y；如果 x 為 false 則判斷值為 z|  
+|<span data-ttu-id="dd555-224">邏輯 AND</span><span class="sxs-lookup"><span data-stu-id="dd555-224">Logical AND</span></span>|<span data-ttu-id="dd555-225">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-225">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span></span>|<span data-ttu-id="dd555-226">整數位元 AND、布林邏輯 AND</span><span class="sxs-lookup"><span data-stu-id="dd555-226">Integer bitwise AND, Boolean logical AND</span></span>|  
+|<span data-ttu-id="dd555-227">邏輯 XOR</span><span class="sxs-lookup"><span data-stu-id="dd555-227">Logical XOR</span></span>|<span data-ttu-id="dd555-228">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-228">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span></span>|<span data-ttu-id="dd555-229">整數位元 XOR、布林邏輯 XOR</span><span class="sxs-lookup"><span data-stu-id="dd555-229">Integer bitwise XOR, boolean logical XOR</span></span>|  
+|<span data-ttu-id="dd555-230">邏輯 OR</span><span class="sxs-lookup"><span data-stu-id="dd555-230">Logical OR</span></span>|<span data-ttu-id="dd555-231">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-231">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span></span>|<span data-ttu-id="dd555-232">整數位元 OR、布林邏輯 OR</span><span class="sxs-lookup"><span data-stu-id="dd555-232">Integer bitwise OR, boolean logical OR</span></span>|  
+|<span data-ttu-id="dd555-233">條件式 AND</span><span class="sxs-lookup"><span data-stu-id="dd555-233">Conditional AND</span></span>|<span data-ttu-id="dd555-234">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-234">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span></span>|<span data-ttu-id="dd555-235">只有在 x 為 true 時評估 y</span><span class="sxs-lookup"><span data-stu-id="dd555-235">Evaluates y only if x is true</span></span>|  
+|<span data-ttu-id="dd555-236">條件式 OR</span><span class="sxs-lookup"><span data-stu-id="dd555-236">Conditional OR</span></span>|<span data-ttu-id="dd555-237">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-237">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span></span>|<span data-ttu-id="dd555-238">只有在 x 為 false 時評估 y</span><span class="sxs-lookup"><span data-stu-id="dd555-238">Evaluates y only if x is false</span></span>|  
+|<span data-ttu-id="dd555-239">Null 聯合</span><span class="sxs-lookup"><span data-stu-id="dd555-239">Null coalescing</span></span>|<span data-ttu-id="dd555-240">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-240">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span></span> <span data-ttu-id="dd555-241">Y</span><span class="sxs-lookup"><span data-stu-id="dd555-241">y</span></span>|<span data-ttu-id="dd555-242">如果 x 為 null 則判斷值為 y，否則判斷值為 x</span><span class="sxs-lookup"><span data-stu-id="dd555-242">Evaluates to y if x is null, to x otherwise</span></span>|  
+|<span data-ttu-id="dd555-243">條件式</span><span class="sxs-lookup"><span data-stu-id="dd555-243">Conditional</span></span>|<span data-ttu-id="dd555-244">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-244">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span></span> <span data-ttu-id="dd555-245">y : z</span><span class="sxs-lookup"><span data-stu-id="dd555-245">y : z</span></span>|<span data-ttu-id="dd555-246">如果 x 為 true 則判斷值為 y；如果 x 為 false 則判斷值為 z</span><span class="sxs-lookup"><span data-stu-id="dd555-246">Evaluates to y if x is true, z if x is false</span></span>|  
   
- **指派和匿名運算子**  
+ <span data-ttu-id="dd555-247">**指派和匿名運算子**</span><span class="sxs-lookup"><span data-stu-id="dd555-247">**Assignment and Anonymous Operators**</span></span>  
   
-|運算式|描述|  
+|<span data-ttu-id="dd555-248">運算式</span><span class="sxs-lookup"><span data-stu-id="dd555-248">Expression</span></span>|<span data-ttu-id="dd555-249">描述</span><span class="sxs-lookup"><span data-stu-id="dd555-249">Description</span></span>|  
 |----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|指派|  
-|x op= y|複合指派。 支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名函式 (Lambda 運算式)|  
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|<span data-ttu-id="dd555-250">指派</span><span class="sxs-lookup"><span data-stu-id="dd555-250">Assignment</span></span>|  
+|<span data-ttu-id="dd555-251">x op= y</span><span class="sxs-lookup"><span data-stu-id="dd555-251">x op= y</span></span>|<span data-ttu-id="dd555-252">複合指派。</span><span class="sxs-lookup"><span data-stu-id="dd555-252">Compound assignment.</span></span> <span data-ttu-id="dd555-253">支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="dd555-253">Supports these operators: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="dd555-254">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="dd555-254">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span></span>|<span data-ttu-id="dd555-255">匿名函式 (Lambda 運算式)</span><span class="sxs-lookup"><span data-stu-id="dd555-255">Anonymous function (lambda expression)</span></span>|  
   
-## <a name="associativity"></a>順序關聯性  
- 當運算式中有兩個以上具有相同優先順序的運算子時，會根據順序關聯性評估這些運算子。 左向關聯運算子會依由左至右的順序進行評估。 例如， `x * y / z` 會判斷值為 `(x * y) / z`。 右向關聯運算子會依由右至左的順序進行評估。 例如，指派運算子就是右向關聯。 如果不是的話，下列程式碼將會產生錯誤。  
+## <a name="associativity"></a><span data-ttu-id="dd555-256">順序關聯性</span><span class="sxs-lookup"><span data-stu-id="dd555-256">Associativity</span></span>  
+ <span data-ttu-id="dd555-257">當運算式中有兩個以上具有相同優先順序的運算子時，會根據順序關聯性評估這些運算子。</span><span class="sxs-lookup"><span data-stu-id="dd555-257">When two or more operators that have the same precedence are present in an expression, they are evaluated based on associativity.</span></span> <span data-ttu-id="dd555-258">左向關聯運算子會依由左至右的順序進行評估。</span><span class="sxs-lookup"><span data-stu-id="dd555-258">Left-associative operators are evaluated in order from left to right.</span></span> <span data-ttu-id="dd555-259">例如， `x * y / z` 會判斷值為 `(x * y) / z`。</span><span class="sxs-lookup"><span data-stu-id="dd555-259">For example, `x * y / z` is evaluated as `(x * y) / z`.</span></span> <span data-ttu-id="dd555-260">右向關聯運算子會依由右至左的順序進行評估。</span><span class="sxs-lookup"><span data-stu-id="dd555-260">Right-associative operators are evaluated in order from right to left.</span></span> <span data-ttu-id="dd555-261">例如，指派運算子就是右向關聯。</span><span class="sxs-lookup"><span data-stu-id="dd555-261">For example, the assignment operator is right associative.</span></span> <span data-ttu-id="dd555-262">如果不是的話，下列程式碼將會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="dd555-262">If it were not, the following code would result in an error.</span></span>  
   
 ```csharp  
 int a, b, c;  
@@ -164,35 +164,35 @@ a = (b = c);
 //(a = b) = c;  
 ```  
   
- 另一個範例是右向關聯的三元運算子 ([?:](../../../csharp/language-reference/operators/conditional-operator.md))。 大部分的二元運算子都是左向關聯。  
+ <span data-ttu-id="dd555-263">另一個範例是右向關聯的三元運算子 ([?:](../../../csharp/language-reference/operators/conditional-operator.md))。</span><span class="sxs-lookup"><span data-stu-id="dd555-263">As another example the ternary operator ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) is right associative.</span></span> <span data-ttu-id="dd555-264">大部分的二元運算子都是左向關聯。</span><span class="sxs-lookup"><span data-stu-id="dd555-264">Most binary operators are left associative.</span></span>  
   
- 不論運算式中的運算子是左向關聯還是右向關聯，都會由左至右先行評估每個運算式的運算元。 下列範例將說明運算子和運算元的評估順序。  
+ <span data-ttu-id="dd555-265">不論運算式中的運算子是左向關聯還是右向關聯，都會由左至右先行評估每個運算式的運算元。</span><span class="sxs-lookup"><span data-stu-id="dd555-265">Whether the operators in an expression are left associative or right associative, the operands of each expression are evaluated first, from left to right.</span></span> <span data-ttu-id="dd555-266">下列範例將說明運算子和運算元的評估順序。</span><span class="sxs-lookup"><span data-stu-id="dd555-266">The following examples illustrate the order of evaluation of operators and operands.</span></span>  
   
-|陳述式|評估的順序|  
+|<span data-ttu-id="dd555-267">陳述式</span><span class="sxs-lookup"><span data-stu-id="dd555-267">Statement</span></span>|<span data-ttu-id="dd555-268">評估的順序</span><span class="sxs-lookup"><span data-stu-id="dd555-268">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = b`|a, b, =|  
-|`a = b + c`|a, b, c, +, =|  
-|`a = b + c * d`|a, b, c, d, *, +, =|  
-|`a = b * c + d`|a, b, c, *, d, +, =|  
-|`a = b - c + d`|a, b, c, -, d, +, =|  
-|`a += b -= c`|a, b, c, -=, +=|  
+|`a = b`|<span data-ttu-id="dd555-269">a, b, =</span><span class="sxs-lookup"><span data-stu-id="dd555-269">a, b, =</span></span>|  
+|`a = b + c`|<span data-ttu-id="dd555-270">a, b, c, +, =</span><span class="sxs-lookup"><span data-stu-id="dd555-270">a, b, c, +, =</span></span>|  
+|`a = b + c * d`|<span data-ttu-id="dd555-271">a, b, c, d, *, +, =</span><span class="sxs-lookup"><span data-stu-id="dd555-271">a, b, c, d, *, +, =</span></span>|  
+|`a = b * c + d`|<span data-ttu-id="dd555-272">a, b, c, *, d, +, =</span><span class="sxs-lookup"><span data-stu-id="dd555-272">a, b, c, *, d, +, =</span></span>|  
+|`a = b - c + d`|<span data-ttu-id="dd555-273">a, b, c, -, d, +, =</span><span class="sxs-lookup"><span data-stu-id="dd555-273">a, b, c, -, d, +, =</span></span>|  
+|`a += b -= c`|<span data-ttu-id="dd555-274">a, b, c, -=, +=</span><span class="sxs-lookup"><span data-stu-id="dd555-274">a, b, c, -=, +=</span></span>|  
   
-## <a name="adding-parentheses"></a>加入括號  
- 您可以使用括號變更運算子優先順序和順序關聯性強制執行的順序。 例如， `2 + 3 * 2` 正常情況下會判斷值為 8，這是因為乘法類運算子的優先順序高於加法類運算子。 但是，如果您將運算式撰寫為 `(2 + 3) * 2`，則會先評估加法再評估乘法，而得到的結果會是 10。 下列範例將說明以括號括住之運算式中的評估順序。 如先範例所示，套用運算子之前會先評估運算元。  
+## <a name="adding-parentheses"></a><span data-ttu-id="dd555-275">加入括號</span><span class="sxs-lookup"><span data-stu-id="dd555-275">Adding Parentheses</span></span>  
+ <span data-ttu-id="dd555-276">您可以使用括號變更運算子優先順序和順序關聯性強制執行的順序。</span><span class="sxs-lookup"><span data-stu-id="dd555-276">You can change the order imposed by operator precedence and associativity by using parentheses.</span></span> <span data-ttu-id="dd555-277">例如， `2 + 3 * 2` 正常情況下會判斷值為 8，這是因為乘法類運算子的優先順序高於加法類運算子。</span><span class="sxs-lookup"><span data-stu-id="dd555-277">For example, `2 + 3 * 2` ordinarily evaluates to 8, because multiplicative operators take precedence over additive operators.</span></span> <span data-ttu-id="dd555-278">但是，如果您將運算式撰寫為 `(2 + 3) * 2`，則會先評估加法再評估乘法，而得到的結果會是 10。</span><span class="sxs-lookup"><span data-stu-id="dd555-278">However, if you write the expression as `(2 + 3) * 2`, the addition is evaluated before the multiplication, and the result is 10.</span></span> <span data-ttu-id="dd555-279">下列範例將說明以括號括住之運算式中的評估順序。</span><span class="sxs-lookup"><span data-stu-id="dd555-279">The following examples illustrate the order of evaluation in parenthesized expressions.</span></span> <span data-ttu-id="dd555-280">如先範例所示，套用運算子之前會先評估運算元。</span><span class="sxs-lookup"><span data-stu-id="dd555-280">As in previous examples, the operands are evaluated before the operator is applied.</span></span>  
   
-|陳述式|評估的順序|  
+|<span data-ttu-id="dd555-281">陳述式</span><span class="sxs-lookup"><span data-stu-id="dd555-281">Statement</span></span>|<span data-ttu-id="dd555-282">評估的順序</span><span class="sxs-lookup"><span data-stu-id="dd555-282">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = (b + c) * d`|a, b, c, +, d, *, =|  
-|`a = b - (c + d)`|a, b, c, d, +, -, =|  
-|`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
+|`a = (b + c) * d`|<span data-ttu-id="dd555-283">a, b, c, +, d, *, =</span><span class="sxs-lookup"><span data-stu-id="dd555-283">a, b, c, +, d, *, =</span></span>|  
+|`a = b - (c + d)`|<span data-ttu-id="dd555-284">a, b, c, d, +, -, =</span><span class="sxs-lookup"><span data-stu-id="dd555-284">a, b, c, d, +, -, =</span></span>|  
+|`a = (b + c) * (d - e)`|<span data-ttu-id="dd555-285">a, b, c, +, d, e, -, *, =</span><span class="sxs-lookup"><span data-stu-id="dd555-285">a, b, c, +, d, e, -, *, =</span></span>|  
   
-## <a name="operator-overloading"></a>運算子多載  
- 您可以變更自訂類別和結構的運算子行為。 這個程序稱為「 *運算子多載*」(Operator Overloading)。 如需詳細資訊，請參閱[可多載的運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。  
+## <a name="operator-overloading"></a><span data-ttu-id="dd555-286">運算子多載</span><span class="sxs-lookup"><span data-stu-id="dd555-286">Operator Overloading</span></span>  
+ <span data-ttu-id="dd555-287">您可以變更自訂類別和結構的運算子行為。</span><span class="sxs-lookup"><span data-stu-id="dd555-287">You can change the behavior of operators for custom classes and structs.</span></span> <span data-ttu-id="dd555-288">這個程序稱為「 *運算子多載*」(Operator Overloading)。</span><span class="sxs-lookup"><span data-stu-id="dd555-288">This process is referred to as *operator overloading*.</span></span> <span data-ttu-id="dd555-289">如需詳細資訊，請參閱[可多載的運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="dd555-289">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。  
+## <a name="related-sections"></a><span data-ttu-id="dd555-290">相關章節</span><span class="sxs-lookup"><span data-stu-id="dd555-290">Related Sections</span></span>  
+ <span data-ttu-id="dd555-291">如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。</span><span class="sxs-lookup"><span data-stu-id="dd555-291">For more information, see [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md) and [C# Operators](../../../csharp/language-reference/operators/index.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="dd555-292">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dd555-292">See Also</span></span>  
+ <span data-ttu-id="dd555-293">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="dd555-293">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="dd555-294">陳述式、運算式和運算子</span><span class="sxs-lookup"><span data-stu-id="dd555-294">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)
 

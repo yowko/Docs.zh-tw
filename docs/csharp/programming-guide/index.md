@@ -1,5 +1,5 @@
 ---
-title: "C# 程式設計指南 | Microsoft Docs"
+title: "C# 程式設計手冊"
 ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
@@ -32,92 +32,83 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d13005e3151058dfe1651b965d6dc6055b26210
-ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 0c95459f21aebf1d5efe1482e74ca2724d283821
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-<a id="c-programming-guide" class="xliff"></a>
+# <a name="c-programming-guide"></a><span data-ttu-id="9639d-102">C# 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="9639d-102">C# programming guide</span></span>
+<span data-ttu-id="9639d-103">本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="9639d-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  
+  
+ <span data-ttu-id="9639d-104">本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。</span><span class="sxs-lookup"><span data-stu-id="9639d-104">Most of this section assumes that you already know something about C# and general programming concepts.</span></span> <span data-ttu-id="9639d-105">如果您是 C# 程式設計或 C# 的新手，您可能想要瀏覽 [C# 使用者入門](https://www.microsoft.com/net/tutorials/csharp/getting-started)互動式教學課程，而不需要事先具備程式設計知識。</span><span class="sxs-lookup"><span data-stu-id="9639d-105">If you are a complete beginner with programming or with C#, you might want to visit the [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) interactive tutorial, where no prior programming knowledge is required.</span></span>  
+  
+ <span data-ttu-id="9639d-106">如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9639d-106">For information about specific keywords, operators and preprocessor directives, see [C# Reference](../../csharp/language-reference/index.md).</span></span> <span data-ttu-id="9639d-107">如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9639d-107">For information about the C# Language Specification, see [C# Language Specification](../../csharp/language-reference/language-specification/index.md).</span></span>  
+  
+## <a name="program-sections"></a><span data-ttu-id="9639d-108">程式區段</span><span class="sxs-lookup"><span data-stu-id="9639d-108">Program sections</span></span>
 
-# C# 程式設計手冊
-本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
+[<span data-ttu-id="9639d-109">C# 程式內部</span><span class="sxs-lookup"><span data-stu-id="9639d-109">Inside a C# Program</span></span>](../../csharp/programming-guide/inside-a-program/index.md)  
   
- 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是程式設計或 C# 的新手，可造訪 [C# 開發人員中心](http://go.microsoft.com/fwlink/?linkid=95125)，您可以在其中找到許多可協助您開始使用的教學課程、範例和影片。  
-  
- 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification.md)。  
-  
-<a id="program-sections" class="xliff"></a>
-
-## 程式區段
-
-[C# 程式內部](../../csharp/programming-guide/inside-a-program/index.md)  
-  
-[Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
+[<span data-ttu-id="9639d-110">Main() 和命令列引數</span><span class="sxs-lookup"><span data-stu-id="9639d-110">Main() and Command-Line Arguments</span></span>](../../csharp/programming-guide/main-and-command-args/index.md)  
  
-<a id="language-sections" class="xliff"></a>
+## <a name="language-sections"></a><span data-ttu-id="9639d-111">語言章節</span><span class="sxs-lookup"><span data-stu-id="9639d-111">Language Sections</span></span>  
+[<span data-ttu-id="9639d-112">陳述式、運算式和運算子</span><span class="sxs-lookup"><span data-stu-id="9639d-112">Statements, Expressions, and Operators</span></span>](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
-## 語言章節  
-[陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+ [<span data-ttu-id="9639d-113">型別</span><span class="sxs-lookup"><span data-stu-id="9639d-113">Types</span></span>](../../csharp/programming-guide/types/index.md)  
 
- [型別](../../csharp/programming-guide/types/index.md)  
-
- [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="9639d-114">類別和結構</span><span class="sxs-lookup"><span data-stu-id="9639d-114">Classes and Structs</span></span>](../../csharp/programming-guide/classes-and-structs/index.md)  
   
- [介面](../../csharp/programming-guide/interfaces/index.md)  
+ [<span data-ttu-id="9639d-115">介面</span><span class="sxs-lookup"><span data-stu-id="9639d-115">Interfaces</span></span>](../../csharp/programming-guide/interfaces/index.md)  
 
- [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
+ [<span data-ttu-id="9639d-116">列舉型別</span><span class="sxs-lookup"><span data-stu-id="9639d-116">Enumeration Types</span></span>](../../csharp/programming-guide/enumeration-types.md)  
   
- [委派](../../csharp/programming-guide/delegates/index.md)  
+ [<span data-ttu-id="9639d-117">委派</span><span class="sxs-lookup"><span data-stu-id="9639d-117">Delegates</span></span>](../../csharp/programming-guide/delegates/index.md)  
  
- [陣列](../../csharp/programming-guide/arrays/index.md)  
+ [<span data-ttu-id="9639d-118">陣列</span><span class="sxs-lookup"><span data-stu-id="9639d-118">Arrays</span></span>](../../csharp/programming-guide/arrays/index.md)  
   
- [字串](../../csharp/programming-guide/strings/index.md)  
+ [<span data-ttu-id="9639d-119">字串</span><span class="sxs-lookup"><span data-stu-id="9639d-119">Strings</span></span>](../../csharp/programming-guide/strings/index.md)  
   
- [屬性](../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="9639d-120">屬性</span><span class="sxs-lookup"><span data-stu-id="9639d-120">Properties</span></span>](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
- [索引子](../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="9639d-121">索引子</span><span class="sxs-lookup"><span data-stu-id="9639d-121">Indexers</span></span>](../../csharp/programming-guide/indexers/index.md)  
   
- [事件](../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="9639d-122">事件</span><span class="sxs-lookup"><span data-stu-id="9639d-122">Events</span></span>](../../csharp/programming-guide/events/index.md)  
   
- [泛型](../../csharp/programming-guide/generics/index.md)  
+ [<span data-ttu-id="9639d-123">泛型</span><span class="sxs-lookup"><span data-stu-id="9639d-123">Generics</span></span>](../../csharp/programming-guide/generics/index.md)  
   
- [迭代器](../../csharp/programming-guide/concepts/iterators.md)
+ [<span data-ttu-id="9639d-124">迭代器</span><span class="sxs-lookup"><span data-stu-id="9639d-124">Iterators</span></span>](../../csharp/programming-guide/concepts/iterators.md)
   
- [LINQ 查詢運算式](../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [<span data-ttu-id="9639d-125">LINQ 查詢運算式</span><span class="sxs-lookup"><span data-stu-id="9639d-125">LINQ Query Expressions</span></span>](../../csharp/programming-guide/linq-query-expressions/index.md)  
   
- [Lambda 運算式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [<span data-ttu-id="9639d-126">Lambda 運算式</span><span class="sxs-lookup"><span data-stu-id="9639d-126">Lambda Expressions</span></span>](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
- [命名空間](../../csharp/programming-guide/namespaces/index.md)  
+ [<span data-ttu-id="9639d-127">命名空間</span><span class="sxs-lookup"><span data-stu-id="9639d-127">Namespaces</span></span>](../../csharp/programming-guide/namespaces/index.md)  
   
- [可為 Null 的型別](../../csharp/programming-guide/nullable-types/index.md)  
+ [<span data-ttu-id="9639d-128">可為 Null 的型別</span><span class="sxs-lookup"><span data-stu-id="9639d-128">Nullable Types</span></span>](../../csharp/programming-guide/nullable-types/index.md)  
   
- [Unsafe 程式碼和指標](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [<span data-ttu-id="9639d-129">Unsafe 程式碼和指標</span><span class="sxs-lookup"><span data-stu-id="9639d-129">Unsafe Code and Pointers</span></span>](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [XML 文件註解](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [<span data-ttu-id="9639d-130">XML 文件註解</span><span class="sxs-lookup"><span data-stu-id="9639d-130">XML Documentation Comments</span></span>](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-<a id="platform-sections" class="xliff"></a>
+## <a name="platform-sections"></a><span data-ttu-id="9639d-131">平台章節</span><span class="sxs-lookup"><span data-stu-id="9639d-131">Platform Sections</span></span>  
+ [<span data-ttu-id="9639d-132">應用程式定義域 (C# 和 Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9639d-132">Application Domains (C# and Visual Basic)</span></span>](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+  
+ [<span data-ttu-id="9639d-133">組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="9639d-133">Assemblies and the Global Assembly Cache</span></span>](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+  
+ [<span data-ttu-id="9639d-134">屬性</span><span class="sxs-lookup"><span data-stu-id="9639d-134">Attributes</span></span>](../../csharp/programming-guide/concepts/attributes/index.md)  
+  
+ [<span data-ttu-id="9639d-135">集合</span><span class="sxs-lookup"><span data-stu-id="9639d-135">Collections</span></span>](../../csharp/programming-guide/concepts/collections.md)  
+  
+ [<span data-ttu-id="9639d-136">例外狀況和例外狀況處理</span><span class="sxs-lookup"><span data-stu-id="9639d-136">Exceptions and Exception Handling</span></span>](../../csharp/programming-guide/exceptions/index.md)  
+  
+ [<span data-ttu-id="9639d-137">檔案系統和登錄 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="9639d-137">File System and the Registry (C# Programming Guide)</span></span>](../../csharp/programming-guide/file-system/index.md)  
+  
+ [<span data-ttu-id="9639d-138">互通性</span><span class="sxs-lookup"><span data-stu-id="9639d-138">Interoperability</span></span>](../../csharp/programming-guide/interop/index.md)  
+  
+ [<span data-ttu-id="9639d-139">反映</span><span class="sxs-lookup"><span data-stu-id="9639d-139">Reflection</span></span>](../../csharp/programming-guide/concepts/reflection.md)  
+  
+## <a name="see-also"></a><span data-ttu-id="9639d-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9639d-140">See Also</span></span>  
+ <span data-ttu-id="9639d-141">[C# 參考](../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9639d-141">[C# Reference](../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="9639d-142">C#</span><span class="sxs-lookup"><span data-stu-id="9639d-142">C#</span></span>](../../csharp/index.md)
 
-## 平台章節  
- [應用程式定義域 (C# 和 Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
-  
- [組件和全域組件快取](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
-  
- [屬性](../../csharp/programming-guide/concepts/attributes/index.md)  
-  
- [集合](../../csharp/programming-guide/concepts/collections.md)  
-  
- [例外狀況和例外狀況處理](../../csharp/programming-guide/exceptions/index.md)  
-  
- [檔案系統和登錄 (C# 程式設計指南)](../../csharp/programming-guide/file-system/index.md)  
-  
- [互通性](../../csharp/programming-guide/interop/index.md)  
-  
- [反映](../../csharp/programming-guide/concepts/reflection.md)  
-  
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
- [C# 參考](../../csharp/language-reference/index.md)   
- [C#](../../csharp/csharp.md)

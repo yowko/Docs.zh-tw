@@ -1,1 +1,1 @@
-TIFF
+<span data-ttu-id="cdf4b-101">TIFF</span><span class="sxs-lookup"><span data-stu-id="cdf4b-101">TIFF</span></span>

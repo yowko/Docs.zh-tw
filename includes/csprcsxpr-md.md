@@ -1,1 +1,1 @@
-Visual C# Express
+<span data-ttu-id="5e028-101">Visual C# Express</span><span class="sxs-lookup"><span data-stu-id="5e028-101">Visual C# Express</span></span>

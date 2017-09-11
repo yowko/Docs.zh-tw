@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 範例應用程式 | Microsoft Docs"
+title: "Visual Basic 範例應用程式"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,19 +28,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5a7bb4ca354fb8b67b3d3987e8d0c9ea563ec1ae
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b73a87d962993577740019df4e4233a4ad0f31b7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-sample-applications"></a>Visual Basic 範例應用程式
-使用 Visual Studio 時，您可以從 [MSDN 程式碼庫](http://go.microsoft.com/fwlink/?LinkId=254185)下載已封裝的完整 Visual Basic 應用程式範例，並進行安裝。  
+# <a name="visual-basic-sample-applications"></a><span data-ttu-id="035ec-102">Visual Basic 範例應用程式</span><span class="sxs-lookup"><span data-stu-id="035ec-102">Visual Basic Sample Applications</span></span>
+<span data-ttu-id="035ec-103">使用 Visual Studio 時，您可以從 [MSDN 程式碼庫](http://go.microsoft.com/fwlink/?LinkId=254185)下載已封裝的完整 Visual Basic 應用程式範例，並進行安裝。</span><span class="sxs-lookup"><span data-stu-id="035ec-103">You can use Visual Studio to download and install samples of full, packaged Visual Basic applications from the [MSDN Code Gallery](http://go.microsoft.com/fwlink/?LinkId=254185)</span></span>  
   
- 您可以分別下載每個範例，也可以下載範例套件，其中包含共用技術或主題的相關範例。 如果您下載的任何範例有發佈原始程式碼的變更，您就會收到通知。  
+ <span data-ttu-id="035ec-104">您可以分別下載每個範例，也可以下載範例套件，其中包含共用技術或主題的相關範例。</span><span class="sxs-lookup"><span data-stu-id="035ec-104">You can download each sample individually, or you can download a Sample Pack, which contains related samples that share a technology or topic.</span></span> <span data-ttu-id="035ec-105">如果您下載的任何範例有發佈原始程式碼的變更，您就會收到通知。</span><span class="sxs-lookup"><span data-stu-id="035ec-105">You’ll receive a notification when source code changes are published for any sample that you download.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Studio 範例](http://go.microsoft.com/fwlink/?LinkId=150928)   
- [Visual Basic 程式設計指南](../visual-basic/programming-guide/index.md)   
- [Visual Basic](../visual-basic/index.md)
+## <a name="see-also"></a><span data-ttu-id="035ec-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="035ec-106">See Also</span></span>  
+ <span data-ttu-id="035ec-107">[Visual Studio 範例](http://go.microsoft.com/fwlink/?LinkId=150928) </span><span class="sxs-lookup"><span data-stu-id="035ec-107">[Visual Studio Samples](http://go.microsoft.com/fwlink/?LinkId=150928) </span></span>  
+ <span data-ttu-id="035ec-108">[Visual Basic 程式設計指南](../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="035ec-108">[Visual Basic Programming Guide](../visual-basic/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="035ec-109">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="035ec-109">Visual Basic</span></span>](../visual-basic/index.md)
+

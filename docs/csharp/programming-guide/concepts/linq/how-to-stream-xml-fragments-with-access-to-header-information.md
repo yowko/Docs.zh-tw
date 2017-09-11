@@ -1,5 +1,5 @@
 ---
-title: "如何：串流 XML 片段並存取標頭資訊 (C#) | Microsoft Docs"
+title: "如何：串流 XML 片段並存取標頭資訊 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,24 +19,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81d0ba2403726f76d50465e1776e6e91ea49d355
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7a83c9fc88b6e59cc1c8308d92464591896d312
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>如何：串流 XML 片段並存取標頭資訊 (C#)
-有時候您必須讀取任意大的 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。 如果您嘗試使用大型 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比，也就是，變成過度。 因此，您應該改用資料流技術。  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a><span data-ttu-id="871fe-102">如何：串流 XML 片段並存取標頭資訊 (C#)</span><span class="sxs-lookup"><span data-stu-id="871fe-102">How to: Stream XML Fragments with Access to Header Information (C#)</span></span>
+<span data-ttu-id="871fe-103">有時候您必須讀取任意大的 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。</span><span class="sxs-lookup"><span data-stu-id="871fe-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="871fe-104">如果您嘗試使用大型 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比，也就是，變成過度。</span><span class="sxs-lookup"><span data-stu-id="871fe-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="871fe-105">因此，您應該改用資料流技術。</span><span class="sxs-lookup"><span data-stu-id="871fe-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- 其中一個選項是使用 <xref:System.Xml.XmlReader> 撰寫您的應用程式。 但是，您可能想要使用 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢 XML 樹狀結構。 若發生這種情況，您可以撰寫自己的自訂座標軸方法。 如需詳細資訊，請參閱[如何：撰寫 LINQ to XML 座標軸方法 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。  
+ <span data-ttu-id="871fe-106">其中一個選項是使用 <xref:System.Xml.XmlReader> 撰寫您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="871fe-106">One option is to write your application using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="871fe-107">但是，您可能想要使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="871fe-107">However, you might want to use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to query the XML tree.</span></span> <span data-ttu-id="871fe-108">若發生這種情況，您可以撰寫自己的自訂座標軸方法。</span><span class="sxs-lookup"><span data-stu-id="871fe-108">If this is the case, you can write your own custom axis method.</span></span> <span data-ttu-id="871fe-109">如需詳細資訊，請參閱[如何：撰寫 LINQ to XML 座標軸方法 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)。</span><span class="sxs-lookup"><span data-stu-id="871fe-109">For more information, see [How to: Write a LINQ to XML Axis Method (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span></span>  
   
- 若要撰寫您自己的座標軸方法，您可以撰寫使用 <xref:System.Xml.XmlReader> 讀取節點的小方法，直到該方法到達您感興趣的其中一個節點。 該方法接著會呼叫從 <xref:System.Xml.XmlReader> 讀取的 <xref:System.Xml.Linq.XNode.ReadFrom%2A>，並具現化 XML 片段。 接著，它會針對列舉自訂座標軸方法的方法，透過 `yield return` 產生每個片段。 此時，您就可以在自訂座標軸方法上撰寫 LINQ 查詢。  
+ <span data-ttu-id="871fe-110">若要撰寫您自己的座標軸方法，您可以撰寫使用 <xref:System.Xml.XmlReader> 讀取節點的小方法，直到該方法到達您感興趣的其中一個節點。</span><span class="sxs-lookup"><span data-stu-id="871fe-110">To write your own axis method, you write a small method that uses the <xref:System.Xml.XmlReader> to read nodes until it reaches one of the nodes in which you are interested.</span></span> <span data-ttu-id="871fe-111">然後，該方法會呼叫從 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 讀取的 <xref:System.Xml.XmlReader>，並具現化 XML 片段。</span><span class="sxs-lookup"><span data-stu-id="871fe-111">The method then calls <xref:System.Xml.Linq.XNode.ReadFrom%2A>, which reads from the <xref:System.Xml.XmlReader> and instantiates an XML fragment.</span></span> <span data-ttu-id="871fe-112">接著，它會針對列舉自訂座標軸方法的方法，透過 `yield return` 產生每個片段。</span><span class="sxs-lookup"><span data-stu-id="871fe-112">It then yields each fragment through `yield return` to the method that is enumerating your custom axis method.</span></span> <span data-ttu-id="871fe-113">此時，您就可以在自訂座標軸方法上撰寫 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="871fe-113">You can then write LINQ queries on your custom axis method.</span></span>  
   
- 在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。 特定的標準查詢運算子 (例如 <xref:System.Linq.Enumerable.OrderBy%2A>) 會逐一查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。 請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會保留小的記憶體使用量。  
+ <span data-ttu-id="871fe-114">在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。</span><span class="sxs-lookup"><span data-stu-id="871fe-114">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="871fe-115">特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="871fe-115">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="871fe-116">請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會保留小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="871fe-116">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint.</span></span>  
   
-## <a name="example"></a>範例  
- 有時候問題會變得更有趣。 在下列 XML 文件中，您自訂座標軸方法的消費者也必須知道每個項目所屬客戶的名稱。  
+## <a name="example"></a><span data-ttu-id="871fe-117">範例</span><span class="sxs-lookup"><span data-stu-id="871fe-117">Example</span></span>  
+ <span data-ttu-id="871fe-118">有時候問題會變得更有趣。</span><span class="sxs-lookup"><span data-stu-id="871fe-118">Sometimes the problem gets just a little more interesting.</span></span> <span data-ttu-id="871fe-119">在下列 XML 文件中，您自訂座標軸方法的消費者也必須知道每個項目所屬客戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="871fe-119">In the following XML document, the consumer of your custom axis method also has to know the name of the customer that each item belongs to.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -83,11 +83,11 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
- 這個範例所採取的方法也是監看這個標頭資訊、儲存標頭資訊，然後建置同時包含您所列舉之標頭資訊與細節的小型 XML 樹狀結構。 這個座標軸方法接著就會產生這個新的小型 XML 樹狀結構。 該查詢將可以存取標頭資訊以及詳細資訊。  
+ <span data-ttu-id="871fe-120">這個範例所採取的方法也是監看這個標頭資訊、儲存標頭資訊，然後建置同時包含您所列舉之標頭資訊與細節的小型 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="871fe-120">The approach that this example takes is to also watch for this header information, save the header information, and then build a small XML tree that contains both the header information and the detail that you are enumerating.</span></span> <span data-ttu-id="871fe-121">這個座標軸方法接著就會產生這個新的小型 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="871fe-121">The axis method then yields this new, small XML tree.</span></span> <span data-ttu-id="871fe-122">該查詢將可以存取標頭資訊以及詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="871fe-122">The query then has access to the header information as well as the detail information.</span></span>  
   
- 此方法擁有小的記憶體使用量。 產生每個細節 XML 片段時，不會針對上一個片段保留任何參考，而且這個片段適用於記憶體回收。 請注意，這個技術會在堆積上建立許多短期存在的物件。  
+ <span data-ttu-id="871fe-123">此方法擁有小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="871fe-123">This approach has a small memory footprint.</span></span> <span data-ttu-id="871fe-124">產生每個細節 XML 片段時，不會針對上一個片段保留任何參考，而且這個片段適用於記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="871fe-124">As each detail XML fragment is yielded, no references are kept to the previous fragment, and it is available for garbage collection.</span></span> <span data-ttu-id="871fe-125">請注意，這個技術會在堆積上建立許多短期存在的物件。</span><span class="sxs-lookup"><span data-stu-id="871fe-125">Note that this technique creates many short lived objects on the heap.</span></span>  
   
- 下列範例顯示如何實作與使用從 URI 指定之檔案資料流 XML 片段的自訂座標軸方法。 這個自訂座標軸是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與上述 `Source.xml` 文件的排列方式相同。 這是簡化的實作方法。 較為複雜的實作方法則用於剖析無效的文件。  
+ <span data-ttu-id="871fe-126">下列範例顯示如何實作與使用從 URI 指定之檔案資料流 XML 片段的自訂座標軸方法。</span><span class="sxs-lookup"><span data-stu-id="871fe-126">The following example shows how to implement and use a custom axis method that streams XML fragments from the file specified by the URI.</span></span> <span data-ttu-id="871fe-127">這個自訂座標軸是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與上述 `Source.xml` 文件的排列方式相同。</span><span class="sxs-lookup"><span data-stu-id="871fe-127">This custom axis is specifically written such that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the above `Source.xml` document.</span></span> <span data-ttu-id="871fe-128">這是簡化的實作方法。</span><span class="sxs-lookup"><span data-stu-id="871fe-128">It is a simplistic implementation.</span></span> <span data-ttu-id="871fe-129">較為複雜的實作方法則用於剖析無效的文件。</span><span class="sxs-lookup"><span data-stu-id="871fe-129">A more robust implementation would be prepared to parse an invalid document.</span></span>  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  
@@ -156,7 +156,7 @@ static void Main(string[] args)
 }  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="871fe-130">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="871fe-130">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -183,5 +183,6 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="871fe-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="871fe-131">See Also</span></span>  
+ [<span data-ttu-id="871fe-132">進階 LINQ to XML 程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="871fe-132">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

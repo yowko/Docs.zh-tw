@@ -20,16 +20,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5d5af4e8f0d9fb19e854c62799e67aedc6ff0e
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a14245e62dc5f9fba3a847551f655f7e3920a8aa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-c"></a>如何：查詢資料夾中的檔案內容 (LINQ) (C#)
-此範例示範如何查詢所指定樹狀目錄中的所有檔案、開啟每個檔案，然後檢查檔案的內容。 這類技巧可以用來建立索引，或將樹狀目錄內容的索引反轉。 在此範例中，執行的是簡單字串搜尋。 不過，您可以使用規則運算式執行更複雜的模式比對類型。 如需詳細資訊，請參閱[如何：使用規則運算式合併 LINQ 查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。  
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-c"></a><span data-ttu-id="6a654-102">如何：查詢資料夾中的檔案內容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="6a654-102">How to: Query the Contents of Files in a Folder (LINQ) (C#)</span></span>
+<span data-ttu-id="6a654-103">此範例示範如何查詢所指定樹狀目錄中的所有檔案、開啟每個檔案，然後檢查檔案的內容。</span><span class="sxs-lookup"><span data-stu-id="6a654-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="6a654-104">這類技巧可以用來建立索引，或將樹狀目錄內容的索引反轉。</span><span class="sxs-lookup"><span data-stu-id="6a654-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="6a654-105">在此範例中，執行的是簡單字串搜尋。</span><span class="sxs-lookup"><span data-stu-id="6a654-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="6a654-106">不過，您可以使用規則運算式執行更複雜的模式比對類型。</span><span class="sxs-lookup"><span data-stu-id="6a654-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="6a654-107">如需詳細資訊，請參閱[如何：使用規則運算式合併 LINQ 查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="6a654-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="6a654-108">範例</span><span class="sxs-lookup"><span data-stu-id="6a654-108">Example</span></span>  
   
 ```csharp  
 class QueryContents  
@@ -87,9 +87,9 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+## <a name="compiling-the-code"></a><span data-ttu-id="6a654-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="6a654-109">Compiling the Code</span></span>  
+ <span data-ttu-id="6a654-110">建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="6a654-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="6a654-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a654-111">See Also</span></span>  
+ <span data-ttu-id="6a654-112">[LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md) </span><span class="sxs-lookup"><span data-stu-id="6a654-112">[LINQ and File Directories (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md) </span></span>  
+<span data-ttu-id="6a654-113"> [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)</span><span class="sxs-lookup"><span data-stu-id="6a654-113"> [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)</span></span>

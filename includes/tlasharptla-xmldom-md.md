@@ -1,1 +1,1 @@
-XML 文件物件模型 (DOM)
+<span data-ttu-id="df620-101">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="df620-101">XML Document Object Model (DOM)</span></span>

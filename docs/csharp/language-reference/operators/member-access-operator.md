@@ -1,5 +1,5 @@
 ---
-title: "。 運算子 (C# 參考) | Microsoft Docs"
+title: ". 運算子 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,44 +31,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 45c775fe92e61de7be2356218f33964071e96c07
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdc7c1821548509f3a3750aef2836c034f7aa53b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>。 運算子 (C# 參考)
-點運算子 (`.`) 是用於成員存取。 點運算子可指定型別或命名空間的成員。 例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：  
+# <a name="-operator-c-reference"></a><span data-ttu-id="ca32c-103">。</span><span class="sxs-lookup"><span data-stu-id="ca32c-103">.</span></span> <span data-ttu-id="ca32c-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ca32c-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="ca32c-105">點運算子 (`.`) 是用於成員存取。</span><span class="sxs-lookup"><span data-stu-id="ca32c-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="ca32c-106">點運算子可指定型別或命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="ca32c-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="ca32c-107">例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：</span><span class="sxs-lookup"><span data-stu-id="ca32c-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
   
- [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
+ <span data-ttu-id="ca32c-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span></span>  
   
- 例如，請參考下列類別：  
+ <span data-ttu-id="ca32c-109">例如，請參考下列類別：</span><span class="sxs-lookup"><span data-stu-id="ca32c-109">For example, consider the following class:</span></span>  
   
- [!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
+ <span data-ttu-id="ca32c-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span></span>  
   
- [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
+ <span data-ttu-id="ca32c-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span></span>  
   
- 變數 `s` 擁有 `a` 和 `b` 兩個成員；若要存取它們，請使用點運算子：  
+ <span data-ttu-id="ca32c-112">變數 `s` 擁有 `a` 和 `b` 兩個成員；若要存取它們，請使用點運算子：</span><span class="sxs-lookup"><span data-stu-id="ca32c-112">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
   
- [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
+ <span data-ttu-id="ca32c-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span></span>  
   
- 點也可用來形成限定名稱，例如指定其所屬命名空間或介面的名稱。  
+ <span data-ttu-id="ca32c-114">點也可用來形成限定名稱，例如指定其所屬命名空間或介面的名稱。</span><span class="sxs-lookup"><span data-stu-id="ca32c-114">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
   
- [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
+ <span data-ttu-id="ca32c-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span></span>  
   
- using 指示詞可讓某些名稱限定成為選擇性項目：  
+ <span data-ttu-id="ca32c-116">using 指示詞可讓某些名稱限定成為選擇性項目：</span><span class="sxs-lookup"><span data-stu-id="ca32c-116">The using directive makes some name qualification optional:</span></span>  
   
- [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
+ <span data-ttu-id="ca32c-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span></span>  
   
- 但若是模稜兩可的識別項，就必須加以限定：  
+ <span data-ttu-id="ca32c-118">但若是模稜兩可的識別項，就必須加以限定：</span><span class="sxs-lookup"><span data-stu-id="ca32c-118">But when an identifier is ambiguous, it must be qualified:</span></span>  
   
- [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
+ <span data-ttu-id="ca32c-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="ca32c-120">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="ca32c-120">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="ca32c-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca32c-121">See Also</span></span>  
+ <span data-ttu-id="ca32c-122">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ca32c-122">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ca32c-123">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ca32c-123">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="ca32c-124">C# 運算子</span><span class="sxs-lookup"><span data-stu-id="ca32c-124">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+

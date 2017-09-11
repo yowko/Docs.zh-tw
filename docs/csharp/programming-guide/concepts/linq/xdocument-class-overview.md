@@ -1,5 +1,5 @@
 ---
-title: "XDocument 類別概觀 (C#) | Microsoft Docs"
+title: "XDocument 類別概觀 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,47 +19,47 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 445b7dff10e25556dabb87867144edece7fc26f9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e8513c8c969f7522866454838c6c08da528c1b6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xdocument-class-overview-c"></a>XDocument 類別概觀 (C#)
-本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  
+# <a name="xdocument-class-overview-c"></a><span data-ttu-id="5cbcf-102">XDocument 類別概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="5cbcf-102">XDocument Class Overview (C#)</span></span>
+<span data-ttu-id="5cbcf-103">本主題說明 <xref:System.Xml.Linq.XDocument> 類別。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-103">This topic introduces the <xref:System.Xml.Linq.XDocument> class.</span></span>  
   
-## <a name="overview-of-the-xdocument-class"></a>XDocument 類別的概觀  
- <xref:System.Xml.Linq.XDocument> 類別包含有效 XML 文件所需的資訊。 這包括 XML 宣告、處理指示與註解。  
+## <a name="overview-of-the-xdocument-class"></a><span data-ttu-id="5cbcf-104">XDocument 類別的概觀</span><span class="sxs-lookup"><span data-stu-id="5cbcf-104">Overview of the XDocument class</span></span>  
+ <span data-ttu-id="5cbcf-105"><xref:System.Xml.Linq.XDocument> 類別包含有效 XML 文件所需的資訊。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-105">The <xref:System.Xml.Linq.XDocument> class contains the information necessary for a valid XML document.</span></span> <span data-ttu-id="5cbcf-106">這包括 XML 宣告、處理指示與註解。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-106">This includes an XML declaration, processing instructions, and comments.</span></span>  
   
- 請注意，如果您需要 <xref:System.Xml.Linq.XDocument> 類別所提供的特定功能，您僅需要建立 <xref:System.Xml.Linq.XDocument> 物件。 在許多情況下，您可以直接使用 <xref:System.Xml.Linq.XElement>。 直接使用 <xref:System.Xml.Linq.XElement> 是較簡單的程式設計模型。  
+ <span data-ttu-id="5cbcf-107">請注意，如果您需要 <xref:System.Xml.Linq.XDocument> 類別所提供的特定功能，您僅需要建立 <xref:System.Xml.Linq.XDocument> 物件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-107">Note that you only have to create <xref:System.Xml.Linq.XDocument> objects if you require the specific functionality provided by the <xref:System.Xml.Linq.XDocument> class.</span></span> <span data-ttu-id="5cbcf-108">在許多情況下，您可以直接使用 <xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-108">In many circumstances, you can work directly with <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="5cbcf-109">直接使用 <xref:System.Xml.Linq.XElement> 是較簡單的程式設計模型。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-109">Working directly with <xref:System.Xml.Linq.XElement> is a simpler programming model.</span></span>  
   
- <xref:System.Xml.Linq.XDocument> 是衍生自 <xref:System.Xml.Linq.XContainer>。 因此，它可以包含子節點。 不過，<xref:System.Xml.Linq.XDocument> 物件可以有只有一個 <xref:System.Xml.Linq.XElement> 子節點。 這會反映 XML 標準，也就是說 XML 文件中只能有一個根項目 (Root Element)。  
+ <span data-ttu-id="5cbcf-110"><xref:System.Xml.Linq.XDocument> 是衍生自 <xref:System.Xml.Linq.XContainer>。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-110"><xref:System.Xml.Linq.XDocument> derives from <xref:System.Xml.Linq.XContainer>.</span></span> <span data-ttu-id="5cbcf-111">因此，它可以包含子節點。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-111">Therefore, it can contain child nodes.</span></span> <span data-ttu-id="5cbcf-112">不過，<xref:System.Xml.Linq.XDocument> 物件可以有只有一個 <xref:System.Xml.Linq.XElement> 子節點。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-112">However, <xref:System.Xml.Linq.XDocument> objects can have only one child <xref:System.Xml.Linq.XElement> node.</span></span> <span data-ttu-id="5cbcf-113">這會反映 XML 標準，也就是說 XML 文件中只能有一個根項目 (Root Element)。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-113">This reflects the XML standard that there can be only one root element in an XML document.</span></span>  
   
-## <a name="components-of-xdocument"></a>XDocument 的元件  
- <xref:System.Xml.Linq.XDocument> 可以包含下列項目：  
+## <a name="components-of-xdocument"></a><span data-ttu-id="5cbcf-114">XDocument 的元件</span><span class="sxs-lookup"><span data-stu-id="5cbcf-114">Components of XDocument</span></span>  
+ <span data-ttu-id="5cbcf-115"><xref:System.Xml.Linq.XDocument> 可以包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="5cbcf-115">An <xref:System.Xml.Linq.XDocument> can contain the following elements:</span></span>  
   
--   一個 <xref:System.Xml.Linq.XDeclaration> 物件。 <xref:System.Xml.Linq.XDeclaration> 可讓您指定 XML 宣告的關聯部分：XML 版本、文件的編碼，以及 XML 文件是否是獨立的。  
+-   <span data-ttu-id="5cbcf-116">一個 <xref:System.Xml.Linq.XDeclaration> 物件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-116">One <xref:System.Xml.Linq.XDeclaration> object.</span></span> <span data-ttu-id="5cbcf-117"><xref:System.Xml.Linq.XDeclaration> 可讓您指定 XML 宣告的關聯部分：XML 版本、文件的編碼，以及 XML 文件是否是獨立的。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-117"><xref:System.Xml.Linq.XDeclaration> enables you to specify the pertinent parts of an XML declaration: the XML version, the encoding of the document, and whether the XML document is stand-alone.</span></span>  
   
--   一個 <xref:System.Xml.Linq.XElement> 物件。 這是 XML 文件的根節點。  
+-   <span data-ttu-id="5cbcf-118">一個 <xref:System.Xml.Linq.XElement> 物件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-118">One <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="5cbcf-119">這是 XML 文件的根節點。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-119">This is the root node of the XML document.</span></span>  
   
--   任何數目的 <xref:System.Xml.Linq.XProcessingInstruction> 物件。 處理指示會將資訊傳達到處理 XML 的應用程式。  
+-   <span data-ttu-id="5cbcf-120">任何數目的 <xref:System.Xml.Linq.XProcessingInstruction> 物件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-120">Any number of <xref:System.Xml.Linq.XProcessingInstruction> objects.</span></span> <span data-ttu-id="5cbcf-121">處理指示會將資訊傳達到處理 XML 的應用程式。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-121">A processing instruction communicates information to an application that processes the XML.</span></span>  
   
--   任何數目的 <xref:System.Xml.Linq.XComment> 物件。 這些註解將是根項目的同層級。 <xref:System.Xml.Linq.XComment> 物件不得為清單中的第一個引數，因為對於 XML 文件而言，它不適用於開始註解。  
+-   <span data-ttu-id="5cbcf-122">任何數目的 <xref:System.Xml.Linq.XComment> 物件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-122">Any number of <xref:System.Xml.Linq.XComment> objects.</span></span> <span data-ttu-id="5cbcf-123">這些註解將是根項目的同層級。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-123">The comments will be siblings to the root element.</span></span> <span data-ttu-id="5cbcf-124"><xref:System.Xml.Linq.XComment> 物件不得為清單中的第一個引數，因為對於 XML 文件而言，它不適用於開始註解。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-124">The <xref:System.Xml.Linq.XComment> object cannot be the first argument in the list, because it is not valid for an XML document to start with a comment.</span></span>  
   
--   一個適用於 DTD 的 <xref:System.Xml.Linq.XDocumentType>。  
+-   <span data-ttu-id="5cbcf-125">一個適用於 DTD 的 <xref:System.Xml.Linq.XDocumentType>。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-125">One <xref:System.Xml.Linq.XDocumentType> for the DTD.</span></span>  
   
- 當您序列化 <xref:System.Xml.Linq.XDocument> 時，即使 `XDocument.Declaration` 為 `null`，如果寫入器已將 `Writer.Settings.OmitXmlDeclaration` 設定為 `false` (預設值)，則輸出將會有 XML 宣告。  
+ <span data-ttu-id="5cbcf-126">當您序列化 <xref:System.Xml.Linq.XDocument> 時，即使 `XDocument.Declaration` 為 `null`，如果寫入器已將 `Writer.Settings.OmitXmlDeclaration` 設定為 `false` (預設值)，則輸出將會有 XML 宣告。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-126">When you serialize an <xref:System.Xml.Linq.XDocument>, even if `XDocument.Declaration` is `null`, the output will have an XML declaration if the writer has `Writer.Settings.OmitXmlDeclaration` set to `false` (the default).</span></span>  
   
- 根據預設，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 會將版本設定為 "1.0"，並將編碼設定為 "utf-8"。  
+ <span data-ttu-id="5cbcf-127">根據預設，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將版本設定為 "1.0"，並將編碼設定為 "utf-8"。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-127">By default, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sets the version to "1.0", and sets the encoding to "utf-8".</span></span>  
   
-## <a name="using-xelement-without-xdocument"></a>在沒有 XDocument 的情況下使用 XElement  
- 如先前所述，<xref:System.Xml.Linq.XElement> 類別是 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 程式發展介面中的主要類別。 在許多情況下，您的應用程式將不需要您建立文件。 您可以使用 <xref:System.Xml.Linq.XElement> 類別來建立 XML 樹狀結構、在其中加入其他 XML 樹狀結構、修改 XML 樹狀結構，然後加以儲存。  
+## <a name="using-xelement-without-xdocument"></a><span data-ttu-id="5cbcf-128">在沒有 XDocument 的情況下使用 XElement</span><span class="sxs-lookup"><span data-stu-id="5cbcf-128">Using XElement without XDocument</span></span>  
+ <span data-ttu-id="5cbcf-129">如先前所述，<xref:System.Xml.Linq.XElement> 類別是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 程式發展介面中的主要類別。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-129">As previously mentioned, the <xref:System.Xml.Linq.XElement> class is the main class in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] programming interface.</span></span> <span data-ttu-id="5cbcf-130">在許多情況下，您的應用程式將不需要您建立文件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-130">In many cases, your application will not require that you create a document.</span></span> <span data-ttu-id="5cbcf-131">您可以使用 <xref:System.Xml.Linq.XElement> 類別來建立 XML 樹狀結構、在其中加入其他 XML 樹狀結構、修改 XML 樹狀結構，然後加以儲存。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-131">By using the <xref:System.Xml.Linq.XElement> class, you can create an XML tree, add other XML trees to it, modify the XML tree, and save it.</span></span>  
   
-## <a name="using-xdocument"></a>使用 XDocument  
- 若要建構 <xref:System.Xml.Linq.XDocument>，請使用功能結構，如同您建構 <xref:System.Xml.Linq.XElement> 物件時所執行的操作。  
+## <a name="using-xdocument"></a><span data-ttu-id="5cbcf-132">使用 XDocument</span><span class="sxs-lookup"><span data-stu-id="5cbcf-132">Using XDocument</span></span>  
+ <span data-ttu-id="5cbcf-133">若要建構 <xref:System.Xml.Linq.XDocument>，請使用功能結構，如同您建構 <xref:System.Xml.Linq.XElement> 物件時所執行的操作。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-133">To construct an <xref:System.Xml.Linq.XDocument>, use functional construction, just like you do to construct <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
- 下列程式碼會建立 <xref:System.Xml.Linq.XDocument> 物件及其所包含的相關聯物件。  
+ <span data-ttu-id="5cbcf-134">下列程式碼會建立 <xref:System.Xml.Linq.XDocument> 物件及其所包含的相關聯物件。</span><span class="sxs-lookup"><span data-stu-id="5cbcf-134">The following code creates an <xref:System.Xml.Linq.XDocument> object and its associated contained objects.</span></span>  
   
 ```csharp  
 XDocument d = new XDocument(  
@@ -84,7 +84,7 @@ Console.WriteLine(d);
 d.Save("test.xml");  
 ```  
   
- 當您檢查 test.xml 檔案時，您會得到下列輸出：  
+ <span data-ttu-id="5cbcf-135">當您檢查 test.xml 檔案時，您會得到下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5cbcf-135">When you examine the file test.xml, you get the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -103,5 +103,6 @@ d.Save("test.xml");
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5cbcf-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5cbcf-136">See Also</span></span>  
+ [<span data-ttu-id="5cbcf-137">LINQ to XML 程式設計概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="5cbcf-137">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

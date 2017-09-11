@@ -1,5 +1,5 @@
 ---
-title: "Null 條件運算子 (C# 和 Visual Basic) | Microsoft Docs"
+title: "Null 條件運算子 (C# 和 Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -25,15 +25,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 61a093677354ba3a960fb5714963a1205d24ed06
-ms.openlocfilehash: 876b7c99ca9249e0a2b9cbd036c38e368228ac9f
+ms.translationtype: HT
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/25/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="null-conditional-operators-c-and-visual-basic"></a>Null 條件運算子 (C# 和 Visual Basic)
-在執行成員存取 (`?.`) 或對 (`?[`) 作業編製索引之前，可用來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  
+# <a name="null-conditional-operators-c-and-visual-basic"></a><span data-ttu-id="6dadf-102">Null 條件運算子 (C# 和 Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dadf-102">Null-conditional Operators (C# and Visual Basic)</span></span>
+<span data-ttu-id="6dadf-103">在執行成員存取 (`?.`) 或對 (`?[`) 作業編製索引之前，可用來測試是否為 Null。</span><span class="sxs-lookup"><span data-stu-id="6dadf-103">Used to test for null before performing a member access (`?.`) or index (`?[`) operation.</span></span>  <span data-ttu-id="6dadf-104">這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。</span><span class="sxs-lookup"><span data-stu-id="6dadf-104">These operators help you write less code to handle null checks, especially for descending into data structures.</span></span>  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- 最後一個範例示範使用最少運算的 Null 條件運算子。  如果條件式成員存取和索引作業鏈結中的一項作業傳回 Null，則鏈結的其餘部分會停止執行。  運算式中優先順序較低的其他作業會繼續進行。  例如，下列程式碼中的 `E` 一律會執行，而且 `??` 和 `==` 作業會執行。  
+ <span data-ttu-id="6dadf-105">最後一個範例示範使用最少運算的 Null 條件運算子。</span><span class="sxs-lookup"><span data-stu-id="6dadf-105">The last example demonstrates that the null-condition operators are short-circuiting.</span></span>  <span data-ttu-id="6dadf-106">如果條件式成員存取和索引作業鏈結中的一項作業傳回 Null，則鏈結的其餘部分會停止執行。</span><span class="sxs-lookup"><span data-stu-id="6dadf-106">If one operation in a chain of conditional member access and index operation returns null, then the rest of the chain’s execution stops.</span></span>  <span data-ttu-id="6dadf-107">運算式中優先順序較低的其他作業會繼續進行。</span><span class="sxs-lookup"><span data-stu-id="6dadf-107">Other operations with lower precedence in the expression continue.</span></span>  <span data-ttu-id="6dadf-108">例如，下列程式碼中的 `E` 會在第二行執行，而且 `??` 和 `==` 運算會執行。</span><span class="sxs-lookup"><span data-stu-id="6dadf-108">For example, `E` in the following executes in the second line, and the `??` and `==` operations execute.</span></span>  <span data-ttu-id="6dadf-109">在第一行，當左邊評估為非 Null 時，`??` 最少運算和 `E` 不會執行。</span><span class="sxs-lookup"><span data-stu-id="6dadf-109">In the first line, the `??` short circuits and `E` does not execute when the left side evaluates to non-null.</span></span>
   
 ```csharp
 A?.B?.C?[0] ?? E  
@@ -59,7 +59,7 @@ A?.B?.C?(0) ?? E
 A?.B?.C?(0) == E  
 ```  
   
- Null 條件成員存取的另一個用法是，使用更少的程式碼以執行緒安全的方式叫用委派。  舊方法需要如下的程式碼：  
+ <span data-ttu-id="6dadf-110">Null 條件成員存取的另一個用法是，使用更少的程式碼以執行緒安全的方式叫用委派。</span><span class="sxs-lookup"><span data-stu-id="6dadf-110">Another use for the null-condition member access is invoking delegates in a thread-safe way with much less code.</span></span>  <span data-ttu-id="6dadf-111">舊方法需要如下的程式碼：</span><span class="sxs-lookup"><span data-stu-id="6dadf-111">The old way requires code like the following:</span></span>  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -73,7 +73,7 @@ If handler IsNot Nothing
     Call handler(…)  
 ```  
   
- 新方法則更簡單：  
+ <span data-ttu-id="6dadf-112">新方法則更簡單：</span><span class="sxs-lookup"><span data-stu-id="6dadf-112">The new way is much simpler:</span></span>  
   
 ```csharp
 PropertyChanged?.Invoke(e)  
@@ -83,19 +83,19 @@ PropertyChanged?.Invoke(e)
 PropertyChanged?.Invoke(e)
 ```  
   
- 新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。  
+ <span data-ttu-id="6dadf-113">新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。</span><span class="sxs-lookup"><span data-stu-id="6dadf-113">The new way is thread-safe because the compiler generates code to evaluate `PropertyChanged` one time only, keeping the result in a temporary variable.</span></span>  
   
- 由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。  有太多模稜兩可剖析的情況可能會導致無法呼叫。  
+ <span data-ttu-id="6dadf-114">由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。</span><span class="sxs-lookup"><span data-stu-id="6dadf-114">You need to explicitly call the `Invoke` method because there is no null-conditional delegate invocation syntax `PropertyChanged?(e)`.</span></span>  <span data-ttu-id="6dadf-115">有太多模稜兩可剖析的情況可能會導致無法呼叫。</span><span class="sxs-lookup"><span data-stu-id="6dadf-115">There were too many ambiguous parsing situations to allow it.</span></span>  
   
-## <a name="language-specifications"></a>語言規格  
+## <a name="language-specifications"></a><span data-ttu-id="6dadf-116">語言規格</span><span class="sxs-lookup"><span data-stu-id="6dadf-116">Language Specifications</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- 如需詳細資訊，請參閱 [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)。  
+ <span data-ttu-id="6dadf-117">如需詳細資訊，請參閱 [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)。</span><span class="sxs-lookup"><span data-stu-id="6dadf-117">For more information, see the [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [?? (Null 聯合運算子)](null-conditional-operator.md)   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)   
- [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="6dadf-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6dadf-118">See Also</span></span>  
+ <span data-ttu-id="6dadf-119">[?? (Null 聯合運算子)](null-conditional-operator.md) </span><span class="sxs-lookup"><span data-stu-id="6dadf-119">[?? (null-coalescing operator)](null-conditional-operator.md) </span></span>  
+ <span data-ttu-id="6dadf-120">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="6dadf-120">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="6dadf-121">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="6dadf-121">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="6dadf-122">[Visual Basic 語言參考](../../../visual-basic/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="6dadf-122">[Visual Basic Language Reference](../../../visual-basic/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="6dadf-123">Visual Basic 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="6dadf-123">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)
 

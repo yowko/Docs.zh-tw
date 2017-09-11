@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Language Runtime 概觀 | Microsoft Docs"
+title: "Dynamic Language Runtime 概觀"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,91 +19,92 @@ caps.latest.revision: 26
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="dynamic-language-runtime-overview"></a>Dynamic Language Runtime 概觀
-「動態語言執行階段」(DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。 DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。  
+# <a name="dynamic-language-runtime-overview"></a><span data-ttu-id="dc2b8-102">Dynamic Language Runtime 概觀</span><span class="sxs-lookup"><span data-stu-id="dc2b8-102">Dynamic Language Runtime Overview</span></span>
+<span data-ttu-id="dc2b8-103">「動態語言執行階段」(DLR) 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-103">The *dynamic language runtime* (DLR) is a runtime environment that adds a set of services for dynamic languages to the common language runtime (CLR).</span></span> <span data-ttu-id="dc2b8-104">DLR 可讓您輕鬆地開發動態語言以便在 .NET Framework 上執行，以及將動態功能新增至靜態類型語言。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-104">The DLR makes it easier to develop dynamic languages to run on the .NET Framework and to add dynamic features to statically typed languages.</span></span>  
   
- 動態語言可以在執行階段識別物件的類型，而在靜態類型語言，例如 C# 和 Visual Basic 中 (當您使用 `Option Explicit On` 時)，您必須在設計階段指定物件類型。 動態語言的範例包括 Lisp、Smalltalk、JavaScript、PHP、Ruby、Python、ColdFusion、Lua、Cobra 和 Groovy。  
+ <span data-ttu-id="dc2b8-105">動態語言可以在執行階段識別物件的類型，而在靜態類型語言，例如 C# 和 Visual Basic 中 (當您使用 `Option Explicit On` 時)，您必須在設計階段指定物件類型。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-105">Dynamic languages can identify the type of an object at run time, whereas in statically typed languages such as C# and Visual Basic (when you use `Option Explicit On`) you must specify object types at design time.</span></span> <span data-ttu-id="dc2b8-106">動態語言的範例包括 Lisp、Smalltalk、JavaScript、PHP、Ruby、Python、ColdFusion、Lua、Cobra 和 Groovy。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-106">Examples of dynamic languages are Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra, and Groovy.</span></span>  
   
- 大部分動態語言為開發人員提供下列優點：  
+ <span data-ttu-id="dc2b8-107">大部分動態語言為開發人員提供下列優點：</span><span class="sxs-lookup"><span data-stu-id="dc2b8-107">Most dynamic languages provide the following advantages for developers:</span></span>  
   
--   能夠使用快速意見反應迴圈 (REPL，或讀取-評估-列印迴圈)。 這可讓您輸入多個陳述式，並立即執行它們來查看結果。  
+-   <span data-ttu-id="dc2b8-108">能夠使用快速意見反應迴圈 (REPL，或讀取-評估-列印迴圈)。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-108">The ability to use a rapid feedback loop (REPL, or read-evaluate-print loop).</span></span> <span data-ttu-id="dc2b8-109">這可讓您輸入多個陳述式，並立即執行它們來查看結果。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-109">This lets you enter several statements and immediately execute them to see the results.</span></span>  
   
--   支援由上而下開發和更傳統的由下而上開發。 比方說，當您使用由上而下方法時，可以呼叫尚未實作的函式，並在需要時再新增基礎實作。  
+-   <span data-ttu-id="dc2b8-110">支援由上而下開發和更傳統的由下而上開發。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-110">Support for both top-down development and more traditional bottom-up development.</span></span> <span data-ttu-id="dc2b8-111">比方說，當您使用由上而下方法時，可以呼叫尚未實作的函式，並在需要時再新增基礎實作。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-111">For example, when you use a top-down approach, you can call functions that are not yet implemented and then add underlying implementations when you need them.</span></span>  
   
--   更容易進行重構和程式碼修改，因為您不需要變更整個程式碼的靜態類型宣告。  
+-   <span data-ttu-id="dc2b8-112">更容易進行重構和程式碼修改，因為您不需要變更整個程式碼的靜態類型宣告。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-112">Easier refactoring and code modifications, because you do not have to change static type declarations throughout the code.</span></span>  
   
- 動態語言促成了絕佳的指令碼語言。 客戶可以使用具有新命令和功能的動態語言，輕鬆地擴充已建立的應用程式。 動態語言也經常用來建立網站和測試控管、維護伺服器陣列、開發各種公用程式，以及執行資料轉換。  
+ <span data-ttu-id="dc2b8-113">動態語言促成了絕佳的指令碼語言。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-113">Dynamic languages make excellent scripting languages.</span></span> <span data-ttu-id="dc2b8-114">客戶可以使用具有新命令和功能的動態語言，輕鬆地擴充已建立的應用程式。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-114">Customers can easily extend applications created by using dynamic languages with new commands and functionality.</span></span> <span data-ttu-id="dc2b8-115">動態語言也經常用來建立網站和測試控管、維護伺服器陣列、開發各種公用程式，以及執行資料轉換。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-115">Dynamic languages are also frequently used for creating Web sites and test harnesses, maintaining server farms, developing various utilities, and performing data transformations.</span></span>  
   
- DLR 的目的是讓動態語言系統能在 .NET Framework 上執行，並提供它們 .NET 互通性。 DLR 將動態物件引入 Visual Studio 2010 中的 C# 和 Visual Basic，以支援這些語言中的動態行為，並啟用其與動態語言的互通。  
+ <span data-ttu-id="dc2b8-116">DLR 的目的是讓動態語言系統能在 .NET Framework 上執行，並提供它們 .NET 互通性。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-116">The purpose of the DLR is to enable a system of dynamic languages to run on the .NET Framework and give them .NET interoperability.</span></span> <span data-ttu-id="dc2b8-117">DLR 將動態物件引入 Visual Studio 2010 中的 C# 和 Visual Basic，以支援這些語言中的動態行為，並啟用其與動態語言的互通。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-117">The DLR introduces dynamic objects to C# and Visual Basic in Visual Studio 2010 to support dynamic behavior in these languages and enable their interoperation with dynamic languages.</span></span>  
   
- DLR 也可協助您建立支援動態作業的程式庫。 比方說，如果您有使用 XML 或 JavaScript 物件標記法 (JSON) 物件的程式庫，您的物件對於使用 DLR 的語言而言，可以作為動態物件。 這可讓程式庫使用者撰寫語法更簡單且更自然的程式碼，來使用物件以及存取物件成員。  
+ <span data-ttu-id="dc2b8-118">DLR 也可協助您建立支援動態作業的程式庫。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-118">The DLR also helps you create libraries that support dynamic operations.</span></span> <span data-ttu-id="dc2b8-119">比方說，如果您有使用 XML 或 JavaScript 物件標記法 (JSON) 物件的程式庫，您的物件對於使用 DLR 的語言而言，可以作為動態物件。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-119">For example, if you have a library that uses XML or JavaScript Object Notation (JSON) objects, your objects can appear as dynamic objects to languages that use the DLR.</span></span> <span data-ttu-id="dc2b8-120">這可讓程式庫使用者撰寫語法更簡單且更自然的程式碼，來使用物件以及存取物件成員。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-120">This lets library users write syntactically simpler and more natural code for operating with objects and accessing object members.</span></span>  
   
- 比方說，您可能使用下列程式碼，以 C# 遞增 XML 中的計數器。  
+ <span data-ttu-id="dc2b8-121">比方說，您可能使用下列程式碼，以 C# 遞增 XML 中的計數器。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-121">For example, you might use the following code to increment a counter in XML in C#.</span></span>  
   
  `Scriptobj.SetProperty("Count", ((int)GetProperty("Count")) + 1);`  
   
- 藉由使用 DLR，您可以改為使用下列程式碼進行相同的作業。  
+ <span data-ttu-id="dc2b8-122">藉由使用 DLR，您可以改為使用下列程式碼進行相同的作業。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-122">By using the DLR, you could use the following code instead for the same operation.</span></span>  
   
  `scriptobj.Count += 1;`  
   
- 就像 CLR，DLR 是 .NET Framework 的一部分，並與 .NET Framework 和 Visual Studio 安裝套件一起提供。 DLR 的開放原始碼版本也可以在 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上下載。  
+ <span data-ttu-id="dc2b8-123">就像 CLR，DLR 是 .NET Framework 的一部分，並與 .NET Framework 和 Visual Studio 安裝套件一起提供。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-123">Like the CLR, the DLR is a part of the .NET Framework and is provided with the .NET Framework and Visual Studio installation packages.</span></span> <span data-ttu-id="dc2b8-124">DLR 的開放原始碼版本也可以在 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上下載。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-124">The open-source version of the DLR is also available for download on the [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Web site.</span></span>  
   
 > [!NOTE]
->  DLR 的開放原始碼版本有 Visual Studio 和 .NET Framework 中包含之 DLR 的所有功能。 它也提供其他支援給語言實作人員。 如需詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。  
+>  <span data-ttu-id="dc2b8-125">DLR 的開放原始碼版本有 Visual Studio 和 .NET Framework 中包含之 DLR 的所有功能。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-125">The open-source version of the DLR has all the features of the DLR that is included in Visual Studio and the .NET Framework.</span></span> <span data-ttu-id="dc2b8-126">它也提供其他支援給語言實作人員。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-126">It also provides additional support for language implementers.</span></span> <span data-ttu-id="dc2b8-127">如需詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-127">For more information, see the documentation on the [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Web site.</span></span>  
   
- 使用 DLR 語言開發的範例包括下列各項：  
+ <span data-ttu-id="dc2b8-128">使用 DLR 語言開發的範例包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="dc2b8-128">Examples of languages developed by using the DLR include the following:</span></span>  
   
--   IronPython。 以開放原始碼軟體於 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040) 網站上提供。  
+-   <span data-ttu-id="dc2b8-129">IronPython。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-129">IronPython.</span></span> <span data-ttu-id="dc2b8-130">在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-130">Available as open-source software from the [GitHub](https://github.com/IronLanguages/ironpython2) Web site.</span></span>  
   
--   IronRuby。 以開放原始碼軟體於 [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。  
+-   <span data-ttu-id="dc2b8-131">IronRuby。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-131">IronRuby.</span></span> <span data-ttu-id="dc2b8-132">以開放原始碼軟體於 [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 網站上提供。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-132">Available as open-source software from the [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) Web site.</span></span>  
   
-## <a name="primary-dlr-advantages"></a>主要的 DLR 優點  
- DLR 提供下列優點。  
+## <a name="primary-dlr-advantages"></a><span data-ttu-id="dc2b8-133">主要的 DLR 優點</span><span class="sxs-lookup"><span data-stu-id="dc2b8-133">Primary DLR Advantages</span></span>  
+ <span data-ttu-id="dc2b8-134">DLR 提供下列優點。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-134">The DLR provides the following advantages.</span></span>  
   
-### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>簡化將動態語言移轉至 .NET Framework  
- DLR 可讓語言實作人員避免建立語彙分析器、剖析器、語意分析器、程式碼產生器以及他們以往都會需要自己建立的其他工具。 若要使用 DLR，語言需要產生*運算式樹狀架構*，它代表樹狀結構中的語言層級程式碼、執行階段 helper 常式，和實作 <xref:System.Dynamic.IDynamicMetaObjectProvider> 介面的選擇性動態物件。 DLR 和 .NET Framework 會自動執行大量的程式碼分析和程式碼產生工作。 這讓語言實作人員能專注於獨特的語言功能。  
+### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a><span data-ttu-id="dc2b8-135">簡化將動態語言移轉至 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="dc2b8-135">Simplifies Porting Dynamic Languages to the .NET Framework</span></span>  
+ <span data-ttu-id="dc2b8-136">DLR 可讓語言實作人員避免建立語彙分析器、剖析器、語意分析器、程式碼產生器以及他們以往都會需要自己建立的其他工具。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-136">The DLR allows language implementers to avoid creating lexical analyzers, parsers, semantic analyzers, code generators, and other tools that they traditionally had to create themselves.</span></span> <span data-ttu-id="dc2b8-137">若要使用 DLR，語言需要產生*運算式樹狀架構*，它代表樹狀結構中的語言層級程式碼、執行階段 helper 常式，和實作 <xref:System.Dynamic.IDynamicMetaObjectProvider> 介面的選擇性動態物件。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-137">To use the DLR, a language needs to produce *expression trees*, which represent language-level code in a tree-shaped structure, runtime helper routines, and optional dynamic objects that implement the <xref:System.Dynamic.IDynamicMetaObjectProvider> interface.</span></span> <span data-ttu-id="dc2b8-138">DLR 和 .NET Framework 會自動執行大量的程式碼分析和程式碼產生工作。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-138">The DLR and the .NET Framework automate a lot of code analysis and code generation tasks.</span></span> <span data-ttu-id="dc2b8-139">這讓語言實作人員能專注於獨特的語言功能。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-139">This enables language implementers to concentrate on unique language features.</span></span>  
   
-### <a name="enables-dynamic-features-in-statically-typed-languages"></a>啟用靜態類型語言中的動態功能  
- 現有的 .NET Framework 語言，例如 C# 和 Visual Basic，可以建立動態物件，並使用它們搭配靜態類型物件。 例如，C# 和 Visual Basic 可以使用動態物件進行 HTML、文件物件模型 (DOM) 和 .NET 反映。  
+### <a name="enables-dynamic-features-in-statically-typed-languages"></a><span data-ttu-id="dc2b8-140">啟用靜態類型語言中的動態功能</span><span class="sxs-lookup"><span data-stu-id="dc2b8-140">Enables Dynamic Features in Statically Typed Languages</span></span>  
+ <span data-ttu-id="dc2b8-141">現有的 .NET Framework 語言，例如 C# 和 Visual Basic，可以建立動態物件，並使用它們搭配靜態類型物件。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-141">Existing .NET Framework languages such as C# and Visual Basic can create dynamic objects and use them together with statically typed objects.</span></span> <span data-ttu-id="dc2b8-142">例如，C# 和 Visual Basic 可以使用動態物件進行 HTML、文件物件模型 (DOM) 和 .NET 反映。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-142">For example, C# and Visual Basic can use dynamic objects for HTML, Document Object Model (DOM), and .NET reflection.</span></span>  
   
-### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>提供 DLR 和 .NET Framework 的未來優點  
- 使用 DLR 實作的語言可以受益於未來的 DLR 和 .NET Framework 增強功能。 比方說，如果 .NET Framework 發行已改善記憶體回收行程或更快組件載入的新版本，使用 DLR 實作的語言會立即獲得相同的優點。 如果 DLR 新增例如更佳編譯的最佳化作業，使用 DLR 實作的所有語言效能也會改善。  
+### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a><span data-ttu-id="dc2b8-143">提供 DLR 和 .NET Framework 的未來優點</span><span class="sxs-lookup"><span data-stu-id="dc2b8-143">Provides Future Benefits of the DLR and .NET Framework</span></span>  
+ <span data-ttu-id="dc2b8-144">使用 DLR 實作的語言可以受益於未來的 DLR 和 .NET Framework 增強功能。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-144">Languages implemented by using the DLR can benefit from future DLR and .NET Framework improvements.</span></span> <span data-ttu-id="dc2b8-145">比方說，如果 .NET Framework 發行已改善記憶體回收行程或更快組件載入的新版本，使用 DLR 實作的語言會立即獲得相同的優點。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-145">For example, if the .NET Framework releases a new version that has an improved garbage collector or faster assembly loading time, languages implemented by using the DLR immediately get the same benefit.</span></span> <span data-ttu-id="dc2b8-146">如果 DLR 新增例如更佳編譯的最佳化作業，使用 DLR 實作的所有語言效能也會改善。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-146">If the DLR adds optimizations such as better compilation, the performance also improves for all languages implemented by using the DLR.</span></span>  
   
-### <a name="enables-sharing-of-libraries-and-objects"></a>啟用程式庫和物件的共用  
- 實作在一種語言中的物件和程式庫可以由其他語言使用。 DLR 也可啟用靜態類型和動態語言之間的交互操作。 例如，C# 可以宣告使用以動態語言所撰寫之程式庫的動態物件。 在此同時，動態語言都可以使用 .NET Framework 的程式庫。  
+### <a name="enables-sharing-of-libraries-and-objects"></a><span data-ttu-id="dc2b8-147">啟用程式庫和物件的共用</span><span class="sxs-lookup"><span data-stu-id="dc2b8-147">Enables Sharing of Libraries and Objects</span></span>  
+ <span data-ttu-id="dc2b8-148">實作在一種語言中的物件和程式庫可以由其他語言使用。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-148">The objects and libraries implemented in one language can be used by other languages.</span></span> <span data-ttu-id="dc2b8-149">DLR 也可啟用靜態類型和動態語言之間的交互操作。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-149">The DLR also enables interoperation between statically typed and dynamic languages.</span></span> <span data-ttu-id="dc2b8-150">例如，C# 可以宣告使用以動態語言所撰寫之程式庫的動態物件。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-150">For example, C# can declare a dynamic object that uses a library that is written in a dynamic language.</span></span> <span data-ttu-id="dc2b8-151">在此同時，動態語言都可以使用 .NET Framework 的程式庫。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-151">At the same time, dynamic languages can use libraries from the .NET Framework.</span></span>  
   
-### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>提供快速動態分派和叫用  
- DLR 藉由支援進階的多型快取而提供動態作業的快速執行。 DLR 會建立規則，以便將使用物件的作業繫結到必要的執行階段實作，然後再快取這些規則，以避免在對相同物件類型連續執行相同程式碼期間發生耗盡資源的繫結計算。  
+### <a name="provides-fast-dynamic-dispatch-and-invocation"></a><span data-ttu-id="dc2b8-152">提供快速動態分派和叫用</span><span class="sxs-lookup"><span data-stu-id="dc2b8-152">Provides Fast Dynamic Dispatch and Invocation</span></span>  
+ <span data-ttu-id="dc2b8-153">DLR 藉由支援進階的多型快取而提供動態作業的快速執行。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-153">The DLR provides fast execution of dynamic operations by supporting advanced polymorphic caching.</span></span> <span data-ttu-id="dc2b8-154">DLR 會建立規則，以便將使用物件的作業繫結到必要的執行階段實作，然後再快取這些規則，以避免在對相同物件類型連續執行相同程式碼期間發生耗盡資源的繫結計算。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-154">The DLR creates rules for binding operations that use objects to the necessary runtime implementations and then caches these rules to avoid resource-exhausting binding computations during successive executions of the same code on the same types of objects.</span></span>  
   
-## <a name="dlr-architecture"></a>DLR 架構  
- 下圖顯示動態語言執行階段的架構。  
+## <a name="dlr-architecture"></a><span data-ttu-id="dc2b8-155">DLR 架構</span><span class="sxs-lookup"><span data-stu-id="dc2b8-155">DLR Architecture</span></span>  
+ <span data-ttu-id="dc2b8-156">下圖顯示動態語言執行階段的架構。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-156">The following illustration shows the architecture of the dynamic language runtime.</span></span>  
   
- ![Dynamic Language Runtime 架構概觀](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
-DLR 架構  
+ <span data-ttu-id="dc2b8-157">![Dynamic Language Runtime 架構概觀](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")</span><span class="sxs-lookup"><span data-stu-id="dc2b8-157">![Dynamic Language Runtime Architecture Overview](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")</span></span>  
+<span data-ttu-id="dc2b8-158">DLR 架構</span><span class="sxs-lookup"><span data-stu-id="dc2b8-158">DLR architecture</span></span>  
   
- DLR 新增一組服務給 CLR，以便更妥善支援動態語言。 這些服務包括下列各項：  
+ <span data-ttu-id="dc2b8-159">DLR 新增一組服務給 CLR，以便更妥善支援動態語言。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-159">The DLR adds a set of services to the CLR for better supporting dynamic languages.</span></span> <span data-ttu-id="dc2b8-160">這些服務包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="dc2b8-160">These services include the following:</span></span>  
   
--   運算式樹狀架構。 DLR 使用運算式樹狀架構來代表語言語意。 基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。 如需詳細資訊，請參閱[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。  
+-   <span data-ttu-id="dc2b8-161">運算式樹狀架構。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-161">Expression trees.</span></span> <span data-ttu-id="dc2b8-162">DLR 使用運算式樹狀架構來代表語言語意。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-162">The DLR uses expression trees to represent language semantics.</span></span> <span data-ttu-id="dc2b8-163">基於此目的，DLR 有擴充的 LINQ 運算式樹狀架構，包含控制流程、指派及其他語言模型節點。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-163">For this purpose, the DLR has extended LINQ expression trees to include control flow, assignment, and other language-modeling nodes.</span></span> <span data-ttu-id="dc2b8-164">如需詳細資訊，請參閱[運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-164">For more information, see [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).</span></span>  
   
--   呼叫站台快取。 「動態呼叫站台」是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。 DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。 如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。  
+-   <span data-ttu-id="dc2b8-165">呼叫站台快取。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-165">Call site caching.</span></span> <span data-ttu-id="dc2b8-166">「動態呼叫站台」是程式碼中您用來對動態物件執行像是 `a + b` 或 `a.b()` 等作業的地方。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-166">A *dynamic call site* is a place in the code where you perform an operation like `a + b` or `a.b()` on dynamic objects.</span></span> <span data-ttu-id="dc2b8-167">DLR 會快取 `a` 和 `b` 的特性 (通常是這些物件的類型) 和作業的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-167">The DLR caches the characteristics of `a` and `b` (usually the types of these objects) and information about the operation.</span></span> <span data-ttu-id="dc2b8-168">如果先前已執行此類作業，DLR 會從快取擷取所有必要資訊以便快速分派。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-168">If such an operation has been performed previously, the DLR retrieves all the necessary information from the cache for fast dispatch.</span></span>  
   
--   動態物件互通性。 DLR 提供一組類別和介面，代表動態物件和作業，而且可以由語言實作者和動態程式庫的作者所使用。 這些類別和介面包括 <xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。  
+-   <span data-ttu-id="dc2b8-169">動態物件互通性。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-169">Dynamic object interoperability.</span></span> <span data-ttu-id="dc2b8-170">DLR 提供一組類別和介面，代表動態物件和作業，而且可以由語言實作者和動態程式庫的作者所使用。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-170">The DLR provides a set of classes and interfaces that represent dynamic objects and operations and can be used by language implementers and authors of dynamic libraries.</span></span> <span data-ttu-id="dc2b8-171">這些類別和介面包括 <xref:System.Dynamic.IDynamicMetaObjectProvider>、<xref:System.Dynamic.DynamicMetaObject>、<xref:System.Dynamic.DynamicObject> 和 <xref:System.Dynamic.ExpandoObject>。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-171">These classes and interfaces include <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, and <xref:System.Dynamic.ExpandoObject>.</span></span>  
   
- DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framework，也與其他基礎結構和服務通訊，包括 Silverlight 和 COM。 繫結器會封裝語言的語意，並指定如何使用運算式樹狀架構在呼叫站台執行作業。 這樣可讓動態語言和使用 DLR 的靜態類型語言共用程式庫，以及存取 DLR 所支援的所有技術。  
+ <span data-ttu-id="dc2b8-172">DLR 使用呼叫站台中的繫結器來進行通訊，不只是與 .NET Framework，也與其他基礎結構和服務通訊，包括 Silverlight 和 COM。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-172">The DLR uses binders in call sites to communicate not only with the .NET Framework, but with other infrastructures and services, including Silverlight and COM.</span></span> <span data-ttu-id="dc2b8-173">繫結器會封裝語言的語意，並指定如何使用運算式樹狀架構在呼叫站台執行作業。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-173">Binders encapsulate a language's semantics and specify how to perform operations in a call site by using expression trees.</span></span> <span data-ttu-id="dc2b8-174">這樣可讓動態語言和使用 DLR 的靜態類型語言共用程式庫，以及存取 DLR 所支援的所有技術。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-174">This enables dynamic and statically typed languages that use the DLR to share libraries and gain access to all the technologies that the DLR supports.</span></span>  
   
-## <a name="dlr-documentation"></a>DLR 文件  
- 如需如何使用 DLR 開放原始碼版本將動態行為加入至語言，或是如何使用動態語言搭配 .NET Framework 的詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。  
+## <a name="dlr-documentation"></a><span data-ttu-id="dc2b8-175">DLR 文件</span><span class="sxs-lookup"><span data-stu-id="dc2b8-175">DLR Documentation</span></span>  
+ <span data-ttu-id="dc2b8-176">如需如何使用 DLR 開放原始碼版本將動態行為加入至語言，或是如何使用動態語言搭配 .NET Framework 的詳細資訊，請參閱 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 網站上的文件。</span><span class="sxs-lookup"><span data-stu-id="dc2b8-176">For more information about how to use the open source version of the DLR to add dynamic behavior to a language, or about how to enable the use of a dynamic language with the .NET Framework, see the documentation on the [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Web site.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Dynamic.ExpandoObject>   
- <xref:System.Dynamic.DynamicObject>   
- [Common Language Runtime](../../../docs/standard/clr.md)   
- [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
- [逐步解說：建立和使用動態物件](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+## <a name="see-also"></a><span data-ttu-id="dc2b8-177">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dc2b8-177">See Also</span></span>  
+ <span data-ttu-id="dc2b8-178"><xref:System.Dynamic.ExpandoObject></span><span class="sxs-lookup"><span data-stu-id="dc2b8-178"><xref:System.Dynamic.ExpandoObject></span></span>   
+ <span data-ttu-id="dc2b8-179"><xref:System.Dynamic.DynamicObject></span><span class="sxs-lookup"><span data-stu-id="dc2b8-179"><xref:System.Dynamic.DynamicObject></span></span>   
+ <span data-ttu-id="dc2b8-180">[Common Language Runtime](../../../docs/standard/clr.md) </span><span class="sxs-lookup"><span data-stu-id="dc2b8-180">[Common Language Runtime](../../../docs/standard/clr.md) </span></span>  
+ <span data-ttu-id="dc2b8-181">[Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) </span><span class="sxs-lookup"><span data-stu-id="dc2b8-181">[Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) </span></span>  
+ [<span data-ttu-id="dc2b8-182">逐步解說：建立和使用動態物件</span><span class="sxs-lookup"><span data-stu-id="dc2b8-182">Walkthrough: Creating and Using Dynamic Objects</span></span>](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

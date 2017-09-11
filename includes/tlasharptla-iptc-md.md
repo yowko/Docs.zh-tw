@@ -1,1 +1,1 @@
-國際電信聯盟 (IPTC)
+<span data-ttu-id="a1cb3-101">國際電信聯盟 (IPTC)</span><span class="sxs-lookup"><span data-stu-id="a1cb3-101">International Press Telecommunications Council (IPTC)</span></span>

@@ -1,5 +1,5 @@
 ---
-title: "如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,19 +14,18 @@ ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c2ea2b6b5c473bd61695e81ead7bcd1f758bfaa4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 033cadcf8d2e87301c8eef9c77b6fcf691c4e040
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)
-有時候您會想要尋找節點正前面的同層級。 由於前面同層級座標軸的位置性述詞語意 (Semantics) 在 XPath 中與 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 相反的這個差異，這是其中一個更有趣的比較。  
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a><span data-ttu-id="e9302-102">如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e9302-102">How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="e9302-103">有時候您會想要尋找節點正前面的同層級。</span><span class="sxs-lookup"><span data-stu-id="e9302-103">Sometimes you want to find the immediate preceding sibling to a node.</span></span> <span data-ttu-id="e9302-104">由於前面同層級座標軸的位置性述詞語意 (Semantics) 在 XPath 中與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相反的這個差異，這是其中一個更有趣的比較。</span><span class="sxs-lookup"><span data-stu-id="e9302-104">Due to the difference in the semantics of positional predicates for the preceding sibling axes in XPath as opposed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], this is one of the more interesting comparisons.</span></span>  
   
-## <a name="example"></a>範例  
- 在此範例中，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢會使用 <xref:System.Linq.Enumerable.Last%2A> 運算子，尋找集合中由 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A> 傳回的最後一個節點。 相較之下，XPath 運算式會使用述詞搭配 1 這個值來尋找正前面的項目。  
+## <a name="example"></a><span data-ttu-id="e9302-105">範例</span><span class="sxs-lookup"><span data-stu-id="e9302-105">Example</span></span>  
+ <span data-ttu-id="e9302-106">在這個範例中，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢會使用 <xref:System.Linq.Enumerable.Last%2A> 運算子，尋找集合中由 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A> 傳回的最後一個節點。</span><span class="sxs-lookup"><span data-stu-id="e9302-106">In this example, the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query uses the <xref:System.Linq.Enumerable.Last%2A> operator to find the last node in the collection returned by <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>.</span></span> <span data-ttu-id="e9302-107">相較之下，XPath 運算式會使用述詞搭配 1 這個值來尋找正前面的項目。</span><span class="sxs-lookup"><span data-stu-id="e9302-107">By contrast, the XPath expression uses a predicate with a value of 1 to find the immediately preceding element.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -58,12 +57,13 @@ else
 Console.WriteLine(el1);  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="e9302-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e9302-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 <Child3 />  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="e9302-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e9302-109">See Also</span></span>  
+ [<span data-ttu-id="e9302-110">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="e9302-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

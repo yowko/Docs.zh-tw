@@ -28,20 +28,20 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 06/08/2017
 
 ---
-# <a name="advanced-windows-presentation-foundation"></a>進階 (Windows Presentation Foundation)
-本節說明 WPF 中的一些進階區域。  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="a0a65-102">進階 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="a0a65-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="a0a65-103">本節說明 WPF 中的一些進階區域。</span><span class="sxs-lookup"><span data-stu-id="a0a65-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [基底項目](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [項目樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [文件](../../../../docs/framework/wpf/advanced/documents.md)  
- [全球化和當地語系化](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [效能](../../../../docs/framework/wpf/advanced/performance.md)  
- [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [Unmanaged WPF API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a0a65-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="a0a65-104">In This Section</span></span>  
+ [<span data-ttu-id="a0a65-105">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="a0a65-105">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+<span data-ttu-id="a0a65-106"> [基底項目](../../../../docs/framework/wpf/advanced/base-elements.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-106"> [Base Elements](../../../../docs/framework/wpf/advanced/base-elements.md)</span></span>  
+<span data-ttu-id="a0a65-107"> [項目樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-107"> [Element Tree and Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)</span></span>  
+<span data-ttu-id="a0a65-108"> [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-108"> [Drag and Drop](../../../../docs/framework/wpf/advanced/drag-and-drop.md)</span></span>  
+<span data-ttu-id="a0a65-109"> [文件](../../../../docs/framework/wpf/advanced/documents.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-109"> [Documents](../../../../docs/framework/wpf/advanced/documents.md)</span></span>  
+<span data-ttu-id="a0a65-110"> [全球化和當地語系化](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-110"> [Globalization and Localization](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)</span></span>  
+<span data-ttu-id="a0a65-111"> [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-111"> [Migration and Interoperability](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)</span></span>  
+<span data-ttu-id="a0a65-112"> [效能](../../../../docs/framework/wpf/advanced/performance.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-112"> [Performance](../../../../docs/framework/wpf/advanced/performance.md)</span></span>  
+<span data-ttu-id="a0a65-113"> [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-113"> [Threading Model](../../../../docs/framework/wpf/advanced/threading-model.md)</span></span>  
+<span data-ttu-id="a0a65-114"> [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-114"> [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)</span></span>  
+<span data-ttu-id="a0a65-115"> [Unmanaged WPF API 參考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)</span><span class="sxs-lookup"><span data-stu-id="a0a65-115"> [Unmanaged WPF API Reference](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)</span></span>  
   
-## <a name="related-sections"></a>相關章節
+## <a name="related-sections"></a><span data-ttu-id="a0a65-116">相關章節</span><span class="sxs-lookup"><span data-stu-id="a0a65-116">Related Sections</span></span>

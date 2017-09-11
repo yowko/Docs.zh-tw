@@ -1,5 +1,5 @@
 ---
-title: "如何：從 CSV 檔案產生 XML (C#) | Microsoft Docs"
+title: "如何：從 CSV 檔案產生 XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,21 +14,20 @@ ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8297ec6c462a3b01548b156f10a1470b8a5e6173
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>如何：從 CSV 檔案產生 XML (C#)
-此範例顯示如何使用 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="9289f-102">如何：從 CSV 檔案產生 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="9289f-102">How to: Generate XML from CSV Files (C#)</span></span>
+<span data-ttu-id="9289f-103">此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="9289f-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢。  
+## <a name="example"></a><span data-ttu-id="9289f-104">範例</span><span class="sxs-lookup"><span data-stu-id="9289f-104">Example</span></span>  
+ <span data-ttu-id="9289f-105">下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="9289f-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
- 此查詢使用 `let` 子句，將每個字串分割為欄位的陣列。  
+ <span data-ttu-id="9289f-106">此查詢使用 `let` 子句，將每個字串分割為欄位的陣列。</span><span class="sxs-lookup"><span data-stu-id="9289f-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -61,7 +60,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="9289f-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9289f-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -120,5 +119,6 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9289f-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9289f-108">See Also</span></span>  
+ [<span data-ttu-id="9289f-109">投影和轉換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9289f-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

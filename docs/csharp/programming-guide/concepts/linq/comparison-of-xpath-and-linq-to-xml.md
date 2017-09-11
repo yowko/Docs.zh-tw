@@ -15,92 +15,92 @@ caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60000605a42faa22841cc7b76b878a77bc53b7f
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: d3df033504a93a2d3eca5b252dbc47fb7d8b0ff9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 
 ---
-# <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 和 LINQ to XML 的比較
-XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 提供一些類似的功能。 兩者都可用於查詢 XML 樹狀結構，將此類結果當做項目的集合、屬性的集合、節點的集合，以及項目或屬性的值傳回。 不過，也有一些差異。  
+# <a name="comparison-of-xpath-and-linq-to-xml"></a><span data-ttu-id="63b3d-102">XPath 和 LINQ to XML 的比較</span><span class="sxs-lookup"><span data-stu-id="63b3d-102">Comparison of XPath and LINQ to XML</span></span>
+<span data-ttu-id="63b3d-103">XPath 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 提供一些類似的功能。</span><span class="sxs-lookup"><span data-stu-id="63b3d-103">XPath and [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] offer some similar functionality.</span></span> <span data-ttu-id="63b3d-104">兩者都可用於查詢 XML 樹狀結構，將此類結果當做項目的集合、屬性的集合、節點的集合，以及項目或屬性的值傳回。</span><span class="sxs-lookup"><span data-stu-id="63b3d-104">Both can be used to query an XML tree, returning such results as a collection of elements, a collection of attributes, a collection of nodes, or the value of an element or attribute.</span></span> <span data-ttu-id="63b3d-105">不過，也有一些差異。</span><span class="sxs-lookup"><span data-stu-id="63b3d-105">However, there are also some differences.</span></span>  
   
-## <a name="differences-between-xpath-and-linq-to-xml"></a>XPath 與 LINQ to XML 之間的差異  
- XPath 不允許評估新的型別。 它只能從樹狀結構傳回節點的集合，而 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 可以執行查詢並評估新圖案中的物件圖形或 XML 樹狀結構。 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢包含的功能更多，而且比 XPath 運算式的功能更強大。  
+## <a name="differences-between-xpath-and-linq-to-xml"></a><span data-ttu-id="63b3d-106">XPath 與 LINQ to XML 之間的差異</span><span class="sxs-lookup"><span data-stu-id="63b3d-106">Differences Between XPath and LINQ to XML</span></span>  
+ <span data-ttu-id="63b3d-107">XPath 不允許評估新的型別。</span><span class="sxs-lookup"><span data-stu-id="63b3d-107">XPath does not allow projection of new types.</span></span> <span data-ttu-id="63b3d-108">它只能從樹狀結構傳回節點的集合，而 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 可以執行查詢並評估新圖案中的物件圖形或 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="63b3d-108">It can only return collections of nodes from the tree, whereas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] can execute a query and project an object graph or an XML tree in a new shape.</span></span> [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<span data-ttu-id="63b3d-109"> 查詢包含的功能更多，而且比 XPath 運算式的功能更強大。</span><span class="sxs-lookup"><span data-stu-id="63b3d-109"> queries encompass much more functionality and are much more powerful than XPath expressions.</span></span>  
   
- XPath 運算式存在於字串內的隔離中。 C# 編譯器在編譯時期無法協助剖析 XPath 運算式。 相較之下，C# 編譯器不會剖析與編譯 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢。 該編譯器可以擷取許多查詢錯誤。  
+ <span data-ttu-id="63b3d-110">XPath 運算式存在於字串內的隔離中。</span><span class="sxs-lookup"><span data-stu-id="63b3d-110">XPath expressions exist in isolation within a string.</span></span> <span data-ttu-id="63b3d-111">C# 編譯器在編譯時期無法協助剖析 XPath 運算式。</span><span class="sxs-lookup"><span data-stu-id="63b3d-111">The C# compiler cannot help parse the XPath expression at compile time.</span></span> <span data-ttu-id="63b3d-112">相較之下，C# 編譯器不會剖析與編譯 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="63b3d-112">By contrast, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] queries are parsed and compiled by the C# compiler.</span></span> <span data-ttu-id="63b3d-113">該編譯器可以擷取許多查詢錯誤。</span><span class="sxs-lookup"><span data-stu-id="63b3d-113">The compiler is able to catch many query errors.</span></span>  
   
- XPath 結果不是強型別 (Strongly Typed)。 在許多情況下，評估 XPath 運算式的結果不是物件，而且開發人員可以決定適當的型別，並在必要時轉換結果。 相較之下，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢的評估為強型別。  
+ <span data-ttu-id="63b3d-114">XPath 結果不是強型別 (Strongly Typed)。</span><span class="sxs-lookup"><span data-stu-id="63b3d-114">XPath results are not strongly typed.</span></span> <span data-ttu-id="63b3d-115">在許多情況下，評估 XPath 運算式的結果不是物件，而且開發人員可以決定適當的型別，並在必要時轉換結果。</span><span class="sxs-lookup"><span data-stu-id="63b3d-115">In a number of circumstances, the result of evaluating an XPath expression is an object, and it is up to the developer to determine the proper type and cast the result as necessary.</span></span> <span data-ttu-id="63b3d-116">相較之下，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢的評估為強型別。</span><span class="sxs-lookup"><span data-stu-id="63b3d-116">By contrast, the projections from a [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query are strongly typed.</span></span>  
   
-## <a name="result-ordering"></a>結果順序  
- XPath 1.0 建議事項說明評估 XPath 運算式之結果的集合沒有排序。  
+## <a name="result-ordering"></a><span data-ttu-id="63b3d-117">結果順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-117">Result Ordering</span></span>  
+ <span data-ttu-id="63b3d-118">XPath 1.0 建議事項說明評估 XPath 運算式之結果的集合沒有排序。</span><span class="sxs-lookup"><span data-stu-id="63b3d-118">The XPath 1.0 Recommendation states that a collection that is the result of evaluating an XPath expression is unordered.</span></span>  
   
- 不過，逐一查看由 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] XPath 軸方法傳回的集合時，會以文件順序傳回集合中的節點。 即使在存取 XPath 軸 (其中的述詞會根據反向的文件順序表示，例如，`preceding` 和 `preceding-sibling`) 時，也是如此。  
+ <span data-ttu-id="63b3d-119">不過，逐一查看由 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] XPath 軸方法傳回的集合時，會以文件順序傳回集合中的節點。</span><span class="sxs-lookup"><span data-stu-id="63b3d-119">However, when iterating through a collection returned by a [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] XPath axis method, the nodes in the collection are returned in document order.</span></span> <span data-ttu-id="63b3d-120">即使在存取 XPath 軸 (其中的述詞會根據反向的文件順序表示，例如，`preceding` 和 `preceding-sibling`) 時，也是如此。</span><span class="sxs-lookup"><span data-stu-id="63b3d-120">This is the case even when accessing the XPath axes where predicates are expressed in terms of reverse document order, such as `preceding` and `preceding-sibling`.</span></span>  
   
- 相較之下，大部分的 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 座標軸會以文件順序傳回集合，但其中兩個 (<xref:System.Xml.Linq.XNode.Ancestors%2A> 和 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>) 會以反向文件順序傳回集合。 下表列舉座標軸，並指出每個座標軸的集合順序：  
+ <span data-ttu-id="63b3d-121">相較之下，大部分的 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 座標軸會以文件順序傳回集合，但其中兩個 (<xref:System.Xml.Linq.XNode.Ancestors%2A> 和 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>) 會以反向文件順序傳回集合。</span><span class="sxs-lookup"><span data-stu-id="63b3d-121">By contrast, most of the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] axes return collections in document order, but two of them, <xref:System.Xml.Linq.XNode.Ancestors%2A> and <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, return collections in reverse document order.</span></span> <span data-ttu-id="63b3d-122">下表列舉座標軸，並指出每個座標軸的集合順序：</span><span class="sxs-lookup"><span data-stu-id="63b3d-122">The following table enumerates the axes, and indicates collection order for each:</span></span>  
   
-|LINQ to XML 軸|排序|  
+|<span data-ttu-id="63b3d-123">LINQ to XML 軸</span><span class="sxs-lookup"><span data-stu-id="63b3d-123">LINQ to XML axis</span></span>|<span data-ttu-id="63b3d-124">排序</span><span class="sxs-lookup"><span data-stu-id="63b3d-124">Ordering</span></span>|  
 |----------------------|--------------|  
-|XContainer.DescendantNodes|文件順序|  
-|XContainer.Descendants|文件順序|  
-|XContainer.Elements|文件順序|  
-|XContainer.Nodes|文件順序|  
-|XContainer.NodesAfterSelf|文件順序|  
-|XContainer.NodesBeforeSelf|文件順序|  
-|XElement.AncestorsAndSelf|反向的文件順序|  
-|XElement.Attributes|文件順序|  
-|XElement.DescendantNodesAndSelf|文件順序|  
-|XElement.DescendantsAndSelf|文件順序|  
-|XNode.Ancestors|反向的文件順序|  
-|XNode.ElementsAfterSelf|文件順序|  
-|XNode.ElementsBeforeSelf|文件順序|  
-|XNode.NodesAfterSelf|文件順序|  
-|XNode.NodesBeforeSelf|文件順序|  
+|<span data-ttu-id="63b3d-125">XContainer.DescendantNodes</span><span class="sxs-lookup"><span data-stu-id="63b3d-125">XContainer.DescendantNodes</span></span>|<span data-ttu-id="63b3d-126">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-126">Document order</span></span>|  
+|<span data-ttu-id="63b3d-127">XContainer.Descendants</span><span class="sxs-lookup"><span data-stu-id="63b3d-127">XContainer.Descendants</span></span>|<span data-ttu-id="63b3d-128">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-128">Document order</span></span>|  
+|<span data-ttu-id="63b3d-129">XContainer.Elements</span><span class="sxs-lookup"><span data-stu-id="63b3d-129">XContainer.Elements</span></span>|<span data-ttu-id="63b3d-130">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-130">Document order</span></span>|  
+|<span data-ttu-id="63b3d-131">XContainer.Nodes</span><span class="sxs-lookup"><span data-stu-id="63b3d-131">XContainer.Nodes</span></span>|<span data-ttu-id="63b3d-132">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-132">Document order</span></span>|  
+|<span data-ttu-id="63b3d-133">XContainer.NodesAfterSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-133">XContainer.NodesAfterSelf</span></span>|<span data-ttu-id="63b3d-134">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-134">Document order</span></span>|  
+|<span data-ttu-id="63b3d-135">XContainer.NodesBeforeSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-135">XContainer.NodesBeforeSelf</span></span>|<span data-ttu-id="63b3d-136">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-136">Document order</span></span>|  
+|<span data-ttu-id="63b3d-137">XElement.AncestorsAndSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-137">XElement.AncestorsAndSelf</span></span>|<span data-ttu-id="63b3d-138">反向的文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-138">Reverse document order</span></span>|  
+|<span data-ttu-id="63b3d-139">XElement.Attributes</span><span class="sxs-lookup"><span data-stu-id="63b3d-139">XElement.Attributes</span></span>|<span data-ttu-id="63b3d-140">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-140">Document order</span></span>|  
+|<span data-ttu-id="63b3d-141">XElement.DescendantNodesAndSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-141">XElement.DescendantNodesAndSelf</span></span>|<span data-ttu-id="63b3d-142">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-142">Document order</span></span>|  
+|<span data-ttu-id="63b3d-143">XElement.DescendantsAndSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-143">XElement.DescendantsAndSelf</span></span>|<span data-ttu-id="63b3d-144">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-144">Document order</span></span>|  
+|<span data-ttu-id="63b3d-145">XNode.Ancestors</span><span class="sxs-lookup"><span data-stu-id="63b3d-145">XNode.Ancestors</span></span>|<span data-ttu-id="63b3d-146">反向的文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-146">Reverse document order</span></span>|  
+|<span data-ttu-id="63b3d-147">XNode.ElementsAfterSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-147">XNode.ElementsAfterSelf</span></span>|<span data-ttu-id="63b3d-148">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-148">Document order</span></span>|  
+|<span data-ttu-id="63b3d-149">XNode.ElementsBeforeSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-149">XNode.ElementsBeforeSelf</span></span>|<span data-ttu-id="63b3d-150">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-150">Document order</span></span>|  
+|<span data-ttu-id="63b3d-151">XNode.NodesAfterSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-151">XNode.NodesAfterSelf</span></span>|<span data-ttu-id="63b3d-152">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-152">Document order</span></span>|  
+|<span data-ttu-id="63b3d-153">XNode.NodesBeforeSelf</span><span class="sxs-lookup"><span data-stu-id="63b3d-153">XNode.NodesBeforeSelf</span></span>|<span data-ttu-id="63b3d-154">文件順序</span><span class="sxs-lookup"><span data-stu-id="63b3d-154">Document order</span></span>|  
   
-## <a name="positional-predicates"></a>位置性述詞  
- 在 XPath 運算式內，許多座標軸的位置性述詞都是以文件順序表示，但是反向座標軸則以反向的文件順序表示，這些反向座標軸包括 `preceding`、`preceding-sibling`、`ancestor` 和 `ancestor-or-self`。 例如，XPath 運算式 `preceding-sibling::*[1]` 會傳回正前面的同層級。 即使最後的結果集會以文件順序呈現，也是如此。  
+## <a name="positional-predicates"></a><span data-ttu-id="63b3d-155">位置性述詞</span><span class="sxs-lookup"><span data-stu-id="63b3d-155">Positional Predicates</span></span>  
+ <span data-ttu-id="63b3d-156">在 XPath 運算式內，許多座標軸的位置性述詞都是以文件順序表示，但是反向座標軸則以反向的文件順序表示，這些反向座標軸包括 `preceding`、`preceding-sibling`、`ancestor` 和 `ancestor-or-self`。</span><span class="sxs-lookup"><span data-stu-id="63b3d-156">Within an XPath expression, positional predicates are expressed in terms of document order for many axes, but are expressed in reverse document order for reverse axes, which are `preceding`, `preceding-sibling`, `ancestor`, and `ancestor-or-self`.</span></span> <span data-ttu-id="63b3d-157">例如，XPath 運算式 `preceding-sibling::*[1]` 會傳回正前面的同層級。</span><span class="sxs-lookup"><span data-stu-id="63b3d-157">For example, the XPath expression `preceding-sibling::*[1]` returns the immediately preceding sibling.</span></span> <span data-ttu-id="63b3d-158">即使最後的結果集會以文件順序呈現，也是如此。</span><span class="sxs-lookup"><span data-stu-id="63b3d-158">This is the case even though the final result set is presented in document order.</span></span>  
   
- 相較之下，LINQ to XML 中的所有位置性述詞都一律會以座標軸的順序表示。 例如，`anElement.ElementsBeforeSelf().ToList()[0]` 會傳回所查詢項目之父代的第一個子項目，而非正前面的同層級。 另一個範例：`anElement.Ancestors().ToList()[0]` 會傳回父項目。  
+ <span data-ttu-id="63b3d-159">相較之下，LINQ to XML 中的所有位置性述詞都一律會以座標軸的順序表示。</span><span class="sxs-lookup"><span data-stu-id="63b3d-159">By contrast, all positional predicates in LINQ to XML are always expressed in terms of the order of the axis.</span></span> <span data-ttu-id="63b3d-160">例如，`anElement.ElementsBeforeSelf().ToList()[0]` 會傳回所查詢項目之父代的第一個子項目，而非正前面的同層級。</span><span class="sxs-lookup"><span data-stu-id="63b3d-160">For example, `anElement.ElementsBeforeSelf().ToList()[0]` returns the first child element of the parent of the queried element, not the immediate preceding sibling.</span></span> <span data-ttu-id="63b3d-161">另一個範例：`anElement.Ancestors().ToList()[0]` 會傳回父項目。</span><span class="sxs-lookup"><span data-stu-id="63b3d-161">Another example: `anElement.Ancestors().ToList()[0]` returns the parent element.</span></span>  
   
- 請注意，上述的方法會具體化整個集合。 這不是撰寫該查詢的最有效方式。 此範例以該方式撰寫，以示範位置性述詞的行為。 撰寫相同查詢更適當的方式是使用 <xref:System.Linq.Enumerable.First%2A> 方法，如下所示：`anElement.ElementsBeforeSelf().First()`。  
+ <span data-ttu-id="63b3d-162">請注意，上述的方法會具體化整個集合。</span><span class="sxs-lookup"><span data-stu-id="63b3d-162">Note that the above approach materializes the entire collection.</span></span> <span data-ttu-id="63b3d-163">這不是撰寫該查詢的最有效方式。</span><span class="sxs-lookup"><span data-stu-id="63b3d-163">This is not the most efficient way to write that query.</span></span> <span data-ttu-id="63b3d-164">此範例以該方式撰寫，以示範位置性述詞的行為。</span><span class="sxs-lookup"><span data-stu-id="63b3d-164">It was written in that way to demonstrate the behavior of positional predicates.</span></span> <span data-ttu-id="63b3d-165">撰寫相同查詢更適當的方式是使用 <xref:System.Linq.Enumerable.First%2A> 方法，如下所示：`anElement.ElementsBeforeSelf().First()`。</span><span class="sxs-lookup"><span data-stu-id="63b3d-165">A more appropriate way to write the same query is to use the <xref:System.Linq.Enumerable.First%2A> method, as follows: `anElement.ElementsBeforeSelf().First()`.</span></span>  
   
- 如果您要在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中尋找正前面的項目，您可以撰寫下列運算式：  
+ <span data-ttu-id="63b3d-166">如果您要在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中尋找正前面的項目，您可以撰寫下列運算式：</span><span class="sxs-lookup"><span data-stu-id="63b3d-166">If you wanted to find the immediately preceding element in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], you would write the following expression:</span></span>  
   
  `ElementsBeforeSelf().Last()`  
   
-## <a name="performance-differences"></a>效能差異  
- 在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中使用 XPath 功能的 XPath 查詢以及 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢將不會執行。  
+## <a name="performance-differences"></a><span data-ttu-id="63b3d-167">效能差異</span><span class="sxs-lookup"><span data-stu-id="63b3d-167">Performance Differences</span></span>  
+ <span data-ttu-id="63b3d-168">在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中使用 XPath 功能的 XPath 查詢以及 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢將不會執行。</span><span class="sxs-lookup"><span data-stu-id="63b3d-168">XPath queries that use the XPath functionality in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] will not perform as well as [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] queries.</span></span>  
   
-## <a name="comparison-of-composition"></a>撰寫比較  
- 撰寫 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢與撰寫 XPath 運算式類似，但是在語法上非常不同。  
+## <a name="comparison-of-composition"></a><span data-ttu-id="63b3d-169">撰寫比較</span><span class="sxs-lookup"><span data-stu-id="63b3d-169">Comparison of Composition</span></span>  
+ <span data-ttu-id="63b3d-170">撰寫 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢與撰寫 XPath 運算式類似，但是在語法上非常不同。</span><span class="sxs-lookup"><span data-stu-id="63b3d-170">Composition of a [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query is somewhat parallel to composition of an XPath expression, although very different in syntax.</span></span>  
   
- 例如，如果您在變數中有一個名稱為 `customers` 的項目，而且您想要在名稱為 `CompanyName` 的所有子項目下，尋找名稱為 `Customer` 的後代子項目，您可以撰寫 XPath 運算式，如下所示：  
+ <span data-ttu-id="63b3d-171">例如，如果您在變數中有一個名稱為 `customers` 的項目，而且您想要在名稱為 `CompanyName` 的所有子項目下，尋找名稱為 `Customer` 的後代子項目，您可以撰寫 XPath 運算式，如下所示：</span><span class="sxs-lookup"><span data-stu-id="63b3d-171">For example, if you have an element in a variable named `customers`, and you want to find a grandchild element named `CompanyName` under all child elements named `Customer`, you would write an XPath expression as follows:</span></span>  
   
 ```csharp  
 customers.XPathSelectElements("./Customer/CompanyName");  
 ```  
   
- 對等的 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢是：  
+ <span data-ttu-id="63b3d-172">對等的 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 查詢是：</span><span class="sxs-lookup"><span data-stu-id="63b3d-172">The equivalent [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query is:</span></span>  
   
 ```csharp  
 customers.Element("Customer").Elements("CompanyName");  
 ```  
   
- 每個 XPath 座標軸都有類似的項目。  
+ <span data-ttu-id="63b3d-173">每個 XPath 座標軸都有類似的項目。</span><span class="sxs-lookup"><span data-stu-id="63b3d-173">There are similar parallels for each of the XPath axes.</span></span>  
   
-|XPath 座標軸|LINQ to XML 軸|  
+|<span data-ttu-id="63b3d-174">XPath 座標軸</span><span class="sxs-lookup"><span data-stu-id="63b3d-174">XPath axis</span></span>|<span data-ttu-id="63b3d-175">LINQ to XML 軸</span><span class="sxs-lookup"><span data-stu-id="63b3d-175">LINQ to XML axis</span></span>|  
 |----------------|----------------------|  
-|child (預設軸)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|  
-|Parent (..)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName>|  
-|attribute 軸 (@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|  
-|ancestor 軸|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|  
-|ancestor-or-self 軸|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|  
-|descendant 軸 (//)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName>|  
-|descendant-or-self|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName>|  
-|following-sibling|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName>|  
-|preceding-sibling|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName><br /><br /> 或<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName>|  
-|following|沒有直接的對等。|  
-|preceding|沒有直接的對等。|  
+|<span data-ttu-id="63b3d-176">child (預設軸)</span><span class="sxs-lookup"><span data-stu-id="63b3d-176">child (the default axis)</span></span>|<span data-ttu-id="63b3d-177"><xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-177"><xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-178">Parent (..)</span><span class="sxs-lookup"><span data-stu-id="63b3d-178">Parent (..)</span></span>|<span data-ttu-id="63b3d-179"><xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-179"><xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-180">attribute 軸 (@)</span><span class="sxs-lookup"><span data-stu-id="63b3d-180">attribute axis (@)</span></span>|<span data-ttu-id="63b3d-181"><xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-181"><xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="63b3d-182">或</span><span class="sxs-lookup"><span data-stu-id="63b3d-182">or</span></span><br /><br /> <span data-ttu-id="63b3d-183"><xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-183"><xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-184">ancestor 軸</span><span class="sxs-lookup"><span data-stu-id="63b3d-184">ancestor axis</span></span>|<span data-ttu-id="63b3d-185"><xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-185"><xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-186">ancestor-or-self 軸</span><span class="sxs-lookup"><span data-stu-id="63b3d-186">ancestor-or-self axis</span></span>|<span data-ttu-id="63b3d-187"><xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-187"><xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-188">descendant 軸 (//)</span><span class="sxs-lookup"><span data-stu-id="63b3d-188">descendant axis (//)</span></span>|<span data-ttu-id="63b3d-189"><xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-189"><xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="63b3d-190">或</span><span class="sxs-lookup"><span data-stu-id="63b3d-190">or</span></span><br /><br /> <span data-ttu-id="63b3d-191"><xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-191"><xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-192">descendant-or-self</span><span class="sxs-lookup"><span data-stu-id="63b3d-192">descendant-or-self</span></span>|<span data-ttu-id="63b3d-193"><xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-193"><xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="63b3d-194">或</span><span class="sxs-lookup"><span data-stu-id="63b3d-194">or</span></span><br /><br /> <span data-ttu-id="63b3d-195"><xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-195"><xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-196">following-sibling</span><span class="sxs-lookup"><span data-stu-id="63b3d-196">following-sibling</span></span>|<span data-ttu-id="63b3d-197"><xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-197"><xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="63b3d-198">或</span><span class="sxs-lookup"><span data-stu-id="63b3d-198">or</span></span><br /><br /> <span data-ttu-id="63b3d-199"><xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-199"><xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-200">preceding-sibling</span><span class="sxs-lookup"><span data-stu-id="63b3d-200">preceding-sibling</span></span>|<span data-ttu-id="63b3d-201"><xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-201"><xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="63b3d-202">或</span><span class="sxs-lookup"><span data-stu-id="63b3d-202">or</span></span><br /><br /> <span data-ttu-id="63b3d-203"><xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="63b3d-203"><xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName></span></span>|  
+|<span data-ttu-id="63b3d-204">following</span><span class="sxs-lookup"><span data-stu-id="63b3d-204">following</span></span>|<span data-ttu-id="63b3d-205">沒有直接的對等。</span><span class="sxs-lookup"><span data-stu-id="63b3d-205">No direct equivalent.</span></span>|  
+|<span data-ttu-id="63b3d-206">preceding</span><span class="sxs-lookup"><span data-stu-id="63b3d-206">preceding</span></span>|<span data-ttu-id="63b3d-207">沒有直接的對等。</span><span class="sxs-lookup"><span data-stu-id="63b3d-207">No direct equivalent.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="63b3d-208">另請參閱</span><span class="sxs-lookup"><span data-stu-id="63b3d-208">See Also</span></span>  
+ [<span data-ttu-id="63b3d-209">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="63b3d-209">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

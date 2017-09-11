@@ -1,0 +1,1 @@
+<span data-ttu-id="fb630-101">**本主題適用於: ✓** .NET Core 1.x **✓** .NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fb630-101">**This topic applies to: ✓** .NET Core 1.x **✓** .NET Core 2.x</span></span>

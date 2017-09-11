@@ -48,146 +48,146 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
-本逐步解說提供 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a><span data-ttu-id="22324-102">逐步解說：在 Visual Basic 中管理檔案和目錄</span><span class="sxs-lookup"><span data-stu-id="22324-102">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>
+<span data-ttu-id="22324-103">本逐步解說提供 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中檔案 I/O 的基本概念簡介。</span><span class="sxs-lookup"><span data-stu-id="22324-103">This walkthrough provides an introduction to the fundamentals of file I/O in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span> <span data-ttu-id="22324-104">其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。</span><span class="sxs-lookup"><span data-stu-id="22324-104">It describes how to create a small application that lists and examines text files in a directory.</span></span> <span data-ttu-id="22324-105">針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。</span><span class="sxs-lookup"><span data-stu-id="22324-105">For each selected text file, the application provides file attributes and the first line of content.</span></span> <span data-ttu-id="22324-106">您也可以選擇將資訊寫入記錄檔。</span><span class="sxs-lookup"><span data-stu-id="22324-106">There is an option to write information to a log file.</span></span>  
   
- 本逐步解說使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 所提供的 `My.Computer.FileSystem Object` 成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。  
+ <span data-ttu-id="22324-107">本逐步解說使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 所提供的 `My.Computer.FileSystem Object` 成員。</span><span class="sxs-lookup"><span data-stu-id="22324-107">This walkthrough uses members of the `My.Computer.FileSystem Object`, which are available in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span> <span data-ttu-id="22324-108">如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。</span><span class="sxs-lookup"><span data-stu-id="22324-108">See <xref:Microsoft.VisualBasic.FileIO.FileSystem> for more information.</span></span> <span data-ttu-id="22324-109">本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。</span><span class="sxs-lookup"><span data-stu-id="22324-109">At the end of the walkthrough, an equivalent example is provided that uses classes from the <xref:System.IO> namespace.</span></span>  
   
 [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### <a name="to-create-the-project"></a>若要建立專案  
+### <a name="to-create-the-project"></a><span data-ttu-id="22324-110">若要建立專案</span><span class="sxs-lookup"><span data-stu-id="22324-110">To create the project</span></span>  
   
-1.  按一下 [檔案] 功能表上的 [新增專案]。  
+1.  <span data-ttu-id="22324-111">按一下 [檔案] 功能表上的 [新增專案]。</span><span class="sxs-lookup"><span data-stu-id="22324-111">On the **File** menu, click **New Project**.</span></span>  
   
-     [ **新增專案** ] 對話方塊隨即出現。  
+     <span data-ttu-id="22324-112">[ **新增專案** ] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="22324-112">The **New Project** dialog box appears.</span></span>  
   
-2.  在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。 在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。  
+2.  <span data-ttu-id="22324-113">在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。</span><span class="sxs-lookup"><span data-stu-id="22324-113">In the **Installed Templates** pane, expand **Visual Basic**, and then click **Windows**.</span></span> <span data-ttu-id="22324-114">在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="22324-114">In the **Templates** pane in the middle, click **Windows Forms Application**.</span></span>  
   
-3.  在 [名稱] 方塊中，輸入 `FileExplorer` 以設定專案名稱，然後按一下 [確定]。  
+3.  <span data-ttu-id="22324-115">在 [名稱] 方塊中，輸入 `FileExplorer` 以設定專案名稱，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="22324-115">In the **Name** box, type `FileExplorer` to set the project name, and then click **OK**.</span></span>  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 即會將專案新增到方案總管中，並開啟 Windows Forms 設計工具。  
+     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)]<span data-ttu-id="22324-116"> 即會將專案新增到方案總管中，並開啟 Windows Forms 設計工具。</span><span class="sxs-lookup"><span data-stu-id="22324-116"> adds the project to **Solution Explorer**, and the Windows Forms Designer opens.</span></span>  
   
-4.  將下表的控制項新增至表單，並設定其屬性的對應值。  
+4.  <span data-ttu-id="22324-117">將下表的控制項新增至表單，並設定其屬性的對應值。</span><span class="sxs-lookup"><span data-stu-id="22324-117">Add the controls in the following table to the form, and set the corresponding values for their properties.</span></span>  
   
-    |控制項|屬性|值|  
+    |<span data-ttu-id="22324-118">控制項</span><span class="sxs-lookup"><span data-stu-id="22324-118">Control</span></span>|<span data-ttu-id="22324-119">屬性</span><span class="sxs-lookup"><span data-stu-id="22324-119">Property</span></span>|<span data-ttu-id="22324-120">值</span><span class="sxs-lookup"><span data-stu-id="22324-120">Value</span></span>|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **文字**|`browseButton`<br /><br /> **瀏覽**|  
-    |**Button**|**Name**<br /><br /> **文字**|`examineButton`<br /><br /> **檢查**|  
-    |**CheckBox**|**Name**<br /><br /> **文字**|`saveCheckBox`<br /><br /> **儲存結果**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |<span data-ttu-id="22324-121">**ListBox**</span><span class="sxs-lookup"><span data-stu-id="22324-121">**ListBox**</span></span>|<span data-ttu-id="22324-122">**Name**</span><span class="sxs-lookup"><span data-stu-id="22324-122">**Name**</span></span>|`filesListBox`|  
+    |<span data-ttu-id="22324-123">**Button**</span><span class="sxs-lookup"><span data-stu-id="22324-123">**Button**</span></span>|<span data-ttu-id="22324-124">**Name**</span><span class="sxs-lookup"><span data-stu-id="22324-124">**Name**</span></span><br /><br /> <span data-ttu-id="22324-125">**文字**</span><span class="sxs-lookup"><span data-stu-id="22324-125">**Text**</span></span>|`browseButton`<br /><br /> <span data-ttu-id="22324-126">**瀏覽**</span><span class="sxs-lookup"><span data-stu-id="22324-126">**Browse**</span></span>|  
+    |<span data-ttu-id="22324-127">**Button**</span><span class="sxs-lookup"><span data-stu-id="22324-127">**Button**</span></span>|<span data-ttu-id="22324-128">**Name**</span><span class="sxs-lookup"><span data-stu-id="22324-128">**Name**</span></span><br /><br /> <span data-ttu-id="22324-129">**文字**</span><span class="sxs-lookup"><span data-stu-id="22324-129">**Text**</span></span>|`examineButton`<br /><br /> <span data-ttu-id="22324-130">**檢查**</span><span class="sxs-lookup"><span data-stu-id="22324-130">**Examine**</span></span>|  
+    |<span data-ttu-id="22324-131">**CheckBox**</span><span class="sxs-lookup"><span data-stu-id="22324-131">**CheckBox**</span></span>|<span data-ttu-id="22324-132">**Name**</span><span class="sxs-lookup"><span data-stu-id="22324-132">**Name**</span></span><br /><br /> <span data-ttu-id="22324-133">**文字**</span><span class="sxs-lookup"><span data-stu-id="22324-133">**Text**</span></span>|`saveCheckBox`<br /><br /> <span data-ttu-id="22324-134">**儲存結果**</span><span class="sxs-lookup"><span data-stu-id="22324-134">**Save Results**</span></span>|  
+    |<span data-ttu-id="22324-135">**FolderBrowserDialog**</span><span class="sxs-lookup"><span data-stu-id="22324-135">**FolderBrowserDialog**</span></span>|<span data-ttu-id="22324-136">**Name**</span><span class="sxs-lookup"><span data-stu-id="22324-136">**Name**</span></span>|`FolderBrowserDialog1`|  
   
-### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
+### <a name="to-select-a-folder-and-list-files-in-a-folder"></a><span data-ttu-id="22324-137">若要選取資料夾，並列出資料夾中的檔案</span><span class="sxs-lookup"><span data-stu-id="22324-137">To select a folder, and list files in a folder</span></span>  
   
-1.  按兩下表單的控制項，以建立 `browseButton` 的 `Click` 事件處理常式。 [程式碼編輯器] 隨即開啟。  
+1.  <span data-ttu-id="22324-138">按兩下表單的控制項，以建立 `browseButton` 的 `Click` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-138">Create a `Click` event handler for `browseButton` by double-clicking the control on the form.</span></span> <span data-ttu-id="22324-139">[程式碼編輯器] 隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="22324-139">The Code Editor opens.</span></span>  
   
-2.  將下列程式碼加入至 `Click` 事件處理常式。  
+2.  <span data-ttu-id="22324-140">將下列程式碼加入至 `Click` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-140">Add the following code to the `Click` event handler.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     <span data-ttu-id="22324-141">[!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-141">[!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]</span></span>  
   
-     `FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾] 對話方塊。 使用者按一下 [確定] 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，以在下一個步驟中加入。  
+     <span data-ttu-id="22324-142">`FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="22324-142">The `FolderBrowserDialog1.ShowDialog` call opens the **Browse For Folder** dialog box.</span></span> <span data-ttu-id="22324-143">使用者按一下 [確定] 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，以在下一個步驟中加入。</span><span class="sxs-lookup"><span data-stu-id="22324-143">After the user clicks **OK**, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is sent as an argument to the `ListFiles` method, which is added in the next step.</span></span>  
   
-3.  新增下列 `ListFiles` 方法。  
+3.  <span data-ttu-id="22324-144">新增下列 `ListFiles` 方法。</span><span class="sxs-lookup"><span data-stu-id="22324-144">Add the following `ListFiles` method.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     <span data-ttu-id="22324-145">[!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-145">[!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]</span></span>  
   
-     此程式碼會先清除 **ListBox**。  
+     <span data-ttu-id="22324-146">此程式碼會先清除 **ListBox**。</span><span class="sxs-lookup"><span data-stu-id="22324-146">This code first clears the **ListBox**.</span></span>  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 方法接著會擷取一組字串，目錄中每個檔案一個字串。 `GetFiles` 方法可接受搜尋模式引數，以擷取符合特定模式的檔案。 在此範例中，僅會傳回副檔名為 .txt 的檔案。  
+     <span data-ttu-id="22324-147"><xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 方法接著會擷取一組字串，目錄中每個檔案一個字串。</span><span class="sxs-lookup"><span data-stu-id="22324-147">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> method then retrieves a collection of strings, one for each file in the directory.</span></span> <span data-ttu-id="22324-148">`GetFiles` 方法可接受搜尋模式引數，以擷取符合特定模式的檔案。</span><span class="sxs-lookup"><span data-stu-id="22324-148">The `GetFiles` method accepts a search pattern argument to retrieve files that match a particular pattern.</span></span> <span data-ttu-id="22324-149">在此範例中，僅會傳回副檔名為 .txt 的檔案。</span><span class="sxs-lookup"><span data-stu-id="22324-149">In this example, only files that have the extension .txt are returned.</span></span>  
   
-     隨即將 `GetFiles` 方法所傳回的字串新增至 **ListBox**。  
+     <span data-ttu-id="22324-150">隨即將 `GetFiles` 方法所傳回的字串新增至 **ListBox**。</span><span class="sxs-lookup"><span data-stu-id="22324-150">The strings that are returned by the `GetFiles` method are then added to the **ListBox**.</span></span>  
   
-4.  執行應用程式。 按一下 [瀏覽] 按鈕。 在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。  
+4.  <span data-ttu-id="22324-151">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-151">Run the application.</span></span> <span data-ttu-id="22324-152">按一下 [瀏覽] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="22324-152">Click the **Browse** button.</span></span> <span data-ttu-id="22324-153">在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="22324-153">In the **Browse For Folder** dialog box, browse to a folder that contains .txt files, and then select the folder and click **OK**.</span></span>  
   
-     `ListBox` 包含所選資料夾中的 .txt 檔案清單。  
+     <span data-ttu-id="22324-154">`ListBox` 包含所選資料夾中的 .txt 檔案清單。</span><span class="sxs-lookup"><span data-stu-id="22324-154">The `ListBox` contains a list of .txt files in the selected folder.</span></span>  
   
-5.  停止執行應用程式。  
+5.  <span data-ttu-id="22324-155">停止執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-155">Stop running the application.</span></span>  
   
-### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>若要取得檔案的屬性以及文字檔案的內容  
+### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a><span data-ttu-id="22324-156">若要取得檔案的屬性以及文字檔案的內容</span><span class="sxs-lookup"><span data-stu-id="22324-156">To obtain attributes of a file, and content from a text file</span></span>  
   
-1.  按兩下表單上的控制項，以建立 `examineButton` 的 `Click` 事件處理常式。  
+1.  <span data-ttu-id="22324-157">按兩下表單上的控制項，以建立 `examineButton` 的 `Click` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-157">Create a `Click` event handler for `examineButton` by double-clicking the control on the form.</span></span>  
   
-2.  將下列程式碼加入至 `Click` 事件處理常式。  
+2.  <span data-ttu-id="22324-158">將下列程式碼加入至 `Click` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-158">Add the following code to the `Click` event handler.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     <span data-ttu-id="22324-159">[!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-159">[!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]</span></span>  
   
-     程式碼會驗證 `ListBox` 中已選取項目。 接著，它會從 `ListBox` 取得檔案路徑的項目。 <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 方法用來檢查檔案是否仍然存在。  
+     <span data-ttu-id="22324-160">程式碼會驗證 `ListBox` 中已選取項目。</span><span class="sxs-lookup"><span data-stu-id="22324-160">The code verifies that an item is selected in the `ListBox`.</span></span> <span data-ttu-id="22324-161">接著，它會從 `ListBox` 取得檔案路徑的項目。</span><span class="sxs-lookup"><span data-stu-id="22324-161">It then obtains the file path entry from the `ListBox`.</span></span> <span data-ttu-id="22324-162"><xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 方法用來檢查檔案是否仍然存在。</span><span class="sxs-lookup"><span data-stu-id="22324-162">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> method is used to check whether the file still exists.</span></span>  
   
-     系統會以引數形式將檔案路徑傳送給 `GetTextForOutput` 方法，以在下一個步驟中加入。 這個方法會傳回字串，其中包含檔案資訊。 **MessageBox** 中會顯示檔案資訊。  
+     <span data-ttu-id="22324-163">系統會以引數形式將檔案路徑傳送給 `GetTextForOutput` 方法，以在下一個步驟中加入。</span><span class="sxs-lookup"><span data-stu-id="22324-163">The file path is sent as an argument to the `GetTextForOutput` method, which is added in the next step.</span></span> <span data-ttu-id="22324-164">這個方法會傳回字串，其中包含檔案資訊。</span><span class="sxs-lookup"><span data-stu-id="22324-164">This method returns a string that contains file information.</span></span> <span data-ttu-id="22324-165">**MessageBox** 中會顯示檔案資訊。</span><span class="sxs-lookup"><span data-stu-id="22324-165">The file information appears in a **MessageBox**.</span></span>  
   
-3.  新增下列 `GetTextForOutput` 方法。  
+3.  <span data-ttu-id="22324-166">新增下列 `GetTextForOutput` 方法。</span><span class="sxs-lookup"><span data-stu-id="22324-166">Add the following `GetTextForOutput` method.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     <span data-ttu-id="22324-167">[!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-167">[!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]</span></span>  
   
-     程式碼使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法來取得檔案參數。 檔案參數會新增至 <xref:System.Text.StringBuilder>。  
+     <span data-ttu-id="22324-168">程式碼使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 方法來取得檔案參數。</span><span class="sxs-lookup"><span data-stu-id="22324-168">The code uses the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method to obtain file parameters.</span></span> <span data-ttu-id="22324-169">檔案參數會新增至 <xref:System.Text.StringBuilder>。</span><span class="sxs-lookup"><span data-stu-id="22324-169">The file parameters are added to a <xref:System.Text.StringBuilder>.</span></span>  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
+     <span data-ttu-id="22324-170"><xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。</span><span class="sxs-lookup"><span data-stu-id="22324-170">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> method reads the file contents into a <xref:System.IO.StreamReader>.</span></span> <span data-ttu-id="22324-171">系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。</span><span class="sxs-lookup"><span data-stu-id="22324-171">The first line of the contents is obtained from the `StreamReader` and is added to the `StringBuilder`.</span></span>  
   
-4.  執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。 按一下 [確定]。  
+4.  <span data-ttu-id="22324-172">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-172">Run the application.</span></span> <span data-ttu-id="22324-173">按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。</span><span class="sxs-lookup"><span data-stu-id="22324-173">Click **Browse**, and browse to a folder that contains .txt files.</span></span> <span data-ttu-id="22324-174">按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="22324-174">Click **OK**.</span></span>  
   
-     選取 `ListBox` 中的檔案，然後按一下 [檢查]。 `MessageBox` 隨即顯示檔案資訊。  
+     <span data-ttu-id="22324-175">選取 `ListBox` 中的檔案，然後按一下 [檢查]。</span><span class="sxs-lookup"><span data-stu-id="22324-175">Select a file in the `ListBox`, and then click **Examine**.</span></span> <span data-ttu-id="22324-176">`MessageBox` 隨即顯示檔案資訊。</span><span class="sxs-lookup"><span data-stu-id="22324-176">A `MessageBox` shows the file information.</span></span>  
   
-5.  停止執行應用程式。  
+5.  <span data-ttu-id="22324-177">停止執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-177">Stop running the application.</span></span>  
   
-### <a name="to-add-a-log-entry"></a>若要新增記錄項目  
+### <a name="to-add-a-log-entry"></a><span data-ttu-id="22324-178">若要新增記錄項目</span><span class="sxs-lookup"><span data-stu-id="22324-178">To add a log entry</span></span>  
   
-1.  將下列程式碼加入 `examineButton_Click` 事件處理常式的結尾。  
+1.  <span data-ttu-id="22324-179">將下列程式碼加入 `examineButton_Click` 事件處理常式的結尾。</span><span class="sxs-lookup"><span data-stu-id="22324-179">Add the following code to the end of the `examineButton_Click` event handler.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     <span data-ttu-id="22324-180">[!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-180">[!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]</span></span>  
   
-     程式碼會將記錄檔路徑設為將記錄檔放入所選檔案的相同目錄中。 記錄項目的文字則會設為目前的日期和時間，後面接著檔案資訊。  
+     <span data-ttu-id="22324-181">程式碼會將記錄檔路徑設為將記錄檔放入所選檔案的相同目錄中。</span><span class="sxs-lookup"><span data-stu-id="22324-181">The code sets the log file path to put the log file in the same directory as that of the selected file.</span></span> <span data-ttu-id="22324-182">記錄項目的文字則會設為目前的日期和時間，後面接著檔案資訊。</span><span class="sxs-lookup"><span data-stu-id="22324-182">The text of the log entry is set to the current date and time followed by the file information.</span></span>  
   
-     將 `append` 引數設定為 `True` 的 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法用來建立記錄項目。  
+     <span data-ttu-id="22324-183">將 `append` 引數設定為 `True` 的 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法用來建立記錄項目。</span><span class="sxs-lookup"><span data-stu-id="22324-183">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method, with the `append` argument set to `True`, is used to create the log entry.</span></span>  
   
-2.  執行應用程式。 瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果] 核取方塊，然後按一下 [檢查]。 確認記錄項目已寫入 `log.txt` 檔案。  
+2.  <span data-ttu-id="22324-184">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-184">Run the application.</span></span> <span data-ttu-id="22324-185">瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果] 核取方塊，然後按一下 [檢查]。</span><span class="sxs-lookup"><span data-stu-id="22324-185">Browse to a text file, select it in the `ListBox`, select the **Save Results** check box, and then click **Examine**.</span></span> <span data-ttu-id="22324-186">確認記錄項目已寫入 `log.txt` 檔案。</span><span class="sxs-lookup"><span data-stu-id="22324-186">Verify that the log entry is written to the `log.txt` file.</span></span>  
   
-3.  停止執行應用程式。  
+3.  <span data-ttu-id="22324-187">停止執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-187">Stop running the application.</span></span>  
   
-### <a name="to-use-the-current-directory"></a>若要使用目前的目錄  
+### <a name="to-use-the-current-directory"></a><span data-ttu-id="22324-188">若要使用目前的目錄</span><span class="sxs-lookup"><span data-stu-id="22324-188">To use the current directory</span></span>  
   
-1.  按兩下表單的控制項，以建立 `Form1_Load` 的事件處理常式。  
+1.  <span data-ttu-id="22324-189">按兩下表單的控制項，以建立 `Form1_Load` 的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-189">Create an event handler for `Form1_Load` by double-clicking the form.</span></span>  
   
-2.  將下列程式碼加入事件處理常式。  
+2.  <span data-ttu-id="22324-190">將下列程式碼加入事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-190">Add the following code to the event handler.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     <span data-ttu-id="22324-191">[!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-191">[!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]</span></span>  
   
-     此程式碼會將資料夾瀏覽器的預設目錄設為目前的目錄。  
+     <span data-ttu-id="22324-192">此程式碼會將資料夾瀏覽器的預設目錄設為目前的目錄。</span><span class="sxs-lookup"><span data-stu-id="22324-192">This code sets the default directory of the folder browser to the current directory.</span></span>  
   
-3.  執行應用程式。 當您首次按一下 [瀏覽] 時，[瀏覽資料夾] 對話方塊即會開啟至目前目錄。  
+3.  <span data-ttu-id="22324-193">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-193">Run the application.</span></span> <span data-ttu-id="22324-194">當您首次按一下 [瀏覽] 時，[瀏覽資料夾] 對話方塊即會開啟至目前目錄。</span><span class="sxs-lookup"><span data-stu-id="22324-194">When you click **Browse** the first time, the **Browse For Folder** dialog box opens to the current directory.</span></span>  
   
-4.  停止執行應用程式。  
+4.  <span data-ttu-id="22324-195">停止執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-195">Stop running the application.</span></span>  
   
-### <a name="to-selectively-enable-controls"></a>若要選擇性地啟用控制項  
+### <a name="to-selectively-enable-controls"></a><span data-ttu-id="22324-196">若要選擇性地啟用控制項</span><span class="sxs-lookup"><span data-stu-id="22324-196">To selectively enable controls</span></span>  
   
-1.  新增下列 `SetEnabled` 方法。  
+1.  <span data-ttu-id="22324-197">新增下列 `SetEnabled` 方法。</span><span class="sxs-lookup"><span data-stu-id="22324-197">Add the following `SetEnabled` method.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     <span data-ttu-id="22324-198">[!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-198">[!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]</span></span>  
   
-     `SetEnabled` 方法會依據 `ListBox` 中是否選取項目，來啟用或停用控制項。  
+     <span data-ttu-id="22324-199">`SetEnabled` 方法會依據 `ListBox` 中是否選取項目，來啟用或停用控制項。</span><span class="sxs-lookup"><span data-stu-id="22324-199">The `SetEnabled` method enables or disables controls depending on whether an item is selected in the `ListBox`.</span></span>  
   
-2.  按兩下表單的 `ListBox` 控制項，以建立 `filesListBox` 的 `SelectedIndexChanged` 事件處理常式。  
+2.  <span data-ttu-id="22324-200">按兩下表單的 `ListBox` 控制項，以建立 `filesListBox` 的 `SelectedIndexChanged` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="22324-200">Create a `SelectedIndexChanged` event handler for `filesListBox` by double-clicking the `ListBox` control on the form.</span></span>  
   
-3.  在新的 `filesListBox_SelectedIndexChanged` 事件處理常式中，新增 `SetEnabled` 的呼叫。  
+3.  <span data-ttu-id="22324-201">在新的 `filesListBox_SelectedIndexChanged` 事件處理常式中，新增 `SetEnabled` 的呼叫。</span><span class="sxs-lookup"><span data-stu-id="22324-201">Add a call to `SetEnabled` in the new `filesListBox_SelectedIndexChanged` event handler.</span></span>  
   
-4.  在 `browseButton_Click` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
+4.  <span data-ttu-id="22324-202">在 `browseButton_Click` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。</span><span class="sxs-lookup"><span data-stu-id="22324-202">Add a call to `SetEnabled` at the end of the `browseButton_Click` event handler.</span></span>  
   
-5.  在 `Form1_Load` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
+5.  <span data-ttu-id="22324-203">在 `Form1_Load` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。</span><span class="sxs-lookup"><span data-stu-id="22324-203">Add a call to `SetEnabled` at the end of the `Form1_Load` event handler.</span></span>  
   
-6.  執行應用程式。 如果 `ListBox` 中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。  
+6.  <span data-ttu-id="22324-204">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="22324-204">Run the application.</span></span> <span data-ttu-id="22324-205">如果 `ListBox` 中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="22324-205">The **Save Results** check box and the **Examine** button are disabled if an item is not selected in the `ListBox`.</span></span>  
   
-## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整範例  
- 下列是完整範例。  
+## <a name="full-example-using-mycomputerfilesystem"></a><span data-ttu-id="22324-206">使用 My.Computer.FileSystem 的完整範例</span><span class="sxs-lookup"><span data-stu-id="22324-206">Full example using My.Computer.FileSystem</span></span>  
+ <span data-ttu-id="22324-207">下列是完整範例。</span><span class="sxs-lookup"><span data-stu-id="22324-207">Following is the complete example.</span></span>  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ <span data-ttu-id="22324-208">[!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-208">[!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]</span></span>  
   
-## <a name="full-example-using-systemio"></a>使用 System.IO 的完整範例  
- 下列對等範例使用來自 <xref:System.IO> 命名空間的類別，而不是使用 `My.Computer.FileSystem` 物件。  
+## <a name="full-example-using-systemio"></a><span data-ttu-id="22324-209">使用 System.IO 的完整範例</span><span class="sxs-lookup"><span data-stu-id="22324-209">Full example using System.IO</span></span>  
+ <span data-ttu-id="22324-210">下列對等範例使用來自 <xref:System.IO> 命名空間的類別，而不是使用 `My.Computer.FileSystem` 物件。</span><span class="sxs-lookup"><span data-stu-id="22324-210">The following equivalent example uses classes from the <xref:System.IO> namespace instead of using `My.Computer.FileSystem` objects.</span></span>  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ <span data-ttu-id="22324-211">[!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]</span><span class="sxs-lookup"><span data-stu-id="22324-211">[!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]</span></span>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a><span data-ttu-id="22324-212">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22324-212">See Also</span></span>  
  <xref:System.IO>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   
- [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+<span data-ttu-id="22324-213"> [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)</span><span class="sxs-lookup"><span data-stu-id="22324-213"> [Walkthrough: Manipulating Files by Using .NET Framework Methods](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)</span></span>
 

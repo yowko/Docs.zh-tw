@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b1a1eca9f75725cc75e6138941b7991416a69b2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>無法轉換類型的起始值 '&lt;type1&gt;'和間距值的型別'&lt;type2&gt;' 為一般型別
-指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="732f7-102">無法轉換類型的起始值 '&lt;type1&gt;'和間距值的型別'&lt;type2&gt;' 為一般型別</span><span class="sxs-lookup"><span data-stu-id="732f7-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="732f7-103">指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。</span><span class="sxs-lookup"><span data-stu-id="732f7-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="732f7-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="732f7-104">To correct this error</span></span>  
   
-1.  請變更一個或多個值的類型，以將所有的值轉換成一般類型。  
+1.  <span data-ttu-id="732f7-105">請變更一個或多個值的類型，以將所有的值轉換成一般類型。</span><span class="sxs-lookup"><span data-stu-id="732f7-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [巡覽程式碼偵錯工具](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [偵錯在 Visual Basic.NET 中的變更](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [For...Next 陳述式](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="732f7-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="732f7-106">See Also</span></span>  
+ <span data-ttu-id="732f7-107">[巡覽程式碼偵錯工具](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span><span class="sxs-lookup"><span data-stu-id="732f7-107">[Navigating through Code with the Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span></span>  
+<span data-ttu-id="732f7-108"> [偵錯在 Visual Basic.NET 中的變更](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span><span class="sxs-lookup"><span data-stu-id="732f7-108"> [Debugging Changes in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span></span>  
+<span data-ttu-id="732f7-109"> [For...Next 陳述式](../../visual-basic/language-reference/statements/for-next-statement.md)</span><span class="sxs-lookup"><span data-stu-id="732f7-109"> [For...Next Statement](../../visual-basic/language-reference/statements/for-next-statement.md)</span></span>

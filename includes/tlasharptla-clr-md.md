@@ -1,1 +1,1 @@
-通用語言執行平台 (CLR)
+<span data-ttu-id="e0353-101">通用語言執行平台 (CLR)</span><span class="sxs-lookup"><span data-stu-id="e0353-101">common language runtime (CLR)</span></span>

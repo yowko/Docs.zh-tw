@@ -1,5 +1,5 @@
 ---
-title: "如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,22 +28,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 78f84351910ff542df13697005a0257882cae623
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)
-這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。 當您必須使用參考類型語意時，請使用這種建構，而不是結構。  
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="7d990-102">如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="7d990-102">How to: Implement a Lightweight Class with Auto-Implemented Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="7d990-103">這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="7d990-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="7d990-104">當您必須使用參考類型語意時，請使用這種建構，而不是結構。</span><span class="sxs-lookup"><span data-stu-id="7d990-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>  
   
- 您可以使用兩種方式讓屬性不可變。  您可以將 [set](../../../csharp/language-reference/keywords/set.md) 存取子宣告為 [private](../../../csharp/language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。  您可以改為只宣告 [get](../../../csharp/language-reference/keywords/get.md) 存取子，在類型的建構函式以外的所有位置讓屬性不可變。  
+ <span data-ttu-id="7d990-105">您可以使用兩種方式讓屬性不可變。</span><span class="sxs-lookup"><span data-stu-id="7d990-105">You can make an immutable property in two ways.</span></span>  <span data-ttu-id="7d990-106">您可以將 [set](../../../csharp/language-reference/keywords/set.md) 存取子宣告為 [private](../../../csharp/language-reference/keywords/private.md)。</span><span class="sxs-lookup"><span data-stu-id="7d990-106">You can declare the [set](../../../csharp/language-reference/keywords/set.md) accessor.to be [private](../../../csharp/language-reference/keywords/private.md).</span></span>  <span data-ttu-id="7d990-107">屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。</span><span class="sxs-lookup"><span data-stu-id="7d990-107">The property is only settable within the type, but it is immutable to consumers.</span></span>  <span data-ttu-id="7d990-108">您可以改為只宣告 [get](../../../csharp/language-reference/keywords/get.md) 存取子，在類型的建構函式以外的所有位置讓屬性不可變。</span><span class="sxs-lookup"><span data-stu-id="7d990-108">You can instead declare only the [get](../../../csharp/language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type’s constructor.</span></span>  
   
- 當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。 您必須使用建構函式或 Factory 方法。  
+ <span data-ttu-id="7d990-109">當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。</span><span class="sxs-lookup"><span data-stu-id="7d990-109">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="7d990-110">您必須使用建構函式或 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="7d990-110">You must use a constructor or a factory method.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例顯示兩個方式來實作不可變的類別，該類別具有自動實作屬性。 每一種方法會宣告具有私用 `set` 的其中一個屬性，以及僅具有 `get` 的其中一個屬性。  第一個類別僅使用建構函式來初始化屬性，第二個類別使用會呼叫建構函式的靜態 Factory 方法。  
+## <a name="example"></a><span data-ttu-id="7d990-111">範例</span><span class="sxs-lookup"><span data-stu-id="7d990-111">Example</span></span>  
+ <span data-ttu-id="7d990-112">下列範例顯示兩個方式來實作不可變的類別，該類別具有自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="7d990-112">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="7d990-113">每一種方法會宣告具有私用 `set` 的其中一個屬性，以及僅具有 `get` 的其中一個屬性。</span><span class="sxs-lookup"><span data-stu-id="7d990-113">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="7d990-114">第一個類別僅使用建構函式來初始化屬性，第二個類別使用會呼叫建構函式的靜態 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="7d990-114">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>  
   
 ```csharp  
 // This class is immutable. After an object is created,   
@@ -134,10 +134,10 @@ ms.lasthandoff: 05/15/2017
 */  
 ```  
   
- 編譯器會針對每個自動實作屬性建立支援欄位。 欄位不是可以直接從原始程式碼存取的。  
+ <span data-ttu-id="7d990-115">編譯器會針對每個自動實作屬性建立支援欄位。</span><span class="sxs-lookup"><span data-stu-id="7d990-115">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="7d990-116">欄位不是可以直接從原始程式碼存取的。</span><span class="sxs-lookup"><span data-stu-id="7d990-116">The fields are not accessible directly from source code.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+## <a name="see-also"></a><span data-ttu-id="7d990-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7d990-117">See Also</span></span>  
+ <span data-ttu-id="7d990-118">[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md) </span><span class="sxs-lookup"><span data-stu-id="7d990-118">[Properties](../../../csharp/programming-guide/classes-and-structs/properties.md) </span></span>  
+ <span data-ttu-id="7d990-119">[struct](../../../csharp/language-reference/keywords/struct.md) </span><span class="sxs-lookup"><span data-stu-id="7d990-119">[struct](../../../csharp/language-reference/keywords/struct.md) </span></span>  
+ [<span data-ttu-id="7d990-120">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="7d990-120">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 

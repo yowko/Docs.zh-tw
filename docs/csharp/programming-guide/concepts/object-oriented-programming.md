@@ -1,5 +1,5 @@
 ---
-title: "物件導向程式設計 (C#) | Microsoft Docs"
+title: "物件導向程式設計 (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,62 +16,62 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 3f3e6aa047e0de279d15298408c4593c5fb17666
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de06921840f06f36d8600b9567986644f58c6ad5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
-C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。  
+# <a name="object-oriented-programming-c"></a><span data-ttu-id="bdc8e-102">物件導向程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="bdc8e-102">Object-Oriented Programming (C#)</span></span>
+<span data-ttu-id="bdc8e-103">C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-103">C# provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>  
   
- 「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。  
+ <span data-ttu-id="bdc8e-104">「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-104">*Encapsulation* means that a group of related properties, methods, and other members are treated as a single unit or object.</span></span>  
   
- 「繼承」則是描述依據現有類別來建立新類別的能力。  
+ <span data-ttu-id="bdc8e-105">「繼承」則是描述依據現有類別來建立新類別的能力。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-105">*Inheritance* describes the ability to create new classes based on an existing class.</span></span>  
   
- 「多型」指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。  
+ <span data-ttu-id="bdc8e-106">「多型」指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-106">*Polymorphism* means that you can have multiple classes that can be used interchangeably, even though each class implements the same properties or methods in different ways.</span></span>  
   
- 本節將說明下列概念：  
+ <span data-ttu-id="bdc8e-107">本節將說明下列概念：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-107">This section describes the following concepts:</span></span>  
   
--   [類別與物件](#Classes)  
+-   [<span data-ttu-id="bdc8e-108">類別與物件</span><span class="sxs-lookup"><span data-stu-id="bdc8e-108">Classes and Objects</span></span>](#Classes)  
   
-    -   [類別成員](#Members)  
+    -   [<span data-ttu-id="bdc8e-109">類別成員</span><span class="sxs-lookup"><span data-stu-id="bdc8e-109">Class Members</span></span>](#Members)  
   
-         [屬性與欄位](#Properties)  
+         [<span data-ttu-id="bdc8e-110">屬性與欄位</span><span class="sxs-lookup"><span data-stu-id="bdc8e-110">Properties and Fields</span></span>](#Properties)  
   
-         [方法](#Methods)  
+         [<span data-ttu-id="bdc8e-111">方法</span><span class="sxs-lookup"><span data-stu-id="bdc8e-111">Methods</span></span>](#Methods)  
   
-         [建構函式](#Constructors)  
+         [<span data-ttu-id="bdc8e-112">建構函式</span><span class="sxs-lookup"><span data-stu-id="bdc8e-112">Constructors</span></span>](#Constructors)  
   
-         [完成項](#Finalizers)  
+         [<span data-ttu-id="bdc8e-113">完成項</span><span class="sxs-lookup"><span data-stu-id="bdc8e-113">Finalizers</span></span>](#Finalizers)  
   
-         [事件](#Events)  
+         [<span data-ttu-id="bdc8e-114">事件</span><span class="sxs-lookup"><span data-stu-id="bdc8e-114">Events</span></span>](#Events)  
   
-         [巢狀類別](#NestedClasses)  
+         [<span data-ttu-id="bdc8e-115">巢狀類別</span><span class="sxs-lookup"><span data-stu-id="bdc8e-115">Nested Classes</span></span>](#NestedClasses)  
   
-    -   [存取修飾詞與存取層級](#AccessModifiers)  
+    -   [<span data-ttu-id="bdc8e-116">存取修飾詞與存取層級</span><span class="sxs-lookup"><span data-stu-id="bdc8e-116">Access Modifiers and Access Levels</span></span>](#AccessModifiers)  
   
-    -   [具現化類別](#InstantiatingClasses)  
+    -   [<span data-ttu-id="bdc8e-117">具現化類別</span><span class="sxs-lookup"><span data-stu-id="bdc8e-117">Instantiating Classes</span></span>](#InstantiatingClasses)  
   
-    -   [靜態類別與成員](#Static)  
+    -   [<span data-ttu-id="bdc8e-118">靜態類別與成員</span><span class="sxs-lookup"><span data-stu-id="bdc8e-118">Static Classes and Members</span></span>](#Static)  
   
-    -   [匿名類型](#AnonymousTypes)  
+    -   [<span data-ttu-id="bdc8e-119">匿名類型</span><span class="sxs-lookup"><span data-stu-id="bdc8e-119">Anonymous Types</span></span>](#AnonymousTypes)  
   
--   [繼承](#Inheritance)  
+-   [<span data-ttu-id="bdc8e-120">繼承</span><span class="sxs-lookup"><span data-stu-id="bdc8e-120">Inheritance</span></span>](#Inheritance)  
   
-    -   [覆寫成員](#Overriding)  
+    -   [<span data-ttu-id="bdc8e-121">覆寫成員</span><span class="sxs-lookup"><span data-stu-id="bdc8e-121">Overriding Members</span></span>](#Overriding)  
   
--   [介面](#Interfaces)  
+-   [<span data-ttu-id="bdc8e-122">介面</span><span class="sxs-lookup"><span data-stu-id="bdc8e-122">Interfaces</span></span>](#Interfaces)  
   
--   [泛型](#Generics)  
+-   [<span data-ttu-id="bdc8e-123">泛型</span><span class="sxs-lookup"><span data-stu-id="bdc8e-123">Generics</span></span>](#Generics)  
   
--   [委派](#Delegates)  
+-   [<span data-ttu-id="bdc8e-124">委派</span><span class="sxs-lookup"><span data-stu-id="bdc8e-124">Delegates</span></span>](#Delegates)  
   
-##  <a name="Classes"></a>類別與物件  
- 「類別」和「物件」有時會交換使用，但事實上，類別說的是物件的「型別」，而物件則是類別之可使用的「執行個體」。 因此，建立物件的動作稱為「具現化」。 再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。  
+##  <span data-ttu-id="bdc8e-125"><a name="Classes"></a>類別與物件</span><span class="sxs-lookup"><span data-stu-id="bdc8e-125"><a name="Classes"></a> Classes and Objects</span></span>  
+ <span data-ttu-id="bdc8e-126">「類別」和「物件」有時會交換使用，但事實上，類別說的是物件的「型別」，而物件則是類別之可使用的「執行個體」。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="bdc8e-127">因此，建立物件的動作稱為「具現化」。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="bdc8e-128">再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>  
   
- 若要定義類別：  
+ <span data-ttu-id="bdc8e-129">若要定義類別：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-129">To define a class:</span></span>  
   
 ```csharp  
 class SampleClass  
@@ -79,9 +79,9 @@ class SampleClass
 }  
 ```  
   
- C# 也會提供輕量版的類別，稱為「結構」，當您必須建立龐大物件陣列而不想要使用太多記憶體時，這個結構會很有用。  
+ <span data-ttu-id="bdc8e-130">C# 也會提供輕量版的類別，稱為「結構」，當您必須建立龐大物件陣列而不想要使用太多記憶體時，這個結構會很有用。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-130">C# also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.</span></span>  
   
- 若要定義結構：  
+ <span data-ttu-id="bdc8e-131">若要定義結構：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-131">To define a structure:</span></span>  
   
 ```csharp  
 struct SampleStruct  
@@ -89,19 +89,19 @@ struct SampleStruct
 }  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-132">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-132">For more information, see:</span></span>  
   
--   [class](../../../csharp/language-reference/keywords/class.md)  
+-   [<span data-ttu-id="bdc8e-133">class</span><span class="sxs-lookup"><span data-stu-id="bdc8e-133">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
   
--   [struct](../../../csharp/language-reference/keywords/struct.md)  
+-   [<span data-ttu-id="bdc8e-134">struct</span><span class="sxs-lookup"><span data-stu-id="bdc8e-134">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> 類別成員  
- 每個類別都有不同的「類別成員」，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。  
+###  <span data-ttu-id="bdc8e-135"><a name="Members"></a> 類別成員</span><span class="sxs-lookup"><span data-stu-id="bdc8e-135"><a name="Members"></a> Class Members</span></span>  
+ <span data-ttu-id="bdc8e-136">每個類別都有不同的「類別成員」，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>  
   
-####  <a name="Properties"></a> 屬性與欄位  
- 欄位和屬性表示物件包含的資訊。 欄位就像是變數，可直接讀取或設定。  
+####  <span data-ttu-id="bdc8e-137"><a name="Properties"></a> 屬性與欄位</span><span class="sxs-lookup"><span data-stu-id="bdc8e-137"><a name="Properties"></a> Properties and Fields</span></span>  
+ <span data-ttu-id="bdc8e-138">欄位和屬性表示物件包含的資訊。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="bdc8e-139">欄位就像是變數，可直接讀取或設定。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-139">Fields are like variables because they can be read or set directly.</span></span>  
   
- 若要定義欄位：  
+ <span data-ttu-id="bdc8e-140">若要定義欄位：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-140">To define a field:</span></span>  
   
 ```csharp  
 Class SampleClass  
@@ -110,11 +110,11 @@ Class SampleClass
 }  
 ```  
   
- 屬性具有取得和設定程序，讓您更容易控制設定與傳回數值的方式。  
+ <span data-ttu-id="bdc8e-141">屬性具有取得和設定程序，讓您更容易控制設定與傳回數值的方式。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-141">Properties have get and set procedures, which provide more control on how values are set or returned.</span></span>  
   
- C# 允許您建立私用欄位來儲存屬性值，或是使用所謂的自動實作屬性，自動在幕後建立此欄位並提供屬性程序的基本邏輯。  
+ <span data-ttu-id="bdc8e-142">C# 允許您建立私用欄位來儲存屬性值，或是使用所謂的自動實作屬性，自動在幕後建立此欄位並提供屬性程序的基本邏輯。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-142">C# allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.</span></span>  
   
- 若要定義自動實作屬性：  
+ <span data-ttu-id="bdc8e-143">若要定義自動實作屬性：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-143">To define an auto-implemented property:</span></span>  
   
 ```csharp  
 class SampleClass  
@@ -123,7 +123,7 @@ class SampleClass
 }  
 ```  
   
- 如果您需要執行某些額外作業來讀取和寫入屬性值，請定義用來儲存屬性值的欄位，並提供儲存和擷取這個欄位的基本邏輯：  
+ <span data-ttu-id="bdc8e-144">如果您需要執行某些額外作業來讀取和寫入屬性值，請定義用來儲存屬性值的欄位，並提供儲存和擷取這個欄位的基本邏輯：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-144">If you need to perform some additional operations for reading and writing the property value, define a field for storing the property value and provide the basic logic for storing and retrieving it:</span></span>  
   
 ```csharp  
 class SampleClass  
@@ -139,18 +139,18 @@ class SampleClass
 }  
 ```  
   
- 大部分屬性都具有方法或程序，可以設定及取得屬性值。 但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。 在 C# 中，則可以省略 `get` 或 `set` 屬性方法。 不過，自動實作的屬性不可以是唯讀或唯寫。  
+ <span data-ttu-id="bdc8e-145">大部分屬性都具有方法或程序，可以設定及取得屬性值。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-145">Most properties have methods or procedures to both set and get the property value.</span></span> <span data-ttu-id="bdc8e-146">但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-146">However, you can create read-only or write-only properties to restrict them from being modified or read.</span></span> <span data-ttu-id="bdc8e-147">在 C# 中，則可以省略 `get` 或 `set` 屬性方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-147">In C#, you can omit the `get` or `set` property method.</span></span> <span data-ttu-id="bdc8e-148">不過，自動實作的屬性不可以是唯讀或唯寫。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-148">However, auto-implemented properties cannot be read-only or write-only.</span></span>  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-149">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-149">For more information, see:</span></span>  
   
--   [get](../../../csharp/language-reference/keywords/get.md)  
+-   [<span data-ttu-id="bdc8e-150">get</span><span class="sxs-lookup"><span data-stu-id="bdc8e-150">get</span></span>](../../../csharp/language-reference/keywords/get.md)  
   
--   [set](../../../csharp/language-reference/keywords/set.md)  
+-   [<span data-ttu-id="bdc8e-151">set</span><span class="sxs-lookup"><span data-stu-id="bdc8e-151">set</span></span>](../../../csharp/language-reference/keywords/set.md)  
   
-####  <a name="Methods"></a> 方法  
- 「方法」是物件可執行的動作。  
+####  <span data-ttu-id="bdc8e-152"><a name="Methods"></a> 方法</span><span class="sxs-lookup"><span data-stu-id="bdc8e-152"><a name="Methods"></a> Methods</span></span>  
+ <span data-ttu-id="bdc8e-153">「方法」是物件可執行的動作。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-153">A *method* is an action that an object can perform.</span></span>  
   
- 若要定義類別的方法：  
+ <span data-ttu-id="bdc8e-154">若要定義類別的方法：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-154">To define a method of a class:</span></span>  
   
 ```csharp  
 class SampleClass  
@@ -162,27 +162,27 @@ class SampleClass
 }  
 ```  
   
- 類別可以有同一個方法的多個實作或「多載」，但是這些實作的參數個數和參數類型並不相同。  
+ <span data-ttu-id="bdc8e-155">類別可以有同一個方法的多個實作或「多載」，但是這些實作的參數個數和參數類型並不相同。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-155">A class can have several implementations, or *overloads*, of the same method that differ in the number of parameters or parameter types.</span></span>  
   
- 若要多載方法：  
+ <span data-ttu-id="bdc8e-156">若要多載方法：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-156">To overload a method:</span></span>  
   
 ```csharp  
 public int sampleMethod(string sampleParam) {};  
 public int sampleMethod(int sampleParam) {}  
 ```  
   
- 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」，允許您在現有類別的實際定義之外將方法新增至類別。  
+ <span data-ttu-id="bdc8e-157">在多數情況下，您是在類別定義中宣告方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-157">In most cases you declare a method within a class definition.</span></span> <span data-ttu-id="bdc8e-158">不過， C# 也支援「擴充方法」，允許您在現有類別的實際定義之外將方法新增至類別。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-158">However, C# also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.</span></span>  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-159">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-159">For more information, see:</span></span>  
   
--   [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+-   [<span data-ttu-id="bdc8e-160">方法</span><span class="sxs-lookup"><span data-stu-id="bdc8e-160">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+-   [<span data-ttu-id="bdc8e-161">擴充方法</span><span class="sxs-lookup"><span data-stu-id="bdc8e-161">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <a name="Constructors"></a> 建構函式  
- 建構函式是類別方法，會在建立指定類型的物件時自動執行。 建構函式通常用來初始化新物件的資料成員， 而且只能在建立類別時執行一次。 此外，建構函式中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 不過，就和其他任何方法一樣，您可以建立多個建構函式多載。  
+####  <span data-ttu-id="bdc8e-162"><a name="Constructors"></a> 建構函式</span><span class="sxs-lookup"><span data-stu-id="bdc8e-162"><a name="Constructors"></a> Constructors</span></span>  
+ <span data-ttu-id="bdc8e-163">建構函式是類別方法，會在建立指定類型的物件時自動執行。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-163">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="bdc8e-164">建構函式通常用來初始化新物件的資料成員，</span><span class="sxs-lookup"><span data-stu-id="bdc8e-164">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="bdc8e-165">而且只能在建立類別時執行一次。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-165">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="bdc8e-166">此外，建構函式中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-166">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="bdc8e-167">不過，就和其他任何方法一樣，您可以建立多個建構函式多載。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-167">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>  
   
- 若要定義類別的建構函式：  
+ <span data-ttu-id="bdc8e-168">若要定義類別的建構函式：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-168">To define a constructor for a class:</span></span>  
   
 ```csharp  
 public class SampleClass  
@@ -194,26 +194,26 @@ public class SampleClass
 }  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-169">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-169">For more information, see:</span></span>  
   
- [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)。  
+ <span data-ttu-id="bdc8e-170">[建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-170">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span>  
   
-####  <a name="Finalizers"></a> 完成項  
- 完成項是用來解構類別的執行個體。 在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。 不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個完成項。  
+####  <span data-ttu-id="bdc8e-171"><a name="Finalizers"></a> 完成項</span><span class="sxs-lookup"><span data-stu-id="bdc8e-171"><a name="Finalizers"></a> Finalizers</span></span>  
+ <span data-ttu-id="bdc8e-172">完成項是用來解構類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-172">Finalizers are used to destruct instances of classes.</span></span> <span data-ttu-id="bdc8e-173">在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-173">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="bdc8e-174">不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-174">However, you may still need finalizers to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="bdc8e-175">一個類別只能有一個完成項。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-175">There can be only one finalizers for a class.</span></span>  
   
- 如需 .NET Framework 的完成項和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
+ <span data-ttu-id="bdc8e-176">如需 .NET Framework 的完成項和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-176">For more information about finalizers and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>  
   
-####  <a name="Events"></a> 事件  
- 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」，而接收 (或處理) 事件的類別則稱為「訂閱者」。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。  
+####  <span data-ttu-id="bdc8e-177"><a name="Events"></a> 事件</span><span class="sxs-lookup"><span data-stu-id="bdc8e-177"><a name="Events"></a> Events</span></span>  
+ <span data-ttu-id="bdc8e-178">事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-178">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="bdc8e-179">傳送 (或引發) 事件的類別稱為「發行者」，而接收 (或處理) 事件的類別則稱為「訂閱者」。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-179">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="bdc8e-180">如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-180">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>  
   
--   若要宣告類別中的事件，請使用 [event](../../../csharp/language-reference/keywords/event.md) 關鍵字。  
+-   <span data-ttu-id="bdc8e-181">若要宣告類別中的事件，請使用 [event](../../../csharp/language-reference/keywords/event.md) 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-181">To declare an event in a class, use the [event](../../../csharp/language-reference/keywords/event.md) keyword.</span></span>  
   
--   要引發事件，請叫用事件委派。  
+-   <span data-ttu-id="bdc8e-182">要引發事件，請叫用事件委派。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-182">To raise an event, invoke the event delegate.</span></span>  
   
--   若要訂閱事件，請使用 `+=` 運算子；若要取消訂閱事件，則使用 `-=` 運算子。  
+-   <span data-ttu-id="bdc8e-183">若要訂閱事件，請使用 `+=` 運算子；若要取消訂閱事件，則使用 `-=` 運算子。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-183">To subscribe to an event, use the `+=` operator; to unsubscribe from an event, use the `-=` operator.</span></span>  
   
-####  <a name="NestedClasses"></a>巢狀類別  
- 在類別中定義的另一個類別即稱為「巢狀」類別。 巢狀類別預設為私用。  
+####  <span data-ttu-id="bdc8e-184"><a name="NestedClasses"></a>巢狀類別</span><span class="sxs-lookup"><span data-stu-id="bdc8e-184"><a name="NestedClasses"></a> Nested Classes</span></span>  
+ <span data-ttu-id="bdc8e-185">在類別中定義的另一個類別即稱為「巢狀」類別。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-185">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="bdc8e-186">巢狀類別預設為私用。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-186">By default, the nested class is private.</span></span>  
   
 ```csharp  
 class Container  
@@ -225,35 +225,35 @@ class Container
 }  
 ```  
   
- 若要建立巢狀類別的執行個體，請使用容器類別名稱，後面加上點號，再接著巢狀類別名稱，如下所示：  
+ <span data-ttu-id="bdc8e-187">若要建立巢狀類別的執行個體，請使用容器類別名稱，後面加上點號，再接著巢狀類別名稱，如下所示：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-187">To create an instance of the nested class, use the name of the container class followed by the dot and then followed by the name of the nested class:</span></span>  
   
 ```csharp  
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <a name="AccessModifiers"></a> 存取修飾詞與存取層級  
- 所有類別及類別成員都可以使用「存取修飾詞」，指定要提供給其他類別的存取層級。  
+###  <span data-ttu-id="bdc8e-188"><a name="AccessModifiers"></a> 存取修飾詞與存取層級</span><span class="sxs-lookup"><span data-stu-id="bdc8e-188"><a name="AccessModifiers"></a> Access Modifiers and Access Levels</span></span>  
+ <span data-ttu-id="bdc8e-189">所有類別及類別成員都可以使用「存取修飾詞」，指定要提供給其他類別的存取層級。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-189">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>  
   
- 下列為可用的存取修飾詞：  
+ <span data-ttu-id="bdc8e-190">下列為可用的存取修飾詞：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-190">The following access modifiers are available:</span></span>  
   
-|C# 修飾詞|定義|  
+|<span data-ttu-id="bdc8e-191">C# 修飾詞</span><span class="sxs-lookup"><span data-stu-id="bdc8e-191">C# Modifier</span></span>|<span data-ttu-id="bdc8e-192">定義</span><span class="sxs-lookup"><span data-stu-id="bdc8e-192">Definition</span></span>|  
 |------------------|----------------|  
-|[public](../../../csharp/language-reference/keywords/public.md)|類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。|  
-|[private](../../../csharp/language-reference/keywords/private.md)|類型或成員只能由相同類別中的程式碼存取。|  
-|[protected](../../../csharp/language-reference/keywords/protected.md)|類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。|  
-|[internal](../../../csharp/language-reference/keywords/internal.md)|類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。|  
-|`protected internal`|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|  
+|[<span data-ttu-id="bdc8e-193">public</span><span class="sxs-lookup"><span data-stu-id="bdc8e-193">public</span></span>](../../../csharp/language-reference/keywords/public.md)|<span data-ttu-id="bdc8e-194">類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-194">The type or member can be accessed by any other code in the same assembly or another assembly that references it.</span></span>|  
+|[<span data-ttu-id="bdc8e-195">private</span><span class="sxs-lookup"><span data-stu-id="bdc8e-195">private</span></span>](../../../csharp/language-reference/keywords/private.md)|<span data-ttu-id="bdc8e-196">類型或成員只能由相同類別中的程式碼存取。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-196">The type or member can only be accessed by code in the same class.</span></span>|  
+|[<span data-ttu-id="bdc8e-197">protected</span><span class="sxs-lookup"><span data-stu-id="bdc8e-197">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)|<span data-ttu-id="bdc8e-198">類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-198">The type or member can only be accessed by code in the same class or in a derived class.</span></span>|  
+|[<span data-ttu-id="bdc8e-199">internal</span><span class="sxs-lookup"><span data-stu-id="bdc8e-199">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)|<span data-ttu-id="bdc8e-200">類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-200">The type or member can be accessed by any code in the same assembly, but not from another assembly.</span></span>|  
+|`protected internal`|<span data-ttu-id="bdc8e-201">類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-201">The type or member can be accessed by any code in the same assembly, or by any derived class in another assembly.</span></span>|  
   
- 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ <span data-ttu-id="bdc8e-202">如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-202">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-###  <a name="InstantiatingClasses"></a> 具現化類別  
- 若要建立物件，您必須將類別執行個體化，或是建立類別執行個體。  
+###  <span data-ttu-id="bdc8e-203"><a name="InstantiatingClasses"></a> 具現化類別</span><span class="sxs-lookup"><span data-stu-id="bdc8e-203"><a name="InstantiatingClasses"></a> Instantiating Classes</span></span>  
+ <span data-ttu-id="bdc8e-204">若要建立物件，您必須將類別執行個體化，或是建立類別執行個體。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-204">To create an object, you need to instantiate a class, or create a class instance.</span></span>  
   
 ```csharp  
 SampleClass sampleObject = new SampleClass();  
 ```  
   
- 將類別執行個體化之後，您就可以將值指派給執行個體的屬性和欄位，並叫用類別方法。  
+ <span data-ttu-id="bdc8e-205">將類別執行個體化之後，您就可以將值指派給執行個體的屬性和欄位，並叫用類別方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-205">After instantiating a class, you can assign values to the instance's properties and fields and invoke class methods.</span></span>  
   
 ```csharp  
 // Set a property value.  
@@ -262,7 +262,7 @@ sampleObject.sampleProperty = "Sample String";
 sampleObject.sampleMethod();  
 ```  
   
- 若要在類別執行個體化期間將值指派給屬性，請使用物件初始設定式：  
+ <span data-ttu-id="bdc8e-206">若要在類別執行個體化期間將值指派給屬性，請使用物件初始設定式：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-206">To assign values to properties during the class instantiation process, use object initializers:</span></span>  
   
 ```csharp  
 // Set a property value.  
@@ -270,16 +270,16 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-207">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-207">For more information, see:</span></span>  
   
--   [new 運算子](../../../csharp/language-reference/keywords/new-operator.md)  
+-   [<span data-ttu-id="bdc8e-208">new 運算子</span><span class="sxs-lookup"><span data-stu-id="bdc8e-208">new Operator</span></span>](../../../csharp/language-reference/keywords/new-operator.md)  
   
--   [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+-   [<span data-ttu-id="bdc8e-209">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="bdc8e-209">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> 靜態類別與成員  
- 類別的靜態成員是類別所有執行個體共用的屬性、程序或欄位。  
+###  <span data-ttu-id="bdc8e-210"><a name="Static"></a> 靜態類別與成員</span><span class="sxs-lookup"><span data-stu-id="bdc8e-210"><a name="Static"></a> Static Classes and Members</span></span>  
+ <span data-ttu-id="bdc8e-211">類別的靜態成員是類別所有執行個體共用的屬性、程序或欄位。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-211">A static member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
- 定義靜態成員：  
+ <span data-ttu-id="bdc8e-212">定義靜態成員：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-212">To define a static member:</span></span>  
   
 ```csharp  
 static class SampleClass  
@@ -288,20 +288,20 @@ static class SampleClass
 }  
 ```  
   
- 若要存取靜態成員，請使用類別的名稱，但不要建立這個類別的物件：  
+ <span data-ttu-id="bdc8e-213">若要存取靜態成員，請使用類別的名稱，但不要建立這個類別的物件：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-213">To access the static member, use the name of the class without creating an object of this class:</span></span>  
   
 ```csharp  
 Console.WriteLine(SampleClass.SampleString);  
 ```  
   
- C# 中的靜態類別只有靜態成員，且無法具現化。 靜態成員也無法存取非靜態屬性、欄位或方法  
+ <span data-ttu-id="bdc8e-214">C# 中的靜態類別只有靜態成員，且無法具現化。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-214">Static  classes in C# have static members only and cannot be instantiated.</span></span> <span data-ttu-id="bdc8e-215">靜態成員也無法存取非靜態屬性、欄位或方法</span><span class="sxs-lookup"><span data-stu-id="bdc8e-215">Static members also cannot access non-static  properties, fields or methods</span></span>  
   
- 如需詳細資訊，請參閱[靜態](../../../csharp/language-reference/keywords/static.md)。  
+ <span data-ttu-id="bdc8e-216">如需詳細資訊，請參閱[靜態](../../../csharp/language-reference/keywords/static.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-216">For more information, see: [static](../../../csharp/language-reference/keywords/static.md).</span></span>  
   
-###  <a name="AnonymousTypes"></a> 匿名型別  
- 使用匿名類型建立物件時，您不需要撰寫資料類型的類別定義， 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 這個類別沒有可使用的名稱，但是包含您在宣告物件時指定的屬性。  
+###  <span data-ttu-id="bdc8e-217"><a name="AnonymousTypes"></a> 匿名型別</span><span class="sxs-lookup"><span data-stu-id="bdc8e-217"><a name="AnonymousTypes"></a> Anonymous Types</span></span>  
+ <span data-ttu-id="bdc8e-218">使用匿名類型建立物件時，您不需要撰寫資料類型的類別定義，</span><span class="sxs-lookup"><span data-stu-id="bdc8e-218">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="bdc8e-219">編譯器 (Compiler) 會自動幫您建立類別 (Class)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-219">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="bdc8e-220">這個類別沒有可使用的名稱，但是包含您在宣告物件時指定的屬性。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-220">The class has no usable name and contains the properties you specify in declaring the object.</span></span>  
   
- 若要建立匿名類型的執行個體：  
+ <span data-ttu-id="bdc8e-221">若要建立匿名類型的執行個體：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-221">To create an instance of an anonymous type:</span></span>  
   
 ```csharp  
 // sampleObject is an instance of a simple anonymous type.  
@@ -309,56 +309,56 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- 如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
+ <span data-ttu-id="bdc8e-222">如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-222">For more information, see: [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-##  <a name="Inheritance"></a> 繼承  
- 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 不過，C# 中的所有類別都隱含繼承 <xref:System.Object> 類別，這個類別會支援 .NET 類別階層架構，並為所有類別提供低階服務。  
+##  <span data-ttu-id="bdc8e-223"><a name="Inheritance"></a> 繼承</span><span class="sxs-lookup"><span data-stu-id="bdc8e-223"><a name="Inheritance"></a> Inheritance</span></span>  
+ <span data-ttu-id="bdc8e-224">繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-224">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="bdc8e-225">成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-225">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="bdc8e-226">不過，C# 中的所有類別都隱含繼承 <xref:System.Object> 類別，這個類別會支援 .NET 類別階層架構，並為所有類別提供低階服務。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-226">However, all classes in C# implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>  
   
 > [!NOTE]
->  C# 不支援多重繼承。 也就是說，您只能為衍生類別指定一個基底類別。  
+>  <span data-ttu-id="bdc8e-227">C# 不支援多重繼承。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-227">C# doesn't support multiple inheritance.</span></span> <span data-ttu-id="bdc8e-228">也就是說，您只能為衍生類別指定一個基底類別。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-228">That is, you can specify only one base class for a derived class.</span></span>  
   
- 若要繼承基底類別：  
+ <span data-ttu-id="bdc8e-229">若要繼承基底類別：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-229">To inherit from a base class:</span></span>  
   
 ```csharp  
 class DerivedClass:BaseClass{}  
 ```  
   
- 所有類別預設都可以被繼承。 不過，您可以指定類別是否不得當做基底類別，或是建立只能當做基底類別的類別。  
+ <span data-ttu-id="bdc8e-230">所有類別預設都可以被繼承。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-230">By default all classes can be inherited.</span></span> <span data-ttu-id="bdc8e-231">不過，您可以指定類別是否不得當做基底類別，或是建立只能當做基底類別的類別。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-231">However, you can specify whether a class must not be used as a base class, or create a class that can be used as a base class only.</span></span>  
   
- 若要指定類別不得當做基底類別使用：  
+ <span data-ttu-id="bdc8e-232">若要指定類別不得當做基底類別使用：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-232">To specify that a class cannot be used as a base class:</span></span>  
   
 ```csharp  
 public sealed class A { }  
 ```  
   
- 若要指定類別只能當做基底類別且無法執行個體化：  
+ <span data-ttu-id="bdc8e-233">若要指定類別只能當做基底類別且無法執行個體化：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-233">To specify that a class can be used as a base class only and cannot be instantiated:</span></span>  
   
 ```csharp  
 public abstract class B { }  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-234">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-234">For more information, see:</span></span>  
   
--   [sealed](../../../csharp/language-reference/keywords/sealed.md)  
+-   [<span data-ttu-id="bdc8e-235">sealed</span><span class="sxs-lookup"><span data-stu-id="bdc8e-235">sealed</span></span>](../../../csharp/language-reference/keywords/sealed.md)  
   
--   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+-   [<span data-ttu-id="bdc8e-236">abstract</span><span class="sxs-lookup"><span data-stu-id="bdc8e-236">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <a name="Overriding"></a> 覆寫成員  
- 衍生類別預設會從其基底類別繼承所有成員。 如果想要變更所繼承成員的行為，您必須覆寫這個成員。 也就是說，您可以定義衍生類別中方法、屬性或事件的新實作。  
+###  <span data-ttu-id="bdc8e-237"><a name="Overriding"></a> 覆寫成員</span><span class="sxs-lookup"><span data-stu-id="bdc8e-237"><a name="Overriding"></a> Overriding Members</span></span>  
+ <span data-ttu-id="bdc8e-238">衍生類別預設會從其基底類別繼承所有成員。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-238">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="bdc8e-239">如果想要變更所繼承成員的行為，您必須覆寫這個成員。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-239">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="bdc8e-240">也就是說，您可以定義衍生類別中方法、屬性或事件的新實作。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-240">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>  
   
- 下列修飾詞是用來控制如何覆寫屬性及方法：  
+ <span data-ttu-id="bdc8e-241">下列修飾詞是用來控制如何覆寫屬性及方法：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-241">The following modifiers are used to control how properties and methods are overridden:</span></span>  
   
-|C# 修飾詞|定義|  
+|<span data-ttu-id="bdc8e-242">C# 修飾詞</span><span class="sxs-lookup"><span data-stu-id="bdc8e-242">C# Modifier</span></span>|<span data-ttu-id="bdc8e-243">定義</span><span class="sxs-lookup"><span data-stu-id="bdc8e-243">Definition</span></span>|  
 |------------------|----------------|  
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|允許在衍生類別中覆寫類別成員。|  
-|[override](../../../csharp/language-reference/keywords/override.md)|覆寫在基底類別中定義的虛擬 (可覆寫) 成員。|  
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|  
-|[new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|  
+|[<span data-ttu-id="bdc8e-244">virtual</span><span class="sxs-lookup"><span data-stu-id="bdc8e-244">virtual</span></span>](../../../csharp/language-reference/keywords/virtual.md)|<span data-ttu-id="bdc8e-245">允許在衍生類別中覆寫類別成員。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-245">Allows a class member to be overridden in a derived class.</span></span>|  
+|[<span data-ttu-id="bdc8e-246">override</span><span class="sxs-lookup"><span data-stu-id="bdc8e-246">override</span></span>](../../../csharp/language-reference/keywords/override.md)|<span data-ttu-id="bdc8e-247">覆寫在基底類別中定義的虛擬 (可覆寫) 成員。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-247">Overrides a virtual (overridable) member defined in the base class.</span></span>|  
+|[<span data-ttu-id="bdc8e-248">abstract</span><span class="sxs-lookup"><span data-stu-id="bdc8e-248">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="bdc8e-249">要求在衍生類別中覆寫類別成員。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-249">Requires that a class member to be overridden in the derived class.</span></span>|  
+|[<span data-ttu-id="bdc8e-250">new 修飾詞</span><span class="sxs-lookup"><span data-stu-id="bdc8e-250">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)|<span data-ttu-id="bdc8e-251">隱藏繼承自基底類別的成員。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-251">Hides a member inherited from a base class</span></span>|  
   
-##  <a name="Interfaces"></a> 介面  
- 介面就像類別，可定義屬性、方法和事件集。 但與類別不同的是，介面並不提供實作。 介面是由類別實作，並定義為與類別不同的實體。 介面就代表著一種合約，因為實作介面的類別必須完全依介面的定義來實作這個介面的各個方面。  
+##  <span data-ttu-id="bdc8e-252"><a name="Interfaces"></a> 介面</span><span class="sxs-lookup"><span data-stu-id="bdc8e-252"><a name="Interfaces"></a> Interfaces</span></span>  
+ <span data-ttu-id="bdc8e-253">介面就像類別，可定義屬性、方法和事件集。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-253">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="bdc8e-254">但與類別不同的是，介面並不提供實作。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-254">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="bdc8e-255">介面是由類別實作，並定義為與類別不同的實體。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-255">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="bdc8e-256">介面就代表著一種合約，因為實作介面的類別必須完全依介面的定義來實作這個介面的各個方面。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-256">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>  
   
- 若要定義介面：  
+ <span data-ttu-id="bdc8e-257">若要定義介面：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-257">To define an interface:</span></span>  
   
 ```csharp  
 interface ISampleInterface  
@@ -367,7 +367,7 @@ interface ISampleInterface
 }  
 ```  
   
- 若要在類別中實作介面：  
+ <span data-ttu-id="bdc8e-258">若要在類別中實作介面：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-258">To implement an interface in a class:</span></span>  
   
 ```csharp  
 class SampleClass : ISampleInterface  
@@ -379,16 +379,16 @@ class SampleClass : ISampleInterface
 }  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-259">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-259">For more information, see:</span></span>  
   
- [介面](../../../csharp/programming-guide/interfaces/index.md)  
+ [<span data-ttu-id="bdc8e-260">介面</span><span class="sxs-lookup"><span data-stu-id="bdc8e-260">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)  
   
- [interface](../../../csharp/language-reference/keywords/interface.md)  
+ [<span data-ttu-id="bdc8e-261">interface</span><span class="sxs-lookup"><span data-stu-id="bdc8e-261">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <a name="Generics"></a> 泛型  
- .NET Framework 中的類別、結構、介面和方法可以包括「型別參數」，這些參數會定義可儲存或使用之物件的類型。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。  
+##  <span data-ttu-id="bdc8e-262"><a name="Generics"></a> 泛型</span><span class="sxs-lookup"><span data-stu-id="bdc8e-262"><a name="Generics"></a> Generics</span></span>  
+ <span data-ttu-id="bdc8e-263">.NET Framework 中的類別、結構、介面和方法可以包括「型別參數」，這些參數會定義可儲存或使用之物件的類型。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-263">Classes, structures, interfaces and methods in the .NET Framework can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="bdc8e-264">泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-264">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>  
   
- 若要定義泛型類別：  
+ <span data-ttu-id="bdc8e-265">若要定義泛型類別：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-265">To define a generic class:</span></span>  
   
 ```csharp  
 Public class SampleGeneric<T>   
@@ -397,32 +397,32 @@ Public class SampleGeneric<T>
 }  
 ```  
   
- 若要建立泛型類別的執行個體：  
+ <span data-ttu-id="bdc8e-266">若要建立泛型類別的執行個體：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-266">To create an instance of a generic class:</span></span>  
   
 ```csharp  
 SampleGeneric<string> sampleObject = new SampleGeneric<string>();  
 sampleObject.Field = "Sample string";  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-267">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-267">For more information, see:</span></span>  
   
--   [泛型](https://msdn.microsoft.com/library/ms172192)  
+-   [<span data-ttu-id="bdc8e-268">泛型</span><span class="sxs-lookup"><span data-stu-id="bdc8e-268">Generics</span></span>](~/docs/standard/generics/index.md)  
   
--   [泛型](../../../csharp/programming-guide/generics/index.md)  
+-   [<span data-ttu-id="bdc8e-269">泛型</span><span class="sxs-lookup"><span data-stu-id="bdc8e-269">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> 委派  
- 「委派」是定義方法簽章的類型，可以提供任何具有相容簽章之方法的參考。 您可以透過委派叫用 (Invoke) 或呼叫方法。 委派可以用來將方法當做引數傳遞給其他方法。  
+##  <span data-ttu-id="bdc8e-270"><a name="Delegates"></a> 委派</span><span class="sxs-lookup"><span data-stu-id="bdc8e-270"><a name="Delegates"></a> Delegates</span></span>  
+ <span data-ttu-id="bdc8e-271">「委派」是定義方法簽章的類型，可以提供任何具有相容簽章之方法的參考。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-271">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="bdc8e-272">您可以透過委派叫用 (Invoke) 或呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-272">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="bdc8e-273">委派可以用來將方法當做引數傳遞給其他方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-273">Delegates are used to pass methods as arguments to other methods.</span></span>  
   
 > [!NOTE]
->  事件處理常式就是透過委派叫用的方法。 如需使用委派處理事件的詳細資訊，請參閱[處理和引發事件](../../../standard/events/index.md)。  
+>  <span data-ttu-id="bdc8e-274">事件處理常式就是透過委派叫用的方法。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-274">Event handlers are nothing more than methods that are invoked through delegates.</span></span> <span data-ttu-id="bdc8e-275">如需使用委派處理事件的詳細資訊，請參閱[處理和引發事件](../../../standard/events/index.md)。</span><span class="sxs-lookup"><span data-stu-id="bdc8e-275">For more information about using delegates in event handling, see [Events](../../../standard/events/index.md).</span></span>  
   
- 若要建立委派：  
+ <span data-ttu-id="bdc8e-276">若要建立委派：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-276">To create a delegate:</span></span>  
   
 ```csharp  
 public delegate void SampleDelegate(string str);  
 ```  
   
- 若要建立與委派所指定簽章相符之方法的參考：  
+ <span data-ttu-id="bdc8e-277">若要建立與委派所指定簽章相符之方法的參考：</span><span class="sxs-lookup"><span data-stu-id="bdc8e-277">To create a reference to a method that matches the signature specified by the delegate:</span></span>  
   
 ```csharp  
 class SampleClass  
@@ -441,11 +441,12 @@ class SampleClass
 }  
 ```  
   
- 如需詳細資訊，請參閱:  
+ <span data-ttu-id="bdc8e-278">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="bdc8e-278">For more information, see:</span></span>  
   
--   [委派](../../../csharp/programming-guide/delegates/index.md)  
+-   [<span data-ttu-id="bdc8e-279">委派</span><span class="sxs-lookup"><span data-stu-id="bdc8e-279">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
   
--   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
+-   [<span data-ttu-id="bdc8e-280">delegate</span><span class="sxs-lookup"><span data-stu-id="bdc8e-280">delegate</span></span>](../../../csharp/language-reference/keywords/delegate.md)  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="bdc8e-281">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bdc8e-281">See Also</span></span>  
+ [<span data-ttu-id="bdc8e-282">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="bdc8e-282">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+

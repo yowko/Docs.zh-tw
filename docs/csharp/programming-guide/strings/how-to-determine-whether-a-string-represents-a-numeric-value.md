@@ -1,5 +1,5 @@
 ---
-title: "如何：判斷字串是否表示數值 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：判斷字串是否表示數值 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,15 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 343e7304a83f396b8bdcc9c92e9123eed206be56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f89f4a4771625389a04f5c92829c91d66eb207
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何：判斷字串是否表示數值 (C# 程式設計手冊)
-若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../../csharp/language-reference/keywords/int.md)。  
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a><span data-ttu-id="b5e51-102">如何：判斷字串是否表示數值 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="b5e51-102">How to: Determine Whether a String Represents a Numeric Value (C# Programming Guide)</span></span>
+<span data-ttu-id="b5e51-103">若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。</span><span class="sxs-lookup"><span data-stu-id="b5e51-103">To determine whether a string is a valid representation of a specified numeric type, use the static `TryParse` method that is implemented by all primitive numeric types and also by types such as <xref:System.DateTime> and <xref:System.Net.IPAddress>.</span></span> <span data-ttu-id="b5e51-104">下列範例示範如何判斷 "108" 是否為有效 [int](../../../csharp/language-reference/keywords/int.md)。</span><span class="sxs-lookup"><span data-stu-id="b5e51-104">The following example shows how to determine whether "108" is a valid [int](../../../csharp/language-reference/keywords/int.md).</span></span>  
   
 ```  
 int i = 0;   
@@ -45,25 +45,26 @@ string s = "108";
 bool result = int.TryParse(s, out i); //i now = 108  
 ```  
   
- 如果字串包含非數值字元，或所指定之特定類型的數值太大或太小，則 `TryParse` 會傳回 false，並將 out 參數設定為零。 否則會傳回 true，並將 out 參數設定為字串的數值。  
+ <span data-ttu-id="b5e51-105">如果字串包含非數值字元，或所指定之特定類型的數值太大或太小，則 `TryParse` 會傳回 false，並將 out 參數設定為零。</span><span class="sxs-lookup"><span data-stu-id="b5e51-105">If the string contains nonnumeric characters or the numeric value is too large or too small for the particular type you have specified, `TryParse` returns false and sets the out parameter to zero.</span></span> <span data-ttu-id="b5e51-106">否則會傳回 true，並將 out 參數設定為字串的數值。</span><span class="sxs-lookup"><span data-stu-id="b5e51-106">Otherwise, it returns true and sets the out parameter to the numeric value of the string.</span></span>  
   
 > [!NOTE]
->  字串只能包含數值字元，而且仍然不適用於您所使用 `TryParse` 方法的類型。 例如，"256" 不是 `byte` 的有效值，但為 `int` 的有效值。 "98.6" 不是 `int` 的有效值，但為有效的 `decimal`。  
+>  <span data-ttu-id="b5e51-107">字串只能包含數值字元，而且仍然不適用於您所使用 `TryParse` 方法的類型。</span><span class="sxs-lookup"><span data-stu-id="b5e51-107">A string may contain only numeric characters and still not be valid for the type whose `TryParse` method that you use.</span></span> <span data-ttu-id="b5e51-108">例如，"256" 不是 `byte` 的有效值，但為 `int` 的有效值。</span><span class="sxs-lookup"><span data-stu-id="b5e51-108">For example, "256" is not a valid value for `byte` but it is valid for `int`.</span></span> <span data-ttu-id="b5e51-109">"98.6" 不是 `int` 的有效值，但為有效的 `decimal`。</span><span class="sxs-lookup"><span data-stu-id="b5e51-109">"98.6" is not a valid value for `int` but it is a valid `decimal`.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例示範如何搭配使用 `TryParse` 與 `long`、`byte` 和 `decimal` 值的字串呈現。  
+## <a name="example"></a><span data-ttu-id="b5e51-110">範例</span><span class="sxs-lookup"><span data-stu-id="b5e51-110">Example</span></span>  
+ <span data-ttu-id="b5e51-111">下列範例示範如何搭配使用 `TryParse` 與 `long`、`byte` 和 `decimal` 值的字串呈現。</span><span class="sxs-lookup"><span data-stu-id="b5e51-111">The following examples show how to use `TryParse` with string representations of `long`, `byte`, and `decimal` values.</span></span>  
   
- [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
+ <span data-ttu-id="b5e51-112">[!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="b5e51-112">[!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]</span></span>  
   
-## <a name="robust-programming"></a>穩固程式設計  
- 基本數值類型也會實作 `Parse` 靜態方法，但如果字串不是有效數字，則會擲回例外狀況。 `TryParse` 通常更具效率，因為它在數字不正確時就會傳回 false。  
+## <a name="robust-programming"></a><span data-ttu-id="b5e51-113">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="b5e51-113">Robust Programming</span></span>  
+ <span data-ttu-id="b5e51-114">基本數值類型也會實作 `Parse` 靜態方法，但如果字串不是有效數字，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="b5e51-114">Primitive numeric types also implement the `Parse` static method, which throws an exception if the string is not a valid number.</span></span> <span data-ttu-id="b5e51-115">`TryParse` 通常更具效率，因為它在數字不正確時就會傳回 false。</span><span class="sxs-lookup"><span data-stu-id="b5e51-115">`TryParse` is generally more efficient because it just returns false if the number is not valid.</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 請一律使用 `TryParse` 或 `Parse` 方法來驗證文字方塊和下拉式方塊這類控制項的使用者輸入。  
+## <a name="net-framework-security"></a><span data-ttu-id="b5e51-116">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="b5e51-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="b5e51-117">請一律使用 `TryParse` 或 `Parse` 方法來驗證文字方塊和下拉式方塊這類控制項的使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="b5e51-117">Always use the `TryParse` or `Parse` methods to validate user input from controls such as text boxes and combo boxes.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [如何：將位元組陣列轉換成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)   
- [如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)   
- [如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
- [剖析數值字串](../../../standard/base-types/parsing-numeric.md)   
- [格式化類型](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="b5e51-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b5e51-118">See Also</span></span>  
+ <span data-ttu-id="b5e51-119">[如何：將位元組陣列轉換成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md) </span><span class="sxs-lookup"><span data-stu-id="b5e51-119">[How to: Convert a byte Array to an int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md) </span></span>  
+ <span data-ttu-id="b5e51-120">[如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) </span><span class="sxs-lookup"><span data-stu-id="b5e51-120">[How to: Convert a String to a Number](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) </span></span>  
+ <span data-ttu-id="b5e51-121">[如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md) </span><span class="sxs-lookup"><span data-stu-id="b5e51-121">[How to: Convert Between Hexadecimal Strings and Numeric Types](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md) </span></span>  
+ <span data-ttu-id="b5e51-122">[剖析數值字串](../../../standard/base-types/parsing-numeric.md) </span><span class="sxs-lookup"><span data-stu-id="b5e51-122">[Parsing Numeric Strings](../../../standard/base-types/parsing-numeric.md) </span></span>  
+ [<span data-ttu-id="b5e51-123">格式化類型</span><span class="sxs-lookup"><span data-stu-id="b5e51-123">Formatting Types</span></span>](../../../standard/base-types/formatting-types.md)
+

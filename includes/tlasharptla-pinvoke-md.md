@@ -1,1 +1,1 @@
-平台引動服務 (PInvoke)
+<span data-ttu-id="a5e4a-101">平台引動服務 (PInvoke)</span><span class="sxs-lookup"><span data-stu-id="a5e4a-101">Platform Invocation Services (PInvoke)</span></span>

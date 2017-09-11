@@ -1,115 +1,120 @@
 ---
-title: ".NET Framework 類別庫概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 類別庫, 關於"
-  - ".NET Framework, 類別庫"
-  - "基底類型, 類別庫"
-  - "內建類型"
-  - "類別庫 [.NET Framework]"
-  - "類別物件實值類型"
-  - "類別 [.NET Framework], 程式庫概觀"
-  - "CLS"
-  - "Common Language Specification"
-  - "資料類型 [.NET Framework]"
-  - "資料類型 [.NET Framework], C#"
-  - "資料類型 [.NET Framework], C++"
-  - "資料類型 [.NET Framework], JScript"
-  - "資料類型 [.NET Framework], Visual Basic"
-  - "浮點實值類型"
-  - "整數實值類型"
-  - "JScript, 資料類型"
-  - "程式庫, .NET Framework 類別庫"
-  - "邏輯實值類型"
-  - "成員 [.NET Framework], 類型"
-  - "命名空間 [.NET Framework]"
-  - "命名空間 [.NET Framework], 關於命名空間"
-  - "命名慣例 [.NET Framework]"
-  - "System 命名空間"
-  - "類型系統 [.NET Framework]"
-  - "類型, .NET Framework"
-  - "使用者定義類型"
-  - "實值類型"
-  - "Visual Basic, 資料類型"
-  - "Visual C#, 資料類型"
-  - "Visual C++, 資料類型"
+title: ".NET Framework 類別庫概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- classes [.NET Framework], library overview
+- class objects value type
+- naming conventions [.NET Framework]
+- types, .NET Framework
+- user-defined types
+- Visual Basic, data types
+- data types [.NET Framework], C++
+- Visual C#, data types
+- libraries, .NET Framework class library
+- data types [.NET Framework], JScript
+- System namespace
+- JScript, data types
+- .NET Framework, class library
+- type system [.NET Framework]
+- data types [.NET Framework]
+- value types
+- data types [.NET Framework], Visual Basic
+- Common Language Specification
+- namespaces [.NET Framework]
+- floating point value type
+- class library [.NET Framework]
+- CLS
+- logical value type
+- .NET Framework class library, about
+- built-in types
+- namespaces [.NET Framework], about namespaces
+- Visual C++, data types
+- members [.NET Framework], type
+- data types [.NET Framework], C#
+- integer value type
+- base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET Framework 類別庫概觀
-[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包括類別、介面和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。  為了促進語言之間的互通性 \(Interoperability\)，大部分 .NET Framework 型別符合 CLS 標準，因而可以用於所有符合 Common Language Specification \(CLS\) 程式語言編譯器之中。  
+# <a name="net-framework-class-library-overview"></a><span data-ttu-id="b8561-102">.NET Framework 類別庫概觀</span><span class="sxs-lookup"><span data-stu-id="b8561-102">.NET Framework Class Library Overview</span></span>
+<span data-ttu-id="b8561-103">[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包括類別、介面和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。</span><span class="sxs-lookup"><span data-stu-id="b8561-103">The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] includes classes, interfaces, and value types that expedite and optimize the development process and provide access to system functionality.</span></span> <span data-ttu-id="b8561-104">為了促進語言之間的互通性 (Interoperability)，大部分 .NET Framework 型別符合 CLS 標準，因而可以用於所有符合 Common Language Specification (CLS) 程式語言編譯器之中。</span><span class="sxs-lookup"><span data-stu-id="b8561-104">To facilitate interoperability between languages, most .NET Framework types are CLS-compliant and can therefore be used from any programming language whose compiler conforms to the common language specification (CLS).</span></span>  
   
- .NET Framework 型別是建置 .NET 應用程式、元件和控制項的基礎。  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包含執行下列函式的型別：  
+ <span data-ttu-id="b8561-105">.NET Framework 型別是建置 .NET 應用程式、元件和控制項的基礎。</span><span class="sxs-lookup"><span data-stu-id="b8561-105">The .NET Framework types are the foundation on which .NET applications, components, and controls are built.</span></span> <span data-ttu-id="b8561-106">[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包含執行下列函式的型別：</span><span class="sxs-lookup"><span data-stu-id="b8561-106">The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] includes types that perform the following functions:</span></span>  
   
--   代表基底資料型別和例外狀況  
+-   <span data-ttu-id="b8561-107">代表基底資料型別和例外狀況</span><span class="sxs-lookup"><span data-stu-id="b8561-107">Represent base data types and exceptions.</span></span>  
   
--   封裝資料結構  
+-   <span data-ttu-id="b8561-108">封裝資料結構</span><span class="sxs-lookup"><span data-stu-id="b8561-108">Encapsulate data structures.</span></span>  
   
--   執行 I\/O  
+-   <span data-ttu-id="b8561-109">執行 I/O</span><span class="sxs-lookup"><span data-stu-id="b8561-109">Perform I/O.</span></span>  
   
--   存取有關已載入型別的資訊  
+-   <span data-ttu-id="b8561-110">存取有關已載入型別的資訊</span><span class="sxs-lookup"><span data-stu-id="b8561-110">Access information about loaded types.</span></span>  
   
--   叫用 .NET Framework 安全性檢查  
+-   <span data-ttu-id="b8561-111">叫用 .NET Framework 安全性檢查</span><span class="sxs-lookup"><span data-stu-id="b8561-111">Invoke .NET Framework security checks.</span></span>  
   
--   提供資料存取、豐富型用戶端 \(Rich Client\) GUI 和伺服器控制的用戶端 GUI  
+-   <span data-ttu-id="b8561-112">提供資料存取、豐富型用戶端 (Rich Client) GUI 和伺服器控制的用戶端 GUI</span><span class="sxs-lookup"><span data-stu-id="b8561-112">Provide data access, rich client-side GUI, and server-controlled, client-side GUI.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供相當豐富的介面，以及抽象和具體 \(非抽象\) 類別。  您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。  若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET Framework 類別之一來衍生類別。  
+ <span data-ttu-id="b8561-113">[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供相當豐富的介面，以及抽象和具體 (非抽象) 類別。</span><span class="sxs-lookup"><span data-stu-id="b8561-113">The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides a rich set of interfaces, as well as abstract and concrete (non-abstract) classes.</span></span> <span data-ttu-id="b8561-114">您可以使用原來的具體類別，或在許多狀況中從它們衍生您自己的類別。</span><span class="sxs-lookup"><span data-stu-id="b8561-114">You can use the concrete classes as is or, in many cases, derive your own classes from them.</span></span> <span data-ttu-id="b8561-115">若要使用介面的功能，您可以建立實作介面的類別，或者從實作介面的 .NET Framework 類別之一來衍生類別。</span><span class="sxs-lookup"><span data-stu-id="b8561-115">To use the functionality of an interface, you can either create a class that implements the interface or derive a class from one of the .NET Framework classes that implements the interface.</span></span>  
   
-## 命名規範  
- .NET Framework 型別使用意味著階層架構的點語法命名配置。  這個技術將相關的型別群組至命名空間 \(Namespace\)，所以可以更容易地搜尋和參考它們。  完整名稱的第一部分 \- 直到最右邊的點 \- 是命名空間名稱。  最後部分是型別名稱。  例如，**System.Collections.ArrayList** 代表 **ArrayList** 型別，其屬於 **System.Collections** 命名空間。  **System.Collections** 中的型別可以用來操作物件的集合。  
+## <a name="naming-conventions"></a><span data-ttu-id="b8561-116">命名規範</span><span class="sxs-lookup"><span data-stu-id="b8561-116">Naming Conventions</span></span>  
+ <span data-ttu-id="b8561-117">.NET Framework 型別使用意味著階層架構的點語法命名配置。</span><span class="sxs-lookup"><span data-stu-id="b8561-117">.NET Framework types use a dot syntax naming scheme that connotes a hierarchy.</span></span> <span data-ttu-id="b8561-118">這個技術將相關的型別群組至命名空間 (Namespace)，所以可以更容易地搜尋和參考它們。</span><span class="sxs-lookup"><span data-stu-id="b8561-118">This technique groups related types into namespaces so they can be searched and referenced more easily.</span></span> <span data-ttu-id="b8561-119">完整名稱的第一部分 - 直到最右邊的點 - 是命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="b8561-119">The first part of the full name — up to the rightmost dot — is the namespace name.</span></span> <span data-ttu-id="b8561-120">最後部分是型別名稱。</span><span class="sxs-lookup"><span data-stu-id="b8561-120">The last part of the name is the type name.</span></span> <span data-ttu-id="b8561-121">例如，**System.Collections.ArrayList** 代表 **ArrayList** 類型，其屬於 **System.Collections** 命名空間。</span><span class="sxs-lookup"><span data-stu-id="b8561-121">For example, **System.Collections.ArrayList** represents the **ArrayList** type, which belongs to the **System.Collections** namespace.</span></span> <span data-ttu-id="b8561-122">**System.Collections** 中的類型可以用來操作物件的集合。</span><span class="sxs-lookup"><span data-stu-id="b8561-122">The types in **System.Collections** can be used to manipulate collections of objects.</span></span>  
   
- 這個命名配置使得程式庫開發人員更容易擴充 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 以建立階層式型別群組，並以一致且有意義的方式來命名它們。  此外還允許以完整名稱明確識別型別 \(也就是藉由命名空間和型別名稱\)，其可避免型別名稱衝突。  程式庫開發人員為其命名空間建立名稱時，應使用以下命名慣例：  
+ <span data-ttu-id="b8561-123">這個命名配置使得程式庫開發人員更容易擴充 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 以建立階層式型別群組，並以一致且有意義的方式來命名它們。</span><span class="sxs-lookup"><span data-stu-id="b8561-123">This naming scheme makes it easy for library developers extending the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] to create hierarchical groups of types and name them in a consistent, informative manner.</span></span> <span data-ttu-id="b8561-124">此外還允許以完整名稱明確識別型別 (也就是藉由命名空間和型別名稱)，其可避免型別名稱衝突。</span><span class="sxs-lookup"><span data-stu-id="b8561-124">It also allows types to be unambiguously identified by their full name (that is, by their namespace and type name), which prevents type name collisions.</span></span> <span data-ttu-id="b8561-125">程式庫開發人員為其命名空間建立名稱時，應使用以下命名慣例：</span><span class="sxs-lookup"><span data-stu-id="b8561-125">Library developers are expected to use the following convention when creating names for their namespaces:</span></span>  
   
- *CompanyName*.*TechnologyName*  
+ <span data-ttu-id="b8561-126">*CompanyName*.*TechnologyName*</span><span class="sxs-lookup"><span data-stu-id="b8561-126">*CompanyName*.*TechnologyName*</span></span>  
   
- 例如，Microsoft.Word 命名空間符合這個方針。  
+ <span data-ttu-id="b8561-127">例如，Microsoft.Word 命名空間符合這個方針。</span><span class="sxs-lookup"><span data-stu-id="b8561-127">For example, the namespace Microsoft.Word conforms to this guideline.</span></span>  
   
- 使用命名模式將相關的型別群組至命名空間，是建置和記錄類別庫非常有用的方式。  然而，這個命名配置在可視性、成員存取、繼承 \(Inheritance\)、安全性或繫結上沒有作用。  命名空間可以在多重組件 \(Assembly\) 之間分割，而單一組件可以包含來自多重命名空間的型別。  組件在 Common Language Runtime 中提供版本、部署、安全性、載入和可視性的正式結構。  
+ <span data-ttu-id="b8561-128">使用命名模式將相關的型別群組至命名空間，是建置和記錄類別庫非常有用的方式。</span><span class="sxs-lookup"><span data-stu-id="b8561-128">The use of naming patterns to group related types into namespaces is a very useful way to build and document class libraries.</span></span> <span data-ttu-id="b8561-129">然而，這個命名配置在可視性、成員存取、繼承 (Inheritance)、安全性或繫結上沒有作用。</span><span class="sxs-lookup"><span data-stu-id="b8561-129">However, this naming scheme has no effect on visibility, member access, inheritance, security, or binding.</span></span> <span data-ttu-id="b8561-130">命名空間可以在多重組件 (Assembly) 之間分割，而單一組件可以包含來自多重命名空間的型別。</span><span class="sxs-lookup"><span data-stu-id="b8561-130">A namespace can be partitioned across multiple assemblies and a single assembly can contain types from multiple namespaces.</span></span> <span data-ttu-id="b8561-131">組件在 Common Language Runtime 中提供版本、部署、安全性、載入和可視性的正式結構。</span><span class="sxs-lookup"><span data-stu-id="b8561-131">The assembly provides the formal structure for versioning, deployment, security, loading, and visibility in the common language runtime.</span></span>  
   
- 如需命名空間和型別名稱的詳細資訊，請參閱[一般型別系統](../../docs/standard/base-types/common-type-system.md)。  
+ <span data-ttu-id="b8561-132">如需命名空間和類型名稱的詳細資訊，請參閱[一般型別系統](../../docs/standard/base-types/common-type-system.md)。</span><span class="sxs-lookup"><span data-stu-id="b8561-132">For more information on namespaces and type names, see [Common Type System](../../docs/standard/base-types/common-type-system.md).</span></span>  
   
-## System 命名空間  
- <xref:System> 命名空間是 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中基礎型別的根 \(Root\) 命名空間。  這個命名空間包含的類別，代表所有應用程式使用的基底資料型別：<xref:System.Object> \(繼承階層架構的根\)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> 等等。  許多這些型別對應到您的程式語言所使用的原始資料型別。  當您使用 .NET Framework 型別撰寫程式碼時，您可以在需要 .NET Framework 基底資料型別時使用您語言的對應關鍵字。  
+## <a name="system-namespace"></a><span data-ttu-id="b8561-133">System 命名空間</span><span class="sxs-lookup"><span data-stu-id="b8561-133">System Namespace</span></span>  
+ <span data-ttu-id="b8561-134"><xref:System> 命名空間是 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中基礎型別的根 (Root) 命名空間。</span><span class="sxs-lookup"><span data-stu-id="b8561-134">The <xref:System> namespace is the root namespace for fundamental types in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="b8561-135">這個命名空間包含的類別，代表所有應用程式使用的基底資料型別：<xref:System.Object> (繼承階層架構的根)、<xref:System.Byte>、<xref:System.Char>、<xref:System.Array>、<xref:System.Int32>、<xref:System.String> 等等。</span><span class="sxs-lookup"><span data-stu-id="b8561-135">This namespace includes classes that represent the base data types used by all applications: <xref:System.Object> (the root of the inheritance hierarchy), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>, and so on.</span></span> <span data-ttu-id="b8561-136">許多這些型別對應到您的程式語言所使用的原始資料型別。</span><span class="sxs-lookup"><span data-stu-id="b8561-136">Many of these types correspond to the primitive data types that your programming language uses.</span></span> <span data-ttu-id="b8561-137">當您使用 .NET Framework 型別撰寫程式碼時，您可以在需要 .NET Framework 基底資料型別時使用您語言的對應關鍵字。</span><span class="sxs-lookup"><span data-stu-id="b8561-137">When you write code using .NET Framework types, you can use your language's corresponding keyword when a .NET Framework base data type is expected.</span></span>  
   
- 下表列出 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 所提供基底型別的清單、簡要說明各型別，並且指示 Visual Basic、C\#、C\+\+ 和 JScript 中的對應型別。  
+ <span data-ttu-id="b8561-138">下表列出 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 所提供基底型別的清單、簡要說明各型別，並且指示 Visual Basic、C#、C++ 和 JScript 中的對應型別。</span><span class="sxs-lookup"><span data-stu-id="b8561-138">The following table lists the base types that the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] supplies, briefly describes each type, and indicates the corresponding type in Visual Basic, C#, C++, and JScript.</span></span>  
   
-|分類|類別名稱|說明|Visual Basic 資料型別|C\# 資料型別|C\+\+ 資料型別|JScript 資料型別|  
-|--------|----------|--------|-----------------------|--------------|----------------|------------------|  
-|整數|<xref:System.Byte>|8 位元不帶正負號的整數。|**Byte**|**byte**|**unsigned char**|**Byte**|  
-||<xref:System.SByte>|8 位元帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**SByte**|**sbyte**|**char**<br /><br /> \-或\-<br /><br /> **signed** **char**|**SByte**|  
-||<xref:System.Int16>|16 位元帶正負號的整數。|**Short**|**short**|**short**|**short**|  
-||<xref:System.Int32>|32 位元帶正負號的整數。|**Integer**|**int**|**int**<br /><br /> \-或\-<br /><br /> **long**|**int**|  
-||<xref:System.Int64>|64 位元帶正負號的整數。|**Long**|**long**|**\_\_int64**|**long**|  
-||<xref:System.UInt16>|16 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|32 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UInteger**|**uint**|**unsigned int**<br /><br /> \-或\-<br /><br /> **unsigned long**|**UInt32**|  
-||<xref:System.UInt64>|64 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**ULong**|**ulong**|**unsigned \_\_int64**|**UInt64**|  
-|浮點數|<xref:System.Single>|單精確度 \(32 位元\) 浮點數。|**Single**|**float**|**float**|**float**|  
-||<xref:System.Double>|雙精度 \(64 位元\) 浮點數。|**Double**|**double**|**double**|**double**|  
-|邏輯|<xref:System.Boolean>|布林值 \(true 或 false\)。|**Boolean**|**bool**|**bool**|**bool**|  
-|其他|<xref:System.Char>|Unicode \(16 位元\) 字元。|**Char**|**char**|**wchar\_t**|**char**|  
-||<xref:System.Decimal>|這是一個 128 位元的十進位值。|**Decimal**|**decimal**|**Decimal**|**Decimal**|  
-||<xref:System.IntPtr>|帶正負號的整數，其大小取決於基礎平台 \(在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值\)。|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**IntPtr**|  
-||<xref:System.UIntPtr>|不帶正負號的整數，其大小取決於基礎平台 \(在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值\)。<br /><br /> 不符合 CLS 標準。|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**<br /><br /> 非內建型別|**UIntPtr**|  
-|類別物件|<xref:System.Object>|物件階層架構的根。|**Object**|**object**|**Object\***|**Object**|  
-||<xref:System.String>|Unicode 字元，為不變且長度固定的字串。|**String**|**string**|**String\***|**String**|  
+|<span data-ttu-id="b8561-139">分類</span><span class="sxs-lookup"><span data-stu-id="b8561-139">Category</span></span>|<span data-ttu-id="b8561-140">類別名稱</span><span class="sxs-lookup"><span data-stu-id="b8561-140">Class name</span></span>|<span data-ttu-id="b8561-141">描述</span><span class="sxs-lookup"><span data-stu-id="b8561-141">Description</span></span>|<span data-ttu-id="b8561-142">Visual Basic 資料型別</span><span class="sxs-lookup"><span data-stu-id="b8561-142">Visual Basic data type</span></span>|<span data-ttu-id="b8561-143">C# 資料型別</span><span class="sxs-lookup"><span data-stu-id="b8561-143">C# data type</span></span>|<span data-ttu-id="b8561-144">C++ 資料型別</span><span class="sxs-lookup"><span data-stu-id="b8561-144">C++ data type</span></span>|<span data-ttu-id="b8561-145">JScript 資料型別</span><span class="sxs-lookup"><span data-stu-id="b8561-145">JScript data type</span></span>|  
+|--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
+|<span data-ttu-id="b8561-146">整數</span><span class="sxs-lookup"><span data-stu-id="b8561-146">Integer</span></span>|<xref:System.Byte>|<span data-ttu-id="b8561-147">8 位元不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-147">An 8-bit unsigned integer.</span></span>|<span data-ttu-id="b8561-148">**Byte**</span><span class="sxs-lookup"><span data-stu-id="b8561-148">**Byte**</span></span>|<span data-ttu-id="b8561-149">**byte**</span><span class="sxs-lookup"><span data-stu-id="b8561-149">**byte**</span></span>|<span data-ttu-id="b8561-150">**unsigned char**</span><span class="sxs-lookup"><span data-stu-id="b8561-150">**unsigned char**</span></span>|<span data-ttu-id="b8561-151">**Byte**</span><span class="sxs-lookup"><span data-stu-id="b8561-151">**Byte**</span></span>|  
+||<xref:System.SByte>|<span data-ttu-id="b8561-152">8 位元帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-152">An 8-bit signed integer.</span></span><br /><br /> <span data-ttu-id="b8561-153">不符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="b8561-153">Not CLS-compliant.</span></span>|<span data-ttu-id="b8561-154">**SByte**</span><span class="sxs-lookup"><span data-stu-id="b8561-154">**SByte**</span></span>|<span data-ttu-id="b8561-155">**sbyte**</span><span class="sxs-lookup"><span data-stu-id="b8561-155">**sbyte**</span></span>|<span data-ttu-id="b8561-156">**char**</span><span class="sxs-lookup"><span data-stu-id="b8561-156">**char**</span></span><br /><br /> <span data-ttu-id="b8561-157">-或-</span><span class="sxs-lookup"><span data-stu-id="b8561-157">-or-</span></span><br /><br /> <span data-ttu-id="b8561-158">**signed** **char**</span><span class="sxs-lookup"><span data-stu-id="b8561-158">**signed** **char**</span></span>|<span data-ttu-id="b8561-159">**SByte**</span><span class="sxs-lookup"><span data-stu-id="b8561-159">**SByte**</span></span>|  
+||<xref:System.Int16>|<span data-ttu-id="b8561-160">16 位元帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-160">A 16-bit signed integer.</span></span>|<span data-ttu-id="b8561-161">**Short**</span><span class="sxs-lookup"><span data-stu-id="b8561-161">**Short**</span></span>|<span data-ttu-id="b8561-162">**short**</span><span class="sxs-lookup"><span data-stu-id="b8561-162">**short**</span></span>|<span data-ttu-id="b8561-163">**short**</span><span class="sxs-lookup"><span data-stu-id="b8561-163">**short**</span></span>|<span data-ttu-id="b8561-164">**short**</span><span class="sxs-lookup"><span data-stu-id="b8561-164">**short**</span></span>|  
+||<xref:System.Int32>|<span data-ttu-id="b8561-165">32 位元帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-165">A 32-bit signed integer.</span></span>|<span data-ttu-id="b8561-166">**Integer**</span><span class="sxs-lookup"><span data-stu-id="b8561-166">**Integer**</span></span>|<span data-ttu-id="b8561-167">**int**</span><span class="sxs-lookup"><span data-stu-id="b8561-167">**int**</span></span>|<span data-ttu-id="b8561-168">**int**</span><span class="sxs-lookup"><span data-stu-id="b8561-168">**int**</span></span><br /><br /> <span data-ttu-id="b8561-169">-或-</span><span class="sxs-lookup"><span data-stu-id="b8561-169">-or-</span></span><br /><br /> <span data-ttu-id="b8561-170">**long**</span><span class="sxs-lookup"><span data-stu-id="b8561-170">**long**</span></span>|<span data-ttu-id="b8561-171">**int**</span><span class="sxs-lookup"><span data-stu-id="b8561-171">**int**</span></span>|  
+||<xref:System.Int64>|<span data-ttu-id="b8561-172">64 位元帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-172">A 64-bit signed integer.</span></span>|<span data-ttu-id="b8561-173">**Long**</span><span class="sxs-lookup"><span data-stu-id="b8561-173">**Long**</span></span>|<span data-ttu-id="b8561-174">**long**</span><span class="sxs-lookup"><span data-stu-id="b8561-174">**long**</span></span>|<span data-ttu-id="b8561-175">**__int64**</span><span class="sxs-lookup"><span data-stu-id="b8561-175">**__int64**</span></span>|<span data-ttu-id="b8561-176">**long**</span><span class="sxs-lookup"><span data-stu-id="b8561-176">**long**</span></span>|  
+||<xref:System.UInt16>|<span data-ttu-id="b8561-177">16 位元不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-177">A 16-bit unsigned integer.</span></span><br /><br /> <span data-ttu-id="b8561-178">不符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="b8561-178">Not CLS-compliant.</span></span>|<span data-ttu-id="b8561-179">**UShort**</span><span class="sxs-lookup"><span data-stu-id="b8561-179">**UShort**</span></span>|<span data-ttu-id="b8561-180">**ushort**</span><span class="sxs-lookup"><span data-stu-id="b8561-180">**ushort**</span></span>|<span data-ttu-id="b8561-181">**unsigned short**</span><span class="sxs-lookup"><span data-stu-id="b8561-181">**unsigned short**</span></span>|<span data-ttu-id="b8561-182">**UInt16**</span><span class="sxs-lookup"><span data-stu-id="b8561-182">**UInt16**</span></span>|  
+||<xref:System.UInt32>|<span data-ttu-id="b8561-183">32 位元不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-183">A 32-bit unsigned integer.</span></span><br /><br /> <span data-ttu-id="b8561-184">不符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="b8561-184">Not CLS-compliant.</span></span>|<span data-ttu-id="b8561-185">**UInteger**</span><span class="sxs-lookup"><span data-stu-id="b8561-185">**UInteger**</span></span>|<span data-ttu-id="b8561-186">**uint**</span><span class="sxs-lookup"><span data-stu-id="b8561-186">**uint**</span></span>|<span data-ttu-id="b8561-187">**unsigned int**</span><span class="sxs-lookup"><span data-stu-id="b8561-187">**unsigned int**</span></span><br /><br /> <span data-ttu-id="b8561-188">-或-</span><span class="sxs-lookup"><span data-stu-id="b8561-188">-or-</span></span><br /><br /> <span data-ttu-id="b8561-189">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="b8561-189">**unsigned long**</span></span>|<span data-ttu-id="b8561-190">**UInt32**</span><span class="sxs-lookup"><span data-stu-id="b8561-190">**UInt32**</span></span>|  
+||<xref:System.UInt64>|<span data-ttu-id="b8561-191">64 位元不帶正負號的整數。</span><span class="sxs-lookup"><span data-stu-id="b8561-191">A 64-bit unsigned integer.</span></span><br /><br /> <span data-ttu-id="b8561-192">不符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="b8561-192">Not CLS-compliant.</span></span>|<span data-ttu-id="b8561-193">**ULong**</span><span class="sxs-lookup"><span data-stu-id="b8561-193">**ULong**</span></span>|<span data-ttu-id="b8561-194">**ulong**</span><span class="sxs-lookup"><span data-stu-id="b8561-194">**ulong**</span></span>|<span data-ttu-id="b8561-195">**unsigned __int64**</span><span class="sxs-lookup"><span data-stu-id="b8561-195">**unsigned __int64**</span></span>|<span data-ttu-id="b8561-196">**UInt64**</span><span class="sxs-lookup"><span data-stu-id="b8561-196">**UInt64**</span></span>|  
+|<span data-ttu-id="b8561-197">浮點</span><span class="sxs-lookup"><span data-stu-id="b8561-197">Floating point</span></span>|<xref:System.Single>|<span data-ttu-id="b8561-198">單精確度 (32 位元) 浮點數。</span><span class="sxs-lookup"><span data-stu-id="b8561-198">A single-precision (32-bit) floating-point number.</span></span>|<span data-ttu-id="b8561-199">**Single**</span><span class="sxs-lookup"><span data-stu-id="b8561-199">**Single**</span></span>|<span data-ttu-id="b8561-200">**float**</span><span class="sxs-lookup"><span data-stu-id="b8561-200">**float**</span></span>|<span data-ttu-id="b8561-201">**float**</span><span class="sxs-lookup"><span data-stu-id="b8561-201">**float**</span></span>|<span data-ttu-id="b8561-202">**float**</span><span class="sxs-lookup"><span data-stu-id="b8561-202">**float**</span></span>|  
+||<xref:System.Double>|<span data-ttu-id="b8561-203">雙精度 (64 位元) 浮點數。</span><span class="sxs-lookup"><span data-stu-id="b8561-203">A double-precision (64-bit) floating-point number.</span></span>|<span data-ttu-id="b8561-204">**Double**</span><span class="sxs-lookup"><span data-stu-id="b8561-204">**Double**</span></span>|<span data-ttu-id="b8561-205">**double**</span><span class="sxs-lookup"><span data-stu-id="b8561-205">**double**</span></span>|<span data-ttu-id="b8561-206">**double**</span><span class="sxs-lookup"><span data-stu-id="b8561-206">**double**</span></span>|<span data-ttu-id="b8561-207">**double**</span><span class="sxs-lookup"><span data-stu-id="b8561-207">**double**</span></span>|  
+|<span data-ttu-id="b8561-208">邏輯</span><span class="sxs-lookup"><span data-stu-id="b8561-208">Logical</span></span>|<xref:System.Boolean>|<span data-ttu-id="b8561-209">布林值 (true 或 false)。</span><span class="sxs-lookup"><span data-stu-id="b8561-209">A Boolean value (true or false).</span></span>|<span data-ttu-id="b8561-210">**布林值**</span><span class="sxs-lookup"><span data-stu-id="b8561-210">**Boolean**</span></span>|<span data-ttu-id="b8561-211">**bool**</span><span class="sxs-lookup"><span data-stu-id="b8561-211">**bool**</span></span>|<span data-ttu-id="b8561-212">**bool**</span><span class="sxs-lookup"><span data-stu-id="b8561-212">**bool**</span></span>|<span data-ttu-id="b8561-213">**bool**</span><span class="sxs-lookup"><span data-stu-id="b8561-213">**bool**</span></span>|  
+|<span data-ttu-id="b8561-214">其他</span><span class="sxs-lookup"><span data-stu-id="b8561-214">Other</span></span>|<xref:System.Char>|<span data-ttu-id="b8561-215">Unicode (16 位元) 字元。</span><span class="sxs-lookup"><span data-stu-id="b8561-215">A Unicode (16-bit) character.</span></span>|<span data-ttu-id="b8561-216">**Char**</span><span class="sxs-lookup"><span data-stu-id="b8561-216">**Char**</span></span>|<span data-ttu-id="b8561-217">**char**</span><span class="sxs-lookup"><span data-stu-id="b8561-217">**char**</span></span>|<span data-ttu-id="b8561-218">**wchar_t**</span><span class="sxs-lookup"><span data-stu-id="b8561-218">**wchar_t**</span></span>|<span data-ttu-id="b8561-219">**char**</span><span class="sxs-lookup"><span data-stu-id="b8561-219">**char**</span></span>|  
+||<xref:System.Decimal>|<span data-ttu-id="b8561-220">這是一個 128 位元的十進位值。</span><span class="sxs-lookup"><span data-stu-id="b8561-220">A decimal  (128-bit) value.</span></span>|<span data-ttu-id="b8561-221">**Decimal**</span><span class="sxs-lookup"><span data-stu-id="b8561-221">**Decimal**</span></span>|<span data-ttu-id="b8561-222">**decimal**</span><span class="sxs-lookup"><span data-stu-id="b8561-222">**decimal**</span></span>|<span data-ttu-id="b8561-223">**Decimal**</span><span class="sxs-lookup"><span data-stu-id="b8561-223">**Decimal**</span></span>|<span data-ttu-id="b8561-224">**Decimal**</span><span class="sxs-lookup"><span data-stu-id="b8561-224">**Decimal**</span></span>|  
+||<xref:System.IntPtr>|<span data-ttu-id="b8561-225">帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。</span><span class="sxs-lookup"><span data-stu-id="b8561-225">A signed integer whose size depends on the underlying platform (a 32-bit value on a 32-bit platform and a 64-bit value on a 64-bit platform).</span></span>|<span data-ttu-id="b8561-226">**IntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-226">**IntPtr**</span></span><br /><br /> <span data-ttu-id="b8561-227">非內建型別</span><span class="sxs-lookup"><span data-stu-id="b8561-227">No built-in type.</span></span>|<span data-ttu-id="b8561-228">**IntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-228">**IntPtr**</span></span><br /><br /> <span data-ttu-id="b8561-229">非內建型別</span><span class="sxs-lookup"><span data-stu-id="b8561-229">No built-in type.</span></span>|<span data-ttu-id="b8561-230">**IntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-230">**IntPtr**</span></span><br /><br /> <span data-ttu-id="b8561-231">非內建型別</span><span class="sxs-lookup"><span data-stu-id="b8561-231">No built-in type.</span></span>|<span data-ttu-id="b8561-232">**IntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-232">**IntPtr**</span></span>|  
+||<xref:System.UIntPtr>|<span data-ttu-id="b8561-233">不帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。</span><span class="sxs-lookup"><span data-stu-id="b8561-233">An unsigned integer whose size depends on the underlying platform (a 32- bit value on a 32-bit platform and a 64-bit value on a 64-bit platform).</span></span><br /><br /> <span data-ttu-id="b8561-234">不符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="b8561-234">Not CLS-compliant.</span></span>|<span data-ttu-id="b8561-235">**UIntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-235">**UIntPtr**</span></span><br /><br /> <span data-ttu-id="b8561-236">非內建型別</span><span class="sxs-lookup"><span data-stu-id="b8561-236">No built-in type.</span></span>|<span data-ttu-id="b8561-237">**UIntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-237">**UIntPtr**</span></span><br /><br /> <span data-ttu-id="b8561-238">非內建型別</span><span class="sxs-lookup"><span data-stu-id="b8561-238">No built-in type.</span></span>|<span data-ttu-id="b8561-239">**UIntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-239">**UIntPtr**</span></span><br /><br /> <span data-ttu-id="b8561-240">非內建型別</span><span class="sxs-lookup"><span data-stu-id="b8561-240">No built-in type.</span></span>|<span data-ttu-id="b8561-241">**UIntPtr**</span><span class="sxs-lookup"><span data-stu-id="b8561-241">**UIntPtr**</span></span>|  
+<span data-ttu-id="b8561-242">ass 物件</span><span class="sxs-lookup"><span data-stu-id="b8561-242">ass objects</span></span>|<xref:System.Object>|<span data-ttu-id="b8561-243">物件階層架構的根。</span><span class="sxs-lookup"><span data-stu-id="b8561-243">The root of the object hierarchy.</span></span>|<span data-ttu-id="b8561-244">**物件**</span><span class="sxs-lookup"><span data-stu-id="b8561-244">**Object**</span></span>|<span data-ttu-id="b8561-245">**object**</span><span class="sxs-lookup"><span data-stu-id="b8561-245">**object**</span></span>|<span data-ttu-id="b8561-246">**Object\***</span><span class="sxs-lookup"><span data-stu-id="b8561-246">**Object\***</span></span>|<span data-ttu-id="b8561-247">**物件**</span><span class="sxs-lookup"><span data-stu-id="b8561-247">**Object**</span></span>|  
+||<xref:System.String>|<span data-ttu-id="b8561-248">Unicode 字元，為不變且長度固定的字串。</span><span class="sxs-lookup"><span data-stu-id="b8561-248">An immutable, fixed-length string of Unicode characters.</span></span>|<span data-ttu-id="b8561-249">**String**</span><span class="sxs-lookup"><span data-stu-id="b8561-249">**String**</span></span>|<span data-ttu-id="b8561-250">**string**</span><span class="sxs-lookup"><span data-stu-id="b8561-250">**string**</span></span>|<span data-ttu-id="b8561-251">**String\***</span><span class="sxs-lookup"><span data-stu-id="b8561-251">**String\***</span></span>|<span data-ttu-id="b8561-252">**String**</span><span class="sxs-lookup"><span data-stu-id="b8561-252">**String**</span></span>|  
   
- 除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。  <xref:System> 命名空間也包含許多第二層命名空間。  
+ <span data-ttu-id="b8561-253">除了基底資料型別，<xref:System> 命名空間還包含 100 多個類別，涵蓋的範圍從處理例外狀況的類別到處理核心執行階段概念的類別，像是應用程式定義域和記憶體回收行程。</span><span class="sxs-lookup"><span data-stu-id="b8561-253">In addition to the base data types, the <xref:System> namespace contains over 100 classes, ranging from classes that handle exceptions to classes that deal with core runtime concepts, such as application domains and the garbage collector.</span></span> <span data-ttu-id="b8561-254"><xref:System> 命名空間也包含許多第二層命名空間。</span><span class="sxs-lookup"><span data-stu-id="b8561-254">The <xref:System> namespace also contains many second-level namespaces.</span></span>  
   
- 如需有關命名空間的詳細資訊，請瀏覽 [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195) \(機器譯文\)。  參考文件提供各個命名空間的簡要概觀，還有各個型別和它成員的正式說明。  
+ <span data-ttu-id="b8561-255">如需命名空間的詳細資訊，請瀏覽 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195) (.NET Framework 類別庫)。</span><span class="sxs-lookup"><span data-stu-id="b8561-255">For more information about namespaces, browse the [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195).</span></span> <span data-ttu-id="b8561-256">參考文件提供各個命名空間的簡要概觀，還有各個型別和它成員的正式說明。</span><span class="sxs-lookup"><span data-stu-id="b8561-256">The reference documentation provides a brief overview of each namespace as well as a formal description of each type and its members.</span></span>  
   
-## 請參閱  
- [一般類型系統](../../docs/standard/base-types/common-type-system.md)   
- [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)   
- [概觀](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a><span data-ttu-id="b8561-257">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8561-257">See Also</span></span>  
+ <span data-ttu-id="b8561-258">[一般型別系統](../../docs/standard/base-types/common-type-system.md) </span><span class="sxs-lookup"><span data-stu-id="b8561-258">[Common Type System](../../docs/standard/base-types/common-type-system.md) </span></span>  
+ <span data-ttu-id="b8561-259">[.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195) </span><span class="sxs-lookup"><span data-stu-id="b8561-259">[.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195) </span></span>  
+ [<span data-ttu-id="b8561-260">概觀</span><span class="sxs-lookup"><span data-stu-id="b8561-260">Overview</span></span>](../../docs/framework/get-started/overview.md)
+

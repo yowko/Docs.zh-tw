@@ -1,5 +1,5 @@
 ---
-title: "如何：在 Visual Basic 中讀取登錄機碼的值 | Microsoft Docs"
+title: "如何：在 Visual Basic 中讀取登錄機碼的值"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,51 +34,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69b833777629cfd642ab75ac055b96b59c1da70b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中讀取登錄機碼的值
-您可以使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取 Windows 登錄中的值。  
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a><span data-ttu-id="589e2-102">如何：在 Visual Basic 中讀取登錄機碼的值</span><span class="sxs-lookup"><span data-stu-id="589e2-102">How to: Read a Value from a Registry Key in Visual Basic</span></span>
+<span data-ttu-id="589e2-103">您可以使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取 Windows 登錄中的值。</span><span class="sxs-lookup"><span data-stu-id="589e2-103">The `GetValue` method of the `My.Computer.Registry` object can be used to read values in the Windows registry.</span></span>  
   
- 如果下列範例中的機碼 "Software\MyApp" 不存在，則會擲回例外狀況。 如果下列範例中的 `ValueName` (也就是 "Name") 不存在，則會傳回 `Nothing`。  
+ <span data-ttu-id="589e2-104">如果下列範例中的機碼 "Software\MyApp" 不存在，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="589e2-104">If the key, "Software\MyApp" in the following example, does not exist, an exception is thrown.</span></span> <span data-ttu-id="589e2-105">如果下列範例中的 `ValueName` (也就是 "Name") 不存在，則會傳回 `Nothing`。</span><span class="sxs-lookup"><span data-stu-id="589e2-105">If the `ValueName`,  "Name" in the following example, does not exist, `Nothing` is returned.</span></span>  
   
- `GetValue` 方法也可用來判斷特定登錄機碼中是否有指定的值。  
+ <span data-ttu-id="589e2-106">`GetValue` 方法也可用來判斷特定登錄機碼中是否有指定的值。</span><span class="sxs-lookup"><span data-stu-id="589e2-106">The `GetValue` method can also be used to determine whether a given value exists in a specific registry key.</span></span>  
   
- 當程式碼從 Web 應用程式讀取登錄時，會由 Web 應用程式中所實作的驗證和模擬來決定目前的使用者。  
+ <span data-ttu-id="589e2-107">當程式碼從 Web 應用程式讀取登錄時，會由 Web 應用程式中所實作的驗證和模擬來決定目前的使用者。</span><span class="sxs-lookup"><span data-stu-id="589e2-107">When code reads the registry from a Web application, the current user is determined by the authentication and impersonation that is implemented in the Web application.</span></span>  
   
-### <a name="to-read-a-value-from-a-registry-key"></a>讀取登錄機碼的值  
+### <a name="to-read-a-value-from-a-registry-key"></a><span data-ttu-id="589e2-108">讀取登錄機碼的值</span><span class="sxs-lookup"><span data-stu-id="589e2-108">To read a value from a registry key</span></span>  
   
--   使用 `GetValue` 方法，並指定路徑和名稱來讀取登錄機碼的值。 下列範例會從 `HKEY_CURRENT_USER\Software\MyApp` 讀取 `Name` 值，並顯示於訊息方塊中。  
+-   <span data-ttu-id="589e2-109">使用 `GetValue` 方法，並指定路徑和名稱來讀取登錄機碼的值。</span><span class="sxs-lookup"><span data-stu-id="589e2-109">Use the `GetValue` method, specifying the path and name) to read a value from registry key.</span></span> <span data-ttu-id="589e2-110">下列範例會從 `HKEY_CURRENT_USER\Software\MyApp` 讀取 `Name` 值，並顯示於訊息方塊中。</span><span class="sxs-lookup"><span data-stu-id="589e2-110">The following example reads the value `Name` from `HKEY_CURRENT_USER\Software\MyApp` and displays it in a message box.</span></span>  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
+     <span data-ttu-id="589e2-111">[!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="589e2-111">[!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]</span></span>  
   
- 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows 作業系統] > [登錄] 中。 如需詳細資訊，請參閱[程式碼片段](https://docs.microsoft.com/visualstudio/ide/code-snippets)。  
+ <span data-ttu-id="589e2-112">這個程式碼範例也可作為 IntelliSense 程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="589e2-112">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="589e2-113">在程式碼片段選擇器中，它位於 [Windows 作業系統] > [登錄] 中。</span><span class="sxs-lookup"><span data-stu-id="589e2-113">In the code snippet picker, it is located in **Windows Operating System > Registry**.</span></span> <span data-ttu-id="589e2-114">如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。</span><span class="sxs-lookup"><span data-stu-id="589e2-114">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>判斷登錄機碼中是否有一個值  
+### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a><span data-ttu-id="589e2-115">判斷登錄機碼中是否有一個值</span><span class="sxs-lookup"><span data-stu-id="589e2-115">To determine whether a value exists in a registry key</span></span>  
   
--   使用 `GetValue` 方法來擷取此值。 下列程式碼會檢查此值是否存在；如果不存在，則傳回訊息。  
+-   <span data-ttu-id="589e2-116">使用 `GetValue` 方法來擷取此值。</span><span class="sxs-lookup"><span data-stu-id="589e2-116">Use the `GetValue` method to retrieve the value.</span></span> <span data-ttu-id="589e2-117">下列程式碼會檢查此值是否存在；如果不存在，則傳回訊息。</span><span class="sxs-lookup"><span data-stu-id="589e2-117">The following code checks whether the value exists and returns a message if it does not.</span></span>  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
+     <span data-ttu-id="589e2-118">[!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="589e2-118">[!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]</span></span>  
   
-## <a name="robust-programming"></a>穩固程式設計  
- 登錄包含可用來儲存資料的最上層或根目錄機碼。 例如，HKEY_LOCAL_MACHINE 根目錄機碼可用於儲存所有使用者所使用的電腦層級設定，而 HKEY_CURRENT_USER 可用於儲存個別使用者的特定資料。  
+## <a name="robust-programming"></a><span data-ttu-id="589e2-119">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="589e2-119">Robust Programming</span></span>  
+ <span data-ttu-id="589e2-120">登錄包含可用來儲存資料的最上層或根目錄機碼。</span><span class="sxs-lookup"><span data-stu-id="589e2-120">The registry holds top-level, or root, keys that are used to store data.</span></span> <span data-ttu-id="589e2-121">例如，HKEY_LOCAL_MACHINE 根目錄機碼可用於儲存所有使用者所使用的電腦層級設定，而 HKEY_CURRENT_USER 可用於儲存個別使用者的特定資料。</span><span class="sxs-lookup"><span data-stu-id="589e2-121">For instance, the HKEY_LOCAL_MACHINE root key is used for storing machine-level settings used by all users, while HKEY_CURRENT_USER is used for storing data specific to an individual user.</span></span>  
   
- 以下條件可能會造成例外狀況：  
+ <span data-ttu-id="589e2-122">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="589e2-122">The following conditions may cause an exception:</span></span>  
   
--   機碼的名稱是 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   <span data-ttu-id="589e2-123">機碼的名稱是 `Nothing` (<xref:System.ArgumentNullException>)。</span><span class="sxs-lookup"><span data-stu-id="589e2-123">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   使用者沒有讀取登錄機碼的權限 (<xref:System.Security.SecurityException>)。  
+-   <span data-ttu-id="589e2-124">使用者沒有讀取登錄機碼的權限 (<xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="589e2-124">The user does not have permissions to read from registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
--   機碼名稱超過 255 個字元的限制 (<xref:System.ArgumentException>)。  
+-   <span data-ttu-id="589e2-125">機碼名稱超過 255 個字元的限制 (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="589e2-125">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。 例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。  
+## <a name="net-framework-security"></a><span data-ttu-id="589e2-126">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="589e2-126">.NET Framework Security</span></span>  
+ <span data-ttu-id="589e2-127">若要執行此程序，您的組件需要由 <xref:System.Security.Permissions.RegistryPermission> 類別授與的權限層級。</span><span class="sxs-lookup"><span data-stu-id="589e2-127">To run this process, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.RegistryPermission> class.</span></span> <span data-ttu-id="589e2-128">若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="589e2-128">If you are running in a partial-trust context, the process might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="589e2-129">同樣地，使用者必須有正確的 ACL，才能建立或寫入設定。</span><span class="sxs-lookup"><span data-stu-id="589e2-129">Similarly, the user must have the correct ACLs for creating or writing to settings.</span></span> <span data-ttu-id="589e2-130">例如，具有程式碼存取安全性權限的本機應用程式，可能不具有作業系統權限。</span><span class="sxs-lookup"><span data-stu-id="589e2-130">For example, a local application that has the code access security permission might not have operating system permission.</span></span> <span data-ttu-id="589e2-131">如需詳細資訊，請參閱[程式碼存取安全性基本概念](https://msdn.microsoft.com/library/33tceax8)。</span><span class="sxs-lookup"><span data-stu-id="589e2-131">For more information, see [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.Win32.RegistryHive>   
- [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a><span data-ttu-id="589e2-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="589e2-132">See Also</span></span>  
+ <span data-ttu-id="589e2-133"><xref:Microsoft.VisualBasic.MyServices.RegistryProxy></span><span class="sxs-lookup"><span data-stu-id="589e2-133"><xref:Microsoft.VisualBasic.MyServices.RegistryProxy></span></span>   
+ <span data-ttu-id="589e2-134"><xref:Microsoft.Win32.RegistryHive></span><span class="sxs-lookup"><span data-stu-id="589e2-134"><xref:Microsoft.Win32.RegistryHive></span></span>   
+ [<span data-ttu-id="589e2-135">讀取和寫入登錄</span><span class="sxs-lookup"><span data-stu-id="589e2-135">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+

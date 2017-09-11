@@ -15,18 +15,19 @@ ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e634d2520e5b40d6ccb8ac11ce47f726980ef8cd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e77574120713159dc5661e159d601cc82117a335
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>如何︰ 投影物件圖形 (Visual Basic)
-本主題說明如何從 XML 規劃或填入物件圖形。  
+# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="51a46-102">如何︰ 投影物件圖形 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="51a46-102">How to: Project an Object Graph (Visual Basic)</span></span>
+<span data-ttu-id="51a46-103">本主題說明如何從 XML 規劃或填入物件圖形。</span><span class="sxs-lookup"><span data-stu-id="51a46-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼會填入物件圖形與`Address`， `PurchaseOrder`，和`PurchaseOrderItem`類別[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件。  
+## <a name="example"></a><span data-ttu-id="51a46-104">範例</span><span class="sxs-lookup"><span data-stu-id="51a46-104">Example</span></span>  
+ <span data-ttu-id="51a46-105">下列程式碼會填入物件圖形與`Address`， `PurchaseOrder`，和`PurchaseOrderItem`類別[範例 XML 檔︰ 典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件。</span><span class="sxs-lookup"><span data-stu-id="51a46-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
   
 ```vb  
 Class Address  
@@ -310,9 +311,9 @@ End Sub
   
 ```  
   
- 在此範例中，將[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢傳回為<xref:System.Collections.Generic.IEnumerable%601>的`PurchaseOrderItem`。</xref:System.Collections.Generic.IEnumerable%601> 中的項目`PurchaseOrder`類別都屬於型別<xref:System.Collections.Generic.IEnumerable%601>的`PurchaseOrderItem`。</xref:System.Collections.Generic.IEnumerable%601> 程式碼使用<xref:System.Linq.Enumerable.ToList%2A>擴充方法，以建立<xref:System.Collections.Generic.List%601>從查詢結果的集合。</xref:System.Collections.Generic.List%601> </xref:System.Linq.Enumerable.ToList%2A>  
+ <span data-ttu-id="51a46-106">在此範例中，將[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]查詢傳回為<xref:System.Collections.Generic.IEnumerable%601>的`PurchaseOrderItem`。</xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="51a46-106">In this example, the result of the [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="51a46-107">中的項目`PurchaseOrder`類別都屬於型別<xref:System.Collections.Generic.IEnumerable%601>的`PurchaseOrderItem`。</xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="51a46-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="51a46-108">程式碼使用<xref:System.Linq.Enumerable.ToList%2A>擴充方法，以建立<xref:System.Collections.Generic.List%601>從查詢結果的集合。</xref:System.Collections.Generic.List%601> </xref:System.Linq.Enumerable.ToList%2A></span><span class="sxs-lookup"><span data-stu-id="51a46-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="51a46-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="51a46-109">The example produces the following output:</span></span>  
   
 ```  
 PurchaseOrderNumber: 99503  
@@ -351,7 +352,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
- <xref:System.Linq.Enumerable.ToList%2A></xref:System.Linq.Enumerable.ToList%2A>   
- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="51a46-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51a46-110">See Also</span></span>  
+ <span data-ttu-id="51a46-111"><xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A></span><span class="sxs-lookup"><span data-stu-id="51a46-111"><xref:System.Linq.Enumerable.Select%2A></span></span>   
+ <span data-ttu-id="51a46-112"><xref:System.Linq.Enumerable.ToList%2A></xref:System.Linq.Enumerable.ToList%2A></span><span class="sxs-lookup"><span data-stu-id="51a46-112"><xref:System.Linq.Enumerable.ToList%2A></span></span>   
+<span data-ttu-id="51a46-113"> [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="51a46-113"> [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)</span></span>

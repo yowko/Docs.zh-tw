@@ -1,5 +1,5 @@
 ---
-title: "使用組件和全域組件快取 | Microsoft Docs"
+title: "使用組件和全域組件快取"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,66 +20,67 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5a3312180542df8d59e30c6fc803d7ba24c7757e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
-如果您想要在數個應用程式之間共用組件，可以將它安裝到全域組件快取。 每部安裝 Common Language Runtime 的電腦都有這個全機器程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。 組件必須有強式名稱，才能安裝在全域組件快取中。  
+# <a name="working-with-assemblies-and-the-global-assembly-cache"></a><span data-ttu-id="858f0-102">使用組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="858f0-102">Working with Assemblies and the Global Assembly Cache</span></span>
+<span data-ttu-id="858f0-103">如果您想要在數個應用程式之間共用組件，可以將它安裝到全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="858f0-103">If you intend to share an assembly among several applications, you can install it into the global assembly cache.</span></span> <span data-ttu-id="858f0-104">每部安裝 Common Language Runtime 的電腦都有這個全機器程式碼快取。</span><span class="sxs-lookup"><span data-stu-id="858f0-104">Each computer where the common language runtime is installed has this machine-wide code cache.</span></span> <span data-ttu-id="858f0-105">全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-105">The global assembly cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span> <span data-ttu-id="858f0-106">組件必須有強式名稱，才能安裝在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="858f0-106">An assembly must have a strong name to be installed in the global assembly cache.</span></span>  
   
 > [!NOTE]
->  放在全域組件快取中的組件必須具有相同的組件名稱和檔案名稱 (不包括副檔名)。 例如，組件名稱為 myAssembly 之組件的檔案名稱必須有 myAssembly.exe 或 myAssembly.dll。  
+>  <span data-ttu-id="858f0-107">放在全域組件快取中的組件必須具有相同的組件名稱和檔案名稱 (不包括副檔名)。</span><span class="sxs-lookup"><span data-stu-id="858f0-107">Assemblies placed in the global assembly cache must have the same assembly name and file name (not including the file name extension).</span></span> <span data-ttu-id="858f0-108">例如，組件名稱為 myAssembly 之組件的檔案名稱必須有 myAssembly.exe 或 myAssembly.dll。</span><span class="sxs-lookup"><span data-stu-id="858f0-108">For example, an assembly with the assembly name of myAssembly must have a file name of either myAssembly.exe or myAssembly.dll.</span></span>  
   
- 您應該只有在必要時才將組件安裝到全域組件快取，來共用組件。 一般來說，除非明確需要共用組件，否則會將組件相依性保留為私用，並且在應用程式目錄中尋找組件。 此外，您不需要將組件安裝到全域組件快取，它們即可供 COM Interop 或 Unmanaged 程式碼使用。  
+ <span data-ttu-id="858f0-109">您應該只有在必要時才將組件安裝到全域組件快取，來共用組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-109">You should share assemblies by installing them into the global assembly cache only when necessary.</span></span> <span data-ttu-id="858f0-110">一般來說，除非明確需要共用組件，否則會將組件相依性保留為私用，並且在應用程式目錄中尋找組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-110">As a general guideline, keep assembly dependencies private and locate assemblies in the application directory unless sharing an assembly is explicitly required.</span></span> <span data-ttu-id="858f0-111">此外，您不需要將組件安裝到全域組件快取，它們即可供 COM Interop 或 Unmanaged 程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="858f0-111">In addition, you do not have to install assemblies into the global assembly cache to make them accessible to COM interop or unmanaged code.</span></span>  
   
- 您有數個原因想要將組件安裝到全域組件快取中：  
+ <span data-ttu-id="858f0-112">您有數個原因想要將組件安裝到全域組件快取中：</span><span class="sxs-lookup"><span data-stu-id="858f0-112">There are several reasons why you might want to install an assembly into the global assembly cache:</span></span>  
   
--   共用位置。  
+-   <span data-ttu-id="858f0-113">共用位置。</span><span class="sxs-lookup"><span data-stu-id="858f0-113">Shared location.</span></span>  
   
-     應用程式應該使用的組件可以放在全域組件快取中。 例如，如果所有應用程式都應該使用位於全域組件快取中的組件，則可以將版本原則陳述式新增至 Machine.config 檔案，以將參考重新導向至組件。  
+     <span data-ttu-id="858f0-114">應用程式應該使用的組件可以放在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="858f0-114">Assemblies that should be used by applications can be put in the global assembly cache.</span></span> <span data-ttu-id="858f0-115">例如，如果所有應用程式都應該使用位於全域組件快取中的組件，則可以將版本原則陳述式新增至 Machine.config 檔案，以將參考重新導向至組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-115">For example, if all applications should use an assembly located in the global assembly cache, a version policy statement can be added to the Machine.config file that redirects references to the assembly.</span></span>  
   
--   檔案安全性。  
+-   <span data-ttu-id="858f0-116">檔案安全性。</span><span class="sxs-lookup"><span data-stu-id="858f0-116">File security.</span></span>  
   
-     系統管理員通常會使用存取控制清單 (ACL) 來控制寫入和執行存取權，以便保護 systemroot 目錄。 因為全域組件快取安裝在 systemroot 目錄中，所以它會繼承該目錄的 ACL。 建議只有具備系統管理員權限的使用者能從全域組件快取刪除檔案。  
+     <span data-ttu-id="858f0-117">系統管理員通常會使用存取控制清單 (ACL) 來控制寫入和執行存取權，以便保護 systemroot 目錄。</span><span class="sxs-lookup"><span data-stu-id="858f0-117">Administrators often protect the systemroot directory using an Access Control List (ACL) to control write and execute access.</span></span> <span data-ttu-id="858f0-118">因為全域組件快取安裝在 systemroot 目錄中，所以它會繼承該目錄的 ACL。</span><span class="sxs-lookup"><span data-stu-id="858f0-118">Because the global assembly cache is installed in the systemroot directory, it inherits that directory's ACL.</span></span> <span data-ttu-id="858f0-119">建議只有具備系統管理員權限的使用者能從全域組件快取刪除檔案。</span><span class="sxs-lookup"><span data-stu-id="858f0-119">It is recommended that only users with Administrator privileges be allowed to delete files from the global assembly cache.</span></span>  
   
--   並存版本。  
+-   <span data-ttu-id="858f0-120">並存版本。</span><span class="sxs-lookup"><span data-stu-id="858f0-120">Side-by-side versioning.</span></span>  
   
-     具有相同名稱但不同版本資訊之組件的多個複本，可以在全域組件快取中進行維護。  
+     <span data-ttu-id="858f0-121">具有相同名稱但不同版本資訊之組件的多個複本，可以在全域組件快取中進行維護。</span><span class="sxs-lookup"><span data-stu-id="858f0-121">Multiple copies of assemblies with the same name but different version information can be maintained in the global assembly cache.</span></span>  
   
--   其他搜尋位置。  
+-   <span data-ttu-id="858f0-122">其他搜尋位置。</span><span class="sxs-lookup"><span data-stu-id="858f0-122">Additional search location.</span></span>  
   
-     在探查或使用組態檔中的程式碼基底資訊之前，Common Language Runtime 會檢查全域組件快取中是否有符合組件要求的組件。  
+     <span data-ttu-id="858f0-123">在探查或使用組態檔中的程式碼基底資訊之前，Common Language Runtime 會檢查全域組件快取中是否有符合組件要求的組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-123">The common language runtime checks the global assembly cache for an assembly that matches the assembly request before probing or using the codebase information in a configuration file.</span></span>  
   
- 請注意，有些情況下您明確不想要將組件安裝到全域組件快取中。 如果您將構成應用程式的其中一個組件放入全域組件快取中，則可以使用 XCOPY 複製應用程式目錄，以不再複寫或安裝應用程式。 在此情況下，您也必須將組件移至全域組件快取。  
+ <span data-ttu-id="858f0-124">請注意，有些情況下您明確不想要將組件安裝到全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="858f0-124">Note that there are scenarios where you explicitly do not want to install an assembly into the global assembly cache.</span></span> <span data-ttu-id="858f0-125">如果您將構成應用程式的其中一個組件放入全域組件快取中，則可以使用 XCOPY 複製應用程式目錄，以不再複寫或安裝應用程式。</span><span class="sxs-lookup"><span data-stu-id="858f0-125">If you place one of the assemblies that make up an application into the global assembly cache, you can no longer replicate or install the application by using XCOPY to copy the application directory.</span></span> <span data-ttu-id="858f0-126">在此情況下，您也必須將組件移至全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="858f0-126">In this case, you must also move the assembly into the global assembly cache.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
- [操作說明：將組件安裝到全域組件快取](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
- 描述將組件安裝到全域組件快取中的方式。  
+## <a name="in-this-section"></a><span data-ttu-id="858f0-127">本章節內容</span><span class="sxs-lookup"><span data-stu-id="858f0-127">In This Section</span></span>  
+ [<span data-ttu-id="858f0-128">操作說明：將組件安裝到全域組件快取</span><span class="sxs-lookup"><span data-stu-id="858f0-128">How to: Install an Assembly into the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ <span data-ttu-id="858f0-129">描述將組件安裝到全域組件快取中的方式。</span><span class="sxs-lookup"><span data-stu-id="858f0-129">Describes the ways to install an assembly into the global assembly cache.</span></span>  
   
- [操作說明：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
- 說明如何使用 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。  
+ [<span data-ttu-id="858f0-130">操作說明：檢視全域組件快取的內容</span><span class="sxs-lookup"><span data-stu-id="858f0-130">How to: View the Contents of the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ <span data-ttu-id="858f0-131">說明如何使用 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。</span><span class="sxs-lookup"><span data-stu-id="858f0-131">Explains how to use the [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to view the contents of the global assembly cache.</span></span>  
   
- [操作說明：從全域組件快取移除組件](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
- 說明如何使用 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來移除全域組件快取中的組件。  
+ [<span data-ttu-id="858f0-132">操作說明：從全域組件快取移除組件</span><span class="sxs-lookup"><span data-stu-id="858f0-132">How to: Remove an Assembly from the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ <span data-ttu-id="858f0-133">說明如何使用 [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) 來移除全域組件快取中的組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-133">Explains how to use the [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to remove an assembly from the global assembly cache.</span></span>  
   
- [使用 Serviced 元件和全域組件快取](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
- 說明 Serviced 元件 (Managed COM+ 元件) 為何應該放在全域組件快取中。  
+ [<span data-ttu-id="858f0-134">使用 Serviced 元件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="858f0-134">Using Serviced Components with the Global Assembly Cache</span></span>](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
+ <span data-ttu-id="858f0-135">說明 Serviced 元件 (Managed COM+ 元件) 為何應該放在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="858f0-135">Explains why serviced components (managed COM+ components) should be placed in the global assembly cache.</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
- 提供建立組件的概觀。  
+## <a name="related-sections"></a><span data-ttu-id="858f0-136">相關章節</span><span class="sxs-lookup"><span data-stu-id="858f0-136">Related Sections</span></span>  
+ [<span data-ttu-id="858f0-137">建立組件</span><span class="sxs-lookup"><span data-stu-id="858f0-137">Creating Assemblies</span></span>](../../../docs/framework/app-domains/create-assemblies.md)  
+ <span data-ttu-id="858f0-138">提供建立組件的概觀。</span><span class="sxs-lookup"><span data-stu-id="858f0-138">Provides an overview of creating assemblies.</span></span>  
   
- [全域組件快取](../../../docs/framework/app-domains/gac.md)  
- 描述全域組件快取。  
+ [<span data-ttu-id="858f0-139">全域組件快取</span><span class="sxs-lookup"><span data-stu-id="858f0-139">Global Assembly Cache</span></span>](../../../docs/framework/app-domains/gac.md)  
+ <span data-ttu-id="858f0-140">描述全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="858f0-140">Describes the global assembly cache.</span></span>  
   
- [操作說明：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- 說明如何使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視組件中的 Microsoft 中繼語言 (MSIL) 資訊。  
+ [<span data-ttu-id="858f0-141">操作說明：檢視組件內容</span><span class="sxs-lookup"><span data-stu-id="858f0-141">How to: View Assembly Contents</span></span>](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ <span data-ttu-id="858f0-142">說明如何使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視組件中的 Microsoft 中繼語言 (MSIL) 資訊。</span><span class="sxs-lookup"><span data-stu-id="858f0-142">Explains how to use the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) information in an assembly.</span></span>  
   
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- 描述 Common Language Runtime 如何找出和載入構成應用程式的組件。  
+ [<span data-ttu-id="858f0-143">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="858f0-143">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ <span data-ttu-id="858f0-144">描述 Common Language Runtime 如何找出和載入構成應用程式的組件。</span><span class="sxs-lookup"><span data-stu-id="858f0-144">Describes how the common language runtime locates and loads the assemblies that make up your application.</span></span>  
   
- [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- 描述組件，即 Managed 應用程式的建置組塊。
+ [<span data-ttu-id="858f0-145">使用組件設計程式</span><span class="sxs-lookup"><span data-stu-id="858f0-145">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ <span data-ttu-id="858f0-146">描述組件，即 Managed 應用程式的建置組塊。</span><span class="sxs-lookup"><span data-stu-id="858f0-146">Describes assemblies, the building blocks of managed applications.</span></span>
+

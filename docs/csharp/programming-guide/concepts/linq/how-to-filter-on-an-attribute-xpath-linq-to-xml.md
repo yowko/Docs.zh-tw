@@ -1,5 +1,5 @@
 ---
-title: "如何：篩選屬性 (XPath-LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：篩選屬性 (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,25 +14,24 @@ ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f86b32c7f3bf4abde0c639fb06b3fdb07e1443e6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbfc95c3fe20738f01a73861535767351ae8007b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>如何：篩選屬性 (XPath-LINQ to XML) (C#)
-本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="e4bb4-102">如何：篩選屬性 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e4bb4-102">How to: Filter on an Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="e4bb4-103">本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。</span><span class="sxs-lookup"><span data-stu-id="e4bb4-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- XPath 運算式為：  
+ <span data-ttu-id="e4bb4-104">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="e4bb4-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a>範例  
- 此範例會尋找具有 `Address` 之名稱，以及具有值為 "Shipping" 之 `Type` 屬性的所有子代項目。  
+## <a name="example"></a><span data-ttu-id="e4bb4-105">範例</span><span class="sxs-lookup"><span data-stu-id="e4bb4-105">Example</span></span>  
+ <span data-ttu-id="e4bb4-106">此範例會尋找具有 `Address` 之名稱，以及具有值為 "Shipping" 之 `Type` 屬性的所有子代項目。</span><span class="sxs-lookup"><span data-stu-id="e4bb4-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ <span data-ttu-id="e4bb4-107">此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="e4bb4-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -55,7 +54,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="e4bb4-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e4bb4-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -85,5 +84,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="e4bb4-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4bb4-109">See Also</span></span>  
+ [<span data-ttu-id="e4bb4-110">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="e4bb4-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

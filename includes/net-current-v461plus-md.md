@@ -1,1 +1,1 @@
-自 4.6.1 起可用
+<span data-ttu-id="bc351-101">自 4.6.1 起可用</span><span class="sxs-lookup"><span data-stu-id="bc351-101">Available since 4.6.1</span></span>

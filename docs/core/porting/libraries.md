@@ -1,378 +1,200 @@
 ---
-title: "移轉到 .NET Core - 程式庫 | Microsoft Docs"
-description: "移轉到 .NET Core - 程式庫"
-keywords: ".NET、.NET Core"
+title: "移轉到 .NET Core - 程式庫"
+description: "了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。"
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 271720298d6432e9fed9ef757df2000c5b7d2482
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
-# 移轉到 .NET Core - 程式庫
-<a id="porting-to-net-core---libraries" class="xliff"></a>
+# <a name="porting-to-net-core---libraries"></a><span data-ttu-id="346e5-104">移轉到 .NET Core - 程式庫</span><span class="sxs-lookup"><span data-stu-id="346e5-104">Porting to .NET Core - Libraries</span></span>
 
-使用 .NET Core 1.0 版本時，有機會移轉現有的程式庫程式碼，讓它可以跨平台執行。 本文討論 .NET 標準程式庫、無法使用的技術、如何說明 .NET Core 1.0 上提供的較少 API、如何使用 .NET Core SDK Preview 2 隨附的工具，以及移轉程式碼的建議作法。
+<span data-ttu-id="346e5-105">本文討論將程式庫程式碼移植到 .NET Core 來使它能跨平台執行。</span><span class="sxs-lookup"><span data-stu-id="346e5-105">This article discusses porting library code to .NET Core so that it runs cross-platform.</span></span>
 
-移轉可能需要一些時間，尤其是當您有大型的程式碼基底時。 您也應該在此視需要準備採用最適合您程式碼的指引。 每個程式碼基底都不相同，因此本文嘗試以彈性的方式規範項目，但您可能會發現自己需要偏離規定的指引。
+## <a name="prerequisites"></a><span data-ttu-id="346e5-106">必要條件</span><span class="sxs-lookup"><span data-stu-id="346e5-106">Prerequisites</span></span>
 
-## 必要條件
-<a id="prerequisites" class="xliff"></a>
+<span data-ttu-id="346e5-107">本文假設您已具備下列條件：</span><span class="sxs-lookup"><span data-stu-id="346e5-107">This article assumes that you:</span></span>
 
-本文假設您在 Windows 上使用 Visual Studio 2017 或更新版本。 舊版 Visual Studio 不提供建置 .NET Core 程式碼所需的位元。
+- <span data-ttu-id="346e5-108">使用 Visual Studio 2017 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="346e5-108">Are using Visual Studio 2017 or later.</span></span> <span data-ttu-id="346e5-109">.NET Core 不支援較舊的 Visual Studio 版本。</span><span class="sxs-lookup"><span data-stu-id="346e5-109">.NET Core isn't supported on earlier versions of Visual Studio.</span></span>
+- <span data-ttu-id="346e5-110">了解[建議的移植程序](index.md)。</span><span class="sxs-lookup"><span data-stu-id="346e5-110">Understand the [recommended porting process](index.md).</span></span>
+- <span data-ttu-id="346e5-111">已解決任何[協力廠商相依性](third-party-deps.md)問題。</span><span class="sxs-lookup"><span data-stu-id="346e5-111">Have resolved any issues with [third-party dependencies](third-party-deps.md).</span></span>
 
-本文也假設您了解[建議移轉程序](index.md)，並已解決所有[協力廠商相依性](third-party-deps.md)問題。
+<span data-ttu-id="346e5-112">您也應該進一步熟悉下列主題的內容：</span><span class="sxs-lookup"><span data-stu-id="346e5-112">You should also become familiar with the content of the following topics:</span></span>
 
-## 以 .NET 標準程式庫為目標
-<a id="targeting-the-net-standard-library" class="xliff"></a>
+<span data-ttu-id="346e5-113">[.NET Standard](~/docs/standard/net-standard.md) </span><span class="sxs-lookup"><span data-stu-id="346e5-113">[.NET Standard](~/docs/standard/net-standard.md) </span></span>  
+<span data-ttu-id="346e5-114">本主題描述計畫在所有 .NET 實作上提供的正式 .NET API 規格。</span><span class="sxs-lookup"><span data-stu-id="346e5-114">This topic describes the formal specification of .NET APIs that are intended to be available on all .NET implementations.</span></span>
 
-建置 .NET Core 跨平台程式庫的最佳辦法，是以 [.NET Standard](../../standard/net-standard.md) 為目標。 .NET 標準程式庫是計劃提供所有 .NET 執行階段使用的 .NET API 正式規格。 受 .NET Core 執行階段支援。
+<span data-ttu-id="346e5-115">[套件、中繼套件和架構](~/docs/core/packages.md) </span><span class="sxs-lookup"><span data-stu-id="346e5-115">[Packages, Metapackages and Frameworks](~/docs/core/packages.md) </span></span>  
+<span data-ttu-id="346e5-116">本文討論 .NET Core 如何定義及使用套件，以及套件如何支援在多個 .NET 實作上執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="346e5-116">This article discusses how .NET Core defines and uses packages and how packages support code running on multiple .NET implementations.</span></span>
 
-這表示，您必須在可以使用的 API 與可以支援的平台之間作出取捨，並挑選最適合所要取捨的 .NET Standard 平台版本。
+<span data-ttu-id="346e5-117">[使用跨平台工具開發程式庫](~/docs/core/tutorials/libraries.md) </span><span class="sxs-lookup"><span data-stu-id="346e5-117">[Developing Libraries with Cross Platform Tools](~/docs/core/tutorials/libraries.md) </span></span>  
+<span data-ttu-id="346e5-118">本主題說明如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。</span><span class="sxs-lookup"><span data-stu-id="346e5-118">This topic explains how to write libraries for .NET using cross-platform CLI tools.</span></span>
 
-目前有 7 種不同的版本要考慮︰.NET Standard 1.0 到 1.6。 如果您選擇較新的版本，就可以存取較多的 API，代價是在較少的目標上執行。 如果您選擇較舊的版本，程式碼可以在較多的目標上執行，代價是可用的 API 較少。
+<span data-ttu-id="346e5-119">[適用於 .NET Core 之 *csproj* 格式的新增項目](~/docs/core/tools/csproj.md) </span><span class="sxs-lookup"><span data-stu-id="346e5-119">[Additions to the *csproj* format for .NET Core](~/docs/core/tools/csproj.md) </span></span>  
+<span data-ttu-id="346e5-120">本文概述從改為使用 *csproj* 和 MSBuild 時，新增至專案檔的變更。</span><span class="sxs-lookup"><span data-stu-id="346e5-120">This article outlines the changes that were added to the project file as part of the move to *csproj* and MSBuild.</span></span>
 
-為了方便起見，以下是每個 .NET Standard 版及其執行所在的各特定區域的交叉表︰
+<span data-ttu-id="346e5-121">[移植到 .NET Core - 分析協力廠商相依性](~/docs/core/porting/third-party-deps.md) </span><span class="sxs-lookup"><span data-stu-id="346e5-121">[Porting to .NET Core - Analyzing your Third-Party Party Dependencies](~/docs/core/porting/third-party-deps.md) </span></span>  
+<span data-ttu-id="346e5-122">本主題討論協力廠商相依性的可攜性，以及當某個 NuGet 套件相依性無法在 .NET Core 上執行時的解決方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-122">This topic discusses the portability of third-party dependencies and what to do when a NuGet package dependency doesn't run on .NET Core.</span></span>
 
-| 平台名稱 | Alias |  |  |  |  |  | | |
-| :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|.NET Standard | netstandard | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 |
-|.NET 核心|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|
-|.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|4.6.3|
-|Mono/Xamarin 平台||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|*|
-|通用 Windows 平台|uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|||
-|Windows|win|&rarr;|8.0|8.1|||||
-|Windows Phone|wpa|&rarr;|&rarr;|8.1|||||
-|Windows Phone Silverlight|wp|8.0|||||||
+## <a name="net-framework-technologies-unavailable-on-net-core"></a><span data-ttu-id="346e5-123">.NET Core 上無法使用的 .NET Framework 技術</span><span class="sxs-lookup"><span data-stu-id="346e5-123">.NET Framework technologies unavailable on .NET Core</span></span>
 
-了解重點：**以較舊版本為目標的專案無法參考以較新版本為目標的專案**。 例如，以 .NET Standard 平台 1.2 版為目標的專案無法參考以 .NET Standard 平台 1.3 或更新版本為目標的專案。 但是專案**可以**參考較舊的版本，因此以 .NET Standard 平台 1.3 為目標的專案可以參考以 .NET Standard 平台 1.2 或較舊版本為目標的專案。
+<span data-ttu-id="346e5-124">有幾種 .NET Framework 程式庫可用的功能並無法搭配 .NET Core 使用，例如 AppDomain、遠端、程式碼存取安全性 (CAS) 和安全性透明。</span><span class="sxs-lookup"><span data-stu-id="346e5-124">Several technologies available to .NET Framework libraries aren't available for use with .NET Core, such as AppDomains, Remoting, Code Access Security (CAS), and Security Transparency.</span></span> <span data-ttu-id="346e5-125">如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-125">If your libraries rely on one or more of these technologies, consider the alternative approaches outlined below.</span></span> <span data-ttu-id="346e5-126">如需 API 相容性的詳細資訊，請參閱 CoreFX 小組在 GitHub 上維護的[行為變更/相容性中斷及過時/舊版 API 的清單](https://github.com/dotnet/corefx/wiki/ApiCompat) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="346e5-126">For more information on API compatibility, the CoreFX team maintains a [List of behavioral changes/compat breaks and deprecated/legacy APIs](https://github.com/dotnet/corefx/wiki/ApiCompat) at GitHub.</span></span>
 
-建議您選擇可能的最低 .NET Standard 版本，整個專案都使用這個版本。
+<span data-ttu-id="346e5-127">目前未實作的 API或技術，並不代表我們是刻意不支援它。</span><span class="sxs-lookup"><span data-stu-id="346e5-127">Just because an API or technology isn't currently implemented doesn't imply it's intentionally unsupported.</span></span> <span data-ttu-id="346e5-128">在 GitHub 上的 [dotnet/corefx 存放庫問題](https://github.com/dotnet/corefx/issues) \(英文\) 頁面中提出問題，以要求特定的 API 和技術。</span><span class="sxs-lookup"><span data-stu-id="346e5-128">File an issue in the [dotnet/corefx repository issues](https://github.com/dotnet/corefx/issues) at GitHub to ask for specific APIs and technologies.</span></span> <span data-ttu-id="346e5-129">[移植要求的相關問題](https://github.com/dotnet/corefx/labels/port-to-core) \(英文\) 會以 `port-to-core` 標籤標記。</span><span class="sxs-lookup"><span data-stu-id="346e5-129">[Porting requests in the issues](https://github.com/dotnet/corefx/labels/port-to-core) are marked with the `port-to-core` label.</span></span>
 
-深入了解 [.NET 平台標準程式庫](../../standard/net-standard.md)。
+### <a name="appdomains"></a><span data-ttu-id="346e5-130">AppDomain</span><span class="sxs-lookup"><span data-stu-id="346e5-130">AppDomains</span></span>
 
-## .NET Standard 或 .NET Core 尚未提供關鍵技術
-<a id="key-technologies-not-yet-available-on-the-net-standard-or-net-core" class="xliff"></a>
+<span data-ttu-id="346e5-131">AppDomain 可將應用程式互相隔離。</span><span class="sxs-lookup"><span data-stu-id="346e5-131">AppDomains isolate apps from one another.</span></span> <span data-ttu-id="346e5-132">AppDomain 需要執行階段支援，且通常具有較高的成本。</span><span class="sxs-lookup"><span data-stu-id="346e5-132">AppDomains require runtime support and are generally quite expensive.</span></span> <span data-ttu-id="346e5-133">該功能尚未在 .NET Core 中實作。</span><span class="sxs-lookup"><span data-stu-id="346e5-133">They're not implemented in .NET Core.</span></span> <span data-ttu-id="346e5-134">我們並未計畫於未來加入此功能。</span><span class="sxs-lookup"><span data-stu-id="346e5-134">We don't plan on adding this capability in future.</span></span> <span data-ttu-id="346e5-135">若要隔離程式碼，建議使用不同的處理序或使用容器作為替代方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-135">For code isolation, we recommend separate processes or using containers as an alternative.</span></span> <span data-ttu-id="346e5-136">若要以動態方式載入組件，建議使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。</span><span class="sxs-lookup"><span data-stu-id="346e5-136">For the dynamic loading of assemblies, we recommend the new <xref:System.Runtime.Loader.AssemblyLoadContext> class.</span></span>
 
-您使用的某些技術可能是 .NET Framework 提供，但目前 .NET Core 不提供。 下列小節各自對應其中一項技術。 可以採用的替代選項就會列出。
+<span data-ttu-id="346e5-137">為了使從 .NET Framework 的程式碼移植作業更加容易，我們已公開 .NET Core 中的部分 <xref:System.AppDomain> API 介面。</span><span class="sxs-lookup"><span data-stu-id="346e5-137">To make code migration from .NET Framework easier, we've exposed some of the <xref:System.AppDomain> API surface in .NET Core.</span></span> <span data-ttu-id="346e5-138">某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=fullName>)，某些成員則不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。</span><span class="sxs-lookup"><span data-stu-id="346e5-138">Some of the API functions normally (for example, <xref:System.AppDomain.UnhandledException?displayProperty=fullName>), some members do nothing (for example, <xref:System.AppDomain.SetCachePath%2A>), and some of them throw <xref:System.PlatformNotSupportedException> (for example, <xref:System.AppDomain.CreateDomain%2A>).</span></span> <span data-ttu-id="346e5-139">在 [dotnet/corefx GitHub 存放庫](https://github.com/dotnet/corefx) \(英文\) 中針對 [`System.AppDomain` 參考來源](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) \(英文\) 檢查您使用的類型，請務必選取符合您實作版本的分支。</span><span class="sxs-lookup"><span data-stu-id="346e5-139">Check the types you use against the [`System.AppDomain` reference source](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) in the [dotnet/corefx GitHub repository](https://github.com/dotnet/corefx) making sure to select the branch that matches your implemented version.</span></span>
 
-### 應用程式定義域
-<a id="app-domains" class="xliff"></a>
+### <a name="remoting"></a><span data-ttu-id="346e5-140">遠端處理</span><span class="sxs-lookup"><span data-stu-id="346e5-140">Remoting</span></span>
 
-AppDomain 在 .NET Framework 上可用於不同用途。 若要隔離程式碼，建議選擇使用不同的程序及/或容器。 若要以動態方式載入組件，建議使用新的 @System.Runtime.Loader.AssemblyLoadContext 類別。
+<span data-ttu-id="346e5-141">.NET 遠端處理已被識別為有問題的架構。</span><span class="sxs-lookup"><span data-stu-id="346e5-141">.NET Remoting was identified as a problematic architecture.</span></span> <span data-ttu-id="346e5-142">該功能是用於目前已不支援的跨 AppDomain 通訊。</span><span class="sxs-lookup"><span data-stu-id="346e5-142">It's used for cross-AppDomain communication, which is no longer supported.</span></span> <span data-ttu-id="346e5-143">此外，遠端處理需要執行階段支援，因此維護成本相當高昂。</span><span class="sxs-lookup"><span data-stu-id="346e5-143">Also, Remoting requires runtime support, which is expensive to maintain.</span></span> <span data-ttu-id="346e5-144">基於這些原因，.NET Core 上並不支援 .NET 遠端處理，且我們也未計畫於未來支援該功能。</span><span class="sxs-lookup"><span data-stu-id="346e5-144">For these reasons, .NET Remoting isn't supported on .NET Core, and we don't plan on adding support for it in the future.</span></span>
 
-### 遠端處理
-<a id="remoting" class="xliff"></a>
+<span data-ttu-id="346e5-145">如需進行跨處理序通訊，請考慮使用處理序間通訊 (IPC) 機制來代替遠端處理，例如 <xref:System.IO.Pipes> 或 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 類別。</span><span class="sxs-lookup"><span data-stu-id="346e5-145">For communication across processes, consider inter-process communication (IPC) mechanisms as an alternative to Remoting, such as the <xref:System.IO.Pipes> or the <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> class.</span></span>
 
-若要跨處理序通訊，可以使用處理序間通訊 (IPC) 機制替代遠端處理，例如[管道](https://docs.microsoft.com/dotnet/core/api/system.io.pipes)或[記憶體對應檔案](https://docs.microsoft.com/dotnet/core/api/system.io.memorymappedfiles.memorymappedfile)。
+<span data-ttu-id="346e5-146">針對跨機器通訊，請使用以網路為基礎的替代方案。</span><span class="sxs-lookup"><span data-stu-id="346e5-146">Across machines, use a network-based solution as an alternative.</span></span> <span data-ttu-id="346e5-147">最好是使用額外負荷較低的純文字通訊協定，例如 HTTP。</span><span class="sxs-lookup"><span data-stu-id="346e5-147">Preferably, use a low-overhead plain text protocol, such as HTTP.</span></span> <span data-ttu-id="346e5-148">[Kestrel Web 伺服器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) \(英文\) 是 ASP.NET Core 所使用的 Web 伺服器，也是此情況下可考慮使用的選項。</span><span class="sxs-lookup"><span data-stu-id="346e5-148">The [Kestrel web server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), the web server used by ASP.NET Core, is an option here.</span></span> <span data-ttu-id="346e5-149">針對以網路基礎的跨機器案例，也可以考慮使用 <xref:System.Net.Sockets>。</span><span class="sxs-lookup"><span data-stu-id="346e5-149">Also consider using <xref:System.Net.Sockets> for network-based, cross-machine scenarios.</span></span> <span data-ttu-id="346e5-150">如需更多選項，請參閱 [.NET 開放原始碼開發人員專案：傳訊](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="346e5-150">For more options, see [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).</span></span>
 
-跨電腦可以選擇使用網路型解決方案，最好是低額外負荷的純文字通訊協定，如 HTTP。 在此可以選擇 ASP.NET Core 使用的 Web 伺服器 [KestrelHttpServer](https://github.com/aspnet/KestrelHttpServer)。 也可以考慮選擇透過 [Castle.Core](https://github.com/castleproject/Core) 產生遠端 Proxy。
+### <a name="code-access-security-cas"></a><span data-ttu-id="346e5-151">程式碼存取安全性 (CAS)</span><span class="sxs-lookup"><span data-stu-id="346e5-151">Code Access Security (CAS)</span></span>
 
-### 二進位序列化
-<a id="binary-serialization" class="xliff"></a>
+<span data-ttu-id="346e5-152">需依賴執行階段或架構，來限制 Managed 應用程式或程式庫可使用或執行之資源的沙箱功能，[在 .NET Framework 上並不受支援](~/docs/framework/misc/code-access-security.md)，因此在 .NET Core 上也不受支援。</span><span class="sxs-lookup"><span data-stu-id="346e5-152">Sandboxing, which is relying on the runtime or the framework to constrain which resources a managed application or library uses or runs, [isn't supported on .NET Framework](~/docs/framework/misc/code-access-security.md) and therefore is also not supported on .NET Core.</span></span> <span data-ttu-id="346e5-153">我們認為 .NET Framework 和執行階段中存在太多發生權限提高的案例，因而無法繼續將 CAS 視為安全性界線。</span><span class="sxs-lookup"><span data-stu-id="346e5-153">We believe that there are too many cases in the .NET Framework and runtime where an elevation of privileges occurs to continue treating CAS as a security boundary.</span></span> <span data-ttu-id="346e5-154">此外，CAS 會讓實作更為複雜，且經常會對不需要使用它的應用程式，正確性與效能之間帶來潛在的相互影響。</span><span class="sxs-lookup"><span data-stu-id="346e5-154">In addition, CAS makes the implementation more complicated and often has correctness-performance implications for applications that don't intend to use it.</span></span>
 
-若要替代二進位序列化，有多種不同的序列化技術可供選擇。 您應該選擇一種適合您格式和使用量目標的技術。 熱門選項包括︰
+<span data-ttu-id="346e5-155">使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。</span><span class="sxs-lookup"><span data-stu-id="346e5-155">Use security boundaries provided by the operating system, such as virtualization, containers, or user accounts for running processes with the least set of privileges.</span></span>
 
-* JSON 為 [JSON.NET](http://www.newtonsoft.com/json)
-* XML 及 JSON 皆可使用 @System.Runtime.Serialization.DataContractSerializer
-* XML 為 @System.Xml.Serialization.XmlSerializer
-* 通訊協定緩衝區為 [protobuf net](https://github.com/mgravell/protobuf-net)
+### <a name="security-transparency"></a><span data-ttu-id="346e5-156">安全性透明度</span><span class="sxs-lookup"><span data-stu-id="346e5-156">Security Transparency</span></span>
 
-請參閱連結資源，以了解它們的優點，並選擇符合您需求的項目。 另有許多其他序列化格式與技術，其中有許多是開放原始碼。
+<span data-ttu-id="346e5-157">安全性透明度與 CAS 類似，允許以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但它已[不再支援作為安全性界線](~/docs/framework/misc/security-transparent-code.md)。</span><span class="sxs-lookup"><span data-stu-id="346e5-157">Similar to CAS, Security Transparency allows separating sandboxed code from security critical code in a declarative fashion but is [no longer supported as a security boundary](~/docs/framework/misc/security-transparent-code.md).</span></span> <span data-ttu-id="346e5-158">Silverlight 會大量使用這項功能。</span><span class="sxs-lookup"><span data-stu-id="346e5-158">This feature is heavily used by Silverlight.</span></span> 
 
-### 沙箱
-<a id="sandboxes" class="xliff"></a>
+<span data-ttu-id="346e5-159">使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。</span><span class="sxs-lookup"><span data-stu-id="346e5-159">Use security boundaries provided by the operating system, such as virtualization, containers, or user accounts for running processes with the least set of privileges.</span></span>
 
-沙箱的替代方案可以使用作業系統提供的安全性界限，例如以最少權限組執行處理序的使用者帳戶。
+### <a name="globaljson"></a><span data-ttu-id="346e5-160">global.json</span><span class="sxs-lookup"><span data-stu-id="346e5-160">global.json</span></span>
 
-## `project.json` 概觀
-<a id="overview-of-projectjson" class="xliff"></a>
-
-[project.json 專案模型](../tools/project-json.md)是隨附於 .NET Core SDK 1.0 Preview 2 的專案模型。 您現在可能想要利用它的某些優勢︰
-
-* 簡單的多目標，可從單一組建產生特定目標組件。
-* 能夠使用專案組建輕鬆產生 NuGet 封裝。
-* 不必列出專案檔中的檔案。
-* 統一 NuGet 封裝相依性以及專案對專案相依性。
-
-> 雖然最終會淘汰 `project.json`，但現在仍可用來在 .NET Standard 上建置程式庫。
-
-### 專案檔：`project.json`
-<a id="the-project-file-projectjson" class="xliff"></a>
-
-.NET Core 專案是由包含 `project.json` 檔案的目錄所定義。 這個檔案是各層面皆宣告的專案，如封裝相依性、編譯器設定、執行階段設定等等。
-
-`dotnet restore` 命令會讀取此專案檔、還原專案所有相依性，以及產生 `project.lock.json` 檔案。 此檔案包含組建系統建置專案所需的所有必要資訊。
-
-若要深入了解 `project.json` 檔案，請參閱 [project.json 參考](../tools/project-json.md)。
-
-### 方案檔：`global.json`
-<a id="the-solution-file-globaljson" class="xliff"></a>
-
-`global.json` 檔案是選擇性檔案，以納入包含多個專案的方案。 它通常位在專案集的根目錄中。 它可用來通知組建系統可包含專案的不同子目錄。 這適合由數個專案組成的較大型系統。
-
-例如，您可以將程式碼組織到最上層的 `/src` 和 `/test` 資料夾，像這樣︰
+<span data-ttu-id="346e5-161">*global.json* 檔案是可讓您設定專案 .NET Core 工具版本的選擇性檔案。</span><span class="sxs-lookup"><span data-stu-id="346e5-161">The *global.json* file is an optional file that allows you to set the .NET Core tools version of a project.</span></span> <span data-ttu-id="346e5-162">如果您是使用 .NET Core 的每晚建置版本，且想要指定特定版本的 SDK，請使用 *global.json* 檔案來指定版本。</span><span class="sxs-lookup"><span data-stu-id="346e5-162">If you're using nightly builds of .NET Core and wish to specify a specific version of the SDK, specify the version with a *global.json* file.</span></span> <span data-ttu-id="346e5-163">它通常位於目前的工作目錄，或是它的其中一個父目錄中。</span><span class="sxs-lookup"><span data-stu-id="346e5-163">It typically resides in the current working directory or one of its parent directories.</span></span> 
 
 ```json
 {
-    "projects":[ "src", "test" ]
+  "sdk": {
+    "version": "2.1.0-preview1-006491"
+  }
 }
 ```
 
-然後，將多個 `project.json` 檔案放在 `/src` 和 `/test` 自己的子資料夾內。
+## <a name="converting-a-pcl-project"></a><span data-ttu-id="346e5-164">轉換 PCL 專案</span><span class="sxs-lookup"><span data-stu-id="346e5-164">Converting a PCL project</span></span>
 
-### 如何使用 `project.json` 設定多目標
-<a id="how-to-multitarget-with-projectjson" class="xliff"></a>
+<span data-ttu-id="346e5-165">您可以透過在 Visual Studio 2017 中載入程式庫並執行下列步驟，以將 PCL 專案的目標轉換至 .NET Standard：</span><span class="sxs-lookup"><span data-stu-id="346e5-165">You can convert the targets of a PCL project to .NET Standard by loading the library in Visual Studio 2017 and performing the following steps:</span></span>
 
-有許多程式庫設定多目標以盡可能廣伸觸角。 使用 .NET Core，設定多目標是「一等公民」，表示您可以使用單一組建輕鬆產生特定平台的組件。
+1. <span data-ttu-id="346e5-166">以滑鼠右鍵按一下專案檔，並選取 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="346e5-166">Right-click on the project file and select **Properties**.</span></span>
+1. <span data-ttu-id="346e5-167">在 [程式庫] 底下，選取 [目標 .NET 平台標準]。</span><span class="sxs-lookup"><span data-stu-id="346e5-167">Under **Library**, select **Target .NET Platform Standard**.</span></span>
 
-設定多目標就像將正確的目標 Framework Moniker (TFM) 加入到 `project.json` 檔案中一樣簡單，每個目標使用正確的相依性 (.NET Core 是 `dependencies`，.NET Framework 是 `frameworkAssemblies`)，也可以使用 `#if` 指示詞有條件地編譯原始程式碼供特定平台 API 使用。
+<span data-ttu-id="346e5-168">如果您的套件支援 NuGet 3.0，專案會將目標重新設定為 .NET Standard。</span><span class="sxs-lookup"><span data-stu-id="346e5-168">If your packages support NuGet 3.0, the project retargets to .NET Standard.</span></span>
 
-例如，假設您要建置一個程式庫，在此執行某些網路作業，而且希望此程式庫能在所有 .NET Framework 版本、可攜式類別庫 (PCL) 設定檔和 .NET Core 上執行。 .NET Core 和 .NET Framework 4.5+ 的目標可以使用 `System.Net.Http` 程式庫和 `async`/`await`。 但是舊版的 .NET Framework 無法使用這些 API。
+<span data-ttu-id="346e5-169">如果您的套件不支援 NuGet 3.0，Visual Studio 將會顯示對話方塊，告知您將目前的套件解除安裝。</span><span class="sxs-lookup"><span data-stu-id="346e5-169">If your packages don't support NuGet 3.0, you receive a dialog from Visual Studio telling you to uninstall your current packages.</span></span> <span data-ttu-id="346e5-170">如果收到此通知，請執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="346e5-170">If you receive this notice, perform the following steps:</span></span>
 
-以下是 `project.json` 的範例 `frameworks` 區段，其目標為 .NET Framework 2.0、3.5、4.0、4.5 版以及 .NET Standard 1.6：
+1. <span data-ttu-id="346e5-171">以滑鼠右鍵按一下專案，選取 [管理 NuGet 套件]。</span><span class="sxs-lookup"><span data-stu-id="346e5-171">Right-click the project, select **Manage NuGet Packages**.</span></span>
+1. <span data-ttu-id="346e5-172">記下該專案的套件。</span><span class="sxs-lookup"><span data-stu-id="346e5-172">Make a note of the project's packages.</span></span>
+1. <span data-ttu-id="346e5-173">將套件逐一解除安裝。</span><span class="sxs-lookup"><span data-stu-id="346e5-173">Uninstall the packages one-by-one.</span></span>
+1. <span data-ttu-id="346e5-174">您可能需要重新啟動 Visual Studio 以完成解除安裝程序。</span><span class="sxs-lookup"><span data-stu-id="346e5-174">You might need to restart Visual Studio to complete the uninstall process.</span></span> <span data-ttu-id="346e5-175">如果需要重新啟動，可以使用 [NuGet 套件管理員] 視窗中所顯示的 [重新啟動] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="346e5-175">If so, a **Restart** button is presented to you in the **NuGet Package Manager** window.</span></span>
+1. <span data-ttu-id="346e5-176">當專案重新載入時，它會以 .NET Standard 為目標。</span><span class="sxs-lookup"><span data-stu-id="346e5-176">When the project reloads, it targets .NET Standard.</span></span> <span data-ttu-id="346e5-177">新增先前要求您解除安裝的套件。</span><span class="sxs-lookup"><span data-stu-id="346e5-177">Add the packages you were required to uninstall.</span></span>
 
-```javascript
-{
-    "frameworks":{
-        "net20":{
-            "frameworkAssemblies":{
-                "System.Net":""
-            }
-        },
-        "net35":{
-            "frameworkAssemblies":{
-                "System.Net":""
-            }
-        },
-        "net40":{
-            "frameworkAssemblies":{
-                "System.Net":""
-            }
-        },
-        "net45":{
-            "frameworkAssemblies":{
-                "System.Net.Http":"",
-                "System.Threading.Tasks":""
-            }
-        },
-        ".NETPortable,Version=v4.5,Profile=Profile259": {
-            "buildOptions": {
-                "define": [ "PORTABLE" ]
-             },
-             "frameworkAssemblies":{
-                 "mscorlib":"",
-                 "System":"",
-                 "System.Core":"",
-                 "System.Net.Http":""
-             }
-        },
-        "netstandard16":{
-            "dependencies":{
-                "NETStandard.Library":"1.6.0",
-                "System.Net.Http":"4.0.1",
-                "System.Threading.Tasks":"4.0.11"
-            }
-        },
-    }
-}
-```
+## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a><span data-ttu-id="346e5-178">將您的 .NET Framework 程式碼目標重新設定為 .NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="346e5-178">Retargeting your .NET Framework code to .NET Framework 4.6.2</span></span>
 
-請注意，PCL 的目標很特殊︰它們需要您指定組建定義供編譯器辨識，而且需要您指定使用的全部組件，包括 `mscorlib`。
+<span data-ttu-id="346e5-179">如果您的程式碼目標不是 .NET Framework 4.6.2，建議您將目標重新設定為 .NET Framework 4.6.2。</span><span class="sxs-lookup"><span data-stu-id="346e5-179">If your code isn't targeting .NET Framework 4.6.2, we recommended that you retarget to .NET Framework 4.6.2.</span></span> <span data-ttu-id="346e5-180">這可確保在 .NET Standard 不支援現有 API 的情況下，仍可以使用最新的 API 替代項目。</span><span class="sxs-lookup"><span data-stu-id="346e5-180">This ensures the availability of the latest API alternatives for cases where the .NET Standard doesn't support existing APIs.</span></span>
 
-然後原始程式碼就可以使用相依性，像這樣︰
+<span data-ttu-id="346e5-181">針對您想要移轉的每個 Visual Studio 專案，執行下列作業︰</span><span class="sxs-lookup"><span data-stu-id="346e5-181">For each of your projects in Visual Studio you wish to port, do the following:</span></span>
 
-```csharp
-#if (NET20 || NET35 || NET40 || PORTABLE)
-using System.Net;
-#else
-using System.Net.Http;
-using System.Threading.Tasks;
-#endif
-```
+1. <span data-ttu-id="346e5-182">以滑鼠右鍵按一下專案並選取 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="346e5-182">Right-click on the project and select Properties.</span></span>
+1. <span data-ttu-id="346e5-183">在 [目標 Framework] 下拉式清單中，選取 [.NET Framework 4.6.2]。</span><span class="sxs-lookup"><span data-stu-id="346e5-183">In the **Target Framework** dropdown, select **.NET Framework 4.6.2**.</span></span>
+1. <span data-ttu-id="346e5-184">重新編譯您的專案。</span><span class="sxs-lookup"><span data-stu-id="346e5-184">Recompile your projects.</span></span>
 
-請注意，所有 .NET Framework 及 .NET Standard 的目標都有編譯器辨識的名稱︰
+<span data-ttu-id="346e5-185">因為您的專案現在是以 .NET Framework 4.6.2 為目標，請使用該版本的 .NET Framework 作為基礎移植程式碼。</span><span class="sxs-lookup"><span data-stu-id="346e5-185">Because your projects now target .NET Framework 4.6.2, use that version of the .NET Framework as your base for porting code.</span></span>
 
-```
-.NET Framework 2.0   --> NET20
-.NET Framework 3.5   --> NET35
-.NET Framework 4.0   --> NET40
-.NET Framework 4.5   --> NET45
-.NET Framework 4.5.1 --> NET451
-.NET Framework 4.5.2 --> NET452
-.NET Framework 4.6   --> NET46
-.NET Framework 4.6.1 --> NET461
-.NET Framework 4.6.2 --> NET462
-.NET Standard 1.0    --> NETSTANDARD1_0
-.NET Standard 1.1    --> NETSTANDARD1_1
-.NET Standard 1.2    --> NETSTANDARD1_2
-.NET Standard 1.3    --> NETSTANDARD1_3
-.NET Standard 1.4    --> NETSTANDARD1_4
-.NET Standard 1.5    --> NETSTANDARD1_5
-.NET Standard 1.6    --> NETSTANDARD1_6
-```
+## <a name="determining-the-portability-of-your-code"></a><span data-ttu-id="346e5-186">判斷程式碼的可攜性</span><span class="sxs-lookup"><span data-stu-id="346e5-186">Determining the portability of your code</span></span>
 
-如上所述，如果您的目標是 PCL，則必須指定編譯器了解的組建定義。 沒有編譯器可以使用的任何預設定義。
+<span data-ttu-id="346e5-187">下一個步驟是執行 API 可攜性分析器 (ApiPort)，以產生可用於分析的可攜性報告。</span><span class="sxs-lookup"><span data-stu-id="346e5-187">The next step is to run the API Portability Analyzer (ApiPort) to generate a portability report for analysis.</span></span>
 
-### 在 Visual Studio 中使用 `project.json`
-<a id="using-projectjson-in-visual-studio" class="xliff"></a>
+<span data-ttu-id="346e5-188">請確定您了解 [API 可攜性分析器 (ApiPort)](~/docs/standard/portability-analyzer.md)，以及產生目標 .NET Core 之可攜性報告的方式。</span><span class="sxs-lookup"><span data-stu-id="346e5-188">Make sure you understand the [API Portability Analyzer (ApiPort)](~/docs/standard/portability-analyzer.md) and how to generate portability reports for targeting .NET Core.</span></span> <span data-ttu-id="346e5-189">作法因個人需求及品味而異。</span><span class="sxs-lookup"><span data-stu-id="346e5-189">How you do this likely varies based on your needs and personal tastes.</span></span> <span data-ttu-id="346e5-190">以下是幾種不同的方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-190">What follows are a few different approaches.</span></span> <span data-ttu-id="346e5-191">根據您的程式碼架構，可以混合使用這些方法的步驟。</span><span class="sxs-lookup"><span data-stu-id="346e5-191">You may find yourself mixing steps of these approaches depending on how your code is structured.</span></span>
 
-在 Visual Studio 中使用 `project.json` 有兩個選項︰
+### <a name="dealing-primarily-with-the-compiler"></a><span data-ttu-id="346e5-192">主要以編譯器處理</span><span class="sxs-lookup"><span data-stu-id="346e5-192">Dealing primarily with the compiler</span></span>
 
-1. 新的 xproj 專案類型。
-2. 支援 .NET Standard 的重定目標 PCL 專案。
+<span data-ttu-id="346e5-193">這個方法大概最適合小型專案或不使用太多 .NET Framework API 的專案。</span><span class="sxs-lookup"><span data-stu-id="346e5-193">This approach may be the best for small projects or projects which don't use many .NET Framework APIs.</span></span> <span data-ttu-id="346e5-194">方法相當簡單︰</span><span class="sxs-lookup"><span data-stu-id="346e5-194">The approach is simple:</span></span>
 
-各有優缺點。
+1. <span data-ttu-id="346e5-195">對專案選擇性地執行 ApiPort。</span><span class="sxs-lookup"><span data-stu-id="346e5-195">Optionally, run ApiPort on your project.</span></span> <span data-ttu-id="346e5-196">如果執行 ApiPort，請透過報告取得需解決問題的相關知識。</span><span class="sxs-lookup"><span data-stu-id="346e5-196">If you run ApiPort, gain knowledge from the report on issues you'll need to address.</span></span>
+1. <span data-ttu-id="346e5-197">將所有程式碼全部複製到新的 .NET Core 專案。</span><span class="sxs-lookup"><span data-stu-id="346e5-197">Copy all of your code over into a new .NET Core project.</span></span>
+1. <span data-ttu-id="346e5-198">在參考可攜性報告 (若有產生) 的同時，持續解決編譯器錯誤，直到專案可完整編譯為止。</span><span class="sxs-lookup"><span data-stu-id="346e5-198">While referring to the portability report (if generated), solve compiler errors until the project fully compiles.</span></span>
 
-#### 挑選 Xproj 專案的時機
-<a id="when-to-pick-an-xproj-project" class="xliff"></a>
+<span data-ttu-id="346e5-199">雖然此方法不夠有條理，但以程式碼為主的方法通常可以快速解決問題，而且可能是最適合小型專案或程式庫的方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-199">Although this approach is unstructured, the code-focused approach often leads to resolving issues quickly and might be the best approach for smaller projects or libraries.</span></span> <span data-ttu-id="346e5-200">只包含資料模型的專案可能最適合此方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-200">A project that contains only data models might be an ideal candidate for this approach.</span></span>
 
-Visual Studio 中的新 Xproj 專案系統利用 `project.json` 專案模型的各種功能，在現有的專案類型上提供兩大功能︰組建多個組件以順暢設定多目標，以及能夠直接在組建上產生 NuGet 封裝。
+### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a><span data-ttu-id="346e5-201">留在 .NET Framework 直到解決可攜性問題</span><span class="sxs-lookup"><span data-stu-id="346e5-201">Staying on the .NET Framework until portability issues are resolved</span></span>
 
-不過，代價是缺少可能用到的某些功能，例如︰
+<span data-ttu-id="346e5-202">如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-202">This approach might be the best if you prefer to have code that compiles during the entire process.</span></span> <span data-ttu-id="346e5-203">方法如下所示︰</span><span class="sxs-lookup"><span data-stu-id="346e5-203">The approach is as follows:</span></span>
 
-- F# 或 Visual Basic 支援
-- 產生有當地語系化資源字串的附屬組件
-- 直接參考檔案系統上的 `.dll` 檔案
-- 能在參考管理員中參考 csproj 型專案 (但取決於是否直接支援 `.dll` 檔案)
+1. <span data-ttu-id="346e5-204">對專案執行 ApiPort。</span><span class="sxs-lookup"><span data-stu-id="346e5-204">Run ApiPort on a project.</span></span>
+1. <span data-ttu-id="346e5-205">使用不同的可攜式 API 來解決問題。</span><span class="sxs-lookup"><span data-stu-id="346e5-205">Address issues by using different APIs that are portable.</span></span>
+1. <span data-ttu-id="346e5-206">記下您無法使用直接替代方法的所有區域。</span><span class="sxs-lookup"><span data-stu-id="346e5-206">Take note of any areas where you're prevented from using a direct alternative.</span></span>
+1. <span data-ttu-id="346e5-207">為所有要移植的專案重複上述步驟，直到確定每個專案皆已準備好複製到新的 .NET Core 專案。</span><span class="sxs-lookup"><span data-stu-id="346e5-207">Repeat the prior steps for all projects you're porting until you're confident each is ready to be copied over into a new .NET Core project.</span></span>
+1. <span data-ttu-id="346e5-208">將程式碼複製到新的 .NET Core 專案。</span><span class="sxs-lookup"><span data-stu-id="346e5-208">Copy the code into a new .NET Core project.</span></span>
+1. <span data-ttu-id="346e5-209">解決您先前所記下沒有直接替代方法的問題。</span><span class="sxs-lookup"><span data-stu-id="346e5-209">Work out any issues where you noted that a direct alternative doesn't exist.</span></span>
 
-如果您的專案需求相對較小，而且可以利用 xproj 的新功能，您應該挑選它作為專案系統。 在 Visual Studio 中完成此作業，如下所示︰
+<span data-ttu-id="346e5-210">這個謹慎的方法比處理編譯器錯誤更有條理，但仍相當著重在程式碼，並具備永遠有會執行編譯之程式碼的優點。</span><span class="sxs-lookup"><span data-stu-id="346e5-210">This careful approach is more structured than simply working out compiler errors, but it's still relatively code-focused and has the benefit of always having code that compiles.</span></span> <span data-ttu-id="346e5-211">改用其他 API 仍無法解決的問題，其解決方式差異極大。</span><span class="sxs-lookup"><span data-stu-id="346e5-211">The way you resolve certain issues that couldn't be addressed by just using another API varies greatly.</span></span> <span data-ttu-id="346e5-212">您可能現某些專案需要開發更完善的方案，下個方法中會加以說明。</span><span class="sxs-lookup"><span data-stu-id="346e5-212">You may find that you need to develop a more comprehensive plan for certain projects, which is covered as the next approach.</span></span>
 
-1. 確定使用的是 Visual Studio 2015 或更新版本。
-2. 選取 [檔案] | [新增專案]。
-3. 選取 Visual C# 下的 ".NET Core"。
-4. 選取 "Class Library (.NET Core)" 範本。 
+### <a name="developing-a-comprehensive-plan-of-attack"></a><span data-ttu-id="346e5-213">開發全面的攻擊計畫</span><span class="sxs-lookup"><span data-stu-id="346e5-213">Developing a comprehensive plan of attack</span></span>
 
-#### 挑選 PCL 專案的時機
-<a id="when-to-pick-a-pcl-project" class="xliff"></a>
+<span data-ttu-id="346e5-214">這個方法可能最適合大型且更複雜的專案，因為可能必須重新建構程式碼或完全重寫特定區域的程式碼才能支援 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="346e5-214">This approach might be best for larger and more complex projects, where restructuring code or completely rewriting certain areas of code might be necessary to support .NET Core.</span></span> <span data-ttu-id="346e5-215">方法如下所示︰</span><span class="sxs-lookup"><span data-stu-id="346e5-215">The approach is as follows:</span></span>
 
-藉由建立可攜式類別庫 (PCL)，並在 [專案組態] 對話方塊中選取 [.NET Core]，您可以在 Visual Studio 中設定使用傳統專案系統的 .NET Core 為目標。 然後，您必須在 .NET Standard 上將用作基礎的專案重新設定為目標︰
-
-1. 以滑鼠右鍵按一下 Visual Studio 中的專案檔案，然後選取 [內容]。
-2. 在 [組建] 下，選取 「Convert to .NET Standard」 (轉換為 .NET Standard)。
-
-如有進階的專案系統需求，這應該就是您的選擇。 請注意，如果想要透過產生特定平台組件來設定多目標，像使用 `xproj` 專案系統，您需要建立「誘導轉向」PCL，如 [How to Make Portable Class Libraries Work for You](https://blogs.msdn.microsoft.com/dsplaisted/2012/08/27/how-to-make-portable-class-libraries-work-for-you/) (如何讓可攜式類別庫為您工作) 中所述。
-
-## 將 .NET Framework 程式碼重定目標為 .NET Framework 4.6.2
-<a id="retargeting-your-net-framework-code-to-net-framework-462" class="xliff"></a>
-
-如果您的程式碼目標不是 .NET Framework 4.6.2，建議您重新設定目標。 這可確保當 .NET Standard 不支援現有的 API 時，您能使用最新的 API 替代項目。
-
-針對您想要移轉的每個 Visual Studio 專案，執行下列作業︰
-
-1. 以滑鼠右鍵按一下專案，選取 [內容]。
-2. 在 [目標 Framework] 下拉式清單中選取 [.NET Framework 4.6.2]。
-3. 重新編譯您的專案。
-
-就是這麼容易！ 因為您的專案現在是以 .NET Framework 4.6.2 為目標，所以您可以使用該版 .NET Framework 作為基礎移轉程式碼。
-
-## 判斷程式碼的可攜性
-<a id="determining-the-portability-of-your-code" class="xliff"></a>
-
-下一個步驟是執行 API 可攜性分析器 (ApiPort)，以產生可以開始分析的可攜性報告。
-
-您必須確定您了解 [API 可攜性工具 (ApiPort)](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)，而且可以產生以 .NET Core 為目標的可攜性報告。 作法因個人需求及品味而異。 下面是幾個不同的方法，您可能會發現自己混用了各種方法，視您的程式碼結構而定。
-
-### 主要以編譯器處理
-<a id="dealing-primarily-with-the-compiler" class="xliff"></a>
-
-這個方法大概最適合小型專案或不使用太多 .NET Framework API 的專案。 方法很簡單︰
-
-1. 對專案選擇性執行 ApiPort。
-2. 如果已執行 ApiPort，快速瀏覽報表。
-3. 將所有程式碼全部複製到新的 .NET Core 專案。
-4. 解決編譯器錯誤直到完成編譯，如有需要請參考可攜性報表。
-5. 視需要重複執行。
-
-雖然此方法不夠有條理，但以程式碼為主的方法可以快速解決任何問題，而且可能是最適合小型專案或程式庫的方法。 只包含資料模型的專案可能是理想的選項。
-
-### 留在 .NET Framework 直到可攜性問題解決
-<a id="staying-on-the-net-framework-until-portability-issues-are-resolved" class="xliff"></a>
-
-如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。 方法如下所示︰
-
-1. 對專案執行 ApiPort。
-2. 使用不同的可攜式 API 解決問題。
-3. 記下任何不能使用直接替代方案的區域。
-4. 為所有移轉的專案重複步驟 1-3，直到確定每個專案皆可複製到 .NET Core 專案。
-5. 將程式碼複製到新的 .NET Core 專案。
-6. 解決所有記下的問題。
-
-這個謹慎的方法比只處理編譯器錯誤更有條理，但仍相當著重在程式碼，其優點是永遠有可編譯的程式碼。 某些換個 API 無法解決的問題，其解決方式差異極大。 您可能現某些專案需要開發更完善的方案，下個方法中會加以說明。
-
-### 開發全面的攻擊計劃
-<a id="developing-a-comprehensive-plan-of-attack" class="xliff"></a>
-
-這個方法可能最適合大型且更複雜的專案，因為可能必須重新建構程式碼或重寫特定區域才能支援 .NET Core。 方法如下所示︰
-
-1. 對專案執行 ApiPort。
-2. 了解每個非可攜式類型用在程式碼何處，以及對整體可攜性有何影響。
-
-   a. 了解這些類型的性質。 它們數量很少但使用頻繁嗎？ 它們數量很大但很少使用嗎？ 使用集中還是分散在整個程式碼？
-   
-   b. 是不是非可攜式的程式碼容易隔離，所以您可以更輕鬆地處理它？
-   
-   c.  您需要重構程式碼嗎？
-   
-   d. 對於非可攜式的類型，是否有替代的 API 可以完成相同的工作？ 例如，如果您使用的是 `WebClient` 類別，可以改用 `HttpClient` 類別。
-   
-   e. 有不同的可攜式 API 可用來完成工作嗎，即使它不是直接替換項目？ 例如，如果使用 `XmlSchema` 協助剖析 XML，但不需要 XML 結構描述探索，您可以使用 `System.Linq.Xml` API 手動剖析資料。
-
-3. 如果有難以移轉的組件，暫時留在 .NET Framework 是否值得？ 以下是要考量的事項：
-
-   a. 程式庫中可能有一些功能與 .NET Core 不相容，因為它太過依賴 .NET Framework 或 Windows 特定功能。 目前暫時拋開該功能，改用功能較少的.NET Core 版程式庫是否值得？
-   
-   b. 重構在此是否有所助益？
-   
-4. 撰寫無法使用的 .NET Framework API 自有實作是否合理？
-
-   可以考慮改用複製、修改及使用 [.NET Framework 參考來源](https://github.com/Microsoft/referencesource)的程式碼。 它在 [MIT 授權](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt) 中授權，所以您可以自由執行這項作業。 只要確定在程式碼中正確定義 Microsoft 屬性！
-   
-5. 視需要對不同的專案重複此程序。
-6. 計劃好後，請執行該計劃。
+1. <span data-ttu-id="346e5-216">對專案執行 ApiPort。</span><span class="sxs-lookup"><span data-stu-id="346e5-216">Run ApiPort on a project.</span></span>
+1. <span data-ttu-id="346e5-217">了解每個非可攜式類型是用在程式碼的何處，以及對整體可攜性有何影響。</span><span class="sxs-lookup"><span data-stu-id="346e5-217">Understand where each non-portable type is used and how that affects overall portability.</span></span>
+   - <span data-ttu-id="346e5-218">了解這些類型的性質。</span><span class="sxs-lookup"><span data-stu-id="346e5-218">Understand the nature of those types.</span></span> <span data-ttu-id="346e5-219">它們是否數量很少但使用頻繁？</span><span class="sxs-lookup"><span data-stu-id="346e5-219">Are they small in number but used frequently?</span></span> <span data-ttu-id="346e5-220">它們是否數量很大但很少使用？</span><span class="sxs-lookup"><span data-stu-id="346e5-220">Are they large in number but used infrequently?</span></span> <span data-ttu-id="346e5-221">使用集中還是分散在整個程式碼？</span><span class="sxs-lookup"><span data-stu-id="346e5-221">Is their use concentrated, or is it spread throughout your code?</span></span>
+   - <span data-ttu-id="346e5-222">是否容易隔離非可攜式的程式碼，以便更輕鬆地處理它？</span><span class="sxs-lookup"><span data-stu-id="346e5-222">Is it easy to isolate code that isn't portable so that you can deal with it more effectively?</span></span>
+   - <span data-ttu-id="346e5-223">是否需要重構程式碼？</span><span class="sxs-lookup"><span data-stu-id="346e5-223">Do you need to refactor your code?</span></span>
+   - <span data-ttu-id="346e5-224">對於非可攜式的類型，是否有替代的 API 可以完成相同的工作？</span><span class="sxs-lookup"><span data-stu-id="346e5-224">For those types which aren't portable, are there alternative APIs that accomplish the same task?</span></span> <span data-ttu-id="346e5-225">例如，如果您使用的是 <xref:System.Net.WebClient> 類別，或許可以改用 <xref:System.Net.Http.HttpClient> 類別。</span><span class="sxs-lookup"><span data-stu-id="346e5-225">For example if you're using the <xref:System.Net.WebClient> class, you might be able to use the <xref:System.Net.Http.HttpClient> class instead.</span></span>
+   - <span data-ttu-id="346e5-226">是否有不同的可攜式 API 可用來完成工作，即使它不是直接替換項目？</span><span class="sxs-lookup"><span data-stu-id="346e5-226">Are there different portable APIs available to accomplish a task, even if it's not a drop-in replacement?</span></span> <span data-ttu-id="346e5-227">例如，如果您是使用 <xref:System.Xml.Schema.XmlSchema> 來剖析 XML，但不需要 XML 結構描述探索，則可以使用 <xref:System.Xml.Linq> API 並自行實作剖析，而不需依靠 API。</span><span class="sxs-lookup"><span data-stu-id="346e5-227">For example if you're using <xref:System.Xml.Schema.XmlSchema> to parse XML but don't require XML schema discovery, you could use <xref:System.Xml.Linq> APIs and implement parsing yourself as opposed to relying on an API.</span></span>
+1. <span data-ttu-id="346e5-228">如果有難以移轉的組件，暫時留在 .NET Framework 是否值得？</span><span class="sxs-lookup"><span data-stu-id="346e5-228">If you have assemblies that are difficult to port, is it worth leaving them on .NET Framework for now?</span></span> <span data-ttu-id="346e5-229">以下是要考量的事項：</span><span class="sxs-lookup"><span data-stu-id="346e5-229">Here are some things to consider:</span></span>
+   - <span data-ttu-id="346e5-230">程式庫中可能有一些功能與 .NET Core 不相容，因為它太過依賴 .NET Framework 或 Windows 特定的功能。</span><span class="sxs-lookup"><span data-stu-id="346e5-230">You may have some functionality in your library that's incompatible with .NET Core because it relies too heavily on .NET Framework or Windows-specific functionality.</span></span> <span data-ttu-id="346e5-231">是否值得先不考慮該功能，改為暫時推出功能較少的程式庫 .NET Core 版本，直到有資源可供移植該功能？</span><span class="sxs-lookup"><span data-stu-id="346e5-231">Is it worth leaving that functionality behind for now and releasing a .NET Core version of your library with less features on a temporary basis until resources are available to port the features?</span></span>
+   - <span data-ttu-id="346e5-232">重構是否會有幫助？</span><span class="sxs-lookup"><span data-stu-id="346e5-232">Would a refactor help?</span></span>
+1. <span data-ttu-id="346e5-233">撰寫無法使用的 .NET Framework API 自有實作是否合理？</span><span class="sxs-lookup"><span data-stu-id="346e5-233">Is it reasonable to write your own implementation of an unavailable .NET Framework API?</span></span>
+   <span data-ttu-id="346e5-234">可以考慮複製、修改及使用來自 [.NET Framework 參考來源](https://github.com/Microsoft/referencesource) \(英文\) 的程式碼。</span><span class="sxs-lookup"><span data-stu-id="346e5-234">You could consider copying, modifying, and using code from the [.NET Framework Reference Source](https://github.com/Microsoft/referencesource).</span></span> <span data-ttu-id="346e5-235">參考來源程式碼是依據 [MIT 授權條款](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt) \(英文\) 授權，因此您有充分的權限可以將該來源做為自己程式碼的基礎。</span><span class="sxs-lookup"><span data-stu-id="346e5-235">The reference source code is licensed under the [MIT License](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), so you have significant freedom to use the source as a basis for your own code.</span></span> <span data-ttu-id="346e5-236">您只需記得在程式碼中適當地將版權歸於 Microsoft。</span><span class="sxs-lookup"><span data-stu-id="346e5-236">Just be sure to properly attribute Microsoft in your code.</span></span>
+1. <span data-ttu-id="346e5-237">視需要對不同的專案重複此程序。</span><span class="sxs-lookup"><span data-stu-id="346e5-237">Repeat this process as needed for different projects.</span></span>
  
-分析階段可能需要一些時間，視您的程式碼基底大小而定。 花時間在這個階段徹底了解所需的變更範圍以及開發計劃，可以省下未來許多時間，特別是如果您的程式碼基底較為複雜。
+<span data-ttu-id="346e5-238">分析階段可能需要一些時間，視您的程式碼基底大小而定。</span><span class="sxs-lookup"><span data-stu-id="346e5-238">The analysis phase could take some time depending on the size of your codebase.</span></span> <span data-ttu-id="346e5-239">在這個階段花時間徹底了解所需的變更範圍並開發計畫，通常能為未來省下許多時間，特別是在您程式碼基底較為複雜的情況下。</span><span class="sxs-lookup"><span data-stu-id="346e5-239">Spending time in this phase to thoroughly understand the scope of changes needed and to develop a plan usually saves you time in the long run, particularly if you have a complex codebase.</span></span>
 
-您的計劃可能涉及在對程式碼基底進行重大變更時仍要以 .NET Framework 4.6.2 為目標，讓它成為前一種方法更有條理的版本。 如何執行計劃，視程式碼基底而定。
+<span data-ttu-id="346e5-240">您的計劃可能涉及在對程式碼基底進行重大變更時仍要以 .NET Framework 4.6.2 為目標，讓它成為前一種方法更有條理的版本。</span><span class="sxs-lookup"><span data-stu-id="346e5-240">Your plan could involve making significant changes to your codebase while still targeting .NET Framework 4.6.2, making this a more structured version of the previous approach.</span></span> <span data-ttu-id="346e5-241">執行計畫的方式須視程式碼基底而定。</span><span class="sxs-lookup"><span data-stu-id="346e5-241">How you go about executing your plan is dependent on your codebase.</span></span>
 
-### 混合方法
-<a id="mixing-approaches" class="xliff"></a>
+### <a name="mixing-approaches"></a><span data-ttu-id="346e5-242">混合方法</span><span class="sxs-lookup"><span data-stu-id="346e5-242">Mixing approaches</span></span>
 
-您可能會根據每個專案混用上述各種方法。 您應該做對您和程式碼基底而言最有意義的事。
+<span data-ttu-id="346e5-243">您可能會根據每個專案混用上述各種方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-243">It's likely that you'll mix the above approaches on a per-project basis.</span></span> <span data-ttu-id="346e5-244">您應該做對您和程式碼基底而言最有意義的事。</span><span class="sxs-lookup"><span data-stu-id="346e5-244">You should do what makes the most sense to you and for your codebase.</span></span>
 
-## 移轉測試
-<a id="porting-your-tests" class="xliff"></a>
+## <a name="porting-your-tests"></a><span data-ttu-id="346e5-245">移植測試</span><span class="sxs-lookup"><span data-stu-id="346e5-245">Porting your tests</span></span>
 
-移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。 若要這樣做，您必須使用會建置及執行 .NET Core 測試的測試架構。 目前有三個選項︰
+<span data-ttu-id="346e5-246">移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。</span><span class="sxs-lookup"><span data-stu-id="346e5-246">The best way to make sure everything works when you've ported your code is to test your code as you port it to .NET Core.</span></span> <span data-ttu-id="346e5-247">若要這樣做，您必須使用能針對 .NET Core 建置並執行測試的測試架構。</span><span class="sxs-lookup"><span data-stu-id="346e5-247">To do this, you'll need to use a testing framework that builds and runs tests for .NET Core.</span></span> <span data-ttu-id="346e5-248">目前有三個選項︰</span><span class="sxs-lookup"><span data-stu-id="346e5-248">Currently, you have three options:</span></span>
 
-* [xUnit](https://xunit.github.io/)
-   - [使用者入門](http://xunit.github.io/docs/getting-started-dotnet-core.html)
-   - [將 MSTest 專案轉換成 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
-* [NUnit](http://www.nunit.org/)
-  - [使用者入門](https://github.com/nunit/docs/wiki/Installation)
-  - [關於從 MSTest 移轉至 NUnit 的部落格文章](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-* [MSTest](https://msdn.microsoft.com/library/ms243147.aspx)
+- [<span data-ttu-id="346e5-249">xUnit</span><span class="sxs-lookup"><span data-stu-id="346e5-249">xUnit</span></span>](https://xunit.github.io/)
+  * [<span data-ttu-id="346e5-250">使用者入門</span><span class="sxs-lookup"><span data-stu-id="346e5-250">Getting Started</span></span>](http://xunit.github.io/docs/getting-started-dotnet-core.html)
+  * [<span data-ttu-id="346e5-251">將 MSTest 專案轉換成 xUnit 的工具</span><span class="sxs-lookup"><span data-stu-id="346e5-251">Tool to convert an MSTest project to xUnit</span></span>](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+- [<span data-ttu-id="346e5-252">NUnit</span><span class="sxs-lookup"><span data-stu-id="346e5-252">NUnit</span></span>](http://www.nunit.org/)
+  * [<span data-ttu-id="346e5-253">使用者入門</span><span class="sxs-lookup"><span data-stu-id="346e5-253">Getting Started</span></span>](https://github.com/nunit/docs/wiki/Installation)
+  * [<span data-ttu-id="346e5-254">關於從 MSTest 移轉至 NUnit 的部落格文章</span><span class="sxs-lookup"><span data-stu-id="346e5-254">Blog post about migrating from MSTest to NUnit</span></span>](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+- [<span data-ttu-id="346e5-255">MSTest</span><span class="sxs-lookup"><span data-stu-id="346e5-255">MSTest</span></span>](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
-## 建議的移轉方法
-<a id="recommended-approach-to-porting" class="xliff"></a>
+## <a name="recommended-approach-to-porting"></a><span data-ttu-id="346e5-256">建議的移植方法</span><span class="sxs-lookup"><span data-stu-id="346e5-256">Recommended approach to porting</span></span>
 
-最後，移轉程式碼！ 最終的移轉代價主要取決於 .NET Framework 程式碼的結構方式。 以下是建議的方法，非常適合您的程式碼基底。
+<span data-ttu-id="346e5-257">不管如何，移植工作都會大幅取決於 .NET Framework 程式碼的架構方式。</span><span class="sxs-lookup"><span data-stu-id="346e5-257">Ultimately, the porting effort depends heavily on how your .NET Framework code is structured.</span></span> <span data-ttu-id="346e5-258">移植程式碼的良好方式，是從程式庫的「基底」開始，也就是程式碼的基本元件。</span><span class="sxs-lookup"><span data-stu-id="346e5-258">A good way to port your code is to begin with the *base* of your library, which are the foundational components of your code.</span></span> <span data-ttu-id="346e5-259">它可能是資料模型，也可能是所有其他項目會直接或間接使用的基礎類別和方法。</span><span class="sxs-lookup"><span data-stu-id="346e5-259">This might be data models or some other foundational classes and methods that everything else uses directly or indirectly.</span></span>
 
-移轉程式碼的好方法是從程式庫的「基底」開始。 這可以是資料模型，或某些其他項目直接或間接使用的其他基本類別和方法。
+1. <span data-ttu-id="346e5-260">針對測試目前正在移植之程式庫層的測試專案進行移植。</span><span class="sxs-lookup"><span data-stu-id="346e5-260">Port the test project that tests the layer of your library that you're currently porting.</span></span>
+1. <span data-ttu-id="346e5-261">將程式庫的基底複製到新的 .NET Core 專案，然後選取您想要支援的 .NET Standard 版本。</span><span class="sxs-lookup"><span data-stu-id="346e5-261">Copy over the base of your library into a new .NET Core project and select the version of the .NET Standard you wish to support.</span></span>
+1. <span data-ttu-id="346e5-262">進行任何必要的變更，令程式碼執行編譯。</span><span class="sxs-lookup"><span data-stu-id="346e5-262">Make any changes needed to get the code to compile.</span></span> <span data-ttu-id="346e5-263">此工作有很大一部分可能會需要將 NuGet 套件相依性新增到 *csproj* 檔案中。</span><span class="sxs-lookup"><span data-stu-id="346e5-263">Much of this may require adding NuGet package dependencies to your *csproj* file.</span></span>
+1. <span data-ttu-id="346e5-264">執行測試並進行任何必要的調整。</span><span class="sxs-lookup"><span data-stu-id="346e5-264">Run the tests and make any needed adjustments.</span></span>
+1. <span data-ttu-id="346e5-265">挑選要移植的下一層程式碼，並重複上述步驟。</span><span class="sxs-lookup"><span data-stu-id="346e5-265">Pick the next layer of code to port over and repeat the prior steps.</span></span>
 
-1. 移轉測試專案，此專案會測試目前移轉中的程式庫圖層。
-2. 將程式庫的「基底」複製到新的 .NET Core 專案，然後選取您想要支援的 .NET Standard 版本。
-3. 進行任何必要的變更，令程式碼執行編譯。 此工作的大部分需要將 NuGet 封裝相依性加入 `project.json` 檔案中。
-4. 執行測試並進行任何必要的調整。
-5. 挑選下一層要移轉的程式碼，並重複步驟 2 和 3！
-
-如果您有條理地從程式庫基底外移，並視需要測試每一層，移轉就會是系統化的程序，問題會一次隔離至一層程式碼。
+<span data-ttu-id="346e5-266">如果您是從程式庫基底向外進行移植，並視需要測試每一層，移植將會是個系統化的程序，並將所有問題都隔離在單層的程式碼內。</span><span class="sxs-lookup"><span data-stu-id="346e5-266">If you start with the base of your library and move outward from the base and test each layer as needed, porting is a systematic process where problems are isolated to one layer of code at a time.</span></span>
 

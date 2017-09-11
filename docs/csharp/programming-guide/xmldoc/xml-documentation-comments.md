@@ -1,5 +1,5 @@
 ---
-title: "XML 文件註解 (C# 程式設計手冊) | Microsoft Docs"
+title: "XML 文件註解 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,15 +34,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 59f8c164acba31ac76387614b5603bb518417800
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 408b2de29b15158499067da05dbb2f89eb1ba22f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xml-documentation-comments-c-programming-guide"></a>XML 文件註解 (C# 程式設計手冊)
-在 Visual C# 中，您可以加入程式碼的文件，加入的方法是在原始程式碼中，於註解所參考程式碼區塊之前的特殊註解欄位 (以三個斜線表示) 中加入 XML 項目，例如：  
+# <a name="xml-documentation-comments-c-programming-guide"></a><span data-ttu-id="5e93e-102">XML 文件註解 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="5e93e-102">XML Documentation Comments (C# Programming Guide)</span></span>
+<span data-ttu-id="5e93e-103">在 Visual C# 中，您可以加入程式碼的文件，加入的方法是在原始程式碼中，於註解所參考程式碼區塊之前的特殊註解欄位 (以三個斜線表示) 中加入 XML 項目，例如：</span><span class="sxs-lookup"><span data-stu-id="5e93e-103">In Visual C# you can create documentation for your code by including XML elements in special comment fields (indicated by triple slashes) in the source code directly before the code block to which the comments refer, for example:</span></span>  
   
 ```  
 /// <summary>  
@@ -51,30 +51,31 @@ ms.lasthandoff: 05/14/2017
 public class MyClass{}  
 ```  
   
- 當您使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 選項編譯時，編譯器將會搜尋原始程式碼中的所有 XML 標記，然後建立 XML 文件檔。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 這類工具。  
+ <span data-ttu-id="5e93e-104">當您使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 選項編譯時，編譯器將會搜尋原始程式碼中的所有 XML 標記，然後建立 XML 文件檔。</span><span class="sxs-lookup"><span data-stu-id="5e93e-104">When you compile with the [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) option, the compiler will search for all XML tags in the source code and create an XML documentation file.</span></span> <span data-ttu-id="5e93e-105">若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具。</span><span class="sxs-lookup"><span data-stu-id="5e93e-105">To create the final documentation based on the compiler-generated file, you can create a custom tool or use a tool such as [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
   
- 若要參考 XML 項目，例如，您的函式處理要在 XML 文件註解中描述的特定 XML 項目，您可以使用標準引號機制 (`<` 和 `>`)。  若要參照程式碼參考 (`cref`) 項目中的泛型識別碼，您可以使用逸出字元 (例如 `cref="List<T>"`) 或大括號 (`cref="List{T}"`)。  視為特殊案例的情形是，編譯器將大括號剖析為角括號，如此在參考泛型識別項時，文件註解撰寫起來就變得不那麼複雜。  
+ <span data-ttu-id="5e93e-106">若要參考 XML 項目，例如，您的函式處理要在 XML 文件註解中描述的特定 XML 項目，您可以使用標準引號機制 (`<` 和 `>`)。</span><span class="sxs-lookup"><span data-stu-id="5e93e-106">To refer to XML elements (for example, your function processes specific XML elements that you want to describe in an XML documentation comment), you can use the standard quoting mechanism (`<` and `>`).</span></span>  <span data-ttu-id="5e93e-107">若要參照程式碼參考 (`cref`) 項目中的泛型識別碼，您可以使用逸出字元 (例如 `cref="List<T>"`) 或大括號 (`cref="List{T}"`)。</span><span class="sxs-lookup"><span data-stu-id="5e93e-107">To refer to generic identifiers in code reference (`cref`) elements, you can use either the escape characters (for example, `cref="List<T>"`) or braces (`cref="List{T}"`).</span></span>  <span data-ttu-id="5e93e-108">視為特殊案例的情形是，編譯器將大括號剖析為角括號，如此在參考泛型識別項時，文件註解撰寫起來就變得不那麼複雜。</span><span class="sxs-lookup"><span data-stu-id="5e93e-108">As a special case, the compiler parses the braces as angle brackets to make the documentation comment less cumbersome to author when referring to generic identifiers.</span></span>  
   
 > [!NOTE]
->  XML 文件註解並不是中繼資料，這些註解不會包含在編譯的組件內，因此不能透過反映存取。  
+>  <span data-ttu-id="5e93e-109">XML 文件註解並不是中繼資料，這些註解不會包含在編譯的組件內，因此不能透過反映存取。</span><span class="sxs-lookup"><span data-stu-id="5e93e-109">The XML documentation comments are not metadata; they are not included in the compiled assembly and therefore they are not accessible through reflection.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="5e93e-110">本章節內容</span><span class="sxs-lookup"><span data-stu-id="5e93e-110">In This Section</span></span>  
   
--   [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
+-   [<span data-ttu-id="5e93e-111">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="5e93e-111">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)  
   
--   [處理 XML 檔案](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
+-   [<span data-ttu-id="5e93e-112">處理 XML 檔案</span><span class="sxs-lookup"><span data-stu-id="5e93e-112">Processing the XML File</span></span>](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)  
   
--   [文件標籤的分隔符號](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
+-   [<span data-ttu-id="5e93e-113">文件標籤的分隔符號</span><span class="sxs-lookup"><span data-stu-id="5e93e-113">Delimiters for Documentation Tags</span></span>](../../../csharp/programming-guide/xmldoc/delimiters-for-documentation-tags.md)  
   
--   [如何：使用 XML 文件功能](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
+-   [<span data-ttu-id="5e93e-114">如何：使用 XML 文件功能</span><span class="sxs-lookup"><span data-stu-id="5e93e-114">How to: Use the XML Documentation Features</span></span>](../../../csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md)  
   
-## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱:  
+## <a name="related-sections"></a><span data-ttu-id="5e93e-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="5e93e-115">Related Sections</span></span>  
+ <span data-ttu-id="5e93e-116">如需詳細資訊，請參閱:</span><span class="sxs-lookup"><span data-stu-id="5e93e-116">For more information, see:</span></span>  
   
--   [/doc (處理文件註解)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+-   [<span data-ttu-id="5e93e-117">/doc (處理文件註解)</span><span class="sxs-lookup"><span data-stu-id="5e93e-117">/doc (Process Documentation Comments)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+## <a name="c-language-specification"></a><span data-ttu-id="5e93e-118">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="5e93e-118">C# Language Specification</span></span>  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="5e93e-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e93e-119">See Also</span></span>  
+ [<span data-ttu-id="5e93e-120">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="5e93e-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+

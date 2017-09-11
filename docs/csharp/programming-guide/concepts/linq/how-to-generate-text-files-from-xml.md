@@ -1,5 +1,5 @@
 ---
-title: "如何：從 XML 產生文字檔 (C#) | Microsoft Docs"
+title: "如何：從 XML 產生文字檔 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,21 +14,20 @@ ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 963c9ddc93f70508fd5002acc8dd952ddb0106ad
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d476851e73f412ba4ca1a111655ca0397dcbbbc1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>如何：從 XML 產生文字檔 (C#)
-此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  
+# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="764a7-102">如何：從 XML 產生文字檔 (C#)</span><span class="sxs-lookup"><span data-stu-id="764a7-102">How to: Generate Text Files from XML (C#)</span></span>
+<span data-ttu-id="764a7-103">此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。</span><span class="sxs-lookup"><span data-stu-id="764a7-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a>範例  
- 此範例的 C# 版本會使用方法語法和 `Aggregate` 運算子，以單一運算式產生 XML 文件的 CSV 檔案。 如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
+## <a name="example"></a><span data-ttu-id="764a7-104">範例</span><span class="sxs-lookup"><span data-stu-id="764a7-104">Example</span></span>  
+ <span data-ttu-id="764a7-105">此範例的 C# 版本會使用方法語法和 `Aggregate` 運算子，以單一運算式產生 XML 文件的 CSV 檔案。</span><span class="sxs-lookup"><span data-stu-id="764a7-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="764a7-106">如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。</span><span class="sxs-lookup"><span data-stu-id="764a7-106">For more information, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
+ <span data-ttu-id="764a7-107">此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="764a7-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -57,7 +56,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="764a7-108">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="764a7-108">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -66,5 +65,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="764a7-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="764a7-109">See Also</span></span>  
+ [<span data-ttu-id="764a7-110">投影和轉換 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="764a7-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

@@ -1,1 +1,1 @@
-影像檔目錄 (IFD)
+<span data-ttu-id="5e5d8-101">影像檔目錄 (IFD)</span><span class="sxs-lookup"><span data-stu-id="5e5d8-101">image file directory (IFD)</span></span>

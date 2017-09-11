@@ -1,1 +1,1 @@
-WCF 資料服務
+<span data-ttu-id="b2d97-101">WCF 資料服務</span><span class="sxs-lookup"><span data-stu-id="b2d97-101">WCF Data Services</span></span>

@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：在 C# 中撰寫查詢 (LINQ) | Microsoft Docs"
+title: "逐步解說：在 C# 中撰寫查詢 (LINQ)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,182 +34,183 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 5692bd4b2fae4c5e17d48c12e98eb2e18523ba61
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aef03dca681f0b3d24f2ab55eef4ae29ee515132
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
-本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
+# <a name="walkthrough-writing-queries-in-c-linq"></a><span data-ttu-id="d1397-102">逐步解說：在 C# 中撰寫查詢 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="d1397-102">Walkthrough: Writing Queries in C# (LINQ)</span></span>
+<span data-ttu-id="d1397-103">本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。</span><span class="sxs-lookup"><span data-stu-id="d1397-103">This walkthrough demonstrates the C# language features that are used to write LINQ query expressions.</span></span>  
   
-## <a name="create-a-c-project"></a>建立 C# 專案  
+## <a name="create-a-c-project"></a><span data-ttu-id="d1397-104">建立 C# 專案</span><span class="sxs-lookup"><span data-stu-id="d1397-104">Create a C# Project</span></span>  
   
 > [!NOTE]
->  下列指示適用於 Visual Studio。 如果您使用不同的開發環境，可搭配 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=fullName> 命名空間的 `using` 指示詞來建立主控台專案。  
+>  <span data-ttu-id="d1397-105">下列指示適用於 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="d1397-105">The following instructions are for Visual Studio.</span></span> <span data-ttu-id="d1397-106">如果您使用不同的開發環境，可搭配 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=fullName> 命名空間的 `using` 指示詞來建立主控台專案。</span><span class="sxs-lookup"><span data-stu-id="d1397-106">If you are using a different development environment, create a console project with a reference to System.Core.dll and a `using` directive for the <xref:System.Linq?displayProperty=fullName> namespace.</span></span>  
   
-#### <a name="to-create-a-project-in-visual-studio"></a>若要在 Visual Studio 中建立專案  
+#### <a name="to-create-a-project-in-visual-studio"></a><span data-ttu-id="d1397-107">若要在 Visual Studio 中建立專案</span><span class="sxs-lookup"><span data-stu-id="d1397-107">To create a project in Visual Studio</span></span>  
   
-1.  啟動 Visual Studio。  
+1.  <span data-ttu-id="d1397-108">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="d1397-108">Start Visual Studio.</span></span>  
   
-2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
+2.  <span data-ttu-id="d1397-109">在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。</span><span class="sxs-lookup"><span data-stu-id="d1397-109">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     [ **新增專案** ] 對話方塊隨即開啟。  
+     <span data-ttu-id="d1397-110">[ **新增專案** ] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="d1397-110">The **New Project** dialog box opens.</span></span>  
   
-3.  依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
+3.  <span data-ttu-id="d1397-111">依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。</span><span class="sxs-lookup"><span data-stu-id="d1397-111">Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.</span></span>  
   
-4.  在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。  
+4.  <span data-ttu-id="d1397-112">在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="d1397-112">In the **Name** text box, enter a different name or accept the default name, and then choose the **OK** button.</span></span>  
   
-     新的專案隨即會出現在方案總管中。  
+     <span data-ttu-id="d1397-113">新的專案隨即會出現在方案總管中。</span><span class="sxs-lookup"><span data-stu-id="d1397-113">The new project appears in **Solution Explorer**.</span></span>  
   
-5.  您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=fullName> 命名空間的 `using` 指示詞。  
+5.  <span data-ttu-id="d1397-114">您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=fullName> 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="d1397-114">Notice that your project has a reference to System.Core.dll and a `using` directive for the <xref:System.Linq?displayProperty=fullName> namespace.</span></span>  
   
-## <a name="create-an-in-memory-data-source"></a>建立記憶體內部資料來源  
- 查詢的資料來源是 `Student` 物件的簡單清單。 每個 `Student` 記錄都有名字、姓氏和整數的陣列，表示其在班級上的測驗分數。 將此程式碼複製到您的專案中。 並注意下列特性：  
+## <a name="create-an-in-memory-data-source"></a><span data-ttu-id="d1397-115">建立記憶體內部資料來源</span><span class="sxs-lookup"><span data-stu-id="d1397-115">Create an in-Memory Data Source</span></span>  
+ <span data-ttu-id="d1397-116">查詢的資料來源是 `Student` 物件的簡單清單。</span><span class="sxs-lookup"><span data-stu-id="d1397-116">The data source for the queries is a simple list of `Student` objects.</span></span> <span data-ttu-id="d1397-117">每個 `Student` 記錄都有名字、姓氏和整數的陣列，表示其在班級上的測驗分數。</span><span class="sxs-lookup"><span data-stu-id="d1397-117">Each `Student` record has a first name, last name, and an array of integers that represents their test scores in the class.</span></span> <span data-ttu-id="d1397-118">將此程式碼複製到您的專案中。</span><span class="sxs-lookup"><span data-stu-id="d1397-118">Copy this code into your project.</span></span> <span data-ttu-id="d1397-119">並注意下列特性：</span><span class="sxs-lookup"><span data-stu-id="d1397-119">Note the following characteristics:</span></span>  
   
--   `Student` 類別是由自動實作的屬性所組成。  
+-   <span data-ttu-id="d1397-120">`Student` 類別是由自動實作的屬性所組成。</span><span class="sxs-lookup"><span data-stu-id="d1397-120">The `Student` class consists of auto-implemented properties.</span></span>  
   
--   使用物件初始設定式，初始化清單中的每一位學生。  
+-   <span data-ttu-id="d1397-121">使用物件初始設定式，初始化清單中的每一位學生。</span><span class="sxs-lookup"><span data-stu-id="d1397-121">Each student in the list is initialized with an object initializer.</span></span>  
   
--   系統會使用集合初始設定式，來初始化清單本身。  
+-   <span data-ttu-id="d1397-122">系統會使用集合初始設定式，來初始化清單本身。</span><span class="sxs-lookup"><span data-stu-id="d1397-122">The list itself is initialized with a collection initializer.</span></span>  
   
- 系統會初始化整個資料結構，並將其具現化，而不需要明確呼叫任何建構函式，亦不需明確的成員存取。 如需這些新功能的詳細資訊，請參閱[自動實作的屬性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)以及[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。  
+ <span data-ttu-id="d1397-123">系統會初始化整個資料結構，並將其具現化，而不需要明確呼叫任何建構函式，亦不需明確的成員存取。</span><span class="sxs-lookup"><span data-stu-id="d1397-123">This whole data structure will be initialized and instantiated without explicit calls to any constructor or explicit member access.</span></span> <span data-ttu-id="d1397-124">如需這些新功能的詳細資訊，請參閱[自動實作的屬性](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)以及[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。</span><span class="sxs-lookup"><span data-stu-id="d1397-124">For more information about these new features, see [Auto-Implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) and [Object and Collection Initializers](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>  
   
-#### <a name="to-add-the-data-source"></a>若要新增資料來源  
+#### <a name="to-add-the-data-source"></a><span data-ttu-id="d1397-125">若要新增資料來源</span><span class="sxs-lookup"><span data-stu-id="d1397-125">To add the data source</span></span>  
   
--   將 `Student` 類別和學生的初始化清單，新增至專案中的 `Program` 類別。  
+-   <span data-ttu-id="d1397-126">將 `Student` 類別和學生的初始化清單，新增至專案中的 `Program` 類別。</span><span class="sxs-lookup"><span data-stu-id="d1397-126">Add the `Student` class and the initialized list of students to the `Program` class in your project.</span></span>  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
+     <span data-ttu-id="d1397-127">[!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-127">[!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]</span></span>  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>若要將新的學生新增至學生清單  
+#### <a name="to-add-a-new-student-to-the-students-list"></a><span data-ttu-id="d1397-128">若要將新的學生新增至學生清單</span><span class="sxs-lookup"><span data-stu-id="d1397-128">To add a new Student to the Students list</span></span>  
   
-1.  將新的 `Student` 新增至 `Students` 清單，並使用您所選擇的名稱和測驗分數。 請嘗試輸入新的學生資訊，以便進一步了解物件初始設定式語法。  
+1.  <span data-ttu-id="d1397-129">將新的 `Student` 新增至 `Students` 清單，並使用您所選擇的名稱和測驗分數。</span><span class="sxs-lookup"><span data-stu-id="d1397-129">Add a new `Student` to the `Students` list and use a name and test scores of your choice.</span></span> <span data-ttu-id="d1397-130">請嘗試輸入新的學生資訊，以便進一步了解物件初始設定式語法。</span><span class="sxs-lookup"><span data-stu-id="d1397-130">Try typing all the new student information in order to better learn the syntax for the object initializer.</span></span>  
   
-## <a name="create-the-query"></a>建立查詢  
+## <a name="create-the-query"></a><span data-ttu-id="d1397-131">建立查詢</span><span class="sxs-lookup"><span data-stu-id="d1397-131">Create the Query</span></span>  
   
-#### <a name="to-create-a-simple-query"></a>建立簡單查詢  
+#### <a name="to-create-a-simple-query"></a><span data-ttu-id="d1397-132">建立簡單查詢</span><span class="sxs-lookup"><span data-stu-id="d1397-132">To create a simple query</span></span>  
   
--   在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果  (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。  
+-   <span data-ttu-id="d1397-133">在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。</span><span class="sxs-lookup"><span data-stu-id="d1397-133">In the application's `Main` method, create a simple query that, when it is executed, will produce a list of all students whose score on the first test was greater than 90.</span></span> <span data-ttu-id="d1397-134">請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。</span><span class="sxs-lookup"><span data-stu-id="d1397-134">Note that because the whole `Student` object is selected, the type of the query is `IEnumerable<Student>`.</span></span> <span data-ttu-id="d1397-135">雖然程式碼也可以藉由 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果 </span><span class="sxs-lookup"><span data-stu-id="d1397-135">Although the code could also use implicit typing by using the [var](../../../../csharp/language-reference/keywords/var.md) keyword, explicit typing is used to clearly illustrate results.</span></span> <span data-ttu-id="d1397-136">(如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md))。</span><span class="sxs-lookup"><span data-stu-id="d1397-136">(For more information about `var`, see [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)</span></span>  
   
-     另請注意，查詢的範圍變數 `student` 可作為來源中每個 `Student` 的參考，並提供每個物件的成員存取。  
+     <span data-ttu-id="d1397-137">另請注意，查詢的範圍變數 `student` 可作為來源中每個 `Student` 的參考，並提供每個物件的成員存取。</span><span class="sxs-lookup"><span data-stu-id="d1397-137">Note also that the query's range variable, `student`, serves as a reference to each `Student` in the source, providing member access for each object.</span></span>  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ <span data-ttu-id="d1397-138">[!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-138">[!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]</span></span>  
   
-## <a name="execute-the-query"></a>執行查詢  
+## <a name="execute-the-query"></a><span data-ttu-id="d1397-139">執行查詢</span><span class="sxs-lookup"><span data-stu-id="d1397-139">Execute the Query</span></span>  
   
-#### <a name="to-execute-the-query"></a>查詢查詢  
+#### <a name="to-execute-the-query"></a><span data-ttu-id="d1397-140">查詢查詢</span><span class="sxs-lookup"><span data-stu-id="d1397-140">To execute the query</span></span>  
   
-1.  現在，請撰寫 `foreach` 迴圈以執行查詢。 請注意下列程式碼的相關重點：  
+1.  <span data-ttu-id="d1397-141">現在，請撰寫 `foreach` 迴圈以執行查詢。</span><span class="sxs-lookup"><span data-stu-id="d1397-141">Now write the `foreach` loop that will cause the query to execute.</span></span> <span data-ttu-id="d1397-142">請注意下列程式碼的相關重點：</span><span class="sxs-lookup"><span data-stu-id="d1397-142">Note the following about the code:</span></span>  
   
-    -   您可透過 `foreach` 迴圈中的反覆運算變數，存取傳回序列中的每個項目。  
+    -   <span data-ttu-id="d1397-143">您可透過 `foreach` 迴圈中的反覆運算變數，存取傳回序列中的每個項目。</span><span class="sxs-lookup"><span data-stu-id="d1397-143">Each element in the returned sequence is accessed through the iteration variable in the `foreach` loop.</span></span>  
   
-    -   此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
+    -   <span data-ttu-id="d1397-144">此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。</span><span class="sxs-lookup"><span data-stu-id="d1397-144">The type of this variable is `Student`, and the type of the query variable is compatible, `IEnumerable<Student>`.</span></span>  
   
-2.  加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
+2.  <span data-ttu-id="d1397-145">加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。</span><span class="sxs-lookup"><span data-stu-id="d1397-145">After you have added this code, build and run the application to see the results in the **Console** window.</span></span>  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ <span data-ttu-id="d1397-146">[!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-146">[!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]</span></span>  
   
-#### <a name="to-add-another-filter-condition"></a>若要新增其他篩選條件  
+#### <a name="to-add-another-filter-condition"></a><span data-ttu-id="d1397-147">若要新增其他篩選條件</span><span class="sxs-lookup"><span data-stu-id="d1397-147">To add another filter condition</span></span>  
   
-1.  您可以在 `where` 中結合多個布林條件，以進一步精簡查詢子句。 下列程式碼會新增條件，讓查詢傳回第一次分數高於 90 分，但最後一次的分數低於 80 分的學生。 `where` 子句應類似於下列程式碼。  
+1.  <span data-ttu-id="d1397-148">您可以在 `where` 中結合多個布林條件，以進一步精簡查詢子句。</span><span class="sxs-lookup"><span data-stu-id="d1397-148">You can combine multiple Boolean conditions in the `where` clause in order to further refine a query.</span></span> <span data-ttu-id="d1397-149">下列程式碼會新增條件，讓查詢傳回第一次分數高於 90 分，但最後一次的分數低於 80 分的學生。</span><span class="sxs-lookup"><span data-stu-id="d1397-149">The following code adds a condition so that the query returns those students whose first score was over 90 and whose last score was less than 80.</span></span> <span data-ttu-id="d1397-150">`where` 子句應類似於下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="d1397-150">The `where` clause should resemble the following code.</span></span>  
   
     ```  
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     如需詳細資訊，請參閱 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。  
+     <span data-ttu-id="d1397-151">如需詳細資訊，請參閱 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="d1397-151">For more information, see [where clause](../../../../csharp/language-reference/keywords/where-clause.md).</span></span>  
   
-## <a name="modify-the-query"></a>修改查詢  
+## <a name="modify-the-query"></a><span data-ttu-id="d1397-152">修改查詢</span><span class="sxs-lookup"><span data-stu-id="d1397-152">Modify the Query</span></span>  
   
-#### <a name="to-order-the-results"></a>若要排序結果  
+#### <a name="to-order-the-results"></a><span data-ttu-id="d1397-153">若要排序結果</span><span class="sxs-lookup"><span data-stu-id="d1397-153">To order the results</span></span>  
   
-1.  如果結果有依照某種順序排列，會比較容易進行掃描。 您可以依據來源項目中任何可存取的欄位，來排序傳回的序列。 例如，下列 `orderby` 子句會根據每個學生的姓氏，依字母 A 到 Z 順序，來排序結果。 請在 `where` 陳述式正後方、`select` 陳述式正前方，將下列 `orderby` 子句新增至查詢：  
+1.  <span data-ttu-id="d1397-154">如果結果有依照某種順序排列，會比較容易進行掃描。</span><span class="sxs-lookup"><span data-stu-id="d1397-154">It will be easier to scan the results if they are in some kind of order.</span></span> <span data-ttu-id="d1397-155">您可以依據來源項目中任何可存取的欄位，來排序傳回的序列。</span><span class="sxs-lookup"><span data-stu-id="d1397-155">You can order the returned sequence by any accessible field in the source elements.</span></span> <span data-ttu-id="d1397-156">例如，下列 `orderby` 子句會根據每個學生的姓氏，依字母 A 到 Z 順序，來排序結果。</span><span class="sxs-lookup"><span data-stu-id="d1397-156">For example, the following `orderby` clause orders the results in alphabetical order from A to Z according to the last name of each student.</span></span> <span data-ttu-id="d1397-157">請在 `where` 陳述式正後方、`select` 陳述式正前方，將下列 `orderby` 子句新增至查詢：</span><span class="sxs-lookup"><span data-stu-id="d1397-157">Add the following `orderby` clause to your query, right after the `where` statement and before the `select` statement:</span></span>  
   
     ```  
     orderby student.Last ascending  
     ```  
   
-2.  現在，變更 `orderby` 子句，以根據第一個測驗，依最低分到最高分的相反順序來排序結果。  
+2.  <span data-ttu-id="d1397-158">現在，變更 `orderby` 子句，以根據第一個測驗，依最低分到最高分的相反順序來排序結果。</span><span class="sxs-lookup"><span data-stu-id="d1397-158">Now change the `orderby` clause so that it orders the results in reverse order according to the score on the first test, from the highest score to the lowest score.</span></span>  
   
     ```  
     orderby student.Scores[0] descending  
     ```  
   
-3.  變更 `WriteLine` 格式字串，以便查看分數：  
+3.  <span data-ttu-id="d1397-159">變更 `WriteLine` 格式字串，以便查看分數：</span><span class="sxs-lookup"><span data-stu-id="d1397-159">Change the `WriteLine` format string so that you can see the scores:</span></span>  
   
     ```  
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     如需詳細資訊，請參閱 [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)。  
+     <span data-ttu-id="d1397-160">如需詳細資訊，請參閱 [orderby 子句](../../../../csharp/language-reference/keywords/orderby-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="d1397-160">For more information, see [orderby clause](../../../../csharp/language-reference/keywords/orderby-clause.md).</span></span>  
   
-#### <a name="to-group-the-results"></a>若要將結果分組  
+#### <a name="to-group-the-results"></a><span data-ttu-id="d1397-161">若要將結果分組</span><span class="sxs-lookup"><span data-stu-id="d1397-161">To group the results</span></span>  
   
-1.  查詢運算式中提供分組這項強大的功能。 使用 group 子句進行查詢時，會產生一個群組序列，且每個群組本身會包含 `Key` 以及組成該群組之所有成員的序列。 下列新查詢會以學生姓氏的第一個字母作為索引鍵，來進行分組。  
+1.  <span data-ttu-id="d1397-162">查詢運算式中提供分組這項強大的功能。</span><span class="sxs-lookup"><span data-stu-id="d1397-162">Grouping is a powerful capability in query expressions.</span></span> <span data-ttu-id="d1397-163">使用 group 子句進行查詢時，會產生一個群組序列，且每個群組本身會包含 `Key` 以及組成該群組之所有成員的序列。</span><span class="sxs-lookup"><span data-stu-id="d1397-163">A query with a group clause produces a sequence of groups, and each group itself contains a `Key` and a sequence that consists of all the members of that group.</span></span> <span data-ttu-id="d1397-164">下列新查詢會以學生姓氏的第一個字母作為索引鍵，來進行分組。</span><span class="sxs-lookup"><span data-stu-id="d1397-164">The following new query groups the students by using the first letter of their last name as the key.</span></span>  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     <span data-ttu-id="d1397-165">[!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-165">[!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]</span></span>  
   
-2.  請注意，查詢類型現在已變更。 現在，即會產生具有 `char` 類型索引鍵的群組序列，以及 `Student` 物件的序列。 由於查詢類型已變更，因此下列程式碼也會變更 `foreach` 執行迴圈：  
+2.  <span data-ttu-id="d1397-166">請注意，查詢類型現在已變更。</span><span class="sxs-lookup"><span data-stu-id="d1397-166">Note that the type of the query has now changed.</span></span> <span data-ttu-id="d1397-167">現在，即會產生具有 `char` 類型索引鍵的群組序列，以及 `Student` 物件的序列。</span><span class="sxs-lookup"><span data-stu-id="d1397-167">It now produces a sequence of groups that have a `char` type as a key, and a sequence of `Student` objects.</span></span> <span data-ttu-id="d1397-168">由於查詢類型已變更，因此下列程式碼也會變更 `foreach` 執行迴圈：</span><span class="sxs-lookup"><span data-stu-id="d1397-168">Because the type of the query has changed, the following code changes the `foreach` execution loop also:</span></span>  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     <span data-ttu-id="d1397-169">[!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-169">[!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]</span></span>  
   
-3.  執行應用程式，並在 [主控台] 視窗中檢視結果。  
+3.  <span data-ttu-id="d1397-170">執行應用程式，並在 [主控台] 視窗中檢視結果。</span><span class="sxs-lookup"><span data-stu-id="d1397-170">Run the application and view the results in the **Console** window.</span></span>  
   
-     如需詳細資訊，請參閱 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。  
+     <span data-ttu-id="d1397-171">如需詳細資訊，請參閱 [group 子句](../../../../csharp/language-reference/keywords/group-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="d1397-171">For more information, see [group clause](../../../../csharp/language-reference/keywords/group-clause.md).</span></span>  
   
-#### <a name="to-make-the-variables-implicitly-typed"></a>若要將變數設為隱含類型  
+#### <a name="to-make-the-variables-implicitly-typed"></a><span data-ttu-id="d1397-172">若要將變數設為隱含類型</span><span class="sxs-lookup"><span data-stu-id="d1397-172">To make the variables implicitly typed</span></span>  
   
-1.  在明確撰寫 `IGroupings` 的 `IEnumerables` 程式碼時，可能很快就會感到枯燥乏味。 為了方便起見，您可以使用 `var` 來撰寫相同的查詢和 `foreach` 迴圈。 `var` 關鍵字不會變更物件的類型，而只會指示編譯器推斷類型。 將 `studentQuery` 類型和反覆運算變數 `group` 變更為 `var`，然後重新執行查詢。 請注意，在內部 `foreach` 迴圈中，反覆運算變數類型仍為 `Student`，查詢亦會如往常般運作。 將 `s` 反覆運算變數變更為 `var`，然後再次執行查詢。 您會發現結果完全相同。  
+1.  <span data-ttu-id="d1397-173">在明確撰寫 `IGroupings` 的 `IEnumerables` 程式碼時，可能很快就會感到枯燥乏味。</span><span class="sxs-lookup"><span data-stu-id="d1397-173">Explicitly coding `IEnumerables` of `IGroupings` can quickly become tedious.</span></span> <span data-ttu-id="d1397-174">為了方便起見，您可以使用 `var` 來撰寫相同的查詢和 `foreach` 迴圈。</span><span class="sxs-lookup"><span data-stu-id="d1397-174">You can write the same query and `foreach` loop much more conveniently by using `var`.</span></span> <span data-ttu-id="d1397-175">`var` 關鍵字不會變更物件的類型，而只會指示編譯器推斷類型。</span><span class="sxs-lookup"><span data-stu-id="d1397-175">The `var` keyword does not change the types of your objects; it just instructs the compiler to infer the types.</span></span> <span data-ttu-id="d1397-176">將 `studentQuery` 類型和反覆運算變數 `group` 變更為 `var`，然後重新執行查詢。</span><span class="sxs-lookup"><span data-stu-id="d1397-176">Change the type of `studentQuery` and the iteration variable `group` to `var` and rerun the query.</span></span> <span data-ttu-id="d1397-177">請注意，在內部 `foreach` 迴圈中，反覆運算變數類型仍為 `Student`，查詢亦會如往常般運作。</span><span class="sxs-lookup"><span data-stu-id="d1397-177">Note that in the inner `foreach` loop, the iteration variable is still typed as `Student`, and the query works just as before.</span></span> <span data-ttu-id="d1397-178">將 `s` 反覆運算變數變更為 `var`，然後再次執行查詢。</span><span class="sxs-lookup"><span data-stu-id="d1397-178">Change the `s` iteration variable to `var` and run the query again.</span></span> <span data-ttu-id="d1397-179">您會發現結果完全相同。</span><span class="sxs-lookup"><span data-stu-id="d1397-179">You see that you get exactly the same results.</span></span>  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     <span data-ttu-id="d1397-180">[!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-180">[!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]</span></span>  
   
-     如需 [var](../../../../csharp/language-reference/keywords/var.md) 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+     <span data-ttu-id="d1397-181">如需 [var](../../../../csharp/language-reference/keywords/var.md) 的詳細資訊，請參閱[隱含類型區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。</span><span class="sxs-lookup"><span data-stu-id="d1397-181">For more information about [var](../../../../csharp/language-reference/keywords/var.md), see [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
   
-#### <a name="to-order-the-groups-by-their-key-value"></a>若要依索引鍵值排序群組  
+#### <a name="to-order-the-groups-by-their-key-value"></a><span data-ttu-id="d1397-182">若要依索引鍵值排序群組</span><span class="sxs-lookup"><span data-stu-id="d1397-182">To order the groups by their key value</span></span>  
   
-1.  當您執行上述查詢時，您會發現群組不是依字母順序排列。 若要變更這種情況，您必須在 `group` 子句之後提供 `orderby` 子句。 不過，若要使用 `orderby` 子句，您必須先取得識別項，以作為 `group` 子句所建立的群組參考。 您可以使用 `into` 關鍵字來提供識別項，如下所示：  
+1.  <span data-ttu-id="d1397-183">當您執行上述查詢時，您會發現群組不是依字母順序排列。</span><span class="sxs-lookup"><span data-stu-id="d1397-183">When you run the previous query, you notice that the groups are not in alphabetical order.</span></span> <span data-ttu-id="d1397-184">若要變更這種情況，您必須在 `group` 子句之後提供 `orderby` 子句。</span><span class="sxs-lookup"><span data-stu-id="d1397-184">To change this, you must provide an `orderby` clause after the `group` clause.</span></span> <span data-ttu-id="d1397-185">不過，若要使用 `orderby` 子句，您必須先取得識別項，以作為 `group` 子句所建立的群組參考。</span><span class="sxs-lookup"><span data-stu-id="d1397-185">But to use an `orderby` clause, you first need an identifier that serves as a reference to the groups created by the `group` clause.</span></span> <span data-ttu-id="d1397-186">您可以使用 `into` 關鍵字來提供識別項，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d1397-186">You provide the identifier by using the `into` keyword, as follows:</span></span>  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     <span data-ttu-id="d1397-187">[!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-187">[!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]</span></span>  
   
-     在您執行此查詢時，會發現群組現已依照字母順序排列。  
+     <span data-ttu-id="d1397-188">在您執行此查詢時，會發現群組現已依照字母順序排列。</span><span class="sxs-lookup"><span data-stu-id="d1397-188">When you run this query, you will see the groups are now sorted in alphabetical order.</span></span>  
   
-#### <a name="to-introduce-an-identifier-by-using-let"></a>若要使用 let 引進識別項  
+#### <a name="to-introduce-an-identifier-by-using-let"></a><span data-ttu-id="d1397-189">若要使用 let 引進識別項</span><span class="sxs-lookup"><span data-stu-id="d1397-189">To introduce an identifier by using let</span></span>  
   
-1.  針對查詢運算式中的任何運算式結果，您可以使用 `let` 關鍵字引進識別項。 如下列範例所示，此識別項非常方便，它也可以儲存運算式的結果，而不需進行多次計算，藉此提高效能。  
+1.  <span data-ttu-id="d1397-190">針對查詢運算式中的任何運算式結果，您可以使用 `let` 關鍵字引進識別項。</span><span class="sxs-lookup"><span data-stu-id="d1397-190">You can use the `let` keyword to introduce an identifier for any expression result in the query expression.</span></span> <span data-ttu-id="d1397-191">如下列範例所示，此識別項非常方便，它也可以儲存運算式的結果，而不需進行多次計算，藉此提高效能。</span><span class="sxs-lookup"><span data-stu-id="d1397-191">This identifier can be a convenience, as in the following example, or it can enhance performance by storing the results of an expression so that it does not have to be calculated multiple times.</span></span>  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     <span data-ttu-id="d1397-192">[!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-192">[!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]</span></span>  
   
-     如需詳細資訊，請參閱 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
+     <span data-ttu-id="d1397-193">如需詳細資訊，請參閱 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="d1397-193">For more information, see [let clause](../../../../csharp/language-reference/keywords/let-clause.md).</span></span>  
   
-#### <a name="to-use-method-syntax-in-a-query-expression"></a>若要在查詢運算式中使用方法語法  
+#### <a name="to-use-method-syntax-in-a-query-expression"></a><span data-ttu-id="d1397-194">若要在查詢運算式中使用方法語法</span><span class="sxs-lookup"><span data-stu-id="d1397-194">To use method syntax in a query expression</span></span>  
   
-1.  如 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)中所述，某些查詢作業只能使用方法語法來表示。 下列程式碼會針對來源序列中的每個 `Student` 計算總分，然後在該查詢結果上呼叫 `Average()` 方法以計算班級的平均分數。 請注意查詢運算式前後的括弧位置。  
+1.  <span data-ttu-id="d1397-195">如 [LINQ 中的查詢語法及方法語法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)中所述，某些查詢作業只能使用方法語法來表示。</span><span class="sxs-lookup"><span data-stu-id="d1397-195">As described in [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), some query operations can only be expressed by using method syntax.</span></span> <span data-ttu-id="d1397-196">下列程式碼會針對來源序列中的每個 `Student` 計算總分，然後在該查詢結果上呼叫 `Average()` 方法以計算班級的平均分數。</span><span class="sxs-lookup"><span data-stu-id="d1397-196">The following code calculates the total score for each `Student` in the source sequence, and then calls the `Average()` method on the results of that query to calculate the average score of the class.</span></span> <span data-ttu-id="d1397-197">請注意查詢運算式前後的括弧位置。</span><span class="sxs-lookup"><span data-stu-id="d1397-197">Note the placement of parentheses around the query expression.</span></span>  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     <span data-ttu-id="d1397-198">[!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-198">[!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]</span></span>  
   
-#### <a name="to-transform-or-project-in-the-select-clause"></a>若要在 select 子句中轉換或投影  
+#### <a name="to-transform-or-project-in-the-select-clause"></a><span data-ttu-id="d1397-199">若要在 select 子句中轉換或投影</span><span class="sxs-lookup"><span data-stu-id="d1397-199">To transform or project in the select clause</span></span>  
   
-1.  這是一種非常普遍的查詢，產生的序列項目與來源序列中的項目不同。 刪除或註解您先前的查詢和執行迴圈，並將其取代為下列程式碼。 請注意，查詢會傳回一個字串序列 (而不是 `Students`)，且這項事實會反映在 `foreach` 迴圈中。  
+1.  <span data-ttu-id="d1397-200">這是一種非常普遍的查詢，產生的序列項目與來源序列中的項目不同。</span><span class="sxs-lookup"><span data-stu-id="d1397-200">It is very common for a query to produce a sequence whose elements differ from the elements in the source sequences.</span></span> <span data-ttu-id="d1397-201">刪除或註解您先前的查詢和執行迴圈，並將其取代為下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="d1397-201">Delete or comment out your previous query and execution loop, and replace it with the following code.</span></span> <span data-ttu-id="d1397-202">請注意，查詢會傳回一個字串序列 (而不是 `Students`)，且這項事實會反映在 `foreach` 迴圈中。</span><span class="sxs-lookup"><span data-stu-id="d1397-202">Note that the query returns a sequence of strings (not `Students`), and this fact is reflected in the `foreach` loop.</span></span>  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     <span data-ttu-id="d1397-203">[!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-203">[!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]</span></span>  
   
-2.  此逐步解說中稍早的程式碼指出，班級平均成績約 334 分。 若要產生一個總分高於班級平均分數並包含 `Student ID` 的 `Students` 序列，您可以使用 `select` 陳述式中的匿名型別：  
+2.  <span data-ttu-id="d1397-204">此逐步解說中稍早的程式碼指出，班級平均成績約 334 分。</span><span class="sxs-lookup"><span data-stu-id="d1397-204">Code earlier in this walkthrough indicated that the average class score is approximately 334.</span></span> <span data-ttu-id="d1397-205">若要產生一個總分高於班級平均分數並包含 `Student ID` 的 `Students` 序列，您可以使用 `select` 陳述式中的匿名型別：</span><span class="sxs-lookup"><span data-stu-id="d1397-205">To produce a sequence of `Students` whose total score is greater than the class average, together with their `Student ID`, you can use an anonymous type in the `select` statement:</span></span>  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     <span data-ttu-id="d1397-206">[!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1397-206">[!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]</span></span>  
   
-## <a name="next-steps"></a>後續步驟  
- 熟悉使用 C# 進行查詢的基本概念之後，您即可開始閱讀自己感興趣之特定類型 LINQ 提供者的相關文件和範例：  
+## <a name="next-steps"></a><span data-ttu-id="d1397-207">後續步驟</span><span class="sxs-lookup"><span data-stu-id="d1397-207">Next Steps</span></span>  
+ <span data-ttu-id="d1397-208">熟悉使用 C# 進行查詢的基本概念之後，您即可開始閱讀自己感興趣之特定類型 LINQ 提供者的相關文件和範例：</span><span class="sxs-lookup"><span data-stu-id="d1397-208">After you are familiar with the basic aspects of working with queries in C#, you are ready to read the documentation and samples for the specific type of LINQ provider you are interested in:</span></span>  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [<span data-ttu-id="d1397-209">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d1397-209">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [<span data-ttu-id="d1397-210">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="d1397-210">LINQ to DataSet</span></span>](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [<span data-ttu-id="d1397-211">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d1397-211">LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="d1397-212">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="d1397-212">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="d1397-213">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d1397-213">See Also</span></span>  
+ <span data-ttu-id="d1397-214">[Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="d1397-214">[Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md) </span></span>  
+ <span data-ttu-id="d1397-215">[開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) </span><span class="sxs-lookup"><span data-stu-id="d1397-215">[Getting Started with LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) </span></span>  
+ [<span data-ttu-id="d1397-216">LINQ 查詢運算式</span><span class="sxs-lookup"><span data-stu-id="d1397-216">LINQ Query Expressions</span></span>](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+

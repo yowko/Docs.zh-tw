@@ -1,1 +1,1 @@
-加強型中繼檔 (EMF) 
+<span data-ttu-id="2621f-101">加強型中繼檔 (EMF) </span><span class="sxs-lookup"><span data-stu-id="2621f-101">Enhanced Metafile (EMF)</span></span>

@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db0e3f415df80e8e4c551bd8493814cb3f4fe5ee
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d28cb398f316fd0df4f20bb038956b184cec7a8b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何︰ 查詢具有指定之的屬性或名稱 (Visual Basic) 的檔案
-這個範例會示範如何尋找具有指定的名稱的副檔名 (例如".txt") 的所有檔案中指定的目錄樹狀結構。 它也會示範如何傳回可能的最新或舊檔案的建立時間為基礎的樹狀目錄中。  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="bcc3d-102">如何︰ 查詢具有指定之的屬性或名稱 (Visual Basic) 的檔案</span><span class="sxs-lookup"><span data-stu-id="bcc3d-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="bcc3d-103">這個範例會示範如何尋找具有指定的名稱的副檔名 (例如".txt") 的所有檔案中指定的目錄樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="bcc3d-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="bcc3d-104">它也會示範如何傳回可能的最新或舊檔案的建立時間為基礎的樹狀目錄中。</span><span class="sxs-lookup"><span data-stu-id="bcc3d-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="bcc3d-105">範例</span><span class="sxs-lookup"><span data-stu-id="bcc3d-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -77,9 +78,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+## <a name="compiling-the-code"></a><span data-ttu-id="bcc3d-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="bcc3d-106">Compiling the Code</span></span>  
+ <span data-ttu-id="bcc3d-107">建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。</span><span class="sxs-lookup"><span data-stu-id="bcc3d-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="bcc3d-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bcc3d-108">See Also</span></span>  
+ <span data-ttu-id="bcc3d-109">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="bcc3d-109">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="bcc3d-110"> [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="bcc3d-110"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

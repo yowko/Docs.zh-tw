@@ -15,25 +15,25 @@ caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89f5c2634e1deb196b121f2983b85f125927ae32
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 995e51bd2cc152aadafb4f134ada5513a43f0948
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>不可部分完成的 XName 和 XNamespace 物件 (LINQ to XML) (C#)
-<xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 物件是「不可部分完成」**的物件；也就是說，如果它們包含相同的限定名稱，則會參考相同的物件。 這會針對查詢產生效能優勢：當您比較兩個不可部分完成的名稱是否相等時，基礎中繼語言 (Intermediate Language) 只需要判斷這兩個參考是否指向相同的物件即可。 基礎程式碼不需要進行耗時的字串比較。  
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a><span data-ttu-id="01665-102">不可部分完成的 XName 和 XNamespace 物件 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="01665-102">Atomized XName and XNamespace Objects (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="01665-103"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 物件是「不可部分完成」**的物件；也就是說，如果它們包含相同的限定名稱，則會參考相同的物件。</span><span class="sxs-lookup"><span data-stu-id="01665-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="01665-104">這會針對查詢產生效能優勢：當您比較兩個不可部分完成的名稱是否相等時，基礎中繼語言 (Intermediate Language) 只需要判斷這兩個參考是否指向相同的物件即可。</span><span class="sxs-lookup"><span data-stu-id="01665-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="01665-105">基礎程式碼不需要進行耗時的字串比較。</span><span class="sxs-lookup"><span data-stu-id="01665-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  
   
-## <a name="atomization-semantics"></a>不可部分完成語意  
- 「不可部分完成」表示，如果兩個 <xref:System.Xml.Linq.XName> 物件具有相同的本機名稱，而且位於相同的命名空間中，則會共用相同的執行個體。 同樣地，如果兩個 <xref:System.Xml.Linq.XNamespace> 物件具有相同的命名空間 URI，則會共用相同的執行個體。  
+## <a name="atomization-semantics"></a><span data-ttu-id="01665-106">不可部分完成語意</span><span class="sxs-lookup"><span data-stu-id="01665-106">Atomization Semantics</span></span>  
+ <span data-ttu-id="01665-107">「不可部分完成」表示，如果兩個 <xref:System.Xml.Linq.XName> 物件具有相同的本機名稱，而且位於相同的命名空間中，則會共用相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="01665-107">Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance.</span></span> <span data-ttu-id="01665-108">同樣地，如果兩個 <xref:System.Xml.Linq.XNamespace> 物件具有相同的命名空間 URI，則會共用相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="01665-108">In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.</span></span>  
   
- 若要讓某個類別 (Class) 啟用不可部分完成的物件，此類別的建構函式 (Constructor) 必須是私用 (Private) 而非公用 (Public)。 這是因為如果建構函式為公用，您就可以建立非不可部分完成的物件。 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 類別會實作隱含轉換運算子，以將字串轉換為 <xref:System.Xml.Linq.XName> 或 <xref:System.Xml.Linq.XNamespace>。 這就是您取得這些物件之執行個體的方式。 您無法使用建構函式來取得執行個體，因為無法存取建構函式。  
+ <span data-ttu-id="01665-109">若要讓某個類別 (Class) 啟用不可部分完成的物件，此類別的建構函式 (Constructor) 必須是私用 (Private) 而非公用 (Public)。</span><span class="sxs-lookup"><span data-stu-id="01665-109">For a class to enable atomized objects, the constructor for the class must be private, not public.</span></span> <span data-ttu-id="01665-110">這是因為如果建構函式為公用，您就可以建立非不可部分完成的物件。</span><span class="sxs-lookup"><span data-stu-id="01665-110">This is because if the constructor were public, you could create a non-atomized object.</span></span> <span data-ttu-id="01665-111"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 類別會實作隱含轉換運算子，以將字串轉換為 <xref:System.Xml.Linq.XName> 或 <xref:System.Xml.Linq.XNamespace>。</span><span class="sxs-lookup"><span data-stu-id="01665-111">The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>.</span></span> <span data-ttu-id="01665-112">這就是您取得這些物件之執行個體的方式。</span><span class="sxs-lookup"><span data-stu-id="01665-112">This is how you get an instance of these objects.</span></span> <span data-ttu-id="01665-113">您無法使用建構函式來取得執行個體，因為無法存取建構函式。</span><span class="sxs-lookup"><span data-stu-id="01665-113">You cannot get an instance by using a constructor, because the constructor is inaccessible.</span></span>  
   
- <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 也會實作等號比較運算子和不等比較運算子，以便判斷所比較的兩個物件是否為相同執行個體的參考。  
+ <span data-ttu-id="01665-114"><xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 也會實作等號比較運算子和不等比較運算子，以便判斷所比較的兩個物件是否為相同執行個體的參考。</span><span class="sxs-lookup"><span data-stu-id="01665-114"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼會建立一些 <xref:System.Xml.Linq.XElement> 物件，並且示範相同的名稱會共用相同的執行個體。  
+## <a name="example"></a><span data-ttu-id="01665-115">範例</span><span class="sxs-lookup"><span data-stu-id="01665-115">Example</span></span>  
+ <span data-ttu-id="01665-116">下列程式碼會建立一些 <xref:System.Xml.Linq.XElement> 物件，並且示範相同的名稱會共用相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="01665-116">The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.</span></span>  
   
 ```csharp  
 XElement r1 = new XElement("Root", "data1");  
@@ -52,16 +52,16 @@ else
     Console.WriteLine("Different");  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="01665-117">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="01665-117">This example produces the following output:</span></span>  
   
 ```  
 r1 and r2 have names that refer to the same instance.  
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
   
- 如先前所述，不可部分完成之物件的優點在於，當您使用其中一個接受 <xref:System.Xml.Linq.XName> 當作參數的座標軸方法時，此座標軸方法只需要判斷兩個名稱是否參考相同的執行個體，即可選取所需的項目。  
+ <span data-ttu-id="01665-118">如先前所述，不可部分完成之物件的優點在於，當您使用其中一個接受 <xref:System.Xml.Linq.XName> 當作參數的座標軸方法時，此座標軸方法只需要判斷兩個名稱是否參考相同的執行個體，即可選取所需的項目。</span><span class="sxs-lookup"><span data-stu-id="01665-118">As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.</span></span>  
   
- 下列範例會將 <xref:System.Xml.Linq.XName> 傳遞至 <xref:System.Xml.Linq.XContainer.Descendants%2A> 方法呼叫，而且這樣做會因不可部分完成模式而具有較佳的效能。  
+ <span data-ttu-id="01665-119">下列範例會將 <xref:System.Xml.Linq.XName> 傳遞至 <xref:System.Xml.Linq.XContainer.Descendants%2A> 方法呼叫，而且這樣做會因不可部分完成模式而具有較佳的效能。</span><span class="sxs-lookup"><span data-stu-id="01665-119">The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -80,12 +80,12 @@ foreach (var z in query)
     Console.WriteLine(z);  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="01665-120">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="01665-120">This example produces the following output:</span></span>  
   
 ```xml  
 <C1>1</C1>  
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [效能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="01665-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="01665-121">See Also</span></span>  
+ [<span data-ttu-id="01665-122">效能 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="01665-122">Performance (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

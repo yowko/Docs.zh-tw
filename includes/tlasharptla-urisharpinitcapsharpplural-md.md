@@ -1,1 +1,1 @@
-統一資源識別項 (URI)
+<span data-ttu-id="0d58c-101">統一資源識別項 (URI)</span><span class="sxs-lookup"><span data-stu-id="0d58c-101">Uniform resource identifiers (URIs)</span></span>

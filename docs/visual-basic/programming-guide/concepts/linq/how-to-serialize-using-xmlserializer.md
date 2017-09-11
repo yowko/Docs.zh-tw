@@ -21,17 +21,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4503774e8d6fc9b0a71c3a4ee390f98b485cc003
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 9cb53837ea2d272efa6bbb9b9f64231c84c42274
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>如何︰ 使用 xmlserializer (Visual Basic) 進行序列化
-本主題顯示的範例會序列化和還原序列化使用<xref:System.Xml.Serialization.XmlSerializer>。</xref:System.Xml.Serialization.XmlSerializer>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="b2fde-102">如何︰ 使用 xmlserializer (Visual Basic) 進行序列化</span><span class="sxs-lookup"><span data-stu-id="b2fde-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="b2fde-103">本主題顯示的範例會序列化和還原序列化使用<xref:System.Xml.Serialization.XmlSerializer>。</xref:System.Xml.Serialization.XmlSerializer></span><span class="sxs-lookup"><span data-stu-id="b2fde-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會建立包含的物件數目<xref:System.Xml.Linq.XElement>物件。</xref:System.Xml.Linq.XElement> 接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。  
+## <a name="example"></a><span data-ttu-id="b2fde-104">範例</span><span class="sxs-lookup"><span data-stu-id="b2fde-104">Example</span></span>  
+ <span data-ttu-id="b2fde-105">下列範例會建立包含的物件數目<xref:System.Xml.Linq.XElement>物件。</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="b2fde-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="b2fde-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="b2fde-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -87,7 +87,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="b2fde-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="b2fde-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -98,6 +98,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [序列化包含 XElement 物件 (Visual Basic) 的物件圖形](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a><span data-ttu-id="b2fde-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2fde-108">See Also</span></span>  
+ [<span data-ttu-id="b2fde-109">序列化包含 XElement 物件 (Visual Basic) 的物件圖形</span><span class="sxs-lookup"><span data-stu-id="b2fde-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
 

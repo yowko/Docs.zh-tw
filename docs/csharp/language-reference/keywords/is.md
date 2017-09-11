@@ -32,149 +32,149 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0d300dbb47e64d2425f8af3bc6a819b145786fa
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 79a2dbbc0ff3f4601075685dece6e7082d4eb57a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="is-c-reference"></a>is (C# 參考) #
+# <a name="is-c-reference"></a><span data-ttu-id="c4b25-103">is (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c4b25-103">is (C# Reference)</span></span> #
 
-檢查物件是否與指定的類型相容，或 (從 C# 7 開始) 根據模式來測試運算式。
+<span data-ttu-id="c4b25-104">檢查物件是否與指定的類型相容，或 (從 C# 7 開始) 根據模式來測試運算式。</span><span class="sxs-lookup"><span data-stu-id="c4b25-104">Checks if an object is compatible with a given type, or (starting with C# 7) tests an expression against a pattern.</span></span>
 
-## <a name="testing-for-type-compatibility"></a>測試類型相容性 ##
+## <a name="testing-for-type-compatibility"></a><span data-ttu-id="c4b25-105">測試類型相容性</span><span class="sxs-lookup"><span data-stu-id="c4b25-105">Testing for type compatibility</span></span> ##
 
-`is` 關鍵字會評估執行階段的類型相容性， 並判斷運算式的物件執行個體或結果是否可轉換成指定的類型。 其語法為
+<span data-ttu-id="c4b25-106">`is` 關鍵字會評估執行階段的類型相容性，</span><span class="sxs-lookup"><span data-stu-id="c4b25-106">The `is` keyword evaluates type compatibility at runtime.</span></span> <span data-ttu-id="c4b25-107">並判斷運算式的物件執行個體或結果是否可轉換成指定的類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-107">It determines whether an object instance or the result of an expression can be converted to a specified type.</span></span> <span data-ttu-id="c4b25-108">其語法為</span><span class="sxs-lookup"><span data-stu-id="c4b25-108">It has the syntax</span></span>
 
 ```csharp
    expr is type
 ```
 
-其中 *expr* 是評估為特定類型執行個體的運算式，而 *type* 是 *expr* 的結果要轉換的目標類型名稱。 如果 *expr* 不是 null，而且透過評估運算式所產生的物件可轉換成 *type*，則 `is` 陳述式為 `true`；否則會傳回 `false`。
+<span data-ttu-id="c4b25-109">其中 *expr* 是評估為特定類型執行個體的運算式，而 *type* 是 *expr* 的結果要轉換的目標類型名稱。</span><span class="sxs-lookup"><span data-stu-id="c4b25-109">where *expr* is an expression that evaluates to an instance of some type, and *type* is the name of the type to which the result of *expr* is to be converted.</span></span> <span data-ttu-id="c4b25-110">如果 *expr* 不是 null，而且透過評估運算式所產生的物件可轉換成 *type*，則 `is` 陳述式為 `true`；否則會傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="c4b25-110">The `is` statement is `true` if *expr* is non-null and the object that results from evaluating the expression can be converted to *type*; otherwise, it returns `false`.</span></span>
 
-例如，下列程式碼會判斷 `obj` 是否可轉換成 `Person` 類型的執行個體：
+<span data-ttu-id="c4b25-111">例如，下列程式碼會判斷 `obj` 是否可轉換成 `Person` 類型的執行個體：</span><span class="sxs-lookup"><span data-stu-id="c4b25-111">For example, the following code determines if `obj` can be cast to an instance of the `Person` type:</span></span>
 
-[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
+<span data-ttu-id="c4b25-112">[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-112">[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]</span></span>
 
-如果下列條件為真，則 `is` 陳述式為 true：
+<span data-ttu-id="c4b25-113">如果下列條件為真，則 `is` 陳述式為 true：</span><span class="sxs-lookup"><span data-stu-id="c4b25-113">The `is` statement is true if:</span></span>
 
-- *expr* 是其類型與 *type* 相同的執行個體。
+- <span data-ttu-id="c4b25-114">*expr* 是其類型與 *type* 相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-114">*expr* is an instance of the same type as *type*.</span></span>
 
-- *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
+- <span data-ttu-id="c4b25-115">*expr* 是衍生自 *type* 的類型執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-115">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="c4b25-116">換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-116">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」**是定義於變數宣告的變數類型。 變數的「執行階段類型」**是指派給該變數的執行個體類型。
+- <span data-ttu-id="c4b25-117">*expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。</span><span class="sxs-lookup"><span data-stu-id="c4b25-117">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="c4b25-118">變數的「編譯時期類型」**是定義於變數宣告的變數類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-118">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="c4b25-119">變數的「執行階段類型」**是指派給該變數的執行個體類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-119">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- *expr* 是實作 *type* 介面的類型執行個體。
+- <span data-ttu-id="c4b25-120">*expr* 是實作 *type* 介面的類型執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-120">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-下列範例顯示在上述每個轉換過程中評估為 `true` 的 `is` 運算式。
+<span data-ttu-id="c4b25-121">下列範例顯示在上述每個轉換過程中評估為 `true` 的 `is` 運算式。</span><span class="sxs-lookup"><span data-stu-id="c4b25-121">The following example shows that the `is` expression evaluates to `true` for each of these conversions.</span></span>
 
-[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
+<span data-ttu-id="c4b25-122">[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-122">[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]</span></span>
 
-如果運算式已知一定會是 `true` 或 `false`，`is` 關鍵字會產生編譯時期警告。 它只會考慮參考轉換、boxing 轉換和 unboxing 轉換，不會考慮使用者定義轉換，或是由類型的 [implicit](implicit.md) 和 [explicit](explicit.md) 運算子定義的轉換。 下列範例會產生警告，因為轉換的結果在編譯時期為已知。 請注意，從 `int` 轉換成 `long` 和 `double` 的 `is` 運算式會傳回 false，因為這些轉換是由 [implicit](implicit.md) 運算子處理。
+<span data-ttu-id="c4b25-123">如果運算式已知一定會是 `true` 或 `false`，`is` 關鍵字會產生編譯時期警告。</span><span class="sxs-lookup"><span data-stu-id="c4b25-123">The `is` keyword generates a compile-time warning if the expression is known to always be either `true` or `false`.</span></span> <span data-ttu-id="c4b25-124">它只會考慮參考轉換、boxing 轉換和 unboxing 轉換，不會考慮使用者定義轉換，或是由類型的 [implicit](implicit.md) 和 [explicit](explicit.md) 運算子定義的轉換。</span><span class="sxs-lookup"><span data-stu-id="c4b25-124">It only considers reference conversions, boxing conversions, and unboxing conversions; it does not consider user-defined conversions or conversions defined by a type's [implicit](implicit.md) and [explicit](explicit.md) operators.</span></span> <span data-ttu-id="c4b25-125">下列範例會產生警告，因為轉換的結果在編譯時期為已知。</span><span class="sxs-lookup"><span data-stu-id="c4b25-125">The following example generates warnings because the result of the conversion is known at compile-time.</span></span> <span data-ttu-id="c4b25-126">請注意，從 `int` 轉換成 `long` 和 `double` 的 `is` 運算式會傳回 false，因為這些轉換是由 [implicit](implicit.md) 運算子處理。</span><span class="sxs-lookup"><span data-stu-id="c4b25-126">Note that the `is` expression for conversions from `int` to `long` and `double` return false, since these conversions are handled by the [implicit](implicit.md) operator.</span></span>
 
-[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
+<span data-ttu-id="c4b25-127">[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-127">[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]</span></span>
 
-`expr` 可以是傳回值的任何運算式，但匿名方法和 Lambda 運算式則除外。 下列範例使用 `is` 來評估方法呼叫的傳回值。   
-[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
+<span data-ttu-id="c4b25-128">`expr` 可以是傳回值的任何運算式，但匿名方法和 Lambda 運算式則除外。</span><span class="sxs-lookup"><span data-stu-id="c4b25-128">`expr` can be any expression that returns a value, with the exception of anonymous methods and lambda expressions.</span></span> <span data-ttu-id="c4b25-129">下列範例使用 `is` 來評估方法呼叫的傳回值。</span><span class="sxs-lookup"><span data-stu-id="c4b25-129">The following example uses  `is` to evaluate the return value of a method call.</span></span>   
+<span data-ttu-id="c4b25-130">[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-130">[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]</span></span>
 
-從 C# 7 開始，您可以搭配[類型模式](#type)使用模式比對來撰寫更簡潔的程式碼，以使用 `is` 陳述式。
+<span data-ttu-id="c4b25-131">從 C# 7 開始，您可以搭配[類型模式](#type)使用模式比對來撰寫更簡潔的程式碼，以使用 `is` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="c4b25-131">Starting with C# 7, you can use pattern matching with the [type pattern](#type) to write more concise code that uses the `is` statement.</span></span>
 
-## <a name="pattern-matching-with-is"></a>以 `is` 進行的模式比對 ##
+## <a name="pattern-matching-with-is"></a><span data-ttu-id="c4b25-132">以 `is` 進行的模式比對</span><span class="sxs-lookup"><span data-stu-id="c4b25-132">Pattern matching with `is`</span></span> ##
 
-從 C# 7 開始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 陳述式支援模式比對。 `is` 關鍵字支援下列模式：
+<span data-ttu-id="c4b25-133">從 C# 7 開始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 陳述式支援模式比對。</span><span class="sxs-lookup"><span data-stu-id="c4b25-133">Starting with C# 7, the `is` and [switch](../../../csharp/language-reference/keywords/switch.md) statements support pattern matching.</span></span> <span data-ttu-id="c4b25-134">`is` 關鍵字支援下列模式：</span><span class="sxs-lookup"><span data-stu-id="c4b25-134">The `is` keyword supports the following patterns:</span></span>
 
-- [類型模式](#type)，測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。
+- <span data-ttu-id="c4b25-135">[類型模式](#type)，測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-135">[Type pattern](#type),  which tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span>
 
-- [常數模式](#constant)，測試運算式是否評估為指定的常數值。
+- <span data-ttu-id="c4b25-136">[常數模式](#constant)，測試運算式是否評估為指定的常數值。</span><span class="sxs-lookup"><span data-stu-id="c4b25-136">[Constant pattern](#constant), which tests whether an expression evaluates to a specified constant value.</span></span>
 
-- [var 模式](#var)，比對一定會成功，而且會將運算式的值繫結至新的區域變數。 
+- <span data-ttu-id="c4b25-137">[var 模式](#var)，比對一定會成功，而且會將運算式的值繫結至新的區域變數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-137">[var pattern](#var), a match that always succeeds and binds the value of an expression to a new local variable.</span></span> 
 
-### <a name="type" /> 類型模式 </a>
+### <span data-ttu-id="c4b25-138"><a name="type" /> 類型模式 </a></span><span class="sxs-lookup"><span data-stu-id="c4b25-138"><a name="type" /> Type pattern </a></span></span>
 
-使用類型模式執行模式比對時，`is` 會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它是 `is` 陳述式的直接延伸，允許精簡類型的評估和轉換。 `is` 類型模式的一般格式為：
+<span data-ttu-id="c4b25-139">使用類型模式執行模式比對時，`is` 會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-139">When using the type pattern to perform pattern matching, `is` tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span> <span data-ttu-id="c4b25-140">它是 `is` 陳述式的直接延伸，允許精簡類型的評估和轉換。</span><span class="sxs-lookup"><span data-stu-id="c4b25-140">It is a straightforward extension of the `is` statement that enables concise type evaluation and conversion.</span></span> <span data-ttu-id="c4b25-141">`is` 類型模式的一般格式為：</span><span class="sxs-lookup"><span data-stu-id="c4b25-141">The general form of the `is` type pattern is:</span></span>
 
 ```csharp
    expr is type varname 
 ```
 
-其中 *expr* 是評估為特定類型執行個體的運算式，*type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件 (如果 `is` 測試為 `true`)。 
+<span data-ttu-id="c4b25-142">其中 *expr* 是評估為特定類型執行個體的運算式，*type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件 (如果 `is` 測試為 `true`)。</span><span class="sxs-lookup"><span data-stu-id="c4b25-142">where *expr* is an expression that evaluates to an instance of some type, *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the `is` test is `true`.</span></span> 
 
-如果下列任一項為真，`is` 運算式為`true`：
+<span data-ttu-id="c4b25-143">如果下列任一項為真，`is` 運算式為`true`：</span><span class="sxs-lookup"><span data-stu-id="c4b25-143">The `is` expression is `true` if any of the following is true:</span></span>
 
-- *expr* 是其類型與 *type* 相同的執行個體。
+- <span data-ttu-id="c4b25-144">*expr* 是其類型與 *type* 相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-144">*expr* is an instance of the same type as *type*.</span></span>
 
-- *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
+- <span data-ttu-id="c4b25-145">*expr* 是衍生自 *type* 的類型執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-145">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="c4b25-146">換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-146">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」**是定義於變數宣告的變數類型。 變數的「執行階段類型」**是指派給該變數的執行個體類型。
+- <span data-ttu-id="c4b25-147">*expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。</span><span class="sxs-lookup"><span data-stu-id="c4b25-147">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="c4b25-148">變數的「編譯時期類型」**是定義於變數宣告的變數類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-148">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="c4b25-149">變數的「執行階段類型」**是指派給該變數的執行個體類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-149">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- *expr* 是實作 *type* 介面的類型執行個體。
+- <span data-ttu-id="c4b25-150">*expr* 是實作 *type* 介面的類型執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4b25-150">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-如果 *exp* 為 `true`，而且 `is` 搭配 `if` 陳述式使用，則 *varname* 會被指派，而且只在 `if` 陳述式內具有區域範圍。
+<span data-ttu-id="c4b25-151">如果 *exp* 為 `true`，而且 `is` 搭配 `if` 陳述式使用，則 *varname* 會被指派，而且只在 `if` 陳述式內具有區域範圍。</span><span class="sxs-lookup"><span data-stu-id="c4b25-151">If *exp* is `true` and `is` is used with an `if` statement, *varname* is assigned and has local scope within the `if` statement only.</span></span>
 
-下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=fullName> 方法的實作。
+<span data-ttu-id="c4b25-152">下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=fullName> 方法的實作。</span><span class="sxs-lookup"><span data-stu-id="c4b25-152">The following example uses the `is` type pattern to provide the implementation of a type's <xref:System.IComparable.CompareTo(System.Object)?displayProperty=fullName> method.</span></span>
 
-[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
+<span data-ttu-id="c4b25-153">[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-153">[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]</span></span>
 
-如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，由於不需要測試轉換的結果是否為 `null`，因此會產生更精簡且容易閱讀的程式碼。  
+<span data-ttu-id="c4b25-154">如果沒有模式比對，此程式碼可能會撰寫如下。</span><span class="sxs-lookup"><span data-stu-id="c4b25-154">Without pattern matching, this code might be written as follows.</span></span> <span data-ttu-id="c4b25-155">使用類型模式比對時，由於不需要測試轉換的結果是否為 `null`，因此會產生更精簡且容易閱讀的程式碼。</span><span class="sxs-lookup"><span data-stu-id="c4b25-155">The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null`.</span></span>  
 
-[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
+<span data-ttu-id="c4b25-156">[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-156">[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]</span></span>
 
-`is` 類型模式也會產生更精簡的程式碼，來判斷實值型別的類型。 下列範例使用 `is` 類型模式來判斷物件為 `Person` 或 `Dog` 執行個體，再顯示適當屬性的值。 
+<span data-ttu-id="c4b25-157">`is` 類型模式也會產生更精簡的程式碼，來判斷實值型別的類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-157">The `is` type pattern also produces more compact code when determining the type of a value type.</span></span> <span data-ttu-id="c4b25-158">下列範例使用 `is` 類型模式來判斷物件為 `Person` 或 `Dog` 執行個體，再顯示適當屬性的值。</span><span class="sxs-lookup"><span data-stu-id="c4b25-158">The following example uses the `is` type pattern to determine whether an object is a `Person` or a `Dog` instance before displaying the value of an appropriate property.</span></span> 
 
-[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
+<span data-ttu-id="c4b25-159">[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-159">[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]</span></span>
 
-不具有模式比對的對等程式碼需要包含明確轉換的個別指派。
+<span data-ttu-id="c4b25-160">不具有模式比對的對等程式碼需要包含明確轉換的個別指派。</span><span class="sxs-lookup"><span data-stu-id="c4b25-160">The equivalent code without pattern matching requires a separate assignment that includes an explicit cast.</span></span>
 
-[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
+<span data-ttu-id="c4b25-161">[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-161">[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]</span></span>
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 常數模式 ###
+### <a name="a-nameconstant--constant-pattern"></a><span data-ttu-id="c4b25-162"><a name="constant" /> 常數模式</span><span class="sxs-lookup"><span data-stu-id="c4b25-162"><a name="constant" /> Constant pattern</span></span> ###
 
-以常數模式執行模式比對時，`is` 會測試運算式是否等於指定的常數。 在 C# 6 (含) 以前版本中，[switch](switch.md) 陳述式支援常數模式。 從 C# 7 開始，`is` 陳述式也提供支援。 它的語法為：
+<span data-ttu-id="c4b25-163">以常數模式執行模式比對時，`is` 會測試運算式是否等於指定的常數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-163">When performing pattern matching with the constant pattern, `is` tests whether an expression equals a specified constant.</span></span> <span data-ttu-id="c4b25-164">在 C# 6 (含) 以前版本中，[switch](switch.md) 陳述式支援常數模式。</span><span class="sxs-lookup"><span data-stu-id="c4b25-164">In C# 6 and earlier versions, the constant pattern is supported by the [switch](switch.md) statement.</span></span> <span data-ttu-id="c4b25-165">從 C# 7 開始，`is` 陳述式也提供支援。</span><span class="sxs-lookup"><span data-stu-id="c4b25-165">Starting with C# 7, it is supported by the `is` statement as well.</span></span> <span data-ttu-id="c4b25-166">它的語法為：</span><span class="sxs-lookup"><span data-stu-id="c4b25-166">Its syntax is:</span></span>
 
 ```csharp
    expr is constant
 ```
 
-其中 *expr* 是要評估的運算式，而 *constant* 是要測試的值。 *constant* 可以是下列任何常數運算式： 
+<span data-ttu-id="c4b25-167">其中 *expr* 是要評估的運算式，而 *constant* 是要測試的值。</span><span class="sxs-lookup"><span data-stu-id="c4b25-167">where *expr* is the expression to evaluate, and *constant* is the value to test for.</span></span> <span data-ttu-id="c4b25-168">*constant* 可以是下列任何常數運算式：</span><span class="sxs-lookup"><span data-stu-id="c4b25-168">*constant* can be any of the following constant expressions:</span></span> 
 
-- 常值。
+- <span data-ttu-id="c4b25-169">常值。</span><span class="sxs-lookup"><span data-stu-id="c4b25-169">A literal value.</span></span>
 
-- 所宣告之 `const` 變數的名稱。
+- <span data-ttu-id="c4b25-170">所宣告之 `const` 變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="c4b25-170">The name of a declared `const` variable.</span></span>
 
-- 列舉常數。
+- <span data-ttu-id="c4b25-171">列舉常數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-171">An enumeration constant.</span></span>
 
-常數運算式評估如下：
+<span data-ttu-id="c4b25-172">常數運算式評估如下：</span><span class="sxs-lookup"><span data-stu-id="c4b25-172">The constant expression is evaluated as follows:</span></span>
 
-- 如果 *expr* 和 *constant* 是整數型別，C# 等號比較運算子會判斷運算式是否傳回`true` (亦即是否 `expr == constant`)。
+- <span data-ttu-id="c4b25-173">如果 *expr* 和 *constant* 是整數型別，C# 等號比較運算子會判斷運算式是否傳回`true` (亦即是否 `expr == constant`)。</span><span class="sxs-lookup"><span data-stu-id="c4b25-173">If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).</span></span>
 
-- 否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。  
+- <span data-ttu-id="c4b25-174">否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。</span><span class="sxs-lookup"><span data-stu-id="c4b25-174">Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.</span></span>  
 
-下列範例結合類型和常數模式來測試物件是否為 `Dice` 執行個體；如果是，則判斷擲出的骰子值是否為 6。
+<span data-ttu-id="c4b25-175">下列範例結合類型和常數模式來測試物件是否為 `Dice` 執行個體；如果是，則判斷擲出的骰子值是否為 6。</span><span class="sxs-lookup"><span data-stu-id="c4b25-175">The following example combines the type and constant patterns to test whether an object is a `Dice` instance and, if it is, to determine whether the value of a dice roll is 6.</span></span>
 
-[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+<span data-ttu-id="c4b25-176">[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-176">[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]</span></span>
  
-### <a name="var" /> var 模式 </a>
+### <span data-ttu-id="c4b25-177"><a name="var" /> var 模式 </a></span><span class="sxs-lookup"><span data-stu-id="c4b25-177"><a name="var" /> var pattern </a></span></span>
 
-以 var 模式進行模式比對一定會成功。 其語法為
+<span data-ttu-id="c4b25-178">以 var 模式進行模式比對一定會成功。</span><span class="sxs-lookup"><span data-stu-id="c4b25-178">A pattern match with the var pattern always succeeds.</span></span> <span data-ttu-id="c4b25-179">其語法為</span><span class="sxs-lookup"><span data-stu-id="c4b25-179">Its syntax is</span></span>
 
 ```csharp 
    expr is var varname
 ```
 
-其中 *expr* 的值一定會指派給名為 *varname* 的區域變數。 *varname* 是其類型與 *expr* 相同的靜態變數。 下列範例使用 var 模式將運算式指派給名為 `obj` 的變數， 然後顯示 `obj` 的值和類型。
+<span data-ttu-id="c4b25-180">其中 *expr* 的值一定會指派給名為 *varname* 的區域變數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-180">where the value of *expr* is always assigned to a local variable named *varname*.</span></span> <span data-ttu-id="c4b25-181">*varname* 是其類型與 *expr* 相同的靜態變數。</span><span class="sxs-lookup"><span data-stu-id="c4b25-181">*varname* is a static variable of the same type as *expr*.</span></span> <span data-ttu-id="c4b25-182">下列範例使用 var 模式將運算式指派給名為 `obj` 的變數，</span><span class="sxs-lookup"><span data-stu-id="c4b25-182">The following example uses the var pattern to assign an expression to a variable named `obj`.</span></span> <span data-ttu-id="c4b25-183">然後顯示 `obj` 的值和類型。</span><span class="sxs-lookup"><span data-stu-id="c4b25-183">It then displays the value and the type of `obj`.</span></span>
 
-[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+<span data-ttu-id="c4b25-184">[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]</span><span class="sxs-lookup"><span data-stu-id="c4b25-184">[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]</span></span>
 
-請注意，如果 *expr* 為 `null`，`is` 運算式仍為 true，而且會將 `null` 指派給 *varname*。 
+<span data-ttu-id="c4b25-185">請注意，如果 *expr* 為 `null`，`is` 運算式仍為 true，而且會將 `null` 指派給 *varname*。</span><span class="sxs-lookup"><span data-stu-id="c4b25-185">Note that if *expr* is `null`, the `is` expression still is true and assigns `null` to *varname*.</span></span> 
 
-# <a name="c-language-specification"></a>C# 語言規格
+# <a name="c-language-specification"></a><span data-ttu-id="c4b25-186">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="c4b25-186">C# Language Specification</span></span>
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="c4b25-187">請參閱</span><span class="sxs-lookup"><span data-stu-id="c4b25-187">See also</span></span>  
+ <span data-ttu-id="c4b25-188">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="c4b25-188">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+<span data-ttu-id="c4b25-189"> [C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="c4b25-189"> [C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+<span data-ttu-id="c4b25-190"> [typeof](../../../csharp/language-reference/keywords/typeof.md) </span><span class="sxs-lookup"><span data-stu-id="c4b25-190"> [typeof](../../../csharp/language-reference/keywords/typeof.md) </span></span>  
+<span data-ttu-id="c4b25-191"> [as](../../../csharp/language-reference/keywords/as.md) </span><span class="sxs-lookup"><span data-stu-id="c4b25-191"> [as](../../../csharp/language-reference/keywords/as.md) </span></span>  
+<span data-ttu-id="c4b25-192"> [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)</span><span class="sxs-lookup"><span data-stu-id="c4b25-192"> [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md)</span></span>
 

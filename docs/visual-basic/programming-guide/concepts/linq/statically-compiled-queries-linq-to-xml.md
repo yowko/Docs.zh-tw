@@ -16,20 +16,20 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2ea8e71acf861b93a21296c74254b3ca4d977d0a
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 83d6e37a00477cedc4a5a4c520ad79ff764d5ff7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>靜態編譯的查詢 (LINQ to XML) (Visual Basic)
-其中一個最重要的效能優勢在於，LINQ to XML，相對於<xref:System.Xml.XmlDocument>，LINQ to XML 中的查詢靜態編譯，而必須在執行階段解譯 XPath 查詢。</xref:System.Xml.XmlDocument> 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。  
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a><span data-ttu-id="e7f3d-102">靜態編譯的查詢 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7f3d-102">Statically Compiled Queries (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="e7f3d-103">其中一個最重要的效能優勢在於，LINQ to XML，相對於<xref:System.Xml.XmlDocument>，LINQ to XML 中的查詢靜態編譯，而必須在執行階段解譯 XPath 查詢。</xref:System.Xml.XmlDocument></span><span class="sxs-lookup"><span data-stu-id="e7f3d-103">One of the most important performance benefits LINQ to XML, as opposed to <xref:System.Xml.XmlDocument>, is that queries in LINQ to XML are statically compiled, whereas XPath queries must be interpreted at run time.</span></span> <span data-ttu-id="e7f3d-104">由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-104">This feature is built in to LINQ to XML, so you do not have to perform extra steps to take advantage of it, but it is helpful to understand the distinction when choosing between the two technologies.</span></span> <span data-ttu-id="e7f3d-105">本主題將說明兩者的差異。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-105">This topic explains the difference.</span></span>  
   
-## <a name="statically-compiled-queries-vs-xpath"></a>靜態編譯查詢與XPath  
- 下列範例將顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
+## <a name="statically-compiled-queries-vs-xpath"></a><span data-ttu-id="e7f3d-106">靜態編譯查詢與XPath</span><span class="sxs-lookup"><span data-stu-id="e7f3d-106">Statically Compiled Queries vs. XPath</span></span>  
+ <span data-ttu-id="e7f3d-107">下列範例將顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-107">The following example shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- 下面是對等的 XPath 運算式：  
+ <span data-ttu-id="e7f3d-108">下面是對等的 XPath 運算式：</span><span class="sxs-lookup"><span data-stu-id="e7f3d-108">The following is the equivalent XPath expression:</span></span>  
   
 ```  
 //Address[@Type='Shipping']  
@@ -46,7 +46,7 @@ For Each el In list1
 Next  
 ```  
   
- 這則範例中的查詢運算式由編譯器重新撰寫成以方法為基礎的查詢語法。 下列範例 (使用以方法為基礎的查詢語法所撰寫) 會與先前的範例產生相同的結果：  
+ <span data-ttu-id="e7f3d-109">這則範例中的查詢運算式由編譯器重新撰寫成以方法為基礎的查詢語法。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-109">The query expression in this example is re-written by the compiler to method-based query syntax.</span></span> <span data-ttu-id="e7f3d-110">下列範例 (使用以方法為基礎的查詢語法所撰寫) 會與先前的範例產生相同的結果：</span><span class="sxs-lookup"><span data-stu-id="e7f3d-110">The following example, which is written in method-based query syntax, produces the same results as the previous one:</span></span>  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -58,7 +58,7 @@ For Each el In list1
 Next   
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A>方法是擴充方法。</xref:System.Linq.Enumerable.Where%2A> 如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。 因為<xref:System.Linq.Enumerable.Where%2A>是擴充方法，就好像它，如下所示撰寫編譯上述查詢︰</xref:System.Linq.Enumerable.Where%2A>  
+ <span data-ttu-id="e7f3d-111"><xref:System.Linq.Enumerable.Where%2A>方法是擴充方法。</xref:System.Linq.Enumerable.Where%2A></span><span class="sxs-lookup"><span data-stu-id="e7f3d-111">The <xref:System.Linq.Enumerable.Where%2A> method is an extension method.</span></span> <span data-ttu-id="e7f3d-112">如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-112">For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span> <span data-ttu-id="e7f3d-113">因為<xref:System.Linq.Enumerable.Where%2A>是擴充方法，就好像它，如下所示撰寫編譯上述查詢︰</xref:System.Linq.Enumerable.Where%2A></span><span class="sxs-lookup"><span data-stu-id="e7f3d-113">Because <xref:System.Linq.Enumerable.Where%2A> is an extension method, the query above is compiled as though it were written as follows:</span></span>  
   
 ```vb  
 Dim po = XDocument.Load("PurchaseOrders.xml")  
@@ -70,13 +70,13 @@ For Each el In list1
 Next  
 ```  
   
- 這則範例會與先前兩則範例產生完全相同的結果。 這表示查詢實際上會編譯成靜態連結方法呼叫。 與 Iterator 的延後執行語意 (Semantics) 結合之後，便可改善效能。 Iterator 的延後的執行語意 （semantics） 的相關資訊，請參閱[延後執行和 LINQ to XML (Visual Basic) 中的延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
+ <span data-ttu-id="e7f3d-114">這則範例會與先前兩則範例產生完全相同的結果。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-114">This example produces exactly the same results as the previous two examples.</span></span> <span data-ttu-id="e7f3d-115">這表示查詢實際上會編譯成靜態連結方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-115">This illustrates the fact that queries are effectively compiled into statically linked method calls.</span></span> <span data-ttu-id="e7f3d-116">與 Iterator 的延後執行語意 (Semantics) 結合之後，便可改善效能。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-116">This, combined with the deferred execution semantics of iterators, improves performance.</span></span> <span data-ttu-id="e7f3d-117">Iterator 的延後的執行語意 （semantics） 的相關資訊，請參閱[延後執行和 LINQ to XML (Visual Basic) 中的延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-117">For more information about the deferred execution semantics of iterators, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
   
 > [!NOTE]
->  這些範例是代表編譯器可能會撰寫的程式碼。 雖然實際的實作 (Implementation) 可能會與這些範例稍微不同，不過其效能與這些範例相同或相似。  
+>  <span data-ttu-id="e7f3d-118">這些範例是代表編譯器可能會撰寫的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-118">These examples are representative of the code that the compiler might write.</span></span> <span data-ttu-id="e7f3d-119">雖然實際的實作 (Implementation) 可能會與這些範例稍微不同，不過其效能與這些範例相同或相似。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-119">The actual implementation might differ slightly from these examples, but the performance will be the same or similar to these examples.</span></span>  
   
-## <a name="executing-xpath-expressions-with-xmldocument"></a>使用 XmlDocument 來執行 XPath 運算式  
- 下列範例會使用<xref:System.Xml.XmlDocument>來達成與先前範例相同的結果︰</xref:System.Xml.XmlDocument>  
+## <a name="executing-xpath-expressions-with-xmldocument"></a><span data-ttu-id="e7f3d-120">使用 XmlDocument 來執行 XPath 運算式</span><span class="sxs-lookup"><span data-stu-id="e7f3d-120">Executing XPath Expressions with XmlDocument</span></span>  
+ <span data-ttu-id="e7f3d-121">下列範例會使用<xref:System.Xml.XmlDocument>來達成與先前範例相同的結果︰</xref:System.Xml.XmlDocument></span><span class="sxs-lookup"><span data-stu-id="e7f3d-121">The following example uses <xref:System.Xml.XmlDocument> to accomplish the same results as the previous examples:</span></span>  
   
 ```vb  
 Dim reader = Xml.XmlReader.Create("PurchaseOrders.xml")  
@@ -89,20 +89,20 @@ Next
 reader.Close()  
 ```  
   
- 此查詢會傳回相同的輸出做為使用 LINQ to XML; 範例唯一的差異是 LINQ to XML 縮排列印的 XML，而<xref:System.Xml.XmlDocument>則否。</xref:System.Xml.XmlDocument>  
+ <span data-ttu-id="e7f3d-122">此查詢會傳回相同的輸出做為使用 LINQ to XML; 範例唯一的差異是 LINQ to XML 縮排列印的 XML，而<xref:System.Xml.XmlDocument>則否。</xref:System.Xml.XmlDocument></span><span class="sxs-lookup"><span data-stu-id="e7f3d-122">This query returns the same output as the examples that use LINQ to XML; the only difference is that LINQ to XML indents the printed XML, whereas <xref:System.Xml.XmlDocument> does not.</span></span>  
   
- 不過，<xref:System.Xml.XmlDocument>方法的執行效能通常不如 LINQ to XML，因為<xref:System.Xml.XmlNode.SelectNodes%2A>方法必須在內部執行下列動作，每次呼叫時︰</xref:System.Xml.XmlNode.SelectNodes%2A> </xref:System.Xml.XmlDocument>  
+ <span data-ttu-id="e7f3d-123">不過，<xref:System.Xml.XmlDocument>方法的執行效能通常不如 LINQ to XML，因為<xref:System.Xml.XmlNode.SelectNodes%2A>方法必須在內部執行下列動作，每次呼叫時︰</xref:System.Xml.XmlNode.SelectNodes%2A> </xref:System.Xml.XmlDocument></span><span class="sxs-lookup"><span data-stu-id="e7f3d-123">However, the <xref:System.Xml.XmlDocument> approach generally does not perform as well as LINQ to XML, because the <xref:System.Xml.XmlNode.SelectNodes%2A> method must do the following internally every time it is called:</span></span>  
   
--   它會剖析包含 XPath 運算式的字串，並將此字串分割成語彙基元 (Token)。  
+-   <span data-ttu-id="e7f3d-124">它會剖析包含 XPath 運算式的字串，並將此字串分割成語彙基元 (Token)。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-124">It parses the string that contains the XPath expression, breaking the string into tokens.</span></span>  
   
--   它會驗證這些語彙基元來確定 XPath 運算式是否有效。  
+-   <span data-ttu-id="e7f3d-125">它會驗證這些語彙基元來確定 XPath 運算式是否有效。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-125">It validates the tokens to make sure that the XPath expression is valid.</span></span>  
   
--   它會將此運算式轉譯成內部運算式樹狀架構。  
+-   <span data-ttu-id="e7f3d-126">它會將此運算式轉譯成內部運算式樹狀架構。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-126">It translates the expression into an internal expression tree.</span></span>  
   
--   它會逐一查看這些節點，並且根據運算式的評估，適當地選取結果集的節點。  
+-   <span data-ttu-id="e7f3d-127">它會逐一查看這些節點，並且根據運算式的評估，適當地選取結果集的節點。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-127">It iterates through the nodes, appropriately selecting the nodes for the result set based on the evaluation of the expression.</span></span>  
   
- 這點明顯比對應 LINQ to XML 查詢所完成的工作還多。 特定的效能差異會因不同類型的查詢，而異，但一般 LINQ to XML 查詢進行較少的工作，並因此優於，評估 XPath 運算式使用<xref:System.Xml.XmlDocument>。</xref:System.Xml.XmlDocument>  
+ <span data-ttu-id="e7f3d-128">這點明顯比對應 LINQ to XML 查詢所完成的工作還多。</span><span class="sxs-lookup"><span data-stu-id="e7f3d-128">This is significantly more than the work done by the corresponding LINQ to XML query.</span></span> <span data-ttu-id="e7f3d-129">特定的效能差異會因不同類型的查詢，而異，但一般 LINQ to XML 查詢進行較少的工作，並因此優於，評估 XPath 運算式使用<xref:System.Xml.XmlDocument>。</xref:System.Xml.XmlDocument></span><span class="sxs-lookup"><span data-stu-id="e7f3d-129">The specific performance difference varies for different types of queries, but in general LINQ to XML queries do less work, and therefore perform better, than evaluating XPath expressions using <xref:System.Xml.XmlDocument>.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [效能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="e7f3d-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7f3d-130">See Also</span></span>  
+ [<span data-ttu-id="e7f3d-131">效能 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7f3d-131">Performance (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
 

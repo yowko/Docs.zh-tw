@@ -20,26 +20,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89ed1f6496ace328b7c5ee00576fbb534107f185
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: fee5e63bf44b786d4500287299f8f338b3583e1a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE 和工具支援的 LINQ (Visual Basic)
-Visual Studio 整合式的開發環境 (IDE) 提供支援 LINQ 的應用程式開發專案的下列功能︰  
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a><span data-ttu-id="4465b-102">Visual Studio IDE 和工具支援的 LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4465b-102">Visual Studio IDE and Tools Support for LINQ (Visual Basic)</span></span>
+<span data-ttu-id="4465b-103">Visual Studio 整合式的開發環境 (IDE) 提供支援 LINQ 的應用程式開發專案的下列功能︰</span><span class="sxs-lookup"><span data-stu-id="4465b-103">The Visual Studio integrated development environment (IDE) provides the following features that support LINQ application development:</span></span>  
   
-## <a name="object-relational-designer"></a>Object Relational Designer  
- 物件關聯式設計工具是視覺化設計工具，可用於[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)在 Visual Basic 中產生類別代表基礎資料庫中的關聯式資料的應用程式。 如需詳細資訊，請參閱[LINQ to SQL 工具，在 Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+## <a name="object-relational-designer"></a><span data-ttu-id="4465b-104">Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="4465b-104">Object Relational Designer</span></span>  
+ <span data-ttu-id="4465b-105">物件關聯式設計工具是視覺化設計工具，可用於[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)在 Visual Basic 中產生類別代表基礎資料庫中的關聯式資料的應用程式。</span><span class="sxs-lookup"><span data-stu-id="4465b-105">The Object Relational Designer is a visual design tool that you can use in [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) applications to generate classes in Visual Basic that represent the relational data in an underlying database.</span></span> <span data-ttu-id="4465b-106">如需詳細資訊，請參閱[LINQ to SQL 工具，在 Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。</span><span class="sxs-lookup"><span data-stu-id="4465b-106">For more information, see [LINQ to SQL Tools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## <a name="sqlmetal-command-line-tool"></a>SQLMetal 命令列工具  
- SQLMetal 是命令列工具，可用於建置處理序中從現有的資料庫，以用於 LINQ 產生類別 to SQL 應用程式。 如需詳細資訊，請參閱[SqlMetal.exe （程式碼產生工具）](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614)。  
+## <a name="sqlmetal-command-line-tool"></a><span data-ttu-id="4465b-107">SQLMetal 命令列工具</span><span class="sxs-lookup"><span data-stu-id="4465b-107">SQLMetal Command Line Tool</span></span>  
+ <span data-ttu-id="4465b-108">SQLMetal 是命令列工具，可用於建置處理序中從現有的資料庫，以用於 LINQ 產生類別 to SQL 應用程式。</span><span class="sxs-lookup"><span data-stu-id="4465b-108">SQLMetal is a command-line tool that can be used in build processes to generate classes from existing databases for use in LINQ to SQL  applications.</span></span> <span data-ttu-id="4465b-109">如需詳細資訊，請參閱[SqlMetal.exe （程式碼產生工具）](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614)。</span><span class="sxs-lookup"><span data-stu-id="4465b-109">For more information, see [SqlMetal.exe (Code Generation Tool)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).</span></span>  
   
-## <a name="linq-aware-code-editor"></a>可感知 LINQ 程式碼編輯器  
- Visual Basic 程式碼編輯器支援 LINQ 廣泛使用 IntelliSense 和格式化的功能。  
+## <a name="linq-aware-code-editor"></a><span data-ttu-id="4465b-110">可感知 LINQ 程式碼編輯器</span><span class="sxs-lookup"><span data-stu-id="4465b-110">LINQ-Aware Code Editor</span></span>  
+ <span data-ttu-id="4465b-111">Visual Basic 程式碼編輯器支援 LINQ 廣泛使用 IntelliSense 和格式化的功能。</span><span class="sxs-lookup"><span data-stu-id="4465b-111">The Visual Basic code editor supports LINQ extensively with IntelliSense and formatting capabilities.</span></span>  
   
-## <a name="visual-studio-debugger-support"></a>Visual Studio 偵錯工具支援  
- Visual Studio 偵錯工具支援偵錯的查詢運算式。 如需詳細資訊，請參閱[偵錯 LINQ](https://docs.microsoft.com/visualstudio/debugger/debugging-linq)。  
+## <a name="visual-studio-debugger-support"></a><span data-ttu-id="4465b-112">Visual Studio 偵錯工具支援</span><span class="sxs-lookup"><span data-stu-id="4465b-112">Visual Studio Debugger Support</span></span>  
+ <span data-ttu-id="4465b-113">Visual Studio 偵錯工具支援偵錯的查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="4465b-113">The Visual Studio debugger supports debugging of query expressions.</span></span> <span data-ttu-id="4465b-114">如需詳細資訊，請參閱[偵錯 LINQ](https://docs.microsoft.com/visualstudio/debugger/debugging-linq)。</span><span class="sxs-lookup"><span data-stu-id="4465b-114">For more information, see [Debugging LINQ](https://docs.microsoft.com/visualstudio/debugger/debugging-linq).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [語言整合查詢 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a><span data-ttu-id="4465b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4465b-115">See Also</span></span>  
+ [<span data-ttu-id="4465b-116">語言整合查詢 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4465b-116">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)

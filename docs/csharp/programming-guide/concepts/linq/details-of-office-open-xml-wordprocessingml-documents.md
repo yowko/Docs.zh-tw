@@ -1,5 +1,5 @@
 ---
-title: "Office Open XML WordprocessingML 文件的詳細資料 (C#) | Microsoft Docs"
+title: "Office Open XML WordprocessingML 文件的詳細資料 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,24 +14,24 @@ ms.assetid: 40c9ed57-b827-4c9e-a3e7-8b2163122106
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce3c9a7fcebd4cce0698be39a6bd2c634f6b5f59
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e36174c28b857922e7e23bff7017b340f0e4769c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Office Open XML WordprocessingML 文件的詳細資料 (C#)
-本節提供 Office Open XML WordprocessingML 文件詳細資料的相關資訊。 它會顯示 Open XML 文件之文件部分和樣式部分的範例。  
+# <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a><span data-ttu-id="1e118-102">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="1e118-102">Details of Office Open XML WordprocessingML Documents (C#)</span></span>
+<span data-ttu-id="1e118-103">本節提供 Office Open XML WordprocessingML 文件詳細資料的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="1e118-103">This section provides information about the details of Office Open XML WordprocessingML documents.</span></span> <span data-ttu-id="1e118-104">它會顯示 Open XML 文件之文件部分和樣式部分的範例。</span><span class="sxs-lookup"><span data-stu-id="1e118-104">It shows examples of the document and style parts of an Open XML document.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="1e118-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="1e118-105">In This Section</span></span>  
   
-|主題|描述|  
+|<span data-ttu-id="1e118-106">主題</span><span class="sxs-lookup"><span data-stu-id="1e118-106">Topic</span></span>|<span data-ttu-id="1e118-107">描述</span><span class="sxs-lookup"><span data-stu-id="1e118-107">Description</span></span>|  
 |-----------|-----------------|  
-|[具有樣式的 WordprocessingML 文件](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|顯示 Office Open XML WordprocessingML 文件的文件部分。|  
-|[WordprocessingML 文件的樣式組件](../../../../csharp/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|顯示 Office Open XML WordprocessingML 文件的樣式部分。|  
-|[輸出 Office Open XML 文件部分內容的範例 (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|提供開啟 Office Open XML WordprocessingML 文件，並將部分內容輸出到主控台的範例。|  
+|[<span data-ttu-id="1e118-108">具有樣式的 WordprocessingML 文件</span><span class="sxs-lookup"><span data-stu-id="1e118-108">WordprocessingML Document with Styles</span></span>](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|<span data-ttu-id="1e118-109">顯示 Office Open XML WordprocessingML 文件的文件部分。</span><span class="sxs-lookup"><span data-stu-id="1e118-109">Shows the document part of an Office Open XML WordprocessingML document.</span></span>|  
+|[<span data-ttu-id="1e118-110">WordprocessingML 文件的樣式組件</span><span class="sxs-lookup"><span data-stu-id="1e118-110">Style Part of a WordprocessingML Document</span></span>](../../../../csharp/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|<span data-ttu-id="1e118-111">顯示 Office Open XML WordprocessingML 文件的樣式部分。</span><span class="sxs-lookup"><span data-stu-id="1e118-111">Shows the style part of an Office Open XML WordprocessingML document.</span></span>|  
+|[<span data-ttu-id="1e118-112">輸出 Office Open XML 文件部分內容的範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="1e118-112">Example that Outputs Office Open XML Document Parts (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|<span data-ttu-id="1e118-113">提供開啟 Office Open XML WordprocessingML 文件，並將部分內容輸出到主控台的範例。</span><span class="sxs-lookup"><span data-stu-id="1e118-113">Provides an example that opens an Office Open XML WordprocessingML document, and outputs the parts to the console.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="1e118-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e118-114">See Also</span></span>  
+ [<span data-ttu-id="1e118-115">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="1e118-115">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

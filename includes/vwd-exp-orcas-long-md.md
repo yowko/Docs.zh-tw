@@ -1,1 +1,1 @@
-Visual Web Developer 2008 Express 版
+<span data-ttu-id="4482a-101">Visual Web Developer 2008 Express 版</span><span class="sxs-lookup"><span data-stu-id="4482a-101">Visual Web Developer 2008 Express Edition</span></span>

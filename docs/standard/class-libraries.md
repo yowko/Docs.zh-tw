@@ -1,6 +1,6 @@
 ---
 title: ".NET 類別庫"
-description: ".NET 類別庫"
+description: "了解 .NET 類別庫如何讓您將有用的功能分組成可供多個應用程式使用的模組。"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -10,56 +10,57 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
-ms.lasthandoff: 03/03/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="net-class-libraries"></a>.NET 類別庫
+# <a name="net-class-libraries"></a><span data-ttu-id="f7cf7-104">.NET 類別庫</span><span class="sxs-lookup"><span data-stu-id="f7cf7-104">.NET Class Libraries</span></span>
 
-類別庫是 .NET 的[共用程式庫](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 它們可讓您將有用的功能設為可供多個應用程式使用的模組中的元件。 它們也可以作為一種方法，來載入應用程式啟動時不需要或未知的功能。 類別庫是使用 [.NET 組件檔案格式](assembly-format.md)進行描述。
+<span data-ttu-id="f7cf7-105">類別庫是 .NET 的[共用程式庫](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-105">Class libraries are the [shared library](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) concept for .NET.</span></span> <span data-ttu-id="f7cf7-106">它們可讓您將有用的功能設為可供多個應用程式使用的模組中的元件。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-106">They enable you to componentize useful functionality into modules that can be used by multiple applications.</span></span> <span data-ttu-id="f7cf7-107">它們也可以作為一種方法，來載入應用程式啟動時不需要或未知的功能。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-107">They can also be used as a means of loading functionality that is not needed or not known at application startup.</span></span> <span data-ttu-id="f7cf7-108">類別庫是使用 [.NET 組件檔案格式](assembly-format.md)進行描述。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-108">Class libraries are described using the [.NET Assembly file format](assembly-format.md).</span></span>
 
-您可以使用三種類型的類別庫：
+<span data-ttu-id="f7cf7-109">您可以使用三種類型的類別庫：</span><span class="sxs-lookup"><span data-stu-id="f7cf7-109">There are three types of class libraries that you can use:</span></span>
 
-*   **平台特定**類別庫可以存取指定平台中的所有 API (例如，.NET Framework、Xamarin iOS)，但是只能供將目標設為該平台的應用程式和程式庫使用。
-*   **可攜式**類別庫可以存取 API 子集，並且可以供將目標設為多個平台的應用程式和程式庫使用。
-*   **.NET Core** 類別庫會將平台特定和可攜式程式庫概念合併到提供兼具兩者的單一模型。
+*   <span data-ttu-id="f7cf7-110">**平台特定**類別庫可以存取指定平台中的所有 API (例如，.NET Framework、Xamarin iOS)，但是只能供將目標設為該平台的應用程式和程式庫使用。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-110">**Platform-specific** class libraries have access to all the APIs in a given platform (for example, .NET Framework, Xamarin iOS), but can only be used by apps and libraries that target that platform.</span></span>
+*   <span data-ttu-id="f7cf7-111">**可攜式**類別庫可以存取 API 子集，並且可以供將目標設為多個平台的應用程式和程式庫使用。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-111">**Portable** class libraries have access to a subset of APIs, and can be used by apps and libraries that target multiple platforms.</span></span>
+*   <span data-ttu-id="f7cf7-112">**.NET Core** 類別庫會將平台特定和可攜式程式庫概念合併到提供兼具兩者的單一模型。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-112">**.NET Core** class libraries are a merger of the platform-specific and portable library concept into a single model that provides the best of both.</span></span>
 
-## <a name="platform-specific-class-libraries"></a>平台特定類別庫
+## <a name="platform-specific-class-libraries"></a><span data-ttu-id="f7cf7-113">平台特定類別庫</span><span class="sxs-lookup"><span data-stu-id="f7cf7-113">Platform-specific Class Libraries</span></span>
 
-平台特定程式庫會繫結至單一 .NET 平台 (例如，Windows 上的 .NET Framework)，因此對已知執行環境具有重大相依性。 這類環境會公開一組已知 API (.NET 和 OS API)，並維護和公開預期狀態 (例如，Windows 登錄)。
+<span data-ttu-id="f7cf7-114">平台特定程式庫會繫結至單一 .NET 實作 (例如 Windows 上的 .NET Framework)，因此對已知執行環境具有重大相依性。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-114">Platform-specific libraries are bound to a single .NET implementation (for example, .NET Framework on Windows) and can therefore take significant dependencies on a known execution environment.</span></span> <span data-ttu-id="f7cf7-115">這類環境會公開一組已知 API (.NET 和 OS API)，並維護和公開預期狀態 (例如，Windows 登錄)。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-115">Such an environment will expose a known set of APIs (.NET and OS APIs) and will maintain and expose expected state (for example, Windows registry).</span></span>
 
-建立平台特定程式庫的開發人員可以完全利用基礎平台。 程式庫永遠只會在該指定平台上執行，這樣就不需要進行平台檢查或撰寫其他形式的條件式程式碼 (以多平台的單一來源程式碼為模數)。
+<span data-ttu-id="f7cf7-116">建立平台特定程式庫的開發人員可以完全利用基礎平台。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-116">Developers who create platform specific libraries can fully exploit the underlying platform.</span></span> <span data-ttu-id="f7cf7-117">程式庫永遠只會在該指定平台上執行，這樣就不需要進行平台檢查或撰寫其他形式的條件式程式碼 (以多平台的單一來源程式碼為模數)。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-117">The libraries will only ever run on that given platform, making platform checks or other forms of conditional code unnecessary (modulo single sourcing code for multiple platforms).</span></span>
 
-平台特定程式庫已是 .NET Framework 的主要類別庫類型。 即使隨著其他 .NET 平台的出現，平台特定程式庫仍然會保有主控程式庫類型。
+<span data-ttu-id="f7cf7-118">平台特定程式庫已是 .NET Framework 的主要類別庫類型。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-118">Platform-specific libraries have been the primary class library type for the .NET Framework.</span></span> <span data-ttu-id="f7cf7-119">即使隨著其他 .NET 實作的出現，平台特定程式庫仍然會保有主控程式庫類型。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-119">Even as other .NET implementations emerged, platform-specific libraries remained the dominant library type.</span></span>
 
-## <a name="portable-class-libraries"></a>可攜式類別庫
+## <a name="portable-class-libraries"></a><span data-ttu-id="f7cf7-120">可攜式類別庫</span><span class="sxs-lookup"><span data-stu-id="f7cf7-120">Portable Class Libraries</span></span>
 
-多個 .NET 平台支援可攜式類別庫。 它們仍然具有與已知執行環境的相依性，不過，環境是一組實體 .NET 平台之交集所產生的綜合環境。 這表示公開的 API 和平台假設是平台特定程式庫可用功能的子集。
+<span data-ttu-id="f7cf7-121">多個 .NET 實作支援可攜式程式庫。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-121">Portable libraries are supported on multiple .NET implementations.</span></span> <span data-ttu-id="f7cf7-122">它們仍然具有與已知執行環境的相依性；不過，環境是一組實體 .NET 實作之交集所產生的綜合環境。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-122">They can still take dependencies on a known execution environment, however, the environment is a synthetic one that is generated by the intersection of a set of concrete .NET implementations.</span></span> <span data-ttu-id="f7cf7-123">這表示公開的 API 和平台假設是平台特定程式庫可用功能的子集。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-123">This means that exposed APIs and platform assumptions are a subset of what would be available to a platform-specific library.</span></span>
 
-當您建立可攜式程式庫時，可以選擇平台組態。 這些是您需要支援的一組平台 (例如，.NET Framework 4.5+、Windows Phone 8.0+)。 您選擇的平台越多，可以進行的 API 和平台假設就越少 (即最小公分母)。 這項特性一開始可能會混淆，因為人們通常認為「越多越好」，但會發現支援的平台越多會導致可用的 API 越少。
+<span data-ttu-id="f7cf7-124">當您建立可攜式程式庫時，可以選擇平台組態。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-124">You choose a platform configuration when you create a portable library.</span></span> <span data-ttu-id="f7cf7-125">這些是您需要支援的一組平台 (例如，.NET Framework 4.5+、Windows Phone 8.0+)。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-125">These are the set of platforms that you need to support (for example, .NET Framework 4.5+, Windows Phone 8.0+).</span></span> <span data-ttu-id="f7cf7-126">您選擇的平台越多，可以進行的 API 和平台假設就越少 (即最小公分母)。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-126">The more platforms you opt to support, the fewer APIs and fewer platform assumptions you can make, the lowest common denominator.</span></span> <span data-ttu-id="f7cf7-127">這項特性一開始可能會混淆，因為人們通常認為「越多越好」，但會發現支援的平台越多會導致可用的 API 越少。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-127">This characteristic can be confusing at first, since people often think "more is better", but find that more supported platforms results in fewer available APIs.</span></span>
 
-許多程式庫開發人員已從透過一個來源產生多個平台特定程式庫 (使用條件式編譯指示詞) 切換到可攜式程式庫。 有[數種方式](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)，可以使用目前最廣泛接受的 [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) 技術來存取可攜式程式庫內的平台特定功能。
+<span data-ttu-id="f7cf7-128">許多程式庫開發人員已從透過一個來源產生多個平台特定程式庫 (使用條件式編譯指示詞) 切換到可攜式程式庫。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-128">Many library developers have switched from producing multiple platform-specific libraries from one source (using conditional compilation directives) to portable libraries.</span></span> <span data-ttu-id="f7cf7-129">有[數種方式](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)，可以使用目前最廣泛接受的 [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) 技術來存取可攜式程式庫內的平台特定功能。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-129">There are [several approaches](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) for accessing platform-specific functionality within portable libraries, with [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) being the most widely accepted technique at this point.</span></span>
 
-### <a name="net-core-class-libraries"></a>.NET Core 類別庫
+### <a name="net-standard-class-libraries"></a><span data-ttu-id="f7cf7-130">.NET Standard 類別庫</span><span class="sxs-lookup"><span data-stu-id="f7cf7-130">.NET Standard Class Libraries</span></span>
 
-.NET Core 程式庫可以取代平台特定和可攜式程式庫概念。 就它們可以公開基礎平台 (沒有綜合平台或平台交集) 的所有功能這點而言，它們是平台特定的。 就它們可以在所有支援的平台上運作這點而言，它們是可攜式。
+<span data-ttu-id="f7cf7-131">.NET Standard 程式庫可以取代平台特定和可攜式程式庫概念。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-131">.NET Standard libraries are a replacement of the platform-specific and portable libraries concepts.</span></span> <span data-ttu-id="f7cf7-132">就它們可以公開基礎平台 (沒有綜合平台或平台交集) 的所有功能這點而言，它們是平台特定的。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-132">They are platform-specific in the sense that they expose all functionality from the underlying platform (no synthetic platforms or platform intersections).</span></span> <span data-ttu-id="f7cf7-133">就它們可以在所有支援的平台上運作這點而言，它們是可攜式。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-133">They are portable in the sense that they work on all supporting platforms.</span></span>
 
-.NET Core 公開一組程式庫_合約_。 .NET 平台必須完整支援或根本不支援每個合約。 因此，每個平台都支援一組 .NET Core 合約。 必然結果是支援合約相依性的平台上支援每個 .NET Core 類別庫。
+<span data-ttu-id="f7cf7-134">.NET Standard 公開一組程式庫「協定」。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-134">The .NET Standard exposes a set of library _contracts_.</span></span> <span data-ttu-id="f7cf7-135">.NET 實作必須完整支援或根本不支援每個協定。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-135">.NET implementations must support each contract fully or not at all.</span></span> <span data-ttu-id="f7cf7-136">因此，每個實作都支援一組 .NET Standard 協定。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-136">Each implementation, therefore, supports a set of .NET Standard contracts.</span></span> <span data-ttu-id="f7cf7-137">必然結果是支援協定相依性的平台上支援每個 .NET Standard 類別庫。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-137">The corollary is that each .NET Standard class library is supported on the platforms that support it’s contract dependencies.</span></span>
 
-.NET Core 合約不會公開 .NET Framework 的整個功能 (也不會公開目標)，不過公開的 API 數目會多於可攜式類別庫。 一段時間之後，就會新增更多 API。
+<span data-ttu-id="f7cf7-138">.NET Standard 不會公開 .NET Framework 的整個功能 (也不會公開目標)，不過公開的 API 數目會多於可攜式類別庫。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-138">The .NET Standard does not expose the entire functionality of the .NET Framework (nor is that a goal), however, they do expose many more APIs than Portable Class Libraries.</span></span> <span data-ttu-id="f7cf7-139">一段時間之後，就會新增更多 API。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-139">More APIs will be added over time.</span></span>
 
-下列平台支援 .NET Core 類別庫︰
+<span data-ttu-id="f7cf7-140">下列平台支援 .NET Standard 類別庫：</span><span class="sxs-lookup"><span data-stu-id="f7cf7-140">The following platforms support .NET Standard libraries:</span></span>
 
-*   .NET 核心
-*   ASP.NET Core
-*   .NET Framework 4.5+
-*   Windows 市集 App
-*   Windows Phone 8+
+*   <span data-ttu-id="f7cf7-141">.NET 核心</span><span class="sxs-lookup"><span data-stu-id="f7cf7-141">.NET Core</span></span>
+*   <span data-ttu-id="f7cf7-142">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="f7cf7-142">ASP.NET Core</span></span>
+*   <span data-ttu-id="f7cf7-143">.NET Framework 4.5+</span><span class="sxs-lookup"><span data-stu-id="f7cf7-143">.NET Framework 4.5+</span></span>
+*   <span data-ttu-id="f7cf7-144">Windows 市集 App</span><span class="sxs-lookup"><span data-stu-id="f7cf7-144">Windows Store Apps</span></span>
+*   <span data-ttu-id="f7cf7-145">Windows Phone 8+</span><span class="sxs-lookup"><span data-stu-id="f7cf7-145">Windows Phone 8+</span></span>
 
-### <a name="mono-class-libraries"></a>Mono 類別庫
+### <a name="mono-class-libraries"></a><span data-ttu-id="f7cf7-146">Mono 類別庫</span><span class="sxs-lookup"><span data-stu-id="f7cf7-146">Mono Class Libraries</span></span>
 
-Mono 上支援類別庫 (包含上述三種類型的程式庫)。 Mono 經常被 (正確) 視為 Microsoft .NET Framework 的跨平台實作。 在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。 在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。
+<span data-ttu-id="f7cf7-147">Mono 上支援類別庫 (包含上述三種類型的程式庫)。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-147">Class libraries are supported on Mono, including the three types of libraries described above.</span></span> <span data-ttu-id="f7cf7-148">Mono 經常被 (正確) 視為 Microsoft .NET Framework 的跨平台實作。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-148">Mono has often been seen (correctly) as a cross-platform implementation of the Microsoft .NET Framework.</span></span> <span data-ttu-id="f7cf7-149">在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-149">In part, this was because platform-specific .NET Framework libraries could run on the Mono runtime without modification or recompilation.</span></span> <span data-ttu-id="f7cf7-150">在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。</span><span class="sxs-lookup"><span data-stu-id="f7cf7-150">This characteristic was in place before the creation of portable class libraries, so was an obvious choice to enable binary portability between the .NET Framework and Mono (although it only worked in one direction).</span></span>
 

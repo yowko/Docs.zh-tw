@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 ConcurrentBag 建立物件集區 | Microsoft Docs"
+title: "如何：使用 ConcurrentBag 建立物件集區"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,20 +15,21 @@ caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: bfe61501586deed112d6a94bf90fd83e84f2639f
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3e26e5954c886d52debbf3e2d41260767b94dc74
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>如何：使用 ConcurrentBag 建立物件集區
-這個範例示範如何使用並行資料包來實作物件集區。 在需要多個類別執行個體的情況下，物件集區可以改善應用程式效能，而且類別的建立或終結成本相當高。 用戶端程式要求新的物件時，物件集區會先嘗試提供已建立並傳回給集區的物件。 如果沒有，則只會建立新的物件。  
+# <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a><span data-ttu-id="5ff5e-102">如何：使用 ConcurrentBag 建立物件集區</span><span class="sxs-lookup"><span data-stu-id="5ff5e-102">How to: Create an Object Pool by Using a ConcurrentBag</span></span>
+<span data-ttu-id="5ff5e-103">這個範例示範如何使用並行資料包來實作物件集區。</span><span class="sxs-lookup"><span data-stu-id="5ff5e-103">This example shows how to use a concurrent bag to implement an object pool.</span></span> <span data-ttu-id="5ff5e-104">在需要多個類別執行個體的情況下，物件集區可以改善應用程式效能，而且類別的建立或終結成本相當高。</span><span class="sxs-lookup"><span data-stu-id="5ff5e-104">Object pools can improve application performance in situations where you require multiple instances of a class and the class is expensive to create or destroy.</span></span> <span data-ttu-id="5ff5e-105">用戶端程式要求新的物件時，物件集區會先嘗試提供已建立並傳回給集區的物件。</span><span class="sxs-lookup"><span data-stu-id="5ff5e-105">When a client program requests a new object, the object pool first attempts to provide one that has already been created and returned to the pool.</span></span> <span data-ttu-id="5ff5e-106">如果沒有，則只會建立新的物件。</span><span class="sxs-lookup"><span data-stu-id="5ff5e-106">If none is available, only then is a new object created.</span></span>  
   
- <xref:System.Collections.Concurrent.ConcurrentBag%601> 可用來儲存物件，因為它支援快速插入和移除，尤其是相同執行緒同時加入和移除項目時。 這個範例可進一步擴大為針對 Bag 資料結構實作的 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 建置，就如同 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。  
+ <span data-ttu-id="5ff5e-107"><xref:System.Collections.Concurrent.ConcurrentBag%601> 用來儲存物件，原因是它支援快速插入和移除，特別是在相同的執行緒新增和移除項目時。</span><span class="sxs-lookup"><span data-stu-id="5ff5e-107"><xref:System.Collections.Concurrent.ConcurrentBag%601> is used to store the objects because it supports fast insertion and removal, especially when the same thread is both adding and removing items.</span></span> <span data-ttu-id="5ff5e-108">此範例無法進一步擴大來建置 bag 資料結構所實作的 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>，這與 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601> 相同。</span><span class="sxs-lookup"><span data-stu-id="5ff5e-108">This example could be further augmented to be built around a <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>, which the bag data structure implements, as do <xref:System.Collections.Concurrent.ConcurrentQueue%601> and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>  
   
-## <a name="example"></a>範例  
- [!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)]
- [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]  
+## <a name="example"></a><span data-ttu-id="5ff5e-109">範例</span><span class="sxs-lookup"><span data-stu-id="5ff5e-109">Example</span></span>  
+ <span data-ttu-id="5ff5e-110">[!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)] [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]</span><span class="sxs-lookup"><span data-stu-id="5ff5e-110">[!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)] [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a><span data-ttu-id="5ff5e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5ff5e-111">See Also</span></span>  
+ [<span data-ttu-id="5ff5e-112">安全執行緒集合</span><span class="sxs-lookup"><span data-stu-id="5ff5e-112">Thread-Safe Collections</span></span>](../../../../docs/standard/collections/thread-safe/index.md)
+

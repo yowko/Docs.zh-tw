@@ -1,1 +1,1 @@
-TrueType
+<span data-ttu-id="32134-101">TrueType</span><span class="sxs-lookup"><span data-stu-id="32134-101">TrueType</span></span>

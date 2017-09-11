@@ -1,5 +1,5 @@
 ---
-title: "檢視類型資訊 | Microsoft Docs"
+title: "檢視類型資訊"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,68 +22,69 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5bc5ed1dd10f04a2d5ef5b00127b6d858102e933
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b7225aeca9bf605f47dcc5a8430cdf1fb12d410
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="viewing-type-information"></a>檢視類型資訊
-<xref:System.Type?displayProperty=fullName> 類別是反映的核心。 Common Language Runtime 會在反映提出要求時，建立載入類型的**類型**。 您可以使用**類型**物件的方法、欄位、屬性和巢狀類別，找出有關該類型的所有資訊。  
+# <a name="viewing-type-information"></a><span data-ttu-id="33151-102">檢視類型資訊</span><span class="sxs-lookup"><span data-stu-id="33151-102">Viewing Type Information</span></span>
+<span data-ttu-id="33151-103"><xref:System.Type?displayProperty=fullName> 類別是反映的核心。</span><span class="sxs-lookup"><span data-stu-id="33151-103">The <xref:System.Type?displayProperty=fullName> class is central to reflection.</span></span> <span data-ttu-id="33151-104">Common Language Runtime 會在反映提出要求時，建立載入類型的**類型**。</span><span class="sxs-lookup"><span data-stu-id="33151-104">The common language runtime creates the **Type** for a loaded type when reflection requests it.</span></span> <span data-ttu-id="33151-105">您可以使用**類型**物件的方法、欄位、屬性和巢狀類別，找出有關該類型的所有資訊。</span><span class="sxs-lookup"><span data-stu-id="33151-105">You can use a **Type** object's methods, fields, properties, and nested classes to find out everything about that type.</span></span>  
   
- 使用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>，從尚未載入、但以類型名稱或您想要的類型名稱傳遞的組件中，取得**類型**物件。 使用<xref:System.Type.GetType%2A?displayProperty=fullName>取得**類型**已載入的組件的物件。 使用 <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName> 和 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=fullName> 取得模組**類型**物件。  
+ <span data-ttu-id="33151-106">使用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>，從尚未載入、但以類型名稱或您想要的類型名稱傳遞的組件中，取得**類型**物件。</span><span class="sxs-lookup"><span data-stu-id="33151-106">Use <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> or <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> to obtain **Type** objects from assemblies that have not been loaded, passing in the name of the type or types you want.</span></span> <span data-ttu-id="33151-107">使用<xref:System.Type.GetType%2A?displayProperty=fullName>取得**類型**已載入的組件的物件。</span><span class="sxs-lookup"><span data-stu-id="33151-107">Use <xref:System.Type.GetType%2A?displayProperty=fullName> to get the **Type** objects from an assembly that is already loaded.</span></span> <span data-ttu-id="33151-108">使用 <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName> 和 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=fullName> 取得模組**類型**物件。</span><span class="sxs-lookup"><span data-stu-id="33151-108">Use <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName> and <xref:System.Reflection.Module.GetTypes%2A?displayProperty=fullName> to obtain module **Type** objects.</span></span>  
   
 > [!NOTE]
->  如果您想要檢查和操作泛型型別和方法，請參閱[反映和泛用型別](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)提供的其他資訊，以及[如何：使用反映檢查和具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。  
+>  <span data-ttu-id="33151-109">如果您想要檢查和操作泛型型別和方法，請參閱[反映和泛用型別](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)提供的其他資訊，以及[如何：使用反映檢查和具現化泛型型別](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="33151-109">If you want to examine and manipulate generic types and methods, please see the additional information provided in [Reflection and Generic Types](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) and [How to: Examine and Instantiate Generic Types with Reflection](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).</span></span>  
   
- 下例示範為組件取得 <xref:System.Reflection.Assembly> 物件和模組的必要語法。  
+ <span data-ttu-id="33151-110">下例示範為組件取得 <xref:System.Reflection.Assembly> 物件和模組的必要語法。</span><span class="sxs-lookup"><span data-stu-id="33151-110">The following example shows the syntax necessary to get the <xref:System.Reflection.Assembly> object and module for an assembly.</span></span>  
   
- [!code-cpp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#6)] [!code-csharp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#6)] [!code-vb[Conceptual.Types.ViewInfo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#6)]  
+ <span data-ttu-id="33151-111">[!code-cpp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#6)] [!code-csharp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#6)] [!code-vb[Conceptual.Types.ViewInfo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#6)]</span><span class="sxs-lookup"><span data-stu-id="33151-111">[!code-cpp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#6)] [!code-csharp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#6)] [!code-vb[Conceptual.Types.ViewInfo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#6)]</span></span>  
   
- 下例示範從載入的組件中取得**類型**物件。  
+ <span data-ttu-id="33151-112">下例示範從載入的組件中取得**類型**物件。</span><span class="sxs-lookup"><span data-stu-id="33151-112">The following example demonstrates getting **Type** objects from a loaded assembly.</span></span>  
   
- [!code-cpp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#7)] [!code-csharp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#7)] [!code-vb[Conceptual.Types.ViewInfo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#7)]  
+ <span data-ttu-id="33151-113">[!code-cpp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#7)] [!code-csharp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#7)] [!code-vb[Conceptual.Types.ViewInfo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#7)]</span><span class="sxs-lookup"><span data-stu-id="33151-113">[!code-cpp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#7)] [!code-csharp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#7)] [!code-vb[Conceptual.Types.ViewInfo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#7)]</span></span>  
   
- 一旦取得**類型**，就有許多方式可以探索該類型成員的相關資訊。 例如，您可以呼叫 <xref:System.Type.GetMembers%2A?displayProperty=fullName> 方法找出類型的所有成員，它會取得 <xref:System.Reflection.MemberInfo> 物件的陣列，描述目前類型的每一個成員。  
+ <span data-ttu-id="33151-114">一旦取得**類型**，就有許多方式可以探索該類型成員的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="33151-114">Once you obtain a **Type**, there are many ways you can discover information about the members of that type.</span></span> <span data-ttu-id="33151-115">例如，您可以呼叫 <xref:System.Type.GetMembers%2A?displayProperty=fullName> 方法找出類型的所有成員，它會取得 <xref:System.Reflection.MemberInfo> 物件的陣列，描述目前類型的每一個成員。</span><span class="sxs-lookup"><span data-stu-id="33151-115">For example, you can find out about all the type's members by calling the <xref:System.Type.GetMembers%2A?displayProperty=fullName> method, which obtains an array of <xref:System.Reflection.MemberInfo> objects describing each of the members of the current type.</span></span>  
   
- 您也可以對**類型**類別使用方法，擷取按名稱指定的一或多個建構函式、方法、事件、欄位或屬性的相關資訊。 例如，<xref:System.Type.GetConstructor%2A?displayProperty=fullName> 會封裝目前類別的特定建構函式。  
+ <span data-ttu-id="33151-116">您也可以對**類型**類別使用方法，擷取按名稱指定的一或多個建構函式、方法、事件、欄位或屬性的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="33151-116">You can also use methods on the **Type** class to retrieve information about one or more constructors, methods, events, fields, or properties that you specify by name.</span></span> <span data-ttu-id="33151-117">例如，<xref:System.Type.GetConstructor%2A?displayProperty=fullName> 會封裝目前類別的特定建構函式。</span><span class="sxs-lookup"><span data-stu-id="33151-117">For example, <xref:System.Type.GetConstructor%2A?displayProperty=fullName> encapsulates a specific constructor of the current class.</span></span>  
   
- 如果您有**類型**，您可以使用 <xref:System.Type.Module%2A?displayProperty=fullName> 屬性，取得封裝模組的物件，而此模組包含該類型。 使用 <xref:System.Reflection.Module.Assembly%2A?displayProperty=fullName> 屬性找出封裝組件的物件，而此組件包含模組。 您可以使用 <xref:System.Type.Assembly%2A?displayProperty=fullName> 屬性直接取得封裝類型的組件。  
+ <span data-ttu-id="33151-118">如果您有**類型**，您可以使用 <xref:System.Type.Module%2A?displayProperty=fullName> 屬性，取得封裝模組的物件，而此模組包含該類型。</span><span class="sxs-lookup"><span data-stu-id="33151-118">If you have a **Type**, you can use the <xref:System.Type.Module%2A?displayProperty=fullName> property to obtain an object that encapsulates the module containing that type.</span></span> <span data-ttu-id="33151-119">使用 <xref:System.Reflection.Module.Assembly%2A?displayProperty=fullName> 屬性找出封裝組件的物件，而此組件包含模組。</span><span class="sxs-lookup"><span data-stu-id="33151-119">Use the <xref:System.Reflection.Module.Assembly%2A?displayProperty=fullName> property to locate an object that encapsulates the assembly containing the module.</span></span> <span data-ttu-id="33151-120">您可以使用 <xref:System.Type.Assembly%2A?displayProperty=fullName> 屬性直接取得封裝類型的組件。</span><span class="sxs-lookup"><span data-stu-id="33151-120">You can obtain the assembly that encapsulates the type directly by using the <xref:System.Type.Assembly%2A?displayProperty=fullName> property.</span></span>  
   
-## <a name="systemtype-and-constructorinfo"></a>System.Type 和 ConstructorInfo  
- 下例示範如何列出類別的建構函式，本例中為 <xref:System.String> 類別。  
+## <a name="systemtype-and-constructorinfo"></a><span data-ttu-id="33151-121">System.Type 和 ConstructorInfo</span><span class="sxs-lookup"><span data-stu-id="33151-121">System.Type and ConstructorInfo</span></span>  
+ <span data-ttu-id="33151-122">下例示範如何列出類別的建構函式，本例中為 <xref:System.String> 類別。</span><span class="sxs-lookup"><span data-stu-id="33151-122">The following example shows how to list the constructors for a class, in this case, the <xref:System.String> class.</span></span>  
   
- [!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)] [!code-csharp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source1.cs#1)] [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
+ <span data-ttu-id="33151-123">[!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)] [!code-csharp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source1.cs#1)] [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]</span><span class="sxs-lookup"><span data-stu-id="33151-123">[!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)] [!code-csharp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source1.cs#1)] [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]</span></span>  
   
-## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo、MethodInfo、FieldInfo 和 PropertyInfo  
- 使用 <xref:System.Reflection.MemberInfo>、<xref:System.Reflection.MethodInfo>、<xref:System.Reflection.FieldInfo> 或 <xref:System.Reflection.PropertyInfo> 物件，取得類型方法、屬性、事件和欄位的相關資訊。  
+## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a><span data-ttu-id="33151-124">MemberInfo、MethodInfo、FieldInfo 和 PropertyInfo</span><span class="sxs-lookup"><span data-stu-id="33151-124">MemberInfo, MethodInfo, FieldInfo, and PropertyInfo</span></span>  
+ <span data-ttu-id="33151-125">使用 <xref:System.Reflection.MemberInfo>、<xref:System.Reflection.MethodInfo>、<xref:System.Reflection.FieldInfo> 或 <xref:System.Reflection.PropertyInfo> 物件，取得類型方法、屬性、事件和欄位的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="33151-125">Obtain information about the type's methods, properties, events, and fields using <xref:System.Reflection.MemberInfo>, <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.FieldInfo>, or <xref:System.Reflection.PropertyInfo> objects.</span></span>  
   
- 下例使用 **MemberInfo** 列出 **System.IO.File** 類別中的成員數目，並使用 <xref:System.Type.IsPublic%2A> 屬性判斷類別的可見度。  
+ <span data-ttu-id="33151-126">下例使用 **MemberInfo** 列出 **System.IO.File** 類別中的成員數目，並使用 <xref:System.Type.IsPublic%2A> 屬性判斷類別的可見度。</span><span class="sxs-lookup"><span data-stu-id="33151-126">The following example uses **MemberInfo** to list the number of members in the **System.IO.File** class and uses the <xref:System.Type.IsPublic%2A> property to determine the visibility of the class.</span></span>  
   
- [!code-cpp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source2.cpp#2)] [!code-csharp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source2.cs#2)] [!code-vb[Conceptual.Types.ViewInfo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source2.vb#2)]  
+ <span data-ttu-id="33151-127">[!code-cpp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source2.cpp#2)] [!code-csharp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source2.cs#2)] [!code-vb[Conceptual.Types.ViewInfo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source2.vb#2)]</span><span class="sxs-lookup"><span data-stu-id="33151-127">[!code-cpp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source2.cpp#2)] [!code-csharp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source2.cs#2)] [!code-vb[Conceptual.Types.ViewInfo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source2.vb#2)]</span></span>  
   
- 下例會檢查指定的成員類型。 它會對 **MemberInfo** 類別的成員執行反映，列出其類型。  
+ <span data-ttu-id="33151-128">下例會檢查指定的成員類型。</span><span class="sxs-lookup"><span data-stu-id="33151-128">The following example investigates the type of the specified member.</span></span> <span data-ttu-id="33151-129">它會對 **MemberInfo** 類別的成員執行反映，列出其類型。</span><span class="sxs-lookup"><span data-stu-id="33151-129">It performs reflection on a member of the **MemberInfo** class, and lists its type.</span></span>  
   
- [!code-cpp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source3.cpp#3)] [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)] [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]  
+ <span data-ttu-id="33151-130">[!code-cpp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source3.cpp#3)] [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)] [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]</span><span class="sxs-lookup"><span data-stu-id="33151-130">[!code-cpp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source3.cpp#3)] [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)] [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]</span></span>  
   
- 下例使用所有反映 **\*Info** 類別與 <xref:System.Reflection.BindingFlags> 列出指定類別的所有成員 (建構函式、欄位、屬性、事件和方法)，將成員區分為靜態和執行個體類別。  
+ <span data-ttu-id="33151-131">下例使用所有反映 **\*Info** 類別與 <xref:System.Reflection.BindingFlags> 列出指定類別的所有成員 (建構函式、欄位、屬性、事件和方法)，將成員區分為靜態和執行個體類別。</span><span class="sxs-lookup"><span data-stu-id="33151-131">The following example uses all the Reflection **\*Info** classes along with <xref:System.Reflection.BindingFlags> to list all the members (constructors, fields, properties, events, and methods) of the specified class, dividing the members into static and instance categories.</span></span>  
   
- [!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)] [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)] [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
+ <span data-ttu-id="33151-132">[!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)] [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)] [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]</span><span class="sxs-lookup"><span data-stu-id="33151-132">[!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)] [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)] [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection.BindingFlags>   
- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>   
- <xref:System.Type.GetType%2A?displayProperty=fullName>   
- <xref:System.Type.GetMembers%2A?displayProperty=fullName>   
- <xref:System.Type.GetFields%2A?displayProperty=fullName>   
- <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>   
- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=fullName>   
- <xref:System.Reflection.MemberInfo>   
- <xref:System.Reflection.ConstructorInfo>   
- <xref:System.Reflection.MethodInfo>   
- <xref:System.Reflection.FieldInfo>   
- <xref:System.Reflection.EventInfo>   
- <xref:System.Reflection.ParameterInfo>   
- [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+## <a name="see-also"></a><span data-ttu-id="33151-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="33151-133">See Also</span></span>  
+ <span data-ttu-id="33151-134"><xref:System.Reflection.BindingFlags></span><span class="sxs-lookup"><span data-stu-id="33151-134"><xref:System.Reflection.BindingFlags></span></span>   
+ <span data-ttu-id="33151-135"><xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-135"><xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-136"><xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-136"><xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-137"><xref:System.Type.GetType%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-137"><xref:System.Type.GetType%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-138"><xref:System.Type.GetMembers%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-138"><xref:System.Type.GetMembers%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-139"><xref:System.Type.GetFields%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-139"><xref:System.Type.GetFields%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-140"><xref:System.Reflection.Module.GetType%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-140"><xref:System.Reflection.Module.GetType%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-141"><xref:System.Reflection.Module.GetTypes%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="33151-141"><xref:System.Reflection.Module.GetTypes%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="33151-142"><xref:System.Reflection.MemberInfo></span><span class="sxs-lookup"><span data-stu-id="33151-142"><xref:System.Reflection.MemberInfo></span></span>   
+ <span data-ttu-id="33151-143"><xref:System.Reflection.ConstructorInfo></span><span class="sxs-lookup"><span data-stu-id="33151-143"><xref:System.Reflection.ConstructorInfo></span></span>   
+ <span data-ttu-id="33151-144"><xref:System.Reflection.MethodInfo></span><span class="sxs-lookup"><span data-stu-id="33151-144"><xref:System.Reflection.MethodInfo></span></span>   
+ <span data-ttu-id="33151-145"><xref:System.Reflection.FieldInfo></span><span class="sxs-lookup"><span data-stu-id="33151-145"><xref:System.Reflection.FieldInfo></span></span>   
+ <span data-ttu-id="33151-146"><xref:System.Reflection.EventInfo></span><span class="sxs-lookup"><span data-stu-id="33151-146"><xref:System.Reflection.EventInfo></span></span>   
+ <span data-ttu-id="33151-147"><xref:System.Reflection.ParameterInfo></span><span class="sxs-lookup"><span data-stu-id="33151-147"><xref:System.Reflection.ParameterInfo></span></span>   
+ [<span data-ttu-id="33151-148">反映和泛用類型</span><span class="sxs-lookup"><span data-stu-id="33151-148">Reflection and Generic Types</span></span>](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+

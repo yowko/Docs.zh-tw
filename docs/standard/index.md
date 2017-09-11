@@ -10,73 +10,74 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
 ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
-ms.lasthandoff: 04/06/2017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/02/2017
 
 ---
 
-# <a name="net-platform-guide"></a>.NET 平台指南
+# <a name="net-platform-guide"></a><span data-ttu-id="efdb0-104">.NET 平台指南</span><span class="sxs-lookup"><span data-stu-id="efdb0-104">.NET Platform Guide</span></span>
 
 > [!NOTE]
-> 如需了解如何建立簡單的 .NET Core 應用程式，請參閱[＜.NET Core 使用者入門＞教學課程](../core/getting-started.md)。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
+> <span data-ttu-id="efdb0-105">如需了解如何建立簡單的 .NET Core 應用程式，請參閱[＜.NET Core 使用者入門＞教學課程](../core/getting-started.md)。</span><span class="sxs-lookup"><span data-stu-id="efdb0-105">Check out the ["Getting Started with .NET Core" tutorials](../core/getting-started.md) to learn how to create a simple .NET Core application.</span></span> <span data-ttu-id="efdb0-106">只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。</span><span class="sxs-lookup"><span data-stu-id="efdb0-106">It only takes a few minutes to get your first app up and running.</span></span>
 
-.NET 是一般用途開發平台。 它可用於使用一般用途方案的任何應用程式類型或工作負載。 它包含幾項對許多開發人員而言具吸引力的重要功能，包括自動記憶體管理和現代程式語言，可讓您更輕鬆且有效率地建置高品質應用程式。 .NET 支援具有許多便利功能的高層級程式設計環境，同時提供原生記憶體和 API 的低層級存取。
+<span data-ttu-id="efdb0-107">.NET 是一般用途開發平台。</span><span class="sxs-lookup"><span data-stu-id="efdb0-107">.NET is a general purpose development platform.</span></span> <span data-ttu-id="efdb0-108">它可用於使用一般用途方案的任何應用程式類型或工作負載。</span><span class="sxs-lookup"><span data-stu-id="efdb0-108">It can be used for any kind of app type or workload where general purpose solutions are used.</span></span> <span data-ttu-id="efdb0-109">它包含幾項對許多開發人員而言具吸引力的重要功能，包括自動記憶體管理和現代程式語言，可讓您更輕鬆且有效率地建置高品質應用程式。</span><span class="sxs-lookup"><span data-stu-id="efdb0-109">It has several key features that are attractive to many developers, including automatic memory management and modern programming languages, that make it easier to efficiently build high-quality applications.</span></span> <span data-ttu-id="efdb0-110">.NET 支援具有許多便利功能的高層級程式設計環境，同時提供原生記憶體和 API 的低層級存取。</span><span class="sxs-lookup"><span data-stu-id="efdb0-110">.NET enables a high-level programming environment with many convenience features, while providing low-level access to native memory and APIs.</span></span>
 
-C#、F# 和 Visual Basic 是依賴 .NET 平台並以其為目標的熱門語言。 .NET 語言以其非同步程式設計模型、Language Integrated Query、泛型型別和型別系統反映等重要功能聞名。 這些語言也提供物件導向和功能性程式設計範例的絕佳選項。
+<span data-ttu-id="efdb0-111">C#、F# 和 Visual Basic 是依賴 .NET 平台並以其為目標的熱門語言。</span><span class="sxs-lookup"><span data-stu-id="efdb0-111">C#, F# and Visual Basic are popular languages that target and rely on the .NET platform.</span></span> <span data-ttu-id="efdb0-112">.NET 語言以其非同步程式設計模型、Language Integrated Query、泛型型別和型別系統反映等重要功能聞名。</span><span class="sxs-lookup"><span data-stu-id="efdb0-112">The .NET languages are known for key features such as their asynchronous programming model, language-integrated query, generic types and type system reflection.</span></span> <span data-ttu-id="efdb0-113">這些語言也提供物件導向和功能性程式設計範例的絕佳選項。</span><span class="sxs-lookup"><span data-stu-id="efdb0-113">The languages also provide great options for both object-oriented and functional programming paradigms.</span></span>
 
-這些語言不僅在原理和語法方面，在共用型別系統所提供的對稱方面也有絕佳的多樣性。 此型別系統是由基礎執行階段環境提供。 .NET 的設計中心概念是「Common Language Runtime」，可支援各種不同語言 (例如動態和靜態型別語言) 的需求，並允許這些語言之間的互通性。 例如，您可以將 `People` 物件集合傳遞給不同的語言，而不會遺失語意或功能。
+<span data-ttu-id="efdb0-114">這些語言不僅在原理和語法方面，在共用型別系統所提供的對稱方面也有絕佳的多樣性。</span><span class="sxs-lookup"><span data-stu-id="efdb0-114">There is great diversity across these languages, in philosophy and syntax, but also symmetry provided by a shared type system.</span></span> <span data-ttu-id="efdb0-115">此型別系統是由基礎執行階段環境提供。</span><span class="sxs-lookup"><span data-stu-id="efdb0-115">This type system is provided by the underlying runtime environment.</span></span> <span data-ttu-id="efdb0-116">.NET 的設計中心概念是「Common Language Runtime」，可支援各種不同語言 (例如動態和靜態型別語言) 的需求，並允許這些語言之間的互通性。</span><span class="sxs-lookup"><span data-stu-id="efdb0-116">.NET was designed around the idea of a "common language runtime" that could support the requirements of diverse languages -- for example, dynamic and statically typed languages -- and enable interoperability between them.</span></span> <span data-ttu-id="efdb0-117">例如，您可以將 `People` 物件集合傳遞給不同的語言，而不會遺失語意或功能。</span><span class="sxs-lookup"><span data-stu-id="efdb0-117">For example, it's possible to pass a collection of `People` objects between languages with no loss in semantics or capability.</span></span>
 
-根據指定平台基礎的開放 [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)，您可以使用多種 [.NET 實作和產品](components.md)。 這些實作和產品分別針對不同的應用程式類型 (例如傳統型、行動、遊戲、雲端) 進行最佳化，並支援許多晶片 (例如 x86/x64、ARM) 和作業系統 (例如 Windows、Linux、iOS、Android、macOS)。 開放原始碼也是 .NET 生態系統很重要的一部分，具有多項 .NET 實作，並有許多經 OSI 核准授權的程式庫可用。
+<span data-ttu-id="efdb0-118">根據指定平台基礎的開放 [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)，您可以使用多種 [.NET 實作和產品](components.md)。</span><span class="sxs-lookup"><span data-stu-id="efdb0-118">Multiple [.NET implementations and products](components.md) are available, based on open [.NET Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) that specify the fundamentals of the platform.</span></span> <span data-ttu-id="efdb0-119">這些實作和產品分別針對不同的應用程式類型 (例如傳統型、行動、遊戲、雲端) 進行最佳化，並支援許多晶片 (例如 x86/x64、ARM) 和作業系統 (例如 Windows、Linux、iOS、Android、macOS)。</span><span class="sxs-lookup"><span data-stu-id="efdb0-119">They are separately optimized for different application types (for example, desktop, mobile, gaming, cloud) and support many chips (for example, x86/x64, ARM) and operating systems (for example, Windows, Linux, iOS, Android, macOS).</span></span> <span data-ttu-id="efdb0-120">開放原始碼也是 .NET 生態系統很重要的一部分，具有多項 .NET 實作，並有許多經 OSI 核准授權的程式庫可用。</span><span class="sxs-lookup"><span data-stu-id="efdb0-120">Open source is also an important part of the .NET ecosystem, with multiple .NET implementations and many libraries available under OSI-approved licenses.</span></span>
 
-- 了解 [C#](../csharp/index.md)
-- 了解 [F#](../fsharp/index.md)
-- 瀏覽 [.NET API 程式庫](../../api/index.md)
-- [Common Language Runtime 簡介](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
+- <span data-ttu-id="efdb0-121">了解 [C#](../csharp/index.md)</span><span class="sxs-lookup"><span data-stu-id="efdb0-121">Learn about [C#](../csharp/index.md)</span></span>
+- <span data-ttu-id="efdb0-122">了解 [F#](../fsharp/index.md)</span><span class="sxs-lookup"><span data-stu-id="efdb0-122">Learn about [F#](../fsharp/index.md)</span></span>
+- <span data-ttu-id="efdb0-123">瀏覽 [.NET API 程式庫](../../api/index.md)</span><span class="sxs-lookup"><span data-stu-id="efdb0-123">Browse the [.NET API Library](../../api/index.md)</span></span>
+- [<span data-ttu-id="efdb0-124">Common Language Runtime 簡介</span><span class="sxs-lookup"><span data-stu-id="efdb0-124">Introduction to the Common Language Runtime</span></span>](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
 
-<a name="fundamentals"></a>Fundamentals
+<a name="fundamentals"></a><span data-ttu-id="efdb0-125">Fundamentals</span><span class="sxs-lookup"><span data-stu-id="efdb0-125">Fundamentals</span></span>
 ------------
 
-**多國語言** -- .NET 提供定義完善的型別系統、檔案格式、執行階段、架構和工具，可供多種語言使用，不僅可單獨執行，也可與使用相同 .NET 元件作為共用元件的其他語言互通。
+<span data-ttu-id="efdb0-126">**多國語言** -- .NET 提供定義完善的型別系統、檔案格式、執行階段、架構和工具，可供多種語言使用，不僅可單獨執行，也可與使用相同 .NET 元件作為共用元件的其他語言互通。</span><span class="sxs-lookup"><span data-stu-id="efdb0-126">**Multi-Language** -- .NET provides a well-defined type system, file formats, runtime, framework and tools that can be used by multiple languages, both for their own execution and also to interoperate with other languages using those same components of .NET as their shared currency.</span></span>
 
-**Managed 記憶體** -- .NET 會透過記憶體回收行程自動為您管理記憶體。 它可確保您永遠參考實際物件，並確保您避免難處理的問題，例如緩衝區滿溢和存取違規。 這包括陣列界限檢查。
+<span data-ttu-id="efdb0-127">**Managed 記憶體** -- .NET 會透過記憶體回收行程自動為您管理記憶體。</span><span class="sxs-lookup"><span data-stu-id="efdb0-127">**Managed Memory** -- .NET automatically manages memory for you via a garbage collector.</span></span> <span data-ttu-id="efdb0-128">它可確保您永遠參考實際物件，並確保您避免難處理的問題，例如緩衝區滿溢和存取違規。</span><span class="sxs-lookup"><span data-stu-id="efdb0-128">It ensures that you always reference live objects, guaranteeing that you avoid nasty problems like buffer overruns and access violations.</span></span> <span data-ttu-id="efdb0-129">這包括陣列界限檢查。</span><span class="sxs-lookup"><span data-stu-id="efdb0-129">This includes array bounds checking.</span></span>
 
-**型別安全** -- 主要 .NET 模型是以「型別」來表示功能和記憶體。 型別可定義圖形並選擇性定義行為。 此執行階段可確保呼叫程式碼只能根據其定義和成員的指定可見度來操作型別，並提供一致、可靠且安全的結果。
+<span data-ttu-id="efdb0-130">**型別安全** -- 主要 .NET 模型是以「型別」來表示功能和記憶體。</span><span class="sxs-lookup"><span data-stu-id="efdb0-130">**Type Safety** -- The primary .NET model for functionality and memory representation is "types".</span></span> <span data-ttu-id="efdb0-131">型別可定義圖形並選擇性定義行為。</span><span class="sxs-lookup"><span data-stu-id="efdb0-131">Types define shape and optionally behavior.</span></span> <span data-ttu-id="efdb0-132">此執行階段可確保呼叫程式碼只能根據其定義和成員的指定可見度來操作型別，並提供一致、可靠且安全的結果。</span><span class="sxs-lookup"><span data-stu-id="efdb0-132">The runtime ensures that calling code can only operate on types according to their definition and specified visibility of members, providing consistent, reliable and secure results.</span></span>
 
-<a name="features"></a>功能
+<a name="features"></a><span data-ttu-id="efdb0-133">功能</span><span class="sxs-lookup"><span data-stu-id="efdb0-133">Features</span></span>
 --------
 
-**使用者定義的實值型別** -- 實值型別是有用的型別分類，因為它們與類別一樣，提供「以傳值方式」的語意，而不是「以傳址方式」。 實值型別對於數值資料最有用。 .NET 支援基本型別 (例如整數) 和使用者定義型別的實值型別。
+<span data-ttu-id="efdb0-134">**使用者定義的實值型別** -- 實值型別是有用的型別分類，因為它們與類別一樣，提供「以傳值方式」的語意，而不是「以傳址方式」。</span><span class="sxs-lookup"><span data-stu-id="efdb0-134">**User-defined Value Types** -- Value types are a useful category of types since they offer the semantic of "pass by value" instead of "pass by reference", as is the case for classes.</span></span> <span data-ttu-id="efdb0-135">實值型別對於數值資料最有用。</span><span class="sxs-lookup"><span data-stu-id="efdb0-135">Value types are most obviously usefully for numeric data.</span></span> <span data-ttu-id="efdb0-136">.NET 支援基本型別 (例如整數) 和使用者定義型別的實值型別。</span><span class="sxs-lookup"><span data-stu-id="efdb0-136">.NET enables value types for both primitive types, like integers, and user-defined types.</span></span>
 
-**泛型型別** -- 泛型型別是具有一或多個型別參數的型別，可在每次具現化時加以指定。 這對許多型別都很有用，如未指定，則會將內容公開為物件類型，或需要多個類型定義。 例如，您可以針對人員、GPS 位置或字串，指定集合類型的具現化。
+<span data-ttu-id="efdb0-137">**泛型型別** -- 泛型型別是具有一或多個型別參數的型別，可在每次具現化時加以指定。</span><span class="sxs-lookup"><span data-stu-id="efdb0-137">**Generic types** -- Generic types are types with one or more type parameters that can be specified on a per-instantiation basis.</span></span> <span data-ttu-id="efdb0-138">這對許多型別都很有用，如未指定，則會將內容公開為物件類型，或需要多個類型定義。</span><span class="sxs-lookup"><span data-stu-id="efdb0-138">This is useful for many types, which otherwise would  expose contents as the Object type or require multiple type definitions.</span></span> <span data-ttu-id="efdb0-139">例如，您可以針對人員、GPS 位置或字串，指定集合類型的具現化。</span><span class="sxs-lookup"><span data-stu-id="efdb0-139">For example, a given instantiation of a collection type can be made specific to People, GPS locations or strings.</span></span>
 
-**反映** -- .NET 會定義描述二進位檔內型別的中繼資料格式。 反映子系統會使用此資料來公開 API，以在執行階段讀取及具現化型別。 這項功能非常適合不方便事先知道程式之實際實作的動態情節。
+<span data-ttu-id="efdb0-140">**反映** -- .NET 會定義描述二進位檔內型別的中繼資料格式。</span><span class="sxs-lookup"><span data-stu-id="efdb0-140">**Reflection** -- .NET defines a metadata format that describes the types within a binary.</span></span> <span data-ttu-id="efdb0-141">反映子系統會使用此資料來公開 API，以在執行階段讀取及具現化型別。</span><span class="sxs-lookup"><span data-stu-id="efdb0-141">The reflection subsystem uses this data, exposing APIs for both reading and instantiating types at runtime.</span></span> <span data-ttu-id="efdb0-142">這項功能非常適合不方便事先知道程式之實際實作的動態情節。</span><span class="sxs-lookup"><span data-stu-id="efdb0-142">This facility is very useful for dynamic scenarios where it is not convenient to know the exact implementation of a program ahead of time.</span></span>
 
-**彈性產生程式碼** -- .NET 並未指定特定方法來將 .NET 二進位檔轉換成機器碼。 您可以使用許多方法來達成，包括解譯、Just-In-Time (JIT) 編譯、支援 JIT 後援的預先 (AOT) 編譯，以及不支援 JIT 後援的 AOT 編譯。 上述每種策略都很有價值，而且有時候會一起使用。
+<span data-ttu-id="efdb0-143">**彈性產生程式碼** -- .NET 並未指定特定方法來將 .NET 二進位檔轉換成機器碼。</span><span class="sxs-lookup"><span data-stu-id="efdb0-143">**Flexible code generation** -- .NET does not prescribe a specific approach to transforming .NET binaries into machine code.</span></span> <span data-ttu-id="efdb0-144">您可以使用許多方法來達成，包括解譯、Just-In-Time (JIT) 編譯、支援 JIT 後援的預先 (AOT) 編譯，以及不支援 JIT 後援的 AOT 編譯。</span><span class="sxs-lookup"><span data-stu-id="efdb0-144">Many approaches have been used successfully, including interpretation, just-in-time (JIT) compilation, ahead-of-time (AOT) compilation with JIT fallback and AOT compilation with no JIT fallback.</span></span> <span data-ttu-id="efdb0-145">上述每種策略都很有價值，而且有時候會一起使用。</span><span class="sxs-lookup"><span data-stu-id="efdb0-145">Each of these strategies can be valuable and there are opportunities for using them together.</span></span>
 
-**跨平台** -- .NET 一開始就是為了跨平台使用。 此二進位格式和指令集適用於各種作業系統、CPU 和指標大小。 內建於 2000 版並可在 32 位元 Windows 電腦上執行的指定 .NET 二進位檔，可在 ARM64 iOS 裝置上以 2016 版執行，而不需要任何修改。
+<span data-ttu-id="efdb0-146">**跨平台** -- .NET 一開始就是為了跨平台使用。</span><span class="sxs-lookup"><span data-stu-id="efdb0-146">**Cross-platform** -- .NET was intended to be cross platform from its inception.</span></span> <span data-ttu-id="efdb0-147">此二進位格式和指令集適用於各種作業系統、CPU 和指標大小。</span><span class="sxs-lookup"><span data-stu-id="efdb0-147">The binary format and the instruction set are operating system, CPU and pointer-size agnostic.</span></span> <span data-ttu-id="efdb0-148">內建於 2000 版並可在 32 位元 Windows 電腦上執行的指定 .NET 二進位檔，可在 ARM64 iOS 裝置上以 2016 版執行，而不需要任何修改。</span><span class="sxs-lookup"><span data-stu-id="efdb0-148">A given .NET binary built in 2000 to run on a 32-bit Windows machine can run on the ARM64 iOS device on 2016 without modification.</span></span>
 
-<a name="open-source"></a>開啟原始檔
+<a name="open-source"></a><span data-ttu-id="efdb0-149">開啟原始檔</span><span class="sxs-lookup"><span data-stu-id="efdb0-149">Open source</span></span>
 -----------
 
-.NET 的 [.NET Core](https://github.com/dotnet/core) 和 [Mono](https://github.com/mono/mono) 實作是使用 MIT 授權的開放原始碼。 文件使用 [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/) 授權。 .NET Core 和 Mono 是由 Microsoft 贊助，並有許來自該社群的參與者。 
+<span data-ttu-id="efdb0-150">.NET 的 [.NET Core](https://github.com/dotnet/core) 和 [Mono](https://github.com/mono/mono) 實作是使用 MIT 授權的開放原始碼。</span><span class="sxs-lookup"><span data-stu-id="efdb0-150">The [.NET Core](https://github.com/dotnet/core) and [Mono](https://github.com/mono/mono) implementations of .NET are open source, using the MIT license.</span></span> <span data-ttu-id="efdb0-151">文件使用 [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/) 授權。</span><span class="sxs-lookup"><span data-stu-id="efdb0-151">Documentation uses the [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/) license.</span></span> <span data-ttu-id="efdb0-152">.NET Core 和 Mono 是由 Microsoft 贊助，並有許來自該社群的參與者。</span><span class="sxs-lookup"><span data-stu-id="efdb0-152">.NET Core and Mono are sponsored by Microsoft and have many contributors from the community.</span></span> 
 
-這些一般用途執行階段可作為學術研究、教學/學習或商業產品的基礎。 其開放本質也表示任何人都可以在發生錯誤或需要新功能的情況下，回溯參與上游產品程式碼。
+<span data-ttu-id="efdb0-153">這些一般用途執行階段可作為學術研究、教學/學習或商業產品的基礎。</span><span class="sxs-lookup"><span data-stu-id="efdb0-153">These general purpose runtimes can be used as the basis of academic research or teaching/learning or commercial products.</span></span> <span data-ttu-id="efdb0-154">其開放本質也表示任何人都可以在發生錯誤或需要新功能的情況下，回溯參與上游產品程式碼。</span><span class="sxs-lookup"><span data-stu-id="efdb0-154">Their open nature also means that anyone can contribute back to the upstream product code given a bug or the desire for a new feature.</span></span>
 
-<a name="projects"></a>專案
+<a name="projects"></a><span data-ttu-id="efdb0-155">專案</span><span class="sxs-lookup"><span data-stu-id="efdb0-155">Projects</span></span>
 --------
 
-- [CoreCLR](https://github.com/dotnet/coreclr) - .NET Core 所使用的 .NET 執行階段。
-- [Mono](https://github.com/mono/mono) - Xamarin 等所使用的 .NET 執行階段。
-- [CoreFX](https://github.com/dotnet/coreclr) - .NET Core 所使用及 Mono 透過來源共用在一定程度上使用的 .NET 類別庫。
-- [Roslyn](https://github.com/dotnet/roslyn) - 大多數 .NET 平台和工具所使用的 C# 和 Visual Basic 編譯器。 公開 API 以讀取、撰寫及分析原始程式碼。
-- [F#](https://github.com/microsoft/visualfsharp) - F# 編譯器。
-- [Xamarin SDK](http://open.xamarin.com) - 在 C# 和 F# 中撰寫 Android、iOS 和 macOS 所需的工具和程式庫。
+- <span data-ttu-id="efdb0-156">[CoreCLR](https://github.com/dotnet/coreclr) - .NET Core 所使用的 .NET 執行階段。</span><span class="sxs-lookup"><span data-stu-id="efdb0-156">[CoreCLR](https://github.com/dotnet/coreclr) - .NET runtime, used by .NET Core.</span></span>
+- <span data-ttu-id="efdb0-157">[Mono](https://github.com/mono/mono) - Xamarin 等所使用的 .NET 執行階段。</span><span class="sxs-lookup"><span data-stu-id="efdb0-157">[Mono](https://github.com/mono/mono) - .NET runtime, used by Xamarin and others.</span></span>
+- <span data-ttu-id="efdb0-158">[CoreFX](https://github.com/dotnet/coreclr) - .NET Core 所使用及 Mono 透過來源共用在一定程度上使用的 .NET 類別庫。</span><span class="sxs-lookup"><span data-stu-id="efdb0-158">[CoreFX](https://github.com/dotnet/coreclr) - .NET class libraries, used by .NET Core and to a degree by Mono via source sharing.</span></span>
+- <span data-ttu-id="efdb0-159">[Roslyn](https://github.com/dotnet/roslyn) - 大多數 .NET 平台和工具所使用的 C# 和 Visual Basic 編譯器。</span><span class="sxs-lookup"><span data-stu-id="efdb0-159">[Roslyn](https://github.com/dotnet/roslyn) - C# and Visual Basic compilers, used by most .NET platforms and tools.</span></span> <span data-ttu-id="efdb0-160">公開 API 以讀取、撰寫及分析原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="efdb0-160">Exposes APIs for reading, writing and analyzing source code.</span></span>
+- <span data-ttu-id="efdb0-161">[F#](https://github.com/microsoft/visualfsharp) - F# 編譯器。</span><span class="sxs-lookup"><span data-stu-id="efdb0-161">[F#](https://github.com/microsoft/visualfsharp) - F# compiler.</span></span>
+- <span data-ttu-id="efdb0-162">[Xamarin SDK](http://open.xamarin.com) - 在 C# 和 F# 中撰寫 Android、iOS 和 macOS 所需的工具和程式庫。</span><span class="sxs-lookup"><span data-stu-id="efdb0-162">[Xamarin SDK](http://open.xamarin.com) - Tools and libraries needed to write Android, iOS and macOS in C# and F#.</span></span>
 
-<a name="standardized"></a>標準化
+<a name="standardized"></a><span data-ttu-id="efdb0-163">標準化</span><span class="sxs-lookup"><span data-stu-id="efdb0-163">Standardized</span></span>
 ------------
 
-.NET 是透過開放 [ECMA 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)所指定，該標準概述其功能，並可用來建立新的實作。 還有其他 .NET 實作，其中 Mono 和 Unity 是除了 Microsoft 以外最熱門的實作。
+<span data-ttu-id="efdb0-164">.NET 是透過開放 [ECMA 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)所指定，該標準概述其功能，並可用來建立新的實作。</span><span class="sxs-lookup"><span data-stu-id="efdb0-164">.NET is specified via open [ECMA standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) that outline its capabilities and that can be used to make a new implementation.</span></span> <span data-ttu-id="efdb0-165">還有其他 .NET 實作，其中 Mono 和 Unity 是除了 Microsoft 以外最熱門的實作。</span><span class="sxs-lookup"><span data-stu-id="efdb0-165">There are other .NET implementations, with Mono and Unity being the most popular beyond the Microsoft ones.</span></span>
 
 

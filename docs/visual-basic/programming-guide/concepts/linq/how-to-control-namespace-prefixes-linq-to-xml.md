@@ -20,21 +20,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b559b54ffaa53b2ae5cd3b6c6d2d4db3ebe0a04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 87db9e5384bee835ca4fde141765eabf9a7cfedb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>如何：控制命名空間前置字元 (Visual Basic) (LINQ to XML)
-這個主題描述如何控制命名空間前置詞。  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="c0909-102">如何：控制命名空間前置字元 (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c0909-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="c0909-103">這個主題描述如何控制命名空間前置詞。</span><span class="sxs-lookup"><span data-stu-id="c0909-103">This topic describes how you can control namespace prefixes.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="c0909-104">範例</span><span class="sxs-lookup"><span data-stu-id="c0909-104">Example</span></span>  
   
-### <a name="description"></a>描述  
- 這個範例會宣告兩個命名空間。 它會指定`http://www.adventure-works.com`命名空間的前置詞`aw`，而且`www.fourthcoffee.com`命名空間的前置詞的`fc`。  
+### <a name="description"></a><span data-ttu-id="c0909-105">描述</span><span class="sxs-lookup"><span data-stu-id="c0909-105">Description</span></span>  
+ <span data-ttu-id="c0909-106">這個範例會宣告兩個命名空間。</span><span class="sxs-lookup"><span data-stu-id="c0909-106">This example declares two namespaces.</span></span> <span data-ttu-id="c0909-107">它會指定`http://www.adventure-works.com`命名空間的前置詞`aw`，而且`www.fourthcoffee.com`命名空間的前置詞的`fc`。</span><span class="sxs-lookup"><span data-stu-id="c0909-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
-### <a name="code"></a>程式碼  
+### <a name="code"></a><span data-ttu-id="c0909-108">程式碼</span><span class="sxs-lookup"><span data-stu-id="c0909-108">Code</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -57,8 +58,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>註解  
- 這個範例會產生下列輸出：  
+### <a name="comments"></a><span data-ttu-id="c0909-109">註解</span><span class="sxs-lookup"><span data-stu-id="c0909-109">Comments</span></span>  
+ <span data-ttu-id="c0909-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="c0909-110">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -70,5 +71,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="c0909-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0909-111">See Also</span></span>  
+ [<span data-ttu-id="c0909-112">處理 XML 命名空間 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0909-112">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

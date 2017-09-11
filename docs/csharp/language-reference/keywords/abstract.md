@@ -1,5 +1,5 @@
 ---
-title: "abstract (C# 參考) | Microsoft Docs"
+title: "abstract (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,83 +30,84 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: acb9c5748addd75f741e97688fca707910b042a0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a109a8e37f84a2e91229bfce789a69cdc26adba9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="abstract-c-reference"></a>abstract (C# 參考)
-`abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。 標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。  
+# <a name="abstract-c-reference"></a><span data-ttu-id="9945f-102">abstract (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9945f-102">abstract (C# Reference)</span></span>
+<span data-ttu-id="9945f-103">`abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。</span><span class="sxs-lookup"><span data-stu-id="9945f-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="9945f-104">抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。</span><span class="sxs-lookup"><span data-stu-id="9945f-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="9945f-105">在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。</span><span class="sxs-lookup"><span data-stu-id="9945f-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes.</span></span> <span data-ttu-id="9945f-106">標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。</span><span class="sxs-lookup"><span data-stu-id="9945f-106">Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.</span></span>  
   
-## <a name="example"></a>範例  
- 在此範例中，`Square` 類別必須提供 `Area` 的實作，因為它繼承自 `ShapesClass`：  
+## <a name="example"></a><span data-ttu-id="9945f-107">範例</span><span class="sxs-lookup"><span data-stu-id="9945f-107">Example</span></span>  
+ <span data-ttu-id="9945f-108">在此範例中，`Square` 類別必須提供 `Area` 的實作，因為它繼承自 `ShapesClass`：</span><span class="sxs-lookup"><span data-stu-id="9945f-108">In this example, the class `Square` must provide an implementation of `Area` because it derives from `ShapesClass`:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ <span data-ttu-id="9945f-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="9945f-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span></span>  
   
- 抽象類別具有下列功能：  
+ <span data-ttu-id="9945f-110">抽象類別具有下列功能：</span><span class="sxs-lookup"><span data-stu-id="9945f-110">Abstract classes have the following features:</span></span>  
   
--   抽象類別無法具現化。  
+-   <span data-ttu-id="9945f-111">抽象類別無法具現化。</span><span class="sxs-lookup"><span data-stu-id="9945f-111">An abstract class cannot be instantiated.</span></span>  
   
--   抽象類別可能包含抽象方法和存取子。  
+-   <span data-ttu-id="9945f-112">抽象類別可能包含抽象方法和存取子。</span><span class="sxs-lookup"><span data-stu-id="9945f-112">An abstract class may contain abstract methods and accessors.</span></span>  
   
--   因為兩個修飾詞的意義相反，所以無法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾詞來修改抽象類別。 `sealed` 修飾詞可防止繼承類別，而 `abstract` 修飾詞需要繼承類別。  
+-   <span data-ttu-id="9945f-113">因為兩個修飾詞的意義相反，所以無法使用 [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾詞來修改抽象類別。</span><span class="sxs-lookup"><span data-stu-id="9945f-113">It is not possible to modify an abstract class with the [sealed](../../../csharp/language-reference/keywords/sealed.md) modifier because the two modifers have opposite meanings.</span></span> <span data-ttu-id="9945f-114">`sealed` 修飾詞可防止繼承類別，而 `abstract` 修飾詞需要繼承類別。</span><span class="sxs-lookup"><span data-stu-id="9945f-114">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
   
--   衍生自抽象類別的非抽象類別必須包括所有繼承抽象方法和存取子的實際實作。  
+-   <span data-ttu-id="9945f-115">衍生自抽象類別的非抽象類別必須包括所有繼承抽象方法和存取子的實際實作。</span><span class="sxs-lookup"><span data-stu-id="9945f-115">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
   
- 在方法或屬性宣告中使用 `abstract` 修飾詞，表示方法或屬性未包含實作。  
+ <span data-ttu-id="9945f-116">在方法或屬性宣告中使用 `abstract` 修飾詞，表示方法或屬性未包含實作。</span><span class="sxs-lookup"><span data-stu-id="9945f-116">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
   
- 抽象方法具有下列功能：  
+ <span data-ttu-id="9945f-117">抽象方法具有下列功能：</span><span class="sxs-lookup"><span data-stu-id="9945f-117">Abstract methods have the following features:</span></span>  
   
--   抽象方法隱含為虛擬方法。  
+-   <span data-ttu-id="9945f-118">抽象方法隱含為虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="9945f-118">An abstract method is implicitly a virtual method.</span></span>  
   
--   只有在抽象類別中才允許抽象方法宣告。  
+-   <span data-ttu-id="9945f-119">只有在抽象類別中才允許抽象方法宣告。</span><span class="sxs-lookup"><span data-stu-id="9945f-119">Abstract method declarations are only permitted in abstract classes.</span></span>  
   
--   因為抽象方法宣告未提供實際實作，所以沒有方法主體；方法宣告的結尾就是分號，而且簽章後面沒有大括號 ({ })。 例如:   
+-   <span data-ttu-id="9945f-120">因為抽象方法宣告未提供實際實作，所以沒有方法主體；方法宣告的結尾就是分號，而且簽章後面沒有大括號 ({ })。</span><span class="sxs-lookup"><span data-stu-id="9945f-120">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="9945f-121">例如: </span><span class="sxs-lookup"><span data-stu-id="9945f-121">For example:</span></span>  
   
     ```  
     public abstract void MyMethod();  
     ```  
   
-     覆寫方法 [override](../../../csharp/language-reference/keywords/override.md) 提供實作，而這個方法是非抽象類別的成員。  
+     <span data-ttu-id="9945f-122">覆寫方法 [override](../../../csharp/language-reference/keywords/override.md) 提供實作，而這個方法是非抽象類別的成員。</span><span class="sxs-lookup"><span data-stu-id="9945f-122">The implementation is provided by an overriding method[override](../../../csharp/language-reference/keywords/override.md), which is a member of a non-abstract class.</span></span>  
   
--   在抽象方法宣告中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾詞是錯誤的。  
+-   <span data-ttu-id="9945f-123">在抽象方法宣告中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾詞是錯誤的。</span><span class="sxs-lookup"><span data-stu-id="9945f-123">It is an error to use the [static](../../../csharp/language-reference/keywords/static.md) or [virtual](../../../csharp/language-reference/keywords/virtual.md) modifiers in an abstract method declaration.</span></span>  
   
- 抽象屬性的行為類似抽象方法，但宣告和引動過程語法的差異除外。  
+ <span data-ttu-id="9945f-124">抽象屬性的行為類似抽象方法，但宣告和引動過程語法的差異除外。</span><span class="sxs-lookup"><span data-stu-id="9945f-124">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   在靜態屬性上使用 `abstract` 修飾詞是錯誤的。  
+-   <span data-ttu-id="9945f-125">在靜態屬性上使用 `abstract` 修飾詞是錯誤的。</span><span class="sxs-lookup"><span data-stu-id="9945f-125">It is an error to use the `abstract` modifier on a static property.</span></span>  
   
--   包括使用 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞的屬性宣告，即可覆寫衍生類別中的抽象繼承屬性。  
+-   <span data-ttu-id="9945f-126">包括使用 [override](../../../csharp/language-reference/keywords/override.md) 修飾詞的屬性宣告，即可覆寫衍生類別中的抽象繼承屬性。</span><span class="sxs-lookup"><span data-stu-id="9945f-126">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](../../../csharp/language-reference/keywords/override.md) modifier.</span></span>  
   
- 如需抽象類別的詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
+ <span data-ttu-id="9945f-127">如需抽象類別的詳細資訊，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。</span><span class="sxs-lookup"><span data-stu-id="9945f-127">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- 抽象類別必須提供所有介面成員的實作。  
+ <span data-ttu-id="9945f-128">抽象類別必須提供所有介面成員的實作。</span><span class="sxs-lookup"><span data-stu-id="9945f-128">An abstract class must provide implementation for all interface members.</span></span>  
   
- 實作介面的抽象類別可能會將介面方法對應至抽象方法。 例如:   
+ <span data-ttu-id="9945f-129">實作介面的抽象類別可能會將介面方法對應至抽象方法。</span><span class="sxs-lookup"><span data-stu-id="9945f-129">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="9945f-130">例如: </span><span class="sxs-lookup"><span data-stu-id="9945f-130">For example:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ <span data-ttu-id="9945f-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="9945f-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span></span>  
   
-## <a name="example"></a>範例  
- 在此範例中，`DerivedClass` 類別衍生自抽象類別 `BaseClass`。 抽象類別包含抽象方法 `AbstractMethod` 和兩個抽象屬性：`X` 和 `Y`。  
+## <a name="example"></a><span data-ttu-id="9945f-132">範例</span><span class="sxs-lookup"><span data-stu-id="9945f-132">Example</span></span>  
+ <span data-ttu-id="9945f-133">在此範例中，`DerivedClass` 類別衍生自抽象類別 `BaseClass`。</span><span class="sxs-lookup"><span data-stu-id="9945f-133">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="9945f-134">抽象類別包含抽象方法 `AbstractMethod` 和兩個抽象屬性：`X` 和 `Y`。</span><span class="sxs-lookup"><span data-stu-id="9945f-134">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ <span data-ttu-id="9945f-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="9945f-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span></span>  
   
- 在上述範例中，如果您嘗試使用如下的陳述式來具現化抽象類別︰  
+ <span data-ttu-id="9945f-136">在上述範例中，如果您嘗試使用如下的陳述式來具現化抽象類別︰</span><span class="sxs-lookup"><span data-stu-id="9945f-136">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
   
 ```  
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- 您會收到錯誤，指出編譯器無法建立抽象類別 'BaseClass' 的執行個體。  
+ <span data-ttu-id="9945f-137">您會收到錯誤，指出編譯器無法建立抽象類別 'BaseClass' 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="9945f-137">you will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="9945f-138">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="9945f-138">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="9945f-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9945f-139">See Also</span></span>  
+ <span data-ttu-id="9945f-140">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9945f-140">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9945f-141">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9945f-141">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="9945f-142">[修飾詞](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="9945f-142">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ <span data-ttu-id="9945f-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span><span class="sxs-lookup"><span data-stu-id="9945f-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span></span>  
+ <span data-ttu-id="9945f-144">[override](../../../csharp/language-reference/keywords/override.md) </span><span class="sxs-lookup"><span data-stu-id="9945f-144">[override](../../../csharp/language-reference/keywords/override.md) </span></span>  
+ [<span data-ttu-id="9945f-145">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="9945f-145">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+

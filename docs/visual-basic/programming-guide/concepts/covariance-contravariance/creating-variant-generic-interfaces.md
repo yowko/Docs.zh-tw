@@ -20,27 +20,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 324e2a906e84950aa9019bbf68a524458492646e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a2cbf0a204a5a3af45f55a14c011518c7021f5b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>建立 Variant 泛型介面 (Visual Basic)
-您可以宣告泛型型別參數，在介面做為 covariant 或 contravariant。 *共變數*允許具有衍生程度較大的傳回型別比泛型型別參數所定義的介面方法。 *反變數*允許其較少衍生的泛型參數所指定的引數型別介面方法。 泛型介面具有 covariant 或 contravariant 的泛型型別參數呼叫*變異*。  
+# <a name="creating-variant-generic-interfaces-visual-basic"></a><span data-ttu-id="0df3b-102">建立 Variant 泛型介面 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0df3b-102">Creating Variant Generic Interfaces (Visual Basic)</span></span>
+<span data-ttu-id="0df3b-103">您可以宣告泛型型別參數，在介面做為 covariant 或 contravariant。</span><span class="sxs-lookup"><span data-stu-id="0df3b-103">You can declare generic type parameters in interfaces as covariant or contravariant.</span></span> <span data-ttu-id="0df3b-104">*共變數*允許具有衍生程度較大的傳回型別比泛型型別參數所定義的介面方法。</span><span class="sxs-lookup"><span data-stu-id="0df3b-104">*Covariance* allows interface methods to have more derived return types than that defined by the generic type parameters.</span></span> <span data-ttu-id="0df3b-105">*反變數*允許其較少衍生的泛型參數所指定的引數型別介面方法。</span><span class="sxs-lookup"><span data-stu-id="0df3b-105">*Contravariance* allows interface methods to have argument types that are less derived than that specified by the generic parameters.</span></span> <span data-ttu-id="0df3b-106">泛型介面具有 covariant 或 contravariant 的泛型型別參數呼叫*變異*。</span><span class="sxs-lookup"><span data-stu-id="0df3b-106">A generic interface that has covariant or contravariant generic type parameters is called *variant*.</span></span>  
   
 > [!NOTE]
->  .NET framework 4 引入變異數支援數個現有的泛型介面。 .NET Framework 中的 variant 介面清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
+>  <span data-ttu-id="0df3b-107">.NET framework 4 引入變異數支援數個現有的泛型介面。</span><span class="sxs-lookup"><span data-stu-id="0df3b-107">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="0df3b-108">.NET Framework 中的 variant 介面清單，請參閱[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。</span><span class="sxs-lookup"><span data-stu-id="0df3b-108">For the list of the variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
   
-## <a name="declaring-variant-generic-interfaces"></a>宣告的 Variant 泛型介面  
- 您可以使用宣告 variant 泛型介面`in`和`out`泛型型別參數的關鍵字。  
+## <a name="declaring-variant-generic-interfaces"></a><span data-ttu-id="0df3b-109">宣告的 Variant 泛型介面</span><span class="sxs-lookup"><span data-stu-id="0df3b-109">Declaring Variant Generic Interfaces</span></span>  
+ <span data-ttu-id="0df3b-110">您可以使用宣告 variant 泛型介面`in`和`out`泛型型別參數的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="0df3b-110">You can declare variant generic interfaces by using the `in` and `out` keywords for generic type parameters.</span></span>  
   
 > [!IMPORTANT]
->  `ByRef`在 Visual Basic 中的參數不能變體。 實值型別也不支援變異數。  
+> <span data-ttu-id="0df3b-111"> `ByRef`在 Visual Basic 中的參數不能變體。</span><span class="sxs-lookup"><span data-stu-id="0df3b-111"> `ByRef` parameters in Visual Basic cannot be variant.</span></span> <span data-ttu-id="0df3b-112">實值型別也不支援變異數。</span><span class="sxs-lookup"><span data-stu-id="0df3b-112">Value types also do not support variance.</span></span>  
   
- 您可以宣告泛型型別參數 covariant 使用`out`關鍵字。 共變數的型別必須滿足下列條件︰  
+ <span data-ttu-id="0df3b-113">您可以宣告泛型型別參數 covariant 使用`out`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="0df3b-113">You can declare a generic type parameter covariant by using the `out` keyword.</span></span> <span data-ttu-id="0df3b-114">共變數的型別必須滿足下列條件︰</span><span class="sxs-lookup"><span data-stu-id="0df3b-114">The covariant type must satisfy the following conditions:</span></span>  
   
--   型別是只用來做為介面方法的傳回型別，而不使用為方法引數的型別。 下列範例中，在其中所示的型別`R`宣告共變性。  
+-   <span data-ttu-id="0df3b-115">型別是只用來做為介面方法的傳回型別，而不使用為方法引數的型別。</span><span class="sxs-lookup"><span data-stu-id="0df3b-115">The type is used only as a return type of interface methods and not used as a type of method arguments.</span></span> <span data-ttu-id="0df3b-116">下列範例中，在其中所示的型別`R`宣告共變性。</span><span class="sxs-lookup"><span data-stu-id="0df3b-116">This is illustrated in the following example, in which the type `R` is declared covariant.</span></span>  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
-     這個規則只有一個例外。 如果您有 contravariant 泛型委派做為方法參數，您可以使用泛型型別參數類型的委派。 說明這種型別所`R`在下列範例中。 如需詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[Func 與 Action 委派 (Visual Basic) 使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。  
+     <span data-ttu-id="0df3b-117">這個規則只有一個例外。</span><span class="sxs-lookup"><span data-stu-id="0df3b-117">There is one exception to this rule.</span></span> <span data-ttu-id="0df3b-118">如果您有 contravariant 泛型委派做為方法參數，您可以使用泛型型別參數類型的委派。</span><span class="sxs-lookup"><span data-stu-id="0df3b-118">If you have a contravariant generic delegate as a method parameter, you can use the type as a generic type parameter for the delegate.</span></span> <span data-ttu-id="0df3b-119">說明這種型別所`R`在下列範例中。</span><span class="sxs-lookup"><span data-stu-id="0df3b-119">This is illustrated by the type `R` in the following example.</span></span> <span data-ttu-id="0df3b-120">如需詳細資訊，請參閱[委派 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[Func 與 Action 委派 (Visual Basic) 使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="0df3b-120">For more information, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
--   型別不是做為泛型條件約束的介面方法。 下列程式碼所示。  
+-   <span data-ttu-id="0df3b-121">型別不是做為泛型條件約束的介面方法。</span><span class="sxs-lookup"><span data-stu-id="0df3b-121">The type is not used as a generic constraint for the interface methods.</span></span> <span data-ttu-id="0df3b-122">下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="0df3b-122">This is illustrated in the following code.</span></span>  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -69,7 +70,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
- 您可以使用宣告泛型型別參數 contravariant`in`關鍵字。 可以使用 contravariant 類型，只為方法引數的型別，而不是介面方法的傳回型別。 Contravariant 類型也用於泛型條件約束。 下列程式碼示範如何宣告逆變性介面，並使用其中一個方法的泛型條件約束。  
+ <span data-ttu-id="0df3b-123">您可以使用宣告泛型型別參數 contravariant`in`關鍵字。</span><span class="sxs-lookup"><span data-stu-id="0df3b-123">You can declare a generic type parameter contravariant by using the `in` keyword.</span></span> <span data-ttu-id="0df3b-124">可以使用 contravariant 類型，只為方法引數的型別，而不是介面方法的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="0df3b-124">The contravariant type can be used only as a type of method arguments and not as a return type of interface methods.</span></span> <span data-ttu-id="0df3b-125">Contravariant 類型也用於泛型條件約束。</span><span class="sxs-lookup"><span data-stu-id="0df3b-125">The contravariant type can also be used for generic constraints.</span></span> <span data-ttu-id="0df3b-126">下列程式碼示範如何宣告逆變性介面，並使用其中一個方法的泛型條件約束。</span><span class="sxs-lookup"><span data-stu-id="0df3b-126">The following code shows how to declare a contravariant interface and use a generic constraint for one of its methods.</span></span>  
   
 ```vb  
 Interface IContravariant(Of In A)  
@@ -80,7 +81,7 @@ Interface IContravariant(Of In A)
 End Interface  
 ```  
   
- 它也可支援共變數和反變數相同的介面，但在不同的型別參數，如下列程式碼範例所示。  
+ <span data-ttu-id="0df3b-127">它也可支援共變數和反變數相同的介面，但在不同的型別參數，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="0df3b-127">It is also possible to support both covariance and contravariance in the same interface, but for different type parameters, as shown in the following code example.</span></span>  
   
 ```vb  
 Interface IVariant(Of Out R, In A)  
@@ -90,7 +91,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- 在 Visual Basic 中，您無法宣告 variant 介面中的事件，但未指定的委派型別。 此外，類別、 列舉或結構，變異數介面不能有巢狀，但它可以有巢狀介面。 下列程式碼所示。  
+ <span data-ttu-id="0df3b-128">在 Visual Basic 中，您無法宣告 variant 介面中的事件，但未指定的委派型別。</span><span class="sxs-lookup"><span data-stu-id="0df3b-128">In Visual Basic, you can't declare events in variant interfaces without specifying the delegate type.</span></span> <span data-ttu-id="0df3b-129">此外，類別、 列舉或結構，變異數介面不能有巢狀，但它可以有巢狀介面。</span><span class="sxs-lookup"><span data-stu-id="0df3b-129">Also, a variant interface can't have nested classes, enums, or structures, but it can have nested interfaces.</span></span> <span data-ttu-id="0df3b-130">下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="0df3b-130">This is illustrated in the following code.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -113,8 +114,8 @@ Interface ICovariant(Of Out R)
 End Interface  
 ```  
   
-## <a name="implementing-variant-generic-interfaces"></a>實作 Variant 泛型介面  
- 您可以使用相同語法不變的介面是用於類別中實作 variant 泛型介面。 下列程式碼範例示範如何實作泛型類別中的共變數的介面。  
+## <a name="implementing-variant-generic-interfaces"></a><span data-ttu-id="0df3b-131">實作 Variant 泛型介面</span><span class="sxs-lookup"><span data-stu-id="0df3b-131">Implementing Variant Generic Interfaces</span></span>  
+ <span data-ttu-id="0df3b-132">您可以使用相同語法不變的介面是用於類別中實作 variant 泛型介面。</span><span class="sxs-lookup"><span data-stu-id="0df3b-132">You implement variant generic interfaces in classes by using the same syntax that is used for invariant interfaces.</span></span> <span data-ttu-id="0df3b-133">下列程式碼範例示範如何實作泛型類別中的共變數的介面。</span><span class="sxs-lookup"><span data-stu-id="0df3b-133">The following code example shows how to implement a covariant interface in a generic class.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -130,7 +131,7 @@ Class SampleImplementation(Of R)
 End Class  
 ```  
   
- 類別可實作 variant 介面都是不變。 例如，試想下列程式碼。  
+ <span data-ttu-id="0df3b-134">類別可實作 variant 介面都是不變。</span><span class="sxs-lookup"><span data-stu-id="0df3b-134">Classes that implement variant interfaces are invariant.</span></span> <span data-ttu-id="0df3b-135">例如，試想下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="0df3b-135">For example, consider the following code.</span></span>  
   
 ```vb  
  The interface is covariant.  
@@ -146,8 +147,8 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button  
 ```  
   
-## <a name="extending-variant-generic-interfaces"></a>擴充的 Variant 泛型介面  
- 當您擴充 variant 泛型介面時，您必須使用`in`和`out`關鍵字明確指定衍生的介面是否支援變異數。 編譯器不會推斷要擴充的介面中的變異數。 例如，請考慮下列介面。  
+## <a name="extending-variant-generic-interfaces"></a><span data-ttu-id="0df3b-136">擴充的 Variant 泛型介面</span><span class="sxs-lookup"><span data-stu-id="0df3b-136">Extending Variant Generic Interfaces</span></span>  
+ <span data-ttu-id="0df3b-137">當您擴充 variant 泛型介面時，您必須使用`in`和`out`關鍵字明確指定衍生的介面是否支援變異數。</span><span class="sxs-lookup"><span data-stu-id="0df3b-137">When you extend a variant generic interface, you have to use the `in` and `out` keywords to explicitly specify whether the derived interface supports variance.</span></span> <span data-ttu-id="0df3b-138">編譯器不會推斷要擴充的介面中的變異數。</span><span class="sxs-lookup"><span data-stu-id="0df3b-138">The compiler does not infer the variance from the interface that is being extended.</span></span> <span data-ttu-id="0df3b-139">例如，請考慮下列介面。</span><span class="sxs-lookup"><span data-stu-id="0df3b-139">For example, consider the following interfaces.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -162,9 +163,9 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- 在`Invariant(Of T)`介面，泛型型別參數`T`不變，而在`IExtCovariant (Of Out T)`型別參數是共變數，雖然這兩個介面擴充相同的介面。 相同的規則會套用至 contravariant 泛型類型參數。  
+ <span data-ttu-id="0df3b-140">在`Invariant(Of T)`介面，泛型型別參數`T`不變，而在`IExtCovariant (Of Out T)`型別參數是共變數，雖然這兩個介面擴充相同的介面。</span><span class="sxs-lookup"><span data-stu-id="0df3b-140">In the `Invariant(Of T)` interface, the generic type parameter `T` is invariant, whereas in `IExtCovariant (Of Out T)`the type parameter is covariant, although both interfaces extend the same interface.</span></span> <span data-ttu-id="0df3b-141">相同的規則會套用至 contravariant 泛型類型參數。</span><span class="sxs-lookup"><span data-stu-id="0df3b-141">The same rule is applied to contravariant generic type parameters.</span></span>  
   
- 您可以擴充泛型型別參數的兩個介面的介面建立`T`是 covariant 和介面反變數中的擴充介面的泛型型別參數`T`不變。 下列程式碼範例所示。  
+ <span data-ttu-id="0df3b-142">您可以擴充泛型型別參數的兩個介面的介面建立`T`是 covariant 和介面反變數中的擴充介面的泛型型別參數`T`不變。</span><span class="sxs-lookup"><span data-stu-id="0df3b-142">You can create an interface that extends both the interface where the generic type parameter `T` is covariant and the interface where it is contravariant if in the extending interface the generic type parameter `T` is invariant.</span></span> <span data-ttu-id="0df3b-143">下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="0df3b-143">This is illustrated in the following code example.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -178,7 +179,7 @@ Interface IInvariant(Of T)
 End Interface  
 ```  
   
- 不過，如果泛型型別參數`T`是共變數的宣告一個介面，您無法將其宣告逆變性在擴充的介面，反之亦然。 下列程式碼範例所示。  
+ <span data-ttu-id="0df3b-144">不過，如果泛型型別參數`T`是共變數的宣告一個介面，您無法將其宣告逆變性在擴充的介面，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="0df3b-144">However, if a generic type parameter `T` is declared covariant in one interface, you cannot declare it contravariant in the extending interface, or vice versa.</span></span> <span data-ttu-id="0df3b-145">下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="0df3b-145">This is illustrated in the following code example.</span></span>  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -190,13 +191,13 @@ End Interface
 ' End Interface  
 ```  
   
-### <a name="avoiding-ambiguity"></a>避免模稜兩可  
- 當您實作 variant 泛型介面時，變異數有時會導致模稜兩可。 對此應該要設法避免。  
+### <a name="avoiding-ambiguity"></a><span data-ttu-id="0df3b-146">避免模稜兩可</span><span class="sxs-lookup"><span data-stu-id="0df3b-146">Avoiding Ambiguity</span></span>  
+ <span data-ttu-id="0df3b-147">當您實作 variant 泛型介面時，變異數有時會導致模稜兩可。</span><span class="sxs-lookup"><span data-stu-id="0df3b-147">When you implement variant generic interfaces, variance can sometimes lead to ambiguity.</span></span> <span data-ttu-id="0df3b-148">對此應該要設法避免。</span><span class="sxs-lookup"><span data-stu-id="0df3b-148">This should be avoided.</span></span>  
   
- 例如，如果您明確地實作相同 variant 泛型介面具有不同的泛型型別參數，一個類別中，它可以建立模稜兩可。 編譯器不會在此情況下，產生錯誤，但未指定的介面實作，則會選擇在執行階段。 這可能會導致您的程式碼中的細微錯誤。 請考慮下列程式碼範例。  
+ <span data-ttu-id="0df3b-149">例如，如果您明確地實作相同 variant 泛型介面具有不同的泛型型別參數，一個類別中，它可以建立模稜兩可。</span><span class="sxs-lookup"><span data-stu-id="0df3b-149">For example, if you explicitly implement the same variant generic interface with different generic type parameters in one class, it can create ambiguity.</span></span> <span data-ttu-id="0df3b-150">編譯器不會在此情況下，產生錯誤，但未指定的介面實作，則會選擇在執行階段。</span><span class="sxs-lookup"><span data-stu-id="0df3b-150">The compiler does not produce an error in this case, but it is not specified which interface implementation will be chosen at runtime.</span></span> <span data-ttu-id="0df3b-151">這可能會導致您的程式碼中的細微錯誤。</span><span class="sxs-lookup"><span data-stu-id="0df3b-151">This could lead to subtle bugs in your code.</span></span> <span data-ttu-id="0df3b-152">請考慮下列程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="0df3b-152">Consider the following code example.</span></span>  
   
 > [!NOTE]
->  使用`Option Strict Off`，Visual Basic 會產生編譯器警告，當模稜兩可的介面實作。 使用`Option Strict On`，Visual Basic 會產生編譯器錯誤。  
+>  <span data-ttu-id="0df3b-153">使用`Option Strict Off`，Visual Basic 會產生編譯器警告，當模稜兩可的介面實作。</span><span class="sxs-lookup"><span data-stu-id="0df3b-153">With `Option Strict Off`, Visual Basic generates a compiler warning when there is an ambiguous interface implementation.</span></span> <span data-ttu-id="0df3b-154">使用`Option Strict On`，Visual Basic 會產生編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="0df3b-154">With `Option Strict On`, Visual Basic generates a compiler error.</span></span>  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -240,8 +241,8 @@ Sub Main()
 End Sub  
 ```  
   
- 在此範例中，並未指定如何`pets.GetEnumerator`方法之間選擇`Cat`和`Dog`。 在程式碼中，這可能會造成問題。  
+ <span data-ttu-id="0df3b-155">在此範例中，並未指定如何`pets.GetEnumerator`方法之間選擇`Cat`和`Dog`。</span><span class="sxs-lookup"><span data-stu-id="0df3b-155">In this example, it is unspecified how the `pets.GetEnumerator` method chooses between `Cat` and `Dog`.</span></span> <span data-ttu-id="0df3b-156">在程式碼中，這可能會造成問題。</span><span class="sxs-lookup"><span data-stu-id="0df3b-156">This could cause problems in your code.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
- [針對 Func 與 Action 委派 (Visual Basic) 中使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="0df3b-157">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0df3b-157">See Also</span></span>  
+ <span data-ttu-id="0df3b-158">[泛型介面 (Visual Basic) 中的變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) </span><span class="sxs-lookup"><span data-stu-id="0df3b-158">[Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) </span></span>  
+<span data-ttu-id="0df3b-159"> [針對 Func 與 Action 委派 (Visual Basic) 中使用變異數](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)</span><span class="sxs-lookup"><span data-stu-id="0df3b-159"> [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)</span></span>

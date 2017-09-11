@@ -1,67 +1,67 @@
 ---
-title: "dotnet-remove reference 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-remove reference 命令提供方便的選項，以移除專案對專案參考。"
+title: "dotnet remove reference 命令 - .NET Core CLI"
+description: "dotnet remove reference 命令提供方便的選項，以移除專案對專案參考。"
 keywords: "dotnet-remove, CLI, CLI 命令, .NET Core"
-author: spboyer
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 889c6b7e-a313-40b1-9fd3-6a6f4c52f1d0
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 22db4037195afa2c49ef038832e09a99c6a0d54e
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 7cb84c2dc7fc4d16b00bd6459132390ab80131f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-reference"></a><span data-ttu-id="3c043-104">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="3c043-104">dotnet remove reference</span></span>
 
-# <a name="dotnet-remove-reference"></a>dotnet-remove reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a><span data-ttu-id="3c043-105">name</span><span class="sxs-lookup"><span data-stu-id="3c043-105">Name</span></span>
 
-`dotnet-remove reference` - 移除專案對專案參考。
+<span data-ttu-id="3c043-106">`dotnet remove reference` - 移除專案對專案參考。</span><span class="sxs-lookup"><span data-stu-id="3c043-106">`dotnet remove reference` - Removes project-to-project references.</span></span>
 
-## <a name="synopsis"></a>概要
+## <a name="synopsis"></a><span data-ttu-id="3c043-107">概要</span><span class="sxs-lookup"><span data-stu-id="3c043-107">Synopsis</span></span>
 
 `dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>說明
+## <a name="description"></a><span data-ttu-id="3c043-108">說明</span><span class="sxs-lookup"><span data-stu-id="3c043-108">Description</span></span>
 
-`dotnet remove reference` 命令提供方便的選項，以從專案中移除專案參考。
+<span data-ttu-id="3c043-109">`dotnet remove reference` 命令提供方便的選項，以從專案中移除專案參考。</span><span class="sxs-lookup"><span data-stu-id="3c043-109">The `dotnet remove reference` command provides a convenient option to remove project references from a project.</span></span>
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a><span data-ttu-id="3c043-110">引數</span><span class="sxs-lookup"><span data-stu-id="3c043-110">Arguments</span></span>
 
 `PROJECT`
 
-目標專案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。
+<span data-ttu-id="3c043-111">目標專案檔。</span><span class="sxs-lookup"><span data-stu-id="3c043-111">Target project file.</span></span> <span data-ttu-id="3c043-112">如果未指定，命令會在目前的目錄中搜尋一個專案檔。</span><span class="sxs-lookup"><span data-stu-id="3c043-112">If not specified, the command searches the current directory for one.</span></span>
 
 `PROJECT_REFERENCES`
 
-要移除的專案對專案 (P2P) 參考。 您可以指定一或多個專案。 以 Unix/Linux 為基礎的終端機上支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
+<span data-ttu-id="3c043-113">要移除的專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="3c043-113">Project to project (P2P references to remove.</span></span> <span data-ttu-id="3c043-114">您可以指定一或多個專案。</span><span class="sxs-lookup"><span data-stu-id="3c043-114">You can specify one or multiple projects.</span></span> <span data-ttu-id="3c043-115">以 Unix/Linux 為基礎的終端機上支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="3c043-115">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux based terminals.</span></span>
 
-## <a name="options"></a>選項
+## <a name="options"></a><span data-ttu-id="3c043-116">選項</span><span class="sxs-lookup"><span data-stu-id="3c043-116">Options</span></span>
 
 `-h|--help`
 
-印出命令的簡短說明。
+<span data-ttu-id="3c043-117">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="3c043-117">Prints out a short help for the command.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-只有在以特定[架構](../../standard/frameworks.md)為目標時，才能移除參考。
+<span data-ttu-id="3c043-118">只有在以特定[架構](../../standard/frameworks.md)為目標時，才能移除參考。</span><span class="sxs-lookup"><span data-stu-id="3c043-118">Removes the reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
-## <a name="examples"></a>範例
+## <a name="examples"></a><span data-ttu-id="3c043-119">範例</span><span class="sxs-lookup"><span data-stu-id="3c043-119">Examples</span></span>
 
-從指定的專案中移除專案參考：
+<span data-ttu-id="3c043-120">從指定的專案中移除專案參考：</span><span class="sxs-lookup"><span data-stu-id="3c043-120">Remove a project reference from the specified project:</span></span>
 
 `dotnet remove app/app.csproj reference lib/lib.csproj`
 
-從目前目錄中的專案移除多個專案參考：
+<span data-ttu-id="3c043-121">從目前目錄中的專案移除多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="3c043-121">Remove multiple project references from the project in the current directory:</span></span>
 
 `dotnet remove reference lib1/lib1.csproj lib2/lib2.csproj`
 
-在 Unix/Linux 上使用 Glob 模式移除多個專案參考︰
+<span data-ttu-id="3c043-122">在 Unix/Linux 上使用 Glob 模式移除多個專案參考︰</span><span class="sxs-lookup"><span data-stu-id="3c043-122">Remove multiple project references using a glob pattern on Unix/Linux:</span></span>
 
 `dotnet remove app/app.csproj reference **/*.csproj`
 

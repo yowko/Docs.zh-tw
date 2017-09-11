@@ -1,1 +1,1 @@
-資源交換檔案格式 (RIFF)
+<span data-ttu-id="47f9f-101">資源交換檔案格式 (RIFF)</span><span class="sxs-lookup"><span data-stu-id="47f9f-101">Resource Interchange File Format (RIFF)</span></span>

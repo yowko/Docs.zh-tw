@@ -1,5 +1,5 @@
 ---
-title: "C# 中的類別和物件 - C# 語言教學課程 | Microsoft Docs"
+title: "C# 中的類別和物件 - C# 語言教學課程"
 description: "第一次接觸 C#？ 請閱讀此類別、物件及繼承概觀"
 keywords: ".NET, csharp, 類別, 執行個體, 物件, 繼承, 多型"
 author: BillWagner
@@ -10,315 +10,296 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: e4af598747b991757912880102cb18bf1835cc56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# 類別與物件
-<a id="classes-and-objects" class="xliff"></a>
+# <a name="classes-and-objects"></a><span data-ttu-id="6f04c-105">類別與物件</span><span class="sxs-lookup"><span data-stu-id="6f04c-105">Classes and objects</span></span>
 
-「類別」是 C# 最基本的型別。 類別是以單一單位結合狀態 (欄位) 和動作 (方法及其他函式成員) 的資料結構。 類別可以為動態建立的類別「執行個體」(稱為「物件」) 提供定義。 類別支援「繼承」和「多型」，這些是可供「衍生類別」將「基底類別」延伸及特製化的機制。
+<span data-ttu-id="6f04c-106">「類別」是 C# 最基本的型別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-106">*Classes* are the most fundamental of C#’s types.</span></span> <span data-ttu-id="6f04c-107">類別是以單一單位結合狀態 (欄位) 和動作 (方法及其他函式成員) 的資料結構。</span><span class="sxs-lookup"><span data-stu-id="6f04c-107">A class is a data structure that combines state (fields) and actions (methods and other function members) in a single unit.</span></span> <span data-ttu-id="6f04c-108">類別可以為動態建立的類別「執行個體」(稱為「物件」) 提供定義。</span><span class="sxs-lookup"><span data-stu-id="6f04c-108">A class provides a definition for dynamically created *instances* of the class, also known as *objects*.</span></span> <span data-ttu-id="6f04c-109">類別支援「繼承」和「多型」，這些是可供「衍生類別」將「基底類別」延伸及特製化的機制。</span><span class="sxs-lookup"><span data-stu-id="6f04c-109">Classes support *inheritance* and *polymorphism*, mechanisms whereby *derived classes* can extend and specialize *base classes*.</span></span>
 
-建立新類別時，是使用類別宣告來建立。 類別宣告的開頭是一個標頭，此標頭會指定類別的屬性和修飾詞、類別的名稱、基底類別 (如果提供)，以及類別所實作的介面。 此標頭後面會接著類別主體，此主體是由在 `{` 與 `}` 分隔符號之間撰寫的成員宣告清單所組成。
+<span data-ttu-id="6f04c-110">建立新類別時，是使用類別宣告來建立。</span><span class="sxs-lookup"><span data-stu-id="6f04c-110">New classes are created using class declarations.</span></span> <span data-ttu-id="6f04c-111">類別宣告的開頭是一個標頭，此標頭會指定類別的屬性和修飾詞、類別的名稱、基底類別 (如果提供)，以及類別所實作的介面。</span><span class="sxs-lookup"><span data-stu-id="6f04c-111">A class declaration starts with a header that specifies the attributes and modifiers of the class, the name of the class, the base class (if given), and the interfaces implemented by the class.</span></span> <span data-ttu-id="6f04c-112">此標頭後面會接著類別主體，此主體是由在 `{` 與 `}` 分隔符號之間撰寫的成員宣告清單所組成。</span><span class="sxs-lookup"><span data-stu-id="6f04c-112">The header is followed by the class body, which consists of a list of member declarations written between the delimiters `{` and `}`.</span></span>
 
-以下是一個名為 `Point` 之簡單類別的宣告：
+<span data-ttu-id="6f04c-113">以下是一個名為 `Point` 之簡單類別的宣告：</span><span class="sxs-lookup"><span data-stu-id="6f04c-113">The following is a declaration of a simple class named `Point`:</span></span>
 
-[!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
+<span data-ttu-id="6f04c-114">[!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-114">[!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]</span></span>
 
-建立類別執行個體時，是使用 `new` 運算子來建立，此運算子會為新執行個體配置記憶體、叫用建構函式來將執行個體初始化，然後傳回對執行個體的參考。 下列陳述式會建立兩個 Point 物件，並以兩個變數儲存對這些物件的參考：
+<span data-ttu-id="6f04c-115">建立類別執行個體時，是使用 `new` 運算子來建立，此運算子會為新執行個體配置記憶體、叫用建構函式來將執行個體初始化，然後傳回對執行個體的參考。</span><span class="sxs-lookup"><span data-stu-id="6f04c-115">Instances of classes are created using the `new` operator, which allocates memory for a new instance, invokes a constructor to initialize the instance, and returns a reference to the instance.</span></span> <span data-ttu-id="6f04c-116">下列陳述式會建立兩個 Point 物件，並以兩個變數儲存對這些物件的參考：</span><span class="sxs-lookup"><span data-stu-id="6f04c-116">The following statements create two Point objects and store references to those objects in two variables:</span></span>
 
-[!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
+<span data-ttu-id="6f04c-117">[!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-117">[!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]</span></span>
 
-當物件不再可供存取時，系統會自動回收物件所佔用的記憶體。 在 C# 中，既沒有必要也不可能明確地將物件解除配置。
+<span data-ttu-id="6f04c-118">當物件不再可供存取時，系統會自動回收物件所佔用的記憶體。</span><span class="sxs-lookup"><span data-stu-id="6f04c-118">The memory occupied by an object is automatically reclaimed when the object is no longer reachable.</span></span> <span data-ttu-id="6f04c-119">在 C# 中，既沒有必要也不可能明確地將物件解除配置。</span><span class="sxs-lookup"><span data-stu-id="6f04c-119">It is neither necessary nor possible to explicitly deallocate objects in C#.</span></span>
 
-## 成員
-<a id="members" class="xliff"></a>
+## <a name="members"></a><span data-ttu-id="6f04c-120">成員</span><span class="sxs-lookup"><span data-stu-id="6f04c-120">Members</span></span>
 
-類別的成員不是靜態成員，就是執行個體成員。 靜態成員隸屬於類別，而執行個體成員則隸屬於物件 (類別的執行個體)。
+<span data-ttu-id="6f04c-121">類別的成員不是靜態成員，就是執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-121">The members of a class are either static members or instance members.</span></span> <span data-ttu-id="6f04c-122">靜態成員隸屬於類別，而執行個體成員則隸屬於物件 (類別的執行個體)。</span><span class="sxs-lookup"><span data-stu-id="6f04c-122">Static members belong to classes, and instance members belong to objects (instances of classes).</span></span>
 
-以下提供類別所能包含之成員類型的概觀。
+<span data-ttu-id="6f04c-123">以下提供類別所能包含之成員類型的概觀。</span><span class="sxs-lookup"><span data-stu-id="6f04c-123">The following provides an overview of the kinds of members a class can contain.</span></span>
 
-* 常數
-    - 與類別關聯的常數值
-* 欄位
-    - 類別的變數
-* 方法
-    - 類別所能執行的計算和動作
-* 屬性
-    - 與讀取和寫入具名的類別特性關聯的動作
-* 索引子
-    - 與編製陣列之類的類別執行個體關聯的動作
-* 事件
-    - 類別所能產生的通知
-* 運算子
-    - 類別所支援的轉換和運算式運算子
-* 建構函式
-    - 將類別執行個體或類別本身初始化所需的動作
-* 完成項
-    - 在永久捨棄類別執行個體之前所要執行的動作
-* 型別
-    - 類別所宣告的巢狀型別
+* <span data-ttu-id="6f04c-124">常數</span><span class="sxs-lookup"><span data-stu-id="6f04c-124">Constants</span></span>
+    - <span data-ttu-id="6f04c-125">與類別關聯的常數值</span><span class="sxs-lookup"><span data-stu-id="6f04c-125">Constant values associated with the class</span></span>
+* <span data-ttu-id="6f04c-126">欄位</span><span class="sxs-lookup"><span data-stu-id="6f04c-126">Fields</span></span>
+    - <span data-ttu-id="6f04c-127">類別的變數</span><span class="sxs-lookup"><span data-stu-id="6f04c-127">Variables of the class</span></span>
+* <span data-ttu-id="6f04c-128">方法</span><span class="sxs-lookup"><span data-stu-id="6f04c-128">Methods</span></span>
+    - <span data-ttu-id="6f04c-129">類別所能執行的計算和動作</span><span class="sxs-lookup"><span data-stu-id="6f04c-129">Computations and actions that can be performed by the class</span></span>
+* <span data-ttu-id="6f04c-130">屬性</span><span class="sxs-lookup"><span data-stu-id="6f04c-130">Properties</span></span>
+    - <span data-ttu-id="6f04c-131">與讀取和寫入具名的類別特性關聯的動作</span><span class="sxs-lookup"><span data-stu-id="6f04c-131">Actions associated with reading and writing named properties of the class</span></span>
+* <span data-ttu-id="6f04c-132">索引子</span><span class="sxs-lookup"><span data-stu-id="6f04c-132">Indexers</span></span>
+    - <span data-ttu-id="6f04c-133">與編製陣列之類的類別執行個體關聯的動作</span><span class="sxs-lookup"><span data-stu-id="6f04c-133">Actions associated with indexing instances of the class like an array</span></span>
+* <span data-ttu-id="6f04c-134">事件</span><span class="sxs-lookup"><span data-stu-id="6f04c-134">Events</span></span>
+    - <span data-ttu-id="6f04c-135">類別所能產生的通知</span><span class="sxs-lookup"><span data-stu-id="6f04c-135">Notifications that can be generated by the class</span></span>
+* <span data-ttu-id="6f04c-136">運算子</span><span class="sxs-lookup"><span data-stu-id="6f04c-136">Operators</span></span>
+    - <span data-ttu-id="6f04c-137">類別所支援的轉換和運算式運算子</span><span class="sxs-lookup"><span data-stu-id="6f04c-137">Conversions and expression operators supported by the class</span></span>
+* <span data-ttu-id="6f04c-138">建構函式</span><span class="sxs-lookup"><span data-stu-id="6f04c-138">Constructors</span></span>
+    - <span data-ttu-id="6f04c-139">將類別執行個體或類別本身初始化所需的動作</span><span class="sxs-lookup"><span data-stu-id="6f04c-139">Actions required to initialize instances of the class or the class itself</span></span>
+* <span data-ttu-id="6f04c-140">完成項</span><span class="sxs-lookup"><span data-stu-id="6f04c-140">Finalizers</span></span>
+    - <span data-ttu-id="6f04c-141">在永久捨棄類別執行個體之前所要執行的動作</span><span class="sxs-lookup"><span data-stu-id="6f04c-141">Actions to perform before instances of the class are permanently discarded</span></span>
+* <span data-ttu-id="6f04c-142">型別</span><span class="sxs-lookup"><span data-stu-id="6f04c-142">Types</span></span>
+    - <span data-ttu-id="6f04c-143">類別所宣告的巢狀型別</span><span class="sxs-lookup"><span data-stu-id="6f04c-143">Nested types declared by the class</span></span>
 
-## 協助工具選項
-<a id="accessibility" class="xliff"></a>
+## <a name="accessibility"></a><span data-ttu-id="6f04c-144">協助工具選項</span><span class="sxs-lookup"><span data-stu-id="6f04c-144">Accessibility</span></span>
 
-類別的每個成員都有關聯的存取能力，用來控制能夠存取成員的程式文字區域。 存取能力有五種可能的形式。 以下為摘要說明。
+<span data-ttu-id="6f04c-145">類別的每個成員都有關聯的存取能力，用來控制能夠存取成員的程式文字區域。</span><span class="sxs-lookup"><span data-stu-id="6f04c-145">Each member of a class has an associated accessibility, which controls the regions of program text that are able to access the member.</span></span> <span data-ttu-id="6f04c-146">存取能力有五種可能的形式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-146">There are five possible forms of accessibility.</span></span> <span data-ttu-id="6f04c-147">以下為摘要說明。</span><span class="sxs-lookup"><span data-stu-id="6f04c-147">These are summarized below.</span></span>
 
 * `public`
-    - 存取不受限制
+    - <span data-ttu-id="6f04c-148">存取不受限制</span><span class="sxs-lookup"><span data-stu-id="6f04c-148">Access not limited</span></span>
 * `protected`
-    - 存取僅限於此類別或此類別所衍生的類別
+    - <span data-ttu-id="6f04c-149">存取僅限於此類別或此類別所衍生的類別</span><span class="sxs-lookup"><span data-stu-id="6f04c-149">Access limited to this class or classes derived from this class</span></span>
 * `internal`
-    - 存取限於目前組件 (.exe、.dll 等)
+    - <span data-ttu-id="6f04c-150">存取限於目前組件 (.exe、.dll 等)</span><span class="sxs-lookup"><span data-stu-id="6f04c-150">Access limited to the current assembly (.exe, .dll, etc.)</span></span>
 * `protected internal`
-    - 存取限於包含類別或衍生自包含類別的類別
+    - <span data-ttu-id="6f04c-151">存取限於包含類別或衍生自包含類別的類別</span><span class="sxs-lookup"><span data-stu-id="6f04c-151">Access limited to the containing class or classes derived from the containing class</span></span>
 * `private`
-    - 存取僅限於此類別
+    - <span data-ttu-id="6f04c-152">存取僅限於此類別</span><span class="sxs-lookup"><span data-stu-id="6f04c-152">Access limited to this class</span></span>
 
-## 型別參數
-<a id="type-parameters" class="xliff"></a>
+## <a name="type-parameters"></a><span data-ttu-id="6f04c-153">型別參數</span><span class="sxs-lookup"><span data-stu-id="6f04c-153">Type parameters</span></span>
 
-類別定義可以在類別名稱後面以角括弧括住型別參數名稱清單，來定義一組型別參數。 接著，就可以在類別宣告的主體中使用這些型別參數，來定義類別的成員。 在下列範例中，`Pair` 的型別參數是 `TFirst` 和 `TSecond`：
+<span data-ttu-id="6f04c-154">類別定義可以在類別名稱後面以角括弧括住型別參數名稱清單，來定義一組型別參數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-154">A class definition may specify a set of type parameters by following the class name with angle brackets enclosing a list of type parameter names.</span></span> <span data-ttu-id="6f04c-155">接著，就可以在類別宣告的主體中使用這些型別參數，來定義類別的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-155">The type parameters can then be used in the body of the class declarations to define the members of the class.</span></span> <span data-ttu-id="6f04c-156">在下列範例中，`Pair` 的型別參數是 `TFirst` 和 `TSecond`：</span><span class="sxs-lookup"><span data-stu-id="6f04c-156">In the following example, the type parameters of `Pair` are `TFirst` and `TSecond`:</span></span>
 
-[!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
+<span data-ttu-id="6f04c-157">[!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-157">[!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]</span></span>
 
-類別型別若宣告為會採用型別參數，即稱為「泛型類別型別」。 結構、介面及委派型別也可以是泛型型別。
-使用泛型類別時，必須為每個型別參數提供型別參數：
+<span data-ttu-id="6f04c-158">類別型別若宣告為會採用型別參數，即稱為「泛型類別型別」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-158">A class type that is declared to take type parameters is called a *generic class type*.</span></span> <span data-ttu-id="6f04c-159">結構、介面及委派型別也可以是泛型型別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-159">Struct, interface and delegate types can also be generic.</span></span>
+<span data-ttu-id="6f04c-160">使用泛型類別時，必須為每個型別參數提供型別參數：</span><span class="sxs-lookup"><span data-stu-id="6f04c-160">When the generic class is used, type arguments must be provided for each of the type parameters:</span></span>
 
-[!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
+<span data-ttu-id="6f04c-161">[!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-161">[!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]</span></span>
 
-泛型型別若已有提供的型別參數 (如上述的 `Pair<int,string>`)，即稱為「建構的型別」。
+<span data-ttu-id="6f04c-162">泛型型別若已有提供的型別參數 (如上述的 `Pair<int,string>`)，即稱為「建構的型別」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-162">A generic type with type arguments provided, like `Pair<int,string>` above, is called a *constructed type*.</span></span>
 
-## 基底類別
-<a id="base-classes" class="xliff"></a>
+## <a name="base-classes"></a><span data-ttu-id="6f04c-163">基底類別</span><span class="sxs-lookup"><span data-stu-id="6f04c-163">Base classes</span></span>
 
-類別宣告可以在類別名稱和型別參數後面加上冒號和基底類別的名稱，來指定基底類別。 省略基底類別規格即等同於衍生自類型 `object`。 在下列範例中，`Point3D` 的基底類別是 `Point`，而 `Point` 的基底類別是 `object`：
+<span data-ttu-id="6f04c-164">類別宣告可以在類別名稱和型別參數後面加上冒號和基底類別的名稱，來指定基底類別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-164">A class declaration may specify a base class by following the class name and type parameters with a colon and the name of the base class.</span></span> <span data-ttu-id="6f04c-165">省略基底類別規格即等同於衍生自類型 `object`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-165">Omitting a base class specification is the same as deriving from type `object`.</span></span> <span data-ttu-id="6f04c-166">在下列範例中，`Point3D` 的基底類別是 `Point`，而 `Point` 的基底類別是 `object`：</span><span class="sxs-lookup"><span data-stu-id="6f04c-166">In the following example, the base class of `Point3D` is `Point`, and the base class of `Point` is `object`:</span></span>
 
-[!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
+<span data-ttu-id="6f04c-167">[!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-167">[!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]</span></span>
 
-類別會繼承其基底類別的成員。 繼承意謂著類別隱含地包含其基底類別的所有成員，但執行個體和靜態建構函式及基底類別的完成項除外。 衍生類別可以在其繼承的成員中新增新的成員，但無法移除所繼承成員的定義。 在先前的範例中，`Point3D` 會從 `Point` 繼承 `x` 和 `y` 欄位，而每個 `Point3D` 執行個體都會包含 `x`、`y` 及 `z` 這三個欄位。
+<span data-ttu-id="6f04c-168">類別會繼承其基底類別的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-168">A class inherits the members of its base class.</span></span> <span data-ttu-id="6f04c-169">繼承意謂著類別隱含地包含其基底類別的所有成員，但執行個體和靜態建構函式及基底類別的完成項除外。</span><span class="sxs-lookup"><span data-stu-id="6f04c-169">Inheritance means that a class implicitly contains all members of its base class, except for the instance and static constructors, and the finalizers of the base class.</span></span> <span data-ttu-id="6f04c-170">衍生類別可以在其繼承的成員中新增新的成員，但無法移除所繼承成員的定義。</span><span class="sxs-lookup"><span data-stu-id="6f04c-170">A derived class can add new members to those it inherits, but it cannot remove the definition of an inherited member.</span></span> <span data-ttu-id="6f04c-171">在先前的範例中，`Point3D` 會從 `Point` 繼承 `x` 和 `y` 欄位，而每個 `Point3D` 執行個體都會包含 `x`、`y` 及 `z` 這三個欄位。</span><span class="sxs-lookup"><span data-stu-id="6f04c-171">In the previous example, `Point3D` inherits the `x` and `y` fields from `Point`, and every `Point3D` instance contains three fields, `x`, `y`, and `z`.</span></span>
 
-在類別型別到其任何基底類別型別之間都存在著隱含轉換。 因此，類別型別的變數可以參考該類別的執行個體，或任何衍生類別的執行個體。 例如，以先前的類別宣告為例，`Point` 型別的變數可以參考 `Point` 或 `Point3D`：
+<span data-ttu-id="6f04c-172">在類別型別到其任何基底類別型別之間都存在著隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="6f04c-172">An implicit conversion exists from a class type to any of its base class types.</span></span> <span data-ttu-id="6f04c-173">因此，類別型別的變數可以參考該類別的執行個體，或任何衍生類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="6f04c-173">Therefore, a variable of a class type can reference an instance of that class or an instance of any derived class.</span></span> <span data-ttu-id="6f04c-174">例如，以先前的類別宣告為例，`Point` 型別的變數可以參考 `Point` 或 `Point3D`：</span><span class="sxs-lookup"><span data-stu-id="6f04c-174">For example, given the previous class declarations, a variable of type `Point` can reference either a `Point` or a `Point3D`:</span></span>
 
-[!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
+<span data-ttu-id="6f04c-175">[!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-175">[!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]</span></span>
 
-## 欄位
-<a id="fields" class="xliff"></a>
+## <a name="fields"></a><span data-ttu-id="6f04c-176">欄位</span><span class="sxs-lookup"><span data-stu-id="6f04c-176">Fields</span></span>
 
-「欄位」是與類別或類別執行個體關聯的變數。
+<span data-ttu-id="6f04c-177">「欄位」是與類別或類別執行個體關聯的變數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-177">A *field* is a variable that is associated with a class or with an instance of a class.</span></span>
 
-使用 static 修飾詞來宣告的欄位會定義靜態欄位。 靜態欄位只會識別一個儲存位置。 不論建立多少個類別執行個體，都只會有一個靜態欄位複本。
+<span data-ttu-id="6f04c-178">使用 static 修飾詞來宣告的欄位會定義靜態欄位。</span><span class="sxs-lookup"><span data-stu-id="6f04c-178">A field declared with the static modifier defines a static field.</span></span> <span data-ttu-id="6f04c-179">靜態欄位只會識別一個儲存位置。</span><span class="sxs-lookup"><span data-stu-id="6f04c-179">A static field identifies exactly one storage location.</span></span> <span data-ttu-id="6f04c-180">不論建立多少個類別執行個體，都只會有一個靜態欄位複本。</span><span class="sxs-lookup"><span data-stu-id="6f04c-180">No matter how many instances of a class are created, there is only ever one copy of a static field.</span></span>
 
-未使用 static 修飾詞來宣告的欄位會定義執行個體欄位。 每個類別執行個體都包含一個該類別所有執行個體欄位的個別複本。
+<span data-ttu-id="6f04c-181">未使用 static 修飾詞來宣告的欄位會定義執行個體欄位。</span><span class="sxs-lookup"><span data-stu-id="6f04c-181">A field declared without the static modifier defines an instance field.</span></span> <span data-ttu-id="6f04c-182">每個類別執行個體都包含一個該類別所有執行個體欄位的個別複本。</span><span class="sxs-lookup"><span data-stu-id="6f04c-182">Every instance of a class contains a separate copy of all the instance fields of that class.</span></span>
 
-在下列範例中，每個 `Color` 類別執行個體都具有 `r`、`g` 及 `b` 執行個體欄位的個別複本，但只有一個 `Black`、`White`、`Red`、`Green` 及 `Blue` 靜態欄位的複本：
+<span data-ttu-id="6f04c-183">在下列範例中，每個 `Color` 類別執行個體都具有 `r`、`g` 及 `b` 執行個體欄位的個別複本，但只有一個 `Black`、`White`、`Red`、`Green` 及 `Blue` 靜態欄位的複本：</span><span class="sxs-lookup"><span data-stu-id="6f04c-183">In the following example, each instance of the `Color` class has a separate copy of the `r`, `g`, and `b` instance fields, but there is only one copy of the `Black`, `White`, `Red`, `Green`, and `Blue` static fields:</span></span>
 
-[!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
+<span data-ttu-id="6f04c-184">[!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-184">[!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]</span></span>
 
-如先前的範例所示，可以使用 `readonly` 修飾詞來宣告「唯讀欄位」。 只有在欄位的宣告或在相同類別的建構函式中，才能對 `readonly` 欄位進行指派。
+<span data-ttu-id="6f04c-185">如先前的範例所示，可以使用 `readonly` 修飾詞來宣告「唯讀欄位」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-185">As shown in the previous example, *read-only fields* may be declared with a `readonly` modifier.</span></span> <span data-ttu-id="6f04c-186">只有在欄位的宣告或在相同類別的建構函式中，才能對 `readonly` 欄位進行指派。</span><span class="sxs-lookup"><span data-stu-id="6f04c-186">Assignment to a `readonly` field can only occur as part of the field’s declaration or in a constructor in the same class.</span></span>
 
-## 方法
-<a id="methods" class="xliff"></a>
+## <a name="methods"></a><span data-ttu-id="6f04c-187">方法</span><span class="sxs-lookup"><span data-stu-id="6f04c-187">Methods</span></span>
 
-「方法」是實作物件或類別所能執行之計算或動作的成員。 存取「靜態方法」時，是透過類別來存取。 存取「執行個體方法」時，是透過類別的執行個體來存取。
+<span data-ttu-id="6f04c-188">「方法」是實作物件或類別所能執行之計算或動作的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-188">A *method* is a member that implements a computation or action that can be performed by an object or class.</span></span> <span data-ttu-id="6f04c-189">存取「靜態方法」時，是透過類別來存取。</span><span class="sxs-lookup"><span data-stu-id="6f04c-189">*Static methods* are accessed through the class.</span></span> <span data-ttu-id="6f04c-190">存取「執行個體方法」時，是透過類別的執行個體來存取。</span><span class="sxs-lookup"><span data-stu-id="6f04c-190">*Instance methods* are accessed through instances of the class.</span></span>
 
-方法可能會有一份「參數」清單和「傳回型別」，前者代表傳送給方法的值或變數參考，後者則指定方法所計算並傳回的值型別。 如果方法不會傳回值，則其傳回型別為 `void`。
+<span data-ttu-id="6f04c-191">方法可能會有一份「參數」清單和「傳回型別」，前者代表傳送給方法的值或變數參考，後者則指定方法所計算並傳回的值型別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-191">Methods may have a list of *parameters*, which represent values or variable references passed to the method, and a *return type*, which specifies the type of the value computed and returned by the method.</span></span> <span data-ttu-id="6f04c-192">如果方法不會傳回值，則其傳回型別為 `void`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-192">A method’s return type is `void` if it does not return a value.</span></span>
 
-與型別相同，方法也可能有一組型別參數，而呼叫方法時，必須為這些參數指定型別引數。 與型別不同的是，型別引數通常可以從方法呼叫的引數推斷，而不需要明確指定。
+<span data-ttu-id="6f04c-193">與型別相同，方法也可能有一組型別參數，而呼叫方法時，必須為這些參數指定型別引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-193">Like types, methods may also have a set of type parameters, for which type arguments must be specified when the method is called.</span></span> <span data-ttu-id="6f04c-194">與型別不同的是，型別引數通常可以從方法呼叫的引數推斷，而不需要明確指定。</span><span class="sxs-lookup"><span data-stu-id="6f04c-194">Unlike types, the type arguments can often be inferred from the arguments of a method call and need not be explicitly given.</span></span>
 
-在宣告方法的類別中，方法的「簽章」必須是唯一的。 方法的簽章是由方法的名稱、型別參數的數目以及其參數的數目、修飾詞和型別所組成。 方法的簽章並不包括傳回型別。
+<span data-ttu-id="6f04c-195">在宣告方法的類別中，方法的「簽章」必須是唯一的。</span><span class="sxs-lookup"><span data-stu-id="6f04c-195">The *signature* of a method must be unique in the class in which the method is declared.</span></span> <span data-ttu-id="6f04c-196">方法的簽章是由方法的名稱、型別參數的數目以及其參數的數目、修飾詞和型別所組成。</span><span class="sxs-lookup"><span data-stu-id="6f04c-196">The signature of a method consists of the name of the method, the number of type parameters and the number, modifiers, and types of its parameters.</span></span> <span data-ttu-id="6f04c-197">方法的簽章並不包括傳回型別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-197">The signature of a method does not include the return type.</span></span>
 
-### 參數
-<a id="parameters" class="xliff"></a>
+### <a name="parameters"></a><span data-ttu-id="6f04c-198">參數</span><span class="sxs-lookup"><span data-stu-id="6f04c-198">Parameters</span></span>
 
-參數是用來將值或變數參考傳遞給方法。 方法的參數會從叫用方法時所指定的「引數」取得其實際值。 參數有四種：值參數、參考參數、輸出參數，以及參數陣列。
+<span data-ttu-id="6f04c-199">參數是用來將值或變數參考傳遞給方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-199">Parameters are used to pass values or variable references to methods.</span></span> <span data-ttu-id="6f04c-200">方法的參數會從叫用方法時所指定的「引數」取得其實際值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-200">The parameters of a method get their actual values from the *arguments* that are specified when the method is invoked.</span></span> <span data-ttu-id="6f04c-201">參數有四種：值參數、參考參數、輸出參數，以及參數陣列。</span><span class="sxs-lookup"><span data-stu-id="6f04c-201">There are four kinds of parameters: value parameters, reference parameters, output parameters, and parameter arrays.</span></span>
 
-「值參數」適用於傳遞輸入引數。 值參數會對應至區域變數，此變數會從針對參數傳遞的引數取得其初始值。 對值參數進行修改並不會影響已針對參數傳遞的引數。 
+<span data-ttu-id="6f04c-202">「值參數」適用於傳遞輸入引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-202">A *value parameter* is used for passing input arguments.</span></span> <span data-ttu-id="6f04c-203">值參數會對應至區域變數，此變數會從針對參數傳遞的引數取得其初始值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-203">A value parameter corresponds to a local variable that gets its initial value from the argument that was passed for the parameter.</span></span> <span data-ttu-id="6f04c-204">對值參數進行修改並不會影響已針對參數傳遞的引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-204">Modifications to a value parameter do not affect the argument that was passed for the parameter.</span></span> 
 
-只要指定預設值，值參數便可以成為選用參數，如此即可省略對應的引數。
+<span data-ttu-id="6f04c-205">只要指定預設值，值參數便可以成為選用參數，如此即可省略對應的引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-205">Value parameters can be optional, by specifying a default value so that corresponding arguments can be omitted.</span></span>
 
-「參考參數」適用於以參考方式傳遞引數。 針對參考參數傳遞的引數必須是含有定義值的變數，而在執行方法的期間，參考參數會代表與引數變數相同的儲存位置。 宣告參考參數時，是使用 `ref` 修飾詞來宣告。 下列範例示範 `ref` 參數的用法。
+<span data-ttu-id="6f04c-206">「參考參數」適用於以參考方式傳遞引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-206">A *reference parameter* is used for passing arguments by reference.</span></span> <span data-ttu-id="6f04c-207">針對參考參數傳遞的引數必須是含有定義值的變數，而在執行方法的期間，參考參數會代表與引數變數相同的儲存位置。</span><span class="sxs-lookup"><span data-stu-id="6f04c-207">The argument passed for a reference parameter must be a variable with a definite value, and during execution of the method, the reference parameter represents the same storage location as the argument variable.</span></span> <span data-ttu-id="6f04c-208">宣告參考參數時，是使用 `ref` 修飾詞來宣告。</span><span class="sxs-lookup"><span data-stu-id="6f04c-208">A reference parameter is declared with the `ref` modifier.</span></span> <span data-ttu-id="6f04c-209">下列範例示範 `ref` 參數的用法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-209">The following example shows the use of `ref` parameters.</span></span>
 
-[!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
+<span data-ttu-id="6f04c-210">[!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-210">[!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]</span></span>
 
-「輸出參數」適用於以參考方式傳遞引數。 其類似於參考參數，只不過它並不需要您明確指派值給呼叫端提供的引數。 宣告輸出參數時，是使用 `out` 修飾詞來宣告。 下列範例示範如何使用 C# 7 中所引入的語法來利用 `out` 參數。
+<span data-ttu-id="6f04c-211">「輸出參數」適用於以參考方式傳遞引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-211">An *output parameter* is used for passing arguments by reference.</span></span> <span data-ttu-id="6f04c-212">其類似於參考參數，只不過它並不需要您明確指派值給呼叫端提供的引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-212">It's similar to a reference parameter, except that it doesn't require that you explicitly assign a value to the caller-provided argument.</span></span> <span data-ttu-id="6f04c-213">宣告輸出參數時，是使用 `out` 修飾詞來宣告。</span><span class="sxs-lookup"><span data-stu-id="6f04c-213">An output parameter is declared with the `out` modifier.</span></span> <span data-ttu-id="6f04c-214">下列範例示範如何使用 C# 7 中所引入的語法來利用 `out` 參數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-214">The following example shows the use of `out` parameters using the syntax introduced in C# 7.</span></span>
 
-[!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
+<span data-ttu-id="6f04c-215">[!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-215">[!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]</span></span>
 
-「參數陣列」可允許將數目不固定的引數傳遞給方法。 宣告參數陣列時，是使用 `params` 修飾詞來宣告。 只有方法的最後一個參數可以是參數陣列，而參數陣列的型別必須是單一維度陣列型別。 `@System.Console` 類別的 Write 和 WriteLine 方法即為參數陣列用法的好例子。 其宣告方式如下。
+<span data-ttu-id="6f04c-216">「參數陣列」可允許將數目不固定的引數傳遞給方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-216">A *parameter array* permits a variable number of arguments to be passed to a method.</span></span> <span data-ttu-id="6f04c-217">宣告參數陣列時，是使用 `params` 修飾詞來宣告。</span><span class="sxs-lookup"><span data-stu-id="6f04c-217">A parameter array is declared with the `params` modifier.</span></span> <span data-ttu-id="6f04c-218">只有方法的最後一個參數可以是參數陣列，而參數陣列的型別必須是單一維度陣列型別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-218">Only the last parameter of a method can be a parameter array, and the type of a parameter array must be a single-dimensional array type.</span></span> <span data-ttu-id="6f04c-219">`@System.Console` 類別的 Write 和 WriteLine 方法即為參數陣列用法的好例子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-219">The Write and WriteLine methods of the `@System.Console` class are good examples of parameter array usage.</span></span> <span data-ttu-id="6f04c-220">其宣告方式如下。</span><span class="sxs-lookup"><span data-stu-id="6f04c-220">They are declared as follows.</span></span>
 
-[!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
+<span data-ttu-id="6f04c-221">[!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-221">[!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]</span></span>
 
-在使用參數陣列的方法內，參數陣列的行為與陣列型別的一般參數完全相同。 不過，在叫用含有參數陣列的方法時，可以傳遞單一的參數陣列型別引數，或是傳遞任意數目的參數陣列元素型別引數。 在後者的案例中，會自動建立陣列執行個體並以指定的引數將其初始化。 以下範例
+<span data-ttu-id="6f04c-222">在使用參數陣列的方法內，參數陣列的行為與陣列型別的一般參數完全相同。</span><span class="sxs-lookup"><span data-stu-id="6f04c-222">Within a method that uses a parameter array, the parameter array behaves exactly like a regular parameter of an array type.</span></span> <span data-ttu-id="6f04c-223">不過，在叫用含有參數陣列的方法時，可以傳遞單一的參數陣列型別引數，或是傳遞任意數目的參數陣列元素型別引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-223">However, in an invocation of a method with a parameter array, it is possible to pass either a single argument of the parameter array type or any number of arguments of the element type of the parameter array.</span></span> <span data-ttu-id="6f04c-224">在後者的案例中，會自動建立陣列執行個體並以指定的引數將其初始化。</span><span class="sxs-lookup"><span data-stu-id="6f04c-224">In the latter case, an array instance is automatically created and initialized with the given arguments.</span></span> <span data-ttu-id="6f04c-225">以下範例</span><span class="sxs-lookup"><span data-stu-id="6f04c-225">This example</span></span>
 
-[!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
+<span data-ttu-id="6f04c-226">[!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-226">[!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]</span></span>
 
-等同於撰寫下列程式碼。
+<span data-ttu-id="6f04c-227">等同於撰寫下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="6f04c-227">is equivalent to writing the following.</span></span>
 
-[!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
+<span data-ttu-id="6f04c-228">[!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-228">[!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]</span></span>
 
-### 方法主體和區域變數
-<a id="method-body-and-local-variables" class="xliff"></a>
+### <a name="method-body-and-local-variables"></a><span data-ttu-id="6f04c-229">方法主體和區域變數</span><span class="sxs-lookup"><span data-stu-id="6f04c-229">Method body and local variables</span></span>
 
-方法的主體會指定叫用方法時所要執行的陳述式。
+<span data-ttu-id="6f04c-230">方法的主體會指定叫用方法時所要執行的陳述式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-230">A method’s body specifies the statements to execute when the method is invoked.</span></span>
 
-方法主體可以宣告方法叫用專屬的變數。 這類變數稱為「區域變數」。 區域變數宣告會指定型別名稱、變數名稱，還可能指定初始值。 下列範例會宣告一個初始值為零的區域變數 `i`，以及一個沒有初始值的區域變數 `j`。
+<span data-ttu-id="6f04c-231">方法主體可以宣告方法叫用專屬的變數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-231">A method body can declare variables that are specific to the invocation of the method.</span></span> <span data-ttu-id="6f04c-232">這類變數稱為「區域變數」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-232">Such variables are called *local variables*.</span></span> <span data-ttu-id="6f04c-233">區域變數宣告會指定型別名稱、變數名稱，還可能指定初始值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-233">A local variable declaration specifies a type name, a variable name, and possibly an initial value.</span></span> <span data-ttu-id="6f04c-234">下列範例會宣告一個初始值為零的區域變數 `i`，以及一個沒有初始值的區域變數 `j`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-234">The following example declares a local variable `i` with an initial value of zero and a local variable `j` with no initial value.</span></span>
 
-[!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
+<span data-ttu-id="6f04c-235">[!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-235">[!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]</span></span>
 
-C# 要求必須「明確指派」區域變數，才能取得其值。 例如，如果先前 `i` 的宣告並未包含初始值，編譯器就會在 `i` 後續被使用時回報錯誤，因為在這些時間點並不會在程式中明確指派 `i`。
+<span data-ttu-id="6f04c-236">C# 要求必須「明確指派」區域變數，才能取得其值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-236">C# requires a local variable to be *definitely assigned* before its value can be obtained.</span></span> <span data-ttu-id="6f04c-237">例如，如果先前 `i` 的宣告並未包含初始值，編譯器就會在 `i` 後續被使用時回報錯誤，因為在這些時間點並不會在程式中明確指派 `i`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-237">For example, if the declaration of the previous `i` did not include an initial value, the compiler would report an error for the subsequent usages of `i` because `i` would not be definitely assigned at those points in the program.</span></span>
 
-方法可以使用 `return` 陳述式將控制權交還給其呼叫端。 在傳回 `void` 的方法中，`return` 陳述式不能指定運算式。 在傳回非 void 的方法中，`return` 陳述式必須包含會計算傳回值的運算式。
+<span data-ttu-id="6f04c-238">方法可以使用 `return` 陳述式將控制權交還給其呼叫端。</span><span class="sxs-lookup"><span data-stu-id="6f04c-238">A method can use `return` statements to return control to its caller.</span></span> <span data-ttu-id="6f04c-239">在傳回 `void` 的方法中，`return` 陳述式不能指定運算式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-239">In a method returning `void`, `return` statements cannot specify an expression.</span></span> <span data-ttu-id="6f04c-240">在傳回非 void 的方法中，`return` 陳述式必須包含會計算傳回值的運算式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-240">In a method returning non-void, `return` statements must include an expression that computes the return value.</span></span>
 
-### 靜態和執行個體方法
-<a id="static-and-instance-methods" class="xliff"></a>
+### <a name="static-and-instance-methods"></a><span data-ttu-id="6f04c-241">靜態和執行個體方法</span><span class="sxs-lookup"><span data-stu-id="6f04c-241">Static and instance methods</span></span>
 
-使用 static 修飾詞來宣告的方法即為「靜態方法」。 靜態方法不會在特定的執行個體上運作，並且只能直接存取靜態成員。
+<span data-ttu-id="6f04c-242">使用 static 修飾詞來宣告的方法即為「靜態方法」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-242">A method declared with a static modifier is a *static method*.</span></span> <span data-ttu-id="6f04c-243">靜態方法不會在特定的執行個體上運作，並且只能直接存取靜態成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-243">A static method does not operate on a specific instance and can only directly access static members.</span></span>
 
-不使用 static 修飾詞來宣告的方法即為「執行個體方法」。 執行個體方法會在特定的執行個體上運作，並且既可存取靜態成員也可存取執行個體成員。 透過 `this` 可以明確存取叫用執行個體方法時所在的執行個體。 參考靜態方法中的 `this` 會產生錯誤。
+<span data-ttu-id="6f04c-244">不使用 static 修飾詞來宣告的方法即為「執行個體方法」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-244">A method declared without a static modifier is an *instance method*.</span></span> <span data-ttu-id="6f04c-245">執行個體方法會在特定的執行個體上運作，並且既可存取靜態成員也可存取執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-245">An instance method operates on a specific instance and can access both static and instance members.</span></span> <span data-ttu-id="6f04c-246">透過 `this` 可以明確存取叫用執行個體方法時所在的執行個體。</span><span class="sxs-lookup"><span data-stu-id="6f04c-246">The instance on which an instance method was invoked can be explicitly accessed as `this`.</span></span> <span data-ttu-id="6f04c-247">參考靜態方法中的 `this` 會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="6f04c-247">It is an error to refer to `this` in a static method.</span></span>
 
-下列 `Entity` 類別同時含有靜態成員和執行個體成員。
+<span data-ttu-id="6f04c-248">下列 `Entity` 類別同時含有靜態成員和執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-248">The following `Entity` class has both static and instance members.</span></span>
 
-[!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
+<span data-ttu-id="6f04c-249">[!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-249">[!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]</span></span>
 
-每個 `Entity` 執行個體都包含一個序號 (並且可能包含一些其他這裡未顯示的資訊)。 `Entity` 建構函式 (類似於執行個體方法) 會將具有下一個可用序號的新執行個體初始化。 由於此建構函式式執行個體成員，因此它既可存取 `serialNo` 執行個體欄位，也可存取 `nextSerialNo` 靜態欄位。
+<span data-ttu-id="6f04c-250">每個 `Entity` 執行個體都包含一個序號 (並且可能包含一些其他這裡未顯示的資訊)。</span><span class="sxs-lookup"><span data-stu-id="6f04c-250">Each `Entity` instance contains a serial number (and presumably some other information that is not shown here).</span></span> <span data-ttu-id="6f04c-251">`Entity` 建構函式 (類似於執行個體方法) 會將具有下一個可用序號的新執行個體初始化。</span><span class="sxs-lookup"><span data-stu-id="6f04c-251">The `Entity` constructor (which is like an instance method) initializes the new instance with the next available serial number.</span></span> <span data-ttu-id="6f04c-252">由於此建構函式式執行個體成員，因此它既可存取 `serialNo` 執行個體欄位，也可存取 `nextSerialNo` 靜態欄位。</span><span class="sxs-lookup"><span data-stu-id="6f04c-252">Because the constructor is an instance member, it is permitted to access both the `serialNo` instance field and the `nextSerialNo` static field.</span></span>
 
-`GetNextSerialNo` 和 `SetNextSerialNo` 靜態方法可以存取 `nextSerialNo` 靜態欄位，但如果直接存取 `serialNo` 執行個體欄位，則會產生錯誤。
+<span data-ttu-id="6f04c-253">`GetNextSerialNo` 和 `SetNextSerialNo` 靜態方法可以存取 `nextSerialNo` 靜態欄位，但如果直接存取 `serialNo` 執行個體欄位，則會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="6f04c-253">The `GetNextSerialNo` and `SetNextSerialNo` static methods can access the `nextSerialNo` static field, but it would be an error for them to directly access the `serialNo` instance field.</span></span>
 
-下列範例示範 Entity 類別的用法。
+<span data-ttu-id="6f04c-254">下列範例示範 Entity 類別的用法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-254">The following example shows the use of the Entity class.</span></span>
 
-[!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
+<span data-ttu-id="6f04c-255">[!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-255">[!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]</span></span>
 
-請注意，`SetNextSerialNo` 和 `GetNextSerialNo` 靜態方法的叫用位置是在類別上，而 `GetSerialNo` 執行個體方法的叫用位置則是在類別的執行個體上。
+<span data-ttu-id="6f04c-256">請注意，`SetNextSerialNo` 和 `GetNextSerialNo` 靜態方法的叫用位置是在類別上，而 `GetSerialNo` 執行個體方法的叫用位置則是在類別的執行個體上。</span><span class="sxs-lookup"><span data-stu-id="6f04c-256">Note that the `SetNextSerialNo` and `GetNextSerialNo` static methods are invoked on the class whereas the `GetSerialNo` instance method is invoked on instances of the class.</span></span>
 
-### 虛擬、覆寫及抽象方法
-<a id="virtual-override-and-abstract-methods" class="xliff"></a>
+### <a name="virtual-override-and-abstract-methods"></a><span data-ttu-id="6f04c-257">虛擬、覆寫及抽象方法</span><span class="sxs-lookup"><span data-stu-id="6f04c-257">Virtual, override, and abstract methods</span></span>
 
-當執行個體方法宣告包含 `virtual` 修飾詞時，該方法即稱為「虛擬方法」。 當沒有任何 virtual 修飾詞存在時，該方法則稱為「非虛擬方法」。
+<span data-ttu-id="6f04c-258">當執行個體方法宣告包含 `virtual` 修飾詞時，該方法即稱為「虛擬方法」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-258">When an instance method declaration includes a `virtual` modifier, the method is said to be a *virtual method*.</span></span> <span data-ttu-id="6f04c-259">當沒有任何 virtual 修飾詞存在時，該方法則稱為「非虛擬方法」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-259">When no virtual modifier is present, the method is said to be a *nonvirtual method*.</span></span>
 
-叫用虛擬方法時，叫用所針對之執行個體的「執行階段型別」會決定要叫用的實際方法實作。 在非虛擬方法叫用中，決定因素則是執行個體的「編譯階段型別」。
+<span data-ttu-id="6f04c-260">叫用虛擬方法時，叫用所針對之執行個體的「執行階段型別」會決定要叫用的實際方法實作。</span><span class="sxs-lookup"><span data-stu-id="6f04c-260">When a virtual method is invoked, the *run-time type* of the instance for which that invocation takes place determines the actual method implementation to invoke.</span></span> <span data-ttu-id="6f04c-261">在非虛擬方法叫用中，決定因素則是執行個體的「編譯階段型別」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-261">In a nonvirtual method invocation, the *compile-time type* of the instance is the determining factor.</span></span>
 
-在衍生類別中可以「覆寫」虛擬方法。 當執行個體方法宣告包含 override 修飾詞時，該方法會覆寫具有相同簽章的已繼承虛擬方法。 虛擬方法宣告會導入新的方法，而覆寫方法宣告則是會提供現有已繼承之虛擬方法的新實作，來將該方法特製化。
+<span data-ttu-id="6f04c-262">在衍生類別中可以「覆寫」虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-262">A virtual method can be *overridden* in a derived class.</span></span> <span data-ttu-id="6f04c-263">當執行個體方法宣告包含 override 修飾詞時，該方法會覆寫具有相同簽章的已繼承虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-263">When an instance method declaration includes an override modifier, the method overrides an inherited virtual method with the same signature.</span></span> <span data-ttu-id="6f04c-264">虛擬方法宣告會導入新的方法，而覆寫方法宣告則是會提供現有已繼承之虛擬方法的新實作，來將該方法特製化。</span><span class="sxs-lookup"><span data-stu-id="6f04c-264">Whereas a virtual method declaration introduces a new method, an override method declaration specializes an existing inherited virtual method by providing a new implementation of that method.</span></span>
 
-「抽象方法」係指不含實作的虛擬方法。 宣告抽象方法時，是使用 abstract 修飾詞，並且只有在同樣宣告為抽象的類別中，才能宣告抽象方法。 抽象方法必須在每個非抽象的衍生類別中被覆寫。
+<span data-ttu-id="6f04c-265">「抽象方法」係指不含實作的虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-265">An *abstract method* is a virtual method with no implementation.</span></span> <span data-ttu-id="6f04c-266">宣告抽象方法時，是使用 abstract 修飾詞，並且只有在同樣宣告為抽象的類別中，才能宣告抽象方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-266">An abstract method is declared with the abstract modifier and is permitted only in a class that is also declared abstract.</span></span> <span data-ttu-id="6f04c-267">抽象方法必須在每個非抽象的衍生類別中被覆寫。</span><span class="sxs-lookup"><span data-stu-id="6f04c-267">An abstract method must be overridden in every non-abstract derived class.</span></span>
 
-下列範例會宣告一個抽象類別 `Expression` 和三個衍生的類別 `Constant`、`VariableReference` 及 `Operation`，前者代表一個運算式樹狀架構節點，後者則會實作常數、變數參考及算數運算式的運算式樹狀架構節點。 (這類似於運算式樹狀架構型別，但請勿與其混淆)。
+<span data-ttu-id="6f04c-268">下列範例會宣告一個抽象類別 `Expression` 和三個衍生的類別 `Constant`、`VariableReference` 及 `Operation`，前者代表一個運算式樹狀架構節點，後者則會實作常數、變數參考及算數運算式的運算式樹狀架構節點。</span><span class="sxs-lookup"><span data-stu-id="6f04c-268">The following example declares an abstract class, `Expression`, which represents an expression tree node, and three derived classes, `Constant`, `VariableReference`, and `Operation`, which implement expression tree nodes for constants, variable references, and arithmetic operations.</span></span> <span data-ttu-id="6f04c-269">(這類似於運算式樹狀架構型別，但請勿與其混淆)。</span><span class="sxs-lookup"><span data-stu-id="6f04c-269">(This is similar to, but not to be confused with the expression tree types).</span></span>
 
-[!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
+<span data-ttu-id="6f04c-270">[!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-270">[!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]</span></span>
 
-先前的四個類別可用來建構算數運算式的模型。 例如，在使用這些類別執行個體的情況下，可以將運算式 `x + 3` 表示如下。
+<span data-ttu-id="6f04c-271">先前的四個類別可用來建構算數運算式的模型。</span><span class="sxs-lookup"><span data-stu-id="6f04c-271">The previous four classes can be used to model arithmetic expressions.</span></span> <span data-ttu-id="6f04c-272">例如，在使用這些類別執行個體的情況下，可以將運算式 `x + 3` 表示如下。</span><span class="sxs-lookup"><span data-stu-id="6f04c-272">For example, using instances of these classes, the expression `x + 3` can be represented as follows.</span></span>
 
-[!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
+<span data-ttu-id="6f04c-273">[!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-273">[!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]</span></span>
 
-系統會叫用 `Expression` 執行個體的 `Evaluate` 方法來評估指定的運算式並產生 `double` 值。 此方法會採用包含變數名稱 (作為項目的索引鍵) 和值 (作為項目的值) 的 `Dictionary` 引數。 因為 `Evaluate` 是一種抽象方法，所以衍生自 `Expression` 的非抽象類別必須覆寫 `Evaluate`。
+<span data-ttu-id="6f04c-274">系統會叫用 `Expression` 執行個體的 `Evaluate` 方法來評估指定的運算式並產生 `double` 值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-274">The `Evaluate` method of an `Expression` instance is invoked to evaluate the given expression and produce a `double` value.</span></span> <span data-ttu-id="6f04c-275">此方法會採用包含變數名稱 (作為項目的索引鍵) 和值 (作為項目的值) 的 `Dictionary` 引數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-275">The method takes a `Dictionary` argument that contains variable names (as keys of the entries) and values (as values of the entries).</span></span> <span data-ttu-id="6f04c-276">因為 `Evaluate` 是一種抽象方法，所以衍生自 `Expression` 的非抽象類別必須覆寫 `Evaluate`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-276">Because `Evaluate` is an abstract method, non-abstract classes derived from `Expression` must override `Evaluate`.</span></span>
 
-`Constant` 的 `Evaluate` 實作會直接傳回預存的常數。 `VariableReference` 的實作會查詢字典中的變數名稱並傳回產生的值。 `Operation` 的實作會先評估左邊和右邊的運算元 (透過以遞迴方式叫用其 `Evaluate` 方法)，然後才執行指定的算數運算。
+<span data-ttu-id="6f04c-277">`Constant` 的 `Evaluate` 實作會直接傳回預存的常數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-277">A `Constant`'s implementation of `Evaluate` simply returns the stored constant.</span></span> <span data-ttu-id="6f04c-278">`VariableReference` 的實作會查詢字典中的變數名稱並傳回產生的值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-278">A `VariableReference`'s implementation looks up the variable name in the dictionary and returns the resulting value.</span></span> <span data-ttu-id="6f04c-279">`Operation` 的實作會先評估左邊和右邊的運算元 (透過以遞迴方式叫用其 `Evaluate` 方法)，然後才執行指定的算數運算。</span><span class="sxs-lookup"><span data-stu-id="6f04c-279">An `Operation`'s implementation first evaluates the left and right operands (by recursively invoking their `Evaluate` methods) and then performs the given arithmetic operation.</span></span>
 
-下列程式會使用 `Expression` 類別來評估不同 `x` 和 `y` 值的 `x * (y + 2)` 運算式。
+<span data-ttu-id="6f04c-280">下列程式會使用 `Expression` 類別來評估不同 `x` 和 `y` 值的 `x * (y + 2)` 運算式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-280">The following program uses the `Expression` classes to evaluate the expression `x * (y + 2)` for different values of `x` and `y`.</span></span>
 
-[!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
+<span data-ttu-id="6f04c-281">[!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-281">[!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]</span></span>
 
-### 方法多載
-<a id="method-overloading" class="xliff"></a>
+### <a name="method-overloading"></a><span data-ttu-id="6f04c-282">方法多載</span><span class="sxs-lookup"><span data-stu-id="6f04c-282">Method overloading</span></span>
 
-方法「多載」可允許相同類別中的多個方法擁有相同的名稱，只要它們的簽章是唯一的即可。 編譯多載方法的叫用時，編譯器會使用「多載解析」來判斷要叫用的特定方法。 多載解析會尋找一個與引數最相符的方法，或者，如果找不到任何一個最相符的方法，則會回報錯誤。 下列範例示範多載解析的實際運作情況。 `Main` 方法中每項叫用的註解會顯示實際叫用的方法是哪一個。
+<span data-ttu-id="6f04c-283">方法「多載」可允許相同類別中的多個方法擁有相同的名稱，只要它們的簽章是唯一的即可。</span><span class="sxs-lookup"><span data-stu-id="6f04c-283">Method *overloading* permits multiple methods in the same class to have the same name as long as they have unique signatures.</span></span> <span data-ttu-id="6f04c-284">編譯多載方法的叫用時，編譯器會使用「多載解析」來判斷要叫用的特定方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-284">When compiling an invocation of an overloaded method, the compiler uses *overload resolution* to determine the specific method to invoke.</span></span> <span data-ttu-id="6f04c-285">多載解析會尋找一個與引數最相符的方法，或者，如果找不到任何一個最相符的方法，則會回報錯誤。</span><span class="sxs-lookup"><span data-stu-id="6f04c-285">Overload resolution finds the one method that best matches the arguments or reports an error if no single best match can be found.</span></span> <span data-ttu-id="6f04c-286">下列範例示範多載解析的實際運作情況。</span><span class="sxs-lookup"><span data-stu-id="6f04c-286">The following example shows overload resolution in effect.</span></span> <span data-ttu-id="6f04c-287">`Main` 方法中每項叫用的註解會顯示實際叫用的方法是哪一個。</span><span class="sxs-lookup"><span data-stu-id="6f04c-287">The comment for each invocation in the `Main` method shows which method is actually invoked.</span></span>
 
-[!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
+<span data-ttu-id="6f04c-288">[!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-288">[!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]</span></span>
 
-如範例所示，透過將引數明確轉換成確切的參數型別和 (或) 明確提供型別引數，即一律可以選取特定的方法。
+<span data-ttu-id="6f04c-289">如範例所示，透過將引數明確轉換成確切的參數型別和 (或) 明確提供型別引數，即一律可以選取特定的方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-289">As shown by the example, a particular method can always be selected by explicitly casting the arguments to the exact parameter types and/or explicitly supplying type arguments.</span></span>
 
-## 其他函式成員
-<a id="other-function-members" class="xliff"></a>
+## <a name="other-function-members"></a><span data-ttu-id="6f04c-290">其他函式成員</span><span class="sxs-lookup"><span data-stu-id="6f04c-290">Other function members</span></span>
 
-包含可執行程式碼的成員統稱為類別的「函式成員」。 上節中所述的方法是主要的函式成員類型。 本節將說明 C# 所支援的其他函式成員類型：建構函式、屬性、索引子、事件、運算子及完成項。
+<span data-ttu-id="6f04c-291">包含可執行程式碼的成員統稱為類別的「函式成員」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-291">Members that contain executable code are collectively known as the *function members* of a class.</span></span> <span data-ttu-id="6f04c-292">上節中所述的方法是主要的函式成員類型。</span><span class="sxs-lookup"><span data-stu-id="6f04c-292">The preceding section describes methods, which are the primary kind of function members.</span></span> <span data-ttu-id="6f04c-293">本節將說明 C# 所支援的其他函式成員類型：建構函式、屬性、索引子、事件、運算子及完成項。</span><span class="sxs-lookup"><span data-stu-id="6f04c-293">This section describes the other kinds of function members supported by C#: constructors, properties, indexers, events, operators, and finalizers.</span></span>
 
-以下顯示一個稱為 List<T> 的泛型類別，此類別會實作可成長的物件清單。 此類別包含數個最常見的函式成員類型。
+<span data-ttu-id="6f04c-294">以下顯示一個稱為 List<T> 的泛型類別，此類別會實作可成長的物件清單。</span><span class="sxs-lookup"><span data-stu-id="6f04c-294">The following shows a generic class called List<T>, which implements a growable list of objects.</span></span> <span data-ttu-id="6f04c-295">此類別包含數個最常見的函式成員類型。</span><span class="sxs-lookup"><span data-stu-id="6f04c-295">The class contains several examples of the most common kinds of function members.</span></span>
 
-[!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
+<span data-ttu-id="6f04c-296">[!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-296">[!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]</span></span>
 
-### 建構函式
-<a id="constructors" class="xliff"></a>
+### <a name="constructors"></a><span data-ttu-id="6f04c-297">建構函式</span><span class="sxs-lookup"><span data-stu-id="6f04c-297">Constructors</span></span>
 
-C# 同時支援執行個體建構函式和靜態建構函式。 「執行個體建構函式」是實作將類別執行個體初始化所需之動作的成員。 「靜態建構函式」是實作第一次將類別本身載入時將其初始化所需之動作的成員。
+<span data-ttu-id="6f04c-298">C# 同時支援執行個體建構函式和靜態建構函式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-298">C# supports both instance and static constructors.</span></span> <span data-ttu-id="6f04c-299">「執行個體建構函式」是實作將類別執行個體初始化所需之動作的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-299">An *instance constructor* is a member that implements the actions required to initialize an instance of a class.</span></span> <span data-ttu-id="6f04c-300">「靜態建構函式」是實作第一次將類別本身載入時將其初始化所需之動作的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-300">A *static constructor* is a member that implements the actions required to initialize a class itself when it is first loaded.</span></span>
 
-建構函式的宣告方式與方法類似，但不含傳回型別且名稱會與包含它的類別相同。 如果建構函式宣告包含 static 修飾詞，則所宣告的就是靜態建構函式。 否則，所宣告的會是執行個體建構函式。
+<span data-ttu-id="6f04c-301">建構函式的宣告方式與方法類似，但不含傳回型別且名稱會與包含它的類別相同。</span><span class="sxs-lookup"><span data-stu-id="6f04c-301">A constructor is declared like a method with no return type and the same name as the containing class.</span></span> <span data-ttu-id="6f04c-302">如果建構函式宣告包含 static 修飾詞，則所宣告的就是靜態建構函式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-302">If a constructor declaration includes a static modifier, it declares a static constructor.</span></span> <span data-ttu-id="6f04c-303">否則，所宣告的會是執行個體建構函式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-303">Otherwise, it declares an instance constructor.</span></span>
 
-執行個體建構函式可被多載，並且可以有選用的參數。 例如，`List<T>` 類別會宣告兩個執行個體建構函式，一個沒有任何參數，另一個會採用 `int` 參數。 叫用執行個體建構函式時，是使用 `new` 運算子來叫用。 下列陳述式會使用 `List` 類別的建構函式搭配或不搭配選用的引數來配置兩個 `List<string>` 執行個體。
+<span data-ttu-id="6f04c-304">執行個體建構函式可被多載，並且可以有選用的參數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-304">Instance constructors can be overloaded, and can have optional parameters.</span></span> <span data-ttu-id="6f04c-305">例如，`List<T>` 類別會宣告兩個執行個體建構函式，一個沒有任何參數，另一個會採用 `int` 參數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-305">For example, the `List<T>` class declares two instance constructors, one with no parameters and one that takes an `int` parameter.</span></span> <span data-ttu-id="6f04c-306">叫用執行個體建構函式時，是使用 `new` 運算子來叫用。</span><span class="sxs-lookup"><span data-stu-id="6f04c-306">Instance constructors are invoked using the `new` operator.</span></span> <span data-ttu-id="6f04c-307">下列陳述式會使用 `List` 類別的建構函式搭配或不搭配選用的引數來配置兩個 `List<string>` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="6f04c-307">The following statements allocate two `List<string>` instances using the constructor of the `List` class with and without the optional argument.</span></span>
 
-[!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
+<span data-ttu-id="6f04c-308">[!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-308">[!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]</span></span>
 
-與其他成員不同，類別並不會繼承執行個體建構函式，而且除了類別中實際宣告的執行個體建構函式以外，類別即不會再有任何執行個體建構函式。 如果沒有為類別提供任何執行個體建構函式，則會自動提供一個沒有任何參數的空建構函式。
+<span data-ttu-id="6f04c-309">與其他成員不同，類別並不會繼承執行個體建構函式，而且除了類別中實際宣告的執行個體建構函式以外，類別即不會再有任何執行個體建構函式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-309">Unlike other members, instance constructors are not inherited, and a class has no instance constructors other than those actually declared in the class.</span></span> <span data-ttu-id="6f04c-310">如果沒有為類別提供任何執行個體建構函式，則會自動提供一個沒有任何參數的空建構函式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-310">If no instance constructor is supplied for a class, then an empty one with no parameters is automatically provided.</span></span>
 
-### 屬性
-<a id="properties" class="xliff"></a>
+### <a name="properties"></a><span data-ttu-id="6f04c-311">屬性</span><span class="sxs-lookup"><span data-stu-id="6f04c-311">Properties</span></span>
 
-「屬性」是欄位的自然延伸。 兩者都是具有關聯型別的具名成員，並且用來存取欄位和屬性的語法是相同的。 不過，與欄位不同的是，屬性並不會指示儲存位置。 取而代之的是，屬性會有「存取子」，這些存取子會指定讀取或寫入其值時要執行的陳述式。
+<span data-ttu-id="6f04c-312">「屬性」是欄位的自然延伸。</span><span class="sxs-lookup"><span data-stu-id="6f04c-312">*Properties* are a natural extension of fields.</span></span> <span data-ttu-id="6f04c-313">兩者都是具有關聯型別的具名成員，並且用來存取欄位和屬性的語法是相同的。</span><span class="sxs-lookup"><span data-stu-id="6f04c-313">Both are named members with associated types, and the syntax for accessing fields and properties is the same.</span></span> <span data-ttu-id="6f04c-314">不過，與欄位不同的是，屬性並不會指示儲存位置。</span><span class="sxs-lookup"><span data-stu-id="6f04c-314">However, unlike fields, properties do not denote storage locations.</span></span> <span data-ttu-id="6f04c-315">取而代之的是，屬性會有「存取子」，這些存取子會指定讀取或寫入其值時要執行的陳述式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-315">Instead, properties have *accessors* that specify the statements to be executed when their values are read or written.</span></span>
 
-屬性的宣告方式與欄位類似，不同之處在於宣告會以在 `{` 與 `}` 分隔符號之間撰寫的 get 存取子和 (或) set 存取子作為結尾，而不是以分號作為結尾。 同時具有 get 存取子和 set 存取子的屬性是「讀寫屬性」，只有 get 存取子的屬性是「唯讀屬性」，而只有 set 存取子的屬性則是「唯寫屬性」。
+<span data-ttu-id="6f04c-316">屬性的宣告方式與欄位類似，不同之處在於宣告會以在 `{` 與 `}` 分隔符號之間撰寫的 get 存取子和 (或) set 存取子作為結尾，而不是以分號作為結尾。</span><span class="sxs-lookup"><span data-stu-id="6f04c-316">A property is declared like a field, except that the declaration ends with a get accessor and/or a set accessor written between the delimiters `{` and `}` instead of ending in a semicolon.</span></span> <span data-ttu-id="6f04c-317">同時具有 get 存取子和 set 存取子的屬性是「讀寫屬性」，只有 get 存取子的屬性是「唯讀屬性」，而只有 set 存取子的屬性則是「唯寫屬性」。</span><span class="sxs-lookup"><span data-stu-id="6f04c-317">A property that has both a get accessor and a set accessor is a *read-write property*, a property that has only a get accessor is a *read-only property*, and a property that has only a set accessor is a *write-only property*.</span></span>
 
-get 存取子會與傳回值屬於屬性型別的無參數方法對應。 除了作為指派目標的情況以外，在運算式中參考屬性時，會叫用屬性的 get 存取子來計算屬性的值。
+<span data-ttu-id="6f04c-318">get 存取子會與傳回值屬於屬性型別的無參數方法對應。</span><span class="sxs-lookup"><span data-stu-id="6f04c-318">A get accessor corresponds to a parameterless method with a return value of the property type.</span></span> <span data-ttu-id="6f04c-319">除了作為指派目標的情況以外，在運算式中參考屬性時，會叫用屬性的 get 存取子來計算屬性的值。</span><span class="sxs-lookup"><span data-stu-id="6f04c-319">Except as the target of an assignment, when a property is referenced in an expression, the get accessor of the property is invoked to compute the value of the property.</span></span>
 
-set 存取子會與具有單一參數具名值且沒有任何傳回型別的方法對應。 將屬性作為指派目標或是作為 ++ 或 -- 的運算元來參考時，會以提供新值的引數來叫用 set 存取子。
+<span data-ttu-id="6f04c-320">set 存取子會與具有單一參數具名值且沒有任何傳回型別的方法對應。</span><span class="sxs-lookup"><span data-stu-id="6f04c-320">A set accessor corresponds to a method with a single parameter named value and no return type.</span></span> <span data-ttu-id="6f04c-321">將屬性作為指派目標或是作為 ++ 或 -- 的運算元來參考時，會以提供新值的引數來叫用 set 存取子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-321">When a property is referenced as the target of an assignment or as the operand of ++ or --, the set accessor is invoked with an argument that provides the new value.</span></span>
 
-`List<T>` 類別會宣告 Count 和 Capacity 這兩個屬性，它們分別是唯讀和讀寫屬性。 以下是這些屬性的用法範例。
+<span data-ttu-id="6f04c-322">`List<T>` 類別會宣告 Count 和 Capacity 這兩個屬性，它們分別是唯讀和讀寫屬性。</span><span class="sxs-lookup"><span data-stu-id="6f04c-322">The `List<T>` class declares two properties, Count and Capacity, which are read-only and read-write, respectively.</span></span> <span data-ttu-id="6f04c-323">以下是這些屬性的用法範例。</span><span class="sxs-lookup"><span data-stu-id="6f04c-323">The following is an example of use of these properties.</span></span>
 
-[!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
+<span data-ttu-id="6f04c-324">[!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-324">[!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]</span></span>
 
-與欄位和方法類似，C# 也同時支援執行個體屬性和靜態屬性。 宣告靜態屬性時，是使用 static 修飾詞來宣告，而宣告執行個體屬性時，則不使用該修飾詞。
+<span data-ttu-id="6f04c-325">與欄位和方法類似，C# 也同時支援執行個體屬性和靜態屬性。</span><span class="sxs-lookup"><span data-stu-id="6f04c-325">Similar to fields and methods, C# supports both instance properties and static properties.</span></span> <span data-ttu-id="6f04c-326">宣告靜態屬性時，是使用 static 修飾詞來宣告，而宣告執行個體屬性時，則不使用該修飾詞。</span><span class="sxs-lookup"><span data-stu-id="6f04c-326">Static properties are declared with the static modifier, and instance properties are declared without it.</span></span>
 
-屬性的存取子可以是虛擬的。 當屬性宣告包含 `virtual`、`abstract` 或 `override` 修飾詞時，會套用至該屬性的存取子。
+<span data-ttu-id="6f04c-327">屬性的存取子可以是虛擬的。</span><span class="sxs-lookup"><span data-stu-id="6f04c-327">The accessor(s) of a property can be virtual.</span></span> <span data-ttu-id="6f04c-328">當屬性宣告包含 `virtual`、`abstract` 或 `override` 修飾詞時，會套用至該屬性的存取子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-328">When a property declaration includes a `virtual`, `abstract`, or `override` modifier, it applies to the accessor(s) of the property.</span></span>
 
-### 索引子
-<a id="indexers" class="xliff"></a>
+### <a name="indexers"></a><span data-ttu-id="6f04c-329">索引子</span><span class="sxs-lookup"><span data-stu-id="6f04c-329">Indexers</span></span>
 
-「索引子」是可讓物件以和陣列相同的方式進行索引編製的成員。 索引子的宣告方式與屬性類似，不同之處在於成員的名稱是 this 後面接著在 `[` 與 `]` 分隔符號之間撰寫的參數清單。 索引子的存取子中會提供參數。 與屬性類似，索引子可以是讀寫、唯讀及唯寫的，而索引子的存取子可以是虛擬的。
+<span data-ttu-id="6f04c-330">「索引子」是可讓物件以和陣列相同的方式進行索引編製的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-330">An *indexer* is a member that enables objects to be indexed in the same way as an array.</span></span> <span data-ttu-id="6f04c-331">索引子的宣告方式與屬性類似，不同之處在於成員的名稱是 this 後面接著在 `[` 與 `]` 分隔符號之間撰寫的參數清單。</span><span class="sxs-lookup"><span data-stu-id="6f04c-331">An indexer is declared like a property except that the name of the member is this followed by a parameter list written between the delimiters `[` and `]`.</span></span> <span data-ttu-id="6f04c-332">索引子的存取子中會提供參數。</span><span class="sxs-lookup"><span data-stu-id="6f04c-332">The parameters are available in the accessor(s) of the indexer.</span></span> <span data-ttu-id="6f04c-333">與屬性類似，索引子可以是讀寫、唯讀及唯寫的，而索引子的存取子可以是虛擬的。</span><span class="sxs-lookup"><span data-stu-id="6f04c-333">Similar to properties, indexers can be read-write, read-only, and write-only, and the accessor(s) of an indexer can be virtual.</span></span>
 
-`List` 類別會宣告一個採用 `int` 參數的單一讀寫索引子。 此索引子使得系統能夠以 `int` 值編製 `List` 執行個體的索引。 例如: 
+<span data-ttu-id="6f04c-334">`List` 類別會宣告一個採用 `int` 參數的單一讀寫索引子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-334">The `List` class declares a single read-write indexer that takes an `int` parameter.</span></span> <span data-ttu-id="6f04c-335">此索引子使得系統能夠以 `int` 值編製 `List` 執行個體的索引。</span><span class="sxs-lookup"><span data-stu-id="6f04c-335">The indexer makes it possible to index `List` instances with `int` values.</span></span> <span data-ttu-id="6f04c-336">例如: </span><span class="sxs-lookup"><span data-stu-id="6f04c-336">For example:</span></span>
 
-[!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
+<span data-ttu-id="6f04c-337">[!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-337">[!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]</span></span>
 
-索引子可被多載，這意謂著類別可以宣告多個索引子，只要其參數的號碼或型別不同即可。
+<span data-ttu-id="6f04c-338">索引子可被多載，這意謂著類別可以宣告多個索引子，只要其參數的號碼或型別不同即可。</span><span class="sxs-lookup"><span data-stu-id="6f04c-338">Indexers can be overloaded, meaning that a class can declare multiple indexers as long as the number or types of their parameters differ.</span></span>
 
-### 事件
-<a id="events" class="xliff"></a>
+### <a name="events"></a><span data-ttu-id="6f04c-339">事件</span><span class="sxs-lookup"><span data-stu-id="6f04c-339">Events</span></span>
 
-「事件」是可讓類別或物件提供通知的成員。 事件的宣告方式與欄位類似，不同之處在於其宣告包含事件關鍵字，並且型別必須是委派型別。
+<span data-ttu-id="6f04c-340">「事件」是可讓類別或物件提供通知的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-340">An *event* is a member that enables a class or object to provide notifications.</span></span> <span data-ttu-id="6f04c-341">事件的宣告方式與欄位類似，不同之處在於其宣告包含事件關鍵字，並且型別必須是委派型別。</span><span class="sxs-lookup"><span data-stu-id="6f04c-341">An event is declared like a field except that the declaration includes an event keyword and the type must be a delegate type.</span></span>
 
-在宣告事件成員的類別內，事件的行為與委派型別的欄位相同 (前提是該事件不是抽象事件且未宣告存取子)。 欄位會儲存對委派項目的參考，該委派項目代表已新增到事件中的事件處理常式。 如果沒有任何事件處理常式存在，欄位就會是 `null`。
+<span data-ttu-id="6f04c-342">在宣告事件成員的類別內，事件的行為與委派型別的欄位相同 (前提是該事件不是抽象事件且未宣告存取子)。</span><span class="sxs-lookup"><span data-stu-id="6f04c-342">Within a class that declares an event member, the event behaves just like a field of a delegate type (provided the event is not abstract and does not declare accessors).</span></span> <span data-ttu-id="6f04c-343">欄位會儲存對委派項目的參考，該委派項目代表已新增到事件中的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="6f04c-343">The field stores a reference to a delegate that represents the event handlers that have been added to the event.</span></span> <span data-ttu-id="6f04c-344">如果沒有任何事件處理常式存在，欄位就會是 `null`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-344">If no event handlers are present, the field is `null`.</span></span>
 
-`List<T>` 類別會宣告一個名為 `Changed` 的單一事件成員，此成員會指出新項目已新增到清單中。 Changed 事件是由 `OnChanged` 虛擬方法所引發，此方法會先檢查事件是否為 `null` (意謂著沒有任何處理常式存在)。 引發事件的概念完全等同於叫用該事件所代表的委派項目，因此，就引發事件而言，並沒有任何特殊的語言建構。
+<span data-ttu-id="6f04c-345">`List<T>` 類別會宣告一個名為 `Changed` 的單一事件成員，此成員會指出新項目已新增到清單中。</span><span class="sxs-lookup"><span data-stu-id="6f04c-345">The `List<T>` class declares a single event member called `Changed`, which indicates that a new item has been added to the list.</span></span> <span data-ttu-id="6f04c-346">Changed 事件是由 `OnChanged` 虛擬方法所引發，此方法會先檢查事件是否為 `null` (意謂著沒有任何處理常式存在)。</span><span class="sxs-lookup"><span data-stu-id="6f04c-346">The Changed event is raised by the `OnChanged` virtual method, which first checks whether the event is `null` (meaning that no handlers are present).</span></span> <span data-ttu-id="6f04c-347">引發事件的概念完全等同於叫用該事件所代表的委派項目，因此，就引發事件而言，並沒有任何特殊的語言建構。</span><span class="sxs-lookup"><span data-stu-id="6f04c-347">The notion of raising an event is precisely equivalent to invoking the delegate represented by the event—thus, there are no special language constructs for raising events.</span></span>
 
-用戶端是透過「事件處理常式」來對事件進行反應。 附加事件處理常式時，是使用 `+=` 運算子，移除時，則是使用 `-=` 運算子。 下列範例會將事件處理常式附加到 `List<string>` 的 `Changed` 事件。
+<span data-ttu-id="6f04c-348">用戶端是透過「事件處理常式」來對事件進行反應。</span><span class="sxs-lookup"><span data-stu-id="6f04c-348">Clients react to events through *event handlers*.</span></span> <span data-ttu-id="6f04c-349">附加事件處理常式時，是使用 `+=` 運算子，移除時，則是使用 `-=` 運算子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-349">Event handlers are attached using the `+=` operator and removed using the `-=` operator.</span></span> <span data-ttu-id="6f04c-350">下列範例會將事件處理常式附加到 `List<string>` 的 `Changed` 事件。</span><span class="sxs-lookup"><span data-stu-id="6f04c-350">The following example attaches an event handler to the `Changed` event of a `List<string>`.</span></span>
 
-[!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
+<span data-ttu-id="6f04c-351">[!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-351">[!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]</span></span>
 
-針對需要控制事件之基礎儲存的進階案例，事件宣告可以明確提供 `add` 和 `remove` 存取子，這有些類似於屬性的 `set` 存取子。
+<span data-ttu-id="6f04c-352">針對需要控制事件之基礎儲存的進階案例，事件宣告可以明確提供 `add` 和 `remove` 存取子，這有些類似於屬性的 `set` 存取子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-352">For advanced scenarios where control of the underlying storage of an event is desired, an event declaration can explicitly provide `add` and `remove` accessors, which are somewhat similar to the `set` accessor of a property.</span></span>
 
-### 運算子
-<a id="operators" class="xliff"></a>
+### <a name="operators"></a><span data-ttu-id="6f04c-353">運算子</span><span class="sxs-lookup"><span data-stu-id="6f04c-353">Operators</span></span>
 
-「運算子」是定義將特定運算式運算子套用到類別執行個體之意義的成員。 可定義的運算子有三種：一元運算子、二元運算子及轉換運算子。 所有運算子都必須宣告為 `public` 和 `static`。
+<span data-ttu-id="6f04c-354">「運算子」是定義將特定運算式運算子套用到類別執行個體之意義的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-354">An *operator* is a member that defines the meaning of applying a particular expression operator to instances of a class.</span></span> <span data-ttu-id="6f04c-355">可定義的運算子有三種：一元運算子、二元運算子及轉換運算子。</span><span class="sxs-lookup"><span data-stu-id="6f04c-355">Three kinds of operators can be defined: unary operators, binary operators, and conversion operators.</span></span> <span data-ttu-id="6f04c-356">所有運算子都必須宣告為 `public` 和 `static`。</span><span class="sxs-lookup"><span data-stu-id="6f04c-356">All operators must be declared as `public` and `static`.</span></span>
 
-`List<T>` 類別會宣告 `operator ==` 和 `operator !=` 這兩個運算子，藉此賦予將這些運算子套用到 `List` 執行個體的運算式新意義。 具體而言，運算子會將兩個 `List<T>` 執行個體的等號比較定義為使用其 Equals 方法來比較所含的每個物件。 下列範例會使用 `==` 運算子來比較兩個 `List<int>` 執行個體。
+<span data-ttu-id="6f04c-357">`List<T>` 類別會宣告 `operator ==` 和 `operator !=` 這兩個運算子，藉此賦予將這些運算子套用到 `List` 執行個體的運算式新意義。</span><span class="sxs-lookup"><span data-stu-id="6f04c-357">The `List<T>` class declares two operators, `operator ==` and `operator !=`, and thus gives new meaning to expressions that apply those operators to `List` instances.</span></span> <span data-ttu-id="6f04c-358">具體而言，運算子會將兩個 `List<T>` 執行個體的等號比較定義為使用其 Equals 方法來比較所含的每個物件。</span><span class="sxs-lookup"><span data-stu-id="6f04c-358">Specifically, the operators define equality of two `List<T>` instances as comparing each of the contained objects using their Equals methods.</span></span> <span data-ttu-id="6f04c-359">下列範例會使用 `==` 運算子來比較兩個 `List<int>` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="6f04c-359">The following example uses the `==` operator to compare two `List<int>` instances.</span></span>
 
-[!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
+<span data-ttu-id="6f04c-360">[!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]</span><span class="sxs-lookup"><span data-stu-id="6f04c-360">[!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]</span></span>
 
-第一個 `Console.WriteLine` 會輸出 `True`，因為兩個清單所包含物件的數目相同、值相同且順序相同。 如果 `List<T>` 並未定義 `operator ==`，則第一個 `Console.WriteLine` 所輸出的會是 `False`，因為 `a` 和 `b` 參考不同的 `List<int>` 執行個體。
+<span data-ttu-id="6f04c-361">第一個 `Console.WriteLine` 會輸出 `True`，因為兩個清單所包含物件的數目相同、值相同且順序相同。</span><span class="sxs-lookup"><span data-stu-id="6f04c-361">The first `Console.WriteLine` outputs `True` because the two lists contain the same number of objects with the same values in the same order.</span></span> <span data-ttu-id="6f04c-362">如果 `List<T>` 並未定義 `operator ==`，則第一個 `Console.WriteLine` 所輸出的會是 `False`，因為 `a` 和 `b` 參考不同的 `List<int>` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="6f04c-362">Had `List<T>` not defined `operator ==`, the first `Console.WriteLine` would have output `False` because `a` and `b` reference different `List<int>` instances.</span></span>
 
-### 完成項
-<a id="finalizers" class="xliff"></a>
+### <a name="finalizers"></a><span data-ttu-id="6f04c-363">完成項</span><span class="sxs-lookup"><span data-stu-id="6f04c-363">Finalizers</span></span>
 
-「完成項」是實作將類別執行個體完成所需之動作的成員。 完成項不能有參數、不能有存取能力修飾詞，也不能以明確方式來叫用。 系統會在記憶體回收期間自動叫用執行個體的完成項。
+<span data-ttu-id="6f04c-364">「完成項」是實作將類別執行個體完成所需之動作的成員。</span><span class="sxs-lookup"><span data-stu-id="6f04c-364">A *finalizer* is a member that implements the actions required to finalize an instance of a class.</span></span> <span data-ttu-id="6f04c-365">完成項不能有參數、不能有存取能力修飾詞，也不能以明確方式來叫用。</span><span class="sxs-lookup"><span data-stu-id="6f04c-365">Finalizers cannot have parameters, they cannot have accessibility modifiers, and they cannot be invoked explicitly.</span></span> <span data-ttu-id="6f04c-366">系統會在記憶體回收期間自動叫用執行個體的完成項。</span><span class="sxs-lookup"><span data-stu-id="6f04c-366">The finalizer for an instance is invoked automatically during garbage collection.</span></span>
 
-記憶體回收行程有相當大的自由來決定何時回收物件並執行完成項。 具體而言，叫用完成項的時機並沒有決定性，而完成項可能在任何執行緒上執行。 基於這些及其他理由，類別應該只有在沒有任何其他解決方案可行時，才實作完成項。
+<span data-ttu-id="6f04c-367">記憶體回收行程有相當大的自由來決定何時回收物件並執行完成項。</span><span class="sxs-lookup"><span data-stu-id="6f04c-367">The garbage collector is allowed wide latitude in deciding when to collect objects and run finalizers.</span></span> <span data-ttu-id="6f04c-368">具體而言，叫用完成項的時機並沒有決定性，而完成項可能在任何執行緒上執行。</span><span class="sxs-lookup"><span data-stu-id="6f04c-368">Specifically, the timing of finalizer invocations is not deterministic, and finalizers may be executed on any thread.</span></span> <span data-ttu-id="6f04c-369">基於這些及其他理由，類別應該只有在沒有任何其他解決方案可行時，才實作完成項。</span><span class="sxs-lookup"><span data-stu-id="6f04c-369">For these and other reasons, classes should implement finalizers only when no other solutions are feasible.</span></span>
 
-`using` 陳述式提供較佳的物件解構方法。
+<span data-ttu-id="6f04c-370">`using` 陳述式提供較佳的物件解構方法。</span><span class="sxs-lookup"><span data-stu-id="6f04c-370">The `using` statement provides a better approach to object destruction.</span></span>
 
 >[!div class="step-by-step"]
-[上一頁](statements.md)
-[下一頁](structs.md)
-
+<span data-ttu-id="6f04c-371">[上一頁](statements.md)
+[下一頁](structs.md)</span><span class="sxs-lookup"><span data-stu-id="6f04c-371">[Previous](statements.md)
+[Next](structs.md)</span></span>
 

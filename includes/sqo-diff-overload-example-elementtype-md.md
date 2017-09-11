@@ -1,2 +1,2 @@
 > [!NOTE]
->  這個程式碼範例會使用此多載方法的多載，這個多載不是本主題描述的特定多載。 若要擴充範例以符合本主題內容，請以具有適當數值類型的項目取代來源序列的項目。
+>  <span data-ttu-id="72b10-101">這個程式碼範例會使用此多載方法的多載，這個多載不是本主題描述的特定多載。</span><span class="sxs-lookup"><span data-stu-id="72b10-101">This code example uses an overload of this overloaded method that is different from the specific overload that this topic describes.</span></span> <span data-ttu-id="72b10-102">若要擴充範例以符合本主題內容，請以具有適當數值類型的項目取代來源序列的項目。</span><span class="sxs-lookup"><span data-stu-id="72b10-102">To extend the example to this topic, substitute the elements of the source sequence with elements of the appropriate numerical type.</span></span>

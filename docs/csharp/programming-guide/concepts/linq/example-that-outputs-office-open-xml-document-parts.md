@@ -1,5 +1,5 @@
 ---
-title: "輸出 Office Open XML 文件部分內容的範例 (C#) | Microsoft Docs"
+title: "輸出 Office Open XML 文件部分內容的範例 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,21 +14,20 @@ ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16b9636a914186fe5f2625b045127c6198939cb0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7b2135a0894e1fa5a553552fa128809d740dea2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>輸出 Office Open XML 文件部分內容的範例 (C#)
-本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="968fd-102">輸出 Office Open XML 文件部分內容的範例 (C#)</span><span class="sxs-lookup"><span data-stu-id="968fd-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="968fd-103">本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。</span><span class="sxs-lookup"><span data-stu-id="968fd-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會開啟 Office Open XML 文件，並列印主控台的文件部分與樣式部分。  
+## <a name="example"></a><span data-ttu-id="968fd-104">範例</span><span class="sxs-lookup"><span data-stu-id="968fd-104">Example</span></span>  
+ <span data-ttu-id="968fd-105">下列範例會開啟 Office Open XML 文件，並列印主控台的文件部分與樣式部分。</span><span class="sxs-lookup"><span data-stu-id="968fd-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的類型。  
+ <span data-ttu-id="968fd-106">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="968fd-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="968fd-107">它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="968fd-107">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -79,5 +78,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Office Open XML WordprocessingML 文件的詳細資料 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="968fd-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="968fd-108">See Also</span></span>  
+ [<span data-ttu-id="968fd-109">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="968fd-109">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+

@@ -1,1 +1,1 @@
-全域組件快取 (GAC)
+<span data-ttu-id="00121-101">全域組件快取 (GAC)</span><span class="sxs-lookup"><span data-stu-id="00121-101">global assembly cache (GAC)</span></span>

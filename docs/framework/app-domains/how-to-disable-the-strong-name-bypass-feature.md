@@ -1,5 +1,5 @@
 ---
-title: "如何：停用強式名稱略過功能 | Microsoft Docs"
+title: "如何：停用強式名稱略過功能"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,38 +17,38 @@ caps.latest.revision: 30
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 73e27a6a1cb58a410bf3c1601e5a5412762242c7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0af565c6d27be6a5a22bfb0fd1f90e4e46deec33
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：停用強式名稱略過功能
-從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，當組件載入到完全信任的 <xref:System.AppDomain> 物件 (例如適用於 `MyComputer` 區域的預設 <xref:System.AppDomain>) 時，不會驗證強式名稱簽章。 這是指強式名稱略過功能。 在完全信任環境中，不論簽章為何，已簽署、完全信任的組件要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 一律會成功。 唯一的限制是組件必須是完全受信任的，因為它的區域是完全信任的。 因為強式名稱不是這些情況下的決定因素，所以不需要進行驗證。 略過強式名稱簽章驗證可大幅提升效能。  
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a><span data-ttu-id="b5108-102">如何：停用強式名稱略過功能</span><span class="sxs-lookup"><span data-stu-id="b5108-102">How to: Disable the Strong-Name Bypass Feature</span></span>
+<span data-ttu-id="b5108-103">從 .NET Framework 3.5 版 Service Pack 1 (SP1) 開始，當組件載入到完全信任的 <xref:System.AppDomain> 物件 (例如適用於 `MyComputer` 區域的預設 <xref:System.AppDomain>) 時，不會驗證強式名稱簽章。</span><span class="sxs-lookup"><span data-stu-id="b5108-103">Starting with the .NET Framework version 3.5 Service Pack 1 (SP1), strong-name signatures are not validated when an assembly is loaded into a full-trust <xref:System.AppDomain> object, such as the default <xref:System.AppDomain> for the `MyComputer` zone.</span></span> <span data-ttu-id="b5108-104">這是指強式名稱略過功能。</span><span class="sxs-lookup"><span data-stu-id="b5108-104">This is referred to as the strong-name bypass feature.</span></span> <span data-ttu-id="b5108-105">在完全信任環境中，不論簽章為何，已簽署、完全信任的組件要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 一律會成功。</span><span class="sxs-lookup"><span data-stu-id="b5108-105">In a full-trust environment, demands for <xref:System.Security.Permissions.StrongNameIdentityPermission> always succeed for signed, full-trust assemblies regardless of their signature.</span></span> <span data-ttu-id="b5108-106">唯一的限制是組件必須是完全受信任的，因為它的區域是完全信任的。</span><span class="sxs-lookup"><span data-stu-id="b5108-106">The only restriction is that the assembly must be fully trusted because its zone is fully trusted.</span></span> <span data-ttu-id="b5108-107">因為強式名稱不是這些情況下的決定因素，所以不需要進行驗證。</span><span class="sxs-lookup"><span data-stu-id="b5108-107">Because the strong name is not a determining factor under these conditions, there is no reason for it to be validated.</span></span> <span data-ttu-id="b5108-108">略過強式名稱簽章驗證可大幅提升效能。</span><span class="sxs-lookup"><span data-stu-id="b5108-108">Bypassing the validation of strong-name signatures provides significant performance improvements.</span></span>  
   
- 略過功能適用於任何完全信任的組件，該組件非延遲簽署，且已從其 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性指定的目錄載入至所有完全信任的 <xref:System.AppDomain>。  
+ <span data-ttu-id="b5108-109">略過功能適用於任何完全信任的組件，該組件非延遲簽署，且已從其 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性指定的目錄載入至所有完全信任的 <xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="b5108-109">The bypass feature applies to any full-trust assembly that is not delay-signed and that is loaded into any full-trust <xref:System.AppDomain> from the directory specified by its <xref:System.AppDomainSetup.ApplicationBase%2A> property.</span></span>  
   
- 您可以設定登錄機碼值，覆寫電腦上所有應用程式的略過功能。 您可以使用應用程式組態檔覆寫單一應用程式的設定。 如果登錄機碼已停用該功能，您即無法恢復單一應用程式的略過功能。  
+ <span data-ttu-id="b5108-110">您可以設定登錄機碼值，覆寫電腦上所有應用程式的略過功能。</span><span class="sxs-lookup"><span data-stu-id="b5108-110">You can override the bypass feature for all applications on a computer by setting a registry key value.</span></span> <span data-ttu-id="b5108-111">您可以使用應用程式組態檔覆寫單一應用程式的設定。</span><span class="sxs-lookup"><span data-stu-id="b5108-111">You can override the setting for a single application by using an application configuration file.</span></span> <span data-ttu-id="b5108-112">如果登錄機碼已停用該功能，您即無法恢復單一應用程式的略過功能。</span><span class="sxs-lookup"><span data-stu-id="b5108-112">You cannot reinstate the bypass feature for a single application if it has been disabled by the registry key.</span></span>  
   
- 當您覆寫略過功能時，只會驗證強式名稱的正確性，不檢查 <xref:System.Security.Permissions.StrongNameIdentityPermission>。 如果您想要確認特定的強式名稱，您必須另外執行檢查。  
+ <span data-ttu-id="b5108-113">當您覆寫略過功能時，只會驗證強式名稱的正確性，不檢查 <xref:System.Security.Permissions.StrongNameIdentityPermission>。</span><span class="sxs-lookup"><span data-stu-id="b5108-113">When you override the bypass feature, the strong name is validated only for correctness; it is not checked for a <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span></span> <span data-ttu-id="b5108-114">如果您想要確認特定的強式名稱，您必須另外執行檢查。</span><span class="sxs-lookup"><span data-stu-id="b5108-114">If you want to confirm a specific strong name, you have to perform that check separately.</span></span>  
   
 > [!IMPORTANT]
->  能否強制執行強式名稱驗證，視登錄機碼而定，如下列程序所述。 如果在沒有存取控制清單 (ACL) 權限的帳戶下，執行應用程式存取該登錄機碼，則設定為無效。 您必須確定此機碼已設定 ACL 權限，它才能為所有組件讀取。  
+>  <span data-ttu-id="b5108-115">能否強制執行強式名稱驗證，視登錄機碼而定，如下列程序所述。</span><span class="sxs-lookup"><span data-stu-id="b5108-115">The ability to force strong-name validation depends on a registry key, as described in the following procedure.</span></span> <span data-ttu-id="b5108-116">如果在沒有存取控制清單 (ACL) 權限的帳戶下，執行應用程式存取該登錄機碼，則設定為無效。</span><span class="sxs-lookup"><span data-stu-id="b5108-116">If an application is running under an account that does not have access control list (ACL) permission to access that registry key, the setting is ineffective.</span></span> <span data-ttu-id="b5108-117">您必須確定此機碼已設定 ACL 權限，它才能為所有組件讀取。</span><span class="sxs-lookup"><span data-stu-id="b5108-117">You must ensure that ACL rights are configured for this key so that it can be read for all assemblies.</span></span>  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>停用所有應用程式的強式名稱略過功能  
+### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a><span data-ttu-id="b5108-118">停用所有應用程式的強式名稱略過功能</span><span class="sxs-lookup"><span data-stu-id="b5108-118">To disable the strong-name bypass feature for all applications</span></span>  
   
--   在 32 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。  
+-   <span data-ttu-id="b5108-119">在 32 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。</span><span class="sxs-lookup"><span data-stu-id="b5108-119">On 32-bit computers, in the system registry, create a DWORD entry with a value of 0 named `AllowStrongNameBypass` under the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.</span></span>  
   
--   在 64 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 和 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。  
+-   <span data-ttu-id="b5108-120">在 64 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 和 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 機碼下，建立值為 0、名為 `AllowStrongNameBypass` 的 DWORD 項目。</span><span class="sxs-lookup"><span data-stu-id="b5108-120">On 64-bit computers, in the system registry, create a DWORD entry with a value of 0 named `AllowStrongNameBypass` under the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework and HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework keys.</span></span>  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>停用單一應用程式的強式名稱略過功能  
+### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a><span data-ttu-id="b5108-121">停用單一應用程式的強式名稱略過功能</span><span class="sxs-lookup"><span data-stu-id="b5108-121">To disable the strong-name bypass feature for a single application</span></span>  
   
-1.  開啟或建立應用程式組態檔。  
+1.  <span data-ttu-id="b5108-122">開啟或建立應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="b5108-122">Open or create the application configuration file.</span></span>  
   
-     如需此檔案的詳細資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)的＜應用程式組態檔＞一節。  
+     <span data-ttu-id="b5108-123">如需此檔案的詳細資訊，請參閱[設定應用程式](../../../docs/framework/configure-apps/index.md)的＜應用程式組態檔＞一節。</span><span class="sxs-lookup"><span data-stu-id="b5108-123">For more information about this file, see the Application Configuration Files section in [Configuring Apps](../../../docs/framework/configure-apps/index.md).</span></span>  
   
-2.  新增下列項目：  
+2.  <span data-ttu-id="b5108-124">新增下列項目：</span><span class="sxs-lookup"><span data-stu-id="b5108-124">Add the following entry:</span></span>  
   
     ```xml  
     <configuration>  
@@ -58,12 +58,13 @@ ms.lasthandoff: 07/13/2017
     </configuration>  
     ```  
   
- 移除組態檔的設定或將屬性設成 "true"，即可還原應用程式的略過功能。  
+ <span data-ttu-id="b5108-125">移除組態檔的設定或將屬性設成 "true"，即可還原應用程式的略過功能。</span><span class="sxs-lookup"><span data-stu-id="b5108-125">You can restore the bypass feature for the application by removing the configuration file setting or by setting the attribute to "true".</span></span>  
   
 > [!NOTE]
->  只有啟用電腦的略過功能，您才可以開啟或關閉應用程式的強式名稱驗證。 如已關閉電腦的略過功能，即會驗證所有應用程式的強式名稱，而您無法略過單一應用程式的驗證。  
+>  <span data-ttu-id="b5108-126">只有啟用電腦的略過功能，您才可以開啟或關閉應用程式的強式名稱驗證。</span><span class="sxs-lookup"><span data-stu-id="b5108-126">You can turn strong-name validation on and off for an application only if the bypass feature is enabled for the computer.</span></span> <span data-ttu-id="b5108-127">如已關閉電腦的略過功能，即會驗證所有應用程式的強式名稱，而您無法略過單一應用程式的驗證。</span><span class="sxs-lookup"><span data-stu-id="b5108-127">If the bypass feature has been turned off for the computer, strong names are validated for all applications and you cannot bypass validation for a single application.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [\<bypassTrustedAppStrongNames> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)   
- [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="b5108-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b5108-128">See Also</span></span>  
+ <span data-ttu-id="b5108-129">[Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) </span><span class="sxs-lookup"><span data-stu-id="b5108-129">[Sn.exe (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) </span></span>  
+ <span data-ttu-id="b5108-130">[\<bypassTrustedAppStrongNames> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md) </span><span class="sxs-lookup"><span data-stu-id="b5108-130">[\<bypassTrustedAppStrongNames> Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md) </span></span>  
+ [<span data-ttu-id="b5108-131">建立和使用強式名稱的組件</span><span class="sxs-lookup"><span data-stu-id="b5108-131">Creating and Using Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+

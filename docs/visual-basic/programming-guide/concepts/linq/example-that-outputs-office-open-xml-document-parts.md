@@ -15,20 +15,21 @@ ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72e8cd6126cd049cafff6e18e1ef609f600cf7c9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5657e146f323b57eb594a778473307b10e43690c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>輸出 Office Open XML 文件組件 (Visual Basic) 的範例
-本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="5b2ce-102">輸出 Office Open XML 文件組件 (Visual Basic) 的範例</span><span class="sxs-lookup"><span data-stu-id="5b2ce-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="5b2ce-103">本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。</span><span class="sxs-lookup"><span data-stu-id="5b2ce-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會開啟 Office Open XML 文件，並列印主控台的文件部分與樣式部分。  
+## <a name="example"></a><span data-ttu-id="5b2ce-104">範例</span><span class="sxs-lookup"><span data-stu-id="5b2ce-104">Example</span></span>  
+ <span data-ttu-id="5b2ce-105">下列範例會開啟 Office Open XML 文件，並列印主控台的文件部分與樣式部分。</span><span class="sxs-lookup"><span data-stu-id="5b2ce-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="5b2ce-106">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="5b2ce-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="5b2ce-107">它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="5b2ce-107">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -77,5 +78,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="5b2ce-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b2ce-108">See Also</span></span>  
+ [<span data-ttu-id="5b2ce-109">詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b2ce-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

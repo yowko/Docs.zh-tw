@@ -1,1 +1,1 @@
-全球資訊網協會 (W3C)
+<span data-ttu-id="4d38d-101">全球資訊網協會 (W3C)</span><span class="sxs-lookup"><span data-stu-id="4d38d-101">World Wide Web Consortium (W3C)</span></span>

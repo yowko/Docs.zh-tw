@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：使用 async 和 await 存取 Web (C#) | Microsoft Docs"
+title: "逐步解說：使用 async 和 await 存取 Web (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,117 +19,117 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 2874eaadd23fdfdc1baf9337169ad5a52c05905f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 async 和 await 存取 Web (C#)
-您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。 您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。  
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="b12ce-102">逐步解說：使用 async 和 await 存取 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="b12ce-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
+<span data-ttu-id="b12ce-103">您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。</span><span class="sxs-lookup"><span data-stu-id="b12ce-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="b12ce-104">您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。</span><span class="sxs-lookup"><span data-stu-id="b12ce-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  
   
- 如需非同步功能的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。  
+ <span data-ttu-id="b12ce-105">如需非同步功能的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-105">For more information about the Async feature, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>  
   
- 本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。 然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。  
+ <span data-ttu-id="b12ce-106">本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="b12ce-106">This walkthrough starts with a synchronous Windows Presentation Foundation (WPF) application that sums the number of bytes in a list of websites.</span></span> <span data-ttu-id="b12ce-107">然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。</span><span class="sxs-lookup"><span data-stu-id="b12ce-107">The walkthrough then converts the application to an asynchronous solution by using the new features.</span></span>  
   
- 如果您不想要自行建置應用程式，可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載「非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)」。  
+ <span data-ttu-id="b12ce-108">如果您不想要自行建置應用程式，可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載「非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)」。</span><span class="sxs-lookup"><span data-stu-id="b12ce-108">If you don't want to build the applications yourself, you can download "Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)" from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191).</span></span>  
   
- 在這個逐步解說中，您將完成下列工作：  
+ <span data-ttu-id="b12ce-109">在這個逐步解說中，您將完成下列工作：</span><span class="sxs-lookup"><span data-stu-id="b12ce-109">In this walkthrough, you complete the following tasks:</span></span>  
   
--   [建立 WPF 應用程式](#CreateWPFApp)  
+-   [<span data-ttu-id="b12ce-110">建立 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="b12ce-110">To create a WPF application</span></span>](#CreateWPFApp)  
   
--   [設計簡單的 WPF MainWindow](#MainWindow)  
+-   [<span data-ttu-id="b12ce-111">設計簡單的 WPF MainWindow</span><span class="sxs-lookup"><span data-stu-id="b12ce-111">To design a simple WPF MainWindow</span></span>](#MainWindow)  
   
--   [加入參考](#AddRef)  
+-   [<span data-ttu-id="b12ce-112">加入參考</span><span class="sxs-lookup"><span data-stu-id="b12ce-112">To add a reference</span></span>](#AddRef)  
   
--   [加入必要的 using 指示詞](#usingDir)  
+-   [<span data-ttu-id="b12ce-113">加入必要的 using 指示詞</span><span class="sxs-lookup"><span data-stu-id="b12ce-113">To add necessary using directives</span></span>](#usingDir)  
   
--   [建立同步應用程式](#synchronous)  
+-   [<span data-ttu-id="b12ce-114">建立同步應用程式</span><span class="sxs-lookup"><span data-stu-id="b12ce-114">To create a synchronous application</span></span>](#synchronous)  
   
--   [測試同步方案](#testSynch)  
+-   [<span data-ttu-id="b12ce-115">測試同步方案</span><span class="sxs-lookup"><span data-stu-id="b12ce-115">To test the synchronous solution</span></span>](#testSynch)  
   
--   [將 GetURLContents 轉換為非同步方法](#GetURLContents)  
+-   [<span data-ttu-id="b12ce-116">將 GetURLContents 轉換為非同步方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-116">To convert GetURLContents to an asynchronous method</span></span>](#GetURLContents)  
   
--   [將 SumPageSizes 轉換為非同步方法](#SumPageSizes)  
+-   [<span data-ttu-id="b12ce-117">將 SumPageSizes 轉換為非同步方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-117">To convert SumPageSizes to an asynchronous method</span></span>](#SumPageSizes)  
   
--   [將 startButton_Click 轉換為非同步方法](#startButton)  
+-   [<span data-ttu-id="b12ce-118">將 startButton_Click 轉換為非同步方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-118">To convert startButton_Click to an asynchronous method</span></span>](#startButton)  
   
--   [測試非同步方案](#testAsynch)  
+-   [<span data-ttu-id="b12ce-119">測試非同步方案</span><span class="sxs-lookup"><span data-stu-id="b12ce-119">To test the asynchronous solution</span></span>](#testAsynch)  
   
--   [將方法 GetURLContentsAsync 取代為 .NET Framework 方法](#GetURLContentsAsync)  
+-   [<span data-ttu-id="b12ce-120">將方法 GetURLContentsAsync 取代為 .NET Framework 方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-120">To replace method GetURLContentsAsync with a .NET Framework method</span></span>](#GetURLContentsAsync)  
   
--   [範例](#BKMK_CompleteCodeExamples)  
+-   [<span data-ttu-id="b12ce-121">範例</span><span class="sxs-lookup"><span data-stu-id="b12ce-121">Example</span></span>](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>必要條件  
- 您的電腦上必須安裝 Visual Studio 2012 或更新版本。 如需詳細資訊，請參閱 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkId=235233)。  
+## <a name="prerequisites"></a><span data-ttu-id="b12ce-122">必要條件</span><span class="sxs-lookup"><span data-stu-id="b12ce-122">Prerequisites</span></span>  
+ <span data-ttu-id="b12ce-123">您的電腦上必須安裝 Visual Studio 2012 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="b12ce-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="b12ce-124">如需詳細資訊，請參閱 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkId=235233)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-124">For more information, see the [Microsoft website](http://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <a name="CreateWPFApp"></a> 建立 WPF 應用程式  
+###  <span data-ttu-id="b12ce-125"><a name="CreateWPFApp"></a> 建立 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="b12ce-125"><a name="CreateWPFApp"></a> To create a WPF application</span></span>  
   
-1.  啟動 Visual Studio。  
+1.  <span data-ttu-id="b12ce-126">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="b12ce-126">Start Visual Studio.</span></span>  
   
-2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
+2.  <span data-ttu-id="b12ce-127">在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。</span><span class="sxs-lookup"><span data-stu-id="b12ce-127">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     [ **新增專案** ] 對話方塊隨即開啟。  
+     <span data-ttu-id="b12ce-128">[ **新增專案** ] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="b12ce-128">The **New Project** dialog box opens.</span></span>  
   
-3.  在 [已安裝的範本] 窗格中，選擇 [Visual C#]，然後從專案類型清單中選擇 [WPF 應用程式]。  
+3.  <span data-ttu-id="b12ce-129">在 [已安裝的範本] 窗格中，選擇 [Visual C#]，然後從專案類型清單中選擇 [WPF 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="b12ce-129">In the **Installed Templates** pane, choose Visual C#, and then choose **WPF Application** from the list of project types.</span></span>  
   
-4.  在 [名稱] 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定] 按鈕。  
+4.  <span data-ttu-id="b12ce-130">在 [名稱] 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="b12ce-130">In the **Name** text box, enter `AsyncExampleWPF`, and then choose the **OK** button.</span></span>  
   
-     新的專案隨即會出現在方案總管中。  
+     <span data-ttu-id="b12ce-131">新的專案隨即會出現在方案總管中。</span><span class="sxs-lookup"><span data-stu-id="b12ce-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> 設計簡單的 WPF MainWindow  
+###  <span data-ttu-id="b12ce-132"><a name="MainWindow"></a> 設計簡單的 WPF MainWindow</span><span class="sxs-lookup"><span data-stu-id="b12ce-132"><a name="MainWindow"></a> To design a simple WPF MainWindow</span></span>  
   
-1.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
+1.  <span data-ttu-id="b12ce-133">在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="b12ce-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-2.  如果未顯示 [工具箱] 視窗，請選擇 [檢視] 功能表，然後選擇 [工具箱]。  
+2.  <span data-ttu-id="b12ce-134">如果未顯示 [工具箱] 視窗，請選擇 [檢視] 功能表，然後選擇 [工具箱]。</span><span class="sxs-lookup"><span data-stu-id="b12ce-134">If the **Toolbox** window isn’t visible, open the **View** menu, and then choose **Toolbox**.</span></span>  
   
-3.  將 **Button** 控制項和 **TextBox** 控制項加入 [MainWindow] 視窗。  
+3.  <span data-ttu-id="b12ce-135">將 **Button** 控制項和 **TextBox** 控制項加入 [MainWindow] 視窗。</span><span class="sxs-lookup"><span data-stu-id="b12ce-135">Add a **Button** control and a **TextBox** control to the **MainWindow** window.</span></span>  
   
-4.  反白顯示 **TextBox** 控制項，並在 [屬性] 視窗中，設定下列值：  
+4.  <span data-ttu-id="b12ce-136">反白顯示 **TextBox** 控制項，並在 [屬性] 視窗中，設定下列值：</span><span class="sxs-lookup"><span data-stu-id="b12ce-136">Highlight the **TextBox** control and, in the **Properties** window, set the following values:</span></span>  
   
-    -   將 [名稱] 屬性設定為 `resultsTextBox`。  
+    -   <span data-ttu-id="b12ce-137">將 [名稱] 屬性設定為 `resultsTextBox`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-137">Set the **Name** property to `resultsTextBox`.</span></span>  
   
-    -   將 [高度] 屬性設為 250。  
+    -   <span data-ttu-id="b12ce-138">將 [高度] 屬性設為 250。</span><span class="sxs-lookup"><span data-stu-id="b12ce-138">Set the **Height** property to 250.</span></span>  
   
-    -   將 [寬度] 屬性設為 500。  
+    -   <span data-ttu-id="b12ce-139">將 [寬度] 屬性設為 500。</span><span class="sxs-lookup"><span data-stu-id="b12ce-139">Set the **Width** property to 500.</span></span>  
   
-    -   在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。  
+    -   <span data-ttu-id="b12ce-140">在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。</span><span class="sxs-lookup"><span data-stu-id="b12ce-140">On the **Text** tab, specify a monospaced font, such as Lucida Console or Global Monospace.</span></span>  
   
-5.  反白顯示 **Button** 控制項，並在 [屬性] 視窗中，設定下列值：  
+5.  <span data-ttu-id="b12ce-141">反白顯示 **Button** 控制項，並在 [屬性] 視窗中，設定下列值：</span><span class="sxs-lookup"><span data-stu-id="b12ce-141">Highlight the **Button** control and, in the **Properties** window, set the following values:</span></span>  
   
-    -   將 [名稱] 屬性設定為 `startButton`。  
+    -   <span data-ttu-id="b12ce-142">將 [名稱] 屬性設定為 `startButton`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-142">Set the **Name** property to `startButton`.</span></span>  
   
-    -   將 [內容] 屬性的值從 **Button** 變更為 **Start**。  
+    -   <span data-ttu-id="b12ce-143">將 [內容] 屬性的值從 **Button** 變更為 **Start**。</span><span class="sxs-lookup"><span data-stu-id="b12ce-143">Change the value of the **Content** property from **Button** to **Start**.</span></span>  
   
-6.  放置文字方塊和按鈕，使兩者都出現在 [MainWindow] 視窗中。  
+6.  <span data-ttu-id="b12ce-144">放置文字方塊和按鈕，使兩者都出現在 [MainWindow] 視窗中。</span><span class="sxs-lookup"><span data-stu-id="b12ce-144">Position the text box and the button so that both appear in the **MainWindow** window.</span></span>  
   
-     如需 WPF XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。  
+     <span data-ttu-id="b12ce-145">如需 WPF XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> 加入參考  
+###  <span data-ttu-id="b12ce-146"><a name="AddRef"></a> 加入參考</span><span class="sxs-lookup"><span data-stu-id="b12ce-146"><a name="AddRef"></a> To add a reference</span></span>  
   
-1.  在方案總管中，反白顯示您的專案名稱。  
+1.  <span data-ttu-id="b12ce-147">在方案總管中，反白顯示您的專案名稱。</span><span class="sxs-lookup"><span data-stu-id="b12ce-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
-2.  在功能表列上，依序選擇 [專案] 和 [加入參考]。  
+2.  <span data-ttu-id="b12ce-148">在功能表列上，依序選擇 [專案] 和 [加入參考]。</span><span class="sxs-lookup"><span data-stu-id="b12ce-148">On the menu bar, choose **Project**, **Add Reference**.</span></span>  
   
-     [參考管理員] 對話方塊隨即顯示。  
+     <span data-ttu-id="b12ce-149">[參考管理員] 對話方塊隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="b12ce-149">The **Reference Manager** dialog box appears.</span></span>  
   
-3.  在對話方塊上方，請確認專案的目標是 .NET Framework 4.5 或更新版本。  
+3.  <span data-ttu-id="b12ce-150">在對話方塊上方，請確認專案的目標是 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="b12ce-150">At the top of the dialog box, verify that your project is targeting the .NET Framework 4.5 or higher.</span></span>  
   
-4.  在 [組件] 區域中，選擇 [Framework] (如果尚未選擇)。  
+4.  <span data-ttu-id="b12ce-151">在 [組件] 區域中，選擇 [Framework] (如果尚未選擇)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-151">In the **Assemblies** area, choose **Framework** if it isn’t already chosen.</span></span>  
   
-5.  在名稱清單中，選取 [System.Net.Http] 核取方塊。  
+5.  <span data-ttu-id="b12ce-152">在名稱清單中，選取 [System.Net.Http] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="b12ce-152">In the list of names, select the **System.Net.Http** check box.</span></span>  
   
-6.  選擇 [確定] 按鈕以關閉對話方塊。  
+6.  <span data-ttu-id="b12ce-153">選擇 [確定] 按鈕以關閉對話方塊。</span><span class="sxs-lookup"><span data-stu-id="b12ce-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="usingDir"></a> 加入必要的 using 指示詞  
+###  <span data-ttu-id="b12ce-154"><a name="usingDir"></a> 加入必要的 using 指示詞</span><span class="sxs-lookup"><span data-stu-id="b12ce-154"><a name="usingDir"></a> To add necessary using directives</span></span>  
   
-1.  在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。  
+1.  <span data-ttu-id="b12ce-155">在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="b12ce-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
   
-2.  如果尚未顯示，請將下列 `using` 指示詞加入程式碼檔案頂端。  
+2.  <span data-ttu-id="b12ce-156">如果尚未顯示，請將下列 `using` 指示詞加入程式碼檔案頂端。</span><span class="sxs-lookup"><span data-stu-id="b12ce-156">Add the following `using` directives at the top of the code file if they’re not already present.</span></span>  
   
     ```csharp  
     using System.Net.Http;  
@@ -138,11 +138,11 @@ ms.lasthandoff: 03/28/2017
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> 建立同步應用程式  
+###  <span data-ttu-id="b12ce-157"><a name="synchronous"></a> 建立同步應用程式</span><span class="sxs-lookup"><span data-stu-id="b12ce-157"><a name="synchronous"></a> To create a synchronous application</span></span>  
   
-1.  在設計視窗 MainWindow.xaml 中，按兩下 [開始] 按鈕，以在 MainWindow.xaml.cs 中建立 `startButton_Click` 事件處理常式。  
+1.  <span data-ttu-id="b12ce-158">在設計視窗 MainWindow.xaml 中，按兩下 [開始] 按鈕，以在 MainWindow.xaml.cs 中建立 `startButton_Click` 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="b12ce-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.cs.</span></span>  
   
-2.  在 MainWindow.xaml.cs 中，將下列程式碼複製到 `startButton_Click` 的內文：  
+2.  <span data-ttu-id="b12ce-159">在 MainWindow.xaml.cs 中，將下列程式碼複製到 `startButton_Click` 的內文：</span><span class="sxs-lookup"><span data-stu-id="b12ce-159">In MainWindow.xaml.cs, copy the following code into the body of `startButton_Click`:</span></span>  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -150,19 +150,19 @@ ms.lasthandoff: 03/28/2017
     resultsTextBox.Text += "\r\nControl returned to startButton_Click.";  
     ```  
   
-     程式碼會呼叫方法，該方法會驅動應用程式 `SumPageSizes`，並且在控制項返回 `startButton_Click` 時顯示訊息。  
+     <span data-ttu-id="b12ce-160">程式碼會呼叫方法，該方法會驅動應用程式 `SumPageSizes`，並且在控制項返回 `startButton_Click` 時顯示訊息。</span><span class="sxs-lookup"><span data-stu-id="b12ce-160">The code calls the method that drives the application, `SumPageSizes`, and displays a message when control returns to `startButton_Click`.</span></span>  
   
-3.  同步方案的程式碼包含下列四種方法：  
+3.  <span data-ttu-id="b12ce-161">同步方案的程式碼包含下列四種方法：</span><span class="sxs-lookup"><span data-stu-id="b12ce-161">The code for the synchronous solution contains the following four methods:</span></span>  
   
-    -   `SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。  
+    -   <span data-ttu-id="b12ce-162">`SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。</span><span class="sxs-lookup"><span data-stu-id="b12ce-162">`SumPageSizes`, which gets a list of webpage URLs from `SetUpURLList` and then calls `GetURLContents` and `DisplayResults` to process each URL.</span></span>  
   
-    -   `SetUpURLList`，會製作並傳回網址清單。  
+    -   <span data-ttu-id="b12ce-163">`SetUpURLList`，會製作並傳回網址清單。</span><span class="sxs-lookup"><span data-stu-id="b12ce-163">`SetUpURLList`, which makes and returns a list of web addresses.</span></span>  
   
-    -   `GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。  
+    -   <span data-ttu-id="b12ce-164">`GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="b12ce-164">`GetURLContents`, which downloads the contents of each website and returns the contents as a byte array.</span></span>  
   
-    -   `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。  
+    -   <span data-ttu-id="b12ce-165">`DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="b12ce-165">`DisplayResults`, which displays  the number of bytes in the byte array for each URL.</span></span>  
   
-     複製下列四種方法，然後貼在 MainWindow.xaml.cs 的 `startButton_Click` 事件處理常式下方：  
+     <span data-ttu-id="b12ce-166">複製下列四種方法，然後貼在 MainWindow.xaml.cs 的 `startButton_Click` 事件處理常式下方：</span><span class="sxs-lookup"><span data-stu-id="b12ce-166">Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.cs:</span></span>  
   
     ```csharp  
     private void SumPageSizes()  
@@ -243,11 +243,11 @@ ms.lasthandoff: 03/28/2017
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> 測試同步方案  
+###  <span data-ttu-id="b12ce-167"><a name="testSynch"></a> 測試同步方案</span><span class="sxs-lookup"><span data-stu-id="b12ce-167"><a name="testSynch"></a> To test the synchronous solution</span></span>  
   
-1.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
+1.  <span data-ttu-id="b12ce-168">選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="b12ce-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     應該會顯示如下列清單的輸出。  
+     <span data-ttu-id="b12ce-169">應該會顯示如下列清單的輸出。</span><span class="sxs-lookup"><span data-stu-id="b12ce-169">Output that resembles the following list should appear.</span></span>  
   
     ```  
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832  
@@ -266,56 +266,56 @@ ms.lasthandoff: 03/28/2017
     Control returned to startButton_Click.  
     ```  
   
-     請注意，需要花費幾秒鐘以顯示計數。 在這段期間，在等候下載要求資源的同時，會封鎖 UI 執行緒。 如此一來，您就無法在選擇 [開始] 按鈕之後，移動、最大化、最小化，或甚至關閉顯示視窗。 這些努力會失敗，直到位元組計數開始出現為止。 如果網站沒有回應，也不會指出失敗的站台。 甚至難以停止等候以及關閉程式。  
+     <span data-ttu-id="b12ce-170">請注意，需要花費幾秒鐘以顯示計數。</span><span class="sxs-lookup"><span data-stu-id="b12ce-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="b12ce-171">在這段期間，在等候下載要求資源的同時，會封鎖 UI 執行緒。</span><span class="sxs-lookup"><span data-stu-id="b12ce-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="b12ce-172">如此一來，您就無法在選擇 [開始] 按鈕之後，移動、最大化、最小化，或甚至關閉顯示視窗。</span><span class="sxs-lookup"><span data-stu-id="b12ce-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="b12ce-173">這些努力會失敗，直到位元組計數開始出現為止。</span><span class="sxs-lookup"><span data-stu-id="b12ce-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="b12ce-174">如果網站沒有回應，也不會指出失敗的站台。</span><span class="sxs-lookup"><span data-stu-id="b12ce-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="b12ce-175">甚至難以停止等候以及關閉程式。</span><span class="sxs-lookup"><span data-stu-id="b12ce-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> 將 GetURLContents 轉換為非同步方法  
+###  <span data-ttu-id="b12ce-176"><a name="GetURLContents"></a> 將 GetURLContents 轉換為非同步方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-176"><a name="GetURLContents"></a> To convert GetURLContents to an asynchronous method</span></span>  
   
-1.  若要將非同步方案轉換為同步方案，最好從 `GetURLContents` 當中開始，因為 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 和 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 的呼叫即為應用程式存取 Web 的位置。 .NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。  
+1.  <span data-ttu-id="b12ce-177">若要將同步方案轉換成非同步方案，最佳的起點是在 `GetURLContents`，因為呼叫 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 及 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 是應用程式存取 Web 的位置。</span><span class="sxs-lookup"><span data-stu-id="b12ce-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="b12ce-178">.NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。</span><span class="sxs-lookup"><span data-stu-id="b12ce-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
-     如需 `GetURLContents` 中所用之方法的詳細資訊，請參閱 <xref:System.Net.WebRequest>。  
+     <span data-ttu-id="b12ce-179">如需 `GetURLContents` 中所用之方法的詳細資訊，請參閱 <xref:System.Net.WebRequest>。</span><span class="sxs-lookup"><span data-stu-id="b12ce-179">For more information about the methods that are used in `GetURLContents`, see <xref:System.Net.WebRequest>.</span></span>  
   
     > [!NOTE]
-    >  當您依照本逐步解說中的步驟時，會出現數個編譯器錯誤。 您可以略過它們，並繼續進行本逐步解說。  
+    >  <span data-ttu-id="b12ce-180">當您依照本逐步解說中的步驟時，會出現數個編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="b12ce-180">As you follow the steps in this walkthrough, several compiler errors appear.</span></span> <span data-ttu-id="b12ce-181">您可以略過它們，並繼續進行本逐步解說。</span><span class="sxs-lookup"><span data-stu-id="b12ce-181">You can ignore them and continue with the walkthrough.</span></span>  
   
-     變更於 `GetURLContents` 的第三行呼叫的方法，使其從 `GetResponse` 變更為非同步、以工作為基礎的 <xref:System.Net.WebRequest.GetResponseAsync%2A> 方法。  
+     <span data-ttu-id="b12ce-182">將在 `GetURLContents` 的第三行呼叫的方法從 `GetResponse` 變更為非同步、以工作為基礎的 <xref:System.Net.WebRequest.GetResponseAsync%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="b12ce-182">Change the method that's called in the third line of `GetURLContents` from `GetResponse` to the asynchronous, task-based <xref:System.Net.WebRequest.GetResponseAsync%2A> method.</span></span>  
   
     ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在此情況下，「工作傳回變數」為 `TResult`，其類型為 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。  
+2.  <span data-ttu-id="b12ce-183">`GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="b12ce-183">`GetResponseAsync` returns a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="b12ce-184">在此情況下，工作傳回變數 `TResult` 具有類型 <xref:System.Net.WebResponse>。</span><span class="sxs-lookup"><span data-stu-id="b12ce-184">In this case, the *task return variable*, `TResult`, has type <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="b12ce-185">工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。</span><span class="sxs-lookup"><span data-stu-id="b12ce-185">The task is a promise to produce an actual `WebResponse` object after the requested data has been downloaded and the task has run to completion.</span></span>  
   
-     若要從工作擷取 `WebResponse` 值，請將 [await](../../../../csharp/language-reference/keywords/await.md) 運算子套用至 `GetResponseAsync` 的呼叫，如下列程式碼所示。  
+     <span data-ttu-id="b12ce-186">若要從工作擷取 `WebResponse` 值，請將 [await](../../../../csharp/language-reference/keywords/await.md) 運算子套用至 `GetResponseAsync` 的呼叫，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="b12ce-186">To retrieve the `WebResponse` value from the task, apply an [await](../../../../csharp/language-reference/keywords/await.md) operator to the call to `GetResponseAsync`, as the following code shows.</span></span>  
   
     ```csharp  
     using (WebResponse response = await webReq.GetResponseAsync())  
     ```  
   
-     `await` 運算子會暫停執行目前的 `GetURLContents` 方法，直到等候的工作完成為止。 同時，控制項會返回非同步方法的呼叫端。 在此範例中，目前方法是 `GetURLContents`，呼叫端是 `SumPageSizes`。 當工作完成時，承諾的 `WebResponse` 物件會以等候工作之值的形式產生，而且會指派給變數 `response`。  
+     <span data-ttu-id="b12ce-187">`await` 運算子會暫停執行目前的 `GetURLContents` 方法，直到等候的工作完成為止。</span><span class="sxs-lookup"><span data-stu-id="b12ce-187">The `await` operator suspends the execution of the current method, `GetURLContents`, until the awaited task is complete.</span></span> <span data-ttu-id="b12ce-188">同時，控制項會返回非同步方法的呼叫端。</span><span class="sxs-lookup"><span data-stu-id="b12ce-188">In the meantime, control returns to the caller of the current method.</span></span> <span data-ttu-id="b12ce-189">在此範例中，目前方法是 `GetURLContents`，呼叫端是 `SumPageSizes`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-189">In this example, the current method is `GetURLContents`, and the caller is `SumPageSizes`.</span></span> <span data-ttu-id="b12ce-190">當工作完成時，承諾的 `WebResponse` 物件會以等候工作之值的形式產生，而且會指派給變數 `response`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-190">When the task is finished, the promised `WebResponse` object is produced as the value of the awaited task and assigned to the variable `response`.</span></span>  
   
-     前一個陳述式可分成下列兩個陳述式，以釐清會發生什麼情況。  
+     <span data-ttu-id="b12ce-191">前一個陳述式可分成下列兩個陳述式，以釐清會發生什麼情況。</span><span class="sxs-lookup"><span data-stu-id="b12ce-191">The previous statement can be separated into the following two statements to clarify what happens.</span></span>  
   
     ```csharp  
     //Task<WebResponse> responseTask = webReq.GetResponseAsync();  
     //using (WebResponse response = await responseTask)  
     ```  
   
-     對 `webReq.GetResponseAsync` 的呼叫會傳回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 await 運算子會套用至工作以擷取 `WebResponse` 值。  
+     <span data-ttu-id="b12ce-192">對 `webReq.GetResponseAsync` 的呼叫會傳回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-192">The call to `webReq.GetResponseAsync` returns a `Task(Of WebResponse)` or `Task<WebResponse>`.</span></span> <span data-ttu-id="b12ce-193">await 運算子會套用至工作以擷取 `WebResponse` 值。</span><span class="sxs-lookup"><span data-stu-id="b12ce-193">Then an await operator is applied to the task to retrieve the `WebResponse` value.</span></span>  
   
-     如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 `await` 運算子之前，繼續這兩個陳述式之間的工作。 如需範例，請參閱[如何：使用 Async 和 Await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 以及[如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+     <span data-ttu-id="b12ce-194">如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 `await` 運算子之前，繼續這兩個陳述式之間的工作。</span><span class="sxs-lookup"><span data-stu-id="b12ce-194">If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the `await` operator is applied.</span></span> <span data-ttu-id="b12ce-195">如需範例，請參閱[如何：使用 Async 和 Await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) 以及[如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-195">For examples, see [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
   
-3.  由於您在上一個步驟中加入 `await` 運算子，所以發生編譯器錯誤。 此運算子只能用於以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。  
+3.  <span data-ttu-id="b12ce-196">由於您在上一個步驟中加入 `await` 運算子，所以發生編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="b12ce-196">Because you added the `await` operator in the previous step, a compiler error occurs.</span></span> <span data-ttu-id="b12ce-197">此運算子只能用於以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法。</span><span class="sxs-lookup"><span data-stu-id="b12ce-197">The operator can be used only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="b12ce-198">當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。</span><span class="sxs-lookup"><span data-stu-id="b12ce-198">Ignore the error while you repeat the conversion steps to replace the call to `CopyTo` with a call to `CopyToAsync`.</span></span>  
   
-    -   變更 <xref:System.IO.Stream.CopyToAsync%2A> 呼叫的方法名稱。  
+    -   <span data-ttu-id="b12ce-199">變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。</span><span class="sxs-lookup"><span data-stu-id="b12ce-199">Change the name of the method that’s called to <xref:System.IO.Stream.CopyToAsync%2A>.</span></span>  
   
-    -   `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 `CopyToAsync` 非同步版本會傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。  
+    -   <span data-ttu-id="b12ce-200">`CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。</span><span class="sxs-lookup"><span data-stu-id="b12ce-200">The `CopyTo` or `CopyToAsync` method copies bytes to its argument, `content`, and doesn’t return a meaningful value.</span></span> <span data-ttu-id="b12ce-201">在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。</span><span class="sxs-lookup"><span data-stu-id="b12ce-201">In the synchronous version, the call to `CopyTo` is a simple statement that doesn't return a value.</span></span> <span data-ttu-id="b12ce-202">非同步版本，`CopyToAsync`，傳回 <xref:System.Threading.Tasks.Task>。</span><span class="sxs-lookup"><span data-stu-id="b12ce-202">The asynchronous version, `CopyToAsync`, returns a <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="b12ce-203">工作函式，例如 "Task(void)"，讓方法等候。</span><span class="sxs-lookup"><span data-stu-id="b12ce-203">The task functions like "Task(void)" and enables the method to be awaited.</span></span> <span data-ttu-id="b12ce-204">將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="b12ce-204">Apply `Await` or `await` to the call to `CopyToAsync`, as the following code shows.</span></span>  
   
         ```csharp  
         await responseStream.CopyToAsync(content);  
         ```  
   
-         前一個陳述式縮寫下列兩行程式碼。  
+         <span data-ttu-id="b12ce-205">前一個陳述式縮寫下列兩行程式碼。</span><span class="sxs-lookup"><span data-stu-id="b12ce-205">The previous statement abbreviates the following two lines of code.</span></span>  
   
         ```csharp  
         // CopyToAsync returns a Task, not a Task<T>.  
@@ -326,46 +326,46 @@ ms.lasthandoff: 03/28/2017
         //await copyTask;  
         ```  
   
-4.  `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法中使用 `await` 運算子。 新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。  
+4.  <span data-ttu-id="b12ce-206">`GetURLContents` 中還需要完成的工作是調整方法簽章。</span><span class="sxs-lookup"><span data-stu-id="b12ce-206">All that remains to be done in `GetURLContents` is to adjust the method signature.</span></span> <span data-ttu-id="b12ce-207">您只能在以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法中使用 `await` 運算子。</span><span class="sxs-lookup"><span data-stu-id="b12ce-207">You can use the `await` operator only in methods that are marked with the [async](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="b12ce-208">新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="b12ce-208">Add the modifier to mark the method as an *async method*, as the following code shows.</span></span>  
   
     ```csharp  
     private async byte[] GetURLContents(string url)  
     ```  
   
-5.  在 C# 中，非同步方法的傳回型別可以是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 [return](../../../../csharp/language-reference/keywords/return.md) 陳述式，則會傳回類型 T 的值，請使用 `Task(T)`；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。  
+5.  <span data-ttu-id="b12ce-209">非同步方法的傳回類型在 C# 中只能是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-209">The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, or `void` in C#.</span></span> <span data-ttu-id="b12ce-210">一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。</span><span class="sxs-lookup"><span data-stu-id="b12ce-210">Typically, a return type of `void` is used only in an async event handler, where `void` is required.</span></span> <span data-ttu-id="b12ce-211">在其他情況下，如果完成的方法有 [return](../../../../csharp/language-reference/keywords/return.md) 陳述式，則會傳回類型 T 的值，請使用 `Task(T)`；如果完成的方法不會傳回有意義的值，則使用 `Task`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-211">In other cases, you use `Task(T)` if the completed method has a [return](../../../../csharp/language-reference/keywords/return.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.</span></span> <span data-ttu-id="b12ce-212">您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。</span><span class="sxs-lookup"><span data-stu-id="b12ce-212">You can think of the `Task` return type as meaning "Task(void)."</span></span>  
   
-     如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+     <span data-ttu-id="b12ce-213">如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-213">For more information, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-     方法 `GetURLContents` 有 return 陳述式，陳述式會傳回位元組陣列。 因此，非同步版本的傳回類型是 Task(T)，其中 T 是位元組陣列。 在方法簽章中進行下列變更：  
+     <span data-ttu-id="b12ce-214">方法 `GetURLContents` 有 return 陳述式，陳述式會傳回位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="b12ce-214">Method `GetURLContents` has a return statement, and the statement returns a byte array.</span></span> <span data-ttu-id="b12ce-215">因此，非同步版本的傳回類型是 Task(T)，其中 T 是位元組陣列。</span><span class="sxs-lookup"><span data-stu-id="b12ce-215">Therefore, the return type of the async version is Task(T), where T is a byte array.</span></span> <span data-ttu-id="b12ce-216">在方法簽章中進行下列變更：</span><span class="sxs-lookup"><span data-stu-id="b12ce-216">Make the following changes in the method signature:</span></span>  
   
-    -   將傳回型別變更為 `Task<byte[]>`。  
+    -   <span data-ttu-id="b12ce-217">將傳回型別變更為 `Task<byte[]>`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-217">Change the return type to `Task<byte[]>`.</span></span>  
   
-    -   依照慣例，非同步方法的名稱會以 "Async" 結尾，所以重新命名方法 `GetURLContentsAsync`。  
+    -   <span data-ttu-id="b12ce-218">依照慣例，非同步方法的名稱會以 "Async" 結尾，所以重新命名方法 `GetURLContentsAsync`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-218">By convention, asynchronous methods have names that end in "Async," so rename the method `GetURLContentsAsync`.</span></span>  
   
-     下列程式碼會顯示這些變更。  
+     <span data-ttu-id="b12ce-219">下列程式碼會顯示這些變更。</span><span class="sxs-lookup"><span data-stu-id="b12ce-219">The following code shows these changes.</span></span>  
   
     ```csharp  
     private async Task<byte[]> GetURLContentsAsync(string url)  
     ```  
   
-     只要這幾個變更，`GetURLContents` 至非同步方法的轉換就能完成。  
+     <span data-ttu-id="b12ce-220">只要這幾個變更，`GetURLContents` 至非同步方法的轉換就能完成。</span><span class="sxs-lookup"><span data-stu-id="b12ce-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> 將 SumPageSizes 轉換為非同步方法  
+###  <span data-ttu-id="b12ce-221"><a name="SumPageSizes"></a> 將 SumPageSizes 轉換為非同步方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-221"><a name="SumPageSizes"></a> To convert SumPageSizes to an asynchronous method</span></span>  
   
-1.  針對 `SumPageSizes` 重複上述程序的步驟。 首先，將對 `GetURLContents` 的呼叫變更為非同步呼叫。  
+1.  <span data-ttu-id="b12ce-222">針對 `SumPageSizes` 重複上述程序的步驟。</span><span class="sxs-lookup"><span data-stu-id="b12ce-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="b12ce-223">首先，將對 `GetURLContents` 的呼叫變更為非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="b12ce-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
-    -   如果您尚未這麼做，請變更方法的名稱，該方法是從 `GetURLContents` 呼叫至 `GetURLContentsAsync`。  
+    -   <span data-ttu-id="b12ce-224">如果您尚未這麼做，請變更方法的名稱，該方法是從 `GetURLContents` 呼叫至 `GetURLContentsAsync`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-224">Change the name of the method that’s called from `GetURLContents` to `GetURLContentsAsync`, if you haven't already done so.</span></span>  
   
-    -   將 `await` 套用至工作，`GetURLContentsAsync` 會傳回該工作以取得位元組陣列值。  
+    -   <span data-ttu-id="b12ce-225">將 `await` 套用至工作，`GetURLContentsAsync` 會傳回該工作以取得位元組陣列值。</span><span class="sxs-lookup"><span data-stu-id="b12ce-225">Apply `await` to the task that `GetURLContentsAsync` returns to obtain the byte array value.</span></span>  
   
-     下列程式碼會顯示這些變更。  
+     <span data-ttu-id="b12ce-226">下列程式碼會顯示這些變更。</span><span class="sxs-lookup"><span data-stu-id="b12ce-226">The following code shows these changes.</span></span>  
   
     ```csharp  
     byte[] urlContents = await GetURLContentsAsync(url);  
     ```  
   
-     前一個指派縮寫下列兩行程式碼。  
+     <span data-ttu-id="b12ce-227">前一個指派縮寫下列兩行程式碼。</span><span class="sxs-lookup"><span data-stu-id="b12ce-227">The previous assignment abbreviates the following two lines of code.</span></span>  
   
     ```csharp  
     // GetURLContentsAsync returns a Task<T>. At completion, the task  
@@ -374,32 +374,32 @@ ms.lasthandoff: 03/28/2017
     //byte[] urlContents = await getContentsTask;  
     ```  
   
-2.  在方法簽章中進行下列變更：  
+2.  <span data-ttu-id="b12ce-228">在方法簽章中進行下列變更：</span><span class="sxs-lookup"><span data-stu-id="b12ce-228">Make the following changes in the method's signature:</span></span>  
   
-    -   以 `async` 修飾詞來標示方法。  
+    -   <span data-ttu-id="b12ce-229">以 `async` 修飾詞來標示方法。</span><span class="sxs-lookup"><span data-stu-id="b12ce-229">Mark the method with the `async` modifier.</span></span>  
   
-    -   將 "Async" 加入至方法名稱。  
+    -   <span data-ttu-id="b12ce-230">將 "Async" 加入至方法名稱。</span><span class="sxs-lookup"><span data-stu-id="b12ce-230">Add "Async" to the method name.</span></span>  
   
-    -   這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。 因此，請將方法的傳回型別從 `void` 變更為 `Task`。  
+    -   <span data-ttu-id="b12ce-231">這次沒有任何工作傳回變數，T，因為 `SumPageSizesAsync` 並未傳回 T 的值。(這個方法沒有任何 `return` 陳述式)。不過，方法必須傳回 `Task` 才可以等候。</span><span class="sxs-lookup"><span data-stu-id="b12ce-231">There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `return` statement.) However, the method must return a `Task` to be awaitable.</span></span> <span data-ttu-id="b12ce-232">因此，請將方法的傳回型別從 `void` 變更為 `Task`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-232">Therefore, change the return type of the method from `void` to `Task`.</span></span>  
   
-     下列程式碼會顯示這些變更。  
+     <span data-ttu-id="b12ce-233">下列程式碼會顯示這些變更。</span><span class="sxs-lookup"><span data-stu-id="b12ce-233">The following code shows these changes.</span></span>  
   
     ```csharp  
     private async Task SumPageSizesAsync()  
     ```  
   
-     `SumPageSizes` 至 `SumPageSizesAsync` 的轉換完成。  
+     <span data-ttu-id="b12ce-234">`SumPageSizes` 至 `SumPageSizesAsync` 的轉換完成。</span><span class="sxs-lookup"><span data-stu-id="b12ce-234">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> 將 startButton_Click 轉換為非同步方法  
+###  <span data-ttu-id="b12ce-235"><a name="startButton"></a> 將 startButton_Click 轉換為非同步方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-235"><a name="startButton"></a> To convert startButton_Click to an asynchronous method</span></span>  
   
-1.  如果您尚未這麼做，請在事件處理常式中，將呼叫方法的名稱從 `SumPageSizes` 變更為 `SumPageSizesAsync`。  
+1.  <span data-ttu-id="b12ce-236">如果您尚未這麼做，請在事件處理常式中，將呼叫方法的名稱從 `SumPageSizes` 變更為 `SumPageSizesAsync`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-236">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
-2.  因為 `SumPageSizesAsync` 是非同步方法，在事件處理常式中變更程式碼以等候結果。  
+2.  <span data-ttu-id="b12ce-237">因為 `SumPageSizesAsync` 是非同步方法，在事件處理常式中變更程式碼以等候結果。</span><span class="sxs-lookup"><span data-stu-id="b12ce-237">Because `SumPageSizesAsync` is an async method, change the code in the event handler to await the result.</span></span>  
   
-     對 `SumPageSizesAsync` 的呼叫會鏡射 `GetURLContentsAsync` 中對 `CopyToAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。  
+     <span data-ttu-id="b12ce-238">對 `SumPageSizesAsync` 的呼叫會鏡射 `GetURLContentsAsync` 中對 `CopyToAsync` 的呼叫。</span><span class="sxs-lookup"><span data-stu-id="b12ce-238">The call to `SumPageSizesAsync` mirrors the call to `CopyToAsync` in `GetURLContentsAsync`.</span></span> <span data-ttu-id="b12ce-239">呼叫會傳回 `Task`，而不是 `Task(T)`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-239">The call returns a `Task`, not a `Task(T)`.</span></span>  
   
-     如同先前的程序，您可以使用一個陳述式或兩個陳述式轉換呼叫。 下列程式碼會顯示這些變更。  
+     <span data-ttu-id="b12ce-240">如同先前的程序，您可以使用一個陳述式或兩個陳述式轉換呼叫。</span><span class="sxs-lookup"><span data-stu-id="b12ce-240">As in previous procedures, you can convert the call by using one statement or two statements.</span></span> <span data-ttu-id="b12ce-241">下列程式碼會顯示這些變更。</span><span class="sxs-lookup"><span data-stu-id="b12ce-241">The following code shows these changes.</span></span>  
   
     ```csharp  
     // One-step async call.  
@@ -410,49 +410,49 @@ ms.lasthandoff: 03/28/2017
     //await sumTask;  
     ```  
   
-3.  若要避免不小心重新進入作業，請在 `startButton_Click` 頂端加入下列陳述式以停用 [開始] 按鈕。  
+3.  <span data-ttu-id="b12ce-242">若要避免不小心重新進入作業，請在 `startButton_Click` 頂端加入下列陳述式以停用 [開始] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="b12ce-242">To prevent accidentally reentering the operation, add the following statement at the top of `startButton_Click` to disable the **Start** button.</span></span>  
   
     ```csharp  
     // Disable the button until the operation is complete.  
     startButton.IsEnabled = false;  
     ```  
   
-     您可以在事件處理常式結尾重新啟用按鈕。  
+     <span data-ttu-id="b12ce-243">您可以在事件處理常式結尾重新啟用按鈕。</span><span class="sxs-lookup"><span data-stu-id="b12ce-243">You can reenable the button at the end of the event handler.</span></span>  
   
     ```csharp  
     // Reenable the button in case you want to run the operation again.  
     startButton.IsEnabled = true;  
     ```  
   
-     如需重新進入的詳細資訊，請參閱[處理非同步應用程式中的重新進入 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)。  
+     <span data-ttu-id="b12ce-244">如需重新進入的詳細資訊，請參閱[處理非同步應用程式中的重新進入 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)。</span><span class="sxs-lookup"><span data-stu-id="b12ce-244">For more information about reentrancy, see [Handling Reentrancy in Async Apps (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span></span>  
   
-4.  最後，將 `async` 修飾詞加入宣告，讓事件處理常式可以等候 `SumPagSizesAsync`。  
+4.  <span data-ttu-id="b12ce-245">最後，將 `async` 修飾詞加入宣告，讓事件處理常式可以等候 `SumPagSizesAsync`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-245">Finally, add the `async` modifier to the declaration so that the event handler can await `SumPagSizesAsync`.</span></span>  
   
     ```csharp  
     private async void startButton_Click(object sender, RoutedEventArgs e)  
     ```  
   
-     一般而言，事件處理常式的名稱並沒有改變。 因為事件處理常式必須傳回 `void`，所以傳回型別不會變更為 `Task`。  
+     <span data-ttu-id="b12ce-246">一般而言，事件處理常式的名稱並沒有改變。</span><span class="sxs-lookup"><span data-stu-id="b12ce-246">Typically, the names of event handlers aren’t changed.</span></span> <span data-ttu-id="b12ce-247">因為事件處理常式必須傳回 `void`，所以傳回型別不會變更為 `Task`。</span><span class="sxs-lookup"><span data-stu-id="b12ce-247">The return type isn’t changed to `Task` because event handlers must return `void`.</span></span>  
   
-     專案從同步到非同步處理的轉換已完成。  
+     <span data-ttu-id="b12ce-248">專案從同步到非同步處理的轉換已完成。</span><span class="sxs-lookup"><span data-stu-id="b12ce-248">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> 測試非同步方案  
+###  <span data-ttu-id="b12ce-249"><a name="testAsynch"></a> 測試非同步方案</span><span class="sxs-lookup"><span data-stu-id="b12ce-249"><a name="testAsynch"></a> To test the asynchronous solution</span></span>  
   
-1.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
+1.  <span data-ttu-id="b12ce-250">選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="b12ce-250">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-2.  類似同步方案的輸出應該會顯示。 但是，請注意下列差異。  
+2.  <span data-ttu-id="b12ce-251">類似同步方案的輸出應該會顯示。</span><span class="sxs-lookup"><span data-stu-id="b12ce-251">Output that resembles the output of the synchronous solution should appear.</span></span> <span data-ttu-id="b12ce-252">但是，請注意下列差異。</span><span class="sxs-lookup"><span data-stu-id="b12ce-252">However, notice the following differences.</span></span>  
   
-    -   處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。  
+    -   <span data-ttu-id="b12ce-253">處理完成之後，結果不會同時發生。</span><span class="sxs-lookup"><span data-stu-id="b12ce-253">The results don’t all occur at the same time, after the processing is complete.</span></span> <span data-ttu-id="b12ce-254">例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。</span><span class="sxs-lookup"><span data-stu-id="b12ce-254">For example, both programs contain a line in `startButton_Click` that clears the text box.</span></span> <span data-ttu-id="b12ce-255">此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。</span><span class="sxs-lookup"><span data-stu-id="b12ce-255">The intent is to clear the text box between runs if you choose the **Start** button for a second time, after one set of results has appeared.</span></span> <span data-ttu-id="b12ce-256">在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。</span><span class="sxs-lookup"><span data-stu-id="b12ce-256">In the synchronous version, the text box is cleared just before the counts appear for the second time, when the downloads are completed and the UI thread is free to do other work.</span></span> <span data-ttu-id="b12ce-257">在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。</span><span class="sxs-lookup"><span data-stu-id="b12ce-257">In the asynchronous version, the text box clears immediately after you choose the **Start** button.</span></span>  
   
-    -   最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。  
+    -   <span data-ttu-id="b12ce-258">最重要的是，不會在下載期間封鎖 UI 執行緒。</span><span class="sxs-lookup"><span data-stu-id="b12ce-258">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="b12ce-259">您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。</span><span class="sxs-lookup"><span data-stu-id="b12ce-259">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="b12ce-260">如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。</span><span class="sxs-lookup"><span data-stu-id="b12ce-260">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> 將方法 GetURLContentsAsync 取代為 .NET Framework 方法  
+###  <span data-ttu-id="b12ce-261"><a name="GetURLContentsAsync"></a> 將方法 GetURLContentsAsync 取代為 .NET Framework 方法</span><span class="sxs-lookup"><span data-stu-id="b12ce-261"><a name="GetURLContentsAsync"></a> To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
-1.  .NET Framework 4.5 提供許多您可以使用的非同步方法。 其中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> 可在這個逐步解說中滿足您的需求。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。  
+1.  <span data-ttu-id="b12ce-262">.NET Framework 4.5 提供許多您可以使用的非同步方法。</span><span class="sxs-lookup"><span data-stu-id="b12ce-262">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="b12ce-263">其中一個方法 (<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>) 會執行這個逐步解說所需的工作。</span><span class="sxs-lookup"><span data-stu-id="b12ce-263">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="b12ce-264">您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。</span><span class="sxs-lookup"><span data-stu-id="b12ce-264">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
-     第一個步驟是在方法 `SumPageSizesAsync` 中建立 `HttpClient` 物件。 在方法的開頭，加入下列宣告。  
+     <span data-ttu-id="b12ce-265">第一個步驟是在方法 `SumPageSizesAsync` 中建立 `HttpClient` 物件。</span><span class="sxs-lookup"><span data-stu-id="b12ce-265">The first step is to create an `HttpClient` object in method `SumPageSizesAsync`.</span></span> <span data-ttu-id="b12ce-266">在方法的開頭，加入下列宣告。</span><span class="sxs-lookup"><span data-stu-id="b12ce-266">Add the following declaration at the start of the method.</span></span>  
   
     ```csharp  
     // Declare an HttpClient object and increase the buffer size. The  
@@ -461,20 +461,20 @@ ms.lasthandoff: 03/28/2017
         new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
     ```  
   
-2.  在 `SumPageSizesAsync,` 中將對 `GetURLContentsAsync` 方法的呼叫取代為對 `HttpClient` 方法的呼叫。  
+2.  <span data-ttu-id="b12ce-267">在 `SumPageSizesAsync,` 中將對 `GetURLContentsAsync` 方法的呼叫取代為對 `HttpClient` 方法的呼叫。</span><span class="sxs-lookup"><span data-stu-id="b12ce-267">In `SumPageSizesAsync,` replace the call to your `GetURLContentsAsync` method with a call to the `HttpClient` method.</span></span>  
   
     ```csharp  
     byte[] urlContents = await client.GetByteArrayAsync(url);  
     ```  
   
-3.  移除或取消註解您撰寫的 `GetURLContentsAsync` 方法。  
+3.  <span data-ttu-id="b12ce-268">移除或取消註解您撰寫的 `GetURLContentsAsync` 方法。</span><span class="sxs-lookup"><span data-stu-id="b12ce-268">Remove or comment out the `GetURLContentsAsync` method that you wrote.</span></span>  
   
-4.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
+4.  <span data-ttu-id="b12ce-269">選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="b12ce-269">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     此版本之專案的行為應該符合「測試非同步方案」程序描述的行為，而且您只需要投入較少的精力。  
+     <span data-ttu-id="b12ce-270">此版本之專案的行為應該符合「測試非同步方案」程序描述的行為，而且您只需要投入較少的精力。</span><span class="sxs-lookup"><span data-stu-id="b12ce-270">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> 範例  
- 下列程式碼包含使用您撰寫的 `GetURLContentsAsync` 方法，從同步轉換為非同步方案的完整範例。 請注意，它極為類似原始的同步方案。  
+##  <span data-ttu-id="b12ce-271"><a name="BKMK_CompleteCodeExamples"></a> 範例</span><span class="sxs-lookup"><span data-stu-id="b12ce-271"><a name="BKMK_CompleteCodeExamples"></a> Example</span></span>  
+ <span data-ttu-id="b12ce-272">下列程式碼包含使用您撰寫的 `GetURLContentsAsync` 方法，從同步轉換為非同步方案的完整範例。</span><span class="sxs-lookup"><span data-stu-id="b12ce-272">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="b12ce-273">請注意，它極為類似原始的同步方案。</span><span class="sxs-lookup"><span data-stu-id="b12ce-273">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```csharp  
 using System;  
@@ -623,7 +623,7 @@ namespace AsyncExampleWPF
 }  
 ```  
   
- 下列程式碼包含使用 `HttpClient` 方法 `GetByteArrayAsync` 之方案的完整範例。  
+ <span data-ttu-id="b12ce-274">下列程式碼包含使用 `HttpClient` 方法 `GetByteArrayAsync` 之方案的完整範例。</span><span class="sxs-lookup"><span data-stu-id="b12ce-274">The following code contains the full example of the solution that uses the `HttpClient` method, `GetByteArrayAsync`.</span></span>  
   
 ```csharp  
 using System;  
@@ -740,13 +740,13 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)   
- [async](../../../../csharp/language-reference/keywords/async.md)   
- [await](../../../../csharp/language-reference/keywords/await.md)   
- [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
- [以工作為基礎的非同步程式設計 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)   
- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)   
- [如何：使用 async 和 await，同時發出多個 Web 要求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a><span data-ttu-id="b12ce-275">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b12ce-275">See Also</span></span>  
+ <span data-ttu-id="b12ce-276">[非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) </span><span class="sxs-lookup"><span data-stu-id="b12ce-276">[Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) </span></span>  
+ <span data-ttu-id="b12ce-277">[async](../../../../csharp/language-reference/keywords/async.md) </span><span class="sxs-lookup"><span data-stu-id="b12ce-277">[async](../../../../csharp/language-reference/keywords/async.md) </span></span>  
+ <span data-ttu-id="b12ce-278">[await](../../../../csharp/language-reference/keywords/await.md) </span><span class="sxs-lookup"><span data-stu-id="b12ce-278">[await](../../../../csharp/language-reference/keywords/await.md) </span></span>  
+ <span data-ttu-id="b12ce-279">[使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md) </span><span class="sxs-lookup"><span data-stu-id="b12ce-279">[Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md) </span></span>  
+ <span data-ttu-id="b12ce-280">[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) </span><span class="sxs-lookup"><span data-stu-id="b12ce-280">[Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) </span></span>  
+ <span data-ttu-id="b12ce-281">[以工作為基礎的非同步程式設計 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847) </span><span class="sxs-lookup"><span data-stu-id="b12ce-281">[Task-based Asynchronous Programming (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847) </span></span>  
+ <span data-ttu-id="b12ce-282">[如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) </span><span class="sxs-lookup"><span data-stu-id="b12ce-282">[How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) </span></span>  
+ [<span data-ttu-id="b12ce-283">如何：使用 async 和 await，同時發出多個 Web 要求 (C#)</span><span class="sxs-lookup"><span data-stu-id="b12ce-283">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
 

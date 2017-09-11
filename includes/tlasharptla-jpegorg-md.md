@@ -1,1 +1,1 @@
-JPEG 格式 (JPEG)
+<span data-ttu-id="a9e6b-101">JPEG 格式 (JPEG)</span><span class="sxs-lookup"><span data-stu-id="a9e6b-101">Joint Photographics Experts Group (JPEG)</span></span>

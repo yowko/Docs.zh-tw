@@ -1,1 +1,1 @@
-結構化查詢語言 (SQL)
+<span data-ttu-id="e2c6f-101">結構化查詢語言 (SQL)</span><span class="sxs-lookup"><span data-stu-id="e2c6f-101">Structured Query Language (SQL)</span></span>

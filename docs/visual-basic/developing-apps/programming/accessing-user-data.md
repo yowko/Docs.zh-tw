@@ -1,5 +1,5 @@
 ---
-title: "存取使用者資料 (Visual Basic) | Microsoft Docs"
+title: "存取使用者資料 (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,25 +35,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ef4607074e1e89bcafdd4262a25070693948f8ff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 396ae45d26551c3a44a8a8fa6334a744508734a7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-user-data-visual-basic"></a>存取使用者資料 (Visual Basic)
-本節包含處理 `My.User` 物件以及可使用它完成的工作等主題。  
+# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="f5ea1-102">存取使用者資料 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5ea1-102">Accessing User Data (Visual Basic)</span></span>
+<span data-ttu-id="f5ea1-103">本節包含處理 `My.User` 物件以及可使用它完成的工作等主題。</span><span class="sxs-lookup"><span data-stu-id="f5ea1-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
   
- `My.User` 物件透過傳回實作 <xref:System.Security.Principal.IPrincipal> 介面的物件，讓您存取已登入使用者的相關資訊。  
+ <span data-ttu-id="f5ea1-104">`My.User` 物件透過傳回實作 <xref:System.Security.Principal.IPrincipal> 介面的物件，讓您存取已登入使用者的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f5ea1-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
   
-## <a name="tasks"></a>工作  
+## <a name="tasks"></a><span data-ttu-id="f5ea1-105">工作</span><span class="sxs-lookup"><span data-stu-id="f5ea1-105">Tasks</span></span>  
   
-|以|請參閱|  
+|<span data-ttu-id="f5ea1-106">以</span><span class="sxs-lookup"><span data-stu-id="f5ea1-106">To</span></span>|<span data-ttu-id="f5ea1-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="f5ea1-107">See</span></span>|  
 |--------|---------|  
-|取得使用者的登入名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|如果應用程式使用 Windows 驗證即可取得使用者的網域名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|判斷使用者的角色|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|<span data-ttu-id="f5ea1-108">取得使用者的登入名稱</span><span class="sxs-lookup"><span data-stu-id="f5ea1-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|<span data-ttu-id="f5ea1-109">如果應用程式使用 Windows 驗證即可取得使用者的網域名稱</span><span class="sxs-lookup"><span data-stu-id="f5ea1-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|<span data-ttu-id="f5ea1-110">判斷使用者的角色</span><span class="sxs-lookup"><span data-stu-id="f5ea1-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a><span data-ttu-id="f5ea1-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f5ea1-111">See Also</span></span>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>
+

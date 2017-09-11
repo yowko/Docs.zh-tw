@@ -1,106 +1,100 @@
 ---
-title: "dotnet-add package 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-add package 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
-keywords: "dotnet-add, CLI, CLI 命令, .NET Core"
-author: spboyer
+title: "dotnet add package 命令 - .NET Core CLI"
+description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 88e0da69-a5ea-46cc-8b46-5493242b7af9
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 41b46e879056d385ceb3abaec27db974cab812e3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-add-package"></a><span data-ttu-id="3295a-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="3295a-103">dotnet add package</span></span>
 
-# <a name="dotnet-add-package"></a>dotnet-add package
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a><span data-ttu-id="3295a-104">name</span><span class="sxs-lookup"><span data-stu-id="3295a-104">Name</span></span>
 
-`dotnet-add package` - 將套件參考新增至專案檔。
+<span data-ttu-id="3295a-105">`dotnet add package` - 將套件參考新增至專案檔。</span><span class="sxs-lookup"><span data-stu-id="3295a-105">`dotnet add package` - Adds a package reference to a project file.</span></span>
 
-## <a name="synopsis"></a>概要
+## <a name="synopsis"></a><span data-ttu-id="3295a-106">概要</span><span class="sxs-lookup"><span data-stu-id="3295a-106">Synopsis</span></span>
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
 
-## <a name="description"></a>描述
+## <a name="description"></a><span data-ttu-id="3295a-107">描述</span><span class="sxs-lookup"><span data-stu-id="3295a-107">Description</span></span>
 
-`dotnet add package` 命令提供方便的選項，可將套件參考新增至專案檔。 執行命令之後，會執行相容性檢查，確保套件與專案中的架構相容。 如果通過檢查，系統會將 `<PackageReference>` 元素新增到專案檔，並執行 [dotnet restore](dotnet-restore.md)。
+<span data-ttu-id="3295a-108">`dotnet add package` 命令提供方便的選項，可將套件參考新增至專案檔。</span><span class="sxs-lookup"><span data-stu-id="3295a-108">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="3295a-109">執行命令之後，會執行相容性檢查，確保套件與專案中的架構相容。</span><span class="sxs-lookup"><span data-stu-id="3295a-109">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="3295a-110">如果通過檢查，系統會將 `<PackageReference>` 元素新增到專案檔，並執行 [dotnet restore](dotnet-restore.md)。</span><span class="sxs-lookup"><span data-stu-id="3295a-110">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
 
-例如，將 `Newtonsoft.Json` 新增至 *ToDo.csproj* 會產生類似如下的輸出：
+<span data-ttu-id="3295a-111">例如，將 `Newtonsoft.Json` 新增至 *ToDo.csproj* 會產生類似下例的輸出：</span><span class="sxs-lookup"><span data-stu-id="3295a-111">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
 
 ```
-Microsoft (R) Build Engine version 15.1.545.13942
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
-info : Adding PackageReference for package 'Newtonsoft.Json' into project 'ToDo.csproj'.
-log  : Restoring packages for ToDo.csproj...
+  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
+log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 119ms
-info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg 27ms
-info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'ToDo.csproj'.
-info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 235ms
+info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\projects\ToDo\ToDo.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-*ToDo.csproj* 檔案現在會包含參考套件的 [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) 元素。
+<span data-ttu-id="3295a-112">*ToDo.csproj* 檔案現在會包含參考套件的 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 元素。</span><span class="sxs-lookup"><span data-stu-id="3295a-112">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a><span data-ttu-id="3295a-113">引數</span><span class="sxs-lookup"><span data-stu-id="3295a-113">Arguments</span></span>
 
 `PROJECT`
 
-指定專案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。
+<span data-ttu-id="3295a-114">指定專案檔。</span><span class="sxs-lookup"><span data-stu-id="3295a-114">Specifies the project file.</span></span> <span data-ttu-id="3295a-115">如果未指定，命令會在目前的目錄中搜尋一個專案檔。</span><span class="sxs-lookup"><span data-stu-id="3295a-115">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-要新增的套件參考。
+<span data-ttu-id="3295a-116">要新增的套件參考。</span><span class="sxs-lookup"><span data-stu-id="3295a-116">The package reference to add.</span></span>
 
-## <a name="options"></a>選項
+## <a name="options"></a><span data-ttu-id="3295a-117">選項</span><span class="sxs-lookup"><span data-stu-id="3295a-117">Options</span></span>
 
 `-h|--help`
 
-印出命令的簡短說明。
+<span data-ttu-id="3295a-118">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="3295a-118">Prints out a short help for the command.</span></span>
 
 `-v|--version <VERSION>`
 
-套件的版本。
+<span data-ttu-id="3295a-119">套件的版本。</span><span class="sxs-lookup"><span data-stu-id="3295a-119">Version of the package.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增套件參考。
+<span data-ttu-id="3295a-120">只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增套件參考。</span><span class="sxs-lookup"><span data-stu-id="3295a-120">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 `-n|--no-restore`
 
-新增套件參考，而不執行還原預覽和相容性檢查。
+<span data-ttu-id="3295a-121">新增套件參考，而不執行還原預覽和相容性檢查。</span><span class="sxs-lookup"><span data-stu-id="3295a-121">Adds a package reference without performing a restore preview and compatibility check.</span></span>
 
 `-s|--source <SOURCE>`
 
-在還原作業期間，使用特定 NuGet 套件來源。
+<span data-ttu-id="3295a-122">在還原作業期間，使用特定 NuGet 套件來源。</span><span class="sxs-lookup"><span data-stu-id="3295a-122">Uses a specific NuGet package source during the restore operation.</span></span>
 
 `--package-directory <PACKAGE_DIRECTORY>`
 
-將套件還原至指定的目錄。
+<span data-ttu-id="3295a-123">將套件還原至指定的目錄。</span><span class="sxs-lookup"><span data-stu-id="3295a-123">Restores the package to the specified directory.</span></span>
 
-## <a name="examples"></a>範例
+## <a name="examples"></a><span data-ttu-id="3295a-124">範例</span><span class="sxs-lookup"><span data-stu-id="3295a-124">Examples</span></span>
 
-將 `Newtonsoft.Json` NuGet 套件新增至專案：
+<span data-ttu-id="3295a-125">將 `Newtonsoft.Json` NuGet 套件新增至專案：</span><span class="sxs-lookup"><span data-stu-id="3295a-125">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
 
 `dotnet add package Newtonsoft.Json`
 
-將特定版本的套件新增至專案：
+<span data-ttu-id="3295a-126">將特定版本的套件新增至專案：</span><span class="sxs-lookup"><span data-stu-id="3295a-126">Add a specific version of a package to a project:</span></span>
 
 `dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0`
 
-使用特定 NuGet 來源新增套件：
+<span data-ttu-id="3295a-127">使用特定 NuGet 來源新增套件：</span><span class="sxs-lookup"><span data-stu-id="3295a-127">Add a package using a specific NuGet source:</span></span>
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
 

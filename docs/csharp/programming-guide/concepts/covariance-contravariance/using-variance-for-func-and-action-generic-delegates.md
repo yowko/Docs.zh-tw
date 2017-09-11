@@ -1,5 +1,5 @@
 ---
-title: "針對 Func 與 Action 泛型委派使用變異數 (C#) | Microsoft Docs"
+title: "針對 Func 與 Action 泛型委派使用變異數 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e14432158ac10a236a157efc5d2872a1a239598
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 976057252a6cfa378008e9508145be7bc330fdc8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a>針對 Func 與 Action 泛型委派使用變異數 (C#)
-下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a><span data-ttu-id="618a4-102">針對 Func 與 Action 泛型委派使用變異數 (C#)</span><span class="sxs-lookup"><span data-stu-id="618a4-102">Using Variance for Func and Action Generic Delegates (C#)</span></span>
+<span data-ttu-id="618a4-103">下列範例示範如何在 `Func` 和 `Action` 泛型委派中使用共變數和反變數，以便在您的程式碼中重複使用方法並提供更多彈性。</span><span class="sxs-lookup"><span data-stu-id="618a4-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
   
- 如需共變數與反變數的詳細資訊，請參閱[委派中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。  
+ <span data-ttu-id="618a4-104">如需共變數與反變數的詳細資訊，請參閱[委派中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="618a4-104">For more information about covariance and contravariance, see [Variance in Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span></span>  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a>使用具有 Covariant 型別參數的委派  
- 下列範例說明在泛型 `Func` 委派中支援共變數的好處。 `FindByTitle` 方法使用 `String` 類型的參數，並傳回 `Employee` 類型的物件。 不過，您可以將此方法指派給 `Func<String, Person>` 委派，因為 `Employee` 會繼承 `Person`。  
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="618a4-105">使用具有 Covariant 型別參數的委派</span><span class="sxs-lookup"><span data-stu-id="618a4-105">Using Delegates with Covariant Type Parameters</span></span>  
+ <span data-ttu-id="618a4-106">下列範例說明在泛型 `Func` 委派中支援共變數的好處。</span><span class="sxs-lookup"><span data-stu-id="618a4-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="618a4-107">`FindByTitle` 方法使用 `String` 類型的參數，並傳回 `Employee` 類型的物件。</span><span class="sxs-lookup"><span data-stu-id="618a4-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="618a4-108">不過，您可以將此方法指派給 `Func<String, Person>` 委派，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="618a4-108">However, you can assign this method to the `Func<String, Person>` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -65,8 +65,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a>使用具有 Contravariant 型別參數的委派  
- 下列範例說明在泛型 `Action` 委派中支援反變數的好處。 `AddToContacts` 方法使用 `Person` 類型的參數。 不過，您可以將此方法指派給 `Action<Employee>` 委派，因為 `Employee` 會繼承 `Person`。  
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="618a4-109">使用具有 Contravariant 型別參數的委派</span><span class="sxs-lookup"><span data-stu-id="618a4-109">Using Delegates with Contravariant Type Parameters</span></span>  
+ <span data-ttu-id="618a4-110">下列範例說明在泛型 `Action` 委派中支援反變數的好處。</span><span class="sxs-lookup"><span data-stu-id="618a4-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="618a4-111">`AddToContacts` 方法使用 `Person` 類型的參數。</span><span class="sxs-lookup"><span data-stu-id="618a4-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="618a4-112">不過，您可以將此方法指派給 `Action<Employee>` 委派，因為 `Employee` 會繼承 `Person`。</span><span class="sxs-lookup"><span data-stu-id="618a4-112">However, you can assign this method to the `Action<Employee>` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 public class Person { }  
@@ -98,6 +98,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [共變數和反變數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)   
- [泛型](https://msdn.microsoft.com/library/ms172192)
+## <a name="see-also"></a><span data-ttu-id="618a4-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="618a4-113">See Also</span></span>  
+ <span data-ttu-id="618a4-114">[共變數和反變數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md) </span><span class="sxs-lookup"><span data-stu-id="618a4-114">[Covariance and Contravariance (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md) </span></span>  
+ [<span data-ttu-id="618a4-115">泛型</span><span class="sxs-lookup"><span data-stu-id="618a4-115">Generics</span></span>](~/docs/standard/generics/index.md)
+

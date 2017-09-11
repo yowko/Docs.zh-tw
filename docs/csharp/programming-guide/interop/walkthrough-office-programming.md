@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：Office 程式設計 (C# 和 Visual Basic) | Microsoft Docs"
+title: "逐步解說：Office 程式設計 (C# 和 Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,189 +29,204 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 和 Visual Basic)
-Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。 有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。 在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取索引的屬性。 Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。
+# <a name="walkthrough-office-programming-c-and-visual-basic"></a><span data-ttu-id="f1f69-102">逐步解說：Office 程式設計 (C# 和 Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1f69-102">Walkthrough: Office Programming (C# and Visual Basic)</span></span>
+<span data-ttu-id="f1f69-103">Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。</span><span class="sxs-lookup"><span data-stu-id="f1f69-103">Visual Studio offers features in C# and Visual Basic that improve Microsoft Office programming.</span></span> <span data-ttu-id="f1f69-104">有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。</span><span class="sxs-lookup"><span data-stu-id="f1f69-104">Helpful C# features include named and optional arguments and return values of type `dynamic`.</span></span> <span data-ttu-id="f1f69-105">在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取已編製索引的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-105">In COM programming, you can omit the `ref` keyword and gain access to indexed properties.</span></span> <span data-ttu-id="f1f69-106">Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。</span><span class="sxs-lookup"><span data-stu-id="f1f69-106">Features in Visual Basic include auto-implemented properties, statements in lambda expressions, and collection initializers.</span></span>
 
-這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。 如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型 (C# 和 Visual Basic)](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)。  
+<span data-ttu-id="f1f69-107">這兩種語言都會啟用類型資訊的內嵌，以允許部署與 COM 元件互動的組件，而不需要將主要 Interop 組件 (PIA) 部署至使用者電腦。</span><span class="sxs-lookup"><span data-stu-id="f1f69-107">Both languages enable embedding of type information, which allows deployment of assemblies that interact with COM components without deploying primary interop assemblies (PIAs) to the user's computer.</span></span> <span data-ttu-id="f1f69-108">如需詳細資訊，請參閱[逐步解說：從 Managed 組件內嵌類型 (C# 和 Visual Basic)](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-108">For more information, see [Walkthrough: Embedding Types from Managed Assemblies](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).</span></span>  
   
-這個逐步解說會示範 Office 程式設計內容中的這些功能，但其中大部分也適用於一般的程式設計。 在這個逐步解說中，您會使用 Excel 增益集應用程式來建立 Excel 活頁簿。 接著，建立含有活頁簿連結的 Word 文件。 最後，了解如何啟用和停用 PIA 相依性。  
+<span data-ttu-id="f1f69-109">這個逐步解說會示範 Office 程式設計內容中的這些功能，但其中大部分也適用於一般的程式設計。</span><span class="sxs-lookup"><span data-stu-id="f1f69-109">This walkthrough demonstrates these features in the context of Office programming, but many of these features are also useful in general programming.</span></span> <span data-ttu-id="f1f69-110">在這個逐步解說中，您會使用 Excel 增益集應用程式來建立 Excel 活頁簿。</span><span class="sxs-lookup"><span data-stu-id="f1f69-110">In the walkthrough, you use an Excel Add-in application to create an Excel workbook.</span></span> <span data-ttu-id="f1f69-111">接著，建立含有活頁簿連結的 Word 文件。</span><span class="sxs-lookup"><span data-stu-id="f1f69-111">Next, you create a Word document that contains a link to the workbook.</span></span> <span data-ttu-id="f1f69-112">最後，了解如何啟用和停用 PIA 相依性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-112">Finally, you see how to enable and disable the PIA dependency.</span></span>  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a><span data-ttu-id="f1f69-113">必要條件</span><span class="sxs-lookup"><span data-stu-id="f1f69-113">Prerequisites</span></span>  
 
-電腦上必須安裝 Microsoft Office Excel 和 Microsoft Office Word 才能完成此逐步解說。  
+<span data-ttu-id="f1f69-114">電腦上必須安裝 Microsoft Office Excel 和 Microsoft Office Word 才能完成此逐步解說。</span><span class="sxs-lookup"><span data-stu-id="f1f69-114">You must have Microsoft Office Excel and Microsoft Office Word installed on your computer to complete this walkthrough.</span></span>  
   
- 如果您使用 [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)] 以前的作業系統，請確定已安裝 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]。  
+ <span data-ttu-id="f1f69-115">如果您使用 [!INCLUDE[windowsver](~/includes/windowsver-md.md)] 以前的作業系統，請確定已安裝 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-115">If you are using an operating system that is older than [!INCLUDE[windowsver](~/includes/windowsver-md.md)], make sure that [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] is installed.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-set-up-an-excel-add-in-application"></a>設定 Excel 增益集應用程式  
+### <a name="to-set-up-an-excel-add-in-application"></a><span data-ttu-id="f1f69-116">設定 Excel 增益集應用程式</span><span class="sxs-lookup"><span data-stu-id="f1f69-116">To set up an Excel Add-in application</span></span>  
   
-1.  啟動 Visual Studio。  
+1.  <span data-ttu-id="f1f69-117">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f1f69-117">Start Visual Studio.</span></span>  
   
-2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+2.  <span data-ttu-id="f1f69-118">在 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-118">On the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-3.  在 [已安裝的範本] 窗格中，展開 **Visual Basic** 或 **Visual C#**，並展開 **Office**，然後按一下 Office 產品的版本年份。  
+3.  <span data-ttu-id="f1f69-119">在 [已安裝的範本] 窗格中，展開 [Visual Basic] 或 [Visual C#]，並展開 [Office]，然後按一下 Office 產品的版本年份。</span><span class="sxs-lookup"><span data-stu-id="f1f69-119">In the **Installed Templates** pane, expand **Visual Basic** or **Visual C#**, expand **Office**, and then click the version year of the Office product.</span></span>  
   
-4.  在 [範本] 窗格中，按一下 [Excel \<版本 > 增益集]。  
+4.  <span data-ttu-id="f1f69-120">在 [範本] 窗格中，按一下 [Excel \<版本 > 增益集]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-120">In the **Templates** pane, click **Excel \<version> Add-in**.</span></span>  
   
-5.  查看 [範本] 窗格頂端，確定 **.NET Framework 4** 或更新版本出現在 [目標 Framework] 方塊中。  
+5.  <span data-ttu-id="f1f69-121">查看 [範本] 窗格頂端，確定 **.NET Framework 4** 或更新版本出現在 [目標 Framework] 方塊中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-121">Look at the top of the **Templates** pane to make sure that **.NET Framework 4**, or a later version, appears in the **Target Framework** box.</span></span>  
   
-6.  視需要在 [名稱] 方塊中，輸入您專案的名稱。  
+6.  <span data-ttu-id="f1f69-122">視需要在 [名稱] 方塊中輸入您專案的名稱。</span><span class="sxs-lookup"><span data-stu-id="f1f69-122">Type a name for your project in the **Name** box, if you want to.</span></span>  
   
-7.  按一下 [確定]。  
+7.  <span data-ttu-id="f1f69-123">按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-123">Click **OK**.</span></span>  
   
-8.  新的專案隨即會出現在方案總管中。  
+8.  <span data-ttu-id="f1f69-124">新的專案隨即會出現在 [方案總管] 中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-124">The new project appears in **Solution Explorer**.</span></span>  
   
-### <a name="to-add-references"></a>加入參考  
+### <a name="to-add-references"></a><span data-ttu-id="f1f69-125">加入參考</span><span class="sxs-lookup"><span data-stu-id="f1f69-125">To add references</span></span>  
   
-1.  在方案總管中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]。 [新增參考] 對話方塊隨即出現。  
+1.  <span data-ttu-id="f1f69-126">在 [方案總管] 中，在專案名稱上按一下滑鼠右鍵，然後按一下 [加入參考]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-126">In **Solution Explorer**, right-click your project's name and then click **Add Reference**.</span></span> <span data-ttu-id="f1f69-127">[加入參考] 對話方塊隨即出現。</span><span class="sxs-lookup"><span data-stu-id="f1f69-127">The **Add Reference** dialog box appears.</span></span>  
   
-2.  在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。 如果看不到組件，您可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。  
+2.  <span data-ttu-id="f1f69-128">在 [組件] 索引標籤上，選取 **Microsoft.Office.Interop.Excel** `<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱] 清單中，按住 CTRL 鍵並選取 **Microsoft.Office.Interop.Word** `version <version>.0.0.0`。</span><span class="sxs-lookup"><span data-stu-id="f1f69-128">On the **Assemblies** tab, select **Microsoft.Office.Interop.Excel**, version `<version>.0.0.0` (for a key to the Office product version numbers, see [Microsoft Versions](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), in the **Component Name** list, and then hold down the CTRL key and select **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`.</span></span> <span data-ttu-id="f1f69-129">如果看不到組件，您可能需要確定它們已安裝並已顯示 (請參閱[如何：安裝 Office 主要 Interop 組件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies))。</span><span class="sxs-lookup"><span data-stu-id="f1f69-129">If you do not see the assemblies, you may need to ensure they are installed and displayed (see [How to: Install Office Primary Interop Assemblies](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).</span></span>  
   
-3.  按一下 [確定]。  
+3.  <span data-ttu-id="f1f69-130">按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-130">Click **OK**.</span></span>  
   
-### <a name="to-add-necessary-imports-statements-or-using-directives"></a>加入必要的 Imports 陳述式或 using 指示詞  
+### <a name="to-add-necessary-imports-statements-or-using-directives"></a><span data-ttu-id="f1f69-131">加入必要的 Imports 陳述式或 using 指示詞</span><span class="sxs-lookup"><span data-stu-id="f1f69-131">To add necessary Imports statements or using directives</span></span>  
   
-1.  在方案總管中，以滑鼠右鍵按一下 **ThisAddIn.vb** 或 **ThisAddIn.cs** 檔案，然後按一下 [檢視程式碼]。  
+1.  <span data-ttu-id="f1f69-132">在 [方案總管] 中，以滑鼠右鍵按一下 **ThisAddIn.vb** 或 **ThisAddIn.cs** 檔案，然後按一下 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-132">In **Solution Explorer**, right-click the **ThisAddIn.vb** or **ThisAddIn.cs** file and then click **View Code**.</span></span>  
   
-2.  將下列 `Imports` 陳述式 (Visual Basic) 或 `using` 指示詞 (C#) 加入還沒有這兩者的程式碼檔案頂端。  
+2.  <span data-ttu-id="f1f69-133">將下列 `Imports` 陳述式 (Visual Basic) 或 `using` 指示詞 (C#) 加入還沒有這兩者的程式碼檔案頂端。</span><span class="sxs-lookup"><span data-stu-id="f1f69-133">Add the following `Imports` statements (Visual Basic) or `using` directives (C#) to the top of the code file if they are not already present.</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]  [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
+     <span data-ttu-id="f1f69-134">[!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-134">[!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-135">[!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-135">[!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]</span></span>
   
-### <a name="to-create-a-list-of-bank-accounts"></a>建立銀行帳戶清單  
+### <a name="to-create-a-list-of-bank-accounts"></a><span data-ttu-id="f1f69-136">建立銀行帳戶清單</span><span class="sxs-lookup"><span data-stu-id="f1f69-136">To create a list of bank accounts</span></span>  
   
-1.  在方案總管中，以滑鼠右鍵按一下您的專案名稱，再按一下 [新增]，然後按一下 [類別]。 如果您使用 Visual Basic，請將類別命名為 Account.vb；如果您使用 C#，則請將類別命名為 Account.cs。 按一下 [加入] 。  
+1.  <span data-ttu-id="f1f69-137">在 [方案總管] 中，以滑鼠右鍵按一下您的專案名稱，再按一下 [新增]，然後按一下 [類別]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-137">In **Solution Explorer**, right-click your project's name, click **Add**, and then click **Class**.</span></span> <span data-ttu-id="f1f69-138">如果您使用 Visual Basic，請將類別命名為 Account.vb；如果您使用 C#，則請將類別命名為 Account.cs。</span><span class="sxs-lookup"><span data-stu-id="f1f69-138">Name the class Account.vb if you are using Visual Basic or Account.cs if you are using C#.</span></span> <span data-ttu-id="f1f69-139">按一下 [加入]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-139">Click **Add**.</span></span>  
   
-2.  將 `Account` 類別的定義取代為下列程式碼。 類別定義使用「自動實作屬性」。 如需詳細資訊，請參閱[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。  
+2.  <span data-ttu-id="f1f69-140">將 `Account` 類別的定義取代為下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="f1f69-140">Replace the definition of the `Account` class with the following code.</span></span> <span data-ttu-id="f1f69-141">類別定義使用「自動實作屬性」。</span><span class="sxs-lookup"><span data-stu-id="f1f69-141">The class definitions use *auto-implemented properties*.</span></span> <span data-ttu-id="f1f69-142">如需詳細資訊，請參閱[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-142">For more information, see [Auto-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]  [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     <span data-ttu-id="f1f69-143">[!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-143">[!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-144">[!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-144">[!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]</span></span>  
   
-3.  若要建立含有兩個帳戶的 `bankAccounts` 清單，請將下列程式碼新增至 *ThisAddIn.vb* 或 *ThisAddIn.cs* 中的 `ThisAddIn_Startup` 方法。 清單宣告使用「集合初始設定式」。 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。  
+3.  <span data-ttu-id="f1f69-145">若要建立含有兩個帳戶的 `bankAccounts` 清單，請將下列程式碼新增至 *ThisAddIn.vb* 或 *ThisAddIn.cs* 中的 `ThisAddIn_Startup` 方法。</span><span class="sxs-lookup"><span data-stu-id="f1f69-145">To create a `bankAccounts` list that contains two accounts, add the following code to the `ThisAddIn_Startup` method in *ThisAddIn.vb* or *ThisAddIn.cs*.</span></span> <span data-ttu-id="f1f69-146">清單宣告使用「集合初始設定式」。</span><span class="sxs-lookup"><span data-stu-id="f1f69-146">The list declarations use *collection initializers*.</span></span> <span data-ttu-id="f1f69-147">如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-147">For more information, see [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]  [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     <span data-ttu-id="f1f69-148">[!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-148">[!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-149">[!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-149">[!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]</span></span>  
   
-### <a name="to-export-data-to-excel"></a>將資料匯出至 Excel  
+### <a name="to-export-data-to-excel"></a><span data-ttu-id="f1f69-150">將資料匯出至 Excel</span><span class="sxs-lookup"><span data-stu-id="f1f69-150">To export data to Excel</span></span>  
   
-1.  在相同的檔案中，將下列方法加入 `ThisAddIn` 類別。 這個方法會設定 Excel 活頁簿，並將資料匯出到 Excel 活頁簿。  
+1.  <span data-ttu-id="f1f69-151">在相同的檔案中，將下列方法加入 `ThisAddIn` 類別。</span><span class="sxs-lookup"><span data-stu-id="f1f69-151">In the same file, add the following method to the `ThisAddIn` class.</span></span> <span data-ttu-id="f1f69-152">這個方法會設定 Excel 活頁簿，並將資料匯出到 Excel 活頁簿。</span><span class="sxs-lookup"><span data-stu-id="f1f69-152">The method sets up an Excel workbook and exports data to it.</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]  [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     <span data-ttu-id="f1f69-153">[!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-153">[!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-154">[!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-154">[!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]</span></span>  
   
-     在這個方法中，使用了兩個新的 C# 功能。 這兩個功能已存在於 Visual Basic 中。  
+     <span data-ttu-id="f1f69-155">在這個方法中，使用了兩個新的 C# 功能。</span><span class="sxs-lookup"><span data-stu-id="f1f69-155">Two new C# features are used in this method.</span></span> <span data-ttu-id="f1f69-156">這兩個功能已存在於 Visual Basic 中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-156">Both of these features already exist in Visual Basic.</span></span>  
   
-    -   [Add](http://go.microsoft.com/fwlink/?LinkId=210910) 方法提供用來指定特定範本的選擇性參數。 如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 中的新功能) 省略該參數的引數。 因為上一個範例中未傳送引數，所以 `Add` 會使用預設範本並建立新的活頁簿。 舊版 C# 中對等的陳述式需要有預留位置引數：`excelApp.Workbooks.Add(Type.Missing)`。  
+    -   <span data-ttu-id="f1f69-157">[Add](http://go.microsoft.com/fwlink/?LinkId=210910) 方法提供用來指定特定範本的選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="f1f69-157">Method [Add](http://go.microsoft.com/fwlink/?LinkId=210910) has an *optional parameter* for specifying a particular template.</span></span> <span data-ttu-id="f1f69-158">如果您想要使用參數的預設值，則可利用選擇性參數 ([!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中的新功能) 省略該參數的引數。</span><span class="sxs-lookup"><span data-stu-id="f1f69-158">Optional parameters, new in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], enable you to omit the argument for that parameter if you want to use the parameter's default value.</span></span> <span data-ttu-id="f1f69-159">因為上一個範例中未傳送引數，所以 `Add` 會使用預設範本並建立新的活頁簿。</span><span class="sxs-lookup"><span data-stu-id="f1f69-159">Because no argument is sent in the previous example, `Add` uses the default template and creates a new workbook.</span></span> <span data-ttu-id="f1f69-160">舊版 C# 中對等的陳述式需要有預留位置引數：`excelApp.Workbooks.Add(Type.Missing)`。</span><span class="sxs-lookup"><span data-stu-id="f1f69-160">The equivalent statement in earlier versions of C# requires a placeholder argument: `excelApp.Workbooks.Add(Type.Missing)`.</span></span>  
   
-         如需詳細資訊，請參閱[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。  
+         <span data-ttu-id="f1f69-161">如需詳細資訊，請參閱[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-161">For more information, see [Named and Optional Arguments](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).</span></span>  
   
-    -   [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 物件的 `Range` 和 `Offset` 屬性會使用「編製過索引的屬性」功能。 您可利用這項功能使用下列一般 C# 語法，來使用 COM 類型的這些屬性。 您可利用編製過索引的屬性，使用 `Value` 物件的 `Range` 屬性，而不需要使用 `Value2` 屬性。 `Value` 屬性編製過索引，但您可選擇是否要編製索引。 在下列範例中，同時使用了選擇性引數與編製過索引的屬性。  
+    -   <span data-ttu-id="f1f69-162">[Range](http://go.microsoft.com/fwlink/?LinkId=210911) 物件的 `Range` 和 `Offset` 屬性會使用「已編製索引的屬性」功能。</span><span class="sxs-lookup"><span data-stu-id="f1f69-162">The `Range` and `Offset` properties of the [Range](http://go.microsoft.com/fwlink/?LinkId=210911) object use the *indexed properties* feature.</span></span> <span data-ttu-id="f1f69-163">您可利用此功能使用下列一般 C# 語法，來取用 COM 類型的這些屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-163">This feature enables you to consume these properties from COM types by using the following typical C# syntax.</span></span> <span data-ttu-id="f1f69-164">您可利用已編製索引的屬性，使用 `Value` 物件的 `Range` 屬性，而不需要使用 `Value2` 屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-164">Indexed properties also enable you to use the `Value` property of the `Range` object, eliminating the need to use the `Value2` property.</span></span> <span data-ttu-id="f1f69-165">`Value` 屬性已編製索引，但您可選擇是否要編製索引。</span><span class="sxs-lookup"><span data-stu-id="f1f69-165">The `Value` property is indexed, but the index is optional.</span></span> <span data-ttu-id="f1f69-166">在下列範例中，同時使用了選擇性引數與已編製索引的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-166">Optional arguments and indexed properties work together in the following example.</span></span>  
   
-         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         <span data-ttu-id="f1f69-167">[!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-167">[!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]</span></span>  
   
-         在舊版語言中，需要下列特殊語法。  
+         <span data-ttu-id="f1f69-168">在舊版語言中，需要下列特殊語法。</span><span class="sxs-lookup"><span data-stu-id="f1f69-168">In earlier versions of the language, the following special syntax is required.</span></span>  
   
-         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         <span data-ttu-id="f1f69-169">[!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-169">[!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]</span></span>  
   
-         您無法建立自己本身的編製過索引的屬性。 這個功能僅支援使用現有已編製過索引的屬性。  
+         <span data-ttu-id="f1f69-170">您無法建立自己本身的已編製索引的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-170">You cannot create indexed properties of your own.</span></span> <span data-ttu-id="f1f69-171">這個功能只支援使用現有已編製索引的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-171">The feature only supports consumption of existing indexed properties.</span></span>  
   
-         如需詳細資訊，請參閱[如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。  
+         <span data-ttu-id="f1f69-172">如需詳細資訊，請參閱[如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-172">For more information, see [How to: Use Indexed Properties in COM Interop Programming](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).</span></span>  
   
-2.  在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。  
+2.  <span data-ttu-id="f1f69-173">在 `DisplayInExcel` 結尾加入下列程式碼，以調整資料行寬度以容納內容。</span><span class="sxs-lookup"><span data-stu-id="f1f69-173">Add the following code at the end of `DisplayInExcel` to adjust the column widths to fit the content.</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]  [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     <span data-ttu-id="f1f69-174">[!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-174">[!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-175">[!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-175">[!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]</span></span>  
   
-     這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。 如果已將 [內嵌 Interop 類型] 設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。 `dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 Visual C# 2008 和語言舊版本中需要明確轉型。  
+     <span data-ttu-id="f1f69-176">這些新增內容可示範 C# 中的另一項功能：將 COM 主機 (例如 Office) 傳回的 `Object` 值，視為具有 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 類型。</span><span class="sxs-lookup"><span data-stu-id="f1f69-176">These additions demonstrate another feature in C#: treating `Object` values returned from COM hosts such as Office as if they have type [dynamic](../../../csharp/language-reference/keywords/dynamic.md).</span></span> <span data-ttu-id="f1f69-177">如果已將 [內嵌 Interop 類型] 設定為其預設值 `True`，則會自動發生這種情況；同樣地，當 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考了組件時也會如此。</span><span class="sxs-lookup"><span data-stu-id="f1f69-177">This happens automatically when **Embed Interop Types** is set to its default value, `True`, or, equivalently, when the assembly is referenced by the [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) compiler option.</span></span> <span data-ttu-id="f1f69-178">`dynamic` 類型可以進行晚期繫結 (Visual Basic 中已有這個功能)，並避免在 Visual C# 2008 和語言舊版本中需要明確轉型。</span><span class="sxs-lookup"><span data-stu-id="f1f69-178">Type `dynamic` allows late binding, already available in Visual Basic, and avoids the explicit casting required in Visual C# 2008 and earlier versions of the language.</span></span>  
   
-     例如，`excelApp.Columns[1]` 會傳回 `Object`；而 `AutoFit` 則為 Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 方法。 如果沒有 `dynamic`，則在呼叫 `excelApp.Columns[1]` 方法之前，必須將 `Range` 所傳回的物件，轉型為 `AutoFit` 執行個體。  
+     <span data-ttu-id="f1f69-179">例如，`excelApp.Columns[1]` 會傳回 `Object`；而 `AutoFit` 則為 Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 方法。</span><span class="sxs-lookup"><span data-stu-id="f1f69-179">For example, `excelApp.Columns[1]` returns an `Object`, and `AutoFit` is an Excel  [Range](http://go.microsoft.com/fwlink/?LinkId=210911) method.</span></span> <span data-ttu-id="f1f69-180">如果沒有 `dynamic`，則在呼叫 `excelApp.Columns[1]` 方法之前，必須將 `Range` 所傳回的物件，轉型為 `AutoFit` 執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1f69-180">Without `dynamic`, you must cast the object returned by `excelApp.Columns[1]` as an instance of `Range` before calling method `AutoFit`.</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     <span data-ttu-id="f1f69-181">[!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-181">[!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]</span></span>  
   
-     如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。 如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 或[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。  
+     <span data-ttu-id="f1f69-182">如需內嵌 Interop 類型的詳細資訊，請參閱本主題稍後的＜尋找 PIA 參考＞和＜還原 PIA 相依性＞程序。</span><span class="sxs-lookup"><span data-stu-id="f1f69-182">For more information about embedding interop types, see procedures "To find the PIA reference" and "To restore the PIA dependency" later in this topic.</span></span> <span data-ttu-id="f1f69-183">如需 `dynamic` 的詳細資訊，請參閱 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 或[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-183">For more information about `dynamic`, see [dynamic](../../../csharp/language-reference/keywords/dynamic.md) or [Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span></span>  
   
-### <a name="to-invoke-displayinexcel"></a>叫用 DisplayInExcel  
+### <a name="to-invoke-displayinexcel"></a><span data-ttu-id="f1f69-184">叫用 DisplayInExcel</span><span class="sxs-lookup"><span data-stu-id="f1f69-184">To invoke DisplayInExcel</span></span>  
   
-1.  在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。 `DisplayInExcel` 呼叫包含兩個引數。 第一個引數是要處理的帳戶清單名稱。 第二個引數則是多行的 Lambda 運算式，定義如何處理資料。 每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。 如需詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+1.  <span data-ttu-id="f1f69-185">在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="f1f69-185">Add the following code at the end of the `ThisAddIn_StartUp` method.</span></span> <span data-ttu-id="f1f69-186">`DisplayInExcel` 呼叫包含兩個引數。</span><span class="sxs-lookup"><span data-stu-id="f1f69-186">The call to `DisplayInExcel` contains two arguments.</span></span> <span data-ttu-id="f1f69-187">第一個引數是要處理的帳戶清單名稱。</span><span class="sxs-lookup"><span data-stu-id="f1f69-187">The first argument is the name of the list of accounts to be processed.</span></span> <span data-ttu-id="f1f69-188">第二個引數則是多行的 Lambda 運算式，定義如何處理資料。</span><span class="sxs-lookup"><span data-stu-id="f1f69-188">The second argument is a multiline lambda expression that defines how the data is to be processed.</span></span> <span data-ttu-id="f1f69-189">每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。</span><span class="sxs-lookup"><span data-stu-id="f1f69-189">The `ID` and `balance` values for each account are displayed in adjacent cells, and the row is displayed in red if the balance is less than zero.</span></span> <span data-ttu-id="f1f69-190">如需詳細資訊，請參閱 [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-190">For more information, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]  [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     <span data-ttu-id="f1f69-191">[!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-191">[!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-192">[!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-192">[!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]</span></span>  
   
-2.  若要執行程式，請按 F5 鍵。 隨即會出現內含帳戶資料的 Excel 工作表。  
+2.  <span data-ttu-id="f1f69-193">若要執行程式，請按 F5。</span><span class="sxs-lookup"><span data-stu-id="f1f69-193">To run the program, press F5.</span></span> <span data-ttu-id="f1f69-194">隨即會出現內含帳戶資料的 Excel 工作表。</span><span class="sxs-lookup"><span data-stu-id="f1f69-194">An Excel worksheet appears that contains the data from the accounts.</span></span>  
   
-### <a name="to-add-a-word-document"></a>加入 Word 文件  
+### <a name="to-add-a-word-document"></a><span data-ttu-id="f1f69-195">加入 Word 文件</span><span class="sxs-lookup"><span data-stu-id="f1f69-195">To add a Word document</span></span>  
   
-1.  在 `ThisAddIn_StartUp` 方法的結尾加入下列程式碼，可以建立內含 Excel 活頁簿連結的 Word 文件。  
+1.  <span data-ttu-id="f1f69-196">在 `ThisAddIn_StartUp` 方法的結尾加入下列程式碼，可以建立內含 Excel 活頁簿連結的 Word 文件。</span><span class="sxs-lookup"><span data-stu-id="f1f69-196">Add the following code at the end of the `ThisAddIn_StartUp` method to create a Word document that contains a link to the Excel workbook.</span></span>  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]  [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     <span data-ttu-id="f1f69-197">[!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-197">[!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]</span></span>
+
+     <span data-ttu-id="f1f69-198">[!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]</span><span class="sxs-lookup"><span data-stu-id="f1f69-198">[!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]</span></span>  
   
-     這個程式碼將會示範 C# 中的數個新功能：省略 COM 程式設計中 `ref` 關鍵字、具名引數和選擇性引數的能力。 Visual Basic 中已有這些功能。 [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) 方法有七個參數，全部都定義為選擇性參考參數。 您可利用具名引數和選擇性引數，指定想要依名稱存取的參數，以及將引數只傳送給那些參數。 在這個範例中會傳送引數，表示應建立剪貼簿上的活頁簿連結 (參數 `Link`)，且連結會以圖示形式顯示在 Word 文件中 (參數 `DisplayAsIcon`)。 在 Visual C# 中也可省略這些引數的 `ref` 關鍵字。
+     <span data-ttu-id="f1f69-199">這個程式碼將會示範 C# 中的數個新功能：省略 COM 程式設計中 `ref` 關鍵字、具名引數和選擇性引數的能力。</span><span class="sxs-lookup"><span data-stu-id="f1f69-199">This code demonstrates several of the new features in C#: the ability to omit the `ref` keyword in COM programming, named arguments, and optional arguments.</span></span> <span data-ttu-id="f1f69-200">Visual Basic 中已有這些功能。</span><span class="sxs-lookup"><span data-stu-id="f1f69-200">These features already exist in Visual Basic.</span></span> <span data-ttu-id="f1f69-201">[PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) 方法有七個參數，全部都定義為選擇性參考參數。</span><span class="sxs-lookup"><span data-stu-id="f1f69-201">The [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) method has seven parameters, all of which are defined as optional reference parameters.</span></span> <span data-ttu-id="f1f69-202">您可利用具名引數和選擇性引數，指定想要依名稱存取的參數，以及將引數只傳送給那些參數。</span><span class="sxs-lookup"><span data-stu-id="f1f69-202">Named and optional arguments enable you to designate the parameters you want to access by name and to send arguments to only those parameters.</span></span> <span data-ttu-id="f1f69-203">在這個範例中會傳送引數，表示應建立剪貼簿上的活頁簿連結 (參數 `Link`)，且連結會以圖示形式顯示在 Word 文件中 (參數 `DisplayAsIcon`)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-203">In this example, arguments are sent to indicate that a link to the workbook on the Clipboard should be created (parameter `Link`) and that the link is to be displayed in the Word document as an icon (parameter `DisplayAsIcon`).</span></span> <span data-ttu-id="f1f69-204">在 Visual C# 中也可省略這些引數的 `ref` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="f1f69-204">Visual C# also enables you to omit the `ref` keyword for these arguments.</span></span>
   
-### <a name="to-run-the-application"></a>若要執行應用程式  
+### <a name="to-run-the-application"></a><span data-ttu-id="f1f69-205">若要執行應用程式</span><span class="sxs-lookup"><span data-stu-id="f1f69-205">To run the application</span></span>  
   
-1.  按 F5 執行應用程式。 隨即會啟動 Excel，並會顯示含有 `bankAccounts` 中兩個帳戶資訊的資料表。 然後，會出現包含 Excel 資料表連結的 Word 文件。  
+1.  <span data-ttu-id="f1f69-206">按 F5 以執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="f1f69-206">Press F5 to run the application.</span></span> <span data-ttu-id="f1f69-207">隨即會啟動 Excel，並會顯示含有 `bankAccounts` 中兩個帳戶資訊的資料表。</span><span class="sxs-lookup"><span data-stu-id="f1f69-207">Excel starts and displays a table that contains the information from the two accounts in `bankAccounts`.</span></span> <span data-ttu-id="f1f69-208">然後，會出現包含 Excel 資料表連結的 Word 文件。</span><span class="sxs-lookup"><span data-stu-id="f1f69-208">Then a Word document appears that contains a link to the Excel table.</span></span>  
   
-### <a name="to-clean-up-the-completed-project"></a>清除已完成的專案  
+### <a name="to-clean-up-the-completed-project"></a><span data-ttu-id="f1f69-209">清除已完成的專案</span><span class="sxs-lookup"><span data-stu-id="f1f69-209">To clean up the completed project</span></span>  
   
-1.  在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]。 否則，每次在電腦上開啟 Excel 時，都會執行增益集。  
+1.  <span data-ttu-id="f1f69-210">在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-210">In Visual Studio, click **Clean Solution** on the **Build** menu.</span></span> <span data-ttu-id="f1f69-211">否則，每次在電腦上開啟 Excel 時，都會執行增益集。</span><span class="sxs-lookup"><span data-stu-id="f1f69-211">Otherwise, the add-in will run every time that you open Excel on your computer.</span></span>  
   
-### <a name="to-find-the-pia-reference"></a>尋找 PIA 參考  
+### <a name="to-find-the-pia-reference"></a><span data-ttu-id="f1f69-212">尋找 PIA 參考</span><span class="sxs-lookup"><span data-stu-id="f1f69-212">To find the PIA reference</span></span>  
   
-1.  重新執行應用程式，但不要按一下 [清除方案]。  
+1.  <span data-ttu-id="f1f69-213">重新執行應用程式，但不要按一下 [清除方案]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-213">Run the application again, but do not click **Clean Solution**.</span></span>  
   
-2.  選取 [開始]。 找出 **Microsoft Visual Studio\<版本>**，開啟開發人員命令提示字元。  
+2.  <span data-ttu-id="f1f69-214">選取 [開始]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-214">Select the **Start**.</span></span> <span data-ttu-id="f1f69-215">找出 **Microsoft Visual Studio\<版本>**，並開啟開發人員命令提示字元。</span><span class="sxs-lookup"><span data-stu-id="f1f69-215">Locate **Microsoft Visual Studio \<version>** and open a developer command prompt.</span></span>  
   
-3.  在 [Visual Studio 命令提示字元] 視窗中鍵入 `ildasm`，然後按 ENTER 。 隨即會出現 IL DASM 視窗。  
+3.  <span data-ttu-id="f1f69-216">在 [Visual Studio 命令提示字元] 視窗中輸入 `ildasm`，然後按 ENTER 。</span><span class="sxs-lookup"><span data-stu-id="f1f69-216">Type `ildasm` in the Visual Studio Command Prompt window, and then press ENTER.</span></span> <span data-ttu-id="f1f69-217">隨即會出現 IL DASM 視窗。</span><span class="sxs-lookup"><span data-stu-id="f1f69-217">The IL DASM window appears.</span></span>  
   
-4.  在 IL DASM 視窗的 [檔案] 功能表上，選取 [檔案] > [開啟]。 按兩下 [Visual Studio \<版本>]，然後按兩下 [專案]。 開啟您專案的資料夾，並查看 bin/Debug 資料夾中的 <您的專案名稱>.dll。 按兩下 <您的專案名稱>.dll。 新的視窗除了顯示會其他模組和組件的參考之外，還會顯示您專案的屬性。 請注意，組件中會包含命名空間 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word`。 在 Visual Studio 中，編譯器預設會將您所需要的類型從參考的 PIA 匯入組件。  
+4.  <span data-ttu-id="f1f69-218">在 [IL DASM] 視窗的 [檔案] 功能表上，選取 [檔案] > [開啟]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-218">On the **File** menu in the IL DASM window, select **File** > **Open**.</span></span> <span data-ttu-id="f1f69-219">按兩下 [Visual Studio \<版本>]，然後按兩下 [專案]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-219">Double-click **Visual Studio \<version>**, and then double-click **Projects**.</span></span> <span data-ttu-id="f1f69-220">開啟您專案的資料夾，並查看 bin/Debug 資料夾中的 <您的專案名稱>.dll。</span><span class="sxs-lookup"><span data-stu-id="f1f69-220">Open the folder for your project, and look in the bin/Debug folder for *your project name*.dll.</span></span> <span data-ttu-id="f1f69-221">按兩下 <您的專案名稱>.dll。</span><span class="sxs-lookup"><span data-stu-id="f1f69-221">Double-click *your project name*.dll.</span></span> <span data-ttu-id="f1f69-222">新的視窗除了顯示會其他模組和組件的參考之外，還會顯示您專案的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1f69-222">A new window displays your project's attributes, in addition to references to other modules and assemblies.</span></span> <span data-ttu-id="f1f69-223">請注意，組件中會包含命名空間 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word`。</span><span class="sxs-lookup"><span data-stu-id="f1f69-223">Note that namespaces `Microsoft.Office.Interop.Excel` and `Microsoft.Office.Interop.Word` are included in the assembly.</span></span> <span data-ttu-id="f1f69-224">在 Visual Studio 中，編譯器預設會將您所需要的類型從參考的 PIA 匯入到組件中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-224">By default in Visual Studio, the compiler imports the types you need from a referenced PIA into your assembly.</span></span>  
   
-     如需詳細資訊，請參閱[如何：檢視組件內容](../../../framework/app-domains/how-to-view-assembly-contents.md)。  
+     <span data-ttu-id="f1f69-225">如需詳細資訊，請參閱[如何：檢視組件內容](../../../framework/app-domains/how-to-view-assembly-contents.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-225">For more information, see [How to: View Assembly Contents](../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-5.  按兩下**資訊清單**圖示。 隨即會出現一個視窗，內含專案所參考之項目的組件清單。 `Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在清單中。 因為您專案所需的類型已匯入組件中，所以不需要 PIA 參考。 這會讓部署更為容易。 PIA 不需要存在於使用者的電腦上，而且因為應用程式不需要部署特定版本的 PIA，所以應用程式可以設計成與多個版本的 Office 搭配使用，但前提是所有版本都有必要的 API。  
+5.  <span data-ttu-id="f1f69-226">按兩下 [資訊清單] 圖示。</span><span class="sxs-lookup"><span data-stu-id="f1f69-226">Double-click the **MANIFEST** icon.</span></span> <span data-ttu-id="f1f69-227">隨即會出現一個視窗，內含專案所參考之項目的組件清單。</span><span class="sxs-lookup"><span data-stu-id="f1f69-227">A window appears that contains a list of assemblies that contain items referenced by the project.</span></span> <span data-ttu-id="f1f69-228">`Microsoft.Office.Interop.Excel` 和 `Microsoft.Office.Interop.Word` 未包含在清單中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-228">`Microsoft.Office.Interop.Excel` and `Microsoft.Office.Interop.Word` are not included in the list.</span></span> <span data-ttu-id="f1f69-229">因為您專案所需的類型已匯入到組件中，所以不需要 PIA 參考。</span><span class="sxs-lookup"><span data-stu-id="f1f69-229">Because the types your project needs have been imported into your assembly, references to a PIA are not required.</span></span> <span data-ttu-id="f1f69-230">這會讓部署更為容易。</span><span class="sxs-lookup"><span data-stu-id="f1f69-230">This makes deployment easier.</span></span> <span data-ttu-id="f1f69-231">PIA 不需要存在於使用者的電腦上，而且因為應用程式不需要部署特定版本的 PIA，所以應用程式可以設計成與多個版本的 Office 搭配使用，但前提是所有版本都有必要的 API。</span><span class="sxs-lookup"><span data-stu-id="f1f69-231">The PIAs do not have to be present on the user's computer, and because an application does not require deployment of a specific version of a PIA, applications can be designed to work with multiple versions of Office, provided that the necessary APIs exist in all versions.</span></span>  
   
-     因為不再需要部署 PIA，所以您可以在使用多個版本 Office (包括舊版本) 的進階情況下，建立應用程式。 不過，這只適用於程式碼未使用供任何 API 時 (目前所用 Office 版本中不提供)。 您不一定清楚舊版本中是否有特定 API，也因為此，不建議使用舊版 Office。  
+     <span data-ttu-id="f1f69-232">因為不再需要部署 PIA，所以您可以在使用多個版本 Office (包括舊版本) 的進階情況下，建立應用程式。</span><span class="sxs-lookup"><span data-stu-id="f1f69-232">Because deployment of PIAs is no longer necessary, you can create an application in advanced scenarios that works with multiple versions of Office, including earlier versions.</span></span> <span data-ttu-id="f1f69-233">不過，這只適用於程式碼未使用供任何 API 時 (目前所用 Office 版本中不提供)。</span><span class="sxs-lookup"><span data-stu-id="f1f69-233">However, this works only if your code does not use any APIs that are not available in the version of Office you are working with.</span></span> <span data-ttu-id="f1f69-234">您不一定清楚舊版本中是否有特定 API，也因為此，建議您不要使用舊版 Office。</span><span class="sxs-lookup"><span data-stu-id="f1f69-234">It is not always clear whether a particular API was available in an earlier version, and for that reason working with earlier versions of Office is not recommended.</span></span>  
   
     > [!NOTE]
-    > 在 Office 2003 之前，Office 未發行 PIA。 因此，產生 Office 2002 或舊版 Interop 組件唯一的方法，是匯入 COM 參考。  
+    > <span data-ttu-id="f1f69-235">在 Office 2003 之前，Office 未發行 PIA。</span><span class="sxs-lookup"><span data-stu-id="f1f69-235">Office did not publish PIAs before Office 2003.</span></span> <span data-ttu-id="f1f69-236">因此，產生 Office 2002 或舊版 Interop 組件唯一的方法是匯入 COM 參考。</span><span class="sxs-lookup"><span data-stu-id="f1f69-236">Therefore, the only way to generate an interop assembly for Office 2002 or earlier versions is by importing the COM reference.</span></span>  
   
-6.  關閉資訊清單視窗和組件視窗。  
+6.  <span data-ttu-id="f1f69-237">關閉資訊清單視窗和組件視窗。</span><span class="sxs-lookup"><span data-stu-id="f1f69-237">Close the manifest window and the assembly window.</span></span>  
   
-### <a name="to-restore-the-pia-dependency"></a>還原 PIA 相依性  
+### <a name="to-restore-the-pia-dependency"></a><span data-ttu-id="f1f69-238">還原 PIA 相依性</span><span class="sxs-lookup"><span data-stu-id="f1f69-238">To restore the PIA dependency</span></span>  
   
-1.  在方案總管中，按一下 [顯示所有檔案] 按鈕。 展開 [參考] 資料夾，然後選取 **Microsoft.Office.Interop.Excel**。 按 F4 顯示 [屬性] 視窗。  
+1.  <span data-ttu-id="f1f69-239">在 [方案總管] 中，按一下 [顯示所有檔案] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f1f69-239">In **Solution Explorer**, click the **Show All Files** button.</span></span> <span data-ttu-id="f1f69-240">展開 [參考] 資料夾，然後選取 **Microsoft.Office.Interop.Excel**。</span><span class="sxs-lookup"><span data-stu-id="f1f69-240">Expand the **References** folder and select **Microsoft.Office.Interop.Excel**.</span></span> <span data-ttu-id="f1f69-241">按 F4 以顯示 [屬性] 視窗。</span><span class="sxs-lookup"><span data-stu-id="f1f69-241">Press F4 to display the **Properties** window.</span></span>  
   
-2.  在 [屬性] 視窗中，將 [內嵌 Interop 類型] 屬性從 [True] 變更為 [False]。  
+2.  <span data-ttu-id="f1f69-242">在 [屬性] 視窗中，將 [內嵌 Interop 類型] 屬性從 [True] 變更為 [False]。</span><span class="sxs-lookup"><span data-stu-id="f1f69-242">In the **Propertie**s window, change the **Embed Interop Types** property from **True** to **False**.</span></span>  
   
-3.  為 `Microsoft.Office.Interop.Word`，重複本程序中的步驟 1 和 2。  
+3.  <span data-ttu-id="f1f69-243">為 `Microsoft.Office.Interop.Word`，重複此程序中的步驟 1 和 2。</span><span class="sxs-lookup"><span data-stu-id="f1f69-243">Repeat steps 1 and 2 in this procedure for `Microsoft.Office.Interop.Word`.</span></span>  
   
-4.  在 C# 中，將 `Autofit` 方法結尾的兩個 `DisplayInExcel` 呼叫標為註解。  
+4.  <span data-ttu-id="f1f69-244">在 C# 中，將 `Autofit` 方法結尾的兩個 `DisplayInExcel` 呼叫標為註解。</span><span class="sxs-lookup"><span data-stu-id="f1f69-244">In C#, comment out the two calls to `Autofit` at the end of the `DisplayInExcel` method.</span></span>  
   
-5.  按 F5 鍵，確認專案仍然正確地執行。  
+5.  <span data-ttu-id="f1f69-245">按 F5 以確認專案仍然正確地執行。</span><span class="sxs-lookup"><span data-stu-id="f1f69-245">Press F5 to verify that the project still runs correctly.</span></span>  
   
-6.  重複前一個程序中的步驟 1-3，開啟組件視窗。 請注意，`Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 已不在內嵌的組件清單中。  
+6.  <span data-ttu-id="f1f69-246">重複前一個程序中的步驟 1-3，以開啟組件視窗。</span><span class="sxs-lookup"><span data-stu-id="f1f69-246">Repeat steps 1-3 from the previous procedure to open the assembly window.</span></span> <span data-ttu-id="f1f69-247">請注意，`Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 已不在內嵌的組件清單中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-247">Notice that `Microsoft.Office.Interop.Word` and `Microsoft.Office.Interop.Excel` are no longer in the list of embedded assemblies.</span></span>  
   
-7.  按兩下**資訊清單**圖示，並捲動所參考之組件的清單。 `Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 都在清單中。 由於應用程式會參考 Excel 和 Word PIA，而且 [內嵌 Interop 類型] 屬性設定為 [False]，所以使用者電腦上必須具有這兩個組件。  
+7.  <span data-ttu-id="f1f69-248">按兩下 [資訊清單] 圖示，並捲動所參考之組件的清單。</span><span class="sxs-lookup"><span data-stu-id="f1f69-248">Double-click the **MANIFEST** icon and scroll through the list of referenced assemblies.</span></span> <span data-ttu-id="f1f69-249">`Microsoft.Office.Interop.Word` 和 `Microsoft.Office.Interop.Excel` 都在清單中。</span><span class="sxs-lookup"><span data-stu-id="f1f69-249">Both `Microsoft.Office.Interop.Word` and `Microsoft.Office.Interop.Excel` are in the list.</span></span> <span data-ttu-id="f1f69-250">由於應用程式會參考 Excel 和 Word PIA，而且 [內嵌 Interop 類型] 屬性設定為 [False]，所以使用者電腦上必須有這兩個組件。</span><span class="sxs-lookup"><span data-stu-id="f1f69-250">Because the application references the Excel and Word PIAs, and the **Embed Interop Types** property is set to **False**, both assemblies must exist on the end user's computer.</span></span>  
   
-8.  在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]，清除已完成的專案。  
+8.  <span data-ttu-id="f1f69-251">在 Visual Studio 中，按一下 [建置] 功能表上的 [清除方案]，以清除已完成的專案。</span><span class="sxs-lookup"><span data-stu-id="f1f69-251">In Visual Studio, click **Clean Solution** on the **Build** menu to clean up the completed project.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)   
- [集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [依位置和名稱傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)   
- [逐步解說：從 Microsoft Office 組件內嵌類型資訊](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)   
- [逐步解說：從 Managed 組件內嵌類型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [逐步解說：建立 Excel 的第一個 VSTO 增益集](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)   
- [互通性](../../../csharp/programming-guide/interop/index.md)
+## <a name="see-also"></a><span data-ttu-id="f1f69-252">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1f69-252">See Also</span></span>  
+ <span data-ttu-id="f1f69-253">[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-253">[Auto-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md) </span></span>  
+ <span data-ttu-id="f1f69-254">[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-254">[Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) </span></span>  
+ <span data-ttu-id="f1f69-255">[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-255">[Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md) </span></span>  
+ <span data-ttu-id="f1f69-256">[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-256">[Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) </span></span>  
+ <span data-ttu-id="f1f69-257">[選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-257">[Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md) </span></span>  
+ <span data-ttu-id="f1f69-258">[依位置和名稱傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-258">[Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md) </span></span>  
+ <span data-ttu-id="f1f69-259">[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-259">[Named and Optional Arguments](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md) </span></span>  
+ <span data-ttu-id="f1f69-260">[早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-260">[Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md) </span></span>  
+ <span data-ttu-id="f1f69-261">[dynamic](../../../csharp/language-reference/keywords/dynamic.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-261">[dynamic](../../../csharp/language-reference/keywords/dynamic.md) </span></span>  
+ <span data-ttu-id="f1f69-262">[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-262">[Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md) </span></span>  
+ <span data-ttu-id="f1f69-263">[Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-263">[Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="f1f69-264">[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-264">[Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="f1f69-265">[如何：在 COM Interop 程式設計中使用已編製索引的屬性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-265">[How to: Use Indexed Properties in COM Interop Programming](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md) </span></span>  
+ <span data-ttu-id="f1f69-266">[逐步解說：從 Microsoft Office 組件內嵌類型資訊](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) </span><span class="sxs-lookup"><span data-stu-id="f1f69-266">[Walkthrough: Embedding Type Information from Microsoft Office Assemblies](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3) </span></span>  
+ <span data-ttu-id="f1f69-267">[逐步解說：從 Managed 組件內嵌類型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21) </span><span class="sxs-lookup"><span data-stu-id="f1f69-267">[Walkthrough: Embedding Types from Managed Assemblies](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21) </span></span>  
+ <span data-ttu-id="f1f69-268">[逐步解說：建立 Excel 的第一個 VSTO 增益集](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f) </span><span class="sxs-lookup"><span data-stu-id="f1f69-268">[Walkthrough: Creating Your First VSTO Add-in for Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f) </span></span>  
+ <span data-ttu-id="f1f69-269">[COM Interop](../../../visual-basic/programming-guide/com-interop/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1f69-269">[COM Interop](../../../visual-basic/programming-guide/com-interop/index.md) </span></span>  
+ [<span data-ttu-id="f1f69-270">互通性</span><span class="sxs-lookup"><span data-stu-id="f1f69-270">Interoperability</span></span>](../../../csharp/programming-guide/interop/index.md)
+

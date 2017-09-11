@@ -1,6 +1,6 @@
 ---
-title: "Visual Basic 使用者入門"
-ms.date: 2017-05-01
+title: "開始使用 Visual Basic"
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -30,54 +30,65 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
-本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
+# <a name="get-started-with-visual-basic"></a><span data-ttu-id="c4992-102">開始使用 Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c4992-102">Get started with Visual Basic</span></span>
+<span data-ttu-id="c4992-103">本文的這一節可協助您開始進行 Visual Basic 應用程式開發。</span><span class="sxs-lookup"><span data-stu-id="c4992-103">This section of the documentation helps you get started with Visual Basic application development.</span></span>  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="get-started-with-visual-basic-and-net-core"></a><span data-ttu-id="c4992-104">開始使用 Visual Basic 和.NET Core</span><span class="sxs-lookup"><span data-stu-id="c4992-104">Get started with Visual Basic and .NET Core</span></span>
 
-[Visual Basic 的新功能](whats-new.md)   
-列出每個 Visual Basic .NET 版本的新功能。
+[<span data-ttu-id="c4992-105">在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式</span><span class="sxs-lookup"><span data-stu-id="c4992-105">Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-with-visual-studio.md)
 
-[Visual Studio 中 Visual Basic 的重大變更](breaking-changes-in-visual-studio.md)  
- 列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
+[<span data-ttu-id="c4992-106">在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫</span><span class="sxs-lookup"><span data-stu-id="c4992-106">Build a class library with Visual Basic and .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a><span data-ttu-id="c4992-107">其他資訊</span><span class="sxs-lookup"><span data-stu-id="c4992-107">Additional information</span></span>
+
+<span data-ttu-id="c4992-108">[Visual Basic 的新功能](whats-new.md) </span><span class="sxs-lookup"><span data-stu-id="c4992-108">[What's new for Visual Basic](whats-new.md) </span></span>  
+<span data-ttu-id="c4992-109">列出每個 Visual Basic .NET 版本的新功能。</span><span class="sxs-lookup"><span data-stu-id="c4992-109">Lists new features in each of the versions of Visual Basic .NET.</span></span>
+
+[<span data-ttu-id="c4992-110">Visual Studio 中 Visual Basic 的重大變更</span><span class="sxs-lookup"><span data-stu-id="c4992-110">Visual Basic Breaking Changes in Visual Studio</span></span>](breaking-changes-in-visual-studio.md)  
+<span data-ttu-id="c4992-111">列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。</span><span class="sxs-lookup"><span data-stu-id="c4992-111">Lists changes in this release that might prevent an application from compiling or change its run-time behavior.</span></span>  
   
- [Visual Basic 程式設計人員的其他資源](../../visual-basic/getting-started/additional-resources.md)  
- 提供網站和新聞群組清單，協助您找到常見問題的解答。  
+[<span data-ttu-id="c4992-112">Visual Basic 程式設計人員的其他資源</span><span class="sxs-lookup"><span data-stu-id="c4992-112">Additional Resources for Visual Basic Programmers</span></span>](additional-resources.md)  
+<span data-ttu-id="c4992-113">提供網站和新聞群組清單，協助您找到常見問題的解答。</span><span class="sxs-lookup"><span data-stu-id="c4992-113">Provides a list of Web sites and newsgroups that can help you find answers to common problems.</span></span>  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a><span data-ttu-id="c4992-114">使用 Visual Basic 開發 .NET Core 應用程式</span><span class="sxs-lookup"><span data-stu-id="c4992-114">Develop .NET Core applications with Visual Basic</span></span>
+
+[<span data-ttu-id="c4992-115">在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式</span><span class="sxs-lookup"><span data-stu-id="c4992-115">Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-with-visual-studio.md) 
+
+[<span data-ttu-id="c4992-116">在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫</span><span class="sxs-lookup"><span data-stu-id="c4992-116">Build a class library with Visual Basic and .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-library-with-visual-studio.md) 
+
+## <a name="see-also"></a><span data-ttu-id="c4992-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="c4992-117">See also</span></span>
+ [<span data-ttu-id="c4992-118">取得 Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c4992-118">Get Visual Basic</span></span>](https://www.visualstudio.com/downloads/)  
+ <span data-ttu-id="c4992-119">提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。</span><span class="sxs-lookup"><span data-stu-id="c4992-119">Provides download links for Visual Studio versions that include Visual basic support, including free versions.</span></span>  
+
+ <span data-ttu-id="c4992-120">[適合無基礎新手參加的 Visual Basic 基礎課程](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) </span><span class="sxs-lookup"><span data-stu-id="c4992-120">[Visual Basic Fundamentals for Absolute Beginners](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) </span></span>  
+ <span data-ttu-id="c4992-121">Microsoft Virtual Academy 課程介紹 Visual Basic 程式設計的基礎。</span><span class="sxs-lookup"><span data-stu-id="c4992-121">Microsoft Virtual Academy course that teaches the fundamentals of Visual Basic programming.</span></span>
+
+ [<span data-ttu-id="c4992-122">物件導向程式設計</span><span class="sxs-lookup"><span data-stu-id="c4992-122">Object-Oriented Programming</span></span>](../programming-guide/concepts/object-oriented-programming.md)  
+ <span data-ttu-id="c4992-123">提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。</span><span class="sxs-lookup"><span data-stu-id="c4992-123">Provides links to pages that introduce object-oriented programming and describe how to create your own objects and how to use objects to simplify your coding.</span></span>  
   
- [了解 Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
- 提供學習如何使用 Visual Basic 進行程式設計的資源連結。  
+ [<span data-ttu-id="c4992-124">範例</span><span class="sxs-lookup"><span data-stu-id="c4992-124">Samples</span></span>](../../visual-basic/sample-applications.md)  
+ <span data-ttu-id="c4992-125">提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中範例程式碼的連結。</span><span class="sxs-lookup"><span data-stu-id="c4992-125">Provides links to sample code in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [取得 Visual Basic](https://www.visualstudio.com/downloads/)  
- 提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。  
+ [<span data-ttu-id="c4992-126">逐步解說</span><span class="sxs-lookup"><span data-stu-id="c4992-126">Walkthroughs</span></span>](../../visual-basic/walkthroughs.md)  
+ <span data-ttu-id="c4992-127">提供示範 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言相關方面的 [說明] 頁清單。</span><span class="sxs-lookup"><span data-stu-id="c4992-127">Provides a list of Help pages that demonstrate aspects of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- [物件導向程式設計](../programming-guide/concepts/object-oriented-programming.md)  
- 提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。  
+ [<span data-ttu-id="c4992-128">告訴我們</span><span class="sxs-lookup"><span data-stu-id="c4992-128">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+ <span data-ttu-id="c4992-129">說明如何接受支援和提供意見。</span><span class="sxs-lookup"><span data-stu-id="c4992-129">Covers how to receive support and give feedback.</span></span>  
   
- [範例](../../visual-basic/sample-applications.md)  
- 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中範例程式碼的連結。  
+ [<span data-ttu-id="c4992-130">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c4992-130">Visual Studio</span></span>](/visualstudio/)  
+ <span data-ttu-id="c4992-131">提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。</span><span class="sxs-lookup"><span data-stu-id="c4992-131">Provides links into the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] documentation.</span></span>  
   
- [逐步解說](../../visual-basic/walkthroughs.md)  
- 提供示範 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言相關方面的 [說明] 頁清單。  
+ <span data-ttu-id="c4992-132">[C#](../../csharp/index.md) 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。</span><span class="sxs-lookup"><span data-stu-id="c4992-132">[C#](../../csharp/index.md) Provides links into the documentation on application development with [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span></span>  
   
- [告訴我們](/visualstudio/ide/talk-to-us)  
- 說明如何接受支援和提供意見。  
+ [<span data-ttu-id="c4992-133">Visual C++</span><span class="sxs-lookup"><span data-stu-id="c4992-133">Visual C++</span></span>](/cpp/)  
+ <span data-ttu-id="c4992-134">提供 Visual C++ 文件的連結。</span><span class="sxs-lookup"><span data-stu-id="c4992-134">Provides links into the Visual C++ documentation.</span></span>  
   
- [Visual Studio](/visualstudio/)  
- 提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。  
-  
- [C#](../../csharp/csharp.md)  
- 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
-  
- [Visual C++](/cpp/)  
- 提供 Visual C++ 文件的連結。  
-  
- [Office 和 SharePoint 開發](https://msdn.microsoft.com/library/d2tx7z6d)  
- 提供有關使用 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 做為您商務應用程式的資訊。
+ [<span data-ttu-id="c4992-135">Office 和 SharePoint 開發</span><span class="sxs-lookup"><span data-stu-id="c4992-135">Office and SharePoint Development</span></span>](https://msdn.microsoft.com/library/d2tx7z6d)  
+ <span data-ttu-id="c4992-136">提供有關使用 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 做為您商務應用程式的資訊。</span><span class="sxs-lookup"><span data-stu-id="c4992-136">Provides information about using Microsoft Office and [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] as part of a business application.</span></span>
 

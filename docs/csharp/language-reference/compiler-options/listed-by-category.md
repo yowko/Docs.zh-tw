@@ -1,116 +1,138 @@
 ---
-title: "C# Compiler Options Listed by Category | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual C# compiler, options listed by category"
-  - "compiler options [C#], listed by category"
-  - "Visual C#, compiler options listed by category"
+title: "依分類列出的 C# 編譯器選項"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- Visual C# compiler, options listed by category
+- compiler options [C#], listed by category
+- Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
+
 ---
-# C# Compiler Options Listed by Category
-下列編譯器選項會依類別排序。  如需依字母順序排列的清單，請參閱[依字母順序列出的 C\# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)。  
+# <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="46eff-102">依分類列出的 C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="46eff-102">C# Compiler Options Listed by Category</span></span>
+<span data-ttu-id="46eff-103">下列編譯器選項會依類別排序。</span><span class="sxs-lookup"><span data-stu-id="46eff-103">The following compiler options are sorted by category.</span></span> <span data-ttu-id="46eff-104">如需依字母順序排列的清單，請參閱[依字母順序列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)。</span><span class="sxs-lookup"><span data-stu-id="46eff-104">For an alphabetical list, see [C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).</span></span>  
   
-### 最佳化  
+### <a name="optimization"></a><span data-ttu-id="46eff-105">最佳化</span><span class="sxs-lookup"><span data-stu-id="46eff-105">Optimization</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[\/filealign](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|指定輸出檔案中區段的大小。|  
-|[\/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|啟用\/停用最佳化。|  
+|<span data-ttu-id="46eff-106">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-106">Option</span></span>|<span data-ttu-id="46eff-107">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-107">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="46eff-108">/filealign</span><span class="sxs-lookup"><span data-stu-id="46eff-108">/filealign</span></span>](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|<span data-ttu-id="46eff-109">指定輸出檔案中區段的大小。</span><span class="sxs-lookup"><span data-stu-id="46eff-109">Specifies the size of sections in the output file.</span></span>|  
+|[<span data-ttu-id="46eff-110">/optimize</span><span class="sxs-lookup"><span data-stu-id="46eff-110">/optimize</span></span>](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|<span data-ttu-id="46eff-111">啟用/停用最佳化。</span><span class="sxs-lookup"><span data-stu-id="46eff-111">Enables/disables optimizations.</span></span>|  
   
-### 輸出檔  
+### <a name="output-files"></a><span data-ttu-id="46eff-112">輸出檔</span><span class="sxs-lookup"><span data-stu-id="46eff-112">Output Files</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|指定要寫入已處理文件註解的 XML 檔案。|  
-|[\/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|指定輸出檔。|  
-|[\/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|指定 .pdb 檔案的檔案名稱和位置。|  
-|[\/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|指定輸出平台。|  
-|[\/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定編譯器輸出的語言。|  
-|[\/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|使用五個選項的其中一個指定輸出檔的格式：[\/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)、[\/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)、[\/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)、[\/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)、[\/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 或 [\/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)。|  
-|`/modulename:<string>`|指定來源模組的名稱|  
+|<span data-ttu-id="46eff-113">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-113">Option</span></span>|<span data-ttu-id="46eff-114">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-114">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="46eff-115">/doc</span><span class="sxs-lookup"><span data-stu-id="46eff-115">/doc</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|<span data-ttu-id="46eff-116">指定要寫入已處理文件註解的 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="46eff-116">Specifies an XML file where processed documentation comments are to be written.</span></span>|  
+|[<span data-ttu-id="46eff-117">/out</span><span class="sxs-lookup"><span data-stu-id="46eff-117">/out</span></span>](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|<span data-ttu-id="46eff-118">指定輸出檔。</span><span class="sxs-lookup"><span data-stu-id="46eff-118">Specifies the output file.</span></span>|  
+|[<span data-ttu-id="46eff-119">/pdb</span><span class="sxs-lookup"><span data-stu-id="46eff-119">/pdb</span></span>](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|<span data-ttu-id="46eff-120">指定 .pdb 檔案的檔案名稱和位置。</span><span class="sxs-lookup"><span data-stu-id="46eff-120">Specifies the file name and location of the .pdb file.</span></span>|  
+|[<span data-ttu-id="46eff-121">/platform</span><span class="sxs-lookup"><span data-stu-id="46eff-121">/platform</span></span>](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|<span data-ttu-id="46eff-122">指定輸出平台。</span><span class="sxs-lookup"><span data-stu-id="46eff-122">Specify the output platform.</span></span>|  
+|[<span data-ttu-id="46eff-123">/preferreduilang</span><span class="sxs-lookup"><span data-stu-id="46eff-123">/preferreduilang</span></span>](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|<span data-ttu-id="46eff-124">指定編譯器輸出的語言。</span><span class="sxs-lookup"><span data-stu-id="46eff-124">Specify a language for compiler output.</span></span>|  
+|[<span data-ttu-id="46eff-125">/refout</span><span class="sxs-lookup"><span data-stu-id="46eff-125">/refout</span></span>](refout-compiler-option.md)|<span data-ttu-id="46eff-126">除了主要組件，再另外產生參考組件。</span><span class="sxs-lookup"><span data-stu-id="46eff-126">Generate a reference assembly in addition to the primary assembly.</span></span>|  
+|[<span data-ttu-id="46eff-127">/refonly</span><span class="sxs-lookup"><span data-stu-id="46eff-127">/refonly</span></span>](refonly-compiler-option.md)|<span data-ttu-id="46eff-128">產生參考組件，而非主要組件。</span><span class="sxs-lookup"><span data-stu-id="46eff-128">Generate a reference assembly instead of a primary assembly.</span></span>|  
+|[<span data-ttu-id="46eff-129">/target</span><span class="sxs-lookup"><span data-stu-id="46eff-129">/target</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|<span data-ttu-id="46eff-130">使用下列五個選項之一來指定輸出檔的格式：[/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)、[/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)、[/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)、[/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)、[/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 或 [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="46eff-130">Specifies the format of the output file using one of five options: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), or [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).</span></span>|  
+|<span data-ttu-id="46eff-131">/modulename:\<字串></span><span class="sxs-lookup"><span data-stu-id="46eff-131">/modulename:\<string></span></span>|<span data-ttu-id="46eff-132">指定來源模組的名稱</span><span class="sxs-lookup"><span data-stu-id="46eff-132">Specify the name of the source module</span></span>|  
   
-### .NET Framework 組件  
+### <a name="net-framework-assemblies"></a><span data-ttu-id="46eff-133">.NET Framework 組件</span><span class="sxs-lookup"><span data-stu-id="46eff-133">.NET Framework Assemblies</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[\/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|指定要成為此組件一部分的一或多個模組。|  
-|[\/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|指示編譯器新增公開金鑰，但是讓組件不帶正負號。|  
-|[\/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|指定密碼編譯金鑰容器的名稱。|  
-|[\/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|指定包含密碼編譯金鑰的檔名。|  
-|[\/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|指定透過 [\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 參考的組件位置。|  
-|[\/nostdlib](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|指示編譯器不要匯入標準程式庫 \(mscorlib.dll\)。|  
-|[\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|從包含組件的檔案匯入中繼資料。|  
-|`/analyzer`|從這個組件執行分析器 \(簡短形式：\/a\)|  
-|`/additionalfile`|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  
+|<span data-ttu-id="46eff-134">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-134">Option</span></span>|<span data-ttu-id="46eff-135">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-135">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="46eff-136">/addmodule</span><span class="sxs-lookup"><span data-stu-id="46eff-136">/addmodule</span></span>](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|<span data-ttu-id="46eff-137">指定要成為此組件一部分的一或多個模組。</span><span class="sxs-lookup"><span data-stu-id="46eff-137">Specifies one or more modules to be part of this assembly.</span></span>|  
+|[<span data-ttu-id="46eff-138">/delaysign</span><span class="sxs-lookup"><span data-stu-id="46eff-138">/delaysign</span></span>](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|<span data-ttu-id="46eff-139">指示編譯器新增公開金鑰，但是讓組件不帶正負號。</span><span class="sxs-lookup"><span data-stu-id="46eff-139">Instructs the compiler to add the public key but to leave the assembly unsigned.</span></span>|  
+|[<span data-ttu-id="46eff-140">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="46eff-140">/keycontainer</span></span>](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|<span data-ttu-id="46eff-141">指定密碼編譯金鑰容器的名稱。</span><span class="sxs-lookup"><span data-stu-id="46eff-141">Specifies the name of the cryptographic key container.</span></span>|  
+|[<span data-ttu-id="46eff-142">/keyfile</span><span class="sxs-lookup"><span data-stu-id="46eff-142">/keyfile</span></span>](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|<span data-ttu-id="46eff-143">指定包含密碼編譯金鑰的檔名。</span><span class="sxs-lookup"><span data-stu-id="46eff-143">Specifies the filename containing the cryptographic key.</span></span>|  
+|[<span data-ttu-id="46eff-144">/lib</span><span class="sxs-lookup"><span data-stu-id="46eff-144">/lib</span></span>](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|<span data-ttu-id="46eff-145">指定透過 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 參考的組件位置。</span><span class="sxs-lookup"><span data-stu-id="46eff-145">Specifies the location of assemblies referenced by means of [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>|  
+|[<span data-ttu-id="46eff-146">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="46eff-146">/nostdlib</span></span>](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|<span data-ttu-id="46eff-147">指示編譯器不要匯入標準程式庫 (mscorlib.dll)。</span><span class="sxs-lookup"><span data-stu-id="46eff-147">Instructs the compiler not to import the standard library (mscorlib.dll).</span></span>|  
+|[<span data-ttu-id="46eff-148">/reference</span><span class="sxs-lookup"><span data-stu-id="46eff-148">/reference</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|<span data-ttu-id="46eff-149">從包含組件的檔案匯入中繼資料。</span><span class="sxs-lookup"><span data-stu-id="46eff-149">Imports metadata from a file that contains an assembly.</span></span>|  
+|<span data-ttu-id="46eff-150">/analyzer</span><span class="sxs-lookup"><span data-stu-id="46eff-150">/analyzer</span></span>|<span data-ttu-id="46eff-151">從這個組件執行分析器 (簡短形式：/a)</span><span class="sxs-lookup"><span data-stu-id="46eff-151">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|<span data-ttu-id="46eff-152">/additionalfile</span><span class="sxs-lookup"><span data-stu-id="46eff-152">/additionalfile</span></span>|<span data-ttu-id="46eff-153">命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。</span><span class="sxs-lookup"><span data-stu-id="46eff-153">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
   
-### 偵錯\/錯誤檢查  
+### <a name="debuggingerror-checking"></a><span data-ttu-id="46eff-154">偵錯/錯誤檢查</span><span class="sxs-lookup"><span data-stu-id="46eff-154">Debugging/Error Checking</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[\/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|  
-|[\/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|  
-|[\/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|指示編譯器發出偵錯資訊。|  
-|[\/errorreport](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|設定錯誤報告行為。|  
-|[\/fullpaths](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|在編譯器輸出中指定檔案的絕對路徑。|  
-|[\/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|抑制編譯器產生指定的警告。|  
-|[\/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|設定警告層級。|  
-|[\/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|將警告提升為錯誤。|  
-|`/ruleset:<file>`|指定停用特定診斷的規則集檔案。|  
+|<span data-ttu-id="46eff-155">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-155">Option</span></span>|<span data-ttu-id="46eff-156">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-156">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="46eff-157">/bugreport</span><span class="sxs-lookup"><span data-stu-id="46eff-157">/bugreport</span></span>](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|<span data-ttu-id="46eff-158">建立檔案，其中包含可簡化錯誤回報的資訊。</span><span class="sxs-lookup"><span data-stu-id="46eff-158">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|[<span data-ttu-id="46eff-159">/checked</span><span class="sxs-lookup"><span data-stu-id="46eff-159">/checked</span></span>](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|<span data-ttu-id="46eff-160">指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。</span><span class="sxs-lookup"><span data-stu-id="46eff-160">Specifies whether integer arithmetic that overflows the bounds of the data type will cause an exception at run time.</span></span>|  
+|[<span data-ttu-id="46eff-161">/debug</span><span class="sxs-lookup"><span data-stu-id="46eff-161">/debug</span></span>](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|<span data-ttu-id="46eff-162">指示編譯器發出偵錯資訊。</span><span class="sxs-lookup"><span data-stu-id="46eff-162">Instruct the compiler to emit debugging information.</span></span>|  
+|[<span data-ttu-id="46eff-163">/errorreport</span><span class="sxs-lookup"><span data-stu-id="46eff-163">/errorreport</span></span>](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|<span data-ttu-id="46eff-164">設定錯誤報告行為。</span><span class="sxs-lookup"><span data-stu-id="46eff-164">Sets error reporting behavior.</span></span>|  
+|[<span data-ttu-id="46eff-165">/fullpaths</span><span class="sxs-lookup"><span data-stu-id="46eff-165">/fullpaths</span></span>](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|<span data-ttu-id="46eff-166">在編譯器輸出中指定檔案的絕對路徑。</span><span class="sxs-lookup"><span data-stu-id="46eff-166">Specifies the absolute path to the file in compiler output.</span></span>|  
+|[<span data-ttu-id="46eff-167">/nowarn</span><span class="sxs-lookup"><span data-stu-id="46eff-167">/nowarn</span></span>](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|<span data-ttu-id="46eff-168">抑制編譯器產生指定的警告。</span><span class="sxs-lookup"><span data-stu-id="46eff-168">Suppresses the compiler's generation of specified warnings.</span></span>|  
+|[<span data-ttu-id="46eff-169">/warn</span><span class="sxs-lookup"><span data-stu-id="46eff-169">/warn</span></span>](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|<span data-ttu-id="46eff-170">設定警告層級。</span><span class="sxs-lookup"><span data-stu-id="46eff-170">Sets the warning level.</span></span>|  
+|[<span data-ttu-id="46eff-171">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="46eff-171">/warnaserror</span></span>](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|<span data-ttu-id="46eff-172">將警告提升為錯誤。</span><span class="sxs-lookup"><span data-stu-id="46eff-172">Promotes warnings to errors.</span></span>|  
+|<span data-ttu-id="46eff-173">/ruleset:\<檔案></span><span class="sxs-lookup"><span data-stu-id="46eff-173">/ruleset:\<file></span></span>|<span data-ttu-id="46eff-174">指定停用特定診斷的規則集檔案。</span><span class="sxs-lookup"><span data-stu-id="46eff-174">Specify a ruleset file that disables specific diagnostics.</span></span>|  
   
-### 前置處理器  
+### <a name="preprocessor"></a><span data-ttu-id="46eff-175">前置處理器</span><span class="sxs-lookup"><span data-stu-id="46eff-175">Preprocessor</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[\/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|定義前置處理器符號。|  
+|<span data-ttu-id="46eff-176">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-176">Option</span></span>|<span data-ttu-id="46eff-177">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-177">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="46eff-178">/define</span><span class="sxs-lookup"><span data-stu-id="46eff-178">/define</span></span>](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|<span data-ttu-id="46eff-179">定義前置處理器符號。</span><span class="sxs-lookup"><span data-stu-id="46eff-179">Defines preprocessor symbols.</span></span>|  
   
-### 資源  
+### <a name="resources"></a><span data-ttu-id="46eff-180">資源</span><span class="sxs-lookup"><span data-stu-id="46eff-180">Resources</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|將指定組件中的 COM 類型資訊提供給專案使用。|  
-|[\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|建立與 Managed 資源的連結。|  
-|[\/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|將 .NET Framework 資源內嵌到輸出檔中。|  
-|[\/win32icon](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|指定要插入輸出檔中的 .ico 檔案。|  
-|[\/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|指定要插入輸出檔中的 Win32 資源。|  
+|<span data-ttu-id="46eff-181">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-181">Option</span></span>|<span data-ttu-id="46eff-182">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-182">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="46eff-183">/link</span><span class="sxs-lookup"><span data-stu-id="46eff-183">/link</span></span>](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|<span data-ttu-id="46eff-184">將指定組件中的 COM 類型資訊提供給專案使用。</span><span class="sxs-lookup"><span data-stu-id="46eff-184">Makes COM type information in specified assemblies available to the project.</span></span>|  
+|[<span data-ttu-id="46eff-185">/linkresource</span><span class="sxs-lookup"><span data-stu-id="46eff-185">/linkresource</span></span>](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|<span data-ttu-id="46eff-186">建立與 Managed 資源的連結。</span><span class="sxs-lookup"><span data-stu-id="46eff-186">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="46eff-187">/resource</span><span class="sxs-lookup"><span data-stu-id="46eff-187">/resource</span></span>](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|<span data-ttu-id="46eff-188">將 .NET Framework 資源內嵌到輸出檔中。</span><span class="sxs-lookup"><span data-stu-id="46eff-188">Embeds a .NET Framework resource into the output file.</span></span>|  
+|[<span data-ttu-id="46eff-189">/win32icon</span><span class="sxs-lookup"><span data-stu-id="46eff-189">/win32icon</span></span>](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|<span data-ttu-id="46eff-190">指定要插入輸出檔中的 .ico 檔案。</span><span class="sxs-lookup"><span data-stu-id="46eff-190">Specifies an .ico file to insert into the output file.</span></span>|  
+|[<span data-ttu-id="46eff-191">/win32res</span><span class="sxs-lookup"><span data-stu-id="46eff-191">/win32res</span></span>](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|<span data-ttu-id="46eff-192">指定要插入輸出檔中的 Win32 資源。</span><span class="sxs-lookup"><span data-stu-id="46eff-192">Specifies a Win32 resource to insert into the output file.</span></span>|  
   
-### 其他  
+### <a name="miscellaneous"></a><span data-ttu-id="46eff-193">其他</span><span class="sxs-lookup"><span data-stu-id="46eff-193">Miscellaneous</span></span>  
   
-|選項|用途|  
-|--------|--------|  
-|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|指定回應檔。|  
-|[\/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|將編譯器選項列出至 stdout。|  
-|[\/baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|指定載入 DLL 時慣用的基底位址。|  
-|[\/codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
-|[\/help](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|將編譯器選項列出至 stdout。|  
-|[\/highentropyva](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|指定可執行檔支援位址空間配置隨機載入 \(ASLR\)。|  
-|[\/langversion](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|指定語言版本模式：ISO\-1、ISO\-2、3、4、5、6 或 Default|  
-|[\/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|指定 **Main** 方法的位置。|  
-|[\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|指示編譯器不要使用 csc.rsp 進行編譯。|  
-|[\/nologo](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|隱藏編譯器橫幅資訊。|  
-|[\/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|搜尋要編譯之原始程式檔的子目錄。|  
-|[\/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|指定可執行檔能夠使用的最低子系統版本。|  
-|[\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|啟用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字的程式碼編譯。|  
-|[\/utf8output](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|使用 UTF\-8 編碼顯示編譯器輸出。|  
-|`/parallel[+&#124;-]`|指定是否要使用並行組建 \(\+\)。|  
-|`/checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 \(預設值\) 或 SHA256。|  
+|<span data-ttu-id="46eff-194">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-194">Option</span></span>|<span data-ttu-id="46eff-195">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-195">Purpose</span></span>|  
+|------------|-------------|  
+|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|<span data-ttu-id="46eff-196">指定回應檔。</span><span class="sxs-lookup"><span data-stu-id="46eff-196">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="46eff-197">/?</span><span class="sxs-lookup"><span data-stu-id="46eff-197">/?</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="46eff-198">將編譯器選項列出至 stdout。</span><span class="sxs-lookup"><span data-stu-id="46eff-198">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="46eff-199">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="46eff-199">/baseaddress</span></span>](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|<span data-ttu-id="46eff-200">指定載入 DLL 時慣用的基底位址。</span><span class="sxs-lookup"><span data-stu-id="46eff-200">Specifies the preferred base address at which to load a DLL.</span></span>|  
+|[<span data-ttu-id="46eff-201">/codepage</span><span class="sxs-lookup"><span data-stu-id="46eff-201">/codepage</span></span>](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|<span data-ttu-id="46eff-202">指定編譯過程中所有原始程式碼檔使用的字碼頁。</span><span class="sxs-lookup"><span data-stu-id="46eff-202">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="46eff-203">/help</span><span class="sxs-lookup"><span data-stu-id="46eff-203">/help</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="46eff-204">將編譯器選項列出至 stdout。</span><span class="sxs-lookup"><span data-stu-id="46eff-204">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="46eff-205">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="46eff-205">/highentropyva</span></span>](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|<span data-ttu-id="46eff-206">指定可執行檔支援位址空間配置隨機載入 (ASLR)。</span><span class="sxs-lookup"><span data-stu-id="46eff-206">Specifies that the executable file supports address space layout randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="46eff-207">/langversion</span><span class="sxs-lookup"><span data-stu-id="46eff-207">/langversion</span></span>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|<span data-ttu-id="46eff-208">指定語言版本模式：Default、ISO-1、ISO-2、3、4、5、6、7、7.1 或 Latest</span><span class="sxs-lookup"><span data-stu-id="46eff-208">Specify language version mode: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, or Latest</span></span> |  
+|[<span data-ttu-id="46eff-209">/main</span><span class="sxs-lookup"><span data-stu-id="46eff-209">/main</span></span>](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|<span data-ttu-id="46eff-210">指定 **Main** 方法的位置。</span><span class="sxs-lookup"><span data-stu-id="46eff-210">Specifies the location of the **Main** method.</span></span>|  
+|[<span data-ttu-id="46eff-211">/noconfig</span><span class="sxs-lookup"><span data-stu-id="46eff-211">/noconfig</span></span>](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|<span data-ttu-id="46eff-212">指示編譯器不要使用 csc.rsp 進行編譯。</span><span class="sxs-lookup"><span data-stu-id="46eff-212">Instructs the compiler not to compile with csc.rsp.</span></span>|  
+|[<span data-ttu-id="46eff-213">/nologo</span><span class="sxs-lookup"><span data-stu-id="46eff-213">/nologo</span></span>](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|<span data-ttu-id="46eff-214">隱藏編譯器橫幅資訊。</span><span class="sxs-lookup"><span data-stu-id="46eff-214">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="46eff-215">/recurse</span><span class="sxs-lookup"><span data-stu-id="46eff-215">/recurse</span></span>](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|<span data-ttu-id="46eff-216">搜尋要編譯之原始程式檔的子目錄。</span><span class="sxs-lookup"><span data-stu-id="46eff-216">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="46eff-217">/subsystemversion</span><span class="sxs-lookup"><span data-stu-id="46eff-217">/subsystemversion</span></span>](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|<span data-ttu-id="46eff-218">指定可執行檔能夠使用的最低子系統版本。</span><span class="sxs-lookup"><span data-stu-id="46eff-218">Specifies the minimum version of the subsystem that the executable file can use.</span></span>|  
+|[<span data-ttu-id="46eff-219">/unsafe</span><span class="sxs-lookup"><span data-stu-id="46eff-219">/unsafe</span></span>](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|<span data-ttu-id="46eff-220">啟用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字的程式碼編譯。</span><span class="sxs-lookup"><span data-stu-id="46eff-220">Enables compilation of code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword.</span></span>|  
+|[<span data-ttu-id="46eff-221">/utf8output</span><span class="sxs-lookup"><span data-stu-id="46eff-221">/utf8output</span></span>](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|<span data-ttu-id="46eff-222">使用 UTF-8 編碼顯示編譯器輸出。</span><span class="sxs-lookup"><span data-stu-id="46eff-222">Displays compiler output using UTF-8 encoding.</span></span>|  
+|<span data-ttu-id="46eff-223">/parallel[+&#124;-]</span><span class="sxs-lookup"><span data-stu-id="46eff-223">/parallel[+&#124;-]</span></span>|<span data-ttu-id="46eff-224">指定是否要使用並行組建 (+)。</span><span class="sxs-lookup"><span data-stu-id="46eff-224">Specifies whether to use concurrent build (+).</span></span>|  
+|<span data-ttu-id="46eff-225">/checksumalgorithm:\<alg></span><span class="sxs-lookup"><span data-stu-id="46eff-225">/checksumalgorithm:\<alg></span></span>|<span data-ttu-id="46eff-226">指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。</span><span class="sxs-lookup"><span data-stu-id="46eff-226">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="46eff-227">支援的值為：SHA1 (預設值) 或 SHA256。</span><span class="sxs-lookup"><span data-stu-id="46eff-227">Supported values are: SHA1 (default) or SHA256.</span></span>|  
   
-## 過時的選項  
+## <a name="obsolete-options"></a><span data-ttu-id="46eff-228">過時的選項</span><span class="sxs-lookup"><span data-stu-id="46eff-228">Obsolete Options</span></span>  
   
-|||  
-|-|-|  
-|**\/incremental**|啟用累加編譯。|  
+|<span data-ttu-id="46eff-229">選項</span><span class="sxs-lookup"><span data-stu-id="46eff-229">Option</span></span>|<span data-ttu-id="46eff-230">用途</span><span class="sxs-lookup"><span data-stu-id="46eff-230">Purpose</span></span>|  
+|---|---|  
+|<span data-ttu-id="46eff-231">/incremental</span><span class="sxs-lookup"><span data-stu-id="46eff-231">/incremental</span></span>|<span data-ttu-id="46eff-232">啟用累加編譯。</span><span class="sxs-lookup"><span data-stu-id="46eff-232">Enables incremental compilation.</span></span>|  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [C\# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+## <a name="see-also"></a><span data-ttu-id="46eff-233">另請參閱</span><span class="sxs-lookup"><span data-stu-id="46eff-233">See Also</span></span>  
+ <span data-ttu-id="46eff-234">[C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="46eff-234">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ <span data-ttu-id="46eff-235">[依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span><span class="sxs-lookup"><span data-stu-id="46eff-235">[C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span></span>  
+ [<span data-ttu-id="46eff-236">如何：為 Visual Studio 命令列設定環境變數</span><span class="sxs-lookup"><span data-stu-id="46eff-236">How to: Set Environment Variables for the Visual Studio Command Line</span></span>](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+

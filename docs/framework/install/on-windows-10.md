@@ -1,41 +1,39 @@
 ---
 title: "在 Windows 10 上安裝 .NET Framework"
-description: "了解如何在 Windows 10 上安裝 .NET Framework"
+description: "了解如何在 Windows 10 上安裝 .NET Framework。"
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, 安裝"
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
-ms.devlang: dotnet
-ms.assetid: 85cda1d5-c6g4-4eb5-93e6-4f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 32e701e5e29b30923a55c96e131b0aa33bbe3b83
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: d51b1be721003ce36ec4c855364d9ee8a751546c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
-# <a name="install-the-net-framework-on-windows-10"></a>在 Windows 10 上安裝 .NET Framework
+# <a name="install-the-net-framework-on-windows-10"></a><span data-ttu-id="fb121-104">在 Windows 10 上安裝 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fb121-104">Install the .NET Framework on Windows 10</span></span>
 
-您可能需要 .NET Framework，才能在 Windows 10 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
+<span data-ttu-id="fb121-105">您可能需要 .NET Framework，才能在 Windows 10 上執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb121-105">You may need the .NET Framework to run an app on Windows 10.</span></span> <span data-ttu-id="fb121-106">您可以使用下列指示來協助您。</span><span class="sxs-lookup"><span data-stu-id="fb121-106">You can use the following instructions to help you.</span></span> <span data-ttu-id="fb121-107">這些指示取決於您所需的 .NET Framework 版本。</span><span class="sxs-lookup"><span data-stu-id="fb121-107">The instructions depend on which version of the .NET Framework you need.</span></span>
 
-## <a name="net-framework-462"></a>.NET Framework 4.6.2
+## <a name="net-framework-47"></a><span data-ttu-id="fb121-108">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="fb121-108">.NET Framework 4.7</span></span>
 
-.NET Framework 4.6.2 隨附於「Windows 10 年度更新」。 
+<span data-ttu-id="fb121-109">.NET Framework 4.7 隨附於 [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10)。</span><span class="sxs-lookup"><span data-stu-id="fb121-109">The .NET Framework 4.7 is included with the [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10).</span></span>
 
-如果您使用較舊的 Windows 10 版本，將必須升級至 [Windows 10 年度更新](https://www.microsoft.com/software-download/windows10)，才能取得 .NET Framework 4.6.2。
+<span data-ttu-id="fb121-110">如果您使用較舊的 Windows 10 版本，則必須升級至 [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10)，才能取得 .NET Framework 4.7。</span><span class="sxs-lookup"><span data-stu-id="fb121-110">If you're on an earlier version of Windows 10, you need to upgrade to [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10) to get the .NET Framework 4.7.</span></span>
 
-.NET Framework 4.6.2 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
+<span data-ttu-id="fb121-111">.NET Framework 4.7 支援針對 .NET Framework 4.0 或更新版本建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb121-111">The .NET Framework 4.7 supports apps built for .NET Framework 4.0 or later.</span></span> <span data-ttu-id="fb121-112">其他 .NET Framework 版本可從[下載 .NET Framework](https://www.microsoft.com/net/download/framework) 網頁取得。</span><span class="sxs-lookup"><span data-stu-id="fb121-112">Other versions of the .NET Framework are available from the [Download .NET Framework](https://www.microsoft.com/net/download/framework) webpage.</span></span>
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a><span data-ttu-id="fb121-113">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="fb121-113">.NET Framework 3.5</span></span>
 
-請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。
+<span data-ttu-id="fb121-114">請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。</span><span class="sxs-lookup"><span data-stu-id="fb121-114">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
 
-.NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
+<span data-ttu-id="fb121-115">.NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb121-115">The .NET Framework 3.5 supports apps built for .NET Framework 1.0 through 3.5.</span></span>
 
-## <a name="help"></a>說明
+## <a name="help"></a><span data-ttu-id="fb121-116">說明</span><span class="sxs-lookup"><span data-stu-id="fb121-116">Help</span></span>
 
-如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)。
+<span data-ttu-id="fb121-117">如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)。</span><span class="sxs-lookup"><span data-stu-id="fb121-117">You can [contact Microsoft for help](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework) if you cannot get the correct version of the .NET Framework installed.</span></span>
 

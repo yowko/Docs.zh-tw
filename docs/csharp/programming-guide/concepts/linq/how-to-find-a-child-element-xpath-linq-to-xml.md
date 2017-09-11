@@ -15,22 +15,22 @@ caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b788d6dbd44f8ed01fe65a18fb25d8e3a0592220
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: ec3452765364850de7b113fe07caf5a02b1e7974
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>如何：尋找子項目 (XPath-LINQ to XML) (C#)
-本主題比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法。  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="271aa-102">如何：尋找子項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="271aa-102">How to: Find a Child Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="271aa-103">本主題比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="271aa-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
   
- XPath 運算式為 `DeliveryNotes`。  
+ <span data-ttu-id="271aa-104">XPath 運算式為 `DeliveryNotes`。</span><span class="sxs-lookup"><span data-stu-id="271aa-104">The XPath expression is `DeliveryNotes`.</span></span>  
   
-## <a name="example"></a>範例  
- 這個範例會尋找子項目 `DeliveryNotes`。  
+## <a name="example"></a><span data-ttu-id="271aa-105">範例</span><span class="sxs-lookup"><span data-stu-id="271aa-105">Example</span></span>  
+ <span data-ttu-id="271aa-106">這個範例會尋找子項目 `DeliveryNotes`。</span><span class="sxs-lookup"><span data-stu-id="271aa-106">This example finds the child element `DeliveryNotes`.</span></span>  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ <span data-ttu-id="271aa-107">此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="271aa-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -51,12 +51,12 @@ else
 Console.WriteLine(el1);  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="271aa-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="271aa-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="271aa-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="271aa-109">See Also</span></span>  
+ [<span data-ttu-id="271aa-110">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="271aa-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,1 +1,1 @@
-WPF 影像處理
+<span data-ttu-id="f5c8c-101">WPF 影像處理</span><span class="sxs-lookup"><span data-stu-id="f5c8c-101">WPF Imaging</span></span>

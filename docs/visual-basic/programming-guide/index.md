@@ -36,23 +36,23 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-programming-guide"></a>Visual Basic 程式設計手冊
-和任何現代程式設計語言一樣，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支援許多通用程式設計建構和語言項目。 本指南描述使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 進行程式設計時的所有主要項目。  
+# <a name="visual-basic-programming-guide"></a><span data-ttu-id="d79dc-102">Visual Basic 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="d79dc-102">Visual Basic Programming Guide</span></span>
+<span data-ttu-id="d79dc-103">和任何現代程式設計語言一樣，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支援許多通用程式設計建構和語言項目。</span><span class="sxs-lookup"><span data-stu-id="d79dc-103">As with any modern programming language, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supports many common programming constructs and language elements.</span></span> <span data-ttu-id="d79dc-104">本指南描述使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 進行程式設計時的所有主要項目。</span><span class="sxs-lookup"><span data-stu-id="d79dc-104">This guide describes all the major elements of programming with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
- [程式結構和程式碼慣例](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- 包含 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 基本結構和程式碼慣例的文件，例如命名慣例、程式碼中的註解，以及 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 內的限制。  
+## <a name="in-this-section"></a><span data-ttu-id="d79dc-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="d79dc-105">In This Section</span></span>  
+ [<span data-ttu-id="d79dc-106">程式結構和程式碼慣例</span><span class="sxs-lookup"><span data-stu-id="d79dc-106">Program Structure and Code Conventions</span></span>](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ <span data-ttu-id="d79dc-107">包含 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 基本結構和程式碼慣例的文件，例如命名慣例、程式碼中的註解，以及 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 內的限制。</span><span class="sxs-lookup"><span data-stu-id="d79dc-107">Contains documentation on the basic structure and code conventions of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], such as naming conventions, comments in code, and limitations within [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [Visual Basic 語言功能](../../visual-basic/programming-guide/language-features/index.md)  
- 提供主題連結，這些主題會介紹及討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的重要功能，包括 LINQ 和 XML 常值。  
+ [<span data-ttu-id="d79dc-108">Visual Basic 語言功能</span><span class="sxs-lookup"><span data-stu-id="d79dc-108">Visual Basic Language Features</span></span>](../../visual-basic/programming-guide/language-features/index.md)  
+ <span data-ttu-id="d79dc-109">提供主題連結，這些主題會介紹及討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的重要功能，包括 LINQ 和 XML 常值。</span><span class="sxs-lookup"><span data-stu-id="d79dc-109">Provides links to topics that introduce and discuss important features of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], including LINQ and XML literals.</span></span>  
   
- [COM Interop](../../visual-basic/programming-guide/com-interop/index.md)  
- 解釋與使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 建立和使用元件物件模型 (COM) 物件相關的互通性問題。  
+ [<span data-ttu-id="d79dc-110">COM Interop</span><span class="sxs-lookup"><span data-stu-id="d79dc-110">COM Interop</span></span>](../../visual-basic/programming-guide/com-interop/index.md)  
+ <span data-ttu-id="d79dc-111">解釋與使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 建立和使用元件物件模型 (COM) 物件相關的互通性問題。</span><span class="sxs-lookup"><span data-stu-id="d79dc-111">Explains the interoperability issues associated with creating and using component object model (COM) objects with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="related-sections"></a>相關章節  
- [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)  
- 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式設計各種層面的參考資訊。  
+## <a name="related-sections"></a><span data-ttu-id="d79dc-112">相關章節</span><span class="sxs-lookup"><span data-stu-id="d79dc-112">Related Sections</span></span>  
+ [<span data-ttu-id="d79dc-113">Visual Basic 語言參考</span><span class="sxs-lookup"><span data-stu-id="d79dc-113">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ <span data-ttu-id="d79dc-114">提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式設計各種層面的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="d79dc-114">Provides reference information about various aspects of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programming.</span></span>  
   
- [Visual Basic 命令列編譯器](../../visual-basic/reference/command-line-compiler/index.md)  
- 提供使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器、編譯器選項及關鍵字升級工具的相關資訊。
+ [<span data-ttu-id="d79dc-115">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="d79dc-115">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="d79dc-116">提供使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器、編譯器選項及關鍵字升級工具的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="d79dc-116">Offers information on using the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler, the compiler options, and the Keyword Upgrade tool.</span></span>
 

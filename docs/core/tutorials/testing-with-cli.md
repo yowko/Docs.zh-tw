@@ -1,7 +1,7 @@
 ---
-title: "使用 .NET Core 命令列組織和測試專案 | Microsoft Docs"
+title: "使用 .NET Core 命令列組織和測試專案"
 description: "本教學課程說明如何從命令列組織和測試 .NET Core 專案。"
-keywords: ".NET, .NET Core, 單元測試, .NET CLI, xUnit"
+keywords: ".NET, .NET Core, 單元測試, .NET Core CLI, xUnit"
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
@@ -10,21 +10,21 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a><span data-ttu-id="a2375-104">使用 .NET Core 命令列組織和測試專案</span><span class="sxs-lookup"><span data-stu-id="a2375-104">Organizing and testing projects with the .NET Core command line</span></span>
 
-本教學課程會遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](using-with-xplat-cli.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
+<span data-ttu-id="a2375-105">本教學課程會遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](using-with-xplat-cli.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。</span><span class="sxs-lookup"><span data-stu-id="a2375-105">This tutorial follows [Getting started with .NET Core on Windows/Linux/macOS using the command line](using-with-xplat-cli.md), taking you beyond the creation of a simple console app to develop advanced and well-organized applications.</span></span> <span data-ttu-id="a2375-106">此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="a2375-106">After showing you how to use folders to organize your code, this tutorial shows you how to extend a console application with the [xUnit](https://xunit.github.io/) testing framework.</span></span>
 
-## <a name="using-folders-to-organize-code"></a>使用資料夾來組織程式碼
+## <a name="using-folders-to-organize-code"></a><span data-ttu-id="a2375-107">使用資料夾來組織程式碼</span><span class="sxs-lookup"><span data-stu-id="a2375-107">Using folders to organize code</span></span>
 
-如果您想要將新類型引入主控台應用程式，則可以將包含類型的檔案新增至應用程式。 例如，如果您將包含 `AccountInformation` 及 `MonthlyReportRecords` 類型的檔案新增至專案，則專案檔案結構會是平面，而且容易進行巡覽︰
+<span data-ttu-id="a2375-108">如果您想要將新類型引入主控台應用程式，則可以將包含類型的檔案新增至應用程式。</span><span class="sxs-lookup"><span data-stu-id="a2375-108">If you want to introduce new types into a console app, you can do so by adding files containing the types to the app.</span></span> <span data-ttu-id="a2375-109">例如，如果您將包含 `AccountInformation` 及 `MonthlyReportRecords` 類型的檔案新增至專案，則專案檔案結構會是平面，而且容易進行巡覽︰</span><span class="sxs-lookup"><span data-stu-id="a2375-109">For example if you add files containing `AccountInformation` and `MonthlyReportRecords` types to your project, the project file structure is flat and easy to navigate:</span></span>
 
 ```
 /MyProject
@@ -34,9 +34,9 @@ ms.lasthandoff: 05/16/2017
 |__Program.cs
 ```
 
-不過，只有在專案規模相當小時，這才會運作良好。 您可以想像將 20 種類型新增至專案時，會發生什麼事？ 如果有多個可將專案根目錄弄亂的檔案，則絕對無法輕鬆地巡覽及維護專案。
+<span data-ttu-id="a2375-110">不過，只有在專案規模相當小時，這才會運作良好。</span><span class="sxs-lookup"><span data-stu-id="a2375-110">However, this only works well when the size of your project is relatively small.</span></span> <span data-ttu-id="a2375-111">您可以想像將 20 種類型新增至專案時，會發生什麼事？</span><span class="sxs-lookup"><span data-stu-id="a2375-111">Can you imagine what will happen if you add 20 types to the project?</span></span> <span data-ttu-id="a2375-112">如果有多個可將專案根目錄弄亂的檔案，則絕對無法輕鬆地巡覽及維護專案。</span><span class="sxs-lookup"><span data-stu-id="a2375-112">The project definitely wouldn't be easy to navigate and maintain with that many files littering the project's root directory.</span></span>
 
-若要組織專案，請建立新的資料夾，並將它命名為 *Models* 以保留類型檔案。 將類型檔案放入 *Models* 資料夾︰
+<span data-ttu-id="a2375-113">若要組織專案，請建立新的資料夾，並將它命名為 *Models* 以保留類型檔案。</span><span class="sxs-lookup"><span data-stu-id="a2375-113">To organize the project, create a new folder and name it *Models* to hold the type files.</span></span> <span data-ttu-id="a2375-114">將類型檔案放入 *Models* 資料夾︰</span><span class="sxs-lookup"><span data-stu-id="a2375-114">Place the type files into the *Models* folder:</span></span>
 
 ```
 /MyProject
@@ -47,17 +47,17 @@ ms.lasthandoff: 05/16/2017
 |__Program.cs
 ```
 
-您也可以輕鬆地巡覽及維護以邏輯方式將檔案群組到資料夾的專案。 在下一節中，您會建立具有資料夾及單元測試的更複雜範例。
+<span data-ttu-id="a2375-115">您也可以輕鬆地巡覽及維護以邏輯方式將檔案群組到資料夾的專案。</span><span class="sxs-lookup"><span data-stu-id="a2375-115">Projects that logically group files into folders are easy to navigate and maintain.</span></span> <span data-ttu-id="a2375-116">在下一節中，您會建立具有資料夾及單元測試的更複雜範例。</span><span class="sxs-lookup"><span data-stu-id="a2375-116">In the next section, you create a more complex sample with folders and unit testing.</span></span>
 
-## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>使用 NewTypes Pets 範例進行組織及測試
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a><span data-ttu-id="a2375-117">使用 NewTypes Pets 範例進行組織及測試</span><span class="sxs-lookup"><span data-stu-id="a2375-117">Organizing and testing using the NewTypes Pets Sample</span></span>
 
-### <a name="building-the-sample"></a>建置範例
+### <a name="building-the-sample"></a><span data-ttu-id="a2375-118">建置範例</span><span class="sxs-lookup"><span data-stu-id="a2375-118">Building the sample</span></span>
 
-如需下列步驟，您可以遵循如何使用 [NewTypes Pets Sample](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild) (NewTypes Pets 範例)，或建立自己的檔案及資料夾。 類型會以邏輯方式組織成資料夾結構以允許稍後新增更多類型，而且測試也會以邏輯方式放在允許稍後新增更多測試的資料夾中。
+<span data-ttu-id="a2375-119">如需下列步驟，您可以遵循如何使用 [NewTypes Pets Sample](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild) (NewTypes Pets 範例)，或建立自己的檔案及資料夾。</span><span class="sxs-lookup"><span data-stu-id="a2375-119">For the following steps, you can either follow along using the [NewTypes Pets Sample](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild) or create your own files and folders.</span></span> <span data-ttu-id="a2375-120">類型會以邏輯方式組織成資料夾結構以允許稍後新增更多類型，而且測試也會以邏輯方式放在允許稍後新增更多測試的資料夾中。</span><span class="sxs-lookup"><span data-stu-id="a2375-120">The types are logically organized into a folder structure that permits the addition of more types later, and tests are also logically placed in folders permitting the addition of more tests later.</span></span>
 
-這個範例包含 `Dog` 及 `Cat` 這兩種類型，並讓它們實作公用介面 `IPet`。 針對 `NewTypes` 專案，您的目標是將寵物相關類型組織到 *Pets* 資料夾。 如果稍後新增另一組類型 (例如，*WildAnimals*)，則會將它們放入 *Pets* 資料夾旁邊的 *NewTypes* 資料夾。 *WildAnimals* 資料夾可能會包含不是寵物之動物的類型，例如 `Squirrel` 及 `Rabbit` 類型。 因此，新增類型時，專案會井然有序。 
+<span data-ttu-id="a2375-121">這個範例包含 `Dog` 及 `Cat` 這兩種類型，並讓它們實作公用介面 `IPet`。</span><span class="sxs-lookup"><span data-stu-id="a2375-121">The sample contains two types, `Dog` and `Cat`, and has them implement a common interface, `IPet`.</span></span> <span data-ttu-id="a2375-122">針對 `NewTypes` 專案，您的目標是將寵物相關類型組織到 *Pets* 資料夾。</span><span class="sxs-lookup"><span data-stu-id="a2375-122">For the `NewTypes` project, your goal is to organize the pet-related types into a *Pets* folder.</span></span> <span data-ttu-id="a2375-123">如果稍後新增另一組類型 (例如，*WildAnimals*)，則會將它們放入 *Pets* 資料夾旁邊的 *NewTypes* 資料夾。</span><span class="sxs-lookup"><span data-stu-id="a2375-123">If another set of types is added later, *WildAnimals* for example, they're placed in the *NewTypes* folder alongside the *Pets* folder.</span></span> <span data-ttu-id="a2375-124">*WildAnimals* 資料夾可能會包含不是寵物之動物的類型，例如 `Squirrel` 及 `Rabbit` 類型。</span><span class="sxs-lookup"><span data-stu-id="a2375-124">The *WildAnimals* folder may contain types for animals that aren't pets, such as `Squirrel` and `Rabbit` types.</span></span> <span data-ttu-id="a2375-125">因此，新增類型時，專案會井然有序。</span><span class="sxs-lookup"><span data-stu-id="a2375-125">In this way as types are added, the project remains well organized.</span></span> 
 
-使用所指出的檔案內容來建立下列資料夾結構︰
+<span data-ttu-id="a2375-126">使用所指出的檔案內容來建立下列資料夾結構︰</span><span class="sxs-lookup"><span data-stu-id="a2375-126">Create the following folder structure with file content indicated:</span></span>
 
 ```
 /NewTypes
@@ -71,55 +71,55 @@ ms.lasthandoff: 05/16/2017
       |__NewTypes.csproj
 ```
 
-*IPet.cs*：
+<span data-ttu-id="a2375-127">*IPet.cs*：</span><span class="sxs-lookup"><span data-stu-id="a2375-127">*IPet.cs*:</span></span>
 
-[!code-csharp[IPet 介面](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+<span data-ttu-id="a2375-128">[!code-csharp[IPet 介面](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]</span><span class="sxs-lookup"><span data-stu-id="a2375-128">[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]</span></span>
 
-*Dog.cs*：
+<span data-ttu-id="a2375-129">*Dog.cs*：</span><span class="sxs-lookup"><span data-stu-id="a2375-129">*Dog.cs*:</span></span>
 
-[!code-csharp[Dog 類別](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+<span data-ttu-id="a2375-130">[!code-csharp[Dog 類別](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]</span><span class="sxs-lookup"><span data-stu-id="a2375-130">[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]</span></span>
 
-*Cat.cs*：
+<span data-ttu-id="a2375-131">*Cat.cs*：</span><span class="sxs-lookup"><span data-stu-id="a2375-131">*Cat.cs*:</span></span>
 
-[!code-csharp[Cat 類別](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+<span data-ttu-id="a2375-132">[!code-csharp[Cat 類別](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]</span><span class="sxs-lookup"><span data-stu-id="a2375-132">[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]</span></span>
 
-*Program.cs*：
+<span data-ttu-id="a2375-133">*Program.cs*：</span><span class="sxs-lookup"><span data-stu-id="a2375-133">*Program.cs*:</span></span>
 
-[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+<span data-ttu-id="a2375-134">[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]</span><span class="sxs-lookup"><span data-stu-id="a2375-134">[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]</span></span>
 
-*NewTypes.csproj*：
+<span data-ttu-id="a2375-135">*NewTypes.csproj*：</span><span class="sxs-lookup"><span data-stu-id="a2375-135">*NewTypes.csproj*:</span></span>
 
-[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+<span data-ttu-id="a2375-136">[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]</span><span class="sxs-lookup"><span data-stu-id="a2375-136">[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]</span></span>
 
-執行下列命令：
+<span data-ttu-id="a2375-137">執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="a2375-137">Execute the following commands:</span></span>
 
 ```console
 dotnet restore
 dotnet run
 ```
 
-取得下列輸出：
+<span data-ttu-id="a2375-138">取得下列輸出：</span><span class="sxs-lookup"><span data-stu-id="a2375-138">Obtain the following output:</span></span>
 
 ```console
 Woof!
 Meow!
 ```
 
-選擇性練習︰您可以擴充此專案，以新增 `Bird` 這類寵物類型。 讓小鳥的 `TalkToOwner` 方法提供 `Tweet!` 給擁有者。 重新執行應用程式。 輸出會包含 `Tweet!`
+<span data-ttu-id="a2375-139">選擇性練習︰您可以擴充此專案，以新增 `Bird` 這類寵物類型。</span><span class="sxs-lookup"><span data-stu-id="a2375-139">Optional exercise: You can add a new pet type, such as a `Bird`, by extending this project.</span></span> <span data-ttu-id="a2375-140">讓小鳥的 `TalkToOwner` 方法提供 `Tweet!` 給擁有者。</span><span class="sxs-lookup"><span data-stu-id="a2375-140">Make the bird's `TalkToOwner` method give a `Tweet!` to the owner.</span></span> <span data-ttu-id="a2375-141">重新執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="a2375-141">Run the app again.</span></span> <span data-ttu-id="a2375-142">輸出會包含 `Tweet!`</span><span class="sxs-lookup"><span data-stu-id="a2375-142">The output will include `Tweet!`</span></span>
 
-### <a name="testing-the-sample"></a>測試範例
+### <a name="testing-the-sample"></a><span data-ttu-id="a2375-143">測試範例</span><span class="sxs-lookup"><span data-stu-id="a2375-143">Testing the sample</span></span>
 
-`NewTypes` 專案已經就緒，而且組織方式是將寵物相關類型保留在資料夾中。 接下來，建立測試專案，並開始撰寫具有 [xUnit](https://xunit.github.io/) 測試架構的測試。 單元測試可讓您自動檢查寵物類型的行為以確認它們正常運作。
+<span data-ttu-id="a2375-144">`NewTypes` 專案已經就緒，而且組織方式是將寵物相關類型保留在資料夾中。</span><span class="sxs-lookup"><span data-stu-id="a2375-144">The `NewTypes` project is in place, and you've organized it by keeping the pets-related types in a folder.</span></span> <span data-ttu-id="a2375-145">接下來，建立測試專案，並開始撰寫具有 [xUnit](https://xunit.github.io/) 測試架構的測試。</span><span class="sxs-lookup"><span data-stu-id="a2375-145">Next, create your test project and start writing tests with the [xUnit](https://xunit.github.io/) test framework.</span></span> <span data-ttu-id="a2375-146">單元測試可讓您自動檢查寵物類型的行為以確認它們正常運作。</span><span class="sxs-lookup"><span data-stu-id="a2375-146">Unit testing allows you to automatically check the bevahior of your pet types to confirm that they're operating properly.</span></span>
 
-建立其內具有 *NewTypesTests* 資料夾的 *test* 資料夾。 在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。 這會產生兩個檔案︰*NewTypesTests.csproj* 及 *UnitTest1.cs*。
+<span data-ttu-id="a2375-147">建立其內具有 *NewTypesTests* 資料夾的 *test* 資料夾。</span><span class="sxs-lookup"><span data-stu-id="a2375-147">Create a *test* folder with a *NewTypesTests* folder within it.</span></span> <span data-ttu-id="a2375-148">在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。</span><span class="sxs-lookup"><span data-stu-id="a2375-148">At a command prompt from the *NewTypesTests* folder, execute `dotnet new xunit`.</span></span> <span data-ttu-id="a2375-149">這會產生兩個檔案︰*NewTypesTests.csproj* 及 *UnitTest1.cs*。</span><span class="sxs-lookup"><span data-stu-id="a2375-149">This produces two files: *NewTypesTests.csproj* and *UnitTest1.cs*.</span></span>
 
-測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 若要新增專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令︰
+<span data-ttu-id="a2375-150">測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。</span><span class="sxs-lookup"><span data-stu-id="a2375-150">The test project cannot currently test the types in `NewTypes` and requires a project reference to the `NewTypes` project.</span></span> <span data-ttu-id="a2375-151">若要新增專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令︰</span><span class="sxs-lookup"><span data-stu-id="a2375-151">To add a project reference, use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-您也可以選擇手動新增專案參考，方法是將 `<ItemGroup>` 節點新增至 *NewTypesTests.csproj* 檔案︰
+<span data-ttu-id="a2375-152">您也可以選擇手動新增專案參考，方法是將 `<ItemGroup>` 節點新增至 *NewTypesTests.csproj* 檔案︰</span><span class="sxs-lookup"><span data-stu-id="a2375-152">You also have the option of manually adding the project reference by adding an `<ItemGroup>` node to the *NewTypesTests.csproj* file:</span></span>
 
 ```xml
 <ItemGroup>
@@ -127,18 +127,18 @@ dotnet add reference ../../src/NewTypes/NewTypes.csproj
 </ItemGroup>
 ```
 
-*NewTypesTests.csproj*：
+<span data-ttu-id="a2375-153">*NewTypesTests.csproj*：</span><span class="sxs-lookup"><span data-stu-id="a2375-153">*NewTypesTests.csproj*:</span></span>
 
-[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+<span data-ttu-id="a2375-154">[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]</span><span class="sxs-lookup"><span data-stu-id="a2375-154">[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]</span></span>
 
-*NewTypesTests.csproj* 檔案包含下列項目：
+<span data-ttu-id="a2375-155">*NewTypesTests.csproj* 檔案包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="a2375-155">The *NewTypesTests.csproj* file contains the following:</span></span>
 
-* `Microsoft.NET.Test.Sdk` (.NET 測試基礎結構) 的套件參考
-* `xunit` (xUnit 測試架構) 的套件參考
-* `xunit.runner.visualstudio` (測試執行器) 的套件參考
-* `NewTypes` (要測試的程式碼) 的套件參考
+* <span data-ttu-id="a2375-156">`Microsoft.NET.Test.Sdk` (.NET 測試基礎結構) 的套件參考</span><span class="sxs-lookup"><span data-stu-id="a2375-156">Package reference to `Microsoft.NET.Test.Sdk`, the .NET testing infrastructure</span></span>
+* <span data-ttu-id="a2375-157">`xunit` (xUnit 測試架構) 的套件參考</span><span class="sxs-lookup"><span data-stu-id="a2375-157">Package reference to `xunit`, the xUnit testing framework</span></span>
+* <span data-ttu-id="a2375-158">`xunit.runner.visualstudio` (測試執行器) 的套件參考</span><span class="sxs-lookup"><span data-stu-id="a2375-158">Package reference to `xunit.runner.visualstudio`, the test runner</span></span>
+* <span data-ttu-id="a2375-159">`NewTypes` (要測試的程式碼) 的套件參考</span><span class="sxs-lookup"><span data-stu-id="a2375-159">Project reference to `NewTypes`, the code to test</span></span>
 
-將 *UnitTest1.cs* 的名稱變更為 *PetTests.cs*，並將檔案中的程式碼取代為下列內容：
+<span data-ttu-id="a2375-160">將 *UnitTest1.cs* 的名稱變更為 *PetTests.cs*，並將檔案中的程式碼取代為下列內容：</span><span class="sxs-lookup"><span data-stu-id="a2375-160">Change the name of *UnitTest1.cs* to *PetTests.cs* and replace the code in the file with the following:</span></span>
 
 ```csharp
 using System;
@@ -167,12 +167,12 @@ public class PetTests
 }
 ```
 
-選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
+<span data-ttu-id="a2375-161">選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。</span><span class="sxs-lookup"><span data-stu-id="a2375-161">Optional exercise: If you added a `Bird` type earlier that yields a `Tweet!` to the owner, add a test method to the *PetTests.cs* file, `BirdTalkToOwnerReturnsTweet`, to check that the `TalkToOwner` method works correctly for the `Bird` type.</span></span>
 
 > [!NOTE]
-> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定它們「不相等」。 一開始一律會讓您的測試失敗一次，以檢查測試邏輯。 這是測試導向設計 (TDD) 方法中的重要步驟。 在您確認測試失敗之後，調整判斷提示以允許它們通過。
+> <span data-ttu-id="a2375-162">雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定它們「不相等」。</span><span class="sxs-lookup"><span data-stu-id="a2375-162">Although you expect that the `expected` and `actual` values are equal, the initial assertions with the `Assert.NotEqual` checks specify that they are *not equal*.</span></span> <span data-ttu-id="a2375-163">一開始一律會讓您的測試失敗一次，以檢查測試邏輯。</span><span class="sxs-lookup"><span data-stu-id="a2375-163">Always initially create your tests to fail once in order to check the logic of the tests.</span></span> <span data-ttu-id="a2375-164">這是測試導向設計 (TDD) 方法中的重要步驟。</span><span class="sxs-lookup"><span data-stu-id="a2375-164">This is an important step in test-driven design (TDD) methodology.</span></span> <span data-ttu-id="a2375-165">在您確認測試失敗之後，調整判斷提示以允許它們通過。</span><span class="sxs-lookup"><span data-stu-id="a2375-165">After you confirm the tests fail, you adjust the assertions to allow them to pass.</span></span>
 
-下列顯示完整專案結構：
+<span data-ttu-id="a2375-166">下列顯示完整專案結構：</span><span class="sxs-lookup"><span data-stu-id="a2375-166">The following shows the complete project structure:</span></span>
 
 ```
 /NewTypes
@@ -190,9 +190,9 @@ public class PetTests
       |__NewTypesTests.csproj
 ```
 
-從 *test/NewTypesTests* 目錄開始。 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原測試專案。 使用 [`dotnet test`](../tools/dotnet-test.md) 命令執行測試。 這個命令會啟動專案檔中指定的測試執行器。
+<span data-ttu-id="a2375-167">從 *test/NewTypesTests* 目錄開始。</span><span class="sxs-lookup"><span data-stu-id="a2375-167">Start in the *test/NewTypesTests* directory.</span></span> <span data-ttu-id="a2375-168">使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原測試專案。</span><span class="sxs-lookup"><span data-stu-id="a2375-168">Restore the test project with the [`dotnet restore`](../tools/dotnet-restore.md) command.</span></span> <span data-ttu-id="a2375-169">使用 [`dotnet test`](../tools/dotnet-test.md) 命令執行測試。</span><span class="sxs-lookup"><span data-stu-id="a2375-169">Run the tests with the [`dotnet test`](../tools/dotnet-test.md) command.</span></span> <span data-ttu-id="a2375-170">這個命令會啟動專案檔中指定的測試執行器。</span><span class="sxs-lookup"><span data-stu-id="a2375-170">This command starts the test runner specified in the project file.</span></span>
  
-如預期，測試會失敗，而且主控台會顯示下列輸出︰
+<span data-ttu-id="a2375-171">如預期，測試會失敗，而且主控台會顯示下列輸出︰</span><span class="sxs-lookup"><span data-stu-id="a2375-171">As expected, testing fails, and the console displays the following output:</span></span>
  
 ```
 Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
@@ -236,11 +236,11 @@ Test Run Failed.
 Test execution time: 2.1371 Seconds
 ```
 
-將您測試的判斷提示從 `Assert.NotEqual` 變更為 `Assert.Equal`：
+<span data-ttu-id="a2375-172">將您測試的判斷提示從 `Assert.NotEqual` 變更為 `Assert.Equal`：</span><span class="sxs-lookup"><span data-stu-id="a2375-172">Change the assertions of your tests from `Assert.NotEqual` to `Assert.Equal`:</span></span>
 
-[!code-csharp[PetTests 類別](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+<span data-ttu-id="a2375-173">[!code-csharp[PetTests 類別](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]</span><span class="sxs-lookup"><span data-stu-id="a2375-173">[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]</span></span>
 
-使用 `dotnet test` 命令重新執行測試，並取得下列輸出︰
+<span data-ttu-id="a2375-174">使用 `dotnet test` 命令重新執行測試，並取得下列輸出︰</span><span class="sxs-lookup"><span data-stu-id="a2375-174">Re-run the tests with the `dotnet test` command and obtain the following output:</span></span>
 
 ```
 Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
@@ -257,6 +257,7 @@ Test Run Successful.
 Test execution time: 1.6634 Seconds
 ```
 
-通過測試。 與擁有者交談時，寵物類型的方法會傳回正確值。
+<span data-ttu-id="a2375-175">通過測試。</span><span class="sxs-lookup"><span data-stu-id="a2375-175">Testing passes.</span></span> <span data-ttu-id="a2375-176">與擁有者交談時，寵物類型的方法會傳回正確值。</span><span class="sxs-lookup"><span data-stu-id="a2375-176">The pet types' methods return the correct values when talking to the owner.</span></span>
 
-您已了解使用 xUnit 來組織及測試專案的技術。 繼續使用這些技術，以將它們套用至您自己的專案。 *祝各位程式撰寫愉快！*
+<span data-ttu-id="a2375-177">您已了解使用 xUnit 來組織及測試專案的技術。</span><span class="sxs-lookup"><span data-stu-id="a2375-177">You've learned techniques for organizing and testing projects using xUnit.</span></span> <span data-ttu-id="a2375-178">繼續使用這些技術，以將它們套用至您自己的專案。</span><span class="sxs-lookup"><span data-stu-id="a2375-178">Go forward with these techniques applying them in your own projects.</span></span> <span data-ttu-id="a2375-179">*祝各位程式撰寫愉快！*</span><span class="sxs-lookup"><span data-stu-id="a2375-179">*Happy coding!*</span></span>
+

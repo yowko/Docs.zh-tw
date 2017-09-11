@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 926bf98bf30817608a8f09f2812c2b7dbe213c27
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 93144e23ebf6a36607f12e0b7f19f5d30710ec1c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>地區設定識別碼 '&lt;名稱&gt;' 不支援此系統上
-您嘗試使用 `VbStrConv`，但您的系統不支援指定的地區設定。  
+# <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a><span data-ttu-id="cc3a3-102">地區設定識別碼 '&lt;名稱&gt;' 不支援此系統上</span><span class="sxs-lookup"><span data-stu-id="cc3a3-102">Locale ID &#39;&lt;name&gt;&#39; is not supported on this system</span></span>
+<span data-ttu-id="cc3a3-103">您嘗試使用 `VbStrConv`，但您的系統不支援指定的地區設定。</span><span class="sxs-lookup"><span data-stu-id="cc3a3-103">You are attempting to use `VbStrConv`, but your system does not support the specified locale.</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cc3a3-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="cc3a3-104">To correct this error</span></span>  
   
-1.  請升級電腦以支援地區設定，或在支援指定地區設定的電腦上執行應用程式。  
+1.  <span data-ttu-id="cc3a3-105">請升級電腦以支援地區設定，或在支援指定地區設定的電腦上執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="cc3a3-105">Upgrade the machine to support the locale, or run the application on a machine that supports the specified locale.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Globalization>   
- [以 .NET Framework 為基礎的國際應用程式簡介](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a><span data-ttu-id="cc3a3-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc3a3-106">See Also</span></span>  
+ <span data-ttu-id="cc3a3-107"><xref:System.Globalization></span><span class="sxs-lookup"><span data-stu-id="cc3a3-107"><xref:System.Globalization></span></span>   
+<span data-ttu-id="cc3a3-108"> [以 .NET Framework 為基礎的國際應用程式簡介](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)</span><span class="sxs-lookup"><span data-stu-id="cc3a3-108"> [Introduction to International Applications Based on the .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)</span></span>

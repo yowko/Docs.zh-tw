@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4472ceee783c2373de8cc4a0950363ed317d56ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0e95ba21e7ec751fe0276244dd1ce49552b178ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>無法載入類別資訊&lt;classname&gt;'
-未提供的類別進行參考。  
+# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a><span data-ttu-id="b4b44-102">無法載入類別資訊&lt;classname&gt;'</span><span class="sxs-lookup"><span data-stu-id="b4b44-102">Unable to load information for class &#39;&lt;classname&gt;&#39;</span></span>
+<span data-ttu-id="b4b44-103">未提供的類別進行參考。</span><span class="sxs-lookup"><span data-stu-id="b4b44-103">A reference was made to a class that is not available.</span></span>  
   
- **錯誤識別碼︰** BC30712  
+ <span data-ttu-id="b4b44-104">**錯誤識別碼︰** BC30712</span><span class="sxs-lookup"><span data-stu-id="b4b44-104">**Error ID:** BC30712</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b4b44-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="b4b44-105">To correct this error</span></span>  
   
-1.  請確認已定義類別和名稱的拼字正確。  
+1.  <span data-ttu-id="b4b44-106">請確認已定義類別和名稱的拼字正確。</span><span class="sxs-lookup"><span data-stu-id="b4b44-106">Verify that the class is defined and that you spelled the name correctly.</span></span>  
   
-2.  嘗試存取模組中所宣告的其中一個成員。 在某些情況下，偵錯環境找不到成員，因為尚未載入宣告它們的模組。  
+2.  <span data-ttu-id="b4b44-107">嘗試存取模組中所宣告的其中一個成員。</span><span class="sxs-lookup"><span data-stu-id="b4b44-107">Try accessing one of the members declared in the module.</span></span> <span data-ttu-id="b4b44-108">在某些情況下，偵錯環境找不到成員，因為尚未載入宣告它們的模組。</span><span class="sxs-lookup"><span data-stu-id="b4b44-108">In some cases, the debugging environment cannot locate members because the modules where they are declared have not been loaded yet.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Studio 偵錯](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a><span data-ttu-id="b4b44-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4b44-109">See Also</span></span>  
+ [<span data-ttu-id="b4b44-110">Visual Studio 偵錯</span><span class="sxs-lookup"><span data-stu-id="b4b44-110">Debugging in Visual Studio</span></span>](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)

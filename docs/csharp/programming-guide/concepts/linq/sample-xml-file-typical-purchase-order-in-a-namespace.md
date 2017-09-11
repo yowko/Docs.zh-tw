@@ -26,10 +26,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>範例 XML 檔：命名空間中的典型採購訂單
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 這個檔案是典型的採購訂單。 XML 位於命名空間中。  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="d3f77-102">範例 XML 檔：命名空間中的典型採購訂單</span><span class="sxs-lookup"><span data-stu-id="d3f77-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="d3f77-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="d3f77-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="d3f77-104">這個檔案是典型的採購訂單。</span><span class="sxs-lookup"><span data-stu-id="d3f77-104">This file is a typical purchase order.</span></span> <span data-ttu-id="d3f77-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="d3f77-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="d3f77-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d3f77-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -71,5 +71,5 @@ ms.lasthandoff: 03/13/2017
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d3f77-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3f77-107">See Also</span></span>  
+ [<span data-ttu-id="d3f77-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d3f77-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

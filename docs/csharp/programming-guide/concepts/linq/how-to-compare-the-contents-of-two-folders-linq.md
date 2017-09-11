@@ -1,5 +1,5 @@
 ---
-title: "如何：比較兩個資料夾的內容 (LINQ) (C#) | Microsoft Docs"
+title: "如何：比較兩個資料夾的內容 (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,28 +19,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a4738ae0c6bd4e29ca21cee51459c83e311a3ad7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c53e79b02df5135daaf8e92fae6681d64d3b5df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>如何：比較兩個資料夾的內容 (LINQ) (C#)
-本例示範三種比較兩個檔案清單的方式︰  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="f91fe-102">如何：比較兩個資料夾的內容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="f91fe-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
+<span data-ttu-id="f91fe-103">本例示範三種比較兩個檔案清單的方式︰</span><span class="sxs-lookup"><span data-stu-id="f91fe-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
--   查詢指定兩個檔案清單是否完全相同的布林值。  
+-   <span data-ttu-id="f91fe-104">查詢指定兩個檔案清單是否完全相同的布林值。</span><span class="sxs-lookup"><span data-stu-id="f91fe-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
--   查詢交集，以擷取這兩個資料夾都有的檔案。  
+-   <span data-ttu-id="f91fe-105">查詢交集，以擷取這兩個資料夾都有的檔案。</span><span class="sxs-lookup"><span data-stu-id="f91fe-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
--   查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。  
+-   <span data-ttu-id="f91fe-106">查詢集合差異，以擷取一個資料夾中有而另一個沒有的檔案。</span><span class="sxs-lookup"><span data-stu-id="f91fe-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    >  這裡顯示的技巧可用於比較任何類型的物件序列。  
+    >  <span data-ttu-id="f91fe-107">這裡顯示的技巧可用於比較任何類型的物件序列。</span><span class="sxs-lookup"><span data-stu-id="f91fe-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- 這裡顯示的 `FileComparer` 類別會示範如何一起使用自訂比較子類別和標準查詢運算子。 此類別不適用於實際案例。 它僅使用每個檔案以位元組計的名稱和長度，來判斷每個資料夾的內容是否相同。 在實際案例中，您應該修改此比較子以執行更嚴格的相等檢查。  
+ <span data-ttu-id="f91fe-108">這裡顯示的 `FileComparer` 類別會示範如何一起使用自訂比較子類別和標準查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="f91fe-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="f91fe-109">此類別不適用於實際案例。</span><span class="sxs-lookup"><span data-stu-id="f91fe-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="f91fe-110">它僅使用每個檔案以位元組計的名稱和長度，來判斷每個資料夾的內容是否相同。</span><span class="sxs-lookup"><span data-stu-id="f91fe-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="f91fe-111">在實際案例中，您應該修改此比較子以執行更嚴格的相等檢查。</span><span class="sxs-lookup"><span data-stu-id="f91fe-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="f91fe-112">範例</span><span class="sxs-lookup"><span data-stu-id="f91fe-112">Example</span></span>  
   
 ```csharp  
 namespace QueryCompareTwoDirs  
@@ -142,9 +142,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+## <a name="compiling-the-code"></a><span data-ttu-id="f91fe-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="f91fe-113">Compiling the Code</span></span>  
+ <span data-ttu-id="f91fe-114">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="f91fe-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="f91fe-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f91fe-115">See Also</span></span>  
+ <span data-ttu-id="f91fe-116">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="f91fe-116">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+ [<span data-ttu-id="f91fe-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="f91fe-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

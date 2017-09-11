@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9829a0270d1969121f02bf6e46779b0e447cbb80
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2606dd913e7c28c46a9667a6121d01810bebf08
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>事件不可以宣告為具有傳回型別的委派類型
-委派指定的函式程序。  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="9abb3-102">事件不可以宣告為具有傳回型別的委派類型</span><span class="sxs-lookup"><span data-stu-id="9abb3-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="9abb3-103">委派指定的函式程序。</span><span class="sxs-lookup"><span data-stu-id="9abb3-103">A delegate was specified for a function procedure.</span></span>  
   
- **錯誤識別碼︰** BC31084  
+ <span data-ttu-id="9abb3-104">**錯誤識別碼︰** BC31084</span><span class="sxs-lookup"><span data-stu-id="9abb3-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9abb3-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="9abb3-105">To correct this error</span></span>  
   
--   指定的委派`Sub`程序。  
+-   <span data-ttu-id="9abb3-106">指定的委派`Sub`程序。</span><span class="sxs-lookup"><span data-stu-id="9abb3-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="9abb3-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9abb3-107">See Also</span></span>  
+ [<span data-ttu-id="9abb3-108">事件</span><span class="sxs-lookup"><span data-stu-id="9abb3-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

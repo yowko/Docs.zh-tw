@@ -1,1 +1,1 @@
-Internet Explorer 7
+<span data-ttu-id="c12f6-101">Internet Explorer 7</span><span class="sxs-lookup"><span data-stu-id="c12f6-101">Internet Explorer 7</span></span>

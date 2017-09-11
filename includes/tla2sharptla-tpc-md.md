@@ -1,1 +1,1 @@
-平板電腦
+<span data-ttu-id="572d5-101">平板電腦</span><span class="sxs-lookup"><span data-stu-id="572d5-101">Tablet PC</span></span>

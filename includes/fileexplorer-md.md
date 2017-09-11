@@ -1,1 +1,1 @@
-檔案總管
+<span data-ttu-id="5b5cb-101">檔案總管</span><span class="sxs-lookup"><span data-stu-id="5b5cb-101">File Explorer</span></span>

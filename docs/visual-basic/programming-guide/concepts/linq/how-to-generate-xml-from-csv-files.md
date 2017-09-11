@@ -16,18 +16,18 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3729a9494c3b7486555b01245036c3c8441bf7e0
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: a36818659adbeef13e2468170360aba090ecc1cb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>如何︰ 從 CSV 檔案 (Visual Basic) 中產生 XML
-此範例顯示如何使用 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="353bd-102">如何︰ 從 CSV 檔案 (Visual Basic) 中產生 XML</span><span class="sxs-lookup"><span data-stu-id="353bd-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="353bd-103">此範例顯示如何使用 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 和 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="353bd-103">This example shows how to use [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] and [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢。  
+## <a name="example"></a><span data-ttu-id="353bd-104">範例</span><span class="sxs-lookup"><span data-stu-id="353bd-104">Example</span></span>  
+ <span data-ttu-id="353bd-105">下列程式碼會在字串的陣列上執行 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 查詢。</span><span class="sxs-lookup"><span data-stu-id="353bd-105">The following code performs a [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -62,7 +62,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="353bd-106">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="353bd-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -121,6 +121,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="353bd-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="353bd-107">See Also</span></span>  
+ [<span data-ttu-id="353bd-108">投影和轉換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="353bd-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

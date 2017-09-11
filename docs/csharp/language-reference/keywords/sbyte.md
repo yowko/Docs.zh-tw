@@ -1,5 +1,5 @@
 ---
-title: "sbyte (C# 參考) | Microsoft Docs"
+title: "sbyte (C# 參考)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,48 +30,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 2de7b352382f1a39ef73788c553d9bd881644019
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69741a5b9556c769156687584041667312550c17
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sbyte-c-reference"></a>sbyte (C# 參考)
+# <a name="sbyte-c-reference"></a><span data-ttu-id="f4104-102">sbyte (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="f4104-102">sbyte (C# Reference)</span></span>
 
-`sbyte` 表示儲存值的整數型別 (以下表所示的大小和範圍為依據)。  
+<span data-ttu-id="f4104-103">`sbyte` 表示儲存值的整數型別 (以下表所示的大小和範圍為依據)。</span><span class="sxs-lookup"><span data-stu-id="f4104-103">`sbyte` denotes an integral type that stores values according to the size and range shown in the following table.</span></span>  
   
-|類型|範圍|大小|.NET Framework 類型|  
+|<span data-ttu-id="f4104-104">類型</span><span class="sxs-lookup"><span data-stu-id="f4104-104">Type</span></span>|<span data-ttu-id="f4104-105">範圍</span><span class="sxs-lookup"><span data-stu-id="f4104-105">Range</span></span>|<span data-ttu-id="f4104-106">大小</span><span class="sxs-lookup"><span data-stu-id="f4104-106">Size</span></span>|<span data-ttu-id="f4104-107">.NET Framework 類型</span><span class="sxs-lookup"><span data-stu-id="f4104-107">.NET Framework type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`sbyte`|-128 到 127|帶正負號的 8 位元整數|<xref:System.SByte?displayProperty=fullName>|  
+|`sbyte`|<span data-ttu-id="f4104-108">-128 到 127</span><span class="sxs-lookup"><span data-stu-id="f4104-108">-128 to 127</span></span>|<span data-ttu-id="f4104-109">帶正負號的 8 位元整數</span><span class="sxs-lookup"><span data-stu-id="f4104-109">Signed 8-bit integer</span></span>|<xref:System.SByte?displayProperty=fullName>|  
   
-## <a name="literals"></a>常值  
+## <a name="literals"></a><span data-ttu-id="f4104-110">常值</span><span class="sxs-lookup"><span data-stu-id="f4104-110">Literals</span></span>  
 
-您可以針對 `sbyte` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 
+<span data-ttu-id="f4104-111">您可以針對 `sbyte` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。</span><span class="sxs-lookup"><span data-stu-id="f4104-111">You can declare and initialize an `sbyte` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7) a binary literal to it.</span></span> 
 
-下列範例會將以十進位、十六進位和二進位常值表示的 -102 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 轉換成 `sbyte` 值。    
+<span data-ttu-id="f4104-112">下列範例會將以十進位、十六進位和二進位常值表示的 -102 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 轉換成 `sbyte` 值。</span><span class="sxs-lookup"><span data-stu-id="f4104-112">In the following example, integers equal to -102 that are represented as decimal, hexadecimal, and binary literals are converted from [int](../../../csharp/language-reference/keywords/int.md) to `sbyte` values.</span></span>    
   
-[!code-cs[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]  
+<span data-ttu-id="f4104-113">[!code-cs[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]</span><span class="sxs-lookup"><span data-stu-id="f4104-113">[!code-cs[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]</span></span>  
 
 > [!NOTE] 
-> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。
+> <span data-ttu-id="f4104-114">您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。</span><span class="sxs-lookup"><span data-stu-id="f4104-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="f4104-115">十進位常值沒有前置詞。</span><span class="sxs-lookup"><span data-stu-id="f4104-115">Decimal literals have no prefix.</span></span>
 
-自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+<span data-ttu-id="f4104-116">自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="f4104-116">Starting with C# 7, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
 
-[!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
+<span data-ttu-id="f4104-117">[!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]</span><span class="sxs-lookup"><span data-stu-id="f4104-117">[!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]</span></span>  
 
-如果整數常值超出 `sbyte` 的範圍 (亦即，如果小於 <xref:System.SByte.MinValue?displayProperty=fullName> 或大於 <xref:System.SByte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。 這表示，此範例會將數值常值 `0x9A` 和 `0b10011010` 解譯為 32 位元帶正負號的整數值 156，而該值已超過 <xref:System.SByte.MaxValue?displayProperty=fullName>。 因此，您需要使用轉型運算子，且作業必須發生在 [unchecked](unchecked.md) 內容中。 
+<span data-ttu-id="f4104-118">如果整數常值超出 `sbyte` 的範圍 (亦即，如果小於 <xref:System.SByte.MinValue?displayProperty=fullName> 或大於 <xref:System.SByte.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。</span><span class="sxs-lookup"><span data-stu-id="f4104-118">If the integer literal is outside the range of `sbyte` (that is, if it is less than <xref:System.SByte.MinValue?displayProperty=fullName> or greater than <xref:System.SByte.MaxValue?displayProperty=fullName>, a compilation error occurs.</span></span> <span data-ttu-id="f4104-119">整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](int.md)、[uint](uint.md)、[long](long.md)、[ulong](ulong.md)。</span><span class="sxs-lookup"><span data-stu-id="f4104-119">When an integer literal has no suffix, its type is the first of these types in which its value can be represented: [int](int.md), [uint](uint.md), [long](long.md), [ulong](ulong.md).</span></span> <span data-ttu-id="f4104-120">這表示，此範例會將數值常值 `0x9A` 和 `0b10011010` 解譯為 32 位元帶正負號的整數值 156，而該值已超過 <xref:System.SByte.MaxValue?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="f4104-120">This means that, in this example, the numeric literals `0x9A` and `0b10011010` are interpreted as 32-bit signed integers with a value of 156, which exceeds <xref:System.SByte.MaxValue?displayProperty=fullName>.</span></span> <span data-ttu-id="f4104-121">因此，您需要使用轉型運算子，且作業必須發生在 [unchecked](unchecked.md) 內容中。</span><span class="sxs-lookup"><span data-stu-id="f4104-121">Because of this, the casting operator is needed, and the assignment must occur in an [unchecked](unchecked.md) context.</span></span> 
 
-## <a name="compiler-overload-resolution"></a>編譯器多載解析
+## <a name="compiler-overload-resolution"></a><span data-ttu-id="f4104-122">編譯器多載解析</span><span class="sxs-lookup"><span data-stu-id="f4104-122">Compiler overload resolution</span></span>
 
- 呼叫多載的方法時，必須使用轉型。 例如，請考慮使用下列使用 `sbyte` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
+ <span data-ttu-id="f4104-123">呼叫多載的方法時，必須使用轉型。</span><span class="sxs-lookup"><span data-stu-id="f4104-123">A cast must be used when calling overloaded methods.</span></span> <span data-ttu-id="f4104-124">例如，請考慮使用下列使用 `sbyte` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：</span><span class="sxs-lookup"><span data-stu-id="f4104-124">Consider, for example, the following overloaded methods that use `sbyte` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(sbyte b) {}  
 ```  
   
- 使用 `sbyte` 轉型時，可以保證呼叫正確的類型，例如：  
+ <span data-ttu-id="f4104-125">使用 `sbyte` 轉型時，可以保證呼叫正確的類型，例如：</span><span class="sxs-lookup"><span data-stu-id="f4104-125">Using the `sbyte` cast guarantees that the correct type is called, for example:</span></span>  
   
 ```csharp 
 // Calling the method with the int parameter:  
@@ -80,28 +80,28 @@ SampleMethod(5);
 SampleMethod((sbyte)5);  
 ```  
   
-## <a name="conversions"></a>轉換  
- 有一項從 `sbyte` 轉換為 [short](../../../csharp/language-reference/keywords/short.md)、[int](../../../csharp/language-reference/keywords/int.md)、[long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。  
+## <a name="conversions"></a><span data-ttu-id="f4104-126">轉換</span><span class="sxs-lookup"><span data-stu-id="f4104-126">Conversions</span></span>  
+ <span data-ttu-id="f4104-127">有一項從 `sbyte` 轉換為 [short](../../../csharp/language-reference/keywords/short.md)、[int](../../../csharp/language-reference/keywords/int.md)、[long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="f4104-127">There is a predefined implicit conversion from `sbyte` to [short](../../../csharp/language-reference/keywords/short.md), [int](../../../csharp/language-reference/keywords/int.md), [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
   
- 您不能將較大儲存大小的非常值數字類型隱含轉換為 `sbyte` (如需整數類型的儲存大小，請參閱[整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md))。 例如，請考慮使用下列兩個 `sbyte` 變數 `x` 和 `y`：  
+ <span data-ttu-id="f4104-128">您不能將較大儲存大小的非常值數字類型隱含轉換為 `sbyte` (如需整數類型的儲存大小，請參閱[整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md))。</span><span class="sxs-lookup"><span data-stu-id="f4104-128">You cannot implicitly convert nonliteral numeric types of larger storage size to `sbyte` (see [Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) for the storage sizes of integral types).</span></span> <span data-ttu-id="f4104-129">例如，請考慮使用下列兩個 `sbyte` 變數 `x` 和 `y`：</span><span class="sxs-lookup"><span data-stu-id="f4104-129">Consider, for example, the following two `sbyte` variables `x` and `y`:</span></span>  
   
 ```csharp  
 sbyte x = 10, y = 20;  
 ```  
   
- 因為指派運算子右側的算術運算式預設會評估為 [int](../../../csharp/language-reference/keywords/int.md)，所以下列指派陳述式將會產生編譯錯誤。  
+ <span data-ttu-id="f4104-130">因為指派運算子右側的算術運算式預設會評估為 [int](../../../csharp/language-reference/keywords/int.md)，所以下列指派陳述式將會產生編譯錯誤。</span><span class="sxs-lookup"><span data-stu-id="f4104-130">The following assignment statement will produce a compilation error, because the arithmetic expression on the right side of the assignment operator evaluates to [int](../../../csharp/language-reference/keywords/int.md) by default.</span></span>  
   
 ```csharp  
 sbyte z = x + y;   // Error: conversion from int to sbyte  
 ```  
   
- 若要修正這個問題，請轉型運算式，如下列範例所示︰  
+ <span data-ttu-id="f4104-131">若要修正這個問題，請轉型運算式，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="f4104-131">To fix this problem, cast the expression as in the following example:</span></span>  
   
 ```csharp  
 sbyte z = (sbyte)(x + y);   // OK: explicit conversion  
 ```  
   
- 不過，可以使用目的地變數具有相同或較大儲存大小的下列陳述式：  
+ <span data-ttu-id="f4104-132">不過，可以使用目的地變數具有相同或較大儲存大小的下列陳述式：</span><span class="sxs-lookup"><span data-stu-id="f4104-132">It is possible though to use the following statements, where the destination variable has the same storage size or a larger storage size:</span></span>  
   
 ```csharp
 sbyte x = 10, y = 20;  
@@ -109,26 +109,27 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- 另請注意，不會從浮點類型隱含地轉換為 `sbyte`。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
+ <span data-ttu-id="f4104-133">另請注意，不會從浮點類型隱含地轉換為 `sbyte`。</span><span class="sxs-lookup"><span data-stu-id="f4104-133">Notice also that there is no implicit conversion from floating-point types to `sbyte`.</span></span> <span data-ttu-id="f4104-134">例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：</span><span class="sxs-lookup"><span data-stu-id="f4104-134">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 sbyte x = 3.0;         // Error: no implicit conversion from double  
 sbyte y = (sbyte)3.0;  // OK: explicit conversion  
 ```  
   
- 如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
+ <span data-ttu-id="f4104-135">如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。</span><span class="sxs-lookup"><span data-stu-id="f4104-135">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- 如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
+ <span data-ttu-id="f4104-136">如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。</span><span class="sxs-lookup"><span data-stu-id="f4104-136">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+## <a name="c-language-specification"></a><span data-ttu-id="f4104-137">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="f4104-137">C# Language Specification</span></span>  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.SByte>   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a><span data-ttu-id="f4104-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f4104-138">See Also</span></span>  
+ <span data-ttu-id="f4104-139"><xref:System.SByte></span><span class="sxs-lookup"><span data-stu-id="f4104-139"><xref:System.SByte></span></span>   
+ <span data-ttu-id="f4104-140">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="f4104-140">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="f4104-141">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="f4104-141">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="f4104-142">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="f4104-142">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="f4104-143">[整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="f4104-143">[Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) </span></span>  
+ <span data-ttu-id="f4104-144">[內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="f4104-144">[Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md) </span></span>  
+ <span data-ttu-id="f4104-145">[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span><span class="sxs-lookup"><span data-stu-id="f4104-145">[Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span></span>  
+ [<span data-ttu-id="f4104-146">明確數值轉換表</span><span class="sxs-lookup"><span data-stu-id="f4104-146">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

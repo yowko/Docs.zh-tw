@@ -1,1 +1,1 @@
-圖形處理器 (GPU)
+<span data-ttu-id="ca3c0-101">圖形處理器 (GPU)</span><span class="sxs-lookup"><span data-stu-id="ca3c0-101">graphics processing unit (GPU)</span></span>

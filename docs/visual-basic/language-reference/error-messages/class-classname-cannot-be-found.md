@@ -32,28 +32,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff3a664022248737045832b8500ed04ca4abe9b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 39b78ce423a9c7910b70b745b46f9a6ead7579ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="class-39ltclassnamegt39-cannot-be-found"></a>類別&lt;classname&gt;' 找不到
-類別\<classname >' 找不到。 此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。  
+# <a name="class-39ltclassnamegt39-cannot-be-found"></a><span data-ttu-id="363c7-102">類別&lt;classname&gt;' 找不到</span><span class="sxs-lookup"><span data-stu-id="363c7-102">Class &#39;&lt;classname&gt;&#39; cannot be found</span></span>
+<span data-ttu-id="363c7-103">類別\<classname >' 找不到。</span><span class="sxs-lookup"><span data-stu-id="363c7-103">Class '\<classname>' cannot be found.</span></span> <span data-ttu-id="363c7-104">此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。</span><span class="sxs-lookup"><span data-stu-id="363c7-104">This condition is usually the result of a mismatched 'Microsoft.VisualBasic.dll'.</span></span>  
   
- 找不到定義的成員。  
+ <span data-ttu-id="363c7-105">找不到定義的成員。</span><span class="sxs-lookup"><span data-stu-id="363c7-105">A defined member could not be located.</span></span>  
   
- **錯誤識別碼︰** BC31098  
+ <span data-ttu-id="363c7-106">**錯誤識別碼︰** BC31098</span><span class="sxs-lookup"><span data-stu-id="363c7-106">**Error ID:** BC31098</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="363c7-107">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="363c7-107">To correct this error</span></span>  
   
-1.  再次編譯程式，看看錯誤是否重複發生。  
+1.  <span data-ttu-id="363c7-108">再次編譯程式，看看錯誤是否重複發生。</span><span class="sxs-lookup"><span data-stu-id="363c7-108">Compile the program again to see if the error recurs.</span></span>  
   
-2.  如果錯誤重複發生，請儲存您的工作，然後重新啟動 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]。  
+2.  <span data-ttu-id="363c7-109">如果錯誤重複發生，請儲存您的工作，然後重新啟動 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]。</span><span class="sxs-lookup"><span data-stu-id="363c7-109">If the error recurs, save your work and restart [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-3.  如果問題持續發生，請重新安裝 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。  
+3.  <span data-ttu-id="363c7-110">如果問題持續發生，請重新安裝 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]。</span><span class="sxs-lookup"><span data-stu-id="363c7-110">If the error persists, reinstall [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-4.  如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
+4.  <span data-ttu-id="363c7-111">如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。</span><span class="sxs-lookup"><span data-stu-id="363c7-111">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [告訴我們](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="363c7-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="363c7-112">See Also</span></span>  
+ [<span data-ttu-id="363c7-113">告訴我們</span><span class="sxs-lookup"><span data-stu-id="363c7-113">Talk to Us</span></span>](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

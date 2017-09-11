@@ -1,1 +1,1 @@
-XML 文件規格 (XPS) 文件
+<span data-ttu-id="e0cad-101">XML 文件規格 (XPS) 文件</span><span class="sxs-lookup"><span data-stu-id="e0cad-101">XML Paper Specification (XPS) document</span></span>

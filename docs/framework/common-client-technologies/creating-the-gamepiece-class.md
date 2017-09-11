@@ -1,5 +1,5 @@
 ---
-title: "建立 GamePiece 類別 | Microsoft Docs"
+title: "建立 GamePiece 類別"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,103 +14,104 @@ caps.latest.revision: 9
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 318a2d3407d36b16137517a9735299027bceddea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="creating-the-gamepiece-class"></a>建立 GamePiece 類別
-**GamePiece** 類別包含下列作業需要的所有功能：載入 Microsoft XNA 遊戲片段映像、追蹤與遊戲片段相關的滑鼠狀態、捕捉滑鼠、提供操作和慣性處理，以及提供當遊戲片段達到檢視區限制時的彈回功能。  
+# <a name="creating-the-gamepiece-class"></a><span data-ttu-id="c6bd7-102">建立 GamePiece 類別</span><span class="sxs-lookup"><span data-stu-id="c6bd7-102">Creating the GamePiece Class</span></span>
+<span data-ttu-id="c6bd7-103">**GamePiece** 類別包含下列作業需要的所有功能：載入 Microsoft XNA 遊戲片段映像、追蹤與遊戲片段相關的滑鼠狀態、捕捉滑鼠、提供操作和慣性處理，以及提供當遊戲片段達到檢視區限制時的彈回功能。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-103">The **GamePiece** class encapsulates all the functionality required to load a Microsoft XNA game piece image, track the state of the mouse in relation to the game piece, capture the mouse, provide manipulation and inertia processing, and provide bouncing capability when the game piece reaches the limits of the view port.</span></span>  
   
-## <a name="private-members"></a>私用成員  
- 在 **GamePiece** 類別頂端，會宣告數個私用成員。  
+## <a name="private-members"></a><span data-ttu-id="c6bd7-104">私用成員</span><span class="sxs-lookup"><span data-stu-id="c6bd7-104">Private Members</span></span>  
+ <span data-ttu-id="c6bd7-105">在 **GamePiece** 類別頂端，會宣告數個私用成員。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-105">At the top of the **GamePiece** class, several private members are declared.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privatemembers)]  
+ <span data-ttu-id="c6bd7-106">[!code-csharp[ManipulationXNA#_GamePiece_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privatemembers)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-106">[!code-csharp[ManipulationXNA#_GamePiece_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privatemembers)]</span></span>  
   
-## <a name="public-properties"></a>公用屬性  
- 其中三個私用成員會透過公用屬性公開。 **Scale** 和 **PieceColor** 屬性分別可讓應用程式指定比例和片段的色彩。 **Bounds** 屬性的出現可讓一個片段利用另一個片段的界限來呈現其本身，例如當一個片段應重疊另一個片段時。 下列程式碼範例顯示公用屬性的宣告。  
+## <a name="public-properties"></a><span data-ttu-id="c6bd7-107">公用屬性</span><span class="sxs-lookup"><span data-stu-id="c6bd7-107">Public Properties</span></span>  
+ <span data-ttu-id="c6bd7-108">其中三個私用成員會透過公用屬性公開。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-108">Three of these private members are exposed through public properties.</span></span> <span data-ttu-id="c6bd7-109">**Scale** 和 **PieceColor** 屬性分別可讓應用程式指定比例和片段的色彩。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-109">The **Scale** and **PieceColor** properties enable the application to specify the scale and the color of the piece, respectively.</span></span> <span data-ttu-id="c6bd7-110">**Bounds** 屬性的出現可讓一個片段利用另一個片段的界限來呈現其本身，例如當一個片段應重疊另一個片段時。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-110">The **Bounds** property is exposed to enable one piece to use the bounds of another to render itself, such as when one piece should overlay another.</span></span> <span data-ttu-id="c6bd7-111">下列程式碼範例顯示公用屬性的宣告。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-111">The following code shows the declaration of the public properties.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_PublicProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_publicproperties)]  
+ <span data-ttu-id="c6bd7-112">[!code-csharp[ManipulationXNA#_GamePiece_PublicProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_publicproperties)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-112">[!code-csharp[ManipulationXNA#_GamePiece_PublicProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_publicproperties)]</span></span>  
   
-## <a name="class-constructor"></a>類別建構函式  
- **GamePiece** 類別的建構函式可接受下列參數：  
+## <a name="class-constructor"></a><span data-ttu-id="c6bd7-113">類別建構函式</span><span class="sxs-lookup"><span data-stu-id="c6bd7-113">Class Constructor</span></span>  
+ <span data-ttu-id="c6bd7-114">**GamePiece** 類別的建構函式可接受下列參數：</span><span class="sxs-lookup"><span data-stu-id="c6bd7-114">The constructor for the **GamePiece** class accepts the following parameters:</span></span>  
   
--   [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 類型。 傳遞到這裡的參考會指派給私用成員 `spriteBatch`，並且在遊戲片段呈現其本身時，用來存取 [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 方法。 此外，還會使用 [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 屬性來建立與遊戲片段建立關聯的 [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 物件，以及取得檢視區大小，以偵測遊戲片段何時遇到視窗界限，讓片段可以彈開。  
+-   <span data-ttu-id="c6bd7-115">[SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 類型。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-115">A [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) type.</span></span> <span data-ttu-id="c6bd7-116">傳遞到這裡的參考會指派給私用成員 `spriteBatch`，並且在遊戲片段呈現其本身時，用來存取 [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 方法。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-116">The reference passed here is assigned to the private member `spriteBatch`, and is used to access the [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) method when the game piece renders itself.</span></span> <span data-ttu-id="c6bd7-117">此外，還會使用 [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 屬性來建立與遊戲片段建立關聯的 [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 物件，以及取得檢視區大小，以偵測遊戲片段何時遇到視窗界限，讓片段可以彈開。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-117">In addition, the [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) property is used to create the [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) object associated with the game piece, and to obtain the size of the view port in order to detect when the game piece encounters a window boundary so that the piece can bounce.</span></span>  
   
--   字串，指定要用於遊戲片段的映像檔案名稱。  
+-   <span data-ttu-id="c6bd7-118">字串，指定要用於遊戲片段的映像檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-118">A string that specifies the file name of the image to use for the game piece.</span></span>  
   
- 此建構函式也會建立 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 物件和 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 物件，並針對這些物件的事件建立事件處理常式。  
+ <span data-ttu-id="c6bd7-119">此建構函式也會建立 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 物件和 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 物件，並針對這些物件的事件建立事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-119">The constructor also creates a <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> object and an <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> object, and establishes event handlers for their events.</span></span>  
   
- 下列程式碼顯示 **GamePiece** 類別的建構函式。  
+ <span data-ttu-id="c6bd7-120">下列程式碼顯示 **GamePiece** 類別的建構函式。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-120">The following code shows the constructor for the **GamePiece** class.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_Constructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_constructor)]  
+ <span data-ttu-id="c6bd7-121">[!code-csharp[ManipulationXNA#_GamePiece_Constructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_constructor)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-121">[!code-csharp[ManipulationXNA#_GamePiece_Constructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_constructor)]</span></span>  
   
-## <a name="capturing-mouse-input"></a>捕捉滑鼠輸入  
- **UpdateFromMouse** 方法負責偵測當滑鼠位於遊戲片段界限內時，何時按下滑鼠按鈕，以及偵測何時放開滑鼠按鈕。  
+## <a name="capturing-mouse-input"></a><span data-ttu-id="c6bd7-122">捕捉滑鼠輸入</span><span class="sxs-lookup"><span data-stu-id="c6bd7-122">Capturing Mouse Input</span></span>  
+ <span data-ttu-id="c6bd7-123">**UpdateFromMouse** 方法負責偵測當滑鼠位於遊戲片段界限內時，何時按下滑鼠按鈕，以及偵測何時放開滑鼠按鈕。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-123">The **UpdateFromMouse** method is responsible for detecting when a mouse button is pressed while the mouse is within the boundaries of the game piece, and for detecting when the mouse button has been released.</span></span>  
   
- 按下滑鼠左鍵時 (當滑鼠位於片段界限)，這個方法會設定旗標，指出這個遊戲片段已捕捉滑鼠，並開始操作處理。  
+ <span data-ttu-id="c6bd7-124">按下滑鼠左鍵時 (當滑鼠位於片段界限)，這個方法會設定旗標，指出這個遊戲片段已捕捉滑鼠，並開始操作處理。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-124">When the left mouse button is pressed (while the mouse is inside the piece boundaries), this method sets a flag to indicate that this game piece has captured the mouse, and begins manipulation processing.</span></span>  
   
- 操作處理一開始會建立 <xref:System.Windows.Input.Manipulations.Manipulator2D> 物件的陣列，並將其傳遞至 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 物件。 這會導致操作處理器評估操作工具 (在此案例中為單一操作工具)，並引發操作事件。  
+ <span data-ttu-id="c6bd7-125">操作處理一開始會建立 <xref:System.Windows.Input.Manipulations.Manipulator2D> 物件的陣列，並將其傳遞至 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 物件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-125">Manipulation processing is started by creating an array of <xref:System.Windows.Input.Manipulations.Manipulator2D> objects and passing them to the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> object.</span></span> <span data-ttu-id="c6bd7-126">這會導致操作處理器評估操作工具 (在此案例中為單一操作工具)，並引發操作事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-126">This causes the manipulation processor to evaluate the manipulators (in this case a single manipulator), and raise manipulation events.</span></span>  
   
- 此外，也會儲存發生拖曳的點。 在之後的 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件期間，將會使用這個點來調整差異轉譯值，讓遊戲片段轉向拖曳點後面的字行中。  
+ <span data-ttu-id="c6bd7-127">此外，也會儲存發生拖曳的點。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-127">In addition, the point at which the drag is occurring is saved.</span></span> <span data-ttu-id="c6bd7-128">在之後的 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件期間，將會使用這個點來調整差異轉譯值，讓遊戲片段轉向拖曳點後面的字行中。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-128">This is used later during the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> event to adjust the delta translation values so that the game piece swings into line behind the drag point.</span></span>  
   
- 最後，此方法會傳回滑鼠捕捉的狀態。 如此可讓 [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) 物件在有多個遊戲片段時，管理擷取動作。  
+ <span data-ttu-id="c6bd7-129">最後，此方法會傳回滑鼠捕捉的狀態。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-129">Finally, this method returns the state of the mouse capture.</span></span> <span data-ttu-id="c6bd7-130">如此可讓 [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) 物件在有多個遊戲片段時，管理擷取動作。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-130">This enables the [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) object to manage capturing when there are multiple game pieces.</span></span>  
   
- 下列程式碼顯示 **UpdateFromMouse** 方法。  
+ <span data-ttu-id="c6bd7-131">下列程式碼顯示 **UpdateFromMouse** 方法。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-131">The following code shows the **UpdateFromMouse** method.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_updatefrommouse)]  
+ <span data-ttu-id="c6bd7-132">[!code-csharp[ManipulationXNA#_GamePiece_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_updatefrommouse)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-132">[!code-csharp[ManipulationXNA#_GamePiece_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_updatefrommouse)]</span></span>  
   
-## <a name="processing-manipulations"></a>處理操作  
- 操作開始時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 事件。 此事件的處理常式會在慣性處理發生時加以停止，並將 *processInertia* 旗標設為 `false`。  
+## <a name="processing-manipulations"></a><span data-ttu-id="c6bd7-133">處理操作</span><span class="sxs-lookup"><span data-stu-id="c6bd7-133">Processing Manipulations</span></span>  
+ <span data-ttu-id="c6bd7-134">操作開始時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-134">When manipulation begins, the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> event is raised.</span></span> <span data-ttu-id="c6bd7-135">此事件的處理常式會在慣性處理發生時加以停止，並將 *processInertia* 旗標設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-135">The handler for this event stops inertia processing if it is occurring, and sets the *processInertia* flag to `false`.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationStarted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationstarted)]  
+ <span data-ttu-id="c6bd7-136">[!code-csharp[ManipulationXNA#_GamePiece_OnManipulationStarted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationstarted)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-136">[!code-csharp[ManipulationXNA#_GamePiece_OnManipulationStarted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationstarted)]</span></span>  
   
- 與操作相關聯的值變更時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件。 此事件的處理常式會使用以事件引數傳遞的差異值，對遊戲片段的位置和旋轉值進行變更。  
+ <span data-ttu-id="c6bd7-137">與操作相關聯的值變更時，會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-137">As the values associated with the manipulation change, the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> event is raised.</span></span> <span data-ttu-id="c6bd7-138">此事件的處理常式會使用以事件引數傳遞的差異值，對遊戲片段的位置和旋轉值進行變更。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-138">The handler for this event uses the delta values passed in the event arguments to make changes to the position and rotation values of the game piece.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationdelta)]  
+ <span data-ttu-id="c6bd7-139">[!code-csharp[ManipulationXNA#_GamePiece_OnManipulationDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationdelta)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-139">[!code-csharp[ManipulationXNA#_GamePiece_OnManipulationDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationdelta)]</span></span>  
   
- 與操作相關聯的所有操作工具 (在此案例中為單一操作工具) 被移除時，操作處理器會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件。 此事件的處理常式開始進行慣性處理時，會將慣性處理器的初始速度設為事件引數所報告的速度，並將 *processInertia* 旗標設為 `true`。  
+ <span data-ttu-id="c6bd7-140">與操作相關聯的所有操作工具 (在此案例中為單一操作工具) 被移除時，操作處理器會引發 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-140">When all of the manipulators (in this case, a single manipulator) that are associated with a manipulation are removed, the manipulation processor raises the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> event.</span></span> <span data-ttu-id="c6bd7-141">此事件的處理常式開始進行慣性處理時，會將慣性處理器的初始速度設為事件引數所報告的速度，並將 *processInertia* 旗標設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-141">The handler for this event begins inertia processing by setting the initial velocities of the inertia processor to those reported by the event arguments, and sets the *processInertia* flag to `true`.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationcompleted)]  
+ <span data-ttu-id="c6bd7-142">[!code-csharp[ManipulationXNA#_GamePiece_OnManipulationCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationcompleted)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-142">[!code-csharp[ManipulationXNA#_GamePiece_OnManipulationCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationcompleted)]</span></span>  
   
-## <a name="processing-inertia"></a>處理慣性  
- 當慣性處理針對角度和線性速度、位置 (轉譯) 座標以及旋轉外推新的值時，會引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。 此事件的處理常式會使用以事件引數傳遞的差異值，來修改遊戲片段的位置和旋轉。  
+## <a name="processing-inertia"></a><span data-ttu-id="c6bd7-143">處理慣性</span><span class="sxs-lookup"><span data-stu-id="c6bd7-143">Processing Inertia</span></span>  
+ <span data-ttu-id="c6bd7-144">當慣性處理針對角度和線性速度、位置 (轉譯) 座標以及旋轉外推新的值時，會引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-144">As inertia processing extrapolates new values for angular and linear velocities, position (translation) coordinates, and rotation, the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> event is raised.</span></span> <span data-ttu-id="c6bd7-145">此事件的處理常式會使用以事件引數傳遞的差異值，來修改遊戲片段的位置和旋轉。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-145">The handler for this event uses the delta values passed in the event arguments to modify the position and rotation of the game piece.</span></span>  
   
- 如果新的座標導致遊戲片段移到檢視區界限之外，慣性處理的速度會反轉。 這會使遊戲片段從其遇到的檢視區界限彈開。  
+ <span data-ttu-id="c6bd7-146">如果新的座標導致遊戲片段移到檢視區界限之外，慣性處理的速度會反轉。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-146">If the new coordinates result in the game piece moving beyond the view port boundaries, the velocity of the inertia processing is reversed.</span></span> <span data-ttu-id="c6bd7-147">這會使遊戲片段從其遇到的檢視區界限彈開。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-147">This causes the game piece to bounce off the view port boundary that it has encountered.</span></span>  
   
- 當 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 物件在執行外推時，您無法變更其屬性。 因此，在反轉 X 或 Y 速度時，事件處理常式會先呼叫 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> 方法來停止慣性。 然後它會指派新的初始速度值作為目前的速度值 (針對海綿行為進行調整)，並將 *processInertia* 旗標設為 `true`。  
+ <span data-ttu-id="c6bd7-148">當 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 物件在執行外推時，您無法變更其屬性。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-148">You cannot change the properties of an <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> object while it is running extrapolation.</span></span> <span data-ttu-id="c6bd7-149">因此，在反轉 X 或 Y 速度時，事件處理常式會先呼叫 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> 方法來停止慣性。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-149">Therefore, when reversing the X or Y velocity, the event handler first stops inertia by calling the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> method.</span></span> <span data-ttu-id="c6bd7-150">然後它會指派新的初始速度值作為目前的速度值 (針對海綿行為進行調整)，並將 *processInertia* 旗標設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-150">It then assigns the new initial velocity values to be the current velocity values (adjusted for sponge behavior), and sets the *processInertia* flag to `true`.</span></span>  
   
- 下列程式碼顯示 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件的事件處理常式。  
+ <span data-ttu-id="c6bd7-151">下列程式碼顯示 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-151">The following code shows the event handler for the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> event.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiadelta)]  
+ <span data-ttu-id="c6bd7-152">[!code-csharp[ManipulationXNA#_GamePiece_OnInertiaDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiadelta)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-152">[!code-csharp[ManipulationXNA#_GamePiece_OnInertiaDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiadelta)]</span></span>  
   
- 當慣性處理完成時，慣性處理器會引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> 事件。 此事件的處理常式會將 *processInertia* 旗標設為 `false`。  
+ <span data-ttu-id="c6bd7-153">當慣性處理完成時，慣性處理器會引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> 事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-153">When inertia processing is complete, the inertia processor raises the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> event.</span></span> <span data-ttu-id="c6bd7-154">此事件的處理常式會將 *processInertia* 旗標設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-154">The handler for this event sets the *processInertia* flag to `false`.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
+ <span data-ttu-id="c6bd7-155">[!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-155">[!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]</span></span>  
   
- 截至目前為止，沒有任何存在的邏輯真正導致慣性外推發生。 這會在 **ProcessInertia** 方法中完成。 這個方法是從遊戲更新迴圈 ([Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法) 重複呼叫，以檢查 *processInertia* 旗標是否設為 `true`；如果是，則會呼叫 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 方法。 呼叫這個方法會導致外推發生，並引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。  
+ <span data-ttu-id="c6bd7-156">截至目前為止，沒有任何存在的邏輯真正導致慣性外推發生。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-156">None of the logic presented so far actually causes inertia extrapolation to occur.</span></span> <span data-ttu-id="c6bd7-157">這會在 **ProcessInertia** 方法中完成。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-157">This is accomplished in the **ProcessInertia** method.</span></span> <span data-ttu-id="c6bd7-158">這個方法是從遊戲更新迴圈 ([Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 方法) 重複呼叫，以檢查 *processInertia* 旗標是否設為 `true`；如果是，則會呼叫 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-158">This method, which is called repeatedly from the game update loop (the [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) method) checks to see if the *processInertia* flag is set to `true`, and if so, calls the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> method.</span></span> <span data-ttu-id="c6bd7-159">呼叫這個方法會導致外推發生，並引發 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 事件。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-159">Calling this method causes extrapolation to occur, and raises the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> event.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
+ <span data-ttu-id="c6bd7-160">[!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-160">[!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]</span></span>  
   
- 在呼叫其中一個 Draw 方法多載之前，不會實際呈現遊戲片段。 這個方法的第一個多載是從遊戲繪圖迴圈 ([Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 方法) 重複呼叫。 這會呈現具有目前位置、旋轉和縮放比例的遊戲片段。  
+ <span data-ttu-id="c6bd7-161">在呼叫其中一個 Draw 方法多載之前，不會實際呈現遊戲片段。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-161">The game piece is not actually rendered until one of the Draw method overloads is called.</span></span> <span data-ttu-id="c6bd7-162">這個方法的第一個多載是從遊戲繪圖迴圈 ([Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 方法) 重複呼叫。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-162">The first overload of this method is called repeatedly from the game draw loop (the [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) method).</span></span> <span data-ttu-id="c6bd7-163">這會呈現具有目前位置、旋轉和縮放比例的遊戲片段。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-163">This renders the game piece with the current position, rotation, and scale factors.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
+ <span data-ttu-id="c6bd7-164">[!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-164">[!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]</span></span>  
   
-## <a name="additional-properties"></a>其他屬性  
- **GamePiece** 類別使用三個私用屬性。  
+## <a name="additional-properties"></a><span data-ttu-id="c6bd7-165">其他屬性</span><span class="sxs-lookup"><span data-stu-id="c6bd7-165">Additional Properties</span></span>  
+ <span data-ttu-id="c6bd7-166">**GamePiece** 類別使用三個私用屬性。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-166">Three private properties are used by the **GamePiece** class.</span></span>  
   
-1.  **Timestamp** – 取得操作和慣性處理器所要使用的時間戳記值。  
+1.  <span data-ttu-id="c6bd7-167">**Timestamp** – 取得操作和慣性處理器所要使用的時間戳記值。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-167">**Timestamp** – Gets a timestamp value to be used by the manipulation and inertia processors.</span></span>  
   
-2.  **X** – 取得或設定遊戲片段的 X 座標。 設定時，可調整用於點擊測試的界限，以及操作處理器的樞紐分析位置。  
+2.  <span data-ttu-id="c6bd7-168">**X** – 取得或設定遊戲片段的 X 座標。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-168">**X** – Gets or sets the X coordinate of the game piece.</span></span> <span data-ttu-id="c6bd7-169">設定時，可調整用於點擊測試的界限，以及操作處理器的樞紐分析位置。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-169">When setting, adjusts the bounds used for hit testing and the pivot location of the manipulation processor.</span></span>  
   
-3.  **Y** – 取得或設定遊戲片段的 Y 座標。 設定時，可調整用於點擊測試的界限，以及操作處理器的樞紐分析位置。  
+3.  <span data-ttu-id="c6bd7-170">**Y** – 取得或設定遊戲片段的 Y 座標。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-170">**Y** – Gets or sets the Y coordinate of the game piece.</span></span> <span data-ttu-id="c6bd7-171">設定時，可調整用於點擊測試的界限，以及操作處理器的樞紐分析位置。</span><span class="sxs-lookup"><span data-stu-id="c6bd7-171">When setting, adjusts the bounds used for hit testing and the pivot location of the manipulation processor.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
+ <span data-ttu-id="c6bd7-172">[!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]</span><span class="sxs-lookup"><span data-stu-id="c6bd7-172">[!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [建立 GamePieceCollection 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
- [建立 Game1 類別](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+## <a name="see-also"></a><span data-ttu-id="c6bd7-173">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6bd7-173">See Also</span></span>  
+ <span data-ttu-id="c6bd7-174">[操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) </span><span class="sxs-lookup"><span data-stu-id="c6bd7-174">[Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) </span></span>  
+ <span data-ttu-id="c6bd7-175">[在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md) </span><span class="sxs-lookup"><span data-stu-id="c6bd7-175">[Using Manipulations and Inertia in an XNA Application](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md) </span></span>  
+ <span data-ttu-id="c6bd7-176">[建立 GamePieceCollection 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) </span><span class="sxs-lookup"><span data-stu-id="c6bd7-176">[Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) </span></span>  
+ [<span data-ttu-id="c6bd7-177">建立 Game1 類別</span><span class="sxs-lookup"><span data-stu-id="c6bd7-177">Creating the Game1 Class</span></span>](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+

@@ -1,1 +1,1 @@
-Microsoft Windows 圖形裝置介面 (GDI)
+<span data-ttu-id="6858c-101">Microsoft Windows 圖形裝置介面 (GDI)</span><span class="sxs-lookup"><span data-stu-id="6858c-101">Microsoft Windows Graphics Device Interface (GDI)</span></span>

@@ -1,1 +1,1 @@
-裝置獨立點陣圖 (DIB)
+<span data-ttu-id="06269-101">裝置獨立點陣圖 (DIB)</span><span class="sxs-lookup"><span data-stu-id="06269-101">device-independent bitmap (DIB)</span></span>

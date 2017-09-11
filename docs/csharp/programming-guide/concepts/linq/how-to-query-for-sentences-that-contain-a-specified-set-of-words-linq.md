@@ -20,16 +20,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c445a70d2f461ea60b575f58e6d57c1edcda922b
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: ef87fecdf199299b65d9c206d7e55f386f6ebb5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何：查詢包含指定字組的句子 (LINQ) (C#)
-此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。 雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。 在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a><span data-ttu-id="d913e-102">如何：查詢包含指定字組的句子 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d913e-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#)</span></span>
+<span data-ttu-id="d913e-103">此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。</span><span class="sxs-lookup"><span data-stu-id="d913e-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="d913e-104">雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。</span><span class="sxs-lookup"><span data-stu-id="d913e-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="d913e-105">在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。</span><span class="sxs-lookup"><span data-stu-id="d913e-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="d913e-106">範例</span><span class="sxs-lookup"><span data-stu-id="d913e-106">Example</span></span>  
   
 ```csharp  
 class FindSentences  
@@ -79,12 +79,12 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- 查詢的運作方式是先將文字分割成句子，然後將句子分割成包含每個字的字串陣列。 在這些陣列中，<xref:System.Linq.Enumerable.Distinct%2A> 方法會移除所有重複的字，然後查詢就會對這個文字陣列和 `wordsToMatch` 陣列執行 <xref:System.Linq.Enumerable.Intersect%2A> 作業。 如果交集的計數與 `wordsToMatch` 陣列的計數相同，則所有字都可以在字組中找到，因而傳回原始句子。  
+ <span data-ttu-id="d913e-107">查詢的運作方式是先將文字分割成句子，然後將句子分割成包含每個字的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="d913e-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="d913e-108">在這些陣列中，<xref:System.Linq.Enumerable.Distinct%2A> 方法會移除所有重複的字，然後查詢就會對這個文字陣列和 `wordsToMatch` 陣列執行 <xref:System.Linq.Enumerable.Intersect%2A> 作業。</span><span class="sxs-lookup"><span data-stu-id="d913e-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="d913e-109">如果交集的計數與 `wordsToMatch` 陣列的計數相同，則所有字都可以在字組中找到，因而傳回原始句子。</span><span class="sxs-lookup"><span data-stu-id="d913e-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
   
- 在 <xref:System.String.Split%2A> 呼叫中，標點符號會當成分隔符號，以從字串中移除。 如果您不這麼做，則您的字串 "Historically," 與 `wordsToMatch` 陣列中的 "Historically" 不符。 根據來源文字中找到的標點符號類型，您可能必須使用其他分隔符號。  
+ <span data-ttu-id="d913e-110">在 <xref:System.String.Split%2A> 呼叫中，標點符號會當成分隔符號，以從字串中移除。</span><span class="sxs-lookup"><span data-stu-id="d913e-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="d913e-111">如果您不這麼做，則您的字串 "Historically," 與 `wordsToMatch` 陣列中的 "Historically" 不符。</span><span class="sxs-lookup"><span data-stu-id="d913e-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="d913e-112">根據來源文字中找到的標點符號類型，您可能必須使用其他分隔符號。</span><span class="sxs-lookup"><span data-stu-id="d913e-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+## <a name="compiling-the-code"></a><span data-ttu-id="d913e-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d913e-113">Compiling the Code</span></span>  
+ <span data-ttu-id="d913e-114">建立以 .NET Framework 3.5 版或更高版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="d913e-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="d913e-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d913e-115">See Also</span></span>  
+ [<span data-ttu-id="d913e-116">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="d913e-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

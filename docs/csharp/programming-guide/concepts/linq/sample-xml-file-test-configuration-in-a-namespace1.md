@@ -26,10 +26,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>範例 XML 檔：命名空間中的測試組態
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 這是測試組態檔案。 XML 位於命名空間中。  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="d33bc-102">範例 XML 檔：命名空間中的測試組態</span><span class="sxs-lookup"><span data-stu-id="d33bc-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="d33bc-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="d33bc-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="d33bc-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="d33bc-104">This is a test configuration file.</span></span> <span data-ttu-id="d33bc-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="d33bc-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="d33bc-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d33bc-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,5 +73,5 @@ ms.lasthandoff: 03/13/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d33bc-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d33bc-107">See Also</span></span>  
+ [<span data-ttu-id="d33bc-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d33bc-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

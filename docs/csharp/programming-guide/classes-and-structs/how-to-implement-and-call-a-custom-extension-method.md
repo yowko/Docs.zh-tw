@@ -1,5 +1,5 @@
 ---
-title: "如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,50 +27,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: bcebdd1a6462e651619776549754eacfac9f9573
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c1c26640c550ce2b16ffafd59430e92189764f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
-本主題示範如何針對 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856) 中的任何類型，或您要擴充的任何其他 .NET 類型，實作您自己的擴充方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a><span data-ttu-id="d37c5-102">如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="d37c5-102">How to: Implement and Call a Custom Extension Method (C# Programming Guide)</span></span>
+<span data-ttu-id="d37c5-103">本主題示範如何針對 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856) 中的任何類型，或您要擴充的任何其他 .NET 類型，實作您自己的擴充方法。</span><span class="sxs-lookup"><span data-stu-id="d37c5-103">This topic shows how to implement your own extension methods for any type in the [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856), or any other .NET type that you want to extend.</span></span> <span data-ttu-id="d37c5-104">用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。</span><span class="sxs-lookup"><span data-stu-id="d37c5-104">Client code can use your extension methods by adding a reference to the DLL that contains them, and adding a [using](../../../csharp/language-reference/keywords/using-directive.md) directive that specifies the namespace in which the extension methods are defined.</span></span>  
   
-## <a name="to-define-and-call-the-extension-method"></a>定義和呼叫擴充方法  
+## <a name="to-define-and-call-the-extension-method"></a><span data-ttu-id="d37c5-105">定義和呼叫擴充方法</span><span class="sxs-lookup"><span data-stu-id="d37c5-105">To define and call the extension method</span></span>  
   
-1.  定義靜態[類別](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)以包含擴充方法。  
+1.  <span data-ttu-id="d37c5-106">定義靜態[類別](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)以包含擴充方法。</span><span class="sxs-lookup"><span data-stu-id="d37c5-106">Define a static [class](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) to contain the extension method.</span></span>  
   
-     此類別對用戶端程式碼而言必須是可見的。 如需存取範圍規則的詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+     <span data-ttu-id="d37c5-107">此類別對用戶端程式碼而言必須是可見的。</span><span class="sxs-lookup"><span data-stu-id="d37c5-107">The class must be visible to client code.</span></span> <span data-ttu-id="d37c5-108">如需存取範圍規則的詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。</span><span class="sxs-lookup"><span data-stu-id="d37c5-108">For more information about accessibility rules, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-2.  將擴充方法實作為其可見度至少等同於包含類別的靜態方法。  
+2.  <span data-ttu-id="d37c5-109">將擴充方法實作為其可見度至少等同於包含類別的靜態方法。</span><span class="sxs-lookup"><span data-stu-id="d37c5-109">Implement the extension method as a static method with at least the same visibility as the containing class.</span></span>  
   
-3.  方法的第一個參數會指定方法的作業類型，前面必須加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。  
+3.  <span data-ttu-id="d37c5-110">方法的第一個參數會指定方法的作業類型，前面必須加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。</span><span class="sxs-lookup"><span data-stu-id="d37c5-110">The first parameter of the method specifies the type that the method operates on; it must be preceded with the [this](../../../csharp/language-reference/keywords/this.md) modifier.</span></span>  
   
-4.  在呼叫程式碼中，新增 `using` 指示詞以指定包含擴充方法類別的[命名空間](../../../csharp/language-reference/keywords/namespace.md)。  
+4.  <span data-ttu-id="d37c5-111">在呼叫程式碼中，新增 `using` 指示詞以指定包含擴充方法類別的[命名空間](../../../csharp/language-reference/keywords/namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="d37c5-111">In the calling code, add a `using` directive to specify the [namespace](../../../csharp/language-reference/keywords/namespace.md) that contains the extension method class.</span></span>  
   
-5.  將方法當做是類型上的執行個體方法進行呼叫。  
+5.  <span data-ttu-id="d37c5-112">將方法當做是類型上的執行個體方法進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="d37c5-112">Call the methods as if they were instance methods on the type.</span></span>  
   
-     請注意，呼叫程式碼未指定第一個參數，因為它代表要套用運算子的類型，而且編譯器已知物件類型。 您只需要針對參數 2 到 `n` 提供引數。  
+     <span data-ttu-id="d37c5-113">請注意，呼叫程式碼未指定第一個參數，因為它代表要套用運算子的類型，而且編譯器已知物件類型。</span><span class="sxs-lookup"><span data-stu-id="d37c5-113">Note that the first parameter is not specified by calling code because it represents the type on which the operator is being applied, and the compiler already knows the type of your object.</span></span> <span data-ttu-id="d37c5-114">您只需要針對參數 2 到 `n` 提供引數。</span><span class="sxs-lookup"><span data-stu-id="d37c5-114">You only have to provide arguments for parameters 2 through `n`.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會在 `CustomExtensions.StringExtension` 類別中實作名為 `WordCount` 的擴充方法。 此方法會用於指定為第一個方法參數的 <xref:System.String> 類別。 `CustomExtensions` 命名空間會匯入應用程式命名空間，並在 `Main` 方法內呼叫此方法。  
+## <a name="example"></a><span data-ttu-id="d37c5-115">範例</span><span class="sxs-lookup"><span data-stu-id="d37c5-115">Example</span></span>  
+ <span data-ttu-id="d37c5-116">下列範例會在 `CustomExtensions.StringExtension` 類別中實作名為 `WordCount` 的擴充方法。</span><span class="sxs-lookup"><span data-stu-id="d37c5-116">The following example implements an extension method named `WordCount` in the `CustomExtensions.StringExtension` class.</span></span> <span data-ttu-id="d37c5-117">此方法會用於指定為第一個方法參數的 <xref:System.String> 類別。</span><span class="sxs-lookup"><span data-stu-id="d37c5-117">The method operates on the <xref:System.String> class, which is specified as the first method parameter.</span></span> <span data-ttu-id="d37c5-118">`CustomExtensions` 命名空間會匯入應用程式命名空間，並在 `Main` 方法內呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="d37c5-118">The `CustomExtensions` namespace is imported into the application namespace, and the method is called inside the `Main` method.</span></span>  
   
- [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
+ <span data-ttu-id="d37c5-119">[!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="d37c5-119">[!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]</span></span>  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 若要執行此程式碼，請將它複製並貼至已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
+## <a name="compiling-the-code"></a><span data-ttu-id="d37c5-120">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d37c5-120">Compiling the Code</span></span>  
+ <span data-ttu-id="d37c5-121">若要執行此程式碼，請將它複製並貼至已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中建立的 Visual C# 主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="d37c5-121">To run this code, copy and paste it into a Visual C# console application project that has been created in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)].</span></span> <span data-ttu-id="d37c5-122">根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="d37c5-122">By default, this project targets version 3.5 of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], and it has a reference to System.Core.dll and a `using` directive for System.Linq.</span></span> <span data-ttu-id="d37c5-123">如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。</span><span class="sxs-lookup"><span data-stu-id="d37c5-123">If one or more of these requirements are missing from the project, you can add them manually.</span></span>   
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 擴充方法沒有特定安全性弱點。 它們無法用於模擬類型上的現有方法，因為所有名稱衝突已使用類型自行定義的執行個體或靜態方法解決。 擴充方法無法存取擴充類別中的任何私用資料。  
+## <a name="net-framework-security"></a><span data-ttu-id="d37c5-124">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="d37c5-124">.NET Framework Security</span></span>  
+ <span data-ttu-id="d37c5-125">擴充方法沒有特定安全性弱點。</span><span class="sxs-lookup"><span data-stu-id="d37c5-125">Extension methods present no specific security vulnerabilities.</span></span> <span data-ttu-id="d37c5-126">它們無法用於模擬類型上的現有方法，因為所有名稱衝突已使用類型自行定義的執行個體或靜態方法解決。</span><span class="sxs-lookup"><span data-stu-id="d37c5-126">They can never be used to impersonate existing methods on a type, because all name collisions are resolved in favor of the instance or static method defined by the type itself.</span></span> <span data-ttu-id="d37c5-127">擴充方法無法存取擴充類別中的任何私用資料。</span><span class="sxs-lookup"><span data-stu-id="d37c5-127">Extension methods cannot access any private data in the extended class.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [this](../../../csharp/language-reference/keywords/this.md)   
- [命名空間](../../../csharp/language-reference/keywords/namespace.md)
+## <a name="see-also"></a><span data-ttu-id="d37c5-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d37c5-128">See Also</span></span>  
+ <span data-ttu-id="d37c5-129">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-129">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="d37c5-130">[擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-130">[Extension Methods](../../../csharp/programming-guide/classes-and-structs/extension-methods.md) </span></span>  
+ <span data-ttu-id="d37c5-131">[LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) </span><span class="sxs-lookup"><span data-stu-id="d37c5-131">[LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) </span></span>  
+ <span data-ttu-id="d37c5-132">[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-132">[Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) </span></span>  
+ <span data-ttu-id="d37c5-133">[protected](../../../csharp/language-reference/keywords/protected.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-133">[protected](../../../csharp/language-reference/keywords/protected.md) </span></span>  
+ <span data-ttu-id="d37c5-134">[internal](../../../csharp/language-reference/keywords/internal.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-134">[internal](../../../csharp/language-reference/keywords/internal.md) </span></span>  
+ <span data-ttu-id="d37c5-135">[public](../../../csharp/language-reference/keywords/public.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-135">[public](../../../csharp/language-reference/keywords/public.md) </span></span>  
+ <span data-ttu-id="d37c5-136">[this](../../../csharp/language-reference/keywords/this.md) </span><span class="sxs-lookup"><span data-stu-id="d37c5-136">[this](../../../csharp/language-reference/keywords/this.md) </span></span>  
+ [<span data-ttu-id="d37c5-137">命名空間</span><span class="sxs-lookup"><span data-stu-id="d37c5-137">namespace</span></span>](../../../csharp/language-reference/keywords/namespace.md)
+

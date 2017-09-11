@@ -1,48 +1,43 @@
 ---
-title: "重構為純虛擬函式 (C#) | Microsoft Docs"
-ms.custom: 
+title: "重構為純虛擬函式 (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d0243dbc1a884cb48eeebd71079c3b17bc520553
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 2bce781df80a777203ed8e713bedf83f1c7779a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 08/25/2017
 
 ---
-# <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
-純功能性轉換的重要觀點為學習如何使用純虛擬函式重構程式碼。  
+# <a name="refactoring-into-pure-functions-c"></a><span data-ttu-id="170b3-102">重構為純虛擬函式 (C#)</span><span class="sxs-lookup"><span data-stu-id="170b3-102">Refactoring Into Pure Functions (C#)</span></span>
+
+<span data-ttu-id="170b3-103">純功能性轉換的重要觀點為學習如何使用純虛擬函式重構程式碼。</span><span class="sxs-lookup"><span data-stu-id="170b3-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>  
   
 > [!NOTE]
->  功能性程式設計的常見命名法為使用純虛擬函式重構程式。 在 Visual Basic 和 C++ 中，這可以利用個別的語言，調整函式的用法。 不過，在 C# 中，函式稱為方法。 就這個討論而言，純虛擬函式會當成 C# 中的方法實作。  
+>  <span data-ttu-id="170b3-104">功能性程式設計的常見命名法為使用純虛擬函式重構程式。</span><span class="sxs-lookup"><span data-stu-id="170b3-104">The common nomenclature in functional programming is that you refactor programs using pure functions.</span></span> <span data-ttu-id="170b3-105">在 Visual Basic 和 C++ 中，這可以利用個別的語言，調整函式的用法。</span><span class="sxs-lookup"><span data-stu-id="170b3-105">In Visual Basic and C++, this aligns with the use of functions in the respective languages.</span></span> <span data-ttu-id="170b3-106">不過，在 C# 中，函式稱為方法。</span><span class="sxs-lookup"><span data-stu-id="170b3-106">However, in C#, functions are called methods.</span></span> <span data-ttu-id="170b3-107">就這個討論而言，純虛擬函式會當成 C# 中的方法實作。</span><span class="sxs-lookup"><span data-stu-id="170b3-107">For the purposes of this discussion, a pure function is implemented as a method in C#.</span></span>  
   
- 如同本節先前所述，純虛擬函式擁有兩個實用的特性：  
+ <span data-ttu-id="170b3-108">如同本節先前所述，純虛擬函式擁有兩個實用的特性：</span><span class="sxs-lookup"><span data-stu-id="170b3-108">As noted previously in this section, a pure function has two useful characteristics:</span></span>  
   
--   它有沒有副作用。 函式不會變更函式以外任何類型的任何變數或資料。  
+-   <span data-ttu-id="170b3-109">它有沒有副作用。</span><span class="sxs-lookup"><span data-stu-id="170b3-109">It has no side effects.</span></span> <span data-ttu-id="170b3-110">函式不會變更函式以外任何類型的任何變數或資料。</span><span class="sxs-lookup"><span data-stu-id="170b3-110">The function does not change any variables or the data of any type outside of the function.</span></span>  
   
--   它是一致的。 假設是相同的輸入資料集合，就永遠會傳回相同的輸出值。  
+-   <span data-ttu-id="170b3-111">它是一致的。</span><span class="sxs-lookup"><span data-stu-id="170b3-111">It is consistent.</span></span> <span data-ttu-id="170b3-112">假設是相同的輸入資料集合，就永遠會傳回相同的輸出值。</span><span class="sxs-lookup"><span data-stu-id="170b3-112">Given the same set of input data, it will always return the same output value.</span></span>  
   
- 轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。  
+ <span data-ttu-id="170b3-113">轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。</span><span class="sxs-lookup"><span data-stu-id="170b3-113">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="170b3-114">以此種方式，您可以建立現有程式碼的純虛擬函式版本。</span><span class="sxs-lookup"><span data-stu-id="170b3-114">In this way, you can create pure function versions of existing code.</span></span>  
   
- 這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教學課程顯示如何管理 WordprocessingML 文件，並包含兩個如何使用純虛擬函式重構的範例。  
+ <span data-ttu-id="170b3-115">這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。</span><span class="sxs-lookup"><span data-stu-id="170b3-115">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="170b3-116">[教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 教學課程顯示如何管理 WordprocessingML 文件，並包含兩個如何使用純虛擬函式重構的範例。</span><span class="sxs-lookup"><span data-stu-id="170b3-116">The [Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>  
   
-## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性  
- 下列範例對照兩個非純虛擬函式與一個純虛擬函式。  
+## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="170b3-117">排除副作用與外部相依性</span><span class="sxs-lookup"><span data-stu-id="170b3-117">Eliminating Side Effects and External Dependencies</span></span>  
+ <span data-ttu-id="170b3-118">下列範例對照兩個非純虛擬函式與一個純虛擬函式。</span><span class="sxs-lookup"><span data-stu-id="170b3-118">The following examples contrast two non-pure functions and a pure function.</span></span>  
   
-### <a name="non-pure-function-that-changes-a-class-member"></a>變更類別成員的非純虛擬函式  
- 在下列程式碼中，`HypenatedConcat` 函式不是純虛擬函式，因為它會修改類別中的 `aMember` 資料成員：  
+### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="170b3-119">變更類別成員的非純虛擬函式</span><span class="sxs-lookup"><span data-stu-id="170b3-119">Non-Pure Function that Changes a Class Member</span></span>  
+ <span data-ttu-id="170b3-120">在下列程式碼中，`HypenatedConcat` 函式不是純虛擬函式，因為它會修改類別中的 `aMember` 資料成員：</span><span class="sxs-lookup"><span data-stu-id="170b3-120">In the following code, the `HypenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>  
   
 ```csharp  
 public class Program  
@@ -62,16 +57,16 @@ public class Program
 }  
 ```  
   
- 此程式碼會產生下列輸出：  
+ <span data-ttu-id="170b3-121">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="170b3-121">This code produces the following output:</span></span>  
   
 ```  
 StringOne-StringTwo  
 ```  
   
- 請注意，要修改的資料具有 `public` 或 `private` 存取權，或者是 `static` 成員或執行個體成員，都沒有關係。 純虛擬函式不會變更函式以外的任何資料。  
+ <span data-ttu-id="170b3-122">請注意，要修改的資料具有 `public` 或 `private` 存取權，或者是 `static` 成員或執行個體成員，都沒有關係。</span><span class="sxs-lookup"><span data-stu-id="170b3-122">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a `static` member or an instance member.</span></span> <span data-ttu-id="170b3-123">純虛擬函式不會變更函式以外的任何資料。</span><span class="sxs-lookup"><span data-stu-id="170b3-123">A pure function does not change any data outside of the function.</span></span>  
   
-### <a name="non-pure-function-that-changes-an-argument"></a>變更引數的非純虛擬函式  
- 此外，這個相同函式的下列版本不是純虛擬函式，因為它會修改其參數 `sb` 的內容。  
+### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="170b3-124">變更引數的非純虛擬函式</span><span class="sxs-lookup"><span data-stu-id="170b3-124">Non-Pure Function that Changes an Argument</span></span>  
+ <span data-ttu-id="170b3-125">此外，這個相同函式的下列版本不是純虛擬函式，因為它會修改其參數 `sb` 的內容。</span><span class="sxs-lookup"><span data-stu-id="170b3-125">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>  
   
 ```csharp  
 public class Program  
@@ -90,13 +85,13 @@ public class Program
 }  
 ```  
   
- 這個版本的程式會產生與第一版相同的輸出，因為 `HypenatedConcat` 函式已經叫用 <xref:System.Text.StringBuilder.Append%2A> 成員函式來變更其第一個參數的值 (狀態)。 請注意，雖然 `HypenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。  
+ <span data-ttu-id="170b3-126">這個版本的程式會產生與第一版相同的輸出，因為 `HypenatedConcat` 函式已經叫用 <xref:System.Text.StringBuilder.Append%2A> 成員函式來變更其第一個參數的值 (狀態)。</span><span class="sxs-lookup"><span data-stu-id="170b3-126">This version of the program produces the same output as the first version, because the `HypenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="170b3-127">請注意，雖然 `HypenatedConcat` 使用 call-by-value 參數傳遞 (Parameter Passing)，還是會發生這個改變。</span><span class="sxs-lookup"><span data-stu-id="170b3-127">Note that this alteration occurs despite that fact that `HypenatedConcat` uses call-by-value parameter passing.</span></span>  
   
 > [!IMPORTANT]
->  若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。 這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。 對於要修改參數的函式，則不一定需要 Call-by-reference。  
+>  <span data-ttu-id="170b3-128">若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。</span><span class="sxs-lookup"><span data-stu-id="170b3-128">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="170b3-129">這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。</span><span class="sxs-lookup"><span data-stu-id="170b3-129">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="170b3-130">對於要修改參數的函式，則不一定需要 Call-by-reference。</span><span class="sxs-lookup"><span data-stu-id="170b3-130">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>  
   
-### <a name="pure-function"></a>純虛擬函式  
- 這個下一個版本的程式顯示如何實作 `HypenatedConcat` 函式做為純虛擬函式。  
+### <a name="pure-function"></a><span data-ttu-id="170b3-131">純虛擬函式</span><span class="sxs-lookup"><span data-stu-id="170b3-131">Pure Function</span></span>  
+<span data-ttu-id="170b3-132">這個下一版的程式會顯示如何將 `HypenatedConcat` 函式實作為純虛擬函式。</span><span class="sxs-lookup"><span data-stu-id="170b3-132">This next version of the program shows how to implement the `HypenatedConcat` function as a pure function.</span></span>  
   
 ```csharp  
 class Program  
@@ -115,15 +110,16 @@ class Program
 }  
 ```  
   
- 再次聲明，這個版本會產生相同的輸出行：`StringOne-StringTwo`。 請注意，若要保留串連值，它會儲存在中繼變數 `s2` 中。  
+ <span data-ttu-id="170b3-133">再次聲明，這個版本會產生相同的輸出行：`StringOne-StringTwo`。</span><span class="sxs-lookup"><span data-stu-id="170b3-133">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="170b3-134">請注意，若要保留串連值，它會儲存在中繼變數 `s2` 中。</span><span class="sxs-lookup"><span data-stu-id="170b3-134">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>  
   
- 其中一個可能非常實用的方法是，撰寫在本機非純虛擬但全域為純虛擬的函式 (亦即，它們可以宣告並修改本機變數)。 這類函式擁有許多值得撰寫的特性，但是會避免某些更錯綜複雜的功能性程式設計慣用句，例如，當簡易迴圈可以完成相同的事情時，必須使用遞迴。  
+ <span data-ttu-id="170b3-135">其中一個可能非常實用的方法是，撰寫在本機非純虛擬但全域為純虛擬的函式 (亦即，它們可以宣告並修改本機變數)。</span><span class="sxs-lookup"><span data-stu-id="170b3-135">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="170b3-136">這類函式擁有許多值得撰寫的特性，但是會避免某些更錯綜複雜的功能性程式設計慣用句，例如，當簡易迴圈可以完成相同的事情時，必須使用遞迴。</span><span class="sxs-lookup"><span data-stu-id="170b3-136">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>  
   
-## <a name="standard-query-operators"></a>標準查詢運算子  
- 標準查詢運算子的重要特性為它們會被當做純虛擬函式實作。  
+## <a name="standard-query-operators"></a><span data-ttu-id="170b3-137">標準查詢運算子</span><span class="sxs-lookup"><span data-stu-id="170b3-137">Standard Query Operators</span></span>  
+ <span data-ttu-id="170b3-138">標準查詢運算子的重要特性為它們會被當做純虛擬函式實作。</span><span class="sxs-lookup"><span data-stu-id="170b3-138">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>  
   
- 如需詳細資訊，請參閱[標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ <span data-ttu-id="170b3-139">如需詳細資訊，請參閱[標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="170b3-139">For more information, see [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a><span data-ttu-id="170b3-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="170b3-140">See Also</span></span>  
+ <span data-ttu-id="170b3-141">[純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md) </span><span class="sxs-lookup"><span data-stu-id="170b3-141">[Introduction to Pure Functional Transformations (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md) </span></span>  
+ [<span data-ttu-id="170b3-142">函數式程式設計與命令式程式設計的比較 (C#)</span><span class="sxs-lookup"><span data-stu-id="170b3-142">Functional Programming vs. Imperative Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+

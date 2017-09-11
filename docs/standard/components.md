@@ -1,95 +1,98 @@
 ---
 title: ".NET 架構元件"
-description: "說明主要的 .NET 架構元件，例如，.NET Standard 程式庫、.NET 執行階段和工具。"
-keywords: ".NET, .NET Standard 程式庫, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 編譯器"
+description: "描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NET 執行階段和工具。"
 author: cartermp
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
-ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
+ms.translationtype: HT
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 08/23/2017
 
 ---
+# <a name="net-architectural-components"></a><span data-ttu-id="bdf7b-103">.NET 架構元件</span><span class="sxs-lookup"><span data-stu-id="bdf7b-103">.NET architectural components</span></span>
 
-# .NET 架構元件
-<a id="net-architectural-components" class="xliff"></a>
+<span data-ttu-id="bdf7b-104">.NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-104">A .NET app is developed for and runs in one or more *implementations of .NET*.</span></span>  <span data-ttu-id="bdf7b-105">.NET 實作包括 .NET Framework、.NET Core 和 Mono。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-105">Implementations of .NET include the .NET Framework, .NET Core, and Mono.</span></span> <span data-ttu-id="bdf7b-106">所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-106">There is an API specification common to all implementations of .NET that's called the .NET Standard.</span></span> <span data-ttu-id="bdf7b-107">本文提供上述每個概念的簡介。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-107">This article gives a brief introduction to each of these concepts.</span></span>
 
-.NET 是由數個主要元件所組成。  它具有名為 .Standard 程式庫的標準程式庫，這是可在任何地方執行的大型 API 集合。  此標準程式庫是由三個 .NET 執行階段所實作 - .NET Framework、.NET Core，以及適用於 Xamarin 的 Mono。  .NET 語言也會在任何 .NET 執行階段執行。  此外，每個平台上均會提供工具，可讓您用以建置專案。  無論您選擇的是哪個執行階段，這些工具都一樣。
+## <a name="net-standard"></a><span data-ttu-id="bdf7b-108">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="bdf7b-108">.NET Standard</span></span>
 
-以下是先前提及的每個 .NET 元件的圖形化概觀，以及它們的相符方式。
+<span data-ttu-id="bdf7b-109">.NET Standard 是由 .NET 實作的基底類別庫所實作的一組 API。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-109">The .NET Standard is a set of APIs that are implemented by the Base Class Library of a .NET implementation.</span></span> <span data-ttu-id="bdf7b-110">更正式的說法是，它是一個 .NET API 的規格，其構成了一組您據以編譯程式碼的制式協定。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-110">More formally, it's a specification of .NET APIs that make up a uniform set of contracts that you compile your code against.</span></span> <span data-ttu-id="bdf7b-111">每個 .NET 實作中都會實作這些協定。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-111">These contracts are implemented in each .NET implementation.</span></span> <span data-ttu-id="bdf7b-112">這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-112">This enables portability across different .NET implementations, effectively allowing your code to run everywhere.</span></span>
 
-![將所有 .NET 架構元件放在一起](media/components.png)
+<span data-ttu-id="bdf7b-113">.NET Standard 也是[目標 Framework](glossary.md#target-framework)。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-113">The .NET Standard is also a [target framework](glossary.md#target-framework).</span></span> <span data-ttu-id="bdf7b-114">如果您的程式碼以某個 .NET Standard 版本為目標，就可以在支援該版 .NET Standard 的任何 .NET 實作上執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-114">If your code targets a version of the .NET Standard, it can run on any .NET implementation which supports that version of the .NET Standard.</span></span>
 
-以下是針對上述每個主要元件的簡短說明。  
+<span data-ttu-id="bdf7b-115">若要了解 .NET Standard 及如何將其設為目標，請參閱 [.NET Standard](net-standard.md) 主題。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-115">To learn more about the .NET Standard and how to target it, see the [.NET Standard](net-standard.md) topic.</span></span>
 
-## .NET Standard 程式庫
-<a id="net-standard-library" class="xliff"></a>
+## <a name="net-implementations"></a><span data-ttu-id="bdf7b-116">.NET 實作</span><span class="sxs-lookup"><span data-stu-id="bdf7b-116">.NET implementations</span></span>
 
-.NET Standard 程式庫是一組由 .NET 執行階段所實作的 API。
+<span data-ttu-id="bdf7b-117">.NET 的每項實作包括下列元件：</span><span class="sxs-lookup"><span data-stu-id="bdf7b-117">Each implementation of .NET includes the following components:</span></span>
 
-更正式的說法是，它是一個 .NET API 的規格，其構成了一組您據以編譯程式碼的制式協定。  這些協定必須具有適用於每個 .NET 執行階段的基礎實作。  這會跨不同的 .NET 執行階段啟用可攜性，如此一來，您的程式碼便能有效地「在任何地方執行」。
+- <span data-ttu-id="bdf7b-118">一或多個執行階段。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-118">One or more runtimes.</span></span> <span data-ttu-id="bdf7b-119">範例：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-119">Examples: CLR for .NET Framework, CoreCLR and CoreRT for .NET Core.</span></span>
+- <span data-ttu-id="bdf7b-120">實作 .NET Standard 並可能實作其他 API 的類別庫。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-120">A class library that implements the .NET Standard and may implement additional APIs.</span></span> <span data-ttu-id="bdf7b-121">範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-121">Examples: .NET Framework Base Class Library, .NET Core Base Class Library.</span></span>
+- <span data-ttu-id="bdf7b-122">(選擇性) 一或多個應用程式架構。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-122">Optionally, one or more application frameworks.</span></span> <span data-ttu-id="bdf7b-123">範例：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 中。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-123">Examples: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md), and [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) are included in the .NET Framework.</span></span>
+- <span data-ttu-id="bdf7b-124">(選擇性) 開發工具。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-124">Optionally, development tools.</span></span> <span data-ttu-id="bdf7b-125">某些開發工具可在多個實作之間共用。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-125">Some development tools are shared among multiple implementations.</span></span>
 
-.NET Standard程式庫也是一個建置目標 (即為 .NET 標準)。  您目前可將目標設定為 .NET Standard 1.0-1.6。  如果您的程式碼目標為某一個 .NET Standard版本，就保證其一定可在實作該版本的任何 .NET 執行階段上執行。
+<span data-ttu-id="bdf7b-126">Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-126">There are four primary .NET implementations that Microsoft actively develops and maintains: .NET Core, .NET Framework, Mono, and UWP.</span></span>
 
-若要深入了解.NET Standard 程式庫以及如何將目標設為 .NET Standard，請參閱 [.NET Standard 程式庫](library.md)。
+### <a name="net-core"></a><span data-ttu-id="bdf7b-127">.NET 核心</span><span class="sxs-lookup"><span data-stu-id="bdf7b-127">.NET Core</span></span>
 
-## .NET 執行階段
-<a id="net-runtimes" class="xliff"></a>
+<span data-ttu-id="bdf7b-128">.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-128">.NET Core is a cross-platform implementation of .NET and designed to handle server and cloud workloads at scale.</span></span> <span data-ttu-id="bdf7b-129">可在 Windows、macOS 及 Linux 執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-129">It runs on Windows, macOS and Linux.</span></span> <span data-ttu-id="bdf7b-130">它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-130">It implements the .NET Standard, so code that targets the .NET Standard can run on .NET Core.</span></span> <span data-ttu-id="bdf7b-131">ASP.NET Core 會在 .NET Core 上執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-131">ASP.NET Core runs on .NET Core.</span></span> 
 
-Microsoft 會主動開發和維護的主要 .NET 執行階段有 3 個︰.NET Core、.NET Framework，以及適用於 Xamarin 的 Mono。
+<span data-ttu-id="bdf7b-132">若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-132">To learn more about .NET Core, see the [.NET Core Guide](../core/index.md) and [Choosing between .NET Core and .NET Framework for server apps](choosing-core-framework-server.md).</span></span>
 
-### .NET Core
-<a id="net-core" class="xliff"></a>
+### <a name="net-framework"></a><span data-ttu-id="bdf7b-133">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="bdf7b-133">.NET Framework</span></span>
 
-.NET Core 是已針對伺服器工作負載最佳化的跨平台執行階段。  它會實作 .NET Standard 程式庫，這表示任何目標為 .NET Standard 的程式碼都可以在 .NET Core 上執行。  它是由 ASP.NET Core 和通用 Windows 平台 (UWP) 所使用的執行階段。  它是新式且高效率的，而其設計目的是為了處理大規模的伺服器與雲端工作負載。
+<span data-ttu-id="bdf7b-134">.NET Framework 是自 2002年以來已存在的原始 .NET 實作。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-134">The.NET Framework is the original .NET implementation that has existed since 2002.</span></span> <span data-ttu-id="bdf7b-135">它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-135">It's the same .NET Framework that existing .NET developers have always used.</span></span> <span data-ttu-id="bdf7b-136">4.5 和更新版本會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在這些 .NET Framework 版本上執行。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-136">Versions 4.5 and later implement the .NET Standard, so code that targets the .NET Standard can run on those versions of the .NET Framework.</span></span> <span data-ttu-id="bdf7b-137">它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-137">It contains additional Windows-specific APIs, such as APIs for Windows desktop development with Windows Forms and WPF.</span></span> <span data-ttu-id="bdf7b-138">.NET Framework 最適合用來建置 Windows 傳統型應用程式。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-138">The .NET Framework is optimized for building Windows desktop applications.</span></span>
 
-若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)。
+<span data-ttu-id="bdf7b-139">若要深入了解 .NET Framework，請參閱 [.NET Framework 指南](../framework/index.md)。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-139">To learn more about the .NET Framework, see the [.NET Framework Guide](../framework/index.md).</span></span>
 
-### .NET Framework
-<a id="net-framework" class="xliff"></a>
+### <a name="mono"></a><span data-ttu-id="bdf7b-140">Mono</span><span class="sxs-lookup"><span data-stu-id="bdf7b-140">Mono</span></span>
 
-.NET Framework 是自 2002年以來已存在的歷史性 .NET 執行階段。  它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。  它會實作 .NET Standard 程式庫，這表示任何目標為 .NET Standard 的程式碼都可以在 .NET Framework 上執行。  它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。  .NET Framework 最適合用來建置 Windows 傳統型應用程式。
+<span data-ttu-id="bdf7b-141">Mono 是需要小型執行階段時主要使用的 .NET 實作。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-141">Mono is a .NET implementation that is mainly used when a small runtime is required.</span></span> <span data-ttu-id="bdf7b-142">它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，主要著重於較小的使用量。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-142">It is the runtime that powers Xamarin applications on Android, Mac, iOS, tvOS and watchOS and is focused primarily on a small footprint.</span></span>
 
-若要深入了解 .NET Framework，請參閱 [.NET Framework 指南](../framework/index.md)。
+<span data-ttu-id="bdf7b-143">它支援目前發行的所有 .NET Standard 版本。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-143">It supports all of the currently published .NET Standard versions.</span></span>
 
-### 適用於 Xamarin 的 Mono
-<a id="mono-for-xamarin" class="xliff"></a>
+<span data-ttu-id="bdf7b-144">在過去，Mono 實作較大型的 .NET Framework API，並模擬 UNIX 上最熱門的其中一些功能。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-144">Historically, Mono implemented the larger API of the .NET Framework and emulated some of the most popular capabilities on Unix.</span></span> <span data-ttu-id="bdf7b-145">它有時可用來執行依賴這些 UNIX 功能的 .NET 應用程式。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-145">It is sometimes used to run .NET applications that rely on those capabilities on Unix.</span></span>
 
-Mono 是 Xamarin 應用程式所使用的執行階段。  它會實作 .NET Standard 程式庫，這表示任何目標為 .NET Standard的程式碼都可以在 Xamarin 應用程式上執行。  它包含適用於 iOS、Android、Xamarin.Forms 和 Xamarin.Mac 的其他 API。  它最適合用來在 iOS 和 Android 上建置行動應用程式。
+<span data-ttu-id="bdf7b-146">Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS 等平台的完整靜態編譯器 (預先編譯)。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-146">Mono is typically used with a just-in-time compiler, but it also features a full static compiler (ahead-of-time compilation) that is used on platforms like iOS.</span></span>
 
-若要深入了解 Mono，請參閱 [Mono 文件](http://www.mono-project.com/docs/)。
+<span data-ttu-id="bdf7b-147">若要深入了解 Mono，請參閱 [Mono 文件](http://www.mono-project.com/docs/)。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-147">To learn more about Mono, see the [Mono documentation](http://www.mono-project.com/docs/).</span></span>
 
-## .NET 工具和通用基礎結構
-<a id="net-tooling-and-common-infrastructure" class="xliff"></a>
+### <a name="universal-windows-platform-uwp"></a><span data-ttu-id="bdf7b-148">通用 Windows 平台 (UWP)</span><span class="sxs-lookup"><span data-stu-id="bdf7b-148">Universal Windows Platform (UWP)</span></span>
 
-適用於 .NET 的工具在每個 .NET 實作中也很常見。  這些包括但不限於：
+<span data-ttu-id="bdf7b-149">UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-149">UWP is an implementation of .NET that is used for building modern, touch-enabled Windows applications and software for the Internet of Things (IoT).</span></span> <span data-ttu-id="bdf7b-150">其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-150">It's designed to unify the different types of devices that you may want to target, including PCs, tablets, phablets, phones, and even the Xbox.</span></span> <span data-ttu-id="bdf7b-151">UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-151">UWP provides many services, such as a centralized app store, an execution environment (AppContainer), and a set of Windows APIs to use instead of Win32 (WinRT).</span></span> <span data-ttu-id="bdf7b-152">您可以使用 C++、C#、VB.NET 和 JavaScript 來撰寫應用程式。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-152">Apps can be written in C++, C#, VB.NET, and JavaScript.</span></span> <span data-ttu-id="bdf7b-153">使用 C# 和 VB.NET 時，.NET API 是由 .NET Core 所提供。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-153">When using C# and VB.NET, the .NET APIs are provided by .NET Core.</span></span>
 
-* .NET 語言及其編譯器
-* 執行階段元件，例如 JIT 和記憶體回收行程
-* .NET 專案系統 (有時稱為 "csproj"、"vbproj" 或 "fsproj")
-* MSBuild，用來建置專案的建置引擎
-* NuGet，適用於.NET 的 Microsoft 套件管理員
-* .NET CLI，用來建置 .NET 專案的跨平台命令列介面
-* 開放原始碼建置協調流程工具，例如 CAKE 和 FAKE
+<span data-ttu-id="bdf7b-154">若要深入了解 UWP，請參閱[通用 Windows 平台簡介](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-154">To learn more about UWP, see [Intro to the Universal Windows Platform](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).</span></span>
 
-此處的主要重點應該是有大量的工具和基礎結構，其對於您選擇來建置應用程式的任何 .NET「類別」而言是很常見的。
+## <a name="net-runtimes"></a><span data-ttu-id="bdf7b-155">.NET 執行階段</span><span class="sxs-lookup"><span data-stu-id="bdf7b-155">.NET runtimes</span></span>
 
-## 後續步驟
-<a id="next-steps" class="xliff"></a>
+<span data-ttu-id="bdf7b-156">執行階段是受管理程式的執行環境。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-156">A runtime is the execution environment for a managed program.</span></span> <span data-ttu-id="bdf7b-157">OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-157">The OS is part of the runtime environment but is not part of the .NET runtime.</span></span> <span data-ttu-id="bdf7b-158">以下是 .NET 執行階段的一些範例：</span><span class="sxs-lookup"><span data-stu-id="bdf7b-158">Here are some examples of .NET runtimes:</span></span>
+ 
+ - <span data-ttu-id="bdf7b-159">適用於 .NET Framework 的 Common Language Runtime (CLR)</span><span class="sxs-lookup"><span data-stu-id="bdf7b-159">Common Language Runtime (CLR) for the .NET Framework</span></span>
+ - <span data-ttu-id="bdf7b-160">適用於 .NET Core 的 Core Common Language Runtime (CoreCLR)</span><span class="sxs-lookup"><span data-stu-id="bdf7b-160">Core Common Language Runtime (CoreCLR) for .NET Core</span></span>
+ - <span data-ttu-id="bdf7b-161">適用於通用 Windows 平台的 .NET Native</span><span class="sxs-lookup"><span data-stu-id="bdf7b-161">.NET Native for Universal Windows Platform</span></span> 
+ - <span data-ttu-id="bdf7b-162">適用於 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面架構的 Mono 執行階段</span><span class="sxs-lookup"><span data-stu-id="bdf7b-162">The Mono runtime for Xamarin.iOS, Xamarin.Android, Xamarin.Mac, and the Mono desktop framework</span></span>
 
-若要深入了解，請瀏覽下列各項：
+## <a name="net-tooling-and-common-infrastructure"></a><span data-ttu-id="bdf7b-163">.NET 工具和通用基礎結構</span><span class="sxs-lookup"><span data-stu-id="bdf7b-163">.NET tooling and common infrastructure</span></span>
 
-* [NET Standard 程式庫](library.md)
-* [.NET Core 指南](../core/index.md)
-* [.NET Framework 指南](../framework/index.md)
-* [C# 指南](../csharp/index.md)
-* [F# 指南](../fsharp/index.md)
-* [VB.NET 指南](../visual-basic/index.md)
+<span data-ttu-id="bdf7b-164">您可以存取一組詳盡的工具和基礎結構元件，以搭配各種 .NET 實作使用。</span><span class="sxs-lookup"><span data-stu-id="bdf7b-164">You have access to an extensive set of tools and infrastructure components that work with every implementation of .NET.</span></span> <span data-ttu-id="bdf7b-165">這些包括 (但不限於) 下列項目：</span><span class="sxs-lookup"><span data-stu-id="bdf7b-165">These include, but are not limited to the following:</span></span>
+
+- <span data-ttu-id="bdf7b-166">.NET 語言及其編譯器</span><span class="sxs-lookup"><span data-stu-id="bdf7b-166">The .NET languages and their compilers</span></span>
+- <span data-ttu-id="bdf7b-167">.NET 專案系統 (以 *.csproj*、*.vbproj* 和 *.fsproj* 檔案為基礎)</span><span class="sxs-lookup"><span data-stu-id="bdf7b-167">The .NET project system (based on *.csproj*, *.vbproj*, and *.fsproj* files)</span></span>
+- <span data-ttu-id="bdf7b-168">[MSBuild](/visualstudio/msbuild/msbuild)，用來建置專案的建置引擎</span><span class="sxs-lookup"><span data-stu-id="bdf7b-168">[MSBuild](/visualstudio/msbuild/msbuild), the build engine used to build projects</span></span>
+- <span data-ttu-id="bdf7b-169">[NuGet](/nuget/)，適用於 .NET 的 Microsoft 套件管理員</span><span class="sxs-lookup"><span data-stu-id="bdf7b-169">[NuGet](/nuget/), Microsoft's package manager for .NET</span></span>
+- <span data-ttu-id="bdf7b-170">開放原始碼建置協調流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)</span><span class="sxs-lookup"><span data-stu-id="bdf7b-170">Open-source build orchestration tools, such as [CAKE](http://cakebuild.net/) and [FAKE](https://fake.build/)</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bdf7b-171">請參閱</span><span class="sxs-lookup"><span data-stu-id="bdf7b-171">See also</span></span>
+<span data-ttu-id="bdf7b-172">[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md) </span><span class="sxs-lookup"><span data-stu-id="bdf7b-172">[Choosing between .NET Core and .NET Framework for server apps](choosing-core-framework-server.md) </span></span>  
+[<span data-ttu-id="bdf7b-173">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="bdf7b-173">.NET Standard</span></span>](net-standard.md)  
+[<span data-ttu-id="bdf7b-174">.NET Core 指南</span><span class="sxs-lookup"><span data-stu-id="bdf7b-174">.NET Core Guide</span></span>](../core/index.md)  
+[<span data-ttu-id="bdf7b-175">.NET Framework 指南</span><span class="sxs-lookup"><span data-stu-id="bdf7b-175">.NET Framework Guide</span></span>](../framework/index.md)  
+[<span data-ttu-id="bdf7b-176">C# 指南</span><span class="sxs-lookup"><span data-stu-id="bdf7b-176">C# Guide</span></span>](../csharp/index.md)  
+[<span data-ttu-id="bdf7b-177">F# 指南</span><span class="sxs-lookup"><span data-stu-id="bdf7b-177">F# Guide</span></span>](../fsharp/index.md)  
+[<span data-ttu-id="bdf7b-178">VB.NET 指南</span><span class="sxs-lookup"><span data-stu-id="bdf7b-178">VB.NET Guide</span></span>](../visual-basic/index.md)  
+
 

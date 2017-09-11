@@ -1,1 +1,1 @@
-.NET Framework 4 版
+<span data-ttu-id="23e23-101">.NET Framework 4 版</span><span class="sxs-lookup"><span data-stu-id="23e23-101">.NET Framework version 4</span></span>

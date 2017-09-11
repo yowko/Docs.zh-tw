@@ -1,5 +1,5 @@
 ---
-title: "使用 LINQ 轉換資料 (C#) | Microsoft Docs"
+title: "使用 LINQ 轉換資料 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,62 +37,62 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: b97d55045a999f3714a5af41fc4247e87684b6c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 不只是關於擷取資料。 它也是功能強大的資料轉換工具。 使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但或許 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 最強大的功能查詢就是能夠建立新的類型。 這是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
+# <a name="data-transformations-with-linq-c"></a><span data-ttu-id="f5e8b-102">使用 LINQ 轉換資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="f5e8b-102">Data Transformations with LINQ (C#)</span></span>
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]<span data-ttu-id="f5e8b-103"> 不只是關於擷取資料。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-103"> is not only about retrieving data.</span></span> <span data-ttu-id="f5e8b-104">它也是功能強大的資料轉換工具。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-104">It is also a powerful tool for transforming data.</span></span> <span data-ttu-id="f5e8b-105">使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，您可以使用來源序列作為輸入，並在許多方面修改它，以建立新的輸出序列。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-105">By using a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query, you can use a source sequence as input and modify it in many ways to create a new output sequence.</span></span> <span data-ttu-id="f5e8b-106">藉由排序及群組，您可以修改序列本身，而不修改項目本身。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-106">You can modify the sequence itself without modifying the elements themselves by sorting and grouping.</span></span> <span data-ttu-id="f5e8b-107">但或許 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 最強大的功能查詢就是能夠建立新的類型。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-107">But perhaps the most powerful feature of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries is the ability to create new types.</span></span> <span data-ttu-id="f5e8b-108">這是在 [select](../../../../csharp/language-reference/keywords/select-clause.md) 子句中完成。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-108">This is accomplished in the [select](../../../../csharp/language-reference/keywords/select-clause.md) clause.</span></span> <span data-ttu-id="f5e8b-109">例如，您可以進行下列工作：</span><span class="sxs-lookup"><span data-stu-id="f5e8b-109">For example, you can perform the following tasks:</span></span>  
   
--   將多個輸入序列合併為具有新類型的單一輸出序列。  
+-   <span data-ttu-id="f5e8b-110">將多個輸入序列合併為具有新類型的單一輸出序列。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-110">Merge multiple input sequences into a single output sequence that has a new type.</span></span>  
   
--   建立輸出序列，使其項目只包含來源序列中每個項目的一或多個屬性。  
+-   <span data-ttu-id="f5e8b-111">建立輸出序列，使其項目只包含來源序列中每個項目的一或多個屬性。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-111">Create output sequences whose elements consist of only one or several properties of each element in the source sequence.</span></span>  
   
--   建立輸出序列，使其項目包含對來源資料執行的作業結果。  
+-   <span data-ttu-id="f5e8b-112">建立輸出序列，使其項目包含對來源資料執行的作業結果。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-112">Create output sequences whose elements consist of the results of operations performed on the source data.</span></span>  
   
--   以不同格式建立輸出序列。 比方說，您可以將資料從 SQL 資料列或文字檔轉換成 XML。  
+-   <span data-ttu-id="f5e8b-113">以不同格式建立輸出序列。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-113">Create output sequences in a different format.</span></span> <span data-ttu-id="f5e8b-114">比方說，您可以將資料從 SQL 資料列或文字檔轉換成 XML。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-114">For example, you can transform data from SQL rows or text files into XML.</span></span>  
   
- 這些只是一些範例。 當然，這些轉換可以用各種方式結合在相同的查詢中。 此外，一個查詢的輸出序列也可用作新查詢的輸入序列。  
+ <span data-ttu-id="f5e8b-115">這些只是一些範例。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-115">These are just several examples.</span></span> <span data-ttu-id="f5e8b-116">當然，這些轉換可以用各種方式結合在相同的查詢中。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-116">Of course, these transformations can be combined in various ways in the same query.</span></span> <span data-ttu-id="f5e8b-117">此外，一個查詢的輸出序列也可用作新查詢的輸入序列。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-117">Furthermore, the output sequence of one query can be used as the input sequence for a new query.</span></span>  
   
-## <a name="joining-multiple-inputs-into-one-output-sequence"></a>將多個輸入聯結成一個輸出序列  
- 您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢來建立輸出序列，其中包含來自多個輸入序列的項目。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
+## <a name="joining-multiple-inputs-into-one-output-sequence"></a><span data-ttu-id="f5e8b-118">將多個輸入聯結成一個輸出序列</span><span class="sxs-lookup"><span data-stu-id="f5e8b-118">Joining Multiple Inputs into One Output Sequence</span></span>  
+ <span data-ttu-id="f5e8b-119">您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢來建立輸出序列，其中包含來自多個輸入序列的項目。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-119">You can use a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query to create an output sequence that contains elements from more than one input sequence.</span></span> <span data-ttu-id="f5e8b-120">下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-120">The following example shows how to combine two in-memory data structures, but the same principles can be applied to combine data from XML or SQL or DataSet sources.</span></span> <span data-ttu-id="f5e8b-121">假設下列兩個類別類型︰</span><span class="sxs-lookup"><span data-stu-id="f5e8b-121">Assume the following two class types:</span></span>  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
+ <span data-ttu-id="f5e8b-122">[!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f5e8b-122">[!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]</span></span>  
   
- 下列範例顯示查詢：  
+ <span data-ttu-id="f5e8b-123">下列範例顯示查詢：</span><span class="sxs-lookup"><span data-stu-id="f5e8b-123">The following example shows the query:</span></span>  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ <span data-ttu-id="f5e8b-124">[!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="f5e8b-124">[!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]</span></span>  
   
- 如需詳細資訊，請參閱 [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)。  
+ <span data-ttu-id="f5e8b-125">如需詳細資訊，請參閱 [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)和 [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-125">For more information, see [join clause](../../../../csharp/language-reference/keywords/join-clause.md) and [select clause](../../../../csharp/language-reference/keywords/select-clause.md).</span></span>  
   
-## <a name="selecting-a-subset-of-each-source-element"></a>選取每個來源項目的子集  
- 有兩種主要方式，可選取來源序列中每個項目的子集︰  
+## <a name="selecting-a-subset-of-each-source-element"></a><span data-ttu-id="f5e8b-126">選取每個來源項目的子集</span><span class="sxs-lookup"><span data-stu-id="f5e8b-126">Selecting a Subset of each Source Element</span></span>  
+ <span data-ttu-id="f5e8b-127">有兩種主要方式，可選取來源序列中每個項目的子集︰</span><span class="sxs-lookup"><span data-stu-id="f5e8b-127">There are two primary ways to select a subset of each element in the source sequence:</span></span>  
   
-1.  若只要選取來源項目的一個成員，請使用點運算。 在下列範例中，假設 `Customer` 物件包含數個公用屬性，包括名為 `City` 的字串。 在執行時，此查詢會產生字串的輸出序列。  
+1.  <span data-ttu-id="f5e8b-128">若只要選取來源項目的一個成員，請使用點運算。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-128">To select just one member of the source element, use the dot operation.</span></span> <span data-ttu-id="f5e8b-129">在下列範例中，假設 `Customer` 物件包含數個公用屬性，包括名為 `City` 的字串。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-129">In the following example, assume that a `Customer` object contains several public properties including a string named `City`.</span></span> <span data-ttu-id="f5e8b-130">在執行時，此查詢會產生字串的輸出序列。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-130">When executed, this query will produce an output sequence of strings.</span></span>  
   
     ```  
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  若要建立包含來自來源項目之多個屬性的項目，您可以使用物件初始設定式與具名物件或匿名型別。 下列範例示範如何使用匿名型別封裝來自每個 `Customer` 項目的兩個屬性︰  
+2.  <span data-ttu-id="f5e8b-131">若要建立包含來自來源項目之多個屬性的項目，您可以使用物件初始設定式與具名物件或匿名型別。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-131">To create elements that contain more than one property from the source element, you can use an object initializer with either a named object or an anonymous type.</span></span> <span data-ttu-id="f5e8b-132">下列範例示範如何使用匿名型別封裝來自每個 `Customer` 項目的兩個屬性︰</span><span class="sxs-lookup"><span data-stu-id="f5e8b-132">The following example shows the use of an anonymous type to encapsulate two properties from each `Customer` element:</span></span>  
   
     ```  
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- 如需詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
+ <span data-ttu-id="f5e8b-133">如需詳細資訊，請參閱[物件和集合初始設定式](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-133">For more information, see [Object and Collection Initializers](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) and [Anonymous Types](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-## <a name="transforming-in-memory-objects-into-xml"></a>將記憶體中的物件轉換成 XML  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集和 XML 資料流或文件之間轉換。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
+## <a name="transforming-in-memory-objects-into-xml"></a><span data-ttu-id="f5e8b-134">將記憶體中的物件轉換成 XML</span><span class="sxs-lookup"><span data-stu-id="f5e8b-134">Transforming in-Memory Objects into XML</span></span>  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="f5e8b-135"> 查詢讓您輕鬆地將資料在記憶體中的資料結構、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集和 XML 資料流或文件之間轉換。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-135"> queries make it easy to transform data between in-memory data structures, SQL databases, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Datasets and XML streams or documents.</span></span> <span data-ttu-id="f5e8b-136">下列範例會將記憶體中資料結構的物件轉換成 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-136">The following example transforms objects in an in-memory data structure into XML elements.</span></span>  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ <span data-ttu-id="f5e8b-137">[!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="f5e8b-137">[!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]</span></span>  
   
- 該程式碼會產生下列 XML 輸出：  
+ <span data-ttu-id="f5e8b-138">該程式碼會產生下列 XML 輸出：</span><span class="sxs-lookup"><span data-stu-id="f5e8b-138">The code produces the following XML output:</span></span>  
   
 ```xml  
 <Root>  
@@ -114,20 +114,21 @@ ms.lasthandoff: 07/03/2017
 </Root>  
 ```  
   
- 如需詳細資訊，請參閱[在 C# 中建立 XML 樹狀結構 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)。  
+ <span data-ttu-id="f5e8b-139">如需詳細資訊，請參閱[在 C# 中建立 XML 樹狀結構 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-139">For more information, see [Creating XML Trees in C# (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md).</span></span>  
   
-## <a name="performing-operations-on-source-elements"></a>對來源項目執行作業  
- 輸出序列可能不會包含來自來源序列的任何項目或項目屬性。 輸出可能會是使用來源項目作為輸入引數而計算的值序列。 下列簡單的查詢在執行時，會輸出字串的序列，這些字串的值代表了以 `double` 類型之項目的來源序列為基礎的計算。  
+## <a name="performing-operations-on-source-elements"></a><span data-ttu-id="f5e8b-140">對來源項目執行作業</span><span class="sxs-lookup"><span data-stu-id="f5e8b-140">Performing Operations on Source Elements</span></span>  
+ <span data-ttu-id="f5e8b-141">輸出序列可能不會包含來自來源序列的任何項目或項目屬性。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-141">An output sequence might not contain any elements or element properties from the source sequence.</span></span> <span data-ttu-id="f5e8b-142">輸出可能會是使用來源項目作為輸入引數而計算的值序列。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-142">The output might instead be a sequence of values that is computed by using the source elements as input arguments.</span></span> <span data-ttu-id="f5e8b-143">下列簡單的查詢在執行時，會輸出字串的序列，這些字串的值代表了以 `double` 類型之項目的來源序列為基礎的計算。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-143">The following simple query, when it is executed, outputs a sequence of strings whose values represent a calculation based on the source sequence of elements of type `double`.</span></span>  
   
 > [!NOTE]
->  如果查詢會轉譯成某個其他領域，則不支援在查詢運算式中呼叫方法。 例如，您無法在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 呼叫一般 C# 方法，因為 SQL Server 沒有它的內容。 不過，您可以將預存程序對應至方法，並呼叫它們。 如需詳細資訊，請參閱[預存程序](../../../../framework/data/adonet/sql/linq/stored-procedures.md)。  
+>  <span data-ttu-id="f5e8b-144">如果查詢會轉譯成某個其他領域，則不支援在查詢運算式中呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-144">Calling methods in query expressions is not supported if the query will be translated into some other domain.</span></span> <span data-ttu-id="f5e8b-145">例如，您無法在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 呼叫一般 C# 方法，因為 SQL Server 沒有它的內容。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-145">For example, you cannot call an ordinary C# method in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] because SQL Server has no context for it.</span></span> <span data-ttu-id="f5e8b-146">不過，您可以將預存程序對應至方法，並呼叫它們。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-146">However, you can map stored procedures to methods and call those.</span></span> <span data-ttu-id="f5e8b-147">如需詳細資訊，請參閱[預存程序](../../../../framework/data/adonet/sql/linq/stored-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e8b-147">For more information, see [Stored Procedures](../../../../framework/data/adonet/sql/linq/stored-procedures.md).</span></span>  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ <span data-ttu-id="f5e8b-148">[!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="f5e8b-148">[!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
- [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)
+## <a name="see-also"></a><span data-ttu-id="f5e8b-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f5e8b-149">See Also</span></span>  
+ <span data-ttu-id="f5e8b-150">[Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="f5e8b-150">[Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md) </span></span>  
+ <span data-ttu-id="f5e8b-151">[LINQ to SQL](https://msdn.microsoft.com/library/bb386976) </span><span class="sxs-lookup"><span data-stu-id="f5e8b-151">[LINQ to SQL](https://msdn.microsoft.com/library/bb386976) </span></span>  
+ <span data-ttu-id="f5e8b-152">[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md) </span><span class="sxs-lookup"><span data-stu-id="f5e8b-152">[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md) </span></span>  
+ <span data-ttu-id="f5e8b-153">[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="f5e8b-153">[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) </span></span>  
+ <span data-ttu-id="f5e8b-154">[LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="f5e8b-154">[LINQ Query Expressions](../../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ [<span data-ttu-id="f5e8b-155">select 子句</span><span class="sxs-lookup"><span data-stu-id="f5e8b-155">select clause</span></span>](../../../../csharp/language-reference/keywords/select-clause.md)
+

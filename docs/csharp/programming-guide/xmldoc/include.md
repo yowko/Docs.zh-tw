@@ -1,57 +1,76 @@
 ---
-title: "&lt;include&gt; (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<include> C# XML 標記"
-  - "include C# XML 標記"
+title: "&lt;include&gt; (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <include> C# XML tag
+- include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0cabcc25c4e35027c600e4af2bccfad7f9db1514
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/29/2017
+
 ---
-# &lt;include&gt; (C# 程式設計手冊)
-## 語法  
+# <a name="ltincludegt-c-programming-guide"></a><span data-ttu-id="b0e20-102">&lt;include&gt; (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="b0e20-102">&lt;include&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="b0e20-103">語法</span><span class="sxs-lookup"><span data-stu-id="b0e20-103">Syntax</span></span>  
   
-```  
+```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a><span data-ttu-id="b0e20-104">參數</span><span class="sxs-lookup"><span data-stu-id="b0e20-104">Parameters</span></span>  
  `filename`  
- 為含有文件的 XML 檔案名稱。  可將檔案名稱加上路徑。  以單引號 \(' '\) 將 `filename` 括起來。  
+ <span data-ttu-id="b0e20-105">包含文件的 XML 檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="b0e20-105">The name of the XML file containing the documentation.</span></span> <span data-ttu-id="b0e20-106">檔案名稱可以使用路徑進行限定。</span><span class="sxs-lookup"><span data-stu-id="b0e20-106">The file name can be qualified with a path.</span></span> <span data-ttu-id="b0e20-107">請將 `filename` 括在單引號 (' ') 內。</span><span class="sxs-lookup"><span data-stu-id="b0e20-107">Enclose `filename` in single quotation marks (' ').</span></span>  
   
  `tagpath`  
- `filename` 中導向標記 \(Tag\) `name` 的標記路徑。  以單引號 \(' '\) 將路徑括起來。  
+ <span data-ttu-id="b0e20-108">`filename` 中導致 `name` 標記的標記路徑。</span><span class="sxs-lookup"><span data-stu-id="b0e20-108">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="b0e20-109">請將路徑括在單引號 (' ') 內。</span><span class="sxs-lookup"><span data-stu-id="b0e20-109">Enclose the path in single quotation marks (' ').</span></span>  
   
  `name`  
- 註解前面標記內的名稱規範。`name` 會有一個 `id`。  
+ <span data-ttu-id="b0e20-110">標記中位在註解前面的名稱規範；`name` 會有 `id`。</span><span class="sxs-lookup"><span data-stu-id="b0e20-110">The name specifier in the tag that precedes the comments; `name` will have an `id`.</span></span>  
   
  `id`  
- 註解前面之標記的 ID。  以雙引號 \(" "\) 將 ID 括住。  
+ <span data-ttu-id="b0e20-111">位在註解前面的標記識別碼。</span><span class="sxs-lookup"><span data-stu-id="b0e20-111">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="b0e20-112">請將識別碼括在雙引號 (" ") 內。</span><span class="sxs-lookup"><span data-stu-id="b0e20-112">Enclose the ID in double quotation marks (" ").</span></span>  
   
-## 備註  
- \<include\> 標記讓您參考其他檔案內的註解，這些檔案描述了您原始程式碼中的型別以及成員。  除了將文件註解直接放置在您原始程式碼檔案中，您也可以使用這種方法。  將文件放在不同的檔案中，您可以對與原始程式碼分開存放的文件套用原始檔控制。  某人會有簽出的原始程式檔，而其他人則會有簽出的文件檔。  
+## <a name="remarks"></a><span data-ttu-id="b0e20-113">備註</span><span class="sxs-lookup"><span data-stu-id="b0e20-113">Remarks</span></span>  
+ <span data-ttu-id="b0e20-114">\<include> 標記可讓您參考另一個檔案中描述原始程式碼中類型和成員的註解。</span><span class="sxs-lookup"><span data-stu-id="b0e20-114">The \<include> tag lets you refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="b0e20-115">這是將文件註解直接放在原始程式碼檔中的替代方案。</span><span class="sxs-lookup"><span data-stu-id="b0e20-115">This is an alternative to placing documentation comments directly in your source code file.</span></span> <span data-ttu-id="b0e20-116">將文件放入個別檔案，即可將原始檔控制套用至與原始程式碼不同的文件。</span><span class="sxs-lookup"><span data-stu-id="b0e20-116">By putting the documentation in a separate file, you can apply source control to the documentation separately from the source code.</span></span> <span data-ttu-id="b0e20-117">一個人可以簽出原始程式碼檔，而且其他人可以簽出文件檔。</span><span class="sxs-lookup"><span data-stu-id="b0e20-117">One person can have the source code file checked out and someone else can have the documentation file checked out.</span></span>  
   
- \<include\> 標記使用了 XML XPath 的語法。  請參閱 XPath 文件，以取得自訂 \<include\> 用途的方法。  
+ <span data-ttu-id="b0e20-118">\<include> 標記使用 XML XPath 語法。</span><span class="sxs-lookup"><span data-stu-id="b0e20-118">The \<include> tag uses the XML XPath syntax.</span></span> <span data-ttu-id="b0e20-119">如需自訂 \<include> 用法的方式，請參閱 XPath 文件。</span><span class="sxs-lookup"><span data-stu-id="b0e20-119">Refer to XPath documentation for ways to customize your \<include> use.</span></span>  
   
-## 範例  
- 這是多重檔案的範例。  第一個檔案使用 \<include\>，列於下方：  
+## <a name="example"></a><span data-ttu-id="b0e20-120">範例</span><span class="sxs-lookup"><span data-stu-id="b0e20-120">Example</span></span>  
+ <span data-ttu-id="b0e20-121">這是多檔案範例。</span><span class="sxs-lookup"><span data-stu-id="b0e20-121">This is a multifile example.</span></span> <span data-ttu-id="b0e20-122">使用 \<include> 的第一個檔案如下所示：</span><span class="sxs-lookup"><span data-stu-id="b0e20-122">The first file, which uses \<include>, is listed below:</span></span>  
   
- [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ <span data-ttu-id="b0e20-123">[!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="b0e20-123">[!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]</span></span>  
   
- 第二個檔案 \(xml\_include\_tag.doc\) 包含下列的文件註解。  
+ <span data-ttu-id="b0e20-124">第二個檔案 xml_include_tag.doc 包含下列文件註解：</span><span class="sxs-lookup"><span data-stu-id="b0e20-124">The second file, xml_include_tag.doc, contains the following documentation comments:</span></span>  
   
-```  
+```xml  
 <MyDocs>  
   
 <MyMembers name="test">  
@@ -69,10 +88,10 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## 程式輸出  
- 當您使用下列命令列編譯 Test 和 Test2 類別時，就會產生下列輸出： `/doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 \[建置\] 窗格中指定 XML 文件註解選項。  當 C\# 編譯器看見 \<inclue\> 標記時，它會搜尋 xml\_include\_tag.doc 而非目前的來源檔案中的文件註解。  編譯器接著會產生 DocFileName.xml，例如 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) \(英文\) 等文件工具就是取用這個檔案來產生最終的文件。  
+## <a name="program-output"></a><span data-ttu-id="b0e20-125">程式輸出</span><span class="sxs-lookup"><span data-stu-id="b0e20-125">Program Output</span></span>  
+ <span data-ttu-id="b0e20-126">當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`/doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 [建置] 窗格中指定 XML 文件註解選項。</span><span class="sxs-lookup"><span data-stu-id="b0e20-126">The following output is generated when you compile the Test and Test2 classes with the following command line: `/doc:DocFileName.xml.` In Visual Studio, you specify the XML doc comments option in the Build pane of the Project Designer.</span></span> <span data-ttu-id="b0e20-127">當 C# 編譯器看到 \<include> 標記時，會搜尋 xml_include_tag.doc 中的文件註解，而不是目前的原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="b0e20-127">When the C# compiler sees the \<include> tag, it will search for documentation comments in xml_include_tag.doc instead of the current source file.</span></span> <span data-ttu-id="b0e20-128">編譯器接著會產生 DocFileName.xml，這是 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具用來產生最終文件的檔案。</span><span class="sxs-lookup"><span data-stu-id="b0e20-128">The compiler then generates DocFileName.xml, and this is the file that is consumed by documentation tools such as [Sandcastle](https://github.com/EWSoftware/SHFB) to produce the final documentation.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>   
 <doc>   
     <assembly>   
@@ -93,6 +112,7 @@ The summary for this other type.
 </doc>   
 ```  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="b0e20-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b0e20-129">See Also</span></span>  
+ <span data-ttu-id="b0e20-130">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="b0e20-130">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="b0e20-131">建議使用的文件註解標籤</span><span class="sxs-lookup"><span data-stu-id="b0e20-131">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

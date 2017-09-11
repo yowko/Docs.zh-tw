@@ -35,19 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db38c0c2a4f8b74a6b862f86f426b4d8837f4424
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 571731ae7066ba7ec52d4a2413b4d948f3f35bfe
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="troubleshooting-arrays-visual-basic"></a>疑難排解陣列 (Visual Basic)
-此頁面列出使用陣列時所發生的一些常見問題。  
+# <a name="troubleshooting-arrays-visual-basic"></a><span data-ttu-id="181b5-102">疑難排解陣列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="181b5-102">Troubleshooting Arrays (Visual Basic)</span></span>
+<span data-ttu-id="181b5-103">此頁面列出使用陣列時所發生的一些常見問題。</span><span class="sxs-lookup"><span data-stu-id="181b5-103">This page lists some common problems that can occur when working with arrays.</span></span>  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>宣告和初始化陣列的編譯錯誤  
- 因為不瞭解的宣告、 建立和初始化陣列的規則可能會發生編譯錯誤。 最常見的錯誤原因如下所示︰  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a><span data-ttu-id="181b5-104">宣告和初始化陣列的編譯錯誤</span><span class="sxs-lookup"><span data-stu-id="181b5-104">Compilation Errors Declaring and Initializing an Array</span></span>  
+ <span data-ttu-id="181b5-105">因為不瞭解的宣告、 建立和初始化陣列的規則可能會發生編譯錯誤。</span><span class="sxs-lookup"><span data-stu-id="181b5-105">Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays.</span></span> <span data-ttu-id="181b5-106">最常見的錯誤原因如下所示︰</span><span class="sxs-lookup"><span data-stu-id="181b5-106">The most common causes of errors are the following:</span></span>  
   
--   提供[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)之後陣列變數宣告中指定的維度長度的子句。 下列程式碼行顯示此類型的無效宣告。  
+-   <span data-ttu-id="181b5-107">提供[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)之後陣列變數宣告中指定的維度長度的子句。</span><span class="sxs-lookup"><span data-stu-id="181b5-107">Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration.</span></span> <span data-ttu-id="181b5-108">下列程式碼行顯示此類型的無效宣告。</span><span class="sxs-lookup"><span data-stu-id="181b5-108">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -55,15 +56,15 @@ ms.lasthandoff: 03/13/2017
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   指定維度長度已超過最上層不規則陣列的陣列。 下列程式碼行顯示此類型無效的宣告。  
+-   <span data-ttu-id="181b5-109">指定維度長度已超過最上層不規則陣列的陣列。</span><span class="sxs-lookup"><span data-stu-id="181b5-109">Specifying dimension lengths for more than the top-level array of a jagged array.</span></span> <span data-ttu-id="181b5-110">下列程式碼行顯示此類型無效的宣告。</span><span class="sxs-lookup"><span data-stu-id="181b5-110">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   省略`New`關鍵字時指定的項目值。 下列程式碼行顯示此類型無效的宣告。  
+-   <span data-ttu-id="181b5-111">省略`New`關鍵字時指定的項目值。</span><span class="sxs-lookup"><span data-stu-id="181b5-111">Omitting the `New` keyword when specifying the element values.</span></span> <span data-ttu-id="181b5-112">下列程式碼行顯示此類型無效的宣告。</span><span class="sxs-lookup"><span data-stu-id="181b5-112">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   提供`New`子句但不含大括號 (`{}`)。 下列程式碼行顯示此類型的無效宣告。  
+-   <span data-ttu-id="181b5-113">提供`New`子句但不含大括號 (`{}`)。</span><span class="sxs-lookup"><span data-stu-id="181b5-113">Supplying a `New` clause without braces (`{}`).</span></span> <span data-ttu-id="181b5-114">下列程式碼行顯示此類型的無效宣告。</span><span class="sxs-lookup"><span data-stu-id="181b5-114">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -73,15 +74,15 @@ ms.lasthandoff: 03/13/2017
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>存取超出界限的陣列  
- 初始化陣列的程序指派每個維度的上限和下限。 每次存取陣列的元素必須指定有效的索引，或是註標，每個維度。 如果任何索引是其下限低於或高於其上限，<xref:System.IndexOutOfRangeException>產生例外狀況。</xref:System.IndexOutOfRangeException> 編譯器無法偵測這類錯誤，因此在執行階段發生錯誤。  
+## <a name="accessing-an-array-out-of-bounds"></a><span data-ttu-id="181b5-115">存取超出界限的陣列</span><span class="sxs-lookup"><span data-stu-id="181b5-115">Accessing an Array Out of Bounds</span></span>  
+ <span data-ttu-id="181b5-116">初始化陣列的程序指派每個維度的上限和下限。</span><span class="sxs-lookup"><span data-stu-id="181b5-116">The process of initializing an array assigns an upper bound and a lower bound to each dimension.</span></span> <span data-ttu-id="181b5-117">每次存取陣列的元素必須指定有效的索引，或是註標，每個維度。</span><span class="sxs-lookup"><span data-stu-id="181b5-117">Every access to an element of the array must specify a valid index, or subscript, for every dimension.</span></span> <span data-ttu-id="181b5-118">如果任何索引是其下限低於或高於其上限，<xref:System.IndexOutOfRangeException>產生例外狀況。</xref:System.IndexOutOfRangeException></span><span class="sxs-lookup"><span data-stu-id="181b5-118">If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results.</span></span> <span data-ttu-id="181b5-119">編譯器無法偵測這類錯誤，因此在執行階段發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="181b5-119">The compiler cannot detect such an error, so an error occurs at run time.</span></span>  
   
-### <a name="determining-bounds"></a>決定界限  
- 如果另一個元件會將陣列傳遞至您的程式碼，例如做為程序引數，您不知道該陣列的大小或其維度的長度。 您嘗試存取任何項目之前，您應該一律判斷陣列中的每個維度的上限。 如果已建立陣列的方法以外的其他[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]`New`子句，下限可能不是 0，而且很安全決定的最小值。  
+### <a name="determining-bounds"></a><span data-ttu-id="181b5-120">決定界限</span><span class="sxs-lookup"><span data-stu-id="181b5-120">Determining Bounds</span></span>  
+ <span data-ttu-id="181b5-121">如果另一個元件會將陣列傳遞至您的程式碼，例如做為程序引數，您不知道該陣列的大小或其維度的長度。</span><span class="sxs-lookup"><span data-stu-id="181b5-121">If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions.</span></span> <span data-ttu-id="181b5-122">您嘗試存取任何項目之前，您應該一律判斷陣列中的每個維度的上限。</span><span class="sxs-lookup"><span data-stu-id="181b5-122">You should always determine the upper bound for every dimension of an array before you attempt to access any elements.</span></span> <span data-ttu-id="181b5-123">如果已建立陣列的方法以外的其他[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]`New`子句，下限可能不是 0，而且很安全決定的最小值。</span><span class="sxs-lookup"><span data-stu-id="181b5-123">If the array has been created by some means other than a [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.</span></span>  
   
-### <a name="specifying-the-dimension"></a>指定維度  
- 在決定多維度陣列的界限時，小心指定維度的方式。 `dimension`參數<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法是以 0 為基礎，同時`Rank`參數[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函式是以 1 為基礎。</xref:Microsoft.VisualBasic.Information.UBound%2A> </xref:Microsoft.VisualBasic.Information.LBound%2A> </xref:System.Array.GetUpperBound%2A> </xref:System.Array.GetLowerBound%2A>  
+### <a name="specifying-the-dimension"></a><span data-ttu-id="181b5-124">指定維度</span><span class="sxs-lookup"><span data-stu-id="181b5-124">Specifying the Dimension</span></span>  
+ <span data-ttu-id="181b5-125">在決定多維度陣列的界限時，小心指定維度的方式。</span><span class="sxs-lookup"><span data-stu-id="181b5-125">When determining the bounds of a multidimensional array, take care how you specify the dimension.</span></span> <span data-ttu-id="181b5-126">`dimension`參數<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法是以 0 為基礎，同時`Rank`參數[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函式是以 1 為基礎。</xref:Microsoft.VisualBasic.Information.UBound%2A> </xref:Microsoft.VisualBasic.Information.LBound%2A> </xref:System.Array.GetUpperBound%2A> </xref:System.Array.GetLowerBound%2A></span><span class="sxs-lookup"><span data-stu-id="181b5-126">The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [如何︰ 在 Visual Basic 中的將陣列變數初始化](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a><span data-ttu-id="181b5-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="181b5-127">See Also</span></span>  
+ <span data-ttu-id="181b5-128">[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="181b5-128">[Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+<span data-ttu-id="181b5-129"> [如何︰ 在 Visual Basic 中的將陣列變數初始化](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)</span><span class="sxs-lookup"><span data-stu-id="181b5-129"> [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)</span></span>

@@ -1,7 +1,7 @@
 ---
-title: .NET Core | Microsoft Docs
-description: .NET Core
-keywords: ".NET、.NET Core"
+title: ".NET Core 指南"
+description: ".NET Core 是 .NET 的模組化、高效能實作，可用於建立 Windows、Linux 和 Mac 應用程式。 了解 .NET Core 以開始使用。"
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,148 +9,148 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
-ms.openlocfilehash: 168ebcd1ad5bff5802c188ebfd06c08f4bdd13b1
+ms.translationtype: HT
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a><span data-ttu-id="2f6fb-105">.NET Core 指南</span><span class="sxs-lookup"><span data-stu-id="2f6fb-105">.NET Core Guide</span></span>
 
-> 簽出[「入門」教學課程](get-started.md)以了解如何建立簡單的 .NET Core 應用程式。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
+> <span data-ttu-id="2f6fb-106">簽出[「入門」教學課程](get-started.md)以了解如何建立簡單的 .NET Core 應用程式。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-106">Check out the ["Getting Started" tutorials](get-started.md) to learn how to create a simple .NET Core application.</span></span> <span data-ttu-id="2f6fb-107">只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-107">It only takes a few minutes to get your first app up and running.</span></span>
 
-.NET Core 是一般用途的開發平台，由 Microsoft 和 [GitHub](https://github.com/dotnet/core) 上的 .NET 社群共同維護。 它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌/IoT 案例。 
+<span data-ttu-id="2f6fb-108">.NET Core 是一般用途的開發平台，由 Microsoft 和 [GitHub](https://github.com/dotnet/core) 上的 .NET 社群共同維護。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-108">.NET Core is a general purpose development platform maintained by Microsoft and the .NET community on [GitHub](https://github.com/dotnet/core).</span></span> <span data-ttu-id="2f6fb-109">它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌/IoT 案例。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-109">It is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span> 
 
-下列特性最能定義 .NET Core：
+<span data-ttu-id="2f6fb-110">下列特性最能定義 .NET Core：</span><span class="sxs-lookup"><span data-stu-id="2f6fb-110">The following characteristics best define .NET Core:</span></span>
 
-- **彈性的部署︰**可以包含在應用程式內，或任何人、任何機器都可並行安裝。
-- **跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。 Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、Cpu 和應用程式案例，會隨著時間成長。
-- **命令列工具︰**所有產品案例都可以在命令列操作。 
-- **相容︰**.NET Core 透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。
-- **開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
-- **受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。
+- <span data-ttu-id="2f6fb-111">**彈性的部署︰**可以包含在應用程式內，或任何人、任何機器都可並行安裝。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-111">**Flexible deployment:** Can be included in your app or installed side-by-side user- or machine-wide.</span></span>
+- <span data-ttu-id="2f6fb-112">**跨平台︰**Windows、macOS 及 Linux 上都可執行，也可以移轉到其他作業系統。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-112">**Cross-platform:** Runs on Windows, macOS and Linux; can be ported to other operating systems.</span></span> <span data-ttu-id="2f6fb-113">Microsoft、其他公司及個人提供的[支援的作業系統 (OS)](https://github.com/dotnet/core/blob/master/roadmap.md)、Cpu 和應用程式案例，會隨著時間成長。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-113">The [supported Operating Systems (OS)](https://github.com/dotnet/core/blob/master/roadmap.md), CPUs and application scenarios will grow over time, provided by Microsoft, other companies, and individuals.</span></span>
+- <span data-ttu-id="2f6fb-114">**命令列工具︰**所有產品案例都可以在命令列操作。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-114">**Command-line tools:**  All product scenarios can be exercised at the command-line.</span></span> 
+- <span data-ttu-id="2f6fb-115">**相容︰**.NET Core 透過 [.NET Standard](../standard/net-standard.md) 與 .NET Framework、Xamarin 及 Mono 相容。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-115">**Compatible:** .NET Core is compatible with .NET Framework, Xamarin and Mono, via the [.NET Standard](../standard/net-standard.md).</span></span>
+- <span data-ttu-id="2f6fb-116">**開放原始碼︰**.NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-116">**Open source:** The .NET Core platform is open source, using MIT and Apache 2 licenses.</span></span> <span data-ttu-id="2f6fb-117">請在 [CC-BY](https://creativecommons.org/licenses/by/4.0/) 下取得文件授權。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-117">Documentation is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0/).</span></span> <span data-ttu-id="2f6fb-118">.NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-118">.NET Core is a [.NET Foundation](https://dotnetfoundation.org/) project.</span></span>
+- <span data-ttu-id="2f6fb-119">**受 Microsoft 支援︰**.NET Core 依照 [.NET Core 支援](https://www.microsoft.com/net/core/support/) 受 Microsoft 支援。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-119">**Supported by Microsoft:** .NET Core is supported by Microsoft, per [.NET Core Support](https://www.microsoft.com/net/core/support/)</span></span>
 
-## <a name="composition"></a>組合
+## <a name="composition"></a><span data-ttu-id="2f6fb-120">組合</span><span class="sxs-lookup"><span data-stu-id="2f6fb-120">Composition</span></span>
 
-.NET Core 由下列部分組成：
+<span data-ttu-id="2f6fb-121">.NET Core 由下列部分組成：</span><span class="sxs-lookup"><span data-stu-id="2f6fb-121">.NET Core is composed of the following parts:</span></span>
 
-- 一個 [.NET 執行階段](https://github.com/dotnet/coreclr)，提供類型系統、組件載入、記憶體回收行程、原生 Interop 及其他基本服務。 
-- 一組 [Framework 程式庫](https://github.com/dotnet/corefx)，提供基本資料類型、應用程式組合類型及基本的公用程式。 
-- [SDK 工具組](https://github.com/dotnet/cli)及[語言編譯器](https://github.com/dotnet/roslyn)，提供基本的開發人員體驗，可在 [.NET Core SDK](sdk.md) 中取得。
-- 'Dotnet' 應用程式主機，用來啟動 .NET Core 應用程式。 它會選取執行階段及裝載執行階段、提供組件載入原則，然後啟動應用程式。 您也可以差不多的方式用相同的主機啟動 SDK 工具。
+- <span data-ttu-id="2f6fb-122">一個 [.NET 執行階段](https://github.com/dotnet/coreclr)，提供類型系統、組件載入、記憶體回收行程、原生 Interop 及其他基本服務。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-122">A [.NET runtime](https://github.com/dotnet/coreclr), which provides a type system, assembly loading, a garbage collector, native interop and other basic services.</span></span> 
+- <span data-ttu-id="2f6fb-123">一組 [Framework 程式庫](https://github.com/dotnet/corefx)，提供基本資料類型、應用程式組合類型及基本的公用程式。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-123">A set of [framework libraries](https://github.com/dotnet/corefx), which provide primitive data types, app composition types and fundamental utilities.</span></span> 
+- <span data-ttu-id="2f6fb-124">[SDK 工具組](https://github.com/dotnet/cli)及[語言編譯器](https://github.com/dotnet/roslyn)，提供基本的開發人員體驗，可在 [.NET Core SDK](sdk.md) 中取得。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-124">A [set of SDK tools](https://github.com/dotnet/cli) and [language compilers](https://github.com/dotnet/roslyn) that enable the base developer experience, available in the [.NET Core SDK](sdk.md).</span></span>
+- <span data-ttu-id="2f6fb-125">'Dotnet' 應用程式主機，用來啟動 .NET Core 應用程式。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-125">The 'dotnet' app host, which is used to launch .NET Core apps.</span></span> <span data-ttu-id="2f6fb-126">它會選取執行階段及裝載執行階段、提供組件載入原則，然後啟動應用程式。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-126">It selects the runtime and hosts the runtime, provides an assembly loading policy and launches the app.</span></span> <span data-ttu-id="2f6fb-127">您也可以差不多的方式用相同的主機啟動 SDK 工具。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-127">The same host is also used to launch SDK tools in much the same way.</span></span>
 
-### <a name="languages"></a>語言
+### <a name="languages"></a><span data-ttu-id="2f6fb-128">語言</span><span class="sxs-lookup"><span data-stu-id="2f6fb-128">Languages</span></span>
 
-C# 和 F# 語言 (Visual Basic 即將加入) 可用來撰寫 .NET Core 應用程式和程式庫。 在 .NET Core 上執行的編譯器，讓您在可以執行 .NET Core 的任何地方進行開發。 一般情況下，您不會直接使用編譯器，而是使用 SDK 工具間接使用它。
+<span data-ttu-id="2f6fb-129">C# 和 F# 語言 (Visual Basic 即將加入) 可用來撰寫 .NET Core 應用程式和程式庫。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-129">The C# and F# languages (Visual Basic is coming) can be used to write applications and libraries for .NET Core.</span></span> <span data-ttu-id="2f6fb-130">在 .NET Core 上執行的編譯器，讓您在可以執行 .NET Core 的任何地方進行開發。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-130">The compilers run on .NET Core, enabling you to develop for .NET Core anywhere it runs.</span></span> <span data-ttu-id="2f6fb-131">一般情況下，您不會直接使用編譯器，而是使用 SDK 工具間接使用它。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-131">In general, you will not use the compilers directly, but indirectly using the SDK tools.</span></span>
 
-C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim，讓 .NET Core 開發成為您最愛的編碼環境和作業系統的選項。 這項整合有部分是由 [OmniSharp 專案](http://www.omnisharp.net/)的熱心人士提供。
+<span data-ttu-id="2f6fb-132">C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim，讓 .NET Core 開發成為您最愛的編碼環境和作業系統的選項。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-132">The C# and F# compilers and the .NET Core tools are or can be integrated into several text editors and IDEs, including Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text and Vim, making .NET Core development an option in your favorite coding environment and OS.</span></span> <span data-ttu-id="2f6fb-133">這項整合有部分是由 [OmniSharp 專案](http://www.omnisharp.net/)的熱心人士提供。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-133">This integration is provided, in part, by the good folks of the [OmniSharp project](http://www.omnisharp.net/).</span></span>
 
-### <a name="net-apis-and-compatibility"></a>.NET API 和相容性
+### <a name="net-apis-and-compatibility"></a><span data-ttu-id="2f6fb-134">.NET API 和相容性</span><span class="sxs-lookup"><span data-stu-id="2f6fb-134">.NET APIs and Compatibility</span></span>
 
-.NET Core 可以視為 .NET Framework 基底類別庫 (BCL) 層的 .NET Framework 跨平台版本。 它會實作 [.NET Standard](../standard/net-standard.md) 規格。 .NET Core 提供可在 .NET Framework 或 Mono/Xamarin 中取得的 API 子集。 在某些情況下不會實作全部類型 (某些成員不提供或已搬遷)。
+<span data-ttu-id="2f6fb-135">.NET Core 可以視為 .NET Framework 基底類別庫 (BCL) 層的 .NET Framework 跨平台版本。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-135">.NET Core can be thought of as a cross-platform version of the .NET Framework, at the layer of the .NET Framework Base Class Libraries (BCL).</span></span> <span data-ttu-id="2f6fb-136">它會實作 [.NET Standard](../standard/net-standard.md) 規格。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-136">It implements the [.NET Standard](../standard/net-standard.md) specification.</span></span> <span data-ttu-id="2f6fb-137">.NET Core 提供可在 .NET Framework 或 Mono/Xamarin 中取得的 API 子集。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-137">.NET Core provides a subset of the APIs that are available in the .NET Framework or Mono/Xamarin.</span></span> <span data-ttu-id="2f6fb-138">在某些情況下不會實作全部類型 (某些成員不提供或已搬遷)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-138">In some cases, types are not fully implemented (some members are not available or have been moved).</span></span>
 
-若要深入了解 .NET Core API 藍圖，請參閱 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)。
+<span data-ttu-id="2f6fb-139">若要深入了解 .NET Core API 藍圖，請參閱 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-139">Look at the [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) to learn more about the .NET Core API roadmap.</span></span>
 
-### <a name="relationship-to-the-net-standard-library"></a>.NET 標準程式庫的關聯性
+### <a name="relationship-to-net-standard"></a><span data-ttu-id="2f6fb-140">.NET Standard 的關聯性</span><span class="sxs-lookup"><span data-stu-id="2f6fb-140">Relationship to .NET Standard</span></span>
 
-[.NET Standard](../standard/net-standard.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。 .NET 實作必須實作此規格，才會被視為符合 .NET 標準程式庫，可以支援以 .NET 標準程式庫為目標的程式庫。 
+<span data-ttu-id="2f6fb-141">[.NET Standard](../standard/net-standard.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-141">The [.NET Standard](../standard/net-standard.md) is an API spec that describes the consistent set of .NET APIs that developers can expect in each .NET implementation.</span></span> <span data-ttu-id="2f6fb-142">.NET 實作必須實作此規格，才會被視為符合 .NET Standard 規範，可以支援以 .NET Standard 為目標的程式庫。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-142">.NET implementations need to implement this spec in order to be considered .NET Standard-compliant and to support libraries that target .NET Standard.</span></span> 
 
-.NET Core 因為實作 .NET 標準程式庫，所以可以支援 .NET 標準程式庫。
+<span data-ttu-id="2f6fb-143">.NET Core 實作 .NET Standard，因此支援 .NET Standard 程式庫。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-143">.NET Core implements .NET Standard, and therefore supports .NET Standard libraries.</span></span>
 
-### <a name="workloads"></a>工作負載
+### <a name="workloads"></a><span data-ttu-id="2f6fb-144">工作負載</span><span class="sxs-lookup"><span data-stu-id="2f6fb-144">Workloads</span></span>
 
-.NET Core 本身就包含單一的應用程式模型：主控台應用程式，對工具、本機服務和文字型遊戲都極有幫助。 其他應用程式模型早已建置在 .NET Core 以擴充其功能，例如︰
+<span data-ttu-id="2f6fb-145">.NET Core 本身就包含單一的應用程式模型：主控台應用程式，對工具、本機服務和文字型遊戲都極有幫助。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-145">By itself, .NET Core includes a single application model -- console apps -- which is useful for tools, local services and text-based games.</span></span> <span data-ttu-id="2f6fb-146">其他應用程式模型早已建置在 .NET Core 以擴充其功能，例如︰</span><span class="sxs-lookup"><span data-stu-id="2f6fb-146">Additional application models have been built on top of .NET Core to extend its functionality, such as:</span></span>
 
-- [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
-- [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
-- [以 UWP 為目標時的 Xamarin.Forms](https://www.xamarin.com/forms)
+- [<span data-ttu-id="2f6fb-147">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="2f6fb-147">ASP.NET Core</span></span>](/aspnet/core/)
+- [<span data-ttu-id="2f6fb-148">Windows 10 通用 Windows 平台 (UWP)</span><span class="sxs-lookup"><span data-stu-id="2f6fb-148">Windows 10 Universal Windows Platform (UWP)</span></span>](https://developer.microsoft.com/windows)
+- [<span data-ttu-id="2f6fb-149">以 UWP 為目標時的 Xamarin.Forms</span><span class="sxs-lookup"><span data-stu-id="2f6fb-149">Xamarin.Forms when targeting UWP</span></span>](https://www.xamarin.com/forms)
 
-### <a name="open-source"></a>開啟原始檔
+### <a name="open-source"></a><span data-ttu-id="2f6fb-150">開啟原始檔</span><span class="sxs-lookup"><span data-stu-id="2f6fb-150">Open Source</span></span>
 
-[.NET Core](https://github.com/dotnet/core) 是開放原始碼 (MIT 授權)，Microsoft 已於 2014 年提供給 [.NET Foundation](https://dotnetfoundation.org)。 它現在是最常使用的 .NET Foundation 專案之一。 可供個人和公司行號自由運用於個人、學術或商業用途。 很多公司將 .NET Core 用為應用程式、工具、新平台及裝載服務的一部分。 這些公司有些在 GitHub 上對 .NET Core 貢獻良多，為產品方向提供指引，成為 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome) 的一部分。
+<span data-ttu-id="2f6fb-151">[.NET Core](https://github.com/dotnet/core) 是開放原始碼 (MIT 授權)，Microsoft 已於 2014 年提供給 [.NET Foundation](https://dotnetfoundation.org)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-151">[.NET Core](https://github.com/dotnet/core) is open source (MIT license) and was contributed to the [.NET Foundation](https://dotnetfoundation.org) by Microsoft in 2014.</span></span> <span data-ttu-id="2f6fb-152">它現在是最常使用的 .NET Foundation 專案之一。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-152">It is now one of the most active .NET Foundation projects.</span></span> <span data-ttu-id="2f6fb-153">可供個人和公司行號自由運用於個人、學術或商業用途。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-153">It can be freely adopted by individuals and companies, including for personal, academic or commercial purposes.</span></span> <span data-ttu-id="2f6fb-154">很多公司將 .NET Core 用為應用程式、工具、新平台及裝載服務的一部分。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-154">Multiple companies use .NET Core as part of apps, tools, new platforms and hosting services.</span></span> <span data-ttu-id="2f6fb-155">這些公司有些在 GitHub 上對 .NET Core 貢獻良多，為產品方向提供指引，成為 [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome) 的一部分。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-155">Some of these companies make significant contributions to .NET Core on GitHub and provide guidance on the product direction as part of the [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome).</span></span>
 
-## <a name="acquisition"></a>擷取
+## <a name="acquisition"></a><span data-ttu-id="2f6fb-156">擷取</span><span class="sxs-lookup"><span data-stu-id="2f6fb-156">Acquisition</span></span>
 
-.NET Core 有兩大散發方式，一種是 NuGet.org 的封裝，一種是獨立散發。
+<span data-ttu-id="2f6fb-157">.NET Core 有兩大散發方式，一種是 NuGet.org 的封裝，一種是獨立散發。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-157">.NET Core is distributed in two main ways, as packages on NuGet.org and as standalone distributions.</span></span>
 
-### <a name="distributions"></a>分佈
+### <a name="distributions"></a><span data-ttu-id="2f6fb-158">分佈</span><span class="sxs-lookup"><span data-stu-id="2f6fb-158">Distributions</span></span>
 
-您可以在 [.NET Core 快速入門](https://www.microsoft.com/net/core)頁面下載 .NET Core。
+<span data-ttu-id="2f6fb-159">您可以在 [.NET Core 快速入門](https://www.microsoft.com/net/core)頁面下載 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-159">You can download .NET Core at the [.NET Core Getting Started](https://www.microsoft.com/net/core) page.</span></span>
 
-- *Microsoft .NET Core* 散發包含 CoreCLR 執行階段、相關程式庫、主控台應用程式主機和 `dotnet` 應用程式啟動程式。 它是由 [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) 中繼套件所描述。
-- *Microsoft .NET Core SDK* 散發包含 .NET Core 和一組還原 NuGet 封裝及編譯與建置應用程式的工具。 
+- <span data-ttu-id="2f6fb-160">*Microsoft .NET Core* 散發包含 CoreCLR 執行階段、相關程式庫、主控台應用程式主機和 `dotnet` 應用程式啟動程式。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-160">The *Microsoft .NET Core* distribution includes the CoreCLR runtime, associated libraries, a console application host and the `dotnet` app launcher.</span></span> <span data-ttu-id="2f6fb-161">它是由 [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) 中繼套件所描述。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-161">It is described by the [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) metapackage.</span></span>
+- <span data-ttu-id="2f6fb-162">*Microsoft .NET Core SDK* 散發包含 .NET Core 和一組還原 NuGet 封裝及編譯與建置應用程式的工具。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-162">The *Microsoft .NET Core SDK* distribution includes .NET Core and a set of tools for restoring NuGet packages and compiling and building apps.</span></span> 
 
-通常您會先安裝 .NET Core SDK 開始使用 .NET Core 開發。 您可以選擇安裝其他的 .NET Core (或許是發行前版本) 組建。
+<span data-ttu-id="2f6fb-163">通常您會先安裝 .NET Core SDK 開始使用 .NET Core 開發。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-163">Typically, you will first install the .NET Core SDK to get started with .NET Core development.</span></span> <span data-ttu-id="2f6fb-164">您可以選擇安裝其他的 .NET Core (或許是發行前版本) 組建。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-164">You may choose to install additional .NET Core (perhaps pre-release) builds.</span></span>
 
-### <a name="packages"></a>封裝
+### <a name="packages"></a><span data-ttu-id="2f6fb-165">封裝</span><span class="sxs-lookup"><span data-stu-id="2f6fb-165">Packages</span></span>
 
-- [.NET Core 封裝](packages.md)包含 .NET Core 執行階段和程式庫 (參考組件和實作)。 例如，[System.Net.Http](https://www.nuget.org/packages/System.Net.Http/)。
-- [.NET Core 中繼套件](packages.md)藉由參考適當的建立版本的程式庫封裝集合，描述各種層級和應用程式模型。
+- <span data-ttu-id="2f6fb-166">[.NET Core 封裝](packages.md)包含 .NET Core 執行階段和程式庫 (參考組件和實作)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-166">[.NET Core Packages](packages.md) contain the .NET Core runtime and libraries (reference assemblies and implementations).</span></span> <span data-ttu-id="2f6fb-167">例如，[System.Net.Http](https://www.nuget.org/packages/System.Net.Http/)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-167">For example, [System.Net.Http](https://www.nuget.org/packages/System.Net.Http/).</span></span>
+- <span data-ttu-id="2f6fb-168">[.NET Core 中繼套件](packages.md)藉由參考適當的建立版本的程式庫封裝集合，描述各種層級和應用程式模型。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-168">[.NET Core Metapackages](packages.md) describe various layers and app-models by referencing the appropriate set of versioned library packages.</span></span>
 
-## <a name="architecture"></a>架構
+## <a name="architecture"></a><span data-ttu-id="2f6fb-169">架構</span><span class="sxs-lookup"><span data-stu-id="2f6fb-169">Architecture</span></span>
 
-.NET Core 是跨平台的 .NET 實作。 .NET Core 唯一的主要架構考量，是關於為支援的平台提供特定平台的實作。
+<span data-ttu-id="2f6fb-170">.NET Core 是跨平台的 .NET 實作。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-170">.NET Core is a cross-platform .NET implementation.</span></span> <span data-ttu-id="2f6fb-171">.NET Core 唯一的主要架構考量，是關於為支援的平台提供特定平台的實作。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-171">The primary architectural concerns unique to .NET Core are related to providing platform-specific implementations for supported platforms.</span></span>
 
-### <a name="environments"></a>環境
+### <a name="environments"></a><span data-ttu-id="2f6fb-172">環境</span><span class="sxs-lookup"><span data-stu-id="2f6fb-172">Environments</span></span>
 
-Microsoft 在 Windows、macOS 及 Linux 上都支援 .NET Core。 在 Linux 上，Microsoft 主要支援 .NET Core 在running on Red Hat Enterprise Linux (RHEL) 及 Debian 散發系列上執行。
+<span data-ttu-id="2f6fb-173">Microsoft 在 Windows、macOS 及 Linux 上都支援 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-173">.NET Core is supported by Microsoft on Windows, macOS and Linux.</span></span> <span data-ttu-id="2f6fb-174">在 Linux 上，Microsoft 主要支援 .NET Core 在running on Red Hat Enterprise Linux (RHEL) 及 Debian 散發系列上執行。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-174">On Linux, Microsoft primarily supports .NET Core running on Red Hat Enterprise Linux (RHEL) and Debian distribution families.</span></span>
 
-.NET Core 目前支援 X64 CPU。 Windows 上也支援 X86。 ARM64 和 ARM32 正在進行中。
+<span data-ttu-id="2f6fb-175">.NET Core 目前支援 X64 CPU。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-175">.NET Core currently supports X64 CPUs.</span></span> <span data-ttu-id="2f6fb-176">Windows 上也支援 X86。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-176">On Windows, X86 is also supported.</span></span> <span data-ttu-id="2f6fb-177">ARM64 和 ARM32 正在進行中。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-177">ARM64 and ARM32 are in progress.</span></span>
 
-[.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) 提供更詳盡的工作負載及作業系統和 CPU 環境支援與方案資訊。
+<span data-ttu-id="2f6fb-178">[.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) 提供更詳盡的工作負載及作業系統和 CPU 環境支援與方案資訊。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-178">The [.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) provides more detailed information on workload and OS and CPU environment support and plans.</span></span>
 
-其他公司或群組可能支援其他應用程式類型和環境的 .NET Core。
+<span data-ttu-id="2f6fb-179">其他公司或群組可能支援其他應用程式類型和環境的 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-179">Other companies or groups may support .NET Core for other app types and environment.</span></span>
 
-### <a name="designed-for-adaptability"></a>可適性設計
+### <a name="designed-for-adaptability"></a><span data-ttu-id="2f6fb-180">可適性設計</span><span class="sxs-lookup"><span data-stu-id="2f6fb-180">Designed for Adaptability</span></span>
 
-.NET Core 近似其他 .NET 產品，但保有獨特性。 它的設計使它具有最大的可適性，能夠適應新的平台、新的工作負載和新的編譯器工具鏈。 目前正在建構數個作業系統和 CPU 連接埠，可能會移轉更多。 [LLILC](https://github.com/dotnet/llilc) 專案即為一例，這是透過 [LLVM](http://llvm.org/) 編譯器的 .NET Core 原生編譯早期原型。
+<span data-ttu-id="2f6fb-181">.NET Core 近似其他 .NET 產品，但保有獨特性。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-181">.NET Core has been built as a very similar but unique product relative to other .NET products.</span></span> <span data-ttu-id="2f6fb-182">它的設計使它具有最大的可適性，能夠適應新的平台、新的工作負載和新的編譯器工具鏈。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-182">It has been designed to enable broad adaptability to new platforms, for new workloads and with new compiler toolchains.</span></span> <span data-ttu-id="2f6fb-183">目前正在建構數個作業系統和 CPU 連接埠，可能會移轉更多。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-183">It has several OS and CPU ports in progress and may be ported to many more.</span></span> <span data-ttu-id="2f6fb-184">[LLILC](https://github.com/dotnet/llilc) 專案即為一例，這是透過 [LLVM](http://llvm.org/) 編譯器的 .NET Core 原生編譯早期原型。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-184">An example is the [LLILC](https://github.com/dotnet/llilc) project, which is an early prototype of native compilation for .NET Core via the [LLVM](http://llvm.org/) compiler.</span></span>
 
-產品分成幾個部分，讓不同的部分適用於新平台的不同排程。 執行階段和特定平台基本程式庫必須移轉為一個單位。 無特定平台程式庫在所有平台都應該按建構照原樣運作。 減少特定平台實作的專案偏差會提高開發人員的效率，只要能全部或部分以該方式實作演算法或 API，就偏好非平台相關的 C# 程式碼。
+<span data-ttu-id="2f6fb-185">產品分成幾個部分，讓不同的部分適用於新平台的不同排程。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-185">The product is broken into several pieces, enabling the various parts to be adapted to new platforms on different schedules.</span></span> <span data-ttu-id="2f6fb-186">執行階段和特定平台基本程式庫必須移轉為一個單位。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-186">The runtime and platform-specific foundational libraries must be ported as a unit.</span></span> <span data-ttu-id="2f6fb-187">無特定平台程式庫在所有平台都應該按建構照原樣運作。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-187">Platform-agnostic libraries should work as-is on all platforms, by construction.</span></span> <span data-ttu-id="2f6fb-188">減少特定平台實作的專案偏差會提高開發人員的效率，只要能全部或部分以該方式實作演算法或 API，就偏好非平台相關的 C# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-188">There is a project bias to reducing platform-specific implementations to increase developer efficiency, preferring platform-neutral C# code whenever an algorithm or API can be implemented in-full or in-part that way.</span></span>
 
-人們常問如何實作 .NET Core 以支援多個作業系統。 他們通常會問是否有不同的實作，或是否使用[條件式編譯](https://en.wikipedia.org/wiki/Conditional_compilation)。 都有，是強式偏差趨向條件式編譯。
+<span data-ttu-id="2f6fb-189">人們常問如何實作 .NET Core 以支援多個作業系統。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-189">People commonly ask how .NET Core is implemented in order to support multiple operating systems.</span></span> <span data-ttu-id="2f6fb-190">他們通常會問是否有不同的實作，或是否使用[條件式編譯](https://en.wikipedia.org/wiki/Conditional_compilation)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-190">They typically ask if there are separate implementations or if [conditional compilation](https://en.wikipedia.org/wiki/Conditional_compilation) is used.</span></span> <span data-ttu-id="2f6fb-191">都有，是強式偏差趨向條件式編譯。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-191">It's both, with a strong bias towards conditional compilation.</span></span>
 
-如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) 絕大部分是跨所有平台共用的非平台相關程式碼。 非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。
+<span data-ttu-id="2f6fb-192">如以下圖表所示，[CoreFX](https://github.com/dotnet/corefx) 絕大部分是跨所有平台共用的非平台相關程式碼。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-192">You can see in the chart below that the vast majority of [CoreFX](https://github.com/dotnet/corefx) is platform-neutral code that is shared across all platforms.</span></span> <span data-ttu-id="2f6fb-193">非平台相關程式碼可以實作為單一的可攜式組件，用在所有平台上。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-193">Platform-neutral code can be implemented as a single portable assembly that is used on all platforms.</span></span>
 
 ![CoreFX︰每個平台各有程式碼行](../images/corefx-platforms-loc.png)
 
-Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會實作一些 Windows 專用功能，例如 [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry)，但尚未實作任何 Unix 專有的概念。 您也會看到大多數的 Linux 和 macOS 實作會跨 Unix 實作共用，因此 Linux 和 macOS 特定實作的大小差相彷彿。
+<span data-ttu-id="2f6fb-195">Windows 與 Unix 實作大小相近。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-195">Windows and Unix implementations are similar in size.</span></span> <span data-ttu-id="2f6fb-196">Windows 實作較大，因為 CoreFX 會實作一些 Windows 專用功能，例如 [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry)，但尚未實作任何 Unix 專有的概念。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-196">Windows has a larger implementation since CoreFX implements some Windows-only features, such as [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) but does not yet implement any Unix-only concepts.</span></span> <span data-ttu-id="2f6fb-197">您也會看到大多數的 Linux 和 macOS 實作會跨 Unix 實作共用，因此 Linux 和 macOS 特定實作的大小差相彷彿。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-197">You will also see that the majority of the Linux and macOS implementations are shared across a Unix implementation, while the Linux- and macOS-specific implementations are roughly similar in size.</span></span>
 
 
-.NET Core 混用特定平台和非平台相關程式庫。 您可以在幾個範例中看到模式︰
+<span data-ttu-id="2f6fb-198">.NET Core 混用特定平台和非平台相關程式庫。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-198">There are a mix of platform-specific and platform-neutral libraries in .NET Core.</span></span> <span data-ttu-id="2f6fb-199">您可以在幾個範例中看到模式︰</span><span class="sxs-lookup"><span data-stu-id="2f6fb-199">You can see the pattern in a few examples:</span></span>
 
-- [CoreCLR](https://github.com/dotnet/coreclr) 是特定平台型的。 它以 C/C++ 建置，所以依建構而言是特定平台。
-- [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定平台型，設儲存體和密碼編譯 API 在每個作業系統上有巨大差異。 
-- [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。
+- <span data-ttu-id="2f6fb-200">[CoreCLR](https://github.com/dotnet/coreclr) 是特定平台型的。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-200">[CoreCLR](https://github.com/dotnet/coreclr) is platform-specific.</span></span> <span data-ttu-id="2f6fb-201">它以 C/C++ 建置，所以依建構而言是特定平台。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-201">It's built in C/C++, so is platform-specific by construction.</span></span>
+- <span data-ttu-id="2f6fb-202">[System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定平台型，設儲存體和密碼編譯 API 在每個作業系統上有巨大差異。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-202">[System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) and [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) are platform-specific, given that the storage and cryptography APIs differ significantly on each OS.</span></span> 
+- <span data-ttu-id="2f6fb-203">[System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-203">[System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) and [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) are platform-neutral, given that they create and operate over data structures.</span></span>
 
-## <a name="comparisons-to-other-net-platforms"></a>其他 .NET 平台的比較
+## <a name="comparisons-to-other-net-implementations"></a><span data-ttu-id="2f6fb-204">與其他 .NET 實作的比較</span><span class="sxs-lookup"><span data-stu-id="2f6fb-204">Comparisons to other .NET implementations</span></span>
 
-比較 .NET Core 和現有的 .NET 平台，可能最容易了解 .NET Core 的大小和形態。 
+<span data-ttu-id="2f6fb-205">比較 .NET Core 和現有的 .NET 實作，可能最容易了解 .NET Core 的大小和形態。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-205">It is perhaps easiest to understand the size and shape of .NET Core by comparing it to existing .NET implementations.</span></span> 
 
-### <a name="comparison-with-net-framework"></a>與 .NET Framework 的比較
+### <a name="comparison-with-net-framework"></a><span data-ttu-id="2f6fb-206">與 .NET Framework 的比較</span><span class="sxs-lookup"><span data-stu-id="2f6fb-206">Comparison with .NET Framework</span></span>
 
-.NET 平台最早由 Microsoft 於 2000 年散發，從此開始發展。 .NET Framework 是 Microsoft 在 15 來年間生產的主要 .NET 產品。 
+<span data-ttu-id="2f6fb-207">.NET 最早由 Microsoft 於 2000 年發表，從此不斷演進。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-207">.NET was first announced by Microsoft in 2000 and then evolved from there.</span></span> <span data-ttu-id="2f6fb-208">.NET Framework 在超過 15 年來始終是 Microsoft 生產的主要 .NET 實作。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-208">The .NET Framework has been the primary .NET implementation produced by Microsoft during that 15+ year span.</span></span> 
 
-.NET Core 和 .NET Framework 的主要差異︰ 
+<span data-ttu-id="2f6fb-209">.NET Core 和 .NET Framework 的主要差異︰</span><span class="sxs-lookup"><span data-stu-id="2f6fb-209">The major differences between .NET Core and the .NET Framework:</span></span> 
 
-- **應用程式模型**：.NET Core 不支援所有的 .NET Framework 應用程式模型，部分是因為其中大部分是建置在 Windows 技術上，例如 WPF (以 DirectX 為建置基礎)。 .NET Core 和 .NET Framework 都支援主控台和 ASP.NET Core 應用程式模型。 
-- **API**：.NET Core 包含許多和 .NET Framework 相同但較少的 API，且有不同的分解 (組件名稱不同，重要案例的類型圖案不同)。 這些差異目前通常需要變更 .NET Core 的移轉來源。 .NET Core 實作 [.NET Standard](../standard/net-standard.md) API，隨著時間會成長到能包含更多的 .NET Framework BCL API。
-- **子系統**：.NET Core 在 .NET Framework 中實作子系統的子集，目標是更簡單的實作和程式設計模型。 例如，不支援程式碼存取安全性 (CAS)，但支援反映。
-- **平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。
-- **開放原始碼**：.NET Core 是開放原始碼，同時[唯讀的 .NET Framework 子集](https://github.com/microsoft/referencesource)也是開放原始碼。
+- <span data-ttu-id="2f6fb-210">**應用程式模型**：.NET Core 不支援所有的 .NET Framework 應用程式模型，部分是因為其中大部分是建置在 Windows 技術上，例如 WPF (以 DirectX 為建置基礎)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-210">**App-models** -- .NET Core does not support all the .NET Framework app-models, in part because many of them are built on Windows technologies, such as WPF (built on top of DirectX).</span></span> <span data-ttu-id="2f6fb-211">.NET Core 和 .NET Framework 都支援主控台和 ASP.NET Core 應用程式模型。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-211">The console and ASP.NET Core app-models are supported by both .NET Core and .NET Framework.</span></span> 
+- <span data-ttu-id="2f6fb-212">**API**：.NET Core 包含許多和 .NET Framework 相同但較少的 API，且有不同的分解 (組件名稱不同，重要案例的類型圖案不同)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-212">**APIs** -- .NET Core contains many of the same, but fewer, APIs as the .NET Framework, and with a different factoring (assembly names are different; type shape differs in key cases).</span></span> <span data-ttu-id="2f6fb-213">這些差異目前通常需要變更 .NET Core 的移轉來源。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-213">These differences currently typically require changes to port source to .NET Core.</span></span> <span data-ttu-id="2f6fb-214">.NET Core 實作 [.NET Standard](../standard/net-standard.md) API，隨著時間會成長到能包含更多的 .NET Framework BCL API。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-214">.NET Core implements the [.NET Standard](../standard/net-standard.md) API, which will grow to include more of the .NET Framework BCL API over time.</span></span>
+- <span data-ttu-id="2f6fb-215">**子系統**：.NET Core 在 .NET Framework 中實作子系統的子集，目標是更簡單的實作和程式設計模型。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-215">**Subsystems** -- .NET Core implements a subset of the subsystems in the .NET Framework, with the goal of a simpler implementation and programming model.</span></span> <span data-ttu-id="2f6fb-216">例如，不支援程式碼存取安全性 (CAS)，但支援反映。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-216">For example, Code Access Security (CAS) is not supported, while reflection is supported.</span></span>
+- <span data-ttu-id="2f6fb-217">**平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-217">**Platforms** -- The .NET Framework supports Windows and Windows Server while .NET Core also supports macOS and Linux.</span></span>
+- <span data-ttu-id="2f6fb-218">**開放原始碼**：.NET Core 是開放原始碼，同時[唯讀的 .NET Framework 子集](https://github.com/microsoft/referencesource)也是開放原始碼。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-218">**Open Source** -- .NET Core is open source, while a [read-only subset of the .NET Framework](https://github.com/microsoft/referencesource) is open source.</span></span>
 
-雖然 .NET Core 具有唯一性，且與 .NET Framework 及其他 .NET 平台有顯著差異，卻可以直接共用程式碼，使用來源或二進位共用技術。 
+<span data-ttu-id="2f6fb-219">雖然 .NET Core 很獨特，與 .NET Framework 及其他 .NET 實作有顯著差異，卻可以使用原始碼或二進位共用技術，直接共用程式碼。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-219">While .NET Core is unique and has significant differences to the .NET Framework and other .NET implementations, it is straightforward to share code, using either source or binary sharing techniques.</span></span> 
 
-### <a name="comparison-with-mono"></a>與 Mono 的比較
+### <a name="comparison-with-mono"></a><span data-ttu-id="2f6fb-220">與 Mono 的比較</span><span class="sxs-lookup"><span data-stu-id="2f6fb-220">Comparison with Mono</span></span>
 
-[Mono](http://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。
+<span data-ttu-id="2f6fb-221">[Mono](http://www.mono-project.com/) 是原始的跨平台和[開放原始碼](https://github.com/mono/mono) .NET 實作，首次發送為 2004 年。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-221">[Mono](http://www.mono-project.com/) is the original cross-platform and [open source](https://github.com/mono/mono) .NET implementation, first shipping in 2004.</span></span> <span data-ttu-id="2f6fb-222">它可以視為 .NET Framework 的社群複製體。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-222">It can be thought of as a community clone of the .NET Framework.</span></span> <span data-ttu-id="2f6fb-223">Mono 專案小組依賴 Microsoft 為提供相容實作而發行的開放 [.NET 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特別是 ECMA 335)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-223">The Mono project team relied on the open [.NET standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (notably ECMA 335) published by Microsoft in order to provide a compatible implementation.</span></span>
 
-.NET Core 和 Mono 的主要差異︰
+<span data-ttu-id="2f6fb-224">.NET Core 和 Mono 的主要差異︰</span><span class="sxs-lookup"><span data-stu-id="2f6fb-224">The major differences between .NET Core and Mono:</span></span>
 
-- **應用程式模型**：單聲道透過 Xamarin 產品支援 .NET Framework 應用程式模型的子集 (例如，Windows Forms) 和一些其他子集 (例如，[Xamarin.iOS](https://www.xamarin.com/platform))。 .NET Core 不支援這些。
-- **API**：Mono 使用相同的組件名稱及分解，支援 .NET Framework API 的[大型子集](http://docs.go-mono.com/?link=root%3a%2fclasslib)。
-- **平台**：Mono支援許多平台和 CPU。
-- **開放原始碼**：Mono 與 .NET Core 都使用 MIT 授權且都是 .NET Foundation 專案。
-- **焦點**：Mono 近年來的主要焦點是行動平台，而 .NET Core 則著重於雲端工作負載。
+- <span data-ttu-id="2f6fb-225">**應用程式模型**：單聲道透過 Xamarin 產品支援 .NET Framework 應用程式模型的子集 (例如，Windows Forms) 和一些其他子集 (例如，[Xamarin.iOS](https://www.xamarin.com/platform))。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-225">**App-models** -- Mono supports a subset of the .NET Framework app-models (for example, Windows Forms) and some additional ones (for example, [Xamarin.iOS](https://www.xamarin.com/platform)) through the Xamarin product.</span></span> <span data-ttu-id="2f6fb-226">.NET Core 不支援這些。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-226">.NET Core doesn't support these.</span></span>
+- <span data-ttu-id="2f6fb-227">**API**：Mono 使用相同的組件名稱及分解，支援 .NET Framework API 的[大型子集](http://docs.go-mono.com/?link=root%3a%2fclasslib)。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-227">**APIs** -- Mono supports a [large subset](http://docs.go-mono.com/?link=root%3a%2fclasslib) of the .NET Framework APIs, using the same assembly names and factoring.</span></span>
+- <span data-ttu-id="2f6fb-228">**平台**：Mono支援許多平台和 CPU。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-228">**Platforms** -- Mono supports many platforms and CPUs.</span></span>
+- <span data-ttu-id="2f6fb-229">**開放原始碼**：Mono 與 .NET Core 都使用 MIT 授權且都是 .NET Foundation 專案。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-229">**Open Source** -- Mono and .NET Core both use the MIT license and are .NET Foundation projects.</span></span>
+- <span data-ttu-id="2f6fb-230">**焦點**：Mono 近年來的主要焦點是行動平台，而 .NET Core 則著重於雲端工作負載。</span><span class="sxs-lookup"><span data-stu-id="2f6fb-230">**Focus** -- The primary focus of Mono in recent years is mobile platforms, while .NET Core is focused on cloud workloads.</span></span>
 

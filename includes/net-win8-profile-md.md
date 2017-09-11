@@ -1,1 +1,1 @@
-適用於 Windows 8.x 市集應用程式的 .NET
+<span data-ttu-id="a0741-101">適用於 Windows 8.x 市集應用程式的 .NET</span><span class="sxs-lookup"><span data-stu-id="a0741-101">.NET for Windows 8.x Store apps</span></span>

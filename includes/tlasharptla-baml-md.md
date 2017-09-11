@@ -1,1 +1,1 @@
-二進位 XAML (BAML)
+<span data-ttu-id="bf775-101">二進位 XAML (BAML)</span><span class="sxs-lookup"><span data-stu-id="bf775-101">binary XAML (BAML)</span></span>

@@ -20,19 +20,19 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 225aa8a39a973ba8d4f199ccfce68e2dc16d8aa2
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 48ca5ab9b10b7663410d8180c3bd9fde73982656
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>如何：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)
-填入 XML 樹狀結構的其中一個方法是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 建立 <xref:System.Xml.XmlWriter>，然後寫入 <xref:System.Xml.XmlWriter>。 XML 樹狀結構會填入所有寫入 <xref:System.Xml.XmlWriter> 的節點。  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a><span data-ttu-id="a3b6e-102">如何：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a3b6e-102">How to: Populate an XML Tree with an XmlWriter (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="a3b6e-103">填入 XML 樹狀結構的其中一個方法是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 建立 <xref:System.Xml.XmlWriter>，然後寫入 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-103">One way to populate an XML tree is to use <xref:System.Xml.Linq.XContainer.CreateWriter%2A> to create an <xref:System.Xml.XmlWriter>, and then write to the <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="a3b6e-104">XML 樹狀結構會填入所有寫入 <xref:System.Xml.XmlWriter> 的節點。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-104">The XML tree is populated with all nodes that are written to the <xref:System.Xml.XmlWriter>.</span></span>  
   
- 當您使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 搭配預期寫入 <xref:System.Xml.XmlWriter> 的其他類別 (例如 <xref:System.Xml.Xsl.XslCompiledTransform>) 時，通常會使用此方法。  
+ <span data-ttu-id="a3b6e-105">當您使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 搭配預期寫入 <xref:System.Xml.XmlWriter> 的其他類別 (例如 <xref:System.Xml.Xsl.XslCompiledTransform>) 時，通常會使用此方法。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-105">You would typically use this method when you use [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] with another class that expects to write to an <xref:System.Xml.XmlWriter>, such as <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
   
-## <a name="example"></a>範例  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 可能用於叫用 XSLT 轉換。 此範例會建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新的文件，然後建立 <xref:System.Xml.XmlWriter> 來寫入新文件。 然後會叫用 XSLT 轉換，並傳入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。 轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。  
+## <a name="example"></a><span data-ttu-id="a3b6e-106">範例</span><span class="sxs-lookup"><span data-stu-id="a3b6e-106">Example</span></span>  
+ <span data-ttu-id="a3b6e-107"><xref:System.Xml.Linq.XContainer.CreateWriter%2A> 可能用於叫用 XSLT 轉換。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-107">One possible use for <xref:System.Xml.Linq.XContainer.CreateWriter%2A> is when invoking an XSLT transformation.</span></span> <span data-ttu-id="a3b6e-108">此範例會建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新的文件，然後建立 <xref:System.Xml.XmlWriter> 來寫入新文件。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-108">This example creates an XML tree, creates an <xref:System.Xml.XmlReader> from the XML tree, creates a new document, and then creates an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="a3b6e-109">然後會叫用 XSLT 轉換，並傳入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-109">It then invokes the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="a3b6e-110">轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="a3b6e-110">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -70,7 +70,7 @@ using (XmlWriter writer = newTree.CreateWriter())
 Console.WriteLine(newTree);  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="a3b6e-111">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="a3b6e-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -79,8 +79,8 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>   
- <xref:System.Xml.XmlWriter>   
- <xref:System.Xml.Xsl.XslCompiledTransform>   
- [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="a3b6e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a3b6e-112">See Also</span></span>  
+ <span data-ttu-id="a3b6e-113"><xref:System.Xml.Linq.XContainer.CreateWriter%2A></span><span class="sxs-lookup"><span data-stu-id="a3b6e-113"><xref:System.Xml.Linq.XContainer.CreateWriter%2A></span></span>   
+ <span data-ttu-id="a3b6e-114"><xref:System.Xml.XmlWriter></span><span class="sxs-lookup"><span data-stu-id="a3b6e-114"><xref:System.Xml.XmlWriter></span></span>   
+ <span data-ttu-id="a3b6e-115"><xref:System.Xml.Xsl.XslCompiledTransform></span><span class="sxs-lookup"><span data-stu-id="a3b6e-115"><xref:System.Xml.Xsl.XslCompiledTransform></span></span>   
+<span data-ttu-id="a3b6e-116"> [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)</span><span class="sxs-lookup"><span data-stu-id="a3b6e-116"> [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)</span></span>

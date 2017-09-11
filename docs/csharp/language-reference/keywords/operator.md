@@ -1,5 +1,5 @@
 ---
-title: "operator (C# 參考) | Microsoft Docs"
+title: "operator (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,28 +30,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2596da6ef7df5a0f051b23645d5b8096e829883f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 76d403493861e9c587672412cd2989c419b8717a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="operator-c-reference"></a>operator (C# 參考)
-使用 `operator` 關鍵字多載內建運算子，或在類別或結構宣告中提供使用者定義的轉換。  
+# <a name="operator-c-reference"></a><span data-ttu-id="e47cb-102">operator (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e47cb-102">operator (C# Reference)</span></span>
+<span data-ttu-id="e47cb-103">使用 `operator` 關鍵字多載內建運算子，或在類別或結構宣告中提供使用者定義的轉換。</span><span class="sxs-lookup"><span data-stu-id="e47cb-103">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>  
   
-## <a name="example"></a>範例  
- 以下是極簡化的分數類別。 它會多載 + 和 * 運算子，以執行分數的加法和乘法，也提供將分數型別轉換成 double 型別的轉換運算子。  
+## <a name="example"></a><span data-ttu-id="e47cb-104">範例</span><span class="sxs-lookup"><span data-stu-id="e47cb-104">Example</span></span>  
+ <span data-ttu-id="e47cb-105">以下是極簡化的分數類別。</span><span class="sxs-lookup"><span data-stu-id="e47cb-105">The following is a very simplified class for fractional numbers.</span></span> <span data-ttu-id="e47cb-106">它會多載 + 和 * 運算子，以執行分數的加法和乘法，也提供將分數型別轉換成 double 型別的轉換運算子。</span><span class="sxs-lookup"><span data-stu-id="e47cb-106">It overloads the + and * operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a Fraction type to a double type.</span></span>  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
+ <span data-ttu-id="e47cb-107">[!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e47cb-107">[!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="e47cb-108">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="e47cb-108">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [implicit](../../../csharp/language-reference/keywords/implicit.md)   
- [explicit](../../../csharp/language-reference/keywords/explicit.md)   
- [如何：在結構之間實作使用者定義的轉換](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+## <a name="see-also"></a><span data-ttu-id="e47cb-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e47cb-109">See Also</span></span>  
+ <span data-ttu-id="e47cb-110">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="e47cb-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="e47cb-111">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e47cb-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="e47cb-112">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="e47cb-112">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="e47cb-113">[implicit](../../../csharp/language-reference/keywords/implicit.md) </span><span class="sxs-lookup"><span data-stu-id="e47cb-113">[implicit](../../../csharp/language-reference/keywords/implicit.md) </span></span>  
+ <span data-ttu-id="e47cb-114">[explicit](../../../csharp/language-reference/keywords/explicit.md) </span><span class="sxs-lookup"><span data-stu-id="e47cb-114">[explicit](../../../csharp/language-reference/keywords/explicit.md) </span></span>  
+ [<span data-ttu-id="e47cb-115">如何：在結構之間實作使用者定義的轉換</span><span class="sxs-lookup"><span data-stu-id="e47cb-115">How to: Implement User-Defined Conversions Between Structs</span></span>](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+

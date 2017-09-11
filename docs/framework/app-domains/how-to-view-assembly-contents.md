@@ -1,5 +1,5 @@
 ---
-title: "如何：檢視組件內容 | Microsoft Docs"
+title: "如何：檢視組件內容"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,34 +22,34 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 38ed309c8d1ef7467b235eb2e751ffb9016a83ab
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3583e69e90080eb830bb61a5e0c7b6e944f7d654
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-view-assembly-contents"></a>如何：檢視組件內容
-您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。 如果所檢查的檔案是組件，這項資訊可以包括組件的屬性，以及其他模組和組件的參考。 這項資訊可能有助於判斷檔案是組件還是組件的一部分，以及檔案是否有其他模組或組件的參考。  
+# <a name="how-to-view-assembly-contents"></a><span data-ttu-id="ca67a-102">如何：檢視組件內容</span><span class="sxs-lookup"><span data-stu-id="ca67a-102">How to: View Assembly Contents</span></span>
+<span data-ttu-id="ca67a-103">您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。</span><span class="sxs-lookup"><span data-stu-id="ca67a-103">You can use the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) information in a file.</span></span> <span data-ttu-id="ca67a-104">如果所檢查的檔案是組件，這項資訊可以包括組件的屬性，以及其他模組和組件的參考。</span><span class="sxs-lookup"><span data-stu-id="ca67a-104">If the file being examined is an assembly, this information can include the assembly's attributes, as well as references to other modules and assemblies.</span></span> <span data-ttu-id="ca67a-105">這項資訊可能有助於判斷檔案是組件還是組件的一部分，以及檔案是否有其他模組或組件的參考。</span><span class="sxs-lookup"><span data-stu-id="ca67a-105">This information can be helpful in determining whether a file is an assembly or part of an assembly, and whether the file has references to other modules or assemblies.</span></span>  
   
-### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>使用 Ildasm.exe 顯示組件的內容  
+### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a><span data-ttu-id="ca67a-106">使用 Ildasm.exe 顯示組件的內容</span><span class="sxs-lookup"><span data-stu-id="ca67a-106">To display the contents of an assembly using Ildasm.exe</span></span>  
   
-1.  在命令提示字元鍵入 **ildasm** \<組件名稱>。 例如，下列命令會反組譯 `Hello.exe` 組件。  
+1.  <span data-ttu-id="ca67a-107">在命令提示字元鍵入 **ildasm** \<組件名稱>。</span><span class="sxs-lookup"><span data-stu-id="ca67a-107">Type **ildasm** \<*assembly name*> at the command prompt.</span></span> <span data-ttu-id="ca67a-108">例如，下列命令會反組譯 `Hello.exe` 組件。</span><span class="sxs-lookup"><span data-stu-id="ca67a-108">For example, the following command disassembles the `Hello.exe` assembly.</span></span>  
   
     ```  
     ildasm Hello.exe  
     ```  
   
-### <a name="to-view-assembly-manifest-information"></a>檢視組件資訊清單資訊  
+### <a name="to-view-assembly-manifest-information"></a><span data-ttu-id="ca67a-109">檢視組件資訊清單資訊</span><span class="sxs-lookup"><span data-stu-id="ca67a-109">To view assembly manifest information</span></span>  
   
-1.  按兩下 [MSIL 反組譯工具] 視窗中的資訊清單圖示。  
+1.  <span data-ttu-id="ca67a-110">按兩下 [MSIL 反組譯工具] 視窗中的資訊清單圖示。</span><span class="sxs-lookup"><span data-stu-id="ca67a-110">Double-click the MANIFEST icon in the MSIL Disassembler window.</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例會啟動基本 "Hello, World" 程式。 編譯程式之後，請使用 Ildasm.exe 來反組譯 Hello.exe 組件，以及檢視組件資訊清單。  
+## <a name="example"></a><span data-ttu-id="ca67a-111">範例</span><span class="sxs-lookup"><span data-stu-id="ca67a-111">Example</span></span>  
+ <span data-ttu-id="ca67a-112">下列範例會啟動基本 "Hello, World" 程式。</span><span class="sxs-lookup"><span data-stu-id="ca67a-112">The following example starts with a basic "Hello, World" program.</span></span> <span data-ttu-id="ca67a-113">編譯程式之後，請使用 Ildasm.exe 來反組譯 Hello.exe 組件，以及檢視組件資訊清單。</span><span class="sxs-lookup"><span data-stu-id="ca67a-113">After compiling the program, use Ildasm.exe to disassemble the Hello.exe assembly and view the assembly manifest.</span></span>  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ <span data-ttu-id="ca67a-114">[!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]</span><span class="sxs-lookup"><span data-stu-id="ca67a-114">[!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]</span></span>  
   
- 在 Hello.exe 組件上執行命令 ildasm.exe，並按兩下 IL DASM 視窗中的資訊清單圖示，以產生下列輸出：  
+ <span data-ttu-id="ca67a-115">在 Hello.exe 組件上執行命令 ildasm.exe，並按兩下 IL DASM 視窗中的資訊清單圖示，以產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="ca67a-115">Running the command ildasm.exe on the Hello.exe assembly and double-clicking the MANIFEST icon in the IL DASM window produces the following output:</span></span>  
   
 ```  
 // Metadata version: v4.0.30319  
@@ -76,24 +76,24 @@ ms.lasthandoff: 07/13/2017
 // Image base: 0x00600000  
 ```  
   
- 下表描述範例中所用 Hello.exe 組件之組件資訊清單中的每個指示詞。  
+ <span data-ttu-id="ca67a-116">下表描述範例中所用 Hello.exe 組件之組件資訊清單中的每個指示詞。</span><span class="sxs-lookup"><span data-stu-id="ca67a-116">The following table describes each directive in the assembly manifest of the Hello.exe assembly used in the example.</span></span>  
   
-|指示詞|說明|  
+|<span data-ttu-id="ca67a-117">指示詞</span><span class="sxs-lookup"><span data-stu-id="ca67a-117">Directive</span></span>|<span data-ttu-id="ca67a-118">說明</span><span class="sxs-lookup"><span data-stu-id="ca67a-118">Description</span></span>|  
 |---------------|-----------------|  
-|**.assembly extern \<**組件名稱**>**|指定另一個組件，其中包含目前模組所參考的項目 (在此範例中為 `mscorlib`)。|  
-|**.publickeytoken \<**權杖**>**|指定所參考組件之實際金鑰的權杖。|  
-|**.ver \<**版本號碼**>**|指定所參考組件的版本號碼。|  
-|**.assembly \<**組件名稱**>**|指定組件名稱。|  
-|**.hash algorithm \<**int32 值**>**|指定使用的雜湊演算法。|  
-|**.ver \<**版本號碼**>**|指定組件的版本號碼。|  
-|**.module \<**檔案名稱**>**|指定構成組件之模組的名稱。 在此範例中，組件只包含一個檔案。|  
-|**.subsystem \<**值**>**|指定程式所需的應用程式環境。 在此範例中，值 3 指出從主控台執行這個可執行檔。|  
-|**.corflags**|中繼資料中目前保留的欄位。|  
+|<span data-ttu-id="ca67a-119">**.assembly extern \<**組件名稱**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-119">**.assembly extern \<** *assembly name* **>**</span></span>|<span data-ttu-id="ca67a-120">指定另一個組件，其中包含目前模組所參考的項目 (在此範例中為 `mscorlib`)。</span><span class="sxs-lookup"><span data-stu-id="ca67a-120">Specifies another assembly that contains items referenced by the current module (in this example, `mscorlib`).</span></span>|  
+|<span data-ttu-id="ca67a-121">**.publickeytoken \<**權杖**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-121">**.publickeytoken \<** *token* **>**</span></span>|<span data-ttu-id="ca67a-122">指定所參考組件之實際金鑰的權杖。</span><span class="sxs-lookup"><span data-stu-id="ca67a-122">Specifies the token of the actual key of the referenced assembly.</span></span>|  
+|<span data-ttu-id="ca67a-123">**.ver \<**版本號碼**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-123">**.ver \<** *version number* **>**</span></span>|<span data-ttu-id="ca67a-124">指定所參考組件的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="ca67a-124">Specifies the version number of the referenced assembly.</span></span>|  
+|<span data-ttu-id="ca67a-125">**.assembly \<**組件名稱**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-125">**.assembly \<** *assembly name* **>**</span></span>|<span data-ttu-id="ca67a-126">指定組件名稱。</span><span class="sxs-lookup"><span data-stu-id="ca67a-126">Specifies the assembly name.</span></span>|  
+|<span data-ttu-id="ca67a-127">**.hash algorithm \<**int32 值**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-127">**.hash algorithm \<** *int32 value* **>**</span></span>|<span data-ttu-id="ca67a-128">指定使用的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="ca67a-128">Specifies the hash algorithm used.</span></span>|  
+|<span data-ttu-id="ca67a-129">**.ver \<**版本號碼**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-129">**.ver \<** *version number* **>**</span></span>|<span data-ttu-id="ca67a-130">指定組件的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="ca67a-130">Specifies the version number of the assembly.</span></span>|  
+|<span data-ttu-id="ca67a-131">**.module \<**檔案名稱**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-131">**.module \<** *file name* **>**</span></span>|<span data-ttu-id="ca67a-132">指定構成組件之模組的名稱。</span><span class="sxs-lookup"><span data-stu-id="ca67a-132">Specifies the name of the modules that make up the assembly.</span></span> <span data-ttu-id="ca67a-133">在此範例中，組件只包含一個檔案。</span><span class="sxs-lookup"><span data-stu-id="ca67a-133">In this example, the assembly consists of only one file.</span></span>|  
+|<span data-ttu-id="ca67a-134">**.subsystem \<**值**>**</span><span class="sxs-lookup"><span data-stu-id="ca67a-134">**.subsystem \<** *value* **>**</span></span>|<span data-ttu-id="ca67a-135">指定程式所需的應用程式環境。</span><span class="sxs-lookup"><span data-stu-id="ca67a-135">Specifies the application environment required for the program.</span></span> <span data-ttu-id="ca67a-136">在此範例中，值 3 指出從主控台執行這個可執行檔。</span><span class="sxs-lookup"><span data-stu-id="ca67a-136">In this example, the value 3 indicates that this executable is run from a console.</span></span>|  
+|<span data-ttu-id="ca67a-137">**.corflags**</span><span class="sxs-lookup"><span data-stu-id="ca67a-137">**.corflags**</span></span>|<span data-ttu-id="ca67a-138">中繼資料中目前保留的欄位。</span><span class="sxs-lookup"><span data-stu-id="ca67a-138">Currently a reserved field in the metadata.</span></span>|  
   
- 根據組件的內容，組件資訊清單可以包含許多不同的指示詞。 如需組件資訊清單中的指示詞延伸清單，請參閱 ECMA 文件，特別是 "Partition II: Metadata Definition and Semantics" (分割 II：中繼資料定義和語意) 和 "Partition III: CIL Instruction Set" (分割 III：CIL 指令集)。 您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](http://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。  
+ <span data-ttu-id="ca67a-139">根據組件的內容，組件資訊清單可以包含許多不同的指示詞。</span><span class="sxs-lookup"><span data-stu-id="ca67a-139">An assembly manifest can contain a number of different directives, depending on the contents of the assembly.</span></span> <span data-ttu-id="ca67a-140">如需組件資訊清單中的指示詞延伸清單，請參閱 ECMA 文件，特別是 "Partition II: Metadata Definition and Semantics" (分割 II：中繼資料定義和語意) 和 "Partition III: CIL Instruction Set" (分割 III：CIL 指令集)。</span><span class="sxs-lookup"><span data-stu-id="ca67a-140">For an extensive list of the directives in the assembly manifest, see the ECMA documentation, especially "Partition II: Metadata Definition and Semantics" and "Partition III: CIL Instruction Set".</span></span> <span data-ttu-id="ca67a-141">您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](http://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。</span><span class="sxs-lookup"><span data-stu-id="ca67a-141">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [應用程式定義域和組件](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
- [應用程式定義域和組件「如何」主題](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
- [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+## <a name="see-also"></a><span data-ttu-id="ca67a-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ca67a-142">See Also</span></span>  
+ <span data-ttu-id="ca67a-143">[應用程式定義域和組件](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346) </span><span class="sxs-lookup"><span data-stu-id="ca67a-143">[Application Domains and Assemblies](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346) </span></span>  
+ <span data-ttu-id="ca67a-144">[應用程式定義域和組件「如何」主題](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md) </span><span class="sxs-lookup"><span data-stu-id="ca67a-144">[Application Domains and Assemblies How-to Topics](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md) </span></span>  
+ [<span data-ttu-id="ca67a-145">Ildasm.exe (IL 反組譯工具)</span><span class="sxs-lookup"><span data-stu-id="ca67a-145">Ildasm.exe (IL Disassembler)</span></span>](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
 

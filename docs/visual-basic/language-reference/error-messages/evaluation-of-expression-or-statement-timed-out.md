@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf087a85710cbf19e490b3c8f335ea40dbc0d4f7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3ca2da6140dff3b1ef82c9546f4f1401ac1f1699
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="evaluation-of-expression-or-statement-timed-out"></a>運算式或陳述式評估已經逾時
-運算式的評估未及時完成。  
+# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="0d70e-102">運算式或陳述式評估已經逾時</span><span class="sxs-lookup"><span data-stu-id="0d70e-102">Evaluation of expression or statement timed out</span></span>
+<span data-ttu-id="0d70e-103">運算式的評估未及時完成。</span><span class="sxs-lookup"><span data-stu-id="0d70e-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
   
- **錯誤識別碼︰** BC30722  
+ <span data-ttu-id="0d70e-104">**錯誤識別碼︰** BC30722</span><span class="sxs-lookup"><span data-stu-id="0d70e-104">**Error ID:** BC30722</span></span>  
   
-## <a name="to-correct-this-error"></a>更正這個錯誤  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0d70e-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="0d70e-105">To correct this error</span></span>  
   
-1.  確認輸入的程式碼正確。  
+1.  <span data-ttu-id="0d70e-106">確認輸入的程式碼正確。</span><span class="sxs-lookup"><span data-stu-id="0d70e-106">Verify that the entered code is correct.</span></span>  
   
-2.  它便會減少執行時間，請簡化運算式。  
+2.  <span data-ttu-id="0d70e-107">它便會減少執行時間，請簡化運算式。</span><span class="sxs-lookup"><span data-stu-id="0d70e-107">Simplify your expression so that it takes less time to execute.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Studio 偵錯](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a><span data-ttu-id="0d70e-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d70e-108">See Also</span></span>  
+ [<span data-ttu-id="0d70e-109">Visual Studio 偵錯</span><span class="sxs-lookup"><span data-stu-id="0d70e-109">Debugging in Visual Studio</span></span>](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)

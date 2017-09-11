@@ -41,19 +41,19 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xml-literals-visual-basic"></a>XML 常值 (Visual Basic)
-本節主題記錄 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中 XML 常值的語法。 XML 常值語法可讓您直接在您的程式碼中加入 XML。  
+# <a name="xml-literals-visual-basic"></a><span data-ttu-id="97fee-102">XML 常值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="97fee-102">XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="97fee-103">本節主題記錄 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中 XML 常值的語法。</span><span class="sxs-lookup"><span data-stu-id="97fee-103">The topics in this section document the syntax of XML literals in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="97fee-104">XML 常值語法可讓您直接在您的程式碼中加入 XML。</span><span class="sxs-lookup"><span data-stu-id="97fee-104">The XML literal syntax enables you to incorporate XML directly in your code.</span></span>  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="97fee-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="97fee-105">In This Section</span></span>  
   
-|主題|說明|  
+|<span data-ttu-id="97fee-106">主題</span><span class="sxs-lookup"><span data-stu-id="97fee-106">Topic</span></span>|<span data-ttu-id="97fee-107">說明</span><span class="sxs-lookup"><span data-stu-id="97fee-107">Description</span></span>|  
 |-----------|-----------------|  
-|[XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|描述代表 <xref:System.Xml.Linq.XElement> 物件之常值的語法。|  
-|[XML 文件常值](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|描述代表 <xref:System.Xml.Linq.XDocument> 物件之常值的語法。|  
-|[XML CDATA 常值](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|描述代表 <xref:System.Xml.Linq.XCData> 物件之常值的語法。|  
-|[XML 註解常值](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|描述代表 <xref:System.Xml.Linq.XComment> 物件之常值的語法。|  
-|[XML 處理指示常值](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|描述代表 <xref:System.Xml.Linq.XProcessingInstruction> 物件之常值的語法。|  
+|[<span data-ttu-id="97fee-108">XML 項目常值</span><span class="sxs-lookup"><span data-stu-id="97fee-108">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|<span data-ttu-id="97fee-109">描述代表 <xref:System.Xml.Linq.XElement> 物件之常值的語法。</span><span class="sxs-lookup"><span data-stu-id="97fee-109">Describes the syntax for literals that represent <xref:System.Xml.Linq.XElement> objects.</span></span>|  
+|[<span data-ttu-id="97fee-110">XML 文件常值</span><span class="sxs-lookup"><span data-stu-id="97fee-110">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|<span data-ttu-id="97fee-111">描述代表 <xref:System.Xml.Linq.XDocument> 物件之常值的語法。</span><span class="sxs-lookup"><span data-stu-id="97fee-111">Describes the syntax for literals that represent <xref:System.Xml.Linq.XDocument> objects.</span></span>|  
+|[<span data-ttu-id="97fee-112">XML CDATA 常值</span><span class="sxs-lookup"><span data-stu-id="97fee-112">XML CDATA Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|<span data-ttu-id="97fee-113">描述代表 <xref:System.Xml.Linq.XCData> 物件之常值的語法。</span><span class="sxs-lookup"><span data-stu-id="97fee-113">Describes the syntax for literals that represent <xref:System.Xml.Linq.XCData> objects.</span></span>|  
+|[<span data-ttu-id="97fee-114">XML 註解常值</span><span class="sxs-lookup"><span data-stu-id="97fee-114">XML Comment Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<span data-ttu-id="97fee-115">描述代表 <xref:System.Xml.Linq.XComment> 物件之常值的語法。</span><span class="sxs-lookup"><span data-stu-id="97fee-115">Describes the syntax for literals that represent <xref:System.Xml.Linq.XComment> objects.</span></span>|  
+|[<span data-ttu-id="97fee-116">XML 處理指示常值</span><span class="sxs-lookup"><span data-stu-id="97fee-116">XML Processing Instruction Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<span data-ttu-id="97fee-117">描述代表 <xref:System.Xml.Linq.XProcessingInstruction> 物件之常值的語法。</span><span class="sxs-lookup"><span data-stu-id="97fee-117">Describes the syntax for literals that represent <xref:System.Xml.Linq.XProcessingInstruction> objects.</span></span>|  
   
-## <a name="see-also"></a>另請參閱  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="97fee-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="97fee-118">See Also</span></span>  
+ [<span data-ttu-id="97fee-119">XML</span><span class="sxs-lookup"><span data-stu-id="97fee-119">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
 

@@ -1,1 +1,1 @@
-此類型支援 .NET Framework 基礎結構，並不能直接使用於您的程式碼中。
+<span data-ttu-id="9c005-101">此類型支援 .NET Framework 基礎結構，並不能直接使用於您的程式碼中。</span><span class="sxs-lookup"><span data-stu-id="9c005-101">This type supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

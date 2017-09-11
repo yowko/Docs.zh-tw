@@ -1,5 +1,5 @@
 ---
-title: "型別 (C# 程式設計指南) | Microsoft Docs"
+title: "類型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,101 +35,87 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31fb07eba1cb40e36861227e3e692677b02e3dd5
-ms.openlocfilehash: ad61ccff0503617f21780d2af7cd806c47da2500
+ms.translationtype: HT
+ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
+ms.openlocfilehash: 906fa362c249c3e5abbd6f2ed3ba879a81334aeb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/01/2017
+ms.lasthandoff: 08/01/2017
 
 ---
-<a id="types-c-programming-guide" class="xliff"></a>
-
-# 類型 (C# 程式設計手冊)
-<a id="types-variables-and-values" class="xliff"></a>
-
-## 型別、變數和值  
- C# 是強型別語言。 每個變數和常數都有型別，如同每個會評估為值的運算式一般。 每種方法簽章都會指定每個輸入參數與其傳回值的型別。 .NET Framework Class Library 會定義一組內建數字型別以及較複雜型別，代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。 一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。  
+# <a name="types-c-programming-guide"></a><span data-ttu-id="13536-102">類型 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="13536-102">Types (C# Programming Guide)</span></span>
+## <a name="types-variables-and-values"></a><span data-ttu-id="13536-103">型別、變數和值</span><span class="sxs-lookup"><span data-stu-id="13536-103">Types, Variables, and Values</span></span>  
+ <span data-ttu-id="13536-104">C# 是強型別語言。</span><span class="sxs-lookup"><span data-stu-id="13536-104">C# is a strongly-typed language.</span></span> <span data-ttu-id="13536-105">每個變數和常數都有型別，如同每個會評估為值的運算式一般。</span><span class="sxs-lookup"><span data-stu-id="13536-105">Every variable and constant has a type, as does every expression that evaluates to a value.</span></span> <span data-ttu-id="13536-106">每種方法簽章都會指定每個輸入參數與其傳回值的型別。</span><span class="sxs-lookup"><span data-stu-id="13536-106">Every method signature specifies a type for each input parameter and for the return value.</span></span> <span data-ttu-id="13536-107">.NET Framework Class Library 會定義一組內建數字型別以及較複雜型別，代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。</span><span class="sxs-lookup"><span data-stu-id="13536-107">The .NET Framework class library defines a set of built-in numeric types as well as more complex types that represent a wide variety of logical constructs, such as the file system, network connections, collections and arrays of objects, and dates.</span></span> <span data-ttu-id="13536-108">一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。</span><span class="sxs-lookup"><span data-stu-id="13536-108">A typical C# program uses types from the class library as well as user-defined types that model the concepts that are specific to the program's problem domain.</span></span>  
   
- 可儲存在型別中的資訊包括下列各項：  
+ <span data-ttu-id="13536-109">可儲存在型別中的資訊包括下列各項：</span><span class="sxs-lookup"><span data-stu-id="13536-109">The information stored in a type can include the following:</span></span>  
   
--   型別的變數需要的儲存空間。  
+-   <span data-ttu-id="13536-110">型別的變數需要的儲存空間。</span><span class="sxs-lookup"><span data-stu-id="13536-110">The storage space that a variable of the type requires.</span></span>  
   
--   它可以代表的最大值和最小值。  
+-   <span data-ttu-id="13536-111">它可以代表的最大值和最小值。</span><span class="sxs-lookup"><span data-stu-id="13536-111">The maximum and minimum values that it can represent.</span></span>  
   
--   它所包含的成員 (方法、欄位、事件等等)。  
+-   <span data-ttu-id="13536-112">它所包含的成員 (方法、欄位、事件等等)。</span><span class="sxs-lookup"><span data-stu-id="13536-112">The members (methods, fields, events, and so on) that it contains.</span></span>  
   
--   它繼承自的基底型別。  
+-   <span data-ttu-id="13536-113">它繼承自的基底型別。</span><span class="sxs-lookup"><span data-stu-id="13536-113">The base type it inherits from.</span></span>  
   
--   將在執行階段配置給變數的記憶體位置。  
+-   <span data-ttu-id="13536-114">將在執行階段配置給變數的記憶體位置。</span><span class="sxs-lookup"><span data-stu-id="13536-114">The location where the memory for variables will be allocated at run time.</span></span>  
   
--   允許的作業類型。  
+-   <span data-ttu-id="13536-115">允許的作業類型。</span><span class="sxs-lookup"><span data-stu-id="13536-115">The kinds of operations that are permitted.</span></span>  
   
- 編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](../../../csharp/language-reference/keywords/int.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰  
+ <span data-ttu-id="13536-116">編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。</span><span class="sxs-lookup"><span data-stu-id="13536-116">The compiler uses type information to make sure that all operations that are performed in your code are *type safe*.</span></span> <span data-ttu-id="13536-117">例如，如果您宣告型別 [int](../../../csharp/language-reference/keywords/int.md) 的變數，編譯器會允許您使用這個變數去做加減運算。</span><span class="sxs-lookup"><span data-stu-id="13536-117">For example, if you declare a variable of type [int](../../../csharp/language-reference/keywords/int.md), the compiler allows you to use the variable in addition and subtraction operations.</span></span> <span data-ttu-id="13536-118">如果您嘗試針對型別 [bool](../../../csharp/language-reference/keywords/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="13536-118">If you try to perform those same operations on a variable of type [bool](../../../csharp/language-reference/keywords/bool.md), the compiler generates an error, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+ <span data-ttu-id="13536-119">[!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-119">[!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]</span></span>  
   
 > [!NOTE]
->  C 和 C++ 開發人員要注意在 C# 中，[bool](../../../csharp/language-reference/keywords/bool.md) 不能轉換為 [int](../../../csharp/language-reference/keywords/int.md)。  
+>  <span data-ttu-id="13536-120">C 和 C++ 開發人員要注意在 C# 中，[bool](../../../csharp/language-reference/keywords/bool.md) 不能轉換為 [int](../../../csharp/language-reference/keywords/int.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-120">C and C++ developers, notice that in C#, [bool](../../../csharp/language-reference/keywords/bool.md) is not convertible to [int](../../../csharp/language-reference/keywords/int.md).</span></span>  
   
- 編譯器會將型別資訊視為中繼資料內嵌至可執行檔。 通用語言執行平台 (CLR) 會在執行階段使用該中繼資料，以在它配置和回收記憶體時，進一步保證型別安全。  
+ <span data-ttu-id="13536-121">編譯器會將型別資訊視為中繼資料內嵌至可執行檔。</span><span class="sxs-lookup"><span data-stu-id="13536-121">The compiler embeds the type information into the executable file as metadata.</span></span> <span data-ttu-id="13536-122">通用語言執行平台 (CLR) 會在執行階段使用該中繼資料，以在它配置和回收記憶體時，進一步保證型別安全。</span><span class="sxs-lookup"><span data-stu-id="13536-122">The common language runtime (CLR) uses that metadata at run time to further guarantee type safety when it allocates and reclaims memory.</span></span>  
   
-<a id="specifying-types-in-variable-declarations" class="xliff"></a>
-
-### 在變數宣告中指定型別  
- 當您在程式中宣告變數或常數時，您必須指定其型別，或使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字以讓編譯器推斷其型別。 下列範例示範一些變數宣告，使用內建的數字型別和複雜的使用者定義型別︰  
+### <a name="specifying-types-in-variable-declarations"></a><span data-ttu-id="13536-123">在變數宣告中指定型別</span><span class="sxs-lookup"><span data-stu-id="13536-123">Specifying Types in Variable Declarations</span></span>  
+ <span data-ttu-id="13536-124">當您在程式中宣告變數或常數時，您必須指定其型別，或使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字以讓編譯器推斷其型別。</span><span class="sxs-lookup"><span data-stu-id="13536-124">When you declare a variable or constant in a program, you must either specify its type or use the [var](../../../csharp/language-reference/keywords/var.md) keyword to let the compiler infer the type.</span></span> <span data-ttu-id="13536-125">下列範例示範一些變數宣告，使用內建的數字型別和複雜的使用者定義型別︰</span><span class="sxs-lookup"><span data-stu-id="13536-125">The following example shows some variable declarations that use both built-in numeric types and complex user-defined types:</span></span>  
   
- [!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
+ <span data-ttu-id="13536-126">[!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-126">[!code-cs[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]</span></span>  
   
- 在方法簽章中指定方法參數和傳回值的型別。 下列簽章顯示的方法要求 [int](../../../csharp/language-reference/keywords/int.md) 做為輸入引數且會傳回字串︰  
+ <span data-ttu-id="13536-127">在方法簽章中指定方法參數和傳回值的型別。</span><span class="sxs-lookup"><span data-stu-id="13536-127">The types of method parameters and return values are specified in the method signature.</span></span> <span data-ttu-id="13536-128">下列簽章顯示的方法要求 [int](../../../csharp/language-reference/keywords/int.md) 做為輸入引數且會傳回字串︰</span><span class="sxs-lookup"><span data-stu-id="13536-128">The following signature shows a method that requires an [int](../../../csharp/language-reference/keywords/int.md) as an input argument and returns a string:</span></span>  
   
- [!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
+ <span data-ttu-id="13536-129">[!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-129">[!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]</span></span>  
   
- 宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告 [int](../../../csharp/language-reference/keywords/int.md) 並將為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。  
+ <span data-ttu-id="13536-130">宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。</span><span class="sxs-lookup"><span data-stu-id="13536-130">After a variable is declared, it cannot be re-declared with a new type, and it cannot be assigned a value that is not compatible with its declared type.</span></span> <span data-ttu-id="13536-131">例如，您無法宣告 [int](../../../csharp/language-reference/keywords/int.md) 並將為 [true](../../../csharp/language-reference/keywords/true-literal.md) 的布林值指派給它。</span><span class="sxs-lookup"><span data-stu-id="13536-131">For example, you cannot declare an [int](../../../csharp/language-reference/keywords/int.md) and then assign it a Boolean value of [true](../../../csharp/language-reference/keywords/true-literal.md).</span></span> <span data-ttu-id="13536-132">不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。</span><span class="sxs-lookup"><span data-stu-id="13536-132">However, values can be converted to other types, for example when they are assigned to new variables or passed as method arguments.</span></span> <span data-ttu-id="13536-133">編譯器會自動執行不會造成資料遺失的「型別轉換」作業。</span><span class="sxs-lookup"><span data-stu-id="13536-133">A *type conversion* that does not cause data loss is performed automatically by the compiler.</span></span> <span data-ttu-id="13536-134">而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。</span><span class="sxs-lookup"><span data-stu-id="13536-134">A conversion that might cause data loss requires a *cast* in the source code.</span></span>  
   
- 如需詳細資訊，請參閱[轉型和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
+ <span data-ttu-id="13536-135">如需詳細資訊，請參閱[轉型和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-135">For more information, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
   
-<a id="built-in-types" class="xliff"></a>
-
-## 內建類型  
- C# 提供一組標準的內建數字型別，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的詳細資訊，請參閱[類型的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)。  
+## <a name="built-in-types"></a><span data-ttu-id="13536-136">內建類型</span><span class="sxs-lookup"><span data-stu-id="13536-136">Built-in Types</span></span>  
+ <span data-ttu-id="13536-137">C# 提供一組標準的內建數字型別，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。</span><span class="sxs-lookup"><span data-stu-id="13536-137">C# provides a standard set of built-in numeric types to represent integers, floating point values, Boolean expressions, text characters, decimal values, and other types of data.</span></span> <span data-ttu-id="13536-138">另外還有內建的 `string` 和 `object` 型別。</span><span class="sxs-lookup"><span data-stu-id="13536-138">There are also built-in `string` and `object` types.</span></span> <span data-ttu-id="13536-139">這些都可供您在任何 C# 程式中使用。</span><span class="sxs-lookup"><span data-stu-id="13536-139">These are available for you to use in any C# program.</span></span> <span data-ttu-id="13536-140">如需內建類型的詳細資訊，請參閱[類型的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-140">For more information about the built-in types, see [Reference Tables for Types](../../../csharp/language-reference/keywords/reference-tables-for-types.md).</span></span>  
   
-<a id="custom-types" class="xliff"></a>
-
-## 自訂型別  
- 您可使用 [struct](../../../csharp/language-reference/keywords/struct.md)、[class](../../../csharp/language-reference/keywords/class.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 及 [enum](../../../csharp/language-reference/keywords/enum.md) 建構來建立您自己的自訂型別。 .NET Framework Class Library 本身是 Microsoft 所提供的自訂型別集合，您可以在自己的應用程式中使用。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。 如需詳細資訊，請參閱 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856)。  
+## <a name="custom-types"></a><span data-ttu-id="13536-141">自訂型別</span><span class="sxs-lookup"><span data-stu-id="13536-141">Custom Types</span></span>  
+ <span data-ttu-id="13536-142">您可使用 [struct](../../../csharp/language-reference/keywords/struct.md)、[class](../../../csharp/language-reference/keywords/class.md)、[interface](../../../csharp/language-reference/keywords/interface.md) 及 [enum](../../../csharp/language-reference/keywords/enum.md) 建構來建立您自己的自訂型別。</span><span class="sxs-lookup"><span data-stu-id="13536-142">You use the [struct](../../../csharp/language-reference/keywords/struct.md), [class](../../../csharp/language-reference/keywords/class.md), [interface](../../../csharp/language-reference/keywords/interface.md), and [enum](../../../csharp/language-reference/keywords/enum.md) constructs to create your own custom types.</span></span> <span data-ttu-id="13536-143">.NET Framework Class Library 本身是 Microsoft 所提供的自訂型別集合，您可以在自己的應用程式中使用。</span><span class="sxs-lookup"><span data-stu-id="13536-143">The .NET Framework class library itself is a collection of custom types provided by Microsoft that you can use in your own applications.</span></span> <span data-ttu-id="13536-144">根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。</span><span class="sxs-lookup"><span data-stu-id="13536-144">By default, the most frequently used types in the class library are available in any C# program.</span></span> <span data-ttu-id="13536-145">只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。</span><span class="sxs-lookup"><span data-stu-id="13536-145">Others become available only when you explicitly add a project reference to the assembly in which they are defined.</span></span> <span data-ttu-id="13536-146">編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。</span><span class="sxs-lookup"><span data-stu-id="13536-146">After the compiler has a reference to the assembly, you can declare variables (and constants) of the types declared in that assembly in source code.</span></span> <span data-ttu-id="13536-147">如需詳細資訊，請參閱 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856)。</span><span class="sxs-lookup"><span data-stu-id="13536-147">For more information, see [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856).</span></span>  
   
-<a id="the-common-type-system" class="xliff"></a>
-
-## 一般型別系統  
- 請務必了解 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中有關型別系統的兩個基本概念：  
+## <a name="the-common-type-system"></a><span data-ttu-id="13536-148">一般型別系統</span><span class="sxs-lookup"><span data-stu-id="13536-148">The Common Type System</span></span>  
+ <span data-ttu-id="13536-149">請務必了解 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中有關型別系統的兩個基本概念：</span><span class="sxs-lookup"><span data-stu-id="13536-149">It is important to understand two fundamental points about the type system in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]:</span></span>  
   
--   它支援繼承原則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。 包括 <xref:System.Int32?displayProperty=fullName> (C# 關鍵字：[int](../../../csharp/language-reference/keywords/int.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=fullName> (C# 關鍵字：[object](../../../csharp/language-reference/keywords/object.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
+-   <span data-ttu-id="13536-150">它支援繼承原則。</span><span class="sxs-lookup"><span data-stu-id="13536-150">It supports the principle of inheritance.</span></span> <span data-ttu-id="13536-151">型別可以衍生自稱為「基底型別」的其他型別。</span><span class="sxs-lookup"><span data-stu-id="13536-151">Types can derive from other types, called *base types*.</span></span> <span data-ttu-id="13536-152">衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。</span><span class="sxs-lookup"><span data-stu-id="13536-152">The derived type inherits (with some restrictions) the methods, properties, and other members of the base type.</span></span> <span data-ttu-id="13536-153">基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。</span><span class="sxs-lookup"><span data-stu-id="13536-153">The base type can in turn derive from some other type, in which case the derived type inherits the members of both base types in its inheritance hierarchy.</span></span> <span data-ttu-id="13536-154">包括 <xref:System.Int32?displayProperty=fullName> (C# 關鍵字：[int](../../../csharp/language-reference/keywords/int.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=fullName> (C# 關鍵字：[object](../../../csharp/language-reference/keywords/object.md))。</span><span class="sxs-lookup"><span data-stu-id="13536-154">All types, including built-in numeric types such as <xref:System.Int32?displayProperty=fullName> (C# keyword: [int](../../../csharp/language-reference/keywords/int.md)), derive ultimately from a single base type, which is <xref:System.Object?displayProperty=fullName> (C# keyword: [object](../../../csharp/language-reference/keywords/object.md)).</span></span> <span data-ttu-id="13536-155">這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。</span><span class="sxs-lookup"><span data-stu-id="13536-155">This unified type hierarchy is called the [Common Type System](../../../standard/base-types/common-type-system.md) (CTS).</span></span> <span data-ttu-id="13536-156">如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-156">For more information about inheritance in C#, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span>  
   
--   CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET Framework Class Library 中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。  
+-   <span data-ttu-id="13536-157">CTS 中的每個型別都會定義為「實值型別」或「參考型別」。</span><span class="sxs-lookup"><span data-stu-id="13536-157">Each type in the CTS is defined as either a *value type* or a *reference type*.</span></span> <span data-ttu-id="13536-158">這包括 .NET Framework Class Library 中的所有自訂型別以及您自己的使用者定義型別。</span><span class="sxs-lookup"><span data-stu-id="13536-158">This includes all custom types in the .NET Framework class library and also your own user-defined types.</span></span> <span data-ttu-id="13536-159">您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。</span><span class="sxs-lookup"><span data-stu-id="13536-159">Types that you define by using the [struct](../../../csharp/language-reference/keywords/struct.md) keyword are value types; all the built-in numeric types are `structs`.</span></span> <span data-ttu-id="13536-160">您使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。</span><span class="sxs-lookup"><span data-stu-id="13536-160">Types that you define by using the [class](../../../csharp/language-reference/keywords/class.md) keyword are reference types.</span></span> <span data-ttu-id="13536-161">參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。</span><span class="sxs-lookup"><span data-stu-id="13536-161">Reference types and value types have different compile-time rules, and different run-time behavior.</span></span>  
   
- 下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。  
+ <span data-ttu-id="13536-162">下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="13536-162">The following illustration shows the relationship between value types and reference types in the CTS.</span></span>  
   
- ![值類型和參考類型](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-CTS 中的實值型別和參考型別  
+ <span data-ttu-id="13536-163">![實值型別和參考型別](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")</span><span class="sxs-lookup"><span data-stu-id="13536-163">![Value Types and Reference Types](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")</span></span>  
+<span data-ttu-id="13536-164">CTS 中的實值型別和參考型別</span><span class="sxs-lookup"><span data-stu-id="13536-164">Value types and reference types in the CTS</span></span>  
   
 > [!NOTE]
->  您可以看到最常使用的型別全都整理在 <xref:System> 命名空間中。 不過，其中包含型別的命名空間和實值型別或參考型別毫無關聯。  
+>  <span data-ttu-id="13536-165">您可以看到最常使用的型別全都整理在 <xref:System> 命名空間中。</span><span class="sxs-lookup"><span data-stu-id="13536-165">You can see that the most commonly used types are all organized in the <xref:System> namespace.</span></span> <span data-ttu-id="13536-166">不過，其中包含型別的命名空間和實值型別或參考型別毫無關聯。</span><span class="sxs-lookup"><span data-stu-id="13536-166">However, the namespace in which a type is contained has no relation to whether it is a value type or reference type.</span></span>  
   
-<a id="value-types" class="xliff"></a>
-
-### 實值類型  
- 實值型別衍生自 <xref:System.ValueType?displayProperty=fullName>，該型別又衍生自 <xref:System.Object?displayProperty=fullName>。 衍生自 <xref:System.ValueType?displayProperty=fullName> 的型別在 CLR 中具有特殊行為。 實值型別變數會直接包含其值，這表示配置的記憶體內嵌在宣告該變數的內容中。 實值型別變數不會有任何個別的堆積配置或記憶體回收額外負荷。  
+### <a name="value-types"></a><span data-ttu-id="13536-167">實值類型</span><span class="sxs-lookup"><span data-stu-id="13536-167">Value Types</span></span>  
+ <span data-ttu-id="13536-168">實值型別衍生自 <xref:System.ValueType?displayProperty=fullName>，該型別又衍生自 <xref:System.Object?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="13536-168">Value types derive from <xref:System.ValueType?displayProperty=fullName>, which derives from <xref:System.Object?displayProperty=fullName>.</span></span> <span data-ttu-id="13536-169">衍生自 <xref:System.ValueType?displayProperty=fullName> 的型別在 CLR 中具有特殊行為。</span><span class="sxs-lookup"><span data-stu-id="13536-169">Types that derive from <xref:System.ValueType?displayProperty=fullName> have special behavior in the CLR.</span></span> <span data-ttu-id="13536-170">實值型別變數會直接包含其值，這表示配置的記憶體內嵌在宣告該變數的內容中。</span><span class="sxs-lookup"><span data-stu-id="13536-170">Value type variables directly contain their values, which means that the memory is allocated inline in whatever context the variable is declared.</span></span> <span data-ttu-id="13536-171">實值型別變數不會有任何個別的堆積配置或記憶體回收額外負荷。</span><span class="sxs-lookup"><span data-stu-id="13536-171">There is no separate heap allocation or garbage collection overhead for value-type variables.</span></span>  
   
- 實值型別有兩種類別︰[struct](../../../csharp/language-reference/keywords/struct.md) 和 [enum](../../../csharp/language-reference/keywords/enum.md)。  
+ <span data-ttu-id="13536-172">實值型別有兩種類別︰[struct](../../../csharp/language-reference/keywords/struct.md) 和 [enum](../../../csharp/language-reference/keywords/enum.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-172">There are two categories of value types: [struct](../../../csharp/language-reference/keywords/struct.md) and [enum](../../../csharp/language-reference/keywords/enum.md).</span></span>  
   
- 內建的數字型別為結構，而您可以存取其屬性和方法︰  
+ <span data-ttu-id="13536-173">內建的數字型別為結構，而您可以存取其屬性和方法︰</span><span class="sxs-lookup"><span data-stu-id="13536-173">The built-in numeric types are structs, and they have properties and methods that you can access:</span></span>  
   
 ```csharp  
 // Static method on type Byte.  
 byte b = Byte.MaxValue;  
 ```  
   
- 但您會將它們當做簡單的非彙總型別來宣告並將值指派給它們︰  
+ <span data-ttu-id="13536-174">但您會將它們當做簡單的非彙總型別來宣告並將值指派給它們︰</span><span class="sxs-lookup"><span data-stu-id="13536-174">But you declare and assign values to them as if they were simple non-aggregate types:</span></span>  
   
 ```csharp  
 byte num = 0xA;  
@@ -137,58 +123,52 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- 實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=fullName> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=fullName> 繼承。 不過，結構可以實作一或多個介面。 您可以將 struct 型別轉換為 interface 型別；原因是包裝結構的 *boxing* 作業在 Managed 堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=fullName> 做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。  
+ <span data-ttu-id="13536-175">實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=fullName> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=fullName> 繼承。</span><span class="sxs-lookup"><span data-stu-id="13536-175">Value types are *sealed*, which means, for example, that you cannot derive a type from <xref:System.Int32?displayProperty=fullName>, and you cannot define a struct to inherit from any user-defined class or struct because a struct can only inherit from <xref:System.ValueType?displayProperty=fullName>.</span></span> <span data-ttu-id="13536-176">不過，結構可以實作一或多個介面。</span><span class="sxs-lookup"><span data-stu-id="13536-176">However, a struct can implement one or more interfaces.</span></span> <span data-ttu-id="13536-177">您可以將 struct 型別轉換為 interface 型別；原因是包裝結構的 *boxing* 作業在 Managed 堆積上的參考型別物件內。</span><span class="sxs-lookup"><span data-stu-id="13536-177">You can cast a struct type to an interface type; this causes a *boxing* operation to wrap the struct inside a reference type object on the managed heap.</span></span> <span data-ttu-id="13536-178">當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=fullName> 做為輸入參數的方法時，就會發生 Boxing 作業。</span><span class="sxs-lookup"><span data-stu-id="13536-178">Boxing operations occur when you pass a value type to a method that takes a <xref:System.Object?displayProperty=fullName> as an input parameter.</span></span> <span data-ttu-id="13536-179">如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-179">For more information, see [Boxing and Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>  
   
- 您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰  
+ <span data-ttu-id="13536-180">您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。</span><span class="sxs-lookup"><span data-stu-id="13536-180">You use the [struct](../../../csharp/language-reference/keywords/struct.md) keyword to create your own custom value types.</span></span> <span data-ttu-id="13536-181">一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="13536-181">Typically, a struct is used as a container for a small set of related variables, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
+ <span data-ttu-id="13536-182">[!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-182">[!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]</span></span>  
   
- 如需結構的詳細資訊，請參閱[結構](../../../csharp/programming-guide/classes-and-structs/structs.md)。 如需有關 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中實值型別的詳細資訊，請參閱[一般型別系統](../../../standard/base-types/common-type-system.md)。  
+ <span data-ttu-id="13536-183">如需結構的詳細資訊，請參閱[結構](../../../csharp/programming-guide/classes-and-structs/structs.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-183">For more information about structs, see [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md).</span></span> <span data-ttu-id="13536-184">如需有關 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中實值型別的詳細資訊，請參閱[一般型別系統](../../../standard/base-types/common-type-system.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-184">For more information about value types in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], see [Common Type System](../../../standard/base-types/common-type-system.md).</span></span>  
   
- 實值型別的另一種類別是 [enum](../../../csharp/language-reference/keywords/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET Framework Class Library 中的 <xref:System.IO.FileMode?displayProperty=fullName> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：  
+ <span data-ttu-id="13536-185">實值型別的另一種類別是 [enum](../../../csharp/language-reference/keywords/enum.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-185">The other category of value types is [enum](../../../csharp/language-reference/keywords/enum.md).</span></span> <span data-ttu-id="13536-186">列舉會定義一組具名的整數常數。</span><span class="sxs-lookup"><span data-stu-id="13536-186">An enum defines a set of named integral constants.</span></span> <span data-ttu-id="13536-187">例如，.NET Framework Class Library 中的 <xref:System.IO.FileMode?displayProperty=fullName> 列舉包含一組指定該如何開啟檔案的具名常數整數。</span><span class="sxs-lookup"><span data-stu-id="13536-187">For example, the <xref:System.IO.FileMode?displayProperty=fullName> enumeration in the .NET Framework class library contains a set of named constant integers that specify how a file should be opened.</span></span> <span data-ttu-id="13536-188">其定義方式如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="13536-188">It is defined as shown in the following example:</span></span>  
  
- [!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
+ <span data-ttu-id="13536-189">[!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-189">[!code-cs[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]</span></span>  
   
- `System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=fullName>。  
+ <span data-ttu-id="13536-190">`System.IO.FileMode.Create` 常數的值為 2。</span><span class="sxs-lookup"><span data-stu-id="13536-190">The `System.IO.FileMode.Create` constant has a value of 2.</span></span> <span data-ttu-id="13536-191">不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。</span><span class="sxs-lookup"><span data-stu-id="13536-191">However, the name is much more meaningful for humans reading the source code, and for that reason it is better to use enumerations instead of constant literal numbers.</span></span> <span data-ttu-id="13536-192">如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="13536-192">For more information, see <xref:System.IO.FileMode?displayProperty=fullName>.</span></span>  
   
- 所有的委派都繼承自 <xref:System.Enum?displayProperty=fullName>，該列舉又繼承自 <xref:System.ValueType?displayProperty=fullName>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉型別](../../../csharp/programming-guide/enumeration-types.md)。  
+ <span data-ttu-id="13536-193">所有的委派都繼承自 <xref:System.Enum?displayProperty=fullName>，該列舉又繼承自 <xref:System.ValueType?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="13536-193">All enums inherit from <xref:System.Enum?displayProperty=fullName>, which inherits from <xref:System.ValueType?displayProperty=fullName>.</span></span> <span data-ttu-id="13536-194">所有適用於結構的規則，也適用於列舉。</span><span class="sxs-lookup"><span data-stu-id="13536-194">All the rules that apply to structs also apply to enums.</span></span> <span data-ttu-id="13536-195">如需有關列舉的詳細資訊，請參閱[列舉型別](../../../csharp/programming-guide/enumeration-types.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-195">For more information about enums, see [Enumeration Types](../../../csharp/programming-guide/enumeration-types.md).</span></span>  
   
-<a id="reference-types" class="xliff"></a>
-
-### 參考類型  
- 定義為 [class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、array 或 [interface](../../../csharp/language-reference/keywords/interface.md) 的型別即為「參考型別」。 在執行階段，當您宣告參考型別的變數時，該變數可包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子明確地建立物件的執行個體，或為它指派在他處使用 `new, as shown in the following example:` 建立的物件為止  
+### <a name="reference-types"></a><span data-ttu-id="13536-196">參考類型</span><span class="sxs-lookup"><span data-stu-id="13536-196">Reference Types</span></span>  
+ <span data-ttu-id="13536-197">定義為 [class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、array 或 [interface](../../../csharp/language-reference/keywords/interface.md) 的型別即為「參考型別」。</span><span class="sxs-lookup"><span data-stu-id="13536-197">A type that is defined as a [class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md), array, or [interface](../../../csharp/language-reference/keywords/interface.md) is a *reference type*.</span></span> <span data-ttu-id="13536-198">在執行階段，當您宣告參考型別的變數時，該變數會包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算子明確地建立物件的執行個體，或為它指派在他處使用 `new` 建立的物件為止，如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="13536-198">At run time, when you declare a variable of a reference type, the variable contains the value [null](../../../csharp/language-reference/keywords/null.md) until you explicitly create an instance of the object by using the [new](../../../csharp/language-reference/keywords/new.md) operator, or assign it an object that has been created elsewhere by using `new`, as shown in the following example:</span></span>
   
 ```csharp  
 MyClass mc = new MyClass();  
 MyClass mc2 = mc;  
 ```  
-   介面必須和實作它的類別物件一起初始化。 如果 `MyClass` 實作 `IMyInterface`，您建立的 `IMyInterface` 執行個體會如下列範例所示︰  
+   <span data-ttu-id="13536-199">介面必須和實作它的類別物件一起初始化。</span><span class="sxs-lookup"><span data-stu-id="13536-199">An interface must be initialized together with a class object that implements it.</span></span> <span data-ttu-id="13536-200">如果 `MyClass` 實作 `IMyInterface`，您建立的 `IMyInterface` 執行個體會如下列範例所示︰</span><span class="sxs-lookup"><span data-stu-id="13536-200">If `MyClass` implements `IMyInterface`, you create an instance of `IMyInterface` as shown in the following example:</span></span>  
   
 ```csharp  
 IMyInterface iface = new MyClass();  
 ```  
   
- 建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。 配置和由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的型別時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需有關記憶體回收的詳細資訊，請參閱[自動記憶體管理](../../../standard/automatic-memory-management.md)。  
+ <span data-ttu-id="13536-201">建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。</span><span class="sxs-lookup"><span data-stu-id="13536-201">When the object is created, the memory is allocated on the managed heap, and the variable holds only a reference to the location of the object.</span></span> <span data-ttu-id="13536-202">配置和由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的型別時，都需要額外負荷。</span><span class="sxs-lookup"><span data-stu-id="13536-202">Types on the managed heap require overhead both when they are allocated and when they are reclaimed by the automatic memory management functionality of the CLR, which is known as *garbage collection*.</span></span> <span data-ttu-id="13536-203">不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。</span><span class="sxs-lookup"><span data-stu-id="13536-203">However, garbage collection is also highly optimized, and in most scenarios it does not create a performance issue.</span></span> <span data-ttu-id="13536-204">如需有關記憶體回收的詳細資訊，請參閱[自動記憶體管理](../../../standard/automatic-memory-management.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-204">For more information about garbage collection, see [Automatic Memory Management](../../../standard/automatic-memory-management.md).</span></span>  
   
- 所有陣列都是參考型別，即使其元素都是實值型別。 陣列隱含衍生自 <xref:System.Array?displayProperty=fullName> 類別，但您會利用 C# 所提供的簡化語法來宣告及使用陣列，如下列範例所示：  
+ <span data-ttu-id="13536-205">所有陣列都是參考型別，即使其元素都是實值型別。</span><span class="sxs-lookup"><span data-stu-id="13536-205">All arrays are reference types, even if their elements are value types.</span></span> <span data-ttu-id="13536-206">陣列隱含衍生自 <xref:System.Array?displayProperty=fullName> 類別，但您會利用 C# 所提供的簡化語法來宣告及使用陣列，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="13536-206">Arrays implicitly derive from the <xref:System.Array?displayProperty=fullName> class, but you declare and use them with the simplified syntax that is provided by C#, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
+ <span data-ttu-id="13536-207">[!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-207">[!code-cs[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]</span></span>  
   
- 參考型別完全支援繼承。 當您建立類別時，您可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)。 如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
+ <span data-ttu-id="13536-208">參考型別完全支援繼承。</span><span class="sxs-lookup"><span data-stu-id="13536-208">Reference types fully support inheritance.</span></span> <span data-ttu-id="13536-209">當您建立類別時，您可以繼承自任何未定義為 [sealed](../../../csharp/language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。</span><span class="sxs-lookup"><span data-stu-id="13536-209">When you create a class, you can inherit from any other interface or class that is not defined as [sealed](../../../csharp/language-reference/keywords/sealed.md), and other classes can inherit from your class and override your virtual methods.</span></span> <span data-ttu-id="13536-210">如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-210">For more information about how to create your own classes, see [Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md).</span></span> <span data-ttu-id="13536-211">如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-211">For more information about inheritance and virtual methods, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span>  
   
-<a id="types-of-literal-values" class="xliff"></a>
-
-## 常值型別  
- 在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需您可以使用字母後置字元指定哪些型別的詳細資訊，請參閱參考頁面中個別型別的[實值型別](../../../csharp/language-reference/keywords/value-types.md)。  
+## <a name="types-of-literal-values"></a><span data-ttu-id="13536-212">常值型別</span><span class="sxs-lookup"><span data-stu-id="13536-212">Types of Literal Values</span></span>  
+ <span data-ttu-id="13536-213">在 C# 中，常值會接收來自編譯器的型別。</span><span class="sxs-lookup"><span data-stu-id="13536-213">In C#, literal values receive a type from the compiler.</span></span> <span data-ttu-id="13536-214">您可以在數字後面附加一個字母，指定應如何輸入數值常值。</span><span class="sxs-lookup"><span data-stu-id="13536-214">You can specify how a numeric literal should be typed by appending a letter to the end of the number.</span></span> <span data-ttu-id="13536-215">例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。</span><span class="sxs-lookup"><span data-stu-id="13536-215">For example, to specify that the value 4.56 should be treated as a float, append an "f" or "F" after the number: `4.56f`.</span></span> <span data-ttu-id="13536-216">如果未附加任何字母時，編譯器會推斷其型別為常值。</span><span class="sxs-lookup"><span data-stu-id="13536-216">If no letter is appended, the compiler will infer a type for the literal.</span></span> <span data-ttu-id="13536-217">如需您可以使用字母後置字元指定哪些型別的詳細資訊，請參閱參考頁面中個別型別的[實值型別](../../../csharp/language-reference/keywords/value-types.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-217">For more information about which types can be specified with letter suffixes, see the reference pages for individual types in [Value Types](../../../csharp/language-reference/keywords/value-types.md).</span></span>  
   
- 因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object?displayProperty=fullName>，所以您可以如下所示來撰寫和編譯程式碼：  
+ <span data-ttu-id="13536-218">因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object?displayProperty=fullName>，所以您可以如下所示來撰寫和編譯程式碼：</span><span class="sxs-lookup"><span data-stu-id="13536-218">Because literals are typed, and all types derive ultimately from <xref:System.Object?displayProperty=fullName>, you can write and compile code such as the following:</span></span>  
   
- [!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
+ <span data-ttu-id="13536-219">[!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="13536-219">[!code-cs[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]</span></span>  
   
-<a id="generic-types" class="xliff"></a>
-
-## 泛型型別  
- 可使用一或多個「型別參數」宣告的型別，做為預留位置 (具象型別)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的型別稱為「泛型型別」。 例如，.NET Framework 型別 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 有一個型別參數，依慣例命名為 *T*。當您建立該型別的執行個體時，您會指定該清單將包含的物件型別，例如 string：  
+## <a name="generic-types"></a><span data-ttu-id="13536-220">泛型型別</span><span class="sxs-lookup"><span data-stu-id="13536-220">Generic Types</span></span>  
+ <span data-ttu-id="13536-221">可使用一或多個「型別參數」宣告的型別，做為預留位置 (具象型別)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。</span><span class="sxs-lookup"><span data-stu-id="13536-221">A type can be declared with one or more *type parameters* that serve as a placeholder for the actual type (the *concrete type*) that client code will provide when it creates an instance of the type.</span></span> <span data-ttu-id="13536-222">這類的型別稱為「泛型型別」。</span><span class="sxs-lookup"><span data-stu-id="13536-222">Such types are called *generic types*.</span></span> <span data-ttu-id="13536-223">例如，.NET Framework 型別 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 有一個型別參數，依慣例命名為 *T*。當您建立該型別的執行個體時，您會指定該清單將包含的物件型別，例如 string：</span><span class="sxs-lookup"><span data-stu-id="13536-223">For example, the .NET Framework type <xref:System.Collections.Generic.List%601?displayProperty=fullName> has one type parameter that by convention is given the name *T*. When you create an instance of the type, you specify the type of the objects that the list will contain, for example, string:</span></span>  
  
 ```csharp
 List<string> stringList = new List<string>();
@@ -196,48 +176,40 @@ stringList.Add("String example");
 // compile time error adding a type other than a string:
 stringList.Add(4);
 ```
- 使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](../../../csharp/language-reference/keywords/object.md)。 泛型集合類別則稱為「強型別集合」，因為編譯器知道集合元素的特定型別，如果您嘗試將整數加入至上一個範例中的 `strings` 物件，便會在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。  
+ <span data-ttu-id="13536-224">使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](../../../csharp/language-reference/keywords/object.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-224">The use of the type parameter makes it possible to reuse the same class to hold any type of element, without having to convert each element to [object](../../../csharp/language-reference/keywords/object.md).</span></span> <span data-ttu-id="13536-225">泛型集合類別則稱為「強型別集合」，因為編譯器知道集合元素的特定型別，如果您嘗試將整數加入至上一個範例中的 `strings` 物件，便會在編譯時期引發錯誤。</span><span class="sxs-lookup"><span data-stu-id="13536-225">Generic collection classes are called *strongly-typed collections* because the compiler knows the specific type of the collection's elements and can raise an error at compile-time if, for example, you try to add an integer to the `strings` object in the previous example.</span></span> <span data-ttu-id="13536-226">如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-226">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
-<a id="implicit-types-anonymous-types-and-nullable-types" class="xliff"></a>
+## <a name="implicit-types-anonymous-types-and-nullable-types"></a><span data-ttu-id="13536-227">隱含型別、匿名型別以及可為 Null 的型別</span><span class="sxs-lookup"><span data-stu-id="13536-227">Implicit Types, Anonymous Types, and Nullable Types</span></span>  
+ <span data-ttu-id="13536-228">如先前所述，您可以使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字，隱含地輸入本機變數 (但不是類別成員)。</span><span class="sxs-lookup"><span data-stu-id="13536-228">As stated previously, you can implicitly type a local variable (but not class members) by using the [var](../../../csharp/language-reference/keywords/var.md) keyword.</span></span> <span data-ttu-id="13536-229">變數還是會在編譯時期收到型別，但其是由編譯器所提供的型別。</span><span class="sxs-lookup"><span data-stu-id="13536-229">The variable still receives a type at compile time, but the type is provided by the compiler.</span></span> <span data-ttu-id="13536-230">如需詳細資訊，請參閱[隱含型別區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-230">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
+  
+ <span data-ttu-id="13536-231">在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。</span><span class="sxs-lookup"><span data-stu-id="13536-231">In some cases, it is inconvenient to create a named type for simple sets of related values that you do not intend to store or pass outside method boundaries.</span></span> <span data-ttu-id="13536-232">為此，您可以建立「匿名型別」。</span><span class="sxs-lookup"><span data-stu-id="13536-232">You can create *anonymous types* for this purpose.</span></span> <span data-ttu-id="13536-233">如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-233">For more information, see [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
+  
+ <span data-ttu-id="13536-234">一般的實值型別值不能為 [null](../../../csharp/language-reference/keywords/null.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-234">Ordinary value types cannot have a value of [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="13536-235">不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。</span><span class="sxs-lookup"><span data-stu-id="13536-235">However, you can create nullable value types by affixing a `?` after the type.</span></span> <span data-ttu-id="13536-236">例如，`int?` 就是也能有 [null](../../../csharp/language-reference/keywords/null.md) 值的 `int` 型別。</span><span class="sxs-lookup"><span data-stu-id="13536-236">For example, `int?` is an `int` type that can also have the value [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="13536-237">在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601?displayProperty=fullName> 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="13536-237">In the CTS, nullable types are instances of the generic struct type <xref:System.Nullable%601?displayProperty=fullName>.</span></span> <span data-ttu-id="13536-238">當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別特別有用。</span><span class="sxs-lookup"><span data-stu-id="13536-238">Nullable types are especially useful when you are passing data to and from databases in which numeric values might be null.</span></span> <span data-ttu-id="13536-239">如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。</span><span class="sxs-lookup"><span data-stu-id="13536-239">For more information, see [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  
+  
+## <a name="related-sections"></a><span data-ttu-id="13536-240">相關章節</span><span class="sxs-lookup"><span data-stu-id="13536-240">Related Sections</span></span>  
+ <span data-ttu-id="13536-241">如需詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="13536-241">For more information, see the following topics:</span></span>  
+  
+-   [<span data-ttu-id="13536-242">轉換和型別轉換</span><span class="sxs-lookup"><span data-stu-id="13536-242">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+  
+-   [<span data-ttu-id="13536-243">Boxing 和 Unboxing</span><span class="sxs-lookup"><span data-stu-id="13536-243">Boxing and Unboxing</span></span>](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+  
+-   [<span data-ttu-id="13536-244">使用動態型別</span><span class="sxs-lookup"><span data-stu-id="13536-244">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+  
+-   [<span data-ttu-id="13536-245">實值型別</span><span class="sxs-lookup"><span data-stu-id="13536-245">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
+  
+-   [<span data-ttu-id="13536-246">參考型別</span><span class="sxs-lookup"><span data-stu-id="13536-246">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
+  
+-   [<span data-ttu-id="13536-247">類別和結構</span><span class="sxs-lookup"><span data-stu-id="13536-247">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+  
+-   [<span data-ttu-id="13536-248">匿名類型</span><span class="sxs-lookup"><span data-stu-id="13536-248">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+  
+-   [<span data-ttu-id="13536-249">泛型</span><span class="sxs-lookup"><span data-stu-id="13536-249">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
 
-## 隱含型別、匿名型別以及可為 Null 的型別  
- 如先前所述，您可以使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字，隱含地輸入本機變數 (但不是類別成員)。 變數還是會在編譯時期收到型別，但其是由編譯器所提供的型別。 如需詳細資訊，請參閱[隱含型別區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
-  
- 在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」。 如需詳細資訊，請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
-  
- 一般的實值型別值不能為 [null](../../../csharp/language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../../csharp/language-reference/keywords/null.md) 值的 `int` 型別。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601?displayProperty=fullName> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別特別有用。 如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。  
-  
-<a id="related-sections" class="xliff"></a>
-
-## 相關章節  
- 如需詳細資訊，請參閱下列主題：  
-  
--   [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
-  
--   [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-  
--   [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-  
--   [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
-  
--   [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
-  
--   [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
-  
--   [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-  
--   [泛型](../../../csharp/programming-guide/generics/index.md)  
-
-<a id="c-language-specification" class="xliff"></a>
-
-## C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="13536-250">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="13536-250">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
- [XML 資料型別轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)   
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a><span data-ttu-id="13536-251">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13536-251">See Also</span></span>  
+ <span data-ttu-id="13536-252">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="13536-252">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="13536-253">[C# 程式設計指南](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="13536-253">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="13536-254">[XML 資料型別轉換](../../../standard/data/xml/conversion-of-xml-data-types.md) </span><span class="sxs-lookup"><span data-stu-id="13536-254">[Conversion of XML Data Types](../../../standard/data/xml/conversion-of-xml-data-types.md) </span></span>  
+ [<span data-ttu-id="13536-255">整數型別表</span><span class="sxs-lookup"><span data-stu-id="13536-255">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)
 

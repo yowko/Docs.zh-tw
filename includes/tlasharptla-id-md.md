@@ -1,1 +1,1 @@
-識別項 (ID)
+<span data-ttu-id="9d6d0-101">識別項 (ID)</span><span class="sxs-lookup"><span data-stu-id="9d6d0-101">identifier (ID)</span></span>

@@ -1,1 +1,1 @@
-如需範例
+<span data-ttu-id="ac26e-101">如需範例</span><span class="sxs-lookup"><span data-stu-id="ac26e-101">For an example of</span></span>

@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ff1686328630b233b25839c79d0009d48aab5ab
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 195dc0c64cb01e38ede0b7c34c30ca7912aea685
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何︰ 使用屬性 (Visual Basic) 建立 C/c + + 等位
-使用屬性中，您可以自訂結構在記憶體中的配置方式。 例如，您可以建立所謂的等位 C/c + + 中使用`StructLayout(LayoutKind.Explicit)`和`FieldOffset`屬性。  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="3a88f-102">如何︰ 使用屬性 (Visual Basic) 建立 C/c + + 等位</span><span class="sxs-lookup"><span data-stu-id="3a88f-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
+<span data-ttu-id="3a88f-103">使用屬性中，您可以自訂結構在記憶體中的配置方式。</span><span class="sxs-lookup"><span data-stu-id="3a88f-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="3a88f-104">例如，您可以建立所謂的等位 C/c + + 中使用`StructLayout(LayoutKind.Explicit)`和`FieldOffset`屬性。</span><span class="sxs-lookup"><span data-stu-id="3a88f-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a>範例  
- 在此程式碼片段中，所有的欄位`TestUnion`在記憶體中相同的位置開始。  
+## <a name="example"></a><span data-ttu-id="3a88f-105">範例</span><span class="sxs-lookup"><span data-stu-id="3a88f-105">Example</span></span>  
+ <span data-ttu-id="3a88f-106">在此程式碼片段中，所有的欄位`TestUnion`在記憶體中相同的位置開始。</span><span class="sxs-lookup"><span data-stu-id="3a88f-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -52,8 +53,8 @@ Structure TestUnion
 End Structure  
 ```  
   
-## <a name="example"></a>範例  
- 以下是另一個範例中，於不同的欄位開始明確設定位置。  
+## <a name="example"></a><span data-ttu-id="3a88f-107">範例</span><span class="sxs-lookup"><span data-stu-id="3a88f-107">Example</span></span>  
+ <span data-ttu-id="3a88f-108">以下是另一個範例中，於不同的欄位開始明確設定位置。</span><span class="sxs-lookup"><span data-stu-id="3a88f-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -81,14 +82,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- 在兩個整數欄位`i1`和`i2`，共用相同的記憶體位置做為`lg`。 使用平台叫用時，這種結構配置控制項很有用。  
+ <span data-ttu-id="3a88f-109">在兩個整數欄位`i1`和`i2`，共用相同的記憶體位置做為`lg`。</span><span class="sxs-lookup"><span data-stu-id="3a88f-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="3a88f-110">使用平台叫用時，這種結構配置控制項很有用。</span><span class="sxs-lookup"><span data-stu-id="3a88f-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)   
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [使用反映 (Visual Basic) 存取屬性](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="3a88f-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a88f-111">See Also</span></span>  
+ <span data-ttu-id="3a88f-112"><xref:System.Reflection></xref:System.Reflection></span><span class="sxs-lookup"><span data-stu-id="3a88f-112"><xref:System.Reflection></span></span>   
+ <span data-ttu-id="3a88f-113"><xref:System.Attribute></xref:System.Attribute></span><span class="sxs-lookup"><span data-stu-id="3a88f-113"><xref:System.Attribute></span></span>   
+<span data-ttu-id="3a88f-114"> [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="3a88f-114"> [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md) </span></span>  
+<span data-ttu-id="3a88f-115"> [屬性](https://msdn.microsoft.com/library/5x6cd29c) </span><span class="sxs-lookup"><span data-stu-id="3a88f-115"> [Attributes](https://msdn.microsoft.com/library/5x6cd29c) </span></span>  
+<span data-ttu-id="3a88f-116"> [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) </span><span class="sxs-lookup"><span data-stu-id="3a88f-116"> [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) </span></span>  
+<span data-ttu-id="3a88f-117"> [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md) </span><span class="sxs-lookup"><span data-stu-id="3a88f-117"> [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md) </span></span>  
+<span data-ttu-id="3a88f-118"> [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) </span><span class="sxs-lookup"><span data-stu-id="3a88f-118"> [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) </span></span>  
+<span data-ttu-id="3a88f-119"> [使用反映 (Visual Basic) 存取屬性](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span><span class="sxs-lookup"><span data-stu-id="3a88f-119"> [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>

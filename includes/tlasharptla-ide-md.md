@@ -1,1 +1,1 @@
-整合式開發環境 (IDE)
+<span data-ttu-id="3a78e-101">整合式開發環境 (IDE)</span><span class="sxs-lookup"><span data-stu-id="3a78e-101">Integrated Development Environment (IDE)</span></span>

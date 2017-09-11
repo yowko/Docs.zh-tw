@@ -20,16 +20,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b7f7c26c3594ddca96a951aa432dc37c7be749d3
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: f237ee48b55cd21210062823a81e85ea7d7d7380
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 03/24/2017
 
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>如何：統計某個字在字串中出現的次數 (LINQ) (C#)
-本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。 請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。 <xref:System.String.Split%2A> 方法有效能費用。 如果對字串執行的唯一作業是計算字數，您應該考慮改用<xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。 不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="b8c11-102">如何：統計某個字在字串中出現的次數 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b8c11-102">How to: Count Occurrences of a Word in a String (LINQ) (C#)</span></span>
+<span data-ttu-id="b8c11-103">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="b8c11-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="b8c11-104">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="b8c11-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="b8c11-105"><xref:System.String.Split%2A> 方法有效能費用。</span><span class="sxs-lookup"><span data-stu-id="b8c11-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="b8c11-106">如果對字串執行的唯一作業是計算字數，您應該考慮改用<xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="b8c11-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="b8c11-107">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="b8c11-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a>範例  
+## <a name="example"></a><span data-ttu-id="b8c11-108">範例</span><span class="sxs-lookup"><span data-stu-id="b8c11-108">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -71,8 +71,8 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
+## <a name="compiling-the-code"></a><span data-ttu-id="b8c11-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="b8c11-109">Compiling the Code</span></span>  
+ <span data-ttu-id="b8c11-110">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="b8c11-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="b8c11-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8c11-111">See Also</span></span>  
+ [<span data-ttu-id="b8c11-112">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="b8c11-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

@@ -1,1 +1,1 @@
-Windows Server 2003
+<span data-ttu-id="0be59-101">Windows Server 2003</span><span class="sxs-lookup"><span data-stu-id="0be59-101">Windows Server 2003</span></span>

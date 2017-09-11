@@ -1,1 +1,1 @@
-Windows°7 作業系統
+<span data-ttu-id="c4913-101">Windows°7 作業系統</span><span class="sxs-lookup"><span data-stu-id="c4913-101">Windows°7 operating system</span></span>

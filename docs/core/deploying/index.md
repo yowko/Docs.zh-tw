@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 應用程式部署 | Microsoft Docs"
+title: ".NET Core 應用程式部署"
 description: "部署 .NET Core 應用程式。"
 keywords: ".NET、.NET Core、.NET Core 部署"
 author: rpetrusha
@@ -9,89 +9,77 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
-ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-application-deployment" class="xliff"></a>
+# <a name="net-core-application-deployment"></a><span data-ttu-id="00709-104">.NET Core 應用程式部署</span><span class="sxs-lookup"><span data-stu-id="00709-104">.NET Core application deployment</span></span>
 
-# .NET Core 應用程式部署
+<span data-ttu-id="00709-105">您可以建立兩種類型的 .NET Core 應用程式部署︰</span><span class="sxs-lookup"><span data-stu-id="00709-105">You can create two types of deployments for .NET Core applications:</span></span>
 
-您可以建立兩種類型的 .NET Core 應用程式部署︰
+- <span data-ttu-id="00709-106">與 Framework 相依的部署。</span><span class="sxs-lookup"><span data-stu-id="00709-106">Framework-dependent deployment.</span></span> <span data-ttu-id="00709-107">正如其名，與 Framework 相依的部署 (framework-dependent deployment, FDD) 仰賴存在於目標系統上的全系統共用 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="00709-107">As the name implies, framework-dependent deployment (FDD) relies on the presence of a shared system-wide version of .NET Core on the target system.</span></span> <span data-ttu-id="00709-108">因為 .NET Core 已存在，所以應用程式也可以在 .NET Core 安裝之間攜帶。</span><span class="sxs-lookup"><span data-stu-id="00709-108">Because .NET Core is already present, your app is also portable between installations of .NET Core.</span></span> <span data-ttu-id="00709-109">您的應用程式僅包含其自有程式碼和 .NET Core 程式庫以外的所有協力廠商相依性。</span><span class="sxs-lookup"><span data-stu-id="00709-109">Your app contains only its own code and any third-party dependencies that are outside of the .NET Core libraries.</span></span> <span data-ttu-id="00709-110">FDD 包含的 *.dll* 檔案，可以使用 [dotnet 公用程式](../tools/dotnet.md)從命令列啟動。</span><span class="sxs-lookup"><span data-stu-id="00709-110">FDDs contain *.dll* files that can be launched by using the [dotnet utility](../tools/dotnet.md) from the command line.</span></span> <span data-ttu-id="00709-111">例如，`dotnet app.dll` 執行名為 `app` 的應用程式。</span><span class="sxs-lookup"><span data-stu-id="00709-111">For example, `dotnet app.dll` runs an application named `app`.</span></span>
 
-- 與 Framework 相依的部署。 正如其名，與 Framework 相依的部署 (FDD) 仰賴存在於目標系統上的全系統共用 .NET Core 版本。 因為 .NET Core 已存在，所以應用程式也可以在 .NET Core 安裝之間攜帶。 您的應用程式僅包含其自有程式碼和 .NET Core 程式庫以外的所有協力廠商相依性。 FDD 包含的 *.dll* 檔案，可以使用 [dotnet 公用程式](../tools/dotnet.md)從命令列啟動。 例如，`dotnet app.dll` 執行名為 `app` 的應用程式。
+- <span data-ttu-id="00709-112">自封式部署。</span><span class="sxs-lookup"><span data-stu-id="00709-112">Self-contained deployment.</span></span> <span data-ttu-id="00709-113">不同於 FDD，自封式部署 (SCD) 不仰賴任何存在於目標系統上的共用元件。</span><span class="sxs-lookup"><span data-stu-id="00709-113">Unlike FDD, a self-contained deployment (SCD) doesn't rely on the presence of shared components on the target system.</span></span> <span data-ttu-id="00709-114">包括 .NET Core 程式庫和 .NET Core 執行階段的所有元件，都隨附於應用程式，並與其他 .NET Core 應用程式隔離。</span><span class="sxs-lookup"><span data-stu-id="00709-114">All components, including both the .NET Core libraries and the .NET Core runtime, are included with the application and are isolated from other .NET Core applications.</span></span> <span data-ttu-id="00709-115">SCD 包含可執行檔 (例如，Windows 平台上 `app` 應用程式的 *app.exe*)，這是重新命名的特定平台 .NET Core 主應用程式版本，以及實際的應用程式 *.dll* 檔案 (例如 *app.dll*)。</span><span class="sxs-lookup"><span data-stu-id="00709-115">SCDs include an executable (such as *app.exe* on Windows platforms for an application named `app`), which is  a renamed version of the platform-specific .NET Core host, and a *.dll* file (such as *app.dll*), which is the actual application.</span></span>
 
-- 自封式部署。 不同於 FDD，自封式部署 (SCD) 不仰賴任何存在於目標系統上的共用元件。 包括 .NET Core 程式庫和 .NET Core 執行階段的所有元件，都隨附於應用程式，並與其他 .NET Core 應用程式隔離。 SCD 包含可執行檔 (例如，Windows 平台上 `app` 應用程式的 *app.exe*)，這是重新命名的特定平台 .NET Core 主應用程式版本，以及實際的應用程式 *.dll* 檔案 (例如 *app.dll*)。
+## <a name="framework-dependent-deployments-fdd"></a><span data-ttu-id="00709-116">與 Framework 相依的部署 (FDD)</span><span class="sxs-lookup"><span data-stu-id="00709-116">Framework-dependent deployments (FDD)</span></span>
 
-<a id="framework-dependent-deployments-fdd" class="xliff"></a>
+<span data-ttu-id="00709-117">在 FDD，您只要部署自己的應用程式和任何協力廠商相依性。</span><span class="sxs-lookup"><span data-stu-id="00709-117">For an FDD, you deploy only your app and any third-party dependencies.</span></span> <span data-ttu-id="00709-118">您不必部署 .NET Core，因為您的應用程式會使用存在於目標系統上的 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="00709-118">You don't have to deploy .NET Core, since your app will use the version of .NET Core that's present on the target system.</span></span> <span data-ttu-id="00709-119">這是 .NET Core 應用程式的預設部署模型。</span><span class="sxs-lookup"><span data-stu-id="00709-119">This is the default deployment model for .NET Core apps.</span></span>
 
-## 與 Framework 相依的部署 (FDD)
+### <a name="why-create-a-framework-dependent-deployment"></a><span data-ttu-id="00709-120">為何建立與 Framework 相依的部署？</span><span class="sxs-lookup"><span data-stu-id="00709-120">Why create a framework-dependent deployment?</span></span>
 
-在 FDD，您只要部署自己的應用程式和任何協力廠商相依性。 您不必部署 .NET Core，因為您的應用程式會使用存在於目標系統上的 .NET Core 版本。 這是 .NET Core 應用程式的預設部署模型。
+<span data-ttu-id="00709-121">部署 FDD 有許多優點︰</span><span class="sxs-lookup"><span data-stu-id="00709-121">Deploying an FDD has a number of advantages:</span></span>
 
-<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
+- <span data-ttu-id="00709-122">您不必事先定義 .NET Core 應用程式執行所在的目標作業系統。</span><span class="sxs-lookup"><span data-stu-id="00709-122">You don't have to define the target operating systems that your .NET Core app will run on in advance.</span></span> <span data-ttu-id="00709-123">由於不論作業系統為何，.NET Core 對可執行檔和程式庫都使用通用的 PE 檔案格式，所以 .NET Core 可以執行您的應用程式，不理會基礎作業系統。</span><span class="sxs-lookup"><span data-stu-id="00709-123">Because .NET Core uses a common PE file format for executables and libraries regardless of operating system, .NET Core can execute your app regardless of the underlying operating system.</span></span> <span data-ttu-id="00709-124">如需 PE 檔格式的詳細資訊，請參閱 [.NET Assembly File Format](../../standard/assembly-format.md) (.NET 組件檔案格式)。</span><span class="sxs-lookup"><span data-stu-id="00709-124">For more information on the PE file format, see [.NET Assembly File Format](../../standard/assembly-format.md).</span></span>
 
-### 為何建立與 Framework 相依的部署？
+- <span data-ttu-id="00709-125">部署套件的大小很小。</span><span class="sxs-lookup"><span data-stu-id="00709-125">The size of your deployment package is small.</span></span> <span data-ttu-id="00709-126">您只需要部署您的應用程式及其相依性，不用部署 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="00709-126">You only deploy your app and its dependencies, not .NET Core itself.</span></span>
 
-部署 FDD 有許多優點︰
+- <span data-ttu-id="00709-127">多個應用程式使用相同的 .NET Core 安裝，這樣可減少主機系統的磁碟空間和記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="00709-127">Multiple apps use the same .NET Core installation, which reduces both disk space and memory usage on host systems.</span></span>
 
-- 您不必事先定義 .NET Core 應用程式執行所在的目標作業系統。 由於不論作業系統為何，.NET Core 對可執行檔和程式庫都使用通用的 PE 檔案格式，所以 .NET Core 可以執行您的應用程式，不理會基礎作業系統。 如需 PE 檔格式的詳細資訊，請參閱 [.NET Assembly File Format](../../standard/assembly-format.md) (.NET 組件檔案格式)。
+<span data-ttu-id="00709-128">另外還有幾個缺點︰</span><span class="sxs-lookup"><span data-stu-id="00709-128">There are also a few disadvantages:</span></span>
 
-- 部署套件的大小很小。 您只需要部署您的應用程式及其相依性，不用部署 .NET Core。
+- <span data-ttu-id="00709-129">只有主機系統安裝了目標的 .NET Core 版本或更新版本，您的應用程式才能執行。</span><span class="sxs-lookup"><span data-stu-id="00709-129">Your app can run only if the version of .NET Core that you target, or a later version, is already installed on the host system.</span></span>
 
-- 多個應用程式使用相同的 .NET Core 安裝，這樣可減少主機系統的磁碟空間和記憶體使用量。
+- <span data-ttu-id="00709-130">.NET Core 執行階段和程式庫在未來的版本中可能有所變更，但不會通知您。</span><span class="sxs-lookup"><span data-stu-id="00709-130">It's possible for the .NET Core runtime and libraries to change without your knowledge in future releases.</span></span> <span data-ttu-id="00709-131">只有極其罕見的情況，才可能變更應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="00709-131">In rare cases, this may change the behavior of your app.</span></span>
 
-另外還有幾個缺點︰
+## <a name="self-contained-deployments-scd"></a><span data-ttu-id="00709-132">自封式部署 (SCD)</span><span class="sxs-lookup"><span data-stu-id="00709-132">Self-contained deployments (SCD)</span></span>
 
-- 只有主機系統安裝了目標的 .NET Core 版本或更新版本，您的應用程式才能執行。
+<span data-ttu-id="00709-133">針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="00709-133">For a self-contained deployment, you deploy your app and any required third-party dependencies along with the version of .NET Core that you used to build the app.</span></span> <span data-ttu-id="00709-134">不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。</span><span class="sxs-lookup"><span data-stu-id="00709-134">Creating an SCD doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) on various platforms, so these must be present before the app runs.</span></span>
 
-- .NET Core 執行階段和程式庫在未來的版本中可能有所變更，但不會通知您。 只有極其罕見的情況，才可能變更應用程式的行為。
+<span data-ttu-id="00709-135">FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的發行者簽章，為 SCD 簽署主機可執行檔。</span><span class="sxs-lookup"><span data-stu-id="00709-135">FDD and SCD deployments use separate host executables, so you can sign a host executable for an SCD with your publisher signature.</span></span>
 
-<a id="self-contained-deployments-scd" class="xliff"></a>
+### <a name="why-deploy-a-self-contained-deployment"></a><span data-ttu-id="00709-136">為什麼要部署自封式部署？</span><span class="sxs-lookup"><span data-stu-id="00709-136">Why deploy a self-contained deployment?</span></span>
 
-## 自封式部署 (SCD)
+<span data-ttu-id="00709-137">部署自封式部署有兩大優點︰</span><span class="sxs-lookup"><span data-stu-id="00709-137">Deploying a Self-contained deployment has two major advantages:</span></span>
 
-針對自封式部署，您需要部署自己的應用程式和所有需要的協力廠商相依性，以及建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台上的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)，這些必須存在，才能執行應用程式。
+- <span data-ttu-id="00709-138">您可以獨家控制隨應用程式部署的 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="00709-138">You have sole control of the version of .NET Core that is deployed with your app.</span></span> <span data-ttu-id="00709-139">只有您可以提供 .NET Core 服務。</span><span class="sxs-lookup"><span data-stu-id="00709-139">.NET Core can be serviced only by you.</span></span>
 
-<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+- <span data-ttu-id="00709-140">您可以保證目標系統能執行您的 .NET Core 應用程式，因為您提供的是它可以執行的 .NET Core 版本。</span><span class="sxs-lookup"><span data-stu-id="00709-140">You can be assured that the target system can run your .NET Core app, since you're providing the version of .NET Core that it will run on.</span></span>
 
-### 為什麼要部署自封式部署？
+<span data-ttu-id="00709-141">它也有一些缺點︰</span><span class="sxs-lookup"><span data-stu-id="00709-141">It also has a number of disadvantages:</span></span>
 
-部署自封式部署有兩大優點︰
+- <span data-ttu-id="00709-142">因為 .NET Core 包含在您的部署套件中，所以您必須事先選取部署套件建置所在的目標平台。</span><span class="sxs-lookup"><span data-stu-id="00709-142">Because .NET Core is included in your deployment package, you must select the target platforms for which you build deployment packages in advance.</span></span>
 
-- 您可以獨家控制隨應用程式部署的 .NET Core 版本。 只有您可以提供 .NET Core 服務。
+- <span data-ttu-id="00709-143">您的部署套件的大小相當大，因為您必須包含 .NET Core 以及應用程式及其協力廠商相依性。</span><span class="sxs-lookup"><span data-stu-id="00709-143">The size of your deployment package is relatively large, since you have to include .NET Core as well as your app and its third-party dependencies.</span></span>
 
-- 您可以保證目標系統能執行您的 .NET Core 應用程式，因為您提供的是它可以執行的 .NET Core 版本。
+- <span data-ttu-id="00709-144">將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。</span><span class="sxs-lookup"><span data-stu-id="00709-144">Deploying numerous self-contained .NET Core apps to a system can consume significant amounts of disk space, since each app duplicates .NET Core files.</span></span>
 
-它也有一些缺點︰
+## <a name="step-by-step-examples"></a><span data-ttu-id="00709-145">逐步說明範例</span><span class="sxs-lookup"><span data-stu-id="00709-145">Step-by-step examples</span></span>
 
-- 因為 .NET Core 包含在您的部署套件中，所以您必須事先選取部署套件建置所在的目標平台。
+<span data-ttu-id="00709-146">如需使用 CLI 工具部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="00709-146">For step-by-step examples of deploying .NET Core apps with CLI tools, see [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md).</span></span> <span data-ttu-id="00709-147">如需使用 Visual Studio 部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="00709-147">For step-by-step examples of deploying .NET Core apps with Visual Studio, see [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md).</span></span> <span data-ttu-id="00709-148">每個主題都包含下列部署的範例：</span><span class="sxs-lookup"><span data-stu-id="00709-148">Each topic includes examples of the following deployments:</span></span>
 
-- 您的部署套件的大小相當大，因為您必須包含 .NET Core 以及應用程式及其協力廠商相依性。
+- <span data-ttu-id="00709-149">與 Framework 相依的部署</span><span class="sxs-lookup"><span data-stu-id="00709-149">Framework-dependent deployment</span></span>
+- <span data-ttu-id="00709-150">有協力廠商相依性的 Framework 相依部署</span><span class="sxs-lookup"><span data-stu-id="00709-150">Framework-dependent deployment with third-party dependencies</span></span>
+- <span data-ttu-id="00709-151">自封式部署</span><span class="sxs-lookup"><span data-stu-id="00709-151">Self-contained deployment</span></span>
+- <span data-ttu-id="00709-152">有協力廠商相依性的自封式部署</span><span class="sxs-lookup"><span data-stu-id="00709-152">Self-contained deployment with third-party dependencies</span></span>
 
-- 將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。
+# <a name="see-also"></a><span data-ttu-id="00709-153">請參閱</span><span class="sxs-lookup"><span data-stu-id="00709-153">See also</span></span>
 
-<a id="step-by-step-examples" class="xliff"></a>
-
-## 逐步說明範例
-
-如需使用 CLI 工具部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)。 如需使用 Visual Studio 部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)。 每個主題都包含下列部署的範例：
-
-- 與 Framework 相依的部署
-- 有協力廠商相依性的 Framework 相依部署
-- 自封式部署
-- 有協力廠商相依性的自封式部署
-
-<a id="see-also" class="xliff"></a>
-
-# 請參閱
-
-[使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)   
-[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)   
-[套件、中繼套件和架構](../packages.md)   
-[.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+<span data-ttu-id="00709-154">[使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md) </span><span class="sxs-lookup"><span data-stu-id="00709-154">[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) </span></span>  
+<span data-ttu-id="00709-155">[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md) </span><span class="sxs-lookup"><span data-stu-id="00709-155">[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) </span></span>  
+<span data-ttu-id="00709-156">[套件、中繼套件和架構](../packages.md) </span><span class="sxs-lookup"><span data-stu-id="00709-156">[Packages, Metapackages and Frameworks](../packages.md) </span></span>  
+[<span data-ttu-id="00709-157">.NET Core 執行階段識別項 (RID) 目錄</span><span class="sxs-lookup"><span data-stu-id="00709-157">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
 

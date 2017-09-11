@@ -1,5 +1,5 @@
 ---
-title: "uint (C# 參考) | Microsoft Docs"
+title: "uint (C# 參考)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,57 +30,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="uint-c-reference"></a>uint (C# 參考)
+# <a name="uint-c-reference"></a><span data-ttu-id="0977f-102">uint (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0977f-102">uint (C# Reference)</span></span>
 
-`uint` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數型別。  
+<span data-ttu-id="0977f-103">`uint` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數型別。</span><span class="sxs-lookup"><span data-stu-id="0977f-103">The `uint` keyword signifies an integral type that stores values according to the size and range shown in the following table.</span></span>  
   
-|類型|範圍|大小|.NET Framework 類型|  
+|<span data-ttu-id="0977f-104">類型</span><span class="sxs-lookup"><span data-stu-id="0977f-104">Type</span></span>|<span data-ttu-id="0977f-105">範圍</span><span class="sxs-lookup"><span data-stu-id="0977f-105">Range</span></span>|<span data-ttu-id="0977f-106">大小</span><span class="sxs-lookup"><span data-stu-id="0977f-106">Size</span></span>|<span data-ttu-id="0977f-107">.NET Framework 類型</span><span class="sxs-lookup"><span data-stu-id="0977f-107">.NET Framework type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`uint`|0 到 4,294,967,295|不帶正負號的 32 位元整數|<xref:System.UInt32?displayProperty=fullName>|  
+|`uint`|<span data-ttu-id="0977f-108">0 到 4,294,967,295</span><span class="sxs-lookup"><span data-stu-id="0977f-108">0 to 4,294,967,295</span></span>|<span data-ttu-id="0977f-109">不帶正負號的 32 位元整數</span><span class="sxs-lookup"><span data-stu-id="0977f-109">Unsigned 32-bit integer</span></span>|<xref:System.UInt32?displayProperty=fullName>|  
   
- **注意** `uint`類型不符合 CLS 規範。 請盡可能使用 `int`。  
+ <span data-ttu-id="0977f-110">**注意** `uint`類型不符合 CLS 規範。</span><span class="sxs-lookup"><span data-stu-id="0977f-110">**Note** The `uint` type is not CLS-compliant.</span></span> <span data-ttu-id="0977f-111">請盡可能使用 `int`。</span><span class="sxs-lookup"><span data-stu-id="0977f-111">Use `int` whenever possible.</span></span>  
   
-## <a name="literals"></a>常值  
+## <a name="literals"></a><span data-ttu-id="0977f-112">常值</span><span class="sxs-lookup"><span data-stu-id="0977f-112">Literals</span></span>  
 
-您可以將十進位常值、十六進位常值，或二進位常值 (自 C# 7 起) 指派給 `uint` 變數，以將其宣告和初始化。 如果整數常值超出 `uint` 範圍 (也就是說，如果它小於 <xref:System.UInt32.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
+<span data-ttu-id="0977f-113">您可以針對 `uint` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。</span><span class="sxs-lookup"><span data-stu-id="0977f-113">You can declare and initialize a `uint` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7) a binary literal to it.</span></span> <span data-ttu-id="0977f-114">如果整數常值超出 `uint` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。</span><span class="sxs-lookup"><span data-stu-id="0977f-114">If the integer literal is outside the range of `uint` (that is, if it is less than <xref:System.UInt32.MinValue?displayProperty=fullName> or greater than <xref:System.UInt32.MaxValue?displayProperty=fullName>), a compilation error occurs.</span></span>
 
-在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `uint` 值。  
+<span data-ttu-id="0977f-115">在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `uint` 值。</span><span class="sxs-lookup"><span data-stu-id="0977f-115">In the following example, integers equal to 3,000,000,000 that are represented as decimal, hexadecimal, and binary literals are assigned to `uint` values.</span></span>  
   
-[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]  
+<span data-ttu-id="0977f-116">[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]</span><span class="sxs-lookup"><span data-stu-id="0977f-116">[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]</span></span>  
 
 > [!NOTE] 
-> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
+> <span data-ttu-id="0977f-117">您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。</span><span class="sxs-lookup"><span data-stu-id="0977f-117">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="0977f-118">十進位常值沒有前置詞。</span><span class="sxs-lookup"><span data-stu-id="0977f-118">Decimal literals have no prefix.</span></span> 
 
-自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+<span data-ttu-id="0977f-119">自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="0977f-119">Starting with C# 7, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
 
-[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
+<span data-ttu-id="0977f-120">[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]</span><span class="sxs-lookup"><span data-stu-id="0977f-120">[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]</span></span>  
  
- 整數常值亦可包含後置詞以表示類型。 `U` 或 'u' 後置詞表示 `uint` 或 `ulong`，視常值的數值而定。 下列範例會使用 `u` 後置詞來表示這兩種類型的不帶正負號整數。 請注意，第一個常值是 `uint`，因為其值小於 <xref:System.UInt32.MaxValue?displayProperty=fullName>，而第二個是 `ulong`，因為其值大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>。
+ <span data-ttu-id="0977f-121">整數常值亦可包含後置詞以表示類型。</span><span class="sxs-lookup"><span data-stu-id="0977f-121">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="0977f-122">`U` 或 'u' 後置詞表示 `uint` 或 `ulong`，視常值的數值而定。</span><span class="sxs-lookup"><span data-stu-id="0977f-122">The suffix `U` or 'u' denotes either a `uint` or a `ulong`, depending on the numeric value of the literal.</span></span> <span data-ttu-id="0977f-123">下列範例會使用 `u` 後置詞來表示這兩種類型的不帶正負號整數。</span><span class="sxs-lookup"><span data-stu-id="0977f-123">The following example uses the `u` suffix to denote an unsigned integer of both types.</span></span> <span data-ttu-id="0977f-124">請注意，第一個常值是 `uint`，因為其值小於 <xref:System.UInt32.MaxValue?displayProperty=fullName>而第二個是 `ulong`，因為其值大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="0977f-124">Note that the first literal is a `uint` because its value is less than <xref:System.UInt32.MaxValue?displayProperty=fullName>, while the second is a `ulong` because its value is greater than <xref:System.UInt32.MaxValue?displayProperty=fullName>.</span></span>
 
-[!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
+<span data-ttu-id="0977f-125">[!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="0977f-125">[!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]</span></span>  
  
-如果整數常值沒有後置詞，其類型會是下列類型中可表示其值的第一個類型： 
+<span data-ttu-id="0977f-126">如果整數常值沒有後置詞，其類型會是下列類型中可表示其值的第一個類型：</span><span class="sxs-lookup"><span data-stu-id="0977f-126">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span> 
 
-1. [int](int.md)
+1. [<span data-ttu-id="0977f-127">int</span><span class="sxs-lookup"><span data-stu-id="0977f-127">int</span></span>](int.md)
 2. `uint`
-3. [long](../../../csharp/language-reference/keywords/long.md)
-4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+3. [<span data-ttu-id="0977f-128">long</span><span class="sxs-lookup"><span data-stu-id="0977f-128">long</span></span>](../../../csharp/language-reference/keywords/long.md)
+4. [<span data-ttu-id="0977f-129">ulong</span><span class="sxs-lookup"><span data-stu-id="0977f-129">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md) 
   
-## <a name="conversions"></a>轉換  
- 有一項從 `uint` 轉換為 [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。 例如:   
+## <a name="conversions"></a><span data-ttu-id="0977f-130">轉換</span><span class="sxs-lookup"><span data-stu-id="0977f-130">Conversions</span></span>  
+ <span data-ttu-id="0977f-131">有一項從 `uint` 轉換為 [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="0977f-131">There is a predefined implicit conversion from `uint` to [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span> <span data-ttu-id="0977f-132">例如: </span><span class="sxs-lookup"><span data-stu-id="0977f-132">For example:</span></span>  
   
 ```csharp  
 float myFloat = 4294967290;   // OK: implicit conversion to float  
 ```  
   
- 有一項從 [byte](../../../csharp/language-reference/keywords/byte.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 轉換為 `uint` 之預先定義的隱含轉換。 否則，您必須使用轉換。 例如，下列指派陳述式會在未進行轉換的情況下產生編譯錯誤：  
+ <span data-ttu-id="0977f-133">有一項從 [byte](../../../csharp/language-reference/keywords/byte.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 轉換為 `uint` 之預先定義的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="0977f-133">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), or [char](../../../csharp/language-reference/keywords/char.md) to `uint`.</span></span> <span data-ttu-id="0977f-134">否則，您必須使用轉換。</span><span class="sxs-lookup"><span data-stu-id="0977f-134">Otherwise you must use a cast.</span></span> <span data-ttu-id="0977f-135">例如，下列指派陳述式會在未進行轉換的情況下產生編譯錯誤：</span><span class="sxs-lookup"><span data-stu-id="0977f-135">For example, the following assignment statement will produce a compilation error without a cast:</span></span>  
   
 ```csharp  
 long aLong = 22;  
@@ -90,7 +90,7 @@ uint uInt1 = aLong;
 uint uInt2 = (uint)aLong;  
 ```  
   
- 另請注意，沒有從浮點類型轉換為 `uint` 的隱含轉換。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
+ <span data-ttu-id="0977f-136">另請注意，沒有從浮點類型轉換為 `uint` 的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="0977f-136">Notice also that there is no implicit conversion from floating-point types to `uint`.</span></span> <span data-ttu-id="0977f-137">例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：</span><span class="sxs-lookup"><span data-stu-id="0977f-137">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -99,19 +99,20 @@ uint x = 3.0;
 uint y = (uint)3.0;   
 ```  
   
- 如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
+ <span data-ttu-id="0977f-138">如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。</span><span class="sxs-lookup"><span data-stu-id="0977f-138">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- 如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
+ <span data-ttu-id="0977f-139">如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。</span><span class="sxs-lookup"><span data-stu-id="0977f-139">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+## <a name="c-language-specification"></a><span data-ttu-id="0977f-140">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="0977f-140">C# Language Specification</span></span>  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:System.UInt32>   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a><span data-ttu-id="0977f-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0977f-141">See Also</span></span>  
+ <span data-ttu-id="0977f-142"><xref:System.UInt32></span><span class="sxs-lookup"><span data-stu-id="0977f-142"><xref:System.UInt32></span></span>   
+ <span data-ttu-id="0977f-143">[C# 參考](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="0977f-143">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="0977f-144">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="0977f-144">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="0977f-145">[C# 關鍵字](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="0977f-145">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="0977f-146">[整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="0977f-146">[Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) </span></span>  
+ <span data-ttu-id="0977f-147">[內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="0977f-147">[Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md) </span></span>  
+ <span data-ttu-id="0977f-148">[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span><span class="sxs-lookup"><span data-stu-id="0977f-148">[Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span></span>  
+ [<span data-ttu-id="0977f-149">明確數值轉換表</span><span class="sxs-lookup"><span data-stu-id="0977f-149">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

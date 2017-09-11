@@ -27,24 +27,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 82c97eae0ba9a41182b857a799303c1ce4f8053f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b6148e97de23ef7be9b3c26f40b3db10caed18a0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="a-e-statements"></a>A-E 陳述式
-下表包含的清單[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]語言陳述式。  
+# <a name="a-e-statements"></a><span data-ttu-id="edbf1-102">A-E 陳述式</span><span class="sxs-lookup"><span data-stu-id="edbf1-102">A-E Statements</span></span>
+<span data-ttu-id="edbf1-103">下表包含的清單[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]語言陳述式。</span><span class="sxs-lookup"><span data-stu-id="edbf1-103">The following table contains a listing of [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] language statements.</span></span>  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[呼叫](../../../visual-basic/language-reference/statements/call-statement.md)|[類別](../../../visual-basic/language-reference/statements/class-statement.md)|[常數](../../../visual-basic/language-reference/statements/const-statement.md)|  
-|[繼續](../../../visual-basic/language-reference/statements/continue-statement.md)|[宣告](../../../visual-basic/language-reference/statements/declare-statement.md)|[委派](../../../visual-basic/language-reference/statements/delegate-statement.md)|[維度](../../../visual-basic/language-reference/statements/dim-statement.md)|  
-|[執行動作...迴圈](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[其他](../../../visual-basic/language-reference/statements/else-statement.md)|[結束](../../../visual-basic/language-reference/statements/end-statement.md)|[結束\<關鍵字 >](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
-|[列舉](../../../visual-basic/language-reference/statements/enum-statement.md)|[清除](../../../visual-basic/language-reference/statements/erase-statement.md)|[錯誤](../../../visual-basic/language-reference/statements/error-statement.md)|[事件](../../../visual-basic/language-reference/statements/event-statement.md)|  
-|[結束](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
+|[<span data-ttu-id="edbf1-104">AddHandler</span><span class="sxs-lookup"><span data-stu-id="edbf1-104">AddHandler</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[<span data-ttu-id="edbf1-105">呼叫</span><span class="sxs-lookup"><span data-stu-id="edbf1-105">Call</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)|[<span data-ttu-id="edbf1-106">類別</span><span class="sxs-lookup"><span data-stu-id="edbf1-106">Class</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)|[<span data-ttu-id="edbf1-107">常數</span><span class="sxs-lookup"><span data-stu-id="edbf1-107">Const</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)|  
+|[<span data-ttu-id="edbf1-108">繼續</span><span class="sxs-lookup"><span data-stu-id="edbf1-108">Continue</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)|[<span data-ttu-id="edbf1-109">宣告</span><span class="sxs-lookup"><span data-stu-id="edbf1-109">Declare</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)|[<span data-ttu-id="edbf1-110">委派</span><span class="sxs-lookup"><span data-stu-id="edbf1-110">Delegate</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)|[<span data-ttu-id="edbf1-111">維度</span><span class="sxs-lookup"><span data-stu-id="edbf1-111">Dim</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)|  
+|[<span data-ttu-id="edbf1-112">執行動作...迴圈</span><span class="sxs-lookup"><span data-stu-id="edbf1-112">Do...Loop</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[<span data-ttu-id="edbf1-113">其他</span><span class="sxs-lookup"><span data-stu-id="edbf1-113">Else</span></span>](../../../visual-basic/language-reference/statements/else-statement.md)|[<span data-ttu-id="edbf1-114">結束</span><span class="sxs-lookup"><span data-stu-id="edbf1-114">End</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)|[<span data-ttu-id="edbf1-115">結束\<關鍵字 ></span><span class="sxs-lookup"><span data-stu-id="edbf1-115">End \<keyword></span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
+|[<span data-ttu-id="edbf1-116">列舉</span><span class="sxs-lookup"><span data-stu-id="edbf1-116">Enum</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)|[<span data-ttu-id="edbf1-117">清除</span><span class="sxs-lookup"><span data-stu-id="edbf1-117">Erase</span></span>](../../../visual-basic/language-reference/statements/erase-statement.md)|[<span data-ttu-id="edbf1-118">錯誤</span><span class="sxs-lookup"><span data-stu-id="edbf1-118">Error</span></span>](../../../visual-basic/language-reference/statements/error-statement.md)|[<span data-ttu-id="edbf1-119">事件</span><span class="sxs-lookup"><span data-stu-id="edbf1-119">Event</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)|  
+|[<span data-ttu-id="edbf1-120">結束</span><span class="sxs-lookup"><span data-stu-id="edbf1-120">Exit</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
-## <a name="see-also"></a>另請參閱  
- [F-P 陳述式](../../../visual-basic/language-reference/statements/f-p-statements.md)   
- [Q-Z 陳述式](../../../visual-basic/language-reference/statements/q-z-statements.md)   
- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="edbf1-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="edbf1-121">See Also</span></span>  
+ <span data-ttu-id="edbf1-122">[F-P 陳述式](../../../visual-basic/language-reference/statements/f-p-statements.md) </span><span class="sxs-lookup"><span data-stu-id="edbf1-122">[F-P Statements](../../../visual-basic/language-reference/statements/f-p-statements.md) </span></span>  
+<span data-ttu-id="edbf1-123"> [Q-Z 陳述式](../../../visual-basic/language-reference/statements/q-z-statements.md) </span><span class="sxs-lookup"><span data-stu-id="edbf1-123"> [Q-Z Statements](../../../visual-basic/language-reference/statements/q-z-statements.md) </span></span>  
+<span data-ttu-id="edbf1-124"> [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)</span><span class="sxs-lookup"><span data-stu-id="edbf1-124"> [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)</span></span>

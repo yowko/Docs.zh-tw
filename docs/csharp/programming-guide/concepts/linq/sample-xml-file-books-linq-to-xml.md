@@ -1,5 +1,5 @@
 ---
-title: "範例 XML 檔：書籍 (LINQ to XML) | Microsoft Docs"
+title: "範例 XML 檔：書籍 (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9533189ab817cf24c9417418f7a90b1687c51dd2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fe9e95c56e0d31f0b294905c0890810d7ce3b086
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>範例 XML 檔：書籍 (LINQ to XML)
-下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 文件的各種範例中。 此檔案包含書籍的相關資訊。  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="8fb02-102">範例 XML 檔：書籍 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8fb02-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="8fb02-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="8fb02-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8fb02-104">此檔案包含書籍的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="8fb02-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a>books.xml  
+## <a name="booksxml"></a><span data-ttu-id="8fb02-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="8fb02-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,5 +56,6 @@ ms.lasthandoff: 03/13/2017
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [範例 XML 文件 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8fb02-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8fb02-106">See Also</span></span>  
+ [<span data-ttu-id="8fb02-107">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8fb02-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

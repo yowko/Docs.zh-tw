@@ -1,5 +1,5 @@
 ---
-title: "處理 XML 檔案 (C# 程式設計手冊) | Microsoft Docs"
+title: "處理 XML 檔案 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,82 +28,83 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 3a585025063847f93dc2c3b3747bd3406f89eae4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 610f3ac5c88fb41a4b55f2990fecdc4c13074e19
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
-編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
+# <a name="processing-the-xml-file-c-programming-guide"></a><span data-ttu-id="35458-102">處理 XML 檔案 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="35458-102">Processing the XML File (C# Programming Guide)</span></span>
+<span data-ttu-id="35458-103">編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。</span><span class="sxs-lookup"><span data-stu-id="35458-103">The compiler generates an ID string for each construct in your code that is tagged to generate documentation.</span></span> <span data-ttu-id="35458-104">(如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。</span><span class="sxs-lookup"><span data-stu-id="35458-104">(For information about how to tag your code, see [Recommended Tags for Documentation Comments](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) The ID string uniquely identifies the construct.</span></span> <span data-ttu-id="35458-105">處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。</span><span class="sxs-lookup"><span data-stu-id="35458-105">Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item that the documentation applies to.</span></span>  
   
- XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個元素所產生之識別碼的一般清單。  
+ <span data-ttu-id="35458-106">XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個元素所產生之識別碼的一般清單。</span><span class="sxs-lookup"><span data-stu-id="35458-106">The XML file is not a hierarchical representation of your code; it is a flat list that has a generated ID for each element.</span></span>  
   
- 編譯器在產生識別碼字串時會遵守下列規則：  
+ <span data-ttu-id="35458-107">編譯器在產生識別碼字串時會遵守下列規則：</span><span class="sxs-lookup"><span data-stu-id="35458-107">The compiler observes the following rules when it generates the ID strings:</span></span>  
   
--   字串中不能有空格。  
+-   <span data-ttu-id="35458-108">字串中不能有空格。</span><span class="sxs-lookup"><span data-stu-id="35458-108">No whitespace is in the string.</span></span>  
   
--   識別碼字串的第一個部分會識別所識別的成員類型，格式為單一字元後面接著一個冒號。 使用的成員類型如下：  
+-   <span data-ttu-id="35458-109">識別碼字串的第一個部分會識別所識別的成員類型，格式為單一字元後面接著一個冒號。</span><span class="sxs-lookup"><span data-stu-id="35458-109">The first part of the ID string identifies the kind of member being identified, by way of a single character followed by a colon.</span></span> <span data-ttu-id="35458-110">使用的成員類型如下：</span><span class="sxs-lookup"><span data-stu-id="35458-110">The following member types are used:</span></span>  
   
-    |字元|描述|  
+    |<span data-ttu-id="35458-111">字元</span><span class="sxs-lookup"><span data-stu-id="35458-111">Character</span></span>|<span data-ttu-id="35458-112">描述</span><span class="sxs-lookup"><span data-stu-id="35458-112">Description</span></span>|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|  
-    |T|型別︰類別、介面、建構、列舉、委派|  
-    |F|Field - 欄位|  
-    |P|屬性 (包括索引子或其他索引屬性)|  
-    |M|方法 (包括像是建構函式、運算子之類的特殊方法)|  
-    |E|Event - 事件|  
-    |!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 C# 編譯器會針對無法解析的連結產生錯誤資訊。|  
+    |<span data-ttu-id="35458-113">N</span><span class="sxs-lookup"><span data-stu-id="35458-113">N</span></span>|<span data-ttu-id="35458-114">namespace</span><span class="sxs-lookup"><span data-stu-id="35458-114">namespace</span></span><br /><br /> <span data-ttu-id="35458-115">您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。</span><span class="sxs-lookup"><span data-stu-id="35458-115">You cannot add documentation comments to a namespace, but you can make cref references to them, where supported.</span></span>|  
+    |<span data-ttu-id="35458-116">T</span><span class="sxs-lookup"><span data-stu-id="35458-116">T</span></span>|<span data-ttu-id="35458-117">型別︰類別、介面、建構、列舉、委派</span><span class="sxs-lookup"><span data-stu-id="35458-117">type: class, interface, struct, enum, delegate</span></span>|  
+    |<span data-ttu-id="35458-118">F</span><span class="sxs-lookup"><span data-stu-id="35458-118">F</span></span>|<span data-ttu-id="35458-119">Field - 欄位</span><span class="sxs-lookup"><span data-stu-id="35458-119">field</span></span>|  
+    |<span data-ttu-id="35458-120">P</span><span class="sxs-lookup"><span data-stu-id="35458-120">P</span></span>|<span data-ttu-id="35458-121">屬性 (包括索引子或其他索引屬性)</span><span class="sxs-lookup"><span data-stu-id="35458-121">property (including indexers or other indexed properties)</span></span>|  
+    |<span data-ttu-id="35458-122">M</span><span class="sxs-lookup"><span data-stu-id="35458-122">M</span></span>|<span data-ttu-id="35458-123">方法 (包括像是建構函式、運算子之類的特殊方法)</span><span class="sxs-lookup"><span data-stu-id="35458-123">method (including such special methods as constructors, operators, and so forth)</span></span>|  
+    |<span data-ttu-id="35458-124">E</span><span class="sxs-lookup"><span data-stu-id="35458-124">E</span></span>|<span data-ttu-id="35458-125">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="35458-125">event</span></span>|  
+    |<span data-ttu-id="35458-126">!</span><span class="sxs-lookup"><span data-stu-id="35458-126">!</span></span>|<span data-ttu-id="35458-127">錯誤字串</span><span class="sxs-lookup"><span data-stu-id="35458-127">error string</span></span><br /><br /> <span data-ttu-id="35458-128">字串的其餘部分提供與錯誤相關的資訊。</span><span class="sxs-lookup"><span data-stu-id="35458-128">The rest of the string provides information about the error.</span></span> <span data-ttu-id="35458-129">C# 編譯器會針對無法解析的連結產生錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="35458-129">The C# compiler generates error information for links that cannot be resolved.</span></span>|  
   
--   字串的第二個部分是項目的完整名稱 (從命名空間的根開始)。 項目名稱、其封入類型及命名空間會以句號來分隔。 如果項目名稱本身包含句點，則會以雜湊符號 ('#') 來取代它們。 假設沒有項目的名稱中直接含有雜湊符號。 例如，String 建構函式的完整名稱會是 "System.String.#ctor"。  
+-   <span data-ttu-id="35458-130">字串的第二個部分是項目的完整名稱 (從命名空間的根開始)。</span><span class="sxs-lookup"><span data-stu-id="35458-130">The second part of the string is the fully qualified name of the item, starting at the root of the namespace.</span></span> <span data-ttu-id="35458-131">項目名稱、其封入類型及命名空間會以句號來分隔。</span><span class="sxs-lookup"><span data-stu-id="35458-131">The name of the item, its enclosing type(s), and namespace are separated by periods.</span></span> <span data-ttu-id="35458-132">如果項目名稱本身包含句點，則會以雜湊符號 ('#') 來取代它們。</span><span class="sxs-lookup"><span data-stu-id="35458-132">If the name of the item itself has periods, they are replaced by the hash-sign ('#').</span></span> <span data-ttu-id="35458-133">假設沒有項目的名稱中直接含有雜湊符號。</span><span class="sxs-lookup"><span data-stu-id="35458-133">It is assumed that no item has a hash-sign directly in its name.</span></span> <span data-ttu-id="35458-134">例如，String 建構函式的完整名稱會是 "System.String.#ctor"。</span><span class="sxs-lookup"><span data-stu-id="35458-134">For example, the fully qualified name of the String constructor would be "System.String.#ctor".</span></span>  
   
--   針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。 如果沒有任何引數，就不會出現括弧。 引數會以逗號分隔。 每個引數的編碼方式都會直接遵循它在 .NET Framework 簽章中的編碼方式：  
+-   <span data-ttu-id="35458-135">針對屬性和方法，如果有方法的引數，則後面會接著以括弧括住的引數清單。</span><span class="sxs-lookup"><span data-stu-id="35458-135">For properties and methods, if there are arguments to the method, the argument list enclosed in parentheses follows.</span></span> <span data-ttu-id="35458-136">如果沒有任何引數，就不會出現括弧。</span><span class="sxs-lookup"><span data-stu-id="35458-136">If there are no arguments, no parentheses are present.</span></span> <span data-ttu-id="35458-137">引數會以逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="35458-137">The arguments are separated by commas.</span></span> <span data-ttu-id="35458-138">每個引數的編碼方式都會直接遵循它在 .NET Framework 簽章中的編碼方式：</span><span class="sxs-lookup"><span data-stu-id="35458-138">The encoding of each argument follows directly how it is encoded in a .NET Framework signature:</span></span>  
   
-    -   基底類型。 一般類型 (ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE) 會表示為類型的完整名稱。  
+    -   <span data-ttu-id="35458-139">基底類型。</span><span class="sxs-lookup"><span data-stu-id="35458-139">Base types.</span></span> <span data-ttu-id="35458-140">一般類型 (ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE) 會表示為類型的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="35458-140">Regular types (ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE) are represented as the fully qualified name of the type.</span></span>  
   
-    -   內建類型 (例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID) 會表示為對應之完整類型的完整名稱。 例如，System.Int32 或 System.TypedReference。  
+    -   <span data-ttu-id="35458-141">內建類型 (例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF</span><span class="sxs-lookup"><span data-stu-id="35458-141">Intrinsic types (for example, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF.</span></span> <span data-ttu-id="35458-142">和 ELEMENT_TYPE_VOID) 會表示為對應之完整類型的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="35458-142">and ELEMENT_TYPE_VOID) are represented as the fully qualified name of the corresponding full type.</span></span> <span data-ttu-id="35458-143">例如，System.Int32 或 System.TypedReference。</span><span class="sxs-lookup"><span data-stu-id="35458-143">For example, System.Int32 or System.TypedReference.</span></span>  
   
-    -   ELEMENT_TYPE_PTR 會表示為 '*'，緊接在已修改的類型之後。  
+    -   <span data-ttu-id="35458-144">ELEMENT_TYPE_PTR 會表示為 '*'，緊接在已修改的類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-144">ELEMENT_TYPE_PTR is represented as a '*' following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_BYREF 會表示為 '@'，緊接在已修改的類型之後。  
+    -   <span data-ttu-id="35458-145">ELEMENT_TYPE_BYREF 會表示為 '@'，緊接在已修改的類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-145">ELEMENT_TYPE_BYREF is represented as a '@' following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_PINNED 會表示為 '^'，緊接在已修改的類型之後。 C# 編譯器永遠都不會產生這個。  
+    -   <span data-ttu-id="35458-146">ELEMENT_TYPE_PINNED 會表示為 '^'，緊接在已修改的類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-146">ELEMENT_TYPE_PINNED is represented as a '^' following the modified type.</span></span> <span data-ttu-id="35458-147">C# 編譯器永遠都不會產生這個。</span><span class="sxs-lookup"><span data-stu-id="35458-147">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_CMOD_REQ 會表示為 '&#124;' 和修飾詞類別的完整名稱，緊接在已修改的類型之後。 C# 編譯器永遠都不會產生這個。  
+    -   <span data-ttu-id="35458-148">ELEMENT_TYPE_CMOD_REQ 會表示為 '&#124;' 和修飾詞類別的完整名稱，緊接在已修改的類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-148">ELEMENT_TYPE_CMOD_REQ is represented as a '&#124;' and the fully qualified name of the modifier class, following the modified type.</span></span> <span data-ttu-id="35458-149">C# 編譯器永遠都不會產生這個。</span><span class="sxs-lookup"><span data-stu-id="35458-149">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_CMOD_OPT 會表示為 '!' 和修飾詞類別的完整名稱，緊接在已修改的類型之後。  
+    -   <span data-ttu-id="35458-150">ELEMENT_TYPE_CMOD_OPT 會表示為 '!' 和修飾詞類別的完整名稱，緊接在已修改的類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-150">ELEMENT_TYPE_CMOD_OPT is represented as a '!' and the fully qualified name of the modifier class, following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_SZARRAY 會表示為 "[]"，緊接在陣列的元素類型之後。  
+    -   <span data-ttu-id="35458-151">ELEMENT_TYPE_SZARRAY 會表示為 "[]"，緊接在陣列的元素類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-151">ELEMENT_TYPE_SZARRAY is represented as "[]" following the element type of the array.</span></span>  
   
-    -   ELEMENT_TYPE_GENERICARRAY 會表示為 "[?]"，緊接在陣列的元素類型之後。 C# 編譯器永遠都不會產生這個。  
+    -   <span data-ttu-id="35458-152">ELEMENT_TYPE_GENERICARRAY 會表示為 "[?]"，緊接在陣列的元素類型之後。</span><span class="sxs-lookup"><span data-stu-id="35458-152">ELEMENT_TYPE_GENERICARRAY is represented as "[?]" following the element type of the array.</span></span> <span data-ttu-id="35458-153">C# 編譯器永遠都不會產生這個。</span><span class="sxs-lookup"><span data-stu-id="35458-153">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_ARRAY 會表示為 [*lowerbound*:`size`,*lowerbound*:`size`]，其中逗號數目的順位是 -1，而每個維度的下限和大小 (如果已知) 會以十進位格式表示。 如果未指定下限或大小，就會加以省略。 如果省略了特定維度的下限和大小，也會省略 ':'。 例如，下限為 1 且未指定大小的 2 維度陣列是 [1:,1:]。  
+    -   <span data-ttu-id="35458-154">ELEMENT_TYPE_ARRAY 會表示為 [*lowerbound*:`size`,*lowerbound*:`size`]，其中逗號數目的順位是 -1，而每個維度的下限和大小 (如果已知) 會以十進位格式表示。</span><span class="sxs-lookup"><span data-stu-id="35458-154">ELEMENT_TYPE_ARRAY is represented as [*lowerbound*:`size`,*lowerbound*:`size`] where the number of commas is the rank - 1, and the lower bounds and size of each dimension, if known, are represented in decimal.</span></span> <span data-ttu-id="35458-155">如果未指定下限或大小，就會加以省略。</span><span class="sxs-lookup"><span data-stu-id="35458-155">If a lower bound or size is not specified, it is simply omitted.</span></span> <span data-ttu-id="35458-156">如果省略了特定維度的下限和大小，也會省略 ':'。</span><span class="sxs-lookup"><span data-stu-id="35458-156">If the lower bound and size for a particular dimension are omitted, the ':' is omitted as well.</span></span> <span data-ttu-id="35458-157">例如，下限為 1 且未指定大小的 2 維度陣列是 [1:,1:]。</span><span class="sxs-lookup"><span data-stu-id="35458-157">For example, a 2-dimensional array with 1 as the lower bounds and unspecified sizes is [1:,1:].</span></span>  
   
-    -   ELEMENT_TYPE_FNPTR 會表示為 "=FUNC:`type`(*signature*)"，其中 `type` 是傳回類型，而 *signature* 是方法的引數。 如果沒有任何引數，就會省略括弧。 C# 編譯器永遠都不會產生這個。  
+    -   <span data-ttu-id="35458-158">ELEMENT_TYPE_FNPTR 會表示為 "=FUNC:`type`(*signature*)"，其中 `type` 是傳回類型，而 *signature* 是方法的引數。</span><span class="sxs-lookup"><span data-stu-id="35458-158">ELEMENT_TYPE_FNPTR is represented as "=FUNC:`type`(*signature*)", where `type` is the return type, and *signature* is the arguments of the method.</span></span> <span data-ttu-id="35458-159">如果沒有任何引數，就會省略括弧。</span><span class="sxs-lookup"><span data-stu-id="35458-159">If there are no arguments, the parentheses are omitted.</span></span> <span data-ttu-id="35458-160">C# 編譯器永遠都不會產生這個。</span><span class="sxs-lookup"><span data-stu-id="35458-160">The C# compiler never generates this.</span></span>  
   
-     下列簽章元件不會出現，因為絕對不會使用它們來區別多載方法：  
+     <span data-ttu-id="35458-161">下列簽章元件不會出現，因為絕對不會使用它們來區別多載方法：</span><span class="sxs-lookup"><span data-stu-id="35458-161">The following signature components are not represented because they are never used for differentiating overloaded methods:</span></span>  
   
-    -   呼叫慣例  
+    -   <span data-ttu-id="35458-162">呼叫慣例</span><span class="sxs-lookup"><span data-stu-id="35458-162">calling convention</span></span>  
   
-    -   傳回類型  
+    -   <span data-ttu-id="35458-163">傳回類型</span><span class="sxs-lookup"><span data-stu-id="35458-163">return type</span></span>  
   
-    -   ELEMENT_TYPE_SENTINEL  
+    -   <span data-ttu-id="35458-164">ELEMENT_TYPE_SENTINEL</span><span class="sxs-lookup"><span data-stu-id="35458-164">ELEMENT_TYPE_SENTINEL</span></span>  
   
--   僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。  
+-   <span data-ttu-id="35458-165">僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。</span><span class="sxs-lookup"><span data-stu-id="35458-165">For conversion operators only (op_Implicit and op_Explicit), the return value of the method is encoded as a '~' followed by the return type, as encoded above.</span></span>  
   
--   針對泛型類型，類型的名稱後面將接著反引號，然後是表示泛型類型參數數目的數字。  例如：  
+-   <span data-ttu-id="35458-166">針對泛型類型，類型的名稱後面將接著反引號，然後是表示泛型類型參數數目的數字。</span><span class="sxs-lookup"><span data-stu-id="35458-166">For generic types, the name of the type will be followed by a back tick and then a number that indicates the number of generic type parameters.</span></span>  <span data-ttu-id="35458-167">例如：</span><span class="sxs-lookup"><span data-stu-id="35458-167">For example,</span></span>  
   
-     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`。  
+     <span data-ttu-id="35458-168">`<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>\`。</span><span class="sxs-lookup"><span data-stu-id="35458-168">`<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>\`.</span></span>  
   
-     針對接受泛型類型做為參數的方法，會將泛型類型參數指定為前面加上反引號的數字 (例如\`0、`1)。  每個數字都表示類型泛型參數之以零為起始的陣列標記法。  
+     <span data-ttu-id="35458-169">針對接受泛型類型做為參數的方法，會將泛型類型參數指定為前面加上反引號的數字 (例如\`0、`1)。</span><span class="sxs-lookup"><span data-stu-id="35458-169">For methods taking generic types as parameters, the generic type parameters are specified as numbers prefaced with back ticks (for example \`0,`1).</span></span>  <span data-ttu-id="35458-170">每個數字都表示類型泛型參數之以零為起始的陣列標記法。</span><span class="sxs-lookup"><span data-stu-id="35458-170">Each number representing a zero-based array notation for the type's generic parameters.</span></span>  
   
-## <a name="examples"></a>範例  
- 下列範例顯示針對類別及其成員產生識別碼字串的方式：  
+## <a name="examples"></a><span data-ttu-id="35458-171">範例</span><span class="sxs-lookup"><span data-stu-id="35458-171">Examples</span></span>  
+ <span data-ttu-id="35458-172">下列範例顯示針對類別及其成員產生識別碼字串的方式：</span><span class="sxs-lookup"><span data-stu-id="35458-172">The following examples show how the ID strings for a class and its members would be generated:</span></span>  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ <span data-ttu-id="35458-173">[!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="35458-173">[!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
- [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="35458-174">另請參閱</span><span class="sxs-lookup"><span data-stu-id="35458-174">See Also</span></span>  
+ <span data-ttu-id="35458-175">[C# 程式設計手冊](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="35458-175">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="35458-176">[/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) </span><span class="sxs-lookup"><span data-stu-id="35458-176">[/doc (C# Compiler Options)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) </span></span>  
+ [<span data-ttu-id="35458-177">XML 文件註解</span><span class="sxs-lookup"><span data-stu-id="35458-177">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

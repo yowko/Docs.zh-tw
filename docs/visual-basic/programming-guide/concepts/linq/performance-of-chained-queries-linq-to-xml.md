@@ -16,17 +16,17 @@ caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd5b63f255107c5864108cfbb87bef6e53a971a0
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: ab3bf1a195fbe83a546df7c3ae6080cc8f39e887
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>鏈結的查詢 (LINQ to XML) 的效能 (Visual Basic)
-LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。  
+# <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a><span data-ttu-id="8edc6-102">鏈結的查詢 (LINQ to XML) 的效能 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8edc6-102">Performance of Chained Queries (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="8edc6-103">LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。</span><span class="sxs-lookup"><span data-stu-id="8edc6-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  
   
- 鏈結查詢是指使用其他查詢當做其來源的查詢。 例如，在下列簡單程式碼中，`query2` 具有 `query1` 當做其來源：  
+ <span data-ttu-id="8edc6-104">鏈結查詢是指使用其他查詢當做其來源的查詢。</span><span class="sxs-lookup"><span data-stu-id="8edc6-104">A chained query is a query that uses another query as its source.</span></span> <span data-ttu-id="8edc6-105">例如，在下列簡單程式碼中，`query2` 具有 `query1` 當做其來源：</span><span class="sxs-lookup"><span data-stu-id="8edc6-105">For example, in the following simple code, `query2` has `query1` as its source:</span></span>  
   
 ```vb  
 Dim root As New XElement("Root", New XElement("Child", 1), New XElement("Child", 2), New XElement("Child", 3), New XElement("Child", 4))  
@@ -40,24 +40,24 @@ For Each i As var In query2
 Next  
 ```  
   
- 這個範例會產生下列輸出：  
+ <span data-ttu-id="8edc6-106">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="8edc6-106">This example produces the following output:</span></span>  
   
 ```  
 4  
 ```  
   
- 這個鏈結查詢會與逐一查看連結串列 (Linked List) 提供相同的效能設定檔。  
+ <span data-ttu-id="8edc6-107">這個鏈結查詢會與逐一查看連結串列 (Linked List) 提供相同的效能設定檔。</span><span class="sxs-lookup"><span data-stu-id="8edc6-107">This chained query provides the same performance profile as iterating through a linked list.</span></span>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A>軸基本上具有相同的效能與逐一查看連結串列。</xref:System.Xml.Linq.XContainer.Elements%2A> <xref:System.Xml.Linq.XContainer.Elements%2A>會實作成延後執行迭代器。</xref:System.Xml.Linq.XContainer.Elements%2A> 這表示，除了逐一查看連結串列以外，它會執行一些工作，例如配置 Iterator 物件和追蹤執行狀態。 這項工作可分成兩個分類：在設定 Iterator 時完成的工作，以及在每次反覆運算期間完成的工作。 設定工作是小型且固定的工作量，而在每次反覆運算期間完成的工作則與來源集合中的項目數成正比。  
+-   <span data-ttu-id="8edc6-108"><xref:System.Xml.Linq.XContainer.Elements%2A>軸基本上具有相同的效能與逐一查看連結串列。</xref:System.Xml.Linq.XContainer.Elements%2A></span><span class="sxs-lookup"><span data-stu-id="8edc6-108">The <xref:System.Xml.Linq.XContainer.Elements%2A> axis has essentially the same performance as iterating through a linked list.</span></span> <span data-ttu-id="8edc6-109"><xref:System.Xml.Linq.XContainer.Elements%2A>會實作成延後執行迭代器。</xref:System.Xml.Linq.XContainer.Elements%2A></span><span class="sxs-lookup"><span data-stu-id="8edc6-109"><xref:System.Xml.Linq.XContainer.Elements%2A> is implemented as an iterator with deferred execution.</span></span> <span data-ttu-id="8edc6-110">這表示，除了逐一查看連結串列以外，它會執行一些工作，例如配置 Iterator 物件和追蹤執行狀態。</span><span class="sxs-lookup"><span data-stu-id="8edc6-110">This means that it does some work in addition to iterating through the linked list, such as allocating the iterator object and keeping track of execution state.</span></span> <span data-ttu-id="8edc6-111">這項工作可分成兩個分類：在設定 Iterator 時完成的工作，以及在每次反覆運算期間完成的工作。</span><span class="sxs-lookup"><span data-stu-id="8edc6-111">This work can be divided into two categories: the work that is done at the time the iterator is set up, and the work that is done during each iteration.</span></span> <span data-ttu-id="8edc6-112">設定工作是小型且固定的工作量，而在每次反覆運算期間完成的工作則與來源集合中的項目數成正比。</span><span class="sxs-lookup"><span data-stu-id="8edc6-112">The setup work is a small, fixed amount of work and the work done during each iteration is proportional to the number of items in the source collection.</span></span>  
   
--   在`query1`、`Where`子句會讓查詢呼叫<xref:System.Linq.Enumerable.Where%2A>方法。</xref:System.Linq.Enumerable.Where%2A> 這個方法也會實作成 Iterator。 設定工作包含具現化將參考 Lambda 運算式的委派 (Delegate)，以及進行 Iterator 的一般設定。 進行每次反覆運算時，系統會呼叫此委派來執行述詞 (Predicate)。 設定工作以及在每次反覆運算期間完成的工作與逐一查看軸時完成的工作很相似。  
+-   <span data-ttu-id="8edc6-113">在`query1`、`Where`子句會讓查詢呼叫<xref:System.Linq.Enumerable.Where%2A>方法。</xref:System.Linq.Enumerable.Where%2A></span><span class="sxs-lookup"><span data-stu-id="8edc6-113">In `query1`, the `Where` clause causes the query to call the <xref:System.Linq.Enumerable.Where%2A> method.</span></span> <span data-ttu-id="8edc6-114">這個方法也會實作成 Iterator。</span><span class="sxs-lookup"><span data-stu-id="8edc6-114">This method is also implemented as an iterator.</span></span> <span data-ttu-id="8edc6-115">設定工作包含具現化將參考 Lambda 運算式的委派 (Delegate)，以及進行 Iterator 的一般設定。</span><span class="sxs-lookup"><span data-stu-id="8edc6-115">The setup work consists of instantiating the delegate that will reference the lambda expression, plus the normal setup for an iterator.</span></span> <span data-ttu-id="8edc6-116">進行每次反覆運算時，系統會呼叫此委派來執行述詞 (Predicate)。</span><span class="sxs-lookup"><span data-stu-id="8edc6-116">With each iteration, the delegate is called to execute the predicate.</span></span> <span data-ttu-id="8edc6-117">設定工作以及在每次反覆運算期間完成的工作與逐一查看軸時完成的工作很相似。</span><span class="sxs-lookup"><span data-stu-id="8edc6-117">The setup work and the work done during each iteration is the similar to the work done while iterating through the axis.</span></span>  
   
--   在`query1`，select 子句會讓查詢呼叫<xref:System.Linq.Enumerable.Select%2A>方法。</xref:System.Linq.Enumerable.Select%2A> 這個方法具有相同的效能設定檔，做為<xref:System.Linq.Enumerable.Where%2A>方法。</xref:System.Linq.Enumerable.Where%2A>  
+-   <span data-ttu-id="8edc6-118">在`query1`，select 子句會讓查詢呼叫<xref:System.Linq.Enumerable.Select%2A>方法。</xref:System.Linq.Enumerable.Select%2A></span><span class="sxs-lookup"><span data-stu-id="8edc6-118">In `query1`, the select clause causes the query to call the <xref:System.Linq.Enumerable.Select%2A> method.</span></span> <span data-ttu-id="8edc6-119">這個方法具有相同的效能設定檔，做為<xref:System.Linq.Enumerable.Where%2A>方法。</xref:System.Linq.Enumerable.Where%2A></span><span class="sxs-lookup"><span data-stu-id="8edc6-119">This method has the same performance profile as the <xref:System.Linq.Enumerable.Where%2A> method.</span></span>  
   
--   在 `query2` 中，`Where` 子句和 `Select` 子句都具有相同的效能設定檔，如同 `query1`。  
+-   <span data-ttu-id="8edc6-120">在 `query2` 中，`Where` 子句和 `Select` 子句都具有相同的效能設定檔，如同 `query1`。</span><span class="sxs-lookup"><span data-stu-id="8edc6-120">In `query2`, both the `Where` clause and the `Select` clause have the same performance profile as in `query1`.</span></span>  
   
- 因此，逐一查看 `query2` 的作業會直接與第一個查詢之來源中的項目數成正比 (亦即，線性時間)。  
+ <span data-ttu-id="8edc6-121">因此，逐一查看 `query2` 的作業會直接與第一個查詢之來源中的項目數成正比 (亦即，線性時間)。</span><span class="sxs-lookup"><span data-stu-id="8edc6-121">The iteration through `query2` is therefore directly proportional to the number of items in the source of the first query, in other words, linear time.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [效能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8edc6-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8edc6-122">See Also</span></span>  
+ [<span data-ttu-id="8edc6-123">效能 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8edc6-123">Performance (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
 
