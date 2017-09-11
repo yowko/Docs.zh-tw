@@ -35,7 +35,7 @@ ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
-您可以為區域變數指定 `var` 的推斷「類型」，而不是明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需如何使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
+您可以為區域變數指定 `var` 的推斷「類型」，而不是明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需了解使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
   
  下列範例顯示可以使用 `var` 宣告區域變數的各種方法：  
   

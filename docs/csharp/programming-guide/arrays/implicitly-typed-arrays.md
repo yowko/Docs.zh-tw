@@ -18,7 +18,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 13
 ---
 # 隱含類型陣列 (C# 程式設計手冊)
-您可以建立隱含型別的陣列，在其中陣列執行個體的型別是由陣列初始設定式中指定的項目推斷。  任何隱含型別變數的規則都適用於隱含型別陣列。  如需詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+您可以建立隱含型別的陣列，在其中陣列執行個體的型別是由陣列初始化中指定的元素推斷。  任何隱含型別變數的規則都適用於隱含型別陣列。  如需詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
  隱含型別陣列通常是在查詢運算式中與匿名型別及物件和集合初始設定式一起使用。  
   
