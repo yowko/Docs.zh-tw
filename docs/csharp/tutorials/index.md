@@ -4,17 +4,17 @@ description: "探索這些 C# 教學課程以了解如何建置 C# 程式，並�
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43d6efd6535e4002be79af1c51dd58e6d26d218d
+ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
+ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
@@ -30,8 +30,6 @@ ms.lasthandoff: 07/28/2017
 * [使用 LINQ](working-with-linq.md)：示範 LINQ 的許多功能和支援的語言元素。
 
 * [裝載於 Docker 的微服務](microservices.md)：示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。
-
-* [繼承](inheritance.md)︰示範類別和介面繼承如何在 C# 中重複使用程式碼。
 
 * [字串插補](string-interpolation.md)︰示範 C# 中 `$` 字串插補的多種用法。
 

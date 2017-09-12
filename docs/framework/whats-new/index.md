@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: f922abca6898e91748158ee16f89ca7f57a81bf7
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 8d0818b770d94511736baf5d51abeba74a90c848
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/05/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 
@@ -1171,7 +1171,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱 <xref:System.Runtime.ProfileOptimization>。
 
-- 可限制規則運算式引擎在逾時之前，嘗試解析規則運算式之時間長度的功能。 請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 屬性。
+- 可限制規則運算式引擎在逾時之前，嘗試解析規則運算式之時間長度的功能。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 屬性。
 
 - 可定義應用程式定義域之預設文化特性的功能。 請參閱 <xref:System.Globalization.CultureInfo> 類別。
 
