@@ -1,50 +1,56 @@
 ---
-title: "WCF 組態結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "WCF 組態結構描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
 caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7a651746abe22b8f5eecd571b10de07b08af26bb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/05/2017
+
 ---
-# WCF 組態結構描述
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 組態項目可讓您設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端應用程式。  您可使用[組態編輯器工具 \(SvcConfigEditor.exe\)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。  由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。  否則，您可能會碰到 XML 項目標記或屬性找不到等問題，  因為 XML 項目標記與屬性有區分大小寫。  
+# <a name="wcf-configuration-schema"></a><span data-ttu-id="dd240-102">WCF 組態結構描述</span><span class="sxs-lookup"><span data-stu-id="dd240-102">WCF Configuration Schema</span></span>
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="dd240-103"> 組態項目可讓您設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="dd240-103"> configuration elements enable you to configure [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service and client applications.</span></span> <span data-ttu-id="dd240-104">您可使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。</span><span class="sxs-lookup"><span data-stu-id="dd240-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="dd240-105">由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。</span><span class="sxs-lookup"><span data-stu-id="dd240-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="dd240-106">否則，您可能會碰到 XML 項目標記或屬性找不到等問題，</span><span class="sxs-lookup"><span data-stu-id="dd240-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="dd240-107">因為 XML 項目標記與屬性有區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="dd240-107">This is because XML element tags and attributes are case-sensitive.</span></span>  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 組態系統是以 <xref:System.Configuration> 命名空間為基礎。  因此，您可以使用 <xref:System.Configuration> 命名空間提供的所有標準功能，例如組態鎖定、加密與合併，以提升應用程式及其組態的安全性。  如需這些概念的詳細資訊，請參閱下列主題。  
+ <span data-ttu-id="dd240-108">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 組態系統是以 <xref:System.Configuration> 命名空間為基礎。</span><span class="sxs-lookup"><span data-stu-id="dd240-108">The [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] configuration system is based on the <xref:System.Configuration> namespace.</span></span> <span data-ttu-id="dd240-109">因此，您可以使用 <xref:System.Configuration> 命名空間提供的所有標準功能，例如組態鎖定、加密與合併，以提升應用程式及其組態的安全性。</span><span class="sxs-lookup"><span data-stu-id="dd240-109">Therefore, you can use all the standard features provided by the <xref:System.Configuration> namespace, such as configuration locking, encryption and merging to increase the security of your application and its configuration.</span></span> <span data-ttu-id="dd240-110">如需這些概念的詳細資訊，請參閱下列主題。</span><span class="sxs-lookup"><span data-stu-id="dd240-110">For more information on these concepts, see the following topics.</span></span>  
   
- [加密組態資訊](http://go.microsoft.com/fwlink/?LinkId=95337)  
+ [<span data-ttu-id="dd240-111">加密組態資訊</span><span class="sxs-lookup"><span data-stu-id="dd240-111">Encrypting Configuration Information</span></span>](http://go.microsoft.com/fwlink/?LinkId=95337)  
   
- [鎖定組態設定](http://go.microsoft.com/fwlink/?LinkId=95338)  
+ [<span data-ttu-id="dd240-112">鎖定組態設定</span><span class="sxs-lookup"><span data-stu-id="dd240-112">Locking Configuration Settings</span></span>](http://go.microsoft.com/fwlink/?LinkId=95338)  
   
- 本節說明每個組態項目的所有可能值，以及項目如何與其他 WCF 組態項目互動。  下圖說明 WCF 組態結構描述。  
+ <span data-ttu-id="dd240-113">本節說明每個組態項目的所有可能值，以及項目如何與其他 WCF 組態項目互動。</span><span class="sxs-lookup"><span data-stu-id="dd240-113">This section describes all possible values of each configuration item, and how it interacts with other WCF configuration elements.</span></span> <span data-ttu-id="dd240-114">下圖說明 WCF 組態結構描述。</span><span class="sxs-lookup"><span data-stu-id="dd240-114">The following map illustrates the WCF configuration schema.</span></span>  
   
- ![WCF 組態結構描述](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
+ <span data-ttu-id="dd240-115">![WCF 組態結構描述](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")</span><span class="sxs-lookup"><span data-stu-id="dd240-115">![WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")</span></span>  
   
 > [!CAUTION]
->  您應該透過適當的存取控制清單 \(ACL\) 保護應用程式組態檔 \(app.config\) 中的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 組態區段，以防任何潛在的安全性威脅侵入。  例如，您要確定只有適當人員才能存取或修改應用程式繫結上的安全性設定，或是服務組態檔的服務模型區段。  
+>  <span data-ttu-id="dd240-116">您應該透過適當的存取控制清單 (ACL) 保護應用程式組態檔 (app.config) 中的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 組態區段，以防任何潛在的安全性威脅侵入。</span><span class="sxs-lookup"><span data-stu-id="dd240-116">You should protect [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] configuration sections in your application configuration files (app.config) with appropriate Access Control Lists (ACL) to prevent any potential security threats.</span></span>  <span data-ttu-id="dd240-117">例如，您要確定只有適當人員才能存取或修改應用程式繫結上的安全性設定，或是服務組態檔的服務模型區段。</span><span class="sxs-lookup"><span data-stu-id="dd240-117">For example, you should make sure that only the appropriate people can access or modify the security settings on application bindings, or the service model section of the configuration file for a service.</span></span>  
   
-## 在本節中  
- [\<system.serviceModel\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
- 說明 `ServiceModel` 項目。  
+## <a name="in-this-section"></a><span data-ttu-id="dd240-118">本章節內容</span><span class="sxs-lookup"><span data-stu-id="dd240-118">In This Section</span></span>  
+ [<span data-ttu-id="dd240-119">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="dd240-119">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+ <span data-ttu-id="dd240-120">說明 `ServiceModel` 項目。</span><span class="sxs-lookup"><span data-stu-id="dd240-120">Describes the `ServiceModel` element.</span></span>  
   
- [\<system.serviceModel.activation\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
- 設定 SMSvcHost.exe 工具。  
+ [<span data-ttu-id="dd240-121">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="dd240-121">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
+ <span data-ttu-id="dd240-122">設定 SMSvcHost.exe 工具。</span><span class="sxs-lookup"><span data-stu-id="dd240-122">Configures the SMSvcHost.exe tool.</span></span>  
   
- [\<system.runtime.serialization\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
- 使用 <xref:System.Runtime.Serialization.DataContractSerializer> 等序列化程式時，設定選項的最上層項目。  
+ [<span data-ttu-id="dd240-123">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="dd240-123">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ <span data-ttu-id="dd240-124">使用 <xref:System.Runtime.Serialization.DataContractSerializer> 等序列化程式時，設定選項的最上層項目。</span><span class="sxs-lookup"><span data-stu-id="dd240-124">The top-level element for setting options when using serializers such as the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## 相關章節  
- [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/zh-tw/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- 說明如何設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端。
+## <a name="related-sections"></a><span data-ttu-id="dd240-125">相關章節</span><span class="sxs-lookup"><span data-stu-id="dd240-125">Related Sections</span></span>  
+ [<span data-ttu-id="dd240-126">設定 Windows Communication Foundation 應用程式</span><span class="sxs-lookup"><span data-stu-id="dd240-126">Configuring Windows Communication Foundation Applications</span></span>](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ <span data-ttu-id="dd240-127">說明如何設定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務與用戶端。</span><span class="sxs-lookup"><span data-stu-id="dd240-127">Describes how to configure [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services and clients.</span></span>
+

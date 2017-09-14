@@ -1,66 +1,72 @@
 ---
-title: "追蹤和偵錯設定結構描述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "組態結構描述 [.NET Framework], 追蹤和除錯設定"
-  - "組態區段 [.NET Framework]"
-  - "組態設定 [.NET Framework], 偵錯"
-  - "組態設定 [.NET Framework], 追蹤"
-  - "項目 [.NET Framework], 追蹤和除錯設定"
-  - "結構描述組態設定"
-  - "追蹤接聽項, 追蹤和偵錯設定結構描述"
-  - "追蹤 [.NET Framework], 追蹤和偵錯設定結構描述"
+title: "追蹤和偵錯設定結構描述"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- tracing [.NET Framework], trace and debug settings schema
+- configuration schema [.NET Framework], trace and debug settings
+- configuration settings [.NET Framework], tracing
+- schema configuration settings
+- configuration settings [.NET Framework], debugging
+- trace listeners, trace and debug settings schema
+- configuration sections [.NET Framework]
+- elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c74874519d992985c49b49542c0c7fb63e8557b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/05/2017
+
 ---
-# 追蹤和偵錯設定結構描述
-追蹤和偵錯設定指定了收集、存放及傳送訊息的追蹤接聽程式 \(Listener\)，以及設定追蹤參數的層級。  
+# <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="08cfc-102">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="08cfc-102">Trace and Debug Settings Schema</span></span>
+<span data-ttu-id="08cfc-103">追蹤和偵錯設定會指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="08cfc-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  
   
- 下表描述的是每一個追蹤和偵錯設定項目的功能。  
+ <span data-ttu-id="08cfc-104">下表描述每個追蹤和偵錯設定項目的函式。</span><span class="sxs-lookup"><span data-stu-id="08cfc-104">The following table describes the function of each trace and debug settings element.</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|將接聽程式加入至追蹤來源的 `Listeners` 集合。|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽程式加入至 `Listeners` 集合。|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|將接聽程式加入至 `sharedListeners` 集合。|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|指定設定追蹤參數的層級。|  
-|[\<assert\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|指定您呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 方法時是否顯示訊息方塊，同時指定要寫入訊息的檔案名稱。|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|清除追蹤來源的 `Listeners` 集合。|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|清除用於追蹤的 `Listeners` 集合。|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|將篩選條件加入至追蹤來源的 `Listeners` 集合中的接聽程式。|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|將篩選條件加入至用於追蹤的 `Listeners` 集合中的接聽程式。|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|將篩選條件加入至 `sharedListeners` 集合中的接聽程式。|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|指定追蹤來源的 `Listeners` 集合的接聽程式。|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|指定用於追蹤的 `Listeners` 集合的接聽程式。|  
-|[\<performanceCounters\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|指定效能計數器所共用的全域記憶體的大小。|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|從用於追蹤的 `Listeners` 集合移除接聽程式。|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|從追蹤來源的 `Listeners` 集合中移除接聽項。|  
-|[\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|包含任何來源或追蹤項目可以參考的接聽程式。|  
-|[\<sources\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|包含會啟始追蹤訊息的追蹤來源。|  
-|[\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|指定會啟始追蹤訊息的追蹤來源。|  
-|[\<switches\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|包含追蹤參數和設定追蹤參數的層級。|  
-|[\<system.diagnostics\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。|  
-|[\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含收集、存放和傳送追蹤訊息的接聽程式。|  
+|<span data-ttu-id="08cfc-105">項目</span><span class="sxs-lookup"><span data-stu-id="08cfc-105">Element</span></span>|<span data-ttu-id="08cfc-106">描述</span><span class="sxs-lookup"><span data-stu-id="08cfc-106">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="08cfc-107">\<add></span><span class="sxs-lookup"><span data-stu-id="08cfc-107">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="08cfc-108">將接聽項新增至追蹤來源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="08cfc-108">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="08cfc-109">\<add></span><span class="sxs-lookup"><span data-stu-id="08cfc-109">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="08cfc-110">將接聽項新增至 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="08cfc-110">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="08cfc-111">\<add></span><span class="sxs-lookup"><span data-stu-id="08cfc-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|<span data-ttu-id="08cfc-112">將接聽項新增至 `sharedListeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="08cfc-112">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="08cfc-113">\<add></span><span class="sxs-lookup"><span data-stu-id="08cfc-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="08cfc-114">指定設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="08cfc-114">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="08cfc-115">\<assert></span><span class="sxs-lookup"><span data-stu-id="08cfc-115">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="08cfc-116">指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="08cfc-116">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="08cfc-117">\<clear></span><span class="sxs-lookup"><span data-stu-id="08cfc-117">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="08cfc-118">清除追蹤來源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="08cfc-118">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="08cfc-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="08cfc-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="08cfc-120">清除追蹤的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="08cfc-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="08cfc-121">\<filter></span><span class="sxs-lookup"><span data-stu-id="08cfc-121">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="08cfc-122">將篩選新增至追蹤來源之 `Listeners` 集合中的接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-122">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="08cfc-123">\<filter></span><span class="sxs-lookup"><span data-stu-id="08cfc-123">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="08cfc-124">將篩選新增至追蹤之 `Listeners` 集合中的接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-124">Adds a filter to a listener in the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="08cfc-125">\<filter></span><span class="sxs-lookup"><span data-stu-id="08cfc-125">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="08cfc-126">將篩選新增至 `sharedListeners` 集合中的接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-126">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="08cfc-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="08cfc-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="08cfc-128">為追蹤來源的 `Listeners` 集合指定接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-128">Specifies listeners for the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="08cfc-129">\<listeners></span><span class="sxs-lookup"><span data-stu-id="08cfc-129">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="08cfc-130">為追蹤的 `Listeners` 集合指定接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-130">Specifies listeners for the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="08cfc-131">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="08cfc-131">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="08cfc-132">指定效能計數器共用之全域記憶體的大小。</span><span class="sxs-lookup"><span data-stu-id="08cfc-132">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="08cfc-133">\<remove></span><span class="sxs-lookup"><span data-stu-id="08cfc-133">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="08cfc-134">從追蹤的 `Listeners` 集合移除接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-134">Removes a listener from the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="08cfc-135">\<remove></span><span class="sxs-lookup"><span data-stu-id="08cfc-135">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="08cfc-136">從追蹤來源的 `Listeners` 集合移除接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-136">Removes a listener from the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="08cfc-137">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="08cfc-137">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="08cfc-138">包含任何來源或追蹤項目可參考的接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-138">Contains listeners that any source or trace element can reference.</span></span>|  
+|[<span data-ttu-id="08cfc-139">\<sources></span><span class="sxs-lookup"><span data-stu-id="08cfc-139">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="08cfc-140">包含起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="08cfc-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="08cfc-141">\<source></span><span class="sxs-lookup"><span data-stu-id="08cfc-141">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="08cfc-142">指定起始追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="08cfc-142">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="08cfc-143">\<switches></span><span class="sxs-lookup"><span data-stu-id="08cfc-143">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="08cfc-144">包含追蹤參數及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="08cfc-144">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="08cfc-145">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="08cfc-145">\<system.diagnostics></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|<span data-ttu-id="08cfc-146">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="08cfc-146">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="08cfc-147">\<trace></span><span class="sxs-lookup"><span data-stu-id="08cfc-147">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="08cfc-148">包含用於收集、儲存及路由傳送追蹤訊息的接聽項。</span><span class="sxs-lookup"><span data-stu-id="08cfc-148">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## 請參閱  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.Debug>   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="08cfc-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="08cfc-149">See Also</span></span>  
+ <span data-ttu-id="08cfc-150"><xref:System.Diagnostics.Trace></span><span class="sxs-lookup"><span data-stu-id="08cfc-150"><xref:System.Diagnostics.Trace></span></span>   
+ <span data-ttu-id="08cfc-151"><xref:System.Diagnostics.TraceSource></span><span class="sxs-lookup"><span data-stu-id="08cfc-151"><xref:System.Diagnostics.TraceSource></span></span>   
+ <span data-ttu-id="08cfc-152"><xref:System.Diagnostics.Debug></span><span class="sxs-lookup"><span data-stu-id="08cfc-152"><xref:System.Diagnostics.Debug></span></span>   
+ [<span data-ttu-id="08cfc-153">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="08cfc-153">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+
