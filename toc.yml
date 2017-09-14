@@ -22,7 +22,7 @@
             - name: 使用屬性擴充中繼資料
               tocHref: /dotnet/standard/attributes/
               topicHref: /dotnet/standard/attributes/index
-            - name: 在 .NET Framework 中使用基底類型
+            - name: 在 .NET 中使用基底類型
               tocHref: /dotnet/standard/base-types/
               topicHref: /dotnet/standard/base-types/index
             - name: 集合和資料結構
@@ -32,7 +32,7 @@
                 - name: 安全執行緒集合
                   tocHref: /dotnet/standard/collections/thread-safe/
                   topicHref: /dotnet/standard/collections/thread-safe/index
-            - name: 使用 .NET Framework 進行多平台開發
+            - name: 利用 .NET 進行多重平台開發
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
             - name: XML 文件和資料
@@ -53,16 +53,16 @@
             - name: 記憶體回收
               tocHref: /dotnet/standard/garbage-collection/
               topicHref: /dotnet/standard/garbage-collection/index
-            - name: .NET Framework 中的泛型
+            - name: .NET 的泛型
               tocHref: /dotnet/standard/generics/
               topicHref: /dotnet/standard/generics/index
-            - name: 全球化和當地語系化：全球化和當地語系化 .NET Framework 應用程式
+            - name: 全球化和當地語系化
               tocHref: /dotnet/standard/globalization-localization/
               topicHref: /dotnet/standard/globalization-localization/index
             - name: 檔案和資料流 I/O
               tocHref: /dotnet/standard/io/
               topicHref: /dotnet/standard/io/index
-            - name: 以 .NET Framework 進行平行程式設計
+            - name: .NET 的平行程式設計
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
             - name: .NET 的安全性
@@ -91,10 +91,10 @@
             - name: 其他類別庫和 API
               tocHref: /dotnet/framework/additional-steps/
               topicHref: /dotnet/framework/additional-steps/index
-            - name: 使用應用程式定義域和組件設計程式
+            - name: 應用程式定義域和組件
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index
-            - name: .NET Framework 中常見的用戶端技術
+            - name: 常見的用戶端技術
               tocHref: /dotnet/framework/common-client-technologies/
               topicHref: /dotnet/framework/common-client-technologies/index
             - name: 使用組態檔設定應用程式
@@ -169,7 +169,7 @@
                 - name: 交易處理
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
-                - name: WCF Data Services 4.5
+                - name: WCF 資料服務
                   tocHref: /dotnet/framework/data/wcf/
                   topicHref: /dotnet/framework/data/wcf/index
             - name: 偵錯、追蹤和程式碼剖析
@@ -193,7 +193,7 @@
             - name: Managed Extensibility Framework (MEF)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: .NET Framework 4.6 和 4.5 移轉手冊
+            - name: 移轉手冊
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: 使用 .NET Native 編譯應用程式
