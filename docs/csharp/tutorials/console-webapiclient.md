@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.translationtype: HT
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 8c747f65dca44fcca25fe67dccaa897561eefcc7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
@@ -172,7 +172,7 @@ var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-請注意，您現在使用的是 @System.Net.Http.HttpClient.GetStreamAsync(System.String) 而不是 @System.Net.Http.HttpClient.GetStringAsync(System.String)。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明上述第二行中所使用的一些 C# 語言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的引數是一個 `await` 運算式。 Await 運算式可以出現在您程式碼中幾乎任何一個地方，雖然到目前為止，您只在指派陳述式中看到它們。
+請注意，您現在使用的是 @System.Net.Http.HttpClient.GetStreamAsync(System.String) 而不是 @System.Net.Http.HttpClient.GetStringAsync(System.String) 。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明上述第二行中所使用的一些 C# 語言功能。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 的引數是一個 `await` 運算式。 Await 運算式可以出現在您程式碼中幾乎任何一個地方，雖然到目前為止，您只在指派陳述式中看到它們。
 
 其次，`as` 運算子會從編譯階段型別 `object` 轉換成 `List<repo>`。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject (System.IO.Stream) 宣告會宣告它傳回 <xref:System.Object?displayProperty=fullName> 類型的物件。 @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 將會傳回您建構它時所指定的型別 (在本教學課程中為 `List<repo>`)。 如果轉換並未成功，`as` 運算子就會評估為 `null`，而不是擲回例外狀況。
 
@@ -352,7 +352,7 @@ public DateTime LastPush
 
 讓我們來檢查上述的新建構。 `IgnoreDataMember` 屬性會指示序列化程式不應該將此型別讀取到任何 JSON 物件，或從任何 JSON 物件寫入此型別。 此屬性只包含 `get` 存取子。 沒有 `set` 存取子。 這就是您以 C# 定義「唯讀」屬性的方式。 (是的，您可以用 C# 來建立「唯寫」屬性，但其值會受到限制)。@System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider) 方法會剖析字串並使用已提供的日期格式來建立 @System.DateTime 物件，然後使用 `CultureInfo` 物件為 `DateTime` 新增額外的中繼資料。 如果剖析作業失敗，屬性存取子就會擲回例外狀況。
 
-若要使用 @System.Globalization.CultureInfo.InvariantCulture，您將必須把 @System.Globalization 命名空間新增到 `repo.cs` 中的 `using` 陳述式：
+若要使用 @System.Globalization.CultureInfo.InvariantCulture ，您將必須把 @System.Globalization 命名空間新增到 `repo.cs` 中的 `using` 陳述式：
 
 ```csharp
 using System.Globalization;
