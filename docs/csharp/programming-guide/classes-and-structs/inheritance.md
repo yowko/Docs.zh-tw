@@ -1,5 +1,5 @@
 ---
-title: "繼承 (C# 程式設計手冊) | Microsoft Docs"
+title: "繼承 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 4ad15bc57b3ec3b6b06f671f560dce426af64ccc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
@@ -81,3 +81,4 @@ ms.lasthandoff: 05/15/2017
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [class](../../../csharp/language-reference/keywords/class.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)
+
