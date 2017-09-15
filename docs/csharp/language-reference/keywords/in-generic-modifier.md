@@ -1,5 +1,5 @@
 ---
-title: "in (泛型修飾詞) (C# 參考) | Microsoft Docs"
+title: "in (泛型修飾詞) (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6c490d14b47aaa527fe2ddb3627ea0a84bfe604
+ms.translationtype: HT
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (泛型修飾詞) (C# 參考)
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
  您可以將類型相同但具有衍生程度較低之泛型型別參數的另一個委派指派給 Contravariant 委派。  
   
- 如需詳細資訊，請參閱 [Covariance and Contravariance](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8) (共變數和反變數)。  
+ 如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)。  
   
 ## <a name="example"></a>範例  
  下例範例示範如何宣告、擴充及實作 Contravariant 泛型介面。 它也會示範如何針對實作此介面的類別使用隱含轉換。  
@@ -63,5 +63,6 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Covariance and Contravariance](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8) (共變數和反變數)   
+ [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)   
  [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
+
