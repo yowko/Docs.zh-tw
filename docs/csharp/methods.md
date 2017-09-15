@@ -1,5 +1,5 @@
 ---
-title: "方法 | C# 指南"
+title: "方法 - C# 手冊"
 description: "方法、方法參數和方法傳回值的概觀"
 keywords: .NET, .NET Core, C#
 author: rpetrusha
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
-ms.openlocfilehash: 42ded63bacfb6ff2ceadde6fa37c7bddb413a933
+ms.translationtype: HT
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="methods"></a>方法 #
@@ -22,7 +22,7 @@ ms.lasthandoff: 04/11/2017
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 `Main` 方法是每個 C# 應用程式的進入點，而且它是由通用語言執行平台 (CLR) 啟動程式時呼叫。
 
 > [!NOTE]
-> 本主題討論具名的方法。 如需匿名函式的資訊，請參閱[匿名函式 (C# 程式設計手冊)](https://msdn.microsoft.com/library/bb882516.aspx)。
+> 本主題討論具名的方法。 如需匿名函式的資訊，請參閱[匿名函式 (C# 程式設計手冊)](programming-guide/statements-expressions-operators/anonymous-functions.md)。
 
 此主題包括下列章節：
 
@@ -252,14 +252,14 @@ if (person != null)
 
 擴充方法可讓您將方法「新增」至現有的類型，但不必修改型別本身或在繼承的型別中實作新方法。 擴充方法也不必和其擴充型別位於相同的組件中。 呼叫擴充方法就像它是型別的定義成員一樣。
 
-如需詳細資訊，請參閱[擴充方法](https://msdn.microsoft.com/library/bb383977.aspx)。
+如需詳細資訊，請參閱[擴充方法](programming-guide/classes-and-structs/extension-methods.md)。
 
 <a name="async"></a>
 ## <a name="async-methods"></a>非同步方法 ##
 
 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。
 
-如果您使用 [async](https://msdn.microsoft.com/library/hh156513.aspx) 修飾詞來標示方法，則可以在方法中使用 [await](https://msdn.microsoft.com/library/hh156528.aspx) 運算子。 當控制項到達 async 方法的 `await` 運算式時，如果等候的工作未完成，控制會回到呼叫端，而有 `await` 關鍵字之方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
+如果您使用 [async](language-reference/keywords/async.md) 修飾詞來標示方法，則可以在方法中使用 [await](language-reference/keywords/await.md) 運算子。 當控制項到達 async 方法的 `await` 運算式時，如果等候的工作未完成，控制會回到呼叫端，而有 `await` 關鍵字之方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
 
 > [!NOTE]
 > 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者
@@ -270,9 +270,9 @@ if (person != null)
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-非同步方法不可以宣告任何 [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) 或 [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) 參數，但是可以呼叫具有這類參數的方法。
+非同步方法不可以宣告任何 [ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out.md) 參數，但是可以呼叫具有這類參數的方法。
 
- 如需非同步方法的詳細資訊，請參閱 [Asynchronous Programming with async and await (C#)](https://msdn.microsoft.com/library/mt674882.aspx) (使用 Async 和 Await 進行非同步程式設計 (C#))、[Control Flow in Async Programs (C#)](https://msdn.microsoft.com/library/mt674892.aspx) (非同步程式中的控制流程 (C#)) 和 [Async Return Types (C#)](https://msdn.microsoft.com/library/mt674893.aspx) (非同步傳回型別 (C#))。
+ 如需非同步方法的詳細資訊，請參閱 [Asynchronous Programming with async and await (C#)](async.md) (使用 Async 和 Await 進行非同步程式設計 (C#))、[Control Flow in Async Programs (C#)](programming-guide/concepts/async/control-flow-in-async-programs.md) (非同步程式中的控制流程 (C#)) 和 [Async Return Types (C#)](programming-guide/concepts/async/async-return-types.md) (非同步傳回型別 (C#))。
 
 <a name="expr"></a>
 ## <a name="expression-bodied-members"></a>運算式主體成員 ##
@@ -280,14 +280,12 @@ if (person != null)
 方法定義只是立即傳回運算式的結果，或是具有單一陳述式做為方法的主體是很常見的。  使用 `=>`定義這類方法有個語法捷徑：
 
 ```csharp
-
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
 public void Print() => Console.WriteLine(First + " " + Last);
 // Works with operators, properties, and indexers too.
 public static Complex operator +(Complex a, Complex b) => a.Add(b);
 public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
-
 ```
 
 如果方法傳回 `void` 或為非同步方法，則方法的主體必須是陳述式運算式 (如同 Lambda)。  針對屬性和索引子，它們必須是唯讀，而且您不會使用 `get` 存取子關鍵字。
@@ -295,20 +293,20 @@ public Customer this[long id] => store.LookupCustomer(id);
 <a name="iterators"></a>
 ## <a name="iterators"></a>Iterator ##
 
-迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) 陳述式一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。
+迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。
 
 迭代器的傳回型別可以是 @System.Collections.IEnumerable、@System.Collections.Generic.IEnumerable%601、@System.Collections.IEnumerator 或 @System.Collections.Generic.IEnumerator%601。
 
-如需詳細資訊，請參閱[迭代器](https://msdn.microsoft.com/library/mt639331.aspx)。
+如需詳細資訊，請參閱[迭代器](programming-guide/concepts/iterators.md)。
 
 ## <a name="see-also"></a>請參閱 ##
 
-[存取修飾詞](https://msdn.microsoft.com/library/wxh6fsc7.aspx)
-[靜態類別和靜態類別成員](https://msdn.microsoft.com/library/79b3xss3.aspx)
-[繼承](https://msdn.microsoft.com/library/ms173149.aspx)
-[抽象和密封類別以及類別成員 ](https://msdn.microsoft.com/library/ms173150.aspx)
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)
-[傳遞參數](https://msdn.microsoft.com/library/0f66670z.aspx)
+[存取修飾詞](language-reference/keywords/access-modifiers.md)   
+[靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+[繼承](programming-guide/classes-and-structs/inheritance.md)   
+[抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+[params](language-reference/keywords/params.md)   
+[out](language-reference/keywords/out.md)   
+[ref](language-reference/keywords/ref.md)   
+[傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)
 
