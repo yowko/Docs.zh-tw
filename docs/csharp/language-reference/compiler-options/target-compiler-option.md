@@ -1,5 +1,5 @@
 ---
-title: "-target (C# 編譯器選項) | Microsoft Docs"
+title: "-target (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,18 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 615a0e2993dc78919008e8f9245504a486e2fb77
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="target-c-compiler-options"></a>/target (C# 編譯器選項)
 您可以使用四種形式之一來指定**/target** 編譯器選項︰  
   
  [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- 建立 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)]應用程式的 .exe 檔。  
+ 建立 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式的 .exe 檔。  
   
  [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
  建立 .exe 檔案。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/13/2017
   
  編譯時，組件資訊清單會放在第一個 .exe 輸出檔，如果沒有 .exe 輸出檔，則會放在第一個 DLL 中。 例如，在下列命令列中，資訊清單會放在 `1.exe` 中：  
   
-```  
+```console  
 csc /out:1.exe t1.cs /out:2.netmodule t2.cs  
 ```  
   
@@ -72,7 +72,7 @@ csc /out:1.exe t1.cs /out:2.netmodule t2.cs
   
  如果您建立組件，則可以使用 <xref:System.CLSCompliantAttribute> 屬性指出所有或部分程式碼符合 CLS 標準。  
   
-```  
+```csharp  
 // target_clscompliant.cs  
 [assembly:System.CLSCompliant(true)]   // specify assembly compliance  
   
@@ -83,9 +83,10 @@ public class TestClass
 }  
 ```  
   
- 如需如何以程式設計方式設定此編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)   
  [/subsystemversion (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+

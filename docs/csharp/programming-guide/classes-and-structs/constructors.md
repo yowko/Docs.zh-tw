@@ -1,5 +1,5 @@
 ---
-title: "建構函式 (C# 程式設計手冊) | Microsoft Docs"
+title: "建構函式 (C# 程式設計手冊)"
 ms.date: 2017-05-05
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 064d8f8b3068596cd1d4fc2dd073f165f0ebadcb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 400afcda2fe30bf0e3621ee4c4247486e01d3ee4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
@@ -50,13 +50,13 @@ ms.lasthandoff: 05/15/2017
 
 [!code-cs[建構函式](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-如果建構函式可以實作為單一陳述式，您就可以使用[運算式主體定義](../statements-expressions-operators/expression-bodied-members.md)。 下列範例定義 `Location` 類別，這個類別的建構函式包含名為 *name* 的單一字串參數。 運算式主體定義會將引數指派給 `Name` 屬性。
+如果建構函式可以實作為單一陳述式，您就可以使用[運算式主體定義](../statements-expressions-operators/expression-bodied-members.md)。 下列範例定義 `Location` 類別，這個類別的建構函式包含名為 *name* 的單一字串參數。 運算式主體定義會將引數指派給 `locationName` 欄位。
 
 [!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 ## <a name="static-constructors"></a>靜態建構函式
 
-前例都已顯示建立新物件的執行個體建構函式。 類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。  靜態建構函式無參數。 如不提供靜態建構函式來初始化靜態欄位，C# 編譯器會提供預設的靜態建構函式，將欄位初始化為其預設值，如[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)中所列。 
+前例都已顯示建立新物件的執行個體建構函式。 類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。  靜態建構函式無參數。 如不提供靜態建構函式來初始化靜態欄位，C# 編譯器會提供預設的靜態建構函式，將靜態欄位初始化為其預設值，如[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)中所列。 
 
 下列範例會使用靜態建構函式來初始化靜態欄位。
 
@@ -85,3 +85,4 @@ ms.lasthandoff: 05/15/2017
  [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)   
  [為什麼初始設定式執行的順序與建構函式相反？第一部](http://go.microsoft.com/fwlink/?LinkId=112374)
+

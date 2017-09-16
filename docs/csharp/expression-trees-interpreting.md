@@ -1,6 +1,6 @@
 ---
 title: "解譯運算式"
-description: "解譯運算式"
+description: "了解如何撰寫程式碼來查看運算式樹狀架構的結構。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07352a2807c08ad19b8d5a47c5a42a0e1c455ab6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [上一個主題 -- 執行運算式](expression-trees-execution.md)
 
-現在，讓我們撰寫一些程式碼來查看「運算式樹狀架構」**的結構。 運算式樹狀架構中的每個節點，都會是衍生自 `Expression` 的類別物件。
+現在，讓我們撰寫一些程式碼來查看「運算式樹狀架構」的結構。 運算式樹狀架構中的每個節點，都會是衍生自 `Expression` 的類別物件。
 
 該設計可讓您透過較簡單的遞迴作業，來瀏覽運算式樹狀架構中的所有節點。 一般做法是從根節點開始，並判斷該節點所屬類型。
 
@@ -255,7 +255,7 @@ The expression body is:
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-在造訪者演算法中執行此運算之前，請試著考慮輸出的可能結果。 請記住，`+` 運算子是「二元運算子」**︰它必須具有兩個子系，分別代表左右運算元。 您可以透過幾個可能的方法來建構正確的樹狀：
+在造訪者演算法中執行此運算之前，請試著考慮輸出的可能結果。 請記住，`+` 運算子是「二元運算子」︰它必須具有兩個子系，分別代表左右運算元。 您可以透過幾個可能的方法來建構正確的樹狀：
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -266,10 +266,10 @@ Expression<Func<int>> sum4 = () => 1 + ((2 + 3) + 4);
 Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
-如您所見，這可分為兩組可能的解，以強調最可能發生的情況。 第一組代表「右向關聯」**運算式。 第二組代表「左向關聯」**運算式。
+如您所見，這可分為兩組可能的解，以強調最可能發生的情況。 第一組代表「右向關聯」運算式。 第二組代表「左向關聯」運算式。
 這兩種格式的優點在於，可根據任意數目的加法運算式來調整格式。 
 
-如果您透過造訪者執行此運算式，您會看到下列輸出，確認此簡單的加法運算式為「左向關聯」**。 
+如果您透過造訪者執行此運算式，您會看到下列輸出，確認此簡單的加法運算式為「左向關聯」。 
 
 為了執行此範例，並查看完整的運算式樹狀架構，我必須對來源運算式樹狀架構進行一項變更。 當運算式樹狀架構包含所有常數時，所產生的樹狀只會包含常數值 `10`。 編譯器會執行所有加法，並將運算式縮減為最簡單的形式。 只要在運算式中新增一個變數，便足以查看原始樹狀：
 
@@ -361,7 +361,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-此程式碼代表數學「階乘」**函式的一個可能實作。 我撰寫此程式碼的方式強調將 Lambda 運算式指派給 Expressions 以建立運算式樹狀架構，會有兩項限制。 首先，不允許陳述式 Lambda。 這表示我無法使用迴圈、區塊、if/else 陳述式，以及 C# 中常見的其他控制結構。 僅限使用運算式。 其次，我無法以遞迴方式呼叫相同的運算式。
+此程式碼代表數學「階乘」函式的一個可能實作。 我撰寫此程式碼的方式強調將 Lambda 運算式指派給 Expressions 以建立運算式樹狀架構，會有兩項限制。 首先，不允許陳述式 Lambda。 這表示我無法使用迴圈、區塊、if/else 陳述式，以及 C# 中常見的其他控制結構。 僅限使用運算式。 其次，我無法以遞迴方式呼叫相同的運算式。
 如果運算式已是委派，則可以這樣做，但我無法在其運算式樹狀架構形式中呼叫運算式。 在[建立運算式樹狀架構](expression-trees-building.md)一節中，您將學習如何克服這些限制的技術。
 
 
@@ -522,7 +522,7 @@ The expression body is:
 
 即使最後一個範例也會識別可能的節點類型子集。
 您仍可將許多會造成失敗的運算式提供給它。
-完整的實作包含在 .NET 標準程式庫中的名稱 [ExpressionVisitor](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 之下，並可處理所有可能的節點類型。
+完整的實作包含在 .NET Standard 的名稱 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) 之下，並可處理所有可能的節點類型。
 
 最後，我在本文中使用的程式庫是為了示範和學習所建立。 它不會經過最佳化。 我的撰寫目的是為了讓所使用的結構相當清楚，並強調用來瀏覽節點和分析其內容的技術。 生產環境的實作會比我更注重效能。
 

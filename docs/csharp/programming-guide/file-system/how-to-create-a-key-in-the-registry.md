@@ -1,5 +1,5 @@
 ---
-title: "如何：在登錄中建立機碼 (Visual C#) | Microsoft Docs"
+title: "如何：在登錄中建立機碼 (Visual C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3a377a85acdc31b426171ab6583bff92b24889b3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>如何：在登錄中建立機碼 (Visual C#)
@@ -54,7 +54,7 @@ key.Close();
   
 -   以直接位在登錄的 HKEY_CURRENT_USER 節點下的索引鍵名稱取代 `Names` 參數。  
   
--   以直接位在 Names 節點下的值名稱取代 `Nam`e 參數。  
+-   以直接位在 Names 節點下的值名稱取代 `Name` 參數。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  檢查登錄結構以找出適合索引鍵的位置。 例如，您可能想要開啟目前使用者的軟體金鑰，並以貴公司的名稱建立金鑰。 請將登錄值新增至貴公司的索引鍵。  
@@ -83,3 +83,4 @@ key.Close();
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [檔案系統和登錄 (C# 程式設計手冊)](../../../csharp/programming-guide/file-system/index.md)   
  [使用 C# 從登錄進行讀取、寫入和刪除](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+

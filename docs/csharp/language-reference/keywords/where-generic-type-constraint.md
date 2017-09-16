@@ -1,5 +1,5 @@
 ---
-title: "where (泛型類型條件約束) (C# 參考) | Microsoft Docs"
+title: "where (泛型類型條件約束) (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e5baa75c55d58a4d975fc42472f90ff4125cbb5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e81640ee56ed672bb09242a070fdf167740874b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
-在泛型類型定義中，`where` 子句是用來指定類型的條件約束，而這些類型可以用作泛型宣告中所定義類型參數的引數。 例如，您可以宣告泛型類別 `MyGenericClass`，讓類型參數 `T` 實作 <xref:System.IComparable%601> 介面：  
+在泛型類型定義中，`where` 子句是用來指定類型的條件約束，而這些類型可以用作泛型宣告中所定義類型參數的引數。 例如，您可以宣告泛型類別 `MyGenericClass`，讓型別參數 `T` 實作 <xref:System.IComparable%601> 介面：  
   
 ```csharp  
 public class MyGenericClass<T> where T:IComparable { }  
@@ -86,3 +86,4 @@ delegate T MyDelegate<T>() where T : new()
  [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [new 條件約束](../../../csharp/language-reference/keywords/new-constraint.md)   
  [型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+

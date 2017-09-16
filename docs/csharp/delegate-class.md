@@ -1,6 +1,6 @@
 ---
 title: "System.Delegate 和 `delegate` 關鍵字"
-description: "System.Delegate 和 `delegate` 關鍵字"
+description: "了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b20c4816582ef3e4d36512c38947f64e86d26541
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -41,7 +41,7 @@ public delegate int Comparison<in T>(T left, T right);
 
 編譯器會產生一個衍生自 `System.Delegate` 且符合所用簽章的類別 (在此情況下，其為一個會傳回整數且具有兩個引數的方法)。 該委派的型別為 `Comparison`。 `Comparison` 委派型別是泛型型別。 如需泛型的詳細資料，請參閱[這裡](generics.md)。
 
-請注意，此語法看似在宣告一個變數，但實際上是宣告「型別」**。 您可以在類別中定義委派型別、直接在命名空間中定義，或甚至在全域命名空間中加以定義。
+請注意，此語法看似在宣告一個變數，但實際上是宣告「型別」。 您可以在類別中定義委派型別、直接在命名空間中定義，或甚至在全域命名空間中加以定義。
 
 > [!NOTE]
 > 不過，我們並不建議您直接宣告全域命名空間中的委派型別 (或其他型別)。 
@@ -72,7 +72,7 @@ public Comparison<T> comparator;
 int result = comparator(left, right);
 ```
 
-在上述該行中，程式碼會「叫用」**附加至委派的方法。
+在上述該行中，程式碼會「叫用」附加至委派的方法。
 您可將變數視為方法名稱，並使用一般方法呼叫語法加以叫用。
 
 該行程式碼會進行不安全的假設︰因此無法保證目標已新增至委派。 如果未附加任何目標，上述行會導致系統擲回 `NullReferenceException`。 我們會在本[系列](delegates-patterns.md)稍後說明可用來解決這個問題的慣用語，這些慣用語比簡單的 null 檢查更複雜。
@@ -143,3 +143,4 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 現在，您已了解支援委派的語言語法與類別，讓我們來查看如何使用、建立及叫用強型別的委派。
 
 [下一個](delegates-strongly-typed.md)
+

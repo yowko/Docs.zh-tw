@@ -1,5 +1,5 @@
 ---
-title: "-preferreduilang (C# 編譯器選項) | Microsoft Docs"
+title: "-preferreduilang (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 0fd8ccca016b598b14780ac6cd2190442777fb53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b94c2794642ad93a78eaafdeb655310e4ecb2d25
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (C# 編譯器選項)
@@ -62,3 +62,4 @@ csc.exe /preferreduilang:ja-JP
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+

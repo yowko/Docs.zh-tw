@@ -1,5 +1,5 @@
 ---
-title: "命令列引數 (C# 程式設計手冊) | Microsoft Docs"
+title: "命令列引數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4034f1575321c94f003a12a83df617d4a0d50702
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
@@ -66,7 +66,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);  
 ```  
   
- 如需詳細資訊，請參閱 <xref:System.Int64.Parse%2A> 和 <xref:System.Convert>。  
+ 如需詳細資訊，請參閱 <xref:System.Int64.Parse%2A> 與 <xref:System.Convert>。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何在主控台應用程式中使用命令列引數。 應用程式會在執行階段接受一個引數，並將引數轉換為整數，以及計算數字的階乘。 如果未提供任何引數，則應用程式會發出說明程式正確用法的訊息。  
@@ -77,7 +77,7 @@ long num = Convert.ToInt64(s);
   
      [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
-2.  從 [開始]**** 畫面或 [開始]**** 功能表中，開啟 Visual Studio [開發人員命令提示字元]**** 視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
+2.  從 [開始] 畫面或 [開始] 功能表中，開啟 Visual Studio [開發人員命令提示字元] 視窗，然後巡覽至包含剛剛建立之檔案的資料夾。  
   
 3.  輸入下列命令以編譯應用程式。  
   
@@ -92,7 +92,7 @@ long num = Convert.ToInt64(s);
 5.  命令會產生以下輸出：`The factorial of 3 is 6.`  
   
 > [!NOTE]
->  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
+>  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
   
  如需如何使用命令列引數的其他範例，請參閱[如何：使用命令列建立和使用組件](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
   
@@ -104,3 +104,4 @@ long num = Convert.ToInt64(s);
  [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
  [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

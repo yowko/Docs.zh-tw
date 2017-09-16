@@ -1,35 +1,55 @@
 ---
-title: "如何：在 C# 中定義常數 | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 常數"
-  - "常數 [C#]"
+title: "如何：在 C# 中定義常數"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, constants
+- constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 caps.latest.revision: 7
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 7
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6c5a6f63675893eb0700afab462bf237f5639d74
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# 如何：在 C# 中定義常數
-常數是欄位，其值是在編譯時期設定並且絕對不能變更。  使用常數提供有意義的名稱，而不是特殊值的數字常值 \(「識別常數」\)。  
+# <a name="how-to-define-constants-in-c"></a>如何：在 C# 中定義常數
+常數是欄位，其值於編譯時期設定且絕對不會變更。 使用常數提供有意義的名稱，而不是特殊值的數值常值 (「神奇號碼」)。  
   
 > [!NOTE]
->  在 C\# 中，[\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 前置處理器指示詞 \(Preprocessor Directive\) 無法用於以通常在 C 和 C\+\+ 使用的方式定義常數。  
+>  在 C# 中，[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 前置處理器指示詞不能以 C 和 C++ 一般使用的方式來定義常數。  
   
- 若要定義整數類資料型別 \(Integral Type\) \(`int`、`byte` 等等\) 的常數值，請使用列舉型別。  如需詳細資訊，請參閱 [enum](../../../csharp/language-reference/keywords/enum.md)。  
+ 若要定義整數型別的常數值 (`int`、`byte` 等等)，請使用列舉類型。 如需詳細資訊，請參閱 [enum](../../../csharp/language-reference/keywords/enum.md)。  
   
- 若要定義非整數常數，其中一個方法是將常數群組在名為 `Constants` 的單一靜態類別中。  這需要所有常數的參考前面都加上類別名稱，如下列範例所示。  
+ 若要定義非整數常數，其中一個方法是將它們分組在名為 `Constants` 的單一靜態類別中。 如下列範例所示，這需要常數的所有參考都以類別名稱開頭。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
- 使用類別名稱限定詞可以協助確保您和其他使用常數的人都了解它是常數且不能修改。  
+ 使用類別名稱限定詞，可協助確保您和其他常數使用者了解它是無法修改的常數。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)
+

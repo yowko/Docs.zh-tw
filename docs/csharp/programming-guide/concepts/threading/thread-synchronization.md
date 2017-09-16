@@ -1,5 +1,5 @@
 ---
-title: "執行緒同步處理 (C#) | Microsoft Docs"
+title: "執行緒同步處理 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: f8d51aa1c50c097577a575be9b5da4b9e0effc55
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df4093d4bf777f904aa8ce376cd164ed822350a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-synchronization-c"></a>執行緒同步處理 (C#)
@@ -100,7 +100,7 @@ finally
 }  
 ```  
   
- 通常會優先使用 `lock` 關鍵字，而不是直接使用 <xref:System.Threading.Monitor> 類別，因為 `lock` 更為精簡，而且 `lock` 確保釋放基準監視，即使受保護程式碼擲回例外狀況也是一樣。 這是使用 `finally` 關鍵字所完成，而不論是否擲回例外狀況，這個關鍵字都會執行其關聯的程式碼區塊。  
+ 通常會優先使用 `lock` 關鍵字，而不是直接使用 <xref:System.Threading.Monitor> 類別，因為 `lock` 更為精簡，而且 `lock` 確保釋放基準監視器，即使受保護程式碼擲回例外狀況也是一樣。 這是使用 `finally` 關鍵字所完成，而不論是否擲回例外狀況，這個關鍵字都會執行其關聯的程式碼區塊。  
   
 ## <a name="synchronization-events-and-wait-handles"></a>同步處理事件和等候控制代碼  
  使用鎖定或監視器適用於防止同時執行執行緒敏感程式碼區塊，但這些建構不允許某個執行緒與另一個執行緒針對事件進行通訊。 這需要「同步處理事件」，這是一個具有可用來啟動和暫止執行緒的兩種狀態 (發出訊號和未發出訊號) 之一的物件。 執行緒的暫止方式是等候未發出訊號的同步處理事件，而啟動方式是將事件狀態變更為發出訊號。 如果執行緒嘗試等候已收到訊號的事件，則執行緒會繼續執行，而不會延遲。  
@@ -183,3 +183,4 @@ class ThreadingExample
  [Interlocked 作業](../../../../standard/threading/interlocked-operations.md)   
  [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
  [同步處理多執行緒處理的資料](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+

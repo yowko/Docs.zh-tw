@@ -1,6 +1,6 @@
 ---
-title: "nameof (C# 和 Visual Basic 參考) | Microsoft Docs"
-ms.date: 2017-03-03
+title: "nameof (C# 參考)"
+ms.date: 2017-06-16
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -28,14 +28,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: da3fef282ac71de07057131069bf58d4f761ad2d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db79af5f38439b881863cf3e03aa0e684ec5cd39
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="nameof-c-and-visual-basic-reference"></a>nameof (C# 和 Visual Basic 參考)
+# <a name="nameof-c-reference"></a>nameof (C# 參考)
 
 用來取得變數、類型或成員的簡單 (不完整) 字串名稱。  
 
@@ -122,19 +122,6 @@ nameof(f<>) -> syntax error
 nameof(Method2()) -> error "This expression does not have a name"  
 ```  
   
- 上述許多範例適用於 Visual Basic。  以下是一些特定的 Visual Basic 範例：  
-  
-```vb  
-NameOf(a!Foo) -> ' error  "This expression does not have a name"  
-NameOf(dict("Foo")) -> ' error  "This expression does not have a name": default property access  
-NameOf(dict.Item("Foo")) -> ' error  "This expression does not have a name"  
-NameOf(arr(2)) -> ' error  "This expression does not have a name": array element index  
-Dim x = Nothing   
-NameOf(x.ToString(2)) -> ' error  "This expression does not have a name"  
-Dim o = Nothing  
-NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of instance; instance will not be evaluated"  
-```  
-  
 ## <a name="remarks"></a>備註  
  傳遞給 `nameof` 的引數必須是簡單名稱、限定名稱、成員存取、指定成員的基底存取，或指定成員的這項存取。  引數運算式會識別程式碼定義，但永遠不會加以評估。  
   
@@ -165,12 +152,9 @@ class C {
 ## <a name="language-specifications"></a>語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- 如需詳細資訊，請參閱 [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)。  
-  
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)   
- [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
+ 
 

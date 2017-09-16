@@ -1,6 +1,6 @@
 ---
 title: "運算式樹狀架構摘要"
-description: "運算式樹狀架構摘要"
+description: "概述如何使用運算式樹狀架構來建立動態程式，將程式碼解譯為資料，並建立以該程式碼為基礎的新功能。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 82d4684ed27b23afd4972da6f68d1757472d85b6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8088ce0c138cdb05a6e4a4fb6467e43efd252ba7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

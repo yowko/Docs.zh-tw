@@ -1,5 +1,5 @@
 ---
-title: "where 子句 (C# 參考) | Microsoft Docs"
+title: "where 子句 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-clause-c-reference"></a>where 子句 (C# 參考)
@@ -58,9 +58,9 @@ ms.lasthandoff: 03/13/2017
 ## <a name="remarks"></a>備註  
  `where` 子句是篩選機制。 它幾乎可以放在查詢運算式中的任何位置，但不能是第一個或最後一個子句。 `where` 子句可能出現在 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句之前或之後，取決於必須在分組來源項目之前還是之後進行篩選。  
   
- 如果指定的述詞不適用於資料來源中的項目，則會產生編譯時期錯誤。 這是 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 所提供的強類型檢查的其中一個優點。  
+ 如果指定的述詞不適用於資料來源中的項目，則會產生編譯時期錯誤。 這是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 所提供的強類型檢查的其中一個優點。  
   
- 在編譯時期，`where` 關鍵字會轉換為 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法呼叫。  
+ 在編譯時間，`where` 關鍵字會轉換為 <xref:System.Linq.Enumerable.Where%2A> 標準查詢運算子方法呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
@@ -69,3 +69,4 @@ ms.lasthandoff: 03/13/2017
  [篩選資料](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

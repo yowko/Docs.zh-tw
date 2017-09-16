@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 225aa8a39a973ba8d4f199ccfce68e2dc16d8aa2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9d74e6bd3d8454f5ed37fa8d190beb0c44399fa7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>如何：使用 XmlWriter 填入 XML 樹狀結構 (LINQ to XML) (C#)
-填入 XML 樹狀結構的其中一個方法是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 建立 <xref:System.Xml.XmlWriter>，然後寫入 <xref:System.Xml.XmlWriter>。 XML 樹狀結構會填入所有寫入 <xref:System.Xml.XmlWriter> 的節點。  
+填入 XML 樹狀結構的其中一種方式是使用 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 來建立 <xref:System.Xml.XmlWriter>，然後寫入到 <xref:System.Xml.XmlWriter> 中。 XML 樹狀結構會以寫入到 <xref:System.Xml.XmlWriter> 的所有節點填入。  
   
- 當您使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 搭配預期寫入 <xref:System.Xml.XmlWriter> 的其他類別 (例如 <xref:System.Xml.Xsl.XslCompiledTransform>) 時，通常會使用此方法。  
+ 當您使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 搭配預期寫入 <xref:System.Xml.XmlWriter> 的其他類別 (例如，<xref:System.Xml.Xsl.XslCompiledTransform>) 時，您通常會使用這個方法。  
   
 ## <a name="example"></a>範例  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 可能用於叫用 XSLT 轉換。 此範例會建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新的文件，然後建立 <xref:System.Xml.XmlWriter> 來寫入新文件。 然後會叫用 XSLT 轉換，並傳入 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。 轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。  
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 的其中一個可能的使用時機為叫用 XSLT 轉換時。 這個範例會建立 XML 樹狀結構、從 XML 樹狀結構建立 <xref:System.Xml.XmlReader>、建立新文件，然後建立 <xref:System.Xml.XmlWriter> 來寫入新文件。 接著，它會叫用 XSLT 轉換，以傳入至 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。 轉換成功完成後，系統會使用轉換的結果填入新的 XML 樹狀結構。  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -84,3 +84,4 @@ Console.WriteLine(newTree);
  <xref:System.Xml.XmlWriter>   
  <xref:System.Xml.Xsl.XslCompiledTransform>   
  [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

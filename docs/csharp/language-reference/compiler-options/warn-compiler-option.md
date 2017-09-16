@@ -1,73 +1,93 @@
 ---
-title: "/warn (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/warn"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "warning level [C#]"
-  - "/w compiler option [C#]"
-  - "-w compiler option [C#]"
-  - "-warn compiler option [C#]"
-  - "/warn compiler option [C#]"
-  - "w compiler option [C#]"
-  - "warn compiler option [C#]"
+title: "-warn (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /warn
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- warning level [C#]
+- /w compiler option [C#]
+- -w compiler option [C#]
+- -warn compiler option [C#]
+- /warn compiler option [C#]
+- w compiler option [C#]
+- warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e703060b7cc5f897ddf0b6764e9607460666e92c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# /warn (C# Compiler Options)
-**\/warn** 選項會指定編譯器顯示的警告層級。  
+# <a name="warn-c-compiler-options"></a>/warn (C# 編譯器選項)
+**/warn** 選項指定要針對編譯器顯示的警告層級。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```console  
 /warn:option  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>引數  
  `option`  
- 您要顯示的編譯警告層級：數字愈小，就只顯示嚴重性高的警告；數字愈大，顯示的警告愈多。  有效值為 0\-4：  
+ 您想要針對編譯顯示的警告層級：較低的數字只會顯示高嚴重性警告；較高的數字則顯示更多的警告。 有效值為 0-4：  
   
 |警告層級|意義|  
-|----------|--------|  
-|0|關閉所有警告訊息的發送。|  
-|1|顯示嚴重的警告訊息。|  
-|2|顯示警告層級 1 及某些較不嚴重的警告，如有關隱藏類別成員的警告。|  
-|3|顯示警告層級 2 及某些較不嚴重的警告，如一定會評估為 `true` 或 `false` 的運算式警告。|  
-|4 \(預設值\)|顯示警告層級 3 及某些資訊警告。|  
+|-------------------|-------------|  
+|0|關閉發出所有警告訊息。|  
+|1|顯示嚴重警告訊息。|  
+|2|顯示層級 1 警告，以及特定較不嚴重的警告，例如隱藏類別成員的警告。|  
+|3|顯示層級 2 警告，以及特定較不嚴重的警告，例如一律評估為 `true` 或 `false` 之運算式的警告。|  
+|4 (預設值)|顯示所有層級 3 警告以及告知性警告。|  
   
-## 備註  
- 若要取得錯誤或警告的詳細資訊，您可以在說明索引中查詢錯誤碼。  如需取得錯誤或警告資訊的其他方式，請參閱 [C\# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md)。  
+## <a name="remarks"></a>備註  
+ 若要取得錯誤或警告資訊，您可以查閱 [說明索引] 中的錯誤碼。 如需取得錯誤或警告資訊的其他方式，請參閱 [C# 編譯器錯誤](../../../csharp/language-reference/compiler-messages/index.md)。  
   
- 使用 [\/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)，將所有警告視為錯誤。  使用 [\/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用某些警告。  
+ 使用 [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) 將所有警告都視為錯誤。 使用 [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用特定警告。  
   
- **\/w** 是 **\/warn** 的簡短形式。  
+ **/w** 是 **/warn** 的簡短形式。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性**\] 頁面。  
+1.  開啟專案的 [屬性] 頁面。  
   
-2.  按一下 \[**建置**\] 屬性頁。  
+2.  按一下 [建置] 屬性頁面。  
   
-3.  修改 \[**警告層級**\] 屬性。  
+3.  修改 [警告層級] 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   
-## 範例  
- 編譯 `in.cs` 並使編譯器只顯示警告層級 1 ：  
+## <a name="example"></a>範例  
+ 編譯 `in.cs`，並讓編譯器只顯示層級 1 警告：  
   
-```  
+```console  
 csc /warn:1 in.cs  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

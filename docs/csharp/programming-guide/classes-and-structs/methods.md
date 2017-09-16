@@ -1,5 +1,5 @@
 ---
-title: "方法 (C# 程式設計手冊) | Microsoft Docs"
+title: "方法 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
@@ -80,7 +80,18 @@ ms.lasthandoff: 05/15/2017
  如需如何依傳址和依傳值方式來傳遞參考型別的詳細資訊，請參閱[傳遞參考型別參數](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)和[參考型別](../../../csharp/language-reference/keywords/reference-types.md)。  
   
 ## <a name="return-values"></a>傳回值  
- 方法可以傳回值給呼叫者。 針對傳回類型，如果列在方法名稱前面的類型不是 `void`，方法可以使用 `return` 關鍵字傳回值。 具有 `return` 關鍵字後面接著符合傳回類型值的陳述式，會將該值傳回給方法呼叫者。 `return` 關鍵字也會停止執行方法。 如果傳回類型為 `void`，不含值的 `return` 陳述式對於停止方法的執行仍很有用。 若沒有 `return` 關鍵字，在方法到達程式碼區塊的結尾時，方法將會停止執行。 具有非 void 傳回類型的方法需要使用 `return` 關鍵字以傳回值。 例如，這兩種方法使用 `return` 關鍵字傳回整數：  
+方法可以傳回值給呼叫者。 針對傳回類型，如果列在方法名稱前面的類型不是 `void`，方法可以使用 `return` 關鍵字傳回值。 具有 `return` 關鍵字後面接著符合傳回類型值的陳述式，會將該值傳回給方法呼叫者。 
+
+可以透過傳值方式將值傳回給呼叫者，或者，從 C# 7 開始，是[以傳址方式](ref-returns.md)。 如果 `ref` 關鍵字用於方法簽章中，並且接在每個 `return` 關鍵字後面，則會以傳址方式將值傳回給呼叫者。 例如，下列方法簽章和傳回陳述式指出方法以傳址方式將變數名稱 `estDistance` 傳回給呼叫者。
+
+```csharp
+public ref double GetEstimatedDistance()
+{
+   return ref estDistance;
+}
+```
+
+`return` 關鍵字也會停止執行方法。 如果傳回類型為 `void`，不含值的 `return` 陳述式對於停止方法的執行仍很有用。 若沒有 `return` 關鍵字，在方法到達程式碼區塊的結尾時，方法將會停止執行。 具有非 void 傳回類型的方法需要使用 `return` 關鍵字以傳回值。 例如，這兩種方法使用 `return` 關鍵字傳回整數：  
   
  [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
@@ -91,8 +102,14 @@ ms.lasthandoff: 05/15/2017
  [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。  
-  
- 如果呼叫端函式將多維陣列傳遞給可修改陣列內容的方法 M，則不需要從 M 傳回該陣列。您可能會從 M 傳回產生的陣列，而產生的陣列具有良好樣式或功能流程的值，但並不需要。  這是因為 C# 會以傳值方式傳遞所有參考型別，而陣列參考的值是陣列的指標，因此您不需要傳回已修改的陣列。 在方法 M 中，任何陣列內容變更都可以透過任何具有陣列參考的程式碼觀察到，如下列範例所示。  
+
+若要從方法使用以傳址方式傳回的值，則在您想要修改 [ref 區域變數](ref-returns.md#ref-locals)的值時必須宣告該變數。 例如，如果 `Planet.GetEstimatedDistance` 方法以傳址方式傳回 <xref:System.Double> 值，您可以使用下列這類程式碼將它定義為 ref 區域變數：
+
+```csharp
+ref int distance = plant 
+```
+
+如果呼叫函式已將陣列傳入 `M`，則不需要從修改陣列內容的 `M` 方法傳回多維度陣列。  您可能會從 `M` 針對值的良好樣式或功能流程傳回產生的陣列，但這不需要，因為 C# 會以傳值方式傳遞所有參考型別，而且陣列參考的值是陣列的指標。 在方法 `M` 中，任何陣列內容變更都可以透過任何具有陣列參考的程式碼觀察到，如下列範例所示。  
   
 ```csharp  
 static void Main(string[] args)  
@@ -124,9 +141,9 @@ static void Main(string[] args)
 > [!NOTE]
 >  非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者  
   
- 非同步方法的傳回類型可以是 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 void。 void 傳回類型主要用於定義需要 void 傳回類型的事件處理常式。 傳回 void 類型的非同步方法無法等候，而且 void 傳回方法的呼叫者無法攔截方法擲回的例外狀況。  
+ 非同步方法的傳回類型可以是 <xref:System.Threading.Tasks.Task%601>、 <xref:System.Threading.Tasks.Task>或 void。 void 傳回類型主要用於定義需要 void 傳回類型的事件處理常式。 傳回 void 類型的非同步方法無法等候，而且 void 傳回方法的呼叫者無法攔截方法擲回的例外狀況。  
   
- 在下列範例中，`DelayAsync` 是會傳回類型 <xref:System.Threading.Tasks.Task%601> 的非同步方法。 `DelayAsync` 具有傳回整數的 `return` 陳述式。 因此 `DelayAsync` 的方法宣告必須具有傳回類型 `Task<int>`。 因為傳回類型是 `Task<int>`， `await` 中 `DoSomethingAsync` 運算式的評估會產生整數，如下列陳述式所示範： `int result = await delayTask`。  
+ 在下列範例中， `DelayAsync` 是會傳回類型 <xref:System.Threading.Tasks.Task%601>的非同步方法。 `DelayAsync` 具有傳回整數的 `return` 陳述式。 因此 `DelayAsync` 的方法宣告必須具有傳回類型 `Task<int>`。 因為傳回類型是 `Task<int>`， `await` 中 `DoSomethingAsync` 運算式的評估會產生整數，如下列陳述式所示範： `int result = await delayTask`。  
   
  `startButton_Click` 方法是傳回類型為 void 的非同步方法的範例。 因為 `DoSomethingAsync` 是非同步方法，對 `DoSomethingAsync` 的呼叫工作必須等候，如下列陳述式所示： `await DoSomethingAsync();`。 `startButton_Click` 方法都必須定義 `async` 修飾詞，因為方法有 `await` 運算式。  
   
@@ -153,11 +170,11 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="iterators"></a>Iterator  
  迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式來一次傳回一個項目。 當 [yield return](../../../csharp/language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
   
- 您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式，透過用戶端程式碼呼叫迭代器。  
+ 您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式透過用戶端程式碼呼叫迭代器。  
   
- 迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。  
+ 迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
- 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 如需詳細資訊，請參閱 [Iterator](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

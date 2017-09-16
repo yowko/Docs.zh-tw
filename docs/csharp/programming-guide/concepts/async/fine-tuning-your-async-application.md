@@ -1,5 +1,5 @@
 ---
-title: "微調非同步應用程式 (C#) | Microsoft Docs"
+title: "微調非同步應用程式 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74cab732debe2381cbd3b9106b2431e2490ef57e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7afcdb28fbe10d5aa33dd2704d264ffd716af5d6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fine-tuning-your-async-application-c"></a>微調非同步應用程式 (C#)
-您可以使用 <xref:System.Threading.Tasks.Task> 類型所提供的方法和屬性，來增加非同步應用程式的精確度和彈性。 本節中的主題示範如何使用 <xref:System.Threading.CancellationToken>，以及 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> 等重要的 `Task` 方法。  
+您可以使用 <xref:System.Threading.Tasks.Task> 類型所提供的方法和屬性，來增加非同步應用程式的精確度和彈性。 本節的主題會示範使用 <xref:System.Threading.CancellationToken> 以及 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> 等重要 `Task` 方法的範例。  
   
  您可以使用 `WhenAny` 和 `WhenAll`，更輕鬆地啟動多個工作，並藉由監視單一工作等候其完成。  
   
@@ -60,3 +60,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+

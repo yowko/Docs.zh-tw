@@ -1,5 +1,5 @@
 ---
-title: "如何：偵錯空的查詢結果集 (C#) | Microsoft Docs"
+title: "如何：偵錯空的查詢結果集 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: afa7e63f4224a91c072c99d04a4851d2548166e5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78c6d612e11f50bedf8f1c2e9826775494faa465
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>如何：偵錯空的查詢結果集 (C#)
@@ -63,7 +62,7 @@ End of result set
 ## <a name="example"></a>範例  
  此範例顯示 XML 在命名空間中的建立，以及編碼正確的查詢。  
   
- 此方案是為了宣告及初始化 <xref:System.Xml.Linq.XNamespace> 物件，然後在指定 <xref:System.Xml.Linq.XName> 物件時使用此物件。 在本例中，<xref:System.Xml.Linq.XElement.Elements%2A> 的引數是 <xref:System.Xml.Linq.XName> 物件。  
+ 解決方案是要宣告與初始化 <xref:System.Xml.Linq.XNamespace> 物件，並在指定 <xref:System.Xml.Linq.XName> 物件時使用。 在這個情況下，<xref:System.Xml.Linq.XElement.Elements%2A> 方法的引數為 <xref:System.Xml.Linq.XName> 物件。  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -97,3 +96,4 @@ End of result set
   
 ## <a name="see-also"></a>另請參閱  
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Box 處理可為 Null 的類型 (C# 程式設計手冊) | Microsoft Docs"
+title: "Box 處理可為 Null 的類型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,15 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e4ff2e8a31ca5a59494f80597460e90107e78c8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Box 處理可為 Null 的類型 (C# 程式設計手冊)
-如為非 Null 的物件，以可為 Null 的型別為基礎的物件僅能以 boxing 處理。 如果 <xref:System.Nullable%601.HasValue%2A> 是 `false`，則物件參考會指派給 `null` 而不是 boxing。 例如:   
+如為非 Null 的物件，以可為 Null 的型別為基礎的物件僅能以 boxing 處理。 如果 <xref:System.Nullable%601.HasValue%2A> 是 `false`，則物件參考會指派給 `null` 而不是 boxing。 例如：  
   
 ```csharp  
 bool? b = null;  
@@ -45,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- 如果為非 Null 的物件 - 如果 <xref:System.Nullable%601.HasValue%2A> 是 `true` - 則發生 boxing，但只有可為 Null 物件依據的基礎類型會經過 boxing 處理。 以 boxing 處理非 Null 的可為 Null 的實值型別，會以 boxing 處理處理實值型別本身，不會處理包裝實值型別的 <xref:System.Nullable%601?displayProperty=fullName>。 例如:   
+ 如果為非 Null 的物件 - 如果 <xref:System.Nullable%601.HasValue%2A> 是 `true` - 則發生 boxing，但只有可為 Null 物件依據的基礎類型會經過 boxing 處理。 以 boxing 處理非 Null 的可為 Null 的實值型別，會以 boxing 處理實值型別本身，不會處理包裝實值型別的 <xref:System.Nullable%601?displayProperty=fullName>。 例如：  
   
 ```csharp  
 bool? b = false;  
@@ -94,3 +94,4 @@ int? i2 = (int?)iBoxed;
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
  [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)   
  [如何：識別可為 Null 的型別](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "設定作業 (C#) | Microsoft Docs"
+title: "設定作業 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 37841cde3aa5e4aaa6545b3a160422d024be5842
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 121dcd4d41dcfea332c45031a5fbed594e2f1e3e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="set-operations-c"></a>設定作業 (C#)
@@ -43,7 +43,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ## <a name="comparison-of-set-operations"></a>比較設定作業  
   
 ### <a name="distinct"></a>Distinct  
- 下圖說明 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> 方法對一系列字元的行為。 所傳回的序列包含輸入序列中的唯一項目。  
+ 下圖說明一連串字元的 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> 方法行為。 所傳回的序列包含輸入序列中的唯一項目。  
   
  ![顯示 Distinct&#40;&#41; 行為的圖形。](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
   
@@ -67,3 +67,4 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [如何：合併和比較字串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
  [如何：尋找兩個清單之間的集合差異 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+

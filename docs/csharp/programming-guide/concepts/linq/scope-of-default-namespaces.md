@@ -1,5 +1,5 @@
 ---
-title: "C# 中的預設命名空間範圍1 | Microsoft Docs"
+title: "C#1 中的預設命名空間範圍"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 760716dc81f5cd946ae014ed22b6c5a7df64a5dd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1c8d8106f7e3e01bb546ce24dd4153b90a0142d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C 中的預設命名空間範圍#
-在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，則仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱得以用於查詢中。  
+# <a name="scope-of-default-namespaces-in-c"></a>C# 中的預設命名空間範圍
+在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。  
   
  查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
   
@@ -70,7 +70,7 @@ End of result set
 ## <a name="example"></a>範例  
  此範例顯示在命名空間中建立 XML，以及編碼正確的查詢。  
   
- 相較於上述編碼錯誤的範例，使用 C# 時的正確方法為宣告與初始化 <xref:System.Xml.Linq.XNamespace> 物件，並在指定 <xref:System.Xml.Linq.XName> 物件時使用它。 在本例中，<xref:System.Xml.Linq.XElement.Elements%2A> 的引數是 <xref:System.Xml.Linq.XName> 物件。  
+ 相較於上述編碼錯誤的範例，使用 C# 時的正確方法為宣告與初始化 <xref:System.Xml.Linq.XNamespace> 物件，並在指定 <xref:System.Xml.Linq.XName> 物件時使用它。 在這個情況下，<xref:System.Xml.Linq.XElement.Elements%2A> 方法的引數為 <xref:System.Xml.Linq.XName> 物件。  
   
 ### <a name="code"></a>程式碼  
   
@@ -107,3 +107,4 @@ End of result set
   
 ## <a name="see-also"></a>另請參閱  
  [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

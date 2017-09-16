@@ -1,5 +1,5 @@
 ---
-title: "-lib (C# 編譯器選項) | Microsoft Docs"
+title: "-lib (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 27bcca456a7a5c884c33de6429e06c94afc9536a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e6d928c0ac1cbb4e65d9747ab2c9133aacdbea8e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lib-c-compiler-options"></a>/lib (C# 編譯器選項)
@@ -92,4 +92,5 @@ csc /lib:c:\ /reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB 如何：修改專案屬性和組態設定](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

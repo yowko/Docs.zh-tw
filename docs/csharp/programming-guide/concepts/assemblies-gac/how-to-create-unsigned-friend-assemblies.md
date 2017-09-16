@@ -1,5 +1,5 @@
 ---
-title: "如何：建立未簽署的 Friend 組件 (C#) | Microsoft Docs"
+title: "如何：建立未簽署的 Friend 組件 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7d2924f0a619c234871232e155bb6f23e43aee4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 967436204ab0824a510c12dc4c6e288d91d7dfa0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>如何：建立未簽署的 Friend 組件 (C#)
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  開啟命令提示字元。  
   
-2.  建立名為 `friend_signed_A.` 並包含下列程式碼的 C# 檔案。 此程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，將 friend_signed_B 宣告為 friend 組件。  
+2.  建立名為 `friend_signed_A.` 並包含下列程式碼的 C# 檔案。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_signed_B 為 Friend 組件。  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -98,14 +98,14 @@ ms.lasthandoff: 03/13/2017
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。 如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
+     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。 如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
   
 6.  執行 friend_signed_B.exe 檔案。  
   
      此程式會列印兩個字串："Class1.Test" 和 "Class2.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似處。 主要差異在於 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限來執行特定程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則會控制 `internal` 類型和成員的可見度。  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `internal` 類型和成員的可見性。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
@@ -113,3 +113,4 @@ ms.lasthandoff: 03/13/2017
  [Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
  [如何：建立簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：建立包含命名空間的文件 (C#) (LINQ to XML) | Microsoft Docs"
+title: "如何：建立包含命名空間的文件 (C#) (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23cc762b1dcd5e39b923c1a57b6f171c7885f0ad
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：建立包含命名空間的文件 (C#) (LINQ to XML)
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>範例  
  若要建立位於命名空間中的項目或屬性，您必須先宣告並初始化 <xref:System.Xml.Linq.XNamespace> 物件。 然後，您可以使用加法運算子多載來結合命名空間與本機名稱 (以字串表示)。  
   
- 下列範例會使用一個命名空間建立文件。 根據預設，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 會使用預設命名空間來序列化此文件。  
+ 下列範例會使用一個命名空間建立文件。 根據預設，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會使用預設命名空間來序列化此文件。  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -136,9 +136,9 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>範例  
- 達到相同結果的另一個方法是，使用展開名稱來代替宣告和建立 <xref:System.Xml.Linq.XNamespace> 物件。  
+ 達到相同結果的另一個方法是，使用擴充名稱來代替宣告和建立 <xref:System.Xml.Linq.XNamespace> 物件。  
   
- 這個方法會有效能隱含作用。 每次您將包含展開名稱的字串傳遞到 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 時，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 就必須剖析名稱、尋找不可部分完成的命名空間，然後尋找不可部分完成的名稱。 這個程序會使用 CPU 時間。 如果效能對您很重要，您可能會想要明確宣告並使用 <xref:System.Xml.Linq.XNamespace> 物件。  
+ 這個方法會有效能隱含作用。 每次您將包含展開名稱的字串傳遞到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 時，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 就必須剖析名稱、尋找不可部分完成的命名空間，然後尋找不可部分完成的名稱。 這個程序會使用 CPU 時間。 如果效能對您很重要，您可能會想要明確宣告並使用 <xref:System.Xml.Linq.XNamespace> 物件。  
   
  如果效能是很重要的問題，請參閱[預先同質化 XName 物件 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) 以取得詳細資訊。  
   
@@ -161,3 +161,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>另請參閱  
  [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

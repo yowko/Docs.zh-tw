@@ -1,5 +1,5 @@
 ---
-title: "float (C# 參考) | Microsoft Docs"
+title: "float (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1fb02f84de504112eee826dbee1275fa3ccb7a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="float-c-reference"></a>float (C# 參考)
@@ -74,12 +74,12 @@ float x = 3.5F;
  如需這些值的詳細資訊，請參閱 [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269) 網站上的 IEEE Standard for Binary Floating-Point Arithmetic。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，會將一個 [int](int.md)、[short](short.md) 和 `float` 加入數學運算式，以產生 `float` 結果 (請記住，`float` 是 <xref:System.Single?displayProperty=fullName> 類型的別名)。請注意，運算式中沒有 [double](double.md)。  
+ 在下列範例中，會將一個 [int](int.md)、[short](short.md) 和 `float` 加入數學運算式，以產生 `float` 結果 (請記住，`float` 是 <xref:System.Single?displayProperty=fullName> 類型的別名。)請注意，運算式中沒有 [double](double.md)。  
   
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Single>   
@@ -87,7 +87,8 @@ float x = 3.5F;
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [轉型和類型轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
  [C# 關鍵字](index.md)   
- [整數型別表](integral-types-table.md)   
+ [整數類型表](integral-types-table.md)   
  [內建類型表](built-in-types-table.md)   
  [隱含數值轉換表](implicit-numeric-conversions-table.md)   
  [明確數值轉換表](explicit-numeric-conversions-table.md)
+

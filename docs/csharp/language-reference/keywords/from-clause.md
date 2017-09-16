@@ -1,58 +1,78 @@
 ---
-title: "from 子句 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "from_CSharpKeyword"
-  - "from"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "from 子句 [C#]"
-  - "from 關鍵字 [C#]"
+title: "from 子句 (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- from_CSharpKeyword
+- from
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- from clause [C#]
+- from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 caps.latest.revision: 27
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 27
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0165144acfa8d0928015e8222179f7e69f19644
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# from 子句 (C# 參考)
-查詢運算式必須以 `from` 子句開頭。  此外，查詢運算式可以包含子查詢，而子查詢也以 `from` 子句開頭。  `from` 子句會指定下列各項：  
+# <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
+查詢運算式的開頭必須是 `from` 子句。 此外，查詢運算式可以包含子查詢，也是以 `from` 子句開頭。 `from` 子句指定下列內容：  
   
--   在其上執行查詢或子查詢的資料來源。  
+-   會執行查詢或子查詢的資料來源。  
   
--   區域「*範圍變數*」\(Range Variable\)，代表來源序列中的每個項目。  
+-   本機「範圍變數」，代表來源序列中的每個項目。  
   
- 範圍變數和資料來源都是強型別。  `from` 子句中參考的資料來源的型別必須是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601> 或衍生的型別，例如 <xref:System.Linq.IQueryable%601>。  
+ 範圍變數和資料來源都是強型別。 `from` 子句中參考的資料來源，必須有 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601> 類型，或 <xref:System.Linq.IQueryable%601> 等衍生類型。  
   
- 在下列範例中，`numbers` 是資料來源而 `num` 是範圍變數。  請注意，變數都是強型別，即使使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字也一樣。  
+ 在下例中，`numbers` 是資料來源，而 `num` 是範圍變數。 請注意，這兩個變數都是強型別，即使透過使用 [var](../../../csharp/language-reference/keywords/var.md) 關鍵字。  
   
  [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
-## 範圍變數  
- 編譯器會在資料來源實作 <xref:System.Collections.Generic.IEnumerable%601> 時推斷範圍變數的型別。  例如，如果來源的型別是 `IEnumerable<Customer>`，則範圍變數會推斷為 `Customer`。  您必須明確指定型別的唯一時機是當來源為非泛型 `IEnumerable` 型別 \(例如 <xref:System.Collections.ArrayList>\) 時。  如需詳細資訊，請參閱[How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md)。  
+## <a name="the-range-variable"></a>範圍變數  
+ 當資料來源實作 <xref:System.Collections.Generic.IEnumerable%601> 時，編譯器會推斷範圍變數的類型。 例如，如果來源有類型 `IEnumerable<Customer>`，則範圍變數推斷為 `Customer`。 必須明確指定類型的時機，是當來源為非泛型的 `IEnumerable` 類型時，如 <xref:System.Collections.ArrayList>。 如需詳細資訊，請參閱[如何：使用 LINQ 查詢 ArrayList](http://msdn.microsoft.com/library/c318b79a-fa4d-4de3-b62d-c1162beb267e)。  
   
- 在上述範例中，`num` 是推斷為型別 `int`。  因為範圍變數是強型別，所以您可以在其上呼叫方法或在其他作業中使用它。  例如，不撰寫 `select num`，您可以撰寫 `select num.ToString()` 讓查詢運算式傳回字串序列而非整數序列。  或者可以撰寫 `select n + 10` 讓運算式傳回序列 14、11、13、12、10。  如需詳細資訊，請參閱 [select 子句](../../../csharp/language-reference/keywords/select-clause.md)。  
+ 在前例中，`num` 推斷為類型 `int`。 因為範圍變數是強型別，所以您可以對它呼叫方法，或在其他作業中使用它。 例如，不寫入 `select num`，而是可以寫入 `select num.ToString()` 讓查詢運算式傳回一串字串，不是整數序列。 或者可以寫入 `select n + 10` 讓運算式傳回 14、11、13、12、10 序列。 如需詳細資訊，請參閱 [select 子句](../../../csharp/language-reference/keywords/select-clause.md)。  
   
- 範圍變數如同 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式中的反覆運算變數，只有一個非常重要的差異：範圍變數永不實際儲存來源的資料。  它只是一種語法上便於使用的工具，讓查詢描述執行查詢時會發生的事件。  如需詳細資訊，請參閱[Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
+ 範圍變數就像 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式中的反覆項目變數，但有一個非常重要的差異：範圍變數從不真正儲存來源的資料。 它只是讓查詢描述在執行查詢時會發生什麼的語法便利性。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
-## 從子句複合  
- 在某些情況下，來源序列中的每個項目本身就是序列或包含序列。  例如，您的資料來源可能是 `IEnumerable<Student>`，其中序列中的每個學生物件包含考試分數的清單。  若要存取每個 `Student` 項目的內部清單，您可以使用複合 `from` 子句。  這個技術如同使用巢狀 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式。  您可以將 [where](../../../csharp/language-reference/keywords/partial-method.md) 或 [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) 子句加入至 `from` 子句以篩選結果。  下列範例顯示 `Student` 物件的序列，每個序列都包含代表考試分數的整數內部 `List`。  若要存取內部清單，請使用複合 `from` 子句。  您可以在必要時於兩個 `from` 子句之間插入子句。  
+## <a name="compound-from-clauses"></a>複合 from 子句  
+ 在某些情況下，來源序列中的每個項目自己本身可能就是序列或包含序列。 例如，您的資料來源可能是 `IEnumerable<Student>`，其中序列中的每個學生物件都包含測驗分數的清單。 若要存取每個 `Student` 項目內的內部清單，您可以使用複合 `from` 子句。 技巧就像使用巢狀的 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式一樣。 您可以將 [where](../../../csharp/language-reference/keywords/partial-method.md) 或 [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) 子句新增至任一 `from` 子句來篩選結果。 下例顯示一系列 `Student` 物件，每個都包含代表測試分數的整數內部 `List`。 若要存取內部清單，請使用複合 `from` 子句。 如有必要，您可以在兩個 `from` 子句之間插入子句。  
   
  [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
-## 使用多個 from 子句執行聯結  
- 複合 `from` 子句是用於存取單一資料來源中的內部集合。  但是，查詢也可以包含多個 `from` 子句，從獨立資料來源產生補充查詢。  此技術可以讓您執行特定類型的聯結作業，這些作業是無法使用 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)來完成。  
+## <a name="using-multiple-from-clauses-to-perform-joins"></a>使用多個 from 子句執行聯結  
+ 複合 `from` 子句是用來存取單一資料來源中的內部集合。 不過，查詢也可以包含多個 `from` 子句，從獨立的資料來源產生增補查詢。 這項技術可讓您執行特定的聯結作業類型，這些是使用 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)都不可能執行的類型。  
   
- 下列範例顯示如何使用兩個 `from` 子句，形成兩個資料來源完整的交叉聯結。  
+ 下例示範如何使用兩個 `from` 子句形成兩個資料來源的完整交叉聯結。  
   
  [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
- 如需使用多個 `from` 子句之聯結作業的詳細資訊，請參閱 [如何：執行自訂聯結作業](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。  
+ 如需使用多個 `from` 子句的聯結作業詳細資訊，請參閱[如何：執行自訂聯結作業](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。  
   
-## 請參閱  
- [查詢關鍵字 \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
+## <a name="see-also"></a>另請參閱  
+ [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

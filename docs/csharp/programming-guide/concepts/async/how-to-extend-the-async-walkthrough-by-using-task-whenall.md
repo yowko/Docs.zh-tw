@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#) | Microsoft Docs"
+title: "如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf538f555c9b1636980fb68ca1c132504112d9fb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 132332f4fd274126bb8bc270cd762e1bdc97106f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)
@@ -179,7 +179,7 @@ ms.lasthandoff: 03/13/2017
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法來取得所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
+5.  最後，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法取得所有網站的長度總和。 將下列程式碼行新增至 `SumPageSizesAsync`。  
   
     ```csharp  
     int total = lengths.Sum();
@@ -187,7 +187,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>測試 Task.WhenAll 方案  
   
--   針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始]**** 按鈕。 輸出應類似於[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的非同步方案輸出。 不過請注意，網站每次出現的順序都不同。  
+-   針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 輸出應類似於[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的非同步方案輸出。 不過請注意，網站每次出現的順序都不同。  
   
 ## <a name="example"></a>範例  
  下列程式碼顯示專案擴充，其使用 `GetURLContentsAsync` 方法從 Web 下載內容。  
@@ -454,5 +454,5 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
- [逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+ [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 

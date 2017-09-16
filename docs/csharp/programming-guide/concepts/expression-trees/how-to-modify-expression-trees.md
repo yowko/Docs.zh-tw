@@ -1,5 +1,5 @@
 ---
-title: "如何：修改運算式樹狀架構 (C#) | Microsoft Docs"
+title: "如何：修改運算式樹狀架構 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 73d95a78673271fb8e458ed7f3c88e2e73eb3455
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b665f3bfa1228e2e8834241f010792e9d5975c96
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-modify-expression-trees-c"></a>如何：修改運算式樹狀架構 (C#)
@@ -90,3 +90,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>另請參閱  
  [如何：執行運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
  [運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+

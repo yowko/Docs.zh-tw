@@ -1,5 +1,5 @@
 ---
-title: "多執行緒程序的參數和傳回值 (C#) | Microsoft Docs"
+title: "多執行緒程序的參數和傳回值 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95fdc0f74c1f2c35a4f3b5c0a8f40f5d4fe9457c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5e377a006409dbae49b3c00297f69e8d55a01295
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>多執行緒程序的參數和傳回值 (C#)
@@ -132,7 +132,7 @@ private void BackgroundWorker1_RunWorkerCompleted(
 }  
 ```  
   
- 您可以使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的選擇性 `ByVal` 狀態物件變數，提供參數並將值傳回執行緒共用執行緒。 執行緒計時器執行緒也支援針對此目的狀態物件。 如需執行緒共用和執行緒計時器的資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)和[執行緒計時器 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)。  
+ 您可以使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的選擇性 `ByVal` 狀態物件變數，提供參數並將值傳回給執行緒集區執行緒。 執行緒計時器執行緒也支援針對此目的狀態物件。 如需執行緒共用和執行緒計時器的資訊，請參閱[執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)和[執行緒計時器 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
@@ -142,3 +142,4 @@ private void BackgroundWorker1_RunWorkerCompleted(
  [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [委派](../../../../csharp/programming-guide/delegates/index.md)   
  [元件中的多執行緒](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+

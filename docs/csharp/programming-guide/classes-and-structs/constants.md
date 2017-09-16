@@ -1,5 +1,5 @@
 ---
-title: "常數 (C# 程式設計手冊) | Microsoft Docs"
+title: "常數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,15 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad6c8119d74be0f178681b334f940ff5c38c05ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 85273420e9e0dbf4b8f24568d97be127c85d5f42
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
-常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../../csharp/language-reference/keywords/const.md) 修飾詞所宣告。 只有 C# 內建類型 (不含 <xref:System.Object?displayProperty=fullName>) 才能宣告為 `const`。 如需內建類型的清單，請參閱[內建類型資料表](../../../csharp/language-reference/keywords/built-in-types-table.md)。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../../csharp/language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
+常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../../csharp/language-reference/keywords/const.md) 修飾詞所宣告。 有 C# 內建型別 (不含 <xref:System.Object?displayProperty=fullName>) 才能宣告為 `const`。 如需內建類型的清單，請參閱[內建類型資料表](../../../csharp/language-reference/keywords/built-in-types-table.md)。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../../csharp/language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
   
  C# 不支援 `const` 方法、屬性或事件。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
- 常數可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected``internal`。 這些存取修飾詞定義類別使用者如何存取常數。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 常數可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected internal`。 這些存取修飾詞定義類別使用者如何存取常數。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  因為類型之所有執行個體的常數值都會相同，所以常數的存取方式就像它們是 [static](../../../csharp/language-reference/keywords/static.md) 欄位一樣。 您未使用 `static` 關鍵字來宣告它們。 不在定義常數之類別中的運算式必須使用類別名稱、句號以及存取常數的常數名稱。 例如:   
   
@@ -75,3 +75,4 @@ ms.lasthandoff: 03/13/2017
  [類型](../../../csharp/programming-guide/types/index.md)   
  [readonly](../../../csharp/language-reference/keywords/readonly.md)   
  [Immutability in C# Part One: Kinds of Immutability](http://go.microsoft.com/fwlink/?LinkId=112379) (C# 中不變性第一部分：不變性類型)
+

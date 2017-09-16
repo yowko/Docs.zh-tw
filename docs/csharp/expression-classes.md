@@ -1,6 +1,6 @@
 ---
 title: "支援運算式樹狀架構的架構類型"
-description: "支援運算式樹狀架構的架構類型"
+description: "了解支援運算式樹狀架構的架構類型、建立運算式樹狀架構，以及使用運算式樹狀架構 API 的技術。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64b3b7999b6ff01bdf28cb7902ba50087d191cb4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 03/13/2017
 [上一篇 -- 說明運算式樹狀架構](expression-trees-explained.md)
 
 .NET Core Framework 中有使用運算式樹狀架構類別的大型清單。
-[這裡](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions)可以看到完整清單。
+[這裡](/dotnet/core/api/System.Linq.Expressions)可以看到完整清單。
 讓我們了解架構類別是如何設計的，而不是執行完整的清單。
 
 在語言設計中，運算式是估算並傳回值的程式碼本文。 運算式可以非常簡單︰常數運算式 `1` 傳回常數值 1。 它們可以很複雜︰運算式 `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` 傳回一個二次方程式的根 (方程式有解決方案的情況下)。  

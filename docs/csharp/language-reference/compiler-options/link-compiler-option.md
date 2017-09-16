@@ -1,5 +1,5 @@
 ---
-title: "-link (C# 編譯器選項) | Microsoft Docs"
+title: "-link (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3096dd622a0b7c5fae13412a95322b934bd38b76
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c08f2e7f13a51fb1a350acadff5224cfa8d61aaa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="link-c-compiler-options"></a>/link (C# 編譯器選項)
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /link:fileList  
 // -or-  
 /l:fileList  
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/13/2017
 > [!NOTE]
 >  當您在程式碼中建立內嵌 COM 類型的執行個體時，必須使用適當的介面來建立執行個體。 嘗試使用 CoClass 建立內嵌 COM 類型的執行個體將會導致錯誤。  
   
- 若要在 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 中設定 `/link` 選項，請新增組件參考，並將 `Embed Interop Types` 屬性設定為 **true**。 `Embed Interop Types` 屬性的預設值為 **false**。  
+ 若要在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中設定 `/link` 選項，請新增組件參考，並將 `Embed Interop Types` 屬性設定為 **true**。 `Embed Interop Types` 屬性的預設值為 **false**。  
   
  如果您所連結的 COM 組件 (A) 本身參考另一個 COM 組件 (組件 B)，您也必須在發生下列任一情況時連結到 B 組件：  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/13/2017
   
 -   所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。  
   
- 如同 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，`/link` 編譯器選項會使用參考常用 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 組件的 Csc.rsp 回應檔。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 編譯器選項。  
+ 如同 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 編譯器選項，`/link` 編譯器選項會使用參考常用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 組件的 Csc.rsp 回應檔。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 編譯器選項。  
   
  `/link` 的簡短形式為 `/l`。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[VbLinkCompilerCS#1](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_1.cs)]  
   
 ### <a name="types-that-have-generic-parameters"></a>具有泛型參數的類型  
- 如果具有泛型參數的類型來自外部組件，且其參數的類型是從 Interop 組件內嵌的，則無法使用該類型。 這項限制不適用於介面。 例如，假設 <xref:Microsoft.Office.Interop.Excel.Range> 介面是在 <xref:Microsoft.Office.Interop.Excel> 組件中定義。 如果程式庫內嵌來自 <xref:Microsoft.Office.Interop.Excel> 組件的 Interop 類型，並公開傳回泛型型別的方法，但是此泛型型別具有類型為 <xref:Microsoft.Office.Interop.Excel.Range> 介面的參數，則該方法就必須傳回泛型介面，如下列程式碼範例所示。  
+ 如果具有泛型參數的類型來自外部組件，且其參數的類型是從 Interop 組件內嵌的，則無法使用該類型。 這項限制不適用於介面。 例如，請考慮使用 <xref:Microsoft.Office.Interop.Excel> 組件中所定義的 <xref:Microsoft.Office.Interop.Excel.Range> 介面。 如果程式庫內嵌來自 <xref:Microsoft.Office.Interop.Excel> 組件的 Interop 類型，並公開傳回泛型型別的方法，但是此泛型型別具有類型為 <xref:Microsoft.Office.Interop.Excel.Range> 介面的參數，則該方法就必須傳回泛型介面，如下列程式碼範例所示。  
   
  [!code-cs[VbLinkCompilerCS#2](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_2.cs)]  
 [!code-cs[VbLinkCompilerCS#3](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_3.cs)]  
@@ -111,3 +111,4 @@ csc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.cs
  [/noconfig (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)   
  [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)
+

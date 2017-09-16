@@ -1,58 +1,77 @@
 ---
-title: "/moduleassemblyname (C# Compiler Option) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/moduleassemblyname"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "moduleassemblyname compiler option [C#]"
-  - "/moduleassemblyname compiler option [C#]"
-  - ".moduleassemblyname compiler option [C#]"
+title: "-moduleassemblyname (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /moduleassemblyname
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- moduleassemblyname compiler option [C#]
+- /moduleassemblyname compiler option [C#]
+- .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# /moduleassemblyname (C# Compiler Option)
-指定組件，.netmodule 可存取該組件的非公開類型。  
+# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (C# 編譯器選項)
+指定 .netmodule 可以存取其非公用類型的組件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```console  
 /moduleassemblyname:assembly_name  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>引數  
  `assembly_name`  
- 其非公用型別 .netmodule 可以存取的組件名稱。  
+ .netmodule 可以存取其非公用類型之組件的名稱。  
   
-## 備註  
- 在建置 .netmodule時應該使用**\/moduleassemblyname** ，且下列條件為 true 的位置：  
+## <a name="remarks"></a>備註  
+ **/moduleassemblyname** 應該在建置 .netmodule 時，以及符合下列條件時使用：  
   
--   .netmodule 需要存取現有組件中的非公用型別。  
+-   .netmodule 需要存取現有組件中的非公用類型。  
   
--   您知道 .netmodule 將建置在其中的組件名稱。  
+-   您知道將在其中建置 .netmodule 之組件的名稱。  
   
--   現存組件已將 friend 組件的存取權授與給 .netmodule將建置在其中的組件。  
+-   現存組件已對將在其中建置 .netmodule 的組件授與 friend 組件的存取權。  
   
- 如需組件 .netmodule的詳細資訊，請參閱 [\/target:module \(Create Module to Add to Assembly\)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
+ 如需建置 .netmodule 的詳細資訊，請參閱 [/target:module (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
   
- 如需 friend 組件的詳細資訊，請參閱 [Friend 組件](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)。  
+ 如需 Friend 組件的詳細資訊，請參閱 [Friend 組件](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
   
- 這個選項在開發環境內無法使用；只有從命令列進行編譯時才能使用。  
+ 這個選項不適用於開發環境；只有在從命令列編譯時才可用。  
   
- 在 Visual Studio 中無法使用這個編譯器選項，而且無法利用程式設計的方式變更它。  
+ Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
-## 範例  
- 這個範例會使用私用型別建置組件，並且讓 friend 組件存取名為 csman\_an\_assembly 的組件。  
+## <a name="example"></a>範例  
+ 此範例會建置具有私用類型的組件，並提供 Friend 組件存取權給稱為 csman_an_assembly 的組件。  
   
-```  
+```csharp  
 // moduleassemblyname_1.cs  
 // compile with: /target:library  
 using System;  
@@ -69,10 +88,10 @@ class An_Internal_Class
 }  
 ```  
   
-## 範例  
- 此範例組件一個會存取組件 moduleassemblyname\_1.dll 中非公用型別的 .netmodule。  透過知道 .netmodule 將建置到名為 csman\_an\_assembly的組件，我們可以指定 **\/moduleassemblyname**，讓 .netmodule 在授與 csman\_an\_assembly 的 friend 組件存取權限的組件中存取非公用型別。  
+## <a name="example"></a>範例  
+ 此範例將建置的 .netmodule 會存取 moduleassemblyname_1.dll 組件中的非公用類型。 藉由得知此 .netmodule 將建置在稱為 csman_an_assembly 的組件中，因此可以指定 **/moduleassemblyname**，讓 .netmodule 在授與 Friend 組件存取權給 csman_an_assembly 的組件中存取非公用類型。  
   
-```  
+```csharp  
 // moduleassemblyname_2.cs  
 // compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
 class B {  
@@ -83,10 +102,10 @@ class B {
 }  
 ```  
   
-## 範例  
- 這個程式碼範例會參考之前建置的組件以及 .netmodule，來建置組件 csman\_an\_assembly。  
+## <a name="example"></a>範例  
+ 此程式碼範例將會建置 csman_an_assembly 組件，並參考之前建置的組件及 .netmodule。  
   
-```  
+```csharp  
 // csman_an_assembly.cs  
 // compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
 class A {  
@@ -97,7 +116,8 @@ class A {
 }  
 ```  
   
-  **呼叫的 An\_Internal\_Class.Test**   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ **已呼叫 An_Internal_Class.Test**   
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

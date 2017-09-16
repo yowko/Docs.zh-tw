@@ -1,50 +1,70 @@
 ---
-title: "&lt;typeparam&gt; (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "typeparam"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<typeparam> C# XML 標記"
-  - "typeparam C# XML 標記"
+title: "&lt;typeparam&gt; (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- typeparam
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <typeparam> C# XML tag
+- typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8bb1d13976cf2cc9df4f573702168c6abdfff3d5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;typeparam&gt; (C# 程式設計手冊)
-## 語法  
+# <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# 程式設計手冊)
+## <a name="syntax"></a>語法  
   
-```  
+```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `name`  
- 型別參數的名稱。  以雙引號 \(" "\) 將名稱括起來。  
+ 型別參數的名稱。 以雙引號 (" ") 括住名稱。  
   
  `description`  
- 型別參數的說明。  
+ 型別參數的描述。  
   
-## 備註  
- `<typeparam>` 標記應該用在泛型型別或方法宣告的註解中，以說明型別參數。  為泛型型別或方法的每個型別參數加入標記。  
+## <a name="remarks"></a>備註  
+ `<typeparam>` 標記應該用於泛型型別或方法宣告的註解中，以描述型別參數。 新增泛型型別或方法之每個型別參數的標記。  
   
- 如需詳細資訊，請參閱 [泛型](../../../csharp/programming-guide/generics/index.md)。  
+ 如需詳細資訊，請參閱[泛型](../../../csharp/programming-guide/generics/index.md)。  
   
- `<typeparam>` 標記的文字會顯示在 IntelliSense \([Object Browser Window](http://msdn.microsoft.com/zh-tw/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda)程式碼結構 Web 報告\) 中。  
+ `<typeparam>` 標記的文字將會顯示於 IntelliSense，即 [Object Browser Window](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) (物件瀏覽器視窗) 程式碼註解 Web 報告。  
   
- 使用 [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 進行編譯，將文件註解處理為檔案。  
+ 使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 編譯，可處理檔案的文件註解。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

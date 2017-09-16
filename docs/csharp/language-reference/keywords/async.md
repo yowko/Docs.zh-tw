@@ -1,6 +1,6 @@
 ---
-title: "async (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "async (C# 參考)"
+ms.date: 2017-05-22
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -31,107 +31,83 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: e7f4cfa81de3c4db41d9303abf65cfd0edc926a4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
-使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指非同步方法。  
+使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
 {  
     // . . . .  
 }  
+```  
+ 
+如果您不熟悉非同步程式設計或不了解非同步方法如何使用 `await` 關鍵字進行可能需要長期執行的工作，而不封鎖呼叫端執行緒，請閱讀[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName> 方法： 
   
+```csharp  
+string contents = await httpClient.GetStringAsync(requestUrl);  
 ```  
   
- 如果您不熟悉非同步程式設計或不了解非同步方法如何使用 `await` 關鍵字進行可能需要長期執行的工作，而不封鎖呼叫端執行緒，則應該閱讀[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)中的簡介。  
+非同步方法會以同步方式執行，直到抵達第一個 `await` 運算式，此時方法會暫停，直到等候的工作完成。 同時，控制項會返回方法的呼叫端，如下一節中的範例所示。  
   
-```  
-string contents = await contentsTask;  
-```  
-  
- 方法會以同步方式執行，直到抵達第一個 `await` 運算式，此時方法會暫停，直到等候的工作完成。 同時，控制項會返回方法的呼叫端，如下一節中的範例所示。  
-  
- 如果 `async` 關鍵字修改的方法不包含 `await` 運算式或陳述式，則方法會以同步方式執行。 如果有任何非同步方法未包含 `await`，編譯器警告就會發出警示，因為這種情況可能表示發生錯誤。 請參閱[編譯器警告 (層級 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md)。  
+如果 `async` 關鍵字修改的方法不包含 `await` 運算式或陳述式，則方法會以同步方式執行。 如果有任何非同步方法未包含 `await` 陳述式，編譯器警告就會發出警示，因為這種情況可能表示發生錯誤。 請參閱[編譯器警告 (層級 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md)。  
   
  `async` 關鍵字與內容相關，它只有在修改方法、Lambda 運算式或匿名方法時，才是關鍵字。 在所有其他內容中，它會解譯為識別項。  
   
 ## <a name="example"></a>範例  
- 下列範例將示範非同步事件處理常式 `StartButton_Click` 與非同步方法 `ExampleMethodAsync` 之間的控制結構與流程。 非同步方法產生的結果是所下載網站的長度。 此程式碼適用於您在 Visual Studio 中建立的 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。請參閱有關設定應用程式的程式碼註解。  
+下列範例將示範非同步事件處理常式 `StartButton_Click` 與非同步方法 `ExampleMethodAsync` 之間的控制結構與流程。 非同步方法的結果是網頁的字元數。 此程式碼適用於您在 Visual Studio 中建立的 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。請參閱有關設定應用程式的程式碼註解。  
+
+您可以在 Visual Studio 中將此程式碼執行為 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。 您需要名為 `StartButton` 的按鈕控制項和名為 `ResultsTextBox` 的文字方塊控制項。 請記住要設定名稱和處理常式，如此才會有像下面這樣的內容：  
+
+```xaml
+<Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
+        Click="StartButton_Click" Name="StartButton"/>  
+<TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
+         Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
+```
   
-```csharp  
-// You can run this code in Visual Studio as a WPF app or a Windows Store app.  
-// You need a button (StartButton) and a textbox (ResultsTextBox).  
-// Remember to set the names and handler so that you have something like this:  
-// <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
-//         Click="StartButton_Click" Name="StartButton"/>  
-// <TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
-//          Text="TextBox" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
+將程式碼執行為 WPF 應用程式：  
+
+- 將此程式碼貼入 MainWindow.xaml.cs 的 `MainWindow` 類別。  
+- 將參考新增至 System.Net.Http。  
+- 為 System.Net.Http 新增 `using` 指示詞。  
   
-// To run the code as a WPF app:  
-//    paste this code into the MainWindow class in MainWindow.xaml.cs,  
-//    add a reference to System.Net.Http, and  
-//    add a using directive for System.Net.Http.  
+將程式碼執行為 Windows 市集應用程式：  
+- 將此程式碼貼入 MainPage.xaml.cs 的 `MainPage` 類別。  
+- 為 System.Net.Http 和 System.Threading.Tasks 新增 using 指示詞。  
   
-// To run the code as a Windows Store app:  
-//    paste this code into the MainPage class in MainPage.xaml.cs, and  
-//    add using directives for System.Net.Http and System.Threading.Tasks.  
-  
-private async void StartButton_Click(object sender, RoutedEventArgs e)  
-{  
-    // ExampleMethodAsync returns a Task<int>, which means that the method  
-    // eventually produces an int result. However, ExampleMethodAsync returns  
-    // the Task<int> value as soon as it reaches an await.  
-    ResultsTextBox.Text += "\n";  
-    try  
-    {  
-        int length = await ExampleMethodAsync();  
-        // Note that you could put "await ExampleMethodAsync()" in the next line where  
-        // "length" is, but due to when '+=' fetches the value of ResultsTextBox, you  
-        // would not see the global side effect of ExampleMethodAsync setting the text.  
-        ResultsTextBox.Text += String.Format("Length: {0}\n", length);  
-    }  
-    catch (Exception)  
-    {  
-        // Process the exception if one occurs.  
-    }  
-}  
-  
-public async Task<int> ExampleMethodAsync()  
-{  
-    var httpClient = new HttpClient();  
-    int exampleInt = (await httpClient.GetStringAsync("http://msdn.microsoft.com")).Length;  
-    ResultsTextBox.Text += "Preparing to finish ExampleMethodAsync.\n";  
-    // After the following return statement, any method that's awaiting  
-    // ExampleMethodAsync (in this case, StartButton_Click) can get the   
-    // integer result.  
-    return exampleInt;  
-}  
-// Output:  
-// Preparing to finish ExampleMethodAsync.  
-// Length: 53292  
-  
-```  
+[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  如需工作以及等候工作時執行之程式碼的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。 如需使用類似項目的完整 WPF 範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載逐步解說程式碼。  
+>  如需工作以及等候工作時執行之程式碼的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。 如需使用類似項目的完整 WPF 範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
 ## <a name="return-types"></a>傳回型別  
- 非同步方法的傳回型別可以是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 [void](../../../csharp/language-reference/keywords/void.md)。 此方法不可以宣告任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 參數，但是可以呼叫具有這類參數的方法。  
+非同步方法可有下列傳回型別：
+
+- <xref:System.Threading.Tasks.Task>
+- <xref:System.Threading.Tasks.Task%601>
+- [void](../../../csharp/language-reference/keywords/void.md)，應該只用於事件處理常式。
+- 自 C# 7 開始，任何具有可存取 `GetAwaiter` 方法的類型。 `System.Threading.Tasks.ValueTask<TResult>` 類型就是一個這種實作。 新增 NuGet 套件 `System.Threading.Tasks.Extensions` 即可使用。 
+
+非同步方法不可以宣告任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 參數，也不可以有 <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) --> 參考傳回值，但可以呼叫有這類參數的方法。  
   
- 如果方法的 [return](../../../csharp/language-reference/keywords/return.md) 陳述式指定 `TResult` 類型的運算元，請指定 `Task<TResult>` 作為非同步方法的傳回型別。 如果方法完成時未傳回任何有意義的值，則使用 `Task`。 也就是說，呼叫方法會傳回 `Task`，但是當 `Task` 完成時，等候 `await` 的任何 `Task` 運算式都會判斷值為 `void`。  
+如果方法的 [return](../../../csharp/language-reference/keywords/return.md) 陳述式指定 `TResult` 類型的運算元，請指定 `Task<TResult>` 作為非同步方法的傳回型別。 如果方法完成時未傳回任何有意義的值，則使用 `Task`。 也就是說，呼叫方法會傳回 `Task`，但是當 `Task` 完成時，等候 `await` 的任何 `Task` 運算式都會判斷值為 `void`。  
   
- 您主要是使用 `void` 傳回類型定義需要該傳回類型的事件處理常式。 傳回 `void` 之非同步方法的呼叫端無法等候它，而且無法攔截方法擲回的例外狀況。  
-  
- 如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
+您主要是使用 `void` 傳回類型定義需要該傳回類型的事件處理常式。 傳回 `void` 之非同步方法的呼叫端無法等候它，而且無法攔截方法擲回的例外狀況。  
+
+自 C# 7 開始，您會傳回另一個類型，通常是實值型別，具有 `GetAwaiter` 方法可將程式碼效能關鍵區段中的記憶體配置降至最低。 
+
+如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
  [await](../../../csharp/language-reference/keywords/await.md)   
  [逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)
+

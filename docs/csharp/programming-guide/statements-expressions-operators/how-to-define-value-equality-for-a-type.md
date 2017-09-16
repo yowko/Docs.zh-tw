@@ -1,5 +1,5 @@
 ---
-title: "如何：定義類型的實值相等 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：定義類型的實值相等 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 33b2ab2252fac8442caa7b2f3e9b5b311cc0f9b6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e008be022765ff7d2bb440f0a37193b882038b76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：定義類型的實值相等 (C# 程式設計手冊)
@@ -51,17 +51,17 @@ ms.lasthandoff: 03/13/2017
   
 5.  x.`Equals`(null) 會傳回 `false`。 不過，null.Equals(null) 會擲回例外狀況，而不會遵守上述第二項規則。  
   
- 您定義的任何結構已有實值相等的預設實作，這是從 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法的 <xref:System.ValueType?displayProperty=fullName> 覆寫繼承而來。 此實作使用反映來檢查類型中的所有欄位和屬性。 雖然此實作會產生正確的結果，但相較於您針對該類型特別撰寫的自訂實作卻慢得多。  
+ 任何您已定義的結構，皆有繼承自 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法的 <xref:System.ValueType?displayProperty=fullName> 覆寫的預設實作實值相等。 此實作使用反映來檢查類型中的所有欄位和屬性。 雖然此實作會產生正確的結果，但相較於您針對該類型特別撰寫的自訂實作卻慢得多。  
   
  對類別和結構而言，實值相等的實作細節並不同。 不過，類別和結構都需要相同的基本步驟來實作相等：  
   
-1.  覆寫[虛擬](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法。 在大部分情況下，實作 `bool Equals( object obj )` 應該只會呼叫特定類型的 `Equals` 方法，這是 <xref:System.IEquatable%601?displayProperty=fullName> 介面的實作 (請參閱步驟 2)。  
+1.  覆寫[虛擬](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 方法。 在大部分情況下，實作 `bool Equals( object obj )` 應該只會呼叫特定類型的 `Equals` 方法，這是 <xref:System.IEquatable%601?displayProperty=fullName> 介面的實作。 (請參閱步驟 2)。  
   
-2.  提供特定類型的 `Equals` 方法，以便實作 <xref:System.IEquatable%601?displayProperty=fullName> 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，則請勿這樣做，因為 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 的 <xref:System.Object> 實作會執行參考相等檢查)。  
+2.  透過提供類型專屬的 `Equals` 方法實作 <xref:System.IEquatable%601?displayProperty=fullName> 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，請不要這樣做，因為 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 的 <xref:System.Object> 實作會執行參考相等檢查。)  
   
 3.  選用但為建議動作︰多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子。  
   
-4.  覆寫 <xref:System.Object.GetHashCode%2A?displayProperty=fullName>，讓具有實值相等的兩個物件可以產生相同的雜湊碼。  
+4.  覆寫 <xref:System.Object.GetHashCode%2A?displayProperty=fullName>，以便有實值相等的兩個物件產生相同的雜湊碼。  
   
 5.  選用︰若要支援「大於」或「小於」的定義，請為類型實作 <xref:System.IComparable%601> 介面，並同時多載 [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) 和 [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) 運算子。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
- 對於結構，<xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 的預設實作 (這是 <xref:System.ValueType?displayProperty=fullName> 中的覆寫版本) 會使用反映來比較類型中每個欄位的值，以便執行實值相等檢查。 當實作器覆寫結構中的虛擬 `Equals` 方法時，其目的是為了提供更有效率的方法來執行實值相等檢查，以及選擇性地根據結構的一部分欄位或屬性進行比較。  
+ 若為結構，預設實作 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> (這是 <xref:System.ValueType?displayProperty=fullName> 中的覆寫版本) 會使用反映執行實值相等檢查，比較類型中的每個欄位值。 當實作器覆寫結構中的虛擬 `Equals` 方法時，其目的是為了提供更有效率的方法來執行實值相等檢查，以及選擇性地根據結構的一部分欄位或屬性進行比較。  
   
  除非結構明確多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子，否則這些運算子無法用於結構。  
   

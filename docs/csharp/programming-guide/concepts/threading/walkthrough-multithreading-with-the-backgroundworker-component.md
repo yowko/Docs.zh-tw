@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#) | Microsoft Docs"
+title: "逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,23 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)
 本逐步解說示範如何建立多執行緒的 Windows Forms 應用程式，以搜尋文字檔案中某個文字的出現次數。 其會示範：  
   
--   使用可由 <xref:System.ComponentModel.BackgroundWorker> 元件呼叫的方法，來定義類別。  
+-   使用 <xref:System.ComponentModel.BackgroundWorker> 元件可呼叫的方法來定義類別。  
   
--   處理由 <xref:System.ComponentModel.BackgroundWorker> 元件所引發的事件。  
+-   處理 <xref:System.ComponentModel.BackgroundWorker> 元件所引發的事件。  
   
--   啟動 <xref:System.ComponentModel.BackgroundWorker> 元件，以執行方法。  
+-   啟動 <xref:System.ComponentModel.BackgroundWorker> 元件來執行方法。  
   
--   實作 `Cancel` 按鈕以停止 <xref:System.ComponentModel.BackgroundWorker> 元件。  
+-   實作 `Cancel` 按鈕，以停止 <xref:System.ComponentModel.BackgroundWorker> 元件。  
   
 ### <a name="to-create-the-user-interface"></a>若要建立使用者介面  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>建立 BackgroundWorker 元件，並訂閱其事件  
   
-1.  從 [ToolBox]**** 的 [元件]**** 區段，將 <xref:System.ComponentModel.BackgroundWorker> 元件新增至表單。 隨即顯示在表單的元件匣中。  
+1.  將 <xref:System.ComponentModel.BackgroundWorker> 元件從 [工具箱] 的 [元件] 區段新增至表單。 隨即顯示在表單的元件匣中。  
   
 2.  設定 backgroundWorker1 物件的下列屬性。  
   
@@ -74,15 +74,15 @@ ms.lasthandoff: 03/13/2017
     |`WorkerReportsProgress`|True|  
     |`WorkerSupportsCancellation`|True|  
   
-3.  訂閱 backgroundWorker1 物件的事件。 在 [屬性]**** 視窗頂端，按一下**事件**圖示。 按兩下 `RunWorkerCompleted` 事件，建立事件處理常式方法。 針對 `ProgressChanged` 和 `DoWork` 事件，執行相同的動作。  
+3.  訂閱 backgroundWorker1 物件的事件。 在 [屬性] 視窗頂端，按一下**事件**圖示。 按兩下 `RunWorkerCompleted` 事件，建立事件處理常式方法。 針對 `ProgressChanged` 和 `DoWork` 事件，執行相同的動作。  
   
 ### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>若要定義會在不同執行緒上執行的方法  
   
-1.  從 [專案]**** 功能表上，選擇 [加入類別]****，將類別新增至專案。 隨即顯示 [ 新增項目]**** 對話方塊。  
+1.  從 [專案] 功能表上，選擇 [加入類別]，將類別新增至專案。 隨即顯示 [ 新增項目] 對話方塊。  
   
-2.  從範本視窗選取 [類別]****，並在名稱欄位中輸入 `Words.cs`。  
+2.  從範本視窗選取 [類別]，並在名稱欄位中輸入 `Words.cs`。  
   
-3.  按一下 [加入] ****。 隨即顯示 `Words`。  
+3.  按一下 [加入] 。 隨即顯示 `Words`。  
   
 4.  將下列程式碼加入 `Words` 類別：  
   
@@ -294,3 +294,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>另請參閱  
  [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [如何：訂閱及取消訂閱事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+

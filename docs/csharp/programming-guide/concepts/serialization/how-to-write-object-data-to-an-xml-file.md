@@ -1,5 +1,5 @@
 ---
-title: "如何：將物件資料寫入 XML 檔案 (C#) | Microsoft Docs"
+title: "如何：將物件資料寫入 XML 檔案 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197e91be6d3785e437cb33541b2b4c9b4a2cbb84
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b2fde8f823e6b945d074327559013f4e748909
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何：將物件資料寫入 XML 檔案 (C#)
-此範例使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。  
+此範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。  
   
 ## <a name="example"></a>範例  
   
@@ -69,7 +69,7 @@ public class XMLWrite
   
 -   正在序列化的類別沒有公用的無參數建構函式。  
   
--   此檔案存在而且是唯讀 (<xref:System.IO.IOException>)。  
+-   該檔案存在且為唯讀 (<xref:System.IO.IOException>)。  
   
 -   路徑太長 (<xref:System.IO.PathTooLongException>)。  
   
@@ -82,3 +82,4 @@ public class XMLWrite
  <xref:System.IO.StreamWriter>   
  [如何：從 XML 檔案讀取物件資料 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)
+

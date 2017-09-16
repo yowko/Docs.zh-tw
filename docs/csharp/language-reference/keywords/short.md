@@ -1,5 +1,5 @@
 ---
-title: "short (C# 參考) | Microsoft Docs"
+title: "short (C# 參考)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 14f9c66bb620e2ad35513abeeba77372904cc1f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab3ccfdeb8d8a67b5fcd60b1ad6eee4dcafc9691
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="short-c-reference"></a>short (C# 參考)
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>常值  
 
-您可以將十進位常值、十六進位常值，或二進位常值 (自 C# 7 起) 指派給 `short` 變數，以將其宣告和初始化。  如果整數常值超出 `short` 範圍 (也就是說，如果它小於 <xref:System.Int16.MinValue?displayProperty=fullName> 或大於 <xref:System.Int16.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+您可以針對 `short` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `short` 的範圍 (亦即，如果小於 <xref:System.Int16.MinValue?displayProperty=fullName> 或大於 <xref:System.Int16.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 1,034 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 隱含轉換成 `short` 值。  
   
@@ -117,7 +117,7 @@ short y = (short)3.0;   // OK: explicit conversion
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Int16>   
@@ -128,3 +128,4 @@ short y = (short)3.0;   // OK: explicit conversion
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

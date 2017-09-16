@@ -1,5 +1,5 @@
 ---
-title: "建立和擲回例外狀況 (C# 程式設計手冊) | Microsoft Docs"
+title: "建立和擲回例外狀況 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3eab50a6a785676dd397498fbe95348187e2b7e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>建立和擲回例外狀況 (C# 程式設計手冊)
-例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../../csharp/language-reference/keywords/throw.md) 關鍵字「擲回」**。 執行階段接著會搜尋最相容的例外狀況處理常式。  
+例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../../csharp/language-reference/keywords/throw.md) 關鍵字「擲回」。 執行階段接著會搜尋最相容的例外狀況處理常式。  
   
  符合下列其中一或多個條件時，程式設計人員應該會擲回例外狀況：  
   
@@ -50,19 +50,19 @@ ms.lasthandoff: 03/13/2017
   
 -   根據物件狀態，對物件進行不適當的呼叫。  
   
-     其中一個範例可能會嘗試寫入至唯讀檔案。 如果物件狀態不允許作業，則會根據這個類別的衍生來擲回 <xref:System.InvalidOperationException> 執行個體或物件。 這是擲回 <xref:System.InvalidOperationException> 物件的方法範例︰  
+     其中一個範例可能會嘗試寫入至唯讀檔案。 如果物件狀態不允許作業，則會根據這個類別的衍生來擲回 <xref:System.InvalidOperationException> 執行個體或物件。 這是擲回 <xref:System.InvalidOperationException> 物件的方法範例：  
   
      [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
 -   方法的引數造成例外狀況時。  
   
-     在此情況下，應該會攔截到原始例外狀況，並且應該會建立 <xref:System.ArgumentException> 執行個體。 應該將原始例外狀況傳遞至 <xref:System.ArgumentException> 的建構函式，作為 <xref:System.Exception.InnerException%2A> 參數︰  
+     在此情況下，應該會攔截到原始例外狀況，並且應該會建立 <xref:System.ArgumentException> 執行個體。 應該將原始例外狀況傳遞至 <xref:System.ArgumentException> 的建構函式，作為 <xref:System.Exception.InnerException%2A> 參數：  
   
      [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
  例外狀況包含名為 <xref:System.Exception.StackTrace%2A> 的屬性。 這個字串包含目前呼叫堆疊上的方法名稱，以及擲回每個方法之例外狀況的檔案名稱和行號。 Common Language Runtime (CLR) 會從 `throw` 陳述式的位置自動建立 <xref:System.Exception.StackTrace%2A> 物件，因此必須從堆疊追蹤應該開始的位置擲回例外狀況。  
   
- 所有例外狀況都會包含名為 <xref:System.Exception.Message%2A> 的屬性。 此字串應該設為說明例外狀況的原因。 請注意，安全性敏感資訊不應該放在訊息文字中。 除了 <xref:System.Exception.Message%2A> 之外，<xref:System.ArgumentException> 還會包含一個名為 <xref:System.ArgumentException.ParamName%2A> 的屬性，而這個屬性應該設為導致擲回例外狀況的引數名稱。 如果是屬性 setter，則 <xref:System.ArgumentException.ParamName%2A> 應該設為 `value`。  
+ 所有例外狀況包含名為 <xref:System.Exception.Message%2A> 的屬性。 此字串應該設為說明例外狀況的原因。 請注意，安全性敏感資訊不應該放在訊息文字中。 除了 <xref:System.Exception.Message%2A> 之外，<xref:System.ArgumentException> 還會包含一個名為 <xref:System.ArgumentException.ParamName%2A> 的屬性，該屬性應設定為導致擲回例外狀況的引數名稱。 如果是屬性 setter，則 <xref:System.ArgumentException.ParamName%2A> 應設定為 `value`。  
   
  只要 public 和 protected 方法成員無法完成其預期函式，應該就會擲回例外狀況。 擲回的例外狀況類別應該是可符合錯誤狀況的最特定例外狀況。 這些例外狀況應該記錄為類別功能的一部分，而且原始類別的衍生類別或更新應該會保留相同的行為，以進行回溯相容性。  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 03/13/2017
  [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)   
  [例外狀況階層](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

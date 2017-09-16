@@ -1,5 +1,5 @@
 ---
-title: "-reference (C# 編譯器選項) | Microsoft Docs"
+title: "-reference (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 11bb7fc9490879714542bfbd77a81d58e7d8e8ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-c-compiler-options"></a>/reference (C# 編譯器選項)
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/31/2017
  預設會使用 csc 回應檔 (.rsp)，以參考常用的 .NET Framework 組件。 如果您不想讓編譯器使用 csc.rsp，可使用 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
   
 > [!NOTE]
-> 在 Visual Studio 中，使用 [新增參考] 對話方塊。 如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `/reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。 這個屬性的預設值為 **True**。  
+> 在 Visual Studio 中，使用 [新增參考] 對話方塊。 如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `/reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。 這個屬性的預設值為 **True**。  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何使用[外部別名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  
@@ -115,4 +115,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB 如何：修改專案屬性和組態設定](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

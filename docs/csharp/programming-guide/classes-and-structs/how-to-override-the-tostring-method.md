@@ -1,5 +1,5 @@
 ---
-title: "如何：覆寫 ToString 方法 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：覆寫 ToString 方法 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 2dde281d439a07d7736949294772a57e926eb587
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 60cec855286a3bb572a0bacd08c0f7920a1fc912
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>如何：覆寫 ToString 方法 (C# 程式設計手冊)
@@ -57,7 +57,7 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
   
 2.  實作方法，讓它傳回字串。  
   
-     下列範例除了類別之特定執行個體的特定資料之外還會傳回類別名稱。  
+     下列範例除了會傳回類別的名稱，也會傳回此類別之特定執行個體 (Instance) 所特有的資料。  
   
      [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
@@ -75,3 +75,4 @@ C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別�
  [override](../../../csharp/language-reference/keywords/override.md)   
  [virtual](../../../csharp/language-reference/keywords/virtual.md)   
  [格式化類型](../../../standard/base-types/formatting-types.md)
+

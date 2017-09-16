@@ -1,5 +1,5 @@
 ---
-title: "foreach、in (C# 參考) | Microsoft Docs"
+title: "foreach、in (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,15 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa5408dbe214af2c21edd394f74fb8b675f2a099
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aed1d4f086f0b1334df750fd912d20d66326a043
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
-`foreach` 陳述式會針對陣列或物件集合中實作 <xref:System.Collections.IEnumerable?displayProperty=fullName> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 介面的每個元素，重複一組內嵌陳述式。 `foreach` 陳述式可用來逐一查看集合，以取得所需的資訊，但不能用來新增或移除來源集合中的項目，以避免無法預期的副作用。 如果您必須新增或移除來源集合中的項目，請使用 [for](../../../csharp/language-reference/keywords/for.md) 迴圈。  
+`foreach` 陳述式會為陣列或物件集合中每個實作 <xref:System.Collections.IEnumerable?displayProperty=fullName> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 介面的每個元素，重複一組內嵌陳述式。 `foreach` 陳述式可用來逐一查看集合，以取得所需的資訊，但不能用來新增或移除來源集合中的項目，以避免無法預期的副作用。 如果您必須新增或移除來源集合中的項目，請使用 [for](../../../csharp/language-reference/keywords/for.md) 迴圈。  
   
  內嵌陳述式會針對陣列或集合中的每個元素繼續執行。 在完成集合中所有元素的反覆運算之後，控制權會轉移到 `foreach` 區塊之後的下一個陳述式。  
   
@@ -74,3 +74,4 @@ ms.lasthandoff: 03/13/2017
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [反覆運算陳述式](../../../csharp/language-reference/keywords/iteration-statements.md)   
  [for](../../../csharp/language-reference/keywords/for.md)
+

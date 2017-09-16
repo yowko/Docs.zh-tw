@@ -1,5 +1,5 @@
 ---
-title: "-linkresource (C# 編譯器選項) | Microsoft Docs"
+title: "-linkresource (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d9a3bc4dc4b51d6170c67f9d2f95b6805497b31c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 022d6c1a53eab98fc033c902f903e7bc66e6da3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linkresource-c-compiler-options"></a>/linkresource (C# 編譯器選項)
@@ -101,4 +101,5 @@ gacutil -i A.dll
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
  [Al.exe (組件連結器)](https://msdn.microsoft.com/library/c405shex)   
  [使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [NIB 如何：修改專案屬性和組態設定](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+
