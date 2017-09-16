@@ -10,10 +10,10 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: HT
-ms.sourcegitcommit: 6500a14839b14d75d09d8d807c943553dbe09b47
-ms.openlocfilehash: 991a5f4419e6aadc2580f34c97dc74a42dc8cbe6
+ms.sourcegitcommit: 03d1e3f0897713e25be7d7f893861a3eb4dac211
+ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/11/2017
 
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/15/2017
 
 ## <a name="open-source"></a>開啟原始檔
 
-這份文件是完全的[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。  此外，.NET 本身大部分都是開放原始碼︰
+這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。  此外，.NET 本身大部分都是開放原始碼︰
 
 - [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
 - [.NET Libraries](https://github.com/dotnet/corefx) (.NET 程式庫)
