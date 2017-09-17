@@ -1,30 +1,35 @@
 ---
-title: "如何：偵測網路可用性和位址變更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "網路"
+title: "如何：偵測網路可用性和位址變更"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 52c3bffb204c35d7741d7e4fb35b05a357f3811f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：偵測網路可用性和位址變更
-這個範例顯示如何偵測介面的網路位址的變更。  
+# <a name="how-to-detect-network-availability-and-address-changes"></a>如何：偵測網路可用性和位址變更
+這個範例示範如何偵測介面的網路位址變更。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 using System;  
@@ -55,7 +60,8 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   為 **System.Net** 命名空間的參考。
+-   對 **System.Net** 命名空間的參考。
+

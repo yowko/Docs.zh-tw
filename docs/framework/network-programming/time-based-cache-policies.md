@@ -1,79 +1,85 @@
 ---
-title: "以時間為基礎的快取原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "以時間為基礎的快取原則"
-  - "快取同步處理日期原則"
-  - "快取 [.NET Framework]，以時間為基礎的原則"
-  - "快取資源的有效期限"
-  - "時間，快取資源"
-  - "最長使用期限原則"
-  - "同步處理，快取"
-  - "快取資源的過時"
-  - "以時間為基礎的預設快取原則"
-  - "最長過時原則"
-  - "內容快取原則"
-  - "已到期的內容"
-  - "最小有效期限原則"
-  - "快取資源的存留期"
+title: "以時間為基礎的快取原則"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- cache synchronization date policy
+- cache [.NET Framework], time-based policies
+- freshness of cached resources
+- time, cached resources
+- maximum age policy
+- synchronization, cache
+- staleness of cached resources
+- default time-based cache policy
+- maximum staleness policy
+- content cache policies
+- expired content
+- minimum freshness policy
+- age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2915139d6a3c46de06bd2bdb0cb12f95f611af3b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 以時間為基礎的快取原則
-以時間為主的快取原則定義快取項目的有效期限使用資源擷取的時間，標頭中傳回的資源和目前的時間。  當設定為以時間為主的快取原則時，您可以使用這項 <xref:System.Net.Cache.HttpRequestCacheLevel> 時間架構原則或建立一個自訂的時間架構原則。  在使用預設時間為基礎的使用超文字傳輸通訊協定 \(HTTPS\) 和類別所取得的原則 \(HTTP\)，在指定的行為取決於實際的快取行為是由這個快取回應包含標題和 Section 13 和第 14 節 RFC 2616， [http:\/\/www.ietf.org](http://www.ietf.org/)網址為。  示範如何設定的程式碼範例的預設時間為基礎的 HTTP 資源的原則，請參閱 [HOW TO:將應用程式的預設時間為主的快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。  如需示範如何建立及使用快取原則的程式碼範例，請參閱 [在 Web 應用程式中設定快取](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
+# <a name="time-based-cache-policies"></a>以時間為基礎的快取原則
+以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在 [http://www.ietf.org](http://www.ietf.org/) 取得。如需示範如何為 HTTP 資源設定以時間為基礎之預設原則的程式碼範例，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
   
-## 判斷快取項目的有效期限的標準  
- 若要自訂以時間為主的快取原則，您可以指定下列其中一個或多個標準用來判斷快取項目的有效期限:  
+## <a name="criteria-to-determine-freshness-of-cached-entries"></a>判斷快取項目有效期限的準則  
+ 若要自訂以時間為基礎的快取原則，您可以指定要使用下列一或多個準則來判斷快取項目的有效期限：  
   
--   最長保留期限  
+-   最長使用期限  
   
--   最大為組態  
+-   最長過時  
   
 -   最短有效期限  
   
 -   快取同步處理日期  
   
 > [!NOTE]
->  使用預設時間為主的快取原則不應與設定應用程式的預設快取原則混淆。  這項預設時間架構原則是可以在要求中使用或應用程式層級的特定原則。  您的應用程式的預設快取原則是原則 \(以位置或以時間\)，該函式會在需要時未設定。  如需設定預設快取原則的詳細資料應用程式的詳細資訊，請參閱 <xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
+>  使用時間為基礎的預設快取原則不應與設定應用程式的預設快取原則混淆。 以時間為基礎的預設原則是可以用於要求或應用程式層級的特定原則。 應用程式的預設快取原則是在要求上未設定原則時生效的原則 (以位置為基礎或以時間為基礎)。 如需設定應用程式之預設快取原則的詳細資料，請參閱<xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
   
-### 最長保留期限  
- 最長保留期限原則標準指定可以使用資源的快取複本的時間。  如果資源的快取複本比指定的時間還要舊，則必須先簽出它重新確認對伺服器的內容。  如果要讓資源使用最長保留期限，在項目過期之後，這個標準不被接受，除非最大過時值同時指定。  
+### <a name="maximum-age"></a>最長使用期限  
+ 最長使用期限原則準則指定可以使用資源快取複本的時間量。 如果資源的快取複本超過指定的時間量，則必須藉由針對伺服器上的內容檢查資源，來重新驗證資源。 如果最長使用期限允許在資源到期後還使用它，則除非同時指定最長過時值，否則不會採用此準則。  
   
-### 最大為組態  
- 最大為組態原則標準內容到期後指定時間可以使用資源的快取複本。  這是允許使用資源的快取原則準則，在過期之後。  
+### <a name="maximum-staleness"></a>最長過時  
+ 最長過時原則準則指定在可以使用資源的快取複本，且在內容到期日之後的時間長度。 這是唯一允許在資源過期之後仍使用資源的快取原則準則。  
   
-### 最短有效期限  
- 最短有效期限原則標準指定內容到期之前的時間可以使用資源的快取複本。  此原則會讓快取項目的角色會在它的到期日之前到期，因此，最短有效期限和最大為組態設定互斥 \(Mutually Exclusive\)。  
+### <a name="minimum-freshness"></a>最短有效期限  
+ 最短有效期限原則準則指定在可以使用資源的快取複本，且在內容到期日之前的時間長度。 此原則的效果會使快取項目在它的到期日之前便過期，因此最短有效期限和最長過時設定兩者互斥。  
   
-## 快取同步處理日期  
- 快取同步處理日期原則準則來判斷資源的快取複本時必須先簽出它重新確認對伺服器的內容。  如果內容已變更，就會快取的項目，則會從伺服器擷取，儲存在快取中，並傳回應用程式。  如果內容沒有變更，它的更新時間戳記，而應用程式取得快取的內容。  
+## <a name="cache-synchronization-date"></a>快取同步處理日期  
+ 快取同步處理日期原則準則會藉由針對伺服器上的內容檢查資源的快取複本，判斷它何時必須重新驗證。 如果項目快取後內容已變更，則會從伺服器擷取它、儲存在快取，並傳回到應用程式。 如果內容未變更，其時間戳記會更新，且應用程式會取得快取的內容。  
   
- 快取同步處理日期可讓您指定必須重新確認快取內容的絕對日期。  如果新快取項目在快取同步處理日期之前最後重新確認，與伺服器的重新確認仍會發生。  如果快取重新確認項目，在快取同步處理日期但失效快取項目將不會有額外的有效期限或伺服器重新確認需求之後，您可以從快取中的項目。  如果將快取同步處理日期設為未來的日期，則每次要求時都會重新確認項目，直到過了快取同步處理日期為止。  
+ 快取同步處理日期可讓您指定必須重新驗證快取內容的絕對日期。 如果新的快取項目上次重新驗證是在快取同步處理日期之前，仍會發生與伺服器的重新驗證。 如果快取項目重新驗證是在快取同步處理日期之後，而且沒有其他有效期限或伺服器重新驗證需求使快取項目失效，則會使用來自快取的項目。 如果快取同步處理日期設定為未來的日期，則每次要求時都會重新驗證項目，直到快取同步處理日期已過為止。  
   
- 下列主題提供有關合併時間為主的快取原則準則之功能的相關資訊:  
+ 下列主題提供結合以時間為基礎之快取原則準則的影響資訊：  
   
 -   [快取原則互動 — 最長使用期限和最長過時](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [快取原則互動 — 最長使用期限和最小有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+-   [快取原則互動 — 最長使用期限和最短有效期限](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [\<requestCaching\> 項目 \(網路設定\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching> 元素 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

@@ -1,34 +1,39 @@
 ---
-title: "如何：自訂以時間為基礎的快取原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "以時間為基礎的快取原則"
-  - "自訂以時間為基礎的快取原則"
-  - "快取 [.NET Framework]，以時間為基礎的原則"
+title: "如何：自訂以時間為基礎的快取原則"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- customizing time-based cache policies
+- cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 24319898cba225a86fcdee3a0aaedc73d4c6220c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：自訂以時間為基礎的快取原則
-當建立以時間為主的快取原則時，您可以指定屬性的值可以自訂快取行為在最長保留期限、最短有效期限、最大為組態或快取同步處理日期。  <xref:System.Net.Cache.HttpRequestCachePolicy> 物件提供可讓您指定這些值的有效組合的多個建構函式。  
+# <a name="how-to-customize-a-time-based-cache-policy"></a>如何：自訂以時間為基礎的快取原則
+在建立以時間為基礎的快取原則時，您可以藉由指定最長使用期限、最短有效期限、最長過時或快取同步處理日期的值來自訂快取行為。 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件所提供的建構函式可讓您指定這些值的有效組合。  
   
-### 建立一個使用快取同步處理日期的以時間為主的快取原則  
+### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>建立使用快取同步處理日期之以時間為基礎的快取原則  
   
--   建立傳遞至 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式的 <xref:System.DateTime> 物件使用一個快取同步處理日期的以時間為主的快取原則。  
+-   藉由將 <xref:System.DateTime> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式，建立使用快取同步處理日期之以時間為基礎的快取原則。  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -50,16 +55,16 @@ caps.handback.revision: 15
     End Function  
     ```  
   
- 類似如下的輸出:  
+ 其輸出如下所示：  
   
 ```  
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
   
-### 若要根據最短有效期限以時間為主的快取原則  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>建立依據最短有效期限之以時間為基礎的快取原則  
   
--   若要根據最短有效期限藉由指定 <xref:System.Net.Cache.HttpCacheAgeControl> 做為 `cacheAgeControl` 參數值和傳遞至 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式的 <xref:System.TimeSpan> 物件的以時間為主的快取原則。  
+-   藉由將 <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> 指定為 `cacheAgeControl` 參數值並將 <xref:System.TimeSpan> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式，建立依據最短有效期限之以時間為基礎的快取原則。  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -79,7 +84,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
     End Function  
     ```  
   
- 下列引動過程的:  
+ 對於下列引動過程：  
   
 ```  
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
@@ -87,12 +92,11 @@ CreateMinFreshPolicy(new TimeSpan(1,0,0));
   
 ```  
 Level:Default MinFresh:3600  
-  
 ```  
   
-### 若要根據最短有效期限和最長保留期限的以時間為主的快取原則  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>建立依據最短有效期限和最長使用期限之以時間為基礎的快取原則  
   
--   若要根據最短有效期限和最長保留期限藉由指定 <xref:System.Net.Cache.HttpCacheAgeControl> 做為 `cacheAgeControl` 參數值和傳遞至 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式有兩種 <xref:System.TimeSpan> 物件的以時間為主的快取原則，指定最長保留期限的一個資源和一秒為從快取傳回之物件所允許的最短有效期限。  
+-   藉由將 <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> 指定為 `cacheAgeControl` 參數值並將兩個 <xref:System.TimeSpan> 物件傳遞給 <xref:System.Net.Cache.HttpRequestCachePolicy> 建構函式 ( 一個用來指定資源的最長使用期限，另一個用來指定從快取傳回的物件所允許的最短有效期限)，建立依據最短有效期限和最長使用期限之以時間為基礎的快取原則。  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
@@ -112,7 +116,7 @@ Level:Default MinFresh:3600
     End Function  
     ```  
   
- 下列引動過程的:  
+ 對於下列引動過程：  
   
 ```  
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
@@ -122,9 +126,10 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 項目 \(網路設定\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

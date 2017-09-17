@@ -1,26 +1,31 @@
 ---
-title: "Interop ETW 事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ETW, Interop 事件 (CLR)"
-  - "Interop 事件 [.NET Framework]"
+title: "Interop ETW 事件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interop events [.NET Framework]
+- ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 55097e38161ea5c76f4e46584241344ec5a52cb9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# Interop ETW 事件
-<a name="top"></a> Interop 事件會擷取 Microsoft 中繼語言 \(MSIL\) Stub 之產生和快取的相關資訊。  
+# <a name="interop-etw-events"></a>Interop ETW 事件
+<a name="top"></a> Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  
   
  這個類別包含下列事件：  
   
@@ -29,26 +34,26 @@ caps.handback.revision: 8
 -   [ILStubCacheHit 事件](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
-## ILStubGenerated 事件  
- 下表說明關鍵字和層級。 \(如需詳細資訊，請參閱 [CLR ETW 關鍵字和層級](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)\)。  
+## <a name="ilstubgenerated-event"></a>ILStubGenerated 事件  
+ 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md))。  
   
 |引發事件的關鍵字|層級|  
-|--------------|--------|  
-|`InteropKeyword` \(0x2000\)|Informational\(4\)|  
+|-----------------------------------|-----------|  
+|`InteropKeyword` (0x2000)|Informational(4)|  
   
  下表說明事件資訊。  
   
 |事件|事件 ID|引發的時機|  
-|--------|-----------|-----------|  
+|-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|已產生 MSIL 虛設常式。|  
   
  下表說明事件資料。  
   
 |欄位名稱|資料類型|描述|  
-|----------|----------|--------|  
+|----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模組識別項。|  
 |StubMethodID|win:UInt64|虛設常式方法識別項。|  
-|StubFlags|win:UInt64|虛設常式的旗標：<br /><br /> 0x1 \- 反向 interop。<br /><br /> 0x2 \- COM interop。<br /><br /> 0x4 \- NGen.exe 所產生的虛設常式。<br /><br /> 0x8 \- 委派。<br /><br /> 0x10 \- 變數引數。<br /><br /> 0x20 \- Unmanaged 被呼叫者。|  
+|StubFlags|win:UInt64|虛設常式的旗標：<br /><br /> 0x1 - 反向 interop。<br /><br /> 0x2 - COM interop。<br /><br /> 0x4 - NGen.exe 所產生的虛設常式。<br /><br /> 0x8 - 委派。<br /><br /> 0x10 - 變數引數。<br /><br /> 0x20 - Unmanaged 被呼叫者。|  
 |ManagedInteropMethodToken|win:UInt32|Managed interop 方法的語彙基元。|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Managed interop 方法的命名空間。|  
 |ManagedInteropMethodName|win:UnicodeString|Managed interop 方法的名稱。|  
@@ -61,23 +66,23 @@ caps.handback.revision: 8
  [回到頁首](#top)  
   
 <a name="ilstubcachehit_event"></a>   
-## ILStubCacheHit 事件  
+## <a name="ilstubcachehit-event"></a>ILStubCacheHit 事件  
  下表說明關鍵字和層級。  
   
 |引發事件的關鍵字|層級|  
-|--------------|--------|  
-|`InteropKeyword` \(0x2000\)|Informational\(4\)|  
+|-----------------------------------|-----------|  
+|`InteropKeyword` (0x2000)|Informational(4)|  
   
  下表說明事件資訊。  
   
 |事件|事件 ID|引發的時機|  
-|--------|-----------|-----------|  
+|-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|已存取 MSIL 快取。|  
   
  下表說明事件資料。  
   
 |欄位名稱|資料類型|描述|  
-|----------|----------|--------|  
+|----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|模組識別項。|  
 |StubMethodID|win:UInt64|虛設常式方法識別項。|  
 |ManagedInteropMethodToken|win:UInt32|Managed interop 方法的語彙基元。|  
@@ -88,5 +93,6 @@ caps.handback.revision: 8
   
  [回到頁首](#top)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+

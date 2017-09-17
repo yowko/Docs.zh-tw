@@ -1,31 +1,36 @@
 ---
-title: "如何：設定要求的快取原則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "要求快取原則"
+title: "如何：設定要求的快取原則"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：設定要求的快取原則
-下列範例會示範設定要求的項目快取原則。  範例會編碼為 URI \(http:\/\/www.contoso.com\/。  
+# <a name="how-to-set-cache-policy-for-a-request"></a>如何：設定要求的快取原則
+下列範例示範如何設定要求的快取原則。 範例的輸入是如 http://www.contoso.com/ 之類的 URI。  
   
-## 範例  
- 下列程式碼範例會建立允許要求的資源從快取使用的快取原則，表示快取長度大於一天。  這個範例會顯示一則訊息資源是否從使用快取的範例， `"The response was retrieved from the cache : False."`—然後顯示資源。  要求可以由用戶端和伺服器之間的所有快取滿足。  
+## <a name="example"></a>範例  
+ 下列程式碼範例會建立一個快取原則，允許所要求的資源在快取中的時間尚未超過一天時，從快取使用該資源。 此範例會顯示一個訊息，指出是否已從快取使用資源 (例如，`"The response was retrieved from the cache : False."`)，然後顯示該資源。 用戶端與伺服器之間的任何快取都可以滿足要求。  
   
 ```csharp  
 using System;  
@@ -110,12 +115,12 @@ Namespace Examples.System.Net.Cache
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
  [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 項目 \(網路設定\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

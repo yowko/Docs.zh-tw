@@ -1,28 +1,33 @@
 ---
-title: "如何：取得介面和通訊協定資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "網路"
+title: "如何：取得介面和通訊協定資訊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
 # 如何：取得介面和通訊協定資訊
-這個範例會顯示如何讀取網路介面的 TCP 統計資料。  
+這個範例示範如何讀取網路介面的 TCP 統計資料。  
   
 ## 範例  
   
@@ -82,4 +87,5 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## 編譯程式碼  
  這個範例需要：  
   
--   為 **System.Net** 命名空間的參考。
+-   對 **System.Net** 命名空間的參考。
+

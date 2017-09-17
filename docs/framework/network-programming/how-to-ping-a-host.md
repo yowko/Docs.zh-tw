@@ -1,30 +1,35 @@
 ---
-title: "如何：Ping 主機 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Ping"
+title: "如何：Ping 主機"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：Ping 主機
-這個範例顯示如何 Ping 遠端主機。  
+# <a name="how-to-ping-a-host"></a>如何：Ping 主機
+這個範例示範如何 Ping 遠端主機。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 using System;  
@@ -130,7 +135,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   為 **System.Net** 命名空間的參考。
+-   對 **System.Net** 命名空間的參考。
+

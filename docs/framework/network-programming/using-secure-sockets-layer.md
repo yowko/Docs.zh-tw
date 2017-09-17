@@ -1,46 +1,51 @@
 ---
-title: "使用安全通訊端層 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "網路"
-  - "SSL"
-  - "安全通訊端層"
-  - "從網際網路要求資料，安全通訊端層"
-  - "傳送資料，安全通訊端層"
-  - "網路資源"
-  - "資料要求，安全通訊端層"
-  - "接收資料，安全通訊端層"
-  - "網際網路，安全通訊端層"
+title: "使用安全通訊端層"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- SSL
+- Secure Sockets Layer
+- requesting data from Internet, Secure Sockets Layer
+- sending data, Secure Sockets Layer
+- Network Resources
+- data requests, Secure Sockets Layer
+- receiving data, Secure Sockets Layer
+- Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb625971f0c0b52bcdcfc9b41d4c0f88814aef08
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用安全通訊端層
-<xref:System.Net> 類別使用 Secure Sockets Layer \(SSL\) 加密幾個網路通訊協定的連接。  
+# <a name="using-secure-sockets-layer"></a>使用安全通訊端層
+<xref:System.Net> 類別會使用安全通訊端層 (SSL) 來加密數個網路通訊協定的連線。  
   
- http 連接， <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別搭配使用 SSL 與支援 SSL 的 Web 主機通訊。  使用 SSL 的決策提供給它的 <xref:System.Net.WebRequest> 類別進行，依據 URI。  如果從 URI 「https 開始: 」，使用 SSL，如果從 URI 「http 開始: 」，使用未加密的連接。  
+ 若為 HTTP 連線，<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會使用 SSL 來與支援 SSL 的 Web 主機通訊。 決定使用 SSL 與否是 <xref:System.Net.WebRequest> 類別根據給定的 URI 來進行。 如果 URI 開頭是 "https:"，則使用 SSL。如果 URI 開頭是 "http:"，則使用未加密的連線。  
   
- 若要使用檔案傳輸通訊協定 \(FTP\) \(FTP\) 的 SSL，請將 <xref:System.Net.FtpWebRequest.EnableSsl> 屬性在呼叫之前 <xref:System.Net.FtpWebRequest.GetResponse>true。  同樣地，搭配 Simple Mail Transport Protocol \(SMTP\) 的 SSL，請將 <xref:System.Net.Mail.SmtpClient.EnableSsl> 屬性在傳送電子郵件訊息之前則為 true。  
+ 若要搭配使用 SSL 與檔案傳輸通訊協定 (FTP)，請將 <xref:System.Net.FtpWebRequest.EnableSsl> 屬性設定為 true，才能呼叫 <xref:System.Net.FtpWebRequest.GetResponse>。 同樣地，若要搭配使用 SSL 與簡易郵件傳輸通訊協定 (SMTP)，請將 <xref:System.Net.Mail.SmtpClient.EnableSsl> 屬性設定為 true，然後傳送電子郵件。  
   
- <xref:System.Net.Security.SslStream> 類別為 SSL 之資料流的抽象概念，並提供許多設定 SSL 交換。  
+ <xref:System.Net.Security.SslStream> 類別提供 SSL 以資料流為基礎的抽象概念，並提供許多方式來設定 SSL 交握。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -64,12 +69,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## 編譯程式碼  
+## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   為 **System.Net** 命名空間的參考。  
+-   對 **System.Net** 命名空間的參考。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)   
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)   
  [憑證的選取和驗證](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+

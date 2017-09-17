@@ -1,52 +1,58 @@
 ---
-title: "COM 包裝函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM 可呼叫包裝函式"
-  - "COM Interop, COM 包裝函式"
-  - "COM 包裝函式"
-  - "COM, 包裝函式"
-  - "與 Unmanaged 程式碼的互通, COM 包裝函式"
-  - "包裝函式類別"
+title: "COM 包裝函式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- wrapper classes
+- COM interop, COM wrappers
+- COM wrappers
+- COM, wrappers
+- interoperation with unmanaged code, COM wrappers
+- COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c83cae510d695dc05b2cc6a71fdef7b5244a2ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM 包裝函式
-COM 在下列幾個重要的方面有別於 .NET Framework 物件模型：  
+# <a name="com-wrappers"></a>COM 包裝函式
+COM 與 .NET Framework 物件模型在數個重要方面不同：  
   
--   COM 物件的用戶端必須管理這些物件的存留期 \(Lifetime\)；Common Language Runtime 則會管理在它環境下之物件的存留期。  
+-   COM 物件用戶端必須管理這些物件的存留期；Common Language Runtime 會管理其環境中物件的存留期。  
   
--   COM 物件的用戶端會藉由要求提供某項服務的介面並且取回介面指標，來判斷這項服務是否可以使用。  .NET 物件的用戶端可以使用反映 \(Reflection\) 來取得物件功能的描述。  
+-   COM 物件用戶端會透過要求提供該服務的介面並取回介面指標來探索服務是否可用。 .NET 物件的用戶端可以取得使用反映之物件功能的描述。  
   
--   .NET 物件是位於由 .NET Framework 執行環境所管理的記憶體中。  基於效能的理由，這個執行環境可以在記憶體中四處移動物件，並且更新它所移動之物件的所有參考。  一旦取得某一物件的指標之後，Unmanaged 用戶端必須依賴這個物件保持在同一位置。  這些用戶端沒有能夠處理位置不固定之物件的機制。  
+-   NET 物件位在 .NET Framework 執行環境所管理的記憶體中。 基於效能原因，執行環境可以在記憶體中移動物件，並更新所移動物件的所有參考。 已取得物件指標的 Unmanaged 用戶端依賴此物件來維持在相同的位置。 這些用戶端沒有機制可以處理其位置不固定的物件。  
   
- 為了克服這些差異，執行階段提供了一些包裝函式類別，可以讓 Managed 和 Unmanaged 用戶端兩者都認為它們是在各自的環境中呼叫物件。  每當 Managed 用戶端呼叫 COM 物件上的方法時，執行階段就會建立[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md) \(RCW\)。  這些 RCW 會抽走 Managed 和 Unmanaged 參考機制之間的差異 \(以及一些其他的東西\)。  執行階段也會建立 [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md) \(CCW\) 來反轉處理序，讓 COM 用戶端能夠不著痕跡地呼叫 .NET 物件上的方法。  如下圖所示，呼叫程式碼的觀點將決定執行階段會建立哪一種包裝函式類別。  
+ 為了克服這些差異，執行階段提供包裝函式類別，讓 Managed 和 Unmanaged 用戶端認為它們在其各自環境內呼叫物件。 只要 Managed 用戶端對 COM 物件呼叫方法，執行階段就會建立[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW)。 此外，RCW 會擷取 Managed 與 Unmanaged 參考機制之間的差異。 執行階段也會建立 [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md) (CCW) 來反轉程序，讓 COM 用戶端在 .NET 物件上順暢地呼叫方法。 如下圖所示，呼叫端程式碼的角度可決定執行階段所建立的包裝函式類別。  
   
  ![COM 包裝函式概觀](../../../docs/framework/interop/media/bidirectional.gif "bidirectional")  
 COM 包裝函式概觀  
   
- 在大部分情況下，由 Runtime 產生的標準 RCW 或 CCW，對於在 COM 和 .NET Framework 之間的跨界限呼叫，都能提供適切的封送處理。  使用自訂屬性 \(Attribute\)，您可以選擇性地調整執行階段表示 Managed 和 Unmanaged 程式碼的方式。  
+ 在大部分情況下，執行階段所產生的標準 RCW 或 CCW 提供呼叫的足夠封送處理，而這些呼叫跨越 COM 與 .NET Framework 之間的界限。 使用自訂屬性，您可以選擇性地調整執行階段呈現 Managed 和 Unmanaged 程式碼的方式。  
   
-## 請參閱  
- [Advanced COM Interoperability](http://msdn.microsoft.com/zh-tw/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
+## <a name="see-also"></a>另請參閱  
+ [進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)   
  [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)   
- [Customizing Standard Wrappers](http://msdn.microsoft.com/zh-tw/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
- [How to: Customize Runtime Callable Wrappers](http://msdn.microsoft.com/zh-tw/4a4bb3da-4d60-4517-99f2-78d46a681732)
+ [自訂標準包裝函式](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
+ [如何：自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/en-us/4a4bb3da-4d60-4517-99f2-78d46a681732)
+

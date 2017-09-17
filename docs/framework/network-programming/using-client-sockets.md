@@ -1,46 +1,50 @@
 ---
-title: "使用用戶端通訊端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式通訊協定，通訊端"
-  - "傳送資料，通訊端"
-  - "資料要求，通訊端"
-  - "從網際網路要求資料，通訊端"
-  - "接收資料，通訊端"
-  - "通訊端類別，用戶端通訊端"
-  - "通訊協定，通訊端"
-  - "網際網路，通訊端"
-  - "通訊端，用戶端通訊端"
-  - "用戶端通訊端"
+title: "使用用戶端通訊端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- receiving data, sockets
+- Socket class, client sockets
+- protocols, sockets
+- Internet, sockets
+- sockets, client sockets
+- client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d18e1f2575481522e54c6c50256418ac026dfb7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用用戶端通訊端
-在您可以 <xref:System.Net.Sockets.Socket>之前啟始對話，您必須在您的應用程式和遠端裝置之間的資料管道。  雖然其他位址家族和通訊協定存在，這個範例示範如何使用一項遠端服務的 TCP\/IP 連接。  
+# <a name="using-client-sockets"></a>使用用戶端通訊端
+在透過 <xref:System.Net.Sockets.Socket> 起始交談之前，您必須先建立應用程式和遠端裝置之間的資料管道。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 連線。  
   
- 一個使用 TCP\/IP 網路位址與服務通訊埠編號唯一識別服務。  網路位址識別在網路上的特定裝置;通訊埠編號識別該裝置的特定服務連接。  Web 服務位址和連接埠的組合稱為端點， .NET Framework 以 <xref:System.Net.EndPoint> 類別。  **EndPoint** 子代針對每個支援的通訊協定家族中定義，對於 IP 位址家族，類別是 <xref:System.Net.IPEndPoint>。  
+ TCP/IP 會使用網路位址和服務連接埠編號來唯一識別服務。 網路位址可識別網路上的特定裝置；連接埠編號則可識別該裝置上要連線的特定服務。 網路位址和服務連接埠的組合稱為端點，在 .NET Framework 中是以 <xref:System.Net.EndPoint> 類別表示。 每個支援的位址系列已定義 **EndPoin** 的子系；對於 IP 位址系列，此類別是 <xref:System.Net.IPEndPoint>。  
   
- <xref:System.Net.Dns> 類別為使用 TCP\/IP 網際網路服務的應用程式定義域提供服務。  <xref:System.Net.Dns.Resolve%2A> 方法查詢 DNS 伺服器對應以方便使用網域名稱 \(例如「host.contoso.com」\) 轉換為數字網際網路位址 \(例如 192.168.1.1\)。  **Resolve** 傳回包含位址和別名清單所要求名稱的 [IPHostEnty](frlrfsystemnetiphostentryclasstopic) 。  在許多情況下，您可以在 <xref:System.Net.IPHostEntry.AddressList%2A> 陣列可以使用傳回的第一個位址。  下列程式碼會取得包含伺服器的 host.contoso.com <xref:System.Net.IPAddress> IP 位址。  
+ <xref:System.Net.Dns> 類別會提供網域名稱服務給使用 TCP/IP 網際網路服務的應用程式。 <xref:System.Net.Dns.Resolve%2A> 方法會查詢 DNS 伺服器，以將使用者易記的網域名稱 (例如 "host.contoso.com") 對應到數字的網際網路位址 (例如 192.168.1.1)。 **Resolve** 會傳回 <xref:System.Net.IPHostEntry>，其中包含位址和所要求名稱之別名的清單。 在大部分情況下，您可以使用 <xref:System.Net.IPHostEntry.AddressList%2A> 陣列中傳回的第一個位址。 下列程式碼可取得包含伺服器 host.contoso.com 之 IP 位址的 <xref:System.Net.IPAddress>。  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  
 Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
-  
 ```  
   
 ```csharp  
@@ -48,18 +52,17 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet Assigned Numbers Authority \(Iana\) 定義通用服務的通訊埠編號 \(如需詳細資訊，請參閱 www.iana.org\/assignments\/port\-numbers\) \(英文\)。  其他服務可以註冊介於 1,024 到 65,535 的通訊埠編號。  下列程式碼包含 host.contoso.com 的 IP 位址和通訊埠編號來建立連接的遠端端點。  
+ Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號 (如需詳細資訊，請參閱 www.iana.org/assignments/port-numbers)。 其他服務的已登錄連接埠編號範圍可以是 1,024 到 65,535。 下列程式碼會合併 host.contoso.com 的 IP 位址與連接埠編號，以建立連線的遠端端點。  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  
-  
 ```  
   
 ```csharp  
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- 在判斷遠端裝置的位址和選取連接埠之後此連接使用，應用程式可以嘗試與遠端裝置的連接。  下列範例會使用現有的 **IPEndPoint** 連接至遠端裝置並攔截任何擲回的例外狀況。  
+ 在判斷遠端裝置的位址並選擇要用於連線的連接埠之後，應用程式可以嘗試建立與遠端裝置的連線。 下列範例會使用現有 **IPEndPoint** 連線到遠端裝置，並捕捉任何擲回的例外狀況。  
   
 ```vb  
 Try  
@@ -72,7 +75,6 @@ Catch se As SocketException
 Catch e As Exception  
     Console.WriteLine("Unexpected exception : {0}", e.ToString())  
 End Try  
-  
 ```  
   
 ```csharp  
@@ -87,8 +89,9 @@ try {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
  [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
  [通訊端](../../../docs/framework/network-programming/sockets.md)
+

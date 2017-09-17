@@ -1,30 +1,35 @@
 ---
-title: "同步伺服器通訊端範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "同步伺服器通訊端"
-  - "通訊端，程式碼範例"
-  - "通訊端，同步伺服器通訊端"
+title: "同步伺服器通訊端範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- synchronous server sockets
+- sockets, code examples
+- sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 同步伺服器通訊端範例
-下列範例建立程式接收來自用戶端的連接要求的伺服器。  伺服器以同步通訊端建置，因此，伺服器應用程式的執行逾時，在等候來自用戶端的連接時。  應用程式接收來自用戶端的字串，在主控台視窗中顯示的字串，然後 echo 字串傳回至用戶端。  來自用戶端的字串必須包含字串「\<EOF\>」通知訊息的結尾。  
+# <a name="synchronous-server-socket-example"></a>同步伺服器通訊端範例
+下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。  
   
 ```vb  
 Imports System  
@@ -86,7 +91,6 @@ Public Class SynchronousSocketListener
     End Sub  
   
 End Class 'SynchronousSocketListener  
-  
 ```  
   
 ```csharp  
@@ -165,7 +169,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
  [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+

@@ -1,46 +1,53 @@
 ---
-title: "下載 JSON Web 語彙基元處理常式套件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "下載 JSON Web 語彙基元處理常式套件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 caps.latest.revision: 3
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 3
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d3821ff1da945df7c6e07e5baf69730173eacc87
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 下載 JSON Web 語彙基元處理常式套件
-這個主題討論如何在專案中下載和使用 JSON Web 權杖處理常式。  
+# <a name="downloading-the-json-web-token-handler-package"></a>下載 JSON Web 語彙基元處理常式套件
+本主題討論如何在您的專案中下載並使用 JSON Web 權杖處理常式。  
   
-## 下載 JSON Web 語彙基元處理常式  
- JSON Web 權杖處理常式擴充已提供做為 NuGet 封裝，可將必要的組件和參考加入至您的專案。  如果您還未安裝 NuGet，請移至 [nuget.org](http://nuget.org) \(英文\) 進行安裝。  您可以瀏覽 NuGet 上的頁面，看到擴充功能的版本歷程記錄：[NuGet 上的 JSON Web 權杖處理常式](http://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)  
+## <a name="downloading-the-json-web-token-handler"></a>下載 JSON Web 語彙基元處理常式  
+ JSON Web 權杖處理常式延伸模組以 NuGet 套件的形式供您使用，會將必要的組件和參考新增至您的專案。 如果尚未安裝 NuGet，請移至 [nuget.org](http://nuget.org) 安裝它。 您可以在 NuGet 前往其頁面，查看延伸模組的版本控制記錄：[JSON Web Token Handler on NuGet](http://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/) (NuGet 上的 JSON Web 權杖處理常式)。  
   
-#### 使用封裝管理員 GUI 下載 JSON Web 語彙基元處理常式  
+#### <a name="downloading-the-json-web-token-handler-by-using-the-package-manager-gui"></a>使用套件管理員 GUI 下載 JSON Web 權杖處理常式  
   
-1.  在 Visual Studio 中，以滑鼠右鍵按一下 \[**方案總管**\] 中的專案，然後選取 \[**Manage NuGet Packages**\]。  
+1.  在 Visual Studio 中，以滑鼠右鍵按一下方案總管中的專案，然後選取 [管理 NuGet 套件]。  
   
-2.  在 \[**管理 NuGet 封裝**\] 視窗中，按一下搜尋方塊並輸入 `JWT Token Handler`，再按 **Enter** 鍵。  
+2.  在 [管理 NuGet 套件] 視窗中，按一下搜尋方塊並輸入 `JWT Token Handler`，然後按 **Enter**。  
   
-3.  從結果窗格中，按一下第一個結果的 \[安裝\] 按鈕。  
+3.  從 [結果] 窗格中，按一下第一個結果的 [安裝] 按鈕。  
   
-4.  封裝會開始下載。  在將其加入至您的專案之前，會出現接受授權對話方塊。  如果您同意授權條款，請按一下 \[**我接受**\]。  
+4.  即開始下載套件。 在它新增至您的專案之前，[接受授權] 對話方塊會先出現。 如果您同意授權條款，請按一下 [接受]。  
   
-5.  最新的 JSON Web 權杖處理常式組件將會下載並加入至您的專案。  
+5.  最新的 JSON Web 權杖處理常式會下載並新增至您的專案。  
   
-#### 使用封裝管理員主控台下載 JSON Web 語彙基元處理常式  
+#### <a name="downloading-the-json-web-token-handler-by-using-the-package-manager-console"></a>使用套件管理員主控台下載 JSON Web 權杖處理常式  
   
-1.  在 Visual Studio 中，按一下 \[**工具**\]、\[**程式庫封裝管理員**\] 和 \[**封裝管理員主控台**\]。  
+1.  在 Visual Studio 中，依序按一下 [工具]、[程式庫套件管理員] 和 [套件管理器主控台]。  
   
-2.  \[**封裝管理員主控台** \] 視窗隨即出現。  輸入下列文字，並按 **Enter** 鍵：  
+2.  [套件管理器主控台] 視窗隨即開啟。 輸入下列文字，然後按 **ENTER**：  
   
     ```powershell  
     Install-Package System.IdentityModel.Tokens.Jwt  
     ```  
   
-3.  最新的 JSON Web 權杖處理常式組件將會下載並加入至您的專案。
+3.  最新的 JSON Web 權杖處理常式會下載並新增至您的專案。
+

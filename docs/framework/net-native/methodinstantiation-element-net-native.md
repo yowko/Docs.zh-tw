@@ -1,34 +1,37 @@
 ---
-title: "&lt;MethodInstantiation&gt; 項目 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;MethodInstantiation&gt; 項目 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d247b2ea8a1b6a908e3eee5082638813545f144d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;MethodInstantiation&gt; 項目 (.NET Native)
+# <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt; 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型方法。  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-  
 <MethodInstantiation Name="method_name"  
                      Signature="method_signature"  
                      Arguments="method_arguments"  
                      Browse="policy_type"  
                      Dynamic="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -48,7 +51,7 @@ caps.handback.revision: 17
   
 |值|說明|  
 |-----------|-----------------|  
-|*method_name*|方法名稱。 方法的型別定義父[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)或[ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)項目。|  
+|*method_name*|方法名稱。 方法的類型是由父 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目所定義。|  
   
 ## <a name="signature-attribute"></a>簽章屬性  
   
@@ -68,15 +71,15 @@ caps.handback.revision: 17
 |-----------|-----------------|  
 |*policy_setting*|要為方法套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  `<MethodInstantiation>` 元素會覆寫其對應開放式泛型方法的執行階段反映原則。  
@@ -85,4 +88,5 @@ caps.handback.revision: 17
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [<>\>項目](../../../docs/framework/net-native/method-element-net-native.md)
+ [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
+

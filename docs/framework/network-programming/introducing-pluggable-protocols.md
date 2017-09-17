@@ -1,83 +1,89 @@
 ---
-title: "可插式通訊協定簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料要求，可插式通訊協定"
-  - "WebRequest 類別，可插式通訊協定"
-  - "網際網路要求回應，可插式通訊協定"
-  - "URI"
-  - "Windows Sockets"
-  - "要求/回應模型"
-  - "傳送資料，可插式通訊協定"
-  - "可插式通訊協定"
-  - "WebClient 類別，關於 WebClient 類別"
-  - "可插式通訊協定，關於可插式通訊協定"
-  - "網際網路，可插式通訊協定"
-  - "路徑識別項"
-  - "統一資源識別項"
-  - "應用程式開發 [.NET Framework]，可插式通訊協定"
-  - "從網際網路要求資料，可插式通訊協定"
-  - "接收資料，可插式通訊協定"
-  - "通訊協定，可插式"
-  - "伺服器識別項"
-  - "配置識別項"
+title: "可插式通訊協定簡介"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- data requests, pluggable protocols
+- WebRequest class, pluggable protocols
+- response to Internet request, pluggable protocols
+- URI
+- Windows Sockets
+- request/response model
+- sending data, pluggable protocols
+- pluggable protocols
+- WebClient class, about WebClient class
+- pluggable protocols, about pluggable protocols
+- Internet, pluggable protocols
+- path identifiers
+- Uniform Resource Identifier
+- application development [.NET Framework], pluggable protocols
+- requesting data from Internet, pluggable protocols
+- receiving data, pluggable protocols
+- protocols, pluggable
+- server identifiers
+- scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69a6b5a45317d3dc25522cc44ad8d710a5fc5cd9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
 # 可插式通訊協定簡介
-. Microsoft .NET Framework 提供一層，可擴充，並處置的網際網路服務的實作可以快速輕鬆地整合到您的應用程式。  在 <xref:System.Net> 的網際網路存取類別和 <xref:System.Net.Sockets> 命名空間可用來實作網路和網際網路架構的應用程式。  
+Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的網際網路存取類別，可用來實作 Web 架構和以網際網路為基礎的應用程式。  
   
 ## 網際網路應用程式  
- 網際網路應用程式可廣泛地分為兩種:要求的用戶端應用程式資訊和回應訊息的伺服器應用程式向用戶端要求。  一般網際網路用戶端與伺服器應用程式為全球資訊網協會，人存取檔案和其他資料的使用瀏覽器儲存在 Web 伺服器全球各地。  
+ 網際網路應用程式可以概分為兩類：要求資訊的用戶端應用程式，和回應用戶端資訊要求的伺服器應用程式。 傳統的網際網路用戶端/伺服器應用程式是全球資訊網，使用者使用瀏覽器在此存取儲存在全球網頁伺服器上的文件和其他資料。  
   
- 應用程式並不限於一個角色，例如，熟悉的中介層應用程式伺服器回應來自用戶端的要求透過要求從另一個伺服器上的資料，在這種情況下，它為伺服器和用戶端的情況下。  
+ 應用程式並不限於其中一個角色。例如，熟悉的中介層應用程式伺服器回應用戶端要求的方法是向另一部伺服器要求資料，在此情況下，它同時擔任伺服器和用戶端。  
   
- 用戶端應用程式可以識別要求的網際網路資源和通訊協定的要求和回應使用提出要求。  如果需要，用戶端也提供需要的任何其他資料完成要求，例如 Surrogate 位置或驗證資訊 \(使用者名稱，密碼，依此類推\)。  所要求的格式，可以要求傳送至伺服器。  
+ 用戶端應用程式透過識別要求的網際網路資源以及用於要求和回應的通訊協定，提出要求。 必要時，用戶端也會提供完成要求所需的任何其他資料，例如 Proxy 位置或驗證資訊 (使用者名稱、密碼等等)。 一旦形成要求，就可將要求傳送到伺服器。  
   
 ## 識別資源  
- .NET Framework 使用統一資源識別元 \(URI\) \(URI\) 識別要求的網際網路資源的通訊協定。  URI 包括三個，也有可能是四個區段:配置識別項，識別要求和回應的通訊協定，伺服器識別項，包括網域名稱系統 \(DNS\) \(DNS\) 主機名稱或位址 TCP 唯一識別在網際網路上的伺服器，路徑識別項，偵測到需要的資訊，伺服器以及選擇性的查詢字串，則伺服器會將來自用戶端的相關資訊。  例如， URI 「http:\/\/www.contoso.com\/whatsnew.aspx?date\=today」包括配置識別項「http」，伺服器識別項「www.contoso.com」，路徑「\/whatsnew.aspx」和查詢字串「? date\=today」。  
+ .NET Framework 使用統一資源識別碼 (URI)，識別所要求的網際網路資源與通訊協定。 URI 包含至少三個片段，可能四個：配置識別碼，識別要求和回應的通訊協定；伺服器識別碼，由網域名稱系統 (DNS) 主機名稱，或在網際網路上可唯一識別伺服器的 TCP 位址；路徑識別碼，找出伺服器上要求的資訊；以及選擇性查詢字串，將資訊從用戶端傳遞至伺服器。 例如，URI "http://www.contoso.com/whatsnew.aspx?date=today" 的構成為配置識別碼 "http"、伺服器識別碼 "www.contoso.com"、路徑 "/whatsnew.aspx" 和查詢字串 "?date=today"。  
   
- 在伺服器收到要求並處理回應之後，它會傳回至用戶端應用程式的回應。  回應包含補充資訊，例如內容類型 \(例如未經處理的文字或 XML 資料，\)。  
+ 伺服器收到要求並處理回應之後，它會將回應傳回到用戶端應用程式。 此回應包含補充資訊，例如內容類型 (例如，未經處理文字或 XML 資料)。  
   
-## 要求和回應在 .NET Framework  
- .NET Framework 使用具象類別提供需要的三項資訊透過要求\/回應模型存取網際網路資源: <xref:System.Uri> 類別，包含網際網路資源的 URI 您搜尋， <xref:System.Net.WebRequest> 類別，包含要求資源;然後 <xref:System.Net.WebResponse> 類別，提供連入回應提供容器 \(Container\)。  
+## .NET Framework 中的要求和回應  
+ .NET Framework 使用特定的類別提供透過要求/回應模型存取網際網路資源的三段必要資訊：<xref:System.Uri> 類別，包含您所尋找之網際網路資源的 URI；<xref:System.Net.WebRequest> 類別，包含資源的要求；以及 <xref:System.Net.WebResponse> 類別，提供連入回應的容器。  
   
- 用戶端應用程式可以透過網路資源的 URI 建立 `WebRequest`<xref:System.Net.WebRequest.Create%2A> 執行個體傳遞至方法。  這個靜態方法會建立特定通訊協定，例如 HTTP 的 `WebRequest` 。  傳回的 `WebRequest` 提供對控制項儲存至資料流的要求至伺服器和存取所傳送的屬性，當提出要求時。  在 `WebRequest` 的 <xref:System.Net.WebRequest.GetResponse%2A> 方法由用戶端應用程式的要求至 URI 識別的伺服器。  在回應中可能會延遲的情況下，要求可以進行非同步使用 <xref:System.Net.WebRequest.BeginGetResponse%2A> 方法在 **WebRequest**，使用方法， <xref:System.Net.WebRequest.EndGetResponse%2A> ，而且回應之後可以傳回。  
+ 用戶端應用程式藉由將網路資源的 URI 傳遞到 <xref:System.Net.WebRequest.Create%2A> 方法，建立 `WebRequest` 執行個體。 這個靜態方法會為特定的通訊協定建立 `WebRequest`，例如 HTTP。 傳回的 `WebRequest` 可讓您存取屬性，同時控制伺服器的要求和提出要求時傳送的資料流存取。 `WebRequest` 上的 <xref:System.Net.WebRequest.GetResponse%2A> 方法會將要求從用戶端應用程式傳送至在 URI 中找到的伺服器。 如果回應可能延遲，則可在 **WebRequest** 上使用 <xref:System.Net.WebRequest.BeginGetResponse%2A> 方法以非同步方式提出要求，稍後使用 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法傳回回應。  
   
- **GetResponse** 和 **EndGetResponse** 方法會提供對伺服器所傳回之資料的 **WebResponse** 。  由於這項資料提供給要求的應用程式為資料流。 <xref:System.Net.WebResponse.GetResponseStream%2A> 方法，可用於任何應用程式資料流使用。  
+ **GetResponse** 和 **EndGetResponse** 方法傳回的 **WebResponse**，可讓您存取伺服器傳回的資料。 因為此資料是 <xref:System.Net.WebResponse.GetResponseStream%2A> 方法以資料流的形式提供給提出要求的應用程式，所以可用於應用程式中任何使用資料流的位置。  
   
- **WebRequest** 和 **WebResponse** 類別是可外掛式通訊協定的基礎—讓您開發應用程式使用網際網路資源，而不讓通訊協定特定詳細資料的每個資源使用擔心網路服務的實作。  **WebRequest** 子代類別 **WebRequest** 向註冊類別處理常式建立對網際網路資源的實際連接詳細資料。  
+ **WebRequest** 和 **WebResponse** 類別是可插式通訊協定的基礎：這是一項網路服務實作，可讓您開發應用程式使用網際網路資源，而不用擔心每項資源所使用的通訊協定特定詳細資料。 **WebRequest** 的子代類別是向 **WebRequest** 類別註冊，以管理建立網際網路資源實際連線的詳細資料。  
   
- 例如，使用 HTTP， <xref:System.Net.HttpWebRequest> 類別管理詳細資料連接至網際網路資源。  根據預設，在中，當從「http 開始的 **WebRequest.Create** 方法遇到 URI: 」或「https: 」\(的 HTTP 通訊協定識別項和安全 HTTP\)，傳回的 **WebRequest** 可以使用像是或可以轉換成 **HttpWebRequest** 存取通訊協定的特定屬性。  在許多情況下， **WebRequest** 針對要求提供所有必要的資訊。  
+ 例如，<xref:System.Net.HttpWebRequest> 類別管理使用 HTTP 連線到網際網路資源的詳細資料。 根據預設，當 **WebRequest.Create** 方法遇到開頭為 "http:" 或 "https:" (HTTP 與安全的 HTTP 通訊協定識別碼) 的 URI 時，傳回的 **WebRequest** 可依現況使用，或將類型轉換成 **HttpWebRequest** 以存取通訊協定特有的屬性。 在大部分情況下，**WebRequest** 會提供提出要求的所有必要資訊。  
   
- 可以表示為要求\/回應交易的任何通訊協定可用來 **WebRequest**。  您可以從 **WebRequest** 和 **WebResponse** 衍生通訊協定的特定類別會註冊它們適用於靜態 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 方法的應用程式使用。  
+ 可以要求/回應交易表示的任何通訊協定都可用於 **WebRequest**。 您也可以從 **WebRequest** 和 **WebResponse** 衍生通訊協定特定類別，然後註冊它們供應用程式搭配靜態 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 方法使用。  
   
- 當需要網際網路要求的用戶端授權， **WebRequest** 的 <xref:System.Net.WebRequest.Credentials%2A> 屬性提供必要的認證。  這些憑證可以是基本 HTTP 的簡單名稱\/密碼為或摘要式驗證或使用 NTLM 或 Kerberos 驗證設定名稱\/密碼\/網域。  一組認證在 [NetworkCredentials](frlrfsystemnetnetworkcredentialclasstopic) 執行個體可以儲存多個集合，或在 <xref:System.Net.CredentialCache> 執行個體可以同時儲存。  **CredentialCache** 使用伺服器支援判斷要求和驗證配置的 URI 傳送哪個認證傳遞至伺服器。  
+ 當用於網際網路要求的用戶端驗證為必要時，**WebRequest** 的 <xref:System.Net.WebRequest.Credentials%2A> 屬性會提供所需的認證。 這些認證可以是基本 HTTP 或摘要式驗證的簡單名稱/密碼組，或者是 NTLM 或 Kerberos 驗證的名稱/密碼/網域集。 一組認證可以儲存在 <xref:System.Net.NetworkCredential> 執行個體中，或多組認證同時儲存在 <xref:System.Net.CredentialCache> 執行個體中。 **CredentialCache** 使用要求的 URI 和伺服器支援的驗證配置，以判斷要傳送到伺服器的認證。  
   
-## 與 Web 用戶端的簡單的需求  
- 需要進行簡單的需求網際網路資源的應用程式， <xref:System.Net.WebClient> 類別提供上載資料至或下載資料提供常用的方法是從網際網路伺服器。  **WebClient** 依賴 **WebRequest** 類別提供對網際網路資源;因此， **WebClient** 類別可以使用任何已登錄的可外掛式通訊協定。  
+## 使用 WebClient 的簡單要求  
+ 凡是需要提出網際網路資源簡單要求的應用程式，<xref:System.Net.WebClient> 類別都會提供常見方法，在網際網路伺服器上傳資料或下載資料。 **WebClient** 依賴 **WebRequest** 類別提供對網際網路資源的存取；因此，**WebClient** 類別可以使用任何已註冊的可插式通訊協定。  
   
- 無法使用要求\/回應模型的應用程式中，或是需要在網路上接聽以及傳送要求的應用程式， **System.Net.Sockets** 命名空間提供 [TCPClient](frlrfsystemnetsocketstcpclientclasstopic)、 [TCPListener](frlrfsystemnetsocketstcplistenerclasstopic)和 [UDPClient](frlrfsystemnetsocketsudpclientclasstopic) 類別。  這些類別處理使用不同的傳輸通訊協定以產生連接的詳細資訊，並公開網路連接至應用程式做為資料流。  
+ 對於無法使用要求/回應模型的應用程式，或需要接聽網路以及傳送要求的應用程式，**System.Net.Sockets**命名空間會提供 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些類別會處理使用不同的傳輸通訊協定建立連線的詳細資料，並將應用程式的網路連線公開為資料流。  
   
- 開發人員熟悉 Windows Sockets 連接或需要程式設計提供的控制項在通訊端層級的人尋找 **System.Net.Sockets** 類別符合其需求。  **System.Net.Sockets** 類別是從 Managed 程式碼中設定中斷點 **System.Net** 加入至類別內的機器碼。  在許多情況下， **System.Net.Sockets** 類別封送處理資料到其 Windows 32 位元的對應，以及處理所有必要的安全性檢查。  
+ 熟悉 Windows Sockets 介面的開發人員，或需要在通訊端層級由程式設計提供控制項的開發人員，會發現 **System.Net.Sockets** 類別符合他們的需要。 **System.Net.Sockets** 類別是在 **System.Net** 類別內從 Managed 程式碼到原生程式碼的轉換點。 在大部分情況下，**System.Net.Sockets** 類別會將資料封送處理到其 Windows 32 位元的對應項目，以及處理任何必要的安全性檢查。  
   
-## 請參閱  
+## 另請參閱  
  [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)   
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)   
- [.NET 的網路範例 MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN 程式碼庫中的 .NET 網路範例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+

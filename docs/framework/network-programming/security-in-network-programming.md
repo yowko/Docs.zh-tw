@@ -1,47 +1,53 @@
 ---
-title: "網路程式設計的安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "傳送資料，網際網路安全性"
-  - "通訊協定，網際網路安全性"
-  - "網路安全性"
-  - "網路資源，網際網路安全性"
-  - "接收資料，網際網路安全性"
-  - "驗證 [.NET Framework]，網際網路安全性"
-  - "網際網路，安全性"
-  - "安全性 [.NET Framework]，網際網路"
-  - "權限 [.NET Framework]，網際網路"
+title: "網路程式設計的安全性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data, Internet security
+- protocols, Internet security
+- Network security
+- network resources, Internet security
+- receiving data, Internet security
+- authentication [.NET Framework], Internet security
+- Internet, security
+- security [.NET Framework], Internet
+- permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c8adacd11aa256cd5d807cc92ec1a9c3c154ad77
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 網路程式設計的安全性
-.NET Framework <xref:System.Net> 命名空間的類別提供內建支援通用的網際網路應用程式驗證 \(Authentication\) 機制和的 .NET Framework 程式碼存取權限。  
+# <a name="security-in-network-programming"></a>網路程式設計的安全性
+.NET Framework <xref:System.Net> 命名空間類別會提供常用網際網路應用程式驗證機制和 .NET Framework 程式碼存取權限的內建支援。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [使用安全通訊端層](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
- 描述如何使用 Secure Sockets Layer \(SSL\) 連線。  
+ 描述如何使用安全通訊端層 (SSL) 連線。  
   
  [網際網路驗證](../../../docs/framework/network-programming/internet-authentication.md)  
- 描述如何使用 HTTP 驗證方法會使用 HTTP 伺服器的驗證的連接。  
+ 描述如何使用 HTTP 驗證方法建立已驗證的 HTTP 伺服器連線。  
   
  [Web 和通訊端權限](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
- 說明如何設定使用網際網路連線的應用程式中的程式碼存取安全性。  
+ 描述如何設定使用網際網路連線之應用程式的程式碼存取安全性。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)  
- 簡介如何在 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的類別。
+ 介紹 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的類別。
+

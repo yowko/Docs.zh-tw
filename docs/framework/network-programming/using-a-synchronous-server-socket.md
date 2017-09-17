@@ -1,42 +1,47 @@
 ---
-title: "使用同步伺服器通訊端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式通訊協定，通訊端"
-  - "同步伺服器通訊端"
-  - "傳送資料，通訊端"
-  - "資料要求，通訊端"
-  - "從網際網路要求資料，通訊端"
-  - "伺服器通訊端"
-  - "接收資料，通訊端"
-  - "通訊端類別，同步伺服器通訊端"
-  - "通訊協定，通訊端"
-  - "通訊端，同步伺服器通訊端"
-  - "網際網路，通訊端"
+title: "使用同步伺服器通訊端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- synchronous server sockets
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- Socket class, synchronous server sockets
+- protocols, sockets
+- sockets, synchronous server sockets
+- Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用同步伺服器通訊端
-同步處理伺服器通訊端暫停應用程式的執行，直到連接要求在通訊端接收。  同步處理伺服器通訊端不適用於大量使用在其作業的網路應用程式，不過，它們可以適用於簡單的 Web 應用程式。  
+# <a name="using-a-synchronous-server-socket"></a>使用同步伺服器通訊端
+同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。 同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。  
   
- 使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法之後，在 <xref:System.Net.Sockets.Socket> 在端點設定接聽，使用方法， <xref:System.Net.Sockets.Socket.Accept%2A> 準備就緒以接受輸入的連接要求。  應用程式會被暫止，直到接收到連接要求，則 **接受** 時呼叫方法。  
+ 使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定 <xref:System.Net.Sockets.Socket> 以接聽端點之後，便已準備好使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受連入的連線要求。 應用程式會暫停，直到呼叫 **Accept** 方法收到連線要求為止。  
   
- 當接收到連接要求時， **接受** 傳回與連接用戶端的 **Socket** 新執行個體。  下列範例從用戶端讀取資料，然後將其顯示在主控台上，並且回應資料傳回給用戶端。  **Socket** 並未指定任何訊息通訊協定，因此字串「\<EOF\>」標記訊息資料的結尾。  這個範例假設，名為 `listener`的 **Socket** 已初始化並繫結到端點。  
+ 收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。 下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。 **Socket** 未指定任何傳訊通訊協定，因此字串 "\<EOF>" 會標記訊息資料的結束。 它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -58,7 +63,6 @@ Dim msg As Byte() = Encoding.ASCII.GetBytes(data)
 handler.Send(msg)  
 handler.Shutdown(SocketShutdown.Both)  
 handler.Close()  
-  
 ```  
   
 ```csharp  
@@ -83,7 +87,8 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [同步伺服器通訊端範例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
+

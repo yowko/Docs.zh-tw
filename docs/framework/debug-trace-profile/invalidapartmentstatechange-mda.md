@@ -1,68 +1,73 @@
 ---
-title: "invalidApartmentStateChange MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), invalid apartment state"
-  - "managed debugging assistants (MDAs), invalid apartment state"
-  - "InvalidApartmentStateChange MDA"
-  - "invalid apartment state changes"
-  - "threading [.NET Framework], apartment states"
-  - "apartment states"
-  - "threading [.NET Framework], managed debugging assistants"
-  - "COM apartment states"
+title: invalidApartmentStateChange MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), invalid apartment state
+- managed debugging assistants (MDAs), invalid apartment state
+- InvalidApartmentStateChange MDA
+- invalid apartment state changes
+- threading [.NET Framework], apartment states
+- apartment states
+- threading [.NET Framework], managed debugging assistants
+- COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# invalidApartmentStateChange MDA
-下列兩個問題中的任何一個問題都會啟動 `invalidApartmentStateChange` Managed 偵錯助理 \(MDS\)：  
+# <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
+`invalidApartmentStateChange` Managed 偵錯助理 (MDA) 是由下列兩個問題之一所啟動：  
   
--   嘗試變更執行緒的 COM Apartment 狀態，卻已經由 COM 初始化為不同的 Apartment 狀態。  
+-   嘗試變更執行緒的 COM Apartment 狀態，該執行緒已被 COM 初始化成不同的 Apartment 狀態。  
   
--   執行緒的 COM Apartment 狀態意外變更。  
+-   未預期的執行緒 COM Apartment 狀態變更。  
   
-## 症狀  
+## <a name="symptoms"></a>徵兆   
   
--   執行緒的 COM Apartment 狀態不是要求的狀態。  如此會使 Proxy 被具有不同於目前執行緒模式的 COM 元件所使用。  這樣在透過未針對跨 Apartment 封送處理 \(Marshaling\) 而設定的介面呼叫 COM 物件時，就會造成 <xref:System.InvalidCastException> 的擲回。  
+-   執行緒的 COM Apartment 狀態不是原來要求的。 這可能會導致 Proxy 用於執行緒模型和目前執行緒模型不同的 COM 元件。 接著，在透過未設定跨 Apartment 封送處理的介面呼叫 COM 物件時，這可能會造成 <xref:System.InvalidCastException> 被擲回。  
   
--   執行緒的 COM Apartment 狀態與預期不同。  這樣在[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md) \(RCW\) 進行呼叫時，就會造成具有 RPC\_E\_WRONG\_THREAD 之 HRESULT 的 <xref:System.Runtime.InteropServices.COMException>，以及 <xref:System.InvalidCastException>。  這樣也會使一些單一執行緒 COM 元件同時被多個執行緒存取，並且因而導致損毀或資料遺失。  
+-   執行緒的 COM Apartment 狀態與預期的不同。 在[執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 上進行呼叫時，這會造成 <xref:System.Runtime.InteropServices.COMException> 具有 RPC_E_WRONG_THREAD 的 HRESULT 以及 <xref:System.InvalidCastException>。 這也會造成多個執行緒同時存取某些單一執行緒的 COM 元件，導致損毀或資料遺失。  
   
-## 原因  
+## <a name="cause"></a>原因  
   
--   執行緒在先前初始化為不同的 COM Apartment 狀態。  請注意，使用明確或隱含作業，都能設定執行緒的 Apartment 狀態。  明確作業包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 屬性，以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。  除非在啟動執行緒之前呼叫 <xref:System.Threading.Thread.SetApartmentState%2A>，否則使用 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒，都會隱含設定為 <xref:System.Threading.ApartmentState>。  除非在主方法上有指定 <xref:System.STAThreadAttribute> 屬性 \(Attribute\)，否則應用程式的主執行緒也會隱含初始化為 <xref:System.Threading.ApartmentState>。  
+-   執行緒先前已初始化成不同的 COM Apartment 狀態。 請注意，可以明確或隱含方式設定執行緒的 Apartment 狀態。 明確的作業包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 屬性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 使用 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒，會以隱含方式設成 <xref:System.Threading.ApartmentState.MTA>，除非啟動執行緒之前呼叫 <xref:System.Threading.Thread.SetApartmentState%2A>。 應用程式的主執行緒也會以隱含方式初始化為 <xref:System.Threading.ApartmentState.MTA>，除非在 Main 方法上指定 <xref:System.STAThreadAttribute> 屬性。  
   
--   在執行緒上呼叫了具有不同並行模型的 `CoUninitialize` 方法 \(或是 `CoInitializeEx` 方法\)。  
+-   在執行緒上呼叫具有不同並行模型的 `CoUninitialize` 方法 (或 `CoInitializeEx` 方法)。  
   
-## 解決方式  
- 在執行緒開始執行之前，設定其 Apartment 狀態，或是將 <xref:System.STAThreadAttribute> 屬性或 <xref:System.MTAThreadAttribute> 屬性套用到應用程式的主方法。  
+## <a name="resolution"></a>解決方式  
+ 請先設定執行緒的 Apartment 狀態再開始執行，或將 <xref:System.STAThreadAttribute> 屬性或 <xref:System.MTAThreadAttribute> 屬性套用到應用程式的 Main 方法。  
   
- 理想上，對於第二種原因，應該修改呼叫 `CoUninitialize` 方法的程式碼以延遲呼叫，直到執行緒將要結束，而且沒有任何 RCW 及其基礎 COM 元件依然由執行緒使用為止。  然而，如果不可能修改呼叫 `CoUninitialize` 方法的程式碼，這樣沒有以這種方式初始化的執行緒就不該使用任何 RCW。  
+ 第二個原因，在理想情況下，應該修改呼叫 `CoUninitialize` 方法的程式碼以延遲呼叫，直到執行緒即將終止且沒有任何 RCW 為止，執行緒仍繼續使用它們的基礎 COM 元件。 不過，如果不可能修改呼叫 `CoUninitialize` 方法的程式碼，則不應從未以此方式初始化的執行緒中使用任何 RCW。  
   
-## 對執行階段的影響  
- 這個 MDA 對 CLR 無效。  
+## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+ 此 MDA 對 CLR 沒有影響。  
   
-## Output  
- 目前執行緒的 COM Apartment 狀態，以及程式碼嘗試套用的狀態。  
+## <a name="output"></a>輸出  
+ 目前執行緒的 COM Apartment 狀態和程式碼之前嘗試套用的狀態。  
   
-## 組態  
+## <a name="configuration"></a>組態  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <invalidApartmentStateChange />  
@@ -70,8 +75,8 @@ caps.handback.revision: 12
 </mdaConfig>  
 ```  
   
-## 範例  
- 下列程式碼範例示範會啟動這個 MDA 的情況。  
+## <a name="example"></a>範例  
+ 下列程式碼範例示範可以啟動此 MDA 的情況。  
   
 ```  
 using System.Threading;  
@@ -87,7 +92,8 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
+

@@ -1,41 +1,46 @@
 ---
-title: "如何：建立通訊端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式通訊協定，通訊端"
-  - "網路"
-  - "傳送資料，通訊端"
-  - "資料要求，通訊端"
-  - "從網際網路要求資料，通訊端"
-  - "通訊端類別，建立通訊端"
-  - "網路資源"
-  - "接收資料，通訊端"
-  - "通訊協定，通訊端"
-  - "網際網路，通訊端"
-  - "通訊端，建立"
+title: "如何：建立通訊端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- Networking
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- Socket class, creating sockets
+- Network Resources
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：建立通訊端
-在您可以使用通訊端與遠端裝置目前通訊，必須初始化通訊端的通訊協定和網路位址資訊。  <xref:System.Net.Sockets.Socket> 類別的建構函式有指定通訊協定家族 \(Family\)、通訊端類型和通訊協定類型使用通訊端進行連接的參數。  
+# <a name="how-to-create-a-socket"></a>如何：建立通訊端
+在您使用通訊端與遠端裝置進行通訊之前，必須先使用通訊協定和網路位址資訊初始化通訊端。 <xref:System.Net.Sockets.Socket> 類別的建構函式所擁有的參數，可指定通訊端用來建立連線的位址家族、通訊端類型和通訊協定類型。  
   
-## 範例  
- 下列範例會在以 TCP\/IP 網路可用於通訊的通訊端，例如網際網路。  
+## <a name="example"></a>範例  
+ 下列範例會建立可在 TCP/IP 網路 (例如網際網路) 上用於通訊的通訊端。  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -45,10 +50,9 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Stream, ProtocolType.Tcp)  
-  
 ```  
   
- 若要使用 TCP、UDP 而不是，請變更通訊協定類型，如下列範例所示:  
+ 若要使用 UDP 而不是 TCP，請變更通訊協定類型，如下列範例所示：  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -58,17 +62,17 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Dgram, ProtocolType.Udp)  
-  
 ```  
   
- <xref:System.Net.Sockets.AddressFamily> 列舉型別指定 **Socket** 類別用於的標準通訊協定家族 \(Family\) 解析位址 \(例如， **AddressFamily.InterNetwork** 成員指定 IP 第 4 版通訊協定家族\)。  
+ <xref:System.Net.Sockets.AddressFamily> 列舉會指定 **Socket** 用來解析網路位址的標準位址系列 (例如，**AddressFamily.InterNetwork** 成員指定 IP 第 4 版位址系列)。  
   
- <xref:System.Net.Sockets.SocketType> 列舉型別指定通訊端類型 \(例如， **SocketType.Stream** 成員表示傳送和接收之資料的標準通訊端與流程控制\)。  
+ <xref:System.Net.Sockets.SocketType> 列舉會指定通訊端類型 (例如，**SocketType.Stream** 成員指出使用流量控制傳送和接收資料的標準通訊端)。  
   
- <xref:System.Net.Sockets.ProtocolType> 列舉時所使用的網路通訊協定進行通訊。 **Socket** \(例如， **ProtocolType.Tcp** 指示使用 TCP 通訊端; **ProtocolType.Udp** 指示使用 UDP 通訊端\)。  
+ <xref:System.Net.Sockets.ProtocolType> 列舉會指定在 **Socket** 上進行通訊時，要使用的網路通訊協定 (例如，**ProtocolType.Tcp** 指出通訊端會使用 TCP；**ProtocolType.Udp** 則指出通訊端會使用 UDP)。  
   
- 在 **Socket** 建立之後，它會先與遠端端點的連接或從遠端裝置接收資料連接。  
+ 建立 **Socket** 之後，它可以初始化與遠端端點的連線或接收來自遠端裝置的連線。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用用戶端通訊端](../../../docs/framework/network-programming/using-client-sockets.md)   
  [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
+

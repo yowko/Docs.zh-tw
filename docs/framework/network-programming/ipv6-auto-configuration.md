@@ -1,39 +1,45 @@
 ---
-title: "IPv6 自動設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "IPv6 自動設定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# IPv6 自動設定
-IPv6 的重要目標是支援隨插即用的節點。  也就是可以外掛節點至 IPv6 網路並自動設定，而不需要使用者介入的應該是可能的。  
+# <a name="ipv6-auto-configuration"></a>IPv6 自動設定
+IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該可能插入 IPv6 網路，並且可以自動設定，不需要人為介入。  
   
-## 自動配置的型別。  
- IPv6 支援自動配置類型如下:  
+## <a name="type-of-auto-configuration"></a>自動組態的類型  
+ IPv6 支援下列類型的自動組態：  
   
--   **Stateful auto\-configuration**。  這種類型的組態需求人員的干擾程度，因為它需要 IPv6 \(DHCPv6\) 伺服器上項目動態主機設定通訊協定 \(DHCP\) 節點的安裝和執行。  DHCPv6 伺服器保存它提供組態資訊節點的清單。  它也會維護狀態資訊，因此伺服器知道每個位址仍然是在使用中，所以，以及何時會為了重新配置行為。  
+-   **具狀態的自動組態**。 這種組態需要某種程度的人為介入，因為它需要 IPv6 的動態主機設定通訊協定 (DHCPv6) 伺服器來安裝與管理節點。 DHCPv6 伺服器會保留一份要提供組態資訊的節點。 它也會維護狀態資訊，讓伺服器知道每個位址使用多長時間，以及何時可供重新指派。  
   
--   **Stateless auto\-configuration**。  這種類型的組態適合小型組織和個別。  在此情況下，每個主應用程式判斷其位址從收到的"路由器通告內容。  使用定義 EUI\-64 IEEE Standard 位址的網路部分 ID，假設主機位址的唯一在連結的是合理的作法。  
+-   **無狀態的自動組態**。 這種組態適合小型組織和個人。 在此情況下，每部主機都會從接收到的路由器通告內容中判斷其位址。 使用 IEEE EUI-64 標準定義位址的網路識別碼部分，就可合理假設主機位址在連結上的唯一性。  
   
- 不論這個位址是如何決定的，節點必須驗證其可能的位址到本機連結是唯一的。  這是由傳送"近鄰請求"訊息設為這個可能的位址。  如果節點收到任何回應，它知道這個位址已經在使用中，且必須判斷另一個位址。  
+ 無論以何方式判斷位址，節點都必須確認其潛在位址對本機連結而言是唯一的。 這是透過將芳鄰請求訊息傳送給潛在位址所完成。 如果節點收到任何回應，它會知道位址已在使用中，必須判斷另一個位址。  
   
-## IPv6 行動性  
- 行動裝置的擴充會引入新的需求:裝置必須能夠選擇性地變更 IPv6 網際網路的位置和仍維持現有的連接。  若要提供這個功能，一個行動指派給它一定已到達主要位址。  當行動 Home 節點時，會連接至首頁連結並使用其主要位址。  當行動節點離開的首頁，一個代理程式，通常是路由器、中間的訊息會在目前的節點和它之間的通訊。  
+## <a name="ipv6-mobility"></a>IPv6 行動性  
+ 行動裝置的激增造成了新的需求：裝置必須能夠在 IPv6 網際網路上任意變更位置，但卻仍然能維持現有的連線。 為提供這項功能，要指派給行動節點一個隨時可以連線的主目錄位址。 當行動節點在主目錄時，它會連接到主目錄連結，並使用主目錄位址。 當行動節點離開主目錄時，主目錄代理程式 (通常是路由器)，會在行動節點和它通訊的節點之間轉送訊息。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [通訊端](../../../docs/framework/network-programming/sockets.md)
+

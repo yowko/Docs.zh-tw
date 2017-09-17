@@ -1,46 +1,52 @@
 ---
-title: "PNRP 雲端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "PNRP 雲端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# PNRP 雲端
-「PNRP Cloud」表示可以彼此通訊網路的節點集。  詞彙「Cloud」與「對等網狀結構」和「\(Peer\-to\-Peer\) 圖形」是同義詞。  
+# <a name="pnrp-clouds"></a>PNRP 雲端
+PNRP「雲端」代表一組節點，可以透過網路彼此進行通訊。 「雲端」這個詞相當於「對等網格」和「點對點圖形」。  
   
- 節點之間的通訊不可以跨 Cloud。  <xref:System.Net.PeerToPeer.Cloud> 執行個體是由區分大小寫的名稱唯一識別。  單一對等或節點可以連接至多個 Cloud。  
+ 節點之間的通訊絕對不應該跨越不同的雲端。 <xref:System.Net.PeerToPeer.Cloud> 執行個體可透過其區分大小寫的名稱唯一進行識別。 單一對等或節點可能已連線至多個雲端。  
   
- Cloud 與網路介面緊密的繫結。  在有兩張網路卡指向不同子網路的多重主目錄電腦上，會傳回三個 Cloud：每個介面的每一個連結本機位址各有一個 Cloud，以及一個單一全域範圍 Cloud。  
+ 雲端極為緊密地繫結至網路介面。  在有兩張網路卡連結至不同子網路的多重主目錄電腦上，將會傳回三個雲端：一個介面的一個連結本機位址有一個，以及單一全域範圍雲端。  
   
- PNRP 使用三個重疊的「範圍」\(Scope\)，範圍為電腦群組可以互相找到:  
+ PNRP 會使用三個雲端「範圍」，而範圍是一組可找到彼此的電腦：  
   
--   全域 Cloud 物件對應至全域 IPv6 位址範圍和全域位址及表示整個 IPv6 網際網路的電腦。  只有一個全域 Cloud。  
+-   全域雲端對應至全域 IPv6 位址範圍和全域位址，並代表整個 IPv6 網際網路上的所有電腦。 單一全域雲端只有一個。  
   
--   連結本機 Cloud 中對應於連結本機位址範圍和 IPv6 連結本機位址。  連結本機 Cloud 是特定連結，通常與本機連接的子網路。  可以有多個連結本機 Cloud。  
+-   連結-本機雲端對應至連結-本機 IPv6 位址範圍與連結-本機位址。 連結-本機雲端用於特定連結，而且通常與本機連接的子網路相同。 可以有多個連結-本機雲端。  
   
- 第三個 Cloud，網站特定 Cloud，對應於網站 IPv6 位址範圍和站台本機位址。  這個 Cloud 中已被取代，不過，它在 PNRP 仍支援。  
+ 第三個雲端是網站特定雲端，並對應至網站 IPv6 位址範圍和網站-本機位址。 此雲端已過時，不過 PNRP 中仍然支援此雲端。  
   
-## Cloud  
- PNRP Cloud <xref:System.Net.PeerToPeer.Cloud> 由類別其執行個體所表示。  中的群組中使用了對等之可列舉的 <xref:System.Net.PeerToPeer.CloudCollection> 類別的執行個體所表示的。  PNRP Cloud 集合的目前對等已知可以藉由呼叫靜態方法 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 取得。  
+## <a name="clouds"></a>雲端  
+ PNRP 雲端是由 <xref:System.Net.PeerToPeer.Cloud> 類別的執行個體所表示。 使用對等的雲端群組是由可列舉 <xref:System.Net.PeerToPeer.CloudCollection> 類別的執行個體所表示。 呼叫靜態 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 方法，即可取得目前對等已知的 PNRP 雲端集合。  
   
- 個別的 Cloud 中有唯一的名稱，表示為 256 個字元的 Unicode 字串。  這些名稱時，使用先前提到的範圍時，用來建構唯一的執行個體 Cloud 類別。  這些執行個體可以用於保存方式序列化並重建。  
+ 個別雲端具有唯一名稱，並以 256 個字元的 Unicode 字串呈現。 這些名稱以及上述範圍是用來建構 Cloud 類別的唯一執行個體。 這些執行個體可以序列化並重新建構以供持續使用。  
   
- 一個 Cloud 建立執行個體或衍生自類別，對等名稱可以移至其註冊建立已知的對等網狀結構。  
+ 建立或取得雲端執行個體之後，可以向它註冊對等名稱，以建立已知對等的網格。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.PeerToPeer.Cloud>   
  [對等名稱解析通訊協定](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+

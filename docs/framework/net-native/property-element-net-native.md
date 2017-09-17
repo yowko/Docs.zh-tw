@@ -1,33 +1,36 @@
 ---
-title: "&lt;Property&gt; 項目 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;Property&gt; 項目 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1df3d7368597abdb991facc399bcedf7412d4fdb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;Property&gt; 項目 (.NET Native)
+# <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt; 項目 (.NET Native)
 將執行階段反映原則套用至屬性。  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-  
 <Property Name="property_name"  
           Browse="policy_type"  
           Dynamic="policy_type"  
           Serialize="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -35,7 +38,7 @@ caps.handback.revision: 16
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|屬性類型|描述|  
+|屬性|屬性類型|說明|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定屬性名稱。|  
 |`Browse`|反射|選擇性屬性。 控制對屬性相關資訊的查詢，或控制屬性的列舉，但不會在執行階段啟用任何動態存取。|  
@@ -46,23 +49,23 @@ caps.handback.revision: 16
   
 |值|說明|  
 |-----------|-----------------|  
-|*method_name*|屬性名稱。 屬性的型別定義父[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)或[ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)項目。|  
+|*method_name*|屬性名稱。 屬性的類型是由父 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目所定義。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要為屬性套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|項目|說明|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果未明確定義屬性的原則，則會繼承其父元素的執行階段原則。  
@@ -71,7 +74,6 @@ caps.handback.revision: 16
  下列範例會使用反映來具現化 `Book` 物件，並顯示其屬性值。 專案的原始 default.rd.xml 檔案會像下面這樣：  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <Application>  
       <Namespace Name="LibraryApplications"  Browse="Required Public" >  
@@ -79,23 +81,21 @@ caps.handback.revision: 16
       </Namespace>  
    </Application>  
 </Directives>  
-  
 ```  
   
  檔案會針對 `All` 類別，將 `Activate` 值套用至 `Book` 原則，如此可允許透過反映來存取類別建構函式。 `Browse` 類別的 `Book` 原則繼承自其父命名空間。 其設定為 `Required Public`，讓中繼資料在執行階段可供使用。  
   
- 以下是範例的原始程式碼。 `outputBlock`變數代表[TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx)控制項。  
+ 以下是範例的原始程式碼。 `outputBlock` 變數代表 [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) 控制項。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- 不過，編譯和執行這個範例會擲回[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)例外狀況。 雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。 我們可以用下列兩種方法之一來更正這個錯誤：  
+ 不過，編譯和執行此範例會擲回 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 例外狀況。 雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。 我們可以用下列兩種方法之一來更正這個錯誤：  
   
--   藉由定義`Dynamic`原則`Book`中輸入其[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)項目。  
+-   在 `Book` 類型的 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 項目中定義其 `Dynamic` 原則。  
   
--   加入巢狀[ <> \> ](../../../docs/framework/net-native/property-element-net-native.md)我們想要叫用，如下列 default.rd.xml 檔案其 getter 的每個屬性的項目。  
+-   針對我們要叫用其 getter 的每個屬性，新增巢狀 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 項目，如下列 default.rd.xml 檔案所示。  
   
-    ```  
-  
+    ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
        <Application>  
           <Namespace Name="LibraryApplications"  Browse="Required Public" >  
@@ -107,10 +107,10 @@ caps.handback.revision: 16
           </Namespace>  
        </Application>  
     </Directives>  
-  
     ```  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+
