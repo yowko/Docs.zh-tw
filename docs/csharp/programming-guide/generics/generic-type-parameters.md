@@ -1,46 +1,66 @@
 ---
-title: "泛型類型參數 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "泛型 [C#], 類型參數"
-  - "類型參數 [C#]"
+title: "泛型型別參數 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- generics [C#], type parameters
+- type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce1024215a381afb3a7b42f2127fe5e8c212d378
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# 泛型類型參數 (C# 程式設計手冊)
-在泛型型別或方法定義中，型別參數是用戶端在產生泛型型別的變數時所指定之特定型別的替代符號 \(Placeholder\)。  泛型類別 \(例如[泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md) 中列出的 `GenericList<T>`\) 無法以原本的狀態使用，因為它不是真的型別，而比較像是型別的藍圖。  若要使用 `GenericList<T>`，用戶端程式碼必須藉由在角括弧內指定型別引數，以宣告和產生建構的型別。  這個特定類別的型別引數可以是編譯器能夠辨認的任意型別。  您可以建立任意數目的建構型別執行個體，每個執行個體使用不同的型別引數，如下所示：  
+# <a name="generic-type-parameters-c-programming-guide"></a>泛型型別參數 (C# 程式設計手冊)
+在泛型型別或方法定義中，當型別參數具現化泛型型別的變數時，它們是用戶端指定之特定類型的預留位置。 泛型類別，例如[泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)中所列的 `GenericList<T>`，不能以現況使用，因為它其實不是類型，更像是類型的藍圖。 若要使用 `GenericList<T>`，用戶端程式碼必須在角括弧內指定型別引數，宣告並具現化建構的類型。 此特定類別的型別引數可以是由編譯器辨識出的任何類型。 您可以建立任何數目的建構類型執行個體，每一個使用不同的型別引數，如下所示：  
   
  [!code-cs[csProgGuideGenerics#7](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_1.cs)]  
   
- 在 `GenericList<T>` 的每個執行個體中，類別內的每個 `T` 項目都將在執行階段被型別引數取代。  藉由這項取代動作，就會使用單一類別定義建立三個不同的型別安全和效率物件。  如需 CLR 如何執行這項取代的詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
+ 這些 `GenericList<T>` 執行個體的每一個中，類別中出現的每個 `T`，在執行階段都會被型別引數取代。 透過這個替代，我們已經使用單一類別定義建立了三個類型安全且有效率的不同物件。 如需 CLR 如何執行此替代的詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
   
-## 型別參數命名方針  
+## <a name="type-parameter-naming-guidelines"></a>型別參數命名方針  
   
--   **最好**使用描述性名稱命名泛型型別，除非單一字母名稱可以充分自我闡明而描述性名稱無法再增添任何幫助。  
+-   **務必**使用描述性的名稱命名泛型型別參數，除非單一字母名稱足以表明，而且描述性名稱不會新增值。  
   
      [!code-cs[csProgGuideGenerics#8](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_2.cs)]  
   
--   **考慮**為使用單一字母型別參數之型別使用 T 做為其型別參數名稱。  
+-   單一字母型別參數的類型**請考慮**使用 T 做為型別參數名稱。  
   
      [!code-cs[csProgGuideGenerics#9](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_3.cs)]  
   
--   **最好**使用 "T" 當做前置描述性型別參數名稱。  
+-   描述性型別參數名稱前面**務必**加上 "T"。  
   
      [!code-cs[csProgGuideGenerics#10](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_4.cs)]  
   
--   **考慮**將指示條件約束置於參數名稱中的型別參數。  例如，限制為 `ISession` 的參數可以稱為 `TSession`。  
+-   **請考慮**在參數名稱中指出放在型別參數上的條件約束。 例如，參數的條件約束為 `ISession` 可能稱為 `TSession`。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.Generic>   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [泛型](../../../csharp/programming-guide/generics/index.md)   
- [C\+\+ 樣板和 C\# 泛型之間的差異](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+ [C++ 範本和 C# 泛型之間的差異](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+
