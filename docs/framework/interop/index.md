@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ff86b062efddde6f97555efb97247f60a6e1db98
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/18/2017
 
 ---
 # <a name="interoperating-with-unmanaged-code"></a>與 Unmanaged 程式碼互通

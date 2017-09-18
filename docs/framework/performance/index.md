@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/18/2017
 
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能

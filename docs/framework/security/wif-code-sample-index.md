@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d5ec81864fca8ec9c83fd294f722e890f002e510
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/18/2017
 
 ---
 # <a name="wif-code-sample-index"></a>WIF 程式碼範例索引

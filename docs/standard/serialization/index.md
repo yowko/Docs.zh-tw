@@ -27,7 +27,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 4aaef3337c9ee2464925ed4dc31c075a4e68a9dc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/18/2017
 
 ---
 # <a name="serialization-in-net"></a>.NET 的序列化
