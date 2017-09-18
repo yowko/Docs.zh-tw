@@ -11,7 +11,7 @@
 ## [.NET 詞彙](standard/glossary.md)
 ## [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](standard/choosing-core-framework-server.md)
 ## [什麼是「Managed 程式碼」？](standard/managed-code.md)
-### [自動管理記憶體](standard/automatic-memory-management.md) 
+### [自動記憶體管理](standard/automatic-memory-management.md) 
 ## [通用語言執行平台 (CLR)](standard/clr.md)
 ## [語言獨立性](standard/language-independence.md)
 ### [語言獨立性以及與語言無關的元件](standard/language-independence-and-language-independent-components.md)
@@ -60,13 +60,12 @@
 ### [在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](core/tutorials/vb-with-visual-studio.md)
 ### [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](core/tutorials/library-with-visual-studio.md)
 ### [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](core/tutorials/vb-library-with-visual-studio.md)
-## [Windows 必要條件](core/windows-prerequisites.md)
+## [Windows 先決條件](core/windows-prerequisites.md)
 ## [macOS 先決條件](core/macos-prerequisites.md)
-## [Linux 必要條件](core/linux-prerequisites.md)
+## [Linux 先決條件](core/linux-prerequisites.md)
 ## [.NET Core 的新功能](core/whats-new/index.md)
 ## [教學課程](core/tutorials/index.md)
 ### [使用 Visual Studio 2017 在 Windows 上建置完整的 .NET Core 解決方案](core/tutorials/using-on-windows-full-solution.md)
-### [C# 與 Visual Studio Code 使用者入門](core/tutorials/with-visual-studio-code.md)
 ### [在 macOS 上開始使用 .NET Core](core/tutorials/using-on-macos.md)
 ### [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -96,11 +95,14 @@
 ## [單元測試](core/testing/index.md)
 ### [使用 dotnet test 及 xUnit 執行單元測試](core/testing/unit-testing-with-dotnet-test.md)
 ### [使用 dotnet test 及 MSTest 執行單元測試](core/testing/unit-testing-with-mstest.md)
+### [搭配 dotnet test 與 xUnit 的 F# 單元測試]()
+### [搭配 dotnet test 與 MSTest 的 F# 單元測試]()
 ### [執行選擇性單元測試](core/testing/selective-unit-tests.md)
+### [搭配 Visual Studio 的 .NET Core 專案即時單元測試]()
 ## [版本控制](core/versions/index.md)
 ### [.NET Core 支援](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
-## [執行階段識別項目錄](core/rid-catalog.md)
+## [執行階段識別碼目錄](core/rid-catalog.md)
 ## [.NET Core SDK 概觀](core/sdk.md)
 ## [.NET Core CLI 工具](core/tools/index.md)
 ### [遙測](core/tools/telemetry.md)
@@ -131,7 +133,7 @@
 ##### [dotnet add reference](core/tools/dotnet-add-reference.md)
 ##### [dotnet list reference](core/tools/dotnet-list-reference.md)
 ##### [dotnet remove reference](core/tools/dotnet-remove-reference.md)
-#### 封裝
+#### 套件
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
@@ -141,13 +143,13 @@
 ### [移植程式庫](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [從原始檔建置 .NET Core](core/build/index.md)
-### [.NET Core 發佈封裝](core/build/distribution-packaging.md)
+### [.NET Core 發佈套件](core/build/distribution-packaging.md)
 ## [VS 2015/project.json 文件](project-json.md)
 <!-- End .NET Core Content -->
 
 <!-- .NET Framework Content -->
 # [.NET Framework 指南](framework/index.md)
-## [新功能](framework/whats-new/)
+## [新增功能](framework/whats-new/)
 ## [開始使用](framework/get-started/)
 ## [安裝指南 (英文)](framework/install/)
 ## [移轉手冊](framework/migration-guide/)
@@ -155,7 +157,7 @@
 ### [在容器中執行主控台應用程式](framework//docker/console.md)
 ## [開發指南](framework/development-guide.md)
 ### [應用程式定義域和組件](framework/app-domains/)
-### [桌面應用程式中的資源](framework/resources/)
+### [傳統型應用程式中的資源](framework/resources/)
 ### [協助工具選項](framework/ui-automation/)
 ### [資料與模型化](framework/data/)
 ### [用戶端應用程式](framework/develop-client-apps.md)
@@ -191,10 +193,10 @@
 ## [C# 的教學課程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# 的新功能](csharp/whats-new/index.md) 
-### [C# 7.1 的新功能](csharp/whats-new/csharp-7-1.md)
-### [C# 7 的新功能](csharp/whats-new/csharp-7.md)
-### [C# 6 的新功能](csharp/whats-new/csharp-6.md)
+## [C# 中的新增功能](csharp/whats-new/index.md) 
+### [C# 7.1 中的新增功能](csharp/whats-new/csharp-7-1.md)
+### [C# 7 中的新增功能](csharp/whats-new/csharp-7.md)
+### [C# 6 中的新增功能](csharp/whats-new/csharp-6.md)
 ### [語言和架構之間的關係](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
@@ -206,7 +208,7 @@
 ### [類別](csharp/classes.md)
 ### [結構](csharp/structs.md)
 ### [元組](csharp/tuples.md)
-### [解構 Tuple 和其他型別](csharp/deconstruct.md)
+### [解構元組和其他型別](csharp/deconstruct.md)
 ### [介面](csharp/programming-guide/interfaces/index.md)
 <!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
 ### [方法](csharp/methods.md)
@@ -255,7 +257,7 @@
 ## [開始使用](fsharp/get-started/index.md)
 ### [Visual Studio 使用者入門](fsharp/get-started/get-started-visual-studio.md)
 ### [開始使用 Visual Studio for Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
-### [Visual Studio Code 和 Ionide 開始使用](fsharp/get-started/get-started-vscode.md)
+### [開始使用 Visual Studio Code 和 Ionide](fsharp/get-started/get-started-vscode.md)
 ### [開始使用 .NET Core CLI](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## 教學課程
