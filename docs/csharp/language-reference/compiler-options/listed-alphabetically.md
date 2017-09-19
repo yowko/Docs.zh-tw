@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
 ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項

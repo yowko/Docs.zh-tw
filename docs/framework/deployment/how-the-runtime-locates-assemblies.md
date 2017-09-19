@@ -93,7 +93,7 @@ ms.lasthandoff: 09/19/2017
 ### <a name="application-configuration-file"></a>應用程式組態檔  
  第一，Common Language Runtime 會檢查應用程式組態檔中，是否有資訊會覆寫儲存在呼叫組件資訊清單中的版本資訊。 應用程式組態檔可以隨著應用程式一起部署，但並不是執行應用程式的必要項目。 通常擷取這個檔案幾乎是瞬間完成，但是如果應用程式基底是在遠端電腦上 (例如在 Internet Explorer Web 架構案例中)，就必須下載組態檔。  
   
- 針對用戶端可執行檔，應用程式組態檔會位在與應用程式可執行檔相同的目錄中，而且基底名稱與可執行檔相同，副檔名為 .config。 例如，C:\Program Files\Myapp\Myapp.exe 的組態檔為 C:\Program Files\Myapp\Myapp.exe.config。 在以瀏覽器為主的案例中，HTML 檔必須使用 **\<link>** 項目明確指向組態檔。  
+ 針對用戶端可執行檔，應用程式組態檔會位在與應用程式可執行檔相同的目錄中，而且基底名稱與可執行檔相同，副檔名為 .config。 例如，C:\Program Files\Myapp\Myapp.exe 的組態檔為 C:\Program Files\Myapp\Myapp.exe.config。在以瀏覽器為主的案例中，HTML 檔必須使用 **\<link>** 項目明確指向組態檔。  
   
  下列程式碼提供應用程式組態檔的簡單範例。 這個範例會將 <xref:System.Diagnostics.TextWriterTraceListener> 加入 <xref:System.Diagnostics.Debug.Listeners%2A> 集合，以啟用將偵錯資訊記錄至檔案的功能。  
   
