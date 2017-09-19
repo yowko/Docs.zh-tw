@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
 ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
