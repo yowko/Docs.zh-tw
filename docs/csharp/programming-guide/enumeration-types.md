@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
 ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
