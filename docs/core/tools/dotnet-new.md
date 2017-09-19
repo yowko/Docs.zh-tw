@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 335902f26148d8201b7311b57370fd37280c68dd
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="dotnet-new"></a>dotnet new
@@ -137,6 +137,10 @@ dotnet new [-h|--help]
 `-u|--uninstall <PATH|NUGET_ID>`
 
 解除安裝 `PATH` 或 `NUGET_ID` 提供的來源或範本套件。
+
+> [!NOTE]
+> 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如，*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* 將有效，但來自包含資料夾的 *./GarciaSoftware.ConsoleTemplate.CSharp* 將無效。
+> 此外，請勿在範本路徑中包含最終結尾目錄斜線。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

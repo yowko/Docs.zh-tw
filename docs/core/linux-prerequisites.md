@@ -1,23 +1,23 @@
 ---
-title: "Linux 上 .NET Core 的必要條件"
+title: "Linux 上 .NET Core 的先決條件"
 description: "支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電腦上開發、部署和執行 .NET Core 應用程式。"
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/01/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: HT
-ms.sourcegitcommit: 7bbb8405f39a52d2798fd1dbc78f3116cb3bedbb
-ms.openlocfilehash: 9864ffa31caa007cb649a9e6e8913863d9cb2c35
+ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
+ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
-# <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
+# <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先決條件
 
 本文會說明在 Linux 開發 .NET Core 應用程式所需的相依性。 支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/05/2017
 
 .NET Core 2.0 將 Linux 視為單一作業系統。 針對每個支援的 Linux 發行版本與每種晶片架構，會有單一的 Linux 組建。
 
-在下列 Linux x64 發行版本/版本上可支援 NET Core 2.x：
+下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 2.x：
 
  * Red Hat Enterprise Linux 7
  * CentOS 7
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/05/2017
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-在下列 Linux x64 發行版本/版本上可支援 .NET Core 1.x：
+下列 Linux 64 位元 (`x86_64` or `amd64`) 發行版本/版本支援NET Core 1.x：
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
@@ -114,7 +114,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 ## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>安裝 Red Hat Enterprise Linux (RHEL) 7 的 .NET Core
 
-若要在 RHEL 7 上安裝 .NET Core：
+在 RHEL 7 上安裝 .NET Core：
 
 1. 啟用 Red Hat .NET 通道，位於 RHEL 7 訂閱底下。
     * Red Hat Enterprise 7 伺服器請使用：
@@ -325,7 +325,7 @@ Linux 上有兩個安裝程式套件選擇：
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
    ```
    
-5. 擷取 .NET Core SDK 二進位檔。
+5. 安裝 .NET Core SDK。
 
    ```bash
    sudo apt-get update
@@ -337,10 +337,17 @@ Linux 上有兩個安裝程式套件選擇：
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
+   
+7. 執行 `dotnet --version` 命令，以證明安裝成功。
+
+   ```bash
+   dotnet --version
+   ```   
+  
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 取得必要條件。
+2. 取得先決條件。
 
    ```bash
    sudo apt-get install curl libunwind8 gettext
@@ -364,17 +371,17 @@ Linux 上有兩個安裝程式套件選擇：
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
    ```
 
----
-
 6. 執行 `dotnet --version` 命令，以證明安裝成功。
 
    ```bash
    dotnet --version
    ```
 
+---
+
 ## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a>安裝適用於 Fedora 24, Fedora 25 或 Fedora 26 的 .NET Core (64 位元)
 
-若要安裝適用於 Fedora 26, Fedora 25 (.NET Core 2.x) 或 Fedora 24 (.NET Core 1.x) 的 .NET Core：
+在 Fedora 26 或 Fedora 25 上安裝 .NET Core 2.x，或在 Fedora 24 上安裝 .NET Core 1.x：
 
 1. 請移除系統中所有 .NET Core **先前的預覽版**。
 
@@ -447,9 +454,9 @@ Linux 上有兩個安裝程式套件選擇：
    dotnet --version
    ```
 
-## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>安裝 .NET Core for CentOS 7.1 (64 位元) 以及 Oracle Linux 7.1 (64 位元)
+## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>安裝 .NET Core for CentOS 7.1 (64 位元) 與 Oracle Linux 7.1 (64 位元)
 
-安裝 .NET Core for CentOS 7.1 (64 位元) 以及 Oracle Linux 7.1 (64 位元)：
+安裝 .NET Core for CentOS 7.1 (64 位元) 與 Oracle Linux 7.1 (64 位元)：
 
 1. 請移除系統中所有 .NET Core **先前的預覽版**。
 
@@ -486,7 +493,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 取得必要條件。
+2. 取得先決條件。
 
    ```bash
    sudo yum install libunwind libicu
@@ -518,9 +525,9 @@ Linux 上有兩個安裝程式套件選擇：
    dotnet --version
    ```
 
-## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>安裝適用於 SUSE Linux Enterprise Server 的 .NET Core (64 位元)
+## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>安裝適用於 SUSE Linux Enterprise Server (64 位元) 的 .NET Core
 
-若要安裝適用於 SUSE Linux Enterprise Server (SLES) 12 SP2 的 .NET Core 2.x (64 位元)：
+安裝適用於 SUSE Linux Enterprise Server (SLES) 12 SP2 (64 位元) 的 .NET Core 2.x：
 
 1. 請移除系統中所有 .NET Core **先前的預覽版**。
 
@@ -551,9 +558,9 @@ Linux 上有兩個安裝程式套件選擇：
    dotnet --version
    ```
    
-## <a name="install-net-core-for-opensuse-64-bit"></a>安裝適用於 openSUSE 的 .NET Core (64 位元)
+## <a name="install-net-core-for-opensuse-64-bit"></a>安裝適用於 openSUSE (64 位元) 的 .NET Core
 
-若要安裝適用於 openSUSE 的 .NET Core 2.x 或適用於 openSUSE 的 .NET Core 1.x (64 位元)：
+安裝適用於 openSUSE 的 .NET Core 2.x 或適用於 openSUSE (64 位元) 的 .NET Core 1.x：
 
 1. 請移除系統中所有 .NET Core **先前的預覽版**。
 
@@ -590,7 +597,7 @@ Linux 上有兩個安裝程式套件選擇：
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 取得必要條件。
+2. 取得先決條件。
 
    ```bash
    sudo zypper install libunwind libicu

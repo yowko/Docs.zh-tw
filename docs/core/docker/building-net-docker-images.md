@@ -4,15 +4,15 @@ description: "了解 Docker 映像和 .NET Core"
 keywords: ".NET、.NET Core、Docker"
 author: spboyer
 ms.author: shboyer
-ms.date: 08/29/2016
+ms.date: 09/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 9dc52f3a8c74c1aa575a83cb3bbd579b93fae9ae
-ms.openlocfilehash: 0e679ffc22f52de5e2ce8194942efbb2f5299ee4
+ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
+ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
 ms.contentlocale: zh-tw
 ms.lasthandoff: 09/06/2017
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 09/06/2017
 
  
 > [!IMPORTANT]
-> 我們正在更新 .NET Core 2.0。 下列說明已過時。 造成您的不便，我們深感抱歉。
+> 我們正在針對 .NET Core 2.0 更新此文章。 下列指示已過時。 造成您的不便，我們深感抱歉。
 
 為了解如何同時使用 .NET Core 和 Docker，我們必須先了解取得的不同 Docker 映像，以及正確的使用時機。 在此，我們會逐步解說所獲得的變化、建置 ASP.NET Core Web API、使用 Yeoman Docker 工具建立可偵錯的容器，以及預覽 Visual Studio Code 如何在程序中提供協助。 
 

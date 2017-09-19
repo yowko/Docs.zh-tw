@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: e31977c511f18737aef673c78a3e295d7c24782f
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/12/2017
 
    | 項目            | 類型   | 說明 |
    | ------------------ | ------ | ----------- |
-   | **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。 這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
+   | **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
    | **\<描述>** | 字串 | UI 顯示中的套件詳細描述。 |
    | **\<識別碼>**          | 字串 | 不區分大小寫的套件識別碼，在整個 nuget.org 或套件所在的任何組件庫都必須是唯一的。 識別碼可能不包含對 URL 而言無效的空格或字元，而且通常會遵循 .NET 命名空間規則。 如需指導方針，請參閱[選擇唯一的套件識別碼並設定版本號碼](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
    | **\<packageType>** | 字串 | 將此項目放在 **\<metadata>** 項目中的 **\<packageTypes>** 項目內。 將 **\<packageType>** 項目的 `name` 屬性設定為 `Template`。 |
@@ -208,6 +208,10 @@ dotnet new garciaconsole
 ```console
 dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
 ```
+
+> [!NOTE]
+> 若要將範本從您的本機檔案系統解除安裝，您需要使路徑成為完整路徑。 例如，*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* 將有效，但來自包含資料夾的 *./GarciaSoftware.ConsoleTemplate.CSharp* 將無效。
+> 此外，請勿在範本路徑中包含最終結尾目錄斜線。
 
 ## <a name="see-also"></a>另請參閱
 
