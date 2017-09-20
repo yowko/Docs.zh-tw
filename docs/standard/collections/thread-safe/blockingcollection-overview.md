@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概觀
@@ -50,7 +50,8 @@ ms.lasthandoff: 07/28/2017
   
  多個執行緒或工作可以同時將項目新增至集合，如果集合達到其指定的最大容量，則會在移除項目之前封鎖產生執行緒。 多位消費者可以同時移除項目，如果集合變成空的，則會在生產者新增項目之前封鎖使用執行緒。 產生執行緒可以呼叫 <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>，表示無法再新增項目。 消費者會監視 <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> 屬性，以得知集合何時變成空的，以及何時無法再新增項目。 下列範例示範界限容量為 100 的簡單 BlockingCollection。 只要符合某個外部條件，生產者工作就會將項目新增至集合，然後呼叫 <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>。 在 <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> 屬性為 true 之前，消費者工作會擷取項目。  
   
- [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)] [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
+ [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
+ [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
  如需完整範例，請參閱[如何：從 BlockingCollection 個別新增和擷取項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)。  
   
@@ -60,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="cancelling-add-and-take-operations"></a>取消新增和擷取作業  
  新增和擷取作業一般會透過迴圈形式執行。 您可以將 <xref:System.Threading.CancellationToken> 傳入 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 或 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法來取消迴圈，然後檢查每個反覆項目上語彙基元之 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性的值。 如果值為 true，則是由您決定透過清除任何資源並結束迴圈來回應取消要求。 下列範例示範採用取消語彙基元之 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 的多載，以及使用它的程式碼︰  
   
- [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)] [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
+ [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
+ [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
  如需如何新增取消支援的範例，請參閱[如何：從 BlockingCollection 個別新增和擷取項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)中的第二個範例。  
   
