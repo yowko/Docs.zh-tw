@@ -24,7 +24,7 @@ ms.lasthandoff: 08/14/2017
 
 編譯和執行您的應用程式： 
 
-1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 [偵錯] 變更為 [發行]。
+1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 **[偵錯]** 變更為 **[發行]**。
 
    ![Visual Studio 工具列](media/publishing-with-visual-studio/toolbar.png)
 
