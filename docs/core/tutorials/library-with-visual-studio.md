@@ -30,9 +30,9 @@ ms.lasthandoff: 09/08/2017
 
 請開始建立類別庫專案和其相關專案的方案。 Visual Studio 方案只能做為一個或多個專案的容器。 建立方案：
 
-1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]   >  [專案]。
+1. 在 Visual Studio 功能表列上，選擇 **[檔案]** > **[新增]** > **[專案]**。
 
-1. 在 [新增專案] 對話方塊中，展開 [其他專案類型] 節點，並選取 [Visual Studio 方案]。 將方案命名為 "ClassLibraryProjects"，然後選取 [確定] 按鈕。
+1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 **[確定]** 按鈕。
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/newproject.png)
 
@@ -40,9 +40,9 @@ ms.lasthandoff: 09/08/2017
 
 建立您的類別庫專案：
 
-1. 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 [新增]  >  [新增專案]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 **[新增]** > **[新增專案]**。
 
-1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，然後選取後面跟著 [類別庫 (.NET Standard)] 專案範本的 [.NET Standard] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
+1. 在 **[新增專案]** 對話方塊中，展開 **[Visual C#]** 節點，然後選取後面跟著 **[類別庫 (.NET Standard)]** 專案範本的 **[.NET Standard]** 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/libproject.png)
 

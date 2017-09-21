@@ -29,11 +29,11 @@ ms.lasthandoff: 09/08/2017
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 組置 C# 類別庫](./library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。
+1. 在 [新增專案] 對話方塊中，展開 [Visual C#] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
 
    ![[新增專案] 對話方塊](./media/consuming-library-with-visual-studio/addnewproject.png)
 
-1. 在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。 
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 **[設定為啟始專案]**。 
 
    ![ShowCase 內容功能表](./media/consuming-library-with-visual-studio/setstartupproject.png)
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/08/2017
 
    ![ShowCase 相依性內容功能表](./media/consuming-library-with-visual-studio/addreference.png)
 
-1. 在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。
+1. 在 **[參考管理員]** 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 **[確定]** 按鈕。
 
    ![參考管理員](./media/consuming-library-with-visual-studio/referencemanager.png)
 
@@ -59,11 +59,11 @@ ms.lasthandoff: 09/08/2017
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. 開啟您[在 Visual Studio 2017 中使用 .NET Core 建置類別庫](vb-library-with-visual-studio.md)主題中建立的 `ClassLibraryProjects` 解決方案。 在方案總管 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "ShowCase"，然後選取 [確定] 按鈕。
+1. 在 [新增專案] 對話方塊中，展開 [Visual Basic] 節點，選取後面跟著 [主控台應用程式 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "ShowCase"，然後選取 **[確定]** 按鈕。
 
    ![[新增專案] 對話方塊](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
 
-1. 在方案總管 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]。 
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 **[設定為啟始專案]**。 
 
    ![ShowCase 內容功能表](./media/consuming-library-with-visual-studio/setstartupproject.png)
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/08/2017
 
    ![ShowCase 相依性內容功能表](./media/consuming-library-with-visual-studio/addreference.png)
 
-1. 在 [參考管理員] 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 [確定] 按鈕。
+1. 在 **[參考管理員]** 對話方塊中，選取**StringLibrary**、您的類別庫專案，然後選取 **[確定]** 按鈕。
 
    ![參考管理員](./media/consuming-library-with-visual-studio/referencemanager.png)
 
