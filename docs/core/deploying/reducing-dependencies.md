@@ -1,7 +1,7 @@
 ---
 title: "減少與 project.json 的封裝相依性"
-description: "減少與 project.json 的封裝相依性"
-keywords: ".NET、.NET Core"
+description: "撰寫以 project.json 為基礎的程式庫時，請降低套件相依性。"
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 03/02/2017
 
 ## <a name="why-its-important"></a>為何重要
 
-.NET Core 是由 NuGet 封裝組成的產品。  必要的封裝是 [.NET 標準程式庫中繼封裝](https://www.nuget.org/packages/NETStandard.Library)，由 NuGet 封裝組成的其他封裝。  它提供的一組封裝，保證都能在多個 .NET 實作上運作，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
+.NET Core 是由 NuGet 封裝組成的產品。  必要的封裝是 [.NETStandard.Library 中繼封裝](https://www.nuget.org/packages/NETStandard.Library) \(英文\)，由 NuGet 封裝組成的其他封裝。  它提供的一組封裝，保證都能在多個 .NET 實作上運作，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
 
 不過，您的程式庫有極大的可能不會使用其包含的每個單一封裝。  在撰寫程式庫並透過 NuGet 散發時，最佳的作法是將相依性「修剪」至實際使用的封裝。  這會減少 NuGet 封裝的整體使用量。
 
