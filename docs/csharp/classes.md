@@ -2,8 +2,8 @@
 title: "類別 - C# 手冊"
 description: "了解類別類型和其建立方式"
 keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+author: stevehoag
+ms.author: shoag
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
@@ -26,7 +26,7 @@ ms.lasthandoff: 09/14/2017
 
 [!code-csharp[Reference Types](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。 配置以及由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的類型時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../standard/garbage-collection/gc.md)。  
+建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。 配置以及由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」**) 回收 Managed 堆積上的類型時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../standard/garbagecollection/gc.md)。  
   
 參考型別完全支援「繼承」，這是物件導向程式設計的基礎特性。 當您建立類別時，可以繼承自任何其他未定義為 [sealed](language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 09/14/2017
 這個程式碼會建立同時參照相同物件的兩個物件參考。 因此，任何透過 `object3` 進行的物件變更都會反映在後續使用 `object4` 時。 因為以傳址方式參照根據類別的物件，所以類別稱為參考型別。  
   
 ## <a name="class-inheritance"></a>類別繼承  
-使用「衍生」可完成繼承，這表示使用從中繼承資料和行為的「基底類別」來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
+使用「衍生」**可完成繼承，這表示使用從中繼承資料和行為的「基底類別」**來宣告類別。 附加冒號以及接著衍生類別名稱後面的基底類別名稱，以指定基底類別，與下面類似：  
   
 [!code-csharp[Inheritance](../../samples/snippets/csharp/concepts/classes/inheritance.cs)]  
   

@@ -39,24 +39,22 @@ ms.lasthandoff: 08/23/2017
 int? length = customers?.Length; // null if customers is null   
 Customer first = customers?[0];  // null if customers is null  
 int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
+  
 ```  
   
 ```vb  
-Dim length = customers?.Length  ' null if customers is null  
-Dim first as Customer = customers?(0)  ' null if customers is null  
-Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
+Dim length = customers?.Length  ‘’ null if customers is null  
+Dim first as Customer = customers?(0);  ‘’ null if customers is null  
+Dim count as Integer? = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
+  
 ```  
   
  最後一個範例示範使用最少運算的 Null 條件運算子。  如果條件式成員存取和索引作業鏈結中的一項作業傳回 Null，則鏈結的其餘部分會停止執行。  運算式中優先順序較低的其他作業會繼續進行。  例如，下列程式碼中的 `E` 會在第二行執行，而且 `??` 和 `==` 運算會執行。  在第一行，當左邊評估為非 Null 時，`??` 最少運算和 `E` 不會執行。
   
-```csharp
+```vb-c#  
 A?.B?.C?[0] ?? E  
 A?.B?.C?[0] == E  
-```
-
-```vb
-A?.B?.C?(0) ?? E  
-A?.B?.C?(0) == E  
+  
 ```  
   
  Null 條件成員存取的另一個用法是，使用更少的程式碼以執行緒安全的方式叫用委派。  舊方法需要如下的程式碼：  
@@ -64,31 +62,30 @@ A?.B?.C?(0) == E
 ```csharp  
 var handler = this.PropertyChanged;  
 if (handler != null)  
-    handler(…);
+    handler(…)  
+  
 ```  
   
 ```vb  
 Dim handler = AddressOf(Me.PropertyChanged)  
 If handler IsNot Nothing  
     Call handler(…)  
+  
 ```  
   
  新方法則更簡單：  
   
-```csharp
+```vb-c#  
 PropertyChanged?.Invoke(e)  
-```  
-
-```vb
-PropertyChanged?.Invoke(e)
+  
 ```  
   
- 新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。  
+ 新方法是安全執行緒，因為編譯器會產生程式碼只評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。  
   
  由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。  有太多模稜兩可剖析的情況可能會導致無法呼叫。  
   
 ## <a name="language-specifications"></a>語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
  如需詳細資訊，請參閱 [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)。  
   
@@ -98,4 +95,3 @@ PropertyChanged?.Invoke(e)
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)   
  [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)
-

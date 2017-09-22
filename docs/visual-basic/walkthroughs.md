@@ -14,8 +14,8 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
+author: stevehoag
+ms.author: shoag
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
   
  [撰寫非同步程式](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- 說明如何使用 [Async](../visual-basic/language-reference/modifiers/async.md) 和 [Await](../visual-basic/language-reference/operators/await-operator.md) 建立非同步解決方案。  
+ 說明如何使用 [Async](../visual-basic/language-reference/modifiers/async.md) 和 [Await](../visual-basic/language-reference/operators/await-operator.md) (已在 [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)] 中引入) 建立非同步方案。  
   
  [宣告和引發事件](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  說明如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中宣告和引發事件。  

@@ -116,7 +116,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  將此項目新增至 `<listeners>` 區段：  
   
-    ```xml  
+    ```  
     <add name="SimpleLog" />  
     ```  
   
@@ -124,7 +124,7 @@ ms.lasthandoff: 07/28/2017
   
 5.  將此項目加入至該 `<sharedListeners>` 區段︰  
   
-    ```xml  
+    ```  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   

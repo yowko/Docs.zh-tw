@@ -1,5 +1,5 @@
 ---
-title: "使用 .NET Framework 開發用戶端應用程式"
+title: "使用 .NET Framework 開發用戶端應用程式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -67,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [開發指南](../../docs/framework/development-guide.md)   
  [如何：建立 Windows 傳統型應用程式](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)   
  [Windows 服務應用程式](../../docs/framework/windows-services/index.md)
-

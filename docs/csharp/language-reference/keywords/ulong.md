@@ -38,7 +38,6 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (C# 參考)
-
 `ulong` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數類型。  
   
 |類型|範圍|大小|.NET Framework 類型|  
@@ -75,14 +74,14 @@ ms.lasthandoff: 07/28/2017
   
  後置詞的常見用法是搭配呼叫多載方法。 例如，請考慮使用下列使用 `ulong` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
-```csharp  
+```  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  搭配使用後置詞與 `ulong` 參數時，可以保證呼叫正確的類型，例如：  
   
-```csharp  
+```  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -92,7 +91,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  沒有從 `ulong` 轉換為任意整數類型的隱含轉換。 例如，下列陳述式會在未明確轉換的情況下產生編譯器錯誤：  
   
-```csharp  
+```  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -100,7 +99,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  同時，沒有從浮點類型轉換為 `ulong` 的隱含轉換。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
   
-```csharp  
+```  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  

@@ -38,51 +38,51 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="debug-c-compiler-options"></a>/debug (C# 編譯器選項)
-**/debug** 選項可讓編譯器產生偵錯資訊，並將它放在一或多個輸出檔案中。  
+# /debug (C# Compiler Options)
+**\/debug** 選項會讓編譯器產生偵錯資訊，並將其置於輸出檔中。  
   
-## <a name="syntax"></a>語法  
+## 語法  
   
-```console  
+```  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
   
-## <a name="arguments"></a>引數  
+## 引數  
  `+` &#124; `-`  
- 指定 `+` 或 **/debug** 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (.pdb 檔案) 中。 指定 `-` (當您未指定 **/debug** 時，它就會生效) 將不會建立任何偵錯資訊。  
+ 指定 `+` \(或者只是 **\/debug**\) 會讓編譯器產生偵錯資訊，並將該資訊置於程式資料庫 \(.pdb 檔案\) 中。  指定 `-` \(如果沒有指定 **\/debug** 則生效\) 就不會建立偵錯資訊。  
   
  `full` &#124; `pdbonly`  
- 指定編譯器所產生的偵錯資訊類型。 完整引數 (當您未指定 **/debug:pdbonly** 時，它就會生效) 允許將偵錯工具附加至執行中的程式。 指定 pdbonly 讓原始程式碼在偵錯工具中啟動程式時進行偵錯，但只有在將執行中的程式附加到偵錯工具時，才會顯示組譯工具。  
+ 指定編譯器所產生的偵錯資訊類型。  此 full 引數 \(它會在您沒有指定 **\/debug:pdbonly** 時生效\) 會啟用附加偵錯工具到正在執行的程式。  指定 pdbonly 可以讓程式在偵錯工具中啟動時進行原始程式碼偵錯，但是如果執行的程式是附加到偵錯工具，則只會顯示組合語言。  
   
-## <a name="remarks"></a>備註  
- 若要建立偵錯組建，請使用此選項。 如果未指定 **/debug**、**/debug+** 或 **/debug:full**，您將無法偵錯程式的輸出檔案。  
+## 備註  
+ 請使用這個選項來建立偵錯組建。  如果未指定 **\/debug**、**\/debug\+** 或 **\/debug:full**，您將無法對程式的輸出檔進行偵錯。  
   
- 如果您使用 **/debug:full**，請注意會對 JIT 最佳化程式碼速度和大小造成某種程度的影響，以及對使用 **/debug:full** 的程式碼品質造成某種程度的影響。 建議使用 **/debug:pdbonly** 或沒有 PDB 可以產生發行程式碼。  
+ 請注意，如果您使用 **\/debug:full**，會影響 JIT 最佳化程式碼的速度與大小，並且對使用 **\/debug:full** 的程式碼品質造成些許影響。  建議您使用 **\/debug:pdbonly** 或不使用 PDB 檔來產生發行程式碼。  
   
 > [!NOTE]
->  **/debug:pdbonly** 與 **/debug:full** 之間的一項差異在於使用 **/debug:full** 時，編譯器會發出 <xref:System.Diagnostics.DebuggableAttribute>，以用來告知 JIT 編譯器有偵錯資訊可用。 因此，如果使用 **/debug:full**，則會在程式碼包含設定為 false 的 <xref:System.Diagnostics.DebuggableAttribute> 時收到錯誤。  
+>  **\/debug:pdbonly** 和 **\/debug:full** 之間的其中一項差異在於，編譯器使用 **\/debug:full** 發出 <xref:System.Diagnostics.DebuggableAttribute>，用來告知 JIT 編譯器已可取得偵錯資訊。  因此，如果您使用 **\/debug:full** 且程式碼中的 <xref:System.Diagnostics.DebuggableAttribute> 設定為 false，便會發生這個錯誤。  
   
- 如需如何設定應用程式偵錯效能的詳細資訊，請參閱[使映像偵錯更容易](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。  
+ 如需如何設定應用程式偵錯效能的相關資訊，請參閱[使映像偵錯更容易](../Topic/Making%20an%20Image%20Easier%20to%20Debug.md)。  
   
- 若要變更 .pdb 檔案的位置，請參閱 [/pdb (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)。  
+ 若要變更 .pdb 檔案的位置，請參閱 [\/pdb \(Specify Debug Symbol File\)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)。  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
+### 在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1.  開啟專案的 \[**屬性**\] 頁面。  
   
-2.  按一下 [建置] 屬性頁面。  
+2.  按一下 \[**建置**\] 屬性頁。  
   
-3.  按一下 [ **進階** ] 按鈕。  
+3.  按一下 \[**進階**\] 按鈕。  
   
-4.  修改 [偵錯資訊] 屬性。  
+4.  修改 \[**偵錯資訊**\] 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   
-## <a name="example"></a>範例  
- 將偵錯資訊放入輸出檔案 `app.pdb` 中：  
+## 範例  
+ 將偵錯資訊放入輸出檔 `app.pdb`：  
   
-```console  
+```  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   

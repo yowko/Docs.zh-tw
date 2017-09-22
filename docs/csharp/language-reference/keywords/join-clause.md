@@ -100,7 +100,7 @@ ms.lasthandoff: 07/28/2017
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>備註  
- 如果 `join` 子句沒有後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 如果 `join` 子句後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
+ 後面沒有 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 後面接著 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   

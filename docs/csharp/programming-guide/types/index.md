@@ -213,3 +213,11 @@ stringList.Add(4);
  [XML 資料型別轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)   
  [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)
 
+## <a name="c-language-specification"></a>C# 語言規格  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+  
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
+ [XML 資料型別轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)   
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)

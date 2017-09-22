@@ -44,7 +44,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="in-this-section"></a>本章節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- 說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 建立非同步解決方案。  
+ 說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) (已在 [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)] 中引入) 建立非同步方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  顯示如何建立 [!INCLUDE[wrt](~/includes/wrt-md.md)]類型，並將其封裝為 [!INCLUDE[wrt](~/includes/wrt-md.md)]元件，然後從 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式呼叫元件，而應用程式使用 JavaScript 針對 Windows 所建置。  

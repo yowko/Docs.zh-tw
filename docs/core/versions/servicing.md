@@ -29,4 +29,3 @@ ms.lasthandoff: 08/11/2017
 > 深入了解如何參與 [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)。
 >
     
-

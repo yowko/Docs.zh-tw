@@ -57,13 +57,13 @@ ms.lasthandoff: 09/05/2017
   
     -   [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   在用戶端應用程式上部署 .NET Framework (適用於開發人員)：  
   
-    -   在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)  
+    -   在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield)  
   
-    -   [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
+    -   [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
   
     -   [建立 WiX 安裝套件](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 09/05/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|  
-|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|  
+|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論可以避免能導致 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 及其他錯誤之類型識別問題的方法。|  
 |[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|  
 |[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|  
 |[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|  

@@ -31,8 +31,6 @@ ms.lasthandoff: 07/28/2017
 
 C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
-
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 
 列舉集合很簡單︰`foreach` 關鍵字會列舉集合，並對集合中的每個項目執行一次內嵌陳述式：
@@ -50,7 +48,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>具有迭代器方法的列舉來源
 
-C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。 
+C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」**。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。 
 
 您可以撰寫這個方法，以產生從 0 到 9 的整數序列：
 

@@ -55,17 +55,17 @@ CLI 工具已透過兩種主要方式進行封裝：
 下表顯示 DNX/DNU 命令和 CLI 對應項目之間的對應。
 
 
-| DNX 命令                       | CLI 命令       | 描述                                                                                                       |
-|--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
-| dnx run                           | dotnet run        | 從來源執行程式碼。                                                                                             |
-| dnu build                         | dotnet build      | 建置您程式碼的 IL 二進位檔。                                                                                  |
-| dnu pack                          | dotnet pack       | 封裝您程式碼的 NuGet 套件。                                                                          |
-| dnx \[command] (例如 "dnx web")   | N/A\*             | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                       |
-| dnu install                       | N/A\*             | 在 DNX 環境中，將套件安裝為相依性。                                                              |
-| dnu restore                       | dotnet restore    | 還原您在 project.json 中指定的相依性。                                                              |
-| dnu publish                       | dotnet publish    | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。    |
-| dnu wrap                          | N/A\*             | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                      |
-| dnu 命令                      | N/A\*             | 在 DNX 環境中，管理已全域安裝的命令。                                                             |
+| DNX 命令                        | CLI 命令        | 描述                                                                                                         |
+|--------------------------------    |----------------    |-----------------------------------------------------------------------------------------------------------------    |
+| dnx run                            | dotnet run         | 從來源執行程式碼。                                                                                               |
+| dnu build                          | dotnet build       | 建置您程式碼的 IL 二進位檔。                                                                                    |
+| dnu pack                           | dotnet pack        | 封裝您程式碼的 NuGet 套件。                                                                            |
+| dnx \[command] (例如 "dnx web")     | N/A\*              | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                         |
+| dnu install                        | N/A\*              | 在 DNX 環境中，將套件安裝為相依性。                                                                |
+| dnu restore                        | dotnet restore     | 還原您在 project.json 中指定的相依性。                                                                |
+| dnu publish                        | dotnet publish     | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。     |
+| dnu wrap                           | N/A\*              | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                        |
+| dnu 命令                       | N/A\*              | 在 DNX 環境中，管理已全域安裝的命令。                                                               |
 
 (\*) - CLI 的設計並不支援這些功能。 
 
@@ -142,4 +142,3 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 ```
 
 執行 `dotnet build` 時，會將任何最終建置錯誤顯示出來，但不應該有太多錯誤。 建置好程式碼並順利執行後，您可以再使用執行器測試一下。 執行 `dotnet <path-to-your-assembly>`，並查看其執行狀況。
-

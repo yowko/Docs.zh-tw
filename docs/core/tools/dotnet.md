@@ -20,7 +20,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="name"></a>名稱
 
-`dotnet` - 用於執行命令列命令的一般驅動器。
+`dotnet` - 用於執行命令列命令的一般驅動程式。
 
 ## <a name="synopsis"></a>概要
 
@@ -36,7 +36,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>說明
 
-`dotnet` 是命令列介面 (CLI) 工具鏈的通用驅動器。 它會自行叫用，提供簡短的使用方式指示。
+`dotnet` 是命令列介面 (CLI) 工具鏈的泛型驅動程式。 它會自行叫用，提供簡短的使用方式指示。
 
 每個特定功能都是當成命令來實作。 若要使用這個功能，請在 `dotnet` 之後指定這個命令 (例如 [`dotnet build`](dotnet-build.md))。 這個命令後面的所有引數都是它自己的引數。
 

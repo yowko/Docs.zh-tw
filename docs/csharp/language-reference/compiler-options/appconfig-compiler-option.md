@@ -36,35 +36,35 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="appconfig-c-compiler-options"></a>/appconfig (C# 編譯器選項)
-**/appconfig** 編譯器選項可讓 C# 應用程式將組件應用程式組態檔 (app.config) 的位置指定到組件繫結時間的 Common Language Runtime (CLR)。  
+# /appconfig (C# Compiler Options)
+**\/appconfig** 編譯器選項可讓 C\# 應用程式在組件繫結階段將組件的應用程式組態 \(app.config\) 檔案位置指定至 Common Language Runtime \(CLR\)。  
   
-## <a name="syntax"></a>語法  
+## 語法  
   
-```console  
+```  
 /appconfig:file  
 ```  
   
-## <a name="arguments"></a>引數  
+## Arguments  
  `file`  
- 必要項。 包含組件繫結設定的應用程式組態檔。  
+ 必要項。  應用程式組態檔包含組件繫結設定。  
   
-## <a name="remarks"></a>備註  
- **/appconfig** 的其中一種用法就是進階案例；在此案例中，組件必須同時參考特定參考組件的 .NET Framework 版本以及 .NET Framework for Silverlight 版本。 例如，以 Windows Presentation Foundation (WPF) 撰寫的 XAML 設計工具，可能必須同時參考 WPF Desktop (設計工具的使用者介面) 和 Silverlight 所附的 WPF 子集。 相同的設計工具組件必須存取這兩個組件。 根據預設，不同的參考會導致編譯器錯誤，因為組件繫結關係會將兩個組件視為對等項目。  
+## 備註  
+ **\/appconfig** 的用法之一就是進階案例，在此案例中組件必須同時參考特定參考組件的 .NET Framework 版本以及 Silverlight 版的 .NET Framework 版本。  例如，以 Windows Presentation Foundation \(WPF\) 撰寫的 XAML 設計工具可能需要參考 WPF 桌面 \(適合設計人員的使用者介面\) 與 Silverlight 隨附的 WPF 的子集。  相同的設計工具組件必須存取這兩個組件。  預設情況下，不同的參考會造成編譯器錯誤，因為組件繫結會將兩個組件視為相等。  
   
- **/appconfig** 編譯器選項可讓您使用 `<supportPortability>` 標記指定停用預設行為的 app.config 檔案位置，如下例所示。  
+ **\/appconfig** 編譯器選項可讓您使用 `<supportPortability>` 標記來指定會停用預設行為的 app.config 檔案位置，如下例所示。  
   
  `<supportPortability PKT="7cec85d7bea7798e" enable="false"/>`  
   
- 編譯器會將檔案位置傳遞至 CLR 的組件繫結關係邏輯。  
+ 編譯器會將檔案的位置傳遞到 CLR 的組件繫結邏輯。  
   
 > [!NOTE]
->  如果使用 Microsoft Build Engine (MSBuild) 來建置應用程式，您可以將屬性標記新增至 .csproj 檔案，以設定 **/appconfig** 編譯器選項。 若要使用專案中已設定的 app.config 檔案，請將屬性標記 `<UseAppConfigForCompiler>` 新增至 .csproj 檔案，並將其值設定為 `true`。 若要指定不同的 app.config 檔案，請新增屬性標記 `<AppConfigForCompiler>` 並將其值設定為檔案位置。  
+>  如果您使用 Microsoft Build Engine \(MSBuild）組建應用程式，可以透過將屬性標記新增至 .csproj 檔案來設定  **\/appconfig**編譯器選項。  若要使用專案中已設定的 app.config 檔，請將屬性標記`<UseAppConfigForCompiler>` 加入至 .csproj 檔，並將其值設定為 `true`。  若要指定不同的 app.config 檔，請加入屬性標記`<AppConfigForCompiler>`，並將其值設定為檔案的位置。  
   
-## <a name="example"></a>範例  
- 下例示範的 app.config 檔案，可讓應用程式同時參考存在於兩個實作中之任何 .NET Framework 組件的 .NET Framework 實作和 .NET Framework for Silverlight 實作。 **/appconfig** 編譯器選項會指定此 app.config 檔案的位置。  
+## 範例  
+ 下列範例示範 app.config 檔案，該檔案讓應用程式能夠參考 .NET Framework 實作，和存在於兩個實作中任何 .NET Framework 組件其 Silverlight 實作的 .NET Framework。  **\/appconfig** 編譯器選項可指定這個 app.config 檔案的位置。  
   
-```xml  
+```  
 <configuration>  
       <runtime>  
       <assemblyBinding>  

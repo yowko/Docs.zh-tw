@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 類別庫中的過時功能"
+title: ".NET Framework 類別庫中的過時功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,10 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7afe9496ca116ed0c330c4ff9e7c3a855249cf14
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 68c71e26ac5e5a1872ac006d02adec84c1fb63da
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 類別庫中的過時功能
@@ -55,7 +54,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  將下列內容加入組態檔。  
   
-    ```xml  
+    ```  
     <configuration>  
        <startup>   
           <supportedRuntime version="v4.0" />  
@@ -92,4 +91,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

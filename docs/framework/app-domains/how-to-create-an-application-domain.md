@@ -23,15 +23,17 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-an-application-domain"></a>如何：建立應用程式定義域
-Common Language Runtime Host 會在有需要時自動建立應用程式定義域。 不過，您可以建立自己的應用程式定義域，將它們載入您想要自行管理的組件中。 您也可以建立要從中執行程式碼的應用程式定義域。  
+# 如何：建立應用程式定義域
+Common Language Runtime 主應用程式會在需要時自動建立應用程式定義域。  然而，您可以建立自己的應用程式定義域，並將它們載入那些您要自行管理的組件。  您也可以建立應用程式定義域並從該應用程式定義域中執行程式碼。  
   
- 使用 <xref:System.AppDomain?displayProperty=fullName> 類別的其中一個多載 **CreateDomain** 方法，建立新的應用程式定義域。 您可以提供應用程式定義域的名稱，並依該名稱參考它。  
+ 您可以使用 <xref:System.AppDomain?displayProperty=fullName> 類別中 **CreateDomain** 方法的其中一個多載，以建立新的應用程式定義域。  您可以提供應用程式定義域名稱，並可依該名稱進行參考。  
   
- 以下範例會建立新的應用程式定義域並指派名稱 `MyDomain`，然後將主機網域和新建子應用程式定義域的名稱列印至主控台。  
+ 下列範例建立新的應用程式定義域、將之命名為 `MyDomain`，然後將主應用程式定義域名稱和新建立的子應用程式定義域列印至主控台 \(Console\)。  
   
-## <a name="example"></a>範例  
- [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)] [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)] [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
+## 範例  
+ [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)]
+ [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
+ [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱  
  [使用應用程式定義域設計程式](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   

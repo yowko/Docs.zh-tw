@@ -21,21 +21,21 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="full-code-listings"></a>完整程式碼清單
-本主題包含使用[操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)處理器的應用程式完整程式碼清單。  
+# Full Code Listings
+本主題針對使用 [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) 處理器的應用程式，包含完整程式碼清單。  
   
-## <a name="gamepiece-class"></a>GamePiece 類別  
- 下列程式碼顯示整個 **GamePiece** 類別。  
+## GamePiece 類別  
+ 下列程式碼會顯示整個 **GamePiece** 類別。  
   
  [!code-csharp[ManipulationXNA#_GamePieceClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiececlass)]  
   
-## <a name="gamepiececollection-class"></a>GamePieceCollection 類別  
- 下列程式碼顯示整個 **GamePieceCollection** 類別。  
+## GamePieceCollection 類別  
+ 下列程式碼會顯示整個 **GamePieceCollection** 類別。  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollectionClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollectionclass)]  
   
-## <a name="game1-class"></a>Game1 類別  
- 下列程式碼顯示整個 **Game1** 類別。  
+## Game1 類別  
+ 下列程式碼會顯示整個 **Game1** 類別。  
   
  [!code-csharp[ManipulationXNA#_Game1Class](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1class)]  
   

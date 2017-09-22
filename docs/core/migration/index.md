@@ -53,7 +53,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 已移轉的檔案 (*project.json*、*global.json* 和 *.xproj*) 將會移至「備份」資料夾。
 
 > [!NOTE]
-> 如果您使用 Visual Studio Code，`dotnet migrate` 命令不會修改 Visual Studio Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。 這也適用於使用 Project Ryder 或是 Visual Studio 以外的任何編輯器或整合式開發環境 (IDE) 的情況。 
+> 如果您使用 VS Code，`dotnet migrate` 命令不會修改 VS Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。 這也適用於使用 Project Ryder 或是 Visual Studio 以外的任何編輯器或整合式開發環境 (IDE) 的情況。 
 
 如需 project.json 和 csproj 格式的比較，請參閱 [project.json 與 csproj 屬性的對應](../tools/project-json-to-csproj.md)。
 

@@ -15,21 +15,20 @@
         ]
       },
       {
-        "files": [ "**/*.md" ],
+        "files": [ 
+          "**/*.md" 
+        ],
         "src": "docs",
         "dest": ".",
         "exclude": [
+          "toc.md",
           "**/includes/**",
           "***/contributing.md",
           "framework/add-ins/**",
           "framework/additional-apis/**",
-          "framework/app-domains/**",
-          "framework/common-client-technologies/**",
           "framework/configure-apps/**",
           "framework/data/**",
           "framework/debug-trace-profile/**",
-          "framework/deployment/**",
-          "framework/install/**",
           "framework/interop/**",
           "framework/mef/**",
           "framework/misc/**",
@@ -40,10 +39,9 @@
           "framework/resources/**",
           "framework/security/**",
           "framework/serialization/**",
-          "framework/tools/**",
           "framework/ui-automation/**",
           "framework/unmanaged-api/**",
-          "framework/wcf/diagnostics/**",
+          "framework/wcf/**",
           "framework/windows-services/**",
           "framework/windows-workflow-foundation/**",
           "framework/winforms/**",
@@ -79,7 +77,7 @@
         ]
       },
       {
-        "files": [ "toc.yml", "index.md" ]
+        "files": ["docs/toc.md",  "toc.yml", "index.md" ]
       }
     ],
     "resource": [

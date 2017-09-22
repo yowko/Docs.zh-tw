@@ -37,11 +37,11 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
-下列編譯器選項會依字母順序排序。 如需分類清單，請參閱[依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)。  
+# C# Compiler Options Listed Alphabetically
+下列編譯器選項會依字母順序排序。  如需分類清單，請參閱[C\# Compiler Options Listed by Category](../../../csharp/language-reference/compiler-options/listed-by-category.md)。  
   
 |選項|用途|  
-|------------|-------------|  
+|--------|--------|  
 |[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|讀取回應檔以取得更多選項。|  
 |[/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|將使用方式訊息顯示到 stdout。|  
 |/additionalfile|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  

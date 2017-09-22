@@ -15,7 +15,7 @@ ms.lasthandoff: 08/05/2017
 
 ---
 
-# <a name="install-the-net-framework-on-windows-10"></a>在 Windows 10 上安裝 .NET Framework
+# <a name="installing-the-net-framework-on-windows-10"></a>在 Windows 10 上安裝 .NET Framework
 
 您可能需要 .NET Framework，才能在 Windows 10 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/05/2017
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。
+請依照指示[在 Windows 10 上安裝 .NET Framework 3.5](dotnet-35-windows-10.md)。 
 
 .NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 

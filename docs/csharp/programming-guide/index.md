@@ -59,19 +59,27 @@ ms.lasthandoff: 09/02/2017
 
  [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
   
- [介面](../../csharp/programming-guide/interfaces/index.md)  
-
- [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
+ [Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
   
- [委派](../../csharp/programming-guide/delegates/index.md)  
- 
+ [型別](../../csharp/programming-guide/types/index.md)  
+  
  [陣列](../../csharp/programming-guide/arrays/index.md)  
   
  [字串](../../csharp/programming-guide/strings/index.md)  
   
+ [陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+  
+ [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
+  
  [屬性](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
+ [介面](../../csharp/programming-guide/interfaces/index.md)  
+  
  [索引子](../../csharp/programming-guide/indexers/index.md)  
+  
+ [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
+  
+ [委派](../../csharp/programming-guide/delegates/index.md)  
   
  [事件](../../csharp/programming-guide/events/index.md)  
   

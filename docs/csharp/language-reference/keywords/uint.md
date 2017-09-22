@@ -38,7 +38,6 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint (C# 參考)
-
 `uint` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數型別。  
   
 |類型|範圍|大小|.NET Framework 類型|  
@@ -76,13 +75,13 @@ ms.lasthandoff: 07/28/2017
 ## <a name="conversions"></a>轉換  
  有一項從 `uint` 轉換為 [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。 例如:   
   
-```csharp  
+```  
 float myFloat = 4294967290;   // OK: implicit conversion to float  
 ```  
   
  有一項從 [byte](../../../csharp/language-reference/keywords/byte.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md) 或 [char](../../../csharp/language-reference/keywords/char.md) 轉換為 `uint` 之預先定義的隱含轉換。 否則，您必須使用轉換。 例如，下列指派陳述式會在未進行轉換的情況下產生編譯錯誤：  
   
-```csharp  
+```  
 long aLong = 22;  
 // Error -- no implicit conversion from long:  
 uint uInt1 = aLong;   
@@ -92,14 +91,14 @@ uint uInt2 = (uint)aLong;
   
  另請注意，沒有從浮點類型轉換為 `uint` 的隱含轉換。 例如，下列陳述式會在未使用明確轉換的情況下產生編譯器錯誤：  
   
-```csharp  
+```  
 // Error -- no implicit conversion from double:  
 uint x = 3.0;  
 // OK -- explicit conversion:  
 uint y = (uint)3.0;   
 ```  
   
- 如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
+ 如需混合浮點類型和整數型別之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
   
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
@@ -111,7 +110,7 @@ uint y = (uint)3.0;
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

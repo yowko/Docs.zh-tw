@@ -43,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="syntax"></a>語法  
   
-```console  
+```  
 /target:library  
 ```  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  建立 `in.dll` 以編譯 `in.cs`：  
   
-```console  
+```  
 csc /target:library in.cs  
 ```  
   

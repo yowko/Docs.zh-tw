@@ -112,13 +112,20 @@ Microsoft 的 .NET Core 散發是使用 [MICROSOFT .NET LIBRARY EULA](https://ak
 
 [.NET NuGet 套件](https://www.nuget.org/profiles/dotnetframework)使用相同的授權，但不啟用遙測 (請參閱[範圍](#scope))。
 
-> 2. 資料。 軟體可能會收集和您及您使用軟體之方式有關的資訊，並將該資訊傳送給 Microsoft。 Microsoft 可能會使用此資訊以改善產品與服務。 您可以前往 http://go.microsoft.com/fwlink/?LinkId=528096，以在說明文件及隱私權聲明中深入了解資料收集和使用方式的相關資訊。 使用軟體即代表您同意這些做法。
+```text
+2.      DATA.  The software may collect information about you and your use of
+the software, and send that to Microsoft. Microsoft may use this information
+to improve our products and services. You can learn more about data collection
+and use in the help documentation and the privacy statement at
+http://go.microsoft.com/fwlink/?LinkId=528096 . Your use of the software
+operates as your consent to these practices.
+```
 
 ## <a name="disclosure"></a>公開
 
 .NET Core CLI 工具會在您第一次執行其中一個命令時顯示下列文字 (例如，`dotnet restore`)。 文字可能略有不同，視執行中的 SDK 版本而定。 這個「第一次執行」經驗是 Microsoft 如何通知您有關資料收集。
 
-```console
+```text
 Welcome to .NET Core!
 ---------------------
 Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.

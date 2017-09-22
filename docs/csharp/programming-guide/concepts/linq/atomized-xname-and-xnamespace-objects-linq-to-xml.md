@@ -81,7 +81,7 @@ foreach (var z in query)
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <C1>1</C1>  
 <C1>1</C1>  
 ```  

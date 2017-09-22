@@ -53,7 +53,7 @@ ms.lasthandoff: 09/11/2017
 - [F# 指南](fsharp/index.md)
 - [Visual Basic 指南](visual-basic/index.md)
 
-此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
+此外，您可以瀏覽 [.NET API 參考](https://docs.microsoft.com/dotnet/api)。
 
 ## <a name="open-source"></a>開啟原始檔
 

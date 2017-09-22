@@ -216,7 +216,7 @@ ms.lasthandoff: 07/28/2017
      [!code-cs[csProgGuideCodingConventions#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_26.cs)]  
   
 ## <a name="security"></a>安全性  
- 請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
+ 請遵循[安全程式碼撰寫方針](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)中的指引。  
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   

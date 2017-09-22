@@ -37,10 +37,8 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
-每當建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)時，都會呼叫其建構函式。 類別或結構可有使用不同引數的多個建構函式。 建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。 如需詳細資訊和範例，請參閱[使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)和[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
-
-## <a name="default-constructors"></a>預設建構函式
+# 建構函式 (C# 程式設計手冊)
+每當建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)時，就會呼叫它的建構函式。  類別或結構可能會有使用不同引數的多個建構函式。  建構函式讓程式設計人員能夠設定預設值、限制具現化，以及撰寫靈活易讀的程式碼。  如需詳細資訊與範例，請參閱 [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)與 [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
   
 如不提供類別的建構函式，C# 預設會建立一個可具現化物件的建構函式，並將成員變數設定為預設值，如[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)中所列。 如不提供結構的建構函式，C# 會回覆「隱含的預設建構函式」，自動將實值型別的每個欄位初始化為其預設值，如[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)中所列。 如需詳細資訊及範例，請參閱[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
 
@@ -68,7 +66,9 @@ ms.lasthandoff: 07/28/2017
 
 如需詳細資訊及範例，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+ 靜態類別和結構也可以擁有建構函式。  如需詳細資訊與範例，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+  
+## 本章節內容  
  [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
   
  [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
@@ -79,10 +79,10 @@ ms.lasthandoff: 07/28/2017
   
  [如何：撰寫複製建構函式](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## 請參閱  
+ [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)   
  [為什麼初始設定式執行的順序與建構函式相反？第一部](http://go.microsoft.com/fwlink/?LinkId=112374)
 

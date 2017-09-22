@@ -15,8 +15,8 @@ helpviewer_keywords:
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
-author: rpetrusha
-ms.author: ronpet
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -126,17 +126,17 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  這項功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。  
   
-[字串內插補點](../../csharp/language-reference/keywords/interpolated-strings.md)  
+ [字串內插補點](../../csharp/language-reference/keywords/interpolated-strings.md)  
  您可以使用字串插值運算式來建構字串。  字串插值運算式類似包含運算式的範本字串。  對於引數而言，字串插值比[複合格式](../../standard/base-types/composite-format.md)更容易了解。  
   
-[Null 條件式成員存取和索引](../../csharp/language-reference/operators/null-conditional-operators.md)  
-您可以在執行成員存取 (`?.`) 或對 (`?[]`) 作業編製索引之前，透過非常精簡的語法來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  如果左運算元或物件參考為 Null，則作業會傳回 Null。  
+ [Null 條件式成員存取和索引](../../csharp/language-reference/operators/null-conditional-operators.md)  
+ 您可以在執行成員存取 (`?.`) 或對 (`?[]`) 作業編製索引之前，透過非常精簡的語法來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  如果左運算元或物件參考為 Null，則作業會傳回 Null。  
   
-[多行字串常值](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ [多行字串常值](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  字串常值可包含新行字元序列。  您不再需要使用 `<xml><![CDATA[...text with newlines...]]></xml>.Value` 的舊解決方法  
   
-註解  
-您可以將註解放到隱含行接續符號之後、初始設定式運算式之內和 LINQ 運算式詞彙之間。  
+ 註解  
+ 您可以將註解放到隱含行接續符號之後、初始設定式運算式之內和 LINQ 運算式詞彙之間。  
   
  更聰明的完整名稱解析  
  以程式碼 `Threading.Thread.Sleep(1000)` 為例，Visual Basic 之前會查詢命名空間 "Threading"，發現它在 System.Threading 和 System.Windows.Threading 之間模稜兩可，然後回報錯誤。  Visual Basic 現在會同時考慮這兩種可能的命名空間。  如果您顯示完成清單，Visual Studio 編輯器會在完成清單中列出這兩種類型的成員。  
@@ -186,6 +186,7 @@ End Interface
   
 Interface IMock2 : Inherits ICustomer, ITime  
 End Interface  
+  
 ```  
   
  現在，編譯器會使用一般多載解析規則來選擇要呼叫的最適合 `GetDetails`，而且您可以在 Visual Basic 中宣告介面關聯性 (如範例所示)。  

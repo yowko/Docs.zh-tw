@@ -39,38 +39,40 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：將事件資訊寫入至文字檔 (Visual Basic)
-您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 這個範例示範如何使用 `My.Application.Log.WriteEntry` 方法將追蹤資訊記錄到記錄檔。  
+# How to: Write Event Information to a Text File (Visual Basic)
+[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+
+您可以使用 `My.Application.Log` 和 `My.Log` 物件，記錄在應用程式中發生的事件資訊。  這個範例會顯示如何使用 `My.Application.Log.WriteEntry` 方法，將追蹤資訊記錄到記錄檔。  
   
-### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式  
+### 若要加入和設定檔案的記錄檔接聽程式  
   
-1.  在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。  
+1.  以滑鼠右鍵按一下 \[**方案總管**\] 的 \[app.config\]，並選擇 \[**開啟**\]。  
   
-     \-或-  
+     \-或\-  
   
-     如果沒有 app.config 檔案︰  
+     如果沒有 app.config 檔：  
   
-    1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
+    1.  在 \[**專案**\] 功能表中，選擇 \[**加入新項目**\]。  
   
     2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入] 。  
+    3.  按一下 \[**加入**\]。  
   
-2.  在應用程式組態檔中找出 `<listeners>` 區段。  
+2.  在應用程式組態檔中尋找 `<listeners>` 區段。  
   
-     您會找到名稱屬性為 "DefaultSource" 之 \<source> 區段 (位於最上層 \<configuration> 區段底下 \<system.diagnostics> 區段中) 中的 \<listeners> 區段。  
+     您可以利用名稱屬性 \(Attribute\) "DefaultSource"，在 \<source\> 區段中找到 \<listeners\> 區段，以巢狀方式放在最上層 \<configuration\> 區段的 \<system.diagnostics\> 區段下。  
   
-3.  將此項目加入至該 `<listeners>` 區段︰  
+3.  將這個項目加入至此 `<listeners>` 區段：  
   
-    ```xml  
+    ```  
     <add name="FileLogListener" />  
     ```  
   
-4.  找出巢狀於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<sharedListeners>` 區段。  
+4.  在以巢狀方式放在最上層 `<configuration>` 區段下的 `<system.diagnostics>` 區段中，尋找 `<sharedListeners>` 區段。  
   
-5.  將此項目加入至該 `<sharedListeners>` 區段︰  
+5.  將這個項目加入至此 `<sharedListeners>` 區段：  
   
-    ```xml  
+    ```  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
@@ -83,15 +85,15 @@ ms.lasthandoff: 07/28/2017
      將 `customlocation` 屬性的值變更為記錄檔目錄。  
   
     > [!NOTE]
-    >  若要設定 listener 屬性的值，請使用與屬性 (property) 同名的屬性 (attribute)，而名稱中的所有字母都是小寫。 例如，`location` 和 `customlocation` 屬性會設定 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 屬性的值。  
+    >  若要設定接聽程式屬性 \(Property\) 的值，請使用與屬性 \(Property\) 擁有相同名稱的屬性 \(Attribute\)，而該名稱中的所有字母皆為小寫。  例如，`location` 和 `customlocation` 屬性 \(Attribute\) 都會設定 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> 和 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> 屬性 \(Property\) 的值。  
   
-### <a name="to-write-event-information-to-the-file-log"></a>將事件資訊寫入檔案記錄檔  
+### 若要將事件資訊寫入檔案記錄檔  
   
--   使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法，將資訊寫入檔案記錄檔。 如需詳細資訊，請參閱[如何：寫入記錄訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。  
+-   使用 `My.Application.Log.WriteEntry` 或 `My.Application.Log.WriteException` 方法，將資訊寫入檔案記錄檔。  如需詳細資訊，請參閱 [如何：寫入記錄訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)和 [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)。  
   
-     設定組件的檔案記錄檔接聽程式之後，接聽程式會接收 `My.Application.Log` 從該組件寫入的所有訊息。  
+     設定組件 \(Assembly\) 的檔案記錄檔接聽程式後，會從該組件中收到 `My.Application.Log` 寫入的所有訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## 請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   

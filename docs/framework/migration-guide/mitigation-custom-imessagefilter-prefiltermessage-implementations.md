@@ -1,5 +1,5 @@
 ---
-title: "風險降低：自訂 IMessageFilter.PreFilterMessage 實作"
+title: "風險降低：自訂 IMessageFilter.PreFilterMessage 實作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework

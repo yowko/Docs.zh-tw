@@ -209,7 +209,7 @@ dotnet test [-h|--help]
 
 | 運算子 | 函式 |
 | :------: | :------: |
-| <code>&#124;</code>      | 或       |
+| `|`      | 或       |
 | `&`      | AND      |
 
 使用條件運算子時，您可以用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。

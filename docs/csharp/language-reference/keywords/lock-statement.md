@@ -58,6 +58,7 @@ class Account
         }  
     }  
 }  
+  
 ```  
   
  如需詳細資訊，請參閱[執行緒同步處理](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)。  
@@ -103,7 +104,6 @@ class Account
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)   
  @System.Threading.Monitor   
- [Interlocked 作業](../../../standard/threading/interlocked-operations.md)   
- [AutoResetEvent](../../../standard/threading/autoresetevent.md)   
+ [Interlocked 作業](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
+ [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
  [執行緒同步處理](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)
-

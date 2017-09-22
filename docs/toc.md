@@ -4,7 +4,6 @@
 # [.NET 指南](standard/index.md)
 ## [開始使用 .NET](standard/get-started.md)
 ## [.NET 教學課程](standard/tour.md)
-## [.NET 微服務：容器化 .NET 應用程式的架構](standard/microservices-architecture/)
 ## [.NET 架構元件](standard/components.md)
 ## [.NET Standard](standard/net-standard.md)
 ## [目標架構](standard/frameworks.md)

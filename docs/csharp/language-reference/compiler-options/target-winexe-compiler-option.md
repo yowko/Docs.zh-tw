@@ -43,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="syntax"></a>語法  
   
-```console  
+```  
 /target:winexe  
 ```  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  將 `in.cs` 編譯為 Windows 程式︰  
   
-```console  
+```  
 csc /target:winexe in.cs  
 ```  
   

@@ -15,7 +15,7 @@ ms.lasthandoff: 08/05/2017
 
 ---
 
-# <a name="install-the-net-framework-on-windows-7-sp1"></a>在 Windows 7 SP1 上安裝 .NET Framework
+# <a name="installing-the-net-framework-on-windows-7-sp1"></a>在 Windows 7 SP1 上安裝 .NET Framework
 
 您可能需要 .NET Framework，才能在 Windows 7 SP1 上執行應用程式。 您可以使用下列指示來安裝最新的支援版本。 這些指示取決於您所需的 .NET Framework 版本。
 
@@ -36,4 +36,3 @@ ms.lasthandoff: 08/05/2017
 ## <a name="help"></a>說明
 
 如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework)。
-

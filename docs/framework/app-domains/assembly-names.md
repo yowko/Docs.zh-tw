@@ -24,54 +24,55 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="assembly-names"></a>組件名稱
-組件的名稱儲存在中繼資料內，而且對組件範圍具有重大影響，並供應用程式使用。 強式名稱組件的完整名稱包括組件的名稱、文化特性、公開金鑰和版本號碼。 這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得載入的組件。  
+# 組件名稱
+組件名稱存放在中繼資料中，對於組件的範圍 \(Scope\) 和應用程式的使用有重大的影響。  強式名稱的組件具有包含組件名稱、文化特性、公開金鑰和版本號碼的完整名稱。  這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得的載入組件。  
   
- 執行階段會使用這項資訊來尋找組件，並區別它與其他同名的組件。 例如，稱為 `myTypes` 的強式名稱組件的完整名稱可能如下：  
+ 執行階段會使用這項資訊找出組件，並和其他有相同名稱的組件區別。  例如，稱為 `myTypes` 的強式名稱組件可能會有下列完整名稱：  
   
 ```  
 myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, ProcessorArchitecture=msil  
 ```  
   
 > [!NOTE]
->  處理器架構會新增至 .NET Framework 2.0 版中的組件身分識別，以允許組件的處理器特定版本。 您可以建立組件的版本，其身分識別只有處理器架構不同，例如 32 位元和 64 位元處理器特定版本。 強式名稱不需要處理器架構。 如需詳細資訊，請參閱<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>。  
+>  處理器架構會加入到 .NET Framework 2.0 版中的組件識別，以允許處理器特定的組件版本。  您可以建立不同組件版本，讓這些版本的識別之間只有處理器架構不同，例如，32 位元和 64 位元的處理器特定版本。  強式名稱不需要處理器架構。  如需詳細資訊，請參閱<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>。  
   
- 在此範例中，完整名稱指出 `myTypes` 組件具有含公開金鑰權杖的強式名稱、具有文化特性值「美式英文」，以及具有版本號碼 1.0.1234.0。 它的處理器架構為 "msil"，表示它將是根據作業系統和處理器編譯成 32 位元程式碼或 64 位元程式碼的 Just-In-Time (JIT)。  
+ 在這個範例中，完整名稱表示 `myTypes` 組件的強式名稱有公開金鑰語彙基元、文化特性值為英文 \(美國\)，以及版本號碼為 1.0.1234.0。  它的處理器架構為 "msil"，這表示它會是編譯成 32 位元或 64 位元的 Just\-in\-Time \(JIT\) 程式碼 \(根據作業系統和處理器而定\)。  
   
- 要求組件中類型的程式碼必須使用完整組件名稱。 這稱為完整繫結。 在 .NET Framework 中參考組件時，不允許只指定組件名稱的部分繫結。  
+ 在組件中要求型別的程式碼必須使用完整的組件名稱。  這稱為完整繫結。  在 .NET Framework 中參考組件時，則不允許僅指定組件名稱的部分繫結。  
   
- 構成 .NET Framework 之組件的所有組件參考也必須包含組件的完整名稱。 例如，參考 1.0 版的 System.Data .NET Framework 組件會包括：  
+ 構成 .NET Framework 的組件的所有組件參考必須包含組件的完整名稱。  例如，若要參考版本 1.0 的 System.Data .NET Framework 組件將包括：  
   
 ```  
+  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  
+  
 ```  
   
- 請注意，版本會對應到 .NET Framework 1.0 版隨附之所有 .NET Framework 組件的版本號碼。 針對 .NET Framework 組件，文化特性值一律為中性，而且公開金鑰與上述範例所示相同。  
+ 請注意，版本和隨附於 .NET Framework 版本 1.0 的所有 .NET Framework 組件版本號碼對應。  對於 .NET Framework 組件，文化特性值永遠是中性的，公開金鑰則和上述範例中顯示的相同。  
   
- 例如，若要在組態檔中新增組件參考來設定追蹤接聽程式，您將包括系統 .NET Framework 組件的完整名稱：  
+ 例如，若要在組態檔中加入組件參考以設定追蹤接聽程式，您會包括系統 .NET Framework 組件的完整名稱：  
   
-```xml  
+```  
 <add name="myListener" type="System.Diagnostics.TextWriterTraceListener, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" initializeData="c:\myListener.log" />  
 ```  
   
 > [!NOTE]
->  繫結至組件時，執行階段會將組件名稱視為不區分大小寫，但會保留組件名稱中所使用的大小寫。 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中的數個工具會將組件名稱處理為區分大小寫。 為了獲得最佳結果，請如同其區分大小寫一樣地管理組件名稱。  
+>  執行階段繫結至組件時，不會區分組件名稱的大小寫，但是會保留組件名稱中所使用的大小寫。  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 中有幾項工具會區分組件名稱的大小寫。  如果要取得最佳效果，請區分組件名稱的大小寫。  
   
-## <a name="naming-application-components"></a>命名應用程式元件  
- 判斷組件的身分識別時，執行階段不會考慮檔案名稱。 執行階段必須知道包含組件名稱、版本、文化特性和強式名稱的組件身分識別。  
+## 命名應用程式元件  
+ 判斷組件識別 \(Identity\) 時，執行階段並不會考慮到檔名。  對執行階段而言，由組件名稱、版本、文化特性和強式名稱所組成的組件識別必須非常清楚。  
   
- 例如，如果您有稱為 myAssembly.exe 的組件可參考稱為 myAssembly.dll 的組件，則會在執行 myAssembly.exe 時正確地進行繫結。 不過，如果另一個應用程式使用 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 方法執行 myAssembly.exe，則執行階段會判斷在 myAssembly.exe 要求繫結至 "myAssembly" 時已經載入 "myAssembly"。 在此情況下，永遠不會載入 myAssembly.dll。 因為 myAssembly.exe 未包含所要求的類型，所以會發生 <xref:System.TypeLoadException>。  
+ 例如，如果您有一個名稱為 myAssembly.exe 的組件，且參考一個名稱為 myAssembly.dll 的組件，則如果您執行 myAssembly.exe 就會正確繫結。  但是，如果其他應用程式使用方法 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 執行 myAssembly.exe，則當 myAssembly.exe 要求繫結至 "myAssembly" 時，執行階段會判斷 "myAssembly" 已載入。 在這種情況下，myAssembly.dll 並未載入。  因為 myAssembly.exe 並未包含要求的型別，而且會發生 <xref:System.TypeLoadException>。  
   
- 若要避免這個問題，請確定構成應用程式的組件沒有相同的組件名稱，或將同名的組件放在不同的目錄中。  
+ 若要避免這個問題，請確認構成應用程式的組件並未使用相同的組件名稱，或是將名稱相同的組件放在不同的目錄中。  
   
 > [!NOTE]
->  如果您將強式名稱組件放入全域組件快取中，組件的檔案名稱必須符合組件名稱 (不包括副檔名，例如 .exe 或 .dll)。 例如，如果組件的檔案名稱是 myAssembly.dll，則組件名稱必須是 myAssembly。 只有在根應用程式目錄中部署的私用組件才能具有與檔案名稱不同的組件名稱。  
+>  如果將強式名稱的組件放在全域組件快取中，組件的檔案名稱必須符合組件名稱 \(不包括副檔名，如 .exe 或 .dll\)。  例如，如果組件的檔名為 myAssembly.dll，則組件名稱必須是 myAssembly。  僅部署在根應用程式目錄的私用組件可以擁有檔名以外的組件名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## 請參閱  
  [如何：決定組件的完整名稱](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)   
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

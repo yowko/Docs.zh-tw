@@ -7,6 +7,7 @@ ms.author: mairaw
 ms.date: 07/14/2017
 ms.topic: article
 ms.prod: .net-core
+ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
@@ -137,7 +138,7 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 
 ### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>留在 .NET Framework 直到解決可攜性問題
 
-如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。 方法如下所示︰
+如果您偏好在整個程序期間執行編譯的程式碼，這就是最佳方法。  方法如下所示︰
 
 1. 對專案執行 ApiPort。
 1. 使用不同的可攜式 API 來解決問題。
@@ -172,7 +173,7 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 
 ### <a name="mixing-approaches"></a>混合方法
 
-您可能會根據每個專案混用上述各種方法。 您應該做對您和程式碼基底而言最有意義的事。
+您可能會根據每個專案混用上述各種方法。  您應該做對您和程式碼基底而言最有意義的事。
 
 ## <a name="porting-your-tests"></a>移植測試
 
@@ -197,4 +198,9 @@ AppDomain 可將應用程式互相隔離。 AppDomain 需要執行階段支援�
 1. 挑選要移植的下一層程式碼，並重複上述步驟。
 
 如果您是從程式庫基底向外進行移植，並視需要測試每一層，移植將會是個系統化的程序，並將所有問題都隔離在單層的程式碼內。
+
+
+
+<!--HONumber=Nov16_HO3-->
+
 

@@ -35,10 +35,12 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-sample-applications"></a>Visual Basic 範例應用程式
-使用 Visual Studio 時，您可以從 [MSDN 程式碼庫](http://go.microsoft.com/fwlink/?LinkId=254185)下載已封裝的完整 Visual Basic 應用程式範例，並進行安裝。  
+# Visual Basic Sample Applications
+[!INCLUDE[vs2017banner](../visual-basic/includes/vs2017banner.md)]
+
+您可以使用 Visual Studio來下載來自[MSDN 開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=254185)完整且封裝的 Visual Basic 應用程式範例，並安裝之。  
   
- 您可以分別下載每個範例，也可以下載範例套件，其中包含共用技術或主題的相關範例。 如果您下載的任何範例有發佈原始程式碼的變更，您就會收到通知。  
+ 您可以個別下載每個範例，也可以下載包含分享技術或主題之相關範例的範例套件。  當您下載的任何範例有發佈原始程式碼變更時，您將會收到通知。  
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Studio 範例](http://go.microsoft.com/fwlink/?LinkId=150928)   

@@ -15,10 +15,9 @@ ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7c0e9d440ab50b7f275296731e5210578bcedcaa
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 
@@ -45,7 +44,7 @@ Next
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
 <Name>Cristian Osorio</Name>  
@@ -94,7 +93,7 @@ Next
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
 <ConfigParameter>SecondConfigParameter</ConfigParameter>  
 ```  
@@ -122,7 +121,7 @@ End Module
   
  這個範例會產生下列輸出：  
   
-```xml  
+```  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Tai Yee</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Cristian Osorio</aw:Name>  

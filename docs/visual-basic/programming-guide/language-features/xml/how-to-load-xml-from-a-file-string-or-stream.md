@@ -32,17 +32,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 242c8b79cbe1329b6f53e9fd4e5495d4a157e08c
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>如何：從檔案、字串或資料流載入 XML (Visual Basic)
 您可以建立[XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)和它們的內容填入從外部來源，例如檔案、 字串或資料流使用幾種方法。 在下列範例會顯示這些方法。  
   
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
 ### <a name="to-load-xml-from-a-file"></a>若要從檔案載入 XML  
   

@@ -39,14 +39,14 @@ C# Tuple 是您使用輕量型語法所定義的類型。 優點包括更簡單�
 若要避免這些缺點，您可以建立 `class` 或 `struct` 來帶出多個元素。 不幸的是，您需要執行更多工作，並且會模糊您的設計目的。 設定 `struct` 或 `class` 表示您定義的類型同時具有資料和行為。 許多次，您都只想要將多個值儲存在單一物件中。
 
 語言功能和 `ValueTuple` 泛型結構會強制執行您無法將任何行為 (方法) 新增至這些 Tuple 類型的規則。
-所有 `ValueTuple` 類型都是「可變動結構」。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
+所有 `ValueTuple` 類型都是「可變動結構」**。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
 
 Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容器。 讓我們來探索這些差異。
 
 ## <a name="named-and-unnamed-tuples"></a>具名和未具名 Tuple
 
 `ValueTuple` 結構具有名為 `Item1`、`Item2`、`Item3` 等等的欄位，而這些欄位與現有 `Tuple` 類型中所定義的屬性類似。
-這些名稱只是您可用於「未具名 Tuple」的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
+這些名稱只是您可用於「未具名 Tuple」**的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple " Tuple")]
 
@@ -216,7 +216,7 @@ Tuple 可能十分有用的另一個慣用語是編寫 LINQ 查詢時，而在�
 
 請注意，您無法在括弧外部使用特定類型，即使 Tuple 中的每個欄位都有相同的類型也是一樣。
 
-### <a name="deconstructing-user-defined-types"></a>解構使用者定義型別
+### <a name="deconstring-user-defined-types"></a>解構使用者定義型別
 
 任何 Tuple 類型都可以如上進行解構。 也很容易在任何使用者定義型別 (類別、結構，甚至是介面) 上啟用解構。
 

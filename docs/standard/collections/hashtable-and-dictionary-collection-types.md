@@ -1,5 +1,5 @@
 ---
-title: "Hashtable 和 Dictionary 集合類型"
+title: "Hashtable 和 Dictionary 集合類型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/06/2017
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
  [常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)
-

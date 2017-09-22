@@ -45,7 +45,8 @@ ms.lasthandoff: 07/28/2017
   
 ```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
-WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"  
+WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode”  
+  
 ```  
   
 ## <a name="key-use-cases"></a>主要使用案例  
@@ -56,6 +57,7 @@ WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"
 void f(string s) {  
     if (s == null) throw new ArgumentNullException(nameof(s));  
 }  
+  
 ```  
   
  MVC 動作連結：  
@@ -64,6 +66,7 @@ void f(string s) {
              @typeof(UserController),  
              @nameof(UserController.SignUp))  
 %>  
+  
 ```  
   
  INotifyPropertyChanged：  
@@ -72,11 +75,13 @@ int p {
     get { return this.p; }  
     set { this.p = value; PropertyChanged(this, new PropertyChangedEventArgs(nameof(this.p)); } // nameof(p) works too  
 }  
+  
 ```  
   
  XAML 相依性屬性：  
  ```csharp  
 public static DependencyProperty AgeProperty = DependencyProperty.Register(nameof(Age), typeof(int), typeof(C));  
+  
 ```  
   
  記錄：  
@@ -84,6 +89,7 @@ public static DependencyProperty AgeProperty = DependencyProperty.Register(nameo
 void f(int i) {  
     Log(nameof(f), "method entry");  
 }  
+  
 ```  
   
  屬性:   
@@ -116,10 +122,11 @@ nameof(c.Method2) -> "Method2"
 nameof(z) -> "z" // inside of Method2 ok, inside Method1 is a compiler error  
 nameof(Stuff) = "Stuff"  
 nameof(T) -> "T" // works inside of method but not in attributes on the method  
-nameof(f) -> "f"  
+nameof(f) -> “f”  
 nameof(f<T>) -> syntax error  
 nameof(f<>) -> syntax error  
-nameof(Method2()) -> error "This expression does not have a name"  
+nameof(Method2()) -> error “This expression does not have a name”  
+  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -127,22 +134,8 @@ nameof(Method2()) -> error "This expression does not have a name"
   
  由於引數必須是運算式語法，因此不允許使用許多對清單沒有幫助的項目。  下列項目可能會產生錯誤，值得留意：預先定義的類型 (例如 `int` 或 `void`)、可為 Null 的類型 (`Point?`)、陣列類型 (`Customer[,]`)、指標類型 (`Buffer*`)、限定別名 (`A::B`)、未繫結的泛型類型 (`Dictionary<,>`)、前置處理符號 (`DEBUG`)，以及標籤 (`loop:`)。  
   
- 如果您需要取得完整限定名稱，您可以搭配使用 `typeof` 運算式和 `nameof`。  例如: 
-```csharp  
-class C {
-    void f(int i) {  
-        Log($"{typeof(C)}.{nameof(f)}", "method entry");  
-    }
-}
-``` 
-
- 可惜，`typeof` 不是 `nameof` 這類常數運算式，因此 `typeof` 不能在 `nameof` 的所有相同位置中搭配使用 `nameof`。  例如，下列情況會導致 CS0182 編譯錯誤：
- ```csharp  
-[DebuggerDisplay("={" + typeof(C) + nameof(GetString) + "()}")]  
-class C {  
-    string GetString() { }  
-}  
-```    
+ 如果您需要取得完整限定名稱，您可以搭配使用 `typeof` 運算式和 `nameof`。  
+  
  報告中有幾個項目能告知我們可能需要處理的問題。  不同於經評估的運算式規定，您不需要具有類型的執行個體。  在某些情況下使用類型名稱會很方便，由於您只參考名稱而不使用執行個體資料，因此不需要設計執行個體變數或運算式。  
   
  您可以在類別的屬性運算式中參考該類別的成員。  
@@ -150,7 +143,7 @@ class C {
  您無法取得簽章資訊，例如 "`Method1 (str, str)`"。  若要執行這項操作，其中一個方法是使用運算式 `Expression e = () => A.B.Method1("s1", "s2")`，然後從產生的運算式樹狀架構中提取 MemberInfo。  
   
 ## <a name="language-specifications"></a>語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

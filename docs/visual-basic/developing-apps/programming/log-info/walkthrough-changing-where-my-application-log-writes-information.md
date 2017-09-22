@@ -65,7 +65,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  將這些項目加入至該 `<listeners>` 區段。  
   
-    ```xml  
+    ```  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -84,7 +84,7 @@ ms.lasthandoff: 07/28/2017
   
 6.  將這些項目加入至該 `<sharedListeners>` 區段。  
   
-    ```xml  
+    ```  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -115,7 +115,7 @@ ms.lasthandoff: 07/28/2017
   
 7.  App.config 檔案的內容應該類似下列 XML：  
   
-    ```xml  
+    ```  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  

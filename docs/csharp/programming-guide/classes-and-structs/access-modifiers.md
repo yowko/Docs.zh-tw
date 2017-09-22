@@ -77,7 +77,7 @@ ms.lasthandoff: 07/28/2017
   
  使用者定義的運算子一律必須宣告為 public。 如需詳細資訊，請參閱 [operator (C# 參考)](../../../csharp/language-reference/keywords/operator.md)。  
   
- 完成項不能有存取範圍修飾詞。  
+ 解構函式不能有存取範圍修飾詞。  
   
  若要設定類別或結構成員的存取層級，請在成員宣告中新增適當的關鍵字，如下列範例所示。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 07/28/2017
  委派的行為類似類別和結構。 根據預設，它們在直接在命名空間內宣告時會具有 internal 存取，而且在巢狀時會具有 private 存取。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

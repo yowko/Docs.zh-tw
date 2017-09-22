@@ -37,11 +37,11 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
-產生來源檔案的總和檢查碼協助偵錯[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]頁面。  
+產生來源檔案的總和檢查碼協助偵錯[!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)]頁面。  
   
 ## <a name="syntax"></a>語法  
   
-```csharp
+```  
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -58,15 +58,15 @@ ms.lasthandoff: 07/28/2017
 ## <a name="remarks"></a>備註  
  Visual Studio 偵錯工具會使用總和檢查碼來確定一定會找到正確的來源。 編譯器會計算來源檔案的總和檢查碼，然後將輸出發至程式資料庫 (PDB) 檔案。 然後偵錯工具會使用 PDB 比較總和檢查碼計算來源檔案。  
   
- 這個解決方案不適用於 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 專案，因為計算過的總和檢查碼適合產生的來源檔案，不是 .aspx 檔案。 若要解決這個問題，`#pragma checksum` 會為 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 頁面提供總和檢查碼支援。  
+ 這個解決方案不適用於 [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 專案，因為計算過的總和檢查碼適合產生的來源檔案，不是 .aspx 檔案。 若要解決這個問題，`#pragma checksum` 會為 [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 頁面提供總和檢查碼支援。  
   
- 當您在 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 中建立 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 專案時，產生的來源檔案會包含 .aspx 檔案的總和檢查碼，來源於此產生。 接著編譯器會將這項資訊寫入 PDB 檔案中。  
+ 當您在 [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] 中建立 [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 專案時，產生的來源檔案會包含 .aspx 檔案的總和檢查碼，來源於此產生。 接著編譯器會將這項資訊寫入 PDB 檔案中。  
   
  如果編譯器在檔案中未遇到任何 `#pragma checksum` 指示詞，它會計算總和檢查碼並將值寫入 PDB 檔案。  
   
 ## <a name="example"></a>範例  
   
-```csharp
+```  
 class TestClass  
 {  
     static int Main()  
@@ -80,4 +80,3 @@ class TestClass
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)
-

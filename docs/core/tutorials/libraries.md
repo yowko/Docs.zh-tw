@@ -4,7 +4,7 @@ description: "了解如何使用 .NET Core CLI 工具建立 .NET 程式庫。"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 05/01/2017
+ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
@@ -46,7 +46,16 @@ ms.lasthandoff: 09/19/2017
 
 在該文中，有一張將 .NET Standard 版本對應至各種實作的表格︰
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+| 平台名稱 | Alias |  |  |  |  |  | | |
+| :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
+|.NET Standard | netstandard | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 |
+|.NET 核心|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|
+|.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|4.6.3|
+|Mono/Xamarin 平台||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|*|
+|通用 Windows 平台|uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|||
+|Windows|win|&rarr;|8.0|8.1|||||
+|Windows Phone|wpa|&rarr;|&rarr;|8.1|||||
+|Windows Phone Silverlight|wp|8.0|||||||
 
 以下是這個資料表在建立程式庫時的意義︰
 
@@ -54,7 +63,10 @@ ms.lasthandoff: 09/19/2017
 
 將目標設為 .NET Standard 時，會有三個主要選項 (視需求而定)。
 
-1. 您可以使用範本所提供的預設 .NET Standard 版本 `netstandard1.4`，以存取 .NET Standard 上的大部分 API，同時仍然與 UWP、.NET Framework 4.6.1 及即將推出的 .NET Standard 2.0 相容。
+1. 您可以使用最新版本的 .NET Standard (`netstandard1.6`)，這適用於想要存取大部分 API 時，而且較少跨實作時則不用在意。
+2. 您可以使用較低版本的 .NET Standard，以將目標設為較舊的 .NET 實作。 這裡的成本不包含存取一些最新的 API。
+    
+    例如，如果您想要確保與 .NET Framework 4.6 和更新版本相容，請挑選 `netstandard1.3`：
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -63,8 +75,6 @@ ms.lasthandoff: 09/19/2017
       </PropertyGroup>
     </Project>
     ```
-
-2. 您可以修改專案檔之 `TargetFramework` 節點中的值，以使用更低或更高的 .NET Standard 版本。
     
     .NET Standard 版本具備回溯相容。 這表示 `netstandard1.0` 程式庫是在 `netstandard1.1` 平台和更高版本上執行。 不過，沒有往後相容性 - 較低的 .NET Standard 平台無法參考較高的平台。 這表示 `netstandard1.0` 程式庫無法參考目標設為 `netstandard1.1` 或更高版本的程式庫。 針對您的需求，選取正確混合使用 API 與平台支援的標準版本。 現在建議使用 `netstandard1.4`。
     
@@ -77,7 +87,7 @@ ms.lasthandoff: 09/19/2017
 
 請記住，將不再支援這裡使用的一些 .NET Framework 版本。 如需不支援的版本，請參閱 [.NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq/en-us) (.NET Framework 支援週期原則 FAQ)。
 
-如果您想要達到開發人員和專案數目上限，請使用 .NET Framework 4.0 作為基準目標。 若要將目標設為 .NET Framework，您需要從使用對應至所要支援之 .NET Framework 版本的正確目標 Framework Moniker (TFM) 開始。
+如果您想要達到開發人員和專案數目上限，請使用 .NET Framework 4 作為基準目標。 若要將目標設為 .NET Framework，您需要從使用對應至所要支援之 .NET Framework 版本的正確目標 Framework Moniker (TFM) 開始。
 
 ```
 .NET Framework 2.0   --> net20
@@ -105,37 +115,81 @@ ms.lasthandoff: 09/19/2017
 
 就是這麼容易！ 雖然這只是針對 .NET Framework 4 所編譯，但是您可以在較新版的 .NET Framework 上使用程式庫。
 
+## <a name="how-to-target-a-portable-class-library-pcl"></a>如何將目標設為可攜式類別庫 (PCL)
+
+> [!NOTE]
+> 這些指示假設您已在電腦上安裝 .NET Framework。  請參閱安裝相依性的[必要條件](#prerequisites)。
+
+將目標設為 PCL 設定檔，比將目標設為 .NET Standard 或 .NET Framework 更難處理。  如果是新手，請[參考這份 PCL 設定檔清單](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY/preview)，以找到對應至設為目標之 PCL 設定檔的 NuGet 目標。
+
+接著，您可能需要執行下列動作：
+
+1. 在 `project.json` 的 `frameworks` 下方建立名為 `.NETPortable,Version=v{version},Profile=Profile{profile}` 的新項目，其中 `{version}` 和 `{profile}` 分別對應至 PCL 版本號碼和設定檔號碼。
+2. 在這個新的項目中，列出 `frameworkAssemblies` 項目下方每個用於該目標的單一組件。  這包含 `mscorlib`、`System` 和 `System.Core`。
+3. 如果您是使用多目標 (請參閱下一節)，則必須在其目標項目下方明確列出每個目標的相依性。  您將無法再使用全域 `dependencies` 項目。
+
+下列是範例目標 PCL Profile 328。 Profile 328 支援：.NET Standard 1.4、.NET Framework 4、Windows 8、Windows Phone 8.1、Windows Phone Silverlight 8.1 和 Silverlight 5。
+
+```json
+{
+    "frameworks":{
+        ".NETPortable,Version=v4.0,Profile=Profile328":{
+            "frameworkAssemblies":{
+                "mscorlib":"",
+                "System":"",
+                "System.Core":""
+            }
+        }
+    }
+}
+```
+
+如果您所建置的專案在 *project.json* 檔案中包含 PCL Profile 328 作為架構，則在 */bin/debug* 資料夾中會有這個子資料夾︰
+
+```
+portable-net40+sl50+netcore45+wpa81+wp8/
+```
+
+這個資料夾包含執行您程式庫所需的 `.dll` 檔案。
+
 ## <a name="how-to-multitarget"></a>如何使用多目標
 
 > [!NOTE]
 > 下列指示假設您已在電腦上安裝 .NET Framework。 請參閱[必要條件](#prerequisites)小節，了解您需要安裝的相依性以及其下載位置。
 
-當您的專案同時支援 .NET Framework 和 .NET Core 時，可能需要將目標設為舊版 .NET Framework。 在這個案例中，如果您想要為較新的目標使用較新的 API 和語言建構，請在程式碼中使用 `#if` 指示詞。 您也可能需要針對設為目標的每個平台新增不同的套件和相依性，以包含每個案例所需的不同 API。
+當您的專案同時支援 .NET Framework 和 .NET Core 時，可能需要將目標設為舊版 .NET Framework。 在這個案例中，如果您想要為較新的目標使用較新的 API 和語言建構，請在程式碼中使用 `#if` 指示詞。 您也可能需要針對設為目標的每個平台，在 `project.json file` 中新增不同的套件和相依性，以包含每個案例所需的不同 API。
 
 例如，假設您的程式庫透過 HTTP 執行網路作業。 針對 .NET Standard 和 .NET Framework 4.5 版或更高版本，您可以使用 `System.Net.Http` 命名空間中的 `HttpClient` 類別。 不過，舊版 .NET Framework 沒有 `HttpClient` 類別，因此您可以改用這些項目之 `System.Net` 命名空間中的 `WebClient` 類別。
 
-專案檔如下所示：
+因此，`project.json` 檔案如下所示：
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
-  </PropertyGroup>
-
-  <!-- Need to conditionally bring in references for the .NET Framework 4.0 target -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
-    <Reference Include="System.Net" />
-  </ItemGroup>
-
-  <!-- Need to conditionally bring in references for the .NET Framework 4.5 target -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Threading.Tasks" />
-  </ItemGroup>
-</Project>
+```json
+{
+    "frameworks":{
+        "net40":{
+            "frameworkAssemblies": {
+                "System.Net":"",
+                "System.Text.RegularExpressions":""
+            }
+        },
+        "net452":{
+            "frameworkAssemblies":{
+                "System.Net":"",
+                "System.Net.Http":"",
+                "System.Text.RegularExpressions":"",
+                "System.Threading.Tasks":""
+            }
+        },
+        "netstandard1.6":{
+            "dependencies": {
+                "NETStandard.Library":"1.6.0",
+            }
+        }
+    }
+}
 ```
 
-您可在這裡發現三個主要變更︰
+請注意，需要在 `net40` 和 `net452` 目標中明確參考 .NET Framework 組件，並且也在 `netstandard1.6` 目標中明確列出 NuGet 參考。  這在多目標案例中是必要的。
 
 1. `TargetFramework` 節點已取代為 `TargetFrameworks`，而且其內表示三個 TFM。
 1. 提取至一個 .NET Framework 參考的 `net40 ` 目標有一個 `<ItemGroup>` 節點。
@@ -145,22 +199,9 @@ ms.lasthandoff: 09/19/2017
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-以下是利用個別目標之條件式編譯的範例︰
+而且在來源的中間，您可以使用 `#if` 指示詞有條件地使用這些程式庫。 例如: 
 
 ```csharp
-using System;
-using System.Text.RegularExpressions;
-#if NET40
-// This only compiles for the .NET Framework 4 targets
-using System.Net;
-#else
- // This compiles for all other targets
-using System.Net.Http;
-using System.Threading.Tasks;
-#endif
-
-namespace MultitargetLib
-{
     public class Library
     {
 #if NET40
@@ -175,19 +216,19 @@ namespace MultitargetLib
         public string GetDotNetCount()
         {
             string url = "http://www.dotnetfoundation.org/";
-
+          
             var uri = new Uri(url);
-
+            
             string result = "";
-
+            
             // Lock here to provide thread-safety.
             lock(_locker)
             {
                 result = _client.DownloadString(uri);
             }
-
+            
             int dotNetCount = Regex.Matches(result, ".NET").Count;
-
+            
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
@@ -205,20 +246,21 @@ namespace MultitargetLib
         }
 #endif
     }
-}
 ```
 
-如果您使用 `dotnet build` 建置此專案，則會在 `bin/` 資料夾下方發現三個目錄：
+如果您所建置的專案在 *project.json* 檔案中包含 `net40`、`net45` 和 `netstandard1.6` 作為架構，則在 */bin/debug* 資料夾中會有這些子資料夾︰
 
 ```
 net40/
 net45/
-netstandard1.4/
+netstandard1.6/
 ```
 
-所有這些都包含每個目標的 `.dll` 檔案。
+### <a name="but-what-about-multitargeting-with-portable-class-libraries"></a>但是具有可攜式類別庫的多目標怎麼辦？
 
-## <a name="how-to-test-libraries-on-net-core"></a>如何測試 .NET Core 上的程式庫
+如果您想要與 PCL 目標交叉編譯，則必須在 PCL 目標中於 `buildOptions` 的 `project.json` 檔案中新增組建定義。  您接著可以在來源中使用將組建定義當成前置處理器符號使用的 `#if` 指示詞。
+
+例如，如果您想要將目標設為 [PCL profile 328](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY/preview) (.NET Framework 4、Windows 8、Windows Phone Silverlight 8、Windows Phone 8.1、Silverlight 5)，則可以在跨編譯時以 "PORTABLE328" 形式參照它。  只要將它當成 `buildOptions` 屬性新增至 `project.json` 檔案︰
 
 重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](http://xunit.github.io/) 或 MSTest。 兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
 
@@ -269,6 +311,8 @@ netstandard1.4/
 
 當您叫用 `dotnet test` 命令時，將會自動重建程式碼。
 
+只要新增相依性，就請記得從命令列執行 `dotnet restore`，這樣您就可以繼續往下進行！
+
 ## <a name="how-to-use-multiple-projects"></a>如何使用多個專案
 
 較大程式庫的常見需求是將功能放在不同的專案中。
@@ -300,36 +344,72 @@ let doWork data = async {
 這類使用案例表示針對 C# 和 F#，正在存取的 API 必須具有不同的結構。  完成這項作業的常見方法將程式庫的所有邏輯都納入核心專案，而且 C# 和 F# 專案定義呼叫該核心專案的 API 層。  區段的其餘部分將使用下列名稱︰
 
 * **AwesomeLibrary.Core** - 核心專案，內含程式庫的所有邏輯
-* **AwesomeLibrary.CSharp** - 專案，具有公用 API 可供在 C# 中使用
-* **AwesomeLibrary.FSharp** - 專案，具有公用 API 可供在 F# 中使用
+* **AwesomeLibrary.CSharp** - 專案，具有公用 API 可供在 C 中使用#
+* **AwesomeLibrary.FSharp** - 專案，具有公用 API 可供在 F 中使用#
 
-您可以在終端機中執行下列命令，以產生與本指南相同的結構︰
+### <a name="project-to-project-referencing"></a>專案對專案參考
 
-```console
-mkdir AwesomeLibrary && cd AwesomeLibrary
-dotnet new sln
-mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
-cd ..
-mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
-cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
-cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
+參考專案的最佳方式是執行下列動作︰
+
+1. 請確定您想要參考的專案有磁碟上其內含資料夾的不錯名稱。  這將是用來參考您專案的名稱。
+2. 在指定 `"target":"project"` 之使用專案的 `project.json` 檔案中，參考來自 (1) 的名稱。
+
+**AwesomeLibrary.CSharp** 和 **AwesomeLibrary.FSharp** 的 `project.json` 檔案現在需要參考 **AwesomeLibrary.Core** 作為 `project` 目標。  如果您未使用多目標，則可以使用全域 `dependencies` 項目：
+
+```json
+{
+    "dependencies":{
+        "AwesomeLibrary.Core":{
+            "target":"project"
+        }
+    }
+}
 ```
 
 這會新增上方的三個專案以及將它們連結在一起的方案檔。 建立方案檔及連結專案可讓您從最上層還原與建置專案。
 
-### <a name="project-to-project-referencing"></a>專案對專案參考
+```json
+{
+    "frameworks":{
+        "netstandard1.6":{
+            "dependencies":{
+                "AwesomeLibrary.Core":{
+                    "target":"project"
+                }
+            }
+        }
+    }
+}
+```
 
 參考專案的最佳方式是使用 .NET Core CLI 來新增專案參考。 從 **AwesomeLibrary.CSharp** 及 **AwesomeLibrary.FSharp** 專案目錄中，您可以執行下列命令︰
 
-```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+```
+/AwesomeLibrary
+|__global.json
+|__/src
+   |__/AwesomeLibrary.Core
+      |__Source Files
+      |__project.json
+   |__/AwesomeLibrary.CSharp
+      |__Source Files
+      |__project.json
+   |__/AwesomeLibrary.FSharp
+      |__Source Files
+      |__project.json
+|__/test
+   |__/AwesomeLibrary.Core.Tests
+      |__Test Files
+      |__project.json
+   |__/AwesomeLibrary.CSharp.Tests
+      |__Test Files
+      |__project.json
+   |__/AwesomeLibrary.FSharp.Tests
+      |__Test Files
+      |__project.json
 ```
 
-**AwesomeLibrary.CSharp** 及 **AwesomeLibrary.FSharp** 的專案檔現在參考 **AwesomeLibrary.Core** 作為 `ProjectReference` 目標。  檢查專案檔並查看其中的下列內容，即可確認這項作業︰
+這個方案的 `global.json` 檔案如下所示：
 
 ```xml
 <ItemGroup>
@@ -339,7 +419,21 @@ $ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 
 如果您不想要使用 .NET Core CLI，則可以手動將這個區段新增至每個專案檔。
 
-### <a name="structuring-a-solution"></a>建構方案
+以下是如何還原套件、建置和測試整個專案︰
 
-多專案方案的另一個重要部分是建立不錯的整體專案結構。 不過，您可以視需要組織程式碼，而且只要您使用 `dotnet sln add` 將每個專案連結至方案檔，就可以在方案層級執行 `dotnet restore` 及 `dotnet build`。
+```
+$ dotnet restore
+$ cd src/AwesomeLibrary.FSharp
+$ dotnet build
+$ cd ../AwesomeLibrary.CSharp
+$ dotnet build
+$ cd ../../test/AwesomeLibrary.Core.Tests
+$ dotnet test
+$ cd ../AwesomeLibrary.CSharp.Tests
+$ dotnet test
+$ cd ../AwesomeLibrary.FSharp.Tests
+$ dotnet test
+```
+
+就是這麼容易！
 

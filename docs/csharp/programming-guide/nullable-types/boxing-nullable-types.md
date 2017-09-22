@@ -39,7 +39,7 @@ ms.lasthandoff: 07/28/2017
 # <a name="boxing-nullable-types-c-programming-guide"></a>Box 處理可為 Null 的類型 (C# 程式設計手冊)
 如為非 Null 的物件，以可為 Null 的型別為基礎的物件僅能以 boxing 處理。 如果 <xref:System.Nullable%601.HasValue%2A> 是 `false`，則物件參考會指派給 `null` 而不是 boxing。 例如：  
   
-```csharp  
+```  
 bool? b = null;  
 object o = b;  
 // Now o is null.  
@@ -47,26 +47,26 @@ object o = b;
   
  如果為非 Null 的物件 - 如果 <xref:System.Nullable%601.HasValue%2A> 是 `true` - 則發生 boxing，但只有可為 Null 物件依據的基礎類型會經過 boxing 處理。 以 boxing 處理非 Null 的可為 Null 的實值型別，會以 boxing 處理實值型別本身，不會處理包裝實值型別的 <xref:System.Nullable%601?displayProperty=fullName>。 例如：  
   
-```csharp  
+```  
 bool? b = false;  
 int? i = 44;  
 object bBoxed = b; // bBoxed contains a boxed bool.  
 object iBoxed = i; // iBoxed contains a boxed int.  
 ```  
   
- 兩個經過 boxing 處理的物件，和經過 boxing 處理的不可為 Null 的型別所建立的物件相同。 而且，就像經過 boxing 處理的不可為 Null 的型別，它們可以取消 boxing 處理成為可為 Null 的型別，如下例所示︰  
+ 這兩個 boxed 物件與透過對不可為 Null 型別執行 box 處理而建立的物件相同。  而且就像不可為 null 的 boxed 型別一樣，可以 unboxed 成可為 null 的型別，如下列範例所示：  
   
-```csharp  
+```  
 bool? b2 = (bool?)bBoxed;  
 int? i2 = (int?)iBoxed;  
 ```  
   
-## <a name="remarks"></a>備註  
- 經過 boxing 處理後，可為 Null 之型別的行為提供兩個優點︰  
+## 備註  
+ 在執行 box 的動作時，可為 Null 型別的行為提供了兩個優點：  
   
-1.  可為 Null 的物件及其經過 boxing 處理過的對應項目，可進行 Null 測試︰  
+1.  可以測試可為 Null 的物件及其 boxed 對應物件是否為 null：  
   
-    ```csharp  
+    ```  
     bool? b = null;  
     object boxedB = b;  
     if (b == null)  
@@ -79,9 +79,9 @@ int? i2 = (int?)iBoxed;
     }  
     ```  
   
-2.  經過 boxing 處理的可為 Null 的型別完全支援基礎類型的功能︰  
+2.  Boxed 可為 Null 型別完全支援基礎型別的功能：  
   
-    ```csharp  
+    ```  
     double? d = 44.4;  
     object iBoxed = d;  
     // Access IConvertible interface implemented by double.  

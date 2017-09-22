@@ -60,15 +60,15 @@ ms.lasthandoff: 07/28/2017
 ## <a name="object-identity-vs-value-equality"></a>物件識別與實值相等  
  當您比較兩個物件是否相等時，您必須先區別是否想要知道這兩個變數在記憶體中是否代表相同的物件，或者其欄位的一或多個值是否相等。 如果您打算比較值，就必須考慮物件是實值型別 (結構) 還是參考型別 (類別、委派、陣列) 的執行個體。  
   
--   若要判斷兩個類別執行個體在記憶體中是否參考相同的位置 (表示它們具有相同的「身分識別」)，請使用靜態 <xref:System.Object.Equals%2A> 方法。 (<xref:System.Object?displayProperty=fullName> 是所有實值型別和參考型別的隱含基底類別，包括使用者定義的結構和類別。)  
+-   若要判斷兩個類別執行個體在記憶體中是否參考相同的位置 (表示它們具有相同的「身分識別」**)，請使用靜態 <xref:System.Object.Equals%2A> 方法。 (<xref:System.Object?displayProperty=fullName> 是所有實值型別和參考型別的隱含基底類別，包括使用者定義的結構和類別。)  
   
--   若要判斷兩個結構執行個體中的執行個體欄位是否有相同的值，請使用 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法。 因為所有結構都是隱含繼承 <xref:System.ValueType?displayProperty=fullName>，所以您可以直接在物件上呼叫方法，如以下範例︰  
+-   若要判斷兩個結構執行個體中的執行個體欄位是否有相同的值，請使用 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 方法。 因為所有結構都是隱含繼承自 <xref:System.ValueType?displayProperty=fullName>，所以您直接在物件上呼叫方法，如下例所示︰  
   
  [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
- 由於 `Equals` 的 <xref:System.ValueType?displayProperty=fullName> 實作必須能夠判斷結構中有哪些欄位，因此會使用反映。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
+ `Equals` 的 <xref:System.ValueType?displayProperty=fullName> 實作使用反映，因為它必須能夠判斷任何結構中有哪些欄位。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
   
--   若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../../csharp/language-reference/operators/equality-comparison-operator.md)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 若要設計自己的類別以覆寫 `Equals`，請務必遵循[如何：定義類型的實值相等](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 所述的指導方針。  
+-   若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../../csharp/language-reference/operators/equality-comparison-operator.md)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 類別可能也實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 設計您自己的類別覆寫 `Equals` 時，請務必遵循[如何：定義型別的實值相等](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 所述的指導方針。  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊：  
@@ -79,7 +79,7 @@ ms.lasthandoff: 07/28/2017
   
 -   [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+-   [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [事件](../../../csharp/programming-guide/events/index.md)  
   

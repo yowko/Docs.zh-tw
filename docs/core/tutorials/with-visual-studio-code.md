@@ -34,13 +34,13 @@ ms.lasthandoff: 08/03/2017
 
 1. 開啟專案：
 
-    * 開啟 Visual Studio Code。
-    * 按一下左側功能表上的 [檔案總管] 圖示，然後按一下 [開啟資料夾]。
-    * 選取您想要放置 C# 專案的資料夾，然後按一下 [選取資料夾]。 針對本範例，我們將為專案建立一個名為 'HelloWorld' 的資料夾。 
+    * 開啟 VS Code。
+    * 按一下左側功能表上的 [檔案總管] 圖示，然後按一下 [開啟資料夾]****。
+    * 選取您想要放置 C# 專案的資料夾，然後按一下 [選取資料夾]****。 針對本範例，我們將為專案建立一個名為 'HelloWorld' 的資料夾。 
 
   ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
-    * 或者，您可以從主功能表選取 [檔案]  >  [開啟資料夾]，來開啟您的專案資料夾。
+    * 或者，您可以從主功能表選取 [檔案]****  >  [開啟資料夾]****，來開啟您的專案資料夾。
 
 2. 初始化 C# 專案：
     * 鍵入 <kbd>CTRL</kbd>+<kbd>\`</kbd> (倒引號) 從 Visual Studio Code 開啟整合式終端機。 另外，您也可以選取主功能表中的 [檢視] > [整合式終端機]。
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/03/2017
 
   ![開啟 Program.cs 檔案](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code 會提示您新增遺失的資產，以建置及偵錯您的應用程式。 選取 [是]。 
+2. VS Code 會提示您加入遺失的資產，以針對您的應用程式進行建置及偵錯。 選取 [是]****。 
 
   ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/03/2017
 
   ![選取 .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. 按一下第 9 行旁邊的「編輯器邊界」(編輯器中行號左側的空白處)，將中斷點新增至您的專案。
+5. 按一下第 9 行旁邊的「編輯器邊界」****(編輯器中行號左側的空白處)，將中斷點新增至您的專案。
 
   ![設定中斷點](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 08/03/2017
 7. 選取頂端的綠色箭頭以繼續偵錯，或者選取頂端的紅色正方形以停止偵錯。
 
 > [!TIP] 
-> 如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (設定 .NET Core 偵錯工具的指示)。
+> 如需在 VS Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解秘訣，請參閱[設定 .NET Core 偵錯工具的指示 (英文)](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
 ## <a name="see-also"></a>請參閱
 [設定 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   

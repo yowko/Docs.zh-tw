@@ -38,8 +38,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="short-c-reference"></a>short (C# 參考)
-
-`short` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數資料型別。  
+`short` 關鍵字表示根據下表所示的大小和範圍來儲存值的整數資料類型。  
   
 |類型|範圍|大小|.NET Framework 類型|  
 |----------|-----------|----------|-------------------------|  
@@ -64,51 +63,48 @@ ms.lasthandoff: 07/28/2017
 
  呼叫多載的方法時，必須使用轉型。 例如，請考慮使用下列使用 `short` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
-```csharp  
+```  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(short s) {}  
 ```  
   
  使用 `short` 轉型時，可以保證呼叫正確的類型，例如：  
   
-```csharp  
+```  
 SampleMethod(5);         // Calling the method with the int parameter  
 SampleMethod((short)5);  // Calling the method with the short parameter  
 ```  
   
 ## <a name="conversions"></a>轉換  
-
  有一項從 `short` 轉換為 [int](../../../csharp/language-reference/keywords/int.md)、[long](../../../csharp/language-reference/keywords/long.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。  
   
  您不能將較大儲存大小的非常值數字類型隱含轉換為 `short` (如需整數類型的儲存大小，請參閱[整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md))。 例如，請考慮使用下列兩個 `short` 變數 `x` 和 `y`：  
   
-```csharp  
+```  
+  
 short x = 5, y = 12;  
 ```  
   
- 因為指派運算子右側的算術運算式預設會評估為 [int](../../../csharp/language-reference/keywords/int.md)，所以下列指派陳述式會產生編譯錯誤。  
+ 因為指派運算子右側的算術運算式預設會評估為 [int](../../../csharp/language-reference/keywords/int.md)，所以下列指派陳述式將會產生編譯錯誤。  
   
-```csharp
-short z  = x + y;        // Compiler error CS0266: no conversion from int to short
-```
-
+ `short`   `z = x + y;   // Error: no conversion from int to short`  
+  
  若要修正這個問題，請使用轉型：  
   
-```csharp
-short z  = (short)(x + y);   // Explicit conversion
-```
+ `short`   `z = (`  `short`  `)(x + y);   // OK: explicit conversion`  
   
- 不過，也可以使用目的地變數具有相同或較大儲存大小的下列陳述式：  
+ 不過，可以使用目的地變數具有相同或較大儲存大小的下列陳述式：  
   
-```csharp  
+```  
 int m = x + y;  
 long n = x + y;  
 ```  
   
  不會從浮點類型隱含地轉換為 `short`。 例如，下列陳述式會在未使用明確轉型的情況下產生編譯器錯誤：  
   
-```csharp  
-short x = 3.0;          // Error: no implicit conversion from double  
+```  
+  
+      short x = 3.0;          // Error: no implicit conversion from double  
 short y = (short)3.0;   // OK: explicit conversion  
 ```  
   

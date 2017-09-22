@@ -43,13 +43,13 @@ ms.lasthandoff: 07/28/2017
   
  這個範例會使用空格、逗號、句號、冒號和定位點，全部以包含這些分隔符號的陣列傳遞至 <xref:System.String.Split%2A>。  目標字串句子中的每個文字都會使用字串結果陣列來個別顯示。  
   
-## <a name="example"></a>範例  
+## 範例  
  [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  
   
-## <a name="example"></a>範例  
+## 範例  
  根據預設，當目標字串中連續出現兩個分隔字元時，String.Split 會傳回空字串。  您可以傳遞選擇性 StringSplitOptions.RemoveEmptyEntries 參數，以排除輸出中的任何空字串。  
   
- String.Split 可採用字串陣列 (做為分隔符號以剖析目標字串的字元序列，而不是單一字元)。  
+ String.Split 可採用字串陣列 \(做為分隔符號以剖析目標字串的字元序列，而不是單一字元\)。  
   
 ```csharp  
 class TestStringSplit  
@@ -58,33 +58,9 @@ class TestStringSplit
     {  
         string[] separatingChars = { "<<", "..." };  
   
-        string text = "one<<two......three<four";  
-        System.Console.WriteLine("Original text: '{0}'", text);  
-  
-        string[] words = text.Split(separatingChars, System.StringSplitOptions.RemoveEmptyEntries );  
-        System.Console.WriteLine("{0} substrings in text:", words.Length);  
-  
-        foreach (string s in words)  
-        {  
-            System.Console.WriteLine(s);  
-        }  
-  
-        // Keep the console window open in debug mode.  
-        System.Console.WriteLine("Press any key to exit.");  
-        System.Console.ReadKey();  
-    }  
-}  
-/* Output:  
-    Original text: 'one<<two......three<four'  
-    3 words in text:  
-    one  
-    two  
-    three<four  
-*/  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## 請參閱  
+ [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [字串](../../../csharp/programming-guide/strings/index.md)   
- [.NET Framework 規則運算式](https://msdn.microsoft.com/library/hs600312)
-
+ [.NET Framework 規則運算式](../Topic/.NET%20Framework%20Regular%20Expressions.md)

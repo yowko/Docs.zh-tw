@@ -42,17 +42,19 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-user-data-visual-basic"></a>存取使用者資料 (Visual Basic)
-本節包含處理 `My.User` 物件以及可使用它完成的工作等主題。  
+# Accessing User Data (Visual Basic)
+[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+
+本章節涵蓋有關 `My.User` 物件與使用此物件可以完成之工作的主題。  
   
- `My.User` 物件透過傳回實作 <xref:System.Security.Principal.IPrincipal> 介面的物件，讓您存取已登入使用者的相關資訊。  
+ `My.User` 物件會傳回實作 <xref:System.Security.Principal.IPrincipal> 介面的物件，藉以提供存取已登入的使用者之相關資訊的權限。  
   
-## <a name="tasks"></a>工作  
+## 工作  
   
-|以|請參閱|  
+|若要|請參閱|  
 |--------|---------|  
 |取得使用者的登入名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|如果應用程式使用 Windows 驗證即可取得使用者的網域名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|取得使用者的網域名稱 \(如果應用程式使用 Windows 驗證\)|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |判斷使用者的角色|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>另請參閱  

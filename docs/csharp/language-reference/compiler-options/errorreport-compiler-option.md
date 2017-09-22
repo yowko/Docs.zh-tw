@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="syntax"></a>語法  
   
-```console  
+```  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   

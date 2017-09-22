@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 系統需求"
+title: ".NET Framework 系統需求 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework

@@ -1,5 +1,5 @@
 ---
-title: "選取集合類別"
+title: "選取集合類別 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -92,4 +92,3 @@ ms.lasthandoff: 09/06/2017
  <xref:System.Collections.Specialized>   
  <xref:System.Collections.Generic>   
  [安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)
-

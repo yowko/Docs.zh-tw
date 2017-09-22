@@ -43,7 +43,7 @@ ms.lasthandoff: 07/28/2017
 >  本主題討論具名的方法。 如需匿名函式的資訊，請參閱[匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)。  
   
 ## <a name="method-signatures"></a>方法簽章  
- 方法是在 [類別](../../../csharp/language-reference/keywords/class.md) 或 [結構](../../../csharp/language-reference/keywords/struct.md) 中宣告，透過指定存取層級 (例如 `public` 或 `private`)、選擇性修飾詞 (例如 `abstract` 或 `sealed`)、傳回值、方法的名稱，以及任何方法參數。 這些部份放在一起即為方法的簽章。  
+ 您可以藉由指定存取層級 (例如 `public` 或 `private`)、選擇性修飾詞 (例如 `abstract` 或 `sealed`)、傳回值、方法名稱以及任何方法參數，在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中宣告方法。 這些部份放在一起即為方法的簽章。  
   
 > [!NOTE]
 >  方法的傳回類型不是方法多載用途的方法簽章的一部分。 不過，在判斷委派與所指向的方法之間的相容性時，它是方法簽章的一部分。  
@@ -129,14 +129,15 @@ static void Main(string[] args)
                 }  
             }  
         }  
+  
 ```  
   
  如需詳細資訊，請參閱 [return](../../../csharp/language-reference/keywords/return.md)。  
   
 ## <a name="async-methods"></a>非同步方法  
- 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。 
+ 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。 非同步功能是在 [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)] 中引進。  
   
- 如果您使用 [async](../../../csharp/language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](../../../csharp/language-reference/keywords/await.md) 運算子。 當控制項到達 async 方法的 await 運算式時，控制項會傳回給呼叫者，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。  
+ 如果您使用 [async](../../../csharp/language-reference/keywords/async.md) 修飾詞來標示方法，則可以在方法中使用 [await](../../../csharp/language-reference/keywords/await.md) 運算子。 當控制項到達 async 方法的 await 運算式時，控制項會傳回給呼叫者，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。  
   
 > [!NOTE]
 >  非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者  
@@ -165,10 +166,10 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);  
 ```  
   
- 如果方法會傳回 `void` 或非同步方法，則方法的主體必須是陳述式運算式 (如同 lambda)。  若為屬性和索引子，它們必須是唯讀，因此您不應使用 `get` 存取子關鍵字。  
+ 如果方法會傳回 `void` 或非同步方法，則方法的主體必須是陳述式運算式 (如同 lambda)。  針對屬性和索引子，它們必須是唯讀，而且您不會使用 `get` 存取子關鍵字。  
   
 ## <a name="iterators"></a>Iterator  
- 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式來一次傳回一個項目。 當 [yield return](../../../csharp/language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
+ 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當到達 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式時，系統會記住程式碼中目前的位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
   
  您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式透過用戶端程式碼呼叫迭代器。  
   
@@ -177,7 +178,7 @@ public Customer this[long id] => store.LookupCustomer(id);
  如需詳細資訊，請參閱 [Iterator](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
@@ -191,4 +192,3 @@ public Customer this[long id] => store.LookupCustomer(id);
  [out](../../../csharp/language-reference/keywords/out.md)   
  [ref](../../../csharp/language-reference/keywords/ref.md)   
  [傳遞參數](passing-parameters.md)
-

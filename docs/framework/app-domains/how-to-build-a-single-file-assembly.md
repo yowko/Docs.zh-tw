@@ -29,23 +29,23 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>如何：建置單一檔案組件
-單一檔案組件，是最簡單的組件類型，包含類型資訊和實作，以及[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。 您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。 編譯器預設會建立副檔名為 .exe 的組件檔案。  
+# 如何：建置單一檔案組件
+單一檔案組件為最簡單的組件型別，含有型別資訊和實作 \(Implementation\) 和[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。  您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。  根據預設，編譯器會建立具有 .exe 副檔名的組件檔案。  
   
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for C# 和 Visual Basic 只能用於建立單一檔案組件。 如想建立多檔案組件，您必須使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C++。  
+>  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for C\# 和 Visual Basic 只能用來建立單一檔案組件。  如果您想建立多檔案的組件，必須使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] for Visual C\+\+。  
   
- 下列程序示範如何使用命令列編譯器建立單一檔案組件。  
+ 下列程序將說明如何使用命令列編譯器來建立單一檔案組件。  
   
-### <a name="to-create-an-assembly-with-an-exe-extension"></a>建立副檔名為 .exe 的組件  
+### 若要建立具有 .exe 副檔名的組件  
   
 1.  在命令提示字元中輸入下列命令：  
   
-     \<*編譯器命令*> \<*模組名稱*>  
+     \<*compiler command*\> \<*module name*\>  
   
-     在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。  
+     在這個命令中，*compiler command* 是您程式碼模組中使用的語言編譯器命令，而 *module name* 則是編譯到組件的程式碼模組名稱。  
   
- 以下範例會從稱為 `myCode` 的程式碼模組建立名為 `myCode.exe` 的組件。  
+ 下列範例會從名為 `myCode` 的程式碼模組，建立名為 `myCode.exe` 的組件。  
   
 ```csharp  
 csc myCode.cs  
@@ -55,15 +55,15 @@ csc myCode.cs
 vbc myCode.vb  
 ```  
   
-#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>建立副檔名為 .exe 的組件並指定輸出檔名稱  
+#### 若要建立副檔名為 .exe 的組件並指定輸出檔名  
   
 1.  在命令提示字元中輸入下列命令：  
   
-     \<*編譯器命令*> **/out:**\<*檔案名稱*> \<*模組名稱*>  
+     \<*compiler command*\> **\/out:**\<*file name*\> \<*module name*\>  
   
-     在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令、「檔案名稱」是輸出檔名稱，而「模組名稱」則是編譯至組件的程式碼模組名稱。  
+     在這個命令中，*compiler command* 是您程式碼模組中使用的語言編譯器命令、*file name* 是輸出檔名，而 *module name* 則是編譯到組件的程式碼模組名稱。  
   
- 以下範例會從稱為 `myCode` 的程式碼模組建立名為 `myAssembly.exe` 的組件。  
+ 下列範例會從名稱為 `myCode` 的程式碼模組，建立命名為 `myAssembly.exe` 組件。  
   
 ```csharp  
 csc /out:myAssembly.exe myCode.cs  
@@ -73,18 +73,18 @@ csc /out:myAssembly.exe myCode.cs
 vbc /out:myAssembly.exe myCode.vb  
 ```  
   
-## <a name="creating-library-assemblies"></a>建立程式庫組件  
- 程式庫組件類似類別庫。 它包含其他組件會參考的類型，但沒有可開始執行的進入點。  
+## 建立程式庫組件  
+ 程式庫組件與類別庫相似。  它含有供其他組件參考的型別，但沒有可開始執行的進入點。  
   
-#### <a name="to-create-a-library-assembly"></a>建立程式庫組件  
+#### 若要建立程式庫組件  
   
 1.  在命令提示字元中輸入下列命令：  
   
-     \<*編譯器命令*> **/t:library** \<*模組名稱*>  
+     \<*compiler command*\> **\/t:library** \<*module name*\>  
   
-     在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。 您也可以使用其他編譯器選項，例如 **/out:** 選項。  
+     在這個命令中，*compiler command* 是您程式碼模組中使用的語言編譯器命令，而 *module name* 則是編譯到組件的程式碼模組名稱。  您也可以使用其他的編譯器選項，例如 **\/out:** 選項。  
   
- 以下範例會從稱為 `myCode` 的程式碼模組建立名為 `myCodeAssembly.dll` 的程式庫組件。  
+ 下列範例從 `myCode` 程式庫模組建立 `myCodeAssembly.dll` 程式庫組件。  
   
 ```csharp  
 csc /out:myCodeLibrary.dll /t:library myCode.cs  
@@ -94,7 +94,7 @@ csc /out:myCodeLibrary.dll /t:library myCode.cs
 vbc /out:myCodeLibrary.dll /t:library myCode.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## 請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   

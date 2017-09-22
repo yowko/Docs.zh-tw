@@ -1,5 +1,5 @@
 ---
-title: "C# 參考"
+title: "C# 參考 | Microsoft Docs"
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/02/2017
  [C# 編譯器錯誤](../../csharp/language-reference/compiler-messages/index.md)  
  包含示範 C# 編譯器錯誤和警告之原因和修正的程式碼片段。  
   
- [C# 語言規格](../../csharp/language-reference/language-specification/index.md)  
+ [C# 語言規格](../../csharp/language-reference/language-specification.md)  
  提供有關 Microsoft Word 格式之最新版 C# 語言規格的指示。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/02/2017
   
  [C#](../../csharp/index.md) 提供 Visual C# 文件入口網站。  
   
- [使用 C# 的 Visual Studio 開發環境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [使用 C# 的 Visual Studio 開發環境](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  提供描述 IDE 和編輯器的概念和工作主題連結。  
   
  [C# 程式設計指南](../../csharp/programming-guide/index.md)  

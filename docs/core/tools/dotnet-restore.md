@@ -167,7 +167,7 @@ dotnet restore [-h|--help]
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-還原目前目錄中專案的相依性和工具，並且只顯示最小輸出：
+還原目前目錄中專案的相依性和工具，並且只在輸出中顯示錯誤︰
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity Error`
 

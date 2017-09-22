@@ -31,10 +31,9 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ad2053e21e58c49205fe869a484cb2dffd2169ee
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -43,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>語法  
   
-```xml  
+```  
 <summary>description</summary>  
 ```  
   

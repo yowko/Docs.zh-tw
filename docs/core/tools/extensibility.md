@@ -1,10 +1,10 @@
 ---
-title: ".NET Core CLI 擴充性模型"
-description: "了解如何擴充命令列介面 (CLI) 工具。"
+title: ".NET Core CLI 擴充性模型 | Microsoft Docs"
+description: ".NET Core CLI 擴充性模型"
 keywords: "CLI, 擴充性, 自訂命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 04/12/2017
+ms.date: 02/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli

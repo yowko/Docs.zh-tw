@@ -45,7 +45,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名類型的物件初始設定式  
  雖然物件初始設定式可以用於任何內容，但是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
   
-```csharp
+```  
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```  
   
@@ -55,13 +55,13 @@ var pet = new { Age = 10, Name = "Fluffy" };
   
  執行此查詢時，`productInfos` 變數將會包含可以在 `foreach` 陳述式中存取的物件序列，如下列範例所示：  
   
-```csharp
+```  
 foreach(var p in productInfos){...}  
 ```  
   
  新的匿名類型中的每個物件都有兩個公用屬性，這兩個屬性會接收與原始物件中的屬性或欄位相同的名稱。 您也可以在建立匿名類型時重新命名欄位，下列範例會將 `UnitPrice` 欄位重新命名為 `Price`。  
   
-```csharp
+```  
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
   
@@ -69,11 +69,11 @@ select new {p.ProductName, Price = p.UnitPrice};
  使用具有可為 null 類型的物件初始設定式是編譯時期錯誤。  
   
 ## <a name="collection-initializers"></a>集合初始設定式  
- 如果集合類別是實作 <xref:System.Collections.IEnumerable>，且具有 `Add` 與適當簽章以作為執行個體方法或擴充方法，集合初始設定式可讓您在初始化這類集合類別時，指定一或多個項目初始設定式。 項目初始設定式可以是簡單的值、運算式或物件初始設定式。 藉由使用集合初始設定式，您就不需要在原始程式碼中指定多個對類別之 `Add` 方法的呼叫，編譯器會加入呼叫。  
+ 集合初始設定式可讓您在初始化實作 <xref:System.Collections.IEnumerable> 的集合類別或具有 `Add` 擴充方法的類別時，指定一或多個項目初始設定式。 項目初始設定式可以是簡單的值、運算式或物件初始設定式。 藉由使用集合初始設定式，您就不需要在原始程式碼中指定多個對類別之 `Add` 方法的呼叫，編譯器會加入呼叫。  
   
  下列範例將示範兩個簡單的集合初始設定式：  
   
-```csharp
+```  
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
 ```  
@@ -88,7 +88,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
  如果集合支援索引，您可以指定索引的項目。  
   
-```csharp
+```  
 var numbers = new Dictionary<int, string> {   
     [7] = "seven",   
     [9] = "nine",   
@@ -103,4 +103,3 @@ var numbers = new Dictionary<int, string> {
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-

@@ -60,7 +60,7 @@ ms.lasthandoff: 07/28/2017
   
  擲回例外狀況之後，如果在呼叫堆疊中找不到相容的 `catch` 區塊，則會發生下列三種情況的其中一種：  
   
--   如果例外狀況在完成項內，就會中止完成項並呼叫基底完成項 (如果有)。  
+-   如果例外狀況在解構函式內，解構函式會中止，並呼叫基底解構函式 (如果有)。  
   
 -   如果呼叫堆疊包含靜態建構函式或靜態欄位初始設定式，則會擲回 <xref:System.TypeInitializationException>，同時將原始例外狀況指派給新例外狀況的 <xref:System.Exception.InnerException%2A> 屬性。  
   

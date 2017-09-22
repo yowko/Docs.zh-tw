@@ -31,9 +31,9 @@ ms.lasthandoff: 08/04/2017
 
 ## <a name="hello-console-app"></a>嗨，主控台應用程式！
 
-您可以從 dotnet/docs GitHub 存放庫[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+首先，瀏覽至或用您喜歡的名稱建立新的資料夾。 *Hello* 是針對範例程式碼選擇的名稱，您可以在[這裡](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild)找到。
 
-開啟命令提示字元，並建立名為 *Hello* 的資料夾。 巡覽至您已建立的資料夾，並鍵入下列內容：
+開啟命令提示字元並輸入下列命令：
 
 ```
 $ dotnet new console
@@ -45,11 +45,11 @@ $ dotnet run
 
 1. `$ dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) 使用建置主控台應用程式時所需的相依性，來建立最新的 `Hello.csproj` 專案檔。  它也會建立 `Program.cs`，這個基本檔案包含了應用程式的進入點。
+[`dotnet new`](../tools/dotnet-new.md) 使用建置主控台應用程式時所需的相依性，來建立最新的 `Hello.csproj` 專案檔。  它也會建立 `Program.cs`，這個基本檔案包含了應用程式的進入點。
    
-   `Hello.csproj`:
+`Hello.csproj`:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+[!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
 
    專案檔會指定還原相依性和建置程式所需的所有內容。
 
@@ -58,7 +58,7 @@ $ dotnet run
 
    `Program.cs`:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+[!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
 
    程式是透過 `using System` 來啟動，這表示「將 `System` 命名空間中的所有內容帶入這個檔案的範圍內」。 `System` 命名空間會包含像是 `string` 的基本結構或數字類型。
 
@@ -66,7 +66,7 @@ $ dotnet run
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md) 呼叫 [NuGet](https://www.nuget.org/) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 *Hello.csproj* 檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 *obj/project.assets.json* 檔案。  必須要有 *project.assets.json* 檔案才能夠編譯並執行。
+   [`dotnet restore`](../tools/dotnet-restore.md) 呼叫 [NuGet](http://nuget.org) (.NET 套件管理員)，以還原相依性的樹狀結構。 NuGet 會分析 *Hello.csproj* 檔案、下載檔案中所述的相依性 (或從您電腦上的快取抓取)，並寫入 *obj/project.assets.json* 檔案。  必須要有 *project.assets.json* 檔案才能夠編譯並執行。
    
    *project.assets.json* 檔案是一組持續性且完整的 NuGet 相依性圖形，也包含了描述應用程式的其他資訊。  其他工具，例如 [`dotnet build`](../tools/dotnet-build.md) 和 [`dotnet run`](../tools/dotnet-run.md)，會讀取這個檔案，以便它們能用正確的 NuGet 相依性集合與繫結解析，處理原始程式碼。
    
@@ -94,32 +94,32 @@ $ dotnet run
 
 1. 以下列程式碼取代 *Program.cs* 檔案的內容：
 
-   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+[!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
 
 2. 執行 [`dotnet build`](../tools/dotnet-build.md) 以編譯變更。
 
 3. 執行將參數傳遞至應用程式的程式：
 
-   ```
-   $ dotnet run -- John
-   Hello John!
-   Fibonacci Numbers 1-15:
-   1: 0
-   2: 1
-   3: 1
-   4: 2
-   5: 3
-   6: 5
-   7: 8
-   8: 13
-   9: 21
-   10: 34
-   11: 55
-   12: 89
-   13: 144
-   14: 233
-   15: 377
-   ```
+```
+$ dotnet run -- John
+Hello John!
+Fibonacci Numbers 1-15:
+1: 0
+2: 1
+3: 1
+4: 2
+5: 3
+6: 5
+7: 8
+8: 13
+9: 21
+10: 34
+11: 55
+12: 89
+13: 144
+14: 233
+15: 377
+```
 
 就是這麼容易！  您可以隨意擴充 `Program.cs`。
 
@@ -129,33 +129,33 @@ $ dotnet run
 
 1. 使用下列程式碼在 *Hello* 目錄中新增名為 *FibonacciGenerator.cs* 的檔案：
 
-   [!code-csharp[Fibonacci 產生器](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+[!code-csharp[Fibonacci 產生器](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
 2. 變更 *Program.cs* 檔案中的 `Main` 方法，以具現化新的類別並呼叫其方法，如下列範例所示：
 
-   [!code-csharp[新的 Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+[!code-csharp[新的 Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. 執行 [`dotnet build`](../tools/dotnet-build.md) 以編譯變更。
 
 4. 藉由執行 [`dotnet run`](../tools/dotnet-run.md) 來執行您的應用程式。 以下顯示程式輸出：
 
-   ```
-   0
-   1
-   1
-   2
-   3
-   5
-   8
-   13
-   21
-   34
-   55
-   89
-   144
-   233
-   377
-   ```
+```
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+```
 
 就是這麼容易！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
 

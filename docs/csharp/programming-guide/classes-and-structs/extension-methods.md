@@ -47,7 +47,7 @@ ms.lasthandoff: 09/05/2017
   
  擴充方法會定義為靜態方法，但透過執行個體方法語法呼叫。 擴充方法的第一個參數會指定方法作業所在的類型，而且參數前面會加上 [this](../../../csharp/language-reference/keywords/this.md) 修飾詞。 您必須使用 `using` 指示詞將命名空間明確匯入至原始程式碼，擴充方法才會進入範圍中。  
   
- 下列範例將示範針對 <xref:System.String?displayProperty=fullName> 類別定義的擴充方法。 請注意，擴充方法是定義在非巢狀且非泛型的靜態類別內：  
+ 下列範例顯示針對 <xref:System.String?displayProperty=fullName> 類別定義的擴充方法。 請注意，擴充方法是定義在非巢狀且非泛型的靜態類別內：  
   
  [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
@@ -74,7 +74,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- (您可能也要加入對 System.Core.dll 的參考)。您將會注意到，標準查詢運算子現在出現在 IntelliSense 中，做為適用於大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的額外方法。  
+ (您可能也要加入對 System.Core.dll 的參考)。您將會注意到，標準查詢運算子現在出現在 IntelliSense 中，作為適用於大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的額外方法。  
   
 > [!NOTE]
 >  雖然標準查詢運算子未針對 <xref:System.String> 出現在 IntelliSense 中，但是您仍然可以使用它們。  

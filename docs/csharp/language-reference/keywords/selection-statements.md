@@ -34,10 +34,10 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="selection-statements-c-reference"></a>選擇陳述式 (C# 參考)
-選擇陳述式可依據特定條件是否為 `true`，將程式控制傳送給特定的流程。  
+# 選擇陳述式 (C# 參考)
+選擇陳述式會根據特定條件是否為 `true`，而將程式控制轉移到特定的流程。  
   
- 選擇陳述式中會使用下列關鍵字：  
+ 以下的關鍵字使用在選擇陳述式：  
   
 -   [if](../../../csharp/language-reference/keywords/if-else.md)  
   

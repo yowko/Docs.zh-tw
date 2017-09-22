@@ -34,10 +34,9 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
+translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 546168994973d19336f86f4b4e9ec566f0b9dd91
-ms.contentlocale: zh-tw
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -77,7 +76,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  此程式碼顯示下列文字：  
   
-```xml  
+```  
 <ns:outer xmlns="http://DefaultNamespace"   
           xmlns:ns="http://NewNamespace">  
   <ns:innerElement></ns:innerElement>  
@@ -93,7 +92,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  此程式碼顯示下列文字：  
   
-```xml  
+```  
 <ns:outer xmlns:ns="http://SomeNamespace">  
   <ns:middle xmlns:ns="http://NewNamespace">  
     <ns:inner1 />  

@@ -31,7 +31,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  下列文字檔 Report.xml 是此範例的原始檔。  
   
-```xml  
+```  
 <?xml version="1.0" encoding="utf-8" ?>  
 <Report>  
   <Section>  

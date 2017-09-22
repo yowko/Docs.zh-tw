@@ -107,7 +107,7 @@ Console.WriteLine(localizeMe);
 
 如果編譯它，您將會收到錯誤：
  
-* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」才宣告 `adj` 變數。
+* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」**才宣告 `adj` 變數。
 * `The name 'otheranimal' does not exist in the current context` - 從未宣告名為 `otheranimal` 的變數
 
 ## <a name="localization-and-internationalization"></a>當地語系化和國際化

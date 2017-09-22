@@ -12,8 +12,8 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
+author: stevehoag
+ms.author: shoag
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -80,4 +80,3 @@ ms.lasthandoff: 07/28/2017
 
  [Office 方案的資料](https://msdn.microsoft.com/library/xx069ybh)  
  包含頁面的連結，這些頁面說明資料在 Office 方案中的運作方式，包括結構描述導向的程式設計、資料快取，以及伺服器端的資料存取。
-

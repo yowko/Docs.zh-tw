@@ -43,11 +43,11 @@ ms.lasthandoff: 07/28/2017
  [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
 ## <a name="remarks"></a>備註  
- <xref:System.IO.File> 和 <xref:System.Drawing.Font> 是 Managed 類型的範例，這些類型會存取 Unmanaged 資源 (在本例中為檔案控制代碼和裝置內容)。 還有許多其他類型的 Unmanaged 資源，以及封裝這些資源的類別庫類型。 所有這些類型都會實作 <xref:System.IDisposable> 介面。  
+ <xref:System.IO.File> 和 <xref:System.Drawing.Font> 是 Managed 類型的範例，這些類型會存取 Unmanaged 資源 (在本例中為檔案控制代碼和裝置內容)。 還有許多其他類型的 Unmanaged 資源，以及封裝這些資源的類別庫類型。 所有這類類型都必須實作 <xref:System.IDisposable> 介面。  
   
- 一般而言，當您使用 `IDisposable` 物件時，您應該在 `using` 陳述式中宣告並具現化該物件。 `using` 陳述式會以正確的方式呼叫物件上的 <xref:System.IDisposable.Dispose%2A> 方法，而且 (當您如稍早所示使用它時) 它也會在一呼叫 <xref:System.IDisposable.Dispose%2A> 時讓物件本身超出範圍。 在 `using` 區塊內，物件是唯讀的，而且無法加以修改或重新指派。  
+ 一般而言，當您使用 `IDisposable` 物件時，您應該在 `using` 陳述式中宣告並具現化該物件。 `using` 陳述式會在物件上正確地呼叫 <xref:System.IDisposable.Dispose%2A> 方法，而且 (當您如稍早所示使用它時) 它也會在呼叫 <xref:System.IDisposable.Dispose%2A> 時導致物件本身超出範圍。 在 `using` 區塊內，物件是唯讀的，而且無法加以修改或重新指派。  
   
- `using` 陳述式可確保呼叫 <xref:System.IDisposable.Dispose%2A>，即使在您呼叫物件上的方法時發生例外狀況也一樣。 您可以將物件放在 try 區塊內，然後在 finally 區塊中呼叫 <xref:System.IDisposable.Dispose%2A>，來達到相同的結果；事實上，這就是編譯器轉譯 `using` 陳述式的方式。 稍早的程式碼範例會在編譯時期展開為下列程式碼 (注意額外的大括號是為了建立物件的有限範圍)：  
+ `using` 陳述式可確保呼叫 <xref:System.IDisposable.Dispose%2A>，即使在物件上呼叫方法時發生例外狀況也一樣。 您可以將物件放在 try 區塊內，然後在 finally 區塊中呼叫 <xref:System.IDisposable.Dispose%2A>，來達到相同的結果；事實上，這就是編譯器轉譯 `using` 陳述式的方式。 稍早的程式碼範例會在編譯時期展開為下列程式碼 (注意額外的大括號是為了建立物件的有限範圍)：  
   
  [!code-cs[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_2.cs)]  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 07/28/2017
  [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

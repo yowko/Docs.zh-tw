@@ -36,7 +36,7 @@ ms.lasthandoff: 07/28/2017
 
 ![Preview 2 工具高階架構](media/cli-msbuild-architecture/p2-arch.png)
 
-這些工具的分層相當簡單。 在底部我們有 .NET Core 命令列工具做為基礎。 所有其他的高階工具 (例如 Visual Studio 或 Visual Studio Code) 則依存並仰賴 CLI 來建置專案、還原相依性等。 舉例來說，這表示如果 Visual Studio 希望執行還原作業，它會呼叫 CLI 中的 `dotnet restore` 命令。 
+這些工具的分層相當簡單。 在底部我們有 .NET Core 命令列工具做為基礎。 所有其他的高階工具 (例如 Visual Studio 或 VS Code) 則依存並仰賴 CLI 來建置專案、還原相依性等。 舉例來說，這表示如果 Visual Studio 希望執行還原作業，它會呼叫 CLI 中的 `dotnet restore` 命令。 
 
 隨著移動到新的專案系統，之前的圖表有所變更： 
 

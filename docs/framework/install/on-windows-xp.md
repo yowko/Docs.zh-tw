@@ -16,10 +16,10 @@ ms.lasthandoff: 08/05/2017
 
 ---
 
-# <a name="install-the-net-framework-on-windows-xp"></a>在 Windows XP 上安裝 .NET Framework
+# <a name="installing-the-net-framework-on-windows-xp"></a>在 Windows XP 上安裝 .NET Framework
 
-> [!NOTE]
-> Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且支援最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。
+> [!NOTE] 
+> Microsoft 已不再支援 Windows XP。 建議您升級至 Windows 10，這是受支援的版本，而且支援最新版的 .NET Framework。 本文件僅供用來作為有幫助的疑難排解指南。 
 
 您可能需要 .NET Framework，才能在 Windows XP 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
 

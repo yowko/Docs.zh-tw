@@ -42,53 +42,55 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>如何：在 Visual Basic 中於相同目錄內建立檔案複本
-使用 `My.Computer.FileSystem.CopyFile` 方法來複製檔案。 這些參數可讓您覆寫現有檔案、重新命名檔案、顯示作業進度，並讓使用者取消作業。  
+# How to: Create a Copy of a File in the Same Directory in Visual Basic
+[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+
+使用 `My.Computer.FileSystem.CopyFile` 方法複製檔案。  此參數可讓您覆寫現有的檔案、重新命名檔案、顯示作業進度，並允許使用者取消作業。  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>在相同資料夾中建立檔案複本  
+### 若要在相同的資料夾中建立檔案的複本  
   
--   使用 `CopyFile` 方法，並提供目標檔案和位置。 下列範例會建立稱為 `test2.txt` 的 `test.txt` 複本。  
+-   請使用 `CopyFile` 方法，提供目標檔案和位置。  下列範例會建立名為 `test2.txt` 之 `test.txt` 的複本。  
   
      [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>在相同資料夾中建立檔案複本，以覆寫現有檔案  
+### 若要在相同的資料夾中建立檔案的複本，以覆寫現有的檔案  
   
--   使用 `CopyFile` 方法，並提供目標檔案和位置，以及將 `overwrite` 設定為 `True`。 下列範例會建立稱為 `test2.txt` 的 `test.txt` 複本，並以該名稱覆寫任何現有檔案。  
+-   請使用 `CopyFile` 方法，提供目標檔案和位置，並將 `overwrite` 設定為 `True`。  下列範例會建立名為 `test2.txt` 之 `test.txt` 的複本，並以該名稱覆寫所有的現有檔案。  
   
      [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
- 下列條件可能會造成擲回例外狀況：  
+## 穩固程式設計  
+ 下列條件可能造成擲回例外狀況：  
   
--   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (開頭為 \\\\.\\) (<xref:System.ArgumentException>)。  
+-   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 \(開頭為 \\\\.  \\\) \(<xref:System.ArgumentException>\).  
   
--   系統無法擷取絕對路徑 (<xref:System.ArgumentException>)。  
+-   系統無法擷取絕對路徑 \(<xref:System.ArgumentException>\)。  
   
--   路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
+-   路徑無效，因為它是 `Nothing` \(<xref:System.ArgumentNullException>\)。  
   
--   來源檔案無效或不存在 (<xref:System.IO.FileNotFoundException>)。  
+-   原始程式檔無效或不存在 \(<xref:System.IO.FileNotFoundException>\)。  
   
--   合併的路徑指向現有目錄 (<xref:System.IO.IOException>)。  
+-   組合路徑會指向現有的目錄 \(<xref:System.IO.IOException>\)。  
   
--   目的地檔案存在且 `overwrite` 設定為 `False` (<xref:System.IO.IOException>)。  
+-   目的檔存在且 `overwrite` 設定為 `False` \(<xref:System.IO.IOException>\)。  
   
--   使用者沒有足夠權限以存取檔案 (<xref:System.IO.IOException>)。  
+-   使用者沒有足夠的使用權限可以存取檔案 \(<xref:System.IO.IOException>\)。  
   
--   正在使用目標資枓夾中同名的檔案 (<xref:System.IO.IOException>)。  
+-   目標資料夾中具有相同名稱的檔案正在使用中 \(<xref:System.IO.IOException>\)。  
   
--   路徑中的檔案或資料夾名稱包含冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
+-   路徑中的檔案或資料夾名稱含有冒號 \(:\)，或者是無效的格式 \(<xref:System.NotSupportedException>\)。  
   
--   `ShowUI` 設定為 `True`、`onUserCancel` 設定為 `ThrowException`，而且使用者已取消作業 (<xref:System.OperationCanceledException>)。  
+-   `ShowUI` 設為 `True`、`onUserCancel` 設為 `ThrowException`，而且使用者已取消作業 \(<xref:System.OperationCanceledException>\)。  
   
--   `ShowUI` 設定為 `True`、`onUserCancel` 設定為 `ThrowException`，而且發生未指定的 I/O 錯誤 (<xref:System.OperationCanceledException>)。  
+-   `ShowUI` 設為 `True`、`onUserCancel` 設為 `ThrowException`，而且發生未指定的 I\/O 錯誤 \(<xref:System.OperationCanceledException>\)。  
   
--   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
+-   路徑超過系統定義的最大長度 \(<xref:System.IO.PathTooLongException>\)。  
   
--   使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者未具備必要的使用權限 \(<xref:System.UnauthorizedAccessException>\)。  
   
--   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
+-   使用者缺乏必要的使用權限來檢視路徑 \(<xref:System.Security.SecurityException>\)。  
   
-## <a name="see-also"></a>另請參閱  
+## 請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>   
  <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   

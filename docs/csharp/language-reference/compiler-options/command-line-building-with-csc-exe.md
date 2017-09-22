@@ -127,4 +127,3 @@ csc /target:library /out:Something.xyz *.cs
  [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-

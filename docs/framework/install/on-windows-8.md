@@ -16,7 +16,7 @@ ms.lasthandoff: 08/05/2017
 
 ---
 
-# <a name="install-the-net-framework-on-windows-8"></a>在 Windows 8 上安裝 .NET Framework
+# <a name="installing-the-net-framework-on-windows-8"></a>在 Windows 8 上安裝 .NET Framework
 
 您可能需要 .NET Framework，才能在 Windows 8 上執行應用程式。 您可以使用下列指示來協助您。 這些指示取決於您所需的 .NET Framework 版本。
 

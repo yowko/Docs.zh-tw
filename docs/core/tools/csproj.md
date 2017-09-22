@@ -4,7 +4,7 @@ description: "深入了解現有和 .NET Core csproj 檔案之間的差異"
 keywords: "參考, csproj, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 05/24/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
@@ -51,11 +51,11 @@ ms.lasthandoff: 07/28/2017
 
 下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))： 
 
-| 項目           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob                |
+| 項目              | 包含 Glob                               | 排除 Glob                                                     | 移除 Glob                  |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
-| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
-| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| 編譯              | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc     | N/A                          |
+| 內嵌資源     | \*\*/\*.resx                                 | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                          |
+| 無                 | \*\*/\*                                      | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 如果您的專案有 Glob，而且您嘗試使用最新的 SDK 建置專案，您會收到下列錯誤：
 
@@ -83,7 +83,6 @@ ms.lasthandoff: 07/28/2017
 
 如果專案具有多個目標架構，系統應該會透過將它們的其中之一指定為 MSBuild 屬性，來使命令的結果專注於該目標架構：
 
-`dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
 
 ## <a name="additions"></a>新增項目
 

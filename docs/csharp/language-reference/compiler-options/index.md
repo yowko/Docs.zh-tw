@@ -1,5 +1,5 @@
 ---
-title: "C# 編譯器選項"
+title: "C# 編譯器選項 | Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -61,12 +61,11 @@ ms.lasthandoff: 08/28/2017
  依字母順序列出編譯器選項。  
   
 ## <a name="related-sections"></a>相關章節  
- [專案設計工具、建置頁](/visualstudio/ide/reference/build-page-project-designer-csharp)  
+ [專案設計工具、建置頁](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)  
  設定可控制如何編譯專案、建置及偵錯的屬性。 包含有關在 Visual C# 專案中自訂建置步驟的資訊。  
   
- [預設和自訂建置](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [預設和自訂建置](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio)  
  有關建置類型和組態的資訊。  
   
- [準備和管理建置](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
+ [準備和管理建置](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
  在 Visual Studio 開發環境內建置的程序。
-

@@ -32,32 +32,33 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (軟體發行者憑證測試工具)
-軟體發行者憑證測試工具會從一個或多個 X.509 憑證建立軟體發行者的憑證 (SPC)。 Cert2spc.exe 僅供測試使用。 您可以從憑證授權單位 (例如 VeriSign 或 Thawte) 取得有效的 SPC。 如需建立 X.509 憑證的詳細資訊，請參閱 [Makecert.exe (憑證建立工具)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
+# Cert2spc.exe (Software Publisher Certificate Test Tool)
+軟體發行者憑證測試工具會從一個或多個 X.509 憑證建立軟體發行者的憑證 \(SPC\)。  Cert2spc.exe 僅供測試使用。  您可以從憑證授權單位 \(例如 VeriSign 或 Thawte\) 取得有效的 SPC。  如需關於建立 X.509 憑證的詳細資訊，請參閱[Makecert.exe \(Certificate Creation Tool\)](../Topic/Makecert.exe%20\(Certificate%20Creation%20Tool\).md)。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。  若要執行此工具，請使用 \[開發人員命令提示字元\] \(或 Windows 7 中的 \[Visual Studio 命令提示字元\]\)。  如需詳細資訊，請參閱 [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
-## <a name="syntax"></a>語法  
+## 語法  
   
 ```  
+  
 cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### 參數  
   
-|引數|說明|  
-|--------------|-----------------|  
-|`certN.cer`|要包含在 SPC 檔案中的 X.509 憑證名稱。 您可以指定多個名稱，並以空格分隔每個名稱。|  
-|`crlN.crl`|要包含在 SPC 檔案中的憑證撤銷清單名稱。 您可以指定多個名稱，並以空格分隔每個名稱。|  
-|`outputSPCfile.spc`|將包含 X.509 憑證的 PKCS #7 物件名稱。|  
+|引數|描述|  
+|--------|--------|  
+|`certN.cer`|要包含在 SPC 檔案中的 X.509 憑證名稱。  您可以指定多個名稱，並以空格分隔每個名稱。|  
+|`crlN.crl`|要包含在 SPC 檔案中的憑證撤銷清單名稱。  您可以指定多個名稱，並以空格分隔每個名稱。|  
+|`outputSPCfile.spc`|將包含 X.509 憑證的 PKCS \#7 物件名稱。|  
   
 |選項|描述|  
-|------------|-----------------|  
-|**/?**|顯示工具的命令語法和選項。|  
+|--------|--------|  
+|**\/?**|顯示工具的命令語法和選項。|  
   
-## <a name="examples"></a>範例  
+## 範例  
  下列命令會從 `myCertificate.cer` 建立 SPC 並且將它放入 `mySPCFile.spc` 中。  
   
 ```  
@@ -70,8 +71,7 @@ cert2spc myCertificate.cer mySPCFile.spc
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [工具](../../../docs/framework/tools/index.md)   
- [Makecert.exe (憑證建立工具)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)   
+## 請參閱  
+ [Tools](../../../docs/framework/tools/index.md)   
+ [Makecert.exe \(Certificate Creation Tool\)](../Topic/Makecert.exe%20\(Certificate%20Creation%20Tool\).md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

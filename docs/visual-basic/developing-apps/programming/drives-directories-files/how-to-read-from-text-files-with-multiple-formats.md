@@ -44,12 +44,14 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>如何：在 Visual Basic 中以多種格式從文字檔讀取
-<xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。  
+# How to: Read From Text Files with Multiple Formats in Visual Basic
+[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+
+<xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件提供簡便且有效的方式來剖析結構化的文字檔，例如記錄檔。  您可以使用 `PeekChars` 方法處理具有多種格式的檔案，以便在剖析整個檔案時判斷每一行的格式。  
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔  
+### 若要剖析具有多種格式的文字檔  
   
-1.  將名為 testfile.txt 的文字檔新增至專案。 將下列內容新增至文字檔。  
+1.  將名為 testfile.txt 的文字檔加入至專案。  將下列內容加入至文字檔中。  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -60,41 +62,41 @@ ms.lasthandoff: 07/28/2017
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  定義預期的格式，以及回報錯誤時所使用的格式。 每個陣列中的最後一個項目為 -1，因此將最後一個欄位假設為可變寬度。 陣列中的最後一個項目小於或等於 0 時會發生這種情況。  
+2.  定義預期的格式，以及報告錯誤時要使用的格式。  每個陣列中的最後一個項目為 \-1，因此最後一個欄位被假設具有可變寬度的性質。  陣列中的最後一個項目小於或等於 0 時，就會發生此情形。  
   
      [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
   
-3.  建立新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件，並定義寬度和格式。  
+3.  建立新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件，定義寬度和格式。  
   
      [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
   
-4.  反覆執行資料列，並在讀取之前測試格式。  
+4.  對資料列進行迴圈 \(Loop\)，在讀取之前先測試格式。  
   
      [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_3.vb)]  
   
-5.  將錯誤寫入主控台。  
+5.  將錯誤寫入至主控台 \(Console\)。  
   
      [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_4.vb)]  
   
-## <a name="example"></a>範例  
- 下列是從 `testfile.txt` 檔案進行讀取的完整範例。  
+## 範例  
+ 以下是示範讀取 `testfile.txt` 檔案的完整範例。  
   
  [!code-vb[VbFileIORead#8](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_5.vb)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
- 以下條件可能會造成例外狀況：  
+## 穩固程式設計  
+ 下列情形可能會造成例外狀況 \(Exception\)：  
   
--   無法使用指定格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 例外狀況訊息指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性被指派至包含於該文字行中的文字。  
+-   不可以使用指定的格式剖析資料列 \(<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>\)。  例外狀況訊息會指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性會指派給此行內含的文字。  
   
--   指定的檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
+-   指定的檔案不存在 \(<xref:System.IO.FileNotFoundException>\)。  
   
--   發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)  
+-   發生使用者權限不足而無法存取檔案的部分信任狀況   \(<xref:System.Security.SecurityException>\).  
   
--   路徑太長 (<xref:System.IO.PathTooLongException>)。  
+-   路徑太長 \(<xref:System.IO.PathTooLongException>\)。  
   
--   使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
+-   使用者沒有足夠的使用權限可以存取檔案 \(<xref:System.UnauthorizedAccessException>\)。  
   
-## <a name="see-also"></a>另請參閱  
+## 請參閱  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>   
  <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>   

@@ -25,7 +25,7 @@ ms.lasthandoff: 07/28/2017
 前一篇文章討論最常見的事件模式。 .NET Core 有比較寬鬆的模式。 在本版中，`EventHandler<TEventArgs>` 定義不再具有 `TEventArgs` 必須是 `System.EventArgs` 衍生類別的條件約束。
 
 這為您增加彈性，且與舊版相容。 讓我們開始使用彈性。 System.EventArgs 類別導入了方法 `MemberwiseClone()`，它會建立物件的淺層複本。
-該方法必須使用反映，才能針對 `EventArgs` 的任何衍生類別實作其功能。 在特定的衍生類別中很容易建立該功能。 它會有效表示衍生自 System.EventArgs 的是條件約束，會限制您的設計，但不提供任何額外的好處。
+該方法必須使用[反映](reflection.md)才能針對 `EventArgs` 的所有衍生類別實作其功能。 在特定的衍生類別中很容易建立該功能。 它會有效表示衍生自 System.EventArgs 的是條件約束，會限制您的設計，但不提供任何額外的好處。
 事實上，您可以變更 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定義，讓它們不衍生自 `EventArgs`。
 程式運作完全相同。
 

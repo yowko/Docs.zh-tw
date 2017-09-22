@@ -37,7 +37,7 @@ ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
-C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上執行且兼俱安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 輕鬆地開發應用程式。  
+C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 上執行且兼俱安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 輕鬆地開發應用程式。  
   
 > [!NOTE]
 > [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 文件假設您了解基本程式設計概念。 如果您是新手，您可以瀏覽網站上的 [!INCLUDE[csprcsxpr](~/includes/csprcsxpr-md.md)]。 您也可以利用 C# 的相關書籍和 Web 資源來了解實用的程式設計技能。  
@@ -65,11 +65,11 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  下列是一些其他 C# 資源：  
   
--   如需此語言的一般簡介，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)的第 1 章。  
+-   如需此語言的一般簡介，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification.md)的第 1 章。  
   
 -   如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。  
   
--   如需 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的詳細資訊，請參閱 [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
+-   如需 [!INCLUDE[vbteclinq](../../csharp/includes/vbteclinq_md.md)] 的詳細資訊，請參閱 [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
   
 -   若要尋找 Visual C# 小組的最新文章和資源，請參閱 [Visual C# 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=47811) \(英文\)。  
   
