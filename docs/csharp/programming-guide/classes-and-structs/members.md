@@ -1,20 +1,39 @@
 ---
-title: "成員 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 類型成員"
-  - "類型 [C#], 巢狀類型"
+title: "成員 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- types [C#], nested types
+- C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 caps.latest.revision: 20
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 20
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 成員 (C# 程式設計手冊)
 類別和結構具有代表資料與行為的成員。  類別的成員包括類別中宣告的所有成員，以及其繼承階層中所有類別內的所有成員 \(但不包括建構函式和解構函式\)。  衍生類別 \(Derived Class\) 可以繼承基底類別 \(Base Class\) 中的 Private 成員，但無法加以存取。  
@@ -47,3 +66,4 @@ caps.handback.revision: 20
  [巢狀類型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
  [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
  [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+

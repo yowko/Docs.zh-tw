@@ -1,5 +1,5 @@
 ---
-title: "使用建構函式 (C# 程式設計手冊) | Microsoft Docs"
+title: "使用建構函式 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d61870e6d2d8f905c56f86bbb6e6d99d5dae80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75b55fde2fbd1697aed7eb0665a571c63b9b0b42
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用建構函式 (C# 程式設計手冊)
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
-不使用任何參數的建構函式稱為「預設建構函式」**。 每當使用 `new` 運算子來具現化物件，而且未提供引數給 `new` 時，便會叫用預設建構函式。 如需詳細資訊，請參閱[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。 
+ 不使用任何參數的建構函式稱為 *預設建構函式*。 每當使用 `new` 運算子來具現化物件，而且未提供引數給 `new` 時，便會叫用預設建構函式。 如需詳細資訊，請參閱[執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)。  
   
  除非是[靜態](../../../csharp/language-reference/keywords/static.md)類別，否則只要是沒有建構函式的類別，C# 編譯器都會指定公用預設建構函式，以啟用類別具現化。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
  如需詳細資訊，請參閱 [私用建構函式](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)。  
   
- [結構](../../../csharp/language-reference/keywords/struct.md)類型的建構函式與類別建構函式類似，但 `structs` 不能包含明確的預設建構函式，因為編譯器已自動提供一個預設建構函式。 此建構函式會將 `struct` 中的每個欄位都初始化為預設值。 如需詳細資訊，請參閱[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)。 不過，只有 `struct` 是以 `new` 具現化時，才會呼叫此預設建構函式。 例如，下列程式碼使用 <xref:System.Int32> 的預設建構函式，因此您可以確定整數已加以初始化：  
+ [結構](../../../csharp/language-reference/keywords/struct.md)類型的建構函式與類別建構函式類似，但 `structs` 不能包含明確的預設建構函式，因為編譯器已自動提供一個預設建構函式。 此建構函式會將 `struct` 中的每個欄位都初始化為預設值。 如需詳細資訊，請參閱[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)。 不過，只有 `struct` 是以 `new` 具現化時，才會呼叫此預設建構函式。 例如，此程式碼使用 <xref:System.Int32> 的預設建構函式，以確保整數已初始化：  
   
 ```  
 int i = new int();  
@@ -105,15 +106,16 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- 建構函式可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected``internal`。 這些存取修飾詞定義類別使用者如何建構類別。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 建構函式可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 `protected internal`。 這些存取修飾詞定義類別使用者如何建構類別。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  建構函式可使用 [static](../../../csharp/language-reference/keywords/static.md) 關鍵字宣告為靜態。 靜態建構函式會在即將存取任何靜態欄位之前自動進行呼叫，而且通常會用來初始化靜態類別成員。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

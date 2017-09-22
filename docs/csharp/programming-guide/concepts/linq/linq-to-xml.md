@@ -1,5 +1,5 @@
 ---
-title: LINQ to XML (C#) | Microsoft Docs
+title: LINQ to XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9772ea7fb9671bef481f0b9011ddc83d0a1b7342
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ccfecd45f68d60d2bbb58d51aa516a20c567a853
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-c"></a>LINQ to XML (C#)
@@ -33,7 +33,7 @@ LINQ to XML 提供運用 .NET Language-Integrated Query (LINQ) Framework 的記�
   
 ## <a name="in-this-section"></a>本節內容  
  [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- 提供 LINQ to XML 的簡介資訊，包括概念式概觀和 <xref:System.Xml.Linq?displayProperty=fullName> 類別的概觀。  
+ 提供有關 LINQ to XML 的簡介資訊，包括概念性概觀和 <xref:System.Xml.Linq?displayProperty=fullName> 類別的概觀。  
   
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  提供使用 LINQ to XML 進行程式設計的概念性和使用說明資訊。  
@@ -43,3 +43,4 @@ LINQ to XML 提供運用 .NET Language-Integrated Query (LINQ) Framework 的記�
   
 ## <a name="see-also"></a>另請參閱  
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+

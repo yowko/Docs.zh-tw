@@ -1,7 +1,7 @@
 ---
 title: "以相鄰索引鍵將結果分組"
 description: "如何以相鄰索引鍵將結果分組。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f49b0e0dac7df20fc6e5015b9707208ee65a48d6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ddd028a3aad5186ef6773b32e9f9e8e1cbff95fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="group-results-by-contiguous-keys"></a>以相鄰索引鍵將結果分組
@@ -59,3 +59,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>請參閱  
  [LINQ 查詢運算式](index.md)   
  
+

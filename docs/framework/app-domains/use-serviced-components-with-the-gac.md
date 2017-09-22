@@ -1,25 +1,30 @@
 ---
-title: "使用 Serviced 元件和全域組件快取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 全域組件快取"
-  - "GAC (全域組件快取), 服務元件"
-  - "全域組件快取, 服務元件"
-  - "服務元件, 全域組件快取"
+title: "使用 Serviced 元件和全域組件快取"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- GAC (global assembly cache), serviced components
+- serviced components, global assembly cache
+- global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 493ca9a2da4a06528eab9b87db78a5b7a49a2f1d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 使用 Serviced 元件和全域組件快取
 Serviced 元件 \(Managed 程式碼 COM\+ 元件\) 應放入全域組件快取。  在某些案例中，Common Language Runtime 和 COM\+ 服務可以處理不在全域組件快取中的 Serviced 元件；但在某些案例中則不行。  下列案例便可說明：  
@@ -33,5 +38,5 @@ Serviced 元件 \(Managed 程式碼 COM\+ 元件\) 應放入全域組件快取�
 ## 請參閱  
  [How to: Create a Serviced Component](http://msdn.microsoft.com/zh-tw/7ec0b488-e5fc-46f2-a48d-1278ea4e301d)   
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [Gacutil.exe \(Global Assembly Cache Tool\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
- [Assembly Cache Viewer \(Shfusion.dll\)](http://msdn.microsoft.com/zh-tw/0d9464cf-ddba-4ca9-bbec-f678fb58f380)
+ [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+

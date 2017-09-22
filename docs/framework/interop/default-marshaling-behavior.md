@@ -1,44 +1,49 @@
 ---
-title: "預設的封送處理行為 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Interop 封送處理, 預設"
-  - "與 Unmanaged 程式碼的互通, 封送處理"
-  - "封送處理行為"
+title: "預設的封送處理行為"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interop marshaling, default
+- interoperation with unmanaged code, marshaling
+- marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 預設的封送處理行為
-Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。  這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
+# <a name="default-marshaling-behavior"></a>預設的封送處理行為
+Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
   
- 本節指出 Interop 封送處理服務的預設行為特性，  提供有關封送處理陣列、Boolean 類型、char 類型、委派、類別、物件、字串和結構的詳細資訊。  
+ 本節指出 Interop 封送處理服務的預設行為特性， 提供有關封送處理陣列、Boolean 類型、char 類型、委派、類別、物件、字串和結構的詳細資訊。  
   
 > [!NOTE]
->  不支援封送處理泛型類型。  如需詳細資訊，請參閱[Interoperating Using Generic Types](http://msdn.microsoft.com/zh-tw/26b88e03-085b-4b53-94ba-a5a9c709ce58)。  
+>  不支援封送處理泛型類型。 如需詳細資訊，請參閱[使用泛型型別互通](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)。  
   
-## 使用 Interop 封送處理器進行記憶體管理  
- Interop 封送處理器一律會嘗試釋放 Unmanaged 程式碼所配置的記憶體。  這個行為使用 COM 記憶體管理規則進行編譯，但與管理原生 C\+\+ 的規則不同。  
+## <a name="memory-management-with-the-interop-marshaler"></a>使用 Interop 封送處理器進行記憶體管理  
+ Interop 封送處理器一律會嘗試釋放 Unmanaged 程式碼所配置的記憶體。 這個行為使用 COM 記憶體管理規則進行編譯，但與管理原生 C++ 的規則不同。  
   
- 如果您使用平台叫用 \(會自動釋放指標的記憶體\) 時，預期原生 C\+\+ 行為 \(不釋放記憶體\)，則會發生混淆。  例如，從 C\+\+ DLL 呼叫下列 Unmanage 方法不會自動釋放任何記憶體。  
+ 如果您使用平台叫用 (會自動釋放指標的記憶體) 時，預期原生 C++ 行為 (不釋放記憶體)，則會發生混淆。 例如，從 C++ DLL 呼叫下列 Unmanage 方法不會自動釋放任何記憶體。  
   
-### Unmanaged 簽章  
+### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
 ```  
 BSTR MethodOne (BSTR b) {  
@@ -46,52 +51,52 @@ BSTR MethodOne (BSTR b) {
 }  
 ```  
   
- 不過，如果您將方法定義為平台叫用原型，將每個 **BSTR** 類型以 <xref:System.String> 類型取代，並呼叫 `MethodOne`，則 Common Language Runtime 會嘗試釋放 `b` 兩次。  您可以使用 <xref:System.IntPtr> 類型 \(而不是**字串**類型\) 變更封送處理行為。  
+ 不過，如果您將方法定義為平台叫用原型、將每個 **BSTR** 類型取代為 <xref:System.String> 類型，並呼叫 `MethodOne`，則 Common Language Runtime 會嘗試釋放 `b` 兩次。 您可以使用 <xref:System.IntPtr> 類型 (而不是 **String** 類型) 變更封送處理行為。  
   
- 執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。  如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，您必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。  同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。  如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](http://msdn.microsoft.com/zh-tw/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)。  
+ 執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)。  
   
-## 類別的預設封送處理  
- 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。  在某些情況下，用來封送處理類別的介面也稱為類別介面。  如需以您選擇的介面來覆寫類別介面的相關資訊，請參閱[類別介面簡介](http://msdn.microsoft.com/zh-tw/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
+## <a name="default-marshaling-for-classes"></a>類別的預設封送處理  
+ 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱[類別介面簡介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
   
-### 將類別傳遞給 COM  
- 將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。  Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。  Proxy 也會公開類別未明確實作的其他介面。  Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 等介面。  
+### <a name="passing-classes-to-com"></a>將類別傳遞給 COM  
+ 將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。 Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。 Proxy 也會公開類別未明確實作的其他介面。 Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 這類介面。  
   
-### 將類別傳遞給 .NET 程式碼  
- 一般而言，Coclass 在 COM 中不會做為方法引數，  通常會以預設介面代替 Coclass 傳遞。  
+### <a name="passing-classes-to-net-code"></a>將類別傳遞給 .NET 程式碼  
+ 一般而言，Coclass 在 COM 中不會做為方法引數， 通常會以預設介面代替 Coclass 傳遞。  
   
- 在將介面傳遞至 Managed 程式碼中之後，Interop 封送處理器會負責以適當的包裝函式來包裝介面，並將包裝函式傳遞給 Managed 方法。  您可能很難決定要使用哪個包裝函式。  不論物件實作多少個介面，COM 物件的每個執行個體都只會有一個包裝函式。  例如，實作五個不同介面的單一 COM 物件只會有一個包裝函式。  同一個包裝函式會公開所有五個介面。  如果建立 COM 物件的兩個執行個體，則會建立包裝函式的兩個執行個體。  
+ 在將介面傳遞至 Managed 程式碼中之後，Interop 封送處理器會負責以適當的包裝函式來包裝介面，並將包裝函式傳遞給 Managed 方法。 您可能很難決定要使用哪個包裝函式。 不論物件實作多少個介面，COM 物件的每個執行個體都只會有一個包裝函式。 例如，實作五個不同介面的單一 COM 物件只會有一個包裝函式。 同一個包裝函式會公開所有五個介面。 如果建立 COM 物件的兩個執行個體，則會建立包裝函式的兩個執行個體。  
   
- 為了讓包裝函式在整個存留期間保持同一個類型，當第一次透過 Interop 封送處理器傳遞物件所公開的介面時，封送處理器必須識別正確的包裝函式。  封送處理器會透過查看物件所實作的其中一個介面，來識別物件。  
+ 為了讓包裝函式在整個存留期間保持同一個類型，當第一次透過 Interop 封送處理器傳遞物件所公開的介面時，封送處理器必須識別正確的包裝函式。 封送處理器會透過查看物件所實作的其中一個介面，來識別物件。  
   
- 例如，封送處理器會決定應該使用類別包裝函式來包裝已傳遞至 Managed 程式碼中的介面。  當透過封送處理器第一次傳遞介面時，封送處理器會檢查介面是否來自已知的物件。  這項檢查會發生於下列兩種情況：  
+ 例如，封送處理器會決定應該使用類別包裝函式來包裝已傳遞至 Managed 程式碼中的介面。 當透過封送處理器第一次傳遞介面時，封送處理器會檢查介面是否來自已知的物件。 這項檢查會發生於下列兩種情況：  
   
--   另一個已傳遞至其他位置之 COM 的 Managed 物件正在實作介面。  封送處理器能夠立即識別 Managed 物件所公開的介面，而且能夠以提供實作的 Managed 物件來比對介面。  接著 Managed 物件會傳遞給方法，並且不需要任何包裝函式。  
+-   另一個已傳遞至其他位置之 COM 的 Managed 物件正在實作介面。 封送處理器能夠立即識別 Managed 物件所公開的介面，而且能夠以提供實作的 Managed 物件來比對介面。 接著 Managed 物件會傳遞給方法，並且不需要任何包裝函式。  
   
--   已包裝的物件正在實作介面。  為了判斷是否為這種情況，封送處理器會查詢物件是否有 **IUnknown** 介面，並且將傳回的介面與其他已包裝之物件的介面進行比較。  如果該介面與其他包裝函式的介面相同，則物件會有相同的識別，因此會將現有的包裝函式傳遞給方法。  
+-   已包裝的物件正在實作介面。 為了判斷是否為這種情況，封送處理器會查詢物件是否有 **IUnknown** 介面，並且將傳回的介面與其他已包裝之物件的介面進行比較。 如果該介面與其他包裝函式的介面相同，則物件會有相同的識別，因此會將現有的包裝函式傳遞給方法。  
   
  如果介面不是來自已知的物件，則封送處理器會執行下列作業：  
   
-1.  封送處理器會查詢物件是否有 **IProvideClassInfo2** 介面。  如果有的話，封送處理器會使用從 **IProvideClassInfo2.GetGUID** 傳回的 CLSID 來識別提供介面的 Coclass。  如果先前已註冊組件，封送處理器就可以使用 CLSID 從登錄中找出包裝函式。  
+1.  封送處理器會查詢物件是否有 **IProvideClassInfo2** 介面。 如果有的話，封送處理器會使用從 **IProvideClassInfo2.GetGUID** 傳回的 CLSID 來識別提供介面的 coclass。 如果先前已註冊組件，封送處理器就可以使用 CLSID 從登錄中找出包裝函式。  
   
-2.  封送處理器會查詢介面是否有 **IProvideClassInfo** 介面。  如果有的話，封送處理器會使用從 **IProvideClassInfo.GetClassinfo** 傳回的 **ITypeInfo** 來判斷公開介面之類別的 CLSID。  封送處理器可以使用 CLSID 來找出包裝函式的中繼資料。  
+2.  封送處理器會查詢介面是否有 **IProvideClassInfo** 介面。 如果有的話，封送處理器會使用從 **IProvideClassInfo.GetClassinfo** 傳回的 **ITypeInfo** 來判斷公開介面之類別的 CLSID。 封送處理器可以使用 CLSID 來找出包裝函式的中繼資料。  
   
-3.  如果封送處理器仍然無法識別類別，則會以稱為 **System.\_\_ComObject** 的泛型包裝函式類別來包裝介面。  
+3.  如果封送處理器仍然無法識別類別，則會以稱為 **System.__ComObject** 的泛型包裝函式類別來包裝介面。  
   
-## 委派的預設封送處理  
+## <a name="default-marshaling-for-delegates"></a>委派的預設封送處理  
  根據呼叫的機制，Managed 委派會封送處理為 COM 介面或函式指標：  
   
 -   若為平台叫用，委派預設會封送處理為 Unmanaged 函式指標。  
   
--   若為 COM Interop，委派預設會封送處理為 **\_Delegate** 類型的 COM 介面。  **\_Delegate** 介面是在 Mscorlib.tlb 類型程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName> 方法，可讓您呼叫委派所參考的方法。  
+-   若為 COM Interop，委派預設會封送處理為 **_Delegate** 類型的 COM 介面。 **_Delegate** 介面是在 Mscorlib.tlb 型別程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName> 方法，可讓您呼叫委派所參考的方法。  
   
- 下表顯示 Managed 委派資料類型的封送處理選項。  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理委派。  
+ 下表顯示 Managed 委派資料類型的封送處理選項。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理委派。  
   
 |列舉類型|Unmanaged 格式的描述|  
-|----------|---------------------|  
+|----------------------|-------------------------------------|  
 |**UnmanagedType.FunctionPtr**|Unmanaged 函式指標。|  
-|**UnmanagedType.Interface**|**\_Delegate** 類型的介面，如 Mscorlib.tlb 中所定義。|  
+|**UnmanagedType.Interface**|**_Delegate** 類型的介面，如 Mscorlib.tlb 中所定義。|  
   
- 請考慮以下的範例程式碼，其中 `DelegateTestInterface` 的方法是匯出至 COM 類型程式庫。  請注意，只有標記為 **ref** \(或 **ByRef**\) 關鍵字的委派會做為 In\/Out 參數傳遞。  
+ 請考慮以下的範例程式碼，其中 `DelegateTestInterface` 的方法是匯出至 COM 類型程式庫。 請注意，只有標記為 **ref** (或 **ByRef**) 關鍵字的委派才會傳遞為 In/Out 參數。  
   
 ```csharp  
 using System;  
@@ -106,7 +111,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
 }  
 ```  
   
-### 類型程式庫表示  
+### <a name="type-library-representation"></a>類型程式庫表示  
   
 ```  
 importlib("mscorlib.tlb");  
@@ -124,7 +129,7 @@ interface DelegateTest : IDispatch {
 > [!NOTE]
 >  Unmanaged 程式碼所持有之 Managed 委派的函式指標參考，無法防止 Common Language Runtime 在 Managed 物件上執行記憶體回收。  
   
- 例如，下列程式碼不正確，因為傳遞給 `SetChangeHandler` 方法的 `cb` 物件參考無法使 `cb` 在過了 `Test` 方法的存留期後仍保持運作。  一旦 `cb` 物件的記憶體被回收，傳遞給 `SetChangeHandler` 的函式指標便不再有效。  
+ 例如，下列程式碼不正確，因為傳遞給 `SetChangeHandler` 方法的 `cb` 物件參考無法使 `cb` 在過了 `Test` 方法的存留期後仍保持運作。 一旦 `cb` 物件的記憶體被回收，傳遞給 `SetChangeHandler` 的函式指標便不再有效。  
   
 ```csharp  
 public class ExternalAPI {  
@@ -147,7 +152,7 @@ internal class DelegateTest {
 }  
 ```  
   
- 為了彌補未預期的記憶體回收，呼叫端必須確保只要 Unmanaged 函式指標正在使用中，`cb` 物件就會保持運作。  您可以選擇性地讓 Unmanaged 程式碼通知 Managed 程式碼已不再需要函式指標，如下列範例所示。  
+ 為了彌補未預期的記憶體回收，呼叫端必須確保只要 Unmanaged 函式指標正在使用中，`cb` 物件就會保持運作。 您可以選擇性地讓 Unmanaged 程式碼通知 Managed 程式碼已不再需要函式指標，如下列範例所示。  
   
 ```csharp  
 internal class DelegateTest {  
@@ -166,22 +171,22 @@ internal class DelegateTest {
 }  
 ```  
   
-## 實值類型的預設封送處理  
- 大部分的實值類型 \(例如整數和浮點數\) 都是 [Blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)，而且不需要封送處理。  其他[非 Blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 類型在 Managed 和 Unmanaged 記憶體中有不同的表示，而且需要封送處理。  但其他類型需要跨互通界限進行明確格式化。  
+## <a name="default-marshaling-for-value-types"></a>實值類型的預設封送處理  
+ 大部分的實值型別 (例如整數和浮點數) 都是 [Blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)，而且不需要封送處理。 其他[非 Blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 類型在 Managed 和 Unmanaged 記憶體中有不同的表示，而且需要封送處理。 但其他類型需要跨互通界限進行明確格式化。  
   
  本主題提供以下有關格式化實值類型的資訊：  
   
--   [在平台叫用中使用的實值類型](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [在平台叫用中使用的實值型別](#cpcondefaultmarshalingforvaluetypesanchor2)  
   
--   [在 COM Interop 中使用的實值類型](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [在 COM Interop 中使用的實值型別](#cpcondefaultmarshalingforvaluetypesanchor3)  
   
- 本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值類型](#cpcondefaultmarshalingforvaluetypesanchor1)。  
+ 本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值型別](#cpcondefaultmarshalingforvaluetypesanchor1)。  
   
- 格式化類型是複雜類型，其中包含在記憶體中明確控制其成員配置的資訊。  這項成員配置資訊會透過 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來提供。  配置可以是下列其中一個 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值：  
+ 格式化類型是複雜類型，其中包含在記憶體中明確控制其成員配置的資訊。 這項成員配置資訊會透過 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來提供。 配置可以是下列其中一個 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值：  
   
 -   **LayoutKind.Automatic**  
   
-     表示 Common Language Runtime 可以為了更高的效率隨意重新排列類型的成員。  不過，當實值類型傳遞至 Unmanaged 程式碼時，成員的配置是可以預測的。  嘗試封送處理這類結構會自動造成例外狀況。  
+     表示 Common Language Runtime 可以為了更高的效率隨意重新排列類型的成員。 不過，當實值類型傳遞至 Unmanaged 程式碼時，成員的配置是可以預測的。 嘗試封送處理這類結構會自動造成例外狀況。  
   
 -   **LayoutKind.Sequential**  
   
@@ -192,7 +197,7 @@ internal class DelegateTest {
      表示根據每個欄位提供的 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 來配置成員。  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
-### 在平台叫用中使用的實值類型  
+### <a name="value-types-used-in-platform-invoke"></a>在平台叫用中使用的實值類型  
  在下列範例中，`Point` 和 `Rect` 類型使用 **StructLayoutAttribute** 提供成員配置資訊。  
   
 ```vb  
@@ -207,7 +212,6 @@ End Structure
    <FieldOffset(8)> Public right As Integer  
    <FieldOffset(12)> Public bottom As Integer  
 End Structure  
-  
 ```  
   
 ```csharp  
@@ -227,7 +231,7 @@ public struct Rect {
 }  
 ```  
   
- 當封送處理至 Unmanaged 程式碼時，這些格式化類型會封送處理為 C 樣式結構。  如此可讓您輕鬆地呼叫具有結構引數的 Unmanaged 應用程式開發介面。  例如，`POINT` 和 `RECT` 結構可以傳遞至 Microsoft Win32 應用程式開發介面 **PtInRect** 函式，如下所示：  
+ 當封送處理至 Unmanaged 程式碼時，這些格式化類型會封送處理為 C 樣式結構。 如此可讓您輕鬆地呼叫具有結構引數的 Unmanaged 應用程式開發介面。 例如，`POINT` 和 `RECT` 結構可以傳遞至 Microsoft Win32 API **PtInRect** 函式，如下所示：  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -240,7 +244,6 @@ Class Win32API
    Declare Auto Function PtInRect Lib "User32.dll" _  
     (ByRef r As Rect, p As Point) As Boolean  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -250,17 +253,17 @@ class Win32API {
 }  
 ```  
   
- `Rect` 實值類型必須以傳址方式傳遞，因為 Unmanaged 應用程式開發介面必須將 `RECT` 的指標傳遞至函式。  `Point` 實值類型必須以傳值方式傳遞，因為 Unmanaged 應用程式開發介面必須在堆疊上傳遞 `POINT`。  這種微妙的差異是非常重要的。  參考會當做指標傳遞至 Unmanaged 程式碼，  而值會在堆疊上傳遞至 Unmanaged 程式碼。  
+ `Rect` 實值類型必須以傳址方式傳遞，因為 Unmanaged 應用程式開發介面必須將 `RECT` 的指標傳遞至函式。 `Point` 實值類型必須以傳值方式傳遞，因為 Unmanaged 應用程式開發介面必須在堆疊上傳遞 `POINT`。 這種微妙的差異是非常重要的。 參考會當做指標傳遞至 Unmanaged 程式碼， 而值會在堆疊上傳遞至 Unmanaged 程式碼。  
   
 > [!NOTE]
->  當格式化類型封送處理為結構時，只能存取類型內的欄位。  如果類型具有方法、屬性或事件，您無法從 Unmanaged 程式碼存取這些項目。  
+>  當格式化類型封送處理為結構時，只能存取類型內的欄位。 如果類型具有方法、屬性或事件，您無法從 Unmanaged 程式碼存取這些項目。  
   
- 只要類別有固定成員配置，也可以當做 C 樣式結構封送處理至 Unmanaged 程式碼。  <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性也會提供類別的成員配置資訊。  具有固定配置的實值類型和具有固定配置的類別之間的主要差異在於，將其封送處理至 Unmanaged 程式碼的方式不同。  實值類型是以傳值方式 \(在堆疊上\) 傳遞，因此呼叫端不會看到被呼叫端對類型的成員所做的任何變更。  參考類型是以傳址方式 \(在堆疊上傳遞類型的參考\) 傳遞，因此呼叫端會看到被呼叫端對類型的 Blittable 類型成員所做的所有變更。  
+ 只要類別有固定成員配置，也可以當做 C 樣式結構封送處理至 Unmanaged 程式碼。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性也會提供類別的成員配置資訊。 具有固定配置的實值類型和具有固定配置的類別之間的主要差異在於，將其封送處理至 Unmanaged 程式碼的方式不同。 實值類型是以傳值方式 (在堆疊上) 傳遞，因此呼叫端不會看到被呼叫端對類型的成員所做的任何變更。 參考類型是以傳址方式 (在堆疊上傳遞類型的參考) 傳遞，因此呼叫端會看到被呼叫端對類型的 Blittable 類型成員所做的所有變更。  
   
 > [!NOTE]
->  如果參考類型具有非 Blittable 類型的成員，則需要轉換兩次：第一次是在將引數傳遞至 Unmanaged 端時，第二次是從呼叫傳回時。  由於這會增加額外負荷，因此如果呼叫端想要看到被呼叫端所做的變更，就必須將 In\/Out 參數明確套用至引數。  
+>  如果參考類型具有非 Blittable 類型的成員，則需要轉換兩次：第一次是在將引數傳遞至 Unmanaged 端時，第二次是從呼叫傳回時。 由於這會增加額外負荷，因此如果呼叫端想要看到被呼叫端所做的變更，就必須將 In/Out 參數明確套用至引數。  
   
- 在下列範例中，`SystemTime` 類別具有循序成員配置，可以傳遞至 Win32 應用程式開發介面 **GetSystemTime** 函式。  
+ 在下列範例中，`SystemTime` 類別具有循序成員配置，可以傳遞至 Win32 API **GetSystemTime** 函式。  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -273,7 +276,6 @@ class Win32API {
    Public wSecond As System.UInt16  
    Public wMilliseconds As System.UInt16  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -303,7 +305,6 @@ Public Class Win32
    Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
    As SystemTime)  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -313,9 +314,9 @@ class Win32API {
 }  
 ```  
   
- 請注意，`SystemTime` 引數未當做參考引數輸入，因為 `SystemTime` 是類別，不是實值類型。  不同於實值類型，類別永遠會以傳址方式傳遞。  
+ 請注意，`SystemTime` 引數未當做參考引數輸入，因為 `SystemTime` 是類別，不是實值類型。 不同於實值類型，類別永遠會以傳址方式傳遞。  
   
- 下列程式碼範例顯示具有 `SetXY` 方法的不同 `Point` 類別。  由於類型具有循序配置，因此可傳遞至 Unmanaged 程式碼，並封送處理為結構。  不過，即使物件是以傳址方式傳遞，還是無法從 Unmanaged 程式碼中呼叫 `SetXY` 成員。  
+ 下列程式碼範例顯示具有 `SetXY` 方法的不同 `Point` 類別。 由於類型具有循序配置，因此可傳遞至 Unmanaged 程式碼，並封送處理為結構。 不過，即使物件是以傳址方式傳遞，還是無法從 Unmanaged 程式碼中呼叫 `SetXY` 成員。  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class Point  
@@ -325,7 +326,6 @@ class Win32API {
       Me.y = y  
    End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -340,10 +340,10 @@ public class Point {
 ```  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
-### 在 COM Interop 中使用的實值類型  
- 格式化類型也可以傳遞至 COM Interop 方法呼叫。  事實上，當匯出至類型程式庫時，實值類型會自動轉換成結構。  如下列範例所示，`Point` 實值類型會變成名為 `Point` 的類型定義 \(typedef\)。  `Point` typedef 會取代在類型程式庫中的所有 `Point` 實值類型的參考。  
+### <a name="value-types-used-in-com-interop"></a>在 COM Interop 中使用的實值類型  
+ 格式化類型也可以傳遞至 COM Interop 方法呼叫。 事實上，當匯出至類型程式庫時，實值類型會自動轉換成結構。 如下列範例所示，`Point` 實值類型會變成名為 `Point` 的類型定義 (typedef)。 `Point` typedef 會取代在類型程式庫中的所有 `Point` 實值類型的參考。  
   
- **類型程式庫表示**  
+ **型別程式庫呈現**  
   
 ```  
 typedef struct tagPoint {  
@@ -358,45 +358,45 @@ interface _Graphics {
 }  
 ```  
   
- 當透過 COM 介面進行封送處理時，會使用與封送處理平台叫用呼叫的值和參考時相同的規則。  例如，將 `Point` 實值類型的執行個體從 .NET Framework 傳遞至 COM 時，會以傳值方式傳遞 `Point`。  如果以傳址方式傳遞 `Point` 實值類型，則會在堆疊上傳遞 `Point` 的指標。  Interop 封送處理器不支援任一方向中更高層級的間接取值 \(**Point \*\***\)。  
+ 當透過 COM 介面進行封送處理時，會使用與封送處理平台叫用呼叫的值和參考時相同的規則。 例如，將 `Point` 實值類型的執行個體從 .NET Framework 傳遞至 COM 時，會以傳值方式傳遞 `Point`。 如果以傳址方式傳遞 `Point` 實值類型，則會在堆疊上傳遞 `Point` 的指標。 Interop 封送處理器不支援任一方向中更高層級的間接取值 (**Point \*\***)。  
   
 > [!NOTE]
->  由於匯出的類型程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 \[明確\] 的結構。  
+>  由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確] 的結構。  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
-### 系統實值類型  
- <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。  例如，實值類型 <xref:System.Int32?displayProperty=fullName> 結構代表 **ELEMENT\_TYPE\_I4** 的 Boxed 格式。  如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。  因此會將 **System.Int32** 封送處理為 **ELEMENT\_TYPE\_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。  下表包含 **System** 命名空間中的實值類型清單，這些類型是基本類型的 Boxed 表示。  
+### <a name="system-value-types"></a>系統實值類型  
+ <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=fullName> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  
   
 |系統實值類型|項目類型|  
-|------------|----------|  
-|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT\_TYPE\_BOOLEAN**|  
-|<xref:System.SByte?displayProperty=fullName>|**ELEMENT\_TYPE\_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**ELEMENT\_TYPE\_UI1**|  
-|<xref:System.Char?displayProperty=fullName>|**ELEMENT\_TYPE\_CHAR**|  
-|<xref:System.Int16?displayProperty=fullName>|**ELEMENT\_TYPE\_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT\_TYPE\_U2**|  
-|<xref:System.Int32?displayProperty=fullName>|**ELEMENT\_TYPE\_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT\_TYPE\_U4**|  
-|<xref:System.Int64?displayProperty=fullName>|**ELEMENT\_TYPE\_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT\_TYPE\_U8**|  
-|<xref:System.Single?displayProperty=fullName>|**ELEMENT\_TYPE\_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**ELEMENT\_TYPE\_R8**|  
-|<xref:System.String?displayProperty=fullName>|**ELEMENT\_TYPE\_STRING**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT\_TYPE\_I**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT\_TYPE\_U**|  
+|-----------------------|------------------|  
+|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT_TYPE_BOOLEAN**|  
+|<xref:System.SByte?displayProperty=fullName>|**ELEMENT_TYPE_I1**|  
+|<xref:System.Byte?displayProperty=fullName>|**ELEMENT_TYPE_UI1**|  
+|<xref:System.Char?displayProperty=fullName>|**ELEMENT_TYPE_CHAR**|  
+|<xref:System.Int16?displayProperty=fullName>|**ELEMENT_TYPE_I2**|  
+|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT_TYPE_U2**|  
+|<xref:System.Int32?displayProperty=fullName>|**ELEMENT_TYPE_I4**|  
+|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT_TYPE_U4**|  
+|<xref:System.Int64?displayProperty=fullName>|**ELEMENT_TYPE_I8**|  
+|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT_TYPE_U8**|  
+|<xref:System.Single?displayProperty=fullName>|**ELEMENT_TYPE_R4**|  
+|<xref:System.Double?displayProperty=fullName>|**ELEMENT_TYPE_R8**|  
+|<xref:System.String?displayProperty=fullName>|**ELEMENT_TYPE_STRING**|  
+|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT_TYPE_I**|  
+|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT_TYPE_U**|  
   
- **System** 命名空間中的其他一些實值類型會以不同方式處理。  由於 Unmanaged 程式碼已經有這些類型的確立格式，因此封送處理器針對這些類型有特殊的封送處理方式。  下表列出 **System** 命名空間中的特殊實值類型，以及要封送處理的目標 Unmanaged 類型。  
+ **System** 命名空間中的其他一些實值型別會以不同方式處理。 由於 Unmanaged 程式碼已經有這些類型的確立格式，因此封送處理器針對這些類型有特殊的封送處理方式。 下表列出 **System** 命名空間中的特殊實值型別，以及要封送處理的目標 Unmanaged 類型。  
   
 |系統實值類型|IDL 類型|  
-|------------|------------|  
+|-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=fullName>|**DATE**|  
 |<xref:System.Decimal?displayProperty=fullName>|**DECIMAL**|  
 |<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE\_COLOR**|  
+|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE_COLOR**|  
   
- 下列程式碼顯示 Stdole2 類型程式庫中 Unmanaged 類型 **DATE**、**GUID**、**DECIMAL** 和 **OLE\_COLOR** 的定義。  
+ 下列程式碼示範 Stdole2 型別程式庫中 Unmanaged 類型 **DATE**、**GUID**、**DECIMAL** 和 **OLE_COLOR** 的定義。  
   
-#### 類型程式庫表示  
+#### <a name="type-library-representation"></a>類型程式庫表示  
   
 ```  
 typedef double DATE;  
@@ -427,7 +427,6 @@ Public Interface IValueTypes
    Sub M3(d As System.Decimal)  
    Sub M4(d As System.Drawing.Color)  
 End Interface  
-  
 ```  
   
 ```csharp  
@@ -439,7 +438,7 @@ public interface IValueTypes {
 }  
 ```  
   
-#### 類型程式庫表示  
+#### <a name="type-library-representation"></a>類型程式庫表示  
   
 ```  
 […]  
@@ -451,9 +450,10 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)   
+ [複製和固定](../../../docs/framework/interop/copying-and-pinning.md)   
  [陣列的預設封送處理](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
  [物件的預設封送處理](../../../docs/framework/interop/default-marshaling-for-objects.md)   
  [字串的預設封送處理](../../../docs/framework/interop/default-marshaling-for-strings.md)
+

@@ -1,23 +1,42 @@
 ---
-title: "/keyfile (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/keyfile"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/keyfile compiler option [C#]"
-  - "-keyfile compiler option [C#]"
-  - "keyfile compiler option [C#]"
+title: "-keyfile (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /keyfile
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /keyfile compiler option [C#]
+- -keyfile compiler option [C#]
+- keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5098067f640c13429c3e2524df0d87364980bb1c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /keyfile (C# Compiler Options)
 指定包含密碼編譯金鑰的檔名。  
@@ -57,6 +76,7 @@ caps.handback.revision: 15
   
  您可以使用 <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>，以程式設計方式存取這個編譯器選項。  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

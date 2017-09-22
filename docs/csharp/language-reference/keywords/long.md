@@ -1,6 +1,6 @@
 ---
-title: "long (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "long (C# 參考)"
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c28c8308d7ed32f7240f56113a77a0794cb1ba62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f7d2d6a3d5781b4e120b8399c7206d4429dd98e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="long-c-reference"></a>long (C# 參考)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
 |類型|範圍|大小|.NET Framework 類型|  
 |----------|-----------|----------|-------------------------|  
-|`long`|–9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|帶正負號的 64 位元整數|<xref:System.Int64?displayProperty=fullName>|  
+|`long`|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|帶正負號的 64 位元整數|<xref:System.Int64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
  您可以宣告並初始化 `long` 變數，如下列範例所示：  
@@ -106,7 +107,7 @@ long y = (long)3.0;   // OK: explicit conversion
 ```  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Int64>   
@@ -117,3 +118,4 @@ long y = (long)3.0;   // OK: explicit conversion
  [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

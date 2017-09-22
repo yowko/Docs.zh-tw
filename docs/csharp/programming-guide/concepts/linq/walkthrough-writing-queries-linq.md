@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：在 C# 中撰寫查詢 (LINQ) | Microsoft Docs"
+title: "逐步解說：在 C# 中撰寫查詢 (LINQ)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9dd72793d23c7f6ccc208a3368c255f7cc4dbbd7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aef03dca681f0b3d24f2ab55eef4ae29ee515132
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
@@ -212,3 +213,4 @@ ms.lasthandoff: 03/13/2017
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
  [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
  [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+

@@ -1,33 +1,38 @@
 ---
-title: "Certmgr.exe (Certificate Manager Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "certificates, managing"
-  - "CRLs"
-  - "certificate trust lists"
-  - "Certmgr.exe"
-  - "Certificate Manager tool"
-  - "CTLs"
-  - "certificate revocation lists"
+title: "Certmgr.exe (憑證管理員工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- certificates, managing
+- CRLs
+- certificate trust lists
+- Certmgr.exe
+- Certificate Manager tool
+- CTLs
+- certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 caps.latest.revision: 27
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 27
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd5d1011a8f8aeadfc7729c3a4f6f56a033110a9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Certmgr.exe (Certificate Manager Tool)
 憑證管理員工具 \(Certmgr.exe\) 可以管理憑證、憑證信任清單 \(CTL\) 和憑證撤銷清單 \(CRL\)。  

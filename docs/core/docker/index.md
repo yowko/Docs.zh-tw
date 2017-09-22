@@ -1,6 +1,6 @@
 ---
-title: "Docker 與 .NET Core | Microsoft Docs"
-description: "Docker 及 .NET Core"
+title: "Docker 及 .NET Core"
+description: "了解如何透過這些有趣的教學課程來搭配使用 Docker 和 .NET Core。"
 keywords: "Docker、.NET、.NET Core"
 author: spboyer
 ms.author: shboyer
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: cae32148-aef4-4e64-a7f0-88072bad4400
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 70e854fbeb9d9da64815e2a67f7a0fe36695a17a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e74a939cbab13705e8a1bd8fe86e292dc97b9ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,5 +25,5 @@ ms.lasthandoff: 05/23/2017
 - [建置 .NET Core 應用程式的 Docker 映像](building-net-docker-images.md)
 - [Visual Studio Tools for Docker](visual-studio-tools-for-docker.md)
 
-如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](https://docs.microsoft.com/aspnet/core/)。
+如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](/aspnet/core/)。
 

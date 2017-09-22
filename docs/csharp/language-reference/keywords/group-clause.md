@@ -1,23 +1,42 @@
 ---
-title: "group 子句 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "group"
-  - "group_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "group 子句 [C#]"
-  - "group 關鍵字 [C#]"
+title: "group 子句 (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- group
+- group_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- group keyword [C#]
+- group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: afd32358a406b2797059cf2b8d85d897c8737222
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # group 子句 (C# 參考)
 `group` 子句會傳回包含零個或多個符合群組之索引鍵值的 <xref:System.Linq.IGrouping%602> 物件序列。  例如，您可以根據每個字串中的第一個字母來群組字串序列。  在此情況下，第一個字母是索引鍵，而且具有 [char](../../../csharp/language-reference/keywords/char.md) 的型別，並儲存在每個 <xref:System.Linq.IGrouping%602> 物件的 `Key` 屬性中。  編譯器會推斷索引鍵的型別。  

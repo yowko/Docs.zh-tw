@@ -1,5 +1,5 @@
 ---
-title: "啟動多項非同步工作並在它們完成時進行處理 (C#) | Microsoft Docs"
+title: "啟動多項非同步工作並在它們完成時進行處理 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 0ab1c8d117327c9f5805d184b263a0932ab0bc3f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
@@ -67,7 +67,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  在專案的 MainWindow.xaml.cs 檔案中，對 `AccessTheWebAsync` 方法進行下列變更。  
   
--   查詢的執行方式是套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>，而不是 <xref:System.Linq.Enumerable.ToArray%2A>。  
+-   套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
         downloadTasks.Remove(firstFinishedTask);  
         ```  
   
-    3.  等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 `TReturn` 為整數的 <xref:System.Threading.Tasks.Task%601>。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。  
+    3.  等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。  
   
         ```csharp  
         int length = await firstFinishedTask;  
@@ -247,3 +247,4 @@ namespace ProcessTasksAsTheyFinish
  [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (非同步範例：微調應用程式)
+

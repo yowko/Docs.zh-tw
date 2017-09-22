@@ -1,28 +1,33 @@
 ---
-title: "檢視類型資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "反映, 檢視類型資訊"
-  - "Type 物件"
-  - "類型, 檢視類型資訊"
-  - "檢視類型資訊"
+title: "檢視類型資訊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- types, viewing type information
+- Type object
+- viewing type information
+- reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b7225aeca9bf605f47dcc5a8430cdf1fb12d410
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 檢視類型資訊
 <xref:System.Type?displayProperty=fullName> 類別為反映的核心。  當反映要求時，Common Language Runtime 會為載入的型別建立 **Type**。  您可以使用 **Type** 物件的方法、欄位、屬性和巢狀類別，找出該型別的一切事項。  
@@ -94,3 +99,4 @@ caps.handback.revision: 12
  <xref:System.Reflection.EventInfo>   
  <xref:System.Reflection.ParameterInfo>   
  [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+

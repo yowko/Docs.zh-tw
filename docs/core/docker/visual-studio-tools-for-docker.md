@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 113d470a55fd92704de0e6def392a6e0a1a3a118
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/25/2017
 
 ---
 
@@ -24,16 +25,20 @@ ms.lasthandoff: 03/02/2017
 >目前的版本以 Linux Docker 容器為目標，Windows 容器的版本即將上市。
 
 ## <a name="prerequisites"></a>必要條件
-- [Microsoft Visual Studio 2015 Update 3](https://www.visualstudio.com/downloads/download-visual-studio-vs)
-- [.NET Core 1.0.1 - VS 2015 工具預覽 2](https://go.microsoft.com/fwlink/?LinkID=827546)
-- [Docker For Windows](https://www.docker.com/products/docker#/windows)：在本機執行 Docker 容器
+
+- 含 .NET Core 工作負載的 [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
+- [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="installation-and-setup"></a>安裝和設定
 從 [Visual Studio 組件庫](http://visualstudiogallery.msdn.microsoft.com/)下載並安裝 [Visual Studio Tools for Docker](https://aka.ms/DockerToolsForVS)，或者您可以在 Visual Studio 的 [擴充功能和更新] 內搜尋。 
 
-必要的設定是在 Docker for Windows 中安裝**[共用磁碟機](https://docs.docker.com/docker-for-windows/#/shared-drives)**。 這對磁碟區對應及偵錯支援是必要的設定。
+安裝含 .NET Core 工作負載的 [Microsoft Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)。
 
-以滑鼠右鍵按一下系統匣中的 Docker 圖示，按一下 [設定] 並選取 [共用磁碟機]。
+若要安裝 Docker，請檢閱 [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker for Windows：安裝須知) 的資訊，並安裝 [Docker For Windows](https://docs.docker.com/docker-for-windows/install/)。
+
+必要的設定是在 Docker for Windows 中安裝**[共用磁碟機](https://docs.docker.com/docker-for-windows/#shared-drives)**。 這對磁碟區對應及偵錯支援是必要的設定。
+
+以滑鼠右鍵按一下系統匣中的 Docker 圖示，按一下 [設定] 並選取 [共用磁碟機]。 選取 Docker 儲存檔案所在的磁碟機，並套用變更。
 
 ![共用磁碟機](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png) 
 
@@ -48,6 +53,8 @@ ms.lasthandoff: 03/02/2017
 [專案] 內容功能表
 
 ![以滑鼠右鍵按一下 「Add Docker Support」 (新增 Docker 支援)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+
+將 Docker 支援加入您的專案時，可以選擇 Windows 或 Linux 容器。 (Docker 主機必須執行相同的容器類型。 如果您需要變更執行中 Docker 執行個體內的容器類型，請以滑鼠右鍵按一下系統匣中的 [Docker] 圖示，選擇 [切換到 Windows 容器] 或 [切換至 Linux 容器])。 
 
 下列檔案即會加入專案中。
 

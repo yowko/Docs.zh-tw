@@ -1,23 +1,28 @@
 ---
-title: "如何：停用強式名稱略過功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "強式名稱略過功能"
-  - "強式名稱組件，載入至受信任的應用程式定義域"
+title: "如何：停用強式名稱略過功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-name bypass feature
+- strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 caps.latest.revision: 30
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 30
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0af565c6d27be6a5a22bfb0fd1f90e4e46deec33
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：停用強式名稱略過功能
 從 .NET Framework 3.5 版 Service Pack 1 \(SP1\) 開始，將組件載入至完全信任的 <xref:System.AppDomain> 物件 \(例如 `MyComputer` 區域的預設 <xref:System.AppDomain>\) 時，不會驗證強式名稱 \(Strong Name\) 簽章。  這稱為強式名稱略過功能。  在完全信任的環境中，已簽署、完全信任的組件 \(Assembly\) 要求 <xref:System.Security.Permissions.StrongNameIdentityPermission> 永遠會成功，不論其簽章為何。  唯一的限制是組件必須完全受信任，因為它的區域是完全受信任的。  在這些情況下，由於強式名稱並非決定性因素，因此沒有必要進行驗證。  略過強式名稱簽章的驗證可大幅提升效能。  
@@ -58,7 +63,8 @@ caps.handback.revision: 30
 > [!NOTE]
 >  只有在電腦啟用略過功能時，您才能開啟和關閉應用程式的強式名稱驗證。  如果電腦關閉略過功能，則所有應用程式都必須驗證強式名稱，並且您無法設定單一應用程式略過驗證。  
   
-## 請參閱  
- [Sn.exe \(Strong Name Tool\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
- [\<bypassTrustedAppStrongNames\> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)   
+## <a name="see-also"></a>另請參閱  
+ [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [\<bypassTrustedAppStrongNames> 項目](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)   
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+

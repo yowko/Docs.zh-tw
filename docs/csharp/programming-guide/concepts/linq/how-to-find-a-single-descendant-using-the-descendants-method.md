@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 Descendants 方法尋找單一子系 (C#) | Microsoft Docs"
+title: "如何：使用 Descendants 方法尋找單一子系 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,19 +14,18 @@ ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fbce5524a214f96b0d44b281e18d43675bfe0b4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89e20ede65caf65e91a37cbee69c80146a1443f0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>如何：使用 Descendants 方法尋找單一子系 (C#)
-您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼，來尋找唯一具名的單一項目。 當您想要利用特定名稱尋找特定子代時，這個技術特別實用。 您可以撰寫程式碼來巡覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。  
+您可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法快速撰寫程式碼以尋找唯一具名的單一項目。 當您想要利用特定名稱尋找特定子代時，這個技術特別實用。 您可以撰寫程式碼來導覽所需的項目，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸撰寫程式碼通常比較快也比較容易。  
   
 ## <a name="example"></a>範例  
- 下列範例使用 <xref:System.Linq.Enumerable.First%2A> 標準查詢運算子。  
+ 此範例使用 <xref:System.Linq.Enumerable.First%2A> 標準查詢運算子。  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -88,3 +87,4 @@ GC3 Value
   
 ## <a name="see-also"></a>另請參閱  
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

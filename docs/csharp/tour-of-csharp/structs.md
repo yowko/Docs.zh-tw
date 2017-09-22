@@ -1,5 +1,5 @@
 ---
-title: "C# 結構 | C# 語言教學課程"
+title: "C# 結構 - C# 語言教學課程"
 description: "了解 C# 實值型別 (稱為結構) 的基本概念"
 keywords: ".NET, C#, 結構, 實值型別"
 author: BillWagner
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 321e2456c5f82f80c825f84ef2b7c0754a6a4e1e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 

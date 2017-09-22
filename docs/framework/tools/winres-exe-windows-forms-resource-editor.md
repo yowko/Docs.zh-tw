@@ -1,33 +1,38 @@
 ---
-title: "Winres.exe (Windows Forms Resource Editor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Winres.exe"
-  - "Windows Forms Resource Editor"
-  - "localization"
-  - "Windows Forms, localization"
-  - "forms, localizing"
-  - "resx files"
-  - ".resx files"
+title: "Winres.exe (Windows Form 資源編輯器)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Winres.exe
+- Windows Forms Resource Editor
+- localization
+- Windows Forms, localization
+- forms, localizing
+- resx files
+- .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 caps.latest.revision: 23
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 23
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/10/2017
+
 ---
 # Winres.exe (Windows Forms Resource Editor)
 Windows Form 資源編輯器 \(Winres.exe\) 是一項視覺化配置工具，可以幫助當地語系化專家將表單所使用的 Windows Form 使用者介面 \(UI\) 資源當地語系化。  做為 Winres.exe 輸入內容的 .resx 或 .resources 檔案，可以利用視覺化設計環境 \(例如 Microsoft Visual Studio\) 建立。  如需在 .NET Framework 應用程式中部署資源的詳細資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。  
@@ -141,7 +146,7 @@ winres /?
   
 4.  若要儲存 .resx 或 .resources 檔案的當地語系化版本，請按一下 \[**儲存**\] 圖示或 \[**檔案**\] 功能表上的相同命令。  工具會顯示 \[**選取文化特性**\] 視窗。  
   
-5.  選取適當的文化特性和檔案模式，然後按一下 \[**確定**\]。  工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。  例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。  如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。  如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 [CultureInfo 類別](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)。  
+5.  選取適當的文化特性和檔案模式，然後按一下 [確定]。 工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。  
   
 ## 請參閱  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -152,3 +157,4 @@ winres /?
  [Tools](../../../docs/framework/tools/index.md)   
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)   
  [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
+

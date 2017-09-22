@@ -1,6 +1,6 @@
 ---
 title: "非同步程式設計"
-description: "非同步程式設計"
+description: "深入了解 .NET Core 提供之 C# 語言層級的非同步程式設計模型。"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27c39f8c67a3f8288883a37025797a461c50f940
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -31,7 +32,7 @@ C# 具有語言層級非同步程式設計模型，可輕鬆撰寫非同步程�
 
 針對 CPU 繫結程式碼，您可以 `await` 作業，這項作業是使用 `Task.Run` 方法在背景執行緒上啟動。
 
-`await` 關鍵字十分神奇，因為它會產生已執行 `await` 之方法的呼叫端控制權。  最終可允許 UI 具有回應，或服務具有彈性。
+`await` 關鍵字就是顯現魔力的地方。 它會將控制交給執行 `await` 的方法呼叫端，最後讓 UI 有回應或服務有彈性。
 
 有其他方法可以達成上面所連結 TAP 文章中所述的 `async` 和 `await` 以外的非同步程式碼，但本文件著重在從這點開始的語言層級建構。
 
@@ -73,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -127,7 +128,7 @@ calculateButton.Clicked += async (o, e) =>
 此程式碼片段會從 www.dotnetfoundation.org 下載 HTML，並計算字串 ".NET" 在 HTML 中的出現次數。  它會使用 ASP.NET MVC 來定義執行此工作的 Web 控制器方法，並傳回數字。
 
 > [!NOTE]
-> 如果您打算進行實際 HTML 剖析，則絕不應該使用規則運算式。  如果這是您在實際執行程式碼中的目的，請使用剖析程式庫。
+> 如果您打算在生產程式碼中執行 HTML 剖析，請不要使用規則運算式。 請改用剖析程式庫。
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
@@ -179,7 +180,6 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 這個範例示範如何捕捉一組 `userId` 的 `User` 資料。
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -204,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 以下是使用 LINQ 利用更簡潔的方式撰寫這個項目的另一種方式：
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

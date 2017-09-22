@@ -1,26 +1,31 @@
 ---
-title: "如何：將組件載入僅限反映的內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 載入以反映"
-  - "組件 [.NET Framework], 僅限反映的載入器內容"
-  - "屬性 [.NET Framework], 擷取"
-  - "反映, 僅限反映的載入器內容"
-  - "僅限反映的載入器內容"
+title: "如何：將組件載入僅限反映的內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection, reflection-only loader context
+- assemblies [.NET Framework], loading for reflection
+- attributes [.NET Framework], retrieving
+- assemblies [.NET Framework], reflection-only loader context
+- reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：將組件載入僅限反映的內容
 僅限反映的載入內容可讓您檢查針對其他平台或其他版本的 .NET Framework 所編譯的組件。  載入此內容中的程式碼只能夠被檢查，而無法被執行；  這表示無法建立物件，因為無法執行建構函式。  由於此程式碼無法被執行，所以不會自動載入相依性。  如果您需要檢查這些相依性，則必須自行載入。  
@@ -57,3 +62,4 @@ caps.handback.revision: 8
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
  <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
  <xref:System.Reflection.CustomAttributeData>
+

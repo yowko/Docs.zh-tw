@@ -1,6 +1,6 @@
 ---
 title: "委派簡介"
-description: "委派簡介"
+description: "透過此概觀主題了解委派，該主題介紹委派的基本概念，並討論委派的語言設計目標。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f68742a02ebf12e222b2fa6827352a3684de5648
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd4c68fb4f960d0c2d5cbdc9e699650070cacaf1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [上一個](delegates-events.md)
 
-委派提供 .NET 中的「晚期繫結」**機制。 「晚期繫結」表示您建立演算法，在其中，呼叫端也會提供至少一個方法來實作演算法的一部分。
+委派提供 .NET 中的「晚期繫結」機制。 「晚期繫結」表示您建立演算法，在其中，呼叫端也會提供至少一個方法來實作演算法的一部分。
 
 例如，請考慮排序天文學應用程式中的星星清單。
 您可以選擇排序這些星星與地球的距離、星星的亮度，或其可察覺的亮度。

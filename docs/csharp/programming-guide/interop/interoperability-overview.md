@@ -1,5 +1,5 @@
 ---
-title: "互通性概觀 (C# 程式設計手冊) | Microsoft Docs"
+title: "互通性概觀 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1b6d5bf9943c5826685b9cc72c79187c7f51364
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/13/2017
 >  [Common Language Runtime](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET Framework 安全性](http://go.microsoft.com/fwlink/?LinkId=37122)。  
   
 ## <a name="c-interop"></a>C++ Interop  
- 您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，[!INCLUDE[vcprvc](../../../csharp/programming-guide/interop/includes/vcprvc_md.md)] 提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
+ 您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] 提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
   
 ## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C#  
  您可以從 C# 專案取用 COM 元件。 一般步驟如下所示：  
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/13/2017
   
 2.  將 COM 元件或型別程式庫的參考新增至專案。  
   
-     當您新增參考時，[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 會使用接受型別程式庫作為輸入的 [Tlbimp.exe (型別程式庫匯入工具)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)，以輸出 .NET Framework Interop 組件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 會將產生的組件參考新增至專案。  
+     當您新增參考時，[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 會使用接受型別程式庫作為輸入的 [Tlbimp.exe (型別程式庫匯入工具)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)，以輸出 .NET Framework Interop 組件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 會將產生的組件參考新增至專案。  
   
 3.  建立定義於 RCW 之類別的執行個體。 這會接著建立 COM 物件的執行個體。  
   
@@ -71,11 +72,11 @@ ms.lasthandoff: 03/13/2017
   
 1.  在 C# 專案中新增 Interop 屬性。  
   
-     您可以藉由修改 [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] 專案屬性來顯示組件 COM。 如需詳細資訊，請參閱[組件資訊對話方塊](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box)。  
+     您可以藉由修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 專案屬性來顯示組件 COM。 如需詳細資訊，請參閱[組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box)。  
   
 2.  產生 COM 型別程式庫並註冊供 COM 使用。  
   
-     您可以修改 [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] 專案屬性，以自動為 COM Interop 註冊 C# 組件。 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 使用 [Regasm.exe (組件登錄工具)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)，並使用接受 Managed 組件作為輸入的 `/tlb` 命令列參數，以產生型別程式庫。 此型別程式庫描述組件中的 `public` 類型，並新增登錄項目，讓 COM 用戶端可以建立 Managed 類別。  
+     您可以修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 專案屬性，以自動為 COM Interop 註冊 C# 組件。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe (組件登錄工具)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)，並使用接受 Managed 組件作為輸入的 `/tlb` 命令列參數，以產生型別程式庫。 此型別程式庫描述組件中的 `public` 類型，並新增登錄項目，讓 COM 用戶端可以建立 Managed 類別。  
   
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) 和[範例 COM 類別](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
@@ -86,3 +87,4 @@ ms.lasthandoff: 03/13/2017
  [與 Unmanaged 程式碼互通](https://msdn.microsoft.com/library/sd10k43k)   
  [進階 COM 互通性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

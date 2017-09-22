@@ -1,63 +1,81 @@
 ---
-title: "對等名稱解析通訊協定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "對等名稱解析通訊協定"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
 # 對等名稱解析通訊協定
-在點對點環境，解析彼此的網路位置的對等電腦使用特定的名稱解析系統 \(位址、通訊協定和通訊埠\) 從名稱或識別項的其他型別。  在過去，對等名稱解析由原本暫時性連接以及其他缺點複雜度簡化在網域名稱系統 \(DNS\) \(DNS\) 內。  
+在對等環境中，對等使用特定名稱解析系統，才能從名稱或其他類型的識別碼解析彼此的網路位置 (位址、通訊協定和連接埠)。 過去，網域名稱系統 (DNS) 內本來就是暫時性連線以及其他缺點，而讓對等名稱解析變得複雜。  
   
- Microsoft® Windows®對等網路平台解析對等名稱解析通訊協定 \(PNRP\)， Windows Vista™先開發適用於 Windows XP 再升級的安全性，可升級和動態名稱註冊和名稱解析通訊協定的問題。  PNRP 工作非常與傳統名稱解析系統不同，開啟應用程式開發人員的進而協助隨時啟動新的可能性。  
+ Microsoft® Windows® 對等網路平台會利用對等名稱解析通訊協定 (PNRP) 解決此問題，此通訊協定最先是針對 Windows XP 所開發，之後於 Windows Vista™ 中升級，是一項安全、可調整的動態名稱登錄與名稱解析通訊協定。 PNRP 的運作方式與傳統的名稱解析系統十分不同，為應用程式開發人員開拓令人雀躍的嶄新視野。  
   
- 使用 PNRP，對等名稱可套用至電腦或個別應用程式或服務在電腦上。  對等名稱解析包含一個位址、通訊埠和可擴充的裝載。  系統的優點包括容錯、瓶頸並不會傳回過時地址名稱解析;進行通訊協定找出的行動使用者的絕佳方案。  
+ 使用 PNRP，可以將對等名稱套用至電腦，或是電腦上的個別應用程式或服務。 對等名稱解析包含位址、連接埠，以及可能的延伸承載。 此系統的優點包含容錯、無瓶頸，以及絕不會傳回過時位址的名稱解析；這樣讓通訊協定成為尋找行動使用者的最佳解決方案。  
   
- 根據安全性，對等名稱可以發行為安全保護 \(Protected\) 或不安全 \(未受保護\)。  PNRP 使用公開金鑰加密受保護的對等名稱以防止假冒;電腦和服務可以使用 PNRP 命名。  
+ 就安全性而言，可以將對等名稱發行為安全的 (受保護) 或不安全的 (未受保護)。 PNRP 使用公開金鑰加密來保護安全對等名稱防止詐騙；您可以使用 PNRP 來命名電腦和服務。  
   
--   對等名稱解析通訊協定示範下列屬性:  
+-   對等名稱解析通訊協定會示範下列屬性：  
   
--   發出和幾乎全部是無伺服器。  伺服器在這個自持程序才是必要的。  
+-   分散式且幾乎完全無伺服器。 只有啟動程序處理序才需要伺服器。  
   
--   保護發行物名稱，而不使用協力廠商的作業中時。  沒有財務成本，不同於 DNS 名稱發行， PNRP 發行物名稱是即時和。  
+-   沒有第三方的安全名稱發行。 與 DNS 名稱發行不同，PNRP 名稱發行是瞬間發生的，沒有財務成本。  
   
--   PNRP 更新在執行階段，防止過時位址的解析度。  
+-   PNRP 會即時更新，以防止解析過時位址。  
   
--   名稱解析傳遞 PNRP 電腦以外透過也允許服務的名稱解析。  
+-   透過 PNRP 的名稱解析同時允許服務的名稱解析，以擴充到不只限於電腦。  
+  
+-  
   
 ## System.Net.PeerToPeer 命名空間  
   
--   PNRP 功能是由 .NET Framework 3.5 版中的 <xref:System.Net.PeerToPeer> 命名空間中定義。  它提供可用來註冊及解決一個可用的 PNRP 服務的對等名稱的一組型別。  
+-   PNRP 功能是由 .NET Framework 3.5 版內的 <xref:System.Net.PeerToPeer> 命名空間所定義。 它提供的一組類型可用來向可用的 PNRP 服務註冊和解析對等名稱。  
   
--   \(PNRP 和自訂對等解析程式可以建立及初始化使用 <xref:System.ServiceModel.PeerResolvers> 在命名空間中提供的型別\)。  
+-  
   
--   使用的基本型別註冊及解決一個可用的 PNRP 服務名稱如下:  
+-   (PNRP 和自訂對等解析程式可以使用 <xref:System.ServiceModel.PeerResolvers> 命名空間中所提供的類型進行建立和具現化)。  
   
--   <xref:System.Net.PeerToPeer.Cloud>:定義描述一個可用的 PNRP Cloud，包括其範圍的資訊。  
+-  
   
--   <xref:System.Net.PeerToPeer.PeerName>:定義可以用來註冊再解析在 Cloud 中對等的一個對等名稱。  
+-   用來向可用 PNRP 服務註冊和解析名稱的基本類型如下：  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>:定義在包含對等的登入資訊，包括網路端點對等電腦可以聯繫 PNRP Cloud 中的資料錄。  
+-  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>:定義一個對等名稱註冊程序，包括方法啟動和停止對等名稱登錄。  
+-   <xref:System.Net.PeerToPeer.Cloud>：定義描述可用 PNRP 雲端的資訊，包含其範圍。  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>:定義用來解析的對等名稱處理序對其網路端點，包括解析度的同步和非同步方法。  
+-   <xref:System.Net.PeerToPeer.PeerName>：定義可用來註冊並後續解析雲端內對等的對等名稱。  
   
-## 請參閱  
+-   <xref:System.Net.PeerToPeer.PeerNameRecord>：定義 PNRP 雲端中包含對等註冊資訊的記錄，而對等包含可連絡對等的網路端點。  
+  
+-   <xref:System.Net.PeerToPeer.PeerNameRegistration>：定義對等名稱的註冊處理序，包含啟動和停止對等名稱註冊的方法。  
+  
+-   <xref:System.Net.PeerToPeer.PeerNameResolver>：定義將對等名稱解析成其網路端點的處理序，同時包含解析的同步和非同步方法。  
+  
+-  
+  
+-  
+  
+## 另請參閱  
  <xref:System.ServiceModel.PeerResolvers>   
  <xref:System.Net.PeerToPeer>   
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)   
  [PeerToPeer 技術範例](http://go.microsoft.com/fwlink/?LinkID=179571)
+

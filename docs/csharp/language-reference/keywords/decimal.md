@@ -1,5 +1,5 @@
 ---
-title: "decimal (C# 參考) | Microsoft Docs"
+title: "decimal (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,24 +30,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal (C# 參考)
-`decimal` 關鍵字表示 128 位元的資料類型。 相較於浮點類型，`decimal` 類型的精確度較高且範圍較小，因此非常適合財務和金融計算。 下表顯示 `decimal` 類型的大概範圍和精確度。  
+`decimal` 關鍵字表示 128 位元的資料類型。 相較於其他浮點類型，`decimal` 類型的精確度較高且範圍較小，因此非常適合財務和金融計算。 下表顯示 `decimal` 類型的大概範圍和精確度。  
   
 |類型|大概範圍|精確度|.NET Framework 類型|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(-7.9 x 10<sup>28</sup> 至 7.9 x 10<sup>28</sup>) / (10<sup>0 至 28</sup>)|28-29 個有效數字|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|(-7.9 x 10<sup>28</sup> 至 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> 至 10<sup>28</sup>)|28-29 個有效數字|<xref:System.Decimal?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
  如果要將數值實數常值視為 `decimal` 處理，請使用後置字元 m 或 M，例如：  
   
-```  
+```csharp
 decimal myMoney = 300.5m;  
 ```  
   
@@ -56,19 +56,19 @@ decimal myMoney = 300.5m;
 ## <a name="conversions"></a>轉換  
  整數類資料類型會隱含轉換成 `decimal`，而且結果會判斷值為 `decimal`。 因此，您可以使用整數常值來初始化 Decimal 變數，而不需要後置字元，如下所示：  
   
-```  
+```csharp
 decimal myMoney = 300;  
 ```  
   
- 浮點類型和 `decimal` 類型之間沒有隱含轉換，因此，這兩種類型之間必須使用轉型進行轉換。 例如：  
+ 其他浮點類型和 `decimal` 類型之間沒有隱含轉換，因此，這兩種類型之間必須使用轉換進行轉換。 例如:   
   
-```  
-      decimal myMoney = 99.9m;  
+```csharp
+decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
 ```  
   
- 您也可以在同一個運算式中混合使用 `decimal` 和數值整數類資料類型。 然而，未使用轉型就混合使用 `decimal` 與浮點類型會造成編譯錯誤。  
+ 您也可以在同一個運算式中混合使用 `decimal` 和數值整數類資料類型。 然而，未使用轉換就混合使用 `decimal` 與其他浮點類型會造成編譯錯誤。  
   
  如需隱含數值轉換的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
@@ -105,7 +105,7 @@ Console.WriteLine((double)dec + dub);
  [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Decimal>   

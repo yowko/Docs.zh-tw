@@ -1,5 +1,5 @@
 ---
-title: "具名和選擇性引數 (C# 程式設計手冊) | Microsoft Docs"
+title: "具名和選擇性引數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,15 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9827553c1362d92bdf68a50e840b33474a22dcaa
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] 介紹具名和選擇性引數。 「具名引數」**可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」**可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介紹具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
   
  當您使用具名和選擇性引數時，會依照引數清單中的引數顯示順序來評估引數，不是依照參數清單的順序。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
 -   `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../../csharp/language-reference/keywords/enum.md) 或 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)；  
   
--   [default(ValType)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) 形式的運算式，其中 `ValType` 是實值型別。  
+-   [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 形式的運算式，其中 `ValType` 是實值型別。  
   
  選擇性參數是定義在參數清單的結尾，在任何必要參數之後。 如果呼叫端為任何一個連續的選擇性參數提供引數，它就必須提供所有前面選擇性參數的引數。 不支援引數清單使用逗點分隔間距。 例如，在下列程式碼中，執行個體方法 `ExampleMethod` 使用一個必要參數及兩個選擇性參數來定義。  
   
@@ -101,11 +101,11 @@ ms.lasthandoff: 03/13/2017
   
  IntelliSense 使用括弧表示選擇性參數，如下圖所示。  
   
- ![IntelliSense 對於 ExampleMethod 方法的快速諮詢](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
+ ![IntelliSense 對於 ExampleMethod 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
 ExampleMethod 的選擇性參數  
   
 > [!NOTE]
->  您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別宣告選擇性參數。 `OptionalAttribute` 參數不需要預設值。  
+>  您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別來宣告選擇性參數。 `OptionalAttribute` 參數不需要預設值。  
   
 ## <a name="example"></a>範例  
  在下例中，`ExampleClass` 的建構函式有一個參數，而它是選擇性的。 `ExampleMethod` 執行個體方法有一個必要參數 `required` 和兩個選擇性參數 `optionalstr` 及 `optionalint`。 `Main` 中的程式碼會示範叫用建構函式和方法的不同方式。  
@@ -117,7 +117,7 @@ ExampleMethod 的選擇性參數
   
  例如，Microsoft Office Excel [Range Interface](http://go.microsoft.com/fwlink/?LinkId=148196) (範圍介面) 的 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 方法有七個參數，它們都是選擇性參數。 下圖會顯示這些參數。  
   
- ![IntelliSense 對於 AutoFormat 方法的快速諮詢](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
+ ![IntelliSense 對於 AutoFormat 方法的快速諮詢。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat 參數  
   
  在 C# 3.0 和舊版中，每個參數都需要引數，如下例所示。  
@@ -140,10 +140,11 @@ AutoFormat 參數
 -   如果兩個候選項目的評斷結果一樣好，則偏向沒有選擇性參數的候選項目，其會在呼叫中省略引數。 這是多載解析一般偏好參數較少之候選項目的結果。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
  [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [使用建構函式](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
  [使用索引子](../../../csharp/programming-guide/indexers/using-indexers.md)
+

@@ -1,76 +1,96 @@
 ---
-title: "/resource (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/resource"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-resource compiler option [C#]"
-  - "/resource compiler option [C#]"
-  - "-res compiler option [C#]"
-  - "/res compiler option [C#]"
-  - "res compiler option [C#]"
-  - "resource compiler option [C#]"
+title: "-resource (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /resource
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -resource compiler option [C#]
+- /resource compiler option [C#]
+- -res compiler option [C#]
+- /res compiler option [C#]
+- res compiler option [C#]
+- resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdb7be630300e11c2e63d88bd6add7d229714bfa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# /resource (C# Compiler Options)
-將指定的資源嵌入輸出檔。  
+# <a name="resource-c-compiler-options"></a>/resource (C# 編譯器選項)
+將指定的資源內嵌到輸出檔。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```console  
 /resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  `filename`  
- 您要嵌入輸出檔的 .NET Framework 資源檔。  
+ 您想要內嵌到輸出檔的 .NET Framework 資源檔。  
   
- `identifier` \(選擇項\)  
- 資源的邏輯名稱，也就是用來載入資源的名稱。  預設名稱是檔名的名稱。  
+ `identifier` (選擇性)  
+ 資源的邏輯名稱；用來載入資源的名稱。 預設值是檔案名稱。  
   
- `accessibility-modifier` \(選擇項\)  
- 資源的存取範圍︰public 或 private。  預設值為 public。  
+ `accessibility-modifier` (選擇性)  
+ 資源的存取範圍：公用或私用。 預設值是公用。  
   
-## 備註  
- 使用 [\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) 將資源連結至組件 \(Assembly\)，且不將資源檔加入輸出檔。  
+## <a name="remarks"></a>備註  
+ 使用 [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) 將資源連結至組件，而不是將資源檔新增至輸出檔。  
   
- 根據預設，當使用 C\# 編譯器建立組件中的連結資源時，這些資源會是公用的。  若要將資源設為私用的，請指定 `private` 做為存取範圍修飾詞。  不能使用 `public` 或 `private` 以外的其他存取範圍。  
+ 根據預設，使用 C# 編譯器建立資源時，這些資源在組件中為公用狀態。 若要將資源設為私用，可將 `private` 指定為存取範圍修飾詞。 不允許 `public` 或 `private` 以外的其他存取範圍。  
   
- 如果 `filename` 是由 [Resgen.exe](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) 或在開發環境中所建立的 .NET Framework 資源檔，則可以使用 <xref:System.Resources> 命名空間內的成員來存取。  如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager?displayProperty=fullName>。  至於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource`\* 方法在執行階段存取資源。  
+ 例如，如果 `filename` 是由 [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager?displayProperty=fullName>。 至於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource`* 方法在執行階段存取資源。  
   
- **\/res** 是 **\/resource** 的簡短形式。  
+ **/res** 是 **/resource** 的簡短形式。  
   
  輸出檔中資源的順序是從命令列上指定的順序決定。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  將資源檔加入至您的專案。  
+1.  將資源檔新增至專案。  
   
-2.  在 \[**方案總管**\] 中，選取您想要內嵌的檔案。  
+2.  選取您想要內嵌在方案總管中的檔案。  
   
-3.  在 \[**屬性**\] 視窗中選取檔案的 \[**建置動作**\]。  
+3.  在 [屬性] 視窗中，選取檔案的 [建置動作]。  
   
-4.  將 \[**建置動作**\] 設定為 \[**內嵌資源**\]。  
+4.  將 [建置動作] 設定為 [內嵌資源]。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   
-## 範例  
- 編譯 `in.cs` 並附加 `rf.resource` 資源檔：  
+## <a name="example"></a>範例  
+ 編譯 `in.cs`，並附加 `rf.resource` 資源檔：  
   
-```  
+```console  
 csc /resource:rf.resource in.cs  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

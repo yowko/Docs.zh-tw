@@ -1,25 +1,44 @@
 ---
-title: "How to: Read Text from Files with a StreamReader (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "reading files, text"
-  - "text, reading from files"
-  - "reading text from files"
-  - "files, reading"
+title: "如何：以 StreamReader 從檔案讀取文字 (Visual Basic)"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- reading files, text
+- text, reading from files
+- reading text from files
+- files, reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d895b32b1613462a6c8dedcc19040b5040f936ec
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Read Text from Files with a StreamReader (Visual Basic)
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -47,5 +66,6 @@ caps.handback.revision: 18
  <xref:System.Windows.Forms.OpenFileDialog>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>   
- [SaveFileDialog 元件](../Topic/SaveFileDialog%20Component%20\(Windows%20Forms\).md)   
- [Reading from Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+ [SaveFileDialog 元件](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)   
+ [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+

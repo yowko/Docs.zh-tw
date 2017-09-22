@@ -1,5 +1,5 @@
 ---
-title: "使用應用程式定義域和組件設計程式 | Microsoft Docs"
+title: "使用應用程式定義域和組件設計程式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1cfd73bf6d8de9ea4ff9854e6882683514cb3c56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6dcf8e4c9bf2401309b1d80d2306bd619b96460d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>使用應用程式定義域和組件設計程式
@@ -53,3 +53,4 @@ Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行
   
  [反映概觀](../../../docs/framework/reflection-and-codedom/reflection.md)  
  描述如何使用「反映」類別，以取得組件的相關資訊。
+

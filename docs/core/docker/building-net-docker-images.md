@@ -4,21 +4,25 @@ description: "了解 Docker 映像和 .NET Core"
 keywords: ".NET、.NET Core、Docker"
 author: spboyer
 ms.author: shboyer
-ms.date: 08/29/2016
+ms.date: 09/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
+ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/06/2017
 
 ---
- 
 
 #<a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
+
+ 
+> [!IMPORTANT]
+> 我們正在針對 .NET Core 2.0 更新此文章。 下列指示已過時。 造成您的不便，我們深感抱歉。
 
 為了解如何同時使用 .NET Core 和 Docker，我們必須先了解取得的不同 Docker 映像，以及正確的使用時機。 在此，我們會逐步解說所獲得的變化、建置 ASP.NET Core Web API、使用 Yeoman Docker 工具建立可偵錯的容器，以及預覽 Visual Studio Code 如何在程序中提供協助。 
 
@@ -52,7 +56,7 @@ ms.lasthandoff: 03/02/2017
 
 - `microsoft/dotnet:<version>-onbuild`︰也就是 **microsoft/dotnet:1.0.0-preview2-onbuild**，包含 [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild) 觸發程序。 組建會[複製](https://docs.docker.com/engine/reference/builder/#/copy)應用程式，執行 `dotnet restore` 並建立 [進入點](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` 指示，在執行 Docker 映像時執行應用程式。 至於未最佳化的生產環境映像，有些人可能會覺得它很有用，因為只要將原始程式碼複製到映像並執行即可。 
 
-- `microsoft/dotnet:<version>-core-deps`︰也就是 **microsoft/dotnet:1.0.0-core-deps**，如果想要執行自封式應用程式，請使用此映像。 它包含作業系統及 .NET Core 所需的所有原生相依性。 此映像也可用為您自己自訂的 CoreFX 或 CoreCLR 組建的基礎映像。 雖然 **onbuild** 變體經過最佳化後，只需將程式碼放入映像並執行即可，但此映像經過最佳化後，只讓所需的作業系統相依性執行將 .NET 執行階段和應用程式封裝在一起的 .NET Core 應用程式。 此映像通常不會為在相同的主機上執行多個 .NET Core 容器而最佳化，因為每個映像在應用程式內都會攜帶 .NET Core 執行階段，而您不會得益於映像圖層。   
+- `microsoft/dotnet:<version>-core-deps`︰也就是 **microsoft/dotnet:1.0.0-core-deps**，如果想要執行自封式應用程式，請使用此映像。 它包含作業系統及 .NET Core 所需的所有原生相依性。 此映像也可用為您自己自訂的 CoreFX 或 CoreCLR 組建的基礎映像。 雖然 **onbuild** 變體經過最佳化後，只需將程式碼放入映像並執行即可，但此映像經過最佳化後，只具有執行 .NET Core 應用程式所需的作業系統相依性，使得 .NET 執行階段和應用程式封裝在一起。 此映像通常不會為在相同的主機上執行多個 .NET Core 容器而最佳化，因為每個映像在應用程式內都會攜帶 .NET Core 執行階段，而您不會得益於映像圖層。   
 
 每個變體的最新版本︰
 
@@ -61,7 +65,7 @@ ms.lasthandoff: 03/02/2017
 - `microsoft/dotnet:core`
 - `microsoft/dotnet:core-deps`
 
-以下是開發電腦上的 `docker pull <imagename>` 顯示各種大小後的映像清單。 請注意，開發/建置變體 `microsoft/dotnet:1.0.0-preview2-sdk` 較大，因為它包含開發和建置應用程式的 SDK。 生產環境變體 `microsoft/dotnet:core` 較小，因為它只包含 .NET Core 執行階段。 能夠在 Linux 上使用的最小映像 `core-deps` 相當小，但您的應用程式需要用它複製 .NET 執行階段的私用複本。 因為容器已經是私人的隔離障礙，所以在執行多個 dotnet 型的容器時會遺失最佳化。 
+以下是開發電腦上的 `docker pull <imagename>` 顯示各種大小後的映像清單。 請注意，開發/建置變體 `microsoft/dotnet:1.0.0-preview2-sdk` 較大，因為它包含開發和建置應用程式的 SDK。 生產環境變體 `microsoft/dotnet:core` 較小，因為它只包含 .NET Core 執行階段。 能夠在 Linux 上使用的最小映像 `core-deps` 相當小，但您的應用程式需要複製 .NET 執行階段的私用複本來加以搭配。 因為容器已經是私人的隔離障礙，所以在執行多個 dotnet 型的容器時會遺失最佳化。 
 
 ```
 REPOSITORY          TAG                     IMAGE ID            SIZE

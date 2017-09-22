@@ -1,86 +1,98 @@
 ---
 title: ".NET 架構元件"
-description: "說明主要的 .NET 架構元件，例如，.NET 標準程式庫、.NET 執行階段和工具。"
-keywords: ".NET, .NET 標準程式庫, .NET 標準, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 編譯器"
+description: "描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NET 執行階段和工具。"
 author: cartermp
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
-ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/23/2017
 
 ---
-
 # <a name="net-architectural-components"></a>.NET 架構元件
 
-.NET 是由數個主要元件所組成。  它具有名為 .Standard 程式庫的標準程式庫，這是可在任何地方執行的大型 API 集合。  此標準程式庫是由三個 .NET 執行階段所實作 - .NET Framework、.NET Core，以及適用於 Xamarin 的 Mono。  .NET 語言也會在任何 .NET 執行階段執行。  此外，每個平台上均會提供工具，可讓您用以建置專案。  無論您選擇的是哪個執行階段，這些工具都一樣。
+.NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
 
-以下是先前提及的每個 .NET 元件的圖形化概觀，以及它們的相符方式。
+## <a name="net-standard"></a>.NET Standard
 
-![將所有 .NET 架構元件放在一起](media/components.png)
+.NET Standard 是由 .NET 實作的基底類別庫所實作的一組 API。 更正式的說法是，它是一個 .NET API 的規格，其構成了一組您據以編譯程式碼的制式協定。 每個 .NET 實作中都會實作這些協定。 這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。
 
-以下是針對上述每個主要元件的簡短說明。  
+.NET Standard 也是[目標 Framework](glossary.md#target-framework)。 如果您的程式碼以某個 .NET Standard 版本為目標，就可以在支援該版 .NET Standard 的任何 .NET 實作上執行。
 
-## <a name="net-standard-library"></a>.NET 標準程式庫
+若要了解 .NET Standard 及如何將其設為目標，請參閱 [.NET Standard](net-standard.md) 主題。
 
-.NET 標準程式庫是一組由 .NET 執行階段所實作的 API。
+## <a name="net-implementations"></a>.NET 實作
 
-更正式的說法是，它是一個 .NET API 的規格，其構成了一組您據以編譯程式碼的制式協定。  這些協定必須具有適用於每個 .NET 執行階段的基礎實作。  這會跨不同的 .NET 執行階段啟用可攜性，如此一來，您的程式碼便能有效地「在任何地方執行」。
+.NET 的每項實作包括下列元件：
 
-.NET 標準程式庫也是一個建置目標 (即為 .NET 標準)。  您目前可將目標設定為 .NET 標準 1.0-1.6。  如果您的程式碼目標為某一個 .NET 標準版本，就保證其一定可在實作該版本的任何 .NET 執行階段上執行。
+- 一或多個執行階段。 範例：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
+- 實作 .NET Standard 並可能實作其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
+- (選擇性) 一或多個應用程式架構。 範例：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 中。
+- (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
-若要深入了解 .NET 標準程式庫以及如何將目標設為 .NET 標準，請參閱 [.NET 標準程式庫](library.md)。
+Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。
 
-## <a name="net-runtimes"></a>.NET 執行階段
+### <a name="net-core"></a>.NET 核心
 
-Microsoft 會主動開發和維護的主要 .NET 執行階段有 3 個︰.NET Core、.NET Framework，以及適用於 Xamarin 的 Mono。
+.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 可在 Windows、macOS 及 Linux 執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 ASP.NET Core 會在 .NET Core 上執行。 
 
-### <a name="net-core"></a>.NET Core
-
-.NET Core 是已針對伺服器工作負載最佳化的跨平台執行階段。  它會實作 .NET 標準程式庫，這表示任何目標為 .NET 標準的程式碼都可以在 .NET Core 上執行。  它是由 ASP.NET Core 和通用 Windows 平台 (UWP) 所使用的執行階段。  它是新式且高效率的，而其設計目的是為了處理大規模的伺服器與雲端工作負載。
-
-若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)。
+若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework 是自 2002年以來已存在的歷史性 .NET 執行階段。  它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。  它會實作 .NET 標準程式庫，這表示任何目標為 .NET 標準的程式碼都可以在 .NET Framework 上執行。  它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。  .NET Framework 最適合用來建置 Windows 傳統型應用程式。
+.NET Framework 是自 2002年以來已存在的原始 .NET 實作。 它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。 4.5 和更新版本會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在這些 .NET Framework 版本上執行。 它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。 .NET Framework 最適合用來建置 Windows 傳統型應用程式。
 
 若要深入了解 .NET Framework，請參閱 [.NET Framework 指南](../framework/index.md)。
 
-### <a name="mono-for-xamarin"></a>適用於 Xamarin 的 Mono
+### <a name="mono"></a>Mono
 
-Mono 是 Xamarin 應用程式所使用的執行階段。  它會實作 .NET 標準程式庫，這表示任何目標為 .NET 標準的程式碼都可以在 Xamarin 應用程式上執行。  它包含適用於 iOS、Android、Xamarin.Forms 和 Xamarin.Mac 的其他 API。  它最適合用來在 iOS 和 Android 上建置行動應用程式。
+Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，主要著重於較小的使用量。
+
+它支援目前發行的所有 .NET Standard 版本。
+
+在過去，Mono 實作較大型的 .NET Framework API，並模擬 UNIX 上最熱門的其中一些功能。 它有時可用來執行依賴這些 UNIX 功能的 .NET 應用程式。
+
+Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS 等平台的完整靜態編譯器 (預先編譯)。
 
 若要深入了解 Mono，請參閱 [Mono 文件](http://www.mono-project.com/docs/)。
 
+### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
+
+UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以使用 C++、C#、VB.NET 和 JavaScript 來撰寫應用程式。 使用 C# 和 VB.NET 時，.NET API 是由 .NET Core 所提供。
+
+若要深入了解 UWP，請參閱[通用 Windows 平台簡介](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)。
+
+## <a name="net-runtimes"></a>.NET 執行階段
+
+執行階段是受管理程式的執行環境。 OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分。 以下是 .NET 執行階段的一些範例：
+ 
+ - 適用於 .NET Framework 的 Common Language Runtime (CLR)
+ - 適用於 .NET Core 的 Core Common Language Runtime (CoreCLR)
+ - 適用於通用 Windows 平台的 .NET Native 
+ - 適用於 Xamarin.iOS、Xamarin.Android、Xamarin.Mac 和 Mono 桌面架構的 Mono 執行階段
+
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和通用基礎結構
 
-適用於 .NET 的工具在每個 .NET 實作中也很常見。  這些包括但不限於：
+您可以存取一組詳盡的工具和基礎結構元件，以搭配各種 .NET 實作使用。 這些包括 (但不限於) 下列項目：
 
-* .NET 語言及其編譯器
-* 執行階段元件，例如 JIT 和記憶體回收行程
-* .NET 專案系統 (有時稱為 "csproj"、"vbproj" 或 "fsproj")
-* MSBuild，用來建置專案的建置引擎
-* NuGet，適用於.NET 的 Microsoft 套件管理員
-* .NET CLI，用來建置 .NET 專案的跨平台命令列介面
-* 開放原始碼建置協調流程工具，例如 CAKE 和 FAKE
+- .NET 語言及其編譯器
+- .NET 專案系統 (以 *.csproj*、*.vbproj* 和 *.fsproj* 檔案為基礎)
+- [MSBuild](/visualstudio/msbuild/msbuild)，用來建置專案的建置引擎
+- [NuGet](/nuget/)，適用於 .NET 的 Microsoft 套件管理員
+- 開放原始碼建置協調流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
-此處的主要重點應該是有大量的工具和基礎結構，其對於您選擇來建置應用程式的任何 .NET「類別」而言是很常見的。
+## <a name="see-also"></a>請參閱
+[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
+[.NET Standard](net-standard.md)  
+[.NET Core 指南](../core/index.md)  
+[.NET Framework 指南](../framework/index.md)  
+[C# 指南](../csharp/index.md)  
+[F# 指南](../fsharp/index.md)  
+[VB.NET 指南](../visual-basic/index.md)  
 
-## <a name="next-steps"></a>後續步驟
-
-若要深入了解，請瀏覽下列各項：
-
-* [.NET 標準程式庫](library.md)
-* [.NET Core 指南](../core/index.md)
-* [.NET Framework 指南](../framework/index.md)
-* [C# 指南](../csharp/index.md)
-* [F# 指南](../fsharp/index.md)
-* [VB.NET 指南](../visual-basic/index.md)
 

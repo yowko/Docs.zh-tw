@@ -1,60 +1,80 @@
 ---
-title: "/warnaserror (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/warnaserror"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/warnaserror compiler option [C#]"
-  - "-warnaserror compiler option [C#]"
-  - "warnaserror compiler option [C#]"
+title: "-warnaserror (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /warnaserror
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /warnaserror compiler option [C#]
+- -warnaserror compiler option [C#]
+- warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df29fd760e0e4a002f1b5078d85370a74f322e23
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# /warnaserror (C# Compiler Options)
-**\/warnaserror\+** 選項會將所有警告視為錯誤。  
+# <a name="warnaserror-c-compiler-options"></a>/warnaserror (C# 編譯器選項)
+**/warnaserror+** 選項會將所有警告都視為錯誤。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```console  
 /warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
-## 備註  
- 任何原本報告為警告的訊息將以錯誤報告，並中止 \(不建置輸出檔\) 建置處理。  
+## <a name="remarks"></a>備註  
+ 任何原本報告為警告的訊息都會改成報告為錯誤，並中止建置程序 (不會建置輸出檔)。  
   
- 根據預設，**\/warnaserror\-** 為作用中，可使警告不至於防止輸出檔的產生。  **\/warnaserror** 和 **\/warnaserror\+** 一樣，會將警告視為錯誤。  
+ 根據預設，**/warnaserror-** 會生效，這會導致無法產生輸出檔的警告。 **/warnaserror** 與 **/warnaserror+** 相同，都會將警告視為錯誤。  
   
- 如果您只要將少數的特定警告視為錯誤，可以選擇指定逗號分隔的清單，列出要視為錯誤的警告編號。  
+ 選擇性，如果您只想要將少數特定警告視為錯誤，則可以指定將以逗號分隔的警告編號清單視為錯誤。  
   
- 使用 [\/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) 指定您要編譯器顯示的警告層級。  使用 [\/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用某些警告。  
+ 使用 [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) 指定您想要編譯器顯示的警告層級。 使用 [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 停用特定警告。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性**\] 頁面。  
+1.  開啟專案的 [屬性] 頁面。  
   
-2.  按一下 \[**建置**\] 屬性頁。  
+2.  按一下 [建置] 屬性頁面。  
   
-3.  修改 \[**警告視為錯誤**\] 屬性。  
+3.  修改 [警告視為錯誤] 屬性。  
   
-     若要用程式設計的方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>。  
+     若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>。  
   
-## 範例  
- 編譯 `in.cs` 並讓編譯器停止顯示任何警告：  
+## <a name="example"></a>範例  
+ 編譯 `in.cs`，並讓編譯器不要顯示任何警告：  
   
-```  
+```console  
 csc /warnaserror in.cs  
 csc /warnaserror:642,649,652 in.cs  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Basic 中讀取檔案 | Microsoft Docs"
+title: "在 Visual Basic 中讀取檔案"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>在 Visual Basic 中讀取檔案
@@ -90,4 +90,5 @@ ms.lasthandoff: 05/22/2017
  示範如何搭配使用 `My` 功能與檔案和目錄。  
   
  [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 示範如何搭配使用 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 方法與檔案和目錄。
+ 示範如何搭配使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法與檔案和目錄。
+

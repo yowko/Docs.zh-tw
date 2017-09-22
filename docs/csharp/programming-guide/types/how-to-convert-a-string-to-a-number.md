@@ -1,22 +1,41 @@
 ---
-title: "如何：將字串轉換為數值 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "轉換 [C#]"
-  - "轉換 [C#], 字串為 int"
-  - "將字串轉換為 int [C#]"
-  - "字串 [C#], 轉換為 int"
+title: "如何：將字串轉換為數值 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- conversions [C#]
+- conversions [C#], string to int
+- converting strings to int [C#]
+- strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
 caps.latest.revision: 34
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 34
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08d13e40a385ce8e9011b508b04361b2e050f904
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：將字串轉換為數值 (C# 程式設計手冊)
 您可以使用 <xref:System.Convert> 類別中的方法，或是使用各種數值類型 \(int、long、float 等等\) 上找到的 `TryParse` 方法，將[字串](../../../csharp/language-reference/keywords/string.md)轉換成數字。  
@@ -61,3 +80,4 @@ caps.handback.revision: 34
  [類型](../../../csharp/programming-guide/types/index.md)   
  [如何：判斷字串是否表示數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)   
  [.NET Framework 4 格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+

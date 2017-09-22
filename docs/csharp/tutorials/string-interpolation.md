@@ -1,5 +1,5 @@
 ---
-title: "字串插補 |C#"
+title: "字串插補 - C#"
 description: "了解字串插補在 C# 6 中如何運作"
 keywords: ".NET, .NET Core, C#, 字串"
 author: mgroves
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41afad1c1148319eb8d7d1c3066424eea431649d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="string-interpolation-in-c"></a>C 中的字串插補# #
+# <a name="string-interpolation-in-c"></a>C# 中的字串插值 #
 
 「字串插補」是以字串變數的值取代字串中預留位置的方式。 在 C# 6 之前，是透過 `System.String.Format` 來執行這項操作。 這個運作方式還行，但由於它使用已編號的預留位置，因此更難以閱讀也更冗長。
 

@@ -1,28 +1,33 @@
 ---
-title: "如何：取得 .NET Framework 4.5 安裝程式的進度 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - ".NET Framework, 安裝"
-  - "進度資訊, .NET Framework 安裝程式"
+title: "如何：取得 .NET Framework 4.5 安裝程式的進度"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- progress information, .NET Framework installer
+- .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 caps.latest.revision: 30
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 30
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 404a092c6c05bcef568b234c9abeaf7969703cce
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：取得 .NET Framework 4.5 安裝程式的進度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 為可轉散發執行階段。  如果您正在開發這個 .NET Framework 版本的應用程式，在應用程式設置中您可以將 \(chain\) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]設置包括至內做為必要條件元件。  若要呈現自訂或統一的安裝經驗，您可能會想要以無訊息模式啟動並追蹤 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝進度，同時顯示您應用程式的安裝進度。  若要啟用無訊息模式追蹤，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]\(可檢視的\)設置會定義一個使用記憶體對應 I\/O \(MMIO\) 區段的通訊協定，來與您的設置\(監看員或 Chainer\)溝通 。  這個通訊協定定義 Chainer 取得進度、得到詳細結果、回應訊息以及取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 設置的方式。  

@@ -1,27 +1,26 @@
 ---
-title: "dotnet-msbuild 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-msbuild 命令提供對 MSBuild 命令列的存取。"
-keywords: "dotnet-msmsbuild, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+title: "dotnet msbuild 命令 - .NET Core CLI"
+description: "dotnet msbuild 命令提供對 MSBuild 命令列的存取。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 069909ab3890b75502602f57fc15df19bc7dd614
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 96e4eac528abad2b336a979a98c9be2bee5d17ee
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-msbuild"></a>dotnet msbuild
 
-# <a name="dotnet-msbuild"></a>dotnet-msbuild
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
-`dotnet-msbuild` - 建置專案和其所有相依性。
+`dotnet msbuild` - 建置專案和其所有相依性。
 
 ## <a name="synopsis"></a>概要
 
@@ -31,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 `dotnet msbuild` 命令可存取完整功能的 MSBuild。
 
-命令與現有的 MSBuild 命令列用戶端具有完全相同的功能。 選項完全一樣。 使用 [MSBuild 命令列參考](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference)來取得可用選項的資訊。 
+命令與現有的 MSBuild 命令列用戶端具有完全相同的功能。 選項完全一樣。 使用 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)來取得可用選項的資訊。 
 
 ## <a name="examples"></a>範例
 
@@ -46,3 +45,8 @@ ms.lasthandoff: 03/22/2017
 執行發行目標並針對 `osx.10.11-x64` RID 發行：
 
 `dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
+
+查看整個專案和 SDK 包含的所有目標：
+
+`dotnet msbuild /pp`
+

@@ -1,6 +1,6 @@
 ---
 title: "從 DNX 移轉到 .NET Core CLI"
-description: "從 DNX 移轉到 .NET Core CLI"
+description: "從使用 DNX 工具移轉為 .NET Core CLI 工具。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e94ab83bb6638438e0a98020a5b42755322af5da
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -105,7 +106,7 @@ CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；
 ```
 
 ### <a name="migrating-the-project-file"></a>移轉專案檔
-CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系統。 專案檔語法和語意基本上維持不變，僅有不同案例的小差異。 結構描述也有一些變更；您可在[結構描述檔案](http://json.schemastore.org/project)或更易記的 [project.json 參考](../tools/project-json.md)中查看這些變更。 
+CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系統。 專案檔語法和語意基本上維持不變，僅有不同案例的小差異。 結構描述也有一些變更，而您可在[結構描述檔案](http://json.schemastore.org/project)中查看這些變更。
 
 如果您要建置主控台應用程式，則需要將下列程式碼片段新增至您的專案檔：
 
@@ -119,14 +120,14 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 如果您的 `project.json` 中有「命令」區段，您可以將它移除。 如果某些命令原本是以 DNU 命令的形式存在 (例如 Entity Framework CLI 命令)，則這些命令會以每個專案擴充功能的形式移植至 CLI。 如果您要自行建立命令以在專案中使用，則需要將其取代為 CLI 擴充功能。 在此情況下，`project.json` 中的 `commands` 節點必須以 `tools` 節點取代，且它需要列出工具相依性。 
 
-完成這些作業之後，您必須決定應用程式要具備哪種類型的可攜性。 我們對 .NET Core 所提供的可攜性選項範圍投注不少心力，以供您選擇。 比方說，您可能需要完全*可攜式*的應用程式，或希望擁有*獨立*的應用程式。 可攜式應用程式選項很像 .NET Framework 應用程式的運作方式：它需要共用元件以在目標電腦 (.NET Core) 上執行。 獨立的應用程式不需要在目標上安裝 .NET Core，但是您必須為每個想要支援的作業系統產生一個應用程式。 bpt id="p1" xmlns="urn:oasis:names:tc:xliff:document:1.2"> [</bpt>應用程式可攜性類型](../deploying/index.md)文件中會說明這些可攜性類型等相關資訊。 
+完成這些作業之後，您必須決定應用程式要具備哪種類型的可攜性。 我們對 .NET Core 所提供的可攜性選項範圍投注不少心力，以供您選擇。 比方說，您可能需要完全*可攜式*的應用程式，或希望擁有*獨立*的應用程式。 可攜式應用程式選項很像 .NET Framework 應用程式的運作方式：它需要共用元件以在目標電腦 (.NET Core) 上執行。 獨立的應用程式不需要在目標上安裝 .NET Core，但是您必須為每個想要支援的作業系統產生一個應用程式。 [應用程式可攜性類型](../deploying/index.md)文件中會說明這些可攜性類型等相關資訊。 
 
-一旦您決定要使用何種可攜性類型時，即需要變更目標架構。 如果您撰寫過 .NET Core 的應用程式，您很可能會使用 `dnxcore50` 做為目標架構。 若要使用 CLI 以及新 [.NET 標準程式庫](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/net-platform-standard.md)帶來的變更 ，架構必須是下列其中之一：
+一旦您決定要使用何種可攜性類型時，即需要變更目標架構。 如果您撰寫過 .NET Core 的應用程式，您很可能會使用 `dnxcore50` 做為目標架構。 由新的 [.NET Standard](../../standard/net-standard.md) \(英文\) 所帶來的 CLI 和變更，使得架構必須為下列其中一項：
 
 1. `netcoreapp1.0`- 如果您要撰寫的應用程式在 .NET Core (包括 ASP.NET Core 應用程式) 上
 2. `netstandard1.6`- 如果您要撰寫 .NET Core 的類別庫
 
-如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `net451`應變更為 `dnx451`。 如需詳細資訊，請參閱 [.NET 標準程式庫文件](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/net-platform-standard.md)。 
+如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `net451`應變更為 `dnx451`。 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md) 主題。 
 
 您的 `project.json` 現已大致就緒。 接著，您必須檢查相依性清單，並將相依性更新為較新版本；如果您是使用 ASP.NET Core 相依性的話，更應注意這項作業。 如果您之前針對 BCL API 使用不同的套件，則可以使用[應用程式可攜性類型](../deploying/index.md)文件中所述的執行階段套件。 
 

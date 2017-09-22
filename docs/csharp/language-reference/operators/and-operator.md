@@ -1,43 +1,64 @@
 ---
-title: "&amp; 運算子 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "&_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "位元 AND 運算子 [C#]"
-  - "連字號運算子 (&) [C#]"
-  - "& 運算子 [C#]"
-  - "AND 運算子 (&) [C#]"
+title: "&amp; 運算子 (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '&_CSharpKeyword'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- bitwise AND operator [C#]
+- ampersand operator (&) [C#]
+- '& operator [C#]'
+- AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d92a860df6fcc9acf14aab4ec558556735ac8aac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# &amp; 運算子 (C# 參考)
-& 運算子可做為一元或二元運算子。  
+# <a name="amp-operator-c-reference"></a>&amp; 運算子 (C# 參考)
+& 運算子可以作為一元或二元運算子。  
   
-## 備註  
- 一元 & 運算子會傳回運算元的位址 \(需要 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 的內容\)。  
+## <a name="remarks"></a>備註  
+ 一元 & 運算子會傳回運算元的位址 (需要 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 內容)。  
   
- 二元 & 運算子已為整數類資料型別及 `bool` 預先定義其運算方式。  對於整數類資料型別，& 會針對其運算元進行邏輯位元 AND 運算。  對於 `bool` 運算元，& 會針對其運算元進行邏輯 AND 運算，也就是說，只有在兩個運算元皆為 `true` 時，結果才會是 `true`。  
+ 整數型別和 `bool` 會預先定義二元 & 運算子。 對於整數型別，& 會計算其運算元的邏輯位元 AND。 對於 `bool` 運算元，& 會計算其運算元的邏輯 AND；亦即，如果且唯有當其兩個運算元都是 `true` 時，結果會是 `true`。  
   
- `&` 運算子會同時評估兩個運算子，不管第一個運算子其值為何。  例如：  
+ 不論第一個運算子的值為何，`&` 運算子都會評估兩個運算子。 例如:   
   
  [!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
- 使用者定義型別可多載二進位 `&` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
+ 使用者定義型別可以多載二進位 `&` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。 整數類資料類型上的作業通常允許用於列舉型別。 二元運算子多載時，對應的指派運算子 (若有) 也會隱含地多載。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 運算子](../../../csharp/language-reference/operators/index.md)
+

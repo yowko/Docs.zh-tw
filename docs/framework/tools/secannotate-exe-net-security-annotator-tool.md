@@ -1,28 +1,33 @@
 ---
-title: "SecAnnotate.exe (.NET Security Annotator Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "SecAnnotate.exe"
-  - "Security Annotator tool"
+title: "SecAnnotate.exe (.NET Security Annotator 工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- SecAnnotate.exe
+- Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 caps.latest.revision: 22
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 22
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # SecAnnotate.exe (.NET Security Annotator Tool)
 .NET Security Annotator 工具 \(SecAnnotate.exe\) 是識別一個或多個組件之 `SecurityCritical` 和 `SecuritySafeCritical` 部分的命令列應用程式。  
@@ -64,4 +69,5 @@ SecAnnotate.exe [parameters] [assemblies]
   
  如需 .NET Security Annotator 的詳細資訊，請參閱 .NET Security 部落格中的項目 [使用 SecAnnotate 分析您的組件是否生透明度違規](http://go.microsoft.com/fwlink/?LinkId=187648)。  
   
-## 範例
+## <a name="examples"></a>範例
+

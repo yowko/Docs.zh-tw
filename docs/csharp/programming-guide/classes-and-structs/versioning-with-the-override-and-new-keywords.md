@@ -1,5 +1,5 @@
 ---
-title: "使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊) | Microsoft Docs"
+title: "使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b464b4c395af093bb9124bb671c5c212c750f497
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
@@ -78,7 +78,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/languag
   
  [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- 如果您不希望自己的方法覆寫新的基底類別方法，請採納下列考量。 為避免混淆兩個方法，您可以重新命名您的方法。 這很耗時間又容易發生錯誤，並且在某些情況下不實際。 不過，如果您的專案相對較小，您可以使用 Visual Studio 的重構選項來重新命名方法。 如需詳細資訊，請參閱[重構類別和型別 (類別設計工具)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer)。  
+ 如果您不希望自己的方法覆寫新的基底類別方法，請採納下列考量。 為避免混淆兩個方法，您可以重新命名您的方法。 這很耗時間又容易發生錯誤，並且在某些情況下不實際。 不過，如果您的專案相對較小，您可以使用 Visual Studio 的重構選項來重新命名方法。 如需詳細資訊，請參閱[重構類別和型別 (類別設計工具)](/visualstudio/ide/refactoring-classes-and-types-class-designer)。  
   
  或者，您也可以在衍生類別定義中使用關鍵字 `new`，避免出現警告：  
   
@@ -106,3 +106,4 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../../csharp/languag
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+

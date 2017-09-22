@@ -1,28 +1,33 @@
 ---
-title: "Mage.exe (資訊清單產生和編輯工具) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "資訊清單產生和編輯工具"
-  - "Mage.exe"
+title: "Mage.exe (資訊清單產生和編輯工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Manifest Generation and Editing tool
+- Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
 caps.latest.revision: 68
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 66
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Mage.exe (資訊清單產生和編輯工具)
 「資訊清單產生和編輯工具」\(Mage.exe\) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。 由於 Mage.exe 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 \(包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式\) 中執行。  
@@ -201,9 +206,10 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>  
 ```  
   
-## 請參閱  
- [ClickOnce 安全性和部署](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [逐步解說：手動部署 ClickOnce 應用程式](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)   
- [受信任的應用程式部署概觀](../Topic/Trusted%20Application%20Deployment%20Overview.md)   
- [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
+## <a name="see-also"></a>另請參閱  
+ [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
+ [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)   
+ [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

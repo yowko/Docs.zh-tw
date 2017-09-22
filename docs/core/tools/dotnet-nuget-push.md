@@ -1,27 +1,26 @@
 ---
-title: "dotnet-nuget-push 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-nuget-push 命令會將套件推送至伺服器並發行。"
-keywords: "dotnet-nuget-push, CLI, CLI 命令, .NET Core"
+title: "dotnet nuget push 命令 - .NET Core CLI"
+description: "dotnet nuget push 命令會將套件推送至伺服器並發行。"
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 51ecf4b8f26fa7722103065bc060e6ea708d147c
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-# <a name="dotnet-nuget-push"></a>dotnet-nuget push
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
-`dotnet-nuget push` - 將套件推送至伺服器並發行。
+`dotnet nuget push` - 將套件推送至伺服器並發行。
 
 ## <a name="synopsis"></a>概要
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>說明
 
-`dotnet nuget push` 命令會將套件推送至伺服器並發行。 推送命令會使用在系統 NuGet 組態檔案或組態檔案鏈中找到的伺服器及認證詳細資料。 如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)。 NuGet 預設組態的取得方式如下：載入 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS)，接著從磁碟機根目錄開始直到目前目錄，載入其中的任何 *nuget.config* 或 *.nuget\nuget.config*。
+`dotnet nuget push` 命令會將套件推送至伺服器並發行。 推送命令會使用在系統 NuGet 組態檔案或組態檔案鏈中找到的伺服器及認證詳細資料。 如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](/nuget/consume-packages/configuring-nuget-behavior)。 NuGet 預設組態的取得方式如下：載入 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS)，接著從磁碟機根目錄開始直到目前目錄，載入其中的任何 *nuget.config* 或 *.nuget\nuget.config*。
 
 ## <a name="arguments"></a>引數
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 03/22/2017
 
 `-h|--help`
 
-印出命令的簡短說明。  
+印出命令的簡短說明。
 
 `-s|--source <SOURCE>`
 
@@ -83,11 +82,11 @@ ms.lasthandoff: 03/22/2017
 
 若有 API 金鑰，將 *foo.nupkg* 推送至自訂推送來源 `http://customsource`：
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/` 
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
 將 *foo.nupkg* 推送至預設推送來源：
 
-`dotnet nuget push foo.nupkg` 
+`dotnet nuget push foo.nupkg`
 
 將 *foo.symbols.nupkg* 推送至預設符號來源：
 

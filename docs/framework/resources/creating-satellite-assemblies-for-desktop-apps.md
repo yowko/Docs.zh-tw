@@ -1,38 +1,43 @@
 ---
-title: "建立桌面應用程式的附屬組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部署應用程式 [.NET Framework]，資源"
-  - "資源檔，部署"
-  - "中樞和支點資源部署模型"
-  - "資源檔，封裝"
-  - "應用程式資源，封裝"
-  - "公開金鑰，取得"
-  - "附屬組件"
-  - "組件 [.NET Framework]，簽署"
-  - "應用程式資源，部署"
-  - "Al.exe"
-  - "GAC (全域組件快取)，附屬組件"
-  - "組件連結器"
-  - "附屬組件的目錄位置"
-  - "全域組件快取，附屬組件"
-  - "封裝應用程式資源"
-  - "編譯附屬組件"
-  - "重新簽署組件"
+title: "建立桌面應用程式的附屬組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying applications [.NET Framework], resources
+- resource files, deploying
+- hub-and-spoke resource deployment model
+- resource files, packaging
+- application resources, packaging
+- public keys, obtaining
+- satellite assemblies
+- assemblies [.NET Framework], signing
+- application resources, deploying
+- Al.exe
+- GAC (global assembly cache), satellite assemblies
+- Assembly Linker
+- directory locations for satellite assemblies
+- global assembly cache, satellite assemblies
+- packaging application resources
+- compiling satellite assemblies
+- re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式上扮演主要角色。  如果使用者自己的語言或文化特性資源無法使用，它們可讓應用程式顯示字串、影像、其他資料使用者自己的語言、文化特性 \(Culture\) 和提供替代的資料。  .NET Framework 使用中樞和輪輻模型來尋找和擷取當地語系化的資源。  中樞為主要組件，包含無法當地語系化的可執行程式碼，以及稱為中性或預設文化特性的單一文化特性的資源。  預設文化特性為應用程式的後援文化特性;，其為當地語系化資源無法使用時使用。  您可以使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性指定應用程式的預設文化特性。  各個輪輻都連接至含有單一文化特性資源 \(但不包含任何程式碼\) 的附屬組件。  因為附屬組件不是主要組件的一部分，所以您可以輕易取代或更新對應至特定文化特性的資源，而不需取代應用程式的主要組件。  

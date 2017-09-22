@@ -1,5 +1,5 @@
 ---
-title: "排序集合類型 | Microsoft Docs"
+title: "排序集合類型"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,14 +19,15 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2ac1552dba8756d033ee02651142476c4a15a485
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sorted-collection-types"></a>排序集合類型
-<xref:System.Collections.SortedList?displayProperty=fullName> 類別、<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>泛型類別和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> 泛型類別與 <xref:System.Collections.Hashtable> 類別和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別的類似處在於實作 <xref:System.Collections.IDictionary> 介面，但它們會透過索引鍵依排序順序維護其元素，而且沒有雜湊表的 O(1) 插入和擷取特性。 三個類別有數個共用功能︰  
+<xref:System.Collections.SortedList?displayProperty=fullName> 類別、<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> 泛型類別和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> 泛型類別，類似於實作 <xref:System.Collections.IDictionary> 介面的 <xref:System.Collections.Hashtable> 類別和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，但它們會依索引鍵的排序次序維持其項目，沒有 O(1) 插入和雜湊資料表的擷取特性。 三個類別有數個共用功能︰  
   
 -   所有三個類別都會實作 <xref:System.Collections.IDictionary?displayProperty=fullName> 介面。 兩個泛型類別也會實作 <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName> 泛型介面。  
   

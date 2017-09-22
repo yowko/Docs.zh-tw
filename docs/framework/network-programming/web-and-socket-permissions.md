@@ -1,48 +1,54 @@
 ---
-title: "Web 和通訊端權限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "網路"
-  - "位置 [.NET Framework]，接受"
-  - "通訊端，權限"
-  - "網路，權限"
-  - "網際網路，權限"
-  - "網路資源"
-  - "SocketPermission 類別，關於 SocketPermission 類別"
-  - "位置 [.NET Framework]，連接"
-  - "WebPermission 類別，關於 WebPermission 類別"
-  - "權限 [.NET Framework]，通訊端"
-  - "安全性 [.NET Framework]，網際網路"
-  - "位置 [.NET Framework]，授與"
+title: "Web 和通訊端權限"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- positions [.NET Framework], accepting
+- sockets, permissions
+- network, permissions
+- Internet, permissions
+- Network Resources
+- SocketPermission class, about SocketPermission class
+- positions [.NET Framework], connecting
+- WebPermission class, about WebPermission class
+- permissions [.NET Framework], sockets
+- security [.NET Framework], Internet
+- positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6071c69799cf289ad0ecf163dc2de038efefecc1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# Web 和通訊端權限
-使用 <xref:System.Net> 命名空間 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 類別為應用程式的網際網路安全性。  **WebPermission** 類別控制應用程式的權限要求 URI 的資料或服務 URI 至網際網路。  **SocketPermission** 類別控制應用程式的使用權限 <xref:System.Net.Sockets.Socket> 接受了某個本機通訊埠資料或使用遠端裝置連接使用傳輸通訊協定在另一個位址，視通訊端主機、連接埠編號和傳輸通訊協定。  
+# <a name="web-and-socket-permissions"></a>Web 和通訊端權限
+使用 <xref:System.Net> 命名空間之應用程式的網際網路安全性是透過 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 類別提供。 **WebPermission** 類別可控制應用程式向 URI 要求資料，或提供 URI 給網際網路的權限。 **SocketPermission** 類別則可控制應用程式根據通訊端的主機、連接埠編號和傳輸通訊協定，使用 <xref:System.Net.Sockets.Socket> 在本機連接埠上接受資料，或使用另一個位址上的傳輸通訊協定連絡遠端裝置的權限。  
   
- 哪些使用權限類別使用取決於您的應用程式類型。  使用 <xref:System.Net.WebRequest> 和其子代 \(Descendant\) 的應用程式應該使用 **WebPermission** 類別處理使用權限。  使用通訊端 \(Socket\) 存取層級的應用程式應該使用 **SocketPermission** 類別處理使用權限。  
+ 使用的權限類別取決於您的應用程式類型。 使用 <xref:System.Net.WebRequest> 和其子系的應用程式應使用 **WebPermission** 類別來管理權限。 使用通訊端層級存取的應用程式應使用 **SocketPermission** 類別來管理權限。  
   
- **WebPermission** 和 **SocketPermission** 定義兩個使用權限:接受並連接到。  接受授權應用程式版權回應來自另一方的連入連線。  連接授與應用程式版權啟始與另一方的連接。  
+ **WebPermission** 和 **SocketPermission** 定義兩個權限：接受和連線。 接受可授與應用程式回應來自另一方之連入連線的權限。 連線可授與應用程式起始與另一方之連線的權限。  
   
- 如需執行個體 **SocketPermission** ，接受表示應用程式可以接受在本機傳輸位址的連入連線，連接表示應用程式可以連接至特定遠端 \(或區域\) 傳送位址。  
+ 若是 **SocketPermission** 執行個體，接受表示應用程式可以在本機傳輸位址上接受連入連線；連線表示應用程式可以連線到某個遠端 (或本機) 傳輸位址。  
   
- 如需執行個體 **WebPermission** ，接受表示應用程式可以匯出控制項的 **WebPermission** URI 至世界;連接表示應用程式可以存取該 URI \(它是否為遠端或本機\)。  
+ 若是 **WebPermission** 執行個體，接受表示應用程式可以將 **WebPermission** 所控制的 URI 匯出到全世界；連線表示應用程式可以存取該 URI (不論它是遠端或本機)。  
   
-## 請參閱  
- [Security](../../../docs/standard/security/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [安全性](../../../docs/standard/security/index.md)   
  [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
+

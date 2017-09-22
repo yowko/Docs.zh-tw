@@ -1,6 +1,6 @@
 ---
-title: "uint (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "uint (C# 參考)"
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe4f7fcbbadee600e0ba6de70508312173d098ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint (C# 參考)
@@ -46,35 +47,30 @@ ms.lasthandoff: 03/13/2017
  **注意** `uint`類型不符合 CLS 規範。 請盡可能使用 `int`。  
   
 ## <a name="literals"></a>常值  
- 您可以宣告並初始化 `uint` 類型的變數，如下列範例所示：  
+
+您可以針對 `uint` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 如果整數常值超出 `uint` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `uint` 值。  
   
-```  
-  
-uint myUint = 4294967290;  
-```  
-  
- 整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](../../../csharp/language-reference/keywords/int.md)、`uint`、[long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)。 在此範例中，它是 `uint`：  
-  
-```  
-  
-uint uInt1 = 123;  
-```  
-  
- 您也可以使用後置詞 u 或 U，如下所示：  
-  
-```  
-  
-uint uInt2 = 123U;  
-```  
-  
- 當您使用後置詞 `U` 或 `u` 時，會根據常值的數值，決定常值的類型為 `uint` 或 `ulong`。 例如：  
-  
-```  
-Console.WriteLine(44U.GetType());  
-Console.WriteLine(323442434344U.GetType());  
-```  
-  
- 這個程式碼顯示後接 `System.UInt64` 的 `System.UInt32` (分別是 `uint` 和 `ulong` 的基礎類型)，因為第二個常值太大，無法依 `uint` 類型進行排序。  
+[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]  
+
+> [!NOTE] 
+> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
+
+自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
+ 
+ 整數常值亦可包含後置詞以表示類型。 `U` 或 'u' 後置詞表示 `uint` 或 `ulong`，視常值的數值而定。 下列範例會使用 `u` 後置詞來表示這兩種類型的不帶正負號整數。 請注意，第一個常值是 `uint`，因為其值小於 <xref:System.UInt32.MaxValue?displayProperty=fullName>而第二個是 `ulong`，因為其值大於 <xref:System.UInt32.MaxValue?displayProperty=fullName>。
+
+[!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
+ 
+如果整數常值沒有後置詞，其類型會是下列類型中可表示其值的第一個類型： 
+
+1. [int](int.md)
+2. `uint`
+3. [long](../../../csharp/language-reference/keywords/long.md)
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
   
 ## <a name="conversions"></a>轉換  
  有一項從 `uint` 轉換為 [long](../../../csharp/language-reference/keywords/long.md)、[ulong](../../../csharp/language-reference/keywords/ulong.md)、[float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md) 之預先定義的隱含轉換。 例如:   
@@ -107,7 +103,7 @@ uint y = (uint)3.0;
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.UInt32>   
@@ -118,3 +114,4 @@ uint y = (uint)3.0;
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

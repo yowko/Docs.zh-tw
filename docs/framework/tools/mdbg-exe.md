@@ -1,28 +1,33 @@
 ---
-title: "MDbg.exe (.NET Framework Command-Line Debugger) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "command-line debugger [.NET Framework]"
-  - "MDbg.exe"
+title: "MDbg.exe (.NET Framework 命令列偵錯工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- command-line debugger [.NET Framework]
+- MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 caps.latest.revision: 27
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 27
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f65251d5712f981eaa038cd8fbfe66b5e690b4b6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # MDbg.exe (.NET Framework Command-Line Debugger)
 .NET Framework 命令列偵錯工具可以協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標之程式的 Bug。  這個工具使用執行階段偵錯 API 來提供偵錯服務。  目前您只能使用 MDbg.exe 偵錯 Managed 程式碼；不支援偵錯 Unmanaged 程式碼。  
@@ -116,6 +121,7 @@ mdbg>
   
 ## 範例  
   
-## 請參閱  
- [Tools](../../../docs/framework/tools/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

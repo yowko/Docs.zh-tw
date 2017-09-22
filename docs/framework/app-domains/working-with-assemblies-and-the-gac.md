@@ -1,26 +1,31 @@
 ---
-title: "使用組件和全域組件快取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "存取控制清單 [.NET Framework]"
-  - "ACL [.NET Framework]"
-  - "組件 [.NET Framework], 全域組件快取"
-  - "GAC (全域組件快取), 好處"
-  - "全域組件快取, 好處"
+title: "使用組件和全域組件快取"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- global assembly cache, benefits
+- ACLs [.NET Framework]
+- GAC (global assembly cache), benefits
+- access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 使用組件和全域組件快取
 如果您想要在數個應用程式之間共用組件，可以將組件安裝在全域組件快取中。  每一部安裝有 Common Language Runtime 的電腦都具有這個電腦程式快取。  全域組件快取會儲存要專門指定給電腦上一些應用程式共用的組件。  組件要求在全域組件快取中必須安裝強式名稱。  
@@ -77,4 +82,5 @@ caps.handback.revision: 12
  說明 Common Language Runtime 是如何尋找及載入構成應用程式的組件。  
   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- 說明 Managed 應用程式的建置組塊，也就是組件。
+ 描述組件，即 Managed 應用程式的建置組塊。
+

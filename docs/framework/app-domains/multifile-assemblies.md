@@ -1,28 +1,33 @@
 ---
-title: "多檔案組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 多檔案"
-  - "組件資訊清單, 多檔案組件"
-  - "程式碼模組"
-  - "命令列編譯器"
-  - "編譯組件"
-  - "組件的進入點"
-  - "多檔案組件"
+title: "多檔案組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- entry point for assembly
+- compiling assemblies
+- command-line compilers
+- assembly manifest, multifile assemblies
+- code modules
+- multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 多檔案組件
 您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 搭配 Visual C\+\+ 建立多檔案組件。  組件的檔案必須包含組件資訊清單。  啟動應用程式的組件必須同時含有進入點，例如 Main 或 WinMain 方法。  
@@ -48,3 +53,4 @@ caps.handback.revision: 9
 ## 請參閱  
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

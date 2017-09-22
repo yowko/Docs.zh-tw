@@ -1,23 +1,42 @@
 ---
-title: "/delaysign (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/delaysign"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-delaysign compiler option [C#]"
-  - "delaysign compiler option [C#]"
-  - "/delaysign compiler option [C#]"
+title: "-delaysign (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /delaysign
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -delaysign compiler option [C#]
+- delaysign compiler option [C#]
+- /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce4c9fbb14081764985f3b02988dff9ee272c451
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /delaysign (C# Compiler Options)
 這個選項會使得編譯器在輸出檔案中保留空間，以便稍後可以加入數位簽章。  
@@ -49,6 +68,7 @@ caps.handback.revision: 16
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

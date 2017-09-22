@@ -1,5 +1,5 @@
 ---
-title: "委派中的差異 (C#) | Microsoft Docs"
+title: "委派中的差異 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79de8218f3fcdf52dad84bb0bacffde01a222066
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
@@ -129,9 +129,9 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework 中具有 Variant 型別參數的泛型委派  
  .NET Framework 4 推出差異支援，適用於數個現有泛型委派中的泛型型別參數：  
   
--   `Action`從 <xref:System> 命名空間委派，例如 <xref:System.Action%601> 和 <xref:System.Action%602>。  
+-   <xref:System> 命名空間中的 `Action` 委派，例如 <xref:System.Action%601> 和 <xref:System.Action%602>  
   
--   `Func`從 <xref:System> 命名空間委派，例如 <xref:System.Func%601> 和 <xref:System.Func%602>。  
+-   <xref:System> 命名空間中的 `Func` 委派，例如 <xref:System.Func%601> 和 <xref:System.Func%602>  
   
 -   <xref:System.Predicate%601> 委派  
   
@@ -157,7 +157,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
-> C# 中的  `ref` 和 `out` 參數不能標示為 Variant。  
+>  C# 中的 `ref` 和 `out` 參數不能標示為 Variant。  
   
  您也可以支援相同委派中不同型別參數的差異和共變數。 這在下列範例中顯示。  
   
@@ -174,7 +174,7 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>結合 Variant 泛型委派  
- 您不應該組合 Variant 委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的型別必須完全一致。 當您使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 運算子組合委派時，這會導致執行階段例外狀況，如以下程式碼範例所示。  
+ 您不應該組合 Variant 委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的類型必須完全一致。 當您使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 運算子合併委派時，這會導致執行階段例外狀況，如下列程式碼範例所示。  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -214,6 +214,7 @@ public static void Test()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [泛型](https://msdn.microsoft.com/library/ms172192)   
+ [泛型](~/docs/standard/generics/index.md)   
  [針對 Func 與 Action 泛型委派使用差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)   
  [如何：組合委派 (多點傳送委派)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 foreach 存取命令列引數 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：使用 foreach 存取命令列引數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,18 +27,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2f0e3bce88beafd45a21773a7b26ffb2bb41215d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 766b5cd0879edec1dc409e07c4f62ee693fd615d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>如何：使用 foreach 存取命令列引數 (C# 程式設計手冊)
 逐一查看陣列的另一種方法是使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式，如本例所示。 `foreach` 陳述式可用來逐一查看陣列、.NET Framework 集合類別，或實作 <xref:System.Collections.IEnumerable> 介面的任何類別或結構。  
   
 > [!NOTE]
->  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
+>  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
   
 ## <a name="example"></a>範例  
  本例會示範如何使用 `foreach` 印出命令列引數。  
@@ -56,3 +56,4 @@ ms.lasthandoff: 03/13/2017
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [如何：顯示命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

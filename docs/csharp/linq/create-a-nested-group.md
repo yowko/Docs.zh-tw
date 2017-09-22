@@ -1,7 +1,7 @@
 ---
 title: "建立巢狀群組"
 description: "如何建立巢狀群組。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff2c0c00ab23346cbaa3ba7c36a0cba25e03b89b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 361ac1f224c6eef292fcf8434c7e465c9448b19c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="create-a-nested-group"></a>建立巢狀群組
@@ -33,3 +33,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>請參閱  
  [LINQ 查詢運算式](index.md)
+

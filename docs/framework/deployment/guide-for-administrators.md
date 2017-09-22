@@ -1,28 +1,33 @@
 ---
-title: ".NET Framework 系統管理員部署手冊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "系統管理員指南, 部署 .NET Framework"
-  - "部署 [.NET Framework], 系統管理員指南"
+title: ".NET Framework 系統管理員部署手冊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- administrator's guide, deploying .NET Framework
+- deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 caps.latest.revision: 40
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 38
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # .NET Framework 系統管理員部署手冊
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。  本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。  如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱 [系統需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -271,3 +276,4 @@ caps.handback.revision: 38
 ## 請參閱  
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [系統需求](../../../docs/framework/get-started/system-requirements.md)
+

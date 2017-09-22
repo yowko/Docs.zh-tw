@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Basic 中使用應用程式記錄檔 | Microsoft Docs"
+title: "在 Visual Basic 中使用應用程式記錄檔"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,18 +33,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>在 Visual Basic 中使用應用程式記錄檔
 `My.Applicaton.Log` 和 `My.Log` 物件讓您輕鬆地將記錄和追蹤資訊寫入記錄檔。  
   
 ## <a name="how-messages-are-logged"></a>記錄訊息的方式  
- 首先，會以記錄檔之 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 屬性中的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性檢查訊息的嚴重性。 根據預設，只有嚴重性為「資訊」和更高等級的訊息會傳遞至追蹤接聽項 (該追蹤接聽項於記錄檔的 `TraceListener` 集合中指定)。 然後，每個接聽程式會將訊息嚴重性和接聽程式的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性進行比較。 如果訊息的嚴重性夠高，接聽程式會寫出訊息。  
+ 首先，會以記錄檔之 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性中的 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 屬性檢查訊息的嚴重性。 根據預設，只有嚴重性為「資訊」和更高等級的訊息會傳遞至追蹤接聽項 (該追蹤接聽項於記錄檔的 `TraceListener` 集合中指定)。 然後，每個接聽程式會將訊息嚴重性和接聽程式的 <xref:System.Diagnostics.TraceSource.Switch%2A> 屬性進行比較。 如果訊息的嚴重性夠高，接聽程式會寫出訊息。  
   
  下列圖表顯示寫入至 `WriteEntry` 方法的訊息如何傳遞至記錄檔追蹤接聽項的 `WriteLine` 方法︰  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 05/22/2017
  ![My 記錄檔組態](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>記錄訊息的位置  
- 如果組件沒有組態檔，`My.Application.Log` 和 `My.Log` 物件會寫入應用程式的偵錯輸出 (透過 <xref:System.Diagnostics.DefaultTraceListener> 類別)。 此外，`My.Application.Log` 物件會寫入組件的記錄檔 (透過 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別)，而 `My.Log` 物件會寫入 ASP.NET 網頁的輸出 (透過 <xref:System.Web.WebPageTraceListener> 類別)。  
+ 如果組件沒有組態檔， `My.Application.Log` 和 `My.Log` 物件會寫入至應用程式的偵錯輸出 (透過 <xref:System.Diagnostics.DefaultTraceListener> 類別)。 此外，`My.Application.Log` 物件會寫入組件的記錄檔 (透過 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別)，而 `My.Log` 物件會寫入 ASP.NET 網頁的輸出 (透過 <xref:System.Web.WebPageTraceListener> 類別)。  
   
- 以偵錯模式執行應用程式時，您可以在 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] [輸出] 視窗中檢視偵錯輸出。 若要開啟 [輸出] 視窗，請按一下 [偵錯] 功能表項目並指向 [Windows] ，然後按一下 [輸出] 。 在 [輸出] 視窗中，從 [顯示輸出來源] 方塊中選取 [偵錯]。  
+ 以偵錯模式執行應用程式時，您可以在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [輸出] 視窗中檢視偵錯輸出。 若要開啟 [輸出] 視窗，請按一下 [偵錯] 功能表項目並指向 [Windows] ，然後按一下 [輸出] 。 在 [輸出]  視窗中，從 [顯示輸出來源]  方塊中選取 [偵錯]  。  
   
- 根據預設， `My.Application.Log` 寫入至位於使用者應用程式資料路徑中的記錄檔。 您可以從 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 物件的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 屬性取得路徑。 該路徑的格式如下所示︰  
+ 根據預設， `My.Application.Log` 寫入至位於使用者應用程式資料路徑中的記錄檔。 您可以從 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 物件的 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 屬性取得路徑。 該路徑的格式如下所示︰  
   
  `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/22/2017
   
  `<sources>`、 `<switches>`和 `<sharedListeners>` 節點的範例於下列程式碼內顯示︰  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -130,3 +130,4 @@ ms.lasthandoff: 05/22/2017
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

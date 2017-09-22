@@ -1,28 +1,33 @@
 ---
-title: "如何：將組件載入應用程式定義域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式定義域, 載入組件"
-  - "載入組件"
+title: "如何：將組件載入應用程式定義域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application domains, loading assemblies
+- loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: c319da0f8e6f3cdfb83e659a778136d668699834
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/10/2017
+
 ---
-# 如何：將組件載入應用程式定義域
-將組件載入應用程式定義域的方式有好幾種，  建議的方式是使用 [System.Reflection.Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) 類別的 `static` \(在 Visual Basic 中為 `Shared`\) <xref:System.Reflection.Assembly.Load%2A> 方法。  載入組件的其他方式包括：  
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：將組件載入應用程式定義域
+有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 <xref:System.Reflection.Assembly?displayProperty=fullName> 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  
   
--   [Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) 類別的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法會載入提供檔案位置的組件。  以此方法載入組件時，會使用不同的載入內容。  
+-   <xref:System.Reflection.Assembly> 類別的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法會載入已指定其檔案位置的組件。 使用這種方法載入組件會使用不同的載入內容。  
   
 -   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法可將組件載入僅限反映的內容中。  載入此內容中的組件可以進行檢查但不能加以執行，以允許檢查以其他平台為目標的組件。  請參閱 [如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
@@ -54,4 +59,5 @@ caps.handback.revision: 16
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)   
  [如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)   
- [Application Domains and Assemblies](http://msdn.microsoft.com/zh-tw/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [應用程式定義域和組件](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+

@@ -1,25 +1,30 @@
 ---
-title: "如何：參考強式名稱簽署組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 強式命名"
-  - "組件繫結, 強式命名"
-  - "編譯時期組件參考"
-  - "強式名稱組件, 編譯時期參考"
+title: "如何：參考強式名稱簽署組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-named assemblies, compile-time references
+- compile-time assembly referencing
+- assemblies [.NET Framework], strong-named
+- assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aa46bfdfe42dca9509e39d4b6218473aa00a1877
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：參考強式名稱簽署組件
 參考強式名稱組件的型別或資源的處理序 \(Process\) 通常是透明的。  您可以在編譯期間 \(早期繫結\) 或執行階段進行參考。  
@@ -71,5 +76,6 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn \-tp \<** *assembly* **\>**  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+

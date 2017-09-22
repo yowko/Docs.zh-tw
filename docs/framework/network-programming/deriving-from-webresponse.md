@@ -1,56 +1,62 @@
 ---
-title: "衍生自 WebResponse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "衍生自 WebResponse"
+title: "衍生自 WebResponse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 627e5170dbf33b9b42ec7e46e77e6ff2fa874463
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 衍生自 WebResponse
-<xref:System.Net.WebResponse> 類別是建立一個通訊協定專屬回應提供基本的方法和屬性調整 .NET Framework 可外掛式通訊協定模型的抽象基底類別。  使用 <xref:System.Net.WebRequest> 類別要求資源的資料的應用程式會收到 **WebResponse**的回應。  通訊協定專屬的 **WebResponse** 子代必須實作 **WebResponse** 類別的抽象成員。  
+# <a name="deriving-from-webresponse"></a>衍生自 WebResponse
+<xref:System.Net.WebResponse> 類別是抽象的基底類別，提供基本的方法和屬性以建立有特定通訊協定回應，符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 <xref:System.Net.WebRequest> 類別向資源要求資料的應用程式，會收到 **WebResponse** 的回應。 通訊協定特定的 **WebResponse** 子代必須實作 **WebResponse** 類別的抽象成員。  
   
- 關聯的 **WebRequest** 類別必須建立 **WebResponse** 子代。  例如，由於呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=fullName> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=fullName>， <xref:System.Net.HttpWebResponse> 執行個體 \(Instance\) 建立。  每個 **WebResponse** 包含要求的結果為資源並不是要重複使用。  
+ 相關聯的 **WebRequest** 類別必須建立 **WebResponse** 子代。 例如，只有呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=fullName> 或 <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=fullName> 才會建立 <xref:System.Net.HttpWebResponse> 執行個體。 每個 **WebResponse** 都包含向資源提出要求的結果，而且不能重複使用。  
   
-## ContentLength 屬性  
- <xref:System.Net.WebResponse.ContentLength%2A> 屬性表示位元組數從 <xref:System.Net.WebResponse.GetResponseStream%2A> 方法所傳回的資料流中所提供的資料。  **ContentLength** 屬性不表示位元組數伺服器或中繼資料資訊傳回的標頭，它會在要求的資源值只位元組數目的資料。  
+## <a name="contentlength-property"></a>ContentLength 屬性  
+ <xref:System.Net.WebResponse.ContentLength%2A> 屬性指出從 <xref:System.Net.WebResponse.GetResponseStream%2A> 方法傳回的資料流中可取得的資料位元組數目。 **ContentLength** 屬性不會指出伺服器所傳回的標頭或中繼資料資訊的位元組數目，它只會指出所要求資源本身的資料位元組數目。  
   
-## ContentType 屬性  
- <xref:System.Net.WebResponse.ContentType%2A> 屬性提供任何特殊資訊的通訊協定需要您要傳送到用戶端的識別伺服器傳送的內容類型。  這通常是傳回的所有資料的 MIME 內容類型。  
+## <a name="contenttype-property"></a>ContentType 屬性  
+ <xref:System.Net.WebResponse.ContentType%2A> 屬性會提供您的通訊協定要求您傳送至用戶端的任何特殊資訊，以識別伺服器要傳送的內容類型。 這通常是任何傳回資料的 MIME 內容類型。  
   
-## 標題屬性。  
- <xref:System.Net.WebResponse.Headers%2A> 屬性包含名稱\/值組的選擇性集合關聯的中繼資料 \(Metadata\) 回應。  可以表示為名稱\/值組的通訊協定所需的所有中繼資料儲存在 **Headers** 屬性可以加入中。  
+## <a name="headers-property"></a>Headers 屬性  
+ <xref:System.Net.WebResponse.Headers%2A> 屬性包含與回應建立關聯的中繼資料名稱/值組任意集合。 **Headers** 屬性可以包含可表示為名稱/值組的通訊協定所需要的任何中繼資料。  
   
- 不需要使用 **Headers** 屬性使用標頭中繼資料。  通訊協定專屬中繼資料可以公開 \(Expose\) 為屬性，例如， <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=fullName> 屬性公開 **Last\-Modified** HTTP 標頭。  當您公開標題中繼資料做為屬性時，會使用 **Headers** 屬性，則不應該允許相同的屬性設定為。  
+ 您不需要使用 **Headers** 屬性，也能使用標頭中繼資料。 通訊協定特定的中繼資料可以公開為屬性。例如，<xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=fullName> 屬性會公開 **Last-Modified** HTTP 標頭。 當您將標頭中繼資料公開為屬性時，您不應該允許使用 **Headers** 屬性設定相同的屬性。  
   
-## ResponseUri 屬性  
- <xref:System.Net.WebResponse.ResponseUri%2A> 屬性包含實際提供回應資源的 URI。  對於不支援重新導向的通訊協定， **ResponseUri** 會與建立回應 **WebRequest** 的 <xref:System.Net.WebRequest.RequestUri%2A> 屬性。  如果通訊協定支援重新導向要求， **ResponseUri** 會包含回應的 URI。  
+## <a name="responseuri-property"></a>ResponseUri 屬性  
+ <xref:System.Net.WebResponse.ResponseUri%2A> 屬性包含實際提供回應的資源 URI。 至於不支援重新導向的通訊協定，**ResponseUri** 會和建立回應的 **WebRequest** 的 <xref:System.Net.WebRequest.RequestUri%2A> 屬性相同。 如果通訊協定支援重新導向要求，**ResponseUri** 會包含回應的 URI。  
   
-## Close 方法  
- <xref:System.Net.WebResponse.Close%2A> 方法關閉要求和回應所建立的所有連接並清除回應所使用的資源。  **關閉** 方法結束回應所使用的所有資料流的執行個體，不過，它不會擲回例外狀況，如果回應資料流 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 由對方法的呼叫之前關閉。  
+## <a name="close-method"></a>Close 方法  
+ <xref:System.Net.WebResponse.Close%2A> 方法關閉要求和回應所建立的任何連線，並清除回應所使用的資源。 **Close** 方法會關閉回應所使用的任何資料流執行個體，但如果 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 方法的呼叫之前已關閉回應資料流，它不會擲回例外狀況。  
   
-## GetResponseStream 方法  
- <xref:System.Net.WebResponse.GetResponseStream%2A> 方法會傳回包含來自所要求資源的資料流物件。  回應資料流包含資源傳回的資料;應該從回應中移除並公開在回應或中繼資料中包含的所有標頭在應用程式透過通訊協定的特定屬性或 **Headers** 屬性。  
+## <a name="getresponsestream-method"></a>GetResponseStream 方法  
+ <xref:System.Net.WebResponse.GetResponseStream%2A> 方法傳回的資料流會包含來自所要求資源的回應。 回應資料流只包含資源傳回的資料，回應中包含的任何標頭或中繼資料都應從回應中移除，並透過通訊協定特有的屬性或 **Headers** 屬性向應用程式公開。  
   
- **GetResponseStream** 方法所傳回的資料流執行個體 \(Instance\) 是由應用程式所擁有，且可以關閉，而不需關閉 **WebResponse**。  依照慣例，呼叫 **WebResponse.Close** 方法也會關閉 **GetResponse**傳回的資料流。  
+ **GetResponseStream** 方法所傳回的資料流執行個體為應用程式所擁有，而且不用關閉 **WebResponse** 即可關閉。 依照慣例，呼叫 **WebResponse.Close** 方法也會關閉 **GetResponse** 傳回的資料流。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.WebResponse>   
  <xref:System.Net.HttpWebResponse>   
  <xref:System.Net.FileWebResponse>   
- [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ [插入式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [衍生自 WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+

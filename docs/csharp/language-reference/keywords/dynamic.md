@@ -1,22 +1,41 @@
 ---
-title: "dynamic (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "dynamic_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "動態 [C#]"
-  - "dynamic 關鍵字 [C#]"
+title: "dynamic (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- dynamic_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- dynamic [C#]
+- dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
 caps.latest.revision: 25
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 25
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b68a6ef4dc3dda01638b9bb84db58ba77214f490
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # dynamic (C# 參考)
 `dynamic` 型別可讓它發生所在的作業略過編譯時期型別檢查。  這些作業會改在執行階段解析。  `dynamic` 型別可簡化對 COM API \(例如 Office 自動化 API\)、動態 API \(例如 IronPython 程式庫\) 及 HTML 文件物件模型 \(DOM\) 的存取。  
@@ -73,5 +92,6 @@ obj = obj + 3;
  [is](../../../csharp/language-reference/keywords/is.md)   
  [as](../../../csharp/language-reference/keywords/as.md)   
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [如何：使用 as 和 is 運算子進行安全轉型](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)   
+ [如何：使用 as 和 is 運算子進行安全轉換](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)   
  [逐步解說：建立和使用動態物件](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

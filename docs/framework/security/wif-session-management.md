@@ -1,37 +1,44 @@
 ---
-title: "WIF 工作階段管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 工作階段管理"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d71b83231140dcc18e6d2351091fbfd4985e90a2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# WIF 工作階段管理
-當用戶端先嘗試存取由一個相依的一方裝載的受保護的資源時，用戶端必須先驗證加入至所依賴之部分信任的安全性權杖服務 \(STS\)。  STS 然後發出安全性語彙基元傳遞至用戶端。  用戶端所表示這個語彙基元所依賴的一方，然後將受保護之資源的用戶端存取。  不過，特別是，因為它可能也不在同一部電腦上或網域和這個相依的一方相同，所以不要讓用戶端必須重新驗證對每個要求的 STS。  相反地， Windows 識別基礎 \(WIF\) 排列此用戶端所依賴之廠商建立用戶端使用一個工作階段安全性權杖驗證加入所有需要的信任的一方，在第一個要求之後的工作階段。  這個相依的一方能使用工作階段安全性權杖，儲存在 Cookie 中，重建用戶端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>。  
+# <a name="wif-session-management"></a>WIF 工作階段管理
+當用戶端第一次嘗試存取由信賴憑證者裝載的受保護資源時，用戶端必須先向信賴憑證者所信任的安全性權杖服務 (STS) 驗證其本身。 接著，STS 會發出安全性權杖給用戶端。 用戶端將這個權杖出示給信賴憑證者後，信賴憑證者便可授與用戶端存取受保護資源的權限。 不過，您不希望用戶端針對每個要求向 STS 重新進行驗證，特別是因為它還可能與信賴憑證者不在同一部電腦或同一個網域中。 相反地，Windows Identity Foundation (WIF) 會讓用戶端和信賴憑證者建立一個工作階段，用戶端可在其中針對第一個要求之後的所有要求，使用工作階段安全性權杖向信賴憑證者驗證其本身。 信賴憑證者可以使用儲存在 Cookie 內的這個工作階段安全性權杖，用來重新建構用戶端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>。  
   
- STS 定義哪些驗證用戶端必須提供。  不過，用戶端可能不會驗證加入 STS 的多個認證。  例如，它可能會從作用中視窗的語彙基元，表示使用者名稱和密碼、憑證和 smartkey。  在這種情況下， STS 授與用戶端數個識別，以及每一個識別與用戶端所表示的其中一個認證對應。  此信任的一方可以使用一或多個識別，並決定時授與用戶端的存取等級為何。  
+ STS 會定義用戶端必須提供的驗證。 不過，用戶端可能會有多個可用來向 STS 驗證其本身的認證。 例如，它可能會有來自 Windows Live 的權杖、使用者名稱和密碼、憑證以及智慧金鑰。 在此情況下，STS 會授與用戶端數個身分識別，其中每個身分識別對應到用戶端出示的其中一個認證。 信賴憑證者決定授與用戶端的存取層級時，可以使用一或多個這些身分識別。  
   
- <xref:System.IdentityModel.Tokens.SessionSecurityToken?displayProperty=fullName> 用來重建用戶端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>，在 <xref:System.Security.Claims.ClaimsPrincipal.Identities%2A>包含所有用戶端的識別。  集合中的每個 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 包含與該識別的指引語彙基元。  
+ <xref:System.IdentityModel.Tokens.SessionSecurityToken?displayProperty=fullName> 用來重新建構用戶端的 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>，後者包含 <xref:System.Security.Claims.ClaimsPrincipal.Identities%2A> 中的所有用戶端身分識別。 集合中的每個 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 都包含與該身分識別建立關聯的啟動程序權杖。  
   
- 如果新工作階段語彙基元都會以原始工作階段語彙基元的工作階段 ID， <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=fullName> 不對語彙基元更新快取工作階段語彙基元。  您應該永遠以唯一工作階段 ID. 的一個工作階段語彙基元  
+ 如果發出新的工作階段權杖時使用原始工作階段權杖的工作階段識別碼，<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=fullName> 不會更新權杖快取中的工作階段權杖。 將工作階段權杖具現化時，應該一律使用唯一的工作階段識別碼。  
   
 > [!NOTE]
->  如果它收到無效的輸入， Session.SecurityTokenHandler.ReadToken <xref:System.Xml.XmlException> 擲回例外狀況;例如，則為，如果工作階段 Cookie 中的語彙基元損毀。  建議您攔截此例外狀況並提供特定應用程式的行為。  
+>  如果 Session.SecurityTokenHandler.ReadToken 收到無效的輸入(比方說，如果包含工作階段權杖的 Cookie 已損毀)，便會擲回 <xref:System.Xml.XmlException> 例外狀況。 建議您攔截此例外狀況，並提供特定應用程式行為。  
   
- 如果受保護的 Web 網頁可以包含或受保護之網域的許多資源 \(例如小圖形\)，用戶端就必須重新驗證本身加入至相依的兩方下載這些資源中。  對工作階段驗證語彙基元來避免驗證對每個要求的 STS，，但仍表示許多 Cookie 傳送。  您可能想要將網頁，如此重要資料和資源在受保護的網域中，當次要項目在未受保護的網域儲存並且與主版頁面時連接。  此外，設定 Cookie 路徑參考只受保護的網域。  
+ 如果受保護的網頁包含同樣也位於受保護網域的大量資源 (例如小型圖形)，用戶端必須向信賴憑證者重新驗證其本身，以便下載這些資源。 使用工作階段驗證權杖可避免需要針對每個要求向 STS 進行驗證，但這仍然意味著要傳送許多 Cookie。 您可以設定網頁，讓重要資料和資源儲存在受保護的網域中，同時將次要項目儲存在未受保護的網域，並從主要網頁加以連結。 此外，請將 Cookie 路徑設定為只參考受保護的網域。  
   
- 若要操作參考模式， Microsoft 建議提供的處理常式會在 **global.asax.cs** 檔案的 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> 事件和設定 **IsReferenceMode** 屬性在 <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A> 屬性傳遞的語彙基元。  這些更新會確保工作階段語彙基元在每個要求上參考模式下操作和優先於僅設定在工作階段驗證模組的 <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> 屬性。  
+ 若要在參考模式中運作，Microsoft 建議您在 **global.asax.cs** 檔案中提供 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> 事件的處理常式，並在 <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A> 屬性所傳遞的權杖上設定 **IsReferenceMode** 屬性。 這些更新可確保工作階段權杖會針對每個要求在參考模式中運作，並且只要設定工作階段驗證模組上的 <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> 屬性就能優先使用。  
   
-## 擴充性  
- 您可以擴充工作階段管理機制。  其中一個理由是以改善效能。  例如，您可以建立轉換或最佳化其記憶體狀態之間的工作階段安全性語彙基元的自訂處理常式 Cookie，以及存取 Cookie。  若要這麼做，您可以設定 <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=fullName> 的 <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=fullName> 屬性使用 <xref:System.IdentityModel.Services.CookieHandler?displayProperty=fullName>衍生自類別的自訂處理常式 Cookie。  <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=fullName> 是預設的 Cookie 處理常式，因為 Cookie 超過超文字傳輸通訊協定 \(HTTPS\) 的 \(HTTP\) 容許大小;如果您使用自訂 Cookie 處理常式，您必須實作區塊。  
+## <a name="extensibility"></a>擴充性  
+ 您可以擴充工作階段管理機制。 進行此操作的其中一個原因是為了改善效能。 例如，您可以建立自訂的 Cookie 處理常式，以便在其記憶體內部狀態與 Cookie 傳入內容之間轉換或最佳化工作階段安全性權杖。 若要這樣做，您可以設定 <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=fullName> 的 <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=fullName> 屬性來使用衍生自 <xref:System.IdentityModel.Services.CookieHandler?displayProperty=fullName> 的自訂 Cookie 處理常式。 由於 Cookie 超過超文字傳輸通訊協定 (HTTP) 所允許的大小，因此 <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=fullName> 是預設的 Cookie 處理常式；如果您改為使用自訂的 Cookie 處理常式，則必須實作區塊處理。  
   
- 如需詳細資訊， [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) 請參閱 \(http:\/\/go.microsoft.com\/fwlink\/?LinkID\=248408\) 範例。  這個範例會顯示陣列準備工作階段快取 \(與 tokenreplycache\)，讓您可以參考使用工作階段而非切換大 Cookie，這個範例在伺服陣列將示範保護 Cookie 的簡單方法。  工作階段快取 WCF 架構。  如需保護的工作階段，程式碼範例示範在 Cookie 的 WIF 4.5 的新功能轉換以 MachineKey，可以透過貼在 web.config 的適當的程式碼片段啟動。  這個範例「沒有型別陣列」，不過，它會顯示您所提供讓您的應用程式需要伺服陣列就緒。
+ 如需詳細資訊，請參閱 [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) 範例。 此範例示範伺服陣列就緒的工作階段快取 (相對於 tokenreplycache)，讓您能夠透過參考使用工作階段，而非交換大型 Cookie；此範例也示範了一種更簡單的方法，用來保護伺服陣列中的 Cookie。 工作階段快取是以 WCF 為基礎。 關於工作階段保護，此範例示範了在 WIF 4.5 中根據 MachineKey 進行 Cookie 轉換的新功能，只要在 web.config 中貼上適當的程式碼片段，就能啟用此功能。此範例本身沒有「伺服陣列」，但它會示範要讓應用程式伺服陣列就緒所需執行的作業。
+

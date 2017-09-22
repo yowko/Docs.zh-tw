@@ -1,5 +1,5 @@
 ---
-title: "組件和全域組件快取 (Visual Basic) | Microsoft Docs"
+title: "組件和全域組件快取 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>組件和全域組件快取 (Visual Basic)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
 -   藉由使用反映，您能以程式設計方式取得組件的相關資訊。 如需詳細資訊，請參閱[反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
   
--   如果您只是想要載入組件來檢查，請使用<xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 之類的方法。  
+-   如果載入組件為僅供檢查之用，請使用像是 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 的方法。  
   
 ## <a name="assembly-manifest"></a>組件資訊清單  
  每個組件內都有「組件資訊清單」。 類似於目錄，組件資訊清單包含下列資訊︰  
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
 -   一個檔案表格，說明構成該組件的所有其他檔案，例如，您所建立為 .exe 或 .dll 檔依賴的任何其他組件，甚至是點陣圖或讀我檔案。  
   
--   一個「組件參考清單」，它是所有外部相依性的清單 - 應用程式所需的 .dll 檔或其他檔案，可能是由其他人所建立。 組件參考同時包含全域和私用物件的參考。 全域物件位於全域組件快取中，此區域可供其他應用程式使用，有點像是 System32 目錄。 例如，<xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空間就是全域組件快取中的組件。 私用物件必須同樣位在您的應用程式安裝目錄中或位在其底下的目錄。  
+-   一個「組件參考清單」，它是所有外部相依性的清單 - 應用程式所需的 .dll 檔或其他檔案，可能是由其他人所建立。 組件參考同時包含全域和私用物件的參考。 全域物件位於全域組件快取中，此區域可供其他應用程式使用，有點像是 System32 目錄。 <xref:Microsoft.VisualBasic?displayProperty=fullName> 命名空間就是全域組件快取中組件的一個例子。 私用物件必須同樣位在您的應用程式安裝目錄中或位在其底下的目錄。  
   
  因為組件包含有關內容、版本管理及相依性的資訊，所以您使用 Visual Basic 建立的應用程式不依賴 Windows 登錄值就能正常運作。 組件可減少 .dll 衝突，並讓您的應用程式更可靠，也更容易部署。 在許多情況下，您只要將 .NET 型應用程式的檔案複製到目標電腦，即完成安裝。  
   
@@ -74,3 +75,4 @@ ms.lasthandoff: 03/13/2017
  [如何：使用命令列建立和使用組件 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
  [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
  [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+

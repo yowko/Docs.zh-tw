@@ -1,30 +1,35 @@
 ---
-title: "同步用戶端通訊端範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "通訊端，程式碼範例"
-  - "同步用戶端通訊端"
-  - "通訊端，同步用戶端通訊端"
+title: "同步用戶端通訊端範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, code examples
+- synchronous client sockets
+- sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 759585d1029742f6f45e9f7253282af05accc82e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 同步用戶端通訊端範例
-下列程式碼範例程式建立連接至伺服器的用戶端。  用戶端以同步通訊端建置，因此，用戶端應用程式的執行暫止，直到伺服器傳回回應。  應用程式將字串傳送至伺服器並顯示在主控台上伺服器所傳回的字串。  
+# <a name="synchronous-client-socket-example"></a>同步用戶端通訊端範例
+下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  
   
 ```vb  
 Imports System  
@@ -92,7 +97,7 @@ public class SynchronousSocketClient {
         try {  
             // Establish the remote endpoint for the socket.  
             // This example uses port 11000 on the local computer.  
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName())  
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
@@ -142,7 +147,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [同步伺服器通訊端範例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [使用同步用戶端通訊端](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+

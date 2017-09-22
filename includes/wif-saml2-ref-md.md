@@ -1,0 +1,1 @@
+如需這個類別所代表項目的詳細資訊，請參閱下列規格：[OASIS 安全性聲明標記語言 (SAML) V2.0 的聲明與通訊協定](http://go.microsoft.com/fwlink/?LinkID=215998) (http://go.microsoft.com/fwlink/?LinkID=215998)。

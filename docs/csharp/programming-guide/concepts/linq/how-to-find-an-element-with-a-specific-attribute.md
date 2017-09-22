@@ -1,5 +1,5 @@
 ---
-title: "如何：尋找具有特定屬性的項目 (C#) | Microsoft Docs"
+title: "如何：尋找具有特定屬性的項目 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 49db675d7543cd754cd799cc032644ea0a35af4c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0852db3d3e374b267321dfbf34dff0222d355d5b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何：尋找具有特定屬性的項目 (C#)
@@ -88,3 +87,4 @@ foreach (XElement el in address)
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+

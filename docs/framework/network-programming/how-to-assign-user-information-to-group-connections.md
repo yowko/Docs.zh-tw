@@ -1,32 +1,37 @@
 ---
-title: "如何：將使用者資訊指派給群組連接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "如何：將使用者資訊指派給群組連接"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：將使用者資訊指派給群組連接
-[程式碼範例](#tskhowtoassignuserinformationtogroupconnectionsanchor1)  
+# <a name="how-to-assign-user-information-to-group-connections"></a>如何：將使用者資訊指派給群組連接
+
   
- 下列範例示範如何將使用者加入至群組資訊連結，假設，應用程式設定變數 *UserName*、 *SecurelyStoredPassword*和 *Domain*，在這個程式碼區段中呼叫，而且 *UserName* 都是唯一的。  
+ 下列範例示範如何將使用者資訊指派給群組連線，並假設應用程式會在呼叫這段程式碼之前設定 *UserName*、*SecurelyStoredPassword* 和 *Domain* 變數，且 *UserName* 為唯一。  
   
-### 將使用者資訊加入至群組連接  
+### <a name="to-assign-user-information-to-a-group-connection"></a>將使用者資訊指派給群組連線  
   
-1.  建立連接群組名稱。  
+1.  建立連線群組名稱。  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  建立一個要求特定的 URL。  例如，下列程式碼會建立一個要求 URL `http://www.contoso.com.`  
+2.  建立特定 URL 的要求。 例如，下列程式碼會建立 URL `http://www.contoso.com.` 的要求  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  設定驗證和連接 Web 要求和呼叫的 **GetResponse** GroupName 擷取 **WebResponse** 物件。  
+3.  設定 Web 要求的認證和連線群組名稱，並呼叫 **GetResponse** 來擷取 **WebResponse** 物件。  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -64,14 +69,12 @@ caps.handback.revision: 8
     myWebRequest.ConnectionGroupName = secureGroupName  
   
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
-  
     ```  
   
-4.  在使用 WebRespose 物件之後關閉回應資料流。  
+4.  使用 WebRespose 物件之後，關閉回應資料流。  
   
     ```csharp  
     MyWebResponse.Close();  
-  
     ```  
   
     ```vb  
@@ -97,7 +100,6 @@ WebResponse myWebResponse=myWebRequest.GetResponse();
 // Insert the code that uses myWebResponse.  
   
 MyWebResponse.Close();  
-  
 ```  
   
 ```vb  
@@ -118,6 +120,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## 請參閱  
- [管理連接](../../../docs/framework/network-programming/managing-connections.md)   
- [連接群組](../../../docs/framework/network-programming/connection-grouping.md)
+## <a name="see-also"></a>另請參閱  
+ [管理連線](../../../docs/framework/network-programming/managing-connections.md)   
+ [連線群組](../../../docs/framework/network-programming/connection-grouping.md)
+

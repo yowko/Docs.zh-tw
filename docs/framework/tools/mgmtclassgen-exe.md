@@ -1,31 +1,36 @@
 ---
-title: "Mgmtclassgen.exe (Management Strongly Typed Class Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "CIM types"
-  - "Management Strongly Typed Class Generator"
-  - "WMI class"
-  - "Mgmtclassgen.exe"
-  - "early-bound managed classes"
+title: "Mgmtclassgen.exe (管理強類型類別產生器)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- CIM types
+- Management Strongly Typed Class Generator
+- WMI class
+- Mgmtclassgen.exe
+- early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f83136265c4002f3ea4872b370b856bfacf4db3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 \[管理強類型類別產生器\] 工具可快速地為指定的 Windows Management Instrumentation \(WMI\) 類別產生早期繫結 Managed 類別。  產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  

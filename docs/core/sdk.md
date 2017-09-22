@@ -1,6 +1,6 @@
 ---
 title: ".NET Core SDK 概觀"
-description: ".NET Core SDK 概觀"
+description: "了解 .NET Core SDK 相關資訊，這是用來建立 .NET Core 專案的一組程式庫和工具。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 41093464c0dc2631217d89e2e715d05b78051284
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 

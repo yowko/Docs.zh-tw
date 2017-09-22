@@ -1,7 +1,7 @@
 ---
 title: "執行左方外部聯結"
 description: "如何執行左方外部聯結。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,22 +11,22 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6ba90a6fe16d4ba33e8b9e55c93f7365b6bc905b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="perform-left-outer-joins"></a>執行左方外部聯結
 左方外部聯結是第一個集合中的每個項目都會傳回的聯結，不論它在第二個集合中是否有任何相互關聯的項目。 您可以對群組聯結的結果呼叫 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 方法，使用 LINQ 執行左方外部聯結。  
   
 ## <a name="example"></a>範例  
- 下例示範如何對群組聯結的結果使用 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 方法，來執行左方外部聯結。  
+ 下列範例示範如何對群組聯結的結果使用 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 方法，來執行左方外部聯結。  
   
  產生兩個集合的左方外部聯結的第一個步驟，是使用群組聯結執行內部聯結。 (如需此程序的說明，請參閱[執行內部聯結](perform-inner-joins.md)。)在本例中，`Person` 物件的清單是根據符合 `Pet.Owner` 的 `Person` 物件，內部聯結到 `Pet` 物件的清單。  
   
- 第二個步驟是在結果集中包含第一個 (左) 集合中的每個項目，即使該元素在右集合中沒有相符的項目。 對來自群組聯結的每個相符項目序列呼叫 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 即可完成此作業。 本例中，已對每個相符 `Pet` 物件的序列呼叫 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>。 如果任何 `Person` 物件的相符 `Pet` 物件序列是空的，方法會傳回包含單一預設值的集合，藉此確保結果集合會顯示每個 `Person` 物件。  
+ 第二個步驟是在結果集中包含第一個 (左) 集合中的每個項目，即使該元素在右集合中沒有相符的項目。 對來自群組聯結的每個相符項目序列呼叫 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 即可完成此作業。 在此範例中，會在每個相符 `Pet` 物件的序列上呼叫 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>。 如果任何 `Person` 物件的相符 `Pet` 物件序列是空的，方法會傳回包含單一預設值的集合，藉此確保結果集合會顯示每個 `Person` 物件。  
   
 > [!NOTE]
 >  參考型別的預設值是 `null`，因此範例會先檢查 Null 參考，再存取每個 `Pet` 集合的每個項目。  
@@ -40,3 +40,4 @@ ms.lasthandoff: 03/13/2017
  [執行群組聯結](perform-grouped-joins.md)   
  [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)   
  
+

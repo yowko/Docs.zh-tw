@@ -1,5 +1,5 @@
 ---
-title: "使用反射存取屬性 (C#) | Microsoft Docs"
+title: "使用反射存取屬性 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d268f237c4feab964c64b2d2843d5b9b539d7535
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36724c7b6a2a786aff837db5bcf2ad2ccfa39205
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>使用反射存取屬性 (C#)
@@ -133,8 +133,9 @@ class TestAuthorAttribute
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection>   
  <xref:System.Attribute>   
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
  [擷取儲存於屬性中的資訊](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)   
  [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+

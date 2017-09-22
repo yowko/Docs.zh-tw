@@ -1,56 +1,61 @@
 ---
-title: "進行非同步要求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "取網際網路，非同步存取"
-  - "網路"
-  - "非同步要求，網際網路資源"
-  - "網路資源"
-  - "WebRequest 類別，非同步存取"
+title: "進行非同步要求"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, asynchronous access
+- Networking
+- asynchronous requests, Internet resources
+- Network Resources
+- WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 進行非同步要求
-<xref:System.Net> 類別提供對網際網路資源的非同步存取使用 .NET Framework 的標準非同步程式設計模型。  <xref:System.Net.WebRequest> 類別開始的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法和完成網際網路資源的非同步要求。  
+# <a name="making-asynchronous-requests"></a>進行非同步要求
+<xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  
   
 > [!NOTE]
->  使用在非同步回呼方法的同步呼叫可能會導致嚴重的效能損失。  **WebRequest** 用做的網際網路要求及其子代 \(Descendant\) 必須使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName><xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> 讀取方法所傳回的資料流。  
+>  在非同步回呼方法中使用同步呼叫可能會導致嚴重效能降低。 使用 **WebRequest** 和其子系所進行的內部要求，必須使用 <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> 來讀取 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> 方法所傳回的資料流。  
   
- 下列程式碼範例示範如何使用 **WebRequest** 類別的非同步呼叫。  這個範例是將從命令列的 URI 的主控台程式，要求資源的 URI 中，然後將資料加入至主控台，因為它從網際網路接收。  
+ 下列範例程式碼示範如何搭配使用非同步呼叫與 **WebRequest** 類別。 此範例是一種主控台程式，可從命令列接受 URI，並要求 URI 上的資源，然後將從網際網路收到的資料列印至主控台。  
   
- 程式會定義供本身使用的兩個類別， **RequestState** 類別，它可以跨非同步呼叫的資料和 **ClientGetAsync** 類別，實作非同步要求至網際網路資源。  
+ 此程式定義兩個類別供它自己使用：**RequestState** 類別可跨非同步呼叫傳遞資料，以及 **ClientGetAsync** 類別可實作網際網路資源非同步要求。  
   
- **RequestState** 類別將需求的狀態跨越呼叫到服務要求的非同步方法。  它包含 **WebRequest** 和在回應包含目前要求至接收緩衝區包含來自網際網路資源目前接收的資料和 <xref:System.Text.StringBuilder> 的資源和資料流包含整個回應的 <xref:System.IO.Stream> 執行個體。  當 <xref:System.AsyncCallback> 方法移至 **WebRequest.BeginGetResponse**時， **RequestState**傳遞做為狀態參數。  
+ **RequestState** 類別會跨提供要求的非同步方法呼叫來保留要求的狀態。 它所含的 **WebRequest** 和 <xref:System.IO.Stream> 執行個體包含目前資源要求以及基於回應而收到的資料流、所含的緩衝區包含目前從網際網路資源收到的資料，而且所含的 <xref:System.Text.StringBuilder> 包含完整回應。 向 **WebRequest.BeginGetResponse** 註冊 <xref:System.AsyncCallback> 方法時，會將 **RequestState** 傳遞為 *state* 參數。  
   
- **ClientGetAsync** 類別實作非同步要求至網際網路資源並寫入至主控台的回應。  它包含在下列清單和屬性描述的方法。  
+ **ClientGetAsync** 類別實作網際網路資源非同步要求，並將產生的回應寫入主控台中。 它包含下列清單所述的方法和屬性。  
   
--   `allDone` 屬性包含表示要求的完成 <xref:System.Threading.ManualResetEvent> 類別的執行個體。  
+-   `allDone` 屬性包含發出要求完成訊號的 <xref:System.Threading.ManualResetEvent> 類別執行個體。  
   
--   `Main()` 方法讀取命令列並啟動要求指定之網際網路資源。  它會建立 **WebRequest**`wreq` 和 **RequestState**`rs`，呼叫 **BeginGetResponse** 開始處理要求，然後呼叫方法 `allDone.WaitOne()`，讓應用程式不會結束，必須等到回呼完成。  在回應來自網際網路資源之後， `Main()` 讀取和寫入主控台應用程式結束寫入其中。  
+-   `Main()` 方法會讀取命令列，並開始所指定網際網路資源的要求。 它會建立 **WebRequest** `wreq` 和 **RequestState** `rs`，並呼叫 **BeginGetResponse** 開始處理要求，然後呼叫 `allDone.WaitOne()` 方法，讓應用程式不會在回呼完成之前結束。 讀取來自網際網路資源的回應之後，`Main()` 會將它寫入至主控台，而且應用程式會結束。  
   
--   `showusage()` 方法在主控台 \(Console\) 的範例命令列。  當要求，在命令列上，則不會提供由 `Main()` 呼叫。  
+-   `showusage()` 方法會寫入主控台上的範例命令列。 命令列上未提供任何 URI 時，它是由 `Main()` 所呼叫。  
   
--   `RespCallBack()` 方法執行網際網路要求的非同步回呼方法。  它會建立包含來自網際網路資源的執行個體 **WebResponse** 回應，取得回應資料流，然後開始讀取資料流的非同步資料。  
+-   `RespCallBack()` 方法會實作網際網路要求的非同步回呼方法。 它會建立包含網際網路資源回應的 **WebResponse** 執行個體，並取得回應資料流，然後開始非同步地讀取資料流中的資料。  
   
--   `ReadCallBack()` 方法執行讀取回應資料流的非同步回呼方法。  它會從網際網路資源的資料傳輸接收到 **RequestState** **ResponseData** 執行個體的屬性，然後啟動另一個非同步讀取回應資料流，直到沒有其他未傳回資料。  一旦所有資料都已讀取， `ReadCallBack()` 關閉回應資料流並呼叫方法 `allDone.Set()` 表示整個回應存在於 **ResponseData**。  
+-   `ReadCallBack()` 方法會實作非同步回呼方法來讀取回應資料流。 它會將接收自網際網路資源的資料傳送至 **RequestState** 執行個體的 **ResponseData** 屬性，接著對回應資料流啟動另一個非同步讀取，直到不再傳回其他資料為止。 已讀取所有資料之後，`ReadCallBack()` 會關閉回應資料流，並呼叫 `allDone.Set()` 方法，指出整個回應存在於 **ResponseData** 中。  
   
     > [!NOTE]
-    >  是重要的所有網路資料流已經關閉。  如果您不要關閉每個要求和回應資料流，您的應用程式會耗盡與伺服器的連接並無法處理其他要求。  
+    >  請務必關閉所有網路資料流。 如果您未關閉每個要求和回應資料流，應用程式就會耗盡與該伺服器的連線，而無法處理其他要求。  
   
 ```csharp  
 using System;  
@@ -341,5 +346,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+

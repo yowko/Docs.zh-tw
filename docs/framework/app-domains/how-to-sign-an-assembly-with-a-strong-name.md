@@ -1,25 +1,30 @@
 ---
-title: "如何：使用強式名稱簽署組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 簽署"
-  - "組件 [.NET Framework], 強式命名"
-  - "簽署組件"
-  - "強式名稱組件, 使用強式名稱簽署"
+title: "如何：使用強式名稱簽署組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-named assemblies, signing with strong names
+- signing assemblies
+- assemblies [.NET Framework], signing
+- assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用強式名稱簽署組件
 以下是幾種以強式名稱簽署組件的方式：  
@@ -103,5 +108,6 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
  [如何：建立公開\/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Al.exe \(組件連結器\)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
  [延遲簽署組件](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [管理組件和資訊清單簽署](../Topic/Managing%20Assembly%20and%20Manifest%20Signing.md)   
- [專案設計工具、簽署頁](../Topic/Signing%20Page,%20Project%20Designer.md)
+ [管理組件和資訊清單簽署](/visualstudio/ide/managing-assembly-and-manifest-signing)   
+ [專案設計工具、簽署頁面](https://msdn.microsoft.com/library/0k50fs3b)
+

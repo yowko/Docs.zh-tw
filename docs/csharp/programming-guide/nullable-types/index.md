@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75726b9864abc0c9b556085e5215c6692d80fb12
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 56e22638457017688ff380f6683b463b47c53a17
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="nullable-types-c-programming-guide"></a>可為 Null 的類型 (C# 程式設計手冊)
@@ -87,8 +88,8 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Nullable>   
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C#](../../../csharp/index.md)   
  [C# 參考](../../../csharp/language-reference/index.md)   
  [「增益」(Lift) 的真正意義是什麼？(英文)](http://go.microsoft.com/fwlink/?LinkId=112382)
 

@@ -1,35 +1,38 @@
 ---
-title: The .NET Portability Analyzer | .NET
-description: "了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同.NET 平台之間的可行性。"
+title: .NET Portability Analyzer - .NET | Microsoft Docs
+description: "了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 01/23/2017
+ms.date: 07/26/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-translationtype: Human Translation
-ms.sourcegitcommit: 2dcfc9e725a9776e810f23a505e2c6fb157161c4
-ms.openlocfilehash: dd14dc23b14e45569f0fdb9a37954b34c4e654d1
-ms.lasthandoff: 02/21/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: adb1971c14c8ff8c147dba378ae0e9a5bc0fb5ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-要將您的程式庫變成多平台？ 想要查看花費多少功夫才能讓您的應用程式與其他 .NET 平台相容嗎？ [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) 是一項工具，其藉由分析組件來提供您有關程式在跨 .NET 平台上之彈性的詳細報表。 Portability Analyzer 會以 Visual Studio 2015 延伸模組和主控台應用程式的形式提供給您。
+要將您的程式庫變成多平台？ 想要查看花費多少功夫才能讓您的應用程式與其他 .NET 實作相容嗎？ [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) 是一項工具，其藉由分析組件來提供您有關程式在跨 .NET 實作上之彈性的詳細報表。 Portability Analyzer 會以 Visual Studio 擴充功能和主控台應用程式的形式提供給您。
 
 ## <a name="new-targets"></a>新目標
 
-*   [.NET core](https://www.dotnetfoundation.org/netcore)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。
-*   [ASP.NET Core](https://www.dotnetfoundation.org/aspnet-core)︰是建置於 .NET Core 上的現代 Web 架構，因此提供開發人員相同的優點。
-*   [.NET Native](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance)︰改善某些 Windows 市集應用程式的效能，這些應用程式在 x64 和 ARM 電腦上使用 .NET Native 的靜態編譯來執行。
+* [.NET core](https://dotnetfoundation.org/net-core)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。
+* [ASP.NET Core](https://dotnetfoundation.org/asp-net-core)︰是建置於 .NET Core 上的現代 Web 架構，因此提供開發人員相同的優點。
+* [通用 Windows 平台](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance)︰改善 Windows 市集應用程式的效能，這些應用程式在 x64 和 ARM 電腦上使用 .NET Native 的靜態編譯來執行。 
+* .NET Core + 平台延伸模組：包含 .NET Core API，以及 .NET 生態系統中的其他 API，例如 WCF、ASP.NET Core、FSharp 和 Azure。
+* .NET Standard + 平台延伸模組：包含 .NET Standard API，以及其他 .NET 生態系統，例如 WCF、ASP.NET Core、FSharp 和 Azure。
 
 ## <a name="how-to-use-portability-analyzer"></a>如何使用 Portability Analyzer
 
-若要開始使用.NET Portability Analyzer，必須從 [Visual Studio 組件庫](http://go.microsoft.com/fwlink/?LinkID=507467) 下載及安裝此延伸模組。 您可以在 Visual Studio 中，使用 [分析] > [Portability Analyzer Settings] (Portability Analyzer 設定) 設定此工具，然後選取您的目標平台。
+若要開始使用.NET Portability Analyzer，必須從 [Visual Studio 組件庫](http://go.microsoft.com/fwlink/?LinkID=507467) 下載及安裝此延伸模組。 它適用於 Visual Studio 2015 和 Visual Studio 2017。 您可以在 Visual Studio 中，使用 [分析] > [Portability Analyzer Settings] (Portability Analyzer 設定) 設定此工具，然後選取您的目標平台。
 
 ![可攜性螢幕擷取畫面](./media/portability-analyzer/portability-screenshot.png)
 
@@ -46,6 +49,7 @@ ms.lasthandoff: 02/21/2017
 *   輸入下列命令分析目前的目錄︰`\...\ApiPort.exe analyze -f .`
 *   若要分析特定的 .dll 檔案清單，請輸入下列命令︰`\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
-您的 .NET Portability 報表會以 Excel (*.xlsx*) 檔案格式儲存在您目前目錄中。 Excel 活頁簿中的 [詳細資料] 索引標籤會包含更多的資訊。
+您的 .NET Portability 報表會以 Excel 檔案 (*.xlsx*) 格式儲存在您目前目錄中。 Excel 活頁簿中的 [詳細資料] 索引標籤會包含更多的資訊。
 
 如需 .NET Portability Analyzer 的詳細資訊，請瀏覽 [GitHub 文件](https://github.com/Microsoft/dotnet-apiport#documentation)和 Channel 9 影片 [Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (.NET Portability Analyzer 簡介)。
+

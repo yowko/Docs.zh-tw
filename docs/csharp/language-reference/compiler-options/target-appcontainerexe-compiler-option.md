@@ -1,5 +1,5 @@
 ---
-title: "-target:appcontainerexe (C# 編譯器選項) | Microsoft Docs"
+title: "-target:appcontainerexe (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,19 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 168771506692308bc9b031df5c059e58e8d190b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (C# 編譯器選項)
-如果您使用 **/target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 這個選項相當於 [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)，但是專為 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] 應用程式所設計。  
+如果您使用 **/target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 這個選項相當於 [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)，但是專為 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式所設計。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /target:appcontainerexe  
 ```  
   
@@ -51,18 +51,18 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>若要在 IDE 中設定這個編譯器選項  
   
-1.  在方案總管****中，開啟專案的捷徑功能表，然後選擇 [屬性]****。  
+1.  在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
   
-2.  在 [應用程式]**** 索引標籤上，選擇 [輸出類型]**** 清單中的 [Windows 市集應用程式]****。  
+2.  在 [應用程式] 索引標籤上，選擇 [輸出類型] 清單中的 [Windows 市集應用程式]。  
   
-     這個選項只適用於 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)]應用程式範本。  
+     這個選項只適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式範本。  
   
- 如需如何以程式設計方式設定此編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  下列命令會將 `filename.cs` 編譯至一個只能在應用程式容器中執行的 Windows 可執行檔。  
   
-```  
+```console  
 csc /target:appcontainerexe filename.cs  
 ```  
   
@@ -70,3 +70,4 @@ csc /target:appcontainerexe filename.cs
  [/target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [/target:winexe (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+

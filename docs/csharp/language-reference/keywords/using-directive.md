@@ -1,5 +1,5 @@
 ---
-title: "using 指示詞 (C# 參考) | Microsoft Docs"
+title: "using 指示詞 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e91cc4fea9fbe57b257e17915cd28b3b82f12f6e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1129efd8a1c4058a9648eab61f98cdcef7e9f2f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/13/2017
     using Project = PC.MyCompany.Project;  
     ```  
   
- `using` 關鍵字也用來建立 *using 陳述式*，協助確保能夠正確處理 <xref:System.IDisposable> 物件 (例如檔案和字型)。 如需詳細資訊，請參閱 [using 陳述式](../../../csharp/language-reference/keywords/using-statement.md)。  
+ `using` 關鍵字也用來建立 *using 陳述式*，協助確保能夠正確處理 <xref:System.IDisposable> 物件 (例如檔案和字型)。 如需詳細資訊，請參閱 [sing 陳述式](../../../csharp/language-reference/keywords/using-statement.md)。  
   
 ## <a name="using-static-type"></a>使用靜態類型  
  您可以存取類型的靜態成員，而不需以類型名稱限定存取：  

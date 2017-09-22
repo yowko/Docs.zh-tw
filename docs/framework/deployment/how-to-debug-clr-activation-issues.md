@@ -1,27 +1,32 @@
 ---
-title: "如何：偵錯 CLR 啟用問題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "CLR 啟動, 問題偵錯"
+title: "如何：偵錯 CLR 啟用問題"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1f1f3393457c783fe8f73d987a287f1afb18f40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：偵錯 CLR 啟用問題
 如果您在以 Common Language Runtime \(CLR\) 的正確版本取得應用程式的時候遇到問題，您可以檢視並偵錯 CLR 啟動記錄檔。  。當決定啟動問題的根本原因時，這些記錄檔可能會非常有用。例如當應用程式所載入不同的 CLR 版本或根本時無法載入 CLR。  ，當 CLR 不會為應用程式時， [.NET Framework 初始化錯誤：管理使用者經驗](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) 會討論這些經驗。  

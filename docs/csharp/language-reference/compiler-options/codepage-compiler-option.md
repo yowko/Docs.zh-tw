@@ -1,46 +1,66 @@
 ---
-title: "/codepage (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/codepage"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/codepage compiler option [C#]"
-  - "codepage compiler option [C#]"
-  - "-codepage compiler option [C#]"
+title: "-codepage (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /codepage
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /codepage compiler option [C#]
+- codepage compiler option [C#]
+- -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b80f6fcf8891d2f0b921af01cc094f624d807aa1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# /codepage (C# Compiler Options)
-如果所需的頁面不是系統目前預設的字碼頁，這個選項可以指定編譯時使用的字碼頁。  
+# <a name="codepage-c-compiler-options"></a>/codepage (C# 編譯器選項)
+如果所需的頁面不是系統目前預設的字碼頁，這個選項可指定編譯期間使用的字碼頁。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```console  
 /codepage:id  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>引數  
  `id`  
- 編譯過程中所有原始程式碼檔所使用字碼頁的 id。  
+ 編譯過程中所有原始程式碼檔使用的字碼頁的 ID。  
   
-## 備註  
- 如果您編譯一個或多個不是為了使用電腦上預設字碼頁而建立的原始程式碼檔，則可以使用 **\/codepage** 選項指定應該使用的字碼頁。  **\/codepage** 會套用到您所編譯的所有原始程式碼檔。  
+## <a name="remarks"></a>備註  
+ 如果您編譯一或多個不是使用電腦的預設字碼頁建立的原始程式碼檔，則可以使用 **/codepage** 選項指定應該使用的字碼頁。 **/codepage** 會套用到您所編譯的所有原始程式碼檔。  
   
- 若原始程式檔是用您電腦內正在作用中的同一個字碼頁所建立的，或者原始程式檔是用 UNICODE 或 UTF\-8 所建立的，則您不需要使用 **\/codepage**。  
+ 如果原始程式檔是使用您電腦中正在作用中的同一個字碼頁所建立的，或者原始程式檔是使用 UNICODE 或 UTF-8 所建立的，則不需要使用 **/codepage**。  
   
- 如需關於搜尋系統所支援之字碼頁的資訊，請參閱 [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) 。  
+ 如需如何尋找系統所支援之字碼頁的詳細資訊，請參閱 [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371)。  
   
- 在 Visual Studio 中無法使用這個編譯器選項，而且無法利用程式設計的方式變更它。  
+ Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

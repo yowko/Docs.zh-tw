@@ -20,11 +20,11 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 59aa4bd6160491ac6c6a4f45131531226ec7e58f
+ms.translationtype: HT
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 和 Dictionary 集合類型

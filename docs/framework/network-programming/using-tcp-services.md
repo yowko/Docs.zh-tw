@@ -1,43 +1,48 @@
 ---
-title: "使用 TCP 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "從網際網路要求資料，TCP"
-  - "接收資料，TCP"
-  - "TcpClient 類別，關於 TcpClient 類別"
-  - "資料要求，TCP"
-  - "應用程式通訊協定，TCP"
-  - "網路資源，TCP"
-  - "傳送資料，TCP"
-  - "TCP"
-  - "通訊協定，TCP"
-  - "網際網路，TCP"
+title: "使用 TCP 服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, TCP
+- receiving data, TCP
+- TcpClient class, about TcpClient class
+- data requests, TCP
+- application protocols, TCP
+- network resources, TCP
+- sending data, TCP
+- TCP
+- protocols, TCP
+- Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用 TCP 服務
-使用 TCP， <xref:System.Net.Sockets.TcpClient> 類別從網際網路資源要求的資料。  使用 TCP， **TcpClient** 方法和屬性擷取建立的 <xref:System.Net.Sockets.Socket> 詳細資料要求和接收資料。  由於與遠端裝置的連接表示為資料流，資料可以讀取和寫入資料流處理技術的 .NET Framework。  
+# <a name="using-tcp-services"></a>使用 TCP 服務
+<xref:System.Net.Sockets.TcpClient> 類別會使用 TCP 向網際網路資源要求資料。 **TcpClient** 的屬性和方法取出的詳細資料，可用來建立 <xref:System.Net.Sockets.Socket> 以使用 TCP 要求和接收資料。 因為遠端裝置的連線是以資料流表示，所以可以使用 .NET Framework 資料流處理技術來讀取和寫入資料。  
   
- TCP 通訊協定以遠端方式傳送和接收資料封包的連接的端點會使用的連接。  TCP 負責確保資料封包傳送至端點並以正確的順序會組合在一起，當它們抵達時。  
+ TCP 通訊協定會建立與遠端端點的連線，然後使用該連接來傳送和接收資料封包。 TCP 負責確保將資料封包傳送到端點，並在送達時以正確的順序組合。  
   
- 若要建立 TCP 連接，必須知道網路裝置的位址會裝載您所需服務的您，而且必須知道服務用於傳送的 TCP 通訊埠。  Internet Assigned Numbers Authority \(Iana\) 定義通用服務的通訊埠編號 \(請參閱 www.iana.org\/assignments\/port\-numbers\) \(英文\)。  服務不在 Iana 清單上可以有介於 1,024 到 65,535 的通訊埠編號。  
+ 若要建立 TCP 傳線，您必須知道裝載所需服務之網路裝置的位址，以及服務用來通訊的 TCP 連接埠。 Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號 (請參閱 www.iana.org/assignments/port-numbers)。 不在 Iana 清單上之服務的連接埠編號範圍可以是 1,024 到 65,535。  
   
- 下列範例會示範設定 **TcpClient** 連接至 TCP 通訊埠 13 上執行階段伺服器。  
+ 下列範例示範如何設定 **TcpClient**，以在 TCP 連接埠 13 上連線到時間伺服器。  
   
 ```vb  
 Imports System  
@@ -74,7 +79,6 @@ Public Class TcpTimeClient
         Return 0  
     End Function 'Main  
 End Class 'TcpTimeClient  
-  
 ```  
   
 ```csharp  
@@ -108,9 +112,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> 用於監視處理與用戶端的連線連入要求的 TCP 通訊埠會建立 **Socket** 或 **TcpClient** 。  <xref:System.Net.Sockets.TcpListener.Start%2A> 方法啟用接聽，因此， <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法停用接聽 \(Listen\) 連接埠。  <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法接受輸入的連接要求並建立 **TcpClient** 處理要求，因此， <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法接受輸入的連接要求並建立 **Socket** 處理要求。  
+ <xref:System.Net.Sockets.TcpListener> 用來監視傳入要求的 TCP 連接埠，然後建立管理用戶端連線的 **Socket** 或 **TcpClient**。 <xref:System.Net.Sockets.TcpListener.Start%2A> 方法可啟用接聽，而 <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法則可停用連接埠上的接聽。 <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法會接受連入連線要求，並建立 **TcpClient** 來處理要求，而 <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法會接受連入連線要求，並建立 **Socket** 來處理要求。  
   
- 下列範例示範如何建立時間 Web 伺服器使用 **TcpListener** 監視 TCP 通訊埠 13。  當一連入連線要求被接受之後，時間伺服器回應與目前的日期和時間從主機伺服器。  
+ 下列範例示範如何建立使用 **TcpListener** 來監視 TCP 連接埠 13 的網路時間伺服器。 接受連入連線要求時，時間伺服器會回應主機伺服器的目前日期和時間。  
   
 ```vb  
 Imports System  
@@ -202,5 +206,6 @@ public class TcpTimeServer {
 }  
 ```  
   
-## 請參閱  
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+## <a name="see-also"></a>另請參閱  
+ 
+

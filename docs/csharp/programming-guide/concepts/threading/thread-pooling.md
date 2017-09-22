@@ -1,5 +1,5 @@
 ---
-title: "執行緒共用 (C#) | Microsoft Docs"
+title: "執行緒共用 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>執行緒共用 (C#)
-「執行緒集區」**是可用來在背景執行數項工作的執行緒集合。 (如需背景資訊，請參閱[執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md))。這可讓主要執行緒非同步地執行其他工作。  
+「執行緒集區」是可用來在背景執行數項工作的執行緒集合。 (如需背景資訊，請參閱[執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md))。這可讓主要執行緒非同步地執行其他工作。  
   
  執行緒集區通常運用於伺服器應用程式中。 每個傳入要求都會指派給執行緒集區中的執行緒，因此可以非同步處理，而不需要輸入主要執行緒或延遲處理後續要求。  
   
@@ -83,3 +83,4 @@ private void AnotherLongTask(Object state)
  [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [執行緒同步處理 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

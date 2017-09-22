@@ -1,5 +1,5 @@
 ---
-title: Visual Basic | Microsoft Docs
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,13 +29,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Visual Basic 指南
+
 Visual Basic 設計用來有效率地建置型別安全且以物件為導向的應用程式。 Visual Basic 讓開發人員可將 Windows、Web 和行動裝置作為目標。 以 Visual Basic 撰寫的程式就如同目標為 Microsoft .NET Framework 的所有語言一樣，受益於安全性及語言的互通性。  
   
  這一代的 Visual Basic 延續傳統，依舊讓您快速輕易地建立 .NET Framework 應用程式。  
@@ -46,8 +48,7 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  [快速入門](../visual-basic/getting-started/index.md)   
  列出產品各種版本的新功能和可用項目，協助您開始進行。  
    
- [程式設計概念](../visual-basic/programming-guide/concepts/index.md) 
- 提供對 Visual Basic 程式設計人員最有用的語言概念。
+ [程式設計概念](../visual-basic/programming-guide/concepts/index.md)提供對 Visual Basic 程式設計人員最有用的語言概念。
 
  [程式結構和程式碼慣例](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  包含關於 Visual Basic 基本結構和程式碼慣例的文件，例如命名慣例、程式碼中的註解，以及 Visual Basic 內的限制。  
@@ -71,8 +72,9 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  提供常見案例的逐步指示連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [Visual Studio 使用者開發入門](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Visual Studio 使用者開發入門](/visualstudio/ide/get-started-developing-with-visual-studio)  
  提供主題連結，協助您了解 Visual Studio 的基本概念。  
   
  [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  
- 讓您使用程式庫，內含 Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] SDK 中的類別、介面和實值類型。
+ 讓您使用程式庫，內含 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK 中的類別、介面和實值類型。
+

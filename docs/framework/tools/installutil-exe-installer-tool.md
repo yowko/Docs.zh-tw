@@ -1,36 +1,41 @@
 ---
-title: "Installutil.exe (Installer Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "uninstalling server resources"
-  - "removing server resources"
-  - "status information for installation"
-  - "installation progress reports"
-  - "installing server resources"
-  - "Installer tool"
-  - "Installutil.exe"
-  - "files, Installer tool"
-  - "progress information for installation"
-  - "reporting installation progress"
+title: "Installutil.exe (安裝程式工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- uninstalling server resources
+- removing server resources
+- status information for installation
+- installation progress reports
+- installing server resources
+- Installer tool
+- Installutil.exe
+- files, Installer tool
+- progress information for installation
+- reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 caps.latest.revision: 40
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 38
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Installutil.exe (Installer Tool)
 安裝程式工具是一種命令列公用程式，可讓您透過執行指定之組件中的安裝程式元件，來安裝和解除安裝伺服器資源。  這個工具可以與 <xref:System.Configuration.Install> 命名空間中的類別一起使用。  

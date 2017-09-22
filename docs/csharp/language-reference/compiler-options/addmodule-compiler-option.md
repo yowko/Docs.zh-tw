@@ -1,23 +1,42 @@
 ---
-title: "/addmodule (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/addmodule"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/addmodule compiler option [C#]"
-  - "-addmodule compiler option [C#]"
-  - "addmodule compiler option [C#]"
+title: "-addmodule (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /addmodule
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /addmodule compiler option [C#]
+- -addmodule compiler option [C#]
+- addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79fdad111b1f059e6a3b00e393ea2474f71db947
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /addmodule (C# Compiler Options)
 這個選項會將使用 target:module 參數建立的模組加入目前的編譯中。  
@@ -48,8 +67,9 @@ caps.handback.revision: 13
 csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [多檔案組件](../Topic/Multifile%20Assemblies.md)   
- [如何：建置多檔案組件](../Topic/How%20to:%20Build%20a%20Multifile%20Assembly.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)   
+ [多檔案組件](../../../framework/app-domains/multifile-assemblies.md)   
+ [操作說明：建置多檔案組件](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+

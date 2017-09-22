@@ -1,28 +1,23 @@
 ---
-title: "重構為純虛擬函式 (C#) | Microsoft Docs"
-ms.custom: 
+title: "重構為純虛擬函式 (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d0243dbc1a884cb48eeebd71079c3b17bc520553
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 2bce781df80a777203ed8e713bedf83f1c7779a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 08/25/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
+
 純功能性轉換的重要觀點為學習如何使用純虛擬函式重構程式碼。  
   
 > [!NOTE]
@@ -96,7 +91,7 @@ public class Program
 >  若是參考型別 (Reference Type)，如果您依據值傳遞參數，會使參考的副本傳遞到物件。 這個副本仍然跟原始參考一樣，與相同的執行個體資料相關聯 (直到將參考變數指派給新的物件)。 對於要修改參數的函式，則不一定需要 Call-by-reference。  
   
 ### <a name="pure-function"></a>純虛擬函式  
- 這個下一個版本的程式顯示如何實作 `HypenatedConcat` 函式做為純虛擬函式。  
+這個下一版的程式會顯示如何將 `HypenatedConcat` 函式實作為純虛擬函式。  
   
 ```csharp  
 class Program  
@@ -127,3 +122,4 @@ class Program
 ## <a name="see-also"></a>另請參閱  
  [純功能性轉換簡介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
  [函數式程式設計與命令式程式設計的比較 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+

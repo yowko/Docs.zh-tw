@@ -1,5 +1,5 @@
 ---
-title: "存取電腦的連接埠 (Visual Basic) | Microsoft Docs"
+title: "存取電腦的連接埠 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db4fdbea07000ab92d5329f53d68c61db9d0547d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>存取電腦的連接埠 (Visual Basic)
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
  示範如何接收來自電腦序列埠的字串。  
   
  [.NET Framework 中的連接埠作業](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- 描述如何在執行連接埠作業時使用 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]。  
+ 描述如何在執行連接埠作業時使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。  
   
 ## <a name="reference"></a>參考資料  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
@@ -70,3 +70,4 @@ ms.lasthandoff: 05/22/2017
 ## <a name="related-sections"></a>相關章節  
  <xref:System.IO.Ports.SerialPort>  
  描述 .NET Framework <xref:System.IO.Ports.SerialPort> 類別。
+

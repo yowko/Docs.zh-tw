@@ -1,28 +1,33 @@
 ---
-title: "動態原始程式碼的產生和編譯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式碼文件物件模型"
-  - "CodeDOM"
-  - "與語言無關的原始程式碼模型"
-  - "語言, CodeDOM 支援的多個語言"
-  - "CodeDOM 支援的多個語言"
-  - "多個語言的原始程式碼"
-  - "System.CodeDom 命名空間"
+title: "動態原始程式碼的產生和編譯"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Code Document Object Model
+- System.CodeDom namespace
+- language-independent source code modeling
+- CodeDOM
+- multiple languages supported by CodeDOM
+- source code in multiple languages
+- languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1eb17af8fef96f42973e65859bd17b1e835fa98
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 動態原始程式碼的產生和編譯
 .NET Framework 包括一種名為程式碼文件物件模型 \(CodeDOM\) 的機制，可以讓發出原始程式碼的程式開發人員在執行階段時，依據代表要轉譯之程式碼的單一模型，使用多種程式語言來產生原始程式碼。  
@@ -55,6 +60,7 @@ caps.handback.revision: 12
  <xref:System.CodeDom.Compiler>  
  定義在執行階段用於產生和編譯程式碼的介面。  
   
-## 相關章節  
- [CodeDOM Quick Reference](http://msdn.microsoft.com/zh-tw/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
- 為開發人員提供快速方法，找出表示原始程式碼項目的 CodeDOM 項目。
+## <a name="related-sections"></a>相關章節  
+ [CodeDOM 快速參考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ 提供快速方法，讓開發人員尋找代表原始程式碼元素的 CodeDOM 元素。
+

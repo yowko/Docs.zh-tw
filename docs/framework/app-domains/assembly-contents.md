@@ -1,25 +1,30 @@
 ---
-title: "組件內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 多檔案"
-  - "組件 [.NET Framework], 單一檔案"
-  - "多檔案組件"
-  - "單一檔案組件"
+title: "組件內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- assemblies [.NET Framework], single-file
+- single-file assemblies
+- multifile assemblies
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 864e90fea6eb3e65a5a35a9eac38eaecf2299e41
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 組件內容
 一般而言，靜態組件可包含四個項目：  
@@ -57,3 +62,4 @@ caps.handback.revision: 8
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)   
  [組件安全性考量](../../../docs/framework/app-domains/assembly-security-considerations.md)
+

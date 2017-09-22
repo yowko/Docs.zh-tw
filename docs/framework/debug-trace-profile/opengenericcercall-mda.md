@@ -1,57 +1,62 @@
 ---
-title: "openGenericCERCall MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), CER calls"
-  - "open generic CER calls"
-  - "constrained execution regions"
-  - "openGenericCERCall MDA"
-  - "CER calls"
-  - "managed debugging assistants (MDAs), CER calls"
-  - "generics [.NET Framework], open generic CER calls"
+title: openGenericCERCall MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), CER calls
+- open generic CER calls
+- constrained execution regions
+- openGenericCERCall MDA
+- CER calls
+- managed debugging assistants (MDAs), CER calls
+- generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 347f9efcf1b0cdaf9cd37bcf6045a42341e4f643
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# openGenericCERCall MDA
-會啟動 `openGenericCERCall` Managed 偵錯助理，警告在根方法上具有泛型型別變數的限制的執行區域 \(CER\) 圖形正在 JIT 編譯或原生映像產生的時間進行處理，且其中至少有一個泛型型別變數為物件參考型別。  
+# <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
+啟用 `openGenericCERCall` Managed 偵錯助理，警告根方法有泛型型別變數的限制執行區域 (CER) 圖形將在 JIT 編譯或原生映像產生時間處理，而且至少一個泛型型別變數是物件參考型別。  
   
-## 症狀  
- CER 程式碼不會在中止執行緒或卸載應用程式定義域時執行。  
+## <a name="symptoms"></a>徵兆   
+ 中止執行緒或卸載應用程式定義域時，未執行 CER。  
   
-## 原因  
- 在 JIT 編譯期間，包含物件參考型別的執行個體化僅具有代表性，因為產生的程式碼是共用的，而且每一個物件參考型別變數都可能是任何物件參考型別；  如此可避免事先預備某些執行階段的資源。  
+## <a name="cause"></a>原因  
+ 在 JIT 編譯期間，包含物件參考型別的具現化僅具有代表性，因為共用產生的程式碼，而且每個物件參考型別變數都可能是任何物件參考型別。 這可以避免事先準備一些執行階段資源。  
   
- 特別是，具有泛型型別變數的方法可以從容地在背景中配置資源，  這些稱為泛型字典項目。  例如，對於陳述式 `List<T> list = new List<T>();`  \(其中 `T` 是泛型型別變數\) 而言，執行階段 \(Runtime\) 必須在執行階段時查詢 \(也可能建立\) 確切的執行個體化，例如 `List<Object>, List<String>` ``  等。  這可能會因為開發人員無法控制的各種理由而失敗，例如，記憶體耗盡。  
+ 特別的是，具有泛型型別變數的方法可以在背景緩慢地配置資源。 這些稱為泛型字典項目。 例如，針對陳述式 `List<T> list = new List<T>();` (其中 `T` 是泛型型別變數)，執行階段必須在執行階段查閱也可能建立確切具現化，例如，`List<Object>, List<String>`，依此類推。 這可能會因超出開發人員控制的各種原因而失敗，例如記憶體不足。  
   
- 這個 MDA 應該只能在 JIT 編譯時期啟動，而不是在有確切的執行個體化時啟動。  
+ 只應該在 JIT 編譯期間啟用此 MDA，而不是有確切的具現化時。  
   
- 當這個 MDA 啟動時，很可能發生的症狀是 CER 無法在錯誤的執行個體化中運作。  事實上，執行階段尚未嘗試在造成此 MDA 啟動的情況下實作 CER；  因此，如果開發人員使用 CER 的共用執行個體化，將不會攔截 JIT 編譯錯誤、泛型型別載入錯誤，或是預期的 CER 之區域內的執行緒中止。  
+ 啟用此 MDA 時，可能的徵兆是 CER 不會針對不正確的具現化作用。 事實上，執行階段尚未嘗試在造成 MDA 啟用的情況下實作 CER。 因此，如果開發人員使用 CER 的共用具現化，則攔截不到預定 CER 區域內的 JIT 編譯錯誤、泛型型別載入錯誤或執行緒中止。  
   
-## 解決方式  
- 如果是可能包含 CER 的方法，不要使用具有物件參考型別的泛型型別變數。  
+## <a name="resolution"></a>解決方式  
+ 請不要使用泛型型別變數，而這些變數是可能包含 CER 之方法的物件參考型別。  
   
-## 對執行階段的影響  
- 這個 MDA 對 CLR 無效。  
+## <a name="effect-on-the-runtime"></a>對執行階段的影響  
+ 此 MDA 對 CLR 沒有影響。  
   
-## Output  
- 下列是來自這個 MDA 的輸出範例。  
+## <a name="output"></a>輸出  
+ 以下是此 MDA 的範例輸出。  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -61,9 +66,9 @@ caps.handback.revision: 13
   
  `declaringType name="OpenGenericCERCall"`  
   
-## 組態  
+## <a name="configuration"></a>組態  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <openGenericCERCall/>  
@@ -71,8 +76,8 @@ caps.handback.revision: 13
 </mdaConfig>  
 ```  
   
-## 範例  
- 不會執行 CER 程式碼。  
+## <a name="example"></a>範例  
+ 未執行 CER 程式碼。  
   
 ```  
 using System;  
@@ -116,7 +121,8 @@ class Program
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

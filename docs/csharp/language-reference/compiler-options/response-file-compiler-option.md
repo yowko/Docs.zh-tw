@@ -1,62 +1,82 @@
 ---
-title: "@ (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "@"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "response files, specifying for compilation [C#]"
-  - "@ compiler option"
+title: "@ (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '@'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- response files, specifying for compilation [C#]
+- '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 caps.latest.revision: 9
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 9
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 219c12e4e3c9b847400f00a135d58506c72d2e7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# @ (C# Compiler Options)
-@ 選項讓您指定包含編譯器選項和原始程式檔以供編譯的檔案。  
+# <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
+@ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 @response_file  
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  `response_file`  
- 列出編譯器選項或原始程式碼檔以供編譯的檔案。  
+ 列出要編譯之編譯器選項或原始程式碼檔的檔案。  
   
-## 備註  
- 這些編譯器選項和原始程式碼檔將由編譯器處理，就如同在命令列上指定一般。  
+## <a name="remarks"></a>備註  
+ 編譯器將會處理編譯器選項和原始程式碼檔，就像已在命令列上指定它們一樣。  
   
- 若要在編譯中指定一個以上的回應檔，請指定多個回應檔選項。  例如：  
+ 若要在編譯中指定多個回應檔，請指定多個回應檔選項。 例如：  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- 在回應檔中，數個編譯器選項和原始程式碼檔可以出現在同一行中。  然而單一編譯器選項規格則必須出現在一行內 \(不能擴展至多行\)。  回應檔可以有以 \# 符號為開頭的註解。  
+ 在回應檔中，多個編譯器選項和原始程式碼檔可以出現在一行上。 單一編譯器選項規格必須出現在一行上 (無法跨越多行)。 回應檔可以有開頭為 # 符號的註解。  
   
- 從回應檔內指定編譯器選項，就如同從命令列中發出這些命令一樣。  如需詳細資訊，請參閱[從命令列建置](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
+ 在回應檔內指定編譯器選項，就像在命令列上發出這些命令一樣。 如需詳細資訊，請參閱[從命令列建置](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。  
   
- 編譯器會處理遇到的命令選項。  因此，命令列引數可以覆寫先前在回應檔中列出的選項。  反之亦然，回應檔的選項也可以覆寫先前在命令列或其他回應檔中列出的選項。  
+ 編譯器會處理遇到的命令選項。 因此，命令列引數可以覆寫回應檔中先前列出的選項。 相反地，回應檔中的選項將會覆寫在命令列或其他回應檔中先前所列的選項。  
   
- C\# 會提供與 csc.exe 檔位在相同目錄中的 csc.rsp 檔。  如需 csc.rsp 的詳細資訊，請參閱 [\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
+ C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。 如需 csc.rsp 的詳細資訊，請參閱 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
   
- 這個編譯器選項無法在 Visual Studio 開發環境中設定，也不能以程式設計的方式變更。  
+ 無法在 Visual Studio 開發環境中設定此編譯器選項，也無法以程式設計方式進行變更。  
   
-## 範例  
- 下面是從範例回應檔中擷取的幾行：  
+## <a name="example"></a>範例  
+ 以下是範例回應檔中的數行：  
   
-```  
+```console  
 # build the first output file  
 /target:exe /out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+

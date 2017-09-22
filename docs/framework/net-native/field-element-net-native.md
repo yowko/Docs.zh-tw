@@ -1,33 +1,36 @@
 ---
-title: "&lt;Field&gt; 項目 (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;Field&gt; 項目 (.NET Native)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84b0e28fb09f730999a8cad6e5002338957ef6a2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;Field&gt; 項目 (.NET Native)
+# <a name="ltfieldgt-element-net-native"></a>&lt;Field&gt; 項目 (.NET Native)
 將執行階段反映原則套用至欄位。  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-  
 <Field Name="field_name"  
        Browse="policy_type"  
        Dynamic="policy_type"  
        Serialize="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
@@ -44,9 +47,9 @@ caps.handback.revision: 9
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*method_name*|欄位名稱。 欄位型別定義父[ <> \> ](../../../docs/framework/net-native/type-element-net-native.md)或[ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)項目。|  
+|*method_name*|欄位名稱。 欄位的類型是由父系 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目定義。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
@@ -54,15 +57,15 @@ caps.handback.revision: 9
 |-----------|-----------------|  
 |*policy_setting*|要為欄位套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|說明|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果未明確定義欄位的原則，則會繼承其父元素的執行階段原則。  
@@ -71,3 +74,4 @@ caps.handback.revision: 9
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

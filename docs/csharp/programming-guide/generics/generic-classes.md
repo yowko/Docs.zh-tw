@@ -1,59 +1,78 @@
 ---
-title: "泛型類別 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 泛型類別"
-  - "泛型 [C#], 類別"
+title: "泛型類別 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, generic classes
+- generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 caps.latest.revision: 30
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17ec9f5d26c01b7f7f7f95026bfdfaa88d709b60
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# 泛型類別 (C# 程式設計手冊)
-泛型類別會封裝並非特定資料型別獨有的作業。  泛型類別的最常見用法，就是搭配如連結清單、雜湊資料表、堆疊、佇列、樹狀架構及其他的集合使用。  無論所儲存的資料型別為何，將項目加入集合或是從集合移除項目的作業，基本上都會以相同的方式執行。  
+# <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
+泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
   
- 對於大多數需要集合類別的案例，建議的方法是使用 .NET Framework 類別庫 \(Class Library\) 所提供的類別。  如需使用這些類別的詳細資訊，請參閱[.NET Framework 類別庫中的泛型](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
+ 對需要集合類別的大多數案例而言，建議的方法是使用 .NET Framework Class Library 中提供的那些類別。 如需使用這些類別的詳細資訊，請參閱 [.NET Framework Class Library 中的泛型](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
   
- 一般而言，會從現有的具象類別開始建立泛型類別，然後一次將多個型別變更為型別參數，直到達到一般化與可用性的最佳平衡點為止。  當建立您自己的泛型類別時，必須考慮下列重要事項：  
+ 建立泛型類別一般是從現有的實體類別開始，一次將一個類型變更成型別參數，直到達成一般化和可用性的最佳平衡。 在建立您自己的泛型類別時，重要考量包括：  
   
--   要一般化為型別參數的型別。  
+-   要將哪些類型一般化為型別參數。  
   
-     一般的規則是，能夠參數化的型別越多，程式碼的彈性和可重複使用性就會越高。  然而，太過度的一般化會產生其他開發人員難以閱讀或了解的程式碼。  
+     依照規則，能夠參數化的類型愈多，程式碼就愈有彈性和可重複使用。 但是，過多的一般化，會建立讓其他開發人員不易閱讀或了解的程式碼。  
   
--   要套用至型別參數的條件約束 \(如果有\) \(請參閱[類型參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)\)。  
+-   如果有的話，要將何種條件約束套用至型別參數 (請參閱[型別參數的條件約束](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md))。  
   
-     好的規則是盡可能套用最多的條件約束，同時仍然可以讓您處理必須處理的型別。  例如，如果知道泛型類別只要搭配參考型別使用，就應該套用類別條件約束。  這可以避免搭配實值型別誤用類別，並且能夠讓您在 `T` 上使用 `as` 運算子，以及檢查 null 值。  
+     理想的規則是盡可能套用最多的條件約束，卻仍能讓您處理必須處理的類型。 例如，如果您知道您的泛型類別，僅打算搭配參考型別，請套用類別條件約束。 這可防止類別非預期搭配實值型別，而且可讓您使用 `T` 的 `as` 運算子，並檢查 null 值。  
   
--   是否要將泛型行為因數化至基底類別和子類別。  
+-   是否要將泛型行為分解成基底類別和子類別。  
   
-     因為泛型類別可以當做基底類別，所以在此適用與非泛型類別相同的設計考量。  請參閱本主題中稍後說明關於繼承自泛型基底類別的規則。  
+     因為泛型類別可做為基底類別，所以這裡適用和非泛型類別相同的設計考量。 請參閱本主題稍後有關繼承自泛型基底類別的規則。  
   
--   是否要實作一個或多個泛型介面。  
+-   是否要實作一或多個泛型介面。  
   
-     例如，如果設計的類別將用來建立泛型架構集合中的項目，您可能需要實作像是 <xref:System.IComparable%601> 的介面，其中 `T` 是類別的型別。  
+     例如，如果您要設計一個類別，用於建立泛型式集合的項目，您可能必須實作 `T` 是您類別類型的介面，例如 <xref:System.IComparable%601>。  
   
  如需簡單泛型類別的範例，請參閱[泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)。  
   
- 型別參數和條件約束的規則有幾個泛型類別行為含意，尤其與繼承和成員存取範圍有關。  在繼續進行之前，您應該先了解某些詞彙。  若是泛型類別，`Node<T>,` 用戶端程式碼可以參考該類別，方法是藉由指定型別引數以建立封閉式建構型別 \(`Node<int>`\)，  或者，也可以不指定型別參數 \(例如在指定泛型基底類別時\) 以建立開放式的建構型別 \(`Node<T>`\)。  泛型類別可以繼承自具象、封閉式或開放式建構基底類別：  
+ 型別參數和條件約束的規則有數個泛型類別行為的含義，特別是有關繼承和成員存取範圍。 請先了解一些辭彙再繼續。 泛型類別 `Node<T>,` 用戶端程式碼可藉由指定型別引數來參考類別，建立封閉式的建構類型 (`Node<int>`)。 或者，它也可以保持不指定型別參數，例如，當您指定泛型基底類別時，建立開放式建構類型 (`Node<T>`)。 泛型類別可以繼承自實體、封閉式或開放式建構基底類別：  
   
  [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
   
- 非泛型 \(也就是具象\) 類別可以繼承自封閉式的建構基底類別，但是不能繼承自開放式建構類別或型別參數，因為在執行階段時用戶端程式碼無法提供產生基底類別時所需要的型別引數。  
+ 換言之，非泛型的實體類別可以繼承自封閉式建構基底類別，但不是繼承自開放式建構類別或型別參數，因為用戶端程式碼在執行階段沒有任何方法，提供必要的型別引數來具現化基底類別。  
   
  [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
   
- 繼承自開放式建構型別的泛型類別，必須提供任何基底類別型別參數的型別引數，並且引數不能與繼承類別共用，如同下列程式碼範例所示範：  
+ 繼承自開放式建構類型的泛型類別必須為所有任何基底類別類型參數提供型別引數，而繼承類別不共用這些參數，如下列程式碼所示：  
   
  [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
   
- 繼承自開放式建構型別的泛型類別必須指定 \(或代表\) 基底型別上條件約束的超集：  
+ 繼承自開放式建構類型的泛型類別必須指定條件約束，這些條件約束是基底類型上的條件約束超集，或暗示基底類型上的條件約束：  
   
  [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
   
@@ -61,17 +80,18 @@ caps.handback.revision: 30
   
  [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
   
- 開放式和封閉式的建構型別都可以用來當做方法參數：  
+ 開放式建構和封閉式建構類型可用為方法參數：  
   
  [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
   
- 如果泛型類別會實作介面，則該類別的所有執行個體都可轉型為該介面。  
+ 如果泛型類別實作某個介面，則該類別的所有執行個體都可以轉換成該介面。  
   
- 泛型類別是不變的。  也就是說，如果輸入參數指定 `List<BaseClass>`，則當您嘗試提供 `List<DerivedClass>` 時，便會發生編譯時期錯誤。  
+ 泛型類別都是非變異值。 換句話說，如果輸入參數指定 `List<BaseClass>`，您會在嘗試提供 `List<DerivedClass>` 時收到編譯時期錯誤。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.Generic>   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [泛型](../../../csharp/programming-guide/generics/index.md)   
- [儲存列舉程式的狀態](http://go.microsoft.com/fwlink/?LinkId=112390)   
- [繼承謎題，第一部分](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [儲存列舉程式狀態](http://go.microsoft.com/fwlink/?LinkId=112390)   
+ [繼承謎題，第一部](http://go.microsoft.com/fwlink/?LinkId=112380)
+

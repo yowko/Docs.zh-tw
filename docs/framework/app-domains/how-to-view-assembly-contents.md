@@ -1,28 +1,33 @@
 ---
-title: "如何：檢視組件內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件資訊清單，檢視資訊"
-  - "Ildasm.exe"
-  - "MSIL 反組譯工具"
-  - "組件 [.NET Framework]，檢視內容"
-  - "檢視組件資訊"
-  - "MSIL"
-  - "檢視 MSIL 資訊"
+title: "如何：檢視組件內容"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly manifest, viewing information
+- Ildasm.exe
+- MSIL Disassembler
+- assemblies [.NET Framework], viewing contents
+- viewing assembly information
+- MSIL
+- viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3583e69e90080eb830bb61a5e0c7b6e944f7d654
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：檢視組件內容
 您可以使用 [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft Intermediate Language \(MSIL\) 資訊。  如果您所檢查的檔案是組件，該資訊將包括組件的屬性，以及對其他模組和組件的參考。  該資訊有助於判斷檔案是否為組件或為組件的一部分，以及檔案是否參考其他模組或組件。  

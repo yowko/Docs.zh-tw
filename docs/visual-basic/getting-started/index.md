@@ -1,6 +1,6 @@
 ---
-title: "Visual Basic 使用者入門 | Microsoft Docs"
-ms.date: 2017-05-01
+title: "開始使用 Visual Basic"
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -29,34 +29,46 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Visual Basic 使用者入門
+# <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="get-started-with-visual-basic-and-net-core"></a>開始使用 Visual Basic 和.NET Core
+
+[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](../../core/tutorials/vb-with-visual-studio.md)
+
+[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>其他資訊
 
 [Visual Basic 的新功能](whats-new.md)   
 列出每個 Visual Basic .NET 版本的新功能。
 
 [Visual Studio 中 Visual Basic 的重大變更](breaking-changes-in-visual-studio.md)  
- 列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
+列出此版本中可能造成應用程式無法編譯或導致執行階段行為改變的變更。  
   
- [Visual Basic 程式設計人員的其他資源](../../visual-basic/getting-started/additional-resources.md)  
- 提供網站和新聞群組清單，協助您找到常見問題的解答。  
-  
- [了解 Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
- 提供學習如何使用 Visual Basic 進行程式設計的資源連結。  
-  
+[Visual Basic 程式設計人員的其他資源](additional-resources.md)  
+提供網站和新聞群組清單，協助您找到常見問題的解答。  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>使用 Visual Basic 開發 .NET Core 應用程式
+
+[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](../../core/tutorials/vb-with-visual-studio.md) 
+
+[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](../../core/tutorials/vb-library-with-visual-studio.md) 
+
+## <a name="see-also"></a>請參閱
  [取得 Visual Basic](https://www.visualstudio.com/downloads/)  
  提供含有 Visual Basic 支援的 Visual Studio 版本下載連結 (包括免費版本)。  
-  
-## <a name="related-sections"></a>相關章節  
+
+ [適合無基礎新手參加的 Visual Basic 基礎課程](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ Microsoft Virtual Academy 課程介紹 Visual Basic 程式設計的基礎。
+
  [物件導向程式設計](../programming-guide/concepts/object-oriented-programming.md)  
  提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。  
   
@@ -72,8 +84,7 @@ ms.lasthandoff: 05/15/2017
  [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  提供 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 文件的連結。  
   
- [C#](../../csharp/csharp.md)  
- 提供利用 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 進行應用程式開發的相關文件連結。  
+ [C#](../../csharp/index.md) 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
   
  [Visual C++](https://docs.microsoft.com/cpp/)  
  提供 Visual C++ 文件的連結。  

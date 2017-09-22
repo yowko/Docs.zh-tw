@@ -1,19 +1,18 @@
 ---
 title: "在 Windows Vista 上安裝 .NET Framework"
-description: "了解如何在 Windows Vista 上安裝 .NET Framework"
+description: "了解如何在 Windows Vista 上安裝 .NET Framework。"
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, 安裝"
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
-ms.technology: vs-ide-deployment
+ms.prod: .net-framework
 ms.devlang: dotnet
-ms.assetid: 67cda1d5-c6g5-5eb5-93e6-5f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: e79b9ba18e4c0d769e76497557dfdb61fc9cd2b9
+ms.translationtype: HT
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: fbc37ee82c431edadaee98be86caf50791d65133
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/11/2017
 
 您可以在 Windows Vista 上安裝 [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs)。
 
-.NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
+.NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
 ## <a name="help"></a>說明
 

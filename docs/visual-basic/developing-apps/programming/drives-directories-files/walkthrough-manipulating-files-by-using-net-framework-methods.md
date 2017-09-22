@@ -1,5 +1,5 @@
 ---
-title: "使用 .NET Framework 方法管理檔案 (Visual Basic) | Microsoft Docs"
+title: "使用 .NET Framework 方法管理檔案 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,20 +41,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a16d2168548dadf9210b653d90ce229d99469b64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eab8ebe0f1e6f3e86b9c4aa7c3b24a2763a27ffc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>逐步解說：使用 .NET Framework 方法管理檔案 (Visual Basic)
 本逐步解說示範如何使用 <xref:System.IO.StreamReader> 類別開啟和讀取檔案、檢查是否正在存取檔案、在 <xref:System.IO.StreamReader> 類別執行個體讀取的檔案內搜尋字串，並使用 <xref:System.IO.StreamWriter> 類別寫入檔案。  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>建立應用程式  
- 若要啟動 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 並開始專案，您可以建立表單，以供使用者寫入至指定的檔案。  
+ 若要啟動 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 並開始專案，您可以建立表單，以供使用者寫入至指定的檔案。  
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  在 [名稱] 方塊中，輸入 `MyDiary` 並按一下 [確定]。  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] 即會將專案新增到方案總管中，並開啟 Windows Forms 設計工具。  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 即會將專案新增到方案總管中，並開啟 Windows Forms 設計工具。  
   
 4.  將下表中的控制項新增至表單，並設定其屬性的對應值。  
   

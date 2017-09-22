@@ -1,34 +1,39 @@
 ---
-title: "使用 CodeDOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式碼編譯器"
-  - "程式碼文件物件模型"
-  - "程式碼文件物件模型, 圖形"
-  - "程式碼產生器"
-  - "CodeDOM"
-  - "CodeDOM, 圖形"
-  - "動態編譯"
-  - "動態表示原始程式碼"
-  - "使用 CodeDOM 繪圖"
-  - "命名空間 [.NET Framework], CodeDOM"
-  - "原始程式碼模型"
-  - "樣板化的程式碼產生"
-  - "類型, CodeDOM"
+title: "使用 CodeDOM"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- code compilers
+- Code Document Object Model
+- Code Document Object Model, graphs
+- types, CodeDOM
+- namespaces [.NET Framework], CodeDOM
+- templated code generation
+- dynamically representing source code
+- source code models
+- CodeDOM
+- graphing with CodeDOM
+- dynamic compilation
+- code generators
+- CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd594e9087a158ab8d5372ad72019cf3e04c38af
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 使用 CodeDOM
 CodeDOM 提供表示多種原始程式碼項目一般型別的型別。  您可以設計一個程式來建置使用 CodeDOM 項目的原始程式碼模型，以組譯物件 Graph。  這個物件 Graph 可以使用受支援的程式語言的 CodeDOM 程式碼產生器，轉譯成原始程式碼。  CodeDOM 也可以用於將原始程式碼編譯為二進位組件。  
@@ -128,4 +133,5 @@ CodeDOM 提供表示多種原始程式碼項目一般型別的型別。  您可�
   
  如需每個 CodeDOM 型別的文件，請參閱 <xref:System.CodeDom> 命名空間的參考文件。  
   
- 如需用來尋找表示特定程式碼項目型別之 CodeDOM 項目的快查圖表，請參閱 [CodeDOM Quick Reference](http://msdn.microsoft.com/zh-tw/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。
+ 如需快速圖表，找出表示特定程式碼項目類型的 CodeDOM 項目，請參閱 [CodeDOM 快速參考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。
+

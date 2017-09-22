@@ -1,22 +1,41 @@
 ---
-title: "How to: Retrieve the Contents of the My Documents Directory in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My Documents directory"
+title: "如何：在 Visual Basic 中擷取我的文件目錄的內容"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: afe236c4b9245ac256fbcbf6bf453de5d706b80f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Retrieve the Contents of the My Documents Directory in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -32,3 +51,4 @@ caps.handback.revision: 13
 ## 請參閱  
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
+

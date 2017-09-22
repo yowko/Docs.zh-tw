@@ -1,6 +1,6 @@
 ---
 title: "事件簡介"
-description: "事件簡介"
+description: "透過此概觀了解 .NET Core 中的事件，以及事件的語言設計目標。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a2eb8daef0883b78769a185be7d64e43c88b1d15
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f81c2d9fc2ec69c295485fe06029b5de65335db0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [上一篇](delegates-patterns.md)
 
-事件就像委派，是「晚期繫結」**機制。 事實上，事件是建立在委派的語言支援上。
+事件就像委派，是「晚期繫結」機制。 事實上，事件是建立在委派的語言支援上。
 
 事件一種物件 (向系統中所有感興趣的元件) 廣播有事發生的方式。 任何其他元件皆可以訂閱事件，並在引發事件時收到通知。
 

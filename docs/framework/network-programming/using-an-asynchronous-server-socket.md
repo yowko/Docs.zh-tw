@@ -1,42 +1,47 @@
 ---
-title: "使用非同步伺服器通訊端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "應用程式通訊協定，通訊端"
-  - "傳送資料，通訊端"
-  - "通訊端類別，非同步伺服器通訊端"
-  - "資料要求，通訊端"
-  - "通訊端，非同步伺服器通訊端"
-  - "從網際網路要求資料，通訊端"
-  - "伺服器通訊端"
-  - "接收資料，通訊端"
-  - "非同步伺服器通訊端"
-  - "通訊協定，通訊端"
-  - "網際網路，通訊端"
+title: "使用非同步伺服器通訊端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- Socket class, asynchronous server sockets
+- data requests, sockets
+- sockets, asynchronous server sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- asynchronous server sockets
+- protocols, sockets
+- Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 使用非同步伺服器通訊端
-非同步通訊端伺服器使用 .NET Framework 非同步程式設計模型中處理 Web 服務要求。  <xref:System.Net.Sockets.Socket> 類別遵循標準 .NET Framework 非同步命名模式，例如，同步處理 <xref:System.Net.Sockets.Socket.Accept%2A> 方法對應於非同步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
+# <a name="using-an-asynchronous-server-socket"></a>使用非同步伺服器通訊端
+非同步伺服器通訊端會使用 .NET Framework 非同步程式設計模型來處理網路服務要求。 <xref:System.Net.Sockets.Socket> 類別會遵循標準 .NET Framework 非同步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法對應於非同步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
   
- 非同步通訊端伺服器需要方法開始從網際網路、回呼方法以處理連接要求並開始接收資料從網路和回呼方法的連接要求結束接收資料。  這些方法會進一步將在此章節中討論。  
+ 非同步伺服器通訊端需要一個用來開始接受網路連線要求的方法、一個用來處理連線要求並開始接收網路資料的回呼方法，以及一個用來結束接收資料的回呼方法。 本節會進一步討論所有這些方法。  
   
- 在下列範例中，啟動接受來自網路的連接要求，則方法 `StartListening` 初始化 **Socket** 然後使用 **BeginAccept** 方法開始接受新的連接。  當新的連接要求在通訊端時，接收接受呼叫的回呼方法。  它會取得處理連接和送出該 **Socket** 對執行緒處理要求的執行個體 **Socket** 負責。  接受回呼方法實作 <xref:System.AsyncCallback> 委派;它會傳回虛值 \(Void\) 且 <xref:System.IAsyncResult>採用型別的單一參數。  下列範例是接受回呼方法的 Shell。  
+ 在下列範例中，若要開始接受網路的連線要求，`StartListening` 方法會初始化**通訊端**，然後使用 **BeginAccept** 方法來開始接受新連線。 在通訊端上收到新的連線要求時，就會呼叫接受回呼方法。 它會負責取得將處理連線的**通訊端**執行個體，並將該**通訊端**移交給將處理要求的執行緒。 接受回呼方法會實作 <xref:System.AsyncCallback> 委派；它會傳回 void，並採用 <xref:System.IAsyncResult> 類型的單一參數。 下列範例是接受回呼方法的殼層。  
   
 ```vb  
 Sub acceptCallback(ar As IAsyncResult)  
@@ -50,7 +55,7 @@ void acceptCallback( IAsyncResult ar) {
 }  
 ```  
   
- **BeginAccept** 方法採用兩個參數，並接受回呼方法和物件來建立回呼方法傳遞狀態資訊的 **AsyncCallback** 委派。  在下列範例中，接聽的 **Socket** 傳遞至回呼方法 *狀態* 參數。  這個範例會建立 **AsyncCallback** 委派並啟動接受來自網路的連線。  
+ **BeginAccept** 方法採用兩個參數：指向接受回呼方法的 **AsyncCallback** 委派和用來將狀態資訊傳遞至回呼方法的物件。 在下列範例中，接聽**通訊端**會透過 *stat* 參數傳遞至回呼方法。 這個範例會建立 **AsyncCallback** 委派並開始接受來自網路的連線。  
   
 ```vb  
 listener.BeginAccept( _  
@@ -64,9 +69,9 @@ listener.BeginAccept(
     listener);  
 ```  
   
- 從系統的非同步通訊端使用執行緒集區處理連入連線。  一個執行緒會接受連接管理，另一個執行緒來處理每個連入連線，，而另一個執行緒加入至以接收連接資料管理。  這些都是相同的執行緒，執行緒會由執行緒集區指派。  在下列範例中，當執行，無法繼續執行時， <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 類別暫停主執行緒和信號的執行。  
+ 非同步通訊端使用系統執行緒集區中的執行緒來處理連入連線。 其中一個執行緒負責接受連線、另一個執行緒用來處理每個連入連線，還有一個執行緒負責接收來自連線的資料。 這些可能是相同的執行緒，視執行緒集區所指派的執行緒而定。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 類別會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
   
- 下列範例顯示在本機電腦上建立非同步 TCP\/IP 通訊端 \(Socket\) 並啟動接受連接的非同步方法。  這個範例假設有一個名為， `allDone`的全域 **ManualResetEvent** ，方法是 `SocketListener`名稱為的類別成員，，且名為 `acceptCallback` 的回呼方法中定義。  
+ 下列範例示範非同步方法，用來在本機電腦上建立非同步的 TCP/IP 通訊端，並開始接受連接。 它假設有一個名為 `allDone` 的全域 **ManualResetEvent**且該方法是 `SocketListener` 類別的成員，以及已定義名為 `acceptCallback` 的回呼方法。  
   
 ```vb  
 Public Sub StartListening()  
@@ -97,7 +102,6 @@ Public Sub StartListening()
     End Try  
     Console.WriteLine("Closing the listener...")  
 End Sub 'StartListening  
-  
 ```  
   
 ```csharp  
@@ -132,7 +136,7 @@ public void StartListening() {
 }  
 ```  
   
- 接受回呼方法 \(在上述範例中的`acceptCallback` \) 到通知主應用程式執行緒負責繼續處理，建立與用戶端的連線並開始非同步讀取來自用戶端的資料。  下列範例是 `acceptCallback` 方法實作的第一個部分。  方法的這個部分通知主應用程式執行緒繼續處理並建立與用戶端的連線。  它會假設名為 `allDone`的全域 **ManualResetEvent** 。  
+ 接受回呼方法 (在上述範例中為 `acceptCallback`) 負責指示主要應用程式執行緒繼續處理、建立與用戶端的連線，以及開始從用戶端非同步讀取資料。 下列範例是 `acceptCallback` 方法實作的第一部分。 該方法的這個區段會指示主要應用程式執行緒繼續處理，並建立與用戶端的連線。 它會假設一個名為 `allDone` 的全域 **ManualResetEvent**。  
   
 ```vb  
 Public Sub acceptCallback(ar As IAsyncResult)  
@@ -156,7 +160,7 @@ public void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- 從用戶端讀取通訊端的資料要求傳遞值在非同步呼叫之間的狀態物件。  下列範例會實作接收的資料將狀態物件從這個遠端用戶端。  它包含用戶端通訊端、資料緩衝區接收的資料和 <xref:System.Text.StringBuilder> 的欄位建立的用戶端傳送的資料字串。  將這些欄位在狀態物件允許其值跨多個呼叫將會從用戶端通訊端的資料。  
+ 從用戶端通訊端讀取資料時，需要在非同步呼叫之間傳遞值的狀態物件。 下列範例會實作從遠端用戶端接收字串的狀態物件。 其包含用於用戶端通訊端的欄位、用來接收資料的資料緩衝區，以及用來建立用戶端所傳送資料字串的 <xref:System.Text.StringBuilder>。 將這些欄位放置在狀態物件，可允許在多個呼叫間保留其值，以從用戶端通訊端讀取資料。  
   
 ```vb  
 Public Class StateObject  
@@ -176,9 +180,9 @@ public class StateObject {
 }  
 ```  
   
- 一開始先接收資料從用戶端通訊端 `acceptCallback` 方法的一部分 `StateObject` 初始化類別的執行個體會呼叫方法 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 開始讀取用戶端通訊端的資料同步。  
+ 開始從用戶端通訊端接收資料的 `acceptCallback` 方法的個區段首先會初始化 `StateObject` 類別的執行個體，然後呼叫 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 方法，開始以非同步方式從用戶端通訊端讀取資料。  
   
- 下列範例顯示完整 `acceptCallback` 方法。  這個範例假設有一個名為， `StateObject` 類別中定義的 `allDone,` 的全域 **ManualResetEvent** 和 `readCallback` 方法在類別中定義名為 `SocketListener`。  
+ 下列範例示範完整的 `acceptCallback` 方法。 它假設有一個名為 `allDone,` 的全域 **ManualResetEvent**，且其 `StateObject` 類別已定義，以及已在名為 `SocketListener` 的類別中定義 `readCallback` 方法。  
   
 ```vb  
 Public Shared Sub acceptCallback(ar As IAsyncResult)  
@@ -195,7 +199,6 @@ Public Shared Sub acceptCallback(ar As IAsyncResult)
     handler.BeginReceive(state.buffer, 0, state.BufferSize, 0, _  
         AddressOf AsynchronousSocketListener.readCallback, state)  
 End Sub 'acceptCallback  
-  
 ```  
   
 ```csharp  
@@ -215,9 +218,9 @@ public static void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- 需要進行非同步通訊端伺服器執行的是 Final 方法傳回用戶端所傳送之資料的讀取的回呼方法。  就像接受回呼方法，讀取回呼方法是 **AsyncCallback** 委派。  這個方法會從用戶端通訊端的一個或多個位元組至資料緩衝區 **BeginReceive** 然後再次呼叫方法，直到用戶端傳送的資料都完成為止。  一旦所有訊息從用戶端讀取，字串會顯示在主控台上，與管理用戶端的伺服器通訊端連接已關閉。  
+ 非同步通訊端伺服器必須實作的最後一個方法是讀取回呼方法，以傳回用戶端所傳送的資料。 如同接受回呼方法一樣，讀取回呼方法是 **AsyncCallback** 委派。 這個方法會從用戶端通訊端讀取一或多個位元組到資料緩衝區，然後重新呼叫 **BeginReceive** 方法，直到用戶端所傳送的資料完整為止。 從用戶端讀取整個訊息後，字串就會顯示在主控台上，並關閉處理用戶端連線的伺服器通訊端。  
   
- 下列範例會執行 `readCallback` 方法。  這個範例假設， `StateObject` 類別中定義。  
+ 下列範例會實作 `readCallback` 方法。 它假設已定義了 `StateObject` 類別。  
   
 ```vb  
 Public Shared Sub readCallback(ar As IAsyncResult)  
@@ -242,7 +245,6 @@ Public Shared Sub readCallback(ar As IAsyncResult)
         End If  
     End If  
 End Sub 'readCallback  
-  
 ```  
   
 ```csharp  
@@ -271,8 +273,9 @@ public static void readCallback(IAsyncResult ar) {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Threading](../../../docs/standard/threading/index.md)   
+ [執行緒](../../../docs/standard/threading/index.md)   
  [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
+

@@ -1,33 +1,38 @@
 ---
-title: "Sn.exe (Strong Name Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "public keys, signing files"
-  - "Strong Name tool"
-  - "Sn.exe"
-  - "assemblies [.NET Framework], signing"
-  - "signing files"
-  - "strong-named assemblies, signing files"
-  - "key pairs for signing files"
+title: "Sn.exe (強式名稱工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- public keys, signing files
+- Strong Name tool
+- Sn.exe
+- assemblies [.NET Framework], signing
+- signing files
+- strong-named assemblies, signing files
+- key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 caps.latest.revision: 44
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 44
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 49bedaddc34685bdec1ad857b1f20a76b9abbd06
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Sn.exe (Strong Name Tool)
 強式名稱工具 \(Sn.exe\) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。  Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  

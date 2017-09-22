@@ -1,6 +1,6 @@
 ---
-title: "int (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "int (C# 參考)"
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 910b23cb0048d5d9f21c9c32e8f34219a425622a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 935428cc9442a3e1d15eeb8942176c237bff4e22
+ms.openlocfilehash: 6e87893bcd9800b61297e71b782028fec5116479
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="int-c-reference"></a>int (C# 參考)
@@ -44,7 +45,10 @@ ms.lasthandoff: 03/13/2017
 |`int`|-2,147,483,648 至 2,147,483,647|帶正負號的 32 位元整數|<xref:System.Int32?displayProperty=fullName>|0|  
   
 ## <a name="literals"></a>常值  
- 您可以宣告並初始化 `int` 類型的變數，如下列範例所示：  
+ 
+您可以針對 `int` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `int` 的範圍 (亦即，如果小於 <xref:System.Int32.MinValue?displayProperty=fullName> 或大於 <xref:System.Int32.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 90,946 整數，會指派給 `int` 值。  
   
 ```  
   
@@ -80,7 +84,7 @@ int y = (int)3.0;    // OK: explicit conversion.
  如需混合浮點類型和整數型別之算術運算式的詳細資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Int32>   
@@ -91,3 +95,4 @@ int y = (int)3.0;    // OK: explicit conversion.
  [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

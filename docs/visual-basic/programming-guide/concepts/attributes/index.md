@@ -1,5 +1,5 @@
 ---
-title: "屬性概觀 (Visual Basic) | Microsoft Docs"
+title: "屬性概觀 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81f6275334a0ba1507dcff2bcd85e0b1aa276067
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-overview-visual-basic"></a>屬性概觀 (Visual Basic)
@@ -75,7 +76,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- 可以針對特定實體多次指定某些屬性。 這類多重使用的屬性範例之一是 <xref:System.Diagnostics.ConditionalAttribute>：  
+ 可以針對特定實體多次指定某些屬性。 <xref:System.Diagnostics.ConditionalAttribute> 就是這種多次使用屬性的一個例子：  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -124,9 +125,9 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>屬性的常見用法  
  下列清單包含一些程式碼中常見的屬性用法：  
   
--   在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute>。  
+-   在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。  
   
--   描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
+-   描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。  
   
 -   描述適用於類別、方法和介面的 COM 屬性。  
   
@@ -163,3 +164,4 @@ Module: CLSCompliant(True)>
  [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)   
  [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
  [屬性](https://msdn.microsoft.com/library/5x6cd29c)
+

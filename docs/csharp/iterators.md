@@ -1,6 +1,6 @@
 ---
-title: Iterator
-description: Iterator
+title: "迭代器"
+description: "了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df6e493f4dfb72ac59951832773cc818627f4c2f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 

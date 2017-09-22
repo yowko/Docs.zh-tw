@@ -1,5 +1,5 @@
 ---
-title: "常見屬性 (C#) | Microsoft Docs"
+title: "常見屬性 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bafcb0a9a81d97e060acca38b7c0bfca23efdaad
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/13/2017
 -   組件資訊清單屬性  
   
 ### <a name="assembly-identity-attributes"></a>組件識別屬性  
- 三個具有強式名稱 (如果適用) 的屬性會判斷組件的識別：名稱、版本與文化特性。 這些屬性會形成組件的完整名稱，且在程式碼中參考組件時需要用到。 您可以使用屬性來設定組件的版本和文化特性。 不過，名稱值乃是根據包含組件資訊清單的檔案來由編譯器、[組件資訊對話方塊](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box) 中的 Visual Studio IDE 或在建立組件時的組件連結器 (Al.exe) 所設定。 <xref:System.Reflection.AssemblyFlagsAttribute> 屬性指定是否可以讓組件的多個複本並存。  
+ 三個具有強式名稱 (如果適用) 的屬性會判斷組件的識別：名稱、版本與文化特性。 這些屬性會形成組件的完整名稱，且在程式碼中參考組件時需要用到。 您可以使用屬性來設定組件的版本和文化特性。 不過，名稱值乃是根據包含組件資訊清單的檔案來由編譯器、[組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box) 中的 Visual Studio IDE 或在建立組件時的組件連結器 (Al.exe) 所設定。 <xref:System.Reflection.AssemblyFlagsAttribute> 屬性指定組件的多個複本是否可以並存。  
   
  下表顯示識別屬性。  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 03/13/2017
 |<xref:System.CLSCompliantAttribute>|表示組件是否符合 Common Language Specification (CLS) 規範。|  
   
 ### <a name="assembly-manifest-attributes"></a>組件資訊清單屬性。  
- 您可以使用組件資訊清單屬性，在組件資訊清單中提供資訊。 這包括標題、描述、預設別名和組態。 下表顯示 <xref:System.Reflection?displayProperty=fullName> 命名空間中定義的組件資訊清單屬性。  
+ 您可以使用組件資訊清單屬性，在組件資訊清單中提供資訊。 這包括標題、描述、預設別名和組態。 下表顯示 <xref:System.Reflection?displayProperty=fullName> 命名空間中定義的資訊清單屬性。  
   
 |屬性|用途|  
 |---------------|-------------|  
@@ -193,16 +193,18 @@ static void DoIfAorB()
   
  若要達到使用 AND 運算子以邏輯方式連結符號的效果，您可以定義序列條件式方法。 例如，只有在同時定義 `A` 和 `B` 時，才會執行下面的第二個方法：  
   
-```csharp  
-<Conditional("A")>   
-Shared Sub DoIfA()  
-    DoIfAandB()  
-End Sub  
+```csharp
+[Conditional("A")]  
+static void DoIfA()  
+{  
+    DoIfAandB();  
+}  
   
-<Conditional("B")>   
-Shared Sub DoIfAandB()  
-    ' Code to execute when both A and B are defined...  
-End Sub  
+[Conditional("B")]  
+static void DoIfAandB()  
+{  
+    // Code to execute when both A and B are defined...  
+}  
 ```  
   
 ### <a name="using-conditional-with-attribute-classes"></a>搭配使用條件式與屬性類別  
@@ -234,7 +236,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> 呼叫端資訊屬性  
  使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。  
   
- 若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空間中定義的「呼叫端資訊」屬性：  
+ 若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空間中定義的 Caller Info 屬性：  
   
 |屬性|描述|類型|  
 |---|---|---|  
@@ -247,7 +249,8 @@ class SampleClass
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection>   
  <xref:System.Attribute>   
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
  [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
  [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

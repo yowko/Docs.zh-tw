@@ -1,42 +1,47 @@
 ---
-title: "基本和摘要式驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "驗證 [.NET Framework]，類別"
-  - "基本驗證"
-  - "驗證 [.NET Framework]，基本"
-  - "用戶端驗證，基本"
-  - "使用者驗證，基本"
-  - "驗證 [.NET Framework]，摘要式"
-  - "接收資料，驗證"
-  - "用戶端驗證，摘要式"
-  - "網際網路，驗證"
-  - "摘要式驗證"
-  - "傳送資料，驗證"
-  - "網路資源，驗證"
-  - "使用者驗證，摘要式"
+title: "基本和摘要式驗證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- authentication [.NET Framework], classes
+- Basic authentication
+- authentication [.NET Framework], basic
+- client authentication, basic
+- user authentication, basic
+- authentication [.NET Framework], digest
+- receiving data, authentication
+- client authentication, digest
+- Internet, authentication
+- digest authentication
+- sending data, authentication
+- network resources, authentication
+- user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 369a473b2e9172abe10d263bb066b253500f9502
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 基本和摘要式驗證
-基本和摘要式驗證的 <xref:System.Net> 實作符合 RFC2617 – HTTP Authentication:基本和摘要式驗證 \(可以在全球資訊網協會 \(W3C\) 網站上 www.w3.org \(英文\)。  
+# <a name="basic-and-digest-authentication"></a>基本和摘要式驗證
+基本和摘要式驗證的 <xref:System.Net> 實作符合 RFC2617 - HTTP 驗證：基本和摘要式驗證 (可在全球資訊網協會的網站 www.w3.org 上取得)。  
   
- 如下列範例所示，若要使用基本和摘要式驗證，應用程式必須提供使用者名稱和密碼會使用要求資料從網際網路 <xref:System.Net.WebRequest> 物件的 <xref:System.Net.WebRequest.Credentials%2A> 屬性。  
+ 若要使用基本和摘要式驗證，應用程式必須在 <xref:System.Net.WebRequest> 物件的 <xref:System.Net.WebRequest.Credentials%2A> 屬性中提供使用者名稱和密碼，以用來從網際網路要求資料，如下列範例所示。  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -51,8 +56,9 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
->  所傳送之資料的基本和摘要式驗證不會加密，因此，資料可以被敵人參閱。  此外，基本驗證認證 \(使用者名稱和密碼\) 的危險傳送並可以攔截。  
+>  使用基本與摘要式驗證傳送的資料不會經過加密，因此敵人可以看到資料。 此外，基本驗證認證 (使用者名稱和密碼) 會以純文字傳送，而且可以被攔截。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [NTLM 與 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
  [網際網路驗證](../../../docs/framework/network-programming/internet-authentication.md)
+

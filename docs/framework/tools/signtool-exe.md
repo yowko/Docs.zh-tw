@@ -1,28 +1,33 @@
 ---
-title: "SignTool.exe (Sign Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Sign tool"
-  - "SignTool.exe"
+title: "SignTool.exe (簽署工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Sign tool
+- SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 caps.latest.revision: 33
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # SignTool.exe (Sign Tool)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
@@ -159,8 +164,8 @@ signtool [command] [options] [file_name | ...]
 |1|執行失敗。|  
 |2|執行已完成，但出現警告。|  
   
-## 範例  
- 下列命令會將目錄檔 MyCatalogFileName.cat 加入至系統元件和驅動程式資料庫。  如有必要防止取代名為 `/v` 的現有目錄檔案，`MyCatalogFileName.cat` 選項會產生一個唯一的名稱。  
+## <a name="examples"></a>範例  
+ 下列命令會將目錄檔 MyCatalogFileName.cat 加入至系統元件和驅動程式資料庫。 如有必要防止取代名為 `/u` 的現有目錄檔案，`MyCatalogFileName.cat` 選項會產生一個唯一的名稱。  
   
 ```  
 signtool catdb /v /u MyCatalogFileName.cat  

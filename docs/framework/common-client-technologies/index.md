@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中常見的用戶端技術 | Microsoft Docs"
+title: ".NET Framework 中常見的用戶端技術"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 33735d01f33adc5fc2299c0a83a4208a28fc6b2d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c36d3577d46136d98b3cbcc9aefd19b30960a0b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework 中常見的用戶端技術
@@ -30,3 +30,4 @@ ms.lasthandoff: 05/22/2017
   
  [用戶端應用程式服務](../../../docs/framework/common-client-technologies/client-application-services.md)  
  描述如何在您的 Windows 應用程式中使用 Microsoft ASP.NET 2.0 AJAX Extensions 中包含的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔應用程式服務。
+

@@ -1,23 +1,28 @@
 ---
-title: "如何：接收第一個可能發生的例外狀況通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "例外狀況, 第一個可能發生的通知"
-  - "發生第一個例外狀況的通知"
+title: "如何：接收第一個可能發生的例外狀況通知"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- first-chance exception notifications
+- exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd906fa2d45331082b9dc86c972e5630361e2653
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：接收第一個可能發生的例外狀況通知
 <xref:System.AppDomain> 類別的 <xref:System.AppDomain.FirstChanceException> 事件可讓您在 Common Language Runtime 開始搜尋例外處理常式之前，接收擲回例外狀況的通知。  
@@ -95,7 +100,7 @@ caps.handback.revision: 10
 > [!NOTE]
 >  預設應用程式定義域的名稱與可執行檔的名稱相同。  
   
- 如果將 <xref:System.AppDomain.FirstChanceException> 事件的處理常式加入預設應用程式定義域，則在預設應用程式定義域處理例外狀況之前，會引發此事件並進行處理。  若要查看此內容，請將 C\# 程式碼 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` \(在 Visual Basic 中為 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`n\) 加入至 `Main()` 的開頭。  
+ 如果您將 <xref:System.AppDomain.FirstChanceException> 事件的處理常式新增至預設應用程式定義域，則會引發事件，並在預設應用程式定義域處理例外狀況之前處理事件。 若要查看其運作，請在 `Main()` 開頭新增 C# 程式碼 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (在 Visual Basic 中，為 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`)。  
   
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
  [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
@@ -104,5 +109,6 @@ caps.handback.revision: 10
   
 -   這個範例是命令列應用程式。  若要在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 中編譯和執行此程式碼，請將 C\# 程式碼 `Console.ReadLine();` \(在 Visual Basic 中為 `Console.ReadLine()`\) 加入至 `Main()` 的結尾，以阻止在您還沒有閱讀輸出之前，命令視窗即關閉。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomain.FirstChanceException>
+

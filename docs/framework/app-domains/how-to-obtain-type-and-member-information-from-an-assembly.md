@@ -1,23 +1,28 @@
 ---
-title: "如何：從組件中取得類型和成員資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 取得資訊的來源"
-  - "取得組件資訊"
+title: "如何：從組件中取得類型和成員資訊"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- obtaining assembly information
+- assemblies [.NET Framework], obtaining information from
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 702567b7b05f8469f796b03a59f2ead71c0a9c22
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：從組件中取得類型和成員資訊
 <xref:System.Reflection> 命名空間內含許多方法，可從組件中取得資訊。  本節將展示其中一種方法。  如需其他詳細資訊，請參閱[反映概觀](../../../docs/framework/reflection-and-codedom/reflection.md)。  
@@ -34,3 +39,4 @@ caps.handback.revision: 11
  [Programming with Application Domains](http://msdn.microsoft.com/zh-tw/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+

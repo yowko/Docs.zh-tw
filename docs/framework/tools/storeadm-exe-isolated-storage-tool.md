@@ -1,31 +1,36 @@
 ---
-title: "Storeadm.exe (Isolated Storage Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Storeadm.exe"
-  - "listing stores for current user"
-  - "Isolated Storage tool"
-  - "stores, current user"
-  - "removing stores"
+title: "Storeadm.exe (隔離儲存區工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Storeadm.exe
+- listing stores for current user
+- Isolated Storage tool
+- stores, current user
+- removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e2304bd0e2ac9115c9d937e502b960399d793356
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Storeadm.exe (Isolated Storage Tool)
 隔離儲存區 \(Isolated Storage\) 工具可以列出或移除目前使用者的所有現有存放區。  

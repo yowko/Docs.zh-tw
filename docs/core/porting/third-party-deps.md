@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 5b7bbc0718817365df63db4d8ca7e4cf8871abae
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -54,7 +55,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-這些是對應 [.NET 標準程式庫](../../standard/library.md) 版本的目標 Framework Moniker (TFM) 版本，以及與 .NET Core 相容的傳統可攜式類別庫 (PCL) 設定檔。  請注意，當 `netcoreapp1.0` 相容時，是用於應用程式，不是程式庫。  雖然使用 `netcoreapp1.0` 型的程式庫沒有錯，但該程式庫可能原本只打算提供其他 `netcoreapp1.0` 應用程式使用。
+這些是對應 [.NET Standard](../../standard/net-standard.md) 版本的目標 Framework Moniker (TFM) 版本，以及與 .NET Core 相容的傳統可攜式類別庫 (PCL) 設定檔。  請注意，當 `netcoreapp1.0` 相容時，是用於應用程式，不是程式庫。  雖然使用 `netcoreapp1.0` 型的程式庫沒有錯，但該程式庫可能原本只打算提供其他 `netcoreapp1.0` 應用程式使用。
 
 還有在 .NET Core 發行前版本中使用的一些舊版 TFM 也可能是相容的：
 

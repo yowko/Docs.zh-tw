@@ -1,6 +1,6 @@
 ---
-title: "什麼是「Managed 程式碼」？"
-description: "什麼是「Managed 程式碼」？"
+title: "什麼是 Managed 程式碼？"
+description: "了解 Managed 程式碼的撰寫方式，其執行是由執行階段 Common Language Runtime (CLR) 所管理。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,13 +10,15 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-translationtype: Human Translation
-ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
-ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="what-is-managed-code"></a>什麼是「Managed 程式碼」？
+# <a name="what-is-managed-code"></a>什麼是 Managed 程式碼？
 
 使用 .NET Framework 時，您經常會遇到「Managed 程式碼」一詞。 本文件將說明此詞彙所代表的意義及其他相關資訊。
 
@@ -24,7 +26,7 @@ ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
 
 與此相反的是您執行 C/C++ 程式的方式，又稱為「Unmanaged 程式碼」。 在 Unmanaged 世界中，程式設計人員會負責處理幾乎所有工作。 實際程式基本上是作業系統 (OS) 載入記憶體並啟動的二進位檔。 從記憶體管理到安全性考量等其他工作都是程式設計人員的責任。
 
-Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual Basic、F# 等)，並可在 .NET 平台上執行。 當您使用這些語言各自的編譯器來編譯以這些語言撰寫的程式碼時，您不會取得機器碼。 您會取得稍後可供執行階段編譯及執行的**中繼語言**碼。 這項規則的唯一例外是 C++，因為它也會產生在 Windows 上執行的原生、Unmanaged 二進位檔。
+Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual Basic、F# 等)，並可在 .NET 上執行。 當您使用這些語言各自的編譯器來編譯以這些語言撰寫的程式碼時，您不會取得機器碼。 您會取得稍後可供執行階段編譯及執行的**中繼語言**碼。 這項規則的唯一例外是 C++，因為它也會產生在 Windows 上執行的原生、Unmanaged 二進位檔。
 
 ## <a name="intermediate-language--execution"></a>中繼語言和執行
 
@@ -45,9 +47,4 @@ Managed 程式碼是以其中一種高階語言撰寫而成 (例如 C#、Visual 
 *   [.NET Framework 的概觀](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [Unsafe 程式碼和指標](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [互通性 (C# 程式設計手冊)](https://msdn.microsoft.com/library/ms173184.aspx)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

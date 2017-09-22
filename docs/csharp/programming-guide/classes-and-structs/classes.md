@@ -1,5 +1,5 @@
 ---
-title: "類別 (C# 程式設計手冊) | Microsoft Docs"
+title: "類別 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a7d66be3ce0a4a24fd95d5b77787dcad5598f4d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
@@ -93,5 +94,6 @@ ms.lasthandoff: 03/13/2017
  [成員](../../../csharp/programming-guide/classes-and-structs/members.md)   
  [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [物件](../../../csharp/programming-guide/classes-and-structs/objects.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "泛型介面中的差異 (C#) | Microsoft Docs"
+title: "泛型介面中的差異 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4c4f3ab00b4de2a6f38858dd5f332db3d47eb85b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40daaa3d008a93ab48d0d74894f60f0baca1d12b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
@@ -69,5 +70,6 @@ IEnumerable<Object> listObjects = new List<String>();
 ## <a name="see-also"></a>另請參閱  
  [針對泛型集合使用介面中的差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)   
  [建立 Variant 泛型介面 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
- [泛型介面](http://msdn.microsoft.com/library/88bf5b04-d371-4edb-ba38-01ec7cabaacf)   
+ [泛型介面](../../../../standard/generics/interfaces.md)   
  [委派中的差異 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+

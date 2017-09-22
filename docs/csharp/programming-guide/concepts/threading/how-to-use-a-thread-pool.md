@@ -1,5 +1,5 @@
 ---
-title: "如何：使用執行緒集區 (C#) | Microsoft Docs"
+title: "如何：使用執行緒集區 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c2a9740a23ff370c1376dfa737b7e2dcd33def7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f90262cdfa6e4d6c8c37c553e999d51fee736d6a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>如何：使用執行緒集區 (C#)
@@ -159,4 +160,5 @@ Fibonacci(27) = 196418
  [執行緒共用 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
  [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  @System.Threading.Monitor   
- [安全性](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ [安全性](../../../../standard/security/index.md)
+

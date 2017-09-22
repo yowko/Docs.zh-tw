@@ -1,57 +1,62 @@
 ---
-title: "如何：設定免註冊啟用的 .NET Framework 架構 COM 元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "啟動, 免註冊"
-  - "應用程式資訊清單 [.NET Framework]"
-  - "元件 [.NET Framework], 資訊清單"
-  - "資訊清單 [.NET Framework]"
-  - "免註冊的 COM Interop, 設定 .NET 架構元件"
+title: "如何：設定免註冊啟用的 .NET Framework 架構 COM 元件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- components [.NET Framework], manifest
+- application manifests [.NET Framework]
+- manifests [.NET Framework]
+- registration-free COM interop, configuring .NET-based components
+- activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
-.NET Framework 元件的免註冊啟動只比 COM 元件的免註冊啟動稍微複雜一些。  此設定需要兩種資訊清單：  
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
+.NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
--   COM 應用程式必須擁有 Win32 樣式應用程式資訊清單來辨識 Managed 元件  
+-   COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
   
--   .NET Framework 元件必須擁有在執行階段時所需之啟動資訊的元件資訊清單  
+-   .NET Framework 元件必須具有執行階段所需啟用資訊的元件資訊清單。  
   
- 這個主題說明如何將應用程式資訊清單與應用程式關聯在一起；並在組件中嵌入元件資訊清單。  
+ 本主題描述如何建立應用程式資訊清單與應用程式的關聯、建立元件資訊清單與元件的關聯，以及將元件資訊清單內嵌在組件中。  
   
-### 若要建立應用程式資訊清單  
+### <a name="to-create-an-application-manifest"></a>建立應用程式資訊清單  
   
-1.  使用 XML 編輯器，建立 \(或修改\) COM 應用程式所擁有的應用程式資訊清單，來與一個或多個 Managed 元件互通。  
+1.  使用 XML 編輯器，建立 (或修改) COM 應用程式所擁有的應用程式資訊清單，而其與一或多個 Managed 元件交互操作。  
   
-2.  在檔案開頭插入下列標準標頭：  
+2.  在檔案開頭，插入下列標準標頭：  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     如需資訊清單項目和其屬性的詳細資訊，請在 MSDN Library 中搜尋 "Application Manifests Reference"。  
+     如需資訊清單項目和其屬性的資訊，請搜尋 MSDN Library 中的＜應用程式資訊清單參考＞。  
   
-3.  識別資訊清單的擁有人。  在下列範例中，`myComApp` 1 版擁有資訊清單檔。  
+3.  識別資訊清單的擁有者。 在下列範例中，`myComApp` 第 1 版擁有資訊清單檔。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
       <assemblyIdentity type="win32"   
@@ -61,9 +66,9 @@ caps.handback.revision: 16
       />  
     ```  
   
-4.  識別相依組件。  在下列範例中，`myComApp` 依存在 `myManagedComp` 上。  
+4.  識別相依組件。 在下列範例中，`myComApp` 取決於 `myManagedComp`。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
       <assemblyIdentity type="win32"   
@@ -85,24 +90,24 @@ caps.handback.revision: 16
     </assembly>  
     ```  
   
-5.  儲存和命名資訊清單檔。  應用程式資訊清單的名稱為組件可執行檔的名稱再加上 .manifest 副檔名於其後。  例如，myComApp.exe 的應用程式資訊清單檔名稱為 myComApp.exe.manifest。  
+5.  儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
- 您可以在與 COM 應用程式相同的目錄之下，安裝應用程式資訊清單。  要不然，您可以將它當做資源加入應用程式的 .exe 檔中。  如需詳細資訊，請在 MSDN Library 中搜尋 "Side\-by\-side Assemblies"。  
+ 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需其他資訊，請搜尋 MSDN Library 中的＜並存組件＞。  
   
-#### 若要建立元件資訊清單  
+#### <a name="to-create-a-component-manifest"></a>建立元件資訊清單  
   
-1.  使用 XML 編輯器，建立元件資訊清單來描述 Managed 組件。  
+1.  使用 XML 編輯器，建立元件資訊清單以描述 Managed 組件。  
   
-2.  在檔案開頭插入下列標準標頭：  
+2.  在檔案開頭，插入下列標準標頭：  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  識別檔案的擁有人。  在應用程式資訊清單檔中，`<dependentAssembly>` 項目的 `<assemblyIdentity>` 項目，必須與元件資訊清單中的項目相符。  在下列範例中，`myManagedComp` 1.2.3.4 版擁有資訊清單檔。  
+3.  識別檔案的擁有者。 應用程式資訊清單檔中 `<dependentAssembly>` 項目的 `<assemblyIdentity>` 項目必須符合元件資訊清單中的項目。 在下列範例中，`myManagedComp` 版本 1.2.3.4 擁有資訊清單檔。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
@@ -113,23 +118,23 @@ caps.handback.revision: 16
            />  
     ```  
   
-4.  識別組件中的每一個類別。  在 Managed 組件中，使用 `<clrClass>` 項目來唯一識別每一個類別。  此項目是 `<assembly>` 項目的子項目，下表說明其所擁有的屬性。  
+4.  識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  
   
-    |屬性|描述|必要項|  
-    |--------|--------|---------|  
-    |`clsid`|指定啟動類別的識別項。|是|  
-    |`description`|告知使用者關於元件資訊的字串。  預設為空字串。|否|  
-    |`name`|表示 Managed 類別的字串。|是|  
-    |`progid`|用於晚期繫結啟動的識別項。|否|  
-    |`threadingModel`|COM 執行緒模型。"Both" 為預設值。|否|  
-    |`runtimeVersion`|指定要使用的 Common Language Runtime \(CLR\) 版本。  如果您未指定此屬性，且 CLR 尚未載入，會以 CLR 第 4 版之前的最新安裝 CLR 載入元件。  如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動回復為 CLR 第 4 版之前的最新安裝 CLR \(通常為 v2.0.50727\)。  如果已載入其他版本的 CLR，而指定的版本可以在同處理序並存載入，則會載入指定的版本；否則，會使用已載入的 CLR。  這可能會導致載入失敗。|否|  
-    |`tlbid`|包含關於類別型別資訊的型別程式庫識別項。|否|  
+    |屬性|描述|必要|  
+    |---------------|-----------------|--------------|  
+    |`clsid`|指定要啟用之類別的識別碼。|是|  
+    |`description`|通知使用者有關元件的字串。 空字串為預設值。|否|  
+    |`name`|代表 Managed 類別的字串。|是|  
+    |`progid`|要用於晚期繫結啟用的識別碼。|否|  
+    |`threadingModel`|COM 執行緒模型。 「兩者」都是預設值。|否|  
+    |`runtimeVersion`|指定要使用的 Common Language Runtime (CLR) 版本。 如果您未指定此屬性，而且尚未載入 CLR，則會載入具有 CLR 第 4 版前之最新已安裝 CLR 的元件。 如果您指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本會自動向前復原至 CLR 版本 4 之前的最新已安裝 CLR 版本 (通常是 v2.0.50727)。 如果已載入另一個版本的 CLR，並且可以透過並存同處理序方式載入指定的版本，則會載入指定的版本；否則，會使用載入的 CLR。 這可能會造成載入失敗。|否|  
+    |`tlbid`|包含類別類型資訊的類型程式庫識別項。|否|  
   
-     所有的屬性標籤都區分大小寫。  藉由使用 OLE\/COM ObjectViewer \(Oleview.exe\) 來檢視匯出的型別程式庫組件，您可以獲得 CLSID、ProgID、執行緒模型和執行階段版本。  
+     所有屬性標記都會區分大小寫。 您可以使用 OLE/COM ObjectViewer (Oleview.exe) 檢視針對組件所匯出的型別程式庫，以取得 CLSID、ProgID、執行緒模型和執行階段版本。  
   
-     下列元件資訊清單辨識單兩個類別：`testClass1` 與 `testClass2`。  
+     下列元件資訊清單識別兩個類別：`testClass1` 和 `testClass2`。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
@@ -156,34 +161,35 @@ caps.handback.revision: 16
     </assembly>  
     ```  
   
-5.  儲存和命名資訊清單檔。  元件資訊清單的名稱為組件程式庫的名稱，後面再加上 .manifest 副檔名。  例如，myManagedComp.dll 的元件資訊清單名稱為 myManagedComp.manifest。  
+5.  儲存並命名資訊清單檔。 元件資訊清單的名稱就是後接 .manifest 副檔名的組件庫名稱。 例如，myManagedComp.dll 是 myManagedComp.manifest。  
   
- 您必須將元件資訊清單當做資源嵌入組件中。  
+ 您必須將元件資訊清單內嵌為組件中的資源。  
   
-#### 若要嵌入元件資訊清單至 Managed 組件中  
+#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>將元件資訊清單內嵌至 Managed 組件  
   
-1.  建立包含下列陳述式的資源指令碼 \(Script\)：  
+1.  建立包含下列陳述式的資源指令碼：  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
-     在此陳述式中，`myManagedComp.manifest` 是嵌入的元件資訊清單名稱。  這個範例的指令碼檔案名稱為 `myresource.rc`。  
+     在此陳述式中，`myManagedComp.manifest` 是所內嵌之元件資訊清單的名稱。 在此範例中，指令碼檔名稱是 `myresource.rc`。  
   
-2.  使用 Microsoft Windows Resource Compiler \(Rc.exe\) 來編譯該指令碼。  在命令提示字元中輸入下列命令：  
+2.  使用 Microsoft Windows 資源編譯器 (Rc.exe) 編譯指令碼。 在命令提示字元中輸入下列命令：  
   
      `rc myresource.rc`  
   
-     Rc.exe 產生 `myresource.res` 資源檔。  
+     Rc.exe 會產生 `myresource.res` 資源檔。  
   
-3.  再次編譯組件的資源檔，並使用 **\/win32res** 選項指定資源檔：  
+3.  重新編譯組件的原始程式檔，然後使用 **/win32res** 選項來指定資源檔：  
   
     ```  
     /win32res:myresource.res  
     ```  
   
-     `myresource.res` 會再一次成為含有內嵌資源之資源檔的名稱。  
+     同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
   
-## 請參閱  
- [免註冊的 COM Interop](../../../docs/framework/interop/registration-free-com-interop.md)   
- [Requirements for Registration\-Free COM Interop](http://msdn.microsoft.com/zh-tw/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [Configuring COM Components for Registration\-Free Activation](http://msdn.microsoft.com/zh-tw/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
- [.NET 架構元件之免註冊啟動: A Walkthrough](http://go.microsoft.com/fwlink/?LinkId=158812)
+## <a name="see-also"></a>另請參閱  
+ [免註冊 COM Interop](../../../docs/framework/interop/registration-free-com-interop.md)   
+ [免註冊 COM Interop 的需求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
+ [設定免註冊啟用的 COM 元件](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
+ [免註冊啟用 .NET 元件：逐步解說](http://go.microsoft.com/fwlink/?LinkId=158812)
+

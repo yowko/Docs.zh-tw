@@ -1,36 +1,41 @@
 ---
-title: "COM Interop 範例：.NET 用戶端與 COM 伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM Interop, 範例"
-  - "與 Unmanaged 程式碼的互通, 範例"
+title: "COM Interop 範例：.NET 用戶端與 COM 伺服器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop 範例：.NET 用戶端與 COM 伺服器
-這個範例展示建置用來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM Coclass 執行個體，以及呼叫類別成員以執行抵押貸款計算。  
+# <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 範例：.NET 用戶端與 COM 伺服器
+此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。  
   
- 在這個範例中，用戶端會建立並呼叫 **Loan** Coclass 的執行個體、傳遞四個引數 \(其中一個等於零\) 給執行個體，並且顯示這項運算。  這個範例的程式碼片段會出現在這個章節的各個地方。  
+ 在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。 這個範例的程式碼片段會出現在本節中。  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## .NET 用戶端  
+## <a name="net-client"></a>.NET 用戶端  
   
 ```vb  
 Imports System  
@@ -101,7 +106,6 @@ Public Class LoanApp
         End While  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -161,7 +165,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## COM Server  
+## <a name="com-server"></a>COM 伺服器  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -306,5 +310,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+

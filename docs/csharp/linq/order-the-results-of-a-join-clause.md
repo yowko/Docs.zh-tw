@@ -1,7 +1,7 @@
 ---
 title: "排序 join 子句的結果"
 description: "如何排序 join 子句的結果。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0252dd62e5638ffd1ab4eeebcfc2382a65997e30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6272181647bb200c18231c5fc836e3dd1a2d6d55
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="order-the-results-of-a-join-clause"></a>排序 join 子句的結果
@@ -30,3 +30,4 @@ ms.lasthandoff: 03/13/2017
  [LINQ 查詢運算式](index.md)   
  [orderby 子句](../language-reference/keywords/orderby-clause.md)   
  [join 子句](../language-reference/keywords/join-clause.md) 
+

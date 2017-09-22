@@ -24,6 +24,8 @@
 ### [自動實作的屬性](auto-implemented-properties.md)
 ### [如何：使用自動實作的屬性來實作輕量型類別](how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)
 ## [方法](methods.md)
+### [區域函式](local-functions.md)
+### [ref 傳回值和 ref 區域變數](ref-returns.md)
 ### [傳遞參數](passing-parameters.md)
 #### [傳遞實值型別參數](passing-value-type-parameters.md)
 #### [傳遞參考型別參數](passing-reference-type-parameters.md)

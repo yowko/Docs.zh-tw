@@ -1,5 +1,5 @@
 ---
-title: "字串插值 (C#) | Microsoft Docs"
+title: "字串插值 (C#)"
 ms.date: 2017-02-03
 ms.prod: .net
 ms.technology:
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29790cadd30e9aca56d7ba4c8d7a945b4f891f35
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>字串插值 (C# 參考)
@@ -50,7 +51,7 @@ Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
 字串插值的結構為：  
   
 ```  
-$"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text> ..."  
+$"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."  
 ```  
 
 其中： 
@@ -90,7 +91,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text>
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 
 ## <a name="language-specification"></a>語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IFormattable?displayProperty=fullName>   

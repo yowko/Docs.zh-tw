@@ -1,5 +1,5 @@
 ---
-title: "在集合內比較和排序 | Microsoft Docs"
+title: "在集合內比較和排序"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,42 +19,43 @@ caps.latest.revision: 11
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0da0bed43cb7871f522b94b134afb164d8ee3ab5
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1033d7ec64641dd5904372bc05bd2076efe60d39
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>在集合內比較和排序
-<xref:System.Collections> 類別幾乎會在管理集合內的所有處理序中執行比較，包含搜尋要移除的元素，或傳回成對的索引鍵與值。  
+<xref:System.Collections> 類別幾乎會在管理集合內的所有處理序中執行比較，包含搜尋要移除的項目，或傳回成對的索引鍵與值。  
   
  集合通常會利用等號比較子和 (或) 排序比較子。 比較會使用兩個建構。  
   
 <a name="BKMK_Checkingforequality"></a>   
 ## <a name="checking-for-equality"></a>檢查相等  
- `Contains`、<xref:System.Collections.IList.IndexOf%2A>、<xref:System.Collections.Generic.List%601.LastIndexOf%2A> 和 `Remove` 等方法會為集合元素使用相等比較子。 如果集合為泛型，則會根據下列方針，比較項目是否相等：  
+ 例如， `Contains`、 <xref:System.Collections.IList.IndexOf%2A>、 <xref:System.Collections.Generic.List%601.LastIndexOf%2A>和 `Remove` 方法會為集合元素使用相等比較子。 如果集合為泛型，則會根據下列方針，比較項目是否相等：  
   
--   如果類型 T 實作 <xref:System.IEquatable%601> 泛型介面，則相等比較子會是該介面的 <xref:System.IEquatable%601.Equals%2A> 方法。  
+-   如果類型 T 實作了 <xref:System.IEquatable%601> 泛型介面，則相等比較子會是該介面的 <xref:System.IEquatable%601.Equals%2A> 方法。  
   
--   如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=fullName>。  
+-   如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=fullName> 。  
   
- 此外，有些字典集合的建構函式多載，能接受 <xref:System.Collections.Generic.IEqualityComparer%601> 實作，其可用以比較索引鍵是否相等。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=fullName> 建構函式。  
+ 此外，有些字典集合的建構函式多載，能接受 <xref:System.Collections.Generic.IEqualityComparer%601> 實作，其可用以比較索引鍵是否相等。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=fullName> 。  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>決定排序順序  
- 例如，方法 `BinarySearch` 和 `Sort` 會為集合元素使用排序比較子。 比較可以在集合的元素之間進行，或在元素和指定的值之間進行。 若為比較物件，會有 `default comparer` 和 `explicit comparer` 的概念。  
+ 例如，方法 `BinarySearch` 和 `Sort` 會為集合元素使用排序比較子。 比較可以在集合的元素之間進行，或在元素和指定的值之間進行。 若為比較物件，會有 `default comparer` 和 `explicit comparer`的概念。  
   
  預設比較子會依賴至少一個所比較的物件，實作 **IComparable** 介面。 最好的作法是在所有用做為清單集合中的值或是用做為字典集合中索引鍵的類別上，實作 **IComparable** 。 若為泛型集合，會根據下列項目來決定相等比較：  
   
--   如果類型 T 實作 <xref:System.IComparable%601?displayProperty=fullName> 泛型介面，則預設比較子會是該介面的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=fullName> 方法  
+-   如果類型 T 實作 <xref:System.IComparable%601?displayProperty=fullName> 泛型介面，則預設比較子會是該介面的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=fullName> 方法。  
   
 -   如果類型 T 實作非泛型 <xref:System.IComparable?displayProperty=fullName> 介面，則預設比較子會是該介面的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=fullName> 方法。  
   
 -   如果類型 T 沒有實作其中一個介面，則不會有預設比較子，且必須明確地提供比較子或比較委派。  
   
- 若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如，<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 實作。  
+ 若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 實作。  
   
- 系統目前的文化特性設定，會影響集合內的比較和排序。 依預設， **Collections** 類別中的比較和排序會區分文化特性。 若要略過文化特性設定，並因而取得一致的比較和排序結果，請使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 搭配接受 <xref:System.Globalization.CultureInfo> 的成員多載。 如需詳細資訊，請參閱[在集合中執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)與[在陣列中執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。  
+ 系統目前的文化特性設定，會影響集合內的比較和排序。 依預設， **Collections** 類別中的比較和排序會區分文化特性。 若要略過文化特性設定，並因而取得一致的比較和排序結果，請使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 搭配接受 <xref:System.Globalization.CultureInfo>的成員多載。 如需詳細資訊，請參閱 [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 與 [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。  
   
 <a name="BKMK_Equalityandsortexample"></a>   
 ## <a name="equality-and-sort-example"></a>相等和排序範例  
@@ -69,3 +70,4 @@ ms.lasthandoff: 04/18/2017
  <xref:System.Collections.Generic.IComparer%601>   
  <xref:System.IComparable>   
  <xref:System.IComparable%601>
+

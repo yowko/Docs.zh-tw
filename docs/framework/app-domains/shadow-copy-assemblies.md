@@ -1,24 +1,29 @@
 ---
-title: "陰影複製組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式定義域, 陰影複製組件"
-  - "組件 [.NET Framework], 陰影複製"
-  - "陰影複製組件"
+title: "陰影複製組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], shadow copying
+- application domains, shadow copying assemblies
+- shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9ca1f68b7f88c3aec08d58fc1ccba7ea082bb026
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 陰影複製組件
 陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。  這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。  
@@ -87,4 +92,5 @@ caps.handback.revision: 15
  <xref:System.AppDomainSetup.CachePath%2A?displayProperty=fullName>   
  <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=fullName>   
  <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName>   
- [\<shadowCopyVerifyByTimestamp\> 項目](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+ [\<shadowCopyVerifyByTimestamp> 項目](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+

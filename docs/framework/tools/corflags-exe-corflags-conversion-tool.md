@@ -1,29 +1,34 @@
 ---
-title: "CorFlags.exe (CorFlags Conversion Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "CorFlags conversion tool"
-  - "CorFlags.exe"
-  - "portable executable files, CorFlags section"
+title: "CorFlags.exe (CorFlags 轉換工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- CorFlags conversion tool
+- CorFlags.exe
+- portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80fb48fc86d3010020a0a8a79bb2b4b7a6275368
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # CorFlags.exe (CorFlags Conversion Tool)
 CorFlags 轉換工具可讓您設定可攜式執行檔映像標頭的 CorFlags 區段。  
@@ -66,3 +71,4 @@ CorFlags.exe assembly [options]
  [Tools](../../../docs/framework/tools/index.md)   
  [64 位元應用程式](../../../docs/framework/64-bit-apps.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

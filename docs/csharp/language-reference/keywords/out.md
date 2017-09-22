@@ -1,5 +1,5 @@
 ---
-title: "out (C# 參考) | Microsoft Docs"
+title: "out (C# 參考)"
 ms.date: 2017-03-01
 ms.prod: .net
 ms.technology:
@@ -31,19 +31,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 405d86562f949227819f4b5bb21bb2f0c2a5ac2c
+ms.translationtype: HT
+ms.sourcegitcommit: 710c1a8031a9f598b1879ebb6306ba3a072a7de1
+ms.openlocfilehash: bcd8e7ad1b60f520536653cdcb67192da470699a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="out-c-reference"></a>out (C# 參考)
 您可以在兩個內容中使用 `out` 內容關鍵字︰
 
-- 作為[參數修飾詞](../../../csharp/language-reference/keywords/out-parameter-modifier.md)，會以傳址方式而非傳值方式讓引數傳遞至方法。
+- 用作[參數修飾詞](../../../csharp/language-reference/keywords/out-parameter-modifier.md)，讓您以傳址方式而非傳值方式將引數傳遞到方法。
 
 - 在介面及委派的[泛型型別參數宣告](../../../csharp/language-reference/keywords/out-generic-modifier.md)中，指定型別參數是 Covariant。
    
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)
+

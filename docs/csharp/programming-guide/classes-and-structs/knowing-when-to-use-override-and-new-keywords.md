@@ -1,21 +1,40 @@
 ---
-title: "了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "new 關鍵字 [C#]"
-  - "override 關鍵字 [C#]"
-  - "多型 [C#], 使用 Override 和 New [C#]"
+title: "了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- override keyword [C#]
+- new keyword [C#]
+- polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4888a93819b155d10b82bfd1ee105a73a1fdc126
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 了解使用 Override 和 New 關鍵字的時機 (C# 程式設計手冊)
 在 C\# 中，衍生類別中的方法可以與基底類別中的方法同名。  您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 和 [override](../../../csharp/language-reference/keywords/override.md) 關鍵字來指定方法互動的方式。  `override` 修飾詞會「*擴充*」\(Extend\) 基底類別方法，而 `new` 修飾詞則加以「*隱藏*」\(Hide\)。  本主題中的範例會說明此差異。  

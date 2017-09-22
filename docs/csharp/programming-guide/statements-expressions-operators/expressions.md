@@ -1,20 +1,39 @@
 ---
-title: "運算式 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 運算式"
-  - "運算式 [C#]"
+title: "運算式 (C# 程式設計手冊)"
+ms.date: 2017-05-11
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- expressions [C#]
+- C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cfefe047805282ea682e127ffb56528fda48c0a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 運算式 (C# 程式設計手冊)
 「*運算式*」\(Expression\) 是一個或多個運算元和零或多個運算子的序列，可計算出單一值、物件、方法或命名空間 \(Namespace\)。  運算式可包含常值、方法引動過程、運算子和運算元，或「*簡單名稱*」\(Simple Name\)。  簡單名稱可以是變數的名稱、型別成員、方法參數、命名空間或型別。  
@@ -81,3 +100,4 @@ DoWork();
  [運算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
  [類型](../../../csharp/programming-guide/types/index.md)   
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

@@ -1,39 +1,44 @@
 ---
-title: ".NET Framework 中的反映 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 反映"
-  - "Assembly 類別, 反映"
-  - "Common Language Runtime, 反映"
-  - "ConstructorInfo 類別, 反映"
-  - "在執行階段探索類型資訊"
-  - "EventInfo 類別, 反映"
-  - "FieldInfo 類別, 反映"
-  - "MethodInfo 類別, 反映"
-  - "Module 類別, 反映"
-  - "模組, 反映"
-  - "ParameterInfo 類別, 反映"
-  - "PropertyInfo 類別, 反映"
-  - "反映"
-  - "反映, 關於反映"
-  - "執行階段, 反映"
-  - "類型瀏覽器"
-  - "類型系統, 反映"
-  - "實值類型, 反映"
+title: ".NET Framework 中的反映"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], reflection
+- EventInfo class, reflection
+- common language runtime, reflection
+- FieldInfo class, reflection
+- ParameterInfo class, reflection
+- ConstructorInfo class, reflection
+- Assembly class, reflection
+- value types, reflection
+- reflection, about reflection
+- modules, reflection
+- runtime, reflection
+- Module class, reflection
+- MethodInfo class, reflection
+- PropertyInfo class, reflection
+- type browsers
+- reflection
+- discovering type information at run time
+- type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf8d583b3e65c80f2c0eef1f6b3e32befe00c3fe
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # .NET Framework 中的反映
 <xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=fullName>，可讓您取得已載入[組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中所定義類型的資訊，例如[類別](http://msdn.microsoft.com/zh-tw/ad7d3561-271e-4546-82fc-e00b059f27a9)、[介面](http://msdn.microsoft.com/zh-tw/fd9d5975-5363-4bc9-b883-609f887895e5) 和[實值類型](http://msdn.microsoft.com/zh-tw/c9c567f8-8ab1-4d88-834d-00f7d92418de)。  您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。  如需有關反映之特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。  
@@ -95,4 +100,4 @@ caps.handback.revision: 18
   
  <xref:System.Reflection.Emit>  
   
- [回到頁首](#top)
+

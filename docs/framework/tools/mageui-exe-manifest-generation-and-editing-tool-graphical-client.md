@@ -1,28 +1,33 @@
 ---
-title: "MageUI.exe (Manifest Generation and Editing Tool, Graphical Client) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Manifest Generation and Editing tool"
-  - "MageUI.exe"
+title: "MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Manifest Generation and Editing tool
+- MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
 caps.latest.revision: 38
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 38
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/19/2017
+
 ---
 # MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)
 MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 \(UI\)。  您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。  使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。  若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。  在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。  如需詳細資訊，請參閱 [Mage.exe \(資訊清單產生和編輯工具\)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
@@ -201,7 +206,8 @@ MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會�
 |-----------|--------|  
 |**選取資訊清單**|可讓您選擇應用程式資訊清單。  當您選擇應用程式資訊清單時，將填入此頁面上的所有其他欄位。|  
   
-## 請參閱  
- [ClickOnce 安全性和部署](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [逐步解說：手動部署 ClickOnce 應用程式](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)   
- [Mage.exe \(資訊清單產生和編輯工具\)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+## <a name="see-also"></a>另請參閱  
+ [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
+ [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+

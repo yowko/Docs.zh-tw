@@ -1,5 +1,5 @@
 ---
-title: "#if (C# 參考) | Microsoft Docs"
+title: "#<a name=\"if-c-reference\"></a>if (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 4fc51446d297015d9e492703c9b1868c3b513c53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f70dac98d5731370ae961f795b08a71946867d9b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/22/2017
   
  您也可以使用 [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 來取消定義符號。  
   
- 您使用 `/define` 或 `#define` 定義的符號不會與相同名稱的變數發生衝突。 也就是，不應將變數名稱傳遞給前置處理器指示詞，而符號僅能由前置處理器指示詞評估。  
+ 透過 `/define` 或 `#define` 所定義的符號不會與相同名稱的變數發生衝突。 也就是，不應將變數名稱傳遞給前置處理器指示詞，而符號僅能由前置處理器指示詞評估。  
   
  使用 `#define` 建立的符號範圍是定義它的檔案。  
   

@@ -1,55 +1,61 @@
 ---
-title: "WIF 3.5 和 WIF 4.5 之間的命名空間對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 3.5 和 WIF 4.5 之間的命名空間對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9c3d726ee5b6da733ddaa79ec23943bb6faa43e5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# WIF 3.5 和 WIF 4.5 之間的命名空間對應
-從 .NET Framework 4.5 開始， Windows 識別基礎 \(WIF\) 完全整合了 .NET Framework。  這項整合可讓已變更和 WIF 命名空間和 API 介面的某些彙總。  本主題提供某些指引與一個永遠圖表 WIF 3.5 命名空間和 WIF 4.5 命名空間之間。  中不是要詳盡，，而是提供陣列的一般資訊、尋找 WIF 4.5 的常見 WIF 3.5 類別。  如需在 WIF WIF 3.5 和 4.5 之間差異的詳細資訊，請參閱 [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)。  如需的相關指引移轉使用 WIF 3.5 到 WIF 所建置的應用程式 4.5，請參閱 [將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
+# <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 和 WIF 4.5 之間的命名空間對應
+從 .NET 4.5 開始，Windows Identity Foundation (WIF) 已與 .NET Framework 完全整合。 這項整合已引起名稱變更以及某項 WIF 命名空間和 API 介面合併。 本主題提供某個指引以及 WIF 3.5 命名空間與 WIF 4.5 命名空間之間的一般對應。 它的目的不是要提供詳盡資訊，而是提供可在 WIF 4.5 的何處找到熟悉 WIF 3.5 類別的一些一般資訊。 如需 WIF 3.5 與 WIF 4.5 差異的詳細資訊，請參閱 [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)。 如需如何將使用 WIF 3.5 所建置的應用程式移轉至 WIF 4.5 的指引，請參閱[將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
   
-## WIF WIF 3.5 至 4.5 命名空間對應。  
- WIF 類別，收集在 WIF 3.5 的 `Microsoft.IdentityModel` 命名空間中，以下列命名空間中出現在發出: `System.Security.Claims`、 `System.ServiceModel.Security`和 `System.IdentityModel` 命名空間在 WIF 4.5。  另外 \+ 某一 WIF 3.5 命名空間在 WIF 4.5 合併後或完全拒絕。  
+## <a name="wif-35-to-wif-45-namespace-map"></a>WIF 3.5 到 WIF 4.5 命名空間對應  
+ 在 WIF 3.5 的 `Microsoft.IdentityModel` 命名空間下收集到的 WIF 類別，現在會散發到下列命名空間：WIF 4.5 中的 `System.Security.Claims`、`System.ServiceModel.Security` 和 `System.IdentityModel` 命名空間。 此外，在 WIF 4.5 中，已合併或卸除部分 WIF 3.5 命名空間。  
   
 > [!IMPORTANT]
->  下列 `System.IdentityModel` 命名空間包含實作 WCF 根據要求的識別模型的類別: <xref:System.IdentityModel.Claims?displayProperty=fullName>、 <xref:System.IdentityModel.Policy?displayProperty=fullName>和 <xref:System.IdentityModel.Selectors?displayProperty=fullName>。  WCF 根據要求的識別 20 世紀 WIF 替換。  表示建立根據 WIF 時，的方案在這三個命名空間不應該使用類別。  
+>  下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=fullName>、<xref:System.IdentityModel.Policy?displayProperty=fullName> 和 <xref:System.IdentityModel.Selectors?displayProperty=fullName>。 WIF 已取代 WCF 宣告式識別模型。 在建置以 WIF 為基礎的解決方案時，您不應該使用這三個命名空間中的類別。  
   
- 下表提供的 WIF 3.5 類別可以在 WIF 4.5 找到的資訊。  
+ 下表提供可在 WIF 4.5 的何處找到 WIF 3.5 類別的相關資訊。  
   
-||||  
-|-|-|-|  
 |**WIF 3.5 命名空間**|**WIF 4.5 命名空間**|**註解**|  
-|`Microsoft.IdentityModel`|<xref:System.IdentityModel?displayProperty=fullName>|-   表示常數的大部分類別沒有實作。<br />-   用來建立安全性權杖服務的類別從 `Microsoft.IdentityModel.SecurityTokenService` 已經移至 <xref:System.IdentityModel?displayProperty=fullName>。<br />-   在 `Microsoft.IdentityModel.Threading` 的類別移動到 <xref:System.IdentityModel?displayProperty=fullName>。<br />-   `ExceptionMapper` 和 `MruSecurityTokenCache` 類別沒有實作。|  
-|`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=fullName>|-   `IClaimsPrincipal` 和 `IClaimsIdentity` 介面在 WIF 4.5 未實作。  相反地 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> 和 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 現在是大部分 .NET Principal 和 Identity 類別衍生的基底類別。  這表示對於特定要求 Principal 和 Identity 類別的需求。 `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` 和 `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity` WIF 在 4.5 中，使用 <xref:System.Security.Principal.WindowsPrincipal?displayProperty=fullName> 和 <xref:System.Security.Principal.WindowsIdentity?displayProperty=fullName> 。  對於其他存在於 WIF 3.5 的其他特定要求 Principal 和 Identity 類別的。<br />-   `Microsoft.IdentityModel.Claims.ClaimsCollection` 類別在 WIF 4.5 未實作。  相反地，要求的集合公開為型別 <xref:System.Security.Claims.Claim?displayProperty=fullName>的可列舉集合。<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> 和 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 提供完整現在支援 LINQ 的方法。|  
-|`Microsoft.IdentityModel.Configuration`|<xref:System.IdentityModel.Configuration?displayProperty=fullName>|陣列元素和類別所執行的變更，而另一些則 WIF 4.5 拒絕;例如 `Microsoft.IdentityModel.Configuraiton.ServiceConfiguration` 現在是 <xref:System.IdentityModel.Configuration.IdentityConfiguration?displayProperty=fullName>。|  
-|`Microsoft.IdentityModel.Protocols`|<xref:System.IdentityModel.Services?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Protocols.WSFederation`|<xref:System.IdentityModel.Services?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Protocols.WSFederation.Metadata`|<xref:System.IdentityModel.Metadata?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Protocols.WSIdentity`|未實作於 WIF 4.5|在 WIF 3.5 包含類別支援， CardSpace 未實作於 WIF 4.5。|  
-|`Microsoft.IdentityModel.Protocols.WSTrust`|在 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName> 和 <xref:System.ServiceModel.Security?displayProperty=fullName> 命名空間之間加以劃分。|表示 WS\-Security 信任成品的類別在 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName> 命名空間;例如， <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> 類別。  表示 WCF 服務合約、服務主機和通道使 WCF 服務通訊 WS\-Security 信任通訊協定的類別在 <xref:System.ServiceModel.Security?displayProperty=fullName> 命名空間;例如， <xref:System.ServiceModel.Security.WSTrustServiceHost> 類別。|  
-|`Microsoft.IdentityModel.Protocols.WSTrust.Bindings`|未實作於 WIF 4.5|\-|  
-|`Microsoft.IdentityModel.Protocols.XmlEncryption`|未實作於 WIF 4.5|表示 XML 加密中 WIF 3.5 的常數所包含的類別。  這些常數在 WIF 4.5 未實作。|  
-|`Microsoft.IdentityModel.Protocols.XmlSignature`|<xref:System.IdentityModel?displayProperty=fullName>|表示常數的 `EnvelopingSignature` 類別和類別沒有實作。|  
-|`Microsoft.IdentityModel.SecurityTokenService`|若要分割 <xref:System.IdentityModel?displayProperty=fullName>、 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName>和 <xref:System.IdentityModel.Tokens?displayProperty=fullName> 命名空間之間。|\-|  
-|`Microsoft.IdentityModel.Threading`|<xref:System.IdentityModel?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Tokens`|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Tokens.Saml11`|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Tokens.Saml2`|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Web`|<xref:System.IdentityModel.Services?displayProperty=fullName>|\-|  
-|`Microsoft.IdentityModel.Web.Configuration`|<xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>|針對現有類別 \(WS\-Security \(W3C\)\) 案例提供設定主要已經移至 <xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>;不過，其中有些類別在 <xref:System.IdentityModel.Services?displayProperty=fullName>。|  
-|`Microsoft.IdentityModel.Web.Controls`|未實作於 WIF 4.5|在 `Microsoft.IdentityModel.Web.Controls` 的類別實作了 \(W3C\) 的被動登入控制項，不存在於 WIF 4.5。|  
-|`Microsoft.IdentityModel.WindowsTokenService`|未實作於 WIF 4.5|\-|  
+|-|-|-|  
+|`Microsoft.IdentityModel`|<xref:System.IdentityModel?displayProperty=fullName>|-   未實作代表常數的大部分類別。<br />-   用來建置安全性權杖服務的類別已從 `Microsoft.IdentityModel.SecurityTokenService` 移動至 <xref:System.IdentityModel?displayProperty=fullName>。<br />-   `Microsoft.IdentityModel.Threading` 中的類別已移至 <xref:System.IdentityModel?displayProperty=fullName>。<br />-   未實作 `ExceptionMapper` 和 `MruSecurityTokenCache` 類別。|  
+|`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=fullName>|-   在 WIF 4.5 中，未實作 `IClaimsPrincipal` 和 `IClaimsIdentity` 介面。 相反地，<xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> 和 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 現在是大部分.NET 主體和身分識別類別衍生自的基底類別。 這表示不需要特殊宣告主體和身分識別類別 (例如 WIF 4.5 中的 `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` 和 `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity`)，請改成使用 <xref:System.Security.Principal.WindowsPrincipal?displayProperty=fullName> 和 <xref:System.Security.Principal.WindowsIdentity?displayProperty=fullName>。 這適用於 WIF 3.5 中的其他特殊宣告主體和身分識別類別。<br />-   在 WIF 4.5 中，未實作 `Microsoft.IdentityModel.Claims.ClaimsCollection` 類別。 相反地，宣告集合會公開為類型 <xref:System.Security.Claims.Claim?displayProperty=fullName> 的可列舉集合。<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> 和 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 提供現在完全支援 LINQ 的方法。|  
+|`Microsoft.IdentityModel.Configuration`|<xref:System.IdentityModel.Configuration?displayProperty=fullName>|一些項目和類別已進行名稱變更，一些則已在 WIF 4.5 中予以卸除；例如 `Microsoft.IdentityModel.Configuraiton.ServiceConfiguration` 現在是 <xref:System.IdentityModel.Configuration.IdentityConfiguration?displayProperty=fullName>。|  
+|`Microsoft.IdentityModel.Protocols`|<xref:System.IdentityModel.Services?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Protocols.WSFederation`|<xref:System.IdentityModel.Services?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Protocols.WSFederation.Metadata`|<xref:System.IdentityModel.Metadata?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Protocols.WSIdentity`|尚未在 WIF 4.5 中實作|在支援 CardSpace 的 WIF 3.5 包含類別中，尚未在 WIF 4.5 中實作。|  
+|`Microsoft.IdentityModel.Protocols.WSTrust`|在 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName> 與 <xref:System.ServiceModel.Security?displayProperty=fullName> 命名空間之間分割。|代表 WS-Trust 成品的類別位於 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName> 命名空間中；例如，<xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> 類別。 代表可讓 WCF 服務使用 WS-Trust 通訊協定進行通訊之 WCF 服務合約、服務主機和通道的類別，位於 <xref:System.ServiceModel.Security?displayProperty=fullName> 命名空間中；例如，<xref:System.ServiceModel.Security.WSTrustServiceHost> 類別。|  
+|`Microsoft.IdentityModel.Protocols.WSTrust.Bindings`|尚未在 WIF 4.5 中實作|-|  
+|`Microsoft.IdentityModel.Protocols.XmlEncryption`|尚未在 WIF 4.5 中實作|WIF 3.5 中代表 XML 加密常數的包含類別。 這些常數尚未在 WIF 4.5 中實作。|  
+|`Microsoft.IdentityModel.Protocols.XmlSignature`|<xref:System.IdentityModel?displayProperty=fullName>|未實作 `EnvelopingSignature` 類別以及代表常數的類別。|  
+|`Microsoft.IdentityModel.SecurityTokenService`|在 <xref:System.IdentityModel?displayProperty=fullName>、<xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName> 與 <xref:System.IdentityModel.Tokens?displayProperty=fullName> 命名空間之間分割。|-|  
+|`Microsoft.IdentityModel.Threading`|<xref:System.IdentityModel?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Tokens`|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Tokens.Saml11`|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Tokens.Saml2`|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Web`|<xref:System.IdentityModel.Services?displayProperty=fullName>|-|  
+|`Microsoft.IdentityModel.Web.Configuration`|<xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>|提供被動 (WS-同盟) 案例組態的類別主要移至 <xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>；不過，其中一些類別是在 <xref:System.IdentityModel.Services?displayProperty=fullName> 中。|  
+|`Microsoft.IdentityModel.Web.Controls`|尚未在 WIF 4.5 中實作|`Microsoft.IdentityModel.Web.Controls` 中的類別已實作同盟被動登入控制項，而這不存在於 WIF 4.5 中。|  
+|`Microsoft.IdentityModel.WindowsTokenService`|尚未在 WIF 4.5 中實作|-|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)   
  [將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "如何：訂閱及取消訂閱事件 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：訂閱及取消訂閱事件 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 583168bc8cce2f4bee9a2dd35d1e59c7a0f380a6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：訂閱及取消訂閱事件 (C# 程式設計手冊)
@@ -41,13 +41,13 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
   
-1.  如果看不到 [屬性]**** 視窗，請在 [設計]**** 檢視中，以滑鼠右鍵按一下您要建立事件處理常式的表單或控制項，然後選取 [屬性]****。  
+1.  如果看不到 [屬性] 視窗，請在 [設計] 檢視中，以滑鼠右鍵按一下您要建立事件處理常式的表單或控制項，然後選取 [屬性]。  
   
-2.  在 [屬性]**** 視窗頂端，按一下**事件**圖示。  
+2.  在 [屬性] 視窗頂端，按一下**事件**圖示。  
   
 3.  按兩下您要建立的事件，例如 `Load` 事件。  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼]**** 檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼] 檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

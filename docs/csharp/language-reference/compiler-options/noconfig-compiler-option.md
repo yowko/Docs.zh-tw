@@ -1,45 +1,65 @@
 ---
-title: "/noconfig (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/noconfig"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/noconfig compiler option [C#]"
-  - "csc.rsp"
-  - "-noconfig compiler option [C#]"
-  - "noconfig compiler option [C#]"
+title: "-noconfig (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /noconfig
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /noconfig compiler option [C#]
+- csc.rsp
+- -noconfig compiler option [C#]
+- noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 594e972dc834ab74412e30a48428f850ae02b5ac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# /noconfig (C# Compiler Options)
-**\/noconfig** 選項會告訴編譯器，不要使用與 csc.exe 檔位在相同目錄並經由該目錄載入的 csc.rsp 檔編譯。  
+# <a name="noconfig-c-compiler-options"></a>/noconfig (C# 編譯器選項)
+**/noconfig** 選項會指示編譯器不要使用 csc.rsp 檔案，該檔案位於與 csc.exe 檔案相同的目錄並從中載入。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```console  
 /noconfig  
 ```  
   
-## 備註  
- csc.rsp 檔參考所有隨附於 .NET Framework 的組件。  Visual Studio .NET 開發環境所包含的實際參考，是取決於專案類型而定。  
+## <a name="remarks"></a>備註  
+ csc.rsp 檔案參考了 .NET Framework 隨附的所有組件。 Visual Studio .NET 開發環境中所包含的實際參考視專案類型而定。  
   
- 您可以修改 csc.rsp 檔和指定其他編譯器選項，這些選項 \(除了 **\/noconfig** 選項\) 應該包含在每次經由命令列使用 csc.exe 的編譯之中。  
+ 您可以修改 csc.rsp 檔案，並指定應併入每次從命令列使用 csc.exe 進行之編譯的其他編譯器選項 (除了 **/noconfig** 選項外)。  
   
- 編譯器最後才會處理傳遞至 **csc** 命令的選項。  因此，命令列中的任何選項都會覆蓋 csc.rsp 檔中相同選項的設定。  
+ 編譯器最後才會處理傳遞至 **csc** 命令的選項。 因此，命令列上的任何選項會覆寫 csc.rsp 檔案中相同選項的設定。  
   
- 如果您不希望由編譯器尋找和使用 csc.rsp 檔中的設定時，請指定 **\/noconfig**。  
+ 如果您不想要編譯器尋找和使用 csc.rsp 檔案中的設定，請指定 **/noconfig**。  
   
- 在 Visual Studio 中無法使用這個編譯器選項，而且無法利用程式設計的方式變更它。  
+ Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

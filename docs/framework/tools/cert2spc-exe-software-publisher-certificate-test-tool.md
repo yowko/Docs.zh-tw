@@ -1,31 +1,36 @@
 ---
-title: "Cert2spc.exe (Software Publisher Certificate Test Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "SPC"
-  - "Software Publisher Certificate Test tool"
-  - "Software Publisher Certificate"
-  - "Cert2spc.exe"
-  - "certificates, Software Publisher's Certificate"
+title: "Cert2spc.exe (軟體發行者憑證測試工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- SPC
+- Software Publisher Certificate Test tool
+- Software Publisher Certificate
+- Cert2spc.exe
+- certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7109f96b6997670afa6ef7c362b9e1a142014fbe
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Cert2spc.exe (Software Publisher Certificate Test Tool)
 軟體發行者憑證測試工具會從一個或多個 X.509 憑證建立軟體發行者的憑證 \(SPC\)。  Cert2spc.exe 僅供測試使用。  您可以從憑證授權單位 \(例如 VeriSign 或 Thawte\) 取得有效的 SPC。  如需關於建立 X.509 憑證的詳細資訊，請參閱[Makecert.exe \(Certificate Creation Tool\)](../Topic/Makecert.exe%20\(Certificate%20Creation%20Tool\).md)。  

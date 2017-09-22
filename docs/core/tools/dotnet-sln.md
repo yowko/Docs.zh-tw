@@ -1,25 +1,24 @@
 ---
-title: "dotnet-sln 命令 - .NET Core CLI | Microsoft Docs"
+title: "dotnet sln 命令 - .NET Core CLI"
 description: "dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。"
-keywords: "dotnet-sln, CLI, CLI 命令, .NET Core"
-author: spboyer
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 5071cb80be0fb14829a0fdffd0f5a2d2371b6ba8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-sln"></a>dotnet sln
 
-# <a name="dotnet-sln"></a>dotnet-sln
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
 `dotnet-sln` - 修改.NET Core 方案檔。
 
@@ -84,5 +83,4 @@ dotnet sln [-h|--help]
 
 使用 Glob 模式將多個專案加入至解決方案︰
 
-`dotnet sln add **/**/*.fsproj`
-
+`dotnet sln todo.sln remove **/*.csproj`

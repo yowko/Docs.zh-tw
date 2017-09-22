@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (C#) | Microsoft Docs"
+title: "逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b698372d28198cfcd34aef69043334e3fc50ce6d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9a901403f34f33639a3eb5c919c337fec594dfd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊 (C#)
@@ -42,15 +42,15 @@ ms.lasthandoff: 03/13/2017
   
 1.  在安裝 Excel 的電腦上啟動 Visual Studio。  
   
-2.  在 [檔案] **** 功能表上，依序選擇 [新增] ****和 [專案] ****。  
+2.  在 [檔案]  功能表上，依序選擇 [新增] 和 [專案] 。  
   
-3.  在 [新增專案]**** 對話方塊的 [專案類型]**** 窗格中，確認已選取 [Windows]****。 選取 [範本]**** 窗格中的 [主控台應用程式]****。 在 [名稱]**** 文字方塊中，輸入 `CreateExcelWorkbook`，然後選擇 [確定]**** 按鈕。 隨即會建立新專案。  
+3.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 選取 [範本] 窗格中的 [主控台應用程式]。 在 [名稱] 文字方塊中，輸入 `CreateExcelWorkbook`，然後選擇 [確定] 按鈕。 隨即會建立新專案。  
   
-4.  在方案總管****中，開啟 [參考]**** 的捷徑功能表，然後選擇 [加入參考]****。  
+4.  在方案總管中，開啟 [參考] 的捷徑功能表，然後選擇 [加入參考]。  
   
-5.  在 [.NET]**** 索引標籤上，選擇最新版本的 `Microsoft.Office.Interop.Excel`。 例如，**Microsoft.Office.Interop.Excel 14.0.0.0**。 選擇 [確定] **** 按鈕。  
+5.  在 [.NET] 索引標籤上，選擇最新版本的 `Microsoft.Office.Interop.Excel`。 例如，**Microsoft.Office.Interop.Excel 14.0.0.0**。 選擇 [確定]  按鈕。  
   
-6.  在 **CreateExcelWorkbook** 專案的參考清單中，選取上一個步驟所加入的 `Microsoft.Office.Interop.Excel` 參考。 在 [屬性]**** 視窗中，確認 `Embed Interop Types` 屬性已設為 `True`。  
+6.  在 **CreateExcelWorkbook** 專案的參考清單中，選取上一個步驟所加入的 `Microsoft.Office.Interop.Excel` 參考。 在 [屬性] 視窗中，確認 `Embed Interop Types` 屬性已設為 `True`。  
   
     > [!NOTE]
     >  由於使用了內嵌的 Interop 類型資訊，因此本逐步解說所建立的應用程式可執行於不同版本的 Microsoft Office。 如果 `Embed Interop Types` 屬性設定為 `False`，您就必須將執行應用程式之每個版本 Microsoft Office 的 PIA 包含在內。  
@@ -133,7 +133,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  在 Visual Studio 中，開啟本逐步解說所建立的專案。  
   
-2.  在 [建置]**** 功能表上，選擇 [發行 CreateExcelWorkbook]****。 遵循 [發行精靈] 的步驟，建立應用程式的可安裝版本。 如需詳細資訊，請參閱[發行精靈 (Visual Studio 中的 Office 程式開發)](https://msdn.microsoft.com/library/bb625071)。  
+2.  在 [建置] 功能表上，選擇 [發行 CreateExcelWorkbook]。 遵循 [發行精靈] 的步驟，建立應用程式的可安裝版本。 如需詳細資訊，請參閱[發行精靈 (Visual Studio 中的 Office 程式開發)](https://msdn.microsoft.com/library/bb625071)。  
   
 3.  在已安裝 .NET Framework 4 或更新版本和不同版本 Excel 的電腦上，安裝應用程式。  
   

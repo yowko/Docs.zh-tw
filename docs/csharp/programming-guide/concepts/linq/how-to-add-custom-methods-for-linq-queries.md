@@ -1,5 +1,5 @@
 ---
-title: "如何：新增 LINQ 查詢的自訂方法 (C#) | Microsoft Docs"
+title: "如何：新增 LINQ 查詢的自訂方法 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 5f3ac26abe3eccc19b928375059e2562c4aa6a80
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c1a7ec7c5c719839d7a1a63568541a26a8216377
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何：新增 LINQ 查詢的自訂方法 (C#)
-您可將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，藉此擴充可用於 LINQ 查詢的方法集合。 例如，除了標準平均值或最多作業，您可以建立自訂的彙總方法，計算一系列值的單一值。 您也可以建立一個方法，用為自訂篩選器或一系列值的特定資料轉換，並傳回新的序列。 此類方法的範例有 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。  
+您可以將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。 例如，除了標準平均值或最多作業，您可以建立自訂的彙總方法，計算一系列值的單一值。 您也可以建立一個方法，用為自訂篩選器或一系列值的特定資料轉換，並傳回新的序列。 這類方法的範例包括 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。  
   
  當您延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面時，可將自訂方法套用至任何可列舉的集合。 如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。  
   
@@ -175,7 +175,7 @@ Console.WriteLine("String: Median = " + query4);
 */  
 ```   
 ## <a name="adding-a-method-that-returns-a-collection"></a>新增傳回集合的方法  
- 您可以使用傳回一系列值的自訂查詢方法來延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面。 本例中，此方法必須傳回 <xref:System.Collections.Generic.IEnumerable%601> 類型的集合。 此等方法可用來將篩選條件或資料轉換套用至一系列的值。  
+ 您可以使用傳回一系列值的自訂查詢方法來延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面。 在此情況下，方法必須傳回型別 <xref:System.Collections.Generic.IEnumerable%601> 的集合。 此等方法可用來將篩選條件或資料轉換套用至一系列的值。  
   
  下例示範如何建立名為 `AlternateElements` 的擴充方法，傳回集合中的每隔個項目，從第一個項目開始。  
   
@@ -225,3 +225,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.Generic.IEnumerable%601>   
  [擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+

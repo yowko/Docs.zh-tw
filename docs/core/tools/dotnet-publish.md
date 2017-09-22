@@ -1,78 +1,152 @@
 ---
-title: "dotnet-publish 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-publish 命令會將 .NET Core 專案發行到目錄中。"
+title: "dotnet publish 命令 - .NET Core CLI"
+description: "dotnet publish 命令會將 .NET Core 專案發行到目錄中。"
 keywords: "dotnet-publish, CLI, CLI 命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 48bfe6c77ee6c5d905069f47da5512ac63a24b2a
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: db6e527a6132be0b6362c68945bb68884f5ad619
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-publish"></a>dotnet publish
 
-# <a name="dotnet-publish"></a>dotnet-publish
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
-`dotnet-publish` - 將應用程式與其相依性封裝至資料夾中，以部署至主機系統。
+`dotnet publish` - 將應用程式與其相依性封裝至資料夾中，以部署至主機系統。
 
 ## <a name="synopsis"></a>概要
 
-`dotnet publish [<PROJECT>] [-f|--framework] [-r|--runtime] [-o|--output] [-c|--configuration] [--version-suffix] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-## <a name="description"></a>描述
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet publish [-h|--help]
+```
+
+---
+
+## <a name="description"></a>說明
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 輸出會包含下列內容：
 
-* 組件中的中繼語言 (IL) 程式碼，副檔名為 `*.dll`。
-* *\*.deps.json* 檔案，其中包含專案的所有相依性。
-* *\*.runtime.config.json* 檔案，指定應用程式預期的共用執行階段，以及執行階段的其他組態選項 (例如記憶體回收類型)。
+* 組件中的中繼語言 (IL) 程式碼，副檔名為 *dll*。
+* *.deps.json* 檔案，其中包含專案的所有相依性。
+* *.runtime.config.json* 檔案，指定應用程式預期的共用執行階段，以及執行階段的其他組態選項 (例如記憶體回收類型)。
 * 應用程式的相依性。 這些相依性會從 NuGet 快取複製到輸出資料夾。
 
-`dotnet publish` 命令的輸出已準備好部署至主機系統 (例如，伺服器、電腦、Mac、膝上型電腦) 以執行，且是準備要進行部署之應用程式的唯一正式支援方式。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。 針對已發行應用程式的目錄結構，請參閱[目錄結構 (英文)](https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure)。
+`dotnet publish` 命令的輸出已準備好部署至主機系統 (例如，伺服器、電腦、Mac、膝上型電腦) 以執行，且是準備要進行部署之應用程式的唯一正式支援方式。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。 針對已發行應用程式的目錄結構，請參閱[目錄結構 (英文)](/aspnet/core/hosting/directory-structure)。
 
 ## <a name="arguments"></a>引數
 
-`PROJECT` 
+`PROJECT`
 
-要發行的專案，如果未指定，則預設為目前目錄。 
+要發行的專案，如果未指定，則預設為目前目錄。
 
 ## <a name="options"></a>選項
 
-`-h|--help`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-印出命令的簡短說明。  
+`-c|--configuration {Debug|Release}`
+
+定義組建組態。 預設值是 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
 發行所指定[目標架構](../../standard/frameworks.md)的應用程式。 您必須在專案檔中指定此目標架構。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--force`
 
-發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+即使最後的還原成功，仍強制解析所有相依性。 這相當於刪除 *project.assets.json* 檔案。
+
+`-h|--help`
+
+印出命令的簡短說明。
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+指定一或多個[目標資訊清單](../deploying/runtime-store.md)，用以修剪應用程式發行的套件集。 資訊清單檔是 [`dotnet store` 命令](dotnet-store.md)輸出的一部分。 若要指定多個資訊清單，請為每個資訊清單新增 `--manifest` 選項。 自 .NET Core 2.0 SDK 開始提供此選項。
+
+`--no-dependencies`
+
+忽略專案對專案參考，並且只還原根專案。
+
+`--no-restore`
+
+執行命令時，不執行隱含的還原。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
 
-`-c|--configuration <CONFIGURATION>`
+`--self-contained`
 
-要在建置專案時使用的組態。 預設值是 `Debug`。
+使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 如已指定執行階段識別碼，則其預設值是 `true`。 如需不同部署類型的詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+
+`-v|--verbosity <LEVEL>`
+
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
 `--version-suffix <VERSION_SUFFIX>`
 
 定義要取代專案檔案的版本欄位中之星號 (`*`) 的版本尾碼。
 
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+定義組建組態。 預設值是 `Debug`。
+
+`-f|--framework <FRAMEWORK>`
+
+發行所指定[目標架構](../../standard/frameworks.md)的應用程式。 您必須在專案檔中指定此目標架構。
+
+`-h|--help`
+
+印出命令的簡短說明。
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+指定一或多個[目標資訊清單](../deploying/runtime-store.md)，用以修剪應用程式發行的套件集。 資訊清單檔是 [`dotnet store` 命令](dotnet-store.md)輸出的一部分。 若要指定多個資訊清單，請為每個資訊清單新增 `--manifest` 選項。 自 .NET Core 2.0 SDK 開始提供此選項。
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+
 `-v|--verbosity <LEVEL>`
 
 設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+
+`--version-suffix <VERSION_SUFFIX>`
+
+定義要取代專案檔案的版本欄位中之星號 (`*`) 的版本尾碼。
+
+---
 
 ## <a name="examples"></a>範例
 
@@ -96,3 +170,4 @@ ms.lasthandoff: 03/22/2017
 
 * [目標架構](../../standard/frameworks.md)
 * [執行階段識別項 (RID) 目錄](../rid-catalog.md)
+

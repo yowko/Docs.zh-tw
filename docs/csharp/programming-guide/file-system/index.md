@@ -61,4 +61,5 @@ ms.lasthandoff: 03/13/2017
   
  [檔案、資料夾和磁碟機](../../../csharp/programming-guide/file-system/index.md)  
   
- <xref:System.IO?displayProperty=fullName>
+ <xref:System.IO?displayProperty=nameWithType>
+

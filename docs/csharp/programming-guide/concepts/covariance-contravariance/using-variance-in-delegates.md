@@ -1,5 +1,5 @@
 ---
-title: "在委派中使用變異數 (C#) | Microsoft Docs"
+title: "在委派中使用變異數 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbcf08eafe05e3299379b0455640fc08ec80e0ca
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a3ab3b62b20d6e4992421ac4fd98b73bded04c9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-variance-in-delegates-c"></a>在委派中使用變異數 (C#)
-當您將方法指派給委派時，「共變數」**和「反變數」**可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。  
+當您將方法指派給委派時，「共變數」和「反變數」可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。  
   
 ## <a name="example-1-covariance"></a>範例 1︰共變數  
   
@@ -73,7 +73,7 @@ class Program
 ### <a name="code"></a>程式碼  
   
 ```csharp  
-// Event hander that accepts a parameter of the EventArgs type.  
+// Event handler that accepts a parameter of the EventArgs type.  
 private void MultiHandler(object sender, System.EventArgs e)  
 {  
     label1.Text = System.DateTime.Now.ToString();  
@@ -97,3 +97,4 @@ public Form1()
 ## <a name="see-also"></a>另請參閱  
  [委派中的變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
  [針對 Func 與 Action 泛型委派使用變異數 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+

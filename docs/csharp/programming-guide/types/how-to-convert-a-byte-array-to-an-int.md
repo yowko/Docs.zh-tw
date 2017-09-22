@@ -1,5 +1,5 @@
 ---
-title: "如何：將位元組陣列轉換成整數 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：將位元組陣列轉換成整數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d26bb4821e09c6633d1c5a4dd40e132e57acf94
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 86ecfe95ab6fb5ce60e7568050cdf974d0dc3d88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何：將位元組陣列轉換成整數 (C# 程式設計手冊)
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## <a name="example"></a>範例  
- 在本例中，呼叫 <xref:System.BitConverter> 類別的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法將 `int` 轉換成位元組陣列。  
+ 在此範例中，會呼叫 <xref:System.BitConverter> 類別的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，將 `int` 轉換成位元組陣列。  
   
 > [!NOTE]
 >  輸出會隨電腦架構位元組由大到小或由小到大而有所不同。  

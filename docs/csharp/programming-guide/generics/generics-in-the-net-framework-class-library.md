@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework Class Library 中的泛型 (C# 程式設計手冊) | Microsoft Docs"
+title: ".NET Framework 類別庫中的泛型 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 35a6c53b089872076028e8ec82f55de2a90962a6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3d5f15c92031301b68c6a702cf8d6b135cca36d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generics-in-the-net-framework-class-library-c-programming-guide"></a>.NET Framework 類別庫中的泛型 (C# 程式設計手冊)
@@ -42,3 +42,4 @@ ms.lasthandoff: 03/13/2017
  [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)   
  [集合和資料結構](../../../standard/collections/index.md)   
  [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+

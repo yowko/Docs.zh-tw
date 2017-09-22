@@ -1,38 +1,43 @@
 ---
-title: "Caspol.exe (Code Access Security Policy Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "permission sets, modifying security policy"
-  - "security policy [.NET Framework], Code Access Security Policy tool"
-  - "enterprise security policy"
-  - "referencing code groups and permission sets"
-  - "user security policy"
-  - "Caspol.exe"
-  - "Code Access Security Policy tool"
-  - "code groups, modifying security policy"
-  - "application development [.NET Framework], security"
-  - "machine security policy"
-  - "security policy [.NET Framework], modifying"
-  - "manually editing security configuration files"
+title: "Caspol.exe (程式碼存取安全性原則工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- permission sets, modifying security policy
+- security policy [.NET Framework], Code Access Security Policy tool
+- enterprise security policy
+- referencing code groups and permission sets
+- user security policy
+- Caspol.exe
+- Code Access Security Policy tool
+- code groups, modifying security policy
+- application development [.NET Framework], security
+- machine security policy
+- security policy [.NET Framework], modifying
+- manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 caps.latest.revision: 44
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 43
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53cb4e7ffbac9a149b9b83b92141b7544734683e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Caspol.exe (Code Access Security Policy Tool)
 程式碼存取安全性 \(CAS\) 原則工具 \(Caspol.exe\) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  

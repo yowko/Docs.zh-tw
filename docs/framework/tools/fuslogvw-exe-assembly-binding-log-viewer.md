@@ -1,32 +1,37 @@
 ---
-title: "Fuslogvw.exe (Assembly Binding Log Viewer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "failed assembly binds"
-  - "Fuslogvw.exe"
-  - "displaying failed assembly bind details"
-  - "assemblies [.NET Framework], failed assembly binds"
-  - "locating assemblies"
-  - "Assembly Binding Log Viewer"
+title: "Fuslogvw.exe (組件繫結記錄檔檢視器)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- failed assembly binds
+- Fuslogvw.exe
+- displaying failed assembly bind details
+- assemblies [.NET Framework], failed assembly binds
+- locating assemblies
+- Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 caps.latest.revision: 35
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 35
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Fuslogvw.exe (Assembly Binding Log Viewer)
 組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。  這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。  這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。  通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。  
@@ -244,3 +249,4 @@ Discarding native image.
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

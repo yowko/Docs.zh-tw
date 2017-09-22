@@ -1,41 +1,46 @@
 ---
-title: "在桌面應用程式中封裝和部署資源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "部署應用程式 [.NET Framework]，資源"
-  - "資源檔，部署"
-  - "中樞和支點資源部署模型"
-  - "資源檔，封裝"
-  - "應用程式資源，封裝"
-  - "單一資源組件"
-  - "附屬組件"
-  - "應用程式的預設文化特性"
-  - "名稱 [.NET Framework]，資源"
-  - "資源的回溯處理序"
-  - "群組文化特性"
-  - "應用程式資源，部署"
-  - "應用程式資源，命名慣例"
-  - "文化特性，封裝和部署資源"
-  - "資源檔，命名慣例"
-  - "封裝應用程式資源"
-  - "應用程式資源，後援處理序"
-  - "資源檔，後援處理序"
-  - "當地語系化資源"
-  - "中性文化特性"
+title: "在桌面應用程式中封裝和部署資源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying applications [.NET Framework], resources
+- resource files, deploying
+- hub-and-spoke resource deployment model
+- resource files, packaging
+- application resources, packaging
+- single resource assembly
+- satellite assemblies
+- default culture for applications
+- names [.NET Framework], resources
+- fallback process for resources
+- grouping cultures
+- application resources, deploying
+- application resources, naming conventions
+- culture, packaging and deploying resources
+- resource files, naming conventions
+- packaging application resources
+- application resources, fallback processes
+- resource files, fallback processes
+- localizing resources
+- neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 caps.latest.revision: 26
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 26
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5de456ff1a371a43241dba3b47be7dcd80bf8f70
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 在桌面應用程式中封裝和部署資源
 應用程式相依於 .NET Framework 資源管理員，以 <xref:System.Resources.ResourceManager> 類別，擷取當地語系化的資源。  資源管理員會假設， hub 和 spoke 模型可用來封裝和部署資源。  中樞為主要組件，包含無法當地語系化的可執行程式碼，和稱為中性或預設文化特性的單一文化特性的資源。  預設文化特性為應用程式的後援文化特性;如果找不到當地語系化的資源，它會使用此文化特性的資源。  各個輪輻都連接至含有單一文化特性資源 \(但不包含任何程式碼\) 的附屬組件。  

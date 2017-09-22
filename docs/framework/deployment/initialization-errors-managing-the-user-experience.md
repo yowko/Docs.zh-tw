@@ -1,29 +1,34 @@
 ---
-title: ".NET Framework 初始化錯誤：管理使用者經驗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - ".NET Framework, 初始化錯誤"
-  - "初始化錯誤 [.NET Framework]"
-  - "找不到 Framework 經驗"
+title: ".NET Framework 初始化錯誤：管理使用者經驗"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- no framework found experience
+- initialization errors [.NET Framework]
+- .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # .NET Framework 初始化錯誤：管理使用者經驗
 Common Language Runtime \(CLR\) 啟動系統是用來決定執行 Managed 應用程式程式碼的 CLR 版本。  在某些情況下，啟動系統可能會找不到 CLR 的版本。  這種情況通常發生在應用程式需要的 CLR 版本無效或未安裝在特定電腦上。  如果找不到要求的版本， CLR 啟動系統從呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會顯示錯誤訊息給執行應用程式的使用者。  本文提供了HRESULT程式碼清單並說明如何防止錯誤訊息出現。  
@@ -86,7 +91,7 @@ Common Language Runtime \(CLR\) 啟動系統是用來決定執行 Managed 應用
 ## [!INCLUDE[win8](../../../includes/win8-md.md)] 行為和 UI  
  CLR 啟動系統在做為 Windows 作業系統上的其他版本所做的 [!INCLUDE[win8](../../../includes/win8-md.md)] 提供相同的行為和 UI，除了遇到載入 CLR 2.0 的問題。  [!INCLUDE[win8](../../../includes/win8-md.md)] 包含使用 CLR 4.5的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，。不過， [!INCLUDE[win8](../../../includes/win8-md.md)] 不包含 .NET Framework 2.0、3.0 或 3.5，此兩者都使用 CLR 2.0。  因此，必須依賴 CLR 2.0 的應用程式在 [!INCLUDE[win8](../../../includes/win8-md.md)] 預設為不會執行。  相反地，它們顯示下列對話方塊讓使用者可安裝 .NET Framework 3.5。  使用者也可以在控制台中啟用 .NET Framework 3.5。  這兩種選擇在本文 [Installing the .NET Framework 3.5 on Windows 8 and later versions](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)中會討論到。  
   
- ![在 Windows 8 安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
+ ![在 Windows 8 上安裝 3.5 時顯示的對話方塊](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
 視需要提示安裝 .NET Framework 3.5  
   
 > [!NOTE]
@@ -100,4 +105,5 @@ Common Language Runtime \(CLR\) 啟動系統是用來決定執行 Managed 應用
  [開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [HOW TO：設定應用程式以支援 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
  [如何：偵錯 CLR 啟用問題](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
- [Installing the .NET Framework 3.5 on Windows 8 and later versions](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)
+ [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)
+

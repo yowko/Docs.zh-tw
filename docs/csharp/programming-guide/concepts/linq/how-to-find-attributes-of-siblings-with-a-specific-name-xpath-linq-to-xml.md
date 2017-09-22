@@ -1,5 +1,5 @@
 ---
-title: "如何：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0480c0bba34f0f1d7d942a52b50987072ea688ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a11b36ebe7dd56dc94984f636644256045ec16d1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何：利用特定名稱尋找同層級的屬性 (XPath-LINQ to XML) (C#)
@@ -70,3 +69,4 @@ id="bk102"
   
 ## <a name="see-also"></a>另請參閱  
  [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

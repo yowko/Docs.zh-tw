@@ -1,7 +1,7 @@
 ---
-title: .NET Core | Microsoft Docs
-description: ".NET 核心"
-keywords: ".NET、.NET Core"
+title: ".NET Core 指南"
+description: ".NET Core 是 .NET 的模組化、高效能實作，可用於建立 Windows、Linux 和 Mac 應用程式。 了解 .NET Core 以開始使用。"
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: cd99aa47233f855ac6da37ff93b981a941ee416a
+ms.translationtype: HT
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a>.NET Core 指南
 
 > 簽出[「入門」教學課程](get-started.md)以了解如何建立簡單的 .NET Core 應用程式。 只需要幾分鐘，您就可以啟動並執行您的第一個應用程式。
 
@@ -53,17 +53,17 @@ C# 和 F# 編譯器和 .NET Core 工具已或可以整合至數個文字編輯�
 
 若要深入了解 .NET Core API 藍圖，請參閱 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)。
 
-### <a name="relationship-to-the-net-standard-library"></a>.NET 標準程式庫的關聯性
+### <a name="relationship-to-net-standard"></a>.NET Standard 的關聯性
 
-[.NET 標準程式庫](../standard/library.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。 .NET 實作必須實作此規格，才會被視為符合 .NET 標準程式庫，可以支援以 .NET 標準程式庫為目標的程式庫。 
+[.NET Standard](../standard/net-standard.md) 是一種 API 規格，描述開發人員在每個 .NET 實作中預期出現的一組一致的 .NET API。 .NET 實作必須實作此規格，才會被視為符合 .NET Standard 規範，可以支援以 .NET Standard 為目標的程式庫。 
 
-.NET Core 因為實作 .NET 標準程式庫，所以可以支援 .NET 標準程式庫。
+.NET Core 實作 .NET Standard，因此支援 .NET Standard 程式庫。
 
 ### <a name="workloads"></a>工作負載
 
 .NET Core 本身就包含單一的應用程式模型：主控台應用程式，對工具、本機服務和文字型遊戲都極有幫助。 其他應用程式模型早已建置在 .NET Core 以擴充其功能，例如︰
 
-- [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
+- [ASP.NET Core](/aspnet/core/)
 - [Windows 10 通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows)
 - [Xamarin.Forms](https://www.xamarin.com/forms)
 
@@ -124,13 +124,13 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 - [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 和 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) 是特定平台型，設儲存體和密碼編譯 API 在每個作業系統上有巨大差異。 
 - [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 和 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) 是非關平台型，設它們在資料結構上建立與操作。
 
-## <a name="comparisons-to-other-net-platforms"></a>其他 .NET 平台的比較
+## <a name="comparisons-to-other-net-implementations"></a>與其他 .NET 實作的比較
 
-比較 .NET Core 和現有的 .NET 平台，可能最容易了解 .NET Core 的大小和形態。 
+比較 .NET Core 和現有的 .NET 實作，可能最容易了解 .NET Core 的大小和形態。 
 
 ### <a name="comparison-with-net-framework"></a>與 .NET Framework 的比較
 
-.NET 平台最早由 Microsoft 於 2000 年散發，從此開始發展。 .NET Framework 是 Microsoft 在 15 來年間生產的主要 .NET 產品。 
+.NET 最早由 Microsoft 於 2000 年發表，從此不斷演進。 .NET Framework 在超過 15 年來始終是 Microsoft 生產的主要 .NET 實作。 
 
 .NET Core 和 .NET Framework 的主要差異︰ 
 
@@ -140,7 +140,7 @@ Windows 與 Unix 實作大小相近。 Windows 實作較大，因為 CoreFX 會�
 - **平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。
 - **開放原始碼**：.NET Core 是開放原始碼，同時[唯讀的 .NET Framework 子集](https://github.com/microsoft/referencesource)也是開放原始碼。
 
-雖然 .NET Core 具有唯一性，且與 .NET Framework 及其他 .NET 平台有顯著差異，卻可以直接共用程式碼，使用來源或二進位共用技術。 
+雖然 .NET Core 很獨特，與 .NET Framework 及其他 .NET 實作有顯著差異，卻可以使用原始碼或二進位共用技術，直接共用程式碼。 
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 

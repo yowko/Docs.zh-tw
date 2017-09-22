@@ -1,40 +1,45 @@
 ---
-title: "Gacutil.exe (Global Assembly Cache Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "assemblies [.NET Framework], global assembly cache"
-  - "global assembly cache, viewing contents"
-  - "viewing assemblies in global assembly cache"
-  - "global assembly cache, manipulating contents"
-  - "GAC (global assembly cache), Gacutil.exe"
-  - "Gacutil.exe"
-  - "GAC (global assembly cache), viewing contents"
-  - "installing assemblies into global assembly cache"
-  - "removing assemblies from global assembly cache"
-  - "list of assemblies in global assembly cache"
-  - "cache [.NET Framework], global assembly cache"
-  - "GAC (global assembly cache), manipulating contents"
-  - "global assembly cache, Gacutil.exe"
-  - "Global Assembly Cache tool"
+title: "Gacutil.exe (全域組件快取工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- global assembly cache, viewing contents
+- viewing assemblies in global assembly cache
+- global assembly cache, manipulating contents
+- GAC (global assembly cache), Gacutil.exe
+- Gacutil.exe
+- GAC (global assembly cache), viewing contents
+- installing assemblies into global assembly cache
+- removing assemblies from global assembly cache
+- list of assemblies in global assembly cache
+- cache [.NET Framework], global assembly cache
+- GAC (global assembly cache), manipulating contents
+- global assembly cache, Gacutil.exe
+- Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a42ef6cc2a1418c5071f94f4c8a7497a8701a73a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Gacutil.exe (Global Assembly Cache Tool)
 全域組件快取工具可以讓您檢視和操作全域組件快取和下載快取的內容。  

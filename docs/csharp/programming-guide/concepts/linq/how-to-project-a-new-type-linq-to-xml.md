@@ -1,5 +1,5 @@
 ---
-title: "如何：投影新類型 (LINQ to XML) (C#) | Microsoft Docs"
+title: "如何：投影新類型 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa8c4676890dcc25108d919a501bde44299db04
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b772326b3b8827351ffbfbb1888b105bd6e537df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>如何：投影新類型 (LINQ to XML) (C#)
-本節中的其他範例所顯示的查詢會以 <xref:System.Xml.Linq.XElement> 的 <xref:System.Collections.Generic.IEnumerable%601>、`string` 的 <xref:System.Collections.Generic.IEnumerable%601> 和 `int` 的 <xref:System.Collections.Generic.IEnumerable%601> 形式傳回結果。 這些是常見的結果型別，但這些型別不適用於每個案例。 在許多情況下，您會想要讓查詢傳回其他類型的 <xref:System.Collections.Generic.IEnumerable%601>。  
+本節中的其他範例顯示的查詢會傳回結果，當做 <xref:System.Collections.Generic.IEnumerable%601> 之 <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> 的 `string`，以及 <xref:System.Collections.Generic.IEnumerable%601> 的 `int`。 這些是常見的結果型別，但這些型別不適用於每個案例。 在許多情況下，您會希望您的查詢傳回其他型別的 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何具現化 `select` 子句中的物件。 此程式碼會先利用建構函式定義新的類別，然後修改 `select` 陳述式，讓運算式成為新類別的新執行個體。  
@@ -69,3 +68,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>另請參閱  
  [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

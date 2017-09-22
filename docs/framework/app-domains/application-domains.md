@@ -1,30 +1,35 @@
 ---
-title: "應用程式定義域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式定義域"
-  - "應用程式定義域, 關於"
-  - "應用程式隔離"
-  - "程式碼, 驗證程序"
-  - "Common Language Runtime, 應用程式定義域"
-  - "在應用程式之間隔離"
-  - "隔離的程序界限"
-  - "執行階段, 應用程式定義域"
-  - "驗證測試程式碼"
+title: "應用程式定義域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process boundaries for isolation
+- application isolation
+- application domains, about
+- common language runtime, application domains
+- application domains
+- runtime, application domains
+- isolation between applications
+- code, verification process
+- verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 應用程式定義域
 作業系統和執行階段環境通常會在應用程式之間提供某種形式的隔離。  例如，Windows 會使用處理序來隔離應用程式。  這種隔離確保在某一應用程式中執行之程式碼不會對其他不相關應用程式造成負面影響。  

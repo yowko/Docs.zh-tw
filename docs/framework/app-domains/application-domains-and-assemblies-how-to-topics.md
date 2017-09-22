@@ -1,23 +1,28 @@
 ---
-title: "應用程式定義域和組件 HOW TO 主題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式定義域, HOW TO"
-  - "組件 [.NET Framework], HOW TO"
+title: "應用程式定義域和組件 HOW TO 主題"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], how-tos
+- application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 396c3ac263f20608d69949c7ad5d9d5b1dffb555
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 應用程式定義域和組件 HOW TO 主題
 下列章節包含與應用程式定義域和組件的程式設計有關的概念性文件中所有 HOW TO 主題之連結。  
@@ -58,5 +63,6 @@ caps.handback.revision: 6
   
 -   [如何：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [應用程式定義域和組件](../../../docs/framework/app-domains/index.md)
+

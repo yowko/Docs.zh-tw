@@ -1,26 +1,31 @@
 ---
-title: "發出動態方法和組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 發出動態組件"
-  - "動態組件"
-  - "中繼資料, 發出介面"
-  - "反映發出"
-  - "反映發出, 概觀"
+title: "發出動態方法和組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection emit
+- dynamic assemblies
+- metadata, emit interfaces
+- reflection emit, overview
+- assemblies [.NET Framework], emitting dynamic assemblies
 ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 發出動態方法和組件
 本節說明 <xref:System.Reflection.Emit> 命名空間中的一組 Managed 類型，它可讓編譯器或工具在執行階段發出中繼資料和 Microsoft 中繼語言 \(MSIL\)，以及選擇性地在磁碟上產生可攜式執行檔 \(PE\)。  指令碼引擎和編譯器是此命名空間的主要使用者。  在本節中，<xref:System.Reflection.Emit> 命名空間所提供的功能稱為反映發出。  
@@ -66,3 +71,4 @@ caps.handback.revision: 18
   
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  提供 .NET Framework 中的組件概觀。
+

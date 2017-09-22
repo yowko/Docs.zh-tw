@@ -1,28 +1,47 @@
 ---
-title: "/reference (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/reference"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/r compiler option [C#]"
-  - "reference compiler option [C#]"
-  - "r compiler option [C#]"
-  - "/reference compiler option [C#]"
-  - "-r compiler option [C#]"
-  - "metadata import [C#]"
-  - "public type information [C#]"
-  - "-reference compiler option [C#]"
+title: "-reference (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /reference
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /r compiler option [C#]
+- reference compiler option [C#]
+- r compiler option [C#]
+- /reference compiler option [C#]
+- -r compiler option [C#]
+- metadata import [C#]
+- public type information [C#]
+- -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 caps.latest.revision: 28
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 28
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /reference (C# Compiler Options)
 **\/reference** 選項會讓編譯器將指定之檔案中的 [public](../../../csharp/language-reference/keywords/public.md) 型別資訊匯入目前的專案，使您得以從指定的組件檔案中參考中繼資料 \(Metadata\)。  
@@ -65,7 +84,7 @@ caps.handback.revision: 28
  根據預設，會使用參考 .NET Framework 常用組件的 csc.rsp 回應檔 \(Response File\)。  如果您不要讓編譯器使用 csc.rsp，請使用 [\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。  
   
 > [!NOTE]
->  在 Visual Studio 中，使用 \[**新增參照**\] 對話方塊。  如需詳細資訊，請參閱 [如何：使用加入參考對話方塊加入或移除參考](http://msdn.microsoft.com/zh-tw/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。  在 Visual Studio 2010 和更新版本中，為確保使用 `/reference` 新增參照 和使用 \[**新增參照**\] 對話方塊新增參照會有相同的行為，必須將您要新增的組件之 **Embed Interop Types** 屬性設為 **false**。  **True** 是該屬性的預設值。  
+> 在 Visual Studio 中，使用 [新增參考] 對話方塊。 如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `/reference` 以及使用 [新增參考] 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型] 屬性設為 **False**。 這個屬性的預設值為 **True**。  
   
 ## 範例  
  這個範例示範如何使用[外部別名](../../../csharp/language-reference/keywords/extern-alias.md)功能。  
@@ -94,6 +113,7 @@ GridV1::Grid
 GridV2::Grid   
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

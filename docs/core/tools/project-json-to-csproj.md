@@ -1,5 +1,5 @@
 ---
-title: "project.json 與 csproj 的比較 - .NET Core | Microsoft Docs"
+title: "project.json 與 csproj 比較 - .NET Core"
 description: "查看 project.json 與 csproj 項目的對應。"
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -494,7 +494,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 }
 ```
 
-其在 MSBuild 中的對應項是 [targets](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)：
+其在 MSBuild 中的對應項是 [targets](/visualstudio/msbuild/msbuild-targets)：
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -562,12 +562,12 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 }
 ```
 
-在 csproj 中不支援。 您必須改為在 *.nuspec* 檔案中建立包含內容檔。 如需詳細資訊，請參閱[包含內容檔](https://docs.microsoft.com/nuget/schema/nuspec#including-content-files)。
+在 csproj 中不支援。 您必須改為在 *.nuspec* 檔案中建立包含內容檔。 如需詳細資訊，請參閱[包含內容檔](/nuget/schema/nuspec#including-content-files)。
 
 ## <a name="files"></a>個檔案
 
 在 *project.json* 中，可擴充組建和套件以從其他資料夾進行編譯和內嵌。
-在 MSBuild 中，這會使用[目](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)來完成。 以下是常見慣例範例：
+在 MSBuild 中，這會使用[目](/visualstudio/msbuild/common-msbuild-project-items)來完成。 以下是常見慣例範例：
 
 ```json
 {
@@ -620,7 +620,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary`，您可以使
 
 您可以使用 `PackagePath="path"` 修改 .nupkg 內的套件配置。
 
-除了 `Content`，大多數項目群組都需要明確地新增 `Pack="true"`，以包含在套件中。 因為 MSBuild `<IncludeContentInPack>` 屬性預設會設定為 `true`，所以會將 `Content` 放在套件的 *content* 資料夾中。 如需詳細資訊，請參閱 [Including content in a package](https://docs.microsoft.com/nuget/schema/msbuild-targets#including-content-in-a-package) (在套件中包含內容)。
+除了 `Content`，大多數項目群組都需要明確地新增 `Pack="true"`，以包含在套件中。 因為 MSBuild `<IncludeContentInPack>` 屬性預設會設定為 `true`，所以會將 `Content` 放在套件的 *content* 資料夾中。 如需詳細資訊，請參閱 [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package) (在套件中包含內容)。
 
 `PackagePath="%(Identity)"` 是將套件路徑設定為專案相關檔案路徑的捷徑。
 

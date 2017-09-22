@@ -1,6 +1,6 @@
 ---
 title: "委派和事件"
-description: "委派和事件"
+description: "了解可在 .NET Core 文件中的何處找到委派和事件的資訊。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c9a2d44ae73208543380c52547473a572ba45d04
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,10 +22,9 @@ ms.lasthandoff: 03/13/2017
 
 下列文章將涵蓋本主題︰
 
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
 1. [委派概觀](delegates-overview.md)
 
-    This article covers an overview of delegates.
+    本文涵蓋委派的概觀。
 
 2. [System.Delegate 和 `delegate` 關鍵字](delegate-class.md)
 
@@ -43,7 +42,7 @@ ms.lasthandoff: 03/13/2017
 
     本文涵蓋 .NET 中的事件概觀。
 
-6. [.NET 事件模式](event-pattern.md)
+6. [標準的 .NET 事件模式](event-pattern.md)
 
     本文涵蓋 .NET 中的標準事件模式。
 

@@ -1,5 +1,5 @@
 ---
-title: "Null 條件運算子 (C# 和 Visual Basic) | Microsoft Docs"
+title: "Null 條件運算子 (C# 和 Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -25,10 +25,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0ecdf3c610bb09d1ecdf01e25b75c8f01802e852
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Null 條件運算子 (C# 和 Visual Basic)
@@ -48,7 +49,7 @@ Dim count as Integer? = customers?[0]?.Orders?.Count();  // null if customers, t
   
 ```  
   
- 最後一個範例示範使用最少運算的 Null 條件運算子。  如果條件式成員存取和索引作業鏈結中的一項作業傳回 Null，則鏈結的其餘部分會停止執行。  運算式中優先順序較低的其他作業會繼續進行。  例如，下列程式碼中的 `E` 一律會執行，而且 `??` 和 `==` 作業會執行。  
+ 最後一個範例示範使用最少運算的 Null 條件運算子。  如果條件式成員存取和索引作業鏈結中的一項作業傳回 Null，則鏈結的其餘部分會停止執行。  運算式中優先順序較低的其他作業會繼續進行。  例如，下列程式碼中的 `E` 會在第二行執行，而且 `??` 和 `==` 運算會執行。  在第一行，當左邊評估為非 Null 時，`??` 最少運算和 `E` 不會執行。
   
 ```vb-c#  
 A?.B?.C?[0] ?? E  

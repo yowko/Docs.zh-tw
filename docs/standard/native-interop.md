@@ -1,6 +1,6 @@
 ---
 title: "原生互通性"
-description: "原生互通性"
+description: "了解如何連接到 .NET 中的原生元件。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="native-interoperability"></a>原生互通性
 
-在本文件中，我們將深入介紹可在 .NET 平台上執行「原生互通性」的三種方式。
+在本文件中，我們將深入介紹透過 .NET 提供之執行「原生互通性」的三種方式。
 
 下列為您要呼叫原生程式碼的幾個原因︰
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/02/2017
 當然，上述清單並未涵蓋所有開發人員會想要或需要與原生元件互動的可能情況和情節。 舉例來說，.NET 類別庫會使用原生互通性支援來實作其一部分的 API，例如主控台支援和操作、檔案系統存取權及其他項目。 不過請務必注意，如果情況需要的話，您還有另外的選項。
 
 > [!NOTE]
-> 本文件中的大部分範例會針對 .NET Core 的所有三種支援平台 (Windows、Linux 和 macOS) 呈現。 不過，對於一些簡短和說明性的範例，只會顯示一個使用 Windows 檔名和副檔名 (也就是「dll」程式庫) 的範例。 這不表示無法在 Linux 或 macOS 上使用這些功能，如此呈現只是為了方便起見。
+> 本文件中的大部分範例會針對 .NET Core 的所有三種支援平台 (Windows、Linux 和 macOS) 呈現。 不過，對於一些簡短和說明性的範例，只會顯示一個使用 Windows 檔名和副檔名 (也就是代表程式庫的 "dll") 的範例。 這不表示無法在 Linux 或 macOS 上使用這些功能，如此呈現只是為了方便起見。
 
 ## <a name="platform-invoke-pinvoke"></a>平台叫用 (P/Invoke)
 
@@ -53,7 +54,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 上述範例是很簡單，但它並未示範從 Managed 程式碼叫用 Unmanaged 函式所需的項目。 現在逐步查看範例︰
@@ -84,7 +84,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 當然，這和在 Linux 上的處理方式類似。 函式名稱相同，是因為 `getpid(2)` 為 [POSIX](https://en.wikipedia.org/wiki/POSIX) 系統呼叫。
@@ -107,7 +106,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>從 Unmanaged 程式碼叫用 Managed 程式碼
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,7 +142,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 在我們逐步解說範例之前，先了解我們要使用的 Unmanaged 函式簽章將有所助益。 我們想要呼叫以列舉所有視窗的函式具有下列簽章︰`BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -208,7 +205,6 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 macOS 範例使用相同的函式，而唯一的差別在於 `DllImport` 屬性的引數，macOS 將 `libc` 放置於不同位置。
@@ -261,7 +257,6 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
 以上兩個範例依參數而定，在這兩種情況下，參數會被指定為 Managed 類型。 執行階段會執行「正確的動作」，並將這些項目處理成對等於另一端的項目。 此程序對原生 Interop 程式碼的撰寫品質十分重要，讓我們看看執行階段_封送處理_類型時會發生什麼事。
@@ -270,12 +265,11 @@ namespace PInvokeSamples {
 
 當類型要跨 Managed 界限進入原生類型時，**封送處理**為轉換類型的程序，反之亦然。
 
-因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 比方說，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的、ASCII 等等。依預設，P/Invoke 子系統會嘗試執行以預設行為為基礎的正確動作，您可以在 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) 查看這些動作。 不過，在您需要進行額外控制的情況下，您可以運用 `MarshalAs` 屬性來指定 Unmanaged 這一端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
+因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 例如，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的及 ASCII 等等。依預設，P/Invoke 子系統會嘗試執行以預設行為為基礎的正確動作，您可以在 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) 查看這些動作。 不過，在您需要進行額外控制的情況下，您可以運用 `MarshalAs` 屬性來指定 Unmanaged 這一端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>封送處理類別和結構
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-上述範例顯示了一個呼叫至 `GetSystemTime()` 函式的簡單範例。 有趣的地方在於第 4 行的 \.。此屬性會指定類別的欄位應該循序對應至 Unmanaged 這一端上的結構。 這表示欄位的命名並不重要，只有它們的順序很重要，因為順序需要對應至 Unmanaged 結構，如下所示︰
+上述範例顯示了一個呼叫至 `GetSystemTime()` 函式的簡單範例。 請注意第 4 行。 此屬性會指定類別的欄位應該循序對應至 Unmanaged 這一端上的結構。 這表示欄位的命名並不重要，只有它們的順序很重要，因為順序需要對應至 Unmanaged 結構，如下所示︰
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,7 +312,6 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 我們已經在上述範例中看到了此步驟的 Linux 和 macOS 範例。 下方會再示範一次。
@@ -341,7 +333,6 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 `StatClass` 類別代表 UNIX 系統上 `stat` 系統呼叫所傳回的結構。 它代表指定檔案的相關資訊。 上述類別在 Managed 程式碼中為 stat 結構表示法。 同樣地，類別中的欄位一定要和原生結構有相同的順序 (您可以在您喜愛的 UNIX 實作手冊頁上找到這些資訊)，它們擁有相同的基礎類型。

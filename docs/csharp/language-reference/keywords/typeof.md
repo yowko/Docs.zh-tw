@@ -1,5 +1,5 @@
 ---
-title: "typeof (C# 參考) | Microsoft Docs"
+title: "typeof (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0590aa8a339dc58b7215722a530a71f8973864d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdb335e44a5a3634520d3a86495a4508597b4f70
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="typeof-c-reference"></a>typeof (C# 參考)
@@ -52,7 +52,7 @@ int i = 0;
 System.Type type = i.GetType();  
 ```  
   
- 無法多載 `typeof` 運算子。  
+ `typeof` 運算子無法多載。  
   
  `typeof` 運算子也可以用於開放式泛型型別。 在規格中，具有多個型別參數的類型必須具有適當數目的逗號。 下列範例示範如何判斷方法的傳回型別是否為泛型 <xref:System.Collections.Generic.IEnumerable%601>。 假設方法是 MethodInfo 類型的執行個體︰  
   
@@ -79,3 +79,4 @@ string s = method.ReturnType.GetInterface
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
  [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)
+

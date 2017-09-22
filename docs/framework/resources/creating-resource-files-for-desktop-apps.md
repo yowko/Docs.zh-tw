@@ -1,25 +1,30 @@
 ---
-title: "建立桌面應用程式的資源檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".resources 檔案"
-  - "應用程式資源, 建立檔案"
-  - "資源檔, .resources 檔案"
-  - "資源檔, 建立"
+title: "建立桌面應用程式的資源檔"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource files, .resources files
+- .resources files
+- application resources, creating files
+- resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 caps.latest.revision: 25
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 25
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 建立桌面應用程式的資源檔
 您可以在資源檔中包含資源 \(例如字串、影像或物件資料\)，輕鬆將其提供給應用程式使用。  .NET Framework 提供五種方式來建立資源檔：  

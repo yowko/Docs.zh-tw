@@ -4,8 +4,8 @@ description: "在 macOS 上開始使用 .NET Core, 使用 Visual Studio Code"
 keywords: .NET, .NET Core
 author: bleroy
 ms.author: mairaw
-ms.date: 02/08/2017
-ms.topic: article
+ms.date: 03/23/2017
+ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b

@@ -1,5 +1,5 @@
 ---
-title: "中繼具體化 (C#) | Microsoft Docs"
+title: "中繼具體化 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4807224faef5968828e16a4e1f11614e7ac6cf73
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3faf721dd4dd9cdda2f7d5f2d440c8d3c6623968
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="intermediate-materialization-c"></a>中繼具體化 (C#)
@@ -101,3 +100,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "using 陳述式 (C# 參考) | Microsoft Docs"
+title: "using 陳述式 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 587e50d5c81c19d75e9d8bf4779064947a373b71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 201dde951b4f92d92b7d78b3d71a3f3cfb559507
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-statement-c-reference"></a>using 陳述式 (C# 參考)
@@ -66,5 +67,6 @@ ms.lasthandoff: 03/13/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [using 指示詞](../../../csharp/language-reference/keywords/using-directive.md)   
- [記憶體回收](../../../standard/garbagecollection/index.md)   
- [實作 Dispose 方法](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)
+ [記憶體回收](../../../standard/garbage-collection/index.md)   
+ [實作 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)
+

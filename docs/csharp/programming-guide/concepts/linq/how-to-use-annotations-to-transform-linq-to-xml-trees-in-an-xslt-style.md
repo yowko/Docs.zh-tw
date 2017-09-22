@@ -1,5 +1,5 @@
 ---
-title: "如何：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構 (C#) | Microsoft Docs"
+title: "如何：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aabc07212e46b98e86ec0050474a4c2e34449550
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29cdf1ef54545bdbd96395dd4fe1d7c6b9f375e9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構 (C#)
@@ -47,15 +47,15 @@ ms.lasthandoff: 03/13/2017
   
  就細節而言，此方法包含：  
   
--   執行一或多個 LINQ to XML 查詢，這些查詢會傳回您要從一個組織結構轉換為另一個組織結構的項目集。 針對查詢中的每個項目，新增 <xref:System.Xml.Linq.XElement> 物件作為項目的註釋。 這個新項目將會取代已轉換之新樹狀中的標註項目。 如本範例的示範，這是容易撰寫的簡單程式碼。  
+-   執行一或多個 LINQ to XML 查詢，這些查詢會傳回您要從一個組織結構轉換為另一個組織結構的項目集。 針對查詢中的每個項目，加入新的 <xref:System.Xml.Linq.XElement> 物件做為項目的附註。 這個新項目將會取代已轉換之新樹狀結構中的附註項目。 如本範例的示範，這是容易撰寫的簡單程式碼。  
   
 -   加入為附註的新項目可以包含新的子節點；它可以形成具有任何所需組織結構的子樹狀結構。  
   
 -   有一個特殊規則：如果新項目的子節點位於不同的命名空間中，也就是針對此目的所形成的命名空間 (在此範例中，命名空間為 `http://www.microsoft.com/LinqToXmlTransform/2007`)，則不會將該子項目複製到新的樹狀結構中。 但是，如果命名空間為上述的特殊命名空間，而且該項目的區域名稱為 `ApplyTransforms`，則會反覆運算來源樹狀結構中項目的子節點，並複製到新的樹狀結構 (除非附註的子項目會根據這些規則自我轉換) 中。  
   
--   這有點類似於 XSL 中的轉換規格。 選取一組節點的查詢類似於範本的 XPath 運算式。 建立另存為註釋之新 <xref:System.Xml.Linq.XElement> 的程式碼類似於 XSL 中的序列建構函式，而 `ApplyTransforms` 項目在功能上則類似於 XSL 中的 `xsl:apply-templates` 項目。  
+-   這有點類似於 XSL 中的轉換規格。 選取一組節點的查詢類似於範本的 XPath 運算式。 建立另存為附註之新 <xref:System.Xml.Linq.XElement> 的程式碼類似於 XSL 中的序列建構函式，而 `ApplyTransforms` 項目在功能上則類似於 XSL 中的 `xsl:apply-templates` 項目。  
   
--   採取此種方法的其中一個優點是，當您編寫查詢時，您永遠都是在未修改的來源樹狀上撰寫查詢。 您不必擔心樹狀結構的修改會如何影響您要撰寫的查詢。  
+-   採取此種方法的其中一個優點是，當您編寫查詢時，您永遠都是在未修改的來源樹狀結構上撰寫查詢。 您不必擔心樹狀結構的修改會如何影響您要撰寫的查詢。  
   
 ## <a name="transforming-a-tree"></a>轉換樹狀結構  
  這個第一個範例會將所有 `Paragraph` 節點重新命名為 `para`。  
@@ -450,3 +450,4 @@ After Transform
   
 ## <a name="see-also"></a>另請參閱  
  [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

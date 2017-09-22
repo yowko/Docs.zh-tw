@@ -1,19 +1,18 @@
 ---
 title: "在 Windows XP 上安裝 .NET Framework"
-description: "了解如何在 Windows XP 上安裝 .NET Framework"
+description: "了解如何在 Windows XP 上安裝 .NET Framework。"
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, 安裝"
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
-ms.technology: vs-ide-deployment
+ms.prod: .net-framework
 ms.devlang: dotnet
-ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: 1355f8d70d9b256e3b0b9bf00ef80889aa35fb69
+ms.translationtype: HT
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -28,7 +27,7 @@ ms.lasthandoff: 05/11/2017
 
 您無法在 Windows XP 上安裝 .NET Framework 4.5 或更新版本。 取而代之的是，您必須升級至較新的 Windows 版本，才能使用較新版的 .NET Framework。
 
-.NET Framework 4.6.2 隨附於 [Windows 10 年度更新](https://www.microsoft.com/software-download/windows10)。
+.NET Framework 4.7 隨附於 [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10)。
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

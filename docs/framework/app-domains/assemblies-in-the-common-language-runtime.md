@@ -1,30 +1,35 @@
 ---
-title: "Common Language Runtime 中的組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework]"
-  - "組件 [.NET Framework], 關於"
-  - "組件 [.NET Framework], 界限"
-  - "組件的界限"
-  - "動態組件"
-  - "參考範圍界限"
-  - "安全性 [.NET Framework], 界限"
-  - "類型界限"
-  - "版本界限"
+title: "Common Language Runtime 中的組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dynamic assemblies
+- security [.NET Framework], boundaries
+- boundaries of assemblies
+- assemblies [.NET Framework], about
+- assemblies [.NET Framework], boundaries
+- reference scope boundaries
+- assemblies [.NET Framework]
+- version boundaries
+- type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Common Language Runtime 中的組件
 組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。  組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。  組件為通用語言執行平台提供了感知型別實作所需的資訊。  對於執行階段而言，型別不會存在於組件的內容以外。  
@@ -66,5 +71,6 @@ caps.handback.revision: 11
 |[發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|描述如何建立動態組件。|  
 |[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 .NET Framework 如何在執行階段中解析組件參考。|  
   
-## 參考資料  
+## <a name="reference"></a>參考資料  
  <xref:System.Reflection.Assembly?displayProperty=fullName>
+
