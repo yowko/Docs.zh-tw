@@ -45,13 +45,13 @@ ms.lasthandoff: 08/21/2017
 ## <a name="trace-levels"></a>追蹤層級  
  當您使用 **TraceSwitch**時，還有其他考量。 **TraceSwitch** 物件有四個會傳回 **布林** 值的屬性，指出該參數是否至少設定為某個特定層級：  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  層級可讓您將所接收的追蹤資訊量，僅限於解決問題所需的資訊。 您可以將追蹤參數設為適當的追蹤層級，以指定您想要的追蹤輸出詳細程度。 您可以接收錯誤訊息、警告訊息、告知性訊息、詳細的追蹤訊息，或沒有任何訊息。  
   

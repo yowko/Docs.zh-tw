@@ -37,34 +37,34 @@ ms.lasthandoff: 07/28/2017
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|傳回此項目祖系之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其祖系具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName>|傳回此項目子代之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其子代具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|傳回此項目的子項目之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其子項目具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName>|傳回此項目後的項目之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的這個項目後之項目的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>|傳回此項目前的項目之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的這個項目前之項目的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|傳回此項目及其祖系之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其項目具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName>|傳回此項目及其子代之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其項目具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|傳回此項目祖系之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其祖系具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|傳回此項目子代之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其子代具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|傳回此項目的子項目之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其子項目具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|傳回此項目後的項目之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的這個項目後之項目的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|傳回此項目前的項目之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的這個項目前之項目的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|傳回此項目及其祖系之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其項目具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|傳回此項目及其子代之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 多載會傳回其項目具有指定之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 之 <xref:System.Xml.Linq.XName>。|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>擷取單一項目的方法  
  下列方法會從 <xref:System.Xml.Linq.XElement> 物件擷取單一子系。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>|傳回具有指定之 <xref:System.Xml.Linq.XElement> 的第一個 <xref:System.Xml.Linq.XName> 子物件。|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|傳回具有指定之 <xref:System.Xml.Linq.XElement> 的第一個 <xref:System.Xml.Linq.XName> 子物件。|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>擷取屬性集合的方法  
  下列方法會從 <xref:System.Xml.Linq.XElement> 物件擷取屬性。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|傳回所有屬性之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XAttribute>。|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|傳回所有屬性之 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XAttribute>。|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>擷取單一屬性的方法  
  下列方法會從 <xref:System.Xml.Linq.XElement> 物件擷取單一屬性。  
   
 |方法|描述|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>|傳回具有指定之 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|傳回具有指定之 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

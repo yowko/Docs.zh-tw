@@ -33,7 +33,7 @@ ms.lasthandoff: 07/28/2017
   
 |方法名稱|描述|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|以成對方式比較項目，判斷兩個序列是否相等。|不適用。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|SequenceEqual|以成對方式比較項目，判斷兩個序列是否相等。|不適用。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Linq>   

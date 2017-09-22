@@ -58,5 +58,5 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Devices.Keyboard>   
- <xref:System.Windows.Forms.Keys?displayProperty=fullName>
+ <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
 

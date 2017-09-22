@@ -39,7 +39,7 @@ ms.lasthandoff: 07/28/2017
   
 |方法名稱|描述|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|將兩個序列串連成一個序列。|不適用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=fullName>|  
+|Concat|將兩個序列串連成一個序列。|不適用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Linq>   

@@ -76,10 +76,10 @@ ms.lasthandoff: 08/21/2017
   
 |類別|描述|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|代表 Windows NT 效能計數器元件。 使用這個類別可讀取現有的預先定義或自訂計數器，並將效能資料發佈 (寫入) 至自訂計數器。|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|提供與電腦上的計數器和計數器類別互動的幾種方法。|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|指定 `PerformanceCounter` 元件的安裝程式。|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|指定用以計算 `NextValue` 之 `PerformanceCounter`方法的公式。|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|代表 Windows NT 效能計數器元件。 使用這個類別可讀取現有的預先定義或自訂計數器，並將效能資料發佈 (寫入) 至自訂計數器。|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|提供與電腦上的計數器和計數器類別互動的幾種方法。|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 元件的安裝程式。|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|指定用以計算 `NextValue` 之 `PerformanceCounter`方法的公式。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)

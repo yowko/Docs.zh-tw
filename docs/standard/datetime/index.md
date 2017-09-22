@@ -85,5 +85,5 @@ ms.lasthandoff: 09/05/2017
 
 ## <a name="reference"></a>參考資料
 
-<xref:System.TimeZoneInfo?displayProperty=fullName>
+<xref:System.TimeZoneInfo?displayProperty=nameWithType>
 
