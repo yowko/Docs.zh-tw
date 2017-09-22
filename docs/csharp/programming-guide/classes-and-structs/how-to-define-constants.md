@@ -36,7 +36,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-constants-in-c"></a>如何：在 C# 中定義常數
-常數是欄位，其值於編譯時期設定且絕對不會變更。 使用常數提供有意義的名稱，而不是特殊值的數值常值 (「神奇號碼」)。  
+常數是欄位，其值於編譯時期設定且絕對不會變更。 使用常數需提供有意義的名稱，而不是特殊值的數字常值 \(「魔術數字 (magic numbers)」\)。  
   
 > [!NOTE]
 >  在 C# 中，[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 前置處理器指示詞不能以 C 和 C++ 一般使用的方式來定義常數。  
