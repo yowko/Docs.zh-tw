@@ -77,4 +77,3 @@ ms.lasthandoff: 08/21/2017
   
  [安全性](../../docs/standard/security/index.md)  
  提供通用語言執行平台和 .NET Framework 中，可加強應用程式開發安全性的類別和服務相關資訊。
-
