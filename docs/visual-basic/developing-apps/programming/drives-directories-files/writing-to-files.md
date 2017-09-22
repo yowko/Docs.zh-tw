@@ -1,26 +1,45 @@
 ---
-title: "Writing to Files in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "I/O [Visual Basic], writing to files"
-  - "files, writing to"
-  - "examples [Visual Basic], writing to files"
-  - "writing to files"
-  - "Visual Basic, writing to files"
+title: "在 Visual Basic 中寫入檔案"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- I/O [Visual Basic], writing to files
+- files, writing to
+- examples [Visual Basic], writing to files
+- writing to files
+- Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2bee678ced4cfbcae186f298b228e691d1e6cd3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Writing to Files in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -66,5 +85,6 @@ caps.handback.revision: 13
  [Storing Data to and Reading from the Clipboard](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  說明如何執行相關的工作`My.Computer.Clipboard`，例如讀取的資料，或將資料寫入至 \[剪貼簿\]。  
   
- [File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- 提供檔案編碼方式的概觀。
+ [檔案編碼方式](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ 提供檔案編碼的概觀。
+

@@ -1,23 +1,28 @@
 ---
-title: "組件名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 名稱"
-  - "名稱 [.NET Framework], 組件"
+title: "組件名稱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], assemblies
+- assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7029fb2b436c9ba49f2dfd3da07c5147222fbeaf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 組件名稱
 組件名稱存放在中繼資料中，對於組件的範圍 \(Scope\) 和應用程式的使用有重大的影響。  強式名稱的組件具有包含組件名稱、文化特性、公開金鑰和版本號碼的完整名稱。  這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得的載入組件。  

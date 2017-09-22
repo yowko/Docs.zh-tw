@@ -1,5 +1,5 @@
 ---
-title: "C# 編碼慣例 (C# 程式設計手冊) | Microsoft Docs"
+title: "C# 編碼慣例 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3a51c6778127c7d2faf9a10b799875308d2850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f32fdc0eb1954cdac30c39e05c74d43301d850c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
@@ -59,7 +60,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="layout-conventions"></a>版面配置慣例  
  好的版面配置使用格式設定，來強調程式碼的結構，並讓程式碼更易於閱讀。 Microsoft 範例遵循以下慣例：  
   
--   使用預設程式碼編輯器設定 (智慧型縮排、四個字元縮排、定位點儲存為空格)。 如需詳細資訊，請參閱[選項、文字編輯器、C#、格式](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting)。  
+-   使用預設程式碼編輯器設定 (智慧型縮排、四個字元縮排、定位點儲存為空格)。 如需詳細資訊，請參閱[選項、文字編輯器、C#、格式](/visualstudio/ide/reference/options-text-editor-csharp-formatting)。  
   
 -   每行只撰寫一個陳述式。  
   
@@ -219,4 +220,5 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
- [安全程式碼撰寫方針](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)
+

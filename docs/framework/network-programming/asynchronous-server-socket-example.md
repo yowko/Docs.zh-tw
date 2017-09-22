@@ -1,30 +1,35 @@
 ---
-title: "非同步伺服器通訊端範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "通訊端，非同步伺服器通訊端"
-  - "通訊端，程式碼範例"
-  - "非同步伺服器通訊端"
+title: "非同步伺服器通訊端範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 非同步伺服器通訊端範例
-下列範例建立程式接收來自用戶端的連接要求的伺服器。  伺服器會以一個非同步通訊端建置，因此，伺服器應用程式的執行沒有逾時，在等候來自用戶端的連接時。  應用程式接收來自用戶端的字串，在主控台視窗中顯示的字串，然後 echo 字串傳回至用戶端。  來自用戶端的字串必須包含字串「\<EOF\>」通知訊息的結尾。  
+# <a name="asynchronous-server-socket-example"></a>非同步伺服器通訊端範例
+下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，不會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步用戶端通訊端範例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
  [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+

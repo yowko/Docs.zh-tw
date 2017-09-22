@@ -1,5 +1,5 @@
 ---
-title: "LINQ 簡介 (C#) | Microsoft Docs"
+title: "LINQ 簡介 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 617fec7a8405116735d7a7510513adf845068f4e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d90ea2503ba94df8ddb750b6f328168ddf22a65a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-linq-c"></a>LINQ 簡介 (C#)
@@ -51,3 +52,4 @@ Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技
   
 ## <a name="see-also"></a>另請參閱  
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+

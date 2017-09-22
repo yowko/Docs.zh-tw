@@ -1,20 +1,39 @@
 ---
-title: "執行個體建構函式 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "建構函式 [C#], 執行個體建構函式"
-  - "執行個體建構函式 [C#]"
+title: "執行個體建構函式 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- constructors [C#], instance constructors
+- instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f93f622d5bf99ab7e8b1d8338192ff58472813dd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 執行個體建構函式 (C# 程式設計手冊)
 當您使用 [new](../../../csharp/language-reference/keywords/new.md) 運算式建立的 [class](../../../csharp/language-reference/keywords/class.md) 的物件時，執行個體建構函式會用於建立並且初始化任一執行個體成員變數。  若要初始化 [static](../../../csharp/language-reference/keywords/static.md) 類別或是非靜態類別中的靜態變數，必須定義靜態建構函式。  如需詳細資訊，請參閱 [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
@@ -65,5 +84,6 @@ caps.handback.revision: 26
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)
+

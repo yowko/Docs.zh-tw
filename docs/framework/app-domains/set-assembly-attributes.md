@@ -1,24 +1,29 @@
 ---
-title: "設定組件屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 屬性"
-  - "組件繫結, 屬性"
-  - "組件資訊清單, 屬性"
+title: "設定組件屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], attributes
+- assembly binding, attributes
+- assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 設定組件屬性
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：  
@@ -90,3 +95,4 @@ caps.handback.revision: 13
 ## 請參閱  
  [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

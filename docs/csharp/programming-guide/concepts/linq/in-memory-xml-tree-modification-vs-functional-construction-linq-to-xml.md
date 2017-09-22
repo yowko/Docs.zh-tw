@@ -1,5 +1,5 @@
 ---
-title: "記憶體中 XML 樹狀修改與函數式建構 (LINQ to XML) (C#) | Microsoft Docs"
+title: "記憶體中 XML 樹狀修改與函數式建構 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,17 @@ ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ed42b0d8acf1baeba84feb1d0a3ed72f2d3b76ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ca3d24c8ff145bdc30db3f71b8ab3e28217f67d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>記憶體中 XML 樹狀修改與函數式建構 (LINQ to XML) (C#)
-就地修改 XML 樹狀結構是變更 XML 文件組織結構的傳統方式。 一般應用程式會將文件載入到資料存放區，例如 DOM 或 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]；使用程式設計介面插入節點、刪除節點或變更節點的內容；然後將 XML 儲存到檔案或透過網路傳輸。  
+就地修改 XML 樹狀結構是變更 XML 文件組織結構的傳統方式。 一般應用程式會將文件載入到資料存放區，例如 DOM 或 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]；使用程式設計介面插入節點、刪除節點或變更節點的內容；然後將 XML 儲存到檔案或透過網路傳輸。  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 可啟用在許多案例中有用的其他方法：「函數式建構」**。 功能結構會將修改資料視為轉換的問題，而不是資料存放區的詳細管理。 如果您可以表示資料，並將其有效地從一個表單轉換到另一個表單，結果會與您取得一個資料存放區，然後以相同的方式管理該資料存放區取得其他組織結構相同。 函數式建構方法的關鍵在於將查詢結果傳遞到 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 建構函式。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可啟用在許多案例中有用的其他方法：「函數式建構」。 功能結構會將修改資料視為轉換的問題，而不是資料存放區的詳細管理。 如果您可以表示資料，並將其有效地從一個表單轉換到另一個表單，結果會與您取得一個資料存放區，然後以相同的方式管理該資料存放區取得其他組織結構相同。 功能結構方法的關鍵在於將查詢結果傳遞到 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 建構函式。  
   
  在許多情況下，您可以用管理資料存放區的少數時間撰寫轉換程式碼，而且該程式碼更穩定、更容易維護。 在這些情況下，即使轉換方法可以取得更大的處理能力，這都是更有效的修改資料方式。 在許多情況下，如果開發人員熟悉功能性方法，產生的程式碼較容易了解。 尋找修改樹狀結構每個部分的程式碼非常容易。  
   
@@ -88,3 +87,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>另請參閱  
  [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

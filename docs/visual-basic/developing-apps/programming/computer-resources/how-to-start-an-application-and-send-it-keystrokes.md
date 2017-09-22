@@ -1,25 +1,44 @@
 ---
-title: "How to: Start an Application and Send it Keystrokes (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "keystrokes, sending"
-  - "Shell command example [Visual Basic]"
-  - "processes, starting and sending keystrokes"
-  - "SendKeys.SendWait examples"
+title: "如何：啟動應用程式並且將按鍵傳送至該應用程式 (Visual Basic)"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- keystrokes, sending
+- Shell command example [Visual Basic]
+- processes, starting and sending keystrokes
+- SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 142db417b6b61724ad80bd3f8e5083dd420b3aeb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Start an Application and Send it Keystrokes (Visual Basic)
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -39,3 +58,4 @@ caps.handback.revision: 15
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>
+

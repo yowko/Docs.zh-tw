@@ -1,5 +1,5 @@
 ---
-title: "static (C# 參考) | Microsoft Docs"
+title: "static (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9126a882984799a5c726ecc5d82b3f3db707858a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e46dc2f00d1c185379dba1017ca445b9ae5ae72
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-c-reference"></a>static (C# 參考)
@@ -65,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  類別和靜態類別可能會有靜態建構函式。 在啟動程式時與具現化類別時之間的某個點，會呼叫靜態建構函式。  
   
 > [!NOTE]
->  `static` 關鍵字的使用方式比在 C++ 中受到更多限制。 若要與 C++ 關鍵字進行比較，請參閱[靜態](https://docs.microsoft.com/cpp/misc/static-cpp)。  
+>  `static` 關鍵字的使用方式比在 C++ 中受到更多限制。 若要與 C++ 關鍵字進行比較，請參閱[儲存類別 (C++)](/cpp/cpp/storage-classes-cpp#static)。
   
  若要示範靜態成員，請考慮使用代表公司員工的類別。 假設此類別包含可計算員工人數的方法以及可儲存員工人數的欄位。 方法和欄位都不屬於任何執行個體員工。 相反地，它們屬於公司類別。 因此，它們應該宣告為類別的靜態成員。  
   

@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 中過時的類型 | Microsoft Docs"
+title: ".NET Framework 中過時的類型"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,10 +18,11 @@ caps.latest.revision: 41
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 175e46e3729190423b85296d7c7c47b136339305
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ab48dedaef24ea209c38939ee87a0321da55cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型

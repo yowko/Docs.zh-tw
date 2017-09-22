@@ -1,22 +1,27 @@
 ---
-title: "如何：設定用戶端應用程式服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "用戶端應用程式服務, 設定"
+title: "如何：設定用戶端應用程式服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
 caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a1d15e380b6b7e8b226f26b261f4d4540eeef88d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：設定用戶端應用程式服務
 本主題說明如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] \[專案設計工具\] 啟用及設定用戶端應用程式服務。  您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。  設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。  如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET Application Services Overview](../Topic/ASP.NET%20Application%20Services%20Overview.md)。  
@@ -157,4 +162,5 @@ caps.handback.revision: 23
  [Implementing a Membership Provider](../Topic/Implementing%20a%20Membership%20Provider.md)   
  [Implementing a Role Provider](../Topic/Implementing%20a%20Role%20Provider.md)   
  [應用程式設定架構](../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [Creating and Configuring the Application Services Database for SQL Server](../Topic/Creating%20and%20Configuring%20the%20Application%20Services%20Database%20for%20SQL%20Server.md)
+ [建立及設定 SQL Server 的應用程式服務資料庫](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+

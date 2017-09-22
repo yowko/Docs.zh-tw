@@ -1,6 +1,6 @@
 ---
-title: "sbyte (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "sbyte (C# 參考)"
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df57296bb285441aeddc596289d82d1e458dc278
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69741a5b9556c769156687584041667312550c17
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sbyte-c-reference"></a>sbyte (C# 參考)
@@ -115,7 +116,7 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.SByte>   
@@ -126,3 +127,4 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

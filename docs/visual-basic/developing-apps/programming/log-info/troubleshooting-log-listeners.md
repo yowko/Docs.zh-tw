@@ -1,24 +1,43 @@
 ---
-title: "Troubleshooting: Log Listeners (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "event logs, troubleshooting"
-  - "troubleshooting Visual Basic, event logs"
-  - "troubleshooting event logs"
+title: "疑難排解：記錄檔接聽程式 (Visual Basic)"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- event logs, troubleshooting
+- troubleshooting Visual Basic, event logs
+- troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0542aef4dc60821939e85760e6fadf0dfb528dec
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Troubleshooting: Log Listeners (Visual Basic)
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -47,7 +66,8 @@ caps.handback.revision: 11
   
      如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+

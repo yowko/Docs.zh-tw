@@ -1,25 +1,30 @@
 ---
-title: "Dynamic Language Runtime 概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DLR"
-  - "Dynamic Language Runtime"
-  - "IronPython"
-  - "IronRuby"
+title: "Dynamic Language Runtime 概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dynamic language runtime
+- IronPython
+- DLR
+- IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 caps.latest.revision: 26
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 26
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Dynamic Language Runtime 概觀
 *Dynamic Language Runtime* \(DLR\) 是在 Common Language Runtime \(CLR\) 中加入了一組動態語言服務的執行階段環境。  DLR 讓開發在 .NET Framework 上執行的動態語言以及將動態功能加入靜態型別語言變得更為容易。  
@@ -55,7 +60,7 @@ caps.handback.revision: 26
   
  使用 DLR 開發的語言範例包括下列各項：  
   
--   IronPython，  可用性如同來自 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040) 網站的開放原始碼軟體。  
+-   IronPython。 在 [GitHub](https://github.com/IronLanguages/ironpython2) 網站上以開放原始碼軟體形式提供。  
   
 -   IronRuby，  可用性如同來自 [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 網站的開放原始碼軟體。  
   
@@ -100,5 +105,6 @@ DLR 架構
  <xref:System.Dynamic.ExpandoObject>   
  <xref:System.Dynamic.DynamicObject>   
  [Common Language Runtime](../../../docs/standard/clr.md)   
- [運算式樹狀架構](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)   
- [逐步解說：建立和使用動態物件](../Topic/Walkthrough:%20Creating%20and%20Using%20Dynamic%20Objects%20\(C%23%20and%20Visual%20Basic\).md)
+ [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
+ [逐步解說：建立和使用動態物件](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

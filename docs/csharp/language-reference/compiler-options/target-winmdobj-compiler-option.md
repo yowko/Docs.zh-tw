@@ -1,5 +1,5 @@
 ---
-title: "-target:winmdobj (C# 編譯器選項) | Microsoft Docs"
+title: "-target:winmdobj (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,11 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7581ec18db0d2741452b47ad6200482b63c102be
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3967f7f9326652271ce55aa286e9f42f94dee775
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (C# 編譯器選項)
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /target:winmdobj  
 ```  
   
@@ -53,23 +53,24 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>若要在 Visual Studio IDE 中為 Windows 市集應用程式設定這個編譯器選項  
   
-1.  在方案總管****中，開啟專案的捷徑功能表，然後選擇 [屬性]****。  
+1.  在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
   
-2.  選擇 [應用程式]**** 索引標籤。  
+2.  選擇 [應用程式] 索引標籤。  
   
-3.  在 [輸出類型]**** 清單中，選擇 [WinMD 檔案]****。  
+3.  在 [輸出類型] 清單中，選擇 [WinMD 檔案]。  
   
-     [WinMD 檔案]**** 選項僅適用於 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] 應用程式範本。  
+     [WinMD 檔案] 選項僅適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式範本。  
   
- 如需如何以程式設計方式設定此編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  下列命令會將 `filename.cs` 編譯到中繼 .winmdobj 檔案。  
   
-```  
+```console  
 csc /target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [/target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+

@@ -1,36 +1,41 @@
 ---
-title: "如何：使用 WebRequest 類別要求資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "下載網際網路資源，步驟"
-  - "從網際網路要求資料，步驟"
-  - "WebRequest 類別，接收資料"
-  - "接收資料，使用 WebRequest 類別"
-  - "網際網路，要求資料"
+title: "如何：使用 WebRequest 類別要求資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- downloading Internet resources, steps
+- requesting data from Internet, steps
+- WebRequest class, receiving data
+- receiving data, using WebRequest class
+- Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：使用 WebRequest 類別要求資料
-下列程序所說明的步驟要求資源時從伺服器，例如，網頁或檔案。  必須由 URI 識別的資源。  
+# <a name="how-to-request-data-using-the-webrequest-class"></a>如何：使用 WebRequest 類別要求資料
+下列程序描述用來向伺服器要求資源的步驟 ，例如網頁或檔案。 資源必須是以 URI 識別。  
   
-### 要求主機伺服器上的資料  
+### <a name="to-request-data-from-a-host-server"></a>向主機伺服器要求資料  
   
-1.  您可以使用資源的 URI。 <xref:System.Net.WebRequest.Create%2A><xref:System.Net.WebRequest> 建立執行個體。  
+1.  藉由使用資源的 URI 來呼叫 <xref:System.Net.WebRequest.Create%2A>，以建立 <xref:System.Net.WebRequest> 執行個體。  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -38,13 +43,12 @@ caps.handback.revision: 8
   
     ```vb  
     Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/")  
-  
     ```  
   
     > [!NOTE]
-    >  .NET Framework 提供 URI 從「http 開始從 **WebRequest** 和 **WebResponse** 衍生通訊協定特定類別: 」， 「https:'' 「， ftp: 」和「檔案: 」。  使用其他通訊協定，才能存取資源，您必須從實作 **WebRequest** 和 **WebResponse**衍生的通訊協定的特定類別。  如需詳細資訊，請參閱[可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)。  
+    >  .NET Framework 針對以 "http:"、"https:''、"ftp:" 和 "file:" 開頭的 URI，提供了衍生自 **WebRequest** 和 **WebResponse** 的通訊協定特定類別。 若要使用其他通訊協定存取資源，您必須實作衍生自 **WebRequest** 和 **WebResponse** 的通訊協定特定類別。 如需詳細資訊，請參閱[可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)。  
   
-2.  設定您在 **WebRequest**需要的任何屬性值。  例如，啟用驗證，請將屬性設定為 **Credentials**<xref:System.Net.NetworkCredential> 類別的執行個體。  
+2.  在 **WebRequest** 中設定任何需要的屬性值。 例如，若要啟用驗證，請將 **Credentials** 屬性設定為 <xref:System.Net.NetworkCredential> 類別的執行個體。  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     在許多情況下， **WebRequest** 類別足以接收資料。  不過，在中，如果您需要設定通訊協定的特定屬性，您必須將項目轉換 **WebRequest** 至通訊協定的特定型別。  例如，存取 <xref:System.Net.HttpWebRequest>HTTP 特定屬性，請先將轉型為 **WebRequest** **HttpWebRequest** 參考。  下列程式碼範例會示範如何設定 HTTP 特定 <xref:System.Net.HttpWebRequest.UserAgent%2A> 屬性。  
+     在大部分情況下，**WebRequest** 類別即足以接收資料。 不過，如果您需要設定通訊協定特定屬性，就必須將 **WebRequest** 轉換為通訊協定特定類型。 例如，若要存取 <xref:System.Net.HttpWebRequest> 的 HTTP 特定屬性，請將 **WebRequest** 轉換為 **HttpWebRequest** 參考。 下列程式碼範例示範如何設定 HTTP 特定的 <xref:System.Net.HttpWebRequest.UserAgent%2A> 屬性。  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -62,10 +66,9 @@ caps.handback.revision: 8
   
     ```vb  
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
-  
     ```  
   
-3.  若要將要求傳送至伺服器，請呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A>。  傳回的 **WebResponse** 物件的實際型別視所要求 URI 的配置。  
+3.  若要將要求傳送到伺服器，請呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A>。 **WebResponse** 物件傳回的實際類型取決於所要求 URI 的配置。  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -73,13 +76,12 @@ caps.handback.revision: 8
   
     ```vb  
     Dim response As WebResponse = request.GetResponse()  
-  
     ```  
   
     > [!NOTE]
-    >  在您完成 <xref:System.Net.WebResponse> 物件之後，您必須呼叫方法 <xref:System.Net.WebResponse.Close%2A> 關閉它。  或者，在 中，如果您從回應物件取得回應資料流，您可以藉由呼叫 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 方法關閉資料流。  如果您不要關閉回應資料流，您的應用程式可能會用盡與伺服器的連接變得無法處理其他要求。  
+    >  完成使用 <xref:System.Net.WebResponse> 物件之後，您必須呼叫 <xref:System.Net.WebResponse.Close%2A> 方法來關閉它。 或者，如果您已自回應物件取得回應資料流，則可呼叫 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 方法來關閉該資料流。 如果不關閉回應或資料流，應用程式就會耗盡所有與該伺服器的連線，而無法處理其他要求。  
   
-4.  您可以存取 **WebResponse** 的屬性或轉型 **WebResponse** 至通訊協定的特定執行個體讀取通訊協定的特定屬性。  例如，存取 <xref:System.Net.HttpWebResponse>HTTP 特定屬性，請先將轉型為 **WebResponse** **HttpWebResponse** 參考。  下列程式碼範例將示範如何顯示狀態資訊傳送回應。  
+4.  您可以存取 **WebResponse** 的屬性或將 **WebResponse** 轉換為通訊協定特定執行個體，以讀取通訊協定特定屬性。 例如，若要存取 <xref:System.Net.HttpWebResponse> 的 HTTP 特定屬性，請將 **WebResponse** 轉換為 **HttpWebResponse** 參考。 下列程式碼範例示範如何顯示與回應一起傳送的狀態資訊。  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -89,7 +91,7 @@ caps.handback.revision: 8
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
     ```  
   
-5.  若要取得包含回應資料的資料流由伺服器傳送，使用 **WebResponse**的 <xref:System.Net.HttpWebResponse.GetResponseStream%2A> 方法。  
+5.  若要取得含有伺服器所傳送之回應資料的資料流，請使用 **WebResponse** 的 <xref:System.Net.HttpWebResponse.GetResponseStream%2A> 方法。  
   
     ```csharp  
     Stream dataStream = response.GetResponseStream ();  
@@ -97,10 +99,9 @@ caps.handback.revision: 8
   
     ```vb  
     Dim dataStream As Stream = response.GetResponseStream()  
-  
     ```  
   
-6.  使用方法，在 **WebResponse.Close** 讀取回應的資料之後，您必須關閉回應資料流使用 **Stream.Close** 方法或結束回應。  在這兩種方法的 **關閉** 回應資料流和 **WebResponse**是不必要的，不過，這樣做並没有害。  **WebResponse.Close** 呼叫 **Stream.Close** ，當關閉回應時。  
+6.  讀取回應中的資料之後，您必須使用 **Stream.Close** 方法關閉回應資料流，或使用 **WebResponse.Close** 方法關閉回應。 您不需要同時針對回應資料流和 **WebResponse** 呼叫 **Close** 方法；不過，這麼做亦無害。 **WebResponse.Close** 在關閉回應時會呼叫 **Stream.Close**。  
   
     ```csharp  
     response.Close();  
@@ -108,10 +109,9 @@ caps.handback.revision: 8
   
     ```vb  
     response.Close()  
-  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```csharp  
 using System;  
@@ -184,9 +184,10 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立網際網路要求](../../../docs/framework/network-programming/creating-internet-requests.md)   
  [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
  [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)   
- [如何：使用 WebRequest 類別傳送資料](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+ [何：使用 WebRequest 類別傳送資料](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+

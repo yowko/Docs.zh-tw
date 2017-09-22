@@ -1,5 +1,5 @@
 ---
-title: "如何：將字串轉換為 DateTime (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：將字串轉換為 DateTime (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,15 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f31deeb2b29495ab48781c7e673fed37e8ad8dce
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>如何：將字串轉換為 DateTime (C# 程式設計手冊)
-程式常讓使用者將日期輸入為字串值。 若要將字串型日期轉換為 <xref:System.DateTime?displayProperty=fullName> 物件，您可以使用 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> 方法或 <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> 靜態方法，如下例所示。  
+程式常讓使用者將日期輸入為字串值。 若要將字串型的日期轉換成 <xref:System.DateTime?displayProperty=fullName> 物件，您可以使用 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> 方法或 <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> 靜態方法，如下例所示。  
   
  **文化特性**。  世界各地的不同文化，有不同的日期字串撰寫方式。  例如，01/20/2008 在美國是 January 20th, 2008。  在法國，這會擲回 InvalidFormatException。 這是因為法國讀取的日期時間為日/月/年，而在美國是月/日/年。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
  如需將字串轉換成 dateTime 的簡單範例，請參閱下例。  
   
- 如需更多日期字串的範例，請參閱 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>。  
+ 如需更多的日期字串範例，請參閱 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>。  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -74,3 +74,4 @@ Press any key to continue . . .
   
 ## <a name="see-also"></a>另請參閱  
  [字串](../../../csharp/programming-guide/strings/index.md)
+

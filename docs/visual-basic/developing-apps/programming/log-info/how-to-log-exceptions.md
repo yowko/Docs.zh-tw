@@ -1,23 +1,42 @@
 ---
-title: "How to: Log Exceptions in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "exceptions, logging"
-  - "exceptions, tracking"
+title: "如何：在 Visual Basic 中記錄例外狀況"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- exceptions, logging
+- exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: adf2dc683a139d21f24379efc779d4510a2057eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Log Exceptions in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -54,9 +73,9 @@ caps.handback.revision: 19
   
 1.  在 \[**方案總管**\] 中選取專案。  在 \[**專案**\] 功能表上，選擇 \[**屬性**\]。  
   
-2.  按一下 \[**應用程式**\] 索引標籤。  
+2.  按一下 [應用程式]  索引標籤。  
   
-3.  按一下 \[**檢視應用程式事件**\] 按鈕，開啟 \[程式碼編輯器\]。  
+3.  按一下 [檢視應用程式事件]  按鈕以開啟 [程式碼編輯器]。  
   
      這會開啟 ApplicationEvents.vb 檔案。  
   
@@ -82,3 +101,4 @@ caps.handback.revision: 19
  [如何：寫入記錄訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
  [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

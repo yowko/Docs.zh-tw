@@ -51,10 +51,10 @@ ms.lasthandoff: 03/13/2017
  提供完整 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 語言規格的連結，該規格包含有關語言所有層面的詳細資訊。  
   
 ## <a name="reference"></a>參考資料  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  這個命名空間包含 Visual Basic Power Packs 控制項的類別。 Visual Basic Power Packs 控制項是附加的 Windows Form 控制項。  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  這個命名空間提供一種元件，可讓您以表單出現在螢幕上的樣子列印表單的傳真。  
   
 ## <a name="related-sections"></a>相關章節  

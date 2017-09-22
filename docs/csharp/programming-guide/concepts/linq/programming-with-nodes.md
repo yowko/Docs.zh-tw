@@ -1,5 +1,5 @@
 ---
-title: "搭配節點進行程式設計 (C#) | Microsoft Docs"
+title: "搭配節點進行程式設計 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,21 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b5cc31077c31d6ba08521a9ba6d602409734e695
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6afa5c9ca5fdf4a8c64be826ead86e96aa94a446
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-with-nodes-c"></a>搭配節點進行程式設計 (C#)
-必須撰寫程式 (例如，XML 編輯器、轉換系統或報表寫入器) 的 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 開發人員通常需要撰寫的程式可在比項目和屬性更細微的層級上作業。 他們通常需要在節點層級、管理的文字節點、處理指示與註解上作業。 這個主題提供一些關於在節點層級進行程式設計的詳細資料。  
+必須撰寫程式 (例如，XML 編輯器、轉換系統或報表寫入器) 的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 開發人員通常需要撰寫的程式可在比項目和屬性更細微的層級上作業。 他們通常需要在節點層級、管理的文字節點、處理指示與註解上作業。 這個主題提供一些關於在節點層級進行程式設計的詳細資料。  
   
 ## <a name="node-details"></a>節點詳細資料  
  這裡提供程式設計人員在節點層級上作業時應該知道的一些程式設計詳細資料。  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>XDocument 之子節點的父屬性設定為 Null  
- <xref:System.Xml.Linq.XObject.Parent%2A> 屬性包含父 <xref:System.Xml.Linq.XElement>，而不是父節點。 <xref:System.Xml.Linq.XDocument> 的子節點沒有父 <xref:System.Xml.Linq.XElement>。 其父系為文件，因此，這些節點的 <xref:System.Xml.Linq.XObject.Parent%2A> 屬性設定為 Null。  
+ <xref:System.Xml.Linq.XObject.Parent%2A> 屬性包含父代 <xref:System.Xml.Linq.XElement>，而不包含父節點。 <xref:System.Xml.Linq.XDocument> 的子節點沒有父代 <xref:System.Xml.Linq.XElement>。 其父代為文件，因此，這些節點的 <xref:System.Xml.Linq.XObject.Parent%2A> 屬性設定為 Null。  
   
  下列範例為其示範：  
   
@@ -51,7 +51,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>文字節點可以是相鄰的  
- 在多個 XML 程式撰寫模型 (Programming Model) 中，相鄰的文字節點永遠會遭到合併。 這有時候稱為文字節點的正規化。 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 不會正規化文字節點。 如果您將兩個文字節點加入到相同的項目，則會讓兩個文字節點變成相鄰的。 不過，如果您新增指定為字串 (而非 <xref:System.Xml.Linq.XText> 節點) 的內容，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 可能會合併字串與相鄰的文字節點。  
+ 在多個 XML 程式撰寫模型 (Programming Model) 中，相鄰的文字節點永遠會遭到合併。 這有時候稱為文字節點的正規化。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不會正規化文字節點。 如果您將兩個文字節點加入到相同的項目，則會讓兩個文字節點變成相鄰的。 不過，如果您新增指定為字串 (而非 <xref:System.Xml.Linq.XText> 節點) 的內容，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可能會合併字串與相鄰的文字節點。  
   
  下列範例為其示範：  
   
@@ -111,15 +111,15 @@ Console.WriteLine(child2);
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>命名空間為 LINQ to XML 樹狀結構中的屬性  
- 即使命名空間宣告與屬性具有相同的語法，在某些程式設計介面 (例如，XSLT 和 XPath) 中，命名空間宣告不會被視為屬性。 不過，在 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中，命名空間會當做 <xref:System.Xml.Linq.XAttribute> 物件，儲存在 XML 樹狀結構中。 如果您逐一查看包含命名空間宣告之項目的屬性，您將可以看到命名空間宣告，做為所傳回之集合中的其中一個項目。  
+ 即使命名空間宣告與屬性具有相同的語法，在某些程式設計介面 (例如，XSLT 和 XPath) 中，命名空間宣告不會被視為屬性。 不過，在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，命名空間會當做 <xref:System.Xml.Linq.XAttribute> 物件，儲存在 XML 樹狀結構中。 如果您逐一查看包含命名空間宣告之項目的屬性，您將可以看到命名空間宣告，做為所傳回之集合中的其中一個項目。  
   
- <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> 屬性 (Property) 會指出屬性 (Attribute) 是否為命名空間宣告。  
+ <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> 屬性會指出屬性是否為命名空間宣告。  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -140,7 +140,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath 座標軸方法不會傳回 XDocument 的子系空白字元  
- 只要文字節點只包含空白字元，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 就允許使用 <xref:System.Xml.Linq.XDocument> 的文字子節點。 不過，XPath 物件模型不包含當做文件子節點的空白字元，因此，當您使用 <xref:System.Xml.Linq.XContainer.Nodes%2A> 座標軸逐一查看 <xref:System.Xml.Linq.XDocument> 的子系時，將不會傳回空白字元文字節點。 但是，當您使用 XPath 座標軸方法逐一查看 <xref:System.Xml.Linq.XDocument> 的子系時，將不會傳回空白字元文字節點。  
+ 只要文字節點只包含空白字元，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 就允許使用 <xref:System.Xml.Linq.XDocument> 的文字子節點。 不過，XPath 物件模型不包含當做文件子節點的空白字元，因此，當您使用 <xref:System.Xml.Linq.XDocument> 座標軸逐一查看 <xref:System.Xml.Linq.XContainer.Nodes%2A> 的子系時，將不會傳回空白字元文字節點。 但是，當您使用 XPath 座標軸方法逐一查看 <xref:System.Xml.Linq.XDocument> 的子系時，將不會傳回空白字元文字節點。  
   
 ```csharp  
 // Create a document with some white space child nodes of the document.  
@@ -191,3 +191,4 @@ Console.WriteLine(doc.Nodes().Count());
   
 ## <a name="see-also"></a>另請參閱  
  [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

@@ -1,27 +1,26 @@
 ---
-title: "dotnet-migrate 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-migrate 命令會移轉專案及其所有相依性。"
-keywords: "dotnet-migrate, CLI, CLI 命令, .NET Core"
-author: blackdwarf
+title: "dotnet migrate 命令 - .NET Core CLI"
+description: "dotnet migrate 命令會移轉專案及其所有相依性。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: bde4df1c9e84e103c75b0ccc32d7e970b7708b53
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-migrate"></a>dotnet migrate
 
-# <a name="dotnet-migrate"></a>dotnet-migrate
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
-`dotnet-migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 1.0 專案。
+`dotnet migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 1.0 專案。
 
 ## <a name="synopsis"></a>概要
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 03/22/2017
 * *solution.sln* 檔案，移轉方案參考的專案。
 * 指定之目錄的所有子目錄，以遞迴方式進行。
 
-`dotnet migrate` 命令會在 `backup` 目錄 (若目錄不存在則會建立) 中保留移轉的 *project.json* 檔案。 這可以使用 `--skip-backup` 選項覆寫此行為。 
+`dotnet migrate` 命令會在 `backup` 目錄 (若目錄不存在則會建立) 中保留移轉的 *project.json* 檔案。 這可以使用 `--skip-backup` 選項覆寫此行為。
 
 根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 選項，則輸出會儲存到指定的檔案。 
 
@@ -63,11 +62,11 @@ ms.lasthandoff: 03/22/2017
 
 `-h|--help`
 
-印出命令的簡短說明。  
+印出命令的簡短說明。
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-要用於移轉的範本 csproj 檔案。 根據預設，會使用 `dotnet new console` 所置放的相同範本。 
+要用於移轉的範本 csproj 檔案。 根據預設，會使用 `dotnet new console` 所置放的相同範本。
 
 `-v|--sdk-package-version <VERSION>`
 

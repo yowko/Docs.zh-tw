@@ -1,5 +1,5 @@
 ---
-title: "如何：從 Office Open XML 文件擷取段落 (C#) | Microsoft Docs"
+title: "如何：從 Office Open XML 文件擷取段落 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 87932173a74053aec1547ee9ebbe0e5f6187085c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 945fc1e2cc3d7ae57239fdc5113e87c0a1512ff8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何：從 Office Open XML 文件擷取段落 (C#)
@@ -28,13 +27,13 @@ ms.lasthandoff: 03/13/2017
  如需 Office Open XML 的詳細資訊，請參閱 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)。  
   
 ## <a name="example"></a>範例  
- 此範例會開啟 Office Open XML 封裝，並使用 Open XML 封裝內的關聯性來尋找文件與樣式部分。 接著，它會查詢文件，投影包含段落 <xref:System.Xml.Linq.XElement> 節點、每個段落之樣式名稱，以及每個段落之文字的匿名型別集合。  
+ 此範例會開啟 Office Open XML 封裝，並使用 Open XML 封裝內的關聯性來尋找文件與樣式部分。 接著，它會查詢文件，投影包含段落 <xref:System.Xml.Linq.XElement> 節點、每個段落之樣式名稱，以及每個段落之文字的匿名型別結合。  
   
  此範例會使用名稱為 `StringConcatenate` 的擴充方法，這個方法也隨附的範例中。  
   
  如需說明此範例如何運作的詳細教學課程，請參閱 [XML 純函數式轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
   
- 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的類型。  
+ 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
   
 ```csharp  
 public static class LocalExtensions  
@@ -198,3 +197,4 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>另請參閱  
  [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "C# 導覽 - C# 指南 | Microsoft Docs"
+title: "C# 的教學課程 - C# 指南"
 description: "第一次接觸 C#？ 了解該語言的基本概念。"
 keywords: .NET, .NET Core, C#, C# Primer, C# Guide
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f122f59dd6f194facd98f4c6fa7f84c658c02a90
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -81,7 +81,7 @@ C# 還有更多可探討的主題。  下列主題提供 C# 語言元素的概�
 * [委派](delegates.md)
     - 「委派型別」代表對方法的參考，其中含有特定參數清單與傳回型別。 委派讓您可將方法視為實體，而實體能指派給變數或當作參數來傳遞。 委派就類似其他程式設計語言中的函式指標，但與函式指標的不同之處是，委派是物件導向且為型別安全。
 * [屬性](attributes.md)
-     * ***屬性***讓程式能指定型別、成員與實體的相關額外宣告資訊。
+    * ***屬性***讓程式能指定型別、成員與實體的相關額外宣告資訊。
 
 >[!div class="step-by-step"]
 [下一步](program-structure.md)

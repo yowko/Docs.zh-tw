@@ -1,5 +1,5 @@
 ---
-title: "&amp;&amp; 運算子 (C# 參考) | Microsoft Docs"
+title: "&amp;&amp; 運算子 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f60d50510a4b6233e248fda87cfbb05a4c299312
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1da61947cbc85e5b3045513e99e013d1e4fae4b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; 運算子 (C# 參考)
@@ -69,3 +69,4 @@ x & y
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 運算子](../../../csharp/language-reference/operators/index.md)
+

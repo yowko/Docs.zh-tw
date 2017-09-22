@@ -1,5 +1,5 @@
 ---
-title: "is (C# 參考) | Microsoft Docs"
+title: "is (C# 參考)"
 keywords: "is 關鍵字 (C#), is (C#)"
 ms.date: 2017-02-17
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0d300dbb47e64d2425f8af3bc6a819b145786fa
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58b18284b12ca0c636ed3fa923c43d94f202597f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/13/2017
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」**是定義於變數宣告的變數類型。 變數的「執行階段類型」**是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -105,7 +105,7 @@ ms.lasthandoff: 03/13/2017
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」**是定義於變數宣告的變數類型。 變數的「執行階段類型」**是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/13/2017
 
 常數運算式評估如下：
 
-- 如果 *expr* 和 *constant* 是整數型別，C# 等號比較運算子會判斷運算式是否傳回`true` (亦即是否 `expr == constant`)。
+- 如果 *expr* 和 *constant* 是整數型別，則 C# 等號比較運算子會判斷運算式是否傳回 `true` (亦即是否 `expr == constant`)。
 
 - 否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。  
 

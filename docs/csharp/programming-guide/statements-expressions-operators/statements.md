@@ -1,5 +1,5 @@
 ---
-title: "陳述式 (C# 程式設計手冊) | Microsoft Docs"
+title: "陳述式 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfbd607f614bd8d287dd33f08dd47b12fa651ced
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4df592821f9bebb318138cffac9045fdbec1e759
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statements-c-programming-guide"></a>陳述式 (C# 程式設計手冊)
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/13/2017
 |[跳躍陳述式](../../../csharp/language-reference/keywords/jump-statements.md)|跳躍陳述式會將控制權轉移給另一個程式碼區段。 如需詳細資訊，請參閱下列主題：<br /><br /> [break](../../../csharp/language-reference/keywords/break.md)、[continue](../../../csharp/language-reference/keywords/continue.md)、[default](../../../csharp/language-reference/keywords/switch.md)、[goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md)、[yield](../../../csharp/language-reference/keywords/yield.md)|  
 |[例外狀況處理陳述式](../../../csharp/language-reference/keywords/exception-handling-statements.md)|例外狀況處理陳述式可讓您順利復原在執行階段發生的例外狀況。 如需詳細資訊，請參閱下列主題：<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md)、[try-catch](../../../csharp/language-reference/keywords/try-catch.md)、[try-finally](../../../csharp/language-reference/keywords/try-finally.md)、[try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked 與 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|checked 和 unchecked 陳述式可讓您指定，在將結果儲存在太小無法保存所產生值的變數中時，是否允許數值作業導致溢位。 如需詳細資訊，請參閱 [checked](../../../csharp/language-reference/keywords/checked.md) 和 [unchecked](../../../csharp/language-reference/keywords/unchecked.md)。|  
-`await` 陳述式|如果您使用 [async](../../../csharp/language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](../../../csharp/language-reference/keywords/await.md) 運算子。 當控制權到達 async 方法中的 `await` 運算式時，控制權會傳回給呼叫端，並暫止方法中的進度，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。<br /><br /> 如需簡單範例，請參閱[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)的＜非同步方法＞一節。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。|  
+|`await` 陳述式|如果您使用 [async](../../../csharp/language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](../../../csharp/language-reference/keywords/await.md) 運算子。 當控制權到達 async 方法中的 `await` 運算式時，控制權會傳回給呼叫端，並暫止方法中的進度，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。<br /><br /> 如需簡單範例，請參閱[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)的＜非同步方法＞一節。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。|  
 |`yield return` 陳述式|迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當到達 `yield return` 陳述式時，系統會記住程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。<br /><br /> 如需詳細資訊，請參閱[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。|  
 |`fixed` 陳述式|fixed 陳述式可防止記憶體回收行程重新配置可移動的變數。 如需詳細資訊，請參閱 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)。|  
 |`lock` 陳述式|lock 陳述式可讓您限制一次只能存取一個執行緒的程式碼區塊。 如需詳細資訊，請參閱 [lock](../../../csharp/language-reference/keywords/lock-statement.md)。|  
@@ -97,3 +97,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

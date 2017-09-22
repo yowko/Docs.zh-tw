@@ -1,6 +1,6 @@
 ---
-title: "C# 程式設計指南 | Microsoft Docs"
-ms.date: 2015-07-20
+title: "C# 程式設計手冊"
+ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -32,21 +32,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4a4c3f5dbe375f723b70f62ccee1a91d577f4949
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 0c95459f21aebf1d5efe1482e74ca2724d283821
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
   
- 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是程式設計或 C# 的新手，可造訪 [C# 開發人員中心](http://go.microsoft.com/fwlink/?linkid=95125)，您可以在其中找到許多可協助您開始使用的教學課程、範例和影片。  
+ 本節內容中大部分會假設您已經了解一些 C# 和一般程式設計概念。 如果您是 C# 程式設計或 C# 的新手，您可能想要瀏覽 [C# 使用者入門](https://www.microsoft.com/net/tutorials/csharp/getting-started)互動式教學課程，而不需要事先具備程式設計知識。  
   
- 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification.md)。  
+ 如需特定關鍵字、運算子和前置處理器指示詞的相關資訊，請參閱 [C# 參考](../../csharp/language-reference/index.md)。 如需 C# 語言規格的相關資訊，請參閱 [C# 語言規格](../../csharp/language-reference/language-specification/index.md)。  
   
+## <a name="program-sections"></a>程式區段
+
+[C# 程式內部](../../csharp/programming-guide/inside-a-program/index.md)  
+  
+[Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
+ 
 ## <a name="language-sections"></a>語言章節  
- [C# 程式內部](../../csharp/programming-guide/inside-a-program/index.md)  
+[陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+
+ [型別](../../csharp/programming-guide/types/index.md)  
+
+ [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
   
  [Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
   
@@ -105,9 +116,7 @@ ms.lasthandoff: 03/13/2017
   
  [反映](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="featured-book-chapter"></a>精選書籍章節  
- [Nutshell 第三版中的 C# 3.0：桌面快速參考 (英文)](http://go.microsoft.com/fwlink/?LinkId=195406) 中的[進階 C#](http://go.microsoft.com/fwlink/?LinkId=195407)  
-  
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../csharp/language-reference/index.md)   
- [C#](../../csharp/csharp.md)
+ [C#](../../csharp/index.md)
+

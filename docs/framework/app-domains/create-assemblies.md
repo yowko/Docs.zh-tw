@@ -1,25 +1,30 @@
 ---
-title: "建立組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 建立"
-  - "組件 [.NET Framework], 多檔案"
-  - "多檔案組件"
-  - "單一檔案組件"
+title: "建立組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- single-file assemblies
+- assemblies [.NET Framework], creating
+- multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 建立組件
 您可以使用整合式開發環境 \(IDE\) \(例如 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]\) 或是 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 所提供的編譯器和工具來建立單一檔案或多檔案的組件。  最簡易的組件即為具有簡式名稱、且已載入單一應用程式定義域的單一檔案。  這個組件無法由應用程式目錄以外的其他組件存取，而且無法進行版本檢查。  如果要解除安裝由組件所組成的應用程式，您只要刪除該應用程式所在的目錄即可。  對許多開發人員而言，他們只需要具有這些功能的組件便可完成部署應用程式。  
@@ -57,3 +62,4 @@ caps.handback.revision: 8
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)
+

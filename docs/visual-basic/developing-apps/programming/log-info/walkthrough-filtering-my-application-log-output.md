@@ -1,5 +1,5 @@
 ---
-title: "篩選 My.Application.Log 輸出 (Visual Basic) | Microsoft Docs"
+title: "篩選 My.Application.Log 輸出 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
@@ -47,7 +48,7 @@ ms.lasthandoff: 03/13/2017
   
 #### <a name="to-build-the-sample-application"></a>若要安裝範例應用程式  
   
-1.  開啟新的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Windows 應用程式專案。  
+1.  開啟新的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows 應用程式專案。  
   
 2.  加入名為 "Button1 to Form1" 的按鈕。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/13/2017
   
 6.  關閉應用程式。  
   
-     如需如何檢視應用程式偵錯輸出視窗的資訊，請參閱[輸出視窗](https://docs.microsoft.com/visualstudio/ide/reference/output-window)。 如需應用程式記錄檔位置的資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
+     如需如何檢視應用程式偵錯輸出視窗的資訊，請參閱[輸出視窗](/visualstudio/ide/reference/output-window)。 如需應用程式記錄檔位置的資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
   
     > [!NOTE]
     >  根據預設，應用程式會在應用程式關閉時清除記錄檔輸出。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/13/2017
   
     1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。  
+    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
     3.  按一下 [加入] ****。  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 03/13/2017
 9. 將 `value` 屬性值變更回 "Information"。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug?displayProperty=fullName> 類別的行為。  
+    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug?displayProperty=fullName> 類別的行為。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>個別篩選 My.Application.Log 接聽程式  
  上一個範例示範如何變更所有 `My.Application.Log` 輸出的篩選。 此範例示範如何篩選個別的記錄檔接聽程式。 應用程式預設會有兩個接聽程式，以寫入應用程式的偵錯輸出和記錄檔。  
@@ -180,7 +181,7 @@ ms.lasthandoff: 03/13/2017
   
     1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。  
+    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
     3.  按一下 [加入] ****。  
   
@@ -278,5 +279,6 @@ ms.lasthandoff: 03/13/2017
  [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
  [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [追蹤參數](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)   
  [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

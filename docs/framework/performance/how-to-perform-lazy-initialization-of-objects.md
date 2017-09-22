@@ -1,28 +1,33 @@
 ---
-title: "如何：執行物件的延遲初始化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET 中的延遲初始設定, 如何執行"
+title: "如何：執行物件的延遲初始化"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab1ae0eae8d78d4b7f14444e78ff5a741fe02d95
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：執行物件的延遲初始化
-<xref:System.Lazy%601?displayProperty=fullName> 類別使得將物件延遲初始化和延遲執行個體化的工作變得簡單。  藉由將物件延遲初始化，您不必再事先建立可能永遠都用不到的物件，而且可以將物件延到初次存取該物件時再初始化。  如需詳細資訊，請參閱[延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)。  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：執行物件的延遲初始化
+<xref:System.Lazy%601?displayProperty=fullName> 類別可簡化執行物件延遲初始化和具現化的工作。 以延遲方式初始化物件時，您可以避免必須在永不需要這些物件時完全建立它們，也可以延後其初始化作業，直到第一次存取這些物件為止。 如需詳細資訊，請參閱[延遲初始化](../../../docs/framework/performance/lazy-initialization.md)。  
   
-## 範例  
- 下列範例示範如何使用 <xref:System.Lazy%601> 來初始化一個值。  假設依據將 `someCondition` 變數設為 true 或 false 的其他某個程式碼而定，可能不需要延遲變數。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用 <xref:System.Lazy%601> 來初始化值。 假設可能不需要延遲變數，這取決於某個將 `someCondition` 變數設定為 true 或 false 的其他程式碼。  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -72,12 +77,12 @@ End Sub
 }  
 ```  
   
-## 範例  
- 下列範例示範如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> 類別，初始化只有目前執行緒上的目前物件執行個體可見的型別。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用 <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> 類別來初始化類型，只有在目前執行緒上的目前物件執行個體中才能看見該類型。  
   
- [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
- [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
+ [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)] [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Threading.LazyInitializer?displayProperty=fullName>   
  [延遲初始設定](../../../docs/framework/performance/lazy-initialization.md)
+

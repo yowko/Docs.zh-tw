@@ -1,22 +1,41 @@
 ---
-title: "如何：使用平台叫用播放 WAV 檔 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - ".wav 檔案"
-  - "互通性 [C#], 使用 Pinvoke 播放 WAV 檔案"
-  - "平台叫用, 音效檔"
-  - "wav 檔案"
+title: "如何：使用平台叫用播放 WAV 檔 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- platform invoke, sound files
+- interoperability [C#], playing WAV files using pinvoke
+- wav files
+- .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
 caps.latest.revision: 30
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 001236392d2b3d3c70dbd0faf2a899929dfe8625
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用平台叫用播放 WAV 檔 (C# 程式設計手冊)
 下列 C\# 程式碼範例會示範如何在 Windows 作業系統上，使用平台叫用服務播放 WAV 音效檔。  
@@ -51,5 +70,6 @@ caps.handback.revision: 30
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)   
  [互通性概觀](../../../csharp/programming-guide/interop/interoperability-overview.md)   
- [A Closer Look at Platform Invoke](http://msdn.microsoft.com/zh-tw/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)   
- [使用平台叫用封送處理資料](../Topic/Marshaling%20Data%20with%20Platform%20Invoke.md)
+ [詳述平台叫用](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)   
+ [使用平台叫用封送處理資料](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+

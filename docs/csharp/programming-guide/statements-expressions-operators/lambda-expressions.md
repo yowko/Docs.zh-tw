@@ -1,5 +1,5 @@
 ---
-title: "Lambda 運算式 (C# 程式設計手冊) | Microsoft Docs"
+title: "Lambda 運算式 (C# 程式設計手冊)"
 ms.date: 2017-03-03
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6083af22fe8743a3d952138e04be90536cbd75d3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計手冊)
@@ -71,9 +72,9 @@ namespace ConsoleApplication1
   
  `=>` 運算子與指派 (`=`) 具有相同的優先順序，而且為[右向關聯](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (請參閱＜運算子＞文章的＜關聯性＞一節)。  
   
- 在以方法為基礎的 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 查詢中，Lambda 會用來作為標準查詢運算子方法的引數，例如 <xref:System.Linq.Enumerable.Where%2A>。  
+ 在以方法為基礎的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，Lambda 會用來做為標準查詢運算子方法的引數，例如 <xref:System.Linq.Enumerable.Where%2A>。  
   
- 當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable> 類別中的 <xref:System.Linq.Enumerable.Where%2A> 方法時 (就像是在 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects 和 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 中所執行)，此參數會是委派類型 <xref:System.Func%602?displayProperty=fullName>。 Lambda 運算式是建立委派最方便的方式。 例如，當您在 <xref:System.Linq.Queryable?displayProperty=fullName> 類別中呼叫相同方法時 (就像是在 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 中所執行)，參數類型就會是 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>，其中 Func 是最多擁有十六個輸入參數的任一個 Func 委派。 再次強調，Lambda 運算式就是建構該運算式樹狀架構非常簡潔的方式。 Lambda 會讓 `Where` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件類型並不相同。  
+ 當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable.Where%2A> 類別中的 <xref:System.Linq.Enumerable> 方法時 (就像是在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]中所執行)，此參數會是委派類型 <xref:System.Func%602?displayProperty=fullName>。 Lambda 運算式是建立委派最方便的方式。 例如，當您在 <xref:System.Linq.Queryable?displayProperty=fullName> 類別中呼叫相同方法時 (就像是在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 中所執行)，參數類型就會是 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>，其中 Func 是最多擁有十六個輸入參數的任一個 Func 委派。 再次強調，Lambda 運算式就是建構該運算式樹狀架構非常簡潔的方式。 Lambda 會讓 `Where` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件類型並不相同。  
   
  在上面的範例中，請注意委派簽章擁有一個 `int`類型的隱含類型輸入參數，而且會傳回 `int`。 由於 Lambda 運算式還有一個輸入參數 (`x`) 和可由編譯器隱含轉換為 `int` 類型的傳回值，因此 Lambda 運算式可以轉換為該類型的委派  (類型推斷將於下列各節中詳細討論)。使用輸入參數 5 叫用委派時，它傳回的結果會是 25。  
   
@@ -290,7 +291,7 @@ class Test
 -   如果跳躍陳述式的目標不在區塊內，則 Lambda 運算式不可包含 Lambda 函式內的 `goto` 陳述式、 `break` 陳述式或 `continue` 陳述式。 即使目標位於區塊內，跳躍陳述式出現在 Lambda 函式區塊外部也一樣是錯誤。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>精選書籍章節  
  [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) (委派、事件和 Lambda 運算式)  

@@ -1,5 +1,5 @@
 ---
-title: "處理磁碟機、目錄和檔案 (Visual Basic) | Microsoft Docs"
+title: "處理磁碟機、目錄和檔案 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4cbb2ead7075e8cda58ac4ec33d9fb6535d3284a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>處理磁碟機、目錄和檔案 (Visual Basic)
-您可以使用 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]，利用 `My.Computer.FileSystem` 物件處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
+您可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，利用 `My.Computer.FileSystem` 物件處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [使用 Visual Basic 存取檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/22/2017
  提供 .NET Framework 中檔案 I/O 概念的概觀，包括資料流、隔離儲存區、檔案事件、檔案屬性和檔案存取。  
   
  [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 示範如何使用 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 來管理檔案和資料夾。  
+ 示範如何使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 來管理檔案和資料夾。  
   
  [逐步解說：在 Visual Basic 中管理檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  示範如何使用 `My.Computer.FileSystem` 物件來管理檔案和資料夾。  
@@ -64,3 +64,4 @@ ms.lasthandoff: 05/22/2017
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  `My.Computer.FileSystem` 物件及其成員的參考文件。
+

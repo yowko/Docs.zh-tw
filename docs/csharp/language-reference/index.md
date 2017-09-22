@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-reference"></a>C# 參考
@@ -72,8 +72,7 @@ ms.lasthandoff: 05/19/2017
  [Microsoft 知識庫中的 C# KB 文件](http://go.microsoft.com/fwlink/?LinkId=70368)  
  開啟 Microsoft 搜尋網頁，以尋找 MSDN 上可用的知識庫文件。  
   
- [C#](../../csharp/csharp.md)  
- 提供 Visual C# 文件入口網站。  
+ [C#](../../csharp/index.md) 提供 Visual C# 文件入口網站。  
   
  [使用 C# 的 Visual Studio 開發環境](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  提供描述 IDE 和編輯器的概念和工作主題連結。  

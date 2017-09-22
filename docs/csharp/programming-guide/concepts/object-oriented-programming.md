@@ -1,5 +1,5 @@
 ---
-title: "物件導向程式設計 (C#) | Microsoft Docs"
+title: "物件導向程式設計 (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74872957345de77f43f3ac649ed6f809aea5f784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de06921840f06f36d8600b9567986644f58c6ad5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
@@ -405,7 +406,7 @@ sampleObject.Field = "Sample string";
   
  如需詳細資訊，請參閱:  
   
--   [泛型](https://msdn.microsoft.com/library/ms172192)  
+-   [泛型](~/docs/standard/generics/index.md)  
   
 -   [泛型](../../../csharp/programming-guide/generics/index.md)  
   
@@ -448,3 +449,4 @@ class SampleClass
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "固定大小緩衝區 (C# 程式設計手冊) | Microsoft Docs"
+title: "固定大小緩衝區 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6c5cacb588dc263e5b72e4b3cd93ad10b4b681f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
@@ -56,7 +56,7 @@ private fixed char name[30];
   
  [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
- 128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../../csharp/language-reference/keywords/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.CharSet>。  
+ 128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../../csharp/language-reference/keywords/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.CharSet>。  
   
  另一個常見的固定大小陣列是 [bool](../../../csharp/language-reference/keywords/bool.md) 陣列。 `bool` 陣列中的元素大小一律為一個位元組。 `bool` 陣列不適用於建立位元陣列或緩衝區。  
   
@@ -78,3 +78,4 @@ private fixed char name[30];
  [不安全的程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [互通性](../../../csharp/programming-guide/interop/index.md)
+

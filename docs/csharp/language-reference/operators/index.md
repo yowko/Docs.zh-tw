@@ -41,11 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-operators"></a>C# 運算子
@@ -80,7 +80,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md) – 停用整數作業的溢位檢查。  這是預設編譯器行為。  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) – 傳回型別 T 的預設初始化值，參考型別為 `null`、數字型別為零，而結構型別的成員則填入零/`null`。  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) – 傳回 T 型別的預設值，參考型別為 `null`、數字型別為零，而結構型別的成員則填入零/`null`。  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) – 宣告並傳回委派執行個體。  
   
@@ -234,8 +234,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
- [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C#](../../../csharp/index.md) [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
 

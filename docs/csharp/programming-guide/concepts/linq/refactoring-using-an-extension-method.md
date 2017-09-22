@@ -1,5 +1,5 @@
 ---
-title: "使用擴充方法進行重構 (C#) | Microsoft Docs"
+title: "使用擴充方法進行重構 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,17 @@ ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8d4df7081c765ce09f95f51822dbd7543876b87
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4145e38a6fc49d53d274520dd155cffb5e7f9d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>使用擴充方法進行重構 (C#)
 這個範例是根據上述範例 ([擷取段落的文字 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)) 所建置，方法是使用當成擴充方法實作的純虛擬函式來重構字串的串連。  
   
- 前一個範例使用 <xref:System.Linq.Enumerable.Aggregate%2A> 標準查詢運算子，將多個字串串連為一個字串。 不過，撰寫擴充方法來執行這個動作更為方便，因為所產生的查詢更小而且更簡單。  
+ 前一個範例使用 <xref:System.Linq.Enumerable.Aggregate%2A> 標準查詢運算子，將多個字串串連到一個字串。 不過，撰寫擴充方法來執行這個動作更為方便，因為所產生的查詢更小而且更簡單。  
   
 ## <a name="example"></a>範例  
  這個範例會處理 WordprocessingML 文件，以擷取段落、每個段落的樣式，以及每個段落的文字。 此範例在這個教學課程中，會在先前的範例上建置。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 03/13/2017
   
  您可以在[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中找到建立此範例之來源文件的指示。  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的類型。  
+ 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
   
 ```csharp  
 public static class LocalExtensions  
@@ -262,3 +261,4 @@ StyleName:Code >Hello World<
 ## <a name="see-also"></a>另請參閱  
  [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
  [重構為純虛擬函式 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

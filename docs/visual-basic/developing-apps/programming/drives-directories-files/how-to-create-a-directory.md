@@ -1,23 +1,42 @@
 ---
-title: "How to: Create a Directory in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "directories [Visual Basic], creating"
-  - "folders [Visual Basic], creating"
+title: "如何：在 Visual Basic 中建立目錄"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- directories [Visual Basic], creating
+- folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a45a785916b480dcee6e36fd295390266eaa0a0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Create a Directory in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -51,4 +70,5 @@ caps.handback.revision: 19
   
 ## 請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   
- [Creating, Deleting, and Moving Files and Directories](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+ [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+

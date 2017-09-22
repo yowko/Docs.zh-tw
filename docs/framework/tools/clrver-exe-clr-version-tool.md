@@ -1,28 +1,33 @@
 ---
-title: "Clrver.exe (CLR Version Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Clrver.exe"
-  - "CLR Version tool"
+title: "Clrver.exe (CLR 版本工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Clrver.exe
+- CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f8bef6f85f9e4b7d35e60c613a12ad87a26b70ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Clrver.exe (CLR Version Tool)
 CLR 版本工具 \(Clrver.exe\) 會報告電腦上已安裝的所有通用語言執行平台 \(CLR\) 版本。  

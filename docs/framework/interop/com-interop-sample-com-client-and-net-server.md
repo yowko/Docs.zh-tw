@@ -1,34 +1,39 @@
 ---
-title: "COM Interop 範例：COM 用戶端與 .NET 伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM Interop, 範例"
-  - "與 Unmanaged 程式碼的互通, 範例"
+title: "COM Interop 範例：COM 用戶端與 .NET 伺服器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop 範例：COM 用戶端與 .NET 伺服器
-這個範例示範 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)和執行抵押貸款計算之 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的互通。  在這個範例中，用戶端會建立並呼叫 Managed `Loan` 類別的執行個體、傳遞四個引數 \(其中一個等於零\) 給執行個體，並且顯示這項運算。  這個範例的程式碼範例會出現在這個章節的各個地方。  
+# <a name="com-interop-sample-com-client-and-net-server"></a>COM Interop 範例：COM 用戶端與 .NET 伺服器
+此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。 在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。 這個範例的程式碼範例會出現在本節中。  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## COM 用戶端  
+## <a name="com-client"></a>COM 用戶端  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -95,7 +100,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## .NET 伺服器  
+## <a name="net-server"></a>.NET 伺服器  
   
 ```vb  
 Imports System  
@@ -270,7 +275,6 @@ Namespace LoanLib
     End Class  
   
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -397,5 +401,6 @@ namespace LoanLib {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+

@@ -1,23 +1,28 @@
 ---
-title: "如何：定義和執行動態方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動態方法"
-  - "反映發出, 動態方法"
+title: "如何：定義和執行動態方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection emit, dynamic methods
+- dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67e909a7b64500bba533290061652e82ffde07a5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：定義和執行動態方法
 下列程序將示範如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。  如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[Reflection Emit Dynamic Method Scenarios](http://msdn.microsoft.com/zh-tw/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)。  
@@ -125,5 +130,6 @@ caps.handback.revision: 12
   
 ## 請參閱  
  <xref:System.Reflection.Emit.DynamicMethod>   
- [Using Reflection Emit](http://msdn.microsoft.com/zh-tw/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
- [Reflection Emit Dynamic Method Scenarios](http://msdn.microsoft.com/zh-tw/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+ [使用反映發出](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
+ [反映發出動態方法案例](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+

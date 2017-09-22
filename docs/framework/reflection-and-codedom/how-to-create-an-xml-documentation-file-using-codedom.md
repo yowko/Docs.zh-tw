@@ -1,24 +1,29 @@
 ---
-title: "如何：使用 CodeDOM 建立 XML 文件檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式碼文件物件模型, 產生 XML 文件"
-  - "CodeDOM, 產生 XML 文件"
-  - "XML 文件, 使用 CodeDOM 建立"
+title: "如何：使用 CodeDOM 建立 XML 文件檔案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CodeDOM, generating XML documentation
+- XML documentation, creating using CodeDOM
+- Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7d5569fd22cc8469052cc318fd50a5f8ef94c1a9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用 CodeDOM 建立 XML 文件檔案
 CodeDOM 可用於建立產生 XML 文件的程式碼，  此程序包括建立包含 XML 文件註解的 CodeDOM 圖形、產生程式碼，並以建立 XML 文件輸出的編譯器選項編譯產生的程式碼。  
@@ -81,7 +86,8 @@ CodeDOM 可用於建立產生 XML 文件的程式碼，  此程序包括建立�
   
 -   此程式碼範例需要有 `FullTrust` 權限集合，才能執行成功。  
   
-## 請參閱  
- [Documenting Your Code with XML](../Topic/Documenting%20Your%20Code%20with%20XML%20\(Visual%20Basic\).md)   
- [XML 文件註解](../Topic/XML%20Documentation%20Comments%20\(C%23%20Programming%20Guide\).md)   
- [XML 文件](../Topic/XML%20Documentation%20\(Visual%20C++\).md)
+## <a name="see-also"></a>另請參閱  
+ [使用 XML 加入程式碼註解](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)   
+ [XML 文件註解](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
+ [XML 文件](/cpp/ide/xml-documentation-visual-cpp)
+

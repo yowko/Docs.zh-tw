@@ -1,5 +1,5 @@
 ---
-title: "=&gt; 運算子 (C# 參考) | Microsoft Docs"
+title: "=&gt; 運算子 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 287cf223b1e2fc62cdf8a73db95000337cedebef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45d4753724ed094408e8cbc5353998a67071b0e4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 運算子 (C# 參考)
@@ -75,7 +75,7 @@ int shortestWordLength = words.Min((string w) => w.Length);
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何為接受兩個引數的標準查詢運算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 多載，撰寫 Lambda 運算式。 因為 Lambda 運算式有多個參數，所以必須以括號括住這些參數。 第二個參數 `index` 表示集合中目前項目的索引。 `Where` 運算式會傳回長度小於其陣列索引位置的所有字串。  
+ 下列範例示範如何為接受兩個引數之標準查詢運算子 <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> 的多載，撰寫 Lambda 運算式。 因為 Lambda 運算式有多個參數，所以必須以括號括住這些參數。 第二個參數 `index` 表示集合中目前項目的索引。 `Where` 運算式會傳回長度小於其陣列索引位置的所有字串。  
   
 ```csharp  
 static void Main(string[] args)  
@@ -104,3 +104,4 @@ static void Main(string[] args)
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+

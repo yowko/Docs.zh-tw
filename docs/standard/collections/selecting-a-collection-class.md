@@ -20,11 +20,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 403a78e3fc1496b91403b3c42494e34d12607b70
+ms.translationtype: HT
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 01abb535567429780a8a0776aebecaf64307950d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
   
     -   <xref:System.Collections.Hashtable> 類別會依其雜湊碼來排序其項目。  
   
-    -   <xref:System.Collections.SortedList> 類別，以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別都會根據 <xref:System.Collections.IComparer> 介面和 <xref:System.Collections.Generic.IComparer%601> 泛型介面的實作，依索引鍵來排序其項目。  
+    -   <xref:System.Collections.SortedList> 類別以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別會根據 <xref:System.Collections.IComparer> 介面和 <xref:System.Collections.Generic.IComparer%601> 泛型介面的實作，依索引鍵來排序其項目。  
   
     -   <xref:System.Collections.ArrayList> 提供 <xref:System.Collections.ArrayList.Sort%2A> 方法，這個方法接受 <xref:System.Collections.IComparer> 實作做為參數。 其對應的泛型版本 (<xref:System.Collections.Generic.List%601> 泛型類別) 會提供 <xref:System.Collections.Generic.List%601.Sort%2A> 方法，這個方法接受 <xref:System.Collections.Generic.IComparer%601> 泛型介面的實作做為參數。  
   

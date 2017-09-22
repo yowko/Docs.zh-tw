@@ -1,81 +1,86 @@
 ---
-title: "處理錯誤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "網際網路、WebRequest 和 WebResponse 類別例外狀況"
-  - "Status 屬性"
-  - "WebExceptions 類別，關於 WebExceptions 類別"
-  - "Timeout 列舉成員"
-  - "ConnectFailure 列舉成員"
-  - "TrustFailure 列舉成員"
-  - "WebRequest 類別，例外狀況"
-  - "從網際網路要求資料，錯誤處理"
-  - "Success 列舉成員"
-  - "接收資料，錯誤"
-  - "ProtocolError 列舉成員"
-  - "下載網際網路資源，錯誤處理"
-  - "WebResponse 類別、例外狀況"
-  - "SendFailure 列舉成員"
-  - "錯誤 [.NET Framework]、WebRequest 和 WebResponse 類別例外狀況"
-  - "傳送資料，錯誤"
-  - "網際網路要求回應，錯誤處理"
-  - "NameResolutionFailure 列舉成員"
-  - "KeepAliveFailure 列舉成員"
-  - "網路資源，WebRequest 和 WebResponse 類別例外狀況"
-  - "RequestCanceled 列舉成員"
-  - "ReceiveFailure 列舉成員"
-  - "ServerProtocolViolation 列舉成員"
-  - "ConnectionClosed 列舉成員"
-  - "SecureChannelFailure 列舉成員"
+title: "處理錯誤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, WebRequest and WebResponse classes exceptions
+- Status property
+- WebExceptions class, about WebExceptions class
+- Timeout enumeration member
+- ConnectFailure enumeration member
+- TrustFailure enumeration member
+- WebRequest class, exceptions
+- requesting data from Internet, error handling
+- Success enumeration member
+- receiving data, errors
+- ProtocolError enumeration member
+- downloading Internet resources, error handling
+- WebResponse class, exceptions
+- SendFailure enumeration member
+- errors [.NET Framework], WebRequest and WebResponse classes exceptions
+- sending data, errors
+- response to Internet request, error handling
+- NameResolutionFailure enumeration member
+- KeepAliveFailure enumeration member
+- network resources, WebRequest and WebResponse classes exceptions
+- RequestCanceled enumeration member
+- ReceiveFailure enumeration member
+- ServerProtocolViolation enumeration member
+- ConnectionClosed enumeration member
+- SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 處理錯誤
-<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別擲回來 <xref:System.Net.WebRequest.GetResponse%2A> 方法擲回的 [WebExceptions](frlrfsystemnetwebexceptionclasstopic) \) 的系統例外狀況 \(例如 <xref:System.ArgumentException>\) 和 Web 特定例外狀況。  
+# <a name="handling-errors"></a>處理錯誤
+<xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會擲回兩個系統例外狀況 (例如 <xref:System.ArgumentException>) 和 Web 特定例外狀況 (這些是 <xref:System.Net.WebRequest.GetResponse%2A> 方法所擲回的 <xref:System.Net.WebException>)。  
   
- 每個 **WebException** 包含從 <xref:System.Net.WebExceptionStatus> 列舉型別的值。 <xref:System.Net.WebException.Status%2A> 屬性。  您可以檢查 **狀態** 屬性來判斷產生的錯誤並執行適當的步驟來解決錯誤。  
+ 每個 **WebException** 包含一個 <xref:System.Net.WebException.Status%2A> 屬性，其中包含來自 <xref:System.Net.WebExceptionStatus> 列舉的值。 您可以檢查 **Status** 屬性來判斷發生的錯誤，並採取適當的步驟來解決這個錯誤。  
   
- 下表說明 **狀態** 屬性的可能值。  
+ 下表描述 **Status** 屬性的可能值。  
   
 |狀態|描述|  
-|--------|--------|  
-|ConnectFailure|遠端服務無法聯繫在傳輸層級。|  
-|ConnectionClosed|連接過早關閉。|  
-|KeepAliveFailure|伺服器關閉正在建立連接 Keep\-Alive 標頭集合。|  
-|NameResolutionFailure|命名服務無法解析主機名稱。|  
-|ProtocolError|從伺服器收到的回應是完整的，但會指示錯誤在通訊協定層。|  
-|ReceiveFailure|未從遠端伺服器接收到完整回應。|  
-|RequestCanceled|要求取消。|  
-|SecureChannelFailure|錯誤在安全通道連結時發生。|  
-|SendFailure|完整要求無法送出至遠端伺服器。|  
-|ServerProtocolViolation|伺服器回應不是有效 HTTP 回應。|  
-|成功|沒有遇到錯誤。|  
-|Timeout|無回應在為要求設定的逾時時間內接收。|  
-|TrustFailure|伺服器憑證無法驗證。|  
-|MessageLengthLimitExceeded|已在傳送要求或從伺服器接收回應時收到超過指定限制的訊息。|  
-|暫止|暫止內部非同步要求。|  
-|PipelineFailure|這個值會支援 .NET Framework 基礎結構並不適合直接用於您的程式碼。|  
-|ProxyNameResolutionFailure|名稱解析程式服務無法解析 Proxy 主機名稱。|  
-|UnknownError|未知類型的例外狀況 \(Exception\) 已經發生。|  
+|------------|-----------------|  
+|ConnectFailure|無法在傳輸層級連絡遠端服務。|  
+|ConnectionClosed|連線過早關閉。|  
+|KeepAliveFailure|伺服器已關閉使用保持連線標頭集合建立的連線。|  
+|NameResolutionFailure|名稱服務無法解析主機名稱。|  
+|ProtocolError|從伺服器收到的回應已完成，但是指出通訊協定層級發生錯誤。|  
+|ReceiveFailure|未從遠端伺服器收到完整的回應。|  
+|RequestCanceled|已取消要求。|  
+|SecureChannelFailure|安全通道連結發生錯誤。|  
+|SendFailure|無法將完整的要求傳送到遠端伺服器。|  
+|ServerProtocolViolation|伺服器回應不是有效的 HTTP 回應。|  
+|成功|沒有遇到任何錯誤。|  
+|等候逾時|在針對要求所設定的逾時內未收到任何回應。|  
+|TrustFailure|無法驗證伺服器憑證。|  
+|MessageLengthLimitExceeded|從伺服器傳送要求或接收回應時，收到超過指定限制的訊息。|  
+|暫止|內部非同步要求正在擱置中。|  
+|PipelineFailure|此值支援 .NET Framework 基礎結構，但不能直接用於您的程式碼中。|  
+|ProxyNameResolutionFailure|名稱解析服務無法解析 Proxy 主機名稱。|  
+|UnknownError|發生未知類型的例外狀況。|  
   
- 當包含來自伺服器的回應的 **狀態** 屬性是 **WebExceptionStatus.ProtocolError**時， **WebResponse** 可用。  您可以檢查回應判斷通訊協定錯誤的實際來源。  
+ 當 **Status** 屬性是 **WebExceptionStatus.ProtocolError** 時，即可使用包含伺服器回應的 **WebResponse**。 您可以檢查這個回應，以判斷實際的通訊協定錯誤來源。  
   
- 下列範例會示範如何攔截 **WebException**。  
+ 下列範例示範如何快取 **WebException**。  
   
 ```csharp  
 try   
@@ -170,10 +175,11 @@ Catch e As Exception
 End Try  
 ```  
   
- 使用 <xref:System.Net.Sockets.Socket> 類別會擲回 [SocketExceptions](frlrfsystemnetsocketssocketexceptionclasstopic) 的應用程式，如果錯誤發生在 Windows Sockets 發生。  [TCPClient](frlrfsystemnetsocketstcpclientclasstopic)、 [TCPListener](frlrfsystemnetsocketstcplistenerclasstopic)和 [UDPClient](frlrfsystemnetsocketsudpclientclasstopic) 類別所建立。 **Socket** 類別最上方並擲回 **SocketExceptions** 。  
+ 當 Windows 通訊端發生錯誤時，使用 <xref:System.Net.Sockets.Socket> 類別的應用程式會擲回 <xref:System.Net.Sockets.SocketException>。 <xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別都建置在 **Socket** 類別之上，因此也會擲回 **SocketExceptions**。  
   
- 當 **SocketException** 擲回時， **SocketException** 類別設定 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 屬性至最後發生的作業系統通訊端錯誤。  如需通訊端錯誤碼的詳細資訊，請參閱 MSDN 上的 Winsock 2.0 API 錯誤碼文件。  
+ 擲回 **SocketException** 時，**SocketException** 類別會將 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 屬性設定為最後發生的作業系統通訊端錯誤。 如需通訊端錯誤碼的詳細資訊，請參閱 MSDN 中的 Winsock 2.0 API 錯誤碼文件。  
   
-## 請參閱  
- [例外狀況處理基礎觀念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
+## <a name="see-also"></a>另請參閱  
+ [例外狀況處理基本概念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+

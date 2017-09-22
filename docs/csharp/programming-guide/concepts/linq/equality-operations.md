@@ -1,5 +1,5 @@
 ---
-title: "相等比較作業 (C#) | Microsoft Docs"
+title: "相等比較作業 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4d78b7b402a136f02a6fff02e3b2eac73d6a0106
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d987d21a7120d7b999e10e2943d690c6aa117f34
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="equality-operations-c"></a>相等比較作業 (C#)
@@ -33,9 +33,10 @@ ms.lasthandoff: 03/13/2017
   
 |方法名稱|描述|C# 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|以成對方式比較項目，判斷兩個序列是否相等。|不適用。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|SequenceEqual|以成對方式比較項目，判斷兩個序列是否相等。|不適用。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Linq>   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [如何：比較兩個資料夾的內容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+

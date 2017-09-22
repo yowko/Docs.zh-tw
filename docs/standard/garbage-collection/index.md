@@ -1,5 +1,5 @@
 ---
-title: "記憶體回收 | Microsoft Docs"
+title: "記憶體回收"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -28,11 +28,11 @@ caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 11ea4186a77a600d1645fe334ba9fd704fe728b4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be94a3e0dee4cb27aee4d5c98ebc1d6ef0704ac9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="garbage-collection"></a>記憶體回收
@@ -53,21 +53,22 @@ ms.lasthandoff: 05/22/2017
 |[弱式參考](../../../docs/standard/garbage-collection/weak-references.md)|描述下列功能：允許記憶體回收行程回收物件，同時仍然允許應用程式存取該物件。|  
   
 ## <a name="reference"></a>參考資料  
- <xref:System.GC?displayProperty=fullName>  
+ <xref:System.GC?displayProperty=nameWithType>  
   
- <xref:System.GCCollectionMode?displayProperty=fullName>  
+ <xref:System.GCCollectionMode?displayProperty=nameWithType>  
   
- <xref:System.GCNotificationStatus?displayProperty=fullName>  
+ <xref:System.GCNotificationStatus?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCLatencyMode?displayProperty=fullName>  
+ <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>  
   
- <xref:System.Object.Finalize%2A?displayProperty=fullName>  
+ <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
   
- <xref:System.IDisposable?displayProperty=fullName>  
+ <xref:System.IDisposable?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>另請參閱  
  [清除 Unmanaged 資源](../../../docs/standard/garbage-collection/unmanaged.md)
+

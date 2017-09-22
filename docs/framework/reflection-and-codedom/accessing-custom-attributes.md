@@ -1,24 +1,29 @@
 ---
-title: "存取自訂屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "屬性 [.NET Framework], 存取"
-  - "自訂屬性, 網頁可及性"
-  - "反映, 自訂屬性"
+title: "存取自訂屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom attributes, accessibility
+- attributes [.NET Framework], accessing
+- reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 393fb3516756438325c9f3fd00941b963b3f2a2e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 存取自訂屬性
 在屬性已經與程式項目關聯之後，反映可以用來查詢它們的存在和值。  在 .NET Framework 1.0 和 1.1 版中，會在執行內容中檢查自訂屬性。  .NET Framework 2.0 版提供了新的載入內容，這是僅限反映的內容，可用來檢查無法載入來執行的程式碼。  
@@ -78,3 +83,4 @@ public class LocalizationExtenderProvider
  <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
  [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+

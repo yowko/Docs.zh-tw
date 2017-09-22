@@ -31,7 +31,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="how-oob-packages-are-distributed"></a>OOB 套件散發的方式  
  核心通用語言執行平台 (CLR) 元件的 OOB 版本是透過 [NuGet 套件管理員](http://nuget.codeplex.com/) (英文) 提供，這是一項開放原始碼 Visual Studio 擴充功能。 NuGet 可讓您從 Visual Studio 的 [方案總管] 中，輕鬆地瀏覽程式庫並加入至 .NET Framework 專案。 從 Visual Studio 2012 開始，NuGet 隨附於所有 Visual Studio 版本。 若要查看是否已安裝 NuGet，請在 Visual Studio 的 [工具] 功能表上尋找 [程式庫套件管理員]。 如果尚未安裝：  
   
-1.  在 Visual Studio 功能表列上，選擇 [工具]、[擴充功能和更新] (在 Visual Studio 2010 中請選擇 [擴充管理員])。  
+1.  在 Visual Studio 功能表列上，選擇 [工具]、[擴充功能和更新]\(在 Visual Studio 2010 中請選擇 [擴充管理員])。  
   
      [擴充功能和更新] 對話方塊隨即開啟。  
   

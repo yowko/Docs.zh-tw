@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-translationtype: Human Translation
-ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
-ms.openlocfilehash: b86693b1d6eed0ff5b8d1831e324354241f29806
-ms.lasthandoff: 03/15/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 93bec65e3bbee93855d6f5bce5e2d6cea8bb9f3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/11/2017
 
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "short (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "short (C# 參考)"
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c14ae463021fbeed9de24610292fa7516a453fe
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab3ccfdeb8d8a67b5fcd60b1ad6eee4dcafc9691
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="short-c-reference"></a>short (C# 參考)
@@ -44,15 +45,22 @@ ms.lasthandoff: 03/13/2017
 |`short`|-32,768 到 32,767|帶正負號的 16 位元整數|<xref:System.Int16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
- 您可以宣告並初始化 `short` 變數，如下列範例所示：  
+
+您可以針對 `short` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `short` 的範圍 (亦即，如果小於 <xref:System.Int16.MinValue?displayProperty=fullName> 或大於 <xref:System.Int16.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 1,034 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 隱含轉換成 `short` 值。  
   
-```  
-  
-short x = 32767;  
-```  
-  
- 在上述宣告中，整數常值 `32767` 會從 [int](../../../csharp/language-reference/keywords/int.md) 隱含地轉換為 `short`。 如果整數常值無法放入 `short` 儲存位置，就會發生編譯錯誤。  
-  
+[!code-cs[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Short)]  
+
+> [!NOTE] 
+> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。
+
+自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-cs[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>編譯器多載解析
+
  呼叫多載的方法時，必須使用轉型。 例如，請考慮使用下列使用 `short` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
 ```  
@@ -105,7 +113,7 @@ short y = (short)3.0;   // OK: explicit conversion
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Int16>   
@@ -116,3 +124,4 @@ short y = (short)3.0;   // OK: explicit conversion
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

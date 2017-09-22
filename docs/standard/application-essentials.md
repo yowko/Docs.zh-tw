@@ -1,28 +1,32 @@
 ---
-title: ".NET Framework 應用程式基本概念 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 開發"
+title: ".NET Framework 應用程式基本概念"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET Framework 應用程式基本概念
+# <a name="net-framework-application-essentials"></a>.NET Framework 應用程式基本概念
 這部分的 .NET Framework 說明文件提供 .NET Framework 中基本應用程式開發工作的相關資訊。  
   
 ## <a name="in-this-section"></a>本章節內容  
- [基底型別](../../docs/standard/base-types/index.md)  
+ [基底類型](../../docs/standard/base-types/index.md)  
  討論如何格式化和剖析基底資料類型，以及使用規則運算式來處理文字。  
   
  [集合和資料結構](../../docs/standard/collections/index.md)  
@@ -31,7 +35,7 @@ caps.handback.revision: 19
  [泛型](../../docs/standard/generics/index.md)  
  說明泛型功能，包括 .NET Framework 提供的一般集合、委派和介面。 提供 C#、Visual Basic 和 Visual C++ 功能說明文件的連結，以及支援技術 (例如 Reflection) 的連結。  
   
- [數字](../../docs/standard/numerics.md)  
+ [數值](../../docs/standard/numerics.md)  
  描述 .NET Framework 中的數值類型。  
   
  [事件](../../docs/standard/events/index.md)  
@@ -40,16 +44,16 @@ caps.handback.revision: 19
  [例外狀況](../../docs/standard/exceptions/index.md)  
  說明 .NET Framework 提供的錯誤處理機制，以及處理例外狀況的基礎。  
   
- [檔案和資料流I-O](../../docs/standard/io/index.md)  
- 說明如何執行同步和非同步檔案及資料流存取，以及如何使用隔離儲存區。  
+ [檔案和資料流 I-O](../../docs/standard/io/index.md)  
+ 說明如何執行同步和非同步檔案及資料流存取，以及如何使用隔離儲存區 (Isolated Storage)。  
   
- [日期、 時間和時區](../../docs/standard/datetime/index.md)  
+ [日期、時間和時區](../../docs/standard/datetime/index.md)  
  說明如何在時區感知應用程式中使用時區和時區轉換。  
   
  [應用程式定義域和組件](../../docs/framework/app-domains/index.md)  
  說明如何建立及使用組件和應用程式定義域。  
   
- [序列化](../../docs/framework/serialization/index.md)  
+ [序列化](../../docs/standard/serialization/index.md)  
  討論如何將物件狀態轉換成可以保存或傳輸的表單。  
   
  [桌面應用程式中的資源](../../docs/framework/resources/index.md)  

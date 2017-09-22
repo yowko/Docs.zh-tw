@@ -1,5 +1,5 @@
 ---
-title: "結構 | C# 手冊"
+title: "結構 - C# 手冊"
 description: "了解結構類型和其建立方式"
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1733538c605cb06c7da4d91a6780caa3ea3bec23
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e2a4bfdb46a69113d5eb8949df4ccf902acf9dee
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -76,3 +77,4 @@ ms.lasthandoff: 03/13/2017
 [類別](classes.md)
 
 [基本類型](basic-types.md)
+

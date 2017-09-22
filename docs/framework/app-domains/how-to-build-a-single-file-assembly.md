@@ -1,28 +1,33 @@
 ---
-title: "如何：建置單一檔案組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 單一檔案"
-  - "組件資訊清單, 單一檔案組件"
-  - "程式碼模組"
-  - "命令列編譯器"
-  - "程式庫組件"
-  - "組件的輸出檔名"
-  - "單一檔案組件"
+title: "如何：建置單一檔案組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly manifest, single-file assemblies
+- library assemblies
+- command-line compilers
+- assemblies [.NET Framework], single-file
+- output file name for assemblies
+- code modules
+- single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：建置單一檔案組件
 單一檔案組件為最簡單的組件型別，含有型別資訊和實作 \(Implementation\) 和[組件資訊清單](../../../docs/framework/app-domains/assembly-manifest.md)。  您可以使用命令列編譯器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 來建立單一檔案組件。  根據預設，編譯器會建立具有 .exe 副檔名的組件檔案。  
@@ -94,3 +99,4 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [如何：建置多檔案組件](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

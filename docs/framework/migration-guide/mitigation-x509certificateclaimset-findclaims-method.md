@@ -1,5 +1,5 @@
 ---
-title: "風險降低：X509CertificateClaimSet.FindClaims 方法 | Microsoft Docs"
+title: "風險降低：X509CertificateClaimSet.FindClaims 方法"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,22 +14,22 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c234d6ddeda50dfefff8c49a2e14d623cdd8d861
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d19bf73e36061729c0c57439f4e4144669787d1a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>風險降低：X509CertificateClaimSet.FindClaims 方法
-從以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 為目標的應用程式開始，<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> 方法會嘗試將 `claimType` 引數與其 SAN 欄位中的所有 DNS 項目進行比對。  
+從以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 為目標的應用程式開始，<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> 方法會嘗試使 `claimType` 引數符合其 SAN 欄位中的所有 DNS 項目。  
   
 ## <a name="impact"></a>影響  
  這項變更只會影響以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和更新版本為目標的應用程式。  
   
- 若是以舊版 .NET Framework 為目標的應用程式，<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> 方法只會嘗試將 `claimType` 引數與最後一個 DNS 項目進行比對。  
+ 若是以舊版 .NET Framework 為目標的應用程式，則 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> 方法僅會嘗試使 `claimType` 引數符合最後一個 DNS 項目。  
   
-## <a name="mitigation"></a>風險降低  
+## <a name="mitigation"></a>緩和  
  如果這不是您要的變更，以 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 和更新版本為目標的應用程式，可以藉由將下列組態設定新增至應用程式組態檔的 [\<執行階段>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 區段，來選擇退出這項行為：  
   
 ```xml  

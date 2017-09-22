@@ -1,32 +1,37 @@
 ---
-title: "Regsvcs.exe (.NET Services Installation Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Regsvcs.exe"
-  - ".NET Services Installation tool"
-  - "loading assemblies"
-  - "assemblies [.NET Framework], registering"
-  - "type libraries"
-  - "registering assemblies"
+title: "Regsvcs.exe (.NET 服務安裝工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Regsvcs.exe
+- .NET Services Installation tool
+- loading assemblies
+- assemblies [.NET Framework], registering
+- type libraries
+- registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 931fc9ee10762485f8fc4da906109023f15e09f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Regsvcs.exe (.NET Services Installation Tool)
 .NET 服務安裝工具會執行下列動作：  

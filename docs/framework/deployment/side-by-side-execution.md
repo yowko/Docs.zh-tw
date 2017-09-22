@@ -1,27 +1,32 @@
 ---
-title: ".NET Framework 並存執行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "並存執行"
+title: ".NET Framework 並存執行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1628d75ab7f842c6b7486a1d57f490b4d876ee28
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # .NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。  在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
@@ -131,5 +136,6 @@ publicKeyToken=...,
 |[Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|提供組件的概觀。|  
 |[應用程式定義域](../../../docs/framework/app-domains/application-domains.md)|提供應用程式定義域的概觀。|  
   
-## 參考資料  
- [\<supportedRuntime\> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="reference"></a>參考資料  
+ [\<supportedRuntime> 項目](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

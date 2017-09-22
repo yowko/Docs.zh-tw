@@ -1,5 +1,5 @@
 ---
-title: "如何：宣告、具現化和使用委派 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：宣告、產生和使用委派 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: f80f50d7d6630aa5738c077cc2f278993e792eb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a16fe4c627989f701ba523769cd87839d074849
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何：宣告、產生和使用委派 (C# 程式設計手冊)
@@ -98,3 +98,4 @@ ms.lasthandoff: 05/22/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [事件](../../../csharp/programming-guide/events/index.md)   
  [委派](../../../csharp/programming-guide/delegates/index.md)
+

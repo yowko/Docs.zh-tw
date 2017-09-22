@@ -1,5 +1,5 @@
 ---
-title: "Boxing 和 Unboxing (C# 程式設計手冊) | Microsoft Docs"
+title: "Boxing 和 Unboxing (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6e0a70abd0f3311324f30eb5155000c09fc29cd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c783ac60735ba25db2736bd9469063c0897be22f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 和 Unboxing (C# 程式設計手冊)
@@ -100,7 +100,7 @@ Boxing 轉換
  ![UnBoxing 轉換圖形](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
 Unboxing 轉換  
   
- 若要在執行階段成功對實值類型進行 Unbox 處理，要進行 Unbox 處理的項目必須是物件的參考，而且該物件是先前對該實值類型的執行個體進行 Box 處理所建立的物件。 嘗試對 `null` 進行 Unbox 處理會導致 <xref:System.NullReferenceException>。 嘗試對不相容的實值型別參考進行 Unbox 處理會導致 <xref:System.InvalidCastException>。  
+ 若要在執行階段成功對實值類型進行 Unbox 處理，要進行 Unbox 處理的項目必須是物件的參考，而且該物件是先前對該實值類型的執行個體進行 Box 處理所建立的物件。 嘗試對 `null` 進行 Unbox 處理會造成 <xref:System.NullReferenceException>。 嘗試對不相容的實值類型參考進行 Unbox 處理會造成 <xref:System.InvalidCastException>。  
   
 ## <a name="example"></a>範例  
  下列範例將示範 Unboxing 無效且產生 `InvalidCastException` 的案例。 若使用 `try` 和 `catch`，則會在發生錯誤時顯示錯誤訊息。  
@@ -142,3 +142,4 @@ int j = (int) o;
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

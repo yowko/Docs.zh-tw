@@ -1,6 +1,6 @@
 ---
 title: "區別委派和事件"
-description: "區別委派和事件"
+description: "了解委派和事件的差異，以及何時使用 .NET Core 的各項功能。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4020df1a63cbcdeb7e7b5d9d49cfe6444a43655e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="distinguising-delegates-and-events"></a>區別委派和事件
+# <a name="distinguishing-delegates-and-events"></a>區別委派和事件
 
-[上一個](modern-events.md)
+[上一步](modern-events.md)
 
 決定以 `delegates` 為基礎的設計與以 `events` 為基礎的設計時，不熟悉 .NET Core 平台的開發人員通常十分糾結。 這是很難理解的概念，因為兩個語言功能非常類似。 事件甚至是使用委派的語言支援所建置。 
 

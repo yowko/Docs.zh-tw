@@ -1,5 +1,5 @@
 ---
-title: "如何：使用屬性建立 C-C++ 等位 (C#) | Microsoft Docs"
+title: "如何：使用屬性建立 C-C++ 等位 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd6bc60dfd1c6146d8fa72abdcfc6a00006817aa
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4532829080d994cf4cec92d64a12e3bf1890dc6a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何：使用屬性建立 C/C++ 等位 (C#)
@@ -91,4 +91,5 @@ ms.lasthandoff: 03/13/2017
  [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [使用反映存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

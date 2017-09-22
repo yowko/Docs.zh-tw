@@ -1,21 +1,40 @@
 ---
-title: "/appconfig (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/appconfig"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/appconfig compiler option [C#]"
+title: "-appconfig (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /appconfig
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 caps.latest.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 26
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2aede966f92af3c94f4591b68732dbdbf5a4c5c9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/19/2017
+
 ---
 # /appconfig (C# Compiler Options)
 **\/appconfig** 編譯器選項可讓 C\# 應用程式在組件繫結階段將組件的應用程式組態 \(app.config\) 檔案位置指定至 Common Language Runtime \(CLR\)。  
@@ -56,7 +75,8 @@ caps.handback.revision: 26
 </configuration>  
 ```  
   
-## 請參閱  
- [.NET Framework Assembly Unification Overview](http://msdn.microsoft.com/zh-tw/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
- [\<supportPortability\> 項目](../Topic/%3CsupportPortability%3E%20Element.md)   
- [C\# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+## <a name="see-also"></a>另請參閱  
+ [.NET Framework 組件對應轉換概觀](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
+ [\<supportPortability> 項目](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
+ [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+

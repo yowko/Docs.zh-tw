@@ -1,5 +1,5 @@
 ---
-title: "如何：顯示命令列引數 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：顯示命令列引數 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e46860ecc2f5062abb440a764443ecee19c5153d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf8a57cce252b3596f0a19c9df643427615467c6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>如何：顯示命令列引數 (C# 程式設計手冊)
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/13/2017
 |**executable.exe "one two" three**|"one two"<br /><br /> "three"|  
   
 > [!NOTE]
->  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
+>  在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。  
   
 ## <a name="example"></a>範例  
  此範例顯示傳遞至命令列應用程式的命令列引數。 所顯示的輸出是上表中的第一個項目。  
@@ -57,3 +57,4 @@ ms.lasthandoff: 03/13/2017
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [如何：使用 foreach 存取命令列引數](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Main() 傳回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

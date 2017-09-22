@@ -1,5 +1,5 @@
 ---
-title: "如何：控制命名空間前置詞 (C#) (LINQ to XML) | Microsoft Docs"
+title: "如何：控制命名空間前置字元 (C#) (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96bc6d1187aa72f8653cd01b2027306009634fd5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>如何：控制命名空間前置字元 (C#) (LINQ to XML)
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/13/2017
   
  控制命名空間前置詞的另一個常見原因是，您要讓使用者手動編輯 XML 文件，而且您要建立使用者便於輸入的命名空間前置詞。 例如，您可能要產生 XSD 文件。 若要轉換結構描述，建議您使用 `xs` 或 `xsd` 做為結構描述命名空間的前置詞。  
   
- 若要控制命名空間前置詞，您可插入宣告命名空間的屬性。 如果您宣告具有特定前置詞的命名空間，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 將會在序列化時，嘗試允許命名空間前置詞。  
+ 若要控制命名空間前置詞，您可插入宣告命名空間的屬性。 如果您宣告具有特定前置詞的命名空間，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 將會在序列化時，嘗試允許命名空間前置詞。  
   
  若要建立宣告具有特定前置詞之命名空間的屬性，您可以建立屬性，其中之屬性名稱的命名空間為 <xref:System.Xml.Linq.XNamespace.Xmlns%2A>，而屬性的名稱為命名空間前置詞。 屬性的值為命名空間的 URI。  
   
@@ -73,3 +73,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>另請參閱  
  [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

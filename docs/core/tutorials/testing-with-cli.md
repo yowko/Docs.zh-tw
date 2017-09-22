@@ -1,7 +1,7 @@
 ---
-title: "使用 .NET Core 命令列組織和測試專案 | Microsoft Docs"
+title: "使用 .NET Core 命令列組織和測試專案"
 description: "本教學課程說明如何從命令列組織和測試 .NET Core 專案。"
-keywords: .NET, .NET Core
+keywords: ".NET, .NET Core, 單元測試, .NET Core CLI, xUnit"
 author: cartermp
 ms.author: mairaw
 ms.date: 03/07/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 3f401907a59d5427cbcfaa0b785931a7ed82110f
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -55,22 +56,31 @@ ms.lasthandoff: 03/07/2017
 |__NewTypes.csproj
 ```
 
-現在，就彷彿它們是相同目錄中的檔案，請給予它們相同的命名空間，然後您就可以將其包含在您的 `Program.cs`。
+*IPet.cs*：
+
+[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
 
 ### <a name="example-pet-types"></a>範例︰寵物類型
 
-這個範例會建立兩個新類型 (`Dog` 和 `Cat`)，並實作公用介面 `IPet`。
+[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
 
 資料夾結構：
 
-```
-/NewTypes
-|__/Pets
-   |__Dog.cs
-   |__Cat.cs
-   |__IPet.cs
-|__Program.cs
-|__NewTypes.csproj
+[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+
+*Program.cs*：
+
+[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+
+*NewTypes.csproj*：
+
+[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+
+執行下列命令：
+
+```console
+dotnet restore
+dotnet run
 ```
 
 `IPet.cs`:
@@ -307,9 +317,13 @@ $ cd test/NewTypesTests
 $ dotnet restore
 $ dotnet test
 ```
- 
-輸出應該看起來像這樣︰
- 
+
+將您測試的判斷提示從 `Assert.NotEqual` 變更為 `Assert.Equal`：
+
+[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+
+使用 `dotnet test` 命令重新執行測試，並取得下列輸出︰
+
 ```
 xUnit.net .NET CLI test runner (64-bit win10-x64)
   Discovering: NewTypesTests
@@ -320,4 +334,8 @@ xUnit.net .NET CLI test runner (64-bit win10-x64)
    NewTypesTests  Total: 2, Errors: 0, Failed: 0, Skipped: 0, Time: 0.144s
 SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 ```
+
+通過測試。 與擁有者交談時，寵物類型的方法會傳回正確值。
+
+您已了解使用 xUnit 來組織及測試專案的技術。 繼續使用這些技術，以將它們套用至您自己的專案。 *祝各位程式撰寫愉快！*
 

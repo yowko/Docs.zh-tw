@@ -1,6 +1,6 @@
 ---
 title: "非同步總覽"
-description: "非同步總覽"
+description: "了解非同步程式設計此一重要技術，如何讓您更容易處理對多個核心的封鎖 I/O 和並行作業。"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: db4c9721381a9675b06f0fc6b5381d987816e9a4
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -28,17 +29,16 @@ ms.lasthandoff: 03/10/2017
 
 ## <a name="why-write-async-code"></a>為什麼撰寫非同步程式碼？
 
-現代應用程式大量使用檔案和網路 I/O。 除非您想要學習和使用具挑戰性的模式，否則 I/O API 傳統上預設會進行封鎖，進而導致不佳的使用者經驗和硬體使用。 非同步 API 和語言層級非同步程式設計模型則與此模型相反，只要學習幾個新的概念就可讓非同步執行成為預設值。
+現代應用程式大量使用檔案和網路 I/O。 除非您想要學習和使用具挑戰性的模式，否則 I/O API 傳統上預設會進行封鎖，進而導致不佳的使用者經驗和硬體使用。 工作架構非同步 API 和語言層級非同步程式設計模型則與此模型相反，只要學習幾個新的概念就可讓非同步執行成為預設值。
 
 非同步程式碼具有下列特性：
 
 * 處理更多的伺服器要求，方法是在等候傳回 I/O 要求時產生執行緒以處理更多的要求。
 * 讓 UI 更具回應性，方法是在等候 I/O 要求時產生 UI 互動的執行緒，以及將長時間執行的工作轉換成其他 CPU 核心。
 * 許多較新的 .NET API 都是非同步的。
-* 非常輕易地就可以在 .NET 中撰寫非同步程式碼！
+* 輕鬆地在 .NET 中撰寫非同步程式碼！
 
 ## <a name="whats-next"></a>後續步驟
 
-若要深入探討非同步概念和程式設計，請參閱[深入了解非同步](async-in-depth.md)。
-
+若要深入探討非同步概念和程式設計，請參閱[深入了解非同步](async-in-depth.md)和[工作架構非同步程式設計](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md)。
 

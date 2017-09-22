@@ -1,29 +1,34 @@
 ---
-title: "逐步解說：在部分信任案例中發出程式碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "匿名裝載的動態方法 [.NET Framework]"
-  - "動態方法"
-  - "發出動態組件, 部分信任案例"
-  - "部分信任, 發出動態方法"
-  - "部分信任, 反映"
-  - "反映發出, 匿名裝載的動態方法"
-  - "反映發出, 動態方法"
-  - "反映發出, 部分信任案例"
+title: "逐步解說：在部分信任案例中發出程式碼"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection emit, anonymously hosted dynamic methods
+- partial trust, reflection
+- partial trust, emitting dynamic methods
+- reflection emit, partial trust scenarios
+- anonymously hosted dynamic methods [.NET Framework]
+- emitting dynamic assemblies,partial trust scenarios
+- reflection emit, dynamic methods
+- dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db8bb0ae8b1ea45bcc3a4034f73b75758ffc35b3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 逐步解說：在部分信任案例中發出程式碼
 反映發出在完全或部分信任都使用相同的 API 集，但部分功能在部分信任的程式碼中需要特殊的使用權限。  此外，反映發出具有匿名裝載動態方法，這項功能是設計與部分信任搭配使用，以供安全性透明的組件使用。  
@@ -215,4 +220,5 @@ caps.handback.revision: 15
   
 ## 請參閱  
  [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
- [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+ [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+

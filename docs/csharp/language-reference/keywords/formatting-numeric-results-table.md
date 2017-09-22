@@ -1,22 +1,42 @@
 ---
-title: "格式化數值結果表 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "格式化 [C#]"
-  - "數值格式化 [C#]"
-  - "String.Format 方法"
-  - "Console.Write 方法"
+title: "格式化數值結果表 (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- formatting [C#]
+- numeric formatting [C#]
+- String.Format method
+- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 16976f5a59bd4eb0eca29553aff87d4fe0b1d247
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 格式化數值結果表 (C# 參考)
 如果要格式化數值結果，您可以使用 <xref:System.String.Format%2A?displayProperty=fullName> 方法，或者透過會呼叫 `String.Format` 的 <xref:System.Console.Write%2A?displayProperty=fullName> 或 <xref:System.Console.WriteLine%2A?displayProperty=fullName> 方法。  此格式是以格式字串 \(Format String\) 指定。  下表包含支援的標準格式字串。  格式字串會使用下列格式：`Axx`，其中 `A` 是格式規範而 `xx` 是精確度規範。  格式規範控制了套用在數值上的格式類型，而精確度規範則控制格式化輸出的有效數字或小數位數的數目。  精確度規範的值範圍從 0 到 99。  
@@ -38,4 +58,5 @@ caps.handback.revision: 14
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [標準數值格式字串](../Topic/Standard%20Numeric%20Format%20Strings.md)   
  [類型的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
- [字串](../../../csharp/language-reference/keywords/string.md)
+ [string](../../../csharp/language-reference/keywords/string.md)
+

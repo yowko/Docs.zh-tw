@@ -1,5 +1,5 @@
 ---
-title: "建立自訂的記錄檔接聽程式 (Visual Basic) | Microsoft Docs"
+title: "建立自訂的記錄檔接聽程式 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c7dd6ed1875abd37e72baf97950d21a110c5a6a8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bc6fde8dcbb27157f3fd180ad393bb406222195e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/22/2017
   
     1.  在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。  
   
-    2.  在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。  
+    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
     3.  按一下 [加入]。  
   
@@ -136,3 +136,4 @@ ms.lasthandoff: 05/22/2017
  [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
  [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

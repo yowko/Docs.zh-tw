@@ -1,20 +1,39 @@
 ---
-title: "靜態建構函式 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "建構函式 [C#], static"
-  - "靜態建構函式 [C#]"
+title: "靜態建構函式 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- static constructors [C#]
+- constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73df76c61f393bf5fe09af66935acfbac4b5663f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 靜態建構函式 (C# 程式設計手冊)
 靜態建構函式可以用來初始化任何[靜態](../../../csharp/language-reference/keywords/static.md)資料，或執行只需執行一次的特定動作。  在建立第一個執行個體或參考任何靜態成員之前，會自動呼叫靜態建構函式。  
@@ -47,4 +66,5 @@ caps.handback.revision: 23
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

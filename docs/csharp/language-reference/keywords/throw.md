@@ -1,5 +1,5 @@
 ---
-title: "throw (C# 參考) | Microsoft Docs"
+title: "throw (C# 參考)"
 ms.date: 2015-03-02
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 095a86f5ab2ce50f5931643161a44b5759583e4e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/13/2017
 ```csharp
 throw [e]
 ```
-其中 `e` 是衍生自 <xref:System.Exception?displayProperty=fullName> 的類別執行個體。 如果傳遞給 `GetNumber` 方法的引數未對應至內部陣列的有效索引，則下列範例會使用 `throw` 陳述式來擲回 @System.IndexOutOfRangeException。
+而 `e` 是衍生自 <xref:System.Exception?displayProperty=fullName> 之類別的執行個體。 如果傳遞給 `GetNumber` 方法的引數未對應至內部陣列的有效索引，則下列範例會使用 `throw` 陳述式來擲回 @System.IndexOutOfRangeException。
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 
@@ -94,3 +94,4 @@ throw [e]
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [例外狀況處理陳述式](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [如何：明確擲回例外狀況](https://msdn.microsoft.com/library/xhcbs8fz)
+

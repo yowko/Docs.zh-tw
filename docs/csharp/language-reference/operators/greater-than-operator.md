@@ -1,34 +1,54 @@
 ---
-title: "&gt; 運算子 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - ">_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "> 運算子 [C#]"
-  - "大於運算子 (>) [C#]"
+title: "&gt; 運算子 (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '>_CSharpKeyword'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '> operator [C#]'
+- greater than operator (>) [C#]
 ms.assetid: 26d3cb69-9c0b-4cc5-858b-5be1abd6659d
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5b4eb1f6fcca311fc772e4dbe0ce0391201af3de
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# &gt; 運算子 (C# 參考)
-所有的數字和列舉型別都定義了「大於」的關係運算子 \(`>`\)，當第一個運算元大於第二個運算元時會傳回 `true`，否則傳回 `false`。  
+# <a name="gt-operator-c-reference"></a>&gt; 運算子 (C# 參考)
+如果第一個運算元大於第二個運算元，則所有數值和列舉類型都會定義「大於」關係運算子 (`>`) 以傳回 `true`，否則為 `false`。  
   
-## 備註  
- 使用者定義型別可多載 `>` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  如果多載 `>`，則也必須多載 [\<](../../../csharp/language-reference/operators/less-than-operator.md)。  當多載二元 \(Binary\) 運算子時，同時隱含多載其對應的指派運算子 \(若有的話\)。  
+## <a name="remarks"></a>備註  
+ 使用者定義型別可以多載 `>` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。 如果多載 `>`，也必須多載 [<](../../../csharp/language-reference/operators/less-than-operator.md)。 二元運算子多載時，對應的指派運算子 (若有) 也會隱含地多載。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 運算子](../../../csharp/language-reference/operators/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 運算子](../../../csharp/language-reference/operators/index.md)   
  [explicit](../../../csharp/language-reference/keywords/explicit.md)
+

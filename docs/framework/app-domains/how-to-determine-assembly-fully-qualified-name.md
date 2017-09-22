@@ -1,24 +1,29 @@
 ---
-title: "如何：決定組件的完整名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 名稱"
-  - "名稱 [.NET Framework], 組件"
-  - "名稱 [.NET Framework], 完整類型名稱"
+title: "如何：決定組件的完整名稱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], fully qualified type names
+- names [.NET Framework], assemblies
+- assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673c836ea761c24e2627e97ab3bcb5dd3c35d141
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：決定組件的完整名稱
 若要在全域組件快取中找到組件的完整名稱，請使用全域組件快取工具 \([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)\)。  請參閱[如何：檢視全域組件快取的內容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
@@ -50,3 +55,4 @@ caps.handback.revision: 13
  [全域組件快取](../../../docs/framework/app-domains/gac.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

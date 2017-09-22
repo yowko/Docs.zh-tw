@@ -1,23 +1,28 @@
 ---
-title: "Common Language Runtime 中的類型轉送 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework]，類型轉送"
-  - "類型轉送"
+title: "Common Language Runtime 中的類型轉送"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], type forwarding
+- type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 113ff6decccc190c6638fa04745af425c55c6c0b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Common Language Runtime 中的類型轉送
 型別轉送可讓您將某種型別移到其他組件，而不需重新編譯使用原始組件的應用程式。  
@@ -40,7 +45,7 @@ caps.handback.revision: 7
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
     ```  
   
-    ```cpp#  
+    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
@@ -50,5 +55,6 @@ caps.handback.revision: 7
   
 ## 請參閱  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
- [Type Forwarding \(C\+\+\/CLI\)](../Topic/Type%20Forwarding%20\(C++-CLI\).md)   
- [\#using 指示詞](../Topic/%23using%20Directive%20\(C++\).md)
+ [型別轉送 (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)   
+ [#using 指示詞](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+

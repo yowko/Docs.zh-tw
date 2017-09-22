@@ -1,28 +1,33 @@
 ---
-title: "全域組件快取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "存取控制清單 [.NET Framework]"
-  - "ACL [.NET Framework]"
-  - "組件 [.NET Framework], 全域組件快取"
-  - "快取 [.NET Framework], 全域組件快取"
-  - "GAC (全域組件快取)"
-  - "全域組件快取"
-  - "全域組件快取, 關於"
+title: "全域組件快取"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- GAC (global assembly cache)
+- ACLs [.NET Framework]
+- global assembly cache
+- cache [.NET Framework], global assembly cache
+- global assembly cache, about
+- access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bad9e339896b0d62dce75a4044b18f3ae6a69332
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 全域組件快取
 安裝 Common Language Runtime 的每一部電腦都有一個稱為全域組件快取之整部電腦通用的程式碼快取。  全域組件快取會儲存要專門指定給電腦上一些應用程式共用的組件。  
@@ -51,3 +56,4 @@ caps.handback.revision: 13
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [使用組件和全域組件快取](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)
+

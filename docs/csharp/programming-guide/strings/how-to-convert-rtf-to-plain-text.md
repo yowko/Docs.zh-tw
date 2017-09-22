@@ -1,48 +1,68 @@
 ---
-title: "如何：轉換 RTF 為純文字 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "字串 [C#]，從 RTF 轉換"
+title: "如何：轉換 RTF 為純文字 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- strings [C#], converting from RTF
 ms.assetid: 3b386a87-899d-4d98-bc82-a980526ddaac
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e4c7b48467f3b260526c604fa3a36fc5d80374e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# 如何：轉換 RTF 為純文字 (C# 程式設計手冊)
-Rich Text Format \(RTF\) 是 Microsoft 在 1980 年代後期開發出來的文件格式，讓文件可跨作業系統進行交換。  Microsoft Word 和 WordPad 都可以讀取及寫入 RTF 文件。  在 .NET Framework 中，使用 <xref:System.Windows.Forms.RichTextBox> 控制項建立的文書處理器，可以支援 RTF 並讓使用者以 WYSIWIG 的方式將格式套用至文字。  
+# <a name="how-to-convert-rtf-to-plain-text-c-programming-guide"></a>如何：轉換 RTF 為純文字 (C# 程式設計手冊)
+Rich Text Format (RTF) 是 Microsoft 在 1980 年代晚期開發的文件格式，以便跨作業系統交換文件。 Microsoft Word 和 WordPad 都可以讀取和寫入 RTF 文件。 在 .NET Framework 中，您可以使用 <xref:System.Windows.Forms.RichTextBox> 控制項來建立支援 RTF 的文書處理器，讓使用者以 WYSIWIG 的方式將格式套用至文字。  
   
- <xref:System.Windows.Forms.RichTextBox> 控制項還可以讓您以程式設計方式，移除文件中的 RTF 格式程式碼，並將文件轉換成純文字。  您不需要在 Windows Form 中嵌入該控制項，就能執行這類作業。  
+ 您也可以使用 <xref:System.Windows.Forms.RichTextBox> 控制項，以程式設計方式移除 RTF 格式化文件中的程式碼，並將它轉換成純文字。 您不需要將控制項內嵌在 Windows Form，就能執行此類作業。  
   
-### 若要在專案中使用 RichTextBox 控制項  
+### <a name="to-use-the-richtextbox-control-in-a-project"></a>在專案中使用 RichTextBox 控制項  
   
-1.  加入 System.Windows.Forms.dll 的參考。  
+1.  新增 System.Windows.Forms.dll 的參考。  
   
-2.  加入 `System.Windows.Forms` 命名空間 \(Namespace\) 的 using 指示詞 \(選擇性\)。  
+2.  為 `System.Windows.Forms` 命名空間新增 using 指示詞 (選擇性)。  
   
-## 範例  
- 下列範例會將範例 RTF 檔為純文字。  檔案包含 RTF 格式 \(例如字型資訊\)，四個 Unicode 字元和四個延伸 ASCII 字元。  當 RTF，擷取內容為文字，顯示在 <xref:System.Windows.Forms.MessageBox>上的文字，並輸出至文字以 UTF\-8 格式，的檔案範例程式碼會開啟檔案，將的內容儲存至 <xref:System.Windows.Forms.RichTextBox> 。  
+## <a name="example"></a>範例  
+ 下列範例會將範例 RTF 檔轉換成純文字。 此檔案包含 RTF 格式 (例如字型資訊)、四個 Unicode 字元，以及四個延伸的 ASCII 字元。 範例程式碼會開啟檔案，將其內容傳遞至 <xref:System.Windows.Forms.RichTextBox> 為 RTF，擷取內容為文字，以 <xref:System.Windows.Forms.MessageBox> 顯示文字，再將文字輸出為 UTF-8 格式的檔案。  
   
- `MessageBox` 和輸出檔案包含下列文字:  
+ `MessageBox` 和輸出檔案包含下列文字：  
   
 ```  
 The Greek word for "psyche" is spelled ψυχή. The Greek letters are encoded in Unicode.  
 These characters are from the extended ASCII character set (Windows code page 1252):  âäӑå  
-  
 ```  
   
  [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-rtf-to-plain-text_1.cs)]  
   
- RTF 字元以八個位元來編碼，  不過，刪除指定的字碼頁，的延伸 ASCII 字元以外的使用者可以指定 Unicode 字元。  因為 <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> 屬性的型別是 [string](../../../csharp/language-reference/keywords/string.md)，因此會以 Unicode UTF\-16 來編碼字元。  原始碼 RTF 文件的任何延伸 ASCII 字元和 Unicode 字元在文字輸出中都可以正確編碼。  
+ RTF 字元會以八個位元編碼。 不過，使用者可在指定字碼頁的延伸 ASCII 字元之外，另行指定 Unicode 字元。 因為 <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> 屬性是[字串](../../../csharp/language-reference/keywords/string.md)類型，所以字元都會編碼為 Unicode UTF-16。 來源 RTF 文件中任何擴充的 ASCII 字元和 Unicode 字元，都會使用文字輸出正確編碼。  
   
- 如果使用 <xref:System.IO.File.WriteAllText%2A?displayProperty=fullName> 方法將文字寫入磁碟，則會以 UTF\-8 \(不含位元組順序標記\) 來編碼文字。  
+ 如果您使用 <xref:System.IO.File.WriteAllText%2A?displayProperty=fullName> 方法將文字寫入磁碟，則文字會編碼為 UTF-8 (無位元組順序標記)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.RichTextBox?displayProperty=fullName>   
  [字串](../../../csharp/programming-guide/strings/index.md)
+

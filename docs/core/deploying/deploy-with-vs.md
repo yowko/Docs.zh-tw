@@ -16,6 +16,23 @@ ms.contentlocale: zh-tw
 ms.lasthandoff: 09/12/2017
 
 ---
+title: "使用 Visual Studio 部署 .NET Core 應用程式"
+description: "了解使用 Visual Studio 的 .NET Core 應用程式部署"
+keywords: ".NET、.NET Core、.NET Core 部署"
+author: rpetrusha
+ms.author: ronpet
+ms.date: 04/18/2017
+ms.topic: article
+ms.prod: .net-core
+ms.devlang: dotnet
+ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.translationtype: HT
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
+
+---
 
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 

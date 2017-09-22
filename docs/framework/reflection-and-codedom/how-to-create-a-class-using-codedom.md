@@ -1,26 +1,31 @@
 ---
-title: "如何：使用 CodeDOM 建立類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "程式碼文件物件模型, 建立類別"
-  - "程式碼文件物件模型, 圖形"
-  - "CodeDOM, 建立類別"
-  - "CodeDOM, 圖形"
-  - "使用 CodeDOM 繪圖"
+title: "如何：使用 CodeDOM 建立類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Code Document Object Model, graphs
+- Code Document Object Model, creating classes
+- graphing with CodeDOM
+- CodeDOM, creating classes
+- CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3876ed881d98b4ee0bdb66f43de3de939111d45d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用 CodeDOM 建立類別
 下列程序說明如何建立及編譯會產生一個類別的 CodeDOM 圖形，此類別包含兩個欄位、三個屬性、一個方法、一個建構函式 \(Constructor\) 和一個進入點 \(Entry Point\)。  
@@ -123,3 +128,4 @@ The object:
 ## 請參閱  
  [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)   
  [從 CodeDOM 圖表產生和編譯原始程式碼](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+

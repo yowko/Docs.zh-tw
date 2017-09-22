@@ -1,5 +1,5 @@
 ---
-title: "在 C# 中建立 XML 樹狀結構 (LINQ to XML) | Microsoft Docs"
+title: "在 C# 中建立 XML 樹狀 (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,24 +19,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92ba0d345183ec503d61254355f948f82a18f053
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ac95fcf49736b554c8a3d4d0061f63b3ac4d3f65
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中建立 XML 樹狀 (LINQ to XML)
 本節提供在 C# 中建立 XML 樹狀的相關資訊。  
   
- 如需使用 LINQ 查詢的結果作為 <xref:System.Xml.Linq.XElement> 內容的詳細資訊，請參閱[功能建構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 如需使用 LINQ 查詢的結果作為 <xref:System.Xml.Linq.XElement> 內容的資訊，請參閱[函數式建構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
 ## <a name="constructing-elements"></a>建構項目  
- <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式的簽章可讓您傳遞項目或屬性的內容，當作建構函式的引數。 由於其中一個建構函式採用多個引數，因此，您可以傳遞任何數目的子項目。 當然，這些子項目中的每個子項目都可以包含其自己的子項目。 對於任何項目，您可以加入任何數目的屬性。  
+ <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 建構函式的簽章可讓您傳遞項目或屬性的內容，當做建構函式的引數。 由於其中一個建構函式採用多個引數，因此，您可以傳遞任何數目的子項目。 當然，這些子項目中的每個子項目都可以包含其自己的子項目。 對於任何項目，您可以加入任何數目的屬性。  
   
- 新增 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，則這些物件只會附加至 XML 樹狀結構。 如果新內容已經成為父代，或是其他 XML 樹狀的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀。 本主題中的最後一個範例會示範這個情況。  
+ 加入 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。 如果新內容已經成為父代，或是其他 XML 樹狀結構的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀結構。 本主題中的最後一個範例會示範這個情況。  
   
- 若要建立 `contacts` <xref:System.Xml.Linq.XElement>，您可以使用下列程式碼︰  
+ 若要建立 `contacts`<xref:System.Xml.Linq.XElement>，您可以使用下列程式碼：  
   
 ```csharp  
 XElement contacts =  
@@ -62,18 +62,18 @@ XElement contacts =
 |建構函式|描述|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|建立 <xref:System.Xml.Linq.XElement>。 `name` 參數會指定項目的名稱；`content` 會指定項目的內容。|  
-|`XElement(XName name)`|建立 <xref:System.Xml.Linq.XElement> 並將其 <xref:System.Xml.Linq.XName> 初始化為指定的名稱。|  
-|`XElement(XName name, params object[] content)`|建立 <xref:System.Xml.Linq.XElement> 並將其 <xref:System.Xml.Linq.XName> 初始化為指定的名稱。 系統會從參數清單的內容建立屬性和/或子項目。|  
+|`XElement(XName name)`|在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。|  
+|`XElement(XName name, params object[] content)`|在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。 系統會從參數清單的內容建立屬性和/或子項目。|  
   
- `content` 參數非常有彈性。 它支援物件為 <xref:System.Xml.Linq.XElement> 之有效子系的任何類型。 下列規則適用於傳入此參數的不同型別物件：  
+ `content` 參數非常有彈性。 它支援物件為 <xref:System.Xml.Linq.XElement> 之有效子系的任何型別。 下列規則適用於傳入此參數的不同型別物件：  
   
 -   字串當做文字內容加入。  
   
--   <xref:System.Xml.Linq.XElement> 新增為子項目。  
+-   <xref:System.Xml.Linq.XElement> 當做子項目加入。  
   
--   <xref:System.Xml.Linq.XAttribute> 新增為屬性。  
+-   <xref:System.Xml.Linq.XAttribute> 當做屬性加入。  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment> 或 <xref:System.Xml.Linq.XText> 新增為子內容。  
+-   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 或 <xref:System.Xml.Linq.XText> 當做子內容加入。  
   
 -   系統會列舉 <xref:System.Collections.IEnumerable>，並將這些規則遞迴地套用到結果。  
   
@@ -109,7 +109,7 @@ Console.WriteLine(n);
  浮點數為 Boxed 而且會傳入建構函式。 Boxed 數字會轉換為字串，並當做項目的內容使用。  
   
 ### <a name="creating-an-xelement-with-a-child-element"></a>建立包含子項目的 XElement  
- 如果您要針對內容引數傳遞 <xref:System.Xml.Linq.XElement> 類別的執行個體，建構函式會建立包含子項目的子系：  
+ 如果您要針對內容引數傳遞 <xref:System.Xml.Linq.XElement> 類別的執行個體，建構函式會建立包含子項目的項目：  
   
 ```csharp  
 XElement shippingUnit = new XElement("ShippingUnit",  
@@ -127,7 +127,7 @@ Console.WriteLine(shippingUnit);
 ```  
   
 ### <a name="creating-an-xelement-with-multiple-child-elements"></a>建立包含多個子項目的 XElement  
- 您可以為內容傳遞數個 <xref:System.Xml.Linq.XElement> 物件。 每個 <xref:System.Xml.Linq.XElement> 物件都會包含為子項目。  
+ 您可以針對內容傳入多個 <xref:System.Xml.Linq.XElement> 物件。 每個 <xref:System.Xml.Linq.XElement> 物件都會當做子項目包含在內。  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -201,7 +201,7 @@ Console.WriteLine(n);
 ```  
   
 ### <a name="attaching-vs-cloning"></a>附加與複製之比較  
- 如前所述，新增 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，則這些物件只會附加至 XML 樹狀結構。 如果新內容已經成為父代，或是其他 XML 樹狀的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀。  
+ 如先前所述，加入 <xref:System.Xml.Linq.XNode> (包括 <xref:System.Xml.Linq.XElement>) 或 <xref:System.Xml.Linq.XAttribute> 物件時，如果新內容沒有父代，這些物件只會附加到 XML 樹狀結構。 如果新內容已經成為父代，或是其他 XML 樹狀結構的一部分，則會複製新內容，而且新複製的內容會附加到 XML 樹狀結構。  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -238,3 +238,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>另請參閱  
  [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

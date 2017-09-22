@@ -1,6 +1,6 @@
 ---
-title: "ulong (C# 參考) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "ulong (C# 參考)"
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36de0add1d7fdf58745c65d231f3789c532ab69f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (C# 參考)
@@ -44,33 +45,32 @@ ms.lasthandoff: 03/13/2017
 |`ulong`|0 到 18,446,744,073,709,551,615|不帶正負號的 64 位元整數|<xref:System.UInt64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>常值  
- 您可以宣告並初始化 `ulong` 變數，如下列範例所示：  
+
+您可以針對 `ulong` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `ulong` 的範圍 (亦即，如果小於 <xref:System.UInt64.MinValue?displayProperty=fullName> 或大於 <xref:System.UInt64.MaxValue?displayProperty=fullName>)，就會發生編譯錯誤。 
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 7,934,076,125 整數，會指派給 `ulong` 值。  
   
-```  
-  
-ulong uLong = 9223372036854775808;  
-```  
-  
- 整數常值沒有後置詞時，其類型會是下列類型中可表示其值的第一個類型：[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md)、`ulong`。 在上述範例中，它是 `ulong` 類型。  
-  
- 您也可以使用後置詞，以根據下列規則來指定常值的類型︰  
-  
--   如果您使用 L 或 l，則根據常值整數的大小，常值整數的類型為 [long](../../../csharp/language-reference/keywords/long.md) 或 `ulong`。  
-  
-    > [!NOTE]
-    >  您可以使用小寫字母 "l" 作為後置詞。 不過，因為字母 "l" 很容易與數字 "1" 混淆，所以這會產生編譯器警告。 為了清楚起見，請使用 "L"。  
-  
--   如果您使用 `U` 或 `u`，則根據常值整數的大小，常值整數的類型為 [uint](../../../csharp/language-reference/keywords/uint.md) 或 `ulong`。  
-  
--   如果您使用 UL、ul、Ul、uL、LU、lu、Lu 或 lU，則常值整數的類型會是 `ulong`。  
-  
-     例如，下列三個陳述式的輸出會是系統類型 `UInt64`，其對應至別名 `ulong`：  
-  
-    ```  
-    Console.WriteLine(9223372036854775808L.GetType());  
-    Console.WriteLine(123UL.GetType());  
-    Console.WriteLine((123UL + 456).GetType());  
-    ```  
+[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+
+> [!NOTE] 
+> 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
+
+自 C# 7 開始，您也可以使用底線字元 `_` 作為數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ 整數常值亦可包含後置詞以表示類型。 `UL` 或 `ul` 後置詞明確地將數值常值識別為 `ulong` 值。 如果常值超出 <xref:System.Int64.MaxValue?displayProperty=fullName>，則 `L` 後置詞表示 `ulong`。 如果常值超出 <xref:System.UInt32.MaxValue?displayProperty=fullName>，則 `U` 或 `u` 後置詞表示 `ulong`。 下列範例會使用 `ul` 後置詞來表示長整數：
+ 
+[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+
+如果整數常值沒有後置詞，其類型會是下列類型中可表示其值的第一個類型： 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](long.md)
+4. `ulong`
+
+## <a name="compiler-overload-resolution"></a>編譯器多載解析
   
  後置詞的常見用法是搭配呼叫多載方法。 例如，請考慮使用下列使用 `ulong` 和 [int](../../../csharp/language-reference/keywords/int.md) 參數的多載方法：  
   
@@ -111,7 +111,7 @@ ulong y = (ulong)3.0;
  如需隱含數值轉換規則的詳細資訊，請參閱[隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.UInt64>   
@@ -122,3 +122,4 @@ ulong y = (ulong)3.0;
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

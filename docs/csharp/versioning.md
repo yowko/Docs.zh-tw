@@ -1,8 +1,8 @@
 ---
-title: "C# 版本控制 | C# 指南"
+title: "C# 版本控制 - C# 手冊"
 description: "了解 C# 和 .NET 的版本控制運作方式"
-keywords: .NET, .NET Core, C#
-author: tsolarin
+keywords: ".NET、.NET Core、C#"
+author: BillWagner
 manager: wpickett
 ms.date: 01/08/2017
 ms.topic: article
@@ -10,15 +10,15 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfa94e6d994f63adb13bdeea9b23f7130799b438
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="versioning-in-c"></a>C 的版本控制# #
+# <a name="versioning-in-c"></a>C# 中的版本控制 #
 
 在本教學課程中，您會了解版本控制在 .NET 中的意義。 您也會了解進行文件庫版本控制以及升級到新版文件庫時要考量的因素。
 

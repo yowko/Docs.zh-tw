@@ -1,13 +1,9 @@
 ---
-title: "如何：判斷安裝的 .NET Framework 版本 | Microsoft Docs"
-ms.custom: 
-ms.date: 04/07/2017
+title: "如何：判斷安裝的 .NET Framework 版本"
+ms.date: 08/09/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions, determining for .NET Framework
@@ -17,10 +13,11 @@ caps.latest.revision: 62
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3f2aca8f5f977d278fd326dfb20267d9bf1a8262
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: afb01fd47ed2ce3b9c5838f3a8f61c8d34147378
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
@@ -36,6 +33,7 @@ ms.lasthandoff: 04/18/2017
  [檢視登錄 (4.5 版及更新版本)](#net_b)  
  [使用程式碼查詢登錄 (1-4 版)](#net_c)  
  [使用程式碼查詢登錄 (4.5 版及更新版本)](#net_d)  
+ [使用 PowerShell 查詢登錄 (4.5 版及更新版本)](#ps_a)  
   
  若要尋找 CLR 版本，您可以使用工具或程式碼：  
   
@@ -144,41 +142,62 @@ ms.lasthandoff: 04/18/2017
     |所有其他 Windows 作業系統版本上安裝的 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394271|  
     |Windows 10 年度更新版上安裝的 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|  
     |所有其他 Windows 作業系統版本上安裝的 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394806|
-    |Windows 10 Creators Update 上安裝的 .NET Framework 4.7|460798|  
+    |Windows 10 Creators Update 上安裝的 .NET Framework 4.7|460798|
+    |所有其他 Windows 作業系統版本上安裝的 .NET Framework 4.7|460805|
+
+     下列範例會檢查登錄中的 `Release` 值，以判斷是否安裝 .NET Framework 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。
+
+     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]   [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+
+     此範例遵循版本檢查的建議做法：
+
+    - 它會檢查 `Release` 項目的值「大於或等於」已知版本機碼的值。
+
+    - 它會從最新版本依序檢查到最舊版本。
+
+<a name="ps_a"></a> 
+#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>藉由查詢 PowerShell 的登錄來檢查所需的最低 .NET Framework 版本 (.NET Framework 4.5 及更新版本)
+
+- 下列範例會檢查 `Release` 關鍵字的值，判斷是否安裝 .NET Framework 4.6.2 或更高版本，無論 Windows 作業系統版本為何 (如果是，傳回 `True`；否則傳回 `False`)。
+
+    ```PowerShell
+    Get-ChildItem "hklm:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | % { $_ -ge 394802 } 
+    ```
+
+    您可以使用下表的其他值取代上例中的 `394802` 來檢查是否有不同的所需最低 .NET Framework 版本。
   
-     下列範例會檢查登錄中的 `Release` 值，以判斷是否安裝 .NET Framework 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。  
-  
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/listversions/cs/Versions45Plus.cs#5)]
-     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listversions/vb/Versions45Plus.vb#5)]  
-  
-     此範例遵循版本檢查的建議做法：  
-  
-    -   它會檢查 `Release` 項目的值「大於或等於」已知版本機碼的值。  
-  
-    -   它會從最新版本依序檢查到最舊版本。  
-  
-<a name="clr_a"></a>   
-#### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>使用 Clrver 工具尋找目前的執行階段版本  
-  
--   使用 CLR 版本工具 (Clrver.exe) 判斷電腦上安裝了哪些通用語言執行平台 (CLR) 版本。  
-  
-     在 Visual Studio 命令提示字元中輸入 `clrver`。 這個命令產生的輸出類似下面所述：  
-  
-    ```  
-    Versions installed on the machine:  
-    v2.0.50727  
-    v4.0.30319  
-    ```  
-  
-     如需使用這項工具的詳細資訊，請參閱 [Clrver.exe (CLR 版本工具)](~/docs/framework/tools/clrver-exe-clr-version-tool.md)。  
-  
-<a name="clr_b"></a>   
-#### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>若要藉由查詢程式碼中的 Environment 類別尋找目前的執行階段版本  
-  
--   查詢 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性，以擷取識別目前執行程式碼之執行階段版本的 <xref:System.Version> 物件。 您可以使用 <xref:System.Version.Major%2A?displayProperty=fullName> 屬性取得主要版本識別碼 (例如 "4" 代表 4.0 版)；使用 <xref:System.Version.Minor%2A?displayProperty=fullName> 屬性取得次要版本識別碼 (例如 "0" 代表 4.0 版)；或使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法取得整個版本字串 (例如 "4.0.30319.18010"，如下列程式碼所示)。 這個屬性會傳回單一值，反映出目前執行程式碼的執行階段版本，但是不會傳回電腦上可能已安裝的組件版本或其他執行階段版本。  
-  
-     針對 .NET Framework 4、4.5、4.5.1 和 4.5.2 版，<xref:System.Environment.Version%2A?displayProperty=fullName> 屬性會傳回 <xref:System.Version> 物件，其字串表示的格式為 `4.0.30319.xxxxx`。 針對 .NET Framework 4.6 和更新版本，其格式為 `4.0.30319.42000`。  
-  
+    |版本|DWORD 版本的最低值|
+    |-------------|--------------------------------|
+    |.NET Framework 4.5|378389|
+    |.NET Framework 4.5.1|378675|
+    |.NET Framework 4.5.2|379893|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
+    |.NET Framework 4.7|460798|
+
+<a name="clr_a"></a> 
+#### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>使用 Clrver 工具尋找目前的執行階段版本
+
+- 使用 CLR 版本工具 (Clrver.exe) 判斷電腦上安裝了哪些通用語言執行平台 (CLR) 版本。
+
+     在 Visual Studio 命令提示字元中輸入 `clrver`。 這個命令產生的輸出類似下面所述：
+
+    ```
+    Versions installed on the machine:
+    v2.0.50727
+    v4.0.30319
+    ```
+
+     如需使用這項工具的詳細資訊，請參閱 [Clrver.exe (CLR 版本工具)](~/docs/framework/tools/clrver-exe-clr-version-tool.md)。
+
+<a name="clr_b"></a> 
+#### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>若要藉由查詢程式碼中的 Environment 類別尋找目前的執行階段版本
+
+- 查詢 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性，以擷取可識別目前執行程式碼的執行階段版本的 <xref:System.Version>。 您可以使用 <xref:System.Version.Major%2A?displayProperty=fullName> 屬性取得主要版本識別項 (例如，"4" 代表 4.0 版)，使用 <xref:System.Version.Minor%2A?displayProperty=fullName> 屬性取得次要版本識別項 (例如，"0" 代表 4.0 版)，或者使用 <xref:System.Object.ToString%2A?displayProperty=fullName> 方法取得整個版本字串 (例如 "4.0.30319.18010"，如下列程式碼所示)。 這個屬性會傳回單一值，反映出目前執行程式碼的執行階段版本，但是不會傳回電腦上可能已安裝的組件版本或其他執行階段版本。
+
+     針對 .NET Framework 4、4.5、4.5.1 和 4.5.2 版，<xref:System.Environment.Version%2A?displayProperty=fullName> 屬性會傳回 <xref:System.Version> 物件，其字串表示的格式為 `4.0.30319.xxxxx`。 針對 .NET Framework 4.6 和更新版本，其格式為 `4.0.30319.42000`。
+
     > [!IMPORTANT]
     >  針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和更新版本，不建議使用 <xref:System.Environment.Version%2A?displayProperty=fullName> 屬性來偵測執行階段版本。 相反地，建議您查詢登錄，如本文稍早的[藉由查詢程式碼中的登錄尋找 .NET Framework 版本 (.NET Framework 4.5 及更新版本)](#net_d) 一節中所述。  
   
@@ -197,5 +216,6 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>另請參閱  
  [如何：判斷安裝的 .NET Framework 更新](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
+ [安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
  [版本和相依性](~/docs/framework/migration-guide/versions-and-dependencies.md)
+

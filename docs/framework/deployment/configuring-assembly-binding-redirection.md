@@ -1,28 +1,33 @@
 ---
-title: "設定組件繫結重新導向 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 繫結重新導向"
-  - "並存執行, 組件繫結重新導向"
+title: "設定組件繫結重新導向"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- side-by-side execution, assembly binding redirection
+- assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6cd1e2d621d133f80a2f6e650ae6aed94e6bbe33
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 設定組件繫結重新導向
 根據預設，應用程式會使用執行階段版本 \(用來編譯應用程式\) 隨附的 .NET Framework 組件集。  您可以使用應用程式組態檔中 [\<assemblyBinding\>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 項目上的 **appliesTo** 屬性，來重新導向組件繫結參考至特定版本的 .NET Framework 組件。  這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它會套用至哪一個版本。  如果沒有指定 **appliesTo** 屬性，則 **\<assemblyBinding\>** 項目會套用至所有的 .NET Framework 版本。  
@@ -67,5 +72,6 @@ caps.handback.revision: 8
   
  您可判斷組態檔是否用於決定正在進行組件繫結重新導向。  使用[組件繫結記錄檔檢視器 \(Fuslogvw.exe\)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 來查看正在載入哪些組件。  若要查看所有組件繫結，您必須在登錄中設定 **ForceLog** 項目。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+

@@ -1,55 +1,60 @@
 ---
-title: "傳遞結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "平台叫用, 呼叫 Unmanaged 函式"
+title: "傳遞結構"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e0cd4b8c76eca00ad7fbfcb03162a6705f72768
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 傳遞結構
-許多 Unmanaged 的函式會要您將參數傳遞給函式、在 Managed 程式碼中所定義的結構 \(也就是 Visual Basic 中的使用者定義型別\) 成員或類別成員。  當使用平台叫用傳遞結構或類別至 Unmanaged 程式碼時，您必須提供額外的資訊以保留原始配置與對齊。  本主題將介紹定義格式化型別所使用的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性。  針對 Managed 結構與類別而言，您可以從多個 **LayoutKind** 列舉所提供之可預測配置行為中予以選取。  
+# <a name="passing-structures"></a>傳遞結構
+許多 Unmanaged 函式都需要您將其傳遞為函式的參數、結構成員 (Visual Basic 中的使用者定義型別) 或使用 Managed 程式碼所定義類別的成員。 使用平台叫用將結構或類別傳遞至 Unmanaged 程式碼時，您必須提供其他資訊來保留原始配置和對齊方式。 本主題介紹用來定義格式化類型的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性。 針對 Managed 結構和類別，您可以從 **LayoutKind** 列舉所提供的數個可預測配置行為中進行選取。  
   
- 本主題中所要呈現的中心概念在於結構與類別型別之間的一些主要差異。  結構為實值型別，而類別為參考型別，類別永遠會提供至少一個層級的記憶體間接取值 \(Indirection\) \(數值指標\)。  這項差異是很重要的，因為 Unmanaged 函式通常會要求間接取值，如同下表第一個欄位中的簽章所顯示的。  在其餘欄位中的 Managed 結構與類別宣告顯示您可以在宣告中調整之間接取值層級範圍。  Visual Basic 和 Visual C\# 均可使用宣告。  
+ 本主題中所呈現概念的中心是結構與類別類型之間的重要差異。 結構是實值型別，而類別是參考型別 - 類別一律會提供至少一層記憶體間接取值 (實值的指標)。 這項差異十分重要，因為 Unmanaged 函式通常要求間接取值，如下表第一個資料行中的簽章所示。 其餘資料行中的 Managed 結構和類別宣告會顯示您可調整宣告中間接取值層級的目標程度。所提供的宣告同時適用於 Visual Basic 和 Visual C#。  
   
-|Unmanaged 簽章|Managed 宣告：               <br /> 無間接取值 \(Indirection\)               <br />  `Structure MyType`  <br />  `struct MyType;`|Managed 宣告：               <br /> 層級一間接取值               <br />  `Class MyType`  <br />  `class MyType;`|  
-|------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> 要求層級零的間接取值。|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> 加入層級零的間接取值。|不可能，因為已經有層級一的間接取值。|  
-|`DoWork(MyType* x);`<br /><br /> 要求層級一的間接取值。|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> 加入層級一的間接取值。|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> 加入層級零的間接取值。|  
-|`DoWork(MyType** x);`<br /><br /> 要求層級二的間接取值。|不可能，因為無法使用 **ByRef** **ByRef**或是`ref` `ref`。|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> 加入層級一的間接取值。|  
+|Unmanaged 簽章|Managed 宣告： <br />無間接取值<br />`Structure MyType`<br />`struct MyType;`|Managed 宣告： <br />一層間接取值<br />`Class MyType`<br />`class MyType;`|  
+|-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
+|`DoWork(MyType x);`<br /><br /> 要求零層間接取值。|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> 兩層間接取值。|無法進行，因為已有一層間接取值。|  
+|`DoWork(MyType* x);`<br /><br /> 要求一層間接取值。|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> 新增一層間接取值。|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> 兩層間接取值。|  
+|`DoWork(MyType** x);`<br /><br /> 要求兩層間接取值。|不可行，因為無法使用 **ByRef** **ByRef** 或 `ref` `ref`。|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> 新增一層間接取值。|  
   
- 該表格說明下列平台叫用宣告的方針：  
+ 此表格描述下列平台叫用宣告方針：  
   
--   當 Unmanaged 函式不要求任何間接取值時，請使用傳值方式的結構。  
+-   Unmanaged 函式未要求間接取值時，請使用以傳值方式傳遞的結構。  
   
--   當 Unmanaged 函式要求層級一的間接取值時，請使用傳址方式結構或傳值方式類別。  
+-   Unmanaged 函式要求一層間接取值時，請使用以傳址方式傳遞的結構或以傳值方式傳遞的類別。  
   
--   當 Unmanaged 函式要求層級二的間接取值時，請使用傳址方式類別。  
+-   Unmanaged 函式要求兩層間接取值時，請使用以傳址方式傳遞的類別。  
   
-## 宣告與傳遞結構  
- 以下範例示範如何在 Managed 程式碼中定義 `Point` 和 `Rect` 結構，並且將型別做為參數傳遞給 User32.dll 檔案中的 **PtInRect** 函式。  **PtInRect** 具有下列 Unmanaged 簽章：  
+## <a name="declaring-and-passing-structures"></a>宣告和傳遞結構  
+ 下列範例示範如何使用 Managed 程式碼定義 `Point` 和 `Rect` 結構，並將類型當成參數傳遞至 User32.dll 檔案中的 **PtInRect** 函式。 **PtInRect** 具有下列 Unmanaged 簽章：  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- 請注意，您必須以傳址 \(By Reference\) 方式傳遞 Rect 結構，因為這個函式需要一個指向 RECT 型別的指標。  
+ 請注意，您必須以傳址方式傳遞 Rect 結構，因為此函式需要有 RECT 類型的指標。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -70,7 +75,6 @@ Class Win32API
     Declare Auto Function PtInRect Lib "user32.dll" _  
     (ByRef r As Rect, p As Point) As Boolean  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -96,14 +100,14 @@ class Win32API {
 }  
 ```  
   
-## 宣告與傳遞類別  
- 只要類別具有固定的成員配置，您就可以將類別的成員傳遞給 Unmanaged DLL 函式。  以下範例示範如何將以循序順序定義的 `MySystemTime` 類別的成員傳遞給 User32.dll 檔案中的 **GetSystemTime**。  **GetSystemTime** 具有以下 Unmanaged 簽章：  
+## <a name="declaring-and-passing-classes"></a>宣告和傳遞類別  
+ 只要類別具有固定成員配置，您就可以將類別的成員傳遞至 Unmanaged DLL 函式。 下列範例示範如何以定義的循序順序將 `MySystemTime` 類別成員傳遞至 User32.dll 檔案中的 **GetSystemTime**。 **GetSystemTime** 具有下列 Unmanaged 簽章：  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- 與實值型別不同的是，類別永遠會有至少一個層級的間接取值。  
+ 與實值型別不同，類別一律會有至少一層間接取值。  
   
 ```vb  
 Imports System  
@@ -142,7 +146,6 @@ Public Class TestPlatformInvoke
         Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -184,8 +187,9 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)   
- [StructLayoutAttribute 類別](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [StructLayoutAttribute 類別](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [FieldOffsetAttribute 類別](frlrfSystemRuntimeInteropServicesFieldOffsetAttributeClassTopic)
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+

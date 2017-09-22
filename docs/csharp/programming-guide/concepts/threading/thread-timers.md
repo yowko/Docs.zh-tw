@@ -1,5 +1,5 @@
 ---
-title: "執行緒計時器 (C#) | Microsoft Docs"
+title: "執行緒計時器 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-timers-c"></a>執行緒計時器 (C#)
-<xref:System.Threading.Timer?displayProperty=fullName> 類別適用於在個別執行緒上定期執行工作。 例如，您可以使用執行緒計時器來檢查資料庫的狀態和完整性，或備份重要檔案。  
+<xref:System.Threading.Timer?displayProperty=fullName> 類別適用於定期對不同的執行緒執行工作。 例如，您可以使用執行緒計時器來檢查資料庫的狀態和完整性，或備份重要檔案。  
   
 ## <a name="thread-timer-example"></a>執行緒計時器範例  
  下列範例會每隔兩秒鐘啟動一次工作，並使用旗標來起始會停止計時器的 <xref:System.IDisposable.Dispose%2A> 方法。 這個範例會將狀態公佈至輸出視窗。  
@@ -89,3 +89,4 @@ private void TimerTask(object StateObj)
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Threading>   
  [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

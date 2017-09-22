@@ -1,23 +1,28 @@
 ---
-title: "如何：使用反映檢視和執行個體化泛型類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "泛型 [.NET Framework], 反映"
-  - "反映, 泛型類型"
+title: "如何：使用反映檢視和執行個體化泛型類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection, generic types
+- generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 27b6315b30c27d0902d34a013c6cb6c6072dffe7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用反映檢視和執行個體化泛型類型
 取得泛型型別相關資訊的方式，與取得其他型別的資訊一樣：檢查表示泛型型別的 <xref:System.Type> 物件。  基本的差異在於泛型型別有一個 <xref:System.Type> 物件清單，其表示它的泛型型別參數。  本章節中的第一個程序會檢查泛型型別。  
@@ -130,3 +135,4 @@ caps.handback.revision: 16
  [反映和泛用類型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
  [泛型](../../../docs/standard/generics/index.md)
+

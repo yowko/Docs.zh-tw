@@ -1,5 +1,5 @@
 ---
-title: "enum (C# 參考) | Microsoft Docs"
+title: "enum (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf12724ec9e450a2bc237db614f235d7f03a4a7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
@@ -56,13 +56,13 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  在這個列舉中，項目的順序會強制從 `1` 開始，而不是 `0`。 不過，建議加入值為 0 的常數。 如需詳細資訊，請參閱[列舉類型](../../../csharp/programming-guide/enumeration-types.md)。  
   
- 每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](../../../csharp/language-reference/keywords/char.md) 除外。 預設的列舉項目基礎類型是 [int](../../../csharp/language-reference/keywords/int.md)。 若要宣告另一個整數型別的列舉，例如 [byte](../../../csharp/language-reference/keywords/byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。  
+ 每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](../../../csharp/language-reference/keywords/char.md) 除外。 預設基礎列舉項目類型是 [int](../../../csharp/language-reference/keywords/int.md)。 若要宣告另一個整數類型的列舉，例如 [byte](../../../csharp/language-reference/keywords/byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。  
   
 ```  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- 列舉的已核准類型為 `byte`、[sbyte](../../../csharp/language-reference/keywords/sbyte.md)、[short](../../../csharp/language-reference/keywords/short.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md)、[long](../../../csharp/language-reference/keywords/long.md) 或 [ulong](../../../csharp/language-reference/keywords/ulong.md)。  
+ 列舉已核准的類型是 `byte`、 [sbyte](../../../csharp/language-reference/keywords/sbyte.md)、 [short](../../../csharp/language-reference/keywords/short.md)、 [ushort](../../../csharp/language-reference/keywords/ushort.md)、 [int](../../../csharp/language-reference/keywords/int.md)、 [uint](../../../csharp/language-reference/keywords/uint.md)、 [long](../../../csharp/language-reference/keywords/long.md)或 [ulong](../../../csharp/language-reference/keywords/ulong.md)。  
   
  類型為 `Days` 的變數可以指派為基礎的類型範圍中的任何值；該值不限於具名常數。  
   
@@ -97,7 +97,7 @@ int x = (int)Days.Sun;
  [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例說明如何在 `enum` 宣告上使用 <xref:System.FlagsAttribute?displayProperty=fullName> 屬性與其效果。  
+ 下列程式碼範例說明如何在 <xref:System.FlagsAttribute?displayProperty=fullName> 宣告上使用 `enum` 屬性與其效果。  
   
  [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
@@ -115,7 +115,7 @@ int x = (int)Days.Sun;
  [C# 參考](../../../csharp/language-reference/index.md)   
  [列舉類型](../../../csharp/programming-guide/enumeration-types.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)   
+ [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -1,24 +1,43 @@
 ---
-title: "Box 處理可為 Null 的類型 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "boxing [C#], 可為 null 的類型"
-  - "可為 null 的類型 [C#], boxing 和 unboxing"
-  - "unboxing [C#], 可為 null 的類型"
+title: "Box 處理可為 Null 的類型 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- boxing [C#], nullable types
+- unboxing [C#], nullable types
+- nullable types [C#], boxing and unboxing
 ms.assetid: bdb5b626-abc0-405d-8f64-0f0a0bf883a4
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# Box 處理可為 Null 的類型 (C# 程式設計手冊)
-只有當以可為 Null 的型別 \(Nullable Type\) 為基礎的物件不是 Null 時，該物件才會是 boxed。  如果 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則會將物件參考指派為 `null`，而不會做 boxing 處理。  例如：  
+# <a name="boxing-nullable-types-c-programming-guide"></a>Box 處理可為 Null 的類型 (C# 程式設計手冊)
+如為非 Null 的物件，以可為 Null 的型別為基礎的物件僅能以 boxing 處理。 如果 <xref:System.Nullable%601.HasValue%2A> 是 `false`，則物件參考會指派給 `null` 而不是 boxing。 例如：  
   
 ```  
 bool? b = null;  
@@ -26,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- 如果物件為非 null \(若 <xref:System.Nullable%601.HasValue%2A> 是 `true`\)，便會進行 boxing 處理，但只有可為 Null 的物件所依據的基礎型別會是 boxed。  對不可為 Null 的數值型別執行 box 處理就會 box 數值型別本身，而非包裝實值型別的 <xref:System.Nullable%601?displayProperty=fullName>。  例如：  
+ 如果為非 Null 的物件 - 如果 <xref:System.Nullable%601.HasValue%2A> 是 `true` - 則發生 boxing，但只有可為 Null 物件依據的基礎類型會經過 boxing 處理。 以 boxing 處理非 Null 的可為 Null 的實值型別，會以 boxing 處理實值型別本身，不會處理包裝實值型別的 <xref:System.Nullable%601?displayProperty=fullName>。 例如：  
   
 ```  
 bool? b = false;  
@@ -71,7 +90,8 @@ int? i2 = (int?)iBoxed;
     string str = ic.ToString();  
     ```  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [可為 Null 的類型](../../../csharp/programming-guide/nullable-types/index.md)   
- [如何：識別可為 Null 的類型](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
+ [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)   
+ [如何：識別可為 Null 的型別](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+

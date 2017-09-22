@@ -1,20 +1,25 @@
 ---
-title: "Using Manipulations and Inertia in an XNA Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 XNA 應用程式中使用操作和慣性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
 caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7d623a8c2276811ae443a4d745faffeeb79ffc6f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Using Manipulations and Inertia in an XNA Application
 本文說明如何在 Microsoft XNA 應用程式中使用操作和慣性處理，來控制遊戲個件的移動。  在閱讀本文之前，您應該先熟悉[Manipulations and Inertia Overview](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)主題和基本 XNA 程式設計概念。  
@@ -38,4 +43,5 @@ caps.handback.revision: 7
   
 ## 請參閱  
  <xref:System.Windows.Input.Manipulations>   
- [Manipulations and Inertia Overview](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)
+ [操作和慣性概觀](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)
+

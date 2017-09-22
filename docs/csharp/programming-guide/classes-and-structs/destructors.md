@@ -1,6 +1,6 @@
 ---
-title: "解構函式 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "完成項 (C# 程式設計手冊)"
+ms.date: 2017-05-10
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6940be34b6cc15f006901e6d14d2a38ebb5d012a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43bb7e6488da5eda863e7ad70b25c9bf55bebb52
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="destructors-c-programming-guide"></a>解構函式 (C# 程式設計手冊)
@@ -99,10 +100,11 @@ protected override void Finalize()
  [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IDisposable>   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [記憶體回收](../../../standard/garbagecollection/index.md)
+ [記憶體回收](../../../standard/garbage-collection/index.md)
+

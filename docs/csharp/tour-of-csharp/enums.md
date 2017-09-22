@@ -1,6 +1,6 @@
 ---
-title: "C# 列舉 | C# 語言教學課程"
-description: "了解 C 中的列舉、離散的具名常數#"
+title: "C# 列舉 - C# 語言教學課程"
+description: "了解 C# 中的列舉、離散的具名常數。"
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 677fd5fb931cca704fa6a0550a229ebb2fccdd7a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
     

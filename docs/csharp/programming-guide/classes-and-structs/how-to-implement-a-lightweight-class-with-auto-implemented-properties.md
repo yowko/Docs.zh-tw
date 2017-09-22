@@ -1,20 +1,39 @@
 ---
-title: "如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "自動實作屬性 [C#]"
-  - "屬性 [C#], 自動實作"
+title: "如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- auto-implemented properties [C#]
+- properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用自動實作的屬性來實作輕量型類別 (C# 程式設計手冊)
 這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。  當您必須使用參考類型語意時，請使用這種建構，而不是結構。  

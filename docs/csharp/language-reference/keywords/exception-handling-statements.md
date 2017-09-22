@@ -1,5 +1,5 @@
 ---
-title: "例外狀況處理陳述式 (C# 參考) | Microsoft Docs"
+title: "例外狀況處理陳述式 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 156be3b61afc26401956b2f257c5e00b9ef03fc9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c60adc167fc585755c8bbb85a05cf2af025edd3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exception-handling-statements-c-reference"></a>例外狀況處理陳述式 (C# 參考)
@@ -53,3 +53,4 @@ C# 提供內建支援以處理稱為例外狀況的異常情況，它們可能�
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [陳述式關鍵字](../../../csharp/language-reference/keywords/statement-keywords.md)   
  [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)
+

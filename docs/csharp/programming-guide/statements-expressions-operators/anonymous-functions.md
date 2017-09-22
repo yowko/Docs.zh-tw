@@ -1,5 +1,5 @@
 ---
-title: "匿名函式 (C# 程式設計手冊) | Microsoft Docs"
+title: "匿名函式 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 465097f9e7024ecfa96ecacb3f4377f3e6a44d13
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f0105ad5ee5a97243e9aeda42c9b1842ec15d0e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函式 (C# 程式設計手冊)
@@ -48,18 +48,19 @@ ms.lasthandoff: 03/13/2017
     > [!NOTE]
     >  Lambda 運算式可以繫結至運算式樹狀結構，也可以繫結至委派。  
   
-## <a name="the-evolution-of-delegates-in-c"></a>C 中的委派演進#  
- 在 C# 1.0 中，您已使用該程式碼中其他地方所定義的方法明確初始化委派，來建立委派執行個體。 C# 2.0 引進匿名方法概念，用來撰寫可在委派引動過程中執行的未命名內嵌陳述式區塊。 C# 3.0 引進 Lambda 運算式，這在概念上與匿名方法類似，但更易懂且更簡潔。 這兩個功能統稱為「匿名函式」**。 一般而言，以 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 3.5 版和更新版本為目標的應用程式應該使用 Lambda 運算式。  
+## <a name="the-evolution-of-delegates-in-c"></a>C# 中的委派演進  
+ 在 C# 1.0 中，您已使用該程式碼中其他地方所定義的方法明確初始化委派，來建立委派執行個體。 C# 2.0 引進匿名方法概念，用來撰寫可在委派引動過程中執行的未命名內嵌陳述式區塊。 C# 3.0 引進 Lambda 運算式，這在概念上與匿名方法類似，但更易懂且更簡潔。 這兩個功能統稱為「匿名函式」。 一般而言，以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版和更新版本為目標的應用程式應該使用 Lambda 運算式。  
   
  下列範例示範從 C# 1.0 到 C# 3.0 的委派建立演進：  
   
  [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)   
  [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [委派](../../../csharp/programming-guide/delegates/index.md)   
  [運算式樹狀結構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+

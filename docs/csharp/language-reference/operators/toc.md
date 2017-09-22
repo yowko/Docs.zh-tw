@@ -40,4 +40,4 @@
 ## [-> 運算子](dereference-operator.md)
 ## [??運算子](null-conditional-operator.md)
 ## [=> 運算子](lambda-operator.md)
-## [Null 條件運算子 (C# 和 Visual Basic)](null-conditional-operators.md)
+## [Null 條件運算子](null-conditional-operators.md)

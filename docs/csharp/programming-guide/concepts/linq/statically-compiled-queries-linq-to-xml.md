@@ -1,5 +1,5 @@
 ---
-title: "靜態編譯的查詢 (LINQ to XML) (C#) | Microsoft Docs"
+title: "靜態編譯的查詢 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10e4df75be88dc5609e0ca15666042a0354824bc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e9986524756c979226919d37318a9ca2562213a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>靜態編譯的查詢 (LINQ to XML) (C#)
-相對於 <xref:System.Xml.XmlDocument> 而言，LINQ to XML 其中一個最重要的效能優勢在於，LINQ to XML 中的查詢是靜態編譯的查詢，而 XPath 查詢則必須在執行階段進行解譯。 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。  
+相對於 <xref:System.Xml.XmlDocument> 而言，LINQ to XML 其中一個最重要的效能優勢在於，LINQ to XML 中的查詢是靜態編譯的查詢，而 XPath 查詢則必須在執行階段解譯。 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。  
   
 ## <a name="statically-compiled-queries-vs-xpath"></a>靜態編譯查詢與XPath  
  下列範例將顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
@@ -60,7 +59,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A> 方法是擴充方法。 如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。 因為 <xref:System.Linq.Enumerable.Where%2A> 是擴充方法，所以上述查詢會依照下列方式編譯：  
+ <xref:System.Linq.Enumerable.Where%2A> 方法是擴充方法。 如需詳細資訊，請參閱[擴充方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。 由於 <xref:System.Linq.Enumerable.Where%2A> 是擴充方法，所以上述查詢會按照下列方式編譯：  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -92,7 +91,7 @@ foreach (XmlNode n in nl)
 reader.Close();  
 ```  
   
- 這個查詢會傳回與使用 LINQ to XML 之範例相同的輸出；唯一的差異是 LINQ to XML 會讓列印的 XML 縮排，<xref:System.Xml.XmlDocument> 則不會。  
+ 這個查詢與使用 LINQ to XML 的範例會傳回相同的輸出。唯一的差異是 LINQ to XML 會讓列印的 XML 縮排，而 <xref:System.Xml.XmlDocument> 則不會。  
   
  不過，<xref:System.Xml.XmlDocument> 方法的執行效能通常不如 LINQ to XML，因為每次呼叫 <xref:System.Xml.XmlNode.SelectNodes%2A> 方法時，它就必須在內部執行下列作業：  
   
@@ -108,3 +107,4 @@ reader.Close();
   
 ## <a name="see-also"></a>另請參閱  
  [效能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

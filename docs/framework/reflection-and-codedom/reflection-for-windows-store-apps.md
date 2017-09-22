@@ -1,23 +1,28 @@
 ---
-title: "Reflection in the .NET Framework for Windows Store Apps | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reflection, Windows Store apps"
-  - ".NET for Windows Store apps, TypeInfo class"
+title: "適用於 Windows 市集應用程式之 .NET Framework 中的反映"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection, Windows Store apps
+- .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd9f8dc3b17dee946155986fe9c66a4f4c4e1353
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Reflection in the .NET Framework for Windows Store Apps
 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，.NET Framework 包含一組反映類型和成員，以便用於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式。  這些類型和成員提供於完整 .NET Framework，以及[適用於 Windows 市集應用程式的 .NET](http://go.microsoft.com/fwlink/?LinkID=225700)。  本文件說明這些與其對應項目在 .NET Framework 4 和舊版之間的主要差異。  
@@ -45,4 +50,5 @@ caps.handback.revision: 20
   
 ## 請參閱  
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)   
- [適用於 Windows 市集應用程式的 .NET – 支援的 API](http://go.microsoft.com/fwlink/?LinkID=225700)
+ [適用於 Windows 市集應用程式的 .NET - 所支援的應用程式開發介面](http://go.microsoft.com/fwlink/?LinkID=225700)
+

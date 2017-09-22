@@ -1,26 +1,31 @@
 ---
-title: "解析組件載入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework]，解析載入"
-  - "應用程式定義域，載入組件"
-  - "解析組件載入"
-  - "組件 [.NET Framework]，載入"
-  - "應用程式定義域，解析組件載入"
+title: "解析組件載入"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], resolving loads
+- application domains, loading assemblies
+- resolving assembly loads
+- assemblies [.NET Framework], loading
+- application domains, resolving assembly loads
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0fe3347c640b7e99487d630cbfac97e774bda7bb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 解析組件載入
 .NET Framework 為需要更充分掌控組件載入的應用程式提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 事件。  藉由處理這個事件，您的應用程式就能從一般探查路徑將組件載入至載入內容、選取要載入的數個組件版本、發出動態組件及將它傳回等。  本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
@@ -81,6 +86,7 @@ caps.handback.revision: 10
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## 請參閱  
- [組件載入的最佳作法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+## <a name="see-also"></a>另請參閱  
+ [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
+

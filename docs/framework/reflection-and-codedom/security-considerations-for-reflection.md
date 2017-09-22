@@ -1,28 +1,33 @@
 ---
-title: "反映的安全性考量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "連結要求"
-  - "MethodInfo 參數"
-  - "非公用成員"
-  - "部分信任, 反映"
-  - "使用權限 [.NET Framework], 反映"
-  - "反映, 安全性"
-  - "反映, 部分信任"
+title: "反映的安全性考量"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [.NET Framework], reflection
+- MethodInfo parameters
+- reflection, security
+- partial trust,reflection
+- nonpublic members
+- reflection,partial trust
+- link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 653b91f899da5962132577fba0df6ecfcdfde4ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 反映的安全性考量
 反映可讓您取得類型和成員的相關資訊，以及存取成員 \(也就是呼叫方法和建構函式、取得和設定屬性值、加入和移除事件處理常式等等\)。  不限制使用反映來取得類型和成員的相關資訊。  所有程式碼都可以使用反映來執行下列工作：  
@@ -119,3 +124,4 @@ caps.handback.revision: 21
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
  [套用屬性](../../../docs/standard/attributes/applying-attributes.md)   
  [存取自訂屬性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+

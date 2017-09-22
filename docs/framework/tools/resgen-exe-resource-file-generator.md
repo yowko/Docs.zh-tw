@@ -1,38 +1,43 @@
 ---
-title: "Resgen.exe (Resource File Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "resource files, .resources files"
-  - "resource files, .resx files"
-  - "resx files (resource files)"
-  - ".resources files"
-  - "files, converting"
-  - "Resource File Generator"
-  - ".resx files"
-  - "Resgen.exe"
-  - "resource files, converting"
-  - "converting files, Resource File Generator"
-  - "binary resources files"
-  - "embedding files in runtime binary executable"
+title: "Resgen.exe (資源檔產生器)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- resource files, .resources files
+- resource files, .resx files
+- resx files (resource files)
+- .resources files
+- files, converting
+- Resource File Generator
+- .resx files
+- Resgen.exe
+- resource files, converting
+- converting files, Resource File Generator
+- binary resources files
+- embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 caps.latest.revision: 46
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 46
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dcafccd1046bd47616ae42c6ce8a117f341a83f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Resgen.exe (Resource File Generator)
 資源檔產生器 \(Resgen.exe\) 可以將文字檔 \(.txt 或 .restext\) 及 XML 架構資源格式檔 \(.resx\)，轉換成通用語言執行平台二進位檔 \(.resources\)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件 \(請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)\)。  

@@ -1,29 +1,48 @@
 ---
-title: "How to: Delete a Registry Key in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.DeleteSetting"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "GetSetting function"
-  - "registry, deleting values"
-  - "GetAllSettings function"
-  - "registry keys, deleting"
-  - "registry, deleting keys"
-  - "examples [Visual Basic], registry"
+title: "如何：在 Visual Basic 中刪除登錄機碼"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.DeleteSetting
+dev_langs:
+- VB
+helpviewer_keywords:
+- GetSetting function
+- registry, deleting values
+- GetAllSettings function
+- registry keys, deleting
+- registry, deleting keys
+- examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
 caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0fc37aff9f6a0ae3a7953377ebf95179d01bb693
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Delete a Registry Key in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -58,5 +77,6 @@ caps.handback.revision: 28
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
  <xref:Microsoft.Win32.RegistryKey>   
- [Security and the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)   
- [Reading from and Writing to the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+ [安全性和登錄](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)   
+ [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+

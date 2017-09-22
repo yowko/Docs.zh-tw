@@ -1,23 +1,28 @@
 ---
-title: "進階強式命名 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "強式命名 [.NET Framework], 加強"
-  - "強式名稱組件"
+title: "進階強式命名"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-named assemblies
+- strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 429a54340cef6d608692abd71311c012afe9a3d0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 進階強式命名
 強式名稱簽章是在 .NET Framework 中用於識別組件的識別機制。  它是公開金鑰數位簽章，通常用來驗證從建立者 \(簽署人\) 傳送給收件者 \(驗證人\) 的資料的完整性。  這個簽章是當做組件的唯一識別使用，確保組件的參考不會模稜兩可。  組件會簽署為建置流程的一部分，然後在載入時驗證。  

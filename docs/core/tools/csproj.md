@@ -1,5 +1,5 @@
 ---
-title: "csproj 參考 | Microsoft Docs"
+title: "csproj 參考"
 description: "深入了解現有和 .NET Core csproj 檔案之間的差異"
 keywords: "參考, csproj, .NET Core"
 author: blackdwarf
@@ -9,26 +9,37 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
-ms.lasthandoff: 03/15/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
-本文件概述從 *project.json* 改為使用 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 時，新增至專案檔的變更。 如需一般專案檔語法以及參考的詳細資訊，請參閱 [MSBuild 專案檔](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference)文件。  
+本文件概述從 *project.json* 改為使用 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 時，新增至專案檔的變更。 如需一般專案檔語法以及參考的詳細資訊，請參閱 [MSBuild 專案檔](/visualstudio/msbuild/msbuild-project-file-schema-reference)文件。  
 
 ## <a name="implicit-package-references"></a>隱含套件參考
-現在會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果目標架構是 `netcoreap1.x`，則會參考 `Microsoft.NETCore.App` 中繼套件的適當版本。 如果目標架構是 `netstandard1.x`，則會參考 `NetStandard.Library` 中繼套件的適當版本。
+會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。
 
-至於其餘行為，工具會如預期般運作，且大部分動作會保持相同 (例如 `dotnet restore`)。 
+```xml
+ <PropertyGroup>
+   <TargetFramework>netcoreapp1.1</TargetFramework>
+ </PropertyGroup>
+ ```
+ 
+ ```xml
+ <PropertyGroup>
+   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+ </PropertyGroup>
+ ```
 
 ### <a name="recommendations"></a>建議
-由於現在會隱含參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件，因此建議使用下列最佳做法：
+由於會隱含參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件，因此建議使用下列最佳做法：
 
-* 絕不透過專案檔中的 `<PackageReference>` 屬性明確參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件。
+* 絕不透過專案檔中的 `<PackageReference>` 項目明確參考 `Microsoft.NETCore.App` 或 `NetStandard.Library` 中繼套件。
 * 如果您需要特定版本的執行階段，您應該使用專案中的 `<RuntimeFrameworkVersion>` 屬性 (例如 `1.0.4`)，而不是參考中繼套件。
     * 如果您使用[獨立性部署](../deploying/index.md#self-contained-deployments-scd)，並需要 1.0.0 LTS 執行階段的特定更新程式版本，就可能會發生此情況。
 * 如果您需要特定版本的 `NetStandard.Library` 中繼套件，您可以使用 `<NetStandardImplicitPackageVersion>` 屬性並設定所需的版本。 
@@ -62,13 +73,21 @@ ms.lasthandoff: 03/15/2017
 這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
 ### <a name="recommendation"></a>建議
-使用 csproj 時，建議您從專案中移除預設 Glob，並只使用 Glob 新增您的應用程式/程式庫在各種情況下 (執行階段、NuGet 套件等) 所需之成品的檔案路徑。
+使用 csproj 時，建議您從專案中移除預設 Glob，並只使用 Glob 新增您的應用程式/程式庫在各種情況下 (例如執行階段與 NuGet 套件) 所需之成品的檔案路徑。
+
+## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>如何以 MSBuild 查看專案的方式查看整個專案
+
+雖然那些 csproj 變更可大幅簡化專案檔，在包括 SDK 和其目標之後，您可能會想要以 MSBuild 查看專案的方式查看完全展開的專案。 使用 [`dotnet msbuild`](dotnet-msbuild.md) 命令的 [`/pp` 切換](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) 對專案進行前置處理，它可以在不需要實際建置專案的情況下，顯示匯入的檔案、檔案的來源，以及該檔案對組建的貢獻：
+
+`dotnet msbuild /pp:fullproject.xml`
+
+如果專案具有多個目標架構，系統應該會透過將它們的其中之一指定為 MSBuild 屬性，來使命令的結果專注於該目標架構：
 
 
 ## <a name="additions"></a>新增項目
 
 ### <a name="sdk-attribute"></a>Sdk 屬性 
-*.csproj* 檔案的 `<Project>` 項目有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks)和[目標](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)。 我們提供內含 .NET Core 工具的兩個主要 SDK：
+*.csproj* 檔案的 `<Project>` 項目有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 我們提供內含 .NET Core 工具的兩個主要 SDK：
 
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
@@ -83,7 +102,7 @@ ms.lasthandoff: 03/15/2017
 ```
 
 #### <a name="version"></a>版本
-`Version` 指定要還原的套件版本。 該元素採用 NuGet 版本設定配置的規則。
+`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
 `IncludeAssets` 屬性指定應取用由 `<PackageReference>` 所指定屬於套件的何種資產。 
@@ -117,7 +136,7 @@ ms.lasthandoff: 03/15/2017
 ```
 
 #### <a name="version"></a>版本
-`Version` 指定要還原的套件版本。 該屬性採用 NuGet 版本控制配置的規則。
+`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 `<RuntimeIdentifiers>` 項目可讓您針對專案指定以分號分隔的[執行階段識別碼 (RID)](../rid-catalog.md) 清單。 RID 允許發行獨立部署。 
@@ -126,7 +145,6 @@ ms.lasthandoff: 03/15/2017
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
-
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 `<RuntimeIdentifier>` 項目可讓您針對專案只指定一個[執行階段識別項 (RID)](../rid-catalog.md)。 RID 允許發行獨立部署。 
 
@@ -134,9 +152,8 @@ ms.lasthandoff: 03/15/2017
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
-
 ### <a name="packagetargetfallback"></a>PackageTargetFallback 
-`<PackageTargetFallback>` 項目可讓您指定一組要在還原套件時使用的相容目標。 其設計目的是為了讓使用 dotnet [TxM (目標 x Moniker)](https://docs.microsoft.com/nuget/schema/target-frameworks) 的套件能和未宣告 dotnet TxM 的套件一起運作。 如果您的專案使用 dotnet TxM，除非您將 `<PackageTargetFallback>` 新增至專案，以讓非 dotnet 平台變成能與 dotnet 相容，否則其相依的所有套件也必須要有 dotnet TxM。 
+`<PackageTargetFallback>` 項目可讓您指定一組要在還原套件時使用的相容目標。 其設計目的是為了讓使用 dotnet [TxM (目標 x Moniker)](/nuget/schema/target-frameworks) 的套件能和未宣告 dotnet TxM 的套件一起運作。 如果您的專案使用 dotnet TxM，除非您將 `<PackageTargetFallback>` 新增至專案，以讓非 dotnet 平台變成能與 dotnet 相容，否則其相依的所有套件也必須要有 dotnet TxM。 
 
 下列範例可為專案中的所有目標提供後援： 
 

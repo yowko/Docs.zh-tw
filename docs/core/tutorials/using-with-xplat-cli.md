@@ -1,19 +1,20 @@
 ---
-title: "使用 CLI 工具開始使用 .NET Core | Microsoft Docs"
+title: "從使用 CLI 開始使用 .NET Core"
 description: "本逐步教學課程說明如何使用 .NET Core 命令列介面 (CLI) 在 Windows、Linux 或 macOS 上開始使用 .NET Core。"
 keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-translationtype: Human Translation
-ms.sourcegitcommit: e30414ac3dd48bbb060ad6f2a33a0a124cba0fa3
-ms.openlocfilehash: 6ffca900d5649823e6aa2e28486a64a2f7844efc
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -53,7 +54,7 @@ $ dotnet run
    專案檔會指定還原相依性和建置程式所需的所有內容。
 
    * `OutputType` 標記會指定我們正在建置可執行檔，亦即主控台應用程式。
-   * `TargetFramework` 標記會指定我們設定為目標的 .NET 執行階段。 在進階案例中，您可以指定多個目標架構，並在單一作業中建置這全部的架構。 在本教學課程中，我們將著重於僅針對 .NET Core 1.0 來建置。
+   * `TargetFramework` 標記會指定做為目標的 .NET 實作。 在進階案例中，您可以指定多個目標架構，並在單一作業中建置這全部的架構。 在本教學課程中，我們將著重於僅針對 .NET Core 1.0 來建置。
 
    `Program.cs`:
 

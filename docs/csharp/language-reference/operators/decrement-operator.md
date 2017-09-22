@@ -1,35 +1,55 @@
 ---
-title: "-- 運算子 (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "--_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-- 運算子 [C#]"
-  - "遞減運算子 (--) [C#]"
+title: "-- 運算子 (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- --_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -- operator [C#]
+- decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 100e68f3b07164b0cfb398a32f47137f2726943f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# -- 運算子 (C# 參考)
-遞減運算子 \(`--`\) 會將其運算元減 1。  遞減運算子可在其運算元之前或之後出現：`--variable` 和 `variable--`。  第一種形式是前置的遞減運算。  這個運算的結果為運算元遞減之後的值。  第二種形式是後置的遞減運算。  這個運算的結果為運算元遞減之前的值。  
+# <a name="---operator-c-reference"></a>-- 運算子 (C# 參考)
+遞減運算子 (`--`) 的運算元遞減量為 1。 遞減運算子可以出現在其運算元的前後：`--variable` 和 `variable--`。 第一種形式是前置遞減運算。 運算的結果是運算元遞減「之後」的值。 第二種形式是後置遞減運算。 運算的結果是運算元遞減「之前」的值。  
   
-## 備註  
- 數字和列舉型別已預先定義了遞減運算子。  
+## <a name="remarks"></a>備註  
+ 數字和列舉型別有預先定義的遞減運算子。  
   
- 使用者定義型別可多載 `--` 運算子 \(請參閱 [operator](../../../csharp/language-reference/keywords/operator.md)\)。  對整數類資料型別執行 \(Integral Type\) 的作業，通常也適用於列舉型別。  
+ 使用者定義型別可以多載 `--` 運算子 (請參閱 [operator](../../../csharp/language-reference/keywords/operator.md))。 整數類資料類型上的作業通常允許用於列舉類型。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
   
-## 請參閱  
- [C\# 參考](../../../csharp/language-reference/index.md)   
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C\# 運算子](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 運算子](../../../csharp/language-reference/operators/index.md)
+

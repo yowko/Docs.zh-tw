@@ -1,33 +1,38 @@
 ---
-title: "組件安全性考量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 安全性"
-  - "組件 [.NET Framework], 簽署"
-  - "組件 [.NET Framework], 強式命名"
-  - "授與使用權限, 組件"
-  - "組件的完整性"
-  - "名稱 [.NET Framework], 組件"
-  - "名稱 [.NET Framework], 強式名稱"
-  - "使用權限 [.NET Framework], 組件"
-  - "安全性 [.NET Framework], 組件"
-  - "signcode"
-  - "簽署組件"
-  - "強式名稱組件, 安全性考量"
+title: "組件安全性考量"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], security
+- signcodes
+- names [.NET Framework], assemblies
+- strong-named assemblies, security considerations
+- signing assemblies
+- assemblies [.NET Framework], signing
+- granting permissions, assemblies
+- assemblies [.NET Framework], strong-named
+- names [.NET Framework], strong names
+- permissions [.NET Framework], assemblies
+- security [.NET Framework], assemblies
+- integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be4fc9f9f2fc9ae57f22a7e59eca05a331ebfb32
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 組件安全性考量
 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。  是否將某些使用權限授予組件則以辨識項 \(Evidence\) 為基礎。  
@@ -65,6 +70,6 @@ caps.handback.revision: 11
   
 ## 請參閱  
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [SignTool.exe \(Sign Tool\)](../../../docs/framework/tools/signtool-exe.md)   
- [File Signing Tool \(Signcode.exe\)](http://msdn.microsoft.com/zh-tw/2d299154-34ea-41ba-ad12-17075bb7e1db)
+ [通用語言執行平台中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
+ [SignTool.exe (簽署工具)](../../../docs/framework/tools/signtool-exe.md)
+

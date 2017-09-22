@@ -1,5 +1,5 @@
 ---
-title: "如何：從檔案系統填入 XML 樹狀結構 (C#) | Microsoft Docs"
+title: "如何：從檔案系統填入 XML 樹狀結構 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f81e4888e32fb05c207100484d2e1b33876fde90
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2a25025c97575d4631ba2f55f72a31386619ead
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何：從檔案系統填入 XML 樹狀結構 (C#)
@@ -131,3 +130,4 @@ Total File Size:59089
   
 ## <a name="see-also"></a>另請參閱  
  [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

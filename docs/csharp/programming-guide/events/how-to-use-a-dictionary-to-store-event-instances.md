@@ -1,27 +1,47 @@
 ---
-title: "如何：使用字典儲存事件執行個體 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "事件 [C#], 在字典中儲存執行個體"
+title: "如何：使用字典儲存事件執行個體 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- events [C#], storing instances in a Dictionary
 ms.assetid: 9512c64d-5aaf-40cd-b941-ca2a592f0064
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bca140ee4d7519f67d6e896757b3187ac169de1f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# 如何：使用字典儲存事件執行個體 (C# 程式設計手冊)
-`accessor-declarations` 的用法之一是公開大量的事件但不配置每個事件的欄位，而是改用字典來儲存事件執行個體。  不過，這只在您擁有大量的事件，但預期大多數事件都不會實作的情況下才有用。  
+# <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a>如何：使用字典儲存事件執行個體 (C# 程式設計手冊)
+`accessor-declarations` 的其中一個用途是公開許多事件，但不為每個事件配置欄位，而改為使用字典儲存事件執行個體。 這只有在您有許多事件，但預期不會實作大多數事件時才有用。  
   
-## 範例  
+## <a name="example"></a>範例  
  [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-use-a-dictionary-to-store-event-instances_1.cs)]  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [事件](../../../csharp/programming-guide/events/index.md)   
  [委派](../../../csharp/programming-guide/delegates/index.md)
+

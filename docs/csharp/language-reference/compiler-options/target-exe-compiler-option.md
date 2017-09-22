@@ -1,5 +1,5 @@
 ---
-title: "-target:exe (C# 編譯器選項) | Microsoft Docs"
+title: "-target:exe (C# 編譯器選項)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d5784186f564241c896333d518e297c3c094f28
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd035bffb697e895da8765f9e5d230fa84e98f04
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetexe-c-compiler-options"></a>/target:exe (C# 編譯器選項)
@@ -60,13 +60,13 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性]**** 頁面。  
+1.  開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [應用程式]**** 屬性頁。  
+2.  按一下 [應用程式] 屬性頁。  
   
-3.  修改 [輸出類型]**** 屬性。  
+3.  修改 [輸出類型] 屬性。  
   
- 如需如何以程式設計方式設定此編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  下列每個命令列都會建立 `in.exe` 來編譯 `in.cs`：  
@@ -79,3 +79,4 @@ csc in.cs
 ## <a name="see-also"></a>另請參閱  
  [/target (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
+

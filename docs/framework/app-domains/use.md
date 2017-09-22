@@ -1,24 +1,29 @@
 ---
-title: "使用應用程式定義域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式定義域，關於"
-  - "通用語言執行平台，應用程式定義域"
-  - "執行階段，應用程式定義域"
+title: "使用應用程式定義域"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application domains, about
+- common language runtime, application domains
+- runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2dac2238ae9117d3678335748c680d594a8b5c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 使用應用程式定義域
 應用程式定義域是可供 Common Language Runtime 運用的隔離單位。  應用程式定義域是在處理序之內建立和執行的。  應用程式定義域通常是由執行階段主應用程式所建立，這個主應用程式的用途，是負責將執行階段載入處理序，以及在應用程式定義域中執行使用者程式碼。  Runtime 主應用程式會建立處理序和預設應用程式定義域，並在該應用程式定義域中執行 Managed 程式碼。  Runtime 主應用程式包括 ASP.NET、Microsoft Internet Explorer 和 Windows Shell。  
@@ -71,4 +76,5 @@ caps.handback.revision: 15
  提供應用程式定義域的概觀。  
   
  [反映概觀](../../../docs/framework/reflection-and-codedom/reflection.md)  
- 說明如何使用 **Reflection** 類別取得組件的資訊。
+ 描述如何使用「反映」類別，以取得組件的相關資訊。
+

@@ -1,7 +1,7 @@
 ---
 title: "疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -61,28 +61,31 @@ ms.lasthandoff: 05/11/2017
 |.NET Framework 4.5.*x* 已是這個作業系統的一部分，但目前處於關閉狀態 (僅限 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)])。|請參閱 Windows 網站上的[開啟或關閉 Windows 功能](http://go.microsoft.com/fwlink/p/?LinkId=248438)。|  
 |這個安裝程式需要 x86 電腦， 無法安裝在 x64 或 IA64 電腦上。|請參閱 MSDN Library 中的[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
 |這個安裝程式需要 x64 或 x86 電腦， 無法安裝在 IA64 電腦上。|請參閱 MSDN Library 中的[系統需求](../../../docs/framework/get-started/system-requirements.md)。|  
-  
-<a name="compat"></a>   
-### <a name="program-compatibility-issues"></a>程式相容性問題  
- 在 Windows 程式相容性模式中執行時，.NET Framework 4.5 或其點發行版本安裝會因為 1603 錯誤碼或封鎖而失敗。 [程式相容性助理] 會指出 .NET Framework 可能沒有正確安裝，並提示您使用建議的設定 (程式相容性模式) 來重新安裝。 也有可能先前試圖執行 .NET Framework 安裝程式時失敗或取消了，而已經由「程式相容性助理」設定了程式相容性模式。  
-  
- .NET Framework 安裝程式無法在程式相容性模式中執行。 若要解決這個封鎖問題，您必須確保未在 [登錄編輯程式] 中啟用全系統的相容性模式設定：  
-  
-1.  選擇 [開始] 按鈕，然後選擇 [執行]。  
-  
-2.  在 [執行] 對話方塊中輸入 `regedit`，然後選擇 [確定]。  
-  
-3.  在 [登錄編輯程式] 中，瀏覽至下列子機碼：  
-  
-    -   HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted  
-  
-    -   HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers  
-  
-4.  在 [名稱] 欄中，根據安裝的版本尋找 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1 或 4.6.2 下載名稱，然後刪除這些項目。 如需下載名稱，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)文章。  
-  
-5.  請重新執行 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 版的 .NET Framework 安裝程式。  
-  
-## <a name="see-also"></a>另請參閱  
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
- [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+
+<a name="compat"></a>
+### <a name="program-compatibility-issues"></a>程式相容性問題
+
+在 Windows 程式相容性模式中執行時，.NET Framework 4.5 或其點發行版本安裝會因為 1603 錯誤碼或封鎖而失敗。 [程式相容性助理] 會指出 .NET Framework 可能沒有正確安裝，並提示您使用建議的設定 (程式相容性模式) 來重新安裝。 也有可能先前試圖執行 .NET Framework 安裝程式時失敗或取消了，而已經由「程式相容性助理」設定了程式相容性模式。
+
+.NET Framework 安裝程式無法在程式相容性模式中執行。 若要解決這個封鎖問題，您必須確保未在 [登錄編輯程式] 中啟用全系統的相容性模式設定：
+
+1. 選擇 [開始] 按鈕，然後選擇 [執行]。
+
+1. 在 [執行] 對話方塊中，鍵入 "regedit"，然後選擇 [確定]。
+
+1. 在 [登錄編輯程式] 中，瀏覽至下列子機碼：
+
+   - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Persisted
+
+   - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
+
+1. 在 [名稱] 欄中，根據安裝的版本尋找 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1 或 4.6.2 下載名稱，然後刪除這些項目。 如需下載名稱，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)一文。
+
+1. 請重新執行 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2 或 4.7 版的 .NET Framework 安裝程式。
+
+## <a name="see-also"></a>請參閱
+
+[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+

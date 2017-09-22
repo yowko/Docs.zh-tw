@@ -1,28 +1,34 @@
 ---
-title: "自訂權杖處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自訂權杖處理常式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 自訂權杖處理常式
-本主題將討論 WIF 語彙基元的處理常式，以及如何使用它們在處理語彙基元。  這個主題也包含功能需要建立預設在 WIF 不支援的語彙基元型別的自訂語彙基元的處理常式。  
+# <a name="custom-token-handlers"></a>自訂權杖處理常式
+本主題討論 WIF 中的權杖處理常式以及如何使用它們來處理權杖。 本主題也涵蓋建立權杖類型的自訂權杖處理常式所需的作業，而 WIF 中預設不支援這些權杖類型。  
   
-## 語彙基元的處理常式簡介 WIF 的  
- WIF 需要安全性權杖建立處理常式，讀取，寫入，並驗證相依的一方 \(RP\) 應用程式或安全性權杖服務 \(STS\) 的語彙基元。  語彙基元管理員為您的擴充點可以加入 WIF 管線的自訂語彙基元的處理常式，或自訂現有的語彙基元的處理常式處理語彙基元的方法。  WIF 提供可修改或完全覆寫視需要變更功能的九個內建安全性語彙基元的處理常式。  
+## <a name="introduction-to-token-handlers-in-wif"></a>WIF 中的權杖處理常式簡介  
+ WIF 依賴安全性權杖處理常式來建立、讀取、寫入和驗證信賴憑證者 (RP) 應用程式或安全性權杖服務 (STS) 的權杖。 權杖處理常式是擴充點，可讓您在 WIF 管線中新增自訂權杖處理常式，或自訂現有權杖處理常式管理權杖的方式。 WIF 提供九個內建安全性權杖處理常式，可視需要進行修改或完全覆寫以變更功能。  
   
-## 內建 WIF 的安全性語彙基元的處理常式。  
- WIF 4.5 包含從抽象基底類別 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>衍生的九個安全性權杖管理員類別:  
+## <a name="built-in-security-token-handlers-in-wif"></a>WIF 中的內建安全性權杖處理常式  
+ WIF 4.5 包含衍生自抽象基底類別 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 的九個安全性權杖處理常式類別：  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -42,14 +48,14 @@ caps.handback.revision: 4
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## 將自訂語彙基元的處理常式。  
- 某些語彙基元型別，例如簡單 Web 語彙基元 \(SWT\) 和 JSON Web 語彙基元 \(JWT\) 不 WIF 所提供的內建語彙基元的處理常式。  如需這些語彙基元型別並不提供內建的處理常式的其他的，您必須執行下列步驟來建立自訂語彙基元的處理常式。  
+## <a name="adding-a-custom-token-handler"></a>新增自訂權杖處理常式  
+ 部分權杖類型 (例如簡單 Web 權杖 (SWT) 和 JSON Web 權杖 (JWT)) 沒有 WIF 所提供的內建權杖處理常式。 針對這些權杖類型以及沒有內建處理常式的權杖類型，您需要執行下列步驟來建立自訂權杖處理常式。  
   
-#### 將自訂語彙基元的處理常式。  
+#### <a name="adding-a-custom-token-handler"></a>新增自訂權杖處理常式  
   
-1.  若要從 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>衍生自的新類別。  
+1.  建立衍生自 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 的新類別。  
   
-2.  會覆寫下列方法並提供自己的實作:  
+2.  覆寫下列方法，並提供您自己的實作：  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -63,9 +69,9 @@ caps.handback.revision: 4
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  加入新的自訂語彙基元處理常式的參考在 *Web.config 或* App.configfile *，* 一個適用於 WIF 的 **\<system.identityModel\>** 區段中。  例如，下列設定標記中指定 **CustomToken** 位於命名空間中的新語彙基元的處理常式 **MyCustomTokenHandler** 。  
+3.  在 *Web.config* 或 *App.config* 檔案中套用 WIF 的 **\<system.identityModel>** 區段內，新增新自訂權杖處理常式的參考。 例如，下列組態標記會指定名為 **MyCustomTokenHandler** 且位在 **CustomToken** 命名空間中的新權杖處理常式。  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
@@ -75,15 +81,16 @@ caps.handback.revision: 4
     </system.identityModel>  
     ```  
   
-     請注意，如果您提供自己語彙基元的處理常式已經將固定語彙基元管理員來建立語彙基元型別，您需要加入 **\<remove\>** 項目置放在預設處理常式並使用您的自訂處理常式。  例如，下列設定是這個自訂語彙基元管理員取代預設 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> :  
+     請注意，如果您要提供自己的權杖處理常式來處理已有內建權杖處理常式的權杖類型，則需要新增 **\<remove>** 項目來捨棄預設處理常式，並改為使用自訂處理常式。 例如，下列組態會將預設 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 取代為自訂權杖處理常式：  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type=”System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789”>  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  
     </system.identityModel>  
     ```
+

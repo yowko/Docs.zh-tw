@@ -1,33 +1,38 @@
 ---
-title: "Visual Studio 的開發人員命令提示字元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "命令提示字元，Windows SDK"
-  - "Visual Studio 命令提示字元"
-  - "命令提示字元，Visual Studio"
-  - "SDK 命令提示字元"
-  - "工具 [.NET Framework]，設定環境變數"
-  - "環境變數，工具的設定"
-  - "開發人員命令提示字元"
+title: "Visual Studio 的開發人員命令提示字元"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- command prompt, Windows SDK
+- Visual Studio command prompt
+- command prompt, Visual Studio
+- SDK command prompt
+- tools [.NET Framework], setting environment variables
+- environment variables, setting for tools
+- developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 caps.latest.revision: 45
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 45
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0287c3f250a57f7a685191702be3ad5cc28fbec6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Visual Studio 的開發人員命令提示字元
 「Visual Studio 開發人員命令提示字元」會自動設定環境變數，讓您能夠輕鬆使用 .NET Framework 工具。 開發人員命令提示字元會隨 Visual Studio 的完整版本或 Community Edition 一起安裝， 但無法隨 Visual Studio 的 Express 版本一起安裝。  
@@ -96,6 +101,7 @@ caps.handback.revision: 45
   
  在這之後會加入新的功能表項目，而且您可以從 \[工具\] 功能表存取命令提示字元。  
   
-## 請參閱  
- [Tools](../../../docs/framework/tools/index.md)   
- [管理外部工具](../Topic/Managing%20External%20Tools.md)
+## <a name="see-also"></a>另請參閱  
+ [工具](../../../docs/framework/tools/index.md)   
+ [管理外部工具](/visualstudio/ide/managing-external-tools)
+

@@ -1,35 +1,40 @@
 ---
-title: "組件載入的最佳作法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "組件, 繫結"
-  - "組件, 載入"
-  - "組件載入錯誤"
-  - "預設載入內容"
-  - "載入內容"
-  - "載入來源內容"
-  - "LoadFrom 方法"
-  - "LoadWithPartialName 方法"
-  - "TypeLoadException 類別, 原因"
+title: "組件載入的最佳作法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- assemblies,binding
+- LoadFrom method
+- default load context
+- TypeLoadException class,causes
+- assembly loading errors
+- load contexts
+- assemblies,loading
+- LoadWithPartialName method
+- load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8fe9ae599f8a8470a85000bc23823d66ef0c8ca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 組件載入的最佳作法
 本文將討論避免出現可造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之型別識別問題的方法。  本文會討論下列建議：  
@@ -179,4 +184,5 @@ caps.handback.revision: 10
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>   
  <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName>   
  <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>   
- [增益集和擴充性](../../../ml/index.xml)
+ [增益集和擴充性](../../../docs/framework/add-ins/index.md)
+

@@ -1,27 +1,26 @@
 ---
-title: "dotnet-remove package 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-remove package 命令提供方便的選項，以移除專案的 NuGet 套件參考。"
-keywords: "dotnet-remove, CLI, CLI 命令, .NET Core"
-author: spboyer
+title: "dotnet remove package 命令 - .NET Core CLI"
+description: "dotnet remove package 命令提供方便的選項，以移除專案的 NuGet 套件參考。"
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 2fcc8d37-16b3-4581-8038-832160e72d36
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: a321610540534a63bd12a8f878950b75e882c3d4
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 4167f5465571259975572669e27f20c586b910da
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-package"></a>dotnet remove package
 
-# <a name="dotnet-remove-package"></a>dotnet-remove package
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
-`dotnet-remove package` - 從專案檔中移除套件參考。
+`dotnet remove package` - 從專案檔中移除套件參考。
 
 ## <a name="synopsis"></a>概要
 
@@ -52,3 +51,4 @@ ms.lasthandoff: 03/22/2017
 從目前目錄中的專案移除 `Newtonsoft.Json` NuGet 套件：
 
 `dotnet remove package Newtonsoft.Json`
+

@@ -1,23 +1,28 @@
 ---
-title: "使用組件設計程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 程式設計"
-  - "程式設計組件"
+title: "使用組件設計程式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], programming
+- programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 368021062a3ad49d2c63f92797c59b8c0f1cddfc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 使用組件設計程式
 組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟動過程 \(Activation\) 範圍設定和安全性使用權限的基本單位。  組件為 Common Language Runtime 提供了讓它察知型別實作所需的資訊。  組件是建置來共同運作及構成一個功能邏輯單位的型別和資源的集合。  對於執行階段而言，型別不會存在於組件的內容以外。  
@@ -88,4 +93,5 @@ caps.handback.revision: 18
  說明執行階段如何決定用來滿足繫結要求的組件。  
   
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)  
- 說明如何使用 **Reflection** 類別取得組件的資訊。
+ 描述如何使用「反映」類別，以取得組件的相關資訊。
+

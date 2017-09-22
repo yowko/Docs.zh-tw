@@ -1,26 +1,45 @@
 ---
-title: "/linkresource (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/linkresource"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/linkresource compiler option [C#]"
-  - "linkres compiler option [C#]"
-  - "/linkres compiler option [C#]"
-  - "-linkres compiler option [C#]"
-  - "-linkresource compiler option [C#]"
-  - "linkresource compiler option [C#]"
+title: "-linkresource (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /linkresource
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /linkresource compiler option [C#]
+- linkres compiler option [C#]
+- /linkres compiler option [C#]
+- -linkres compiler option [C#]
+- -linkresource compiler option [C#]
+- linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 022d6c1a53eab98fc033c902f903e7bc66e6da3f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /linkresource (C# Compiler Options)
 在輸出檔中建立 .NET Framework 資源的連結。  資源檔不會加入到輸出檔中。  這點與 [\/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 選項不同，該選項會將資源檔內嵌到輸出檔中。  
@@ -78,8 +97,9 @@ al /out:A.dll A.netmodule /link:N.dll
 gacutil -i A.dll  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Al.exe \(組件連結器\)](../Topic/Al.exe%20\(Assembly%20Linker\).md)   
- [使用組件和全域組件快取](../Topic/Working%20with%20Assemblies%20and%20the%20Global%20Assembly%20Cache.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [Al.exe (組件連結器)](https://msdn.microsoft.com/library/c405shex)   
+ [使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

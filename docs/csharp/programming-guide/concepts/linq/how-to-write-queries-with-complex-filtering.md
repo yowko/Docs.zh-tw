@@ -1,5 +1,5 @@
 ---
-title: "如何：撰寫具有複雜篩選功能的查詢 (C#) | Microsoft Docs"
+title: "如何：撰寫具有複雜篩選功能的查詢 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9aacd8c7e7e97477affd789401a6fd8bb0da616
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5b212796df6e65263b8b35514b6807bcdf5797f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>如何：撰寫具有複雜篩選功能的查詢 (C#)
@@ -88,3 +87,4 @@ foreach (XElement el in purchaseOrders)
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [投射作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)   
  [數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+

@@ -1,33 +1,38 @@
 ---
-title: "指定完整的類型名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 名稱"
-  - "巴克斯格式"
-  - "BNF"
-  - "完整類型名稱"
-  - "IDENTIFIER"
-  - "語言, BNF 文法"
-  - "名稱 [.NET Framework], 組件"
-  - "名稱 [.NET Framework], 完整類型名稱"
-  - "反映, 完整類型名稱"
-  - "特殊字元"
-  - "語彙基元"
-  - "類型名稱"
+title: "指定完整的類型名稱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], fully qualified type names
+- reflection, fully qualified type names
+- names [.NET Framework], assemblies
+- tokens
+- BNF
+- assemblies [.NET Framework], names
+- Backus-Naur form
+- languages, BNF grammar
+- fully qualified type names
+- type names
+- special characters
+- IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 966bc0883cf29774ab6f52f6f3207241c129159c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 指定完整的類型名稱
 您必須指定型別名稱，以使各種反映作業的輸入有效。  完整型別名稱由組件名稱規格、命名空間規格和型別名稱所構成。  型別名稱規格用於 <xref:System.Type.GetType%2A?displayProperty=fullName>、<xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 等方法。  
@@ -155,3 +160,4 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  <xref:System.Type.GetType%2A?displayProperty=fullName>   
  <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+

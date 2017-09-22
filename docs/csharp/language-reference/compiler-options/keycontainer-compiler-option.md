@@ -1,23 +1,42 @@
 ---
-title: "/keycontainer (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/keycontainer"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/keycontainer compiler option [C#]"
-  - "keycontainer compiler option [C#]"
-  - "-keycontainer compiler option [C#]"
+title: "-keycontainer (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /keycontainer
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /keycontainer compiler option [C#]
+- keycontainer compiler option [C#]
+- -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d27fa0b80ca6df15394ad1fda149377cac41a8b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /keycontainer (C# Compiler Options)
 指定密碼編譯金鑰容器的名稱。  
@@ -49,6 +68,7 @@ caps.handback.revision: 17
   
  您可以使用 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>，以程式設計方式存取這個編譯器選項。  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

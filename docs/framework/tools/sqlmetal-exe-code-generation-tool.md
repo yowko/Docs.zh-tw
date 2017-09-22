@@ -1,32 +1,37 @@
 ---
-title: "SqlMetal.exe (程式碼產生工具) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "SQLMetal [LINQ to SQL]"
-  - "程式碼產生工具"
-  - "SQLMetal.exe"
-  - "LINQ to SQL, 序列化"
-  - "LINQ to SQL, DBML 檔案"
-  - "LINQ to SQL, SQLMetal"
+title: "SqlMetal.exe (程式碼產生工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- SQLMetal [LINQ to SQL]
+- code generation tool
+- SQLMetal.exe
+- LINQ to SQL, serialization
+- LINQ to SQL, DBML files
+- LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 caps.latest.revision: 43
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 43
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d0ac9c682c60db8eb9e5188a71916dc5d97de60
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會產生 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 之 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 元件的程式碼和對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -144,7 +149,8 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  當您使用 **\/pluralize** 選項搭配 Northwind 範例資料庫時，請注意以下行為： 當 SqlMetal 提供資料表的資料列類型名稱時，資料表名稱會是單數。 當它為資料表提供 <xref:System.Data.Linq.DataContext> 屬性時，資料表名稱會是複數。 碰巧的是，Northwind 範例資料庫中的資料表已經是複數。 因此您不會看見該部分的運作情形。 雖然一般會將資料庫資料表的名稱設為單數，在 .NET 中仍然常會把集合名稱設為複數。  
   
-## 請參閱  
- [HOW TO：在 Visual Basic 或 C\# 中產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
- [LINQ to SQL 的程式碼產生](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [如何：在 Visual Basic 或 C# 中產生物件模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
+ [LINQ to SQL 中的程式碼產生](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
  [外部對應](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+

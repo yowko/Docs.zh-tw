@@ -1,6 +1,6 @@
 ---
 title: "深入了解非同步"
-description: "深入解說非同步程式碼在 .NET 中的運作方式"
+description: "了解如何使用 .NET 工作架構非同步模型，直接撰寫 I/O 繫結和 CPU 繫結非同步程式碼。"
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/29/2017
 
 ---
 
 # <a name="async-in-depth"></a>深入了解非同步
 
-撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 語言關鍵字所公開。 本文說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
+撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。本文說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
 
 ## <a name="task-and-tasklttgt"></a>Task 與 Task&lt;T&gt;
 
@@ -28,13 +29,13 @@ Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org
 *   `Task` 代表不會傳回值的單一作業。
 *   `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
 
-您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇性地明確要求透過 `Task.Run` API 在個別執行緒上執行 Task。
+您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇明確要求透過 `Task.Run` API 在個別執行緒上執行工作。
 
 Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 (如果是 `Task<T>`)。 與 `await` 關鍵字的語言整合提供更高層級的抽象層來使用 Task。 
 
-使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行這項作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將 Task 完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
+使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行這項作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將工作完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
 
-如需 Task 及與其互動之不同方式的詳細資訊，請參閱[以工作為基礎的非同步模式 (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) 一文。
+如需工作及與其互動之不同方式的詳細資訊，請參閱[工作架構非同步模式 (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主題。
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>更深入了解 I/O-Bound 作業的 Task
 
@@ -45,14 +46,14 @@ Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
 }
 ```
 
-第二個範例會加入 `async` 和 `await` 關鍵字的使用，以在 Task 上運作。
+第二個範例會新增 `async` 和 `await` 關鍵字的使用，以在工作上運作。
 
 ```csharp
 public async Task<string> GetFirstCharactersCountAsync(string url, int count)
@@ -147,3 +148,10 @@ public async Task<int> CalculateResult(InputData data)
 ### <a name="why-does-async-help-here"></a>為什麼非同步有助於此作業？
 
 當您需要快速回應，`async` 與 `await` 是管理 CPU-bound 工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以這項新功能為主的程式碼。
+
+## <a name="see-also"></a>請參閱
+
+[C# 中的非同步程式設計](~/docs/csharp/async.md)   
+[F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+[使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

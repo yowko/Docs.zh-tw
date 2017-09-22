@@ -1,21 +1,40 @@
 ---
-title: "如何：判斷字串是否表示數值 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "數值字串 [C#]"
-  - "字串 [C#], 數值"
-  - "驗證數字輸入 [C#]"
+title: "如何：判斷字串是否表示數值 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- numeric strings [C#]
+- validating numeric input [C#]
+- strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
 caps.latest.revision: 9
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 9
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f89f4a4771625389a04f5c92829c91d66eb207
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：判斷字串是否表示數值 (C# 程式設計手冊)
 若要判斷字串是否為指定之數字型別 \(Numeric Type\) 的有效表示，請使用靜態 `TryParse` 方法，這是由所有基本數字型別以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 等這類型別實作的方法。  下列範例顯示如何判斷 "108" 是否為有效的 [int](../../../csharp/language-reference/keywords/int.md)。  
@@ -46,5 +65,6 @@ bool result = int.TryParse(s, out i); //i now = 108
  [如何：將位元組陣列轉換成整數](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)   
  [如何：將字串轉換為數值](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)   
  [如何：在十六進位字串和數字類型間轉換](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
- [剖析數值字串](../Topic/Parsing%20Numeric%20Strings%20in%20the%20.NET%20Framework.md)   
- [格式化類型](../Topic/Formatting%20Types%20in%20the%20.NET%20Framework.md)
+ [剖析數值字串](../../../standard/base-types/parsing-numeric.md)   
+ [格式化類型](../../../standard/base-types/formatting-types.md)
+

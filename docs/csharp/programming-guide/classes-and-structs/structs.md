@@ -1,20 +1,39 @@
 ---
-title: "結構 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 結構"
-  - "結構 [C#]"
+title: "結構 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, structs
+- structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce12f402c0748ea6729c82e3f188c0a58f63d628
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 結構 (C# 程式設計手冊)
 結構 \(Struct\) 是使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字所定義，例如：  
@@ -60,3 +79,4 @@ caps.handback.revision: 31
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

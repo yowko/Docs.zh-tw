@@ -1,5 +1,5 @@
 ---
-title: Common Language Runtime (CLR) | Microsoft Docs
+title: Common Language Runtime (CLR)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -25,11 +25,11 @@ caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 69b30d2e6d3b92e33d6bc827fa1a8de6298e6a1f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98c9e59342c1a336fc6889464fce529feebc2414
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
@@ -94,3 +94,4 @@ ms.lasthandoff: 05/11/2017
   
 ## <a name="see-also"></a>另請參閱  
  [版本和相依性](../../docs/framework/migration-guide/versions-and-dependencies.md)
+

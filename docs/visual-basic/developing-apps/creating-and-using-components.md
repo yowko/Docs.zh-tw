@@ -1,5 +1,5 @@
 ---
-title: "在 Visual Basic 中建立和使用元件 | Microsoft Docs"
+title: "在 Visual Basic 中建立和使用元件"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ca4df41897fafc5d7981c85741ae4fa1a8c641f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03929dd0dbb81a9efee5b69ede78ff0b4ab4d380
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>在 Visual Basic 中建立和使用元件
-「元件」**是實作 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 介面的類別，或是直接或間接衍生自實作 <xref:System.ComponentModel.IComponent> 的類別。 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 元件是能重複使用的物件，可以與其他物件互動，並且提供對於外部資源的控制與設計階段支援。  
+「元件」是實作 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 介面的類別，或直接或間接衍生自可實作 <xref:System.ComponentModel.IComponent> 類別的類別。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 元件是能重複使用的物件，可以與其他物件互動，並且提供對於外部資源的控制與設計階段支援。  
   
- 元件的一項重要特色是它們可以設計，這表示類別如果是元件，則可用於 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 整合式開發環境。 元件可以新增至工具箱、拖曳並放至表單上，以及在設計介面上操作。 請注意，元件的基底設計階段支援已內建至 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]，元件開發人員不需要執行任何額外的工作，即可利用基底設計階段功能。  
+ 元件的一項重要特色是它們可以設計，這表示類別如果是元件，則可用於 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境。 元件可以新增至工具箱、拖曳並放至表單上，以及在設計介面上操作。 請注意，元件的基底設計階段支援已內建至 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，元件開發人員不需要執行任何額外的工作，即可利用基底設計階段功能。  
   
  「控制項」**類似於元件，都是可以設計的。 不過，控制項提供使用者介面，而元件則不提供。 控制項必須衍生自基底控制項類別之一︰<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
   
@@ -102,3 +103,4 @@ ms.lasthandoff: 03/13/2017
  [如何：在 Windows Forms 中存取設計階段支援](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)   
  [如何：在設計模式中擴充控制項的外觀和行為](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)   
  [如何：在設計模式中執行控制項的自訂初始設定](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+

@@ -1,24 +1,29 @@
 ---
-title: "如何：使用反映發出定義泛型方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "泛型 [.NET Framework], 動態類型"
-  - "泛型 [.NET Framework], 反映發出"
-  - "反映發出, 泛型方法"
+title: "如何：使用反映發出定義泛型方法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generics [.NET Framework], reflection emit
+- reflection emit, generic methods
+- generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 655ec9d5c53de10e6044cacc0eb8239fefe36489
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用反映發出定義泛型方法
 第一個程序是示範如何建立具有兩個型別參數的簡單泛型方法，以及如何套用類別條件約束、介面條件約束及型別參數的特殊條件約束。  
@@ -168,10 +173,11 @@ caps.handback.revision: 13
   
 -   此程式碼含有進行編譯所需的 C\# `using` 陳述式 \(Visual Basic 中的 `Imports`\)。  
   
--   不需要其他的組件參考。  
+-   不需要任何其他組件參考。  
   
--   使用 csc.exe、vbc.exe 或 cl.exe 在命令列編譯程式碼。  若要在 Visual Studio 中編譯程式碼，請將程式碼放在主控台應用程式專案範本中。  
+-   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## 請參閱  
  <xref:System.Reflection.Emit.MethodBuilder>   
- [如何：使用反映發出定義泛型類型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+ [操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+

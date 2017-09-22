@@ -1,5 +1,5 @@
 ---
-title: "建立自訂屬性 (C#) | Microsoft Docs"
+title: "建立自訂屬性 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b71bf8fe1f4d448bf373fcab4bccd89bca4672b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ae5084501a2dd60ae23c93bbdb52dcd44f3f3f7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-custom-attributes-c"></a>建立自訂屬性 (C#)
@@ -85,8 +86,9 @@ class SampleClass
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection>   
  [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
- [撰寫自訂屬性](http://msdn.microsoft.com/library/97216f69-bde8-49fd-ac40-f18c500ef5dc)   
+ [撰寫自訂屬性](../../../../standard/attributes/writing-custom-attributes.md)   
  [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [使用反映存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
  [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+

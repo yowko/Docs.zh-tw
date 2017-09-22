@@ -1,5 +1,5 @@
 ---
-title: "分割資料 (C#) | Microsoft Docs"
+title: "分割資料 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8bab82ff0921871e610eef37650d1aa52e16006c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1690dac93d5e74f1305bd457f8bc749bec5449
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="partitioning-data-c"></a>分割資料 (C#)
@@ -39,11 +39,12 @@ LINQ 中的分割是指將輸入序列分成兩個區段的作業，不用重新
   
 |運算子名稱|描述|C# 查詢運算式語法|更多資訊|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|略過項目直至序列中指定的位置為止。|不適用。|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=fullName>|  
-|SkipWhile|根據述詞函式跳過項目，直到不符合條件的項目為止。|不適用。|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=fullName>|  
-|Take|採用序列中最多到指定位置為止的項目。|不適用。|<xref:System.Linq.Enumerable.Take%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=fullName>|  
-|TakeWhile|根據述詞函式採用項目，直到不符合條件的項目為止。|不適用。|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=fullName>|  
+|Skip|略過項目直至序列中指定的位置為止。|不適用。|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|SkipWhile|根據述詞函式跳過項目，直到不符合條件的項目為止。|不適用。|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|Take|採用序列中最多到指定位置為止的項目。|不適用。|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|TakeWhile|根據述詞函式採用項目，直到不符合條件的項目為止。|不適用。|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Linq>   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+

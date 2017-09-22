@@ -1,27 +1,27 @@
 ---
-title: "dotnet-remove reference 命令 - .NET Core CLI | Microsoft Docs"
-description: "dotnet-remove reference 命令提供方便的選項，以移除專案對專案參考。"
+title: "dotnet remove reference 命令 - .NET Core CLI"
+description: "dotnet remove reference 命令提供方便的選項，以移除專案對專案參考。"
 keywords: "dotnet-remove, CLI, CLI 命令, .NET Core"
-author: spboyer
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 889c6b7e-a313-40b1-9fd3-6a6f4c52f1d0
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 22db4037195afa2c49ef038832e09a99c6a0d54e
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 7cb84c2dc7fc4d16b00bd6459132390ab80131f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-# <a name="dotnet-remove-reference"></a>dotnet-remove reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>name
 
-`dotnet-remove reference` - 移除專案對專案參考。
+`dotnet remove reference` - 移除專案對專案參考。
 
 ## <a name="synopsis"></a>概要
 

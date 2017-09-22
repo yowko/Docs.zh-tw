@@ -1,5 +1,5 @@
 ---
-title: "尋找 Word 文件中的文字 (C#) | Microsoft Docs"
+title: "尋找 Word 文件中的文字 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f51cbe8a9debf989512b55a501bd3b3b6bcf0893
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8a171965c302e38de9403b8e9f03a34100a425a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="finding-text-in-word-documents-c"></a>尋找 Word 文件中的文字 (C#)
@@ -30,7 +29,7 @@ ms.lasthandoff: 03/13/2017
   
  如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
- 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的類型。  
+ 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
   
 ```csharp  
 public static class LocalExtensions  
@@ -344,3 +343,4 @@ StyleName:Code ><
  [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
  [使用純虛擬函式進行重構 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)   
  [LINQ to XML 中的延後執行和延遲評估 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+

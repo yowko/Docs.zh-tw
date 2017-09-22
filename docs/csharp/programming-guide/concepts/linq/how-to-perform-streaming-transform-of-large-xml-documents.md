@@ -1,5 +1,5 @@
 ---
-title: "如何：執行大型 XML 文件的串流轉換 (C#) | Microsoft Docs"
+title: "如何：執行大型 XML 文件的串流轉換 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: fc8716c2190ac42b66ba8d76ccfec152ea804c4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 952fad19f9abdea464e2763b721446ab5fe68301
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>如何：執行大型 XML 文件的串流轉換 (C#)
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/22/2017
   
  即使您使用[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中所描述的技術，如果您嘗試組合包含已轉換之文件的 XML 樹狀結構，記憶體使用量將會太大。  
   
- 有兩個主要方法。 其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。 另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 這個主題會示範這兩種方法。  
+ 有兩個主要方法。 其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。 另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 這個主題會示範這兩種方法。  
   
 ## <a name="example"></a>範例  
  下列範例是根據[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的範例所建立。  
@@ -208,7 +208,7 @@ static void Main(string[] args)
 ## <a name="example"></a>範例  
  下列範例也是根據[如何：串流 XML 片段並存取標頭資訊 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 中的範例所建立。  
   
- 此範例會使用 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
+ 此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。 此範例可以轉換非常大的文件，同時維護小的記憶體使用量。  
   
  請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。 不過，較為複雜的實作方法將會使用 XSD 驗證來源文件，或做為剖析無效文件的準備。  
   
@@ -341,3 +341,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>另請參閱  
  [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

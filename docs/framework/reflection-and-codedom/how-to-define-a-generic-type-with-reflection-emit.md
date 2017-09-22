@@ -1,24 +1,29 @@
 ---
-title: "如何：使用反映發出定義泛型類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "泛型 [.NET Framework], 動態類型"
-  - "泛型 [.NET Framework], 反映發出"
-  - "反映發出, 泛型類型"
+title: "如何：使用反映發出定義泛型類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- generics [.NET Framework], reflection emit
+- generics [.NET Framework], dynamic types
+- reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 85e5bc1cdbd9d90597864c75a5bd33109e4ae783
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用反映發出定義泛型類型
 這個主題將示範如何建立具有兩個型別參數的簡單泛型型別、如何套用類別條件約束、介面條件約束及型別參數的特殊條件約束，以及如何建立將類別的型別參數當做參數型別和傳回型別使用的成員。  
@@ -138,5 +143,6 @@ caps.handback.revision: 14
   
 ## 請參閱  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>   
- [Using Reflection Emit](http://msdn.microsoft.com/zh-tw/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
- [Reflection Emit Dynamic Assembly Scenarios](http://msdn.microsoft.com/zh-tw/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [使用反映發出](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
+ [反映發出動態組件案例](http://msdn.microsoft.com/en-us/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+

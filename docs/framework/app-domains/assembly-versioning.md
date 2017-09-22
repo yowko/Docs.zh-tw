@@ -1,26 +1,31 @@
 ---
-title: "組件版本控制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 版本控制"
-  - "資訊版本"
-  - "解析組件繫結要求"
-  - "版本編號, 組件"
-  - "版本控制, 組件"
+title: "組件版本控制"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- informational versions
+- version numbers, assemblies
+- assemblies [.NET Framework], versioning
+- resolving assembly binding requests
+- versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 組件版本控制
 使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。  組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。  Runtime 的預設版本原則為，除非被組態檔 \(應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔\) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。  
@@ -80,3 +85,4 @@ caps.handback.revision: 10
  [設定應用程式](../../../docs/framework/configure-apps/index.md)   
  [設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)   
  [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+

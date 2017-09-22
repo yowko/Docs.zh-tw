@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic) | Microsoft Docs"
+title: ".NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f471bac04a853e5876b9da52b7b858e1e1766e28
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
@@ -130,3 +130,4 @@ ms.lasthandoff: 05/22/2017
  [檔案和資料流 I/O](https://msdn.microsoft.com/library/k3352a4t)   
  [非同步檔案 I/O](https://msdn.microsoft.com/library/kztecsys)   
  [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+

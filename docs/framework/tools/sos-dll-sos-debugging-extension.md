@@ -1,29 +1,34 @@
 ---
-title: "SOS.dll (SOS 偵錯擴充功能) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "偵錯擴充功能"
-  - "SOS 偵錯擴充功能"
-  - "SOS.dll"
+title: "SOS.dll (SOS 偵錯擴充功能)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- debugging extensions
+- SOS debugging extensions
+- SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 caps.latest.revision: 55
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 55
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41338111c92cb4af7f175c00c8ec87e48dc9c228
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # SOS.dll (SOS 偵錯擴充功能)
 SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境的相關資訊，以協助您在 Windows 偵錯工具 (WinDbg.exe) 和 Visual Studio 中偵錯 Managed 程式。 這個工具需要您的專案已啟用非 Managed 偵錯。 SOS.dll 會隨著 .NET Framework 自動安裝。 若要在 Visual Studio 中使用 SOS.dll，安裝[Windows Driver Kit (WDK)](http://msdn.microsoft.com/windows/hardware/hh852362)。  
@@ -217,3 +222,4 @@ SOS 偵錯副檔名 (SOS.dll) 提供內部通用語言執行平台 (CLR) 環境�
 ## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)   
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

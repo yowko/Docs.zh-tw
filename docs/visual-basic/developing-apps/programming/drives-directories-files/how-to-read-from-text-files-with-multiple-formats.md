@@ -1,29 +1,48 @@
 ---
-title: "How to: Read From Text Files with Multiple Formats in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "TextFieldParser object, reading from a file"
-  - "TextFieldType enumeration"
-  - "My.Computer.FileSystem.WriteAllText method, parsing structured text files"
-  - "WriteAllText method, parsing structured text files"
-  - "PeekChars method, determining format of text"
-  - "reading text files, multiple formats"
-  - "I/O [Visual Basic], reading text files"
-  - "text files, reading"
+title: "如何：在 Visual Basic 中以多種格式從文字檔讀取"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- TextFieldParser object, reading from a file
+- TextFieldType enumeration
+- My.Computer.FileSystem.WriteAllText method, parsing structured text files
+- WriteAllText method, parsing structured text files
+- PeekChars method, determining format of text
+- reading text files, multiple formats
+- I/O [Visual Basic], reading text files
+- text files, reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be085e5a0f7a57890893ba310db3c66480b300da
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Read From Text Files with Multiple Formats in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -84,6 +103,7 @@ caps.handback.revision: 17
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>   
- [How to: Read From Comma\-Delimited Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [How to: Read From Fixed\-width Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
- [Parsing Text Files with the TextFieldParser Object](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+ [如何：從逗號分隔文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
+ [如何：從固定寬度的文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
+ [使用 TextFieldParser 物件剖析文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+

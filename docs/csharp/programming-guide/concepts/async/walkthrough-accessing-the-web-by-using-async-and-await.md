@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：使用 async 和 await 存取 Web (C#) | Microsoft Docs"
+title: "逐步解說：使用 async 和 await 存取 Web (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2cd8842a9fcc0a075d6504c5f310d8de88dc09c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 async 和 await 存取 Web (C#)
@@ -104,7 +105,7 @@ ms.lasthandoff: 03/13/2017
   
 6.  放置文字方塊和按鈕，使兩者都出現在 [MainWindow]**** 視窗中。  
   
-     如需 WPF XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。  
+     如需 WPF XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。  
   
 ##  <a name="BKMK_AddReference"></a>   
 ###  <a name="AddRef"></a> 加入參考  
@@ -272,20 +273,20 @@ ms.lasthandoff: 03/13/2017
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
 ###  <a name="GetURLContents"></a> 將 GetURLContents 轉換為非同步方法  
   
-1.  若要將非同步方案轉換為同步方案，最好從 `GetURLContents` 當中開始，因為 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 和 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 的呼叫即為應用程式存取 Web 的位置。 .NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。  
+1.  若要將同步方案轉換成非同步方案，最佳的起點是在 `GetURLContents`，因為呼叫 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 及 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 是應用程式存取 Web 的位置。 .NET Framework 會讓轉換變得簡單，方法是提供這兩種方法的非同步版本。  
   
      如需 `GetURLContents` 中所用之方法的詳細資訊，請參閱 <xref:System.Net.WebRequest>。  
   
     > [!NOTE]
     >  當您依照本逐步解說中的步驟時，會出現數個編譯器錯誤。 您可以略過它們，並繼續進行本逐步解說。  
   
-     變更於 `GetURLContents` 的第三行呼叫的方法，使其從 `GetResponse` 變更為非同步、以工作為基礎的 <xref:System.Net.WebRequest.GetResponseAsync%2A> 方法。  
+     將在 `GetURLContents` 的第三行呼叫的方法從 `GetResponse` 變更為非同步、以工作為基礎的 <xref:System.Net.WebRequest.GetResponseAsync%2A> 方法。  
   
     ```cs  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在此情況下，「工作傳回變數」**為 `TResult`，其類型為 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。  
+2.  `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在此情況下，工作傳回變數 `TResult` 具有類型 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。  
   
      若要從工作擷取 `WebResponse` 值，請將 [await](../../../../csharp/language-reference/keywords/await.md) 運算子套用至 `GetResponseAsync` 的呼叫，如下列程式碼所示。  
   
@@ -301,9 +302,9 @@ ms.lasthandoff: 03/13/2017
   
 3.  由於您在上一個步驟中加入 `await` 運算子，所以發生編譯器錯誤。 此運算子只能用於以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。  
   
-    -   變更 <xref:System.IO.Stream.CopyToAsync%2A> 呼叫的方法名稱。  
+    -   變更方法的名稱，該方法會呼叫 <xref:System.IO.Stream.CopyToAsync%2A>。  
   
-    -   `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 `CopyToAsync` 非同步版本會傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。  
+    -   `CopyTo` 或 `CopyToAsync` 方法會將位元組複製到其引數，`content`，並不會傳回有意義的值。 在同步版本中，呼叫 `CopyTo` 是簡單的陳述式，不會傳回值。 非同步版本，`CopyToAsync`，傳回 <xref:System.Threading.Tasks.Task>。 工作函式，例如 "Task(void)"，讓方法等候。 將 `Await` 或 `await` 套用至對 `CopyToAsync` 的呼叫，如下列程式碼所示。  
   
 <CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
          前一個陳述式縮寫下列兩行程式碼。  
@@ -311,8 +312,7 @@ ms.lasthandoff: 03/13/2017
 <CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
 4.  `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞標示的方法中使用 `await` 運算子。 新增修飾詞以將方法標示為「非同步方法」**，如下列程式碼所示。  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
-5.  在 C# 中，非同步方法的傳回型別可以是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 [return](../../../../csharp/language-reference/keywords/return.md) 陳述式，則會傳回類型 T 的值，請使用 `Task(T)`；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。  
+5.  非同步方法的傳回類型在 C# 中只能是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 [return](../../../../csharp/language-reference/keywords/return.md) 陳述式，則會傳回類型 T 的值，請使用 `Task(T)`；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。  
   
      如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
@@ -430,7 +430,7 @@ ms.lasthandoff: 03/13/2017
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ###  <a name="GetURLContentsAsync"></a> 將方法 GetURLContentsAsync 取代為 .NET Framework 方法  
   
-1.  .NET Framework 4.5 提供許多您可以使用的非同步方法。 其中，<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> 可在這個逐步解說中滿足您的需求。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。  
+1.  .NET Framework 4.5 提供許多您可以使用的非同步方法。 其中一個方法 (<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>) 會執行這個逐步解說所需的工作。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。  
   
      第一個步驟是在方法 `SumPageSizesAsync` 中建立 `HttpClient` 物件。 在方法的開頭，加入下列宣告。  
   

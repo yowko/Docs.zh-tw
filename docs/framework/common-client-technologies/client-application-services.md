@@ -1,35 +1,40 @@
 ---
-title: "用戶端應用程式服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式設定, 用戶端應用程式服務"
-  - "ASP.NET 服務, 用戶端應用程式服務"
-  - "驗證 [ASP.NET], 用戶端應用程式服務"
-  - "用戶端應用程式服務"
-  - "用戶端應用程式服務, 關於用戶端應用程式服務"
-  - "用戶端應用程式, ASP.NET 服務"
-  - "認證 [.NET Framework]"
-  - "登入 [用戶端應用程式服務]"
-  - "設定檔 [ASP.NET], 用戶端應用程式服務"
-  - "以角色為基礎的安全性 [.NET Framework], 用戶端應用程式服務"
-  - "角色 [.NET Framework], 用戶端應用程式服務"
-  - "共用資訊和功能 [用戶端應用程式服務]"
-  - "Web 設定 [用戶端應用程式服務]"
-  - "Windows 架構的應用程式, 用戶端應用程式服務"
+title: "用戶端應用程式服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role-based security [.NET Framework], client application services
+- client application services
+- credentials [.NET Framework]
+- Windows-based applications, client application services
+- application settings, client application services
+- profiles [ASP.NET], client application services
+- logins [client application services]
+- sharing information and functionality [client application services]
+- Web settings [client application services]
+- authentication [ASP.NET], client application services
+- ASP.NET services, client application services
+- client applications, ASP.NET services
+- roles [.NET Framework], client application services
+- client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
 caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c776040786a51089c9aa988e9229805c06b28bae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 用戶端應用程式服務
 用戶端應用程式服務可讓您輕鬆地建立使用 Microsoft ASP.NET 2.0 AJAX 擴充功能隨附之 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔應用程式服務的 Windows 應用程式。  這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊和使用者管理功能。  例如，您可以使用這些服務執行下列工作：  
@@ -70,12 +75,12 @@ caps.handback.revision: 14
  <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs>  
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
-## 請參閱  
- [ASP.NET Application Services Overview](../Topic/ASP.NET%20Application%20Services%20Overview.md)   
- [Using Forms Authentication with Microsoft Ajax](../Topic/Using%20Forms%20Authentication%20with%20Microsoft%20Ajax.md)   
- [Using Roles Information with Microsoft Ajax](../Topic/Using%20Roles%20Information%20with%20Microsoft%20Ajax.md)   
- [Using Profile Information with Microsoft Ajax](../Topic/Using%20Profile%20Information%20with%20Microsoft%20Ajax.md)   
- [ASP.NET Authentication](../Topic/ASP.NET%20Authentication.md)   
- [Managing Authorization Using Roles](../Topic/Managing%20Authorization%20Using%20Roles.md)   
- [OLD NIB: Managing Application Settings](http://msdn.microsoft.com/zh-tw/7de3c3bd-e0dc-4e75-a1aa-7b0ecfaac4fc)   
+## <a name="see-also"></a>另請參閱  
+ [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)   
+ [透過 Microsoft Ajax 使用表單驗證](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)   
+ [透過 Microsoft Ajax 使用角色資訊](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)   
+ [透過 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)   
+ [ASP.NET 驗證](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)   
+ [使用角色管理授權](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+

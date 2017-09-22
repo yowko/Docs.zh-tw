@@ -1,28 +1,33 @@
 ---
-title: "同處理序並存執行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "同處理序並存執行"
-  - "並存執行, 同處理序"
+title: "同處理序並存執行"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- in-process side-by-side execution
+- side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 25
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]開始，您就可以使用同處理序並存裝載功能，在單一處理序中執行多個 Common Language Runtime \(CLR\) 版本。  根據預設，不論系統針對處理序所載入 .NET Framework 版本為何，Managed COM 元件都會使用建置它們所用的 .NET Framework 版本來執行。  

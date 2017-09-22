@@ -1,29 +1,48 @@
 ---
-title: "How to: Create a Registry Key and Set Its Value in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "RegistryKey.CreateSubKey"
-  - "RegistryKey.SetValue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "registry keys, creating"
-  - "registry, adding values"
-  - "registry, adding keys"
-  - "registry keys, setting values"
-  - "examples [Visual Basic], registry"
+title: "如何：在 Visual Basic 中建立登錄機碼並設定其值"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- RegistryKey.CreateSubKey
+- RegistryKey.SetValue
+dev_langs:
+- VB
+helpviewer_keywords:
+- registry keys, creating
+- registry, adding values
+- registry, adding keys
+- registry keys, setting values
+- examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 106a98a1b15c37eb2cac05e1a681bf7dfed3543d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Create a Registry Key and Set Its Value in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -83,5 +102,6 @@ caps.handback.revision: 30
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
  <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [Reading from and Writing to the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
- [Code Access Security Basics](../Topic/Code%20Access%20Security%20Basics.md)
+ [讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ [程式碼存取安全性的基本概念](https://msdn.microsoft.com/library/33tceax8)
+

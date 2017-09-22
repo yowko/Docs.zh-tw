@@ -1,5 +1,5 @@
 ---
-title: "LINQ to XML 安全性 (C#) | Microsoft Docs"
+title: "LINQ to XML 安全性 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d4da76c120b8028c12a8c2ac58e5130d89a01e05
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b55a9b70ad4291bc74b629e289bdc168a30702ca
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML 安全性 (C#)
@@ -34,12 +34,12 @@ ms.lasthandoff: 03/13/2017
   
  如果您必須從未知的來源處理不受信任的資料，Microsoft 建議您使用 <xref:System.Xml.XmlReader> 類別的執行個體，該類別已設定為篩選掉已知的 XML 阻絕服務 (DoS) 攻擊。  
   
- 如果您已將 <xref:System.Xml.XmlReader> 設定為降低拒絕服務攻擊的威脅，即可使用該讀取器填入 LINQ to XML 樹狀結構，並仍獲益於 LINQ to XML 的程式設計人員生產力提升功能。 多數防護技術包括建立設定為減少安全性問題的讀取器，然後透過已設定的讀取器具現化 XML 樹狀結構。  
+ 如果您已經將 <xref:System.Xml.XmlReader> 設定為減少阻絕服務攻擊，您可以使用該讀取器填入 LINQ to XML 樹狀結構，而且仍然可以享受 LINQ to XML 的程式設計師產能加強功能。 多數防護技術包括建立設定為減少安全性問題的讀取器，然後透過已設定的讀取器具現化 XML 樹狀結構。  
   
  XML 在本質上容易遭到阻絕服務攻擊，因為文件的大小、深度、項目名稱大小等等沒有受到限制。 不論您使用什麼元件處理 XML，如果該元件使用過多的資源，您務必要做好循環使用應用程式網域的準備。  
   
 ## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>減少 XML、XSD、XPath 和 XSLT 攻擊  
- LINQ to XML 是根據 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 建置。 LINQ to XML 是透過 <xref:System.Xml.Schema?displayProperty=fullName> 和 <xref:System.Xml.XPath?displayProperty=fullName> 命名空間中的擴充方法來支援 XSD 和 XPath。 使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.Xml.XmlWriter> 類別搭配 LINQ to XML 時，您可以叫用 XSLT 來轉換 XML 樹狀結構。  
+ LINQ to XML 是根據 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 建置。 LINQ to XML 透過 <xref:System.Xml.Schema?displayProperty=fullName> 和 <xref:System.Xml.XPath?displayProperty=fullName> 命名空間中的擴充方法，支援 XSD 和 XPath。 使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.Xml.XmlWriter> 類別搭配 LINQ to XML 時，您可以叫用 XSLT 來轉換 XML 樹狀結構。  
   
  如果您要在較不安全的環境下操作，則會有一些與 XML 相關聯的安全性問題，以及在 <xref:System.Xml?displayProperty=fullName>、<xref:System.Xml.Schema?displayProperty=fullName>、<xref:System.Xml.XPath?displayProperty=fullName> 和 <xref:System.Xml.Xsl?displayProperty=fullName> 中使用類別的安全性問題。 這些包括 (但不限於) 下列問題：  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/13/2017
   
 -   特別深的 XML 文件可能會提出阻絕服務問題；您可能想要限制 XML 文件的深度。  
   
--   請勿接受來自不受信任組件的支援元件，例如 <xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager> 和 <xref:System.Xml.XmlResolver> 物件。  
+-   請勿接受來自不受信任組件的支援元件，例如，<xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager> 和 <xref:System.Xml.XmlResolver> 物件。  
   
 -   讀取區塊中的資料以減少大型文件的攻擊。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/13/2017
 ### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>請勿在事件處理常式中呼叫 CodeAccessPermissions.Assert  
  組件的權限可大可小。 權限較大的組件對電腦及其環境有較大的掌控能力。  
   
- 如果程式碼位於具有較大權限的組件中，當它在事件處理常式中呼叫 <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>，然後將 XML 樹狀結構傳遞到具有限制權限的惡意組件時，惡意組件可能會引發事件。 由於事件會在權限較大的組件中執行程式碼，因此惡意組件會以更高的權限操作。  
+ 如果權限較大之組件中的程式碼在事件處理常式中呼叫 <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>，然後將 XML 樹狀結構傳遞到具有限制權限的惡意組件，惡意組件可能會引發事件。 由於事件會在權限較大的組件中執行程式碼，因此惡意組件會以更高的權限操作。  
   
  Microsoft 建議您絕對不要在事件處理常式中呼叫 <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>。  
   
@@ -90,24 +90,24 @@ ms.lasthandoff: 03/13/2017
 ### <a name="avoid-excessive-buffer-allocation"></a>避免配置過度的緩衝區  
  應用程式開發人員應該知道，過大的資料來源可能會導致資源耗盡與阻絕服務攻擊。  
   
- 如果惡意使用者提交或上載非常大的 XML 文件，可能會使 LINQ to XML 消耗過度的系統資源。 這可能會造成阻絕服務攻擊。 為防止這個情況，您可以設定 <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> 屬性，並建立有限制可載入文件大小的讀取器。 然後，您可以使用讀取器建立 XML 樹狀結構。  
+ 如果惡意使用者提交或上載非常大的 XML 文件，可能會使 LINQ to XML 消耗過度的系統資源。 這可能會造成阻絕服務攻擊。 為防止這個情況，您可以設定 <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> 屬性，並建立限制載入文件之大小的讀取器。 然後，您可以使用讀取器建立 XML 樹狀結構。  
   
- 好比說，如果您知道來自不受信任來源的 XML 文件預期大小上限將小於 50K 位元組，則可將 <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> 設定為 100,000。 這將不會妨礙您處理 XML 文件，同時，這會降低文件上載時，消耗大量記憶體的阻絕服務威脅。  
+ 例如，如果您知道來自不受信任來源的 XML 文件預期大小上限將小於 50K 位元組，將 <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> 設定為 100,000。 這將不會妨礙您處理 XML 文件，同時，這會降低文件上載時，消耗大量記憶體的阻絕服務威脅。  
   
 ### <a name="avoid-excess-entity-expansion"></a>避免過度擴充實體  
- 使用 DTD 時，其中一個已知的阻絕服務攻擊為造成實體過度擴充的文件。 為防止這個情況，您可以設定 <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=fullName> 屬性，並建立有限制實體擴充產生之字元數的讀取器。 然後，您可以使用讀取器建立 XML 樹狀結構。  
+ 使用 DTD 時，其中一個已知的阻絕服務攻擊為造成實體過度擴充的文件。 為防止這個情況，您可以設定 <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=fullName> 屬性，並建立限制實體擴充產生之字元數的讀取器。 然後，您可以使用讀取器建立 XML 樹狀結構。  
   
 ### <a name="limit-the-depth-of-the-xml-hierarchy"></a>限制 XML 階層的深度  
- 其中一個可能的阻絕服務攻擊會發生在提交階層過深的文件時。 為防止這個情況，您可以將 <xref:System.Xml.XmlReader> 包裝在自己的類別中，以計算項目深度。 如果深度超過預先決定的合理層級，您可以中止惡意文件的處理。  
+ 其中一個可能的阻絕服務攻擊會發生在提交階層過深的文件時。 為防止這個情況，您可以利用自己的類別，包裝計算項目深度的 <xref:System.Xml.XmlReader>。 如果深度超過預先決定的合理層級，您可以中止惡意文件的處理。  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>防止不受信任的 XmlReader 或 XmlWriter 實作  
  管理員應該確認外部提供的任何 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 實作具有強式名稱，而且已經在電腦組態中註冊。 這樣可以防止惡意程式碼偽裝成讀取器或寫入器進行載入。  
   
 ### <a name="periodically-free-objects-that-reference-xname"></a>定期釋放參考 Xname 的物件  
- 為防止特定種類的攻擊，應用程式設計人員應該在應用程式定義域中，定期釋放參考 <xref:System.Xml.Linq.XName> 物件的所有物件。  
+ 為防止特定種類的攻擊，應用程式設計人員應該在應用程式網域中，定期釋放參考 <xref:System.Xml.Linq.XName> 物件的所有物件。  
   
 ### <a name="protect-against-random-xml-names"></a>防止 XML 隨機名稱  
- 如果應用程式會從未受信任的來源取得資料，您應該考慮將 <xref:System.Xml.XmlReader> 包裝在自訂程式碼中，以檢查 XML 隨機名稱與命名空間的可能性。 如果偵測到這類的 XML 隨機名稱與命名空間，應用程式可以中止惡意文件的處理。  
+ 從未受信任來源取出資料的應用程式應該考慮使用以自訂程式碼包裝的 <xref:System.Xml.XmlReader> 來檢查 XML 隨機名稱與命名空間的可能性。 如果偵測到這類的 XML 隨機名稱與命名空間，應用程式可以中止惡意文件的處理。  
   
  您可能想要在任何指定的命名空間 (包括沒有命名空間中的名稱) 中，將名稱數限制為合理的限制。  
   
@@ -118,3 +118,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>另請參閱  
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

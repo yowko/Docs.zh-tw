@@ -1,30 +1,35 @@
 ---
-title: "Regasm.exe (Assembly Registration Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Assembly Registration tool"
-  - "assemblies [.NET Framework], registering"
-  - "Regasm.exe"
-  - "registering assemblies"
+title: "Regasm.exe (組件登錄工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Assembly Registration tool
+- assemblies [.NET Framework], registering
+- Regasm.exe
+- registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 553b7725d2e0fe8fc197805d8e4b444567c33040
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Regasm.exe (Assembly Registration Tool)
 組件註冊工具會讀取組件內的中繼資料，並將必要的項目加入至登錄，這樣可讓 COM 用戶端順利地建立 .NET Framework 類別。  註冊類別之後，任何 COM 用戶端都可以將它當做 COM 類別使用。  類別只會在安裝組件時註冊一次。  在實際註冊類別之後，才能從 COM 建立組件內類別的執行個體。  

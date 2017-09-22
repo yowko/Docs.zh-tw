@@ -1,60 +1,66 @@
 ---
-title: "向 COM 註冊組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM Interop, 註冊組件"
-  - "與 Unmanaged 程式碼的互通, 註冊組件"
-  - "註冊組件"
-  - "移除註冊組件"
+title: "向 COM 註冊組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- COM interop, registering assemblies
+- unregistering assemblies
+- interoperation with unmanaged code, registering assemblies
+- registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a467bff903701cf252da983e1265c679171e90b0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 向 COM 註冊組件
-您可以執行一個名為[組件註冊工具 \(Regasm.exe\)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 的命令列工具來註冊或移除註冊使用於 COM 的組件。  Regasm.exe 會將關於類別的資訊加入到系統登錄，讓 COM 用戶端可以無障礙地使用 .NET Framework 類別。  <xref:System.Runtime.InteropServices.RegistrationServices> 類別提供了同等的功能。  
+# <a name="registering-assemblies-with-com"></a>向 COM 註冊組件
+您可以執行稱為[組件註冊工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 的命令列工具，註冊或取消登錄與 COM 搭配使用的組件。 Regasm.exe 會將此類別的相關資訊新增至容器登錄，讓 COM 用戶端可以明確地使用 .NET Framework 類別。 <xref:System.Runtime.InteropServices.RegistrationServices> 類別提供對等功能。  
   
- 從 COM 用戶端啟動 Managed 元件之前，其必須註冊在 Windows 登錄中。  下表顯示 Regasm.exe 通常會加入至 Windows 登錄的機碼   \(000000 表示實際的 GUID 值\)。  
+ 必須先在 Windows 登錄中註冊 Managed 元件，才能從 COM 用戶端進行啟用。 下表顯示 Regasm.exe 通常會新增至 Windows 登錄的機碼 (000000 表示實際 GUID 值)。  
   
 |GUID|描述|登錄機碼|  
-|----------|--------|----------|  
-|CLSID|類別識別項|HKEY\_CLASSES\_ROOT\\CLSID\\{000…000}|  
-|IID|介面識別項|HKEY\_CLASSES\_ROOT\\Interface\\{000…000}|  
-|LIBID|程式庫識別項|HKEY\_CLASSES\_ROOT\\TypeLib\\{000…000}|  
-|ProgID|程式設計識別項|HKEY\_CLASSES\_ROOT\\000…000|  
+|----------|-----------------|------------------|  
+|CLSID|類別識別碼|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
+|IID|介面識別碼|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
+|LIBID|程式庫識別碼|HKEY_CLASSES_ROOT\TypeLib\\{000…000}|  
+|ProgID|程式設計識別碼|HKEY_CLASSES_ROOT\000…000|  
   
- 在 HKCR\\CLSID\\{0000...0000} 機碼之下，會將預設值設定為類別的 ProgID，並加入兩個新的已命名值 Class 和 Assembly。  Runtime 會從登錄中讀取組件值，然後將它傳遞給 Runtime 組件解析程式 \(Resolver\)。  組件解析程式會依據名稱和版本號碼這類組件資訊嘗試找出這個組件。  為了使組件解析程式找到組件，該組件必須在下列位置其中之一：  
+ 在 HKCR\CLSID\\{0000…0000} 機碼下，預設值設定為類別的 ProgID，並新增兩個新具名值：類別和組件。 執行階段會從登錄讀取 Assembly 值，並將它傳入執行階段組件解析程式。 組件解析程式會根據名稱和版本號碼這類組件資訊來嘗試找出組件。 若要讓組件解析程式找到組件，組件必須位在下列其中一個位置：  
   
--   全域組件快取 \(GAC\) \(必須為強式名稱的組件\)  
+-   全域組件快取 (必須是強式名稱組件)。  
   
--   在應用程式目錄中。  從應用程式路徑載入的組件只能從那個應用程式才能夠存取  
+-   在應用程式目錄中。 只有從該應用程式才能存取從應用程式路徑載入的組件。  
   
--   指定的檔案路徑加上 Regasm.exe 的 **\/codebase** 選項  
+-   使用 **/codebase** 選項所指定之 Regasm.exe 的檔案路徑。  
   
- Regasm.exe 也會在 HKCR\\CLSID\\{0000...0000} 機碼之下建立 InProcServer32 機碼。  這個機碼的預設值會設定為內含 Common Language Runtime 的 DLL 名稱 \(Mscoree.dll\)。  
+ Regasm.exe 也會在 HKCR\CLSID\\{0000…0000} 機碼下建立 InProcServer32 機碼。 索引鍵的預設值設為初始化 Common Language Runtime 的 DLL 名稱 (Mscoree.dll)。  
   
-## 檢查登錄項目  
- COM Interop 提供了一個標準 Class Factory 實作，來建立任何 .NET Framework 類別的執行個體。  用戶端可以呼叫 Managed DLL 上的 **DllGetClassObject**，取得 Class Factory 並且建立物件，就像對任何其他 COM 元件一樣。  
+## <a name="examining-registry-entries"></a>檢查登錄項目  
+ COM Interop 提供標準 Class Factory 實作，來建立任何 .NET Framework 類別的執行個體。 用戶端可以在 Managed DLL 上呼叫 **DllGetClassObject**，來取得 Class Factory 以及建立物件，就像使用任何其他 COM 元件一樣。  
   
- 對於 `InprocServer32` 子機碼，對 Mscoree.dll 的參考在一個傳統 COM 型別程式庫位置表示 Common Language Runtime 建立 Managed 物件。  
+ 針對 `InprocServer32` 索引鍵，Mscoree.dll 的參考會取代傳統 COM 型別程式庫，以指出 Common Language Runtime 建立 Managed 物件。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
  [如何：參考 COM 的 .NET 類型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)   
- [Calling a .NET Object](http://msdn.microsoft.com/zh-tw/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
- [Deploying an Application for COM Access](http://msdn.microsoft.com/zh-tw/fb63564c-c1b9-4655-a094-a235625882ce)
+ [呼叫 .NET 物件](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
+ [部署供 COM 存取的應用程式](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+

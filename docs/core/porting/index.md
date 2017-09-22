@@ -1,7 +1,7 @@
 ---
-title: "從 .NET Framework 移植到 .NET Core | Microsoft Docs"
-description: "從 .NET Framework 移轉到 .NET Core"
-keywords: ".NET、.NET Core"
+title: "從 .NET Framework 移轉到 .NET Core"
+description: "了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。"
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f922fd75bf22d3cfb0c54276443820bae175bc79
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/23/2017
 
 以下是您會發現有幫助的簡短工具清單︰
 
-* NuGet：[Nuget 用戶端](https://dist.nuget.org/index.html) 或 [NuGet 封裝總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)，Microsoft 的 .NET 平台封裝管理員。
+* NuGet - [NuGet 用戶端](https://dist.nuget.org/index.html)或 [NuGet 套件總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)，適用於 .NET 實作的 Microsoft 封裝管理員。
 * API 可攜性分析器：[命令列工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 擴充功能](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)，一種工具鏈，可以產生一份報表，說明程式碼在 .NET Framework 與 .NET Core 之間的可攜程度，以及逐一分析組件問題。  如需詳細資訊，請參閱 [Tooling to help you on the process](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)。
 * 反向封裝搜尋：[有用的 Web 服務](https://packagesearch.azurewebsites.net)，可讓您搜尋類型，以及尋找包含該類型的封裝。
 

@@ -1,5 +1,5 @@
 ---
-title: "@ (C# 參考) | Microsoft Docs"
+title: "@ (C# 參考)"
 ms.date: 2017-02-09
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c86bbeae8f2fc39de3781e124f7ca16ef884a05
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08e3da6aaeee037d7272ea8cddc4382a436b683b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-c-reference"></a>@ (C# 參考)

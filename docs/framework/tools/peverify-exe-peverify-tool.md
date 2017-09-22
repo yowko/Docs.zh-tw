@@ -1,33 +1,38 @@
 ---
-title: "Peverify.exe (PEVerify Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "portable executable files, PEVerify"
-  - "verifying MSIL and metadata"
-  - "PEVerify tool"
-  - "type safety requirements"
-  - "MSIL"
-  - "PEverify.exe"
-  - "PE files, PEVerify"
+title: "Peverify.exe (PEVerify 工具)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- portable executable files, PEVerify
+- verifying MSIL and metadata
+- PEVerify tool
+- type safety requirements
+- MSIL
+- PEverify.exe
+- PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01606ede139ef370817926df1dd82bcbfcbabafd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Peverify.exe (PEVerify Tool)
 PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language \(MSIL\) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。  只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。  如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。  在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  

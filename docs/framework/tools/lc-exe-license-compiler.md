@@ -1,35 +1,40 @@
 ---
-title: "Lc.exe (License Compiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Lc.exe"
-  - ".licx file"
-  - "License Compiler"
-  - "control licenses [Windows Forms]"
-  - "compiling licenses file"
-  - "license file"
-  - ".licenses file"
-  - "Windows Forms, control licenses"
-  - "licensed controls [Windows Forms]"
+title: "Lc.exe (授權編譯器)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Lc.exe
+- .licx file
+- License Compiler
+- control licenses [Windows Forms]
+- compiling licenses file
+- license file
+- .licenses file
+- Windows Forms, control licenses
+- licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
 caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f65212d9f62d090cd0c16e15b6678e21b00f235
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Lc.exe (License Compiler)
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  

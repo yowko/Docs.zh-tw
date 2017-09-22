@@ -1,30 +1,35 @@
 ---
-title: "非同步用戶端通訊端範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "非同步用戶端通訊端"
-  - "通訊端，程式碼範例"
-  - "通訊端，非同步用戶端通訊端"
+title: "非同步用戶端通訊端範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- asynchronous client sockets
+- sockets, code examples
+- sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 非同步用戶端通訊端範例
-下列程式碼範例程式建立連接至伺服器的用戶端。  用戶端的非同步通訊端建置，因此，用戶端應用程式的執行沒有逾時，當伺服器傳回回應時。  應用程式將字串傳送至伺服器並顯示在主控台上伺服器所傳回的字串。  
+# <a name="asynchronous-client-socket-example"></a>非同步用戶端通訊端範例
+下列範例程式會建立連線到伺服器的用戶端。 伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。 應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。  
   
 ```vb  
 Imports System  
@@ -328,7 +333,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
  [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [通訊端程式碼範例](../../../docs/framework/network-programming/socket-code-examples.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "stackalloc (C# 參考) | Microsoft Docs"
+title: "stackalloc (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53d61cfdcf4d356a28881c57ad923017c2b479ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C# 參考)
@@ -57,7 +57,7 @@ block = stackalloc int[100];
   
  因為涉及指標類型，所以 `stackalloc` 需要 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 內容。 如需詳細資訊，請參閱 [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)。  
   
- `stackalloc` 就像 C 執行階段程式庫中的 [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca)。  
+ `stackalloc` 就像 C 執行階段程式庫中的 [_alloca](/cpp/c-runtime-library/reference/alloca)。  
   
  下列範例會計算並顯示 Fibonacci 序列中的前 20 個數字。 每個數字都是前兩個數字的總和。 在程式碼中，大小足以包含 20 個類型 `int` 的項目的記憶體區塊會配置於堆疊上，而不是堆積。 區塊的位址會儲存在指標 `fib` 中。 這個記憶體不會進行記憶體回收，因此不需要固定 (使用 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md))。 記憶體區塊的存留期只限於定義它的方法的存留期。 傳回方法之前，無法釋放記憶體。  
   
@@ -76,3 +76,4 @@ block = stackalloc int[100];
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
  [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

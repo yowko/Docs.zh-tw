@@ -1,23 +1,42 @@
 ---
-title: "/lib (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/lib"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lib compiler option [C#]"
-  - "-lib compiler option [C#]"
-  - "/lib compiler option [C#]"
+title: "-lib (C# 編譯器選項)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /lib
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lib compiler option [C#]
+- -lib compiler option [C#]
+- /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e6d928c0ac1cbb4e65d9747ab2c9133aacdbea8e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # /lib (C# Compiler Options)
 **\/lib** 選項會透過 [\/reference \(Import Metadata\)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項指定所參考組件的位置。  
@@ -71,6 +90,7 @@ caps.handback.revision: 16
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   
-## 請參閱  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [如何：修改專案屬性和組態設定](http://msdn.microsoft.com/zh-tw/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>另請參閱  
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+

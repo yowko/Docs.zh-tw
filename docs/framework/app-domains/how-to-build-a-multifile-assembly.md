@@ -1,31 +1,36 @@
 ---
-title: "如何：建置多檔案組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework]，多檔案"
-  - "組件的進入點"
-  - "編譯組件"
-  - "Al.exe"
-  - "命令列編譯器"
-  - "組件資訊清單，多檔案組件"
-  - "組件 [.NET Framework]，編譯"
-  - "組件連結器"
-  - "程式碼模組"
-  - "多檔案組件"
+title: "如何：建置多檔案組件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- entry point for assembly
+- compiling assemblies
+- Al.exe
+- command-line compilers
+- assembly manifest, multifile assemblies
+- assemblies [.NET Framework], compiling
+- Assembly Linker
+- code modules
+- multifile assemblies
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dd9de26f083209a0e8da79562f914023e008251
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：建置多檔案組件
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。  
@@ -102,3 +107,4 @@ caps.handback.revision: 15
  [如何：檢視組件內容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)   
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [多檔案組件](../../../docs/framework/app-domains/multifile-assemblies.md)
+

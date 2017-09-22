@@ -1,5 +1,5 @@
 ---
-title: "使用 Visual Basic 存取檔案 | Microsoft Docs"
+title: "使用 Visual Basic 存取檔案"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -40,15 +40,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2a2a60f9033d6bdec0b9a0d5905adb2b1953bf66
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 71e941bf33c3b1051c22c8170b327df9fae7d4b9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 存取檔案
-`My.Computer.FileSystem` 物件提供用於處理檔案和資料夾的工具。 其屬性、方法和事件可讓您建立、複製、移動、調查及刪除檔案和資料夾。 `My.Computer.FileSystem` 比 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 所提供的舊版函式 (`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等) 提供更佳效能，以利回溯相容性。  
+`My.Computer.FileSystem` 物件提供用於處理檔案和資料夾的工具。 其屬性、方法和事件可讓您建立、複製、移動、調查及刪除檔案和資料夾。 `My.Computer.FileSystem` 比 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 所提供的舊版函式 (`FileOpen`、`FileClose`、`Input`、`InputString`、`LineInput` 等) 提供更佳效能，以利回溯相容性。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
@@ -71,3 +71,4 @@ ms.lasthandoff: 03/13/2017
   
  [疑難排解：讀取和寫入文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  列出讀取和寫入文字檔時遇到的常見問題，並針對每個問題提供補救建議。
+

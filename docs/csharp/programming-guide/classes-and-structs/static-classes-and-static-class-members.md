@@ -1,5 +1,5 @@
 ---
-title: "靜態類別和靜態類別成員 (C# 程式設計手冊) | Microsoft Docs"
+title: "靜態類別和靜態類別成員 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f93706bb5df41e46c860ca70d131d94015a6348f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
@@ -59,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- 與所有類別類型的情況相同，載入可參考類別的程式時，[!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Common Language Runtime (CLR) 會載入靜態類別的類型資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
+ 與所有類別類型的情況相同，載入可參考類別的程式時，[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 會載入靜態類別的類型資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
   
 > [!NOTE]
 >  若要建立只允許建立它本身之一個執行個體的非靜態類別，請參閱 [Implementing Singleton in C#](http://go.microsoft.com/fwlink/?LinkID=100567) (在 C# 中實作單一)。  
@@ -76,7 +76,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  因此，建立靜態類別，基本上與建立只包含靜態成員和私用建構函式的類別相同。 私用建構函式可防止具現化類別。 使用靜態類別的優點在於編譯器可以確認不會意外新增任何執行個體成員。 編譯器將保證無法建立此類別的執行個體。  
   
- 靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含執行個體建構函式，但可以包含靜態建構函式。 如果類別包含需要重要初始化的靜態成員，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+ 靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含執行個體建構函式，但可以包含靜態建構函式。 如果類別所包含的靜態成員不適合用平常方式來初始化，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
 ## <a name="example"></a>範例  
  以下是包含兩種方法可將溫度從攝氏轉換為華氏以及從華氏轉換為攝氏的靜態類別範例︰  
@@ -107,7 +107,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  靜態方法的呼叫會使用 Microsoft Intermediate Language (MSIL) 產生呼叫指令，而執行個體方法的呼叫會產生 `callvirt` 指令，這也會檢查是否有 Null 物件參考。 不過，大部分的時間，兩者之間的效能差異並不明顯。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
@@ -116,3 +116,4 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [class](../../../csharp/language-reference/keywords/class.md)   
  [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
  [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+

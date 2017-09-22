@@ -1,6 +1,6 @@
 ---
 title: "索引子"
-description: "索引子"
+description: "了解 C# 索引子，以及其如何實作索引的屬性，而索引的屬性就是使用一或多個引數所參考的屬性。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3dc9347aa3c4090b71d473d13b5c7ad68f1fbc76
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -52,8 +53,7 @@ public int this[string key]
 當您的類型 API 建立一些集合的模型，以供您在其中定義該集合的引數時，您會在此類型中定義「索引子」。 您的索引子不一定會直接對應至屬於 .NET Core Framework 的集合類型。 您的類型除了建立集合的模型之外，可能還有其他職責。
 索引子可讓您提供符合類型抽象概念的 API，而不會公開有關該抽象概念的值如何儲存或計算的內部詳細資料。
 
-讓我們逐步解說使用「索引子」的一些常見案例。
-您可以在 [GitHub 儲存機制](https://github.com/dotnet/core-docs)的核心文件中，存取所有範例的程式碼。 或者，您可以直接存取[範例資料夾](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)。
+讓我們逐步解說使用「索引子」的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="arrays-and-vectors"></a>陣列和向量
 

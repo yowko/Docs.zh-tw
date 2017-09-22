@@ -1,31 +1,36 @@
 ---
-title: "2.0 版之 System.Uri 命名空間的變更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "2.0 版之 System.Uri 命名空間的變更"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 2.0 版之 System.Uri 命名空間的變更
-數個變更 <xref:System.Uri?displayProperty=fullName> 類別。  這些變更修正不正確的行為，引發的可用性，並增強安全性。  
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>2.0 版之 System.Uri 命名空間的變更
+已對 <xref:System.Uri?displayProperty=fullName> 類別進行數項變更。 這些變更已修正不正確的行為、增強可用性和增強式安全性。  
   
-## 過時並取代成員  
- 建構函式:  
+## <a name="obsolete-and-deprecated-members"></a>已淘汰和已取代的成員  
+ 建構函式：  
   
--   具有 `dontEscape`參數的任何建構函式。  
+-   所有具有 `dontEscape` 參數的建構函式。  
   
  方法:  
   
@@ -45,39 +50,40 @@ caps.handback.revision: 9
   
 -   <xref:System.Uri.EscapeString%2A>  
   
-## 變更  
+## <a name="changes"></a>變更  
   
--   確定不會查詢組件 URI 配置的檔案 \(，、和其他\)， 「?」字元一律逸出和不會視為 <xref:System.Uri.Query%2A> 組件的開頭。  
+-   針對已知沒有查詢部分的 URI 配置 (file、ftp 和其他項目)，一律會逸出 '?' 字元，而且它不是 <xref:System.Uri.Query%2A> 部分的開頭。  
   
--   隱含檔案的 URI \(格式為「c:\\directory\\file」\)， @name.txt 片段字元 \(「\#」\) 永遠是逸出字元，除非完整 unescaping 需求或 <xref:System.Uri.LocalPath%2A> 是 `true`。  
+-   針對隱含檔案 URI (形式為 "c:\directory\file@name.txt")，除非要求完整取消逸出，或 <xref:System.Uri.LocalPath%2A> 是 `true`，否則一律會逸出片段字元 ('#')。  
   
--   通用命名慣例 \(UNC\) 路徑已移除主機名稱支援，表示國際主機名稱的 IDN 規格的資料。  
+-   已移除 UNC 主機名稱支援；已採用用於呈現國際主機名稱的 IDN 規格。  
   
--   <xref:System.Uri.LocalPath%2A> 一律會傳回完全逸出字串。  
+-   <xref:System.Uri.LocalPath%2A> 一律會傳回完整未逸出的字串。  
   
--   <xref:System.Uri.ToString%2A> 不會逸出每個逸出字元" %」， 「? 」、「\#」字元。  
+-   <xref:System.Uri.ToString%2A> 不會取消逸出已逸出的 '%'、'?' 或 '#' 字元。  
   
--   在<xref:System.Uri.Equals%2A> 相等檢查現在包含 <xref:System.Uri.Query%2A> 組件。  
+-   <xref:System.Uri.Equals%2A> 現在會在相等檢查時包含 <xref:System.Uri.Query%2A> 部分。  
   
--   運算子「\=\=」和「\! \=」與 <xref:System.Uri.Equals%2A> 覆寫並連接方法。  
+-   運算子 "==" 和 "!=" 會覆寫並連結至 <xref:System.Uri.Equals%2A> 方法。  
   
--   <xref:System.Uri.IsLoopback%2A> 現在會產生不一致的結果。  
+-   <xref:System.Uri.IsLoopback%2A> 現在會產生一致的結果。  
   
--   URI 「`file:///path`」不再轉譯為「file:\/\/path」。  
+-   URI "`file:///path`" 不再轉譯成 "file://path"。  
   
--   「\#」現在視為主機名稱結束字元。  也就是「http:\/\/consoto.com\#fragment」已轉換為「http:\/\/contoso.com\/\#fragment」。  
+-   "#" 現在會辨識為主機名稱結束字元。 亦即，"http://consoto.com#fragment" 現在會轉換成 "http://contoso.com/#fragment"。  
   
--   Bug，並在結合基底 URI 的片段中修正。  
+-   已修正合併基底 URI 與片段時的 Bug。  
   
--   在 <xref:System.Uri.HostNameType%2A> 的已修正 Bug。  
+-   已修正 <xref:System.Uri.HostNameType%2A> 中的 Bug。  
   
--   在剖析的 NNTP 的已修正 Bug。  
+-   已修正 NNTP 剖析中的 Bug。  
   
--   HTTP:contoso.com 格式的 URI 現在會擲回剖析例外狀況。  
+-   HTTP:contoso.com 形式的 URI 現在會擲回剖析例外狀況。  
   
--   Framework 正確處理 URI 中的 userinfo。  
+-   Framework 可正確處理 URI 中的 userinfo。  
   
--   URI 路徑壓縮是固定的，因此已中斷的 URI 不能周遊根上的檔案系統。  
+-   已修正 URI 路徑壓縮，因此中斷 URI 無法周遊檔案系統的根目錄。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Uri?displayProperty=fullName>
+

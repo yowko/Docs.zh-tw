@@ -1,26 +1,31 @@
 ---
-title: "組件資訊清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 中繼資料"
-  - "組件資訊清單"
-  - "文化特性, 組件資訊清單"
-  - "動態組件, 組件資訊清單"
-  - "中繼資料, 組件資訊清單"
+title: "組件資訊清單"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly manifest
+- dynamic assemblies, assembly manifest
+- metadata, assembly manifest
+- culture, assembly manifest
+- assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 組件資訊清單
 每個組件 \(不論是靜態或是動態\) 都含有描述組件中項目彼此如何關聯的資料集合。  組件資訊清單就包含這個組件的中繼資料。  組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。  組件資訊清單可以存放在具有 Microsoft Intermediate Language \(MSIL\) 程式碼的可移植執行檔 \(PE\) \(.exe 或 .dll\) 中，或者存放在只包含組件資訊清單的獨立 PE 檔中。  
@@ -64,3 +69,4 @@ caps.handback.revision: 7
  [組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)   
  [建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
  [強式名稱的組件](../../../docs/framework/app-domains/strong-named-assemblies.md)
+

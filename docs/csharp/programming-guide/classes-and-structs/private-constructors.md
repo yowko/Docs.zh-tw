@@ -1,5 +1,5 @@
 ---
-title: "私用建構函式 (C# 程式設計手冊) | Microsoft Docs"
+title: "私用建構函式 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f63f4a2189848f8d12ae09eab215c7e15a57863
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ccd3db5f95e3a237bb37d9e09c34f415fcfd752
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="private-constructors-c-programming-guide"></a>私用建構函式 (C# 程式設計手冊)
@@ -62,3 +63,4 @@ ms.lasthandoff: 03/13/2017
  [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [public](../../../csharp/language-reference/keywords/public.md)
+

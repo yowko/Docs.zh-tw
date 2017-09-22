@@ -1,5 +1,5 @@
 ---
-title: AttributeUsage (C#) | Microsoft Docs
+title: AttributeUsage (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f6c72c8152cc0f76085efbaa99ec63e50d1b676
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c008c1a696e93bc3b756a926a046aa5a6942bc10
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
@@ -45,13 +45,11 @@ class NewAttribute : System.Attribute { }
 class NewAttribute : System.Attribute { }  
 ```  
   
- 第一個 `AttributeUsage` 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個項目。 您可以使用 OR 運算子來連結多個目標類型，與下面類似：  
+ 第一個 `AttributeUsage` 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個元素。 您可以使用 OR 運算子來連結多個目標類型，與下面類似：  
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]  
 class NewPropertyOrFieldAttribute : Attribute { }  
 ```  
@@ -60,9 +58,7 @@ class NewPropertyOrFieldAttribute : Attribute { }
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]  
 class MultiUseAttr : Attribute { }  
   
@@ -80,9 +76,7 @@ class Class2 { }
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]  
 class Attr1 : Attribute { }  
   
@@ -104,9 +98,7 @@ class DClass : BClass { }
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 // Create some custom attributes:  
 [AttributeUsage(System.AttributeTargets.Class, Inherited = false)]  
 class A1 : System.Attribute { }  
@@ -164,9 +156,10 @@ A2
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Attribute>   
  <xref:System.Reflection>   
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)   
+ [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
  [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
  [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [屬性](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
  [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

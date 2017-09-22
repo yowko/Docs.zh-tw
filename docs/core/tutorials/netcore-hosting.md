@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-translationtype: Human Translation
-ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
-ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
-ms.lasthandoff: 03/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 03/08/2017
 
 由於主機是原生應用程式，因此本教學課程將說明如何建構 C++ 應用程式以裝載 .NET Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://www.visualstudio.com/downloads/) 所提供的環境)。
 
-您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://www.microsoft.com/net/core) 並[建置一個小型的.NET Core 測試應用程式](../../csharp/getting-started/with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
+您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://www.microsoft.com/net/core) 並[建置一個小型的.NET Core 測試應用程式](../../core/tutorials/with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
 
 本教學課程及其[相關範例](https://github.com/dotnet/docs/tree/master/samples/core/hosting)會建立 Windows 主機，但請同時參閱本文結尾有關裝載於 Unix 的注意事項。
 

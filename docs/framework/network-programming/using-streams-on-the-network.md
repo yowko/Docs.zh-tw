@@ -1,48 +1,53 @@
 ---
-title: "在網路上使用資料流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "從網際網路要求資料，資料流"
-  - "網路"
-  - "回應網際網路要求，資料流"
-  - "網路資源，資料流功能"
-  - "接收資料，資料流功能"
-  - "網路資源"
-  - "傳送資料，資料流功能"
-  - "下載網際網路資源，資料流"
-  - "資料流，功能"
-  - "網際網路，資料流"
-  - "資料流"
+title: "在網路上使用資料流"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, streams
+- Networking
+- response to Internet request, streams
+- network resources, stream capabilities
+- receiving data, stream capabilities
+- Network Resources
+- sending data, stream capabilities
+- downloading Internet resources, streams
+- streams, capabilities
+- Internet, streams
+- streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 在網路上使用資料流
-網路資源在 .NET Framework 中表示為資料流。  藉由將資料流泛型， .NET Framework 提供下列功能:  
+# <a name="using-streams-on-the-network"></a>在網路上使用資料流
+網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  
   
--   一種常見方式傳送和接收網路資料。  哪些檔案 \(HTML， XML 或其他的實際內容—應用程式將使用 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 和 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 傳送和接收資料。  
+-   以一般方式傳送和接收 Web 資料。 不論實際的檔案內容為何 (HTML、XML 或其他格式)，應用程式都會使用 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 和 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 來傳送和接收資料。  
   
--   使用資料流的相容性跨 .NET Framework。  資料流使用在 .NET Framework 中，會處理它們的豐富的基礎結構。  例如，您可以修改 <xref:System.IO.FileStream> 讀取的 XML 資料是以變更只有少數程式碼讀取 <xref:System.Net.Sockets.NetworkStream> 的資料初始化資料流的應用程式。  **NetworkStream** 類別和其他資料流之間的主要差異在於 **NetworkStream** 不可搜尋， <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 屬性永遠會傳回， **false**，並 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法擲回 <xref:System.NotSupportedException>。  
+-   與整個 .NET Framework 資料流的相容性。 .NET Framework 中無處不使用資料流，其處理資料流的基礎結構健全。 例如，您可將讀取 <xref:System.IO.FileStream> 中 XML 資料的應用程式，修改為讀取 <xref:System.Net.Sockets.NetworkStream> 中的資料，而非僅變更將資料流初始化的幾行程式碼。 **NetworkStream** 類別與其他資料流最大的不同處，在於 **NetworkStream** 是不可搜尋的，<xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 屬性一律傳回 **false**而 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法則擲回 <xref:System.NotSupportedException>。  
   
--   處理資料，則到達。  資料流提供對資料，當從網路到達，而不是強制應用程式等候設定的整個資料下載。  
+-   資料送達時的處理。 來自網路的資料以資料流方式到達時，應用程式可立即存取該資料，而不必等到整個資料集下載完成後才存取。  
   
- <xref:System.Net.Sockets> 命名空間包含明確地實作 <xref:System.IO.Stream> 類別可以搭配網路資源使用的 **NetworkStream** 類別。  在 <xref:System.Net.Sockets> 命名空間中的類別會使用 **NetworkStream** 類別代表資料流。  
+ <xref:System.Net.Sockets> 命名空間包含 **NetworkStream** 類別，其可特別實作用於網路資源的 <xref:System.IO.Stream> 類別。 <xref:System.Net.Sockets> 命名空間中的類別會使用 **NetworkStream** 類別來代表資料流。  
   
- 使用傳回的資料流，要將資料傳送至網路，請在您的 <xref:System.Net.WebRequest>的 <xref:System.Net.WebRequest.GetRequestStream%2A> 。  **WebRequest** 會傳送要求標頭傳送至伺服器，然後您可以將資料傳送至網路資源是透過呼叫 <xref:System.IO.Stream.BeginWrite%2A>、 <xref:System.IO.Stream.EndWrite%2A>或 <xref:System.IO.Stream.Write%2A> 方法所傳回的資料流。  某些通訊協定，例如 HTTP，可能會要求您在傳送資料之前設定通訊協定的特定屬性。  下列程式碼範例會示範如何設定正在傳送之資料的 HTTP 特定屬性。  這個範例假設，變數 `sendData` 包含資料傳送，而變數 `sendLength` 是位元組數傳送的資料。  
+ 若要使用傳回的資料流將資料傳送到網路上，請在 <xref:System.Net.WebRequest> 上呼叫 <xref:System.Net.WebRequest.GetRequestStream%2A>。 **WebRequest** 會將要求標題傳送至伺服器；然後您即可在傳回的資料流上呼叫 <xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A> 或 <xref:System.IO.Stream.Write%2A> 方法，將資料傳送到網路資源。 有些通訊協定 (例如 HTTP) 可能會要求您先設定特定通訊協定屬性，再傳送資料。 下列程式碼範例示範如何設定用於傳送資料的特定 HTTP 屬性。 它假設變數 `sendData` 包含要傳送的資料，而變數 `sendLength` 則是要傳送資料的位元組數。  
   
 ```csharp  
 HttpWebRequest request =   
@@ -59,7 +64,6 @@ catch
 {  
    // Handle errors . . .  
 }  
-  
 ```  
   
 ```vb  
@@ -76,19 +80,19 @@ Catch
 End Try  
 ```  
   
- 若要從網路接收的資料，請在您的 <xref:System.Net.WebResponse>的 <xref:System.Net.WebResponse.GetResponseStream%2A> 。  您可以藉由呼叫 <xref:System.IO.Stream.BeginRead%2A>、 <xref:System.IO.Stream.EndRead%2A>或 <xref:System.IO.Stream.Read%2A> 方法然後讀取網路資源的資料會儲存在傳回的資料流。  
+ 若要從網路接收資料，請在 <xref:System.Net.WebResponse> 上呼叫 <xref:System.Net.WebResponse.GetResponseStream%2A>。 然後，您即可在傳回的資料流上呼叫 <xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A> 或 <xref:System.IO.Stream.Read%2A> 方法，以讀取網路資源的資料。  
   
- 當使用從網路資源的資料流時，請注意下列幾點:  
+ 使用網路資源的資料流時，請牢記下列要點：  
   
--   因為 **NetworkStream** 類別無法變更資料流的位置， **CanSeek** 屬性一定會傳回 **false** 。  **Seek** 和 **位置** 方法擲回 **NotSupportedException**。  
+-   因為 **NetworkStream** 類別無法在資料流中變更位置，所以 **CanSeek** 屬性一律傳回 **false**。 **Seek** 和 **Position** 方法會擲回 **NotSupportedException**。  
   
--   當您使用 **WebRequest** 和 **WebResponse**時，呼叫方法所建立的資料流執行個體 **GetResponseStream** 是唯讀的，而且呼叫方法所建立的資料流執行個體 **GetRequestStream** 唯寫。  
+-   使用 **WebRequest** 和 **WebResponse** 時，呼叫 **GetResponseStream** 所建立的資料流執行個體為唯讀，而呼叫 **GetRequestStream** 所建立的資料流執行個體則為唯寫。  
   
--   使用 <xref:System.IO.StreamReader> 類別讓輸入更容易。  下列程式碼範例會使用 **StreamReader** 讀取 **WebResponse** 的 ASCII 編碼資料流 \(本範例未顯示建立要求\)。  
+-   使用 <xref:System.IO.StreamReader> 類別可讓編碼工作變得更輕鬆。 下列程式碼範例會使用 **StreamReader** 從 **WebResponse** 讀取以 ASCII 編碼的資料流 (範例中未示範如何建立要求)。  
   
--   如果網路資源無法使用， **GetResponse** 對的呼叫會封鎖。  您應該考慮使用 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法的非同步要求。  
+-   如果沒有可用的網路資源，即可能會封鎖對 **GetResponse** 的呼叫。 您應考慮透過 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法使用非同步要求。  
   
--   在與伺服器的連接時， **GetRequestStream** 對的呼叫會封鎖。  您應該考慮使用非同步要求來與 <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 和 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法的資料流。  
+-   完成建立伺服器連線時，可能會封鎖對 **GetRequestStream** 的呼叫。 您應考慮透過 <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 和 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 方法，對資料流使用非同步要求。  
   
 ```csharp  
 // Create a response object.  
@@ -110,6 +114,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)
+

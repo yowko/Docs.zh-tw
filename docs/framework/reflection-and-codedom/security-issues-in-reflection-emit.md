@@ -1,29 +1,34 @@
 ---
-title: "反映發出中的安全性問題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "匿名裝載的動態方法 [.NET Framework]"
-  - "動態組件, 安全性"
-  - "發出動態組件, 安全性"
-  - "發出動態組件, 部分信任案例"
-  - "部分信任, 發出動態方法"
-  - "部分信任的程式碼"
-  - "反映發出, 部分信任案例"
-  - "反映發出, 安全性"
+title: "反映發出中的安全性問題"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partially trusted code
+- emitting dynamic assemblies, security
+- reflection emit, security
+- reflection emit, partial trust scenarios
+- partial trust,emitting dynamic methods
+- anonymously hosted dynamic methods [.NET Framework]
+- emitting dynamic assemblies,partial trust scenarios
+- dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d9e8b5858f115e8aaf16861d37a49c18c3bf22b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 反映發出中的安全性問題
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供三種發出 Microsoft 中繼語言 \(MSIL\) 的方式，每種都有它自己的安全性問題：  
@@ -161,3 +166,4 @@ caps.handback.revision: 18
 ## 請參閱  
  [反映的安全性考量](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)   
  [發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+

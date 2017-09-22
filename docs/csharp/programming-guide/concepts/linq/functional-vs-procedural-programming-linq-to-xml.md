@@ -1,5 +1,5 @@
 ---
-title: "功能性與程序性程式設計的比較 (LINQ to XML) | Microsoft Docs"
+title: "功能性與程序性程式設計的比較 (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4505d705b82e7d803070153a107f2f6117a0130a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0920206524f9ff93a6be2acdb230f59c244840f7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>功能性與程序性程式設計的比較 (LINQ to XML) (C#)
@@ -59,3 +59,4 @@ XML 應用程式有很多種：
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

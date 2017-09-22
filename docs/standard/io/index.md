@@ -1,5 +1,5 @@
 ---
-title: "檔案和資料流 I-O | Microsoft Docs"
+title: "檔案和資料流 I-O"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/02/2017
   
 -   <xref:System.IO.DirectoryInfo> - 提供建立、移動和列舉目錄和子目錄的執行個體方法。  
   
--   <xref:System.IO.DirectoryInfo> - 提供以跨平台方式處理目錄字串的方法和屬性。  
+-   <xref:System.IO.Path> - 提供以跨平台方式處理目錄字串的方法和屬性。  
   
  除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> 類別針對檔案 I/O 提供的方法。  
   
@@ -62,15 +62,15 @@ ms.lasthandoff: 05/02/2017
   
 -   搜尋 - 查詢和修改資料流內的目前位置。  
   
- 依據基礎資料來源或儲存機制而定，資料流可能只支援其中部分功能。 例如，<xref:System.IO.Pipes.PipeStream> 類別不支援搜尋。 資料流的 <xref:System.IO.Stream.CanRead%2A>、<xref:System.IO.Stream.CanWrite%2A> 和 <xref:System.IO.Stream.CanSeek%2A> 屬性可指定資料流所支援的作業。  
+ 依據基礎資料來源或儲存機制而定，資料流可能只支援其中部分功能。 例如，<xref:System.IO.Pipes.PipeStream> 類別不支援搜尋。 資料流的 <xref:System.IO.Stream.CanRead%2A>、<xref:System.IO.Stream.CanWrite%2A> 和 <xref:System.IO.Stream.CanSeek%2A> 屬性會指定資料流支援的作業。  
   
  以下是部分常用的資料流類別：  
   
 -   <xref:System.IO.FileStream> – 用於讀取和寫入檔案。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 用於讀取和寫入至隔離儲存區中的檔案。  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 用於讀取和寫入位於隔離儲存區中的檔案。  
   
--   <xref:System.IO.FileStream> – 用於讀取和寫入做為備份存放區的記憶體。  
+-   <xref:System.IO.MemoryStream> – 用於讀取和寫入做為備份存放區的記憶體。  
   
 -   <xref:System.IO.BufferedStream> – 用於改善讀取和寫入作業的效能。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/02/2017
   
 -   <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter> – 使用編碼值在字元與位元組之間進行轉換的方式讀取和寫入字元。  
   
--   <xref:System.IO.StringReader> 和 <xref:System.IO.StringWriter> – 用於讀取和寫入字串中的字元。  
+-   <xref:System.IO.StringReader> 和 <xref:System.IO.StringWriter> – 從字串讀取字元以及將字元寫入字串。  
   
 -   <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter> – 做為其他讀取和寫入二進位資料以外的字元與字串之讀取器和寫入器的抽象基底類別。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/02/2017
 ## <a name="asynchronous-io-operations"></a>非同步 I/O 作業  
  讀取或寫入大量資料可能會耗用大量資源。 如果您的應用程式需要保持對使用者的回應能力，您應該以非同步方式執行這些工作。 進行同步 I/O 作業時，UI 執行緒會遭到封鎖，直至耗用資源的作業完成為止。  開發 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式時請使用非同步 I/O 作業，避免造成應用程式停止運作的印象。  
   
- 非同步成員在其名稱中包含 `Async`例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 這些方法可搭配 `async` 和 `await` 關鍵字使用。  
+ 非同步成員的名稱中包含 `Async`，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 這些方法可搭配 `async` 和 `await` 關鍵字使用。  
   
  如需詳細資訊，請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
@@ -109,15 +109,15 @@ ms.lasthandoff: 05/02/2017
   
  以下是壓縮和解壓縮檔案和資料流時經常使用的類別：  
   
--   <xref:System.IO.Compression.ZipArchive> – 用於建立和解壓縮 zip 封存中的項目。  
+-   <xref:System.IO.Compression.ZipArchive> – 用於建立和擷取 zip 封存中的項目。  
   
--   <xref:System.IO.Compression.ZipArchiveEntry> – 用於表示已壓縮的檔案。  
+-   <xref:System.IO.Compression.ZipArchiveEntry> – 用於表示壓縮檔。  
   
--   <xref:System.IO.Compression.ZipFile> – 用於建立、解壓縮和開啟已壓縮的套件。  
+-   <xref:System.IO.Compression.ZipFile> – 用於建立、擷取和開啟壓縮的封裝。  
   
--   <xref:System.IO.Compression.ZipFileExtensions> – 用於建立和解壓縮已壓縮套件中的項目。  
+-   <xref:System.IO.Compression.ZipFileExtensions> – 用於建立和擷取壓縮封裝中的項目。  
   
--   <xref:System.IO.Compression.DeflateStream> – 使用 Deflate 演算法來壓縮和解壓縮資料流。  
+-   <xref:System.IO.Compression.DeflateStream> – 使用 Deflate 演算法壓縮及解壓縮資料流。  
   
 -   <xref:System.IO.Compression.GZipStream> – 以 gzip 資料格式壓縮和解壓縮資料流。  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/02/2017
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – 提供包含檔案和目錄的隔離存放區域。  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 公開隔離儲存區內的檔案。  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 公開隔離儲存區內的檔案。  
   
  請參閱[隔離儲存區](../../../docs/standard/io/isolated-storage.md)。  
   
@@ -143,20 +143,20 @@ ms.lasthandoff: 05/02/2017
   
  以下是在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中使用 I/O 作業時要注意的一些重要差異：  
   
--   與檔案作業特別相關的類型 (例如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>) 不包含在 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 因此，請改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空間中的類型，例如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
+-   <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 因此，請改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空間中的類型，例如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
   
 -   無法使用隔離儲存區，請改用[應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175)。  
   
--   使用非同步方法 (例如 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>) 來防止封鎖 UI 執行緒。  
+-   使用非同步方法，例如 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>，防止封鎖 UI 執行緒。  
   
--   無法使用以路徑為基礎的壓縮類型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions>。 因此，請改用 [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 命名空間中的類型。  
+-   無法使用路徑壓縮類型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions>。 因此，請改用 [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 命名空間中的類型。  
   
  如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)或 [System.IO.WindowsRuntimeStreamExtensions (英文)](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)。 <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  如需 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱 Windows 開發人員中心的[快速入門：讀取和寫入檔案](http://go.microsoft.com/fwlink/p/?LinkId=243072)。  
   
 ## <a name="io-and-security"></a>I/O 和安全性  
- 當您使用 <xref:System.IO?displayProperty=fullName> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 除了 <xref:System.Security.Permissions.FileIOPermission> 需求，還有這項需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
+ 當您使用 <xref:System.IO?displayProperty=fullName> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
   
  預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 對於傳統 .NET Framework 應用程式請改用[隔離儲存區](../../../docs/standard/io/isolated-storage.md)，對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式則改用[應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175)。  
   

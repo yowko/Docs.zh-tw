@@ -1,5 +1,5 @@
 ---
-title: "標準查詢運算子的查詢運算式語法 (C#) | Microsoft Docs"
+title: "標準查詢運算子的查詢運算式語法 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 115f97eec99d5f22a659532ccf4ed7b20a089014
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30e994329234b8bd455f739694e50121bac63d5d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>標準查詢運算子的查詢運算式語法 (C#)
-某些更常用的標準查詢運算子具有專用 C# 語言關鍵字語法，可將它們呼叫為「查詢運算式」**的一部分。 相較於「方法」**對等項目，查詢運算式是一個不同且更具可讀性的表示查詢形式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。  
+某些更常用的標準查詢運算子具有專用 C# 語言關鍵字語法，可將它們呼叫為「查詢運算式」的一部分。 相較於「方法」對等項目，查詢運算式是一個不同且更具可讀性的表示查詢形式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。  
   
 ## <a name="query-expression-syntax-table"></a>查詢運算式語法表  
  下表列出具有對等查詢運算式子句的標準查詢運算子。  
@@ -51,3 +51,4 @@ ms.lasthandoff: 03/13/2017
  <xref:System.Linq.Queryable>   
  [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [依據執行方式將標準查詢運算子分類 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "使用 XML 宣告序列化 (C#) | Microsoft Docs"
+title: "使用 XML 宣告序列化 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,23 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c0389630c7fc4b8aa394974b7e42cce2a5101a4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36ffb8ddd584785c660896ca77707d504638852f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>使用 XML 宣告序列化 (C#)
 這個主題描述如何控制序列化是否產生 XML 宣告。  
   
 ## <a name="xml-declaration-generation"></a>XML 宣告產生  
- 使用 <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> 方法或 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> 方法序列化到 <xref:System.IO.File> 或 <xref:System.IO.TextWriter>，會產生 XML 宣告。 當您序列化到 <xref:System.Xml.XmlWriter> 時，寫入器設定 (指定於 <xref:System.Xml.XmlWriterSettings> 物件中) 會決定是否產生 XML 宣告。  
+ 使用 <xref:System.IO.File> 方法或 <xref:System.IO.TextWriter> 方法序列化為 <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> 或 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> 會產生 XML 宣告。 當您序列化為 <xref:System.Xml.XmlWriter> 時，寫入器設定 (在 <xref:System.Xml.XmlWriterSettings> 物件中指定) 會決定是否產生 XML 宣告。  
   
  如果您要使用 `ToString` 方法序列化為字串，所產生的 XML 將不會包含 XML 宣告。  
   
 ### <a name="serializing-with-an-xml-declaration"></a>使用 XML 宣告進行序列化  
- 下列範例會建立 <xref:System.Xml.Linq.XElement>，並將文件儲存為檔案，然後將檔案列印到主控台：  
+ 下列範例會建立 <xref:System.Xml.Linq.XElement>、將文件儲存為檔案，然後將檔案列印到主控台：  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -56,7 +56,7 @@ Console.WriteLine(str);
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>不使用 XML 宣告序列化  
- 下列範例顯示如何將 <xref:System.Xml.Linq.XElement> 儲存至 <xref:System.Xml.XmlWriter>。  
+ 下列範例顯示如何將 <xref:System.Xml.Linq.XElement> 儲存為 <xref:System.Xml.XmlWriter>。  
   
 ```csharp  
 StringBuilder sb = new StringBuilder();  
@@ -80,3 +80,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>另請參閱  
  [序列化 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

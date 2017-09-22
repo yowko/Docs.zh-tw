@@ -1,5 +1,5 @@
 ---
-title: "when (C# 參考) | Microsoft Docs"
+title: "when (C# 參考)"
 ms.date: 2017-03-07
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f6218eed8afa7d71429b72be86ab7cc426029e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae869fa04d2dfb963694f258624c5cd594ff1184
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
  # <a name="when-c-reference"></a>when (C# 參考)
@@ -62,7 +62,7 @@ catch ExceptionType [e] when (expr)
 從 7 開始，`case` 標籤不再需要互斥，而且 `case` 標籤在 `switch` 陳述式中的出現順序可以判斷要執行的 switch 區塊。 `when` 關鍵字可以用來指定篩選條件，使其相關聯的 case 標籤只有在篩選條件也是為 true 時才為 true。 它的語法為：
 
 ```csharp
-case (expr) where (when-condition):
+case (expr) when (when-condition):
 ```
 其中，*expr* 是與比對運算式進行比較的常數模式或類型模式，而 *when-condition* 是任何布林運算式。 
 

@@ -1,21 +1,40 @@
 ---
-title: "如何：使用指標複製位元組陣列 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "陣列 [C#], byte"
-  - "位元組陣列 [C#]"
-  - "指標 [C#], 複製位元組"
+title: "如何：使用指標複製位元組陣列 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- byte arrays [C#]
+- arrays [C#], byte
+- pointers [C#], to copy bytes
 ms.assetid: ec16fbb4-a24e-45f5-a763-9499d3fabe0a
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 808a74f75e4dcbcec47735d98063138e2c7456e5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用指標複製位元組陣列 (C# 程式設計手冊)
 下列範例會使用指標在陣列之間複製位元組。  
@@ -30,5 +49,6 @@ caps.handback.revision: 21
 ## 請參閱  
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [\/unsafe \(Enable Unsafe Mode\)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)   
- [Garbage Collection](../Topic/Garbage%20Collection.md)
+ [/unsafe (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)   
+ [記憶體回收](../../../standard/garbage-collection/index.md)
+

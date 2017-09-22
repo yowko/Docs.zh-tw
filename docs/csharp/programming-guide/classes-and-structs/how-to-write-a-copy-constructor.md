@@ -1,20 +1,39 @@
 ---
-title: "如何：撰寫複製建構函式 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# 語言, 複製建構函式"
-  - "複製建構函式 [C#]"
+title: "如何：撰寫複製建構函式 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# Language, copy constructor
+- copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
 caps.latest.revision: 20
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 20
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 712d9d5e792d025dd7c91d4c1809eeba96759757
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：撰寫複製建構函式 (C# 程式設計手冊)
 C\# 不提供物件的複製建構函式，不過，您可以自行撰寫複製建構函式。  
@@ -29,4 +48,5 @@ C\# 不提供物件的複製建構函式，不過，您可以自行撰寫複製�
  [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [解構函式](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [完成項](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

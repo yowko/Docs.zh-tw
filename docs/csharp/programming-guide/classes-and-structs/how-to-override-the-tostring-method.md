@@ -1,20 +1,39 @@
 ---
-title: "如何：覆寫 ToString 方法 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "繼承 [C#], 覆寫 OnPaint 和 ToString"
-  - "ToString 方法, 在 C# 中覆寫"
+title: "如何：覆寫 ToString 方法 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- ToString method, overriding in C#
+- inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 60cec855286a3bb572a0bacd08c0f7920a1fc912
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：覆寫 ToString 方法 (C# 程式設計手冊)
 C\# 中的每一個類別與結構 \(Struct\) 都會隱含繼承 <xref:System.Object> 類別。  所以，C\# 中的每一個物件都會取得 <xref:System.Object.ToString%2A> 方法，這個方法會傳回代表物件的字串。  例如，型別 `int` 的所有變數都有 `ToString` 方法，使其能夠以字串的形式傳回本身的內容：  
@@ -38,7 +57,7 @@ C\# 中的每一個類別與結構 \(Struct\) 都會隱含繼承 <xref:System.Ob
   
 2.  實作此方法，使其傳回字串。  
   
-     除了此類別之特定執行個體 \(Instance\) 所特有的資料，下列範例也會傳回類別的名稱。  
+     下列範例除了會傳回類別的名稱，也會傳回此類別之特定執行個體 (Instance) 所特有的資料。  
   
      [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
@@ -54,5 +73,6 @@ C\# 中的每一個類別與結構 \(Struct\) 都會隱含繼承 <xref:System.Ob
  [字串](../../../csharp/language-reference/keywords/string.md)   
  [new](../../../csharp/language-reference/keywords/new.md)   
  [override](../../../csharp/language-reference/keywords/override.md)   
- [虛擬](../../../csharp/language-reference/keywords/virtual.md)   
- [格式化類型](../Topic/Formatting%20Types%20in%20the%20.NET%20Framework.md)
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)   
+ [格式化類型](../../../standard/base-types/formatting-types.md)
+

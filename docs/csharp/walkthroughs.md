@@ -1,5 +1,5 @@
 ---
-title: "C# 逐步解說 | Microsoft Docs"
+title: "C# 逐步解說"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c4c52096803ff0cbf311afb2a0e38a7f37cf86c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
  說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) (已在 [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)] 中引入) 建立非同步方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
- 顯示如何建立 [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]類型，並將其封裝為 [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]元件，然後從 [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)]應用程式呼叫元件，而應用程式使用 JavaScript 針對 Windows 所建置。  
+ 顯示如何建立 [!INCLUDE[wrt](~/includes/wrt-md.md)]類型，並將其封裝為 [!INCLUDE[wrt](~/includes/wrt-md.md)]元件，然後從 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式呼叫元件，而應用程式使用 JavaScript 針對 Windows 所建置。  
   
  [Office 程式設計 (C# 和 Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  顯示如何使用 C# 和 Visual Basic 來建立 Excel 活頁簿和 Word 文件。  
@@ -70,10 +71,10 @@ ms.lasthandoff: 03/13/2017
  示範一些經常執行的工作，例如，在 `TabControl` 上加入或移除索引標籤、將控制項固定到其父系，以及變更 `SplitContainer` 控制項的方向。  
   
  [在 C# 中撰寫查詢 (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- 示範用以撰寫 [!INCLUDE[vbteclinq](../csharp/includes/vbteclinq_md.md)] 查詢運算式的 C# 語言功能。  
+ 示範用以撰寫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式的 C# 語言功能。  
   
  [處理資料 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
- 說明 [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)] 情節，以加入、修改及刪除資料庫中的資料。  
+ 說明 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 情節，以加入、修改及刪除資料庫中的資料。  
   
  [簡單的物件模型與查詢 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
  示範如何建立實體類別與簡單的查詢，來篩選實體類別。  
@@ -82,15 +83,16 @@ ms.lasthandoff: 03/13/2017
  示範如何使用 LINQ to SQL，透過僅執行預存程序來存取資料。  
   
  [跨關聯性查詢 (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
- 示範如何使用 [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)] 關聯，來代表資料庫中的外部索引鍵關聯性。  
+ 示範如何使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 關聯，來代表資料庫中的外部索引鍵關聯性。  
 
- [使用 C# 撰寫視覺化檢視](https://docs.microsoft.com/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ [使用 C# 撰寫視覺化檢視](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
  顯示如何使用 C# 撰寫簡單的視覺化檢視。  
   
 ## <a name="related-sections"></a>相關章節  
- [部署範例和逐步解說](https://docs.microsoft.com/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ [部署範例和逐步解說](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供通用部署情節的逐步範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../csharp/programming-guide/index.md)   
- [Visual Studio 範例](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)
+ [Visual Studio 範例](/visualstudio/ide/visual-studio-samples)
+

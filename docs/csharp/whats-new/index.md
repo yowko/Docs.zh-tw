@@ -1,5 +1,5 @@
 ---
-title: "C# 的新功能 - C# 指南 | Microsoft Docs"
+title: "C# 的新功能 - C# 指南"
 description: "C# 語言的進化方式"
 keywords: "C#, 最新功能, 新功能, Roslyn"
 author: BillWagner
@@ -10,20 +10,27 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f337a916f0a15c6e81b228ec378a34e97055f68e
+ms.translationtype: HT
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0a328f62a02aea223340fcc00e839e841041a7d6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>C# 的新功能 #
 
+此頁面提供 C# 語言每個主要版本的新功能藍圖。 下列連結提供每個版本中新增主要功能的詳細資訊。
+
+> [!IMPORTANT]
+> C# 語言中的部分功能仰賴「標準程式庫」中的型別和方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 @System.Exception 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 @System.Exception 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 相關說明請見每個特定版本的頁面。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。 
+
+* [C# 7.1](csharp-7-1.md)：
+    - 此頁面說明 C# 語言中的最新功能。 這涵蓋目前於 [Visual Studio 2017 版本 15.3](https://www.visualstudio.com/vs/whatsnew/) 及 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中提供使用的 C# 7.1。
 
 * [C# 7](csharp-7.md)：
-    - 此頁面說明 C# 語言中的最新功能。 這涵蓋目前於 [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) 中提供使用的 C# 7。
-
+    - 此頁面說明 C# 7 中新增的功能。 這些功能已新增到 [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) 和 [.NET Core 1.0](../../core/whats-new/index.md) 及更新版本
+     
 * [C# 6](csharp-6.md)：
     - 此頁面說明 C# 6 中新增的功能。 若是 Windows 開發人員，這些功能可在 Visual Studio 2015 中使用。若是在 macOS 和 Linux 上探索 C# 的開發人員，則可在 .NET Core 1.0 中使用。
 

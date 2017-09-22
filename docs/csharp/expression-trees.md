@@ -1,6 +1,6 @@
 ---
 title: Expression Trees
-description: Expression Trees
+description: "了解 .NET Core 中的運算式樹狀架構，以及如何使用它們來表示您可以檢查、修改和執行的程式碼結構。"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 05/22/2017
 這可讓 [Entity Framework](http://docs.efproject.net/en/latest/) 將以 C# 撰寫的查詢，轉譯為在資料庫引擎中執行的 SQL。 另一個範例是 [Moq](https://github.com/Moq/moq)，這是 .NET 的熱門模擬架構。
 
 本教學課程的其餘章節會探索運算式樹狀架構為何、查看支援運算式樹狀架構的架構類別，並示範如何使用運算式樹狀架構。 您將了解如何讀取運算式樹狀架構、如何建立運算式樹狀架構、如何建立修改後的運算式樹狀架構，以及如何執行由運算式樹狀架構表示的程式碼。 閱讀完後，您將能夠使用這些結構來建立豐富彈性的演算法。
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
+
 1. [說明運算式樹狀架構](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+    了解「運算式樹狀架構」背後的結構和概念。
     
 2. [支援運算式樹狀架構的架構類型](expression-classes.md)
     

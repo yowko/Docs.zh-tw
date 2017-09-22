@@ -1,7 +1,7 @@
 ---
 title: "使用複合索引鍵執行聯結"
 description: "如何使用複合索引鍵執行聯結。"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -11,16 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f504c9dabcd7ca2d198d58c6d81e1fde1052e3be
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e3e860729ca9267d29ba105ac03ebe22a70b1762
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="join-by-using-composite-keys"></a>使用複合索引鍵執行聯結
 
-此範例示範如何執行聯結作業，您想要在其中使用多個索引鍵來定義比對項目。 使用複合索引鍵便可完成這項定義。 您會將複合索引鍵建立成匿名型別，或是包含要比較之值的具名型別。 如果查詢變數傳遞時將跨越方法界限，請使用會覆寫該索引鍵之 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 的具名型別。 在每個索引鍵中，這些屬性的名稱及其出現的順序都必須相同。  
+此範例示範如何執行聯結作業，您想要在其中使用多個索引鍵來定義比對項目。 使用複合索引鍵便可完成這項定義。 您會將複合索引鍵建立成匿名型別，或是包含要比較之值的具名型別。 如果將跨方法界限傳遞查詢變數，請使用可覆寫索引鍵之 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 的具名類型。 在每個索引鍵中，這些屬性的名稱及其出現的順序都必須相同。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用複合索引鍵來聯結來自三個資料表的資料：  
@@ -47,3 +47,4 @@ join...on new {Name = o.CustomerName, ID = o.CustID} equals
  [LINQ 查詢運算式](index.md)   
  [Join 子句](../language-reference/keywords/join-clause.md)   
  [group 子句](../language-reference/keywords/group-clause.md)
+

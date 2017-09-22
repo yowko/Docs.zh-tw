@@ -1,29 +1,34 @@
 ---
-title: "如何：建立公開/私密金鑰組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "強式名稱組件的私密金鑰組"
-  - "簽署組件"
-  - "組件 [.NET Framework]，簽署"
-  - "密碼編譯金鑰組"
-  - "snk 檔案 (金鑰組檔案)"
-  - "公開-私密金鑰組"
-  - ".snk 檔案"
-  - "強式名稱組件，金鑰組"
+title: "如何：建立公開/私密金鑰組"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- key pairs for strong-named assemblies
+- signing assemblies
+- assemblies [.NET Framework], signing
+- cryptographic key pairs
+- snk files (key pair files)
+- public-private key pairs
+- .snk files
+- strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 772bcae9c3467553e4ca90989a82798155ee034c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：建立公開/私密金鑰組
 若要使用強式名稱簽署組件，您必須擁有公開\/私密金鑰組。  這個公用和私密的密碼編譯金鑰組將在編譯期間用來建立強式名稱的組件。  您可以使用[強式名稱工具 \(Sn.exe\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 來建立金鑰組。  金鑰組檔案通常會具有 .snk 副檔名。  
@@ -67,5 +72,6 @@ sn -p keypair.snk public.snk
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
  [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+

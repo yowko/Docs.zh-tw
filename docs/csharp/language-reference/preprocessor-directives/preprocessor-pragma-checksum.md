@@ -1,5 +1,5 @@
 ---
-title: "#pragma 總和檢查碼 (C# 參考) | Microsoft Docs"
+title: "#<a name=\"pragma-checksum-c-reference\"></a>pragma 總和檢查碼 (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5daf71faea5736036e9e3e0178e84ea03c314ff6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c48d99843b9ba398dfe8dc3cf0d2264aaf72be9f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)

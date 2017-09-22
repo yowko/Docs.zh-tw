@@ -1,19 +1,39 @@
 ---
-title: "相等比較 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "物件相等 [C#]"
+title: "相等比較 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 相等比較 (C# 程式設計手冊)
 有時候需要比較兩個值是否相等。  在某些情況下，您會測試「*實值相等*」\(Value Equality\)，也稱為「*等價*」\(Equivalence\)，這表示兩個變數包含的值相等。  在其他情況下，您需判斷兩個變數是否參考記憶體中的同一個基礎物件。  這種相等稱為「*參考相等*」\(Reference Equality\) 或「*一致*」\(Identity\)。  本主題說明這兩種相等，並提供詳細資訊的其他主題連結。  
@@ -57,5 +77,6 @@ if( b == a)
 |[C\# 程式設計手冊](../../../csharp/programming-guide/index.md)|提供重要 C\# 語言功能以及能夠透過 .NET Framework 用於 C\# 之功能的詳細資訊連結。|  
 |[類型](../../../csharp/programming-guide/types/index.md)|提供 C\# 類型系統的詳細資訊以及其他資訊的連結。|  
   
-## 請參閱  
- [C\# 程式設計手冊](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>另請參閱  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+

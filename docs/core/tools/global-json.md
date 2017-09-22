@@ -1,6 +1,6 @@
 ---
-title: "global.json 參考 | Microsoft Docs"
-description: "global.json 參考"
+title: "global.json 參考"
+description: "請參閱 global.json 檔案的結構描述，它允許設定 .NET Core 工具的版本。"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 253b8642ae6fc5308d47552e9addfdbed6813ff1
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ffa97164736fc7f3edc450682d23bdf499b6eb34
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 

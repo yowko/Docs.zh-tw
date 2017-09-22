@@ -1,40 +1,59 @@
 ---
-title: "Creating, Deleting, and Moving Files and Directories in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "examples [Visual Basic], moving files and directories"
-  - "I/O [Visual Basic], deleting folders"
-  - "I/O [Visual Basic], moving directories"
-  - "I/O [Visual Basic], copying directories"
-  - "examples [Visual Basic], creating files and directories"
-  - "I/O [Visual Basic], copying folders"
-  - "I/O [Visual Basic], moving folders"
-  - "examples [Visual Basic], copying files and directories"
-  - "I/O [Visual Basic], deleting directories"
-  - "I/O [Visual Basic], copying files"
-  - "examples [Visual Basic], renaming files and directories"
-  - "I/O [Visual Basic], creating folders"
-  - "I/O [Visual Basic], renaming files"
-  - "I/O [Visual Basic], deleting files"
-  - "I/O [Visual Basic], creating directories"
-  - "I/O [Visual Basic], creating files"
-  - "I/O [Visual Basic], renaming directories"
-  - "I/O [Visual Basic], renaming folders"
-  - "I/O [Visual Basic], moving files"
+title: "在 Visual Basic 中建立、刪除和移動檔案和目錄"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- examples [Visual Basic], moving files and directories
+- I/O [Visual Basic], deleting folders
+- I/O [Visual Basic], moving directories
+- I/O [Visual Basic], copying directories
+- examples [Visual Basic], creating files and directories
+- I/O [Visual Basic], copying folders
+- I/O [Visual Basic], moving folders
+- examples [Visual Basic], copying files and directories
+- I/O [Visual Basic], deleting directories
+- I/O [Visual Basic], copying files
+- examples [Visual Basic], renaming files and directories
+- I/O [Visual Basic], creating folders
+- I/O [Visual Basic], renaming files
+- I/O [Visual Basic], deleting files
+- I/O [Visual Basic], creating directories
+- I/O [Visual Basic], creating files
+- I/O [Visual Basic], renaming directories
+- I/O [Visual Basic], renaming folders
+- I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00144ca80e267ef2f24df0bdaa1c9f689a43af77
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Creating, Deleting, and Moving Files and Directories in Visual Basic
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -128,5 +147,6 @@ caps.handback.revision: 14
  [Reading from Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出與從檔案讀取關聯的工作。  
   
- [Writing to Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- 列出包含寫入檔案的工作。
+ [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ 列出有關寫入檔案的工作。
+

@@ -1,26 +1,31 @@
 ---
-title: "如何：將組件安裝到全域組件快取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 全域組件快取"
-  - "Gacutil.exe"
-  - "全域組件快取工具"
-  - "全域組件快取, 安裝組件"
-  - "強式名稱組件, 全域組件快取"
+title: "如何：將組件安裝到全域組件快取"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- Gacutil.exe
+- strong-named assemblies, global assembly cache
+- global assembly cache, installing assemblies
+- Global Assembly Cache tool
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c1a0eb5034c10b84b02f493cd21bccd121c8315c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：將組件安裝到全域組件快取
 有兩種方式可以將強式名稱組件安裝到全域組件快取 \(GAC\) 中：  
@@ -87,4 +92,5 @@ gacutil -i hello.dll
  [如何：從全域組件快取移除組件](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)   
  [Gacutil.exe \(Global Assembly Cache Tool\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
  [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [Windows Installer Deployment](http://msdn.microsoft.com/zh-tw/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+

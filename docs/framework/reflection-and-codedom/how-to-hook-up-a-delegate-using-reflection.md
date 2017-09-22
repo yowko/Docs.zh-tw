@@ -1,24 +1,29 @@
 ---
-title: "如何：使用反映連結委派 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "委派 [.NET Framework], 使用反映加入事件處理常式"
-  - "事件 [.NET Framework], 使用反映加入事件處理常式"
-  - "反映, 加入事件處理常式委派"
+title: "如何：使用反映連結委派"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [.NET Framework], adding event handlers with reflection
+- reflection, adding event-handler delegates
+- delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0124d3bde63855648183b34a2af3c0817bb71a2b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：使用反映連結委派
 當您使用反映 \(Reflection\) 來載入及執行組件時，將無法使用類似 C\# `+=` 運算子或 Visual Basic [AddHandler 陳述式](../../../ocs/visual-basic/language-reference/statements/addhandler-statement.md)的語言功能來連結事件。  下列程序將示範如何透過反映取得所有必要的型別，以將現有的方法連結到事件，以及如何使用反映發出建立動態方法，並將它連結到事件。  
@@ -121,3 +126,4 @@ caps.handback.revision: 12
  <xref:System.Delegate.CreateDelegate%2A>   
  [如何：定義和執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)   
  [反映](../../../docs/framework/reflection-and-codedom/reflection.md)
+

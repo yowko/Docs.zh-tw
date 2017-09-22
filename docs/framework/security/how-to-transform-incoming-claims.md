@@ -1,31 +1,37 @@
 ---
-title: "如何：轉換傳入宣告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：轉換傳入宣告"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bcf0e640e6b6b45ddb87070c7d6df2fa6dadc834
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/21/2017
+
 ---
-# 如何：轉換傳入宣告
-## 適用於  
+# <a name="how-to-transform-incoming-claims"></a>如何：轉換傳入宣告
+## <a name="applies-to"></a>適用於  
   
--   Microsoft® Windows®識別基礎 \(WIF\)  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Form  
+-   ASP.NET® Web Forms  
   
-## 摘要  
- 本 HOW TO 來建立簡單的需求明確的 ASP.NET Web Form 應用程式和轉換連入要求提供詳細的逐步程序。  它提供如何測試應用程式也提供指示驗證提議已轉換的需求，在應用程式執行時。  
+## <a name="summary"></a>摘要  
+ 此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET Web Forms 應用程式和轉換傳入宣告。 此外，還提供一些指示，說明如何測試應用程式，以確認應用程式執行時會呈現宣告。  
   
-## 內容  
+## <a name="contents"></a>內容  
   
 -   目標  
   
@@ -33,49 +39,49 @@ caps.handback.revision: 4
   
 -   步驟摘要  
   
--   步驟 1 \-建立簡單的 ASP.NET Web Form 應用程式  
+-   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
   
--   步驟 2 \-使用自訂 ClaimsAuthenticationManager，實作需要轉換  
+-   步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
--   步驟 3 \-測試方案。  
+-   步驟 3 – 測試方案  
   
-## 目標  
+## <a name="objectives"></a>目標  
   
--   設定為以要求驗證的 ASP.NET Web Form 應用程式  
+-   設定宣告型驗證的 ASP.NET Web Forms 應用程式  
   
--   藉由將 Administrators 角色轉換連入要求  
+-   藉由新增系統管理員角色宣告來轉換傳入宣告  
   
--   測試 ASP.NET Web Form 應用程式以查看是否正常運作。  
+-   測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
   
-## 概觀  
- WIF 公開可讓使用者修改需要名為的 <xref:System.Security.Claims.ClaimsAuthenticationManager> 的類別，然後才會呈現至相依的一方 \(RP\) 應用程式。  <xref:System.Security.Claims.ClaimsAuthenticationManager> 為重點分開適用於驗證與基礎應用程式程式碼之間的差異。  下列範例示範如何將角色加入至需求可能由 RP 需要傳入的 <xref:System.Security.Claims.ClaimsPrincipal> 。  
+## <a name="overview"></a>概觀  
+ WIF 會公開一個名為 <xref:System.Security.Claims.ClaimsAuthenticationManager> 類別，其可讓使用者在向信賴憑證者 (RP) 應用程式呈現宣告之前，修改這些宣告。 <xref:System.Security.Claims.ClaimsAuthenticationManager> 可用來分隔驗證與基礎應用程式程式碼之間的問題。 下列範例示範如何在 RP 可能需要的傳入 <xref:System.Security.Claims.ClaimsPrincipal> 宣告中加入角色。  
   
-## 步驟摘要  
+## <a name="summary-of-steps"></a>步驟摘要  
   
--   步驟 1 \-建立簡單的 ASP.NET Web Form 應用程式  
+-   步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
   
--   步驟 2 \-使用自訂 ClaimsAuthenticationManager，實作需要轉換  
+-   步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
--   步驟 3 \-測試方案。  
+-   步驟 3 – 測試方案  
   
-## 步驟 1 \-建立簡單的 ASP.NET Web Form 應用程式  
- 在這個步驟中，您將建立新的 ASP.NET Web Form 應用程式。  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>步驟 1 – 建立簡單的 ASP.NET Web Forms 應用程式  
+ 在此步驟中，您將建立新的 ASP.NET Web Forms 應用程式。  
   
-#### 建立簡單的 ASP.NET 應用程式  
+#### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
-1.  啟動 Visual Studio 以更高階的權限模式為系統管理員。  
+1.  以系統管理員身分的高階權限模式來啟動 Visual Studio。  
   
-2.  在 Visual Studio 中，按一下 **檔案**，按一下 **新增**，然後按一下 **專案**。  
+2.  在 Visual Studio 中，依序按一下 [檔案]、[新增] 和 [專案]。  
   
-3.  在 **新增專案** 視窗，請按一下 **ASP.NET Web Form 應用程式**。  
+3.  在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
   
-4.  在 **名稱**，請輸入並按下 `TestApp`**確定**。  
+4.  在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
   
-5.  以滑鼠右鍵按一下 **機碼** 專案在 **方案總管**下的，然後選取 **識別和存取**。  
+5.  以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
   
-6.  **識別和存取** 視窗隨即出現。  在 **提供者**下，選取的 **測試您的變更與本機開發 STS 的應用程式**，然後按一下 **套用**。  
+6.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
   
-7.  在 *Default.aspx 檔案中* ，以下列內容取代現有的標記，然後儲存檔案:  
+7.  在 *Default.aspx* 檔案中，將現有標記取代為下列標記，然後儲存檔案：  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -90,10 +96,9 @@ caps.handback.revision: 4
             </asp:GridView>  
         </p>  
     </asp:Content>  
-  
     ```  
   
-8.  開啟名為的 *Default.aspx.cs。*程式碼後置檔案  以下列內容取代現有的程式碼，然後儲存檔案:  
+8.  開啟名為 *Default.aspx.cs* 的程式碼後置檔案。 將現有程式碼取代為下列程式碼，然後儲存檔案：  
   
     ```csharp  
     using System;  
@@ -114,32 +119,32 @@ caps.handback.revision: 4
     }  
     ```  
   
-## 步驟 2 \-使用自訂 ClaimsAuthenticationManager，實作需要轉換  
- 在這個步驟會覆寫 <xref:System.Security.Claims.ClaimsAuthenticationManager> 類別的預設功能將 Administrators 角色至傳入的主體。  
+## <a name="step-2--implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>步驟 2 – 使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
+ 在此步驟中，您將覆寫 <xref:System.Security.Claims.ClaimsAuthenticationManager> 類別中的預設功能，以便將系統管理員角色新增到傳入主體。  
   
-#### 使用自訂 ClaimsAuthenticationManager，實作需要轉換  
+#### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>使用自訂的 ClaimsAuthenticationManager 實作宣告轉換  
   
-1.  在 Visual Studio 中，以滑鼠右鍵按一下方案，然後按一下 **新增**，然後按一下 **新增專案**。  
+1.  在 Visual Studio 中，以滑鼠右鍵按一下方案，然後依序按一下 [新增] 和 [新增專案]。  
   
-2.  在 **新增專案** 視窗，請從 **Visual C\#** 範本的 SELECT **類別庫** 清單中，輸入，然後按 `ClaimsTransformation`**確定**。  新的專案在您的方案資料夾中建立。  
+2.  在 [新增專案] 視窗中，選取 [Visual C#] 範本清單中的 [類別庫]，輸入 `ClaimsTransformation`，然後按 [確定]。 您的方案資料夾中就會建立新的專案。  
   
-3.  以滑鼠右鍵按一下 **參考** 在 **ClaimsTransformation** 專案底下，然後按一下 **新增參考**。  
+3.  以滑鼠右鍵按一下 [ClaimsTransformation] 專案底下的 [參考]，然後按一下 [新增參考]。  
   
-4.  在 **參考管理員** 視窗中，選取的 **System.IdentityModel**，然後按一下 **確定**。  
+4.  在 [參考管理員] 視窗中，選取 **System.IdentityModel**，然後按一下 [確定]。  
   
-5.  開啟 **Class1.cs**，或者，如果不存在，請以滑鼠右鍵按一下 **ClaimsTransformation**，按一下 \[**新增**\]，然後按一下 **分類…**  
+5.  開啟 **Class1.cs**，如果沒有該檔案，請以滑鼠右鍵按一下 [ClaimsTransformation]，然後依序按一下 [新增] 和 [類別...]  
   
-6.  將下列 using 指示詞加入至程式碼檔:  
+6.  將下列 using 指示詞新增程式碼檔案：  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  加入下列類別和方法在程式碼檔。  
+7.  在程式碼檔案中新增下列類別和方法。  
   
     > [!WARNING]
-    >  下列程式碼僅供示範使用;務必確認您所需的使用權限在實際執行程式碼。  
+    >  下列程式碼僅供示範之用；請務必在生產環境程式碼中驗證預期權限。  
   
     ```csharp  
     public class ClaimsTransformationModule : ClaimsAuthenticationManager  
@@ -156,27 +161,28 @@ caps.handback.revision: 4
     }  
     ```  
   
-8.  儲存檔案並建立 **ClaimsTransformation** 專案。  
+8.  儲存檔案，並建置 **ClaimsTransformation** 專案。  
   
-9. 在您的 **機碼** ASP.NET 專案中，以滑鼠右鍵按一下參考，然後按一下 **新增參考**。  
+9. 在 [TestApp] ASP.NET 專案中，以滑鼠右鍵按一下參考，然後按一下 [新增參考]。  
   
-10. 在 **參考管理員** 視窗中，從左功能表上選取 **方案** ，從填入選取的 SELECT **ClaimsTransformation** ，然後按一下 **確定**。  
+10. 在 [參考管理員] 視窗中，選取左側功能表中的 [方案]，從填入的選項中選取 [ClaimsTransformation]，然後按一下 [確定]。  
   
-11. 在根 **Web.config** 檔案，巡覽至 **\<system.identityModel\>** 輸入。  在 **\<identityConfiguration\>** 項目內，加入下列程式碼行並儲存檔案:  
+11. 在根 **Web.config** 檔案中，巡覽至 **\<system.identityModel>** 項目。 在 **\<identityConfiguration>** 項目內，新增下列一行並儲存檔案：  
   
-    ```  
+    ```xml  
     <claimsAuthenticationManager type="ClaimsTransformation.ClaimsTransformationModule, ClaimsTransformation" />  
     ```  
   
-## 步驟 3 \-測試方案。  
- 在這個步驟會測試 ASP.NET Web Form 應用程式，並確認提出要求，當使用者登入使用表單驗證。  
+## <a name="step-3--test-your-solution"></a>步驟 3 – 測試方案  
+ 在此步驟中，您將測試 ASP.NET Web Forms 應用程式，並確認使用者使用表單驗證登入時會呈現宣告。  
   
-#### 使用表單驗證，測試您的變更要求的 ASP.NET Web Form 應用程式  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>測試使用表單驗證之宣告的 ASP.NET Web Forms 應用程式  
   
-1.  按 **F5** 建置並執行應用程式。  您應該顯示 *Default.aspx。*  
+1.  按 **F5** 鍵建置並執行應用程式。 您應該會看到 *Default.aspx*。  
   
-2.  在 *Default.aspx* 網頁中，您會看到包含 **簽發者**、 **OriginalIssuer**、 **類型**、 **值**和 **實質型別** 要求有關您的帳戶的 **您的要求** 標題下的資料表。  應以下列方式來顯示最後一個資料列:  
+2.  在 *Default.aspx* 頁面上，您應該會看到 [Your Claims] (您的宣告) 標題下方有一個資料表，其中包含有關您帳戶的 **Issuer**、**OriginalIssuer**、**Type**、**Value** 和 **ValueType** 宣告資訊。 應該會以下列方式呈現最後一個資料列：  
   
     ||||||  
     |-|-|-|-|-|  
-    |位置政府|位置政府|http:\/\/schemas.microsoft.com\/ws\/2008\/06\/identity\/claims\/role|Admin|http:\/\/www.w3.org\/2001\/XMLSchema\#string|
+    |LOCAL AUTHORITY|LOCAL AUTHORITY|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|系統管理員|http://www.w3.org/2001/XMLSchema#string|
+

@@ -1,5 +1,5 @@
 ---
-title: "物件 (C# 程式設計手冊) | Microsoft Docs"
+title: "物件 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ab83f765d6cc66bc0808a316cecabf65af7a3843
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
@@ -51,7 +52,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- `p1` 和 `p2` 的記憶體都配置在執行緒堆疊上。 該記憶體會和其宣告所在的型別或方法一起回收。 這是在指派時複製結構的原因之一。 相較之下，當物件的所有參考都超出範圍時，通用語言執行平台會自動回收為類別執行個體配置的記憶體 (記憶體回收)。 您不可能像在 C++ 中一樣決定性終結類別物件。 如需 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbagecollection/index.md)。  
+ `p1` 和 `p2` 的記憶體都配置在執行緒堆疊上。 該記憶體會和其宣告所在的型別或方法一起回收。 這是在指派時複製結構的原因之一。 相較之下，當物件的所有參考都超出範圍時，通用語言執行平台會自動回收為類別執行個體配置的記憶體 (記憶體回收)。 您不可能像在 C++ 中一樣決定性終結類別物件。 如需 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
   
 > [!NOTE]
 >  通用語言執行平台中，已高度最佳化 Managed 堆積上的記憶體配置和解除配置。 在大部分情況下，在堆積上配置類別執行個體與在堆疊上配置結構執行個體，效能成本沒有任何重大差異。  
@@ -89,4 +90,5 @@ ms.lasthandoff: 03/13/2017
  [class](../../../csharp/language-reference/keywords/class.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [ew 運算子](../../../csharp/language-reference/keywords/new-operator.md)   
- [一般類型系統](http://msdn.microsoft.com/library/53c57c96-83e1-4ee3-9543-9ac832671a89)
+ [一般類型系統](../../../standard/base-types/common-type-system.md)
+

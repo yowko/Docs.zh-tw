@@ -1,21 +1,40 @@
 ---
-title: "如何：在 COM Interop 程式設計中使用索引的屬性 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "索引屬性 [C#]"
-  - "Office 程式設計 [C#], 索引屬性"
-  - "屬性 [C#], 索引"
+title: "如何：在 COM Interop 程式設計中使用索引的屬性 (C# 程式設計手冊)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- indexed properties [C#]
+- Office programming [C#], indexed properties
+- properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
 caps.latest.revision: 20
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 20
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 19e620415adefd6190d3896377eaf6a7cf944f28
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 如何：在 COM Interop 程式設計中使用索引的屬性 (C# 程式設計手冊)
 「*索引的屬性*」\(Indexed Property\) 可改善具有參數的 COM 屬性用於 C\# 程式設計中的方式。  索引的屬性可與 Visual C\# 2010 中引入的其他功能搭配使用，例如[具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)、新的型別 \([dynamic](../../../csharp/language-reference/keywords/dynamic.md)\) 和[內嵌型別資訊](../Topic/Walkthrough:%20Embedding%20Types%20from%20Managed%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)，以增強 Microsoft Office 程式設計功能。  
@@ -51,5 +70,6 @@ caps.handback.revision: 20
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
  [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [如何：在 Office 程式設計中使用具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
- [如何：使用 Visual C\#  功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)   
+ [如何：使用 Visual C# 功能存取 Office Interop 物件](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)   
  [逐步解說：Office 程式設計](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+

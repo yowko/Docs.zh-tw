@@ -11,22 +11,22 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fd0ef3c71d66ceca28d3ae7025058df469655c2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-basics"></a>查詢運算式基本概念
 
 ## <a name="what-is-a-query-and-what-does-it-do"></a>什麼是查詢？它有哪些功能？ 
 
- *「查詢」*是一組指令，描述要從一個或多個指定資料來源擷取的資料以及所傳回資料應該具有的組織結構和組織。 查詢與其產生的結果不同。  
+ 「查詢」是一組指令，描述要從一個或多個指定資料來源擷取的資料以及所傳回資料應該具有的組織結構和組織。 查詢與其產生的結果不同。  
   
  一般而言，來源資料也會以邏輯方式組織成一系列相同類型的項目。 例如，SQL 資料庫資料表包含一系列的資料列。 在 XML 檔案中，有一「序列」的 XML 項目 (雖然這些都是以階層方式組織成樹狀結構)。 記憶體內部集合包含一系列的物件。 
   
- 從應用程式的觀點來看，原始來源資料的特定類型和結構並不重要。 應用程式一律會將來源資料看成 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 集合。 例如，在 LINQ to XML 中，來源資料就會顯示為 `IEnumerable`\<<xref:System.Xml.Linq.XElement>>。  
+ 從應用程式的觀點來看，原始來源資料的特定類型和結構並不重要。 應用程式一律會將來源資料視為 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 集合。 例如，在 LINQ to XML 中，來源資料就會顯示為 `IEnumerable`\<<xref:System.Xml.Linq.XElement>>。  
   
  如果指定此來源序列，則查詢可能會執行三個事項之一︰  
   
@@ -56,19 +56,19 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="what-is-a-query-expression"></a>什麼是查詢運算式？  
 
- *「查詢運算式」*是以查詢語法表示的查詢。 查詢運算式是第一類語言建構。 它就像任何其他運算式一樣，可以用於 C# 運算式有效的任何內容。 查詢運算式包含以 SQL 或 XQuery 類似的宣告式語法所撰寫的一組子句。 每個子句接著會包含一個或多個 C# 運算式，而且這些運算式本身可能是查詢運算式或包含查詢運算式。  
+ 「查詢運算式」是以查詢語法表示的查詢。 查詢運算式是第一類語言建構。 它就像任何其他運算式一樣，可以用於 C# 運算式有效的任何內容。 查詢運算式包含以 SQL 或 XQuery 類似的宣告式語法所撰寫的一組子句。 每個子句接著會包含一個或多個 C# 運算式，而且這些運算式本身可能是查詢運算式或包含查詢運算式。  
   
  查詢運算式的開頭必須是 [from](../language-reference/keywords/from-clause.md) 子句，結尾則必須是 [select](../language-reference/keywords/select-clause.md) 或 [group](../language-reference/keywords/group-clause.md) 子句。 在第一個 `from` 子句與最後一個 `select` 或 `group` 子句之間，它可以包含下列其中一個或多個選擇性子句︰[where](../language-reference/keywords/where-clause.md)、[orderby](../language-reference/keywords/orderby-clause.md)、[join](../language-reference/keywords/join-clause.md)、[let](../language-reference/keywords/let-clause.md)，甚至是額外的 [from](../language-reference/keywords/from-clause.md) 子句。 您也可以使用 [into](../language-reference/keywords/into.md) 關鍵字，讓 `join` 或 `group` 子句的結果作為相同查詢運算式中其他查詢子句的來源。  
   
 ### <a name="query-variable"></a>查詢變數  
  
- 在 LINQ 中，查詢變數是儲存*「查詢」* 而非查詢*「結果」* 的任何變數。 更具體來說，在 `foreach` 陳述式中逐一查看查詢變數或直接呼叫其 `IEnumerator.MoveNext` 方法時，查詢變數一律是將產生一序列項目的可列舉類型。  
+ 在 LINQ 中，查詢變數是儲存「查詢」 而非查詢「結果」 的任何變數。 更具體來說，在 `foreach` 陳述式中逐一查看查詢變數或直接呼叫其 `IEnumerator.MoveNext` 方法時，查詢變數一律是將產生一序列項目的可列舉類型。  
   
  下列程式碼範例示範簡單查詢運算式，內含一個資料來源、一個篩選子句、一個排序子句，而且不需轉換來源項目。 `select` 子句會結束查詢。  
   
  [!code-cs[csrefQueryExpBasics#49](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_5.cs)]  
   
- 在上述範例中，`scoreQuery` 是*「查詢變數」*，這有時指的就是*「查詢」*。 查詢變數不會儲存 `foreach` 迴圈中所產生的任何實際結果資料。 執行 `foreach` 陳述式時，透過查詢變數 `scoreQuery` 不會傳回查詢結果。 而是會透過反覆運算變數 `testScore` 傳回。 可以在第二個 `foreach` 迴圈中逐一查看 `scoreQuery` 變數。 只要未修改過它或資料來源，就會產生相同的結果。  
+ 在上述範例中，`scoreQuery` 是「查詢變數」，這有時指的就是「查詢」。 查詢變數不會儲存 `foreach` 迴圈中所產生的任何實際結果資料。 執行 `foreach` 陳述式時，透過查詢變數 `scoreQuery` 不會傳回查詢結果。 而是會透過反覆運算變數 `testScore` 傳回。 可以在第二個 `foreach` 迴圈中逐一查看 `scoreQuery` 變數。 只要未修改過它或資料來源，就會產生相同的結果。  
   
  查詢變數可能會儲存以查詢語法、方法語法或兩者組合表示的查詢。 在下列範例中，`queryMajorCities` 和 `queryMajorCities2` 都是查詢變數︰  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csrefQueryExpBasics#56](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]  
   
- `select` 子句可以用來將來源資料轉換為新類型的序列。 這項轉換也稱為*「投影」*。 在下列範例中，`select` 子句會*「投影」*一序列的匿名類型，只包含原始項目中欄位的子集。 請注意，使用物件初始設定式，可以初始化新物件。  
+ `select` 子句可以用來將來源資料轉換為新類型的序列。 這項轉換也稱為「投影」。 在下列範例中，`select` 子句會「投影」一序列的匿名類型，只包含原始項目中欄位的子集。 請注意，使用物件初始設定式，可以初始化新物件。  
   
  [!code-cs[csrefQueryExpBasics#57](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="subqueries-in-a-query-expression"></a>查詢運算式中的子查詢  
 
- 查詢子句本身可能會包含查詢運算式，有時稱為*「子查詢」*。 每個子查詢的開頭都會是它自己的 `from` 子句，而子句不一定會指向第一個 `from` 子句中的相同資料來源。 例如，下列查詢示範用於 select 陳述式以擷取分組作業結果的查詢運算式。  
+ 查詢子句本身可能會包含查詢運算式，有時稱為「子查詢」。 每個子查詢的開頭都會是它自己的 `from` 子句，而子句不一定會指向第一個 `from` 子句中的相同資料來源。 例如，下列查詢示範用於 select 陳述式以擷取分組作業結果的查詢運算式。  
   
  [!code-cs[csrefQueryExpBasics#63](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]  
   

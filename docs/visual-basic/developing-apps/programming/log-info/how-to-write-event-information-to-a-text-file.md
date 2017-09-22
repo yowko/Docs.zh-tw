@@ -1,24 +1,43 @@
 ---
-title: "How to: Write Event Information to a Text File (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "event logs [Visual Studio], writing event information"
-  - "text files, writing event information to a text file"
-  - "events [Visual Basic], writing event information to a text file"
+title: "如何：將事件資訊寫入至文字檔 (Visual Basic)"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- event logs [Visual Studio], writing event information
+- text files, writing event information to a text file
+- events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8008f25198928e0bf2bd7e1c0caee8118b8fec9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # How to: Write Event Information to a Text File (Visual Basic)
 [!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
@@ -35,7 +54,7 @@ caps.handback.revision: 20
   
     1.  在 \[**專案**\] 功能表中，選擇 \[**加入新項目**\]。  
   
-    2.  從 \[**加入新項目**\] 對話方塊中選擇 \[**應用程式組態檔**\]。  
+    2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
     3.  按一下 \[**加入**\]。  
   
@@ -79,4 +98,5 @@ caps.handback.revision: 20
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
  [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+ [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+

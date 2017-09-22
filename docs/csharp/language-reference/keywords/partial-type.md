@@ -1,5 +1,5 @@
 ---
-title: "partial (類型) (C# 參考) | Microsoft Docs"
+title: "partial (類型) (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29cec1546de1058929ec192614bc460a9df176ce
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5405455d933f6512cfa3a18e1a545556c5715151
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="partial-type-c-reference"></a>partial (類型) (C# 參考)
@@ -59,3 +59,4 @@ ms.lasthandoff: 03/13/2017
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
  [泛型簡介](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+

@@ -1,26 +1,31 @@
 ---
-title: "動態載入和使用類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "動態載入和使用類型"
-  - "早期繫結"
-  - "隱含晚期繫結"
-  - "晚期繫結, 關於晚期繫結"
-  - "反映, 動態使用類型"
+title: "動態載入和使用類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- late binding, about late binding
+- early binding
+- dynamically loading and using types
+- implicit late binding
+- reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64abd2832ad14f09a8e3079818bddf78c32ee13d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # 動態載入和使用類型
 反映 \(Reflection\) 提供語言編譯器 \(例如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript\) 用來實作隱含晚期繫結的基礎結構。  繫結是找出對應唯一指定型別的宣告 \(即實作\) 的過程。  當這個過程出現在執行階段而非編譯時期時，就稱為晚期繫結  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 可以讓您在程式碼中使用隱含晚期繫結，Visual Basic 編譯器會呼叫使用反映取得物件型別的 Helper 方法。  傳遞至 Helper 方法的引數使得適當的方法在執行階段被叫用。  這些引數是用以叫用方法的執行個體 \(物件\)、叫用的方法的名稱 \(字串\)，和傳遞至叫用的方法的引數 \(物件陣列\)。  
@@ -104,4 +109,5 @@ End Module
  <xref:System.Type.InvokeMember%2A?displayProperty=fullName>   
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
  [檢視類型資訊](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [.NET Framework 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)
+ [.NET Framework 中的型別轉換](../../../docs/standard/base-types/type-conversion.md)
+

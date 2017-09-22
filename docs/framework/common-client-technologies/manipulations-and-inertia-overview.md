@@ -1,20 +1,25 @@
 ---
-title: "Manipulations and Inertia Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "操作和慣性概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b9cfd81b966e2bab95aa780a4fbde26abec74b00
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Manipulations and Inertia Overview
 *操作*可讓使用者使用*操作工具*來移動、旋轉和調整使用者介面 \(UI\) 項目大小。  操作工具代表滑鼠或 \(在觸控式的情況下\) 手寫筆或手指。  
@@ -78,5 +83,6 @@ caps.handback.revision: 7
   
  慣性處理和操作處理通常一起使用。  其介面很類似，而且它們所引發的事件 \(在某些情況下\) 完全相同。  一般而言，當 UI 項目操作完成時，就會開始慣性處理。  這透過接聽 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件和從事件處理常式啟動慣性處理而完成。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Input.Manipulations>
+

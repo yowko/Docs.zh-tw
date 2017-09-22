@@ -1,5 +1,5 @@
 ---
-title: "try-catch (C# 參考) | Microsoft Docs"
+title: "try-catch (C# 參考)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
@@ -47,7 +47,7 @@ try-catch 陳述式包含 `try` 區塊後面接著一個或多個 `catch` 子句
 ## <a name="remarks"></a>備註  
  擲回例外狀況時，Common Language Runtime (CLR) 會尋找處理此例外狀況的 `catch` 陳述式。 如果目前執行的方法不包含這類 `catch` 區塊，CLR 會在呼叫堆疊上查看呼叫目前方法的方法，依此類推。 如果找不到 `catch` 區塊，則 CLR 會向使用者顯示未處理的例外狀況訊息，並停止執行程式。  
   
- `try` 區塊包含可能會造成例外狀況的防護程式碼。 區塊會執行直到例外狀況擲回，或已成功完成。 例如，以下的 `null` 物件轉換嘗試會引發 <xref:System.NullReferenceException> 例外狀況：  
+ `try` 區塊包含可能會造成例外狀況的防護程式碼。 區塊會執行直到例外狀況擲回，或已成功完成。 例如，以下的轉換 `null` 物件嘗試會引發 <xref:System.NullReferenceException> 例外狀況：  
   
 ```csharp  
 object o2 = null;  
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- 雖然可以不含引數使用 `catch` 子句，來攔截任何類型的例外狀況，不建議使用這種用法。 一般而言，您應該只攔截那些您知道如何從中復原的例外狀況。 因此，您應該一律指定衍生自 <xref:System.Exception?displayProperty=fullName> 的物件引數，例如：  
+ 雖然可以不含引數使用 `catch` 子句，來攔截任何類型的例外狀況，不建議使用這種用法。 一般而言，您應該只攔截那些您知道如何從中復原的例外狀況。 因此，您應該永遠指定衍生自 <xref:System.Exception?displayProperty=fullName> 的物件引數，例如：  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -150,7 +150,7 @@ static void Main()
   
  若要攔截例外狀況，請在 `try` 區塊中等候工作，並在關聯的 `catch` 區塊中攔截例外狀況。 如需範例，請參閱＜範例＞一節。  
   
- 工作可能處於錯誤狀態，因為在等候的非同步方法中發生多個例外狀況。 例如，工作可能是 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 呼叫的結果。 當您等候這類工作時，只會攔截到其中一個例外狀況，而且您無法預測會攔截的例外狀況。 如需範例，請參閱＜範例＞一節。  
+ 工作可能處於錯誤狀態，因為在等候的非同步方法中發生多個例外狀況。 例如，工作可能是對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 呼叫的結果。 當您等候這類工作時，只會攔截到其中一個例外狀況，而且您無法預測會攔截的例外狀況。 如需範例，請參閱＜範例＞一節。  
   
 ## <a name="example"></a>範例  
  在下列範例中，`try` 區塊包含可能會造成例外狀況的對 `ProcessString` 方法的呼叫。 `catch` 子句包含只會在螢幕上顯示訊息的例外狀況處理常式。 從 `MyMethod` 內呼叫 `throw` 陳述式時 ，系統會尋找 `catch` 陳述式，並顯示訊息 `Exception caught`。  
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>範例  
- 下列範例說明多項工作可能會導致多個例外狀況的例外狀況處理。 `try` 區塊會等候 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 呼叫所傳回的工作。 當套用所有項目的三項工作都完成時，工作即完成。  
+ 下列範例說明多項工作可能會導致多個例外狀況的例外狀況處理。 `try` 區塊會等候對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 的呼叫傳回的工作。 當套用所有項目的三項工作都完成時，工作即完成。  
   
- 這三個工作都會造成例外狀況。 `catch` 區塊會逐一查看例外狀況，這可以在 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 所傳回工作的 `Exception.InnerExceptions` 屬性中找到。  
+ 這三個工作都會造成例外狀況。 `catch` 區塊會逐一查看例外狀況，這可以在 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 傳回的工作的 `Exception.InnerExceptions` 屬性中找到。  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
@@ -189,7 +189,7 @@ static void Main()
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [try、throw 和 catch 陳述式 (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [例外狀況處理陳述式](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   

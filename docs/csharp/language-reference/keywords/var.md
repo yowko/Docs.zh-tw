@@ -1,25 +1,44 @@
 ---
-title: "var (C# 參考) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "var"
-  - "var_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "var 關鍵字 [C#]"
+title: "var (C# 參考)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- var
+- var_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2a96d1c8869edd96cec913f1a868bcc3253dd14f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
-# var (C# 參考)
-從 Visual C\# 3.0 開始，在方法範圍宣告的變數具有隱含型別 `var`。  隱含型別區域變數是強型別 \(Strongly Typed\)，就和您自行宣告型別一樣，差別在於前者是由編譯器 \(Compiler\) 判斷型別。  下列兩個 `i` 宣告的功能相同：  
+# <a name="var-c-reference"></a>var (C# 參考)
+從 Visual C# 3.0 開始，在方法範圍內宣告的變數可以使用隱含的「類型」`var`。 隱含型別區域變數如同您自己宣告的類型一樣是強型別，但是編譯器會判斷類型。 下列兩個 `i` 宣告的功能相同：  
   
 ```  
 var i = 10; // implicitly typed  

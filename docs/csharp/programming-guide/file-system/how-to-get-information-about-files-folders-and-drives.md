@@ -1,5 +1,5 @@
 ---
-title: "如何：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊) | Microsoft Docs"
+title: "如何：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16950f835938846804ade1a8ad23d907aa69b9c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6067ea9d51c31c9398c7b1fcd83ca8fa3a4fec76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何：取得有關檔案、資料夾和磁碟機的資訊 (C# 程式設計手冊)
@@ -53,9 +53,9 @@ ms.lasthandoff: 03/13/2017
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- 您也可以使用 <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>、<xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> 和 <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName> 呼叫，來取得檔案、資料夾或磁碟機的名稱。  
+ 您也可以呼叫 <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>、<xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> 和 <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>，取得檔案、資料夾或磁碟機名稱。  
   
- <xref:System.IO.Directory?displayProperty=fullName> 和 <xref:System.IO.File?displayProperty=fullName> 類別提供靜態方法，以擷取目錄和檔案的相關資訊。  
+ <xref:System.IO.Directory?displayProperty=fullName> 和 <xref:System.IO.File?displayProperty=fullName> 類別提供靜態方法，擷取目錄和檔案的相關資訊。  
   
 ## <a name="example"></a>範例  
  下列範例示範用來存取檔案和資料夾相關資訊的各種方法。  
@@ -77,5 +77,6 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.IO?displayProperty=fullName>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)   
  [檔案系統和登錄 (C# 程式設計手冊)](../../../csharp/programming-guide/file-system/index.md)
+

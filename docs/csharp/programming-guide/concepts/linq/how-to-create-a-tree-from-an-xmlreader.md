@@ -1,5 +1,5 @@
 ---
-title: "如何：從 XmlReader 建立樹狀結構 (C#) | Microsoft Docs"
+title: "如何：從 XmlReader 建立樹狀結構 (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d94b2238f6908a29efeb2465c1c11babc54a3704
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61685e93e6886b3101d6b30c7f8eb04d026ea55a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>如何：從 XmlReader 建立樹狀結構 (C#)
@@ -70,3 +70,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>另請參閱  
  [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

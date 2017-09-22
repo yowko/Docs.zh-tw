@@ -1,20 +1,25 @@
 ---
-title: "Creating the GamePiece Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "建立 GamePiece 類別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
 caps.latest.revision: 9
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 9
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
+ms.contentlocale: zh-tw
+ms.lasthandoff: 07/28/2017
+
 ---
 # Creating the GamePiece Class
 **GamePiece** 類別包含下列作業需要的所有功能：載入 Microsoft XNA 遊戲片段映像、追蹤與遊戲片段相關的滑鼠狀態、捕捉滑鼠、提供操作和慣性處理，以及提供當遊戲片段達到檢視區限制時的彈回功能。  
@@ -104,8 +109,9 @@ caps.handback.revision: 9
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
-## 請參閱  
- [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [Using Manipulations and Inertia in an XNA Application](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
- [Creating the Game1 Class](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+## <a name="see-also"></a>另請參閱  
+ [操作和慣性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
+ [在 XNA 應用程式中使用操作和慣性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
+ [建立 GamePieceCollection 類別](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
+ [建立 Game1 類別](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+
