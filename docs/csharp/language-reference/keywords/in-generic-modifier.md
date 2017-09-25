@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
 ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (泛型修飾詞) (C# 參考)
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/11/2017
  [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   

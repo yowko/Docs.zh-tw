@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d55ac6a6d35e5f47ab26da681afe9fb5555331ec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程式的一般結構 (C# 程式設計手冊)
@@ -53,7 +53,7 @@ C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多�
 -   [委派](../../../csharp/programming-guide/delegates/index.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   

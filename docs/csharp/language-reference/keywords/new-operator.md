@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 59e1cc2006548df9a7a10283a34044040e5c2fef
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
@@ -66,7 +66,7 @@ int i = 0;
   
  結構等實值型別物件是建立在堆疊上，而類別等參考型別物件則是建立在堆積上。 這兩種物件型別都會自動終結，但實值型別物件是在超出範圍時終結，而參考型別物件則是在移除其最後一個參考後的未指定時間終結。 對於使用大量記憶體、檔案控制代碼或網路連線等固定資源的參考類型而言，有時候非常需要採用具決定性的最終處理，以確保儘速終結物件。 如需詳細資訊，請參閱[使用陳述式](../../../csharp/language-reference/keywords/using-statement.md)。  
   
- 無法多載 `new` 運算子。  
+ `new` 運算子無法多載。  
   
  如果 `new` 運算子無法配置記憶體，則會擲回例外狀況 <xref:System.OutOfMemoryException>。  
   
@@ -78,7 +78,7 @@ int i = 0;
  請注意，範例中的字串預設值是 `null`。 因此，不會顯示。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

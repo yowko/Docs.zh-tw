@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 77f44a43b80c4cf1f12baadaaf6861b3b53244d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 ```csharp
 throw [e]
 ```
-而 `e` 是衍生自 <xref:System.Exception?displayProperty=fullName> 之類別的執行個體。 如果傳遞給 `GetNumber` 方法的引數未對應至內部陣列的有效索引，則下列範例會使用 `throw` 陳述式來擲回 @System.IndexOutOfRangeException。
+而 `e` 是衍生自 <xref:System.Exception?displayProperty=nameWithType> 之類別的執行個體。 如果傳遞給 `GetNumber` 方法的引數未對應至內部陣列的有效索引，則下列範例會使用 `throw` 陳述式來擲回 @System.IndexOutOfRangeException。
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 
@@ -84,7 +84,7 @@ throw [e]
  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   
