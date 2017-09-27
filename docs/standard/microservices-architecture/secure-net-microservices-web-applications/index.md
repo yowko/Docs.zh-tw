@@ -7,6 +7,7 @@ ms.author: wiwagn
 ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.translationtype: HT
 ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
 ms.openlocfilehash: 0bc9fe2975dc1c72f6dbe551c4ec74d7d51e69af
