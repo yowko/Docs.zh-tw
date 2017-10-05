@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
 ms.openlocfilehash: a560a0307723d32750a7e26ad4ee1afec360a849
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (泛型修飾詞) (C# 參考)
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/11/2017
  在泛型委派中，如果型別只用為方法傳回型別，不用於方法引數，則可以宣告為 Covariant。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [泛型介面中的變異數](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   

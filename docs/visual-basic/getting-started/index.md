@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
 ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
 ms.contentlocale: zh-tw
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
@@ -73,21 +73,22 @@ ms.lasthandoff: 09/02/2017
  提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。  
   
  [範例](../../visual-basic/sample-applications.md)  
- 提供 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中範例程式碼的連結。  
+ 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中範例程式碼的連結。  
   
  [逐步解說](../../visual-basic/walkthroughs.md)  
- 提供示範 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 語言相關方面的 [說明] 頁清單。  
+ 提供示範 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言相關方面的 [說明] 頁清單。  
   
- [告訴我們](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
+ [告訴我們](/visualstudio/ide/talk-to-us)  
  說明如何接受支援和提供意見。  
   
- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
- 提供 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 文件的連結。  
+ [Visual Studio](/visualstudio/)  
+ 提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。  
   
  [C#](../../csharp/index.md) 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
   
- [Visual C++](https://docs.microsoft.com/cpp/)  
+ [Visual C++](/cpp/)  
  提供 Visual C++ 文件的連結。  
   
  [Office 和 SharePoint 開發](https://msdn.microsoft.com/library/d2tx7z6d)  
- 提供有關使用 Microsoft Office 和 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 做為您商務應用程式的資訊。
+ 提供有關使用 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 做為您商務應用程式的資訊。
+

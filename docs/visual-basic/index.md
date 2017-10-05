@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
 ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
@@ -60,7 +60,7 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  包含 Visual Basic 語言和編譯器資訊。  
 
  [使用 Visual Basic 開發應用程式](../visual-basic/developing-apps/index.md)  
- 討論 Visual Basic 中開發的各種層面，例如安全性、例外狀況處理、以及使用 [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] 類別庫。
+ 討論 Visual Basic 中開發的各種層面，例如安全性、例外狀況處理、以及使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫。
 
  [COM Interop](../visual-basic/programming-guide/com-interop/index.md)  
  解釋與利用 Visual Basic 建立和使用元件物件模型 (COM) 物件相關的互通性問題。  

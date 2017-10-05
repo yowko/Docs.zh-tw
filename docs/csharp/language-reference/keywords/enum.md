@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf12724ec9e450a2bc237db614f235d7f03a4a7e
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
@@ -56,7 +56,7 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  在這個列舉中，項目的順序會強制從 `1` 開始，而不是 `0`。 不過，建議加入值為 0 的常數。 如需詳細資訊，請參閱[列舉類型](../../../csharp/programming-guide/enumeration-types.md)。  
   
- 每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](../../../csharp/language-reference/keywords/char.md) 除外。 預設基礎列舉項目類型是 [int](../../../csharp/language-reference/keywords/int.md)。 若要宣告另一個整數類型的列舉，例如 [byte](../../../csharp/language-reference/keywords/byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。  
+ 每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](../../../csharp/language-reference/keywords/char.md) 除外。 預設基礎列舉項目類型是 [int](../../../csharp/language-reference/keywords/int.md)。若要宣告另一個整數類型的列舉，例如 [byte](../../../csharp/language-reference/keywords/byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。  
   
 ```  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
@@ -77,7 +77,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 int x = (int)Days.Sun;  
 ```  
   
- 當您將 <xref:System.FlagsAttribute?displayProperty=fullName> 套用至包含可與位元 `OR` 作業結合之項目的列舉時，這個屬性會影響 `enum` 與某些工具一起使用時的行為。 當您使用如 <xref:System.Console> 類別方法和運算式評估工具等工具時，您可以注意到這些變更。 (請參閱第三個範例。)  
+ 當您將 <xref:System.FlagsAttribute?displayProperty=nameWithType> 套用至包含可與位元 `OR` 作業結合之項目的列舉時，這個屬性會影響 `enum` 與某些工具一起使用時的行為。 當您使用如 <xref:System.Console> 類別方法和運算式評估工具等工具時，您可以注意到這些變更。 (請參閱第三個範例。)  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  如同任何常數，對列舉之個別值的所有參考都會在編譯時期轉換成數值常值。 這有可能產生潛在的版本控制問題，如[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)中所述。  
@@ -97,7 +97,7 @@ int x = (int)Days.Sun;
  [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例說明如何在 <xref:System.FlagsAttribute?displayProperty=fullName> 宣告上使用 `enum` 屬性與其效果。  
+ 下列程式碼範例說明如何在 <xref:System.FlagsAttribute?displayProperty=nameWithType> 宣告上使用 `enum` 屬性與其效果。  
   
  [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
@@ -109,7 +109,7 @@ int x = (int)Days.Sun;
  `5`  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

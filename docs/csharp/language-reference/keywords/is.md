@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 58b18284b12ca0c636ed3fa923c43d94f202597f
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 5aeb29a799ba24b5ab7db3eca62a91035b25b8f6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
@@ -111,7 +111,7 @@ ms.lasthandoff: 07/28/2017
 
 如果 *exp* 為 `true`，而且 `is` 搭配 `if` 陳述式使用，則 *varname* 會被指派，而且只在 `if` 陳述式內具有區域範圍。
 
-下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=fullName> 方法的實作。
+下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法的實作。
 
 [!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
@@ -169,7 +169,7 @@ ms.lasthandoff: 07/28/2017
 
 # <a name="c-language-specification"></a>C# 語言規格
   
-[!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)   

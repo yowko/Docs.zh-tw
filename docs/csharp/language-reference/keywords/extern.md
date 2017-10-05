@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e499ade5ec8a9339b0d425c59809cf7c177466fb
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 796a904ec40dd8cdf59f093a4b89d7a2e1f99005
 ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="extern-c-reference"></a>extern (C# 參考)
@@ -108,10 +108,10 @@ SampleMethod() returns 50.
 ```  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>   
+ <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>   
  [C# 參考](../../../csharp/language-reference/index.md)   
  [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   

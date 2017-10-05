@@ -1,5 +1,5 @@
 ---
-title: "例外狀況和例外處理 (C# 程式設計指南) | Microsoft Docs"
+title: "例外狀況和例外處理 (C# 程式設計手冊)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 561113241f7433d8e0f7f1f1f96f0338ebe81ae3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
@@ -66,7 +66,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
   
 -   即使擲回例外狀況，`finally` 區塊中的程式碼也會執行。 使用 `finally` 區塊來釋放資源，例如，關閉已在 `try` 區塊中開啟的任何資料流或檔案。  
   
--   .NET Framework 中的 Managed 例外狀況是在 Win32 結構化例外狀況處理機制上實作的。 如需詳細資訊，請參閱[結構化例外狀況處理 (C/C++)](https://docs.microsoft.com/cpp/cpp/structured-exception-handling-c-cpp) 和[深入探究 Win32 結構化例外狀況處理的毀損課程 (英文)](http://go.microsoft.com/fwlink/?LinkId=119654)。  
+-   .NET Framework 中的 Managed 例外狀況是在 Win32 結構化例外狀況處理機制上實作的。 如需詳細資訊，請參閱[結構化例外狀況處理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[深入探究 Win32 結構化例外狀況處理的毀損課程 (英文)](http://go.microsoft.com/fwlink/?LinkId=119654)。  
   
 ## <a name="related-sections"></a>相關章節  
  請參閱下列主題，以了解例外狀況和例外狀況處理的詳細資訊：  
@@ -84,7 +84,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 -   [如何：使用 finally 執行清除程式碼](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.SystemException>   
@@ -98,3 +98,4 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
  [例外狀況階層架構](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [撰寫可靠的 .NET 程式碼](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [特定例外狀況的小型傾印](http://go.microsoft.com/fwlink/?LinkId=112408)
+
