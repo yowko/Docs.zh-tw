@@ -1,1 +1,1 @@
-.NET Framework 3.5
+.NET framework 3.5
