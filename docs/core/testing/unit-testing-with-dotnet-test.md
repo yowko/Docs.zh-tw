@@ -50,7 +50,7 @@ namespace Prime.Services
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
-接著，建立 *MrimeService.Testss* 目錄。 下列大綱顯示目錄結構：
+接著，建立 *PrimeService.Tests* 目錄。 下列大綱顯示目錄結構：
 
 ```
 /unit-testing-using-dotnet-test
