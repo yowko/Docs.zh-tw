@@ -90,6 +90,7 @@
       "_displayLangs": [ "csharp" ],
       "author": "dotnet-bot",
       "ms.author": "dotnetcontent",
+      "bilingual_type": "hover over",
       "manager": "wpickett",
       "searchScope": [ ".NET" ],
       "uhfHeaderId": "MSDocsHeader-DotNet",
