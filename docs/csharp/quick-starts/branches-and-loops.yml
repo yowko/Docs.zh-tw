@@ -1,0 +1,214 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: <span data-ttu-id="a5107-101">分支和迴圈</span><span class="sxs-lookup"><span data-stu-id="a5107-101">Branches and loops</span></span>
+metadata:
+  title: <span data-ttu-id="a5107-102">分支和迴圈</span><span class="sxs-lookup"><span data-stu-id="a5107-102">Branches and loops</span></span>
+  description: '<span data-ttu-id="a5107-103">在本教學課程中，您將使用瀏覽器以互動方式學習有關 C# 的分支和迴圈。</span><span class="sxs-lookup"><span data-stu-id="a5107-103">In this tutorial about branches and loops, you''ll use your browser to learn C# interactively.</span></span> <span data-ttu-id="a5107-104">您將要撰寫 C# 程式碼，並直接在瀏覽器中查看程式碼編譯和執行的結果。</span><span class="sxs-lookup"><span data-stu-id="a5107-104">You''re going to write C# code and see the results of compiling and running your code directly in the browser.</span></span>'
+  audience: Developer
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  nextTutorialHref: arrays-and-collections
+  nextTutorialTitle: 'Arrays and colletions in C#'
+items:
+  - durationInMinutes: 1
+    content: |
+      <span data-ttu-id="a5107-105">本教學課程將讓您了解如何撰寫程式碼來檢視變數，並根據這些變數來變更執行路徑。</span><span class="sxs-lookup"><span data-stu-id="a5107-105">This tutorial teaches you about how to write code that examines variables and changes execution path based on those variables.</span></span> <span data-ttu-id="a5107-106">您將以互動方式使用瀏覽器撰寫 C#，並查看編譯和執行程式碼的結果。</span><span class="sxs-lookup"><span data-stu-id="a5107-106">You'll write C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="a5107-107">內容包含一系列探索 C# 中分支和迴圈建構的課程。</span><span class="sxs-lookup"><span data-stu-id="a5107-107">It contains a series of lessons that explore branching and looping constructs in C#.</span></span> <span data-ttu-id="a5107-108">這些課程會教導您 C# 語言的基本概念。</span><span class="sxs-lookup"><span data-stu-id="a5107-108">These lessons teach you the fundamentals of the C# language.</span></span>
+  - title: <span data-ttu-id="a5107-109">使用 if 陳述式來做決策</span><span class="sxs-lookup"><span data-stu-id="a5107-109">Make decisions using the if statement</span></span>
+    durationInMinutes: 4
+    content: |
+      <span data-ttu-id="a5107-110">在互動式視窗中執行下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="a5107-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="a5107-111">若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：</span><span class="sxs-lookup"><span data-stu-id="a5107-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 6;
+      if (a + b > 10)
+          Console.WriteLine("The answer is greater than 10.");
+      ```
+
+      <span data-ttu-id="a5107-112">修改 `b` 的宣告，讓總和小於 10：</span><span class="sxs-lookup"><span data-stu-id="a5107-112">Modify the declaration of `b` so that the sum is less than 10:</span></span> 
+
+      ```csharp
+      int b = 3;
+      ```
+
+      <span data-ttu-id="a5107-113">再按一下 [執行] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="a5107-113">Click the **Run** button again.</span></span> <span data-ttu-id="a5107-114">因為答案小於 10，所以不會印出任何東西。</span><span class="sxs-lookup"><span data-stu-id="a5107-114">Because the answer is less than 10, nothing is printed.</span></span> <span data-ttu-id="a5107-115">您正在測試的**條件**為 False。</span><span class="sxs-lookup"><span data-stu-id="a5107-115">The **condition** you're testing is false.</span></span> <span data-ttu-id="a5107-116">您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。</span><span class="sxs-lookup"><span data-stu-id="a5107-116">You don't have any code to execute because you've only written one of the possible branches for an `if` statement: the true branch.</span></span>
+
+      > [!TIP]
+      > <span data-ttu-id="a5107-117">在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。</span><span class="sxs-lookup"><span data-stu-id="a5107-117">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="a5107-118">**編譯器**會找出那些錯誤並回報給您。</span><span class="sxs-lookup"><span data-stu-id="a5107-118">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="a5107-119">當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。</span><span class="sxs-lookup"><span data-stu-id="a5107-119">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+      > <span data-ttu-id="a5107-120">該練習將有助於您了解 C# 程式碼的結構。</span><span class="sxs-lookup"><span data-stu-id="a5107-120">That exercise will help you learn the structure of C# code.</span></span>     
+
+      <span data-ttu-id="a5107-121">此第一個範例示範 `if` 和布林型別的功能。</span><span class="sxs-lookup"><span data-stu-id="a5107-121">This first sample shows the power of `if` and boolean types.</span></span> <span data-ttu-id="a5107-122">「布林」是一個變數，可能具有兩種值的其中之一：`true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="a5107-122">A *boolean* is a variable that can have one of two values: `true` or `false`.</span></span> <span data-ttu-id="a5107-123">C# 為布林變數定義了一個特殊型別：`bool`。</span><span class="sxs-lookup"><span data-stu-id="a5107-123">C# defines a special type, `bool` for boolean variables.</span></span> <span data-ttu-id="a5107-124">`if` 陳述式會檢查 `bool` 的值。</span><span class="sxs-lookup"><span data-stu-id="a5107-124">The `if` statement checks the value of a `bool`.</span></span> <span data-ttu-id="a5107-125">當值為 `true` 時，就會執行 `if` 之後的陳述式。</span><span class="sxs-lookup"><span data-stu-id="a5107-125">When the value is `true`, the statement following the `if` executes.</span></span> <span data-ttu-id="a5107-126">否則，就會略過。</span><span class="sxs-lookup"><span data-stu-id="a5107-126">Otherwise, it is skipped.</span></span> 
+
+      <span data-ttu-id="a5107-127">這個流程可以檢查條件，並根據條件來執行陳述式，因此非常實用。</span><span class="sxs-lookup"><span data-stu-id="a5107-127">This process of checking conditions and executing statements based on those conditions is very powerful.</span></span> <span data-ttu-id="a5107-128">讓我們來探索更多內容。</span><span class="sxs-lookup"><span data-stu-id="a5107-128">Let's explore more.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="a5107-129">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="a5107-129">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a5107-130">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="a5107-130">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="a5107-131">搭配使用 if 和 else</span><span class="sxs-lookup"><span data-stu-id="a5107-131">Make if and else work together</span></span>
+    durationInMinutes: 10
+    content: |
+
+      <span data-ttu-id="a5107-132">若要在 True 和 False 分支中執行不同的程式碼，則必須建立可在條件為 False 時執行的 `else` 分支。</span><span class="sxs-lookup"><span data-stu-id="a5107-132">To execute different code in both the true and false branches, you create an `else` branch that executes when the condition is false.</span></span> <span data-ttu-id="a5107-133">試試這個：</span><span class="sxs-lookup"><span data-stu-id="a5107-133">Try this:</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      if (a + b > 10)
+          Console.WriteLine("The answer is greater than 10");
+      else
+          Console.WriteLine("The answer is not greater than 10");
+      ```
+
+      <span data-ttu-id="a5107-134">只有當測試的條件為 `false` 時，才會執行 `else` 關鍵字之後的陳述式。</span><span class="sxs-lookup"><span data-stu-id="a5107-134">The statement following the `else` keyword executes only when the condition being tested is `false`.</span></span> <span data-ttu-id="a5107-135">將 `if` 和 `else` 結合布林值條件，就可提供您需要的所有功能。</span><span class="sxs-lookup"><span data-stu-id="a5107-135">Combining `if` and `else` with boolean conditions provides all the power you need.</span></span>
+
+      > [!IMPORTANT]
+      > <span data-ttu-id="a5107-136">`if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。</span><span class="sxs-lookup"><span data-stu-id="a5107-136">The indentation under the `if` and `else` statements is for human readers.</span></span>
+      > <span data-ttu-id="a5107-137">C# 語言不會將縮排或空格視為有意義的內容。</span><span class="sxs-lookup"><span data-stu-id="a5107-137">The C# language doesn't treat indentation or whitespace as significant.</span></span> <span data-ttu-id="a5107-138">`if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。</span><span class="sxs-lookup"><span data-stu-id="a5107-138">The statement following the `if` or `else` keyword will be executed based on the condition.</span></span> <span data-ttu-id="a5107-139">在本教學課程的所有範例中，都會遵循常見的做法，將執行的程式碼行加以縮排。</span><span class="sxs-lookup"><span data-stu-id="a5107-139">All the samples in this tutorial follow a common practice to indent lines based on execution.</span></span>
+
+      <span data-ttu-id="a5107-140">因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。</span><span class="sxs-lookup"><span data-stu-id="a5107-140">Because indentation is not significant, you need to use `{` and `}` to indicate when you want more than one statement to be part of the block that executes conditionally.</span></span> <span data-ttu-id="a5107-141">C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。</span><span class="sxs-lookup"><span data-stu-id="a5107-141">C# programmers typically use those braces on all `if` and `else` clauses.</span></span> <span data-ttu-id="a5107-142">下列範例與您剛剛所建立的內容相同。</span><span class="sxs-lookup"><span data-stu-id="a5107-142">The following example is the same as what you just created.</span></span> <span data-ttu-id="a5107-143">試試看。</span><span class="sxs-lookup"><span data-stu-id="a5107-143">Try it.</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      if (a + b > 10)
+      {
+          Console.WriteLine("The answer is greater than 10");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+      }
+      ```
+
+      > [!TIP]
+      > <span data-ttu-id="a5107-144">本教學課程的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。</span><span class="sxs-lookup"><span data-stu-id="a5107-144">Through the rest of this tutorial, the code samples all include the braces, following accepted practices.</span></span>
+
+      <span data-ttu-id="a5107-145">您可以測試更複雜的條件：</span><span class="sxs-lookup"><span data-stu-id="a5107-145">You can test more complicated conditions:</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      int c = 4;
+      if ((a + b + c > 10) && (a > b))
+      {
+          Console.WriteLine("The answer is greater than 10");
+          Console.WriteLine("And the first number is greater than the second");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+          Console.WriteLine("Or the first number is not greater than the second");
+      }
+      ```
+
+      <span data-ttu-id="a5107-146">`&&` 代表「且」。</span><span class="sxs-lookup"><span data-stu-id="a5107-146">The `&&` represents "and".</span></span> <span data-ttu-id="a5107-147">這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。</span><span class="sxs-lookup"><span data-stu-id="a5107-147">It means both conditions must be true to execute the statement in the true branch.</span></span>  <span data-ttu-id="a5107-148">這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。</span><span class="sxs-lookup"><span data-stu-id="a5107-148">These examples also show that you can have multiple statements in each conditional branch, provided you enclose them in `{` and `}`.</span></span>
+
+      <span data-ttu-id="a5107-149">您也可以使用 `||` 來代表「或」：</span><span class="sxs-lookup"><span data-stu-id="a5107-149">You can also use  `||` to represent "or":</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      int c = 4;
+      if ((a + b + c > 10) || (a > b))
+      {
+          Console.WriteLine("The answer is greater than 10");
+          Console.WriteLine("Or the first number is greater than the second");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+          Console.WriteLine("And the first number is not greater than the second");
+      }
+      ```
+
+      > [!NOTE]
+      > <span data-ttu-id="a5107-150">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="a5107-150">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a5107-151">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="a5107-151">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="a5107-152">使用迴圈重複執行作業</span><span class="sxs-lookup"><span data-stu-id="a5107-152">Use loops to repeat operations</span></span>
+    durationInMinutes: 6
+    content: |
+      <span data-ttu-id="a5107-153">若要建立較大型的程式，另一項重要的概念是**迴圈**。</span><span class="sxs-lookup"><span data-stu-id="a5107-153">Another important concept to create larger programs is **loops**.</span></span> <span data-ttu-id="a5107-154">您將使用迴圈來重複要執行一次以上的陳述式。</span><span class="sxs-lookup"><span data-stu-id="a5107-154">You'll use loops to repeat statements that you want executed more than once.</span></span> <span data-ttu-id="a5107-155">在互動式視窗中嘗試這個程式碼：</span><span class="sxs-lookup"><span data-stu-id="a5107-155">Try this code in the interactive window:</span></span>
+
+      ```csharp
+      int counter = 0;
+      while (counter < 10)
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+        counter++;
+      }
+      ```
+
+      <span data-ttu-id="a5107-156">`while` 陳述式會檢查條件，並執行 `while` 之後的陳述式。</span><span class="sxs-lookup"><span data-stu-id="a5107-156">The `while` statement checks a condition and executes the statement following the `while`.</span></span> <span data-ttu-id="a5107-157">它會重複檢查條件並執行那些陳述式，直到條件為 False 為止。</span><span class="sxs-lookup"><span data-stu-id="a5107-157">It will repeat checking the condition and executing those statements until the condition is false.</span></span>
+
+      <span data-ttu-id="a5107-158">在此範例中有一個新的運算子。</span><span class="sxs-lookup"><span data-stu-id="a5107-158">There's one other new operator in this example.</span></span> <span data-ttu-id="a5107-159">`counter` 變數之後的 `++` 是**遞增**運算子。</span><span class="sxs-lookup"><span data-stu-id="a5107-159">The `++` after the `counter` variable is the **increment** operator.</span></span> <span data-ttu-id="a5107-160">它會將 1 加到 counter (計數器) 上，並將該值儲存在 counter 變數中。</span><span class="sxs-lookup"><span data-stu-id="a5107-160">It adds 1 to the value of counter, and stores that value in the counter variable.</span></span>
+
+      > [!IMPORTANT]
+      > <span data-ttu-id="a5107-161">請確定 `while` 迴圈條件在您執行程式碼時會切換至 False。</span><span class="sxs-lookup"><span data-stu-id="a5107-161">Make sure that the `while` loop condition does switch to false as you execute the code.</span></span> <span data-ttu-id="a5107-162">否則，您建立的**無限迴圈**程式永遠不會結束。</span><span class="sxs-lookup"><span data-stu-id="a5107-162">Otherwise, you create an **infinite loop** where your program never ends.</span></span> <span data-ttu-id="a5107-163">我們不會示範這個部分，因為執行程式碼的引擎將會逾時，而您不會看到程式有任何輸出。</span><span class="sxs-lookup"><span data-stu-id="a5107-163">Let's not demonstrate that, because the engine that runs your code will time out and you'll see no output from your program.</span></span>
+
+      <span data-ttu-id="a5107-164">`while` 迴圈會先測試條件，然後才執行 `while` 之後的程式碼。</span><span class="sxs-lookup"><span data-stu-id="a5107-164">The `while` loop tests the condition before executing the code following the `while`.</span></span> <span data-ttu-id="a5107-165">`do` ... `while` 迴圈會先執行程式碼，然後才檢查條件。</span><span class="sxs-lookup"><span data-stu-id="a5107-165">The `do` ... `while` loop executes the code first, and then checks the condition.</span></span> <span data-ttu-id="a5107-166">程式碼看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="a5107-166">It looks like this:</span></span>
+
+      ```csharp
+      int counter = 0;
+      do
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+        counter++;
+      } while (counter < 10);
+      ```
+
+      <span data-ttu-id="a5107-167">此 `do` 迴圈和稍早的 `while` 迴圈有相同的功能。</span><span class="sxs-lookup"><span data-stu-id="a5107-167">This `do` loop and the earlier `while` loop work the same.</span></span> 
+
+      <span data-ttu-id="a5107-168">讓我們繼續至最後一個迴圈陳述式。</span><span class="sxs-lookup"><span data-stu-id="a5107-168">Let's move on to one last loop statement.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="a5107-169">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="a5107-169">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a5107-170">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="a5107-170">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="a5107-171">使用 for 迴圈</span><span class="sxs-lookup"><span data-stu-id="a5107-171">Work with the for loop</span></span>
+    durationInMinutes: 5
+    content: |
+      <span data-ttu-id="a5107-172">您在 C# 程式碼中常看到的另一個迴圈陳述式是 `for` 迴圈。</span><span class="sxs-lookup"><span data-stu-id="a5107-172">Another common loop statement that you'll see in C# code is the `for` loop.</span></span> <span data-ttu-id="a5107-173">在互動式視窗中嘗試這個程式碼：</span><span class="sxs-lookup"><span data-stu-id="a5107-173">Try this code in the interactive window:</span></span>
+
+      ```csharp
+      for(int counter = 0; counter < 10; counter++)
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+      } 
+      ```
+
+      <span data-ttu-id="a5107-174">這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。</span><span class="sxs-lookup"><span data-stu-id="a5107-174">This does the same work as the `while` loop and the `do` loop you've already used.</span></span> <span data-ttu-id="a5107-175">`for` 陳述式有三個部分來控制其運作方式。</span><span class="sxs-lookup"><span data-stu-id="a5107-175">The `for` statement has three parts that control how it works.</span></span> 
+
+      <span data-ttu-id="a5107-176">第一個部分是 **for 初始設定式**：`for counter = 0;` 宣告 `counter` 是迴圈變數，然後將它的初始值設為 `0`。</span><span class="sxs-lookup"><span data-stu-id="a5107-176">The first part is the **for initializer**: `for counter = 0;` declares that `counter` is the loop variable, and sets its initial value to `0`.</span></span>
+
+      <span data-ttu-id="a5107-177">中間的部分是 **for 條件**：`counter < 10` 宣告此 `for` 迴圈只要 counter (計數器) 的值小於 10，就會繼續執行。</span><span class="sxs-lookup"><span data-stu-id="a5107-177">The middle part is the **for condition**: `counter < 10` declares that this `for` loop continues to execute as long as the value of counter is less than 10.</span></span>
+
+      <span data-ttu-id="a5107-178">最後一個部分是 **for 迭代器**：`counter++` 會指定在執行 `for` 陳述式之後的區塊後，如何修改迴圈變數。</span><span class="sxs-lookup"><span data-stu-id="a5107-178">The final part is the **for iterator**: `counter++` specifies how to modify the loop variable after executing the block following the `for` statement.</span></span> <span data-ttu-id="a5107-179">在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。</span><span class="sxs-lookup"><span data-stu-id="a5107-179">Here, it specifies that `counter` should be incremented by 1 each time the block executes.</span></span>
+
+      <span data-ttu-id="a5107-180">您可以自行實驗這些部分。</span><span class="sxs-lookup"><span data-stu-id="a5107-180">Experiment with these yourself.</span></span> <span data-ttu-id="a5107-181">請嘗試下列各項：</span><span class="sxs-lookup"><span data-stu-id="a5107-181">Try each of the following:</span></span>
+
+      - <span data-ttu-id="a5107-182">變更初始設定式，以不同的值開始。</span><span class="sxs-lookup"><span data-stu-id="a5107-182">Change the initializer to start at a different value.</span></span>
+      - <span data-ttu-id="a5107-183">變更條件，以不同的值停止。</span><span class="sxs-lookup"><span data-stu-id="a5107-183">Change the condition to stop at a different value.</span></span>
+
+      <span data-ttu-id="a5107-184">當您完成後，我們會繼續使用您學到的內容來撰寫一些程式碼。</span><span class="sxs-lookup"><span data-stu-id="a5107-184">When you're done, let's move on to write some code yourself to use what you've learned.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="a5107-185">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="a5107-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a5107-186">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="a5107-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="a5107-187">結合分支和迴圈</span><span class="sxs-lookup"><span data-stu-id="a5107-187">Combining branches and loops</span></span>
+    durationInMinutes: 12
+    content: |
+      <span data-ttu-id="a5107-188">您已經了解 C# 語言中的 `if` 陳述式和迴圈建構，接著看看您是否能夠撰寫 C# 程式碼，以找出從整數 1 至 20 能夠被 3 整除之數字的總和。</span><span class="sxs-lookup"><span data-stu-id="a5107-188">Now that you've seen the `if` statement and the looping constructs in the C# language, see if you can write C# code to find the sum of all integers 1 through 20 that are divisible by 3.</span></span>  <span data-ttu-id="a5107-189">下列提供幾個提示：</span><span class="sxs-lookup"><span data-stu-id="a5107-189">Here are a few hints:</span></span>
+
+      - <span data-ttu-id="a5107-190">`%` 運算子可提供除法運算的餘數。</span><span class="sxs-lookup"><span data-stu-id="a5107-190">The `%` operator gives you the remainder of a division operation.</span></span>
+      - <span data-ttu-id="a5107-191">`if` 運算式可提供條件，以判斷數字是否應為總和的一部分。</span><span class="sxs-lookup"><span data-stu-id="a5107-191">The `if` statement givesx you the condition to see if a number should be part of the sum.</span></span>
+      - <span data-ttu-id="a5107-192">`for` 迴圈可協助您將 1 到 20 的所有數字重複一系列的步驟。</span><span class="sxs-lookup"><span data-stu-id="a5107-192">The `for` loop can help you repeat a series of steps for all the numbers 1 through 20.</span></span>
+
+      <span data-ttu-id="a5107-193">請自己試試看。</span><span class="sxs-lookup"><span data-stu-id="a5107-193">Try it yourself.</span></span> <span data-ttu-id="a5107-194">然後檢查成果。</span><span class="sxs-lookup"><span data-stu-id="a5107-194">Then check how you did.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="a5107-195">此線上程式碼撰寫體驗仍處於預覽模式。</span><span class="sxs-lookup"><span data-stu-id="a5107-195">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a5107-196">如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。</span><span class="sxs-lookup"><span data-stu-id="a5107-196">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="a5107-197">完成挑戰</span><span class="sxs-lookup"><span data-stu-id="a5107-197">Complete challenge</span></span>
+    durationInMinutes: 1
+    content: |
+      <span data-ttu-id="a5107-198">您已經完成＜分支和迴圈＞教學課程。</span><span class="sxs-lookup"><span data-stu-id="a5107-198">You've completed the "branches and loops" tutorial.</span></span> <span data-ttu-id="a5107-199">您可以在下列主題中深入了解這些概念：</span><span class="sxs-lookup"><span data-stu-id="a5107-199">You can learn more about these concepts in these topics:</span></span>
+
+      <span data-ttu-id="a5107-200">[If 和 else 陳述式](../language-reference/keywords/if-else.md) </span><span class="sxs-lookup"><span data-stu-id="a5107-200">[If and else statement](../language-reference/keywords/if-else.md) </span></span>  
+      <span data-ttu-id="a5107-201">[While 陳述式](../language-reference/keywords/while.md) </span><span class="sxs-lookup"><span data-stu-id="a5107-201">[While statement](../language-reference/keywords/while.md) </span></span>  
+      <span data-ttu-id="a5107-202">[Do 陳述式](../language-reference/keywords/do.md) </span><span class="sxs-lookup"><span data-stu-id="a5107-202">[Do statement](../language-reference/keywords/do.md) </span></span>  
+      [<span data-ttu-id="a5107-203">For 陳述式</span><span class="sxs-lookup"><span data-stu-id="a5107-203">For statement</span></span>](../language-reference/keywords/for.md)

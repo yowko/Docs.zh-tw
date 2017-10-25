@@ -1,0 +1,6 @@
+# [快速入門](index.md)
+## [Hello world](hello-world.yml)
+## [C# 中的數字](numbers-in-csharp.yml)
+## [分支和迴圈](branches-and-loops.yml)
+## [List 集合](list-collection.yml)
+## [類別簡介](introduction-to-classes.md)
