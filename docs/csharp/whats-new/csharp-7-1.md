@@ -14,15 +14,13 @@ C# 7.1 自 Visual Studio 2017 版本 15.3 起與 .NET Core SDK 2.0 開始支援�
 若要啟用 C# 7.1 功能，您必需確認您的專案編輯語言版本設定值。
 
 
-在 Visual Studio ，設定 C# 7.1 功能啟用的方法為專案總管中欲於設定功能啟用的專案右鍵選單選擇專案屬性
-(**Properties**) ，選擇建置頁籤 (**Build**) 後，按下進階 (**Advanced**) 按紐，將看見下面對話視窗：
+在 Visual Studio ，設定 C# 7.1 功能啟用的方法為專案總管中欲於設定功能啟用的專案右鍵選單選擇「專案屬性」
+(**Properties**) ，選擇「建置」頁籤 (**Build**) 後，按下「進階」按紐 (**Advanced**) ，將看見下面對話視窗：
 
 
-![Setting the language version](./media/csharp-7-1/advanced-build-settings.png)
 
-
-在此對話視窗中選擇語言版本 (**Build**) 選項下拉選單值為 C# 最新主要版本 (**C# latest minor version (latest)**) 
-或為 C# 7.1 (**C# 7.1**)，按下確定按紐後， Visual Studio 將會為您選取的專案 csproj 設定檔中寫入以下設定：
+在此對話視窗中選擇「語言版本 (**Build**) 選項下拉選單值為「 C# 最新主要版本」 (**C# latest minor version (latest)**) 
+或為 「 C# 7.1 」(**C# 7.1**)，按下確定按紐後， Visual Studio 將會為您選取的專案 csproj 設定檔中寫入以下設定：
 
 
 ```xml
@@ -31,8 +29,9 @@ C# 7.1 自 Visual Studio 2017 版本 15.3 起與 .NET Core SDK 2.0 開始支援�
 </PropertyGroup>
 ```
 
-選單值 C# 最新主要版本與 C# 7.1 差異在於選擇 C# 最新主要版本設定時將會使用您當前機器上的最新版本，而選擇
- C# 7.1 則為明確指定使用 C# 7.1 而非使用當前機器現有更新版本。
+
+選單值「 C# 最新主要版本」與「 C# 7.1 」差異在於選擇 C# 最新主要版本設定時將會使用您當前機器上的最新版本，而選擇
+ 「C# 7.1」 則為明確指定使用 C# 7.1 而非使用當前機器現有更新版本。
 
 > [!註記]
 > 如果使用 Visual Studio IDE 介面更新 csproj 設定檔， IDE 介面將會為您所選取專案進行個別設定更新，並產
