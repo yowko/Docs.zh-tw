@@ -2,25 +2,24 @@
 
 在 C# 7.1 ，提供以下功能：
 
-* [`async` 非同步方法 ( `async` `Main` method )](#async-main)
+* [非同步Main函數 ( Async Main method )](#非同步Main函數)
   - The entry point for an application can have the `async` modifier.
-* [`default` 字元正則表達式 ( `default` literal expressions )](#default-literal-expressions)
+* [Default運算值表達式 ( Default literal expressions )](#Default運算值表達式)
   - You can use default literal expressions in default value expressions when the target type can be inferred.
-* [推導 Tuple 型別節點 ( Inferred tuple element names )](#inferred-tuple-element-names)
+* [Tuple型別推導 ( Inferred tuple element names )](#Tuple型別推導)
   - The names of tuple elements can be inferred from tuple initialization in many cases.
 
 ## 深入瞭解新版本
-C# 7.1 自 Visual Studio 2017 版本 15.3 起與 .NET Core SDK 2.0 開始支援，預設 C# 7.1 功能為關閉，
+C# 7.1 自 Visual Studio 2017 15.3 版本起與 .NET Core SDK 2.0 版本起開始支援，預設值 C# 7.1 功能為關閉，
 若要啟用 C# 7.1 功能，您必需確認您的專案編輯語言版本設定值。
 
 
-在 Visual Studio ，設定 C# 7.1 功能啟用的方法為專案總管中欲於設定功能啟用的專案右鍵選單選擇「專案屬性」
+在 Visual Studio ，設定 C# 7.1 功能啟用的方法為專案總管中欲於設定功能啟用的專案上右鍵選單選擇「專案屬性」
 (**Properties**) ，選擇「建置」頁籤 (**Build**) 後，按下「進階」按紐 (**Advanced**) ，將看見下面對話視窗：
 
 
-
 在此對話視窗中選擇「語言版本 (**Build**) 選項下拉選單值為「 C# 最新主要版本」 (**C# latest minor version (latest)**) 
-或為 「 C# 7.1 」(**C# 7.1**)，按下確定按紐後， Visual Studio 將會為您選取的專案 csproj 設定檔中寫入以下設定：
+或為 「 C# 7.1 」(**C# 7.1**)，按下確定按紐後， Visual Studio 將會為您選取的專案 csproj 設定檔中寫入以下啟用設定：
 
 
 ```xml
@@ -33,7 +32,7 @@ C# 7.1 自 Visual Studio 2017 版本 15.3 起與 .NET Core SDK 2.0 開始支援�
 選單值「 C# 最新主要版本」與「 C# 7.1 」差異在於選擇 C# 最新主要版本設定時將會使用您當前機器上的最新版本，而選擇
  「C# 7.1」 則為明確指定使用 C# 7.1 而非使用當前機器現有更新版本。
 
-> [!註記]
+> [!NOTE]
 > 如果使用 Visual Studio IDE 介面更新 csproj 設定檔， IDE 介面將會為您所選取專案進行個別設定更新，並產
 > 生單一的設定值。然而若有為個別開發環境設定環境變數，或者在當前定選擇所有設定更新時，您將會看到以下設定方式
 
@@ -64,7 +63,7 @@ LangVersion 提供了以下有效數值設定選項：
 您可以使用最新版本 SDK 與其相關工具進行細部個別設定。
 
 
-## Async 非同步方法 (Async main)
+## 非同步Main函數
 
 An *async main* method enables you to use `await` in your `Main` method.
 Previously you would need to write:
@@ -101,7 +100,7 @@ You can read more about the details in the
 [async main](../programming-guide/main-and-command-args/index.md) topic
 in the programming guide.
 
-## Default 字元正則表達式 (Default literal expressions)
+## Default運算值表達式
 
 Default literal expressions are an enhancement to default value expressions.
 These expressions initialize a variable to the default value. Where you previously
@@ -122,7 +121,7 @@ on [default value expressions](../programming-guide/statements-expressions-opera
 
 This enhancement also changes some of the parsing rules for the [default keyword](../language-reference/keywords/default.md).
 
-## 推導 Tuple 型別節點 (Inferred tuple element names)
+## Tuple型別推導
 
 This feature is a small enhancement to the tuples feature introduced in
 C# 7.0. Many times when you initialize a tuple, the variables used for the
