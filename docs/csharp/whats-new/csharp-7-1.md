@@ -10,23 +10,20 @@
   - The names of tuple elements can be inferred from tuple initialization in many cases.
 
 ## 深入瞭解新版本
+C# 7.1 自 Visual Studio 2017 版本 15.3 起與 .NET Core SDK 2.0 開始支援，預設 C# 7.1 功能為關閉，
+若要啟用 C# 7.1 功能，您必需確認您的專案編輯語言版本設定值。
 
-The C# compiler supports C# 7.1 starting with Visual Studio 2017 version 15.3, or
-the .NET Core SDK 2.0. However, the 7.1 features are turned
-off by default. To enable the 7.1 features, you need to change the language
-version setting for your project.
 
-In Visual Studio, right-click on the project node in Solution Explorer and select
-**Properties**. Select the **Build** tab and select the **Advanced** button. In the dropdown,
-select **C# latest minor version (latest)**, or the specific version **C# 7.1**
-as shown in the image following. The `latest` value means you want to use the latest
-minor version on the current machine. The `C# 7.1` means that you want to use C# 7.1,
-even after newer minor versions are released.
+在 Visual Studio ，設定 C# 7.1 功能啟用的方法為專案總管中欲於設定功能啟用的專案右鍵選單選擇專案屬性
+(**Properties**) ，選擇建置頁籤 (**Build**) 後，按下進階 (**Advanced**) 按紐，將看見下面對話視窗：
+
 
 ![Setting the language version](./media/csharp-7-1/advanced-build-settings.png)
 
-Alternatively, you can edit the "csproj" file and add or modify the
-following lines:
+
+在此對話視窗中選擇語言版本 (**Build**) 選項下拉選單值為 C# 最新主要版本 (**C# latest minor version (latest)**) 
+或為 C# 7.1 (**C# 7.1**)，按下確定按紐後， Visual Studio 將會為您選取的專案 csproj 設定檔中寫入以下設定：
+
 
 ```xml
 <PropertyGroup>
@@ -34,12 +31,12 @@ following lines:
 </PropertyGroup>
 ```
 
-> [!NOTE]
-> If you use the Visual Studio IDE to update your csproj files, the IDE
-> creates separate nodes for each build configuration. You'll typically
-> set the value the same in all build configurations, but you need to
-> set it explicitly for each build configuration, or select "All Configurations"
-> when you modify this setting. You'll see the following in your csproj file:
+選單值 C# 最新主要版本與 C# 7.1 差異在於選擇 C# 最新主要版本設定時將會使用您當前機器上的最新版本，而選擇
+ C# 7.1 則為明確指定使用 C# 7.1 而非使用當前機器現有更新版本。
+
+> [!註記]
+> 如果使用 Visual Studio IDE 介面更新 csproj 設定檔， IDE 介面將會為您所選取專案進行個別設定更新，並產
+> 生單一的設定值。然而若有為個別開發環境設定環境變數，或者在當前定選擇所有設定更新時，您將會看到以下設定方式
 
 ```xml
 <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -51,7 +48,7 @@ following lines:
 </PropertyGroup>
 ```
 
-Valid settings for the `LangVersion` element are:
+LangVersion 提供了以下有效數值設定選項：
 
 * `ISO-1`
 * `ISO-2`
@@ -64,14 +61,9 @@ Valid settings for the `LangVersion` element are:
 * `default`
 * `latest`
 
-The special strings `default` and `latest` resolve to the latest major
-and minor language versions installed on the build machine, respectively.
+文字字串 `default` 與 `latest` 分別提供使用當前機器所使用的最新版本與次要最新版本。
+您可以使用最新版本 SDK 與其相關工具進行細部個別設定。
 
-This setting decouples installing new versions of the SDK and tools
-in your development environment from choosing to incorporate new language
-features in a project. You can install the latest SDK and tools on your
-build machine. Each project can be configured to use a specific version
-of the language for its build.
 
 ## Async 非同步方法 (Async main)
 
