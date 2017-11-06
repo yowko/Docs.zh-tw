@@ -2,7 +2,7 @@
 
 在 C# 7.1 ，提供以下功能：
 
-* [非同步Main函數 ( Async Main method )](#非同步Main函數)
+* [非同步Main方法 ( Async Main method )](#非同步Main方法)
   - The entry point for an application can have the `async` modifier.
 * [Default運算值表達式 ( Default literal expressions )](#Default運算值表達式)
   - You can use default literal expressions in default value expressions when the target type can be inferred.
@@ -18,7 +18,7 @@ C# 7.1 自 Visual Studio 2017 15.3 版本起與 .NET Core SDK 2.0 版本起開�
 (**Properties**) ，選擇「建置」頁籤 (**Build**) 後，按下「進階」按紐 (**Advanced**) ，將看見下面對話視窗：
 
 
-在此對話視窗中選擇「語言版本 (**Build**) 選項下拉選單值為「 C# 最新主要版本」 (**C# latest minor version (latest)**) 
+在此對話視窗中選擇「語言版本」 (**Build**) 選項下拉選單值為「 C# 最新主要版本」 (**C# latest minor version (latest)**) 
 或為 「 C# 7.1 」(**C# 7.1**)，按下確定按紐後， Visual Studio 將會為您選取的專案 csproj 設定檔中寫入以下啟用設定：
 
 
@@ -63,10 +63,10 @@ LangVersion 提供了以下有效數值設定選項：
 您可以使用最新版本 SDK 與其相關工具進行細部個別設定。
 
 
-## 非同步Main函數
+## 非同步Main方法
 
-An *async main* method enables you to use `await` in your `Main` method.
-Previously you would need to write:
+本方法提供 `Main` 方法 (**Main method**) 中使用 `await` 運算子 (**Await operator**) 。在過去您必須這樣寫：
+
 
 ```csharp
 static int Main()
@@ -75,7 +75,7 @@ static int Main()
 }
 ```
 
-You can now write:
+現在您可以這樣寫：
 
 ```csharp
 static async Task<int> Main()
@@ -86,8 +86,9 @@ static async Task<int> Main()
 }
 ```
 
-If your program doesn't return an exit code, you can declare a `Main` method
-that returns a <xref:System.Threading.Tasks.Task>:
+如果您的程式並不需要擲出執行完成狀態 (**An exit code**) ，你可以定義 Main 方法使其擲出
+<xref:System.Threading.Tasks.Task>：
+
 
 ```csharp
 static async Task Main()
@@ -95,10 +96,8 @@ static async Task Main()
     await SomeAsyncMethod();
 }
 ```
-
-You can read more about the details in the
-[async main](../programming-guide/main-and-command-args/index.md) topic
-in the programming guide.
+你可以在程式編輯指南中的 [async main](../programming-guide/main-and-command-args/index.md) 
+章節閱讀細節。
 
 ## Default運算值表達式
 
