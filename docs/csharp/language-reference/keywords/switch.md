@@ -1,88 +1,69 @@
 ---
 title: "switch 關鍵字 (C# 參考)"
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
 - switch
 - case
 - case_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - switch statement [C#]
 - switch keyword [C#]
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
-ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/02/2017
 ---
-# <a name="switch-c-reference"></a>switch (C# 參考)
-`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。 
+# <a name="switch-c-reference"></a><span data-ttu-id="884fc-102">switch (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="884fc-102">switch (C# Reference)</span></span>
+<span data-ttu-id="884fc-103">`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。</span><span class="sxs-lookup"><span data-stu-id="884fc-103">`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.</span></span> 
   
  [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
-如果針對三個或多個條件測試單一運算式，則通常會使用 `switch` 陳述式來替代 [if-else](if-else.md) 建構。 例如，下列 `switch` 陳述式判斷 `Color` 類型的變數是否有三個值之一︰ 
+<span data-ttu-id="884fc-104">如果針對三個或多個條件測試單一運算式，則通常會使用 `switch` 陳述式來替代 [if-else](if-else.md) 建構。</span><span class="sxs-lookup"><span data-stu-id="884fc-104">The `switch` statement is often used as an alternative to an [if-else](if-else.md) construct if a single expression is tested against three or more conditions.</span></span> <span data-ttu-id="884fc-105">例如，下列 `switch` 陳述式判斷 `Color` 類型的變數是否有三個值之一︰</span><span class="sxs-lookup"><span data-stu-id="884fc-105">For example, the following `switch` statement determines whether a variable of type `Color` has one of three values:</span></span> 
 
 [!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
 
-它等同於下列使用 `if`-`else` 建構的範例。 
+<span data-ttu-id="884fc-106">它等同於下列使用 `if`-`else` 建構的範例。</span><span class="sxs-lookup"><span data-stu-id="884fc-106">It is equivalent to the following example that uses an `if`-`else` construct.</span></span> 
 
 [!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
 
-## <a name="the-match-expression"></a>比對運算式
+## <a name="the-match-expression"></a><span data-ttu-id="884fc-107">比對運算式</span><span class="sxs-lookup"><span data-stu-id="884fc-107">The match expression</span></span>
 
-比對運算式提供要與 `case` 標籤中的模式進行比對的值。 它的語法為：
+<span data-ttu-id="884fc-108">比對運算式提供要與 `case` 標籤中的模式進行比對的值。</span><span class="sxs-lookup"><span data-stu-id="884fc-108">The match expression provides the value to match against the patterns in `case` labels.</span></span> <span data-ttu-id="884fc-109">它的語法為：</span><span class="sxs-lookup"><span data-stu-id="884fc-109">Its syntax is:</span></span>
 
 ```csharp
    switch (expr)
 ```
 
-在 C# 6 中，比對運算式必須是傳回下列類型之值的運算式︰
+<span data-ttu-id="884fc-110">在 C# 6 中，比對運算式必須是傳回下列類型之值的運算式︰</span><span class="sxs-lookup"><span data-stu-id="884fc-110">In C# 6, the match expression must be an expression that returns a value of the following types:</span></span>
 
-- [char](char.md)。
-- [string](string.md)。
-- [bool](bool.md)。 
-- 整數值，例如 [int](int.md) 或 [long](long.md)。
-- [enum](enum.md) 值。
+- <span data-ttu-id="884fc-111">[char](char.md)。</span><span class="sxs-lookup"><span data-stu-id="884fc-111">a [char](char.md).</span></span>
+- <span data-ttu-id="884fc-112">[string](string.md)。</span><span class="sxs-lookup"><span data-stu-id="884fc-112">a [string](string.md).</span></span>
+- <span data-ttu-id="884fc-113">[bool](bool.md)。</span><span class="sxs-lookup"><span data-stu-id="884fc-113">a [bool](bool.md).</span></span> 
+- <span data-ttu-id="884fc-114">整數值，例如 [int](int.md) 或 [long](long.md)。</span><span class="sxs-lookup"><span data-stu-id="884fc-114">an integral value, such as an [int](int.md) or a [long](long.md).</span></span>
+- <span data-ttu-id="884fc-115">[enum](enum.md) 值。</span><span class="sxs-lookup"><span data-stu-id="884fc-115">an [enum](enum.md) value.</span></span>
 
-從 C# 7 開始，比對運算式可以是任何非 Null 運算式。
+<span data-ttu-id="884fc-116">從 C# 7 開始，比對運算式可以是任何非 Null 運算式。</span><span class="sxs-lookup"><span data-stu-id="884fc-116">Starting with C# 7, the match expression can be any non-null expression.</span></span>
  
-## <a name="the-switch-section"></a>參數區段
+## <a name="the-switch-section"></a><span data-ttu-id="884fc-117">參數區段</span><span class="sxs-lookup"><span data-stu-id="884fc-117">The switch section</span></span>
  
- `switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」，後面接著一或多個陳述式。 下列範例將示範擁有三個參數區段的簡單 `switch` 陳述式。 每個參數區段擁有一個 case 標籤，例如 `case 1:`，以及兩個陳述式。
+ <span data-ttu-id="884fc-118">`switch` 陳述式包含一個或多個參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-118">A `switch` statement includes one or more switch sections.</span></span> <span data-ttu-id="884fc-119">每個參數區段都包含一或多個「case 標籤」，後面接著一或多個陳述式。</span><span class="sxs-lookup"><span data-stu-id="884fc-119">Each switch section contains one or more *case labels* followed by one or more statements.</span></span> <span data-ttu-id="884fc-120">下列範例將示範擁有三個參數區段的簡單 `switch` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="884fc-120">The following example shows a simple `switch` statement that has three switch sections.</span></span> <span data-ttu-id="884fc-121">每個參數區段擁有一個 case 標籤，例如 `case 1:`，以及兩個陳述式。</span><span class="sxs-lookup"><span data-stu-id="884fc-121">Each switch section has one case label, such as `case 1:`, and two statements.</span></span>
  
-  `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。  
+  <span data-ttu-id="884fc-122">`switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="884fc-122">A `switch` statement can include any number of switch sections, and each section can have one or more case labels, as shown in the following example.</span></span> <span data-ttu-id="884fc-123">不過，不可以有兩個 case 標籤包含相同的運算式。</span><span class="sxs-lookup"><span data-stu-id="884fc-123">However, no two case labels may contain the same expression.</span></span>  
 
  [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
 
- switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「程式控制權無法從一個 case 標籤 (<case label>) 繼續到另一個」。   
+ <span data-ttu-id="884fc-124">switch 陳述式中只會執行一個參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-124">Only one switch section in a switch statement executes.</span></span> <span data-ttu-id="884fc-125">C# 不允許從某個參數區段繼續執行至另一個參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-125">C# does not allow execution to continue from one switch section to the next.</span></span> <span data-ttu-id="884fc-126">因此，下列程式碼會產生編譯器錯誤 CS0163：「程式控制權無法從一個 case 標籤 (<case label>) 繼續到另一個」。</span><span class="sxs-lookup"><span data-stu-id="884fc-126">Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (<case label>) to another."</span></span>   
 
 ```csharp  
 switch (caseSwitch)  
@@ -96,304 +77,128 @@ switch (caseSwitch)
         break;  
 }  
 ```  
-使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合這項需求。 不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。
+<span data-ttu-id="884fc-127">使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合這項需求。</span><span class="sxs-lookup"><span data-stu-id="884fc-127">This requirement is usually met by explicitly exiting the switch section by using a [break](break.md), [goto](goto.md), or [return](return.md) statement.</span></span> <span data-ttu-id="884fc-128">不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-128">However, the following code is also valid, because it ensures that program control cannot fall through to the `default` switch section.</span></span>
   
  [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
- 在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
+ <span data-ttu-id="884fc-129">在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。</span><span class="sxs-lookup"><span data-stu-id="884fc-129">Execution of the statement list in the switch section with a case label that matches the match expression begins with the first statement and proceeds through the statement list, typically until a jump statement, such as a `break`, `goto case`, `goto label`, `return`, or `throw`, is reached.</span></span> <span data-ttu-id="884fc-130">到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。</span><span class="sxs-lookup"><span data-stu-id="884fc-130">At that point, control is transferred outside the `switch` statement or to another case label.</span></span> <span data-ttu-id="884fc-131">如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。</span><span class="sxs-lookup"><span data-stu-id="884fc-131">A `goto` statement, if it is used, must transfer control to a constant label.</span></span> <span data-ttu-id="884fc-132">這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。</span><span class="sxs-lookup"><span data-stu-id="884fc-132">This restriction is necessary, since attempting to transfer control to a non-constant label can have undesirable side-effects, such transferring control to an unintended location in code or creating an endless loop.</span></span>
 
-## <a name="case-labels"></a>case 標籤
+## <a name="case-labels"></a><span data-ttu-id="884fc-133">case 標籤</span><span class="sxs-lookup"><span data-stu-id="884fc-133">Case labels</span></span>
 
- 每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」相符 case 標籤的參數區段。 如果沒有任何 case 標籤模式符合比對運算式，則控制權會轉移到具有 `default` case 標籤 (如果有的話) 的區段。 如果沒有 `default` case，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
+ <span data-ttu-id="884fc-134">每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。</span><span class="sxs-lookup"><span data-stu-id="884fc-134">Each case label specifies a pattern to compare to the match expression (the `caseSwitch` variable in the previous examples).</span></span> <span data-ttu-id="884fc-135">如果相符，控制權會轉移至 **「第一個」**相符 case 標籤的參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-135">If they match, control is transferred to the switch section that contains the **first** matching case label.</span></span> <span data-ttu-id="884fc-136">若無任何 case 標籤模式符合比對運算式，會將控制權轉移到具有 `default` case 標籤的區段 (如有此標籤)。</span><span class="sxs-lookup"><span data-stu-id="884fc-136">If no case label pattern matches the match expression, control is transferred to the section with the `default` case label, if there is one.</span></span> <span data-ttu-id="884fc-137">如果沒有 `default` case，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。</span><span class="sxs-lookup"><span data-stu-id="884fc-137">If there is no `default` case, no statements in any switch section are executed, and control is transferred outside the `switch` statement.</span></span>
 
- 如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
+ <span data-ttu-id="884fc-138">如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。</span><span class="sxs-lookup"><span data-stu-id="884fc-138">For information on the `switch` statement and pattern matching, see the [Pattern matching with the `switch` statement](#pattern) section.</span></span>
 
- 因為 C# 6 只支援常數模式，且不允許重複常數值，所以 case 標籤定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
+ <span data-ttu-id="884fc-139">因為 C# 6 只支援常數模式，且不允許重複常數值，所以 case 標籤定義互斥值，而且只有一個模式可以符合比對運算式。</span><span class="sxs-lookup"><span data-stu-id="884fc-139">Because C# 6 supports only the constant pattern and does not allow the repetition of constant values, case labels define mutually exclusive values, and only one pattern can match the match expression.</span></span> <span data-ttu-id="884fc-140">因此，`case` 陳述式的出現順序並不重要。</span><span class="sxs-lookup"><span data-stu-id="884fc-140">As a result, the order in which `case` statements appear is unimportant.</span></span>
 
- 不過，在 C# 7 中，因為支援其他模式，所以 case 標籤不需要定義互斥值，而且可以有多個模式符合比對運算式。 因為只會執行包含第一個相符模式的參數區段中的陳述式，所以 `case` 陳述式的出現順序現在十分重要。 如果 C# 偵測到一或多個 case 陳述式等於或為先前陳述式子集的參數區段，則會產生編譯器錯誤 CS8120：「先前的案例已處理切換案例。」 
+ <span data-ttu-id="884fc-141">不過，在 C# 7 中，因為支援其他模式，所以 case 標籤不需要定義互斥值，而且可以有多個模式符合比對運算式。</span><span class="sxs-lookup"><span data-stu-id="884fc-141">In C# 7, however, because other patterns are supported, case labels need not define mutually exclusive values, and multiple patterns can match the match expression.</span></span> <span data-ttu-id="884fc-142">因為只會執行包含第一個相符模式的參數區段中的陳述式，所以 `case` 陳述式的出現順序現在十分重要。</span><span class="sxs-lookup"><span data-stu-id="884fc-142">Because only the statements in the switch section that contains the first matching pattern are executed, the order in which `case` statements appear is now important.</span></span> <span data-ttu-id="884fc-143">如果 C# 偵測到一或多個 case 陳述式等於或為先前陳述式子集的參數區段，則會產生編譯器錯誤 CS8120：「先前的案例已處理切換案例。」</span><span class="sxs-lookup"><span data-stu-id="884fc-143">If C# detects a switch section whose case statement or statements are equivalent to or are subsets of previous statements, it generates a compiler error, CS8120, "The switch case has already been handled by a previous case."</span></span> 
 
- 下列範例說明使用各種非互斥模式的 `switch` 陳述式。 如果您移動 `case 0:` 參數區段，讓它不再是 `switch` 陳述式中的第一個區段，則 C# 會產生編譯器錯誤，因為值為零的整數是所有整數的子集，而這是 `case int val` 陳述式所定義的模式。
+ <span data-ttu-id="884fc-144">下列範例說明使用各種非互斥模式的 `switch` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="884fc-144">The following example illustrates a `switch` statement that uses a variety of non-mutually exclusive patterns.</span></span> <span data-ttu-id="884fc-145">如果您移動 `case 0:` 參數區段，讓它不再是 `switch` 陳述式中的第一個區段，則 C# 會產生編譯器錯誤，因為值為零的整數是所有整數的子集，而這是 `case int val` 陳述式所定義的模式。</span><span class="sxs-lookup"><span data-stu-id="884fc-145">If you move the `case 0:` switch section so that it is no longer the first section in the `switch` statement, C# generates a compiler error because an integer whose value is zero is a subset of all integers, which is the pattern defined by the `case int val` statement.</span></span>
 
  [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
 
-您可以更正此問題，並使用兩種方式之一來排除編譯器警告︰
+<span data-ttu-id="884fc-146">您可以更正此問題，並使用兩種方式之一來排除編譯器警告︰</span><span class="sxs-lookup"><span data-stu-id="884fc-146">You can correct this issue and eliminate the compiler warning in one of two ways:</span></span>
 
-- 變更參數區段的順序。 
+- <span data-ttu-id="884fc-147">變更參數區段的順序。</span><span class="sxs-lookup"><span data-stu-id="884fc-147">By changing the order of the switch sections.</span></span> 
  
-- 在 `case` 標籤中使用 </a name="when">when 子句</a>。
+- <span data-ttu-id="884fc-148">在 `case` 標籤中使用 </a name="when">when 子句</a>。</span><span class="sxs-lookup"><span data-stu-id="884fc-148">By using a </a name="when">when clause</a> in the `case` label.</span></span>
  
-## <a name="the-default-case"></a>`default` case
+## <a name="the-default-case"></a><span data-ttu-id="884fc-149">`default` case</span><span class="sxs-lookup"><span data-stu-id="884fc-149">The `default` case</span></span>
 
-如果比對運算式不符合任何其他 `case` 標籤，則 `default` case 指定要執行的參數區段。 如果 `default` case 不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。
+<span data-ttu-id="884fc-150">如果比對運算式不符合任何其他 `case` 標籤，則 `default` case 指定要執行的參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-150">The `default` case specifies the switch section to execute if the match expression does not match any other `case` label.</span></span> <span data-ttu-id="884fc-151">如果 `default` case 不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="884fc-151">If a `default` case is not present and the match expression does not match any other `case` label, program flow falls through the `switch` statement.</span></span>
 
-`default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
+<span data-ttu-id="884fc-152">`default` case 可以依任何順序出現在 `switch` 陳述式中。</span><span class="sxs-lookup"><span data-stu-id="884fc-152">The `default` case can appear in any order in the `switch` statement.</span></span> <span data-ttu-id="884fc-153">不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。</span><span class="sxs-lookup"><span data-stu-id="884fc-153">Regardless of its order in the source code, it is always evaluated last, after all `case` labels have been evaluated.</span></span>
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><span data-ttu-id="884fc-154">使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對</span><span class="sxs-lookup"><span data-stu-id="884fc-154"><a name="pattern" /> Pattern matching with the `switch` statement</span></span>
   
-每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7 開始，支援其餘的模式。 
+<span data-ttu-id="884fc-155">每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-155">Each `case` statement defines a pattern that, if it matches the match expression, causes its  containing switch section to be executed.</span></span> <span data-ttu-id="884fc-156">所有版本的 C# 都支援常數模式。</span><span class="sxs-lookup"><span data-stu-id="884fc-156">All versions of C# support the constant pattern.</span></span> <span data-ttu-id="884fc-157">從 C# 7 開始，支援其餘的模式。</span><span class="sxs-lookup"><span data-stu-id="884fc-157">The remaining patterns are supported beginning with C# 7.</span></span> 
   
-### <a name="constant-pattern"></a>常數模式 
+### <a name="constant-pattern"></a><span data-ttu-id="884fc-158">常數模式</span><span class="sxs-lookup"><span data-stu-id="884fc-158">Constant pattern</span></span> 
 
-常數模式會測試比對運算式是否等於指定的常數。 它的語法為：
+<span data-ttu-id="884fc-159">常數模式會測試比對運算式是否等於指定的常數。</span><span class="sxs-lookup"><span data-stu-id="884fc-159">The constant pattern tests whether the match expression equals a specified constant.</span></span> <span data-ttu-id="884fc-160">它的語法為：</span><span class="sxs-lookup"><span data-stu-id="884fc-160">Its syntax is:</span></span>
 
 ```csharp
    case constant:
 ```
 
-其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式： 
+<span data-ttu-id="884fc-161">其中，*constant* 是用來測試的值。</span><span class="sxs-lookup"><span data-stu-id="884fc-161">where *constant* is the value to test for.</span></span> <span data-ttu-id="884fc-162">*constant* 可以是下列任何常數運算式：</span><span class="sxs-lookup"><span data-stu-id="884fc-162">*constant* can be any of the following constant expressions:</span></span> 
 
-- [bool](bool.md) 常值：`true` 或 `false`。
-- 任何整數常數，例如 [int](int.md)、[long](long.md) 或 [byte](byte.md)。 
-- 所宣告之 `const` 變數的名稱。
-- 列舉常數。
-- [char](char.md) 常值。
-- [string](string.md) 常值。
+- <span data-ttu-id="884fc-163">[bool](bool.md) 常值：`true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="884fc-163">A [bool](bool.md) literal, either `true` or `false`.</span></span>
+- <span data-ttu-id="884fc-164">任何整數常數，例如 [int](int.md)、[long](long.md) 或 [byte](byte.md)。</span><span class="sxs-lookup"><span data-stu-id="884fc-164">Any integral constant, such as an [int](int.md), a [long](long.md), or a [byte](byte.md).</span></span> 
+- <span data-ttu-id="884fc-165">所宣告之 `const` 變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="884fc-165">The name of a declared `const` variable.</span></span>
+- <span data-ttu-id="884fc-166">列舉常數。</span><span class="sxs-lookup"><span data-stu-id="884fc-166">An enumeration constant.</span></span>
+- <span data-ttu-id="884fc-167">[char](char.md) 常值。</span><span class="sxs-lookup"><span data-stu-id="884fc-167">A [char](char.md) literal.</span></span>
+- <span data-ttu-id="884fc-168">[string](string.md) 常值。</span><span class="sxs-lookup"><span data-stu-id="884fc-168">A [string](string.md) literal.</span></span>
 
-常數運算式評估如下：
+<span data-ttu-id="884fc-169">常數運算式評估如下：</span><span class="sxs-lookup"><span data-stu-id="884fc-169">The constant expression is evaluated as follows:</span></span>
 
-- 如果 *expr* 和 *constant* 是整數型別，則 C# 等號比較運算子會判斷運算式是否傳回 `true` (亦即是否 `expr == constant`)。
+- <span data-ttu-id="884fc-170">如果 *expr* 和 *constant* 是整數型別，則 C# 等號比較運算子會判斷運算式是否傳回 `true` (亦即是否 `expr == constant`)。</span><span class="sxs-lookup"><span data-stu-id="884fc-170">If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).</span></span>
 
-- 否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。  
+- <span data-ttu-id="884fc-171">否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。</span><span class="sxs-lookup"><span data-stu-id="884fc-171">Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.</span></span>  
 
-下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。 它會針對 @System.DayOfWeek 列舉的成員來評估目前這天的 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 屬性。 
+<span data-ttu-id="884fc-172">下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。</span><span class="sxs-lookup"><span data-stu-id="884fc-172">The following example uses the constant pattern to determine whether a particular date is a weekend, the first day of the work week, the last day of the work week, or the middle of the work week.</span></span> <span data-ttu-id="884fc-173">其會依據 <xref:System.DayOfWeek> 列舉的成員，評估當日的 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="884fc-173">It evaluates the <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> property of the current day against the members of the <xref:System.DayOfWeek> enumeration.</span></span> 
 
 [!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
-下列範例使用常數模式，來處理模擬自動咖啡機之主控台應用程式中的使用者輸入。
+<span data-ttu-id="884fc-174">下列範例使用常數模式，來處理模擬自動咖啡機之主控台應用程式中的使用者輸入。</span><span class="sxs-lookup"><span data-stu-id="884fc-174">The following example uses the constant pattern to handle user input in a console application that simulates an automatic coffee machine.</span></span>
   
  [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
 
-### <a name="type-pattern"></a>類型模式
+### <a name="type-pattern"></a><span data-ttu-id="884fc-175">類型模式</span><span class="sxs-lookup"><span data-stu-id="884fc-175">Type pattern</span></span>
 
-類型模式會啟用精簡類型評估和轉換。 與 `switch` 陳述式搭配使用來執行模式比對時，會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它的語法為：
+<span data-ttu-id="884fc-176">類型模式會啟用精簡類型評估和轉換。</span><span class="sxs-lookup"><span data-stu-id="884fc-176">The type pattern enables concise type evaluation and conversion.</span></span> <span data-ttu-id="884fc-177">與 `switch` 陳述式搭配使用來執行模式比對時，會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。</span><span class="sxs-lookup"><span data-stu-id="884fc-177">When used with the `switch` statement to perform pattern matching, it tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span> <span data-ttu-id="884fc-178">它的語法為：</span><span class="sxs-lookup"><span data-stu-id="884fc-178">Its syntax is:</span></span>
 
 ```csharp
    case type varname 
 ```
-其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。 
+<span data-ttu-id="884fc-179">其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。</span><span class="sxs-lookup"><span data-stu-id="884fc-179">where *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the match succeeds.</span></span> 
 
-如果符合下列任一項，則 `case` 運算式為`true`：
+<span data-ttu-id="884fc-180">如果符合下列任一項，則 `case` 運算式為`true`：</span><span class="sxs-lookup"><span data-stu-id="884fc-180">The `case` expression is `true` if any of the following is true:</span></span>
 
-- *expr* 是其類型與 *type* 相同的執行個體。
+- <span data-ttu-id="884fc-181">*expr* 是其類型與 *type* 相同的執行個體。</span><span class="sxs-lookup"><span data-stu-id="884fc-181">*expr* is an instance of the same type as *type*.</span></span>
 
-- *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
+- <span data-ttu-id="884fc-182">*expr* 是衍生自 *type* 的類型執行個體。</span><span class="sxs-lookup"><span data-stu-id="884fc-182">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="884fc-183">換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。</span><span class="sxs-lookup"><span data-stu-id="884fc-183">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於其型別宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
+- <span data-ttu-id="884fc-184">*expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。</span><span class="sxs-lookup"><span data-stu-id="884fc-184">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="884fc-185">變數的「編譯時期類型」是定義於其型別宣告的變數類型。</span><span class="sxs-lookup"><span data-stu-id="884fc-185">The *compile-time type* of a variable is the variable's type as defined in its type declaration.</span></span> <span data-ttu-id="884fc-186">變數的「執行階段類型」是指派給該變數的執行個體類型。</span><span class="sxs-lookup"><span data-stu-id="884fc-186">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- *expr* 是實作 *type* 介面的類型執行個體。
+- <span data-ttu-id="884fc-187">*expr* 是實作 *type* 介面的類型執行個體。</span><span class="sxs-lookup"><span data-stu-id="884fc-187">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-如果 case 運算式為 true，則 *varname* 會明確地進行指派，並且只具有參數區段內的區域範圍。
+<span data-ttu-id="884fc-188">如果 case 運算式為 true，則 *varname* 會明確地進行指派，並且只具有參數區段內的區域範圍。</span><span class="sxs-lookup"><span data-stu-id="884fc-188">If the case expression is true, *varname* is definitely assigned and has local scope within the switch section only.</span></span>
 
-請注意，`null` 不符合類型。 若要比對 `null`，請使用下列 `case` 標籤︰
+<span data-ttu-id="884fc-189">請注意，`null` 不符合類型。</span><span class="sxs-lookup"><span data-stu-id="884fc-189">Note that `null` does not match a type.</span></span> <span data-ttu-id="884fc-190">若要比對 `null`，請使用下列 `case` 標籤︰</span><span class="sxs-lookup"><span data-stu-id="884fc-190">To match a `null`, you use the following `case` label:</span></span>
 
 ```csharp
 case null:
 ```
  
-下列範例使用類型模式提供各種集合類型的資訊。
+<span data-ttu-id="884fc-191">下列範例使用類型模式提供各種集合類型的資訊。</span><span class="sxs-lookup"><span data-stu-id="884fc-191">The following example uses the type pattern to provide information about various kinds of collection types.</span></span>
 
 [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
-如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，不需要測試轉換的結果是否為 `null` 或執行重複轉換，因此會產生更精簡且容易閱讀的程式碼。  
+<span data-ttu-id="884fc-192">如果沒有模式比對，此程式碼可能會撰寫如下。</span><span class="sxs-lookup"><span data-stu-id="884fc-192">Without pattern matching, this code might be written as follows.</span></span> <span data-ttu-id="884fc-193">使用類型模式比對時，不需要測試轉換的結果是否為 `null` 或執行重複轉換，因此會產生更精簡且容易閱讀的程式碼。</span><span class="sxs-lookup"><span data-stu-id="884fc-193">The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null` or to perform repeated casts.</span></span>  
 
 [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a>`case` 陳述式和 `when` 子句
+## <a name="the-case-statement-and-the-when-clause"></a><span data-ttu-id="884fc-194">`case` 陳述式和 `when` 子句</span><span class="sxs-lookup"><span data-stu-id="884fc-194">The `case` statement and the `when` clause</span></span>
 
-從 C# 7 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。 其中一個更常用的 `when` 子句是用來防止在比對運算式的值為 `null` 時執行參數區段。 
+<span data-ttu-id="884fc-195">從 C# 7 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。</span><span class="sxs-lookup"><span data-stu-id="884fc-195">Starting with C# 7, because case statements need not be mutually exclusive, you can use add a `when` clause to specify an additional condition that must be satisfied for the case statement to evaluate to true.</span></span> <span data-ttu-id="884fc-196">`when` 子句可以是任何傳回布林值的運算式。</span><span class="sxs-lookup"><span data-stu-id="884fc-196">The `when` clause can be any expression that returns a Boolean value.</span></span> <span data-ttu-id="884fc-197">其中一個更常用的 `when` 子句是用來防止在比對運算式的值為 `null` 時執行參數區段。</span><span class="sxs-lookup"><span data-stu-id="884fc-197">One of the more common uses for the `when` clause is used to prevent a switch section from executing when the value of a match expression is `null`.</span></span> 
 
- 下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件識別為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。 
-
-[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
-  
-請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
-
-## <a name="c-language-specification"></a>C# 語言規格  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>另請參閱  
-
- [C# 參考](../index.md)   
- [C# 程式設計手冊](../../programming-guide/index.md)   
- [C# 關鍵字](index.md)   
- [if-else](if-else.md)   
- [模式比對](../../pattern-matching.md)   
- 
-
- 
-=======
-# <a name="switch-c-reference"></a>switch (C# 參考)
-`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」**的模式比對，從候選項清單中選擇要執行的單一「參數區段」**。 
-  
- [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
-
-如果針對三個或多個條件測試單一運算式，則通常會使用 `switch` 陳述式來替代 [if-else](if-else.md) 建構。 例如，下列 `switch` 陳述式判斷 `Color` 類型的變數是否有三個值之一︰ 
-
-[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
-
-它等同於下列使用 `if`-`else` 建構的範例。 
-
-[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
-
-## <a name="the-match-expression"></a>比對運算式
-
-比對運算式提供要與 `case` 標籤中的模式進行比對的值。 它的語法為：
-
-```csharp
-   switch (expr)
-```
-
-在 C# 6 中，比對運算式必須是傳回下列類型之值的運算式︰
-
-- [char](char.md)。
-- [string](string.md)。
-- [bool](bool.md)。 
-- 整數值，例如 [int](int.md) 或 [long](long.md)。
-- [enum](enum.md) 值。
-
-從 C# 7 開始，比對運算式可以是任何非 Null 運算式。
- 
-## <a name="the-switch-section"></a>參數區段
- 
- `switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個 「case 標籤」 ，後面接著一或多個陳述式。 下列範例將示範擁有三個參數區段的簡單 `switch` 陳述式。 每個參數區段擁有一個 case 標籤，例如 `case 1:`，以及兩個陳述式。
- 
-  `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。  
-
- [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
-
- switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「程式控制權無法從一個 case 標籤 (<case label>) 繼續到另一個」。   
-
-```csharp  
-switch (caseSwitch)  
-{  
-    // The following switch section causes an error.  
-    case 1:  
-        Console.WriteLine("Case 1...");  
-        // Add a break or other jump statement here.  
-    case 2:  
-        Console.WriteLine("... and/or Case 2");  
-        break;  
-}  
-```  
-使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合這項需求。 不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。
-  
- [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
-  
- 在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
-
-## <a name="case-labels"></a>case 標籤
-
- 每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」相符 case 標籤的參數區段。 如果沒有任何 case 標籤模式符合比對運算式，則控制權會轉移到具有 `default` case 標籤 (如果有的話) 的區段。 如果沒有 `default` case，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
-
- 如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
-
- 因為 C# 6 只支援常數模式，且不允許重複常數值，所以 case 標籤定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
-
- 不過，在 C# 7 中，因為支援其他模式，所以 case 標籤不需要定義互斥值，而且可以有多個模式符合比對運算式。 因為只會執行包含第一個相符模式的參數區段中的陳述式，所以 `case` 陳述式的出現順序現在十分重要。 如果 C# 偵測到一或多個 case 陳述式等於或為先前陳述式子集的參數區段，則會產生編譯器錯誤 CS8120：「先前的案例已處理切換案例。」 
-
- 下列範例說明使用各種非互斥模式的 `switch` 陳述式。 如果您移動 `case 0:` 參數區段，讓它不再是 `switch` 陳述式中的第一個區段，則 C# 會產生編譯器錯誤，因為值為零的整數是所有整數的子集，而這是 `case int val` 陳述式所定義的模式。
-
- [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
-
-您可以更正此問題，並使用兩種方式之一來排除編譯器警告︰
-
-- 變更參數區段的順序。 
- 
-- 在 `case` 標籤中使用 </a name="when">when 子句</a>。
- 
-## <a name="the-default-case"></a>`default` case
-
-如果比對運算式不符合任何其他 `case` 標籤，則 `default` case 指定要執行的參數區段。 如果 `default` case 不存在，而且比對運算式不符合任何其他 `case` 標籤，則程式流程會落到 `switch` 陳述式。
-
-`default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
-
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
-  
-每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7 開始，支援其餘的模式。 
-  
-### <a name="constant-pattern"></a>常數模式 
-
-常數模式會測試比對運算式是否等於指定的常數。 它的語法為：
-
-```csharp
-   case constant:
-```
-
-其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式： 
-
-- [bool](bool.md) 常值：`true` 或 `false`。
-- 任何整數常數，例如 [int](int.md)、[long](long.md) 或 [byte](byte.md)。 
-- 所宣告之 `const` 變數的名稱。
-- 列舉常數。
-- [char](char.md) 常值。
-- [string](string.md) 常值。
-
-常數運算式評估如下：
-
-- 如果 *expr* 和 *constant* 是整數型別，則 C# 等號比較運算子會判斷運算式是否傳回 `true` (亦即是否 `expr == constant`)。
-
-- 否則，會呼叫靜態 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 方法來判斷運算式的值。  
-
-下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。 它會針對 @System.DayOfWeek 列舉的成員來評估目前這天的 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 屬性。 
-
-[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
-
-下列範例使用常數模式，來處理模擬自動咖啡機之主控台應用程式中的使用者輸入。
-  
- [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
-
-### <a name="type-pattern"></a>類型模式
-
-類型模式會啟用精簡類型評估和轉換。 與 `switch` 陳述式搭配使用來執行模式比對時，會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它的語法為：
-
-```csharp
-   case type varname 
-```
-其中，如果比對成功，則 *type* 是 *expr* 的結果要轉換的目標類型名稱，而 *varname* 是 *expr* 的結果所轉換的目標物件。 
-
-如果符合下列任一項，則 `case` 運算式為`true`：
-
-- *expr* 是其類型與 *type* 相同的執行個體。
-
-- *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
-
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」**是定義於其型別宣告的變數類型。 變數的「執行階段類型」**是指派給該變數的執行個體類型。
-
-- *expr* 是實作 *type* 介面的類型執行個體。
-
-如果 case 運算式為 true，則 *varname* 會明確地進行指派，並且只具有參數區段內的區域範圍。
-
-請注意，`null` 不符合類型。 若要比對 `null`，請使用下列 `case` 標籤︰
-
-```csharp
-case null:
-```
- 
-下列範例使用類型模式提供各種集合類型的資訊。
-
-[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
-
-如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，不需要測試轉換的結果是否為 `null` 或執行重複轉換，因此會產生更精簡且容易閱讀的程式碼。  
-
-[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
-
-## <a name="the-case-statement-and-the-when-clause"></a>`case` 陳述式和 `when` 子句
-
-從 C# 7 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。 其中一個更常用的 `when` 子句是用來防止在比對運算式的值為 `null` 時執行參數區段。 
-
- 下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件識別為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。 
+ <span data-ttu-id="884fc-198">下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。</span><span class="sxs-lookup"><span data-stu-id="884fc-198">The following example defines a base `Shape` class, a `Rectangle` class that derives from `Shape`, and a `Square` class that derives from `Rectangle`.</span></span> <span data-ttu-id="884fc-199">它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件識別為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。</span><span class="sxs-lookup"><span data-stu-id="884fc-199">It uses the `when` clause to ensure that the `ShowShapeInfo` treats a `Rectangle` object that has been assigned equal lengths and widths as a `Square` even if is has not been instantiated as a `Square` object.</span></span> <span data-ttu-id="884fc-200">此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="884fc-200">The method does not attempt to display information either about an object that is `null` or a shape whose area is zero.</span></span> 
 
 [!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
   
-請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
+<span data-ttu-id="884fc-201">請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。</span><span class="sxs-lookup"><span data-stu-id="884fc-201">Note that the `when` clause in the example that attempts to test whether a `Shape` object is `null` does not execute.</span></span> <span data-ttu-id="884fc-202">要測試是否為 `null` 的正確類型模式是 `case null:`。</span><span class="sxs-lookup"><span data-stu-id="884fc-202">The correct type pattern to test for a `null` is `case null:`.</span></span>
 
-## <a name="c-language-specification"></a>C# 語言規格  
+## <a name="c-language-specification"></a><span data-ttu-id="884fc-203">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="884fc-203">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a><span data-ttu-id="884fc-204">另請參閱</span><span class="sxs-lookup"><span data-stu-id="884fc-204">See Also</span></span>  
 
- [C# 參考](../index.md)   
- [C# 程式設計手冊](../../programming-guide/index.md)   
- [C# 關鍵字](index.md)   
- [if-else](if-else.md)   
- [模式比對](../../pattern-matching.md)   
+ <span data-ttu-id="884fc-205">[C# 參考](../index.md) </span><span class="sxs-lookup"><span data-stu-id="884fc-205">[C# Reference](../index.md) </span></span>  
+ <span data-ttu-id="884fc-206">[C# 程式設計手冊](../../programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="884fc-206">[C# Programming Guide](../../programming-guide/index.md) </span></span>  
+ <span data-ttu-id="884fc-207">[C# 關鍵字](index.md) </span><span class="sxs-lookup"><span data-stu-id="884fc-207">[C# Keywords](index.md) </span></span>  
+ <span data-ttu-id="884fc-208">[if-else](if-else.md) </span><span class="sxs-lookup"><span data-stu-id="884fc-208">[if-else](if-else.md) </span></span>  
+ [<span data-ttu-id="884fc-209">模式比對</span><span class="sxs-lookup"><span data-stu-id="884fc-209">Pattern Matching</span></span>](../../pattern-matching.md)   
+ 
+
+ 
