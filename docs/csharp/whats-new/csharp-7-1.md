@@ -86,7 +86,7 @@ static async Task<int> Main()
 }
 ```
 
-如果您的程式並不需要擲出執行完成狀態 (**An exit code**) ，你可以定義 Main 方法使其擲出
+如果您的程式並不需要擲出執行完成狀態 (**An exit code**) ，您可以定義 Main 方法使其擲出
 <xref:System.Threading.Tasks.Task>：
 
 
@@ -96,29 +96,29 @@ static async Task Main()
     await SomeAsyncMethod();
 }
 ```
+
+
 你可以在程式編輯指南中的 [async main](../programming-guide/main-and-command-args/index.md) 
 章節閱讀細節。
 
 ## Default運算值表達式
 
-Default literal expressions are an enhancement to default value expressions.
-These expressions initialize a variable to the default value. Where you previously
-would write:
+本方法提供[預設值運算式](../programming-guide/statements-expressions-operators/default-value-expressions.md) (**Default value expressions**)的加強。此表達式將會對一個變數初始化一個預設值。在過去您必須這樣寫：
+
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
 ```
 
-You can now omit the type on the right-hand side of the initialization:
+現在您可以省略右邊的初始化類型：
 
 ```csharp
 Func<string, bool> whereClause = default;
 ```
 
-You can learn more about this enhancement in the C# Programming Guide topic
-on [default value expressions](../programming-guide/statements-expressions-operators/default-value-expressions.md).
+您可以在程式設計指南中的[預設值運算式](../programming-guide/statements-expressions-operators/default-value-expressions.md)章節閱讀細節。
 
-This enhancement also changes some of the parsing rules for the [default keyword](../language-reference/keywords/default.md).
+本次加強也變更了 [Default 關鍵字](../language-reference/keywords/default.md) (**Default keyword**) 的解析規則。
 
 ## Tuple型別推導
 
