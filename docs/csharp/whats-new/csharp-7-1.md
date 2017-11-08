@@ -141,8 +141,6 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-You can learn more about this feature in the [Tuples](../tuples.md) topic.
-
 您可以在 [Tuples類型](../tuples.md) (**Tuple types**) 章節中學習更多關於此功能的細節。
 
 ## 組件版本資源
