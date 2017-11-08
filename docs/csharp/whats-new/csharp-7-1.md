@@ -98,7 +98,7 @@ static async Task Main()
 ```
 
 
-你可以在程式編輯指南中的 [async main](../programming-guide/main-and-command-args/index.md) 
+你可以在程式編輯指南中的 [Main方法](../programming-guide/main-and-command-args/index.md)  (**Main() and command-line arguments**) 
 章節閱讀細節。
 
 ## Default運算值表達式
@@ -122,10 +122,9 @@ Func<string, bool> whereClause = default;
 
 ## Tuple型別推導
 
-This feature is a small enhancement to the tuples feature introduced in
-C# 7.0. Many times when you initialize a tuple, the variables used for the
-right side of the assignment are the same as the names you'd like for the
-tuple elements:
+本方法為 C# 7.0 版本 Tuple 方法的改進，在進行 Tuple 方法初始化變數時，需要在初始化變數左方定義一個分類變數名稱
+，然而許多情況下分類變數名稱常與初始化變數名稱相同：
+
 
 ```csharp
 int count = 5;
@@ -133,8 +132,8 @@ string label = "Colors used in the map";
 var pair = (count: count, label: label);
 ```
 
-The names of tuple elements can be inferred from the variables used to initialize
-the tuple in C# 7.1:
+改進後的方法在進行變數初始化時分類變數名稱可以由變數名稱推導：
+
 
 ```csharp
 int count = 5;
@@ -143,6 +142,8 @@ var pair = (count, label); // element names are "count" and "label"
 ```
 
 You can learn more about this feature in the [Tuples](../tuples.md) topic.
+
+您可以在 [Tuples類型](../tuples.md) (**Tuple types**) 章節中學習更多關於此功能的細節。
 
 ## 組件版本資源
 
