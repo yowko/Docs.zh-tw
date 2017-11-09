@@ -3,11 +3,11 @@
 在 C# 7.1 ，提供以下功能：
 
 * [非同步Main方法 ( Async Main method )](#非同步Main方法)
-  - The entry point for an application can have the `async` modifier.
+  - 提供程式進入點允許使用 `await` 運算子。
 * [Default運算值表達式 ( Default literal expressions )](#Default運算值表達式)
-  - You can use default literal expressions in default value expressions when the target type can be inferred.
+  - 提供變數初始化時簡化初始化目標類型名稱。
 * [Tuple型別推導 ( Inferred tuple element names )](#Tuple型別推導)
-  - The names of tuple elements can be inferred from tuple initialization in many cases.
+  - 提供 Tuple 方法進行初始化變數時可以由變數名稱自動推導。
 
 ## 深入瞭解新版本
 C# 7.1 自 Visual Studio 2017 15.3 版本起與 .NET Core SDK 2.0 版本起開始支援，預設值 C# 7.1 功能為關閉，
@@ -145,7 +145,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## 組件版本資源
 
-There are two new compiler options that generate *reference-only assemblies*:
-[/refout](../language-reference/compiler-options/refout-compiler-option.md)
-and [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-The linked topics explain these options and reference assemblies in more detail.
+C# 7.1 起提供了兩個新的組件編譯時參考組件編譯參數： [/refout](../language-reference/compiler-options/refout-compiler-option.md)
+ 與 [/refonly](../language-reference/compiler-options/refonly-compiler-option.md)，您可以在連結的章節更詳細的解釋這些選項以及細節。
