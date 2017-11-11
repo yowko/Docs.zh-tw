@@ -1,25 +1,25 @@
 # C# 7 中的新增功能
 
 在 C# 7 ，提供以下功能：
-* [`out` variables](#out-variables)
+* [ Out 參數修飾詞 ( Out variables )](#out參數修飾詞)
     - You can declare `out` values inline as arguments to the method where they are used.
-* [Tuples](#tuples)
+* [ Tuple 方法 ( Tuples )](#tuple方法)
     - You can create lightweight, unnamed types that contain multiple public fields. Compilers and IDE tools understand the semantics of these types.
-* [Discards](#discards)
+* [ Discard 暫存變數 ( Discards )](#暫存變數)
     - Discards are temporary, write-only variables used in assignments when you don't care about the value assigned. They are particularly useful when deconstructing tuples and user-defined types, as well as when calling methods with `out` parameters.
-* [Pattern Matching](#pattern-matching)
+* [模式比對 ( Pattern Matching )](#模式比對)
     - You can create branching logic based on arbitrary types and values of the members of those types.
-* [`ref` locals and returns](#ref-locals-and-returns)
+* [Ref 擲回傳址參數修飾詞 ( ref locals and returns )](#ref擲回傳址參數修飾詞)
     - Method arguments and local variables can be references to other storage.
-* [Local Functions](#local-functions)
+* [區域函式 ( Local functions )](#區域函式)
     - You can nest functions inside other functions to limit their scope and visibility.
-* [More expression-bodied members](#more-expression-bodied-members)
+* [表示式本體成員 ( More expression-bodied members )](#表示式本體成員)
     - The list of members that can be authored using expressions has grown.
-* [`throw` Expressions](#throw-expressions)
+* [Throw 例外運算子參數修飾詞 ( throw Expressions )](#Throw例外運算子參數修飾詞)
     - You can throw exceptions in code constructs that previously were not allowed because `throw` was a statement. 
-* [Generalized async return types](#generalized-async-return-types)
+* [非同步方法的傳回型別 ( Generalized async return types )](#非同步方法的傳回型別) 
     - Methods declared with the `async` modifier can return other types in addition to `Task` and `Task<T>`.
-* [Numeric literal syntax improvements](#numeric-literal-syntax-improvements)
+* [小數位數語法 ( Numeric literal syntax improvements )](#小數位數語法)
     - New tokens improve readability for numeric constants.
 
 The remainder of this topic discusses each of the features. For each feature,
