@@ -27,26 +27,40 @@ you'll learn the reasoning behind it. You'll learn the syntax. You'll see
 some sample scenarios where using the new feature will make you more 
 productive as a developer. 
 
-## `out` variables
+## out參數修飾詞
 
-The existing syntax that supports `out` parameters has been improved
-in this version.  
+本方法提供 `out` 參數修飾詞改進。
 
-Previously, you would need to separate the declaration of the out variable
-and its initialization into two different statements:
+過往進行變數初始化，需要使用 `out` 參數修飾詞定義變數性質時，您必須個別定義變數及執行方法 ( method ) 中 `out` 參數修飾詞：
 
-[!code-csharp[OutVariableOldStyle](../../../samples/snippets/csharp/new-in-7/program.cs#03_OutVariableOldStyle "classic out variable declaration")]
+```csharp
+int numericResult;
+if (int.TryParse(input, out numericResult))
+    WriteLine(numericResult);
+else
+    WriteLine("Could not parse input");
+```
+
+現在您可以直接於執行方法當中的變數使用 `out` 參數修飾詞：
 
 You can now declare `out` variables in the argument list of a method call,
 rather than writing a separate declaration statement:
 
-[!code-csharp[OutVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#01_OutVariableDeclarations "Out variable declarations")]
+```csharp
+if (int.TryParse(input, out int result))
+    WriteLine(result);
+else
+    WriteLine("Could not parse input");
+```
 
-You may want to specify the type of the `out` variable for clarity,
-as shown above. However, the language does support using an implicitly
-typed local variable:
+或許您可能希望如上述明確指名使用 `out` 參數修飾詞變數類型，然而語法亦可支援使用 `var` 隱含類型區域變數定義的變數：
 
-[!code-csharp[OutVarVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#02_OutVarVariableDeclarations "Implicitly typed Out variable")]
+```csharp
+if (int.TryParse(input, out var answer))
+    WriteLine(answer);
+else
+    WriteLine("Could not parse input");
+```
 
 * The code is easier to read. 
     - You declare the out variable where you use it, not on another line above.
