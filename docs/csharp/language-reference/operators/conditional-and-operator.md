@@ -38,7 +38,7 @@ ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; 運算子 (C# 參考)
-條件式 AND 運算子 (`&&`) 會執行其 `bool` 運算元的邏輯 AND，但只會評估其第二個運算元 (必要的話)。  
+條件式 AND 運算子 (`&&`) 會執行其 `bool` 運算元的邏輯 AND，但只在需要的時候才評估其第二個運算元。 
   
 ## <a name="remarks"></a>備註  
  作業  
