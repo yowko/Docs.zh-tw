@@ -43,9 +43,6 @@ else
 
 現在您可以直接於執行方法當中的變數使用 `out` 參數修飾詞：
 
-You can now declare `out` variables in the argument list of a method call,
-rather than writing a separate declaration statement:
-
 ```csharp
 if (int.TryParse(input, out int result))
     WriteLine(result);
@@ -62,14 +59,15 @@ else
     WriteLine("Could not parse input");
 ```
 
-* The code is easier to read. 
-    - You declare the out variable where you use it, not on another line above.
-* No need to assign an initial value.
-    - By declaring the `out` variable where it is used in a method call, you can't accidentally use it before it is assigned.
+使用 `out` 參數修飾詞的變數命名將可以獲得以下便利之處：
 
-The most common use for this feature will be the `Try` pattern. In this
-pattern, a method returns a `bool` indicating success or failure and an
-`out` variable that provides the result if the method succeeds.
+* 程式碼將可以更容易閱讀理解。
+    - 當下使用 `out` 參數修飾詞時候，您不需要將變數個別獨立出來定義屬性。
+* 無需為區域變數指定初始值。
+    - 過往使用 `out` 參數修飾詞時候，無法指定選用性，您必需明確指定區域變數值 ( Value ) 。
+    
+本方法最常見使用情境為 `Try` 陳述式 ( try-catch-finally )  ，在使用此陳述式時，一個方法將擲回執行成功或執行失敗狀態，
+若使用 `out` 參數修飾詞修飾擲回狀態，將可確保擲回狀態正確輸出。
 
 When using the `out` variable declaration, the declared variable "leaks" into the outer scope of the if statement. This allows you to use the variable afterwards:
 
