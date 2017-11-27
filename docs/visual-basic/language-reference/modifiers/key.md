@@ -1,66 +1,64 @@
 ---
-title: "Key (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.AnonymousKey"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "anonymous types [Visual Basic], key"
-  - "Key [Visual Basic]"
-  - "Key keyword [Visual Basic]"
+title: Key (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.AnonymousKey
+helpviewer_keywords:
+- anonymous types [Visual Basic], key
+- Key [Visual Basic]
+- Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 20dbe4e67fb3e415ba0202555ace7fd5afed68d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Key (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-`Key` 關鍵字可讓您指定匿名型別之屬性的行為。  只有您指定為索引鍵屬性的屬性，將會用於匿名型別執行個體間的相等性測試，或用於計算雜湊程式碼值。  索引鍵屬性的值無法變更。  
+# <a name="key-visual-basic"></a>Key (Visual Basic)
+`Key`關鍵字可讓您指定之屬性的匿名型別行為。 只有屬性指定為索引鍵屬性中的匿名型別執行個體或計算的雜湊程式碼的值之間的等號比較測試。 無法變更索引鍵屬性的值。  
   
- 為匿名型別指定索引鍵屬性的方法，是在初始設定清單中於屬性的宣告前面加上 `Key` 關鍵字。  在下列範例中，`Airline` 和 `FlightNo` 是索引鍵屬性，`Gate` 則不是。  
+ 將匿名類型的屬性指定為索引鍵內容的放入關鍵字`Key`初始設定清單中宣告的前面。 在下列範例中，`Airline`和`FlightNo`是索引鍵屬性，但`Gate`不是。  
   
  [!code-vb[VbVbalrAnonymousTypes#26](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_1.vb)]  
   
- 建立匿名型別時，匿名型別會直接繼承自 <xref:System.Object>。  編譯器 \(Compiler\) 會覆寫三個繼承的成員：<xref:System.Object.Equals%2A>、<xref:System.Object.GetHashCode%2A> 和 <xref:System.Object.ToString%2A>。  為 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 產生的覆寫程式碼，是以索引鍵屬性為基礎。  如果型別中沒有索引鍵屬性，就不會覆寫 <xref:System.Object.GetHashCode%2A> 和 <xref:System.Object.Equals%2A>。  
+ 建立新的匿名型別時，它直接繼承自<xref:System.Object>。 編譯器會覆寫繼承的三個成員： <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。 產生的覆寫程式碼<xref:System.Object.Equals%2A>和<xref:System.Object.GetHashCode%2A>根據索引鍵屬性。 如果類型中沒有索引鍵屬性<xref:System.Object.GetHashCode%2A>和<xref:System.Object.Equals%2A>不會覆寫。  
   
-## 相等  
- 如果兩個匿名型別執行個體 \(Instance\) 屬於相同型別，而且索引鍵屬性的值也相同，則這兩個執行個體便相等。  在下列範例中，`flight2` 和前一個範例中的 `flight1` 相等，因為它們是相同匿名型別的執行個體，且有和索引鍵屬性相符的值。  然而，`flight3` 和 `flight1` 並不相等，因為它的索引鍵屬性 `FlightNo` 的值不同。  執行個體 `flight4` 和 `flight1` 的型別不同，因為它們指派做為索引鍵屬性的屬性不同。  
+## <a name="equality"></a>相等  
+ 兩個匿名型別執行個體相等，如果相同型別的執行個體，而且其索引鍵屬性的值是否相等。 在下列範例中，`flight2`等於`flight1`前一個範例因為它們是執行個體的相同匿名類型，而且它們有相符的索引鍵屬性的值。 不過，`flight3`不等於`flight1`因為它有不同的值為索引鍵的屬性， `FlightNo`。 執行個體`flight4`不是相同的型別`flight1`因為他們指派不同的屬性為索引鍵屬性。  
   
  [!code-vb[VbVbalrAnonymousTypes#27](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_2.vb)]  
   
- 如果兩個執行個體只宣告非索引鍵屬性，但名稱、型別、順序和值都相等，則這兩個執行個體還是不相等。  沒有索引鍵屬性的執行個體只會與自己相等。  
+ 只有非索引鍵屬性，相同的名稱、 類型、 順序和值，以宣告兩個執行個體的兩個執行個體不相等。 沒有索引鍵屬性的執行個體等於只有本身。  
   
- 如需在何種條件下，兩個匿名型別的執行個體會是相同匿名型別之執行個體的詳細資訊，請參閱[Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+ 如需條件的兩個匿名型別執行個體都是相同匿名類型的執行個體的詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
   
-## 計算雜湊程式碼  
- 如同 <xref:System.Object.Equals%2A>，定義於 <xref:System.Object.GetHashCode%2A> 中的匿名型別雜湊函數，是以型別的索引鍵屬性為基礎。  在下列範例中，顯示了在索引鍵屬性和雜湊程式碼值間的互動。  
+## <a name="hash-code-calculation"></a>計算雜湊程式碼  
+ 像<xref:System.Object.Equals%2A>，雜湊函式中定義<xref:System.Object.GetHashCode%2A>匿名型別是根據索引鍵類型的屬性。 下列範例顯示程式碼值的雜湊索引鍵屬性之間的互動。  
   
- 所有索引鍵屬性值都相同之匿名型別的執行個體，就算非索引鍵屬性的值不相符，仍會有同樣的雜湊程式碼值。  下列陳述式會傳回 `True`。  
+ 匿名型別的所有索引鍵屬性的值相同的執行個體有相同的雜湊碼值，即使非索引鍵屬性沒有相符的值。 下列陳述式會傳回`True`。  
   
  [!code-vb[VbVbalrAnonymousTypes#37](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_3.vb)]  
   
- 有一個或多個索引鍵屬性值不同之匿名型別的執行個體，會有不一樣的雜湊程式碼值。  下列陳述式會傳回 `False`。  
+ 匿名類型的一或多個索引鍵屬性的值不同的執行個體具有不同的雜湊碼值。 下列陳述式會傳回`False`。  
   
  [!code-vb[VbVbalrAnonymousTypes#38](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_4.vb)]  
   
- 指派不同的屬性做為索引鍵屬性之匿名型別的執行個體，不是相同屬性的執行個體。  就算所有屬性的名稱和值都相同，雜湊程式碼值仍然不同。  下列陳述式會傳回 `False`。  
+ 指派不同的屬性為索引鍵屬性的匿名型別的執行個體不是相同類型的執行個體。 即使名稱和所有屬性的值相同時，它們就會有不同的雜湊程式碼的值。 下列陳述式會傳回`False`。  
   
  [!code-vb[VbVbalrAnonymousTypes#39](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_5.vb)]  
   
-## 唯讀值  
- 索引鍵屬性的值無法變更。  例如，在稍早範例的 `flight1` 中，`Airline` 和 `FlightNo` 欄位是唯讀的，但 `Gate` 是可以變更的。  
+## <a name="read-only-values"></a>唯讀的值  
+ 無法變更索引鍵屬性的值。 例如，在`flight1`先前範例中中,`Airline`和`FlightNo`欄位是唯讀的但`Gate`可以變更。  
   
  [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
   
-## 請參閱  
- [Anonymous Type Definition](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)   
- [如何：在匿名類型宣告中推斷屬性名稱和類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)   
- [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>另請參閱  
+ [匿名類型定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
+ [如何：在匿名類型宣告中推斷屬性名稱和類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

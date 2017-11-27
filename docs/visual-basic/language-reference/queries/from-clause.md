@@ -1,97 +1,95 @@
 ---
-title: "From Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryFrom"
-  - "vb.QueryFromIn"
-  - "vb.QueryFromLet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], From"
-  - "From clause"
-  - "From statement"
+title: "From 子句 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryFrom
+- vb.QueryFromIn
+- vb.QueryFromLet
+helpviewer_keywords:
+- queries [Visual Basic], From
+- From clause [Visual Basic]
+- From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# From Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定一個或多個範圍變數以及要查詢的集合。  
+# <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
+指定一或多個範圍變數以及要查詢的集合。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
   
-|||  
-|-|-|  
 |詞彙|定義|  
-|`element`|必要項。  用於逐一查看集合中項目的「*範圍變數*」\(Range Variable\)。  在查詢逐一查看 `collection` 時，範圍變數可用以參考 `collection` 的每個成員。  必須是可列舉的型別。|  
-|`type`|選擇項。  `element` 的型別。  如果沒有指定 `type`，則會從 `collection` 推斷 `element` 的型別。|  
-|`collection`|必要項。  參考要查詢的集合。  必須是可列舉的型別。|  
+|---|---|  
+|`element`|必要項。 A*範圍變數*用來逐一查看集合的元素。 範圍變數用來參考的每個成員`collection`如逐一查看查詢`collection`。 必須是可列舉的類型。|  
+|`type`|選擇項。 `element` 的類型。 如果沒有`type`指定的型別`element`推斷從`collection`。|  
+|`collection`|必要項。 是指要查詢的集合。 必須是可列舉的類型。|  
   
-## 備註  
- `From` 子句可用來識別查詢的來源資料，以及用以參考來源集合中的某個項目的變數。  這些變數稱為「*範圍變數*」。  除非在查詢中使用 `Aggregate` 子句表示只傳回彙總結果，否則查詢中一定要使用 `From` 子句。  如需詳細資訊，請參閱 [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
+## <a name="remarks"></a>備註  
+ `From`子句用來識別來源資料查詢，包括用來參考項目的來源集合的變數。 這些變數稱為*範圍變數*。 `From`子句是必要的查詢，除非`Aggregate`子句用來識別傳回只會彙總結果的查詢。 如需詳細資訊，請參閱[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  
   
- 您可以在查詢中指定多個 `From` 子句，以識別要聯結 \(Join\) 的多個集合。  指定多個集合時，這些集合會個別受到反覆查看，如果這些集合互相關聯，您也可以將它們聯結再反覆查看。  您可以使用 `Select` 子句隱含聯結集合，也可以使用 `Join` 或 `Group Join` 子句明確聯結集合。  或者，還可以在單一 `From` 子句中將每個相關的範圍變數和集合以逗號隔開，藉以指定多個範圍變數和集合。  下列程式碼範例顯示 `From` 子句的這兩種語法選項。  
+ 您可以指定多個`From`查詢中，以識別要加入多個集合的子句。 當指定多個集合時，它們各自獨立地重複處理，或您可以將其聯結如果它們相關。 使用隱含聯結集合`Select`子句，或明確地使用`Join`或`Group Join`子句。 或者，您可以指定多個範圍變數和集合中單一`From`子句，具有每個相關的範圍變數以及與其他以逗號分隔的集合。 下列程式碼範例顯示兩個語法選項`From`子句。  
   
  [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
- `From` 子句會定義查詢的範圍，類似於 `For` 迴圈 \(Loop\) 的範圍。  因此，查詢的範圍中每個 `element` 範圍變數都必須具有唯一的名稱。  因為查詢中可以指定多個 `From` 子句，所以後續 `From` 子句可以參考該 `From` 子句中的範圍變數，也可以參考上一個 `From` 子句中的範圍變數。  例如，下列範例顯示一個巢狀 `From` 子句，其中第二個子句中的集合是根據第一個子句中的範圍變數屬性。  
+ `From`子句定義的範圍內的類似查詢的範圍`For`迴圈。 因此，每個`element`查詢範圍中的範圍變數必須有唯一的名稱。 因為您可以指定多個`From`子句的查詢時，後續`From`子句可以參考中的範圍變數`From`子句，或者也可以參考的範圍變數中前一個`From`子句。 例如，下列範例顯示巢狀`From`子句，其中第二個子句中的集合根據第一個子句中的範圍變數的屬性。  
   
  [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
- 每個 `From` 子句後面都可以接其他查詢子句的任意組合，以進一步限定查詢。  您可以利用下列方式限定查詢：  
+ 每個`From`子句後面可以接著以精簡查詢的其他查詢子句的任何組合。 您可以下列方式來縮小查詢：  
   
--   使用 `From` 和 `Select` 子句可以隱含合併多個集合，使用 `Join` 或 `Group Join` 子句則可明確合併多個集合。  
+-   使用隱含結合多個集合`From`和`Select`子句，或明確地使用`Join`或`Group Join`子句。  
   
--   使用 `Where` 子句可以篩選查詢結果。  
+-   使用`Where`子句來篩選查詢結果。  
   
--   使用 `Order By` 子句可將結果排序。  
+-   使用排序結果`Order By`子句。  
   
--   使用 `Group By` 子句可將類似的結果放在一起形成群組。  
+-   利用群組類似的結果`Group By`子句。  
   
--   使用 `Aggregate` 子句可以識別要針對整個查詢結果進行評估的彙總函式 \(Aggregate Function\)。  
+-   使用`Aggregate`子句，以識別要評估的整個查詢結果的彙總函式。  
   
--   使用 `Let` 子句可引進反覆運算變數，這個變數的值是由運算式而不是集合所決定。  
+-   使用`Let`引入反覆運算變數的值取決於運算式而不是集合的子句。  
   
--   使用 `Distinct` 子句可忽略重複的查詢結果。  
+-   使用`Distinct`子句來略過重複的查詢結果。  
   
--   使用 `Skip`、`Take`、`Skip While` 和 `Take While` 子句可以識別要傳回的結果部分。  
+-   使用傳回的結果的部分識別為`Skip`， `Take`， `Skip While`，和`Take While`子句。  
   
-## 範例  
- 下列查詢運算式使用 `From` 子句，為 `customers` 集合中每個 `Customer` 物件宣告範圍變數 `cust`。  接著 `Where` 子句使用範圍變數，將輸出限制在所指定區域的客戶。  `For Each` 迴圈則會顯示查詢結果中每個客戶的公司名稱。  
+## <a name="example"></a>範例  
+ 下列查詢運算式使用`From`子句來宣告範圍變數`cust`每個`Customer`物件存放至`customers`集合。 `Where`子句來限制輸出給客戶，從指定的地區中使用的範圍變數。 `For Each`迴圈會顯示查詢結果中的每個客戶的公司名稱。  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## 請參閱  
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Where Clause](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md)   
- [Distinct Clause](../../../visual-basic/language-reference/queries/distinct-clause.md)   
- [Join Clause](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md)   
- [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md)   
- [Skip Clause](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Take Clause](../../../visual-basic/language-reference/queries/take-clause.md)   
- [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
- [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>另請參閱  
+ [查詢](../../../visual-basic/language-reference/queries/queries.md)  
+ [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [For Each...Next 陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Distinct 子句](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Order By 子句](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)  
+ [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)

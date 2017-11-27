@@ -1,39 +1,31 @@
 ---
-title: "如何︰ 讀取和寫入編碼的文件 (Visual Basic) |Microsoft 文件"
+title: "如何： 讀取和寫入編碼文件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3247af177066e9b50d5028766f99e7bf6589050f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7dd871b4ab58103897bd5884581bf2e1353a3c60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>如何︰ 讀取和寫入編碼的文件 (Visual Basic)
-若要建立編碼的 XML 文件，您將新增<xref:System.Xml.Linq.XDeclaration>XML 樹狀結構中，設定為所要的字碼頁名稱編碼。</xref:System.Xml.Linq.XDeclaration>  
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>如何： 讀取和寫入編碼文件 (Visual Basic)
+若要建立編碼的 XML 文件，您可以將編碼設定為所需的字碼頁名稱，以便將 <xref:System.Xml.Linq.XDeclaration> 加入到 XML 樹狀結構中。  
   
- 傳回的任何值<xref:System.Text.Encoding.WebName%2A>是有效的值。</xref:System.Text.Encoding.WebName%2A>  
+ 由 <xref:System.Text.Encoding.WebName%2A> 傳回的任何值都是有效的值。  
   
- 如果您讀過編碼的文件，<xref:System.Xml.Linq.XDeclaration.Encoding%2A>屬性會設定為字碼頁名稱。</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ 如果您要讀取加密的文件，<xref:System.Xml.Linq.XDeclaration.Encoding%2A> 屬性將會設定為字碼頁名稱。  
   
- 如果您設定<xref:System.Xml.Linq.XDeclaration.Encoding%2A>為有效的字碼頁名稱，[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]會使用指定的編碼方式序列化。</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ 如果您將 <xref:System.Xml.Linq.XDeclaration.Encoding%2A> 設定為有效的字碼頁名稱，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會使用指定的編碼序列化。  
   
 ## <a name="example"></a>範例  
  下列範例會建立兩個文件，其中一個編碼為 utf-8，而另一個編碼為 utf-16。 然後，會載入文件並將編碼方式列印至主控台。  
@@ -94,5 +86,5 @@ Encoding of loaded document is:utf-16
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
  [進階的 LINQ to XML 程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

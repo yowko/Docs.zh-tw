@@ -1,61 +1,60 @@
 ---
-title: "WriteOnly (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "WriteOnly"
-  - "vb.WriteOnly"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "write-only properties"
-  - "WriteOnly keyword"
-  - "sensitive data, protecting"
-  - "properties [Visual Basic], write-only"
-  - "sensitive data"
+title: WriteOnly (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- WriteOnly
+- vb.WriteOnly
+helpviewer_keywords:
+- write-only properties
+- WriteOnly keyword [Visual Basic]
+- sensitive data, protecting
+- properties [Visual Basic], write-only
+- sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9dab9115c31e538bd28583b9f0591ae0c9611e2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WriteOnly (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-指定可寫入但無法讀取的屬性。  
+# <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
+指定可寫入屬性，但無法讀取。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
-## 規則  
- **宣告內容：** 只能在模組層級使用 `WriteOnly`。  這表示 `WriteOnly` 屬性的宣告內容必須是類別、結構或模組，且不可以是原始程式檔、命名空間或程序。  
+## <a name="rules"></a>規則  
+ **宣告內容。** 您只能在模組層級使用 `WriteOnly`。 這表示宣告內容`WriteOnly`屬性必須是類別、 結構或模組，而且不能是原始程式檔、 命名空間或程序。  
   
- 可將屬性宣告為 `WriteOnly`，但不可是變數。  
+ 您可以宣告為屬性`WriteOnly`，但不是變數。  
   
-## 使用 WriteOnly 的時機  
- 您有時會想要使用程式碼能夠設定值，但卻找不到它是什麼。  例如，敏感資料 \(例如社會註冊碼或密碼\) 需要加以保護，讓任何未設定它的元件無法進行存取。  在這些情況下，可使用 `WriteOnly` 屬性來設定該值。  
+## <a name="when-to-use-writeonly"></a>何時使用 WriteOnly  
+ 有時候您會想使用的程式碼，可以設定的值，但不是會發現它是什麼。 例如，敏感性資料，例如社交的註冊號碼或密碼，需要存取從受未設定任何元件。 在這些情況下，您可以使用`WriteOnly`屬性設定的值。  
   
 > [!IMPORTANT]
->  定義和使用 `WriteOnly` 屬性時，請考慮下列其他的保護措施：  
+>  當您定義和使用`WriteOnly`屬性，請考慮下列額外的保護措施：  
   
--   **覆寫** 如果屬性是類別的成員，則容許將它預設成 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，且不會將它宣告為 `Overridable` 或 `MustOverride`。  這會讓衍生類別無法透過覆寫進行不良的存取。  
+-   **覆寫。** 如果屬性是類別的成員，讓它預設為[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)，並不會宣告`Overridable`或`MustOverride`。 這可防止在衍生的類別進行覆寫透過不良的存取。  
   
--   **存取層級** 如果將屬性的敏感資料保留在一個或多個變數中，請將此資料宣告為 [Private](../../../visual-basic/language-reference/modifiers/private.md)，這樣就沒有其他程式碼可進行存取。  
+-   **存取層級。** 如果您屬性的機密資料保留在一個或多個變數，將其宣告[私人](../../../visual-basic/language-reference/modifiers/private.md)，讓其他程式碼可以存取它們。  
   
--   **加密** ：以加密格式 \(而非純文字\) 儲存所有敏感資料。  如果惡意程式碼以某種方法取得該記憶體區域的存取權，則使用此資料會較困難。  如果需要序列化敏感資料，則加密也十分有用。  
+-   **加密。** 儲存所有的機密資料，以加密形式，而不是以純文字。 如果惡意程式碼以某種方式取得存取權的記憶體該區域，就更難以將使用的資料。 加密也很有用，如果需要序列化的機密資料。  
   
--   **重設** ：正在結束定義屬性的類別、結構或模組時，請將敏感資料重設為預設值，或重設為其他不具意義的值。  釋出記憶體區域以供一般存取時，這會提供額外的保護。  
+-   **重設。** 正在終止類別、 結構或模組定義該屬性時，重設的敏感性資料，預設值或其他無意義的值。 該區域的記憶體已釋放的一般存取時，這會提供額外的保護。  
   
--   **保存性** ：如果可以避免，請不要保存任何敏感資料 \(例如保留在磁碟上\)。  而且，請不要將任何敏感資料寫入剪貼簿。  
+-   **持續性。** 不會保存任何敏感性資料，例如在磁碟上，如果可以避免。 此外，不寫入任何機密資料到剪貼簿。  
   
- `WriteOnly` 修飾詞可用於以下內容中：  
+ `WriteOnly`修飾詞可用於此內容：  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## 請參閱  
- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
+## <a name="see-also"></a>另請參閱  
+ [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
  [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

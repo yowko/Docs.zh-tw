@@ -1,43 +1,46 @@
 ---
-title: "如何：繪製矩形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "繪製, 矩形"
-  - "圖形 [WPF], 矩形"
-  - "矩形, 繪製"
+title: "如何：繪製矩形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [WPF], rectangles
+- graphics [WPF], rectangles
+- rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c163897af27c9b34c8cd87a3b197047f86d21ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：繪製矩形
-本範例說明如何使用 <xref:System.Windows.Shapes.Rectangle> 項目繪製矩形。  
+# <a name="how-to-draw-a-rectangle"></a>如何：繪製矩形
+這個範例示範如何使用繪製矩形<xref:System.Windows.Shapes.Rectangle>項目。  
   
- 若要繪製矩形，請建立 <xref:System.Windows.Shapes.Rectangle> 項目並指定它的 <xref:System.Windows.FrameworkElement.Width%2A> 和 <xref:System.Windows.FrameworkElement.Height%2A>。  若要繪製矩形內部，請設定其 <xref:System.Windows.Shapes.Shape.Fill%2A>。  若要繪製矩形外框，請使用其 <xref:System.Windows.Shapes.Shape.Stroke%2A> 和 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 屬性。  
+ 若要繪製矩形，建立<xref:System.Windows.Shapes.Rectangle>項目，並指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。 若要繪製的矩形內部，將其<xref:System.Windows.Shapes.Shape.Fill%2A>。 若要讓矩形外框，使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>屬性。  
   
- 若要將矩形的邊角繪製成圓角，請指定選擇性的 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 屬性。  <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> 和 <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> 屬性會設定用來繪製矩形圓角的 X 軸和 Y 軸半徑。  
+ 若要將矩形的圓角中，指定選擇性<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>屬性。 <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>設定 x 軸和 y 軸半徑，用來決定矩形的圓橢圓形的屬性。  
   
- 下列範例會將兩個 <xref:System.Windows.Shapes.Rectangle> 項目繪製在 <xref:System.Windows.Controls.Canvas> 中。  第一個矩形的內部為 <xref:System.Windows.Media.Brushes.Blue%2A>。  第二個矩形有 <xref:System.Windows.Media.Brushes.Blue%2A> 內部、<xref:System.Windows.Media.Brushes.Black%2A> 外框和圓角。  
+ 在下列範例中，兩個<xref:System.Windows.Shapes.Rectangle>項目會繪製<xref:System.Windows.Controls.Canvas>。 第一個矩形<xref:System.Windows.Media.Brushes.Blue%2A>內部。 第二個矩形<xref:System.Windows.Media.Brushes.Blue%2A>內部，<xref:System.Windows.Media.Brushes.Black%2A>大綱，以及圓的角。  
   
-## 範例  
- [!code-xml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
+## <a name="example"></a>範例  
+ [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- 雖然本範例使用 <xref:System.Windows.Controls.Canvas> 包含矩形，不過您可以將矩形項目 \(以及所有其他圖案項目\) 用於任何支援非文字內容的 <xref:System.Windows.Controls.Panel> 或 <xref:System.Windows.Controls.Control>。  事實上，矩形特別適合用來提供 <xref:System.Windows.Controls.Grid> 面板部分的背景。  如需範例，請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)。  
+ 雖然這個範例會使用<xref:System.Windows.Controls.Canvas>包含矩形，您可以使用矩形項目 （以及所有其他圖形項目） 與任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支援非文字內容。 事實上，矩形會特別有用的部分提供背景<xref:System.Windows.Controls.Grid>面板。 如需範例，請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)。  
   
- 這個範例是完整範例的一部分。如需完整範例，請參閱[圖案項目範例](http://go.microsoft.com/fwlink/?LinkID=160037) \(英文\)。  
+ 這個範例是較大範例的一部分如需完整範例，請參閱[圖形項目範例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## 請參閱  
- <xref:System.Windows.Shapes.Rectangle>   
- [圖案項目範例](http://go.microsoft.com/fwlink/?LinkID=160037)   
- [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Shapes.Rectangle>  
+ [圖形項目範例](http://go.microsoft.com/fwlink/?LinkID=160037)  
+ [WPF 中圖案和基本繪圖概觀](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)

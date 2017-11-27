@@ -1,54 +1,52 @@
 ---
-title: "Continue Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.continue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Continue statement [Visual Basic]"
-  - "loops, transferring to next iteration"
+title: "Continue 陳述式 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.continue
+helpviewer_keywords:
+- Continue statement [Visual Basic]
+- loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4a47819600a6c1d58f09c2f8ed3443632e9dab68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Continue Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-將控制權立即轉移到迴圈 \(Loop\) 的下一個反覆運算。  
+# <a name="continue-statement-visual-basic"></a>Continue 陳述式 (Visual Basic)
+將控制權立即迴圈的下一個反覆項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-Continue { Do | For | While }  
+Continue { Do | For | While }  
 ```  
   
-## 備註  
- 您可以從 `Do`、`For` 或 `While` 迴圈內轉移到該迴圈的下一個反覆運算。  控制權會立即移交給迴圈條件測試，這相當於轉移到 `For` 或 `While` 陳述式，或是轉移到包含 `Until` 或 `While` 子句的 `Do` 或 `Loop` 陳述式。  
+## <a name="remarks"></a>備註  
+ 您可以從傳輸內`Do`， `For`，或`While`迴圈，該迴圈的下一個反覆項目。 控制會傳遞給迴圈的條件測試，這相當於將傳送至立即`For`或`While`陳述式，或`Do`或`Loop`包含陳述式`Until`或`While`子句。  
   
- 您可以在迴圈中任何允許轉移的位置使用 `Continue`。  允許控制權轉移的規則與 [GoTo Statement](../../../visual-basic/language-reference/statements/goto-statement.md)相同。  
+ 您可以使用`Continue`允許傳輸的迴圈中的任何位置。 允許將控制項的規則是與使用相同[GoTo 陳述式](../../../visual-basic/language-reference/statements/goto-statement.md)。  
   
- 例如，如果迴圈完全包含在 `Try` 區塊、`Catch` 區塊或 `Finally` 區塊內，您便可以使用 `Continue` 轉移到迴圈之外。  相反地，如果 `Try`...`End Try` 結構包含於迴圈內，您就無法使用 `Continue` 將控制權轉移到 `Finally` 區塊之外，而是只能在要完全轉移到 `Try`...`End Try` 結構外時，用它轉移到 `Try` 或 `Catch` 區塊之外。  
+ 比方說，如果迴圈是完全包含在`Try`區塊，`Catch`區塊，或`Finally`區塊中，您可以使用`Continue`迴圈之外傳輸。 另一方面，如果`Try`...`End Try`結構是否包含在迴圈中，您無法使用`Continue`傳輸超出控制項`Finally`區塊，以及您可以使用它來傳送出`Try`或`Catch`完全轉移出時才會封鎖`Try`...`End Try`結構。  
   
- 如果您具有相同類型的巢狀迴圈 \(例如，將 `Do` 迴圈置於另一個 `Do` 迴圈內\)，則 `Continue Do` 陳述式會跳到包含該陳述式之最內層 `Do` 迴圈的下一個反覆運算。  您無法使用 `Continue` 跳到相同類型之外層迴圈的下一個反覆運算。  
+ 如果您有巢狀的迴圈屬於相同的類型，例如`Do`另迴圈內`Do`迴圈，`Continue Do`陳述式會略過的最內層的下一個反覆運算`Do`包含它的迴圈。 您無法使用`Continue`跳至包含相同類型的迴圈的下一個反覆項目。  
   
- 如果您具有不同類型的巢狀迴圈 \(例如，將 `Do` 迴圈置於 `For` 迴圈內\)，則可以使用 `Continue Do` 或 `Continue For`，跳到這些任一迴圈的下一個反覆運算。  
+ 如果您有巢狀的迴圈的不同型別，例如`Do`迴圈內`For`迴圈中，您可以使用跳至其中一個迴圈的下一個反覆運算`Continue Do`或`Continue For`。  
   
-## 範例  
- 下列程式碼範例會使用 `Continue While` 陳述式，在除數為零時跳到陣列的下一行。  `Continue While` 會在 `For` 迴圈內。  它會轉移到 `While col < lastcol` 陳述式，這是包含 `For` 迴圈之最內層 `While` 迴圈的下一個反覆運算。  
+## <a name="example"></a>範例  
+ 下列程式碼範例使用`Continue While`陳述式跳至下一個資料行的陣列，如果除數為零。 `Continue While`位於`For`迴圈。 它會傳送到`While col < lastcol`陳述式，這是最內層的下一個反覆運算`While`迴圈，其中包含`For`迴圈。  
   
  [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
-## 請參閱  
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [Do...Loop 陳述式](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [While...End While 陳述式](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

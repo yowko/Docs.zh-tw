@@ -1,43 +1,35 @@
 ---
-title: "如何︰ 執行運算式樹狀架構 (Visual Basic) |Microsoft 文件"
+title: "如何： 執行運算式樹狀架構 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e12c45b417310f097d597561b2652ee793a4b2c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45a13f13659472b7620b6df070815ace1d6fb0de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>如何︰ 執行運算式樹狀架構 (Visual Basic)
-本主題說明如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回值，或只是執行動作，例如呼叫方法。  
+# <a name="how-to-execute-expression-trees-visual-basic"></a>如何： 執行運算式樹狀架構 (Visual Basic)
+本主題示範如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。  
   
- 您可以執行 lambda 運算式表示運算式樹狀架構。 運算式樹狀結構，代表 lambda 運算式的型別<xref:System.Linq.Expressions.LambdaExpression>或<xref:System.Linq.Expressions.Expression%601>。</xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression> 若要執行這些運算式樹狀架構，呼叫<xref:System.Linq.Expressions.LambdaExpression.Compile%2A>方法以建立可執行的委派，然後叫用委派。</xref:System.Linq.Expressions.LambdaExpression.Compile%2A>  
+ 您只能執行代表 Lambda 運算式的運算式樹狀架構。 代表 Lambda 運算式的運算式樹狀架構為 <xref:System.Linq.Expressions.LambdaExpression> 或 <xref:System.Linq.Expressions.Expression%601> 類型。 若要執行這些運算式樹狀架構，請呼叫 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 方法建立可執行委派，然後叫用該委派。  
   
 > [!NOTE]
->  如果不知道委派型別，也就是 lambda 運算式為類型<xref:System.Linq.Expressions.LambdaExpression>而非<xref:System.Linq.Expressions.Expression%601>，您必須呼叫<xref:System.Delegate.DynamicInvoke%2A>方法而不是直接叫用該委派。</xref:System.Delegate.DynamicInvoke%2A> </xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression>  
+>  如果不知道委派的類型，也就是 lambda 運算式是類型 <xref:System.Linq.Expressions.LambdaExpression> 而非 <xref:System.Linq.Expressions.Expression%601>，您必須對委派呼叫 <xref:System.Delegate.DynamicInvoke%2A> 方法，而不是直接叫用它。  
   
- 如果運算式樹狀架構不代表 lambda 運算式，您可以建立新的 lambda 運算式做為其主體中，具有原始的運算式樹狀架構，藉由呼叫<xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>方法。</xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 然後，您可以執行 lambda 運算式，如本節先前所述。  
+ 如果運算式樹狀架構不代表 Lambda 運算式，您可以呼叫 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 方法，建立新的 Lambda 運算式，以原始的運算式樹狀架構當做其主體。 然後，您可以如本節稍早所述來執行此 Lambda 運算式。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例示範如何執行運算式樹狀架構代表某個數字乘冪提高藉由建立 lambda 運算式，並執行它。 結果，代表數字乘冪，會顯示。  
+ 下列程式碼範例示範如何藉由建立和執行 Lambda 運算式，來執行代表數字自乘至乘冪的運算式樹狀架構。 顯示的結果會是已自乘至乘冪的數字。  
   
 ```vb  
 ' The expression tree to execute.  
@@ -61,10 +53,10 @@ MsgBox(result)
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   如果沒有參考，加入專案參考 system.core.dll 的參考。  
+-   如果 System.Core.dll 的專案參考原本未參考，請新增這項參考。  
   
--   包括 System.Linq.Expressions 命名空間。  
+-   加入 System.Linq.Expressions 命名空間。  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [如何︰ 修改運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+ [運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [如何： 修改運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

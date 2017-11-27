@@ -1,91 +1,88 @@
 ---
-title: "Not Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Not"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Boolean expressions, negating"
-  - "operators [Visual Basic], bitwise"
-  - "negation operator"
-  - "inverse bit values in variables"
-  - "bitwise operators, NOT operator"
-  - "bitwise comparison"
-  - "Not operator [Visual Basic]"
-  - "logical negation"
-  - "operators [Visual Basic], negation"
+title: "Not 運算子 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Not
+helpviewer_keywords:
+- Boolean expressions, negating
+- operators [Visual Basic], bitwise
+- negation operator [Visual Basic]
+- inverse bit values in variables [Visual Basic]
+- bitwise operators [Visual Basic], NOT operator
+- bitwise comparison [Visual Basic]
+- Not operator [Visual Basic]
+- logical negation
+- operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ac160aef7b7dc8acb8bf0211b403599692f2373c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Not Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-對 `Boolean` 運算式執行邏輯否定，或對數值運算式執行位元否定。  
+# <a name="not-operator-visual-basic"></a>Not 運算子 (Visual Basic)
+上執行邏輯否定`Boolean`運算式或數值運算式上的位元否定運算。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 result = Not expression  
 ```  
   
-## 組件  
+## <a name="parts"></a>組件  
  `result`  
- 必要項。  任何 `Boolean` 或數值運算式。  
+ 必要項。 任何`Boolean`或數值運算式。  
   
  `expression`  
- 必要項。  任何 `Boolean` 或數值運算式。  
+ 必要項。 任何`Boolean`或數值運算式。  
   
-## 備註  
- 就 `Boolean` 運算式而論，下表說明了如何判斷 `result`。  
+## <a name="remarks"></a>備註  
+ 如`Boolean`運算式下, 表將說明如何`result`決定。  
   
-|如果 `expression` 為|`result` 的值為|  
-|-----------------------|------------------|  
+|如果`expression`是|值`result`是|  
+|------------------------|------------------------------|  
 |`True`|`False`|  
 |`False`|`True`|  
   
- 就數值運算式而論，`Not` 運算子會將任何數值運算式的位元值反轉，並依據下表來設定 `result` 中的對應位元。  
+ 針對數值運算式，`Not`運算子反轉任何數值運算式的位元值和對應的中位元設`result`根據下表。  
   
-|如果 `expression` 中的位元是|`result` 中的位元是|  
-|---------------------------|--------------------|  
+|如果位元`expression`是|中的位元`result`是|  
+|-------------------------------|----------------------------|  
 |1|0|  
 |0|1|  
   
 > [!NOTE]
->  由於邏輯和位元運算子的優先順序低於其他算術和關係運算子，所以任何位元運算都必須加上括號，以確保執行結果的正確性。  
+>  因為邏輯和位元運算子會有較低的優先順序高於其他算術和關係運算子，所以任何位元運算應該括在括號可確保能夠正確執行。  
   
-## 資料型別  
- 若為布林 \(Boolean\) 否定，則結果的資料型別為 `Boolean`。  若為位元 \(Bitwise\) 運算，則結果資料型別會與 `expression` 的資料型別相同。  不過，如果運算式是 `Decimal`，則結果為 `Long`。  
+## <a name="data-types"></a>資料類型  
+ 布林值的否定運算結果的資料型別是`Boolean`。 位元否定運算，將結果資料類型是屬於相同`expression`。 不過，如果運算式是`Decimal`，結果是`Long`。  
   
-## 多載化  
- `Not` 運算子可以「*多載*」\(Overloaded\)，也就是，當運算元具備類別或結構的類型時，該類別或結構就可以重新定義其行為。  如果您的程式碼在這種類別或結構上使用此運算子，就一定要先瞭解其重新定義的行為。  如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+## <a name="overloading"></a>多載化  
+ `Not`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時其運算元的該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
-## 範例  
- 下列範例會使用 `Not` 運算子，對 `Boolean` 運算式執行邏輯否定。  結果為 `Boolean` 值，表示運算式的相反值。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Not`上執行邏輯否定運算子`Boolean`運算式。 結果是`Boolean`值，表示運算式值的反向。  
   
  [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
   
- 前述範例分別會產生 `False` 和 `True` 的結果。  
+ 上述範例產生的結果`False`和`True`分別。  
   
-## 範例  
- 下列範例會使用 `Not` 運算子，對數值運算式的個別位元執行邏輯否定。  會將結果模式中的對應位元設為運算元模式中對應位元的反向，包括正負號位元。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Not`運算子執行邏輯否定的數值運算式的個別位元。 結果模式中的位元會設定為在運算元模式中，包括正負號位元的對應位元的反向。  
   
  [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
   
- 前一個範例分別產生 \-11、\-9 和 \-7 的結果。  
+ 上述範例中會分別產生-11-9 及-7 的結果。  
   
-## 請參閱  
- [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>另請參閱  
+ [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [在 Visual Basic 中的邏輯和位元運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

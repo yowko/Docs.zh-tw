@@ -1,36 +1,32 @@
 ---
-title: "使用純虛擬函式 (Visual Basic) 重構 |Microsoft 文件"
+title: "使用純虛擬函式 (Visual Basic) 進行重構"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a60f55513aa30e4f221c45f4be506d6f0507406
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>重構使用純虛擬函式 (Visual Basic)
-下列範例會重構先前範例中，[使用擴充方法 (Visual Basic) 重構](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，若要使用純虛擬函式，在此範例中，若要尋找段落的文字會移到純靜態方法的程式碼`ParagraphText`。  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>使用純虛擬函式 (Visual Basic) 進行重構
+下列範例重構前一個範例中，[使用擴充方法 (Visual Basic) 進行重構](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，可使用純虛擬函式在此範例中，程式碼以尋找段落的文字會移至 單純的靜態方法`ParagraphText`.  
   
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式。 此範例在這個教學課程中，會在先前的範例上建置。 重構的程式碼會在以下程式碼的註解中叫出。  
   
- 如需建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 建立此範例的來源文件的指示，請參閱[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用中的型別<xref:System.IO.Packaging?displayProperty=fullName>命名空間。</xref:System.IO.Packaging?displayProperty=fullName>  
+ 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -183,9 +179,9 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>後續步驟  
  下一個範例顯示如何將 XML 規劃為不同的組織結構：  
   
--   [組織結構規劃 XML 不同形式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [不同的組織結構 (Visual Basic) 的組織結構規劃 XML](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程︰ 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [重構的擴充方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
- [重構為純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+ [教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [使用擴充方法 (Visual Basic) 進行重構](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+ [重構到純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

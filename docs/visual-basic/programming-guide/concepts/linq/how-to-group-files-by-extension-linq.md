@@ -1,36 +1,28 @@
 ---
-title: "如何︰ 依副檔名 (LINQ) (Visual Basic) 分組檔案 |Microsoft 文件"
+title: "如何： 依副檔名 (LINQ) (Visual Basic) 的檔案群組"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f78785b4da3ae3b362603eea34d81207ed48a657
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1e2d81f88371e63f64567422e87ed5b185e7a633
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何︰ 依副檔名 (LINQ) (Visual Basic) 的檔案群組
-此範例顯示如何使用 LINQ，若要執行進階的分組和排序作業清單上的檔案或資料夾。 它也示範如何使用網頁在主控台視窗輸出<xref:System.Linq.Enumerable.Skip%2A>和<xref:System.Linq.Enumerable.Take%2A>方法。</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A>  
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何： 依副檔名 (LINQ) (Visual Basic) 的檔案群組
+此範例示範如何使用 LINQ，對檔案或資料庫清單執行進階群組和排序作業。 它也示範如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在主控台視窗中分頁輸出。  
   
 ## <a name="example"></a>範例  
- 下列查詢會示範如何依副檔名分組指定的目錄樹狀結構的內容。  
+ 下列查詢示範如何依副檔名分組指定樹狀目錄的內容。  
   
 ```vb  
 Module GroupByExtension  
@@ -108,11 +100,11 @@ Module GroupByExtension
 End Module  
 ```  
   
- 此程式的輸出可以很長的根據本機檔案系統，以及詳細資料`startFolder`設為。 若要啟用 檢視所有結果，此範例會示範如何將結果分頁。 相同的技巧可以套用至 Windows 和 Web 應用程式中。 請注意，因為字碼頁的巢狀群組中的項目`For Each`迴圈是必要。 另外還有一些額外的邏輯來計算目前的位置，在清單中，並讓使用者停止分頁並結束程式。 在此案例中，分頁查詢針對快取的結果從執行原始查詢。 在其他內容，例如 LINQ to SQL，這類不需要快取。  
+ 根據本機檔案系統的詳細資料及 `startFolder` 的設定，此程式的輸出可能很長。 為了能夠檢視所有結果，此範例示範如何將結果分頁。 您可以將相同的技術應用到 Windows 和 Web 應用程式。 請注意，因為程式碼會將群組中的項目分頁，所以需要使用巢狀 `For Each` 迴圈。 此外還需要一些額外的邏輯來計算清單中目前的位置，以及讓使用者停止分頁並結束程式。 在這種特殊情況下，會對原始查詢的快取結果執行分頁查詢。 在其他內容中 (例如 LINQ to SQL)，則不需要這類快取。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立專案的目標.NET Framework 3.5 或更新版本與對 system.core.dll 的參考的版本和`Imports`System.Linq 命名空間陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

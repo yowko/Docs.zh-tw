@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 92f070a919363e373cd898682c37ac7a199d2463
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
 -   [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/05/2017
 -   [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)  
   
     -   [WIF 組態結構描述慣例](../../../docs/framework/security/wif-configuration-schema-conventions.md)
-

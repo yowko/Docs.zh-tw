@@ -1,65 +1,63 @@
 ---
-title: "類別、 結構和介面的名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "型別名稱的指導方針"
-  - "類別 [.NET Framework] 名稱"
-  - "列舉 [.NET Framework] 名稱"
-  - "名稱 [.NET Framework] 介面"
-  - "一般型別名稱"
-  - "名稱 [.NET Framework] 的型別名稱"
-  - "名稱 [.NET Framework] 類別"
-  - "介面 [.NET Framework] 名稱"
-  - "泛型型別參數"
+title: "類別、結構和介面的名稱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type names, guidelines
+- classes [.NET Framework], names
+- enumerations [.NET Framework], names
+- names [.NET Framework], interfaces
+- common type names
+- names [.NET Framework], type names
+- names [.NET Framework], classes
+- interfaces [.NET Framework], names
+- generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a4f4b9e48587138f3e65c0c6825af0b3e4e8c592
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 類別、 結構和介面的名稱
-請依照下列命名指導方針適用於一般類型命名。  
+# <a name="names-of-classes-structs-and-interfaces"></a>類別、結構和介面的名稱
+遵循的命名指導方針適用於一般類型命名。  
   
- **✓ 執行** 命名類別與結構名詞或名詞片語，使用 PascalCasing。  
+ **✓ 不要**命名類別與結構名詞或名詞片語，使用 PascalCasing。  
   
- 這可以區別型別名稱與命名的動詞片語的方法。  
+ 這個區別型別名稱與命名的動詞片語的方法。  
   
- **✓ 執行** 命名形容詞片語，或有時候名詞或名詞片語的介面。  
+ **✓ 不要**命名介面與形容詞片語，或有時候名詞或名詞片語。  
   
- 名詞和名詞片語應該使用很少，而且它們可能表示的類型應該是抽象類別，並不是介面。  
+ 名詞和名詞片語應該很少使用，它們可能表示的類型應該是抽象類別，並不是介面。  
   
- **X 不** 為指定類別名稱的前置詞 \(例如，"C"\)。  
+ **X 不**提供以類別名稱的前置詞 (例如，"C")。  
   
- **✓ 考慮** 名稱的結尾衍生的基底類別的類別名稱。  
+ **✓ 考慮**名稱的結尾衍生的基底類別名稱的類別。  
   
- 這是非常容易閱讀，而且清楚地說明的關聯性。 這個程式碼中的部分範例如下︰ `ArgumentOutOfRangeException`, ，這是一種的 `Exception`, ，和 `SerializableAttribute`, ，這是一種的 `Attribute`。 不過，請務必使用合理判斷在套用此指導方針。例如， `Button` 類別是一種類型的 `Control` 事件，雖然 `Control` 不會出現在其名稱。  
+ 這是不易閱讀，而且清楚地說明的關聯性。 這個程式碼中的某些範例包括： `ArgumentOutOfRangeException`，這是一種的`Exception`，和`SerializableAttribute`，這是一種的`Attribute`。 不過，請務必使用合理判斷在套用這個指導方針。例如，`Button`類別是一種的`Control`事件，雖然`Control`不會出現在其名稱。  
   
- **✓ 執行** 前置詞介面名稱以字母 I，以表示型別是介面。  
+ **✓ 不要**前置詞介面名稱以字母 I，表示型別是介面。  
   
- 例如， `IComponent` （描述性名詞） `ICustomAttributeProvider` （名詞片語） 和 `IPersistable` （形容詞） 是適當的介面名稱。 如同其他的型別名稱，避免縮寫。  
+ 例如， `IComponent` （描述性名詞） `ICustomAttributeProvider` （名詞片語） 和`IPersistable`（形容詞） 是適當的介面名稱。 如同其他類型名稱，避免縮寫。  
   
- **✓ 執行** 確保僅由"I"前置詞上的介面名稱定義其中類別是標準的介面實作的一組類別 – 介面時，名稱會不同。  
+ **✓ 不要**確保僅由"I"前置詞上的介面名稱定義在類別是標準的介面實作的一組類別 – 介面時，名稱會不同。  
   
-## 泛型型別參數的名稱  
- .NET Framework 2.0 已加入泛型。 此功能導入新類型的識別項稱為 *型別參數*。  
+## <a name="names-of-generic-type-parameters"></a>泛型型別參數的名稱  
+ 泛型已新增至.NET Framework 2.0。 此功能導入了一種新的識別項稱為*型別參數*。  
   
- **✓ 執行** 泛型型別參數名稱使用描述性名稱，除非單一字母名稱是完全一目了然，而且具描述性的名稱不會增加其值。  
+ **✓ 不要**泛型型別參數名稱使用描述性名稱，除非單一字母名稱是完全一目了然，而且專案的描述性名稱不會加入值。  
   
- **✓ 考慮** 使用 `T` 做為型別參數名稱用於具有一個單一字母型別參數的類型。  
+ **✓ 考慮**使用`T`做為型別參數名稱與一個單一字母的型別參數的類型。  
   
 ```  
 public int IComparer<T> { ... }  
@@ -67,7 +65,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }  
 ```  
   
- **✓ 執行** 描述性型別參數名稱前面加上 `T`。  
+ **✓ 不要**描述性型別參數名稱前面加上`T`。  
   
 ```  
 public interface ISessionChannel<TSession> where TSession : ISession{  
@@ -75,42 +73,42 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 }  
 ```  
   
- **✓ 考慮** 指出條件約束放在以參數名稱的型別參數。  
+ **✓ 考慮**指出條件約束放在以參數名稱的型別參數上。  
   
- 例如，參數限制為 `ISession` 可能呼叫 `TSession`。  
+ 例如，將參數限制為`ISession`可能呼叫`TSession`。  
   
-## 一般型別的名稱  
- **✓ 執行** 遵循命名型別衍生自或實作特定的.NET Framework 型別時下, 表中所述的指導方針。  
+## <a name="names-of-common-types"></a>一般型別的名稱  
+ **✓ 不要**遵循命名型別衍生自或實作特定的.NET Framework 型別時下, 表中所述的指導方針。  
   
-|基底型別|衍生\/實作型別指導方針|  
-|----------|------------------|  
-|`System.Attribute`|**✓ 執行** 將後置詞 「 屬性 」 新增到自訂屬性類別的名稱。 將自訂屬性類別的名稱尾碼 \[屬性\]。|  
-|`System.Delegate`|**✓ 執行** 將後置詞"事件處理常式 」 新增到事件中所使用的委派的名稱。<br /><br /> **✓ 執行** 加入做為事件處理常式之外的後置詞 「 回呼 」 名稱的委派。<br /><br /> **X 不** 加入委派的後置詞 「 委派 」。|  
-|`System.EventArgs`|**✓ 執行** 新增尾碼"EventArgs 」。|  
-|`System.Enum`|**X 不** 衍生自這個類別使用改為您的語言所支援的關鍵字; 例如，在 C\# 中，使用 enum 關鍵字。<br /><br /> **X 不** 加入後置詞 「 列舉 」 或 「 旗標 」。|  
-|`System.Exception`|**✓ 執行** 加入後置詞 「 例外狀況 」。|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ 執行** 新增尾碼 \[字典\]。 請注意， `IDictionary` 是特定類型的集合，但這項指導方針的優先順序高於遵循的一般集合方針。|  
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ 執行** 加入後置詞 「 集合 」。|  
-|`System.IO.Stream`|**✓ 執行** 加入後置詞 「 資料流 」。|  
-|`CodeAccessPermission IPermission`|**✓ 執行** 加入後置詞 「 使用權限 」。|  
+|基底類型|衍生/實作型別指導方針|  
+|---------------|------------------------------------------|  
+|`System.Attribute`|**✓ 不要**加入後置詞"Attribute"的自訂屬性的類別名稱。|  
+|`System.Delegate`|**✓ 不要**將後置詞"事件處理常式 」 新增到事件中所使用的委派的名稱。<br /><br /> **✓ 不要**加入後置詞"Callback"名稱的委派以外做為事件處理常式。<br /><br /> **X 不**委派中加入後置詞 「 委派 」。|  
+|`System.EventArgs`|**✓ 不要**加入後置詞"EventArgs。 」|  
+|`System.Enum`|**X 不**衍生自這個類別使用改為您的語言支援的關鍵字; 例如，在 C# 中，使用`enum`關鍵字。<br /><br /> **X 不**加入後置詞 「 列舉 」 或 「 旗標。 」|  
+|`System.Exception`|**✓ 不要**加入後置詞 「 例外狀況 」。|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ 不要**加入後置詞"字典。 請注意，`IDictionary`特定類型的集合，但這項指導方針的優先順序高於遵循的一般集合導線。|  
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ 不要**加入後置詞 「 集合 」。|  
+|`System.IO.Stream`|**✓ 不要**加入後置詞"資料流。 」|  
+|`CodeAccessPermission IPermission`|**✓ 不要**加入後置詞 「 權限。 」|  
   
-## 命名的列舉型別  
- 一般的列舉型別 （也稱為列舉） 的名稱應遵循的一般型別命名規則 （PascalCasing 等）。 不過，有一些額外的指導方針適用於列舉。  
+## <a name="naming-enumerations"></a>命名列舉型別  
+ 一般情況下 （也稱為列舉） 的列舉類型的名稱應該遵循的一般型別命名規則 （PascalCasing 等等）。 不過，有一些額外的指導方針適用於列舉。  
   
- **✓ 執行** 使用單數型別名稱的列舉型別，除非其值是位元欄位。  
+ **✓ 不要**使用單數的型別名稱的列舉型別，除非其值是位元欄位。  
   
- **✓ 執行** 具有位元欄位使用列舉的複數的型別名稱，做為值，也稱為旗標列舉。  
+ **✓ 不要**與位元欄位使用列舉的複數的型別名稱，做為值，也稱為旗標列舉。  
   
- **X 不** 列舉型別名稱中使用之 「 列舉 」 後置字元。  
+ **X 不**列舉型別名稱中使用的 「 列舉 」 後置詞。  
   
- **X 不** 使用"標示"或"Flags"後的置字元在列舉型別名稱。  
+ **X 不**使用 」 的旗標 」 或"Flags"尾碼在列舉型別名稱。  
   
- **X 不** 列舉值名稱 \(例如，"ad"適用於 ADO 的列舉。\)、 「 rtf 」 上使用前置詞 rich text 格式的列舉，依此類推。  
+ **X 不**使用前置詞上的列舉值名稱 (例如，"ad"ADO 列舉。)、"rtf"rtf 文字列舉等等。  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 著作權所有，並保留一切權利。*  
+ *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
   
- *皮耳森教育，從 Inc.的權限所印製 [Framework 設計方針︰ 慣例、 慣用句和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 並 Brad Abrams，2008 年 10 月 22 日由 Addison\-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## 請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

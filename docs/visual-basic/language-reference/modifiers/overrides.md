@@ -1,64 +1,63 @@
 ---
-title: "Overrides (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overrides"
-  - "vb.Overrides"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "properties [Visual Basic], redefining"
-  - "procedures, overriding"
-  - "procedures, redefining"
-  - "overriding"
-  - "Overrides keyword"
-  - "overriding, Overrides keyword"
-  - "properties [Visual Basic], overriding"
+title: Overrides (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overrides
+- vb.Overrides
+helpviewer_keywords:
+- properties [Visual Basic], redefining
+- procedures [Visual Basic], overriding
+- procedures [Visual Basic], redefining
+- overriding
+- Overrides keyword [Visual Basic]
+- overriding, Overrides keyword
+- properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1bee6a6235b87a7e20f087a73bef76e0fc7bf124
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Overrides (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 指定屬性或程序會覆寫繼承自基底類別的同名屬性或程序。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
-## 規則  
+## <a name="rules"></a>規則  
   
 -   **宣告內容。** 您只能在屬性或程序宣告陳述式中使用 `Overrides`。  
   
--   **結合的修飾詞。** 您不能相同的宣告中同時指定 `Overrides` 與 `Shadows` 或 `Shared`。  因為覆寫項目可隱含覆寫，您無法結合 `Overridable` 與 `Overrides`。  
+-   **結合的修飾詞。** 您不能相同的宣告中同時指定 `Overrides` 與 `Shadows` 或 `Shared`。 因為覆寫項目可隱含覆寫，您無法結合 `Overridable` 與 `Overrides`。  
   
--   **相符簽章。** 此宣告的簽章必須完全符合它覆寫的屬性或程序的*簽章*。  這表示的參數清單必須有相同數目的參數、相同的順序及相同的資料類型。  
+-   **相符簽章。** 此宣告的簽章必須完全符合*簽章*屬性或程序，它會覆寫。 這表示的參數清單必須有相同數目的參數、相同的順序及相同的資料類型。  
   
      除了簽章，覆寫宣告也必須完全符合下列各項：  
   
     -   存取層級  
   
-    -   傳回類型 \(如果有的話\)  
+    -   傳回型別 (如果有的話)  
   
--   **泛型簽章。** 在泛型程序中，簽章包含類型參數的個數。  因此，覆寫宣告在這方面也必須符合基底類別版本。  
+-   **泛型簽章。** 在泛型程序中，簽章包含型別參數的個數。 因此，覆寫宣告在這方面也必須符合基底類別版本。  
   
 -   **其他符合。** 除了符合簽章的基底類別版本，此宣告在下列方面也必須符合它：  
   
-    -   存取層級修飾詞 \(例如 [Public](../../../visual-basic/language-reference/modifiers/public.md)\)  
+    -   存取層級修飾詞 (例如[公用](../../../visual-basic/language-reference/modifiers/public.md))  
   
-    -   每個參數的傳遞機制 \([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 或 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)\)  
+    -   傳遞機制，每個參數 ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
-    -   泛型程序的每個類型參數的條件約束清單  
+    -   泛型程序的每個型別參數的條件約束清單  
   
--   **遮蔽和覆寫。** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。  如需詳細資訊，請參閱 [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+-   **遮蔽和覆寫。** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱[Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
- 如果您使用 `Overrides`，編譯器會隱含地新增 `Overloads`，讓程式庫 API 更容易使用 C\#。  
+ 如果您使用 `Overrides`，編譯器會隱含地新增 `Overloads`，讓程式庫 API 更容易使用 C#。  
   
  `Overrides` 修飾詞可用於以下內容：  
   
@@ -68,11 +67,11 @@ caps.handback.revision: 18
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 請參閱  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)   
- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Type List](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>另請參閱  
+ [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [關鍵字](../../../visual-basic/language-reference/keywords/index.md)  
+ [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [Visual Basic 中的泛型型別](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
