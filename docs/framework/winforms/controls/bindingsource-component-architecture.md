@@ -1,97 +1,98 @@
 ---
-title: "BindingSource 元件架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource 元件 [Windows Form], 關於 BindingSource 元件"
-  - "BindingSource 元件, 架構"
-  - "資料繫結, BindingSource 元件"
-  - "Windows Form, 資料繫結"
+title: "BindingSource 元件架構"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BindingSource component [Windows Forms], architecture
+- Windows Forms, data binding
+- BindingSource component [Windows Forms], about BindingSource component
+- data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# BindingSource 元件架構
-透過 <xref:System.Windows.Forms.BindingSource> 元件，您可以將所有的 Windows Form 控制項全部繫結至資料來源。  
+# <a name="bindingsource-component-architecture"></a>BindingSource 元件架構
+與<xref:System.Windows.Forms.BindingSource>元件，都將資料來源所有 Windows Form 控制項繫都結。  
   
- <xref:System.Windows.Forms.BindingSource> 元件簡化了將控制項繫結至資料來源的程序，同時提供了優於舊式資料繫結的下列各項特點：  
+ <xref:System.Windows.Forms.BindingSource>元件可簡化將控制項繫結至資料來源的程序，並提供傳統資料繫結的下列優勢：  
   
--   可以讓商務物件 \(Business Object\) 使用設計階段繫結。  
+-   啟用商務物件的設計階段繫結。  
   
--   可以在設計階段封裝 <xref:System.Windows.Forms.CurrencyManager> 功能和公開 \(Expose\) <xref:System.Windows.Forms.CurrencyManager> 事件。  
+-   封裝<xref:System.Windows.Forms.CurrencyManager>功能而且會公開<xref:System.Windows.Forms.CurrencyManager>設計階段的事件。  
   
--   藉由為原本不支援清單變更告知的資料來源，提供清單變更告知功能，可以簡化支援 <xref:System.ComponentModel.IBindingList> 介面的清單建立程序。  
+-   可簡化建立清單支援<xref:System.ComponentModel.IBindingList>原本不支援清單的資料來源變更通知，提供清單變更通知的介面。  
   
--   為 <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=fullName> 方法提供了擴充性點。  
+-   提供的擴充點<xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType>方法。  
   
--   在資料來源和控制項之間提供了間接取值 \(Indirection\) 層級。  當資料來源可以在執行階段變更時，間接取值非常重要。  
+-   提供資料來源控制項之間的間接取值層的級。 在執行階段可能會變更資料來源時，重要這個間接取值。  
   
--   可以與其他資料相關的 Windows Form 控制項 \(特別是 <xref:System.Windows.Forms.BindingNavigator> 和 <xref:System.Windows.Forms.DataGridView> 控制項\) 相互操作。  
+-   與其他資料相關的 Windows Form 控制項，特別是相互操作<xref:System.Windows.Forms.BindingNavigator>和<xref:System.Windows.Forms.DataGridView>控制項。  
   
- 基於這些理由，<xref:System.Windows.Forms.BindingSource> 元件是當您將 Windows Form 控制項繫結至資料來源時的慣用方式。  
+ 基於這些理由，<xref:System.Windows.Forms.BindingSource>元件是您的 Windows Form 控制項繫結至資料來源的慣用的方式。  
   
-## BindingSource 功能  
- <xref:System.Windows.Forms.BindingSource> 元件提供了數種可將控制項繫結至資料的功能。  利用這些功能，幾乎不太需要撰寫程式碼，就可以實作大部分的資料繫結案例。  
+## <a name="bindingsource-features"></a>BindingSource 功能  
+ <xref:System.Windows.Forms.BindingSource>元件提供數個功能的控制項繫結至資料。 使用這些功能，您可以實作使用幾乎任何撰寫程式碼的大部分資料繫結案例。  
   
- <xref:System.Windows.Forms.BindingSource> 元件藉由提供一致的介面做為存取各種不同資料來源之用，即可完成此項工作。  這意味著不論是繫結至何種型別，都是使用相同的程序。  例如，可以將 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性附加至 <xref:System.Data.DataSet> 或商務物件。這兩種情況都是使用同一組屬性、方法和事件來管理資料來源。  
+ <xref:System.Windows.Forms.BindingSource>元件可完成此作業藉由提供一致的介面來存取許多不同種類的資料來源。 這表示繫結至任何類型，使用相同的程序。 例如，您可以將附加<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性<xref:System.Data.DataSet>或商務物件，並以兩種情況下您使用相同的屬性、 方法和事件來操作資料來源。  
   
- <xref:System.Windows.Forms.BindingSource> 元件所提供的一致介面大幅簡化了資料至控制項的繫結程序。  對於提供變更告知的資料來源型別，<xref:System.Windows.Forms.BindingSource> 元件會自動在控制項與資料來源之間傳遞變更。  對於不提供變更告知的資料來源型別，會提供可讓您引發變更告知的事件。  下列是 <xref:System.Windows.Forms.BindingSource> 元件支援的功能：  
+ 提供的一致介面<xref:System.Windows.Forms.BindingSource>元件可大幅簡化資料繫結至控制項之程序。 資料來源類型，可提供變更通知，<xref:System.Windows.Forms.BindingSource>元件會自動進行通訊的控制項與資料來源之間的變更。 對於不提供變更通知資料來源類型，事件會提供可讓您引發變更通知。 下列清單顯示所支援的功能<xref:System.Windows.Forms.BindingSource>元件：  
   
 -   間接取值。  
   
--   功能轉換管理。  
+-   貨幣管理。  
   
 -   資料來源做為清單。  
   
--   <xref:System.Windows.Forms.BindingSource> 做為 <xref:System.ComponentModel.IBindingList>。  
+-   <xref:System.Windows.Forms.BindingSource>做為<xref:System.ComponentModel.IBindingList>。  
   
--   建立自訂項目。  
+-   建立自訂的項目。  
   
--   建立異動項目。  
+-   建立交易式的項目。  
   
--   <xref:System.Collections.IEnumerable> 支援。  
+-   <xref:System.Collections.IEnumerable>支援。  
   
 -   設計階段支援。  
   
--   靜態 <xref:System.Windows.Forms.ListBindingHelper> 方法。  
+-   靜態<xref:System.Windows.Forms.ListBindingHelper>方法。  
   
--   使用 <xref:System.ComponentModel.IBindingListView> 介面進行排序和篩選。  
+-   排序和篩選與<xref:System.ComponentModel.IBindingListView>介面。  
   
--   使用 <xref:System.Windows.Forms.BindingNavigator> 進行整合。  
+-   與整合<xref:System.Windows.Forms.BindingNavigator>。  
   
-### 間接  
- <xref:System.Windows.Forms.BindingSource> 元件在資料來源和控制項之間，提供了可以進行間接取值的層級。  您不是將控制項直接繫結至資料來源，而是先將控制項繫結至 <xref:System.Windows.Forms.BindingSource>，然後再將資料來源附加至 <xref:System.Windows.Forms.BindingSource> 元件的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性。  
+### <a name="indirection"></a>間接  
+ <xref:System.Windows.Forms.BindingSource>元件所提供的控制項和資料來源之間的間接取值層級。 而不是將控制項繫結至資料來源直接，您將控制項繫結至<xref:System.Windows.Forms.BindingSource>，和附加資料來源以<xref:System.Windows.Forms.BindingSource>元件的<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性。  
   
- 利用這個間接取值層級，您不需要重新設定控制項繫結即可變更資料來源，  因而能夠：  
+ 這個層級的間接取值，您可以變更資料來源，而不重設控制項繫結。 這可提供下列功能：  
   
--   將 <xref:System.Windows.Forms.BindingSource> 附加至不同的資料來源，而且同時又能保留目前的控制項繫結。  
+-   您可以將附加<xref:System.Windows.Forms.BindingSource>到不同的資料來源，同時保留目前的控制項繫結。  
   
--   變更資料來源中的項目，然後告知繫結控制項。  如需詳細資訊，請參閱 [如何：使用 BindingSource 反映 Windows Form 控制項中的資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
+-   您可以變更資料來源中的項目，並通知繫結的控制項。 如需詳細資訊，請參閱[How to： 使用 BindingSource 的 Windows Form 控制項中的反映資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
   
--   可以繫結至 <xref:System.Type>，而不是記憶體中的物件。  如需詳細資訊，請參閱 [如何：將 Windows Form 控制項繫結至類型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。  接著可以在執行階段繫結至物件。  
+-   您可以繫結至<xref:System.Type>而不是在記憶體中的物件。 如需詳細資訊，請參閱[How to： 將 Windows Form 控制項繫結的型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。 您接著可以在執行階段繫結的物件。  
   
-### 貨幣管理  
- <xref:System.Windows.Forms.BindingSource> 元件會實作 <xref:System.Windows.Forms.ICurrencyManagerProvider> 介面，來為您處理貨幣管理。  透過 <xref:System.Windows.Forms.ICurrencyManagerProvider> 介面，除了其他繫結至相同 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 之 <xref:System.Windows.Forms.BindingSource> 的 Currency 管理員以外，您還可以存取 <xref:System.Windows.Forms.BindingSource> 的 Currency 管理員。  
+### <a name="currency-management"></a>貨幣管理  
+ <xref:System.Windows.Forms.BindingSource>元件實作<xref:System.Windows.Forms.ICurrencyManagerProvider>處理貨幣管理您的介面。 與<xref:System.Windows.Forms.ICurrencyManagerProvider>介面，您也可以存取要 currency 管理員<xref:System.Windows.Forms.BindingSource>，另一個 currency 管理員除了<xref:System.Windows.Forms.BindingSource>繫結至相同<xref:System.Windows.Forms.BindingSource.DataMember%2A>。  
   
- <xref:System.Windows.Forms.BindingSource> 元件可封裝 <xref:System.Windows.Forms.CurrencyManager> 功能和公開最常用的 <xref:System.Windows.Forms.CurrencyManager> 屬性和事件。  下表說明部分與貨幣管理相關的成員。  
+ <xref:System.Windows.Forms.BindingSource>元件封裝<xref:System.Windows.Forms.CurrencyManager>功能並公開最常見<xref:System.Windows.Forms.CurrencyManager>屬性和事件。 下表說明一些與貨幣管理相關的成員。  
   
  <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> 屬性  
- 取得與 <xref:System.Windows.Forms.BindingSource> 關聯的 Currency 管理員。  
+ 取得相關聯的 currency 管理員<xref:System.Windows.Forms.BindingSource>。  
   
  <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> 方法  
- 如果有其他 <xref:System.Windows.Forms.BindingSource> 繫結至指定的資料成員，則取得它的 Currency 管理員。  
+ 如果有另一個<xref:System.Windows.Forms.BindingSource>繫結至指定的資料成員，取得其 currency 管理員。  
   
  <xref:System.Windows.Forms.BindingSource.Current%2A> 屬性  
  取得資料來源的目前項目。  
@@ -105,56 +106,56 @@ caps.handback.revision: 23
  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 方法  
  取消目前的編輯作業。  
   
-### 資料來源做為清單。  
- <xref:System.Windows.Forms.BindingSource> 元件可實作 <xref:System.ComponentModel.IBindingListView> 和 <xref:System.ComponentModel.ITypedList> 介面。  利用這個實作，您不需要任何外部儲存體即可將 <xref:System.Windows.Forms.BindingSource> 元件本身當做資料來源使用。  
+### <a name="data-source-as-a-list"></a>資料來源，因為清單  
+ <xref:System.Windows.Forms.BindingSource>元件實作<xref:System.ComponentModel.IBindingListView>和<xref:System.ComponentModel.ITypedList>介面。 此實作中，您可以使用<xref:System.Windows.Forms.BindingSource>元件本身做為資料來源，沒有任何外部存放裝置。  
   
- 當 <xref:System.Windows.Forms.BindingSource> 元件附加至資料來源時，它會將資料來源公開為清單。  
+ 當<xref:System.Windows.Forms.BindingSource>元件連接到資料來源，它會公開為清單的資料來源。  
   
- 您可以將 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設定為數種資料來源，  包括型別、物件和型別清單。  產生的資料來源將公開為清單。  下表顯示部分的通用資料來源以及產生的清單評估。  
+ <xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性可以設定為幾個資料來源。 這些包括型別、 物件和類型的清單。 產生的資料來源會公開為清單。 下表顯示一些常見的資料來源和產生的清單評估。  
   
-|DataSource 屬性|列出結果|  
-|-------------------|----------|  
-|null 參考 \(在 Visual Basic 中為 `Nothing`\)|物件的空 <xref:System.ComponentModel.IBindingList>。  藉由加入項目即可將清單設為已加入之項目的型別。|  
-|含有 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 集合的 null 參考 \(在 Visual Basic 中為 `Nothing`\)|不支援，會引發 <xref:System.ArgumentException>。|  
-|非清單型別或 型別 "T" 的物件|"T" 型別的空 <xref:System.ComponentModel.IBindingList>。|  
-|陣列執行個體|包含陣列項目的 <xref:System.ComponentModel.IBindingList>。|  
-|<xref:System.Collections.IEnumerable> 執行個體|包含 <xref:System.Collections.IEnumerable> 項目的 <xref:System.ComponentModel.IBindingList>|  
-|包含 "T" 型別的清單執行個體|包含 "T" 型別的 <xref:System.ComponentModel.IBindingList>。|  
+|資料來源屬性|結果清單|  
+|-------------------------|------------------|  
+|null 參考 (在 Visual Basic 中為 `Nothing`)|空白<xref:System.ComponentModel.IBindingList>的物件。 加入項目類型的已加入的項目設定的清單。|  
+|Null 參考 (`Nothing`在 Visual Basic 中) 與<xref:System.Windows.Forms.BindingSource.DataMember%2A>設定|不支援;引發<xref:System.ArgumentException>。|  
+|非清單型別或型別"T"的物件|空白<xref:System.ComponentModel.IBindingList>的型別"T"。|  
+|陣列執行個體|<xref:System.ComponentModel.IBindingList>包含陣列項目。|  
+|<xref:System.Collections.IEnumerable>執行個體|<xref:System.ComponentModel.IBindingList>包含<xref:System.Collections.IEnumerable>項目|  
+|包含清單執行個體型別"T"|<xref:System.ComponentModel.IBindingList>包含型別"T"的執行個體。|  
   
- 此外，也可以將 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 設定為其他清單型別 \(例如 <xref:System.ComponentModel.IListSource> 和 <xref:System.ComponentModel.ITypedList>\)，並且將由 <xref:System.Windows.Forms.BindingSource> 適當地處理這些型別。  在這種情況下，清單中所包含的型別應該要有預設的建構函式。  
+ 此外，<xref:System.Windows.Forms.BindingSource.DataSource%2A>可以設定為其他清單類型，例如<xref:System.ComponentModel.IListSource>和<xref:System.ComponentModel.ITypedList>，而<xref:System.Windows.Forms.BindingSource>會適當地處理它們。 在此情況下，包含在清單中的類型應該有預設建構函式。  
   
-### BindingSource 做為 IBindingList  
- <xref:System.Windows.Forms.BindingSource> 元件提供存取和管理基礎資料的成員做為 <xref:System.ComponentModel.IBindingList>。  下表說明這些成員中的一部分。  
+### <a name="bindingsource-as-an-ibindinglist"></a>為 IBindingList BindingSource  
+ <xref:System.Windows.Forms.BindingSource>元件提供用於存取和管理做為基礎的資料成員<xref:System.ComponentModel.IBindingList>。 下表說明部分這些成員。  
   
 |成員|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> 屬性|取得經由評估 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 或 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性而得到的清單。|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|將新的項目加入至基礎清單中。  套用至實作 <xref:System.ComponentModel.IBindingList> 介面的資料來源 \(也就是將 <xref:System.Windows.Forms.BindingSource.AllowNew%2A> 屬性設為 `true`\)。|  
+|------------|-----------------|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> 屬性|取得評估的結果清單<xref:System.Windows.Forms.BindingSource.DataSource%2A>或<xref:System.Windows.Forms.BindingSource.DataMember%2A>屬性。|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|將新的項目加入基礎清單中。 適用於實作的資料來源<xref:System.ComponentModel.IBindingList>介面，並允許加入項目 (也就是<xref:System.Windows.Forms.BindingSource.AllowNew%2A>屬性設定為`true`)。|  
   
-### 建立自訂項目。  
- 您可以處理 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件以提供自己的項目建立邏輯。  在 <xref:System.Windows.Forms.BindingSource> 加入新物件之前會發生 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件。  這個事件是發生於呼叫 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法之後，但基礎清單加入新項目之前。  藉由處理這個事件，不需從 <xref:System.Windows.Forms.BindingSource> 類別衍生即可提供建立自訂項目行為。  如需詳細資訊，請參閱 [如何：使用 Windows Form BindingSource 自訂加入項目](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)。  
+### <a name="custom-item-creation"></a>建立自訂的項目  
+ 您可以處理<xref:System.Windows.Forms.BindingSource.AddingNew>事件以提供您自己的項目建立的邏輯。 <xref:System.Windows.Forms.BindingSource.AddingNew>之前要加入新的物件，就會發生事件<xref:System.Windows.Forms.BindingSource>。 之後會引發這個事件<xref:System.Windows.Forms.BindingSource.AddNew%2A>呼叫方法時，但新的項目加入基礎清單之前。 藉由處理這個事件，您可以提供自訂的項目建立行為，不需衍生自<xref:System.Windows.Forms.BindingSource>類別。 如需詳細資訊，請參閱[How to： 使用 Windows Form BindingSource 自訂項目加入](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)。  
   
-### 建立異動項目。  
- <xref:System.Windows.Forms.BindingSource> 元件可實作 <xref:System.ComponentModel.ICancelAddNew> 介面，此介面可建立異動項目。  隨著呼叫 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 而暫時建立了新項目之後，這個加入項目的動作可利用下列方式加以認可或復原：  
+### <a name="transactional-item-creation"></a>建立交易式的項目  
+ <xref:System.Windows.Forms.BindingSource>元件實作<xref:System.ComponentModel.ICancelAddNew>介面，讓建立交易式的項目。 部份建立新的項目使用的呼叫之後<xref:System.Windows.Forms.BindingSource.AddNew%2A>，可能會認可或回復以下列方式加入：  
   
--   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> 方法會明確認可這項暫止的加入動作。  
+-   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A>方法將會明確地認可暫止的加入。  
   
--   執行其他集合作業 \(例如插入、移除或移動\) 即隱含認可這項暫止的加入動作。  
+-   執行另一個集合運算，例如插入、 移除或移動，將會以隱含方式認可暫止的加入。  
   
--   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> 方法會復原暫止的加入動作 \(如果此方法尚未經過認可的話\)。  
+-   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>方法將會復原暫止的加入方法已被認可。  
   
-### IEnumerable 支援  
- <xref:System.Windows.Forms.BindingSource> 元件可將控制項繫結至 <xref:System.Collections.IEnumerable> 資料來源。  利用這個元件，可繫結至資料來源 \(例如 <xref:System.Data.SqlClient.SqlDataReader?displayProperty=fullName>\)。  
+### <a name="ienumerable-support"></a>IEnumerable 支援  
+ <xref:System.Windows.Forms.BindingSource>元件可讓控制項繫結至<xref:System.Collections.IEnumerable>資料來源。 與這個元件，您可以繫結至資料來源這類<xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>。  
   
- 當 <xref:System.Collections.IEnumerable> 資料來源指派給 <xref:System.Windows.Forms.BindingSource> 元件時，<xref:System.Windows.Forms.BindingSource> 會建立 <xref:System.ComponentModel.IBindingList> 並將 <xref:System.Collections.IEnumerable> 資料來源的內容加入至清單。  
+ 當<xref:System.Collections.IEnumerable>資料來源指派給<xref:System.Windows.Forms.BindingSource>元件，<xref:System.Windows.Forms.BindingSource>建立<xref:System.ComponentModel.IBindingList>和將內容加入<xref:System.Collections.IEnumerable>清單中的資料來源。  
   
-### 設計階段支援  
- 有些物件型別無法在設計階段建立，例如，建立自 Factory 類別的物件或是由 Web 服務傳回的物件。  有時候，您可能必須在設計階段將控制項繫結至這些型別，即使記憶體中並沒有控制項可以繫結的物件。  例如，此時可能必須使用自訂型別的公用屬性名稱來標記 <xref:System.Windows.Forms.DataGridView> 控制項的資料行行首。  
+### <a name="design-time-support"></a>設計階段支援  
+ 無法建立某些物件類型，在設計階段，例如從 factory 類別，建立的物件或 Web 服務所傳回的物件。 您有時可能對這類繫結控制項，在設計階段，即使您的控制項可以繫結的記憶體中沒有任何物件。 例如，可能需要加上標籤的資料行標頭<xref:System.Windows.Forms.DataGridView>控制項的自訂類型的公用屬性名稱。  
   
- 為了支援這樣的案例，<xref:System.Windows.Forms.BindingSource> 元件將會支援繫結至 <xref:System.Type>。  當您將 <xref:System.Type> 指派給 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性時，<xref:System.Windows.Forms.BindingSource> 元件會建立 <xref:System.Type> 項目的空 <xref:System.ComponentModel.BindingList%601>。  如果型別的屬性或結構描述在設計階段或執行階段中出現，那麼後續繫結至 <xref:System.Windows.Forms.BindingSource> 元件的所有控制項都將會收到警示。  如需詳細資訊，請參閱 [如何：將 Windows Form 控制項繫結至類型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。  
+ 若要支援此案例中，<xref:System.Windows.Forms.BindingSource>元件支援的繫結至<xref:System.Type>。 當您指派<xref:System.Type>至<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性，<xref:System.Windows.Forms.BindingSource>元件建立空<xref:System.ComponentModel.BindingList%601>的<xref:System.Type>項目。 您接著繫結至任何控制項<xref:System.Windows.Forms.BindingSource>元件將會警示您類型的結構描述之屬性的目前狀態，在設計階段或執行階段。 如需詳細資訊，請參閱[How to： 將 Windows Form 控制項繫結的型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。  
   
-### 靜態 ListBindingHelper 方法  
- <xref:System.Windows.Forms.BindingContext?displayProperty=fullName>、<xref:System.Windows.Forms.CurrencyManager?displayProperty=fullName> 和 <xref:System.Windows.Forms.BindingSource> 型別都共用一般邏輯，藉此從成對的 `DataSource`\/`DataMember` 組合產生清單。  此外，這個通用邏輯會透過下列 `static` 方法進行公開，以供控制項作者和其他協力廠商使用：  
+### <a name="static-listbindinghelper-methods"></a>靜態 ListBindingHelper 方法  
+ <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>， <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>，和<xref:System.Windows.Forms.BindingSource>類型來產生一份清單列出的共用通用邏輯`DataSource` / `DataMember`組。 此外，這個通用邏輯公開由用於控制項作者和其他協力廠商在下列`static`方法：  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
@@ -164,25 +165,25 @@ caps.handback.revision: 23
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
   
-### 使用 IBindingListView 介面進行排序和篩選。  
- <xref:System.Windows.Forms.BindingSource> 元件可實作 <xref:System.ComponentModel.IBindingListView> 介面，而此介面可延伸 <xref:System.ComponentModel.IBindingList> 介面。  <xref:System.ComponentModel.IBindingList> 提供單一資料行排序，而 <xref:System.ComponentModel.IBindingListView> 則提供進階排序和篩選。  如果資料來源也會實作其中一個介面，您可以使用 <xref:System.ComponentModel.IBindingListView> 來排序和篩選資料來源中的項目。  <xref:System.Windows.Forms.BindingSource> 元件並不提供這些成員的參考實作。  而呼叫會轉送到底層清單。  
+### <a name="sorting-and-filtering-with-the-ibindinglistview-interface"></a>排序和篩選與 IBindingListView 介面  
+ <xref:System.Windows.Forms.BindingSource>元件實作<xref:System.ComponentModel.IBindingListView>介面，其延伸了<xref:System.ComponentModel.IBindingList>介面。 <xref:System.ComponentModel.IBindingList>提供了單一資料行排序和<xref:System.ComponentModel.IBindingListView>提供進階的排序和篩選。 與<xref:System.ComponentModel.IBindingListView>、 您可以排序和篩選項目在資料來源中，如果資料來源也會實作這些介面的其中一個。 <xref:System.Windows.Forms.BindingSource>元件不提供這些成員的參考實作。 相反地，加入基礎清單的呼叫都會被轉送。  
   
- 下表說明在排序和篩選時所使用的屬性。  
+ 下表描述您用於排序和篩選的屬性。  
   
 |成員|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingListView>，則可取得或設定運算式，此運算式是用於篩選檢視中的資料列。|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingList>，則可取得或設定資料行名稱，此資料行名稱是用於排序以及排序次序資訊。<br /><br /> \-或\-<br /><br /> 如果資料來源是 <xref:System.ComponentModel.IBindingListView> 並且支援進階排序，則可取得多重資料行名稱，此資料行名稱是用於排序以及排序次序。|  
+|------------|-----------------|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingListView>，可取得或設定用來篩選所檢視之資料列的運算式。|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingList>，可取得或設定用來排序的資料行名稱，以及排序次序資訊。<br /><br /> -或-<br /><br /> 如果資料來源是<xref:System.ComponentModel.IBindingListView>並支援進階排序，可取得用來排序和排序順序的多個資料行名稱|  
   
-### 使用 BindingNavigator 進行整合  
- 可以使用 <xref:System.Windows.Forms.BindingSource> 元件將任何 Windows Form 控制項繫結至資料來源，但 <xref:System.Windows.Forms.BindingNavigator> 控制項是特別設計用來與 <xref:System.Windows.Forms.BindingSource> 元件搭配使用。  <xref:System.Windows.Forms.BindingNavigator> 控制項所提供的介面用於控制 <xref:System.Windows.Forms.BindingSource> 元件的目前項目。  根據預設，<xref:System.Windows.Forms.BindingNavigator> 控制項所提供的按鈕是對應到 <xref:System.Windows.Forms.BindingSource> 元件上的巡覽方法。  如需詳細資訊，請參閱 [如何：使用 Windows Form BindingNavigator 控制項巡覽資料](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
+### <a name="integration-with-bindingnavigator"></a>BindingNavigator 與整合  
+ 您可以使用<xref:System.Windows.Forms.BindingSource>元件任何 Windows Form 控制項繫結到資料來源，但<xref:System.Windows.Forms.BindingNavigator>控制項特別設計來搭配<xref:System.Windows.Forms.BindingSource>元件。 <xref:System.Windows.Forms.BindingNavigator>控制項提供使用者介面控制<xref:System.Windows.Forms.BindingSource>元件的目前項目。 根據預設，<xref:System.Windows.Forms.BindingNavigator>控制項提供對應的巡覽方法的按鈕<xref:System.Windows.Forms.BindingSource>元件。 如需詳細資訊，請參閱[How to： 使用 Windows Form BindingNavigator 控制項的瀏覽資料](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
-## 請參閱  
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.BindingNavigator>   
- [BindingSource 元件概觀](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)   
- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)   
- [Windows Form 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [如何：將 Windows Form 控制項繫結至類型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)   
- [如何：使用 BindingSource 反映 Windows Form 控制項中的資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ [BindingSource 元件概觀](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
+ [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [操作說明：將 Windows Forms 控制項繫結至型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [操作說明：使用 BindingSource 反射 Windows Forms 控制項中的資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

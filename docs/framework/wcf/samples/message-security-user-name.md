@@ -1,28 +1,27 @@
 ---
-title: "訊息安全性使用者名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WS 安全性"
+title: "訊息安全性使用者名稱"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-caps.latest.revision: 57
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 57
+caps.latest.revision: "57"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: acf01818a697f2267307bdf7b9e469fec5741511
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 訊息安全性使用者名稱
-這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配使用者名稱驗證的 WS\-Security，並要求使用伺服器之 X.509v3 憑證進行驗證的伺服器驗證。  用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。  根據預設，用戶端提供的使用者名稱與密碼會用來登入有效的 Windows 帳戶。  這個範例是以[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)為基礎。  這個範例是由用戶端主控台程式 \(Client.exe\) 和網際網路資訊服務 \(IIS\) 所裝載的服務程式庫 \(Service.dll\) 所組成。  服務會實作定義要求\-回覆通訊模式的合約。  
+# <a name="message-security-user-name"></a>訊息安全性使用者名稱
+這個範例會示範如何實作應用程式，該應用程式會對用戶端使用搭配使用者名稱驗證的 WS-Security，並要求使用伺服器之 X.509v3 憑證進行驗證的伺服器驗證。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 根據預設，用戶端提供的使用者名稱與密碼會用來登入有效的 Windows 帳戶。 這個範例根據[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 這個範例是由用戶端主控台程式 (Client.exe) 和網際網路資訊服務 (IIS) 所裝載的服務程式庫 (Service.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -33,9 +32,9 @@ caps.handback.revision: 57
   
 -   如何從服務程式碼存取呼叫者的身分識別資訊。  
   
- 服務會公開 \(Expose\) 單一的端點來與已使用組態檔 Web.config 定義之服務進行通訊。  端點是由位址、繫結及合約所組成。  繫結已設定成預設會使用訊息安全性的標準 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  這個範例會將標準 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 設定為使用用戶端使用者名稱驗證。  此行為會指定用來進行服務驗證的使用者認證。  伺服器憑證中包含的主體名稱值，必須與 [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)中的 `findValue` 屬性值相同。  
+ 服務會公開 (Expose) 單一的端點來與已使用組態檔 Web.config 定義之服務進行通訊。端點是由位址、繫結及合約所組成。 繫結設定的標準[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)，預設為使用訊息安全性。 這個範例會設定標準[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)使用用戶端使用者名稱驗證。 此行為會指定用來進行服務驗證的使用者認證。 伺服器憑證必須包含相同值的主體名稱當成`findValue`屬性[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
   
-```  
+```xml  
 <system.serviceModel>  
   <protocolMapping>  
     <add scheme="http" binding="wsHttpBinding" />  
@@ -76,9 +75,9 @@ caps.handback.revision: 57
 </system.serviceModel>  
 ```  
   
- 用戶端端點組態是由服務端點的絕對位址、繫結及合約所組成。  用戶端繫結是透過適當的 `securityMode` 和 `authenticationMode` 所設定。  在跨電腦案例中執行時，服務端點位址必須隨同變更。  
+ 用戶端端點組態是由服務端點的絕對位址、繫結及合約所組成。 用戶端繫結是透過適當的 `securityMode` 和 `authenticationMode` 所設定。 在跨電腦案例中執行時，服務端點位址必須隨同變更。  
   
-```  
+```xml  
 <system.serviceModel>  
   <client>  
     <endpoint address="http://localhost/servicemodelsamples/service.svc"   
@@ -140,10 +139,9 @@ Console.WriteLine(client.GetCallerIdentity());
 ...  
 //Closing the client gracefully closes the connection and cleans up resources.  
 client.Close();  
-  
 ```  
   
- 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。  在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
+ 當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
 ```  
 MyMachine\TestAccount  
@@ -152,10 +150,9 @@ Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25  
 Divide(22,7) = 3.14285714285714  
 Press <ENTER> to terminate client.  
-  
 ```  
   
- 訊息安全性範例所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要憑證安全性的裝載應用程式。  此批次檔可以在兩種模式中執行。  若要在單一電腦模式中執行此批次檔，請在命令列中輸入 `setup.bat`。  若要在服務模式中執行此批次檔，請輸入 `setup.bat service`。  您可以在跨電腦執行範例時使用這個模式。  如需詳細資訊，請參閱本主題結尾的安裝程序。  
+ 訊息安全性範例所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要憑證安全性的裝載應用程式。 此批次檔可以在兩種模式中執行。 若要在單一電腦模式中執行此批次檔，請在命令列中輸入 `setup.bat`。 若要在服務模式中執行此批次檔，請輸入 `setup.bat service`。 您可以在跨電腦執行範例時使用這個模式。 如需詳細資訊，請參閱本主題結尾的安裝程序。  
   
  下面會提供批次檔之不同區段的簡短概觀。  
   
@@ -173,15 +170,14 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     %SERVER\_NAME% 變數會指定伺服器名稱。  憑證是儲存在 LocalMachine 存放區中。  如果使用 service 引數執行 Setup.bat 批次檔 \(例如，`setup.bat service`\)，%SERVER\_NAME% 就會包含電腦的完整網域名稱。  否則，預設為 localhost。  
+     %SERVER_NAME% 變數會指定伺服器名稱。 憑證是儲存在 LocalMachine 存放區中。 如果使用 service 引數執行 Setup.bat 批次檔 (例如，`setup.bat service`)，%SERVER_NAME% 就會包含電腦的完整網域名稱。  否則，預設為 localhost。  
   
 -   將伺服器憑證安裝至用戶端的受信任憑證存放區中。  
   
-     下列程式行會將伺服器憑證複製到用戶端受信任人的存放區中。  這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。  如果您已經有一個以用戶端信任的根憑證 \(例如 Microsoft 所發行的憑證\) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。  
+     下列程式行會將伺服器憑證複製到用戶端受信任人的存放區中。 這是必要步驟，因為用戶端系統並未隱含信任 Makecert.exe 產生的憑證。 如果您已經有一個以用戶端信任的根憑證 (例如 Microsoft 所發行的憑證) 為基礎的憑證，就不需要這個將伺服器憑證填入用戶端憑證的步驟。  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
 -   授與憑證私密金鑰的權限  
@@ -200,56 +196,56 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  如果您使用的是非美式  英文版的 Windows，則必須編輯 Setup.bat 檔案，並以適用您所在地區的對等帳戶取代 `NT AUTHORITY\NETWORK SERVICE` 帳戶名稱。  
+    >  如果您使用的是非美式英文版的 Windows，則必須編輯 Setup.bat 檔案，並以適用您所在地區的對等帳戶取代 `NT AUTHORITY\NETWORK SERVICE` 帳戶名稱。  
   
-### 若要安裝、建置及執行範例  
+### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1.  請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C\# 或 Visual Basic .NET 版本，請遵循[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-### 若要在同一部電腦上執行範例  
+### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
 1.  確認路徑中包含 Makecert.exe 和 FindPrivateKey.exe 所在的資料夾。  
   
-2.  在使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行範例安裝資料夾中的 Setup.bat。  這會安裝執行範例所需的所有憑證。  
+2.  在使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。  
   
     > [!NOTE]
-    >  Setup.bat 批次檔是設計用來從 Visual Studio 命令提示字元執行。  它要求 path 環境變數指向安裝 SDK 的目錄。  這個環境變數是自動在 Visual Studio 命令提示字元中設定。  
+    >  Setup.bat 批次檔是設計用來從 Visual Studio 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 命令提示字元中設定。  
   
-3.  在瀏覽器輸入位址 http:\/\/localhost\/servicemodelsamples\/service.svc 來確認服務存取。  
+3.  在瀏覽器輸入位址 http://localhost/servicemodelsamples/service.svc 來確認服務存取。  
   
-4.  從 \\client\\bin 啟動 Client.exe。  用戶端活動會顯示在用戶端主控台應用程式上。  
+4.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-5.  如果用戶端和服務無法通訊，請參閱[Troubleshooting Tips](http://msdn.microsoft.com/zh-tw/8787c877-5e96-42da-8214-fa737a38f10b)。  
+5.  如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-### 若要跨電腦執行範例  
+### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
-1.  在服務電腦上建立目錄。  使用 Internet Information Services 管理工具，為這個目錄建立名為 servicemodelsamples 的虛擬應用程式。  
+1.  在服務電腦上建立目錄。 使用 Internet Information Services 管理工具，為這個目錄建立名為 servicemodelsamples 的虛擬應用程式。  
   
-2.  將 \\inetpub\\wwwroot\\servicemodelsamples 中的服務程式檔複製至服務電腦上的虛擬目錄中。  確定複製 \\bin 子目錄中的檔案。  同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
+2.  將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務電腦上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
 3.  在用戶端電腦上為用戶端二進位碼檔案建立一個目錄。  
   
-4.  將用戶端程式檔複製到用戶端電腦上的用戶端目錄。  同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
+4.  將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5.  在伺服器上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 `setup.bat service`。  使用 `service` 引數來執行 `setup.bat` ，就會建立具有電腦完整網域名稱的服務憑證，並且將服務憑證匯出為名為 Service.cer 的檔案。  
+5.  在伺服器上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 `setup.bat service`。 執行`setup.bat`與`service`引數具有電腦完整網域名稱建立服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-6.  編輯 Web.config 以反映新的憑證名稱 \(在 serviceCertificate 項目的 findValue 屬性中\)，這個名稱與電腦的完整網域名稱相同`.`  
+6.  編輯 Web.config 以反映新的憑證名稱 (在 serviceCertificate 項目的 findValue 屬性中)，這個名稱與電腦的完整網域名稱相同`.`  
   
 7.  從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
 8.  在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
   
-9. 在用戶端上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 ImportServiceCert.bat。  這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser \- TrustedPeople 存放區中。  
+9. 在用戶端上，於使用系統管理員權限開啟的 Visual Studio 命令提示字元中，執行 ImportServiceCert.bat。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。  如果用戶端和服務無法通訊，請參閱[Troubleshooting Tips](http://msdn.microsoft.com/zh-tw/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
-### 若要在使用範例之後進行清除  
+### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 -   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。  如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser \- TrustedPeople 存放區中的服務憑證。  若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - binary serialization, basic serialization
 - serialization, basic serialization
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
-dev_langs:
-- CSharp
-caps.latest.revision: 7
+dev_langs: CSharp
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 334fe65c41e283f9ea6335183da1b2dab53e30af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1e059fa92f88501853236c3e6632525646bc7a19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -101,6 +99,5 @@ public class MyStuff : MyObject
  使用 [Serializable](xref:System.SerializableAttribute) 屬性十分方便，但有上述限制。 如需何時應將類別標示為序列化的資訊，請參閱[序列化方針](serialization-guidelines.md)。 類別在編譯後即無法在其中新增序列化。  
   
 ## <a name="see-also"></a>請參閱  
- [二進位序列化](binary-serialization.md)   
+ [二進位序列化](binary-serialization.md)  
  [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
-

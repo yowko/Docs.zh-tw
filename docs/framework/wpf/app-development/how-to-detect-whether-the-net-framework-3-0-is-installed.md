@@ -1,34 +1,37 @@
 ---
-title: "如何：偵測有無安裝 .NET Framework 3.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "偵測 WPF 存在"
-  - "WPF 的存在, 偵測"
-  - "WinFX Runtime user-agent 字串"
+title: "如何：偵測有無安裝 .NET Framework 3.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WinFX Runtime user-agent string
+- presence of WPT [WPF], detecting
+- detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e013c9426507e20da05df26932a1f9cf1e5df761
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：偵測有無安裝 .NET Framework 3.0
-系統管理員必須先確認 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 執行階段確實存在，然後才能在系統上部署 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 應用程式。  本主題提供以 HTML\/JavaScript 撰寫的指令碼，供系統管理員用來判斷系統上是否有 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]。  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：偵測有無安裝 .NET Framework 3.0
+系統管理員可以部署之前[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]應用程式在系統上，他們必須先確認[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]執行階段會出現。 本主題提供撰寫的指令碼 HTML/javascript，系統管理員可以用來判斷是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]存在於系統上。  
   
 > [!NOTE]
->  如需安裝、部署及偵測 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 的詳細資訊，請參閱[部署 Microsoft .NET Framework 3.0 版](http://go.microsoft.com/fwlink/?LinkId=96739) \(英文\) 中的相關討論。  
+>  如需詳細資訊，在上安裝、 部署和偵測[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，請參閱[部署 Microsoft.NET Framework 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)。  
   
 <a name="content_expiration"></a>   
-## 偵測 ".NET CLR" User\-Agent 字串  
- 安裝 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 時，MSI 會在 UserAgent 宇串中加入 ".NET CLR" 和版本號碼。  下列範例顯示內嵌在簡單 HTML 網頁中的指令碼。  這個指令碼會搜尋 UserAgent 字串，確定是否已安裝 [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]，並在搜尋結果中顯示狀態訊息。  
+## <a name="detect-the-net-clr-user-agent-string"></a>偵測 「.NET CLR"使用者代理字串  
+ 當[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]已安裝，MSI 新增 「.NET CLR"和版本號碼的使用者代理字串。 下列範例顯示簡單的 HTML 網頁中內嵌的指令碼。 指令碼搜尋使用者代理字串，以判斷是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]已安裝，且在搜尋結果中顯示狀態訊息。  
   
 ```  
 <HTML>  
@@ -118,16 +121,15 @@ caps.handback.revision: 12
     <div id="result" />  
   </BODY>  
 </HTML>  
-  
 ```  
   
- 如果搜尋 ".NET CLR " 版本成功，則會顯示下列類型的狀態訊息：  
+ 如果 「.NET CLR"版本的搜尋成功，則會出現下列類型的狀態訊息：  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- 否則，便會出現下列類型的狀態訊息：  
+ 否則，就會出現下列類型的狀態訊息：  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

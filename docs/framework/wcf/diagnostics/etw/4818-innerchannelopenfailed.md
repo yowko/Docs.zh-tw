@@ -1,35 +1,38 @@
 ---
-title: "4818 - InnerChannelOpenFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4818 - InnerChannelOpenFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8ac6447-4fbb-4e08-ab26-91acae48dd11
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 550eb2c6266ad43c3375fbc675267e25a8430f1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 4818 - InnerChannelOpenFailed
-## 屬性  
+# <a name="4818---innerchannelopenfailed"></a>4818 - InnerChannelOpenFailed
+## <a name="properties"></a>屬性  
   
 |||  
 |-|-|  
 |ID|4818|  
 |關鍵字|探索|  
 |層級|警告|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## 描述  
- 當 DiscoveryClientChannel 無法以探索結果端點開啟通道時，就會發出此事件。  DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
+## <a name="description"></a>描述  
+ 當 DiscoveryClientChannel 無法以探索結果端點開啟通道時，就會發出此事件。 DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
   
-## 訊息  
- DiscoveryClientChannel 無法以 EndpointAddress\='%1' 且 Via\='%2' 的探索結果端點開啟通道。  DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
+## <a name="message"></a>訊息  
+ DiscoveryClientChannel 無法以 EndpointAddress='%1' 且 Via='%2' 的探索結果端點開啟通道。 DiscoveryClientChannel 現在將嘗試使用下一個可用的探索結果端點。  
   
-## 詳細資料
+## <a name="details"></a>詳細資料

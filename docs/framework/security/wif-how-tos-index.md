@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e8c6d04-fc2e-4b55-8717-c4cbaf681381
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 91d76cb823bd16b716889a8ef52dc1c6d2c94ee3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/18/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-how-to39s-index"></a>WIF 的操作說明索引
 -   [操作說明：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/18/2017
 -   [操作說明：啟用 WCF Web 服務應用程式的 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
   
 -   [操作說明：轉換傳入宣告](../../../docs/framework/security/how-to-transform-incoming-claims.md)
-

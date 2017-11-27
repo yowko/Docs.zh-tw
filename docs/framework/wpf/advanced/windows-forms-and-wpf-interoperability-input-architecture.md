@@ -1,145 +1,148 @@
 ---
-title: "Windows Form 和 WPF 互通性輸入架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost 鍵盤和訊息"
-  - "輸入架構 [WPF 互通性]"
-  - "互通性 [WPF], Windows Form"
-  - "鍵盤互通 [WPF]"
-  - "訊息 [WPF]"
-  - "非強制回應對話方塊 [WPF]"
-  - "非強制回應表單"
-  - "Windows Form [WPF], 互通性"
-  - "Windows Form, WPF 互通"
-  - "WindowsFormsHost 鍵盤和訊息"
+title: "Windows Form 和 WPF 互通性輸入架構"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input architecture [WPF interoperability]
+- messages [WPF]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- modeless forms [WPF]
+- ElementHost keyboard and messages [WPF]
+- keyboard interoperation [WPF]
+- WindowsFormsHost keyboard and messages [WPF]
+- modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b48b5d78ce3136146f7ad17f859a489b5556a000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Form 和 WPF 互通性輸入架構
-若要讓 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 與 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 兩者之間互通，這兩項技術都必須具有適當的鍵盤輸入處理。  本主題說明這些技術如何實作鍵盤與訊息處理，以在混合應用程式中順利達到互通性。  
+# <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Form 和 WPF 互通性輸入架構
+互通性之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]需要這兩種技術有適當的鍵盤輸入的處理。 本主題會說明這些技術的實作方式鍵盤和訊息處理，以達到混合式應用程式中的平順互通性。  
   
  本主題包含下列子章節：  
   
--   非強制回應表單與對話方塊  
+-   非強制回應表單和對話方塊  
   
--   WindowsFormsHost 鍵盤與訊息處理  
+-   WindowsFormsHost 鍵盤和訊息處理  
   
--   ElementHost 鍵盤與訊息處理  
+-   ElementHost 鍵盤和訊息處理  
   
-## 非強制回應表單與對話方塊  
- 呼叫 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 項目的 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 方法，以從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構應用程式開啟非強制回應 \(Modeless\) 表單或對話方塊。  
+## <a name="modeless-forms-and-dialog-boxes"></a>非強制回應表單和對話方塊  
+ 呼叫<xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素以封閉從非強制回應表單或對話方塊方塊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。  
   
- 呼叫 <xref:System.Windows.Forms.Integration.ElementHost> 控制項的 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 方法，以在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 架構應用程式中開啟非強制回應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面。  
+ 呼叫<xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>方法<xref:System.Windows.Forms.Integration.ElementHost>要開啟的非強制回應控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-應用程式。  
   
-## WindowsFormsHost 鍵盤與訊息處理  
- 當由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構應用程式裝載時，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 鍵盤與訊息處理包含下列步驟：  
+## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost 鍵盤和訊息處理  
+ 當裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-應用程式，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]鍵盤和訊息處理包含下列項目：  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 類別會從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 訊息迴圈取得訊息，而該訊息迴圈是由 <xref:System.Windows.Interop.ComponentDispatcher> 類別所實作。  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別取得訊息從[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈，而藉由<xref:System.Windows.Interop.ComponentDispatcher>類別。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 類別會建立 Surrogate [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 訊息迴圈，以確定已執行一般的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 鍵盤處理。  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會建立代理[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]訊息迴圈，以確保該一般[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]鍵盤處理，就會發生。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 類別會實作 <xref:System.Windows.Interop.IKeyboardInputSink> 介面，以便與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 協調焦點 \(Focus\) 的管理。  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost>類別會實作<xref:System.Windows.Interop.IKeyboardInputSink>介面來協調與焦點管理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項自行註冊，並啟動其訊息迴圈。  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項自行註冊並啟動它的訊息迴圈。  
   
- 下列章節將進一步說明程序中的這些部分。  
+ 下列章節將更詳細的程序中的這些部分。  
   
-### 從 WPF 訊息迴圈取得訊息  
- <xref:System.Windows.Interop.ComponentDispatcher> 類別會實作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的訊息迴圈管理員。  <xref:System.Windows.Interop.ComponentDispatcher> 類別會提供攔截 \(Hook\)，讓外部用戶端可在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 處理訊息前先篩選訊息。  
+### <a name="acquiring-messages-from-the-wpf-message-loop"></a>取得訊息，從 WPF 訊息迴圈  
+ <xref:System.Windows.Interop.ComponentDispatcher>類別實作的訊息迴圈管理員[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Interop.ComponentDispatcher>類別會提供可讓外部用戶端篩選器之前的訊息勾點[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]加以處理。  
   
- 互通性實作 \(Implementation\) 會處理 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件，讓 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項可在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項之前處理訊息。  
+ 互通性實作控點<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件，可讓[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項來處理訊息之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
   
-### Surrogate Windows Form 訊息迴圈  
- 根據預設，<xref:System.Windows.Forms.Application?displayProperty=fullName> 類別包含 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式的主要訊息迴圈。  在互通期間，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 訊息迴圈不會處理訊息。  因此，必須重現這個邏輯。  <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件的處理常式會執行下列步驟：  
+### <a name="surrogate-windows-forms-message-loop"></a>Surrogate Windows Form 訊息迴圈  
+ 根據預設，<xref:System.Windows.Forms.Application?displayProperty=nameWithType>類別包含的主要訊息迴圈[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式。 互通性，期間[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]訊息迴圈不處理訊息。 因此，必須重新產生這個邏輯。 處理常式<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件執行下列步驟：  
   
-1.  使用 <xref:System.Windows.Forms.IMessageFilter> 介面篩選訊息。  
+1.  訊息使用篩選<xref:System.Windows.Forms.IMessageFilter>介面。  
   
-2.  呼叫 <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName> 方法。  
+2.  呼叫<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法。  
   
-3.  視需要轉譯和分派訊息。  
+3.  將轉譯和分派訊息，如有必要。  
   
-4.  將訊息傳送至裝載控制項 \(若無其他控制項可以處理訊息\)。  
+4.  如果沒有其他控制項可以處理訊息，請將訊息傳遞至裝載的控制項。  
   
-### IKeyboardInputSink 實作  
- Surrogate 訊息迴圈會負責處理鍵盤管理。  因此，<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> 方法是唯一需要在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 類別中實作的 <xref:System.Windows.Interop.IKeyboardInputSink> 成員。  
+### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink 實作  
+ 代理訊息迴圈處理鍵盤管理。 因此，<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法是唯一<xref:System.Windows.Interop.IKeyboardInputSink>成員需要在實作<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別。  
   
- 根據預設，<xref:System.Windows.Interop.HwndHost> 類別會針對其 <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 實作傳回 `false`。  如此可防止透過 Tab 鍵從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項移至 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。  
+ 根據預設，<xref:System.Windows.Interop.HwndHost>類別會傳回`false`針對其<xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>實作。 這可防止從按下 tab 鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制權傳輸至[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項。  
   
- <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> 方法的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 實作會執行下列步驟：  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>實作<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法會執行下列步驟：  
   
-1.  尋找 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項所包含且可接收焦點的第一個或最後一個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。  控制項的選擇是根據周遊資訊而定。  
+1.  尋找第一個或最後一個[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]所包含的控制項<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項，可以接收焦點。 控制項的選擇取決於周遊資訊。  
   
-2.  將焦點設到控制項上，並傳回 `true`。  
+2.  將焦點設定為控制項，並傳回`true`。  
   
-3.  如果沒有控制項可接收焦點，則傳回 `false`。  
+3.  如果沒有控制項可以接收焦點，就會傳回`false`。  
   
-### WindowsFormsHost 註冊  
- 當建立 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項的視窗控制代碼 \(Window Handle\) 時，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項會呼叫可以將自己註冊到訊息迴圈中的內部靜態方法。  
+### <a name="windowsformshost-registration"></a>WindowsFormsHost 註冊  
+ 當視窗的控制代碼<xref:System.Windows.Forms.Integration.WindowsFormsHost>建立控制項時，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項便會呼叫註冊其目前狀態的訊息迴圈內部的靜態方法。  
   
- 在註冊期間，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項會檢查訊息迴圈。  如果訊息迴圈尚未啟動，則會建立 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件處理常式。  附加 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> 事件處理常式後，訊息迴圈會被視為執行中。  
+ 在註冊期間，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制會檢查訊息迴圈。 如果尚未啟動訊息迴圈，<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>建立事件處理常式。 訊息迴圈會被視為在執行時<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>附加事件處理常式。  
   
- 當視窗控制代碼被終結時，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項即會將自己從註冊中移除。  
+ 終結視窗控制代碼時，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項則會從登錄移除本身。  
   
-## ElementHost 鍵盤與訊息處理  
- 當由 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式裝載時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 鍵盤與訊息處理包含下列項目：  
+## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost 鍵盤和訊息處理  
+ 當裝載[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]鍵盤和訊息處理包含下列項目：  
   
--   <xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.IKeyboardInputSink> 與 <xref:System.Windows.Interop.IKeyboardInputSite> 介面實作。  
+-   <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.IKeyboardInputSink>，和<xref:System.Windows.Interop.IKeyboardInputSite>介面實作。  
   
--   Tab 鍵切換與方向鍵。  
+-   按下 tab 鍵和箭號索引鍵。  
   
--   命令鍵與對話方塊按鍵。  
+-   命令的索引鍵與對話方塊按鍵。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵處理。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]對應處理程序。  
   
- 下列章節將進一步說明這些部分。  
+ 下列章節將更多詳細資料中的這些組件。  
   
-### 介面實作  
- 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，鍵盤訊息會傳送至具有焦點之控制項的視窗控制代碼。  在 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中，這些訊息會傳送至裝載的項目。  為了完成這項作業，<xref:System.Windows.Forms.Integration.ElementHost> 控制項會提供 <xref:System.Windows.Interop.HwndSource> 執行個體。  如果 <xref:System.Windows.Forms.Integration.ElementHost> 控制項具有焦點，<xref:System.Windows.Interop.HwndSource> 執行個體即會傳送大部分的鍵盤輸入，使其可由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 類別處理。  
+### <a name="interface-implementations"></a>介面實作  
+ 在[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]，鍵盤訊息會路由傳送至具有焦點的控制項的視窗控制代碼。 在<xref:System.Windows.Forms.Integration.ElementHost>控制項，這些訊息會路由傳送至裝載的項目。 若要達成此目的，<xref:System.Windows.Forms.Integration.ElementHost>控制項提供<xref:System.Windows.Interop.HwndSource>執行個體。 如果<xref:System.Windows.Forms.Integration.ElementHost>控制項有焦點，<xref:System.Windows.Interop.HwndSource>執行路由傳送的輸入，因此可處理的大部分鍵盤[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.InputManager>類別。  
   
- <xref:System.Windows.Interop.HwndSource> 類別會實作 <xref:System.Windows.Interop.IKeyboardInputSink> 與 <xref:System.Windows.Interop.IKeyboardInputSite> 介面。  
+ <xref:System.Windows.Interop.HwndSource>類別會實作<xref:System.Windows.Interop.IKeyboardInputSink>和<xref:System.Windows.Interop.IKeyboardInputSite>介面。  
   
- 若要與鍵盤互通，必須實作 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 方法，以處理可以將焦點移出裝載的項目的 TAB 鍵與方向鍵。  
+ 實作依賴鍵盤互通<xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>方法，以控制代碼 TAB 鍵和方向鍵索引鍵將焦點從裝載的項目移的輸入。  
   
-### Tab 切換與方向鍵  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 選取邏輯會對應至 <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> 與 <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> 方法，以實作 TAB 鍵與方向鍵巡覽。  覆寫 <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> 方法即可達成此對應。  
+### <a name="tabbing-and-arrow-keys"></a>Tab 切換和方向鍵  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]選取邏輯會對應至<xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>和<xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A>方法來實作 TAB 和方向鍵索引鍵巡覽。 覆寫<xref:System.Windows.Forms.Integration.ElementHost.Select%2A>方法會完成這項對應。  
   
-### 命令鍵與對話方塊按鍵  
- 為了提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 先處理命令鍵與對話方塊按鍵的機會，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 命令處理已連接至 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 方法。  覆寫 <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=fullName> 方法即可連接至這兩項技術。  
+### <a name="command-keys-and-dialog-box-keys"></a>命令索引鍵和索引鍵對話方塊  
+ 若要讓[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]第一個有機會處理命令和對話方塊金鑰，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命令前置處理已連線到<xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>方法。 覆寫<xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType>方法連接這兩項技術。  
   
- 透過 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> 方法，受裝的載項目可以處理任何按鍵訊息，如 WM\_KEYDOWN、WM\_KEYUP、WM\_SYSKEYDOWN 或 WM\_SYSKEYUP，包括 TAB、ENTER、ESC 與方向鍵等命令鍵。  如果沒有處理按鍵訊息，則會將其傳送至 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 祖系階層以進行處理。  
+ 與<xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>方法中，裝載項目可以處理任何索引鍵的訊息，例如 WM_KEYUP WM_KEYDOWN、 WM_SYSKEYDOWN、 或 WM_SYSKEYUP，包括命令的按鍵，例如 TAB、 ENTER、 esc 鍵和方向鍵。 如果未處理按鍵訊息，就會傳送[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]處理的上階階層。  
   
-### 快速鍵處理  
- 若要正確處理快速鍵，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵處理必須已連接至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 類別。  此外，所有 WM\_CHAR 訊息也都必須正確傳送至裝載的項目。  
+### <a name="accelerator-processing"></a>快速鍵處理  
+ 正確地處理加速器，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]快速鍵處理必須連接到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>類別。 此外，所有的 WM_CHAR 訊息必須正確地路由傳送至裝載的項目。  
   
- 由於 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> 方法的 <xref:System.Windows.Interop.HwndSource> 預設實作會傳回 `false`，因此 WM\_CHAR 訊息會以下列邏輯進行處理：  
+ 因為預設<xref:System.Windows.Interop.HwndSource>實作<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>方法會傳回`false`，WM_CHAR 訊息將會使用處理下列邏輯：  
   
--   覆寫 <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=fullName> 方法，以確保所有 WM\_CHAR 訊息都會轉寄至裝載的項目。  
+-   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>以確保所有的 WM_CHAR 訊息會轉寄至裝載的項目會覆寫方法。  
   
--   如果按下 ALT 鍵，則訊息為 WM\_SYSCHAR。  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不會透過 <xref:System.Windows.Forms.Control.IsInputChar%2A> 方法前置處理這個訊息。  因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 方法會被覆寫，以向 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 查詢已註冊的快速鍵。  如果找到已註冊的快速鍵，則 <xref:System.Windows.Input.AccessKeyManager> 會加以處理。  
+-   如果按下 ALT 鍵時，訊息就會 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]不會透過此訊息前置處理<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>會覆寫方法來查詢[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>的已註冊的快速鍵。 如果找到已註冊的 accelerator，<xref:System.Windows.Input.AccessKeyManager>加以處理。  
   
--   如果未按 ALT 鍵，則 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 類別會處理未處理的輸入。  如果輸入的是快速鍵，則 <xref:System.Windows.Input.AccessKeyManager> 會加以處理。  如果是未處理的 WM\_CHAR 訊息，則會處理 <xref:System.Windows.Input.InputManager.PostProcessInput> 事件。  
+-   如果未按下 ALT 鍵， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>類別處理未處理的輸入。 如果輸入是快速鍵，<xref:System.Windows.Input.AccessKeyManager>加以處理。 <xref:System.Windows.Input.InputManager.PostProcessInput>未處理的 WM_CHAR 訊息處理事件。  
   
- 當使用者按 ALT 鍵時，整個表單上都會顯示快速鍵視覺提示。  為了支援這項行為，無論哪個控制項具有焦點，作用中表單上所有的 <xref:System.Windows.Forms.Integration.ElementHost> 控制項都會接收 WM\_SYSKEYDOWN 訊息。  
+ 當使用者按下 ALT 鍵時，整個表單會顯示快速鍵視覺提示。 若要支援此行為，所有<xref:System.Windows.Forms.Integration.ElementHost>作用中的表單上控制項接收 WM_SYSKEYDOWN 訊息，不論哪個控制項具有焦點。  
   
- 訊息只會傳送至作用中表單內的 <xref:System.Windows.Forms.Integration.ElementHost> 控制項。  
+ 訊息傳送至<xref:System.Windows.Forms.Integration.ElementHost>現用表單中的控制項。  
   
-## 請參閱  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [逐步解說：在 WPF 中裝載 Windows Form 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [逐步解說：在 Windows Form 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
- [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

@@ -1,73 +1,79 @@
 ---
-title: "制定投影 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "制定投影"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8afd48c6ce7c6313e82a7b74c2271f52833d1f5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 制定投影
-下列範例顯示 C\# 中的 `select` 陳述式和 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Select` 陳述式如何與其他功能結合，以構成查詢投影。  
+# <a name="formulate-projections"></a>制定投影
+下列範例顯示 C# 中的 `select` 陳述式和 `Select` 中的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 陳述式如何與其他功能結合，以構成查詢投影。  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Select` 子句 \(C\# 中的 `select` 子句\)，傳回 `Customers` 的連絡人名稱序列。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`中的子句[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select`子句在 C# 中的) 以傳回的連絡人名稱序列`Customers`。  
   
  [!code-csharp[DLinqQueryExamples#57](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#57)]
  [!code-vb[DLinqQueryExamples#57](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#57)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `Select` 中的子句 \(C\# 中的 `select` 子句\) 和「*匿名型別*」\(Anonymous Type\)，傳回 `Customers` 的連絡人名稱和電話號碼序列。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`中的子句[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select`子句在 C# 中的) 和*匿名型別*要傳回的連絡人名稱序列和電話號碼`Customers`。  
   
  [!code-csharp[DLinqQueryExamples#58](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#58)]
  [!code-vb[DLinqQueryExamples#58](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#58)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Select` 子句 \(C\# 中的 `select` 子句\) 和「*匿名型別*」，傳回員工的姓名和電話號碼序列。  `FirstName` 和 `LastName` 欄位會合併成單一欄位 \(`Name`\)，而在結果序列中 `HomePhone` 欄位會重新命名為 `Phone`。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`中的子句[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select`子句在 C# 中的) 和*匿名型別*傳回一連串的名稱，並為員工電話號碼。 `FirstName`和`LastName`欄位會合併成單一欄位 (`Name`)，而`HomePhone`欄位重新命名為`Phone`中所產生的順序。  
   
  [!code-csharp[DLinqQueryExamples#59](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#59)]
  [!code-vb[DLinqQueryExamples#59](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#59)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Select` 子句 \(C\# 中的 `select` 子句\) 和「*匿名型別*」，傳回所有 `ProductID` 的序列和名為 `HalfPrice` 的計算值。  此值設為 `UnitPrice` 除以 2。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`中的子句[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select`子句在 C# 中的) 和*匿名型別*以傳回所有序列`ProductID`s 和名為的導出的值`HalfPrice`。 此值設為 `UnitPrice` 除以 2。  
   
  [!code-csharp[DLinqQueryExamples#60](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#60)]
  [!code-vb[DLinqQueryExamples#60](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#60)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Select` 子句 \(C\# 中的 `select` 子句\) 和「*條件陳述式*」\(Conditional Statement\)，傳回產品名稱和產品可用性的序列。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`中的子句[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select`子句在 C# 中的) 和*條件陳述式*傳回一連串的產品名稱和產品可用性。  
   
  [!code-csharp[DLinqQueryExamples#61](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#61)]
  [!code-vb[DLinqQueryExamples#61](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#61)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `Select` 子句 \(C\# 中的 `select` 子句\) 和「*已知型別*」\(Known Type\) \(Name\)，傳回員工姓名的序列。  
+## <a name="example"></a>範例  
+ 下列範例會使用[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]`Select`子句 (`select`子句在 C# 中的) 和*已知型別*(Name)，傳回員工的名稱的序列。  
   
  [!code-csharp[DLinqQueryExamples#62](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#62)]
  [!code-vb[DLinqQueryExamples#62](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#62)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的 `Select` 和 `Where` \(C\# 中的 `select` 和 `where`\)，傳回倫敦客戶之連絡人名稱的「*篩選序列*」\(Filtered Sequence\)。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`和`Where`中[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select`和`where`C# 中) 來傳回*篩選順序*位於倫敦的客戶的連絡人名稱。  
   
  [!code-csharp[DLinqQueryExamples#63](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#63)]
  [!code-vb[DLinqQueryExamples#63](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#63)]  
   
-## 範例  
- 下列範例使用 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的  `Select` 子句 \(C\# 中的 `select` 子句\) 和「*匿名型別*」，傳回客戶相關資料的「*合適子集*」\(Shaped Subset\)。  
+## <a name="example"></a>範例  
+ 下列範例會使用`Select`中的子句[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)](`select` C# 中的子句) 和*匿名型別*傳回*形狀子集*客戶相關的資料。  
   
  [!code-csharp[DLinqQueryExamples#64](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#64)]
  [!code-vb[DLinqQueryExamples#64](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#64)]  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例使用巢狀查詢，傳回下列結果：  
   
 -   所有訂單與其對應 `OrderID` 的序列。  
@@ -79,5 +85,5 @@ caps.handback.revision: 2
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

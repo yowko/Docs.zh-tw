@@ -1,30 +1,34 @@
 ---
-title: "實體活動 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "實體活動"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cc1ddb69e69e603c4460ef6db1a60f4e2e650749
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 實體活動
+# <a name="entity-activities"></a>實體活動
 這個範例示範如何與 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 搭配使用 ADO.NET Entity Framework，以簡化資料存取。  
   
- ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。ADO.NET Entity Framework 藉由提供某個層級的抽象概念來進行這項處理，這個概念會針對概念應用程式模型進行程式設計，而不是直接針對關聯式儲存結構描述進行程式設計。[!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework，請參閱 [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)。  
+ ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。 ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework，請參閱[ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)。  
   
-## 範例詳細資料  
- 這個範例會使用 `Northwind` 資料庫，而且包含了用來建立及移除 `Northwind` 資料庫的指令碼 \(Setup.cmd 和 Cleanup.cmd\)。此範例中的專案包含了根據 `Northwind` 資料庫的實體資料模型。您可以開啟專案中包含的 `Northwind.edmx` 檔案來尋找此模型。這個模型會定義可以使用 ADO.NET Entity Framework 存取之物件的形狀。  
+## <a name="sample-details"></a>範例詳細資料  
+ 這個範例會使用 `Northwind` 資料庫，而且包含了用來建立及移除 `Northwind` 資料庫的指令碼 (Setup.cmd 和 Cleanup.cmd)。 此範例中的專案包含了根據 `Northwind` 資料庫的實體資料模型。 您可以開啟專案中包含的 `Northwind.edmx` 檔案來尋找此模型。 這個模型會定義可以使用 ADO.NET Entity Framework 存取之物件的形狀。  
   
  下列活動包含在此範例中：  
   
--   `EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。[!INCLUDE[crabout](../../../../includes/crabout-md.md)]如需 Entity SQL 語言的詳細資訊，請參閱 [Entity SQL 語言](http://go.microsoft.com/fwlink/?LinkId=165646) \(英文\)。  
+-   `EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。 Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Entity SQL 語言，請參閱[Entity SQL 語言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
   
 -   `EntityLinqQuery`：這個活動可讓您從根據 LINQ 查詢或述詞的資料庫中擷取物件。  
   
@@ -32,13 +36,13 @@ caps.handback.revision: 9
   
 -   `EntityDelete`：`EntityDelete` 活動可讓您從資料庫中刪除實體或實體集合。  
   
--   `ObjectContextScope`：之前提到的活動只能在包含的 `ObjectContextScope` 活動執行個體內使用。`ObjectContextScope` 活動會設定與資料庫之間的連接。此活動需要連接字串 \(使用組態檔設定來傳入或擷取\)。`ObjectContextScope` 活動可讓您輕鬆地針對實體執行一組相關作業。因為這個範圍會維護作用中的連接，所以它是「無持續性」範圍。此外，當 `ObjectContextScope` 活動結束時，使用該範圍內的實體活動所擷取之物件的任何變更都會自動保存回資料庫，而且不需要任何明確或後續的動作來將物件儲存回資料庫。  
+-   `ObjectContextScope`：之前提到的活動只能在包含的 `ObjectContextScope` 活動執行個體內使用。 `ObjectContextScope` 活動會設定與資料庫之間的連接。 此活動需要連接字串 (使用組態檔設定來傳入或擷取)。 `ObjectContextScope` 活動可讓您輕鬆地針對實體執行一組相關作業。 因為這個範圍會維護作用中的連接，所以它是「無持續性」範圍。 此外，當 `ObjectContextScope` 活動結束時，使用該範圍內的實體活動所擷取之物件的任何變更都會自動保存回資料庫，而且不需要任何明確或後續的動作來將物件儲存回資料庫。  
   
-## 使用實體活動  
+## <a name="using-the-entity-activities"></a>使用實體活動  
  下列程式碼片段會示範如何使用這個範例所呈現的實體活動。  
   
-### EntitySql  
- 底下的程式碼片段會示範如何查詢位於倫敦 \(London\) 的所有客戶 \(依據名稱排序\)，以及如何逐一查看客戶清單。  
+### <a name="entitysql"></a>EntitySql  
+ 底下的程式碼片段會示範如何查詢位於倫敦 (London) 的所有客戶 (依據名稱排序)，以及如何逐一查看客戶清單。  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>();  
@@ -81,12 +85,11 @@ return new ObjectContextScope
                     }  
                 }  
         }                 
-};  
-  
+};     
 ```  
   
-### EntityLinqQuery  
- 底下的程式碼片段會示範如何查詢位於倫敦 \(London\) 的所有客戶，以及如何逐一查看產生的客戶清單。  
+### <a name="entitylinqquery"></a>EntityLinqQuery  
+ 底下的程式碼片段會示範如何查詢位於倫敦 (London) 的所有客戶，以及如何逐一查看產生的客戶清單。  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>() { Name = "LondonCustomers" };  
@@ -126,10 +129,9 @@ return new ObjectContextScope
         }  
     }  
 };  
-  
 ```  
   
-### EntityAdd  
+### <a name="entityadd"></a>EntityAdd  
  底下的程式碼片段會示範如何將 OrderDetail 記錄加入至現有的訂單。  
   
 ```  
@@ -176,11 +178,10 @@ return new ObjectContextScope
         }  
     }  
 };  
-  
 ```  
   
-### EntityDelete  
- 底下的程式碼片段會示範如何刪除訂單中的現有 OrderDetail 記錄 \(如果存在的話\)。  
+### <a name="entitydelete"></a>EntityDelete  
+ 底下的程式碼片段會示範如何刪除訂單中的現有 OrderDetail 記錄 (如果存在的話)。  
   
 ```  
 Variable<IEnumerable<OrderDetail>> orderDetails = new Variable<IEnumerable<OrderDetail>>();              
@@ -224,45 +225,44 @@ return new ObjectContextScope
         }  
     }  
 };  
-  
 ```  
   
-## 若要使用這個範例  
+## <a name="to-use-this-sample"></a>若要使用這個範例  
  您必須先在本機 SQL Server Express 執行個體中建立 `Northwind` 資料庫，然後才能執行這個範例。  
   
-#### 若要設定 Northwind 資料庫  
+#### <a name="to-set-up-the-northwind-database"></a>若要設定 Northwind 資料庫  
   
 1.  開啟命令提示字元。  
   
-2.  在新的命令提示字元視窗中，巡覽至 EntityActivities\\CS 資料夾。  
+2.  在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。  
   
-3.  輸入 `setup.cmd` 然後按 ENTER。  
+3.  型別`setup.cmd`按下 ENTER。  
   
-#### 若要執行範例  
+#### <a name="to-run-the-sample"></a>若要執行範例  
   
 1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 EntityActivities.sln 方案檔。  
   
-2.  若要建置此方案，請按下 CTRL\+SHIFT\+B。  
+2.  若要建置此方案，請按 CTRL+SHIFT+B。  
   
-3.  若要執行此方案，請按下 CTRL\+F5。  
+3.  若要執行此方案，請按下 CTRL+F5。  
   
  在執行此範例之後，您可能會想要移除 `Northwind` 資料庫。  
   
-#### 若要解除安裝 Northwind 資料庫  
+#### <a name="to-uninstall-the-northwind-database"></a>若要解除安裝 Northwind 資料庫  
   
 1.  開啟命令提示字元。  
   
-2.  在新的命令提示字元視窗中，巡覽至 EntityActivities\\CS 資料夾。  
+2.  在新的命令提示字元視窗中，巡覽至 EntityActivities\CS 資料夾。  
   
-3.  輸入 `cleanup.cmd` 然後按 ENTER。  
+3.  型別`cleanup.cmd`按下 ENTER。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

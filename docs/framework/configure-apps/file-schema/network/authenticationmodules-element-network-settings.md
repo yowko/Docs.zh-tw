@@ -1,73 +1,74 @@
 ---
-title: "&lt;authenticationModules&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules> 項目"
-  - "authenticationModules 項目"
+title: "&lt;authenticationModules&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules
+helpviewer_keywords:
+- authenticationModules element
+- <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fe2e1757a3e2da5c2aa6084c0eb21164de3ece0e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;authenticationModules&gt; 項目 (網路設定)
-指定用於驗證網路要求的模組。  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt;項目 （網路設定）
+指定用來驗證網路要求的模組。  
   
-## 語法  
+ \<configuration>  
+\<system.net >  
+\<authenticationModules >  
   
-```  
+## <a name="syntax"></a>語法  
   
-      <authenticationModules>   
+```xml  
+<authenticationModules>   
 </authenticationModules>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
  無。  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
   
-|**元素**|**說明**|  
-|------------|------------|  
-|[加入](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|加入驗證模組至應用程式。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|從應用程式清除所有驗證模組。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|從應用程式移除驗證模組。|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|將驗證模組加入至應用程式。|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|清除所有的驗證模組，從應用程式。|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|移除應用程式中的驗證模組。|  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
-|------------|------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何連接至網路的設定。|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
-## 備註  
- `authenticationModule` 項目指定使用伺服器執行驗證處理的驗證模組。  驗證模組必須實作 <xref:System.Net.IAuthenticationModule> 介面。  
+## <a name="remarks"></a>備註  
+ `authenticationModule`項目會指定執行驗證程序與伺服器的驗證模組。 驗證模組必須實作<xref:System.Net.IAuthenticationModule>介面。  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a>組態檔  
+ 此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## 範例  
- 下列程式碼範例啟用驗證模組。  您應該將 Version 和 PublicKeyToken 的值取代成指定之模組的正確值。  
+## <a name="example"></a>範例  
+ 下列範例會啟用驗證模組。 您應該取得版本和 PublicKeyToken 的值取代為指定模組的正確值。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -78,7 +79,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

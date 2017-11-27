@@ -1,51 +1,54 @@
 ---
-title: "如何：保留當做背景之影像的外觀比例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "背景影像的外觀比例, 保留"
-  - "背景影像, 保留外觀比例"
-  - "筆刷, 保留背景影像的外觀比例"
+title: "操作說明：維持當做背景之影像的外觀比例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aspect ratios of background images [WPF], preserving
+- brushes [WPF], preserving aspect ratios of background images
+- background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a34377403a55ba42d9d3f2946ef26ea48982f5d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：保留當做背景之影像的外觀比例
-本範例示範如何使用 <xref:System.Windows.Media.ImageBrush> 的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性保留影像的[外觀比例](GTMT) \(Aspect Ratio\)。  
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>操作說明：維持當做背景之影像的外觀比例
+這個範例示範如何使用<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性<xref:System.Windows.Media.ImageBrush>以維持外觀比例的影像。  
   
- 根據預設，當您使用 <xref:System.Windows.Media.ImageBrush> 繪製區域時，它的內容會延伸填滿整個輸出區域。  當輸出區域和影像的[外觀比例](GTMT)不同時，影像會因延伸而扭曲。  
+ 根據預設，當您使用<xref:System.Windows.Media.ImageBrush>繪製區域，其內容自動縮放以完全填滿輸出區域。 當輸出區域和影像的外觀比例不相同時，影像就會因為自動縮放而扭曲。  
   
- 若要 <xref:System.Windows.Media.ImageBrush> 保留影像的外觀比例，請將 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性設為 <xref:System.Windows.Media.Stretch> 或 <xref:System.Windows.Media.Stretch>。  
+ 讓<xref:System.Windows.Media.ImageBrush>保留其影像的外觀比例，設定<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>。  
   
-## 範例  
- 下列範例使用兩個 <xref:System.Windows.Media.ImageBrush> 物件繪製兩個矩形。  每個矩形都是 300 x 150 [像素](GTMT)，而且各包含一個 300 x 300 像素的影像。  第一個筆刷的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性設為 <xref:System.Windows.Media.Stretch>，而第二個筆刷的 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性設為 <xref:System.Windows.Media.Stretch>。  
+## <a name="example"></a>範例  
+ 下列範例會使用兩個<xref:System.Windows.Media.ImageBrush>來繪製兩個矩形的物件。 每個矩形是 300 乘 150 像素且各包含一個 300 乘 300 像素的影像。 <xref:System.Windows.Media.TileBrush.Stretch%2A>第一筆刷屬性設定為<xref:System.Windows.Media.Stretch.Uniform>，而<xref:System.Windows.Media.TileBrush.Stretch%2A>的第二筆刷屬性設定為<xref:System.Windows.Media.Stretch.UniformToFill>。  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
   
- 下圖顯示第一個筆刷的輸出，其中將 <xref:System.Windows.Media.TileBrush.Stretch%2A> 設為 <xref:System.Windows.Media.Stretch>。  
+ 下圖顯示具有的第一筆刷輸出<xref:System.Windows.Media.TileBrush.Stretch%2A>設定<xref:System.Windows.Media.Stretch.Uniform>。  
   
- ![Stretch 屬性設定為 Uniform 的 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.png "graphicsmm\_ImageBrushUniformStretch")  
+ ![Stretch 屬性設定為 Uniform 的 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
   
- 下圖顯示第二個筆刷的輸出，其中將 <xref:System.Windows.Media.TileBrush.Stretch%2A> 設為 <xref:System.Windows.Media.Stretch>。  
+ 下圖顯示具有的第二筆刷的輸出<xref:System.Windows.Media.TileBrush.Stretch%2A>設定<xref:System.Windows.Media.Stretch.UniformToFill>。  
   
- ![Stretch 屬性設定為 UniformToFill 的 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.png "graphicsmm\_ImageBrushUniformToFillStretch")  
+ ![Stretch 屬性設定為 UniformToFill 的 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
   
- 請注意，<xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性對其他 <xref:System.Windows.Media.TileBrush> 物件 \(即 <xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush>\) 的作用完全相同。  如需 <xref:System.Windows.Media.ImageBrush> 和其他 <xref:System.Windows.Media.TileBrush> 物件的詳細資訊，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ 請注意，<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性運作方式完全相同的其他<xref:System.Windows.Media.TileBrush>物件，也就是針對<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 如需有關<xref:System.Windows.Media.ImageBrush>和其他<xref:System.Windows.Media.TileBrush>物件，請參閱[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
- 另外請注意，雖然 <xref:System.Windows.Media.TileBrush.Stretch%2A> 屬性看起來像是指定 <xref:System.Windows.Media.TileBrush> 內容如何延伸填滿其輸出區域，但實際上是指定 <xref:System.Windows.Media.TileBrush> 內容如何延伸填滿其基底並排顯示。  如需詳細資訊，請參閱 <xref:System.Windows.Media.TileBrush>。  
+ 此外，請注意，雖然<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性會顯示以指定如何<xref:System.Windows.Media.TileBrush>內容自動縮放以符合其輸出區域中，它確實會指定如何<xref:System.Windows.Media.TileBrush>兩端之間自動縮放以填滿其基底的並排顯示的內容。 如需詳細資訊，請參閱<xref:System.Windows.Media.TileBrush>。  
   
- 這個程式碼範例是 <xref:System.Windows.Media.ImageBrush> 類別完整範例的一部分。  如需完整範例，請參閱 [ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005) \(英文\)。  
+ 這個程式碼範例是所提供之較大範例的一部分<xref:System.Windows.Media.ImageBrush>類別。 如需完整範例，請參閱[ImageBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160005)。  
   
-## 請參閱  
- <xref:System.Windows.Media.TileBrush>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Media.TileBrush>  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

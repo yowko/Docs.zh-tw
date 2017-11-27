@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-claims-programming-model"></a>WIF 宣告程式設計模型
 ASP.NET 和 Windows Communication Foundation (WCF) 的開發人員通常會使用身分識別和 IPrincipal 介面來處理使用者的身分識別資訊。 在 .NET 4.5 中，Windows Identity Foundation (WIF) 已經過整合，使得目前任何主體一律都存在宣告，如下圖所示：  
@@ -68,7 +66,7 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |-|-|-|  
 |SAML 1.1|1.來自 System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity(System.Security.Claims.ClaimsPrincipal、System.IdentityModel.Protocols.WSTrust.RequestSecurityToken、System.IdentityModel.Scope) 的所有宣告。<br />2.包含確認索引鍵之 XML 序列化的 `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey` 宣告 (此權杖包含證明權杖時)。<br />3.來自 Issuer 元素的 `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername` 宣告。<br />4.AuthenticationMethod 和 AuthenticationInstant 宣告 (權杖包含驗證陳述式時)。|除了＜SAML 1.1＞中所列的宣告之外 (不包含 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 類型的宣告)，還會加入 Windows 驗證相關宣告，身分識別將以 WindowsClaimsIdentity 表示。|  
 |SAML 2.0|與＜SAML 1.1＞相同。|與＜SAML 1.1 對應到 Windows 帳戶＞相同。|  
-|X509|1.含有來自 X509 憑證的下列 X500 辨別名稱屬性的宣告：emailName、dnsName、SimpleName、UpnName、UrlName、thumbprin、RsaKey (這可以使用 RSACryptoServiceProvider.ExportParameters 方法從 X509Certificate2.PublicKey.Key 屬性擷取)、DsaKey (這可以使用 DSACryptoServiceProvider.ExportParameters 方法從 X509Certificate2.PublicKey.Key 屬性擷取)、SerialNumber。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` 的 AuthenticationMethod 宣告。 含有 XmlSchema DateTime 格式的憑證驗證時間值的 AuthenticationInstant 宣告。|1.它會使用 Windows 帳戶的完整網域名稱作為 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 宣告值。 。<br />2.來自 X509 憑證的宣告未對應到 Windows，但已透過將憑證對應到 Windows 取得來自 Windows 帳戶的宣告。|  
+|X509|1.含有來自 X509 憑證的下列 X500 辨別名稱屬性的宣告：emailName、dnsName、SimpleName、UpnName、UrlName、thumbprin、RsaKey (這可以使用 RSACryptoServiceProvider.ExportParameters 方法從 X509Certificate2.PublicKey.Key 屬性擷取)、DsaKey (這可以使用 DSACryptoServiceProvider.ExportParameters 方法從 X509Certificate2.PublicKey.Key 屬性擷取)、SerialNumber。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` AuthenticationMethod 宣告。 含有 XmlSchema DateTime 格式的憑證驗證時間值的 AuthenticationInstant 宣告。|1.它會使用 Windows 帳戶的完整網域名稱作為 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 宣告值。 。<br />2.來自 X509 憑證的宣告未對應到 Windows，但已透過將憑證對應到 Windows 取得來自 Windows 帳戶的宣告。|  
 |UPN|1.宣告類似於 Windows 驗證章節中的宣告。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` AuthenticationMethod 宣告。 含有 XmlSchema DateTime 格式的密碼驗證時間值的 AuthenticationInstant 宣告。||  
 |Windows (Kerberos 或 NTLM)|1.從存取權杖產生的宣告，例如：PrimarySID、DenyOnlyPrimarySID、PrimaryGroupSID、DenyOnlyPrimaryGroupSID、GroupSID、DenyOnlySID 和 Name<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` 的 AuthenticationMethod。 含有 XMLSchema DateTime 格式的 Windows 存取權杖建立時間值的 AuthenticationInstant。||  
 |RSA 金鑰組|1.含有值 RSAKeyValue 的 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` 宣告。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature` 的 AuthenticationMethod 宣告。 含有 XMLSchema DateTime 格式的 RSA 金鑰驗證 (也就是驗證簽章) 時間值的 AuthenticationInstant 宣告。||  
@@ -84,4 +82,3 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |Spki|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
 |XmlDSig|`urn:ietf:rfc:3075`|  
 |未指定|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|
-

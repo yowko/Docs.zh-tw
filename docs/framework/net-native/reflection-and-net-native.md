@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6ec8d0a93354fcea17b27321d59174f2e53a47f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d9e4bdc26815feab7910e7518f7cd691a1f4dece
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-and-net-native"></a>反映和 .NET Native
 在 .NET Framework 中，Managed 開發可透過反映 API 來支援 metaprogramming。 反映可讓您檢查應用程式中的物件、在透過檢查發現的物件上呼叫方法、在執行階段產生新的類型，並可支援許多其他動態程式碼案例。 它也支援序列化和還原序列化，可讓物件的欄位值保存下來，並於稍後還原。 這些案例全都需要 .NET Framework just-in-time (JIT) 編譯器依據可用的中繼資料來產生機器碼。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/21/2017
 > [!NOTE]
 >  如需 .NET 原生編譯程序的概觀 (其提供需要執行階段指示詞檔案的背景資訊)，請參閱 [.NET 原生和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)。  
   
- 此外，[!INCLUDE[net_native](../../../includes/net-native-md.md)] 不允許您反映至 .NET Framework 類別庫的私用成員。 例如，呼叫 <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=fullName> 屬性來擷取 .NET Framework 類別庫類型，只會傳回公用或受保護的欄位。  
+ 此外，[!INCLUDE[net_native](../../../includes/net-native-md.md)] 不允許您反映至 .NET Framework 類別庫的私用成員。 例如，呼叫 <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> 屬性來擷取 .NET Framework 類別庫類型，只會傳回公用或受保護的欄位。  
   
  下列主題提供您在應用程式中支援反映和序列化時，所需的概念和參考文件：  
   
@@ -44,6 +42,5 @@ ms.lasthandoff: 08/21/2017
 -   [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)   
+ [使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)  
  [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
-

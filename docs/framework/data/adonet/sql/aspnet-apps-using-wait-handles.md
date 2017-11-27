@@ -1,40 +1,44 @@
 ---
-title: "使用等候控制代碼的 ASP.NET 應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用 Wait 控制代碼的 ASP.NET 應用程式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 01244b06085614ea5e36bdde3e3b2fe196c0c0f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用等候控制代碼的 ASP.NET 應用程式
-當應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼及輪詢模式會很有用。  等候模式可提供更靈活的方式來處理多個非同步作業。  有兩種等候模式，這兩種模式都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 \(任何\) 模式及等候 \(所有\) 模式。  
+# <a name="aspnet-applications-using-wait-handles"></a>使用 Wait 控制代碼的 ASP.NET 應用程式
+當應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼及輪詢模式會很有用。 等候模式可提供更靈活的方式來處理多個非同步作業。 有兩種等候模式，這兩種模式都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 (任何) 模式及等候 (所有) 模式。  
   
- 若要使用其中一種等候模式，您需要使用由 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法傳回之 <xref:System.IAsyncResult> 物件的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 屬性。  <xref:System.Threading.WaitHandle.WaitAny%2A> 與 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都會要求您傳送 <xref:System.Threading.WaitHandle> 物件做為引數，一起群組在陣列中。  
+ 若要使用其中一種等候模式，您需要使用由 <xref:System.IAsyncResult.AsyncWaitHandle%2A>、<xref:System.IAsyncResult> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法傳回之 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 物件的 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 屬性。 <xref:System.Threading.WaitHandle.WaitAny%2A> 與 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都會要求您傳送 <xref:System.Threading.WaitHandle> 物件做為引數，一起群組在陣列中。  
   
- 這兩種等候方法都會監視非同步作業，並且等候作業完成。  <xref:System.Threading.WaitHandle.WaitAny%2A> 方法會等候任意一項作業完成或逾時。  一旦您知道某項特定作業已完成，就可處理其結果，然後繼續等候下一項作業完成或逾時。  <xref:System.Threading.WaitHandle.WaitAll%2A> 方法會等候 <xref:System.Threading.WaitHandle> 執行個體陣列中的所有處理序完成或逾時後才繼續。  
+ 這兩種等候方法都會監視非同步作業，並且等候作業完成。 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法會等候任意一項作業完成或逾時。一旦您知道某項特定作業已完成，就可處理其結果，然後繼續等候下一項作業完成或逾時。<xref:System.Threading.WaitHandle.WaitAll%2A> 方法會等候 <xref:System.Threading.WaitHandle> 執行個體陣列中的所有處理序完成或逾時後才繼續。  
   
- 當您需要在不同伺服器上執行一定長度的多項作業，或您的伺服器功能足以同時處理所有查詢時，最可以突顯出等候模型的優點。  在此處顯示的範例中，三個查詢藉由將不同長度的 WAITFOR 命令加入不連貫的 SELECT 查詢，模擬長處理序。  
+ 當您需要在不同伺服器上執行一定長度的多項作業，或您的伺服器功能足以同時處理所有查詢時，最可以突顯出等候模型的優點。 在此處顯示的範例中，三個查詢藉由將不同長度的 WAITFOR 命令加入不連貫的 SELECT 查詢，模擬長處理序。  
   
-## 範例：等候 \(任何\) 模式  
- 下列範例說明等候 \(任何\) 模式。  啟動三個非同步處理序後，會呼叫 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，以等候其中任何一項處理序完成。  每個處理序完成時，都會呼叫 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法，並讀取產生的 <xref:System.Data.SqlClient.SqlDataReader> 物件。  此時，實際應用程式很可能使用 <xref:System.Data.SqlClient.SqlDataReader> 來填入一部分頁面。  在此簡單範例中，會將處理序完成的時間加入與該處理序對應的文字方塊中。  整體而言，文字方塊中的時間可說明：每次處理序完成時，都會執行程式碼。  
+## <a name="example-wait-any-model"></a>範例：等候 (任何) 模式  
+ 下列範例說明等候 (任何) 模式。 啟動三個非同步處理序後，會呼叫 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，以等候其中任何一項處理序完成。 每個處理序完成時，都會呼叫 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法，並讀取產生的 <xref:System.Data.SqlClient.SqlDataReader> 物件。 此時，實際應用程式很可能使用 <xref:System.Data.SqlClient.SqlDataReader> 來填入一部分頁面。 在此簡單範例中，會將處理序完成的時間加入與該處理序對應的文字方塊中。 整體而言，文字方塊中的時間可說明：每次處理序完成時，都會執行程式碼。  
   
- 若要設定此範例，請建立新的 ASP.NET 網站專案。  將一個 <xref:System.Web.UI.WebControls.Button> 控制項與四個 <xref:System.Web.UI.WebControls.TextBox> 控制項置於頁面上 \(接受每個控制項的預設名稱\)。  
+ 若要設定此範例，請建立新的 ASP.NET 網站專案。 將一個 <xref:System.Web.UI.WebControls.Button> 控制項與四個 <xref:System.Web.UI.WebControls.TextBox> 控制項置於頁面上 (接受每個控制項的預設名稱)。  
   
  將下列程式碼加入表單類別，並視環境需要修改連接字串。  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -165,9 +169,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -320,18 +322,16 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## 範例：等候 \(所有\) 模式  
- 下列範例說明等候 \(所有\) 模式。  啟動三個非同步處理序後，會呼叫 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法，以等候所有處理序完成或逾時。  
+## <a name="example-wait-all-model"></a>範例：等候 (所有) 模式  
+ 下列範例說明等候 (所有) 模式。 啟動三個非同步處理序後，會呼叫 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法，以等候所有處理序完成或逾時。  
   
- 像等候 \(任何\) 模式的範例一樣，會將處理序完成的時間加入與該處理序對應的文字方塊中。  同樣地，文字方塊中的時間可說明：只有當所有處理序都完成之後，才會執行 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法後面的程式碼。  
+ 像等候 (任何) 模式的範例一樣，會將處理序完成的時間加入與該處理序對應的文字方塊中。 同樣地，文字方塊中的時間可說明：只有當所有處理序都完成之後，才會執行 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法後面的程式碼。  
   
- 若要設定此範例，請建立新的 ASP.NET 網站專案。  將一個 <xref:System.Web.UI.WebControls.Button> 控制項與四個 <xref:System.Web.UI.WebControls.TextBox> 控制項置於頁面上 \(接受每個控制項的預設名稱\)。  
+ 若要設定此範例，請建立新的 ASP.NET 網站專案。 將一個 <xref:System.Web.UI.WebControls.Button> 控制項與四個 <xref:System.Web.UI.WebControls.TextBox> 控制項置於頁面上 (接受每個控制項的預設名稱)。  
   
  將下列程式碼加入表單類別，並視環境需要修改連接字串。  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -452,9 +452,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -591,6 +589,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## 請參閱  
- [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

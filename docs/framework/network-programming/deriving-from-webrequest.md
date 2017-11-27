@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -21,26 +16,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56a536ccdd9b4ad67bc6a07f4a6d2a225f6fa565
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webrequest"></a>衍生自 WebRequest
 <xref:System.Net.WebRequest> 類別是抽象的基底類別，提供基本的方法和屬性以建立特定通訊協定要求，其符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 **WebRequest** 類別的應用程式可以使用任何支援的通訊協定要求資料，不需要指定使用的通訊協定。  
   
- 為使特定通訊協定類別用為插入式通訊協定，必須符合兩個準則：類別必須實作 <xref:System.Net.IWebRequestCreate> 介面，且必須使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 方法登錄。 類別必須覆寫 **WebRequest** 所有的抽象方法和屬性，才能提供插入式介面。  
+ 為使特定通訊協定類別用為插入式通訊協定，必須符合兩個準則：類別必須實作 <xref:System.Net.IWebRequestCreate> 介面，且必須使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 方法登錄。 類別必須覆寫 **WebRequest** 所有的抽象方法和屬性，才能提供插入式介面。  
   
  **WebRequest** 執行個體僅供單次使用，如果您想要提出另一項要求，請建立新的 **WebRequest**。 **WebRequest** 支援 <xref:System.Runtime.Serialization.ISerializable> 介面，可讓開發人員序列化範本 **WebRequest**，然後重新建構其他要求的範本。  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest 建立方法  
- <xref:System.Net.IWebRequestCreate.Create%2A> 方法負責初始化特定通訊協定類別的新執行個體。 建立新的 **WebRequest** 時，<xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 方法會比對要求的 URI 和以 **RegisterPrefix** 方法登錄的 URI 前置詞。 正確特定通訊協定子代的 **Create** 方法，必須傳回能夠執行通訊協定標準要求/回應交易的子代初始化執行個體，不需要修改特定通訊協定的任何欄位。  
+ <xref:System.Net.IWebRequestCreate.Create%2A> 方法負責初始化特定通訊協定類別的新執行個體。 建立新的 **WebRequest** 時，<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法會比對要求的 URI 和以 **RegisterPrefix** 方法登錄的 URI 前置詞。 正確特定通訊協定子代的 **Create** 方法，必須傳回能夠執行通訊協定標準要求/回應交易的子代初始化執行個體，不需要修改特定通訊協定的任何欄位。  
   
 ## <a name="connectiongroupname-property"></a>ConnectionGroupName 屬性  
  <xref:System.Net.WebRequest.ConnectionGroupName%2A> 屬性用於命名一組對資源的連線，以便透過單一連線提出多項要求。 若要實作連線共用，您必須使用共用和指派連線的特定通訊協定方法。 例如，提供的 <xref:System.Net.ServicePointManager> 類別會實作 <xref:System.Net.HttpWebRequest> 類別的連線共用。 **ServicePointManager** 類別會建立 <xref:System.Net.ServicePoint>，為每個連線群組提供特定伺服器的連線。  
@@ -59,7 +53,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="headers-property"></a>Headers 屬性  
  <xref:System.Net.WebRequest.Headers%2A> 屬性包含與要求建立關聯的中繼資料名稱/值組任意集合。 **Headers** 屬性可以包含可表示為名稱/值組的通訊協定所需要的任何中繼資料。 通常必須先設定這項資訊，再呼叫 <xref:System.Net.WebRequest.GetRequestStream%2A> 或 <xref:System.Net.WebRequest.GetResponse%2A> 方法；一旦提出要求，中繼資料即視為唯讀。  
   
- 您不需要使用 **Headers** 屬性，也能使用標頭中繼資料。 通訊協定特定的中繼資料可以公開為屬性。例如，<xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> 屬性會公開 **User-Agent** HTTP 標頭。 當您將標頭中繼資料公開為屬性時，您不應該允許使用 **Headers** 屬性設定相同的屬性。  
+ 您不需要使用 **Headers** 屬性，也能使用標頭中繼資料。 通訊協定特定的中繼資料可以公開為屬性。例如，<xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> 屬性會公開 **User-Agent** HTTP 標頭。 當您將標頭中繼資料公開為屬性時，您不應該允許使用 **Headers** 屬性設定相同的屬性。  
   
 ## <a name="method-property"></a>Method 屬性  
  <xref:System.Net.WebRequest.Method%2A> 屬性包含要求會要求伺服器執行的動詞或動作。 **Method** 屬性的預設值必須啟用標準的要求/回應動作，不需要設定任何通訊協定特有的屬性。 例如，<xref:System.Net.HttpWebResponse.Method%2A> 方法預設為 GET，會從網頁伺服器要求資源並傳回回應。  
@@ -104,9 +98,8 @@ ms.lasthandoff: 08/21/2017
  **GetResponse** 方法負責建立適當的 **WebResponse** 子代，以包含傳入的回應。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [插入式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.FileWebRequest>  
+ [可插式通訊協定程式設計](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [衍生自 WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-

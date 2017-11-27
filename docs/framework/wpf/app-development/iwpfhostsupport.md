@@ -1,44 +1,46 @@
 ---
-title: "IWpfHostSupport | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IWpfHostSupport 介面"
+title: IWpfHostSupport
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85d4ed09d6c5ca17e148d531e6aac483ff737d51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# IWpfHostSupport
-透過 PresentationHost.exe 裝載 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 內容的應用程式會實作這個介面，以提供該主應用程式和 PresentationHost.exe 之間的整合點。  
+# <a name="iwpfhostsupport"></a>IWpfHostSupport
+裝載應用程式，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]內容 PresentationHost.exe 透過實作這個介面來提供主機和 PresentationHost.exe 之間的整合點。  
   
-## 備註  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式，例如網頁瀏覽器可以裝載 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 內容，包括 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 和鬆散的 XAML。  為了裝載 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 內容，[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式會建立 [WebBrowser 控制項](http://go.microsoft.com/fwlink/?LinkId=97911) \(英文\) 的執行個體。  為了接受裝載，[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 會建立 PresentationHost.exe 執行個體，提供裝載的 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 內容給主應用程式顯示在 [WebBrowser 控制項](http://go.microsoft.com/fwlink/?LinkId=97911) \(英文\)。  
+## <a name="remarks"></a>備註  
+ [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]如網頁瀏覽器的應用程式可以裝載[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]內容，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和鬆散的 XAML。 主機[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]內容，[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]應用程式建立的執行個體[WebBrowser 控制項](http://go.microsoft.com/fwlink/?LinkId=97911)。 要裝載[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]建立 PresentationHost.exe，提供裝載的執行個體[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]的主控件中的顯示內容[WebBrowser 控制項](http://go.microsoft.com/fwlink/?LinkId=97911)。  
   
- `IWpfHostSupport` 所啟用的整合可以讓 PresentationHost.exe：  
+ 啟用的整合`IWpfHostSupport`允許 PresentationHost.exe 至：  
   
--   針對主應用程式有興趣的未經處理輸入裝置 \(人性化介面裝置，Human Interface Devices\) 進行探索和註冊。  
+-   探索並向原始輸入裝置 （人性化介面裝置） 的主應用程式有興趣。  
   
--   從註冊的未經處理輸入裝置接收輸入訊息，並轉送適當訊息給主應用程式。  
+-   輸入從接收訊息的已註冊的原始輸入的裝置和轉寄的適當訊息主應用程式。  
   
--   向主應用程式查詢自訂進度和錯誤使用者介面。  
+-   查詢主應用程式自訂進度和錯誤的使用者介面。  
   
 > [!NOTE]
->  這個 API 只預定在本機用戶端電腦上使用並支援  
+>  僅限在本機用戶端電腦上使用及支援此 API  
   
-## Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
-|--------|--------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|讓 PresentationHost.exe 尋找主應用程式有興趣的未經處理輸入裝置 \(人性化介面裝置\)。|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|除非有傳回 E\_NOTIMPL，否則只要收到訊息，PresentationHost.exe 就會呼叫它。|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|根據預設，PresentationHost.exe 會提供自己的部署進度和部署錯誤使用者介面 \(在部署 WPF 內容時所顯示的\)。|
+|成員|說明|  
+|------------|-----------------|  
+|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|可讓 PresentationHost.exe 探索主應用程式有興趣的未經處理輸入裝置 (人性化介面裝置)。|  
+|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|除非傳回 E_NOTIMPL，否則每當收到訊息時，都會由 PresentationHost.exe 呼叫。|  
+|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|根據預設，PresentationHost.exe 提供它自己的部署進度和部署錯誤會顯示部署的 WPF 內容時的使用者介面。|

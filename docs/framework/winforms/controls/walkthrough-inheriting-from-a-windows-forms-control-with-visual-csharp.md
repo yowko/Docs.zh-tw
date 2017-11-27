@@ -1,73 +1,72 @@
 ---
-title: "逐步解說：使用 Visual C# 繼承自 Windows Form 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自訂控制項 [Windows Form], 繼承"
-  - "繼承, 控制項"
-  - "繼承, 自訂控制項"
-  - "繼承, 逐步解說"
-  - "Windows Form 控制項, 繼承"
+title: "逐步解說：使用 Visual C# 繼承自 Windows Form 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inheritance [Windows Forms], custom controls
+- inheritance [Windows Forms], control
+- Windows Forms controls, inheritance
+- inheritance [Windows Forms], walkthroughs
+- custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 668dd3624d06f916b23ec16dd8268d2bae4ffcf7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用 Visual C# 繼承自 Windows Form 控制項
-您可以使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)]，透過「*繼承*」\(Inheritance\) 建立強大的自訂控制項。  經由繼承，您可以建立保留標準 Windows Form 控制項所有繼承功能的控制項，但同時可整合自訂功能。  在這個逐步解說中，您將建立名為 `ValueButton` 的簡單繼承控制項。  這個按鈕將從標準 Windows Form <xref:System.Windows.Forms.Button> 控制項繼承功能，並將公開 \(Expose\) 名為 `ButtonValue` 的自訂屬性。  
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>逐步解說：使用 Visual C# 繼承自 Windows Form 控制項 #
+使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)]，您可以透過「繼承」建立功能強大的自訂控制項。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 這個按鈕就會繼承標準 Windows Form 功能<xref:System.Windows.Forms.Button>控制項，然後將公開名為的自訂屬性`ButtonValue`。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
-## 建立專案  
- 建立新專案時，您指定新專案名稱以便設定預設命名空間、組件名稱及專案名稱，同時也可確定預設元件會在正確的命名空間中。  
+## <a name="creating-the-project"></a>建立專案  
+ 當您建立新的專案時，您會指定其名稱以設定根命名空間、組件名稱和專案名稱，並且確定預設元件將會在正確的命名空間中。  
   
-#### 若要建立 ValueButtonLib 控制項程式庫和 ValueButton 控制項  
+#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>若要建立 ValueButtonLib 控制項程式庫和 ValueButton 控制項  
   
-1.  在 \[**檔案**\] 功能表上指向 \[**新增**\]，然後按一下 \[**專案**\] 以開啟 \[**新增專案**\] 對話方塊。  
+1.  在 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]，開啟 [新增專案] 對話方塊。  
   
-2.  從 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 專案清單中選取 \[**Windows Form 控制項程式庫**\] 專案範本，然後在 \[**名稱**\] 方塊中輸入 `ValueButtonLib`。  
+2.  從 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 專案的清單中選取 **Windows Forms 控制項程式庫**專案範本，在 [名稱] 方塊中輸入 `ValueButtonLib`。  
   
-     依照預設，專案名稱 `ValueButtonLib` 也會指派到根命名空間。  預設命名空間是用來限定組件中的元件名稱。  例如，若有兩個組件提供名為 `ValueButton` 的元件，您就可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 元件。  如需詳細資訊，請參閱[命名空間](../Topic/Namespaces%20\(C%23%20Programming%20Guide\).md)。  
+     專案名稱，`ValueButtonLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ValueButton`，您可以使用 `ValueButtonLib.ValueButton` 指定您的 `ValueButton` 元件。 如需詳細資訊，請參閱[命名空間](../../../csharp/programming-guide/namespaces/index.md)。  
   
-3.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下 \[**UserControl1.cs**\]，然後從捷徑功能表選擇 \[**重新命名**\]。  將檔案名稱變更為 `ValueButton.cs`。  當詢問您是否要重新命名對程式碼項目「`UserControl1`」的所有參考時，請按一下 \[**是**\] 按鈕。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下 [UserControl1.cs]，然後從捷徑功能表選擇 [重新命名]。 將檔案名稱變更為 `ValueButton.cs`。 當系統詢問您是否要重新命名程式碼元素 '`UserControl1`' 的所有參考時，按一下 [是]按鈕。  
   
-4.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下 \[**ValueButton.cs**\]，然後選取 \[**檢視程式碼**\]。  
+4.  在 [方案總管] 中，以滑鼠右鍵按一下 [ValueButton.cs]，然後選取 [檢視程式碼]。  
   
-5.  找到 `class` 陳述式行 `public partial class ValueButton`，並將這個控制項繼承自 <xref:System.Windows.Forms.UserControl> 的型別變更為 <xref:System.Windows.Forms.Button>。  這讓您的繼承控制項可以繼承 <xref:System.Windows.Forms.Button> 控制項的所有功能。  
+5.  找出`class`陳述式行`public partial class ValueButton`，並將變更從這個控制項繼承的類型<xref:System.Windows.Forms.UserControl>至<xref:System.Windows.Forms.Button>。 這可讓繼承的控制項可以繼承的所有功能<xref:System.Windows.Forms.Button>控制項。  
   
-6.  在 \[**方案總管**\] 中開啟 \[**ValueButton.cs**\] 節點，以顯示設計工具所產生的程式碼檔 \[**ValueButton.Designer.cs**\]。  在 \[**程式碼編輯器**\] 中開啟這個檔案。  
+6.  在 [方案總管] 中，開啟 [ValueButton.cs] 節點以顯示設計工具產生的程式碼檔案，**ValueButton.Designer.cs**。 在 [程式碼編輯器] 中開啟此檔案。  
   
-7.  尋找 `InitializeComponent` 方法，並移除指派 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 屬性的程式碼行。  這個屬性不存在於 <xref:System.Windows.Forms.Button> 控制項。  
+7.  找出`InitializeComponent`方法並移除指定的行<xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>屬性。 這個屬性不存在於<xref:System.Windows.Forms.Button>控制項。  
   
-8.  從 \[**檔案**\] 功能表中選擇 \[**全部儲存**\] 以儲存專案。  
+8.  從 [檔案] 功能表選擇 [全部儲存] 以儲存專案。  
   
     > [!NOTE]
-    >  視覺化設計工具已經無法使用。  由於 <xref:System.Windows.Forms.Button> 按鈕會自行繪製，因此您無法在設計工具中修改它的外觀。  它的視覺外觀會與它繼承類別的視覺外觀完全相同 \(也就是 <xref:System.Windows.Forms.Button>\)，除非在程式碼中有修改。  您仍然可以將沒有 UI 項目的元件加入至設計介面。  
+    >  視覺化設計工具再也無法使用。 因為<xref:System.Windows.Forms.Button>控制項沒有自己的繪製，您就無法修改其設計工具中的外觀。 其視覺表示法將會完全與它所繼承的類別相同 (也就是<xref:System.Windows.Forms.Button>) 除非修改程式碼中。 您仍然可以將元件 (其中沒有任何 UI 元素) 新增至設計介面。  
   
-## 加入屬性到繼承控制項  
- 繼承的 Windows Form 控制項其中一個可能的用途是建立與標準 Windows Form 控制項外觀與感覺完全相同的控制項，但會公開自訂屬性。  在本章節中，您會將稱為 `ButtonValue` 的屬性加入至控制項。  
+## <a name="adding-a-property-to-your-inherited-control"></a>將屬性新增至繼承的控制項  
+ 繼承 Windows Forms 控制項的可能用法之一是建立外觀及操作與標準的 Windows Forms 控制項相同的控制項，但是公開自訂屬性。 在本節中，您會將名為 `ButtonValue` 的屬性新增至您的控制項。  
   
-#### 若要加入 Value 屬性  
+#### <a name="to-add-the-value-property"></a>若要新增 Value 屬性  
   
-1.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下 \[**ValueButton.cs**\]，然後按一下捷徑功能表上的 \[**檢視程式碼**\]。  
+1.  在 [方案總管] 中，以滑鼠右鍵按一下 [ValueButton.cs]，然後從捷徑功能表按一下 [檢視程式碼]。  
   
-2.  找出 `class` 陳述式。  緊接在 `{` 之後，輸入下列程式碼：  
+2.  尋找 `class` 陳述式。 緊接在 `{` 後面，輸入下列程式碼：  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // Creates the private variable that will store the value of your   
     // property.  
     private int varValue;  
@@ -87,75 +86,73 @@ caps.handback.revision: 17
     }  
     ```  
   
-     這個程式碼設定儲存及擷取 `ButtonValue` 屬性的方法。  `get` 陳述式將傳回的值設定為儲存在私用變數 `varValue` 中的值，而 `set` 陳述式使用 `value` 關鍵字來設定私用變數的值。  
+     此程式碼會設定方法，系統會使用該方法來儲存和擷取 `ButtonValue` 屬性。 `get` 陳述式會將傳回值設為儲存在私用變數 `varValue` 的值，而 `set` 陳述式會使用 `value` 關鍵字設定私用變數的值。  
   
-3.  從 \[**檔案**\] 功能表中選擇 \[**全部儲存**\] 以儲存專案。  
+3.  從 [檔案] 功能表選擇 [全部儲存] 以儲存專案。  
   
-## 測試控制項  
- 控制項不是獨立的專案，必須裝載在容器中。  若要測試控制項，您必須提供用於執行控制項的測試專案。  也必須建置 \(編譯\) 控制項，讓測試專案能夠存取它。  在本章節中，您將建立自己的控制項，並在 Windows Form 中加以測試。  
+## <a name="testing-your-control"></a>測試您的控制項  
+ 控制項不是獨立專案；它們必須裝載在容器中。 若要測試您的控制項，您必須提供測試專案讓控制項在其中執行。 您也必須藉由建置 (編譯) 控制項，讓控制項可供測試專案存取。 在本節中，您將會建置您的控制項，並且在 Windows Form 中進行測試。  
   
-#### 若要建置自己的控制項  
+#### <a name="to-build-your-control"></a>若要建置您的控制項  
   
-1.  在 \[**建置**\] 功能表上，按一下 \[**建置方案**\]。  
+1.  在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。  
   
-     此時建置應會成功，不會有編譯器錯誤或警告。  
+     建置應該會成功，沒有編譯器錯誤或警告。  
   
-#### 若要建立測試專案  
+#### <a name="to-create-a-test-project"></a>若要建立測試專案  
   
-1.  在 \[**檔案**\] 功能表上，指向 \[**新增**\]，然後按一下 \[**新增專案**\] 以開啟 \[**加入新的專案**\] 對話方塊。  
+1.  在 [檔案] 功能表上，指向 [新增]，然後選取 [新增專案]，以開啟 [加入新的專案]對話方塊。  
   
-2.  選取 \[**Visual C\#**\] 節點下方的 \[**Windows**\] 節點，然後按一下 \[**Windows Form 應用程式**\]。  
+2.  選取 [Visual C#] 節點下方的 [Windows] 節點，然後按一下 [Windows Forms 應用程式]。  
   
-3.  在 \[**名稱**\] 方塊中輸入 `Test`。  
+3.  在 [名稱] 方塊中，輸入 `Test`。  
   
-4.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下測試專案的 \[**參考**\] 節點，然後從捷徑功能表中選取 \[**加入參考**\]，以便顯示 \[**加入參考**\] 對話方塊。  
+4.  在 [方案總管] 中，以滑鼠右鍵按一下測試專案的 [參考] 節點，然後從捷徑功能表選取 [加入參考]，以顯示 [加入參考] 對話方塊。  
   
-5.  按一下標示為 \[**專案**\] 的索引標籤。  您的 `ValueButtonLib` 專案將列在 \[**專案名稱**\] 下。  按兩下專案，將參考加入至測試專案。  
+5.  按一下標籤為 [專案] 的索引標籤。 您的 `ValueButtonLib` 專案會列在 [專案名稱] 底下。 按兩下專案以將參考新增至測試專案。  
   
-6.  在 \[**方案總管**\] 中，以滑鼠右鍵按一下 \[**測試**\]，然後選取 \[**建置**\]。  
+6.  在 [方案總管] 中，以滑鼠右鍵按一下 [測試]，然後選取 [建置]。  
   
-#### 若要將控制項加入至表單  
+#### <a name="to-add-your-control-to-the-form"></a>若要將控制項新增至表單  
   
-1.  在 \[**方案總管**\] 中以滑鼠右鍵按一下 \[**Form1.cs**\]，然後從捷徑功能表選擇 \[**設計工具檢視**\]。  
+1.  在 [方案總管] 中，以滑鼠右鍵按一下 [Form1.cs]，然後從捷徑功能表選擇 [檢視表設計工具]。  
   
-2.  在 \[**工具箱**\] 中，按一下 \[**ValueButtonLib 元件**\]。  按兩下 \[**ValueButton**\]。  
+2.  在 [工具箱] 中，按一下 [ValueButtonLib 元件]。 按兩下 [ValueButton]。  
   
-     \[**ValueButton**\] 會出現在表單上。  
+     [ValueButton] 隨即出現在表單上。  
   
-3.  以滑鼠右鍵按一下 \[**ValueButton**\]，然後從捷徑功能表選取 \[**屬性**\]。  
+3.  以滑鼠右鍵按一下 [ValueButton]，然後從捷徑功能表選取 [屬性]。  
   
-4.  在 \[**屬性**\] 視窗中，檢查這個控制項的屬性。  請注意除了多了一個屬性 `ButtonValue` 之外，這些屬性與標準按鈕公開的屬性完全相同。  
+4.  在 [屬性] 視窗中，檢查此控制項的屬性。 請注意，它們與標準按鈕所公開的屬性相同，不同之處是有一個額外屬性，`ButtonValue`。  
   
 5.  將 `ButtonValue` 屬性設定為 `5`。  
   
-6.  在 \[**工具箱**\] 的 \[**所有 Windows Form**\] 索引標籤中，按兩下 \[**Label**\]，將 <xref:System.Windows.Forms.Label> 控制項加入至表單。  
+6.  在**所有 Windows Form**  索引標籤**工具箱**，連按兩下**標籤**新增<xref:System.Windows.Forms.Label>控制項加入至表單。  
   
-7.  重新將標籤放置到表單中央。  
+7.  重新將標籤放置在表單的中央。  
   
 8.  按兩下 `valueButton1`。  
   
-     \[**程式碼編輯器**\] 會開啟至 `valueButton1_Click` 事件。  
+     在 [程式碼編輯器] 中開啟至 `valueButton1_Click` 事件。  
   
-9. 加入下列程式碼行。  
+9. 插入下列程式碼行。  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     label1.Text = valueButton1.ButtonValue.ToString();  
     ```  
   
-10. 在 \[**方案總管**\] 中，以滑鼠右鍵按一下 \[**測試**\]，然後從捷徑功能表中選擇 \[**設定為啟始專案**\]。  
+10. 在 [方案總管] 中，以滑鼠右鍵按一下 [測試]，然後從捷徑功能表選擇 [設定為啟始專案]。  
   
-11. 從 \[**偵錯**\] 功能表中選取 \[**開始偵錯**\]。  
+11. 從 [偵錯] 功能表中，選取 [開始偵錯]。  
   
-     `Form1` 便會出現。  
+     `Form1` 隨即出現。  
   
 12. 按一下 `valueButton1`。  
   
-     數字「5」會顯示在 `label1` 內，顯示繼承控制項的 `ButtonValue` 屬性已經由 `valueButton1_Click` 方法傳遞給 `label1`。  因此，您的 `ValueButton` 控制項繼承了標準 Windows Form 按鈕的所有功能，但公開了額外的自訂屬性。  
+     數字 '5' 會顯示在 `label1` 中，示範繼承的控制項之 `ButtonValue` 屬性已透過 `valueButton1_Click` 方法傳遞至 `label1`。 因此，`ValueButton` 控制項會繼承標準 Windows Forms 按鈕的所有功能，但是會公開額外的自訂屬性。  
   
-## 請參閱  
- [使用元件進行程式設計](../Topic/Programming%20with%20Components.md)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)   
- [如何：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [逐步解說：使用 Visual C\# 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+## <a name="see-also"></a>另請參閱  
+ [使用元件進行程式設計](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [元件撰寫逐步解說](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [操作說明：在選擇工具箱項目對話方塊中顯示控制項](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [逐步解說：使用 Visual C# 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

@@ -1,40 +1,22 @@
 ---
 title: "Visual Basic 語言規格"
-ms.date: 2017-08-02
+ms.date: 08/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - resources [Visual Basic], specifications
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: a16c50310dc45f231d921bce0ae6549864652951
-ms.openlocfilehash: eb8260d1c7349e2a1402f92a54ee118eb2d9ca7d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 語言規格
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言規格是經授權的資訊來源，可回答所有關於 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 文法和語法的問題。 其中包含語言方面的詳細資訊，包括 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 參考文件中未涵蓋的許多部分。  

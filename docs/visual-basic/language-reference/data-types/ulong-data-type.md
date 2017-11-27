@@ -1,63 +1,85 @@
 ---
-title: "ULong Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ulong"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "numbers, whole"
-  - "whole numbers"
-  - "integral data types"
-  - "integer numbers"
-  - "numbers, integer"
-  - "integers, data types"
-  - "integers, types"
-  - "data types [Visual Basic], integral"
-  - "literal type characters, UL"
-  - "ULong data type"
-  - "UL literal type characters"
+title: "ULong 資料類型 (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ulong
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- literal type characters [Visual Basic], UL
+- ULong data type
+- UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: afc52bfd16541feed599d5445adad7aba04f8e9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ULong Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="ulong-data-type-visual-basic"></a>ULong 資料類型 (Visual Basic)
 
-存放不帶正負號的 64 位元 \(8 位元組\) 整數，其值的範圍是從 0 到 18,446,744,073,709,551,615 \(超過 1.84 乘以 10 ^ 19\)。  
+保存不帶正負號的 64 位元 （8 個位元組） 整數值範圍從 0 到 18446744073709551615 (超過 1.84 乘以 10 ^19)。  
   
-## 備註  
- 使用 `ULong` 資料型別取得對 `UInteger` 而言太大的二進位資料，或取得不帶正負號的最大可能整數值。  
+## <a name="remarks"></a>備註
+
+使用`ULong`資料類型可包含二進位資料太大， `UInteger`，或最大可能的不帶正負號的整數值。  
   
- `ULong` 的預設值為 0。  
+`ULong` 的預設值為 0。
+
+## <a name="literal-assignments"></a>常值的指派
+
+您可以宣告和初始化`ULong`變數將其指派十進位常值、 十六進位常值、 八進位常值，或是 （從開始使用 Visual Basic 2017） 二進位常值。 如果整數常值超出 `ULong` 的範圍 (亦即，如果小於 <xref:System.UInt64.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
+
+在下列範例中，以十進位、十六進位和二進位常值表示的 7,934,076,125 整數，會指派給 `ULong` 值。
   
-## 程式設計提示  
+[!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
+
+> [!NOTE] 
+> 使用前置詞`&h`或`&H`來表示十六進位常值前置詞`&b`或`&B`代表二進位常值，以及前置詞`&o`或`&O`代表八進位常值。 十進位常值沒有前置詞。
+
+從 Visual Basic 2017 開始，您也可以使用底線字元， `_`，當做數字分隔符號，以提升可讀性，如下列範例所示。
+
+[!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
+
+數值常值也可以包含`UL`或`ul`[類型字元](../../programming-guide\language-features\data-types/type-characters.md)代表`ULong`資料類型，如下列範例所示。
+
+```vb
+Dim number = &H00_00_0A_96_2F_AC_14_D7ul
+```
+
+## <a name="programming-tips"></a>程式設計提示
   
--   **負數：** 由於 `ULong` 是不帶正負號的型別，故無法代表負數。  如果您在評估為 `ULong` 型別的運算式中使用一元 \(Unary\) 減號 \(`-`\) 運算子，則 Visual Basic 會先將運算式轉換為 `Decimal`。  
+-   **負的數字。** 因為`ULong`是不帶正負號的類型，它無法表示為負數。 如果您使用一元減號 (`-`) 運算子的運算式評估為輸入`ULong`，Visual Basic 會將轉換的運算式`Decimal`第一次。  
   
--   **符合 CLS 標準：** `ULong` 資料型別不屬於 [語言獨立性以及與語言無關的元件](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\) 的一部分，所以符合 CLS 標準的程式碼不可以採納使用此資料型別的元件。  
+-   **Cls 符合性。** `ULong`資料類型不是屬於[Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) （cls） 標準，所以符合 CLS 標準的程式碼無法使用所使用的元件。  
   
--   **Interop 考量：** 如果您正在使用不是針對 .NET Framework 所撰寫的元件，例如 Automation 或 COM 物件，請記住，如 `ulong` 的型別在其他環境中可以有不同的資料寬度 \(32 位元\)。  如果您要將 32 位元引數傳遞到這類元件，則需將其宣告為 `UInteger` 而不是 Managed Visual Basic 程式碼中的 `ULong`。  
+-   **Interop 考量。** 如果您要使用的元件不是撰寫.NET framework，例如 Automation 或 COM 物件，請記住，這類類型`ulong`在其他環境中可以有不同的資料寬度 （32 位元）。 如果您要將 32 位元引數至這類元件，將它宣告為`UInteger`而不是`ULong`受管理的 Visual Basic 程式碼。  
   
-     此外，自動化不在 Windows 95、Windows 98、Windows ME，或 Windows 2000 支援 64 位元整數。  您不能在這些平台上，將 Visual Basic `ULong` 引數傳遞到自動化元件。  
+     此外，自動化不支援 Windows 95、 Windows 98、 Windows ME 或 Windows 2000 上 64 位元整數。 您無法將 Visual Basic`ULong`至 Automation 元件在這些平台上的引數。  
   
--   **擴展：** `ULong` 資料型別會擴大至 `Decimal`、`Single` 和 `Double`。  這表示您可以將 `ULong` 轉換成這些類型的任何一項，而不會發生 <xref:System.OverflowException?displayProperty=fullName> 錯誤。  
+-   **擴展。** `ULong`資料類型可擴展成`Decimal`， `Single`，和`Double`。 這表示您可以將轉換`ULong`而不會發生這些類型的任何<xref:System.OverflowException?displayProperty=nameWithType>錯誤。  
   
--   **型別字元。** 將常值型別字元 `UL` 附加到常值，會強制其成為 `ULong` 資料型別。  `ULong` 沒有識別項型別字元。  
+-   **類型字元。** 將常值類型字元附加`UL`到常值會強制其成為`ULong`資料型別。 `ULong`有任何識別項類型字元。
   
--   **架構型別。** 在 .NET Framework 中對應的型別為 <xref:System.UInt64?displayProperty=fullName> 結構。  
+-   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.UInt64?displayProperty=nameWithType> 結構。  
   
-## 請參閱  
- <xref:System.UInt64>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [How to: Call a Windows Function that Takes Unsigned Types](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>請參閱
+
+ <xref:System.UInt64>  
+ [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [轉換摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [操作說明：呼叫使用不帶正負號類型的 Windows 函式](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [有效率地使用資料類型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

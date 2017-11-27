@@ -1,44 +1,47 @@
 ---
-title: "Oracle BFILE | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oracle BFILE
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f48bd85559d55d9a1190310bcf13cd4a68625011
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle BFILE
-Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.OracleBFile> 類別，可用來與 Oracle <xref:System.Data.OracleClient.OracleType> 資料型別搭配使用。  
+# <a name="oracle-bfiles"></a>Oracle BFILE
+Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.OracleBFile> 類別，可用來與 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 資料型別搭配使用。  
   
- Oracle **BFILE** 資料型別是一種 Oracle **LOB** 資料型別，它包含最大值 4 GB 之二進位資料的參考。  Oracle **BFILE** 與其他 Oracle **LOB** 資料型別的不同之處在於，其資料儲存於作業系統的實體檔案中，而不是儲存於伺服器上。  請注意，**BFILE** 資料型別對資料資料唯讀存取權。  
+ Oracle **BFILE**資料型別是一種 Oracle **LOB**資料類型，包含最大值 4 gb 之二進位資料的參考。 Oracle **BFILE**不同於其他 Oracle **LOB**資料類型，其資料儲存在伺服器上的實體檔案而不是作業系統中。 請注意， **BFILE**資料類型提供唯讀資料存取。  
   
- 使 **BFILE** 資料型別有別於 **LOB** 資料型別的其他特性包括：  
+ 其他特性**BFILE**資料型別有別於**LOB**資料類型包括：  
   
 -   包含非結構化資料。  
   
 -   支援伺服器端區塊。  
   
--   使用參考複製語意。  例如，如果您在 **BFILE** 上執行複製作業，則只會複製 **BFILE** 定位器 \(其為檔案的參考\)。  而不會複製檔案中的資料。  
+-   使用參考複製語意。 例如，如果您在上執行複製作業**BFILE**，則只**BFILE**複製定位器 （其為檔案的參考）。 而不會複製檔案中的資料。  
   
- **BFILE** 資料型別應該用來參考無法儲存於資料庫中的大型 LOB。  與 **LOB** 資料型別相比，使用 **BFILE** 資料型別所涉及的用戶端、伺服器及通訊額外負荷較大。  如果您只需要取得少量資料，則存取 **BFILE** 會更有效率。  如果您需要取得整個物件，則存取常駐於資料庫的 LOB 會更有效率。  
+ **BFILE**資料類型應該用於參照大小，大的 Lob，因此，不適合儲存在資料庫中。 當使用涉及多個用戶端、 伺服器及通訊額外負荷**BFILE**資料型別相較於**LOB**資料型別。 若要存取更有效率**BFILE**如果您只需要取得少量資料。 如果您需要取得整個物件，則存取常駐於資料庫的 LOB 會更有效率。  
   
- 每個非 NULL **OracleBFile** 物件都與定義基礎實體檔案位置的兩個實體相關聯：  
+ 每個非 NULL **OracleBFile**物件都與定義基礎實體檔案的位置的兩個實體：  
   
-1.  Oracle DIRECTORY 物件 \(檔案系統中目錄的資料庫別名\) 及  
+1.  Oracle DIRECTORY 物件 (檔案系統中目錄的資料庫別名) 及  
   
-2.  基礎實體檔案的檔名 \(位於與 DIRECTORY 物件相關聯的目錄中\)。  
+2.  基礎實體檔案的檔名 (位於與 DIRECTORY 物件相關聯的目錄中)。  
   
-## 範例  
- 下列 C\# 範例說明如何在 Oracle 資料表中建立 **BFILE**，然後以 **OracleBFile** 物件的形式擷取。  該範例使用 <xref:System.Data.OracleClient.OracleDataReader> 物件與 **OracleBFile** **Seek** 及 **Read** 方法來進行示範。  請注意，為了使用此範例，您必須先在 Oracle 伺服器上建立名為 c:\\\\bfiles 的目錄及名為 MyFile.jpg 的檔案。  
+## <a name="example"></a>範例  
+ 下列 C# 範例會示範如何建立**BFILE**在 Oracle 資料表中，然後再擷取它的形式**OracleBFile**物件。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleBFile** **搜尋**和**讀取**方法。 請注意，若要使用這個範例中，您必須先建立名為"c:\\\bfiles"和 Oracle 伺服器上名為"MyFile.jpg"的檔案。  
   
 ```csharp  
 using System;  
@@ -93,6 +96,6 @@ public class Sample
 }  
 ```  
   
-## 請參閱  
- [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

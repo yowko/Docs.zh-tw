@@ -1,25 +1,28 @@
 ---
-title: "LINQ to DataSet 範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to DataSet 範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to DataSet 範例
-本節將提供使用標準查詢運算子的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 程式設計範例。  這些範例中使用的 <xref:System.Data.DataSet> 是使用[將資料載入 DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) 中指定的 `FillDataSet` 方法填入資料。如需詳細資訊，請參閱[Standard Query Operators Overview](../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+# <a name="linq-to-dataset-examples"></a>LINQ to DataSet 範例
+本節提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式設計使用標準查詢運算子的範例。 <xref:System.Data.DataSet>這些範例中使用填入的方式是使用`FillDataSet`方法中所指定[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 如需詳細資訊，請參閱[標準查詢運算子概觀](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [查詢運算式範例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
  包含下列範例：  
   
@@ -27,7 +30,7 @@ caps.handback.revision: 2
   
 -   [限制](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
--   [分割](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+-   [資料分割](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
 -   [排序](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
@@ -42,7 +45,7 @@ caps.handback.revision: 2
   
 -   [投影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
--   [分割](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+-   [資料分割](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
 -   [排序](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
@@ -54,11 +57,11 @@ caps.handback.revision: 2
   
 -   [彙總運算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [聯結](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+-   [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [DataSet 專用的運算子範例](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- 包含一些示範如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 類別 \(Class\) 的範例。  
+ [資料集專屬運算子範例](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ 包含一些示範如何使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法和 <xref:System.Data.DataRowComparer> 類別 (Class) 的範例。  
   
-## 請參閱  
- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)   
- [將資料載入 DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a>另請參閱  
+ [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

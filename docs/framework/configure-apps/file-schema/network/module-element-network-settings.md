@@ -1,85 +1,87 @@
 ---
-title: "&lt;module&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#module"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<module> 項目"
-  - "module 項目"
+title: "&lt;模組&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#module
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module
+helpviewer_keywords:
+- module element
+- <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;module&gt; 項目 (網路設定)
-將新的 Pxory 模組加入至應用程式。  
+# <a name="ltmodulegt-element-network-settings"></a>&lt;模組&gt;項目 （網路設定）
+將新的 Proxy 模組加入至應用程式。  
   
-## 語法  
+ \<configuration>  
+\<system.net >  
+\<defaultProxy >  
+\<模組 >  
   
-```  
+## <a name="syntax"></a>語法  
   
-      <module   
-   type = "name", System, Version="version number", Culture="culture", PublicKeyToken="token" "   
+```xml  
+<module   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |**屬性**|**說明**|  
-|------------|------------|  
-|`type`|實作 Proxy 的模組的名稱和規格。|  
+|-------------------|---------------------|  
+|`type`|完整限定的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)，實作 proxy 以逗號分隔。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
-|------------|------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 \(HTTP\) Proxy 伺服器。|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
-## 備註  
- `module` 項目會註冊實作 <xref:System.Net.IWebProxy> 介面的 Proxy 類別。  註冊了 Proxy 類別之後，可以使用 `module`，透過支援的 Proxy 要求資訊。  
+## <a name="remarks"></a>備註  
+ `module`項目會註冊 proxy 類別可實作<xref:System.Net.IWebProxy>介面。 註冊 Proxy 類別之後，可以使用 `module` 透過支援的 Proxy 要求資訊。  
   
- `type` 屬性的值必須是有效動態連結程式庫 \(DLL\) 的名稱和模組的類別名稱。  
+ 值`type`屬性應該是類別名稱的模組和名稱的其對應動態連結程式庫 (DLL)。  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a>組態檔  
+ 此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## 範例  
- 以下程式碼範例會註冊自訂的 Proxy 類別。  
+## <a name="example"></a>範例  
+ 下列範例會註冊自訂的 proxy 類別。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <module  
-        type = "Test.CustomWebProxy, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+        type="Test.CustomWebProxy, TestProxy, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b23a5c561934e385"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.IWebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

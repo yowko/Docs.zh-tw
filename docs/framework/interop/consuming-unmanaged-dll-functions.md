@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc0e2e7af861fd6ee233cad5069fef862bb29717
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Win32 API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。 如需這項服務的詳細資訊，請參閱[進一步了解平台叫用](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)。  
@@ -64,7 +57,7 @@ ms.lasthandoff: 08/21/2017
   
      在您的 Managed 類別上呼叫方法，如同您呼叫任何其他 Managed 方法。 [傳遞結構](../../../docs/framework/interop/passing-structures.md)和[實作回呼函式](../../../docs/framework/interop/callback-functions.md)為特殊案例。  
   
- 如需示範如何建構要與平台叫用搭配使用之 .NET 宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
+ 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>進一步了解平台叫用  
  平台叫用依賴中繼資料來找出被匯出的函式，並在執行階段封送處理其引數。 下圖顯示這個程序。  
@@ -88,8 +81,7 @@ ms.lasthandoff: 08/21/2017
  平台叫用會擲回由 Unmanaged 函式產生的例外狀況給 Managed 呼叫端。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)   
- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)   
+ [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)  
+ [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)  
  [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-

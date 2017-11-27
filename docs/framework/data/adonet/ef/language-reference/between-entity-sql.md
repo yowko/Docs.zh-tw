@@ -1,44 +1,42 @@
 ---
-title: "BETWEEN (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: BETWEEN (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6ab5c08dad5f11d968eec4efa51ff225d3cfd0fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# BETWEEN (Entity SQL)
-判斷運算式是否會產生所指定範圍內的值。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 運算式的功能就相當於 Transact\-SQL BETWEEN 運算式。  
+# <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
+判斷運算式是否會產生所指定範圍內的值。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 運算式的 於 TRANSACT-SQL BETWEEN 運算式相同的功能。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-expression [ NOT ] BETWEEN begin_expression AND end_expression  
+expression [ NOT ] BETWEEN begin_expression AND end_expression    
 ```  
   
-## 引數  
+## <a name="arguments"></a>引數  
  `expression`  
- 用來測試是否在 `begin_expression` 和 `end_expression` 所定義範圍中的任何有效運算式。`expression` 必須與 `begin_expression` 和 `end_expression` 兩者型別相同。  
+ 用來測試是否在 `begin_expression` 和 `end_expression` 所定義範圍中的任何有效運算式。 `expression` 必須與 `begin_expression` 和 `end_expression` 兩者型別相同。  
   
  `begin_expression`  
- 任何有效的運算式。`begin_expression` 必須與 `expression` 和 `end_expression` 兩者型別相同。`begin_expression` 應小於 `end_expression`，否則便會否定傳回值。  
+ 任何有效的運算式。 `begin_expression` 必須與 `expression` 和 `end_expression` 兩者型別相同。 `begin_expression` 應小於 `end_expression`，否則便會否定傳回值。  
   
  `end_expression`  
- 任何有效的運算式。`end_expression` 必須與 `expression` 和 `begin_expression` 兩者型別相同。  
+ 任何有效的運算式。 `end_expression` 必須與 `expression` 和 `begin_expression` 兩者型別相同。  
   
  NOT  
  指定要否定 BETWEEN 的結果。  
@@ -46,20 +44,20 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  AND  
  做為一個預留位置，用來指出 `expression` 應該在 `begin_expression` 和 `end_expression` 所指示的範圍內。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  如果 `true` 是在 `expression` 和 `begin_expression` 所指定的範圍內則為 `end_expression`；否則為 `false`。 如果 `null` 為 `expression`，或者 `null` 或 `begin_expression` 為 `end_expression`，便會傳回 `null`。  
   
-## 備註  
- 若要指定排除範圍，請使用大於 \(\>\) 及小於 \(\<\) 運算子，不要用 BETWEEN。  
+## <a name="remarks"></a>備註  
+ 若要指定排除範圍，請使用大於 (>) 及小於 (<) 運算子，不要用 BETWEEN。  
   
-## 範例  
+## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 BETWEEN 運算子來判斷運算式是否會產生所指定範圍內的值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  遵循 [HOW TO：執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md) 中的程序進行。  
+1.  遵循 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
   
 2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

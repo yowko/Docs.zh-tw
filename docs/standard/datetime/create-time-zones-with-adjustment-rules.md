@@ -1,97 +1,107 @@
 ---
-title: "如何：建立有調整規則的時區 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "調整規則 [.NET Framework]"
-  - "時區 [.NET Framework], 以及調整規則"
-  - "時區 [.NET Framework], 建立"
+title: "如何： 建立有調整規則的時區"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- time zones [.NET Framework], creating
+- time zones [.NET Framework], and adjustment rules
+- adjustment rule [.NET Framework]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 75e1867e810090bf35a0dfc7def5785747f94382
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：建立有調整規則的時區
-特定系統可能基於以下原因，而沒有應用程式所需的精確的時區資訊：  
-  
--   本機系統登錄中從未定義這個時區。  
-  
--   時區的資料已被修改或從登錄中移除。  
-  
--   這個時區並沒有特定歷史期間的時區調整精確資訊。  
-  
- 在這種情況下，您可以呼叫 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法以定義應用程式所需的時區。  您可以使用這個方法的多載，以建立包含或不含調整規則的時區。  如果該時區支援日光節約時間，您可以使用固定或浮動調整規則來定義調整方式 \(如需這些用語的定義，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)的＜時區用語＞一節\)。  
-  
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>如何： 建立有調整規則的時區
+
+為應用程式所需的精確的時區資訊可能不存在特定的系統上有幾個原因：
+
+* 時區永遠不會在本機系統登錄中已定義。
+
+* 已經修改或移除登錄中時區的相關資料。
+
+* 時區並沒有特定的歷程記錄期間時區調整的正確資訊。
+
+在這些情況下，您可以呼叫<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法，以定義應用程式所需的時區。 您可以使用這個方法的多載來建立具有或沒有調整規則的時區。 如果時區支援日光節約時間，您可以定義其中一個固定或浮動調整規則的調整。 (如需這些詞彙的定義，請參閱 < 時區詞彙 」 一節[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。)
+
 > [!IMPORTANT]
->  呼叫 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法所建立的自訂時區不會新增至登錄中。  只能透過 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法呼叫所傳回的物件參考才能存取。  
-  
- 本主題說明如何建立時區和調整規則。  如果要建立不支援日光節約時間調整規則的時區，請參閱 [如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)。  
-  
-### 建立採用浮動調整規則的時區  
-  
-1.  對每一個調整方法 \(就是，標準時間與特定時間間隔的來回轉換\) 執行下列步驟：  
-  
-    1.  定義時區調整開始轉換的時間。  
-  
-         您必須呼叫 <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=fullName> 方法，並將下列值傳送給方法：定義轉換時間的 <xref:System.DateTime> 值、定義轉換月份的整數值、定義轉換週的整數值，以及定義轉換日的 <xref:System.DayOfWeek> 值。  這個方法呼叫會將 <xref:System.TimeZoneInfo.TransitionTime> 物件個體化。  
-  
-    2.  定義時區調整結束轉換的時間。  這麼做必須要再次呼叫 <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=fullName> 方法。  這個方法呼叫會將第二個 <xref:System.TimeZoneInfo.TransitionTime> 物件個體化。  
-  
-    3.  呼叫 <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> 方法，並將下列值傳送給方法：調整的有效開始及結束日期、定義轉換時間長度的 <xref:System.TimeSpan> 物件，以及兩個定義來回轉換日光節約時間發生時間的 <xref:System.TimeZoneInfo.TransitionTime> 物件。  這個方法呼叫會將 <xref:System.TimeZoneInfo.AdjustmentRule> 物件個體化。  
-  
-    4.  將 <xref:System.TimeZoneInfo.AdjustmentRule> 物件指派給 <xref:System.TimeZoneInfo.AdjustmentRule> 物件的陣列。  
-  
-2.  定義時區的顯示名稱。  顯示名稱遵循相當程度的標準格式，其中時區的 Coordinated Universal Time \(UTC\) 位移會包含在括號中，後面接著識別時區的字串、該時區的一或多個城市，或是該時區的一或多個國家或地區。  
-  
-3.  定義時區的標準時間之名稱。  通常，這個字串也會當成時區的識別項使用。  
-  
-4.  定義時區的日光節約時間名稱。  
-  
-5.  如果您要使用和時區的標準名稱不同的識別項，請定義時區識別項。  
-  
-6.  將定義時區的 UTC 位移之 <xref:System.TimeSpan> 物件個體化。  時間較 UTC 晚的時區，位移值是正的。  時間較 UTC 早的時區，位移值是負的。  
-  
-7.  呼叫 [TimeZoneInfo.CreateCustomTimeZone\(String, TimeSpan, String, String, String, TimeZoneInfo.AdjustmentRule\<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=fullName> 方法，將新時區個體化。  
-  
-## 範例  
- 下列範例會定義美國的「中央標準時間」區，內含自 1918 年至今的各種時間間隔的調整規則。  
-  
- [!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
- [!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]  
-  
- 本範例中所建立的時區有多重調整規則。  請特別小心，以確保任何調整規則的有效開始及結束日期不會與其他調整規則的日期重疊。  如果重疊，就會擲回 <xref:System.InvalidTimeZoneException>。  
-  
- 如果是浮動調整規則，會將值 5 傳送給 <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> 方法的 `week` 參數，以指出轉換是在特定月份的最後一週發生的。  
-  
- 在建立 <xref:System.TimeZoneInfo.AdjustmentRule> 物件的陣列以使用於 [TimeZoneInfo.CreateCustomTimeZone\(String, TimeSpan, String, String, String, TimeZoneInfo.AdjustmentRule\<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=fullName> 方法呼叫時，程式碼可以將陣列個體化，使陣列的大小和時區要建立之調整數目所要求的大小一樣。  這個程式碼範例會呼叫 <xref:System.Collections.Generic.List%601.Add%2A> 方法，將每一個調整規則新增至 <xref:System.TimeZoneInfo.AdjustmentRule> 物件的泛型 <xref:System.Collections.Generic.List%601> 集合。  然後程式碼會呼叫 <xref:System.Collections.Generic.List%601.CopyTo%2A> 方法，將集合的成員複製至陣列。  
-  
- 這個範例也會使用 <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> 方法來定義固定日期的調整。  這麼做類似呼叫 <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> 方法，只不過它只需要轉換參數的時間、月份及日期。  
-  
- 本範例可以使用如下面的程式碼測試：  
-  
- [!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
- [!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]  
-  
-## 編譯程式碼  
- 這個範例需要：  
-  
--   將 System.Core.dll 的參考加入至專案中。  
-  
--   匯入下列命名空間：  
-  
-     [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
-     [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]  
-  
-## 請參閱  
- [日期、時間和時區](../../../docs/standard/datetime/index.md)   
- [時區概觀](../../../docs/standard/datetime/time-zone-overview.md)   
- [如何：建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+> 藉由呼叫建立的自訂時區<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不會加入至登錄。 相反地，他們可以只透過存取所傳回的物件參考<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法呼叫。
+
+本主題示範如何建立有調整規則的時區。 若要建立不支援日光節約時間調整規則的時區，請參閱[How to： 建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)。
+
+### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>若要建立採用浮動調整規則的時區
+
+1. 每個調整 （也就是，針對每個轉換遠離和一段特定時間間隔回標準時間），執行下列動作：
+
+    1. 定義時區調整開始轉換的時間。
+
+       您必須呼叫<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType>方法並將它傳遞<xref:System.DateTime>值，其定義的轉換、 定義轉換的月份的整數值、 整數值，定義轉換發生的當週的時間和<xref:System.DayOfWeek>定義轉換發生的一週天數的值。 這個方法呼叫會具現化<xref:System.TimeZoneInfo.TransitionTime>物件。
+
+    2. 定義結束轉換的時區調整的時間。 這需要另一個呼叫<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType>方法。 這個方法呼叫會具現化第二個<xref:System.TimeZoneInfo.TransitionTime>物件。
+
+    3. 呼叫<xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A>方法並將它傳遞的有效開始和結束日期的調整，<xref:System.TimeSpan>物件，在轉換中，以及兩個定義的時間量<xref:System.TimeZoneInfo.TransitionTime>物件，以定義何時套用日光節約時間來回轉換發生時間。 這個方法呼叫會具現化<xref:System.TimeZoneInfo.AdjustmentRule>物件。
+
+    4. 指派<xref:System.TimeZoneInfo.AdjustmentRule>物件的陣列<xref:System.TimeZoneInfo.AdjustmentRule>物件。
+
+2. 定義時區的顯示名稱。 顯示名稱會遵循國際標準時間 (UTC) 時區的位移加上括弧和後面的字串，識別時區，一或多個時區中，或其中一個城市的多個 cou 相當標準格式ntries 或時區中的區域。
+
+3. 定義時區標準時間名稱。 一般而言，這個字串也做時區的識別項。
+
+4. 定義時區的日光節約時間名稱。
+
+5. 如果您想要使用不同的識別項與時區的標準名稱，定義時區識別項。
+
+6. 具現化<xref:System.TimeSpan>定義與 UTC 的時區時差的物件。 較晚於 UTC 的時區有正面的位移。 時間早於 UTC 的時區有了負數的位移。
+
+7. 呼叫<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType>方法來具現化新的時區。
+
+## <a name="example"></a>範例
+
+下列範例會定義包含各種不同的時間間隔從 1918年至目前的調整規則的美國中部標準時區。
+
+[!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
+[!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]
+
+此範例中所建立的時區有多項調整規則。 小心以確保的有效開始和結束日期的任何調整規則未重疊的另一項調整規則的日期。 如果沒有重疊，<xref:System.InvalidTimeZoneException>就會擲回。
+
+5 的值傳遞至浮點調整規則，`week`參數<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A>方法，以表示轉換發生在特定月份的最後一週。
+
+在中建立的陣列<xref:System.TimeZoneInfo.AdjustmentRule>物件中使用<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType>方法呼叫的程式碼可以初始化數個調整時區建立所需的大小的陣列。 相反地，這個程式碼範例會呼叫<xref:System.Collections.Generic.List%601.Add%2A>方法，將每個調整規則加入至泛型<xref:System.Collections.Generic.List%601>集合<xref:System.TimeZoneInfo.AdjustmentRule>物件。 然後程式碼會呼叫<xref:System.Collections.Generic.List%601.CopyTo%2A>方法，將此集合的成員複製到陣列。
+
+此範例也會使用<xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A>方法，以定義固定日期調整。 這是類似於呼叫<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A>方法，但是它需要只時間、 月和日轉換參數。
+
+可以使用下列程式碼來測試範例：
+
+[!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
+[!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]
+
+## <a name="compiling-the-code"></a>編譯程式碼
+
+這個範例需要：
+
+* 對 system.core.dll 的參考無法加入至專案。
+
+* 應該是匯入下列命名空間：
+
+  [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
+  [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
+
+## <a name="see-also"></a>請參閱
+
+[日期、 時間和時區](../../../docs/standard/datetime/index.md)
+[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)
+[How to： 建立沒有調整規則的時區](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

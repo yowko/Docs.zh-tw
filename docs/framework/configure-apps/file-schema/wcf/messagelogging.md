@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;messageLogging&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
+# <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ \<系統。ServiceModel >  
+\<診斷 >  
+\<messageLogging >  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -57,7 +59,7 @@ caps.handback.revision: 16
 |`maxMessagesToLog`|正整數，指定要記錄的訊息數目上限。 預設值為 1000。|  
 |`maxSizeOfMessageToLog`|正整數，指定要記錄之訊息的大小上限 (以位元組為單位)。 大於限制的訊息將不會記錄。 這個設定會影響所有的追蹤層級。 預設為 262144(0x4000)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -74,9 +76,9 @@ caps.handback.revision: 16
   
  可以加入 XPath 篩選條件，以記錄傳輸和服務層級的特定訊息。 如果沒有定義篩選條件，便會記錄所有的訊息。 篩選條件只會套用於訊息的標頭。 本文會被忽略。 WCF 會忽略訊息本文，以增進效能。 如果您希望根據本文的內容進行篩選，可以使用執行這項工作的篩選條件來建立自訂接聽程式。  
   
- 您必須建立追蹤接聽程式，以啟動訊息追蹤。 接聽程式本身可以是任何接聽程式，可以使用<xref:System.Diagnostics>追蹤架構。 下列範例示範如何建立這類接聽程式。  
+ 您必須建立追蹤接聽程式，以啟動訊息追蹤。 接聽程式本身可以是與 <xref:System.Diagnostics> 追蹤架構搭配使用的任何接聽程式。 下列範例示範如何建立這類接聽程式。  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -111,7 +113,7 @@ caps.handback.revision: 16
   
 ## <a name="example"></a>範例  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -125,8 +127,8 @@ caps.handback.revision: 16
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
  [設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

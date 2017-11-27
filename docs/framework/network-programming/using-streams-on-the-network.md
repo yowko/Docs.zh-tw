@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-streams-on-the-network"></a>在網路上使用資料流
 網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  
   
--   以一般方式傳送和接收 Web 資料。 不論實際的檔案內容為何 (HTML、XML 或其他格式)，應用程式都會使用 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 和 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 來傳送和接收資料。  
+-   以一般方式傳送和接收 Web 資料。 不論實際的檔案內容為何 (HTML、XML 或其他格式)，應用程式都會使用 <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> 來傳送和接收資料。  
   
 -   與整個 .NET Framework 資料流的相容性。 .NET Framework 中無處不使用資料流，其處理資料流的基礎結構健全。 例如，您可將讀取 <xref:System.IO.FileStream> 中 XML 資料的應用程式，修改為讀取 <xref:System.Net.Sockets.NetworkStream> 中的資料，而非僅變更將資料流初始化的幾行程式碼。 **NetworkStream** 類別與其他資料流最大的不同處，在於 **NetworkStream** 是不可搜尋的，<xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 屬性一律傳回 **false**而 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 和 <xref:System.Net.Sockets.NetworkStream.Position%2A> 方法則擲回 <xref:System.NotSupportedException>。  
   
@@ -115,6 +112,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [如何：使用 WebRequest 類別要求資料](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [要求資料](../../../docs/framework/network-programming/requesting-data.md)
-

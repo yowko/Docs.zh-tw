@@ -1,32 +1,34 @@
 ---
-title: "HOW TO：實作 Windows Communication Foundation 服務合約 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "服務合約 [WCF], 實作"
+title: "HOW TO：實作 Windows Communication Foundation 服務合約"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c8ef9d97d9ed76175c0ca4c4d5ba40ca401f8f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：實作 Windows Communication Foundation 服務合約
-這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務及可以呼叫該服務的用戶端時，必須進行的六個工作中的第二個。  如需這六個工作的概觀，請參閱[快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>HOW TO：實作 Windows Communication Foundation 服務合約
+這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務及可以呼叫該服務的用戶端時，必須進行的六個工作中的第二個。 如需所有六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 建立 WCF 應用程式的下一步是實作服務介面。  其中包含建立名稱為 `CalculatorService` 的類別，該類別會實作使用者定義的 `ICalculator` 介面。  
+ 建立 WCF 應用程式的下一步是實作服務介面。 其中包含建立名稱為 `CalculatorService` 的類別，該類別會實作使用者定義的 `ICalculator` 介面。  
   
-### 實作 WCF 服務合約  
+### <a name="to-implement-a-wcf-service-contract"></a>實作 WCF 服務合約  
   
 1.  開啟 Service1.cs 或 Service1.vb 檔案，並加入下列程式碼：  
   
@@ -77,10 +79,9 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
-    ```  
+    ```vb
     ‘Service1.vb  
     Imports System  
     Imports System.ServiceModel  
@@ -127,10 +128,10 @@ caps.handback.revision: 38
   
      每個方法會實作計算機作業，並將一些文字寫入主控台以簡化測試。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼同時說明可定義合約的介面，以及介面的實作。  
   
-```  
+```csharp
 // IService1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -154,10 +155,9 @@ namespace GettingStartedLib
             double Divide(double n1, double n2);  
         }  
 }  
-  
 ```  
   
-```  
+```csharp
 // Service1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -204,10 +204,9 @@ namespace GettingStartedLib
         }  
     }  
 }  
-  
 ```  
   
-```  
+```vb
 ‘IService.vb  
 Imports System  
 Imports System.ServiceModel  
@@ -229,7 +228,7 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
-```  
+```vb
 Imports System  
 Imports System.ServiceModel  
   
@@ -273,11 +272,11 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
- 現在，服務合約已建立且已實作。  建置方案以確認沒有任何編譯錯誤，然後繼續進行 [HOW TO：裝載和執行基本服務](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)執行服務。  如需疑難排解的詳細資訊，請參閱[使用者入門教學課程疑難排解](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
+ 現在，服務合約已建立且已實作。 建置方案，以確保沒有任何編譯錯誤，然後繼續進行[How to： 裝載和執行基本服務](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)來執行服務。 如需疑難排解資訊，請參閱[疑難排解入門教學課程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   
-## 編譯程式碼  
- 如果您使用的是 Visual Studio，請按一下 \[建置\] 功能表上的 \[建置方案\] \(或按 CTRL\+SHIFT\+B\)。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 如果您使用 Visual Studio，在 建置 功能表上按一下 建置方案 （或按 CTRL + SHIFT + B）。  
   
-## 請參閱  
- [使用者入門](../../../docs/framework/wcf/samples/getting-started-sample.md)   
+## <a name="see-also"></a>另請參閱  
+ [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)

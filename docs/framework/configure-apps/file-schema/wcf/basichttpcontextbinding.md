@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 59fa9c4a5a296ee3a0663cce6f77a8c12c5955c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1c39ca0a4437016b8b718bd5d3cf988029556fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 指定一個繫結，這個繫結提供要藉由啟用 HTTP Cookie 做為交換機制交換之 <xref:System.ServiceModel.BasicHttpBinding> 的內容。  
@@ -105,13 +103,12 @@ ms.lasthandoff: 09/25/2017
  這個繫結項目會提供保護層級和交換機制，做為 `BasicHttpBinding` 內容的一部分。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.BasicHttpContextBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>   
- <xref:System.ServiceModel.Channels.ContextBindingElement>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結 >](../../../../../docs/framework/misc/binding.md)   
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.BasicHttpContextBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>  
+ <xref:System.ServiceModel.Channels.ContextBindingElement>  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
  [\<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
-

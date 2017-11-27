@@ -1,54 +1,57 @@
 ---
-title: "如何：建立 Windows Form 控制項的便捷鍵 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "便捷鍵, 為控制項建立"
-  - "便捷鍵, Windows Form"
-  - "ALT 鍵"
-  - "快速鍵中的連字號 (&) 字元"
-  - "Button 控制項 [Windows Form], 便捷鍵"
-  - "控制項 [Windows Form], 便捷鍵"
-  - "對話方塊控制項, 助憶鍵"
-  - "範例 [Windows Form], 控制項"
-  - "鍵盤快速鍵, 為控制項建立"
-  - "助憶鍵"
-  - "助憶鍵, 加入至對話方塊控制項"
-  - "Text 屬性, 指定控制項的便捷鍵"
-  - "Windows Form 控制項, 便捷鍵"
+title: "如何：建立 Windows Form 控制項的便捷鍵"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [Windows Forms], access keys
+- Button control [Windows Forms], access keys
+- dialog box controls [Windows Forms], mnemonics
+- access keys [Windows Forms], creating for controls
+- mnemonics [Windows Forms], adding to dialog box controls
+- mnemonics
+- ampersand character in shortcut key
+- Windows Forms controls, access keys
+- examples [Windows Forms], controls
+- Text property [Windows Forms], specifying access keys for controls
+- keyboard shortcuts [Windows Forms], creating for controls
+- access keys [Windows Forms], Windows Forms
+- ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af4cbcc5dacc4f9a0b5312b67838479bf6817228
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：建立 Windows Form 控制項的便捷鍵
-*便捷鍵* \(Access Key\) 指的是功能表文字、功能表項目或是控制項標籤中含有底線的字元 \(例如按鈕\)。  便捷鍵可讓使用者同時按下 ALT 鍵與預先定義便捷鍵，來達到「按一下」按鈕的效果。  例如，如果某按鈕是以執行程序來列印表單，因此該按鈕 `Text` 屬性是設定為 "Print"，在字母 "P" 之前加上連字號 \(&\) 即可讓在執行階段的按鈕文字字母 "P" 加上底線。  使用者可按 ALT\+P 鍵來執行與按鈕關聯的命令。  您不能為無法接受焦點的控制項設定便捷鍵。  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>如何：建立 Windows Form 控制項的便捷鍵
+*便捷鍵*是功能表或功能表項目，例如按鈕控制項的標籤文字中加底線的字元。 便捷鍵，使用者可以 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，按鈕會執行程序來列印表單時，如果，因此其`Text`屬性設定為"Print"，將新增連字號，再字母"P"讓字母"P"會在執行階段上底線的按鈕文字。 使用者可以執行命令與按鈕按下 ALT + P 關聯。 您不能有無法接收焦點的控制項的便捷鍵。  
   
-### 若要建立控制項的便捷鍵  
+### <a name="to-create-an-access-key-for-a-control"></a>若要建立控制項的便捷鍵  
   
-1.  將 `Text` 屬性設為字串，並且在要成為快速鍵的字母前面加上連字號 \(&\)。  
+1.  設定`Text`屬性為字串，包含連字號 (&) 會快顯的字母前面。  
   
     ```vb  
     ' Set the letter "P" as an access key.  
     Button1.Text = "&Print"  
-  
     ```  
   
     ```csharp  
     // Set the letter "P" as an access key.  
     button1.Text = "&Print";  
-  
     ```  
   
     ```cpp  
@@ -57,10 +60,10 @@ caps.handback.revision: 13
     ```  
   
     > [!NOTE]
-    >  若標題要包含連字號但不建立便捷鍵，則請加上兩個連字號 \(&&\)。  這樣標題中會出現單一連字號，且不會在字元中加上底線。  
+    >  若要包含標題中的連字號，而不需要建立便捷鍵，包含兩個連字號 (（& s) （& s))。 單一連字號會顯示在標題中，而且沒有字元加上底線。  
   
-## 請參閱  
- <xref:System.Windows.Forms.Button>   
- [如何：回應 Windows Form Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [如何：設定由 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [標記個別 Windows Form 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.Button>  
+ [操作說明：回應 Windows Forms Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [操作說明：設定由 Windows Forms 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

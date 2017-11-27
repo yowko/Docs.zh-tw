@@ -1,25 +1,28 @@
 ---
-title: "用戶端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "用戶端"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e0c7a0336ec72ebe1fe8083286ab098c78ba845
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 用戶端
+# <a name="client"></a>用戶端
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式的範例。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [用戶端互通性](../../../../docs/framework/wcf/samples/client-interoperability.md)  
  示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與其他技術之間的互通性。  
   
@@ -36,7 +39,7 @@ caps.handback.revision: 4
  示範如何將會動態擷取服務之中繼資料的用戶端實作成選擇要與其通訊的端點。  
   
  [避免 Using 陳述式發生問題](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
- 說明使用具型別用戶端時，為什麼不能使用 C\# "using" 陳述式自動清除資源。  
+ 說明使用具型別用戶端時，為什麼不能使用 C# "using" 陳述式自動清除資源。  
   
  [型別用戶端](../../../../docs/framework/wcf/samples/typed-client.md)  
- 示範如何取得 [ServiceModel 中繼資料公用程式工具 \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 所產生之型別用戶端的資訊。
+ 示範如何取得所產生的型別用戶端資訊[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。

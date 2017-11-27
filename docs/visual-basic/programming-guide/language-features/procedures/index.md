@@ -1,48 +1,30 @@
 ---
-title: "Visual Basic 中的程序 | Microsoft Docs"
+title: "Visual Basic 中的程序"
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
-「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 陳述式區塊。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中所有的可執行陳述式都必須在某個程序內。  
+「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 陳述式區塊。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中所有的可執行陳述式都必須在某個程序內。  
   
 ## <a name="calling-a-procedure"></a>呼叫程序  
  您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
@@ -60,7 +42,7 @@ ms.lasthandoff: 05/15/2017
  在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
   
 ## <a name="types-of-procedures"></a>程序類型  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 使用數種程序類型：  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 使用數種程序類型：  
   
 -   [Sub 程序](./sub-procedures.md)會執行動作，但不會傳回值給呼叫程式碼。  
   
@@ -88,13 +70,13 @@ ms.lasthandoff: 05/15/2017
 -   開發用於一個平台的程序之後，您可以在其他程式中使用這些程序，通常只需要微幅修改或完全不需要修改。 這可協助您避免程式碼重複。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何：建立程序](./how-to-create-a-procedure.md)   
- [Sub 程序](./sub-procedures.md)   
- [Function 程序](./function-procedures.md)   
- [屬性程序](./property-procedures.md)   
- [運算子程序](./operator-procedures.md)   
- [程序參數和引數](./procedure-parameters-and-arguments.md)   
- [遞迴程序](./recursive-procedures.md)   
- [程序多載化](./procedure-overloading.md)   
- [Visual Basic 中的泛型程序](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+ [如何：建立程序](./how-to-create-a-procedure.md)  
+ [Sub 程序](./sub-procedures.md)  
+ [函式程序](./function-procedures.md)  
+ [屬性程序](./property-procedures.md)  
+ [運算子程序](./operator-procedures.md)  
+ [程序參數和引數](./procedure-parameters-and-arguments.md)  
+ [遞迴程序](./recursive-procedures.md)  
+ [程序多載化](./procedure-overloading.md)  
+ [在 Visual Basic 中的泛型程序](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

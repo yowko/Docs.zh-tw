@@ -1,104 +1,105 @@
 ---
-title: "&lt;socket&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#socket"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<socket> 項目"
-  - "socket 項目"
+title: "&lt;通訊端&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#socket
+helpviewer_keywords:
+- <socket> element
+- socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-caps.latest.revision: 21
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3d1adc163e889a0de6ad27347c8f122ac26d3524
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;socket&gt; 項目 (網路設定)
-指定通訊端操作是否使用完成通訊埠。  
+# <a name="ltsocketgt-element-network-settings"></a>&lt;通訊端&gt;項目 （網路設定）
+指定通訊端作業是否使用完成通訊埠。  
   
-## 語法  
+ \<configuration>  
+\<system.net >  
+\<設定 >  
+\<通訊端 >  
   
-```  
+## <a name="syntax"></a>語法  
   
-      <socket  
+```xml  
+<socket  
   alwaysUseCompletionPortsForConnect="true|false"  
   alwaysUseCompletionPortsForAccept="true|false"  
-  ipProtectionLevel ="EdgeRestricted|Restricted|Unrestricted|Unspecified"  
-/socket>  
+  ipProtectionLevel="EdgeRestricted|Restricted|Unrestricted|Unspecified"  
+/>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |**屬性**|**說明**|  
-|------------|------------|  
-|`alwaysUseCompletionPortsForAccept`|指出通訊端是否應該永遠使用完成通訊埠用於接受方法呼叫。  預設值是 `false`。|  
-|`alwaysUseCompletionPortsForConnect`|指出通訊端是否應該永遠使用完成通訊埠用於連接方法呼叫。  預設值是 `false`。|  
-|`ipProtectionLevel`|指定通訊端所使用的預設 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>。  預設值取決於 Windows 的版本。|  
+|-------------------|---------------------|  
+|`alwaysUseCompletionPortsForAccept`|表示通訊端是否應該永遠使用完成通訊埠用於呼叫接受 」 方法。 預設值是 `false`。|  
+|`alwaysUseCompletionPortsForConnect`|表示通訊端是否應該永遠使用完成通訊埠的連接方法呼叫。 預設值是 `false`。|  
+|`ipProtectionLevel`|指定的預設<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>来用於通訊端。 預設值取決於 Windows 版本。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
-|------------|------------|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
-## 備註  
- `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 屬性用來指定與透過 <xref:System.Net.Sockets?displayProperty=fullName> 中的類別來使用完成通訊埠有關的預設行為。  但是建議您針對高效能的伺服器應用程式使用完成通訊埠。  
+## <a name="remarks"></a>備註  
+ `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 屬性用來指定與 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間中的類別使用完成通訊埠有關的預設行為。 完成連接埠建議高效能伺服器應用程式。  
   
- `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 屬性的預設值為 **false**。  
+ 預設值為`alwaysUseCompletionPortsForAccept`和`alwaysUseCompletionPortsForConnect`屬性**false**。  
   
- <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> 可用來從適用的組態檔中取得 `alwaysUseCompletionPortsForAccept` 屬性的目前值。  <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> 可用來從適用的組態檔中取得 `alwaysUseCompletionPortsForConnect` 屬性的目前值。  
+ <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A>可以用來取得目前的值`alwaysUseCompletionPortsForAccept`適用的組態檔中的屬性。 <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A>可以用來取得目前的值`alwaysUseCompletionPortsForConnect`適用的組態檔中的屬性。  
   
- `ipProtectionLevel` 屬性會指定預設的 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName> 供通訊端使用。  <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> 屬性允許將 IPv6 通訊端限制在指定的範圍，例如含有同一個連結本機或站台本機前置詞的位址。  此選項可讓應用程式在 IPv6 通訊端上設置存取限制。  這類限制可以讓應用程式在私人 LAN 上執行，簡便又穩當地強化應用程式對外部攻擊的抵禦。  這個選項可放大或縮小接聽通訊端的範圍，根據需要啟用公用和私用使用者的無限制存取，或視需要限制成僅可存取相同的站台。  
+ `ipProtectionLevel`屬性會指定預設<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>来用於通訊端。 <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>屬性可以讓 IPv6 通訊端，在指定的範圍限制的設定，例如具有相同位址連結本機或網站本機首碼。 此選項可讓應用程式置於 IPv6 通訊端的存取限制。 這類限制可以讓應用程式在私人 LAN 上執行，簡便又穩當地強化應用程式對外部攻擊的抵禦。 此選項可放大或縮小接聽通訊端啟用的公用和私用的使用者在適當的情況下，或只是以相同的站台，視需要限制存取不受限制的存取範圍。  
   
- 此 `ipProtectionLevel` 屬性設定只會影響初始的傳入流量：  
+ 這`ipProtectionLevel`屬性設定會影響初始的連入流量：  
   
--   在通訊端上接聽連入連線的 TCP 伺服器。  
+-   TCP 伺服器正在接聽的通訊端上的連入連線。  
   
--   在通訊端上接收封包的 UDP 應用程式。  
+-   接收通訊端上的封包的 UDP 應用程式。  
   
- 這個組態設定不會影響已經建立的 TCP 連線 \(雙向的流量均無限制\)，也不會影響傳送 UDP 封包的應用程式。  
+ 此組態設定不會影響已經建立的 TCP 連接 （流量不受限制的兩個方向） 並不會影響應用程式傳送 UDP 封包。  
   
- `ipProtectionLevel` 屬性設定的可能值會與 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName> 列舉中指定的已定義保護層級對應，如下所示：  
+ 可能值`ipProtectionLevel`屬性設定對應中指定的已定義的保護層級與<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>列舉型別，如下所示：  
   
-|||  
-|-|-|  
 |**屬性值**|**說明**|  
-|EdgeRestricted|IP 保護層級有臨界限制。  這個值將由設計在整個網際網路上操作的應用程式所使用。  此項設定不允許使用 Windows Teredo 實作來進行網路位址轉譯 \(NAT\) 周遊。  這些應用程式可能會略過 IPv4 防火牆，因此必須加強應用程式，以抵禦在開啟的通訊埠位置遭受的直接網路攻擊。  在 Windows Server 2003 和 Windows XP 環境下，通訊端 IP 保護層級的預設值有臨界限制。|  
-|Restricted|IP 保護層級有限制。  這個值將由未實作網際網路案例的內部網路應用程式所使用。  這些應用程式通常不會就網路攻擊測試進行測試或是採取強化。  這個設定會將接收傳輸限制於僅連結和本機之間。|  
-|不受限|IP 保護層級不受限制。  這個值將由設計在整個網際網路上操作的應用程式使用，包括發揮已內建在 Windows 之 IPv6 NAT 周遊功能的應用程式 \(例如 Teredo\)。  這些應用程式可能會略過 IPv4 防火牆，因此必須加強應用程式，以抵禦在開啟的通訊埠位置遭受的直接網路攻擊。  在 Windows Server 2008 R2 和 Windows Vista 環境下，通訊端 IP 保護層級的預設值不受任何限制。|  
-|Unspecified|IP 保護層級尚未指定。  在 Windows 7 和 Windows Server 2008 R2 環境下，通訊端 IP 保護層級的預設值尚未指定。|  
+|-|-|  
+|EdgeRestricted|IP 保護層級是限制的邊緣。 若要在網際網路上操作所設計的應用程式會使用此值。 此設定不允許使用 Windows Teredo 實作的網路位址轉譯 (NAT) 周遊。 這些應用程式可能會略過 IPv4 防火牆，因此應用程式必須強行攻擊網際網路導向的開啟連接埠。 在 Windows Server 2003 和 Windows XP 中，通訊端上的 IP 保護層級的預設值是受限制的邊緣。|  
+|限制|IP 保護層級受到限制。 不會實作網際網路狀況的內部網路應用程式會使用此值。 這些應用程式通常未測試或對抗網際網路型攻擊。 這項設定會限制只連結-本機接收的流量。|  
+|無限制的|IP 保護層級不受限制。 這個值會由整個網際網路，包括利用內建的 IPv6 的 NAT 周遊功能的應用程式運作所設計的應用程式至 Windows (例如 Teredo)。 這些應用程式可能會略過 IPv4 防火牆，因此應用程式必須強行攻擊網際網路導向的開啟連接埠。 在 Windows Server 2008 R2 和 Windows Vista，通訊端上的 IP 保護層級的預設值是不受限制。|  
+|未指定|未指定 IP 保護層級。 在 Windows 7 和 Windows Server 2008 R2 中，通訊端上的 IP 保護層級的預設值是未指定。|  
   
- `ipProtectionLevel` 屬性的預設值為 **Unspecified**。  
+ 預設值為`ipProtectionLevel`屬性是**未指定**。  
   
- <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> 屬性可用來從適用的組態檔中取得 `ipProtectionLevel` 屬性的目前值。  
+ <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>屬性可以用來取得目前的值`ipProtectionLevel`適用的組態檔中的屬性。  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a>組態檔  
+ 此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## 範例  
- 下列程式碼範例示範如何指定應該使用的完成通訊埠，以及預設 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName> 不應該受到限制。  
+## <a name="example"></a>範例  
+ 下列範例示範如何指定應完成通訊埠，而且預設<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>應該是不受限制。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -112,10 +113,10 @@ caps.handback.revision: 21
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net?displayProperty=fullName>   
- <xref:System.Net.Configuration.SocketElement?displayProperty=fullName>   
- <xref:System.Net.Sockets?displayProperty=fullName>   
- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Net?displayProperty=nameWithType>  
+ <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

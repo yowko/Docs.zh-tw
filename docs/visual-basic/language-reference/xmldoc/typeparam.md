@@ -1,51 +1,50 @@
 ---
-title: "&lt;typeparam&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "typeparam XML tag"
-  - "<typeparam> XML tag"
+title: '&lt;typeparam&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- typeparam XML tag
+- <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b654fe6fc93642693730256b523fee999aa55937
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;typeparam&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-定義型別參數名稱和說明。  
+# <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
+定義的型別參數名稱和描述。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `name`  
- 型別參數的名稱。  以雙引號 \(" "\) 將名稱括起來。  
+ 型別參數的名稱。 以雙引號 (" ") 括住名稱。  
   
  `description`  
  型別參數的描述。  
   
-## 備註  
- 在泛型型別或泛型成員宣告的註解中使用 `<typeparam>` 標記，說明其中一個型別參數。  
+## <a name="remarks"></a>備註  
+ 使用`<typeparam>`泛型類型或泛型成員宣告描述的其中一個型別參數的註解中的標記。  
   
- 使用 [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 進行編譯，將文件註解處理為檔案。  
+ 編譯搭配 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) 可處理檔案的文件註解。  
   
-## 範例  
- 這個範例會使用 `<typeparam>` 標記，說明 `id` 參數。  
+## <a name="example"></a>範例  
+ 這個範例會使用`<typeparam>`標記來描述`id`參數。  
   
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
-## 請參閱  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>另請參閱  
+ [XML 註解標記](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

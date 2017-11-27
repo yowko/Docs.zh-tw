@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="copying-and-pinning"></a>複製和 Pin
 封送處理資料時，Interop 封送處理器可以複製或釘選所封送處理的資料。 複製資料時會將某個記憶體位置中的一份資料放入另一個記憶體位置。 下圖顯示複製實值型別與以傳址方式將類型從 Managed 複製至 Unmanaged 記憶體之間的差異。  
@@ -88,13 +81,12 @@ ms.lasthandoff: 08/21/2017
 > [!CAUTION]
 >  以傳值方式傳遞字串時，被呼叫者必須永遠不得改變封送處理器所傳遞的參考。 這樣做可能會損毀 Managed 堆積。  
   
- 以傳址方式傳遞 <xref:System.String?displayProperty=fullName> 時，封送處理器會先將字串的內容複製至次要緩衝區，再提出要求。 它接著會透過呼叫，在傳回時將緩衝區的內容複製至新的字串。 這項技術可確保不可變的 Managed 字串保持不變。  
+ 以傳址方式傳遞 <xref:System.String?displayProperty=nameWithType> 時，封送處理器會先將字串的內容複製至次要緩衝區，再提出要求。 它接著會透過呼叫，在傳回時將緩衝區的內容複製至新的字串。 這項技術可確保不可變的 Managed 字串保持不變。  
   
- 以傳值方式傳遞 <xref:System.Text.StringBuilder?displayProperty=fullName> 時，封送處理器會直接將 **StringBuilder** 的內部緩衝區參考傳遞給呼叫者。 呼叫者和被呼叫者必須同意緩衝區的大小。 呼叫者負責建立長度足夠的 **StringBuilder**。 被呼叫者必須採取必要的預防措施，確保緩衝區未溢位。 **StringBuilder** 是規則的例外狀況，而此規則預設會將以傳值方式傳遞的參考型別傳遞為 In 參數。 它一律會傳遞為 In/Out。  
+ 以傳值方式傳遞 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 時，封送處理器會直接將 **StringBuilder** 的內部緩衝區參考傳遞給呼叫者。 呼叫者和被呼叫者必須同意緩衝區的大小。 呼叫者負責建立長度足夠的 **StringBuilder**。 被呼叫者必須採取必要的預防措施，確保緩衝區未溢位。 **StringBuilder** 是規則的例外狀況，而此規則預設會將以傳值方式傳遞的參考型別傳遞為 In 參數。 它一律會傳遞為 In/Out。  
   
 ## <a name="see-also"></a>另請參閱  
- [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [使用 Interop 封送處理器進行記憶體管理](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [方向屬性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [使用 Interop 封送處理器進行記憶體管理](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [方向屬性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
-

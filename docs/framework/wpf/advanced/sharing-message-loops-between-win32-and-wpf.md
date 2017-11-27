@@ -1,76 +1,79 @@
 ---
-title: "在 Win32 和 WPF 之間共用訊息迴圈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "互通性 [WPF], Win32"
-  - "訊息迴圈 [WPF]"
-  - "共用訊息迴圈"
-  - "Win32 程式碼, 共用訊息迴圈"
+title: "在 Win32 和 WPF 之間共用訊息迴圈"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Win32 code [WPF], sharing message loops
+- message loops [WPF]
+- sharing message loops [WPF]
+- interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dcf8baa87038bc5625d46968b39d759daae25cbc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 在 Win32 和 WPF 之間共用訊息迴圈
-本主題說明如何透過使用 <xref:System.Windows.Threading.Dispatcher> 中現有的訊息迴圈 \(Loop\) 公開，或是在互通性程式碼的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 端建立個別訊息迴圈，以便實作用來與 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 互通的訊息迴圈。  
+# <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之間共用訊息迴圈
+本主題描述如何實作與互通的訊息迴圈[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，藉由使用現有訊息中的迴圈曝光<xref:System.Windows.Threading.Dispatcher>或藉由建立個別的訊息迴圈上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]這邊的交互操作的程式碼。  
   
-## ComponentDispatcher 和訊息迴圈  
- 互通性和鍵盤事件支援的一般案例是實作 <xref:System.Windows.Interop.IKeyboardInputSink>，或是從已經實作 <xref:System.Windows.Interop.IKeyboardInputSink> 的類別 \(例如 <xref:System.Windows.Interop.HwndSource> 或 <xref:System.Windows.Interop.HwndHost>\) 進行子類別化 \(Subclass\)。  不過，鍵盤接收器支援無法處理跨互通界限傳送及接收訊息時，可能產生的所有訊息迴圈需求。  為了協助應用程式訊息迴圈架構的成形，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了 <xref:System.Windows.Interop.ComponentDispatcher> 類別，用以定義供訊息迴圈遵守的簡單通訊協定 \(Protocol\)。  
+## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher 和訊息迴圈  
+ 要實作的互通性和鍵盤事件支援一般案例是<xref:System.Windows.Interop.IKeyboardInputSink>，或從已經實作的類別的子類別化<xref:System.Windows.Interop.IKeyboardInputSink>，例如<xref:System.Windows.Interop.HwndSource>或<xref:System.Windows.Interop.HwndHost>。 不過，鍵盤接收器支援不會處理所有的訊息迴圈需求，您可能必須傳送和接收訊息跨互通界限時。 若要協助擬定應用程式訊息迴圈架構，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供<xref:System.Windows.Interop.ComponentDispatcher>類別，定義訊息迴圈，以遵循簡單的通訊協定。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 是公開幾個成員的靜態類別。  每個方法的範圍都隱含繫結至呼叫端執行緒。  訊息迴圈必須在關鍵時間 \(如下一節所定義\) 呼叫部分 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。  
+ <xref:System.Windows.Interop.ComponentDispatcher>是靜態類別會公開數個成員。 每個方法的範圍會隱含地繫結呼叫執行緒。 訊息迴圈必須呼叫部分[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]在關鍵時刻 （如 下一節中所定義）。  
   
- <xref:System.Windows.Interop.ComponentDispatcher> 提供其他元件 \(例如鍵盤接收器\) 可以接聽的事件。  <xref:System.Windows.Threading.Dispatcher> 類別會按照適當的順序呼叫所有適當的 <xref:System.Windows.Interop.ComponentDispatcher> 方法。  若實作的是您自己的訊息，便由您的程式碼負責以類似的方式呼叫 <xref:System.Windows.Interop.ComponentDispatcher> 方法。  
+ <xref:System.Windows.Interop.ComponentDispatcher>提供的其他元件 （例如鍵盤接收器） 可以接聽的事件。 <xref:System.Windows.Threading.Dispatcher>類別會呼叫所有適當<xref:System.Windows.Interop.ComponentDispatcher>中適當的順序的方法。 如果您要實作您自己的訊息迴圈，您的程式碼會負責呼叫<xref:System.Windows.Interop.ComponentDispatcher>方法，以類似的方式。  
   
- 在執行緒上呼叫 <xref:System.Windows.Interop.ComponentDispatcher> 方法只會叫用 \(Invoke\) 已在該執行緒上註冊的事件處理常式 \(Event Handler\)。  
+ 呼叫<xref:System.Windows.Interop.ComponentDispatcher>執行緒上的方法只會叫用該執行緒已註冊的事件處理常式。  
   
-## 撰寫訊息迴圈  
- 以下提供一份檢查清單，其中列出自行撰寫訊息迴圈時所要使用的 <xref:System.Windows.Interop.ComponentDispatcher> 成員：  
+## <a name="writing-message-loops"></a>撰寫訊息迴圈  
+ 下列是檢查清單<xref:System.Windows.Interop.ComponentDispatcher>如果您要撰寫您自己的訊息迴圈，您將使用的成員：  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>：訊息迴圈應該呼叫這個成員，表示執行緒是強制回應。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>： 呼叫這個方法來表示執行緒為強制回應訊息迴圈。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>：訊息迴圈應該呼叫這個成員，表示執行緒已還原為非強制回應。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>： 呼叫這個方法來表示執行緒已還原成 nonmodal 訊息迴圈。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>：訊息迴圈應該呼叫這個成員，表示 <xref:System.Windows.Interop.ComponentDispatcher> 應該引發 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> 事件。  如果 <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> 為 `true`，<xref:System.Windows.Interop.ComponentDispatcher> 就不會引發 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>，但是訊息迴圈還是可以選擇呼叫 <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> \(即使 <xref:System.Windows.Interop.ComponentDispatcher> 在強制回應狀態中無法回應呼叫\)。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>： 呼叫這個方法，表示訊息迴圈<xref:System.Windows.Interop.ComponentDispatcher>應該引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>事件。 <xref:System.Windows.Interop.ComponentDispatcher>將不會引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>如果<xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>是`true`，但呼叫可能會選擇訊息迴圈<xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>即使<xref:System.Windows.Interop.ComponentDispatcher>它處於強制回應狀態時無法回應。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>：訊息迴圈應該呼叫這個成員，表示有新的訊息。  傳回的值會指出 <xref:System.Windows.Interop.ComponentDispatcher> 事件的接聽程式 \(Listener\) 是否已處理該訊息。  如果 <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> 傳回 `true` \(已處理\)，發送器應該不會對訊息執行其他動作。  如果傳回值是 `false`，則發送器應該會呼叫 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 函式 `TranslateMessage`，然後再呼叫 `DispatchMessage`。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>： 呼叫這個方法以指出新的訊息是使用訊息迴圈。 傳回值會指出是否要接聽程式<xref:System.Windows.Interop.ComponentDispatcher>處理訊息的事件。 如果<xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>傳回`true`（處理），發送器應該執行任何進一步處理訊息。 如果傳回值是`false`，發送器應該如何呼叫[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]函式`TranslateMessage`，然後呼叫`DispatchMessage`。  
   
-## 使用 ComponentDispatcher 和現有訊息處理  
- 以下提供一份檢查清單，其中列出依賴固有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 訊息迴圈時所要使用的 <xref:System.Windows.Interop.ComponentDispatcher> 成員。  
+## <a name="using-componentdispatcher-and-existing-message-handling"></a>使用 ComponentDispatcher 」 和 「 現有訊息處理  
+ 下列是檢查清單<xref:System.Windows.Interop.ComponentDispatcher>成員，您將使用如果您依賴固有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]訊息迴圈。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>：傳回應用程式是否已變成強制回應 \(也就是已推入強制回應訊息迴圈\)。  <xref:System.Windows.Interop.ComponentDispatcher> 可以追蹤這個狀態，因為這個類別維護了訊息迴圈傳回之 <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> 和 <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> 呼叫的計數。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>： 傳回應用程式是否已進入強制回應 （例如，強制訊息迴圈已排除）。 <xref:System.Windows.Interop.ComponentDispatcher>可以追蹤此狀態，因為該類別會維護的計數<xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>和<xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>於訊息迴圈的呼叫。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 和 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 事件會遵守委派引動過程 的標準規則。  未特別指定叫用委派的順序，而且即使第一個委派將訊息標記為已處理，也會叫用所有的委派。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>和<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件遵循標準的規則，以便委派引動過程。 未指定的順序，會叫用委派，即使第一個會將訊息標示為已處理，會叫用所有的委派。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>：指出進行閒置處理適當又有效率的時間 \(執行緒中沒有其他擱置訊息\)。  如果執行緒是強制回應，則不會引發 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>： 表示適當且有效率的時間，以執行閒置處理 （沒有其他擱置中訊息的執行緒）。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>系統不會引發如果執行緒為強制回應。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>：訊息幫浦 \(Message Pump\) 處理之所有訊息都會引發此成員。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>： 在訊息幫浦內處理的所有訊息時都引發。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>：<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 期間未處理的所有訊息都會引發此成員。  
+-   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>： 所有期間未處理的訊息時引發<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>。  
   
- 如果在 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> 事件或 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 事件之後，事件資料中以傳址方式傳遞的 `handled` 參數為 `true`，就會將訊息視為已經處理。  若 `handled` 為 `true`，事件處理常式應該忽略該訊息，因為這表示不同的處理常式已先處理該訊息。  這兩個事件的事件處理常式都可以修改該訊息。  發送器應該發送修改過的訊息，而不是未更動過的原始訊息。  <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> 會傳送給所有接聽程式，但在架構目的中，應該只有內含訊息鎖定之 HWND 的最上層視窗 \(Top\-Level Window\) 才能叫用程式碼來回應訊息。  
+ 訊息會被視為已處理之後如果<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>事件或<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>事件，`handled`事件資料的參考所傳遞的參數是`true`。 如果事件處理常式應忽略該訊息`handled`是`true`，因為這表示不同的處理常式已處理訊息第一次。 這兩個事件的事件處理常式可能會修改訊息。 發送器應該分派已修改的訊息而不原始未變更的訊息。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>傳遞至所有接聽程式，但是架構設計用意在於只包含的 HWND 的目標訊息應叫用程式碼以回應訊息的最上層視窗。  
   
-## HwndSource 處理 ComponentDispatcher 事件的方式  
- 如果 <xref:System.Windows.Interop.HwndSource> 是最上層視窗 \(無父代 HWND\)，它會註冊 <xref:System.Windows.Interop.ComponentDispatcher>。  如果引發 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>，而且訊息是要用於 <xref:System.Windows.Interop.HwndSource> 或子視窗，<xref:System.Windows.Interop.HwndSource> 便會呼叫其 <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TranslateAccelerator%2A>、<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>、<xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A> 鍵盤接收器序列。  
+## <a name="how-hwndsource-treats-componentdispatcher-events"></a>HwndSource 如何處理 ComponentDispatcher 事件  
+ 如果<xref:System.Windows.Interop.HwndSource>是最上層的視窗 （沒有父代 HWND），它會向<xref:System.Windows.Interop.ComponentDispatcher>。 如果<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>引發時，如果訊息專供<xref:System.Windows.Interop.HwndSource>或子視窗<xref:System.Windows.Interop.HwndSource>呼叫其<xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TranslateAccelerator%2A>， <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>，<xref:System.Windows.Interop.IKeyboardInputSink.OnMnemonic%2A>鍵盤接收器的順序。  
   
- 如果 <xref:System.Windows.Interop.HwndSource> 不是最上層視窗 \(有父代 HWND\)，則不會進行任何處理動作。  只有最上層視窗才能執行處理作業，而且任何互通性案例應該都有可以支援鍵盤接收器的最上層視窗。  
+ 如果<xref:System.Windows.Interop.HwndSource>不是最上層視窗 （具有父 HWND），會有任何處理。 只有最上層視窗是需要進行處理，但那里預計要做為任何互通性案例的一部分的鍵盤接收器支援的最上層視窗。  
   
- 如果呼叫 <xref:System.Windows.Interop.HwndSource> 上的 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 之前沒有先呼叫適當的鍵盤接收器方法，應用程式會收到較高層級的鍵盤事件，例如 <xref:System.Windows.UIElement.KeyDown>。  不過，系統不會呼叫任何鍵盤接收器方法，而無法提供需要的鍵盤輸入模型功能，例如便捷鍵 \(Access Key\) 支援。  發生這種情況的原因可能是訊息迴圈未正確通知 <xref:System.Windows.Interop.ComponentDispatcher> 上的相關執行緒，或是父代 HWND 未叫用適當的鍵盤接收器回應。  
+ 如果<xref:System.Windows.Interop.HwndHost.WndProc%2A>上<xref:System.Windows.Interop.HwndSource>呼叫沒有先呼叫適當的鍵盤接收器方法，您的應用程式會收到較高的層級的鍵盤事件諸如<xref:System.Windows.UIElement.KeyDown>。 不過，沒有任何的鍵盤接收器方法會呼叫，其中規避理想的鍵盤輸入的模型功能，例如存取金鑰的支援。 這可能是因為訊息迴圈沒有適當地通知相關的執行緒上<xref:System.Windows.Interop.ComponentDispatcher>，或因為父 HWND 未叫用適當的鍵盤接收器回應。  
   
- 如果您使用 <xref:System.Windows.Interop.HwndSource.AddHook%2A> 方法加入進入鍵盤接收器之訊息的攔截程式 \(Hook\)，該訊息可能不會傳送到 HWND。  這個訊息可能已經直接在訊息幫浦層級加以處理，而且不會送出至 `DispatchMessage` 函式。  
+ 移至的鍵盤接收器的訊息可能不會傳送到 HWND 如果使用加入的訊息勾點<xref:System.Windows.Interop.HwndSource.AddHook%2A>方法。 訊息可能已經直接而不提交至訊息幫浦層級處理`DispatchMessage`函式。  
   
-## 請參閱  
- <xref:System.Windows.Interop.ComponentDispatcher>   
- <xref:System.Windows.Interop.IKeyboardInputSink>   
- [WPF 和 Win32 互通](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Interop.ComponentDispatcher>  
+ <xref:System.Windows.Interop.IKeyboardInputSink>  
+ [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)  
  [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)

@@ -1,34 +1,40 @@
 ---
-title: "覆寫服務的身分識別以進行驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "覆寫服務的身分識別以進行驗證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6a3125504326f2cb129fef6f1f3e01dba577f599
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 覆寫服務的身分識別以進行驗證
-一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如，下列組態程式碼會使用[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。  
+# <a name="overriding-the-identity-of-a-service-for-authentication"></a>覆寫服務的身分識別以進行驗證
+一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如，下列組態程式碼會使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。  
   
   
   
- 下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。 在此範例中，服務執行為特定使用者帳戶的自我裝載服務(username@contoso.com)，因此使用者主要名稱 (UPN) 識別包含帳戶名稱。 UPN 在 Windows 網域中也稱為使用者登入名稱。  
+ 下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。 在此範例中，服務自我裝載的服務特定使用者帳戶以執行 (username@contoso.com)，因此使用者主要名稱 (UPN) 識別包含帳戶名稱。 UPN 在 Windows 網域中也稱為使用者登入名稱。  
   
   
   
- 示範身分識別設定的範例應用程式，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]服務身分識別，請參閱[服務身分識別與驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 範例應用程式，示範身分識別設定，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]服務身分識別，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 驗證和身分識別  
- 根據預設，當服務設定為使用 Windows 認證時， [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含項目[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL 中產生項目。 如果服務正在`LocalSystem`， `LocalService`，或`NetworkService`帳戶、 服務主要名稱 (SPN) 由預設的形式產生`host/` \< *hostname*> 因為這些帳戶可以存取電腦的 SPN 資料。 如果服務正在執行不同的帳戶，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]的格式產生 UPN *username*>@<*domainName*`>`。 這種情況發生的原因是 Kerberos 驗證需要對用戶端提供 UPN 或 SPN，才能驗證服務。  
+ 根據預設，當服務設定為使用 Windows 認證， [\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含項目[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL 中不會產生元素。 如果服務在執行`LocalSystem`， `LocalService`，或`NetworkService`帳戶、 服務主要名稱 (SPN) 產生的表單中的預設`host/` \< *hostname*> 因為這些帳戶可以存取電腦的 SPN 資料。 如果服務正在執行不同的帳戶，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]格式產生 UPN \< *username*>@<*domainName*`>`。 這種情況發生的原因是 Kerberos 驗證需要對用戶端提供 UPN 或 SPN，才能驗證服務。  
   
  您也可以使用 Setspn.exe 工具，以服務的帳戶在網域中登錄其他 SPN。 您接著就可以使用 SPN 做為服務的身分識別。 若要下載此工具，請參閱[Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工具，請參閱[Setspn 概觀](http://go.microsoft.com/fwlink/?LinkId=61374)。  
   
@@ -54,7 +60,7 @@ caps.handback.revision: 9
   
 -   如果您正在直接使用 Kerberos (也就是「單次」)，則驗證失敗。  
   
-### <a name="using-the-identity-element-in-configuration"></a>使用<>\>組態中的項目  
+### <a name="using-the-identity-element-in-configuration"></a>使用\<識別 > 組態中的項目  
  如果您在先前對 Certificate`,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證，這個憑證可用於身分識別值，其值如以下程式碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
   
   
@@ -70,5 +76,5 @@ caps.handback.revision: 9
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱  
- [如何︰ 建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)   
- [服務身分識別與驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [如何： 建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -1,71 +1,69 @@
 ---
-title: "Security and User Input | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], user input"
-  - "user input, security"
-  - "secure coding, user input"
-  - "code security, user input"
+title: "安全性和使用者輸入"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], user input
+- user input, security
+- secure coding, user input
+- code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 804b91cdda1316bc0a3081c8353493faf8869b4f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Security and User Input
-使用者資料可以是任何種類的輸入資料 \(來自 Web 要求或 URL 的資料、Microsoft Windows Form 應用程式控制項的輸入內容等\)，由於這種資料通常直接用來當做呼叫其他程式碼的參數，因此會影響到程式碼。  這種情況類似惡意程式碼使用奇怪的參數呼叫您的程式碼，也需採取相同的防範措施。  實際上，使用者輸入的安全比較不易維護，因為這種資料沒有堆疊框架可以追蹤潛在的未受信任資料是否存在。  
+# <a name="security-and-user-input"></a>安全性和使用者輸入
+使用者資料，也就是任何種類的輸入 (來自 Web 要求或 URL 的資料、對 Microsoft Windows Forms 應用程式之控制項的輸入等等)，可以會對程式碼有不良影響，因為通常該資料會直接做為參數來呼叫其他程式碼。 這種情況類似惡意程式碼使用奇怪的參數呼叫您的程式碼，應該採取相同的預防措施。 使用者輸入實際上較難以保護其安全，因為沒有任何堆疊框架，可以追蹤可能不受信任的資料存在。  
   
- 這些是最神秘也是最難發現的安全性錯誤；它們可能會存在看起來與安全性完全無關的程式碼中，但是它們卻是將錯誤資料傳遞給其他程式碼的通道。  如果要找出這些錯誤，請注意每一種輸入資料，想像可能的數值範圍，並思考看到這個資料的程式碼是否可以處理所有的狀況。  您可以透過檢查範圍並拒絕程式碼無法處理的任何輸入，以修正這些錯誤。  
+ 它們是在最細微且最難以尋找的安全性錯誤當中，因為，雖然它們可以存在於似乎是與安全性沒有相關的程式碼中，但是它們是將錯誤資料傳遞給其他程式碼的閘道。 若要找出這些錯誤，請依照下列任何一種輸入資料，想像一下可能值的範圍，並且考量查看此資料的程式碼是否可以處理所有這些情況。 您可以透過檢查範圍以及拒絕程式碼無法處理的任何輸入，來修正這些錯誤。  
   
- 與使用者資料相關的部分重要考量事項包括：  
+ 與使用者資料相關的一些重要考量包括下列項目︰  
   
--   伺服器回應中的任何使用者資料都會在用戶端的伺服器站台內容中執行。  如果您的 Web 伺服器接受使用者資料並將它插入傳回的網頁中，它可能，例如，含有 **\<script\>** 標記而且會執行，就好像是從伺服器執行一樣。  
+-   伺服器回應的任何使用者資料會在用戶端的伺服器網站內容中執行。 例如，如果您的 Web 伺服器接受使用者資料並將它插入傳回的網頁中，它可能會包含 **\<script>** 標記，並且看起來就像是從伺服器執行。  
   
--   請注意，用戶端可以要求任何 URL。  
+-   請記住，用戶端可以要求任何 URL。  
   
--   仔細檢查複雜或無效的路徑：  
+-   請考慮棘手或無效的路徑︰  
   
-    -   ..\\、非常長的路徑  
+    -   ..\，非常長的路徑。  
   
-    -   使用萬用字元 \(\*\)  
+    -   使用萬用字元 (*)。  
   
-    -   語彙基元 \(Token\) 展開 \(%token%\)  
+    -   語彙基元展開 (%token%)。  
   
-    -   具有特殊意義的奇怪路徑格式  
+    -   具有特殊意義的奇怪格式路徑。  
   
-    -   替代檔案系統資料流名稱，例如 `filename::$DATA`  
+    -   替代的檔案系統資料流名稱，例如 `filename::$DATA`。  
   
-    -   檔案名稱縮短版，如 `longfilename` 的縮短名稱 `longfi~1`  
+    -   簡短版本的檔案名稱，例如 `longfilename` 的 `longfi~1`。  
   
--   請記住，Eval\(userdata\) 可以執行任何動作。  
+-   請記住，Eval(userdata) 可以執行任何動作。  
   
--   要注意包含某些使用者資料之名稱的晚期繫結。  
+-   請小心晚期繫結至包含一些使用者資料的名稱。  
   
--   如果您處理的是 Web 資料，請仔細檢查系統允許的各種逸出字元形式，包括：  
+-   如果您正在處理 Web 資料，請考慮允許的各種形式逸出，包括︰  
   
-    -   十六進位逸出字元 \(%nn\)  
+    -   十六進位逸出 (%nn)。  
   
-    -   Unicode 逸出字元 \(%nnn\)  
+    -   Unicode 逸出 (%nnn)。  
   
-    -   過長的 UTF\-8 逸出字元 \(%nn%nn\)  
+    -   過長 UTF-8 逸出 (%nn%nn)。  
   
-    -   雙逸出字元 \(%nn 變成 %mmnn，其中的 %mm 是 '%' 的逸出字元\)  
+    -   雙逸出 (%nn 變成 %mmnn，其中 %mm 是 '%' 的逸出)。  
   
--   請留意可能會有多個正式名稱格式的使用者名稱。  例如，在 Microsoft Windows 2000 中，您通常可以使用 MYDOMAIN\\*username* 的格式或 *username*@mydomain.example.com 的格式。  
+-   請小心可能有一個以上標準格式的使用者名稱。 例如，您通常可以使用 MYDOMAIN\\username 形式或 username@mydomain.example.com 形式。  
   
-## 請參閱  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>另請參閱  
+ [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

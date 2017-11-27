@@ -1,70 +1,71 @@
 ---
-title: "authenticationModules 的 &lt;clear&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, clear 項目"
-  - "<clear> 項目, authenticationModules"
-  - "authenticationModules, clear 項目"
-  - "clear 項目, authenticationModules"
+title: "&lt;清除&gt;authenticationModules （網路設定） 的項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, authenticationModules
+- <authenticationModules>, clear element
+- <clear> element, authenticationModules
+- authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f056894148177e6b540fd45569140a996b6b888f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# authenticationModules 的 &lt;clear&gt; 項目 (網路設定)
-從應用程式清除所有驗證模組。  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;清除&gt;authenticationModules （網路設定） 的項目
+清除所有的驗證模組，從應用程式。  
   
-## 語法  
+ \<configuration>  
+\<system.net >  
+\<authenticationModules >  
+\<清除 >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
  無。  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
-|------------|------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用於驗證網路要求的模組。|  
+|**目**|**說明**|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   
-## 備註  
- `clear` 項目會移除在組態檔之前或組態階層中更高層級定義的所有驗證模組。  
+## <a name="remarks"></a>備註  
+ `clear`項目會移除所有先前已定義在組態檔中或在組態階層架構中較高層級的驗證模組。  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a>組態檔  
+ 此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## 範例  
- 下列程式碼範例會移除所有設定的驗證模組。  
+## <a name="example"></a>範例  
+ 下列範例會移除所有設定的驗證模組。  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -74,7 +75,7 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

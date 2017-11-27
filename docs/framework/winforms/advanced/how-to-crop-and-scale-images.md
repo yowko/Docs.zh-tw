@@ -1,46 +1,50 @@
 ---
-title: "如何：裁剪和縮放影像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "影像 [Windows Form], 裁剪"
-  - "影像 [Windows Form], 縮放比例"
+title: "如何：裁剪和縮放影像"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], cropping
+- images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8fb5d527cd1047197f370c4a9a9b1f8f33461653
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：裁剪和縮放影像
-<xref:System.Drawing.Graphics> 類別提供了幾個 <xref:System.Drawing.Graphics.DrawImage%2A> 方法，有些方法的來源和目的端矩形參數可用來裁切和縮放影像。  
+# <a name="how-to-crop-and-scale-images"></a>如何：裁剪和縮放影像
+<xref:System.Drawing.Graphics>類別提供幾種<xref:System.Drawing.Graphics.DrawImage%2A>方法，其中有些具有來源和目的地矩形參數可用來裁剪和縮放影像。  
   
-## 範例  
- 下列範例會從磁碟檔案 Apple.gif 建構 <xref:System.Drawing.Image> 物件。  程式碼會以原始大小來繪製整個蘋果影像。  接著，程式碼會呼叫 <xref:System.Drawing.Graphics> 物件的 <xref:System.Drawing.Graphics.DrawImage%2A> 方法，在大於原始蘋果影像的目的端矩形中繪製一部分蘋果影像。  
+## <a name="example"></a>範例  
+ 下列範例會建構<xref:System.Drawing.Image>從磁碟檔案 Apple.gif 物件。 程式碼會在其原始大小繪製整個 apple 映像。 然後程式碼會呼叫<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>apple 映像的一部分繪製大於原始 apple 映像的目的地矩形的物件。  
   
- <xref:System.Drawing.Graphics.DrawImage%2A> 方法會查看來源矩形，決定要繪製的蘋果部分，來源矩形是由第三、第四、第五和第六個引數來指定。  在這種情況下，會將蘋果的寬度裁切為 75%，高度也會裁切為 75%。  
+ <xref:System.Drawing.Graphics.DrawImage%2A>方法會判斷藉由查看來源矩形中，第四個，指定第三個、 第 5 個和第六個引數，讓 apple 的哪一部分。 在此情況下，將 apple 裁剪成 75%的寬度和高度的 75%。  
   
- <xref:System.Drawing.Graphics.DrawImage%2A> 方法也會查看目的端矩形，決定繪製裁切蘋果的位置和裁切蘋果的大小，目的端矩形是由第二個引數來指定。  在這種情況下，目的端矩形的寬度會比原始影像寬 30%，長度也會比原始影像長 30%。  
+ <xref:System.Drawing.Graphics.DrawImage%2A>方法會判斷繪製裁剪的 apple 位置和大小，以便進行裁剪的 apple 查看目的矩形，也就是第二個引數所指定。 在此情況下，目的地矩形是較寬的 30%，而 30%高於原始映像。  
   
- 下圖顯示的是原始的蘋果以及縮放和裁切過的蘋果。  
+ 下圖顯示原始 apple 和縮放裁剪 apple。  
   
  ![裁剪 & 縮放](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
-## 編譯程式碼  
- 上述範例是專為與 Windows Form 搭配使用而設計的，而且它需要 <xref:System.Windows.Forms.PaintEventArgs> `e` \(即 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數\)。  請以系統中有效的影像檔名稱和路徑取代 `Apple.gif`。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。 請務必取代`Apple.gif`映像檔案名稱與您系統為有效的路徑。  
   
-## 請參閱  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>另請參閱  
+ [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

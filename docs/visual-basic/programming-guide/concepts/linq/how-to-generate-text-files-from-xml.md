@@ -1,34 +1,30 @@
 ---
-title: "如何︰ 從 XML (Visual Basic) 產生文字檔 |Microsoft 文件"
+title: "如何： 產生文字檔案，從 XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c45218ab9330c0b67ebfbbcedd5e5f699c3e6e2
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 901d31b6dbac54740404a7dc182ecbadca5ddd74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>如何︰ 從 XML (Visual Basic) 產生文字檔
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>如何： 產生文字檔案，從 XML (Visual Basic)
 此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  
   
 ## <a name="example"></a>範例  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]版本使用程序程式碼將彙總成單一字串的字串集合。  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]版本使用程序程式碼來彙總成單一字串的字串集合。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  

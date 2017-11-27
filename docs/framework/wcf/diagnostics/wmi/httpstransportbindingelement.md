@@ -1,25 +1,28 @@
 ---
-title: "HttpsTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpsTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e78aa8c6-b53b-4105-a900-d3e7a39670f2
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 24bd5d0241a638e942f6dfbe5c7afa75dd72e14b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HttpsTransportBindingElement
+# <a name="httpstransportbindingelement"></a>HttpsTransportBindingElement
 HttpsTransportBindingElement  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class HttpsTransportBindingElement : HttpTransportBindingElement  
@@ -28,24 +31,24 @@ class HttpsTransportBindingElement : HttpTransportBindingElement
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  HttpsTransportBindingElement 類別並未定義任何方法。  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  HttpsTransportBindingElement 類別具有下列屬性：  
   
-### RequireClientCertificate  
+### <a name="requireclientcertificate"></a>RequireClientCertificate  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  一個值，這個值會指出是否需要 SSL 用戶端驗證。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

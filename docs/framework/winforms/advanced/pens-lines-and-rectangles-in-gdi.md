@@ -1,82 +1,86 @@
 ---
-title: "GDI+ 中的畫筆、線條和矩形 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "繪製, 線條"
-  - "繪製, 矩形"
-  - "範例 [Windows Form], 描繪線條和圖案"
-  - "範例 [Windows Form], GDI+"
-  - "範例 [Windows Form], 畫筆"
-  - "GDI+, 線條"
-  - "GDI+, 畫筆"
-  - "GDI+, 矩形"
-  - "線條"
-  - "線條, 虛線"
-  - "矩形"
+title: "GDI+ 中的畫筆、線條和矩形"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lines
+- GDI+, lines
+- drawing [Windows Forms], rectangles
+- rectangles
+- drawing [Windows Forms], lines
+- GDI+, pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- GDI+, rectangles
+- examples [Windows Forms], GDI+
+- lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# GDI+ 中的畫筆、線條和矩形
-若要使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 繪製線條，您必須建立 <xref:System.Drawing.Graphics> 物件和 <xref:System.Drawing.Pen> 物件。  <xref:System.Drawing.Graphics> 物件提供實際進行繪製的方法，而 <xref:System.Drawing.Pen> 物件則是儲存屬性，例如線條色彩、寬度和樣式。  
+# <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的畫筆、線條和矩形
+若要使用繪製線條[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]您需要建立<xref:System.Drawing.Graphics>物件和<xref:System.Drawing.Pen>物件。 <xref:System.Drawing.Graphics>物件提供的方法，實際進行繪製，而<xref:System.Drawing.Pen>物件會儲存屬性，例如線條色彩、 寬度和樣式。  
   
-## 繪製線條  
- 若要繪製線條，請呼叫 <xref:System.Drawing.Graphics> 物件的 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。  <xref:System.Drawing.Pen> 物件會當成其中一個引數傳遞給 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。  下列範例從點 \(4, 2\) 至點 \(12, 6\) 繪製一條線：  
+## <a name="drawing-a-line"></a>繪製線條  
+ 若要繪製一條線，呼叫<xref:System.Drawing.Graphics.DrawLine%2A>方法<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Pen>物件會傳遞做為其中一個引數<xref:System.Drawing.Graphics.DrawLine%2A>方法。 下列範例會繪製一條線從點 （4，2） 的點 （12，6）：  
   
  [!code-csharp[LinesCurvesAndShapes#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#41)]
  [!code-vb[LinesCurvesAndShapes#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#41)]  
   
- <xref:System.Drawing.Graphics.DrawLine%2A> 是 <xref:System.Drawing.Graphics> 類別的多載方法，因此可使用許多種方法提供引數給它。  例如，您可以建構兩個 <xref:System.Drawing.Point> 物件，並將 <xref:System.Drawing.Point> 物件當做引數傳遞給 <xref:System.Drawing.Graphics.DrawLine%2A> 方法：  
+ <xref:System.Drawing.Graphics.DrawLine%2A>是一種多載的方法<xref:System.Drawing.Graphics>類別中，因此您可以提供引數的數種方式。 例如，您可以建構兩個<xref:System.Drawing.Point>物件和傳遞<xref:System.Drawing.Point>物件做為引數<xref:System.Drawing.Graphics.DrawLine%2A>方法：  
   
  [!code-csharp[LinesCurvesAndShapes#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#42)]
  [!code-vb[LinesCurvesAndShapes#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#42)]  
   
-## 建構畫筆  
- 您可以在建構 <xref:System.Drawing.Pen> 物件時指定某些屬性。  例如，`Pen` 建構函式 \(Constructor\) 可用來指定色彩和寬度。  下列範例從 \(0, 0\) 到 \(60, 30\) 繪製一條寬度為 2 的藍線：  
+## <a name="constructing-a-pen"></a>建構畫筆  
+ 當您建構時，您可以指定特定屬性<xref:System.Drawing.Pen>物件。 例如，一個`Pen`建構函式可讓您指定的色彩和寬度。 下列範例會繪製藍線的寬度為 2 從 （0，0） 到 （60，30）：  
   
  [!code-csharp[LinesCurvesAndShapes#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#43)]
  [!code-vb[LinesCurvesAndShapes#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#43)]  
   
-## 虛線和線條端點  
- <xref:System.Drawing.Pen> 物件也提供屬性，例如 <xref:System.Drawing.Pen.DashStyle%2A>，可用來指定線條的特性。  下列範例從 \(100, 50\) 到 \(300, 80\) 繪製一條虛線：  
+## <a name="dashed-lines-and-line-caps"></a>虛線和線條頭尾圖案  
+ <xref:System.Drawing.Pen>物件也會公開屬性，例如<xref:System.Drawing.Pen.DashStyle%2A>，可用來指定線條的功能。 下列範例會繪製虛線從 （100，50） 到 300 (80）：  
   
  [!code-csharp[LinesCurvesAndShapes#44](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#44)]
  [!code-vb[LinesCurvesAndShapes#44](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#44)]  
   
- 您可以使用 <xref:System.Drawing.Pen> 物件的屬性來設定其他更多線條屬性。  <xref:System.Drawing.Pen.StartCap%2A> 和 <xref:System.Drawing.Pen.EndCap%2A> 屬性可指定線條端點的外觀；結束的端點可以是平面、方的、圓角的、三角形或是自訂的形狀。  <xref:System.Drawing.Pen.LineJoin%2A> 屬性可指定連接的線條是否為斜接 \(使用突出的點來聯結\)、斜切 \(Bevel\)、圓角或裁剪。  下圖顯示具有不同端點和聯結樣式的線條。  
+ 您可以使用的屬性<xref:System.Drawing.Pen>物件來設定行的許多其他屬性。 <xref:System.Drawing.Pen.StartCap%2A>和<xref:System.Drawing.Pen.EndCap%2A>屬性指定線結束部分的外觀，端點可以是一般、 正方形、 圓角、 三角形，或自訂的圖形。 <xref:System.Drawing.Pen.LineJoin%2A>屬性可讓您指定連接的直線斜接 （聯結以尖角）、 斜、 四捨五入時，是否為裁剪。 下圖顯示使用不同的端點和聯結樣式的行。  
   
- ![線條](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.png "Aboutgdip02\_art04")  
+ ![行](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
-## 繪製矩形  
- 使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 繪製矩形和繪製線條相似。  若要繪製矩形，您需要 <xref:System.Drawing.Graphics> 物件和 <xref:System.Drawing.Pen> 物件。  <xref:System.Drawing.Graphics> 物件提供 <xref:System.Drawing.Graphics.DrawRectangle%2A> 方法，而 <xref:System.Drawing.Pen> 物件則是儲存屬性，例如線條寬度和色彩。  <xref:System.Drawing.Pen> 物件會當成其中一個引數傳遞給 <xref:System.Drawing.Graphics.DrawRectangle%2A> 方法。  下列範例從左上角 \(100, 50\) 繪製一個寬度為 80、高度為 40 的矩形：  
+## <a name="drawing-a-rectangle"></a>繪製矩形  
+ 繪製矩形[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]類似繪製線條。 若要繪製矩形，您需要<xref:System.Drawing.Graphics>物件和<xref:System.Drawing.Pen>物件。 <xref:System.Drawing.Graphics>物件提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，而<xref:System.Drawing.Pen>物件會儲存屬性，例如線條寬度和色彩。 <xref:System.Drawing.Pen>物件會傳遞做為其中一個引數<xref:System.Drawing.Graphics.DrawRectangle%2A>方法。 下列範例會繪製在其左上角的矩形 （100，50），寬度為 80，而高度為 40:  
   
  [!code-csharp[LinesCurvesAndShapes#45](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  
   
- <xref:System.Drawing.Graphics.DrawRectangle%2A> 是 <xref:System.Drawing.Graphics> 類別的多載方法，因此可使用許多種方法提供引數給它。  例如，您可以建構 <xref:System.Drawing.Rectangle> 物件並將 <xref:System.Drawing.Rectangle> 物件當做引數傳遞給 <xref:System.Drawing.Graphics.DrawRectangle%2A> 方法：  
+ <xref:System.Drawing.Graphics.DrawRectangle%2A>是一種多載的方法<xref:System.Drawing.Graphics>類別中，因此您可以提供引數的數種方式。 例如，您可以建構<xref:System.Drawing.Rectangle>物件，並傳遞<xref:System.Drawing.Rectangle>物件<xref:System.Drawing.Graphics.DrawRectangle%2A>做為引數的方法：  
   
  [!code-csharp[LinesCurvesAndShapes#46](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#46)]
  [!code-vb[LinesCurvesAndShapes#46](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#46)]  
   
- <xref:System.Drawing.Rectangle> 物件具有用來管理和收集矩形相關資訊的方法和屬性。  例如，<xref:System.Drawing.Rectangle.Inflate%2A> 和 <xref:System.Drawing.Rectangle.Offset%2A> 方法可改變矩形的大小和位置。  <xref:System.Drawing.Rectangle.IntersectsWith%2A> 方法可告訴您該矩形是否與另一個指定的矩形交集，而 <xref:System.Drawing.Rectangle.Contains%2A> 方法則是會通知您指定的點是否位於矩形中。  
+ A<xref:System.Drawing.Rectangle>物件具有方法與屬性，來操作和收集矩形的相關資訊。 例如，<xref:System.Drawing.Rectangle.Inflate%2A>和<xref:System.Drawing.Rectangle.Offset%2A>方法變更矩形的位置和大小。 <xref:System.Drawing.Rectangle.IntersectsWith%2A>方法會告訴您矩形是否相交另一個指定的矩形，而<xref:System.Drawing.Rectangle.Contains%2A>方法會告訴您指定的點是否在矩形內部。  
   
-## 請參閱  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- <xref:System.Drawing.Rectangle?displayProperty=fullName>   
- [如何：建立畫筆](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
- [如何：在 Windows Form 上繪製線條](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)   
- [如何：繪製外框形狀](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  
+ [操作說明：建立畫筆](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [操作說明：在 Windows Form 上繪製線條](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ [操作說明：繪製外框形狀](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

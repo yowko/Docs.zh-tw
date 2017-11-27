@@ -1,25 +1,28 @@
 ---
-title: "HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。
-WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。  當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。  本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務。
+WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。  當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。 本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。  
   
-### 定義服務  
+### <a name="define-the-service"></a>定義服務  
   
 1.  定義回呼合約  
   
@@ -66,7 +69,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
         }  
     ```  
   
-     服務作業 `StartSendingQuotes` 會實作成非同步呼叫。  我們使用 `OperationContext` 擷取回呼通道，如果通道已開啟，就會在回呼通道上進行非同步呼叫。  
+     服務作業 `StartSendingQuotes` 會實作成非同步呼叫。 我們使用 `OperationContext` 擷取回呼通道，如果通道已開啟，就會在回呼通道上進行非同步呼叫。  
   
 4.  設定服務  
   
@@ -97,9 +100,9 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
     </configuration>  
     ```  
   
-     服務組態檔依賴 WCF 的預設端點。  `<protocolMapping>` 會用來指定建立的預設端點應使用 `NetHttpBinding`。  
+     服務組態檔依賴 WCF 的預設端點。 `<protocolMapping>` 會用來指定建立的預設端點應使用 `NetHttpBinding`。  
   
-### 定義用戶端  
+### <a name="define-the-client"></a>定義用戶端  
   
 1.  實作回呼合約。  
   
@@ -138,7 +141,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
         }  
         ```  
   
-         為求清楚明瞭，這裡會重複 CallbackHandler。  用戶端應用程式會建立新的 InstanceContext，並指定回呼介面的實作。  接下來會建立 Proxy 類別的執行個體，傳送新建立之 InstanceContext 的參考。  當用戶端呼叫服務時，服務會使用指定的回呼合約來呼叫用戶端。  
+         為求清楚明瞭，這裡會重複 CallbackHandler。 用戶端應用程式會建立新的 InstanceContext，並指定回呼介面的實作。 接下來會建立 Proxy 類別的執行個體，傳送新建立之 InstanceContext 的參考。 當用戶端呼叫服務時，服務會使用指定的回呼合約來呼叫用戶端。  
   
     2.  設定用戶端  
   
@@ -167,7 +170,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
   
          在用戶端組態中沒有特別要做的事，只是使用 `NetHttpBinding` 指定用戶端端點。  
   
-## 範例  
+## <a name="example"></a>範例  
  以下是這個主題中使用的完整程式碼。  
   
 ```csharp  
@@ -196,7 +199,6 @@ namespace Server
         Task SendQuote(string code, double value);  
     }  
 }  
-  
 ```  
   
 ```  
@@ -326,6 +328,6 @@ namespace Client
 </configuration>  
 ```  
   
-## 請參閱  
- [同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)   
+## <a name="see-also"></a>另請參閱  
+ [同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [使用 NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

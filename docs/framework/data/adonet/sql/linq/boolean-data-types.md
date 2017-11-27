@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: fb9c76193203255b943b1f1e5f8109b4bdd4bd40
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="boolean-data-types"></a>Boolean 資料類型
 除了不會轉譯最少運算行為以外，在 Common Language Runtime (CLR) 中布林運算子會如預期運作。 例如，Visual Basic `AndAlso` 運算子的行為方式如同 `And` 運算子。 而 C# `&&` 運算子的行為方式則如同 `&` 運算子。  
@@ -37,4 +35,3 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="see-also"></a>另請參閱  
  [資料型別和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-

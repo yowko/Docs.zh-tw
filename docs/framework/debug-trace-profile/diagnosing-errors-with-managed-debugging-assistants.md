@@ -5,17 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EHMDA
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+f1_keywords: EHMDA
 helpviewer_keywords:
 - run-time error debugging
 - managed code, run-time debugging
@@ -42,16 +35,15 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8afc1ec3d5a1dab4412b16826bb32829f9b42263
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23de3ea6e9693c05aa81da056ac7763bced8e9a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>診斷 Managed 偵錯助理的錯誤
 Managed 偵錯助理 (MDA) 是偵錯輔助程式，可與通用語言執行平台 (CLR) 合作提供執行階段狀態的相關資訊。 這些助理會產生有關您無法設陷之執行階段事件的告知性訊息。 您可以使用 MDA 來隔離在 Managed 與 Unmanaged 程式碼之間轉換時，所發生之不易發現的應用程式 Bug。 若要啟用或停用所有 MDA，您可以加入機碼至 Windows 登錄，或是設定環境變數。 若要啟用特定 MDA，您可以使用應用程式組態設定。 您可以針對應用程式組態檔中某些個別的 MDA，設定額外的組態設定。 因為在載入執行階段時，會剖析這些組態檔，所以您必須在 Managed 應用程式啟動之前，先啟用 MDA。 您不能為已啟動的應用程式啟用 MDA。  
@@ -198,4 +190,3 @@ Windows Registry Editor Version 5.00
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯、追蹤和程式碼剖析](../../../docs/framework/debug-trace-profile/index.md)
-

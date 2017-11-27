@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -24,19 +19,18 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124e383efbe6cf6bb459d013b9689bf5da287cf1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 701ff252380ef93dbe3668c8aca73f08a8425d6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="http"></a>HTTP
-.NET Framework 可透過 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 類別，對於佔據所有網際網路流量絕大部分的 HTTP 通訊協定提供全面的支援。 這些類別衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，每當靜態方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 碰到以 "http" 或 "https" 開頭的 URI 時，預設會傳回這些類別。 在大部分情況下，**WebRequest** 和 **WebResponse** 類別提供了提出要求所需的一切功能，但是如果您需要存取以屬性方式公開的 HTTP 特定功能，則可以將這些類別轉型為 **HttpWebRequest** 或 **HttpWebResponse**。  
+.NET Framework 提供完整支援 HTTP 通訊協定，與組成的所有網際網路流量，大部分<xref:System.Net.HttpWebRequest>和<xref:System.Net.HttpWebResponse>類別。 這些類別衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，每當靜態方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 碰到以 "http" 或 "https" 開頭的 URI 時，預設會傳回這些類別。 在大部分情況下，**WebRequest** 和 **WebResponse** 類別提供了提出要求所需的一切功能，但是如果您需要存取以屬性方式公開的 HTTP 特定功能，則可以將這些類別轉型為 **HttpWebRequest** 或 **HttpWebResponse**。  
   
  **HttpWebRequest** 和 **HttpWebResponse** 封裝了標準的 HTTP 要求與回應交易，並提供對一般 HTTP 標頭的存取。 這些類別也支援大部分的 HTTP 1.1 功能，包括管線操作、以區塊方式傳送和接收資料 、驗證、預先驗證、加密、Proxy 支援、伺服器憑證驗證，以及連線管理。 自訂標頭和未透過屬性提供的標頭則可透過 **Headers** 屬性來儲存和存取。  
   
@@ -47,7 +41,6 @@ ms.lasthandoff: 08/21/2017
  應用程式藉由將 <xref:System.Net.WebException.Status%2A> 設為 <xref:System.Net.WebExceptionStatus> 來捕捉 <xref:System.Net.WebException>，以便接收 HTTP 通訊協定錯誤。 <xref:System.Net.WebException.Response%2A> 屬性包含伺服器所傳送的 **WebResponse**，並指出實際發生的 HTTP 錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)   
- [何：存取 HTTP 特定屬性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
-
+ [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [如何：存取 HTTP 特定屬性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

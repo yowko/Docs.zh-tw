@@ -1,35 +1,30 @@
 ---
-title: "如何︰ 撰寫 LINQ to XML 軸心方法 (Visual Basic) |Microsoft 文件"
+title: "如何： 撰寫 LINQ to XML 軸心方法 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6749c2eee72cdc24c5dc3957e00a8bab54ce226b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0c0c61514e6f51b060c3ccd431920c3a9adc418
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>如何︰ 撰寫 LINQ to XML 軸心方法 (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>如何： 撰寫 LINQ to XML 軸心方法 (Visual Basic)
 您可以撰寫自己的座標軸方法來擷取 XML 樹狀結構中的集合。 其中一個最好的方式是，撰寫可傳回項目或屬性集合的擴充方法。 您可以根據您應用程式的需求，撰寫您的擴充方法來傳回項目或屬性的特定子集。  
   
 ## <a name="example"></a>範例  
- 下列範例使用兩種擴充方法。 第一個擴充方法， `GetXPath`，在<xref:System.Xml.Linq.XObject>，並傳回 XPath 運算式的評估時將傳回節點或屬性。</xref:System.Xml.Linq.XObject> 第二個擴充方法， `Find`，運作於<xref:System.Xml.Linq.XElement>。</xref:System.Xml.Linq.XElement> 它會傳回集合的<xref:System.Xml.Linq.XAttribute>物件和<xref:System.Xml.Linq.XElement>物件，包含某些指定的文字。</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute>  
+ 下列範例使用兩種擴充方法。 第一個擴充方法 `GetXPath` 會在 <xref:System.Xml.Linq.XObject> 上運算，並在接受評估時，傳回將傳回節點或屬性的 XPath 運算式。 第二個擴充方法 `Find` 會在 <xref:System.Xml.Linq.XElement> 上運算。 該擴充方法會傳回包含某些指定之文字的 <xref:System.Xml.Linq.XAttribute> 物件集合和 <xref:System.Xml.Linq.XElement> 物件集合。  
   
- 這個範例會使用下列 XML 文件︰[範例 XML 檔︰ 多份採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -231,4 +226,3 @@ End Module
   
 ## <a name="see-also"></a>另請參閱  
  [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

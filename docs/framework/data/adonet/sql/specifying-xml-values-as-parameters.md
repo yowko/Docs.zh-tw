@@ -1,35 +1,41 @@
 ---
-title: "指定 XML 值做為參數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "將 XML 值指定為參數"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 指定 XML 值做為參數
-如果查詢需要值為 XML 字串的參數，則開發人員可以使用 **SqlXml** 資料型別的執行個體提供該值。  這其實沒什麼訣竅；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。  
+# <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
+如果查詢需要的參數，其值為 XML 字串，開發人員可以提供使用的執行個體該值**SqlXml**資料型別。 這其實沒什麼訣竅；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。  
   
-## 範例  
- 下列主控台應用程式會在 **AdventureWorks** 資料庫中建立新的資料表。  新資料表包括名為 **SalesID** 的資料行及名為 **SalesInfo** 的 XML 資料行。  
+## <a name="example"></a>範例  
+ 下列主控台應用程式建立新的資料表中**AdventureWorks**資料庫。 新的資料表包含資料行名為**SalesID**和 XML 資料行名為**SalesInfo**。  
   
 > [!NOTE]
->  當您安裝 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 時，預設不會安裝 **AdventureWorks** 範例資料庫。  您可以藉由執行 SQL Server 安裝程式來安裝它。  
+>  **AdventureWorks**安裝時，預設不安裝範例資料庫[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 您可以藉由執行 SQL Server 安裝程式來安裝它。  
   
- 該範例準備了 <xref:System.Data.SqlClient.SqlCommand> 物件，以在新資料表中插入資料列。  已儲存的檔案為 **SalesInfo** 資料行提供必要的 XML 資料。  
+ 該範例準備了 <xref:System.Data.SqlClient.SqlCommand> 物件，以在新資料表中插入資料列。 已儲存的檔案提供所需的 XML 資料**SalesInfo**資料行。  
   
- 若要建立執行範例所需的檔案，請在與您專案相同的資料夾中建立新的文字檔。  將其命名為 MyTestStoreData.xml。  在 \[記事本\] 中開啟該檔案，然後複製並貼上下列文字：  
+ 若要建立執行範例所需的檔案，請在與您專案相同的資料夾中建立新的文字檔。 將其命名為 MyTestStoreData.xml。 在 [記事本] 中開啟該檔案，然後複製並貼上下列文字：  
   
-```  
+```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
@@ -44,9 +50,7 @@ caps.handback.revision: 5
 </StoreSurvey>  
 ```  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
 Imports System.Data.SqlTypes  
@@ -104,9 +108,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -167,7 +169,7 @@ class Class1
 }  
 ```  
   
-## 請參閱  
- <xref:System.Data.SqlTypes.SqlXml>   
- [SQL Server 中的 XML 資料](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Data.SqlTypes.SqlXml>  
+ [SQL Server 中的 XML 資料](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

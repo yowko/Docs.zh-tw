@@ -1,71 +1,63 @@
 ---
-title: "多執行緒處理和 BackgroundWorker 元件 (Visual Basic) |Microsoft 文件"
+title: "多執行緒的 BackgroundWorker 元件 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>逐步解說︰ 使用 BackgroundWorker 元件 (Visual Basic) 的多執行緒處理
-本逐步解說示範如何建立多執行緒的 Windows Form 應用程式，以搜尋相符項目文字的文字檔案。 它會示範︰  
+# <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>逐步解說： 使用 BackgroundWorker 元件 (Visual Basic) 進行多執行緒處理
+本逐步解說示範如何建立多執行緒的 Windows Forms 應用程式，以搜尋文字檔案中某個文字的出現次數。 其會示範：  
   
--   定義類別的方法，可由呼叫<xref:System.ComponentModel.BackgroundWorker>元件。</xref:System.ComponentModel.BackgroundWorker>  
+-   使用 <xref:System.ComponentModel.BackgroundWorker> 元件可呼叫的方法來定義類別。  
   
--   處理所引發的事件<xref:System.ComponentModel.BackgroundWorker>元件。</xref:System.ComponentModel.BackgroundWorker>  
+-   處理 <xref:System.ComponentModel.BackgroundWorker> 元件所引發的事件。  
   
--   啟動<xref:System.ComponentModel.BackgroundWorker>元件來執行方法。</xref:System.ComponentModel.BackgroundWorker>  
+-   啟動 <xref:System.ComponentModel.BackgroundWorker> 元件來執行方法。  
   
--   實作`Cancel`停止按鈕<xref:System.ComponentModel.BackgroundWorker>元件。</xref:System.ComponentModel.BackgroundWorker>  
+-   實作 `Cancel` 按鈕，以停止 <xref:System.ComponentModel.BackgroundWorker> 元件。  
   
 ### <a name="to-create-the-user-interface"></a>若要建立使用者介面  
   
-1.  開啟新的 Visual Basic Windows Form 應用程式專案，並建立名為的表單`Form1`。  
+1.  開啟新的 Visual Basic Windows Forms 應用程式專案，並建立名為表單`Form1`。  
   
-2.  將兩個按鈕和四個文字方塊來加入`Form1`。  
+2.  將兩個按鈕和四個文字方塊新增至 `Form1`。  
   
-3.  下表所示，為物件命名。  
+3.  依照下表所示的方式，命名物件。  
   
     |物件|屬性|設定|  
     |------------|--------------|-------------|  
-    |第一個按鈕|`Name`, `Text`|[開始] 開始|  
-    |第二個按鈕|`Name`, `Text`|[取消]，[取消]|  
-    |第一個文字方塊|`Name`, `Text`|SourceFile，""|  
-    |第二個文字方塊|`Name`, `Text`|CompareString，""|  
-    |第三個文字方塊|`Name`, `Text`|WordsCounted，"0"|  
-    |第四個文字方塊|`Name`, `Text`|LinesCounted，"0"|  
+    |第一個按鈕|`Name`, `Text`|Start, Start|  
+    |第二個按鈕|`Name`, `Text`|Cancel, Cancel|  
+    |第一個文字方塊|`Name`, `Text`|SourceFile, ""|  
+    |第二個文字方塊|`Name`, `Text`|CompareString, ""|  
+    |第三個文字方塊|`Name`, `Text`|WordsCounted, "0"|  
+    |第四個文字方塊|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  加入每個文字方塊旁邊的標籤。 設定`Text`每一個標籤，如下表所示的屬性。  
+4.  將標籤新增至每個文字方塊旁。 依照下表所示的方式，設定每個標籤的 `Text` 屬性。  
   
     |物件|屬性|設定|  
     |------------|--------------|-------------|  
     |第一個標籤|`Text`|原始程式檔|  
     |第二個標籤|`Text`|比較字串|  
     |第三個標籤|`Text`|符合的文字|  
-    |第四個標籤|`Text`|計算程式碼行|  
+    |第四個標籤|`Text`|計算的行數|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>若要建立 BackgroundWorker 元件，並訂閱其事件  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>建立 BackgroundWorker 元件，並訂閱其事件  
   
-1.  新增<xref:System.ComponentModel.BackgroundWorker>元件從**元件**區段**工具箱**至表單。</xref:System.ComponentModel.BackgroundWorker> 它會顯示在表單的元件匣。  
+1.  將 <xref:System.ComponentModel.BackgroundWorker> 元件從 [工具箱] 的 [元件] 區段新增至表單。 隨即顯示在表單的元件匣中。  
   
 2.  設定下列屬性 BackgroundWorker1 物件。  
   
@@ -74,13 +66,13 @@ ms.lasthandoff: 03/13/2017
     |`WorkerReportsProgress`|True|  
     |`WorkerSupportsCancellation`|True|  
   
-### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>定義會在個別的執行緒執行的方法  
+### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>若要定義會在不同執行緒上執行的方法  
   
-1.  從**專案**] 功能表上，選擇 [**加入類別**將類別加入至專案。 **加入新項目**對話方塊隨即出現。  
+1.  從 [專案] 功能表上，選擇 [加入類別]，將類別新增至專案。 隨即顯示 [ 新增項目] 對話方塊。  
   
-2.  選取**類別**從 [範本] 視窗並輸入`Words.vb`[名稱] 欄位中。  
+2.  從範本視窗選取 [類別]，並在名稱欄位中輸入 `Words.vb`。  
   
-3.  按一下 [加入] ****。 `Words`類別會顯示。  
+3.  按一下 [加入] 。 隨即顯示 `Words`。  
   
 4.  將下列程式碼加入 `Words` 類別：  
   
@@ -171,9 +163,9 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>處理執行緒中的事件  
+### <a name="to-handle-events-from-the-thread"></a>若要處理來自執行緒的事件  
   
--   將下列事件處理常式加入至您的主要表單︰  
+-   將下列事件處理常式新增至您的主要表單：  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,9 +197,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>若要開始，並呼叫新的執行緒可執行的 WordCount 方法  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>若要開始並呼叫新的執行緒，以執行 WordCount 方法  
   
-1.  將下列程序新增至您的程式︰  
+1.  將下列程序加入您的程式中：  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-2.  呼叫`StartThread`方法從`Start`表單上的按鈕︰  
+2.  從表單上的 `Start` 按鈕，呼叫 `StartThread` 方法：  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>若要實作 [取消] 按鈕，停止執行緒  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>若要實作 Cancel 按鈕，以停止執行緒  
   
--   呼叫`StopThread`程序從`Click`事件處理常式`Cancel` 按鈕。  
+-   從 `Click` 事件處理常式，呼叫 `Cancel` 按鈕的 `StopThread` 程序。  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -267,24 +259,24 @@ ms.lasthandoff: 03/13/2017
   
 1.  按 F5 執行應用程式。  
   
-2.  顯示表單時，請輸入您想要在測試的檔案的檔案路徑`sourceFile`方塊。 例如，假設您的測試檔名為 Test.txt，輸入 C:\Test.txt。  
+2.  顯示表單時，請輸入您想要在 `sourceFile` 方塊中測試之檔案的檔案路徑。 例如，假設您的測試檔名為 Test.txt，請輸入 C:\Test.txt。  
   
-3.  在第二個文字方塊中，輸入單字或片語來搜尋文字檔案中的應用程式。  
+3.  在第二個文字方塊中，輸入文字或片語來搜尋文字檔案中的應用程式。  
   
-4.  按一下 `Start` 按鈕。 `LinesCounted`按鈕應該開始立即遞增。 在完成時，應用程式就會顯示 「 完成計數 」 訊息。  
+4.  按一下 `Start` 按鈕。 `LinesCounted` 按鈕應該開始立即遞增。 完成時，應用程式就會顯示「完成計數」訊息。  
   
-#### <a name="to-test-the-cancel-button"></a>若要測試的 [取消] 按鈕  
+#### <a name="to-test-the-cancel-button"></a>若要測試 Cancel 按鈕  
   
-1.  按 F5 以啟動應用程式，並輸入檔案名稱，並搜尋文字中先前的程序所述。 請確定您選擇的檔案夠大，以確定您有時間完成之前取消此程序。  
+1.  按 F5 以啟動應用程式，輸入檔案名稱，並依據先前的程序所述來搜尋文字。 請確定您選擇的檔案夠大，才能在程序完成之前進行取消。  
   
-2.  按一下 [ `Start` ] 按鈕以啟動應用程式。  
+2.  按一下 `Start` 按鈕，以啟動應用程式。  
   
 3.  按一下 `Cancel` 按鈕。 應用程式應該立刻停止計數。  
   
 ## <a name="next-steps"></a>後續步驟  
- 此應用程式包含一些基本錯誤處理。 它會偵測空白的搜尋字串。 您可以讓程式更穩固處理其他錯誤，例如超過文字或程式行，就可以計算的最大數目。  
+ 此應用程式包含一些基本錯誤處理。 它會偵測空白的搜尋字串。 您可以藉由處理其他錯誤 (例如計算超過上限的文字或行數)，讓此程式更穩固。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行緒處理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [逐步解說︰ 撰寫簡單的多執行緒的元件，使用 Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [執行緒 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [逐步解說： 撰寫簡單的多執行緒的元件使用 Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [如何：訂閱及取消訂閱事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

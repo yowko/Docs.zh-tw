@@ -1,31 +1,34 @@
 ---
-title: "HOW TO：使用組態新增 ASP.NET AJAX 端點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：使用組態新增 ASP.NET AJAX 端點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b08bfd30eae1b33b2bf91eb1b0bd0127c09f9632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用組態新增 ASP.NET AJAX 端點
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可讓您建立服務以提供啟用 ASP.NET AJAX 的端點，進而透過用戶端網站上的 JavaScript 來進行呼叫。若要建立此類端點，您可以使用組態檔 \(如同建立所有其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 端點一般\)，或是使用不需要任何組態項目的方法。本主題示範組態方法。  
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>HOW TO：使用組態新增 ASP.NET AJAX 端點
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可讓您建立服務以提供啟用 ASP.NET AJAX 的端點，進而透過用戶端網站上的 JavaScript 來進行呼叫。 若要建立此類端點，您可以使用組態檔 (如同建立所有其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 端點一般)，或是使用不需要任何組態項目的方法。 本主題示範組態方法。  
   
- 讓服務端點成為啟用了 ASP.NET AJAX 的程序部分包含設定端點使用 <xref:System.ServiceModel.WebHttpBinding> 並新增 [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 端點行為。設定好端點之後，實作與裝載服務的步驟與其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務所採用的步驟很類似。如需實用範例，請參閱[使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
+ 可讓要變成 ASP.NET AJAX 能力的服務端點的程序的一部分包括設定端點以使用<xref:System.ServiceModel.WebHttpBinding>，並加入[ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)端點行為。 設定好端點之後，實作與裝載服務的步驟與其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務所採用的步驟很類似。 如需實用範例，請參閱[AJAX 服務使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]不使用組態來設定 ASP.NET AJAX 端點的詳細資訊，請參閱 [HOW TO：不使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何設定 ASP.NET AJAX 端點，而不需要使用組態，請參閱[如何： 加入 ASP.NET AJAX 端點而不使用組態](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
   
-### 若要建立基本 WCF 服務  
+### <a name="to-create-a-basic-wcf-service"></a>若要建立基本 WCF 服務  
   
-1.  使用以 <xref:System.ServiceModel.ServiceContractAttribute> 屬性標記的介面來定義基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務合約。以 <xref:System.ServiceModel.OperationContractAttribute> 標記每項作業。請務必設定 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 屬性。  
+1.  使用以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 屬性標記的介面來定義基本的 <xref:System.ServiceModel.ServiceContractAttribute> 服務合約。 以 <xref:System.ServiceModel.OperationContractAttribute> 標記每項作業。 請務必設定 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 屬性。  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -40,7 +43,7 @@ caps.handback.revision: 14
     }  
     ```  
   
-2.  使用 `CalculatorService` 來實作 `ICalculator` 服務合約。  
+2.  使用 `ICalculator` 來實作 `CalculatorService` 服務合約。  
   
     ```  
     public class CalculatorService : ICalculator  
@@ -62,11 +65,11 @@ caps.handback.revision: 14
     }  
     ```  
   
-### 若要建立服務的 ASP.NET AJAX 端點  
+### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>若要建立服務的 ASP.NET AJAX 端點  
   
-1.  針對服務中啟用了 ASP.NET AJAX 的端點，建立行為組態並指定 [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) 行為。  
+1.  建立行為設定，並指定[ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) ASP.NET ajax 端點的服務行為。  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <behaviors>  
             <endpointBehaviors>  
@@ -78,9 +81,9 @@ caps.handback.revision: 14
     </system.serviceModel>  
     ```  
   
-2.  針對使用 <xref:System.ServiceModel.WebHttpBinding> 和 ASP.NET AJAX 行為 \(上一個步驟中所定義\) 的服務，建立其端點。  
+2.  針對使用 <xref:System.ServiceModel.WebHttpBinding> 和 ASP.NET AJAX 行為 (上一個步驟中所定義) 的服務，建立其端點。  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <services>  
             <service name="Microsoft.Ajax.Samples.CalculatorService">  
@@ -93,9 +96,9 @@ caps.handback.revision: 14
     </system.serviceModel>   
     ```  
   
-### 若要在 IIS 中裝載服務  
+### <a name="to-host-the-service-in-iis"></a>若要在 IIS 中裝載服務  
   
-1.  若要在 IIS 中裝載服務，請在應用程式中建立一個名為 service 且副檔名為 .svc 的新檔案。您可以為服務新增適當的 [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指示資訊，編輯這個檔案。例如，`CalculatorService` 範例中的服務檔案內容包含下列資訊。  
+1.  若要在 IIS 中裝載服務，請在應用程式中建立一個名為 service 且副檔名為 .svc 的新檔案。 藉由新增適當的編輯此檔案[ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞服務的資訊。 例如，`CalculatorService` 範例中的服務檔案內容包含下列資訊。  
   
     ```  
     <%@ServiceHost   
@@ -105,12 +108,12 @@ caps.handback.revision: 14
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在 IIS 中裝載的詳細資訊，請參閱 [HOW TO：在 IIS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
+2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]裝載在 IIS 中，請參閱[How to： 將 WCF 服務裝載於 IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
-### 若要呼叫服務  
+### <a name="to-call-the-service"></a>若要呼叫服務  
   
-1.  端點會在相對於 .svc 檔案的空白位址上設定，因此服務現在可以使用而且可藉由將要求傳送至 service.svc\/\<operation\> 來叫用。例如，`Add` 作業的 service.svc\/Add。您可以將端點 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。如需範例，請參閱[使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
+1.  端點會設定在與.svc 檔，相對的空白位址，因此服務現在可以使用而且可以將要求傳送至 service.svc / 叫用\<作業 >-例如，service.svc/add`Add`作業。 您可以將端點 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱[AJAX 服務使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
   
-## 請參閱  
- [建立 ASP.NET AJAX 的 WCF 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)   
- [HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>另請參閱  
+ [建立 ASP.NET AJAX 的 WCF 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [如何： 將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

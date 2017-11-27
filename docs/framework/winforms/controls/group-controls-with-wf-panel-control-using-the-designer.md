@@ -1,44 +1,45 @@
 ---
-title: "如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 群組"
-  - "Panel 控制項 [Windows Form], 群組控制項"
-  - "Windows Form 控制項, 群組"
+title: "如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Panel control [Windows Forms], grouping controls
+- controls [Windows Forms], grouping
+- Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1d4a49f36ac294199871075a04b7e682bd5613b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項
-Windows Form <xref:System.Windows.Forms.Panel> 控制項可用來將其他控制項設為群組。  有三個原因必須群組控制項。  第一個是，視覺化群組相關的表單項目，以取得清楚的使用者介面；另一個理由是，程式化群組，例如選項按鈕等；最後一個理由是，在設計階段中，將控制項當做一個單位來移動。  
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項
+Windows Form<xref:System.Windows.Forms.Panel>控制項可用來將其他控制項組成群組。 有群組控制項的三個原因。 其中一個是視覺化群組相關的表單項目，清楚的使用者介面。另一個是以程式設計方式分組，選項按鈕： 例如，上次是在設計階段將控制項移做為一個單位。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要建立控制項群組  
+### <a name="to-create-a-group-of-controls"></a>若要建立的控制項群組  
   
-1.  從 \[工具箱\] 的 \[**Windows Form**\] 索引標籤，將 <xref:System.Windows.Forms.Panel> 控制項拖曳至表單中。  
+1.  拖曳<xref:System.Windows.Forms.Panel>控制項從**Windows Form**  索引標籤的 工具箱 拖曳至表單。  
   
-2.  將其他控制項加入面版 \(Panel\)，並將每一項拖曳至面版中。  
+2.  將其他控制項加入面板中，每個面板內繪製。  
   
-     如果想將現存的控制項含括至一個面版中，您可以選取所有控制項，剪下它們並置入剪貼簿，選取 <xref:System.Windows.Forms.Panel> 控制項，然後將它們貼到面版中。  您也可以將它們拖曳至面版。  
+     如果您有想要住在面板中的現有控制項，您可以選取所有控制項，剪下到剪貼簿中，都選取並<xref:System.Windows.Forms.Panel>控制項，然後再將它們貼至 [面板]。 您也可以將它們拖曳到 [面板]。  
   
-3.  \(選擇性\) 若要加入面版的框線，請設定其 <xref:System.Windows.Forms.BorderStyle> 屬性。  其中有三個選擇：<xref:System.Windows.Forms.BorderStyle>、<xref:System.Windows.Forms.BorderStyle> 和 <xref:System.Windows.Forms.BorderStyle>。  
+3.  （選擇性）如果您想要將框線加入至面板，設定其<xref:System.Windows.Forms.BorderStyle>屬性。 有三個選擇： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。  
   
-## 請參閱  
- [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)   
- [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [如何：設定面板背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+## <a name="see-also"></a>另請參閱  
+ [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [操作說明：設定面板背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

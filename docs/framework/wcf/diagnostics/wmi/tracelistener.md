@@ -1,25 +1,28 @@
 ---
-title: "TraceListener | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: TraceListener
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c0bba558a7b0c727dd971960ab3f9120a6aaada
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# TraceListener
+# <a name="tracelistener"></a>TraceListener
 TraceListener。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class TraceListener  
@@ -29,28 +32,28 @@ class TraceListener
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  TraceListener 類別沒有定義任何方法。  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  TraceListener 類別有下列屬性：  
   
-### 名稱  
+### <a name="name"></a>名稱  
  資料型別：字串  
   
  存取類型：唯讀  
   
  追蹤接聽項的名稱。  
   
-### TraceListenerArguments  
+### <a name="tracelistenerarguments"></a>TraceListenerArguments  
  資料型別：TraceListenerArgument 陣列  
   
  存取類型：唯讀  
   
  追蹤接聽項的引數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|

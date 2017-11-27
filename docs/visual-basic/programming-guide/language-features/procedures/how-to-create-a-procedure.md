@@ -1,75 +1,74 @@
 ---
-title: "How to: Create a Procedure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, reusing"
-  - "procedure declarations"
-  - "procedures, about procedures"
+title: "如何：建立程序 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, reusing
+- procedure declarations
+- procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56a44918b7a1426d215cee0ff2981f5763432a48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-封入開始宣告陳述式 \(`Sub` 或 `Function`\) 與結束宣告陳述式 \(`End Sub` 或 `End Function`\) 之間的程序。  所有程序的程式碼都位於這些陳述式之間。  
+# <a name="how-to-create-a-procedure-visual-basic"></a>如何：建立程序 (Visual Basic)
+您將開始的宣告陳述式之間的程序 (`Sub`或`Function`) 和結束的宣告陳述式 (`End Sub`或`End Function`)。 所有程序的程式碼都位於這些陳述式之間。  
   
- 程序不可包含另一個程序，因此它的開始和結束陳述式都必須在任何其他程序之外。  
+ 程序不能包含另一個程序，因此其開始和結束的陳述式必須是其他程序之外。  
   
- 如果您的程式碼會在不同位置執行相同工作，則只要將工作撰寫成程序一次，然後就可在程式碼的不同位置呼叫它。  
+ 如果您在不同的地方執行相同工作的程式碼，您可以撰寫一次做為程序工作，然後依照從不同的地方程式碼中呼叫它。  
   
-### 若要建立不傳回值的程序  
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>若要建立程序不會傳回值  
   
-1.  在任何其他程序之外，使用後面緊接 `End Sub` 陳述式的 `Sub` 陳述式。  
+1.  任何其他程序，之外使用`Sub`陳述式，後面接著`End Sub`陳述式。  
   
-2.  在 `Sub` 陳述式中，請在 `Sub` 關鍵字後面緊接著程序名稱，然後是以括號括住的參數清單。  
+2.  在`Sub`陳述式，請遵循`Sub`關鍵字的程序，則參數清單括號括住名稱。  
   
-3.  將程序的程式碼陳述式放在 `Sub` 與 `End Sub` 陳述式之間。  
+3.  放置程序的程式碼陳述式之間`Sub`和`End Sub`陳述式。  
   
-### 若要建立傳回值的程序  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>若要建立程序傳回值  
   
-1.  在任何其他程序之外，使用後面緊接 `End Function` 陳述式 \(Statement\) 的 `Function` 陳述式。  
+1.  任何其他程序，之外使用`Function`陳述式，後面接著`End Function`陳述式。  
   
-2.  在 `Function` 陳述式中，請在 `Function` 關鍵字後面依序緊接著程序名稱、以括號括住的參數清單，然後是指定傳回值之資料型別的 `As` 子句。  
+2.  在`Function`陳述式，請遵循`Function`關鍵字的程序，則參數清單括號中，名稱，然後`As`子句指定的傳回值的資料類型。  
   
-3.  將程序的程式碼陳述式放在 `Function` 與 `End Function` 陳述式之間。  
+3.  放置程序的程式碼陳述式之間`Function`和`End Function`陳述式。  
   
-4.  使用 `Return` 陳述式，將值傳回給呼叫程式碼。  
+4.  使用`Return`陳述式來將值傳回給呼叫程式碼。  
   
-### 若要連接新程序與程式碼的舊重複區塊  
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>連接新的程序與舊重複區塊的程式碼  
   
-1.  確定在舊程式碼可存取的位置定義新程序。  
+1.  請確定您在舊的程式碼可以存取它的其中一個位置中定義新的程序。  
   
-2.  在舊的重複程式碼區塊中，請將執行重複工作的陳述式替換為呼叫 `Sub` 或 `Function` 程序的單一陳述式。  
+2.  在舊而重複的程式碼區塊中，取代執行呼叫的單一陳述式的重複性工作的陳述式`Sub`或`Function`程序。  
   
-3.  如果程序是傳回值的 `Function`，請確定呼叫陳述式是以傳回的值來執行動作 \(例如將它儲存在變數中\)，否則該值會遺失。  
+3.  如果您的程序是`Function`傳回值，請確定您呼叫的陳述式執行的動作，以傳回的值，例如儲存在變數中，否則值將會遺失。  
   
-## 範例  
- 下列 `Function` 程序會在已知其他兩邊值的情況下，計算直角三角形的最長邊 \(也稱為斜邊\)。  
+## <a name="example"></a>範例  
+ 下列`Function`已知值的其他兩個邊直角三角形斜邊的最長邊，程序會計算。  
   
  [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
-## 請參閱  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [函式程序](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [屬性程序](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Recursive Procedures](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [物件導向程式設計](../Topic/Object-Oriented%20Programming%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ [程序](./index.md)  
+ [Sub 程序](./sub-procedures.md)  
+ [函式程序](./function-procedures.md)  
+ [屬性程序](./property-procedures.md)  
+ [運算子程序](./operator-procedures.md)  
+ [程序參數和引數](./procedure-parameters-and-arguments.md)  
+ [遞迴程序](./recursive-procedures.md)  
+ [程序多載化](./procedure-overloading.md)  
+ [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [物件導向程式設計](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

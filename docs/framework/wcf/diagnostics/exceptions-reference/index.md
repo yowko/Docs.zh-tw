@@ -1,47 +1,50 @@
 ---
-title: "例外狀況參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "例外狀況參考"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2f21511fc95860c2513af96e1cb368a75e13386c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 例外狀況參考
+# <a name="exceptions-reference"></a>例外狀況參考
 本節列出下列區域中由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 所產生的所有例外狀況：  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
- [COM\+ 整合](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [COM + 整合](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
   
  [組態](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [核心通訊：通道架構](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [核心通訊： 通道架構](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [核心通訊：連線架構](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [核心通訊： 連線架構](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
- [核心通訊：HTTP\/HTTPS 傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-http-https-transport-channels.md)  
+ 核心通訊：HTTP/HTTPS 傳輸通道  
   
- [核心通訊：內部雙工傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [核心通訊： 內部雙工傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [核心通訊：具名管道傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [核心通訊： 具名管道傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [核心通訊：TCP 傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [核心通訊： TCP 傳輸通道](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [核心通訊：傳輸架構](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [核心通訊： 傳輸架構](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
- [核心通訊：公用程式](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [核心通訊： 公用程式](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [核心通訊：Webhost 支援](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [核心通訊： Webhost 支援](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [異動](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
@@ -61,6 +64,6 @@ caps.handback.revision: 4
   
  [服務架構資料](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework-data.md)  
   
- [交易格式器](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
+ [異動格式器](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
   
  [工具](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)

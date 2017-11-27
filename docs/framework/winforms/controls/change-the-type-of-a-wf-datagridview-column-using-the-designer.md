@@ -1,49 +1,50 @@
 ---
-title: "如何：使用設計工具變更 Windows Form DataGridView 資料行的類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料行 [Windows Form], 類型"
-  - "資料 [Windows Form], 顯示"
-  - "DataGridView 控制項 [Windows Form], 變更資料行類型"
-  - "Windows Form, 資料行"
+title: "如何：使用設計工具變更 Windows Form DataGridView 資料行的類型"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, columns
+- columns [Windows Forms], types
+- DataGridView control [Windows Forms], changing column type
+- data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d4f27c9dcdc1bc7e00b0c809c62889b6c61cd16
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用設計工具變更 Windows Form DataGridView 資料行的類型
-您有時候可能會想變更已經加入至 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料行型別。  例如，您可能想修改在繫結控制項至資料來源時，所自動產生的某些資料行的型別。  當您所顯示的資料表在其資料行中，包含相關資料表內資料列的外部索引鍵時，這會非常有用。  在這種情況下，您可能想以顯示相關資料表中更具意義之值的下拉式方塊，取代顯示這些外部索引鍵的文字方塊資料行。  
+# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>如何：使用設計工具變更 Windows Form DataGridView 資料行的類型
+有時您會想要變更的資料行，已新增至 Windows Form 的型別<xref:System.Windows.Forms.DataGridView>控制項。 例如，您可能要修改的某些資料行時將控制項繫結至資料來源自動產生的型別。 當您顯示的資料表有包含相關資料表中的資料列的外部索引鍵資料行時，這非常有用。 在此情況下，您可能想要取代顯示這些外部索引鍵，以顯示更有意義的值，從相關資料表中的下拉式方塊資料行的文字 方塊中資料行。  
   
- 下列程序需要 **Windows 應用程式**專案，且專案具有包含 <xref:System.Windows.Forms.DataGridView> 控制項的表單。  如需設定這類專案的詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa) 和 [如何：將控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項。 設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-### 若要使用設計工具變更資料行型別  
+### <a name="to-change-the-type-of-a-column-using-the-designer"></a>若要變更資料行使用設計工具類型  
   
-1.  按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的智慧標籤圖像 \(![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)，然後選取 \[**編輯資料行**\]。  
+1.  按一下智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再選取**編輯資料行**。  
   
-2.  從 \[**已選取的資料行**\] 清單中選取資料行。  
+2.  選取的資料行**選取的資料行**清單。  
   
-3.  在 \[**資料行屬性**\] 方格中，將 `ColumnType` 屬性設定為新的資料行型別。  
+3.  在**資料行屬性**方格中，設定`ColumnType`成新的資料行類型的屬性。  
   
     > [!NOTE]
-    >  `ColumnType` 是僅限設計階段的屬性，表示代表資料行型別的類別。  這不是定義在資料行類別中的實質屬性。  
+    >  `ColumnType`屬性是只有設計階段屬性，指出代表資料行類型的類別。 它不是實際內容中的資料行類別定義。  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [如何：將控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ [如何： 建立 Windows 應用程式專案](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

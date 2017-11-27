@@ -1,46 +1,51 @@
 ---
-title: "如何：建立立體場景 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "立體場景"
-  - "建立, 立體場景"
-  - "場景, 3D"
+title: "如何：建立立體場景"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- scenes [WPF], 3-D
+- 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dd84a95bf793b3da9970b605b2f02509e3938ab0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# 如何：建立立體場景
-這個範例顯示如何建立看起來像是旋轉過之紙張的 3\-D 物件。  <xref:System.Windows.Controls.Viewport3D> 與下列元件用於建立這個範例的 3\-D 場景：  
+# <a name="how-to-create-a-3-d-scene"></a>如何：建立立體場景
+這個範例示範如何建立 3d 物件會像一般的工作表的已旋轉的紙張。 A<xref:System.Windows.Controls.Viewport3D>以及下列元件用來建立這個簡單的 3d 場景：  
   
--   使用 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 建立鏡頭。  鏡頭會指定哪個部分的 3\-D 場景可以看得見。  
+-   使用建立相機<xref:System.Windows.Media.Media3D.PerspectiveCamera>。 相機指定可檢視的 3d 場景哪個部分。  
   
--   使用 <xref:System.Windows.Media.Media3D.GeometryModel3D> 的 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> 屬性，建立網狀結構來指定 3\-D 物件的圖案 \(紙張\)。  
+-   網狀結構是用來指定 3d 物件 （單張紙） 使用的圖形<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
   
--   使用 <xref:System.Windows.Media.Media3D.GeometryModel3D> 的 <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> 屬性，指定物件表面上顯示的材質 \(在這個範例中是線形漸層\)。  
+-   材質指定物件 （在此範例中的線性漸層） 使用的介面上顯示<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>屬性<xref:System.Windows.Media.Media3D.GeometryModel3D>。  
   
--   使用 <xref:System.Windows.Media.Media3D.DirectionalLight> 建立光源來照亮物件。  
+-   物件使用平台建立光線<xref:System.Windows.Media.Media3D.DirectionalLight>。  
   
-## 範例  
- 下列程式碼顯示如何在 XAML 中建立 3\-D 場景。  
+## <a name="example"></a>範例  
+ 下列程式碼會示範如何在 XAML 中建立的 3d 場景。  
   
- [!code-xml[3DGallery_snip#Basic3DShapeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
+ [!code-xaml[3DGallery_snip#Basic3DShapeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
   
-## 範例  
- 下列程式碼顯示如何在程序性程式碼中建立相同的 3\-D 場景。  
+## <a name="example"></a>範例  
+ 下列程式碼會示範如何在程序程式碼中建立相同的 3d 場景。  
   
  [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
  [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

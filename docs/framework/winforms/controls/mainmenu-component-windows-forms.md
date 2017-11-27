@@ -1,39 +1,39 @@
 ---
-title: "MainMenu 元件 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MainMenu 控制項 [Windows Form]"
+title: "MainMenu 元件 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe5871ba9926d1741b42d70d1e0e798c2a0aecc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# MainMenu 元件 (Windows Form)
+# <a name="mainmenu-component-windows-forms"></a>MainMenu 元件 (Windows Form)
 > [!NOTE]
->  雖然 `MenuStrip` 和 `ContextMenuStrip` 會取代和加入功能至舊版的 `MainMenu` 和 <xref:System.Windows.Forms.ContextMenu> 控制項，但是會保留 `MainMenu` 和 <xref:System.Windows.Forms.ContextMenu> 以提供回溯相容性 \(Backward Compatibility\) 和未來使用 \(如果您選擇要用\)。  
+>  雖然`MenuStrip`和`ContextMenuStrip`取代，並將功能加入至`MainMenu`和<xref:System.Windows.Forms.ContextMenu>的舊版中，控制項`MainMenu`和<xref:System.Windows.Forms.ContextMenu>您選擇保留的回溯相容性及供未來使用。  
   
- Windows Form `MainMenu` 元件會顯示執行階段的功能表。  
+ Windows Form`MainMenu`元件會在執行階段顯示的功能表。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [MainMenu 元件概觀](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
- 解釋這個元件是什麼，以及其主要功能和屬性。  
+ 說明此元件是什麼及其重要功能與屬性。  
   
-## 參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.MainMenu>  
- 描述這個類別並且連結到它所有的成員。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
-## 請參閱  
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

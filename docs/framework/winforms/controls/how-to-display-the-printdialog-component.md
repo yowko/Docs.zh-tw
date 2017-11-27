@@ -1,40 +1,41 @@
 ---
-title: "如何：顯示 PrintDialog 元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "列印對話方塊, 顯示"
-  - "PrintDialog 元件 [Windows Form], 顯示"
-  - "列印 [Windows Form], 顯示列印對話方塊"
+title: "如何：顯示 PrintDialog 元件"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Print dialog box [Windows Forms], displaying
+- PrintDialog component [Windows Forms], displaying
+- printing [Windows Forms], displaying print dialog box
 ms.assetid: 745a8db7-0526-4b21-b09d-18e13ed32014
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7e1162a4e926d5be35f8f7bb7cdeb92264f293aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：顯示 PrintDialog 元件
-<xref:System.Windows.Forms.PrintDialog> 元件是許多使用者都相當熟悉的標準 Windows 列印對話方塊。  由於您的使用者能夠很快地上手，所以使用 <xref:System.Windows.Forms.PrintDialog> 元件對您應該佷有幫助。  
+# <a name="how-to-display-the-printdialog-component"></a>如何：顯示 PrintDialog 元件
+<xref:System.Windows.Forms.PrintDialog>元件是標準 Windows 列印對話方塊，您的使用者都很熟悉。 因為您的使用者會立即熟悉，很有幫助您使用<xref:System.Windows.Forms.PrintDialog>元件。  
   
-### 若要顯示 PrintDialog 元件  
+### <a name="to-display-the-printdialog-component"></a>顯示 PrintDialog 元件  
   
--   在應用程式的程式碼中呼叫 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法。  
+-   呼叫<xref:System.Windows.Forms.Form.ShowDialog%2A>從您的應用程式的程式碼中的方法。  
   
-     顯示元件後，使用者將與其互動，設定列印工作的屬性。  這些都會儲存在與該列印工作關聯的 [PrinterSettings](frlrfSystemDrawingPrintingPrinterSettingsMembersTopic) 類別 \(以及 [PageSettings](frlrfSystemDrawingPrintingPageSettingsMembersTopic) 類別，如果使用者是透過 <xref:System.Windows.Forms.PrintDialog> 元件存取 [PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)\)。  接著您可以呼叫用來決定列印工作特性的屬性。  
+     顯示此元件之後，使用者將會透過設定列印工作的屬性來與其互動。 這些會儲存在<!--zz <xref:System.Drawing.Printing.PrinterSetting>-->`PrinterSetting`類別 (和<xref:System.Drawing.Printing.PageSettings>類別，如果使用者存取[PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)透過<xref:System.Windows.Forms.PrintDialog>元件) 與該列印工作相關聯。 您接著可以呼叫它們所設定的屬性來決定列印工作的詳細資訊。  
   
-## 請參閱  
- [如何：建立標準的 Windows Form 列印工作](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)   
- [如何：在執行階段從 PrintDialog 擷取使用者輸入](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)   
- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [PrintDialog 元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)   
- [Windows Form 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)
+## <a name="see-also"></a>另請參閱  
+ [操作說明：建立標準的 Windows Forms 列印工作](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ [操作說明：在執行階段從 PrintDialog 擷取使用者輸入](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [PrintDialog 元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)

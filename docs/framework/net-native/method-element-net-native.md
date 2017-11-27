@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 523ec4fd2c8d19dc9086e417fa99c89a619caa71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c6d70fd560cb7b164460eb3882cac88ed733d788
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltmethodgt-element-net-native"></a>&lt;Method&gt; 項目 (.NET Native)
 將執行階段反映原則套用到建構函式或方法。  
@@ -87,7 +85,7 @@ ms.lasthandoff: 08/21/2017
  您不能使用 `<Method>` 元素來為建構函式定義執行階段反映原則， 而是要使用 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)、[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)、[\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目的 `Activate` 屬性。  
   
 ## <a name="example"></a>範例  
- 下列範例中的 `Stringify` 方法是一般用途的格式化方法，它會使用反映將物件轉換成其字串表示法。 除了呼叫物件的預設 `ToString` 方法，此方法還可以將格式字串及/或 `ToString` 實作傳遞給物件的 <xref:System.IFormatProvider> 方法，以產生格式化的結果字串。 它也可以呼叫其中一個 <xref:System.Convert.ToString%2A?displayProperty=fullName> 多載，將數字轉換成二進位、十六進位或八進位表示法。  
+ 下列範例中的 `Stringify` 方法是一般用途的格式化方法，它會使用反映將物件轉換成其字串表示法。 除了呼叫物件的預設 `ToString` 方法，此方法還可以將格式字串及/或 `ToString` 實作傳遞給物件的 <xref:System.IFormatProvider> 方法，以產生格式化的結果字串。 它也可以呼叫其中一個 <xref:System.Convert.ToString%2A?displayProperty=nameWithType> 多載，將數字轉換成二進位、十六進位或八進位表示法。  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
@@ -156,8 +154,7 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
  [\<MethodInstantiation> 項目](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
-

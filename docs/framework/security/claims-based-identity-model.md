@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
 當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者名稱，而另一個則可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/21/2017
 3.  IP 發行權杖，權杖隨即傳回至瀏覽器。  
   
 4.  瀏覽器會重新導向至原本要求的頁面，並且 WIF 會判斷該權杖是否有足夠的權限可以存取該頁面。 如果權限沒問題，瀏覽器隨即發行 Cookie 以建立工作階段，因此驗證只需要進行一次，接著就將控制權移交給應用程式。
-

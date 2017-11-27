@@ -1,37 +1,28 @@
 ---
-title: "如何︰ 使用 XmlSerializer (Visual Basic) 序列化 |Microsoft 文件"
+title: "如何： 序列化使用 XmlSerializer (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4503774e8d6fc9b0a71c3a4ee390f98b485cc003
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9d137296f6f4006cd222ebfa5e36e04d41f6ab9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>如何︰ 使用 xmlserializer (Visual Basic) 進行序列化
-本主題顯示的範例會序列化和還原序列化使用<xref:System.Xml.Serialization.XmlSerializer>。</xref:System.Xml.Serialization.XmlSerializer>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>如何： 序列化使用 XmlSerializer (Visual Basic)
+本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立包含的物件數目<xref:System.Xml.Linq.XElement>物件。</xref:System.Xml.Linq.XElement> 接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。  
+ 下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。 接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。  
   
 ```vb  
 Imports System  
@@ -99,5 +90,4 @@ Testing for type: XElementContainer
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [序列化包含 XElement 物件 (Visual Basic) 的物件圖形](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
-
+ [將物件圖形序列化包含 XElement 物件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

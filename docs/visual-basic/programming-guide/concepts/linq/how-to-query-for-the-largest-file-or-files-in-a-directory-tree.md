@@ -1,46 +1,38 @@
 ---
-title: "如何︰ 查詢的最大檔案或目錄樹狀結構 (LINQ) (Visual Basic) 中的檔案 |Microsoft 文件"
+title: "如何：查詢目錄樹狀中的最大檔案 (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bcdb73006958188ef14949e37b04c2913c3fa0a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>如何：查詢目錄樹狀中的最大檔案 (LINQ) (Visual Basic)
-此範例顯示五個查詢相關的檔案大小 （位元組）︰  
+此範例顯示五個與檔案位元組大小相關的查詢：  
   
--   如何擷取以位元組為單位的最大檔案大小。  
+-   如何擷取最大檔案的位元組大小。  
   
--   如何擷取以位元組為單位的最小的檔案大小。  
+-   如何擷取最小檔案的位元組大小。  
   
--   如何擷取<xref:System.IO.FileInfo>物件最大或最小檔案，從指定的根資料夾下的一個或多個資料夾。</xref:System.IO.FileInfo>  
+-   如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。  
   
--   如何擷取序列，例如 10 個最大的檔案。  
+-   如何擷取序列，例如 10 個最大檔案。  
   
--   如何排成群組根據檔案大小 （位元組），略過小於指定大小的檔案。  
+-   如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
   
 ## <a name="example"></a>範例  
- 下列範例包含五個不同的查詢顯示如何查詢及群組檔案，以位元組為單位的檔案大小而定。 您可以輕鬆地修改這些範例為基礎的一些其他屬性的查詢<xref:System.IO.FileInfo>物件。</xref:System.IO.FileInfo>  
+ 下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。 您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +122,13 @@ Module QueryBySize
 End Module  
 ```  
   
- 若要傳回一或多個完成<xref:System.IO.FileInfo>物件查詢首先必須檢查每個資料來源，然後再將它們排序其 Length 屬性的值。</xref:System.IO.FileInfo> 然後它會傳回單一物件或順序具有最大長度。 使用<xref:System.Linq.Enumerable.First%2A>傳回清單中的第一個項目。</xref:System.Linq.Enumerable.First%2A> 使用<xref:System.Linq.Enumerable.Take%2A>傳回的第 n 個項目。</xref:System.Linq.Enumerable.Take%2A> 指定遞減的排序順序，將最小項目清單的開頭。  
+ 若要傳回一或多個完整的 <xref:System.IO.FileInfo> 物件，查詢必須先檢查資料來源中的每個物件，再根據其 Length 屬性值進行排序。 然後，它會傳回具有最大長度的單一物件或物件序列。 使用 <xref:System.Linq.Enumerable.First%2A> 可傳回清單中的第一個項目。 使用 <xref:System.Linq.Enumerable.Take%2A> 則傳回前 n 個項目。 指定遞減排序次序，則會將最小的項目放在清單的開頭。  
   
- 查詢會呼叫另一個方法來取得檔案大小 （位元組），才能使用可能會在案例中，檔案已刪除另一個執行緒的時間週期之後引發的例外狀況<xref:System.IO.FileInfo>物件建立於呼叫`GetFiles`。</xref:System.IO.FileInfo> 即使透過<xref:System.IO.FileInfo>物件已建立，可能會發生例外狀況，因為<xref:System.IO.FileInfo>物件將會嘗試重新整理其<xref:System.IO.FileInfo.Length%2A>屬性，以位元組為單位的第一次存取該屬性時使用的最新的大小。</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> 將這項作業放在 try catch 區塊中的查詢之外，我們要遵循的規則，避免可能會造成副作用的查詢中的作業。 一般情況下，絕佳必須小心使用例外狀況時，以確定應用程式未處於未知狀態。  
+ 查詢會呼叫外面另一個取得檔案位元組大小的方法，以解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件以來的這段期間，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試使用目前最新的位元組大小來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 建立以.NET Framework 3.5 版或以上版本，搭配 system.core.dll 的參考目標的專案和`Imports`System.Linq 命名空間陳述式。  
+ 建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,24 +1,27 @@
 ---
-title: "UI Automation Specification and Community Promise | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "UI 自動化規格和社群承諾"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
-caps.latest.revision: 5
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 9ce3dc97e27ab76024c989e1b7208d388312c6b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Specification and Community Promise
-UI 自動化讓您能夠用程式存取桌面上大部分的使用者介面 \(UI\) 項目，啟用輔助技術產品 \(例如螢幕助讀員\)，以便為使用者提供 UI 的相關資訊，以及使用標準輸入以外的方式來操作 UI。  
+# <a name="ui-automation-specification-and-community-promise"></a>UI 自動化規格和社群承諾
+使用者介面自動化提供以程式設計方式存取大部分的使用者介面 (UI) 項目在桌面上，啟用輔助技術產品，例如螢幕助讀程式 UI 的相關資訊提供給使用者，以及標準輸入以外的方式來操作 UI.  
   
-## 請參閱  
- [UI 自動化規格 \(英文\)](http://go.microsoft.com/fwlink/?LinkId=108541)   
- [UI 自動化社群承諾 \(英文\)](http://go.microsoft.com/fwlink/?LinkId=108542)
+## <a name="see-also"></a>另請參閱  
+ [UI 自動化規格](http://go.microsoft.com/fwlink/?LinkId=108541)  
+ [UI 自動化社群承諾](http://go.microsoft.com/fwlink/?LinkId=108542)

@@ -1,38 +1,43 @@
 ---
-title: "如何：在執行階段設定圖片 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "點陣圖 [Windows Form], 在 PictureBox 控制項中顯示 [Windows Form]"
-  - "範例 [Windows Form], PictureBox 控制項"
-  - "影像 [Windows Form], adding with PictureBox 控制項 [Windows Form]"
-  - "PictureBox 控制項 [Windows Form], 加入影像"
-  - "PictureBox 控制項 [Windows Form], 加入圖片"
-  - "圖片, 設定顯示"
+title: "如何：在執行階段設定圖片 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- pictures [Windows Forms], setting display
+- examples [Windows Forms], PictureBox control
+- bitmaps [Windows Forms], displaying in PictureBox control [Windows Forms]
+- PictureBox control [Windows Forms], adding images
+- images [Windows Forms], adding with PictureBox control [Windows Forms]
+- PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 429c0c928d8bff4f837186040288d9447fc18687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在執行階段設定圖片 (Windows Form)
-您可以程式設計的方式，設定 Windows Form <xref:System.Windows.Forms.PictureBox> 控制項所顯示的影像。  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在執行階段設定圖片 (Windows Form)
+您可以透過程式設計方式設定 Windows Form 所顯示的影像<xref:System.Windows.Forms.PictureBox>控制項。  
   
-### 若要以程式設計的方式設定圖片  
+### <a name="to-set-a-picture-programmatically"></a>以程式設計方式設定圖片  
   
--   使用 <xref:System.Drawing.Image> 類別的 <xref:System.Drawing.Image.FromFile%2A> 方法，設定 <xref:System.Windows.Forms.PictureBox.Image%2A> 屬性。  
+-   設定<xref:System.Windows.Forms.PictureBox.Image%2A>屬性使用<xref:System.Drawing.Image.FromFile%2A>方法<xref:System.Drawing.Image>類別。  
   
-     在下列範例中，為影像位置所設定的路徑為 \[我的文件\] 資料夾。  這是可以做到的，因為您可假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。  這也可讓使用者以最基本的系統存取層級，便可安全執行應用程式。  下列範例假設已將 <xref:System.Windows.Forms.PictureBox> 控制項加入表單。  
+     下列範例中，在映像的位置所設定的路徑會是 [我的文件] 資料夾。 這麼做，因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此目錄。 也可讓具備最小系統存取層級的使用者安全地執行應用程式。 以下範例假設的表單具有<xref:System.Windows.Forms.PictureBox>已經加入的控制項。  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -43,7 +48,6 @@ caps.handback.revision: 14
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -56,7 +60,6 @@ caps.handback.revision: 14
        (System.Environment.SpecialFolder.Personal)  
        + @"\Image.gif");  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,16 +75,15 @@ caps.handback.revision: 14
        }  
     ```  
   
-### 若要清除圖形  
+### <a name="to-clear-a-graphic"></a>若要清除圖形  
   
--   首先，釋放正由影像使用的記憶體，然後再清除圖形。  如果記憶體管理成為問題，則記憶體回收稍後將會釋放記憶體。  
+-   首先，釋放記憶體正在使用映像，並再清除圖形。 記憶體回收會釋出記憶體稍後如果記憶體管理變得有問題。  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
        PictureBox1.Image.Dispose()  
        PictureBox1.Image = Nothing  
     End If  
-  
     ```  
   
     ```csharp  
@@ -90,7 +92,6 @@ caps.handback.revision: 14
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
     }  
-  
     ```  
   
     ```cpp  
@@ -102,14 +103,14 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]
-    >  如需為何要以這種方式使用 <xref:System.Drawing.Image.Dispose%2A> 方法的詳細資訊，請參閱[Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md)。  
+    >  如需有關為什麼您應該使用<xref:System.Drawing.Image.Dispose%2A>方法，如此一來，請參閱[清除 Unmanaged 資源上](../../../../docs/standard/garbage-collection/unmanaged.md)。  
   
-     即使圖形是在設計階段時載入控制項，此程式碼也會清除影像。  
+     此程式碼將會清除映像，即使圖形在設計階段時載入控制項。  
   
-## 請參閱  
- <xref:System.Windows.Forms.PictureBox>   
- <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName>   
- [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [如何：使用設計工具載入圖片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [如何：於執行階段修改圖片的大小或位置](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Windows.Forms.PictureBox>  
+ <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
+ [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [操作說明：使用設計工具載入圖片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [操作說明：於執行階段修改圖片的大小或位置](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
  [PictureBox 控制項](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

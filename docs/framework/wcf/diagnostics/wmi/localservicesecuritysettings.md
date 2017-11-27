@@ -1,25 +1,28 @@
 ---
-title: "LocalServiceSecuritySettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LocalServiceSecuritySettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# LocalServiceSecuritySettings
+# <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -41,115 +44,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## 方法  
+## <a name="methods"></a>方法  
  LocalServiceSecuritySettings 類別不會定義任何方法。  
   
-## 屬性  
+## <a name="properties"></a>屬性  
  LocalServiceSecuritySettings 類別具有下列屬性：  
   
-### DetectReplays  
+### <a name="detectreplays"></a>DetectReplays  
  資料型別：布林值  
   
  存取類型：唯讀  
   
  布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。  
   
-### InactivityTimeout  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  服務支援的暫止安全性工作階段數目上限。  
   
-### IssuedCookieLifetime  
+### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  TimeSpan 指定發出給所有新的安全性 Cookie 的存留期。  
   
-### MaxCachedCookies  
+### <a name="maxcachedcookies"></a>MaxCachedCookies  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  可以快取的 Cookie 數目上限。  
   
-### MaxClockSkew  
+### <a name="maxclockskew"></a>MaxClockSkew  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  TimeSpan 指定通訊雙方之系統時鐘之間的最大時間差異。  
   
-### MaxPendingSessions  
+### <a name="maxpendingsessions"></a>MaxPendingSessions  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  服務上的最大暫止連線數目。  
   
-### MaxStatefulNegotiations  
+### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  可以同時為作用中的安全性交涉數目。  
   
-### NegotiationTimeout  
+### <a name="negotiationtimeout"></a>NegotiationTimeout  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  TimeSpan 指定伺服器和用戶端之間安全性交涉階段的最大持續期間。  
   
-### ReconnectTransportOnFailure  
+### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  資料型別：布林值  
   
  存取類型：唯讀  
   
- 布林值，指定使用 WS\-Reliable 訊息的連線是否會在傳輸失敗之後嘗試重新連線。  
+ 布林值，指定使用 WS-Reliable 訊息的連線是否會在傳輸失敗之後嘗試重新連線。  
   
-### ReplayCacheSize  
+### <a name="replaycachesize"></a>ReplayCacheSize  
  資料型別：sint32  
   
  存取類型：唯讀  
   
  用於偵測重新執行的已快取 Nonce 數目。  
   
-### ReplayWindow  
+### <a name="replaywindow"></a>ReplayWindow  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  TimeSpan 指定個別訊息 Nonce 有效的持續期間。  
   
-### SessionKeyRenewalInterval  
+### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  指定持續期間的 TimeSpan，啟動器將在這段期間過後更新安全性工作階段的金鑰。  
   
-### SessionKeyRolloverInterval  
+### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  TimeSpan，指定前一個工作階段金鑰在金鑰更新期間對傳入訊息屬有效的時間間隔。  
   
-### TimestampValidityDuration  
+### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
  資料型別：日期時間  
   
  存取類型：唯讀  
   
  TimeSpan，指定時間戳記有效的持續期間。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |MOF|於 Servicemodel.mof 中宣告。|  
-|---------|-----------------------------|  
-|命名空間|於 root\\ServiceModel 中定義|  
+|---------|-----------------------------------|  
+|命名空間|於 root\ServiceModel 中定義|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

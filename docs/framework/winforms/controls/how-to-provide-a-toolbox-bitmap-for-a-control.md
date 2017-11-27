@@ -1,35 +1,39 @@
 ---
-title: "如何：為控制項提供工具箱點陣圖 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "點陣圖 [Windows Form], 自訂控制項"
-  - "自訂控制項 [Windows Form], 工具箱點陣圖"
-  - "工具箱 [Windows Form], 加入自訂控制項的點陣圖"
+title: "如何：為控制項提供工具箱點陣圖"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Toolbox [Windows Forms], adding bitmaps for custom controls
+- custom controls [Windows Forms], Toolbox bitmaps
+- bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2d1ab49b6596c6feaa2ead5bbb92525f0ddb356d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：為控制項提供工具箱點陣圖
-如果想讓控制項的特殊圖示出現在 \[**工具箱**\] 中，您可使用 <xref:System.Drawing.ToolboxBitmapAttribute> 指定特定的影像。  這個類別是一種*屬性* \(Attribute\)，是可以附加到其他類別的特殊類別。  如需屬性的詳細資訊，請參閱 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 的 [NOT IN BUILD: Attributes Overview in Visual Basic](http://msdn.microsoft.com/zh-tw/0d0cff64-892d-4f57-83bd-bef388553d4f)和 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的[屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)。  
+# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：為控制項提供工具箱點陣圖
+如果您想要有特殊的圖示，為您的控制項出現在**工具箱**，您可以指定特定的映像使用<xref:System.Drawing.ToolboxBitmapAttribute>。 此類別是一個「屬性」，一種您可以附加至其他類別的特殊類別。 如需屬性的詳細資訊，請參閱[不在組建中︰Visual Basic 中的屬性概觀](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) (適用於 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) 和[屬性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) (適用於 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)])。  
   
- 您可使用 <xref:System.Drawing.ToolboxBitmapAttribute> 來指定字串，此字串表示 16 x 16 像素點陣圖的路徑和檔名。  將控制項加入 \[**工具箱**\] 時，這個點陣圖就會出現在控制項旁。  您也可以指定 <xref:System.Type>，而在這種情況下就會載入與該型別關聯的點陣圖。  如果同時指定了 <xref:System.Type> 和字串，控制項就會搜尋名稱是由組件中的字串參數所指定的影像資源，此組件包含 <xref:System.Type> 參數指定的型別。  
+ 使用<xref:System.Drawing.ToolboxBitmapAttribute>，您可以指定表示 16 x 16 像素點陣圖的路徑和檔案名稱的字串。 將此點陣圖新增至 [工具箱]，它會接著出現在您的控制項旁邊。 您也可以指定<xref:System.Type>，在此情況下會載入與這個類型相關聯的點陣圖。 如果您同時指定<xref:System.Type>和字串，控制項搜尋影像資源字串中的參數包含所指定之類型的組件所指定的名稱與<xref:System.Type>參數。  
   
-### 若要為您的控制項指定工具箱點陣圖  
+### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>指定控制項的工具箱點陣圖  
   
-1.  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 的 `Class` 關鍵字之前，以及在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的類別宣告 \(Class Declaration\) 上方，將 <xref:System.Drawing.ToolboxBitmapAttribute> 加入至控制項的類別宣告。  
+1.  新增<xref:System.Drawing.ToolboxBitmapAttribute>至類別宣告之前控制項的`Class`關鍵字[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，和更高版本的類別宣告[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]。  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -67,11 +71,11 @@ caps.handback.revision: 20
 2.  重建專案。  
   
     > [!NOTE]
-    >  \[工具箱\] 中沒有出現用來自動產生控制項和元件的點陣圖。  若要看到點陣圖，請使用 \[**選擇工具箱項目**\] 對話方塊重新載入該控制項。  如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
+    >  點陣圖並不會針對自動產生的控制項和元件出現在工具箱中。 若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。 如需詳細資訊，請參閱[逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
-## 請參閱  
- <xref:System.Drawing.ToolboxBitmapAttribute>   
- [逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)   
- [在設計階段開發 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Attributes](../Topic/Attributes%20\(Visual%20Basic\)1.md)   
- [屬性](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Drawing.ToolboxBitmapAttribute>  
+ [逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [屬性 (Visual Basic)](~/docs/visual-basic/language-reference/attributes.md)  
+ [屬性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

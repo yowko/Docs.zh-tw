@@ -1,43 +1,49 @@
 ---
-title: "檢視 DataTable 中的資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "在 DataTable 中檢視資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 檢視 DataTable 中的資料
-您可以使用 **DataTable** 的 **Rows** 和 **Columns** 集合，以存取 <xref:System.Data.DataTable> 的內容。  也可以根據條件 \(包括搜尋條件、排序順序及資料列狀態\)，使用 <xref:System.Data.DataTable.Select%2A> 方法傳回 **DataTable** 中資料的子集。  此外，使用主索引鍵值來搜尋某個資料列時，可以使用 **DataRowCollection** 的 <xref:System.Data.DataRowCollection.Find%2A> 方法。  
+# <a name="viewing-data-in-a-datatable"></a>在 DataTable 中檢視資料
+您可以存取的內容<xref:System.Data.DataTable>使用**列**和**資料行**集合**DataTable**。 您也可以使用<xref:System.Data.DataTable.Select%2A>方法來傳回中的資料子集**DataTable**根據包括搜尋條件的準則，排序順序，與資料列狀態。 此外，您可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜尋特定的資料列，使用主索引鍵值時。  
   
- **DataTable** 物件的 **Select** 方法會傳回符合指定條件的一組 <xref:System.Data.DataRow> 物件。  **Select** 使用篩選條件運算式、排序運算式和 **DataViewRowState** 的選擇性引數。  篩選條件運算式會根據 **DataColumn** 值 \(例如 `LastName = 'Smith'`\)，辨識要傳回的資料列。  排序運算式會遵照標準的 SQL 慣例排序資料行，例如 `LastName ASC, FirstName ASC`。  如需撰寫運算式的相關規則，請參閱 **DataColumn** 類別的 <xref:System.Data.DataColumn.Expression%2A> 屬性。  
+ **選取**方法**DataTable**物件會傳回一組<xref:System.Data.DataRow>符合指定的準則的物件。 **選取**接受選擇性引數的篩選運算式，排序運算式和**DataViewRowState**。 篩選條件運算式會識別要根據傳回的資料列**DataColumn**值，例如`LastName = 'Smith'`。 排序運算式會遵照標準的 SQL 慣例排序資料行，例如 `LastName ASC, FirstName ASC`。 如需有關撰寫運算式的規則，請參閱<xref:System.Data.DataColumn.Expression%2A>屬性**DataColumn**類別。  
   
 > [!TIP]
->  如果您正在執行多個對 **DataTable** 之 **Select** 方法的呼叫，則可藉由先建立 **DataTable** 的 <xref:System.Data.DataView> 以增加效能。  建立 **DataView** 可索引資料表的資料列。  **Select** 方法接下來便可使用該索引，這樣可大幅減少產生查詢結果的時間。  如需建立 **DataTable** 之 **DataView** 的相關資訊，請參閱 [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。  
+>  如果您正在執行的呼叫程序數**選取**方法**DataTable**，您可以先建立，以提升效能<xref:System.Data.DataView>如**DataTable**。 建立**DataView**編製索引之資料表的資料列。 **選取**方法則了建立索引，大幅減少產生查詢結果的時間。 如需建立資訊**DataView**如**DataTable**，請參閱[Dataview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。  
   
- **Select** 方法會依據 <xref:System.Data.DataViewRowState>，判斷要檢視或管理的資料列版本。  下表即說明可能的 **DataViewRowState** 列舉值。  
+ **選取**方法會判斷要檢視或管理的資料列的版本將會根據<xref:System.Data.DataViewRowState>。 下表描述可能的**DataViewRowState**列舉值。  
   
-|DataViewRowState 值|描述|  
-|------------------------|--------|  
+|DataViewRowState 值|說明|  
+|----------------------------|-----------------|  
 |**CurrentRows**|目前資料列，包括未變更、加入和修改過的資料列。|  
-|**Deleted**|刪除的資料列。|  
-|**ModifiedCurrent**|目前的版本，即為原始資料的修改版本  \(請參閱 **ModifiedOriginal**\)。|  
-|**ModifiedOriginal**|所有修改資料列的原始版本。  目前版本可透過 **ModifiedCurrent** 來使用。|  
-|**Added**|新的資料列。|  
+|**刪除**|刪除的資料列。|  
+|**ModifiedCurrent**|目前的版本，即為原始資料的修改版本 (請參閱**ModifiedOriginal**。)|  
+|**ModifiedOriginal**|所有修改資料列的原始版本。 目前的版本是提供使用**ModifiedCurrent**。|  
+|**加入**|新的資料列。|  
 |**無**|無。|  
 |**OriginalRows**|原始資料列，包括未變更和刪除的資料列。|  
-|**Unchanged**|未變更的資料列。|  
+|**不變**|未變更的資料列。|  
   
- 下列範例中，**DataSet** 物件已經過篩選，因此您只需使用將 **DataViewRowState** 設為 **CurrentRows** 的資料列。  
+ 在下列範例中，**資料集**物件已經過篩選，讓您只使用資料列的**DataViewRowState**設**CurrentRows**。  
   
 ```vb  
 Dim column As DataColumn  
@@ -65,7 +71,6 @@ Else
     Console.WriteLine(vbTab & rowState)  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -91,7 +96,7 @@ else
 }  
 ```  
   
- 您可以使用 **Select** 方法傳回具有不同的 **RowState** 值或欄位值的資料列。  下列範例將傳回會參考所有已刪除之資料列的 **DataRow** 陣列，並傳回另一個會參考所有資料列的 **DataRow** 陣列 \(以 **CustLName** 排序\)，其中 **CustID** 資料行大於 5。  如需如何在 **Deleted** 資料列中檢視資訊的詳細資訊，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ **選取**方法可以用來傳回具有不同的資料列**RowState**值或欄位值。 下列範例會傳回**DataRow**參考所有資料列已刪除，並傳回另一個陣列**DataRow**陣列所參考的所有資料列，依**CustLName**，其中**CustID**資料行大於 5。 如需有關如何檢視中的資訊資訊**刪除**資料列中，請參閱[資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -100,7 +105,6 @@ Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowSta
 ' Retrieve rows where CustID > 5, and order by CustLName.  
 Dim custRows() As DataRow = workTable.Select( _  
     "CustID > 5", "CustLName ASC")  
-  
 ```  
   
 ```csharp  
@@ -112,11 +116,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## 請參閱  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataViewRowState>   
- [管理 DataTable 中的資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataViewRowState>  
+ [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

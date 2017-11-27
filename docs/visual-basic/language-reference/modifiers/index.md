@@ -1,37 +1,19 @@
 ---
 title: "修飾詞 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 99618381c1267647e07d9acc64693dcc5def6f3a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 1564ccf2d8f0fc2f787a19feec17ad5a0badc7db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="modifiers-visual-basic"></a>修飾詞 (Visual Basic)
 本節中的主題將說明 Visual Basic 執行階段修飾詞。  
@@ -111,4 +93,3 @@ ms.lasthandoff: 07/28/2017
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
-

@@ -1,27 +1,30 @@
 ---
-title: "WS 繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WS 繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d83ff828515a2399f3dae3c263b22ec91bb1fc6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# WS 繫結
+# <a name="ws-binding"></a>WS 繫結
 本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中 Windows 服務繫結的範例。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [WS 交易流程](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
- 示範用戶端協調交易的用法，以及使用 WS\-Atomic 交易或 OleTransactions 通訊協定之交易流程的用戶端和伺服器選項。  
+ 示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。  
   
  [WS 2007 聯合 HTTP 繫結](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
  示範 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的使用方式。  
@@ -29,8 +32,8 @@ caps.handback.revision: 7
  [WS 雙重 Http](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
  示範如何設定 `WSDualHttpBinding` 繫結。  
   
- [MTOM 編碼方式](../../../../docs/framework/wcf/samples/mtom-encoding.md)  
- 透過 WSHttpBinding 使用「訊息傳輸最佳化機制」\(Message Transmission Optimization Mechanism，MTOM\) 訊息編碼。  
+ [MTOM 編碼](../../../../docs/framework/wcf/samples/mtom-encoding.md)  
+ 透過 WSHttpBinding 使用「訊息傳輸最佳化機制」(Message Transmission Optimization Mechanism，MTOM) 訊息編碼。  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
  示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作一般服務與一般用戶端。  

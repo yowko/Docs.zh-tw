@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 25a384fa2465be6f4e523410e69aba6813e5c22d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>範例：動態程式設計疑難排解
 > [!NOTE]
@@ -60,9 +58,9 @@ AppViewModel.Current.LayoutVM.PageMap
   
  可能的失敗原因，就是 `App.Core.ViewModels.Layout.LayoutApplicationVM` 遺失中繼資料，因為它是在不同的命名空間中。  
   
- 在此情況下，為 `App.Core.ViewModels` 加入執行階段指示詞就解決了問題。 根本原因是對 <xref:System.Type.GetType%28System.String%29?displayProperty=fullName> 方法進行的 API 呼叫傳回 **null**，而應用程式靜靜忽略這個問題，直到發生當機。  
+ 在此情況下，為 `App.Core.ViewModels` 加入執行階段指示詞就解決了問題。 根本原因是對 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法進行的 API 呼叫傳回 **null**，而應用程式靜靜忽略這個問題，直到發生當機。  
   
- 在動態程式設計中，在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之下使用反映 API 的好作法，是使用會在失敗時擲回例外狀況的 <xref:System.Type.GetType%2A?displayProperty=fullName> 多載。  
+ 在動態程式設計中，在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之下使用反映 API 的好作法，是使用會在失敗時擲回例外狀況的 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 多載。  
   
 ## <a name="is-this-an-isolated-case"></a>這是個案嗎？  
  使用 `App.Core.ViewModels` 時，可能也會發生其他問題。  您必須決定是否值得識別並修正每個遺失中繼資料的例外狀況，還是要節省時間，並為較大類別的類型加入指示詞。  在這裡，如果輸出二進位檔產生的結果大小增加並不是問題，則為 `dynamic` 加入 `App.Core.ViewModels` 中繼資料可能是最佳方法。  
@@ -71,6 +69,5 @@ AppViewModel.Current.LayoutVM.PageMap
  如果應用程式使用 `typeof(LayoutApplicationVM)`，而不是 `Type.GetType("LayoutApplicationVM")`，則工具鏈可能保留了 `browse` 中繼資料。  不過，它還是不會建立 `invoke` 中繼資料，如此一來，在具現化類型時，就會導致 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況。 若要避免這個例外狀況，您還是必須為命名空間或是指定 `dynamic` 原則的類型加入執行階段指示詞。 如需執行階段指示詞的相關資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [範例：處理繫結資料時所發生的例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
-

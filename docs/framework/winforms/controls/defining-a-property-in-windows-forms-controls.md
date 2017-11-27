@@ -1,39 +1,43 @@
 ---
-title: "定義 Windows Form 控制項中的屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自訂控制項 [Windows Form], 在程式碼中定義屬性"
-  - "屬性 [Windows Form], 在程式碼中定義"
+title: "定義 Windows Form 控制項中的屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [Windows Forms], defining in code
+- custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c3c25b9c408e5b8f0b76cdf87375875cdb06a13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 定義 Windows Form 控制項中的屬性
-如需屬性的概觀，請參閱[屬性概觀](../Topic/Properties%20Overview.md)。  在定義屬性時有一些重要的考量：  
+# <a name="defining-a-property-in-windows-forms-controls"></a>定義 Windows Form 控制項中的屬性
+如需屬性的概觀，請參閱[屬性概觀](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 定義屬性時，有一些重要的考量︰  
   
--   您必須套用屬性 \(Attribute\) 於您定義的屬性 \(Property\)。  屬性 \(Attribute\) 指定設計工具應該如何顯示屬性 \(Property\)。  如需詳細資訊，請參閱[元件的設計階段屬性](../Topic/Design-Time%20Attributes%20for%20Components.md)。  
+-   您必須將屬性 (Attribute) 套用至您所定義的屬性 (Property)。 屬性 (Attribute) 指定設計工具如何顯示屬性 (Property)。 如需詳細資料，請參閱[元件的設計階段屬性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
   
--   如果變更屬性會影響控制項的視覺顯示，請從 `set` 存取子呼叫 <xref:System.Windows.Forms.Control.Invalidate%2A> 方法 \(您控制項繼承自 <xref:System.Windows.Forms.Control> 的方法\)。  <xref:System.Windows.Forms.Control.Invalidate%2A> 接著呼叫 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法，這將會重繪控制項。  對 <xref:System.Windows.Forms.Control.Invalidate%2A> 的多重呼叫為了有效率起見，會產生對 <xref:System.Windows.Forms.Control.OnPaint%2A> 的單一呼叫。  
+-   屬性變更會影響控制項的視覺顯示，如果呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (控制項繼承自<xref:System.Windows.Forms.Control>) 從`set`存取子。 <xref:System.Windows.Forms.Control.Invalidate%2A>依序呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，這個方法會重新繪製控制項。 多個呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>導致呼叫一次<xref:System.Windows.Forms.Control.OnPaint%2A>為了提高效率。  
   
--   .NET Framework 類別庫 \(Class Library\) 提供型別轉換子 \(Type Converter\) 給一般資料型別，例如整數、小數數字、布林 \(Boolean\) 值等。  型別轉換子的用途通常提供字串至數值的轉換 \(從字串資料至其他資料型別\)。  一般資料型別與預設型別轉換子有關聯，這轉換子會轉換數值為字串，和轉換字串為適當資料型別。  如果您定義自訂 \(亦即，非標準的\) 資料型別的屬性 \(Property\)，您將必須套用屬性 \(Attribute\)，以指定與那屬性相關的型別轉換子。  您可以也可以使用屬性 \(Attribute\) 來將自訂 UI 型別編輯器與屬性 \(Property\) 產生關聯。  UI 型別編輯器提供用以編輯屬性或資料型別的使用者介面。  色彩選擇器即為 UI 型別編輯器的一個例子。  屬性的範例在這個主題的結尾會提供。  
+-   .NET Framework Class Library 提供一般資料型別的轉換器，例如整數、十進位數字、布林值和其他型別。 型別轉換器的用途通常是將字串轉換成值 (從字串資料至其他資料型別)。 一般資料型別與預設型別轉換器相關聯，可將值轉換成字串，也可將字串轉換成適當的資料型別。 如果您定義的屬性 (Property) 是自訂 (亦即非標準) 資料型別，您必須套用屬性 (Attribute)，指定要與該屬性 (Property) 相關聯的型別轉換器。 您也可以使用屬性 (Attribute)，將自訂 UI 類型編輯器與屬性 (Property) 相關聯。 UI 類型編輯器提供使用者介面來編輯屬性或資料型別。 色彩選擇器是 UI 類型編輯器的一個例子。 本主題最後會提供屬性的範例。  
   
     > [!NOTE]
-    >  如果您的自訂屬性沒有型別轉換子或 UI 型別編輯器，您可以實作一個，如[Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md) 中所說明的。  
+    >  如果型別轉換器或 UI 類型編輯器不適用於您的自訂屬性，您可以如[擴充設計階段支援](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)所述自行實作。  
   
- 下列程式碼片段為自訂控制項 `FlashTrackBar` 定義名為 `EndColor` 的自訂屬性。  
+ 下列程式碼片段示範如何定義自訂控制項 `FlashTrackBar` 的自訂事件 `EndColor`。  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -66,7 +70,6 @@ Public Class FlashTrackBar
    End Property  
    ...  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -102,7 +105,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- 下列程式碼片段將型別轉換子和 UI 型別編輯器與屬性 `Value` 產生關聯。  這個案例中，`Value` 為整數，並具有預設型別轉換子，但 <xref:System.ComponentModel.TypeConverterAttribute> 屬性套用自訂型別轉換子 \(`FlashTrackBarValueConverter`\) 以允許設計工具將它顯示為百分比。  UI 型別編輯器 `FlashTrackBarValueEditor` 讓百分比可以視覺化顯示。  這個範例也示範 <xref:System.ComponentModel.TypeConverterAttribute> 或 <xref:System.ComponentModel.EditorAttribute> 屬性指定的型別轉換子或編輯器如何覆寫預設轉換子。  
+ 下列程式碼片段將型別轉換器和 UI 類型編輯器與屬性 `Value` 相關聯。 在此情況下`Value`是一個整數，有的預設型別轉換子，但<xref:System.ComponentModel.TypeConverterAttribute>屬性會套用自訂類型轉換器 (`FlashTrackBarValueConverter`)，可讓設計工具，以顯示成百分比。 UI 類型編輯器 `FlashTrackBarValueEditor` 可讓百分比以視覺化方式呈現。 此範例也顯示型別轉換子或所指定的編輯器<xref:System.ComponentModel.TypeConverterAttribute>或<xref:System.ComponentModel.EditorAttribute>屬性會覆寫預設的轉換器。  
   
 ```vb  
 <Category("Flash"), _  
@@ -113,7 +116,6 @@ Description("The current value of the track bar.  You can enter an actual value 
 Public ReadOnly Property Value() As Integer  
 ...  
 End Property  
-  
 ```  
   
 ```csharp  
@@ -128,8 +130,8 @@ public int Value {
 }  
 ```  
   
-## 請參閱  
- [Windows Form 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [使用 ShouldSerialize 和 Reset 方法定義預設值](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)   
- [屬性變更事件](../../../../docs/framework/winforms/controls/property-changed-events.md)   
- [Windows Form 控制項中的屬性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [使用 ShouldSerialize 和 Reset 方法定義預設值](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [屬性變更事件](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)

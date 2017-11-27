@@ -1,57 +1,39 @@
 ---
-title: "運算式具有類型 &quot;&lt;typename&gt;&quot; 是受限制的類型以及不能用來存取成員繼承自 &quot;Object&quot; 或 &quot;ValueType&quot; |Microsoft 文件"
-ms.date: 2015-07-20
+title: "運算式具有類型 &#39;&lt;typename&gt;&#39; 這是受限制的類型，且無法用來存取成員繼承自 &#39; 物件 &#39; 或 &#39;ValueType &#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc31393
 - vbc31393
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC31393
+helpviewer_keywords: BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aaedfd825889498159f92cbd1d615cc0064973d3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a30742bd46ccd1a3e5a688ebd2621e2c8a3d50e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>運算式具有類型 '&lt;typename&gt;' 的受限制的型別，而且不能用來存取繼承自 'Object' 或 'ValueType' 的成員
-運算式會評估無法 boxed common language runtime (CLR) 型別，但是存取需要進行 boxing 的成員。  
+# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>運算式具有類型 &#39;&lt;typename&gt;&#39; 這是受限制的類型，且無法用來存取成員繼承自 &#39; 物件 &#39; 或 &#39;ValueType &#39;
+運算式評估為 common language runtime (CLR) 無法 box 處理的類型，但是會存取需要進行 boxing 的成員。  
   
- *Boxing*是指需要轉換的型別處理`Object`或在某些情況下，為<xref:System.ValueType>。</xref:System.ValueType> Common language runtime 無法方塊某些結構類型，例如<xref:System.ArgIterator>， <xref:System.RuntimeArgumentHandle>，和<xref:System.TypedReference>.</xref:System.TypedReference> </xref:System.RuntimeArgumentHandle> </xref:System.ArgIterator>  
+ *Boxing* 是指將類型轉換為 `Object` 或者，在某些情況下，轉換為 <xref:System.ValueType>時所需的處理。 Common language runtime 無法 box 處理某些結構類型，例如<xref:System.ArgIterator>， <xref:System.RuntimeArgumentHandle>，和<xref:System.TypedReference>。  
   
- 這個運算式會嘗試使用受限制的型別呼叫方法，繼承自<xref:System.Object>或<xref:System.ValueType>，例如<xref:System.Object.GetHashCode%2A>或<xref:System.Object.ToString%2A>.</xref:System.Object.ToString%2A> </xref:System.Object.GetHashCode%2A> </xref:System.ValueType> </xref:System.Object> 若要存取此方法，[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]嘗試會造成此錯誤的隱含 boxing 轉換。  
+ 這個運算式會嘗試使用受限的類型呼叫的方法繼承自<xref:System.Object>或<xref:System.ValueType>，例如<xref:System.Object.GetHashCode%2A>或<xref:System.Object.ToString%2A>。 若要存取此方法，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]嘗試會造成這個錯誤的隱含 boxing 轉換。  
   
- **錯誤識別碼︰** BC31393  
+ **錯誤 ID:** BC31393  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
 1.  找出評估至所指出類型的運算式。  
   
-2.  找出您嘗試呼叫的方法繼承自<xref:System.Object>或<xref:System.ValueType>.</xref:System.ValueType></xref:System.Object>的陳述式的組件  
+2.  找出您嘗試呼叫的方法繼承自的陳述式的一部分<xref:System.Object>或<xref:System.ValueType>。  
   
 3.  請重寫陳述式，避免在方法呼叫。  
   
