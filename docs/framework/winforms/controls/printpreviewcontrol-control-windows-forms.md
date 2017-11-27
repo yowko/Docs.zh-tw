@@ -1,42 +1,43 @@
 ---
-title: "PrintPreviewControl 控制項 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "預覽列印, 自訂介面 (使用設計工具)"
-  - "列印 [Windows Form], 預覽列印"
-  - "PrintPreview 控制項 (使用設計工具)"
-  - "PrintPreviewControl 控制項 (使用設計工具)"
+title: "PrintPreviewControl 控制項 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing [Windows Forms], print preview
+- PrintPreviewControl control (using designer)
+- PrintPreview control (using designer)
+- print preview [Windows Forms], custom interface (using designer)
 ms.assetid: 3fdb2e46-92a3-4e26-bb8d-63a89087b337
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca40e8837669424865debc70c2289d6381902cf9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# PrintPreviewControl 控制項 (Windows Form)
-Windows Form `PrintPreviewControl` 可用來將文件顯示成其列印時的外觀。  這個控制項沒有任何按鈕或其他使用者介面項目，因此，通常只有當您想要撰寫您自己的預覽列印使用者介面時，才會使用 `PrintPreviewControl`。  如果您想要標準使用者介面，請使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項。  
+# <a name="printpreviewcontrol-control-windows-forms"></a><span data-ttu-id="b82b7-102">PrintPreviewControl 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="b82b7-102">PrintPreviewControl Control (Windows Forms)</span></span>
+<span data-ttu-id="b82b7-103">Windows Form `PrintPreviewControl` 可用來將文件顯示成其列印時的外觀。</span><span class="sxs-lookup"><span data-stu-id="b82b7-103">The Windows Forms `PrintPreviewControl` is used to display a document as it will appear when printed.</span></span> <span data-ttu-id="b82b7-104">這個控制項沒有任何按鈕或其他使用者介面項目，因此，通常只有當您想要撰寫您自己的預覽列印使用者介面時，才會使用 `PrintPreviewControl`。</span><span class="sxs-lookup"><span data-stu-id="b82b7-104">This control has no buttons or other user interface elements, so typically you use the `PrintPreviewControl` only if you wish to write your own print-preview user interface.</span></span> <span data-ttu-id="b82b7-105">如果您想要標準使用者介面，請使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項。</span><span class="sxs-lookup"><span data-stu-id="b82b7-105">If you want the standard user interface, use a <xref:System.Windows.Forms.PrintPreviewDialog> control.</span></span>  
   
-## 在本節中  
- [PrintPreviewControl 控制項概觀](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
- 介紹 `PrintPreviewControl` 的一般概念，您可以使用這個控制項來設計自己的預覽列印對話方塊或元件。  
+## <a name="in-this-section"></a><span data-ttu-id="b82b7-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="b82b7-106">In This Section</span></span>  
+ [<span data-ttu-id="b82b7-107">PrintPreviewControl 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="b82b7-107">PrintPreviewControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
+ <span data-ttu-id="b82b7-108">介紹 `PrintPreviewControl` 的一般概念，您可以使用這個控制項來設計自己的預覽列印對話方塊或元件。</span><span class="sxs-lookup"><span data-stu-id="b82b7-108">Introduces the general concepts of the `PrintPreviewControl`, which you can use to design your own print preview dialog or component.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="b82b7-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="b82b7-109">Reference</span></span>  
  <xref:System.Windows.Forms.PrintPreviewControl>  
- 提供這個類別及其成員的參考資訊。  
+ <span data-ttu-id="b82b7-110">提供這個類別及其成員的相關參考資訊。</span><span class="sxs-lookup"><span data-stu-id="b82b7-110">Provides reference information on the class and its members.</span></span>  
   
-## 相關章節  
- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- 說明用來建立預覽列印功能的替代方式。  
+## <a name="related-sections"></a><span data-ttu-id="b82b7-111">相關章節</span><span class="sxs-lookup"><span data-stu-id="b82b7-111">Related Sections</span></span>  
+ [<span data-ttu-id="b82b7-112">PrintPreviewDialog 控制項</span><span class="sxs-lookup"><span data-stu-id="b82b7-112">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ <span data-ttu-id="b82b7-113">說明用來建立預覽列印功能的替代方式。</span><span class="sxs-lookup"><span data-stu-id="b82b7-113">Describes an alternate way to create print preview functionality.</span></span>  
   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。
+ [<span data-ttu-id="b82b7-114">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="b82b7-114">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="b82b7-115">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="b82b7-115">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

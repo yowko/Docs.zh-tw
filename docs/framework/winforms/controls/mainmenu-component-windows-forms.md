@@ -1,39 +1,39 @@
 ---
-title: "MainMenu 元件 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MainMenu 控制項 [Windows Form]"
+title: "MainMenu 元件 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe5871ba9926d1741b42d70d1e0e798c2a0aecc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# MainMenu 元件 (Windows Form)
+# <a name="mainmenu-component-windows-forms"></a><span data-ttu-id="4d03b-102">MainMenu 元件 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="4d03b-102">MainMenu Component (Windows Forms)</span></span>
 > [!NOTE]
->  雖然 `MenuStrip` 和 `ContextMenuStrip` 會取代和加入功能至舊版的 `MainMenu` 和 <xref:System.Windows.Forms.ContextMenu> 控制項，但是會保留 `MainMenu` 和 <xref:System.Windows.Forms.ContextMenu> 以提供回溯相容性 \(Backward Compatibility\) 和未來使用 \(如果您選擇要用\)。  
+>  <span data-ttu-id="4d03b-103">雖然`MenuStrip`和`ContextMenuStrip`取代，並將功能加入至`MainMenu`和<xref:System.Windows.Forms.ContextMenu>的舊版中，控制項`MainMenu`和<xref:System.Windows.Forms.ContextMenu>您選擇保留的回溯相容性及供未來使用。</span><span class="sxs-lookup"><span data-stu-id="4d03b-103">Although `MenuStrip` and `ContextMenuStrip` replace and add functionality to the `MainMenu` and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, `MainMenu` and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
- Windows Form `MainMenu` 元件會顯示執行階段的功能表。  
+ <span data-ttu-id="4d03b-104">Windows Form`MainMenu`元件會在執行階段顯示的功能表。</span><span class="sxs-lookup"><span data-stu-id="4d03b-104">The Windows Forms `MainMenu` component displays a menu at run time.</span></span>  
   
-## 在本節中  
- [MainMenu 元件概觀](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
- 解釋這個元件是什麼，以及其主要功能和屬性。  
+## <a name="in-this-section"></a><span data-ttu-id="4d03b-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="4d03b-105">In This Section</span></span>  
+ [<span data-ttu-id="4d03b-106">MainMenu 元件概觀</span><span class="sxs-lookup"><span data-stu-id="4d03b-106">MainMenu Component Overview</span></span>](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
+ <span data-ttu-id="4d03b-107">說明此元件是什麼及其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="4d03b-107">Explains what this component is and its key features and properties.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="4d03b-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="4d03b-108">Reference</span></span>  
  <xref:System.Windows.Forms.MainMenu>  
- 描述這個類別並且連結到它所有的成員。  
+ <span data-ttu-id="4d03b-109">說明這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="4d03b-109">Describes this class and has links to all its members.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a><span data-ttu-id="4d03b-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4d03b-110">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

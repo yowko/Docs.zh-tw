@@ -1,89 +1,92 @@
 ---
-title: "使用資料合約 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "DataContractAttribute 類別"
-  - "WCF, 資料"
-  - "資料合約 [WCF]"
+title: "使用資料合約"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataContractAttribute class
+- WCF, data
+- data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 258e7fd0235ffa67ee8c293831cb8230d48a894c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用資料合約
-「*資料合約*」\(Data Contract\) 是服務與用戶端之間的正式合約，其中會抽象地描述要交換的資料。 也就是說，若要進行通訊，用戶端與服務並不需要共用相同的型別，而只需要共用相同的資料合約。 資料合約會針對每個參數或傳回型別精確地定義哪些資料要序列化 \(變成 XML\) 才能進行交換。  
+# <a name="using-data-contracts"></a><span data-ttu-id="4b37a-102">使用資料合約</span><span class="sxs-lookup"><span data-stu-id="4b37a-102">Using Data Contracts</span></span>
+<span data-ttu-id="4b37a-103">「 *資料合約* 」(Data Contract) 是服務與用戶端之間的正式合約，其中會抽象地描述要交換的資料。</span><span class="sxs-lookup"><span data-stu-id="4b37a-103">A *data contract* is a formal agreement between a service and a client that abstractly describes the data to be exchanged.</span></span> <span data-ttu-id="4b37a-104">也就是說，若要進行通訊，用戶端與服務並不需要共用相同的型別，而只需要共用相同的資料合約。</span><span class="sxs-lookup"><span data-stu-id="4b37a-104">That is, to communicate, the client and the service do not have to share the same types, only the same data contracts.</span></span> <span data-ttu-id="4b37a-105">資料合約會針對每個參數或傳回型別精確地定義哪些資料要序列化 (變成 XML) 才能進行交換。</span><span class="sxs-lookup"><span data-stu-id="4b37a-105">A data contract precisely defines, for each parameter or return type, what data is serialized (turned into XML) to be exchanged.</span></span>  
   
-## 資料合約基本概念  
- 根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用稱為「資料合約序列化程式」的序列化引擎來序列化和還原序列化資料 \(在資料和 XML 之間來回轉換\)。 包括像是整數和字串的所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基本型別 \(Primitive Type\)，以及被視為基本型別的特定型別，例如 <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>，都可以不用經過其他準備即加以序列化，而且會被視為具有預設的資料合約。 許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別也具有現有的資料合約。 如需可序列化型別的完整清單，請參閱[資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+## <a name="data-contract-basics"></a><span data-ttu-id="4b37a-106">資料合約基本概念</span><span class="sxs-lookup"><span data-stu-id="4b37a-106">Data Contract Basics</span></span>  
+ <span data-ttu-id="4b37a-107">根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用稱為「資料合約序列化程式」的序列化引擎來序列化和還原序列化資料 (在資料和 XML 之間來回轉換)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-107">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uses a serialization engine called the Data Contract Serializer by default to serialize and deserialize data (convert it to and from XML).</span></span> <span data-ttu-id="4b37a-108">包括像是整數和字串的所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基本型別 (Primitive Type)，以及被視為基本型別的特定型別，例如 <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>，都可以不用經過其他準備即加以序列化，而且會被視為具有預設的資料合約。</span><span class="sxs-lookup"><span data-stu-id="4b37a-108">All [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] primitive types, such as integers and strings, as well as certain types treated as primitives, such as <xref:System.DateTime> and <xref:System.Xml.XmlElement>, can be serialized with no other preparation and are considered as having default data contracts.</span></span> <span data-ttu-id="4b37a-109">許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別也具有現有的資料合約。</span><span class="sxs-lookup"><span data-stu-id="4b37a-109">Many [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types also have existing data contracts.</span></span> <span data-ttu-id="4b37a-110">如需可序列化型別的完整清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-110">For a full list of serializable types, see [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).</span></span>  
   
- 您建立的新複雜型別必須具有已針對其所定義的資料合約，才能夠進行序列化。 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer> 會推斷資料合約，並且會序列化所有公開可見的型別。 型別的所有公用讀取\/寫入屬性 \(Property\) 和欄位都會序列化。 您可以藉由使用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>，選擇不序列化成員。 您也可以使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 \(Attribute\) 明確建立資料合約。 通常將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至該型別即可達成這點。 這個屬性可以套用至類別、結構和列舉型別 \(Enumeration\)。 然後，<xref:System.Runtime.Serialization.DataMemberAttribute> 屬性必須套用至資料合約型別的各個成員，以表示其為「*資料成員*」\(Data Member\)，也就是這個成員應該要加以序列化。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [可序列化的型別](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+ <span data-ttu-id="4b37a-111">您建立的新複雜型別必須具有已針對其所定義的資料合約，才能夠進行序列化。</span><span class="sxs-lookup"><span data-stu-id="4b37a-111">New complex types that you create must have a data contract defined for them to be serializable.</span></span> <span data-ttu-id="4b37a-112">根據預設， <xref:System.Runtime.Serialization.DataContractSerializer> 會推斷資料合約，並且會序列化所有公開可見的型別。</span><span class="sxs-lookup"><span data-stu-id="4b37a-112">By default, the <xref:System.Runtime.Serialization.DataContractSerializer> infers the data contract and serializes all publicly visible types.</span></span> <span data-ttu-id="4b37a-113">型別的所有公用讀取/寫入屬性 (Property) 和欄位都會序列化。</span><span class="sxs-lookup"><span data-stu-id="4b37a-113">All public read/write properties and fields of the type are serialized.</span></span> <span data-ttu-id="4b37a-114">您可以藉由使用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>，選擇不序列化成員。</span><span class="sxs-lookup"><span data-stu-id="4b37a-114">You can opt out members from serialization by using the <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>.</span></span> <span data-ttu-id="4b37a-115">您也可以使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 明確建立資料合約。</span><span class="sxs-lookup"><span data-stu-id="4b37a-115">You can also explicitly create a data contract by using <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes.</span></span> <span data-ttu-id="4b37a-116">通常將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至該型別即可達成這點。</span><span class="sxs-lookup"><span data-stu-id="4b37a-116">This is normally done by applying the <xref:System.Runtime.Serialization.DataContractAttribute> attribute to the type.</span></span> <span data-ttu-id="4b37a-117">這個屬性可以套用至類別、結構和列舉型別 (Enumeration)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-117">This attribute can be applied to classes, structures, and enumerations.</span></span> <span data-ttu-id="4b37a-118">然後， <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性必須套用至資料合約型別的各個成員，以表示其為「 *資料成員*」(Data Member)，也就是這個成員應該要加以序列化。</span><span class="sxs-lookup"><span data-stu-id="4b37a-118">The <xref:System.Runtime.Serialization.DataMemberAttribute> attribute must then be applied to each member of the data contract type to indicate that it is a *data member*, that is, it should be serialized.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4b37a-119">[可序列化型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-119"> [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md).</span></span>  
   
-### 範例  
- 下列範例會示範已經明確套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性的服務合約 \(介面\)。 此範例會示範基本型別不需要資料合約，而複雜型別則需要。  
+### <a name="example"></a><span data-ttu-id="4b37a-120">範例</span><span class="sxs-lookup"><span data-stu-id="4b37a-120">Example</span></span>  
+ <span data-ttu-id="4b37a-121">下列範例會示範已經明確套用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性的服務合約 (介面)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-121">The following example shows a service contract (an interface) to which the <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.OperationContractAttribute> attributes have been explicitly applied.</span></span> <span data-ttu-id="4b37a-122">此範例會示範基本型別不需要資料合約，而複雜型別則需要。</span><span class="sxs-lookup"><span data-stu-id="4b37a-122">The example shows that primitive types do not require a data contract, while a complex type does.</span></span>  
   
  [!code-csharp[C_DataContract#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#1)]
  [!code-vb[C_DataContract#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#1)]  
   
- 下列範例會示範如何透過將 `MyTypes.PurchaseOrder` 和 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至類別及其成員，以便建立 <xref:System.Runtime.Serialization.DataMemberAttribute> 型別的資料合約。  
+ <span data-ttu-id="4b37a-123">下列範例會示範如何透過將 `MyTypes.PurchaseOrder` 和 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至類別及其成員，以便建立 <xref:System.Runtime.Serialization.DataMemberAttribute> 型別的資料合約。</span><span class="sxs-lookup"><span data-stu-id="4b37a-123">The following example shows how a data contract for the `MyTypes.PurchaseOrder` type is created by applying the <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes to the class and its members.</span></span>  
   
  [!code-csharp[C_DataContract#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#2)]
  [!code-vb[C_DataContract#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#2)]  
   
-### 備註  
- 下列注意事項提供在建立資料合約時的考慮項目：  
+### <a name="notes"></a><span data-ttu-id="4b37a-124">備註</span><span class="sxs-lookup"><span data-stu-id="4b37a-124">Notes</span></span>  
+ <span data-ttu-id="4b37a-125">下列注意事項提供在建立資料合約時的考慮項目：</span><span class="sxs-lookup"><span data-stu-id="4b37a-125">The following notes provide items to consider when creating data contracts:</span></span>  
   
--   <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 屬性只有在搭配未標記的型別使用時才會被接受。 其中包含未使用 <xref:System.Runtime.Serialization.DataContractAttribute>、<xref:System.SerializableAttribute>、<xref:System.Runtime.Serialization.CollectionDataContractAttribute> 或 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性其中一個所標記的型別，或未透過任何其他方式 \(例如 <xref:System.Xml.Serialization.IXmlSerializable>\) 標記為可序列化的型別。  
+-   <span data-ttu-id="4b37a-126"><xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 屬性只有在搭配未標記的型別使用時才會被接受。</span><span class="sxs-lookup"><span data-stu-id="4b37a-126">The <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> attribute is only honored when used with unmarked types.</span></span> <span data-ttu-id="4b37a-127">其中包含未使用 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>或 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性其中一個所標記的型別，或未透過任何其他方式 (例如 <xref:System.Xml.Serialization.IXmlSerializable>) 標記為可序列化的型別。</span><span class="sxs-lookup"><span data-stu-id="4b37a-127">This includes types that are not marked with one of the <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, or <xref:System.Runtime.Serialization.EnumMemberAttribute> attributes, or marked as serializable by any other means (such as <xref:System.Xml.Serialization.IXmlSerializable>).</span></span>  
   
--   您可以將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 \(Attribute\) 套用至欄位和屬性 \(Property\)。  
+-   <span data-ttu-id="4b37a-128">您可以將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 套用至欄位和屬性 (Property)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-128">You can apply the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to fields, and properties.</span></span>  
   
--   成員存取層級 \(內部、私密、保護或公用\) 不會以任何形式影響資料合約。  
+-   <span data-ttu-id="4b37a-129">成員存取層級 (內部、私密、保護或公用) 不會以任何形式影響資料合約。</span><span class="sxs-lookup"><span data-stu-id="4b37a-129">Member accessibility levels (internal, private, protected, or public) do not affect the data contract in any way.</span></span>  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性在套用至靜態成員時會遭到忽略。  
+-   <span data-ttu-id="4b37a-130"><xref:System.Runtime.Serialization.DataMemberAttribute> 屬性在套用至靜態成員時會遭到忽略。</span><span class="sxs-lookup"><span data-stu-id="4b37a-130">The <xref:System.Runtime.Serialization.DataMemberAttribute> attribute is ignored if it is applied to static members.</span></span>  
   
--   取得屬性 \(property\-get\) 的程式碼會在進行序列化時呼叫，以便讓屬性資料成員取得要進行序列化之屬性的值。  
+-   <span data-ttu-id="4b37a-131">取得屬性 (property-get) 的程式碼會在進行序列化時呼叫，以便讓屬性資料成員取得要進行序列化之屬性的值。</span><span class="sxs-lookup"><span data-stu-id="4b37a-131">During serialization, property-get code is called for property data members to get the value of the properties to be serialized.</span></span>  
   
--   在進行還原序列化時會先建立未初始化的物件，而不會呼叫該型別上的任何建構函式 \(Constructor\)。 接下來，所有的資料成員都會還原序列化。  
+-   <span data-ttu-id="4b37a-132">在進行還原序列化時會先建立未初始化的物件，而不會呼叫該型別上的任何建構函式 (Constructor)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-132">During deserialization, an uninitialized object is first created, without calling any constructors on the type.</span></span> <span data-ttu-id="4b37a-133">接下來，所有的資料成員都會還原序列化。</span><span class="sxs-lookup"><span data-stu-id="4b37a-133">Then all data members are deserialized.</span></span>  
   
--   設定屬性 \(property\-set\) 的程式碼會在進行還原序列化時呼叫，以便讓屬性資料成員設定要進行還原序列化之屬性的值。  
+-   <span data-ttu-id="4b37a-134">設定屬性 (property-set) 的程式碼會在進行還原序列化時呼叫，以便讓屬性資料成員設定要進行還原序列化之屬性的值。</span><span class="sxs-lookup"><span data-stu-id="4b37a-134">During deserialization, property-set code is called for property data members to set the properties to the value being deserialized.</span></span>  
   
--   若是有效的資料合約，該資料合約肯定是可能會序列化其所有資料成員。 如需可序列化型別的完整清單，請參閱[資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+-   <span data-ttu-id="4b37a-135">若是有效的資料合約，該資料合約肯定是可能會序列化其所有資料成員。</span><span class="sxs-lookup"><span data-stu-id="4b37a-135">For a data contract to be valid, it must be possible to serialize all of its data members.</span></span> <span data-ttu-id="4b37a-136">如需可序列化型別的完整清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。</span><span class="sxs-lookup"><span data-stu-id="4b37a-136">For a full list of serializable types, see [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).</span></span>  
   
-     對於泛型型別的處理方式與非泛型型別完全相同。 對於泛型參數沒有特殊的需求。 以下列型別為例：  
+     <span data-ttu-id="4b37a-137">對於泛型型別的處理方式與非泛型型別完全相同。</span><span class="sxs-lookup"><span data-stu-id="4b37a-137">Generic types are handled in exactly the same way as non-generic types.</span></span> <span data-ttu-id="4b37a-138">對於泛型參數沒有特殊的需求。</span><span class="sxs-lookup"><span data-stu-id="4b37a-138">There are no special requirements for generic parameters.</span></span> <span data-ttu-id="4b37a-139">以下列型別為例：</span><span class="sxs-lookup"><span data-stu-id="4b37a-139">For example, consider the following type.</span></span>  
   
  [!code-csharp[C_DataContract#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#3)]
  [!code-vb[C_DataContract#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#3)]  
   
- 無論用於泛型型別參數 \(`T`\) 的型別是否為可序列化的型別，這個型別都是可序列化的型別。 由於其一定可以序列化所有的資料成員，所以下列型別只有在泛型型別參數也屬於可序列化時才能進行序列化，如下列程式碼所示。  
+ <span data-ttu-id="4b37a-140">無論用於泛型型別參數 (`T`) 的型別是否為可序列化的型別，這個型別都是可序列化的型別。</span><span class="sxs-lookup"><span data-stu-id="4b37a-140">This type is serializable whether the type used for the generic type parameter (`T`) is serializable or not.</span></span> <span data-ttu-id="4b37a-141">由於其一定可以序列化所有的資料成員，所以下列型別只有在泛型型別參數也屬於可序列化時才能進行序列化，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="4b37a-141">Because it must be possible to serialize all data members, the following type is serializable only if the generic type parameter is also serializable, as shown in the following code.</span></span>  
   
  [!code-csharp[C_DataContract#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#4)]
  [!code-vb[C_DataContract#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#4)]  
   
- 如需定義資料合約的 WCF 服務完整程式碼範例，請參閱 [基本資料合約](../../../../docs/framework/wcf/samples/basic-data-contract.md) 範例。  
+ <span data-ttu-id="4b37a-142">如需定義資料合約的 WCF 服務完整程式碼範例，請參閱 [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) 範例。</span><span class="sxs-lookup"><span data-stu-id="4b37a-142">For a complete code sample of a WCF service that defines a data contract see the [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) sample.</span></span>  
   
-## 請參閱  
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- [可序列化的型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)   
- [資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)   
- [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)   
- [資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)   
- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)   
- [資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)   
- [版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)   
- [資料成員預設值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)   
- [資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)   
- [HOW TO：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+## <a name="see-also"></a><span data-ttu-id="4b37a-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4b37a-143">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ [<span data-ttu-id="4b37a-144">可序列化型別</span><span class="sxs-lookup"><span data-stu-id="4b37a-144">Serializable Types</span></span>](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
+ [<span data-ttu-id="4b37a-145">資料合約名稱</span><span class="sxs-lookup"><span data-stu-id="4b37a-145">Data Contract Names</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [<span data-ttu-id="4b37a-146">資料合約等價</span><span class="sxs-lookup"><span data-stu-id="4b37a-146">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="4b37a-147">資料成員順序</span><span class="sxs-lookup"><span data-stu-id="4b37a-147">Data Member Order</span></span>](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
+ [<span data-ttu-id="4b37a-148">資料合約已知型別</span><span class="sxs-lookup"><span data-stu-id="4b37a-148">Data Contract Known Types</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="4b37a-149">向前相容資料合約</span><span class="sxs-lookup"><span data-stu-id="4b37a-149">Forward-Compatible Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [<span data-ttu-id="4b37a-150">資料合約版本控制</span><span class="sxs-lookup"><span data-stu-id="4b37a-150">Data Contract Versioning</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [<span data-ttu-id="4b37a-151">版本相容序列化回呼</span><span class="sxs-lookup"><span data-stu-id="4b37a-151">Version-Tolerant Serialization Callbacks</span></span>](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
+ [<span data-ttu-id="4b37a-152">資料成員預設值</span><span class="sxs-lookup"><span data-stu-id="4b37a-152">Data Member Default Values</span></span>](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
+ [<span data-ttu-id="4b37a-153">資料合約序列化程式所支援的類型</span><span class="sxs-lookup"><span data-stu-id="4b37a-153">Types Supported by the Data Contract Serializer</span></span>](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [<span data-ttu-id="4b37a-154">如何： 建立基本的資料合約的類別或結構</span><span class="sxs-lookup"><span data-stu-id="4b37a-154">How to: Create a Basic Data Contract for a Class or Structure</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

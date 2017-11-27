@@ -1,51 +1,54 @@
 ---
-title: "為何轉換順序很重要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "轉換, 順序的重要性"
+title: "為何轉換順序很重要"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 為何轉換順序很重要
-單一的 <xref:System.Drawing.Drawing2D.Matrix> 物件可儲存單一轉換或一系列轉換。  後者稱為複合轉換。  複合轉換矩陣的取得方式是乘以個別轉換的矩陣。  
+# <a name="why-transformation-order-is-significant"></a><span data-ttu-id="a4fd0-102">為何轉換順序很重要</span><span class="sxs-lookup"><span data-stu-id="a4fd0-102">Why Transformation Order Is Significant</span></span>
+<span data-ttu-id="a4fd0-103">單一<xref:System.Drawing.Drawing2D.Matrix>物件可儲存單一轉換的序列。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-103">A single <xref:System.Drawing.Drawing2D.Matrix> object can store a single transformation or a sequence of transformations.</span></span> <span data-ttu-id="a4fd0-104">後者稱為複合轉換。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-104">The latter is called a composite transformation.</span></span> <span data-ttu-id="a4fd0-105">取得複合的轉換矩陣乘以個別轉換的矩陣。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-105">The matrix of a composite transformation is obtained by multiplying the matrices of individual transformations.</span></span>  
   
-## 複合轉換範例  
- 在複合轉換中，個別轉換的順序非常重要。  例如，如果先旋轉、再縮放，然後平移，則取得的結果會與先平移、再旋轉，然後縮放的結果不同。  在 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 中，複合轉換是從左到右建置。  假設 S、R 和 T 依次代表縮放、旋轉和轉換矩陣，則 SRT \(依此順序\) 的結果是先縮放、再旋轉，然後轉換所產生的複合轉換矩陣。  SRT 產生的矩陣和 TRS 產生的矩陣不同。  
+## <a name="composite-transform-examples"></a><span data-ttu-id="a4fd0-106">複合轉換範例</span><span class="sxs-lookup"><span data-stu-id="a4fd0-106">Composite Transform Examples</span></span>  
+ <span data-ttu-id="a4fd0-107">在複合轉換中，個別轉換的順序很重要的。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-107">In a composite transformation, the order of individual transformations is important.</span></span> <span data-ttu-id="a4fd0-108">例如，如果第一次旋轉，再調整，然後轉譯，您取得不同的結果非先轉換，再旋轉，然後調整。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-108">For example, if you first rotate, then scale, then translate, you get a different result than if you first translate, then rotate, then scale.</span></span> <span data-ttu-id="a4fd0-109">在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，複合轉換建立從左到右。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-109">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], composite transformations are built from left to right.</span></span> <span data-ttu-id="a4fd0-110">如果 S、 R 和 T 分別是縮放、 旋轉和轉譯矩陣，然後產品 SRT （依該順序） 是複合的轉換矩陣的第一個標尺、 一個圖示旋轉，然後將轉譯。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-110">If S, R, and T are scale, rotation, and translation matrices respectively, then the product SRT (in that order) is the matrix of the composite transformation that first scales, then rotates, then translates.</span></span> <span data-ttu-id="a4fd0-111">產品所產生的矩陣 SRT 與不同產品 TRS 所產生的矩陣。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-111">The matrix produced by the product SRT is different from the matrix produced by the product TRS.</span></span>  
   
- 順序很重要的原因之一是，旋轉和縮放這類的轉換是根據座標系統的原點來進行。  縮放中心位於原點的物件所產生的結果，與縮放已從原點移開的物件不同。  同樣地，旋轉中心位於原點的物件所產生的結果，也會與旋轉已從原點移開的物件不同。  
+ <span data-ttu-id="a4fd0-112">順序是很重要的其中一個原因是，完成像旋轉和縮放轉換，以根據座標系統的原點。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-112">One reason order is significant is that transformations like rotation and scaling are done with respect to the origin of the coordinate system.</span></span> <span data-ttu-id="a4fd0-113">縮放的中心位於原點的物件產生不同的結果調整已移開原點的物件。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-113">Scaling an object that is centered at the origin produces a different result than scaling an object that has been moved away from the origin.</span></span> <span data-ttu-id="a4fd0-114">同樣地，旋轉的中心位於原點的物件所產生的旋轉已移開原點的物件不同的結果。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-114">Similarly, rotating an object that is centered at the origin produces a different result than rotating an object that has been moved away from the origin.</span></span>  
   
- 下列範例組合了縮放、旋轉和轉換 \(依此順序\)，形成複合轉換。  傳遞至 <xref:System.Drawing.Graphics.RotateTransform%2A> 方法的 <xref:System.Drawing.Drawing2D.MatrixOrder> 引數指出旋轉將在縮放之後進行。  同樣地，傳遞至 <xref:System.Drawing.Drawing2D.MatrixOrder> 方法的 <xref:System.Drawing.Graphics.TranslateTransform%2A> 引數會指出轉換將在旋轉之後進行。  <xref:System.Drawing.Drawing2D.MatrixOrder> 和 <xref:System.Drawing.Drawing2D.MatrixOrder> 是 <xref:System.Drawing.Drawing2D.MatrixOrder> 列舉的成員。  
+ <span data-ttu-id="a4fd0-115">下列範例會結合以形成複合轉換縮放、 旋轉和轉譯 （依該順序）。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-115">The following example combines scaling, rotation and translation (in that order) to form a composite transformation.</span></span> <span data-ttu-id="a4fd0-116">引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.RotateTransform%2A>方法表示旋轉會遵循縮放比例。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-116">The argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passed to the <xref:System.Drawing.Graphics.RotateTransform%2A> method indicates that the rotation will follow the scaling.</span></span> <span data-ttu-id="a4fd0-117">同樣地，引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.TranslateTransform%2A>方法表示轉譯會遵循旋轉。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-117">Likewise, the argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passed to the <xref:System.Drawing.Graphics.TranslateTransform%2A> method indicates that the translation will follow the rotation.</span></span> <span data-ttu-id="a4fd0-118"><xref:System.Drawing.Drawing2D.MatrixOrder.Append>和<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>屬於<xref:System.Drawing.Drawing2D.MatrixOrder>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-118"><xref:System.Drawing.Drawing2D.MatrixOrder.Append> and <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> are members of the <xref:System.Drawing.Drawing2D.MatrixOrder> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  
   
- 下列範例會進行和上述範例中相同的呼叫，只不過順序顛倒。  最後的作業順序為先轉換、再旋轉，然後縮放，產生的結果和先縮放、再旋轉，然後轉換的結果完全不同。  
+ <span data-ttu-id="a4fd0-119">下列範例使如同上述範例中，相同的方法呼叫，但呼叫的順序相反。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-119">The following example makes the same method calls as the preceding example, but the order of the calls is reversed.</span></span> <span data-ttu-id="a4fd0-120">產生作業的順序會先轉換再旋轉，則小數位數，會產生第一個標尺非常不同的結果，再更換，然後轉換。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-120">The resulting order of operations is first translate, then rotate, then scale, which produces a very different result than first scale, then rotate, then translate.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#22)]  
   
- 使複合轉換中個別轉換的順序顛倒的方式之一，就是將一系列方法呼叫的順序顛倒。  控制作業順序的第二種方式是變更矩陣順序引數。  下列的範例與上述範例相同，除了 <xref:System.Drawing.Drawing2D.MatrixOrder> 已變更為 <xref:System.Drawing.Drawing2D.MatrixOrder> 以外。  矩陣乘法是依照 SRT 的順序，此處的 S、R 和 T 分別是指縮放、旋轉和轉換的矩陣。  複合轉換的順序是先縮放、再旋轉，然後轉換。  
+ <span data-ttu-id="a4fd0-121">複合轉換中的個別轉換的順序互換的其中一種方式是一系列的方法呼叫的順序互換。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-121">One way to reverse the order of individual transformations in a composite transformation is to reverse the order of a sequence of method calls.</span></span> <span data-ttu-id="a4fd0-122">控制作業的順序的第二個方式是變更矩陣的 order 引數。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-122">A second way to control the order of operations is to change the matrix order argument.</span></span> <span data-ttu-id="a4fd0-123">下列範例是上述範例中，不同處在於相同<xref:System.Drawing.Drawing2D.MatrixOrder.Append>已變更為<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-123">The following example is the same as the preceding example, except that <xref:System.Drawing.Drawing2D.MatrixOrder.Append> has been changed to <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>.</span></span> <span data-ttu-id="a4fd0-124">SRT，其中 S、 R、 T 縮放、 旋轉矩陣並分別將轉譯的順序是矩陣乘法。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-124">The matrix multiplication is done in the order SRT, where S, R, and T are the matrices for scale, rotate, and translate, respectively.</span></span> <span data-ttu-id="a4fd0-125">複合轉換的順序會是第一個標尺，再旋轉，然後轉換。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-125">The order of the composite transformation is first scale, then rotate, then translate.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#23)]  
   
- 最後這個範例的結果與這個主題中的第一個範例相同。  這是因為我們同時將方法呼叫的順序和矩陣乘法的順序都顛倒了。  
+ <span data-ttu-id="a4fd0-126">前一個範例的結果是相同的此主題中的第一個範例的結果。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-126">The result of the immediately preceding example is the same as the result of the first example in this topic.</span></span> <span data-ttu-id="a4fd0-127">這是因為我們反轉方法呼叫的順序和矩陣乘法的順序。</span><span class="sxs-lookup"><span data-stu-id="a4fd0-127">This is because we reversed both the order of the method calls and the order of the matrix multiplication.</span></span>  
   
-## 請參閱  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [使用 Managed GDI\+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="a4fd0-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4fd0-128">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [<span data-ttu-id="a4fd0-129">座標系統和轉換</span><span class="sxs-lookup"><span data-stu-id="a4fd0-129">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="a4fd0-130">使用 Managed GDI+ 中的轉換</span><span class="sxs-lookup"><span data-stu-id="a4fd0-130">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

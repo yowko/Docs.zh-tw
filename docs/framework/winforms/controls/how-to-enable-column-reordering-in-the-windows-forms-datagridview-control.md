@@ -1,48 +1,52 @@
 ---
-title: "如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "資料行 [Windows Form], 重新排列"
-  - "資料格, 重新調整資料行順序"
-  - "DataGridView 控制項 [Windows Form], 資料行順序"
+title: "如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], column order
+- data grids [Windows Forms], reordering columns
+- columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bec2f8f59ae29da55bf6c28e9e0261deeae31afe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序
-當您在 <xref:System.Windows.Forms.DataGridView> 控制項中啟用資料行重新調整順序，使用者可以使用滑鼠拖曳資料行標頭，將資料行移至新的位置。  在 <xref:System.Windows.Forms.DataGridView> 控制項中，<xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=fullName> 屬性值會決定使用者是否能將資料行移至不同位置。  
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="02a6c-102">如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序</span><span class="sxs-lookup"><span data-stu-id="02a6c-102">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="02a6c-103">當您在 <xref:System.Windows.Forms.DataGridView> 控制項中啟用資料行重新調整順序，使用者可以使用滑鼠拖曳資料行標頭，將資料行移至新的位置。</span><span class="sxs-lookup"><span data-stu-id="02a6c-103">When you enable column reordering in the <xref:System.Windows.Forms.DataGridView> control, users can move a column to a new position by dragging the column header with the mouse.</span></span> <span data-ttu-id="02a6c-104">在 <xref:System.Windows.Forms.DataGridView> 控制項中，<xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 屬性值會決定使用者是否能將資料行移至不同位置。</span><span class="sxs-lookup"><span data-stu-id="02a6c-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> property value determines whether users can move columns to different positions.</span></span>  
   
- 在 Visual Studio 中會支援這項工作。  另請參閱[如何：使用設計工具在 Windows Form DataGridView 控制項中啟用資料行重新調整順序](http://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))。  
+ <span data-ttu-id="02a6c-105">在 Visual Studio 中會支援這項工作。</span><span class="sxs-lookup"><span data-stu-id="02a6c-105">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="02a6c-106">另請參閱[How to： 啟用資料行重新調整順序中使用 Windows Form DataGridView 控制項設計工具](http://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="02a6c-106">Also see [How to: Enable Column Reordering in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))</span></span>  
   
-### 以程式設計方式啟用資料行重新調整順序  
+### <a name="to-enable-column-reordering-programmatically"></a><span data-ttu-id="02a6c-107">以程式設計方式啟用資料行重新調整順序</span><span class="sxs-lookup"><span data-stu-id="02a6c-107">To enable column reordering programmatically</span></span>  
   
--   將 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=fullName> 屬性設定為 `true`。  
+-   <span data-ttu-id="02a6c-108">將 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 屬性設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="02a6c-108">Set the <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#060](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#060)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#060](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#060)]  
   
-## 編譯程式碼  
- 這個範例需要：  
+## <a name="compiling-the-code"></a><span data-ttu-id="02a6c-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="02a6c-109">Compiling the Code</span></span>  
+ <span data-ttu-id="02a6c-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="02a6c-110">This example requires:</span></span>  
   
--   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+-   <span data-ttu-id="02a6c-111">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="02a6c-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <xref:System?displayProperty=fullName> 和 <xref:System.Windows.Forms?displayProperty=fullName> 組件的參考。  
+-   <span data-ttu-id="02a6c-112"><xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="02a6c-112">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=fullName>   
- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)   
- [如何：凍結 Windows Form DataGridView 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="02a6c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02a6c-113">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="02a6c-114">Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能</span><span class="sxs-lookup"><span data-stu-id="02a6c-114">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [<span data-ttu-id="02a6c-115">操作說明：凍結 Windows Forms DataGridView 控制項中的資料行</span><span class="sxs-lookup"><span data-stu-id="02a6c-115">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

@@ -1,28 +1,31 @@
 ---
-title: "使用標準端點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用標準端點"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 85dda1619fe3a77c4716806de2467cb96287b2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用標準端點
-這個範例示範如何在服務組態檔中使用標準端點。  標準端點可讓使用者透過使用單一屬性描述位址、繫結和合約組合，並且將其他屬性與該屬性產生關聯的方式簡化端點定義。  這個範例示範如何定義及實作自訂標準端點，以及如何定義端點中的特定屬性。  
+# <a name="usage-of-standard-endpoints"></a><span data-ttu-id="8385f-102">使用標準端點</span><span class="sxs-lookup"><span data-stu-id="8385f-102">Usage of Standard Endpoints</span></span>
+<span data-ttu-id="8385f-103">這個範例示範如何在服務組態檔中使用標準端點。</span><span class="sxs-lookup"><span data-stu-id="8385f-103">This sample demonstrates how to use standard endpoints in service configuration files.</span></span> <span data-ttu-id="8385f-104">標準端點可讓使用者透過使用單一屬性描述位址、繫結和合約組合，並且將其他屬性與該屬性產生關聯的方式簡化端點定義。</span><span class="sxs-lookup"><span data-stu-id="8385f-104">A standard endpoint allows the user to simplify endpoint definitions by using a single property to describe an address, binding and contract combination with additional properties associated to it.</span></span> <span data-ttu-id="8385f-105">這個範例示範如何定義及實作自訂標準端點，以及如何定義端點中的特定屬性。</span><span class="sxs-lookup"><span data-stu-id="8385f-105">This sample demonstrates how to define and implement a custom standard endpoint and how to define specific properties in the endpoint.</span></span>  
   
-## 範例詳細資料  
- 服務端點可以透過提供三個參數指定：位址、繫結和合約。  其他可提供的參數包括行為組態、標頭和接聽 URI 等。  在某些情況下，任何或所有位址、繫結和合約會有無法變更的值。  因此可以使用標準端點。  這類端點的範例包括中繼資料交換端點和探索端點。  標準端點還可透過允許設定服務端點，而不需提供固定特質的資訊或建立自己的標準端點，藉此改善可用性，例如透過提供一組合理的預設值，因而降低組態檔的詳細程度，達到改善可用性的目的。  
+## <a name="sample-details"></a><span data-ttu-id="8385f-106">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="8385f-106">Sample Details</span></span>  
+ <span data-ttu-id="8385f-107">服務端點可以透過提供三個參數指定：位址、繫結和合約。</span><span class="sxs-lookup"><span data-stu-id="8385f-107">Service endpoints can be specified by supplying three parameters: address, binding and contract.</span></span> <span data-ttu-id="8385f-108">其他可提供的參數包括行為組態、標頭和接聽 URI 等。</span><span class="sxs-lookup"><span data-stu-id="8385f-108">Other parameters that can be supplied include behavior configuration, headers, listen URI, and so on.</span></span> <span data-ttu-id="8385f-109">在某些情況下，任何或所有位址、繫結和合約會有無法變更的值。</span><span class="sxs-lookup"><span data-stu-id="8385f-109">In some cases, any or all of addresses, bindings and contracts have values that cannot change.</span></span> <span data-ttu-id="8385f-110">因此可以使用標準端點。</span><span class="sxs-lookup"><span data-stu-id="8385f-110">For this reason, it is possible to use standard endpoints.</span></span> <span data-ttu-id="8385f-111">這類端點的範例包括中繼資料交換端點和探索端點。</span><span class="sxs-lookup"><span data-stu-id="8385f-111">Some examples of such endpoints include metadata exchange endpoints and discovery endpoints.</span></span> <span data-ttu-id="8385f-112">標準端點還可透過允許設定服務端點，而不需提供固定特質的資訊或建立自己的標準端點，藉此改善可用性，例如透過提供一組合理的預設值，因而降低組態檔的詳細程度，達到改善可用性的目的。</span><span class="sxs-lookup"><span data-stu-id="8385f-112">Standard endpoints also improve usability by allowing configuration of service endpoints without having to provide information of a fixed nature or to create their own standard endpoints, for example to improve usability by supplying a reasonable set of default values and thus reducing the verbosity of configuration files.</span></span>  
   
- 這個範例包括兩個專案：定義兩個標準端點的服務，以及與該服務進行通訊的用戶端。  在組態檔中為服務定義標準端點的方式如下列範例所示。  
+ <span data-ttu-id="8385f-113">這個範例包括兩個專案：定義兩個標準端點的服務，以及與該服務進行通訊的用戶端。</span><span class="sxs-lookup"><span data-stu-id="8385f-113">This sample consists of two projects: the service that defines two standard endpoints and the client that communicates with the service.</span></span> <span data-ttu-id="8385f-114">在組態檔中為服務定義標準端點的方式如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="8385f-114">The way the standard endpoints are defined for the service in the configuration file is show in the following example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,12 +56,11 @@ caps.handback.revision: 8
     </standardEndpoints>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- 為服務定義的第一個端點為 `customEndpoint` 類型，其定義可以在 `<standardEndpoints>` 區段中看見，其中 `property` 屬性的值會指定為 `true`。  這個案例中，端點擁有自訂的新屬性。  第二個端點會對應至中繼資料端點，其中位址、繫結和合約的值是固定的。  
+ <span data-ttu-id="8385f-115">為服務定義的第一個端點為 `customEndpoint` 類型，其定義可以在 `<standardEndpoints>` 區段中看見，其中 `property` 屬性的值會指定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="8385f-115">The first endpoint defined for the service is of kind `customEndpoint`, whose definition can be seen in the `<standardEndpoints>` section, in which the property `property` is given the value `true`.</span></span> <span data-ttu-id="8385f-116">這個案例中，端點擁有自訂的新屬性。</span><span class="sxs-lookup"><span data-stu-id="8385f-116">This is the case of an endpoint customized with a new property.</span></span> <span data-ttu-id="8385f-117">第二個端點會對應至中繼資料端點，其中位址、繫結和合約的值是固定的。</span><span class="sxs-lookup"><span data-stu-id="8385f-117">The second endpoint corresponds to a metadata endpoint, in which the values for address, binding and contract are fixed.</span></span>  
   
- 若要定義標準端點項目，則必須建立衍生自 `StandardEndpointElement` 的類別。  在這個範例中已定義 `CustomEndpointElement` 類別，如下列範例所示。  
+ <span data-ttu-id="8385f-118">若要定義標準端點項目，則必須建立衍生自 `StandardEndpointElement` 的類別。</span><span class="sxs-lookup"><span data-stu-id="8385f-118">To define the standard endpoint element, a class that derives from `StandardEndpointElement` must be created.</span></span> <span data-ttu-id="8385f-119">在這個範例中已定義 `CustomEndpointElement` 類別，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="8385f-119">In the case of this sample, the `CustomEndpointElement` class has been defined as shown in the following example.</span></span>  
   
 ```csharp  
 public class CustomEndpointElement : StandardEndpointElement  
@@ -109,10 +111,9 @@ public class CustomEndpointElement : StandardEndpointElement
     {  
     }  
 }  
-  
 ```  
   
- 在 `CreateServiceEndpoint` 函式中會建立 `CustomEndpoint` 物件。  其定義如下列範例所示。  
+ <span data-ttu-id="8385f-120">在 `CreateServiceEndpoint` 函式中會建立 `CustomEndpoint` 物件。</span><span class="sxs-lookup"><span data-stu-id="8385f-120">In the `CreateServiceEndpoint` function, a `CustomEndpoint` object is created.</span></span> <span data-ttu-id="8385f-121">其定義如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="8385f-121">Its definition is shown in the following example.</span></span>  
   
 ```  
 public class CustomEndpoint : ServiceEndpoint  
@@ -140,43 +141,42 @@ public class CustomEndpoint : ServiceEndpoint
             set;  
         }  
     }  
-  
 ```  
   
- 為了在服務和用戶端之間進行通訊，用戶端中會建立對服務的服務參考。  範例建立完成並執行時，服務就會執行且用戶端會與該服務通訊。  請注意，服務參考應該在每次服務中有變更時更新。  
+ <span data-ttu-id="8385f-122">為了在服務和用戶端之間進行通訊，用戶端中會建立對服務的服務參考。</span><span class="sxs-lookup"><span data-stu-id="8385f-122">To perform the communication between service and client, a service reference is created in the client to the service.</span></span> <span data-ttu-id="8385f-123">範例建立完成並執行時，服務就會執行且用戶端會與該服務通訊。</span><span class="sxs-lookup"><span data-stu-id="8385f-123">When the sample is built and executed, the service executes and the client communicates with it.</span></span> <span data-ttu-id="8385f-124">請注意，服務參考應該在每次服務中有變更時更新。</span><span class="sxs-lookup"><span data-stu-id="8385f-124">Note that the service reference should be updated every time there is some change in the service.</span></span>  
   
-#### 若要使用這個範例  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="8385f-125">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="8385f-125">To use this sample</span></span>  
   
-1.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 \[StandardEndpoints.sln\] 檔案。  
+1.  <span data-ttu-id="8385f-126">使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 開啟 [StandardEndpoints.sln] 檔案。</span><span class="sxs-lookup"><span data-stu-id="8385f-126">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the StandardEndpoints.sln file.</span></span>  
   
-2.  讓多個專案啟動。  
+2.  <span data-ttu-id="8385f-127">讓多個專案啟動。</span><span class="sxs-lookup"><span data-stu-id="8385f-127">Enable multiple projects to start up.</span></span>  
   
-    1.  以滑鼠右鍵按一下 \[**方案總管**\] 中的 \[標準端點\] 方案，然後選取 \[**屬性**\]。  
+    1.  <span data-ttu-id="8385f-128">在**方案總管 中**，以滑鼠右鍵按一下標準端點 方案，然後選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="8385f-128">In **Solution Explorer**, right-click the Standard Endpoints solution and then select **Properties**.</span></span>  
   
-    2.  選取 \[**通用屬性**\] 中的 \[**啟始專案**\]，然後按一下 \[**多個啟始專案**\]。  
+    2.  <span data-ttu-id="8385f-129">在**通用屬性**，選取**啟始專案**，然後按一下 **多個啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="8385f-129">In **Common Properties**, select **Startup Project**, and then click **Multiple Startup Projects**.</span></span>  
   
-    3.  將 \[服務\] 專案移至清單的開頭，並且將 \[**動作**\] 設為 \[**啟動**\]。  
+    3.  <span data-ttu-id="8385f-130">將 [服務] 專案移至清單的開頭，與**動作**設**啟動**。</span><span class="sxs-lookup"><span data-stu-id="8385f-130">Move the Service project to the beginning of the list, with the **Action** set to **Start**.</span></span>  
   
-    4.  將 \[用戶端\] 專案移至 \[服務\] 專案後面，並且同樣將 \[**動作**\] 設為 \[**啟動**\]。  
+    4.  <span data-ttu-id="8385f-131">移動也在與服務專案中之後, 用戶端專案**動作**設**啟動**。</span><span class="sxs-lookup"><span data-stu-id="8385f-131">Move the Client project after the Service project, also with the **Action** set to **Start**.</span></span>  
   
-         這樣會指定 \[用戶端\] 專案在 \[服務\] 專案之後執行。  
+         <span data-ttu-id="8385f-132">這樣會指定 [用戶端] 專案在 [服務] 專案之後執行。</span><span class="sxs-lookup"><span data-stu-id="8385f-132">This specifies that the Client project is executed after the Service project.</span></span>  
   
-3.  若要執行此方案，請按 F5。  
+3.  <span data-ttu-id="8385f-133">若要執行此方案，請按 F5。</span><span class="sxs-lookup"><span data-stu-id="8385f-133">To run the solution, press F5.</span></span>  
   
 > [!NOTE]
->  如果這些步驟沒有作用，則請使用下列步驟確認您的環境已正確設定。  
+>  <span data-ttu-id="8385f-134">如果這些步驟沒有作用，則請使用下列步驟確認您的環境已正確設定。</span><span class="sxs-lookup"><span data-stu-id="8385f-134">If these steps do not work, then make sure that your environment has been properly set up, using the following steps.</span></span>  
 >   
->  1.  請確定您已執行 [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
-> 2.  若要建置方案，請遵循 [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md) 中的指示進行。  
-> 3.  若要在單一或多個電腦組態中執行本範例，請遵循[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示進行。  
+>  1.  <span data-ttu-id="8385f-135">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="8385f-135">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+> 2.  <span data-ttu-id="8385f-136">若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="8385f-136">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+> 3.  <span data-ttu-id="8385f-137">若要執行範例單一或多個電腦組態，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="8385f-137">To run the sample in a single or multiple computer configurations, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。  請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="8385f-138">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="8385f-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8385f-139">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="8385f-139">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[適用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。  此範例位於下列目錄。  
+>  <span data-ttu-id="8385f-140">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="8385f-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8385f-141">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="8385f-141">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="8385f-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8385f-142">See Also</span></span>

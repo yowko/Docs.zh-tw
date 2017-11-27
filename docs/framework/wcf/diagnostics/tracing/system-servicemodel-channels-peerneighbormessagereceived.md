@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.PeerNeighborMessageReceived | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PeerNeighborMessageReceived
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c787b86c-08c9-4d44-80ce-a6d189deb732
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b354d6c284f7223cca6e014483231e3d04f57f73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PeerNeighborMessageReceived
-已從對等芳鄰收到訊息。  
+# <a name="systemservicemodelchannelspeerneighbormessagereceived"></a><span data-ttu-id="2b81c-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span><span class="sxs-lookup"><span data-stu-id="2b81c-102">System.ServiceModel.Channels.PeerNeighborMessageReceived</span></span>
+<span data-ttu-id="2b81c-103">已從對等芳鄰收到訊息。</span><span class="sxs-lookup"><span data-stu-id="2b81c-103">A message was received from a peer neighbor.</span></span>  
   
-## 描述  
- 這個追蹤會在處理來自芳鄰清單中節點的傳入訊息期間發生。  
+## <a name="description"></a><span data-ttu-id="2b81c-104">描述</span><span class="sxs-lookup"><span data-stu-id="2b81c-104">Description</span></span>  
+ <span data-ttu-id="2b81c-105">這個追蹤會在處理來自芳鄰清單中節點的傳入訊息期間發生。</span><span class="sxs-lookup"><span data-stu-id="2b81c-105">This trace occurs during the processing of an incoming message from a node in the neighbor list.</span></span>  
   
-## 請參閱  
- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="2b81c-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2b81c-106">See Also</span></span>  
+ [<span data-ttu-id="2b81c-107">追蹤</span><span class="sxs-lookup"><span data-stu-id="2b81c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="2b81c-108">使用追蹤來疑難排解您的應用程式</span><span class="sxs-lookup"><span data-stu-id="2b81c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="2b81c-109">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="2b81c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

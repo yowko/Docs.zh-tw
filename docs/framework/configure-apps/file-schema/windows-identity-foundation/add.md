@@ -1,64 +1,73 @@
 ---
-title: "&lt;add&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;add&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: cc1907d5f6117307ebadd04641c9eddc48e77cec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;add&gt;
-將指定的安全性語彙基元的處理常式加入語彙基元的處理常式集合。  
+# <a name="ltaddgt"></a><span data-ttu-id="af4e0-102">&lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="af4e0-102">&lt;add&gt;</span></span>
+<span data-ttu-id="af4e0-103">將指定的安全性權杖處理常式加入至權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="af4e0-103">Adds the specified security token handler to the token handler collection.</span></span>  
   
-## 語法  
+ <span data-ttu-id="af4e0-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="af4e0-104">\<system.identityModel></span></span>  
+<span data-ttu-id="af4e0-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="af4e0-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="af4e0-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="af4e0-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="af4e0-107">\<add></span><span class="sxs-lookup"><span data-stu-id="af4e0-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="af4e0-108">語法</span><span class="sxs-lookup"><span data-stu-id="af4e0-108">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type=xs:string>  
-        <optionalConfigurationElement>  
-        </optionalConfigurationElement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type=xs:string>  
+        <optionalConfigurationElement>  
+        </optionalConfigurationElement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="af4e0-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="af4e0-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="af4e0-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="af4e0-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="af4e0-111">屬性</span><span class="sxs-lookup"><span data-stu-id="af4e0-111">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|type|要加入語彙基元的處理常式的 CLR 型別名稱。  如需有關如何指定`type`屬性，請參閱[Custom Type References](http://msdn.microsoft.com/zh-tw/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。|  
+|<span data-ttu-id="af4e0-112">屬性</span><span class="sxs-lookup"><span data-stu-id="af4e0-112">Attribute</span></span>|<span data-ttu-id="af4e0-113">描述</span><span class="sxs-lookup"><span data-stu-id="af4e0-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="af4e0-114">類型</span><span class="sxs-lookup"><span data-stu-id="af4e0-114">type</span></span>|<span data-ttu-id="af4e0-115">要加入的語彙基元處理常式的 CLR 型別名稱。</span><span class="sxs-lookup"><span data-stu-id="af4e0-115">The CLR type name of the token handler to be added.</span></span> <span data-ttu-id="af4e0-116">如需有關如何指定`type`屬性，請參閱[自訂型別參考](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。</span><span class="sxs-lookup"><span data-stu-id="af4e0-116">For more information about how to specify the `type` attribute, see [Custom Type References](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).</span></span>|  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="af4e0-117">子元素</span><span class="sxs-lookup"><span data-stu-id="af4e0-117">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<samlSecurityTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|提供設定<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別， <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或衍生的類別的任一種類別。|  
-|[\<sessionTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|提供設定<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。|  
-|[\<userNameSecurityTokenHandlerRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|提供設定<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>類別或衍生的類別。|  
-|[\<x509SecurityTokenHandlerRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|提供選擇性的設定，如<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生的類別。|  
+|<span data-ttu-id="af4e0-118">項目</span><span class="sxs-lookup"><span data-stu-id="af4e0-118">Element</span></span>|<span data-ttu-id="af4e0-119">說明</span><span class="sxs-lookup"><span data-stu-id="af4e0-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="af4e0-120">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="af4e0-120">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="af4e0-121">提供組態<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或衍生的類別中的這些類別的其中一個。</span><span class="sxs-lookup"><span data-stu-id="af4e0-121">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="af4e0-122">\<sessionTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="af4e0-122">\<sessionTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|<span data-ttu-id="af4e0-123">提供組態<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類別或衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="af4e0-123">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>|  
+|[<span data-ttu-id="af4e0-124">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="af4e0-124">\<userNameSecurityTokenHandlerRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|<span data-ttu-id="af4e0-125">提供組態<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>類別或衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="af4e0-125">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>|  
+|[<span data-ttu-id="af4e0-126">\<x509SecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="af4e0-126">\<x509SecurityTokenHandlerRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|<span data-ttu-id="af4e0-127">提供選擇性組態<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="af4e0-127">Provides optional configuration for the <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> class or derived classes.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="af4e0-128">父項目</span><span class="sxs-lookup"><span data-stu-id="af4e0-128">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|指定登錄與端點的安全性語彙基元處理常式的集合。|  
+|<span data-ttu-id="af4e0-129">項目</span><span class="sxs-lookup"><span data-stu-id="af4e0-129">Element</span></span>|<span data-ttu-id="af4e0-130">說明</span><span class="sxs-lookup"><span data-stu-id="af4e0-130">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="af4e0-131">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="af4e0-131">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="af4e0-132">指定註冊的端點的安全性權杖處理常式的集合。</span><span class="sxs-lookup"><span data-stu-id="af4e0-132">Specifies a collection of security token handlers that are registered with the endpoint.</span></span>|  
   
-## 備註  
- `<add>`項目可以取得指定語彙基元的處理常式組態的單一子項目。  這是取決於處理常式類別是否參考到`type`屬性的`<add>`項目會提供這項功能的支援。  語彙基元的處理常式類別，可以提供這項功能必須公開 \(expose\) 使用的建構函式<xref:System.Xml.XmlElement>物件。  
+## <a name="remarks"></a><span data-ttu-id="af4e0-133">備註</span><span class="sxs-lookup"><span data-stu-id="af4e0-133">Remarks</span></span>  
+ <span data-ttu-id="af4e0-134">`<add>`項目可指定的語彙基元處理常式組態的單一子項目。</span><span class="sxs-lookup"><span data-stu-id="af4e0-134">The `<add>` element can take a single child element that specifies the configuration for the token handler.</span></span> <span data-ttu-id="af4e0-135">這是相依於處理常式類別是否透過參考`type`屬性`<add>`元素提供這項功能的支援。</span><span class="sxs-lookup"><span data-stu-id="af4e0-135">This is dependent on whether the handler class referenced through the `type` attribute of the `<add>` element provides support for this feature.</span></span> <span data-ttu-id="af4e0-136">權杖處理常式類別，提供此功能必須公開 （expose) 的建構函式<xref:System.Xml.XmlElement>物件。</span><span class="sxs-lookup"><span data-stu-id="af4e0-136">Token handler classes that provide this feature must expose a constructor that takes an <xref:System.Xml.XmlElement> object.</span></span>  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,17 +78,17 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- 有幾個內建的安全性語彙基元的處理常式的類別有提供這項功能。  These classes are <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, and <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+ <span data-ttu-id="af4e0-137">數個內建安全性權杖處理常式類別並提供這項功能。</span><span class="sxs-lookup"><span data-stu-id="af4e0-137">Several of the built-in security token handler classes do provide this functionality.</span></span> <span data-ttu-id="af4e0-138">這些類別是<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>， <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>， <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>，和<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>。</span><span class="sxs-lookup"><span data-stu-id="af4e0-138">These classes are <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, and <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.</span></span>  
   
 > [!IMPORTANT]
->  語彙基元的處理常式集合只能包含單一的處理任何的常式指定的型別。  這表示，例如，如果您想要加入的處理常式，衍生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別加入集合中，您必須先移除<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>，也就是預設為存在，集合中。  您可以使用[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)若要移除之集合或使用單一的處理常式的項目[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)要從集合移除所有的處理常式的項目。  
+>  <span data-ttu-id="af4e0-139">權杖處理常式集合只能包含單一的處理常式，任何給定的類型。</span><span class="sxs-lookup"><span data-stu-id="af4e0-139">The token handler collection can only contain a single handler of any given type.</span></span> <span data-ttu-id="af4e0-140">這表示，例如，如果您想要加入的處理常式，衍生自<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別加入集合中，您必須先移除<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>，它並根據預設，從集合存在。</span><span class="sxs-lookup"><span data-stu-id="af4e0-140">This means, for example, that if you want to add a handler that is derived from the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class to the collection, you must first remove the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, which is present by default, from the collection.</span></span> <span data-ttu-id="af4e0-141">您可以使用[\<移除 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)項目移除的集合或使用單一處理常式[\<清除 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)項目移除集合中的所有處理常式。</span><span class="sxs-lookup"><span data-stu-id="af4e0-141">You can use the [\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) element to remove a single handler from the collection or use the [\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) element to remove all handlers from the collection.</span></span>  
   
- 在處理常式中指定的設定會覆寫下的語彙基元的處理常式集合上所指定的對等設定[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目，並指定在服務層級下的[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目。  
+ <span data-ttu-id="af4e0-142">指定處理常式上設定覆寫下，權杖處理常式集合上指定的對等設定[ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)項目，並指定在服務層級下的[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)項目。</span><span class="sxs-lookup"><span data-stu-id="af4e0-142">Settings specified on a handler override equivalent settings specified on the token handler collection under the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element and those specified at the service-level under the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element.</span></span>  
   
-## 範例  
- 下列 XML 程式碼示範如何使用`<add>`和`<remove>`來取代預設的工作階段權杖處理常式和自訂工作階段的語彙基元處理常式的項目。  XML 來自`ClaimsAwareWebFarm`範例。  
+## <a name="example"></a><span data-ttu-id="af4e0-143">範例</span><span class="sxs-lookup"><span data-stu-id="af4e0-143">Example</span></span>  
+ <span data-ttu-id="af4e0-144">下列 XML 程式碼將示範如何使用`<add>`和`<remove>`自訂工作階段權杖處理常式以取代預設工作階段權杖處理常式項目。</span><span class="sxs-lookup"><span data-stu-id="af4e0-144">The following XML shows the use of the `<add>` and `<remove>` elements to replace the default session token handler with a custom session token handler.</span></span> <span data-ttu-id="af4e0-145">XML 取自`ClaimsAwareWebFarm`範例。</span><span class="sxs-lookup"><span data-stu-id="af4e0-145">The XML is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
   
-```  
+```xml  
 <securityTokenHandlers>  
   <remove type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
   <add type="System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  

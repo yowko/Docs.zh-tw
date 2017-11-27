@@ -1,37 +1,41 @@
 ---
-title: "如何：決定 Freezable 是否凍結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Freezable 物件, 判斷是否凍結"
-  - "IsFrozen 屬性"
+title: "如何：決定 Freezable 是否凍結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47fb0a871c3792450386c440629ead1ee3fbecdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：決定 Freezable 是否凍結
-下列範例說明如何判斷 <xref:System.Windows.Freezable> 物件是否凍結。  如果您試著修改凍結的 <xref:System.Windows.Freezable> 物件，它會擲回 <xref:System.InvalidOperationException>。  為避免擲回這個例外狀況，請使用 <xref:System.Windows.Freezable> 物件的 <xref:System.Windows.Freezable.IsFrozen%2A> 屬性，判斷物件是否凍結。  
+# <a name="how-to-determine-whether-a-freezable-is-frozen"></a><span data-ttu-id="b0a4a-102">如何：決定 Freezable 是否凍結</span><span class="sxs-lookup"><span data-stu-id="b0a4a-102">How to: Determine Whether a Freezable Is Frozen</span></span>
+<span data-ttu-id="b0a4a-103">這個範例示範如何判斷是否<xref:System.Windows.Freezable>物件已凍結。</span><span class="sxs-lookup"><span data-stu-id="b0a4a-103">This example shows how to determine whether a <xref:System.Windows.Freezable> object is frozen.</span></span> <span data-ttu-id="b0a4a-104">如果您嘗試修改凍結<xref:System.Windows.Freezable>物件，就會擲回<xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="b0a4a-104">If you try to modify a frozen <xref:System.Windows.Freezable> object, it throws an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="b0a4a-105">若要避免擲回這個例外狀況，請使用<xref:System.Windows.Freezable.IsFrozen%2A>屬性<xref:System.Windows.Freezable>物件，以判斷是否已凍結。</span><span class="sxs-lookup"><span data-stu-id="b0a4a-105">To avoid throwing this exception, use the <xref:System.Windows.Freezable.IsFrozen%2A> property of the <xref:System.Windows.Freezable> object to determine whether it is frozen.</span></span>  
   
-## 範例  
- 下列範例會凍結 <xref:System.Windows.Media.SolidColorBrush>，然後使用 <xref:System.Windows.Freezable.IsFrozen%2A> 屬性測試它，以判斷它是否凍結。  
+## <a name="example"></a><span data-ttu-id="b0a4a-106">範例</span><span class="sxs-lookup"><span data-stu-id="b0a4a-106">Example</span></span>  
+ <span data-ttu-id="b0a4a-107">下列範例會凍結<xref:System.Windows.Media.SolidColorBrush>，然後使用測試<xref:System.Windows.Freezable.IsFrozen%2A>屬性來判斷是否已凍結。</span><span class="sxs-lookup"><span data-stu-id="b0a4a-107">The following example freezes a <xref:System.Windows.Media.SolidColorBrush> and then tests it by using the <xref:System.Windows.Freezable.IsFrozen%2A> property to determine whether it is frozen.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- 如需 <xref:System.Windows.Freezable> 物件的詳細資訊，請參閱 [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ <span data-ttu-id="b0a4a-108">如需有關<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="b0a4a-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Freezable>   
- <xref:System.Windows.Freezable.IsFrozen%2A>   
- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [HOW TO 主題](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="b0a4a-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b0a4a-109">See Also</span></span>  
+ <xref:System.Windows.Freezable>  
+ <xref:System.Windows.Freezable.IsFrozen%2A>  
+ [<span data-ttu-id="b0a4a-110">Freezable 物件概觀</span><span class="sxs-lookup"><span data-stu-id="b0a4a-110">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="b0a4a-111">操作說明主題</span><span class="sxs-lookup"><span data-stu-id="b0a4a-111">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

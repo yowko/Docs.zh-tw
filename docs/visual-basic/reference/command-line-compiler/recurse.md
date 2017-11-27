@@ -1,78 +1,61 @@
 ---
-title: "/recurse |Microsoft 文件"
-ms.date: 2015-07-20
+title: /recurse
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /recurse compiler option [Visual Basic]
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbf7d67c7f70345e62ddbb03c8626b688b5c593b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb69c7c44dcc2e8da5eb8a76f7d22f936a6d948f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="recurse"></a>/recurse
-編譯原始程式碼檔指定的目錄或專案目錄中的所有子目錄中。  
+# <a name="recurse"></a><span data-ttu-id="84b48-102">/recurse</span><span class="sxs-lookup"><span data-stu-id="84b48-102">/recurse</span></span>
+<span data-ttu-id="84b48-103">編譯指定的目錄或專案目錄的子目錄中的原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="84b48-103">Compiles source-code files in all child directories of either the specified directory or the project directory.</span></span>  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a><span data-ttu-id="84b48-104">語法</span><span class="sxs-lookup"><span data-stu-id="84b48-104">Syntax</span></span>  
   
 ```  
 /recurse:[dir\]file  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a><span data-ttu-id="84b48-105">引數</span><span class="sxs-lookup"><span data-stu-id="84b48-105">Arguments</span></span>  
  `dir`  
- 選擇項。 您想要開始搜尋的目錄。 如果未指定，則會在專案目錄中開始搜尋。  
+ <span data-ttu-id="84b48-106">選擇項。</span><span class="sxs-lookup"><span data-stu-id="84b48-106">Optional.</span></span> <span data-ttu-id="84b48-107">您想要開始搜尋的目錄。</span><span class="sxs-lookup"><span data-stu-id="84b48-107">The directory in which you want the search to begin.</span></span> <span data-ttu-id="84b48-108">如果未指定，則會在專案目錄中開始搜尋。</span><span class="sxs-lookup"><span data-stu-id="84b48-108">If not specified, the search begins in the project directory.</span></span>  
   
  `file`  
- 必要項。 要搜尋的檔案。 允許萬用字元。  
+ <span data-ttu-id="84b48-109">必要項。</span><span class="sxs-lookup"><span data-stu-id="84b48-109">Required.</span></span> <span data-ttu-id="84b48-110">要搜尋的檔案。</span><span class="sxs-lookup"><span data-stu-id="84b48-110">The file(s) to search for.</span></span> <span data-ttu-id="84b48-111">允許萬用字元。</span><span class="sxs-lookup"><span data-stu-id="84b48-111">Wildcard characters are allowed.</span></span>  
   
-## <a name="remarks"></a>備註  
- 您也可以在檔案名稱中使用萬用字元，編譯專案目錄中所有相符的檔案，而不需使用`/recurse`。 如果沒有指定輸出檔名是，編譯器來建立輸出檔名稱，第一個處理的輸入檔。 這通常是在編譯時依字母順序檢視檔案清單中的第一個檔案。 基於這個理由，最好指定輸出檔使用`/out`選項。  
+## <a name="remarks"></a><span data-ttu-id="84b48-112">備註</span><span class="sxs-lookup"><span data-stu-id="84b48-112">Remarks</span></span>  
+ <span data-ttu-id="84b48-113">您也可以在檔案名稱中使用萬用字元，編譯專案目錄中所有相符的檔案，而不使用`/recurse`。</span><span class="sxs-lookup"><span data-stu-id="84b48-113">You can use wildcards in a file name to compile all matching files in the project directory without using `/recurse`.</span></span> <span data-ttu-id="84b48-114">如果沒有任何輸出檔案名稱指定時，編譯器會根據處理第一個輸入檔的輸出檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="84b48-114">If no output file name is specified, the compiler bases the output file name on the first input file processed.</span></span> <span data-ttu-id="84b48-115">這通常是在編譯時依字母順序檢視檔清單中的第一個檔案。</span><span class="sxs-lookup"><span data-stu-id="84b48-115">This is generally the first file in the list of files compiled when viewed alphabetically.</span></span> <span data-ttu-id="84b48-116">基於這個理由，建議您最好以指定輸出檔案使用`/out`選項。</span><span class="sxs-lookup"><span data-stu-id="84b48-116">For this reason, it is best to specify an output file using the `/out` option.</span></span>  
   
 > [!NOTE]
->  `/recurse`選項不是從 Visual Studio 開發環境中使用，可從命令列編譯時，才。  
+>  <span data-ttu-id="84b48-117">`/recurse`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。</span><span class="sxs-lookup"><span data-stu-id="84b48-117">The `/recurse` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>範例  
- 下列程式碼編譯所有[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]目前目錄中的檔案。  
+## <a name="example"></a><span data-ttu-id="84b48-118">範例</span><span class="sxs-lookup"><span data-stu-id="84b48-118">Example</span></span>  
+ <span data-ttu-id="84b48-119">下列程式碼會編譯所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]目前目錄中的檔案。</span><span class="sxs-lookup"><span data-stu-id="84b48-119">The following code compiles all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the current directory.</span></span>  
   
 ```  
 vbc *.vb  
 ```  
   
- 下列程式碼編譯所有[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]檔案中`Test\ABC`目錄和其下，任何目錄，然後產生`Test.ABC.dll`。  
+ <span data-ttu-id="84b48-120">下列程式碼會編譯所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]檔案`Test\ABC`目錄和任何目錄下方，然後產生`Test.ABC.dll`。</span><span class="sxs-lookup"><span data-stu-id="84b48-120">The following code compiles all [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] files in the `Test\ABC` directory and any directories below it, and then generates `Test.ABC.dll`.</span></span>  
   
 ```  
 vbc /target:library /out:Test.ABC.dll /recurse:Test\ABC\*.vb  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)   
- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="84b48-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="84b48-121">See Also</span></span>  
+ [<span data-ttu-id="84b48-122">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="84b48-122">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="84b48-123">/out (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84b48-123">/out (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)  
+ [<span data-ttu-id="84b48-124">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="84b48-124">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

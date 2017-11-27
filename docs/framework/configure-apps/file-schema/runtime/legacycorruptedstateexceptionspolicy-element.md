@@ -1,81 +1,83 @@
 ---
-title: "&lt;legacyCorruptedStateExceptionsPolicy&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<legacyCorruptedStateExceptionsPolicy> 項目"
-  - "legacyCorruptedStateExceptionsPolicy 項目"
+title: "&lt;legacyCorruptedStateExceptionsPolicy&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <legacyCorruptedStateExceptionsPolicy> element
+- legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e4379f6f38c886504905483cefd7c7a6bbd519ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;legacyCorruptedStateExceptionsPolicy&gt; 項目
-指定 Common Language Runtime 是否允許 Managed 程式碼攔截存取違規及其他毀損狀態例外狀況。  
+# <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a><span data-ttu-id="1ede3-102">&lt;legacyCorruptedStateExceptionsPolicy&gt;項目</span><span class="sxs-lookup"><span data-stu-id="1ede3-102">&lt;legacyCorruptedStateExceptionsPolicy&gt; Element</span></span>
+<span data-ttu-id="1ede3-103">指定 common language runtime 是否允許受管理的程式碼，以擷取存取違規和其他損毀的狀態例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1ede3-103">Specifies whether the common language runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>  
   
-## 語法  
+ <span data-ttu-id="1ede3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="1ede3-104">\<configuration></span></span>  
+<span data-ttu-id="1ede3-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="1ede3-105">\<runtime></span></span>  
+<span data-ttu-id="1ede3-106">\<legacyCorruptedStateExceptionsPolicy ></span><span class="sxs-lookup"><span data-stu-id="1ede3-106">\<legacyCorruptedStateExceptionsPolicy></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1ede3-107">語法</span><span class="sxs-lookup"><span data-stu-id="1ede3-107">Syntax</span></span>  
+  
+```xml  
 <legacyCorruptedStateExceptionsPolicy enabled="true|false"/>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1ede3-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="1ede3-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="1ede3-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="1ede3-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="1ede3-110">屬性</span><span class="sxs-lookup"><span data-stu-id="1ede3-110">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|`enabled`|必要屬性。<br /><br /> 指定應用程式要攔截毀損狀態例外狀況失敗，例如存取違規。|  
+|<span data-ttu-id="1ede3-111">屬性</span><span class="sxs-lookup"><span data-stu-id="1ede3-111">Attribute</span></span>|<span data-ttu-id="1ede3-112">描述</span><span class="sxs-lookup"><span data-stu-id="1ede3-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="1ede3-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="1ede3-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="1ede3-114">指定應用程式將會攔截損毀狀態例外狀況失敗，例如存取違規。</span><span class="sxs-lookup"><span data-stu-id="1ede3-114">Specifies that the application will catch corrupting state exception failures such as access violations.</span></span>|  
   
-## 啟用屬性  
+## <a name="enabled-attribute"></a><span data-ttu-id="1ede3-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="1ede3-115">enabled Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|`false`|應用程式不會攔截毀損狀態例外狀況失敗，例如存取違規。  這是預設值。|  
-|`true`|應用程式會攔截毀損狀態例外狀況失敗，例如存取違規。|  
+|<span data-ttu-id="1ede3-116">值</span><span class="sxs-lookup"><span data-stu-id="1ede3-116">Value</span></span>|<span data-ttu-id="1ede3-117">說明</span><span class="sxs-lookup"><span data-stu-id="1ede3-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="1ede3-118">應用程式不會抓取損毀狀態例外狀況失敗，例如存取違規。</span><span class="sxs-lookup"><span data-stu-id="1ede3-118">The application will not catch corrupting state exception failures such as access violations.</span></span> <span data-ttu-id="1ede3-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="1ede3-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="1ede3-120">應用程式將會攔截損毀狀態例外狀況失敗，例如存取違規。</span><span class="sxs-lookup"><span data-stu-id="1ede3-120">The application will catch corrupting state exception failures such as access violations.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="1ede3-121">子元素</span><span class="sxs-lookup"><span data-stu-id="1ede3-121">Child Elements</span></span>  
+ <span data-ttu-id="1ede3-122">無。</span><span class="sxs-lookup"><span data-stu-id="1ede3-122">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="1ede3-123">父項目</span><span class="sxs-lookup"><span data-stu-id="1ede3-123">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
+|<span data-ttu-id="1ede3-124">項目</span><span class="sxs-lookup"><span data-stu-id="1ede3-124">Element</span></span>|<span data-ttu-id="1ede3-125">描述</span><span class="sxs-lookup"><span data-stu-id="1ede3-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="1ede3-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="1ede3-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="1ede3-127">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="1ede3-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 備註  
- 在 .NET Framework 3.5 \(含\) 以前版本中，Common Language Runtime 允許 Managed 程式碼攔截毀損處理序狀態引發的例外狀況。  存取違規即是這種例外狀況類型的範例。  
+## <a name="remarks"></a><span data-ttu-id="1ede3-128">備註</span><span class="sxs-lookup"><span data-stu-id="1ede3-128">Remarks</span></span>  
+ <span data-ttu-id="1ede3-129">在.NET Framework 3.5 或更早版本中，通用語言執行平台允許 managed 程式碼來攔截已損毀處理序狀態所引發的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1ede3-129">In the .NET Framework version 3.5 and earlier, the common language runtime allowed managed code to catch exceptions that were raised by corrupted process states.</span></span> <span data-ttu-id="1ede3-130">存取違規是這種類型的例外狀況的範例。</span><span class="sxs-lookup"><span data-stu-id="1ede3-130">An access violation is an example of this type of exception.</span></span>  
   
- 從 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 開始，Managed 程式碼不再於 `catch` 區塊中攔截這些例外狀況類型。  但是，您可以覆寫這項變更，並透過兩種方式保留對毀損狀態例外狀況的處理機制：  
+ <span data-ttu-id="1ede3-131">從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 managed 程式碼不再攔截這些類型中的例外狀況的`catch`區塊。</span><span class="sxs-lookup"><span data-stu-id="1ede3-131">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], managed code no longer catches these types of exceptions in `catch` blocks.</span></span> <span data-ttu-id="1ede3-132">不過，您可以覆寫這項變更，並維護兩種方式中的損毀的狀態例外狀況的處理：</span><span class="sxs-lookup"><span data-stu-id="1ede3-132">However, you can override this change and maintain the handling of corrupted state exceptions in two ways:</span></span>  
   
--   將 `<legacyCorruptedStateExceptionsPolicy>` 項目的 `enabled` 屬性設定為 `true`。  這個組態設定會在整個處理序中套用，並影響所有方法。  
+-   <span data-ttu-id="1ede3-133">設定`<legacyCorruptedStateExceptionsPolicy>`項目的`enabled`屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="1ede3-133">Set the `<legacyCorruptedStateExceptionsPolicy>` element's `enabled` attribute to `true`.</span></span> <span data-ttu-id="1ede3-134">此組態設定會套用的 processwide，而且會影響所有方法。</span><span class="sxs-lookup"><span data-stu-id="1ede3-134">This configuration setting is applied processwide and affects all methods.</span></span>  
   
- \-或\-  
+ <span data-ttu-id="1ede3-135">-或-</span><span class="sxs-lookup"><span data-stu-id="1ede3-135">-or-</span></span>  
   
--   將 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=fullName> 屬性套用至包含例外狀況 `catch` 區塊的方法。  
+-   <span data-ttu-id="1ede3-136">套用<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>包含例外狀況的方法，此屬性`catch`區塊。</span><span class="sxs-lookup"><span data-stu-id="1ede3-136">Apply the <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> attribute to the method that contains the exceptions `catch` block.</span></span>  
   
- 這個組態項目只能在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] \(含\) 以後版本中使用。  
+ <span data-ttu-id="1ede3-137">這個組態項目是僅適用於[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]和更新版本。</span><span class="sxs-lookup"><span data-stu-id="1ede3-137">This configuration element is available only in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later.</span></span>  
   
-## 範例  
- 在下列範例中，會示範如何指定應用程式應還原成 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 之前的行為，並攔截所有毀損狀態例外狀況失敗。  
+## <a name="example"></a><span data-ttu-id="1ede3-138">範例</span><span class="sxs-lookup"><span data-stu-id="1ede3-138">Example</span></span>  
+ <span data-ttu-id="1ede3-139">下列範例示範如何指定應用程式應該還原成之前的行為[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，並攔截所有損毀狀態例外狀況失敗。</span><span class="sxs-lookup"><span data-stu-id="1ede3-139">The following example shows how to specify that the application should revert to the behavior before the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], and catch all corrupting state exception failures.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <legacyCorruptedStateExceptionsPolicy enabled="true" />  
@@ -83,7 +85,7 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>   
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="1ede3-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1ede3-140">See Also</span></span>  
+ <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
+ [<span data-ttu-id="1ede3-141">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="1ede3-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="1ede3-142">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="1ede3-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

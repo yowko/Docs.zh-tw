@@ -1,56 +1,60 @@
 ---
-title: "線條和曲線的反鋸齒功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "消除鋸齒"
-  - "消除鋸齒, 平滑模式"
-  - "GDI+, 消除鋸齒"
+title: "線條和曲線的反鋸齒功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- antialiasing
+- antialiasing [Windows Forms], smoothing modes
+- GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d69d635fbdd8720937cd189826c1496b8126ddef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 線條和曲線的反鋸齒功能
-使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 繪製線條時，您必須提供線條的起始點和結束點，但不必提供該線條的個別像素相關資訊。  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 與顯示驅動程式軟體搭配以決定必須開啟哪些像素，才可以在特定顯示裝置上顯示該線條。  
+# <a name="antialiasing-with-lines-and-curves"></a><span data-ttu-id="ed344-102">線條和曲線的反鋸齒功能</span><span class="sxs-lookup"><span data-stu-id="ed344-102">Antialiasing with Lines and Curves</span></span>
+<span data-ttu-id="ed344-103">當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製一條線，您提供的起點和結束點的行，但您沒有提供在列上的任何資訊的個別像素。</span><span class="sxs-lookup"><span data-stu-id="ed344-103">When you use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to draw a line, you provide the starting point and ending point of the line, but you do not have to provide any information about the individual pixels on the line.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ed344-104">顯示驅動程式軟體，以判斷哪一個像素為單位將會開啟以特定顯示裝置上顯示線與搭配運作。</span><span class="sxs-lookup"><span data-stu-id="ed344-104"> works in conjunction with the display driver software to determine which pixels will be turned on to show the line on a particular display device.</span></span>  
   
-## 鋸齒  
- 舉這條從點 \(4, 2\) 到點 \(16, 10\) 的直色紅線做為範例說明。  假設座標系統的原點在左上角，而度量單位為像素。  同時我們也假設 X 軸指向右方，而 Y 軸則向下延伸。  下圖將顯示在多重色彩背景上繪製的紅色線條的放大檢視畫面。  
+## <a name="aliasing"></a><span data-ttu-id="ed344-105">別名</span><span class="sxs-lookup"><span data-stu-id="ed344-105">Aliasing</span></span>  
+ <span data-ttu-id="ed344-106">請考慮直接紅線，會從點 （4，2） 移至的點 （16，10）。</span><span class="sxs-lookup"><span data-stu-id="ed344-106">Consider the straight red line that goes from the point (4, 2) to the point (16, 10).</span></span> <span data-ttu-id="ed344-107">假設座標系統的原點位於左上角和度量單位為像素。</span><span class="sxs-lookup"><span data-stu-id="ed344-107">Assume the coordinate system has its origin in the upper-left corner and that the unit of measure is the pixel.</span></span> <span data-ttu-id="ed344-108">也假設，x 軸指向右側，而 y 軸向下。</span><span class="sxs-lookup"><span data-stu-id="ed344-108">Also assume that the x-axis points to the right and the y-axis points down.</span></span> <span data-ttu-id="ed344-109">下圖顯示彩色的背景上繪製紅線放大的的檢視。</span><span class="sxs-lookup"><span data-stu-id="ed344-109">The following illustration shows an enlarged view of the red line drawn on a multicolored background.</span></span>  
   
- ![線條，無反鋸齒](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.png "AboutGdip02\_Art33")  
+ <span data-ttu-id="ed344-110">![線條，無反鋸齒](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.gif "AboutGdip02_Art33")</span><span class="sxs-lookup"><span data-stu-id="ed344-110">![Line, no antialiasing](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.gif "AboutGdip02_Art33")</span></span>  
   
- 用來呈現線條的紅色像素是不透明的。  這條直線的像素全部都是不透明的。  此類線條繪製方式所產生的線條會出現不規則 \(Jagged\) 外觀，看起來有點像階梯。  這種將線條繪製成階梯狀的技術稱為鋸齒 \(Aliasing\)；這種階梯為理論線條的鋸齒。  
+ <span data-ttu-id="ed344-111">用來呈現線條的紅色像素是不透明的。</span><span class="sxs-lookup"><span data-stu-id="ed344-111">The red pixels used to render the line are opaque.</span></span> <span data-ttu-id="ed344-112">行中有不透明的像素。</span><span class="sxs-lookup"><span data-stu-id="ed344-112">There are no partially transparent pixels in the line.</span></span> <span data-ttu-id="ed344-113">這種類型的行呈現所產生的線條不規則的外觀，並看起來有點像階梯。</span><span class="sxs-lookup"><span data-stu-id="ed344-113">This type of line rendering gives the line a jagged appearance, and the line looks somewhat like a staircase.</span></span> <span data-ttu-id="ed344-114">代表的階梯線條的這項技術稱為別名。階梯是理論行的別名。</span><span class="sxs-lookup"><span data-stu-id="ed344-114">This technique of representing a line with a staircase is called aliasing; the staircase is an alias for the theoretical line.</span></span>  
   
-## 反鋸齒  
- 另一種更為複雜的繪製線條技術是同時使用透明的像素和不透明的像素。  像素將設為純紅色或紅色與背景色彩的混色，但是這需要視像素與線條接近的程度。  此類繪製方式稱為反鋸齒 \(Antialiasing\)，並可產生肉眼便可察覺、更為平滑的線條。  下圖將顯示某些像素將與背景混色以產生反鋸齒線條。  
+## <a name="antialiasing"></a><span data-ttu-id="ed344-115">反鋸齒功能</span><span class="sxs-lookup"><span data-stu-id="ed344-115">Antialiasing</span></span>  
+ <span data-ttu-id="ed344-116">繪製線條更趨精密完美的技術包含使用透明的像素，以及不透明的像素為單位。</span><span class="sxs-lookup"><span data-stu-id="ed344-116">A more sophisticated technique for rendering a line involves using partially transparent pixels along with opaque pixels.</span></span> <span data-ttu-id="ed344-117">像素為單位設定為純紅色，或紅和背景色彩混合體，根據如何關閉它們是列。</span><span class="sxs-lookup"><span data-stu-id="ed344-117">Pixels are set to pure red, or to some blend of red and the background color, depending on how close they are to the line.</span></span> <span data-ttu-id="ed344-118">這種類型的呈現稱為反鋸齒功能，而導致人類的眼睛感知為更平滑線。</span><span class="sxs-lookup"><span data-stu-id="ed344-118">This type of rendering is called antialiasing and results in a line that the human eye perceives as more smooth.</span></span> <span data-ttu-id="ed344-119">下圖顯示如何在背景產生鋸齒線條與混合特定像素為單位。</span><span class="sxs-lookup"><span data-stu-id="ed344-119">The following illustration shows how certain pixels are blended with the background to produce an antialiased line.</span></span>  
   
- ![對線條進行反鋸齒處理](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.png "AboutGdip02\_Art34")  
+ <span data-ttu-id="ed344-120">![消除鋸齒線條](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.gif "AboutGdip02_Art34")</span><span class="sxs-lookup"><span data-stu-id="ed344-120">![Antialiasing a Line](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.gif "AboutGdip02_Art34")</span></span>  
   
- 反鋸齒 \(亦稱為平滑化\) 也可套用至曲線。  下圖將顯示平滑橢圓形的放大檢視畫面。  
+ <span data-ttu-id="ed344-121">反鋸齒功能，也稱為 平滑，也可以套用至曲線。</span><span class="sxs-lookup"><span data-stu-id="ed344-121">Antialiasing, also called smoothing, can also be applied to curves.</span></span> <span data-ttu-id="ed344-122">下圖顯示放大平滑的橢圓形的檢視。</span><span class="sxs-lookup"><span data-stu-id="ed344-122">The following illustration shows an enlarged view of a smoothed ellipse.</span></span>  
   
- ![對曲線進行反鋸齒處理](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.png "AboutGdip02\_Art35")  
+ <span data-ttu-id="ed344-123">![消除鋸齒曲線](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.gif "AboutGdip02_Art35")</span><span class="sxs-lookup"><span data-stu-id="ed344-123">![Antialiasing Curves](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.gif "AboutGdip02_Art35")</span></span>  
   
- 下圖將顯示同一個橢圓形的實際大小，一個未使用反鋸齒功能，另一個則使用反鋸齒功能。  
+ <span data-ttu-id="ed344-124">下圖顯示相同的橢圓形的實際大小，一次進行反鋸齒處理而一次使用反鋸齒功能。</span><span class="sxs-lookup"><span data-stu-id="ed344-124">The following illustration shows the same ellipse in its actual size, once without antialiasing and once with antialiasing.</span></span>  
   
- ![反鋸齒功能範例](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02\_Art36")  
+ <span data-ttu-id="ed344-125">![反鋸齒功能範例](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02_Art36")</span><span class="sxs-lookup"><span data-stu-id="ed344-125">![Antialiasing example](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02_Art36")</span></span>  
   
- 若要繪製使用反鋸齒功能的線條和曲線，請建立 <xref:System.Drawing.Graphics> 類別執行個體，並將其 <xref:System.Drawing.Graphics.SmoothingMode%2A> 屬性設定為 <xref:System.Drawing.Drawing2D.SmoothingMode> 或 <xref:System.Drawing.Drawing2D.SmoothingMode>。  然後，呼叫相同 <xref:System.Drawing.Graphics> 類別的其中一個繪圖方法。  
+ <span data-ttu-id="ed344-126">若要繪製的直線和曲線使用消除鋸齒，建立的執行個體<xref:System.Drawing.Graphics>類別並設定其<xref:System.Drawing.Graphics.SmoothingMode%2A>屬性<xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>或<xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>。</span><span class="sxs-lookup"><span data-stu-id="ed344-126">To draw lines and curves that use antialiasing, create an instance of the <xref:System.Drawing.Graphics> class and set its <xref:System.Drawing.Graphics.SmoothingMode%2A> property to <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> or <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>.</span></span> <span data-ttu-id="ed344-127">然後呼叫其中一個繪圖的方法相同<xref:System.Drawing.Graphics>類別。</span><span class="sxs-lookup"><span data-stu-id="ed344-127">Then call one of the drawing methods of that same <xref:System.Drawing.Graphics> class.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#81)]
  [!code-vb[LinesCurvesAndShapes#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
-## 請參閱  
- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=fullName>   
- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [如何：使用文字反鋸齒功能](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+## <a name="see-also"></a><span data-ttu-id="ed344-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed344-128">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
+ [<span data-ttu-id="ed344-129">線條、曲線和形狀</span><span class="sxs-lookup"><span data-stu-id="ed344-129">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="ed344-130">操作說明：使用文字反鋸齒功能</span><span class="sxs-lookup"><span data-stu-id="ed344-130">How to: Use Antialiasing with Text</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

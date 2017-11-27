@@ -1,31 +1,37 @@
 ---
-title: "HOW TO：使用交易括住資料提交 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "如何：使用異動括住提交的資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 071c0c8bc7e0bb8dca01e9fc51c66fb930ed102b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：使用交易括住資料提交
-您可以使用 <xref:System.Transactions.TransactionScope> 來括住資料庫提交。  如需詳細資訊，請參閱[交易支援](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)。  
+# <a name="how-to-bracket-data-submissions-by-using-transactions"></a><span data-ttu-id="a9067-102">如何：使用異動括住提交的資料</span><span class="sxs-lookup"><span data-stu-id="a9067-102">How to: Bracket Data Submissions by Using Transactions</span></span>
+<span data-ttu-id="a9067-103">您可以使用 <xref:System.Transactions.TransactionScope> 來括住資料庫提交。</span><span class="sxs-lookup"><span data-stu-id="a9067-103">You can use <xref:System.Transactions.TransactionScope> to bracket your submissions to the database.</span></span> <span data-ttu-id="a9067-104">如需詳細資訊，請參閱[交易支援](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)。</span><span class="sxs-lookup"><span data-stu-id="a9067-104">For more information, see [Transaction Support](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span></span>  
   
-## 範例  
- 下列程式碼會將資料庫提交封入 <xref:System.Transactions.TransactionScope> 中。  
+## <a name="example"></a><span data-ttu-id="a9067-105">範例</span><span class="sxs-lookup"><span data-stu-id="a9067-105">Example</span></span>  
+ <span data-ttu-id="a9067-106">下列程式碼會將資料庫提交封入 <xref:System.Transactions.TransactionScope> 中。</span><span class="sxs-lookup"><span data-stu-id="a9067-106">The following code encloses the database submission in a <xref:System.Transactions.TransactionScope>.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#3)]
  [!code-vb[DLinqSubmittingChanges#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#3)]  
   
-## 請參閱  
- [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
- [進行和提交資料變更](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)   
- [交易支援](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+## <a name="see-also"></a><span data-ttu-id="a9067-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9067-107">See Also</span></span>  
+ [<span data-ttu-id="a9067-108">下載範例資料庫</span><span class="sxs-lookup"><span data-stu-id="a9067-108">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="a9067-109">建立和提交資料變更</span><span class="sxs-lookup"><span data-stu-id="a9067-109">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
+ [<span data-ttu-id="a9067-110">異動支援</span><span class="sxs-lookup"><span data-stu-id="a9067-110">Transaction Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)

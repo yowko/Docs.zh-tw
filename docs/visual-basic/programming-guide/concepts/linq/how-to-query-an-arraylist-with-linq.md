@@ -1,46 +1,37 @@
 ---
-title: "如何︰ 使用 LINQ (Visual Basic) 查詢 ArrayList |Microsoft 文件"
+title: "如何： 查詢 ArrayList 使用 LINQ (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6740d8a7c6d4a31ccd3730249695c24c6417785d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>如何︰ 使用 LINQ (Visual Basic) 查詢 ArrayList
-當您使用 LINQ 查詢的非泛型時<xref:System.Collections.IEnumerable>集合，例如<xref:System.Collections.ArrayList>，您必須明確宣告的範圍變數，以反映在集合中物件的特定類型的類型。</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> 例如，如果您有<xref:System.Collections.ArrayList>的`Student`物件，您[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)應該看起來像這樣︰</xref:System.Collections.ArrayList>  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a><span data-ttu-id="df384-102">如何： 查詢 ArrayList 使用 LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df384-102">How to: Query an ArrayList with LINQ (Visual Basic)</span></span>
+<span data-ttu-id="df384-103">使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。</span><span class="sxs-lookup"><span data-stu-id="df384-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="df384-104">例如，如果您有<xref:System.Collections.ArrayList>的`Student`物件，您[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)應該看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="df384-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [From Clause](../../../../visual-basic/language-reference/queries/from-clause.md) should look like this:</span></span>  
   
 ```  
 Dim query = From student As Student In arrList   
 ...  
 ```  
   
- 藉由指定的範圍變數的類型，您正在轉換中的每個項目<xref:System.Collections.ArrayList>到`Student`。</xref:System.Collections.ArrayList>  
+ <span data-ttu-id="df384-105">藉由指定範圍變數的類型，您就可以將 <xref:System.Collections.ArrayList> 中的每個項目轉換為 `Student`。</span><span class="sxs-lookup"><span data-stu-id="df384-105">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
   
- 在查詢運算式中明確指定型別的的範圍變數的用途就相當於呼叫<xref:System.Linq.Enumerable.Cast%2A>方法。</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>如果無法執行指定的轉型，則會擲回例外狀況。</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>和<xref:System.Linq.Enumerable.OfType%2A>對非泛型的兩個標準查詢運算子方法<xref:System.Collections.IEnumerable>型別。</xref:System.Collections.IEnumerable> </xref:System.Linq.Enumerable.OfType%2A></xref:System.Linq.Enumerable.Cast%2A> 在 Visual Basic 中，您必須明確地呼叫<xref:System.Linq.Enumerable.Cast%2A>方法上的資料來源，以確保特定範圍的變數型別。</xref:System.Linq.Enumerable.Cast%2A> 如需詳細資訊，請參閱[查詢作業 (Visual Basic) 中的型別關聯性](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。  
+ <span data-ttu-id="df384-106">在查詢運算式中使用具有明確類型的範圍變數，相當於呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="df384-106">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="df384-107">如果無法執行指定的轉換，則 <xref:System.Linq.Enumerable.Cast%2A> 會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="df384-107"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="df384-108"><xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是對非泛型 <xref:System.Collections.IEnumerable> 類型執行的兩個標準查詢運算子方法。</span><span class="sxs-lookup"><span data-stu-id="df384-108"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="df384-109">在 Visual Basic 中，您必須明確呼叫<xref:System.Linq.Enumerable.Cast%2A>資料來源，以確保特定範圍的變數類型上的方法。</span><span class="sxs-lookup"><span data-stu-id="df384-109">In Visual Basic, you must explicitly call the <xref:System.Linq.Enumerable.Cast%2A> method on the data source to ensure a specific range variable type.</span></span> <span data-ttu-id="df384-110">如需詳細資訊，請參閱[查詢作業 (Visual Basic) 中的類型關聯性](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="df384-110">For more information, see[Type Relationships in Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).</span></span>  
   
-## <a name="example"></a>範例  
- 下列範例顯示簡單的查詢，透過<xref:System.Collections.ArrayList>.</xref:System.Collections.ArrayList> 請注意，此範例會使用物件初始設定式時，程式碼呼叫<xref:System.Collections.ArrayList.Add%2A>方法，但這不一定。</xref:System.Collections.ArrayList.Add%2A>  
+## <a name="example"></a><span data-ttu-id="df384-111">範例</span><span class="sxs-lookup"><span data-stu-id="df384-111">Example</span></span>  
+ <span data-ttu-id="df384-112">下列範例將顯示 <xref:System.Collections.ArrayList> 的簡單查詢。</span><span class="sxs-lookup"><span data-stu-id="df384-112">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="df384-113">請注意，此範例會在程式碼呼叫 <xref:System.Collections.ArrayList.Add%2A> 方法時使用物件初始設定式，但這不是必要的。</span><span class="sxs-lookup"><span data-stu-id="df384-113">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
   
 ```vb  
 Imports System.Collections  
@@ -94,6 +85,5 @@ End Module
 '   Garcia: 97  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="df384-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="df384-114">See Also</span></span>  
+ [<span data-ttu-id="df384-115">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df384-115">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

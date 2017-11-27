@@ -1,32 +1,35 @@
 ---
-title: "指定自訂的加密演算法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "指定自訂的加密演算法"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 630457e4d1b30fe2a9439c3a41af5da92606c55a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 指定自訂的加密演算法
-WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編譯演算法。  其步驟如下：  
+# <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="12de3-102">指定自訂的加密演算法</span><span class="sxs-lookup"><span data-stu-id="12de3-102">Specifying a Custom Crypto Algorithm</span></span>
+<span data-ttu-id="12de3-103">WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編譯演算法。</span><span class="sxs-lookup"><span data-stu-id="12de3-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="12de3-104">其步驟如下：</span><span class="sxs-lookup"><span data-stu-id="12de3-104">This is done by the following steps:</span></span>  
   
-1.  從 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生類別  
+1.  <span data-ttu-id="12de3-105">從 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生類別</span><span class="sxs-lookup"><span data-stu-id="12de3-105">Derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span></span>  
   
-2.  註冊演算法  
+2.  <span data-ttu-id="12de3-106">註冊演算法</span><span class="sxs-lookup"><span data-stu-id="12de3-106">Register the algorithm</span></span>  
   
-3.  使用 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生的類別設定繫結。  
+3.  <span data-ttu-id="12de3-107">使用 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生的類別設定繫結。</span><span class="sxs-lookup"><span data-stu-id="12de3-107">Configure the binding with the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class.</span></span>  
   
-## 從 SecurityAlgorithmSuite 衍生類別  
- <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 是一個抽象的基底類別，可讓您指定執行各種安全性相關作業時使用的演算法。  例如，計算數位簽章的雜湊或加密訊息。  下列程式碼示範如何從 <xref:System.ServiceModel.Security.SecurityAlgorithm> 衍生類別：  
+## <a name="derive-a-class-from-securityalgorithmsuite"></a><span data-ttu-id="12de3-108">從 SecurityAlgorithmSuite 衍生類別</span><span class="sxs-lookup"><span data-stu-id="12de3-108">Derive a class from SecurityAlgorithmSuite</span></span>  
+ <span data-ttu-id="12de3-109"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 是一個抽象的基底類別，可讓您指定執行各種安全性相關作業時使用的演算法。</span><span class="sxs-lookup"><span data-stu-id="12de3-109">The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> is an abstract base class that allows you to specify the algorithm to use when performing various security related operations.</span></span> <span data-ttu-id="12de3-110">例如，計算數位簽章的雜湊或加密訊息。</span><span class="sxs-lookup"><span data-stu-id="12de3-110">For example, computing a hash for a digital signature or encrypting a message.</span></span> <span data-ttu-id="12de3-111">下列程式碼示範如何從 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生類別：</span><span class="sxs-lookup"><span data-stu-id="12de3-111">The following code shows how to derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span></span>  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -91,11 +94,10 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
             return length >= 128 && length <= 256;  
         }  
     }  
-  
 ```  
   
-## 註冊自訂演算法  
- 您可以在組態檔或命令式程式碼中進行註冊。  註冊自訂演算法的方法是，在實作密碼編譯服務提供者和別名的類別之間建立對應。  接著，將別名對應到在 WCF 服務的繫結中指定演算法時使用的 URI。  下列組態程式碼片段說明如何在組態中註冊自訂演算法：  
+## <a name="register-the-custom-algorithm"></a><span data-ttu-id="12de3-112">註冊自訂演算法</span><span class="sxs-lookup"><span data-stu-id="12de3-112">Register the Custom Algorithm</span></span>  
+ <span data-ttu-id="12de3-113">您可以在組態檔或命令式程式碼中進行註冊。</span><span class="sxs-lookup"><span data-stu-id="12de3-113">Registration can be done in a configuration file or in imperative code.</span></span> <span data-ttu-id="12de3-114">註冊自訂演算法的方法是，在實作密碼編譯服務提供者和別名的類別之間建立對應。</span><span class="sxs-lookup"><span data-stu-id="12de3-114">Registering a custom algorithm is done by creating a mapping between a class that implements a crypto service provider and an alias.</span></span> <span data-ttu-id="12de3-115">接著，將別名對應到在 WCF 服務的繫結中指定演算法時使用的 URI。</span><span class="sxs-lookup"><span data-stu-id="12de3-115">The alias is then mapped to a URI which is used when specifying the algorithm in the WCF service’s binding.</span></span> <span data-ttu-id="12de3-116">下列組態程式碼片段說明如何在組態中註冊自訂演算法：</span><span class="sxs-lookup"><span data-stu-id="12de3-116">The following configuration snippet illustrates how to register a custom algorithm in config:</span></span>  
   
 ```xml  
 <configuration>  
@@ -111,33 +113,30 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
         </cryptographySettings>  
     </mscorlib>  
 </configuration>  
-  
 ```  
   
- \<`cryptoClasses`\> 項目下的區段會建立 SHA256CryptoServiceProvider 和別名 "SHA256CSP" 之間的對應。  \<[nameEntry](assetId:///nameEntry?qualifyHint=False&amp;autoUpgrade=True)\> 項目會建立 "SHA256CSP" 別名和指定之 URL \(http:\/\/constoso.com\/CustomAlgorithms\/CustomHashAlgorithm\) 之間的對應。  
+ <span data-ttu-id="12de3-117">在下的一節 <`cryptoClasses`> 項目會建立 SHA256CryptoServiceProvider 和別名"SHA256CSP"之間的對應。</span><span class="sxs-lookup"><span data-stu-id="12de3-117">The section under the <`cryptoClasses`> element creates the mapping between the SHA256CryptoServiceProvider and the alias "SHA256CSP".</span></span> <span data-ttu-id="12de3-118"><`nameEntry`> 項目會建立"SHA256CSP"別名和指定的 URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) 之間的對應。</span><span class="sxs-lookup"><span data-stu-id="12de3-118">The <`nameEntry`> element creates the mapping between the "SHA256CSP" alias and the specified URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span></span>  
   
- 若要在程式碼中註冊自訂演算法，請使用 [M:System.Security.Cryptography.CryptoConfig.AddAlgorithm\(System.Type, System.String\<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False&autoUpgrade=True 方法。  此方法會建立兩個對應。  下列範例會示範如何呼叫這個方法：  
+ <span data-ttu-id="12de3-119">若要註冊自訂演算法，在程式碼使用<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A>System.String[])?qualifyHint=False & autoUpgrade = True 的方法。</span><span class="sxs-lookup"><span data-stu-id="12de3-119">To register the custom algorithm in code use the <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False&autoUpgrade=True method.</span></span> <span data-ttu-id="12de3-120">此方法會建立兩個對應。</span><span class="sxs-lookup"><span data-stu-id="12de3-120">This method creates both mappings.</span></span> <span data-ttu-id="12de3-121">下列範例會示範如何呼叫這個方法：</span><span class="sxs-lookup"><span data-stu-id="12de3-121">The following example shows how to call this method:</span></span>  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
-  
 ```  
   
-## 設定繫結  
- 在繫結設定中指定自訂 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生的類別來設定繫結，如下列程式碼片段所示：  
+## <a name="configure-the-binding"></a><span data-ttu-id="12de3-122">設定繫結</span><span class="sxs-lookup"><span data-stu-id="12de3-122">Configure the Binding</span></span>  
+ <span data-ttu-id="12de3-123">在繫結設定中指定自訂 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 衍生的類別來設定繫結，如下列程式碼片段所示：</span><span class="sxs-lookup"><span data-stu-id="12de3-123">You configure the binding by specifying the custom <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class in the binding settings as shown in the following code snippet:</span></span>  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
-  
 ```  
   
- 如需完整的程式碼範例，請參閱[WCF 安全性中的加密彈性](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)範例。  
+ <span data-ttu-id="12de3-124">如需完整的程式碼範例，請參閱[WCF 安全性中的加密彈性](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)範例。</span><span class="sxs-lookup"><span data-stu-id="12de3-124">For a complete code example, see the [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) sample.</span></span>  
   
-## 請參閱  
- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)   
- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="12de3-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12de3-125">See Also</span></span>  
+ [<span data-ttu-id="12de3-126">保護服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="12de3-126">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="12de3-127">保護服務安全</span><span class="sxs-lookup"><span data-stu-id="12de3-127">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="12de3-128">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="12de3-128">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="12de3-129">安全性概念</span><span class="sxs-lookup"><span data-stu-id="12de3-129">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)

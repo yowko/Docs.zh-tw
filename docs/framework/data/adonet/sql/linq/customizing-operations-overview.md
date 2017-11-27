@@ -1,34 +1,37 @@
 ---
-title: "自訂作業：概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "自訂作業：概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7653ca137c93da5174e0ddcd1ced8bdfceaa9edc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 自訂作業：概觀
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設會根據對應產生動態 SQL，以便進行插入、更新和刪除作業。但實際上，您通常會想加入自己的商務邏輯，為安全性、驗證等做準備。  
+# <a name="customizing-operations-overview"></a><span data-ttu-id="02181-102">自訂作業：概觀</span><span class="sxs-lookup"><span data-stu-id="02181-102">Customizing Operations: Overview</span></span>
+<span data-ttu-id="02181-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設會根據對應產生動態 SQL，以便進行插入、更新和刪除作業。</span><span class="sxs-lookup"><span data-stu-id="02181-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL for insert, update, and delete operations based on mapping.</span></span> <span data-ttu-id="02181-104">但實際上，您通常會想加入自己的業務邏輯，為安全性、驗證等做準備。</span><span class="sxs-lookup"><span data-stu-id="02181-104">However, in practice you typically want to add your own business logic to provide for security, validation, and so forth.</span></span>  
   
- 用於自訂這些作業的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技巧包含下列各項。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="02181-105">用於自訂這些作業的技術包括下列項目。</span><span class="sxs-lookup"><span data-stu-id="02181-105"> techniques for customizing these operations include the following.</span></span>  
   
-## 載入選項  
- 在查詢中，您可以控制在您連接至資料庫時要擷取多少與主要目標相關的資料。  這項功能大部分是使用 <xref:System.Data.Linq.DataLoadOptions> 來實作。  如需詳細資訊，請參閱[延後和立即載入的比較](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
+## <a name="loading-options"></a><span data-ttu-id="02181-106">載入選項</span><span class="sxs-lookup"><span data-stu-id="02181-106">Loading Options</span></span>  
+ <span data-ttu-id="02181-107">在查詢中，您可以控制在您連接至資料庫時要擷取多少與主要目標相關的資料。</span><span class="sxs-lookup"><span data-stu-id="02181-107">In your queries, you can control how much data related to your main target is retrieved when you connect to the database.</span></span> <span data-ttu-id="02181-108">這項功能大部分是使用 <xref:System.Data.Linq.DataLoadOptions> 來實作。</span><span class="sxs-lookup"><span data-stu-id="02181-108">This functionality is implemented largely by using <xref:System.Data.Linq.DataLoadOptions>.</span></span> <span data-ttu-id="02181-109">如需詳細資訊，請參閱[延後執行與立即載入](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。</span><span class="sxs-lookup"><span data-stu-id="02181-109">For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
   
-## 部分方法  
- 在其預設對應中，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了部分方法來協助您實作商務邏輯。  如需詳細資訊，請參閱[使用部分方法加入商務邏輯](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)。  
+## <a name="partial-methods"></a><span data-ttu-id="02181-110">部分方法</span><span class="sxs-lookup"><span data-stu-id="02181-110">Partial Methods</span></span>  
+ <span data-ttu-id="02181-111">在其預設對應中，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了部分方法來協助您實作商務邏輯。</span><span class="sxs-lookup"><span data-stu-id="02181-111">In its default mapping, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides partial methods to help you implement your business logic.</span></span> <span data-ttu-id="02181-112">如需詳細資訊，請參閱[加入商務邏輯所使用部分方法](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)。</span><span class="sxs-lookup"><span data-stu-id="02181-112">For more information, see [Adding Business Logic By Using Partial Methods](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md).</span></span>  
   
-## 預存程序和使用者定義的函式  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援使用預存程序 \(Stored Procedure\) 和使用者定義函式。  預存程序時常用於自訂作業。  如需詳細資訊，請參閱[預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。  
+## <a name="stored-procedures-and-user-defined-functions"></a><span data-ttu-id="02181-113">預存程序和使用者定義的函式</span><span class="sxs-lookup"><span data-stu-id="02181-113">Stored Procedures and User-Defined Functions</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="02181-114">支援使用預存程序和使用者定義函式。</span><span class="sxs-lookup"><span data-stu-id="02181-114"> supports the use of stored procedures and user-defined functions.</span></span> <span data-ttu-id="02181-115">預存程序時常用於自訂作業。</span><span class="sxs-lookup"><span data-stu-id="02181-115">Stored procedures are frequently used to customize operations.</span></span> <span data-ttu-id="02181-116">如需詳細資訊，請參閱[預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="02181-116">For more information, see [Stored Procedures](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span></span>  
   
-## 請參閱  
- [自訂插入、更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a><span data-ttu-id="02181-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02181-117">See Also</span></span>  
+ [<span data-ttu-id="02181-118">自訂插入、 更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="02181-118">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

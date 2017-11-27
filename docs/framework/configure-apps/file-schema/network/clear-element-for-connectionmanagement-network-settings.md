@@ -1,70 +1,71 @@
 ---
-title: "connectionManagement 的 &lt;clear&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> 項目, connectionManagement"
-  - "<connectionManagement>, clear 項目"
-  - "clear 項目, connectionManagement"
-  - "connectionManagement, clear 項目"
+title: "&lt;清除&gt;connectionManagement （網路設定） 的項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- <clear> element, connectionManagement
+- connectionManagement, clear element
+- clear element, connectionManagement
+- <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0fe32b20b9b0a0217ecef36f65ae1ee4084e92ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# connectionManagement 的 &lt;clear&gt; 項目 (網路設定)
-清除連結管理清單。  
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="85cdc-102">&lt;清除&gt;connectionManagement （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="85cdc-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="85cdc-103">清除連線管理清單中。</span><span class="sxs-lookup"><span data-stu-id="85cdc-103">Clears the connection management list.</span></span>  
   
-## 語法  
+ <span data-ttu-id="85cdc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="85cdc-104">\<configuration></span></span>  
+<span data-ttu-id="85cdc-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="85cdc-105">\<system.net></span></span>  
+<span data-ttu-id="85cdc-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="85cdc-106">\<connectionManagement></span></span>  
+<span data-ttu-id="85cdc-107">\<清除 ></span><span class="sxs-lookup"><span data-stu-id="85cdc-107">\<clear></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="85cdc-108">語法</span><span class="sxs-lookup"><span data-stu-id="85cdc-108">Syntax</span></span>  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="85cdc-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="85cdc-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="85cdc-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="85cdc-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="85cdc-111">屬性</span><span class="sxs-lookup"><span data-stu-id="85cdc-111">Attributes</span></span>  
+ <span data-ttu-id="85cdc-112">無。</span><span class="sxs-lookup"><span data-stu-id="85cdc-112">None.</span></span>  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="85cdc-113">子元素</span><span class="sxs-lookup"><span data-stu-id="85cdc-113">Child Elements</span></span>  
+ <span data-ttu-id="85cdc-114">無。</span><span class="sxs-lookup"><span data-stu-id="85cdc-114">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="85cdc-115">父項目</span><span class="sxs-lookup"><span data-stu-id="85cdc-115">Parent Elements</span></span>  
   
-|**項目**|**描述**|  
-|------------|------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定與網路主機的連接之最大數目。|  
+|<span data-ttu-id="85cdc-116">**目**</span><span class="sxs-lookup"><span data-stu-id="85cdc-116">**Element**</span></span>|<span data-ttu-id="85cdc-117">**說明**</span><span class="sxs-lookup"><span data-stu-id="85cdc-117">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="85cdc-118">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="85cdc-118">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="85cdc-119">指定連接至網路主機的連線數目上限。</span><span class="sxs-lookup"><span data-stu-id="85cdc-119">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## 備註  
- `clear` 項目 \(Element\) 會清除連結管理清單中的所有項目 \(Entry\)。  
+## <a name="remarks"></a><span data-ttu-id="85cdc-120">備註</span><span class="sxs-lookup"><span data-stu-id="85cdc-120">Remarks</span></span>  
+ <span data-ttu-id="85cdc-121">`clear`項目清除從連線管理清單中的所有項目。</span><span class="sxs-lookup"><span data-stu-id="85cdc-121">The `clear` element clears all entries from the connection management list.</span></span>  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a><span data-ttu-id="85cdc-122">組態檔</span><span class="sxs-lookup"><span data-stu-id="85cdc-122">Configuration Files</span></span>  
+ <span data-ttu-id="85cdc-123">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="85cdc-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 範例  
- 下列程式碼範例會清除連結管理清單，然後加入 www.contoso.com 伺服器和其他所有網路主機的新連結管理項目。  
+## <a name="example"></a><span data-ttu-id="85cdc-124">範例</span><span class="sxs-lookup"><span data-stu-id="85cdc-124">Example</span></span>  
+ <span data-ttu-id="85cdc-125">下列範例會清除連線管理清單，並將新 www.contoso.com 伺服器和所有其他網路主機的連接管理項目。</span><span class="sxs-lookup"><span data-stu-id="85cdc-125">The following example clears the connection management list and then adds new connection management entries for the server www.contoso.com and all other network hosts.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <connectionManagement>  
@@ -76,7 +77,7 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.ServicePoint>   
- <xref:System.Net.ServicePointManager>   
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="85cdc-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85cdc-126">See Also</span></span>  
+ <xref:System.Net.ServicePoint>  
+ <xref:System.Net.ServicePointManager>  
+ [<span data-ttu-id="85cdc-127">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="85cdc-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

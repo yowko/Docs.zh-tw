@@ -1,28 +1,37 @@
 ---
-title: "&lt;issuedTokenParameters&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;r&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef68585054d61de8c25b7e3effd1d72063d4589c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;issuedTokenParameters&gt;
-指定在聯合安全性案例中發行之安全性權杖的參數。  
+# <a name="ltissuedtokenparametersgt"></a><span data-ttu-id="32cf7-102">&lt;r&gt;</span><span class="sxs-lookup"><span data-stu-id="32cf7-102">&lt;issuedTokenParameters&gt;</span></span>
+<span data-ttu-id="32cf7-103">指定在聯合安全性案例中發行之安全性權杖的參數。</span><span class="sxs-lookup"><span data-stu-id="32cf7-103">Specifies the parameters for a security token issued in a Federated security scenario.</span></span>  
   
-## 語法  
+ <span data-ttu-id="32cf7-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="32cf7-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="32cf7-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="32cf7-105">\<bindings></span></span>  
+<span data-ttu-id="32cf7-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="32cf7-106">\<customBinding></span></span>  
+<span data-ttu-id="32cf7-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="32cf7-107">\<binding></span></span>  
+<span data-ttu-id="32cf7-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="32cf7-108">\<security></span></span>  
+<span data-ttu-id="32cf7-109">\<></span><span class="sxs-lookup"><span data-stu-id="32cf7-109">\<issuedTokenParameters></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="32cf7-110">語法</span><span class="sxs-lookup"><span data-stu-id="32cf7-110">Syntax</span></span>  
   
+```xml  
 <issuedTokenParameters   
       DefaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"  
       inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"  
@@ -40,50 +49,50 @@ caps.handback.revision: 10
 </issuedTokenParameters>  
 ```  
   
-## 類型  
+## <a name="type"></a><span data-ttu-id="32cf7-111">類型</span><span class="sxs-lookup"><span data-stu-id="32cf7-111">Type</span></span>  
  `Type`  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="32cf7-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="32cf7-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="32cf7-113">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="32cf7-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="32cf7-114">屬性</span><span class="sxs-lookup"><span data-stu-id="32cf7-114">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|defaultMessageSecurityVersion|指定繫結必須支援的安全性規格版本 \(WS\-Security、WS\-Trust、WS\-Secure Conversation 和 WS\-Security Policy\)。  這個值的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。|  
-|inclusionMode|指定權杖內含需求。  此屬性的型別為 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>。|  
-|keySize|指定權杖金鑰大小的整數。  預設值為 256。|  
-|keyType|指定金鑰型別之 <xref:System.IdentityModel.Tokens.SecurityKeyType> 的有效值。  預設為 `SymmetricKey`。|  
-|tokenType|指定權杖型別的字串。  預設為 "http:\/\/docs.oasis\-open.org\/wss\/oasis\-wss\-saml\-token\-profile\-1.1\#SAML"。|  
+|<span data-ttu-id="32cf7-115">屬性</span><span class="sxs-lookup"><span data-stu-id="32cf7-115">Attribute</span></span>|<span data-ttu-id="32cf7-116">描述</span><span class="sxs-lookup"><span data-stu-id="32cf7-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="32cf7-117">defaultMessageSecurityVersion</span><span class="sxs-lookup"><span data-stu-id="32cf7-117">defaultMessageSecurityVersion</span></span>|<span data-ttu-id="32cf7-118">指定繫結必須支援的安全性規格版本 (WS-Security、WS-Trust、WS-Secure Conversation 和 WS-Security Policy)。</span><span class="sxs-lookup"><span data-stu-id="32cf7-118">Specifies the versions of the security specifications, (WS-Security, WS-Trust, WS-Secure Conversation and WS-Security Policy) that must be supported by the binding.</span></span> <span data-ttu-id="32cf7-119">這個值的型別為 <xref:System.ServiceModel.MessageSecurityVersion>。</span><span class="sxs-lookup"><span data-stu-id="32cf7-119">This value is of type <xref:System.ServiceModel.MessageSecurityVersion>.</span></span>|  
+|<span data-ttu-id="32cf7-120">inclusionMode</span><span class="sxs-lookup"><span data-stu-id="32cf7-120">inclusionMode</span></span>|<span data-ttu-id="32cf7-121">指定權杖內含需求。</span><span class="sxs-lookup"><span data-stu-id="32cf7-121">Specifies the token inclusion requirements.</span></span> <span data-ttu-id="32cf7-122">此屬性的型別為 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>。</span><span class="sxs-lookup"><span data-stu-id="32cf7-122">This attribute is of type <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.</span></span>|  
+|<span data-ttu-id="32cf7-123">keySize</span><span class="sxs-lookup"><span data-stu-id="32cf7-123">keySize</span></span>|<span data-ttu-id="32cf7-124">指定權杖金鑰大小的整數。</span><span class="sxs-lookup"><span data-stu-id="32cf7-124">An integer that specifies the token key size.</span></span> <span data-ttu-id="32cf7-125">預設值為 256。</span><span class="sxs-lookup"><span data-stu-id="32cf7-125">The default value is 256.</span></span>|  
+|<span data-ttu-id="32cf7-126">keyType</span><span class="sxs-lookup"><span data-stu-id="32cf7-126">keyType</span></span>|<span data-ttu-id="32cf7-127">指定金鑰型別之 <xref:System.IdentityModel.Tokens.SecurityKeyType> 的有效值。</span><span class="sxs-lookup"><span data-stu-id="32cf7-127">A valid value of <xref:System.IdentityModel.Tokens.SecurityKeyType> that specifies the key type.</span></span> <span data-ttu-id="32cf7-128">預設為 `SymmetricKey`。</span><span class="sxs-lookup"><span data-stu-id="32cf7-128">The default is `SymmetricKey`.</span></span>|  
+|<span data-ttu-id="32cf7-129">tokenType</span><span class="sxs-lookup"><span data-stu-id="32cf7-129">tokenType</span></span>|<span data-ttu-id="32cf7-130">指定權杖型別的字串。</span><span class="sxs-lookup"><span data-stu-id="32cf7-130">A string that specifies the token type.</span></span> <span data-ttu-id="32cf7-131">預設為 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML"。</span><span class="sxs-lookup"><span data-stu-id="32cf7-131">The default is "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".</span></span>|  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="32cf7-132">子元素</span><span class="sxs-lookup"><span data-stu-id="32cf7-132">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<additionalRequestParameters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|指定額外要求參數的組態項目集合。|  
-|[\<claimTypeRequirements\>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|指定必要宣告型別的集合。<br /><br /> 在聯合案例中，服務會聲明對傳入認證的需求。  例如，傳入認證必須處理特定的一組宣告型別。  這個集合中的每一個項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。|  
-|[\<issuer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|指定發行目前權杖之端點的組態項目。|  
-|[\<issuerMetadata\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|指定權杖簽發者中繼資料之端點位址的組態項目。|  
+|<span data-ttu-id="32cf7-133">項目</span><span class="sxs-lookup"><span data-stu-id="32cf7-133">Element</span></span>|<span data-ttu-id="32cf7-134">說明</span><span class="sxs-lookup"><span data-stu-id="32cf7-134">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="32cf7-135">\<additionalRequestParameters ></span><span class="sxs-lookup"><span data-stu-id="32cf7-135">\<additionalRequestParameters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|<span data-ttu-id="32cf7-136">指定額外要求參數的組態項目集合。</span><span class="sxs-lookup"><span data-stu-id="32cf7-136">A collection of configuration elements that specify additional request parameters.</span></span>|  
+|[<span data-ttu-id="32cf7-137">\<q ></span><span class="sxs-lookup"><span data-stu-id="32cf7-137">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|<span data-ttu-id="32cf7-138">指定必要宣告型別的集合。</span><span class="sxs-lookup"><span data-stu-id="32cf7-138">Specifies a collection of required claim types.</span></span><br /><br /> <span data-ttu-id="32cf7-139">在聯合案例中，服務會聲明對傳入認證的需求。</span><span class="sxs-lookup"><span data-stu-id="32cf7-139">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="32cf7-140">例如，傳入認證必須處理特定的一組宣告型別。</span><span class="sxs-lookup"><span data-stu-id="32cf7-140">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="32cf7-141">這個集合中的每一個項目都會指定要顯示在聯合認證中的必要和選擇性宣告型別。</span><span class="sxs-lookup"><span data-stu-id="32cf7-141">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
+|[<span data-ttu-id="32cf7-142">\<簽發者 ></span><span class="sxs-lookup"><span data-stu-id="32cf7-142">\<issuer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|<span data-ttu-id="32cf7-143">指定發行目前權杖之端點的組態項目。</span><span class="sxs-lookup"><span data-stu-id="32cf7-143">A configuration element that specifies the endpoint that issues the current token.</span></span>|  
+|[<span data-ttu-id="32cf7-144">\<issuerMetadata ></span><span class="sxs-lookup"><span data-stu-id="32cf7-144">\<issuerMetadata></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|<span data-ttu-id="32cf7-145">指定權杖簽發者中繼資料之端點位址的組態項目。</span><span class="sxs-lookup"><span data-stu-id="32cf7-145">A configuration element that specifies the endpoint address of the token issuer's metadata.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="32cf7-146">父項目</span><span class="sxs-lookup"><span data-stu-id="32cf7-146">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<secureConversationBootstrap\>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|<span data-ttu-id="32cf7-147">項目</span><span class="sxs-lookup"><span data-stu-id="32cf7-147">Element</span></span>|<span data-ttu-id="32cf7-148">說明</span><span class="sxs-lookup"><span data-stu-id="32cf7-148">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="32cf7-149">\<secureConversationBootstrap ></span><span class="sxs-lookup"><span data-stu-id="32cf7-149">\<secureConversationBootstrap></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|<span data-ttu-id="32cf7-150">指定用於啟始安全對話服務的預設值。</span><span class="sxs-lookup"><span data-stu-id="32cf7-150">Specifies the default values used for initiating a secure conversation service.</span></span>|  
+|[<span data-ttu-id="32cf7-151">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="32cf7-151">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="32cf7-152">指定自訂繫結的安全性選項。</span><span class="sxs-lookup"><span data-stu-id="32cf7-152">Specifies the security options for a custom binding.</span></span>|  
   
-## 請參閱  
- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>   
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>   
- <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)   
- [服務身分識別和驗證](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [聯合與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)   
- [自訂繫結的安全性功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)   
- [聯合與發行的權杖](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a><span data-ttu-id="32cf7-153">另請參閱</span><span class="sxs-lookup"><span data-stu-id="32cf7-153">See Also</span></span>  
+ <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>  
+ <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>  
+ <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="32cf7-154">繫結</span><span class="sxs-lookup"><span data-stu-id="32cf7-154">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="32cf7-155">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="32cf7-155">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="32cf7-156">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="32cf7-156">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="32cf7-157">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="32cf7-157">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="32cf7-158">如何： 建立自訂繫結使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="32cf7-158">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="32cf7-159">自訂繫結安全性</span><span class="sxs-lookup"><span data-stu-id="32cf7-159">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
+ [<span data-ttu-id="32cf7-160">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="32cf7-160">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="32cf7-161">同盟與發行的權杖</span><span class="sxs-lookup"><span data-stu-id="32cf7-161">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="32cf7-162">自訂繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="32cf7-162">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="32cf7-163">同盟與發行的權杖</span><span class="sxs-lookup"><span data-stu-id="32cf7-163">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

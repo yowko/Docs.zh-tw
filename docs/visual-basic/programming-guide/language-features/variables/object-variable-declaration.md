@@ -1,82 +1,81 @@
 ---
-title: "Object Variable Declaration (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "early binding"
-  - "declarations, class"
-  - "classes [Visual Basic], declaring"
-  - "binding, late and early"
-  - "object variables, declaring"
-  - "variables [Visual Basic], object"
-  - "declaring variables, object variables"
-  - "declaring classes"
-  - "late binding"
+title: "物件變數宣告 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- early binding [Visual Basic]
+- declarations [Visual Basic], class
+- classes [Visual Basic], declaring
+- binding [Visual Basic], late and early
+- object variables [Visual Basic], declaring
+- variables [Visual Basic], object
+- declaring variables [Visual Basic], object variables
+- declaring classes [Visual Basic]
+- late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-caps.latest.revision: 33
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cdca188d778e9884f918d97eba492a29c64af826
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Object Variable Declaration (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-使用一般宣告陳述式來宣告物件變數。  至於資料型別，請指定 `Object` \(也就是 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)\) 或比較特定的類別 \(該物件將要從類別建立\)。  
+# <a name="object-variable-declaration-visual-basic"></a><span data-ttu-id="596cd-102">物件變數宣告 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="596cd-102">Object Variable Declaration (Visual Basic)</span></span>
+<span data-ttu-id="596cd-103">您可以使用一般宣告陳述式來宣告物件變數。</span><span class="sxs-lookup"><span data-stu-id="596cd-103">You use a normal declaration statement to declare an object variable.</span></span> <span data-ttu-id="596cd-104">資料類型，您指定`Object`(也就是[物件資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更特定類別的物件是要建立的。</span><span class="sxs-lookup"><span data-stu-id="596cd-104">For the data type, you specify either `Object` (that is, the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) or a more specific class from which the object is to be created.</span></span>  
   
- 將變數宣告為 `Object` 與將它宣告為 <xref:System.Object?displayProperty=fullName> 一樣。  
+ <span data-ttu-id="596cd-105">變數宣告為`Object`等同於它宣告為<xref:System.Object?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="596cd-105">Declaring a variable as `Object` is the same as declaring it as <xref:System.Object?displayProperty=nameWithType>.</span></span>  
   
- 當您使用特定的物件類別宣告變數時，它可以存取該類別及其所繼承的類別公開之所有方法和屬性。  如果您使用 <xref:System.Object> 宣告變數，則它只能存取 <xref:System.Object> 類別的成員，除非您將 `Option Strict Off` 改變為允許晚期繫結。  
+ <span data-ttu-id="596cd-106">當您宣告具有特定的物件類別的變數時，它可以存取所有的方法和該類別和它所繼承的類別所公開的屬性。</span><span class="sxs-lookup"><span data-stu-id="596cd-106">When you declare a variable with a specific object class, it can access all the methods and properties exposed by that class and the classes from which it inherits.</span></span> <span data-ttu-id="596cd-107">如果您宣告變數和<xref:System.Object>，它可以存取的成員<xref:System.Object>類別，除非您開啟`Option Strict Off`允許晚期繫結。</span><span class="sxs-lookup"><span data-stu-id="596cd-107">If you declare the variable with <xref:System.Object>, it can access only the members of the <xref:System.Object> class, unless you turn `Option Strict Off` to allow late binding.</span></span>  
   
-## 宣告語法  
- 用下列語法來宣告物件變數：  
+## <a name="declaration-syntax"></a><span data-ttu-id="596cd-108">宣告語法</span><span class="sxs-lookup"><span data-stu-id="596cd-108">Declaration Syntax</span></span>  
+ <span data-ttu-id="596cd-109">使用下列語法來宣告物件變數：</span><span class="sxs-lookup"><span data-stu-id="596cd-109">Use the following syntax to declare an object variable:</span></span>  
   
-```  
+```vb  
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- 您也可在宣告當中指定 [Public](../../../../visual-basic/language-reference/modifiers/public.md)、[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、`Protected Friend`、[Private](../../../../visual-basic/language-reference/modifiers/private.md)、[Shared](../../../../visual-basic/language-reference/modifiers/shared.md) 或 [Static](../../../../visual-basic/language-reference/modifiers/static.md)。  下列是有效的範例宣告：  
+ <span data-ttu-id="596cd-110">您也可以指定[公用](../../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)， `Protected Friend`，[私人](../../../../visual-basic/language-reference/modifiers/private.md)，[共用](../../../../visual-basic/language-reference/modifiers/shared.md)，或[靜態](../../../../visual-basic/language-reference/modifiers/static.md)宣告中。</span><span class="sxs-lookup"><span data-stu-id="596cd-110">You can also specify [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, [Private](../../../../visual-basic/language-reference/modifiers/private.md), [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), or [Static](../../../../visual-basic/language-reference/modifiers/static.md) in the declaration.</span></span> <span data-ttu-id="596cd-111">下列範例宣告是有效值：</span><span class="sxs-lookup"><span data-stu-id="596cd-111">The following example declarations are valid:</span></span>  
   
-```  
+```vb  
 Private objA As Object  
 Static objB As System.Windows.Forms.Label  
 Dim objC As System.OperatingSystem  
 ```  
   
-## 晚期繫結與早期繫結  
- 有時候特定類別在程式碼執行之前都是未知的。  在這個情況下，您必須以 `Object` 資料型別來宣告物件變數。  這樣可以建立對任何型別物件的一般參考，且會在執行階段指定特定類別。  這稱為「*晚期繫結*」\(Late Binding\)。  晚期繫結需要額外的執行時間。  這也會將您的程式碼限制於最近指派給它的類別方法和屬性。  若您的程式碼試圖存取不同類別的成員，會導致執行階段錯誤。  
+## <a name="late-binding-and-early-binding"></a><span data-ttu-id="596cd-112">晚期繫結與早期繫結</span><span class="sxs-lookup"><span data-stu-id="596cd-112">Late Binding and Early Binding</span></span>  
+ <span data-ttu-id="596cd-113">有時特定類別是未知的程式碼執行之前。</span><span class="sxs-lookup"><span data-stu-id="596cd-113">Sometimes the specific class is unknown until your code runs.</span></span> <span data-ttu-id="596cd-114">在此情況下，您必須宣告物件變數`Object`資料型別。</span><span class="sxs-lookup"><span data-stu-id="596cd-114">In this case, you must declare the object variable with the `Object` data type.</span></span> <span data-ttu-id="596cd-115">這會建立任何類型的物件，以一般參考，並在執行階段指派特定的類別。</span><span class="sxs-lookup"><span data-stu-id="596cd-115">This creates a general reference to any type of object, and the specific class is assigned at run time.</span></span> <span data-ttu-id="596cd-116">這稱為*晚期繫結*。</span><span class="sxs-lookup"><span data-stu-id="596cd-116">This is called *late binding*.</span></span> <span data-ttu-id="596cd-117">晚期繫結需要額外的執行時間。</span><span class="sxs-lookup"><span data-stu-id="596cd-117">Late binding requires additional execution time.</span></span> <span data-ttu-id="596cd-118">它也會限制您的程式碼的方法和屬性，您最近已指派給它的類別。</span><span class="sxs-lookup"><span data-stu-id="596cd-118">It also limits your code to the methods and properties of the class you have most recently assigned to it.</span></span> <span data-ttu-id="596cd-119">如果您的程式碼嘗試存取不同類別的成員，這會造成執行階段錯誤。</span><span class="sxs-lookup"><span data-stu-id="596cd-119">This can cause run-time errors if your code attempts to access members of a different class.</span></span>  
   
- 當您在編譯期間知道特定的物件時，應該將物件變數宣告為該類別。  這就稱為「*早期繫結*」\(Early Binding\)。  早期繫結可以改善效能，並保證程式碼可以存取所有特定類別的方法和屬性。  在之前的範例宣告中，如果變數 `objA` 僅會使用類別 <xref:System.Windows.Forms.Label?displayProperty=fullName> 的物件，您應該在其宣告中指定 `As System.Windows.Forms.Label`。  
+ <span data-ttu-id="596cd-120">當您在編譯時間知道特定類別時，您應該宣告為該類別的物件變數。</span><span class="sxs-lookup"><span data-stu-id="596cd-120">When you know the specific class at compile time, you should declare the object variable to be of that class.</span></span> <span data-ttu-id="596cd-121">這稱為「早期繫結」。</span><span class="sxs-lookup"><span data-stu-id="596cd-121">This is called *early binding*.</span></span> <span data-ttu-id="596cd-122">早期繫結可改善效能，而且不保證您的程式碼存取的所有方法和特定類別的屬性。</span><span class="sxs-lookup"><span data-stu-id="596cd-122">Early binding improves performance and guarantees your code access to all the methods and properties of the specific class.</span></span> <span data-ttu-id="596cd-123">在上述範例宣告中，如果變數`objA`使用物件類別<xref:System.Windows.Forms.Label?displayProperty=nameWithType>，您應該指定`As System.Windows.Forms.Label`在其宣告中。</span><span class="sxs-lookup"><span data-stu-id="596cd-123">In the preceding example declarations, if variable `objA` uses only objects of class <xref:System.Windows.Forms.Label?displayProperty=nameWithType>, you should specify `As System.Windows.Forms.Label` in its declaration.</span></span>  
   
-### 早期繫結的優點  
- 將物件變數宣告為特定的類別有幾個優點：  
+### <a name="advantages-of-early-binding"></a><span data-ttu-id="596cd-124">早期繫結的優點</span><span class="sxs-lookup"><span data-stu-id="596cd-124">Advantages of Early Binding</span></span>  
+ <span data-ttu-id="596cd-125">物件變數宣告為特定的類別有數個優點：</span><span class="sxs-lookup"><span data-stu-id="596cd-125">Declaring an object variable as a specific class gives you several advantages:</span></span>  
   
--   自動型別檢查  
+-   <span data-ttu-id="596cd-126">自動類型檢查</span><span class="sxs-lookup"><span data-stu-id="596cd-126">Automatic type checking</span></span>  
   
--   可以確保能夠存取特定類別的所有成員  
+-   <span data-ttu-id="596cd-127">保證特定類別的所有成員存取</span><span class="sxs-lookup"><span data-stu-id="596cd-127">Guaranteed access to all members of the specific class</span></span>  
   
--   程式碼編輯器中的 Microsoft IntelliSense 支援  
+-   <span data-ttu-id="596cd-128">Microsoft IntelliSense 支援在程式碼編輯器</span><span class="sxs-lookup"><span data-stu-id="596cd-128">Microsoft IntelliSense support in the Code Editor</span></span>  
   
--   改善程式碼的可讀性  
+-   <span data-ttu-id="596cd-129">您的程式碼更容易閱讀</span><span class="sxs-lookup"><span data-stu-id="596cd-129">Improved readability of your code</span></span>  
   
--   較少程式碼錯誤  
+-   <span data-ttu-id="596cd-130">減少程式碼中的錯誤</span><span class="sxs-lookup"><span data-stu-id="596cd-130">Fewer errors in your code</span></span>  
   
--   在編譯時期而非在執行階段找出錯誤  
+-   <span data-ttu-id="596cd-131">錯誤攔截在編譯時期而不是執行階段</span><span class="sxs-lookup"><span data-stu-id="596cd-131">Errors caught at compile time rather than run time</span></span>  
   
--   更快的程式碼執行  
+-   <span data-ttu-id="596cd-132">更快速執行的程式碼</span><span class="sxs-lookup"><span data-stu-id="596cd-132">Faster code execution</span></span>  
   
-## 存取物件變數成員  
- 當 `Option Strict` 已轉為 `On` 時，物件變數僅能存取在您宣告其類別的方法和屬性。  下列範例將說明這點。  
+## <a name="access-to-object-variable-members"></a><span data-ttu-id="596cd-133">物件變數成員存取</span><span class="sxs-lookup"><span data-stu-id="596cd-133">Access to Object Variable Members</span></span>  
+ <span data-ttu-id="596cd-134">當`Option Strict`開啟`On`，物件變數只能存取方法和您用以宣告它之類別的屬性。</span><span class="sxs-lookup"><span data-stu-id="596cd-134">When `Option Strict` is turned `On`, an object variable can access only the methods and properties of the class with which you declare it.</span></span> <span data-ttu-id="596cd-135">下列範例將說明這點。</span><span class="sxs-lookup"><span data-stu-id="596cd-135">The following example illustrates this.</span></span>  
   
-```  
+```vb  
 ' Option statements must precede all other source file lines.  
 Option Strict On  
 ' Imports statement must precede all declarations in the source file.  
@@ -94,26 +93,28 @@ Public Sub accessMembers()
 End Sub  
 ```  
   
- 在此範例中，`p` 僅能使用 <xref:System.Object> 類別本身的成員，其並未包含 `Left` 屬性。  另一方面，將 `q` 宣告為 <xref:System.Windows.Forms.Label> 型別，如此就可使用 <xref:System.Windows.Forms> 命名空間內 <xref:System.Windows.Forms.Label> 類別的所有方法和屬性。  
+ <span data-ttu-id="596cd-136">在此範例中， `p` 只能使用 <xref:System.Object> 類別本身的成員，其並未包含 `Left` 屬性。</span><span class="sxs-lookup"><span data-stu-id="596cd-136">In this example, `p` can use only the members of the <xref:System.Object> class itself, which do not include the `Left` property.</span></span> <span data-ttu-id="596cd-137">另一方面，已宣告 `q` 屬於 <xref:System.Windows.Forms.Label>類型，因此它可以使用 <xref:System.Windows.Forms.Label> 命名空間中 <xref:System.Windows.Forms> 類別的所有方法和屬性。</span><span class="sxs-lookup"><span data-stu-id="596cd-137">On the other hand, `q` was declared to be of type <xref:System.Windows.Forms.Label>, so it can use all the methods and properties of the <xref:System.Windows.Forms.Label> class in the <xref:System.Windows.Forms> namespace.</span></span>  
   
-## 物件變數彈性  
- 使用繼承階層架構 \(Inheritance Hierarchy\) 中的物件時，您可以選擇用哪一個類別來宣告您的物件變數。  在選擇時，您必須平衡物件指派的彈性和類別成員的存取權限。  例如，考慮指向 <xref:System.Windows.Forms.Form?displayProperty=fullName> 類別的繼承階層架構：  
+## <a name="flexibility-of-object-variables"></a><span data-ttu-id="596cd-138">物件變數的彈性</span><span class="sxs-lookup"><span data-stu-id="596cd-138">Flexibility of Object Variables</span></span>  
+ <span data-ttu-id="596cd-139">當使用繼承階層架構中的物件，您必須選擇要用於宣告物件變數的類別。</span><span class="sxs-lookup"><span data-stu-id="596cd-139">When working with objects in an inheritance hierarchy, you have a choice of which class to use for declaring your object variables.</span></span> <span data-ttu-id="596cd-140">在選擇時，您必須平衡對類別成員存取的物件指派的彈性。</span><span class="sxs-lookup"><span data-stu-id="596cd-140">In making this choice, you must balance flexibility of object assignment against access to members of a class.</span></span> <span data-ttu-id="596cd-141">例如，請考慮繼承階層架構，會導致<xref:System.Windows.Forms.Form?displayProperty=nameWithType>類別：</span><span class="sxs-lookup"><span data-stu-id="596cd-141">For example, consider the inheritance hierarchy that leads to the <xref:System.Windows.Forms.Form?displayProperty=nameWithType> class:</span></span>  
   
  <xref:System.Object>  
   
- `` <xref:System.ComponentModel.Component>  
+ &nbsp;&nbsp;<xref:System.MarshalByRefObject>  
   
- `` <xref:System.Windows.Forms.Control>  
+ &nbsp;&nbsp;&nbsp;&nbsp;<xref:System.ComponentModel.Component>  
   
- `` <xref:System.Windows.Forms.ScrollableControl>  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.Control>  
   
- `` <xref:System.Windows.Forms.ContainerControl>  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.ScrollableControl>  
   
- `` <xref:System.Windows.Forms.Form>  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.ContainerControl>  
   
- 假設您的應用程式定義了繼承自 <xref:System.Windows.Forms.Form> 類別的表單類別，稱為 `specialForm`。  您可以宣告一個特別參考 `specialForm` 的物件變數，如下列範例所示。  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.Windows.Forms.Form>  
   
-```  
+ <span data-ttu-id="596cd-142">假設您的應用程式定義表單類別，稱為`specialForm`，後者繼承自類別<xref:System.Windows.Forms.Form>。</span><span class="sxs-lookup"><span data-stu-id="596cd-142">Suppose your application defines a form class called `specialForm`, which inherits from class <xref:System.Windows.Forms.Form>.</span></span> <span data-ttu-id="596cd-143">您可以宣告物件變數，指的是專為`specialForm`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="596cd-143">You can declare an object variable that refers specifically to `specialForm`, as the following example shows.</span></span>  
+  
+```vb  
 Public Class specialForm  
     Inherits System.Windows.Forms.Form  
     ' Insert code defining methods and properties of specialForm.  
@@ -121,24 +122,24 @@ End Class
 Dim nextForm As New specialForm  
 ```  
   
- 上面範例中的宣告會將變數 `nextForm` 限制為 `specialForm` 類別的物件，但是也讓 `specialForm` 的所有方法與屬性可以供 `nextForm` 使用，也可以供繼承自 `specialForm` 的所有類別之所有成員使用。  
+ <span data-ttu-id="596cd-144">在上述範例中宣告限制變數`nextForm`類別的物件`specialForm`，但同時也讓所有方法和屬性`specialForm`可`nextForm`，以及從中的所有類別的所有成員`specialForm`繼承。</span><span class="sxs-lookup"><span data-stu-id="596cd-144">The declaration in the preceding example limits the variable `nextForm` to objects of class `specialForm`, but it also makes all the methods and properties of `specialForm` available to `nextForm`, as well as all the members of all the classes from which `specialForm` inherits.</span></span>  
   
- 您可以將物件變數宣告為 <xref:System.Windows.Forms.Form> 型別，使它較為一般化，如下列範例所示。  
+ <span data-ttu-id="596cd-145">您可以藉由宣告它是型別進行更一般的物件變數<xref:System.Windows.Forms.Form>，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="596cd-145">You can make an object variable more general by declaring it to be of type <xref:System.Windows.Forms.Form>, as the following example shows.</span></span>  
   
-```  
+```vb  
 Dim anyForm As System.Windows.Forms.Form  
 ```  
   
- 上面範例中的宣告可以讓您將應用程式內的任何表單指派給 `anyForm`。  不過，雖然 `anyForm` 可以存取 <xref:System.Windows.Forms.Form> 類別的所有成員，但是卻不能使用定義給特定表單 \(像是 `specialForm`\) 的其他方法或屬性。  
+ <span data-ttu-id="596cd-146">在上述範例中宣告可讓您指定您的應用程式中的任何表單`anyForm`。</span><span class="sxs-lookup"><span data-stu-id="596cd-146">The declaration in the preceding example lets you assign any form in your application to `anyForm`.</span></span> <span data-ttu-id="596cd-147">不過，雖然`anyForm`可以存取類別的所有成員<xref:System.Windows.Forms.Form>，它不能使用任何其他方法或屬性，例如定義特定形式`specialForm`。</span><span class="sxs-lookup"><span data-stu-id="596cd-147">However, although `anyForm` can access all the members of class <xref:System.Windows.Forms.Form>, it cannot use any of the additional methods or properties defined for specific forms such as `specialForm`.</span></span>  
   
- 基底類別 \(Base Class\) 的所有成員都可用於衍生類別 \(Derived Class\)，但衍生類別的其他成員不可用於基底類別。  
+ <span data-ttu-id="596cd-148">基底類別的所有成員都都可以使用衍生的類別，但在衍生類別的其他成員都則無法使用的基底類別。</span><span class="sxs-lookup"><span data-stu-id="596cd-148">All the members of a base class are available to derived classes, but the additional members of a derived class are unavailable to the base class.</span></span>  
   
-## 請參閱  
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Object Variable Assignment](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Object Variable Values](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)   
- [How to: Access Members of an Object](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)   
- [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a><span data-ttu-id="596cd-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="596cd-149">See Also</span></span>  
+ [<span data-ttu-id="596cd-150">物件變數</span><span class="sxs-lookup"><span data-stu-id="596cd-150">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="596cd-151">物件變數指派</span><span class="sxs-lookup"><span data-stu-id="596cd-151">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [<span data-ttu-id="596cd-152">物件變數值</span><span class="sxs-lookup"><span data-stu-id="596cd-152">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [<span data-ttu-id="596cd-153">如何： 宣告物件變數，並在 Visual Basic 中為其指派物件</span><span class="sxs-lookup"><span data-stu-id="596cd-153">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [<span data-ttu-id="596cd-154">如何：存取物件的成員</span><span class="sxs-lookup"><span data-stu-id="596cd-154">How to: Access Members of an Object</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+ [<span data-ttu-id="596cd-155">New 運算子</span><span class="sxs-lookup"><span data-stu-id="596cd-155">New Operator</span></span>](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [<span data-ttu-id="596cd-156">Option Strict 陳述式</span><span class="sxs-lookup"><span data-stu-id="596cd-156">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="596cd-157">區域類型推斷</span><span class="sxs-lookup"><span data-stu-id="596cd-157">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

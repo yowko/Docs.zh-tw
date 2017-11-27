@@ -1,48 +1,52 @@
 ---
-title: "基本 TransactionScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "基本 TransactionScope"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d4f9d9e966a0a6d8fa48d195b17438b3d78b32a9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 基本 TransactionScope
-這個範例包含四個案例，會示範如何巢狀處理 <xref:System.Activities.Statements.TransactionScope> 執行個體。第一個案例會示範巢狀處理協力廠商活動，作者對於這個活動的結構並不清楚。第二和第三個案例示範如何採用逾時，最後一個案例則示範 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 設定。  
+# <a name="basic-transactionscope"></a><span data-ttu-id="82078-102">基本 TransactionScope</span><span class="sxs-lookup"><span data-stu-id="82078-102">Basic TransactionScope</span></span>
+<span data-ttu-id="82078-103">這個範例包含四個案例，會示範如何巢狀處理 <xref:System.Activities.Statements.TransactionScope> 執行個體。</span><span class="sxs-lookup"><span data-stu-id="82078-103">This sample consists of four scenarios that run showing how to nest <xref:System.Activities.Statements.TransactionScope> instances.</span></span> <span data-ttu-id="82078-104">第一個案例會示範巢狀處理協力廠商活動，作者對於這個活動的結構並不清楚。</span><span class="sxs-lookup"><span data-stu-id="82078-104">The first scenario shows nesting a 3rd party activity of which the author has no knowledge of the construction.</span></span> <span data-ttu-id="82078-105">第二和第三個案例示範如何採用逾時，最後一個案例則示範 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 設定。</span><span class="sxs-lookup"><span data-stu-id="82078-105">The second and third scenarios show how time-outs are respected and the final scenario shows the <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> setting.</span></span>  
   
-## 巢狀處理 TransactionScopeActivity  
- 第一個案例的工作流程是由兩個 <xref:System.Activities.Statements.WriteLine> 活動和一個 <xref:System.Activities.Statements.TransactionScope> 的序列所組成。<xref:System.Activities.Statements.TransactionScope> 的主體為另外兩個 <xref:System.Activities.Statements.WriteLine> 活動、一個列印交易本機識別碼的自訂活動，以及協力廠商活動的序列。協力廠商活動 `TransactionScopeTest` 包含 <xref:System.Activities.Statements.TransactionScope>，雖然工作流程作者對此不得而知。這個案例會示範 <xref:System.Activities.Statements.TransactionScope> 活動可以進行巢狀處理。  
+## <a name="nesting-of-transactionscopeactivity"></a><span data-ttu-id="82078-106">巢狀處理 TransactionScopeActivity</span><span class="sxs-lookup"><span data-stu-id="82078-106">Nesting of TransactionScopeActivity</span></span>  
+ <span data-ttu-id="82078-107">第一個案例的工作流程是由兩個 <xref:System.Activities.Statements.WriteLine> 活動和一個 <xref:System.Activities.Statements.TransactionScope> 的序列所組成。</span><span class="sxs-lookup"><span data-stu-id="82078-107">The workflow for the first scenario consists of a sequence of two <xref:System.Activities.Statements.WriteLine> activities and a <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="82078-108"><xref:System.Activities.Statements.TransactionScope> 的主體為另外兩個 <xref:System.Activities.Statements.WriteLine> 活動、一個列印交易本機識別碼的自訂活動，以及協力廠商活動的序列。</span><span class="sxs-lookup"><span data-stu-id="82078-108">The body of the <xref:System.Activities.Statements.TransactionScope> is a sequence of two more <xref:System.Activities.Statements.WriteLine> activities, a custom activity that prints the local identifier of the transaction and a third party activity.</span></span> <span data-ttu-id="82078-109">協力廠商活動 `TransactionScopeTest` 包含 <xref:System.Activities.Statements.TransactionScope>，雖然工作流程作者對此不得而知。</span><span class="sxs-lookup"><span data-stu-id="82078-109">The third party activity `TransactionScopeTest` contains a <xref:System.Activities.Statements.TransactionScope> although the workflow author has no way of knowing.</span></span> <span data-ttu-id="82078-110">這個案例會示範 <xref:System.Activities.Statements.TransactionScope> 活動可以進行巢狀處理。</span><span class="sxs-lookup"><span data-stu-id="82078-110">This scenario shows that <xref:System.Activities.Statements.TransactionScope> activities can be nested.</span></span>  
   
-## 逾時  
- 第二個案例的工作流程與第一個案例幾乎完全相同。`TransactionScopeTest` 已取代為 <xref:System.Activities.Statements.TransactionScope>。<xref:System.Activities.Statements.TransactionScope> 的主體為五秒鐘延遲，而交易的逾時設為兩秒。外部 <xref:System.Activities.Statements.TransactionScope> 的逾時設為 10 秒。請注意，系統會採用範圍內最小的逾時，且交易會逾時。  
+## <a name="time-outs"></a><span data-ttu-id="82078-111">逾時</span><span class="sxs-lookup"><span data-stu-id="82078-111">Time-Outs</span></span>  
+ <span data-ttu-id="82078-112">第二個案例的工作流程與第一個案例幾乎完全相同。</span><span class="sxs-lookup"><span data-stu-id="82078-112">The workflow for the second scenario is nearly identical to the first.</span></span> <span data-ttu-id="82078-113">`TransactionScopeTest` 已取代為 <xref:System.Activities.Statements.TransactionScope>。</span><span class="sxs-lookup"><span data-stu-id="82078-113">The `TransactionScopeTest` has been replaced with a <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="82078-114"><xref:System.Activities.Statements.TransactionScope> 的主體為五秒鐘延遲，而交易的逾時設為兩秒。</span><span class="sxs-lookup"><span data-stu-id="82078-114">The body of the <xref:System.Activities.Statements.TransactionScope> is a five-second delay and the time-out for the transaction is set to two seconds.</span></span> <span data-ttu-id="82078-115">外部 <xref:System.Activities.Statements.TransactionScope> 的逾時設為 10 秒。</span><span class="sxs-lookup"><span data-stu-id="82078-115">The time-out for the outer <xref:System.Activities.Statements.TransactionScope> is set to 10 seconds.</span></span> <span data-ttu-id="82078-116">請注意，系統會採用範圍內最小的逾時，且交易會逾時。</span><span class="sxs-lookup"><span data-stu-id="82078-116">Note that the smallest time-out in scope is respected and the transaction times out.</span></span>  
   
- 第三個案例的工作流程與第二個案例幾乎完全相同。延遲活動已從內部 <xref:System.Activities.Statements.TransactionScope> 的主體移至它在本身為外部 <xref:System.Activities.Statements.TransactionScope> 主體之序列中的正後方。交易仍然會逾時，不過這是因為內部 <xref:System.Activities.Statements.TransactionScope> 的兩秒逾時不再適用。交易會在超過外部 <xref:System.Activities.Statements.TransactionScope> 逾時的第 10 秒逾時。  
+ <span data-ttu-id="82078-117">第三個案例的工作流程與第二個案例幾乎完全相同。</span><span class="sxs-lookup"><span data-stu-id="82078-117">The workflow for the third scenario is nearly identical to scenario two.</span></span> <span data-ttu-id="82078-118">延遲活動已從內部 <xref:System.Activities.Statements.TransactionScope> 的主體移至它在本身為外部 <xref:System.Activities.Statements.TransactionScope> 主體之序列中的正後方。</span><span class="sxs-lookup"><span data-stu-id="82078-118">The delay activity has been moved from the body of the inner <xref:System.Activities.Statements.TransactionScope> to immediately after it in the sequence that is the body of the outer <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="82078-119">交易仍然會逾時，不過這是因為內部 <xref:System.Activities.Statements.TransactionScope> 的兩秒逾時不再適用。</span><span class="sxs-lookup"><span data-stu-id="82078-119">The transaction still times out but because the two second time-out of the inner <xref:System.Activities.Statements.TransactionScope> no longer applies.</span></span> <span data-ttu-id="82078-120">交易會在超過外部 <xref:System.Activities.Statements.TransactionScope> 逾時的第 10 秒逾時。</span><span class="sxs-lookup"><span data-stu-id="82078-120">The transaction times out at 10 seconds when the outer <xref:System.Activities.Statements.TransactionScope> time-out is exceeded.</span></span>  
   
-## 交易失敗時中止  
- 這個工作流程與案例三類似，不過逾時已被 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 屬性取代。請注意，所有內部子系的旗標 \(如果已設定\) 都必須符合外部 <xref:System.Activities.Statements.TransactionScope>。在這個案例中，這些旗標並不相符，因此會在工作流程開啟時擲回例外狀況。  
+## <a name="aborting-on-transaction-failure"></a><span data-ttu-id="82078-121">交易失敗時中止</span><span class="sxs-lookup"><span data-stu-id="82078-121">Aborting on Transaction Failure</span></span>  
+ <span data-ttu-id="82078-122">這個工作流程與案例三類似，不過逾時已被 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 屬性取代。</span><span class="sxs-lookup"><span data-stu-id="82078-122">This workflow is similar to scenario three except the time-outs have been replaced by the <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> property.</span></span> <span data-ttu-id="82078-123">請注意，所有內部子系的旗標 (如果已設定) 都必須符合外部 <xref:System.Activities.Statements.TransactionScope>。</span><span class="sxs-lookup"><span data-stu-id="82078-123">Note that the flags of all inner children, if set, must match the outer <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="82078-124">在這個案例中，這些旗標並不相符，因此會在工作流程開啟時擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="82078-124">In this scenario, they do not and an exception is thrown when the workflow opens.</span></span>  
   
-#### 若要執行範例  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="82078-125">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="82078-125">To run the sample</span></span>  
   
-1.  在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 BasicTransactionScopeSample.sln 方案。  
+1.  <span data-ttu-id="82078-126">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中開啟 BasicTransactionScopeSample.sln 方案。</span><span class="sxs-lookup"><span data-stu-id="82078-126">Open the BasicTransactionScopeSample.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  若要建置方案，請按 CTRL\+SHIFT\+B 或選取 \[**建置**\] 功能表中的 \[**建置方案**\]。  
+2.  <span data-ttu-id="82078-127">若要建置此方案，請按 CTRL + SHIFT + B 或選取**建置方案**從**建置**功能表。</span><span class="sxs-lookup"><span data-stu-id="82078-127">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-3.  成功建置後，按 F5 或選取 \[**偵錯**\] 功能表中的 \[**開始偵錯**\]。或者，您可以按 CTRL\+F5 或選取 \[**偵錯**\] 功能表中的 \[**啟動但不偵錯**\]，執行範例但不偵錯。  
+3.  <span data-ttu-id="82078-128">成功建置後，按 F5 或選取**開始偵錯**從**偵錯**功能表。</span><span class="sxs-lookup"><span data-stu-id="82078-128">Once the build has succeeded, press F5 or select **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="82078-129">或者您可以按 CTRL + F5 或選取**啟動但不偵錯**從**偵錯**執行，而不偵錯 功能表。</span><span class="sxs-lookup"><span data-stu-id="82078-129">Alternatively you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  <span data-ttu-id="82078-130">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="82078-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="82078-131">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="82078-131">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。此範例位於下列目錄。  
+>  <span data-ttu-id="82078-132">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="82078-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="82078-133">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="82078-133">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`  
   
-## 請參閱
+## <a name="see-also"></a><span data-ttu-id="82078-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="82078-134">See Also</span></span>

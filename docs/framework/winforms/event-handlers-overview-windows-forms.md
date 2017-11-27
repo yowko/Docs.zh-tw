@@ -1,35 +1,39 @@
 ---
-title: "事件處理常式概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "事件處理常式, 關於事件處理常式"
-  - "事件處理, Windows Form"
-  - "Windows Form, 事件處理"
+title: "事件處理常式概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms, event handling
+- event handling [Windows Forms], Windows Forms
+- event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7353f3ab4513d8331b1d38cb01ad16c7d3cde165
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 事件處理常式概觀 (Windows Form)
-事件處理常式是繫結至事件的方法。  當事件引發時，會執行事件處理常式內的程式碼。  每個事件處理常式都提供兩個參數，可讓您適當處理事件。  以下範例顯示 <xref:System.Windows.Forms.Button> 控制項 <xref:System.Windows.Forms.Control.Click> 事件的事件處理常式。  
+# <a name="event-handlers-overview-windows-forms"></a><span data-ttu-id="e5a9a-102">事件處理常式概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="e5a9a-102">Event Handlers Overview (Windows Forms)</span></span>
+<span data-ttu-id="e5a9a-103">事件處理常式會是繫結至事件的方法。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-103">An event handler is a method that is bound to an event.</span></span> <span data-ttu-id="e5a9a-104">當事件引發時，事件處理常式中的程式碼會執行。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-104">When the event is raised, the code within the event handler is executed.</span></span> <span data-ttu-id="e5a9a-105">每個事件處理常式提供可讓您正確處理事件的兩個參數。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-105">Each event handler provides two parameters that allow you to handle the event properly.</span></span> <span data-ttu-id="e5a9a-106">下列範例顯示的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-106">The following example shows an event handler for a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
 ```vb  
 Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click  
   
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -37,7 +41,6 @@ private void button1_Click(object sender, System.EventArgs e)
 {  
   
 }  
-  
 ```  
   
 ```cpp  
@@ -49,12 +52,12 @@ private:
   }  
 ```  
   
- 第一個參數 `sender` 提供引發事件的物件參考。  上例中的第二個參數 `e` 傳遞的是針對欲處理事件的物件。  藉由參考物件的屬性 \(有時候是它的方法\)，您可以取得一些資訊，例如：mouse 事件的滑鼠位置，或是 drag\-and\-drop 事件中傳送的資料。  
+ <span data-ttu-id="e5a9a-107">第一個參數，`sender`，提供引發事件之物件的參考。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-107">The first parameter,`sender`, provides a reference to the object that raised the event.</span></span> <span data-ttu-id="e5a9a-108">第二個參數， `e`，在上述範例中，會傳遞物件特定事件的處理。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-108">The second parameter, `e`, in the example above, passes an object specific to the event that is being handled.</span></span> <span data-ttu-id="e5a9a-109">藉由參考物件的屬性 （甚至是某些情況下，它的方法），您可以取得資訊，例如滑鼠事件或拖放事件中傳送的資料的滑鼠位置。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-109">By referencing the object's properties (and, sometimes, its methods), you can obtain information such as the location of the mouse for mouse events or data being transferred in drag-and-drop events.</span></span>  
   
- 通常每個事件會產生與第二個參數的事件物件型別不同的事件處理常式。  某些事件處理常式，例如用於 <xref:System.Windows.Forms.Control.MouseDown> 和 <xref:System.Windows.Forms.Control.MouseUp> 事件的事件處理常式，則與第二個參數屬於相同的物件型別。  針對這些類型的事件，您可使用相同的事件處理常式來處理這兩種事件。  
+ <span data-ttu-id="e5a9a-110">通常每個事件，就會產生具有不同的事件物件類型的第二個參數的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-110">Typically each event produces an event handler with a different event-object type for the second parameter.</span></span> <span data-ttu-id="e5a9a-111">事件處理常式，例如用於<xref:System.Windows.Forms.Control.MouseDown>和<xref:System.Windows.Forms.Control.MouseUp>事件，都有相同的物件類型，其第二個參數。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-111">Some event handlers, such as those for the <xref:System.Windows.Forms.Control.MouseDown> and <xref:System.Windows.Forms.Control.MouseUp> events, have the same object type for their second parameter.</span></span> <span data-ttu-id="e5a9a-112">針對這些類型的事件，您可以使用相同的事件處理常式來處理這兩個事件。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-112">For these types of events, you can use the same event handler to handle both events.</span></span>  
   
- 您也可以使用相同的事件處理常式來處理不同控制項的相同事件。  舉例來說，假設表單上有一群 <xref:System.Windows.Forms.RadioButton> 控制項，您就可以針對 <xref:System.Windows.Forms.Control.Click> 事件建立一個事件處理常式，然後將每一個控制項的 <xref:System.Windows.Forms.Control.Click> 事件繫結到這個事件處理常式。  如需詳細資訊，請參閱 [如何：在 Windows Form 中連接多個事件至單一事件處理常式](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)。  
+ <span data-ttu-id="e5a9a-113">您也可以使用相同的事件處理常式來處理不同的控制項相同的事件。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-113">You can also use the same event handler to handle the same event for different controls.</span></span> <span data-ttu-id="e5a9a-114">例如，如果您有一組<xref:System.Windows.Forms.RadioButton>表單上的控制項，您可以建立單一事件處理常式<xref:System.Windows.Forms.Control.Click>事件，而且有每個控制項<xref:System.Windows.Forms.Control.Click>事件繫結至單一事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-114">For example, if you have a group of <xref:System.Windows.Forms.RadioButton> controls on a form, you could create a single event handler for the <xref:System.Windows.Forms.Control.Click> event and have each control's <xref:System.Windows.Forms.Control.Click> event bound to the single event handler.</span></span> <span data-ttu-id="e5a9a-115">如需詳細資訊，請參閱[如何： 連接至 Windows Form 中的單一事件處理常式的多個事件](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="e5a9a-115">For more information, see [How to: Connect Multiple Events to a Single Event Handler in Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).</span></span>  
   
-## 請參閱  
- [在 Windows Form 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [事件概觀](../../../docs/framework/winforms/events-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e5a9a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5a9a-116">See Also</span></span>  
+ [<span data-ttu-id="e5a9a-117">在 Windows Forms 中建立事件處理常式</span><span class="sxs-lookup"><span data-stu-id="e5a9a-117">Creating Event Handlers in Windows Forms</span></span>](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [<span data-ttu-id="e5a9a-118">事件概觀</span><span class="sxs-lookup"><span data-stu-id="e5a9a-118">Events Overview</span></span>](../../../docs/framework/winforms/events-overview-windows-forms.md)

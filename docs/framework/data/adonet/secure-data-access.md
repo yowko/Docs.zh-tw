@@ -1,106 +1,109 @@
 ---
-title: "安全資料存取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "安全存取資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 安全資料存取
-若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。  您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
+# <a name="secure-data-access"></a><span data-ttu-id="bb356-102">安全存取資料</span><span class="sxs-lookup"><span data-stu-id="bb356-102">Secure Data Access</span></span>
+<span data-ttu-id="bb356-103">若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。</span><span class="sxs-lookup"><span data-stu-id="bb356-103">To write secure ADO.NET code, you have to understand the security mechanisms available in the underlying data store, or database.</span></span> <span data-ttu-id="bb356-104">您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。</span><span class="sxs-lookup"><span data-stu-id="bb356-104">You also need to consider the security implications of other features or components that your application may contain.</span></span>  
   
-## 驗證、授權和權限  
- 在連接 Microsoft SQL Server 時，您也可以選擇使用「Windows 驗證」\(也稱為「整合式安全性」\)，它使用目前使用中的 Windows 使用者識別，而非傳遞使用者 ID 和密碼。  強烈建議您使用「Windows 驗證」，因為使用者認證並不會在連接字串中公開 \(Expose\)。  如果無法使用「Windows 驗證」連接到 SQL Server，則請考慮使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 在執行階段建立連接字串。  
+## <a name="authentication-authorization-and-permissions"></a><span data-ttu-id="bb356-105">驗證、授權和權限</span><span class="sxs-lookup"><span data-stu-id="bb356-105">Authentication, Authorization and Permissions</span></span>  
+ <span data-ttu-id="bb356-106">在連接 Microsoft SQL Server 時，您也可以選擇使用「Windows 驗證」(也稱為「整合式安全性」)，它使用目前使用中的 Windows 使用者識別，而非傳遞使用者 ID 和密碼。</span><span class="sxs-lookup"><span data-stu-id="bb356-106">When connecting to Microsoft SQL Server, you can use Windows Authentication, also known as Integrated Security, which uses the identity of the current active Windows user rather than passing a user ID and password.</span></span> <span data-ttu-id="bb356-107">強烈建議您使用「Windows 驗證」，因為使用者認證並不會在連接字串中公開 (Expose)。</span><span class="sxs-lookup"><span data-stu-id="bb356-107">Using Windows Authentication is highly recommended because user credentials are not exposed in the connection string.</span></span> <span data-ttu-id="bb356-108">如果無法使用「Windows 驗證」連接到 SQL Server，則請考慮使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 在執行階段建立連接字串。</span><span class="sxs-lookup"><span data-stu-id="bb356-108">If you cannot use Windows Authentication to connect to SQL Server, then consider creating connection strings at run time using the <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.</span></span>  
   
- 根據應用程式類型，需要以不同方式處理驗證所使用的認證。  例如，在 Windows Form 應用程式中，系統會提示使用者提供驗證資訊，或可使用使用者的 Windows 認證。  不過，Web 應用程式通常使用應用程式本身 \(而非使用者\) 提供的認證來存取資料。  
+ <span data-ttu-id="bb356-109">根據應用程式類型，需要以不同方式處理驗證所使用的認證。</span><span class="sxs-lookup"><span data-stu-id="bb356-109">The credentials used for authentication need to be handled differently based on the type of application.</span></span> <span data-ttu-id="bb356-110">例如，在 Windows Form 應用程式中，系統會提示使用者提供驗證資訊，或可使用使用者的 Windows 認證。</span><span class="sxs-lookup"><span data-stu-id="bb356-110">For example, in a Windows Forms application, the user can be prompted to supply authentication information, or the user's Windows credentials can be used.</span></span> <span data-ttu-id="bb356-111">不過，Web 應用程式通常使用應用程式本身 (而非使用者) 提供的認證來存取資料。</span><span class="sxs-lookup"><span data-stu-id="bb356-111">However, a Web application often accesses data using credentials supplied by the application itself rather than by the user.</span></span>  
   
- 使用者一旦經過驗證，其動作範圍就會根據所授與的權限而定。  請務必遵守最小權限的原則，並僅授與絕對必要的權限。  
+ <span data-ttu-id="bb356-112">使用者一旦經過驗證，其動作範圍就會根據所授與的權限而定。</span><span class="sxs-lookup"><span data-stu-id="bb356-112">Once users have been authenticated, the scope of their actions depends on the permissions that have been granted to them.</span></span> <span data-ttu-id="bb356-113">請務必遵守最小權限的原則，並僅授與絕對必要的權限。</span><span class="sxs-lookup"><span data-stu-id="bb356-113">Always follow the principle of least privilege and grant only permissions that are absolutely necessary.</span></span>  
   
- 如需詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-114">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-114">For more information, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
-|[Recommendations for Data Access Strategies](http://msdn.microsoft.com/zh-tw/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供存取資料及執行資料庫作業的建議。|  
-|[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)|說明如何在執行階段從使用者輸入建立連接字串。|  
-|[SQL Server 安全性的概觀](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|說明 SQL Server 安全性架構。|  
+|<span data-ttu-id="bb356-115">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-115">Resource</span></span>|<span data-ttu-id="bb356-116">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-116">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-117">保護連線資訊</span><span class="sxs-lookup"><span data-stu-id="bb356-117">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)|<span data-ttu-id="bb356-118">描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。</span><span class="sxs-lookup"><span data-stu-id="bb356-118">Describes security best practices and techniques for protecting connection information, such as using protected configuration to encrypt connection strings.</span></span>|  
+|[<span data-ttu-id="bb356-119">資料存取策略的建議</span><span class="sxs-lookup"><span data-stu-id="bb356-119">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|<span data-ttu-id="bb356-120">提供存取資料及執行資料庫作業的建議。</span><span class="sxs-lookup"><span data-stu-id="bb356-120">Provides recommendations for accessing data and performing database operations.</span></span>|  
+|[<span data-ttu-id="bb356-121">連接字串產生器</span><span class="sxs-lookup"><span data-stu-id="bb356-121">Connection String Builders</span></span>](../../../../docs/framework/data/adonet/connection-string-builders.md)|<span data-ttu-id="bb356-122">說明如何在執行階段從使用者輸入建立連接字串。</span><span class="sxs-lookup"><span data-stu-id="bb356-122">Describes how to build connection strings from user input at run time.</span></span>|  
+|[<span data-ttu-id="bb356-123">SQL Server 安全性概觀</span><span class="sxs-lookup"><span data-stu-id="bb356-123">Overview of SQL Server Security</span></span>](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|<span data-ttu-id="bb356-124">說明 SQL Server 安全性架構。</span><span class="sxs-lookup"><span data-stu-id="bb356-124">Describes the SQL Server security architecture.</span></span>|  
   
-## 參數型命令和 SQL 插入  
- 使用參數型命令 \(Parameterized Command\) 有助於防衛 SQL 插入式攻擊，在此類攻擊中，攻擊者會將命令「插入」至 SQL 陳述式而危及伺服器的安全。  參數型命令可確保自外部來源所接收的值僅會以值的形式傳遞，而不會當做 Transact\-SQL 陳述式，藉此防衛 SQL 插入式攻擊。  因此，已插入值的 Transact\-SQL 命令不會在資料來源執行，  而是將其做為參數值單獨評估。  除了安全性優點外，參數型命令也提供方便的方法，可您安排以 Transact\-SQL 陳述式傳遞的值或傳遞到預存程序 \(Stored Procedure\) 的值。  
+## <a name="parameterized-commands-and-sql-injection"></a><span data-ttu-id="bb356-125">參數型命令和 SQL 插入</span><span class="sxs-lookup"><span data-stu-id="bb356-125">Parameterized Commands and SQL Injection</span></span>  
+ <span data-ttu-id="bb356-126">使用參數型命令 (Parameterized Command) 有助於防衛 SQL 插入式攻擊，在此類攻擊中，攻擊者會將命令「插入」至 SQL 陳述式而危及伺服器的安全。</span><span class="sxs-lookup"><span data-stu-id="bb356-126">Using parameterized commands helps guard against SQL injection attacks, in which an attacker "injects" a command into a SQL statement that compromises security on the server.</span></span> <span data-ttu-id="bb356-127">參數型命令可確保自外部來源所接收的值僅會以值的形式傳遞，而不會當做 Transact-SQL 陳述式，藉此防衛 SQL 插入式攻擊。</span><span class="sxs-lookup"><span data-stu-id="bb356-127">Parameterized commands guard against a SQL injection attack by ensuring that values received from an external source are passed as values only, and not part of the Transact-SQL statement.</span></span> <span data-ttu-id="bb356-128">因此，已插入值的 Transact-SQL 命令不會在資料來源執行，</span><span class="sxs-lookup"><span data-stu-id="bb356-128">As a result, Transact-SQL commands inserted into a value are not executed at the data source.</span></span> <span data-ttu-id="bb356-129">而是將其做為參數值單獨評估。</span><span class="sxs-lookup"><span data-stu-id="bb356-129">Rather, they are evaluated solely as a parameter value.</span></span> <span data-ttu-id="bb356-130">除了安全性優點外，參數型命令也提供方便的方法，可您安排以 Transact-SQL 陳述式傳遞的值或傳遞到預存程序 (Stored Procedure) 的值。</span><span class="sxs-lookup"><span data-stu-id="bb356-130">In addition to the security benefits, parameterized commands provide a convenient method for organizing values passed with a Transact-SQL statement or to a stored procedure.</span></span>  
   
- 如需有關使用參數型命令的詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-131">如需有關使用參數型命令的詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-131">For more information on using parameterized commands, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
-|[使用預存程序修改資料](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|說明如何指定參數並取得傳回值。|  
-|[在 SQL Server 中使用預存程序管理權限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
+|<span data-ttu-id="bb356-132">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-132">Resource</span></span>|<span data-ttu-id="bb356-133">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-133">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-134">DataAdapter 的參數</span><span class="sxs-lookup"><span data-stu-id="bb356-134">DataAdapter Parameters</span></span>](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|<span data-ttu-id="bb356-135">說明如何將參數搭配 `DataAdapter` 使用。</span><span class="sxs-lookup"><span data-stu-id="bb356-135">Describes how to use parameters with a `DataAdapter`.</span></span>|  
+|[<span data-ttu-id="bb356-136">使用預存程序修改資料</span><span class="sxs-lookup"><span data-stu-id="bb356-136">Modifying Data with Stored Procedures</span></span>](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|<span data-ttu-id="bb356-137">說明如何指定參數並取得傳回值。</span><span class="sxs-lookup"><span data-stu-id="bb356-137">Describes how to specify parameters and obtain a return value.</span></span>|  
+|[<span data-ttu-id="bb356-138">管理 SQL Server 中的預存程序的權限</span><span class="sxs-lookup"><span data-stu-id="bb356-138">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|<span data-ttu-id="bb356-139">說明如何使用 SQL Server 預存程序以封裝資料存取。</span><span class="sxs-lookup"><span data-stu-id="bb356-139">Describes how to use SQL Server stored procedures to encapsulate data access.</span></span>|  
   
-## 指令碼攻擊  
- 指令碼攻擊是另一種形式的插入，此種攻擊會使用插入至網頁的惡意字元。  瀏覽器並不會驗證插入的字元，而會將其當做網頁的一部分來處理。  
+## <a name="script-exploits"></a><span data-ttu-id="bb356-140">指令碼攻擊</span><span class="sxs-lookup"><span data-stu-id="bb356-140">Script Exploits</span></span>  
+ <span data-ttu-id="bb356-141">指令碼攻擊是另一種形式的插入，此種攻擊會使用插入至網頁的惡意字元。</span><span class="sxs-lookup"><span data-stu-id="bb356-141">A script exploit is another form of injection that uses malicious characters inserted into a Web page.</span></span> <span data-ttu-id="bb356-142">瀏覽器並不會驗證插入的字元，而會將其當做網頁的一部分來處理。</span><span class="sxs-lookup"><span data-stu-id="bb356-142">The browser does not validate the inserted characters and will process them as part of the page.</span></span>  
   
- 如需詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-143">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-143">For more information, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)|說明如何防衛指令碼和 SQL 陳述式攻擊。|  
+|<span data-ttu-id="bb356-144">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-144">Resource</span></span>|<span data-ttu-id="bb356-145">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-145">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-146">指令碼擅用概觀</span><span class="sxs-lookup"><span data-stu-id="bb356-146">Script Exploits Overview</span></span>](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|<span data-ttu-id="bb356-147">說明如何防衛指令碼和 SQL 陳述式攻擊。</span><span class="sxs-lookup"><span data-stu-id="bb356-147">Describes how to guard against scripting and SQL statement exploits.</span></span>|  
   
-## 探查攻擊  
- 攻擊者通常利用例外狀況的資訊，例如伺服器、資料庫或資料表名稱，來對系統設置攻擊。  由於例外狀況可能包含有關應用程式或資料來源的特定資訊，所以您可以只將必要的資訊公開給用戶端，使應用程式和資料來源有更嚴密的保護。  
+## <a name="probing-attacks"></a><span data-ttu-id="bb356-148">探查攻擊</span><span class="sxs-lookup"><span data-stu-id="bb356-148">Probing Attacks</span></span>  
+ <span data-ttu-id="bb356-149">攻擊者通常利用例外狀況的資訊，例如伺服器、資料庫或資料表名稱，來對系統設置攻擊。</span><span class="sxs-lookup"><span data-stu-id="bb356-149">Attackers often use information from an exception, such as the name of your server, database, or table, to mount an attack on your system.</span></span> <span data-ttu-id="bb356-150">由於例外狀況可能包含有關應用程式或資料來源的特定資訊，所以您可以只將必要的資訊公開給用戶端，使應用程式和資料來源有更嚴密的保護。</span><span class="sxs-lookup"><span data-stu-id="bb356-150">Because exceptions can contain specific information about your application or data source, you can help keep your application and data source better protected by only exposing essential information to the client.</span></span>  
   
- 如需詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-151">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-151">For more information, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[例外狀況處理基礎觀念](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|說明 try\/catch\/finally 結構化例外狀況處理 \(Structured Exception Handling\) 的基本形式。|  
-|[例外狀況的最佳作法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|說明處理例外狀況的最佳做法。|  
+|<span data-ttu-id="bb356-152">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-152">Resource</span></span>|<span data-ttu-id="bb356-153">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-153">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-154">例外狀況處理基本概念</span><span class="sxs-lookup"><span data-stu-id="bb356-154">Exception Handling Fundamentals</span></span>](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|<span data-ttu-id="bb356-155">說明 try/catch/finally 結構化例外狀況處理 (Structured Exception Handling) 的基本形式。</span><span class="sxs-lookup"><span data-stu-id="bb356-155">Describes the basic forms of try/catch/finally structured exception handling.</span></span>|  
+|[<span data-ttu-id="bb356-156">例外狀況的最佳做法</span><span class="sxs-lookup"><span data-stu-id="bb356-156">Best Practices for Exceptions</span></span>](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|<span data-ttu-id="bb356-157">說明處理例外狀況的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="bb356-157">Describes best practices for handling exceptions.</span></span>|  
   
-## 保護 Microsoft Access 和 Excel 資料來源  
- 當安全性需求為最低或不存在時，可將 Microsoft Access 和 Microsoft Excel 當做 ADO.NET 應用程式的資料存放區。  其安全性功能可有效遏止侵擾，但僅止於阻擋狀況外使用者的干擾。  Access 和 Excel 的實體資料檔存在於檔案系統中，而且必須讓所有的使用者都可以存取。  這使得這些檔案易遭受因竊取或資料遺失而導致的攻擊，因為檔案可以輕易地複製或變更。  在需要強固安全性時，請使用 SQL Server 或其他伺服器架構的資料庫，因為其中的實體資料檔是無法從檔案系統讀取的。  
+## <a name="protecting-microsoft-access-and-excel-data-sources"></a><span data-ttu-id="bb356-158">保護 Microsoft Access 和 Excel 資料來源</span><span class="sxs-lookup"><span data-stu-id="bb356-158">Protecting Microsoft Access and Excel Data Sources</span></span>  
+ <span data-ttu-id="bb356-159">當安全性需求為最低或不存在時，可將 Microsoft Access 和 Microsoft Excel 當做 ADO.NET 應用程式的資料存放區。</span><span class="sxs-lookup"><span data-stu-id="bb356-159">Microsoft Access and Microsoft Excel can act as a data store for an ADO.NET application when security requirements are minimal or nonexistent.</span></span> <span data-ttu-id="bb356-160">其安全性功能可有效遏止侵擾，但僅止於阻擋狀況外使用者的干擾。</span><span class="sxs-lookup"><span data-stu-id="bb356-160">Their security features are effective for deterrence, but should not be relied upon to do more than discourage meddling by uninformed users.</span></span> <span data-ttu-id="bb356-161">Access 和 Excel 的實體資料檔存在於檔案系統中，而且必須讓所有的使用者都可以存取。</span><span class="sxs-lookup"><span data-stu-id="bb356-161">The physical data files for Access and Excel exist on the file system, and must be accessible to all users.</span></span> <span data-ttu-id="bb356-162">這使得這些檔案易遭受因竊取或資料遺失而導致的攻擊，因為檔案可以輕易地複製或變更。</span><span class="sxs-lookup"><span data-stu-id="bb356-162">This makes them vulnerable to attacks that could result in theft or data loss since the files can be easily copied or altered.</span></span> <span data-ttu-id="bb356-163">在需要強固安全性時，請使用 SQL Server 或其他伺服器架構的資料庫，因為其中的實體資料檔是無法從檔案系統讀取的。</span><span class="sxs-lookup"><span data-stu-id="bb356-163">When robust security is required, use SQL Server or another server-based database where the physical data files are not readable from the file system.</span></span>  
   
- 如需有關保護 Access 和 Excel 資料的詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-164">如需有關保護 Access 和 Excel 資料的詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-164">For more information on protecting Access and Excel data, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[Access 2007 的安全性考量和指引](http://go.microsoft.com/fwlink/?LinkId=98354)|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
-|[以使用者層級安全性協助保護 Access 資料庫 \(MDB\)](http://go.microsoft.com/fwlink/?LinkId=47697)|適用於 Access 2003。  提供實作使用者層級安全性以保護 Access 2003 資料的指示。|  
-|[了解工作群組資訊檔在 Access 安全性的角色](http://support.microsoft.com/kb/305542)|說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。|  
-|[關於 Microsoft Access 2.0 到 2000 版的 Microsoft Access 安全性常見問題集](http://go.microsoft.com/fwlink/?LinkId=47698)|可下載版本的 Microsoft Access 安全性常見問題集。|  
-|[安全性和防護疑難排解](http://go.microsoft.com/fwlink/?LinkId=47703)|呈現 Excel 2003 一般安全性問題的解決方案。|  
+|<span data-ttu-id="bb356-165">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-165">Resource</span></span>|<span data-ttu-id="bb356-166">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-166">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-167">安全性考量和 Access 2007 的指引</span><span class="sxs-lookup"><span data-stu-id="bb356-167">Security Considerations and Guidance for Access 2007</span></span>](http://go.microsoft.com/fwlink/?LinkId=98354)|<span data-ttu-id="bb356-168">說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。</span><span class="sxs-lookup"><span data-stu-id="bb356-168">Describes security techniques for Access 2007 such encrypting files, administering passwords, converting databases to the new ACCDB and ACCDE formats, and using other security options.</span></span>|  
+|[<span data-ttu-id="bb356-169">協助保護 Access 資料庫與使用者層級安全性 (MDB)</span><span class="sxs-lookup"><span data-stu-id="bb356-169">Help Protect an Access database with User-Level Security (MDB)</span></span>](http://go.microsoft.com/fwlink/?LinkId=47697)|<span data-ttu-id="bb356-170">適用於 Access 2003。</span><span class="sxs-lookup"><span data-stu-id="bb356-170">Applies to Access 2003.</span></span> <span data-ttu-id="bb356-171">提供實作使用者層級安全性以保護 Access 2003 資料的指示。</span><span class="sxs-lookup"><span data-stu-id="bb356-171">Provides instructions for implementing user-level security to protect data in Access 2003.</span></span>|  
+|[<span data-ttu-id="bb356-172">了解工作群組資訊檔的角色中存取安全性</span><span class="sxs-lookup"><span data-stu-id="bb356-172">Understanding the Role of Workgroup Information Files in Access Security</span></span>](http://support.microsoft.com/kb/305542)|<span data-ttu-id="bb356-173">說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。</span><span class="sxs-lookup"><span data-stu-id="bb356-173">Explains the role and relationship of the workgroup information file in Access 2003 security.</span></span>|  
+|[<span data-ttu-id="bb356-174">經常詢問問題相關的 Microsoft Access 安全性 Microsoft Access 2.0 到 2000年版</span><span class="sxs-lookup"><span data-stu-id="bb356-174">Frequently Asked Questions About Microsoft Access Security for Microsoft Access versions 2.0 through 2000</span></span>](http://go.microsoft.com/fwlink/?LinkId=47698)|<span data-ttu-id="bb356-175">可下載版本的 Microsoft Access 安全性常見問題集。</span><span class="sxs-lookup"><span data-stu-id="bb356-175">Downloadable version of the Microsoft Access Security FAQ.</span></span>|  
+|[<span data-ttu-id="bb356-176">安全性和防護疑難排解</span><span class="sxs-lookup"><span data-stu-id="bb356-176">Troubleshoot Security and Protection</span></span>](http://go.microsoft.com/fwlink/?LinkId=47703)|<span data-ttu-id="bb356-177">呈現 Excel 2003 一般安全性問題的解決方案。</span><span class="sxs-lookup"><span data-stu-id="bb356-177">Presents solutions to common problems with security in Excel 2003.</span></span>|  
   
-## 企業服務  
- COM\+ 本身包含根據 Windows NT 帳戶和處理序\/執行緒模擬而定的安全性模型。  <xref:System.EnterpriseServices> 命名空間提供包裝函式，這些包裝函式允許 .NET 應用程式透過 <xref:System.EnterpriseServices.ServicedComponent> 類別來整合 Managed 程式碼與 COM\+ 安全性服務。  
+## <a name="enterprise-services"></a><span data-ttu-id="bb356-178">企業服務</span><span class="sxs-lookup"><span data-stu-id="bb356-178">Enterprise Services</span></span>  
+ <span data-ttu-id="bb356-179">COM+ 本身包含根據 Windows NT 帳戶和處理序/執行緒模擬而定的安全性模型。</span><span class="sxs-lookup"><span data-stu-id="bb356-179">COM+ contains its own security model that relies on Windows NT accounts and process/thread impersonation.</span></span> <span data-ttu-id="bb356-180"><xref:System.EnterpriseServices> 命名空間提供包裝函式，這些包裝函式允許 .NET 應用程式透過 <xref:System.EnterpriseServices.ServicedComponent> 類別來整合 Managed 程式碼與 COM+ 安全性服務。</span><span class="sxs-lookup"><span data-stu-id="bb356-180">The <xref:System.EnterpriseServices> namespace provides wrappers that allow .NET applications to integrate managed code with COM+ security services through the <xref:System.EnterpriseServices.ServicedComponent> class.</span></span>  
   
- 如需詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-181">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-181">For more information, see the following resource.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[COM\+ Role\-Based Security and the .NET Framework](http://msdn.microsoft.com/zh-tw/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|討論如何整合 Managed 程式碼和 COM\+ 安全性服務。|  
+|<span data-ttu-id="bb356-182">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-182">Resource</span></span>|<span data-ttu-id="bb356-183">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-183">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-184">COM + 角色為基礎的安全性和.NET Framework</span><span class="sxs-lookup"><span data-stu-id="bb356-184">COM+ Role-Based Security and the .NET Framework</span></span>](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|<span data-ttu-id="bb356-185">討論如何整合 Managed 程式碼和 COM+ 安全性服務。</span><span class="sxs-lookup"><span data-stu-id="bb356-185">Discusses how to integrate managed code with COM+ security services.</span></span>|  
   
-## 與 Unmanaged 程式碼互通  
- .NET Framework 可用於與 Unmanaged 程式碼互動，這包括 COM 元件、COM\+ 服務、外部型別程式庫以及許多作業系統服務。  使用 Unmanaged 程式碼時需要越過 Managed 程式碼的安全性範疇。  您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 \(指定了 <xref:System.Security.Permissions.SecurityPermissionFlag> 旗標的 <xref:System.Security.Permissions.SecurityPermission>\)。  Unmanaged 程式碼可能會在應用程式中引入非預期的安全性漏洞；  因此，除非絕對必要，否則應該避免與 Unmanaged 程式碼互通。  
+## <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="bb356-186">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="bb356-186">Interoperating with Unmanaged Code</span></span>  
+ <span data-ttu-id="bb356-187">.NET Framework 可用於與 Unmanaged 程式碼互動，這包括 COM 元件、COM+ 服務、外部型別程式庫以及許多作業系統服務。</span><span class="sxs-lookup"><span data-stu-id="bb356-187">The .NET Framework provides for interaction with unmanaged code, including COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="bb356-188">使用 Unmanaged 程式碼時需要越過 Managed 程式碼的安全性範疇。</span><span class="sxs-lookup"><span data-stu-id="bb356-188">Working with unmanaged code involves going outside the security perimeter for managed code.</span></span> <span data-ttu-id="bb356-189">您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了 <xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>)。</span><span class="sxs-lookup"><span data-stu-id="bb356-189">Both your code and any code that calls it must have unmanaged code permission (<xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specified).</span></span> <span data-ttu-id="bb356-190">Unmanaged 程式碼可能會在應用程式中引入非預期的安全性漏洞；</span><span class="sxs-lookup"><span data-stu-id="bb356-190">Unmanaged code can introduce unintended security vulnerabilities into your application.</span></span> <span data-ttu-id="bb356-191">因此，除非絕對必要，否則應該避免與 Unmanaged 程式碼互通。</span><span class="sxs-lookup"><span data-stu-id="bb356-191">Therefore, you should avoid interoperating with unmanaged code unless it is absolutely necessary.</span></span>  
   
- 如需詳細資訊，請參閱下列資源。  
+ <span data-ttu-id="bb356-192">如需詳細資訊，請參閱下列資源。</span><span class="sxs-lookup"><span data-stu-id="bb356-192">For more information, see the following resources.</span></span>  
   
-|資源|描述|  
-|--------|--------|  
-|[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)|包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。|  
-|[Advanced COM Interoperability](http://msdn.microsoft.com/zh-tw/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含主要 Interop 組件 \(Assembly\)、執行緒和自訂封送處理 \(Marshaling\) 等進階主題。|  
+|<span data-ttu-id="bb356-193">資源</span><span class="sxs-lookup"><span data-stu-id="bb356-193">Resource</span></span>|<span data-ttu-id="bb356-194">說明</span><span class="sxs-lookup"><span data-stu-id="bb356-194">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="bb356-195">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="bb356-195">Interoperating with Unmanaged Code</span></span>](../../../../docs/framework/interop/index.md)|<span data-ttu-id="bb356-196">包含說明如何將 COM 元件公開至 .NET Framework 以及如何將 .NET Framework 元件公開至 COM 的主題。</span><span class="sxs-lookup"><span data-stu-id="bb356-196">Contains topics describing how to expose COM components to the .NET Framework and how to expose .NET Framework components to COM.</span></span>|  
+|[<span data-ttu-id="bb356-197">進階 COM 互通性</span><span class="sxs-lookup"><span data-stu-id="bb356-197">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|<span data-ttu-id="bb356-198">包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。</span><span class="sxs-lookup"><span data-stu-id="bb356-198">Contains advanced topics such as primary interop assemblies, threading and custom marshaling.</span></span>|  
   
-## 請參閱  
- [保護 ADO.NET 應用程式](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [Recommendations for Data Access Strategies](http://msdn.microsoft.com/zh-tw/72411f32-d12a-4de8-b961-e54fca7faaf5)   
- [保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)   
- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="bb356-199">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bb356-199">See Also</span></span>  
+ [<span data-ttu-id="bb356-200">設定 ADO.NET 應用程式的安全性</span><span class="sxs-lookup"><span data-stu-id="bb356-200">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="bb356-201">SQL Server 安全性</span><span class="sxs-lookup"><span data-stu-id="bb356-201">SQL Server Security</span></span>](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [<span data-ttu-id="bb356-202">資料存取策略的建議</span><span class="sxs-lookup"><span data-stu-id="bb356-202">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [<span data-ttu-id="bb356-203">保護連線資訊</span><span class="sxs-lookup"><span data-stu-id="bb356-203">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [<span data-ttu-id="bb356-204">連接字串產生器</span><span class="sxs-lookup"><span data-stu-id="bb356-204">Connection String Builders</span></span>](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [<span data-ttu-id="bb356-205">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="bb356-205">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

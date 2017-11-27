@@ -1,123 +1,125 @@
 ---
-title: "傳輸配額 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "傳輸配額 [WCF]"
+title: "傳輸配額"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 78a7b421b2ac1a7ef8323a5ab31e536a489f09e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 傳輸配額
-傳輸配額是用來判斷連線何時過度使用資源的原則機制。配額是硬性限制，一旦超出配額值，就會無法使用其他資源。傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
+# <a name="transport-quotas"></a><span data-ttu-id="f50c6-102">傳輸配額</span><span class="sxs-lookup"><span data-stu-id="f50c6-102">Transport Quotas</span></span>
+<span data-ttu-id="f50c6-103">傳輸配額是用來判斷連線何時過度使用資源的原則機制。</span><span class="sxs-lookup"><span data-stu-id="f50c6-103">Transport quotas are a policy mechanism for deciding when a connection is consuming excessive resources.</span></span> <span data-ttu-id="f50c6-104">配額是硬性限制，一旦超出配額值，就會無法使用其他資源。</span><span class="sxs-lookup"><span data-stu-id="f50c6-104">A quota is a hard limit that prevents the use of additional resources once the quota value is exceeded.</span></span> <span data-ttu-id="f50c6-105">傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。</span><span class="sxs-lookup"><span data-stu-id="f50c6-105">Transport quotas prevent either malicious or unintentional denial of service attacks.</span></span>  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的預設傳輸配額值是依據保守的資源配置。這些預設值適用於開發環境和小規模的安裝情況。如果安裝時資源不足，或者不論是否有額外的資源，連線都會受到限制時，服務系統管理員就應該檢查傳輸配額，並且調整個別的配額值。  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="f50c6-106"> 的預設傳輸配額值是依據保守的資源配置。</span><span class="sxs-lookup"><span data-stu-id="f50c6-106"> transports have default quota values that are based on a conservative allocation of resources.</span></span> <span data-ttu-id="f50c6-107">這些預設值適用於開發環境和小規模的安裝情況。</span><span class="sxs-lookup"><span data-stu-id="f50c6-107">These default values are suitable for development environments and small installation scenarios.</span></span> <span data-ttu-id="f50c6-108">如果安裝時資源不足，或者不論是否有額外的資源，連線都會受到限制時，服務系統管理員就應該檢查傳輸配額，並且調整個別的配額值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-108">Service administrators should review transport quotas and tune individual quota values if an installation is running out of resources or if connections are being limited despite the availability of additional resources.</span></span>  
   
-## 傳輸配額的類型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸有三種配額：  
+## <a name="types-of-transport-quotas"></a><span data-ttu-id="f50c6-109">傳輸配額的類型</span><span class="sxs-lookup"><span data-stu-id="f50c6-109">Types of Transport Quotas</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f50c6-110"> 傳輸有三種配額：</span><span class="sxs-lookup"><span data-stu-id="f50c6-110"> transports have three types of quotas:</span></span>  
   
--   「*逾時*」\(Timeout\) 會降低藉由長時間佔用資源所產生的阻絕服務攻擊情形。  
+-   <span data-ttu-id="f50c6-111">*逾時*減少阻絕服務攻擊，依賴佔用資源一段時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-111">*Timeouts* mitigate denial of service attacks that rely on tying up resources for an extended period of time.</span></span>  
   
--   「*記憶體配置限制*」\(Memory Allocation Limit\) 會防止單一連線用盡系統記憶體和拒絕服務其他連線。  
+-   <span data-ttu-id="f50c6-112">*記憶體配置限制*防止單一連線耗盡系統記憶體和拒絕服務其他連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-112">*Memory allocation limits* prevent a single connection from exhausting system memory and denying service to other connections.</span></span>  
   
--   「*集合大小限制*」\(Collection Size Limit\) 會限制間接配置記憶體或有限供應之資源的使用。  
+-   <span data-ttu-id="f50c6-113">*收集大小限制*繫結間接配置記憶體或有限供應之資源的耗用量。</span><span class="sxs-lookup"><span data-stu-id="f50c6-113">*Collection size limits* bound the consumption of resources that indirectly allocate memory or are in limited supply.</span></span>  
   
-## 傳輸配額描述  
- 本章節說明標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸 HTTP\(S\)、TCP\/IP 和具名管道適用的傳輸配額。自訂傳輸會公開未包含在下列清單的可設定配額。如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。  
+## <a name="transport-quota-descriptions"></a><span data-ttu-id="f50c6-114">傳輸配額描述</span><span class="sxs-lookup"><span data-stu-id="f50c6-114">Transport Quota Descriptions</span></span>  
+ <span data-ttu-id="f50c6-115">本章節說明標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸 HTTP(S)、TCP/IP 和具名管道適用的傳輸配額。</span><span class="sxs-lookup"><span data-stu-id="f50c6-115">This section describes the transport quotas available for the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transports: HTTP(S), TCP/IP, and named pipes.</span></span> <span data-ttu-id="f50c6-116">自訂傳輸會公開未包含在下列清單的可設定配額。</span><span class="sxs-lookup"><span data-stu-id="f50c6-116">Custom transports can expose their own configurable quotas not included in this list.</span></span> <span data-ttu-id="f50c6-117">如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。</span><span class="sxs-lookup"><span data-stu-id="f50c6-117">Consult the documentation for a custom transport to find out about its quotas.</span></span>  
   
- 每個配額設定都各有型別、最小值和預設值。配額的最大值受到其型別限制。由於機器限制，不一定都能將配額設定為最大值。  
+ <span data-ttu-id="f50c6-118">每個配額設定都各有型別、最小值和預設值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-118">Each quota setting has a type, minimum value, and default value.</span></span> <span data-ttu-id="f50c6-119">配額的最大值受到其型別限制。</span><span class="sxs-lookup"><span data-stu-id="f50c6-119">The maximum value of a quota is limited by its type.</span></span> <span data-ttu-id="f50c6-120">由於機器限制，不一定都能將配額設定為最大值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-120">Due to machine limitations, it is not always possible to set a quota to its maximum value.</span></span>  
   
-|名稱|型別|最小<br /><br /> 值|Default<br /><br /> 值|說明|  
-|--------|--------|--------------|-------------------|--------|  
-|`ChannelInitializationTimeout`|TimeSpan|1 次滴答聲|5 秒|初始讀取期間，等待連線傳送前序編碼 \(Preamble\) 的最長時間。在發生驗證之前會接收到這項資料。這個設定通常比 `ReceiveTimeout` 配額值小很多。|  
-|`CloseTimeout`|TimeSpan|0|1 分鐘|在傳輸引發例外狀況之前，等待連線關閉的最長時間。|  
-|`ConnectionBufferSize`|Integer|1|8 KB|基礎傳輸的傳輸和接收緩衝區大小 \(以位元組為單位\)。增加緩衝區大小，可以在傳送大型訊息時提高輸送量。|  
-|`IdleTimeout`|TimeSpan|0|2 分鐘|共用連線關閉之前，可以保持在閒置狀態的最長時間。<br /><br /> 這個設定只適用於共用連線。|  
-|`LeaseTimeout`|TimeSpan|0|5 分鐘|作用中共用連線的最長存留期。當超過指定的時間後，一旦已服務目前要求，就會關閉連線。<br /><br /> 這個設定只適用於共用連線。|  
-|`ListenBacklog`|Integer|1|10|在拒絕端點的其他連線之前，接聽項尚未服務之連線的最大數目。|  
-|`MaxBufferPoolSize`|長整數|0|512 KB|傳輸專用於共用可重複使用之訊息緩衝區的最大記憶體 \(以位元組為單位\)。當集區無法提供訊息緩衝區時，就會配置新緩衝區，暫時使用。<br /><br /> 建立許多通道處理站或接聽項的安裝，可以為緩衝集區配置大量記憶體。減少這個緩衝區大小，在這個情況下會大幅降低記憶體使用量。|  
-|`MaxBufferSize`|Integer|1|64 KB|用於串流資料的最大緩衝區大小 \(以位元組為單位\)。如果未設定這個傳輸配額，或者傳輸不是使用資料流，配額值就是 `MaxReceivedMessageSize` 配額值和 <xref:System.Int32.MaxValue> 兩者的較小值。|  
-|`MaxOutboundConnectionsPerEndpoint`|Integer|1|10|可與特定端點相關聯之傳出連線的最大數目。<br /><br /> 這個設定只適用於共用連線。|  
-|`MaxOutputDelay`|TimeSpan|0|200 毫秒|等待傳送作業在單一作業中批次處理其他訊息的最長時間。如果基礎傳輸的緩衝區已滿，就會提早傳送訊息。傳送額外訊息並不會重設延遲期間。|  
-|`MaxPendingAccepts`|Integer|1|1|接聽項上等待通道接受的最大數目。<br /><br /> 在完成接受和啟動新接受之間有段時間間隔。增加這個集合大小，可以防止這個間隔期間內進行連線的用戶端遭到捨棄。|  
-|`MaxPendingConnections`|Integer|1|10|接聽項上等待應用程式接受連線的最大數目。當超過這個配額值時，新的傳入連線會被捨棄，而不是等待被接受。<br /><br /> 如訊息安全性等連線功能，可能會導致用戶端開啟一個以上的連線。在設定這個配額值時，服務系統管理員應該考量到其他連線。|  
-|`MaxReceivedMessageSize`|長整數|1|64 KB|在傳輸引發例外狀況之前，已接收的訊息 \(包括標頭\) 大小上限 \(以位元組為單位\)。|  
-|`OpenTimeout`|TimeSpan|0|1 分鐘|在傳輸引發例外狀況之前，等待建立連線的最長時間。|  
-|`ReceiveTimeout`|TimeSpan|0|10 分鐘|在傳輸引發例外狀況之前，等待讀取作業完成的最長時間。|  
-|`SendTimeout`|Timespan|0|1 分鐘|在傳輸引發例外狀況之前，等待寫入作業完成的最長時間。|  
+|<span data-ttu-id="f50c6-121">名稱</span><span class="sxs-lookup"><span data-stu-id="f50c6-121">Name</span></span>|<span data-ttu-id="f50c6-122">類型</span><span class="sxs-lookup"><span data-stu-id="f50c6-122">Type</span></span>|<span data-ttu-id="f50c6-123">最小</span><span class="sxs-lookup"><span data-stu-id="f50c6-123">Min.</span></span><br /><br /> <span data-ttu-id="f50c6-124">value</span><span class="sxs-lookup"><span data-stu-id="f50c6-124">value</span></span>|<span data-ttu-id="f50c6-125">預設</span><span class="sxs-lookup"><span data-stu-id="f50c6-125">Default</span></span><br /><br /> <span data-ttu-id="f50c6-126">value</span><span class="sxs-lookup"><span data-stu-id="f50c6-126">value</span></span>|<span data-ttu-id="f50c6-127">說明</span><span class="sxs-lookup"><span data-stu-id="f50c6-127">Description</span></span>|  
+|----------|----------|--------------------|-----------------------|-----------------|  
+|`ChannelInitializationTimeout`|<span data-ttu-id="f50c6-128">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-128">TimeSpan</span></span>|<span data-ttu-id="f50c6-129">1 次滴答聲</span><span class="sxs-lookup"><span data-stu-id="f50c6-129">1 tick</span></span>|<span data-ttu-id="f50c6-130">5 秒</span><span class="sxs-lookup"><span data-stu-id="f50c6-130">5 sec</span></span>|<span data-ttu-id="f50c6-131">初始讀取期間，等待連線傳送前序編碼 (Preamble) 的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-131">Maximum time to wait for a connection to send the preamble during the initial read.</span></span> <span data-ttu-id="f50c6-132">在發生驗證之前會接收到這項資料。</span><span class="sxs-lookup"><span data-stu-id="f50c6-132">This data is received before authentication occurs.</span></span> <span data-ttu-id="f50c6-133">這個設定通常比 `ReceiveTimeout` 配額值小很多。</span><span class="sxs-lookup"><span data-stu-id="f50c6-133">This setting is generally much smaller than the `ReceiveTimeout` quota value.</span></span>|  
+|`CloseTimeout`|<span data-ttu-id="f50c6-134">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-134">TimeSpan</span></span>|<span data-ttu-id="f50c6-135">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-135">0</span></span>|<span data-ttu-id="f50c6-136">1 分鐘</span><span class="sxs-lookup"><span data-stu-id="f50c6-136">1 min</span></span>|<span data-ttu-id="f50c6-137">在傳輸引發例外狀況之前，等待連線關閉的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-137">Maximum time to wait for a connection to close before the transport raises an exception.</span></span>|  
+|`ConnectionBufferSize`|<span data-ttu-id="f50c6-138">整數</span><span class="sxs-lookup"><span data-stu-id="f50c6-138">Integer</span></span>|<span data-ttu-id="f50c6-139">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-139">1</span></span>|<span data-ttu-id="f50c6-140">8 KB</span><span class="sxs-lookup"><span data-stu-id="f50c6-140">8 KB</span></span>|<span data-ttu-id="f50c6-141">基礎傳輸的傳輸和接收緩衝區大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f50c6-141">Size, in bytes, of the transmit and receive buffers of the underlying transport.</span></span> <span data-ttu-id="f50c6-142">增加緩衝區大小，可以在傳送大型訊息時提高輸送量。</span><span class="sxs-lookup"><span data-stu-id="f50c6-142">Increasing the buffer size can improve throughput when sending large messages.</span></span>|  
+|`IdleTimeout`|<span data-ttu-id="f50c6-143">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-143">TimeSpan</span></span>|<span data-ttu-id="f50c6-144">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-144">0</span></span>|<span data-ttu-id="f50c6-145">2 分鐘</span><span class="sxs-lookup"><span data-stu-id="f50c6-145">2 min</span></span>|<span data-ttu-id="f50c6-146">共用連線關閉之前，可以保持在閒置狀態的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-146">Maximum time a pooled connection can remain idle before being closed.</span></span><br /><br /> <span data-ttu-id="f50c6-147">這個設定只適用於共用連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-147">This setting only applies to pooled connections.</span></span>|  
+|`LeaseTimeout`|<span data-ttu-id="f50c6-148">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-148">TimeSpan</span></span>|<span data-ttu-id="f50c6-149">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-149">0</span></span>|<span data-ttu-id="f50c6-150">5 分鐘</span><span class="sxs-lookup"><span data-stu-id="f50c6-150">5 min</span></span>|<span data-ttu-id="f50c6-151">作用中共用連線的最長存留期。</span><span class="sxs-lookup"><span data-stu-id="f50c6-151">Maximum lifetime of an active pooled connection.</span></span> <span data-ttu-id="f50c6-152">當超過指定的時間後，一旦已服務目前要求，就會關閉連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-152">After the specified time elapses, the connection closes once the current request is serviced.</span></span><br /><br /> <span data-ttu-id="f50c6-153">這個設定只適用於共用連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-153">This setting only applies to pooled connections.</span></span>|  
+|`ListenBacklog`|<span data-ttu-id="f50c6-154">整數</span><span class="sxs-lookup"><span data-stu-id="f50c6-154">Integer</span></span>|<span data-ttu-id="f50c6-155">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-155">1</span></span>|<span data-ttu-id="f50c6-156">10</span><span class="sxs-lookup"><span data-stu-id="f50c6-156">10</span></span>|<span data-ttu-id="f50c6-157">在拒絕端點的其他連線之前，接聽項尚未服務之連線的最大數目。</span><span class="sxs-lookup"><span data-stu-id="f50c6-157">Maximum number of connections that the listener can have unserviced before additional connections to that endpoint are denied.</span></span>|  
+|`MaxBufferPoolSize`|<span data-ttu-id="f50c6-158">Long</span><span class="sxs-lookup"><span data-stu-id="f50c6-158">Long</span></span>|<span data-ttu-id="f50c6-159">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-159">0</span></span>|<span data-ttu-id="f50c6-160">512 KB</span><span class="sxs-lookup"><span data-stu-id="f50c6-160">512 KB</span></span>|<span data-ttu-id="f50c6-161">傳輸專用於共用可重複使用之訊息緩衝區的最大記憶體 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f50c6-161">Maximum memory, in bytes, that the transport devotes to pooling reusable message buffers.</span></span> <span data-ttu-id="f50c6-162">當集區無法提供訊息緩衝區時，就會配置新緩衝區，暫時使用。</span><span class="sxs-lookup"><span data-stu-id="f50c6-162">When the pool cannot supply a message buffer, a new buffer is allocated for temporary use.</span></span><br /><br /> <span data-ttu-id="f50c6-163">建立許多通道處理站或接聽項的安裝，可以為緩衝集區配置大量記憶體。</span><span class="sxs-lookup"><span data-stu-id="f50c6-163">Installations that create many channel factories or listeners can allocate large amounts of memory for buffer pools.</span></span> <span data-ttu-id="f50c6-164">減少這個緩衝區大小，在這個情況下會大幅降低記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="f50c6-164">Reducing this buffer size can greatly reduce memory usage in this scenario.</span></span>|  
+|`MaxBufferSize`|<span data-ttu-id="f50c6-165">整數</span><span class="sxs-lookup"><span data-stu-id="f50c6-165">Integer</span></span>|<span data-ttu-id="f50c6-166">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-166">1</span></span>|<span data-ttu-id="f50c6-167">64 KB</span><span class="sxs-lookup"><span data-stu-id="f50c6-167">64 KB</span></span>|<span data-ttu-id="f50c6-168">用於串流資料的最大緩衝區大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f50c6-168">Maximum size, in bytes, of a buffer used for streaming data.</span></span> <span data-ttu-id="f50c6-169">如果未設定這個傳輸配額，或者傳輸不是使用資料流，配額值就是 `MaxReceivedMessageSize` 配額值和 <xref:System.Int32.MaxValue> 兩者的較小值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-169">If this transport quota is not set, or the transport is not using streaming, then the quota value is the same as the smaller of the `MaxReceivedMessageSize` quota value and <xref:System.Int32.MaxValue>.</span></span>|  
+|`MaxOutboundConnectionsPerEndpoint`|<span data-ttu-id="f50c6-170">整數</span><span class="sxs-lookup"><span data-stu-id="f50c6-170">Integer</span></span>|<span data-ttu-id="f50c6-171">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-171">1</span></span>|<span data-ttu-id="f50c6-172">10</span><span class="sxs-lookup"><span data-stu-id="f50c6-172">10</span></span>|<span data-ttu-id="f50c6-173">可與特定端點相關聯之傳出連線的最大數目。</span><span class="sxs-lookup"><span data-stu-id="f50c6-173">Maximum number of outgoing connections that can be associated with a particular endpoint.</span></span><br /><br /> <span data-ttu-id="f50c6-174">這個設定只適用於共用連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-174">This setting only applies to pooled connections.</span></span>|  
+|`MaxOutputDelay`|<span data-ttu-id="f50c6-175">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-175">TimeSpan</span></span>|<span data-ttu-id="f50c6-176">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-176">0</span></span>|<span data-ttu-id="f50c6-177">200 毫秒</span><span class="sxs-lookup"><span data-stu-id="f50c6-177">200 ms</span></span>|<span data-ttu-id="f50c6-178">等待傳送作業在單一作業中批次處理其他訊息的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-178">Maximum time to wait after a send operation for batching additional messages in a single operation.</span></span> <span data-ttu-id="f50c6-179">如果基礎傳輸的緩衝區已滿，就會提早傳送訊息。</span><span class="sxs-lookup"><span data-stu-id="f50c6-179">Messages are sent earlier if the buffer of the underlying transport becomes full.</span></span> <span data-ttu-id="f50c6-180">傳送額外訊息並不會重設延遲期間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-180">Sending additional messages does not reset the delay period.</span></span>|  
+|`MaxPendingAccepts`|<span data-ttu-id="f50c6-181">整數</span><span class="sxs-lookup"><span data-stu-id="f50c6-181">Integer</span></span>|<span data-ttu-id="f50c6-182">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-182">1</span></span>|<span data-ttu-id="f50c6-183">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-183">1</span></span>|<span data-ttu-id="f50c6-184">接聽項上等待通道接受的最大數目。</span><span class="sxs-lookup"><span data-stu-id="f50c6-184">Maximum number of accepts for channels that the listener can have waiting.</span></span><br /><br /> <span data-ttu-id="f50c6-185">在完成接受和啟動新接受之間有段時間間隔。</span><span class="sxs-lookup"><span data-stu-id="f50c6-185">There is an interval of time between the accept completing and a new accept starting.</span></span> <span data-ttu-id="f50c6-186">增加這個集合大小，可以防止這個間隔期間內進行連線的用戶端遭到捨棄。</span><span class="sxs-lookup"><span data-stu-id="f50c6-186">Increasing this collection size can prevent clients that connect during this interval from being dropped.</span></span>|  
+|`MaxPendingConnections`|<span data-ttu-id="f50c6-187">整數</span><span class="sxs-lookup"><span data-stu-id="f50c6-187">Integer</span></span>|<span data-ttu-id="f50c6-188">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-188">1</span></span>|<span data-ttu-id="f50c6-189">10</span><span class="sxs-lookup"><span data-stu-id="f50c6-189">10</span></span>|<span data-ttu-id="f50c6-190">接聽項上等待應用程式接受連線的最大數目。</span><span class="sxs-lookup"><span data-stu-id="f50c6-190">Maximum number of connections that the listener can have waiting to be accepted by the application.</span></span> <span data-ttu-id="f50c6-191">當超過這個配額值時，新的傳入連線會被捨棄，而不是等待被接受。</span><span class="sxs-lookup"><span data-stu-id="f50c6-191">When this quota value is exceeded, new incoming connections are dropped rather than waiting to be accepted.</span></span><br /><br /> <span data-ttu-id="f50c6-192">如訊息安全性等連線功能，可能會導致用戶端開啟一個以上的連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-192">Connection features such as message security can cause a client to open more than one connection.</span></span> <span data-ttu-id="f50c6-193">在設定這個配額值時，服務系統管理員應該考量到其他連線。</span><span class="sxs-lookup"><span data-stu-id="f50c6-193">Service administrators should account for these additional connections when setting this quota value.</span></span>|  
+|`MaxReceivedMessageSize`|<span data-ttu-id="f50c6-194">Long</span><span class="sxs-lookup"><span data-stu-id="f50c6-194">Long</span></span>|<span data-ttu-id="f50c6-195">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-195">1</span></span>|<span data-ttu-id="f50c6-196">64 KB</span><span class="sxs-lookup"><span data-stu-id="f50c6-196">64 KB</span></span>|<span data-ttu-id="f50c6-197">在傳輸引發例外狀況之前，已接收的訊息 (包括標頭) 大小上限 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f50c6-197">Maximum size, in bytes, of a received message, including headers, before the transport raises an exception.</span></span>|  
+|`OpenTimeout`|<span data-ttu-id="f50c6-198">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-198">TimeSpan</span></span>|<span data-ttu-id="f50c6-199">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-199">0</span></span>|<span data-ttu-id="f50c6-200">1 分鐘</span><span class="sxs-lookup"><span data-stu-id="f50c6-200">1 min</span></span>|<span data-ttu-id="f50c6-201">在傳輸引發例外狀況之前，等待建立連線的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-201">Maximum time to wait for a connection to be established before the transport raises an exception.</span></span>|  
+|`ReceiveTimeout`|<span data-ttu-id="f50c6-202">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="f50c6-202">TimeSpan</span></span>|<span data-ttu-id="f50c6-203">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-203">0</span></span>|<span data-ttu-id="f50c6-204">10 分鐘</span><span class="sxs-lookup"><span data-stu-id="f50c6-204">10 min</span></span>|<span data-ttu-id="f50c6-205">在傳輸引發例外狀況之前，等待讀取作業完成的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-205">Maximum time to wait for a read operation to complete before the transport raises an exception.</span></span>|  
+|`SendTimeout`|<span data-ttu-id="f50c6-206">Timespan</span><span class="sxs-lookup"><span data-stu-id="f50c6-206">Timespan</span></span>|<span data-ttu-id="f50c6-207">0</span><span class="sxs-lookup"><span data-stu-id="f50c6-207">0</span></span>|<span data-ttu-id="f50c6-208">1 分鐘</span><span class="sxs-lookup"><span data-stu-id="f50c6-208">1 min</span></span>|<span data-ttu-id="f50c6-209">在傳輸引發例外狀況之前，等待寫入作業完成的最長時間。</span><span class="sxs-lookup"><span data-stu-id="f50c6-209">Maximum time to wait for a write operation to complete before the transport raises an exception.</span></span>|  
   
- 透過繫結或組態進行設定時，傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。只有繫結項目才能允許個別設定這些配額值。`MaxConnections` 傳輸配額具有相同的最小值和預設值。  
+ <span data-ttu-id="f50c6-210">透過繫結或組態進行設定時，傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。</span><span class="sxs-lookup"><span data-stu-id="f50c6-210">The transport quotas `MaxPendingConnections` and `MaxOutboundConnectionsPerEndpoint` are combined into a single transport quota called `MaxConnections` when set through the binding or configuration.</span></span> <span data-ttu-id="f50c6-211">只有繫結項目才能允許個別設定這些配額值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-211">Only the binding element allows setting these quota values individually.</span></span> <span data-ttu-id="f50c6-212">`MaxConnections` 傳輸配額具有相同的最小值和預設值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-212">The `MaxConnections` transport quota has the same minimum and default values.</span></span>  
   
-## 設定傳輸配額  
- 傳輸配額可以透過傳輸繫結項目、傳輸繫結、應用程式組態或主機原則來設定。本文件未涵蓋透過主應用程式原則來設定傳輸的內容。如需探索主機原則配額設定的詳細資訊，請參閱基礎傳輸的相關文件。[設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) 主題說明 Http.sys 驅動程式的配額設定。如需在 HTTP、TCP\/IP 和具名管道連線上設定 Windows 限制的詳細資訊，請搜尋 Microsoft 知識庫。  
+## <a name="setting-transport-quotas"></a><span data-ttu-id="f50c6-213">設定傳輸配額</span><span class="sxs-lookup"><span data-stu-id="f50c6-213">Setting Transport Quotas</span></span>  
+ <span data-ttu-id="f50c6-214">傳輸配額可以透過傳輸繫結項目、傳輸繫結、應用程式組態或主機原則來設定。</span><span class="sxs-lookup"><span data-stu-id="f50c6-214">Transport quotas are set through the transport binding element, the transport binding, application configuration, or host policy.</span></span> <span data-ttu-id="f50c6-215">本文件未涵蓋透過主應用程式原則來設定傳輸的內容。</span><span class="sxs-lookup"><span data-stu-id="f50c6-215">This document does not cover setting transports through host policy.</span></span> <span data-ttu-id="f50c6-216">如需探索主機原則配額設定的詳細資訊，請參閱基礎傳輸的相關文件。</span><span class="sxs-lookup"><span data-stu-id="f50c6-216">Consult the documentation for the underlying transport to discover the settings for host policy quotas.</span></span> <span data-ttu-id="f50c6-217">[設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)主題描述 Http.sys 驅動程式的配額設定。</span><span class="sxs-lookup"><span data-stu-id="f50c6-217">The [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) topic describes quota settings for the Http.sys driver.</span></span> <span data-ttu-id="f50c6-218">如需在 HTTP、TCP/IP 和具名管道連線上設定 Windows 限制的詳細資訊，請搜尋 Microsoft 知識庫。</span><span class="sxs-lookup"><span data-stu-id="f50c6-218">Search the Microsoft Knowledge Base for more information about configuring Windows limits on HTTP, TCP/IP, and named pipe connections.</span></span>  
   
- 其他類型的配額會間接套用至傳輸。傳輸用來將訊息轉換為位元組的訊息編碼器，可以有自己的配額設定。不過，這些配額與所要使用的傳輸類型無關。  
+ <span data-ttu-id="f50c6-219">其他類型的配額會間接套用至傳輸。</span><span class="sxs-lookup"><span data-stu-id="f50c6-219">Other types of quotas apply indirectly to transports.</span></span> <span data-ttu-id="f50c6-220">傳輸用來將訊息轉換為位元組的訊息編碼器，可以有自己的配額設定。</span><span class="sxs-lookup"><span data-stu-id="f50c6-220">The message encoder that the transport uses to transform a message into bytes can have its own quota settings.</span></span> <span data-ttu-id="f50c6-221">不過，這些配額與所要使用的傳輸類型無關。</span><span class="sxs-lookup"><span data-stu-id="f50c6-221">However, these quotas are independent of the type of transport being used.</span></span>  
   
-### 從繫結項目控制傳輸配額  
- 透過繫結項目來設定傳輸配額，可提供控制傳輸行為的最大彈性。在建置通道時，會從繫結取得 Close、Open、Receive 和 Send 作業的預設逾時。  
+### <a name="controlling-transport-quotas-from-the-binding-element"></a><span data-ttu-id="f50c6-222">從繫結項目控制傳輸配額</span><span class="sxs-lookup"><span data-stu-id="f50c6-222">Controlling Transport Quotas from the Binding Element</span></span>  
+ <span data-ttu-id="f50c6-223">透過繫結項目來設定傳輸配額，可提供控制傳輸行為的最大彈性。</span><span class="sxs-lookup"><span data-stu-id="f50c6-223">Setting transport quotas through the binding element offers the greatest flexibility in controlling the transport's behavior.</span></span> <span data-ttu-id="f50c6-224">在建置通道時，會從繫結取得 Close、Open、Receive 和 Send 作業的預設逾時。</span><span class="sxs-lookup"><span data-stu-id="f50c6-224">The default timeouts for Close, Open, Receive, and Send operations are taken from the binding when a channel is built.</span></span>  
   
-|名稱|HTTP|TCP\/IP|具名管道|  
-|--------|----------|-------------|----------|  
-|`ChannelInitializationTimeout`||X|X|  
+|<span data-ttu-id="f50c6-225">名稱</span><span class="sxs-lookup"><span data-stu-id="f50c6-225">Name</span></span>|<span data-ttu-id="f50c6-226">HTTP</span><span class="sxs-lookup"><span data-stu-id="f50c6-226">HTTP</span></span>|<span data-ttu-id="f50c6-227">TCP/IP</span><span class="sxs-lookup"><span data-stu-id="f50c6-227">TCP/IP</span></span>|<span data-ttu-id="f50c6-228">具名管道</span><span class="sxs-lookup"><span data-stu-id="f50c6-228">Named pipe</span></span>|  
+|----------|----------|-------------|----------------|  
+|`ChannelInitializationTimeout`||<span data-ttu-id="f50c6-229">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-229">X</span></span>|<span data-ttu-id="f50c6-230">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-230">X</span></span>|  
 |`CloseTimeout`||||  
-|`ConnectionBufferSize`||X|X|  
-|`IdleTimeout`||X|X|  
-|`LeaseTimeout`||X||  
-|`ListenBacklog`||X||  
-|`MaxBufferPoolSize`|X|X|X|  
-|`MaxBufferSize`|X|X|X|  
-|`MaxOutboundConnectionsPerEndpoint`||X|X|  
-|`MaxOutputDelay`||X|X|  
-|`MaxPendingAccepts`||X|X|  
-|`MaxPendingConnections`||X|X|  
-|`MaxReceivedMessageSize`|X|X|X|  
+|`ConnectionBufferSize`||<span data-ttu-id="f50c6-231">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-231">X</span></span>|<span data-ttu-id="f50c6-232">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-232">X</span></span>|  
+|`IdleTimeout`||<span data-ttu-id="f50c6-233">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-233">X</span></span>|<span data-ttu-id="f50c6-234">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-234">X</span></span>|  
+|`LeaseTimeout`||<span data-ttu-id="f50c6-235">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-235">X</span></span>||  
+|`ListenBacklog`||<span data-ttu-id="f50c6-236">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-236">X</span></span>||  
+|`MaxBufferPoolSize`|<span data-ttu-id="f50c6-237">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-237">X</span></span>|<span data-ttu-id="f50c6-238">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-238">X</span></span>|<span data-ttu-id="f50c6-239">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-239">X</span></span>|  
+|`MaxBufferSize`|<span data-ttu-id="f50c6-240">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-240">X</span></span>|<span data-ttu-id="f50c6-241">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-241">X</span></span>|<span data-ttu-id="f50c6-242">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-242">X</span></span>|  
+|`MaxOutboundConnectionsPerEndpoint`||<span data-ttu-id="f50c6-243">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-243">X</span></span>|<span data-ttu-id="f50c6-244">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-244">X</span></span>|  
+|`MaxOutputDelay`||<span data-ttu-id="f50c6-245">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-245">X</span></span>|<span data-ttu-id="f50c6-246">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-246">X</span></span>|  
+|`MaxPendingAccepts`||<span data-ttu-id="f50c6-247">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-247">X</span></span>|<span data-ttu-id="f50c6-248">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-248">X</span></span>|  
+|`MaxPendingConnections`||<span data-ttu-id="f50c6-249">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-249">X</span></span>|<span data-ttu-id="f50c6-250">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-250">X</span></span>|  
+|`MaxReceivedMessageSize`|<span data-ttu-id="f50c6-251">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-251">X</span></span>|<span data-ttu-id="f50c6-252">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-252">X</span></span>|<span data-ttu-id="f50c6-253">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-253">X</span></span>|  
 |`OpenTimeout`||||  
 |`ReceiveTimeout`||||  
 |`SendTimeout`||||  
   
-### 從繫結控制傳輸配額  
- 透過繫結來設定傳輸配額，會提供一組可從中選擇的簡化配額，同時仍會提供存取最常用的配額值。  
+### <a name="controlling-transport-quotas-from-the-binding"></a><span data-ttu-id="f50c6-254">從繫結控制傳輸配額</span><span class="sxs-lookup"><span data-stu-id="f50c6-254">Controlling Transport Quotas from the Binding</span></span>  
+ <span data-ttu-id="f50c6-255">透過繫結來設定傳輸配額，會提供一組可從中選擇的簡化配額，同時仍會提供存取最常用的配額值。</span><span class="sxs-lookup"><span data-stu-id="f50c6-255">Setting transport quotas through the binding offers a simplified set of quotas to choose from while still giving access to the most common quota values.</span></span>  
   
-|名稱|HTTP|TCP\/IP|具名管道|  
-|--------|----------|-------------|----------|  
+|<span data-ttu-id="f50c6-256">名稱</span><span class="sxs-lookup"><span data-stu-id="f50c6-256">Name</span></span>|<span data-ttu-id="f50c6-257">HTTP</span><span class="sxs-lookup"><span data-stu-id="f50c6-257">HTTP</span></span>|<span data-ttu-id="f50c6-258">TCP/IP</span><span class="sxs-lookup"><span data-stu-id="f50c6-258">TCP/IP</span></span>|<span data-ttu-id="f50c6-259">具名管道</span><span class="sxs-lookup"><span data-stu-id="f50c6-259">Named pipe</span></span>|  
+|----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
-|`CloseTimeout`|X|X|X|  
+|`CloseTimeout`|<span data-ttu-id="f50c6-260">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-260">X</span></span>|<span data-ttu-id="f50c6-261">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-261">X</span></span>|<span data-ttu-id="f50c6-262">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-262">X</span></span>|  
 |`ConnectionBufferSize`||||  
 |`IdleTimeout`||||  
 |`LeaseTimeout`||||  
-|`ListenBacklog`||X||  
-|`MaxBufferPoolSize`|X|X|X|  
-|`MaxBufferSize`|1|X|X|  
-|`MaxOutboundConnectionsPerEndpoint`||2|2|  
+|`ListenBacklog`||<span data-ttu-id="f50c6-263">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-263">X</span></span>||  
+|`MaxBufferPoolSize`|<span data-ttu-id="f50c6-264">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-264">X</span></span>|<span data-ttu-id="f50c6-265">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-265">X</span></span>|<span data-ttu-id="f50c6-266">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-266">X</span></span>|  
+|`MaxBufferSize`|<span data-ttu-id="f50c6-267">1</span><span class="sxs-lookup"><span data-stu-id="f50c6-267">1</span></span>|<span data-ttu-id="f50c6-268">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-268">X</span></span>|<span data-ttu-id="f50c6-269">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-269">X</span></span>|  
+|`MaxOutboundConnectionsPerEndpoint`||<span data-ttu-id="f50c6-270">2</span><span class="sxs-lookup"><span data-stu-id="f50c6-270">2</span></span>|<span data-ttu-id="f50c6-271">2</span><span class="sxs-lookup"><span data-stu-id="f50c6-271">2</span></span>|  
 |`MaxOutputDelay`||||  
 |`MaxPendingAccepts`||||  
-|`MaxPendingConnections`||2|2|  
-|`MaxReceivedMessageSize`|X|X|X|  
-|`OpenTimeout`|X|X|X|  
-|`ReceiveTimeout`|X|X|X|  
-|`SendTimeout`|X|X|X|  
+|`MaxPendingConnections`||<span data-ttu-id="f50c6-272">2</span><span class="sxs-lookup"><span data-stu-id="f50c6-272">2</span></span>|<span data-ttu-id="f50c6-273">2</span><span class="sxs-lookup"><span data-stu-id="f50c6-273">2</span></span>|  
+|`MaxReceivedMessageSize`|<span data-ttu-id="f50c6-274">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-274">X</span></span>|<span data-ttu-id="f50c6-275">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-275">X</span></span>|<span data-ttu-id="f50c6-276">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-276">X</span></span>|  
+|`OpenTimeout`|<span data-ttu-id="f50c6-277">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-277">X</span></span>|<span data-ttu-id="f50c6-278">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-278">X</span></span>|<span data-ttu-id="f50c6-279">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-279">X</span></span>|  
+|`ReceiveTimeout`|<span data-ttu-id="f50c6-280">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-280">X</span></span>|<span data-ttu-id="f50c6-281">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-281">X</span></span>|<span data-ttu-id="f50c6-282">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-282">X</span></span>|  
+|`SendTimeout`|<span data-ttu-id="f50c6-283">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-283">X</span></span>|<span data-ttu-id="f50c6-284">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-284">X</span></span>|<span data-ttu-id="f50c6-285">X</span><span class="sxs-lookup"><span data-stu-id="f50c6-285">X</span></span>|  
   
-1.  `MaxBufferSize` 傳輸配額只適用於 `BasicHttp` 繫結。`WSHttp` 繫結適用於不支援資料流傳輸模式的情況中。  
+1.  <span data-ttu-id="f50c6-286">`MaxBufferSize` 傳輸配額只適用於 `BasicHttp` 繫結。</span><span class="sxs-lookup"><span data-stu-id="f50c6-286">The `MaxBufferSize` transport quota is only available on the `BasicHttp` binding.</span></span> <span data-ttu-id="f50c6-287">`WSHttp` 繫結適用於不支援資料流傳輸模式的情況中。</span><span class="sxs-lookup"><span data-stu-id="f50c6-287">The `WSHttp` bindings are for scenarios that do not support streamed transport modes.</span></span>  
   
-2.  傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。  
+2.  <span data-ttu-id="f50c6-288">傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。</span><span class="sxs-lookup"><span data-stu-id="f50c6-288">The transport quotas `MaxPendingConnections` and `MaxOutboundConnectionsPerEndpoint` are combined into a single transport quota called `MaxConnections`.</span></span>  
   
-### 從組態控制傳輸配額  
- 應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。  
+### <a name="controlling-transport-quotas-from-configuration"></a><span data-ttu-id="f50c6-289">從組態控制傳輸配額</span><span class="sxs-lookup"><span data-stu-id="f50c6-289">Controlling Transport Quotas from Configuration</span></span>  
+ <span data-ttu-id="f50c6-290">應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。</span><span class="sxs-lookup"><span data-stu-id="f50c6-290">Application configuration can set the same transport quotas as directly accessing properties on a binding.</span></span> <span data-ttu-id="f50c6-291">在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。</span><span class="sxs-lookup"><span data-stu-id="f50c6-291">In configuration files, the name of a transport quota always starts with a lowercase letter.</span></span> <span data-ttu-id="f50c6-292">例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。</span><span class="sxs-lookup"><span data-stu-id="f50c6-292">For example, the `CloseTimeout` property on a binding corresponds to the `closeTimeout` setting in configuration and the `MaxConnections` property on a binding corresponds to the `maxConnections` setting in configuration.</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>   
+## <a name="see-also"></a><span data-ttu-id="f50c6-293">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f50c6-293">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>

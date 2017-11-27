@@ -1,41 +1,46 @@
 ---
-title: "如何：將面板加入至 StatusBar 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "面板, 狀態列"
-  - "狀態列, 加入面板"
-  - "StatusBar 控制項 [Windows Form], 加入面板"
+title: "如何：將面板加入至 StatusBar 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- panels [Windows Forms], status bars
+- status bars [Windows Forms], adding panels
+- StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b44b98aab49208bc53bbd48bca88ee72e9a5270d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：將面板加入至 StatusBar 控制項
+# <a name="how-to-add-panels-to-a-statusbar-control"></a><span data-ttu-id="8f029-102">如何：將面板加入至 StatusBar 控制項</span><span class="sxs-lookup"><span data-stu-id="8f029-102">How to: Add Panels to a StatusBar Control</span></span>
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> 和 <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代和加入功能至 <xref:System.Windows.Forms.StatusBar> 和 <xref:System.Windows.Forms.StatusBarPanel> 控制項；不過 <xref:System.Windows.Forms.StatusBar> 和 <xref:System.Windows.Forms.StatusBarPanel> 控制項會保留以提供回溯相容性和未來使用 \(如果您選擇要使用\)。  
+>  <span data-ttu-id="8f029-103"><xref:System.Windows.Forms.StatusStrip>和<xref:System.Windows.Forms.ToolStripStatusLabel>控制項取代，並將功能加入至<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項是被保留為回溯相容性及未來使用，如果您選擇。</span><span class="sxs-lookup"><span data-stu-id="8f029-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
- 在 [StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) 控制項內的可程式化區域，是由 <xref:System.Windows.Forms.StatusBarPanel> 類別的執行個體 \(Instance\) 所組成。  這些是經由其他方式加入至 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> 類別。  
+ <span data-ttu-id="8f029-104">可程式化的區域內[StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控制項所組成的執行個體<xref:System.Windows.Forms.StatusBarPanel>類別。</span><span class="sxs-lookup"><span data-stu-id="8f029-104">The programmable area within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control consists of instances of the <xref:System.Windows.Forms.StatusBarPanel> class.</span></span> <span data-ttu-id="8f029-105">新增這些新增項目透過<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>類別。</span><span class="sxs-lookup"><span data-stu-id="8f029-105">These are added through additions to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> class.</span></span>  
   
-### 若要將面板加入至狀態列  
+### <a name="to-add-panels-to-a-status-bar"></a><span data-ttu-id="8f029-106">若要將面板加入狀態列</span><span class="sxs-lookup"><span data-stu-id="8f029-106">To add panels to a status bar</span></span>  
   
-1.  在程序中，藉由加入至 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> 來建立狀況列面板。  使用透過 <xref:System.Windows.Forms.StatusBar.Panels%2A> 屬性傳遞的個別面板索引來指定各個面板的屬性設定。  
+1.  <span data-ttu-id="8f029-107">在程序，建立狀態列面板藉由加入<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。</span><span class="sxs-lookup"><span data-stu-id="8f029-107">In a procedure, create status-bar panels by adding them to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span></span> <span data-ttu-id="8f029-108">指定屬性設定為個別的面板，您可以使用其索引通過<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="8f029-108">Specify property settings for individual panels by using its index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property.</span></span>  
   
-     在下列的範例程式碼中，為圖示位置所設定的路徑是 \[**我的文件**\] 資料夾。  這個位置的使用，是因為您可假設大部分執行 Windows 作業系統的電腦，都會包含這個資料夾。  選擇這個位置也可讓使用者以最基本的系統存取層級，便可安全執行應用程式。  下列範例假設已將 <xref:System.Windows.Forms.StatusBar> 控制項加入表單。  
+     <span data-ttu-id="8f029-109">在下列程式碼範例中，將路徑設定圖示的位置是**我的文件**資料夾。</span><span class="sxs-lookup"><span data-stu-id="8f029-109">In the following code example, the path set for the location of the icon is the **My Documents** folder.</span></span> <span data-ttu-id="8f029-110">使用這個位置是因為您可以假設執行 Windows 作業系統的大部分電腦都會包含此資料夾。</span><span class="sxs-lookup"><span data-stu-id="8f029-110">This location is used because you can assume that most computers running the Windows operating system will include this folder.</span></span> <span data-ttu-id="8f029-111">選擇此位置也可讓使用者以最少的系統存取層級可安全地執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="8f029-111">Choosing this location also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="8f029-112">下列範例要求的表單具有<xref:System.Windows.Forms.StatusBar>已經加入的控制項。</span><span class="sxs-lookup"><span data-stu-id="8f029-112">The following example requires a form with a <xref:System.Windows.Forms.StatusBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> 是個以零起始的集合，所以程式碼都應該依序處理。  
+    >  <span data-ttu-id="8f029-113"><xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>是以零為起始的集合，因此應視情況繼續執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="8f029-113">The <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -60,7 +65,6 @@ caps.handback.revision: 15
        & "\Icon.ico")  
        StatusBar1.ShowPanels = True  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -89,7 +93,6 @@ caps.handback.revision: 15
        + @"\Icon.ico");  
        statusBar1.ShowPanels = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -127,11 +130,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-## 請參閱  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Collection Editor Dialog Box](http://msdn.microsoft.com/zh-tw/53fb3aad-bffa-4da5-ac89-8438e6fc803c)   
- [如何：設定狀態列面板的大小](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)   
- [逐步解說：在執行階段更新狀態列資訊](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)   
- [如何：判斷在 Windows Form StatusBar 控制項中按下的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)   
- [StatusBar 控制項概觀](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8f029-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8f029-114">See Also</span></span>  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [<span data-ttu-id="8f029-115">集合編輯器對話方塊</span><span class="sxs-lookup"><span data-stu-id="8f029-115">Collection Editor Dialog Box</span></span>](http://msdn.microsoft.com/en-us/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
+ [<span data-ttu-id="8f029-116">操作說明：設定狀態列面板的大小</span><span class="sxs-lookup"><span data-stu-id="8f029-116">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ [<span data-ttu-id="8f029-117">逐步解說：在執行階段更新狀態列資訊</span><span class="sxs-lookup"><span data-stu-id="8f029-117">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [<span data-ttu-id="8f029-118">操作說明：判斷在 Windows Forms StatusBar 控制項中按下的面板</span><span class="sxs-lookup"><span data-stu-id="8f029-118">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [<span data-ttu-id="8f029-119">StatusBar 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="8f029-119">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

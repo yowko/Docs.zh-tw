@@ -1,61 +1,64 @@
 ---
-title: "最佳化效能：應用程式資源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "應用程式資源, 效能"
-  - "筆刷, 效能"
-  - "資源, 效能"
-  - "在未複製的情況下共用筆刷"
-  - "資源分享"
-  - "靜態資源"
+title: "最佳化效能：應用程式資源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application resources [WPF], performance
+- resources [WPF], performance
+- static resources [WPF]
+- sharing resources [WPF]
+- brushes [WPF], performance
+- sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ac462f3b49788fd909f9d9f4fc785db74704ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 最佳化效能：應用程式資源
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您共用應用程式資源，因此可以支援類似型別項目的一致外觀或行為。  本主題提供這個區域的一些建議，以協助您改善應用程式的效能。  
+# <a name="optimizing-performance-application-resources"></a><span data-ttu-id="37d5c-102">最佳化效能：應用程式資源</span><span class="sxs-lookup"><span data-stu-id="37d5c-102">Optimizing Performance: Application Resources</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="37d5c-103">可讓您共用應用程式資源，以便您可以透過類似具類型的項目支援一致的外觀或行為。</span><span class="sxs-lookup"><span data-stu-id="37d5c-103"> allows you to share application resources so that you can support a consistent look or behavior across similar-typed elements.</span></span> <span data-ttu-id="37d5c-104">本主題提供的一些建議這個區域，可協助您改善應用程式的效能。</span><span class="sxs-lookup"><span data-stu-id="37d5c-104">This topic provides a few recommendations in this area that can help you improve the performance of your applications.</span></span>  
   
- 如需資源的詳細資訊，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ <span data-ttu-id="37d5c-105">如需詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="37d5c-105">For more information on resources, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
-## 共用資源  
- 如果應用程式使用自訂控制項，並在 <xref:System.Windows.ResourceDictionary> \(或「XAML 資源」節點\) 中定義資源，則建議您在 <xref:System.Windows.Application> 或 <xref:System.Windows.Window> 物件層級定義資源，或將它們定義於自訂控制項的預設佈景主題中。  而在自訂控制項的 <xref:System.Windows.ResourceDictionary> 中定義資源，會影響該控制項之每個執行個體的效能。  例如，如果您將損耗效能的筆刷作業定義為自訂控制項的資源定義一部分，而且擁有自訂控制項的多個執行個體，則應用程式的工作集會明顯增加。  
+## <a name="sharing-resources"></a><span data-ttu-id="37d5c-106">共用資源</span><span class="sxs-lookup"><span data-stu-id="37d5c-106">Sharing resources</span></span>  
+ <span data-ttu-id="37d5c-107">如果您的應用程式會使用自訂控制項，並定義中的資源<xref:System.Windows.ResourceDictionary>（或 XAML 資源節點），建議您是定義在資源<xref:System.Windows.Application>或<xref:System.Windows.Window>物件層級，或定義它們中的預設佈景主題自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="37d5c-107">If your application uses custom controls and defines resources in a <xref:System.Windows.ResourceDictionary> (or XAML Resources node), it is recommended that you either define the resources at the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or define them in the default theme for the custom controls.</span></span> <span data-ttu-id="37d5c-108">定義自訂控制項中的資源<xref:System.Windows.ResourceDictionary>會影響效能，該控制項的每個執行個體。</span><span class="sxs-lookup"><span data-stu-id="37d5c-108">Defining resources in a custom control's <xref:System.Windows.ResourceDictionary> imposes a performance impact for every instance of that control.</span></span> <span data-ttu-id="37d5c-109">例如，如果您有大量效能的筆刷作業定義為自訂控制項的資源定義的一部分，以及許多執行個體的自訂控制項，應用程式的工作集將會大幅增加。</span><span class="sxs-lookup"><span data-stu-id="37d5c-109">For example, if you have performance-intensive brush operations defined as part of the resource definition of a custom control and many instances of the custom control, the application's working set will increase significantly.</span></span>  
   
- 為了說明這一點，請考慮下列事項。  假設您使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開發撲克牌遊戲。  在大部分的撲克牌遊戲中，都需要有 52 張撲克牌，具有 52 種不同卡面。  而您決定實作撲克牌自訂控制項，並且在撲克牌自訂控制項的資源中定義 52 種筆刷 \(每個都代表一種卡面\)。  在主要應用程式中，一開始會為這個撲克牌自訂控制項建立 52 個執行個體。  撲克牌自訂控制項的每個執行個體都會產生 52 個 <xref:System.Windows.Media.Brush> 物件的執行個體，因此在應用程式中總共會提供 52 \* 52 個 <xref:System.Windows.Media.Brush> 物件。  若將筆刷移出撲克牌自訂控制項資源並放至 <xref:System.Windows.Application> 或 <xref:System.Windows.Window> 物件層級，或將它們定義於自訂控制項的預設佈景主題中，則可減少應用程式的工作集，因為現在是在 52 個撲克牌控制項執行個體之間共用 52 個筆刷。  
+ <span data-ttu-id="37d5c-110">為了說明這點，請考慮下列項目。</span><span class="sxs-lookup"><span data-stu-id="37d5c-110">To illustrate this point, consider the following.</span></span> <span data-ttu-id="37d5c-111">假設您正在開發卡遊戲 using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="37d5c-111">Let's say you are developing a card game using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="37d5c-112">大部分的撲克牌遊戲，您必須具有不同的字體 52 52 卡片。</span><span class="sxs-lookup"><span data-stu-id="37d5c-112">For most card games, you need 52 cards with 52 different faces.</span></span> <span data-ttu-id="37d5c-113">您決定實作卡自訂控制項和您定義 52 筆刷 （每個都代表卡面） 中的資源，卡片自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="37d5c-113">You decide to implement a card custom control and you define 52 brushes (each representing a card face) in the resources of your card custom control.</span></span> <span data-ttu-id="37d5c-114">在主應用程式一開始建立 52 此卡的自訂控制項的執行個體。</span><span class="sxs-lookup"><span data-stu-id="37d5c-114">In your main application, you initially create 52 instances of this card custom control.</span></span> <span data-ttu-id="37d5c-115">卡片自訂控制項的每個執行個體會產生 52 個執行個體<xref:System.Windows.Media.Brush>物件，可讓您總共 52 * 52<xref:System.Windows.Media.Brush>應用程式中的物件。</span><span class="sxs-lookup"><span data-stu-id="37d5c-115">Each instance of the card custom control generates 52 instances of <xref:System.Windows.Media.Brush> objects, which gives you a total of 52 * 52 <xref:System.Windows.Media.Brush> objects in your application.</span></span> <span data-ttu-id="37d5c-116">藉由移動卡自訂控制項資源不足筆刷<xref:System.Windows.Application>或<xref:System.Windows.Window>物件層級，或自訂控制項的預設佈景主題中定義您減少應用程式的工作集，因為您現在共用 52 筆刷在 52 卡控制項執行個體。</span><span class="sxs-lookup"><span data-stu-id="37d5c-116">By moving the brushes out of the card custom control resources to the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or defining them in the default theme for the custom control, you reduce the working set of the application, since you are now sharing the 52 brushes among 52 instances of the card control.</span></span>  
   
-## 在未複製的情況下共用筆刷  
- 如果有多個使用相同 <xref:System.Windows.Media.Brush> 物件的項目，請將筆刷定義為資源並進行參考，而不是以 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 定義筆刷內嵌 \(Inline\)。  這種方法會建立一個執行個體，並重新使用該執行個體，而在 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中定義筆刷內嵌則會為每個項目建立新的執行個體。  
+## <a name="sharing-a-brush-without-copying"></a><span data-ttu-id="37d5c-117">無需先行複製共用筆刷</span><span class="sxs-lookup"><span data-stu-id="37d5c-117">Sharing a Brush without Copying</span></span>  
+ <span data-ttu-id="37d5c-118">如果您有多個使用相同的項目<xref:System.Windows.Media.Brush>物件，定義為資源的筆刷，並參考它，而不是定義中內嵌的筆刷[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="37d5c-118">If you have multiple elements using the same <xref:System.Windows.Media.Brush> object, define the brush as a resource and reference it, rather than defining the brush inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span></span> <span data-ttu-id="37d5c-119">這個方法會建立一個執行個體，並重複使用，而定義中的筆刷內嵌[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]建立新的執行個體，每個項目。</span><span class="sxs-lookup"><span data-stu-id="37d5c-119">This method will create one instance and reuse it, whereas defining brushes inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] creates a new instance for each element.</span></span>  
   
- 下列標記範例會說明這一點：  
+ <span data-ttu-id="37d5c-120">下列標記範例將說明這一點：</span><span class="sxs-lookup"><span data-stu-id="37d5c-120">The following markup sample illustrates this point:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## 盡可能使用靜態資源  
- 靜態資源是透過查閱已定義資源的參考，提供任何 XAML 屬性的值。  該資源的查閱行為與編譯階段查閱類似。  
+## <a name="use-static-resources-when-possible"></a><span data-ttu-id="37d5c-121">使用靜態資源時可能</span><span class="sxs-lookup"><span data-stu-id="37d5c-121">Use Static Resources when Possible</span></span>  
+ <span data-ttu-id="37d5c-122">靜態資源查閱已定義之資源的參考，用於任何 XAML 屬性提供值。</span><span class="sxs-lookup"><span data-stu-id="37d5c-122">A static resource provides a value for any XAML property attribute by looking up a reference to an already defined resource.</span></span> <span data-ttu-id="37d5c-123">該資源的查閱行為相當於編譯時期查閱。</span><span class="sxs-lookup"><span data-stu-id="37d5c-123">Lookup behavior for that resource is analogous to compile-time lookup.</span></span>  
   
- 換句話說，動態資源會在初始編譯期間建立暫存運算式，因此在實際需要所要求的資源值以建構物件之前，並不會進行資源的查閱。  該資源的查閱行為與執行階段查閱類似，但會影響效能。  請盡可能在應用程式中使用靜態資源，而動態資源則請在必要時才使用。  
+ <span data-ttu-id="37d5c-124">動態的資源，相反地，將會建立暫存的運算式，在初始的編譯期間和直到實際需要才能建構物件，而要求的資源值，因此延遲的資源查閱。</span><span class="sxs-lookup"><span data-stu-id="37d5c-124">A dynamic resource, on the other hand, will create a temporary expression during the initial compilation and thus defer lookup for resources until the requested resource value is actually required in order to construct an object.</span></span> <span data-ttu-id="37d5c-125">該資源的查閱行為相當於執行階段查閱，會影響效能。</span><span class="sxs-lookup"><span data-stu-id="37d5c-125">Lookup behavior for that resource is analogous to run-time lookup, which imposes a performance impact.</span></span> <span data-ttu-id="37d5c-126">使用靜態的資源，請盡可能使用動態的資源，只在必要時在您的應用程式中。</span><span class="sxs-lookup"><span data-stu-id="37d5c-126">Use static resources whenever possible in your application, using dynamic resources only when necessary.</span></span>  
   
- 下列標記範例顯示使用兩種類型的資源：  
+ <span data-ttu-id="37d5c-127">下列標記範例會示範如何使用兩種類型的資源：</span><span class="sxs-lookup"><span data-stu-id="37d5c-127">The following markup sample shows the use of both types of resources:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## 請參閱  
- [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [2D 圖形和影像](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [物件行為](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [文字](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [其他效能建議](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="37d5c-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37d5c-128">See Also</span></span>  
+ [<span data-ttu-id="37d5c-129">最佳化 WPF 應用程式效能</span><span class="sxs-lookup"><span data-stu-id="37d5c-129">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="37d5c-130">應用程式效能規劃</span><span class="sxs-lookup"><span data-stu-id="37d5c-130">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="37d5c-131">運用硬體</span><span class="sxs-lookup"><span data-stu-id="37d5c-131">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="37d5c-132">版面配置與設計</span><span class="sxs-lookup"><span data-stu-id="37d5c-132">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="37d5c-133">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="37d5c-133">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="37d5c-134">物件行為</span><span class="sxs-lookup"><span data-stu-id="37d5c-134">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="37d5c-135">Text</span><span class="sxs-lookup"><span data-stu-id="37d5c-135">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="37d5c-136">資料繫結</span><span class="sxs-lookup"><span data-stu-id="37d5c-136">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="37d5c-137">其他效能建議</span><span class="sxs-lookup"><span data-stu-id="37d5c-137">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

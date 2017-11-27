@@ -1,72 +1,73 @@
 ---
-title: "&lt;system.diagnostics&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.diagnostics> 項目"
-  - "system.diagnostics 項目"
+title: "&lt;system.diagnostics&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics
+helpviewer_keywords:
+- <system.diagnostics> element
+- system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d336a0f733451cb28d8fe57af20585515b71ca4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;system.diagnostics&gt; 項目
-指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。  
+# <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="a36b0-102">&lt;system.diagnostics&gt;項目</span><span class="sxs-lookup"><span data-stu-id="a36b0-102">&lt;system.diagnostics&gt; Element</span></span>
+<span data-ttu-id="a36b0-103">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="a36b0-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  
   
-## 語法  
+ <span data-ttu-id="a36b0-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a36b0-104">\<configuration></span></span>  
+<span data-ttu-id="a36b0-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="a36b0-105">\<system.diagnostics></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a36b0-106">語法</span><span class="sxs-lookup"><span data-stu-id="a36b0-106">Syntax</span></span>  
+  
+```xml  
 <system.diagnostics>   
 </system.diagnostics>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a36b0-107">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="a36b0-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="a36b0-108">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="a36b0-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="a36b0-109">屬性</span><span class="sxs-lookup"><span data-stu-id="a36b0-109">Attributes</span></span>  
+ <span data-ttu-id="a36b0-110">無。</span><span class="sxs-lookup"><span data-stu-id="a36b0-110">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="a36b0-111">子項目</span><span class="sxs-lookup"><span data-stu-id="a36b0-111">Child Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[\<assert\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|指定您呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 方法時是否顯示訊息方塊，同時指定要寫入訊息的檔案名稱。|  
-|[\<performanceCounters\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|指定效能計數器所共用的全域記憶體的大小。|  
-|[\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|包含任何來源或追蹤項目可以參考的接聽程式。  識別為共用接聽項的接聽項可以根據名稱加入到來源或追蹤。|  
-|[\<來源\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|指定啟始追蹤訊息的追蹤來源。|  
-|[\<參數\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|包含追蹤參數和設定追蹤參數的層級。|  
-|[\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含收集、存放和傳送追蹤訊息的接聽程式。|  
+|<span data-ttu-id="a36b0-112">項目</span><span class="sxs-lookup"><span data-stu-id="a36b0-112">Element</span></span>|<span data-ttu-id="a36b0-113">說明</span><span class="sxs-lookup"><span data-stu-id="a36b0-113">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a36b0-114">\<assert></span><span class="sxs-lookup"><span data-stu-id="a36b0-114">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="a36b0-115">指定呼叫 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 方法時是否要顯示訊息方塊，此外也會指定寫入訊息之目的地檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="a36b0-115">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="a36b0-116">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="a36b0-116">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="a36b0-117">指定效能計數器共用之全域記憶體的大小。</span><span class="sxs-lookup"><span data-stu-id="a36b0-117">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="a36b0-118">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="a36b0-118">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="a36b0-119">包含任何來源或追蹤項目可參考的接聽項。</span><span class="sxs-lookup"><span data-stu-id="a36b0-119">Contains listeners that any source or trace element can reference.</span></span> <span data-ttu-id="a36b0-120">識別為共用接聽項可以依名稱加入至來源或追蹤接聽項。</span><span class="sxs-lookup"><span data-stu-id="a36b0-120">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>|  
+|[<span data-ttu-id="a36b0-121">\<sources></span><span class="sxs-lookup"><span data-stu-id="a36b0-121">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="a36b0-122">指定初始化追蹤訊息的追蹤來源。</span><span class="sxs-lookup"><span data-stu-id="a36b0-122">Specifies trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="a36b0-123">\<switches></span><span class="sxs-lookup"><span data-stu-id="a36b0-123">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="a36b0-124">包含追蹤參數和追蹤參數會設定其中的層級。</span><span class="sxs-lookup"><span data-stu-id="a36b0-124">Contains trace switches and the levels where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="a36b0-125">\<trace></span><span class="sxs-lookup"><span data-stu-id="a36b0-125">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="a36b0-126">包含用於收集、儲存及路由傳送追蹤訊息的接聽項。</span><span class="sxs-lookup"><span data-stu-id="a36b0-126">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="a36b0-127">父項目</span><span class="sxs-lookup"><span data-stu-id="a36b0-127">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|<span data-ttu-id="a36b0-128">項目</span><span class="sxs-lookup"><span data-stu-id="a36b0-128">Element</span></span>|<span data-ttu-id="a36b0-129">描述</span><span class="sxs-lookup"><span data-stu-id="a36b0-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="a36b0-130">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="a36b0-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## 範例  
- 以下範例示範如何在 **\<system.diagnostics\>** 項目中內嵌一個追蹤參數和一個追蹤接聽程式。  `General` 追蹤參數設定為 [TraceLevel.Error](frlrfSystemDiagnosticsTraceLevelClassTopic) 層級。  追蹤接聽程式 `myListener` 會建立一個名為 `MyListener.log` 的檔案，並且將輸出寫入檔案。  
+## <a name="example"></a><span data-ttu-id="a36b0-131">範例</span><span class="sxs-lookup"><span data-stu-id="a36b0-131">Example</span></span>  
+ <span data-ttu-id="a36b0-132">下列範例示範如何內嵌追蹤參數和追蹤接聽程式 **\<system.diagnostics >**項目。</span><span class="sxs-lookup"><span data-stu-id="a36b0-132">The following example shows how to embed a trace switch and a trace listener inside the **\<system.diagnostics>** element.</span></span> <span data-ttu-id="a36b0-133">`General`追蹤參數設為<xref:System.Diagnostics.TraceLevel>層級。</span><span class="sxs-lookup"><span data-stu-id="a36b0-133">The `General` trace switch is set to the <xref:System.Diagnostics.TraceLevel> level.</span></span> <span data-ttu-id="a36b0-134">追蹤接聽項`myListener`會建立名為的檔案`MyListener.log`並將輸出寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="a36b0-134">The trace listener `myListener` creates a file called `MyListener.log` and writes the output to the file.</span></span>  
   
 > [!NOTE]
->  在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。  例如，您可以為 <xref:System.Diagnostics.BooleanSwitch> 指定 `true`，或是使用代表列舉值的文字，例如，為 <xref:System.Diagnostics.TraceSwitch> 指定 `Error`。  `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
+>  <span data-ttu-id="a36b0-135">在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。</span><span class="sxs-lookup"><span data-stu-id="a36b0-135">In the .NET Framework version 2.0, you can use text to specify the value for a switch.</span></span> <span data-ttu-id="a36b0-136">例如，您可以指定`true`如<xref:System.Diagnostics.BooleanSwitch>或使用這類代表列舉值的文字`Error`如<xref:System.Diagnostics.TraceSwitch>。</span><span class="sxs-lookup"><span data-stu-id="a36b0-136">For example, you can specify `true` for a <xref:System.Diagnostics.BooleanSwitch> or use the text representing an enumeration value such as `Error` for a <xref:System.Diagnostics.TraceSwitch>.</span></span> <span data-ttu-id="a36b0-137">`<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。</span><span class="sxs-lookup"><span data-stu-id="a36b0-137">The line `<add name="myTraceSwitch" value="Error" />` is equivalent to `<add name="myTraceSwitch" value="1" />`.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <switches>  
@@ -81,7 +82,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.Debug>   
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="a36b0-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a36b0-138">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="a36b0-139">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="a36b0-139">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

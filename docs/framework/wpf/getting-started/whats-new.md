@@ -1,136 +1,139 @@
 ---
-title: "WPF 4.5 版的新功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows Presentation Foundation, 新功能"
-  - "WPF, 新功能"
+title: "WPF 4.5 版的新功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Presentation Foundation [WPF], what's new
+- WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-caps.latest.revision: 55
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 55
+caps.latest.revision: "55"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
+ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
-# WPF 4.5 版的新功能
-<a name="introduction"></a> 本主題包含 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 4.5 版中新功能和增強功能的相關資訊。  
+# <a name="what39s-new-in-wpf-version-45"></a><span data-ttu-id="bbf92-102">WPF 4.5 版的新功能</span><span class="sxs-lookup"><span data-stu-id="bbf92-102">What&#39;s New in WPF Version 4.5</span></span>
+<span data-ttu-id="bbf92-103"><a name="introduction"></a>本主題包含新功能和增強功能的相關資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。</span><span class="sxs-lookup"><span data-stu-id="bbf92-103"><a name="introduction"></a> This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
   
- 此主題包括下列章節：  
+ <span data-ttu-id="bbf92-104">此主題包括下列章節：</span><span class="sxs-lookup"><span data-stu-id="bbf92-104">This topic contains the following sections:</span></span>  
   
--   [功能區控制項](#ribbon_control)  
+-   [<span data-ttu-id="bbf92-105">功能區控制項</span><span class="sxs-lookup"><span data-stu-id="bbf92-105">Ribbon control</span></span>](#ribbon_control)  
   
--   [提高效能，同時顯示大量分組資料時](#grouped_virtualization)  
+-   [<span data-ttu-id="bbf92-106">顯示大型群組資料集合時改善效能</span><span class="sxs-lookup"><span data-stu-id="bbf92-106">Improved performance when displaying large sets of grouped data</span></span>](#grouped_virtualization)  
   
--   [VirtualizingPanel 的新功能](#VirtualizingPanel)  
+-   [<span data-ttu-id="bbf92-107">VirtualizingPanel 的新功能</span><span class="sxs-lookup"><span data-stu-id="bbf92-107">New features for the VirtualizingPanel</span></span>](#VirtualizingPanel)  
   
--   [繫結至靜態屬性](#static_properties)  
+-   [<span data-ttu-id="bbf92-108">繫結至靜態屬性</span><span class="sxs-lookup"><span data-stu-id="bbf92-108">Binding to static properties</span></span>](#static_properties)  
   
--   [在非 UI 執行緒存取集合。](#xthread_access)  
+-   [<span data-ttu-id="bbf92-109">存取非 UI 執行緒上的集合</span><span class="sxs-lookup"><span data-stu-id="bbf92-109">Accessing collections on non-UI Threads</span></span>](#xthread_access)  
   
--   [同步和非同步驗證資料](#INotifyDataErrorInfo)  
+-   [<span data-ttu-id="bbf92-110">同步和非同步驗證資料</span><span class="sxs-lookup"><span data-stu-id="bbf92-110">Synchronously and Asynchronously validating data</span></span>](#INotifyDataErrorInfo)  
   
--   [自動更新資料繫結的來源。](#delay)  
+-   [<span data-ttu-id="bbf92-111">自動更新資料繫結的來源</span><span class="sxs-lookup"><span data-stu-id="bbf92-111">Automatically updating the source of a data binding</span></span>](#delay)  
   
--   [繫結至實作的型別 ICustomTypeProvider](#ICustomTypeProvider)  
+-   [<span data-ttu-id="bbf92-112">繫結至實作 ICustomTypeProvider 的型別</span><span class="sxs-lookup"><span data-stu-id="bbf92-112">Binding to types that Implement ICustomTypeProvider</span></span>](#ICustomTypeProvider)  
   
--   [擷取資料繫結資訊從一個繫結運算式](#binding_state)  
+-   [<span data-ttu-id="bbf92-113">從繫結運算式擷取資料繫結資訊</span><span class="sxs-lookup"><span data-stu-id="bbf92-113">Retrieving data binding information from a binding expression</span></span>](#binding_state)  
   
--   [檢查有效 DataContext 物件](#DisconnectedSource)  
+-   [<span data-ttu-id="bbf92-114">檢查有效的 DataContext 物件</span><span class="sxs-lookup"><span data-stu-id="bbf92-114">Checking for a valid DataContext object</span></span>](#DisconnectedSource)  
   
--   [將資料當做資料值變更 \(Live 模型\)](#live_shaping)  
+-   [<span data-ttu-id="bbf92-115">隨著資料值變更重新調整資料的位置 (即時繪圖)</span><span class="sxs-lookup"><span data-stu-id="bbf92-115">Repositioning data as the data's values change (Live shaping)</span></span>](#live_shaping)  
   
--   [改良的支援建立事件的弱式參考](#weak_event_pattern)  
+-   [<span data-ttu-id="bbf92-116">建立事件弱式參考的加強支援</span><span class="sxs-lookup"><span data-stu-id="bbf92-116">Improved Support for Establishing a Weak Reference to an Event</span></span>](#weak_event_pattern)  
   
--   [發送器類別中的新方法](#async)  
+-   [<span data-ttu-id="bbf92-117">Dispatcher 類別的新方法</span><span class="sxs-lookup"><span data-stu-id="bbf92-117">New methods for the Dispatcher class</span></span>](#async)  
   
--   [事件的標記延伸](#events_markup_extenions)  
+-   [<span data-ttu-id="bbf92-118">事件的標記延伸</span><span class="sxs-lookup"><span data-stu-id="bbf92-118">Markup Extensions for Events</span></span>](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
-## 功能區控制項  
- WPF 4.5 隨附於裝載一個快速存取工具列、應用程式功能表和 索引標籤上的 <xref:System.Windows.Controls.Ribbon.Ribbon> 控制項。  如需詳細資訊，請參閱[功能區概觀](../Topic/Ribbon%20Overview.md)。  
+## <a name="ribbon-control"></a><span data-ttu-id="bbf92-119">功能區控制項</span><span class="sxs-lookup"><span data-stu-id="bbf92-119">Ribbon control</span></span>  
+ <span data-ttu-id="bbf92-120">WPF 4.5 隨附<xref:System.Windows.Controls.Ribbon.Ribbon>裝載了 快速存取工具列、 應用程式功能表 及 索引標籤的控制項。</span><span class="sxs-lookup"><span data-stu-id="bbf92-120">WPF 4.5 ships with a <xref:System.Windows.Controls.Ribbon.Ribbon> control that hosts a Quick Access Toolbar, Application Menu, and tabs.</span></span>  <span data-ttu-id="bbf92-121">如需詳細資訊，請參閱[功能區概觀](/visualstudio/vsto/ribbon-overview)。</span><span class="sxs-lookup"><span data-stu-id="bbf92-121">For more information, see the [Ribbon Overview](/visualstudio/vsto/ribbon-overview).</span></span>  
   
 <a name="grouped_virtualization"></a>   
-## 提高效能，同時顯示大量分組資料時  
- UI 虛擬化，發生於使用者介面項目 \(UI\) 的子集資料項目的最大數字 \(根據哪些項目產生是顯示在螢幕上。  <xref:System.Windows.Controls.VirtualizingPanel> 定義可分組之資料的 UI 虛擬化的 <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> 附加屬性。  如需群組資料的詳細資訊，請參閱\<HOW TO:使用 XAML 檢視中，已排序和分組。  如需有效群組資料的詳細資訊，請參閱 <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> 附加屬性。  
+## <a name="improved-performance-when-displaying-large-sets-of-grouped-data"></a><span data-ttu-id="bbf92-122">顯示大型群組資料集合時改善效能</span><span class="sxs-lookup"><span data-stu-id="bbf92-122">Improved performance when displaying large sets of grouped data</span></span>  
+ <span data-ttu-id="bbf92-123">UI 虛擬化會在使用者介面 (UI) 元素的子集從大量資料項目，根據可在畫面上看到的項目來產生時發生。</span><span class="sxs-lookup"><span data-stu-id="bbf92-123">UI virtualization occurs when  a subset of user interface (UI) elements are generated from a larger number of data items based on which items are visible on the screen.</span></span> <span data-ttu-id="bbf92-124"><xref:System.Windows.Controls.VirtualizingPanel>定義<xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A>附加 UI 虛擬化讓群組資料的屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-124">The <xref:System.Windows.Controls.VirtualizingPanel> defines the <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> attached property that enables UI Virtualization for grouped data.</span></span>  <span data-ttu-id="bbf92-125">如需群組資料的詳細資訊，請參閱「如何：使用 XAML 中的檢視排序和分組資料」。</span><span class="sxs-lookup"><span data-stu-id="bbf92-125">For more information about grouping data, see How to: Sort and Group Data Using a View in XAML.</span></span>  <span data-ttu-id="bbf92-126">如需有關虛擬化分組資料，請參閱 <<c0> <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> 附加屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-126">For more information about virtualizing grouped data, see the <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> attached property.</span></span>  
   
 <a name="VirtualizingPanel"></a>   
-## VirtualizingPanel 的新功能  
+## <a name="new-features-for-the-virtualizingpanel"></a><span data-ttu-id="bbf92-127">VirtualizingPanel 的新功能</span><span class="sxs-lookup"><span data-stu-id="bbf92-127">New features for the VirtualizingPanel</span></span>  
   
-1.  您可以指定 <xref:System.Windows.Controls.VirtualizingPanel>，例如 <xref:System.Windows.Controls.VirtualizingStackPanel>，使用 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 附加屬性，是否僅顯示部分項目。  如果 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 設為 <xref:System.Windows.Controls.ScrollUnit>， <xref:System.Windows.Controls.VirtualizingPanel> 只會顯示完全可見的項目。  如果 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 設為 <xref:System.Windows.Controls.ScrollUnit>， <xref:System.Windows.Controls.VirtualizingPanel> 可顯示部分可見的項目。  
+1.  <span data-ttu-id="bbf92-128">您可以指定是否<xref:System.Windows.Controls.VirtualizingPanel>，例如<xref:System.Windows.Controls.VirtualizingStackPanel>，藉由顯示部分項目<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>附加屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-128">You can specify whether a <xref:System.Windows.Controls.VirtualizingPanel>, such as the <xref:System.Windows.Controls.VirtualizingStackPanel>, displays partial items by using the <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> attached property.</span></span> <span data-ttu-id="bbf92-129">如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>設<xref:System.Windows.Controls.ScrollUnit.Item>、<xref:System.Windows.Controls.VirtualizingPanel>只會顯示完整的看見的項目。</span><span class="sxs-lookup"><span data-stu-id="bbf92-129">If <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> is set to <xref:System.Windows.Controls.ScrollUnit.Item>, the <xref:System.Windows.Controls.VirtualizingPanel> will only display items that are completely visible.</span></span> <span data-ttu-id="bbf92-130">如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>設<xref:System.Windows.Controls.ScrollUnit.Pixel>、<xref:System.Windows.Controls.VirtualizingPanel>可以顯示有部分顯示的項目。</span><span class="sxs-lookup"><span data-stu-id="bbf92-130">If <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> is set to <xref:System.Windows.Controls.ScrollUnit.Pixel>, the <xref:System.Windows.Controls.VirtualizingPanel> can display partially visible items.</span></span>  
   
-2.  您可以使用 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> 附加屬性時，在中，當 <xref:System.Windows.Controls.VirtualizingPanel> 有效，您可以指定快取的大小在檢視區之前或之後。  快取是間距\] 或 項目所含的檢視區的上方。  使用快取以避免產生 UI 項目，是項目被捲動到檢視可以改善效能。  快取填入在較低優先權，如此應用程式就變得沒有回應在作業期間。  <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=fullName> 屬性 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=fullName>決定使用的度量單位。  
+2.  <span data-ttu-id="bbf92-131">檢視區的前後，您可以指定快取大小時<xref:System.Windows.Controls.VirtualizingPanel>正在使用虛擬化<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A>附加屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-131">You can specify the  size of the cache before and after the viewport when the <xref:System.Windows.Controls.VirtualizingPanel> is virtualizing by using the <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> attached property.</span></span>  <span data-ttu-id="bbf92-132">快取是不虛擬化項目之高於或低於檢視區的空間量。</span><span class="sxs-lookup"><span data-stu-id="bbf92-132">The cache is the amount of space above or below the viewport in which items are not virtualized.</span></span>  <span data-ttu-id="bbf92-133">使用快取以避免產生 UI 元素，因為它們捲動至檢視中可以改善效能。</span><span class="sxs-lookup"><span data-stu-id="bbf92-133">Using a cache to avoid generating UI elements as they’re scrolled into view can improve performance.</span></span> <span data-ttu-id="bbf92-134">填入快取的優先順序較低，讓應用程式在作業期間不會變成沒有回應。</span><span class="sxs-lookup"><span data-stu-id="bbf92-134">The cache is populated at a lower priority so that the application does not become unresponsive during the operation.</span></span> <span data-ttu-id="bbf92-135"><xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType>屬性會決定所使用的度量單位<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-135">The <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> property determines the unit of measurement that is used by <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.</span></span>  
   
 <a name="static_properties"></a>   
-## 繫結至靜態屬性  
- 您可以使用靜態屬性為資料繫結的來源。  資料繫結引擎辨認屬性的值變更時，如果靜態事件會引發事件。  例如，如果類別， `SomeClass` 定義呼叫 `MyProperty`的靜態屬性， `SomeClass` 可以定義引發的靜態事件，當 `MyProperty` 的值變更時。  靜態事件可使用下列簽章之一。  
+## <a name="binding-to-static-properties"></a><span data-ttu-id="bbf92-136">繫結至靜態屬性</span><span class="sxs-lookup"><span data-stu-id="bbf92-136">Binding to static properties</span></span>  
+ <span data-ttu-id="bbf92-137">您可以使用靜態屬性做為資料繫結的來源。</span><span class="sxs-lookup"><span data-stu-id="bbf92-137">You can use static properties as the source of a data binding.</span></span> <span data-ttu-id="bbf92-138">資料繫結引擎會辨識當引發靜態事件時，屬性的值何時變更。</span><span class="sxs-lookup"><span data-stu-id="bbf92-138">The data binding engine recognizes when the property's value changes if a static event is raised.</span></span>  <span data-ttu-id="bbf92-139">例如，如果類別 `SomeClass` 定義靜態屬性，稱為 `MyProperty`，`SomeClass` 可以定義為靜態事件，該事件在 `MyProperty` 的值變更時引發。</span><span class="sxs-lookup"><span data-stu-id="bbf92-139">For example, if the class `SomeClass` defines a static property called `MyProperty`, `SomeClass` can define a static event that is raised when the value of `MyProperty` changes.</span></span>  <span data-ttu-id="bbf92-140">靜態事件可以使用下列簽章。</span><span class="sxs-lookup"><span data-stu-id="bbf92-140">The static event can use either of the following signatures.</span></span>  
   
 -   `public static event EventHandler MyPropertyChanged;`  
   
 -   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
- 請注意，在第一種情況下，類別會公開 <xref:System.EventArgs> 傳遞至事件處理常式 *屬性名稱*名為的靜態事件`Changed` 。  在第二種情況下，類別會公開 <xref:System.ComponentModel.PropertyChangedEventArgs> 傳遞至事件處理常式 `StaticPropertyChanged` 名為的靜態事件。  實作這個靜態屬性使用任一方法的類別，可以選擇引發屬性變更通知。  
+ <span data-ttu-id="bbf92-141">請注意，在第一個案例中，這個類別會公開靜態事件，名為*PropertyName* `Changed`傳遞之任何<xref:System.EventArgs>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="bbf92-141">Note that in the first case, the class exposes a static event named *PropertyName*`Changed` that passes <xref:System.EventArgs> to the event handler.</span></span>  <span data-ttu-id="bbf92-142">在第二個案例中，這個類別會公開靜態事件，名為`StaticPropertyChanged`傳遞之任何<xref:System.ComponentModel.PropertyChangedEventArgs>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="bbf92-142">In the second case, the class exposes a static event named `StaticPropertyChanged` that passes <xref:System.ComponentModel.PropertyChangedEventArgs> to the event handler.</span></span> <span data-ttu-id="bbf92-143">實作靜態屬性的類別，可以選擇使用任一種方法引發屬性變更通知。</span><span class="sxs-lookup"><span data-stu-id="bbf92-143">A class that implements the static property can choose to raise property-change notifications using either method.</span></span>  
   
 <a name="xthread_access"></a>   
-## 在非 UI 執行緒存取集合。  
- WPF 可讓您存取和修改在執行緒進行資料收集。除了建立集合的其他。  這可讓您使用背景執行緒上接收到來自外部來源的資料，例如資料庫，並將資料顯示在 UI 執行緒的資料。  您可以使用修改集合的另一個執行緒，您的使用者介面保持回應使用者互動。  
+## <a name="accessing-collections-on-non-ui-threads"></a><span data-ttu-id="bbf92-144">存取非 UI 執行緒上的集合</span><span class="sxs-lookup"><span data-stu-id="bbf92-144">Accessing collections on non-UI Threads</span></span>  
+ <span data-ttu-id="bbf92-145">WPF 可讓您存取和修改在執行緒上的資料集合，不是建立集合的執行緒。</span><span class="sxs-lookup"><span data-stu-id="bbf92-145">WPF enables you to access and modify data collections on threads other than the one that created the collection.</span></span>  <span data-ttu-id="bbf92-146">這可讓您使用背景執行緒從外部來源 (例如資料庫) 接收資料，並且在 UI 執行緒上顯示資料。</span><span class="sxs-lookup"><span data-stu-id="bbf92-146">This enables you to use a background thread to receive data from an external source, such as a database, and display the data on the UI thread.</span></span>  <span data-ttu-id="bbf92-147">藉由使用另一個執行緒來修改集合，您的使用者介面仍然能夠保持對使用者互動回應。</span><span class="sxs-lookup"><span data-stu-id="bbf92-147">By using another thread to modify the collection, your user interface remains responsive to user interaction.</span></span>  
   
 <a name="INotifyDataErrorInfo"></a>   
-## 同步和非同步驗證資料  
- <xref:System.ComponentModel.INotifyDataErrorInfo> 介面可讓資料實體類別實作自訂驗證規則和公開驗證結果非同步。  這個介面也支援自訂錯誤物件、多個錯誤每個屬性，跨屬性錯誤和實體層級錯誤。  如需詳細資訊，請參閱<xref:System.ComponentModel.INotifyDataErrorInfo>。  
+## <a name="synchronously-and-asynchronously-validating-data"></a><span data-ttu-id="bbf92-148">同步和非同步驗證資料</span><span class="sxs-lookup"><span data-stu-id="bbf92-148">Synchronously and Asynchronously validating data</span></span>  
+ <span data-ttu-id="bbf92-149"><xref:System.ComponentModel.INotifyDataErrorInfo>介面可讓資料實體類別，實作自訂驗證規則，並以非同步方式公開 （expose） 驗證結果。</span><span class="sxs-lookup"><span data-stu-id="bbf92-149">The <xref:System.ComponentModel.INotifyDataErrorInfo> interface enables data entity classes to implement custom validation rules and expose validation results asynchronously.</span></span> <span data-ttu-id="bbf92-150">此介面也支援自訂錯誤物件、每個屬性多個錯誤、跨屬性錯誤，以及實體層級錯誤。</span><span class="sxs-lookup"><span data-stu-id="bbf92-150">This interface also supports custom error objects, multiple errors per property, cross-property errors, and entity-level errors.</span></span>  <span data-ttu-id="bbf92-151">如需詳細資訊，請參閱<xref:System.ComponentModel.INotifyDataErrorInfo>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-151">For more information, see <xref:System.ComponentModel.INotifyDataErrorInfo>.</span></span>  
   
 <a name="delay"></a>   
-## 自動更新資料繫結的來源。  
- 如果您使用資料繫結更新資料來源，您可以使用 <xref:System.Windows.Data.BindingBase.Delay%2A> 屬性指定一次傳遞中，在目標屬性變更時，在來源更新之前。  例如，假設有自己的屬性 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 雙向資料繫結至資料物件屬性，並 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 屬性設為的 <xref:System.Windows.Data.UpdateSourceTrigger>您有 <xref:System.Windows.Controls.Slider> 。  在此範例中，會使用，在使用者移動 <xref:System.Windows.Controls.Slider>， <xref:System.Windows.Controls.Slider> 移動的每個像素的來源更新。  只有在滑桿的 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 停止變更時，來源物件通常需要滑桿的值。  若要防止太通常會更新來源，請使用 <xref:System.Windows.Data.BindingBase.Delay%2A> 指定不應該更新來源，直到大量的時間長度，在捲動方塊停止移動之後。  
+## <a name="automatically-updating-the-source-of-a-data-binding"></a><span data-ttu-id="bbf92-152">自動更新資料繫結的來源</span><span class="sxs-lookup"><span data-stu-id="bbf92-152">Automatically updating the source of a data binding</span></span>  
+ <span data-ttu-id="bbf92-153">如果您使用資料繫結來更新資料來源時，您可以使用<xref:System.Windows.Data.BindingBase.Delay%2A>屬性來指定要傳遞之前來源更新目標上的屬性變更之後的時間量。</span><span class="sxs-lookup"><span data-stu-id="bbf92-153">If you use a data binding to update a data source, you can use the <xref:System.Windows.Data.BindingBase.Delay%2A> property to specify an amount of time to pass after the property changes on the target before the source updates.</span></span>  <span data-ttu-id="bbf92-154">例如，假設您有<xref:System.Windows.Controls.Slider>具有其<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>屬性資料雙向繫結至資料物件的屬性和<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性設定為<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-154">For example, suppose that you have a <xref:System.Windows.Controls.Slider> that has its <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> property data two-way bound to a property of a data object and the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property is set to <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span></span>  <span data-ttu-id="bbf92-155">在此範例中，當使用者將<xref:System.Windows.Controls.Slider>，每個像素的來源更新的<xref:System.Windows.Controls.Slider>移動。</span><span class="sxs-lookup"><span data-stu-id="bbf92-155">In this example, when the user moves the <xref:System.Windows.Controls.Slider>, the source updates for each pixel that the <xref:System.Windows.Controls.Slider> moves.</span></span>  <span data-ttu-id="bbf92-156">來源物件通常需要滑桿的值只有當滑桿的<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>停止變更。</span><span class="sxs-lookup"><span data-stu-id="bbf92-156">The source object typically needs the value of the slider only when the slider's <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> stops changing.</span></span>  <span data-ttu-id="bbf92-157">若要避免太過頻繁更新來源，請使用<xref:System.Windows.Data.BindingBase.Delay%2A>指定軸之捲動方塊就會停止移動經過一段時間之前，不應更新來源。</span><span class="sxs-lookup"><span data-stu-id="bbf92-157">To prevent updating the source too often, use <xref:System.Windows.Data.BindingBase.Delay%2A> to specify that the source should not be updated until a certain amount of time elapses after the thumb stops moving.</span></span>  
   
 <a name="ICustomTypeProvider"></a>   
-## 繫結至實作的型別 ICustomTypeProvider  
- WPF 支援資料繫結 <xref:System.Reflection.ICustomTypeProvider>實作的物件，也稱為自訂型別。  您可以在下列情況下使用自訂型別。  
+## <a name="binding-to-types-that-implement-icustomtypeprovider"></a><span data-ttu-id="bbf92-158">繫結至實作 ICustomTypeProvider 的型別</span><span class="sxs-lookup"><span data-stu-id="bbf92-158">Binding to types that Implement ICustomTypeProvider</span></span>  
+ <span data-ttu-id="bbf92-159">WPF 支援實作物件的資料繫結<xref:System.Reflection.ICustomTypeProvider>，也稱為自訂型別。</span><span class="sxs-lookup"><span data-stu-id="bbf92-159">WPF supports data binding to objects that implement <xref:System.Reflection.ICustomTypeProvider>, also known as custom types.</span></span>  <span data-ttu-id="bbf92-160">您可以在下列情況下使用自訂型別。</span><span class="sxs-lookup"><span data-stu-id="bbf92-160">You can use custom types in the following cases.</span></span>  
   
-1.  做為 <xref:System.Windows.PropertyPath> 在資料繫結中。  例如， <xref:System.Windows.Data.Binding> 的 <xref:System.Windows.Data.Binding.Path%2A> 屬性可參考自訂型別的屬性。  
+1.  <span data-ttu-id="bbf92-161">做為<xref:System.Windows.PropertyPath>資料繫結中。</span><span class="sxs-lookup"><span data-stu-id="bbf92-161">As a <xref:System.Windows.PropertyPath> in a data binding.</span></span> <span data-ttu-id="bbf92-162">例如，<xref:System.Windows.Data.Binding.Path%2A>屬性<xref:System.Windows.Data.Binding>可以參考自訂類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-162">For example, the <xref:System.Windows.Data.Binding.Path%2A> property of a <xref:System.Windows.Data.Binding> can reference a property of a custom type.</span></span>  
   
-2.  <xref:System.Windows.DataTemplate.DataType%2A> 做為屬性的值。  
+2.  <span data-ttu-id="bbf92-163">值為<xref:System.Windows.DataTemplate.DataType%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-163">As the value of the <xref:System.Windows.DataTemplate.DataType%2A> property.</span></span>  
   
-3.  以判斷在 <xref:System.Windows.Controls.DataGrid>的自動產生之資料行的型別。  
+3.  <span data-ttu-id="bbf92-164">為決定自動產生的資料行中的型別<xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-164">As a type that determines the automatically generated columns in a <xref:System.Windows.Controls.DataGrid>.</span></span>  
   
 <a name="binding_state"></a>   
-## 擷取資料繫結資訊從一個繫結運算式  
- 在某些情況下，您可能會取得 <xref:System.Windows.Data.Binding> 的 <xref:System.Windows.Data.BindingExpression> 和所需的繫結來源和目標物件的相關資訊。  加入新的 API 可讓您取得來源或目標物件或相關聯的屬性。  當您有 <xref:System.Windows.Data.BindingExpression>時，請使用下列 API 取得有關目標和來源的資訊。  
+## <a name="retrieving-data-binding-information-from-a-binding-expression"></a><span data-ttu-id="bbf92-165">從繫結運算式擷取資料繫結資訊</span><span class="sxs-lookup"><span data-stu-id="bbf92-165">Retrieving data binding information from a binding expression</span></span>  
+ <span data-ttu-id="bbf92-166">在某些情況下，您可能會收到<xref:System.Windows.Data.BindingExpression>的<xref:System.Windows.Data.Binding>，而且需要來源和目標物件的繫結的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="bbf92-166">In certain cases, you might get the <xref:System.Windows.Data.BindingExpression> of a <xref:System.Windows.Data.Binding> and need information about the source and target objects of the binding.</span></span>  <span data-ttu-id="bbf92-167">新的 API 已新增，可讓您取得來源或目標物件或相關聯的屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-167">New APIs have been added to enable you to get the source or target object or the associated property.</span></span>  <span data-ttu-id="bbf92-168">當您有<xref:System.Windows.Data.BindingExpression>，使用下列 Api 來取得有關目標和來源的資訊。</span><span class="sxs-lookup"><span data-stu-id="bbf92-168">When you have a <xref:System.Windows.Data.BindingExpression>, use the following APIs to get information about the target and source.</span></span>  
   
-|尋找繫結的這個值。|使用這個 API|  
-|---------------|--------------|  
-|目標物件|<xref:System.Windows.Data.BindingExpressionBase.Target%2A?displayProperty=fullName>|  
-|目標屬性|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=fullName>|  
-|來源物件|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=fullName>|  
-|來源屬性|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Data.BindingExpression> 是否屬於 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Data.BindingGroup>的擁有者。|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
+|<span data-ttu-id="bbf92-169">若要尋找繫結的此值</span><span class="sxs-lookup"><span data-stu-id="bbf92-169">To find this value of the binding</span></span>|<span data-ttu-id="bbf92-170">使用此 API</span><span class="sxs-lookup"><span data-stu-id="bbf92-170">Use this API</span></span>|  
+|---------------------------------------|------------------|  
+|<span data-ttu-id="bbf92-171">目標物件</span><span class="sxs-lookup"><span data-stu-id="bbf92-171">The target object</span></span>|<xref:System.Windows.Data.BindingExpressionBase.Target%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bbf92-172">目標屬性</span><span class="sxs-lookup"><span data-stu-id="bbf92-172">The target property</span></span>|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bbf92-173">來源物件</span><span class="sxs-lookup"><span data-stu-id="bbf92-173">The source object</span></span>|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bbf92-174">來源屬性</span><span class="sxs-lookup"><span data-stu-id="bbf92-174">The source property</span></span>|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bbf92-175">是否<xref:System.Windows.Data.BindingExpression>屬於<xref:System.Windows.Data.BindingGroup></span><span class="sxs-lookup"><span data-stu-id="bbf92-175">Whether the <xref:System.Windows.Data.BindingExpression> belongs to a <xref:System.Windows.Data.BindingGroup></span></span>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="bbf92-176">擁有者<xref:System.Windows.Data.BindingGroup></span><span class="sxs-lookup"><span data-stu-id="bbf92-176">The owner of a <xref:System.Windows.Data.BindingGroup></span></span>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
-## 檢查有效 DataContext 物件  
- 具有項目容器 <xref:System.Windows.FrameworkElement.DataContext%2A> 在 <xref:System.Windows.Controls.ItemsControl> 的變成不相關的情況。  項目容器是顯示在 <xref:System.Windows.Controls.ItemsControl>的某個項目的 UI 項目。  當 <xref:System.Windows.Controls.ItemsControl> 都會繫結至集合時，項目容器為每個項目產生。  在某些情況下，項目容器自視覺化樹狀結構中移除。  項目容器移除的兩個常見的情況是項目從基礎集合中移除，而且會在虛擬 <xref:System.Windows.Controls.ItemsControl>時啟用。  在這些情況下，項目容器的 <xref:System.Windows.FrameworkElement.DataContext%2A> 屬性會設定為由 <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=fullName> 靜態屬性所傳回的 Sentinel 物件。  您應該確認是否 <xref:System.Windows.FrameworkElement.DataContext%2A> 與 <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> 物件等於在存取項目容器的 <xref:System.Windows.FrameworkElement.DataContext%2A> 之前。  
+## <a name="checking-for-a-valid-datacontext-object"></a><span data-ttu-id="bbf92-177">檢查有效的 DataContext 物件</span><span class="sxs-lookup"><span data-stu-id="bbf92-177">Checking for a valid DataContext object</span></span>  
+ <span data-ttu-id="bbf92-178">某些情況下其中<xref:System.Windows.FrameworkElement.DataContext%2A>項目容器中的<xref:System.Windows.Controls.ItemsControl>中斷連接。</span><span class="sxs-lookup"><span data-stu-id="bbf92-178">There are cases where the <xref:System.Windows.FrameworkElement.DataContext%2A> of an item container in an <xref:System.Windows.Controls.ItemsControl> becomes disconnected.</span></span>  <span data-ttu-id="bbf92-179">項目容器是顯示的項目中的 UI 項目<xref:System.Windows.Controls.ItemsControl>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-179">An item container is the UI element that displays an item in an <xref:System.Windows.Controls.ItemsControl>.</span></span>  <span data-ttu-id="bbf92-180">當<xref:System.Windows.Controls.ItemsControl>是資料繫結至集合，項目容器會產生每個項目。</span><span class="sxs-lookup"><span data-stu-id="bbf92-180">When an <xref:System.Windows.Controls.ItemsControl> is data bound to a collection, an item container is generated for each item.</span></span> <span data-ttu-id="bbf92-181">在某些情況下，項目容器會從視覺化樹狀結構移除。</span><span class="sxs-lookup"><span data-stu-id="bbf92-181">In some cases, item containers are removed from the visual tree.</span></span> <span data-ttu-id="bbf92-182">移除項目容器的所在的兩種一般情況下會從基礎集合中移除項目時，當已啟用虛擬化<xref:System.Windows.Controls.ItemsControl>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-182">Two typical cases where an item container is removed are when an item is removed from the underlying collection and when virtualization is enabled on the <xref:System.Windows.Controls.ItemsControl>.</span></span> <span data-ttu-id="bbf92-183">在這些情況下，<xref:System.Windows.FrameworkElement.DataContext%2A>的項目容器的屬性將設定成傳回 sentinel 物件<xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType>靜態屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-183">In these cases, the <xref:System.Windows.FrameworkElement.DataContext%2A> property of the item container will be set to the sentinel object that is returned by the <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType> static property.</span></span>  <span data-ttu-id="bbf92-184">您應該檢查是否<xref:System.Windows.FrameworkElement.DataContext%2A>等於<xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A>之前存取物件<xref:System.Windows.FrameworkElement.DataContext%2A>的項目容器。</span><span class="sxs-lookup"><span data-stu-id="bbf92-184">You should check whether the <xref:System.Windows.FrameworkElement.DataContext%2A> is equal to the <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> object before accessing the <xref:System.Windows.FrameworkElement.DataContext%2A> of an item container.</span></span>  
   
 <a name="live_shaping"></a>   
-## 將資料當做資料值變更 \(Live 模型\)  
- 資料可以群組，排序或篩選。  當修改時， WPF 4.5 可讓資料重新整理資料。  例如，假設應用程式會在股市上使用 <xref:System.Windows.Controls.DataGrid> 股票清單，並共用由內建值排序。  使用排序在共用的 <xref:System.Windows.Data.CollectionView>有效，則 <xref:System.Windows.Controls.DataGrid> 的共用位置移動，所共用的值大於另一個共用的值為大於或小於。  如需詳細資訊，請參閱 <xref:System.ComponentModel.ICollectionViewLiveShaping> 介面。  
+## <a name="repositioning-data-as-the-datas-values-change-live-shaping"></a><span data-ttu-id="bbf92-185">隨著資料值變更重新調整資料的位置 (即時繪圖)</span><span class="sxs-lookup"><span data-stu-id="bbf92-185">Repositioning data as the data's values change (Live shaping)</span></span>  
+ <span data-ttu-id="bbf92-186">資料的集合可以分組、排序或篩選。</span><span class="sxs-lookup"><span data-stu-id="bbf92-186">A collection of data can be grouped, sorted, or filtered.</span></span> <span data-ttu-id="bbf92-187">WPF 4.5 可讓資料在修改時重新排列。</span><span class="sxs-lookup"><span data-stu-id="bbf92-187">WPF 4.5 enables the data to be rearranged when the data is modified.</span></span> <span data-ttu-id="bbf92-188">例如，假設應用程式使用<xref:System.Windows.Controls.DataGrid>列出股票市場的股票和股票依存貨值排序。</span><span class="sxs-lookup"><span data-stu-id="bbf92-188">For example, suppose that an application uses a <xref:System.Windows.Controls.DataGrid> to list stocks in a stock market and the stocks are sorted by stock value.</span></span> <span data-ttu-id="bbf92-189">如果啟用即時排序股票 '<xref:System.Windows.Data.CollectionView>中的內建的位置<xref:System.Windows.Controls.DataGrid>移當股票價格的值會變成大於或小於另一個內建值。</span><span class="sxs-lookup"><span data-stu-id="bbf92-189">If live sorting is enabled on the stocks' <xref:System.Windows.Data.CollectionView>, a stock's position in the <xref:System.Windows.Controls.DataGrid> moves when the value of the stock becomes greater or less than another stock's value.</span></span>   <span data-ttu-id="bbf92-190">如需詳細資訊，請參閱<xref:System.ComponentModel.ICollectionViewLiveShaping>介面。</span><span class="sxs-lookup"><span data-stu-id="bbf92-190">For more information, see the <xref:System.ComponentModel.ICollectionViewLiveShaping> interface.</span></span>  
   
 <a name="weak_event_pattern"></a>   
-## 改良的支援建立事件的弱式參考  
- 實作弱式事件模式現在變得更加容易，因為事件的訂閱者可以參與，而不需要實作額外的介面。  如果專屬的 <xref:System.Windows.WeakEventManager> 提供一些事件，不存在 <xref:System.Windows.WeakEventManager> 泛型類別也可讓訂閱者參與弱式事件模式。  如需詳細資訊，請參閱[弱式事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)。  
+## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a><span data-ttu-id="bbf92-191">建立事件弱式參考的加強支援</span><span class="sxs-lookup"><span data-stu-id="bbf92-191">Improved Support for Establishing a Weak Reference to an Event</span></span>  
+ <span data-ttu-id="bbf92-192">實作弱式事件模式現在更加容易，因為事件訂閱者可以參與它而不用實作額外的介面。</span><span class="sxs-lookup"><span data-stu-id="bbf92-192">Implementing the weak event pattern is now easier because subscribers to events can participate in it without implementing an extra interface.</span></span>  <span data-ttu-id="bbf92-193">泛型<xref:System.Windows.WeakEventManager>類別也可讓訂閱者參與的弱式事件模式，如果是專用<xref:System.Windows.WeakEventManager>不存在的特定事件。</span><span class="sxs-lookup"><span data-stu-id="bbf92-193">The generic <xref:System.Windows.WeakEventManager> class also enables subscribers to participate in the weak event pattern if a dedicated <xref:System.Windows.WeakEventManager> does not exist for a certain event.</span></span>  <span data-ttu-id="bbf92-194">如需詳細資訊，請參閱[弱式事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)。</span><span class="sxs-lookup"><span data-stu-id="bbf92-194">For more information, see [Weak Event Patterns](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).</span></span>  
   
 <a name="async"></a>   
-## 發送器類別中的新方法  
- 發送器類別定義同步和非同步作業的新方法。  同步處理 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 方法會定義接受 <xref:System.Action> 或 <xref:System.Func%601> 參數的多載。  新的非同步方法， <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，也會接受 <xref:System.Action> 或 <xref:System.Func%601> 做為回呼參數並傳回 <xref:System.Windows.Threading.DispatcherOperation> 或 <xref:System.Windows.Threading.DispatcherOperation%601>。  <xref:System.Windows.Threading.DispatcherOperation> 和 <xref:System.Windows.Threading.DispatcherOperation%601> 類別定義 <xref:System.Threading.Tasks.Task> 屬性。  當您呼叫 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>時，您可以使用 <xref:System.Windows.Threading.DispatcherOperation> 或相關聯的 <xref:System.Threading.Tasks.Task>的 `await` 關鍵字。  如果由 <xref:System.Windows.Threading.DispatcherOperation> 或 <xref:System.Windows.Threading.DispatcherOperation%601>傳回需要同步處理 <xref:System.Threading.Tasks.Task> 等等，請呼叫 <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 擴充方法。  如果作業在呼叫的執行緒，佇列呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName> 造成死結 \(Deadlock\)。  如需使用的 <xref:System.Threading.Tasks.Task> 執行非同步作業，請參閱 [工作平行處理原則 \(工作平行程式庫\)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)。  
+## <a name="new-methods-for-the-dispatcher-class"></a><span data-ttu-id="bbf92-195">Dispatcher 類別的新方法</span><span class="sxs-lookup"><span data-stu-id="bbf92-195">New methods for the Dispatcher class</span></span>  
+ <span data-ttu-id="bbf92-196">Dispatcher 類別會定義同步和非同步作業的新方法。</span><span class="sxs-lookup"><span data-stu-id="bbf92-196">The Dispatcher class defines new methods for synchronous and asynchronous operations.</span></span>  <span data-ttu-id="bbf92-197">同步<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法所定義，採用多載<xref:System.Action>或<xref:System.Func%601>參數。</span><span class="sxs-lookup"><span data-stu-id="bbf92-197">The synchronous <xref:System.Windows.Threading.Dispatcher.Invoke%2A> method defines overloads that take an <xref:System.Action> or <xref:System.Func%601> parameter.</span></span> <span data-ttu-id="bbf92-198">新的非同步方法， <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，也會採用<xref:System.Action>或<xref:System.Func%601>做為回呼參數並傳回<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-198">The new asynchronous method, <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, also takes an <xref:System.Action> or <xref:System.Func%601> as the callback parameter and returns a <xref:System.Windows.Threading.DispatcherOperation> or <xref:System.Windows.Threading.DispatcherOperation%601>.</span></span>   <span data-ttu-id="bbf92-199"><xref:System.Windows.Threading.DispatcherOperation>和<xref:System.Windows.Threading.DispatcherOperation%601>類別定義<xref:System.Threading.Tasks.Task>屬性。</span><span class="sxs-lookup"><span data-stu-id="bbf92-199">The <xref:System.Windows.Threading.DispatcherOperation> and <xref:System.Windows.Threading.DispatcherOperation%601> classes define a <xref:System.Threading.Tasks.Task> property.</span></span>  <span data-ttu-id="bbf92-200">當您呼叫<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，您可以使用`await`關鍵字使用<xref:System.Windows.Threading.DispatcherOperation>或相關聯<xref:System.Threading.Tasks.Task>。</span><span class="sxs-lookup"><span data-stu-id="bbf92-200">When you call <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, you can use the `await` keyword with either the <xref:System.Windows.Threading.DispatcherOperation> or the associated <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="bbf92-201">如果您要同步等候<xref:System.Threading.Tasks.Task>所傳回<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，呼叫<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>擴充方法。</span><span class="sxs-lookup"><span data-stu-id="bbf92-201">If you need to wait synchronously for the <xref:System.Threading.Tasks.Task> that is returned by a <xref:System.Windows.Threading.DispatcherOperation> or <xref:System.Windows.Threading.DispatcherOperation%601>, call the <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> extension method.</span></span> <span data-ttu-id="bbf92-202">呼叫<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>如果呼叫執行緒上的作業會排入佇列，會導致死結。</span><span class="sxs-lookup"><span data-stu-id="bbf92-202">Calling <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> will result in a deadlock if the operation is queued on a calling thread.</span></span> <span data-ttu-id="bbf92-203">如需有關使用<xref:System.Threading.Tasks.Task>為了執行非同步作業，請參閱[工作平行處理原則 （工作平行程式庫）](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="bbf92-203">For more information about using a <xref:System.Threading.Tasks.Task> to perform asynchronous operations, see [Task Parallelism (Task Parallel Library)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).</span></span>  
   
 <a name="events_markup_extenions"></a>   
-## 事件的標記延伸  
- WPF 4.5 支援事件的標記延伸。  當 WPF 不會定義為事件時所要使用的標記延伸，協力廠商可以建立可搭配事件使用的標記延伸。  
+## <a name="markup-extensions-for-events"></a><span data-ttu-id="bbf92-204">事件的標記延伸</span><span class="sxs-lookup"><span data-stu-id="bbf92-204">Markup Extensions for Events</span></span>  
+ <span data-ttu-id="bbf92-205">WPF 4.5 支援事件的標記延伸。</span><span class="sxs-lookup"><span data-stu-id="bbf92-205">WPF 4.5 supports markup extensions for events.</span></span>  <span data-ttu-id="bbf92-206">WPF 不會定義要用於事件的標記延伸，協力廠商可以建立可與事件一起使用的標記延伸。</span><span class="sxs-lookup"><span data-stu-id="bbf92-206">While WPF does not define a markup extension to be used for events, third parties are able to create a markup extension that can be used with events.</span></span>  
   
-## 請參閱  
- [.NET Framework 的新功能](../../../../docs/framework/whats-new/index.md)
+## <a name="see-also"></a><span data-ttu-id="bbf92-207">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bbf92-207">See Also</span></span>  
+ [<span data-ttu-id="bbf92-208">.NET Framework 的新功能</span><span class="sxs-lookup"><span data-stu-id="bbf92-208">What's New in the .NET Framework</span></span>](../../../../docs/framework/whats-new/index.md)

@@ -1,77 +1,80 @@
 ---
-title: "HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cb6a0b7913434be70efdc5af780980b971b5bc6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務
-本主題說明如何設定 IIS 裝載的 WCF 服務以使用 HTTP 傳輸安全性。  HTTP 傳輸安全性必須使用 SSL 憑證才能註冊到 IIS。  如果您沒有 SSL 憑證，則可以使用 IIS 來產生測試憑證。  接下來，您必須將 SSL 繫結加入至網站，並設定網站的驗證屬性。  最後，您需要將 WCF 服務設定為使用 HTTPS。  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="70e36-102">HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="70e36-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
+<span data-ttu-id="70e36-103">本主題說明如何設定 IIS 裝載的 WCF 服務以使用 HTTP 傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="70e36-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="70e36-104">HTTP 傳輸安全性必須使用 SSL 憑證才能註冊到 IIS。</span><span class="sxs-lookup"><span data-stu-id="70e36-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="70e36-105">如果您沒有 SSL 憑證，則可以使用 IIS 來產生測試憑證。</span><span class="sxs-lookup"><span data-stu-id="70e36-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="70e36-106">接下來，您必須將 SSL 繫結加入至網站，並設定網站的驗證屬性。</span><span class="sxs-lookup"><span data-stu-id="70e36-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="70e36-107">最後，您需要將 WCF 服務設定為使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="70e36-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
   
-### 建立自我簽署憑證  
+### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="70e36-108">建立自我簽署憑證</span><span class="sxs-lookup"><span data-stu-id="70e36-108">Creating a Self-Signed Certificate</span></span>  
   
-1.  開啟網際網路資訊服務管理員 \(inetmgr.exe\)，並在左側樹狀檢視中選取您的電腦名稱。  在螢幕右側選取 \[伺服器憑證\]  
+1.  <span data-ttu-id="70e36-109">開啟網際網路資訊服務管理員 (inetmgr.exe)，並在左側樹狀檢視中選取您的電腦名稱。</span><span class="sxs-lookup"><span data-stu-id="70e36-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="70e36-110">在螢幕右側選取 [伺服器憑證]</span><span class="sxs-lookup"><span data-stu-id="70e36-110">On the right-hand side of the screen select Server Certificates</span></span>  
   
-     ![IIS Manager 首頁畫面](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg\_INetMgrHome")  
+     <span data-ttu-id="70e36-111">![IIS Manager 首頁畫面](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="70e36-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
   
-2.  在 \[伺服器憑證\] 視窗中，按一下 \[**建立自我簽署憑證**\]連結。  
+2.  <span data-ttu-id="70e36-112">在 [伺服器憑證] 視窗中按一下**建立自我簽署憑證...**</span><span class="sxs-lookup"><span data-stu-id="70e36-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="70e36-113">連結。</span><span class="sxs-lookup"><span data-stu-id="70e36-113">Link.</span></span>  
   
-     ![使用 IIS 建立自我簽署憑證](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg\_CreateSelfSignedCert")  
+     <span data-ttu-id="70e36-114">![建立自我 &#45; 簽章的憑證與 IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="70e36-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
   
-3.  輸入自我簽署憑證的易記名稱，然後按一下 \[**確定**\]。  
+3.  <span data-ttu-id="70e36-115">輸入的自我簽署憑證的易記名稱，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="70e36-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
   
-     ![建立自我簽署憑證對話方塊](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg\_MyCert")  
+     <span data-ttu-id="70e36-116">![建立自我 &#45;簽署憑證對話方塊](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="70e36-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
   
-     新建立的自我簽署憑證詳細資料會顯示在 \[**伺服器憑證**\] 視窗。  
+     <span data-ttu-id="70e36-117">新建立的自我簽署的憑證的詳細資訊會顯示在**伺服器憑證**視窗。</span><span class="sxs-lookup"><span data-stu-id="70e36-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
   
-     ![伺服器憑證視窗](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg\_ServerCertificateWindow")  
+     <span data-ttu-id="70e36-118">![伺服器憑證視窗](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="70e36-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
   
-     產生的憑證會安裝在 \[受信任的根憑證授權單位\] 存放區中。  
+     <span data-ttu-id="70e36-119">產生的憑證會安裝在 [受信任的根憑證授權單位] 存放區中。</span><span class="sxs-lookup"><span data-stu-id="70e36-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
   
-### 加入 SSL 繫結  
+### <a name="add-ssl-binding"></a><span data-ttu-id="70e36-120">加入 SSL 繫結</span><span class="sxs-lookup"><span data-stu-id="70e36-120">Add SSL Binding</span></span>  
   
-1.  仍舊在網際網路資訊服務管理員中，依序展開螢幕左側樹狀檢視中的 \[**網站**\] 和 \[**預設的網站**\] 資料夾。  
+1.  <span data-ttu-id="70e36-121">仍在網際網路資訊服務管理員中，依序展開**網站**資料夾，然後**Default Web Site**螢幕左側樹狀檢視中的資料夾。</span><span class="sxs-lookup"><span data-stu-id="70e36-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
   
-2.  按一下 \[**繫結**\]。連結視窗右上方部分中的 \[**動作**\] 區段。  
+2.  <span data-ttu-id="70e36-122">按一下**繫結...**</span><span class="sxs-lookup"><span data-stu-id="70e36-122">Click the **Bindings….**</span></span> <span data-ttu-id="70e36-123">連結中**動作**視窗右上方部分中的一節。</span><span class="sxs-lookup"><span data-stu-id="70e36-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
   
-     ![加入 SSL 繫結](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg\_AddSSLBinding")  
+     <span data-ttu-id="70e36-124">![加入 SSL 繫結](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="70e36-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
   
-3.  在 \[網站繫結\] 視窗中按一下 \[**新增**\] 按鈕。  
+3.  <span data-ttu-id="70e36-125">在 網站繫結 視窗中按一下**新增** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="70e36-125">In the Site Bindings window click the **Add** button.</span></span>  
   
-     ![站台繫結對話方塊](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg\_SiteBindingsDialog")  
+     <span data-ttu-id="70e36-126">![站台繫結 對話方塊](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="70e36-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
   
-4.  在 \[**新增網站繫結**\] 對話方塊中，選取 https 的類型和您剛建立的自我簽署憑證的易記名稱。  
+4.  <span data-ttu-id="70e36-127">在**新增網站繫結**對話方塊中，選取 https 的類型以及您剛才的自我簽署憑證的易記名稱建立。</span><span class="sxs-lookup"><span data-stu-id="70e36-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
   
-     ![站台繫結範例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg\_MyCertBinding")  
+     <span data-ttu-id="70e36-128">![站台繫結範例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="70e36-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
   
-### 設定 SSL 的虛擬目錄  
+### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="70e36-129">設定 SSL 的虛擬目錄</span><span class="sxs-lookup"><span data-stu-id="70e36-129">Configure Virtual Directory for SSL</span></span>  
   
-1.  仍舊在網際網路資訊服務管理員中，選取包含您的 WCF 安全服務的虛擬目錄。  
+1.  <span data-ttu-id="70e36-130">仍舊在網際網路資訊服務管理員中，選取包含您的 WCF 安全服務的虛擬目錄。</span><span class="sxs-lookup"><span data-stu-id="70e36-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
   
-2.  在視窗的中間窗格中，選取 IIS 區段中的 \[**SSL 設定**\]。  
+2.  <span data-ttu-id="70e36-131">在視窗的中央窗格中，選取**SSL 設定**的 IIS 區段中。</span><span class="sxs-lookup"><span data-stu-id="70e36-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
   
-     ![虛擬目錄的 SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg\_SSLSettingsForVDir")  
+     <span data-ttu-id="70e36-132">![虛擬目錄的 SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="70e36-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
   
-3.  在 \[SSL 設定\] 窗格中選取 \[**需要 SSL**\] 核取方塊，並在螢幕右側的 \[**動作**\] 區段中按一下 \[**套用**\] 連結。  
+3.  <span data-ttu-id="70e36-133">在 SSL 設定 窗格中，選取**需要 SSL**核取方塊，按一下 **套用**中連結**動作**螢幕的右邊區段。</span><span class="sxs-lookup"><span data-stu-id="70e36-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
   
-     ![虛擬目錄 SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg\_VDirSSLSettings")  
+     <span data-ttu-id="70e36-134">![虛擬目錄 SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="70e36-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
   
-### 設定 HTTP 傳輸安全性的 WCF 服務  
+### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="70e36-135">設定 HTTP 傳輸安全性的 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="70e36-135">Configure WCF Service for HTTP Transport Security</span></span>  
   
-1.  在 WCF 服務的 web.config 中，將 HTTP 繫結設定為使用傳輸安全性，如下列 XML 所示。  
+1.  <span data-ttu-id="70e36-136">在 WCF 服務的 web.config 中，將 HTTP 繫結設定為使用傳輸安全性，如下列 XML 所示。</span><span class="sxs-lookup"><span data-stu-id="70e36-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
           <basicHttpBinding>  
             <binding name="secureHttpBinding">  
@@ -80,13 +83,12 @@ caps.handback.revision: 3
               </security>  
             </binding>  
           </basicHttpBinding>  
-        </bindings>  
-  
+    </bindings>  
     ```  
   
-2.  指定您的服務和服務端點，如下列 XML 所示。  
+2.  <span data-ttu-id="70e36-137">指定您的服務和服務端點，如下列 XML 所示。</span><span class="sxs-lookup"><span data-stu-id="70e36-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
   
-    ```  
+    ```xml  
     <services>  
           <service name="MySecureWCFService.Service1">  
             <endpoint address=""  
@@ -98,14 +100,13 @@ caps.handback.revision: 3
                       binding="mexHttpsBinding"  
                       contract="IMetadataExchange" />  
           </service>  
-        </services>  
-  
+    </services>  
     ```  
   
-## 範例  
- 下列是使用 HTTP 傳輸安全性之 WCF 服務的 web.config 檔的完整範例  
+## <a name="example"></a><span data-ttu-id="70e36-138">範例</span><span class="sxs-lookup"><span data-stu-id="70e36-138">Example</span></span>  
+ <span data-ttu-id="70e36-139">下列是使用 HTTP 傳輸安全性之 WCF 服務的 web.config 檔的完整範例</span><span class="sxs-lookup"><span data-stu-id="70e36-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <configuration>  
   
@@ -146,18 +147,15 @@ caps.handback.revision: 3
     </behaviors>  
     <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
   </system.serviceModel>  
- <system.webServer>  
+  <system.webServer>  
     <modules runAllManagedModulesForAllRequests="true"/>  
   </system.webServer>  
   
 </configuration>  
-  
 ```  
   
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
-## 請參閱  
- [在網際網路資訊服務中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [網際網路資訊服務裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [使用內嵌程式碼的 IIS 裝載](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+## <a name="see-also"></a><span data-ttu-id="70e36-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70e36-140">See Also</span></span>  
+ [<span data-ttu-id="70e36-141">裝載在 Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="70e36-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="70e36-142">Internet Information Service 裝載指示</span><span class="sxs-lookup"><span data-stu-id="70e36-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="70e36-143">網際網路資訊服務裝載最佳做法</span><span class="sxs-lookup"><span data-stu-id="70e36-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="70e36-144">使用內嵌程式碼的 IIS 裝載</span><span class="sxs-lookup"><span data-stu-id="70e36-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

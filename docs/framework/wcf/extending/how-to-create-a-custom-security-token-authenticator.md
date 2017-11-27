@@ -1,72 +1,77 @@
 ---
-title: "HOW TO：建立自訂安全性權杖驗證器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, 驗證"
+title: "HOW TO：建立自訂安全性權杖驗證器"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 12
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: cd9511642789cc8b5cade502941d54c5b88f625c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# HOW TO：建立自訂安全性權杖驗證器
-本主題會示範如何建立自訂安全性權杖驗證器，以及如何將其與自訂的安全性權杖管理員整合。安全性權杖驗證器會驗證傳入訊息所提供之安全性權杖的內容。如果驗證成功，驗證器便會傳回在進行評估時會傳回一組宣告之 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。  
+# <a name="how-to-create-a-custom-security-token-authenticator"></a><span data-ttu-id="f945f-102">HOW TO：建立自訂安全性權杖驗證器</span><span class="sxs-lookup"><span data-stu-id="f945f-102">How to: Create a Custom Security Token Authenticator</span></span>
+<span data-ttu-id="f945f-103">本主題會示範如何建立自訂安全性權杖驗證器，以及如何將其與自訂的安全性權杖管理員整合。</span><span class="sxs-lookup"><span data-stu-id="f945f-103">This topic shows how to create a custom security token authenticator and how to integrate it with a custom security token manager.</span></span> <span data-ttu-id="f945f-104">安全性權杖驗證器會驗證傳入訊息所提供之安全性權杖的內容。</span><span class="sxs-lookup"><span data-stu-id="f945f-104">A security token authenticator validates the content of a security token provided with an incoming message.</span></span> <span data-ttu-id="f945f-105">如果驗證成功，驗證器便會傳回在進行評估時會傳回一組宣告之 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。</span><span class="sxs-lookup"><span data-stu-id="f945f-105">If the validation succeeds, the authenticator returns a collection of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instances that, when evaluated, returns a set of claims.</span></span>  
   
- 若要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用自訂安全性權杖驗證器，您必須先建立自訂認證和安全性權杖管理員實作 \(Implementation\)。如需建立自訂認證和安全性權杖管理員的詳細資訊，請參閱 [逐步解說：建立自訂用戶端與服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。如需認證、安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱[Security Architecture](http://msdn.microsoft.com/zh-tw/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ <span data-ttu-id="f945f-106">若要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用自訂安全性權杖驗證器，您必須先建立自訂認證和安全性權杖管理員實作 (Implementation)。</span><span class="sxs-lookup"><span data-stu-id="f945f-106">To use a custom security token authenticator in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], you must first create custom credentials and security token manager implementations.</span></span> <span data-ttu-id="f945f-107">如需有關如何建立自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。</span><span class="sxs-lookup"><span data-stu-id="f945f-107">For more information about creating custom credentials and a security token manager, see [Walkthrough: Creating Custom Client and Service Credentials](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).</span></span> <span data-ttu-id="f945f-108">如需有關認證、 安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱[安全性架構](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)。</span><span class="sxs-lookup"><span data-stu-id="f945f-108">For more information about credentials, security token manager, and provider and authenticator classes, see [Security Architecture](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).</span></span>  
   
-## 程序  
+## <a name="procedures"></a><span data-ttu-id="f945f-109">程序</span><span class="sxs-lookup"><span data-stu-id="f945f-109">Procedures</span></span>  
   
-#### 建立自訂安全性權杖驗證器  
+#### <a name="to-create-a-custom-security-token-authenticator"></a><span data-ttu-id="f945f-110">建立自訂安全性權杖驗證器</span><span class="sxs-lookup"><span data-stu-id="f945f-110">To create a custom security token authenticator</span></span>  
   
-1.  定義衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 類別的新類別。  
+1.  <span data-ttu-id="f945f-111">定義衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 類別的新類別。</span><span class="sxs-lookup"><span data-stu-id="f945f-111">Define a new class derived from the <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> class.</span></span>  
   
-2.  覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> 方法。該方法會根據自訂驗證器是否能夠驗證傳入的權杖類型，傳回 `true` 或 `false`。  
+2.  <span data-ttu-id="f945f-112">覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f945f-112">Override the <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> method.</span></span> <span data-ttu-id="f945f-113">該方法會根據自訂驗證器是否能夠驗證傳入的權杖類型，傳回 `true` 或 `false`。</span><span class="sxs-lookup"><span data-stu-id="f945f-113">The method returns `true` or `false` depending on whether the custom authenticator can validate the incoming token type or not.</span></span>  
   
-3.  覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。這個方法需要適當地驗證權杖內容。如果權杖通過驗證步驟，此方法就會傳回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。下列範例會使用將在下一個程序中建立的自訂授權原則實作。  
+3.  <span data-ttu-id="f945f-114">覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f945f-114">Override the <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> method.</span></span> <span data-ttu-id="f945f-115">這個方法需要適當地驗證權杖內容。</span><span class="sxs-lookup"><span data-stu-id="f945f-115">This method needs to validate the token contents appropriately.</span></span> <span data-ttu-id="f945f-116">如果權杖通過驗證步驟，此方法就會傳回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。</span><span class="sxs-lookup"><span data-stu-id="f945f-116">If the token passes the validation step, it returns a collection of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instances.</span></span> <span data-ttu-id="f945f-117">下列範例會使用將在下一個程序中建立的自訂授權原則實作。</span><span class="sxs-lookup"><span data-stu-id="f945f-117">The following example uses a custom authorization policy implementation that will be created in the next procedure.</span></span>  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- 上述程式碼會透過 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法傳回授權原則的集合。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不會提供這個介面的公用實作。下列程序會示範如何根據您的需求來完成這項工作。  
+ <span data-ttu-id="f945f-118">上述程式碼會透過 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法傳回授權原則的集合。</span><span class="sxs-lookup"><span data-stu-id="f945f-118">The previous code returns a collection of authorization policies in the <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> method.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="f945f-119"> 不會提供這個介面的公用實作。</span><span class="sxs-lookup"><span data-stu-id="f945f-119"> does not provide a public implementation of this interface.</span></span> <span data-ttu-id="f945f-120">下列程序會示範如何根據您的需求來完成這項工作。</span><span class="sxs-lookup"><span data-stu-id="f945f-120">The following procedure shows how to do so for your own requirements.</span></span>  
   
-#### 建立自訂授權原則  
+#### <a name="to-create-a-custom-authorization-policy"></a><span data-ttu-id="f945f-121">建立自訂授權原則</span><span class="sxs-lookup"><span data-stu-id="f945f-121">To create a custom authorization policy</span></span>  
   
-1.  定義實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 介面的新類別。  
+1.  <span data-ttu-id="f945f-122">定義實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 介面的新類別。</span><span class="sxs-lookup"><span data-stu-id="f945f-122">Define a new class implementing the <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface.</span></span>  
   
-2.  實作 <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> 唯讀屬性。使用類別建構函式 \(Constructor\) 來產生全域唯一識別項 \(GUID\)，並在每次要求此屬性的值時將其傳回，就是實作此原則的一種方式  
+2.  <span data-ttu-id="f945f-123">實作 <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> 唯讀屬性。</span><span class="sxs-lookup"><span data-stu-id="f945f-123">Implement the <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> read-only property.</span></span> <span data-ttu-id="f945f-124">使用類別建構函式 (Constructor) 來產生全域唯一識別項 (GUID)，並在每次要求此屬性的值時將其傳回，就是實作此原則的一種方式</span><span class="sxs-lookup"><span data-stu-id="f945f-124">One way to implement this property is to generate a globally unique identifier (GUID) in the class constructor and return it every time the value for this property is requested.</span></span>  
   
-3.  實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> 唯讀屬性。這個屬性需要傳回從權杖取得之宣告集的簽發者。這個簽發者應該會對應至權杖的簽發者，或是負責驗證該權杖內容的授權單位。下列範例會使用從上述程序所建立自訂安全性權杖驗證器傳遞到這個類別的簽發者宣告。自訂安全性權杖驗證器會使用系統提供的宣告集 \(由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 屬性傳回\) 來表示使用者名稱權杖的簽發者。  
+3.  <span data-ttu-id="f945f-125">實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> 唯讀屬性。</span><span class="sxs-lookup"><span data-stu-id="f945f-125">Implement the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> read-only property.</span></span> <span data-ttu-id="f945f-126">這個屬性需要傳回從權杖取得之宣告集的簽發者。</span><span class="sxs-lookup"><span data-stu-id="f945f-126">This property needs to return an issuer of the claim sets that are obtained from the token.</span></span> <span data-ttu-id="f945f-127">這個簽發者應該會對應至權杖的簽發者，或是負責驗證該權杖內容的授權單位。</span><span class="sxs-lookup"><span data-stu-id="f945f-127">This issuer should correspond to the issuer of the token or an authority that is responsible for validating the token contents.</span></span> <span data-ttu-id="f945f-128">下列範例會使用從上述程序所建立自訂安全性權杖驗證器傳遞到這個類別的簽發者宣告。</span><span class="sxs-lookup"><span data-stu-id="f945f-128">The following example uses the issuer claim that passed to this class from the custom security token authenticator created in the previous procedure.</span></span> <span data-ttu-id="f945f-129">自訂安全性權杖驗證器會使用系統提供的宣告集 (由 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 屬性傳回) 來表示使用者名稱權杖的簽發者。</span><span class="sxs-lookup"><span data-stu-id="f945f-129">The custom security token authenticator uses the system-provided claim set (returned by the <xref:System.IdentityModel.Claims.ClaimSet.System%2A> property) to represent the issuer of the username token.</span></span>  
   
-4.  實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。這個方法會用以傳入安全性權杖內容為基礎的宣告，填入 \(Populate\) <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體 \(當做引數傳入\)。此方法會在完成評估時傳回 `true`。當實作依賴對評估內容提供其他資訊之授權原則的存在，而需要的資訊尚未存在於評估內容時，這個方法便會傳回 `false`。在此情況下，如果這些授權原則中至少有一個修改了評估內容，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將會在評估過針對傳入訊息所產生的所有其他授權原則之後，再度呼叫此方法。  
+4.  <span data-ttu-id="f945f-130">實作 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f945f-130">Implement the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> method.</span></span> <span data-ttu-id="f945f-131">這個方法會用以傳入安全性權杖內容為基礎的宣告，填入 (Populate) <xref:System.IdentityModel.Policy.EvaluationContext> 類別的執行個體 (當做引數傳入)。</span><span class="sxs-lookup"><span data-stu-id="f945f-131">This method populates an instance of the <xref:System.IdentityModel.Policy.EvaluationContext> class (passed in as an argument) with claims that are based on the incoming security token content.</span></span> <span data-ttu-id="f945f-132">此方法會在完成評估時傳回 `true`。</span><span class="sxs-lookup"><span data-stu-id="f945f-132">The method returns `true` when it is done with the evaluation.</span></span> <span data-ttu-id="f945f-133">當實作依賴對評估內容提供其他資訊之授權原則的存在，而需要的資訊尚未存在於評估內容時，這個方法便會傳回 `false`。</span><span class="sxs-lookup"><span data-stu-id="f945f-133">In cases when the implementation relies on the presence of other authorization policies that provide additional information to the evaluation context, this method can return `false` if the required information is not present yet in the evaluation context.</span></span> <span data-ttu-id="f945f-134">在此情況下，如果這些授權原則中至少有一個修改了評估內容，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將會在評估過針對傳入訊息所產生的所有其他授權原則之後，再度呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="f945f-134">In that case, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] will call the method again after evaluating all other authorization policies generated for the incoming message if at least one of those authorization policies modified the evaluation context.</span></span>  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
   
- [逐步解說：建立自訂用戶端與服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)會說明如何建立自訂認證和自訂安全性權杖管理員。為了使用在此建立的自訂安全性權杖驗證器，安全性權杖管理員的實作會經過修改，以便從 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法傳回自訂驗證器。若有傳入適當的安全性權杖需求，此方法便會傳回驗證器。  
+ <span data-ttu-id="f945f-135">[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)說明如何建立自訂認證和自訂安全性權杖管理員。</span><span class="sxs-lookup"><span data-stu-id="f945f-135">[Walkthrough: Creating Custom Client and Service Credentials](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) describes how to create custom credentials and a custom security token manager.</span></span> <span data-ttu-id="f945f-136">為了使用在此建立的自訂安全性權杖驗證器，安全性權杖管理員的實作會經過修改，以便從 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法傳回自訂驗證器。</span><span class="sxs-lookup"><span data-stu-id="f945f-136">To use the custom security token authenticator created here, an implementation of the security token manager is modified to return the custom authenticator from the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> method.</span></span> <span data-ttu-id="f945f-137">若有傳入適當的安全性權杖需求，此方法便會傳回驗證器。</span><span class="sxs-lookup"><span data-stu-id="f945f-137">The method returns an authenticator when an appropriate security token requirement is passed in.</span></span>  
   
-#### 將自訂安全性權杖驗證器與自訂安全性權杖管理員整合  
+#### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a><span data-ttu-id="f945f-138">將自訂安全性權杖驗證器與自訂安全性權杖管理員整合</span><span class="sxs-lookup"><span data-stu-id="f945f-138">To integrate a custom security token authenticator with a custom security token manager</span></span>  
   
-1.  覆寫自訂安全性權杖管理員實作中的 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法。  
+1.  <span data-ttu-id="f945f-139">覆寫自訂安全性權杖管理員實作中的 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f945f-139">Override the <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> method in your custom security token manager implementation.</span></span>  
   
-2.  將邏輯新增到方法中，讓方法能夠根據 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 參數傳回自訂安全性權杖驗證器。如果在權杖需求中權杖類型為使用者名稱 \(由 <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> 屬性表示\)，而且安全性權杖驗證器被要求的訊息方向為輸入時 \(由 <xref:System.ServiceModel.Description.MessageDirection> 欄位表示\)，下列範例就會傳回自訂安全性權杖驗證器。  
+2.  <span data-ttu-id="f945f-140">將邏輯新增到方法中，讓方法能夠根據 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 參數傳回自訂安全性權杖驗證器。</span><span class="sxs-lookup"><span data-stu-id="f945f-140">Add logic to the method to enable it to return your custom security token authenticator based on the <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parameter.</span></span> <span data-ttu-id="f945f-141">如果在權杖需求中權杖類型為使用者名稱 (由 <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> 屬性表示)，而且安全性權杖驗證器被要求的訊息方向為輸入時 (由 <xref:System.ServiceModel.Description.MessageDirection.Input> 欄位表示)，下列範例就會傳回自訂安全性權杖驗證器。</span><span class="sxs-lookup"><span data-stu-id="f945f-141">The following example returns a custom security token authenticator if the token requirements token type is a user name (represented by the <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> property) and the message direction for which the security token authenticator is being requested is input (represented by the <xref:System.ServiceModel.Description.MessageDirection.Input> field).</span></span>  
   
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
   
-## 請參閱  
- <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>   
- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>   
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>   
- <xref:System.IdentityModel.Tokens.UserNameSecurityToken>   
- [逐步解說：建立自訂用戶端與服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)   
- [HOW TO：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)   
- [Security Architecture](http://msdn.microsoft.com/zh-tw/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a><span data-ttu-id="f945f-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f945f-142">See Also</span></span>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
+ <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
+ <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
+ [<span data-ttu-id="f945f-143">逐步解說： 建立自訂用戶端和服務認證</span><span class="sxs-lookup"><span data-stu-id="f945f-143">Walkthrough: Creating Custom Client and Service Credentials</span></span>](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [<span data-ttu-id="f945f-144">如何： 建立自訂安全性權杖提供者</span><span class="sxs-lookup"><span data-stu-id="f945f-144">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [<span data-ttu-id="f945f-145">安全性架構</span><span class="sxs-lookup"><span data-stu-id="f945f-145">Security Architecture</span></span>](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

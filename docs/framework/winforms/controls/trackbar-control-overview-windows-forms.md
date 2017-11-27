@@ -1,37 +1,37 @@
 ---
-title: "TrackBar 控制項概觀 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TrackBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "滑桿, 關於滑桿控制項"
-  - "滑桿, 關於滑桿"
-  - "TrackBar 控制項 [Windows Form], 關於 TrackBar 控制項"
+title: "TrackBar 控制項概觀 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TrackBar
+helpviewer_keywords:
+- sliders [Windows Forms], about sliders
+- TrackBar control [Windows Forms], about TrackBar control
+- slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccea982c45ab22a4b2ab81bc80c16dd472144bbe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# TrackBar 控制項概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.TrackBar> 控制項 \(有時也稱為「滑桿」\(Slider\) 控制項\) 是用來瀏覽大量資訊或視覺調整數字設定。  <xref:System.Windows.Forms.TrackBar> 控制項是由兩個部分組成：縮圖 \(也稱為滑桿\) 和刻度標記。  縮圖是可以調整的部分。  它的位置和 <xref:System.Windows.Forms.TrackBar.Value%2A> 屬性對應。  刻度標記則是有著固定間距的視覺指示器 \(Indicator\)。  Trackbar 可依您指定來遞增移動距離，也可水平或垂直調整。  例如，您可能使用滑動軸來控制系統的游標閃爍速率或是滑鼠速度。  
+# <a name="trackbar-control-overview-windows-forms"></a><span data-ttu-id="274c4-102">TrackBar 控制項概觀 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="274c4-102">TrackBar Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="274c4-103">Windows Form<xref:System.Windows.Forms.TrackBar>控制項 （有時也稱為 「 滑桿 」 控制項） 用來瀏覽大量的資訊或以視覺方式調整數字設定。</span><span class="sxs-lookup"><span data-stu-id="274c4-103">The Windows Forms <xref:System.Windows.Forms.TrackBar> control (also sometimes called a "slider" control) is used for navigating through a large amount of information or for visually adjusting a numeric setting.</span></span> <span data-ttu-id="274c4-104"><xref:System.Windows.Forms.TrackBar>控制項有兩個部分： 也稱為滑桿，與刻度標記縮圖。</span><span class="sxs-lookup"><span data-stu-id="274c4-104">The <xref:System.Windows.Forms.TrackBar> control has two parts: the thumb, also known as a slider, and the tick marks.</span></span> <span data-ttu-id="274c4-105">基本原則是可調整的部分。</span><span class="sxs-lookup"><span data-stu-id="274c4-105">The thumb is the part that can be adjusted.</span></span> <span data-ttu-id="274c4-106">它的位置對應至<xref:System.Windows.Forms.TrackBar.Value%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="274c4-106">Its position corresponds to the <xref:System.Windows.Forms.TrackBar.Value%2A> property.</span></span> <span data-ttu-id="274c4-107">刻度是定期為間距的視覺指標。</span><span class="sxs-lookup"><span data-stu-id="274c4-107">The tick marks are visual indicators that are spaced at regular intervals.</span></span> <span data-ttu-id="274c4-108">Trackbar 移動您指定和可以對齊水平或垂直增量。</span><span class="sxs-lookup"><span data-stu-id="274c4-108">The trackbar moves in increments that you specify and can be aligned horizontally or vertically.</span></span> <span data-ttu-id="274c4-109">例如，您可能會使用追蹤列來控制系統游標閃爍頻率或滑鼠速度。</span><span class="sxs-lookup"><span data-stu-id="274c4-109">For example, you might use the track bar to control the cursor blink rate or mouse speed for a system.</span></span>  
   
-## 主要屬性  
- <xref:System.Windows.Forms.TrackBar> 控制項的主要屬性是 <xref:System.Windows.Forms.TrackBar.Value%2A>、<xref:System.Windows.Forms.TrackBar.TickFrequency%2A>、<xref:System.Windows.Forms.TrackBar.Minimum%2A> 和 <xref:System.Windows.Forms.TrackBar.Maximum%2A>。  <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> 是刻度的間距。  <xref:System.Windows.Forms.TrackBar.Minimum%2A> 和 <xref:System.Windows.Forms.TrackBar.Maximum%2A> 則是滑動軸上可表示的最小及最大值。  
+## <a name="key-properties"></a><span data-ttu-id="274c4-110">索引鍵屬性</span><span class="sxs-lookup"><span data-stu-id="274c4-110">Key Properties</span></span>  
+ <span data-ttu-id="274c4-111">索引鍵屬性<xref:System.Windows.Forms.TrackBar>控制是<xref:System.Windows.Forms.TrackBar.Value%2A>， <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>， <xref:System.Windows.Forms.TrackBar.Minimum%2A>，和<xref:System.Windows.Forms.TrackBar.Maximum%2A>。</span><span class="sxs-lookup"><span data-stu-id="274c4-111">The key properties of the <xref:System.Windows.Forms.TrackBar> control are <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, and <xref:System.Windows.Forms.TrackBar.Maximum%2A>.</span></span> <span data-ttu-id="274c4-112"><xref:System.Windows.Forms.TrackBar.TickFrequency%2A>是刻度的間距。</span><span class="sxs-lookup"><span data-stu-id="274c4-112"><xref:System.Windows.Forms.TrackBar.TickFrequency%2A> is the spacing of the ticks.</span></span> <span data-ttu-id="274c4-113"><xref:System.Windows.Forms.TrackBar.Minimum%2A>和<xref:System.Windows.Forms.TrackBar.Maximum%2A>是可以在追蹤列表示的最小和最大值。</span><span class="sxs-lookup"><span data-stu-id="274c4-113"><xref:System.Windows.Forms.TrackBar.Minimum%2A> and <xref:System.Windows.Forms.TrackBar.Maximum%2A> are the smallest and largest values that can be represented on the track bar.</span></span>  
   
- 其他兩個重要屬性為 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 和 <xref:System.Windows.Forms.TrackBar.LargeChange%2A>。  <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 屬性的值是縮圖依據按向左鍵或向右鍵次數來移動的位置數。  <xref:System.Windows.Forms.TrackBar.LargeChange%2A> 屬性的值是縮圖依據按 PAGE UP 或 PAGE DOWN 鍵次數，或在縮圖兩邊的滑動軸上按滑鼠的次數來移動的位置數。  
+ <span data-ttu-id="274c4-114">其他兩個重要的屬性是<xref:System.Windows.Forms.TrackBar.SmallChange%2A>和<xref:System.Windows.Forms.TrackBar.LargeChange%2A>。</span><span class="sxs-lookup"><span data-stu-id="274c4-114">Two other important properties are <xref:System.Windows.Forms.TrackBar.SmallChange%2A> and <xref:System.Windows.Forms.TrackBar.LargeChange%2A>.</span></span> <span data-ttu-id="274c4-115">值<xref:System.Windows.Forms.TrackBar.SmallChange%2A>屬性是回應需要按下的左或向右箭號鍵移動捲動方塊的位置數目。</span><span class="sxs-lookup"><span data-stu-id="274c4-115">The value of the <xref:System.Windows.Forms.TrackBar.SmallChange%2A> property is the number of positions the thumb moves in response to having the LEFT or RIGHT ARROW key pressed.</span></span> <span data-ttu-id="274c4-116">值<xref:System.Windows.Forms.TrackBar.LargeChange%2A>屬性是捲動方塊回應具有 PAGE UP 或 PAGE DOWN 按鍵，移動或以回應滑鼠按一下捲動方塊的任一端追蹤列上的位置數目。</span><span class="sxs-lookup"><span data-stu-id="274c4-116">The value of the <xref:System.Windows.Forms.TrackBar.LargeChange%2A> property is the number of positions the thumb moves in response to having the PAGE UP or PAGE DOWN key pressed, or in response to mouse clicks on the track bar on either side of the thumb.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.TrackBar>   
- [TrackBar 控制項](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="274c4-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="274c4-117">See Also</span></span>  
+ <xref:System.Windows.Forms.TrackBar>  
+ [<span data-ttu-id="274c4-118">TrackBar 控制項</span><span class="sxs-lookup"><span data-stu-id="274c4-118">TrackBar Control</span></span>](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)

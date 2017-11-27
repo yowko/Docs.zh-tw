@@ -1,50 +1,53 @@
 ---
-title: "HOW TO：建立支援的認證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "HOW TO：建立支援的認證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2c140b96fab0227a1563c8c1a511053d8d1ab944
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# HOW TO：建立支援的認證
-您可能具有需要多個認證的自訂安全性配置。  例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。  第二個認證是「*支援認證*」\(Supporting Credential\)。  這個主題會說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端中實作這類認證。  
+# <a name="how-to-create-a-supporting-credential"></a><span data-ttu-id="b2c1e-102">HOW TO：建立支援的認證</span><span class="sxs-lookup"><span data-stu-id="b2c1e-102">How to: Create a Supporting Credential</span></span>
+<span data-ttu-id="b2c1e-103">您可能具有需要多個認證的自訂安全性配置。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-103">It is possible to have a custom security scheme that requires more than one credential.</span></span> <span data-ttu-id="b2c1e-104">例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-104">For example, a service may demand from the client not just a user name and password, but also a credential that proves the client is over the age of 18.</span></span> <span data-ttu-id="b2c1e-105">第二個認證是*支援認證*。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-105">The second credential is a *supporting credential*.</span></span> <span data-ttu-id="b2c1e-106">這個主題會說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端中實作這類認證。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-106">This topic explains how to implement such credentials in an [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client.</span></span>  
   
 > [!NOTE]
->  支援認證的規格為 WS\-SecurityPolicy 規格的一部分。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Web 服務安全性規格](http://go.microsoft.com/fwlink/?LinkId=88537)。  
+>  <span data-ttu-id="b2c1e-107">支援認證的規格為 WS-SecurityPolicy 規格的一部分。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-107">The specification for supporting credentials is part of the WS-SecurityPolicy specification.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b2c1e-108">[Web 服務安全性規格](http://go.microsoft.com/fwlink/?LinkId=88537)。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-108"> [Web Services Security Specifications](http://go.microsoft.com/fwlink/?LinkId=88537).</span></span>  
   
-## 支援權杖  
- 簡單來說，當您使用訊息安全性時，一定會使用「*主要認證*」\(Primary Credential\) 來保護訊息 \(例如，X.509 憑證或 Kerberos 票證\)。  
+## <a name="supporting-tokens"></a><span data-ttu-id="b2c1e-109">支援權杖</span><span class="sxs-lookup"><span data-stu-id="b2c1e-109">Supporting Tokens</span></span>  
+ <span data-ttu-id="b2c1e-110">簡單地說，當您使用訊息安全性，*主要認證*永遠用來保護訊息 （例如，X.509 憑證或 Kerberos 票證）。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-110">In brief, when you use message security, a *primary credential* is always used to secure the message (for example, an X.509 certificate or a Kerberos ticket).</span></span>  
   
- 如規格所定義，安全性繫結會使用「*權杖*」\(Token\) 來保護訊息交換。  「*權杖*」\(Token\) 也就是一種安全性認證。  
+ <span data-ttu-id="b2c1e-111">如規格所定義，安全性繫結會使用*語彙基元*來保護訊息交換。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-111">As defined by the specification, a security binding uses *tokens* to secure the message exchange.</span></span> <span data-ttu-id="b2c1e-112">A*語彙基元*是安全性認證的表示法。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-112">A *token* is a representation of a security credential.</span></span>  
   
- 安全性繫結會使用安全性繫結原則中識別的主要權杖來建立簽章。  這個簽章也稱為「*訊息簽章*」\(Message Signature\)。  
+ <span data-ttu-id="b2c1e-113">安全性繫結會使用安全性繫結原則中識別的主要權杖來建立簽章。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-113">The security binding uses a primary token identified in the security binding policy to create a signature.</span></span> <span data-ttu-id="b2c1e-114">此簽章指*訊息簽章*。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-114">This signature is referred to as the *message signature*.</span></span>  
   
- 您也可以指定其他權杖，以擴大與訊息簽章相關聯的權杖所提供的宣告。  
+ <span data-ttu-id="b2c1e-115">您也可以指定其他權杖，以擴大與訊息簽章相關聯的權杖所提供的宣告。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-115">Additional tokens can be specified to augment the claims provided by the token associated with the message signature.</span></span>  
   
-## 簽署 \(Endorsing\)、簽署 \(Signing\) 和加密  
- 支援認證會產生在訊息內進行傳輸的「*支援權杖*」\(Supporting Token\)。  WS\-SecurityPolicy 規格定義了四種可將支援權杖附加至訊息的方法，如下表所述。  
+## <a name="endorsing-signing-and-encrypting"></a><span data-ttu-id="b2c1e-116">簽署 (Endorsing)、簽署 (Signing) 和加密</span><span class="sxs-lookup"><span data-stu-id="b2c1e-116">Endorsing, Signing, and Encrypting</span></span>  
+ <span data-ttu-id="b2c1e-117">支援的認證會導致*支援權杖*訊息內進行傳輸。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-117">A supporting credential results in a *supporting token* transmitted inside the message.</span></span> <span data-ttu-id="b2c1e-118">WS-SecurityPolicy 規格定義了四種可將支援權杖附加至訊息的方法，如下表所述。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-118">The WS-SecurityPolicy specification defines four ways to attach a supporting token to the message, as described in the following table.</span></span>  
   
-|用途|描述|  
-|--------|--------|  
-|簽署人|支援權杖包含在安全性標頭中，而且是由訊息簽章進行簽署。|  
-|簽署|「*簽署權杖*」\(Endorsing Token\) 會簽署訊息簽章。|  
-|已簽署 \(Signed\) 和簽署 \(Endorsing\)|已簽署的簽署權杖會簽署從訊息簽章產生的整個 `ds:Signature` 項目，而這些權杖本身就是由該訊息簽章所簽署；也就是說，這兩個權杖 \(用於訊息簽章的權杖和已簽署的簽署權杖\) 會彼此進行簽署。|  
-|已簽署和加密|已簽署的加密支援權杖是出現在 `wsse:SecurityHeader` 時，也會進行加密的已簽署支援權杖。|  
+|<span data-ttu-id="b2c1e-119">用途</span><span class="sxs-lookup"><span data-stu-id="b2c1e-119">Purpose</span></span>|<span data-ttu-id="b2c1e-120">描述</span><span class="sxs-lookup"><span data-stu-id="b2c1e-120">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="b2c1e-121">簽署人</span><span class="sxs-lookup"><span data-stu-id="b2c1e-121">Signed</span></span>|<span data-ttu-id="b2c1e-122">支援權杖包含在安全性標頭中，而且是由訊息簽章進行簽署。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-122">The supporting token is included in the security header and is signed by the message signature.</span></span>|  
+|<span data-ttu-id="b2c1e-123">簽署</span><span class="sxs-lookup"><span data-stu-id="b2c1e-123">Endorsing</span></span>|<span data-ttu-id="b2c1e-124">*簽署 （endorsing） 權杖*簽署訊息簽章。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-124">An *endorsing token* signs the message signature.</span></span>|  
+|<span data-ttu-id="b2c1e-125">已簽署 (Signed) 和簽署 (Endorsing)</span><span class="sxs-lookup"><span data-stu-id="b2c1e-125">Signed and Endorsing</span></span>|<span data-ttu-id="b2c1e-126">已簽署的簽署權杖會簽署從訊息簽章產生的整個 `ds:Signature` 項目，而這些權杖本身就是由該訊息簽章所簽署；也就是說，這兩個權杖 (用於訊息簽章的權杖和已簽署的簽署權杖) 會彼此進行簽署。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-126">Signed, endorsing tokens sign the entire `ds:Signature` element produced from the message signature and are themselves signed by that message signature; that is, both tokens (the token used for the message signature and the signed endorsing token) sign each other.</span></span>|  
+|<span data-ttu-id="b2c1e-127">已簽署和加密</span><span class="sxs-lookup"><span data-stu-id="b2c1e-127">Signed and Encrypting</span></span>|<span data-ttu-id="b2c1e-128">已簽署的加密支援權杖是出現在 `wsse:SecurityHeader` 時，也會進行加密的已簽署支援權杖。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-128">Signed, encrypted supporting tokens are signed supporting tokens that are also encrypted when they appear in the `wsse:SecurityHeader`.</span></span>|  
   
-## 程式設計的支援認證  
- 若要建立會使用支援權杖的服務，您必須建立 [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) \([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).\)  
+## <a name="programming-supporting-credentials"></a><span data-ttu-id="b2c1e-129">程式設計的支援認證</span><span class="sxs-lookup"><span data-stu-id="b2c1e-129">Programming Supporting Credentials</span></span>  
+ <span data-ttu-id="b2c1e-130">若要建立的服務，您必須建立的支援權杖會使用[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-130">To create a service that uses supporting tokens you must create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span> <span data-ttu-id="b2c1e-131">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)</span><span class="sxs-lookup"><span data-stu-id="b2c1e-131">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [How to: Create a Custom Binding Using the SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)</span></span>  
   
- 建立自訂繫結的第一個步驟為建立安全性繫結項目，可以是下列三種類型的其中之一：  
+ <span data-ttu-id="b2c1e-132">建立自訂繫結的第一個步驟為建立安全性繫結項目，可以是下列三種類型的其中之一：</span><span class="sxs-lookup"><span data-stu-id="b2c1e-132">The first step when creating a custom binding is to create a security binding element, which can be one of three types:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
@@ -52,7 +55,7 @@ caps.handback.revision: 9
   
 -   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- 繼承自 <xref:System.ServiceModel.Channels.SecurityBindingElement> 的所有類別，可包含四個相關的屬性：  
+ <span data-ttu-id="b2c1e-133">繼承自 <xref:System.ServiceModel.Channels.SecurityBindingElement> 的所有類別，可包含四個相關的屬性：</span><span class="sxs-lookup"><span data-stu-id="b2c1e-133">All classes inherit from the <xref:System.ServiceModel.Channels.SecurityBindingElement>, which includes four relevant properties:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
@@ -62,30 +65,30 @@ caps.handback.revision: 9
   
 -   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
-#### 範圍  
- 支援認證中有兩個範圍：  
+#### <a name="scopes"></a><span data-ttu-id="b2c1e-134">範圍</span><span class="sxs-lookup"><span data-stu-id="b2c1e-134">Scopes</span></span>  
+ <span data-ttu-id="b2c1e-135">支援認證中有兩個範圍：</span><span class="sxs-lookup"><span data-stu-id="b2c1e-135">Two scopes exist for supporting credentials:</span></span>  
   
--   「*端點支援權杖*」\(Endpoint Supporting Token\) 支援端點的所有作業。  這也就是支援權杖所表示的認證，可以在每次叫用端點作業時使用此認證。  
+-   <span data-ttu-id="b2c1e-136">*支援權杖的端點*支援所有作業的端點。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-136">*Endpoint supporting tokens* support all operations of an endpoint.</span></span> <span data-ttu-id="b2c1e-137">這也就是支援權杖所表示的認證，可以在每次叫用端點作業時使用此認證。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-137">That is, the credential that the supporting token represents can be used whenever any endpoint operations are invoked.</span></span>  
   
--   「*作業支援權杖*」\(Operation Supporting Token\) 僅支援特定的端點作業。  
+-   <span data-ttu-id="b2c1e-138">*支援權杖的作業*支援特定的端點作業。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-138">*Operation supporting tokens* support only a specific endpoint operation.</span></span>  
   
- 如屬性名稱所指出，支援認證可以為必要項目或選用項目。  也就是說，如果在出現支援認證時使用該認證 \(雖然不需要該認證\)，在沒有出現該認證時驗證也不會失敗。  
+ <span data-ttu-id="b2c1e-139">如屬性名稱所指出，支援認證可以為必要項目或選用項目。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-139">As indicated by the property names, supporting credentials can be either required or optional.</span></span> <span data-ttu-id="b2c1e-140">也就是說，如果在出現支援認證時使用該認證 (雖然不需要該認證)，在沒有出現該認證時驗證也不會失敗。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-140">That is, if the supporting credential is used if it is present, although it is not necessary, but the authentication will not fail if it is not present.</span></span>  
   
-## 程序  
+## <a name="procedures"></a><span data-ttu-id="b2c1e-141">程序</span><span class="sxs-lookup"><span data-stu-id="b2c1e-141">Procedures</span></span>  
   
-#### 建立包含支援認證的自訂繫結  
+#### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a><span data-ttu-id="b2c1e-142">建立包含支援認證的自訂繫結</span><span class="sxs-lookup"><span data-stu-id="b2c1e-142">To create a custom binding that includes supporting credentials</span></span>  
   
-1.  建立安全性繫結項目。  底下的範例會使用 `UserNameForCertificate` 驗證模式建立 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  請使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> 方法。  
+1.  <span data-ttu-id="b2c1e-143">建立安全性繫結項目。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-143">Create a security binding element.</span></span> <span data-ttu-id="b2c1e-144">底下的範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 驗證模式建立 `UserNameForCertificate`。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-144">The example below creates a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> with the `UserNameForCertificate` authentication mode.</span></span> <span data-ttu-id="b2c1e-145">請使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-145">Use the <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> method.</span></span>  
   
-2.  將支援參數新增至適當屬性 \(`Endorsing`、`Signed`、`SignedEncrypted` 或 `SignedEndorsed`\) 所傳回的類型集合。  <xref:System.ServiceModel.Security.Tokens> 命名空間中的類型包含常用類型，例如 <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>。  
+2.  <span data-ttu-id="b2c1e-146">將支援參數新增至適當屬性 (`Endorsing`、`Signed`、`SignedEncrypted` 或 `SignedEndorsed`) 所傳回的類型集合。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-146">Add the supporting parameter to the collection of types returned by the appropriate property (`Endorsing`, `Signed`, `SignedEncrypted`, or `SignedEndorsed`).</span></span> <span data-ttu-id="b2c1e-147"><xref:System.ServiceModel.Security.Tokens> 命名空間中的類型包含常用類型，例如 <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-147">The types in the <xref:System.ServiceModel.Security.Tokens> namespace include commonly used types, such as the <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.</span></span>  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="b2c1e-148">範例</span><span class="sxs-lookup"><span data-stu-id="b2c1e-148">Example</span></span>  
   
-### 描述  
- 下列範例會建立 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 的執行個體，並將 <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> 類別的執行個體新增至所傳回的簽署屬性集合。  
+### <a name="description"></a><span data-ttu-id="b2c1e-149">描述</span><span class="sxs-lookup"><span data-stu-id="b2c1e-149">Description</span></span>  
+ <span data-ttu-id="b2c1e-150">下列範例會建立 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 的執行個體，並將 <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> 類別的執行個體新增至所傳回的簽署屬性集合。</span><span class="sxs-lookup"><span data-stu-id="b2c1e-150">The following example creates an instance of the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> and adds an instance of the <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> class to the collection the Endorsing property returned.</span></span>  
   
-### 程式碼  
+### <a name="code"></a><span data-ttu-id="b2c1e-151">程式碼</span><span class="sxs-lookup"><span data-stu-id="b2c1e-151">Code</span></span>  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## 請參閱  
- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a><span data-ttu-id="b2c1e-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b2c1e-152">See Also</span></span>  
+ [<span data-ttu-id="b2c1e-153">如何： 建立自訂繫結使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="b2c1e-153">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

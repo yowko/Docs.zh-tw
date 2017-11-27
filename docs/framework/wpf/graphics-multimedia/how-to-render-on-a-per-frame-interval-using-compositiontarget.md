@@ -1,49 +1,55 @@
 ---
-title: "如何：使用 CompositionTarget 在單格間隔轉譯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CompositionTarget 物件, 單格轉譯"
-  - "使用 CompositionTarget 物件單格轉譯"
+title: "操作說明：使用 CompositionTarget 在單格間隔轉譯"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- CompositionTarget objects [WPF], rendering per frame
+- rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7616a418b9f2f6b175b925e4385322c42546e9bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用 CompositionTarget 在單格間隔轉譯
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎提供許多功能，可以用來建立畫面格架構的動畫。  不過，在某些應用程式案例中，您需要針對每一個畫面格進行更精細的呈現控制。  <xref:System.Windows.Media.CompositionTarget> 物件提供了依據單格回呼 \(Callback\) 建立自訂動畫的功能。  
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a><span data-ttu-id="b002d-102">操作說明：使用 CompositionTarget 在單格間隔轉譯</span><span class="sxs-lookup"><span data-stu-id="b002d-102">How to: Render on a Per Frame Interval Using CompositionTarget</span></span>
+<span data-ttu-id="b002d-103">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎提供許多建立畫面型動畫的功能。</span><span class="sxs-lookup"><span data-stu-id="b002d-103">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine provides many features for creating frame-based animation.</span></span> <span data-ttu-id="b002d-104">不過，有些應用程式案例需要依據每個畫面進行更細微的控制。</span><span class="sxs-lookup"><span data-stu-id="b002d-104">However, there are application scenarios in which you need finer-grained control over rendering on a per frame basis.</span></span> <span data-ttu-id="b002d-105"><xref:System.Windows.Media.CompositionTarget>物件可讓您建立自訂個別畫面格回呼為基礎的動畫。</span><span class="sxs-lookup"><span data-stu-id="b002d-105">The <xref:System.Windows.Media.CompositionTarget> object provides the ability to create custom animations based on a per-frame callback.</span></span>  
   
- <xref:System.Windows.Media.CompositionTarget> 是一種靜態類別，代表用來繪製應用程式的顯示介面。  每次繪製應用程式的場景時，都會引發 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件。  呈現畫面播放速率就是每秒繪製場景的次數。  
+ <span data-ttu-id="b002d-106"><xref:System.Windows.Media.CompositionTarget>是代表繪製您的應用程式的顯示介面的靜態類別。</span><span class="sxs-lookup"><span data-stu-id="b002d-106"><xref:System.Windows.Media.CompositionTarget> is a static class which represents the display surface on which your application is being drawn.</span></span> <span data-ttu-id="b002d-107"><xref:System.Windows.Media.CompositionTarget.Rendering>應用程式的場景會繪製每次引發事件。</span><span class="sxs-lookup"><span data-stu-id="b002d-107">The <xref:System.Windows.Media.CompositionTarget.Rendering> event is raised each time the application's scene is drawn.</span></span> <span data-ttu-id="b002d-108">轉譯畫面播放速率是每秒繪製場景的次數。</span><span class="sxs-lookup"><span data-stu-id="b002d-108">The rendering frame rate is the number of times the scene is drawn per second.</span></span>  
   
 > [!NOTE]
->  如需使用 <xref:System.Windows.Media.CompositionTarget> 的完整程式碼範例，請參閱[使用 CompositionTarget 範例](http://go.microsoft.com/fwlink/?LinkID=160045) \(英文\)。  
+>  <span data-ttu-id="b002d-109">完整的程式碼範例使用<xref:System.Windows.Media.CompositionTarget>，請參閱[使用 CompositionTarget 範例](http://go.microsoft.com/fwlink/?LinkID=160045)。</span><span class="sxs-lookup"><span data-stu-id="b002d-109">For a complete code sample using <xref:System.Windows.Media.CompositionTarget>, see [Using the CompositionTarget Sample](http://go.microsoft.com/fwlink/?LinkID=160045).</span></span>  
   
-## 範例  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈現處理過程中會引發 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件。  下列範例顯示如何將 <xref:System.EventHandler> 委派註冊到 <xref:System.Windows.Media.CompositionTarget> 上的靜態 <xref:System.Windows.Media.CompositionTarget.Rendering> 方法。  
+## <a name="example"></a><span data-ttu-id="b002d-110">範例</span><span class="sxs-lookup"><span data-stu-id="b002d-110">Example</span></span>  
+ <span data-ttu-id="b002d-111"><xref:System.Windows.Media.CompositionTarget.Rendering>事件引發時[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯程序。</span><span class="sxs-lookup"><span data-stu-id="b002d-111">The <xref:System.Windows.Media.CompositionTarget.Rendering> event fires during the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering process.</span></span> <span data-ttu-id="b002d-112">下列範例顯示如何註冊<xref:System.EventHandler>委派給靜態<xref:System.Windows.Media.CompositionTarget.Rendering>方法<xref:System.Windows.Media.CompositionTarget>。</span><span class="sxs-lookup"><span data-stu-id="b002d-112">The following example shows how you register an <xref:System.EventHandler> delegate to the static <xref:System.Windows.Media.CompositionTarget.Rendering> method on <xref:System.Windows.Media.CompositionTarget>.</span></span>  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]
  [!code-vb[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget1)]  
   
- 您可以使用自己的呈現事件處理常式 \(Event Handler\) 方法來建立自訂繪製內容。  每個畫面格都會呼叫此事件處理常式方法一次。  每次 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 將[視覺化樹狀結構](GTMT)中保留的呈現資料封送處理至複合場景圖形時，就會呼叫事件處理常式方法。  此外，如果[視覺化樹狀結構](GTMT)的變更強制更新複合場景圖形，也會呼叫事件處理常式方法。  請注意，事件處理常式方法是在配置計算完成之後呼叫。  不過，您可以在事件處理常式方法中修改配置，而這代表配置會在呈現之前再計算一次。  
+ <span data-ttu-id="b002d-113">您可以使用轉譯事件處理常式方法來建立自訂的繪製內容。</span><span class="sxs-lookup"><span data-stu-id="b002d-113">You can use your rendering event handler method to create custom drawing content.</span></span> <span data-ttu-id="b002d-114">系統會針對每個畫面呼叫一次此事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="b002d-114">This event handler method gets called once per frame.</span></span> <span data-ttu-id="b002d-115">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 每次封送處理視覺化樹狀結構中已保存的轉譯資料，跨越到組合場景圖形時，就會呼叫您的事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="b002d-115">Each time that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals the persisted rendering data in the visual tree across to the composition scene graph, your event handler method is called.</span></span> <span data-ttu-id="b002d-116">此外，如果視覺化樹狀結構的變更強迫更新組合場景圖形，也會呼叫您的事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="b002d-116">In addition, if changes to the visual tree force updates to the composition scene graph, your event handler method is also called.</span></span> <span data-ttu-id="b002d-117">請注意，計算版面配置之後會呼叫您的事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="b002d-117">Note that your event handler method is called after layout has been computed.</span></span> <span data-ttu-id="b002d-118">不過，您可以在您的事件處理常式方法中修改版面配置，這表示轉譯之前會再次計算版面配置。</span><span class="sxs-lookup"><span data-stu-id="b002d-118">However, you can modify layout in your event handler method, which means that layout will be computed once more before rendering.</span></span>  
   
- 下列範例說明如何在 <xref:System.Windows.Media.CompositionTarget> 事件處理常式方法中提供自訂繪圖。  這個案例使用以滑鼠座標位置為準的色彩值來繪製 <xref:System.Windows.Controls.Canvas> 的背景色彩。  如果您將滑鼠移到 <xref:System.Windows.Controls.Canvas> 內，它的背景色彩就會改變。  此外，這個範例也會根據目前已耗用的時間和呈現的畫面格總數，計算平均畫面播放速率。  
+ <span data-ttu-id="b002d-119">下列範例示範如何提供自訂繪圖<xref:System.Windows.Media.CompositionTarget>事件處理常式方法。</span><span class="sxs-lookup"><span data-stu-id="b002d-119">The following example shows how you can provide custom drawing in a <xref:System.Windows.Media.CompositionTarget> event handler method.</span></span> <span data-ttu-id="b002d-120">在此情況下的背景色彩<xref:System.Windows.Controls.Canvas>繪製滑鼠座標位置為基礎的色彩值。</span><span class="sxs-lookup"><span data-stu-id="b002d-120">In this case, the background color of the <xref:System.Windows.Controls.Canvas> is drawn with a color value based on the coordinate position of the mouse.</span></span> <span data-ttu-id="b002d-121">如果您移動滑鼠內<xref:System.Windows.Controls.Canvas>、 其背景色彩變更。</span><span class="sxs-lookup"><span data-stu-id="b002d-121">If you move the mouse inside the <xref:System.Windows.Controls.Canvas>, its background color changes.</span></span> <span data-ttu-id="b002d-122">此外，也會根據目前的已耗用時間和已轉譯畫面的總數目，計算平均畫面播放速率。</span><span class="sxs-lookup"><span data-stu-id="b002d-122">In addition, the average frame rate is calculated, based on the current elapsed time and the total number of rendered frames.</span></span>  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget2)]
  [!code-vb[CompositionTargetSample#CompositionTarget2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget2)]  
   
- 您可能會發現自己的自訂繪圖在不同電腦上的執行速度也不同。  這是因為您的自訂繪圖受到畫面播放速率的限制。  依據您所執行的系統和系統的工作負載而定，每秒呼叫 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件的次數可能各不相同。  如需判斷執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 之裝置的圖形硬體功能和效能的詳細資訊，請參閱[圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ <span data-ttu-id="b002d-123">您可能會發現您的自訂繪製在不同電腦上的執行速度不同。</span><span class="sxs-lookup"><span data-stu-id="b002d-123">You may discover that your custom drawing runs at different speeds on different computers.</span></span> <span data-ttu-id="b002d-124">因為自訂繪製並非獨立於畫面撥放速率。</span><span class="sxs-lookup"><span data-stu-id="b002d-124">This is because your custom drawing is not frame-rate independent.</span></span> <span data-ttu-id="b002d-125">根據您所執行的系統和工作負載的系統，<xref:System.Windows.Media.CompositionTarget.Rendering>不同數目的每秒的時間可能會呼叫事件。</span><span class="sxs-lookup"><span data-stu-id="b002d-125">Depending on the system you are running and the workload of that system, the <xref:System.Windows.Media.CompositionTarget.Rendering> event may be called a different number of times per second.</span></span> <span data-ttu-id="b002d-126">如需判斷執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體功能及效能的詳細資訊，請參閱[圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。</span><span class="sxs-lookup"><span data-stu-id="b002d-126">For information on determining the graphics hardware capability and performance for a device that runs a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, see [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span></span>  
   
- 在引發事件時加入或移除呈現 <xref:System.EventHandler> 委派的作業將會延後到事件引發完成之後。  這與在 Common Language Runtime \(CLR\) 中處理 <xref:System.MulticastDelegate> 架構事件的方式一致。  另外請注意，呈現事件不一定會以任何特定的順序呼叫。  如果您有多項必須遵照特定順序的 <xref:System.EventHandler> 委派，應該註冊單一 <xref:System.Windows.Media.CompositionTarget.Rendering> 事件，然後再自行按照正確的順序多工處理這些委派。  
+ <span data-ttu-id="b002d-127">新增或移除轉譯<xref:System.EventHandler>時引發事件的委派會延遲到事件完成後引發。</span><span class="sxs-lookup"><span data-stu-id="b002d-127">Adding or removing a rendering <xref:System.EventHandler> delegate while the event is firing will be delayed until after the event is finished firing.</span></span> <span data-ttu-id="b002d-128">這是的方式一致<xref:System.MulticastDelegate>-已處理 Common Language Runtime (CLR) 型的事件。</span><span class="sxs-lookup"><span data-stu-id="b002d-128">This is consistent with how <xref:System.MulticastDelegate>-based events are handled in the Common Language Runtime (CLR).</span></span> <span data-ttu-id="b002d-129">另請注意，不保證會以特定的順序呼叫轉譯事件。</span><span class="sxs-lookup"><span data-stu-id="b002d-129">Also note that rendering events are not guaranteed to be called in any particular order.</span></span> <span data-ttu-id="b002d-130">如果您有多個<xref:System.EventHandler>委派依賴以特定順序，您應該註冊單一<xref:System.Windows.Media.CompositionTarget.Rendering>事件和多工處理的委派中的正確順序自己。</span><span class="sxs-lookup"><span data-stu-id="b002d-130">If you have multiple <xref:System.EventHandler> delegates that rely on a particular order, you should register a single <xref:System.Windows.Media.CompositionTarget.Rendering> event and multiplex the delegates in the correct order yourself.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.CompositionTarget>   
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b002d-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b002d-131">See Also</span></span>  
+ <xref:System.Windows.Media.CompositionTarget>  
+ [<span data-ttu-id="b002d-132">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="b002d-132">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

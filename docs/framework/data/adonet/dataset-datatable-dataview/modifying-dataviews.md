@@ -1,33 +1,39 @@
 ---
-title: "修改 DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "修改 DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0a8478e9b21c6c2abdc02677305e468109e7b9fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 修改 DataView
-您可以使用 <xref:System.Data.DataView> 加入、刪除或修改基底資料表中的資料列。  **DataView** 有三個布林值 \(Boolean\) 屬性，只要設定其中任一個，就能使用 **DataView** 修改基底資料表的資料。  這些屬性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。  它們都預設為 **true**。  
+# <a name="modifying-dataviews"></a><span data-ttu-id="d32d9-102">修改 DataView</span><span class="sxs-lookup"><span data-stu-id="d32d9-102">Modifying DataViews</span></span>
+<span data-ttu-id="d32d9-103">您可以使用 <xref:System.Data.DataView> 加入、刪除或修改基底資料表中的資料列。</span><span class="sxs-lookup"><span data-stu-id="d32d9-103">You can use the <xref:System.Data.DataView> to add, delete, or modify rows of data in the underlying table.</span></span> <span data-ttu-id="d32d9-104">能夠使用**DataView**來修改基礎資料表中的資料由設定其中的三個布林值屬性**DataView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-104">The ability to use the **DataView** to modify data in the underlying table is controlled by setting one of three Boolean properties of the **DataView**.</span></span> <span data-ttu-id="d32d9-105">這些屬性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。</span><span class="sxs-lookup"><span data-stu-id="d32d9-105">These properties are <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, and <xref:System.Data.DataView.AllowDelete%2A>.</span></span> <span data-ttu-id="d32d9-106">它們會設定為**true**預設。</span><span class="sxs-lookup"><span data-stu-id="d32d9-106">They are set to **true** by default.</span></span>  
   
- 如果 **AllowNew** 為 **true**，則可使用 **DataView** 的 <xref:System.Data.DataView.AddNew%2A> 方法來建立新的 <xref:System.Data.DataRowView>。  請注意，除非呼叫 **DataRowView** 的 <xref:System.Data.DataRowView.EndEdit%2A> 方法，否則不會將新資料列確實加入基礎 <xref:System.Data.DataTable> 中。  如果呼叫 **DataRowView** 的 <xref:System.Data.DataRowView.CancelEdit%2A> 方法，則會捨棄新的資料列。  另一點要注意的是您一次只能編輯一項 **DataRowView**。  如果您在暫止資料列存在時，呼叫 **DataRowView** 的 **AddNew** 或 **BeginEdit** 方法，就會在暫止資料列上隱含呼叫 **EndEdit**。  **EndEdit** 被呼叫後，變更會套用至基礎 **DataTable**，而您稍後可使用 **DataTable**、**DataSet** 或 **DataRow** 物件的 **AcceptChanges** 或 **RejectChanges** 方法來認可或拒絕變更。  如果 **AllowNew** 為 **false**，則您呼叫 **DataRowView** 的 **AddNew** 方法時會擲回例外狀況。  
+ <span data-ttu-id="d32d9-107">如果**AllowNew**是**true**，您可以使用<xref:System.Data.DataView.AddNew%2A>方法**DataView**來建立新的<xref:System.Data.DataRowView>。</span><span class="sxs-lookup"><span data-stu-id="d32d9-107">If **AllowNew** is **true**, you can use the <xref:System.Data.DataView.AddNew%2A> method of the **DataView** to create a new <xref:System.Data.DataRowView>.</span></span> <span data-ttu-id="d32d9-108">請注意，新的資料列不是實際加入基礎<xref:System.Data.DataTable>直到<xref:System.Data.DataRowView.EndEdit%2A>方法**DataRowView**呼叫。</span><span class="sxs-lookup"><span data-stu-id="d32d9-108">Note that a new row is not actually added to the underlying <xref:System.Data.DataTable> until the <xref:System.Data.DataRowView.EndEdit%2A> method of the **DataRowView** is called.</span></span> <span data-ttu-id="d32d9-109">如果<xref:System.Data.DataRowView.CancelEdit%2A>方法**DataRowView**是呼叫，就會捨棄新的資料列。</span><span class="sxs-lookup"><span data-stu-id="d32d9-109">If the <xref:System.Data.DataRowView.CancelEdit%2A> method of the **DataRowView** is called, the new row is discarded.</span></span> <span data-ttu-id="d32d9-110">也請注意，您可以進行編輯只有一個**DataRowView**一次。</span><span class="sxs-lookup"><span data-stu-id="d32d9-110">Note also that you can edit only one **DataRowView** at a time.</span></span> <span data-ttu-id="d32d9-111">如果您呼叫**AddNew**或**BeginEdit**方法**DataRowView**暫止資料列存在時， **EndEdit**上隱含呼叫暫止的資料列。</span><span class="sxs-lookup"><span data-stu-id="d32d9-111">If you call the **AddNew** or **BeginEdit** method of the **DataRowView** while a pending row exists, **EndEdit** is implicitly called on the pending row.</span></span> <span data-ttu-id="d32d9-112">當**EndEdit**是呼叫，所做的變更套用至基礎**DataTable**而且可以稍後再認可或拒絕使用**AcceptChanges**或**RejectChanges**方法**DataTable**，**資料集**，或**DataRow**物件。</span><span class="sxs-lookup"><span data-stu-id="d32d9-112">When **EndEdit** is called, the changes are applied to the underlying **DataTable** and can later be committed or rejected using the **AcceptChanges** or **RejectChanges** methods of the **DataTable**, **DataSet**, or **DataRow** object.</span></span> <span data-ttu-id="d32d9-113">如果**AllowNew**是**false**，如果您呼叫會擲回例外狀況**AddNew**方法**DataRowView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-113">If **AllowNew** is **false**, an exception is thrown if you call the **AddNew** method of the **DataRowView**.</span></span>  
   
- 如果 **AllowEdit** 為 **true**，則您可以透過 **DataRowView** 修改 **DataRow** 的內容。  您可以使用 **DataRowView.EndEdit** 將變更確認至基礎資料列中，或是使用 **DataRowView.CancelEdit** 拒絕變更。  請注意您一次只能編輯一筆資料列。  如果您在暫止資料列存在時，呼叫 **DataRowView** 的 **AddNew** 或 **BeginEdit** 方法，就會在暫止資料列上隱含呼叫 **EndEdit**。  **EndEdit** 被呼叫後，建議的變更會放入基礎 **DataRow** 的 **Current** 資料列版本，而您稍後可使用 **DataTable**、**DataSet** 或 **DataRow** 物件的 **AcceptChanges** 或 **RejectChanges** 方法來認可或拒絕變更。  如果 **AllowEdit** 為 **false**，則您嘗試修改 **DataView** 的值時，會擲回例外狀況。  
+ <span data-ttu-id="d32d9-114">如果**AllowEdit**是**true**，您可以修改的內容**DataRow**透過**DataRowView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-114">If **AllowEdit** is **true**, you can modify the contents of a **DataRow** via the **DataRowView**.</span></span> <span data-ttu-id="d32d9-115">您可以確認變更為基礎的資料列使用**DataRowView.EndEdit**或拒絕變更使用**DataRowView.CancelEdit**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-115">You can confirm changes to the underlying row using **DataRowView.EndEdit** or reject the changes using **DataRowView.CancelEdit**.</span></span> <span data-ttu-id="d32d9-116">請注意您一次只能編輯一筆資料列。</span><span class="sxs-lookup"><span data-stu-id="d32d9-116">Note that only one row can be edited at a time.</span></span> <span data-ttu-id="d32d9-117">如果您呼叫**AddNew**或**BeginEdit**方法**DataRowView**暫止資料列存在時， **EndEdit**上隱含呼叫暫止的資料列。</span><span class="sxs-lookup"><span data-stu-id="d32d9-117">If you call the **AddNew** or **BeginEdit** methods of the **DataRowView** while a pending row exists, **EndEdit** is implicitly called on the pending row.</span></span> <span data-ttu-id="d32d9-118">當**EndEdit**呼叫時，建議的變更會放在**目前**基礎的資料列版本**DataRow**而且可以稍後再認可或拒絕使用**AcceptChanges**或**RejectChanges**方法**DataTable**，**資料集**，或**DataRow**物件。</span><span class="sxs-lookup"><span data-stu-id="d32d9-118">When **EndEdit** is called, proposed changes are placed in the **Current** row version of the underlying **DataRow** and can later be committed or rejected using the **AcceptChanges** or **RejectChanges** methods of the **DataTable**, **DataSet**, or **DataRow** object.</span></span> <span data-ttu-id="d32d9-119">如果**AllowEdit**是**false**，如果您嘗試修改中的值，會擲回例外狀況**DataView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-119">If **AllowEdit** is **false**, an exception is thrown if you attempt to modify a value in the **DataView**.</span></span>  
   
- 現有 **DataRowView** 經過編輯後，基礎 **DataTable** 的事件仍會與建議的變更一起被引發。  請注意，如果您呼叫基礎 **DataRow** 的 **EndEdit** 或 **CancelEdit**，則不管 **DataRowView** 上是否有呼叫 **EndEdit** 或 **CancelEdit**，暫止變更仍會被套用或取消。  
+ <span data-ttu-id="d32d9-120">當現有**DataRowView**正在編輯中，基礎事件**DataTable**仍會引發與建議的變更。</span><span class="sxs-lookup"><span data-stu-id="d32d9-120">When an existing **DataRowView** is being edited, events of the underlying **DataTable** will still be raised with the proposed changes.</span></span> <span data-ttu-id="d32d9-121">請注意，如果您呼叫**EndEdit**或**CancelEdit**基礎**DataRow**、 暫止變更，將套用或取消無論**EndEdit**或**CancelEdit**上呼叫**DataRowView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-121">Note that if you call **EndEdit** or **CancelEdit** on the underlying **DataRow**, pending changes will be applied or canceled regardless of whether **EndEdit** or **CancelEdit** is called on the **DataRowView**.</span></span>  
   
- 如果 **AllowDelete** 為 **true**，則您可以使用 **DataView** 或 **DataRowView** 物件的 **Delete** 方法，從 **DataView** 刪除資料列，這樣資料列就會從基礎 **DataTable** 中刪除。  您稍後可使用 **AcceptChanges** 來認可刪除，或使用 **RejectChanges** 來拒絕刪除。  如果 **AllowDelete** 為 **false**，則您呼叫 **DataView** 或 **DataRowView** 的 **Delete** 方法時會擲回例外狀況。  
+ <span data-ttu-id="d32d9-122">如果**AllowDelete**是**true**，您可以刪除資料列從**DataView**使用**刪除**方法**DataView**或**DataRowView**物件和資料列會從基礎刪除**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-122">If **AllowDelete** is **true**, you can delete rows from the **DataView** by using the **Delete** method of the **DataView** or **DataRowView** object, and the rows are deleted from the underlying **DataTable**.</span></span> <span data-ttu-id="d32d9-123">您可以稍後再認可或拒絕刪除使用**AcceptChanges**或**RejectChanges**分別。</span><span class="sxs-lookup"><span data-stu-id="d32d9-123">You can later commit or reject the deletes using **AcceptChanges** or **RejectChanges** respectively.</span></span> <span data-ttu-id="d32d9-124">如果**AllowDelete**是**false**，如果您呼叫會擲回例外狀況**刪除**方法**DataView**或**DataRowView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-124">If **AllowDelete** is **false**, an exception is thrown if you call the **Delete** method of the **DataView** or **DataRowView**.</span></span>  
   
- 下列程式碼範例使用 **DataView** 停用資料列的刪除，並使用 **DataView** 將新資料列加入基底資料表。  
+ <span data-ttu-id="d32d9-125">下列程式碼範例會停用使用**DataView**來刪除資料列，並將新的資料列加入至基礎的資料表使用**DataView**。</span><span class="sxs-lookup"><span data-stu-id="d32d9-125">The following code example disables using the **DataView** to delete rows  and adds a new row to the underlying table using the **DataView**.</span></span>  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -40,7 +46,6 @@ Dim newDRV As DataRowView = custView.AddNew()
 newDRV("CustomerID") = "ABCDE"  
 newDRV("CompanyName") = "ABC Products"  
 newDRV.EndEdit()  
-  
 ```  
   
 ```csharp  
@@ -56,9 +61,9 @@ newDRV["CompanyName"] = "ABC Products";
 newDRV.EndEdit();  
 ```  
   
-## 請參閱  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d32d9-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d32d9-126">See Also</span></span>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [<span data-ttu-id="d32d9-127">DataView</span><span class="sxs-lookup"><span data-stu-id="d32d9-127">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="d32d9-128">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="d32d9-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

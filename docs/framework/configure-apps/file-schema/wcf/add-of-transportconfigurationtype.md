@@ -1,31 +1,35 @@
 ---
-title: "&lt;transportConfigurationType&gt; 的 &lt;add&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "&lt;transportConfigurationType&gt; 的 &lt;add&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cb00a5d5a2b4f64cdce6832faef4822b63f426d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transportConfigurationType&gt; 的 &lt;add&gt;
-此項目是索引鍵\/值組，可用來識別特定傳輸的型別。  
+# <a name="ltaddgt-of-lttransportconfigurationtypegt"></a><span data-ttu-id="4520a-102">&lt;transportConfigurationType&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="4520a-102">&lt;add&gt; of &lt;transportConfigurationType&gt;</span></span>
+<span data-ttu-id="4520a-103">此項目是索引鍵/值組，可用來識別特定傳輸的型別。</span><span class="sxs-lookup"><span data-stu-id="4520a-103">This element is a key/value pair, which identifies the type of a particular transport.</span></span>  
   
-## 語法  
+ <span data-ttu-id="4520a-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="4520a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="4520a-105">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="4520a-105">\<ServiceHostingEnvironment></span></span>  
+<span data-ttu-id="4520a-106">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="4520a-106">\<transportConfigurationTypes></span></span>  
+<span data-ttu-id="4520a-107">\<add></span><span class="sxs-lookup"><span data-stu-id="4520a-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4520a-108">語法</span><span class="sxs-lookup"><span data-stu-id="4520a-108">Syntax</span></span>  
   
+```xml  
 <serviceHostingEnvironment>   
    <transportConfigurationTypes>  
       <add name="String"  
@@ -34,28 +38,28 @@ caps.handback.revision: 12
 </serviceHostingEnvironment>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4520a-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="4520a-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="4520a-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="4520a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="4520a-111">屬性</span><span class="sxs-lookup"><span data-stu-id="4520a-111">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|name|必要的 String 屬性。<br /><br /> 包含唯一識別傳輸型別的使用者定義索引鍵。|  
-|transportConfigurationType|字串，包含可實作特定傳輸的型別。|  
+|<span data-ttu-id="4520a-112">屬性</span><span class="sxs-lookup"><span data-stu-id="4520a-112">Attribute</span></span>|<span data-ttu-id="4520a-113">描述</span><span class="sxs-lookup"><span data-stu-id="4520a-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="4520a-114">name</span><span class="sxs-lookup"><span data-stu-id="4520a-114">name</span></span>|<span data-ttu-id="4520a-115">必要的 String 屬性。</span><span class="sxs-lookup"><span data-stu-id="4520a-115">Required String attribute.</span></span><br /><br /> <span data-ttu-id="4520a-116">包含唯一識別傳輸型別的使用者定義索引鍵。</span><span class="sxs-lookup"><span data-stu-id="4520a-116">Contains a user-defined key that uniquely identifies the transport type.</span></span>|  
+|<span data-ttu-id="4520a-117">transportConfigurationType</span><span class="sxs-lookup"><span data-stu-id="4520a-117">transportConfigurationType</span></span>|<span data-ttu-id="4520a-118">字串，包含可實作特定傳輸的型別。</span><span class="sxs-lookup"><span data-stu-id="4520a-118">A string that contains the type that implements the specific transport.</span></span>|  
   
-### 子項目  
- 無  
+### <a name="child-elements"></a><span data-ttu-id="4520a-119">子元素</span><span class="sxs-lookup"><span data-stu-id="4520a-119">Child Elements</span></span>  
+ <span data-ttu-id="4520a-120">無</span><span class="sxs-lookup"><span data-stu-id="4520a-120">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="4520a-121">父項目</span><span class="sxs-lookup"><span data-stu-id="4520a-121">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<transportConfigurationTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|實作特定傳輸之型別的集合。|  
+|<span data-ttu-id="4520a-122">項目</span><span class="sxs-lookup"><span data-stu-id="4520a-122">Element</span></span>|<span data-ttu-id="4520a-123">說明</span><span class="sxs-lookup"><span data-stu-id="4520a-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4520a-124">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="4520a-124">\<transportConfigurationTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|<span data-ttu-id="4520a-125">實作特定傳輸之型別的集合。</span><span class="sxs-lookup"><span data-stu-id="4520a-125">A collection of types that implement the specific transport.</span></span>|  
   
-## 範例  
+## <a name="example"></a><span data-ttu-id="4520a-126">範例</span><span class="sxs-lookup"><span data-stu-id="4520a-126">Example</span></span>  
   
-```  
+```xml  
 <serviceHostingEnvironment>   
    <transportConfigurationTypes>  
       <add name="net.udp"  
@@ -64,8 +68,8 @@ caps.handback.revision: 12
 </serviceHostingEnvironment>  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>   
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>   
- <xref:System.ServiceModel.ServiceHostingEnvironment>   
- [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a><span data-ttu-id="4520a-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4520a-127">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
+ <xref:System.ServiceModel.ServiceHostingEnvironment>  
+ [<span data-ttu-id="4520a-128">裝載</span><span class="sxs-lookup"><span data-stu-id="4520a-128">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

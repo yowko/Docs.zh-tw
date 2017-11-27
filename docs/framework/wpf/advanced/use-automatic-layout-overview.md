@@ -1,103 +1,91 @@
 ---
-title: "使用自動配置概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "自動配置"
-  - "配置, 自動"
+title: "使用自動配置概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [WPF], automatic
+- automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2c9f5b9a6665778bc313febb039aeeeb2e484a6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 使用自動配置概觀
-本主題向開發人員介紹以可當地語系化的[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式的方針。  在過去，將 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 當地語系化是一項非常費時的程序。  每當 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 需要顯示新的語言就必須逐一調整像素。  現在有了正確的設計和編碼標準，[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 的建構就可以更簡單，進而減少當地語系化人員調整大小和位置的工作。  這種使應用程式的大小和位置更容易調整的撰寫方法稱為「自動配置」，可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式設計來達成。  
-  
- 本主題包含下列章節。  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [使用自動配置的優點](#advantages_of_autolayout)  
-  
--   [自動配置和控制項](#autolayout_controls)  
-  
--   [自動配置和編碼標準](#autolayout_coding)  
-  
--   [自動配置和格線](#autolay_grids)  
-  
--   [使用 IsSharedSizeScope 屬性的自動配置和格線](#autolay_grids_issharedsizescope)  
-  
--   [相關主題](#seeAlsoToggle)  
+# <a name="use-automatic-layout-overview"></a><span data-ttu-id="7cd28-102">使用自動配置概觀</span><span class="sxs-lookup"><span data-stu-id="7cd28-102">Use Automatic Layout Overview</span></span>
+<span data-ttu-id="7cd28-103">本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7cd28-103">This topic introduces guidelines for developers on how to write [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications with localizable [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)].</span></span> <span data-ttu-id="7cd28-104">在過去，當地語系化的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]耗時的程序。</span><span class="sxs-lookup"><span data-stu-id="7cd28-104">In the past, localization of a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] was a time consuming process.</span></span> <span data-ttu-id="7cd28-105">每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是改為所需的像素的像素調整。</span><span class="sxs-lookup"><span data-stu-id="7cd28-105">Each language that the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] was adapted for required a pixel by pixel adjustment.</span></span> <span data-ttu-id="7cd28-106">使用正確的設計和編碼標準，右邊今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可用於建構，所以當地語系化人員需要小於調整大小和執行重新調整位置。</span><span class="sxs-lookup"><span data-stu-id="7cd28-106">Today with the right design and right coding standards, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] can be constructed so that localizers have less resizing and repositioning to do.</span></span> <span data-ttu-id="7cd28-107">撰寫應用程式都可以更輕鬆地調整大小和重新定位的方法在呼叫自動配置，而且可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。</span><span class="sxs-lookup"><span data-stu-id="7cd28-107">The approach to writing applications that can be more easily resized and repositioned is called automatic layout, and can be achieved by using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application design.</span></span>  
   
 <a name="advantages_of_autolayout"></a>   
-## 使用自動配置的優點  
- 因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 展示系統強大且有彈性，所以可以在應用程式中針對不同語言的需求來配置項目。  下表指出部分自動配置的優點。  
+## <a name="advantages-of-using-automatic-layout"></a><span data-ttu-id="7cd28-108">使用自動版面配置的優點</span><span class="sxs-lookup"><span data-stu-id="7cd28-108">Advantages of Using Automatic Layout</span></span>  
+ <span data-ttu-id="7cd28-109">因為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]簡報系統是功能強大且靈活，它提供的應用程式，可以調整以配合不同的語言需求的配置元素的能力。</span><span class="sxs-lookup"><span data-stu-id="7cd28-109">Because the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presentation system is powerful and flexible, it provides the ability to layout elements in an application that can be adjusted to fit the requirements of different languages.</span></span> <span data-ttu-id="7cd28-110">下列清單提出一些自動版面配置的優點。</span><span class="sxs-lookup"><span data-stu-id="7cd28-110">The following list points out some of the advantages of automatic layout.</span></span>  
   
--   在任何語言中，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 都能正常顯示。  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<span data-ttu-id="7cd28-111"> 能以任何語言適當地顯示。</span><span class="sxs-lookup"><span data-stu-id="7cd28-111"> displays well  in any language.</span></span>  
   
--   減少文字轉譯之後重新調整控制項位置和大小的需要。  
+-   <span data-ttu-id="7cd28-112">減少在翻譯文字之後重新調整控制項位置和大小的需求。</span><span class="sxs-lookup"><span data-stu-id="7cd28-112">Reduces the need to readjust position and size of controls after text is translated.</span></span>  
   
--   減少重新調整視窗大小的需要。  
+-   <span data-ttu-id="7cd28-113">減少重新調整視窗大小的需求。</span><span class="sxs-lookup"><span data-stu-id="7cd28-113">Reduces the need to readjust window size.</span></span>  
   
--   在任何語言中，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 配置都能適當呈現。  
+-   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]<span data-ttu-id="7cd28-114"> 版面配置會以任何語言適當地轉譯。</span><span class="sxs-lookup"><span data-stu-id="7cd28-114"> layout renders properly in any language.</span></span>  
   
--   減少當地語系化的工作，幾乎只要翻譯字串就能完成。  
+-   <span data-ttu-id="7cd28-115">可將當地語系化降低為只比字串翻譯多一點點的程度。</span><span class="sxs-lookup"><span data-stu-id="7cd28-115">Localization can be reduced to the point that it is little more than string translation.</span></span>  
   
 <a name="autolayout_controls"></a>   
-## 自動配置和控制項  
- 自動配置可以讓應用程式自動調整控制項的大小。  例如，控制項可以隨文字長度調整。  這項功能讓當地語系化人員可以翻譯字串，而不再需要調整控制項大小以符合翻譯後文字的大小。  下列範例會建立具有英文內容的按鈕。  
+## <a name="automatic-layout-and-controls"></a><span data-ttu-id="7cd28-116">自動版面配置和控制項</span><span class="sxs-lookup"><span data-stu-id="7cd28-116">Automatic Layout and Controls</span></span>  
+ <span data-ttu-id="7cd28-117">自動版面配置可讓應用程式自動調整控制項的大小。</span><span class="sxs-lookup"><span data-stu-id="7cd28-117">Automatic layout enables an application to adjust the size of a control automatically.</span></span> <span data-ttu-id="7cd28-118">例如，控制項可變更以容納字串的長度。</span><span class="sxs-lookup"><span data-stu-id="7cd28-118">For example, a control can change to accommodate the length of a string.</span></span> <span data-ttu-id="7cd28-119">此功能可讓當地語系化工具翻譯該字串；它們不再需要調整控制項的大小來符合翻譯的文字。</span><span class="sxs-lookup"><span data-stu-id="7cd28-119">This capability enables  localizers to translate the string; they no longer need to resize the control to fit the translated text.</span></span> <span data-ttu-id="7cd28-120">下列範例會建立一個含有英文內容的按鈕。</span><span class="sxs-lookup"><span data-stu-id="7cd28-120">The following example creates a button with English content.</span></span>  
   
- [!code-xml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- 在這個範例中，要變成西班牙文按鈕只需要變更文字。  例如：  
+ <span data-ttu-id="7cd28-121">在範例中，您唯一需要對西班牙文按鈕做的是變更文字。</span><span class="sxs-lookup"><span data-stu-id="7cd28-121">In the example, all you have to do to make a Spanish button is change the text.</span></span> <span data-ttu-id="7cd28-122">例如：</span><span class="sxs-lookup"><span data-stu-id="7cd28-122">For example,</span></span>  
   
- [!code-xml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- 下圖顯示程式碼範例的輸出。  
+ <span data-ttu-id="7cd28-123">下圖顯示程式碼範例的輸出。</span><span class="sxs-lookup"><span data-stu-id="7cd28-123">The following graphic shows the output of the code samples.</span></span>  
   
- ![按鈕相同，但文字的語言不同](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
-可自動調整大小的按鈕  
+ <span data-ttu-id="7cd28-124">![按鈕相同，但文字的語言不同](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")</span><span class="sxs-lookup"><span data-stu-id="7cd28-124">![The same button with text in different languages](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")</span></span>  
+<span data-ttu-id="7cd28-125">可自動調整大小的按鈕</span><span class="sxs-lookup"><span data-stu-id="7cd28-125">Auto Resizable Button</span></span>  
   
 <a name="autolayout_coding"></a>   
-## 自動配置和編碼標準  
- 使用自動配置方法需要一組編碼、設計標準及規則，才能產生可完全當地語系化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  下列方針會協助自動配置編碼。  
+## <a name="automatic-layout-and-coding-standards"></a><span data-ttu-id="7cd28-126">自動版面配置和編碼標準</span><span class="sxs-lookup"><span data-stu-id="7cd28-126">Automatic Layout and Coding Standards</span></span>  
+ <span data-ttu-id="7cd28-127">使用自動配置方法，需要一組程式碼撰寫和設計的標準和規則，才能產生完全當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7cd28-127">Using the automatic layout approach requires a set of coding and design standards and rules to produce a fully localizable  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span> <span data-ttu-id="7cd28-128">下列指導方針將有助於自動版面配置編碼。</span><span class="sxs-lookup"><span data-stu-id="7cd28-128">The following guidelines will aid your automatic layout coding.</span></span>  
   
-|編碼標準|描述|  
-|----------|--------|  
-|請勿使用絕對位置。|-   請勿使用 <xref:System.Windows.Controls.Canvas>，因為它會設定項目的絕對位置。<br />-   使用 <xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.StackPanel> 及 <xref:System.Windows.Controls.Grid> 來放置控制項。<br />-   如需各類面板的討論，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。|  
-|請勿對視窗設定固定大小。|-   使用 <xref:System.Windows.Window.SizeToContent%2A>。<br />-   例如：<br /><br /> [!code-xml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|加入 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。|<ul><li>將 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 加入至應用程式的根項目。</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一種便利的方式來支援水平、雙向和垂直的版面配置。  在展示架構中，<xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性可以用來定義配置。  行文方向模式有：<br /><br /> <ul><li><xref:System.Windows.FlowDirection> \(LrTb\) \- 適用於拉丁文、東亞文字等的水平版面配置。</li><li><xref:System.Windows.FlowDirection> \(RlTb\) \- 適用於阿拉伯文、希伯來文等的雙向版面配置。</li></ul></li></ul>|  
-|使用複合字型而非實體字型 \(Physical Font\)。|<ul><li>使用複合字型，<xref:System.Windows.Controls.Control.FontFamily%2A> 屬性就不需要當地語系化。</li><li>開發人員可以使用下列其中一種字型或自行建立字型。<br /><br /> <ul><li>Global User Interface</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul>|  
-|加入 xml:lang。|-   將 `xml:lang` 屬性加入至 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的根項目，例如代表英文應用程式的 `xml:lang="en-US"`。<br />-   因為複合字型是使用 `xml:lang` 決定要使用的字型，所以請設定這個屬性以支援多語系案例。|  
+|<span data-ttu-id="7cd28-129">編碼標準</span><span class="sxs-lookup"><span data-stu-id="7cd28-129">Coding Standards</span></span>|<span data-ttu-id="7cd28-130">描述</span><span class="sxs-lookup"><span data-stu-id="7cd28-130">Description</span></span>|  
+|----------------------|-----------------|  
+|<span data-ttu-id="7cd28-131">請勿使用絕對位置。</span><span class="sxs-lookup"><span data-stu-id="7cd28-131">Do not use absolute positions.</span></span>|<span data-ttu-id="7cd28-132">-請勿使用<xref:System.Windows.Controls.Canvas>因為它絕對定位項目。</span><span class="sxs-lookup"><span data-stu-id="7cd28-132">-   Do not use <xref:System.Windows.Controls.Canvas> because it positions elements absolutely.</span></span><br /><span data-ttu-id="7cd28-133">-使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>來定位控制項。</span><span class="sxs-lookup"><span data-stu-id="7cd28-133">-   Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, and <xref:System.Windows.Controls.Grid> to position controls.</span></span><br /><span data-ttu-id="7cd28-134">-如需有關各種類型的面板的討論，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="7cd28-134">-   For a discussion about various types of panels, see [Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md).</span></span>|  
+|<span data-ttu-id="7cd28-135">請勿為視窗設定固定大小。</span><span class="sxs-lookup"><span data-stu-id="7cd28-135">Do not set a fixed size for a window.</span></span>|<span data-ttu-id="7cd28-136">-使用<xref:System.Windows.Window.SizeToContent%2A>。</span><span class="sxs-lookup"><span data-stu-id="7cd28-136">-   Use <xref:System.Windows.Window.SizeToContent%2A>.</span></span><br /><span data-ttu-id="7cd28-137">-   例如：</span><span class="sxs-lookup"><span data-stu-id="7cd28-137">-   For example:</span></span><br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
+|<span data-ttu-id="7cd28-138">新增 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。</span><span class="sxs-lookup"><span data-stu-id="7cd28-138">Add a <xref:System.Windows.FrameworkElement.FlowDirection%2A>.</span></span>|<ul><li><span data-ttu-id="7cd28-139">新增<xref:System.Windows.FrameworkElement.FlowDirection%2A>至您的應用程式的根項目。</span><span class="sxs-lookup"><span data-stu-id="7cd28-139">Add a <xref:System.Windows.FrameworkElement.FlowDirection%2A> to the root element of your application.</span></span></li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="7cd28-140"> 提供一種便利的方式來支援水平、雙向和垂直版面配置。</span><span class="sxs-lookup"><span data-stu-id="7cd28-140"> provides a convenient way to support horizontal, bidirectional, and vertical layouts.</span></span> <span data-ttu-id="7cd28-141">在簡報 framework<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性可以用來定義配置。</span><span class="sxs-lookup"><span data-stu-id="7cd28-141">In presentation framework,   the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property can be used to define layout.</span></span> <span data-ttu-id="7cd28-142">書寫方向模式如下：</span><span class="sxs-lookup"><span data-stu-id="7cd28-142">The flow-direction patterns are:</span></span><br /><br /> <ul><li><span data-ttu-id="7cd28-143"><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) — 拉丁、 東亞、 等等的水平配置。</span><span class="sxs-lookup"><span data-stu-id="7cd28-143"><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — horizontal layout for Latin, East Asian, and so forth.</span></span></li><li><span data-ttu-id="7cd28-144"><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) — 雙向阿拉伯文或希伯來文等等。</span><span class="sxs-lookup"><span data-stu-id="7cd28-144"><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — bidirectional for Arabic, Hebrew, and so forth.</span></span></li></ul></li></ul>|  
+|<span data-ttu-id="7cd28-145">使用複合字型，而不是實體字型。</span><span class="sxs-lookup"><span data-stu-id="7cd28-145">Use composite fonts instead of physical fonts.</span></span>|<ul><li><span data-ttu-id="7cd28-146">複合字型，<xref:System.Windows.Controls.Control.FontFamily%2A>屬性不需要當地語系化。</span><span class="sxs-lookup"><span data-stu-id="7cd28-146">With composite fonts, the <xref:System.Windows.Controls.Control.FontFamily%2A> property does not need to be localized.</span></span></li><li><span data-ttu-id="7cd28-147">開發人員可以使用下列其中一個字型，或自行建立。</span><span class="sxs-lookup"><span data-stu-id="7cd28-147">Developers can use one of the following fonts or create their own.</span></span><br /><br /> <ul><li><span data-ttu-id="7cd28-148">Global User Interface</span><span class="sxs-lookup"><span data-stu-id="7cd28-148">Global User Interface</span></span></li><li><span data-ttu-id="7cd28-149">全域新細明體</span><span class="sxs-lookup"><span data-stu-id="7cd28-149">Global San Serif</span></span></li><li><span data-ttu-id="7cd28-150">全域有襯線字型</span><span class="sxs-lookup"><span data-stu-id="7cd28-150">Global Serif</span></span></li></ul></li></ul>|  
+|<span data-ttu-id="7cd28-151">加入 xml:lang。</span><span class="sxs-lookup"><span data-stu-id="7cd28-151">Add xml:lang.</span></span>|<span data-ttu-id="7cd28-152">新增`xml:lang`屬性中的根項目您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，例如`xml:lang="en-US"`英文版的應用程式。</span><span class="sxs-lookup"><span data-stu-id="7cd28-152">-   Add the `xml:lang` attribute in the root element of your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], such as `xml:lang="en-US"` for an English application.</span></span><br /><span data-ttu-id="7cd28-153">-因為複合字型使用`xml:lang`來判斷要使用的字型，請設定這個屬性，以支援多國語言的案例。</span><span class="sxs-lookup"><span data-stu-id="7cd28-153">-   Because composite fonts use `xml:lang` to determine what font to use, set this property to support multilingual scenarios.</span></span>|  
   
 <a name="autolay_grids"></a>   
-## 自動配置和格線  
- <xref:System.Windows.Controls.Grid> 項目對於自動配置相當有用，因為它可以讓開發人員放置項目。  <xref:System.Windows.Controls.Grid> 控制項可以在其子項目之間使用欄和列排列的方式分配可用空間。  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目可以橫跨多個儲存格，因此格線內還可以有格線。  格線相當有用，因為它們可以讓您建立並放置複雜的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  下列範例示範使用格線來放置部分按鈕和文字。  請注意，儲存格的高度和寬度是設為 <xref:System.Windows.GridUnitType>，因此包含影像按鈕的儲存格會隨影像調整大小。  
+## <a name="automatic-layout-and-grids"></a><span data-ttu-id="7cd28-154">自動版面配置和方格</span><span class="sxs-lookup"><span data-stu-id="7cd28-154">Automatic Layout and Grids</span></span>  
+ <span data-ttu-id="7cd28-155"><xref:System.Windows.Controls.Grid>項目，可用於自動版面配置，因為它可讓開發人員的項目位置。</span><span class="sxs-lookup"><span data-stu-id="7cd28-155">The <xref:System.Windows.Controls.Grid> element, is useful for automatic layout because it enables a developer to position elements.</span></span> <span data-ttu-id="7cd28-156">A<xref:System.Windows.Controls.Grid>控制項是能夠散發其子項目，使用資料行和資料列的排列方式之間的可用空間。</span><span class="sxs-lookup"><span data-stu-id="7cd28-156">A <xref:System.Windows.Controls.Grid> control is capable of distributing the available space among its child elements, using a column and row arrangement.</span></span> <span data-ttu-id="7cd28-157">[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]項目可以跨越多個資料格，而且很可能有格線中的方格。</span><span class="sxs-lookup"><span data-stu-id="7cd28-157">The [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elements can span multiple cells, and it is possible to have grids within grids.</span></span> <span data-ttu-id="7cd28-158">格線則很有用，因為它們可讓您建立及放置複雜[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="7cd28-158">Grids are useful because they enable you to create and position complex [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span> <span data-ttu-id="7cd28-159">下列範例示範如何使用方格來定位部分按鈕和文字。</span><span class="sxs-lookup"><span data-stu-id="7cd28-159">The following example demonstrates using a grid to position some buttons and text.</span></span> <span data-ttu-id="7cd28-160">請注意，儲存格的寬度與高度設為<xref:System.Windows.GridUnitType.Auto>; 因此，包含與映像按鈕的資料格會調整，以符合影像。</span><span class="sxs-lookup"><span data-stu-id="7cd28-160">Notice that the height and width of the cells are set to <xref:System.Windows.GridUnitType.Auto>; therefore, the cell that contains the button with an image adjusts to fit the image.</span></span>  
   
- [!code-xml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
- 下圖顯示上述程式碼產生的格線。  
+ <span data-ttu-id="7cd28-161">下圖顯示由先前程式碼所產生的方格。</span><span class="sxs-lookup"><span data-stu-id="7cd28-161">The following graphic shows the grid produced by the previous code.</span></span>  
   
- ![格線範例](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob\_grid")  
-Grid  
+ <span data-ttu-id="7cd28-162">![格線範例](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")</span><span class="sxs-lookup"><span data-stu-id="7cd28-162">![Grid example](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")</span></span>  
+<span data-ttu-id="7cd28-163">Grid</span><span class="sxs-lookup"><span data-stu-id="7cd28-163">Grid</span></span>  
   
 <a name="autolay_grids_issharedsizescope"></a>   
-## 使用 IsSharedSizeScope 屬性的自動配置和格線  
- <xref:System.Windows.Controls.Grid> 項目在可當地語系化的應用程式中相當實用，可以建立隨內容大小調整的控制項。  但是，有時候您會想要讓控制項維持特定大小，不論內容有多大。  例如，如果您有 \[確定\]、\[取消\] 及 \[瀏覽\] 按鈕，可能就不希望按鈕隨內容調整大小。  在此情況下 <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=fullName> 附加屬性相當實用，可在多個格線項目之間共用相同的大小。  下列範例示範如何在多個 <xref:System.Windows.Controls.Grid> 項目之間共用欄和列的大小資料。  
+## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a><span data-ttu-id="7cd28-164">使用 IsSharedSizeScope 屬性的自動版面配置和方格</span><span class="sxs-lookup"><span data-stu-id="7cd28-164">Automatic Layout and Grids Using the IsSharedSizeScope Property</span></span>  
+ <span data-ttu-id="7cd28-165">A<xref:System.Windows.Controls.Grid>項目是用於建立控制項，調整以符合內容可當地語系化的應用程式。</span><span class="sxs-lookup"><span data-stu-id="7cd28-165">A <xref:System.Windows.Controls.Grid> element is useful in localizable applications to create controls that adjust to fit content.</span></span> <span data-ttu-id="7cd28-166">不過，有時您想要讓控制項不論內容為何，都會維持特定的大小。</span><span class="sxs-lookup"><span data-stu-id="7cd28-166">However, at times you want controls to maintain a particular size regardless of content.</span></span> <span data-ttu-id="7cd28-167">例如，如果您擁有 [確定]、[取消] 和 [瀏覽] 按鈕，您可能不想調整按鈕的大小以符合內容。</span><span class="sxs-lookup"><span data-stu-id="7cd28-167">For example, if you have "OK", "Cancel" and "Browse" buttons you probably do not want the buttons sized to fit the content.</span></span> <span data-ttu-id="7cd28-168">在此情況下<xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType>附加的屬性可用於共用相同的調整大小，在多個格線元素之間。</span><span class="sxs-lookup"><span data-stu-id="7cd28-168">In this case the <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> attached property is useful for sharing the same sizing among multiple grid elements.</span></span> <span data-ttu-id="7cd28-169">下列範例示範如何在共用資料行和調整大小資料之間的多個資料列<xref:System.Windows.Controls.Grid>項目。</span><span class="sxs-lookup"><span data-stu-id="7cd28-169">The following example demonstrates how to share column and row sizing data between multiple <xref:System.Windows.Controls.Grid> elements.</span></span>  
   
- [!code-xml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **注意**：如需完整程式碼範例，請參閱 [在格線之間共用調整大小屬性](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ <span data-ttu-id="7cd28-170">**請注意**完整的程式碼範例，請參閱[共用大小屬性之間格線](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)</span><span class="sxs-lookup"><span data-stu-id="7cd28-170">**Note** For the complete code sample, see [Share Sizing Properties Between Grids](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)</span></span>  
   
-## 請參閱  
- [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [使用自動配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)   
- [針對自動配置使用格線](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a><span data-ttu-id="7cd28-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7cd28-171">See Also</span></span>  
+ [<span data-ttu-id="7cd28-172">WPF 的全球化</span><span class="sxs-lookup"><span data-stu-id="7cd28-172">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="7cd28-173">使用自動版面配置建立按鈕</span><span class="sxs-lookup"><span data-stu-id="7cd28-173">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="7cd28-174">針對自動版面配置使用方格</span><span class="sxs-lookup"><span data-stu-id="7cd28-174">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

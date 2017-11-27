@@ -1,43 +1,44 @@
 ---
-title: "如何：在選擇工具箱項目對話方塊中顯示控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "全域組件快取, [選擇工具箱項目] 對話方塊"
-  - "AssemblyFoldersEx, [選擇工具箱項目] 對話方塊"
-  - "控制項, 在 [選擇工具箱項目] 對話方塊中顯示"
-  - "組件資料夾註冊, [選擇工具箱項目] 對話方塊"
-  - "[選擇工具箱項目] 對話方塊, 顯示控制項"
+title: "如何：在選擇工具箱項目對話方塊中顯示控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global assembly cache [Windows Forms], Choose Toolbox Items dialog box
+- AssemblyFoldersEx [Windows Forms], Choose Toolbox Items dialog box
+- controls [Windows Forms], display in Choose Toolbox Items dialog box
+- assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
+- Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f7bbb13e8a2b877d0f503e091b5bb8b1e7e89d00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：在選擇工具箱項目對話方塊中顯示控制項
-當您在開發和散發控制項時，可能希望這些控制項能出現在 \[**選擇工具箱項目**\] 對話方塊中，這個對話方塊會在您以滑鼠按一下 \[**工具箱**\] 並選取 \[**選擇項目**\] 時顯示。  您可以使用 AssemblyFoldersEx 註冊程序，讓控制項出現在這個對話方塊中。  
+# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a><span data-ttu-id="5f62e-102">如何：在選擇工具箱項目對話方塊中顯示控制項</span><span class="sxs-lookup"><span data-stu-id="5f62e-102">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>
+<span data-ttu-id="5f62e-103">當您開發並散發控制項，您可能會想要出現在這些控制項**選擇工具箱項目**對話方塊中，當您以滑鼠右鍵按一下顯示**工具箱**選取**選擇項目**。</span><span class="sxs-lookup"><span data-stu-id="5f62e-103">As you develop and distribute controls, you may want those controls to appear in the **Choose Toolbox Items** dialog box, which is displayed when you right-click the **Toolbox** and select **Choose Items**.</span></span> <span data-ttu-id="5f62e-104">您可以啟用您的控制項才會出現在這個對話方塊中，使用 AssemblyFoldersEx 登錄程序。</span><span class="sxs-lookup"><span data-stu-id="5f62e-104">You can enable your control to appear in this dialog box by using the AssemblyFoldersEx registration procedure.</span></span>  
   
-### 若要在選擇工具箱項目對話方塊中顯示控制項  
+### <a name="to-display-your-control-in-the-choose-toolbox-items-dialog-box"></a><span data-ttu-id="5f62e-105">在 [選擇工具箱項目] 對話方塊中顯示控制項</span><span class="sxs-lookup"><span data-stu-id="5f62e-105">To display your control in the Choose Toolbox Items dialog box</span></span>  
   
--   將控制項組件安裝至全域組件快取。  如需詳細資訊，請參閱 [如何：將組件安裝到全域組件快取](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+-   <span data-ttu-id="5f62e-106">控制項組件安裝至全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="5f62e-106">Install your control assembly to the global assembly cache.</span></span> <span data-ttu-id="5f62e-107">如需詳細資訊，請參閱[How to： 將組件安裝到全域組件快取](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)</span><span class="sxs-lookup"><span data-stu-id="5f62e-107">For more information, see [How to: Install an Assembly into the Global Assembly Cache](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)</span></span>  
   
-     \-或\-  
+     <span data-ttu-id="5f62e-108">-或-</span><span class="sxs-lookup"><span data-stu-id="5f62e-108">-or-</span></span>  
   
--   使用 AssemblyFoldersEx 註冊程序來註冊控制項及其關聯的設計階段組件。  AssemblyFoldersEx 是註冊位置，協力廠商使用這個位置來儲存他們支援的每個架構版本的路徑。  設計階段解決方案可以查詢這個註冊位置，以尋找參考組件。  註冊指令碼可以指定要顯示在 \[工具箱\] 的控制項。  如需詳細資訊，請參閱[部署自訂控制項和設計階段屬性](http://msdn.microsoft.com/zh-tw/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)。  
+-   <span data-ttu-id="5f62e-109">註冊您的控制項和其相關聯的設計階段組件使用 AssemblyFoldersEx 登錄程序。</span><span class="sxs-lookup"><span data-stu-id="5f62e-109">Register your control and its associated design-time assemblies by using the AssemblyFoldersEx registration procedure.</span></span> <span data-ttu-id="5f62e-110">AssemblyFoldersEx 是協力廠商儲存每個版本的 framework 所支援路徑的登錄位置。</span><span class="sxs-lookup"><span data-stu-id="5f62e-110">AssemblyFoldersEx is a registry location where third-party vendors store paths for each version of the framework that they support.</span></span> <span data-ttu-id="5f62e-111">設計階段解析度可以查看此登錄位置中尋找參考組件中。</span><span class="sxs-lookup"><span data-stu-id="5f62e-111">Design-time resolution can look in this registry location to find reference assemblies.</span></span> <span data-ttu-id="5f62e-112">登錄指令碼可以指定您想要出現在工具箱中的控制項。</span><span class="sxs-lookup"><span data-stu-id="5f62e-112">The registry script can specify the controls you want to appear in the Toolbox.</span></span> <span data-ttu-id="5f62e-113">如需詳細資訊，請參閱[部署自訂控制項和設計階段組件 (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)。</span><span class="sxs-lookup"><span data-stu-id="5f62e-113">For more information, see [Deploying a Custom Control and Design-time Assemblies (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb).</span></span>  
   
-## 請參閱  
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/zh-tw/bd07835f-18a8-433e-bccc-7141f65263bb)   
- [部署自訂控制項和設計階段屬性](http://msdn.microsoft.com/zh-tw/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)   
- [在設計階段開發 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [如何：將組件安裝到全域組件快取](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
- [逐步解說：自動將自訂元件填入工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a><span data-ttu-id="5f62e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f62e-114">See Also</span></span>  
+ [<span data-ttu-id="5f62e-115">選擇工具箱項目對話方塊 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="5f62e-115">Choose Toolbox Items Dialog Box (Visual Studio)</span></span>](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [<span data-ttu-id="5f62e-116">部署自訂控制項和設計階段組件 (Visual Studio 2013)</span><span class="sxs-lookup"><span data-stu-id="5f62e-116">Deploying a Custom Control and Design-time Assemblies (Visual Studio 2013)</span></span>](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)  
+ [<span data-ttu-id="5f62e-117">在設計階段開發 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="5f62e-117">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="5f62e-118">操作說明：將組件安裝到全域組件快取</span><span class="sxs-lookup"><span data-stu-id="5f62e-118">How to: Install an Assembly into the Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [<span data-ttu-id="5f62e-119">逐步解說：自動將自訂元件填入工具箱</span><span class="sxs-lookup"><span data-stu-id="5f62e-119">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

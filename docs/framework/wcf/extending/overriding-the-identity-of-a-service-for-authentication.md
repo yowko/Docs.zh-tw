@@ -1,74 +1,80 @@
 ---
-title: "覆寫服務的身分識別以進行驗證 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "覆寫服務的身分識別以進行驗證"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6a3125504326f2cb129fef6f1f3e01dba577f599
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 覆寫服務的身分識別以進行驗證
-一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如，下列組態程式碼會使用[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。  
+# <a name="overriding-the-identity-of-a-service-for-authentication"></a><span data-ttu-id="5687f-102">覆寫服務的身分識別以進行驗證</span><span class="sxs-lookup"><span data-stu-id="5687f-102">Overriding the Identity of a Service for Authentication</span></span>
+<span data-ttu-id="5687f-103">一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。</span><span class="sxs-lookup"><span data-stu-id="5687f-103">Typically, you do not have to set the identity on a service because the selection of a client credential type dictates the type of identity exposed in the service metadata.</span></span> <span data-ttu-id="5687f-104">例如，下列組態程式碼會使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。</span><span class="sxs-lookup"><span data-stu-id="5687f-104">For example, the following configuration code uses the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element and sets the `clientCredentialType` attribute to Windows.</span></span>  
   
   
   
- 下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。 在此範例中，服務執行為特定使用者帳戶的自我裝載服務(username@contoso.com)，因此使用者主要名稱 (UPN) 識別包含帳戶名稱。 UPN 在 Windows 網域中也稱為使用者登入名稱。  
+ <span data-ttu-id="5687f-105">下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。</span><span class="sxs-lookup"><span data-stu-id="5687f-105">The following Web Services Description Language (WSDL) fragment shows the identity for the endpoint previously defined.</span></span> <span data-ttu-id="5687f-106">在此範例中，服務自我裝載的服務特定使用者帳戶以執行 (username@contoso.com)，因此使用者主要名稱 (UPN) 識別包含帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="5687f-106">In this example, the service is running as a self-hosted service under a particular user account (username@contoso.com) and therefore the user principal name (UPN) identity contains the account name.</span></span> <span data-ttu-id="5687f-107">UPN 在 Windows 網域中也稱為使用者登入名稱。</span><span class="sxs-lookup"><span data-stu-id="5687f-107">The UPN is also known as the user logon name in a Windows domain.</span></span>  
   
   
   
- 示範身分識別設定的範例應用程式，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]服務身分識別，請參閱[服務身分識別與驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ <span data-ttu-id="5687f-108">範例應用程式，示範身分識別設定，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="5687f-108">For a sample application that demonstrates identity setting, see [Service Identity Sample](../../../../docs/framework/wcf/samples/service-identity-sample.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5687f-109">服務身分識別，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="5687f-109"> service identity, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
-## <a name="kerberos-authentication-and-identity"></a>Kerberos 驗證和身分識別  
- 根據預設，當服務設定為使用 Windows 認證時， [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含項目[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL 中產生項目。 如果服務正在`LocalSystem`， `LocalService`，或`NetworkService`帳戶、 服務主要名稱 (SPN) 由預設的形式產生`host/` \< *hostname*> 因為這些帳戶可以存取電腦的 SPN 資料。 如果服務正在執行不同的帳戶，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]的格式產生 UPN *username*>@<*domainName*`>`。 這種情況發生的原因是 Kerberos 驗證需要對用戶端提供 UPN 或 SPN，才能驗證服務。  
+## <a name="kerberos-authentication-and-identity"></a><span data-ttu-id="5687f-110">Kerberos 驗證和身分識別</span><span class="sxs-lookup"><span data-stu-id="5687f-110">Kerberos Authentication and Identity</span></span>  
+ <span data-ttu-id="5687f-111">根據預設，當服務設定為使用 Windows 認證， [\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含項目[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL 中不會產生元素。</span><span class="sxs-lookup"><span data-stu-id="5687f-111">By default, when a service is configured to use a Windows credential, an [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) element that contains a [\<userPrincipalName>](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) or [\<servicePrincipalName>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) element is generated in the WSDL.</span></span> <span data-ttu-id="5687f-112">如果服務在執行`LocalSystem`， `LocalService`，或`NetworkService`帳戶、 服務主要名稱 (SPN) 產生的表單中的預設`host/` \< *hostname*> 因為這些帳戶可以存取電腦的 SPN 資料。</span><span class="sxs-lookup"><span data-stu-id="5687f-112">If the service is running under the `LocalSystem`, `LocalService`, or `NetworkService` account, a service principal name (SPN) is generated by default in the form of `host/`\<*hostname*> because those accounts have access to the computer's SPN data.</span></span> <span data-ttu-id="5687f-113">如果服務正在執行不同的帳戶，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]格式產生 UPN \< *username*>@<*domainName*`>`。</span><span class="sxs-lookup"><span data-stu-id="5687f-113">If the service is running under a different account, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] generates a UPN in the form of \<*username*>@<*domainName*`>`.</span></span> <span data-ttu-id="5687f-114">這種情況發生的原因是 Kerberos 驗證需要對用戶端提供 UPN 或 SPN，才能驗證服務。</span><span class="sxs-lookup"><span data-stu-id="5687f-114">This occurs because Kerberos authentication requires that a UPN or SPN be supplied to the client to authenticate the service.</span></span>  
   
- 您也可以使用 Setspn.exe 工具，以服務的帳戶在網域中登錄其他 SPN。 您接著就可以使用 SPN 做為服務的身分識別。 若要下載此工具，請參閱[Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工具，請參閱[Setspn 概觀](http://go.microsoft.com/fwlink/?LinkId=61374)。  
+ <span data-ttu-id="5687f-115">您也可以使用 Setspn.exe 工具，以服務的帳戶在網域中登錄其他 SPN。</span><span class="sxs-lookup"><span data-stu-id="5687f-115">You can also use the Setspn.exe tool to register an additional SPN with a service's account in a domain.</span></span> <span data-ttu-id="5687f-116">您接著就可以使用 SPN 做為服務的身分識別。</span><span class="sxs-lookup"><span data-stu-id="5687f-116">You can then use the SPN as the identity of the service.</span></span> <span data-ttu-id="5687f-117">若要下載此工具，請參閱[Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。</span><span class="sxs-lookup"><span data-stu-id="5687f-117">To download the tool, see [Windows 2000 Resource Kit Tool : Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5687f-118">工具，請參閱[Setspn 概觀](http://go.microsoft.com/fwlink/?LinkId=61374)。</span><span class="sxs-lookup"><span data-stu-id="5687f-118"> the tool, see [Setspn Overview](http://go.microsoft.com/fwlink/?LinkId=61374).</span></span>  
   
 > [!NOTE]
->  若不進行交涉而使用 Windows 認證類型，服務的使用者帳戶必須可以存取透過 Active Directory 網域登錄的 SPN。 您可以透過下列方法完成這項作業：  
+>  <span data-ttu-id="5687f-119">若不進行交涉而使用 Windows 認證類型，服務的使用者帳戶必須可以存取透過 Active Directory 網域登錄的 SPN。</span><span class="sxs-lookup"><span data-stu-id="5687f-119">To use the Windows credential type without negotiation, the service's user account must have access to the SPN that is registered with the Active Directory domain.</span></span> <span data-ttu-id="5687f-120">您可以透過下列方法完成這項作業：</span><span class="sxs-lookup"><span data-stu-id="5687f-120">You can do this in the following ways:</span></span>  
   
--   使用 NetworkService 或 LocalSystem 帳戶執行服務。 因為這些帳戶均可存取電腦加入 Active Directory 網域時所建立的電腦 SPN，所以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動在服務中繼資料 (WSDL) 的服務端點內產生適當的 SPN 項目。  
+-   <span data-ttu-id="5687f-121">使用 NetworkService 或 LocalSystem 帳戶執行服務。</span><span class="sxs-lookup"><span data-stu-id="5687f-121">Use the NetworkService or LocalSystem account to run your service.</span></span> <span data-ttu-id="5687f-122">因為這些帳戶均可存取電腦加入 Active Directory 網域時所建立的電腦 SPN，所以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動在服務中繼資料 (WSDL) 的服務端點內產生適當的 SPN 項目。</span><span class="sxs-lookup"><span data-stu-id="5687f-122">Because those accounts have access to the machine SPN that is established when the machine joins the Active Directory domain, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatically generates the proper SPN element inside the service's endpoint in the service's metadata (WSDL).</span></span>  
   
--   使用任意的 Active Directory 網域帳戶來執行服務。 在這個情況下，請建立該網域帳戶的 SPN，您可使用 Setspn.exe 公用程式工具來進行。 一旦您建立了服務帳戶的 SPN，請設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以透過其中繼資料 (WSDL) 將該 SPN 發行至服務的用戶端。 不論是透過應用程式組態檔或程式碼，均可設定公開端點的端點身分識別以完成此作業。  
+-   <span data-ttu-id="5687f-123">使用任意的 Active Directory 網域帳戶來執行服務。</span><span class="sxs-lookup"><span data-stu-id="5687f-123">Use an arbitrary Active Directory domain account to run your service.</span></span> <span data-ttu-id="5687f-124">在這個情況下，請建立該網域帳戶的 SPN，您可使用 Setspn.exe 公用程式工具來進行。</span><span class="sxs-lookup"><span data-stu-id="5687f-124">In this case, establish an SPN for that domain account, which you can do by using the Setspn.exe utility tool.</span></span> <span data-ttu-id="5687f-125">一旦您建立了服務帳戶的 SPN，請設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以透過其中繼資料 (WSDL) 將該 SPN 發行至服務的用戶端。</span><span class="sxs-lookup"><span data-stu-id="5687f-125">Once you create the SPN for the service's account, configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to publish that SPN to the service's clients through its metadata (WSDL).</span></span> <span data-ttu-id="5687f-126">不論是透過應用程式組態檔或程式碼，均可設定公開端點的端點身分識別以完成此作業。</span><span class="sxs-lookup"><span data-stu-id="5687f-126">This is done by setting the endpoint identity for the exposed endpoint, either through an application configuration file or code.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Spn、 Kerberos 通訊協定和 Active Directory 中，請參閱[補充 Windows 的 Kerberos 技術](http://go.microsoft.com/fwlink/?LinkId=88330)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5687f-127">Spn、 Kerberos 通訊協定和 Active Directory 中，請參閱[補充 Windows 的 Kerberos 技術](http://go.microsoft.com/fwlink/?LinkId=88330)。</span><span class="sxs-lookup"><span data-stu-id="5687f-127"> SPNs, the Kerberos protocol, and Active Directory, see [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=88330).</span></span>  
   
-### <a name="when-spn-or-upn-equals-the-empty-string"></a>SPN 或 UPN 等於空字串時  
- 如果您設定 SPN 或 UPN 等於空字串，那麼會發生一些不同的狀況，依使用的安全性層級和驗證模式而定：  
+### <a name="when-spn-or-upn-equals-the-empty-string"></a><span data-ttu-id="5687f-128">SPN 或 UPN 等於空字串時</span><span class="sxs-lookup"><span data-stu-id="5687f-128">When SPN or UPN Equals the Empty String</span></span>  
+ <span data-ttu-id="5687f-129">如果您設定 SPN 或 UPN 等於空字串，那麼會發生一些不同的狀況，依使用的安全性層級和驗證模式而定：</span><span class="sxs-lookup"><span data-stu-id="5687f-129">If you set the SPN or UPN equal to an empty string, a number of different things happen, depending on the security level and authentication mode being used:</span></span>  
   
--   如果您使用傳輸層級安全性，就會選擇 NT LanMan (NTLM) 驗證。  
+-   <span data-ttu-id="5687f-130">如果您使用傳輸層級安全性，就會選擇 NT LanMan (NTLM) 驗證。</span><span class="sxs-lookup"><span data-stu-id="5687f-130">If you are using transport level security, NT LanMan (NTLM) authentication is chosen.</span></span>  
   
--   如果您使用訊息層級安全性，驗證可能會失敗，依驗證模式而定：  
+-   <span data-ttu-id="5687f-131">如果您使用訊息層級安全性，驗證可能會失敗，依驗證模式而定：</span><span class="sxs-lookup"><span data-stu-id="5687f-131">If you are using message level security, authentication may fail, depending on the authentication mode:</span></span>  
   
--   如果您正在使用 `spnego` 模式並且將 `AllowNtlm` 屬性設定為 `false`，則驗證失敗。  
+-   <span data-ttu-id="5687f-132">如果您正在使用 `spnego` 模式並且將 `AllowNtlm` 屬性設定為 `false`，則驗證失敗。</span><span class="sxs-lookup"><span data-stu-id="5687f-132">If you are using `spnego` mode and the `AllowNtlm` attribute is set to `false`, authentication fail.</span></span>  
   
--   如果您正在使用 `spnego` 模式並且將 `AllowNtlm` 屬性設定為 `true`，則若 UPN 為空時驗證失敗，而若 SPN 為空時驗證成功。  
+-   <span data-ttu-id="5687f-133">如果您正在使用 `spnego` 模式並且將 `AllowNtlm` 屬性設定為 `true`，則若 UPN 為空時驗證失敗，而若 SPN 為空時驗證成功。</span><span class="sxs-lookup"><span data-stu-id="5687f-133">If you are using `spnego` mode and the `AllowNtlm` attribute is set to `true`, authentication fails if the UPN is empty, but succeeds if the SPN is empty.</span></span>  
   
--   如果您正在直接使用 Kerberos (也就是「單次」)，則驗證失敗。  
+-   <span data-ttu-id="5687f-134">如果您正在直接使用 Kerberos (也就是「單次」)，則驗證失敗。</span><span class="sxs-lookup"><span data-stu-id="5687f-134">If you are using Kerberos direct (also known as "one-shot"), authentication fails.</span></span>  
   
-### <a name="using-the-identity-element-in-configuration"></a>使用<>\>組態中的項目  
- 如果您在先前對 Certificate`,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證，這個憑證可用於身分識別值，其值如以下程式碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
-  
-  
-  
- 您可以使用組態中的 <`identity`> 項目或在程式碼中設定身分識別，變更預設服務身分識別的值或變更身分識別的類型。 下列組態程式碼會以 `contoso.com` 這個值來設定網域名稱系統 (DNS) 身分識別。  
+### <a name="using-the-identity-element-in-configuration"></a><span data-ttu-id="5687f-135">使用\<識別 > 組態中的項目</span><span class="sxs-lookup"><span data-stu-id="5687f-135">Using the \<identity> Element in Configuration</span></span>  
+ <span data-ttu-id="5687f-136">如果您在先前對 Certificate`,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證，這個憑證可用於身分識別值，其值如以下程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="5687f-136">If you change the client credential type in the binding previously shown to Certificate`,` then the generated WSDL contains a Base64 serialized X.509 certificate for the identity value as shown in the following code.</span></span> <span data-ttu-id="5687f-137">這是 Windows 以外所有用戶端認證類型的預設值。</span><span class="sxs-lookup"><span data-stu-id="5687f-137">This is the default for all client credential types other than Windows.</span></span>  
   
   
   
-### <a name="setting-identity-programmatically"></a>以程式設計方式設定身分識別  
- 您的服務不需要明確指定身分識別，因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動決定。 不過，如果有需要，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您指定端點上的身分識別。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
+ <span data-ttu-id="5687f-138">您可以使用組態中的 <`identity`> 項目或在程式碼中設定身分識別，變更預設服務身分識別的值或變更身分識別的類型。</span><span class="sxs-lookup"><span data-stu-id="5687f-138">You can change the value of the default service identity or change the type of the identity by using the <`identity`> element in configuration or by setting the identity in code.</span></span> <span data-ttu-id="5687f-139">下列組態程式碼會以 `contoso.com` 這個值來設定網域名稱系統 (DNS) 身分識別。</span><span class="sxs-lookup"><span data-stu-id="5687f-139">The following configuration code sets a domain name system (DNS) identity with the value `contoso.com`.</span></span>  
+  
+  
+  
+### <a name="setting-identity-programmatically"></a><span data-ttu-id="5687f-140">以程式設計方式設定身分識別</span><span class="sxs-lookup"><span data-stu-id="5687f-140">Setting Identity Programmatically</span></span>  
+ <span data-ttu-id="5687f-141">您的服務不需要明確指定身分識別，因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動決定。</span><span class="sxs-lookup"><span data-stu-id="5687f-141">Your service does not have to explicitly specify an identity, because [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatically determines it.</span></span> <span data-ttu-id="5687f-142">不過，如果有需要，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您指定端點上的身分識別。</span><span class="sxs-lookup"><span data-stu-id="5687f-142">However, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] allows you to specify an identity on an endpoint, if required.</span></span> <span data-ttu-id="5687f-143">下列程式碼會新增具有特定 DNS 身分識別的新服務端點。</span><span class="sxs-lookup"><span data-stu-id="5687f-143">The following code adds a new service endpoint with a specific DNS identity.</span></span>  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
- [如何︰ 建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)   
- [服務身分識別與驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="5687f-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5687f-144">See Also</span></span>  
+ [<span data-ttu-id="5687f-145">如何： 建立自訂用戶端身分識別驗證器</span><span class="sxs-lookup"><span data-stu-id="5687f-145">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [<span data-ttu-id="5687f-146">服務身分識別和驗證</span><span class="sxs-lookup"><span data-stu-id="5687f-146">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

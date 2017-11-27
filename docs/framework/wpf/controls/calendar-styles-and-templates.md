@@ -1,148 +1,146 @@
 ---
-title: "Calendar 樣式和範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Calendar [WPF], 樣式和範本"
-  - "ControlTemplate [WPF], Calendar"
-  - "組件 [WPF], Calendar"
-  - "狀態 [WPF], Calendar"
-  - "樣式 [WPF], Calendar"
-  - "範本 [WPF], Calendar"
+title: "Calendar 樣式和範本"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], Calendar
+- templates [WPF], Calendar
+- states [WPF], Calendar
+- parts [WPF], Calendar
+- Calendar [WPF], styles and templates
+- ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b27049c63faa9bf84dc5febd210a29a530f175a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Calendar 樣式和範本
-本主題說明 <xref:System.Windows.Controls.Calendar> 控制項的樣式和範本。  您可以修改預設的 <xref:System.Windows.Controls.ControlTemplate>，讓控制項擁有獨特的外觀。  如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="calendar-styles-and-templates"></a><span data-ttu-id="c1dcd-102">Calendar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="c1dcd-102">Calendar Styles and Templates</span></span>
+<span data-ttu-id="c1dcd-103">本主題描述樣式和範本<xref:System.Windows.Controls.Calendar>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Calendar> control.</span></span> <span data-ttu-id="c1dcd-104">您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="c1dcd-105">如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Calendar 組件  
- 下表列出 <xref:System.Windows.Controls.Calendar> 控制項的具名組件。  
+## <a name="calendar-parts"></a><span data-ttu-id="c1dcd-106">行事曆組件</span><span class="sxs-lookup"><span data-stu-id="c1dcd-106">Calendar Parts</span></span>  
+ <span data-ttu-id="c1dcd-107">下表列出的具名組件<xref:System.Windows.Controls.Calendar>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-107">The following table lists the named parts for the <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="c1dcd-108">組件</span><span class="sxs-lookup"><span data-stu-id="c1dcd-108">Part</span></span>|<span data-ttu-id="c1dcd-109">類型</span><span class="sxs-lookup"><span data-stu-id="c1dcd-109">Type</span></span>|<span data-ttu-id="c1dcd-110">說明</span><span class="sxs-lookup"><span data-stu-id="c1dcd-110">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|<xref:System.Windows.Controls.Calendar> 上目前顯示的月份或年份。|  
-|PART\_Root|<xref:System.Windows.Controls.Panel>|包含 <xref:System.Windows.Controls.Primitives.CalendarItem> 的面板。|  
+|<span data-ttu-id="c1dcd-111">PART_CalendarItem</span><span class="sxs-lookup"><span data-stu-id="c1dcd-111">PART_CalendarItem</span></span>|<xref:System.Windows.Controls.Primitives.CalendarItem>|<span data-ttu-id="c1dcd-112">目前顯示的月或年<xref:System.Windows.Controls.Calendar>。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-112">The currently displayed month or year on the <xref:System.Windows.Controls.Calendar>.</span></span>|  
+|<span data-ttu-id="c1dcd-113">PART_Root</span><span class="sxs-lookup"><span data-stu-id="c1dcd-113">PART_Root</span></span>|<xref:System.Windows.Controls.Panel>|<span data-ttu-id="c1dcd-114">包含的面板<xref:System.Windows.Controls.Primitives.CalendarItem>。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-114">The panel that contains the <xref:System.Windows.Controls.Primitives.CalendarItem>.</span></span>|  
   
-## Calendar 狀態  
- 下表列出 <xref:System.Windows.Controls.Calendar> 控制項的可見狀態。  
+## <a name="calendar-states"></a><span data-ttu-id="c1dcd-115">行事曆狀態</span><span class="sxs-lookup"><span data-stu-id="c1dcd-115">Calendar States</span></span>  
+ <span data-ttu-id="c1dcd-116">下表列出的視覺狀態<xref:System.Windows.Controls.Calendar>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-116">The following table lists the visual states for the <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|--------------------|-------------------------|--------|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="c1dcd-117">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-117">VisualState Name</span></span>|<span data-ttu-id="c1dcd-118">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-118">VisualStateGroup Name</span></span>|<span data-ttu-id="c1dcd-119">描述</span><span class="sxs-lookup"><span data-stu-id="c1dcd-119">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="c1dcd-120">驗證</span><span class="sxs-lookup"><span data-stu-id="c1dcd-120">Valid</span></span>|<span data-ttu-id="c1dcd-121">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-121">ValidationStates</span></span>|<span data-ttu-id="c1dcd-122">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-122">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="c1dcd-123">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-123">InvalidFocused</span></span>|<span data-ttu-id="c1dcd-124">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-124">ValidationStates</span></span>|<span data-ttu-id="c1dcd-125"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-125">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-126">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-126">InvalidUnfocused</span></span>|<span data-ttu-id="c1dcd-127">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-127">ValidationStates</span></span>|<span data-ttu-id="c1dcd-128"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-128">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarItem 組件  
- 下表列出 <xref:System.Windows.Controls.Primitives.CalendarItem> 控制項的具名組件。  
+## <a name="calendaritem-parts"></a><span data-ttu-id="c1dcd-129">CalendarItem 組件</span><span class="sxs-lookup"><span data-stu-id="c1dcd-129">CalendarItem Parts</span></span>  
+ <span data-ttu-id="c1dcd-130">下表列出的具名組件<xref:System.Windows.Controls.Primitives.CalendarItem>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-130">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.CalendarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="c1dcd-131">組件</span><span class="sxs-lookup"><span data-stu-id="c1dcd-131">Part</span></span>|<span data-ttu-id="c1dcd-132">類型</span><span class="sxs-lookup"><span data-stu-id="c1dcd-132">Type</span></span>|<span data-ttu-id="c1dcd-133">說明</span><span class="sxs-lookup"><span data-stu-id="c1dcd-133">Description</span></span>|  
 |-|-|-|  
-|組件|型別|描述|  
-|PART\_Root|<xref:System.Windows.FrameworkElement>|控制項的根目錄。|  
-|PART\_PreviousButton|<xref:System.Windows.Controls.Button>|按下時會顯示行事曆上一頁的按鈕。|  
-|PART\_NextButton|<xref:System.Windows.Controls.Button>|按下時會顯示行事曆下一頁的按鈕。|  
-|PART\_HeaderButton|<xref:System.Windows.Controls.Button>|可在月模式、年模式和十年模式之間切換的按鈕。|  
-|PART\_MonthView|<xref:System.Windows.Controls.Grid>|採用月模式時裝載內容。|  
-|PART\_YearView|<xref:System.Windows.Controls.Grid>|採用年或十年模式時裝載內容。|  
-|PART\_DisabledVisual|<xref:System.Windows.FrameworkElement>|停用狀態的重疊。|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|描述視覺化結構的 <xref:System.Windows.DataTemplate>。|  
+|<span data-ttu-id="c1dcd-134">PART_Root</span><span class="sxs-lookup"><span data-stu-id="c1dcd-134">PART_Root</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="c1dcd-135">控制項的根目錄。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-135">The root of the control.</span></span>|  
+|<span data-ttu-id="c1dcd-136">PART_PreviousButton</span><span class="sxs-lookup"><span data-stu-id="c1dcd-136">PART_PreviousButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="c1dcd-137">按下時會顯示行事曆的上一頁按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-137">The button that displays the previous page of the calendar when it is clicked.</span></span>|  
+|<span data-ttu-id="c1dcd-138">PART_NextButton</span><span class="sxs-lookup"><span data-stu-id="c1dcd-138">PART_NextButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="c1dcd-139">按下時會顯示行事曆的下一頁按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-139">The button that displays the next page of the calendar when it is clicked.</span></span>|  
+|<span data-ttu-id="c1dcd-140">PART_HeaderButton</span><span class="sxs-lookup"><span data-stu-id="c1dcd-140">PART_HeaderButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="c1dcd-141">允許月模式、 年模式和十年模式之間切換按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-141">The button that allows switching between month mode, year mode, and decade mode.</span></span>|  
+|<span data-ttu-id="c1dcd-142">PART_MonthView</span><span class="sxs-lookup"><span data-stu-id="c1dcd-142">PART_MonthView</span></span>|<xref:System.Windows.Controls.Grid>|<span data-ttu-id="c1dcd-143">裝載在月模式中的內容。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-143">Hosts the content when in month mode.</span></span>|  
+|<span data-ttu-id="c1dcd-144">PART_YearView</span><span class="sxs-lookup"><span data-stu-id="c1dcd-144">PART_YearView</span></span>|<xref:System.Windows.Controls.Grid>|<span data-ttu-id="c1dcd-145">裝載在年份或十年模式中的內容。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-145">Hosts the content when in year or decade mode.</span></span>|  
+|<span data-ttu-id="c1dcd-146">PART_DisabledVisual</span><span class="sxs-lookup"><span data-stu-id="c1dcd-146">PART_DisabledVisual</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="c1dcd-147">停用狀態的重疊。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-147">The overlay for the disabled state.</span></span>|  
+|<span data-ttu-id="c1dcd-148">DayTitleTemplate</span><span class="sxs-lookup"><span data-stu-id="c1dcd-148">DayTitleTemplate</span></span>|<xref:System.Windows.DataTemplate>|<span data-ttu-id="c1dcd-149"><xref:System.Windows.DataTemplate>視覺化結構描述。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-149">The <xref:System.Windows.DataTemplate> that describes the visual structure.</span></span>|  
   
-## CalendarItem 狀態  
- 下表列出 <xref:System.Windows.Controls.Primitives.CalendarItem> 控制項的可見狀態。  
+## <a name="calendaritem-states"></a><span data-ttu-id="c1dcd-150">CalendarItem 狀態</span><span class="sxs-lookup"><span data-stu-id="c1dcd-150">CalendarItem States</span></span>  
+ <span data-ttu-id="c1dcd-151">下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.CalendarItem>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-151">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="c1dcd-152">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-152">VisualState Name</span></span>|<span data-ttu-id="c1dcd-153">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-153">VisualStateGroup Name</span></span>|<span data-ttu-id="c1dcd-154">說明</span><span class="sxs-lookup"><span data-stu-id="c1dcd-154">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal State|CommonStates|預設狀態。|  
-|Disabled State|CommonStates|<xref:System.Windows.UIElement.IsEnabled%2A> 屬性是 `false` 時的行事曆狀態。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="c1dcd-155">一般狀態</span><span class="sxs-lookup"><span data-stu-id="c1dcd-155">Normal State</span></span>|<span data-ttu-id="c1dcd-156">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-156">CommonStates</span></span>|<span data-ttu-id="c1dcd-157">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-157">The default state.</span></span>|  
+|<span data-ttu-id="c1dcd-158">停用狀態</span><span class="sxs-lookup"><span data-stu-id="c1dcd-158">Disabled State</span></span>|<span data-ttu-id="c1dcd-159">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-159">CommonStates</span></span>|<span data-ttu-id="c1dcd-160">行事曆的狀態時<xref:System.Windows.UIElement.IsEnabled%2A>屬性是`false`。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-160">The state of the calendar when the <xref:System.Windows.UIElement.IsEnabled%2A> property is `false`.</span></span>|  
+|<span data-ttu-id="c1dcd-161">驗證</span><span class="sxs-lookup"><span data-stu-id="c1dcd-161">Valid</span></span>|<span data-ttu-id="c1dcd-162">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-162">ValidationStates</span></span>|<span data-ttu-id="c1dcd-163">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-163">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="c1dcd-164">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-164">InvalidFocused</span></span>|<span data-ttu-id="c1dcd-165">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-165">ValidationStates</span></span>|<span data-ttu-id="c1dcd-166"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-166">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-167">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-167">InvalidUnfocused</span></span>|<span data-ttu-id="c1dcd-168">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-168">ValidationStates</span></span>|<span data-ttu-id="c1dcd-169"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-169">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
+|<span data-ttu-id="c1dcd-170">驗證</span><span class="sxs-lookup"><span data-stu-id="c1dcd-170">Valid</span></span>|<span data-ttu-id="c1dcd-171">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-171">ValidationStates</span></span>|<span data-ttu-id="c1dcd-172">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-172">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="c1dcd-173">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-173">InvalidFocused</span></span>|<span data-ttu-id="c1dcd-174">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-174">ValidationStates</span></span>|<span data-ttu-id="c1dcd-175"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-175">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-176">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-176">InvalidUnfocused</span></span>|<span data-ttu-id="c1dcd-177">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-177">ValidationStates</span></span>|<span data-ttu-id="c1dcd-178"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-178">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarDayButton 組件  
- <xref:System.Windows.Controls.Primitives.CalendarDayButton> 控制項沒有任何具名組件。  
+## <a name="calendardaybutton-parts"></a><span data-ttu-id="c1dcd-179">CalendarDayButton 組件</span><span class="sxs-lookup"><span data-stu-id="c1dcd-179">CalendarDayButton Parts</span></span>  
+ <span data-ttu-id="c1dcd-180"><xref:System.Windows.Controls.Primitives.CalendarDayButton>控制項沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-180">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> control does not have any named parts.</span></span>  
   
-## CalendarDayButton 狀態  
- 下表列出 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 控制項的可見狀態。  
+## <a name="calendardaybutton-states"></a><span data-ttu-id="c1dcd-181">CalendarDayButton 狀態</span><span class="sxs-lookup"><span data-stu-id="c1dcd-181">CalendarDayButton States</span></span>  
+ <span data-ttu-id="c1dcd-182">下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.CalendarDayButton>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-182">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarDayButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="c1dcd-183">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-183">VisualState Name</span></span>|<span data-ttu-id="c1dcd-184">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-184">VisualStateGroup Name</span></span>|<span data-ttu-id="c1dcd-185">描述</span><span class="sxs-lookup"><span data-stu-id="c1dcd-185">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> 已停用。|  
-|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 上方。|  
-|Pressed|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarDayButton>。|  
-|Selected|SelectionStates|按鈕已選取。|  
-|Unselected|SelectionStates|按鈕未選取。|  
-|CalendarButtonFocused|CalendarButtonFocusStates|按鈕擁有焦點。|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|按鈕沒有焦點。|  
-|Focused|FocusStates|按鈕擁有焦點。|  
-|Unfocused|FocusStates|按鈕沒有焦點。|  
-|Active|ActiveStates|按鈕為作用中。|  
-|Inactive|ActiveStates|按鈕非作用中。|  
-|RegularDay|DayStates|按鈕不是代表 <xref:System.DateTime.Today%2A?displayProperty=fullName>。|  
-|Today|DayStates|按鈕代表 <xref:System.DateTime.Today%2A?displayProperty=fullName>。|  
-|NormalDay|BlackoutDayStates|按鈕代表一個可以選取的日子。|  
-|BlackoutDay|BlackoutDayStates|按鈕代表一個不可選取的日子。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="c1dcd-186">一般</span><span class="sxs-lookup"><span data-stu-id="c1dcd-186">Normal</span></span>|<span data-ttu-id="c1dcd-187">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-187">CommonStates</span></span>|<span data-ttu-id="c1dcd-188">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-188">The default state.</span></span>|  
+|<span data-ttu-id="c1dcd-189">已停用</span><span class="sxs-lookup"><span data-stu-id="c1dcd-189">Disabled</span></span>|<span data-ttu-id="c1dcd-190">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-190">CommonStates</span></span>|<span data-ttu-id="c1dcd-191"><xref:System.Windows.Controls.Primitives.CalendarDayButton>已停用。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-191">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> is disabled.</span></span>|  
+|<span data-ttu-id="c1dcd-192">MouseOver</span><span class="sxs-lookup"><span data-stu-id="c1dcd-192">MouseOver</span></span>|<span data-ttu-id="c1dcd-193">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-193">CommonStates</span></span>|<span data-ttu-id="c1dcd-194">滑鼠指標位於<xref:System.Windows.Controls.Primitives.CalendarDayButton>。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-194">The mouse pointer is positioned over the <xref:System.Windows.Controls.Primitives.CalendarDayButton>.</span></span>|  
+|<span data-ttu-id="c1dcd-195">按下</span><span class="sxs-lookup"><span data-stu-id="c1dcd-195">Pressed</span></span>|<span data-ttu-id="c1dcd-196">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-196">CommonStates</span></span>|<span data-ttu-id="c1dcd-197"><xref:System.Windows.Controls.Primitives.CalendarDayButton>按下。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-197">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> is pressed.</span></span>|  
+|<span data-ttu-id="c1dcd-198">已選取</span><span class="sxs-lookup"><span data-stu-id="c1dcd-198">Selected</span></span>|<span data-ttu-id="c1dcd-199">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-199">SelectionStates</span></span>|<span data-ttu-id="c1dcd-200">選取 [] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-200">The button is selected.</span></span>|  
+|<span data-ttu-id="c1dcd-201">未選取</span><span class="sxs-lookup"><span data-stu-id="c1dcd-201">Unselected</span></span>|<span data-ttu-id="c1dcd-202">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-202">SelectionStates</span></span>|<span data-ttu-id="c1dcd-203">未選取 [] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-203">The button is not selected.</span></span>|  
+|<span data-ttu-id="c1dcd-204">CalendarButtonFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-204">CalendarButtonFocused</span></span>|<span data-ttu-id="c1dcd-205">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-205">CalendarButtonFocusStates</span></span>|<span data-ttu-id="c1dcd-206">按鈕具有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-206">The button has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-207">CalendarButtonUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-207">CalendarButtonUnfocused</span></span>|<span data-ttu-id="c1dcd-208">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-208">CalendarButtonFocusStates</span></span>|<span data-ttu-id="c1dcd-209">按鈕沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-209">The button does not have focus.</span></span>|  
+|<span data-ttu-id="c1dcd-210">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="c1dcd-210">Focused</span></span>|<span data-ttu-id="c1dcd-211">FocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-211">FocusStates</span></span>|<span data-ttu-id="c1dcd-212">按鈕具有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-212">The button has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-213">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="c1dcd-213">Unfocused</span></span>|<span data-ttu-id="c1dcd-214">FocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-214">FocusStates</span></span>|<span data-ttu-id="c1dcd-215">按鈕沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-215">The button does not have focus.</span></span>|  
+|<span data-ttu-id="c1dcd-216">作用中</span><span class="sxs-lookup"><span data-stu-id="c1dcd-216">Active</span></span>|<span data-ttu-id="c1dcd-217">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-217">ActiveStates</span></span>|<span data-ttu-id="c1dcd-218">作用中 按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-218">The button is active.</span></span>|  
+|<span data-ttu-id="c1dcd-219">非使用中</span><span class="sxs-lookup"><span data-stu-id="c1dcd-219">Inactive</span></span>|<span data-ttu-id="c1dcd-220">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-220">ActiveStates</span></span>|<span data-ttu-id="c1dcd-221">[] 按鈕未作用中。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-221">The button is inactive.</span></span>|  
+|<span data-ttu-id="c1dcd-222">RegularDay</span><span class="sxs-lookup"><span data-stu-id="c1dcd-222">RegularDay</span></span>|<span data-ttu-id="c1dcd-223">DayStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-223">DayStates</span></span>|<span data-ttu-id="c1dcd-224">不代表按鈕<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-224">The button does not represent <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="c1dcd-225">今天</span><span class="sxs-lookup"><span data-stu-id="c1dcd-225">Today</span></span>|<span data-ttu-id="c1dcd-226">DayStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-226">DayStates</span></span>|<span data-ttu-id="c1dcd-227">表示按鈕<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-227">The button represents <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="c1dcd-228">NormalDay</span><span class="sxs-lookup"><span data-stu-id="c1dcd-228">NormalDay</span></span>|<span data-ttu-id="c1dcd-229">BlackoutDayStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-229">BlackoutDayStates</span></span>|<span data-ttu-id="c1dcd-230">[] 按鈕，表示可以選取一天。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-230">The button represents a day that can be selected.</span></span>|  
+|<span data-ttu-id="c1dcd-231">BlackoutDay</span><span class="sxs-lookup"><span data-stu-id="c1dcd-231">BlackoutDay</span></span>|<span data-ttu-id="c1dcd-232">BlackoutDayStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-232">BlackoutDayStates</span></span>|<span data-ttu-id="c1dcd-233">[] 按鈕，表示不選取一天。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-233">The button represents a day that cannot be selected.</span></span>|  
+|<span data-ttu-id="c1dcd-234">驗證</span><span class="sxs-lookup"><span data-stu-id="c1dcd-234">Valid</span></span>|<span data-ttu-id="c1dcd-235">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-235">ValidationStates</span></span>|<span data-ttu-id="c1dcd-236">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-236">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="c1dcd-237">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-237">InvalidFocused</span></span>|<span data-ttu-id="c1dcd-238">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-238">ValidationStates</span></span>|<span data-ttu-id="c1dcd-239"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-239">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-240">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-240">InvalidUnfocused</span></span>|<span data-ttu-id="c1dcd-241">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-241">ValidationStates</span></span>|<span data-ttu-id="c1dcd-242"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-242">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarButton 組件  
- <xref:System.Windows.Controls.Primitives.CalendarButton> 控制項沒有任何具名組件。  
+## <a name="calendarbutton-parts"></a><span data-ttu-id="c1dcd-243">CalendarButton 組件</span><span class="sxs-lookup"><span data-stu-id="c1dcd-243">CalendarButton Parts</span></span>  
+ <span data-ttu-id="c1dcd-244"><xref:System.Windows.Controls.Primitives.CalendarButton>控制項沒有任何已命名的組件。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-244">The <xref:System.Windows.Controls.Primitives.CalendarButton> control does not have any named parts.</span></span>  
   
-## CalendarButton 狀態  
- 下表列出 <xref:System.Windows.Controls.Primitives.CalendarButton> 控制項的可見狀態。  
+## <a name="calendarbutton-states"></a><span data-ttu-id="c1dcd-245">CalendarButton 狀態</span><span class="sxs-lookup"><span data-stu-id="c1dcd-245">CalendarButton States</span></span>  
+ <span data-ttu-id="c1dcd-246">下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.CalendarButton>控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-246">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="c1dcd-247">VisualState 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-247">VisualState Name</span></span>|<span data-ttu-id="c1dcd-248">VisualStateGroup 名稱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-248">VisualStateGroup Name</span></span>|<span data-ttu-id="c1dcd-249">描述</span><span class="sxs-lookup"><span data-stu-id="c1dcd-249">Description</span></span>|  
 |-|-|-|  
-|VisualState 名稱|VisualStateGroup 名稱|描述|  
-|Normal|CommonStates|預設狀態。|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> 已停用。|  
-|MouseOver|CommonStates|滑鼠指標位於 <xref:System.Windows.Controls.Primitives.CalendarButton> 上方。|  
-|Pressed|CommonStates|已按下 <xref:System.Windows.Controls.Primitives.CalendarButton>。|  
-|Selected|SelectionStates|按鈕已選取。|  
-|Unselected|SelectionStates|按鈕未選取。|  
-|CalendarButtonFocused|CalendarButtonFocusStates|按鈕擁有焦點。|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|按鈕沒有焦點。|  
-|Focused|FocusStates|按鈕擁有焦點。|  
-|Unfocused|FocusStates|按鈕沒有焦點。|  
-|Active|ActiveStates|按鈕為作用中。|  
-|Inactive|ActiveStates|按鈕非作用中。|  
-|Valid|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，且 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項擁有焦點。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> 附加屬性為 `true` 且控制項沒有焦點。|  
+|<span data-ttu-id="c1dcd-250">一般</span><span class="sxs-lookup"><span data-stu-id="c1dcd-250">Normal</span></span>|<span data-ttu-id="c1dcd-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-251">CommonStates</span></span>|<span data-ttu-id="c1dcd-252">預設狀態。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-252">The default state.</span></span>|  
+|<span data-ttu-id="c1dcd-253">已停用</span><span class="sxs-lookup"><span data-stu-id="c1dcd-253">Disabled</span></span>|<span data-ttu-id="c1dcd-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-254">CommonStates</span></span>|<span data-ttu-id="c1dcd-255"><xref:System.Windows.Controls.Primitives.CalendarButton>已停用。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-255">The <xref:System.Windows.Controls.Primitives.CalendarButton> is disabled.</span></span>|  
+|<span data-ttu-id="c1dcd-256">MouseOver</span><span class="sxs-lookup"><span data-stu-id="c1dcd-256">MouseOver</span></span>|<span data-ttu-id="c1dcd-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-257">CommonStates</span></span>|<span data-ttu-id="c1dcd-258">滑鼠指標位於<xref:System.Windows.Controls.Primitives.CalendarButton>。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-258">The mouse pointer is positioned over the <xref:System.Windows.Controls.Primitives.CalendarButton>.</span></span>|  
+|<span data-ttu-id="c1dcd-259">按下</span><span class="sxs-lookup"><span data-stu-id="c1dcd-259">Pressed</span></span>|<span data-ttu-id="c1dcd-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-260">CommonStates</span></span>|<span data-ttu-id="c1dcd-261"><xref:System.Windows.Controls.Primitives.CalendarButton>按下。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-261">The <xref:System.Windows.Controls.Primitives.CalendarButton> is pressed.</span></span>|  
+|<span data-ttu-id="c1dcd-262">已選取</span><span class="sxs-lookup"><span data-stu-id="c1dcd-262">Selected</span></span>|<span data-ttu-id="c1dcd-263">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-263">SelectionStates</span></span>|<span data-ttu-id="c1dcd-264">選取 [] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-264">The button is selected.</span></span>|  
+|<span data-ttu-id="c1dcd-265">未選取</span><span class="sxs-lookup"><span data-stu-id="c1dcd-265">Unselected</span></span>|<span data-ttu-id="c1dcd-266">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-266">SelectionStates</span></span>|<span data-ttu-id="c1dcd-267">未選取 [] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-267">The button is not selected.</span></span>|  
+|<span data-ttu-id="c1dcd-268">CalendarButtonFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-268">CalendarButtonFocused</span></span>|<span data-ttu-id="c1dcd-269">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-269">CalendarButtonFocusStates</span></span>|<span data-ttu-id="c1dcd-270">按鈕具有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-270">The button has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-271">CalendarButtonUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-271">CalendarButtonUnfocused</span></span>|<span data-ttu-id="c1dcd-272">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-272">CalendarButtonFocusStates</span></span>|<span data-ttu-id="c1dcd-273">按鈕沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-273">The button does not have focus.</span></span>|  
+|<span data-ttu-id="c1dcd-274">已取得焦點</span><span class="sxs-lookup"><span data-stu-id="c1dcd-274">Focused</span></span>|<span data-ttu-id="c1dcd-275">FocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-275">FocusStates</span></span>|<span data-ttu-id="c1dcd-276">按鈕具有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-276">The button has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-277">未取得焦點</span><span class="sxs-lookup"><span data-stu-id="c1dcd-277">Unfocused</span></span>|<span data-ttu-id="c1dcd-278">FocusStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-278">FocusStates</span></span>|<span data-ttu-id="c1dcd-279">按鈕沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-279">The button does not have focus.</span></span>|  
+|<span data-ttu-id="c1dcd-280">作用中</span><span class="sxs-lookup"><span data-stu-id="c1dcd-280">Active</span></span>|<span data-ttu-id="c1dcd-281">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-281">ActiveStates</span></span>|<span data-ttu-id="c1dcd-282">作用中 按鈕。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-282">The button is active.</span></span>|  
+|<span data-ttu-id="c1dcd-283">非使用中</span><span class="sxs-lookup"><span data-stu-id="c1dcd-283">Inactive</span></span>|<span data-ttu-id="c1dcd-284">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-284">ActiveStates</span></span>|<span data-ttu-id="c1dcd-285">[] 按鈕未作用中。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-285">The button is inactive.</span></span>|  
+|<span data-ttu-id="c1dcd-286">驗證</span><span class="sxs-lookup"><span data-stu-id="c1dcd-286">Valid</span></span>|<span data-ttu-id="c1dcd-287">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-287">ValidationStates</span></span>|<span data-ttu-id="c1dcd-288">此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-288">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="c1dcd-289">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-289">InvalidFocused</span></span>|<span data-ttu-id="c1dcd-290">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-290">ValidationStates</span></span>|<span data-ttu-id="c1dcd-291"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-291">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="c1dcd-292">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1dcd-292">InvalidUnfocused</span></span>|<span data-ttu-id="c1dcd-293">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1dcd-293">ValidationStates</span></span>|<span data-ttu-id="c1dcd-294"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-294">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Calendar ControlTemplate 範例  
- 下列範例顯示如何定義 <xref:System.Windows.Controls.Calendar> 控制項的 <xref:System.Windows.Controls.ControlTemplate> 以及關聯的型別。  
+## <a name="calendar-controltemplate-example"></a><span data-ttu-id="c1dcd-295">行事曆 ControlTemplate 範例</span><span class="sxs-lookup"><span data-stu-id="c1dcd-295">Calendar ControlTemplate Example</span></span>  
+ <span data-ttu-id="c1dcd-296">下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.Calendar>控制項和相關聯的類型。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-296">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Calendar> control and associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
+ [!code-xaml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
- 前述範例使用了下列一或多項資源。  
+ <span data-ttu-id="c1dcd-297">上述範例使用下列一或多項資源。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-297">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 如需完整範例，請參閱          [使用 ControlTemplates 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="c1dcd-298">如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。</span><span class="sxs-lookup"><span data-stu-id="c1dcd-298">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)   
- [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="c1dcd-299">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1dcd-299">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="c1dcd-300">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="c1dcd-300">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="c1dcd-301">控制項自訂</span><span class="sxs-lookup"><span data-stu-id="c1dcd-301">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="c1dcd-302">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="c1dcd-302">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="c1dcd-303">透過建立 ControlTemplate 自訂現有控制項的外觀</span><span class="sxs-lookup"><span data-stu-id="c1dcd-303">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

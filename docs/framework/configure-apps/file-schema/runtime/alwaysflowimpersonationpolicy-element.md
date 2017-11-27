@@ -1,88 +1,114 @@
 ---
-title: "&lt;alwaysFlowImpersonationPolicy&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/alwaysFlowImpersonationPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#alwaysFlowImpersonationPolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<alwaysFlowImpersonationPolicy> 項目"
-  - "alwaysFlowImpersonationPolicy 項目"
+title: "&lt;alwaysFlowImpersonationPolicy&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/alwaysFlowImpersonationPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#alwaysFlowImpersonationPolicy
+helpviewer_keywords:
+- alwaysFlowImpersonationPolicy element
+- <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 52cdb26f6f78ed740efa1f27958368e8c7e2ae78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;alwaysFlowImpersonationPolicy&gt; 項目
-指定 Windows 識別一定會跨非同步點流動，不論如何執行模擬。  
+# <a name="ltalwaysflowimpersonationpolicygt-element"></a><span data-ttu-id="c793d-102">&lt;alwaysFlowImpersonationPolicy&gt;項目</span><span class="sxs-lookup"><span data-stu-id="c793d-102">&lt;alwaysFlowImpersonationPolicy&gt; Element</span></span>
+<span data-ttu-id="c793d-103">指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。</span><span class="sxs-lookup"><span data-stu-id="c793d-103">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>  
   
-## 語法  
+ <span data-ttu-id="c793d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c793d-104">\<configuration></span></span>  
+<span data-ttu-id="c793d-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="c793d-105">\<runtime></span></span>  
+<span data-ttu-id="c793d-106">\<alwaysFlowImpersonationPolicy ></span><span class="sxs-lookup"><span data-stu-id="c793d-106">\<alwaysFlowImpersonationPolicy></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c793d-107">語法</span><span class="sxs-lookup"><span data-stu-id="c793d-107">Syntax</span></span>  
+  
+```xml  
 <alwaysFlowImpersonationPolicy    
   enabled="true|false"/>  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c793d-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c793d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="c793d-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c793d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="c793d-110">屬性</span><span class="sxs-lookup"><span data-stu-id="c793d-110">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|`enabled`|必要屬性。<br /><br /> 指出 Windows 識別是否會跨非同步點流動。|  
+|<span data-ttu-id="c793d-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c793d-111">Attribute</span></span>|<span data-ttu-id="c793d-112">描述</span><span class="sxs-lookup"><span data-stu-id="c793d-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="c793d-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="c793d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="c793d-114">指出是否 Windows 身分識別流動到非同步的點。</span><span class="sxs-lookup"><span data-stu-id="c793d-114">Indicates whether the Windows identity flows across asynchronous points.</span></span>|  
   
-## 啟用屬性  
+## <a name="enabled-attribute"></a><span data-ttu-id="c793d-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="c793d-115">enabled Attribute</span></span>  
   
-|值|描述|  
-|-------|--------|  
-|`false`|Windows 識別不會跨非同步點流動，除非是透過如 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 的 Managed 方法來執行模擬。  這是預設值。|  
-|`true`|Windows 識別一定會跨非同步點流動，不論如何執行模擬。|  
+|<span data-ttu-id="c793d-116">值</span><span class="sxs-lookup"><span data-stu-id="c793d-116">Value</span></span>|<span data-ttu-id="c793d-117">說明</span><span class="sxs-lookup"><span data-stu-id="c793d-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="c793d-118">身分識別不會流動到非同步的點，除非透過執行模擬的 Windows managed 方法例如<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>。</span><span class="sxs-lookup"><span data-stu-id="c793d-118">The Windows identity does not flow across asynchronous points, unless the impersonation is performed through managed methods such as <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>.</span></span> <span data-ttu-id="c793d-119">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="c793d-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="c793d-120">Windows 識別一律流動到非同步的點，無論模擬執行的方式。</span><span class="sxs-lookup"><span data-stu-id="c793d-120">The Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="c793d-121">子元素</span><span class="sxs-lookup"><span data-stu-id="c793d-121">Child Elements</span></span>  
+ <span data-ttu-id="c793d-122">無。</span><span class="sxs-lookup"><span data-stu-id="c793d-122">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="c793d-123">父項目</span><span class="sxs-lookup"><span data-stu-id="c793d-123">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
+|<span data-ttu-id="c793d-124">項目</span><span class="sxs-lookup"><span data-stu-id="c793d-124">Element</span></span>|<span data-ttu-id="c793d-125">描述</span><span class="sxs-lookup"><span data-stu-id="c793d-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="c793d-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="c793d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="c793d-127">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="c793d-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## 備註  
- 在 .NET Framework 1.0 和 1.1 版中，Windows 識別不會跨非同步點流動。  在 .NET Framework 2.0 版中，有一個 <xref:System.Threading.ExecutionContext> 物件包含了與目前執行之執行緒有關的資訊，而且它會在應用程式定義域內跨非同步點流動。  <xref:System.Security.Principal.WindowsIdentity> 也會當做此資訊的一部分進行跨非同步點流動，但前提是模擬作業是利用類似 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 的 Managed 方法所完成，而不是透過類似原生方法的平台叫用等其他方法來完成。  這個項目是用來指定 Windows 識別不會跨非同步點流動，不論模擬作業是如何完成。  
+## <a name="remarks"></a><span data-ttu-id="c793d-128">備註</span><span class="sxs-lookup"><span data-stu-id="c793d-128">Remarks</span></span>  
+ <span data-ttu-id="c793d-129">在.NET framework 1.0 和 1.1 版中，Windows 身分識別不會流動到非同步的點。</span><span class="sxs-lookup"><span data-stu-id="c793d-129">In the .NET Framework versions 1.0 and 1.1, the Windows identity does not flow across asynchronous points.</span></span> <span data-ttu-id="c793d-130">在.NET Framework 2.0 版中，沒有<xref:System.Threading.ExecutionContext>物件，包含目前執行的執行緒的相關資訊，並傳送到非同步應用程式定義域中的點。</span><span class="sxs-lookup"><span data-stu-id="c793d-130">In the .NET Framework version 2.0, there is an <xref:System.Threading.ExecutionContext> object that contains information about the currently executing thread, and flows it across asynchronous points within an application domain.</span></span> <span data-ttu-id="c793d-131"><xref:System.Security.Principal.WindowsIdentity>也流程一部分的資訊提供使用達成模擬流動到非同步的點，管理方法例如<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>並不能透過其他方式如平台叫用原生方法。</span><span class="sxs-lookup"><span data-stu-id="c793d-131">The <xref:System.Security.Principal.WindowsIdentity> also flows as part of the information that flows across the asynchronous points, provided the impersonation was achieved using managed methods such as <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> and not through other means such as platform invoke to native methods.</span></span> <span data-ttu-id="c793d-132">這個項目用來指定 Windows 身分識別沒有流經非同步的點，無論模擬所達成的效果。</span><span class="sxs-lookup"><span data-stu-id="c793d-132">This element is used to specify that the Windows identity does flow across asynchronous points, regardless of how the impersonation was achieved.</span></span>  
   
- 您可以使用兩種其他方式來更改此預設行為：  
+ <span data-ttu-id="c793d-133">您可以變更此預設行為，另外兩種方式：</span><span class="sxs-lookup"><span data-stu-id="c793d-133">You can alter this default behavior in two other ways:</span></span>  
   
-1.  針對個別執行緒在 Managed 程式碼中進行。  
+1.  <span data-ttu-id="c793d-134">在每個執行緒為基礎的 managed 程式碼。</span><span class="sxs-lookup"><span data-stu-id="c793d-134">In managed code on a per-thread basis.</span></span>  
   
-     您可以針對個別執行緒來隱藏此流程，其方式是使用 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=fullName>、<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=fullName> 或 <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=fullName> 方法修改 <xref:System.Threading.ExecutionContext> 和 <xref:System.Security.SecurityContext> 設定。  
+     <span data-ttu-id="c793d-135">您可以藉由修改隱藏每個執行緒為基礎的流程<xref:System.Threading.ExecutionContext>和<xref:System.Security.SecurityContext>設定使用<xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>， <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>，或<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="c793d-135">You can suppress the flow on a per-thread basis by modifying the <xref:System.Threading.ExecutionContext> and <xref:System.Security.SecurityContext> settings by using the <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, or <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  在 Unmanaged 裝載介面的呼叫中，用來載入 Common Language Runtime \(CLR\)。  
+2.  <span data-ttu-id="c793d-136">在載入 common language runtime (CLR) 的 unmanaged 裝載介面的呼叫。</span><span class="sxs-lookup"><span data-stu-id="c793d-136">In the call to the unmanaged hosting interface to load the common language runtime (CLR).</span></span>  
   
-     如果使用 Unmanaged 裝載介面 \(而非單一 Managed 可執行檔\) 來載入 CLR，您可以在 [CorBindToRuntimeEx 函式](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 函式的呼叫中指定特殊旗標。  若要為整個處理序啟用相容性模式，請將 [CorBindToRuntimeEx 函式](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 的 `flags` 參數設定為 STARTUP\_ALWAYSFLOW\_IMPERSONATION。  
+     <span data-ttu-id="c793d-137">如果載入 CLR 用於 unmanaged 裝載介面 （而不是簡單的 managed 可執行檔），您可以呼叫中指定的特殊旗標[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="c793d-137">If an unmanaged hosting interface (instead of a simple managed executable) is used to load the CLR, you can specify a special flag in the call to the [CorBindToRuntimeEx Function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function.</span></span> <span data-ttu-id="c793d-138">若要啟用的整個程序的相容性模式，`flags`參數[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)至`STARTUP_ALWAYSFLOW_IMPERSONATION`。</span><span class="sxs-lookup"><span data-stu-id="c793d-138">To enable the compatibility mode for the entire process, set the `flags` parameter for [CorBindToRuntimeEx Function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) to `STARTUP_ALWAYSFLOW_IMPERSONATION`.</span></span>  
   
-## 組態檔  
- 這個項目只能在應用程式組態檔中使用。  
+## <a name="configuration-file"></a><span data-ttu-id="c793d-139">組態檔</span><span class="sxs-lookup"><span data-stu-id="c793d-139">Configuration File</span></span>  
+ <span data-ttu-id="c793d-140">在.NET Framework 應用程式中，此項目只可以用於與應用程式組態檔。</span><span class="sxs-lookup"><span data-stu-id="c793d-140">In a .NET Framework application, this element can be used only in the application configuration file.</span></span>  
   
-## 範例  
- 下列範例將示範如何指定 Windows 識別會跨非同步點流動，即使是透過 Managed 方法以外的方式來完成模擬。  
+ <span data-ttu-id="c793d-141">可以位於 aspnet.config 檔案中設定 ASP.NET 應用程式，模擬流程\<Windows 資料夾 > \Microsoft.NET\Framework\vx.x.xxxx 目錄。</span><span class="sxs-lookup"><span data-stu-id="c793d-141">For an ASP.NET application, the impersonation flow can be configured in the aspnet.config file found in the \<Windows Folder>\Microsoft.NET\Framework\vx.x.xxxx directory.</span></span>  
+  
+ <span data-ttu-id="c793d-142">預設的 ASP.NET 中，會停用模擬流程 aspnet.config 檔案中的使用下列組態設定：</span><span class="sxs-lookup"><span data-stu-id="c793d-142">ASP.NET by default disables the impersonation flow in the aspnet.config file by using the following configuration settings:</span></span>  
   
 ```  
+configuration>  
+   <runtime>  
+      <legacyImpersonationPolicy enabled="true"/>  
+      <alwaysFlowImpersonationPolicy enabled="false"/>  
+   </runtime>  
+</configuration>  
+```  
+  
+ <span data-ttu-id="c793d-143">在 ASP.NET 中，如果您想要允許的模擬流程相反地，您必須明確地使用下列組態設定：</span><span class="sxs-lookup"><span data-stu-id="c793d-143">In ASP.NET, if you want to allow the flow of impersonation instead, you must explicitly use the following configuration settings:</span></span>  
+  
+```xml  
+<configuration>  
+   <runtime>  
+      <legacyImpersonationPolicy enabled="false"/>  
+      <alwaysFlowImpersonationPolicy enabled="true"/>  
+   </runtime>  
+</configuration>  
+```  
+  
+## <a name="example"></a><span data-ttu-id="c793d-144">範例</span><span class="sxs-lookup"><span data-stu-id="c793d-144">Example</span></span>  
+ <span data-ttu-id="c793d-145">下列範例會示範如何指定 Windows 身分識別流動到非同步的點，即使模擬透過 managed 方法以外的方式來達成。</span><span class="sxs-lookup"><span data-stu-id="c793d-145">The following example shows how to specify that the Windows identity flows across asynchronous points, even when the impersonation is achieved through means other than managed methods.</span></span>  
+  
+```xml  
 <configuration>  
   <runtime>  
     <alwaysFlowImpersonationPolicy enabled="true"/>  
@@ -90,7 +116,7 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<legacyImpersonationPolicy\> 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+## <a name="see-also"></a><span data-ttu-id="c793d-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c793d-146">See Also</span></span>  
+ [<span data-ttu-id="c793d-147">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="c793d-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="c793d-148">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="c793d-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="c793d-149">\<legacyImpersonationPolicy > 項目</span><span class="sxs-lookup"><span data-stu-id="c793d-149">\<legacyImpersonationPolicy> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

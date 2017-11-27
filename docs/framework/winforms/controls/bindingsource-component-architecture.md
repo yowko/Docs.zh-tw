@@ -1,188 +1,189 @@
 ---
-title: "BindingSource 元件架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource 元件 [Windows Form], 關於 BindingSource 元件"
-  - "BindingSource 元件, 架構"
-  - "資料繫結, BindingSource 元件"
-  - "Windows Form, 資料繫結"
+title: "BindingSource 元件架構"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BindingSource component [Windows Forms], architecture
+- Windows Forms, data binding
+- BindingSource component [Windows Forms], about BindingSource component
+- data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# BindingSource 元件架構
-透過 <xref:System.Windows.Forms.BindingSource> 元件，您可以將所有的 Windows Form 控制項全部繫結至資料來源。  
+# <a name="bindingsource-component-architecture"></a><span data-ttu-id="60ab6-102">BindingSource 元件架構</span><span class="sxs-lookup"><span data-stu-id="60ab6-102">BindingSource Component Architecture</span></span>
+<span data-ttu-id="60ab6-103">與<xref:System.Windows.Forms.BindingSource>元件，都將資料來源所有 Windows Form 控制項繫都結。</span><span class="sxs-lookup"><span data-stu-id="60ab6-103">With the <xref:System.Windows.Forms.BindingSource> component, you can universally bind  all Windows Forms controls to data sources.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource> 元件簡化了將控制項繫結至資料來源的程序，同時提供了優於舊式資料繫結的下列各項特點：  
+ <span data-ttu-id="60ab6-104"><xref:System.Windows.Forms.BindingSource>元件可簡化將控制項繫結至資料來源的程序，並提供傳統資料繫結的下列優勢：</span><span class="sxs-lookup"><span data-stu-id="60ab6-104">The <xref:System.Windows.Forms.BindingSource> component simplifies the process of binding controls to a data source and provides the following advantages over traditional data binding:</span></span>  
   
--   可以讓商務物件 \(Business Object\) 使用設計階段繫結。  
+-   <span data-ttu-id="60ab6-105">啟用商務物件的設計階段繫結。</span><span class="sxs-lookup"><span data-stu-id="60ab6-105">Enables design-time binding to business objects.</span></span>  
   
--   可以在設計階段封裝 <xref:System.Windows.Forms.CurrencyManager> 功能和公開 \(Expose\) <xref:System.Windows.Forms.CurrencyManager> 事件。  
+-   <span data-ttu-id="60ab6-106">封裝<xref:System.Windows.Forms.CurrencyManager>功能而且會公開<xref:System.Windows.Forms.CurrencyManager>設計階段的事件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-106">Encapsulates <xref:System.Windows.Forms.CurrencyManager> functionality and exposes <xref:System.Windows.Forms.CurrencyManager> events at design time.</span></span>  
   
--   藉由為原本不支援清單變更告知的資料來源，提供清單變更告知功能，可以簡化支援 <xref:System.ComponentModel.IBindingList> 介面的清單建立程序。  
+-   <span data-ttu-id="60ab6-107">可簡化建立清單支援<xref:System.ComponentModel.IBindingList>原本不支援清單的資料來源變更通知，提供清單變更通知的介面。</span><span class="sxs-lookup"><span data-stu-id="60ab6-107">Simplifies creating a list that supports the <xref:System.ComponentModel.IBindingList> interface by providing list change notification for data sources that do not natively support list change notification.</span></span>  
   
--   為 <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=fullName> 方法提供了擴充性點。  
+-   <span data-ttu-id="60ab6-108">提供的擴充點<xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="60ab6-108">Provides an extensibility point for the <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType> method.</span></span>  
   
--   在資料來源和控制項之間提供了間接取值 \(Indirection\) 層級。  當資料來源可以在執行階段變更時，間接取值非常重要。  
+-   <span data-ttu-id="60ab6-109">提供資料來源控制項之間的間接取值層的級。</span><span class="sxs-lookup"><span data-stu-id="60ab6-109">Provides a level of indirection between the data source and the control.</span></span> <span data-ttu-id="60ab6-110">在執行階段可能會變更資料來源時，重要這個間接取值。</span><span class="sxs-lookup"><span data-stu-id="60ab6-110">This indirection is important when the data source may change at run time.</span></span>  
   
--   可以與其他資料相關的 Windows Form 控制項 \(特別是 <xref:System.Windows.Forms.BindingNavigator> 和 <xref:System.Windows.Forms.DataGridView> 控制項\) 相互操作。  
+-   <span data-ttu-id="60ab6-111">與其他資料相關的 Windows Form 控制項，特別是相互操作<xref:System.Windows.Forms.BindingNavigator>和<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="60ab6-111">Interoperates with other data-related Windows Forms controls, specifically the <xref:System.Windows.Forms.BindingNavigator> and the <xref:System.Windows.Forms.DataGridView> controls.</span></span>  
   
- 基於這些理由，<xref:System.Windows.Forms.BindingSource> 元件是當您將 Windows Form 控制項繫結至資料來源時的慣用方式。  
+ <span data-ttu-id="60ab6-112">基於這些理由，<xref:System.Windows.Forms.BindingSource>元件是您的 Windows Form 控制項繫結至資料來源的慣用的方式。</span><span class="sxs-lookup"><span data-stu-id="60ab6-112">For these reasons, the <xref:System.Windows.Forms.BindingSource> component is the preferred way to bind your Windows Forms controls to data sources.</span></span>  
   
-## BindingSource 功能  
- <xref:System.Windows.Forms.BindingSource> 元件提供了數種可將控制項繫結至資料的功能。  利用這些功能，幾乎不太需要撰寫程式碼，就可以實作大部分的資料繫結案例。  
+## <a name="bindingsource-features"></a><span data-ttu-id="60ab6-113">BindingSource 功能</span><span class="sxs-lookup"><span data-stu-id="60ab6-113">BindingSource Features</span></span>  
+ <span data-ttu-id="60ab6-114"><xref:System.Windows.Forms.BindingSource>元件提供數個功能的控制項繫結至資料。</span><span class="sxs-lookup"><span data-stu-id="60ab6-114">The <xref:System.Windows.Forms.BindingSource> component provides several features for binding controls to data.</span></span> <span data-ttu-id="60ab6-115">使用這些功能，您可以實作使用幾乎任何撰寫程式碼的大部分資料繫結案例。</span><span class="sxs-lookup"><span data-stu-id="60ab6-115">With these features, you can implement most data-binding scenarios with almost no coding on your part.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource> 元件藉由提供一致的介面做為存取各種不同資料來源之用，即可完成此項工作。  這意味著不論是繫結至何種型別，都是使用相同的程序。  例如，可以將 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性附加至 <xref:System.Data.DataSet> 或商務物件。這兩種情況都是使用同一組屬性、方法和事件來管理資料來源。  
+ <span data-ttu-id="60ab6-116"><xref:System.Windows.Forms.BindingSource>元件可完成此作業藉由提供一致的介面來存取許多不同種類的資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-116">The <xref:System.Windows.Forms.BindingSource> component accomplishes this by providing a consistent interface for accessing many different kinds of data sources.</span></span> <span data-ttu-id="60ab6-117">這表示繫結至任何類型，使用相同的程序。</span><span class="sxs-lookup"><span data-stu-id="60ab6-117">This means that you use the same procedure for binding to any type.</span></span> <span data-ttu-id="60ab6-118">例如，您可以將附加<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性<xref:System.Data.DataSet>或商務物件，並以兩種情況下您使用相同的屬性、 方法和事件來操作資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-118">For example, you can attach the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property to a <xref:System.Data.DataSet> or to a business object and in both cases you use the same set of properties, methods, and events to manipulate the data source.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource> 元件所提供的一致介面大幅簡化了資料至控制項的繫結程序。  對於提供變更告知的資料來源型別，<xref:System.Windows.Forms.BindingSource> 元件會自動在控制項與資料來源之間傳遞變更。  對於不提供變更告知的資料來源型別，會提供可讓您引發變更告知的事件。  下列是 <xref:System.Windows.Forms.BindingSource> 元件支援的功能：  
+ <span data-ttu-id="60ab6-119">提供的一致介面<xref:System.Windows.Forms.BindingSource>元件可大幅簡化資料繫結至控制項之程序。</span><span class="sxs-lookup"><span data-stu-id="60ab6-119">The consistent interface provided by the <xref:System.Windows.Forms.BindingSource> component greatly simplifies the process of binding data to controls.</span></span> <span data-ttu-id="60ab6-120">資料來源類型，可提供變更通知，<xref:System.Windows.Forms.BindingSource>元件會自動進行通訊的控制項與資料來源之間的變更。</span><span class="sxs-lookup"><span data-stu-id="60ab6-120">For data-source types that provide change notification, the <xref:System.Windows.Forms.BindingSource> component automatically communicates changes between the control and the data source.</span></span> <span data-ttu-id="60ab6-121">對於不提供變更通知資料來源類型，事件會提供可讓您引發變更通知。</span><span class="sxs-lookup"><span data-stu-id="60ab6-121">For data-source types that do not provide change notification, events are provided that let you raise change notifications.</span></span> <span data-ttu-id="60ab6-122">下列清單顯示所支援的功能<xref:System.Windows.Forms.BindingSource>元件：</span><span class="sxs-lookup"><span data-stu-id="60ab6-122">The following list shows the features supported by the <xref:System.Windows.Forms.BindingSource> component:</span></span>  
   
--   間接取值。  
+-   <span data-ttu-id="60ab6-123">間接取值。</span><span class="sxs-lookup"><span data-stu-id="60ab6-123">Indirection.</span></span>  
   
--   功能轉換管理。  
+-   <span data-ttu-id="60ab6-124">貨幣管理。</span><span class="sxs-lookup"><span data-stu-id="60ab6-124">Currency management.</span></span>  
   
--   資料來源做為清單。  
+-   <span data-ttu-id="60ab6-125">資料來源做為清單。</span><span class="sxs-lookup"><span data-stu-id="60ab6-125">Data source as a list.</span></span>  
   
--   <xref:System.Windows.Forms.BindingSource> 做為 <xref:System.ComponentModel.IBindingList>。  
+-   <span data-ttu-id="60ab6-126"><xref:System.Windows.Forms.BindingSource>做為<xref:System.ComponentModel.IBindingList>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-126"><xref:System.Windows.Forms.BindingSource> as an <xref:System.ComponentModel.IBindingList>.</span></span>  
   
--   建立自訂項目。  
+-   <span data-ttu-id="60ab6-127">建立自訂的項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-127">Custom item creation.</span></span>  
   
--   建立異動項目。  
+-   <span data-ttu-id="60ab6-128">建立交易式的項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-128">Transactional item creation.</span></span>  
   
--   <xref:System.Collections.IEnumerable> 支援。  
+-   <span data-ttu-id="60ab6-129"><xref:System.Collections.IEnumerable>支援。</span><span class="sxs-lookup"><span data-stu-id="60ab6-129"><xref:System.Collections.IEnumerable> support.</span></span>  
   
--   設計階段支援。  
+-   <span data-ttu-id="60ab6-130">設計階段支援。</span><span class="sxs-lookup"><span data-stu-id="60ab6-130">Design-time support.</span></span>  
   
--   靜態 <xref:System.Windows.Forms.ListBindingHelper> 方法。  
+-   <span data-ttu-id="60ab6-131">靜態<xref:System.Windows.Forms.ListBindingHelper>方法。</span><span class="sxs-lookup"><span data-stu-id="60ab6-131">Static <xref:System.Windows.Forms.ListBindingHelper> methods.</span></span>  
   
--   使用 <xref:System.ComponentModel.IBindingListView> 介面進行排序和篩選。  
+-   <span data-ttu-id="60ab6-132">排序和篩選與<xref:System.ComponentModel.IBindingListView>介面。</span><span class="sxs-lookup"><span data-stu-id="60ab6-132">Sorting and filtering with the <xref:System.ComponentModel.IBindingListView> interface.</span></span>  
   
--   使用 <xref:System.Windows.Forms.BindingNavigator> 進行整合。  
+-   <span data-ttu-id="60ab6-133">與整合<xref:System.Windows.Forms.BindingNavigator>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-133">Integration with <xref:System.Windows.Forms.BindingNavigator>.</span></span>  
   
-### 間接  
- <xref:System.Windows.Forms.BindingSource> 元件在資料來源和控制項之間，提供了可以進行間接取值的層級。  您不是將控制項直接繫結至資料來源，而是先將控制項繫結至 <xref:System.Windows.Forms.BindingSource>，然後再將資料來源附加至 <xref:System.Windows.Forms.BindingSource> 元件的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性。  
+### <a name="indirection"></a><span data-ttu-id="60ab6-134">間接</span><span class="sxs-lookup"><span data-stu-id="60ab6-134">Indirection</span></span>  
+ <span data-ttu-id="60ab6-135"><xref:System.Windows.Forms.BindingSource>元件所提供的控制項和資料來源之間的間接取值層級。</span><span class="sxs-lookup"><span data-stu-id="60ab6-135">The <xref:System.Windows.Forms.BindingSource> component provides a level of indirection between a control and a data source.</span></span> <span data-ttu-id="60ab6-136">而不是將控制項繫結至資料來源直接，您將控制項繫結至<xref:System.Windows.Forms.BindingSource>，和附加資料來源以<xref:System.Windows.Forms.BindingSource>元件的<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="60ab6-136">Instead of binding a control directly to a data source, you bind the control to a <xref:System.Windows.Forms.BindingSource>, and you attach the data source to the <xref:System.Windows.Forms.BindingSource> component's <xref:System.Windows.Forms.BindingSource.DataSource%2A> property.</span></span>  
   
- 利用這個間接取值層級，您不需要重新設定控制項繫結即可變更資料來源，  因而能夠：  
+ <span data-ttu-id="60ab6-137">這個層級的間接取值，您可以變更資料來源，而不重設控制項繫結。</span><span class="sxs-lookup"><span data-stu-id="60ab6-137">With this level of indirection, you can change the data source without resetting the control binding.</span></span> <span data-ttu-id="60ab6-138">這可提供下列功能：</span><span class="sxs-lookup"><span data-stu-id="60ab6-138">This gives you the following capabilities:</span></span>  
   
--   將 <xref:System.Windows.Forms.BindingSource> 附加至不同的資料來源，而且同時又能保留目前的控制項繫結。  
+-   <span data-ttu-id="60ab6-139">您可以將附加<xref:System.Windows.Forms.BindingSource>到不同的資料來源，同時保留目前的控制項繫結。</span><span class="sxs-lookup"><span data-stu-id="60ab6-139">You can attach the <xref:System.Windows.Forms.BindingSource> to different data sources while retaining the current control bindings.</span></span>  
   
--   變更資料來源中的項目，然後告知繫結控制項。  如需詳細資訊，請參閱 [如何：使用 BindingSource 反映 Windows Form 控制項中的資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
+-   <span data-ttu-id="60ab6-140">您可以變更資料來源中的項目，並通知繫結的控制項。</span><span class="sxs-lookup"><span data-stu-id="60ab6-140">You can change items in the data source and notify bound controls.</span></span> <span data-ttu-id="60ab6-141">如需詳細資訊，請參閱[How to： 使用 BindingSource 的 Windows Form 控制項中的反映資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。</span><span class="sxs-lookup"><span data-stu-id="60ab6-141">For more information, see [How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).</span></span>  
   
--   可以繫結至 <xref:System.Type>，而不是記憶體中的物件。  如需詳細資訊，請參閱 [如何：將 Windows Form 控制項繫結至類型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。  接著可以在執行階段繫結至物件。  
+-   <span data-ttu-id="60ab6-142">您可以繫結至<xref:System.Type>而不是在記憶體中的物件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-142">You can bind to a <xref:System.Type> instead of an object in memory.</span></span> <span data-ttu-id="60ab6-143">如需詳細資訊，請參閱[How to： 將 Windows Form 控制項繫結的型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。</span><span class="sxs-lookup"><span data-stu-id="60ab6-143">For more information, see [How to: Bind a Windows Forms Control to a Type](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md).</span></span> <span data-ttu-id="60ab6-144">您接著可以在執行階段繫結的物件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-144">You can then bind to an object at run time.</span></span>  
   
-### 貨幣管理  
- <xref:System.Windows.Forms.BindingSource> 元件會實作 <xref:System.Windows.Forms.ICurrencyManagerProvider> 介面，來為您處理貨幣管理。  透過 <xref:System.Windows.Forms.ICurrencyManagerProvider> 介面，除了其他繫結至相同 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 之 <xref:System.Windows.Forms.BindingSource> 的 Currency 管理員以外，您還可以存取 <xref:System.Windows.Forms.BindingSource> 的 Currency 管理員。  
+### <a name="currency-management"></a><span data-ttu-id="60ab6-145">貨幣管理</span><span class="sxs-lookup"><span data-stu-id="60ab6-145">Currency Management</span></span>  
+ <span data-ttu-id="60ab6-146"><xref:System.Windows.Forms.BindingSource>元件實作<xref:System.Windows.Forms.ICurrencyManagerProvider>處理貨幣管理您的介面。</span><span class="sxs-lookup"><span data-stu-id="60ab6-146">The <xref:System.Windows.Forms.BindingSource> component implements the <xref:System.Windows.Forms.ICurrencyManagerProvider> interface to handle currency management for you.</span></span> <span data-ttu-id="60ab6-147">與<xref:System.Windows.Forms.ICurrencyManagerProvider>介面，您也可以存取要 currency 管理員<xref:System.Windows.Forms.BindingSource>，另一個 currency 管理員除了<xref:System.Windows.Forms.BindingSource>繫結至相同<xref:System.Windows.Forms.BindingSource.DataMember%2A>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-147">With the <xref:System.Windows.Forms.ICurrencyManagerProvider> interface, you can also access to the currency manager for a <xref:System.Windows.Forms.BindingSource>, in addition to the currency manager for another <xref:System.Windows.Forms.BindingSource> bound to the same <xref:System.Windows.Forms.BindingSource.DataMember%2A>.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource> 元件可封裝 <xref:System.Windows.Forms.CurrencyManager> 功能和公開最常用的 <xref:System.Windows.Forms.CurrencyManager> 屬性和事件。  下表說明部分與貨幣管理相關的成員。  
+ <span data-ttu-id="60ab6-148"><xref:System.Windows.Forms.BindingSource>元件封裝<xref:System.Windows.Forms.CurrencyManager>功能並公開最常見<xref:System.Windows.Forms.CurrencyManager>屬性和事件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-148">The <xref:System.Windows.Forms.BindingSource> component encapsulates <xref:System.Windows.Forms.CurrencyManager> functionality and exposes the most common <xref:System.Windows.Forms.CurrencyManager> properties and events.</span></span> <span data-ttu-id="60ab6-149">下表說明一些與貨幣管理相關的成員。</span><span class="sxs-lookup"><span data-stu-id="60ab6-149">The following table describes some of the members related to currency management.</span></span>  
   
- <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> 屬性  
- 取得與 <xref:System.Windows.Forms.BindingSource> 關聯的 Currency 管理員。  
+ <span data-ttu-id="60ab6-150"><xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-150"><xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> property</span></span>  
+ <span data-ttu-id="60ab6-151">取得相關聯的 currency 管理員<xref:System.Windows.Forms.BindingSource>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-151">Gets the currency manager associated with the <xref:System.Windows.Forms.BindingSource>.</span></span>  
   
- <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> 方法  
- 如果有其他 <xref:System.Windows.Forms.BindingSource> 繫結至指定的資料成員，則取得它的 Currency 管理員。  
+ <span data-ttu-id="60ab6-152"><xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="60ab6-152"><xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> method</span></span>  
+ <span data-ttu-id="60ab6-153">如果有另一個<xref:System.Windows.Forms.BindingSource>繫結至指定的資料成員，取得其 currency 管理員。</span><span class="sxs-lookup"><span data-stu-id="60ab6-153">If there is another <xref:System.Windows.Forms.BindingSource> bound to the specified data member, gets its currency manager.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource.Current%2A> 屬性  
- 取得資料來源的目前項目。  
+ <span data-ttu-id="60ab6-154"><xref:System.Windows.Forms.BindingSource.Current%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-154"><xref:System.Windows.Forms.BindingSource.Current%2A> property</span></span>  
+ <span data-ttu-id="60ab6-155">取得資料來源的目前項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-155">Gets the current item of the data source.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource.Position%2A> 屬性  
- 取得或設定基礎清單中的目前位置。  
+ <span data-ttu-id="60ab6-156"><xref:System.Windows.Forms.BindingSource.Position%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-156"><xref:System.Windows.Forms.BindingSource.Position%2A> property</span></span>  
+ <span data-ttu-id="60ab6-157">取得或設定基礎清單中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="60ab6-157">Gets or sets the current position in the underlying list.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 方法  
- 將暫止的變更套用至基礎資料來源。  
+ <span data-ttu-id="60ab6-158"><xref:System.Windows.Forms.BindingSource.EndEdit%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="60ab6-158"><xref:System.Windows.Forms.BindingSource.EndEdit%2A> method</span></span>  
+ <span data-ttu-id="60ab6-159">將暫止的變更套用至基礎資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-159">Applies pending changes to the underlying data source.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 方法  
- 取消目前的編輯作業。  
+ <span data-ttu-id="60ab6-160"><xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="60ab6-160"><xref:System.Windows.Forms.BindingSource.CancelEdit%2A> method</span></span>  
+ <span data-ttu-id="60ab6-161">取消目前的編輯作業。</span><span class="sxs-lookup"><span data-stu-id="60ab6-161">Cancels the current edit operation.</span></span>  
   
-### 資料來源做為清單。  
- <xref:System.Windows.Forms.BindingSource> 元件可實作 <xref:System.ComponentModel.IBindingListView> 和 <xref:System.ComponentModel.ITypedList> 介面。  利用這個實作，您不需要任何外部儲存體即可將 <xref:System.Windows.Forms.BindingSource> 元件本身當做資料來源使用。  
+### <a name="data-source-as-a-list"></a><span data-ttu-id="60ab6-162">資料來源，因為清單</span><span class="sxs-lookup"><span data-stu-id="60ab6-162">Data Source as a List</span></span>  
+ <span data-ttu-id="60ab6-163"><xref:System.Windows.Forms.BindingSource>元件實作<xref:System.ComponentModel.IBindingListView>和<xref:System.ComponentModel.ITypedList>介面。</span><span class="sxs-lookup"><span data-stu-id="60ab6-163">The <xref:System.Windows.Forms.BindingSource> component implements the <xref:System.ComponentModel.IBindingListView> and <xref:System.ComponentModel.ITypedList> interfaces.</span></span> <span data-ttu-id="60ab6-164">此實作中，您可以使用<xref:System.Windows.Forms.BindingSource>元件本身做為資料來源，沒有任何外部存放裝置。</span><span class="sxs-lookup"><span data-stu-id="60ab6-164">With this implementation, you can use the <xref:System.Windows.Forms.BindingSource> component itself as a data source, without any external storage.</span></span>  
   
- 當 <xref:System.Windows.Forms.BindingSource> 元件附加至資料來源時，它會將資料來源公開為清單。  
+ <span data-ttu-id="60ab6-165">當<xref:System.Windows.Forms.BindingSource>元件連接到資料來源，它會公開為清單的資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-165">When the <xref:System.Windows.Forms.BindingSource> component is attached to a data source, it exposes the data source as a list.</span></span>  
   
- 您可以將 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設定為數種資料來源，  包括型別、物件和型別清單。  產生的資料來源將公開為清單。  下表顯示部分的通用資料來源以及產生的清單評估。  
+ <span data-ttu-id="60ab6-166"><xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性可以設定為幾個資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-166">The <xref:System.Windows.Forms.BindingSource.DataSource%2A> property can be set to several data sources.</span></span> <span data-ttu-id="60ab6-167">這些包括型別、 物件和類型的清單。</span><span class="sxs-lookup"><span data-stu-id="60ab6-167">These include types, objects, and lists of types.</span></span> <span data-ttu-id="60ab6-168">產生的資料來源會公開為清單。</span><span class="sxs-lookup"><span data-stu-id="60ab6-168">The resulting data source will be exposed as a list.</span></span> <span data-ttu-id="60ab6-169">下表顯示一些常見的資料來源和產生的清單評估。</span><span class="sxs-lookup"><span data-stu-id="60ab6-169">The following table shows some of the common data sources and the resulting list evaluation.</span></span>  
   
-|DataSource 屬性|列出結果|  
-|-------------------|----------|  
-|null 參考 \(在 Visual Basic 中為 `Nothing`\)|物件的空 <xref:System.ComponentModel.IBindingList>。  藉由加入項目即可將清單設為已加入之項目的型別。|  
-|含有 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 集合的 null 參考 \(在 Visual Basic 中為 `Nothing`\)|不支援，會引發 <xref:System.ArgumentException>。|  
-|非清單型別或 型別 "T" 的物件|"T" 型別的空 <xref:System.ComponentModel.IBindingList>。|  
-|陣列執行個體|包含陣列項目的 <xref:System.ComponentModel.IBindingList>。|  
-|<xref:System.Collections.IEnumerable> 執行個體|包含 <xref:System.Collections.IEnumerable> 項目的 <xref:System.ComponentModel.IBindingList>|  
-|包含 "T" 型別的清單執行個體|包含 "T" 型別的 <xref:System.ComponentModel.IBindingList>。|  
+|<span data-ttu-id="60ab6-170">資料來源屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-170">DataSource property</span></span>|<span data-ttu-id="60ab6-171">結果清單</span><span class="sxs-lookup"><span data-stu-id="60ab6-171">List results</span></span>|  
+|-------------------------|------------------|  
+|<span data-ttu-id="60ab6-172">null 參考 (在 Visual Basic 中為 `Nothing`)</span><span class="sxs-lookup"><span data-stu-id="60ab6-172">A null reference (`Nothing` in Visual Basic)</span></span>|<span data-ttu-id="60ab6-173">空白<xref:System.ComponentModel.IBindingList>的物件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-173">An empty <xref:System.ComponentModel.IBindingList> of objects.</span></span> <span data-ttu-id="60ab6-174">加入項目類型的已加入的項目設定的清單。</span><span class="sxs-lookup"><span data-stu-id="60ab6-174">Adding an item sets the list to the type of the added item.</span></span>|  
+|<span data-ttu-id="60ab6-175">Null 參考 (`Nothing`在 Visual Basic 中) 與<xref:System.Windows.Forms.BindingSource.DataMember%2A>設定</span><span class="sxs-lookup"><span data-stu-id="60ab6-175">A null reference (`Nothing` in Visual Basic) with <xref:System.Windows.Forms.BindingSource.DataMember%2A> set</span></span>|<span data-ttu-id="60ab6-176">不支援;引發<xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-176">Not supported; raises <xref:System.ArgumentException>.</span></span>|  
+|<span data-ttu-id="60ab6-177">非清單型別或型別"T"的物件</span><span class="sxs-lookup"><span data-stu-id="60ab6-177">Non-list type or object of type "T"</span></span>|<span data-ttu-id="60ab6-178">空白<xref:System.ComponentModel.IBindingList>的型別"T"。</span><span class="sxs-lookup"><span data-stu-id="60ab6-178">An empty <xref:System.ComponentModel.IBindingList> of type "T".</span></span>|  
+|<span data-ttu-id="60ab6-179">陣列執行個體</span><span class="sxs-lookup"><span data-stu-id="60ab6-179">Array instance</span></span>|<span data-ttu-id="60ab6-180"><xref:System.ComponentModel.IBindingList>包含陣列項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-180">An <xref:System.ComponentModel.IBindingList> containing the array elements.</span></span>|  
+|<span data-ttu-id="60ab6-181"><xref:System.Collections.IEnumerable>執行個體</span><span class="sxs-lookup"><span data-stu-id="60ab6-181"><xref:System.Collections.IEnumerable> instance</span></span>|<span data-ttu-id="60ab6-182"><xref:System.ComponentModel.IBindingList>包含<xref:System.Collections.IEnumerable>項目</span><span class="sxs-lookup"><span data-stu-id="60ab6-182">An <xref:System.ComponentModel.IBindingList> containing the <xref:System.Collections.IEnumerable> items</span></span>|  
+|<span data-ttu-id="60ab6-183">包含清單執行個體型別"T"</span><span class="sxs-lookup"><span data-stu-id="60ab6-183">List instance containing type "T"</span></span>|<span data-ttu-id="60ab6-184"><xref:System.ComponentModel.IBindingList>包含型別"T"的執行個體。</span><span class="sxs-lookup"><span data-stu-id="60ab6-184">An <xref:System.ComponentModel.IBindingList> instance containing type "T".</span></span>|  
   
- 此外，也可以將 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 設定為其他清單型別 \(例如 <xref:System.ComponentModel.IListSource> 和 <xref:System.ComponentModel.ITypedList>\)，並且將由 <xref:System.Windows.Forms.BindingSource> 適當地處理這些型別。  在這種情況下，清單中所包含的型別應該要有預設的建構函式。  
+ <span data-ttu-id="60ab6-185">此外，<xref:System.Windows.Forms.BindingSource.DataSource%2A>可以設定為其他清單類型，例如<xref:System.ComponentModel.IListSource>和<xref:System.ComponentModel.ITypedList>，而<xref:System.Windows.Forms.BindingSource>會適當地處理它們。</span><span class="sxs-lookup"><span data-stu-id="60ab6-185">Additionally, <xref:System.Windows.Forms.BindingSource.DataSource%2A> can be set to other list types, such as <xref:System.ComponentModel.IListSource> and <xref:System.ComponentModel.ITypedList>, and the <xref:System.Windows.Forms.BindingSource> will handle them appropriately.</span></span> <span data-ttu-id="60ab6-186">在此情況下，包含在清單中的類型應該有預設建構函式。</span><span class="sxs-lookup"><span data-stu-id="60ab6-186">In this case, the type that is contained in the list should have a default constructor.</span></span>  
   
-### BindingSource 做為 IBindingList  
- <xref:System.Windows.Forms.BindingSource> 元件提供存取和管理基礎資料的成員做為 <xref:System.ComponentModel.IBindingList>。  下表說明這些成員中的一部分。  
+### <a name="bindingsource-as-an-ibindinglist"></a><span data-ttu-id="60ab6-187">為 IBindingList BindingSource</span><span class="sxs-lookup"><span data-stu-id="60ab6-187">BindingSource as an IBindingList</span></span>  
+ <span data-ttu-id="60ab6-188"><xref:System.Windows.Forms.BindingSource>元件提供用於存取和管理做為基礎的資料成員<xref:System.ComponentModel.IBindingList>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-188">The <xref:System.Windows.Forms.BindingSource> component provides members for accessing and manipulating the underlying data as an <xref:System.ComponentModel.IBindingList>.</span></span> <span data-ttu-id="60ab6-189">下表說明部分這些成員。</span><span class="sxs-lookup"><span data-stu-id="60ab6-189">The following table describes some of these members.</span></span>  
   
-|成員|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> 屬性|取得經由評估 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 或 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性而得到的清單。|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|將新的項目加入至基礎清單中。  套用至實作 <xref:System.ComponentModel.IBindingList> 介面的資料來源 \(也就是將 <xref:System.Windows.Forms.BindingSource.AllowNew%2A> 屬性設為 `true`\)。|  
+|<span data-ttu-id="60ab6-190">成員</span><span class="sxs-lookup"><span data-stu-id="60ab6-190">Member</span></span>|<span data-ttu-id="60ab6-191">描述</span><span class="sxs-lookup"><span data-stu-id="60ab6-191">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="60ab6-192"><xref:System.Windows.Forms.BindingSource.List%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-192"><xref:System.Windows.Forms.BindingSource.List%2A> property</span></span>|<span data-ttu-id="60ab6-193">取得評估的結果清單<xref:System.Windows.Forms.BindingSource.DataSource%2A>或<xref:System.Windows.Forms.BindingSource.DataMember%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="60ab6-193">Gets the list that results from the evaluation of the <xref:System.Windows.Forms.BindingSource.DataSource%2A> or <xref:System.Windows.Forms.BindingSource.DataMember%2A> properties.</span></span>|  
+|<span data-ttu-id="60ab6-194"><xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法</span><span class="sxs-lookup"><span data-stu-id="60ab6-194"><xref:System.Windows.Forms.BindingSource.AddNew%2A> method</span></span>|<span data-ttu-id="60ab6-195">將新的項目加入基礎清單中。</span><span class="sxs-lookup"><span data-stu-id="60ab6-195">Adds a new item to the underlying list.</span></span> <span data-ttu-id="60ab6-196">適用於實作的資料來源<xref:System.ComponentModel.IBindingList>介面，並允許加入項目 (也就是<xref:System.Windows.Forms.BindingSource.AllowNew%2A>屬性設定為`true`)。</span><span class="sxs-lookup"><span data-stu-id="60ab6-196">Applies to data sources that implement the <xref:System.ComponentModel.IBindingList> interface and allow adding items (that is, the <xref:System.Windows.Forms.BindingSource.AllowNew%2A> property is set to `true`).</span></span>|  
   
-### 建立自訂項目。  
- 您可以處理 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件以提供自己的項目建立邏輯。  在 <xref:System.Windows.Forms.BindingSource> 加入新物件之前會發生 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件。  這個事件是發生於呼叫 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法之後，但基礎清單加入新項目之前。  藉由處理這個事件，不需從 <xref:System.Windows.Forms.BindingSource> 類別衍生即可提供建立自訂項目行為。  如需詳細資訊，請參閱 [如何：使用 Windows Form BindingSource 自訂加入項目](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)。  
+### <a name="custom-item-creation"></a><span data-ttu-id="60ab6-197">建立自訂的項目</span><span class="sxs-lookup"><span data-stu-id="60ab6-197">Custom Item Creation</span></span>  
+ <span data-ttu-id="60ab6-198">您可以處理<xref:System.Windows.Forms.BindingSource.AddingNew>事件以提供您自己的項目建立的邏輯。</span><span class="sxs-lookup"><span data-stu-id="60ab6-198">You can handle the <xref:System.Windows.Forms.BindingSource.AddingNew> event to provide your own item-creation logic.</span></span> <span data-ttu-id="60ab6-199"><xref:System.Windows.Forms.BindingSource.AddingNew>之前要加入新的物件，就會發生事件<xref:System.Windows.Forms.BindingSource>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-199">The <xref:System.Windows.Forms.BindingSource.AddingNew> event occurs before a new object is added to the <xref:System.Windows.Forms.BindingSource>.</span></span> <span data-ttu-id="60ab6-200">之後會引發這個事件<xref:System.Windows.Forms.BindingSource.AddNew%2A>呼叫方法時，但新的項目加入基礎清單之前。</span><span class="sxs-lookup"><span data-stu-id="60ab6-200">This event is raised after the <xref:System.Windows.Forms.BindingSource.AddNew%2A> method is called, but before the new item is added to the underlying list.</span></span> <span data-ttu-id="60ab6-201">藉由處理這個事件，您可以提供自訂的項目建立行為，不需衍生自<xref:System.Windows.Forms.BindingSource>類別。</span><span class="sxs-lookup"><span data-stu-id="60ab6-201">By handling this event, you can provide custom item creation behavior without deriving from the <xref:System.Windows.Forms.BindingSource> class.</span></span> <span data-ttu-id="60ab6-202">如需詳細資訊，請參閱[How to： 使用 Windows Form BindingSource 自訂項目加入](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)。</span><span class="sxs-lookup"><span data-stu-id="60ab6-202">For more information, see [How to: Customize Item Addition with the Windows Forms BindingSource](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).</span></span>  
   
-### 建立異動項目。  
- <xref:System.Windows.Forms.BindingSource> 元件可實作 <xref:System.ComponentModel.ICancelAddNew> 介面，此介面可建立異動項目。  隨著呼叫 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 而暫時建立了新項目之後，這個加入項目的動作可利用下列方式加以認可或復原：  
+### <a name="transactional-item-creation"></a><span data-ttu-id="60ab6-203">建立交易式的項目</span><span class="sxs-lookup"><span data-stu-id="60ab6-203">Transactional Item Creation</span></span>  
+ <span data-ttu-id="60ab6-204"><xref:System.Windows.Forms.BindingSource>元件實作<xref:System.ComponentModel.ICancelAddNew>介面，讓建立交易式的項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-204">The <xref:System.Windows.Forms.BindingSource> component implements the <xref:System.ComponentModel.ICancelAddNew> interface, which enables transactional item creation.</span></span> <span data-ttu-id="60ab6-205">部份建立新的項目使用的呼叫之後<xref:System.Windows.Forms.BindingSource.AddNew%2A>，可能會認可或回復以下列方式加入：</span><span class="sxs-lookup"><span data-stu-id="60ab6-205">After a new item is provisionally created by using a call to <xref:System.Windows.Forms.BindingSource.AddNew%2A>, the addition may be committed or rolled back in the following ways:</span></span>  
   
--   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> 方法會明確認可這項暫止的加入動作。  
+-   <span data-ttu-id="60ab6-206"><xref:System.ComponentModel.ICancelAddNew.EndNew%2A>方法將會明確地認可暫止的加入。</span><span class="sxs-lookup"><span data-stu-id="60ab6-206">The <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> method will explicitly commit the pending addition.</span></span>  
   
--   執行其他集合作業 \(例如插入、移除或移動\) 即隱含認可這項暫止的加入動作。  
+-   <span data-ttu-id="60ab6-207">執行另一個集合運算，例如插入、 移除或移動，將會以隱含方式認可暫止的加入。</span><span class="sxs-lookup"><span data-stu-id="60ab6-207">Performing another collection operation, such as an insertion, removal, or move, will implicitly commit the pending addition.</span></span>  
   
--   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> 方法會復原暫止的加入動作 \(如果此方法尚未經過認可的話\)。  
+-   <span data-ttu-id="60ab6-208"><xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>方法將會復原暫止的加入方法已被認可。</span><span class="sxs-lookup"><span data-stu-id="60ab6-208">The <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> method will roll back the pending addition if the method has not already been committed.</span></span>  
   
-### IEnumerable 支援  
- <xref:System.Windows.Forms.BindingSource> 元件可將控制項繫結至 <xref:System.Collections.IEnumerable> 資料來源。  利用這個元件，可繫結至資料來源 \(例如 <xref:System.Data.SqlClient.SqlDataReader?displayProperty=fullName>\)。  
+### <a name="ienumerable-support"></a><span data-ttu-id="60ab6-209">IEnumerable 支援</span><span class="sxs-lookup"><span data-stu-id="60ab6-209">IEnumerable Support</span></span>  
+ <span data-ttu-id="60ab6-210"><xref:System.Windows.Forms.BindingSource>元件可讓控制項繫結至<xref:System.Collections.IEnumerable>資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-210">The <xref:System.Windows.Forms.BindingSource> component enables binding controls to <xref:System.Collections.IEnumerable> data sources.</span></span> <span data-ttu-id="60ab6-211">與這個元件，您可以繫結至資料來源這類<xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-211">With this component, you can bind to a data source such as a <xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>.</span></span>  
   
- 當 <xref:System.Collections.IEnumerable> 資料來源指派給 <xref:System.Windows.Forms.BindingSource> 元件時，<xref:System.Windows.Forms.BindingSource> 會建立 <xref:System.ComponentModel.IBindingList> 並將 <xref:System.Collections.IEnumerable> 資料來源的內容加入至清單。  
+ <span data-ttu-id="60ab6-212">當<xref:System.Collections.IEnumerable>資料來源指派給<xref:System.Windows.Forms.BindingSource>元件，<xref:System.Windows.Forms.BindingSource>建立<xref:System.ComponentModel.IBindingList>和將內容加入<xref:System.Collections.IEnumerable>清單中的資料來源。</span><span class="sxs-lookup"><span data-stu-id="60ab6-212">When an <xref:System.Collections.IEnumerable> data source is assigned to the <xref:System.Windows.Forms.BindingSource> component, the <xref:System.Windows.Forms.BindingSource> creates an <xref:System.ComponentModel.IBindingList> and adds the contents of the <xref:System.Collections.IEnumerable> data source to the list.</span></span>  
   
-### 設計階段支援  
- 有些物件型別無法在設計階段建立，例如，建立自 Factory 類別的物件或是由 Web 服務傳回的物件。  有時候，您可能必須在設計階段將控制項繫結至這些型別，即使記憶體中並沒有控制項可以繫結的物件。  例如，此時可能必須使用自訂型別的公用屬性名稱來標記 <xref:System.Windows.Forms.DataGridView> 控制項的資料行行首。  
+### <a name="design-time-support"></a><span data-ttu-id="60ab6-213">設計階段支援</span><span class="sxs-lookup"><span data-stu-id="60ab6-213">Design-Time Support</span></span>  
+ <span data-ttu-id="60ab6-214">無法建立某些物件類型，在設計階段，例如從 factory 類別，建立的物件或 Web 服務所傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-214">Some object types cannot be created at design time, such as objects created from a factory class, or objects returned by a Web service.</span></span> <span data-ttu-id="60ab6-215">您有時可能對這類繫結控制項，在設計階段，即使您的控制項可以繫結的記憶體中沒有任何物件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-215">You may sometimes have to bind your controls to these types at design time, even though there is no object in memory to which your controls can bind.</span></span> <span data-ttu-id="60ab6-216">例如，可能需要加上標籤的資料行標頭<xref:System.Windows.Forms.DataGridView>控制項的自訂類型的公用屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="60ab6-216">You may, for example, need to label the column headers of a <xref:System.Windows.Forms.DataGridView> control with the names of your custom type's public properties.</span></span>  
   
- 為了支援這樣的案例，<xref:System.Windows.Forms.BindingSource> 元件將會支援繫結至 <xref:System.Type>。  當您將 <xref:System.Type> 指派給 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性時，<xref:System.Windows.Forms.BindingSource> 元件會建立 <xref:System.Type> 項目的空 <xref:System.ComponentModel.BindingList%601>。  如果型別的屬性或結構描述在設計階段或執行階段中出現，那麼後續繫結至 <xref:System.Windows.Forms.BindingSource> 元件的所有控制項都將會收到警示。  如需詳細資訊，請參閱 [如何：將 Windows Form 控制項繫結至類型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。  
+ <span data-ttu-id="60ab6-217">若要支援此案例中，<xref:System.Windows.Forms.BindingSource>元件支援的繫結至<xref:System.Type>。</span><span class="sxs-lookup"><span data-stu-id="60ab6-217">To support this scenario, the <xref:System.Windows.Forms.BindingSource> component supports binding to a <xref:System.Type>.</span></span> <span data-ttu-id="60ab6-218">當您指派<xref:System.Type>至<xref:System.Windows.Forms.BindingSource.DataSource%2A>屬性，<xref:System.Windows.Forms.BindingSource>元件建立空<xref:System.ComponentModel.BindingList%601>的<xref:System.Type>項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-218">When you assign a <xref:System.Type> to the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property, the <xref:System.Windows.Forms.BindingSource> component creates an empty <xref:System.ComponentModel.BindingList%601> of <xref:System.Type> items.</span></span> <span data-ttu-id="60ab6-219">您接著繫結至任何控制項<xref:System.Windows.Forms.BindingSource>元件將會警示您類型的結構描述之屬性的目前狀態，在設計階段或執行階段。</span><span class="sxs-lookup"><span data-stu-id="60ab6-219">Any controls you subsequently bind to the <xref:System.Windows.Forms.BindingSource> component will be alerted to the presence of the properties or schema of your type at design time, or at run time.</span></span> <span data-ttu-id="60ab6-220">如需詳細資訊，請參閱[How to： 將 Windows Form 控制項繫結的型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。</span><span class="sxs-lookup"><span data-stu-id="60ab6-220">For more information, see [How to: Bind a Windows Forms Control to a Type](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md).</span></span>  
   
-### 靜態 ListBindingHelper 方法  
- <xref:System.Windows.Forms.BindingContext?displayProperty=fullName>、<xref:System.Windows.Forms.CurrencyManager?displayProperty=fullName> 和 <xref:System.Windows.Forms.BindingSource> 型別都共用一般邏輯，藉此從成對的 `DataSource`\/`DataMember` 組合產生清單。  此外，這個通用邏輯會透過下列 `static` 方法進行公開，以供控制項作者和其他協力廠商使用：  
+### <a name="static-listbindinghelper-methods"></a><span data-ttu-id="60ab6-221">靜態 ListBindingHelper 方法</span><span class="sxs-lookup"><span data-stu-id="60ab6-221">Static ListBindingHelper Methods</span></span>  
+ <span data-ttu-id="60ab6-222"><xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>， <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>，和<xref:System.Windows.Forms.BindingSource>類型來產生一份清單列出的共用通用邏輯`DataSource` / `DataMember`組。</span><span class="sxs-lookup"><span data-stu-id="60ab6-222">The <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>, <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>, and <xref:System.Windows.Forms.BindingSource> types all share common logic to generate a list from a `DataSource`/`DataMember` pair.</span></span> <span data-ttu-id="60ab6-223">此外，這個通用邏輯公開由用於控制項作者和其他協力廠商在下列`static`方法：</span><span class="sxs-lookup"><span data-stu-id="60ab6-223">Additionally, this common logic is publicly exposed for use by control authors and other third parties in the following `static` methods:</span></span>  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
+-   <span data-ttu-id="60ab6-224"><xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.</span><span class="sxs-lookup"><span data-stu-id="60ab6-224"><xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.</span></span>  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
   
-### 使用 IBindingListView 介面進行排序和篩選。  
- <xref:System.Windows.Forms.BindingSource> 元件可實作 <xref:System.ComponentModel.IBindingListView> 介面，而此介面可延伸 <xref:System.ComponentModel.IBindingList> 介面。  <xref:System.ComponentModel.IBindingList> 提供單一資料行排序，而 <xref:System.ComponentModel.IBindingListView> 則提供進階排序和篩選。  如果資料來源也會實作其中一個介面，您可以使用 <xref:System.ComponentModel.IBindingListView> 來排序和篩選資料來源中的項目。  <xref:System.Windows.Forms.BindingSource> 元件並不提供這些成員的參考實作。  而呼叫會轉送到底層清單。  
+### <a name="sorting-and-filtering-with-the-ibindinglistview-interface"></a><span data-ttu-id="60ab6-225">排序和篩選與 IBindingListView 介面</span><span class="sxs-lookup"><span data-stu-id="60ab6-225">Sorting and Filtering with the IBindingListView Interface</span></span>  
+ <span data-ttu-id="60ab6-226"><xref:System.Windows.Forms.BindingSource>元件實作<xref:System.ComponentModel.IBindingListView>介面，其延伸了<xref:System.ComponentModel.IBindingList>介面。</span><span class="sxs-lookup"><span data-stu-id="60ab6-226">The <xref:System.Windows.Forms.BindingSource> component implements the <xref:System.ComponentModel.IBindingListView> interface, which extends the <xref:System.ComponentModel.IBindingList> interface.</span></span> <span data-ttu-id="60ab6-227"><xref:System.ComponentModel.IBindingList>提供了單一資料行排序和<xref:System.ComponentModel.IBindingListView>提供進階的排序和篩選。</span><span class="sxs-lookup"><span data-stu-id="60ab6-227">The <xref:System.ComponentModel.IBindingList> offers single column sorting and the <xref:System.ComponentModel.IBindingListView> offers advanced sorting and filtering.</span></span> <span data-ttu-id="60ab6-228">與<xref:System.ComponentModel.IBindingListView>、 您可以排序和篩選項目在資料來源中，如果資料來源也會實作這些介面的其中一個。</span><span class="sxs-lookup"><span data-stu-id="60ab6-228">With <xref:System.ComponentModel.IBindingListView>, you can sort and filter items in the data source, if the data source also implements one of these interfaces.</span></span> <span data-ttu-id="60ab6-229"><xref:System.Windows.Forms.BindingSource>元件不提供這些成員的參考實作。</span><span class="sxs-lookup"><span data-stu-id="60ab6-229">The <xref:System.Windows.Forms.BindingSource> component does not provide a reference implementation of these members.</span></span> <span data-ttu-id="60ab6-230">相反地，加入基礎清單的呼叫都會被轉送。</span><span class="sxs-lookup"><span data-stu-id="60ab6-230">Instead, calls are forwarded to the underlying list.</span></span>  
   
- 下表說明在排序和篩選時所使用的屬性。  
+ <span data-ttu-id="60ab6-231">下表描述您用於排序和篩選的屬性。</span><span class="sxs-lookup"><span data-stu-id="60ab6-231">The following table describes the properties you use for sorting and filtering.</span></span>  
   
-|成員|描述|  
-|--------|--------|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingListView>，則可取得或設定運算式，此運算式是用於篩選檢視中的資料列。|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingList>，則可取得或設定資料行名稱，此資料行名稱是用於排序以及排序次序資訊。<br /><br /> \-或\-<br /><br /> 如果資料來源是 <xref:System.ComponentModel.IBindingListView> 並且支援進階排序，則可取得多重資料行名稱，此資料行名稱是用於排序以及排序次序。|  
+|<span data-ttu-id="60ab6-232">成員</span><span class="sxs-lookup"><span data-stu-id="60ab6-232">Member</span></span>|<span data-ttu-id="60ab6-233">描述</span><span class="sxs-lookup"><span data-stu-id="60ab6-233">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="60ab6-234"><xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-234"><xref:System.Windows.Forms.BindingSource.Filter%2A> property</span></span>|<span data-ttu-id="60ab6-235">如果資料來源是 <xref:System.ComponentModel.IBindingListView>，可取得或設定用來篩選所檢視之資料列的運算式。</span><span class="sxs-lookup"><span data-stu-id="60ab6-235">If the data source is an <xref:System.ComponentModel.IBindingListView>, gets or sets the expression used to filter which rows are viewed.</span></span>|  
+|<span data-ttu-id="60ab6-236"><xref:System.Windows.Forms.BindingSource.Sort%2A> 屬性</span><span class="sxs-lookup"><span data-stu-id="60ab6-236"><xref:System.Windows.Forms.BindingSource.Sort%2A> property</span></span>|<span data-ttu-id="60ab6-237">如果資料來源是 <xref:System.ComponentModel.IBindingList>，可取得或設定用來排序的資料行名稱，以及排序次序資訊。</span><span class="sxs-lookup"><span data-stu-id="60ab6-237">If the data source is an <xref:System.ComponentModel.IBindingList>, gets or sets a column name used for sorting and sort order information.</span></span><br /><br /> <span data-ttu-id="60ab6-238">-或-</span><span class="sxs-lookup"><span data-stu-id="60ab6-238">-or-</span></span><br /><br /> <span data-ttu-id="60ab6-239">如果資料來源是<xref:System.ComponentModel.IBindingListView>並支援進階排序，可取得用來排序和排序順序的多個資料行名稱</span><span class="sxs-lookup"><span data-stu-id="60ab6-239">If the data source is an <xref:System.ComponentModel.IBindingListView> and supports advanced sorting, gets multiple column names used for sorting and sort order</span></span>|  
   
-### 使用 BindingNavigator 進行整合  
- 可以使用 <xref:System.Windows.Forms.BindingSource> 元件將任何 Windows Form 控制項繫結至資料來源，但 <xref:System.Windows.Forms.BindingNavigator> 控制項是特別設計用來與 <xref:System.Windows.Forms.BindingSource> 元件搭配使用。  <xref:System.Windows.Forms.BindingNavigator> 控制項所提供的介面用於控制 <xref:System.Windows.Forms.BindingSource> 元件的目前項目。  根據預設，<xref:System.Windows.Forms.BindingNavigator> 控制項所提供的按鈕是對應到 <xref:System.Windows.Forms.BindingSource> 元件上的巡覽方法。  如需詳細資訊，請參閱 [如何：使用 Windows Form BindingNavigator 控制項巡覽資料](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
+### <a name="integration-with-bindingnavigator"></a><span data-ttu-id="60ab6-240">BindingNavigator 與整合</span><span class="sxs-lookup"><span data-stu-id="60ab6-240">Integration with BindingNavigator</span></span>  
+ <span data-ttu-id="60ab6-241">您可以使用<xref:System.Windows.Forms.BindingSource>元件任何 Windows Form 控制項繫結到資料來源，但<xref:System.Windows.Forms.BindingNavigator>控制項特別設計來搭配<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-241">You can use the <xref:System.Windows.Forms.BindingSource> component to bind any Windows Forms control to a data source, but the <xref:System.Windows.Forms.BindingNavigator> control is designed specifically to work with the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="60ab6-242"><xref:System.Windows.Forms.BindingNavigator>控制項提供使用者介面控制<xref:System.Windows.Forms.BindingSource>元件的目前項目。</span><span class="sxs-lookup"><span data-stu-id="60ab6-242">The <xref:System.Windows.Forms.BindingNavigator> control provides a user interface for controlling the <xref:System.Windows.Forms.BindingSource> component's current item.</span></span> <span data-ttu-id="60ab6-243">根據預設，<xref:System.Windows.Forms.BindingNavigator>控制項提供對應的巡覽方法的按鈕<xref:System.Windows.Forms.BindingSource>元件。</span><span class="sxs-lookup"><span data-stu-id="60ab6-243">By default, the <xref:System.Windows.Forms.BindingNavigator> control provides buttons that correspond to the navigation methods on the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="60ab6-244">如需詳細資訊，請參閱[How to： 使用 Windows Form BindingNavigator 控制項的瀏覽資料](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。</span><span class="sxs-lookup"><span data-stu-id="60ab6-244">For more information, see [How to: Navigate Data with the Windows Forms BindingNavigator Control](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.BindingNavigator>   
- [BindingSource 元件概觀](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)   
- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)   
- [Windows Form 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [如何：將 Windows Form 控制項繫結至類型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)   
- [如何：使用 BindingSource 反映 Windows Form 控制項中的資料來源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+## <a name="see-also"></a><span data-ttu-id="60ab6-245">另請參閱</span><span class="sxs-lookup"><span data-stu-id="60ab6-245">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ [<span data-ttu-id="60ab6-246">BindingSource 元件概觀</span><span class="sxs-lookup"><span data-stu-id="60ab6-246">BindingSource Component Overview</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
+ [<span data-ttu-id="60ab6-247">BindingNavigator 控制項</span><span class="sxs-lookup"><span data-stu-id="60ab6-247">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [<span data-ttu-id="60ab6-248">Windows Forms 資料繫結</span><span class="sxs-lookup"><span data-stu-id="60ab6-248">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [<span data-ttu-id="60ab6-249">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="60ab6-249">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="60ab6-250">操作說明：將 Windows Forms 控制項繫結至型別</span><span class="sxs-lookup"><span data-stu-id="60ab6-250">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [<span data-ttu-id="60ab6-251">操作說明：使用 BindingSource 反射 Windows Forms 控制項中的資料來源更新</span><span class="sxs-lookup"><span data-stu-id="60ab6-251">How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource</span></span>](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

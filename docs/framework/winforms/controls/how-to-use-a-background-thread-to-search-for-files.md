@@ -1,46 +1,50 @@
 ---
-title: "如何：使用背景執行緒搜尋檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "自訂控制項 [Windows Form], 多執行緒"
-  - "自訂控制項 [Windows Form], 範例"
-  - "多執行緒 Windows Form 控制項範例 [Windows Form]"
-  - "執行緒處理 [Windows Form], 自訂控制項"
+title: "如何：使用背景執行緒搜尋檔案"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Multithreaded Windows Forms Control sample [Windows Forms]
+- custom controls [Windows Forms], multithreading
+- threading [Windows Forms], custom controls
+- custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9f23a99418d585f43348cd155bc65a3c3e73742b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：使用背景執行緒搜尋檔案
-<xref:System.ComponentModel.BackgroundWorker> 元件會取代並加入功能至 <xref:System.Threading> 命名空間；不過，您可以依選擇為回溯相容性 \(Backward Compatibility\) 和未來使用而保留 <xref:System.Threading> 命名空間。  如需詳細資訊，請參閱 [BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="85638-102">如何：使用背景執行緒搜尋檔案</span><span class="sxs-lookup"><span data-stu-id="85638-102">How to: Use a Background Thread to Search for Files</span></span>
+<span data-ttu-id="85638-103"><xref:System.ComponentModel.BackgroundWorker>元件取代，並將功能加入<xref:System.Threading>命名空間，但是<xref:System.Threading>命名空間會保留回溯相容性及未來使用，如果您選擇。</span><span class="sxs-lookup"><span data-stu-id="85638-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="85638-104">如需詳細資訊，請參閱[BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="85638-104">For more information, see [BackgroundWorker Component Overview](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span></span>  
   
- Windows Form 使用單一執行緒 Apartment Model \(STA\)，因為 Windows Form 的架構是以本質上即是 Apartment 執行緒的原生 Win32 Windows 為基礎。  STA 模型表示可以在任何執行緒上建立視窗，但建立後則不可以在執行緒間切換，且所有呼叫它的函式必須存在於它的建立執行緒上。  除了 Windows Form 以外，.NET Framework 中的類別是使用無限制執行緒模型 \(Free Threading Model\)。  如需 .NET Framework 中執行緒的詳細資訊，請參閱 [Threading](../../../../docs/standard/threading/index.md)。  
+ <span data-ttu-id="85638-105">Windows Form 會使用單一執行緒 apartment (STA) 模式，因為 Windows Form 以原本的 apartment 執行緒的原生 Win32 視窗為基礎。</span><span class="sxs-lookup"><span data-stu-id="85638-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="85638-106">STA 模型表示可以在任何執行緒上，建立視窗，但是它無法切換執行緒建立之後，而且它的所有函式呼叫必須在其建立的執行緒上進行。</span><span class="sxs-lookup"><span data-stu-id="85638-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="85638-107">外部 Windows Forms，.NET Framework 中的類別會使用可用的執行緒模型。</span><span class="sxs-lookup"><span data-stu-id="85638-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="85638-108">.NET Framework 中執行緒的相關資訊，請參閱[執行緒](../../../../docs/standard/threading/index.md)。</span><span class="sxs-lookup"><span data-stu-id="85638-108">For information about threading in the .NET Framework, see [Threading](../../../../docs/standard/threading/index.md).</span></span>  
   
- STA 模型對需在控制項的建立執行緒之外呼叫的控制項，會要求該控制項的任何方法必須封送 \(Marshal\) 給 \(執行於\) 控制項的建立執行緒處理。  基底類別 <xref:System.Windows.Forms.Control> 類別提供幾個方法 \(<xref:System.Windows.Forms.Control.Invoke%2A>、<xref:System.Windows.Forms.Control.BeginInvoke%2A> 和 <xref:System.Windows.Forms.Control.EndInvoke%2A>\) 來達成此目的。  <xref:System.Windows.Forms.Control.Invoke%2A> 會產生同步方法呼叫；<xref:System.Windows.Forms.Control.BeginInvoke%2A> 則會產生非同步方法呼叫。  
+ <span data-ttu-id="85638-109">STA 模型需要的任何方法需要從呼叫控制項的建立執行緒以外的控制項上必須封送處理 （在上執行） 的控制項建立執行緒。</span><span class="sxs-lookup"><span data-stu-id="85638-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="85638-110">基底類別<xref:System.Windows.Forms.Control>提供數種方法 (<xref:System.Windows.Forms.Control.Invoke%2A>， <xref:System.Windows.Forms.Control.BeginInvoke%2A>，和<xref:System.Windows.Forms.Control.EndInvoke%2A>) 針對此目的。</span><span class="sxs-lookup"><span data-stu-id="85638-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="85638-111"><xref:System.Windows.Forms.Control.Invoke%2A>呼叫同步方法。<xref:System.Windows.Forms.Control.BeginInvoke%2A>非同步方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="85638-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>  
   
- 當您在控制項中使用多執行緒來處理耗用資源的工作時，因為耗用資源的作業是在背景 \(Background\) 執行緒上執行，所以使用者介面仍然可以正常回應。  
+ <span data-ttu-id="85638-112">如果您使用多執行緒處理您在控制項中需要大量資源的工作，使用者介面可以時保持回應狀態背景執行緒上執行需要大量資源的計算。</span><span class="sxs-lookup"><span data-stu-id="85638-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>  
   
- 下列範例 \(`DirectorySearcher`\) 將說明一個使用背景執行緒的多執行緒 Windows Form 控制項，它將以指定的搜尋字串遞迴搜尋目錄中相符的檔案，然後將搜尋結果填入 \(Populate\) 清單方塊。  以下為範例中所描述的重要概念。  
+ <span data-ttu-id="85638-113">下列範例 (`DirectorySearcher`)，顯示符合指定之搜尋字串的檔案會使用背景執行緒以遞迴方式搜尋目錄，然後搜尋結果 清單方塊中填入多執行緒的 Windows Form 控制項。</span><span class="sxs-lookup"><span data-stu-id="85638-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="85638-114">此範例所說明的索引鍵概念，如下所示：</span><span class="sxs-lookup"><span data-stu-id="85638-114">The key concepts illustrated by the sample are as follows:</span></span>  
   
--   `DirectorySearcher` 將啟動一個新執行緒以執行搜尋作業。  之後執行 `ThreadProcedure` 方法的執行緒會呼叫 Helper `RecurseDirectory` 方法以執行實際的搜尋和填入清單方塊作業。  但是，填入清單方塊作業需要執行的跨執行緒 \(Cross\-Thread\) 呼叫將在稍後的項目符號中說明。  
+-   <span data-ttu-id="85638-115">`DirectorySearcher`啟動新的執行緒來執行搜尋。</span><span class="sxs-lookup"><span data-stu-id="85638-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="85638-116">執行緒執行`ThreadProcedure`協助專家會依序呼叫的方法`RecurseDirectory`方法以執行實際搜尋，並填入清單方塊。</span><span class="sxs-lookup"><span data-stu-id="85638-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="85638-117">不過，填入清單方塊需要跨執行緒呼叫，在下面兩個項目符號項目中所述。</span><span class="sxs-lookup"><span data-stu-id="85638-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>  
   
--   `DirectorySearcher` 會定義將檔案加入至清單方塊的 `AddFiles` 方法；而 `RecurseDirectory` 則不可以直接叫用 `AddFiles`，因為 `AddFiles` 只可在建立 `DirectorySearcher` 的 STA 執行緒中執行。  
+-   <span data-ttu-id="85638-118">`DirectorySearcher`定義`AddFiles`方法，將檔案加入至清單方塊; 不過，`RecurseDirectory`無法直接叫用`AddFiles`因為`AddFiles`可以只在建立在 STA 執行緒中執行`DirectorySearcher`。</span><span class="sxs-lookup"><span data-stu-id="85638-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>  
   
--   `RecurseDirectory` 只能透過跨執行緒呼叫的方式呼叫 `AddFiles`，也就是必須呼叫 <xref:System.Windows.Forms.Control.Invoke%2A> 或 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 而將 `AddFiles` 封送至 `DirectorySearcher` 的建立執行緒。  `RecurseDirectory` 使用 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 以執行非同步呼叫。  
+-   <span data-ttu-id="85638-119">唯一方式`RecurseDirectory`可以呼叫`AddFiles`是透過跨執行緒呼叫 — 也就藉由呼叫<xref:System.Windows.Forms.Control.Invoke%2A>或<xref:System.Windows.Forms.Control.BeginInvoke%2A>封送處理`AddFiles`建立執行緒`DirectorySearcher`。</span><span class="sxs-lookup"><span data-stu-id="85638-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="85638-120">`RecurseDirectory`使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>使其可以非同步方式進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="85638-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>  
   
--   將方法封送處理需要使用函式指標或回呼 \(Callback\)。  在 .NET Framework 中使用委派即可達成此目的。  <xref:System.Windows.Forms.Control.BeginInvoke%2A> 會將委派視為引數。  `DirectorySearcher` 即可定義一個委派 \(`FileListDelegate`\)、在它的建構函式中將 `AddFiles` 繫結於 `FileListDelegate` 的執行個體，然後將這個委派執行個體傳遞給 <xref:System.Windows.Forms.Control.BeginInvoke%2A>。  `DirectorySearcher` 同時也會定義在完成搜尋後要封送處理的事件委派。  
+-   <span data-ttu-id="85638-121">封送處理方法需要相當於函式指標或回呼。</span><span class="sxs-lookup"><span data-stu-id="85638-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="85638-122">這是.NET Framework 中使用委派來完成。</span><span class="sxs-lookup"><span data-stu-id="85638-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="85638-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A>會接受委派做為引數。</span><span class="sxs-lookup"><span data-stu-id="85638-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="85638-124">`DirectorySearcher`因此定義委派 (`FileListDelegate`)，將繫結`AddFiles`的執行個體`FileListDelegate`在其建構函式，並將這個委派執行個體<xref:System.Windows.Forms.Control.BeginInvoke%2A>。</span><span class="sxs-lookup"><span data-stu-id="85638-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="85638-125">`DirectorySearcher`也會定義當搜尋完畢時，封送處理的事件委派。</span><span class="sxs-lookup"><span data-stu-id="85638-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>  
   
 ```vb  
 Option Strict  
@@ -287,7 +291,6 @@ Namespace Microsoft.Samples.DirectorySearcher
       End Sub  
    End Class  
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -576,8 +579,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }  
 ```  
   
-## 在表單上使用多執行緒控制項  
- 下列範例將說明如何在表單上使用多執行緒 `DirectorySearcher` 控制項。  
+## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="85638-126">使用多執行緒的控制項在表單上</span><span class="sxs-lookup"><span data-stu-id="85638-126">Using the Multithreaded Control on a Form</span></span>  
+ <span data-ttu-id="85638-127">下列範例會示範如何多執行緒`DirectorySearcher`控制項可以用於表單上。</span><span class="sxs-lookup"><span data-stu-id="85638-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -666,7 +669,6 @@ Namespace SampleUsage
       End Sub  
    End Class  
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -770,7 +772,7 @@ namespace SampleUsage
 }  
 ```  
   
-## 請參閱  
- <xref:System.ComponentModel.BackgroundWorker>   
- [使用 .NET Framework 開發自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Event\-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="85638-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85638-128">See Also</span></span>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="85638-129">使用 .NET Framework 開發自訂的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="85638-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="85638-130">事件架構非同步模式概觀</span><span class="sxs-lookup"><span data-stu-id="85638-130">Event-based Asynchronous Pattern Overview</span></span>](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

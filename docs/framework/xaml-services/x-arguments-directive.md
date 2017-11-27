@@ -1,75 +1,78 @@
 ---
-title: "x:Arguments Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Arguments directive [XAML Services]"
-  - "Arguments directive in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Arguments directive"
+title: "x:Arguments 指示詞"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Arguments directive [XAML Services]
+- Arguments directive in XAML [XAML Services]
+- XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# x:Arguments Directive
-在 XAML 中封裝非預設建構函式物件項目宣告的建構引數，或 Factory 方法物件宣告。  
+# <a name="xarguments-directive"></a><span data-ttu-id="58bed-102">x:Arguments 指示詞</span><span class="sxs-lookup"><span data-stu-id="58bed-102">x:Arguments Directive</span></span>
+<span data-ttu-id="58bed-103">在 XAML 中、 非預設建構函式物件項目宣告或 factory 方法物件宣告，封裝建構引數。</span><span class="sxs-lookup"><span data-stu-id="58bed-103">Packages construction arguments for a non-default constructor object element declaration in XAML, or for a factory method object declaration.</span></span>  
   
-## XAML 項目使用方式 \(非預設建構函式\)  
+## <a name="xaml-element-usage-nondefault-constructor"></a><span data-ttu-id="58bed-104">（非預設建構函式） 的 XAML 項目用法</span><span class="sxs-lookup"><span data-stu-id="58bed-104">XAML Element Usage (Nondefault constructor)</span></span>  
   
 ```  
-<object ...>  
+<object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## XAML 項目使用方式 \(Factory 方法\)  
+## <a name="xaml-element-usage-factory-method"></a><span data-ttu-id="58bed-105">XAML 項目使用方式 （處理站方法）</span><span class="sxs-lookup"><span data-stu-id="58bed-105">XAML Element Usage (factory method)</span></span>  
   
 ```  
-<object x:FactoryMethod="methodName"...>  
+<object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## XAML 值  
+## <a name="xaml-values"></a><span data-ttu-id="58bed-106">XAML 值</span><span class="sxs-lookup"><span data-stu-id="58bed-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|一個或多個物件項目，這些項目會指定要傳遞給非預設支援建構函式或 Factory 方法的引數。<br /><br /> 一般的使用方式是使用物件項目中的初始化文字指定實際的引數值。  請參閱範例章節。<br /><br /> 項目的順序非常重要。  XAML 型別依序必須符合支援建構函式或 Factory 方法多載的型別及型別順序。|  
-|`methodName`|應該會處理任何 `x:Arguments` 引數之 Factory 方法的名稱。|  
+|`oneOrMoreObjectElements`|<span data-ttu-id="58bed-107">一或多個物件項目指定要傳遞至支援非預設建構函式或 factory 方法的引數。</span><span class="sxs-lookup"><span data-stu-id="58bed-107">One or more object elements that specify arguments to be passed to the backing non-default constructor or factory method.</span></span><br /><br /> <span data-ttu-id="58bed-108">一般用法是，使用指定的實際引數的值的物件項目內的初始文字。</span><span class="sxs-lookup"><span data-stu-id="58bed-108">Typical usage is to use initialization text within the object elements to specify the actual argument values.</span></span> <span data-ttu-id="58bed-109">請參閱範例 > 一節。</span><span class="sxs-lookup"><span data-stu-id="58bed-109">See Examples section.</span></span><br /><br /> <span data-ttu-id="58bed-110">項目的順序很重要。</span><span class="sxs-lookup"><span data-stu-id="58bed-110">The order of the elements is significant.</span></span> <span data-ttu-id="58bed-111">在順序中的 XAML 型別必須符合類型，然後輸入備份建構函式或 factory 方法多載的順序。</span><span class="sxs-lookup"><span data-stu-id="58bed-111">The XAML types in order must match the types and type order of the backing constructor or factory method overload.</span></span>|  
+|`methodName`|<span data-ttu-id="58bed-112">應該處理任何的 factory 方法的名稱`x:Arguments`引數。</span><span class="sxs-lookup"><span data-stu-id="58bed-112">The name of the factory method that should process any `x:Arguments` arguments.</span></span>|  
   
-## 相依性  
- `x:FactoryMethod` 可以修改 `x:Arguments` 套用的範圍和行為。  
+## <a name="dependencies"></a><span data-ttu-id="58bed-113">相依性</span><span class="sxs-lookup"><span data-stu-id="58bed-113">Dependencies</span></span>  
+ <span data-ttu-id="58bed-114">`x:FactoryMethod`範圍和行為可以修改其中`x:Arguments`套用。</span><span class="sxs-lookup"><span data-stu-id="58bed-114">`x:FactoryMethod` can modify the scope and behavior where `x:Arguments` applies.</span></span>  
   
- 如果未指定任何 `x:FactoryMethod`，`x:Arguments` 就會套用至支援建構函式的替代 \(非預設\) 簽章。  
+ <span data-ttu-id="58bed-115">如果沒有`x:FactoryMethod`指定，則`x:Arguments`適用於支援建構函式的替代 （非預設值） 簽章。</span><span class="sxs-lookup"><span data-stu-id="58bed-115">If no `x:FactoryMethod` is specified, `x:Arguments` applies to alternate (non-default) signatures of the backing constructors.</span></span>  
   
- 如果指定 `x:FactoryMethod`，`x:Arguments` 就會套用至具名方法的多載。  
+ <span data-ttu-id="58bed-116">如果`x:FactoryMethod`指定，則`x:Arguments`適用於具名方法的多載。</span><span class="sxs-lookup"><span data-stu-id="58bed-116">If `x:FactoryMethod` is specified, `x:Arguments` applies to an overload of the named method.</span></span>  
   
-## 備註  
- XAML 2006 可以透過初始化文字支援非預設初始化。  但是，初始化文字建構技術的實際應用是有限的。  初始化文字被視為單一文字字串；因此，只會增加單一參數初始化的功能，除非定義建構函式行為的型別轉換器，可以剖析字串的自訂資訊項目和自訂分隔符號。  而且，物件邏輯的文字字串可能是指定之 XAML 剖析器的處理基本型別的原生預設型別轉換子，而非真正的字串。  
+## <a name="remarks"></a><span data-ttu-id="58bed-117">備註</span><span class="sxs-lookup"><span data-stu-id="58bed-117">Remarks</span></span>  
+ <span data-ttu-id="58bed-118">XAML 2006 可支援透過初始文字的非預設值初始化。</span><span class="sxs-lookup"><span data-stu-id="58bed-118">XAML 2006 can support non-default initialization through initialization text.</span></span> <span data-ttu-id="58bed-119">不過，實際的應用程式的初始化文字建構項技術是限制。</span><span class="sxs-lookup"><span data-stu-id="58bed-119">However, the practical application of an initialization text construction technique is limited.</span></span> <span data-ttu-id="58bed-120">初始文字會被視為單一文字字串;因此，它只會將單一參數初始設定的功能，除非建構行為可以剖析自訂的資訊項目以及從字串的自訂分隔符號定義型別轉換子。</span><span class="sxs-lookup"><span data-stu-id="58bed-120">Initialization text is treated as a single text string; therefore, it only adds capability for a single parameter initialization unless a type converter is defined for the construction behavior that can parse custom information items and custom delimiters from the string.</span></span> <span data-ttu-id="58bed-121">此外，邏輯物件的文字字串可能會處理原始物件，則為 true 的字串以外的給定的 XAML 剖析器的原生的預設型別轉換子。</span><span class="sxs-lookup"><span data-stu-id="58bed-121">Also, the text string to object logic is potentially a given XAML parser's native default type converter for handling primitives other than a true string.</span></span>  
   
- `x:Arguments` XAML 使用方式不是典型的屬性項目，因為指示詞標記不會參考包含物件項目的型別。  它近似於其他指示詞，例如 `x:Code`，其中項目會解除標記某個範圍，在此範圍中，應將標記解譯為預設子內容以外的內容。  在這種情況下，每個物件項目的 XAML 型別會傳達關於引數型別的資訊，由 XAML 剖析器用於判斷 `x:Arguments` 使用方法常是參考哪一個特定的建構函式原廠方法簽章。  
+ <span data-ttu-id="58bed-122">`x:Arguments` XAML 用法不是屬性項目用法中的一般意義，因為指示詞標記未參考包含物件項目類型。</span><span class="sxs-lookup"><span data-stu-id="58bed-122">The `x:Arguments` XAML usage is not property element usage in the typical sense, because the directive markup does not reference the containing object element's type.</span></span> <span data-ttu-id="58bed-123">例如，它是比較類似於其他指示詞`x:Code`其中的項目 demarks 所在標記應該解譯為以外子內容的預設值的範圍。</span><span class="sxs-lookup"><span data-stu-id="58bed-123">It is more akin to other directives such as `x:Code` where the element demarks a range in which the markup should be interpreted as other than the default for child contents.</span></span> <span data-ttu-id="58bed-124">在此情況下，XAML 類型的每個物件項目傳達資訊引數類型的 XAML 剖析器用來判斷哪一個特定的建構函式的 factory 方法簽章`x:Arguments`使用量嘗試參考。</span><span class="sxs-lookup"><span data-stu-id="58bed-124">In this case, the XAML type of each object element communicates information about the argument types, which is used by XAML parsers to determine which specific constructor factory method signature an `x:Arguments` usage is attempting to reference.</span></span>  
   
- 建構中物件項的 `x:Arguments` 必須在物件項目的任何其他屬性項目、內容、內部文字或初始化字串之前。  `x:Arguments` 中的物件項目可以包含屬性和初始化字串，如該 XAML 型別及其支援建構函式或 Factory 方法所允許的。  對於物件或參數，您可以指定自訂 XAML 類型或 XAML 類型，這些類型可以透過參照建立的前置詞對應位於預設的 XAML 命名空間以外。  
+ <span data-ttu-id="58bed-125">`x:Arguments`物件項目所建構應優先於其他任何屬性項目、 內容、 內部文字或初始化字串的物件項目。</span><span class="sxs-lookup"><span data-stu-id="58bed-125">`x:Arguments` for an object element being constructed must precede any other property elements, content, inner text, or initialization strings of the object element.</span></span> <span data-ttu-id="58bed-126">中的物件項目`x:Arguments`可以包括屬性和初始化字串所允許的該 XAML 類型和其支援的建構函式或 factory 方法。</span><span class="sxs-lookup"><span data-stu-id="58bed-126">The object elements within `x:Arguments` can include attributes and initialization strings, as permitted by that XAML type and its backing constructor or factory method.</span></span> <span data-ttu-id="58bed-127">物件或引數，您可以指定自訂的 XAML 型別或 XAML 類型，否則預設 XAML 命名空間外部參考已建立的前置詞對應。</span><span class="sxs-lookup"><span data-stu-id="58bed-127">For either the object or the arguments, you can specify custom XAML types or XAML types that are otherwise outside the default XAML namespace by referencing established prefix mappings.</span></span>  
   
- XAML 處理器使用下列方針，決定如何使用 `x:Arguments` 中指定的引數來建構物件。  如果指定 `x:FactoryMethod`，會比較資訊和指定的 `x:FactoryMethod`（請注意，`x:FactoryMethod` 的值是方法名稱，而且具名方法可以擁有多載。  如果未指定 `x:FactoryMethod`，會比較資訊與物件所有公開建構函式多載的集合。  然後 XAML 處理邏輯會比較參數的數目，並選取 Arity 相符 \(可接受同樣數目引數\) 的多載。  如果有多個相符項目，XAML 處理器應該根據所提供之物件項目的 XAML 型別比較參數的型別。  如果還有一個以上的相符項目，XAML 處理器行為就是未定義的。  如果指定`x:FactoryMethod`但無法解析該方法，XAML 處理器應擲回例外狀況。  
+ <span data-ttu-id="58bed-128">XAML 處理器會使用下列指導方針來判斷如何在中指定的引數`x:Arguments`應該用來建構物件。</span><span class="sxs-lookup"><span data-stu-id="58bed-128">XAML processors use the following guidelines to determine how the arguments specified in `x:Arguments` should be used to construct an object.</span></span> <span data-ttu-id="58bed-129">如果`x:FactoryMethod`指定，則資訊進行比較的指定`x:FactoryMethod`(請注意，值`x:FactoryMethod`是方法名稱，而具名的方法的多載。</span><span class="sxs-lookup"><span data-stu-id="58bed-129">If `x:FactoryMethod` is specified, information is compared to the specified `x:FactoryMethod` (note that the value of `x:FactoryMethod` is the method name, and the named method can have overloads.</span></span> <span data-ttu-id="58bed-130">如果`x:FactoryMethod`未指定，資訊進行比較的物件的所有公用建構函式多載的集合。</span><span class="sxs-lookup"><span data-stu-id="58bed-130">If `x:FactoryMethod` is not specified, information is compared to the set of all public constructor overloads of the object.</span></span> <span data-ttu-id="58bed-131">然後，XAML 處理邏輯會比較的參數數目，並選取具有相符引數數目的多載。</span><span class="sxs-lookup"><span data-stu-id="58bed-131">XAML processing logic then compares the number of parameters and selects the overload with matching arity.</span></span> <span data-ttu-id="58bed-132">如果有多個相符項目，XAML 處理器應該比較根據提供的物件項目的 XAML 型別參數的類型。</span><span class="sxs-lookup"><span data-stu-id="58bed-132">If there is more than one match, the XAML processor should compare the types of the parameters based on the XAML types of the provided object elements.</span></span> <span data-ttu-id="58bed-133">如果沒有仍然超過一個符合項目，XAML 處理器的行為未定義。</span><span class="sxs-lookup"><span data-stu-id="58bed-133">If there is still more than one match, the XAML processor behavior is undefined.</span></span> <span data-ttu-id="58bed-134">如果`x:FactoryMethod`指定，但此方法無法解決，XAML 處理器應該擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="58bed-134">If a `x:FactoryMethod` is specified but the method cannot be resolved, a XAML processor should throw an exception.</span></span>  
   
- XAML 屬性使用方式 `<x:Arguments>string</x:Arguments>` 在技術上是可行的。  不過，除了透過初始化文字和類型轉換器可執行的功能外，這不提供任何功能，而且，使用此語法不是 XAML 2009 原廠預設的方法功能。  
+ <span data-ttu-id="58bed-135">XAML 屬性使用方式`<x:Arguments>string</x:Arguments>`是可行的。</span><span class="sxs-lookup"><span data-stu-id="58bed-135">A XAML attribute usage `<x:Arguments>string</x:Arguments>` is technically possible.</span></span> <span data-ttu-id="58bed-136">不過，這會提供任何功能什麼無法透過否則初始化文字和類型轉換器，並使用此語法不是 XAML 2009 的 factory 方法功能的設計目的。</span><span class="sxs-lookup"><span data-stu-id="58bed-136">However, this provides no capabilities beyond what could be done otherwise through initialization text and type converters, and using this syntax is not the design intention of the XAML 2009 factory method features.</span></span>  
   
-## 範例  
- 下列範例顯示非預設建構函式簽章，然後說明存取該簽章之 `x:Arguments` 的 XAML 使用方式。  
+## <a name="examples"></a><span data-ttu-id="58bed-137">範例</span><span class="sxs-lookup"><span data-stu-id="58bed-137">Examples</span></span>  
+ <span data-ttu-id="58bed-138">下列範例顯示的非預設建構函式簽章，則的 XAML 用法`x:Arguments`，用來存取該簽章。</span><span class="sxs-lookup"><span data-stu-id="58bed-138">The following example shows a non-default constructor signature, then the XAML usage of `x:Arguments` that accesses that signature.</span></span>  
   
 ```csharp  
 public class Food {  
@@ -82,7 +85,7 @@ public class Food {
 }  
 ```  
   
-```  
+```xaml  
 <my:Food>  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -91,7 +94,7 @@ public class Food {
 </my:Food>  
 ```  
   
- 下列範例顯示目標 Factory 方法簽章，然後說明存取該簽章之 `x:Arguments` 的 XAML 使用方式。  
+ <span data-ttu-id="58bed-139">下列範例顯示目標的 factory 方法簽章然後的 XAML 用法`x:Arguments`，用來存取該簽章。</span><span class="sxs-lookup"><span data-stu-id="58bed-139">The following example shows a target factory method signature, then the XAML usage of `x:Arguments` that accesses that signature.</span></span>  
   
 ```csharp  
 public Food TryLookupFood(string name)  
@@ -105,7 +108,7 @@ public Food TryLookupFood(string name)
 }  
 ```  
   
-```  
+```xaml  
 <my:Food x:FactoryMethod="TryLookupFood">  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -113,6 +116,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## 請參閱  
- [Defining Custom Types for Use with .NET Framework XAML Services](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)   
- [XAML 概觀 \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="58bed-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="58bed-140">See Also</span></span>  
+ [<span data-ttu-id="58bed-141">定義可搭配 .NET Framework XAML 服務使用的自訂類型</span><span class="sxs-lookup"><span data-stu-id="58bed-141">Defining Custom Types for Use with .NET Framework XAML Services</span></span>](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
+ [<span data-ttu-id="58bed-142">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="58bed-142">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

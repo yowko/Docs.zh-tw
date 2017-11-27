@@ -1,70 +1,71 @@
 ---
-title: "如何：撰寫 Windows Form 的控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "控制項 [Windows Form], 建立"
-  - "自訂控制項 [Windows Form], 建立"
-  - "UserControl 類別, Windows Form"
+title: "如何：撰寫 Windows Forms 的控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], creating
+- UserControl class [Windows Forms], Windows Forms
+- custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f42ee49a4690c23a563740993e721207d5dedea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：撰寫 Windows Form 的控制項
-控制項代表使用者和程式之間的圖形連結。  控制項可提供或處理資料、接受使用者輸入、回應事件或者執行連接使用者與應用程式的任何數量的其他功能。  由於控制項基本上是含圖形介面的元件，所以可以執行元件可做的任何功能，並提供使用者互動。  控制項的建立是為了服務特定目的，而撰寫控制項只是另一個程式設計工作。  請牢記在心，下列步驟代表控制項撰寫處理序的概觀。  連結提供個別步驟的其他資訊。  
+# <a name="how-to-author-controls-for-windows-forms"></a><span data-ttu-id="6787d-102">如何：撰寫 Windows Forms 的控制項</span><span class="sxs-lookup"><span data-stu-id="6787d-102">How to: Author Controls for Windows Forms</span></span>
+<span data-ttu-id="6787d-103">控制項所代表使用者與程式之間的圖形化連結。</span><span class="sxs-lookup"><span data-stu-id="6787d-103">A control represents a graphical link between the user and the program.</span></span> <span data-ttu-id="6787d-104">控制項可以提供或處理資料、接受使用者輸入、回應事件，或執行任意數目的其他功能來連接使用者與應用程式。</span><span class="sxs-lookup"><span data-stu-id="6787d-104">A control can provide or process data, accept user input, respond to events, or perform any number of other functions that connect the user and the application.</span></span> <span data-ttu-id="6787d-105">因為控制項本質上是具有圖形化介面的元件，所以可以提供元件所執行的任何功能，以及提供使用者互動。</span><span class="sxs-lookup"><span data-stu-id="6787d-105">Because a control is essentially a component with a graphical interface, it can serve any function that a component does, as well as provide user interaction.</span></span> <span data-ttu-id="6787d-106">建立控制項以提供特定用途，而編寫控制項只是另一個程式設計工作。</span><span class="sxs-lookup"><span data-stu-id="6787d-106">Controls are created to serve specific purposes, and authoring controls is just another programming task.</span></span> <span data-ttu-id="6787d-107">記住這點，下列步驟代表控制項撰寫處理序的概觀。</span><span class="sxs-lookup"><span data-stu-id="6787d-107">With that in mind, the following steps represent an overview of the control authoring process.</span></span> <span data-ttu-id="6787d-108">連結可提供各個步驟的其他資訊。</span><span class="sxs-lookup"><span data-stu-id="6787d-108">Links provide additional information on the individual steps.</span></span>  
   
 > [!NOTE]
->  如果想要編寫自訂控制項以在 Web Form 上使用，請參閱[Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md)。  
+>  <span data-ttu-id="6787d-109">如果您想要撰寫自訂控制項以在 Web Forms 上使用，請參閱[開發自訂 ASP.NET 伺服器控制項](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。</span><span class="sxs-lookup"><span data-stu-id="6787d-109">If you want to author a custom control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
 >   
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="6787d-110">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="6787d-110">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="6787d-111">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="6787d-111">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="6787d-112">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="6787d-112">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要撰寫控制項  
+### <a name="to-author-a-control"></a><span data-ttu-id="6787d-113">撰寫控制項</span><span class="sxs-lookup"><span data-stu-id="6787d-113">To author a control</span></span>  
   
-1.  在決定控制項要完成哪些工作，或控制項在應用程式什麼樣的角色時，  要考慮的重點有：  
+1.  <span data-ttu-id="6787d-114">決定您希望控制項完成的事項，或在您的應用程式中扮演的角色。</span><span class="sxs-lookup"><span data-stu-id="6787d-114">Determine what you want your control to accomplish, or what part it will play in your application.</span></span> <span data-ttu-id="6787d-115">應考量的因素包括：</span><span class="sxs-lookup"><span data-stu-id="6787d-115">Factors to consider are:</span></span>  
   
-    -   您需要哪種圖形介面？  
+    -   <span data-ttu-id="6787d-116">您需要何種圖形化介面？</span><span class="sxs-lookup"><span data-stu-id="6787d-116">What kind of graphical interface do you need?</span></span>  
   
-    -   這個控制項要處理的特定使用者互動為何？  
+    -   <span data-ttu-id="6787d-117">此控制項將處理哪些特定的使用者互動？</span><span class="sxs-lookup"><span data-stu-id="6787d-117">What specific user interactions will this control handle?</span></span>  
   
-    -   有任何的現有控制項提供您所需的功能嗎？  
+    -   <span data-ttu-id="6787d-118">您需要的功能是由任何現有控制項提供嗎？</span><span class="sxs-lookup"><span data-stu-id="6787d-118">Is the functionality you need provided by any existing controls?</span></span>  
   
-    -   您可以結合多個 Windows Form 控制項來取得所需要的功能嗎？  
+    -   <span data-ttu-id="6787d-119">您可以藉由結合數個 Windows Forms 控制項來取得您需要的功能嗎？</span><span class="sxs-lookup"><span data-stu-id="6787d-119">Can you get the functionality you need by combining several Windows Forms controls?</span></span>  
   
-2.  如果您的控制項需要物件模型 \(Object Model\)，請決定功能要如何散發到整個物件模型，及要如何劃分控制項和任何子物件 \(Subobject\) 之間的功能。  如果您要規劃複雜的控制項，或希望加入多個功能，則物件模型可能會很有用。  
+2.  <span data-ttu-id="6787d-120">如果您需要控制項的物件模型，請決定如何將功能散發於整個物件模型，以及在控制項與任何子物件之間分配功能。</span><span class="sxs-lookup"><span data-stu-id="6787d-120">If you need an object model for your control, determine how functionality will be distributed throughout the object model, and divide up functionality between the control and any subobjects.</span></span> <span data-ttu-id="6787d-121">如果您要規劃複雜的控制項，或想要併入多個功能，物件模型可能很有用。</span><span class="sxs-lookup"><span data-stu-id="6787d-121">An object model may be useful if you are planning a complex control, or want to incorporate several functionalities.</span></span>  
   
-3.  決定您所需的控制項類型 \(例如，使用者控制項、自訂控制項和繼承的 Windows Form 控制項\)。  如需詳細資訊，請參閱 [控制項類型建議](../../../../docs/framework/winforms/controls/control-type-recommendations.md) 與 [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)。  
+3.  <span data-ttu-id="6787d-122">決定您需要的控制項類型 (例如，使用者控制項、自訂控制項、繼承的 Windows Forms 控制項)。</span><span class="sxs-lookup"><span data-stu-id="6787d-122">Determine the type of control (for example, user control, custom control, inherited Windows Forms control) you need.</span></span> <span data-ttu-id="6787d-123">如需詳細資訊，請參閱[控制項類型建議](../../../../docs/framework/winforms/controls/control-type-recommendations.md)和[各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="6787d-123">For details, see [Control Type Recommendations](../../../../docs/framework/winforms/controls/control-type-recommendations.md) and [Varieties of Custom Controls](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span></span>  
   
-4.  將功能表示為控制項的屬性、方法和事件，以及子物件或附屬結構，並指派適當的存取層級 \(例如，公用 \(Public\)、保護 \(Protected\) 等等\)。  
+4.  <span data-ttu-id="6787d-124">將功能表示為控制項的屬性、方法和事件及其子物件或附屬結構，並指派適當的存取層級 (例如，公用、受保護等等)。</span><span class="sxs-lookup"><span data-stu-id="6787d-124">Express functionality as properties, methods, and events of the control and its subobjects or subsidiary structures, and assign appropriate access levels (for example, public, protected, and so on).</span></span>  
   
-5.  如果您需要自訂您控制項的繪製，請加入它的程式碼。  如需詳細資訊，請參閱 [自訂控制項繪製和轉譯](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)。  
+5.  <span data-ttu-id="6787d-125">如果您需要自訂控制項的繪製，請為它新增程式碼。</span><span class="sxs-lookup"><span data-stu-id="6787d-125">If you need custom painting for your control, add code for it.</span></span> <span data-ttu-id="6787d-126">如需詳細資訊，請參閱[自訂控制項繪製和轉譯](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)。</span><span class="sxs-lookup"><span data-stu-id="6787d-126">For details, see [Custom Control Painting and Rendering](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).</span></span>  
   
-6.  如果控制項是繼承自 <xref:System.Windows.Forms.UserControl>，您就可以透過建置控制項專案並在 \[**使用者測試容器**\] 中執行，以測試執行階段行為。  如需詳細資訊，請參閱 [如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+6.  <span data-ttu-id="6787d-127">如果您的控制項是繼承自<xref:System.Windows.Forms.UserControl>，您可以藉由建置控制項專案中執行測試其執行階段行為**UserControl 測試容器**。</span><span class="sxs-lookup"><span data-stu-id="6787d-127">If your control inherits from <xref:System.Windows.Forms.UserControl>, you can test its runtime behavior by building the control project and running it in the **UserControl Test Container**.</span></span> <span data-ttu-id="6787d-128">如需詳細資訊，請參閱[如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。</span><span class="sxs-lookup"><span data-stu-id="6787d-128">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-7.  您也可以建立新專案 \(例如 Windows 應用程式\) 並將它放置在容器中，藉此測試和偵錯控制項。  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)中會示範這個處理序。  
+7.  <span data-ttu-id="6787d-129">您也可以建立新專案 (例如 Windows 應用程式) 並將它放入容器中，來測試您的控制項並進行偵錯。</span><span class="sxs-lookup"><span data-stu-id="6787d-129">You can also test and debug your control by creating a new project, such as a Windows Application, and placing it into a container.</span></span> <span data-ttu-id="6787d-130">此處理序的示範在[逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)中。</span><span class="sxs-lookup"><span data-stu-id="6787d-130">This process is demonstrated as part of [Walkthrough: Authoring a Composite Control with Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).</span></span>  
   
-8.  當您加入每一個功能，請將功能加入您的測試專案以執行新功能。  
+8.  <span data-ttu-id="6787d-131">當您新增每項功能時，將功能新增至測試專案，以執行新功能。</span><span class="sxs-lookup"><span data-stu-id="6787d-131">As you add each feature, add features to your test project to exercise the new functionality.</span></span>  
   
-9. 重複修正設計。  
+9. <span data-ttu-id="6787d-132">重複執行，並調整設計。</span><span class="sxs-lookup"><span data-stu-id="6787d-132">Repeat, refining the design.</span></span>  
   
-10. 封裝和部署您的控制項。  如需詳細資訊，請參閱[部署應用程式、服務和元件](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md)。  
+10. <span data-ttu-id="6787d-133">封裝並部署您的控制項。</span><span class="sxs-lookup"><span data-stu-id="6787d-133">Package and deploy your control.</span></span> <span data-ttu-id="6787d-134">如需詳細資訊，請參閱[部署應用程式、服務和元件](https://msdn.microsoft.com/library/wtzawcsz)。</span><span class="sxs-lookup"><span data-stu-id="6787d-134">For details, see [Deploying Applications, Services, and Components](https://msdn.microsoft.com/library/wtzawcsz).</span></span>  
   
-## 請參閱  
- [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)   
- [逐步解說：使用 Visual Basic 繼承自 Windows Form 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)   
- [如何：繼承自 UserControl 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)   
- [如何：繼承自 Control 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)   
- [如何：繼承自現有的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)   
- [如何：測試 UserControl 的執行階段行為](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)   
- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="6787d-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6787d-135">See Also</span></span>  
+ [<span data-ttu-id="6787d-136">逐步解說：使用 Visual Basic 撰寫複合控制項</span><span class="sxs-lookup"><span data-stu-id="6787d-136">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [<span data-ttu-id="6787d-137">逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="6787d-137">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [<span data-ttu-id="6787d-138">操作說明：繼承自 UserControl 類別</span><span class="sxs-lookup"><span data-stu-id="6787d-138">How to: Inherit from the UserControl Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [<span data-ttu-id="6787d-139">操作說明：繼承自 Control 類別</span><span class="sxs-lookup"><span data-stu-id="6787d-139">How to: Inherit from the Control Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [<span data-ttu-id="6787d-140">操作說明：繼承自現有的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="6787d-140">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [<span data-ttu-id="6787d-141">操作說明：測試 UserControl 的執行階段行為</span><span class="sxs-lookup"><span data-stu-id="6787d-141">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [<span data-ttu-id="6787d-142">各種自訂控制項</span><span class="sxs-lookup"><span data-stu-id="6787d-142">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

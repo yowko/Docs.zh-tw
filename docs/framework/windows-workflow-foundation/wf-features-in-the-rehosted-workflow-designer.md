@@ -1,150 +1,154 @@
 ---
-title: "針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 346dc5f06fd5f655426d8f41164a9a2f24acdb5b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的 [!INCLUDE[wf](../../../includes/wf-md.md)] 引入了很多新功能，包括幾項工作流程設計工具經驗的增強功能。本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。  
+# <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a><span data-ttu-id="742b7-102">針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援</span><span class="sxs-lookup"><span data-stu-id="742b7-102">Support for New Workflow Foundation 4.5 Features in the Rehosted Workflow Designer</span></span>
+[!INCLUDE[wf](../../../includes/wf-md.md)]<span data-ttu-id="742b7-103"> 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了很多新功能，包括幾項工作流程設計工具經驗的增強功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-103"> in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduced many new features, including several enhancements to the workflow designer experience.</span></span> <span data-ttu-id="742b7-104">本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-104">This topic details which of these features are supported in the rehosted designer, and which ones are currently not supported.</span></span>  
   
 > [!NOTE]
->  如需 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入之新 [!INCLUDE[wf](../../../includes/wf-md.md)] 功能的完整清單，包括與重新裝載設計工具無關的功能，請參閱[.NET 4.5 中 Windows Workflow Foundation 的新功能](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md)。  
+>  <span data-ttu-id="742b7-105">如需的所有新的清單[!INCLUDE[wf](../../../includes/wf-md.md)]中引進的功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，包括那些不相關設計工具重新裝載的請參閱 < [What's New in.NET 4.5 中 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。</span><span class="sxs-lookup"><span data-stu-id="742b7-105">For a list of all of the new [!INCLUDE[wf](../../../includes/wf-md.md)] features introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], including those that are unrelated to designer rehosting, see [What's New in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).</span></span>  
   
-## 活動  
- 內建活動程式庫包含新的活動及現有活動的新功能。重新裝載的設計工具支援所有新活動。如需這些新活動的詳細資訊，請參閱[.NET 4.5 中 Windows Workflow Foundation 的新功能](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md) 的[活動](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)一節。  
+## <a name="activities"></a><span data-ttu-id="742b7-106">活動</span><span class="sxs-lookup"><span data-stu-id="742b7-106">Activities</span></span>  
+ <span data-ttu-id="742b7-107">內建活動程式庫包含新的活動及現有活動的新功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-107">The built-in activity library contains new activities and new features for existing activities.</span></span> <span data-ttu-id="742b7-108">重新裝載的設計工具支援所有新活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-108">All of these new activities are supported in the rehosted designer.</span></span> <span data-ttu-id="742b7-109">如需有關這些新的活動的詳細資訊，請參閱[活動](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)區段[What's New in.NET 4.5 中 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。</span><span class="sxs-lookup"><span data-stu-id="742b7-109">For more information on these new activities, see the [Activities](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) section of [What's New in Windows Workflow Foundation in .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).</span></span>  
   
-## C\# 運算式  
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，您只能使用 Visual Basic 來撰寫工作流程中的所有運算式。在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Visual Basic 運算式只用於使用 Visual Basic 建立的專案。Visual C\# 專案現在使用 C\# 來撰寫運算式。在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中撰寫工作流程時，會提供功能完整的 C\# 運算式編輯器，可使用反白顯示文法及 intellisense 等功能。在舊版中使用 Visual Basic 運算式建立的 C\# 工作流程專案仍可繼續運作。  
-  
-> [!WARNING]
->  重新裝載的設計工具不支援 C\# 運算式。  
-  
-## 新的設計工具功能  
-  
-### 設計工具搜尋  
- 重新裝載的設計工具不支援在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的[快速尋找](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[檔案中尋找](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)功能。重新裝載的設計工具支援 `Toolbox` 搜尋。如需這些功能的詳細資訊，請參閱[設計工具搜尋](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)。  
+## <a name="c-expressions"></a><span data-ttu-id="742b7-110">C# 運算式</span><span class="sxs-lookup"><span data-stu-id="742b7-110">C# Expressions</span></span>  
+ <span data-ttu-id="742b7-111">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，您只能使用 Visual Basic 來撰寫工作流程中的所有運算式。</span><span class="sxs-lookup"><span data-stu-id="742b7-111">Prior to [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], all expressions in workflows could only be written in Visual Basic.</span></span> <span data-ttu-id="742b7-112">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Visual Basic 運算式只用於使用 Visual Basic 建立的專案。</span><span class="sxs-lookup"><span data-stu-id="742b7-112">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Visual Basic expressions are only used for projects created using Visual Basic.</span></span> <span data-ttu-id="742b7-113">Visual C# 專案現在使用 C# 來撰寫運算式。</span><span class="sxs-lookup"><span data-stu-id="742b7-113">Visual C# projects now use C# for expressions.</span></span> <span data-ttu-id="742b7-114">在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中撰寫工作流程時，會提供功能完整的 C# 運算式編輯器，可使用反白顯示文法及 intellisense 等功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-114">When authoring workflows in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], a fully functional C# expression editor is provided which capabilities such as grammar highlighting and intellisense.</span></span> <span data-ttu-id="742b7-115">在舊版中使用 Visual Basic 運算式建立的 C# 工作流程專案仍可繼續運作。</span><span class="sxs-lookup"><span data-stu-id="742b7-115">C# workflow projects created in previous versions that use Visual Basic expressions will continue to work.</span></span>  
   
 > [!WARNING]
->  重新裝載的設計工具不支援[快速尋找](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[檔案中尋找](../../../docs/framework/windows-workflow-foundation//whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)。  
+>  <span data-ttu-id="742b7-116">重新裝載的設計工具不支援 C# 運算式。</span><span class="sxs-lookup"><span data-stu-id="742b7-116">C# expressions are not supported in the rehosted designer.</span></span>  
   
-### 變數和引數設計工具中的刪除內容功能表項目  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用鍵盤刪除設計工具中的變數和引數。從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，即可以使用內容功能表刪除變數和引數。重新裝載的設計工具支援此功能。  
+## <a name="new-designer-capabilities"></a><span data-ttu-id="742b7-117">新的設計工具功能</span><span class="sxs-lookup"><span data-stu-id="742b7-117">New Designer Capabilities</span></span>  
   
- 下列螢幕擷取畫面顯示變數和引數設計工具內容功能表。  
-  
- ![變數和引數設計工具內容功能表](../../../docs/framework/windows-workflow-foundation//media/designercontextmenu.png "DesignerContextMenu")  
-  
-### 使用 Sequence 進行 Auto\-surround  
- 由於工作流程或特定容器活動 \(如 <xref:System.Activities.Statements.NoPersistScope>\) 只能包含單一主體活動，因此開發人員必須先刪除第一個活動、加入 <xref:System.Activities.Statements.Sequence> 活動，然後將這兩個活動同時加入序列活動中，才能加入第二個活動。從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，將第二個活動加入到設計工具介面時，會自動建立一個 `Sequence` 活動，以同時包含這兩個活動。重新裝載的設計工具支援此功能。  
-  
- 下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `NoPersistScope` 的 `Body` 中。  
-  
- ![自動環繞置放位置](../../../docs/framework/windows-workflow-foundation//media/autosurround1.png "AutoSurround1")  
-  
- 當第二個 `WriteLine` 降到第一個之下時，下列螢幕擷取畫面會顯示在 `Body` 中自動建立的 `Sequence` 活動。  
-  
- ![自動建立的序列活動](../../../docs/framework/windows-workflow-foundation//media/autosurround2.png "AutoSurround2")  
-  
-### 移動瀏覽模式  
- 若要更輕鬆地在設計工具中巡覽大型工作流程，可以啟用移動瀏覽模式，讓開發人員能夠透過按一下與拖曳方式來移動工作流程的可見部分，而不需使用捲軸。啟用移動瀏覽模式的按鈕位於設計工具的右下角。重新裝載的設計工具支援此功能。  
-  
- 下列螢幕擷取畫面顯示位於工作流程設計工具右下角的移動瀏覽按鈕。  
-  
- ![Workflow Designer 中的移動瀏覽按鈕](../../../docs/framework/windows-workflow-foundation//media/panbutton.png "PanButton")  
-  
- 您也可以使用滑鼠中鍵或空白鍵移動瀏覽工作流程設計工具。  
-  
-### 多重選取  
- 您可以拖曳矩形將所要的活動圍住 \(未啟用移動瀏覽模式時\)，或是按住 Ctrl 鍵並依序按一下所需的活動，以同時選取多個活動。重新裝載的設計工具支援此功能。  
-  
- 您也可以在設計工具中拖放多個活動選取項目，或者使用內容功能表與選取項目互動。  
-  
-### 工作流程項目的大綱檢視  
- 為簡化階層工作流程的巡覽功能，工作流程的元件會顯示在樹狀結構大綱檢視中。大綱檢視會顯示在 \[**文件大綱**\] 檢視中。若要在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中開啟此檢視，請從最上方的功能表選取 \[**檢視**\]、\[**其他視窗**\]、\[**文件大綱**\]，或者按下 Ctrl \+ W、U。按一下大綱檢視中的節點，會巡覽至工作流程設計工具中對應的活動，且大綱檢視會更新以顯示在設計工具中選取的活動。重新裝載的設計工具支援此功能。  
-  
- 下列已完成工作流程的螢幕擷取畫面 \(擷取自[快速入門教學課程](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)\) 顯示序列化工作流程的大綱檢視。  
-  
- ![Workflow Designer 中的大綱檢視](../../../docs/framework/windows-workflow-foundation//media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
-  
-### 更多殼層列及標頭項目的可見度控制功能  
- 在重新裝載的設計工具中，部分標準 UI 控制項可能對特定工作流程沒有意義，而且可能是關閉狀態。在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只有設計工具最下方的殼層列支援這項自訂功能。在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以透過設定 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 與適當的 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 值，來調整是否顯示設計工具最上方的殼層標頭項目。  
-  
-### 流程圖與狀態機器工作流程中的自動連接和自動插入  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，流程圖工作流程的節點連接必須手動加入。[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖和狀態機器的節點具有自動連接點，在將活動從工具箱拖曳到設計工具介面上時，就會顯示自動連接點。將活動拖曳到其中一點上，會自動加入該活動及必要的連接。  
-  
- 下列螢幕擷取畫面顯示從工具箱拖曳活動時顯示的附加點。  
-  
- ![顯示自動連接點的流程圖開始節點](../../../docs/framework/windows-workflow-foundation//media/autoconnect1.png "Autoconnect1")  
-  
- 您也可以將活動拖曳到流程圖節點和狀態之間的連接，以在其他兩個節點之間自動插入該節點。下列螢幕擷取畫面顯示反白顯示的連接線，在此可以從工具箱中拖曳及放置活動。  
-  
- ![用於置放活動的自動插入控點](../../../docs/framework/windows-workflow-foundation//media/autoinsert.png "Autoinsert")  
-  
- 重新裝載的設計工具支援自動連接和自動插入。  
-  
-### 設計工具標註  
- 為方便開發大型工作流程，設計工具現已支援加入標註，以追蹤設計流程。您可以在活動、狀態、流程圖節點、變數和引數中加入標註。下列螢幕擷取畫面顯示用來將標註加入設計工具的內容功能表。  
-  
- ![&#91;註釋&#93; 內容功能表](../../../docs/framework/windows-workflow-foundation//media/annotationdialog.png "annotationdialog")  
-  
- 重新裝載的設計工具支援設計工具標註。  
-  
-### 在設計工具中定義與取用 ActivityDelegate 物件  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。如需詳細資訊，請參閱 [HOW TO：定義並取用工作流程設計工具中的活動委派](../Topic/How%20to:%20Define%20and%20consume%20activity%20delegates%20in%20the%20Workflow%20Designer.md)。  
-  
- 重新裝載的設計工具支援活動委派。  
-  
-### 建置階段驗證  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流程驗證錯誤會導致建置失敗。  
+### <a name="designer-search"></a><span data-ttu-id="742b7-118">設計工具搜尋</span><span class="sxs-lookup"><span data-stu-id="742b7-118">Designer Search</span></span>  
+ <span data-ttu-id="742b7-119">[快速尋找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[檔案中尋找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)功能引進[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]重新裝載設計工具中不支援。</span><span class="sxs-lookup"><span data-stu-id="742b7-119">The [Quick Find](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) and [Find in Files](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) features introduced with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] are not supported in the rehosted designer.</span></span> <span data-ttu-id="742b7-120">重新裝載的設計工具支援 `Toolbox` 搜尋。</span><span class="sxs-lookup"><span data-stu-id="742b7-120">The `Toolbox` search is supported in the rehosted designer.</span></span> <span data-ttu-id="742b7-121">如需有關這些功能的詳細資訊，請參閱[設計工具搜尋](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)。</span><span class="sxs-lookup"><span data-stu-id="742b7-121">For more information on these features, see [Designer Search](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).</span></span>  
   
 > [!WARNING]
->  重新裝載的設計工具不支援建置階段驗證。  
+>  <span data-ttu-id="742b7-122">[快速尋找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)和[檔案中尋找](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)重新裝載設計工具中不支援。</span><span class="sxs-lookup"><span data-stu-id="742b7-122">[Quick Find](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) and [Find in Files](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) are not supported in the rehosted designer.</span></span>  
   
-### 設計階段背景驗證  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，會在前景處理序中驗證工作流程，因此若驗證處理序較複雜或耗時，可能會使 UI 停止回應。現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。  
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a><span data-ttu-id="742b7-123">變數和引數設計工具中的刪除操作功能表項目</span><span class="sxs-lookup"><span data-stu-id="742b7-123">Delete context menu item in variable and argument designer</span></span>  
+ <span data-ttu-id="742b7-124">在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用鍵盤刪除設計工具中的變數和引數。</span><span class="sxs-lookup"><span data-stu-id="742b7-124">In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], variables and arguments could only be deleted in the designer using the keyboard.</span></span> <span data-ttu-id="742b7-125">從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，即可以使用內容功能表刪除變數和引數。</span><span class="sxs-lookup"><span data-stu-id="742b7-125">Starting with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], variables and arguments can be deleted using the context menu.</span></span> <span data-ttu-id="742b7-126">重新裝載的設計工具支援此功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-126">This feature is supported in the rehosted designer.</span></span>  
   
- 重新裝載的設計工具支援設計階段背景驗證。  
+ <span data-ttu-id="742b7-127">下列螢幕擷取畫面顯示變數和引數設計工具操作功能表。</span><span class="sxs-lookup"><span data-stu-id="742b7-127">The following screenshot shows the variable and argument designer context menu.</span></span>  
   
-### 檢視狀態在 XAML 檔案中的獨立位置  
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流程的檢視狀態資訊會跨 XAML 檔案儲存在許多不同的位置。對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，XAML 檔案中的檢視狀態資訊序列化為 XAML 檔案中的獨立項目。開發人員可以很容易找到及編輯活動的狀態資訊，也可以一併移除檢視狀態。  
+ <span data-ttu-id="742b7-128">![變數和引數設計工具內容功能表](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")</span><span class="sxs-lookup"><span data-stu-id="742b7-128">![Variable and Argument Designer Context Menu](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")</span></span>  
   
- 重新裝載的工作流程設計工具支援此功能。  
+### <a name="auto-surround-with-sequence"></a><span data-ttu-id="742b7-129">使用 Sequence 進行 Auto-surround</span><span class="sxs-lookup"><span data-stu-id="742b7-129">Auto-surround with Sequence</span></span>  
+ <span data-ttu-id="742b7-130">由於工作流程或特定容器活動 (如 <xref:System.Activities.Statements.NoPersistScope>) 只能包含單一主體活動，因此開發人員必須先刪除第一個活動、加入 <xref:System.Activities.Statements.Sequence> 活動，然後將這兩個活動同時加入序列活動中，才能加入第二個活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-130">Since a workflow or certain container activities (such as <xref:System.Activities.Statements.NoPersistScope>) can only contain a single body activity, adding a second activity required the developer to delete the first activity, add a <xref:System.Activities.Statements.Sequence> activity, and then add both activities to the sequence activity.</span></span> <span data-ttu-id="742b7-131">從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，將第二個活動加入到設計工具介面時，會自動建立一個 `Sequence` 活動，以同時包含這兩個活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-131">Starting with [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], when adding a second activity to the designer surface, a `Sequence` activity will be automatically created to wrap both activities.</span></span> <span data-ttu-id="742b7-132">重新裝載的設計工具支援此功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-132">This feature is supported in the rehosted designer.</span></span>  
   
-### 在重新裝載設計工具中，選擇使用 Workflow 4.5 功能  
- 為保持回溯相容性，重新裝載的設計工具預設中並未啟用包含在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的一些新功能。這是為了確保現有的應用程式 \(使用重新裝載設計工具\) 不會因為更新至最新版本而中斷。若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".Net Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。  
+ <span data-ttu-id="742b7-133">下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `Body` 的 `NoPersistScope` 中。</span><span class="sxs-lookup"><span data-stu-id="742b7-133">The following screenshot shows a `WriteLine` activity in the `Body` of a `NoPersistScope`.</span></span>  
   
-## 新的工作流程開發模型  
- 除了流程圖和循序工作流程開發模型外，此版本還包括狀態機器工作流程和合約優先工作流程服務。  
+ <span data-ttu-id="742b7-134">![自動 &#45; 環繞置放位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")</span><span class="sxs-lookup"><span data-stu-id="742b7-134">![Auto&#45;surround drop location](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")</span></span>  
   
-### 狀態機器工作流程  
- 在 [Microsoft .NET Framework 4 Platform Update 1](http://go.microsoft.com/fwlink/?LinkID=215092) 中已將狀態機器工作流程引進為 .NET Framework 4.0.1 的一部分。此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。這些類別和活動在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中皆已更新。更新包括：  
+ <span data-ttu-id="742b7-135">當第二個 `Sequence` 降到第一個之下時，下列螢幕擷取畫面會顯示在 `Body` 中自動建立的 `WriteLine` 活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-135">The following screenshot shows the automatically created `Sequence` activity in the `Body` when a second `WriteLine` is dropped below the first.</span></span>  
   
-1.  可設定狀態中斷點的功能  
+ <span data-ttu-id="742b7-136">![自動建立序列活動](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")</span><span class="sxs-lookup"><span data-stu-id="742b7-136">![Automatically created sequence activity](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")</span></span>  
   
-2.  可在工作流程設計工具中複製和貼上轉換的功能  
+### <a name="pan-mode"></a><span data-ttu-id="742b7-137">移動瀏覽模式</span><span class="sxs-lookup"><span data-stu-id="742b7-137">Pan Mode</span></span>  
+ <span data-ttu-id="742b7-138">若要更輕鬆地在設計工具中巡覽大型工作流程，可以啟用移動瀏覽模式，讓開發人員能夠透過按一下與拖曳方式來移動工作流程的可見部分，而不需使用捲軸。</span><span class="sxs-lookup"><span data-stu-id="742b7-138">To more easily navigate a large workflow in the designer, pan mode can be enabled, allowing the developer to click and drag to move the visible portion of the workflow, rather than needing to use the scroll bars.</span></span> <span data-ttu-id="742b7-139">啟用移動瀏覽模式的按鈕位於設計工具的右下角。</span><span class="sxs-lookup"><span data-stu-id="742b7-139">The button to activate pan mode is in the lower right corner of the designer.</span></span> <span data-ttu-id="742b7-140">重新裝載的設計工具支援此功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-140">This feature is supported in the rehosted designer.</span></span>  
   
-3.  設計工具支援建立共用的觸發程序轉換  
+ <span data-ttu-id="742b7-141">下列螢幕擷取畫面顯示位於工作流程設計工具右下角的移動瀏覽按鈕。</span><span class="sxs-lookup"><span data-stu-id="742b7-141">The following screenshot shows the pan button which is located at the bottom right corner of the workflow designer.</span></span>  
   
-4.  用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
+ <span data-ttu-id="742b7-142">![在工作流程設計工具中的移動瀏覽按鈕](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")</span><span class="sxs-lookup"><span data-stu-id="742b7-142">![Pan button in workflow designer](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")</span></span>  
   
- 下列螢幕擷取畫面顯示已完成的狀態機器工作流程 \(擷取自 [快速入門教學課程](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md) 的 [HOW TO：建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md) 步驟\)。  
+ <span data-ttu-id="742b7-143">您也可以使用滑鼠中鍵或空白鍵移動瀏覽工作流程設計工具。</span><span class="sxs-lookup"><span data-stu-id="742b7-143">The middle mouse button or space bar can also be used to pan the workflow designer.</span></span>  
   
- ![已完成的狀態機器工作流程](../../../docs/framework/windows-workflow-foundation//media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+### <a name="multi-select"></a><span data-ttu-id="742b7-144">多重選取</span><span class="sxs-lookup"><span data-stu-id="742b7-144">Multi-select</span></span>  
+ <span data-ttu-id="742b7-145">您可以拖曳矩形將所要的活動圍住 (未啟用移動瀏覽模式時)，或是按住 Ctrl 鍵並依序按一下所需的活動，以同時選取多個活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-145">Multiple activities can be selected at one time, either by dragging a rectangle around them (when pan mode is not enabled), or by holding down Ctrl and click on the desired activities one by one.</span></span> <span data-ttu-id="742b7-146">重新裝載的設計工具支援此功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-146">This feature is supported in the rehosted designer.</span></span>  
   
- 如需建立狀態機器工作流程的詳細資訊，請參閱 [狀態機器工作流程](../../../docs/framework/windows-workflow-foundation//state-machine-workflows.md)。重新裝載的設計工具支援狀態機器工作流程。  
+ <span data-ttu-id="742b7-147">您也可以在設計工具中拖放多個活動選取項目，或者使用內容功能表與選取項目互動。</span><span class="sxs-lookup"><span data-stu-id="742b7-147">Multiple activity selections can also be dragged and dropped within the designer, and can also be interacted with using the context menu.</span></span>  
   
-### 合約優先工作流程開發  
- 合約優先工作流程開發工具可讓開發人員在 Code First 中設計合約，然後，只要在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中按幾下滑鼠，就可在代表各作業的工具箱中自動產生活動範本。之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。有關合約優先工作流程服務開發的詳細資訊，請參閱 [HOW TO：建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+### <a name="outline-view-of-workflow-items"></a><span data-ttu-id="742b7-148">工作流程項目的大綱檢視</span><span class="sxs-lookup"><span data-stu-id="742b7-148">Outline view of workflow items</span></span>  
+ <span data-ttu-id="742b7-149">為簡化階層工作流程的巡覽功能，工作流程的元件會顯示在樹狀大綱檢閱中。</span><span class="sxs-lookup"><span data-stu-id="742b7-149">In order to make hierarchical workflows easier to navigate, components of a workflow are shown in a tree-style outline view.</span></span> <span data-ttu-id="742b7-150">大綱檢視會顯示在**文件大綱**檢視。</span><span class="sxs-lookup"><span data-stu-id="742b7-150">The outline view is displayed in the **Document Outline** view.</span></span> <span data-ttu-id="742b7-151">若要開啟此檢視的[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，從頂端功能表中，選取**檢視**，**其他視窗**，**文件大綱**，或按 Ctrl + W、 u。</span><span class="sxs-lookup"><span data-stu-id="742b7-151">To open this view in [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], from the top menu, select **View**, **Other Windows**, **Document Outline**, or press Ctrl W,U.</span></span> <span data-ttu-id="742b7-152">按一下大綱檢視中的節點，會巡覽至工作流程設計工具中對應的活動，且大綱檢視會更新以顯示在設計工具中選取的活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-152">Clicking on a node in outline view will navigate to the corresponding activity in the workflow designer, and the outline view will be updated to show activities that are selected in the designer.</span></span> <span data-ttu-id="742b7-153">重新裝載的設計工具支援此功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-153">This feature is supported in the rehosted designer.</span></span>  
+  
+ <span data-ttu-id="742b7-154">從完成的工作流程中的下列螢幕擷取畫面[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)與循序工作流程大綱檢視會顯示。</span><span class="sxs-lookup"><span data-stu-id="742b7-154">The following screenshot of the completed workflow from the [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) shows the outline view with a sequential workflow.</span></span>  
+  
+ <span data-ttu-id="742b7-155">![大綱檢視中工作流程設計工具](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")</span><span class="sxs-lookup"><span data-stu-id="742b7-155">![Outline View in Workflow Designer](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")</span></span>  
+  
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a><span data-ttu-id="742b7-156">更多殼層列及標頭項目的可見度控制功能</span><span class="sxs-lookup"><span data-stu-id="742b7-156">More control of visibility of shell bar and header items</span></span>  
+ <span data-ttu-id="742b7-157">在重新裝載的設計工具中，部分標準 UI 控制項可能對特定工作流程沒有意義，而且可能是關閉狀態。</span><span class="sxs-lookup"><span data-stu-id="742b7-157">In a rehosted designer, some of the standard UI controls may not have meaning for a given workflow, and may be turned off.</span></span> <span data-ttu-id="742b7-158">在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只有設計工具最下方的殼層列支援這項自訂功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-158">In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], this customization is only supported by the shell bar at the bottom of the designer.</span></span> <span data-ttu-id="742b7-159">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以透過設定 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 與適當的 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 值，來調整是否顯示設計工具最上方的殼層標頭項目。</span><span class="sxs-lookup"><span data-stu-id="742b7-159">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the visibility of shell header items at the top of the designer can be adjusted by setting <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> with the appropriate <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> value.</span></span>  
+  
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a><span data-ttu-id="742b7-160">流程圖與狀態機器工作流程中的自動連接和自動插入</span><span class="sxs-lookup"><span data-stu-id="742b7-160">Auto-connect and auto-insert in Flowchart and State Machine workflows</span></span>  
+ <span data-ttu-id="742b7-161">在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，流程圖工作流程的節點連接必須手動加入。</span><span class="sxs-lookup"><span data-stu-id="742b7-161">In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], connections between nodes in a Flowchart workflow had to be added manually.</span></span> <span data-ttu-id="742b7-162">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖和狀態機器的節點具有自動連接點，在將活動從工具箱拖曳到設計工具介面上時，就會顯示自動連接點。</span><span class="sxs-lookup"><span data-stu-id="742b7-162">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Flowchart and State Machine nodes have auto-connect points that become visible when an activity is dragged from the toolbox onto the designer surface.</span></span> <span data-ttu-id="742b7-163">將活動拖曳到其中一點上，會自動加入該活動及必要的連接。</span><span class="sxs-lookup"><span data-stu-id="742b7-163">Dropping an activity on one of these points automatically adds the activity along with the necessary connection.</span></span>  
+  
+ <span data-ttu-id="742b7-164">下列螢幕擷取畫面顯示從工具箱拖曳活動時顯示的附加點。</span><span class="sxs-lookup"><span data-stu-id="742b7-164">The following screenshot shows the attachment points that become visible when an activity is dragged from the toolbox.</span></span>  
+  
+ <span data-ttu-id="742b7-165">![顯示自動連接點的流程圖開始節點](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")</span><span class="sxs-lookup"><span data-stu-id="742b7-165">![Flowchart start node showing autoconnect points](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")</span></span>  
+  
+ <span data-ttu-id="742b7-166">您也可以將活動拖曳到流程圖節點和狀態之間的連接，以在其他兩個節點之間自動插入該節點。</span><span class="sxs-lookup"><span data-stu-id="742b7-166">Activities can also be dragged onto connections between flowchart nodes and states to auto-insert the node between two other nodes.</span></span> <span data-ttu-id="742b7-167">下列螢幕擷取畫面顯示反白顯示的連接線，在此可以從工具箱中拖曳及放置活動。</span><span class="sxs-lookup"><span data-stu-id="742b7-167">The following screenshot shows the highlighted connecting line where activities can be dragged from the toolbox and dropped.</span></span>  
+  
+ <span data-ttu-id="742b7-168">![自動 &#45; 用於置放活動處理的插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")</span><span class="sxs-lookup"><span data-stu-id="742b7-168">![Auto&#45;insert handle for dropping activities](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")</span></span>  
+  
+ <span data-ttu-id="742b7-169">重新裝載的設計工具支援自動連接和自動插入。</span><span class="sxs-lookup"><span data-stu-id="742b7-169">Auto-connect and auto-insert are supported in the rehosted designer.</span></span>  
+  
+### <a name="designer-annotations"></a><span data-ttu-id="742b7-170">設計工具標註</span><span class="sxs-lookup"><span data-stu-id="742b7-170">Designer Annotations</span></span>  
+ <span data-ttu-id="742b7-171">為方便開發大型工作流程，設計工具現已支援加入標註，以追蹤設計流程。</span><span class="sxs-lookup"><span data-stu-id="742b7-171">To facilitate developing larger workflows, the designer now supports adding annotations to help keep track of the design process.</span></span> <span data-ttu-id="742b7-172">您可以在活動、狀態、流程圖節點、變數和引數中加入標註。</span><span class="sxs-lookup"><span data-stu-id="742b7-172">Annotation can be added to activities, states, flowchart nodes, variables and arguments.</span></span> <span data-ttu-id="742b7-173">下列螢幕擷取畫面顯示用來將標註加入設計工具的操作功能表。</span><span class="sxs-lookup"><span data-stu-id="742b7-173">The following screenshot shows the context menu used to add annotations to the designer.</span></span>  
+  
+ <span data-ttu-id="742b7-174">![註釋 內容功能表](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")</span><span class="sxs-lookup"><span data-stu-id="742b7-174">![Annotation context menu](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")</span></span>  
+  
+ <span data-ttu-id="742b7-175">重新裝載的設計工具支援設計工具標註。</span><span class="sxs-lookup"><span data-stu-id="742b7-175">Designer annotations are supported in the rehosted designer.</span></span>  
+  
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a><span data-ttu-id="742b7-176">在設計工具中定義與取用 ActivityDelegate 物件</span><span class="sxs-lookup"><span data-stu-id="742b7-176">Define and consume ActivityDelegate objects in the designer</span></span>  
+ <span data-ttu-id="742b7-177">[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。</span><span class="sxs-lookup"><span data-stu-id="742b7-177">Activities in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] used <xref:System.Activities.ActivityDelegate> objects to expose execution points where other parts of the workflow could interact with a workflow's execution, but using these execution points usually required a fair amount of code.</span></span> <span data-ttu-id="742b7-178">在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。</span><span class="sxs-lookup"><span data-stu-id="742b7-178">In this release, developers can define and consume activity delegates using the workflow designer.</span></span> <span data-ttu-id="742b7-179">如需詳細資訊，請參閱[如何： 定義和使用工作流程設計工具中的活動委派](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)。</span><span class="sxs-lookup"><span data-stu-id="742b7-179">For more information, see [How to: Define and consume activity delegates in the Workflow Designer](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).</span></span>  
+  
+ <span data-ttu-id="742b7-180">重新裝載的設計工具支援活動委派。</span><span class="sxs-lookup"><span data-stu-id="742b7-180">Activity delegates are supported in the rehosted designer.</span></span>  
+  
+### <a name="build-time-validation"></a><span data-ttu-id="742b7-181">建置階段驗證</span><span class="sxs-lookup"><span data-stu-id="742b7-181">Build-time validation</span></span>  
+ <span data-ttu-id="742b7-182">在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。</span><span class="sxs-lookup"><span data-stu-id="742b7-182">In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], workflow validation errors weren’t counted as build errors during the build of a workflow project.</span></span> <span data-ttu-id="742b7-183">這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。</span><span class="sxs-lookup"><span data-stu-id="742b7-183">This meant that building a workflow project could succeed even when there were workflow validation errors.</span></span> <span data-ttu-id="742b7-184">在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流程驗證錯誤會導致建置失敗。</span><span class="sxs-lookup"><span data-stu-id="742b7-184">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], workflow validation errors cause the build to fail.</span></span>  
   
 > [!WARNING]
->  工作流程設計工具不支援合約優先工作流程開發。
+>  <span data-ttu-id="742b7-185">重新裝載的設計工具不支援建置階段驗證。</span><span class="sxs-lookup"><span data-stu-id="742b7-185">Build-time validation is not supported in the rehosted designer.</span></span>  
+  
+### <a name="design-time-background-validation"></a><span data-ttu-id="742b7-186">設計階段背景驗證</span><span class="sxs-lookup"><span data-stu-id="742b7-186">Design-time background validation</span></span>  
+ <span data-ttu-id="742b7-187">在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，會在前景處理序中驗證工作流程，因此若驗證處理序較複雜或耗時，可能會使 UI 停止回應。</span><span class="sxs-lookup"><span data-stu-id="742b7-187">In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], workflows were validated as a foreground process, which could potentially hang the UI during complex or time-consuming validation processes.</span></span> <span data-ttu-id="742b7-188">現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。</span><span class="sxs-lookup"><span data-stu-id="742b7-188">Workflow validation now takes place on a background thread, so that the UI is not blocked.</span></span>  
+  
+ <span data-ttu-id="742b7-189">重新裝載的設計工具支援設計階段背景驗證。</span><span class="sxs-lookup"><span data-stu-id="742b7-189">Design-time background validation is supported in the rehosted designer.</span></span>  
+  
+### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a><span data-ttu-id="742b7-190">檢視狀態在 XAML 檔案中的獨立位置</span><span class="sxs-lookup"><span data-stu-id="742b7-190">View state located in a separate location in XAML files</span></span>  
+ <span data-ttu-id="742b7-191">在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流程的檢視狀態資訊會跨 XAML 檔案儲存在許多不同的位置。</span><span class="sxs-lookup"><span data-stu-id="742b7-191">In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], the view state information for a workflow is stored across the XAML file in many different locations.</span></span> <span data-ttu-id="742b7-192">對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。</span><span class="sxs-lookup"><span data-stu-id="742b7-192">This is inconvenient for developers who want to read XAML directly, or write code to remove the view state information.</span></span> <span data-ttu-id="742b7-193">在[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，XAML 檔案中的檢視狀態資訊會序列化為 XAML 檔案中的個別項目。</span><span class="sxs-lookup"><span data-stu-id="742b7-193">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the view state information in the XAML file is serialized as a separate element in the XAML file.</span></span>  <span data-ttu-id="742b7-194">開發人員可以輕鬆地找出和編輯檢視狀態資訊的活動，或完全移除檢視狀態。</span><span class="sxs-lookup"><span data-stu-id="742b7-194">Developers can easily locate and edit the view state information of an activity, or remove the view state altogether.</span></span>  
+  
+ <span data-ttu-id="742b7-195">重新裝載的工作流程設計工具支援此功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-195">This feature is supported in the rehosted workflow designer.</span></span>  
+  
+### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a><span data-ttu-id="742b7-196">在重新裝載設計工具中，選擇使用 Workflow 4.5 功能</span><span class="sxs-lookup"><span data-stu-id="742b7-196">Opt-in for Workflow 4.5 features in rehosted designer</span></span>  
+ <span data-ttu-id="742b7-197">為保持回溯相容性，重新裝載的設計工具預設中並未啟用包含在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的一些新功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-197">To preserve backward compatibility, some new features included in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] are not enabled by default in the rehosted designer.</span></span> <span data-ttu-id="742b7-198">這是為了確保現有的應用程式 (使用重新裝載設計工具) 不會因為更新至最新版本而中斷。</span><span class="sxs-lookup"><span data-stu-id="742b7-198">This is to ensure that existing applications that use the rehosted designer are not broken by updating to the latest version.</span></span> <span data-ttu-id="742b7-199">若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".Net Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。</span><span class="sxs-lookup"><span data-stu-id="742b7-199">To enable new features in the rehosted designer, either set <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> to ".Net Framework 4.5", or set individual members of <xref:System.Activities.Presentation.DesignerConfigurationService> to enable individual features.</span></span>  
+  
+## <a name="new-workflow-development-models"></a><span data-ttu-id="742b7-200">新的工作流程開發模型</span><span class="sxs-lookup"><span data-stu-id="742b7-200">New Workflow Development Models</span></span>  
+ <span data-ttu-id="742b7-201">除了流程圖和循序工作流程開發模型外，此版本還包括狀態機器工作流程和合約優先工作流程服務。</span><span class="sxs-lookup"><span data-stu-id="742b7-201">In addition to flowchart and sequential workflow development models, this release includes State Machine workflows, and contract-first workflow services.</span></span>  
+  
+### <a name="state-machine-workflows"></a><span data-ttu-id="742b7-202">狀態機器工作流程</span><span class="sxs-lookup"><span data-stu-id="742b7-202">State machine workflows</span></span>  
+ <span data-ttu-id="742b7-203">狀態機器工作流程組件的.NET Framework 4.0.1 中引進[Microsoft.NET Framework 4 平台更新 1](http://go.microsoft.com/fwlink/?LinkID=215092)。</span><span class="sxs-lookup"><span data-stu-id="742b7-203">State machine workflows were introduced as part of the .NET Framework 4.0.1 in the [Microsoft .NET Framework 4 Platform Update 1](http://go.microsoft.com/fwlink/?LinkID=215092).</span></span> <span data-ttu-id="742b7-204">此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。</span><span class="sxs-lookup"><span data-stu-id="742b7-204">This update included several new classes and activities which allowed developers to create state machine workflows.</span></span> <span data-ttu-id="742b7-205">這些類別和活動在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中皆已更新。</span><span class="sxs-lookup"><span data-stu-id="742b7-205">These classes and activities have been updated for [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="742b7-206">更新包括：</span><span class="sxs-lookup"><span data-stu-id="742b7-206">Updates include:</span></span>  
+  
+1.  <span data-ttu-id="742b7-207">可設定狀態中斷點的功能</span><span class="sxs-lookup"><span data-stu-id="742b7-207">The ability to set breakpoints on states</span></span>  
+  
+2.  <span data-ttu-id="742b7-208">可在工作流程設計工具中複製和貼上轉換的功能</span><span class="sxs-lookup"><span data-stu-id="742b7-208">The ability to copy and paste transitions in the workflow designer</span></span>  
+  
+3.  <span data-ttu-id="742b7-209">設計工具支援建立共用的觸發程序轉換</span><span class="sxs-lookup"><span data-stu-id="742b7-209">Designer support for shared trigger transition creation</span></span>  
+  
+4.  <span data-ttu-id="742b7-210">用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition></span><span class="sxs-lookup"><span data-stu-id="742b7-210">Activities used to create State Machine workflows, including: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, and <xref:System.Activities.Statements.Transition></span></span>  
+  
+ <span data-ttu-id="742b7-211">下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步驟[How to： 建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)。</span><span class="sxs-lookup"><span data-stu-id="742b7-211">The following screenshot shows the completed state machine workflow from the [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) step [How to: Create a State Machine Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).</span></span>  
+  
+ <span data-ttu-id="742b7-212">![已完成狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span><span class="sxs-lookup"><span data-stu-id="742b7-212">![Completed State Machine Workflow](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span></span>  
+  
+ <span data-ttu-id="742b7-213">如需有關如何建立狀態機器工作流程的詳細資訊，請參閱[狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。</span><span class="sxs-lookup"><span data-stu-id="742b7-213">For more information on creating state machine workflows, see [State Machine Workflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).</span></span> <span data-ttu-id="742b7-214">重新裝載的設計工具支援狀態機器工作流程。</span><span class="sxs-lookup"><span data-stu-id="742b7-214">State machine workflows are supported in the rehosted designer.</span></span>  
+  
+### <a name="contract-first-workflow-development"></a><span data-ttu-id="742b7-215">合約優先工作流程開發</span><span class="sxs-lookup"><span data-stu-id="742b7-215">Contract-first workflow development</span></span>  
+ <span data-ttu-id="742b7-216">合約優先工作流程開發工具可讓開發人員在 Code First 中設計合約，然後，只要在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中按幾下滑鼠，就可在代表各作業的工具箱中自動產生活動範本。</span><span class="sxs-lookup"><span data-stu-id="742b7-216">The contract-first workflow development tool allows the developer to design a contract in code first, then, with a few clicks in [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], automatically generate an activity template in the toolbox representing each operation.</span></span> <span data-ttu-id="742b7-217">之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。</span><span class="sxs-lookup"><span data-stu-id="742b7-217">These activities are then used to create a workflow that implements the operations defined by the contract.</span></span> <span data-ttu-id="742b7-218">工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。</span><span class="sxs-lookup"><span data-stu-id="742b7-218">The workflow designer will validate the workflow service to ensure that these operations are implemented and the signature of the workflow matches the contract signature.</span></span> <span data-ttu-id="742b7-219">開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。</span><span class="sxs-lookup"><span data-stu-id="742b7-219">The developer can also associate a workflow service with a collection of implemented contracts.</span></span> <span data-ttu-id="742b7-220">如需合約優先工作流程服務開發的詳細資訊，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="742b7-220">For more information on contract-first workflow service development, see [How to: Create a workflow service that consumes an existing service contract](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).</span></span>  
+  
+> [!WARNING]
+>  <span data-ttu-id="742b7-221">工作流程設計工具不支援合約優先工作流程開發。</span><span class="sxs-lookup"><span data-stu-id="742b7-221">Contract-first workflow development is not supported in the workflow designer.</span></span>

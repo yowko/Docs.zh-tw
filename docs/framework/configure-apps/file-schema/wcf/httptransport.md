@@ -1,31 +1,36 @@
 ---
-title: "&lt;httpTransport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;httpTransport&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6aacdb254b12e5c1b344b43c2fbf2e94681c1f6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;httpTransport&gt;
-指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
+# <a name="lthttptransportgt"></a><span data-ttu-id="758bb-102">&lt;httpTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="758bb-102">&lt;httpTransport&gt;</span></span>
+<span data-ttu-id="758bb-103">指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。</span><span class="sxs-lookup"><span data-stu-id="758bb-103">Specifies an HTTP transport for transmitting SOAP messages for a custom binding.</span></span>  
   
-## 語法  
+ <span data-ttu-id="758bb-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="758bb-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="758bb-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="758bb-105">\<bindings></span></span>  
+<span data-ttu-id="758bb-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="758bb-106">\<customBinding></span></span>  
+<span data-ttu-id="758bb-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="758bb-107">\<binding></span></span>  
+<span data-ttu-id="758bb-108">\<httpTransport ></span><span class="sxs-lookup"><span data-stu-id="758bb-108">\<httpTransport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="758bb-109">語法</span><span class="sxs-lookup"><span data-stu-id="758bb-109">Syntax</span></span>  
   
+```xml  
 <httpTransport  
     allowCookies=Boolean"  
     authenticationScheme="Digest/Negotiate/Ntlm/Basic/Anonymous"  
@@ -42,46 +47,46 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
         useDefaultWebProxy="Boolean" />  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="758bb-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="758bb-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="758bb-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="758bb-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="758bb-112">屬性</span><span class="sxs-lookup"><span data-stu-id="758bb-112">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|allowCookies|布林值，指定用戶端是否接受 Cookie 並在未來要求時傳播 Cookie。  預設為 `false`。<br /><br /> 當您與使用 Cookie 的 ASMX Web 服務互動時，可以使用這個屬性。  如此一來，從伺服器傳回的 Cookie 就一定會自動複製到該服務未來所有的用戶端要求。|  
-|authenticationScheme|指定通訊協定，用於驗證由 HTTP 接聽程式處理的用戶端要求。  有效值包括以下的值：<br /><br /> -   Digest：指定摘要式驗證。<br />-   Negotiate：與用戶端交涉，以決定驗證配置。  如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-   Ntlm：指定 NTLM 驗證。<br />-   Basic：指定基本驗證。<br />-   Anonymous：指定匿名驗證。<br /><br /> 預設值為 Anonymous。  此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。  這個屬性只可以設定一次。|  
-|bypassProxyOnLocal|布林值，指出本機位址是否略過 Proxy 伺服器。  預設為 `false`。<br /><br /> 本機位址是位於本機 LAN 或內部網路上的位址。<br /><br /> 如果服務位址是以 http:\/\/localhost 開頭，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 一律忽略 Proxy。<br /><br /> 如果您希望用戶端在與相同電腦上的服務進行交談時通過 Proxy，應使用主機名稱而非 localhost。|  
-|hostnameComparisonMode|指定用於剖析 URI 的 HTTP 主機名稱比較模式。  有效值為：<br /><br /> -   StrongWildcard：\(“\+”\) 比對指定之配置、連接埠和相對 URI 的內容中所有可能的主機名稱。<br />-   Exact：無萬用字元。<br />-   WeakWildcard：\(“\*”\) 比對指定之配置、連接埠和相對 UIR 的內容中，所有尚未明確比對或透過強式萬用字元機制比對的可能主機名稱。<br /><br /> 預設為 StrongWildcard。  此屬性的型別為 <xref:System.ServiceModel.HostnameComparisonMode>。|  
-|keepAliveEnabled|布林值，指定是否要與網際網路資源建立持續連線。|  
-|maxBufferSize|正整數，指定緩衝區的大小上限。  預設為 524288。|  
-|proxyAddress|指定 HTTP Proxy 位址的 URI。  如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。  預設為 `null`。|  
-|proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。  有效值包括以下的值：<br /><br /> -   None：未執行驗證。<br />-   Digest：指定摘要式驗證。<br />-   Negotiate：與用戶端交涉，以決定驗證配置。  如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-   Ntlm：指定 NTLM 驗證。<br />-   Basic：指定基本驗證。<br />-   Anonymous：指定匿名驗證。<br />-   IntegratedWindowsAuthentication：指定 Windows 驗證。<br /><br /> 預設值為 Anonymous。  此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。|  
-|realm|字串，指定在 Proxy\/伺服器上使用的領域。  預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。  每個分割都可以有自己的驗證配置和 \(或\) 授權資料庫。  領域只限於基本和摘要式驗證使用。  當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。  如需領域的詳細說明，請參閱 RFC 2617，網址為 http:\/\/www.ietf.org。|  
-|transferMode|指定訊息是否要經過緩衝處理或資料流處理，或為要求或回應。  有效值包括以下的值：<br /><br /> -   Buffered：緩衝處理要求訊息和回應訊息。<br />-   Streamed：資料流處理要求訊息和回應訊息。<br />-   StreamedRequest：資料流處理要求訊息，緩衝處理回應訊息。<br />-   StreamedResponse：緩衝處理要求訊息，資料流處理回應訊息。<br /><br /> 預設為 Buffered。  此屬性的型別為 <xref:System.ServiceModel.TransferMode>。|  
-|unsafeConnectionNtlmAuthentication|布林值，指定是否已在伺服器啟用「不安全的連線共用」。  預設為 `false`。  如果已啟用，NTLM 驗證會在各 TCP 連線上執行一次。|  
-|useDefaultWebProxy|布林值，指定是否使用整部機器 Proxy 設定而非使用者特定設定。  預設為 `true`。|  
+|<span data-ttu-id="758bb-113">屬性</span><span class="sxs-lookup"><span data-stu-id="758bb-113">Attribute</span></span>|<span data-ttu-id="758bb-114">描述</span><span class="sxs-lookup"><span data-stu-id="758bb-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="758bb-115">allowCookies</span><span class="sxs-lookup"><span data-stu-id="758bb-115">allowCookies</span></span>|<span data-ttu-id="758bb-116">布林值，指定用戶端是否接受 Cookie 並在未來要求時傳播 Cookie。</span><span class="sxs-lookup"><span data-stu-id="758bb-116">A Boolean value that specifies whether the client accepts cookies and propagates them on future requests.</span></span> <span data-ttu-id="758bb-117">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="758bb-117">The default is `false`.</span></span><br /><br /> <span data-ttu-id="758bb-118">當您與使用 Cookie 的 ASMX Web 服務互動時，可以使用這個屬性。</span><span class="sxs-lookup"><span data-stu-id="758bb-118">You can use this attribute when you interact with ASMX Web services that use cookies.</span></span> <span data-ttu-id="758bb-119">如此一來，從伺服器傳回的 Cookie 就一定會自動複製到該服務未來所有的用戶端要求。</span><span class="sxs-lookup"><span data-stu-id="758bb-119">In this way, you can be sure that the cookies returned from the server are automatically copied to all future client requests for that service.</span></span>|  
+|<span data-ttu-id="758bb-120">authenticationScheme</span><span class="sxs-lookup"><span data-stu-id="758bb-120">authenticationScheme</span></span>|<span data-ttu-id="758bb-121">指定通訊協定，用於驗證由 HTTP 接聽程式處理的用戶端要求。</span><span class="sxs-lookup"><span data-stu-id="758bb-121">Specifies the protocol used to authenticate client requests being processed by an HTTP listener.</span></span> <span data-ttu-id="758bb-122">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="758bb-122">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="758bb-123">-Digest： 指定摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-123">-   Digest: Specifies digest authentication.</span></span><br /><span data-ttu-id="758bb-124">-Negotiate： 與用戶端決定驗證配置進行交涉。</span><span class="sxs-lookup"><span data-stu-id="758bb-124">-   Negotiate: Negotiates with the client to determine the authentication scheme.</span></span> <span data-ttu-id="758bb-125">如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。</span><span class="sxs-lookup"><span data-stu-id="758bb-125">If both client and server support Kerberos, it is used; otherwise, NTLM is used.</span></span><br /><span data-ttu-id="758bb-126">-Ntlm： 指定 NTLM 驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-126">-   Ntlm: Specifies NTLM authentication.</span></span><br /><span data-ttu-id="758bb-127">-基本： 指定基本驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-127">-   Basic: Specifies basic authentication.</span></span><br /><span data-ttu-id="758bb-128">匿名： 指定匿名驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-128">-   Anonymous: Specifies anonymous authentication.</span></span><br /><br /> <span data-ttu-id="758bb-129">預設值為 Anonymous。</span><span class="sxs-lookup"><span data-stu-id="758bb-129">The default is Anonymous.</span></span> <span data-ttu-id="758bb-130">此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。</span><span class="sxs-lookup"><span data-stu-id="758bb-130">This attribute is of type <xref:System.Net.AuthenticationSchemes>.</span></span> <span data-ttu-id="758bb-131">這個屬性只可以設定一次。</span><span class="sxs-lookup"><span data-stu-id="758bb-131">This attribute can only be set once.</span></span>|  
+|<span data-ttu-id="758bb-132">bypassProxyOnLocal</span><span class="sxs-lookup"><span data-stu-id="758bb-132">bypassProxyOnLocal</span></span>|<span data-ttu-id="758bb-133">布林值，指出本機位址是否略過 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="758bb-133">A Boolean value that indicates whether to bypass the proxy server for local addresses.</span></span> <span data-ttu-id="758bb-134">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="758bb-134">The default is `false`.</span></span><br /><br /> <span data-ttu-id="758bb-135">本機位址是位於本機 LAN 或內部網路上的位址。</span><span class="sxs-lookup"><span data-stu-id="758bb-135">A local address is one that is on the local LAN or intranet.</span></span><br /><br /> <span data-ttu-id="758bb-136">如果服務位址是以 http://localhost 開頭，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 一律忽略 Proxy。</span><span class="sxs-lookup"><span data-stu-id="758bb-136">[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] always ignores the proxy if the service address begins with http://localhost.</span></span><br /><br /> <span data-ttu-id="758bb-137">如果您希望用戶端在與相同電腦上的服務進行交談時通過 Proxy，應使用主機名稱而非 localhost。</span><span class="sxs-lookup"><span data-stu-id="758bb-137">You should use the host name rather than localhost if you want clients to go through a proxy when talking to services on the same machine.</span></span>|  
+|<span data-ttu-id="758bb-138">hostnameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="758bb-138">hostnameComparisonMode</span></span>|<span data-ttu-id="758bb-139">指定用於剖析 URI 的 HTTP 主機名稱比較模式。</span><span class="sxs-lookup"><span data-stu-id="758bb-139">Specifies the HTTP hostname comparison mode used to parse URIs.</span></span> <span data-ttu-id="758bb-140">有效值為：</span><span class="sxs-lookup"><span data-stu-id="758bb-140">Valid values are,</span></span><br /><br /> <span data-ttu-id="758bb-141">-StrongWildcard: （"+"） 比對指定的配置、 連接埠和相對 URI 的內容中所有可能的主機名稱。</span><span class="sxs-lookup"><span data-stu-id="758bb-141">-   StrongWildcard: ("+") matches all possible hostnames in the context of the specified scheme, port and relative URI.</span></span><br /><span data-ttu-id="758bb-142">-完全： 無萬用字元。</span><span class="sxs-lookup"><span data-stu-id="758bb-142">-   Exact: no wildcards</span></span><br /><span data-ttu-id="758bb-143">-WeakWildcard: ("*") 必須符合指定的配置、 連接埠和相對 UIR 有不尚未明確比對或透過強式萬用字元機制的內容中的所有可能主機名稱。</span><span class="sxs-lookup"><span data-stu-id="758bb-143">-   WeakWildcard: ("*") matches all possible hostname in the context of the specified scheme, port and relative UIR that have not been matched explicitly or through the strong wildcard mechanism.</span></span><br /><br /> <span data-ttu-id="758bb-144">預設為 StrongWildcard。</span><span class="sxs-lookup"><span data-stu-id="758bb-144">The default is StrongWildcard.</span></span> <span data-ttu-id="758bb-145">此屬性的型別為 `System.ServiceModel.HostnameComparisonMode`。</span><span class="sxs-lookup"><span data-stu-id="758bb-145">This attribute is of type `System.ServiceModel.HostnameComparisonMode`.</span></span>|  
+|<span data-ttu-id="758bb-146">keepAliveEnabled</span><span class="sxs-lookup"><span data-stu-id="758bb-146">keepAliveEnabled</span></span>|<span data-ttu-id="758bb-147">布林值，指定是否要與網際網路資源建立持續連線。</span><span class="sxs-lookup"><span data-stu-id="758bb-147">A Boolean value that specifies whether to make a persistent connection to the internet resource.</span></span>|  
+|<span data-ttu-id="758bb-148">maxBufferSize</span><span class="sxs-lookup"><span data-stu-id="758bb-148">maxBufferSize</span></span>|<span data-ttu-id="758bb-149">正整數，指定緩衝區的大小上限。</span><span class="sxs-lookup"><span data-stu-id="758bb-149">A positive integer that specifies the maximum size of the buffer.</span></span> <span data-ttu-id="758bb-150">預設為 524288。</span><span class="sxs-lookup"><span data-stu-id="758bb-150">The default is 524288</span></span>|  
+|<span data-ttu-id="758bb-151">proxyAddress</span><span class="sxs-lookup"><span data-stu-id="758bb-151">proxyAddress</span></span>|<span data-ttu-id="758bb-152">指定 HTTP Proxy 位址的 URI。</span><span class="sxs-lookup"><span data-stu-id="758bb-152">A URI that specifies the address of the HTTP proxy.</span></span> <span data-ttu-id="758bb-153">如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。</span><span class="sxs-lookup"><span data-stu-id="758bb-153">If `useSystemWebProxy` is `true`, this setting must be `null`.</span></span> <span data-ttu-id="758bb-154">預設為 `null`。</span><span class="sxs-lookup"><span data-stu-id="758bb-154">The default is `null`.</span></span>|  
+|<span data-ttu-id="758bb-155">proxyAuthenticationScheme</span><span class="sxs-lookup"><span data-stu-id="758bb-155">proxyAuthenticationScheme</span></span>|<span data-ttu-id="758bb-156">指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。</span><span class="sxs-lookup"><span data-stu-id="758bb-156">Specifies the protocol used for authenticating client requests being processed by an HTTP proxy.</span></span> <span data-ttu-id="758bb-157">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="758bb-157">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="758bb-158">-無： 未執行驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-158">-   None: No authentication is performed.</span></span><br /><span data-ttu-id="758bb-159">-Digest： 指定摘要式驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-159">-   Digest: Specifies digest authentication.</span></span><br /><span data-ttu-id="758bb-160">-Negotiate： 與用戶端決定驗證配置進行交涉。</span><span class="sxs-lookup"><span data-stu-id="758bb-160">-   Negotiate: Negotiates with the client to determine the authentication scheme.</span></span> <span data-ttu-id="758bb-161">如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。</span><span class="sxs-lookup"><span data-stu-id="758bb-161">If both client and server support Kerberos, it is used; otherwise, NTLM is used.</span></span><br /><span data-ttu-id="758bb-162">-Ntlm： 指定 NTLM 驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-162">-   Ntlm: Specifies NTLM authentication.</span></span><br /><span data-ttu-id="758bb-163">-基本： 指定基本驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-163">-   Basic: Specifies basic authentication.</span></span><br /><span data-ttu-id="758bb-164">匿名： 指定匿名驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-164">-   Anonymous: Specifies anonymous authentication.</span></span><br /><span data-ttu-id="758bb-165">-IntegratedWindowsAuthentication： 指定 Windows 驗證。</span><span class="sxs-lookup"><span data-stu-id="758bb-165">-   IntegratedWindowsAuthentication: Specifies Windows authentication.</span></span><br /><br /> <span data-ttu-id="758bb-166">預設值為 Anonymous。</span><span class="sxs-lookup"><span data-stu-id="758bb-166">The default is Anonymous.</span></span> <span data-ttu-id="758bb-167">此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。</span><span class="sxs-lookup"><span data-stu-id="758bb-167">This attribute is of type <xref:System.Net.AuthenticationSchemes>.</span></span>|  
+|<span data-ttu-id="758bb-168">realm</span><span class="sxs-lookup"><span data-stu-id="758bb-168">realm</span></span>|<span data-ttu-id="758bb-169">字串，指定在 Proxy/伺服器上使用的領域。</span><span class="sxs-lookup"><span data-stu-id="758bb-169">A string that specifies the realm to use on the proxy/server.</span></span> <span data-ttu-id="758bb-170">預設為空字串。</span><span class="sxs-lookup"><span data-stu-id="758bb-170">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="758bb-171">伺服器使用領域來分割受保護的資源。</span><span class="sxs-lookup"><span data-stu-id="758bb-171">Servers use realms to partition protected resources.</span></span> <span data-ttu-id="758bb-172">每個分割都可以有自己的驗證配置和 (或) 授權資料庫。</span><span class="sxs-lookup"><span data-stu-id="758bb-172">Each partition can have its own authentication scheme and/or authorization database.</span></span> <span data-ttu-id="758bb-173">領域只限於基本和摘要式驗證使用。</span><span class="sxs-lookup"><span data-stu-id="758bb-173">Realms are used only for basic and digest authentication.</span></span> <span data-ttu-id="758bb-174">當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。</span><span class="sxs-lookup"><span data-stu-id="758bb-174">After a client successfully authenticates, the authentication is valid for all resources in a given realm.</span></span> <span data-ttu-id="758bb-175">如需領域的詳細說明，請參閱 RFC 2617，網址為 http://www.ietf.org。</span><span class="sxs-lookup"><span data-stu-id="758bb-175">For a detailed description of realms, see RFC 2617 at http://www.ietf.org.</span></span>|  
+|<span data-ttu-id="758bb-176">transferMode</span><span class="sxs-lookup"><span data-stu-id="758bb-176">transferMode</span></span>|<span data-ttu-id="758bb-177">指定訊息是否要經過緩衝處理或資料流處理，或為要求或回應。</span><span class="sxs-lookup"><span data-stu-id="758bb-177">Specifies whether messages are buffered or streamed or a request or response.</span></span> <span data-ttu-id="758bb-178">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="758bb-178">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="758bb-179">緩衝： 緩衝要求和回應訊息。</span><span class="sxs-lookup"><span data-stu-id="758bb-179">-   Buffered: The request and response messages are buffered.</span></span><br /><span data-ttu-id="758bb-180">資料流： 進行串流的要求和回應訊息。</span><span class="sxs-lookup"><span data-stu-id="758bb-180">-   Streamed: The request and response messages are streamed.</span></span><br /><span data-ttu-id="758bb-181">-StreamedRequest： 要求訊息資料流處理，並緩衝處理回應訊息。</span><span class="sxs-lookup"><span data-stu-id="758bb-181">-   StreamedRequest: The request message is streamed and the response message is buffered.</span></span><br /><span data-ttu-id="758bb-182">-StreamedResponse： 緩衝處理要求訊息和回應訊息資料流處理。</span><span class="sxs-lookup"><span data-stu-id="758bb-182">-   StreamedResponse: The request message is buffered and the response message is streamed.</span></span><br /><br /> <span data-ttu-id="758bb-183">預設為 Buffered。</span><span class="sxs-lookup"><span data-stu-id="758bb-183">The default is Buffered.</span></span> <span data-ttu-id="758bb-184">此屬性的型別為 <xref:System.ServiceModel.TransferMode>。</span><span class="sxs-lookup"><span data-stu-id="758bb-184">This attribute is of type <xref:System.ServiceModel.TransferMode> .</span></span>|  
+|<span data-ttu-id="758bb-185">unsafeConnectionNtlmAuthentication</span><span class="sxs-lookup"><span data-stu-id="758bb-185">unsafeConnectionNtlmAuthentication</span></span>|<span data-ttu-id="758bb-186">布林值，指定是否已在伺服器啟用「不安全的連線共用」。</span><span class="sxs-lookup"><span data-stu-id="758bb-186">A Boolean value that specifies whether Unsafe Connection Sharing is enabled on the server.</span></span> <span data-ttu-id="758bb-187">預設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="758bb-187">The default is `false`.</span></span> <span data-ttu-id="758bb-188">如果已啟用，NTLM 驗證會在各 TCP 連線上執行一次。</span><span class="sxs-lookup"><span data-stu-id="758bb-188">If enabled, NTLM authentication is performed once on each TCP connection.</span></span>|  
+|<span data-ttu-id="758bb-189">useDefaultWebProxy</span><span class="sxs-lookup"><span data-stu-id="758bb-189">useDefaultWebProxy</span></span>|<span data-ttu-id="758bb-190">布林值，指定是否使用整部機器 Proxy 設定而非使用者特定設定。</span><span class="sxs-lookup"><span data-stu-id="758bb-190">A Boolean value that specifies whether the machine-wide proxy settings are used rather than the user specific settings.</span></span> <span data-ttu-id="758bb-191">預設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="758bb-191">The default is `true`.</span></span>|  
   
-### 子項目  
- 無  
+### <a name="child-elements"></a><span data-ttu-id="758bb-192">子元素</span><span class="sxs-lookup"><span data-stu-id="758bb-192">Child Elements</span></span>  
+ <span data-ttu-id="758bb-193">無</span><span class="sxs-lookup"><span data-stu-id="758bb-193">None</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="758bb-194">父項目</span><span class="sxs-lookup"><span data-stu-id="758bb-194">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<繫結\>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|<span data-ttu-id="758bb-195">項目</span><span class="sxs-lookup"><span data-stu-id="758bb-195">Element</span></span>|<span data-ttu-id="758bb-196">說明</span><span class="sxs-lookup"><span data-stu-id="758bb-196">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="758bb-197">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="758bb-197">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="758bb-198">定義自訂繫結的所有繫結功能。</span><span class="sxs-lookup"><span data-stu-id="758bb-198">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## 備註  
- `httpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 HTTP 傳輸通訊協定。  HTTP 是用於互通性目的的主要傳輸。  這個傳輸是由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支援，可確保與其他非 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 服務堆疊之間的互通性。  
+## <a name="remarks"></a><span data-ttu-id="758bb-199">備註</span><span class="sxs-lookup"><span data-stu-id="758bb-199">Remarks</span></span>  
+ <span data-ttu-id="758bb-200">`httpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 HTTP 傳輸通訊協定。</span><span class="sxs-lookup"><span data-stu-id="758bb-200">The `httpTransport` element is the starting point for creating a custom binding that implements the HTTP transport protocol.</span></span> <span data-ttu-id="758bb-201">HTTP 是用於互通性目的的主要傳輸。</span><span class="sxs-lookup"><span data-stu-id="758bb-201">HTTP is the primary transport used for interoperability purposes.</span></span> <span data-ttu-id="758bb-202">這個傳輸是由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支援，可確保與其他非 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 服務堆疊之間的互通性。</span><span class="sxs-lookup"><span data-stu-id="758bb-202">This transport is supported by the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] to ensure interoperability with other non-[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web services stacks.</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.HttpTransportElement>   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TransportBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)   
- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="758bb-203">另請參閱</span><span class="sxs-lookup"><span data-stu-id="758bb-203">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.HttpTransportElement>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="758bb-204">傳輸</span><span class="sxs-lookup"><span data-stu-id="758bb-204">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="758bb-205">選擇傳輸</span><span class="sxs-lookup"><span data-stu-id="758bb-205">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="758bb-206">繫結</span><span class="sxs-lookup"><span data-stu-id="758bb-206">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="758bb-207">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="758bb-207">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="758bb-208">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="758bb-208">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="758bb-209">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="758bb-209">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

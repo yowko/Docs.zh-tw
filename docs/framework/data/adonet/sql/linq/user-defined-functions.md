@@ -1,40 +1,43 @@
 ---
-title: "使用者定義函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "使用者定義函式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ff13a123bcb2c61d786f2156e600a16cdd6bb31e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用者定義函式
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用物件模型 \(Object Model\) 中的方法來表示使用者定義函式。  您可套用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 屬性 \(Attribute\) 和 \(視需要\) 套用 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將方法指定為函式。  如需詳細資訊，請參閱 [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。  
+# <a name="user-defined-functions"></a><span data-ttu-id="b99a1-102">使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="b99a1-102">User-Defined Functions</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b99a1-103"> 會使用物件模型 (Object Model) 中的方法來表示使用者定義函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-103"> uses methods in your object model to represent user-defined functions.</span></span> <span data-ttu-id="b99a1-104">您可套用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 屬性 (Attribute) 和 (視需要) 套用 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將方法指定為函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-104">You designate methods as functions by applying the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute and, where required, the <xref:System.Data.Linq.Mapping.ParameterAttribute> attribute.</span></span> <span data-ttu-id="b99a1-105">如需詳細資訊，請參閱[LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)。</span><span class="sxs-lookup"><span data-stu-id="b99a1-105">For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).</span></span>  
   
- 若要避免 <xref:System.InvalidOperationException>，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的使用者定義函式必須為下列其中一種形式：  
+ <span data-ttu-id="b99a1-106">若要避免 <xref:System.InvalidOperationException>，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的使用者定義函式必須為下列其中一種形式：</span><span class="sxs-lookup"><span data-stu-id="b99a1-106">To avoid an <xref:System.InvalidOperationException>, user-defined functions in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be in one of the following forms:</span></span>  
   
--   包裝為具有正確對應屬性之方法呼叫的函式。  如需詳細資訊，請參閱[以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
+-   <span data-ttu-id="b99a1-107">包裝為具有正確對應屬性之方法呼叫的函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-107">A function wrapped as a method call having the correct mapping attributes.</span></span> <span data-ttu-id="b99a1-108">如需詳細資訊，請參閱[屬性架構對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。</span><span class="sxs-lookup"><span data-stu-id="b99a1-108">For more information, see [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特有的靜態 SQL 方法。  
+-   <span data-ttu-id="b99a1-109">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特有的靜態 SQL 方法。</span><span class="sxs-lookup"><span data-stu-id="b99a1-109">A static SQL method specific to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
--   [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 方法所支援的函式。  
+-   <span data-ttu-id="b99a1-110">[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 方法所支援的函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-110">A function supported by a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] method.</span></span>  
   
- 本節中的主題顯示自行撰寫程式碼時，如何在應用程式中形成和呼叫這些方法。  使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的開發人員通常會使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來對應使用者定義函式。  
+ <span data-ttu-id="b99a1-111">本節中的主題顯示自行撰寫程式碼時，如何在應用程式中形成和呼叫這些方法。</span><span class="sxs-lookup"><span data-stu-id="b99a1-111">The topics in this section show how to form and call these methods in your application if you write the code yourself.</span></span> <span data-ttu-id="b99a1-112">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的開發人員通常會使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 來對應使用者定義函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-112">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] would typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map user-defined functions.</span></span>  
   
-## 在本節中  
- [HOW TO：使用純量值使用者定義函式](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
- 描述如何實作可傳回純量值的函式。  
+## <a name="in-this-section"></a><span data-ttu-id="b99a1-113">本章節內容</span><span class="sxs-lookup"><span data-stu-id="b99a1-113">In This Section</span></span>  
+ [<span data-ttu-id="b99a1-114">如何： 使用純量值使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="b99a1-114">How to: Use Scalar-Valued User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
+ <span data-ttu-id="b99a1-115">描述如何實作可傳回純量值的函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-115">Describes how to implement a function that returns scalar values.</span></span>  
   
- [HOW TO：使用資料表值使用者定義函式](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
- 描述如何實作可傳回資料表值的函式。  
+ [<span data-ttu-id="b99a1-116">如何： 使用資料表值使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="b99a1-116">How to: Use Table-Valued User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
+ <span data-ttu-id="b99a1-117">描述如何實作可傳回資料表值的函式。</span><span class="sxs-lookup"><span data-stu-id="b99a1-117">Describes how to implement a function that returns table values.</span></span>  
   
- [HOW TO：以內嵌方式呼叫使用者定義函式](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
- 描述如何對函式進行內嵌 \(Inline\) 呼叫，以及當呼叫成為內嵌時的執行差異。
+ [<span data-ttu-id="b99a1-118">如何： 呼叫內嵌使用者定義函式</span><span class="sxs-lookup"><span data-stu-id="b99a1-118">How to: Call User-Defined Functions Inline</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
+ <span data-ttu-id="b99a1-119">描述如何對函式進行內嵌 (Inline) 呼叫，以及當呼叫成為內嵌時的執行差異。</span><span class="sxs-lookup"><span data-stu-id="b99a1-119">Describes how to make inline calls to functions and the differences in execution when the call is made inline.</span></span>

@@ -1,108 +1,110 @@
 ---
-title: "GlyphRun 物件和 Glyphs 項目簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "印刷樣式圖像 （glyph） 項目"
-  - "Glyphs 項目"
-  - "GlyphRun 物件"
-  - "圖像的文字"
-  - "圖像 [WPF]"
-  - "印刷樣式，GlyphRun 物件"
+title: "GlyphRun 物件和 Glyphs 項目簡介"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- typography [WPF], Glyphs element
+- Glyphs elements [WPF]
+- GlyphRun object [WPF]
+- text [WPF], glyphs
+- glyphs [WPF]
+- typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e1b61b098d24857d6f1bc54165a5937d8887ee8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# GlyphRun 物件和 Glyphs 項目簡介
-本主題描述<xref:System.Windows.Media.GlyphRun>物件和<xref:System.Windows.Documents.Glyphs>項目。  
+# <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a><span data-ttu-id="84e5a-102">GlyphRun 物件和 Glyphs 項目簡介</span><span class="sxs-lookup"><span data-stu-id="84e5a-102">Introduction to the GlyphRun Object and Glyphs Element</span></span>
+<span data-ttu-id="84e5a-103">本主題描述<xref:System.Windows.Media.GlyphRun>物件和<xref:System.Windows.Documents.Glyphs>項目。</span><span class="sxs-lookup"><span data-stu-id="84e5a-103">This topic describes the <xref:System.Windows.Media.GlyphRun> object and the <xref:System.Windows.Documents.Glyphs> element.</span></span>  
   
-   
   
 <a name="text_glyphrunovw_intro"></a>   
-## <a name="introduction-to-glyphrun"></a>GlyphRun 簡介  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供進階的文字支援包括直接存取的圖像 （glyph） 層級標記<xref:System.Windows.Documents.Glyphs>的客戶想要進行攔截和保存格式化後的文字。 這些功能提供重大支援不同的文字轉譯中每個下列案例的需求。  
+## <a name="introduction-to-glyphrun"></a><span data-ttu-id="84e5a-104">GlyphRun 簡介</span><span class="sxs-lookup"><span data-stu-id="84e5a-104">Introduction to GlyphRun</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="84e5a-105">提供進階的文字支援包括直接存取的圖像 （glyph） 層級標記<xref:System.Windows.Documents.Glyphs>的客戶想要攔截，並將保存完成格式化後的文字。</span><span class="sxs-lookup"><span data-stu-id="84e5a-105"> provides advanced text support including glyph-level markup with direct access to <xref:System.Windows.Documents.Glyphs> for customers who want to intercept and persist text after formatting.</span></span> <span data-ttu-id="84e5a-106">這些功能可針對下列每個案例中的不同文字轉譯需求提供重要支援。</span><span class="sxs-lookup"><span data-stu-id="84e5a-106">These features provide critical support for the different text rendering requirements in each of the following scenarios.</span></span>  
   
-1.  固定格式文件的螢幕顯示。  
+1.  <span data-ttu-id="84e5a-107">固定格式文件的螢幕顯示。</span><span class="sxs-lookup"><span data-stu-id="84e5a-107">Screen display of fixed-format documents.</span></span>  
   
-2.  列印案例。  
+2.  <span data-ttu-id="84e5a-108">列印案例。</span><span class="sxs-lookup"><span data-stu-id="84e5a-108">Print scenarios.</span></span>  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]為裝置印表機語言。  
+    -   <span data-ttu-id="84e5a-109">使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作為裝置印表機語言。</span><span class="sxs-lookup"><span data-stu-id="84e5a-109">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] as a device printer language.</span></span>  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]<span data-ttu-id="84e5a-110">.</span><span class="sxs-lookup"><span data-stu-id="84e5a-110">.</span></span>  
   
-    -   先前的印表機驅動程式，從輸出[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]固定格式的應用程式。  
+    -   <span data-ttu-id="84e5a-111">先前的印表機驅動程式，從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式輸出為固定格式。</span><span class="sxs-lookup"><span data-stu-id="84e5a-111">Previous printer drivers, output from [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] applications to the fixed format.</span></span>  
   
-    -   列印多工緩衝處理格式。  
+    -   <span data-ttu-id="84e5a-112">列印多工緩衝處理格式。</span><span class="sxs-lookup"><span data-stu-id="84e5a-112">Print spool format.</span></span>  
   
-3.  固定格式文件表示法，包括舊版的用戶端[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]和其他電腦的裝置。  
+3.  <span data-ttu-id="84e5a-113">固定格式文件呈現，包括舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和其他電腦裝置的用戶端。</span><span class="sxs-lookup"><span data-stu-id="84e5a-113">Fixed-format document representation, including clients for previous versions of [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] and other computing devices.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>專為固定格式文件呈現及列印案例。                      [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個項目的一般配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例，例如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 如需有關配置和[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]案例，請參閱[WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
+>  <span data-ttu-id="84e5a-114"><xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>專為固定格式文件簡報和列印的案例。</span><span class="sxs-lookup"><span data-stu-id="84e5a-114"><xref:System.Windows.Documents.Glyphs> and <xref:System.Windows.Media.GlyphRun> are designed for fixed-format document presentation and print scenarios.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="84e5a-115">提供數個項目的一般版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例，例如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="84e5a-115"> provides several elements for general layout and [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenarios such as <xref:System.Windows.Controls.Label> and <xref:System.Windows.Controls.TextBlock>.</span></span> <span data-ttu-id="84e5a-116">如需配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例的詳細資訊，請參閱 [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="84e5a-116">For more information on layout and [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios, see the [Typography in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).</span></span>  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
-## <a name="the-glyphrun-object"></a>GlyphRun 物件  
- <xref:System.Windows.Media.GlyphRun>物件都代表單一的大小，並以單一呈現樣式的單一字型單一字體一連串的圖像 （glyph）。  
+## <a name="the-glyphrun-object"></a><span data-ttu-id="84e5a-117">GlyphRun 物件</span><span class="sxs-lookup"><span data-stu-id="84e5a-117">The GlyphRun Object</span></span>  
+ <span data-ttu-id="84e5a-118"><xref:System.Windows.Media.GlyphRun>物件都代表單一的字型以單一轉譯樣式，在單一的大小，單一字體圖像 （glyph） 的序列。</span><span class="sxs-lookup"><span data-stu-id="84e5a-118">The <xref:System.Windows.Media.GlyphRun> object represents a sequence of glyphs from a single face of a single font at a single size, and with a single rendering style.</span></span>  
   
- <xref:System.Windows.Media.GlyphRun>包含這兩種字型詳細資料，例如圖像<xref:System.Windows.Documents.Glyphs.Indices%2A>，以及個別的圖像 （glyph） 的位置。 它也包含原始[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]字碼的指標執行所產生的字元-圖像緩衝區位移的對應資訊，以及每個字元和每個字符旗標。  
+ <span data-ttu-id="84e5a-119"><xref:System.Windows.Media.GlyphRun>包含這兩種字型詳細資料，例如圖像<xref:System.Windows.Documents.Glyphs.Indices%2A>和個別的字符的位置。</span><span class="sxs-lookup"><span data-stu-id="84e5a-119"><xref:System.Windows.Media.GlyphRun> includes both font details such as glyph <xref:System.Windows.Documents.Glyphs.Indices%2A> and individual glyph positions.</span></span> <span data-ttu-id="84e5a-120">它也包含原始[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]字碼的指標執行所產生的字元-圖像緩衝區位移的對應資訊，以及每個字元和每個字符的旗標。</span><span class="sxs-lookup"><span data-stu-id="84e5a-120">It also includes the original [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] code points the run was generated from, character-to-glyph buffer offset mapping information, and per-character and per-glyph flags.</span></span>  
   
- <xref:System.Windows.Media.GlyphRun>都有對應的高層級<xref:System.Windows.FrameworkElement>，<xref:System.Windows.Documents.Glyphs>。                  <xref:System.Windows.Documents.Glyphs>可用項目樹狀結構中，並在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]表示標記<xref:System.Windows.Media.GlyphRun>輸出。  
+ <span data-ttu-id="84e5a-121"><xref:System.Windows.Media.GlyphRun>都有對應的高層級<xref:System.Windows.FrameworkElement>， <xref:System.Windows.Documents.Glyphs>。</span><span class="sxs-lookup"><span data-stu-id="84e5a-121"><xref:System.Windows.Media.GlyphRun> has a corresponding high-level <xref:System.Windows.FrameworkElement>, <xref:System.Windows.Documents.Glyphs>.</span></span> <span data-ttu-id="84e5a-122"><xref:System.Windows.Documents.Glyphs>可用項目樹狀結構中以及在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]表示標記<xref:System.Windows.Media.GlyphRun>輸出。</span><span class="sxs-lookup"><span data-stu-id="84e5a-122"><xref:System.Windows.Documents.Glyphs> can be used in the element tree and in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup to represent <xref:System.Windows.Media.GlyphRun> output.</span></span>  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
-## <a name="the-glyphs-element"></a>Glyphs 項目  
- <xref:System.Windows.Documents.Glyphs>項目代表的輸出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 下列標記語法用來描述<xref:System.Windows.Documents.Glyphs>項目。  
+## <a name="the-glyphs-element"></a><span data-ttu-id="84e5a-123">Glyphs 項目</span><span class="sxs-lookup"><span data-stu-id="84e5a-123">The Glyphs Element</span></span>  
+ <span data-ttu-id="84e5a-124"><xref:System.Windows.Documents.Glyphs>項目代表的輸出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="84e5a-124">The <xref:System.Windows.Documents.Glyphs> element represents the output of a <xref:System.Windows.Media.GlyphRun> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="84e5a-125">下列標記的語法用來描述<xref:System.Windows.Documents.Glyphs>項目。</span><span class="sxs-lookup"><span data-stu-id="84e5a-125">The following markup syntax is used to describe the <xref:System.Windows.Documents.Glyphs> element.</span></span>  
   
- [!code-xml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
- 下列屬性定義對應至範例標記中的前四個屬性。  
+ <span data-ttu-id="84e5a-126">下列屬性定義對應至範例標記中的前四個屬性。</span><span class="sxs-lookup"><span data-stu-id="84e5a-126">The following property definitions correspond to the first four attributes in the sample markup.</span></span>  
   
-|屬性|描述|  
+|<span data-ttu-id="84e5a-127">屬性</span><span class="sxs-lookup"><span data-stu-id="84e5a-127">Property</span></span>|<span data-ttu-id="84e5a-128">說明</span><span class="sxs-lookup"><span data-stu-id="84e5a-128">Description</span></span>|  
 |--------------|-----------------|  
-|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|指定資源識別元︰ 檔案名稱，Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]，或在應用程式的.exe 或容器資源參考。|  
-|<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|指定的字型大小以繪圖介面的單位 （預設值為.96 英吋為單位）。|  
-|<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|指定旗標為粗體和斜體樣式。|  
-|<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|指定雙向版面配置層級。 偶數和零值表示由左到右的版面配置。奇數值代表從右至左配置。|  
+|<xref:System.Windows.Documents.Glyphs.FontUri%2A>|<span data-ttu-id="84e5a-129">指定的資源識別碼： 檔案名稱，Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]，或在應用程式的.exe 或容器資源參考。</span><span class="sxs-lookup"><span data-stu-id="84e5a-129">Specifies a resource identifier: file name, Web [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], or resource reference in the application .exe or container.</span></span>|  
+|<xref:System.Windows.Documents.Glyphs.FontRenderingEmSize%2A>|<span data-ttu-id="84e5a-130">指定字型大小 (以繪圖介面單位為單位) (預設值為 .96 英吋)。</span><span class="sxs-lookup"><span data-stu-id="84e5a-130">Specifies the font size in drawing surface units (default is .96 inches).</span></span>|  
+|<xref:System.Windows.Documents.Glyphs.StyleSimulations%2A>|<span data-ttu-id="84e5a-131">指定粗體和斜體樣式的旗標。</span><span class="sxs-lookup"><span data-stu-id="84e5a-131">Specifies flags for bold and Italic styles.</span></span>|  
+|<xref:System.Windows.Documents.Glyphs.BidiLevel%2A>|<span data-ttu-id="84e5a-132">指定雙向配置層級。</span><span class="sxs-lookup"><span data-stu-id="84e5a-132">Specifies the bidirectional layout level.</span></span> <span data-ttu-id="84e5a-133">偶數值和零值表示由左至右的版面配置，奇數值則表示由右至左的版面配置。</span><span class="sxs-lookup"><span data-stu-id="84e5a-133">Even-numbered and zero values imply left-to-right layout; odd-numbered values imply right-to-left layout.</span></span>|  
   
 <a name="text_glyphrunovw_indicesproperty"></a>   
-### <a name="indices-property"></a>索引屬性  
- <xref:System.Windows.Documents.Glyphs.Indices%2A>屬性是一個字串的圖像 （glyph） 規格。 在一系列圖像形成單一叢集，叢集中的第一個圖像的規格被加上多少圖像 （glyph） 的規格和幾個字碼指標相結合形成叢集。 <xref:System.Windows.Documents.Glyphs.Indices%2A>屬性收集在一個字串中的下列屬性。  
+### <a name="indices-property"></a><span data-ttu-id="84e5a-134">Indices 屬性</span><span class="sxs-lookup"><span data-stu-id="84e5a-134">Indices property</span></span>  
+ <span data-ttu-id="84e5a-135"><xref:System.Windows.Documents.Glyphs.Indices%2A>屬性是字符規格的字串。</span><span class="sxs-lookup"><span data-stu-id="84e5a-135">The <xref:System.Windows.Documents.Glyphs.Indices%2A> property is a string of glyph specifications.</span></span> <span data-ttu-id="84e5a-136">如果由一系列字符形成單一叢集，則會先指定叢集中的第一個字符，再指定合併多少字符和多少字碼指標來形成叢集。</span><span class="sxs-lookup"><span data-stu-id="84e5a-136">Where a sequence of glyphs forms a single cluster, the specification of the first glyph in the cluster is preceded by a specification of how many glyphs and how many code points combine to form the cluster.</span></span> <span data-ttu-id="84e5a-137"><xref:System.Windows.Documents.Glyphs.Indices%2A>屬性收集在一個字串中的下列屬性。</span><span class="sxs-lookup"><span data-stu-id="84e5a-137">The <xref:System.Windows.Documents.Glyphs.Indices%2A> property collects in one string the following properties.</span></span>  
   
--   圖像索引  
+-   <span data-ttu-id="84e5a-138">字符索引</span><span class="sxs-lookup"><span data-stu-id="84e5a-138">Glyph indices</span></span>  
   
--   圖像前進距離寬度  
+-   <span data-ttu-id="84e5a-139">字符遞增寬度</span><span class="sxs-lookup"><span data-stu-id="84e5a-139">Glyph advance widths</span></span>  
   
--   合併圖像附加向量  
+-   <span data-ttu-id="84e5a-140">合併字符附加向量</span><span class="sxs-lookup"><span data-stu-id="84e5a-140">Combining glyph attachment vectors</span></span>  
   
--   從程式碼的叢集對應指向圖像 （glyph）  
+-   <span data-ttu-id="84e5a-141">從字碼指標到字符的叢集對應</span><span class="sxs-lookup"><span data-stu-id="84e5a-141">Cluster mapping from code points to glyphs</span></span>  
   
--   圖像 （glyph） 旗標  
+-   <span data-ttu-id="84e5a-142">字符旗標</span><span class="sxs-lookup"><span data-stu-id="84e5a-142">Glyph flags</span></span>  
   
- 每個圖像 （glyph） 規格的格式如下。  
+ <span data-ttu-id="84e5a-143">每個字符規格的形式如下。</span><span class="sxs-lookup"><span data-stu-id="84e5a-143">Each glyph specification has the following form.</span></span>  
   
  `[GlyphIndex][,[Advance][,[uOffset][,[vOffset][,[Flags]]]]]`  
   
 <a name="text_glyphrunovw_glyphmetrics"></a>   
-## <a name="glyph-metrics"></a>圖像度量  
- 每個圖像 （glyph） 會定義指定如何使其與對齊其他度量<xref:System.Windows.Documents.Glyphs>。 下圖定義兩個不同的圖像 （glyph） 字元的各種印刷品質。  
+## <a name="glyph-metrics"></a><span data-ttu-id="84e5a-144">字符度量</span><span class="sxs-lookup"><span data-stu-id="84e5a-144">Glyph Metrics</span></span>  
+ <span data-ttu-id="84e5a-145">每個字符定義指定與其他的對齊方式的標準<xref:System.Windows.Documents.Glyphs>。</span><span class="sxs-lookup"><span data-stu-id="84e5a-145">Each glyph defines metrics that specify how it aligns with other <xref:System.Windows.Documents.Glyphs>.</span></span> <span data-ttu-id="84e5a-146">下圖定義兩個不同字符字元的各種印刷品質。</span><span class="sxs-lookup"><span data-stu-id="84e5a-146">The following graphic defines the various typographic qualities of two different glyph characters.</span></span>  
   
- ![圖像量測繪圖器圖像度量](../../../../docs/framework/wpf/advanced/media/glyph-example.png "glyph_example")  
+ <span data-ttu-id="84e5a-147">![字符測量的繪圖器](../../../../docs/framework/wpf/advanced/media/glyph-example.png "glyph_example")</span><span class="sxs-lookup"><span data-stu-id="84e5a-147">![Diagraph of glyph measurements](../../../../docs/framework/wpf/advanced/media/glyph-example.png "glyph_example")</span></span>  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
-## <a name="glyphs-markup"></a>圖像 （glyph） 標記  
- 下列程式碼範例示範如何使用的各種屬性<xref:System.Windows.Documents.Glyphs>中的項目[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+## <a name="glyphs-markup"></a><span data-ttu-id="84e5a-148">字符標記</span><span class="sxs-lookup"><span data-stu-id="84e5a-148">Glyphs Markup</span></span>  
+ <span data-ttu-id="84e5a-149">下列程式碼範例示範如何使用的各種屬性<xref:System.Windows.Documents.Glyphs>中的項目[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="84e5a-149">The following code example shows how to use various properties of the <xref:System.Windows.Documents.Glyphs> element in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
   
- [!code-xml[GlyphsOvwSamp2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSamp2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
-## <a name="see-also"></a>另請參閱  
- [在 WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)   
- [在 WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [文字](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+## <a name="see-also"></a><span data-ttu-id="84e5a-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="84e5a-150">See Also</span></span>  
+ [<span data-ttu-id="84e5a-151">WPF 中的印刷樣式</span><span class="sxs-lookup"><span data-stu-id="84e5a-151">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [<span data-ttu-id="84e5a-152">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="84e5a-152">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="84e5a-153">Text</span><span class="sxs-lookup"><span data-stu-id="84e5a-153">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)

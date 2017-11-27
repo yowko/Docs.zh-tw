@@ -1,150 +1,156 @@
 ---
-title: "逐步解說：使用 ElementHost 控制項對應屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost 控制項, 對應屬性"
-  - "對應屬性"
+title: "逐步解說：使用 ElementHost 控制項對應屬性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- mapping properties [WPF]
+- ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dae954012d15431d2019d3d9cbe61747a8646d4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：使用 ElementHost 控制項對應屬性
-本逐步解說顯示如何使用 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 屬性將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 屬性對應至裝載之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目上的對應屬性。  
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a><span data-ttu-id="bc4da-102">逐步解說：使用 ElementHost 控制項對應屬性</span><span class="sxs-lookup"><span data-stu-id="bc4da-102">Walkthrough: Mapping Properties Using the ElementHost Control</span></span>
+<span data-ttu-id="bc4da-103">本逐步解說會示範如何使用<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>屬性，對應[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上裝載的對應屬性的屬性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目。</span><span class="sxs-lookup"><span data-stu-id="bc4da-103">This walkthrough shows you how to use the <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> property to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding properties on a hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element.</span></span>  
   
- 逐步解說將說明的工作包括：  
+ <span data-ttu-id="bc4da-104">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="bc4da-104">Tasks illustrated in this walkthrough include:</span></span>  
   
--   建立專案。  
+-   <span data-ttu-id="bc4da-105">建立專案。</span><span class="sxs-lookup"><span data-stu-id="bc4da-105">Creating the project.</span></span>  
   
--   定義新的屬性對應。  
+-   <span data-ttu-id="bc4da-106">定義新的屬性對應。</span><span class="sxs-lookup"><span data-stu-id="bc4da-106">Defining a new property mapping.</span></span>  
   
--   移除預設的屬性對應。  
+-   <span data-ttu-id="bc4da-107">移除預設屬性對應。</span><span class="sxs-lookup"><span data-stu-id="bc4da-107">Removing a default property mapping.</span></span>  
   
--   擴充預設的屬性對應。  
+-   <span data-ttu-id="bc4da-108">擴充預設屬性對應。</span><span class="sxs-lookup"><span data-stu-id="bc4da-108">Extending a default property mapping.</span></span>  
   
- 如需這個逐步解說中所說明之工作的完整程式碼清單，請參閱[使用 ElementHost 控制項對應屬性範例](http://go.microsoft.com/fwlink/?LinkID=160018) \(英文\)。  
+ <span data-ttu-id="bc4da-109">在此逐步解說中所述的工作的完整程式碼清單，請參閱[對應屬性使用 ElementHost 控制項範例](http://go.microsoft.com/fwlink/?LinkID=160018)。</span><span class="sxs-lookup"><span data-stu-id="bc4da-109">For a complete code listing of the tasks illustrated in this walkthrough, see [Mapping Properties Using the ElementHost Control Sample](http://go.microsoft.com/fwlink/?LinkID=160018).</span></span>  
   
- 完成時，就可以將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 屬性對應至裝載之項目上的對應 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性。  
+ <span data-ttu-id="bc4da-110">當您完成時，您將能夠對應[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]屬性，以對應[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]裝載的項目上的屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-110">When you are finished, you will be able to map [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] properties to corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] properties on a hosted element.</span></span>  
   
-## 必要條件  
- 您需要下列元件才能完成此逐步解說：  
+## <a name="prerequisites"></a><span data-ttu-id="bc4da-111">必要條件</span><span class="sxs-lookup"><span data-stu-id="bc4da-111">Prerequisites</span></span>  
+ <span data-ttu-id="bc4da-112">您需要下列元件才能完成此逐步解說：</span><span class="sxs-lookup"><span data-stu-id="bc4da-112">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="bc4da-113">.</span><span class="sxs-lookup"><span data-stu-id="bc4da-113">.</span></span>  
   
-## 建立專案  
+## <a name="creating-the-project"></a><span data-ttu-id="bc4da-114">建立專案</span><span class="sxs-lookup"><span data-stu-id="bc4da-114">Creating the Project</span></span>  
   
-#### 若要建立專案  
+#### <a name="to-create-the-project"></a><span data-ttu-id="bc4da-115">若要建立專案</span><span class="sxs-lookup"><span data-stu-id="bc4da-115">To create the project</span></span>  
   
-1.  建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式專案，取名為 `PropertyMappingWithElementHost`。  如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  <span data-ttu-id="bc4da-116">建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式專案，名為`PropertyMappingWithElementHost`。</span><span class="sxs-lookup"><span data-stu-id="bc4da-116">Create a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application project named `PropertyMappingWithElementHost`.</span></span> <span data-ttu-id="bc4da-117">如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="bc4da-117">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  在 \[方案總管\] 中加入下列 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 組件的參考。  
+2.  <span data-ttu-id="bc4da-118">在方案總管 中，加入下列參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件。</span><span class="sxs-lookup"><span data-stu-id="bc4da-118">In Solution Explorer, add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies.</span></span>  
   
-    -   PresentationCore  
+    -   <span data-ttu-id="bc4da-119">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="bc4da-119">PresentationCore</span></span>  
   
-    -   PresentationFramework  
+    -   <span data-ttu-id="bc4da-120">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="bc4da-120">PresentationFramework</span></span>  
   
-    -   WindowsBase  
+    -   <span data-ttu-id="bc4da-121">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="bc4da-121">WindowsBase</span></span>  
   
-    -   WindowsFormsIntegration  
+    -   <span data-ttu-id="bc4da-122">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="bc4da-122">WindowsFormsIntegration</span></span>  
   
-3.  將下列程式碼複製至 `Form1` 程式碼檔案的最上面。  
+3.  <span data-ttu-id="bc4da-123">將下列程式碼複製到頂端`Form1`程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="bc4da-123">Copy the following code into the top of the `Form1` code file.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]  
   
-4.  在 Windows Form 設計工具中開啟表單 `Form1`。  按兩下表單加入 <xref:System.Windows.Forms.Form.Load> 事件的事件處理常式。  
+4.  <span data-ttu-id="bc4da-124">在 Windows Form 設計工具中開啟 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="bc4da-124">Open `Form1` in the Windows Forms Designer.</span></span> <span data-ttu-id="bc4da-125">按兩下表單，加入事件處理常式<xref:System.Windows.Forms.Form.Load>事件。</span><span class="sxs-lookup"><span data-stu-id="bc4da-125">Double-click the form to add an event handler for the <xref:System.Windows.Forms.Form.Load> event.</span></span>  
   
-5.  回到 \[Windows Form 設計工具\]，並加入表單的 <xref:System.Windows.Forms.Control.Resize> 事件的事件處理常式。  如需詳細資訊，請參閱 [How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/zh-tw/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+5.  <span data-ttu-id="bc4da-126">返回 Windows Form 設計工具，並加入表單的事件處理常式<xref:System.Windows.Forms.Control.Resize>事件。</span><span class="sxs-lookup"><span data-stu-id="bc4da-126">Return to the Windows Forms Designer and add an event handler for the form's <xref:System.Windows.Forms.Control.Resize> event.</span></span> <span data-ttu-id="bc4da-127">如需詳細資訊，請參閱[How to： 使用設計工具建立事件處理常式](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)。</span><span class="sxs-lookup"><span data-stu-id="bc4da-127">For more information, see [How to: Create Event Handlers Using the Designer](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).</span></span>  
   
-6.  在 `Form1` 類別中宣告 <xref:System.Windows.Forms.Integration.ElementHost> 欄位。  
+6.  <span data-ttu-id="bc4da-128">宣告<xref:System.Windows.Forms.Integration.ElementHost>欄位`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="bc4da-128">Declare an <xref:System.Windows.Forms.Integration.ElementHost> field in the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]  
   
-## 定義新的屬性對應  
- <xref:System.Windows.Forms.Integration.ElementHost> 控制項會提供數個預設的屬性對應。  您可以藉由在 <xref:System.Windows.Forms.Integration.ElementHost> 控制項的 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 上呼叫 <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> 方法，加入新的屬性對應。  
+## <a name="defining-new-property-mappings"></a><span data-ttu-id="bc4da-129">定義新的屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-129">Defining New Property Mappings</span></span>  
+ <span data-ttu-id="bc4da-130"><xref:System.Windows.Forms.Integration.ElementHost>控制項提供數個預設屬性對應。</span><span class="sxs-lookup"><span data-stu-id="bc4da-130">The <xref:System.Windows.Forms.Integration.ElementHost> control provides several default property mappings.</span></span> <span data-ttu-id="bc4da-131">您加入新的屬性對應，藉由呼叫<xref:System.Windows.Forms.Integration.PropertyMap.Add%2A>方法<xref:System.Windows.Forms.Integration.ElementHost>控制項的<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>。</span><span class="sxs-lookup"><span data-stu-id="bc4da-131">You add a new property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>  
   
-#### 若要定義新的屬性對應  
+#### <a name="to-define-new-property-mappings"></a><span data-ttu-id="bc4da-132">若要定義新的屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-132">To define new property mappings</span></span>  
   
-1.  將下列程式碼複製到 `Form1` 類別的定義中。  
+1.  <span data-ttu-id="bc4da-133">將下列程式碼複製到的定義`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="bc4da-133">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]  
   
-     `AddMarginMapping` 方法會加入 <xref:System.Windows.Forms.Control.Margin%2A> 屬性的新對應。  
+     <span data-ttu-id="bc4da-134">`AddMarginMapping`方法會將新的對應<xref:System.Windows.Forms.Control.Margin%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-134">The `AddMarginMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Margin%2A> property.</span></span>  
   
-     `OnMarginChange` 方法會將 <xref:System.Windows.Forms.Control.Margin%2A> 屬性轉譯成 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> 屬性。  
+     <span data-ttu-id="bc4da-135">`OnMarginChange`方法會轉譯<xref:System.Windows.Forms.Control.Margin%2A>屬性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement.Margin%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-135">The `OnMarginChange` method translates the <xref:System.Windows.Forms.Control.Margin%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> property.</span></span>  
   
-2.  將下列程式碼複製到 `Form1` 類別的定義中。  
+2.  <span data-ttu-id="bc4da-136">將下列程式碼複製到的定義`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="bc4da-136">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]  
   
-     `AddRegionMapping` 方法會加入 <xref:System.Windows.Forms.Control.Region%2A> 屬性的新對應。  
+     <span data-ttu-id="bc4da-137">`AddRegionMapping`方法會將新的對應<xref:System.Windows.Forms.Control.Region%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-137">The `AddRegionMapping` method adds a new mapping for the <xref:System.Windows.Forms.Control.Region%2A> property.</span></span>  
   
-     `OnRegionChange` 方法會將 <xref:System.Windows.Forms.Control.Region%2A> 屬性轉譯成 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> 屬性。  
+     <span data-ttu-id="bc4da-138">`OnRegionChange`方法會轉譯<xref:System.Windows.Forms.Control.Region%2A>屬性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.UIElement.Clip%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-138">The `OnRegionChange` method translates the <xref:System.Windows.Forms.Control.Region%2A> property to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> property.</span></span>  
   
-     `Form1_Resize` 方法會處理表單的 <xref:System.Windows.Forms.Control.Resize> 事件，並且調整裁剪區域的大小以符合裝載的項目。  
+     <span data-ttu-id="bc4da-139">`Form1_Resize`方法會處理表單的<xref:System.Windows.Forms.Control.Resize>事件，並調整大小以符合裝載的項目之裁剪區域。</span><span class="sxs-lookup"><span data-stu-id="bc4da-139">The `Form1_Resize` method handles the form's <xref:System.Windows.Forms.Control.Resize> event and sizes the clipping region to fit the hosted element.</span></span>  
   
-## 移除預設的屬性對應  
- 您可以藉由在 <xref:System.Windows.Forms.Integration.ElementHost> 控制項的 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 上呼叫 <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> 方法，移除預設的屬性對應。  
+## <a name="removing-a-default-property-mapping"></a><span data-ttu-id="bc4da-140">移除預設屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-140">Removing a Default Property Mapping</span></span>  
+ <span data-ttu-id="bc4da-141">移除預設的屬性對應，藉由呼叫<xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A>方法<xref:System.Windows.Forms.Integration.ElementHost>控制項的<xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>。</span><span class="sxs-lookup"><span data-stu-id="bc4da-141">Remove a default property mapping by calling the <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> method on the <xref:System.Windows.Forms.Integration.ElementHost> control's <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.</span></span>  
   
-#### 若要移除預設的屬性對應  
+#### <a name="to-remove-a-default-property-mapping"></a><span data-ttu-id="bc4da-142">移除預設屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-142">To remove a default property mapping</span></span>  
   
--   將下列程式碼複製到 `Form1` 類別的定義中。  
+-   <span data-ttu-id="bc4da-143">將下列程式碼複製到的定義`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="bc4da-143">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]  
   
-     `RemoveCursorMapping` 方法會刪除 <xref:System.Windows.Forms.Control.Cursor%2A> 屬性的預設對應。  
+     <span data-ttu-id="bc4da-144">`RemoveCursorMapping`方法會刪除預設對應<xref:System.Windows.Forms.Control.Cursor%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-144">The `RemoveCursorMapping` method deletes the default mapping for the <xref:System.Windows.Forms.Control.Cursor%2A> property.</span></span>  
   
-## 擴充預設的屬性對應  
- 您可以使用預設的屬性對應，同時以自己的對應加以擴充。  
+## <a name="extending-a-default-property-mapping"></a><span data-ttu-id="bc4da-145">擴充預設屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-145">Extending a Default Property Mapping</span></span>  
+ <span data-ttu-id="bc4da-146">您可以使用預設屬性對應，也可以使用自己的對應來進行擴充。</span><span class="sxs-lookup"><span data-stu-id="bc4da-146">You can use a default property mapping and also extend it with your own mapping.</span></span>  
   
-#### 若要擴充預設的屬性對應  
+#### <a name="to-extend-a-default-property-mapping"></a><span data-ttu-id="bc4da-147">擴充預設屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-147">To extend a default property mapping</span></span>  
   
--   將下列程式碼複製到 `Form1` 類別的定義中。  
+-   <span data-ttu-id="bc4da-148">將下列程式碼複製到的定義`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="bc4da-148">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]  
   
-     `ExtendBackColorMapping` 方法會將自訂屬性轉譯器加入至現有的 <xref:System.Windows.Forms.Control.BackColor%2A> 屬性對應。  
+     <span data-ttu-id="bc4da-149">`ExtendBackColorMapping`方法會將自訂的屬性轉譯器加入至現有<xref:System.Windows.Forms.Control.BackColor%2A>屬性對應。</span><span class="sxs-lookup"><span data-stu-id="bc4da-149">The `ExtendBackColorMapping` method adds a custom property translator to the existing <xref:System.Windows.Forms.Control.BackColor%2A> property mapping.</span></span>  
   
-     `OnBackColorChange` 方法會將特定的影像指派至裝載之控制項的 <xref:System.Windows.Controls.Control.Background%2A> 屬性。  套用預設屬性對應之後，就會呼叫 `OnBackColorChange` 方法。  
+     <span data-ttu-id="bc4da-150">`OnBackColorChange`方法指派給裝載控制項的特定映像<xref:System.Windows.Controls.Control.Background%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-150">The `OnBackColorChange` method assigns a specific image to the hosted control's <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="bc4da-151">`OnBackColorChange`套用預設的屬性對應之後，呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="bc4da-151">The `OnBackColorChange` method is called after the default property mapping is applied.</span></span>  
   
-## 初始化屬性對應  
+## <a name="initializing-your-property-mappings"></a><span data-ttu-id="bc4da-152">初始化屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-152">Initializing Your Property Mappings</span></span>  
   
-#### 若要初始化屬性對應  
+#### <a name="to-initialize-your-property-mappings"></a><span data-ttu-id="bc4da-153">初始化屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-153">To initialize your property mappings</span></span>  
   
-1.  將下列程式碼複製到 `Form1` 類別的定義中。  
+1.  <span data-ttu-id="bc4da-154">將下列程式碼複製到的定義`Form1`類別。</span><span class="sxs-lookup"><span data-stu-id="bc4da-154">Copy the following code into the definition for the `Form1` class.</span></span>  
   
      [!code-csharp[PropertyMappingWithElementHost#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]  
   
-     `Form1_Load` 方法會處理 <xref:System.Windows.Forms.Form.Load> 事件並執行下列初始化。  
+     <span data-ttu-id="bc4da-155">`Form1_Load`方法會處理<xref:System.Windows.Forms.Form.Load>事件並執行下列的初始化。</span><span class="sxs-lookup"><span data-stu-id="bc4da-155">The `Form1_Load` method handles the <xref:System.Windows.Forms.Form.Load> event and performs the following initialization.</span></span>  
   
-    -   建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> 項目。  
+    -   <span data-ttu-id="bc4da-156">建立[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>項目。</span><span class="sxs-lookup"><span data-stu-id="bc4da-156">Creates a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> element.</span></span>  
   
-    -   呼叫您稍早在這個逐步解說中定義的方法，以設定屬性對應。  
+    -   <span data-ttu-id="bc4da-157">呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。</span><span class="sxs-lookup"><span data-stu-id="bc4da-157">Calls the methods you defined earlier in the walkthrough to set up the property mappings.</span></span>  
   
-    -   將初始值指派給對應的屬性。  
+    -   <span data-ttu-id="bc4da-158">將初始值指派給對應的屬性。</span><span class="sxs-lookup"><span data-stu-id="bc4da-158">Assigns initial values to the mapped properties.</span></span>  
   
-2.  按 F5 建置並執行應用程式。  
+2.  <span data-ttu-id="bc4da-159">按 F5 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="bc4da-159">Press F5 to build and run the application.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Windows Form 和 WPF 屬性對應](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)   
- [WPF Designer](http://msdn.microsoft.com/zh-tw/c6c65214-8411-4e16-b254-163ed4099c26)   
- [逐步解說：在 Windows Form 中裝載 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="bc4da-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bc4da-160">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="bc4da-161">Windows Forms 和 WPF 屬性對應</span><span class="sxs-lookup"><span data-stu-id="bc4da-161">Windows Forms and WPF Property Mapping</span></span>](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
+ [<span data-ttu-id="bc4da-162">WPF 設計工具</span><span class="sxs-lookup"><span data-stu-id="bc4da-162">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="bc4da-163">逐步解說：在 Windows Forms 中裝載 WPF 複合控制項</span><span class="sxs-lookup"><span data-stu-id="bc4da-163">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

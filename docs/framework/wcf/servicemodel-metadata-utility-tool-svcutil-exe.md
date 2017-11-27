@@ -1,241 +1,244 @@
 ---
-title: "ServiceModel 中繼資料公用程式工具 (Svcutil.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "用戶端 [WCF], 建置"
-  - "端點 [WCF]"
-  - "Svcutil.exe"
-  - "用戶端 [WCF], 使用服務"
+title: "ServiceModel 中繼資料公用程式工具 (Svcutil.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clients [WCF], building
+- endpoints [WCF]
+- Svcutil.exe
+- clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: 40
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "40"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: be753660a5bd83acc2d25256e2e3714e665c5f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
-ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。  
+# <a name="servicemodel-metadata-utility-tool-svcutilexe"></a><span data-ttu-id="02f05-102">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="02f05-102">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>
+<span data-ttu-id="02f05-103">ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-103">The ServiceModel Metadata Utility tool is used to generate service model code from metadata documents and metadata documents from service model code.</span></span>  
   
-## SvcUtil.exe  
- ServiceModel 中繼資料公用程式工具位於 Windows SDK 安裝位置中，具體而言就是 C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0\\Bin  
+## <a name="svcutilexe"></a><span data-ttu-id="02f05-104">SvcUtil.exe</span><span class="sxs-lookup"><span data-stu-id="02f05-104">SvcUtil.exe</span></span>  
+ <span data-ttu-id="02f05-105">ServiceModel 中繼資料公用程式工具位於 Windows SDK 安裝位置中，具體而言就是 C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin</span><span class="sxs-lookup"><span data-stu-id="02f05-105">The ServiceModel Metadata Utility Tool can be found at the Windows SDK installation location, specifically, C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin</span></span>  
   
-### 功能  
- 下表摘要說明這個工具所提供的各種功能，以及討論工具用法的對應主題。  
+### <a name="functionalities"></a><span data-ttu-id="02f05-106">功能</span><span class="sxs-lookup"><span data-stu-id="02f05-106">Functionalities</span></span>  
+ <span data-ttu-id="02f05-107">下表摘要說明這個工具所提供的各種功能，以及討論工具用法的對應主題。</span><span class="sxs-lookup"><span data-stu-id="02f05-107">The following table summarizes the various functionalities provided by this tool and the corresponding topic that discusses how it is used.</span></span>  
   
-|工作|主題|  
-|--------|--------|  
-|從執行中服務或靜態中繼資料文件產生程式碼。|[從服務中繼資料產生 WCF 用戶端](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|從編譯的程式碼匯出中繼資料文件。|[HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|驗證編譯的服務程式碼。|[HOW TO：使用 Svcutil.exe 來驗證已編譯服務程式碼](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|從執行中服務下載中繼資料文件。|[HOW TO：使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|產生序列化程式碼。|[HOW TO：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|<span data-ttu-id="02f05-108">工作</span><span class="sxs-lookup"><span data-stu-id="02f05-108">Task</span></span>|<span data-ttu-id="02f05-109">主題</span><span class="sxs-lookup"><span data-stu-id="02f05-109">Topic</span></span>|  
+|----------|-----------|  
+|<span data-ttu-id="02f05-110">從執行中服務或靜態中繼資料文件產生程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-110">Generates code from running services or static metadata documents.</span></span>|[<span data-ttu-id="02f05-111">從服務中繼資料產生 WCF 用戶端</span><span class="sxs-lookup"><span data-stu-id="02f05-111">Generating a WCF Client from Service Metadata</span></span>](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
+|<span data-ttu-id="02f05-112">從編譯的程式碼匯出中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-112">Exports metadata documents from compiled code.</span></span>|[<span data-ttu-id="02f05-113">如何： 使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料</span><span class="sxs-lookup"><span data-stu-id="02f05-113">How to: Use Svcutil.exe to Export Metadata from Compiled Service Code</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|<span data-ttu-id="02f05-114">驗證編譯的服務程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-114">Validates compiled service code.</span></span>|[<span data-ttu-id="02f05-115">如何： 使用 Svcutil.exe 來驗證已編譯的服務程式碼</span><span class="sxs-lookup"><span data-stu-id="02f05-115">How to: Use Svcutil.exe to Validate Compiled Service Code</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|<span data-ttu-id="02f05-116">從執行中服務下載中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-116">Downloads metadata documents from running services.</span></span>|[<span data-ttu-id="02f05-117">如何： 使用 Svcutil.exe 來下載中繼資料文件</span><span class="sxs-lookup"><span data-stu-id="02f05-117">How to: Use Svcutil.exe to Download Metadata Documents</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|<span data-ttu-id="02f05-118">產生序列化程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-118">Generates serialization code.</span></span>|[<span data-ttu-id="02f05-119">如何： 改善啟動時間的 WCF 用戶端應用程式使用 XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="02f05-119">How to: Improve the Startup Time of WCF Client Applications using the XmlSerializer</span></span>](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
->  如果做為參數所提供的名稱相同，則 Svcutil 將覆寫磁碟上現有的檔案。 這會包括程式碼檔案、組態或中繼資料檔案。 為了在產生程式碼和組態檔時避免這種情況，請使用 `/mergeConfig` 參數。  
+>  <span data-ttu-id="02f05-120">如果做為參數所提供的名稱相同，則 Svcutil 將覆寫磁碟上現有的檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-120">Svcutil will overwrite existing files on a disk if the names supplied as parameters are identical.</span></span> <span data-ttu-id="02f05-121">這會包括程式碼檔案、組態或中繼資料檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-121">This can include code files, configuration or metadata files.</span></span> <span data-ttu-id="02f05-122">為了在產生程式碼和組態檔時避免這種情況，請使用 `/mergeConfig` 參數。</span><span class="sxs-lookup"><span data-stu-id="02f05-122">To avoid this when generating code and configuration flies, use the `/mergeConfig` switch.</span></span>  
 >   
->  此外，用於參考型別的 `/r` 和 `/ct`  參數可用於產生資料合約。 使用 XmlSerializer 時，這些參數不會運作。  
+>  <span data-ttu-id="02f05-123">此外，`/r`和`/ct`用於參考型別的參數可用於產生資料合約。</span><span class="sxs-lookup"><span data-stu-id="02f05-123">In addition, the `/r` and `/ct` switches for referencing types are for generating data contracts.</span></span> <span data-ttu-id="02f05-124">使用 XmlSerializer 時，這些參數不會運作。</span><span class="sxs-lookup"><span data-stu-id="02f05-124">These switches do not work when using XmlSerializer.</span></span>  
   
-### 等候逾時  
- 這個工具在擷取中繼資料時會有 5 分鐘的逾時。  這個逾時只適用於在網路上擷取中繼資料， 不適用於該中繼資料的任何處理。  
+### <a name="timeout"></a><span data-ttu-id="02f05-125">等候逾時</span><span class="sxs-lookup"><span data-stu-id="02f05-125">Timeout</span></span>  
+ <span data-ttu-id="02f05-126">這個工具在擷取中繼資料時會有 5 分鐘的逾時。</span><span class="sxs-lookup"><span data-stu-id="02f05-126">The tool has a 5 minute timeout when retrieving metadata.</span></span>  <span data-ttu-id="02f05-127">這個逾時只適用於在網路上擷取中繼資料，</span><span class="sxs-lookup"><span data-stu-id="02f05-127">This timeout only applies to retrieving metadata over the network.</span></span> <span data-ttu-id="02f05-128">不適用於該中繼資料的任何處理。</span><span class="sxs-lookup"><span data-stu-id="02f05-128">It does not apply to any processing of that metadata.</span></span>  
   
-### 多目標  
- 這個工具不支援多目標。 如果您要從 svcutil.exe 產生 .NET 4 成品，則必須使用 .NET 4 SDK 中的 svcutil.exe。 若要產生 .NET 3.5 成品，請使用 .NET 3.5 SDK 中的可執行檔。  
+### <a name="multi-targetting"></a><span data-ttu-id="02f05-129">多目標</span><span class="sxs-lookup"><span data-stu-id="02f05-129">Multi-targetting</span></span>  
+ <span data-ttu-id="02f05-130">這個工具不支援多目標。</span><span class="sxs-lookup"><span data-stu-id="02f05-130">The tool does not support multi-targeting.</span></span> <span data-ttu-id="02f05-131">如果您要從 svcutil.exe 產生 .NET 4 成品，則必須使用 .NET 4 SDK 中的 svcutil.exe。</span><span class="sxs-lookup"><span data-stu-id="02f05-131">If you want to generate a .NET 4 artifact from svcutil.exe, you have to use the svcutil.exe from the .NET 4 SDK.</span></span> <span data-ttu-id="02f05-132">若要產生 .NET 3.5 成品，請使用 .NET 3.5 SDK 中的可執行檔。</span><span class="sxs-lookup"><span data-stu-id="02f05-132">To generate a .NET 3.5 artifact, use the executable from the .NET 3.5 SDK.</span></span>  
   
-### 存取 WSDL 文件  
- 使用 Svcutil 存取參考安全性權杖服務 \(STS\) 的 WSDL 文件時，Svcutil 會對 STS 進行 WS\-MetadataExchange 呼叫。 不過，服務可以使用 WS\-MetadataExchange 或 HTTP GET 來公開 WSDL 文件。 因此，如果 STS 使用 HTTP GET 只公開 WSDL 文件時，寫入 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中的用戶端將失敗。 對於寫入 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 的用戶端，Svcutil 會嘗試使用 WS\-MetadataExchange 和 HTTP GET 取得 STS WSDL。  
+### <a name="accessing-wsdl-documents"></a><span data-ttu-id="02f05-133">存取 WSDL 文件</span><span class="sxs-lookup"><span data-stu-id="02f05-133">Accessing WSDL Documents</span></span>  
+ <span data-ttu-id="02f05-134">使用 Svcutil 存取參考安全性權杖服務 (STS) 的 WSDL 文件時，Svcutil 會對 STS 進行 WS-MetadataExchange 呼叫。</span><span class="sxs-lookup"><span data-stu-id="02f05-134">When you use Svcutil to access a WSDL document that has a reference to a security token service (STS), Svcutil makes a WS-MetadataExchange call to the STS.</span></span> <span data-ttu-id="02f05-135">不過，服務可以使用 WS-MetadataExchange 或 HTTP GET 來公開 WSDL 文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-135">However, the service can expose its WSDL documents using either WS-MetadataExchange or HTTP GET.</span></span> <span data-ttu-id="02f05-136">因此，如果 STS 使用 HTTP GET 只公開 WSDL 文件時，寫入 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中的用戶端將失敗。</span><span class="sxs-lookup"><span data-stu-id="02f05-136">Therefore, if the STS has only exposed the WSDL document using HTTP GET, a client written in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] will fail.</span></span> <span data-ttu-id="02f05-137">對於寫入 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 的用戶端，Svcutil 會嘗試使用 WS-MetadataExchange 和 HTTP GET 取得 STS WSDL。</span><span class="sxs-lookup"><span data-stu-id="02f05-137">For clients written in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil will attempt to use both WS-MetadataExchange and HTTP GET to obtain the STS WSDL.</span></span>  
   
-## 使用 SvcUtil.exe  
+## <a name="using-svcutilexe"></a><span data-ttu-id="02f05-138">使用 SvcUtil.exe</span><span class="sxs-lookup"><span data-stu-id="02f05-138">Using SvcUtil.exe</span></span>  
   
-### 常見使用方式  
- 下表顯示這個工具的一些常用選項。  
+### <a name="common-usages"></a><span data-ttu-id="02f05-139">常見使用方式</span><span class="sxs-lookup"><span data-stu-id="02f05-139">Common Usages</span></span>  
+ <span data-ttu-id="02f05-140">下表顯示這個工具的一些常用選項。</span><span class="sxs-lookup"><span data-stu-id="02f05-140">The following table shows some commonly used options for this tool.</span></span>  
   
-|選項|描述|  
-|--------|--------|  
-|\/directory:\<directory\>|要建立檔案的目錄。<br /><br /> 預設：目前的目錄。<br /><br /> 簡短形式：`/d`|  
-|\/help|顯示工具的命令語法和選項。<br /><br /> 簡短形式：`/?`|  
-|\/noLogo|隱藏版權和橫幅訊息。|  
-|\/svcutilConfig:\<configFile\>|指定要取代 App.config 檔所使用的自訂組態檔。 指定的組態檔可用來註冊 system.serviceModel 副檔名，而不會變更工具的組態檔。|  
-|\/target:\<output type\>|指定要由工具產生的輸出。<br /><br /> 有效值為 code、metadata 或 xmlSerializer。<br /><br /> 簡短形式：`/t`|  
+|<span data-ttu-id="02f05-141">選項</span><span class="sxs-lookup"><span data-stu-id="02f05-141">Option</span></span>|<span data-ttu-id="02f05-142">說明</span><span class="sxs-lookup"><span data-stu-id="02f05-142">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="02f05-143">/ 目錄：\<目錄 ></span><span class="sxs-lookup"><span data-stu-id="02f05-143">/directory:\<directory></span></span>|<span data-ttu-id="02f05-144">要建立檔案的目錄。</span><span class="sxs-lookup"><span data-stu-id="02f05-144">Directory to create files in.</span></span><br /><br /> <span data-ttu-id="02f05-145">預設：目前的目錄。</span><span class="sxs-lookup"><span data-stu-id="02f05-145">Default: The current directory.</span></span><br /><br /> <span data-ttu-id="02f05-146">簡短形式：`/d`</span><span class="sxs-lookup"><span data-stu-id="02f05-146">Short form: `/d`</span></span>|  
+|<span data-ttu-id="02f05-147">/help</span><span class="sxs-lookup"><span data-stu-id="02f05-147">/help</span></span>|<span data-ttu-id="02f05-148">顯示工具的命令語法和選項。</span><span class="sxs-lookup"><span data-stu-id="02f05-148">Displays the command syntax and options for the tool.</span></span><br /><br /> <span data-ttu-id="02f05-149">簡短形式：`/?`</span><span class="sxs-lookup"><span data-stu-id="02f05-149">Short form: `/?`</span></span>|  
+|<span data-ttu-id="02f05-150">/noLogo</span><span class="sxs-lookup"><span data-stu-id="02f05-150">/noLogo</span></span>|<span data-ttu-id="02f05-151">隱藏版權和橫幅訊息。</span><span class="sxs-lookup"><span data-stu-id="02f05-151">Suppress the copyright and banner message.</span></span>|  
+|<span data-ttu-id="02f05-152">/svcutilConfig:\<configFile ></span><span class="sxs-lookup"><span data-stu-id="02f05-152">/svcutilConfig:\<configFile></span></span>|<span data-ttu-id="02f05-153">指定要取代 App.config 檔所使用的自訂組態檔。</span><span class="sxs-lookup"><span data-stu-id="02f05-153">Specifies a custom configuration file to use instead of the App.config file.</span></span> <span data-ttu-id="02f05-154">指定的組態檔可用來註冊 system.serviceModel 副檔名，而不會變更工具的組態檔。</span><span class="sxs-lookup"><span data-stu-id="02f05-154">This can be used to register system.serviceModel extensions without altering the tool's configuration file.</span></span>|  
+|<span data-ttu-id="02f05-155">/target:\<輸出類型 ></span><span class="sxs-lookup"><span data-stu-id="02f05-155">/target:\<output type></span></span>|<span data-ttu-id="02f05-156">指定要由工具產生的輸出。</span><span class="sxs-lookup"><span data-stu-id="02f05-156">Specifies the output to be generated by the tool.</span></span><br /><br /> <span data-ttu-id="02f05-157">有效值為 code、metadata 或 xmlSerializer。</span><span class="sxs-lookup"><span data-stu-id="02f05-157">Valid values are code, metadata or xmlSerializer.</span></span><br /><br /> <span data-ttu-id="02f05-158">簡短形式：`/t`</span><span class="sxs-lookup"><span data-stu-id="02f05-158">Short form: `/t`</span></span>|  
   
-### 程式碼產生  
- Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型別的程式碼。 這些中繼資料文件可在永久性儲存裝置或線上擷取。 線上擷取會遵循 WS\-Metadata Exchange 通訊協定或 DISCO 通訊協定 \(如需詳細資訊，請參閱「中繼資料下載」一節\)。  
+### <a name="code-generation"></a><span data-ttu-id="02f05-159">程式碼產生</span><span class="sxs-lookup"><span data-stu-id="02f05-159">Code Generation</span></span>  
+ <span data-ttu-id="02f05-160">Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型別的程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-160">Svcutil.exe can generate code for service contracts, clients and data types from metadata documents.</span></span> <span data-ttu-id="02f05-161">這些中繼資料文件可在永久性儲存裝置或線上擷取。</span><span class="sxs-lookup"><span data-stu-id="02f05-161">These metadata documents can be on a durable storage, or be retrieved online.</span></span> <span data-ttu-id="02f05-162">線上擷取會遵循 WS-Metadata Exchange 通訊協定或 DISCO 通訊協定 (如需詳細資訊，請參閱「中繼資料下載」一節)。</span><span class="sxs-lookup"><span data-stu-id="02f05-162">Online retrieval follows either the WS-Metadata Exchange protocol or the DISCO protocol (for details see the Metadata Download section).</span></span>  
   
- 您可以使用 SvcUtil.exe 工具產生以預先定義之 WSDL 文件為基礎的服務與資料合約。 使用 \/serviceContract 參數，並指定可以下載或找到 WSDL 文件的 URL 或檔案位置。 這將會產生 WSDL 文件中定義的服務與資料合約，而這些合約接著就可以用來實作投訴服務。[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [HOW TO：擷取中繼資料並實作相容性服務](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ <span data-ttu-id="02f05-163">您可以使用 SvcUtil.exe 工具產生以預先定義之 WSDL 文件為基礎的服務與資料合約。</span><span class="sxs-lookup"><span data-stu-id="02f05-163">You can use the SvcUtil.exe tool to generate service and data contracts based on a predefined WSDL document.</span></span> <span data-ttu-id="02f05-164">使用 /serviceContract 參數，並指定可以下載或找到 WSDL 文件的 URL 或檔案位置。</span><span class="sxs-lookup"><span data-stu-id="02f05-164">Use the /serviceContract switch and specify a URL or file location where the WSDL document can be downloaded or found.</span></span> <span data-ttu-id="02f05-165">這將會產生 WSDL 文件中定義的服務與資料合約，而這些合約接著就可以用來實作投訴服務。</span><span class="sxs-lookup"><span data-stu-id="02f05-165">This will generate the service and data contracts defined in the WSDL document that can then be used to implement a complaint service .</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="02f05-166">[How to： 擷取中繼資料，並實作相容服務](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。</span><span class="sxs-lookup"><span data-stu-id="02f05-166"> [How to: Retrieve Metadata and Implement a Compliant Service](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).</span></span>  
   
- 對於含 BasicHttpContextbinding 端點的服務，Svcutil.exe 會產生 BasicHttpBinding，其 `allowCookies` 屬性設為 `true`。 Cookie 用於伺服器上的內容。 如果您要在服務使用 Cookie 時管理用戶端上的內容，您可以手動修改組態以使用內容繫結。  
+ <span data-ttu-id="02f05-167">對於含 BasicHttpContextbinding 端點的服務，Svcutil.exe 會產生 BasicHttpBinding，其 `allowCookies` 屬性設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="02f05-167">For a service with a BasicHttpContextbinding endpoint, Svcutil.exe generates a BasicHttpBinding with the `allowCookies` attribute set to `true` instead.</span></span> <span data-ttu-id="02f05-168">Cookie 用於伺服器上的內容。</span><span class="sxs-lookup"><span data-stu-id="02f05-168">The cookies are used for context on the server.</span></span> <span data-ttu-id="02f05-169">如果您要在服務使用 Cookie 時管理用戶端上的內容，您可以手動修改組態以使用內容繫結。</span><span class="sxs-lookup"><span data-stu-id="02f05-169">If you would like to manage context on the client when the service uses cookies, you can manually modify the configuration to use a context binding.</span></span>  
   
 > [!CAUTION]
->  Svcutil.exe 會根據 WSDL 或從服務收到的原則檔產生用戶端。 使用者主要名稱 \(UPN\) 是串連使用者名稱、"@" 和完整網域名稱 \(FQDN\) 所產生的。 但是，對於在 Active Directory 上登錄的使用者而言，這個格式無效，且此工具產生的 UPN 會造成 Kerberos 驗證失敗，並顯示「登入嘗試失敗」錯誤訊息。 若要解決這個問題，您應手動修復由這個工具產生的用戶端檔案。  
+>  <span data-ttu-id="02f05-170">Svcutil.exe 會根據 WSDL 或從服務收到的原則檔產生用戶端。</span><span class="sxs-lookup"><span data-stu-id="02f05-170">Svcutil.exe generates the client based on the WSDL or policy file received from the service.</span></span> <span data-ttu-id="02f05-171">使用者主要名稱 (UPN) 是串連使用者名稱、"@" 和完整網域名稱 (FQDN) 所產生的。</span><span class="sxs-lookup"><span data-stu-id="02f05-171">The user principal name (UPN) is generated by concatenating username, "@" and a fully-qualified domain name (FQDN).</span></span> <span data-ttu-id="02f05-172">但是，對於在 Active Directory 上登錄的使用者而言，這個格式無效，且此工具產生的 UPN 會造成 Kerberos 驗證失敗，並顯示「登入嘗試失敗」錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="02f05-172">However, for users who registered on Active Directory, this format is not valid and the UPN generated by the tool causes a failure in Kerberos authentication with the error message "The logon attempt failed".</span></span> <span data-ttu-id="02f05-173">若要解決這個問題，您應手動修復由這個工具產生的用戶端檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-173">To resolve this problem, you should manually fix the client file generated by this tool.</span></span>  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   
-|引數|描述|  
-|--------|--------|  
-|`epr`|XML 檔案的路徑，其中包含支援 WS\-Metadata Exchange 之服務端點的 WS\-Addressing EndpointReference。 如需詳細資訊，請參閱「中繼資料下載」一節。|  
-|`metadataDocumentPath`|中繼資料文件 \(wsdl 或 xsd\) 的路徑，其中包含要匯入程式碼的合約 \(.wsdl、.xsd、.wspolicy 或 .wsmex\)。<br /><br /> 如果您指定的是中繼資料的遠端 URL，Svcutil 會根據您的指定執行匯入並包含其中的內容。 但是，如果您要處理本機檔案系統上的中繼資料檔，則必須在這個引數中指定所有檔案。 如此一來，您就可以在無法取得網路相依性的建置環境中使用 Svcutil。 您可以針對這個引數使用萬用字元 \(\*.xsd、\*.wsdl\)。|  
-|`url`|提供中繼資料之服務端點的 URL，或裝載於線上之中繼資料文件的 URL。 如需如何擷取這些文件的詳細資訊，請參閱「中繼資料下載」一節。|  
+|<span data-ttu-id="02f05-174">引數</span><span class="sxs-lookup"><span data-stu-id="02f05-174">Argument</span></span>|<span data-ttu-id="02f05-175">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-175">Description</span></span>|  
+|--------------|-----------------|  
+|`epr`|<span data-ttu-id="02f05-176">XML 檔案的路徑，其中包含支援 WS-Metadata Exchange 之服務端點的 WS-Addressing EndpointReference。</span><span class="sxs-lookup"><span data-stu-id="02f05-176">The path to an XML file that contains a WS-Addressing EndpointReference for a service endpoint that supports WS-Metadata Exchange.</span></span> <span data-ttu-id="02f05-177">如需詳細資訊，請參閱「中繼資料下載」一節。</span><span class="sxs-lookup"><span data-stu-id="02f05-177">For more information, see the Metadata Download section.</span></span>|  
+|`metadataDocumentPath`|<span data-ttu-id="02f05-178">中繼資料文件 (wsdl 或 xsd) 的路徑，其中包含要匯入程式碼的合約 (.wsdl、.xsd、.wspolicy 或 .wsmex)。</span><span class="sxs-lookup"><span data-stu-id="02f05-178">The path to a metadata document (wsdl or xsd) that contains the contract to import into code (.wsdl, .xsd, .wspolicy or .wsmex).</span></span><br /><br /> <span data-ttu-id="02f05-179">如果您指定的是中繼資料的遠端 URL，Svcutil 會根據您的指定執行匯入並包含其中的內容。</span><span class="sxs-lookup"><span data-stu-id="02f05-179">Svcutil follows imports and includes when you specify a remote URL for metadata.</span></span> <span data-ttu-id="02f05-180">但是，如果您要處理本機檔案系統上的中繼資料檔，則必須在這個引數中指定所有檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-180">However, if you want to process metadata files on the local file system, you must specify all files in this argument.</span></span> <span data-ttu-id="02f05-181">如此一來，您就可以在無法取得網路相依性的建置環境中使用 Svcutil。</span><span class="sxs-lookup"><span data-stu-id="02f05-181">In this way, you can use Svcutil in a build environment where you cannot have network dependencies.</span></span> <span data-ttu-id="02f05-182">您可以使用萬用字元 (*.xsd， \*.wsdl) 這個引數。</span><span class="sxs-lookup"><span data-stu-id="02f05-182">You can use wildcards (*.xsd, \*.wsdl) for this argument.</span></span>|  
+|`url`|<span data-ttu-id="02f05-183">提供中繼資料之服務端點的 URL，或裝載於線上之中繼資料文件的 URL。</span><span class="sxs-lookup"><span data-stu-id="02f05-183">The URL to a service endpoint that provides metadata or to a metadata document hosted online.</span></span> <span data-ttu-id="02f05-184">如需如何擷取這些文件的詳細資訊，請參閱「中繼資料下載」一節。</span><span class="sxs-lookup"><span data-stu-id="02f05-184">For more information on how these documents are retrieved, see the Metadata Download section.</span></span>|  
   
-|選項|描述|  
-|--------|--------|  
-|\/async|同時產生同步與非同步方法簽章。<br /><br /> 預設：只產生同步方法簽章。<br /><br /> 簡短形式：`/a`|  
-|\/collectionType:\<type\>|同時產生同步與非同步方法簽章。<br /><br /> 預設：只產生同步方法簽章。<br /><br /> 簡短形式：`/a`|  
-|\/config:\<configFile\>|指定產生之組態檔的檔案名稱。<br /><br /> 預設：output.config|  
-|\/dataContractOnly|只產生資料合約類型的程式碼。 不會產生「服務合約」類型。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|  
-|\/enableDataBinding|在所有「資料合約」類型上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結。<br /><br /> 簡短形式：`/edb`|  
-|\/excludeType:\<type\>|指定要從參考的合約類型排除的完整型別名稱或組件限定型別名稱。<br /><br /> 將這個參數與個別 DLL 的 `/r` 一起使用時，會參考 XSD 類別的完整名稱。<br /><br /> 簡短形式：`/et`|  
-|\/importXmlTypes|設定資料合約序列化程式，將非資料合約類型匯入為 IXmlSerializable 類型。|  
-|\/internal|產生標示為內部的類別。 預設：只產生公用類別。<br /><br /> 簡短形式：`/i`|  
-|\/language:\<language\>|指定要用於產生程式碼的程式語言。 您應提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c\#、cs、csharp、vb、visualbasic、c\+\+、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式：`/l` **Note:**  此參數只支援 Visual Studio 2005 SP1 所隨附程式碼提供者的 C\+\+。|  
-|\/mergeConfig|將產生的組態合併至現有檔案，而非覆寫現有檔案。|  
-|\/messageContract|產生「訊息合約」類型。<br /><br /> 簡短形式：`/mc`|  
-|\/namespace:\<string,string\>|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 針對 targetNamespace 使用 '\*'，將會對應至所有的 targetNamespace，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設：自資料合約的結構描述文件之目標命名空間衍生而來。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n`|  
-|\/noConfig|不要產生組態檔。|  
-|\/noStdLib|不引用標準程式庫。<br /><br /> 預設：引用 Mscorlib.dll 和 System.servicemodel.dll。|  
-|\/out:\<file\>|指定產生之程式碼的檔案名稱。<br /><br /> 預設：衍生自 WSDL 定義名稱、WSDL 服務名稱，或其中一個結構描述的目標命名空間。<br /><br /> 簡短形式：`/o`|  
-|\/reference:\<file path\>|參考指定組件中的型別。 產生用戶端時，使用這個選項即可指定組件，這些組件可能包含代表匯入之中繼資料的類型。<br /><br /> 您無法使用這個參數指定訊息合約和 <xref:System.Xml.Serialization.XmlSerializer> 型別。<br /><br /> 如果已參考 <xref:System.DateTimeOffset>，則會使用這個型別，而不會產生新型別。 如果應用程式是使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 撰寫的，則 SvcUtil.exe 會自動參考 <xref:System.DateTimeOffset>。<br /><br /> 簡短形式：`/r`|  
-|\/serializable|產生已使用 Serializable 屬性標示的類別。<br /><br /> 簡短形式：`/s`|  
-|\/serviceContract|只產生服務合約的程式碼。 不會產生用戶端類別和組態<br /><br /> 簡短形式：`/sc`|  
-|\/serializer:Auto|產生已使用 Serializable 屬性標示的類別。<br /><br /> 簡短形式：`/s`|  
-|\/serializer:DataContractSerializer|產生使用「資料合約序列化程式」以進行序列化與還原序列化的資料型別。<br /><br /> 簡短形式：`/ser:DataContractSerializer`|  
-|\/serializer:XmlSerializer|產生使用 <xref:System.Xml.Serialization.XmlSerializer> 以進行序列化與還原序列化的資料型別。<br /><br /> 簡短形式：`/ser:XmlSerializer`|  
-|\/targetClientVersion|指定設為應用程式目標的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 版本。 有效值為 `Version30` 和 `Version35`。 預設值是 `Version30`。<br /><br /> 簡短形式：`/tcv`<br /><br /> `Version30`：如果您正在為使用 `/tcv:Version30` 的用戶端產生程式碼，則使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。<br /><br /> `Version35`：如果您正在為使用 `/tcv:Version35` 的用戶端產生程式碼，則使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 將 `/tcv:Version35` 與 `/async` 參數一起使用時，會產生事件架構與回呼\/委派架構的非同步方法。 此外，也會啟用具備 LINQ 功能的資料集和 <xref:System.DateTimeOffset> 的支援。|  
-|\/wrapped|控制是否將特殊大小寫搭配 wrapped 參數用於文件常值樣式的文件。 搭配[Service Model Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具使用 **\/wrapped** 參數，即可指定一般大小寫。|  
+|<span data-ttu-id="02f05-185">選項</span><span class="sxs-lookup"><span data-stu-id="02f05-185">Option</span></span>|<span data-ttu-id="02f05-186">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-186">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="02f05-187">/async</span><span class="sxs-lookup"><span data-stu-id="02f05-187">/async</span></span>|<span data-ttu-id="02f05-188">同時產生同步與非同步方法簽章。</span><span class="sxs-lookup"><span data-stu-id="02f05-188">Generates both synchronous and asynchronous method signatures.</span></span><br /><br /> <span data-ttu-id="02f05-189">預設：只產生同步方法簽章。</span><span class="sxs-lookup"><span data-stu-id="02f05-189">Default: generate only synchronous method signatures.</span></span><br /><br /> <span data-ttu-id="02f05-190">簡短形式：`/a`</span><span class="sxs-lookup"><span data-stu-id="02f05-190">Short Form: `/a`</span></span>|  
+|<span data-ttu-id="02f05-191">/collectionType:\<類型 ></span><span class="sxs-lookup"><span data-stu-id="02f05-191">/collectionType:\<type></span></span>|<span data-ttu-id="02f05-192">指定 WCF 用戶端的清單集合類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-192">Specifies the list collection type for a WCF client.</span></span><br/><br /> <span data-ttu-id="02f05-193">預設值： 集合型別為 System.Array。</span><span class="sxs-lookup"><span data-stu-id="02f05-193">Default: collection type is System.Array.</span></span> <br /><br /> <span data-ttu-id="02f05-194">簡短形式：`/ct`</span><span class="sxs-lookup"><span data-stu-id="02f05-194">Short Form: `/ct`</span></span>|  
+|<span data-ttu-id="02f05-195">/config:\<configFile ></span><span class="sxs-lookup"><span data-stu-id="02f05-195">/config:\<configFile></span></span>|<span data-ttu-id="02f05-196">指定產生之組態檔的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-196">Specifies the filename for the generated configuration file.</span></span><br /><br /> <span data-ttu-id="02f05-197">預設：output.config</span><span class="sxs-lookup"><span data-stu-id="02f05-197">Default: output.config</span></span>|  
+|<span data-ttu-id="02f05-198">/dataContractOnly</span><span class="sxs-lookup"><span data-stu-id="02f05-198">/dataContractOnly</span></span>|<span data-ttu-id="02f05-199">只產生資料合約類型的程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-199">Generates code for data contract types only.</span></span> <span data-ttu-id="02f05-200">不會產生「服務合約」類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-200">Service Contract types are not generated.</span></span><br /><br /> <span data-ttu-id="02f05-201">這個選項應該只能指定本機中繼資料檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-201">You should only specify local metadata files for this option.</span></span><br /><br /> <span data-ttu-id="02f05-202">簡短形式：`/dconly`</span><span class="sxs-lookup"><span data-stu-id="02f05-202">Short Form: `/dconly`</span></span>|  
+|<span data-ttu-id="02f05-203">/enableDataBinding</span><span class="sxs-lookup"><span data-stu-id="02f05-203">/enableDataBinding</span></span>|<span data-ttu-id="02f05-204">在所有「資料合約」類型上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結。</span><span class="sxs-lookup"><span data-stu-id="02f05-204">Implements the <xref:System.ComponentModel.INotifyPropertyChanged> interface on all Data Contract types to enable data binding.</span></span><br /><br /> <span data-ttu-id="02f05-205">簡短形式：`/edb`</span><span class="sxs-lookup"><span data-stu-id="02f05-205">Short Form: `/edb`</span></span>|  
+|<span data-ttu-id="02f05-206">/excludeType:\<類型 ></span><span class="sxs-lookup"><span data-stu-id="02f05-206">/excludeType:\<type></span></span>|<span data-ttu-id="02f05-207">指定要從參考的合約類型排除的完整型別名稱或組件限定型別名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-207">Specifies a fully-qualified or assembly-qualified type name to be excluded from referenced contract types.</span></span><br /><br /> <span data-ttu-id="02f05-208">將這個參數與個別 DLL 的 `/r` 一起使用時，會參考 XSD 類別的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-208">When using this switch together with `/r` from separate DLLs, the full name of the XSD class is referenced.</span></span><br /><br /> <span data-ttu-id="02f05-209">簡短形式：`/et`</span><span class="sxs-lookup"><span data-stu-id="02f05-209">Short Form: `/et`</span></span>|  
+|<span data-ttu-id="02f05-210">/importXmlTypes</span><span class="sxs-lookup"><span data-stu-id="02f05-210">/importXmlTypes</span></span>|<span data-ttu-id="02f05-211">設定資料合約序列化程式，將非資料合約類型匯入為 IXmlSerializable 類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-211">Configures the Data Contract serializer to import non-Data Contract types as IXmlSerializable types.</span></span>|  
+|<span data-ttu-id="02f05-212">/internal</span><span class="sxs-lookup"><span data-stu-id="02f05-212">/internal</span></span>|<span data-ttu-id="02f05-213">產生標示為內部的類別。</span><span class="sxs-lookup"><span data-stu-id="02f05-213">Generates classes that are marked as internal.</span></span> <span data-ttu-id="02f05-214">預設：只產生公用類別。</span><span class="sxs-lookup"><span data-stu-id="02f05-214">Default: generate public classes only.</span></span><br /><br /> <span data-ttu-id="02f05-215">簡短形式：`/i`</span><span class="sxs-lookup"><span data-stu-id="02f05-215">Short Form: `/i`</span></span>|  
+|<span data-ttu-id="02f05-216">/language:\<語言 ></span><span class="sxs-lookup"><span data-stu-id="02f05-216">/language:\<language></span></span>|<span data-ttu-id="02f05-217">指定要用於產生程式碼的程式語言。</span><span class="sxs-lookup"><span data-stu-id="02f05-217">Specifies the programming language to use for code generation.</span></span> <span data-ttu-id="02f05-218">您應提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-218">You should provide either a language name registered in the Machine.config file, or the fully-qualified name of a class that inherits from <xref:System.CodeDom.Compiler.CodeDomProvider>.</span></span><br /><br /> <span data-ttu-id="02f05-219">值：c#、cs、csharp、vb、visualbasic、c++、cpp</span><span class="sxs-lookup"><span data-stu-id="02f05-219">Values: c#, cs, csharp, vb, visualbasic, c++, cpp</span></span><br /><br /> <span data-ttu-id="02f05-220">預設：csharp</span><span class="sxs-lookup"><span data-stu-id="02f05-220">Default: csharp</span></span><br /><br /> <span data-ttu-id="02f05-221">簡短形式： `/l` **附註：**此參數只支援 c + + 程式碼提供者隨附於 Visual Studio 2005 SP1。</span><span class="sxs-lookup"><span data-stu-id="02f05-221">Short form: `/l` **Note:**  The switch only supports C++ for the code provider that ships with Visual Studio 2005 SP1.</span></span>|  
+|<span data-ttu-id="02f05-222">/mergeConfig</span><span class="sxs-lookup"><span data-stu-id="02f05-222">/mergeConfig</span></span>|<span data-ttu-id="02f05-223">將產生的組態合併至現有檔案，而非覆寫現有檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-223">Merges the generated configuration into an existing file, instead of overwriting the existing file.</span></span>|  
+|<span data-ttu-id="02f05-224">/messageContract</span><span class="sxs-lookup"><span data-stu-id="02f05-224">/messageContract</span></span>|<span data-ttu-id="02f05-225">產生「訊息合約」類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-225">Generates Message Contract types.</span></span><br /><br /> <span data-ttu-id="02f05-226">簡短形式：`/mc`</span><span class="sxs-lookup"><span data-stu-id="02f05-226">Short Form: `/mc`</span></span>|  
+|<span data-ttu-id="02f05-227">/namespace:\<字串、 字串 ></span><span class="sxs-lookup"><span data-stu-id="02f05-227">/namespace:\<string,string></span></span>|<span data-ttu-id="02f05-228">指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。</span><span class="sxs-lookup"><span data-stu-id="02f05-228">Specifies a mapping from a WSDL or XML Schema targetNamespace to a CLR namespace.</span></span> <span data-ttu-id="02f05-229">使用 '\*' 的目標命名空間對應所有的 Targetnamespace，而不會明確對應至該 CLR 命名空間。</span><span class="sxs-lookup"><span data-stu-id="02f05-229">Using '\*' for the targetNamespace maps all targetNamespaces without an explicit mapping to that CLR namespace.</span></span><br /><br /> <span data-ttu-id="02f05-230">為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-230">To make sure that the message contract name does not collide with operation name, you should either qualify the type reference with `::`, or make sure the names are unique.</span></span><br /><br /> <span data-ttu-id="02f05-231">預設：自資料合約的結構描述文件之目標命名空間衍生而來。</span><span class="sxs-lookup"><span data-stu-id="02f05-231">Default: Derived from the target namespace of the schema document for Data Contracts.</span></span> <span data-ttu-id="02f05-232">預設命名空間用於所有其他產生的型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-232">The default namespace is used for all other generated types.</span></span><br /><br /> <span data-ttu-id="02f05-233">簡短形式： `/n` **附註：**當產生的型別使用 XmlSerializer，就會支援單一命名空間對應。</span><span class="sxs-lookup"><span data-stu-id="02f05-233">Short Form: `/n` **Note:**  When generating types to use with XmlSerializer, only a single namespace mapping is supported.</span></span> <span data-ttu-id="02f05-234">所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。</span><span class="sxs-lookup"><span data-stu-id="02f05-234">All generated types will either be in the default namespace or the namespace specified by '*'.</span></span>|  
+|<span data-ttu-id="02f05-235">/noConfig</span><span class="sxs-lookup"><span data-stu-id="02f05-235">/noConfig</span></span>|<span data-ttu-id="02f05-236">不要產生組態檔。</span><span class="sxs-lookup"><span data-stu-id="02f05-236">Do not generate configuration files.</span></span>|  
+|<span data-ttu-id="02f05-237">/noStdLib</span><span class="sxs-lookup"><span data-stu-id="02f05-237">/noStdLib</span></span>|<span data-ttu-id="02f05-238">不引用標準程式庫。</span><span class="sxs-lookup"><span data-stu-id="02f05-238">Do not reference standard libraries.</span></span><br /><br /> <span data-ttu-id="02f05-239">預設：引用 Mscorlib.dll 和 System.servicemodel.dll。</span><span class="sxs-lookup"><span data-stu-id="02f05-239">Default: Mscorlib.dll and System.servicemodel.dll are referenced.</span></span>|  
+|<span data-ttu-id="02f05-240">/out:\<檔案 ></span><span class="sxs-lookup"><span data-stu-id="02f05-240">/out:\<file></span></span>|<span data-ttu-id="02f05-241">指定產生之程式碼的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-241">Specifies the file name for the generated code.</span></span><br /><br /> <span data-ttu-id="02f05-242">預設：衍生自 WSDL 定義名稱、WSDL 服務名稱，或其中一個結構描述的目標命名空間。</span><span class="sxs-lookup"><span data-stu-id="02f05-242">Default: Derived from the WSDL definition name, WSDL service name or target namespace of one of the schemas.</span></span><br /><br /> <span data-ttu-id="02f05-243">簡短形式：`/o`</span><span class="sxs-lookup"><span data-stu-id="02f05-243">Short form: `/o`</span></span>|  
+|<span data-ttu-id="02f05-244">/reference:\<檔案路徑 ></span><span class="sxs-lookup"><span data-stu-id="02f05-244">/reference:\<file path></span></span>|<span data-ttu-id="02f05-245">參考指定組件中的型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-245">References types in the specified assembly.</span></span> <span data-ttu-id="02f05-246">產生用戶端時，使用這個選項即可指定組件，這些組件可能包含代表匯入之中繼資料的類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-246">When generating clients, use this option to specify assemblies that might contain types that represent the metadata being imported.</span></span><br /><br /> <span data-ttu-id="02f05-247">您無法使用這個參數指定訊息合約和 <xref:System.Xml.Serialization.XmlSerializer> 型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-247">You cannot specify message contracts and <xref:System.Xml.Serialization.XmlSerializer> types using this switch.</span></span><br /><br /> <span data-ttu-id="02f05-248">如果已參考 <xref:System.DateTimeOffset>，則會使用這個型別，而不會產生新型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-248">If <xref:System.DateTimeOffset> referenced, this type is used instead of generating a new type.</span></span> <span data-ttu-id="02f05-249">如果應用程式是使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 撰寫的，則 SvcUtil.exe 會自動參考 <xref:System.DateTimeOffset>。</span><span class="sxs-lookup"><span data-stu-id="02f05-249">If the application is written using [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe references <xref:System.DateTimeOffset> automatically.</span></span><br /><br /> <span data-ttu-id="02f05-250">簡短形式：`/r`</span><span class="sxs-lookup"><span data-stu-id="02f05-250">Short Form: `/r`</span></span>|  
+|<span data-ttu-id="02f05-251">/serializable</span><span class="sxs-lookup"><span data-stu-id="02f05-251">/serializable</span></span>|<span data-ttu-id="02f05-252">產生已使用 Serializable 屬性標示的類別。</span><span class="sxs-lookup"><span data-stu-id="02f05-252">Generates classes marked with the Serializable Attribute.</span></span><br /><br /> <span data-ttu-id="02f05-253">簡短形式：`/s`</span><span class="sxs-lookup"><span data-stu-id="02f05-253">Short Form: `/s`</span></span>|  
+|<span data-ttu-id="02f05-254">/serviceContract</span><span class="sxs-lookup"><span data-stu-id="02f05-254">/serviceContract</span></span>|<span data-ttu-id="02f05-255">只產生服務合約的程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-255">Generate code for service contracts only.</span></span> <span data-ttu-id="02f05-256">不會產生用戶端類別和組態</span><span class="sxs-lookup"><span data-stu-id="02f05-256">Client class and configuration will not be generated</span></span><br /><br /> <span data-ttu-id="02f05-257">簡短形式：`/sc`</span><span class="sxs-lookup"><span data-stu-id="02f05-257">Short Form: `/sc`</span></span>|  
+|<span data-ttu-id="02f05-258">/serializer:Auto</span><span class="sxs-lookup"><span data-stu-id="02f05-258">/serializer:Auto</span></span>|<span data-ttu-id="02f05-259">自動選取序列化程式。</span><span class="sxs-lookup"><span data-stu-id="02f05-259">Automatically select the serializer.</span></span> <span data-ttu-id="02f05-260">這會嘗試使用 「 資料合約序列化程式，並使用 XmlSerializer，如果失敗。</span><span class="sxs-lookup"><span data-stu-id="02f05-260">This tries to use the Data Contract serializer and uses the XmlSerializer if that fails.</span></span><br /><br /> <span data-ttu-id="02f05-261">簡短形式：`/ser`</span><span class="sxs-lookup"><span data-stu-id="02f05-261">Short Form: `/ser`</span></span>|  
+|<span data-ttu-id="02f05-262">/serializer:DataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="02f05-262">/serializer:DataContractSerializer</span></span>|<span data-ttu-id="02f05-263">產生使用「資料合約序列化程式」以進行序列化與還原序列化的資料型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-263">Generates data types that use the Data Contract Serializer for serialization and deserialization.</span></span><br /><br /> <span data-ttu-id="02f05-264">簡短形式：`/ser:DataContractSerializer`</span><span class="sxs-lookup"><span data-stu-id="02f05-264">Short Form: `/ser:DataContractSerializer`</span></span>|  
+|<span data-ttu-id="02f05-265">/serializer:XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="02f05-265">/serializer:XmlSerializer</span></span>|<span data-ttu-id="02f05-266">產生使用 <xref:System.Xml.Serialization.XmlSerializer> 以進行序列化與還原序列化的資料型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-266">Generates data types that use the <xref:System.Xml.Serialization.XmlSerializer> for serialization and deserialization.</span></span><br /><br /> <span data-ttu-id="02f05-267">簡短形式：`/ser:XmlSerializer`</span><span class="sxs-lookup"><span data-stu-id="02f05-267">Short Form: `/ser:XmlSerializer`</span></span>|  
+|<span data-ttu-id="02f05-268">/targetClientVersion</span><span class="sxs-lookup"><span data-stu-id="02f05-268">/targetClientVersion</span></span>|<span data-ttu-id="02f05-269">指定設為應用程式目標的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 版本。</span><span class="sxs-lookup"><span data-stu-id="02f05-269">Specify which version of [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] the application is targeting.</span></span> <span data-ttu-id="02f05-270">有效值為 `Version30` 和 `Version35`。</span><span class="sxs-lookup"><span data-stu-id="02f05-270">Valid values are `Version30` and `Version35`.</span></span> <span data-ttu-id="02f05-271">預設值是 `Version30`。</span><span class="sxs-lookup"><span data-stu-id="02f05-271">The default value is `Version30`.</span></span><br /><br /> <span data-ttu-id="02f05-272">簡短形式：`/tcv`</span><span class="sxs-lookup"><span data-stu-id="02f05-272">Short Form: `/tcv`</span></span><br /><br /> <span data-ttu-id="02f05-273">`Version30`：如果您正在為使用 `/tcv:Version30` 的用戶端產生程式碼，則使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="02f05-273">`Version30`: Use `/tcv:Version30` if you are generating code for clients that use [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].</span></span><br /><br /> <span data-ttu-id="02f05-274">`Version35`：如果您正在為使用 `/tcv:Version35` 的用戶端產生程式碼，則使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="02f05-274">`Version35`: Use `/tcv:Version35` if you are generating code for clients that use [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> <span data-ttu-id="02f05-275">將 `/tcv:Version35` 與 `/async` 參數一起使用時，會產生事件架構與回呼/委派架構的非同步方法。</span><span class="sxs-lookup"><span data-stu-id="02f05-275">When using `/tcv:Version35` with the `/async` switch, both event-based and callback/delegate-based asynchronous methods are generated.</span></span> <span data-ttu-id="02f05-276">此外，也會啟用具備 LINQ 功能的資料集和 <xref:System.DateTimeOffset> 的支援。</span><span class="sxs-lookup"><span data-stu-id="02f05-276">In addition, support for LINQ-enabled DataSets and <xref:System.DateTimeOffset> is enabled.</span></span>|  
+|<span data-ttu-id="02f05-277">/wrapped</span><span class="sxs-lookup"><span data-stu-id="02f05-277">/wrapped</span></span>|<span data-ttu-id="02f05-278">控制是否將特殊大小寫搭配 wrapped 參數用於文件常值樣式的文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-278">Controls whether special-casing is used for document-literal styled documents with wrapped parameters.</span></span> <span data-ttu-id="02f05-279">使用**/ 包裝**參數搭配[Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具來指定一般大小寫。</span><span class="sxs-lookup"><span data-stu-id="02f05-279">Use the **/wrapped** switch with the [Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to specify normal casing.</span></span>|  
   
 > [!NOTE]
->  服務繫結為其中一個系統所提供繫結 \(請參閱[系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)\)，且 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 屬性設為 `None` 或 `Sign` 時，Svcutil 會使用 [\<customBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 項目產生組態檔，而非使用預期的系統提供項目。 例如，如果服務使用 `<wsHttpBinding>` 項目，其中 `ProtectionLevel` 設為 `Sign`，則產生的組態會在繫結區段中有 `<customBinding>`，而非 `<wsHttpBinding>`。 如需保護層級的詳細資訊，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
+>  <span data-ttu-id="02f05-280">當服務繫結是一種系統提供的繫結 (請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md))，而<xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A>屬性會設為`None`或`Sign`，Svcutil 會產生組態檔使用[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)元素而不是預期的系統提供項目。</span><span class="sxs-lookup"><span data-stu-id="02f05-280">When the service binding is one of the system-provided bindings (see [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)), and the <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> property is set to either `None` or `Sign`, Svcutil generates a configuration file using the [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) element instead of the expected system-provided element.</span></span> <span data-ttu-id="02f05-281">例如，如果服務使用 `<wsHttpBinding>` 項目，其中 `ProtectionLevel` 設為 `Sign`，則產生的組態會在繫結區段中有 `<customBinding>`，而非 `<wsHttpBinding>`。</span><span class="sxs-lookup"><span data-stu-id="02f05-281">For example, if the service uses the `<wsHttpBinding>` element with the `ProtectionLevel` set to `Sign`, the generated configuration has `<customBinding>` in the bindings section instead of `<wsHttpBinding>`.</span></span> <span data-ttu-id="02f05-282">如需保護層級的詳細資訊，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。</span><span class="sxs-lookup"><span data-stu-id="02f05-282">For more information about the protection level, see [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md).</span></span>  
   
-### 中繼資料匯出  
- Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件中的資料型別。 若要匯出服務的中繼資料，您必須使用 `/serviceName` 選項指定要匯出的服務。 若要匯出組件內的所有資料合約類型，請使用 `/dataContractOnly` 選項。 根據預設，會匯出輸入組件中所有服務合約的中繼資料。  
+### <a name="metadata-export"></a><span data-ttu-id="02f05-283">中繼資料匯出</span><span class="sxs-lookup"><span data-stu-id="02f05-283">Metadata Export</span></span>  
+ <span data-ttu-id="02f05-284">Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件中的資料型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-284">Svcutil.exe can export metadata for services, contracts and data types in compiled assemblies.</span></span> <span data-ttu-id="02f05-285">若要匯出服務的中繼資料，您必須使用 `/serviceName` 選項指定要匯出的服務。</span><span class="sxs-lookup"><span data-stu-id="02f05-285">To export metadata for a service, you must use the `/serviceName` option to specify the service you would like to export.</span></span> <span data-ttu-id="02f05-286">若要匯出組件內的所有資料合約類型，請使用 `/dataContractOnly` 選項。</span><span class="sxs-lookup"><span data-stu-id="02f05-286">To export all data contract types within an assembly, you should use the `/dataContractOnly` option.</span></span> <span data-ttu-id="02f05-287">根據預設，會匯出輸入組件中所有服務合約的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="02f05-287">By default, metadata is exported for all service contracts in the input assemblies.</span></span>  
   
  `svcutil.exe [/t:metadata] [/serviceName:<serviceConfigName>] [/dataContractOnly] <assemblyPath>*`  
   
-|引數|描述|  
-|--------|--------|  
-|`assemblyPath`|指定包含要匯出之服務、合約或資料合約類型的組件路徑。 標準命令列萬用字元可用於提供多個檔案做為輸入。|  
+|<span data-ttu-id="02f05-288">引數</span><span class="sxs-lookup"><span data-stu-id="02f05-288">Argument</span></span>|<span data-ttu-id="02f05-289">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-289">Description</span></span>|  
+|--------------|-----------------|  
+|`assemblyPath`|<span data-ttu-id="02f05-290">指定包含要匯出之服務、合約或資料合約類型的組件路徑。</span><span class="sxs-lookup"><span data-stu-id="02f05-290">Specifies the path to an assembly that contains services, contracts or data contract types to be exported.</span></span> <span data-ttu-id="02f05-291">標準命令列萬用字元可用於提供多個檔案做為輸入。</span><span class="sxs-lookup"><span data-stu-id="02f05-291">Standard command line wildcards can be used to provide multiple files as input.</span></span>|  
   
-|選項|描述|  
-|--------|--------|  
-|\/serviceName:\<serviceConfigName\>|指定要匯出的服務其組態名稱。 如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。 Svcutil.exe 會搜尋所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
-|\/reference:\<file path\>|將指定的組件新增至用於解析型別參考的組件集合中。 如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 \(Behavior、Binding 和 BindingElement\)，請使用這個選項找出不在 GAC 中的擴充功能組件。<br /><br /> 簡短形式：`/r`|  
-|\/dataContractOnly|只在資料合約類型上操作。 不處理服務合約。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|  
-|\/excludeType:\<type\>|指定要從匯出作業排除的型別其完整名稱或組件限定名稱。 在匯出服務中繼資料或是一組服務合約時，如果要從匯出作業排出某些型別，則可以使用這個選項。 這個選項無法與 `/dconly` 選項一起使用。<br /><br /> 當您有單一組件包含多個服務，且每個服務使用具有相同 XSD 名稱的不同類別時，在指定這個參數時應使用服務名稱而不是 XSD 類別名稱。<br /><br /> 不支援 XSD 或資料合約類型。<br /><br /> 簡短形式：`/et`|  
+|<span data-ttu-id="02f05-292">選項</span><span class="sxs-lookup"><span data-stu-id="02f05-292">Option</span></span>|<span data-ttu-id="02f05-293">說明</span><span class="sxs-lookup"><span data-stu-id="02f05-293">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="02f05-294">/serviceName:\<serviceConfigName ></span><span class="sxs-lookup"><span data-stu-id="02f05-294">/serviceName:\<serviceConfigName></span></span>|<span data-ttu-id="02f05-295">指定要匯出的服務其組態名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-295">Specifies the configuration name of a service to be exported.</span></span> <span data-ttu-id="02f05-296">如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。</span><span class="sxs-lookup"><span data-stu-id="02f05-296">If this option is used, an executable assembly with an associated configuration file must be passed as input.</span></span> <span data-ttu-id="02f05-297">Svcutil.exe 會搜尋所有相關聯組態檔中的服務組態。</span><span class="sxs-lookup"><span data-stu-id="02f05-297">Svcutil.exe searches all associated configuration files for the service configuration.</span></span> <span data-ttu-id="02f05-298">如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。</span><span class="sxs-lookup"><span data-stu-id="02f05-298">If the configuration files contain any extension types, the assemblies that contain these types must either be in the GAC or explicitly provided using the `/reference` option.</span></span>|  
+|<span data-ttu-id="02f05-299">/reference:\<檔案路徑 ></span><span class="sxs-lookup"><span data-stu-id="02f05-299">/reference:\<file path></span></span>|<span data-ttu-id="02f05-300">將指定的組件新增至用於解析型別參考的組件集合中。</span><span class="sxs-lookup"><span data-stu-id="02f05-300">Adds the specified assembly to the set of assemblies used for resolving type references.</span></span> <span data-ttu-id="02f05-301">如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 (Behavior、Binding 和 BindingElement)，請使用這個選項找出不在 GAC 中的擴充功能組件。</span><span class="sxs-lookup"><span data-stu-id="02f05-301">If you are exporting or validating a service that uses 3rd-party extensions (Behaviors, Bindings and BindingElements) registered in configuration, use this option to locate extension assemblies that are not in the GAC.</span></span><br /><br /> <span data-ttu-id="02f05-302">簡短形式：`/r`</span><span class="sxs-lookup"><span data-stu-id="02f05-302">Short Form: `/r`</span></span>|  
+|<span data-ttu-id="02f05-303">/dataContractOnly</span><span class="sxs-lookup"><span data-stu-id="02f05-303">/dataContractOnly</span></span>|<span data-ttu-id="02f05-304">只在資料合約類型上操作。</span><span class="sxs-lookup"><span data-stu-id="02f05-304">Operates on data contract types only.</span></span> <span data-ttu-id="02f05-305">不處理服務合約。</span><span class="sxs-lookup"><span data-stu-id="02f05-305">Service Contracts are not processed.</span></span><br /><br /> <span data-ttu-id="02f05-306">這個選項應該只能指定本機中繼資料檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-306">You should only specify local metadata files for this option.</span></span><br /><br /> <span data-ttu-id="02f05-307">簡短形式：`/dconly`</span><span class="sxs-lookup"><span data-stu-id="02f05-307">Short Form: `/dconly`</span></span>|  
+|<span data-ttu-id="02f05-308">/excludeType:\<類型 ></span><span class="sxs-lookup"><span data-stu-id="02f05-308">/excludeType:\<type></span></span>|<span data-ttu-id="02f05-309">指定要從匯出作業排除的型別其完整名稱或組件限定名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-309">Specifies the fully-qualified or assembly-qualified name of a type to be excluded from export.</span></span> <span data-ttu-id="02f05-310">在匯出服務中繼資料或是一組服務合約時，如果要從匯出作業排出某些型別，則可以使用這個選項。</span><span class="sxs-lookup"><span data-stu-id="02f05-310">This option can be used when exporting metadata for a service, or a set of service contracts to exclude types from being exported.</span></span> <span data-ttu-id="02f05-311">這個選項無法與 `/dconly` 選項一起使用。</span><span class="sxs-lookup"><span data-stu-id="02f05-311">This option cannot be used together with the `/dconly` option.</span></span><br /><br /> <span data-ttu-id="02f05-312">當您有單一組件包含多個服務，且每個服務使用具有相同 XSD 名稱的不同類別時，在指定這個參數時應使用服務名稱而不是 XSD 類別名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-312">When you have a single assembly containing multiple services, and each uses separate classes with the same XSD name, you should specify the service name instead of the XSD class name for this switch.</span></span><br /><br /> <span data-ttu-id="02f05-313">不支援 XSD 或資料合約類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-313">XSD or data contract types are not supported.</span></span><br /><br /> <span data-ttu-id="02f05-314">簡短形式：`/et`</span><span class="sxs-lookup"><span data-stu-id="02f05-314">Short Form: `/et`</span></span>|  
   
-### 服務驗證  
- 您可以使用驗證來偵測服務實作中的錯誤，而不需要裝載服務。 您必須使用 `/serviceName` 選項來指出您要驗證的服務。  
+### <a name="service-validation"></a><span data-ttu-id="02f05-315">服務驗證</span><span class="sxs-lookup"><span data-stu-id="02f05-315">Service Validation</span></span>  
+ <span data-ttu-id="02f05-316">您可以使用驗證來偵測服務實作中的錯誤，而不需要裝載服務。</span><span class="sxs-lookup"><span data-stu-id="02f05-316">Validation can be used to detect errors in service implementations without hosting the service.</span></span> <span data-ttu-id="02f05-317">您必須使用 `/serviceName` 選項來指出您要驗證的服務。</span><span class="sxs-lookup"><span data-stu-id="02f05-317">You must use the `/serviceName` option to indicate the service you want to validate.</span></span>  
   
  `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`  
   
-|引數|描述|  
-|--------|--------|  
-|`assemblyPath`|指定包含要驗證的服務類型之組件的路徑。 組件必須具有相關聯的組態檔，才能提供服務組態。 標準命令列萬用字元可用於提供多個組件。|  
+|<span data-ttu-id="02f05-318">引數</span><span class="sxs-lookup"><span data-stu-id="02f05-318">Argument</span></span>|<span data-ttu-id="02f05-319">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-319">Description</span></span>|  
+|--------------|-----------------|  
+|`assemblyPath`|<span data-ttu-id="02f05-320">指定包含要驗證的服務類型之組件的路徑。</span><span class="sxs-lookup"><span data-stu-id="02f05-320">Specifies the path to an assembly that contains service types to be validated.</span></span> <span data-ttu-id="02f05-321">組件必須具有相關聯的組態檔，才能提供服務組態。</span><span class="sxs-lookup"><span data-stu-id="02f05-321">The assembly must have an associated configuration file to provide service configuration.</span></span> <span data-ttu-id="02f05-322">標準命令列萬用字元可用於提供多個組件。</span><span class="sxs-lookup"><span data-stu-id="02f05-322">Standard command-line wildcards can be used to provide multiple assemblies.</span></span>|  
   
-|選項|描述|  
-|--------|--------|  
-|\/validate|驗證由 `/serviceName` 選項指定的服務實作。 如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。<br /><br /> 簡短形式：`/v`|  
-|\/serviceName:\<serviceConfigName\>|指定要驗證的服務其組態名稱。 Svcutil.exe 會搜尋所有輸入組件其所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
-|\/reference:\<file path\>|將指定的組件新增至用於解析型別參考的組件集合中。 如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 \(Behavior、Binding 和 BindingElement\)，請使用這個選項找出不在 GAC 中的擴充功能組件。<br /><br /> 簡短形式：`/r`|  
-|\/dataContractOnly|只在資料合約類型上操作。 不處理服務合約。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|  
-|\/excludeType:\<type\>|指定要從驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
+|<span data-ttu-id="02f05-323">選項</span><span class="sxs-lookup"><span data-stu-id="02f05-323">Option</span></span>|<span data-ttu-id="02f05-324">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-324">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="02f05-325">/validate</span><span class="sxs-lookup"><span data-stu-id="02f05-325">/validate</span></span>|<span data-ttu-id="02f05-326">驗證由 `/serviceName` 選項指定的服務實作。</span><span class="sxs-lookup"><span data-stu-id="02f05-326">Validates a service implementation specified by the `/serviceName` option.</span></span> <span data-ttu-id="02f05-327">如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。</span><span class="sxs-lookup"><span data-stu-id="02f05-327">If this option is used, an executable assembly with an associated configuration file must be passed as input.</span></span><br /><br /> <span data-ttu-id="02f05-328">簡短形式：`/v`</span><span class="sxs-lookup"><span data-stu-id="02f05-328">Short Form: `/v`</span></span>|  
+|<span data-ttu-id="02f05-329">/serviceName:\<serviceConfigName ></span><span class="sxs-lookup"><span data-stu-id="02f05-329">/serviceName:\<serviceConfigName></span></span>|<span data-ttu-id="02f05-330">指定要驗證的服務其組態名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-330">Specifies the configuration name of a service to be validated.</span></span> <span data-ttu-id="02f05-331">Svcutil.exe 會搜尋所有輸入組件其所有相關聯組態檔中的服務組態。</span><span class="sxs-lookup"><span data-stu-id="02f05-331">Svcutil.exe searches all associated configuration files of all input assemblies for the service configuration.</span></span> <span data-ttu-id="02f05-332">如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。</span><span class="sxs-lookup"><span data-stu-id="02f05-332">If the configuration files contain any extension types, the assemblies that contains these types must either be in the GAC or explicitly provided using the `/reference` option.</span></span>|  
+|<span data-ttu-id="02f05-333">/reference:\<檔案路徑 ></span><span class="sxs-lookup"><span data-stu-id="02f05-333">/reference:\<file path></span></span>|<span data-ttu-id="02f05-334">將指定的組件新增至用於解析型別參考的組件集合中。</span><span class="sxs-lookup"><span data-stu-id="02f05-334">Adds the specified assembly to the set of assemblies used for resolving type references.</span></span> <span data-ttu-id="02f05-335">如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 (Behavior、Binding 和 BindingElement)，請使用這個選項找出不在 GAC 中的擴充功能組件。</span><span class="sxs-lookup"><span data-stu-id="02f05-335">If you are exporting or validating a service that uses 3rd-party extensions (Behaviors, Bindings and BindingElements) registered in configuration, use this option to locate extension assemblies that are not in the GAC.</span></span><br /><br /> <span data-ttu-id="02f05-336">簡短形式：`/r`</span><span class="sxs-lookup"><span data-stu-id="02f05-336">Short Form: `/r`</span></span>|  
+|<span data-ttu-id="02f05-337">/dataContractOnly</span><span class="sxs-lookup"><span data-stu-id="02f05-337">/dataContractOnly</span></span>|<span data-ttu-id="02f05-338">只在資料合約類型上操作。</span><span class="sxs-lookup"><span data-stu-id="02f05-338">Operates on data contract types only.</span></span> <span data-ttu-id="02f05-339">不處理服務合約。</span><span class="sxs-lookup"><span data-stu-id="02f05-339">Service Contracts are not processed.</span></span><br /><br /> <span data-ttu-id="02f05-340">這個選項應該只能指定本機中繼資料檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-340">You should only specify local metadata files for this option.</span></span><br /><br /> <span data-ttu-id="02f05-341">簡短形式：`/dconly`</span><span class="sxs-lookup"><span data-stu-id="02f05-341">Short Form: `/dconly`</span></span>|  
+|<span data-ttu-id="02f05-342">/excludeType:\<類型 ></span><span class="sxs-lookup"><span data-stu-id="02f05-342">/excludeType:\<type></span></span>|<span data-ttu-id="02f05-343">指定要從驗證作業排除的型別其完整名稱或組件限定名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-343">Specifies the fully-qualified or assembly-qualified name of a type to be excluded from validation.</span></span><br /><br /> <span data-ttu-id="02f05-344">簡短形式：`/et`</span><span class="sxs-lookup"><span data-stu-id="02f05-344">Short Form: `/et`</span></span>|  
   
-### 中繼資料下載  
- Svcutil.exe 可用於從執行中服務下載中繼資料，並將中繼資料儲存至本機檔案中。 若要下載中繼資料，您必須指定 `/t:metadata` 選項。 否則，會產生用戶端程式碼。 對於 HTTP 和 HTTPS URL 結構描述，Svcutil.exe 會嘗試使用 WS\-Metadata Exchange 和 DISCO 擷取中繼資料。 對於所有其他的 URL 結構描述，Svcutil.exe 只使用 WS\-Metadata Exchange。  
+### <a name="metadata-download"></a><span data-ttu-id="02f05-345">中繼資料下載</span><span class="sxs-lookup"><span data-stu-id="02f05-345">Metadata Download</span></span>  
+ <span data-ttu-id="02f05-346">Svcutil.exe 可用於從執行中服務下載中繼資料，並將中繼資料儲存至本機檔案中。</span><span class="sxs-lookup"><span data-stu-id="02f05-346">Svcutil.exe can be used to download metadata from running services, and save the metadata to local files.</span></span> <span data-ttu-id="02f05-347">若要下載中繼資料，您必須指定 `/t:metadata` 選項。</span><span class="sxs-lookup"><span data-stu-id="02f05-347">To download metadata, you must specify the `/t:metadata` option.</span></span> <span data-ttu-id="02f05-348">否則，會產生用戶端程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-348">Otherwise, client code is generated.</span></span> <span data-ttu-id="02f05-349">對於 HTTP 和 HTTPS URL 結構描述，Svcutil.exe 會嘗試使用 WS-Metadata Exchange 和 DISCO 擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="02f05-349">For HTTP and HTTPS URL schemes, Svcutil.exe attempts to retrieve metadata using WS-Metadata Exchange and DISCO.</span></span> <span data-ttu-id="02f05-350">對於所有其他的 URL 結構描述，Svcutil.exe 只使用 WS-Metadata Exchange。</span><span class="sxs-lookup"><span data-stu-id="02f05-350">For all other URL schemes, Svcutil.exe only uses WS-Metadata Exchange.</span></span>  
   
- Svcutil 會同時發出以下中繼資料要求，以擷取中繼資料。  
+ <span data-ttu-id="02f05-351">Svcutil 會同時發出以下中繼資料要求，以擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="02f05-351">Svcutil issues the following metadata requests simultaneously to retrieve metadata.</span></span>  
   
--   對所提供位址的 MEX \(WS\-Transfer\) 要求  
+-   <span data-ttu-id="02f05-352">對所提供位址的 MEX (WS-Transfer) 要求</span><span class="sxs-lookup"><span data-stu-id="02f05-352">MEX (WS-Transfer) request to the supplied address</span></span>  
   
--   對附加 \/mex 之所提供位址的 MEX 要求  
+-   <span data-ttu-id="02f05-353">對附加 /mex 之所提供位址的 MEX 要求</span><span class="sxs-lookup"><span data-stu-id="02f05-353">MEX request to the supplied address with /mex appended</span></span>  
   
--   對所提供位址的 DISCO 要求 \(使用 ASMX 中的 DiscoveryClientProtocol\)。  
+-   <span data-ttu-id="02f05-354">對所提供位址的 DISCO 要求 (使用 ASMX 中的 DiscoveryClientProtocol)。</span><span class="sxs-lookup"><span data-stu-id="02f05-354">DISCO request (using the DiscoveryClientProtocol from ASMX) to the supplied address.</span></span>  
   
- 根據預設，Svcutil.exe 會使用在 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別中定義的繫結進行 MEX 要求。 若要設定用於 WS\-Metadata Exchange 的繫結，您必須在使用 IMetadataExchange 合約的組態中定義用戶端端點。 這可在 Svcutil.exe 的組態檔中定義，或在使用 `/svcutilConfig` 選項所指定的另一個組態檔中定義。  
+ <span data-ttu-id="02f05-355">根據預設，Svcutil.exe 會使用在 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別中定義的繫結進行 MEX 要求。</span><span class="sxs-lookup"><span data-stu-id="02f05-355">By default, Svcutil.exe uses the bindings defined in the <xref:System.ServiceModel.Description.MetadataExchangeBindings> class to make MEX requests.</span></span> <span data-ttu-id="02f05-356">若要設定用於 WS-Metadata Exchange 的繫結，您必須在使用 IMetadataExchange 合約的組態中定義用戶端端點。</span><span class="sxs-lookup"><span data-stu-id="02f05-356">To configure the binding used for WS-Metadata Exchange, you must define a client endpoint in configuration that uses the IMetadataExchange contract.</span></span> <span data-ttu-id="02f05-357">這可在 Svcutil.exe 的組態檔中定義，或在使用 `/svcutilConfig` 選項所指定的另一個組態檔中定義。</span><span class="sxs-lookup"><span data-stu-id="02f05-357">This can be defined either in the configuration file of Svcutil.exe, or in another configuration file specified using the `/svcutilConfig` option.</span></span>  
   
  `svcutil.exe /t:metadata  <url>* | <epr>`  
   
-|引數|描述|  
-|--------|--------|  
-|`url`|提供中繼資料之服務端點的 URL，或裝載於線上之中繼資料文件的 URL。|  
-|`epr`|XML 檔案的路徑，其中包含支援 WS\-Metadata Exchange 之服務端點的 WS\-Addressing EndpointReference。|  
+|<span data-ttu-id="02f05-358">引數</span><span class="sxs-lookup"><span data-stu-id="02f05-358">Argument</span></span>|<span data-ttu-id="02f05-359">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-359">Description</span></span>|  
+|--------------|-----------------|  
+|`url`|<span data-ttu-id="02f05-360">提供中繼資料之服務端點的 URL，或裝載於線上之中繼資料文件的 URL。</span><span class="sxs-lookup"><span data-stu-id="02f05-360">The URL to a service endpoint that provides metadata or to a metadata document hosted online.</span></span>|  
+|`epr`|<span data-ttu-id="02f05-361">XML 檔案的路徑，其中包含支援 WS-Metadata Exchange 之服務端點的 WS-Addressing EndpointReference。</span><span class="sxs-lookup"><span data-stu-id="02f05-361">The path to an XML file that contains a WS-Addressing EndpointReference for a service endpoint that supports WS-Metadata Exchange.</span></span>|  
   
-### XmlSerializer 型別產生  
- 使用資料型別 \(可使用 <xref:System.Xml.Serialization.XmlSerializer> 加以序列化\) 的服務和用戶端應用程式會在執行階段針對這些資料型別產生和編譯序列化程式碼，這可能會導致啟動的效能變慢。  
-  
-> [!NOTE]
->  預先產生的序列化程式碼只能用於用戶端應用程式中，而不能用於服務中。  
-  
- Svcutil.exe 可從應用程式的已編譯組件產生必要的 C\# 序列化程式碼，因此可改善這些應用程式的啟動效能。 如需詳細資訊，請參閱[HOW TO：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。  
+### <a name="xmlserializer-type-generation"></a><span data-ttu-id="02f05-362">XmlSerializer 型別產生</span><span class="sxs-lookup"><span data-stu-id="02f05-362">XmlSerializer Type Generation</span></span>  
+ <span data-ttu-id="02f05-363">使用資料型別 (可使用 <xref:System.Xml.Serialization.XmlSerializer> 加以序列化) 的服務和用戶端應用程式會在執行階段針對這些資料型別產生和編譯序列化程式碼，這可能會導致啟動的效能變慢。</span><span class="sxs-lookup"><span data-stu-id="02f05-363">Services and client applications that use data types that are serializable using the <xref:System.Xml.Serialization.XmlSerializer> generate and compile serialization code for those data types at runtime, which can result in slow start-up performance.</span></span>  
   
 > [!NOTE]
->  Svcutil.exe 只會針對輸入組件中的服務合約所使用的型別產生程式碼。  
+>  <span data-ttu-id="02f05-364">預先產生的序列化程式碼只能用於用戶端應用程式中，而不能用於服務中。</span><span class="sxs-lookup"><span data-stu-id="02f05-364">Pre-generated serialization code can only be used in client applications and not in services.</span></span>  
+  
+ <span data-ttu-id="02f05-365">Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程式碼，因此可改善這些應用程式的啟動效能。</span><span class="sxs-lookup"><span data-stu-id="02f05-365">Svcutil.exe can generate the necessary C# serialization code from the compiled assemblies for the application, thus improving start-up performance for these applications.</span></span> <span data-ttu-id="02f05-366">如需詳細資訊，請參閱[How to： 改善啟動時間的 WCF 用戶端應用程式使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。</span><span class="sxs-lookup"><span data-stu-id="02f05-366">For more information, see [How to: Improve the Startup Time of WCF Client Applications using the XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="02f05-367">Svcutil.exe 只會針對輸入組件中的服務合約所使用的型別產生程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-367">Svcutil.exe only generates code for types used by Service Contracts found in the input assemblies.</span></span>  
   
  `svcutil.exe /t:xmlSerializer  <assemblyPath>*`  
   
-|引數|描述|  
-|--------|--------|  
-|`assemblyPath`|指定包含服務合約類型之組件的路徑。 會針對每個合約中的所有 Xml 可序列化型別產生序列化型別。|  
+|<span data-ttu-id="02f05-368">引數</span><span class="sxs-lookup"><span data-stu-id="02f05-368">Argument</span></span>|<span data-ttu-id="02f05-369">描述</span><span class="sxs-lookup"><span data-stu-id="02f05-369">Description</span></span>|  
+|--------------|-----------------|  
+|`assemblyPath`|<span data-ttu-id="02f05-370">指定包含服務合約類型之組件的路徑。</span><span class="sxs-lookup"><span data-stu-id="02f05-370">Specifies the path to an assembly that contains service contract types.</span></span> <span data-ttu-id="02f05-371">會針對每個合約中的所有 Xml 可序列化型別產生序列化型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-371">Serialization types are generated for all Xml Serializable types in each contract.</span></span>|  
   
-|選項|描述|  
-|--------|--------|  
-|\/reference:\<file path\>|將指定的組件新增至用於解析型別參考的組件集合中。<br /><br /> 簡短形式：`/r`|  
-|\/excludeType:\<type\>|指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
-|\/out:\<file\>|指定產生之程式碼的檔案名稱。 將多個組件做為工具的輸入傳遞時，會忽略這個選項。<br /><br /> 預設：衍生自組件名稱。<br /><br /> 簡短形式：`/o`|  
-|\/UseSerializerForFaults|指定應使用 <xref:System.Xml.XmlSerializer> 來讀取和寫入錯誤，而非使用預設 <xref:System.Runtime.Serialization.DataContractSerializer>。|  
+|<span data-ttu-id="02f05-372">選項</span><span class="sxs-lookup"><span data-stu-id="02f05-372">Option</span></span>|<span data-ttu-id="02f05-373">說明</span><span class="sxs-lookup"><span data-stu-id="02f05-373">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="02f05-374">/reference:\<檔案路徑 ></span><span class="sxs-lookup"><span data-stu-id="02f05-374">/reference:\<file path></span></span>|<span data-ttu-id="02f05-375">將指定的組件新增至用於解析型別參考的組件集合中。</span><span class="sxs-lookup"><span data-stu-id="02f05-375">Adds the specified assembly to the set of assemblies used for resolving type references.</span></span><br /><br /> <span data-ttu-id="02f05-376">簡短形式：`/r`</span><span class="sxs-lookup"><span data-stu-id="02f05-376">Short Form: `/r`</span></span>|  
+|<span data-ttu-id="02f05-377">/excludeType:\<類型 ></span><span class="sxs-lookup"><span data-stu-id="02f05-377">/excludeType:\<type></span></span>|<span data-ttu-id="02f05-378">指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-378">Specifies the fully-qualified or assembly-qualified name of a type to be excluded from export or validation.</span></span><br /><br /> <span data-ttu-id="02f05-379">簡短形式：`/et`</span><span class="sxs-lookup"><span data-stu-id="02f05-379">Short Form: `/et`</span></span>|  
+|<span data-ttu-id="02f05-380">/out:\<檔案 ></span><span class="sxs-lookup"><span data-stu-id="02f05-380">/out:\<file></span></span>|<span data-ttu-id="02f05-381">指定產生之程式碼的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-381">Specifies the filename for the generated code.</span></span> <span data-ttu-id="02f05-382">將多個組件做為工具的輸入傳遞時，會忽略這個選項。</span><span class="sxs-lookup"><span data-stu-id="02f05-382">This option is ignored when multiple assemblies are passed as input to the tool.</span></span><br /><br /> <span data-ttu-id="02f05-383">預設：衍生自組件名稱。</span><span class="sxs-lookup"><span data-stu-id="02f05-383">Default: Derived from the assembly name.</span></span><br /><br /> <span data-ttu-id="02f05-384">簡短形式：`/o`</span><span class="sxs-lookup"><span data-stu-id="02f05-384">Short Form: `/o`</span></span>|  
+|<span data-ttu-id="02f05-385">/UseSerializerForFaults</span><span class="sxs-lookup"><span data-stu-id="02f05-385">/UseSerializerForFaults</span></span>|<span data-ttu-id="02f05-386">指定<!--zz <xref:System.Xml.XmlSerializer> -->`xref:System.Xml.XmlSerializer `應該用於讀取和寫入錯誤，而不使用預設<xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="02f05-386">Specifies that the <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` should be used for reading and writing faults, instead of the default <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## 範例  
- 下列命令會從執行中服務或線上中繼資料文件產生用戶端程式碼。  
+## <a name="examples"></a><span data-ttu-id="02f05-387">範例</span><span class="sxs-lookup"><span data-stu-id="02f05-387">Examples</span></span>  
+ <span data-ttu-id="02f05-388">下列命令會從執行中服務或線上中繼資料文件產生用戶端程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-388">The following command generates client code from a running service or online metadata documents.</span></span>  
   
  `svcutil http://service/metadataEndpoint`  
   
- 下列命令會從本機中繼資料文件產生用戶端程式碼。  
+ <span data-ttu-id="02f05-389">下列命令會從本機中繼資料文件產生用戶端程式碼。</span><span class="sxs-lookup"><span data-stu-id="02f05-389">The following command generates client code from local metadata documents.</span></span>  
   
  `svcutil *.wsdl *.xsd /language:C#`  
   
- 下列命令會使用 Visual Basic 從本機結構描述文件產生用戶端合約類型。  
+ <span data-ttu-id="02f05-390">下列命令會使用 Visual Basic 從本機結構描述文件產生用戶端合約類型。</span><span class="sxs-lookup"><span data-stu-id="02f05-390">The following command generates data contract types in Visual Basic from local schema documents.</span></span>  
   
  `svcutil /dconly *.xsd /language:VB`  
   
- 下列命令會從執行中服務下載中繼資料文件。  
+ <span data-ttu-id="02f05-391">下列命令會從執行中服務下載中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-391">The following command downloads metadata documents from running services.</span></span>  
   
  `svcutil /t:metadata http://service/metadataEndpoint`  
   
- 下列命令會在組件中產生服務合約和相關類型的中繼資料文件。  
+ <span data-ttu-id="02f05-392">下列命令會在組件中產生服務合約和相關類型的中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-392">The following command generates metadata documents for service contracts and associated types in an assembly.</span></span>  
   
  `svcutil myAssembly.dll`  
   
- 下列命令會在組件中產生服務、所有相關服務合約和資料型別的中繼資料文件。  
+ <span data-ttu-id="02f05-393">下列命令會在組件中產生服務、所有相關服務合約和資料型別的中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-393">The following command generates metadata documents for a service, and all associated service contracts and data types in an assembly.</span></span>  
   
  `svcutil myServiceHost.exe /serviceName:myServiceName`  
   
- 下列命令會在組件中產生資料型別的中繼資料文件。  
+ <span data-ttu-id="02f05-394">下列命令會在組件中產生資料型別的中繼資料文件。</span><span class="sxs-lookup"><span data-stu-id="02f05-394">The following command generates metadata documents for data types in an assembly.</span></span>  
   
  `svcutil myServiceHost.exe /dconly`  
   
- 下列命令會驗證服務裝載。  
+ <span data-ttu-id="02f05-395">下列命令會驗證服務裝載。</span><span class="sxs-lookup"><span data-stu-id="02f05-395">The following command verifies service hosting.</span></span>  
   
  `svcutil /validate /serviceName:myServiceName myServiceHost.exe`  
   
- 下列命令會針對組件中任何服務合約所使用的 <xref:System.Xml.Serialization.XmlSerializer> 型別，產生序列化型別。  
+ <span data-ttu-id="02f05-396">下列命令會針對組件中任何服務合約所使用的 <xref:System.Xml.Serialization.XmlSerializer> 型別，產生序列化型別。</span><span class="sxs-lookup"><span data-stu-id="02f05-396">The following command generates serialization types for <xref:System.Xml.Serialization.XmlSerializer> types used by any service contracts in the assembly.</span></span>  
   
  `svcutil /t:xmlserializer myContractLibrary.exe`  
   
-## 最大名稱表格字元計數配額  
- 使用 svcutil 產生服務中繼資料時，可能會出現下列訊息：  
+## <a name="maximum-nametable-character-count-quota"></a><span data-ttu-id="02f05-397">最大名稱表格字元計數配額</span><span class="sxs-lookup"><span data-stu-id="02f05-397">Maximum Nametable Character Count Quota</span></span>  
+ <span data-ttu-id="02f05-398">使用 svcutil 產生服務中繼資料時，可能會出現下列訊息：</span><span class="sxs-lookup"><span data-stu-id="02f05-398">When using svcutil to generate metadata for a service, you may get the following message:</span></span>  
   
- 錯誤：無法取得來自 http:\/\/localhost:8000\/somesservice\/mex 的中繼資料 讀取 XML 資料時已超過名稱表格字元計數配額 \(16384\) 上限。 名稱表格是一種資料結構，用來儲存在 XML 處理過程中所遇到的字串 \- 具有不重複的項目名稱、屬性名稱及屬性值的冗長 XML 文件可能會觸發此配額限制。 在建立 XML 讀取器時變更 XmlDictionaryReaderQuotas 物件上使用的 MaxNameTableCharCount 屬性，便可以增加此配額。  
+ <span data-ttu-id="02f05-399">錯誤：無法取得來自 http://localhost:8000/somesservice/mex 的中繼資料 讀取 XML 資料時已超過名稱表格字元計數配額 (16384) 上限。</span><span class="sxs-lookup"><span data-stu-id="02f05-399">Error: Cannot obtain Metadata from http://localhost:8000/somesservice/mex The maximum nametable character count quota (16384) has been exceeded while reading XML data.</span></span> <span data-ttu-id="02f05-400">名稱表格是一種資料結構，用來儲存在 XML 處理過程中所遇到的字串 - 具有不重複的項目名稱、屬性名稱及屬性值的冗長 XML 文件可能會觸發此配額限制。</span><span class="sxs-lookup"><span data-stu-id="02f05-400">The nametable is a data structure used to store strings encountered during XML processing - long XML documents with non-repeating element names, attribute names and attribute values may trigger this quota.</span></span> <span data-ttu-id="02f05-401">在建立 XML 讀取器時變更 XmlDictionaryReaderQuotas 物件上使用的 MaxNameTableCharCount 屬性，便可以增加此配額。</span><span class="sxs-lookup"><span data-stu-id="02f05-401">This quota may be increased by changing the MaxNameTableCharCount property on the XmlDictionaryReaderQuotas object used when creating the XML reader.</span></span>  
   
- 這個錯誤可能是當您要求服務的中繼資料時，傳回大型 WSDL 檔案的服務所導致。 這時候的問題是已超過 svcutil.exe 工具的字元配額。 設定此值是為了防止阻斷服務 \(DOS\) 攻擊。 可對 svcutil 指定下列組態檔，增加此配額。  
+ <span data-ttu-id="02f05-402">這個錯誤可能是當您要求服務的中繼資料時，傳回大型 WSDL 檔案的服務所導致。</span><span class="sxs-lookup"><span data-stu-id="02f05-402">This error can be caused by a service that returns a large WSDL file when you request its metadata.</span></span> <span data-ttu-id="02f05-403">這時候的問題是已超過 svcutil.exe 工具的字元配額。</span><span class="sxs-lookup"><span data-stu-id="02f05-403">The problem is that the character quota for the svcutil.exe tool is exceeded.</span></span> <span data-ttu-id="02f05-404">設定此值是為了防止阻斷服務 (DOS) 攻擊。</span><span class="sxs-lookup"><span data-stu-id="02f05-404">This value is set to help prevent denial of service (dos) attacks.</span></span> <span data-ttu-id="02f05-405">可對 svcutil 指定下列組態檔，增加此配額。</span><span class="sxs-lookup"><span data-stu-id="02f05-405">You can increase this quota by specifying the following config file for svcutil.</span></span>  
   
- 下列組態檔顯示如何設定 svcutil 的讀取器配額。  
+ <span data-ttu-id="02f05-406">下列組態檔顯示如何設定 svcutil 的讀取器配額。</span><span class="sxs-lookup"><span data-stu-id="02f05-406">The following config file shows how to set the reader quotas for svcutil</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
     <system.serviceModel>  
@@ -259,16 +262,16 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 </configuration>  
 ```  
   
- 建立名為 svcutil.exe.config 的新檔案，並將 XML 範例程式碼複製到此檔案。 然後將檔案放置在和 svcutil.exe 相同的目錄中。 下次 svcutil.exe 執行時便會啟用新設定。  
+ <span data-ttu-id="02f05-407">建立名為 svcutil.exe.config 的新檔案，並將 XML 範例程式碼複製到此檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-407">Create a new file called svcutil.exe.config and copy the XML example code into it.</span></span> <span data-ttu-id="02f05-408">然後將檔案放置在和 svcutil.exe 相同的目錄中。</span><span class="sxs-lookup"><span data-stu-id="02f05-408">Then place the file in the same directory as svcutil.exe.</span></span> <span data-ttu-id="02f05-409">下次 svcutil.exe 執行時便會啟用新設定。</span><span class="sxs-lookup"><span data-stu-id="02f05-409">The next time svcutil.exe is run it will pick up the new settings.</span></span>  
   
-## 安全性考量  
- 您應該使用適當的存取控制清單 \(ACL\) 來保護 Svcutil.exe 的安裝資料夾、Svcutil.config 和 `/svcutilConfig` 指向的檔案。 這可以防止註冊和執行惡意的延伸。  
+## <a name="security-concerns"></a><span data-ttu-id="02f05-410">安全性考量</span><span class="sxs-lookup"><span data-stu-id="02f05-410">Security Concerns</span></span>  
+ <span data-ttu-id="02f05-411">您應該使用適當的存取控制清單 (ACL) 來保護 Svcutil.exe 的安裝資料夾、Svcutil.config 和 `/svcutilConfig` 指向的檔案。</span><span class="sxs-lookup"><span data-stu-id="02f05-411">You should use the appropriate Access Control List (ACL) to protect Svcutil.exe's installation folder, Svcutil.config, and files being pointed to by `/svcutilConfig`.</span></span> <span data-ttu-id="02f05-412">這可以防止註冊和執行惡意的延伸。</span><span class="sxs-lookup"><span data-stu-id="02f05-412">This can prevent malicious extensions from being registered and run.</span></span>  
   
- 此外，為了將安全性遭受危害的機會降到最小，您不應該將未受信任的延伸新增為系統的一部分，或使用具有 Svcutil.exe 的未受信任程式碼提供者。  
+ <span data-ttu-id="02f05-413">此外，為了將安全性遭受危害的機會降到最小，您不應該將未受信任的延伸新增為系統的一部分，或使用具有 Svcutil.exe 的未受信任程式碼提供者。</span><span class="sxs-lookup"><span data-stu-id="02f05-413">In addition, to minimize the chance that security be compromised, you should not add untrusted extensions to be part of the system, or use untrusted code providers with Svcutil.exe.</span></span>  
   
- 最後，您不應該在應用程式的中介層 \(Middle Tier\) 使用這個工具，因為它可能會對目前處理序造成阻絕服務攻擊。  
+ <span data-ttu-id="02f05-414">最後，您不應該在應用程式的中介層 (Middle Tier) 使用這個工具，因為它可能會對目前處理序造成阻絕服務攻擊。</span><span class="sxs-lookup"><span data-stu-id="02f05-414">Finally, you should not use the tool in the middle-tier of your application, as it may cause denial-of-service to the current process.</span></span>  
   
-## 請參閱  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- [HOW TO：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+## <a name="see-also"></a><span data-ttu-id="02f05-415">另請參閱</span><span class="sxs-lookup"><span data-stu-id="02f05-415">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ [<span data-ttu-id="02f05-416">如何：建立用戶端</span><span class="sxs-lookup"><span data-stu-id="02f05-416">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

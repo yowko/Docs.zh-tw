@@ -1,59 +1,65 @@
 ---
-title: "SAML 權杖與宣告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "聯合"
-  - "發行的權杖"
-  - "SAML 權杖"
-  - "WCF, 聯合"
+title: "SAML 權杖與宣告"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation
+- issued tokens
+- SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 093b2e8c3a6bad476bc294db733de3e706c38af7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# SAML 權杖與宣告
-安全性判斷提示標記語言 \(SAML\)「*權杖*」\(token\) 為宣告的 XML 表示。根據預設，聯合安全性案例使用的 SAML 權杖 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 為「*發行權杖*」\(issued token\)。  
+# <a name="saml-tokens-and-claims"></a><span data-ttu-id="f4b01-102">SAML 權杖與宣告</span><span class="sxs-lookup"><span data-stu-id="f4b01-102">SAML Tokens and Claims</span></span>
+<span data-ttu-id="f4b01-103">安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。</span><span class="sxs-lookup"><span data-stu-id="f4b01-103">Security Assertions Markup Language (SAML) *tokens* are XML representations of claims.</span></span> <span data-ttu-id="f4b01-104">根據預設，SAML 權杖[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]聯合的安全性案例中的用法是*發行的權杖*。</span><span class="sxs-lookup"><span data-stu-id="f4b01-104">By default, SAML tokens [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uses in federated security scenarios are *issued tokens*.</span></span>  
   
- SAML 權杖包含一實體對另一實體所做出之宣告集合的陳述式。例如，在聯合安全性案例中，陳述式是由系統中關於使用者的安全性權杖服務所表示。安全性權杖服務會簽署 SAML 權杖，以表示權杖中所含陳述式的真實性。除此之外，SAML 權杖會與 SAML 權杖使用者證實知悉的密碼編譯金鑰內容產生關聯。這項證明能滿足信賴憑證者，證實該 SAML 權杖確實簽發至該使用者。例如，在典型的案例中：  
+ <span data-ttu-id="f4b01-105">SAML 權杖包含一實體對另一實體所做出之宣告集合的陳述式。</span><span class="sxs-lookup"><span data-stu-id="f4b01-105">SAML tokens carry statements that are sets of claims made by one entity about another entity.</span></span> <span data-ttu-id="f4b01-106">例如，在聯合安全性案例中，陳述式是由系統中關於使用者的安全性權杖服務所表示。</span><span class="sxs-lookup"><span data-stu-id="f4b01-106">For example, in federated security scenarios, the statements are made by a security token service about a user in the system.</span></span> <span data-ttu-id="f4b01-107">安全性權杖服務會簽署 SAML 權杖，以表示權杖中所含陳述式的真實性。</span><span class="sxs-lookup"><span data-stu-id="f4b01-107">The security token service signs the SAML token to indicate the veracity of the statements contained in the token.</span></span> <span data-ttu-id="f4b01-108">除此之外，SAML 權杖會與 SAML 權杖使用者證實知悉的密碼編譯金鑰內容產生關聯。</span><span class="sxs-lookup"><span data-stu-id="f4b01-108">In addition, the SAML token is associated with cryptographic key material that the user of the SAML token proves knowledge of.</span></span> <span data-ttu-id="f4b01-109">這項證明能滿足信賴憑證者，證實該 SAML 權杖確實簽發至該使用者。</span><span class="sxs-lookup"><span data-stu-id="f4b01-109">This proof satisfies the relying party that the SAML token was, in fact, issued to that user.</span></span> <span data-ttu-id="f4b01-110">例如，在典型的案例中：</span><span class="sxs-lookup"><span data-stu-id="f4b01-110">For example, in a typical scenario:</span></span>  
   
-1.  用戶端向安全性權杖服務要求 SAML 權杖，藉由使用 Windows 認證，驗證至該安全性權杖服務。  
+1.  <span data-ttu-id="f4b01-111">用戶端向安全性權杖服務要求 SAML 權杖，藉由使用 Windows 認證，驗證至該安全性權杖服務。</span><span class="sxs-lookup"><span data-stu-id="f4b01-111">A client requests a SAML token from a security token service, authenticating to that security token service by using Windows credentials.</span></span>  
   
-2.  安全性權杖服務簽發 SAML 權杖至用戶端。SAML 權杖是以與安全性權杖服務相關的憑證進行簽署，並且包含針對目標服務加密的證明金鑰。  
+2.  <span data-ttu-id="f4b01-112">安全性權杖服務簽發 SAML 權杖至用戶端。</span><span class="sxs-lookup"><span data-stu-id="f4b01-112">The security token service issues a SAML token to the client.</span></span> <span data-ttu-id="f4b01-113">SAML 權杖是以與安全性權杖服務相關的憑證進行簽署，並且包含針對目標服務加密的證明金鑰。</span><span class="sxs-lookup"><span data-stu-id="f4b01-113">The SAML token is signed with a certificate associated with the security token service and contains a proof key encrypted for the target service.</span></span>  
   
-3.  用戶端也會收到一份「*證明金鑰*」\(proof key\)。然後，用戶端會對應用程式服務 \(「*信賴憑證者*」\(relying party\) \) 提出 SAML 權杖，並以該證明金鑰簽署訊息。  
+3.  <span data-ttu-id="f4b01-114">用戶端也會收到一份*證明金鑰*。</span><span class="sxs-lookup"><span data-stu-id="f4b01-114">The client also receives a copy of the *proof key*.</span></span> <span data-ttu-id="f4b01-115">用戶端，然後呈現為應用程式服務的 SAML 權杖 (*信賴憑證者的合作對象*)，並以該證明金鑰簽署訊息。</span><span class="sxs-lookup"><span data-stu-id="f4b01-115">The client then presents the SAML token to the application service (the *relying party*) and signs the message with that proof key.</span></span>  
   
-4.  SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。  
+4.  <span data-ttu-id="f4b01-116">SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。</span><span class="sxs-lookup"><span data-stu-id="f4b01-116">The signature over the SAML token tells the relying party that the security token service issued the token.</span></span> <span data-ttu-id="f4b01-117">使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。</span><span class="sxs-lookup"><span data-stu-id="f4b01-117">The message signature created with the proof key tells the relying party that the token was issued to the client.</span></span>  
   
-## 從宣告到 SamlAttributes  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，SAML 權杖中的陳述式會以 <xref:System.IdentityModel.Tokens.SamlAttribute> 物件做為模型，可從 <xref:System.IdentityModel.Claims.Claim> 物件直接填入，前提是 <xref:System.IdentityModel.Claims.Claim> 物件擁有 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 屬性，且 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 屬性為 <xref:System.String> 型別。例如：  
+## <a name="from-claims-to-samlattributes"></a><span data-ttu-id="f4b01-118">從宣告到 SamlAttributes</span><span class="sxs-lookup"><span data-stu-id="f4b01-118">From Claims to SamlAttributes</span></span>  
+ <span data-ttu-id="f4b01-119">在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.IdentityModel.Tokens.SamlAttribute>中，SAML 權杖中的陳述式會以 <xref:System.IdentityModel.Claims.Claim> 物件做為模型，可從 <xref:System.IdentityModel.Claims.Claim> 物件直接填入，前提是 <xref:System.IdentityModel.Claims.Claim.Right%2A> 物件擁有 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A><xref:System.IdentityModel.Claims.Claim.Resource%2A>的 <xref:System.String> 屬性，且  屬性為 型別。</span><span class="sxs-lookup"><span data-stu-id="f4b01-119">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], statements in SAML tokens are modeled as <xref:System.IdentityModel.Tokens.SamlAttribute> objects, which can be populated directly from <xref:System.IdentityModel.Claims.Claim> objects, provided the <xref:System.IdentityModel.Claims.Claim> object has a <xref:System.IdentityModel.Claims.Claim.Right%2A> property of <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> and the <xref:System.IdentityModel.Claims.Claim.Resource%2A> property is of type <xref:System.String>.</span></span> <span data-ttu-id="f4b01-120">例如: </span><span class="sxs-lookup"><span data-stu-id="f4b01-120">For example:</span></span>  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  當 SAML 權杖在訊息中序列化，不論是當這些權杖是安全性權杖服務所核發，或是當這些權杖由用戶端視為驗證的一部分提供至服務，訊息大小配額上限必須大到足以容納 SAML 權杖及其他訊息部分。正常情況下，預設訊息大小配額應足夠。然而，若 SAML 權杖因為包含數百個宣告而變很大時，您可能需要增加配額以容納序列化的權杖。[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+>  <span data-ttu-id="f4b01-121">當 SAML 權杖在訊息中序列化，不論是當這些權杖是安全性權杖服務所核發，或是當這些權杖由用戶端視為驗證的一部分提供至服務，訊息大小配額上限必須大到足以容納 SAML 權杖及其他訊息部分。</span><span class="sxs-lookup"><span data-stu-id="f4b01-121">When SAML tokens are serialized in messages, either when they are issued by a security token service or when they are presented by clients to services as part of authentication, the maximum message size quota must be sufficiently large to accommodate the SAML token and the other message parts.</span></span> <span data-ttu-id="f4b01-122">正常情況下，預設訊息大小配額應足夠。</span><span class="sxs-lookup"><span data-stu-id="f4b01-122">In normal cases, the default message size quotas are sufficient.</span></span> <span data-ttu-id="f4b01-123">然而，若 SAML 權杖因為包含數百個宣告而變很大時，您可能需要增加配額以容納序列化的權杖。</span><span class="sxs-lookup"><span data-stu-id="f4b01-123">However, in cases where a SAML token is large because it contains hundreds of claims, you may need to increase the quotas to accommodate the serialized token.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="f4b01-124">[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。</span><span class="sxs-lookup"><span data-stu-id="f4b01-124"> [Security Considerations for Data](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).</span></span>  
   
-## 從 SamlAttributes 到宣告  
- 當 SAML 權杖在訊息內接收時，SAML 權杖內的各種陳述式會轉變成 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 物件，置於 <xref:System.IdentityModel.Policy.AuthorizationContext> 之內。來自每個 SAML 陳述式的宣告均由 <xref:System.IdentityModel.Policy.AuthorizationContext> 的 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 屬性傳回，並且可進行檢查以決定是否驗證並授權使用者。  
+## <a name="from-samlattributes-to-claims"></a><span data-ttu-id="f4b01-125">從 SamlAttributes 到宣告</span><span class="sxs-lookup"><span data-stu-id="f4b01-125">From SamlAttributes to Claims</span></span>  
+ <span data-ttu-id="f4b01-126">當 SAML 權杖在訊息內接收時，SAML 權杖內的各種陳述式會轉變成 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 物件，置於 <xref:System.IdentityModel.Policy.AuthorizationContext>之內。</span><span class="sxs-lookup"><span data-stu-id="f4b01-126">When SAML tokens are received in messages, the various statements in the SAML token are turned into <xref:System.IdentityModel.Policy.IAuthorizationPolicy> objects that are placed into the <xref:System.IdentityModel.Policy.AuthorizationContext>.</span></span> <span data-ttu-id="f4b01-127">來自每個 SAML 陳述式的宣告均由 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 屬性傳回，並且可進行檢查以決定是否驗證並授權使用者。</span><span class="sxs-lookup"><span data-stu-id="f4b01-127">The claims from each SAML statement are returned by the <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> property of the <xref:System.IdentityModel.Policy.AuthorizationContext> and can be examined to determine whether to authenticate and authorize the user.</span></span>  
   
-## 請參閱  
- <xref:System.IdentityModel.Policy.AuthorizationContext>   
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>   
- <xref:System.IdentityModel.Claims.ClaimSet>   
- [聯合](../../../../docs/framework/wcf/feature-details/federation.md)   
- [HOW TO：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [HOW TO：設定聯合服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)   
- [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)   
- [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)   
- [HOW TO：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a><span data-ttu-id="f4b01-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f4b01-128">See Also</span></span>  
+ <xref:System.IdentityModel.Policy.AuthorizationContext>  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
+ <xref:System.IdentityModel.Claims.ClaimSet>  
+ [<span data-ttu-id="f4b01-129">同盟</span><span class="sxs-lookup"><span data-stu-id="f4b01-129">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [<span data-ttu-id="f4b01-130">如何： 建立聯合用戶端</span><span class="sxs-lookup"><span data-stu-id="f4b01-130">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="f4b01-131">如何： 設定聯合服務認證</span><span class="sxs-lookup"><span data-stu-id="f4b01-131">How to: Configure Credentials on a Federation Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [<span data-ttu-id="f4b01-132">管理宣告和授權與身分識別模型</span><span class="sxs-lookup"><span data-stu-id="f4b01-132">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [<span data-ttu-id="f4b01-133">宣告與權杖</span><span class="sxs-lookup"><span data-stu-id="f4b01-133">Claims and Tokens</span></span>](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [<span data-ttu-id="f4b01-134">宣告建立與資源值</span><span class="sxs-lookup"><span data-stu-id="f4b01-134">Claim Creation and Resource Values</span></span>](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
+ [<span data-ttu-id="f4b01-135">如何： 建立自訂宣告</span><span class="sxs-lookup"><span data-stu-id="f4b01-135">How to: Create a Custom Claim</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

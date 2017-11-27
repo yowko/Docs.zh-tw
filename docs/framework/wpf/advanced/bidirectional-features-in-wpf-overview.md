@@ -1,288 +1,289 @@
 ---
-title: "WPF 中的雙向功能概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "雙向功能"
-  - "FlowDirection 屬性"
-  - "FlowDocument 屬性"
-  - "Span 項目"
+title: "WPF 中的雙向功能概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Span elements [WPF]
+- bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 716774efdf62356c2e3253c588dabb51de74470c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# WPF 中的雙向功能概觀
-和其他開發平台不同，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具有許多功能可支援快速開發雙向 \(Bidirectional\) 內容，例如，在同一份文件中混合由左至右和由右至左的資料。  同時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 能替需要雙向功能的使用者 \(如說阿拉伯文和希伯來文的使用者\)，創造絕佳的經驗。  
+# <a name="bidirectional-features-in-wpf-overview"></a><span data-ttu-id="32d94-102">WPF 中的雙向功能概觀</span><span class="sxs-lookup"><span data-stu-id="32d94-102">Bidirectional Features in WPF Overview</span></span>
+<span data-ttu-id="32d94-103">不同於其他任何開發平台，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有許多功能可支援快速開發雙向內容，以滑鼠右鍵，並以滑鼠右鍵來混合的左比方說，資料處於相同文件。</span><span class="sxs-lookup"><span data-stu-id="32d94-103">Unlike any other development platform, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] has many features that support rapid development of bidirectional content, for example, mixed left to right and right to left data in the same document.</span></span> <span data-ttu-id="32d94-104">同時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]建立需要雙向功能，如阿拉伯文與希伯來文讀出使用者之使用者的絕佳的體驗。</span><span class="sxs-lookup"><span data-stu-id="32d94-104">At the same time, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creates an excellent experience for users who require bidirectional features such as Arabic and Hebrew speaking users.</span></span>  
   
- 下列各節說明雙向功能，並提供用以說明如何達到雙向內容最佳顯示的範例。  大部分範例使用 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]，不過您可以輕易地將概念運用到 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 或 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 程式碼。  
+ <span data-ttu-id="32d94-105">下列各節說明許多雙向功能以及說明如何達到最佳雙向內容顯示的範例。</span><span class="sxs-lookup"><span data-stu-id="32d94-105">The following sections explain many bidirectional features together with examples illustrating how to achieve the best display of bidirectional content.</span></span> <span data-ttu-id="32d94-106">大部分的範例使用[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]，但是您可以輕鬆地套用到概念[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]或[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]程式碼。</span><span class="sxs-lookup"><span data-stu-id="32d94-106">Most of the samples use [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], though you can easily apply the concepts to [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] or [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] code.</span></span>  
   
-   
+
   
 <a name="FlowDirection"></a>   
-## FlowDirection  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中定義內容流向的基本屬性為 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  這個屬性可用於設定下列其中一個列舉值：<xref:System.Windows.FlowDirection> 或 <xref:System.Windows.FlowDirection>。  此屬性可用於所有繼承自 <xref:System.Windows.FrameworkElement> 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目。  
+## <a name="flowdirection"></a><span data-ttu-id="32d94-107">FlowDirection</span><span class="sxs-lookup"><span data-stu-id="32d94-107">FlowDirection</span></span>  
+ <span data-ttu-id="32d94-108">基本的屬性，定義中的內容流向[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式是<xref:System.Windows.FrameworkElement.FlowDirection%2A>。</span><span class="sxs-lookup"><span data-stu-id="32d94-108">The basic property that defines the content flow direction in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application is <xref:System.Windows.FrameworkElement.FlowDirection%2A>.</span></span> <span data-ttu-id="32d94-109">這個屬性可以設定為其中一個列舉值，<xref:System.Windows.FlowDirection.LeftToRight>或<xref:System.Windows.FlowDirection.RightToLeft>。</span><span class="sxs-lookup"><span data-stu-id="32d94-109">This property can be set to one of two enumeration values, <xref:System.Windows.FlowDirection.LeftToRight> or <xref:System.Windows.FlowDirection.RightToLeft>.</span></span> <span data-ttu-id="32d94-110">屬性是可供所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]繼承的項目<xref:System.Windows.FrameworkElement>。</span><span class="sxs-lookup"><span data-stu-id="32d94-110">The property is available to all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements that inherit from <xref:System.Windows.FrameworkElement>.</span></span>  
   
- 下列範例會設定 <xref:System.Windows.Controls.TextBox> 項目的流向。  
+ <span data-ttu-id="32d94-111">下列範例會設定文字方向的<xref:System.Windows.Controls.TextBox>項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-111">The following examples set the flow direction of a <xref:System.Windows.Controls.TextBox> element.</span></span>  
   
- **由左至右流向**  
+ <span data-ttu-id="32d94-112">**由左至右的流向**</span><span class="sxs-lookup"><span data-stu-id="32d94-112">**Left-to-right flow direction**</span></span>  
   
- [!code-xml[LTRRTL#LTR](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
+ [!code-xaml[LTRRTL#LTR](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
- **由右至左流向**  
+ <span data-ttu-id="32d94-113">**由右至左的流向**</span><span class="sxs-lookup"><span data-stu-id="32d94-113">**Right-to-left flow direction**</span></span>  
   
- [!code-xml[LTRRTL#RTL](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
+ [!code-xaml[LTRRTL#RTL](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
- 下圖顯示先前程式碼的呈現方式。  
+ <span data-ttu-id="32d94-114">下圖顯示如何轉譯先前的程式碼。</span><span class="sxs-lookup"><span data-stu-id="32d94-114">The following graphic shows how the previous code renders.</span></span>  
   
- **說明 FlowDirection 的圖形**  
+ <span data-ttu-id="32d94-115">**說明 FlowDirection 的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-115">**Graphic That Illustrates FlowDirection**</span></span>  
   
- ![TextBlock 對齊](../../../../docs/framework/wpf/advanced/media/lefttorightrighttoleft.png "LefttoRightRighttoLeft")  
+ <span data-ttu-id="32d94-116">![TextBlock 對齊](../../../../docs/framework/wpf/advanced/media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")</span><span class="sxs-lookup"><span data-stu-id="32d94-116">![TextBlock alignment](../../../../docs/framework/wpf/advanced/media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")</span></span>  
   
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 樹狀結構中的項目會從其容器 \(Container\) 繼承 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  在下列範列中，<xref:System.Windows.Controls.TextBlock> 在 <xref:System.Windows.Controls.Grid> 之內，而 Grid 位於 <xref:System.Windows.Window> 中。  設定 <xref:System.Windows.Window> 的 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 意味同時針對 <xref:System.Windows.Controls.Grid> 和 <xref:System.Windows.Controls.TextBlock> 進行設定。  
+ <span data-ttu-id="32d94-117">中的項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]樹狀結構會繼承<xref:System.Windows.FrameworkElement.FlowDirection%2A>從它的容器。</span><span class="sxs-lookup"><span data-stu-id="32d94-117">An element within a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] tree will inherit the <xref:System.Windows.FrameworkElement.FlowDirection%2A> from its container.</span></span> <span data-ttu-id="32d94-118">在下列範例中，<xref:System.Windows.Controls.TextBlock>位於<xref:System.Windows.Controls.Grid>，其位於<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="32d94-118">In the following example, the <xref:System.Windows.Controls.TextBlock> is inside a <xref:System.Windows.Controls.Grid>, which resides in a <xref:System.Windows.Window>.</span></span> <span data-ttu-id="32d94-119">設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>如<xref:System.Windows.Window>隱含設定為<xref:System.Windows.Controls.Grid>和<xref:System.Windows.Controls.TextBlock>以及。</span><span class="sxs-lookup"><span data-stu-id="32d94-119">Setting the <xref:System.Windows.FrameworkElement.FlowDirection%2A> for the <xref:System.Windows.Window> implies setting it for the <xref:System.Windows.Controls.Grid> and <xref:System.Windows.Controls.TextBlock> as well.</span></span>  
   
- 下列範例會示範如何設定 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
+ <span data-ttu-id="32d94-120">下列範例會示範設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>。</span><span class="sxs-lookup"><span data-stu-id="32d94-120">The following example demonstrates setting <xref:System.Windows.FrameworkElement.FlowDirection%2A>.</span></span>  
   
- [!code-xml[FlowDirection#FlowDirection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
+ [!code-xaml[FlowDirection#FlowDirection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- 最上層 <xref:System.Windows.Window> 具有 <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection>，所以其內含的所有項目也會繼承相同的 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  至於要覆寫指定之 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 的項目，則必須加入明確的方向變更，例如前一個範例中的第二個 <xref:System.Windows.Controls.TextBlock> 會變更為 <xref:System.Windows.FlowDirection>。  未定義 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 的情況下，則會套用預設 <xref:System.Windows.FlowDirection>。  
+ <span data-ttu-id="32d94-121">最上層<xref:System.Windows.Window>具有<xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>，因此也包含在其中的所有項目會繼承相同<xref:System.Windows.FrameworkElement.FlowDirection%2A>。</span><span class="sxs-lookup"><span data-stu-id="32d94-121">The top level <xref:System.Windows.Window> has a <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, so all elements contained within it also inherit the same <xref:System.Windows.FrameworkElement.FlowDirection%2A>.</span></span> <span data-ttu-id="32d94-122">若要覆寫指定的項目<xref:System.Windows.FrameworkElement.FlowDirection%2A>它必須加入明確的方向變更例如第二個<xref:System.Windows.Controls.TextBlock>在上述範例變更為<xref:System.Windows.FlowDirection.LeftToRight>。</span><span class="sxs-lookup"><span data-stu-id="32d94-122">For an element to override a specified <xref:System.Windows.FrameworkElement.FlowDirection%2A> it must add an explicit direction change such as the second <xref:System.Windows.Controls.TextBlock> in the previous example which changes to <xref:System.Windows.FlowDirection.LeftToRight>.</span></span> <span data-ttu-id="32d94-123">若未<xref:System.Windows.FrameworkElement.FlowDirection%2A>定義，則預設<xref:System.Windows.FlowDirection.LeftToRight>套用。</span><span class="sxs-lookup"><span data-stu-id="32d94-123">When no <xref:System.Windows.FrameworkElement.FlowDirection%2A> is defined, the default <xref:System.Windows.FlowDirection.LeftToRight> applies.</span></span>  
   
- 下圖顯示前一個範例的輸出。  
+ <span data-ttu-id="32d94-124">下圖顯示上述範例的輸出。</span><span class="sxs-lookup"><span data-stu-id="32d94-124">The following graphic shows the output of the previous example.</span></span>  
   
- **說明明確指定之 FlowDirection 的圖形**  
+ <span data-ttu-id="32d94-125">**說明明確指派之 FlowDirection 的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-125">**Graphic That Illustrates Explicitly Assigned FlowDirection**</span></span>  
   
- ![文字顯示方向圖例](../../../../docs/framework/wpf/advanced/media/flowdir.png "FlowDir")  
+ <span data-ttu-id="32d94-126">![向圖例](../../../../docs/framework/wpf/advanced/media/flowdir.PNG "FlowDir")</span><span class="sxs-lookup"><span data-stu-id="32d94-126">![Flow direction illustration](../../../../docs/framework/wpf/advanced/media/flowdir.PNG "FlowDir")</span></span>  
   
 <a name="FlowDocument"></a>   
-## FlowDocument  
- 許多開發平台 \(例如，[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 和 Java\) 都提供雙向內容開發的特殊支援。  [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 這類標記語言會將所需的標記提供給內容寫入器，以便以任何所需的方向顯示文字，以 [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 4.0 標記為例，"dir" 會採用 "rtl" 或 "ltr" 值。  這個標記類似於 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性，但 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性會以更進階個方式來配置文字內容，而且可用於文字以外的內容。  
+## <a name="flowdocument"></a><span data-ttu-id="32d94-127">FlowDocument</span><span class="sxs-lookup"><span data-stu-id="32d94-127">FlowDocument</span></span>  
+ <span data-ttu-id="32d94-128">例如，許多開發平台[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]，[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]和 Java 提供特殊支援雙向內容開發。</span><span class="sxs-lookup"><span data-stu-id="32d94-128">Many development platforms such as [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)], [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] and Java provide special support for bidirectional content development.</span></span> <span data-ttu-id="32d94-129">標記語言，例如[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]提供必要的標記任何必要的方向，例如顯示的文字內容的寫入器[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]4.0 標記、"dir"做為值採用"rtl"或"ltr"。</span><span class="sxs-lookup"><span data-stu-id="32d94-129">Markup languages such as [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] give content writers the necessary markup to display text in any required direction, for example the [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] 4.0 tag, "dir" that takes "rtl" or "ltr" as values.</span></span> <span data-ttu-id="32d94-130">此標記是類似於<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性，但<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性適用於更進階的方式配置的文字內容，並可用於文字以外的內容。</span><span class="sxs-lookup"><span data-stu-id="32d94-130">This tag is similar to the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property, but the <xref:System.Windows.FrameworkElement.FlowDirection%2A> property works in a more advanced way to layout textual content and can be used for content other than text.</span></span>  
   
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，<xref:System.Windows.Documents.FlowDocument> 為多用途的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目，可以裝載 \(Host\) 文字、表格、影像和其他項目的組合。  下列各節中的範例會使用此項目。  
+ <span data-ttu-id="32d94-131">在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、<xref:System.Windows.Documents.FlowDocument>用途多[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可裝載的文字、 表格、 影像和其他項目組合項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-131">In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a <xref:System.Windows.Documents.FlowDocument> is a versatile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] element that can host a combination of text, tables, images and other elements.</span></span> <span data-ttu-id="32d94-132">下列各節中的範例會使用這個項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-132">The samples in the following sections use this element.</span></span>  
   
- 有很多種方法可以將文字加入至 <xref:System.Windows.Documents.FlowDocument>。  其中一種簡單方法就是透過 <xref:System.Windows.Documents.Paragraph>，這是用於群組文字之類內容的區塊層級項目。  為了將文字加入至內嵌層級項目，範例會使用 <xref:System.Windows.Documents.Span> 和 <xref:System.Windows.Documents.Run>。  <xref:System.Windows.Documents.Span> 為內嵌層級非固定格式內容項目，適用於群組其他內嵌項目，而 <xref:System.Windows.Documents.Run> 則為內嵌層級非固定格式內容項目，主要用於包含一連串未格式化的文字。  <xref:System.Windows.Documents.Span> 可以包含多個 <xref:System.Windows.Documents.Run> 項目。  
+ <span data-ttu-id="32d94-133">新增文字至<xref:System.Windows.Documents.FlowDocument>可以完成多一個方式。</span><span class="sxs-lookup"><span data-stu-id="32d94-133">Adding text to a <xref:System.Windows.Documents.FlowDocument> can be done in more that one way.</span></span> <span data-ttu-id="32d94-134">若要這樣做的簡單方式是透過<xref:System.Windows.Documents.Paragraph>這是用來群組內容，例如文字區塊層級項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-134">A simple way to do so is through a <xref:System.Windows.Documents.Paragraph> which is a block-level element used to group content such as text.</span></span> <span data-ttu-id="32d94-135">若要將文字加入內嵌層級元素的範例使用<xref:System.Windows.Documents.Span>和<xref:System.Windows.Documents.Run>。</span><span class="sxs-lookup"><span data-stu-id="32d94-135">To add text to inline-level elements the samples use <xref:System.Windows.Documents.Span> and <xref:System.Windows.Documents.Run>.</span></span> <span data-ttu-id="32d94-136"><xref:System.Windows.Documents.Span>是內嵌層級流動內容項目用於群組其他內嵌項目，雖然<xref:System.Windows.Documents.Run>是內嵌層級動態內容項目要用來包含執行的未格式化的文字。</span><span class="sxs-lookup"><span data-stu-id="32d94-136"><xref:System.Windows.Documents.Span> is an inline-level flow content element used for grouping other inline elements, while a <xref:System.Windows.Documents.Run> is an inline-level flow content element intended to contain a run of unformatted text.</span></span> <span data-ttu-id="32d94-137">A<xref:System.Windows.Documents.Span>可以包含多個<xref:System.Windows.Documents.Run>項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-137">A <xref:System.Windows.Documents.Span> can contain multiple <xref:System.Windows.Documents.Run> elements.</span></span>  
   
- 第一個文件範例所包含的文件具有許多網路共用名稱，例如 `\\server1\folder\file.ext`。  不論是在阿拉伯文或英文文件中有此網路連結，您都會希望該連結以相同的方式顯示。  下圖顯示在阿拉伯文 <xref:System.Windows.FlowDirection> 文件中的這個連結。  
+ <span data-ttu-id="32d94-138">第一個文件的範例包含文件編號的網路共用的名稱;例如`\\server1\folder\file.ext`。</span><span class="sxs-lookup"><span data-stu-id="32d94-138">The first document example contains a document that has a number of network share names; for example `\\server1\folder\file.ext`.</span></span> <span data-ttu-id="32d94-139">不論此網路連結出現在阿拉伯文文件還是英文文件中，您一定都會想要以相同的方式來顯示它。</span><span class="sxs-lookup"><span data-stu-id="32d94-139">Whether you have this network link in an Arabic or English document, you always want it to appear in the same way.</span></span> <span data-ttu-id="32d94-140">下圖顯示連結阿拉伯<xref:System.Windows.FlowDirection.RightToLeft>文件。</span><span class="sxs-lookup"><span data-stu-id="32d94-140">The following graphic shows the link in an Arabic <xref:System.Windows.FlowDirection.RightToLeft> document.</span></span>  
   
- **說明如何使用 Span 項目的圖形**  
+ <span data-ttu-id="32d94-141">**說明使用 Span 項目的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-141">**Graphic That Illustrates Using the Span Element**</span></span>  
   
- ![文字顯示方向為由左至右的文件](../../../../docs/framework/wpf/advanced/media/flowdocument.png "FlowDocument")  
+ <span data-ttu-id="32d94-142">![流向為由右至左的文件](../../../../docs/framework/wpf/advanced/media/flowdocument.PNG "FlowDocument")</span><span class="sxs-lookup"><span data-stu-id="32d94-142">![Document that flows from right to left](../../../../docs/framework/wpf/advanced/media/flowdocument.PNG "FlowDocument")</span></span>  
   
- 因為文字是 <xref:System.Windows.FlowDirection>，所以 "\\" 之類的所有特殊字元都會以由右至左的順序分隔文字。  結果導致連結不是以正確的順序顯示，因此，若要解決此問題，就必須內嵌文字以保留個別的 <xref:System.Windows.Documents.Run> 流動 <xref:System.Windows.FlowDirection>。  除了讓每種語言具有個別的 <xref:System.Windows.Documents.Run> 以外，解決此問題的更好方法是將不常用的英文文字內嵌到較大的阿拉伯文 <xref:System.Windows.Documents.Span> 中。  
+ <span data-ttu-id="32d94-143">因為文字是<xref:System.Windows.FlowDirection.RightToLeft>、 所有特殊字元，例如"\\"，區隔由右至左的順序中的文字。</span><span class="sxs-lookup"><span data-stu-id="32d94-143">Because the text is <xref:System.Windows.FlowDirection.RightToLeft>, all special characters, such as the "\\", separate the text in a right to left order.</span></span> <span data-ttu-id="32d94-144">這樣會造成不正確的順序顯示的連結，因此若要解決此問題，文字必須內嵌保留個別<xref:System.Windows.Documents.Run>流動<xref:System.Windows.FlowDirection.LeftToRight>。</span><span class="sxs-lookup"><span data-stu-id="32d94-144">That results in the link not being shown in the correct order, therefore to solve the problem, the text must be embedded to preserve a separate <xref:System.Windows.Documents.Run> flowing <xref:System.Windows.FlowDirection.LeftToRight>.</span></span> <span data-ttu-id="32d94-145">而不需要個別<xref:System.Windows.Documents.Run>每種語言，更好的方法，以解決此問題是較不常用的英文字嵌入較大阿拉伯文<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="32d94-145">Instead of having a separate <xref:System.Windows.Documents.Run> for each language, a better way to solve the problem is to embed the less frequently used English text into a larger Arabic <xref:System.Windows.Documents.Span>.</span></span>  
   
- 下圖將說明這點。  
+ <span data-ttu-id="32d94-146">下圖說明這個程序。</span><span class="sxs-lookup"><span data-stu-id="32d94-146">The following graphic illustrates this.</span></span>  
   
- **說明如何使用內嵌於 Span 項目中之 Run 項目的圖形**  
+ <span data-ttu-id="32d94-147">**說明使用內嵌在 Span 項目之 Run 項目的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-147">**Graphic That Illustrates Using the Run Element Embedded in a Span Element**</span></span>  
   
- ![XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/runspan.png "RunSpan")  
+ <span data-ttu-id="32d94-148">![XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/runspan.PNG "RunSpan")</span><span class="sxs-lookup"><span data-stu-id="32d94-148">![XamlPad screen shot](../../../../docs/framework/wpf/advanced/media/runspan.PNG "RunSpan")</span></span>  
   
- 下列範例會示範如何在文件中使用 <xref:System.Windows.Documents.Run> 和 <xref:System.Windows.Documents.Span> 項目。  
+ <span data-ttu-id="32d94-149">下列範例示範如何使用<xref:System.Windows.Documents.Run>和<xref:System.Windows.Documents.Span>文件中的項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-149">The following example demonstrates using <xref:System.Windows.Documents.Run> and <xref:System.Windows.Documents.Span> elements in documents.</span></span>  
   
- [!code-xml[RunSpan#RunSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
+ [!code-xaml[RunSpan#RunSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
   
 <a name="SpanElements"></a>   
-## Span 項目  
- <xref:System.Windows.Documents.Span> 項目的作用為具有不同流向的文字之間的界限分隔符號。  甚至具有相同流向的 <xref:System.Windows.Documents.Span> 項目都會被視為有不同雙向範圍，這表示 <xref:System.Windows.Documents.Span> 項目是以容器的 <xref:System.Windows.FlowDirection> 排序，而只有 <xref:System.Windows.Documents.Span> 項目內的內容會遵循 <xref:System.Windows.Documents.Span> 的 <xref:System.Windows.FlowDirection>。  
+## <a name="span-elements"></a><span data-ttu-id="32d94-150">Span 項目</span><span class="sxs-lookup"><span data-stu-id="32d94-150">Span Elements</span></span>  
+ <span data-ttu-id="32d94-151"><xref:System.Windows.Documents.Span>項目的運作方式為界限之間的分隔符號文字方向不同。</span><span class="sxs-lookup"><span data-stu-id="32d94-151">The <xref:System.Windows.Documents.Span> element works as a boundary separator between texts with different flow directions.</span></span>  <span data-ttu-id="32d94-152">即使<xref:System.Windows.Documents.Span>具有相同的文字方向的項目都會被視為具有不同的雙向領域，這表示<xref:System.Windows.Documents.Span>中容器的排序項目<xref:System.Windows.FlowDirection>中的內容<xref:System.Windows.Documents.Span>項目遵循<xref:System.Windows.FlowDirection>的<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="32d94-152">Even <xref:System.Windows.Documents.Span> elements with the same flow direction are considered to have different bidirectional scopes which means that the <xref:System.Windows.Documents.Span> elements are ordered in the container’s <xref:System.Windows.FlowDirection>, only the content within the <xref:System.Windows.Documents.Span> element follows the <xref:System.Windows.FlowDirection> of the <xref:System.Windows.Documents.Span>.</span></span>  
   
- 下圖顯示數個 <xref:System.Windows.Controls.TextBlock> 項目的流向。  
+ <span data-ttu-id="32d94-153">下圖顯示數個流向<xref:System.Windows.Controls.TextBlock>項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-153">The following graphic shows the flow direction of several <xref:System.Windows.Controls.TextBlock> elements.</span></span>  
   
- **說明數個 TextBlock 項目中之 FlowDirection 的圖形**  
+ <span data-ttu-id="32d94-154">**說明數個 TextBlock 項目中 FlowDirection 的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-154">**Graphic That Illustrates FlowDirection in Several TextBlock Elements**</span></span>  
   
- ![文字方向不同的文字區塊](../../../../docs/framework/wpf/advanced/media/span.png "Span")  
+ <span data-ttu-id="32d94-155">![向不同的文字區塊](../../../../docs/framework/wpf/advanced/media/span.PNG "Span")</span><span class="sxs-lookup"><span data-stu-id="32d94-155">![Text blocks with different flow directions](../../../../docs/framework/wpf/advanced/media/span.PNG "Span")</span></span>  
   
- 下列範例顯示如何使用 <xref:System.Windows.Documents.Span> 和 <xref:System.Windows.Documents.Run> 項目，產生上圖所示的結果。  
+ <span data-ttu-id="32d94-156">下列範例示範如何使用<xref:System.Windows.Documents.Span>和<xref:System.Windows.Documents.Run>元素來產生結果前圖所示。</span><span class="sxs-lookup"><span data-stu-id="32d94-156">The following example shows how to use the <xref:System.Windows.Documents.Span> and <xref:System.Windows.Documents.Run> elements to produce the results shown in the previous graphic.</span></span>  
   
- [!code-xml[Span#Span](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
+ [!code-xaml[Span#Span](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
   
- 在本範例的 <xref:System.Windows.Controls.TextBlock> 項目中，<xref:System.Windows.Documents.Span> 項目會根據其父代 \(Parent\) 的 <xref:System.Windows.FlowDirection> 進行配置，但每個 <xref:System.Windows.Documents.Span> 項目內的文字則是根據其擁有的 <xref:System.Windows.FlowDirection> 而流動。  這適用於拉丁文和阿拉伯文 – 或任何其他語言。  
+ <span data-ttu-id="32d94-157">在<xref:System.Windows.Controls.TextBlock>在範例中，項目<xref:System.Windows.Documents.Span>元素配置時根據<xref:System.Windows.FlowDirection>其父系，但在每個文字<xref:System.Windows.Documents.Span>根據自己的項目流程<xref:System.Windows.FlowDirection>。</span><span class="sxs-lookup"><span data-stu-id="32d94-157">In the <xref:System.Windows.Controls.TextBlock> elements in the sample, the <xref:System.Windows.Documents.Span> elements are laid out according to the <xref:System.Windows.FlowDirection> of their parents, but the text within each <xref:System.Windows.Documents.Span> element flows according to its own <xref:System.Windows.FlowDirection>.</span></span> <span data-ttu-id="32d94-158">這適用於拉丁文和阿拉伯文，或任何其他語言。</span><span class="sxs-lookup"><span data-stu-id="32d94-158">This is applicable to Latin and Arabic – or any other language.</span></span>  
   
-### 加入 xml:lang  
- 下圖顯示另一個使用數字和算術運算式 \(如 `"200.0+21.4=221.4"`\) 的範例。  請注意，只會設定 <xref:System.Windows.FlowDirection>。  
+### <a name="adding-xmllang"></a><span data-ttu-id="32d94-159">新增 xml:lang</span><span class="sxs-lookup"><span data-stu-id="32d94-159">Adding xml:lang</span></span>  
+ <span data-ttu-id="32d94-160">下圖顯示另一個範例使用數字和算術運算式，例如`"200.0+21.4=221.4"`。</span><span class="sxs-lookup"><span data-stu-id="32d94-160">The following graphic shows another example that uses numbers and arithmetic expressions, such as `"200.0+21.4=221.4"`.</span></span> <span data-ttu-id="32d94-161">請注意，只有<xref:System.Windows.FlowDirection>設定。</span><span class="sxs-lookup"><span data-stu-id="32d94-161">Notice that only the <xref:System.Windows.FlowDirection> is set.</span></span>  
   
- **僅使用 FlowDirection 顯示數字的圖形**  
+ <span data-ttu-id="32d94-162">**顯示只使用 FlowDirection 之數字的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-162">**Graphic That Displays Numbers Using Only FlowDirection**</span></span>  
   
- ![方向由右至左的數字](../../../../docs/framework/wpf/advanced/media/langattribute.png "LangAttribute")  
+ <span data-ttu-id="32d94-163">![向由右至左的數字](../../../../docs/framework/wpf/advanced/media/langattribute.PNG "LangAttribute")</span><span class="sxs-lookup"><span data-stu-id="32d94-163">![Numbers that flow from right to left](../../../../docs/framework/wpf/advanced/media/langattribute.PNG "LangAttribute")</span></span>  
   
- 即使 <xref:System.Windows.FlowDirection> 正確無誤，此應用程式的使用者將會對輸出感到失望，因為數字的外形並非阿拉伯數字應有的外形。  
+ <span data-ttu-id="32d94-164">此應用程式的使用者將會失望輸出，即使<xref:System.Windows.FlowDirection>正確數字不應該形狀阿拉伯數字為形狀。</span><span class="sxs-lookup"><span data-stu-id="32d94-164">Users of this application will be disappointed by the output, even though the <xref:System.Windows.FlowDirection> is correct the numbers are not shaped as Arabic numbers should be shaped.</span></span>  
   
- XAML 項目可以包含定義每個項目語言的 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 屬性 \(`xml:lang`\)。  XAML 也支援 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 語言主體，其中套用至樹狀結構中父項目的 `xml:lang` 值為子項目所使用。  在前一個範例中，因為未針對 <xref:System.Windows.Documents.Run> 項目或任何其最上層項目定義語言，所以會使用預設的 `xml:lang`，對於 XAML 就是 `en-US`。  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的內部數字外形演算法會選取對應語言 \(在此例中為英文\) 中的數字。  若要使阿拉伯數字得以正確呈現，則必須設定 `xml:lang`。  
+ <span data-ttu-id="32d94-165">將 XAML 項目可以包含[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]屬性 (`xml:lang`)，定義每個項目的語言。</span><span class="sxs-lookup"><span data-stu-id="32d94-165">XAML elements can include an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] attribute (`xml:lang`) that defines the language of each element.</span></span> <span data-ttu-id="32d94-166">也支援 XAML[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]語言原則讓`xml:lang`套用到在樹狀目錄中的父項目值由子元素。</span><span class="sxs-lookup"><span data-stu-id="32d94-166">XAML also supports a [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] language principle whereby `xml:lang` values applied to parent elements in the tree are used by child elements.</span></span> <span data-ttu-id="32d94-167">在上述範例中，因為語言不定義為<xref:System.Windows.Documents.Run>項目或任何它上方層級項目，預設值`xml:lang`被使用，也就是`en-US`xaml。</span><span class="sxs-lookup"><span data-stu-id="32d94-167">In the previous example, because a language was not defined for the <xref:System.Windows.Documents.Run> element or any of its top level elements, the default `xml:lang` was used, which is `en-US` for XAML.</span></span> <span data-ttu-id="32d94-168">內部數字成形演算法的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]選取數字中的對應語言 – 在此情況下英文。</span><span class="sxs-lookup"><span data-stu-id="32d94-168">The internal number shaping algorithm of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] selects numbers in the corresponding language – in this case English.</span></span> <span data-ttu-id="32d94-169">若要讓阿拉伯數字呈現正確`xml:lang`必須設定。</span><span class="sxs-lookup"><span data-stu-id="32d94-169">To make the Arabic numbers render correctly `xml:lang` needs to be set.</span></span>  
   
- 下圖顯示加入 `xml:lang` 的範例。  
+ <span data-ttu-id="32d94-170">下圖顯示範例`xml:lang`加入。</span><span class="sxs-lookup"><span data-stu-id="32d94-170">The following graphic shows the example with `xml:lang` added.</span></span>  
   
- **說明如何使用 xml:lang 屬性的圖形**  
+ <span data-ttu-id="32d94-171">**說明使用 xml:lang 屬性的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-171">**Graphic That Illustrates Using the xml:lang Attribute**</span></span>  
   
- ![方向由右至左的阿拉伯數字](../../../../docs/framework/wpf/advanced/media/langattribute2.png "LangAttribute2")  
+ <span data-ttu-id="32d94-172">![向由右至左的阿拉伯數字](../../../../docs/framework/wpf/advanced/media/langattribute2.PNG "LangAttribute2")</span><span class="sxs-lookup"><span data-stu-id="32d94-172">![Arabic numbers that flow from right to left](../../../../docs/framework/wpf/advanced/media/langattribute2.PNG "LangAttribute2")</span></span>  
   
- 下列範例會將 `xml:lang` 加入至應用程式。  
+ <span data-ttu-id="32d94-173">下列範例會將`xml:lang`應用程式。</span><span class="sxs-lookup"><span data-stu-id="32d94-173">The following example adds `xml:lang` to the application.</span></span>  
   
- [!code-xml[LangAttribute#LangAttribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
+ [!code-xaml[LangAttribute#LangAttribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
   
- 請特別注意，許多語言會根據目標區域而定，而有不同的 `xml:lang` 值，例如 `"ar-SA"` 和 `"ar-EG"` 代表阿拉伯文的兩種變化。  先前範例說明您必須同時定義 `xml:lang` 和 <xref:System.Windows.FlowDirection> 值。  
+ <span data-ttu-id="32d94-174">請注意，許多語言有不同`xml:lang`值的目標地區，例如，根據`"ar-SA"`和`"ar-EG"`代表阿拉伯文的兩種變化。</span><span class="sxs-lookup"><span data-stu-id="32d94-174">Be aware that many languages have different `xml:lang` values depending on the targeted region, for example, `"ar-SA"` and `"ar-EG"` represent two variations of Arabic.</span></span> <span data-ttu-id="32d94-175">先前的範例將說明您需要同時定義`xml:lang`和<xref:System.Windows.FlowDirection>值。</span><span class="sxs-lookup"><span data-stu-id="32d94-175">The previous examples illustrate that you need to define both the `xml:lang` and <xref:System.Windows.FlowDirection> values.</span></span>  
   
 <a name="FlowDirectionNontext"></a>   
-## 非文字項目的 FlowDirection  
- <xref:System.Windows.FlowDirection> 不僅會定義文字項目中的文字流動方式，也會定義幾乎其他每個 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目的流動。  下圖所顯示的 <xref:System.Windows.Controls.ToolBar> 會使用水平 <xref:System.Windows.Media.LinearGradientBrush> 來繪製其背景。  
+## <a name="flowdirection-with-non-text-elements"></a><span data-ttu-id="32d94-176">具有非文字項目的 FlowDirection</span><span class="sxs-lookup"><span data-stu-id="32d94-176">FlowDirection with Non-text Elements</span></span>  
+ <span data-ttu-id="32d94-177"><xref:System.Windows.FlowDirection>定義不僅文字流動的方式在文字項目，但是幾乎每個其他的流向[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]項目。</span><span class="sxs-lookup"><span data-stu-id="32d94-177"><xref:System.Windows.FlowDirection> defines not only how text flows in a textual element but also the flow direction of almost every other [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] element.</span></span> <span data-ttu-id="32d94-178">下圖顯示<xref:System.Windows.Controls.ToolBar>使用水平<xref:System.Windows.Media.LinearGradientBrush>繪製它的背景。</span><span class="sxs-lookup"><span data-stu-id="32d94-178">The following graphic shows a <xref:System.Windows.Controls.ToolBar> that uses a horizontal <xref:System.Windows.Media.LinearGradientBrush> to draw its background.</span></span>  
   
- **顯示具有由左至右漸層之 ToolBar 的圖形**  
+ <span data-ttu-id="32d94-179">**顯示具有由左至右漸層之工具列的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-179">**Graphic That Shows a ToolBar with a Left to Right Gradient**</span></span>  
   
- ![漸層螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/gradient.png "Gradient")  
+ <span data-ttu-id="32d94-180">![漸層螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/gradient.PNG "Gradient")</span><span class="sxs-lookup"><span data-stu-id="32d94-180">![Gradient screen shot](../../../../docs/framework/wpf/advanced/media/gradient.PNG "Gradient")</span></span>  
   
- 將 <xref:System.Windows.FlowDirection> 設為 <xref:System.Windows.FlowDirection> 之後，不僅 <xref:System.Windows.Controls.ToolBar> 按鈕會由右至左排列，甚至 <xref:System.Windows.Media.LinearGradientBrush> 也會重新對齊其位移 \(Offset\)，以便由右至左流動。  
+ <span data-ttu-id="32d94-181">設定之後<xref:System.Windows.FlowDirection>至<xref:System.Windows.FlowDirection.RightToLeft>，不只<xref:System.Windows.Controls.ToolBar>從右至左，但即使排列按鈕<xref:System.Windows.Media.LinearGradientBrush>方向上重新對齊方向由右至左的位移。</span><span class="sxs-lookup"><span data-stu-id="32d94-181">After setting the <xref:System.Windows.FlowDirection> to <xref:System.Windows.FlowDirection.RightToLeft>, not only the <xref:System.Windows.Controls.ToolBar> buttons are arranged from right to left, but even the <xref:System.Windows.Media.LinearGradientBrush> realigns its offsets to flow from right to left.</span></span>  
   
- 下圖顯示 <xref:System.Windows.Media.LinearGradientBrush> 的重新對齊方式。  
+ <span data-ttu-id="32d94-182">下圖顯示對齊<xref:System.Windows.Media.LinearGradientBrush>。</span><span class="sxs-lookup"><span data-stu-id="32d94-182">The following graphic shows the realignment of the <xref:System.Windows.Media.LinearGradientBrush>.</span></span>  
   
- **顯示具有由右至左漸層之 ToolBar 的圖形**  
+ <span data-ttu-id="32d94-183">**顯示具有由右至左漸層之工具列的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-183">**Graphic That Shows a ToolBar with a Right to Left Gradient**</span></span>  
   
- ![方向為由右至左的漸層](../../../../docs/framework/wpf/advanced/media/gradient2-wpf.png "Gradient2\_WPF")  
+ <span data-ttu-id="32d94-184">![向由右至左的漸層](../../../../docs/framework/wpf/advanced/media/gradient2-wpf.PNG "Gradient2_WPF")</span><span class="sxs-lookup"><span data-stu-id="32d94-184">![A gradient that flows from right to left](../../../../docs/framework/wpf/advanced/media/gradient2-wpf.PNG "Gradient2_WPF")</span></span>  
   
- 下列範例將繪製 <xref:System.Windows.FlowDirection> <xref:System.Windows.Controls.ToolBar>。  若要由左至右進行繪製，請移除 <xref:System.Windows.Controls.ToolBar> 的 <xref:System.Windows.FlowDirection> 屬性。  
+ <span data-ttu-id="32d94-185">下列範例會繪製<xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="32d94-185">The following example draws a <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>.</span></span> <span data-ttu-id="32d94-186">(若要繪製左到右，移除<xref:System.Windows.FlowDirection>屬性<xref:System.Windows.Controls.ToolBar>。</span><span class="sxs-lookup"><span data-stu-id="32d94-186">(To draw it left to right, remove the <xref:System.Windows.FlowDirection> attribute on the <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
- [!code-xml[Gradient#Gradient](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
+ [!code-xaml[Gradient#Gradient](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
 <a name="FlowDirectionExceptions"></a>   
-### FlowDirection 例外狀況  
- 在少數情況下，<xref:System.Windows.FlowDirection> 的行為不如預期。  本節涵蓋其中兩種例外狀況 \(Exception\)。  
+### <a name="flowdirection-exceptions"></a><span data-ttu-id="32d94-187">FlowDirection 例外狀況</span><span class="sxs-lookup"><span data-stu-id="32d94-187">FlowDirection Exceptions</span></span>  
+ <span data-ttu-id="32d94-188">少數的情況下其中<xref:System.Windows.FlowDirection>未如預期般運作。</span><span class="sxs-lookup"><span data-stu-id="32d94-188">There are a few cases where <xref:System.Windows.FlowDirection> does not behave as expected.</span></span> <span data-ttu-id="32d94-189">本節涵蓋其中的兩個例外狀況。</span><span class="sxs-lookup"><span data-stu-id="32d94-189">This section covers two of these exceptions.</span></span>  
   
- **Image**  
+ <span data-ttu-id="32d94-190">**影像**</span><span class="sxs-lookup"><span data-stu-id="32d94-190">**Image**</span></span>  
   
- <xref:System.Windows.Controls.Image> 表示會顯示影像的控制項。  在 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中，它可搭配 <xref:System.Windows.Controls.Image.Source%2A> 屬性使用，該屬性會定義要顯示之 <xref:System.Windows.Controls.Image> 的[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
+ <span data-ttu-id="32d94-191"><xref:System.Windows.Controls.Image>代表顯示影像的控制項。</span><span class="sxs-lookup"><span data-stu-id="32d94-191">An <xref:System.Windows.Controls.Image> represents a control that displays an image.</span></span> <span data-ttu-id="32d94-192">在[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]它可以搭配<xref:System.Windows.Controls.Image.Source%2A>屬性，定義[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]的<xref:System.Windows.Controls.Image>顯示。</span><span class="sxs-lookup"><span data-stu-id="32d94-192">In [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] it can be used with a <xref:System.Windows.Controls.Image.Source%2A> property that defines the [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] of the <xref:System.Windows.Controls.Image> to display.</span></span>  
   
- 和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目不同，<xref:System.Windows.Controls.Image> 不會從容器繼承 <xref:System.Windows.FlowDirection>。  但是，如果 <xref:System.Windows.FlowDirection> 已明確設定為 <xref:System.Windows.FlowDirection>，則 <xref:System.Windows.Controls.Image> 會以水平翻轉方式顯示。  雙向內容的開發人員會將此當做方便的功能實作，因為在某些情況下，水平翻轉影像可產生所要的效果。  
+ <span data-ttu-id="32d94-193">不同於其他[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]項目，<xref:System.Windows.Controls.Image>不會繼承<xref:System.Windows.FlowDirection>從容器。</span><span class="sxs-lookup"><span data-stu-id="32d94-193">Unlike other [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elements, an <xref:System.Windows.Controls.Image> does not inherit the <xref:System.Windows.FlowDirection> from the container.</span></span> <span data-ttu-id="32d94-194">不過，如果<xref:System.Windows.FlowDirection>明確設定為<xref:System.Windows.FlowDirection.RightToLeft>、<xref:System.Windows.Controls.Image>會顯示水平翻轉。</span><span class="sxs-lookup"><span data-stu-id="32d94-194">However, if the <xref:System.Windows.FlowDirection> is set explicitly to <xref:System.Windows.FlowDirection.RightToLeft>, an <xref:System.Windows.Controls.Image> is displayed flipped horizontally.</span></span> <span data-ttu-id="32d94-195">這會實作為方便使用的功能，讓開發人員用於雙向內容；因為在某些情況下，水平翻轉影像會產生所要的效果。</span><span class="sxs-lookup"><span data-stu-id="32d94-195">This is implemented as a convenient feature for developers of bidirectional content; because in some cases, horizontally flipping the image produces the desired effect.</span></span>  
   
- 下圖顯示已翻轉的 <xref:System.Windows.Controls.Image>。  
+ <span data-ttu-id="32d94-196">下圖顯示翻轉<xref:System.Windows.Controls.Image>。</span><span class="sxs-lookup"><span data-stu-id="32d94-196">The following graphic shows a flipped <xref:System.Windows.Controls.Image>.</span></span>  
   
- **說明已翻轉影像的圖形**  
+ <span data-ttu-id="32d94-197">**說明已翻轉影像的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-197">**Graphic That Illustrates a Flipped Image**</span></span>  
   
- ![XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/image.png "Image")  
+ <span data-ttu-id="32d94-198">![XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/image.PNG "Image")</span><span class="sxs-lookup"><span data-stu-id="32d94-198">![XamlPad screen shot](../../../../docs/framework/wpf/advanced/media/image.PNG "Image")</span></span>  
   
- 下列範例示範 <xref:System.Windows.Controls.Image> 無法從包含它的 <xref:System.Windows.Controls.StackPanel> 繼承 <xref:System.Windows.FlowDirection>。  **注意**：您的 C:\\ 磁碟機上必須要有名為 **ms\_logo.jpg** 的檔案，才能執行此範例。  
+ <span data-ttu-id="32d94-199">下列範例會示範<xref:System.Windows.Controls.Image>無法繼承<xref:System.Windows.FlowDirection>從<xref:System.Windows.Controls.StackPanel>包含它。</span><span class="sxs-lookup"><span data-stu-id="32d94-199">The following example demonstrates that the <xref:System.Windows.Controls.Image> fails to inherit the <xref:System.Windows.FlowDirection> from the <xref:System.Windows.Controls.StackPanel> that contains it.</span></span> <span data-ttu-id="32d94-200">**請注意**您必須擁有名為**ms_logo.jpg** C:\ 磁碟機執行此範例。</span><span class="sxs-lookup"><span data-stu-id="32d94-200">**Note** You must have a file named **ms_logo.jpg** on your C:\ drive to run this example.</span></span>  
   
- [!code-xml[Image#Image](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
+ [!code-xaml[Image#Image](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
   
- **注意**：下載的檔案中包括一個 **ms\_logo.jpg** 檔案。  程式碼會假定 .jpg 檔案不在您的專案中，但位在 C:\\ 磁碟機的某個位置。  您必須將專案檔案的 .jpg 複製至您的 C:\\ 磁碟機，或變更程式碼使其在專案中尋找。  若要這麼做，請將 `Source="file://c:/ms_logo.jpg"` 變更為 `Source="ms_logo.jpg"`。  
+ <span data-ttu-id="32d94-201">**請注意**包含在下載檔案是**ms_logo.jpg**檔案。</span><span class="sxs-lookup"><span data-stu-id="32d94-201">**Note** Included in the download files is an **ms_logo.jpg** file.</span></span> <span data-ttu-id="32d94-202">這個程式碼假設 .jpg 檔案不在您的專案內，而是在 C:\ 磁碟機的某個位置。</span><span class="sxs-lookup"><span data-stu-id="32d94-202">The code assumes that the .jpg file is not inside your project but somewhere on the C:\ drive.</span></span> <span data-ttu-id="32d94-203">您必須將 .jpg 從專案檔複製至 C:\ 磁碟機，或變更程式碼來尋找專案內的檔案。</span><span class="sxs-lookup"><span data-stu-id="32d94-203">You must copy the .jpg from the project files to your C:\ drive or change the code to look for the file inside the project.</span></span> <span data-ttu-id="32d94-204">若要執行這項變更`Source="file://c:/ms_logo.jpg"`至`Source="ms_logo.jpg"`。</span><span class="sxs-lookup"><span data-stu-id="32d94-204">To do this change `Source="file://c:/ms_logo.jpg"` to `Source="ms_logo.jpg"`.</span></span>  
   
- **Path**  
+ <span data-ttu-id="32d94-205">**路徑**</span><span class="sxs-lookup"><span data-stu-id="32d94-205">**Paths**</span></span>  
   
- 除了 <xref:System.Windows.Controls.Image> 以外，另一個有趣的項目為 <xref:System.Windows.Shapes.Path>。  Path 就是可以繪製一系列相連線條和曲線的物件。  至於其 <xref:System.Windows.FlowDirection> 的行為方式則類似於 <xref:System.Windows.Controls.Image>，例如它的 <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection> 為其 <xref:System.Windows.FlowDirection> 流向的水平左右反轉。  但是，和 <xref:System.Windows.Controls.Image> 不同，<xref:System.Windows.Shapes.Path> 會從容器繼承它的 <xref:System.Windows.FlowDirection>，使用者不須進行明確指定。  
+ <span data-ttu-id="32d94-206">除了<xref:System.Windows.Controls.Image>，另一個有趣的項目是<xref:System.Windows.Shapes.Path>。</span><span class="sxs-lookup"><span data-stu-id="32d94-206">In addition to an <xref:System.Windows.Controls.Image>, another interesting element is <xref:System.Windows.Shapes.Path>.</span></span> <span data-ttu-id="32d94-207">路徑是物件，可繪製一系列連接的線條和曲線。</span><span class="sxs-lookup"><span data-stu-id="32d94-207">A Path is an object that can draw a series of connected lines and curves.</span></span> <span data-ttu-id="32d94-208">其行為類似的方式<xref:System.Windows.Controls.Image>有關其<xref:System.Windows.FlowDirection>; 例如其<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>是水平的鏡像其<xref:System.Windows.FlowDirection.LeftToRight>其中一個。</span><span class="sxs-lookup"><span data-stu-id="32d94-208">It behaves in a manner similar to an <xref:System.Windows.Controls.Image> regarding its <xref:System.Windows.FlowDirection>; for example its <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> is a horizontal mirror of its <xref:System.Windows.FlowDirection.LeftToRight> one.</span></span> <span data-ttu-id="32d94-209">不過，不同於<xref:System.Windows.Controls.Image>，<xref:System.Windows.Shapes.Path>繼承其<xref:System.Windows.FlowDirection>從容器，另一個不需要明確指定。</span><span class="sxs-lookup"><span data-stu-id="32d94-209">However, unlike an <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> inherits its <xref:System.Windows.FlowDirection> from the container and one does not need to specify it explicitly.</span></span>  
   
- 下列範例會使用三條線來繪製簡單的箭號。  第一個箭號會從 <xref:System.Windows.Controls.StackPanel> 繼承 <xref:System.Windows.FlowDirection> 流向，以便從右邊的根測量其開始和結束點。  而具有明確 <xref:System.Windows.FlowDirection> <xref:System.Windows.FlowDirection> 的第二個箭號也是從右邊開始。  但是，第三個箭號的起始根則在左邊。  如需繪圖的詳細資訊，請參閱 <xref:System.Windows.Media.LineGeometry> 和 <xref:System.Windows.Media.GeometryGroup>。  
+ <span data-ttu-id="32d94-210">下列範例會繪製一個使用 3 條線的簡單箭號。</span><span class="sxs-lookup"><span data-stu-id="32d94-210">The following example draws a simple arrow using 3 lines.</span></span> <span data-ttu-id="32d94-211">第一個箭號會繼承<xref:System.Windows.FlowDirection.RightToLeft>資料流程方向從<xref:System.Windows.Controls.StackPanel>使其開始和結束點起右邊的根。</span><span class="sxs-lookup"><span data-stu-id="32d94-211">The first arrow inherits the <xref:System.Windows.FlowDirection.RightToLeft> flow direction from the <xref:System.Windows.Controls.StackPanel> so that its start and end points are measured from a root on the right side.</span></span> <span data-ttu-id="32d94-212">具有明確的第二個箭頭<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>也會啟動在右邊。</span><span class="sxs-lookup"><span data-stu-id="32d94-212">The second arrow which has an explicit <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> also starts on the right side.</span></span> <span data-ttu-id="32d94-213">不過，第三個箭號的起始根在左邊。</span><span class="sxs-lookup"><span data-stu-id="32d94-213">However, the third arrow has its starting root on the left side.</span></span> <span data-ttu-id="32d94-214">如需有關繪製，請參閱<xref:System.Windows.Media.LineGeometry>和<xref:System.Windows.Media.GeometryGroup>。</span><span class="sxs-lookup"><span data-stu-id="32d94-214">For more information on drawing see <xref:System.Windows.Media.LineGeometry> and <xref:System.Windows.Media.GeometryGroup>.</span></span>  
   
- [!code-xml[Paths#Paths](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
+ [!code-xaml[Paths#Paths](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
- 下圖顯示前一個範例的輸出。  
+ <span data-ttu-id="32d94-215">下圖顯示上述範例的輸出。</span><span class="sxs-lookup"><span data-stu-id="32d94-215">The following graphic shows the output of the previous example.</span></span>  
   
- **說明如何使用 Path 項目繪製箭號的圖形**  
+ <span data-ttu-id="32d94-216">**說明使用 Path 項目所繪製箭號的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-216">**Graphic That Illustrates Arrows Drawn Using the Path Element**</span></span>  
   
- ![路徑](../../../../docs/framework/wpf/advanced/media/paths.png "Paths")  
+ <span data-ttu-id="32d94-217">![路徑](../../../../docs/framework/wpf/advanced/media/paths.PNG "Paths")</span><span class="sxs-lookup"><span data-stu-id="32d94-217">![Paths](../../../../docs/framework/wpf/advanced/media/paths.PNG "Paths")</span></span>  
   
- <xref:System.Windows.Controls.Image> 和 <xref:System.Windows.Shapes.Path> 為 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 如何使用 <xref:System.Windows.FlowDirection> 的兩個範例。  除了在容器內以特定方向配置 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目以外，<xref:System.Windows.FlowDirection> 可以搭配 <xref:System.Windows.Controls.InkPresenter> \(該項目可在表面上呈現筆跡\)、<xref:System.Windows.Media.LinearGradientBrush>、<xref:System.Windows.Media.RadialGradientBrush> 之類的項目使用。  每當模擬由左至右行為的內容需要由右至左行為時 \(反之亦然\)，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 都可提供該功能。  
+ <span data-ttu-id="32d94-218"><xref:System.Windows.Controls.Image>和<xref:System.Windows.Shapes.Path>兩個範例說明如何[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用<xref:System.Windows.FlowDirection>。</span><span class="sxs-lookup"><span data-stu-id="32d94-218">The <xref:System.Windows.Controls.Image> and <xref:System.Windows.Shapes.Path> are two examples of a how [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uses <xref:System.Windows.FlowDirection>.</span></span> <span data-ttu-id="32d94-219">旁邊的版面配置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]依特定方向的容器中的項目<xref:System.Windows.FlowDirection>適用於項目例如<xref:System.Windows.Controls.InkPresenter>的呈現表面的筆墨<xref:System.Windows.Media.LinearGradientBrush>， <xref:System.Windows.Media.RadialGradientBrush>。</span><span class="sxs-lookup"><span data-stu-id="32d94-219">Beside laying out [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elements in a specific direction within a container, <xref:System.Windows.FlowDirection> can be used with elements such as <xref:System.Windows.Controls.InkPresenter> which renders ink on a surface, <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>.</span></span> <span data-ttu-id="32d94-220">每當您需要由右至左的行為，為您的內容，以模擬左到右的行為，或反之亦然，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供這項功能。</span><span class="sxs-lookup"><span data-stu-id="32d94-220">Whenever you need a right to left behavior for your content that mimics a left to right behavior, or vice versa, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides that capability.</span></span>  
   
 <a name="NumberSubstitution"></a>   
-## 數字替換  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 過去支援數字替換功能，其做法為允許相同的數字有不同的文化表示形式，並且使這些數字的內部儲存在不同的地區設定 \(Locale\) 內保持統一。例如：數字會以其知名的十六進位值 0x40、0x41 儲存，但會根據選取的語言予以顯示。  
+## <a name="number-substitution"></a><span data-ttu-id="32d94-221">數字替代</span><span class="sxs-lookup"><span data-stu-id="32d94-221">Number Substitution</span></span>  
+ <span data-ttu-id="32d94-222">在過去，[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]已藉由使用相同的數字不同文化特性的圖形表示法同時保護內部的儲存體整合之間不同的地區設定，這些數字的範例數字會儲存在支援的數字替代其已知十六進位值，0x40、 0x41，但根據選取的語言顯示。</span><span class="sxs-lookup"><span data-stu-id="32d94-222">Historically, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] has supported number substitution by allowing the representation of different cultural shapes for the same digits while keeping the internal storage of these digits unified among different locales, for example numbers are stored in their well known hexadecimal values, 0x40, 0x41, but displayed according to the selected language.</span></span>  
   
- 如此一來，應用程式不須將數值從某種語言轉換成另一種語言，便可處理數值。例如，使用者可以在當地語系化的阿拉文 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中開啟 [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] 試算表，並且看見阿拉伯文形式的數字，但在歐語版的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中開啟試算表，卻會看見相同數字的歐語表示。  其他符號 \(如逗號分隔符號和百分比符號\) 也需要這項功能，因為這些符號通常會在同份文件中伴隨數字出現。  
+ <span data-ttu-id="32d94-223">這有允許的應用程式處理而不需要從一種語言轉換成另一個數值，例如使用者可以開啟[!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]試算表中當地語系化阿拉伯文[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]和看到形狀以阿拉伯數字，數字，但在中開啟它歐洲版本[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]並查看相同的數字的歐洲的表示法。</span><span class="sxs-lookup"><span data-stu-id="32d94-223">This has allowed applications to process numerical values without the need to convert them from one language to another, for example a user can open an [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] spreadsheet in a localized Arabic [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] and see the numbers shaped in Arabic, but open it in a European version of [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] and see European representation of the same numbers.</span></span> <span data-ttu-id="32d94-224">針對逗號分隔符號和百分比符號這類其他符號，這也是必要的，因為在相同的文件中，它們通常會伴隨數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-224">This is also necessary for other symbols such as comma separators and percentage symbol because they usually accompany numbers in the same document.</span></span>  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 延續了相同的傳統，並加入這項功能的進一步支援，而讓使用者更能夠掌控使用替換功能的時機和方式。  這項功能雖然是針對所有語言設計，但它卻特別適用於雙向內容。在雙向內容中，設計特定語言的數字外形通常是應用程式開發人員的一大挑戰，因為應用程式可能會在各種的文化特性 \(Culture\) 中執行。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="32d94-225"> 會持續使用相同的傳統，並新增此替代的進一步支援，讓使用者更深入控制該何時和如何使用這項功能。</span><span class="sxs-lookup"><span data-stu-id="32d94-225"> continues the same tradition, and adds further support for this feature that allows more user control over when and how substitution is used.</span></span> <span data-ttu-id="32d94-226">雖然這項功能設計用於任何語言，但特別適用於雙向內容，其中特定語言的成形數字通常會是應用程式開發人員的挑戰，因為應用程式可能會在各種文化特性中執行。</span><span class="sxs-lookup"><span data-stu-id="32d94-226">While this feature is designed for any language, it is particularly useful in bidirectional content where shaping digits for a specific language is usually a challenge for application developers because of the various cultures an application might run on.</span></span>  
   
- 控制如何在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中運用數字替換的核心屬性就是 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 相依性屬性。  <xref:System.Windows.Media.NumberSubstitution> 類別會指定文字中數字的顯示方式。  該類別有三個公用屬性可定義其行為。  以下是每個屬性的摘要。  
+ <span data-ttu-id="32d94-227">控制如何數字替代的核心屬性適用於[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>相依性屬性。</span><span class="sxs-lookup"><span data-stu-id="32d94-227">The core property controlling how number substitution works in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is the <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> dependency property.</span></span> <span data-ttu-id="32d94-228"><xref:System.Windows.Media.NumberSubstitution>類別會指定要顯示的文字中的數字的方式。</span><span class="sxs-lookup"><span data-stu-id="32d94-228">The <xref:System.Windows.Media.NumberSubstitution> class specifies how numbers in text are to be displayed.</span></span> <span data-ttu-id="32d94-229">它有三個定義其行為的公用屬性。</span><span class="sxs-lookup"><span data-stu-id="32d94-229">It has three public properties that define its behavior.</span></span> <span data-ttu-id="32d94-230">以下是每個屬性的摘要。</span><span class="sxs-lookup"><span data-stu-id="32d94-230">Following is a summary of each of the properties.</span></span>  
   
- **CultureSource：**  
+ <span data-ttu-id="32d94-231">**CultureSource**：</span><span class="sxs-lookup"><span data-stu-id="32d94-231">**CultureSource:**</span></span>  
   
- 這個屬性可指定如何決定數字的文化特性。  它會採用三個 <xref:System.Windows.Media.NumberCultureSource> 列舉值的其中一個。  
+ <span data-ttu-id="32d94-232">這個屬性指定如何判斷數字的文化特性。</span><span class="sxs-lookup"><span data-stu-id="32d94-232">This property specifies how the culture for numbers is determined.</span></span> <span data-ttu-id="32d94-233">它會使用其中一個三個<xref:System.Windows.Media.NumberCultureSource>列舉值。</span><span class="sxs-lookup"><span data-stu-id="32d94-233">It takes one of three <xref:System.Windows.Media.NumberCultureSource> enumeration values.</span></span>  
   
--   覆寫：數字文化特性就是 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 屬性的數字文化特性。  
+-   <span data-ttu-id="32d94-234">覆寫： 數字文化特性是屬於<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="32d94-234">Override: Number culture is that of <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> property.</span></span>  
   
--   文字：數字文化特性就是文字執行的文化特性。  在標記中，這會是 `xml:lang`，或其別名 `Language` 屬性 \(<xref:System.Windows.FrameworkElement.Language%2A> 或 <xref:System.Windows.FrameworkContentElement.Language%2A>\)。  此外，它也是衍生自 <xref:System.Windows.FrameworkContentElement> 之類別的預設值。  此種類別包含 <xref:System.Windows.Documents.Paragraph?displayProperty=fullName>、<xref:System.Windows.Documents.Table?displayProperty=fullName>、<xref:System.Windows.Documents.TableCell?displayProperty=fullName> 等。  
+-   <span data-ttu-id="32d94-235">文字︰數字文化特性是文字執行的文化特性。</span><span class="sxs-lookup"><span data-stu-id="32d94-235">Text: Number culture is the culture of the text run.</span></span> <span data-ttu-id="32d94-236">在標記中，這會是`xml:lang`，或其別名`Language`屬性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。</span><span class="sxs-lookup"><span data-stu-id="32d94-236">In markup, this would be `xml:lang`, or its alias `Language` property (<xref:System.Windows.FrameworkElement.Language%2A> or <xref:System.Windows.FrameworkContentElement.Language%2A>).</span></span> <span data-ttu-id="32d94-237">此外，它是衍生自類別的預設值<xref:System.Windows.FrameworkContentElement>。</span><span class="sxs-lookup"><span data-stu-id="32d94-237">Also, it is the default for classes deriving from <xref:System.Windows.FrameworkContentElement>.</span></span> <span data-ttu-id="32d94-238">這類類別都包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>，<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>等等。</span><span class="sxs-lookup"><span data-stu-id="32d94-238">Such classes include <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> and so forth.</span></span>  
   
--   使用者：數字文化特性就是目前執行緒的文化特性。  此屬性為 <xref:System.Windows.FrameworkElement> 之所有子類別 \(如 <xref:System.Windows.Controls.Page>、<xref:System.Windows.Window> 和 <xref:System.Windows.Controls.TextBlock>\) 的預設值。  
+-   <span data-ttu-id="32d94-239">使用者︰數字文化特性是目前執行緒的文化特性。</span><span class="sxs-lookup"><span data-stu-id="32d94-239">User: Number culture is the culture of the current thread.</span></span> <span data-ttu-id="32d94-240">這個屬性是所有的子類別的預設值<xref:System.Windows.FrameworkElement>例如<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="32d94-240">This property is the default for all subclasses of <xref:System.Windows.FrameworkElement> such as <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> and <xref:System.Windows.Controls.TextBlock>.</span></span>  
   
- **CultureOverride**：  
+ <span data-ttu-id="32d94-241">**CultureOverride**：</span><span class="sxs-lookup"><span data-stu-id="32d94-241">**CultureOverride**:</span></span>  
   
- <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> 屬性設為 <xref:System.Windows.Media.NumberCultureSource> 時，才會使用 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 屬性，否則會予以忽略。  該屬性可指定數字文化特性。  值為 `null` \(預設值\) 會解譯為 en\-US。  
+ <span data-ttu-id="32d94-242"><xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>屬性只使用<xref:System.Windows.Media.NumberSubstitution.CultureSource%2A>屬性設定為<xref:System.Windows.Media.NumberCultureSource.Override>，否則會被忽略。</span><span class="sxs-lookup"><span data-stu-id="32d94-242">The <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> property is used only if the <xref:System.Windows.Media.NumberSubstitution.CultureSource%2A> property is set to <xref:System.Windows.Media.NumberCultureSource.Override> and is ignored otherwise.</span></span> <span data-ttu-id="32d94-243">它指定數字文化特性。</span><span class="sxs-lookup"><span data-stu-id="32d94-243">It specifies the number culture.</span></span> <span data-ttu-id="32d94-244">值為`null`，預設值，會解譯為 EN-US。</span><span class="sxs-lookup"><span data-stu-id="32d94-244">A value of `null`, the default value, is interpreted as en-US.</span></span>  
   
- **Substitution**：  
+ <span data-ttu-id="32d94-245">**替代**：</span><span class="sxs-lookup"><span data-stu-id="32d94-245">**Substitution**:</span></span>  
   
- 這個屬性會指定要執行的數字替換類型。  它會採用下列其中一個 <xref:System.Windows.Media.NumberSubstitutionMethod> 列舉值。  
+ <span data-ttu-id="32d94-246">這個屬性指定要執行的數字替代類型。</span><span class="sxs-lookup"><span data-stu-id="32d94-246">This property specifies the type of number substitution to perform.</span></span> <span data-ttu-id="32d94-247">它會採用下列其中一種<xref:System.Windows.Media.NumberSubstitutionMethod>列舉值。</span><span class="sxs-lookup"><span data-stu-id="32d94-247">It takes one of the following <xref:System.Windows.Media.NumberSubstitutionMethod> enumeration values.</span></span>  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod>：替換方法是根據數字文化特定的 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=fullName> 屬性決定。  這是預設值。  
+-   <span data-ttu-id="32d94-248"><xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>： 的替代方法取決於數字的文化特性<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="32d94-248"><xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: The substitution method is determined based on the number culture's <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="32d94-249">這是預設值。</span><span class="sxs-lookup"><span data-stu-id="32d94-249">This is the default.</span></span>  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod>：如果數字文化特性為阿拉伯或波斯文化特性，則會指定數字需視內容而定。  
+-   <span data-ttu-id="32d94-250"><xref:System.Windows.Media.NumberSubstitutionMethod.Context>： 如果數字的文化特性為阿拉伯文或波斯文文化特性，它會指定數字取決的內容。</span><span class="sxs-lookup"><span data-stu-id="32d94-250"><xref:System.Windows.Media.NumberSubstitutionMethod.Context>: If the number culture is an Arabic or Farsi culture, it specifies that the digits depend on the context.</span></span>  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod>：數字一律呈現為歐語數字。  
+-   <span data-ttu-id="32d94-251"><xref:System.Windows.Media.NumberSubstitutionMethod.European>： 數字永遠會轉譯為歐洲的數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-251"><xref:System.Windows.Media.NumberSubstitutionMethod.European>: Numbers are always rendered as European digits.</span></span>  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod>：使用國際數字的數字文化特性來呈現數字，如同文化特性的 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 所指定。  
+-   <span data-ttu-id="32d94-252"><xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>： 使用國家 （地區） 的數字的數字的文化特性的文化特性所指定的轉譯數字<xref:System.Globalization.CultureInfo.NumberFormat%2A>。</span><span class="sxs-lookup"><span data-stu-id="32d94-252"><xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Numbers are rendered using the national digits for the number culture, as specified by the culture's <xref:System.Globalization.CultureInfo.NumberFormat%2A>.</span></span>  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod>：使用傳統數字的數字文化特性來呈現數字。  對大多數的文化特性來說，這與 <xref:System.Windows.Media.NumberSubstitutionMethod> 相同。  不過，<xref:System.Windows.Media.NumberSubstitutionMethod> 會在某些阿拉伯文化特性中呈現拉丁數字，然而此值會在所有的阿拉伯文化特性中呈現阿拉伯數字。  
+-   <span data-ttu-id="32d94-253"><xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>： 數字會轉譯使用傳統的位數的數字的文化特性。</span><span class="sxs-lookup"><span data-stu-id="32d94-253"><xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Numbers are rendered using the traditional digits for the number culture.</span></span> <span data-ttu-id="32d94-254">對於大部分的文化特性，這等同於<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。</span><span class="sxs-lookup"><span data-stu-id="32d94-254">For most cultures, this is the same as <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>.</span></span> <span data-ttu-id="32d94-255">不過，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>導致某些阿拉伯文的文化特性的拉丁文數字，而這個值會導致所有阿拉伯文文化特性的阿拉伯數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-255">However, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> results in Latin digits for some Arabic cultures, whereas this value results in Arabic digits for all Arabic cultures.</span></span>  
   
- 這些值對雙向內容開發人員而言有何意義？  在大部分情況下，開發人員可能只需要定義每個文字 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 項目的 <xref:System.Windows.FlowDirection> 和語言，例如 `Language="ar-SA"`，而 <xref:System.Windows.Media.NumberSubstitution> 邏輯會根據正確的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 負責顯示數字。  下列範例會示範如何在執行於 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 阿拉伯文版的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中使用阿拉伯和英文數字。  
+ <span data-ttu-id="32d94-256">這些值對雙向內容開發人員的意義為何？</span><span class="sxs-lookup"><span data-stu-id="32d94-256">What do those values mean for a bidirectional content developer?</span></span> <span data-ttu-id="32d94-257">在大部分情況下，開發人員可能需要只定義<xref:System.Windows.FlowDirection>每個文字的語言及[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]項目，例如`Language="ar-SA"`和<xref:System.Windows.Media.NumberSubstitution>邏輯會負責顯示根據正確的數字[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="32d94-257">In most cases, the developer might need only to define <xref:System.Windows.FlowDirection> and the language of each textual [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] element, for example `Language="ar-SA"` and the <xref:System.Windows.Media.NumberSubstitution> logic takes care of displaying the numbers according to the correct [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].</span></span> <span data-ttu-id="32d94-258">下列範例示範如何使用阿拉伯文和英文中的數字[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]阿拉伯文版本中執行的應用程式[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="32d94-258">The following example demonstrates using Arabic and English numbers in a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application running in an Arabic version of [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].</span></span>  
   
- [!code-xml[Numbers#Numbers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
+ [!code-xaml[Numbers#Numbers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   
- 如果您是在 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 阿拉伯文版中執行，下圖會顯示前一個範例的輸出。  
+ <span data-ttu-id="32d94-259">下圖顯示先前範例的輸出，如果您正在使用阿拉伯文的版本[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="32d94-259">The following graphic shows the output of the previous sample if you are running in an Arabic version of [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].</span></span>  
   
- **顯示阿拉伯和英文數字的圖形**  
+ <span data-ttu-id="32d94-260">**顯示其中顯示阿拉伯和英文數字的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-260">**Graphic That Shows Arabic and English Numbers Displayed**</span></span>  
   
- ![顯示數字的 XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/numbers.png "Numbers")  
+ <span data-ttu-id="32d94-261">![顯示數字的 XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/numbers.PNG "Numbers")</span><span class="sxs-lookup"><span data-stu-id="32d94-261">![XamlPad screen shot with numbers](../../../../docs/framework/wpf/advanced/media/numbers.PNG "Numbers")</span></span>  
   
- 在此情況下 <xref:System.Windows.FlowDirection> 很重要，因為將 <xref:System.Windows.FlowDirection> 改設為 <xref:System.Windows.FlowDirection> 會產生歐語數字。  下列各節討論如何讓整份文件中的數字有統一的顯示方式。  如果這個範例不是在 Windows 阿拉伯文版上執行，則所有數字都會顯示為歐語數字。  
+ <span data-ttu-id="32d94-262"><xref:System.Windows.FlowDirection>是非常重要的在此情況下設定因為<xref:System.Windows.FlowDirection>至<xref:System.Windows.FlowDirection.LeftToRight>而是會產生歐洲的數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-262">The <xref:System.Windows.FlowDirection> was important in this case because setting the <xref:System.Windows.FlowDirection> to <xref:System.Windows.FlowDirection.LeftToRight> instead would have yielded European digits.</span></span> <span data-ttu-id="32d94-263">下列各節討論如何統一顯示整個文件的數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-263">The following sections discuss how to have a unified display of digits throughout your document.</span></span> <span data-ttu-id="32d94-264">如果此範例不是在阿拉伯文 Windows 上執行，則所有數字會顯示為歐洲數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-264">If this example is not running on Arabic Windows, all the digits display as European digits.</span></span>  
   
- **定義替換規則**  
+ <span data-ttu-id="32d94-265">**定義替代規則**</span><span class="sxs-lookup"><span data-stu-id="32d94-265">**Defining Substitution Rules**</span></span>  
   
- 在真正的應用程式中，您可能需要以程式設計的方式設定語言。  例如，您想要將 `xml:lang` 屬性設為與系統 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 所用的屬性相同，或者也可以根據應用程式狀態變更語言。  
+ <span data-ttu-id="32d94-266">在實際的應用程式中，您可能需要以程式設計方式來設定語言。</span><span class="sxs-lookup"><span data-stu-id="32d94-266">In a real application you might need to set the Language programmatically.</span></span> <span data-ttu-id="32d94-267">例如，您要設定`xml:lang`系統所使用的相同屬性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，或可能已經變更的語言，根據應用程式狀態。</span><span class="sxs-lookup"><span data-stu-id="32d94-267">For example, you want to set the `xml:lang` attribute to be the same as the one used by the system’s [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], or maybe change the language depending on the application state.</span></span>  
   
- 如果您想根據應用程式的狀態進行變更，請使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的其他功能。  
+ <span data-ttu-id="32d94-268">如果您想要變更根據應用程式的狀態，請使用所提供的其他功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="32d94-268">If you want to make changes based on the application's state, make use of other features provided by [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
- 首先，設定應用程式元件的 `NumberSubstitution.CultureSource="Text"`。  使用此設定可確保設定並非來自以「使用者」做為預設值之文字項目 \(如 <xref:System.Windows.Controls.TextBlock>\) 的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ <span data-ttu-id="32d94-269">首先，設定應用程式元件的`NumberSubstitution.CultureSource="Text"`。</span><span class="sxs-lookup"><span data-stu-id="32d94-269">First, set the application component’s `NumberSubstitution.CultureSource="Text"`.</span></span> <span data-ttu-id="32d94-270">使用這項設定可確保該設定不是來自[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]文字項目，具有 「 使用者 」 做為預設值，例如<xref:System.Windows.Controls.TextBlock>。</span><span class="sxs-lookup"><span data-stu-id="32d94-270">Using this setting makes sure that the settings do not come from the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] for text elements that have "User" as the default, such as <xref:System.Windows.Controls.TextBlock>.</span></span>  
   
- 例如：  
+ <span data-ttu-id="32d94-271">例如: </span><span class="sxs-lookup"><span data-stu-id="32d94-271">For example:</span></span>  
   
 ||  
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- 例如，在對應的 [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] 程式碼中，將 `Language` 屬性設為 `"ar-SA"`。  
+ <span data-ttu-id="32d94-272">在對應[!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)]程式碼中，設定`Language`屬性例如，若要`"ar-SA"`。</span><span class="sxs-lookup"><span data-stu-id="32d94-272">In the corresponding [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] code, set the `Language` property for example, to `"ar-SA"`.</span></span>  
   
 ||  
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage("ar-SA");`|  
   
- 如果您需要將 `Language` 屬性設為目前使用者的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 語言，請使用下列程式碼。  
+ <span data-ttu-id="32d94-273">如果您需要設定`Language`屬性目前的使用者[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用下列程式碼的語言。</span><span class="sxs-lookup"><span data-stu-id="32d94-273">If you need to set the `Language` property to the current user’s [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] language use the following code.</span></span>  
   
 ||  
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 表示目前執行緒在執行階段使用的目前文化特性。  
+ <span data-ttu-id="32d94-274"><xref:System.Globalization.CultureInfo.CurrentCulture%2A>表示目前在執行階段目前的執行緒所使用的文化特性。</span><span class="sxs-lookup"><span data-stu-id="32d94-274"><xref:System.Globalization.CultureInfo.CurrentCulture%2A> represents the current culture used by the current thread at run time.</span></span>  
   
- 您最後的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 範例應該類似下列範例。  
+ <span data-ttu-id="32d94-275">最終[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]範例應該類似下列的範例。</span><span class="sxs-lookup"><span data-stu-id="32d94-275">Your final [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] example should be similar to the following example.</span></span>  
   
- [!code-xml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
+ [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- 您最後的 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 範例應該類似下列範例。  
+ <span data-ttu-id="32d94-276">最終[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]應該類似下列的範例。</span><span class="sxs-lookup"><span data-stu-id="32d94-276">Your final [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] example should be similar to the following.</span></span>  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   
- 下圖顯示各程式設計語言的視窗外觀。  
+ <span data-ttu-id="32d94-277">下圖顯示任一程式設計語言之視窗的外觀。</span><span class="sxs-lookup"><span data-stu-id="32d94-277">The following graphic shows what the window looks like for either programming language.</span></span>  
   
- **顯示阿拉伯數字的圖形**  
+ <span data-ttu-id="32d94-278">**顯示阿拉伯數字的圖形**</span><span class="sxs-lookup"><span data-stu-id="32d94-278">**Graphic That Displays Arabic Numbers**</span></span>  
   
- ![阿拉伯數字](../../../../docs/framework/wpf/advanced/media/numbers2.png "Numbers2")  
+ <span data-ttu-id="32d94-279">![阿拉伯數字](../../../../docs/framework/wpf/advanced/media/numbers2.PNG "Numbers2")</span><span class="sxs-lookup"><span data-stu-id="32d94-279">![Arabic numbers](../../../../docs/framework/wpf/advanced/media/numbers2.PNG "Numbers2")</span></span>  
   
- **使用 Substitution 屬性**  
+ <span data-ttu-id="32d94-280">**使用替代屬性**</span><span class="sxs-lookup"><span data-stu-id="32d94-280">**Using the Substitution Property**</span></span>  
   
- 數字替換在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的運作方式，會取決於文字項目的語言與其 <xref:System.Windows.FlowDirection>。  如果 <xref:System.Windows.FlowDirection> 為由左至右，則會呈現歐語數字。  但是，如果數字前面接著阿拉伯文字，或語言設定為 "ar" 且 <xref:System.Windows.FlowDirection> 為 <xref:System.Windows.FlowDirection>，則會改為呈現阿拉伯數字。  
+ <span data-ttu-id="32d94-281">在中的運作方式數字的替代[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]取決於這兩種語言的文字項目和其<xref:System.Windows.FlowDirection>。</span><span class="sxs-lookup"><span data-stu-id="32d94-281">The way number substitution works in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] depends on both the Language of the text element and its <xref:System.Windows.FlowDirection>.</span></span> <span data-ttu-id="32d94-282">如果<xref:System.Windows.FlowDirection>由左到右，然後呈現歐洲的數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-282">If the <xref:System.Windows.FlowDirection> is left to right, then European digits are rendered.</span></span> <span data-ttu-id="32d94-283">不過如果它前面阿拉伯文文字，或語言設定為"ar"和<xref:System.Windows.FlowDirection>是<xref:System.Windows.FlowDirection.RightToLeft>，改為呈現阿拉伯數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-283">However if it is preceded by Arabic text, or has the language set to "ar" and the <xref:System.Windows.FlowDirection> is <xref:System.Windows.FlowDirection.RightToLeft>, Arabic digits are rendered instead.</span></span>  
   
- 然而，在某些情況下，您可能想建立統一的應用程式，例如：所有使用者都適用歐語數字。  或者，<xref:System.Windows.Documents.Table> 儲存格中的阿拉伯數字具有特定 <xref:System.Windows.Style>。  使用 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 屬性，便可輕易達成。  
+ <span data-ttu-id="32d94-284">不過，在某些情況下，您可能想建立統一的應用程式，例如所有使用者都使用歐洲數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-284">In some cases, however, you might want to create a unified application, for example European digits for all users.</span></span> <span data-ttu-id="32d94-285">阿拉伯數字或者<xref:System.Windows.Documents.Table>具有特定的資料格<xref:System.Windows.Style>。</span><span class="sxs-lookup"><span data-stu-id="32d94-285">Or Arabic digits in <xref:System.Windows.Documents.Table> cells with a specific <xref:System.Windows.Style>.</span></span> <span data-ttu-id="32d94-286">一個簡單的方法是使用<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="32d94-286">One easy way to do that is using the <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> property.</span></span>  
   
- 在下列範例中，第一個 <xref:System.Windows.Controls.TextBlock> 尚未設定 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 屬性，所以演算法會如預期顯示阿拉伯數字。  然而，在第二個 <xref:System.Windows.Controls.TextBlock> 中，替換功能設定為歐語覆寫阿拉伯數字的預設替換，所以會顯示歐語數字。  
+ <span data-ttu-id="32d94-287">在下列範例中，第一個<xref:System.Windows.Controls.TextBlock>沒有<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>設定屬性，因此演算法會如預期般，顯示阿拉伯數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-287">In the following example, the first <xref:System.Windows.Controls.TextBlock> does not have the <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> property set, so the algorithm displays Arabic digits as expected.</span></span> <span data-ttu-id="32d94-288">不過，第二個<xref:System.Windows.Controls.TextBlock>、 替代設為歐洲覆寫預設替代的阿拉伯數字，且顯示歐洲的數字。</span><span class="sxs-lookup"><span data-stu-id="32d94-288">However in the second <xref:System.Windows.Controls.TextBlock>, the substitution is set to European overriding the default substitution for Arabic numbers, and European digits are displayed.</span></span>  
   
- [!code-xml[Numbers3#Numbers3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]
+ [!code-xaml[Numbers3#Numbers3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

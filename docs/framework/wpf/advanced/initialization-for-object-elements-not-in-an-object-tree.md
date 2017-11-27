@@ -1,52 +1,58 @@
 ---
-title: "初始化物件樹狀結構以外的物件項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "項目, 初始化"
-  - "初始化項目"
-  - "邏輯樹狀結構"
-  - "視覺化樹狀結構"
+title: "初始化物件樹狀結構以外的物件項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- logical tree [WPF]
+- visual tree [WPF]
+- elements [WPF], initializing
+- initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a2a4dd10b664dc349b0c413d7abac03280f8fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 初始化物件樹狀結構以外的物件項目
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始設定的某些部分已延後到某些處理序，而這些處理序通常依賴連接至[邏輯樹狀結構](GTMT)或[視覺化樹狀結構](GTMT)的項目。  本主題說明為了初始化未連接到這兩個樹狀目錄的項目，您可能需要採取的步驟。  
+# <a name="initialization-for-object-elements-not-in-an-object-tree"></a><span data-ttu-id="1bff5-102">初始化物件樹狀結構以外的物件項目</span><span class="sxs-lookup"><span data-stu-id="1bff5-102">Initialization for Object Elements Not in an Object Tree</span></span>
+<span data-ttu-id="1bff5-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化的某些層面會延後處理，因為這些處理通常需要將該項目連接到邏輯樹狀結構或視覺化樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="1bff5-103">Some aspects of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] initialization are deferred to processes that typically rely on that element being connected to either the logical tree or visual tree.</span></span> <span data-ttu-id="1bff5-104">本主題說明為了初始化未連接到任一樹狀結構的項目所需的步驟。</span><span class="sxs-lookup"><span data-stu-id="1bff5-104">This topic describes the steps that may be necessary in order to initialize an element that is not connected to either tree.</span></span>  
   
-   
+ 
   
-## 項目和邏輯樹狀結構  
- 在程式碼中建立 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的執行個體時，您應該了解，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的物件初始設定有幾個層面並不屬於呼叫類別建構函式時所執行之程式碼的一部分。  特別是控制項類別，該控制項的視覺化呈現大都不是由建構函式定義，  而是由控制項的樣板定義。  樣板可能來自各種不同的來源，但通常是從主題佈景樣式取得。  樣板實際上是晚期繫結 \(Late\-Binding\)；必須等到相關控制項可以開始配置時，必要的樣板才會附加到該控制項，  而控制項則必須等到附加至邏輯樹狀結構 \(連接到根目錄的呈現介面\) 之後才可以開始配置。  其於邏輯樹狀結構中定義的所有子項目都是由該根層級項目加以啟始。  
+## <a name="elements-and-the-logical-tree"></a><span data-ttu-id="1bff5-105">項目和邏輯樹狀結構</span><span class="sxs-lookup"><span data-stu-id="1bff5-105">Elements and the Logical Tree</span></span>  
+ <span data-ttu-id="1bff5-106">當您在程式碼中建立 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的執行個體時，您應該注意到 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的物件初始化有幾個層面刻意不屬於呼叫類別建構函式時所執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="1bff5-106">When you create an instance of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] class in code, you should be aware that several aspects of object initialization for a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] class are deliberately not a part of the code that is executed when calling the class constructor.</span></span> <span data-ttu-id="1bff5-107">特別是控制項類別，該控制項的視覺表示大部分不是由建構函式定義，</span><span class="sxs-lookup"><span data-stu-id="1bff5-107">Particularly for a control class, most of the visual representation of that control is not defined by the constructor.</span></span> <span data-ttu-id="1bff5-108">而是由控制項的範本來定義視覺表示。</span><span class="sxs-lookup"><span data-stu-id="1bff5-108">Instead, the visual representation is defined by the control's template.</span></span> <span data-ttu-id="1bff5-109">範本可能來自各種不同的來源，但最常會從佈景主題樣式取得範本。</span><span class="sxs-lookup"><span data-stu-id="1bff5-109">The template potentially comes from a variety of sources, but most often the template is obtained from theme styles.</span></span> <span data-ttu-id="1bff5-110">範本實際上是晚期繫結；必須等到相關控制項可以開始配置之後，才能將所需的範本附加至該控制項。</span><span class="sxs-lookup"><span data-stu-id="1bff5-110">Templates are effectively late-binding; the necessary template is not attached to the control in question until the control is ready for layout.</span></span> <span data-ttu-id="1bff5-111">此外，控制項必須等到附加至連接到根目錄之呈現介面的邏輯樹狀結構之後，才能開始配置。</span><span class="sxs-lookup"><span data-stu-id="1bff5-111">And the control is not ready for layout until it is attached to a logical tree that connects to a rendering surface at the root.</span></span> <span data-ttu-id="1bff5-112">根層級項目會依照邏輯樹狀結構中的定義，來啟始其所有子項目的呈現。</span><span class="sxs-lookup"><span data-stu-id="1bff5-112">It is that root-level element that initiates the rendering of all of its child elements as defined in the logical tree.</span></span>  
   
- 視覺化樹狀結構也會參與此程序。  透過樣板成為視覺樹狀結構一部分的項目，也必須等到連接之後才會完全具現化 \(Instantiated\)。  
+ <span data-ttu-id="1bff5-113">視覺化樹狀結構也會參與此程序。</span><span class="sxs-lookup"><span data-stu-id="1bff5-113">The visual tree also participates in this process.</span></span> <span data-ttu-id="1bff5-114">透過範本成為視覺化樹狀結構一部分的項目，也必須等到連接之後才能完全具現化。</span><span class="sxs-lookup"><span data-stu-id="1bff5-114">Elements that are part of the visual tree through the templates are also not fully instantiated until connected.</span></span>  
   
- 這個行為的結果是依賴項目完整視覺特性的某些作業需要執行額外的步驟。  例如，如果您嘗試取得某個類別的視覺化特性，但是該類別雖已建構完成卻尚未附加至樹狀結構。  舉例來說，如果您想在 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 上呼叫 <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>，而您所傳遞的視覺效果是尚未連接至樹狀結構的項目，則必須等到完成額外的初始設定步驟之後，該項目才會呈現完整的視覺效果。  
+ <span data-ttu-id="1bff5-115">此行為的結果是，依賴某個項目之完整視覺特性的特定作業需要額外的步驟。</span><span class="sxs-lookup"><span data-stu-id="1bff5-115">The consequences of this behavior are that certain operations that rely on the completed visual characteristics of an element require additional steps.</span></span> <span data-ttu-id="1bff5-116">其中一個範例是您嘗試取得某個類別的視覺特性，而此類別已建構但尚未附加至樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="1bff5-116">An example is if you are attempting to get the visual characteristics of a class that was constructed but not yet attached to a tree.</span></span> <span data-ttu-id="1bff5-117">比方說，如果您想要呼叫<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>上<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和您要將視覺效果是項目未連線至樹狀目錄中，直到其他初始設定步驟都完成之後，該元素會以視覺化方式完成。</span><span class="sxs-lookup"><span data-stu-id="1bff5-117">For instance, if you want to call <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> on a <xref:System.Windows.Media.Imaging.RenderTargetBitmap> and the visual you are passing is an element not connected to a tree, that element is not visually complete until additional initialization steps are completed.</span></span>  
   
-### 使用 BeginInit 和 EndInit 來初始化項目  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的各種類別均可實作 <xref:System.ComponentModel.ISupportInitialize> 介面。  您可使用此介面的 <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> 和 <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 方法來代表程式碼中包含初始設定步驟 \(例如設定影響呈現效果的屬性值\) 的區域。  在呼叫序列中的 <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> 之後，配置系統可以處理項目並開始尋找隱含樣式。  
+### <a name="using-begininit-and-endinit-to-initialize-the-element"></a><span data-ttu-id="1bff5-118">使用 BeginInit 和 EndInit 來初始化項目</span><span class="sxs-lookup"><span data-stu-id="1bff5-118">Using BeginInit and EndInit to Initialize the Element</span></span>  
+ <span data-ttu-id="1bff5-119">中的各種類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.ComponentModel.ISupportInitialize>介面。</span><span class="sxs-lookup"><span data-stu-id="1bff5-119">Various classes in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implement the <xref:System.ComponentModel.ISupportInitialize> interface.</span></span> <span data-ttu-id="1bff5-120">您使用<xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>和<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>包含初始化步驟 （例如，設定屬性值，會影響轉譯） 程式碼中的區域線，代表介面的方法。</span><span class="sxs-lookup"><span data-stu-id="1bff5-120">You use the <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> and <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> methods of the interface to denote a region in your code that contains initialization steps (such as setting property values that affect rendering).</span></span> <span data-ttu-id="1bff5-121">之後<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>呼叫的順序，請配置系統可以處理項目，並開始尋找隱含樣式。</span><span class="sxs-lookup"><span data-stu-id="1bff5-121">After <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> is called in the sequence, the layout system can process the element and start looking for an implicit style.</span></span>  
   
- 如果您要設定屬性的項目是 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 衍生類別 \(Derived Class\)，則您可以呼叫 <xref:System.Windows.FrameworkElement.BeginInit%2A> 和 <xref:System.Windows.FrameworkElement.EndInit%2A> 的版本，而非轉換成 <xref:System.ComponentModel.ISupportInitialize>。  
+ <span data-ttu-id="1bff5-122">如果項目要設定屬性，在上是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>衍生類別中，您便可以呼叫的類別版本<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>而不是轉型為<xref:System.ComponentModel.ISupportInitialize>。</span><span class="sxs-lookup"><span data-stu-id="1bff5-122">If the element you are setting properties on is a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement> derived class, then you can call the class versions of <xref:System.Windows.FrameworkElement.BeginInit%2A> and <xref:System.Windows.FrameworkElement.EndInit%2A> rather than casting to <xref:System.ComponentModel.ISupportInitialize>.</span></span>  
   
-### 程式碼範例  
- 下列範例是主控台應用程式的範例程式碼，它使用鬆散 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案的呈現 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和 <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=fullName>，說明如何將 <xref:System.Windows.FrameworkElement.BeginInit%2A> 和 <xref:System.Windows.FrameworkElement.EndInit%2A> 正確放置在可調整影響呈現之屬性的其他 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼叫前後。  
+### <a name="sample-code"></a><span data-ttu-id="1bff5-123">程式碼範例</span><span class="sxs-lookup"><span data-stu-id="1bff5-123">Sample Code</span></span>  
+ <span data-ttu-id="1bff5-124">下列範例會使用轉譯的主控台應用程式的範例程式碼[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]和<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>的鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，以說明的適當位置<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>周圍其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼叫可調整會影響呈現的屬性。</span><span class="sxs-lookup"><span data-stu-id="1bff5-124">The following example is sample code for a console application that uses rendering [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] and <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> of a loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file to illustrate the proper placement of <xref:System.Windows.FrameworkElement.BeginInit%2A> and <xref:System.Windows.FrameworkElement.EndInit%2A> around other [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] calls that adjust properties that affect rendering.</span></span>  
   
- 此範例僅顯示主要的函式。  `Rasterize` 和 `Save` 函式 \(未顯示\) 是負責影像處理和 IO 的公用程式函式。  
+ <span data-ttu-id="1bff5-125">此範例只會說明 main 函式。</span><span class="sxs-lookup"><span data-stu-id="1bff5-125">The example illustrates the main function only.</span></span> <span data-ttu-id="1bff5-126">`Rasterize` 和 `Save` 函式 (未顯示) 是負責影像處理和 IO 的公用程式函式。</span><span class="sxs-lookup"><span data-stu-id="1bff5-126">The functions `Rasterize` and `Save` (not shown) are utility functions that take care of image processing and IO.</span></span>  
   
  [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
  [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
-## 請參閱  
- [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)   
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)   
- [XAML 概觀 \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="1bff5-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1bff5-127">See Also</span></span>  
+ [<span data-ttu-id="1bff5-128">WPF 中的樹狀結構</span><span class="sxs-lookup"><span data-stu-id="1bff5-128">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [<span data-ttu-id="1bff5-129">WPF 圖形轉譯概觀</span><span class="sxs-lookup"><span data-stu-id="1bff5-129">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="1bff5-130">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="1bff5-130">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

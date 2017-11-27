@@ -1,82 +1,85 @@
 ---
-title: "Implementing the UI Automation Invoke Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, Invoke control pattern"
-  - "control patterns, Invoke"
-  - "Invoke control pattern"
+title: "實作 UI 自動化 Invoke 控制項模式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Invoke control pattern
+- control patterns, Invoke
+- Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-caps.latest.revision: 31
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 30
+caps.latest.revision: "31"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: d42952328f70fec32b4a2cb58733785b3c1d97ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Invoke Control Pattern
+# <a name="implementing-the-ui-automation-invoke-control-pattern"></a><span data-ttu-id="1521f-102">實作 UI 自動化 Invoke 控制項模式</span><span class="sxs-lookup"><span data-stu-id="1521f-102">Implementing the UI Automation Invoke Control Pattern</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱[Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="1521f-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="1521f-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="1521f-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="1521f-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題將介紹實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於此主題的結尾部分。  
+ <span data-ttu-id="1521f-105">本主題將介紹實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>的方針和慣例，包括事件和屬性的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="1521f-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IInvokeProvider>, including information about events and properties.</span></span> <span data-ttu-id="1521f-106">其他參考的連結列於此主題的結尾部分。</span><span class="sxs-lookup"><span data-stu-id="1521f-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- <xref:System.Windows.Automation.InvokePattern> 控制項模式用來支援控制項，且這些控制項在啟動時並不會維護狀態，而是會啟始或執行明確的單一動作。 維護狀態的控制項，例如核取方塊和選項按鈕，必須分別實作 <xref:System.Windows.Automation.Provider.IToggleProvider> 及 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>。 如需實作叫用控制項模式的控制項，請參閱[Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <span data-ttu-id="1521f-107"><xref:System.Windows.Automation.InvokePattern> 控制項模式用來支援控制項，且這些控制項在啟動時並不會維護狀態，而是會啟始或執行明確的單一動作。</span><span class="sxs-lookup"><span data-stu-id="1521f-107">The <xref:System.Windows.Automation.InvokePattern> control pattern is used to support controls that do not maintain state when activated but rather initiate or perform a single, unambiguous action.</span></span> <span data-ttu-id="1521f-108">維護狀態的控制項，例如核取方塊和選項按鈕，必須分別實作 <xref:System.Windows.Automation.Provider.IToggleProvider> 及 <xref:System.Windows.Automation.Provider.ISelectionItemProvider> 。</span><span class="sxs-lookup"><span data-stu-id="1521f-108">Controls that do maintain state, such as check boxes and radio buttons, must instead implement <xref:System.Windows.Automation.Provider.IToggleProvider> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider> respectively.</span></span> <span data-ttu-id="1521f-109">如需實作叫用控制項模式的控制項，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。</span><span class="sxs-lookup"><span data-stu-id="1521f-109">For examples of controls that implement the Invoke control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## 實作方針和慣例  
- 實作叫用控制項模式時，請注意下列方針和慣例：  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="1521f-110">實作方針和慣例</span><span class="sxs-lookup"><span data-stu-id="1521f-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="1521f-111">實作叫用控制項模式時，請注意下列方針和慣例：</span><span class="sxs-lookup"><span data-stu-id="1521f-111">When implementing the Invoke control pattern, note the following guidelines and conventions:</span></span>  
   
--   如果未透過另一個控制項模式提供者來公開相同的行為，則控制項會實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>。 例如，如果控制項的 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法所執行的動作與 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 方法相同，該控制項就不應實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>。  
+-   <span data-ttu-id="1521f-112">如果未透過另一個控制項模式提供者來公開相同的行為，則控制項會實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 。</span><span class="sxs-lookup"><span data-stu-id="1521f-112">Controls implement <xref:System.Windows.Automation.Provider.IInvokeProvider> if the same behavior is not exposed through another control pattern provider.</span></span> <span data-ttu-id="1521f-113">例如，如果控制項的 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法所執行的動作與 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 或 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 方法相同，該控制項就不應實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>。</span><span class="sxs-lookup"><span data-stu-id="1521f-113">For example, if the <xref:System.Windows.Automation.InvokePattern.Invoke%2A> method on a control performs the same action as the <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> method, the control should not implement <xref:System.Windows.Automation.Provider.IInvokeProvider>.</span></span>  
   
--   通常按一下、按兩下或按 ENTER、使用預先定義的鍵盤快速鍵，或其他按鈕組合，就可以叫用控制項。  
+-   <span data-ttu-id="1521f-114">通常按一下、按兩下或按 ENTER、使用預先定義的鍵盤快速鍵，或其他按鈕組合，就可以叫用控制項。</span><span class="sxs-lookup"><span data-stu-id="1521f-114">Invoking a control is generally performed by clicking or double-clicking or pressing ENTER, a predefined keyboard shortcut, or some alternate combination of keystrokes.</span></span>  
   
--   已啟動的控制項上會引發 <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> \(以回應執行相關動作的控制項\)。 在可能的情況下，應該是在控制項完成該動作並返回，且沒有發生封鎖時才會引發該事件。 在下列情節中，叫用事件應該在服務叫用要求之前引發：  
+-   <span data-ttu-id="1521f-115">已啟動的控制項上會引發<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (以回應執行相關動作的控制項)。</span><span class="sxs-lookup"><span data-stu-id="1521f-115"><xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> is raised on a control that has been activated (as a response to a control carrying out its associated action).</span></span> <span data-ttu-id="1521f-116">在可能的情況下，應該是在控制項完成該動作並返回，且沒有發生封鎖時才會引發該事件。</span><span class="sxs-lookup"><span data-stu-id="1521f-116">If possible, the event should be raised after the control has completed the action and returned without blocking.</span></span> <span data-ttu-id="1521f-117">在下列情節中，叫用事件應該在服務叫用要求之前引發：</span><span class="sxs-lookup"><span data-stu-id="1521f-117">The Invoked event should be raised before servicing the Invoke request in the following scenarios:</span></span>  
   
-    -   無法或不適合等待至動作完成。  
+    -   <span data-ttu-id="1521f-118">無法或不適合等待至動作完成。</span><span class="sxs-lookup"><span data-stu-id="1521f-118">It is not possible or practical to wait until the action is complete.</span></span>  
   
-    -   動作需要使用者互動。  
+    -   <span data-ttu-id="1521f-119">動作需要使用者互動。</span><span class="sxs-lookup"><span data-stu-id="1521f-119">The action requires user interaction.</span></span>  
   
-    -   動作費時，且會導致發出呼叫的用戶端長時間凍結。  
+    -   <span data-ttu-id="1521f-120">動作費時，且會導致發出呼叫的用戶端長時間凍結。</span><span class="sxs-lookup"><span data-stu-id="1521f-120">The action is time-consuming and will cause the calling client to block for a significant amount of time.</span></span>  
   
--   如果叫用控制項會有嚴重的副作用，就必須透過 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 屬性公開這些副作用。 例如，雖然 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 和選取範圍沒有關聯，但 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 卻可能會造成其他控制項受到選取。  
+-   <span data-ttu-id="1521f-121">如果叫用控制項會有嚴重的副作用，就必須透過 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 屬性公開這些副作用。</span><span class="sxs-lookup"><span data-stu-id="1521f-121">If invoking the control has significant side-effects, those side-effects should be exposed through the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> property.</span></span> <span data-ttu-id="1521f-122">例如，雖然 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 和選取範圍沒有關聯，但 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 卻可能會造成其他控制項受到選取。</span><span class="sxs-lookup"><span data-stu-id="1521f-122">For example, even though <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> is not associated with selection, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> may cause another control to become selected.</span></span>  
   
--   停留 \(滑鼠在上\) 效果通常不會形成叫用事件。 但是，根據停留狀態而執行動作 \(相對於產生視覺效果\) 的控制項，應該要支援 <xref:System.Windows.Automation.InvokePattern> 控制項模式。  
+-   <span data-ttu-id="1521f-123">停留 (滑鼠在上) 效果通常不會形成叫用事件。</span><span class="sxs-lookup"><span data-stu-id="1521f-123">Hover (or mouse-over) effects generally do not constitute an Invoked event.</span></span> <span data-ttu-id="1521f-124">但是，根據停留狀態而執行動作 (相對於產生視覺效果) 的控制項，應該要支援 <xref:System.Windows.Automation.InvokePattern> 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="1521f-124">However, controls that perform an action (as opposed to cause a visual effect) based on the hover state should support the <xref:System.Windows.Automation.InvokePattern> control pattern.</span></span>  
   
 > [!NOTE]
->  如果控制項的叫用是與滑鼠相關的副作用所造成的，便會將這個實作視為協助工具問題。  
+>  <span data-ttu-id="1521f-125">如果控制項的叫用是與滑鼠相關的副作用所造成的，便會將這個實作視為協助工具問題。</span><span class="sxs-lookup"><span data-stu-id="1521f-125">This implementation is considered an accessibility issue if the control can be invoked only as a result of a mouse-related side effect.</span></span>  
   
--   叫用控制項和選擇項目不同。 但是，依據控制項而定，叫用某些控制項可能會有造成此項目受到選取的副作用。 例如，叫用 \[我的文件\] 資料夾中的 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文件清單項目時，便會選取這個項目並開啟文件。  
+-   <span data-ttu-id="1521f-126">叫用控制項和選擇項目不同。</span><span class="sxs-lookup"><span data-stu-id="1521f-126">Invoking a control is different from selecting an item.</span></span> <span data-ttu-id="1521f-127">但是，依據控制項而定，叫用某些控制項可能會有造成此項目受到選取的副作用。</span><span class="sxs-lookup"><span data-stu-id="1521f-127">However, depending on the control, invoking it may cause the item to become selected as a side-effect.</span></span> <span data-ttu-id="1521f-128">例如，叫用 [我的文件] 資料夾中的 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 文件清單項目時，便會選取這個項目並開啟文件。</span><span class="sxs-lookup"><span data-stu-id="1521f-128">For example, invoking a [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] document list item in the My Documents folder both selects the item and opens the document.</span></span>  
   
--   叫用某個項目時，此項目可能會立即從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中消失。 要求事件回呼所提供的項目資訊，可能會因此而失敗。 建議的解決方法是預先擷取快取的資訊。  
+-   <span data-ttu-id="1521f-129">叫用某個項目時，此項目可能會立即從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中消失。</span><span class="sxs-lookup"><span data-stu-id="1521f-129">An element can disappear from the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree immediately upon being invoked.</span></span> <span data-ttu-id="1521f-130">要求事件回呼所提供的項目資訊，可能會因此而失敗。</span><span class="sxs-lookup"><span data-stu-id="1521f-130">Requesting information from the element provided by the event callback may fail as a result.</span></span> <span data-ttu-id="1521f-131">建議的解決方法是預先擷取快取的資訊。</span><span class="sxs-lookup"><span data-stu-id="1521f-131">Pre-fetching cached information is the recommended workaround.</span></span>  
   
--   控制項可以實作多個控制項模式。 例如，[!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具列上的 \[填滿色彩\] 控制項會實作 <xref:System.Windows.Automation.InvokePattern> 及 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。<xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。  
+-   <span data-ttu-id="1521f-132">控制項可以實作多個控制項模式。</span><span class="sxs-lookup"><span data-stu-id="1521f-132">Controls can implement multiple control patterns.</span></span> <span data-ttu-id="1521f-133">例如， [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 工具列上的 [填滿色彩] 控制項會實作 <xref:System.Windows.Automation.InvokePattern> 及 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="1521f-133">For example, the Fill Color control on the [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns.</span></span> <span data-ttu-id="1521f-134"><xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。</span><span class="sxs-lookup"><span data-stu-id="1521f-134"><xref:System.Windows.Automation.ExpandCollapsePattern> exposes the menu and the <xref:System.Windows.Automation.InvokePattern> fills the active selection with the chosen color.</span></span>  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## IInvokeProvider 的必要成員  
- 以下是實作 <xref:System.Windows.Automation.Provider.IInvokeProvider> 的必要屬性和方法。  
+## <a name="required-members-for-iinvokeprovider"></a><span data-ttu-id="1521f-135">IInvokeProvider 的必要成員</span><span class="sxs-lookup"><span data-stu-id="1521f-135">Required Members for IInvokeProvider</span></span>  
+ <span data-ttu-id="1521f-136">以下是實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>的必要屬性和方法。</span><span class="sxs-lookup"><span data-stu-id="1521f-136">The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IInvokeProvider>.</span></span>  
   
-|必要成員|成員類型|備註|  
-|----------|----------|--------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|方法|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 為非同步呼叫，且必須立即返回，不可封鎖。<br /><br /> 對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。 任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。|  
+|<span data-ttu-id="1521f-137">必要成員</span><span class="sxs-lookup"><span data-stu-id="1521f-137">Required members</span></span>|<span data-ttu-id="1521f-138">成員類型</span><span class="sxs-lookup"><span data-stu-id="1521f-138">Member type</span></span>|<span data-ttu-id="1521f-139">備註</span><span class="sxs-lookup"><span data-stu-id="1521f-139">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|<span data-ttu-id="1521f-140">方法</span><span class="sxs-lookup"><span data-stu-id="1521f-140">method</span></span>|<span data-ttu-id="1521f-141"><xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 為非同步呼叫，且必須立即返回，不可封鎖。</span><span class="sxs-lookup"><span data-stu-id="1521f-141"><xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> is an asynchronous call and must return immediately without blocking.</span></span><br /><br /> <span data-ttu-id="1521f-142">對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。</span><span class="sxs-lookup"><span data-stu-id="1521f-142">This behavior is particularly critical for controls that, directly or indirectly, launch a modal dialog when invoked.</span></span> <span data-ttu-id="1521f-143">任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。</span><span class="sxs-lookup"><span data-stu-id="1521f-143">Any UI Automation client that instigated the event will remain blocked until the modal dialog is closed.</span></span>|  
   
 <a name="Exceptions"></a>   
-## 例外狀況  
- 提供者必須擲回下列例外狀況。  
+## <a name="exceptions"></a><span data-ttu-id="1521f-144">例外狀況</span><span class="sxs-lookup"><span data-stu-id="1521f-144">Exceptions</span></span>  
+ <span data-ttu-id="1521f-145">提供者必須擲回下列例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1521f-145">Providers must throw the following exceptions.</span></span>  
   
-|例外狀況類型|條件|  
-|------------|--------|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|如果未啟用此控制項。|  
+|<span data-ttu-id="1521f-146">例外狀況類型</span><span class="sxs-lookup"><span data-stu-id="1521f-146">Exception Type</span></span>|<span data-ttu-id="1521f-147">條件</span><span class="sxs-lookup"><span data-stu-id="1521f-147">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<span data-ttu-id="1521f-148">如果未啟用此控制項。</span><span class="sxs-lookup"><span data-stu-id="1521f-148">If the control is not enabled.</span></span>|  
   
-## 請參閱  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Invoke a Control Using UI Automation](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="1521f-149">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1521f-149">See Also</span></span>  
+ [<span data-ttu-id="1521f-150">UI 自動化控制項模式概觀</span><span class="sxs-lookup"><span data-stu-id="1521f-150">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="1521f-151">UI 自動化提供者不支援控制項模式</span><span class="sxs-lookup"><span data-stu-id="1521f-151">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="1521f-152">用戶端的 UI 自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="1521f-152">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="1521f-153">叫用控制項使用 UI 自動化</span><span class="sxs-lookup"><span data-stu-id="1521f-153">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="1521f-154">UI 自動化樹狀目錄概觀</span><span class="sxs-lookup"><span data-stu-id="1521f-154">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="1521f-155">使用 UI 自動化中的快取</span><span class="sxs-lookup"><span data-stu-id="1521f-155">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -1,159 +1,163 @@
 ---
-title: "逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "設計階段功能, Windows Form"
-  - "DocumentDesigner 類別 [Windows Form]"
-  - "逐步解說 [Windows Form], 控制項"
-  - "Windows Form 控制項, 建立"
+title: "逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms controls, creating
+- design-time functionality [Windows Forms], Windows Forms
+- DocumentDesigner class [Windows Forms]
+- walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-caps.latest.revision: 46
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 46
+caps.latest.revision: "46"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba195656363b15407aed6a4da0ab804421a3d964
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項
-自訂控制項的設計階段經驗，可以透過撰寫關聯的自訂設計工具來加強。  
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a><span data-ttu-id="f1df9-102">逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-102">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>
+<span data-ttu-id="f1df9-103">撰寫相關聯的自訂設計工具，可以增進自訂控制項的設計階段經驗。</span><span class="sxs-lookup"><span data-stu-id="f1df9-103">The design-time experience for a custom control can be enhanced by authoring an associated custom designer.</span></span>  
   
- 這個逐步解說會說明如何建立自訂控制項的自訂設計工具。  您將會實作 `MarqueeControl` 型別和關聯的設計工具類別 \(稱為 `MarqueeControlRootDesigner`\)。  
+ <span data-ttu-id="f1df9-104">這個逐步解說將說明如何建立自訂控制項的自訂設計工具。</span><span class="sxs-lookup"><span data-stu-id="f1df9-104">This walkthrough illustrates how to create a custom designer for a custom control.</span></span> <span data-ttu-id="f1df9-105">您將實作`MarqueeControl`類型和相關聯的設計工具類別，稱為`MarqueeControlRootDesigner`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-105">You will implement a `MarqueeControl` type and an associated designer class, called `MarqueeControlRootDesigner`.</span></span>  
   
- `MarqueeControl` 型別會實作類似於劇院跑馬燈的顯示，具有動畫燈和閃爍的文字。  
+ <span data-ttu-id="f1df9-106">`MarqueeControl`型別會實作可顯示類似劇場跑馬燈，與動畫燈號閃爍的文字。</span><span class="sxs-lookup"><span data-stu-id="f1df9-106">The `MarqueeControl` type implements a display similar to a theater marquee, with animated lights and flashing text.</span></span>  
   
- 這個控制項的設計工具會和設計環境互動，以提供自訂設計階段經驗。  有了自訂設計工具，您可以組合具有動畫燈和閃爍文字多種組合的自訂 `MarqueeControl` 實作。  您可以在表單上使用組合的控制項，就像使用任何其他 Windows Form 控制項一樣。  
+ <span data-ttu-id="f1df9-107">此控制項的設計工具會與要提供自訂的設計階段經驗的設計環境互動。</span><span class="sxs-lookup"><span data-stu-id="f1df9-107">The designer for this control interacts with the design environment to provide a custom design-time experience.</span></span> <span data-ttu-id="f1df9-108">使用自訂設計工具中，您可以將組譯自訂`MarqueeControl`實作與動畫燈號閃爍文字多種組合。</span><span class="sxs-lookup"><span data-stu-id="f1df9-108">With the custom designer, you can assemble a custom `MarqueeControl` implementation with animated lights and flashing text in many combinations.</span></span> <span data-ttu-id="f1df9-109">您可以使用組合像任何其他 Windows Form 控制項在表單上的控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-109">You can use the assembled control on a form like any other Windows Forms control.</span></span>  
   
- 逐步解說將說明的工作包括：  
+ <span data-ttu-id="f1df9-110">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="f1df9-110">Tasks illustrated in this walkthrough include:</span></span>  
   
--   建立專案  
+-   <span data-ttu-id="f1df9-111">建立專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-111">Creating the Project</span></span>  
   
--   建立控制項程式庫專案  
+-   <span data-ttu-id="f1df9-112">建立控制項程式庫專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-112">Creating a Control Library Project</span></span>  
   
--   參考自訂控制項專案  
+-   <span data-ttu-id="f1df9-113">參考自訂控制項專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-113">Referencing the Custom Control Project</span></span>  
   
--   定義自訂控制項及其自訂設計工具  
+-   <span data-ttu-id="f1df9-114">定義自訂控制項和其自訂的設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-114">Defining a Custom Control and Its Custom Designer</span></span>  
   
--   建立自訂控制項的執行個體  
+-   <span data-ttu-id="f1df9-115">建立自訂控制項的執行個體</span><span class="sxs-lookup"><span data-stu-id="f1df9-115">Creating an Instance of Your Custom Control</span></span>  
   
--   設定專案進行設計階段偵錯  
+-   <span data-ttu-id="f1df9-116">設計階段偵錯的專案設定</span><span class="sxs-lookup"><span data-stu-id="f1df9-116">Setting Up the Project for Design-Time Debugging</span></span>  
   
--   實作自訂控制項  
+-   <span data-ttu-id="f1df9-117">實作自訂控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-117">Implementing Your Custom Control</span></span>  
   
--   建立自訂控制項的子控制項  
+-   <span data-ttu-id="f1df9-118">建立自訂控制項的子控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-118">Creating a Child Control for Your Custom Control</span></span>  
   
--   建立 MarqueeBorder 子控制項  
+-   <span data-ttu-id="f1df9-119">建立 MarqueeBorder 子控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-119">Create the MarqueeBorder Child Control</span></span>  
   
--   建立自訂設計工具以遮蔽和篩選屬性  
+-   <span data-ttu-id="f1df9-120">建立自訂的設計工具，以遮蔽和篩選屬性</span><span class="sxs-lookup"><span data-stu-id="f1df9-120">Creating a Custom Designer to Shadow and Filter Properties</span></span>  
   
--   處理元件變更  
+-   <span data-ttu-id="f1df9-121">處理元件的變更</span><span class="sxs-lookup"><span data-stu-id="f1df9-121">Handling Component Changes</span></span>  
   
--   加入設計工具動詞命令至自訂設計工具  
+-   <span data-ttu-id="f1df9-122">將設計工具動詞命令加入至您的自訂設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-122">Adding Designer Verbs to your Custom Designer</span></span>  
   
--   建立自訂 UITypeEditor  
+-   <span data-ttu-id="f1df9-123">建立自訂的 UITypeEditor</span><span class="sxs-lookup"><span data-stu-id="f1df9-123">Creating a Custom UITypeEditor</span></span>  
   
--   測試設計工具中的自訂控制項  
+-   <span data-ttu-id="f1df9-124">在設計工具中測試您的自訂控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-124">Testing your Custom Control in the Designer</span></span>  
   
- 當完成時，您的自訂控制項看起來會如同下列所示：  
+ <span data-ttu-id="f1df9-125">當您完成時，您的自訂控制項看起來像下面這樣：</span><span class="sxs-lookup"><span data-stu-id="f1df9-125">When you are finished, your custom control will look something like the following:</span></span>  
   
- ![MarqueeControl 可能的排列方式](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")  
+ <span data-ttu-id="f1df9-126">![可能的 MarqueeControl 排列](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")</span><span class="sxs-lookup"><span data-stu-id="f1df9-126">![A possible MarqueeControl arrangement](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")</span></span>  
   
- 如需完整的程式碼清單，請參閱 [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)。  
+ <span data-ttu-id="f1df9-127">如需完整的程式碼清單，請參閱[How to： 建立 Windows Form 控制項，會利用的設計階段功能](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-127">For the complete code listing, see [How to: Create a Windows Forms Control That Takes Advantage of Design-Time Features](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="f1df9-128">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="f1df9-128">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f1df9-129">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="f1df9-129">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f1df9-130">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-130">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## 必要條件  
- 若要完成這個逐步解說，您必須要有：  
+## <a name="prerequisites"></a><span data-ttu-id="f1df9-131">必要條件</span><span class="sxs-lookup"><span data-stu-id="f1df9-131">Prerequisites</span></span>  
+ <span data-ttu-id="f1df9-132">若要完成這個逐步解說，您將需要：</span><span class="sxs-lookup"><span data-stu-id="f1df9-132">In order to complete this walkthrough, you will need:</span></span>  
   
--   擁有足夠的使用權限，可以在安裝 Visual Studio 的電腦上建立並執行 Windows Form 應用程式專案。  
+-   <span data-ttu-id="f1df9-133">若要能夠建立及安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。</span><span class="sxs-lookup"><span data-stu-id="f1df9-133">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where Visual Studio is installed.</span></span>  
   
-## 建立專案  
- 首先建立應用程式物件。  您將會使用這個專案來建置裝載自訂控制項的應用程式。  
+## <a name="creating-the-project"></a><span data-ttu-id="f1df9-134">建立專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-134">Creating the Project</span></span>  
+ <span data-ttu-id="f1df9-135">第一個步驟是建立應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-135">The first step is to create the application project.</span></span> <span data-ttu-id="f1df9-136">您將使用此專案來建置裝載自訂控制項的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-136">You will use this project to build the application that hosts the custom control.</span></span>  
   
-#### 若要建立專案  
+#### <a name="to-create-the-project"></a><span data-ttu-id="f1df9-137">若要建立專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-137">To create the project</span></span>  
   
--   建立名為 "MarqueeControlTest" 的 Windows Form 應用程式專案。 如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/zh-tw/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+-   <span data-ttu-id="f1df9-138">建立 Windows Forms 應用程式專案，稱為 「 MarqueeControlTest。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-138">Create a Windows Forms Application project called "MarqueeControlTest."</span></span> <span data-ttu-id="f1df9-139">如需詳細資訊，請參閱 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-139">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-## 建立控制項程式庫專案  
- 下一步就是建立控制項程式庫專案。  您將建立新的自訂控制項及其對應的自訂設計工具。  
+## <a name="creating-a-control-library-project"></a><span data-ttu-id="f1df9-140">建立控制項程式庫專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-140">Creating a Control Library Project</span></span>  
+ <span data-ttu-id="f1df9-141">下一個步驟是建立控制項程式庫專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-141">The next step is to create the control library project.</span></span> <span data-ttu-id="f1df9-142">您將建立新的自訂控制項和其相對應的自訂設計工具。</span><span class="sxs-lookup"><span data-stu-id="f1df9-142">You will create a new custom control and its corresponding custom designer.</span></span>  
   
-#### 若要建立控制項程式庫專案  
+#### <a name="to-create-the-control-library-project"></a><span data-ttu-id="f1df9-143">若要建立控制項程式庫專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-143">To create the control library project</span></span>  
   
-1.  將 Windows Form 控制項程式庫專案加入至方案。  將專案命名為 "MarqueeControlLibrary"。  
+1.  <span data-ttu-id="f1df9-144">將 Windows Form 控制項程式庫專案加入方案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-144">Add a Windows Forms Control Library project to the solution.</span></span> <span data-ttu-id="f1df9-145">專案"MarqueeControlLibrary。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-145">Name the project "MarqueeControlLibrary."</span></span>  
   
-2.  使用 \[**方案總管**\]，刪除名為 "UserControl1.cs" 或 "UserControl1.vb" \(依據您選擇的語言而定\) 的原始程式檔 \(Source File\)，藉此刪除專案的預設控制項。  如需詳細資訊，請參閱 [NIB:How to: Remove, Delete, and Exclude Items](http://msdn.microsoft.com/zh-tw/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+2.  <span data-ttu-id="f1df9-146">使用**方案總管 中**，藉由刪除來源檔案，視您所選擇的語言而定，名為"UserControl1.cs"或"UserControl1.vb"，刪除專案的預設控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-146">Using **Solution Explorer**, delete the project's default control by deleting the source file named "UserControl1.cs" or "UserControl1.vb", depending on your language of choice.</span></span> <span data-ttu-id="f1df9-147">如需詳細資訊，請參閱[NIB： 如何： 移除、 刪除和排除的項目](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-147">For more information, see [NIB:How to: Remove, Delete, and Exclude Items](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).</span></span>  
   
-3.  將新的 <xref:System.Windows.Forms.UserControl> 項目加入至 `MarqueeControlLibrary` 專案。  提供主檔名 "MarqueeControl" 給新的原始程式檔。  
+3.  <span data-ttu-id="f1df9-148">加入新<xref:System.Windows.Forms.UserControl>項目`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-148">Add a new <xref:System.Windows.Forms.UserControl> item to the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-149">提供新的來源檔案的基底名稱"MarqueeControl。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-149">Give the new source file a base name of "MarqueeControl."</span></span>  
   
-4.  使用 \[**方案總管**\]，在 `MarqueeControlLibrary` 專案中建立新資料夾。  如需詳細資訊，請參閱 [NIB:How to: Add New Project Items](http://msdn.microsoft.com/zh-tw/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  將新資料夾命名為 "Design"。  
+4.  <span data-ttu-id="f1df9-150">使用**方案總管 中**，建立新的資料夾中`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-150">Using **Solution Explorer**, create a new folder in the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-151">如需詳細資訊，請參閱[NIB： 如何： 加入新的專案項目](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-151">For more information, see [NIB:How to: Add New Project Items](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).</span></span> <span data-ttu-id="f1df9-152">將新的資料夾命名為 [設計]。</span><span class="sxs-lookup"><span data-stu-id="f1df9-152">Name the new folder "Design."</span></span>  
   
-5.  以滑鼠右鍵按一下 \[**設計**\] 資料夾，並加入新類別。  提供主檔名 "MarqueeControlRootDesigner" 給新的原始程式檔。  
+5.  <span data-ttu-id="f1df9-153">以滑鼠右鍵按一下**設計**資料夾並加入新的類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-153">Right-click the **Design** folder and add a new class.</span></span> <span data-ttu-id="f1df9-154">提供的原始程式檔的基底名稱"MarqueeControlRootDesigner。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-154">Give the source file a base name of "MarqueeControlRootDesigner."</span></span>  
   
-6.  您將會需要使用 System.Design 組件的型別，所以請加入此參考至 `MarqueeControlLibrary` 專案。  
+6.  <span data-ttu-id="f1df9-155">您必須使用來自 System.Design 組件的類型，因此請加入此參考`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-155">You will need to use types from the System.Design assembly, so add this reference to the `MarqueeControlLibrary` project.</span></span>  
   
     > [!NOTE]
-    >  若要使用 System.Design 組件，您的專案必須以完整版的 .NET Framework 為目標，而不是 .NET Framework Client Profile。  若要變更目標架構，請參閱 [如何：以 .NET Framework 版本為目標](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md)。  
+    >  <span data-ttu-id="f1df9-156">若要使用 System.Design 組件，您的專案必須為目標的完整版本的.NET Framework 中，而非.NET Framework Client Profile。</span><span class="sxs-lookup"><span data-stu-id="f1df9-156">To use the System.Design assembly, your project must target the full version of the .NET Framework, not the .NET Framework Client Profile.</span></span> <span data-ttu-id="f1df9-157">若要變更目標 framework，請參閱[How to： 以.NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-157">To change the target framework, see [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).</span></span>  
   
-## 參考自訂控制項專案  
- 您將使用 `MarqueeControlTest` 專案以測試自訂控制項。  在您加入專案參考至 `MarqueeControlLibrary` 組件時，測試專案會留意自訂控制項。  
+## <a name="referencing-the-custom-control-project"></a><span data-ttu-id="f1df9-158">參考自訂控制項專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-158">Referencing the Custom Control Project</span></span>  
+ <span data-ttu-id="f1df9-159">您將使用`MarqueeControlTest`專案來進行測試的自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-159">You will use the `MarqueeControlTest` project to test the custom control.</span></span> <span data-ttu-id="f1df9-160">測試專案將會察覺自訂控制項，當您將加入的專案參考`MarqueeControlLibrary`組件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-160">The test project will become aware of the custom control when you add a project reference to the `MarqueeControlLibrary` assembly.</span></span>  
   
-#### 若要參考自訂控制項專案  
+#### <a name="to-reference-the-custom-control-project"></a><span data-ttu-id="f1df9-161">若要參考自訂控制項專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-161">To reference the custom control project</span></span>  
   
--   在 `MarqueeControlTest` 專案中，加入專案參考至 `MarqueeControlLibrary` 組件。  請確認有使用 \[**加入參考**\] 對話方塊中的 \[**屬性**\] 索引標籤，而非直接參考 `MarqueeControlLibrary` 組件。  
+-   <span data-ttu-id="f1df9-162">在`MarqueeControlTest`專案中，加入的專案參考`MarqueeControlLibrary`組件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-162">In the `MarqueeControlTest` project, add a project reference to the `MarqueeControlLibrary` assembly.</span></span> <span data-ttu-id="f1df9-163">務必使用**專案**索引標籤中**加入參考**對話方塊而不是參考`MarqueeControlLibrary`直接組件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-163">Be sure to use the **Projects** tab in the **Add Reference** dialog box instead of referencing the `MarqueeControlLibrary` assembly directly.</span></span>  
   
-## 定義自訂控制項及其自訂設計工具  
- 您的自訂控制項將衍生自 <xref:System.Windows.Forms.UserControl> 類別。  這能讓您的控制項包含其他控制項，且提供您的控制項許多預設功能。  
+## <a name="defining-a-custom-control-and-its-custom-designer"></a><span data-ttu-id="f1df9-164">定義自訂控制項和其自訂的設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-164">Defining a Custom Control and Its Custom Designer</span></span>  
+ <span data-ttu-id="f1df9-165">您的自訂控制項衍生<xref:System.Windows.Forms.UserControl>類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-165">Your custom control will derive from the <xref:System.Windows.Forms.UserControl> class.</span></span> <span data-ttu-id="f1df9-166">這可讓您包含其他控制項的控制項，並讓您控制許多預設功能。</span><span class="sxs-lookup"><span data-stu-id="f1df9-166">This allows your control to contain other controls, and it gives your control a great deal of default functionality.</span></span>  
   
- 您的自訂控制項將會有關聯的自訂設計工具。  這能讓您建立特別為自訂控制項量身訂做的獨特設計經驗。  
+ <span data-ttu-id="f1df9-167">您的自訂控制項將會有相關聯的自訂設計工具。</span><span class="sxs-lookup"><span data-stu-id="f1df9-167">Your custom control will have an associated custom designer.</span></span> <span data-ttu-id="f1df9-168">這可讓您建立唯一的設計經驗，特別適合您的自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-168">This allows you to create a unique design experience tailored specifically for your custom control.</span></span>  
   
- 您可透過使用 <xref:System.ComponentModel.DesignerAttribute> 類別，將控制項與設計工具相關聯。  因為您是開發自訂控制項的整個設計階段行為，所以自訂控制項將會實作 <xref:System.ComponentModel.Design.IRootDesigner> 介面。  
+ <span data-ttu-id="f1df9-169">您使用相關聯控制項與設計工具<xref:System.ComponentModel.DesignerAttribute>類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-169">You associate the control with its designer by using the <xref:System.ComponentModel.DesignerAttribute> class.</span></span> <span data-ttu-id="f1df9-170">因為您正在開發的自訂控制項的整個設計階段行為，將實作自訂的設計工具<xref:System.ComponentModel.Design.IRootDesigner>介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-170">Because you are developing the entire design-time behavior of your custom control, the custom designer will implement the <xref:System.ComponentModel.Design.IRootDesigner> interface.</span></span>  
   
-#### 若要定義自訂控制項及其自訂設計工具  
+#### <a name="to-define-a-custom-control-and-its-custom-designer"></a><span data-ttu-id="f1df9-171">若要定義自訂控制項和其自訂的設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-171">To define a custom control and its custom designer</span></span>  
   
-1.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeControl` 來源檔。  在檔案頂端匯入下列命名空間：  
+1.  <span data-ttu-id="f1df9-172">開啟`MarqueeControl`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-172">Open the `MarqueeControl` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-173">在檔案頂端，匯入下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-173">At the top of the file, import the following namespaces:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#220](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#220)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#220](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#220)]  
   
-2.  請將 <xref:System.ComponentModel.DesignerAttribute> 屬性加入至 `MarqueeControl` 類別宣告 \(Class Declaration\)。  這會將自訂控制項與設計工具相關聯。  
+2.  <span data-ttu-id="f1df9-174">新增<xref:System.ComponentModel.DesignerAttribute>至`MarqueeControl`類別宣告。</span><span class="sxs-lookup"><span data-stu-id="f1df9-174">Add the <xref:System.ComponentModel.DesignerAttribute> to the `MarqueeControl` class declaration.</span></span> <span data-ttu-id="f1df9-175">這樣會將與設計工具關聯的自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-175">This associates the custom control with its designer.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#240](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#240)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#240](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#240)]  
   
-3.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeControlRootDesigner` 來源檔。  在檔案頂端匯入下列命名空間：  
+3.  <span data-ttu-id="f1df9-176">開啟`MarqueeControlRootDesigner`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-176">Open the `MarqueeControlRootDesigner` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-177">在檔案頂端，匯入下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-177">At the top of the file, import the following namespaces:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#520](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#520)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#520](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#520)]  
   
-4.  將 `MarqueeControlRootDesigner` 的宣告變更為繼承自 <xref:System.Windows.Forms.Design.DocumentDesigner> 類別。  套用 <xref:System.ComponentModel.ToolboxItemFilterAttribute> 以指定與 \[**工具箱**\] 進行的設計工具互動。  
+4.  <span data-ttu-id="f1df9-178">變更宣告`MarqueeControlRootDesigner`繼承自<xref:System.Windows.Forms.Design.DocumentDesigner>類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-178">Change the declaration of `MarqueeControlRootDesigner` to inherit from the <xref:System.Windows.Forms.Design.DocumentDesigner> class.</span></span> <span data-ttu-id="f1df9-179">套用<xref:System.ComponentModel.ToolboxItemFilterAttribute>指定與設計工具的互動**工具箱**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-179">Apply the <xref:System.ComponentModel.ToolboxItemFilterAttribute> to specify the designer interaction with the **Toolbox**.</span></span>  
   
-     **注意**：`MarqueeControlRootDesigner` 類別的定義放在名為 "MarqueeControlLibrary.Design" 的命名空間中。 這個宣告會將設計工具放在為設計相關型別所保留的特殊命名空間中。  
+     <span data-ttu-id="f1df9-180">**請注意**的定義`MarqueeControlRootDesigner`類別已經括在命名空間中稱為 「 MarqueeControlLibrary.Design。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-180">**Note** The definition for the `MarqueeControlRootDesigner` class has been enclosed in a namespace called "MarqueeControlLibrary.Design."</span></span> <span data-ttu-id="f1df9-181">這個宣告置於設計工具的特殊命名空間保留的設計相關的類型。</span><span class="sxs-lookup"><span data-stu-id="f1df9-181">This declaration places the designer in a special namespace reserved for design-related types.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#530](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#530)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#530](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#530)]  
   
-5.  定義 `MarqueeControlRootDesigner` 類別的建構函式。  在建構函式主體中插入 <xref:System.Diagnostics.Trace.WriteLine%2A> 陳述式。  這對於偵錯用途將會非常有用。  
+5.  <span data-ttu-id="f1df9-182">定義的建構函式`MarqueeControlRootDesigner`類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-182">Define the constructor for the `MarqueeControlRootDesigner` class.</span></span> <span data-ttu-id="f1df9-183">插入<xref:System.Diagnostics.Trace.WriteLine%2A>建構函式主體中的陳述式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-183">Insert a <xref:System.Diagnostics.Trace.WriteLine%2A> statement in the constructor body.</span></span> <span data-ttu-id="f1df9-184">這會是用來偵錯。</span><span class="sxs-lookup"><span data-stu-id="f1df9-184">This will be useful for debugging purposes.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#540](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#540)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#540](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#540)]  
   
-## 建立自訂控制項的執行個體  
- 若要觀察控制項的自訂設計階段行為，您要將控制項的執行個體放置在 `MarqueeControlTest` 專案中的表單上。  
+## <a name="creating-an-instance-of-your-custom-control"></a><span data-ttu-id="f1df9-185">建立自訂控制項的執行個體</span><span class="sxs-lookup"><span data-stu-id="f1df9-185">Creating an Instance of Your Custom Control</span></span>  
+ <span data-ttu-id="f1df9-186">若要觀察自訂控制項的設計階段行為，您將放置在表單上控制項的執行個體`MarqueeControlTest`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-186">To observe the custom design-time behavior of your control, you will place an instance of your control on the form in `MarqueeControlTest` project.</span></span>  
   
-#### 若要建立自訂控制項的執行個體  
+#### <a name="to-create-an-instance-of-your-custom-control"></a><span data-ttu-id="f1df9-187">若要建立自訂控制項的執行個體</span><span class="sxs-lookup"><span data-stu-id="f1df9-187">To create an instance of your custom control</span></span>  
   
-1.  將新的 <xref:System.Windows.Forms.UserControl> 項目加入至 `MarqueeControlTest` 專案。  提供主檔名 "DemoMarqueeControl" 給新的原始程式檔。  
+1.  <span data-ttu-id="f1df9-188">加入新<xref:System.Windows.Forms.UserControl>項目`MarqueeControlTest`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-188">Add a new <xref:System.Windows.Forms.UserControl> item to the `MarqueeControlTest` project.</span></span> <span data-ttu-id="f1df9-189">提供新的來源檔案的基底名稱"DemoMarqueeControl。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-189">Give the new source file a base name of "DemoMarqueeControl."</span></span>  
   
-2.  在 \[**程式碼編輯器**\] 中，開啟 `DemoMarqueeControl` 檔案。  在檔案的頂端匯入 `MarqueeControlLibrary` 命名空間：  
+2.  <span data-ttu-id="f1df9-190">開啟`DemoMarqueeControl`檔案**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-190">Open the `DemoMarqueeControl` file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-191">在檔案頂端，匯入`MarqueeControlLibrary`命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-191">At the top of the file, import the `MarqueeControlLibrary` namespace:</span></span>  
   
 ```vb  
 Imports MarqueeControlLibrary  
@@ -163,231 +167,231 @@ Imports MarqueeControlLibrary
 using MarqueeControlLibrary;  
 ```  
   
-1.  將 `DemoMarqueeControl` 的宣告變更為繼承自 `MarqueeControl` 類別。  
+1.  <span data-ttu-id="f1df9-192">變更宣告`DemoMarqueeControl`繼承自`MarqueeControl`類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-192">Change the declaration of `DemoMarqueeControl` to inherit from the `MarqueeControl` class.</span></span>  
   
-2.  建置專案。  
+2.  <span data-ttu-id="f1df9-193">建置專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-193">Build the project.</span></span>  
   
-3.  在 Windows Form 設計工具中開啟表單 `Form1`。  
+3.  <span data-ttu-id="f1df9-194">在 Windows Form 設計工具中開啟 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-194">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-4.  在 \[**工具箱**\] 中尋找 \[**MarqueeControlTest 元件**\] 索引標籤，然後予以開啟。  將 `DemoMarqueeControl` 從 \[**工具箱**\] 拖曳到表單上。  
+4.  <span data-ttu-id="f1df9-195">尋找**MarqueeControlTest 元件**索引標籤中**工具箱**並開啟它。</span><span class="sxs-lookup"><span data-stu-id="f1df9-195">Find the **MarqueeControlTest Components** tab in the **Toolbox** and open it.</span></span> <span data-ttu-id="f1df9-196">拖曳`DemoMarqueeControl`從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="f1df9-196">Drag a `DemoMarqueeControl` from the **Toolbox** onto your form.</span></span>  
   
-5.  建置專案。  
+5.  <span data-ttu-id="f1df9-197">建置專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-197">Build the project.</span></span>  
   
-## 設定專案進行設計階段偵錯  
- 您在開發自訂設計階段經驗時，將需要偵錯控制項和元件。  有一種簡單的方法可以設定您的專案以允許設計階段時的偵錯。  如需詳細資訊，請參閱[逐步解說：在設計階段偵錯自訂的 Windows Form 控制項](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
+## <a name="setting-up-the-project-for-design-time-debugging"></a><span data-ttu-id="f1df9-198">設計階段偵錯的專案設定</span><span class="sxs-lookup"><span data-stu-id="f1df9-198">Setting Up the Project for Design-Time Debugging</span></span>  
+ <span data-ttu-id="f1df9-199">當您開發自訂的設計階段經驗時，就必須偵錯您的控制項和元件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-199">When you are developing a custom design-time experience, it will be necessary to debug your controls and components.</span></span> <span data-ttu-id="f1df9-200">沒有簡單的方式來設定您的專案，才能在設計階段偵錯。</span><span class="sxs-lookup"><span data-stu-id="f1df9-200">There is a simple way to set up your project to allow debugging at design time.</span></span> <span data-ttu-id="f1df9-201">如需詳細資訊，請參閱[逐步解說： 在設計階段偵錯自訂 Windows Form 控制項](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-201">For more information, see [Walkthrough: Debugging Custom Windows Forms Controls at Design Time](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).</span></span>  
   
-#### 若要設定設計階段偵錯的專案  
+#### <a name="to-set-up-the-project-for-design-time-debugging"></a><span data-ttu-id="f1df9-202">若要設定的設計階段偵錯專案</span><span class="sxs-lookup"><span data-stu-id="f1df9-202">To set up the project for design-time debugging</span></span>  
   
-1.  以滑鼠右鍵按一下 `MarqueeControlLibrary` 專案，然後選取 \[**屬性**\]。  
+1.  <span data-ttu-id="f1df9-203">以滑鼠右鍵按一下`MarqueeControlLibrary`專案，然後選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-203">Right-click the `MarqueeControlLibrary` project and select **Properties**.</span></span>  
   
-2.  在 \[MarqueeControlLibrary 屬性頁\] 對話方塊中選取 \[**偵錯**\] 頁。  
+2.  <span data-ttu-id="f1df9-204">在 「 MarqueeControlLibrary 屬性頁面 」 對話方塊中，選取**偵錯**頁面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-204">In the "MarqueeControlLibrary Property Pages" dialog box, select the **Debug** page.</span></span>  
   
-3.  在 \[**起始動作**\] 區段中選取 \[**起始外部程式**\]。  您將會偵錯個別的 Visual Studio 執行個體，所以請按一下省略 \(![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) 按鈕，以瀏覽 Visual Studio IDE。  可執行檔的名稱為 devenv.exe，如果您安裝至預設位置，其路徑就會是 %programfiles%\\Microsoft Visual Studio 9.0\\Common7\\IDE\\devenv.exe。  
+3.  <span data-ttu-id="f1df9-205">在**起始動作**區段中，選取**起始外部程式**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-205">In the **Start Action** section, select **Start External Program**.</span></span> <span data-ttu-id="f1df9-206">您將無法偵錯 Visual Studio 中，個別執行個體，按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕來瀏覽 Visual Studio IDE。</span><span class="sxs-lookup"><span data-stu-id="f1df9-206">You will be debugging a separate instance of Visual Studio, so click the ellipsis (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button to browse for the Visual Studio IDE.</span></span> <span data-ttu-id="f1df9-207">可執行檔的名稱是 devenv.exe，且如果您安裝到預設位置，其路徑為 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。</span><span class="sxs-lookup"><span data-stu-id="f1df9-207">The name of the executable file is devenv.exe, and if you installed to the default location, its path is %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.</span></span>  
   
-4.  按一下 \[確定\] 以關閉對話方塊。  
+4.  <span data-ttu-id="f1df9-208">按一下 [確定] 以關閉對話方塊。</span><span class="sxs-lookup"><span data-stu-id="f1df9-208">Click OK to close the dialog box.</span></span>  
   
-5.  以滑鼠右鍵按一下 `MarqueeControlLibrary` 專案，然後選取 \[設定為啟始專案\]，以啟用這個偵錯設定。  
+5.  <span data-ttu-id="f1df9-209">以滑鼠右鍵按一下`MarqueeControlLibrary`專案，然後選取 」 設定為啟始專案 」 來啟用這個偵錯組態。</span><span class="sxs-lookup"><span data-stu-id="f1df9-209">Right-click the `MarqueeControlLibrary` project and select "Set as StartUp Project" to enable this debugging configuration.</span></span>  
   
-## 檢查點  
- 您現在已準備好偵錯自訂控制項的設計階段行為。  一旦您決定偵錯環境已設定正確，就可測試自訂控制項和自訂設計介面之間的關聯。  
+## <a name="checkpoint"></a><span data-ttu-id="f1df9-210">檢查點</span><span class="sxs-lookup"><span data-stu-id="f1df9-210">Checkpoint</span></span>  
+ <span data-ttu-id="f1df9-211">您現在準備偵錯您的自訂控制項的設計階段行為。</span><span class="sxs-lookup"><span data-stu-id="f1df9-211">You are now ready to debug the design-time behavior of your custom control.</span></span> <span data-ttu-id="f1df9-212">一旦您決定在偵錯環境已正確設定時，您將測試自訂控制項和自訂的設計工具之間的關聯。</span><span class="sxs-lookup"><span data-stu-id="f1df9-212">Once you have determined that the debugging environment is set up correctly, you will test the association between the custom control and the custom designer.</span></span>  
   
-#### 若要測試偵錯環境和設計工具關聯  
+#### <a name="to-test-the-debugging-environment-and-the-designer-association"></a><span data-ttu-id="f1df9-213">若要測試的偵錯環境和設計工具關聯</span><span class="sxs-lookup"><span data-stu-id="f1df9-213">To test the debugging environment and the designer association</span></span>  
   
-1.  請開啟 \[**程式碼編輯器**\] 中的 `MarqueeControlRootDesigner`，並在 <xref:System.Diagnostics.Trace.WriteLine%2A> 陳述式上放置中斷點。  
+1.  <span data-ttu-id="f1df9-214">開啟`MarqueeControlRootDesigner`原始程式檔中的**程式碼編輯器**，並將中斷點放在<xref:System.Diagnostics.Trace.WriteLine%2A>陳述式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-214">Open the `MarqueeControlRootDesigner` source file in the **Code Editor** and place a breakpoint on the <xref:System.Diagnostics.Trace.WriteLine%2A> statement.</span></span>  
   
-2.  按 F5 以啟動偵錯工作階段。  請注意，會建立新的 Visual Studio 執行個體。  
+2.  <span data-ttu-id="f1df9-215">按 f5 鍵啟動偵錯工作階段。</span><span class="sxs-lookup"><span data-stu-id="f1df9-215">Press F5 to start the debugging session.</span></span> <span data-ttu-id="f1df9-216">請注意，要建立的 Visual Studio 的新執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1df9-216">Note that a new instance of Visual Studio is created.</span></span>  
   
-3.  在新的 Visual Studio 執行個體中開啟 "MarqueeControlTest" 方案。  您可以輕易地找到方案，方法是從 \[**檔案**\] 功能表中選取 \[**最近使用的專案**\]。  "MarqueeControlTest.sln" 方案檔將會列為最近使用的檔案。  
+3.  <span data-ttu-id="f1df9-217">在 Visual Studio 的新執行個體，開啟 「 MarqueeControlTest 」 方案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-217">In the new instance of Visual Studio, open the "MarqueeControlTest" solution.</span></span> <span data-ttu-id="f1df9-218">您可以輕鬆地找到所選取的方案**最近使用的專案**從**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="f1df9-218">You can easily find the solution by selecting **Recent Projects** from the **File** menu.</span></span> <span data-ttu-id="f1df9-219">會列出 「 MarqueeControlTest.sln 」 方案檔，如此最近使用過的檔案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-219">The "MarqueeControlTest.sln" solution file will be listed as the most recently used file.</span></span>  
   
-4.  在設計工具中開啟 `DemoMarqueeControl`。  請注意，Visual Studio 的偵錯執行個體需要焦點，且執行會停止於中斷點。  按下 F5 以繼續偵錯工作階段。  
+4.  <span data-ttu-id="f1df9-220">開啟`DemoMarqueeControl`設計工具中。</span><span class="sxs-lookup"><span data-stu-id="f1df9-220">Open the `DemoMarqueeControl` in the designer.</span></span> <span data-ttu-id="f1df9-221">請注意，Visual Studio 偵錯執行個體取得焦點，執行會在您的中斷點停止。</span><span class="sxs-lookup"><span data-stu-id="f1df9-221">Note that the debugging instance of Visual Studio acquires focus and execution stops at your breakpoint.</span></span> <span data-ttu-id="f1df9-222">按 F5 繼續偵錯工作階段。</span><span class="sxs-lookup"><span data-stu-id="f1df9-222">Press F5 to continue the debugging session.</span></span>  
   
- 此時一切都已就緒，您可開發和偵錯自訂控制項及其關聯的自訂設計工具。  這個逐步解說剩下的內容，將會集中在控制項及設計工具的實作功能詳細資料。  
+ <span data-ttu-id="f1df9-223">此時，所有項目是可供您開發和偵錯您的自訂控制項和其相關聯的自訂設計工具。</span><span class="sxs-lookup"><span data-stu-id="f1df9-223">At this point, everything is in place for you to develop and debug your custom control and its associated custom designer.</span></span> <span data-ttu-id="f1df9-224">本逐步解說的其餘部分會專注於實作的控制項和設計工具功能的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="f1df9-224">The remainder of this walkthrough will concentrate on the details of implementing features of the control and the designer.</span></span>  
   
-## 實作自訂控制項  
- `MarqueeControl` 是具有少量自訂的 <xref:System.Windows.Forms.UserControl>。  它會公開 \(Expose\) 兩種方法：`Start` \(啟動跑馬燈動畫\) 以及 `Stop` \(停止動畫\)。  因為 `MarqueeControl` 包含實作 `IMarqueeWidget` 介面的子控制項，所以 `Start` 和 `Stop` 會在實作 `IMarqueeWidget` 的子控制項上，列舉每個子控制項並分別呼叫 `StartMarquee` 和 `StopMarquee` 方法。  
+## <a name="implementing-your-custom-control"></a><span data-ttu-id="f1df9-225">實作自訂控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-225">Implementing Your Custom Control</span></span>  
+ <span data-ttu-id="f1df9-226">`MarqueeControl`是<xref:System.Windows.Forms.UserControl>利用最少的自訂。</span><span class="sxs-lookup"><span data-stu-id="f1df9-226">The `MarqueeControl` is a <xref:System.Windows.Forms.UserControl> with a little bit of customization.</span></span> <span data-ttu-id="f1df9-227">它會公開兩種方法： `Start`，以便啟動跑馬燈動畫和`Stop`，這會停止動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-227">It exposes two methods: `Start`, which starts the marquee animation, and `Stop`, which stops the animation.</span></span> <span data-ttu-id="f1df9-228">因為`MarqueeControl`包含子控制項實作`IMarqueeWidget`介面，`Start`和`Stop`列舉每個子控制項和呼叫`StartMarquee`和`StopMarquee`方法，分別在每個子控制項它會實作`IMarqueeWidget`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-228">Because the `MarqueeControl` contains child controls that implement the `IMarqueeWidget` interface, `Start` and `Stop` enumerate each child control and call the `StartMarquee` and `StopMarquee` methods, respectively, on each child control that implements `IMarqueeWidget`.</span></span>  
   
- `MarqueeBorder` 和 `MarqueeText` 控制項的外觀是取決於配置，所以 `MarqueeControl` 會在這種型別的子控制項上，覆寫 <xref:System.Windows.Forms.Control.OnLayout%2A> 方法並呼叫 <xref:System.Windows.Forms.Control.PerformLayout%2A>。  
+ <span data-ttu-id="f1df9-229">外觀`MarqueeBorder`和`MarqueeText`控制項是取決於配置，因此`MarqueeControl`會覆寫<xref:System.Windows.Forms.Control.OnLayout%2A>方法，呼叫<xref:System.Windows.Forms.Control.PerformLayout%2A>上此類型的子控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-229">The appearance of the `MarqueeBorder` and `MarqueeText` controls is dependent on the layout, so `MarqueeControl` overrides the <xref:System.Windows.Forms.Control.OnLayout%2A> method and calls <xref:System.Windows.Forms.Control.PerformLayout%2A> on child controls of this type.</span></span>  
   
- 這是 `MarqueeControl` 自訂的範圍。  執行階段功能是由 `MarqueeBorder` 和 `MarqueeText` 控制項實作，而設計階段功能則是由 `MarqueeBorderDesigner` 和 `MarqueeControlRootDesigner` 類別實作。  
+ <span data-ttu-id="f1df9-230">這是範圍`MarqueeControl`自訂項目。</span><span class="sxs-lookup"><span data-stu-id="f1df9-230">This is the extent of the `MarqueeControl` customizations.</span></span> <span data-ttu-id="f1df9-231">執行階段功能由實作`MarqueeBorder`和`MarqueeText`控制項和設計階段功能由實作`MarqueeBorderDesigner`和`MarqueeControlRootDesigner`類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-231">The run-time features are implemented by the `MarqueeBorder` and `MarqueeText` controls, and the design-time features are implemented by the `MarqueeBorderDesigner` and `MarqueeControlRootDesigner` classes.</span></span>  
   
-#### 若要實作自訂控制項  
+#### <a name="to-implement-your-custom-control"></a><span data-ttu-id="f1df9-232">若要實作自訂控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-232">To implement your custom control</span></span>  
   
-1.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeControl` 來源檔。  實作 `Start` 和 `Stop` 方法。  
+1.  <span data-ttu-id="f1df9-233">開啟`MarqueeControl`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-233">Open the `MarqueeControl` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-234">實作`Start`和`Stop`方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-234">Implement the `Start` and `Stop` methods.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]  
   
-2.  覆寫 <xref:System.Windows.Forms.Control.OnLayout%2A> 方法。  
+2.  <span data-ttu-id="f1df9-235">覆寫 <xref:System.Windows.Forms.Control.OnLayout%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-235">Override the <xref:System.Windows.Forms.Control.OnLayout%2A> method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]  
   
-## 建立自訂控制項的子控制項  
- `MarqueeControl` 將會裝載兩種子控制項：`MarqueeBorder` 控制項和 `MarqueeText` 控制項。  
+## <a name="creating-a-child-control-for-your-custom-control"></a><span data-ttu-id="f1df9-236">建立自訂控制項的子控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-236">Creating a Child Control for Your Custom Control</span></span>  
+ <span data-ttu-id="f1df9-237">`MarqueeControl`將裝載子控制項的兩種：`MarqueeBorder`控制項和`MarqueeText`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-237">The `MarqueeControl` will host two kinds of child control: the `MarqueeBorder` control and the `MarqueeText` control.</span></span>  
   
--   `MarqueeBorder`：此控制項會在邊緣周圍繪製「燈號」\(Lights\) 的框線。  燈號會依序閃爍，所以看起來像是沿著邊框移動。  燈號閃爍的速度是由稱為 `UpdatePeriod` 的屬性控制。  數種其他的自訂屬性會決定控制項外觀的其他方面。  稱為 `StartMarquee` 和 `StopMarquee` 的兩種方法會控制動畫啟動和停止的時機。  
+-   <span data-ttu-id="f1df9-238">`MarqueeBorder`： 這個控制項繪製"lights"其邊緣的框線。</span><span class="sxs-lookup"><span data-stu-id="f1df9-238">`MarqueeBorder`: This control paints a border of "lights" around its edges.</span></span> <span data-ttu-id="f1df9-239">燈號閃爍在順序中，以便移動框線周圍顯示。</span><span class="sxs-lookup"><span data-stu-id="f1df9-239">The lights flash in sequence, so they appear to be moving around the border.</span></span> <span data-ttu-id="f1df9-240">燈號閃爍的速度由名`UpdatePeriod`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-240">The speed at which the lights flash is controlled by a property called `UpdatePeriod`.</span></span> <span data-ttu-id="f1df9-241">其他幾個自訂屬性決定控制項的外觀的其他層面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-241">Several other custom properties determine other aspects of the control's appearance.</span></span> <span data-ttu-id="f1df9-242">兩種方法，稱為`StartMarquee`和`StopMarquee`，控制何時啟動動畫和停止。</span><span class="sxs-lookup"><span data-stu-id="f1df9-242">Two methods, called `StartMarquee` and `StopMarquee`, control when the animation starts and stops.</span></span>  
   
--   `MarqueeText`：此控制項會繪製閃爍的字串。  和 `MarqueeBorder` 控制項一樣，文字閃爍的速度是由 `UpdatePeriod` 屬性所控制。  `MarqueeText` 控制項和 `MarqueeBorder` 控制項相同，也有 `StartMarquee` 和 `StopMarquee` 方法。  
+-   <span data-ttu-id="f1df9-243">`MarqueeText`： 這個控制項繪製閃爍的字串。</span><span class="sxs-lookup"><span data-stu-id="f1df9-243">`MarqueeText`: This control paints a flashing string.</span></span> <span data-ttu-id="f1df9-244">像`MarqueeBorder`控制項文字的閃爍的速度由`UpdatePeriod`屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-244">Like the `MarqueeBorder` control, the speed at which the text flashes is controlled by the `UpdatePeriod` property.</span></span> <span data-ttu-id="f1df9-245">`MarqueeText`控制項也有`StartMarquee`和`StopMarquee`方法與`MarqueeBorder`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-245">The `MarqueeText` control also has the `StartMarquee` and `StopMarquee` methods in common with the `MarqueeBorder` control.</span></span>  
   
- 在執行階段，`MarqueeControlRootDesigner` 允許這兩種控制項型別以任何組合方式加入至 `MarqueeControl`。  
+ <span data-ttu-id="f1df9-246">在設計階段`MarqueeControlRootDesigner`讓這些兩個控制項型別加入至`MarqueeControl`任何組合。</span><span class="sxs-lookup"><span data-stu-id="f1df9-246">At design time, the `MarqueeControlRootDesigner` allows these two control types to be added to a `MarqueeControl` in any combination.</span></span>  
   
- 兩個控制項的通用功能會納入稱為 `IMarqueeWidget` 的介面中。  這可讓 `MarqueeControl` 探索任何跑馬燈相關的子控制項，並給予它們特殊處理。  
+ <span data-ttu-id="f1df9-247">兩個控制項的一般功能會納入介面呼叫`IMarqueeWidget`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-247">Common features of the two controls are factored into an interface called `IMarqueeWidget`.</span></span> <span data-ttu-id="f1df9-248">這可讓`MarqueeControl`探索任何跑馬燈相關的子控制項，並賦予特殊處理。</span><span class="sxs-lookup"><span data-stu-id="f1df9-248">This allows the `MarqueeControl` to discover any Marquee-related child controls and give them special treatment.</span></span>  
   
- 若要實作週期性動畫功能，您可從 <xref:System.ComponentModel?displayProperty=fullName> 命名空間使用 <xref:System.ComponentModel.BackgroundWorker> 物件。  您可以使用 <xref:System.Windows.Forms.Timer> 物件，但是有許多 `IMarqueeWidget` 物件時，單一的 UI 執行緒可能就無法跟上動畫的速度。  
+ <span data-ttu-id="f1df9-249">若要實作定期動畫功能，您將使用<xref:System.ComponentModel.BackgroundWorker>物件從<xref:System.ComponentModel?displayProperty=nameWithType>命名空間。</span><span class="sxs-lookup"><span data-stu-id="f1df9-249">To implement the periodic animation feature, you will use <xref:System.ComponentModel.BackgroundWorker> objects from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="f1df9-250">您可以使用<xref:System.Windows.Forms.Timer>物件，但是在許多`IMarqueeWidget`物件存在，可能無法跟上動畫單一 UI 執行緒。</span><span class="sxs-lookup"><span data-stu-id="f1df9-250">You could use <xref:System.Windows.Forms.Timer> objects, but when many `IMarqueeWidget` objects are present, the single UI thread may be unable to keep up with the animation.</span></span>  
   
-#### 若要建立自訂控制項的子控制項  
+#### <a name="to-create-a-child-control-for-your-custom-control"></a><span data-ttu-id="f1df9-251">若要建立您的自訂控制項的子控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-251">To create a child control for your custom control</span></span>  
   
-1.  將新的類別項目加入至 `MarqueeControlLibrary` 專案。  提供主檔名 "IMarqueeWidget" 給新的原始程式檔。  
+1.  <span data-ttu-id="f1df9-252">若要加入新的類別`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-252">Add a new class item to the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-253">提供新的來源檔案的基底名稱"IMarqueeWidget。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-253">Give the new source file a base name of "IMarqueeWidget."</span></span>  
   
-2.  開啟 \[**程式碼編輯器**\] 的 `IMarqueeWidget` 原始程式檔，並將 `class` 的宣告變更為 `interface`：  
+2.  <span data-ttu-id="f1df9-254">開啟`IMarqueeWidget`原始程式檔中的**程式碼編輯器**並將變更從宣告`class`至`interface`:</span><span class="sxs-lookup"><span data-stu-id="f1df9-254">Open the `IMarqueeWidget` source file in the **Code Editor** and change the declaration from `class` to `interface`:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/imarqueewidget.cs#2)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/imarqueewidget.vb#2)]  
   
-3.  加入下列程式碼至 `IMarqueeWidget` 介面，以公開管理跑馬燈動畫的兩種方法和一個屬性：  
+3.  <span data-ttu-id="f1df9-255">將下列程式碼加入`IMarqueeWidget`介面來公開兩個方法和操作跑馬燈動畫的屬性：</span><span class="sxs-lookup"><span data-stu-id="f1df9-255">Add the following code to the `IMarqueeWidget` interface to expose two methods and a property that manipulate the marquee animation:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/imarqueewidget.cs#3)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/imarqueewidget.vb#3)]  
   
-4.  將新的 \[**自訂控制項**\] 項目加入至 `MarqueeControlLibrary` 專案。  提供主檔名 "MarqueeText" 給新的原始程式檔。  
+4.  <span data-ttu-id="f1df9-256">加入新**自訂控制項**項目`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-256">Add a new **Custom Control** item to the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-257">提供新的來源檔案的基底名稱"MarqueeText。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-257">Give the new source file a base name of "MarqueeText."</span></span>  
   
-5.  從 \[**工具箱**\] 將 <xref:System.ComponentModel.BackgroundWorker> 元件拖曳至 `MarqueeText` 控制項。  此元件允許 `MarqueeText` 控制項非同步自我更新。  
+5.  <span data-ttu-id="f1df9-258">拖曳<xref:System.ComponentModel.BackgroundWorker>元件從**工具箱**拖曳至您`MarqueeText`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-258">Drag a <xref:System.ComponentModel.BackgroundWorker> component from the **Toolbox** onto your `MarqueeText` control.</span></span> <span data-ttu-id="f1df9-259">此元件可讓`MarqueeText`控制項以非同步方式更新本身。</span><span class="sxs-lookup"><span data-stu-id="f1df9-259">This component will allow the `MarqueeText` control to update itself asynchronously.</span></span>  
   
-6.  在 \[屬性\] 視窗中，將 <xref:System.ComponentModel.BackgroundWorker> 元件的 `WorkerReportsProgess` 和 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> 屬性設定為 `true`。  這些設定能讓 <xref:System.ComponentModel.BackgroundWorker> 元件週期性地引發 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件，並取消非同步更新。  如需詳細資訊，請參閱 [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)。  
+6.  <span data-ttu-id="f1df9-260">在 [屬性] 視窗中，設定<xref:System.ComponentModel.BackgroundWorker>元件的`WorkerReportsProgess`和<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-260">In the Properties window, set the <xref:System.ComponentModel.BackgroundWorker> component's `WorkerReportsProgess` and <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> properties to `true`.</span></span> <span data-ttu-id="f1df9-261">這些設定可讓<xref:System.ComponentModel.BackgroundWorker>元件會定期引發<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件以及取消非同步更新。</span><span class="sxs-lookup"><span data-stu-id="f1df9-261">These settings allow the <xref:System.ComponentModel.BackgroundWorker> component to periodically raise the <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> event and to cancel asynchronous updates.</span></span> <span data-ttu-id="f1df9-262">如需詳細資訊，請參閱[BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-262">For more information, see [BackgroundWorker Component](../../../../docs/framework/winforms/controls/backgroundworker-component.md).</span></span>  
   
-7.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeText` 來源檔。  在檔案頂端匯入下列命名空間：  
+7.  <span data-ttu-id="f1df9-263">開啟`MarqueeText`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-263">Open the `MarqueeText` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-264">在檔案頂端，匯入下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-264">At the top of the file, import the following namespaces:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#120)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#120)]  
   
-8.  將 `MarqueeText` 的宣告變更為繼承自 <xref:System.Windows.Forms.Label> 以及實作 `IMarqueeWidget` 介面：  
+8.  <span data-ttu-id="f1df9-265">變更宣告`MarqueeText`繼承自<xref:System.Windows.Forms.Label>並實作`IMarqueeWidget`介面：</span><span class="sxs-lookup"><span data-stu-id="f1df9-265">Change the declaration of `MarqueeText` to inherit from <xref:System.Windows.Forms.Label> and to implement the `IMarqueeWidget` interface:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#130)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#130)]  
   
-9. 宣告對應至公開屬性的執行個體變數，並在建構函式中初始化它們。  `isLit` 欄位會決定是否要用 `LightColor` 屬性提供的色彩繪製文字。  
+9. <span data-ttu-id="f1df9-266">宣告的執行個體變數對應至公開的屬性，並在建構函式中初始化它們。</span><span class="sxs-lookup"><span data-stu-id="f1df9-266">Declare the instance variables that correspond to the exposed properties, and initialize them in the constructor.</span></span> <span data-ttu-id="f1df9-267">`isLit`欄位判斷文字是否要繪製在所指定的色彩`LightColor`屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-267">The `isLit` field determines if the text is to be painted in the color given by the `LightColor` property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]  
   
-10. 實作 `IMarqueeWidget` 介面。  
+10. <span data-ttu-id="f1df9-268">實作 `IMarqueeWidget` 介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-268">Implement the `IMarqueeWidget` interface.</span></span>  
   
-     `StartMarquee` 和 `StopMarquee` 方法會叫用 <xref:System.ComponentModel.BackgroundWorker> 元件的 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 和 <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> 方法，以啟動和停止動畫。  
+     <span data-ttu-id="f1df9-269">`StartMarquee`和`StopMarquee`方法叫用<xref:System.ComponentModel.BackgroundWorker>元件的<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>和<xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>方法啟動或停止動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-269">The `StartMarquee` and `StopMarquee` methods invoke the <xref:System.ComponentModel.BackgroundWorker> component's <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> and <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> methods to start and stop the animation.</span></span>  
   
-     <xref:System.ComponentModel.CategoryAttribute.Category%2A> 和 <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> 屬性 \(Attribute\) 會套用至 `UpdatePeriod` 屬性 \(Property\)，使它出現在 \[屬性\] 視窗的自訂區段 \(此區段名為 "Marquee"\) 中。  
+     <span data-ttu-id="f1df9-270"><xref:System.ComponentModel.CategoryAttribute.Category%2A>和<xref:System.ComponentModel.BrowsableAttribute.Browsable%2A>屬性會套用至`UpdatePeriod`屬性，讓它出現在 [屬性] 視窗，稱為 「 跑馬燈。 「 自訂區段</span><span class="sxs-lookup"><span data-stu-id="f1df9-270">The <xref:System.ComponentModel.CategoryAttribute.Category%2A> and <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> attributes are applied to the `UpdatePeriod` property so it appears in a custom section of the Properties window called "Marquee."</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#150)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#150)]  
   
-11. 實作屬性存取子。  您將公開兩個屬性給用戶端：`LightColor` 和 `DarkColor`。  <xref:System.ComponentModel.CategoryAttribute.Category%2A> 和 <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> 屬性 \(Attribute\) 會套用至這些屬性 \(Property\)，使它出現在 \[屬性\] 視窗的自訂區段 \(此區段名為 "Marquee"\) 中。  
+11. <span data-ttu-id="f1df9-271">實作屬性存取子。</span><span class="sxs-lookup"><span data-stu-id="f1df9-271">Implement the property accessors.</span></span> <span data-ttu-id="f1df9-272">您將公開給用戶端的兩個屬性：`LightColor`和`DarkColor`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-272">You will expose two properties to clients: `LightColor` and `DarkColor`.</span></span> <span data-ttu-id="f1df9-273"><xref:System.ComponentModel.CategoryAttribute.Category%2A>和<xref:System.ComponentModel.BrowsableAttribute.Browsable%2A>屬性套用至這些屬性，因此屬性會出現在稱為 「 跑馬燈。 」 的 [屬性] 視窗中的自訂 > 一節</span><span class="sxs-lookup"><span data-stu-id="f1df9-273">The <xref:System.ComponentModel.CategoryAttribute.Category%2A> and <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> attributes are applied to these properties, so the properties appear in a custom section of the Properties window called "Marquee."</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#160)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#160)]  
   
-12. 實作 <xref:System.ComponentModel.BackgroundWorker> 元件的 <xref:System.ComponentModel.BackgroundWorker.DoWork> 和 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件的處理常式。  
+12. <span data-ttu-id="f1df9-274">實作的處理常式<xref:System.ComponentModel.BackgroundWorker>元件的<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-274">Implement the handlers for the <xref:System.ComponentModel.BackgroundWorker> component's <xref:System.ComponentModel.BackgroundWorker.DoWork> and <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> events.</span></span>  
   
-     <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件處理常式會休眠由 `UpdatePeriod` 所指定的毫秒數，然後引發 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件，直到程式碼藉由呼叫 <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> 來停止動畫。  
+     <span data-ttu-id="f1df9-275"><xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式進入睡眠狀態所指定的毫秒數`UpdatePeriod`然後引發<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件，直到您的程式碼會藉由呼叫停止動畫<xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-275">The <xref:System.ComponentModel.BackgroundWorker.DoWork> event handler sleeps for the number of milliseconds specified by `UpdatePeriod` then raises the <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> event, until your code stops the animation by calling <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>.</span></span>  
   
-     <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件處理常式會切換亮和暗的狀態，以提供閃爍的外觀。  
+     <span data-ttu-id="f1df9-276"><xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件處理常式將文字之間切換其淺色與深色的狀態，以提供閃爍的外觀。</span><span class="sxs-lookup"><span data-stu-id="f1df9-276">The <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> event handler toggles the text between its light and dark state to give the appearance of flashing.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#180)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#180)]  
   
-13. 覆寫 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法以啟用動畫。  
+13. <span data-ttu-id="f1df9-277">覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以啟用動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-277">Override the <xref:System.Windows.Forms.Control.OnPaint%2A> method to enable the animation.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]  
   
-14. 按 F6 建置方案。  
+14. <span data-ttu-id="f1df9-278">按 F6 建置此方案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-278">Press F6 to build the solution.</span></span>  
   
-## 建立 MarqueeBorder 子控制項  
- `MarqueeBorder` 控制項是比 `MarqueeText` 控制項略微複雜一點的控制項。  它具有較多的屬性，而在 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法中的動畫更為複雜。  基本上，它和 `MarqueeText` 控制項十分類似。  
+## <a name="create-the-marqueeborder-child-control"></a><span data-ttu-id="f1df9-279">建立 MarqueeBorder 子控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-279">Create the MarqueeBorder Child Control</span></span>  
+ <span data-ttu-id="f1df9-280">`MarqueeBorder`控制項是稍微複雜一點比`MarqueeText`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-280">The `MarqueeBorder` control is slightly more sophisticated than the `MarqueeText` control.</span></span> <span data-ttu-id="f1df9-281">它有更多的屬性和中的動畫<xref:System.Windows.Forms.Control.OnPaint%2A>方法會更為複雜。</span><span class="sxs-lookup"><span data-stu-id="f1df9-281">It has more properties and the animation in the <xref:System.Windows.Forms.Control.OnPaint%2A> method is more involved.</span></span> <span data-ttu-id="f1df9-282">基本上，是非常類似`MarqueeText`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-282">In principle, it is quite similar to the `MarqueeText` control.</span></span>  
   
- 因為 `MarqueeBorder` 控制項能擁有子控制項，所以需要留意 <xref:System.Windows.Forms.Control.Layout> 事件。  
+ <span data-ttu-id="f1df9-283">因為`MarqueeBorder`控制項可以有子控制項，它必須留意<xref:System.Windows.Forms.Control.Layout>事件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-283">Because the `MarqueeBorder` control can have child controls, it needs to be aware of <xref:System.Windows.Forms.Control.Layout> events.</span></span>  
   
-#### 若要建立 MarqueeBorder 控制項  
+#### <a name="to-create-the-marqueeborder-control"></a><span data-ttu-id="f1df9-284">若要建立 MarqueeBorder 控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-284">To create the MarqueeBorder control</span></span>  
   
-1.  將新的 \[**自訂控制項**\] 項目加入至 `MarqueeControlLibrary` 專案。  提供主檔名 "MarqueeBorder" 給新的原始程式檔。  
+1.  <span data-ttu-id="f1df9-285">加入新**自訂控制項**項目`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-285">Add a new **Custom Control** item to the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-286">提供新的來源檔案的基底名稱"MarqueeBorder。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-286">Give the new source file a base name of "MarqueeBorder."</span></span>  
   
-2.  從 \[**工具箱**\] 將 <xref:System.ComponentModel.BackgroundWorker> 元件拖曳至 `MarqueeBorder` 控制項。  這個元件允許 `MarqueeBorder` 控制項非同步自我更新。  
+2.  <span data-ttu-id="f1df9-287">拖曳<xref:System.ComponentModel.BackgroundWorker>元件從**工具箱**拖曳至您`MarqueeBorder`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-287">Drag a <xref:System.ComponentModel.BackgroundWorker> component from the **Toolbox** onto your `MarqueeBorder` control.</span></span> <span data-ttu-id="f1df9-288">此元件可讓`MarqueeBorder`控制項以非同步方式更新本身。</span><span class="sxs-lookup"><span data-stu-id="f1df9-288">This component will allow the `MarqueeBorder` control to update itself asynchronously.</span></span>  
   
-3.  在 \[屬性\] 視窗中，將 <xref:System.ComponentModel.BackgroundWorker> 元件的 `WorkerReportsProgess` 和 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> 屬性設定為 `true`。  這些設定能讓 <xref:System.ComponentModel.BackgroundWorker> 元件週期性地引發 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件，並取消非同步更新。  如需詳細資訊，請參閱 [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)。  
+3.  <span data-ttu-id="f1df9-289">在 [屬性] 視窗中，設定<xref:System.ComponentModel.BackgroundWorker>元件的`WorkerReportsProgess`和<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>屬性`true`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-289">In the Properties window, set the <xref:System.ComponentModel.BackgroundWorker> component's `WorkerReportsProgess` and <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> properties to `true`.</span></span> <span data-ttu-id="f1df9-290">這些設定可讓<xref:System.ComponentModel.BackgroundWorker>元件會定期引發<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件以及取消非同步更新。</span><span class="sxs-lookup"><span data-stu-id="f1df9-290">These settings allow the <xref:System.ComponentModel.BackgroundWorker> component to periodically raise the <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> event and to cancel asynchronous updates.</span></span> <span data-ttu-id="f1df9-291">如需詳細資訊，請參閱[BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-291">For more information, see [BackgroundWorker Component](../../../../docs/framework/winforms/controls/backgroundworker-component.md).</span></span>  
   
-4.  在 \[屬性\] 視窗中，按一下 \[事件\] 按鈕。  附加 <xref:System.ComponentModel.BackgroundWorker.DoWork> 和 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件的處理常式。  
+4.  <span data-ttu-id="f1df9-292">在 [屬性] 視窗中，按一下 [事件] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f1df9-292">In the Properties window, click the Events button.</span></span> <span data-ttu-id="f1df9-293">附加的處理常式<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-293">Attach handlers for the <xref:System.ComponentModel.BackgroundWorker.DoWork> and <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> events.</span></span>  
   
-5.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeBorder` 來源檔。  在檔案頂端匯入下列命名空間：  
+5.  <span data-ttu-id="f1df9-294">開啟`MarqueeBorder`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-294">Open the `MarqueeBorder` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-295">在檔案頂端，匯入下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-295">At the top of the file, import the following namespaces:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#20)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#20)]  
   
-6.  變更 `MarqueeBorder` 的宣告為繼承自 <xref:System.Windows.Forms.Panel>，並實作 `IMarqueeWidget` 介面。  
+6.  <span data-ttu-id="f1df9-296">變更宣告`MarqueeBorder`繼承自<xref:System.Windows.Forms.Panel>並實作`IMarqueeWidget`介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-296">Change the declaration of `MarqueeBorder` to inherit from <xref:System.Windows.Forms.Panel> and to implement the `IMarqueeWidget` interface.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#30)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#30)]  
   
-7.  宣告管理 `MarqueeBorder` 控制項狀態的兩個列舉型別：`MarqueeSpinDirection` \(決定燈號在框線周圍「旋轉」\(Spin\) 的方向\) 以及 `MarqueeLightShape` \(會決定燈號的形狀 \(方形或圓形\)\)。  將這些宣告放置在 `MarqueeBorder` 類別宣告之前。  
+7.  <span data-ttu-id="f1df9-297">宣告兩個用於管理列舉`MarqueeBorder`控制項的狀態： `MarqueeSpinDirection`，可判斷在其中燈號 「 微調 」 框線周圍的方向和`MarqueeLightShape`，這會決定指示燈 （正方形或循環） 的圖形。</span><span class="sxs-lookup"><span data-stu-id="f1df9-297">Declare two enumerations for managing the `MarqueeBorder` control's state: `MarqueeSpinDirection`, which determines the direction in which the lights "spin" around the border, and `MarqueeLightShape`, which determines the shape of the lights (square or circular).</span></span> <span data-ttu-id="f1df9-298">將這些宣告之前`MarqueeBorder`類別宣告。</span><span class="sxs-lookup"><span data-stu-id="f1df9-298">Place these declarations before the `MarqueeBorder` class declaration.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#97](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#97)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#97](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#97)]  
   
-8.  宣告對應至公開屬性的執行個體變數，並在建構函式中初始化它們。  
+8.  <span data-ttu-id="f1df9-299">宣告的執行個體變數對應至公開的屬性，並在建構函式中初始化它們。</span><span class="sxs-lookup"><span data-stu-id="f1df9-299">Declare the instance variables that correspond to the exposed properties, and initialize them in the constructor.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]  
   
-9. 實作 `IMarqueeWidget` 介面。  
+9. <span data-ttu-id="f1df9-300">實作 `IMarqueeWidget` 介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-300">Implement the `IMarqueeWidget` interface.</span></span>  
   
-     `StartMarquee` 和 `StopMarquee` 方法會叫用 <xref:System.ComponentModel.BackgroundWorker> 元件的 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 和 <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> 方法，以啟動和停止動畫。  
+     <span data-ttu-id="f1df9-301">`StartMarquee`和`StopMarquee`方法叫用<xref:System.ComponentModel.BackgroundWorker>元件的<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>和<xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>方法啟動或停止動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-301">The `StartMarquee` and `StopMarquee` methods invoke the <xref:System.ComponentModel.BackgroundWorker> component's <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> and <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> methods to start and stop the animation.</span></span>  
   
-     因為 `MarqueeBorder` 控制項可以包含子控制項，`StartMarquee` 方法會列舉所有子控制項，並在實作 `IMarqueeWidget` 的這些子控制項上呼叫 `StartMarquee`。  `StopMarquee` 方法具有類似的實作。  
+     <span data-ttu-id="f1df9-302">因為`MarqueeBorder`控制項可以包含子控制項`StartMarquee`方法會列舉所有的子控制項和呼叫`StartMarquee`那些實作`IMarqueeWidget`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-302">Because the `MarqueeBorder` control can contain child controls, the `StartMarquee` method enumerates all child controls and calls `StartMarquee` on those that implement `IMarqueeWidget`.</span></span> <span data-ttu-id="f1df9-303">`StopMarquee`方法具有類似的實作。</span><span class="sxs-lookup"><span data-stu-id="f1df9-303">The `StopMarquee` method has a similar implementation.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#50](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#50)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#50](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#50)]  
   
-10. 實作屬性存取子。  `MarqueeBorder` 控制項具有控制外觀的數種屬性。  
+10. <span data-ttu-id="f1df9-304">實作屬性存取子。</span><span class="sxs-lookup"><span data-stu-id="f1df9-304">Implement the property accessors.</span></span> <span data-ttu-id="f1df9-305">`MarqueeBorder`控制項有數個屬性來控制其外觀。</span><span class="sxs-lookup"><span data-stu-id="f1df9-305">The `MarqueeBorder` control has several properties for controlling its appearance.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#60)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#60)]  
   
-11. 實作 <xref:System.ComponentModel.BackgroundWorker> 元件的 <xref:System.ComponentModel.BackgroundWorker.DoWork> 和 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件的處理常式。  
+11. <span data-ttu-id="f1df9-306">實作的處理常式<xref:System.ComponentModel.BackgroundWorker>元件的<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-306">Implement the handlers for the <xref:System.ComponentModel.BackgroundWorker> component's <xref:System.ComponentModel.BackgroundWorker.DoWork> and <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> events.</span></span>  
   
-     <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件處理常式會休眠由 `UpdatePeriod` 所指定的毫秒數，然後引發 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件，直到程式碼藉由呼叫 <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> 來停止動畫。  
+     <span data-ttu-id="f1df9-307"><xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式進入睡眠狀態所指定的毫秒數`UpdatePeriod`然後引發<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件，直到您的程式碼會藉由呼叫停止動畫<xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-307">The <xref:System.ComponentModel.BackgroundWorker.DoWork> event handler sleeps for the number of milliseconds specified by `UpdatePeriod` then raises the <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> event, until your code stops the animation by calling <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>.</span></span>  
   
-     <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件處理常式會遞增「基底」\(Base\) 燈號的位置 \(其他燈號的亮\/暗狀態將由此來決定\)，並且會呼叫 <xref:System.Windows.Forms.Control.Refresh%2A> 方法，導致控制項重新自我繪製。  
+     <span data-ttu-id="f1df9-308"><xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件處理常式會遞增 「 基底 」 的光線，從中淡/濃其他燈號判斷狀態和呼叫的位置<xref:System.Windows.Forms.Control.Refresh%2A>方法，讓控制項重繪本身。</span><span class="sxs-lookup"><span data-stu-id="f1df9-308">The <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> event handler increments the position of the "base" light, from which the light/dark state of the other lights is determined, and calls the <xref:System.Windows.Forms.Control.Refresh%2A> method to cause the control to repaint itself.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#90](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#90)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#90](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#90)]  
   
-12. 實作 Helper 方法：`IsLit` 和 `DrawLight`。  
+12. <span data-ttu-id="f1df9-309">實作 helper 方法，`IsLit`和`DrawLight`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-309">Implement the helper methods, `IsLit` and `DrawLight`.</span></span>  
   
-     `IsLit` 方法會決定在指定位置上的燈號色彩。  「亮」\(Lit\) 的燈號是以 `LightColor` 屬性所提供的色彩進行繪製，而「暗」\(Dark\) 的那些燈號則是以 `DarkColor` 屬性所提供的色彩進行繪製。  
+     <span data-ttu-id="f1df9-310">`IsLit`方法會判斷指定的位置光線色彩。</span><span class="sxs-lookup"><span data-stu-id="f1df9-310">The `IsLit` method determines the color of a light at a given position.</span></span> <span data-ttu-id="f1df9-311">所指定的色彩繪製為 「 亮 」 的燈號`LightColor`屬性，以及是 「 暗色調 」 中所指定的色彩繪製`DarkColor`屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-311">Lights that are "lit" are drawn in the color given by the `LightColor` property, and those that are "dark" are drawn in the color given by the `DarkColor` property.</span></span>  
   
-     `DrawLight` 方法會使用適當的色彩、形狀及位置繪製燈號。  
+     <span data-ttu-id="f1df9-312">`DrawLight`方法繪製使用適當的色彩、 圖形與位置的燈號。</span><span class="sxs-lookup"><span data-stu-id="f1df9-312">The `DrawLight` method draws a light using the appropriate color, shape, and position.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#80](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#80)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#80](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#80)]  
   
-13. 覆寫 <xref:System.Windows.Forms.Control.OnLayout%2A> 和 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法。  
+13. <span data-ttu-id="f1df9-313">覆寫<xref:System.Windows.Forms.Control.OnLayout%2A>和<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-313">Override the <xref:System.Windows.Forms.Control.OnLayout%2A> and <xref:System.Windows.Forms.Control.OnPaint%2A> methods.</span></span>  
   
-     <xref:System.Windows.Forms.Control.OnPaint%2A> 方法會沿著 `MarqueeBorder` 控制項的邊緣繪製燈號。  
+     <span data-ttu-id="f1df9-314"><xref:System.Windows.Forms.Control.OnPaint%2A>方法繪製周圍的膠帶燈`MarqueeBorder`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-314">The <xref:System.Windows.Forms.Control.OnPaint%2A> method draws the lights along the edges of the `MarqueeBorder` control.</span></span>  
   
-     因為 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法會依據 `MarqueeBorder` 控制項的維度 \(Dimension\) 而定，所以每次配置變更時，就需要呼叫它。  若要達成這項作業，請覆寫 <xref:System.Windows.Forms.Control.OnLayout%2A> 並呼叫 <xref:System.Windows.Forms.Control.Refresh%2A>。  
+     <span data-ttu-id="f1df9-315">因為<xref:System.Windows.Forms.Control.OnPaint%2A>方法取決於維度的`MarqueeBorder`控制項，您需要每次配置變更時呼叫它。</span><span class="sxs-lookup"><span data-stu-id="f1df9-315">Because the <xref:System.Windows.Forms.Control.OnPaint%2A> method depends on the dimensions of the `MarqueeBorder` control, you need to call it whenever the layout changes.</span></span> <span data-ttu-id="f1df9-316">若要達成此目的，覆寫<xref:System.Windows.Forms.Control.OnLayout%2A>呼叫<xref:System.Windows.Forms.Control.Refresh%2A>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-316">To achieve this, override <xref:System.Windows.Forms.Control.OnLayout%2A> and call <xref:System.Windows.Forms.Control.Refresh%2A>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#70](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#70)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#70](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#70)]  
   
-## 建立自訂設計工具以遮蔽和篩選屬性  
- `MarqueeControlRootDesigner` 類別提供根目錄設計工具的實作。  除了在 `MarqueeControl` 上作業的這個設計工具以外，您將需要特別與 `MarqueeBorder` 控制項關聯的自訂設計工具。  這個設計工具會提供在自訂根目錄設計工具的內容中適合的自訂行為。  
+## <a name="creating-a-custom-designer-to-shadow-and-filter-properties"></a><span data-ttu-id="f1df9-317">建立自訂的設計工具，以遮蔽和篩選屬性</span><span class="sxs-lookup"><span data-stu-id="f1df9-317">Creating a Custom Designer to Shadow and Filter Properties</span></span>  
+ <span data-ttu-id="f1df9-318">`MarqueeControlRootDesigner`類別提供的根目錄設計工具的實作。</span><span class="sxs-lookup"><span data-stu-id="f1df9-318">The `MarqueeControlRootDesigner` class provides the implementation for the root designer.</span></span> <span data-ttu-id="f1df9-319">除了這個設計工具中，這對`MarqueeControl`，您必須特別相關聯的自訂設計工具`MarqueeBorder`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-319">In addition to this designer, which operates on the `MarqueeControl`, you will need a custom designer that is specifically associated with the `MarqueeBorder` control.</span></span> <span data-ttu-id="f1df9-320">這個設計工具提供自訂的根目錄設計工具的內容中適當的自訂行為。</span><span class="sxs-lookup"><span data-stu-id="f1df9-320">This designer provides custom behavior that is appropriate in the context of the custom root designer.</span></span>  
   
- 特別是，`MarqueeBorderDesigner` 將會「遮蔽」\(Shadow\) 及篩選 `MarqueeBorder` 控制項中的屬性，變更它們與設計環境的互動。  
+ <span data-ttu-id="f1df9-321">具體來說，`MarqueeBorderDesigner`將 「 陰影 」 和篩選的某些屬性上`MarqueeBorder`控制項，變更其在設計環境互動。</span><span class="sxs-lookup"><span data-stu-id="f1df9-321">Specifically, the `MarqueeBorderDesigner` will "shadow" and filter certain properties on the `MarqueeBorder` control, changing their interaction with the design environment.</span></span>  
   
- 攔截對元件的屬性存取子的呼叫稱為「遮蔽」\(Shadowing\)。 這種行為能讓設計工具追蹤使用者所設定的值，並選擇性地傳遞該值至正在設計的元件。  
+ <span data-ttu-id="f1df9-322">攔截元件的屬性存取子的呼叫稱為 「 遮蔽 」。</span><span class="sxs-lookup"><span data-stu-id="f1df9-322">Intercepting calls to a component's property accessor is known as "shadowing."</span></span> <span data-ttu-id="f1df9-323">它可讓設計工具來追蹤使用者所設定的值，並選擇性地將該值傳遞至正在設計的元件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-323">It allows a designer to track the value set by the user and optionally pass that value to the component being designed.</span></span>  
   
- 對於這個範例，<xref:System.Windows.Forms.Control.Visible%2A> 和 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性將會由 `MarqueeBorderDesigner` 遮蔽，讓使用者不會在執行階段時無法檢視 `MarqueeBorder` 控制項或將其停用。  
+ <span data-ttu-id="f1df9-324">針對此範例中，<xref:System.Windows.Forms.Control.Visible%2A>和<xref:System.Windows.Forms.Control.Enabled%2A>屬性會被遮蔽`MarqueeBorderDesigner`，它可防止進行使用者`MarqueeBorder`不可見或已停用在設計階段期間的控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-324">For this example, the <xref:System.Windows.Forms.Control.Visible%2A> and <xref:System.Windows.Forms.Control.Enabled%2A> properties will be shadowed by the `MarqueeBorderDesigner`, which prevents the user from making the `MarqueeBorder` control invisible or disabled during design time.</span></span>  
   
- 設計工具也可以加入和移除屬性。  對於這個範例，<xref:System.Windows.Forms.Control.Padding%2A> 屬性會在設計階段移除，因為 `MarqueeBorder` 控制項會依據 `LightSize` 屬性所指定的燈號大小，以程式設計方式設定邊框距離。  
+ <span data-ttu-id="f1df9-325">設計工具也可以加入或移除屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-325">Designers can also add and remove properties.</span></span> <span data-ttu-id="f1df9-326">例如，<xref:System.Windows.Forms.Control.Padding%2A>屬性將會移除在設計階段，因為`MarqueeBorder`控制項以程式設計方式設定的燈號所指定大小所根據的邊框間距`LightSize`屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-326">For this example, the <xref:System.Windows.Forms.Control.Padding%2A> property will be removed at design time, because the `MarqueeBorder` control programmatically sets the padding based on the size of the lights specified by the `LightSize` property.</span></span>  
   
- `MarqueeBorderDesigner` 的基底類別是 <xref:System.ComponentModel.Design.ComponentDesigner>，具有能夠變更在設計階段由控制項公開的屬性 \(Attribute\)、屬性 \(Property\) 及事件的方法：  
+ <span data-ttu-id="f1df9-327">基底類別`MarqueeBorderDesigner`是<xref:System.ComponentModel.Design.ComponentDesigner>，其中包含可以變更屬性、 屬性和控制項所公開的設計階段事件的方法：</span><span class="sxs-lookup"><span data-stu-id="f1df9-327">The base class for `MarqueeBorderDesigner` is <xref:System.ComponentModel.Design.ComponentDesigner>, which has methods that can change the attributes, properties, and events exposed by a control at design time:</span></span>  
   
 -   <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A>  
   
@@ -401,126 +405,126 @@ using MarqueeControlLibrary;
   
 -   <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A>  
   
- 當使用這些方法來變更元件的公用介面時，您必須遵循下列規則：  
+ <span data-ttu-id="f1df9-328">變更時使用這些方法之元件的公用介面，您必須遵守下列規則：</span><span class="sxs-lookup"><span data-stu-id="f1df9-328">When changing the public interface of a component using these methods, you must follow these rules:</span></span>  
   
--   只加入或移除 `PreFilter` 方法中的項目  
+-   <span data-ttu-id="f1df9-329">新增或移除項目中的`PreFilter`只方法</span><span class="sxs-lookup"><span data-stu-id="f1df9-329">Add or remove items in the `PreFilter` methods only</span></span>  
   
--   只修改 `PostFilter` 方法中的現有項目  
+-   <span data-ttu-id="f1df9-330">修改現有的項目中`PostFilter`只方法</span><span class="sxs-lookup"><span data-stu-id="f1df9-330">Modify existing items in the `PostFilter` methods only</span></span>  
   
--   永遠在 `PreFilter` 方法中最先呼叫基底實作  
+-   <span data-ttu-id="f1df9-331">一律第一次呼叫基底實作`PreFilter`方法</span><span class="sxs-lookup"><span data-stu-id="f1df9-331">Always call the base implementation first in the `PreFilter` methods</span></span>  
   
--   永遠在 `PostFilter` 方法中最後呼叫基底實作  
+-   <span data-ttu-id="f1df9-332">務必上次呼叫基底實作`PostFilter`方法</span><span class="sxs-lookup"><span data-stu-id="f1df9-332">Always call the base implementation last in the `PostFilter` methods</span></span>  
   
- 遵守這些規則能確保設計階段環境中的所有設計工具，對於正在設計的所有元件都具有一致的檢視。  
+ <span data-ttu-id="f1df9-333">遵守這些規則可確保在設計階段環境中的所有設計工具有一致的所有元件的設計檢視。</span><span class="sxs-lookup"><span data-stu-id="f1df9-333">Adhering to these rules ensures that all designers in the design-time environment have a consistent view of all components being designed.</span></span>  
   
- <xref:System.ComponentModel.Design.ComponentDesigner> 類別提供的字典可管理遮蔽屬性的值，讓您不需為建立特定執行個體變數的需要而煩惱。  
+ <span data-ttu-id="f1df9-334"><xref:System.ComponentModel.Design.ComponentDesigner>類別提供的字典，用於管理已遮蔽屬性值，其中減輕您需要建立特定的執行個體變數。</span><span class="sxs-lookup"><span data-stu-id="f1df9-334">The <xref:System.ComponentModel.Design.ComponentDesigner> class provides a dictionary for managing the values of shadowed properties, which relieves you of the need to create specific instance variables.</span></span>  
   
-#### 若要建立自訂設計工具以遮蔽和篩選屬性  
+#### <a name="to-create-a-custom-designer-to-shadow-and-filter-properties"></a><span data-ttu-id="f1df9-335">若要建立自訂的設計工具，以遮蔽和篩選的屬性</span><span class="sxs-lookup"><span data-stu-id="f1df9-335">To create a custom designer to shadow and filter properties</span></span>  
   
-1.  以滑鼠右鍵按一下 \[**設計**\] 資料夾，並加入新類別。  提供主檔名 "MarqueeBorderDesigner" 給原始程式檔。  
+1.  <span data-ttu-id="f1df9-336">以滑鼠右鍵按一下**設計**資料夾並加入新的類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-336">Right-click the **Design** folder and add a new class.</span></span> <span data-ttu-id="f1df9-337">提供的原始程式檔的基底名稱"MarqueeBorderDesigner。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-337">Give the source file a base name of "MarqueeBorderDesigner."</span></span>  
   
-2.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeBorderDesigner` 來源檔。  在檔案頂端匯入下列命名空間：  
+2.  <span data-ttu-id="f1df9-338">開啟`MarqueeBorderDesigner`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-338">Open the `MarqueeBorderDesigner` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-339">在檔案頂端，匯入下列命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-339">At the top of the file, import the following namespaces:</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#420](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#420)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#420](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#420)]  
   
-3.  將 `MarqueeBorderDesigner` 的宣告變更為繼承自 <xref:System.Windows.Forms.Design.ParentControlDesigner>。  
+3.  <span data-ttu-id="f1df9-340">變更宣告`MarqueeBorderDesigner`繼承自<xref:System.Windows.Forms.Design.ParentControlDesigner>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-340">Change the declaration of `MarqueeBorderDesigner` to inherit from <xref:System.Windows.Forms.Design.ParentControlDesigner>.</span></span>  
   
-     因為 `MarqueeBorder` 控制項可包含子控制項，所以 `MarqueeBorderDesigner` 會繼承自 <xref:System.Windows.Forms.Design.ParentControlDesigner>，這將能處理父子互動。  
+     <span data-ttu-id="f1df9-341">因為`MarqueeBorder`控制項可以包含子控制項`MarqueeBorderDesigner`繼承自<xref:System.Windows.Forms.Design.ParentControlDesigner>，處理父子式互動。</span><span class="sxs-lookup"><span data-stu-id="f1df9-341">Because the `MarqueeBorder` control can contain child controls, `MarqueeBorderDesigner` inherits from <xref:System.Windows.Forms.Design.ParentControlDesigner>, which handles the parent-child interaction.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#430](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#430)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#430](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#430)]  
   
-4.  覆寫 <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A> 的基底實作。  
+4.  <span data-ttu-id="f1df9-342">覆寫的基底實作<xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-342">Override the base implementation of <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#450](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#450)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#450](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#450)]  
   
-5.  實作 <xref:System.Windows.Forms.Control.Enabled%2A> 和 <xref:System.Windows.Forms.Control.Visible%2A> 屬性。  這些實作會遮蔽控制項的屬性。  
+5.  <span data-ttu-id="f1df9-343">實作 <xref:System.Windows.Forms.Control.Enabled%2A> 和 <xref:System.Windows.Forms.Control.Visible%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-343">Implement the <xref:System.Windows.Forms.Control.Enabled%2A> and <xref:System.Windows.Forms.Control.Visible%2A> properties.</span></span> <span data-ttu-id="f1df9-344">這些實作會遮蔽控制項的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-344">These implementations shadow the control's properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#440](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#440)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#440](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#440)]  
   
-## 處理元件變更  
- `MarqueeControlRootDesigner` 類別會提供 `MarqueeControl` 執行個體的自訂設計階段經驗。  大部分的設計階段功能都是繼承自 <xref:System.Windows.Forms.Design.DocumentDesigner> 類別；您的程式碼將會實作這兩種特定自訂：處理元件變更及加入設計工具動詞命令。  
+## <a name="handling-component-changes"></a><span data-ttu-id="f1df9-345">處理元件的變更</span><span class="sxs-lookup"><span data-stu-id="f1df9-345">Handling Component Changes</span></span>  
+ <span data-ttu-id="f1df9-346">`MarqueeControlRootDesigner`類別會提供自訂的設計階段經驗，針對您`MarqueeControl`執行個體。</span><span class="sxs-lookup"><span data-stu-id="f1df9-346">The `MarqueeControlRootDesigner` class provides the custom design-time experience for your `MarqueeControl` instances.</span></span> <span data-ttu-id="f1df9-347">大部分的設計階段功能都繼承自<xref:System.Windows.Forms.Design.DocumentDesigner>類別; 您的程式碼會實作兩個特定的自訂項目： 處理元件的變更，並加入設計工具動詞命令。</span><span class="sxs-lookup"><span data-stu-id="f1df9-347">Most of the design-time functionality is inherited from the <xref:System.Windows.Forms.Design.DocumentDesigner> class; your code will implement two specific customizations: handling component changes, and adding designer verbs.</span></span>  
   
- 當使用者設計他們的 `MarqueeControl` 執行個體時，您的根目錄設計工具將會追蹤變更至 `MarqueeControl` 及其子控制項。  設計階段環境提供便利的服務 <xref:System.ComponentModel.Design.IComponentChangeService>，可用來追蹤元件狀態的變更。  
+ <span data-ttu-id="f1df9-348">為使用者設計其`MarqueeControl`情況下，您的根設計工具會追蹤變更`MarqueeControl`及其子控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-348">As users design their `MarqueeControl` instances, your root designer will track changes to the `MarqueeControl` and its child controls.</span></span> <span data-ttu-id="f1df9-349">設計階段環境提供便利的服務， <xref:System.ComponentModel.Design.IComponentChangeService>、 追蹤變更為元件的狀態。</span><span class="sxs-lookup"><span data-stu-id="f1df9-349">The design-time environment offers a convenient service, <xref:System.ComponentModel.Design.IComponentChangeService>, for tracking changes to component state.</span></span>  
   
- 您可以使用 <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> 方法查詢環境，藉此取得對此服務的參考。  如果查詢成功，您的設計工具就可以附加 <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> 事件的處理常式，並執行在設計階段維持一致狀態所需要的任何工作。  
+ <span data-ttu-id="f1df9-350">您藉由查詢的環境中取得此服務的參考<xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-350">You acquire a reference to this service by querying the environment with the <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> method.</span></span> <span data-ttu-id="f1df9-351">如果查詢成功，您的設計工具可以附加的處理常式<xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged>事件，並執行任何工作的需要在設計階段中維持一致的狀態。</span><span class="sxs-lookup"><span data-stu-id="f1df9-351">If the query is successful, your designer can attach a handler for the <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> event and perform whatever tasks are required to maintain a consistent state at design time.</span></span>  
   
- 在 `MarqueeControlRootDesigner` 類別的情況下，您將會在 `MarqueeControl` 所包含的每個 `IMarqueeWidget` 物件上呼叫 <xref:System.Windows.Forms.Control.Refresh%2A> 方法。  如此一來，在變更如父代的 <xref:System.Windows.Forms.Control.Size%2A> 之類的屬性時，`IMarqueeWidget` 控制項就會適當地重新自我繪製。  
+ <span data-ttu-id="f1df9-352">如果是`MarqueeControlRootDesigner`類別，您會呼叫<xref:System.Windows.Forms.Control.Refresh%2A>上每個方法`IMarqueeWidget`物件所包含的`MarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-352">In the case of the `MarqueeControlRootDesigner` class, you will call the <xref:System.Windows.Forms.Control.Refresh%2A> method on each `IMarqueeWidget` object contained by the `MarqueeControl`.</span></span> <span data-ttu-id="f1df9-353">這會導致`IMarqueeWidget`重繪本身適當時屬性例如其父系物件<xref:System.Windows.Forms.Control.Size%2A>會變更。</span><span class="sxs-lookup"><span data-stu-id="f1df9-353">This will cause the `IMarqueeWidget` object to repaint itself appropriately when properties like its parent's <xref:System.Windows.Forms.Control.Size%2A> are changed.</span></span>  
   
-#### 若要處理元件變更  
+#### <a name="to-handle-component-changes"></a><span data-ttu-id="f1df9-354">若要處理元件的變更</span><span class="sxs-lookup"><span data-stu-id="f1df9-354">To handle component changes</span></span>  
   
-1.  在 \[**程式碼編輯器**\] 中開啟 `MarqueeControlRootDesigner` 原始程式檔，並覆寫 <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> 方法。  呼叫 <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> 的基底實作，並查詢 <xref:System.ComponentModel.Design.IComponentChangeService>。  
+1.  <span data-ttu-id="f1df9-355">開啟`MarqueeControlRootDesigner`原始程式檔中的**程式碼編輯器**並覆寫<xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-355">Open the `MarqueeControlRootDesigner` source file in the **Code Editor** and override the <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> method.</span></span> <span data-ttu-id="f1df9-356">呼叫的基底實作<xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A>和查詢<xref:System.ComponentModel.Design.IComponentChangeService>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-356">Call the base implementation of <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> and query for the <xref:System.ComponentModel.Design.IComponentChangeService>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#580](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#580)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#580](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#580)]  
   
-2.  實作 <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> 事件處理常式。  測試傳送元件的類型，如果該類型是 `IMarqueeWidget`，便呼叫 <xref:System.Windows.Forms.Control.Refresh%2A> 方法。  
+2.  <span data-ttu-id="f1df9-357">實作<xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-357">Implement the <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> event handler.</span></span> <span data-ttu-id="f1df9-358">測試傳送的元件類型，而且如果它是`IMarqueeWidget`，呼叫其<xref:System.Windows.Forms.Control.Refresh%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-358">Test the sending component's type, and if it is an `IMarqueeWidget`, call its <xref:System.Windows.Forms.Control.Refresh%2A> method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#560)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]  
   
-## 加入設計工具動詞命令至自訂設計工具  
- 設計工具動詞命令是連結至事件處理常式的功能表命令。  設計工具動詞命令會在執行階段加入至元件的捷徑功能表。  如需詳細資訊，請參閱 <xref:System.ComponentModel.Design.DesignerVerb>。  
+## <a name="adding-designer-verbs-to-your-custom-designer"></a><span data-ttu-id="f1df9-359">將設計工具動詞命令加入至您的自訂設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-359">Adding Designer Verbs to your Custom Designer</span></span>  
+ <span data-ttu-id="f1df9-360">設計工具動詞命令是連結至事件處理常式的功能表命令。</span><span class="sxs-lookup"><span data-stu-id="f1df9-360">A designer verb is a menu command linked to an event handler.</span></span> <span data-ttu-id="f1df9-361">設計工具動詞命令是在設計階段加入至元件的捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="f1df9-361">Designer verbs are added to a component's shortcut menu at design time.</span></span> <span data-ttu-id="f1df9-362">如需詳細資訊，請參閱<xref:System.ComponentModel.Design.DesignerVerb>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-362">For more information, see <xref:System.ComponentModel.Design.DesignerVerb>.</span></span>  
   
- 您將會加入兩個設計工具動詞命令至設計工具：\[**執行測試**\] 和 \[**停止測試**\]。  這些動詞命令能讓您在設計階段檢視 `MarqueeControl` 的執行階段行為。  這些動詞命令會加入至 `MarqueeControlRootDesigner`。  
+ <span data-ttu-id="f1df9-363">您將會加入您的設計工具中的兩個設計工具動詞命令：**執行測試**和**停止測試**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-363">You will add two designer verbs to your designers: **Run Test** and **Stop Test**.</span></span> <span data-ttu-id="f1df9-364">這些動詞命令可讓您檢視執行階段行為的`MarqueeControl`在設計階段。</span><span class="sxs-lookup"><span data-stu-id="f1df9-364">These verbs will allow you to view the run-time behavior of the `MarqueeControl` at design time.</span></span> <span data-ttu-id="f1df9-365">這些動詞命令會加入至`MarqueeControlRootDesigner`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-365">These verbs will be added to the `MarqueeControlRootDesigner`.</span></span>  
   
- 當叫用 \[**執行測試**\] 時，動詞命令事件處理常式將會叫用 `MarqueeControl` 上的 `StartMarquee` 方法。  當叫用 \[**停止測試**\] 時，動詞命令事件處理常式將會叫用 `MarqueeControl` 上的 `StopMarquee` 方法。  `StartMarquee` 和 `StopMarquee` 方法的實作會在實作 `IMarqueeWidget` 的被收納的控制項 \(Contained Control\) 上呼叫這些方法，所以任何被收納的 `IMarqueeWidget` 控制項都將會參與測試。  
+ <span data-ttu-id="f1df9-366">當**執行測試**是叫用動詞命令的事件處理常式會呼叫`StartMarquee`方法`MarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-366">When **Run Test** is invoked, the verb event handler will call the `StartMarquee` method on the `MarqueeControl`.</span></span> <span data-ttu-id="f1df9-367">當**停止測試**是叫用動詞命令的事件處理常式會呼叫`StopMarquee`方法`MarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-367">When **Stop Test** is invoked, the verb event handler will call the `StopMarquee` method on the `MarqueeControl`.</span></span> <span data-ttu-id="f1df9-368">實作`StartMarquee`和`StopMarquee`方法會呼叫這些方法上包含的控制項實作`IMarqueeWidget`，因此任何包含`IMarqueeWidget`測試也會加入控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-368">The implementation of the `StartMarquee` and `StopMarquee` methods call these methods on contained controls that implement `IMarqueeWidget`, so any contained `IMarqueeWidget` controls will also participate in the test.</span></span>  
   
-#### 若要加入設計工具動詞命令至自訂設計工具  
+#### <a name="to-add-designer-verbs-to-your-custom-designers"></a><span data-ttu-id="f1df9-369">若要將設計工具動詞命令加入至您的自訂設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-369">To add designer verbs to your custom designers</span></span>  
   
-1.  在 `MarqueeControlRootDesigner` 類別中加入名為 `OnVerbRunTest` 和 `OnVerbStopTest` 的事件處理常式。  
+1.  <span data-ttu-id="f1df9-370">在`MarqueeControlRootDesigner`類別中，加入名為事件處理常式`OnVerbRunTest`和`OnVerbStopTest`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-370">In the `MarqueeControlRootDesigner` class, add event handlers named `OnVerbRunTest` and `OnVerbStopTest`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#570)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#570](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#570)]  
   
-2.  將這些事件處理常式連接至對應的設計工具動詞命令。  `MarqueeControlRootDesigner` 會從基底類別繼承 <xref:System.ComponentModel.Design.DesignerVerbCollection>。  您將會建立兩個新的 <xref:System.ComponentModel.Design.DesignerVerb> 物件，並將它們加入至 <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> 方法中的這個集合。  
+2.  <span data-ttu-id="f1df9-371">連接至其對應的設計工具動詞的這些事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-371">Connect these event handlers to their corresponding designer verbs.</span></span> <span data-ttu-id="f1df9-372">`MarqueeControlRootDesigner`繼承<xref:System.ComponentModel.Design.DesignerVerbCollection>自其基底類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-372">`MarqueeControlRootDesigner` inherits a <xref:System.ComponentModel.Design.DesignerVerbCollection> from its base class.</span></span> <span data-ttu-id="f1df9-373">您將建立兩個新<xref:System.ComponentModel.Design.DesignerVerb>物件，並將它們加入此集合中<xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-373">You will create two new <xref:System.ComponentModel.Design.DesignerVerb> objects and add them to this collection in the <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
-## 建立自訂 UITypeEditor  
- 當您建立使用者的自訂設計階段經驗時，通常會希望建立與 \[屬性\] 視窗的自訂互動。  您可以藉由建立 <xref:System.Drawing.Design.UITypeEditor> 以完成這動作。  如需詳細資訊，請參閱 [How to: Create a UI Type Editor](../Topic/How%20to:%20Create%20a%20UI%20Type%20Editor.md)。  
+## <a name="creating-a-custom-uitypeeditor"></a><span data-ttu-id="f1df9-374">建立自訂的 UITypeEditor</span><span class="sxs-lookup"><span data-stu-id="f1df9-374">Creating a Custom UITypeEditor</span></span>  
+ <span data-ttu-id="f1df9-375">當您建立自訂的設計階段經驗的使用者時，通常會建立與 [屬性] 視窗的自訂互動。</span><span class="sxs-lookup"><span data-stu-id="f1df9-375">When you create a custom design-time experience for users, it is often desirable to create a custom interaction with the Properties window.</span></span> <span data-ttu-id="f1df9-376">您可以完成此作業建立<xref:System.Drawing.Design.UITypeEditor>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-376">You can accomplish this by creating a <xref:System.Drawing.Design.UITypeEditor>.</span></span> <span data-ttu-id="f1df9-377">如需詳細資訊，請參閱[How to： 建立 UI 類型編輯器](http://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-377">For more information, see [How to: Create a UI Type Editor](http://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd).</span></span>  
   
- `MarqueeBorder` 控制項會在 \[屬性\] 視窗中公開數種屬性。  這些屬性當中的兩種，即 `MarqueeSpinDirection` 和 `MarqueeLightShape`，是由列舉型別所表示的。  為了說明 UI 型別編輯器的使用，`MarqueeLightShape` 屬性將會有關聯的 <xref:System.Drawing.Design.UITypeEditor> 類別。  
+ <span data-ttu-id="f1df9-378">`MarqueeBorder`控制項不僅會公開數個屬性，在 [屬性] 視窗中的。</span><span class="sxs-lookup"><span data-stu-id="f1df9-378">The `MarqueeBorder` control exposes several properties in the Properties window.</span></span> <span data-ttu-id="f1df9-379">這些屬性，其中兩個`MarqueeSpinDirection`和`MarqueeLightShape`都由列舉型別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-379">Two of these properties, `MarqueeSpinDirection` and `MarqueeLightShape` are represented by enumerations.</span></span> <span data-ttu-id="f1df9-380">若要說明的 UI 類型編輯器中，使用`MarqueeLightShape`屬性會有相關聯<xref:System.Drawing.Design.UITypeEditor>類別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-380">To illustrate the use of a UI type editor, the `MarqueeLightShape` property will have an associated <xref:System.Drawing.Design.UITypeEditor> class.</span></span>  
   
-#### 若要建立自訂 UI 型別編輯器  
+#### <a name="to-create-a-custom-ui-type-editor"></a><span data-ttu-id="f1df9-381">若要建立自訂的 UI 類型編輯器</span><span class="sxs-lookup"><span data-stu-id="f1df9-381">To create a custom UI type editor</span></span>  
   
-1.  在 \[**程式碼編輯器**\] 中，開啟 `MarqueeBorder` 來源檔。  
+1.  <span data-ttu-id="f1df9-382">開啟`MarqueeBorder`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-382">Open the `MarqueeBorder` source file in the **Code Editor**.</span></span>  
   
-2.  在 `MarqueeBorder` 類別的定義中，宣告名為 `LightShapeEditor` 的類別，此類別衍生自 <xref:System.Drawing.Design.UITypeEditor>。  
+2.  <span data-ttu-id="f1df9-383">定義中的`MarqueeBorder`類別，宣告一種類別稱為`LightShapeEditor`衍生自<xref:System.Drawing.Design.UITypeEditor>。</span><span class="sxs-lookup"><span data-stu-id="f1df9-383">In the definition of the `MarqueeBorder` class, declare a class called `LightShapeEditor` that derives from <xref:System.Drawing.Design.UITypeEditor>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#96](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#96)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#96](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#96)]  
   
-3.  宣告稱為 `editorService` 的 <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> 執行個體變數。  
+3.  <span data-ttu-id="f1df9-384">宣告<xref:System.Windows.Forms.Design.IWindowsFormsEditorService>名的執行個體變數`editorService`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-384">Declare an <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> instance variable called `editorService`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]  
   
-4.  覆寫 <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> 方法。  這個實作會傳回 <xref:System.Drawing.Design.UITypeEditorEditStyle>，告訴設計環境如何顯示 `LightShapeEditor`。  
+4.  <span data-ttu-id="f1df9-385">覆寫 <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-385">Override the <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> method.</span></span> <span data-ttu-id="f1df9-386">這個實作會傳回<xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>，以取得如何顯示在設計環境`LightShapeEditor`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-386">This implementation returns <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, which tells the design environment how to display the `LightShapeEditor`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]  
   
-5.  覆寫 <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> 方法。  這個實作會查詢 <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> 物件的設計環境。  如果成功的話，它會建立 `LightShapeSelectionControl`。  會叫用 <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> 方法來啟動 `LightShapeEditor`。  這個引動過程的傳回值會傳回至設計環境。  
+5.  <span data-ttu-id="f1df9-387">覆寫 <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-387">Override the <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> method.</span></span> <span data-ttu-id="f1df9-388">這項實作查詢的設計環境<xref:System.Windows.Forms.Design.IWindowsFormsEditorService>物件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-388">This implementation queries the design environment for an <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> object.</span></span> <span data-ttu-id="f1df9-389">如果成功，它會建立`LightShapeSelectionControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-389">If successful, it creates a `LightShapeSelectionControl`.</span></span> <span data-ttu-id="f1df9-390"><xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A>方法會叫用來啟動`LightShapeEditor`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-390">The <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> method is invoked to start the `LightShapeEditor`.</span></span> <span data-ttu-id="f1df9-391">這個引動過程傳回值會傳回到設計環境。</span><span class="sxs-lookup"><span data-stu-id="f1df9-391">The return value from this invocation is returned to the design environment.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]  
   
-## 建立自訂 UITypeEditor 的檢視控制項  
+## <a name="creating-a-view-control-for-your-custom-uitypeeditor"></a><span data-ttu-id="f1df9-392">為您自訂的 UITypeEditor 建立檢視控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-392">Creating a View Control for your Custom UITypeEditor</span></span>  
   
-1.  `MarqueeLightShape` 屬性支援兩種燈號圖形類型：`Square` 和 `Circle`。  您將會建立自訂控制項，此控制只用於在 \[屬性\] 視窗中圖形化顯示這些值的用途。  這個自訂控制項將會由 <xref:System.Drawing.Design.UITypeEditor> 用來與 \[屬性\] 視窗互動。  
+1.  <span data-ttu-id="f1df9-393">`MarqueeLightShape`屬性支援兩種類型的淺圖形：`Square`和`Circle`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-393">The `MarqueeLightShape` property supports two types of light shapes: `Square` and `Circle`.</span></span> <span data-ttu-id="f1df9-394">您將建立自訂控制項，僅用於以圖形方式顯示在 [屬性] 視窗中的這些值。</span><span class="sxs-lookup"><span data-stu-id="f1df9-394">You will create a custom control used solely for the purpose of graphically displaying these values in the Properties window.</span></span> <span data-ttu-id="f1df9-395">此自訂控制項將使用您<xref:System.Drawing.Design.UITypeEditor>與 [屬性] 視窗進行互動。</span><span class="sxs-lookup"><span data-stu-id="f1df9-395">This custom control will be used by your <xref:System.Drawing.Design.UITypeEditor> to interact with the Properties window.</span></span>  
   
-#### 若要建立自訂 UI 型別編輯器的檢視控制項  
+#### <a name="to-create-a-view-control-for-your-custom-ui-type-editor"></a><span data-ttu-id="f1df9-396">若要建立您自訂的 UI 類型編輯器的檢視控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-396">To create a view control for your custom UI type editor</span></span>  
   
-1.  將新的 <xref:System.Windows.Forms.UserControl> 項目加入至 `MarqueeControlLibrary` 專案。  提供主檔名 "LightShapeSelectionControl" 給新的原始程式檔。  
+1.  <span data-ttu-id="f1df9-397">加入新<xref:System.Windows.Forms.UserControl>項目`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-397">Add a new <xref:System.Windows.Forms.UserControl> item to the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-398">提供新的來源檔案的基底名稱"LightShapeSelectionControl。 」</span><span class="sxs-lookup"><span data-stu-id="f1df9-398">Give the new source file a base name of "LightShapeSelectionControl."</span></span>  
   
-2.  將兩個 <xref:System.Windows.Forms.Panel> 控制項從 \[**工具箱**\] 拖曳至 `LightShapeSelectionControl`。  將它們命名為 `squarePanel` 和 `circlePanel`。  以並排方式來排列它們。  將兩個 <xref:System.Windows.Forms.Panel> 控制項的 <xref:System.Windows.Forms.Control.Size%2A> 屬性設定為 \(60, 60\)。  將 `squarePanel` 控制項的 <xref:System.Windows.Forms.Control.Location%2A> 屬性設定為 \(8, 10\)。  將 `circlePanel` 控制項的 <xref:System.Windows.Forms.Control.Location%2A> 屬性設定為 \(80, 10\)。  最後，將 `LightShapeSelectionControl` 的 <xref:System.Windows.Forms.Control.Size%2A> 屬性設定為 \(150, 80\)。  
+2.  <span data-ttu-id="f1df9-399">拖放兩<xref:System.Windows.Forms.Panel>控制從**工具箱**到`LightShapeSelectionControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-399">Drag two <xref:System.Windows.Forms.Panel> controls from the **Toolbox** onto the `LightShapeSelectionControl`.</span></span> <span data-ttu-id="f1df9-400">它們的名稱`squarePanel`和`circlePanel`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-400">Name them `squarePanel` and `circlePanel`.</span></span> <span data-ttu-id="f1df9-401">將它們並排方式排列。</span><span class="sxs-lookup"><span data-stu-id="f1df9-401">Arrange them side by side.</span></span> <span data-ttu-id="f1df9-402">設定<xref:System.Windows.Forms.Control.Size%2A>屬性<xref:System.Windows.Forms.Panel>控制項 （60，60）。</span><span class="sxs-lookup"><span data-stu-id="f1df9-402">Set the <xref:System.Windows.Forms.Control.Size%2A> property of both <xref:System.Windows.Forms.Panel> controls to (60, 60).</span></span> <span data-ttu-id="f1df9-403">設定<xref:System.Windows.Forms.Control.Location%2A>屬性`squarePanel`控制項 （8，10）。</span><span class="sxs-lookup"><span data-stu-id="f1df9-403">Set the <xref:System.Windows.Forms.Control.Location%2A> property of the `squarePanel` control to (8, 10).</span></span> <span data-ttu-id="f1df9-404">設定<xref:System.Windows.Forms.Control.Location%2A>屬性`circlePanel`控制權傳輸至 80 (10）。</span><span class="sxs-lookup"><span data-stu-id="f1df9-404">Set the <xref:System.Windows.Forms.Control.Location%2A> property of the `circlePanel` control to (80, 10).</span></span> <span data-ttu-id="f1df9-405">最後，設定<xref:System.Windows.Forms.Control.Size%2A>屬性`LightShapeSelectionControl`到 150 (80）。</span><span class="sxs-lookup"><span data-stu-id="f1df9-405">Finally, set the <xref:System.Windows.Forms.Control.Size%2A> property of the `LightShapeSelectionControl` to (150, 80).</span></span>  
   
-3.  在 \[**程式碼編輯器**\] 中，開啟 `LightShapeSelectionControl` 原始程式檔。  在檔案的頂端匯入 <xref:System.Windows.Forms.Design?displayProperty=fullName> 命名空間：  
+3.  <span data-ttu-id="f1df9-406">開啟`LightShapeSelectionControl`原始程式檔中的**程式碼編輯器**。</span><span class="sxs-lookup"><span data-stu-id="f1df9-406">Open the `LightShapeSelectionControl` source file in the **Code Editor**.</span></span> <span data-ttu-id="f1df9-407">在檔案頂端，匯入<xref:System.Windows.Forms.Design?displayProperty=nameWithType>命名空間：</span><span class="sxs-lookup"><span data-stu-id="f1df9-407">At the top of the file, import the <xref:System.Windows.Forms.Design?displayProperty=nameWithType> namespace:</span></span>  
   
 ```vb  
 Imports System.Windows.Forms.Design  
@@ -530,12 +534,12 @@ Imports System.Windows.Forms.Design
 using System.Windows.Forms.Design;  
 ```  
   
-1.  實作 `squarePanel` 和 `circlePanel` 控制項的 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  這些方法會叫用 <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A>，以結束自訂 <xref:System.Drawing.Design.UITypeEditor> 編輯工作階段。  
+1.  <span data-ttu-id="f1df9-408">實作<xref:System.Windows.Forms.Control.Click>事件處理常式`squarePanel`和`circlePanel`控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-408">Implement <xref:System.Windows.Forms.Control.Click> event handlers for the `squarePanel` and `circlePanel` controls.</span></span> <span data-ttu-id="f1df9-409">這些方法叫用<xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A>結束自訂<xref:System.Drawing.Design.UITypeEditor>編輯工作階段。</span><span class="sxs-lookup"><span data-stu-id="f1df9-409">These methods invoke <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> to end the custom <xref:System.Drawing.Design.UITypeEditor> editing session.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#390](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#390)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#390](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#390)]  
   
-2.  宣告稱為 `editorService` 的 <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> 執行個體變數。  
+2.  <span data-ttu-id="f1df9-410">宣告<xref:System.Windows.Forms.Design.IWindowsFormsEditorService>名的執行個體變數`editorService`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-410">Declare an <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> instance variable called `editorService`.</span></span>  
   
 ```vb  
 Private editorService As IWindowsFormsEditorService  
@@ -545,61 +549,61 @@ Private editorService As IWindowsFormsEditorService
 private IWindowsFormsEditorService editorService;  
 ```  
   
-1.  宣告稱為 `lightShapeValue` 的 `MarqueeLightShape` 執行個體變數。  
+1.  <span data-ttu-id="f1df9-411">宣告`MarqueeLightShape`名的執行個體變數`lightShapeValue`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-411">Declare a `MarqueeLightShape` instance variable called `lightShapeValue`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#330](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#330)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#330](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#330)]  
   
-2.  在 `LightShapeSelectionControl` 建構函式中，將 <xref:System.Windows.Forms.Control.Click> 事件處理常式附加至 `squarePanel` 和 `circlePanel` 控制項的 <xref:System.Windows.Forms.Control.Click> 事件。  同時定義建構函式多載，可將 `MarqueeLightShape` 值從設計環境指派至 `lightShapeValue` 欄位。  
+2.  <span data-ttu-id="f1df9-412">在`LightShapeSelectionControl`建構函式，將附加<xref:System.Windows.Forms.Control.Click>事件處理常式，`squarePanel`和`circlePanel`控制項的<xref:System.Windows.Forms.Control.Click>事件。</span><span class="sxs-lookup"><span data-stu-id="f1df9-412">In the `LightShapeSelectionControl` constructor, attach the <xref:System.Windows.Forms.Control.Click> event handlers to the `squarePanel` and `circlePanel` controls' <xref:System.Windows.Forms.Control.Click> events.</span></span> <span data-ttu-id="f1df9-413">此外，定義指派的建構函式多載`MarqueeLightShape`設計環境來取值`lightShapeValue`欄位。</span><span class="sxs-lookup"><span data-stu-id="f1df9-413">Also, define a constructor overload that assigns the `MarqueeLightShape` value from the design environment to the `lightShapeValue` field.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#340](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#340)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#340](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#340)]  
   
-3.  在 <xref:System.ComponentModel.Component.Dispose%2A> 方法中，中斷連結 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  
+3.  <span data-ttu-id="f1df9-414">在<xref:System.ComponentModel.Component.Dispose%2A>方法中，卸離<xref:System.Windows.Forms.Control.Click>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-414">In the <xref:System.ComponentModel.Component.Dispose%2A> method, detach the <xref:System.Windows.Forms.Control.Click> event handlers.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#350](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#350)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#350](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#350)]  
   
-4.  在 \[**方案總管**\] 中按一下 \[**顯示所有檔案**\] 按鈕。  開啟 LightShapeSelectionControl.Designer.cs 或 LightShapeSelectionControl.Designer.vb 檔，然後移除 <xref:System.ComponentModel.Component.Dispose%2A> 方法的預設定義。  
+4.  <span data-ttu-id="f1df9-415">在方案總管中，按一下 [顯示所有檔案] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f1df9-415">In **Solution Explorer**, click the **Show All Files** button.</span></span> <span data-ttu-id="f1df9-416">開啟 LightShapeSelectionControl.Designer.cs 或 LightShapeSelectionControl.Designer.vb 檔案，並移除預設定義<xref:System.ComponentModel.Component.Dispose%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-416">Open the LightShapeSelectionControl.Designer.cs or LightShapeSelectionControl.Designer.vb file, and remove the default definition of the <xref:System.ComponentModel.Component.Dispose%2A> method.</span></span>  
   
-5.  實作 `LightShape` 屬性。  
+5.  <span data-ttu-id="f1df9-417">實作 `LightShape` 屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-417">Implement the `LightShape` property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]  
   
-6.  覆寫 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法。  這個實作將繪製中間填滿的方形與圓形。  也會在某個圖案的周邊繪製框線，以醒目提示所選取的值。  
+6.  <span data-ttu-id="f1df9-418">覆寫 <xref:System.Windows.Forms.Control.OnPaint%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f1df9-418">Override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="f1df9-419">這個實作會繪製填滿的方形和圓形。</span><span class="sxs-lookup"><span data-stu-id="f1df9-419">This implementation will draw a filled square and circle.</span></span> <span data-ttu-id="f1df9-420">它也會繪製圖形或其他周圍的框線，反白選取的值。</span><span class="sxs-lookup"><span data-stu-id="f1df9-420">It will also highlight the selected value by drawing a border around one shape or the other.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]  
   
-## 測試設計工具中的自訂控制項  
- 此時，您就可以建置 `MarqueeControlLibrary` 專案了。  建立繼承自 `MarqueeControl` 類別的控制項，並在表單上使用該控制項，以測試您的實作。  
+## <a name="testing-your-custom-control-in-the-designer"></a><span data-ttu-id="f1df9-421">在設計工具中測試您的自訂控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-421">Testing your Custom Control in the Designer</span></span>  
+ <span data-ttu-id="f1df9-422">此時，您可以建置`MarqueeControlLibrary`專案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-422">At this point, you can build the `MarqueeControlLibrary` project.</span></span> <span data-ttu-id="f1df9-423">建立繼承的控制項來測試您的實作`MarqueeControl`類別，而在表單上使用它。</span><span class="sxs-lookup"><span data-stu-id="f1df9-423">Test your implementation by creating a control that inherits from the `MarqueeControl` class and using it on a form.</span></span>  
   
-#### 若要建立自訂 MarqueeControl 實作  
+#### <a name="to-create-a-custom-marqueecontrol-implementation"></a><span data-ttu-id="f1df9-424">若要建立自訂的 MarqueeControl 實作</span><span class="sxs-lookup"><span data-stu-id="f1df9-424">To create a custom MarqueeControl implementation</span></span>  
   
-1.  在 Windows Form 設計工具中開啟表單 `DemoMarqueeControl`。  這樣將會建立 `DemoMarqueeControl` 型別的執行個體，並且會在 `MarqueeControlRootDesigner` 型別的執行個體中顯示該執行個體。  
+1.  <span data-ttu-id="f1df9-425">在 Windows Form 設計工具中開啟 `DemoMarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-425">Open `DemoMarqueeControl` in the Windows Forms Designer.</span></span> <span data-ttu-id="f1df9-426">這會建立的執行個體`DemoMarqueeControl`輸入和顯示執行個體中`MarqueeControlRootDesigner`型別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-426">This creates an instance of the `DemoMarqueeControl` type and displays it in an instance of the `MarqueeControlRootDesigner` type.</span></span>  
   
-2.  在 \[**工具箱**\] 中開啟 \[**MarqueeControlLibrary 元件**\] 索引標籤。  您會看到 `MarqueeBorder` 和 `MarqueeText` 控制項可用於選取。  
+2.  <span data-ttu-id="f1df9-427">在**工具箱**，開啟**MarqueeControlLibrary 元件** 索引標籤。您會看到`MarqueeBorder`和`MarqueeText`可讓您選取的控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-427">In the **Toolbox**, open the **MarqueeControlLibrary Components** tab. You will see the `MarqueeBorder` and `MarqueeText` controls available for selection.</span></span>  
   
-3.  拖曳 `MarqueeBorder` 控制項的執行個體至 `DemoMarqueeControl` 設計介面。  將此 `MarqueeBorder` 控制項停駐至父控制項。  
+3.  <span data-ttu-id="f1df9-428">執行個體`MarqueeBorder`控制項拖曳至`DemoMarqueeControl`設計介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-428">Drag an instance of the `MarqueeBorder` control onto the `DemoMarqueeControl` design surface.</span></span> <span data-ttu-id="f1df9-429">停駐此`MarqueeBorder`父控制項的控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-429">Dock this `MarqueeBorder` control to the parent control.</span></span>  
   
-4.  將 `MarqueeText` 控制項的執行個體拖曳至 `DemoMarqueeControl` 設計介面。  
+4.  <span data-ttu-id="f1df9-430">執行個體`MarqueeText`控制項拖曳至`DemoMarqueeControl`設計介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-430">Drag an instance of the `MarqueeText` control onto the `DemoMarqueeControl` design surface.</span></span>  
   
-5.  建置方案。  
+5.  <span data-ttu-id="f1df9-431">建置方案。</span><span class="sxs-lookup"><span data-stu-id="f1df9-431">Build the solution.</span></span>  
   
-6.  以滑鼠右鍵按一下 `DemoMarqueeControl`，並從捷徑功能表中選取 \[**執行測試**\] 選項以開始動畫。  按一下 \[**停止測試**\] 以停止動畫。  
+6.  <span data-ttu-id="f1df9-432">以滑鼠右鍵按一下`DemoMarqueeControl`從快顯功能表選取**執行測試**選項來啟動動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-432">Right-click the `DemoMarqueeControl` and from the shortcut menu select the **Run Test** option to start the animation.</span></span> <span data-ttu-id="f1df9-433">按一下**停止測試**停止動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-433">Click **Stop Test** to stop the animation.</span></span>  
   
-7.  以 \[設計\] 檢視開啟 \[**Form1**\]。  
+7.  <span data-ttu-id="f1df9-434">開啟**Form1**設計 檢視中。</span><span class="sxs-lookup"><span data-stu-id="f1df9-434">Open **Form1** in Design view.</span></span>  
   
-8.  在表單上放置兩個 <xref:System.Windows.Forms.Button> 控制項。  將它們命名為 `startButton` 和 `stopButton`，並將 <xref:System.Windows.Forms.Control.Text%2A> 屬性值分別變更為 Start 和 Stop。  
+8.  <span data-ttu-id="f1df9-435">將兩個<xref:System.Windows.Forms.Button>表單上的控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-435">Place two <xref:System.Windows.Forms.Button> controls on the form.</span></span> <span data-ttu-id="f1df9-436">它們的名稱`startButton`和`stopButton`，並變更<xref:System.Windows.Forms.Control.Text%2A>屬性值來**啟動**和**停止**分別。</span><span class="sxs-lookup"><span data-stu-id="f1df9-436">Name them `startButton` and `stopButton`, and change the <xref:System.Windows.Forms.Control.Text%2A> property values to **Start** and **Stop**, respectively.</span></span>  
   
-9. 實作兩個 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件處理常式。  
+9. <span data-ttu-id="f1df9-437">實作<xref:System.Windows.Forms.Control.Click>兩個事件處理常式<xref:System.Windows.Forms.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-437">Implement <xref:System.Windows.Forms.Control.Click> event handlers for both <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-10. 在 \[**工具箱**\] 中開啟 \[**MarqueeControlTest 元件**\] 索引標籤。  您會看到 `DemoMarqueeControl` 可用於選取。  
+10. <span data-ttu-id="f1df9-438">在**工具箱**，開啟**MarqueeControlTest 元件** 索引標籤。您會看到`DemoMarqueeControl`可讓您選取。</span><span class="sxs-lookup"><span data-stu-id="f1df9-438">In the **Toolbox**, open the **MarqueeControlTest Components** tab. You will see the `DemoMarqueeControl` available for selection.</span></span>  
   
-11. 將 `DemoMarqueeControl` 的執行個體拖曳至 \[**Form1**\] 設計介面。  
+11. <span data-ttu-id="f1df9-439">執行個體`DemoMarqueeControl`到**Form1**設計介面。</span><span class="sxs-lookup"><span data-stu-id="f1df9-439">Drag an instance of `DemoMarqueeControl` onto the **Form1** design surface.</span></span>  
   
-12. 在 <xref:System.Windows.Forms.Control.Click> 事件處理常式中叫用 `DemoMarqueeControl` 上的 `Start` 和 `Stop` 方法。  
+12. <span data-ttu-id="f1df9-440">在<xref:System.Windows.Forms.Control.Click>叫用事件處理常式，`Start`和`Stop`方法`DemoMarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-440">In the <xref:System.Windows.Forms.Control.Click> event handlers, invoke the `Start` and `Stop` methods on the `DemoMarqueeControl`.</span></span>  
   
 ```vb  
 Private Sub startButton_Click(sender As Object, e As System.EventArgs)  
@@ -623,30 +627,30 @@ private void stopButton_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-1.  將 `MarqueeControlTest` 專案設定為啟動專案然後予以執行。  您將會看到顯示 `DemoMarqueeControl` 的表單。  按一下 \[**開始**\] 按鈕開始動畫。  您應該會看到文字閃爍，以及沿著框線四周移動的燈光。  
+1.  <span data-ttu-id="f1df9-441">設定`MarqueeControlTest`專案為啟始專案，並執行它。</span><span class="sxs-lookup"><span data-stu-id="f1df9-441">Set the `MarqueeControlTest` project as the startup project and run it.</span></span> <span data-ttu-id="f1df9-442">您會看到表單顯示程式`DemoMarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-442">You will see the form displaying your `DemoMarqueeControl`.</span></span> <span data-ttu-id="f1df9-443">按一下**啟動**按鈕以啟動動畫。</span><span class="sxs-lookup"><span data-stu-id="f1df9-443">Click the **Start** button to start the animation.</span></span> <span data-ttu-id="f1df9-444">您應該會看到閃爍的文字和移動框線周圍的燈號。</span><span class="sxs-lookup"><span data-stu-id="f1df9-444">You should see the text flashing and the lights moving around the border.</span></span>  
   
-## 後續步驟  
- `MarqueeControlLibrary` 示範自訂控制項與關聯的設計工具之簡單實作。  您可以使用數種方式，讓這個範例更為複雜：  
+## <a name="next-steps"></a><span data-ttu-id="f1df9-445">後續步驟</span><span class="sxs-lookup"><span data-stu-id="f1df9-445">Next Steps</span></span>  
+ <span data-ttu-id="f1df9-446">`MarqueeControlLibrary`示範自訂控制項和相關聯的設計工具的簡單實作。</span><span class="sxs-lookup"><span data-stu-id="f1df9-446">The `MarqueeControlLibrary` demonstrates a simple implementation of custom controls and associated designers.</span></span> <span data-ttu-id="f1df9-447">您可以在此範例更趨精密完美數種方式：</span><span class="sxs-lookup"><span data-stu-id="f1df9-447">You can make this sample more sophisticated in several ways:</span></span>  
   
--   變更在設計工具中 `DemoMarqueeControl` 的屬性值。  加入更多的 `MarqueBorder` 控制項，並將它們停駐在父執行個體內，以建立巢狀作用。  嘗試 `UpdatePeriod` 和燈號相關屬性的不同設定。  
+-   <span data-ttu-id="f1df9-448">變更的屬性值`DemoMarqueeControl`設計工具中。</span><span class="sxs-lookup"><span data-stu-id="f1df9-448">Change the property values for the `DemoMarqueeControl` in the designer.</span></span> <span data-ttu-id="f1df9-449">新增更多`MarqueBorder`控制，並將它們停駐在其父執行個體，以建立巢狀的效果。</span><span class="sxs-lookup"><span data-stu-id="f1df9-449">Add more `MarqueBorder` controls and dock them within their parent instances to create a nested effect.</span></span> <span data-ttu-id="f1df9-450">嘗試使用不同設定的`UpdatePeriod`和 light 相關的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-450">Experiment with different settings for the `UpdatePeriod` and the light-related properties.</span></span>  
   
--   撰寫您自己的 `IMarqueeWidget` 實作。  例如，您可以建立閃爍的「霓虹燈標誌」\(Neon Sign\) 或具有多個影像的動畫標誌。  
+-   <span data-ttu-id="f1df9-451">撰寫您自己的實作`IMarqueeWidget`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-451">Author your own implementations of `IMarqueeWidget`.</span></span> <span data-ttu-id="f1df9-452">您可以例如建立，閃爍 「 neon 簽署 」 或動畫的號與多個映像。</span><span class="sxs-lookup"><span data-stu-id="f1df9-452">You could, for example, create a flashing "neon sign" or an animated sign with multiple images.</span></span>  
   
--   進一步自訂設計階段經驗。  您可以嘗試遮蔽比 <xref:System.Windows.Forms.Control.Enabled%2A> 和 <xref:System.Windows.Forms.Control.Visible%2A> 更多的屬性，也可以加入新的屬性。  加入新的設計工具動詞命令以簡化一般工作，例如停駐子控制項。  
+-   <span data-ttu-id="f1df9-453">進一步自訂的設計階段經驗。</span><span class="sxs-lookup"><span data-stu-id="f1df9-453">Further customize the design-time experience.</span></span> <span data-ttu-id="f1df9-454">您可以嘗試遮蔽屬性數目超過<xref:System.Windows.Forms.Control.Enabled%2A>和<xref:System.Windows.Forms.Control.Visible%2A>，而且您無法加入新的屬性。</span><span class="sxs-lookup"><span data-stu-id="f1df9-454">You could try shadowing more properties than <xref:System.Windows.Forms.Control.Enabled%2A> and <xref:System.Windows.Forms.Control.Visible%2A>, and you could add new properties.</span></span> <span data-ttu-id="f1df9-455">加入新的設計工具動詞命令，以簡化常見工作，像是停駐子控制項。</span><span class="sxs-lookup"><span data-stu-id="f1df9-455">Add new designer verbs to simplify common tasks like docking child controls.</span></span>  
   
--   授權 `MarqueeControl`。  如需詳細資訊，請參閱 [如何：授權元件和控制項](../Topic/How%20to:%20License%20Components%20and%20Controls.md)。  
+-   <span data-ttu-id="f1df9-456">授權`MarqueeControl`。</span><span class="sxs-lookup"><span data-stu-id="f1df9-456">License the `MarqueeControl`.</span></span> <span data-ttu-id="f1df9-457">如需詳細資訊，請參閱[How to： 授權元件和控制項](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-457">For more information, see [How to: License Components and Controls](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).</span></span>  
   
--   控制序列化控制項的方式以及針對控制項產生程式碼的方式。  如需詳細資訊，請參閱[動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。  
+-   <span data-ttu-id="f1df9-458">控制如何序列化您的控制項，並為其產生程式碼的方式。</span><span class="sxs-lookup"><span data-stu-id="f1df9-458">Control how your controls are serialized and how code is generated for them.</span></span> <span data-ttu-id="f1df9-459">如需詳細資訊，請參閱[動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="f1df9-459">For more information, see [Dynamic Source Code Generation and Compilation](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Forms.UserControl>   
- <xref:System.Windows.Forms.Design.ParentControlDesigner>   
- <xref:System.Windows.Forms.Design.DocumentDesigner>   
- <xref:System.ComponentModel.Design.IRootDesigner>   
- <xref:System.ComponentModel.Design.DesignerVerb>   
- <xref:System.Drawing.Design.UITypeEditor>   
- <xref:System.ComponentModel.BackgroundWorker>   
- [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [Custom Designers](../Topic/Custom%20Designers.md)   
- [.NET 圖案程式庫：簡單的設計工具](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a><span data-ttu-id="f1df9-460">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f1df9-460">See Also</span></span>  
+ <xref:System.Windows.Forms.UserControl>  
+ <xref:System.Windows.Forms.Design.ParentControlDesigner>  
+ <xref:System.Windows.Forms.Design.DocumentDesigner>  
+ <xref:System.ComponentModel.Design.IRootDesigner>  
+ <xref:System.ComponentModel.Design.DesignerVerb>  
+ <xref:System.Drawing.Design.UITypeEditor>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="f1df9-461">如何：建立採用設計階段功能的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="f1df9-461">How to: Create a Windows Forms Control That Takes Advantage of Design-Time Features</span></span>](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
+ [<span data-ttu-id="f1df9-462">擴充設計階段支援</span><span class="sxs-lookup"><span data-stu-id="f1df9-462">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="f1df9-463">自訂的設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-463">Custom Designers</span></span>](http://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
+ [<span data-ttu-id="f1df9-464">.NET 圖形程式庫： 範例設計工具</span><span class="sxs-lookup"><span data-stu-id="f1df9-464">.NET Shape Library: A Sample Designer</span></span>](http://windowsforms.net/articles/shapedesigner.aspx)

@@ -1,97 +1,99 @@
 ---
-title: "Windows 服務應用程式簡介 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController"
-helpviewer_keywords: 
-  - "架構服務, 建立服務"
-  - "OnContinue 方法"
-  - "OnPause 方法"
-  - "OnStop 方法"
-  - "Service 類別, Windows 服務應用程式"
-  - "服務狀態"
-  - "ServiceController 元件, 關於 Windows 服務"
-  - "服務, 關於服務"
-  - "服務, 存留期"
-  - "服務, 狀態"
-  - "WaitForStatus 方法"
-  - "Win32OwnProcess 服務類型"
-  - "Win32ShareProcess 服務類型"
-  - "Windows 服務應用程式, 關於 Windows 服務應用程式"
-  - "Windows 服務應用程式, 部署"
-  - "Windows 服務應用程式, 存留期"
+title: "Windows 服務應用程式簡介"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ServiceController
+helpviewer_keywords:
+- Windows Service applications, deploying
+- OnStop method
+- OnPause method
+- services, about services
+- Service class, Windows Service applications
+- framework services, creating services
+- ServiceController components, about Windows services
+- Win32OwnProcess service type
+- services, lifetime
+- OnContinue method
+- Windows Service applications, about Windows Service applications
+- services, states
+- service states
+- WaitForStatus method
+- Win32ShareProcess service type
+- Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# Windows 服務應用程式簡介
-Microsoft Windows 服務，也就是先前的 NT 服務，可讓您建立長期執行的應用程式，在應用程式本身的 Windows 工作階段 \(Session\) 中執行。  這些服務可以在電腦啟動時自動啟動，也可以暫停或重新啟動，都不會顯示任何使用者介面。  這些功能使得服務非常適合在伺服器中使用，或每當需要不干擾使用同一部電腦之其他使用者的長期執行功能時使用。  您也可以在不同於登入使用者或預設電腦帳戶的特定使用者帳戶的安全性內容下執行服務。  如需服務和 Windows 工作階段的詳細資訊，請參閱 MSDN Library 中的 Windows SDK 文件。  
+# <a name="introduction-to-windows-service-applications"></a><span data-ttu-id="82657-102">Windows 服務應用程式簡介</span><span class="sxs-lookup"><span data-stu-id="82657-102">Introduction to Windows Service Applications</span></span>
+<span data-ttu-id="82657-103">Microsoft Windows 服務，之前稱為 NT 服務可讓您建立自己的 Windows 工作階段中執行的長時間執行可執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="82657-103">Microsoft Windows services, formerly known as NT services, enable you to create long-running executable applications that run in their own Windows sessions.</span></span> <span data-ttu-id="82657-104">當電腦開機時，自動啟動這些服務也可以暫停或重新啟動，且並未顯示任何使用者介面。</span><span class="sxs-lookup"><span data-stu-id="82657-104">These services can be automatically started when the computer boots, can be paused and restarted, and do not show any user interface.</span></span> <span data-ttu-id="82657-105">這些功能可讓服務特別適用於在伺服器上，或者每當您需要長時間執行的功能，不會干擾正在同一部電腦的其他使用者。</span><span class="sxs-lookup"><span data-stu-id="82657-105">These features make services ideal for use on a server or whenever you need long-running functionality that does not interfere with other users who are working on the same computer.</span></span> <span data-ttu-id="82657-106">您也可以在不同於登入使用者的特定使用者帳戶或預設電腦帳戶的安全性內容中執行服務。</span><span class="sxs-lookup"><span data-stu-id="82657-106">You can also run services in the security context of a specific user account that is different from the logged-on user or the default computer account.</span></span> <span data-ttu-id="82657-107">如需有關服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 的文件。</span><span class="sxs-lookup"><span data-stu-id="82657-107">For more information about services and Windows sessions, see the Windows SDK documentation.</span></span>  
   
- 您可以輕鬆地建立應用程式，並將其安裝成為服務。  例如，假設您希望監視效能計數器資料並反應臨界值。  您可以撰寫接聽 \(Listen\) 效能計數器資料的 Windows 服務應用程式、部署此應用程式並開始收集和分析資料。  
+ <span data-ttu-id="82657-108">您可以建立的應用程式，安裝為服務，輕鬆建立服務。</span><span class="sxs-lookup"><span data-stu-id="82657-108">You can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="82657-109">例如，假設您想要監視的效能計數器資料，並反應臨界值。</span><span class="sxs-lookup"><span data-stu-id="82657-109">For example, suppose you want to monitor performance counter data and react to threshold values.</span></span> <span data-ttu-id="82657-110">您無法撰寫 Windows 服務應用程式所接聽的效能計數器資料、 部署應用程式，以及開始收集和分析資料。</span><span class="sxs-lookup"><span data-stu-id="82657-110">You could write a Windows Service application that listens to the performance counter data, deploy the application, and begin collecting and analyzing data.</span></span>  
   
- 您可以將服務建立為 Microsoft Visual Studio 專案，在其中定義程式碼，以便控制可以傳送給服務的命令，以及收到這些命令時應該採取的動作。  可以傳送給服務的命令包含啟動、暫停、繼續和停止服務，而且您也可以執行自訂命令。  
+ <span data-ttu-id="82657-111">您建立您的服務，為 Microsoft Visual Studio 專案時，定義在其中控制哪些命令的程式碼可以傳送到服務，並會在收到這些命令時，應該採取什麼動作。</span><span class="sxs-lookup"><span data-stu-id="82657-111">You create your service as a Microsoft Visual Studio project, defining code within it that controls what commands can be sent to the service and what actions should be taken when those commands are received.</span></span> <span data-ttu-id="82657-112">可以傳送至服務的命令包括啟動、 暫停、 繼續和停止服務。您也可以執行自訂命令。</span><span class="sxs-lookup"><span data-stu-id="82657-112">Commands that can be sent to a service include starting, pausing, resuming, and stopping the service; you can also execute custom commands.</span></span>  
   
- 當您建立並建置 \(Build\) 應用程式後，就可以執行命令列公用程式 InstallUtil.exe 並傳遞服務可執行檔的路徑，安裝此應用程式。  之後您可以利用 \[**服務控制管理員**\] 來啟動、停止、暫停、繼續和設定您的服務。  您也可以在 \[**伺服器總管**\] 的 \[**服務**\] 節點中，或利用 <xref:System.ServiceProcess.ServiceController> 類別，完成許多相同的工作。  
+ <span data-ttu-id="82657-113">您建立並建置應用程式之後，您可以以執行 InstallUtil.exe 的命令列公用程式，並將路徑傳遞至服務的可執行檔來進行安裝。</span><span class="sxs-lookup"><span data-stu-id="82657-113">After you create and build the application, you can install it by running the command-line utility InstallUtil.exe and passing the path to the service's executable file.</span></span> <span data-ttu-id="82657-114">然後您可以使用**服務控制管理員**來啟動、 停止、 暫停、 繼續及設定您的服務。</span><span class="sxs-lookup"><span data-stu-id="82657-114">You can then use the **Services Control Manager** to start, stop, pause, resume, and configure your service.</span></span> <span data-ttu-id="82657-115">您也可以完成相同工作中的許多**服務**節點**伺服器總管**或使用<xref:System.ServiceProcess.ServiceController>類別。</span><span class="sxs-lookup"><span data-stu-id="82657-115">You can also accomplish many of these same tasks in the **Services** node in **Server Explorer** or by using the <xref:System.ServiceProcess.ServiceController> class.</span></span>  
   
-## 服務應用程式和其他 Visual Studio 應用程式的比較  
- 服務應用程式的運作有幾方面不同於許多其他的專案類型，如下所示：  
+## <a name="service-applications-vs-other-visual-studio-applications"></a><span data-ttu-id="82657-116">服務應用程式與Visual Studio 中的其他應用程式</span><span class="sxs-lookup"><span data-stu-id="82657-116">Service Applications vs. Other Visual Studio Applications</span></span>  
+ <span data-ttu-id="82657-117">服務應用程式仍可與幾種方式的許多其他專案類型不同：</span><span class="sxs-lookup"><span data-stu-id="82657-117">Service applications function differently from many other project types in several ways:</span></span>  
   
--   服務應用程式專案所建立的編譯可執行檔必須在專案能夠以有意義的方式運作前安裝在伺服器中。  您不能按下 F5 或 F11 偵錯或執行服務應用程式，也不能立即執行服務或逐步執行程式碼。  而是必須安裝並啟動服務，再附加偵錯工具到服務的處理序 \(Process\) 中。  如需詳細資訊，請參閱[如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
+-   <span data-ttu-id="82657-118">建立服務應用程式專案的已編譯可執行檔必須安裝在伺服器上，然後專案可以有意義的方式運作。</span><span class="sxs-lookup"><span data-stu-id="82657-118">The compiled executable file that a service application project creates must be installed on the server before the project can function in a meaningful way.</span></span> <span data-ttu-id="82657-119">您無法偵錯或執行服務應用程式，按下 F5 或 F11;其程式碼，您無法立即執行的服務或步驟。</span><span class="sxs-lookup"><span data-stu-id="82657-119">You cannot debug or run a service application by pressing F5 or F11; you cannot immediately run a service or step into its code.</span></span> <span data-ttu-id="82657-120">相反地，您必須安裝並啟動您的服務並再將偵錯工具附加至服務的程序。</span><span class="sxs-lookup"><span data-stu-id="82657-120">Instead, you must install and start your service, and then attach a debugger to the service's process.</span></span> <span data-ttu-id="82657-121">如需詳細資訊，請參閱[如何： 偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="82657-121">For more information, see [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).</span></span>  
   
--   和某些類型的專案不同的是，您必須為服務應用程式建立安裝元件。  安裝元件負責在伺服器中安裝和註冊服務，並在 Windows 的 \[**服務控制管理員**\] 中建立服務項目。  如需詳細資訊，請參閱[如何：加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+-   <span data-ttu-id="82657-122">不同於某些類型的專案，您必須建立服務應用程式的安裝元件。</span><span class="sxs-lookup"><span data-stu-id="82657-122">Unlike some types of projects, you must create installation components for service applications.</span></span> <span data-ttu-id="82657-123">安裝元件安裝和註冊的伺服器上的服務，並建立您的服務項目，使用 Windows**服務控制管理員**。</span><span class="sxs-lookup"><span data-stu-id="82657-123">The installation components install and register the service on the server and create an entry for your service with the Windows **Services Control Manager**.</span></span> <span data-ttu-id="82657-124">如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。</span><span class="sxs-lookup"><span data-stu-id="82657-124">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
   
--   服務應用程式的 `Main` 方法必須為專案所包含的服務發出 Run 命令。  `Run` 方法會將服務載入至適當伺服器的 \[**服務控制管理員**\] 中。  如果您使用 \[**Windows 服務**\] 專案範本，則會自動為您撰寫這個方法。  請注意，載入服務和啟動服務是兩回事。  如需詳細資訊，請參閱下列＜服務的存留期＞一節。  
+-   <span data-ttu-id="82657-125">`Main`方法的服務應用程式必須發行服務的 [執行] 命令專案包含。</span><span class="sxs-lookup"><span data-stu-id="82657-125">The `Main` method for your service application must issue the Run command for the services your project contains.</span></span> <span data-ttu-id="82657-126">`Run`方法會為服務載入**服務控制管理員**適當伺服器上。</span><span class="sxs-lookup"><span data-stu-id="82657-126">The `Run` method loads the services into the **Services Control Manager** on the appropriate server.</span></span> <span data-ttu-id="82657-127">如果您使用**Windows 服務**專案範本，這個方法會為您自動寫入。</span><span class="sxs-lookup"><span data-stu-id="82657-127">If you use the **Windows Services** project template, this method is written for you automatically.</span></span> <span data-ttu-id="82657-128">請注意，載入服務無法啟動服務相同的動作。</span><span class="sxs-lookup"><span data-stu-id="82657-128">Note that loading a service is not the same thing as starting the service.</span></span> <span data-ttu-id="82657-129">「 服務的存留期 」 下面的如需詳細資訊，請參閱。</span><span class="sxs-lookup"><span data-stu-id="82657-129">See "Service Lifetime" below for more information.</span></span>  
   
--   Windows 服務應用程式在不同的視窗型工作站 \(Window Station\) 中執行，而不是在登入使用者的互動式工作站 \(Interactive Station\) 上執行。  視窗工作站是安全物件，其中包含剪貼簿、一組全域元素和一組桌面物件。  由於 Windows 服務的工作站不是互動式工作站，所以將無法看見由 Windows 服務應用程式內引發的對話方塊，而且可能造成程式停止回應。  同樣地，錯誤訊息應該記錄在 Windows 事件記錄檔中，而不是產生在使用者介面中。  
+-   <span data-ttu-id="82657-130">在不同的視窗工作站比互動式登入使用者的工作站中，執行 Windows 服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="82657-130">Windows Service applications run in a different window station than the interactive station of the logged-on user.</span></span> <span data-ttu-id="82657-131">視窗工作站是安全的物件，其中包含剪貼簿、 一組通用的元素和桌面的物件群組。</span><span class="sxs-lookup"><span data-stu-id="82657-131">A window station is a secure object that contains a Clipboard, a set of global atoms, and a group of desktop objects.</span></span> <span data-ttu-id="82657-132">Windows 服務的站台不是互動式的站台，因為對話方塊所產生的一種 Windows 服務應用程式不會看到，並可能會造成程式停止回應。</span><span class="sxs-lookup"><span data-stu-id="82657-132">Because the station of the Windows service is not an interactive station, dialog boxes raised from within a Windows service application will not be seen and may cause your program to stop responding.</span></span> <span data-ttu-id="82657-133">同樣地，錯誤訊息應該登入 Windows 事件記錄檔，而使用者介面中引發。</span><span class="sxs-lookup"><span data-stu-id="82657-133">Similarly, error messages should be logged in the Windows event log rather than raised in the user interface.</span></span>  
   
-     .NET Framework 支援的 Windows 服務類別並不支援與互動式工作站 \(也就是登入使用者\) 的互動。  .NET Framework 也不包含表示工作站和桌面的類別。  如果您的 Windows 服務必須與其他工作站互動，則需要存取 Unmanaged Windows API。  如需詳細資訊，請參閱 Windows SDK 文件。  
+     <span data-ttu-id="82657-134">.NET Framework 所支援的 Windows 服務類別不支援互動式電台，也就是登入的使用者互動。</span><span class="sxs-lookup"><span data-stu-id="82657-134">The Windows service classes supported by the .NET Framework do not support interaction with interactive stations, that is, the logged-on user.</span></span> <span data-ttu-id="82657-135">.NET Framework 也不包含代表站台和桌上型電腦的類別。</span><span class="sxs-lookup"><span data-stu-id="82657-135">The .NET Framework also does not include classes that represent stations and desktops.</span></span> <span data-ttu-id="82657-136">如果您的 Windows 服務必須與其他站台互動，您必須存取不受管理的 Windows API。</span><span class="sxs-lookup"><span data-stu-id="82657-136">If your Windows service must interact with other stations, you will need to access the unmanaged Windows API.</span></span> <span data-ttu-id="82657-137">如需詳細資訊，請參閱 Windows SDK 的文件。</span><span class="sxs-lookup"><span data-stu-id="82657-137">For more information, see the Windows SDK documentation.</span></span>  
   
-     Windows 服務與使用者或其他工作站的互動必須仔細經過設計以包含案例，例如沒有登入使用者，或是使用者具有未預期的桌面物件組。  在某些情況中，可能撰寫在使用者控制下執行的 Windows 應用程式會更為恰當。  
+     <span data-ttu-id="82657-138">與使用者或其他站台的服務必須仔細地設計以包含這類案例那里沒有登入的使用者或使用者具有未預期的桌面物件組之 windows 互動。</span><span class="sxs-lookup"><span data-stu-id="82657-138">The interaction of the Windows service with the user or other stations must be carefully designed to include scenarios such as there being no logged on user, or the user having an unexpected set of desktop objects.</span></span> <span data-ttu-id="82657-139">在某些情況下，它可能會更加適合撰寫 Windows 應用程式之使用者的控制下執行的程式碼。</span><span class="sxs-lookup"><span data-stu-id="82657-139">In some cases, it may be more appropriate to write a Windows application that runs under the control of the user.</span></span>  
   
--   Windows 服務應用程式會在它們自己的安全性內容中執行，並在使用者登入安裝服務的 Windows 電腦前就已經啟動。  您應該仔細地規劃服務要在那個使用者帳戶中執行；在系統帳戶下執行的服務所擁有的權限高於使用者帳戶。  
+-   <span data-ttu-id="82657-140">Windows 服務應用程式在使用者的安全性內容中執行，並啟動之前在使用者登入安裝所在的 Windows 電腦。</span><span class="sxs-lookup"><span data-stu-id="82657-140">Windows service applications run in their own security context and are started before the user logs into the Windows computer on which they are installed.</span></span> <span data-ttu-id="82657-141">您應該仔細地規劃哪些使用者帳戶，來執行; 內的服務在系統帳戶下執行的服務有多個權限和權限與使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="82657-141">You should plan carefully what user account to run the service within; a service running under the system account has more permissions and privileges than a user account.</span></span>  
   
-## 服務的存留期  
- 服務會在它的存留期中經過幾個內部的狀態。  首先，會將服務安裝在將執行該服務的系統中。  這個處理序會執行服務專案的安裝程式，並將服務載入該電腦的 \[**服務控制管理員**\] 中。  \[**服務控制管理員**\] 是 Windows 提供給管理服務的集中式公用程式。  
+## <a name="service-lifetime"></a><span data-ttu-id="82657-142">服務的存留期</span><span class="sxs-lookup"><span data-stu-id="82657-142">Service Lifetime</span></span>  
+ <span data-ttu-id="82657-143">服務會在其存留期間經歷數個內部狀態。</span><span class="sxs-lookup"><span data-stu-id="82657-143">A service goes through several internal states in its lifetime.</span></span> <span data-ttu-id="82657-144">首先，它會在其執行的系統上安裝此服務。</span><span class="sxs-lookup"><span data-stu-id="82657-144">First, the service is installed onto the system on which it will run.</span></span> <span data-ttu-id="82657-145">此程序執行的安裝程式服務專案，並載入到服務**服務控制管理員**該電腦。</span><span class="sxs-lookup"><span data-stu-id="82657-145">This process executes the installers for the service project and loads the service into the **Services Control Manager** for that computer.</span></span> <span data-ttu-id="82657-146">**服務控制管理員**是中央管理服務的 Windows 所提供的公用程式。</span><span class="sxs-lookup"><span data-stu-id="82657-146">The **Services Control Manager** is the central utility provided by Windows to administer services.</span></span>  
   
- 載入服務後，必須啟動該服務。  啟動服務讓它可以開始運作。  您可以藉由呼叫 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法，從 \[**服務控制管理員**\]、\[**伺服器總管**\] 或程式碼啟動服務。  <xref:System.ServiceProcess.ServiceController.Start%2A> 方法會將處理傳遞給應用程式的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法，並處理您在方法中定義的程式碼。  
+ <span data-ttu-id="82657-147">已載入該服務之後，它必須啟動。</span><span class="sxs-lookup"><span data-stu-id="82657-147">After the service has been loaded, it must be started.</span></span> <span data-ttu-id="82657-148">正在啟動服務，可讓它開始運作。</span><span class="sxs-lookup"><span data-stu-id="82657-148">Starting the service allows it to begin functioning.</span></span> <span data-ttu-id="82657-149">您可以啟動服務，以從**服務控制管理員**，從**伺服器總管**，藉由呼叫的程式碼之間來回<xref:System.ServiceProcess.ServiceController.Start%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="82657-149">You can start a service from the **Services Control Manager**, from **Server Explorer**, or from code by calling the <xref:System.ServiceProcess.ServiceController.Start%2A> method.</span></span> <span data-ttu-id="82657-150"><xref:System.ServiceProcess.ServiceController.Start%2A>方法會處理傳遞至應用程式的<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法並處理您已那里定義任何程式碼。</span><span class="sxs-lookup"><span data-stu-id="82657-150">The <xref:System.ServiceProcess.ServiceController.Start%2A> method passes processing to the application's <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and processes any code you have defined there.</span></span>  
   
- 執行中的服務可以無限期地存在於這個狀態中，直到停止或暫停該服務，或直到電腦關機為止。  服務可以存在於三個基本狀態的其中之一：<xref:System.ServiceProcess.ServiceControllerStatus>、<xref:System.ServiceProcess.ServiceControllerStatus> 或 <xref:System.ServiceProcess.ServiceControllerStatus>。  服務也可以回報暫止命令的狀態：<xref:System.ServiceProcess.ServiceControllerStatus>、<xref:System.ServiceProcess.ServiceControllerStatus>、<xref:System.ServiceProcess.ServiceControllerStatus> 或 <xref:System.ServiceProcess.ServiceControllerStatus>。  這些狀態指示已經發出命令，例如暫停執行中服務的命令，但是還沒有執行該命令。  您可以查詢 <xref:System.ServiceProcess.ServiceController.Status%2A> 來判斷服務所處的狀態，或利用 <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> 在發生這些狀態任一項時執行動作。  
+ <span data-ttu-id="82657-151">執行中服務的存在處於此狀態中，直到它停止或暫停，或是直到電腦關機。</span><span class="sxs-lookup"><span data-stu-id="82657-151">A running service can exist in this state indefinitely until it is either stopped or paused or until the computer shuts down.</span></span> <span data-ttu-id="82657-152">服務可以存在於三個基本狀態之一： <xref:System.ServiceProcess.ServiceControllerStatus.Running>， <xref:System.ServiceProcess.ServiceControllerStatus.Paused>，或<xref:System.ServiceProcess.ServiceControllerStatus.Stopped>。</span><span class="sxs-lookup"><span data-stu-id="82657-152">A service can exist in one of three basic states: <xref:System.ServiceProcess.ServiceControllerStatus.Running>, <xref:System.ServiceProcess.ServiceControllerStatus.Paused>, or <xref:System.ServiceProcess.ServiceControllerStatus.Stopped>.</span></span> <span data-ttu-id="82657-153">服務也可以報告的暫止命令的狀態： <xref:System.ServiceProcess.ServiceControllerStatus.ContinuePending>， <xref:System.ServiceProcess.ServiceControllerStatus.PausePending>， <xref:System.ServiceProcess.ServiceControllerStatus.StartPending>，或<xref:System.ServiceProcess.ServiceControllerStatus.StopPending>。</span><span class="sxs-lookup"><span data-stu-id="82657-153">The service can also report the state of a pending command: <xref:System.ServiceProcess.ServiceControllerStatus.ContinuePending>, <xref:System.ServiceProcess.ServiceControllerStatus.PausePending>, <xref:System.ServiceProcess.ServiceControllerStatus.StartPending>, or <xref:System.ServiceProcess.ServiceControllerStatus.StopPending>.</span></span> <span data-ttu-id="82657-154">這些狀態會指出命令已發出，例如命令，以暫停執行中的服務，但有不執行。</span><span class="sxs-lookup"><span data-stu-id="82657-154">These statuses indicate that a command has been issued, such as a command to pause a running service, but has not been carried out yet.</span></span> <span data-ttu-id="82657-155">您可以查詢<xref:System.ServiceProcess.ServiceController.Status%2A>判斷何種狀態服務是在中，或使用<xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>執行動作，任何這兩種狀態時，就會發生。</span><span class="sxs-lookup"><span data-stu-id="82657-155">You can query the <xref:System.ServiceProcess.ServiceController.Status%2A> to determine what state a service is in, or use the <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> to carry out an action when any of these states occurs.</span></span>  
   
- 您可以從 \[**服務控制管理員**\]、\[**伺服器總管**\] 或在程式碼中呼叫方法，以暫停、停止或繼續服務。  每一個動作都可以呼叫服務中的相關程序 \(<xref:System.ServiceProcess.ServiceBase.OnStop%2A>、<xref:System.ServiceProcess.ServiceBase.OnPause%2A> 或 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>\)，您可以在其中定義服務改變狀態時要執行的其他處理。  
+ <span data-ttu-id="82657-156">您可以暫停、 停止或繼續從服務**服務控制管理員**，從**伺服器總管**，或藉由在程式碼中呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="82657-156">You can pause, stop, or resume a service from the **Services Control Manager**, from **Server Explorer**, or by calling methods in code.</span></span> <span data-ttu-id="82657-157">每個動作可以在服務中呼叫相關聯的程序 (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>， <xref:System.ServiceProcess.ServiceBase.OnPause%2A>，或<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>)，您可以定義服務的狀態變更時所要執行額外的處理中。</span><span class="sxs-lookup"><span data-stu-id="82657-157">Each of these actions can call an associated procedure in the service (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, or <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>), in which you can define additional processing to be performed when the service changes state.</span></span>  
   
-## 服務類型  
- 您可以使用 .NET Framework 在 Visual Studio 中建立兩種服務類型。  屬於處理序中唯一的服務，會指定為 <xref:System.ServiceProcess.ServiceType> 類型。  和其他服務共用處理序的服務，則指定為 <xref:System.ServiceProcess.ServiceType> 類型。  您可以查詢 <xref:System.ServiceProcess.ServiceController.ServiceType%2A> 屬性，藉以擷取服務類型。  
+## <a name="types-of-services"></a><span data-ttu-id="82657-158">類型的服務</span><span class="sxs-lookup"><span data-stu-id="82657-158">Types of Services</span></span>  
+ <span data-ttu-id="82657-159">有兩種類型的服務，您可以使用.NET Framework 的 Visual Studio 中建立。</span><span class="sxs-lookup"><span data-stu-id="82657-159">There are two types of services you can create in Visual Studio using the .NET Framework.</span></span> <span data-ttu-id="82657-160">會指派給服務的處理程序中唯一的服務類型<xref:System.ServiceProcess.ServiceType.Win32OwnProcess>。</span><span class="sxs-lookup"><span data-stu-id="82657-160">Services that are the only service in a process are assigned the type <xref:System.ServiceProcess.ServiceType.Win32OwnProcess>.</span></span> <span data-ttu-id="82657-161">會指派給另一個服務共用處理序的服務類型<xref:System.ServiceProcess.ServiceType.Win32ShareProcess>。</span><span class="sxs-lookup"><span data-stu-id="82657-161">Services that share a process with another service are assigned the type <xref:System.ServiceProcess.ServiceType.Win32ShareProcess>.</span></span> <span data-ttu-id="82657-162">您可以藉由查詢擷取的服務類型<xref:System.ServiceProcess.ServiceController.ServiceType%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="82657-162">You can retrieve the service type by querying the <xref:System.ServiceProcess.ServiceController.ServiceType%2A> property.</span></span>  
   
- 如果您查詢非 Visual Studio 所建立的現有服務，有時候您會看到其他的服務類型。  如需這些服務的詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceType>。  
+ <span data-ttu-id="82657-163">如果查詢未建立 Visual Studio 中的現有服務，有時可能會看到其他服務類型。</span><span class="sxs-lookup"><span data-stu-id="82657-163">You might occasionally see other service types if you query existing services that were not created in Visual Studio.</span></span> <span data-ttu-id="82657-164">如需這些的詳細資訊，請參閱<xref:System.ServiceProcess.ServiceType>。</span><span class="sxs-lookup"><span data-stu-id="82657-164">For more information on these, see the <xref:System.ServiceProcess.ServiceType>.</span></span>  
   
-## 服務和 ServiceController 元件  
- <xref:System.ServiceProcess.ServiceController> 元件用以連接已安裝的服務並且管理其狀態；利用 <xref:System.ServiceProcess.ServiceController> 元件，您可以啟動和停止服務、暫停和繼續其運作，並傳送自訂命令給服務。  但是，當您建立服務應用程式時，並不需要使用 <xref:System.ServiceProcess.ServiceController> 元件。  事實上，在大多數情況下，<xref:System.ServiceProcess.ServiceController> 元件應該存在於定義服務之 Windows 服務應用程式之外的另一個應用程式中。  
+## <a name="services-and-the-servicecontroller-component"></a><span data-ttu-id="82657-165">服務和 ServiceController 元件</span><span class="sxs-lookup"><span data-stu-id="82657-165">Services and the ServiceController Component</span></span>  
+ <span data-ttu-id="82657-166"><xref:System.ServiceProcess.ServiceController>元件是用來連接到已安裝的服務和操作其狀態，使用<xref:System.ServiceProcess.ServiceController>元件，啟動和停止服務、 暫停和繼續其正常運作，即可將自訂命令傳送至服務。</span><span class="sxs-lookup"><span data-stu-id="82657-166">The <xref:System.ServiceProcess.ServiceController> component is used to connect to an installed service and manipulate its state; using a <xref:System.ServiceProcess.ServiceController> component, you can start and stop a service, pause and continue its functioning, and send custom commands to a service.</span></span> <span data-ttu-id="82657-167">不過，您不需要使用<xref:System.ServiceProcess.ServiceController>當您建立服務應用程式的元件。</span><span class="sxs-lookup"><span data-stu-id="82657-167">However, you do not need to use a <xref:System.ServiceProcess.ServiceController> component when you create a service application.</span></span> <span data-ttu-id="82657-168">事實上，在大部分情況下您<xref:System.ServiceProcess.ServiceController>元件應存在於不同的應用程式定義服務的 Windows 服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="82657-168">In fact, in most cases your <xref:System.ServiceProcess.ServiceController> component should exist in a separate application from the Windows service application that defines your service.</span></span>  
   
- 如需詳細資訊，請參閱<xref:System.ServiceProcess.ServiceController>。  
+ <span data-ttu-id="82657-169">如需詳細資訊，請參閱<xref:System.ServiceProcess.ServiceController>。</span><span class="sxs-lookup"><span data-stu-id="82657-169">For more information, see <xref:System.ServiceProcess.ServiceController>.</span></span>  
   
-## 需求  
+## <a name="requirements"></a><span data-ttu-id="82657-170">需求</span><span class="sxs-lookup"><span data-stu-id="82657-170">Requirements</span></span>  
   
--   服務必須在 \[**Windows 服務**\] 應用程式專案或另一個啟用 .NET Framework 的專案中建立，而這個專案建置時會建立 .exe 檔案並繼承自 <xref:System.ServiceProcess.ServiceBase> 類別。  
+-   <span data-ttu-id="82657-171">服務也必須在建立**Windows 服務**應用程式專案或其他.NET Framework 功能，以建立.exe 檔建置時，並繼承自專案<xref:System.ServiceProcess.ServiceBase>類別。</span><span class="sxs-lookup"><span data-stu-id="82657-171">Services must be created in a **Windows Service** application project or another .NET Framework–enabled project that creates an .exe file when built and inherits from the <xref:System.ServiceProcess.ServiceBase> class.</span></span>  
   
--   包含 Windows 服務的專案，必須有專案和其服務的安裝元件。  在 \[**屬性**\] 視窗中可以輕鬆地完成這個工作。  如需詳細資訊，請參閱[如何：加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+-   <span data-ttu-id="82657-172">專案包含 Windows 服務必須有專案和其服務的安裝元件。</span><span class="sxs-lookup"><span data-stu-id="82657-172">Projects containing Windows services must have installation components for the project and its services.</span></span> <span data-ttu-id="82657-173">這可以輕鬆地完成從**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="82657-173">This can be easily accomplished from the **Properties** window.</span></span> <span data-ttu-id="82657-174">如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。</span><span class="sxs-lookup"><span data-stu-id="82657-174">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
   
-## 請參閱  
- [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)   
- [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)   
- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)   
- [如何：安裝及解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)   
- [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)   
- [如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)   
- [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)   
- [如何：加入 Installer 至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a><span data-ttu-id="82657-175">另請參閱</span><span class="sxs-lookup"><span data-stu-id="82657-175">See Also</span></span>  
+ [<span data-ttu-id="82657-176">Windows 服務應用程式</span><span class="sxs-lookup"><span data-stu-id="82657-176">Windows Service Applications</span></span>](../../../docs/framework/windows-services/index.md)  
+ [<span data-ttu-id="82657-177">服務應用程式的程式設計架構</span><span class="sxs-lookup"><span data-stu-id="82657-177">Service Application Programming Architecture</span></span>](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
+ [<span data-ttu-id="82657-178">如何： 建立 Windows 服務</span><span class="sxs-lookup"><span data-stu-id="82657-178">How to: Create Windows Services</span></span>](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [<span data-ttu-id="82657-179">如何： 安裝和解除安裝服務</span><span class="sxs-lookup"><span data-stu-id="82657-179">How to: Install and Uninstall Services</span></span>](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [<span data-ttu-id="82657-180">如何： 啟動服務</span><span class="sxs-lookup"><span data-stu-id="82657-180">How to: Start Services</span></span>](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [<span data-ttu-id="82657-181">如何： 偵錯 Windows 服務應用程式</span><span class="sxs-lookup"><span data-stu-id="82657-181">How to: Debug Windows Service Applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [<span data-ttu-id="82657-182">逐步解說： 在元件設計工具中建立 Windows 服務應用程式</span><span class="sxs-lookup"><span data-stu-id="82657-182">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [<span data-ttu-id="82657-183">如何： 加入 Installer 至服務應用程式</span><span class="sxs-lookup"><span data-stu-id="82657-183">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

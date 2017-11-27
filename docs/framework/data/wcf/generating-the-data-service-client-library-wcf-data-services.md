@@ -1,49 +1,52 @@
 ---
-title: "產生資料服務用戶端程式庫 (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "加入服務參考對話方塊"
-  - "用戶端應用程式, WCF Data Services"
-  - "WCF Data Services, 用戶端程式庫"
+title: "產生資料服務用戶端程式庫 (WCF 資料服務)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client applications, WCF Data Services
+- WCF Data Services, client library
+- Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5fbf45a3447a1dc5fb449628bdd7f741fb3e8324
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 產生資料服務用戶端程式庫 (WCF Data Services)
-實作 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的資料服務可以傳回服務中繼資料文件，以描述 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要所公開的資料模型。  如需詳細資訊，請參閱 [OData：服務中繼資料文件](http://go.microsoft.com/fwlink/?LinkId=186070)。您可以使用 Visual Studio 中的 \[加入服務參考\] 對話方塊來加入 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 型服務的參考。  當您使用這個工具，在用戶端專案中加入 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要傳回之中繼資料的參考時，將會執行下列動作：  
+# <a name="generating-the-data-service-client-library-wcf-data-services"></a><span data-ttu-id="5a47d-102">產生資料服務用戶端程式庫 (WCF 資料服務)</span><span class="sxs-lookup"><span data-stu-id="5a47d-102">Generating the Data Service Client Library (WCF Data Services)</span></span>
+<span data-ttu-id="5a47d-103">資料服務可實作[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以傳回描述資料模型所公開服務中繼資料文件[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。</span><span class="sxs-lookup"><span data-stu-id="5a47d-103">A data service that implements the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] can return a service metadata document that describes the data model exposed by the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span> <span data-ttu-id="5a47d-104">如需詳細資訊，請參閱[OData： 服務中繼資料文件](http://go.microsoft.com/fwlink/?LinkId=186070)。</span><span class="sxs-lookup"><span data-stu-id="5a47d-104">For more information, see [OData: Service Metadata Document](http://go.microsoft.com/fwlink/?LinkId=186070).</span></span> <span data-ttu-id="5a47d-105">您可以使用**加入服務參考**將參考加入至 Visual Studio 中的對話方塊[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的服務。</span><span class="sxs-lookup"><span data-stu-id="5a47d-105">You can use the **Add Service Reference** dialog in Visual Studio to add a reference to an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based service.</span></span> <span data-ttu-id="5a47d-106">當您使用此工具將參考加入至所傳回的中繼資料[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要的用戶端專案中，執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="5a47d-106">When you use this tool to add a reference to the metadata returned by an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a client project, it performs the following actions:</span></span>  
   
--   要求資料服務中的服務中繼資料文件，然後解譯傳回的中繼資料。  
+-   <span data-ttu-id="5a47d-107">要求資料服務中的服務中繼資料文件，然後解譯傳回的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="5a47d-107">Requests the service metadata document from the data service and interprets the returned metadata.</span></span>  
   
     > [!NOTE]
-    >  傳回的中繼資料會以 .edmx 檔案形式儲存在用戶端專案中。  這個 .edmx 檔案不能使用實體資料模型設計工具開啟，因為它的格式與 Entity Framework 使用的 .edmx 檔案格式不同。  您可以使用 XML 編輯器或任何文字編輯器檢視此中繼資料。  如需詳細資訊，請參閱 [\[MC\-EDMX\]：資料服務封裝格式的實體資料模型](http://go.microsoft.com/fwlink/?LinkID=178833)規格。  
+    >  <span data-ttu-id="5a47d-108">傳回的中繼資料會以 .edmx 檔案形式儲存在用戶端專案中。</span><span class="sxs-lookup"><span data-stu-id="5a47d-108">The returned metadata is stored in the client project as an .edmx file.</span></span> <span data-ttu-id="5a47d-109">這個 .edmx 檔案不能使用實體資料模型設計工具開啟，因為它的格式與 Entity Framework 使用的 .edmx 檔案格式不同。</span><span class="sxs-lookup"><span data-stu-id="5a47d-109">This .edmx file cannot be opened by using the Entity Data Model designer because it does not have the same format an .edmx file used by the Entity Framework.</span></span> <span data-ttu-id="5a47d-110">您可以使用 XML 編輯器或任何文字編輯器檢視此中繼資料。</span><span class="sxs-lookup"><span data-stu-id="5a47d-110">You can view this metadata file by using the XML editor or any text editor.</span></span> <span data-ttu-id="5a47d-111">如需詳細資訊，請參閱[ \[MC-EDMX\]： 資料服務封裝格式的實體資料模型](http://go.microsoft.com/fwlink/?LinkID=178833)規格</span><span class="sxs-lookup"><span data-stu-id="5a47d-111">For more information, see the [\[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833) specification</span></span>  
   
--   產生服務的表示，成為繼承自 <xref:System.Data.Services.Client.DataServiceContext> 的實體容器類別。  這樣產生的實體容器類別與實體資料模型工具產生的實體容器相似。  如需詳細資訊，請參閱[Object Services Overview \(Entity Framework\)](http://msdn.microsoft.com/zh-tw/43014cf9-c9cb-4538-bfbb-197820b60038)。  
+-   <span data-ttu-id="5a47d-112">產生服務的表示，成為繼承自 <xref:System.Data.Services.Client.DataServiceContext> 的實體容器類別。</span><span class="sxs-lookup"><span data-stu-id="5a47d-112">Generates a representation of the service as an entity container class that inherits from <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="5a47d-113">這樣產生的實體容器類別與實體資料模型工具產生的實體容器相似。</span><span class="sxs-lookup"><span data-stu-id="5a47d-113">This generated entity container class resembles the entity container that the Entity Data Model tools generate.</span></span> <span data-ttu-id="5a47d-114">如需詳細資訊，請參閱[物件服務概觀 (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)。</span><span class="sxs-lookup"><span data-stu-id="5a47d-114">For more information, see [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).</span></span>  
   
--   針對在服務中繼資料中找到的資料模型型別產生資料類別。  
+-   <span data-ttu-id="5a47d-115">針對在服務中繼資料中找到的資料模型型別產生資料類別。</span><span class="sxs-lookup"><span data-stu-id="5a47d-115">Generates data classes for the data model types that it discovers in the service metadata.</span></span>  
   
--   將參考加入至專案的 `System.Data.Services.Client` 組件。  
+-   <span data-ttu-id="5a47d-116">將參考加入至專案的 `System.Data.Services.Client` 組件。</span><span class="sxs-lookup"><span data-stu-id="5a47d-116">Adds a reference to the `System.Data.Services.Client` assembly to the project.</span></span>  
   
- 如需詳細資訊，請參閱[HOW TO：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。  
+ <span data-ttu-id="5a47d-117">如需詳細資訊，請參閱[如何： 加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="5a47d-117">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span>  
   
- 您也可以在命令提示字元中使用 [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 工具，產生用戶端資料服務類別。  如需詳細資訊，請參閱[HOW TO：手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
+ <span data-ttu-id="5a47d-118">也可以使用產生的用戶端資料服務類別[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)在命令提示字元工具。</span><span class="sxs-lookup"><span data-stu-id="5a47d-118">The client data service classes can also be generated by using the [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) tool at the command prompt.</span></span> <span data-ttu-id="5a47d-119">如需詳細資訊，請參閱[How to： 手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。</span><span class="sxs-lookup"><span data-stu-id="5a47d-119">For more information, see [How to: Manually Generate Client Data Service Classes](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).</span></span>  
   
-## 用戶端資料型別對應  
- 當您使用 Visual Studio 中的 \[**加入服務參考**\] 對話方塊或 `DataSvcUtil.exe` 工具，產生根據 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的用戶端資料類別時，.NET Framework 資料型別會對應至資料模型的基本型別，如下所示：  
+## <a name="client-data-type-mapping"></a><span data-ttu-id="5a47d-120">用戶端資料型別對應</span><span class="sxs-lookup"><span data-stu-id="5a47d-120">Client Data Type Mapping</span></span>  
+ <span data-ttu-id="5a47d-121">當您使用**加入服務參考**Visual Studio 中的對話方塊或`DataSvcUtil.exe`工具來產生用戶端資料類別為基礎的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要時，.NET Framework 資料型別會對應至從基本的類型資料模型，如下所示：</span><span class="sxs-lookup"><span data-stu-id="5a47d-121">When you use the **Add Service Reference** dialog in Visual Studio or the `DataSvcUtil.exe` tool to generate client data classes that are based on an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, the .NET Framework data types are mapped to the primitive types from the data model as follows:</span></span>  
   
-|資料模型型別|.NET Framework 資料型別|  
-|------------|-------------------------|  
-|`Edm.Binary`|<xref:System.Byte> `[]`|  
+|<span data-ttu-id="5a47d-122">資料模型型別</span><span class="sxs-lookup"><span data-stu-id="5a47d-122">Data model type</span></span>|<span data-ttu-id="5a47d-123">.NET Framework 資料型別</span><span class="sxs-lookup"><span data-stu-id="5a47d-123">.NET Framework data type</span></span>|  
+|---------------------|------------------------------|  
+|`Edm.Binary`|<span data-ttu-id="5a47d-124"><xref:System.Byte> `[]`</span><span class="sxs-lookup"><span data-stu-id="5a47d-124"><xref:System.Byte> `[]`</span></span>|  
 |`Edm.Boolean`|<xref:System.Boolean>|  
 |`Edm.Byte`|<xref:System.Byte>|  
 |`Edm.DateTime`|<xref:System.DateTime>|  
@@ -57,8 +60,8 @@ caps.handback.revision: 2
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- 如需詳細資訊，請參閱 [OData：基本資料型別](http://go.microsoft.com/fwlink/?LinkId=186072)。  
+ <span data-ttu-id="5a47d-125">如需詳細資訊，請參閱[OData： 基本資料型別](http://go.microsoft.com/fwlink/?LinkId=186072)。</span><span class="sxs-lookup"><span data-stu-id="5a47d-125">For more information, see [OData: Primitive Data Types](http://go.microsoft.com/fwlink/?LinkId=186072).</span></span>  
   
-## 請參閱  
- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)   
- [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="5a47d-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a47d-126">See Also</span></span>  
+ [<span data-ttu-id="5a47d-127">WCF Data Services 用戶端程式庫</span><span class="sxs-lookup"><span data-stu-id="5a47d-127">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [<span data-ttu-id="5a47d-128">快速入門</span><span class="sxs-lookup"><span data-stu-id="5a47d-128">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

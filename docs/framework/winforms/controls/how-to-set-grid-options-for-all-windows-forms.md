@@ -1,51 +1,52 @@
 ---
-title: "如何：為所有 Windows Form 設定格線選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "方格, Windows Form 中的選項"
-  - "貼齊格線, Windows Form 設計工具"
-  - "對齊線, Windows Form 設計工具"
-  - "Windows Form 設計工具"
-  - "Windows Form, 設計工具中的格線選項"
+title: "如何：為所有 Windows Form 設定格線選項"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snap to grid [Windows Forms], Windows Forms Designer
+- grids [Windows Forms], options in Windows Forms
+- snaplines [Windows Forms], Windows Forms Designer
+- Windows Forms, grid options in designer
+- Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 如何：為所有 Windows Form 設定格線選項
-當您習慣於在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 開發環境中工作時，可以在 Windows Form 設計工具中為您所使用的所有表單和專案設定喜好設定。  
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a><span data-ttu-id="c691c-102">如何：為所有 Windows Form 設定格線選項</span><span class="sxs-lookup"><span data-stu-id="c691c-102">How to: Set Grid Options for All Windows Forms</span></span>
+<span data-ttu-id="c691c-103">當您成為用來在工作[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]開發環境中，您可以在 Windows Form 設計工具設定喜好設定的所有表單和您使用的專案。</span><span class="sxs-lookup"><span data-stu-id="c691c-103">As you become used to working in the [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] development environment, you can set preferences for all the forms and projects you work with in the Windows Forms Designer.</span></span>  
   
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊與功能表指令可能會與 \[說明\] 中描述的不同。  若要變更設定，請從 \[**工具**\] 功能表中選擇 \[**匯入和匯出設定**\]。  如需詳細資訊，請參閱 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/zh-tw/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  <span data-ttu-id="c691c-104">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="c691c-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c691c-105">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="c691c-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c691c-106">如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。</span><span class="sxs-lookup"><span data-stu-id="c691c-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 若要設定全域 Windows Form 選項  
+### <a name="to-set-global-windows-forms-options"></a><span data-ttu-id="c691c-107">若要設定全域 Windows Form 選項</span><span class="sxs-lookup"><span data-stu-id="c691c-107">To set global Windows Forms options</span></span>  
   
-1.  從 \[**工具**\] 功能表中選取 \[**選項**\]。  
+1.  <span data-ttu-id="c691c-108">從**工具**功能表上，選取**選項**。</span><span class="sxs-lookup"><span data-stu-id="c691c-108">From the **Tools** menu, select **Options**.</span></span>  
   
-2.  在 \[**選項**\] 對話方塊的左窗格中，按一下 \[**Windows Form 設計工具**\]。  
+2.  <span data-ttu-id="c691c-109">在左窗格中**選項**對話方塊中，按一下  **Windows Form 設計工具**。</span><span class="sxs-lookup"><span data-stu-id="c691c-109">In the left pane of the **Options** dialog box, click **Windows Forms Designer**.</span></span>  
   
-     在右窗格中的 \[**配置設定**\] 標題下，您可以為所有建立的新表單設定預設格線設定。  這些設定包含格線大小、控制項是否貼齊它，以及它是否預設為開啟。  此外，您可以在 \[**SnapToGrid**\] 和 \[**SnapLines**\] 配置模式之間進行選取。  如需對齊線的詳細資訊，請參閱[逐步解說：使用對齊線排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
+     <span data-ttu-id="c691c-110">在右窗格中，在**版面配置設定**標題時，您可以設定預設方格設定為您建立的新表單。</span><span class="sxs-lookup"><span data-stu-id="c691c-110">In the right pane, under the **Layout Settings** heading, you can set the default grid settings for all the new forms you create.</span></span> <span data-ttu-id="c691c-111">這些設定包括格線大小，控制項是否貼齊，及是否它預設為開啟。</span><span class="sxs-lookup"><span data-stu-id="c691c-111">These settings include the grid size, whether controls snap to it, and whether it is on by default.</span></span> <span data-ttu-id="c691c-112">此外，您可以選取之間**SnapToGrid**和**對齊線**配置模式。</span><span class="sxs-lookup"><span data-stu-id="c691c-112">In addition, you can select between **SnapToGrid** and **SnapLines** layout modes.</span></span> <span data-ttu-id="c691c-113">如需有關對齊線的詳細資訊，請參閱[逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。</span><span class="sxs-lookup"><span data-stu-id="c691c-113">For more information on snaplines, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>  
   
-## 請參閱  
- [逐步解說：使用對齊線排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/zh-tw/8dd170af-72f0-4212-b04b-034ceee92834)   
- [Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)   
- [如何：將控制項加入至 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [排列 Windows Form 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [如何：在 Windows Form 上設定定位順序](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)   
- [如何：設定由 Windows Form 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [依功能區分 Windows Form 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="c691c-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c691c-114">See Also</span></span>  
+ [<span data-ttu-id="c691c-115">逐步解說：使用對齊線排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="c691c-115">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="c691c-116">選項對話方塊、 Windows Form 設計工具，一般</span><span class="sxs-lookup"><span data-stu-id="c691c-116">General, Windows Forms Designer, Options Dialog Box</span></span>](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [<span data-ttu-id="c691c-117">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c691c-117">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="c691c-118">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c691c-118">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="c691c-119">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="c691c-119">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="c691c-120">操作說明：在 Windows Forms 上設定定位順序</span><span class="sxs-lookup"><span data-stu-id="c691c-120">How to: Set the Tab Order on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
+ [<span data-ttu-id="c691c-121">操作說明：設定由 Windows Forms 控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="c691c-121">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="c691c-122">將控制項加入 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c691c-122">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [<span data-ttu-id="c691c-123">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="c691c-123">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="c691c-124">依功能區分 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="c691c-124">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

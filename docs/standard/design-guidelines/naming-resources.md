@@ -1,55 +1,53 @@
 ---
-title: "命名資源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "名稱 [.NET Framework] 當地語系化資源"
-  - "當地語系化命名方針"
-  - "資源名稱"
-  - "命名方針的全球化應用程式"
-  - "國際化應用程式，命名方針"
+title: "命名資源"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], localized resources
+- localization, naming guidelines
+- resource names
+- global applications, naming guidelines
+- international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 89782b00799bfaac97780b0ffdee62c89fdfbe49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 命名資源
-也可以透過某些物件參考可當地語系化的資源，如同它們是屬性，因為資源命名方針是類似屬性的指導方針。  
+# <a name="naming-resources"></a><span data-ttu-id="ecb8f-102">命名資源</span><span class="sxs-lookup"><span data-stu-id="ecb8f-102">Naming Resources</span></span>
+<span data-ttu-id="ecb8f-103">因為好像屬性，可以透過特定的物件參考可當地語系化的資源，資源命名方針如下屬性指導方針。</span><span class="sxs-lookup"><span data-stu-id="ecb8f-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
   
- **✓ 執行** PascalCasing 用於資源索引鍵。  
+ <span data-ttu-id="ecb8f-104">**✓ 不要**PascalCasing 用於資源索引鍵。</span><span class="sxs-lookup"><span data-stu-id="ecb8f-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
   
- **✓ 執行** 提供描述性的而不是簡短的識別項。  
+ <span data-ttu-id="ecb8f-105">**✓ 不要**提供描述性的而不是簡短的識別項。</span><span class="sxs-lookup"><span data-stu-id="ecb8f-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
   
- **X 不** 使用主要 CLR 語言的語言特有的關鍵字。  
+ <span data-ttu-id="ecb8f-106">**X 不**使用主要的 CLR 語言的語言特有的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="ecb8f-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
   
- **✓ 執行** 使用只有英數字元和底線命名資源。  
+ <span data-ttu-id="ecb8f-107">**✓ 不要**使用只使用英數字元和底線命名資源。</span><span class="sxs-lookup"><span data-stu-id="ecb8f-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
   
- **✓ 執行** 例外狀況訊息資源使用下列命名慣例。  
+ <span data-ttu-id="ecb8f-108">**✓ 不要**下列命名慣例用於例外狀況訊息的資源。</span><span class="sxs-lookup"><span data-stu-id="ecb8f-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
   
- 資源識別項應該是例外狀況型別名稱加上例外狀況的簡短識別項︰  
+ <span data-ttu-id="ecb8f-109">例外狀況型別名稱加上例外狀況的簡短的識別項，應該使用的資源識別碼：</span><span class="sxs-lookup"><span data-stu-id="ecb8f-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
   
- `ArgumentExceptionIllegalCharacters`   
- `ArgumentExceptionInvalidName`   
+ `ArgumentExceptionIllegalCharacters`  
+ `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *部分 © 2005年、 2009 Microsoft Corporation。 著作權所有，並保留一切權利。*  
+ <span data-ttu-id="ecb8f-110">*部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="ecb8f-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *皮耳森教育，從 Inc.的權限所印製 [Framework 設計方針︰ 慣例、 慣用句和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina 並 Brad Abrams，2008 年 10 月 22 日由 Addison\-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ <span data-ttu-id="ecb8f-111">*皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*</span><span class="sxs-lookup"><span data-stu-id="ecb8f-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## 請參閱  
- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)   
- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="ecb8f-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ecb8f-112">See Also</span></span>  
+ [<span data-ttu-id="ecb8f-113">Framework 設計方針</span><span class="sxs-lookup"><span data-stu-id="ecb8f-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="ecb8f-114">命名方針</span><span class="sxs-lookup"><span data-stu-id="ecb8f-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

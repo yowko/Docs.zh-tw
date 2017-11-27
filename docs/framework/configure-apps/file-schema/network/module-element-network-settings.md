@@ -1,85 +1,87 @@
 ---
-title: "&lt;module&gt; 項目 (網路設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#module"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<module> 項目"
-  - "module 項目"
+title: "&lt;模組&gt;項目 （網路設定）"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#module
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module
+helpviewer_keywords:
+- module element
+- <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;module&gt; 項目 (網路設定)
-將新的 Pxory 模組加入至應用程式。  
+# <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="81ca3-102">&lt;模組&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="81ca3-102">&lt;module&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="81ca3-103">將新的 Proxy 模組加入至應用程式。</span><span class="sxs-lookup"><span data-stu-id="81ca3-103">Adds a new proxy module to the application.</span></span>  
   
-## 語法  
+ <span data-ttu-id="81ca3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="81ca3-104">\<configuration></span></span>  
+<span data-ttu-id="81ca3-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="81ca3-105">\<system.net></span></span>  
+<span data-ttu-id="81ca3-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="81ca3-106">\<defaultProxy></span></span>  
+<span data-ttu-id="81ca3-107">\<模組 ></span><span class="sxs-lookup"><span data-stu-id="81ca3-107">\<module></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="81ca3-108">語法</span><span class="sxs-lookup"><span data-stu-id="81ca3-108">Syntax</span></span>  
   
-      <module   
-   type = "name", System, Version="version number", Culture="culture", PublicKeyToken="token" "   
+```xml  
+<module   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="81ca3-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="81ca3-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="81ca3-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="81ca3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="81ca3-111">屬性</span><span class="sxs-lookup"><span data-stu-id="81ca3-111">Attributes</span></span>  
   
-|**屬性**|**說明**|  
-|------------|------------|  
-|`type`|實作 Proxy 的模組的名稱和規格。|  
+|<span data-ttu-id="81ca3-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="81ca3-112">**Attribute**</span></span>|<span data-ttu-id="81ca3-113">**說明**</span><span class="sxs-lookup"><span data-stu-id="81ca3-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`type`|<span data-ttu-id="81ca3-114">完整限定的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)，實作 proxy 以逗號分隔。</span><span class="sxs-lookup"><span data-stu-id="81ca3-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="81ca3-115">子元素</span><span class="sxs-lookup"><span data-stu-id="81ca3-115">Child Elements</span></span>  
+ <span data-ttu-id="81ca3-116">無。</span><span class="sxs-lookup"><span data-stu-id="81ca3-116">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="81ca3-117">父項目</span><span class="sxs-lookup"><span data-stu-id="81ca3-117">Parent Elements</span></span>  
   
-|**元素**|**說明**|  
-|------------|------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|設定超文字傳輸協定 \(HTTP\) Proxy 伺服器。|  
+|<span data-ttu-id="81ca3-118">**目**</span><span class="sxs-lookup"><span data-stu-id="81ca3-118">**Element**</span></span>|<span data-ttu-id="81ca3-119">**說明**</span><span class="sxs-lookup"><span data-stu-id="81ca3-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="81ca3-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="81ca3-120">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="81ca3-121">設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="81ca3-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## 備註  
- `module` 項目會註冊實作 <xref:System.Net.IWebProxy> 介面的 Proxy 類別。  註冊了 Proxy 類別之後，可以使用 `module`，透過支援的 Proxy 要求資訊。  
+## <a name="remarks"></a><span data-ttu-id="81ca3-122">備註</span><span class="sxs-lookup"><span data-stu-id="81ca3-122">Remarks</span></span>  
+ <span data-ttu-id="81ca3-123">`module`項目會註冊 proxy 類別可實作<xref:System.Net.IWebProxy>介面。</span><span class="sxs-lookup"><span data-stu-id="81ca3-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="81ca3-124">註冊 Proxy 類別之後，可以使用 `module` 透過支援的 Proxy 要求資訊。</span><span class="sxs-lookup"><span data-stu-id="81ca3-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
   
- `type` 屬性的值必須是有效動態連結程式庫 \(DLL\) 的名稱和模組的類別名稱。  
+ <span data-ttu-id="81ca3-125">值`type`屬性應該是類別名稱的模組和名稱的其對應動態連結程式庫 (DLL)。</span><span class="sxs-lookup"><span data-stu-id="81ca3-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a><span data-ttu-id="81ca3-126">組態檔</span><span class="sxs-lookup"><span data-stu-id="81ca3-126">Configuration Files</span></span>  
+ <span data-ttu-id="81ca3-127">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="81ca3-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 範例  
- 以下程式碼範例會註冊自訂的 Proxy 類別。  
+## <a name="example"></a><span data-ttu-id="81ca3-128">範例</span><span class="sxs-lookup"><span data-stu-id="81ca3-128">Example</span></span>  
+ <span data-ttu-id="81ca3-129">下列範例會註冊自訂的 proxy 類別。</span><span class="sxs-lookup"><span data-stu-id="81ca3-129">The following example registers a custom proxy class.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <module  
-        type = "Test.CustomWebProxy, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+        type="Test.CustomWebProxy, TestProxy, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b23a5c561934e385"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Net.IWebProxy?displayProperty=fullName>   
- [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="81ca3-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="81ca3-130">See Also</span></span>  
+ <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="81ca3-131">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="81ca3-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

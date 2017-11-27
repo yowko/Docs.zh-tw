@@ -1,60 +1,61 @@
 ---
-title: "PageSetupDialog 元件 (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "頁尾, 版面設定選項"
-  - "頁首, 列印"
-  - "橫印"
-  - "邊界, 版面設定選項"
-  - "頁尾"
-  - "頁首"
-  - "網頁屬性"
-  - "網頁設定"
-  - "版面設定對話方塊"
-  - "PageSetupDialog 元件"
-  - "紙張列印方向"
-  - "直向"
-  - "列印選項, PageSetupDialog 元件"
-  - "列印 [Windows Form], 顯示設定對話方塊"
-  - "列印 [Windows Form], 頁首和頁尾"
-  - "列印 [Windows Form], 網頁設定"
+title: "PageSetupDialog 元件 (Windows Form)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing [Windows Forms], page setup
+- margins [Windows Forms], page setup options
+- paper orientation
+- print options [Windows Forms], PageSetupDialog component
+- page properties
+- printing [Windows Forms], displaying setup dialog boxes
+- portrait orientation
+- headers [Windows Forms], printing
+- footers [Windows Forms], page setup options
+- landscape orientation
+- page footer
+- page setup
+- Page Setup dialog box
+- PageSetupDialog component
+- page header
+- printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eb071b4bf3248deaa171ad473d1867d2edb46ab
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# PageSetupDialog 元件 (Windows Form)
-Windows Form <xref:System.Windows.Forms.PageSetupDialog> 元件是預先設定的對話方塊，此方塊用來在 Windows 架構應用程式中設定列印的頁面詳細資料。  在您的 Windows 架構應用程式中，使用此控制項做為使用者設定頁面喜好設定的簡單方案，就不用設定自己的對話方塊。  您可以讓使用者設定框線和邊界調整、頁首和頁尾及直印  或橫印。  利用標準的 Windows 對話方塊做為基礎，您可以建立使用者可立即熟悉基本功能的應用程式。  
+# <a name="pagesetupdialog-component-windows-forms"></a><span data-ttu-id="fe0c9-102">PageSetupDialog 元件 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="fe0c9-102">PageSetupDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="fe0c9-103">Windows Form<xref:System.Windows.Forms.PageSetupDialog>元件是預先設定的對話方塊，用來設定 Windows 架構應用程式中列印的頁面詳細資料。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-103">The Windows Forms <xref:System.Windows.Forms.PageSetupDialog> component is a pre-configured dialog box used to set page details for printing in Windows-based applications.</span></span> <span data-ttu-id="fe0c9-104">它應用程式中使用 windows 做為簡單的解決方案使用者設定 頁面就不需設定您自己的對話方塊。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-104">Use it within your Windows-based application as a simple solution for users to set page preferences in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="fe0c9-105">您可以讓使用者設定框線和邊界調整、 頁首和頁尾和直印或橫印。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-105">You can enable users to set border and margin adjustments, headers and footers, and portrait vs. landscape orientation.</span></span> <span data-ttu-id="fe0c9-106">藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-106">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span>  
   
-## 在本節中  
- [PageSetupDialog 元件概觀](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
- 介紹 <xref:System.Windows.Forms.PageSetupDialog> 元件的一般概念，您可以使用此元件顯示使用者能用來管理頁面設定的預先設定的對話方塊。  
+## <a name="in-this-section"></a><span data-ttu-id="fe0c9-107">本章節內容</span><span class="sxs-lookup"><span data-stu-id="fe0c9-107">In This Section</span></span>  
+ [<span data-ttu-id="fe0c9-108">PageSetupDialog 元件概觀</span><span class="sxs-lookup"><span data-stu-id="fe0c9-108">PageSetupDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="fe0c9-109">導入的一般概念<xref:System.Windows.Forms.PageSetupDialog>元件，您可以使用顯示預先設定的對話方塊，使用者可用來管理頁面設定。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-109">Introduces the general concepts of the <xref:System.Windows.Forms.PageSetupDialog> component, which you can use to display a pre-configured dialog box that users can use to manipulate page settings.</span></span>  
   
- [如何：使用 PageSetupDialog 元件決定頁面屬性](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- 說明如何在執行階段透過使用 <xref:System.Windows.Forms.PageSetupDialog> 元件的執行個體 \(Instance\) 設定頁面屬性。  
+ [<span data-ttu-id="fe0c9-110">操作說明：使用 PageSetupDialog 元件決定頁面屬性</span><span class="sxs-lookup"><span data-stu-id="fe0c9-110">How to: Determine Page Properties Using the PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ <span data-ttu-id="fe0c9-111">說明如何使用的執行個體設定頁面屬性<xref:System.Windows.Forms.PageSetupDialog>在執行階段元件。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-111">Explains how to set page properties by using an instance of the <xref:System.Windows.Forms.PageSetupDialog> component at run time.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="fe0c9-112">參考資料</span><span class="sxs-lookup"><span data-stu-id="fe0c9-112">Reference</span></span>  
  <xref:System.Windows.Forms.PageSetupDialog>  
- 提供類別和其成員的參考資訊。  
+ <span data-ttu-id="fe0c9-113">提供這個類別及其成員的相關參考資訊。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-113">Provides reference information on the class and its members.</span></span>  
   
-## 相關章節  
- [在 Windows Form 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法資訊的連結。  
+## <a name="related-sections"></a><span data-ttu-id="fe0c9-114">相關章節</span><span class="sxs-lookup"><span data-stu-id="fe0c9-114">Related Sections</span></span>  
+ [<span data-ttu-id="fe0c9-115">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="fe0c9-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="fe0c9-116">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [對話方塊控制項和元件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- 描述一組讓使用者與應用程式或系統進行標準互動的控制項和元件。  
+ [<span data-ttu-id="fe0c9-117">對話方塊控制項和元件</span><span class="sxs-lookup"><span data-stu-id="fe0c9-117">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="fe0c9-118">描述可讓使用者與應用程式或系統進行標準互動的一組控制項和元件。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-118">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
   
- [Windows Form 對話方塊的基本程式碼](http://go.microsoft.com/fwlink/?LinkID=102575) \(英文\)  
- 討論 Windows Form 對話方塊控制項和元件，及執行其基本功能的必要程式碼   \(MSDN Online Library 技術文件\)
+ <span data-ttu-id="fe0c9-119">[Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼)</span><span class="sxs-lookup"><span data-stu-id="fe0c9-119">[Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575)</span></span>  
+ <span data-ttu-id="fe0c9-120">討論 Windows Form 對話方塊控制項和元件，以及執行其基本功能所需的程式碼。</span><span class="sxs-lookup"><span data-stu-id="fe0c9-120">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="fe0c9-121">(MSDN Online Library 技術文件)</span><span class="sxs-lookup"><span data-stu-id="fe0c9-121">(MSDN Online Library technical article)</span></span>

@@ -1,175 +1,178 @@
 ---
-title: "部分信任功能相容性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "部分信任功能相容性"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 74
+caps.latest.revision: "75"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 127629d34c66f5a46ab73e8ddd6dbcd095b87f0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 部分信任功能相容性
-當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在部分信任的環境中執行時，僅支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [支援的部署案例](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
+# <a name="partial-trust-feature-compatibility"></a><span data-ttu-id="8327e-102">部分信任功能相容性</span><span class="sxs-lookup"><span data-stu-id="8327e-102">Partial Trust Feature Compatibility</span></span>
+<span data-ttu-id="8327e-103">當[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在部分信任的環境中執行時，僅支援有限的功能子集。</span><span class="sxs-lookup"><span data-stu-id="8327e-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supports a limited subset of functionality when running in a partially-trusted environment.</span></span> <span data-ttu-id="8327e-104">部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。</span><span class="sxs-lookup"><span data-stu-id="8327e-104">The features supported in partial trust are designed around a specific set of scenarios as described in the [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) topic.</span></span>  
   
-## 基本權限需求  
- 對於在下列標準具名權限集合中執行的應用程式，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援其中的功能子集：  
+## <a name="minimum-permission-requirements"></a><span data-ttu-id="8327e-105">基本權限需求</span><span class="sxs-lookup"><span data-stu-id="8327e-105">Minimum Permission Requirements</span></span>  
+ <span data-ttu-id="8327e-106">對於在下列標準具名權限集合中執行的應用程式，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援其中的功能子集：</span><span class="sxs-lookup"><span data-stu-id="8327e-106">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports a subset of features in applications running under either of the following standard named permission sets:</span></span>  
   
--   中度信任權限  
+-   <span data-ttu-id="8327e-107">中度信任權限</span><span class="sxs-lookup"><span data-stu-id="8327e-107">Medium Trust permissions</span></span>  
   
--   網際網路區域權限  
+-   <span data-ttu-id="8327e-108">網際網路區域權限</span><span class="sxs-lookup"><span data-stu-id="8327e-108">Internet Zone permissions</span></span>  
   
- 嘗試在部分信任且包含更多限制性權限的應用程式中使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，可能會在執行階段導致安全性例外狀況。  
+ <span data-ttu-id="8327e-109">嘗試在部分信任且包含更多限制性權限的應用程式中使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ，可能會在執行階段導致安全性例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-109">Attempting to use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in partially-trusted applications with more restrictive permissions may result in security exceptions at runtime.</span></span>  
   
-## 合約  
- 在部分信任環境中執行時，合約有下列限制：  
+## <a name="contracts"></a><span data-ttu-id="8327e-110">合約</span><span class="sxs-lookup"><span data-stu-id="8327e-110">Contracts</span></span>  
+ <span data-ttu-id="8327e-111">在部分信任環境中執行時，合約有下列限制：</span><span class="sxs-lookup"><span data-stu-id="8327e-111">Contracts are subject to the following restrictions when running under partial trust:</span></span>  
   
--   實作 `[ServiceContract]` 介面的服務類別必須是 `public` 且具有 `public` 建構函式。 如果此服務類別定義 `[OperationContract]` 方法，這些方法就必須是 `public`。 如果它改為實作 `[ServiceContract]` 介面，這些方法實作可以是明確或 `private`，前提是 `[ServiceContract]` 介面為 `public`。  
+-   <span data-ttu-id="8327e-112">實作 `[ServiceContract]` 介面的服務類別必須是 `public` 且具有 `public` 建構函式。</span><span class="sxs-lookup"><span data-stu-id="8327e-112">The service class that implements the `[ServiceContract]` interface must be `public` and have a `public` constructor.</span></span> <span data-ttu-id="8327e-113">如果此服務類別定義 `[OperationContract]` 方法，這些方法就必須是 `public`。</span><span class="sxs-lookup"><span data-stu-id="8327e-113">If it defines `[OperationContract]` methods, these must be `public`.</span></span> <span data-ttu-id="8327e-114">如果它改為實作 `[ServiceContract]` 介面，這些方法實作可以是明確或 `private`，前提是 `[ServiceContract]` 介面為 `public`。</span><span class="sxs-lookup"><span data-stu-id="8327e-114">If it instead implements a `[ServiceContract]` interface, those method implementations can be explicit or `private`, provided that the `[ServiceContract]` interface is `public`.</span></span>  
   
--   使用 `[ServiceKnownType]` 屬性時，指定的方法必須是 `public`。  
+-   <span data-ttu-id="8327e-115">使用 `[ServiceKnownType]` 屬性時，指定的方法必須是 `public`。</span><span class="sxs-lookup"><span data-stu-id="8327e-115">When using the `[ServiceKnownType]` attribute, the method specified must be `public`.</span></span>  
   
--   `[MessageContract]` 類別和其成員都可以是 `public`。 如果 `[MessageContract]` 類別在應用程式組件中定義，它可以是 `internal` 且具有 `internal` 成員。  
+-   <span data-ttu-id="8327e-116">`[MessageContract]` 類別和其成員都可以是 `public`。</span><span class="sxs-lookup"><span data-stu-id="8327e-116">`[MessageContract]` classes and their members can be `public`.</span></span> <span data-ttu-id="8327e-117">如果 `[MessageContract]` 類別在應用程式組件中定義，它可以是 `internal` 且具有 `internal` 成員。</span><span class="sxs-lookup"><span data-stu-id="8327e-117">If the `[MessageContract]` class is defined in the application assembly it can be `internal` and have `internal` members.</span></span>  
   
-## 系統提供的繫結  
- 部分信任環境可充分支援 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WebHttpBinding>。<xref:System.ServiceModel.WSHttpBinding> 僅支援傳輸安全性模式。  
+## <a name="system-provided-bindings"></a><span data-ttu-id="8327e-118">系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="8327e-118">System-Provided Bindings</span></span>  
+ <span data-ttu-id="8327e-119">部分信任環境可充分支援 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WebHttpBinding> 。</span><span class="sxs-lookup"><span data-stu-id="8327e-119">The <xref:System.ServiceModel.BasicHttpBinding> and <xref:System.ServiceModel.WebHttpBinding> are fully supported in a partial trust environment.</span></span> <span data-ttu-id="8327e-120"><xref:System.ServiceModel.WSHttpBinding> 僅支援傳輸安全性模式。</span><span class="sxs-lookup"><span data-stu-id="8327e-120">The <xref:System.ServiceModel.WSHttpBinding> is supported for Transport security mode only.</span></span>  
   
- 在部分信任環境中執行時，不支援使用 HTTP 以外 \(例如，<xref:System.ServiceModel.NetTcpBinding>、<xref:System.ServiceModel.NetNamedPipeBinding>，或 <xref:System.ServiceModel.NetMsmqBinding>\) 之傳輸的繫結。  
+ <span data-ttu-id="8327e-121">在部分信任環境中執行時，不支援使用 HTTP 以外 (例如， <xref:System.ServiceModel.NetTcpBinding>、 <xref:System.ServiceModel.NetNamedPipeBinding>，或 <xref:System.ServiceModel.NetMsmqBinding>) 之傳輸的繫結。</span><span class="sxs-lookup"><span data-stu-id="8327e-121">Bindings that use transports other than HTTP, such as the <xref:System.ServiceModel.NetTcpBinding>, the <xref:System.ServiceModel.NetNamedPipeBinding>, or the <xref:System.ServiceModel.NetMsmqBinding>, are not supported when running in a partial trust environment.</span></span>  
   
-## 自訂繫結  
- 自訂繫結可在部分信任環境中建立並加以使用，但是必須遵守本節所指定的限制。  
+## <a name="custom-bindings"></a><span data-ttu-id="8327e-122">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="8327e-122">Custom Bindings</span></span>  
+ <span data-ttu-id="8327e-123">自訂繫結可在部分信任環境中建立並加以使用，但是必須遵守本節所指定的限制。</span><span class="sxs-lookup"><span data-stu-id="8327e-123">Custom bindings can be created and used in a partial trust environment, but must follow the restrictions specified in this section.</span></span>  
   
-### 傳輸  
- 唯一允許使用的傳輸繫結項目為 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>。  
+### <a name="transports"></a><span data-ttu-id="8327e-124">傳輸</span><span class="sxs-lookup"><span data-stu-id="8327e-124">Transports</span></span>  
+ <span data-ttu-id="8327e-125">唯一允許使用的傳輸繫結項目為 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="8327e-125">The only allowed transport binding elements are <xref:System.ServiceModel.Channels.HttpTransportBindingElement> and <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.</span></span>  
   
-### 編碼器  
- 允許使用下列編碼器：  
+### <a name="encoders"></a><span data-ttu-id="8327e-126">編碼器</span><span class="sxs-lookup"><span data-stu-id="8327e-126">Encoders</span></span>  
+ <span data-ttu-id="8327e-127">允許使用下列編碼器：</span><span class="sxs-lookup"><span data-stu-id="8327e-127">The following encoders are allowed:</span></span>  
   
--   文字編碼器 \(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>\)。  
+-   <span data-ttu-id="8327e-128">文字編碼器 (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>)。</span><span class="sxs-lookup"><span data-stu-id="8327e-128">The text encoder (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).</span></span>  
   
--   二進位編碼器 \(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>\)。  
+-   <span data-ttu-id="8327e-129">二進位編碼器 (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>)。</span><span class="sxs-lookup"><span data-stu-id="8327e-129">The binary encoder (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).</span></span>  
   
--   Web 訊息編碼器 \(<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>\)。  
+-   <span data-ttu-id="8327e-130">Web 訊息編碼器 (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>)。</span><span class="sxs-lookup"><span data-stu-id="8327e-130">The Web Message encoder (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).</span></span>  
   
- 不支援訊息傳輸最佳化機制 \(MTOM\) 編碼器。  
+ <span data-ttu-id="8327e-131">不支援訊息傳輸最佳化機制 (MTOM) 編碼器。</span><span class="sxs-lookup"><span data-stu-id="8327e-131">The Message Transmission Optimization Mechanism (MTOM) encoders are not supported.</span></span>  
   
-### 安全性  
- 部分信任的應用程式可以透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的傳輸層級安全性功能來保護自身通訊安全。 不支援訊息層級安全性。 設定繫結來使用訊息層級安全性會導致執行階段出現例外狀況。  
+### <a name="security"></a><span data-ttu-id="8327e-132">安全性</span><span class="sxs-lookup"><span data-stu-id="8327e-132">Security</span></span>  
+ <span data-ttu-id="8327e-133">部分信任的應用程式可以透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的傳輸層級安全性功能來保護自身通訊安全。</span><span class="sxs-lookup"><span data-stu-id="8327e-133">Partially-trusted applications can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s transport-level security features for securing their communication.</span></span> <span data-ttu-id="8327e-134">不支援訊息層級安全性。</span><span class="sxs-lookup"><span data-stu-id="8327e-134">Message-level security is not supported.</span></span> <span data-ttu-id="8327e-135">設定繫結來使用訊息層級安全性會導致執行階段出現例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-135">Configuring a binding to use message-level security results in an exception at runtime.</span></span>  
   
-### 不支援的繫結  
- 不支援使用可信賴傳訊、交易，或訊息層級安全性的繫結。  
+### <a name="unsupported-bindings"></a><span data-ttu-id="8327e-136">不支援的繫結</span><span class="sxs-lookup"><span data-stu-id="8327e-136">Unsupported Bindings</span></span>  
+ <span data-ttu-id="8327e-137">不支援使用可信賴傳訊、交易，或訊息層級安全性的繫結。</span><span class="sxs-lookup"><span data-stu-id="8327e-137">Bindings that use reliable messaging, transactions, or message-level security are not supported.</span></span>  
   
-## 序列化  
- 部分信任環境同時支援 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer>。 然而，<xref:System.Runtime.Serialization.DataContractSerializer> 的使用需視下列情況而定：  
+## <a name="serialization"></a><span data-ttu-id="8327e-138">序列化</span><span class="sxs-lookup"><span data-stu-id="8327e-138">Serialization</span></span>  
+ <span data-ttu-id="8327e-139">部分信任環境同時支援 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 。</span><span class="sxs-lookup"><span data-stu-id="8327e-139">Both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Xml.Serialization.XmlSerializer> are supported in a partial trust environment.</span></span> <span data-ttu-id="8327e-140">然而， <xref:System.Runtime.Serialization.DataContractSerializer> 的使用需視下列情況而定：</span><span class="sxs-lookup"><span data-stu-id="8327e-140">However, use of the <xref:System.Runtime.Serialization.DataContractSerializer> is subject to the following conditions:</span></span>  
   
--   所有可序列化的 `[DataContract]` 型別必須是 `public`。  
+-   <span data-ttu-id="8327e-141">所有可序列化的 `[DataContract]` 型別必須是 `public`。</span><span class="sxs-lookup"><span data-stu-id="8327e-141">All serializable `[DataContract]` types must be `public`.</span></span>  
   
--   `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀\/寫性質。 在部分信任的應用程式中執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，不支援 [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) \(唯讀\) 欄位的序列化與還原序列化。  
+-   <span data-ttu-id="8327e-142">`[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。</span><span class="sxs-lookup"><span data-stu-id="8327e-142">All serializable `[DataMember]` fields or properties in a `[DataContract]` type must be public and read/write.</span></span> <span data-ttu-id="8327e-143">在部分信任的應用程式中執行 [時，不支援](http://go.microsoft.com/fwlink/?LinkID=98854) readonly [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (唯讀) 欄位的序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="8327e-143">The serialization and deserialization of [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) fields is not supported when running [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in a partially-trusted application.</span></span>  
   
--   部分信任的環境不支援 `[Serializable]`\/ISerializable 程式撰寫模型 \(Programming Model\)。  
+-   <span data-ttu-id="8327e-144">部分信任的環境不支援 `[Serializable]`/ISerializable 程式撰寫模型 (Programming Model)。</span><span class="sxs-lookup"><span data-stu-id="8327e-144">The `[Serializable]`/ISerializable programming model is not supported in a partial trust environment.</span></span>  
   
--   已知型別必須在程式碼或電腦層級組態 \(machine.config\) 中指定。 為了安全起見，已知型別無法在應用程式層級的組態中指定。  
+-   <span data-ttu-id="8327e-145">已知型別必須在程式碼或電腦層級組態 (machine.config) 中指定。</span><span class="sxs-lookup"><span data-stu-id="8327e-145">Known types must be specified in code or machine-level configuration (machine.config).</span></span> <span data-ttu-id="8327e-146">為了安全起見，已知型別無法在應用程式層級的組態中指定。</span><span class="sxs-lookup"><span data-stu-id="8327e-146">Known types cannot be specified in application-level configuration for security reasons.</span></span>  
   
--   在部分信任環境中，實作 <xref:System.Runtime.Serialization.IObjectReference> 的型別會擲回例外狀況。  
+-   <span data-ttu-id="8327e-147">在部分信任環境中，實作 <xref:System.Runtime.Serialization.IObjectReference> 的型別會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-147">Types that implement <xref:System.Runtime.Serialization.IObjectReference> throw an exception in a partially-trusted environment.</span></span>  
   
- 如需在部分信任應用程式中安全使用 [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) 的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer> 中的＜序列化＞一節。  
+ <span data-ttu-id="8327e-148">如需在部分信任應用程式中安全使用 [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) 的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer> 中的＜序列化＞一節。</span><span class="sxs-lookup"><span data-stu-id="8327e-148">See the Serialization section in [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) for more information about security when using <xref:System.Runtime.Serialization.DataContractSerializer> safely in a partially-trusted application.</span></span>  
   
-### 集合型別  
- 有些集合型別會同時實作 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Collections.IEnumerable>。 例如，可實作 <xref:System.Collections.Generic.ICollection%601> 的型別。 此類型別可實作 `public` 的 `GetEnumerator()` 實作，以及 `GetEnumerator()` 的明確實作。 在此情況下，<xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `public` 的 `GetEnumerator()` 實作，而不是叫用 `GetEnumerator()` 的明確實作。 如果所有 `GetEnumerator()` 實作都不是 `public`，且都是明確的實作，則 <xref:System.Runtime.Serialization.DataContractSerializer>會叫用 `IEnumerable.GetEnumerator()`。  
+### <a name="collection-types"></a><span data-ttu-id="8327e-149">集合型別</span><span class="sxs-lookup"><span data-stu-id="8327e-149">Collection Types</span></span>  
+ <span data-ttu-id="8327e-150">有些集合型別會同時實作 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Collections.IEnumerable>。</span><span class="sxs-lookup"><span data-stu-id="8327e-150">Some collection types implement both <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="8327e-151">例如，可實作 <xref:System.Collections.Generic.ICollection%601>的型別。</span><span class="sxs-lookup"><span data-stu-id="8327e-151">Examples include types that implement <xref:System.Collections.Generic.ICollection%601>.</span></span> <span data-ttu-id="8327e-152">此類型別可實作 `public` 的 `GetEnumerator()`實作，以及 `GetEnumerator()`的明確實作。</span><span class="sxs-lookup"><span data-stu-id="8327e-152">Such types can implement a `public` implementation of `GetEnumerator()`, and an explicit implementation of `GetEnumerator()`.</span></span> <span data-ttu-id="8327e-153">在此情況下， <xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `public` 的 `GetEnumerator()`實作，而不是叫用 `GetEnumerator()`的明確實作。</span><span class="sxs-lookup"><span data-stu-id="8327e-153">In this case, <xref:System.Runtime.Serialization.DataContractSerializer> invokes the `public` implementation of `GetEnumerator()`, and not the explicit implementation of `GetEnumerator()`.</span></span> <span data-ttu-id="8327e-154">如果所有 `GetEnumerator()` 實作都不是 `public` ，且都是明確的實作，則 <xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `IEnumerable.GetEnumerator()`。</span><span class="sxs-lookup"><span data-stu-id="8327e-154">If none of the `GetEnumerator()` implementations are `public` and all are explicit implementations, then <xref:System.Runtime.Serialization.DataContractSerializer> invokes `IEnumerable.GetEnumerator()`.</span></span>  
   
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在部分信任環境中執行時，對於集合型別來說，如果所有的 `GetEnumerator()` 實作都不是 `public`，或者全都不是明確的介面實作，則會擲回安全性例外狀況。  
+ <span data-ttu-id="8327e-155">當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在部分信任環境中執行時，對於集合型別來說，如果所有的 `GetEnumerator()` 實作都不是 `public`，或者全都不是明確的介面實作，則會擲回安全性例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-155">For collection types when [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is running in a partial trust environment, if none of the `GetEnumerator()` implementations are `public`, or none of them are explicit interface implementations, then a security exception is thrown.</span></span>  
   
-### NetDataContractSerializer  
- 在部分信任中，<xref:System.Collections.Generic.List%601> 不支援許多 .NET Framework 集合型別，例如 <xref:System.Collections.ArrayList>、<xref:System.Collections.Generic.Dictionary%602>、<xref:System.Collections.Hashtable> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 這些型別的 `[Serializable]` 屬性都已經過設定，如前面「序列化」一節所述，部分信任的環境不支援這個屬性。<xref:System.Runtime.Serialization.DataContractSerializer> 會以特殊方式處理集合，因此能夠解決這個限制，但 <xref:System.Runtime.Serialization.NetDataContractSerializer> 沒有這類機制來避免這個限制。  
+### <a name="netdatacontractserializer"></a><span data-ttu-id="8327e-156">NetDataContractSerializer</span><span class="sxs-lookup"><span data-stu-id="8327e-156">NetDataContractSerializer</span></span>  
+ <span data-ttu-id="8327e-157">在部分信任中， <xref:System.Collections.Generic.List%601>不支援許多 .NET Framework 集合型別，例如 <xref:System.Collections.ArrayList>、 <xref:System.Collections.Generic.Dictionary%602> 、 <xref:System.Collections.Hashtable> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 。</span><span class="sxs-lookup"><span data-stu-id="8327e-157">Many .NET Framework collection types such as <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> and <xref:System.Collections.Hashtable> are not supported by the <xref:System.Runtime.Serialization.NetDataContractSerializer> in partial trust.</span></span> <span data-ttu-id="8327e-158">這些型別的 `[Serializable]` 屬性都已經過設定，如前面「序列化」一節所述，部分信任的環境不支援這個屬性。</span><span class="sxs-lookup"><span data-stu-id="8327e-158">These types have the `[Serializable]` attribute set, and as stated previously in the Serialization section, this attribute is not supported in partial trust.</span></span> <span data-ttu-id="8327e-159"><xref:System.Runtime.Serialization.DataContractSerializer> 會以特殊方式處理集合，因此能夠解決這個限制，但 <xref:System.Runtime.Serialization.NetDataContractSerializer> 沒有這類機制來避免這個限制。</span><span class="sxs-lookup"><span data-stu-id="8327e-159">The <xref:System.Runtime.Serialization.DataContractSerializer> treats collections in a special way and is thus able to get around this restriction, but the <xref:System.Runtime.Serialization.NetDataContractSerializer> has no such mechanism to circumvent this restriction.</span></span>  
   
- 在部分信任中，<xref:System.DateTimeOffset> 不支援 <xref:System.Runtime.Serialization.NetDataContractSerializer> 型別。  
+ <span data-ttu-id="8327e-160">在部分信任中， <xref:System.DateTimeOffset> 不支援 <xref:System.Runtime.Serialization.NetDataContractSerializer> 型別。</span><span class="sxs-lookup"><span data-stu-id="8327e-160">The <xref:System.DateTimeOffset> type is not supported by the <xref:System.Runtime.Serialization.NetDataContractSerializer> in partial trust.</span></span>  
   
- 在部分信任中執行時，無法搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer> 使用代理 \(透過 <xref:System.Runtime.Serialization.SurrogateSelector> 機制\)。 請注意，這個限制只適用於使用代理時，不適用於序列化代理時。  
+ <span data-ttu-id="8327e-161">在部分信任中執行時，無法搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer> 使用代理 (透過 <xref:System.Runtime.Serialization.SurrogateSelector> 機制)。</span><span class="sxs-lookup"><span data-stu-id="8327e-161">A surrogate cannot be used with the <xref:System.Runtime.Serialization.NetDataContractSerializer> (using the <xref:System.Runtime.Serialization.SurrogateSelector> mechanism) when running in partial trust.</span></span> <span data-ttu-id="8327e-162">請注意，這個限制只適用於使用代理時，不適用於序列化代理時。</span><span class="sxs-lookup"><span data-stu-id="8327e-162">Note that this restriction applies to using a surrogate, not to serializing it.</span></span>  
   
-## 讓通用行為執行  
- 當應用程式在部分信任環境中執行時，如果服務或端點行為是新增至組態檔的 [\<commonBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 區段但未以 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性 \(APTCA\) 標記，則不會加以執行，並且發生這種情況時，也不會擲回例外狀況。 若要強制執行通用行為，您必須執行下列其中一項：  
+## <a name="enabling-common-behaviors-to-run"></a><span data-ttu-id="8327e-163">讓通用行為執行</span><span class="sxs-lookup"><span data-stu-id="8327e-163">Enabling Common Behaviors to Run</span></span>  
+ <span data-ttu-id="8327e-164">服務或端點行為沒有標記為<xref:System.Security.AllowPartiallyTrustedCallersAttribute>屬性 (APTCA) 加入至[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)在部分信任中執行的應用程式時，不會執行組態檔區段當發生這種情況時，就會擲回環境和任何例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-164">Service or endpoint behaviors not marked with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribute (APTCA) that are added to the [\<commonBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section of a configuration file are not run when the application runs in a partial trust environment and no exception is thrown when this occurs.</span></span> <span data-ttu-id="8327e-165">若要強制執行通用行為，您必須執行下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="8327e-165">To enforce the running of common behaviors, you must do one of the following options:</span></span>  
   
--   使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記您的通用行為，讓它可以在部署為部分信任應用程式時執行。 請注意，您可以在電腦上設定登錄項目，以防止已標記 APTCA 的組件執行。 .  
+-   <span data-ttu-id="8327e-166">使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記您的通用行為，讓它可以在部署為部分信任應用程式時執行。</span><span class="sxs-lookup"><span data-stu-id="8327e-166">Mark your common behavior with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribute so that it can run when deployed as a partial trust application.</span></span> <span data-ttu-id="8327e-167">請注意，您可以在電腦上設定登錄項目，以防止已標記 APTCA 的組件執行。</span><span class="sxs-lookup"><span data-stu-id="8327e-167">Note that a registry entry can be set on the computer to prevent APTCA-marked assemblies from running.</span></span> <span data-ttu-id="8327e-168">。</span><span class="sxs-lookup"><span data-stu-id="8327e-168">.</span></span>  
   
--   確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 為了確保這項操作，請使用 [Caspol.exe \(Code Access Security Policy Tool\)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) 以參閱 **levelfinal** 選項。  
+-   <span data-ttu-id="8327e-169">確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="8327e-169">Ensure that if the application is deployed as a fully-trusted application that users cannot modify the code-access security settings to run the application in a partial trust environment.</span></span> <span data-ttu-id="8327e-170">如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-170">If they can do so, the behavior does not run and no exception is thrown.</span></span> <span data-ttu-id="8327e-171">若要確保這種情況，請參閱**levelfinal**選項使用[Caspol.exe （程式碼存取安全性原則工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="8327e-171">To ensure this, see the **levelfinal** option using [Caspol.exe (Code Access Security Policy Tool)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).</span></span>  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] 通用行為的範例，請參閱 [HOW TO：鎖定企業的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+ [!INCLUDE[crexample](../../../../includes/crexample-md.md)]<span data-ttu-id="8327e-172"> 通用行為的範例，請參閱 [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。</span><span class="sxs-lookup"><span data-stu-id="8327e-172"> a common behavior, see [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).</span></span>  
   
-## 組態  
- 部分信任程式碼只能載入本機 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 檔案中的 `app.config` 組態區段，但有一個例外。 若要載入參考 machine.config 或根 web.config 檔案中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段，將需要 ConfigurationPermission\(Unrestricted\)。 少了這個權限，本機組態檔以外的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態區段 \(行為、繫結\) 參考會在載入組態時導致例外狀況。  
+## <a name="configuration"></a><span data-ttu-id="8327e-173">組態</span><span class="sxs-lookup"><span data-stu-id="8327e-173">Configuration</span></span>  
+ <span data-ttu-id="8327e-174">部分信任程式碼只能載入本機 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 檔案中的 `app.config` 組態區段，但有一個例外。</span><span class="sxs-lookup"><span data-stu-id="8327e-174">With one exception, partially-trusted code can only load [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration sections in the local `app.config` file.</span></span> <span data-ttu-id="8327e-175">若要載入參考 machine.config 或根 web.config 檔案中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段，將需要 ConfigurationPermission(Unrestricted)。</span><span class="sxs-lookup"><span data-stu-id="8327e-175">To load [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration sections that reference [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sections in machine.config or in a root web.config file requires ConfigurationPermission(Unrestricted).</span></span> <span data-ttu-id="8327e-176">少了這個權限，本機組態檔以外的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態區段 (行為、繫結) 參考會在載入組態時導致例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-176">Without this permission, references to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration sections (behaviors, bindings) outside of the local configuration file results in an exception when the configuration is loaded.</span></span>  
   
- 唯一的例外是序列化的已知型別組態，如本主題的「序列化」一節所述。  
+ <span data-ttu-id="8327e-177">唯一的例外是序列化的已知型別組態，如本主題的「序列化」一節所述。</span><span class="sxs-lookup"><span data-stu-id="8327e-177">The one exception is known-type configuration for serialization, as described in the Serialization section of this topic.</span></span>  
   
 > [!IMPORTANT]
->  只有在完全信任下執行時，才支援設定延伸。  
+>  <span data-ttu-id="8327e-178">只有在完全信任下執行時，才支援設定延伸。</span><span class="sxs-lookup"><span data-stu-id="8327e-178">Configuration extensions are only supported when running under Full Trust.</span></span>  
   
-## 診斷  
+## <a name="diagnostics"></a><span data-ttu-id="8327e-179">診斷</span><span class="sxs-lookup"><span data-stu-id="8327e-179">Diagnostics</span></span>  
   
-### 事件記錄  
- 在部分信任下，只支援有限的事件記錄。 只有服務啟動錯誤以及追蹤\/訊息記錄失敗，才會記錄至事件記錄檔中。 處理序最多可以記錄 5 個事件數目，以避免事件記錄檔中寫入過多訊息。  
+### <a name="event-logging"></a><span data-ttu-id="8327e-180">事件記錄</span><span class="sxs-lookup"><span data-stu-id="8327e-180">Event Logging</span></span>  
+ <span data-ttu-id="8327e-181">在部分信任下，只支援有限的事件記錄。</span><span class="sxs-lookup"><span data-stu-id="8327e-181">Limited event logging is supported under partial trust.</span></span> <span data-ttu-id="8327e-182">只有服務啟動錯誤以及追蹤/訊息記錄失敗，才會記錄至事件記錄檔中。</span><span class="sxs-lookup"><span data-stu-id="8327e-182">Only service activation faults and tracing/message logging failures are logged to the Event Log.</span></span> <span data-ttu-id="8327e-183">處理序最多可以記錄 5 個事件數目，以避免事件記錄檔中寫入過多訊息。</span><span class="sxs-lookup"><span data-stu-id="8327e-183">The maximum number of events that can be logged by a process is 5, to avoid writing excessive messages to the Event Log.</span></span>  
   
-### 訊息記錄  
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在部分信任環境中執行時，訊息記錄將無法運作。 如果在部分信任情況下啟用的話，儘管不會導致服務啟動失敗，但也無法記錄訊息。  
+### <a name="message-logging"></a><span data-ttu-id="8327e-184">訊息記錄</span><span class="sxs-lookup"><span data-stu-id="8327e-184">Message Logging</span></span>  
+ <span data-ttu-id="8327e-185">當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在部分信任環境中執行時，訊息記錄將無法運作。</span><span class="sxs-lookup"><span data-stu-id="8327e-185">Message logging does not work when [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is run in a partial trust environment.</span></span> <span data-ttu-id="8327e-186">如果在部分信任情況下啟用的話，儘管不會導致服務啟動失敗，但也無法記錄訊息。</span><span class="sxs-lookup"><span data-stu-id="8327e-186">If enabled under partial trust, it does not fail service activation, but no message is logged.</span></span>  
   
-### 追蹤  
- 在部分信任環境中執行時，可使用受限制的追蹤功能。 在組態檔的 \<`listeners`\> 項目中，您可以新增的唯一類型就是 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。 使用標準 <xref:System.Diagnostics.XmlWriterTraceListener> 可能導致不完整或不正確的記錄。  
+### <a name="tracing"></a><span data-ttu-id="8327e-187">追蹤</span><span class="sxs-lookup"><span data-stu-id="8327e-187">Tracing</span></span>  
+ <span data-ttu-id="8327e-188">在部分信任環境中執行時，可使用受限制的追蹤功能。</span><span class="sxs-lookup"><span data-stu-id="8327e-188">Restricted tracing functionality is available when running in a partial trust environment.</span></span> <span data-ttu-id="8327e-189">在組態檔的 <`listeners`> 項目中，您可以新增的唯一類型就是 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。</span><span class="sxs-lookup"><span data-stu-id="8327e-189">In the <`listeners`> element in the configuration file, the only types that you can add are <xref:System.Diagnostics.TextWriterTraceListener> and the new <xref:System.Diagnostics.EventSchemaTraceListener>.</span></span> <span data-ttu-id="8327e-190">使用標準 <xref:System.Diagnostics.XmlWriterTraceListener> 可能導致不完整或不正確的記錄。</span><span class="sxs-lookup"><span data-stu-id="8327e-190">Use of the standard <xref:System.Diagnostics.XmlWriterTraceListener> may result in incomplete or incorrect logs.</span></span>  
   
- 下列為支援的追蹤來源：  
+ <span data-ttu-id="8327e-191">下列為支援的追蹤來源：</span><span class="sxs-lookup"><span data-stu-id="8327e-191">Supported trace sources are:</span></span>  
   
 -   <xref:System.ServiceModel>  
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>、<xref:System.IdentityModel.Policy>、<xref:System.IdentityModel.Selectors>和<xref:System.IdentityModel.Tokens>。  
+-   <span data-ttu-id="8327e-192"><xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>和 <xref:System.IdentityModel.Tokens>。</span><span class="sxs-lookup"><span data-stu-id="8327e-192"><xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, and <xref:System.IdentityModel.Tokens>.</span></span>  
   
- 下列為不支援的追蹤來源：  
+ <span data-ttu-id="8327e-193">下列為不支援的追蹤來源：</span><span class="sxs-lookup"><span data-stu-id="8327e-193">The following trace sources are not supported:</span></span>  
   
--   CardSpace  
+-   <span data-ttu-id="8327e-194">CardSpace</span><span class="sxs-lookup"><span data-stu-id="8327e-194">CardSpace</span></span>  
   
 -   <xref:System.IO.Log>  
+
+-   <span data-ttu-id="8327e-195">[System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]</span><span class="sxs-lookup"><span data-stu-id="8327e-195">[System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]</span></span>
   
--   <xref:System.ServiceModel.Internal.TransactionBridge>  
+ <span data-ttu-id="8327e-196">您不應該指定下列 <xref:System.Diagnostics.TraceOptions> 列舉成員：</span><span class="sxs-lookup"><span data-stu-id="8327e-196">The following members of the <xref:System.Diagnostics.TraceOptions> enumeration should not be specified:</span></span>  
   
- 您不應該指定下列 <xref:System.Diagnostics.TraceOptions> 列舉成員：  
+-   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions>  
+-   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessID>  
-  
- 在部分信任環境中使用追蹤時，請確定應用程式擁有足夠的權限來儲存追蹤接聽項的輸出。 例如，使用 <xref:System.Diagnostics.TextWriterTraceListener> 將追蹤輸出寫入至文字檔時，請確定應用程式具有必要的 FileIOPermission 來順利寫入追蹤檔。  
+ <span data-ttu-id="8327e-197">在部分信任環境中使用追蹤時，請確定應用程式擁有足夠的權限來儲存追蹤接聽項的輸出。</span><span class="sxs-lookup"><span data-stu-id="8327e-197">When using tracing in a partial trust environment, ensure that the application has sufficient permissions to store the output of the trace listener.</span></span> <span data-ttu-id="8327e-198">例如，使用 <xref:System.Diagnostics.TextWriterTraceListener> 將追蹤輸出寫入至文字檔時，請確定應用程式具有必要的 FileIOPermission 來順利寫入追蹤檔。</span><span class="sxs-lookup"><span data-stu-id="8327e-198">For example, when using the <xref:System.Diagnostics.TextWriterTraceListener> to write trace output to a text file, ensure that the application has the necessary FileIOPermission required to successfully write to the trace file.</span></span>  
   
 > [!NOTE]
->  為了避免在追蹤檔中大量出現重複錯誤，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
+>  <span data-ttu-id="8327e-199">為了避免在追蹤檔中大量出現重複錯誤， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。</span><span class="sxs-lookup"><span data-stu-id="8327e-199">To avoid flooding the trace files with duplicate errors, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disables tracing of the resource or action after the first security failure.</span></span> <span data-ttu-id="8327e-200">第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。</span><span class="sxs-lookup"><span data-stu-id="8327e-200">There is one exception trace for each failed resource access, the first time an attempt is made to access the resource or perform the action.</span></span>  
   
-## WCF 服務主機  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務主機不支援部分信任。 如果您想要在部分信任情況下使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請勿使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服務程式庫專案範本來建置服務。 反之，請選擇 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服務網站範本在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中建立新的網站，如此可在支援 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任的 Web 伺服器裝載服務。  
+## <a name="wcf-service-host"></a><span data-ttu-id="8327e-201">WCF 服務主機</span><span class="sxs-lookup"><span data-stu-id="8327e-201">WCF Service Host</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8327e-202"> 服務主機不支援部分信任。</span><span class="sxs-lookup"><span data-stu-id="8327e-202"> service host does not support partial trust.</span></span> <span data-ttu-id="8327e-203">如果您想要在部分信任情況下使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請勿使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服務程式庫專案範本來建置服務。</span><span class="sxs-lookup"><span data-stu-id="8327e-203">If you want to use a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service in partial trust, do not use the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Service Library Project template in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] to build your service.</span></span> <span data-ttu-id="8327e-204">反之，請選擇 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服務網站範本在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中建立新的網站，如此可在支援 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任的 Web 伺服器裝載服務。</span><span class="sxs-lookup"><span data-stu-id="8327e-204">Instead, create a new Web site in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by choosing the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service Web site template, which can host the service in a Web server on which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] partial trust is supported.</span></span>  
   
-## 其他限制  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一般來說會受到裝載應用程式加諸其上的安全性考量限制。 例如，如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是裝載於 XAML 瀏覽器應用程式 \(XBAP\)，則會受限於各種 XBAP 限制，如 [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138) \(Windows Presentation Foundation 部分信任安全性\) 一文中所述。  
+## <a name="other-limitations"></a><span data-ttu-id="8327e-205">其他限制</span><span class="sxs-lookup"><span data-stu-id="8327e-205">Other Limitations</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="8327e-206"> 一般來說會受到裝載應用程式加諸其上的安全性考量限制。</span><span class="sxs-lookup"><span data-stu-id="8327e-206"> is generally limited to the security considerations imposed upon it by the hosting application.</span></span> <span data-ttu-id="8327e-207">例如，如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是裝載於 XAML 瀏覽器應用程式 (XBAP)，則會受限於各種 XBAP 限制，如 [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138)(Windows Presentation Foundation 部分信任安全性) 一文中所述。</span><span class="sxs-lookup"><span data-stu-id="8327e-207">For example, if [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is hosted in a XAML Browser Application (XBAP), it is subject to XBAP limitations, as described in [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138).</span></span>  
   
- 在部分信任環境中執行 indigo2 時，不會啟用下列額外的功能：  
+ <span data-ttu-id="8327e-208">在部分信任環境中執行 indigo2 時，不會啟用下列額外的功能：</span><span class="sxs-lookup"><span data-stu-id="8327e-208">The following additional features are not enabled when running indigo2 in a partial trust environment:</span></span>  
   
--   Windows Management Instrumentation \(WMI\)  
+-   <span data-ttu-id="8327e-209">Windows Management Instrumentation (WMI)</span><span class="sxs-lookup"><span data-stu-id="8327e-209">Windows Management Instrumentation (WMI)</span></span>  
   
--   僅部分啟用事件記錄 \(請參閱「**診斷**」一節中的討論\)。  
+-   <span data-ttu-id="8327e-210">僅部分啟用事件記錄 (請參閱「 **診斷** 」一節中的討論)。</span><span class="sxs-lookup"><span data-stu-id="8327e-210">Event logging is only partially enabled (see discussion in **Diagnostics** section).</span></span>  
   
--   效能計數器  
+-   <span data-ttu-id="8327e-211">效能計數器</span><span class="sxs-lookup"><span data-stu-id="8327e-211">Performance counters</span></span>  
   
- 在部分信任環境中使用不支援的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能可能會導致執行階段出現例外狀況。  
+ <span data-ttu-id="8327e-212">在部分信任環境中使用不支援的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能可能會導致執行階段出現例外狀況。</span><span class="sxs-lookup"><span data-stu-id="8327e-212">Use of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features that are not supported in a partial trust environment may result in exceptions at runtime.</span></span>  
   
-## 未列出的功能  
- 在部分信任環境中執行時，要找到不可用的資訊片段或動作的最好方式，就是嘗試在 `try` 區塊內部存取資源或執行動作，然後捕捉 \(`catch`\) 失敗。 為了避免在追蹤檔中大量出現重複錯誤，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
+## <a name="unlisted-features"></a><span data-ttu-id="8327e-213">未列出的功能</span><span class="sxs-lookup"><span data-stu-id="8327e-213">Unlisted Features</span></span>  
+ <span data-ttu-id="8327e-214">在部分信任環境中執行時，要找到不可用的資訊片段或動作的最好方式，就是嘗試在 `try` 區塊內部存取資源或執行動作，然後捕捉 ( `catch` ) 失敗。</span><span class="sxs-lookup"><span data-stu-id="8327e-214">The best way to discover that a piece of information or action is unavailable when running in a partial trust environment is to try to access the resource or do the action inside of a `try` block, and then `catch` the failure.</span></span> <span data-ttu-id="8327e-215">為了避免在追蹤檔中大量出現重複錯誤， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。</span><span class="sxs-lookup"><span data-stu-id="8327e-215">To avoid flooding the trace files with duplicate errors, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disables tracing of the resource or action after the first security failure.</span></span> <span data-ttu-id="8327e-216">第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。</span><span class="sxs-lookup"><span data-stu-id="8327e-216">There is one exception trace for each failed resource access, the first time an attempt is made to access the resource or perform the action.</span></span>  
   
-## 請參閱  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>   
- [支援的部署案例](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)   
- [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a><span data-ttu-id="8327e-217">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8327e-217">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
+ [<span data-ttu-id="8327e-218">支援的部署案例</span><span class="sxs-lookup"><span data-stu-id="8327e-218">Supported Deployment Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
+ [<span data-ttu-id="8327e-219">部分信任最佳做法</span><span class="sxs-lookup"><span data-stu-id="8327e-219">Partial Trust Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

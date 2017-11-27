@@ -1,48 +1,52 @@
 ---
-title: "撰寫交易式應用程式  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "撰寫異動式應用程式"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ec8537c4fdf80ffe448bba1376eacf519d67bcbe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 撰寫交易式應用程式 
-身為交易式應用程式設計人員，您可以利用 <xref:System.Transactions> 命名空間所提供的兩個程式撰寫模型 \(Programming Model\) 來建立交易。您可以藉由 <xref:System.Transactions.Transaction> 類別來使用明確的程式撰寫模型，或是藉由 <xref:System.Transactions.TransactionScope> 類別來使用隱含的程式撰寫模型，以便透過基礎結構自動管理交易。建議您使用隱含交易模型進行開發。您可以在[使用交易範圍實作隱含交易 ](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)主題中找到有關如何使用交易範圍的詳細資訊。  
+# <a name="writing-a-transactional-application"></a><span data-ttu-id="51d4c-102">撰寫異動式應用程式</span><span class="sxs-lookup"><span data-stu-id="51d4c-102">Writing a Transactional Application</span></span>
+<span data-ttu-id="51d4c-103">身為交易式應用程式設計人員，您可以利用 <xref:System.Transactions> 命名空間所提供的兩個程式撰寫模型 (Programming Model) 來建立交易。</span><span class="sxs-lookup"><span data-stu-id="51d4c-103">As a transactional application programmer, you can take advantage of the two programming models provided by the <xref:System.Transactions> namespace to create a transaction.</span></span> <span data-ttu-id="51d4c-104">您可以利用明確的程式設計模型使用<xref:System.Transactions.Transaction>類別或隱含的程式設計模型，交易自動管理基礎結構，使用<xref:System.Transactions.TransactionScope>類別。</span><span class="sxs-lookup"><span data-stu-id="51d4c-104">You can utilize the explicit programming model by using the <xref:System.Transactions.Transaction> class, or the implicit programming model in which transactions are automatically managed by the infrastructure, by using the <xref:System.Transactions.TransactionScope> class.</span></span> <span data-ttu-id="51d4c-105">我們建議您開發使用隱含交易模式。</span><span class="sxs-lookup"><span data-stu-id="51d4c-105">We recommend that you use the implicit transaction model for development.</span></span> <span data-ttu-id="51d4c-106">您可以找到有關如何使用交易範圍中的詳細資訊[實作隱含交易使用交易範圍](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)主題。</span><span class="sxs-lookup"><span data-stu-id="51d4c-106">You can find more information on how to use a transaction scope in the [Implementing an Implicit Transaction using Transaction Scope](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) topic.</span></span>  
   
- 兩種模型都支援在程式到達一致的狀態時認可交易。一旦成功認可，就會永久地認可交易。如果認可失敗，就會中止交易。如果應用程式無法成功完成交易，就會嘗試中止並復原交易影響。  
+ <span data-ttu-id="51d4c-107">兩種模型都支援在程式到達一致的狀態時認可交易。</span><span class="sxs-lookup"><span data-stu-id="51d4c-107">Both models support committing a transaction when the program reaches a consistent state.</span></span> <span data-ttu-id="51d4c-108">一旦成功認可，就會永久地認可交易。</span><span class="sxs-lookup"><span data-stu-id="51d4c-108">If the commit succeeds, the transaction is durably committed.</span></span> <span data-ttu-id="51d4c-109">如果認可失敗，就會中止交易。</span><span class="sxs-lookup"><span data-stu-id="51d4c-109">If the commit fails, the transaction aborts.</span></span> <span data-ttu-id="51d4c-110">如果應用程式無法成功完成交易，就會嘗試中止並復原交易影響。</span><span class="sxs-lookup"><span data-stu-id="51d4c-110">If the application program cannot successfully complete the transaction, it attempts to abort and undo the transaction's effects.</span></span>  
   
-## 本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="51d4c-111">本節內容</span><span class="sxs-lookup"><span data-stu-id="51d4c-111">In This Section</span></span>  
   
-### 建立交易  
- <xref:System.Transactions> 命名空間會提供兩種用來建立交易的模型。下列主題涵蓋這些模式。  
+### <a name="creating-a-transaction"></a><span data-ttu-id="51d4c-112">建立交易</span><span class="sxs-lookup"><span data-stu-id="51d4c-112">Creating a Transaction</span></span>  
+ <span data-ttu-id="51d4c-113"><xref:System.Transactions> 命名空間會提供兩種用來建立交易的模型。</span><span class="sxs-lookup"><span data-stu-id="51d4c-113">The <xref:System.Transactions> namespace provides two models for creating a transaction.</span></span> <span data-ttu-id="51d4c-114">下列主題涵蓋這些模式。</span><span class="sxs-lookup"><span data-stu-id="51d4c-114">These models are covered in the following topics.</span></span>  
   
- [使用交易範圍實作隱含交易 ](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [<span data-ttu-id="51d4c-115">實作隱含交易使用交易範圍</span><span class="sxs-lookup"><span data-stu-id="51d4c-115">Implementing an Implicit Transaction using Transaction Scope</span></span>](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
   
- 說明 <xref:System.Transactions> 命名空間如何透過 <xref:System.Transactions.TransactionScope> 類別來支援建立隱含的交易。  
+ <span data-ttu-id="51d4c-116">說明 <xref:System.Transactions> 命名空間如何透過 <xref:System.Transactions.TransactionScope> 類別來支援建立隱含的交易。</span><span class="sxs-lookup"><span data-stu-id="51d4c-116">Describes how the <xref:System.Transactions> namespace supports creating implicit transactions using the <xref:System.Transactions.TransactionScope> class.</span></span>  
   
- [使用 CommittableTransaction 實作明確交易 ](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [<span data-ttu-id="51d4c-117">實作使用 CommittableTransaction 明確交易</span><span class="sxs-lookup"><span data-stu-id="51d4c-117">Implementing an Explicit Transaction using CommittableTransaction</span></span>](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
- 說明 <xref:System.Transactions> 命名空間如何透過 <xref:System.Transactions.CommittableTransaction> 類別來支援建立明確的交易。  
+ <span data-ttu-id="51d4c-118">說明 <xref:System.Transactions> 命名空間如何透過 <xref:System.Transactions.CommittableTransaction> 類別來支援建立明確的交易。</span><span class="sxs-lookup"><span data-stu-id="51d4c-118">Describes how the <xref:System.Transactions> namespace supports creating explicit transactions using the <xref:System.Transactions.CommittableTransaction> class.</span></span>  
   
-### 擴大交易管理  
- 當交易需要存取位於另一個應用程式定義域的資源時，或是當您想要登記到另一個永久性的資源管理員時，交易會自動擴大為受到 MSDTC 管理。[交易管理擴大規模案例 ](../../../../docs/framework/data/transactions/transaction-management-escalation.md) 主題涵蓋交易範圍擴大。  
+### <a name="escalating-transaction-management"></a><span data-ttu-id="51d4c-119">擴大交易管理</span><span class="sxs-lookup"><span data-stu-id="51d4c-119">Escalating Transaction Management</span></span>  
+ <span data-ttu-id="51d4c-120">當交易需要存取位於另一個應用程式定義域的資源時，或是當您想要登記到另一個永久性的資源管理員時，交易會自動擴大為受到 MSDTC 管理。</span><span class="sxs-lookup"><span data-stu-id="51d4c-120">When a transaction needs to access a resource in another application domain, or if you want to enlist in another durable resource manager, the transaction is automatically escalated to be managed by the MSDTC.</span></span> <span data-ttu-id="51d4c-121">交易擴大在講述[交易管理擴大](../../../../docs/framework/data/transactions/transaction-management-escalation.md)主題。</span><span class="sxs-lookup"><span data-stu-id="51d4c-121">Transaction escalation is covered in the [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md) topic.</span></span>  
   
-### 並行  
- [使用 DependentTransaction 管理並行存取 ](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md) 主題示範如何使用 <xref:System.Transactions.DependentTransaction> 類別來達到非同步工作之間的並行狀態。  
+### <a name="concurrency"></a><span data-ttu-id="51d4c-122">並行</span><span class="sxs-lookup"><span data-stu-id="51d4c-122">Concurrency</span></span>  
+ <span data-ttu-id="51d4c-123">本主題[DependentTransaction 管理並行存取](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md)示範如何達成並行，使用非同步工作之間<xref:System.Transactions.DependentTransaction>類別。</span><span class="sxs-lookup"><span data-stu-id="51d4c-123">The topic [Managing Concurrency with DependentTransaction](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md) demonstrates how concurrency can be achieved between asynchronous tasks by using the <xref:System.Transactions.DependentTransaction> class.</span></span>  
   
-### COM\+ Interop  
- [與 Enterprise Services 和 COM\+ 交易的互通性 ](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)主題說明如何讓分散式交易與 COM\+ 交易互動。  
+### <a name="com-interop"></a><span data-ttu-id="51d4c-124">COM+ Interop</span><span class="sxs-lookup"><span data-stu-id="51d4c-124">COM+ Interop</span></span>  
+ <span data-ttu-id="51d4c-125">本主題[互通性與 Enterprise Services 和 COM + 交易](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)說明可以讓您與 COM + 交易進行互動的分散式的交易的方式。</span><span class="sxs-lookup"><span data-stu-id="51d4c-125">The topic [Interoperability with Enterprise Services and COM+ Transactions](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md) illustrates how you can make your distributed transactions interact with COM+ transactions.</span></span>  
   
-### 診斷  
- [診斷追蹤 ](../../../../docs/framework/data/transactions/diagnostic-traces.md)說明如何使用 <xref:System.Transactions> 基礎結構所產生的追蹤程式碼來疑難排解應用程式中的錯誤。  
+### <a name="diagnostics"></a><span data-ttu-id="51d4c-126">診斷</span><span class="sxs-lookup"><span data-stu-id="51d4c-126">Diagnostics</span></span>  
+ <span data-ttu-id="51d4c-127">[診斷追蹤](../../../../docs/framework/data/transactions/diagnostic-traces.md)描述如何使用所產生的追蹤程式碼<xref:System.Transactions>基礎結構，以針對您的應用程式錯誤進行疑難排解。</span><span class="sxs-lookup"><span data-stu-id="51d4c-127">[Diagnostic Traces](../../../../docs/framework/data/transactions/diagnostic-traces.md) describes how you can use the trace codes that are generated by the <xref:System.Transactions> infrastructure to troubleshoot errors in your applications.</span></span>  
   
-### 使用 ASP.NET  
- [在 ASP.NET 中使用 System.Transactions](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) 主題說明如何成功運用 ASP.NET 應用程式中的 <xref:System.Transactions>。
+### <a name="working-within-aspnet"></a><span data-ttu-id="51d4c-128">使用 ASP.NET</span><span class="sxs-lookup"><span data-stu-id="51d4c-128">Working within ASP.NET</span></span>  
+ <span data-ttu-id="51d4c-129">[ASP.NET 中的使用 System.Transactions](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md)主題描述如何成功使用<xref:System.Transactions>ASP.NET 應用程式內。</span><span class="sxs-lookup"><span data-stu-id="51d4c-129">The [Using System.Transactions in ASP.NET](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) topic describes how you can successfully use <xref:System.Transactions> inside an ASP.NET application.</span></span>

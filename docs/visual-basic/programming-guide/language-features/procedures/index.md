@@ -1,100 +1,82 @@
 ---
-title: "Visual Basic 中的程序 | Microsoft Docs"
+title: "Visual Basic 中的程序"
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
-「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 陳述式區塊。 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 中所有的可執行陳述式都必須在某個程序內。  
+# <a name="procedures-in-visual-basic"></a><span data-ttu-id="4045a-102">Visual Basic 中的程序</span><span class="sxs-lookup"><span data-stu-id="4045a-102">Procedures in Visual Basic</span></span>
+<span data-ttu-id="4045a-103">「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 陳述式區塊。</span><span class="sxs-lookup"><span data-stu-id="4045a-103">A *procedure* is a block of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration.</span></span> <span data-ttu-id="4045a-104">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中所有的可執行陳述式都必須在某個程序內。</span><span class="sxs-lookup"><span data-stu-id="4045a-104">All executable statements in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] must be within some procedure.</span></span>  
   
-## <a name="calling-a-procedure"></a>呼叫程序  
- 您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
+## <a name="calling-a-procedure"></a><span data-ttu-id="4045a-105">呼叫程序</span><span class="sxs-lookup"><span data-stu-id="4045a-105">Calling a Procedure</span></span>  
+ <span data-ttu-id="4045a-106">您可以從程式碼中的其他位置叫用程序。</span><span class="sxs-lookup"><span data-stu-id="4045a-106">You invoke a procedure from some other place in the code.</span></span> <span data-ttu-id="4045a-107">這稱為「程序呼叫」。</span><span class="sxs-lookup"><span data-stu-id="4045a-107">This is known as a *procedure call*.</span></span> <span data-ttu-id="4045a-108">當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。</span><span class="sxs-lookup"><span data-stu-id="4045a-108">When the procedure is finished running, it returns control to the code that invoked it, which is known as the *calling code*.</span></span> <span data-ttu-id="4045a-109">呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。</span><span class="sxs-lookup"><span data-stu-id="4045a-109">The calling code is a statement, or an expression within a statement, that specifies the procedure by name and transfers control to it.</span></span>  
   
-## <a name="returning-from-a-procedure"></a>從程序交還  
- 程序會在完成執行時將控制權交還給呼叫程式碼。 它可以使用 [Return 陳述式](../../../../visual-basic/language-reference/statements/return-statement.md)、程序的適當 [Exit 陳述式](../../../../visual-basic/language-reference/statements/exit-statement.md)或程序的 [End \<關鍵字> 陳述式](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)來進行這項操作。 控制權會在下列程序呼叫時間點之後接著傳遞給呼叫程式碼。  
+## <a name="returning-from-a-procedure"></a><span data-ttu-id="4045a-110">從程序交還</span><span class="sxs-lookup"><span data-stu-id="4045a-110">Returning from a Procedure</span></span>  
+ <span data-ttu-id="4045a-111">程序會在完成執行時將控制權交還給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-111">A procedure returns control to the calling code when it has finished running.</span></span> <span data-ttu-id="4045a-112">它可以使用 [Return 陳述式](../../../../visual-basic/language-reference/statements/return-statement.md)、程序的適當 [Exit 陳述式](../../../../visual-basic/language-reference/statements/exit-statement.md)或程序的 [End \<關鍵字> 陳述式](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)來進行這項操作。</span><span class="sxs-lookup"><span data-stu-id="4045a-112">To do this, it can use a [Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md), the appropriate [Exit Statement](../../../../visual-basic/language-reference/statements/exit-statement.md) statement for the procedure, or the procedure's [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) statement.</span></span> <span data-ttu-id="4045a-113">控制權會在下列程序呼叫時間點之後接著傳遞給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-113">Control then passes to the calling code following the point of the procedure call.</span></span>  
   
--   若使用 `Return` 陳述式，控制權會立即交還給呼叫程式碼。 `Return` 陳述式後面的陳述式不會執行。 同一個程序中可以有多個 `Return` 陳述式。  
+-   <span data-ttu-id="4045a-114">若使用 `Return` 陳述式，控制權會立即交還給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-114">With a `Return` statement, control returns immediately to the calling code.</span></span> <span data-ttu-id="4045a-115">`Return` 陳述式後面的陳述式不會執行。</span><span class="sxs-lookup"><span data-stu-id="4045a-115">Statements following the `Return` statement do not run.</span></span> <span data-ttu-id="4045a-116">同一個程序中可以有多個 `Return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4045a-116">You can have more than one `Return` statement in the same procedure.</span></span>  
   
--   若使用 `Exit Sub` 或 `Exit Function` 陳述式，控制權會立即交還給呼叫程式碼。 `Exit` 陳述式後面的陳述式不會執行。 同一個程序中可以有多個 `Exit` 陳述式，也可以混合 `Return` 和 `Exit` 陳述式。  
+-   <span data-ttu-id="4045a-117">若使用 `Exit Sub` 或 `Exit Function` 陳述式，控制權會立即交還給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-117">With an `Exit Sub` or `Exit Function` statement, control returns immediately to the calling code.</span></span> <span data-ttu-id="4045a-118">`Exit` 陳述式後面的陳述式不會執行。</span><span class="sxs-lookup"><span data-stu-id="4045a-118">Statements following the `Exit` statement do not run.</span></span> <span data-ttu-id="4045a-119">同一個程序中可以有多個 `Exit` 陳述式，也可以混合 `Return` 和 `Exit` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4045a-119">You can have more than one `Exit` statement in the same procedure, and you can mix `Return` and `Exit` statements in the same procedure.</span></span>  
   
--   如果程序沒有 `Return` 或 `Exit` 陳述式，則會以程序主體最後一個陳述式後面的 `End Sub`、`End Function`、`End Get` 或 `End Set` 陳述式結束。 `End` 陳述式會將控制權立即交還給呼叫程式碼。 一個程序中只能有一個 `End` 陳述式。  
+-   <span data-ttu-id="4045a-120">如果程序沒有 `Return` 或 `Exit` 陳述式，則會以程序主體最後一個陳述式後面的 `End Sub`、`End Function`、`End Get` 或 `End Set` 陳述式結束。</span><span class="sxs-lookup"><span data-stu-id="4045a-120">If a procedure has no `Return` or `Exit` statements, it concludes with an `End Sub` or `End Function`, `End Get`, or `End Set` statement following the last statement of the procedure body.</span></span> <span data-ttu-id="4045a-121">`End` 陳述式會將控制權立即交還給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-121">The `End` statement returns control immediately to the calling code.</span></span> <span data-ttu-id="4045a-122">一個程序中只能有一個 `End` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4045a-122">You can have only one `End` statement in a procedure.</span></span>  
   
-## <a name="parameters-and-arguments"></a>參數和引數  
- 在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
+## <a name="parameters-and-arguments"></a><span data-ttu-id="4045a-123">參數和引數</span><span class="sxs-lookup"><span data-stu-id="4045a-123">Parameters and Arguments</span></span>  
+ <span data-ttu-id="4045a-124">在大部分情況下，程序會在每次呼叫時針對不同的資料執行。</span><span class="sxs-lookup"><span data-stu-id="4045a-124">In most cases, a procedure needs to operate on different data each time you call it.</span></span> <span data-ttu-id="4045a-125">您可以將這項資訊當作程序呼叫的一部分傳遞給程序。</span><span class="sxs-lookup"><span data-stu-id="4045a-125">You can pass this information to the procedure as part of the procedure call.</span></span> <span data-ttu-id="4045a-126">程序會定義零或多個「參數」，每個參數代表預期會收到的值。</span><span class="sxs-lookup"><span data-stu-id="4045a-126">The procedure defines zero or more *parameters*, each of which represents a value it expects you to pass to it.</span></span> <span data-ttu-id="4045a-127">程序定義中的每個參數會對應至程序呼叫中的「引數」。</span><span class="sxs-lookup"><span data-stu-id="4045a-127">Corresponding to each parameter in the procedure definition is an *argument* in the procedure call.</span></span> <span data-ttu-id="4045a-128">引數代表您傳遞給指定程序呼叫中對應參數的值。</span><span class="sxs-lookup"><span data-stu-id="4045a-128">An argument represents the value you pass to the corresponding parameter in a given procedure call.</span></span>  
   
-## <a name="types-of-procedures"></a>程序類型  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 使用數種程序類型：  
+## <a name="types-of-procedures"></a><span data-ttu-id="4045a-129">程序類型</span><span class="sxs-lookup"><span data-stu-id="4045a-129">Types of Procedures</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="4045a-130"> 使用數種程序類型：</span><span class="sxs-lookup"><span data-stu-id="4045a-130"> uses several types of procedures:</span></span>  
   
--   [Sub 程序](./sub-procedures.md)會執行動作，但不會傳回值給呼叫程式碼。  
+-   <span data-ttu-id="4045a-131">[Sub 程序](./sub-procedures.md)會執行動作，但不會傳回值給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-131">[Sub Procedures](./sub-procedures.md) perform actions but do not return a value to the calling code.</span></span>  
   
--   事件處理程序是為了回應使用者動作或程式中某個項目所引發之事件所執行的 `Sub` 程序。  
+-   <span data-ttu-id="4045a-132">事件處理程序是為了回應使用者動作或程式中某個項目所引發之事件所執行的 `Sub` 程序。</span><span class="sxs-lookup"><span data-stu-id="4045a-132">Event-handling procedures are `Sub` procedures that execute in response to an event raised by user action or by an occurrence in a program.</span></span>  
   
--   [Function 程序](./function-procedures.md)會傳回值給呼叫程式碼。 該程序可在傳回前執行其他動作。
+-   <span data-ttu-id="4045a-133">[Function 程序](./function-procedures.md)會傳回值給呼叫程式碼。</span><span class="sxs-lookup"><span data-stu-id="4045a-133">[Function Procedures](./function-procedures.md) return a value to the calling code.</span></span> <span data-ttu-id="4045a-134">該程序可在傳回前執行其他動作。</span><span class="sxs-lookup"><span data-stu-id="4045a-134">They can perform other actions before returning.</span></span>
 
-    某些以 C# 撰寫的函式會傳回「參考傳回值」。 函式呼叫者可以修改傳回值，而且這項修改會反映在所呼叫物件的狀態中。 從 Visual Basic 2017 開始，Visual Basic 程式碼可以使用參考傳回值，但無法以傳址方式傳回值。 如需詳細資訊，請參閱[參考傳回值](ref-return-values.md)。
+    <span data-ttu-id="4045a-135">某些以 C# 撰寫的函式會傳回「參考傳回值」。</span><span class="sxs-lookup"><span data-stu-id="4045a-135">Some functions written in C# return a *reference return value*.</span></span> <span data-ttu-id="4045a-136">函式呼叫者可以修改傳回值，而且這項修改會反映在所呼叫物件的狀態中。</span><span class="sxs-lookup"><span data-stu-id="4045a-136">Function callers can modify the return value, and this modification is reflected in the state of the called object.</span></span> <span data-ttu-id="4045a-137">從 Visual Basic 2017 開始，Visual Basic 程式碼可以使用參考傳回值，但無法以傳址方式傳回值。</span><span class="sxs-lookup"><span data-stu-id="4045a-137">Starting with Visual Basic 2017, Visual Basic code can consume reference return values, although it cannot return a value by reference.</span></span> <span data-ttu-id="4045a-138">如需詳細資訊，請參閱[參考傳回值](ref-return-values.md)。</span><span class="sxs-lookup"><span data-stu-id="4045a-138">For more information, see [Reference return values](ref-return-values.md).</span></span>
   
--   [屬性程序](./property-procedures.md)會傳回並指派物件或模組上的屬性值。  
+-   <span data-ttu-id="4045a-139">[屬性程序](./property-procedures.md)會傳回並指派物件或模組上的屬性值。</span><span class="sxs-lookup"><span data-stu-id="4045a-139">[Property Procedures](./property-procedures.md) return and assign values of properties on objects or modules.</span></span>  
   
--   當一或多個運算元是新定義的類別或結構時，[運算子程序](./operator-procedures.md)會定義標準運算式的行為。  
+-   <span data-ttu-id="4045a-140">當一或多個運算元是新定義的類別或結構時，[運算子程序](./operator-procedures.md)會定義標準運算式的行為。</span><span class="sxs-lookup"><span data-stu-id="4045a-140">[Operator Procedures](./operator-procedures.md) define the behavior of a standard operator when one or both of the operands is a newly-defined class or structure.</span></span>  
   
--   [Visual Basic 中的泛型程序](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)除了其一般參數之外，還會定義一或多個「型別參數」，讓呼叫程式碼可在每次呼叫時傳遞特定資料類型。  
+-   <span data-ttu-id="4045a-141">[Visual Basic 中的泛型程序](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)除了其一般參數之外，還會定義一或多個「型別參數」，讓呼叫程式碼可在每次呼叫時傳遞特定資料類型。</span><span class="sxs-lookup"><span data-stu-id="4045a-141">[Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) define one or more *type parameters* in addition to their normal parameters, so the calling code can pass specific data types each time it makes a call.</span></span>  
   
-## <a name="procedures-and-structured-code"></a>程序和結構化程式碼  
- 應用程式中所有的可執行程式碼行都必須在某個程序內，例如 `Main`、`calculate` 或 `Button1_Click`。 如果您將大型程序細分成較小的程序，您的應用程式會更容易閱讀。  
+## <a name="procedures-and-structured-code"></a><span data-ttu-id="4045a-142">程序和結構化程式碼</span><span class="sxs-lookup"><span data-stu-id="4045a-142">Procedures and Structured Code</span></span>  
+ <span data-ttu-id="4045a-143">應用程式中所有的可執行程式碼行都必須在某個程序內，例如 `Main`、`calculate` 或 `Button1_Click`。</span><span class="sxs-lookup"><span data-stu-id="4045a-143">Every line of executable code in your application must be inside some procedure, such as `Main`, `calculate`, or `Button1_Click`.</span></span> <span data-ttu-id="4045a-144">如果您將大型程序細分成較小的程序，您的應用程式會更容易閱讀。</span><span class="sxs-lookup"><span data-stu-id="4045a-144">If you subdivide large procedures into smaller ones, your application is more readable.</span></span>  
   
- 程序很適合用來執行重複或共用的工作，例如常用的計算、文字和控制項操作，以及資料庫作業。 您可以從程式碼的許多不同位置呼叫程序，因此您可以將程序作為應用程式的建置組塊使用。  
+ <span data-ttu-id="4045a-145">程序很適合用來執行重複或共用的工作，例如常用的計算、文字和控制項操作，以及資料庫作業。</span><span class="sxs-lookup"><span data-stu-id="4045a-145">Procedures are useful for performing repeated or shared tasks, such as frequently used calculations, text and control manipulation, and database operations.</span></span> <span data-ttu-id="4045a-146">您可以從程式碼的許多不同位置呼叫程序，因此您可以將程序作為應用程式的建置組塊使用。</span><span class="sxs-lookup"><span data-stu-id="4045a-146">You can call a procedure from many different places in your code, so you can use procedures as building blocks for your application.</span></span>  
   
- 使用程序建構您的程式碼提供下列優點：  
+ <span data-ttu-id="4045a-147">使用程序建構您的程式碼提供下列優點：</span><span class="sxs-lookup"><span data-stu-id="4045a-147">Structuring your code with procedures gives you the following benefits:</span></span>  
   
--   程序可讓您將程式分成不連續的邏輯單元。 比起不使用程序對整個程式進行偵錯，偵錯個別單元會更輕鬆。  
+-   <span data-ttu-id="4045a-148">程序可讓您將程式分成不連續的邏輯單元。</span><span class="sxs-lookup"><span data-stu-id="4045a-148">Procedures allow you to break your programs into discrete logical units.</span></span> <span data-ttu-id="4045a-149">比起不使用程序對整個程式進行偵錯，偵錯個別單元會更輕鬆。</span><span class="sxs-lookup"><span data-stu-id="4045a-149">You can debug separate units more easily than you can debug an entire program without procedures.</span></span>  
   
--   開發用於一個平台的程序之後，您可以在其他程式中使用這些程序，通常只需要微幅修改或完全不需要修改。 這可協助您避免程式碼重複。  
+-   <span data-ttu-id="4045a-150">開發用於一個平台的程序之後，您可以在其他程式中使用這些程序，通常只需要微幅修改或完全不需要修改。</span><span class="sxs-lookup"><span data-stu-id="4045a-150">After you develop procedures for use in one program, you can use them in other programs, often with little or no modification.</span></span> <span data-ttu-id="4045a-151">這可協助您避免程式碼重複。</span><span class="sxs-lookup"><span data-stu-id="4045a-151">This helps you avoid code duplication.</span></span>  
   
-## <a name="see-also"></a>另請參閱  
- [如何：建立程序](./how-to-create-a-procedure.md)   
- [Sub 程序](./sub-procedures.md)   
- [Function 程序](./function-procedures.md)   
- [屬性程序](./property-procedures.md)   
- [運算子程序](./operator-procedures.md)   
- [程序參數和引數](./procedure-parameters-and-arguments.md)   
- [遞迴程序](./recursive-procedures.md)   
- [程序多載化](./procedure-overloading.md)   
- [Visual Basic 中的泛型程序](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="4045a-152">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4045a-152">See Also</span></span>  
+ [<span data-ttu-id="4045a-153">如何：建立程序</span><span class="sxs-lookup"><span data-stu-id="4045a-153">How to: Create a Procedure</span></span>](./how-to-create-a-procedure.md)  
+ [<span data-ttu-id="4045a-154">Sub 程序</span><span class="sxs-lookup"><span data-stu-id="4045a-154">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="4045a-155">函式程序</span><span class="sxs-lookup"><span data-stu-id="4045a-155">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="4045a-156">屬性程序</span><span class="sxs-lookup"><span data-stu-id="4045a-156">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="4045a-157">運算子程序</span><span class="sxs-lookup"><span data-stu-id="4045a-157">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="4045a-158">程序參數和引數</span><span class="sxs-lookup"><span data-stu-id="4045a-158">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="4045a-159">遞迴程序</span><span class="sxs-lookup"><span data-stu-id="4045a-159">Recursive Procedures</span></span>](./recursive-procedures.md)  
+ [<span data-ttu-id="4045a-160">程序多載化</span><span class="sxs-lookup"><span data-stu-id="4045a-160">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="4045a-161">在 Visual Basic 中的泛型程序</span><span class="sxs-lookup"><span data-stu-id="4045a-161">Generic Procedures in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
+ [<span data-ttu-id="4045a-162">物件和類別</span><span class="sxs-lookup"><span data-stu-id="4045a-162">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
