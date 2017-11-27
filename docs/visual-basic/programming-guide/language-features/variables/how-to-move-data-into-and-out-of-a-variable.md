@@ -1,65 +1,64 @@
 ---
-title: "How to: Move Data Into and Out of a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], retrieving values"
-  - "variables [Visual Basic], storing data"
+title: "如何：移入和移出變數資料 (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], retrieving values
+- variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fefb1979e35cd7b5fa1917f8f1a57af575e51234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Move Data Into and Out of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-藉由在指派陳述式 \(Assignment Statement\) 的左邊放置變數名稱，即可將值存入變數。  
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a><span data-ttu-id="78fd5-102">如何：移入和移出變數資料 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="78fd5-102">How to: Move Data Into and Out of a Variable (Visual Basic)</span></span>
+<span data-ttu-id="78fd5-103">您將變數的名稱放在指派陳述式左邊將值儲存在變數中。</span><span class="sxs-lookup"><span data-stu-id="78fd5-103">You store a value in a variable by putting the variable name on the left side of an assignment statement.</span></span>  
   
-## 在變數中放置資料  
+## <a name="putting-data-in-a-variable"></a><span data-ttu-id="78fd5-104">將資料放在變數中</span><span class="sxs-lookup"><span data-stu-id="78fd5-104">Putting Data in a Variable</span></span>  
   
-#### 若要將值存入變數  
+#### <a name="to-store-a-value-in-a-variable"></a><span data-ttu-id="78fd5-105">將值儲存在變數中</span><span class="sxs-lookup"><span data-stu-id="78fd5-105">To store a value in a variable</span></span>  
   
--   請在指派陳述式的左邊使用變數名稱。  
+-   <span data-ttu-id="78fd5-106">指派陳述式的左邊使用變數名稱。</span><span class="sxs-lookup"><span data-stu-id="78fd5-106">Use the variable name on the left side of an assignment statement.</span></span>  
   
-     下列範例會設定變數 `alpha` 的值。  
+     <span data-ttu-id="78fd5-107">下列範例會設定變數的值`alpha`。</span><span class="sxs-lookup"><span data-stu-id="78fd5-107">The following example sets the value of the variable `alpha`.</span></span>  
   
     ```  
     alpha = (beta * 6.27) / (gamma + 2.1)  
     ```  
   
-     指派陳述式右邊所產生的值便會存入變數中。  
+     <span data-ttu-id="78fd5-108">產生的指派陳述式右邊的值會儲存在變數中。</span><span class="sxs-lookup"><span data-stu-id="78fd5-108">The value generated on the right side of the assignment statement is stored in the variable.</span></span>  
   
-## 取得變數的資料  
- 將變數名稱納入運算式中，即可擷取變數的值。  
+## <a name="getting-data-from-a-variable"></a><span data-ttu-id="78fd5-109">從變數取得資料</span><span class="sxs-lookup"><span data-stu-id="78fd5-109">Getting Data from a Variable</span></span>  
+ <span data-ttu-id="78fd5-110">您可以在運算式中包括變數名稱擷取變數的值。</span><span class="sxs-lookup"><span data-stu-id="78fd5-110">You retrieve a variable's value by including the variable name in an expression.</span></span>  
   
-#### 若要擷取變數的值  
+#### <a name="to-retrieve-a-value-from-a-variable"></a><span data-ttu-id="78fd5-111">若要從變數擷取值</span><span class="sxs-lookup"><span data-stu-id="78fd5-111">To retrieve a value from a variable</span></span>  
   
--   請在運算式中使用變數名稱。  只要是可以使用常數或常值的任何地方，都可以使用變數，除了定義常數值的運算式之外。  
+-   <span data-ttu-id="78fd5-112">在運算式中使用變數名稱。</span><span class="sxs-lookup"><span data-stu-id="78fd5-112">Use the variable name in an expression.</span></span> <span data-ttu-id="78fd5-113">您可以使用變數任何地方您可以使用常數或常值，除了在定義常數值的運算式。</span><span class="sxs-lookup"><span data-stu-id="78fd5-113">You can use a variable anywhere you can use a constant or a literal, except in an expression that defines the value of a constant.</span></span>  
   
-     \-或\-  
+     <span data-ttu-id="78fd5-114">-或-</span><span class="sxs-lookup"><span data-stu-id="78fd5-114">-or-</span></span>  
   
--   請在指派陳述式的等號 \(`=`\) 後使用變數名稱。  
+-   <span data-ttu-id="78fd5-115">使用變數名稱後面，等於 (`=`) 登入指派陳述式。</span><span class="sxs-lookup"><span data-stu-id="78fd5-115">Use the variable name following the equal (`=`) sign in an assignment statement.</span></span>  
   
-     下列範例會讀取變數 `startValue` 的值，然後在運算式中使用變數 `counter` 的值。  
+     <span data-ttu-id="78fd5-116">下列範例會讀取變數的值`startValue`，然後使用變數的值`counter`在運算式中。</span><span class="sxs-lookup"><span data-stu-id="78fd5-116">The following example reads the value of the variable `startValue` and then uses the value of the variable `counter` in an expression.</span></span>  
   
     ```  
     counter = startValue  
     cellValue = (counter + 5) ^ 2  
     ```  
   
-     運算式中的變數值就會如同常數一般使用，接著結果會儲存在指派陳述式左邊的變數或屬性 \(Property\) 中。  
+     <span data-ttu-id="78fd5-117">變數的值加入運算式，就如同常數會，然後儲存在變數或指派陳述式左邊的屬性。</span><span class="sxs-lookup"><span data-stu-id="78fd5-117">The value of the variable participates in the expression just as a constant would, and then it is stored in the variable or property on the left side of the assignment statement.</span></span>  
   
-## 請參閱  
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+## <a name="see-also"></a><span data-ttu-id="78fd5-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78fd5-118">See Also</span></span>  
+ [<span data-ttu-id="78fd5-119">變數</span><span class="sxs-lookup"><span data-stu-id="78fd5-119">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="78fd5-120">變數宣告</span><span class="sxs-lookup"><span data-stu-id="78fd5-120">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="78fd5-121">物件變數</span><span class="sxs-lookup"><span data-stu-id="78fd5-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

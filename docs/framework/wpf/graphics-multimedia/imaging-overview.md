@@ -1,202 +1,208 @@
 ---
-title: "影像處理概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "轉換影像"
-  - "裁剪影像"
-  - "解碼影像格式"
-  - "顯示影像"
-  - "編碼影像格式"
-  - "影像格式解碼"
-  - "影像格式編碼"
-  - "影像中繼資料"
-  - "影像, 關於影像處理"
-  - "影像處理 API"
-  - "中繼資料, 影像"
-  - "以影像繪製"
-  - "旋轉影像"
-  - "自動縮放影像"
+title: "影像處理概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- metadata [WPF], images
+- displaying images [WPF]
+- Imaging API [WPF]
+- image metadata [WPF]
+- converting images [WPF]
+- encoding image formats [WPF]
+- format decoding for images [WPF]
+- painting with images [WPF]
+- stretching images [WPF]
+- images [WPF], about imaging
+- format encoding for images [WPF]
+- cropping images [WPF]
+- decoding image formats [WPF]
+- rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-caps.latest.revision: 32
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "32"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6821b724e45ea90a5b22c6efe6c36ee3b99e39ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 影像處理概觀
-本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]讓開發人員可以顯示、轉換及格式化影像。  
+# <a name="imaging-overview"></a><span data-ttu-id="0f14d-102">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="0f14d-102">Imaging Overview</span></span>
+<span data-ttu-id="0f14d-103">本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。</span><span class="sxs-lookup"><span data-stu-id="0f14d-103">This topic provides an introduction to the [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)].</span></span> [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="0f14d-104"> 可讓開發人員顯示、轉換及格式化影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-104"> enables developers to display, transform, and format images.</span></span>  
   
-   
   
 <a name="_wpfImaging"></a>   
-## WPF 影像處理元件  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。  之前的影像處理功能 \(例如顯示點陣圖或在通用控制項上使用影像\) 要依賴 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 程式庫運作。  這些 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供基準的影像處理功能，但是缺少一些功能，例如支援轉碼器擴充性和高精確度影像支援。  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]的設計在於克服 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 和 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 的缺點，並提供一組新的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 以在應用程式內顯示及使用影像。  
+## <a name="wpf-imaging-component"></a><span data-ttu-id="0f14d-105">WPF 影像處理元件</span><span class="sxs-lookup"><span data-stu-id="0f14d-105">WPF Imaging Component</span></span>  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="0f14d-106"> 提供 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 內重要的影像處理增強功能。</span><span class="sxs-lookup"><span data-stu-id="0f14d-106"> provides significant enhancements in imaging capabilities within [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)].</span></span> <span data-ttu-id="0f14d-107">之前的影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 要依賴 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 程式庫運作。</span><span class="sxs-lookup"><span data-stu-id="0f14d-107">Imaging capabilities, such as displaying a bitmap or using an image on a common control were previously reliant upon the [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] or [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] libraries.</span></span> <span data-ttu-id="0f14d-108">這些 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供基本影像處理功能，但是缺少一些功能，例如支援轉碼器擴充性和高畫質影像支援。</span><span class="sxs-lookup"><span data-stu-id="0f14d-108">These [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] provide baseline imaging functionality, but lack features such as support for codec extensibility and high fidelity image support.</span></span> [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="0f14d-109"> 的設計目的是克服 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 和 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 的缺點，並提供一組新的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 以在應用程式內顯示及使用影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-109"> is designed to overcome the shortcomings of [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] and [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] and provide a new set of [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] to display and use images within your applications.</span></span>  
   
- 有兩種方法可以存取 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，也就是 Managed 元件和 Unmanaged 元件。  Unmanaged 元件會提供下列功能。  
+ <span data-ttu-id="0f14d-110">有兩種方式可以存取 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]，Managed 元件和 Unmanaged 元件。</span><span class="sxs-lookup"><span data-stu-id="0f14d-110">There are two ways to access the [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], a managed component and an unmanaged component.</span></span> <span data-ttu-id="0f14d-111">Unmanaged 元件提供下列功能。</span><span class="sxs-lookup"><span data-stu-id="0f14d-111">The unmanaged component provides the following features.</span></span>  
   
--   新的或專屬影像格式的擴充性模型。  
+-   <span data-ttu-id="0f14d-112">新的或專屬影像格式的擴充性模型。</span><span class="sxs-lookup"><span data-stu-id="0f14d-112">Extensibility model for new or proprietary image formats.</span></span>  
   
--   [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 及圖示 \(.ico\) 等原生影像格式的改善效能及安全性。  
+-   <span data-ttu-id="0f14d-113">[!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 和圖示 (.ico) 等原生影像格式的改善效能及安全性。</span><span class="sxs-lookup"><span data-stu-id="0f14d-113">Improved performance and security on native image formats including [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)], and icon (.ico).</span></span>  
   
--   高位元深度影像資料最多可保留每色頻 8 位元 \(每一像素 32 位元\)。  
+-   <span data-ttu-id="0f14d-114">高位元深度影像資料最多可保留每色頻 8 位元 (每像素 32 位元)。</span><span class="sxs-lookup"><span data-stu-id="0f14d-114">Preservation of high bit-depth image data up to 8 bits per channel (32 bits per pixel).</span></span>  
   
--   非解構性的影像縮放、裁剪及旋轉。  
+-   <span data-ttu-id="0f14d-115">非破壞性的影像縮放、裁剪及旋轉。</span><span class="sxs-lookup"><span data-stu-id="0f14d-115">Nondestructive image scaling, cropping, and rotations.</span></span>  
   
--   簡化的色彩管理。  
+-   <span data-ttu-id="0f14d-116">簡化的色彩管理。</span><span class="sxs-lookup"><span data-stu-id="0f14d-116">Simplified color management.</span></span>  
   
--   支援檔案中、專屬中繼資料 \(Metadata\)。  
+-   <span data-ttu-id="0f14d-117">支援檔案內、專屬中繼資料。</span><span class="sxs-lookup"><span data-stu-id="0f14d-117">Support for in-file, proprietary metadata.</span></span>  
   
--   Managed 元件會利用 Unmanaged 基礎結構提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 \(例如[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫及圖形\) 的緊密整合。  Managed 元件還受益於 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 影像處理轉碼器擴充性模型，該模型會自動辨識 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中的新影像格式。  
+-   <span data-ttu-id="0f14d-118">Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。</span><span class="sxs-lookup"><span data-stu-id="0f14d-118">The managed component utilizes the unmanaged infrastructure to provide seamless integration of images with other [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] features such as [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], animation, and graphics.</span></span> <span data-ttu-id="0f14d-119">Managed 元件也受益於 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 影像處理轉碼器擴充性模型，該模型會自動辨識 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中的新影像格式。</span><span class="sxs-lookup"><span data-stu-id="0f14d-119">The managed component also benefits from the [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] imaging codec extensibility model which enables automatic recognition of new image formats in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.</span></span>  
   
- 大多數 Managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 都位於 <xref:System.Windows.Media.Imaging?displayProperty=fullName> 命名空間，不過有幾項重要型別例外，例如 <xref:System.Windows.Media.ImageBrush> 和 <xref:System.Windows.Media.ImageDrawing> 位於 <xref:System.Windows.Media?displayProperty=fullName> 命名空間，而 <xref:System.Windows.Controls.Image> 位於 <xref:System.Windows.Controls?displayProperty=fullName> 命名空間。  
+ <span data-ttu-id="0f14d-120">大部分的 managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]位於<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空間，但是數個重要類型、 例如<xref:System.Windows.Media.ImageBrush>和<xref:System.Windows.Media.ImageDrawing>位於<xref:System.Windows.Media?displayProperty=nameWithType>命名空間和<xref:System.Windows.Controls.Image>位於<xref:System.Windows.Controls?displayProperty=nameWithType>命名空間。</span><span class="sxs-lookup"><span data-stu-id="0f14d-120">The majority of the managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] reside in the <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> namespace, though several important types, such as <xref:System.Windows.Media.ImageBrush> and <xref:System.Windows.Media.ImageDrawing> reside in the <xref:System.Windows.Media?displayProperty=nameWithType> namespace and <xref:System.Windows.Controls.Image> resides in the <xref:System.Windows.Controls?displayProperty=nameWithType> namespace.</span></span>  
   
- 本主題提供 Managed 元件的詳細資訊。  如需 Unmanaged [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的詳細資訊，請參閱 [Unmanaged WPF 影像處理元件](_wic_lh)文件。  
+ <span data-ttu-id="0f14d-121">本主題提供 Managed 元件的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="0f14d-121">This topic provides additional information about the managed component.</span></span> <span data-ttu-id="0f14d-122">如需 Unmanaged [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的詳細資訊，請參閱 [Unmanaged WPF 影像處理元件 (英文)](https://msdn.microsoft.com/library/ee719902.aspx) 文件。</span><span class="sxs-lookup"><span data-stu-id="0f14d-122">For more information on the unmanaged [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] see the [Unmanaged WPF Imaging Component](https://msdn.microsoft.com/library/ee719902.aspx) documentation.</span></span>  
   
 <a name="_imageformats"></a>   
-## WPF 影像格式  
- 轉碼器可用來解碼或編碼特定媒體格式。  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]包含 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]、[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 及 ICON 影像格式的轉碼器。  每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 \(但 ICON 在編碼部分是例外\)。  
+## <a name="wpf-image-formats"></a><span data-ttu-id="0f14d-123">WPF 影像格式</span><span class="sxs-lookup"><span data-stu-id="0f14d-123">WPF Image Formats</span></span>  
+ <span data-ttu-id="0f14d-124">轉碼器可以用來將特定媒體格式解碼或編碼。</span><span class="sxs-lookup"><span data-stu-id="0f14d-124">A codec is used to decode or encode a specific media format.</span></span> [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="0f14d-125"> 包含 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]、[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 和 ICON 影像格式的轉碼器。</span><span class="sxs-lookup"><span data-stu-id="0f14d-125"> includes a codec  for [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)], [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)], [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)], [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)], and ICON image formats.</span></span> <span data-ttu-id="0f14d-126">每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。</span><span class="sxs-lookup"><span data-stu-id="0f14d-126">Each of these codecs enable applications to decode and, with the exception of ICON, encode their respective image formats.</span></span>  
   
- <xref:System.Windows.Media.Imaging.BitmapSource> 是重要的類別，用在影像的解碼和編碼。  它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。  <xref:System.Windows.Media.Imaging.BitmapSource> 可以是多畫面格影像中的個別畫面格，或者是對 <xref:System.Windows.Media.Imaging.BitmapSource> 執行轉換的結果。  它是許多 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 影像處理 \(例如 <xref:System.Windows.Media.Imaging.BitmapFrame>\) 中使用之主要類別的父代 \(Parent\)。  
+ <span data-ttu-id="0f14d-127"><xref:System.Windows.Media.Imaging.BitmapSource>重要的類別用於解碼和影像的編碼。</span><span class="sxs-lookup"><span data-stu-id="0f14d-127"><xref:System.Windows.Media.Imaging.BitmapSource> is an important class used in the decoding and encoding of images.</span></span> <span data-ttu-id="0f14d-128">它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。</span><span class="sxs-lookup"><span data-stu-id="0f14d-128">It is the basic building block of the [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] pipeline and represents a single, constant set of pixels at a certain size and resolution.</span></span> <span data-ttu-id="0f14d-129">A<xref:System.Windows.Media.Imaging.BitmapSource>可個別畫面格的多個框架映像，或可以執行轉換的結果<xref:System.Windows.Media.Imaging.BitmapSource>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-129">A <xref:System.Windows.Media.Imaging.BitmapSource> can be an individual frame of a multiple frame image, or it can be the result of a transform performed on a <xref:System.Windows.Media.Imaging.BitmapSource>.</span></span> <span data-ttu-id="0f14d-130">它是父項中使用的主要類別的許多[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]映像例如<xref:System.Windows.Media.Imaging.BitmapFrame>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-130">It is the parent of many of the primary classes used in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] imaging such as <xref:System.Windows.Media.Imaging.BitmapFrame>.</span></span>  
   
- <xref:System.Windows.Media.Imaging.BitmapFrame> 可以用來儲存影像格式的實際點陣圖資料。  許多影像格式只支援單一 <xref:System.Windows.Media.Imaging.BitmapFrame>，而例如 [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 和 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 的格式則支援每個影像有多畫面格。  畫面格會由解碼器做為輸入資料並傳送至編碼器以建立影像檔。  
+ <span data-ttu-id="0f14d-131">A<xref:System.Windows.Media.Imaging.BitmapFrame>用來儲存影像格式的點陣圖的實際資料。</span><span class="sxs-lookup"><span data-stu-id="0f14d-131">A <xref:System.Windows.Media.Imaging.BitmapFrame> is used to store the actual bitmap data of an image format.</span></span> <span data-ttu-id="0f14d-132">許多的影像格式僅支援單一<xref:System.Windows.Media.Imaging.BitmapFrame>，但是格式例如[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]和[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]支援每個影像的多個框架。</span><span class="sxs-lookup"><span data-stu-id="0f14d-132">Many image formats only support a single <xref:System.Windows.Media.Imaging.BitmapFrame>, although formats such as [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] and [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] support multiple frames per image.</span></span> <span data-ttu-id="0f14d-133">畫面格會由解碼器作為輸入資料並傳遞至編碼器以建立影像檔。</span><span class="sxs-lookup"><span data-stu-id="0f14d-133">Frames are used by decoders as input data and are passed to encoders to create image files.</span></span>  
   
- 下列範例示範 <xref:System.Windows.Media.Imaging.BitmapFrame> 如何從 <xref:System.Windows.Media.Imaging.BitmapSource> 建立，然後加入至 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 影像。  
+ <span data-ttu-id="0f14d-134">下列範例會示範如何<xref:System.Windows.Media.Imaging.BitmapFrame>建立從<xref:System.Windows.Media.Imaging.BitmapSource>再加入[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]映像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-134">The following example demonstrates how a <xref:System.Windows.Media.Imaging.BitmapFrame> is created from a <xref:System.Windows.Media.Imaging.BitmapSource> and then added to a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image.</span></span>  
   
  [!code-csharp[BitmapFrameExample#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
  [!code-vb[BitmapFrameExample#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
-### 影像格式解碼  
- 影像解碼是指將影像格式變成系統可用之影像資料的轉譯作業。  然後就可以使用影像資料來顯示、處理或編碼為不同格式。  選擇的解碼器視影像格式而定。  除非指定特定的解碼器，否則轉碼器選擇作業是自動的。  [在 WPF 中顯示影像](#_displayingimages)一節中的範例會示範自動解碼。  使用 Unmanaged [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]介面開發的以及自動向系統註冊的自訂格式解碼器，會參與解碼器選擇作業。  這可以讓自訂格式自動在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中顯示。  
+### <a name="image-format-decoding"></a><span data-ttu-id="0f14d-135">影像格式解碼</span><span class="sxs-lookup"><span data-stu-id="0f14d-135">Image Format Decoding</span></span>  
+ <span data-ttu-id="0f14d-136">影像解碼是指將影像格式變成系統可用之影像資料的轉譯作業。</span><span class="sxs-lookup"><span data-stu-id="0f14d-136">Image decoding is the translation of an image format to image data that can be used by the system.</span></span> <span data-ttu-id="0f14d-137">接著可使用影像資料來顯示、處理，或編碼成不同格式。</span><span class="sxs-lookup"><span data-stu-id="0f14d-137">The image data can then be used to display, process, or encode to a different format.</span></span> <span data-ttu-id="0f14d-138">選取的解碼器是根據影像格式而定。</span><span class="sxs-lookup"><span data-stu-id="0f14d-138">Decoder selection is based on the image format.</span></span> <span data-ttu-id="0f14d-139">除非指定特定的解碼器，否則會自動選取轉碼器。</span><span class="sxs-lookup"><span data-stu-id="0f14d-139">Codec selection is automatic unless a specific decoder is specified.</span></span> <span data-ttu-id="0f14d-140">[在 WPF 中顯示影像](#_displayingimages)一節中的範例示範自動解碼。</span><span class="sxs-lookup"><span data-stu-id="0f14d-140">The examples in the [Displaying Images in WPF](#_displayingimages) section demonstrate automatic decoding.</span></span> <span data-ttu-id="0f14d-141">使用 Unmanaged [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 介面開發並向系統註冊的自訂格式解碼器，會自動參與解碼器選取作業。</span><span class="sxs-lookup"><span data-stu-id="0f14d-141">Custom format decoders developed using the unmanaged [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] interfaces and registered with the system automatically participate in decoder selection.</span></span> <span data-ttu-id="0f14d-142">這可讓自訂格式自動在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中顯示。</span><span class="sxs-lookup"><span data-stu-id="0f14d-142">This allows custom formats to be displayed automatically in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.</span></span>  
   
- 下列範例示範使用點陣圖解碼器將 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 格式影像解碼。  
+ <span data-ttu-id="0f14d-143">下列範例示範使用點陣圖解碼器將 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 格式影像解碼。</span><span class="sxs-lookup"><span data-stu-id="0f14d-143">The following example demonstrates the use of a bitmap decoder to decode a [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] format image.</span></span>  
   
  [!code-cpp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
  [!code-csharp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
  [!code-vb[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
-### 影像格式編碼  
- 影像編碼是指將影像資料變成特定影像格式的轉譯作業。  然後就可以使用編碼的影像資料建立新的影像檔。  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]會為上述每一種影像格式提供編碼器。  
+### <a name="image-format-encoding"></a><span data-ttu-id="0f14d-144">影像格式編碼</span><span class="sxs-lookup"><span data-stu-id="0f14d-144">Image Format Encoding</span></span>  
+ <span data-ttu-id="0f14d-145">影像編碼是指將影像資料變成特定影像格式的轉換作業。</span><span class="sxs-lookup"><span data-stu-id="0f14d-145">Image encoding is the translation of image data to a specific image format.</span></span> <span data-ttu-id="0f14d-146">接著可使用已編碼的影像資料建立新的影像檔。</span><span class="sxs-lookup"><span data-stu-id="0f14d-146">The encoded image data can then be used to create new image files.</span></span> [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="0f14d-147"> 為上述每一種影像格式提供編碼器。</span><span class="sxs-lookup"><span data-stu-id="0f14d-147"> provides encoders for each of the image formats described above.</span></span>  
   
- 下列範例示範使用編碼器儲存新建立的點陣圖影像。  
+ <span data-ttu-id="0f14d-148">下列範例示範使用編碼器儲存新建立的點陣圖影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-148">The following example demonstrates the use of an encoder to save a newly created bitmap image.</span></span>  
   
  [!code-cpp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
  [!code-csharp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
  [!code-vb[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
   
 <a name="_displayingimages"></a>   
-## 在 WPF 中顯示影像  
- 有幾種方法可以在 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式中顯示影像。  顯示影像的方法有使用 <xref:System.Windows.Controls.Image> 控制項顯示影像，使用 <xref:System.Windows.Media.ImageBrush> 在視覺物件上繪製影像，或使用 <xref:System.Windows.Media.ImageDrawing> 繪製影像。  
+## <a name="displaying-images-in-wpf"></a><span data-ttu-id="0f14d-149">在 WPF 中顯示影像</span><span class="sxs-lookup"><span data-stu-id="0f14d-149">Displaying Images in WPF</span></span>  
+ <span data-ttu-id="0f14d-150">有幾種方式可在 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式中顯示影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-150">There are several ways to display an image in a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application.</span></span> <span data-ttu-id="0f14d-151">可以使用顯示映像<xref:System.Windows.Controls.Image>控制項繪製 visual 使用<xref:System.Windows.Media.ImageBrush>，或使用繪製<xref:System.Windows.Media.ImageDrawing>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-151">Images can be displayed using an <xref:System.Windows.Controls.Image> control, painted on a visual using an <xref:System.Windows.Media.ImageBrush>, or drawn using an <xref:System.Windows.Media.ImageDrawing>.</span></span>  
   
-### 使用影像控制項  
- <xref:System.Windows.Controls.Image> 是一項架構項目，也是在應用程式中顯示影像的主要方法。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，有兩種方法可以使用 <xref:System.Windows.Controls.Image>，也就是屬性 \(Attribute\) 語法和屬性 \(Property\) 語法。  下列範例顯示如何使用屬性 \(Attribute\) 語法和屬性 \(Property\) 標記語法呈現 200 像素寬的影像。  如需屬性 \(Attribute\) 語法和屬性 \(Property\) 語法的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+### <a name="using-the-image-control"></a><span data-ttu-id="0f14d-152">使用影像控制項</span><span class="sxs-lookup"><span data-stu-id="0f14d-152">Using the Image Control</span></span>  
+ <span data-ttu-id="0f14d-153"><xref:System.Windows.Controls.Image>架構項目的而在應用程式中顯示影像的主要方法。</span><span class="sxs-lookup"><span data-stu-id="0f14d-153"><xref:System.Windows.Controls.Image> is a framework element and the primary way to display images in applications.</span></span> <span data-ttu-id="0f14d-154">在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可以用於兩種方式，則屬性語法或屬性的語法。</span><span class="sxs-lookup"><span data-stu-id="0f14d-154">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> can be used in two ways; attribute syntax or property syntax.</span></span> <span data-ttu-id="0f14d-155">下列範例顯示如何使用屬性 (Attribute) 語法和屬性 (Property) 標記語法呈現 200 像素寬的影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-155">The following example shows how to render an image 200 pixels wide using both attribute syntax and property tag syntax.</span></span> <span data-ttu-id="0f14d-156">如需屬性 (Attribute) 語法和屬性 (Property) 語法的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0f14d-156">For more information on attribute syntax and property syntax, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
- [!code-xml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
- 其中許多範例是使用 <xref:System.Windows.Media.Imaging.BitmapImage> 物件參考影像檔。  <xref:System.Windows.Media.Imaging.BitmapImage> 是一種特製的 <xref:System.Windows.Media.Imaging.BitmapSource>，已針對載入[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 最佳化，並且是將影像顯示為 <xref:System.Windows.Controls.Image> 控制項的 <xref:System.Windows.Controls.Image.Source%2A> 的一個簡單方法。  
+ <span data-ttu-id="0f14d-157">許多範例都使用<xref:System.Windows.Media.Imaging.BitmapImage>物件參考的映像檔。</span><span class="sxs-lookup"><span data-stu-id="0f14d-157">Many of the examples use a <xref:System.Windows.Media.Imaging.BitmapImage> object to reference an image file.</span></span> <span data-ttu-id="0f14d-158"><xref:System.Windows.Media.Imaging.BitmapImage>具特製化<xref:System.Windows.Media.Imaging.BitmapSource>而最佳化的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]載入和簡單的方法，來顯示影像做為<xref:System.Windows.Controls.Image.Source%2A>的<xref:System.Windows.Controls.Image>控制項。</span><span class="sxs-lookup"><span data-stu-id="0f14d-158"><xref:System.Windows.Media.Imaging.BitmapImage> is a specialized <xref:System.Windows.Media.Imaging.BitmapSource> that is optimized for [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] loading and is an easy way to display images as the <xref:System.Windows.Controls.Image.Source%2A> of an <xref:System.Windows.Controls.Image> control.</span></span>  
   
- 下列範例顯示如何使用程式碼呈現 200 像素寬的影像。  
+ <span data-ttu-id="0f14d-159">下列範例示範如何使用程式碼呈現 200 像素寬的影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-159">The following example shows how to render an image 200 pixels wide using code.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage> 會實作 <xref:System.ComponentModel.ISupportInitialize> 介面以最佳化多個屬性的初始化作業。  屬性變更只會在物件初始化期間發生。  呼叫 <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> 表示初始化已經開始，呼叫 <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> 則表示初始化已經完成。  初始化之後所做的屬性變更會被忽略。  
+>  <span data-ttu-id="0f14d-160"><xref:System.Windows.Media.Imaging.BitmapImage>實作<xref:System.ComponentModel.ISupportInitialize>最佳化初始化多個屬性上的介面。</span><span class="sxs-lookup"><span data-stu-id="0f14d-160"><xref:System.Windows.Media.Imaging.BitmapImage> implements the <xref:System.ComponentModel.ISupportInitialize> interface to optimize initialization on multiple properties.</span></span> <span data-ttu-id="0f14d-161">只有在物件初始化期間，才會發生屬性變更。</span><span class="sxs-lookup"><span data-stu-id="0f14d-161">Property changes can only occur during object initialization.</span></span> <span data-ttu-id="0f14d-162">呼叫<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>發出信號，初始設定開始和<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>來表示已完成初始設定。</span><span class="sxs-lookup"><span data-stu-id="0f14d-162">Call <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> to signal that initialization has begun and <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> to signal that initialization has completed.</span></span> <span data-ttu-id="0f14d-163">初始化之後，所做的屬性變更都會被忽略。</span><span class="sxs-lookup"><span data-stu-id="0f14d-163">Once initialized, property changes are ignored.</span></span>  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
-#### 旋轉、轉換及裁剪影像  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 讓使用者可以透過下列兩種方式轉換影像：使用 <xref:System.Windows.Media.Imaging.BitmapImage> 的屬性，以及使用其他 <xref:System.Windows.Media.Imaging.BitmapSource> 物件，例如 <xref:System.Windows.Media.Imaging.CroppedBitmap> 或 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。  這些影像轉換作業可以縮放或旋轉影像、變更影像的像素格式，或裁剪影像。  
+#### <a name="rotating-converting-and-cropping-images"></a><span data-ttu-id="0f14d-164">旋轉、轉換和裁剪影像</span><span class="sxs-lookup"><span data-stu-id="0f14d-164">Rotating, Converting, and Cropping Images</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="0f14d-165">可讓使用者使用的內容轉換的映像<xref:System.Windows.Media.Imaging.BitmapImage>或使用其他<xref:System.Windows.Media.Imaging.BitmapSource>物件，例如<xref:System.Windows.Media.Imaging.CroppedBitmap>或<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-165"> enables users to transform images by using properties of <xref:System.Windows.Media.Imaging.BitmapImage> or by using additional <xref:System.Windows.Media.Imaging.BitmapSource> objects such as <xref:System.Windows.Media.Imaging.CroppedBitmap> or <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span> <span data-ttu-id="0f14d-166">這些影像轉換作業可以縮放或旋轉影像、變更影像的像素格式，或裁剪影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-166">These image transformations can scale or rotate an image, change the pixel format of an image, or crop an image.</span></span>  
   
- 影像旋轉作業是使用 <xref:System.Windows.Media.Imaging.BitmapImage> 的 <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> 屬性執行。  只能以 90 度遞增的角度旋轉。  在下列範例中，影像會旋轉 90 度。  
+ <span data-ttu-id="0f14d-167">使用執行影像旋轉<xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A>屬性<xref:System.Windows.Media.Imaging.BitmapImage>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-167">Image rotations are performed using the <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> property of <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span> <span data-ttu-id="0f14d-168">只能以 90 度遞增的角度旋轉。</span><span class="sxs-lookup"><span data-stu-id="0f14d-168">Rotations can only be done in 90 degree increments.</span></span> <span data-ttu-id="0f14d-169">在下列範例中，影像會旋轉 90 度。</span><span class="sxs-lookup"><span data-stu-id="0f14d-169">In the following example, an image is rotated 90 degrees.</span></span>  
   
- [!code-xml[ImageElementExample#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
+ [!code-xaml[ImageElementExample#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
  [!code-csharp[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
  [!code-vb[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
   
- 將影像轉換為不同的像素格式，例如使用 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap> 轉換成灰階。  在下列範例中，影像會轉換為 <xref:System.Windows.Media.PixelFormats.Gray4%2A>。  
+ <span data-ttu-id="0f14d-170">將影像轉換成不同的像素格式，例如灰階是使用<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-170">Converting an image to a different pixel format such as grayscale is done using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span> <span data-ttu-id="0f14d-171">下列範例中，在映像會轉換成<xref:System.Windows.Media.PixelFormats.Gray4%2A>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-171">In the following examples, an image is converted to <xref:System.Windows.Media.PixelFormats.Gray4%2A>.</span></span>  
   
- [!code-xml[ImageElementExample_snip#ConvertedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
+ [!code-xaml[ImageElementExample_snip#ConvertedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
   
  [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
  [!code-vb[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
   
- 若要裁剪影像，可以使用 <xref:System.Windows.Controls.Image> 或 <xref:System.Windows.Media.Imaging.CroppedBitmap> 的 <xref:System.Windows.UIElement.Clip%2A> 屬性。  通常，如果您只要顯示影像的某一部分，應該使用 <xref:System.Windows.UIElement.Clip%2A>。  如果您需要編碼並且儲存裁剪的影像，應該使用 <xref:System.Windows.Media.Imaging.CroppedBitmap>。  在下列範例中，會使用 Clip 屬性 \(利用 <xref:System.Windows.Media.EllipseGeometry>\) 裁剪影像。  
+ <span data-ttu-id="0f14d-172">若要裁剪影像，或是<xref:System.Windows.UIElement.Clip%2A>屬性<xref:System.Windows.Controls.Image>或<xref:System.Windows.Media.Imaging.CroppedBitmap>可用。</span><span class="sxs-lookup"><span data-stu-id="0f14d-172">To crop an image, either the <xref:System.Windows.UIElement.Clip%2A> property of <xref:System.Windows.Controls.Image> or <xref:System.Windows.Media.Imaging.CroppedBitmap> can be used.</span></span> <span data-ttu-id="0f14d-173">一般而言，如果您只想要顯示影像的一部分<xref:System.Windows.UIElement.Clip%2A>應使用。</span><span class="sxs-lookup"><span data-stu-id="0f14d-173">Typically, if you just want to display a portion of an image, <xref:System.Windows.UIElement.Clip%2A> should be used.</span></span> <span data-ttu-id="0f14d-174">如果您需要編碼並儲存裁剪的影像，<xref:System.Windows.Media.Imaging.CroppedBitmap>應使用。</span><span class="sxs-lookup"><span data-stu-id="0f14d-174">If you need to encode and save a cropped image, the <xref:System.Windows.Media.Imaging.CroppedBitmap> should be used.</span></span> <span data-ttu-id="0f14d-175">在下列範例中，映像會裁剪使用剪輯屬性使用<xref:System.Windows.Media.EllipseGeometry>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-175">In the following example, an image is cropped using the Clip property using an <xref:System.Windows.Media.EllipseGeometry>.</span></span>  
   
- [!code-xml[ImageElementExample_snip#CroppedXAMLUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
+ [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
   
  [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
  [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
   
-#### 自動縮放影像  
- <xref:System.Windows.Controls.Image.Stretch%2A> 屬性控制影像如何自動縮放以填滿容器。  <xref:System.Windows.Controls.Image.Stretch%2A> 屬性接受下列值 \(由 <xref:System.Windows.Media.Stretch> 列舉型別定義\)：  
+#### <a name="stretching-images"></a><span data-ttu-id="0f14d-176">縮放影像</span><span class="sxs-lookup"><span data-stu-id="0f14d-176">Stretching Images</span></span>  
+ <span data-ttu-id="0f14d-177"><xref:System.Windows.Controls.Image.Stretch%2A>屬性會控制伸展影像以填滿其容器的方式。</span><span class="sxs-lookup"><span data-stu-id="0f14d-177">The <xref:System.Windows.Controls.Image.Stretch%2A> property controls how an image is stretched to fill its container.</span></span> <span data-ttu-id="0f14d-178"><xref:System.Windows.Controls.Image.Stretch%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.Stretch>列舉型別：</span><span class="sxs-lookup"><span data-stu-id="0f14d-178">The <xref:System.Windows.Controls.Image.Stretch%2A> property accepts the following values, defined by the <xref:System.Windows.Media.Stretch> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：影像不會自動縮放以填滿輸出區域。  如果影像大於輸出區域，會將影像繪製至輸出區域，並裁剪超過的部分。  
+-   <span data-ttu-id="0f14d-179"><xref:System.Windows.Media.Stretch.None>： 影像不會延伸以填滿輸出區域中。</span><span class="sxs-lookup"><span data-stu-id="0f14d-179"><xref:System.Windows.Media.Stretch.None>: The image is not stretched to fill the output area.</span></span> <span data-ttu-id="0f14d-180">如果影像大於輸出區域，會將影像繪製到輸出區域，並裁剪超過的部分。</span><span class="sxs-lookup"><span data-stu-id="0f14d-180">If the image is larger than the output area, the image is drawn to the output area, clipping what does not fit.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：影像會隨縮放以符合輸出區域的大小。  因為影像的高度和寬度是分開縮放的，所以可能不會保留影像的原始外觀比例 \(Aspect Ratio\)。  也就是說，影像可能會扭曲以完全填滿輸出容器。  
+-   <span data-ttu-id="0f14d-181"><xref:System.Windows.Media.Stretch.Fill>： 影像會調整為適合在輸出區域中。</span><span class="sxs-lookup"><span data-stu-id="0f14d-181"><xref:System.Windows.Media.Stretch.Fill>: The image is scaled to fit the output area.</span></span> <span data-ttu-id="0f14d-182">因為影像的高度和寬度是分開縮放，所以可能不會維持影像的原始外觀比例。</span><span class="sxs-lookup"><span data-stu-id="0f14d-182">Because the image height and width are scaled independently, the original aspect ratio of the image might not be preserved.</span></span> <span data-ttu-id="0f14d-183">也就是說，影像可能會變形以完全填滿輸出容器。</span><span class="sxs-lookup"><span data-stu-id="0f14d-183">That is, the image might be warped in order to completely fill the output container.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：影像會縮放以完全符合輸出區域的大小。  會保留影像的外觀比例。  
+-   <span data-ttu-id="0f14d-184"><xref:System.Windows.Media.Stretch.Uniform>： 影像會調整，使其完全符合在輸出區域中。</span><span class="sxs-lookup"><span data-stu-id="0f14d-184"><xref:System.Windows.Media.Stretch.Uniform>: The image is scaled so that it fits completely within the output area.</span></span> <span data-ttu-id="0f14d-185">會維持影像的外觀比例。</span><span class="sxs-lookup"><span data-stu-id="0f14d-185">The image's aspect ratio is preserved.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>：影像會縮放以完全填滿輸出區域，並同時保留影像的原始外觀比例。  
+-   <span data-ttu-id="0f14d-186"><xref:System.Windows.Media.Stretch.UniformToFill>： 影像會調整，讓它完全填滿輸出區域，同時維持原始外觀比例的影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-186"><xref:System.Windows.Media.Stretch.UniformToFill>: The image is scaled so that it completely fills the output area while preserving the image's original aspect ratio.</span></span>  
   
- 下列範例會將每個可用的 <xref:System.Windows.Media.Stretch> 列舉型別套用至 <xref:System.Windows.Controls.Image>。  
+ <span data-ttu-id="0f14d-187">下列範例會套用每個可用<xref:System.Windows.Media.Stretch>列舉型別的<xref:System.Windows.Controls.Image>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-187">The following example applies each of the available <xref:System.Windows.Media.Stretch> enumerations to an <xref:System.Windows.Controls.Image>.</span></span>  
   
- 下圖顯示這個範例的輸出，並且示範不同 <xref:System.Windows.Controls.Image.Stretch%2A> 設定套用至影像時的影響。  
+ <span data-ttu-id="0f14d-188">下圖顯示此範例的輸出，並示範不同的影響<xref:System.Windows.Controls.Image.Stretch%2A>時必須設定套用至映像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-188">The following image shows the output from the example and demonstrates the affect the different <xref:System.Windows.Controls.Image.Stretch%2A> settings have when applied to an image.</span></span>  
   
- ![不同的 TileBrush Stretch 設定](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.png "img\_mmgraphics\_stretchenum")  
-不同自動縮放設定  
+ <span data-ttu-id="0f14d-189">![不同的 TileBrush Stretch 設定](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span><span class="sxs-lookup"><span data-stu-id="0f14d-189">![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span></span>  
+<span data-ttu-id="0f14d-190">不同的縮放設定</span><span class="sxs-lookup"><span data-stu-id="0f14d-190">Different stretch settings</span></span>  
   
- [!code-xml[ImageElementExample_snip#ImageStretchExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
+ [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
   
-### 以影像繪製  
- 影像也可以藉由以 <xref:System.Windows.Media.Brush> 在應用程式中繪製來顯示。  筆刷可以讓您以任何項目 \(從簡單、單純的色彩到複雜的圖樣和影像集\) 繪製 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 物件。  若要以影像繪製，請使用 <xref:System.Windows.Media.ImageBrush>。  <xref:System.Windows.Media.ImageBrush> 是一種 <xref:System.Windows.Media.TileBrush>，可將其內容定義為點陣圖影像。  <xref:System.Windows.Media.ImageBrush> 會顯示以其 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 屬性所指定的單一影像。  您可以控制影像自動縮放、對齊及並排的方式，以防止扭曲並且創造出圖樣和其他效果。  下圖顯示可以使用 <xref:System.Windows.Media.ImageBrush> 達成的部分效果。  
+### <a name="painting-with-images"></a><span data-ttu-id="0f14d-191">以影像繪製</span><span class="sxs-lookup"><span data-stu-id="0f14d-191">Painting with Images</span></span>  
+ <span data-ttu-id="0f14d-192">映像也可以顯示應用程式中所使用的繪製<xref:System.Windows.Media.Brush>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-192">Images can also be displayed in an application by painting with a <xref:System.Windows.Media.Brush>.</span></span> <span data-ttu-id="0f14d-193">筆刷可讓您以任何項目 (從簡單的純色到複雜的圖樣和影像集) 繪製 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 物件。</span><span class="sxs-lookup"><span data-stu-id="0f14d-193">Brushes enable you to paint [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] objects with anything from simple, solid colors to complex sets of patterns and images.</span></span> <span data-ttu-id="0f14d-194">若要繪製影像，請使用<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-194">To paint with images, use an <xref:System.Windows.Media.ImageBrush>.</span></span> <span data-ttu-id="0f14d-195"><xref:System.Windows.Media.ImageBrush>是一種<xref:System.Windows.Media.TileBrush>，定義其內容以點陣圖影像。</span><span class="sxs-lookup"><span data-stu-id="0f14d-195">An <xref:System.Windows.Media.ImageBrush> is a type of <xref:System.Windows.Media.TileBrush> that defines its content as a bitmap image.</span></span> <span data-ttu-id="0f14d-196"><xref:System.Windows.Media.ImageBrush>會顯示所指定的單一映像及其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="0f14d-196">An <xref:System.Windows.Media.ImageBrush> displays a single image, which is specified by its <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property.</span></span> <span data-ttu-id="0f14d-197">您可以控制影像縮放、對齊及並排的方式，以防止扭曲並且創造出圖樣和其他效果。</span><span class="sxs-lookup"><span data-stu-id="0f14d-197">You can control how the image is stretched, aligned, and tiled, enabling you to prevent distortion and produce patterns and other effects.</span></span> <span data-ttu-id="0f14d-198">下圖顯示一些可達到的效果<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-198">The following illustration shows some effects that can be achieved with an <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
- ![ImageBrush 輸出範例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.png "wcpsdk\_mmgraphics\_imagebrushexamples")  
-影像筆刷可以填滿圖案、控制項、文字等等  
+ <span data-ttu-id="0f14d-199">![ImageBrush 輸出範例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")</span><span class="sxs-lookup"><span data-stu-id="0f14d-199">![ImageBrush output examples](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")</span></span>  
+<span data-ttu-id="0f14d-200">影像筆刷可以填滿圖形、控制項、文字等等</span><span class="sxs-lookup"><span data-stu-id="0f14d-200">Image brushes can fill shapes, controls, text, and more</span></span>  
   
- 下列範例示範如何使用 <xref:System.Windows.Media.ImageBrush> 以影像繪製按鈕背景。  
+ <span data-ttu-id="0f14d-201">下列範例示範如何繪製映像使用按鈕的背景<xref:System.Windows.Media.ImageBrush>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-201">The following example demonstrates how to paint the background of a button with an image using an <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
- [!code-xml[UsingImageBrush#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
+ [!code-xaml[UsingImageBrush#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
   
- 如需 <xref:System.Windows.Media.ImageBrush> 和繪製影像的詳細資訊，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ <span data-ttu-id="0f14d-202">如需有關<xref:System.Windows.Media.ImageBrush>並繪製影像查看[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。</span><span class="sxs-lookup"><span data-stu-id="0f14d-202">For additional information about <xref:System.Windows.Media.ImageBrush> and painting images see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="_metadata"></a>   
-## 影像中繼資料  
- 有些影像檔包含中繼資料 來描述檔案的內容或特性。  例如，大多數數位相機建立的影像中會包含關於捕捉影像時所使用的相機品牌和型號的中繼資料。  雖然每個影像格式處理中繼資料的方式各有不同，但是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]可以替所有支援的影像格式提供統一的中繼資料儲存及擷取方法。  
+## <a name="image-metadata"></a><span data-ttu-id="0f14d-203">影像中繼資料</span><span class="sxs-lookup"><span data-stu-id="0f14d-203">Image Metadata</span></span>  
+ <span data-ttu-id="0f14d-204">某些影像檔包含描述檔案內容或特性的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="0f14d-204">Some image files contain metadata that describes the content or the characteristics of the file.</span></span> <span data-ttu-id="0f14d-205">例如，大部分數位相機建立的影像，會包含用來擷取影像之相機廠牌與型號的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="0f14d-205">For example, most digital cameras create images that contain metadata about the make and model of the camera used to capture the image.</span></span> <span data-ttu-id="0f14d-206">每種影像格式處理中繼資料的方式也有所不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可針對每種支援的影像格式提供統一的中繼資料儲存及擷取方式。</span><span class="sxs-lookup"><span data-stu-id="0f14d-206">Each image format handles metadata differently but [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] provides a uniform way of storing and retrieving metadata for each supported image format.</span></span>  
   
- 中繼資料的存取是透過 <xref:System.Windows.Media.Imaging.BitmapSource> 物件的 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 屬性提供。  <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 會傳回 <xref:System.Windows.Media.Imaging.BitmapMetadata> 物件，其中包括影像內含的所有中繼資料。  這項資料可能位於單一中繼資料結構描述或不同結構描述的組合中。  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt \(PNG 文字資料\)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ <span data-ttu-id="0f14d-207">中繼資料的存取透過提供<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>屬性<xref:System.Windows.Media.Imaging.BitmapSource>物件。</span><span class="sxs-lookup"><span data-stu-id="0f14d-207">Access to metadata is provided through the <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> property of a <xref:System.Windows.Media.Imaging.BitmapSource> object.</span></span> <span data-ttu-id="0f14d-208"><xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>傳回<xref:System.Windows.Media.Imaging.BitmapMetadata>物件，其中包含映像所包含的所有中繼資料。</span><span class="sxs-lookup"><span data-stu-id="0f14d-208"><xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> returns a <xref:System.Windows.Media.Imaging.BitmapMetadata> object that includes all the metadata contained by the image.</span></span> <span data-ttu-id="0f14d-209">此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。</span><span class="sxs-lookup"><span data-stu-id="0f14d-209">This data may be in one metadata schema or a combination of different schemes.</span></span> [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]<span data-ttu-id="0f14d-210"> 支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt (PNG 文字型資料)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0f14d-210"> supports the following image metadata schemas: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt (PNG Textual Data), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], and [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].</span></span>  
   
- 為了簡化讀取中繼資料的程序，<xref:System.Windows.Media.Imaging.BitmapMetadata> 提供數個可以輕易存取的具名屬性，例如 <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>、<xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A> 和 <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。  許多具名屬性可以用於寫入中繼資料。  讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。  <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 方法可以擷取中繼資料查詢讀取器，方法是提供 *"\/app1\/exif\/"* 之類的字串查詢。  在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> 可以取得儲存在 *"\/Text\/Description"* 位置中的文字。  
+ <span data-ttu-id="0f14d-211">若要簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供幾個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。</span><span class="sxs-lookup"><span data-stu-id="0f14d-211">In order to simplify the process of reading metadata, <xref:System.Windows.Media.Imaging.BitmapMetadata> provides several named properties that can be easily accessed such as <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, and <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>.</span></span> <span data-ttu-id="0f14d-212">許多具名屬性也可以用於寫入中繼資料。</span><span class="sxs-lookup"><span data-stu-id="0f14d-212">Many of these named properties can also be used to write metadata.</span></span> <span data-ttu-id="0f14d-213">讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。</span><span class="sxs-lookup"><span data-stu-id="0f14d-213">Additional support for reading metadata is provided by the metadata query reader.</span></span> <span data-ttu-id="0f14d-214"><xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用來擷取中繼資料查詢讀取器所提供字串查詢，例如*"/ app1/exif /"*。</span><span class="sxs-lookup"><span data-stu-id="0f14d-214">The <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> method is used to retrieve a metadata query reader by providing a string query such as *"/app1/exif/"*.</span></span> <span data-ttu-id="0f14d-215">在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於*"/ 文字/說明 「*位置。</span><span class="sxs-lookup"><span data-stu-id="0f14d-215">In the following example, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> is used to obtain the text stored in the *"/Text/Description"* location.</span></span>  
   
  [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- 若要撰寫中繼資料，可使用中繼資料查詢寫入器。  <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 會取得查詢寫入器並設定需要的值。  在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 可以寫入儲存在 *"\/Text\/Description"* 位置中的文字。  
+ <span data-ttu-id="0f14d-216">若要寫入中繼資料，必須使用中繼資料查詢寫入器。</span><span class="sxs-lookup"><span data-stu-id="0f14d-216">To write metadata, a metadata query writer is used.</span></span> <span data-ttu-id="0f14d-217"><xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>取得查詢寫入者，並設定所需的值。</span><span class="sxs-lookup"><span data-stu-id="0f14d-217"><xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> obtains the query writer and sets the desired value.</span></span> <span data-ttu-id="0f14d-218">在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用來寫入文字儲存於*"/ 文字/說明 「*位置。</span><span class="sxs-lookup"><span data-stu-id="0f14d-218">In the following example, <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> is used to write the text stored in the *"/Text/Description"* location.</span></span>  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
  [!code-vb[BitmapMetadata#SetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
   
 <a name="_extensibility"></a>   
-## 轉碼器擴充性  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]的核心功能是新影像轉碼器的擴充性模型。  這些 Unmanaged 介面可以讓轉碼器開發人員整合轉碼器與 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，使得 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式可以自動使用新的影像格式。  
+## <a name="codec-extensibility"></a><span data-ttu-id="0f14d-219">轉碼器擴充性</span><span class="sxs-lookup"><span data-stu-id="0f14d-219">Codec Extensibility</span></span>  
+ <span data-ttu-id="0f14d-220">[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 的核心功能是新影像轉碼器的擴充性模型。</span><span class="sxs-lookup"><span data-stu-id="0f14d-220">A core feature of [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] is the extensibility model for new image codecs.</span></span> <span data-ttu-id="0f14d-221">這些 Unmanaged 介面可讓轉碼器開發人員整合轉碼器與 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，以便 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式可以自動使用新的影像格式。</span><span class="sxs-lookup"><span data-stu-id="0f14d-221">These unmanaged interfaces enable codec developers to integrate codecs with [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] so new image formats can automatically be used by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.</span></span>  
   
- 如需擴充性 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的範例，請參閱 [Win32 範例轉碼器](http://go.microsoft.com/fwlink/?LinkID=160052) \(英文\)。  這個範例示範如何針對自訂影像格式建立解碼器和編碼器。  
+ <span data-ttu-id="0f14d-222">如需擴充性 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 的範例，請參閱 [Win32 範例轉碼器 (英文)](http://go.microsoft.com/fwlink/?LinkID=160052)。</span><span class="sxs-lookup"><span data-stu-id="0f14d-222">For a sample of the extensibility [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], see the [Win32 Sample Codec](http://go.microsoft.com/fwlink/?LinkID=160052).</span></span> <span data-ttu-id="0f14d-223">此範例示範如何針對自訂影像格式建立解碼器和編碼器。</span><span class="sxs-lookup"><span data-stu-id="0f14d-223">This sample demonstrates how to create a decoder and encoder for a custom image format.</span></span>  
   
 > [!NOTE]
->  轉碼器必須有數位簽章，系統才能加以辨識。  
+>  <span data-ttu-id="0f14d-224">轉碼器必須經過數位簽署，系統才能辨識它。</span><span class="sxs-lookup"><span data-stu-id="0f14d-224">The codec must be digitally signed for the system to recognize it.</span></span>  
   
-## 請參閱  
- <xref:System.Windows.Media.Imaging.BitmapSource>   
- <xref:System.Windows.Media.Imaging.BitmapImage>   
- <xref:System.Windows.Controls.Image>   
- <xref:System.Windows.Media.Imaging.BitmapMetadata>   
- [2D 圖形和影像](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Win32 範例轉碼器](http://go.microsoft.com/fwlink/?LinkID=160052)
+## <a name="see-also"></a><span data-ttu-id="0f14d-225">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f14d-225">See Also</span></span>  
+ <xref:System.Windows.Media.Imaging.BitmapSource>  
+ <xref:System.Windows.Media.Imaging.BitmapImage>  
+ <xref:System.Windows.Controls.Image>  
+ <xref:System.Windows.Media.Imaging.BitmapMetadata>  
+ [<span data-ttu-id="0f14d-226">2D 圖形和影像處理</span><span class="sxs-lookup"><span data-stu-id="0f14d-226">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="0f14d-227">Win32 範例轉碼器 (英文)</span><span class="sxs-lookup"><span data-stu-id="0f14d-227">Win32 Sample Codec</span></span>](http://go.microsoft.com/fwlink/?LinkID=160052)

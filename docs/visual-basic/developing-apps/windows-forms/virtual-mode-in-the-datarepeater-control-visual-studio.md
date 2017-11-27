@@ -1,100 +1,86 @@
 ---
-title: "DataRepeater 控制項 (Visual Studio) 中的虛擬模式 |Microsoft 文件"
-ms.date: 2015-07-20
+title: "DataRepeater 控制項中的虛擬模式 (Visual Studio)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 dev_langs:
-- VB
+- csharp
+- vb
 helpviewer_keywords:
-- virtual data binding
+- virtual data binding [Visual Basic]
 - DataRepeater
 - DataRepeater, virtual mode
 ms.assetid: 5fb805dc-2d8b-4139-b1e3-86e4c2667221
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 85f7e250c57a507e891eb30756c0550098cce9e0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4c85ce4541e32991bfa09b1436385281d27ad355
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>DataRepeater 控制項中的虛擬模式 (Visual Studio)
-當您想要顯示表格式資料中的大量<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項，您可以改善效能，藉由設定<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性`True`和明確地管理其資料來源控制項的互動。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項提供數個與您的資料來源進行互動，並視需要在執行階段顯示的資料，您可以處理的事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+# <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a><span data-ttu-id="6466f-102">DataRepeater 控制項中的虛擬模式 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="6466f-102">Virtual Mode in the DataRepeater Control (Visual Studio)</span></span>
+<span data-ttu-id="6466f-103">當您想要顯示在表格式資料的大量<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項，您可以藉由設定來改善效能<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性`True`和明確地管理其資料來源的控制項的互動。</span><span class="sxs-lookup"><span data-stu-id="6466f-103">When you want to display large quantities of tabular data in a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control, you can improve performance by setting the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> property to `True` and explicitly managing the control's interaction with its data source.</span></span> <span data-ttu-id="6466f-104"><xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項提供數個事件，您可以處理與資料來源進行互動，並視需要在執行階段顯示的資料。</span><span class="sxs-lookup"><span data-stu-id="6466f-104">The <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control provides several events that you can handle to interact with your data source and display the data as needed at run time.</span></span>  
   
-## <a name="how-virtual-mode-works"></a>虛擬模式運作  
- 最常見的案例<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項是繫結的子控制項<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>至資料來源在設計階段，並允許<xref:System.Windows.Forms.BindingSource>傳遞資料來回視。</xref:System.Windows.Forms.BindingSource> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 當您使用的虛擬模式時，控制項未繫結至資料來源，以及資料來回傳遞至基礎資料來源在執行階段。  
+## <a name="how-virtual-mode-works"></a><span data-ttu-id="6466f-105">如何虛擬模式的運作</span><span class="sxs-lookup"><span data-stu-id="6466f-105">How Virtual Mode Works</span></span>  
+ <span data-ttu-id="6466f-106">最常見的案例<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項是繫結的子控制項<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>至資料來源在設計階段，並允許<xref:System.Windows.Forms.BindingSource>傳遞來回所需的資料。</span><span class="sxs-lookup"><span data-stu-id="6466f-106">The most common scenario for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control is to bind the child controls of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> to a data source at design time and allow the <xref:System.Windows.Forms.BindingSource> to pass data back and forth as needed.</span></span> <span data-ttu-id="6466f-107">當您使用的虛擬模式時，控制項未繫結至資料來源，以及資料來回傳遞至基礎資料來源在執行階段。</span><span class="sxs-lookup"><span data-stu-id="6466f-107">When you use virtual mode, the controls are not bound to a data source, and data is passed back and forth to the underlying data source at run time.</span></span>  
   
- 當<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性設定為`True`，您新增的控制項建立使用者介面**工具箱**而不是加入繫結的控制項，從**資料來源**視窗。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>  
+ <span data-ttu-id="6466f-108">當<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性設定為`True`，您將控制項從建立使用者介面**工具箱**而非從繫結的控制項中新增**資料來源**視窗。</span><span class="sxs-lookup"><span data-stu-id="6466f-108">When the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> property is set to `True`, you create the user interface by adding controls from the **Toolbox** instead of adding bound controls from the **Data Sources** window.</span></span>  
   
- 針對控制項的控制項，會引發事件，而且您必須加入程式碼來處理資料的顯示。 當新<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>捲動到檢視，<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>就會引發一次，每個控制項的事件，所以您必須提供每個控制項中的值<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>事件處理常式。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>  
+ <span data-ttu-id="6466f-109">以控制項的控制項為基礎，會引發事件，而且您必須加入程式碼來處理資料的顯示。</span><span class="sxs-lookup"><span data-stu-id="6466f-109">Events are raised on a control-by-control basis, and you must add code to handle the display of data.</span></span> <span data-ttu-id="6466f-110">當新<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>捲動到檢視，<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>事件引發一次，每個控制項，您必須提供每個控制項中的值<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="6466f-110">When a new <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> is scrolled into view, the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> event is raised one time for each control and you must supply the values for each control in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> event handler.</span></span>  
   
- 如果使用者變更其中一個控制項中的資料<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>就會引發事件，而您必須驗證資料並將它儲存到您的資料來源。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>  
+ <span data-ttu-id="6466f-111">如果其中一個控制項中的資料由使用者變更<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>就會引發事件，而且您必須驗證的資料，並將它儲存到您的資料來源。</span><span class="sxs-lookup"><span data-stu-id="6466f-111">If data in one of the controls is changed by the user, the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> event is raised and you must validate the data and save it to your data source.</span></span>  
   
- 如果使用者加入新項目，<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>就會引發事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> 若要建立新的記錄資料來源中使用這個事件處理常式。 若要避免非預期的變更，您也必須監視<xref:System.Windows.Forms.Control.KeyDown>事件針對每個控制項和呼叫<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>如果使用者按下 ESC 鍵。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> </xref:System.Windows.Forms.Control.KeyDown>  
+ <span data-ttu-id="6466f-112">如果使用者加入新項目，<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>就會引發事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-112">If the user adds a new item, the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> event is raised.</span></span> <span data-ttu-id="6466f-113">若要建立新的記錄資料來源中使用此事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="6466f-113">Use this event's handler to create a new record in your data source.</span></span> <span data-ttu-id="6466f-114">若要避免非預期的變更，您也必須監視<xref:System.Windows.Forms.Control.KeyDown>事件針對每個控制項和呼叫<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>如果使用者按下 ESC 鍵。</span><span class="sxs-lookup"><span data-stu-id="6466f-114">To prevent unintended changes, you must also monitor the <xref:System.Windows.Forms.Control.KeyDown> event for each control and call <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> if the user presses the ESC key.</span></span>  
   
- 如果您的資料來源變更時，您可以重新整理<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項，藉由呼叫<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>和<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>方法。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 這兩種方法必須呼叫順序。  
+ <span data-ttu-id="6466f-115">如果您的資料來源變更時，您可以重新整理<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>藉由呼叫控制項<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>和<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="6466f-115">If your data source changes, you can refresh the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control by calling the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> and <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> methods.</span></span> <span data-ttu-id="6466f-116">這兩種方法必須順序呼叫。</span><span class="sxs-lookup"><span data-stu-id="6466f-116">Both methods must be called in order.</span></span>  
   
- 最後，您必須實作的事件處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>事件，就會發生刪除項目時，也可以針對<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems>和<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems>每當使用者按下 DELETE 鍵刪除的項目就會發生的事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>  
+ <span data-ttu-id="6466f-117">最後，您必須實作的事件處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>事件，以刪除項目時，以及選擇性的就會發生<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems>和<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems>每當使用者按下 DELETE 鍵刪除項目時所發生的事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-117">Finally, you must implement event handlers for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved> event, which occurs when an item is deleted, and optionally for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems> and <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems> events, which occur whenever a user deletes an item by pressing the DELETE key.</span></span>  
   
-## <a name="implementing-virtual-mode"></a>實作虛擬模式  
- 以下是實作虛擬模式所需的步驟。  
+## <a name="implementing-virtual-mode"></a><span data-ttu-id="6466f-118">實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="6466f-118">Implementing Virtual Mode</span></span>  
+ <span data-ttu-id="6466f-119">以下是實作虛擬模式所需的步驟。</span><span class="sxs-lookup"><span data-stu-id="6466f-119">Following are the steps that are required to implement virtual mode.</span></span>  
   
-#### <a name="to-implement-virtual-mode"></a>若要實作虛擬模式  
+#### <a name="to-implement-virtual-mode"></a><span data-ttu-id="6466f-120">若要實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="6466f-120">To implement virtual mode</span></span>  
   
-1.  拖放到<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項從**Visual Basic PowerPacks**索引標籤中**工具箱**到表單或容器控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 設定<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性`True`。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>  
+1.  <span data-ttu-id="6466f-121">拖曳<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項從**Visual Basic PowerPacks**索引標籤中**工具箱**到表單或容器控制項。</span><span class="sxs-lookup"><span data-stu-id="6466f-121">Drag a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span> <span data-ttu-id="6466f-122">將 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> 屬性設定為 `True`。</span><span class="sxs-lookup"><span data-stu-id="6466f-122">Set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> property to `True`.</span></span>  
   
-2.  將控制項從**工具箱**拖曳的項目範本區域 （左上區域） 至<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 您想要顯示的資料來源中每個欄位必須有一個控制項。  
+2.  <span data-ttu-id="6466f-123">將控制項從**工具箱**到項目範本區域 （上方區域） 的<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</span><span class="sxs-lookup"><span data-stu-id="6466f-123">Drag controls from the **Toolbox** onto the item template region (the upper region) of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="6466f-124">您想要顯示的資料來源中每個欄位，您將需要一個控制項。</span><span class="sxs-lookup"><span data-stu-id="6466f-124">You will need one control for each field in your data source that you want to display.</span></span>  
   
-3.  實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>事件以提供每個控制項的值。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> 當新時，會引發這個事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>捲動到檢視。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> 程式碼將類似下列的範例中，名為資料來源是`Employees`。  
+3.  <span data-ttu-id="6466f-125">實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>事件以提供每個控制項的值。</span><span class="sxs-lookup"><span data-stu-id="6466f-125">Implement a handler for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> event to provide values for each control.</span></span> <span data-ttu-id="6466f-126">當新時，會引發這個事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>捲動到檢視。</span><span class="sxs-lookup"><span data-stu-id="6466f-126">This event is raised when a new <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> is scrolled into view.</span></span> <span data-ttu-id="6466f-127">程式碼會類似下列的範例中，名為資料來源是`Employees`。</span><span class="sxs-lookup"><span data-stu-id="6466f-127">The code will resemble the following example, which is for a data source named `Employees`.</span></span>  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb) ] 
-     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb)]
+     [!code-csharp[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
   
-4.  實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>來儲存資料的事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> 當使用者將變更認可至<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>的子控制項時，會引發這個事件 程式碼將類似下列的範例中，名為資料來源是`Employees`。  
+4.  <span data-ttu-id="6466f-128">實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>來儲存資料的事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-128">Implement a handler for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> event to store the data.</span></span> <span data-ttu-id="6466f-129">子控制項的使用者認可的變更時，會引發這個事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>。</span><span class="sxs-lookup"><span data-stu-id="6466f-129">This event is raised when the user commits changes to a child control of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</span></span> <span data-ttu-id="6466f-130">程式碼會類似下列的範例中，名為資料來源是`Employees`。</span><span class="sxs-lookup"><span data-stu-id="6466f-130">The code will resemble the following example, which is for a data source named `Employees`.</span></span>  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb) ] 
-     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb)]
+     [!code-csharp[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
   
-5.  實作的每個子控制項的處理常式<xref:System.Windows.Forms.Control.KeyDown>事件和監視器 ESC 鍵。</xref:System.Windows.Forms.Control.KeyDown> 呼叫<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>方法，以防止<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>引發的事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> 程式碼將類似下列的範例。  
+5.  <span data-ttu-id="6466f-131">實作的每個子控制項的處理常式<xref:System.Windows.Forms.Control.KeyDown>事件和監視器 ESC 鍵。</span><span class="sxs-lookup"><span data-stu-id="6466f-131">Implement a handler for each child control's <xref:System.Windows.Forms.Control.KeyDown> event and monitor the ESC key.</span></span> <span data-ttu-id="6466f-132">呼叫<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>方法，以防止<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>引發的事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-132">Call the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> method to prevent the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> event from being raised.</span></span> <span data-ttu-id="6466f-133">程式碼將類似下列的範例。</span><span class="sxs-lookup"><span data-stu-id="6466f-133">The code will resemble the following example.</span></span>  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb) ] 
-     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb)]
+     [!code-csharp[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
   
-6.  實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> 當使用者加入新項目，會引發這個事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 程式碼將類似下列的範例中，名為資料來源是`Employees`。  
+6.  <span data-ttu-id="6466f-134">實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-134">Implement a handler for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> event.</span></span> <span data-ttu-id="6466f-135">當使用者加入至新的項目，會引發這個事件<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。</span><span class="sxs-lookup"><span data-stu-id="6466f-135">This event is raised when the user adds a new item to the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="6466f-136">程式碼會類似下列的範例中，名為資料來源是`Employees`。</span><span class="sxs-lookup"><span data-stu-id="6466f-136">The code will resemble the following example, which is for a data source named `Employees`.</span></span>  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb) ] 
-     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb)]
+     [!code-csharp[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
   
-7.  實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>事件。</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved> 當使用者刪除現有的項目，就會發生此事件。 程式碼將類似下列的範例中，名為資料來源是`Employees`。  
+7.  <span data-ttu-id="6466f-137">實作的處理常式<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-137">Implement a handler for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved> event.</span></span> <span data-ttu-id="6466f-138">當使用者刪除現有的項目，就會發生此事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-138">This event occurs when a user deletes an existing item.</span></span> <span data-ttu-id="6466f-139">程式碼會類似下列的範例中，名為資料來源是`Employees`。</span><span class="sxs-lookup"><span data-stu-id="6466f-139">The code will resemble the following example, which is for a data source named `Employees`.</span></span>  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb) ] 
-     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb)]
+     [!code-csharp[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
   
-8.  控制層級驗證，您可以選擇實作的處理常式<xref:System.Windows.Forms.Control.Validating>子控制項的事件。</xref:System.Windows.Forms.Control.Validating> 程式碼將類似下列的範例。  
+8.  <span data-ttu-id="6466f-140">控制層級驗證，選擇性地實作的處理常式<xref:System.Windows.Forms.Control.Validating>子控制項的事件。</span><span class="sxs-lookup"><span data-stu-id="6466f-140">For control-level validation, optionally implement handlers for the <xref:System.Windows.Forms.Control.Validating> events of the child controls.</span></span> <span data-ttu-id="6466f-141">程式碼將類似下列的範例。</span><span class="sxs-lookup"><span data-stu-id="6466f-141">The code will resemble the following example.</span></span>  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#6;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb) ] 
-     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#6;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb)]
+     [!code-csharp[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
   
-## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>   
- [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="6466f-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6466f-142">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>  
+ [<span data-ttu-id="6466f-143">DataRepeater 控制項簡介</span><span class="sxs-lookup"><span data-stu-id="6466f-143">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
