@@ -1,80 +1,80 @@
 ---
-title: "基本 WCF 程式設計 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "基本程式設計 [WCF]"
-  - "WCF [WCF], 基本程式設計"
-  - "WCF [WCF], 程式設計"
-  - "Windows Communication Foundation [WCF], 基本程式設計"
-  - "Windows Communication Foundation [WCF], 程式設計"
+title: "基本 WCF 程式設計"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- basic programming [WCF]
+- WCF [WCF], basic programming
+- WCF [WCF], programming
+- Windows Communication Foundation [WCF], basic programming
+- Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fa43705fd20a60512ca4c460bb3048220aa1e193
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 基本 WCF 程式設計
-本章節將說明建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式的基礎概念。  
+# <a name="basic-wcf-programming"></a><span data-ttu-id="b7256-102">基本 WCF 程式設計</span><span class="sxs-lookup"><span data-stu-id="b7256-102">Basic WCF Programming</span></span>
+<span data-ttu-id="b7256-103">本章節將說明建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式的基礎概念。</span><span class="sxs-lookup"><span data-stu-id="b7256-103">This section presents the fundamentals for creating [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications.</span></span>  
   
-## 在本節中  
- [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- 說明設計、建置及部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務和用戶端應用程式的生命週期。  
+## <a name="in-this-section"></a><span data-ttu-id="b7256-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="b7256-104">In This Section</span></span>  
+ [<span data-ttu-id="b7256-105">基本程式設計週期</span><span class="sxs-lookup"><span data-stu-id="b7256-105">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ <span data-ttu-id="b7256-106">說明設計、建置及部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務和用戶端應用程式的生命週期。</span><span class="sxs-lookup"><span data-stu-id="b7256-106">Describes the lifecycle of designing, building, and deploying [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and client applications.</span></span>  
   
- [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- 說明如何設計和實作服務合約、選擇訊息交換模式、指定錯誤合約，以及其他服務的基本部分。  
+ [<span data-ttu-id="b7256-107">設計與實作服務</span><span class="sxs-lookup"><span data-stu-id="b7256-107">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ <span data-ttu-id="b7256-108">說明如何設計和實作服務合約、選擇訊息交換模式、指定錯誤合約，以及其他服務的基本部分。</span><span class="sxs-lookup"><span data-stu-id="b7256-108">Describes how to design and implement a service contract, choose a message exchange pattern, specify a fault contract, and other basic aspects of services.</span></span>  
   
- [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- 說明如何設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務使其支援合約要求、自訂本機執行階段行為，以及指示發行服務的位址。  
+ [<span data-ttu-id="b7256-109">設定服務</span><span class="sxs-lookup"><span data-stu-id="b7256-109">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
+ <span data-ttu-id="b7256-110">說明如何設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務使其支援合約要求、自訂本機執行階段行為，以及指示發行服務的位址。</span><span class="sxs-lookup"><span data-stu-id="b7256-110">Describes how to configure a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service to support the contract requirements, customize local runtime behavior, and indicate the address to publish the service.</span></span>  
   
- [裝載服務](../../../docs/framework/wcf/hosting-services.md)  
- 說明在應用程式中裝載服務的基本概念。  
+ [<span data-ttu-id="b7256-111">裝載服務</span><span class="sxs-lookup"><span data-stu-id="b7256-111">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
+ <span data-ttu-id="b7256-112">說明在應用程式中裝載服務的基本概念。</span><span class="sxs-lookup"><span data-stu-id="b7256-112">Describes the basics of hosting services in an application.</span></span>  
   
- [建置用戶端](../../../docs/framework/wcf/building-clients.md)  
- 說明如何取得服務的中繼資料、將該資料轉換成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼、處理安全性問題，以及建置、設定和裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。  
+ [<span data-ttu-id="b7256-113">建置用戶端</span><span class="sxs-lookup"><span data-stu-id="b7256-113">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ <span data-ttu-id="b7256-114">說明如何取得服務的中繼資料、將該資料轉換成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼、處理安全性問題，以及建置、設定和裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。</span><span class="sxs-lookup"><span data-stu-id="b7256-114">Describes how to obtain metadata from services, convert that into [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client code, handle security issues, and build, configure, and host an [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
   
- [擴充性簡介](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- 說明如何擴充 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 以建立自訂解決方案。  
+ [<span data-ttu-id="b7256-115">擴充性簡介</span><span class="sxs-lookup"><span data-stu-id="b7256-115">Introduction to Extensibility</span></span>](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ <span data-ttu-id="b7256-116">說明如何擴充 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 以建立自訂解決方案。</span><span class="sxs-lookup"><span data-stu-id="b7256-116">Describes how to extend [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to create custom solutions.</span></span>  
   
- [WCF 疑難排解快速入門](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- 說明某些最常發生的問題、解決這些問題的方法，以及如何尋找更多相關問題的資訊。  
+ [<span data-ttu-id="b7256-117">WCF 疑難排解快速入門</span><span class="sxs-lookup"><span data-stu-id="b7256-117">WCF Troubleshooting Quickstart</span></span>](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
+ <span data-ttu-id="b7256-118">說明某些最常發生的問題、解決這些問題的方法，以及如何尋找更多相關問題的資訊。</span><span class="sxs-lookup"><span data-stu-id="b7256-118">Describes some of the most common issues that occur, what you can do to solve them, and where to locate more information about the issue.</span></span>  
   
- [WCF 和 ASP.NET Web 應用程式開發介面](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- 討論這兩項技術、彼此的關聯性和使用時機。  
+ [<span data-ttu-id="b7256-119">WCF 與 ASP.NET Web API</span><span class="sxs-lookup"><span data-stu-id="b7256-119">WCF and ASP.NET Web API</span></span>](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ <span data-ttu-id="b7256-120">討論這兩項技術、彼此的關聯性和使用時機。</span><span class="sxs-lookup"><span data-stu-id="b7256-120">Discusses the two technologies, how they relate to each other, and when to use them.</span></span>  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="b7256-121">參考資料</span><span class="sxs-lookup"><span data-stu-id="b7256-121">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## 相關章節  
- [系統需求](../../../docs/framework/wcf/wcf-system-requirements.md)  
+## <a name="related-sections"></a><span data-ttu-id="b7256-122">相關章節</span><span class="sxs-lookup"><span data-stu-id="b7256-122">Related Sections</span></span>  
+ [<span data-ttu-id="b7256-123">系統需求</span><span class="sxs-lookup"><span data-stu-id="b7256-123">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
- [概觀說明](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="b7256-124">概念性概觀</span><span class="sxs-lookup"><span data-stu-id="b7256-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [快速入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="b7256-125">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="b7256-125">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="b7256-126">方針及最佳做法</span><span class="sxs-lookup"><span data-stu-id="b7256-126">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [Windows Communication Foundation 工具](../../../docs/framework/wcf/tools.md)  
+ [<span data-ttu-id="b7256-127">Windows Communication Foundation 工具</span><span class="sxs-lookup"><span data-stu-id="b7256-127">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/zh-tw/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [<span data-ttu-id="b7256-128">Windows Communication Foundation 範例</span><span class="sxs-lookup"><span data-stu-id="b7256-128">Windows Communication Foundation Samples</span></span>](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [使用者入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="b7256-129">快速入門</span><span class="sxs-lookup"><span data-stu-id="b7256-129">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- [使用內嵌程式碼的 IIS 裝載](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [<span data-ttu-id="b7256-130">使用內嵌程式碼的 IIS 裝載</span><span class="sxs-lookup"><span data-stu-id="b7256-130">IIS Hosting Using Inline Code</span></span>](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
- [自我裝載](../../../docs/framework/wcf/samples/self-host.md)
+ [<span data-ttu-id="b7256-131">自我裝載</span><span class="sxs-lookup"><span data-stu-id="b7256-131">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

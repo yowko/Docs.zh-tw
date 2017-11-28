@@ -1,70 +1,71 @@
 ---
-title: "&lt;switches&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#switches"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<switches> 項目"
-  - "switches 項目"
-  - "追蹤參數, <switches> 項目"
+title: "&lt;交換器&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#switches
+helpviewer_keywords:
+- <switches> element
+- switches element
+- trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6240f8192f2a31faeb81528e54481eb06cc04d04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;switches&gt; 項目
-包含追蹤參數和設定追蹤參數的層級。  
+# <a name="ltswitchesgt-element"></a><span data-ttu-id="ed57e-102">&lt;交換器&gt;項目</span><span class="sxs-lookup"><span data-stu-id="ed57e-102">&lt;switches&gt; Element</span></span>
+<span data-ttu-id="ed57e-103">包含追蹤參數及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="ed57e-103">Contains trace switches and the level where the trace switches are set.</span></span>  
   
-## 語法  
+ <span data-ttu-id="ed57e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ed57e-104">\<configuration></span></span>  
+<span data-ttu-id="ed57e-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="ed57e-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="ed57e-106">\<參數 ></span><span class="sxs-lookup"><span data-stu-id="ed57e-106">\<switches></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ed57e-107">語法</span><span class="sxs-lookup"><span data-stu-id="ed57e-107">Syntax</span></span>  
   
-      <switches>   
+```xml  
+      <switches>   
 </switches>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ed57e-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="ed57e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ed57e-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="ed57e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
- 無。  
+### <a name="attributes"></a><span data-ttu-id="ed57e-110">屬性</span><span class="sxs-lookup"><span data-stu-id="ed57e-110">Attributes</span></span>  
+ <span data-ttu-id="ed57e-111">無。</span><span class="sxs-lookup"><span data-stu-id="ed57e-111">None.</span></span>  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="ed57e-112">子項目</span><span class="sxs-lookup"><span data-stu-id="ed57e-112">Child Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|[\<新增\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|指定設定追蹤參數的層級。|  
+|<span data-ttu-id="ed57e-113">項目</span><span class="sxs-lookup"><span data-stu-id="ed57e-113">Element</span></span>|<span data-ttu-id="ed57e-114">描述</span><span class="sxs-lookup"><span data-stu-id="ed57e-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ed57e-115">\<add></span><span class="sxs-lookup"><span data-stu-id="ed57e-115">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="ed57e-116">指定設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="ed57e-116">Specifies the level where a trace switch is set.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="ed57e-117">父項目</span><span class="sxs-lookup"><span data-stu-id="ed57e-117">Parent Elements</span></span>  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`System.diagnostics`|指定收集、存放和傳送訊息的追蹤接聽程式，以及設定追蹤參數的層級。|  
+|<span data-ttu-id="ed57e-118">項目</span><span class="sxs-lookup"><span data-stu-id="ed57e-118">Element</span></span>|<span data-ttu-id="ed57e-119">描述</span><span class="sxs-lookup"><span data-stu-id="ed57e-119">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ed57e-120">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="ed57e-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.diagnostics`|<span data-ttu-id="ed57e-121">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="ed57e-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## 備註  
- 您可以將追蹤參數放在組態檔中，以變更參數的層級。  如果參數是 <xref:System.Diagnostics.BooleanSwitch>，您可以開啟或關閉這個參數。  如果參數是 <xref:System.Diagnostics.TraceSwitch>，您可以為其指派不同的層級，以指定應用程式輸出的追蹤或偵錯訊息類型。  
+## <a name="remarks"></a><span data-ttu-id="ed57e-122">備註</span><span class="sxs-lookup"><span data-stu-id="ed57e-122">Remarks</span></span>  
+ <span data-ttu-id="ed57e-123">您可以變更的層級的追蹤參數，以將它放置在組態檔中。</span><span class="sxs-lookup"><span data-stu-id="ed57e-123">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="ed57e-124">如果已切換<xref:System.Diagnostics.BooleanSwitch>，您可以開啟或關閉。</span><span class="sxs-lookup"><span data-stu-id="ed57e-124">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="ed57e-125">如果已切換<xref:System.Diagnostics.TraceSwitch>、 您可以指派不同層級，以便指定類型的追蹤或偵錯訊息的應用程式輸出。</span><span class="sxs-lookup"><span data-stu-id="ed57e-125">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
   
-## 範例  
- 以下範例顯示如何使用 **\<switch\>** 項目，將 `General` 追蹤參數設為 [TraceLevel.Error](frlrfSystemDiagnosticsTraceLevelClassTopic) 層級，並且啟用 `Data` 布林追蹤參數。  
+## <a name="example"></a><span data-ttu-id="ed57e-126">範例</span><span class="sxs-lookup"><span data-stu-id="ed57e-126">Example</span></span>  
+ <span data-ttu-id="ed57e-127">下列範例示範如何使用**\<切換 >**項目來設定`General`追蹤參數<xref:System.Diagnostics.TraceLevel>層級，並且啟用`Data`布林追蹤參數。</span><span class="sxs-lookup"><span data-stu-id="ed57e-127">The following example shows how to use the **\<switch>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <switches>  
@@ -75,8 +76,8 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Diagnostics.Switch>   
- <xref:System.Diagnostics.TraceSwitch>   
- <xref:System.Diagnostics.BooleanSwitch>   
- [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="ed57e-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed57e-128">See Also</span></span>  
+ <xref:System.Diagnostics.Switch>  
+ <xref:System.Diagnostics.TraceSwitch>  
+ <xref:System.Diagnostics.BooleanSwitch>  
+ [<span data-ttu-id="ed57e-129">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="ed57e-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,43 +1,46 @@
 ---
-title: "LINQ to DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LINQ to DataSet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: de0f11149c2ec587372b9e25f39f35f8552503c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to DataSet
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓您更方便且更快速地查詢在 <xref:System.Data.DataSet> 物件中快取的資料。  更明確地說，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓開發人員從程式語言本身撰寫查詢，而非使用不同的查詢語言，藉以簡化查詢作業。  這點對於 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 開發人員特別有用，因為他們現在就可以在查詢中運用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 所提供的編譯時期語法檢查、靜態型別和 IntelliSense 支援。  
+# <a name="linq-to-dataset"></a><span data-ttu-id="fa357-102">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="fa357-102">LINQ to DataSet</span></span>
+[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="fa357-103"> 可讓您更方便且更快速地查詢在 <xref:System.Data.DataSet> 物件中快取的資料。</span><span class="sxs-lookup"><span data-stu-id="fa357-103"> makes it easier and faster to query over data cached in a <xref:System.Data.DataSet> object.</span></span> <span data-ttu-id="fa357-104">具體來說，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]簡化查詢，讓開發人員從程式語言本身撰寫查詢而不是使用不同的查詢語言。</span><span class="sxs-lookup"><span data-stu-id="fa357-104">Specifically, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] simplifies querying by enabling developers to write queries from the programming language itself, instead of by using a separate query language.</span></span> <span data-ttu-id="fa357-105">這是特別適用於[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]開發人員現在能夠利用編譯時期語法檢查、 靜態型別和 IntelliSense 支援所提供的優點[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]在查詢中。</span><span class="sxs-lookup"><span data-stu-id="fa357-105">This is especially useful for [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] developers, who can now take advantage of the compile-time syntax checking, static typing, and IntelliSense support provided by the [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] in their queries.</span></span>  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也可用來查詢已經從一個或多個資料來源合併的資料。  這點可以實現許多資料表示和處理方式需要彈性的案例，例如本機查詢彙總的資料和在 Web 應用程式中進行中介層 \(Middle Tier\) 快取。  尤其，一般報表、分析和商務智慧應用程式都需要這種管理方法。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="fa357-106"> 也可用來查詢已經從一個或多個資料來源合併的資料。</span><span class="sxs-lookup"><span data-stu-id="fa357-106"> can also be used to query over data that has been consolidated from one or more data sources.</span></span> <span data-ttu-id="fa357-107">這點可以實現許多資料表示和處理方式需要彈性的案例，例如本機查詢彙總的資料和在 Web 應用程式中進行中介層 (Middle Tier) 快取。</span><span class="sxs-lookup"><span data-stu-id="fa357-107">This enables many scenarios that require flexibility in how data is represented and handled, such as querying locally aggregated data and middle-tier caching in Web applications.</span></span> <span data-ttu-id="fa357-108">尤其，一般報表、分析和商務智慧應用程式都需要這種管理方法。</span><span class="sxs-lookup"><span data-stu-id="fa357-108">In particular, generic reporting, analysis, and business intelligence applications require this method of manipulation.</span></span>  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 功能主要是透過 <xref:System.Data.DataRowExtensions> 和 <xref:System.Data.DataTableExtensions> 類別 \(Class\) 中的擴充方法公開 \(Expose\) 的。[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 是以現有的 [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] 架構為基礎並加以使用，但是不會在應用程式程式碼中取代 [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]。  現有的 ADO.NET 2.0 程式碼將繼續在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 應用程式中運作。 下圖將說明 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 與 [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] 的關聯性以及資料存放區。  
+ <span data-ttu-id="fa357-109">[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]功能中的擴充方法主要是透過公開<xref:System.Data.DataRowExtensions>和<xref:System.Data.DataTableExtensions>類別。</span><span class="sxs-lookup"><span data-stu-id="fa357-109">The [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] functionality is exposed primarily through the extension methods in the <xref:System.Data.DataRowExtensions> and <xref:System.Data.DataTableExtensions> classes.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="fa357-110">為基礎，並使用現有[!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]架構，而不是取代[!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]應用程式程式碼中。</span><span class="sxs-lookup"><span data-stu-id="fa357-110"> builds on and uses the existing [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] architecture, and is not meant to replace [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] in application code.</span></span> <span data-ttu-id="fa357-111">現有的 ADO.NET 2.0 程式碼將繼續在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 應用程式中運作。</span><span class="sxs-lookup"><span data-stu-id="fa357-111">Existing ADO.NET 2.0 code will continue to function in a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] application.</span></span> <span data-ttu-id="fa357-112">下圖將說明 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 與 [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] 的關聯性以及資料存放區。</span><span class="sxs-lookup"><span data-stu-id="fa357-112">The relationship of [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] to [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] and the data store is illustrated in the following diagram.</span></span>  
   
- ![LINQ to DataSet 是以 ADO.NET 提供者為基礎](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
+ <span data-ttu-id="fa357-113">![LINQ to DataSet 根據 ADO.NET 提供者](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")</span><span class="sxs-lookup"><span data-stu-id="fa357-113">![LINQ to DataSet is based on the ADO.NET Provider](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")</span></span>  
   
-## 在本節中  
- [使用者入門](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fa357-114">本章節內容</span><span class="sxs-lookup"><span data-stu-id="fa357-114">In This Section</span></span>  
+ [<span data-ttu-id="fa357-115">快速入門</span><span class="sxs-lookup"><span data-stu-id="fa357-115">Getting Started</span></span>](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
   
- [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="fa357-116">程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="fa357-116">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
   
-## 參考  
+## <a name="reference"></a><span data-ttu-id="fa357-117">參考資料</span><span class="sxs-lookup"><span data-stu-id="fa357-117">Reference</span></span>  
  <xref:System.Data.DataTableExtensions>  
   
  <xref:System.Data.DataRowExtensions>  
   
  <xref:System.Data.DataRowComparer>  
   
-## 請參閱  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)   
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+## <a name="see-also"></a><span data-ttu-id="fa357-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa357-118">See Also</span></span>  
+ [<span data-ttu-id="fa357-119">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="fa357-119">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="fa357-120">LINQ 和 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="fa357-120">LINQ and ADO.NET</span></span>](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [<span data-ttu-id="fa357-121">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="fa357-121">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)

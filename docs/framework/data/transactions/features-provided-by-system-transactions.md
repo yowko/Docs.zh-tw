@@ -1,43 +1,47 @@
 ---
-title: "System.Transactions 所提供的功能  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "System.Transactions 所提供的功能"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: be3e2fec5d6859b38ae149e50fd1fe82838d8e08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# System.Transactions 所提供的功能 
-本節說明如何使用 <xref:System.Transactions> 命名空間所提供的各項功能，來撰寫自己的交易式應用程式與資源管理員。具體來說，本節涵蓋了如何與一或多位參與者一同建立並參與交易 \(本機或分散式\)。  
+# <a name="features-provided-by-systemtransactions"></a><span data-ttu-id="ac2f0-102">System.Transactions 所提供的功能</span><span class="sxs-lookup"><span data-stu-id="ac2f0-102">Features Provided by System.Transactions</span></span>
+<span data-ttu-id="ac2f0-103">本節說明如何使用 <xref:System.Transactions> 命名空間所提供的各項功能，來撰寫自己的交易式應用程式與資源管理員。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-103">This section describes how you can use the features provided by the <xref:System.Transactions> namespace to write your own transactional application and resource manager.</span></span> <span data-ttu-id="ac2f0-104">具體來說，本節涵蓋了如何與一或多位參與者一同建立並參與交易 (本機或分散式)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-104">Specifically, this section covers how to create and participate in a transaction (local or distributed) with one or multiple participants.</span></span>  
   
-## System.Transactions 概觀  
- 由 <xref:System.Transactions> 命名空間的各項類別所提供的基礎結構，藉由支援 SQL Server、ADO.NET、訊息佇列 \(MSMQ\)，以及 Microsoft 分散式交易協調器 \(MSDTC\) 所啟始的交易，讓交易程式設計變得簡單又有效率。<xref:System.Transactions> 命名空間會提供根據 <xref:System.Transactions.Transaction> 類別的明確程式撰寫模型 \(Programming Model\)，以及使用 <xref:System.Transactions.TransactionScope> 類別的隱含程式撰寫模型，而其中交易會由基礎結構自動管理。如需如何使用這兩種模型來建立交易式應用程式的詳細資訊，請參閱[撰寫交易式應用程式 ](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)。  
+## <a name="overview-of-systemtransactions"></a><span data-ttu-id="ac2f0-105">System.Transactions 概觀</span><span class="sxs-lookup"><span data-stu-id="ac2f0-105">Overview of System.Transactions</span></span>  
+ <span data-ttu-id="ac2f0-106">由 <xref:System.Transactions> 命名空間的各項類別所提供的基礎結構，藉由支援 SQL Server、ADO.NET、訊息佇列 (MSMQ)，以及 Microsoft 分散式交易協調器 (MSDTC) 所啟始的交易，讓交易程式設計變得簡單又有效率。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-106">The infrastructure provided by the classes in the <xref:System.Transactions> namespace makes transactional programming simple and efficient by supporting transactions initiated in SQL Server, ADO.NET, Message Queuing (MSMQ), and the Microsoft Distributed Transaction Coordinator (MSDTC).</span></span> <span data-ttu-id="ac2f0-107"><xref:System.Transactions> 命名空間會提供根據 <xref:System.Transactions.Transaction> 類別的明確程式撰寫模型 (Programming Model)，以及使用 <xref:System.Transactions.TransactionScope> 類別的隱含程式撰寫模型，而其中交易會由基礎結構自動管理。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-107">The <xref:System.Transactions> namespace provides both an explicit programming model based on the <xref:System.Transactions.Transaction> class, as well as an implicit programming model using the <xref:System.Transactions.TransactionScope> class, in which transactions are automatically managed by the infrastructure.</span></span> <span data-ttu-id="ac2f0-108">如需有關如何建立交易式應用程式使用這兩個模型的詳細資訊，請參閱[撰寫異動應用程式](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-108">For more information on how to create a transactional application using these two models, see [Writing a Transactional Application](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).</span></span>  
   
- <xref:System.Transactions> 命名空間也提供讓您實作資源管理員的型別。資源管理員會管理交易中所使用的永久性資料或變動性資料，並和交易管理員一起合作以提供應用程式單元性 \(Atomicity\) 和隔離性 \(Isolation\) 的保證。<xref:System.Transactions> 基礎結構所提供的交易管理員可支援多個變動性資源或單一永久性資源的相關交易。如需實作資源管理員的詳細資訊，請參閱[實作資源管理員 ](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)。  
+ <span data-ttu-id="ac2f0-109"><xref:System.Transactions> 命名空間也提供讓您實作資源管理員的型別。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-109">The <xref:System.Transactions> namespace also provides types for you to implement a resource manager.</span></span> <span data-ttu-id="ac2f0-110">資源管理員會管理交易中所使用的永久性資料或變動性資料，並和交易管理員一起合作以提供應用程式單元性 (Atomicity) 和隔離性 (Isolation) 的保證。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-110">A resource manager manages durable or volatile data used in a transaction, and work in cooperation with the transaction manager to provide the application with a guarantee of atomicity and isolation.</span></span> <span data-ttu-id="ac2f0-111"><xref:System.Transactions> 基礎結構所提供的交易管理員可支援多個變動性資源或單一永久性資源的相關交易。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-111">The transaction manager that is provided by the <xref:System.Transactions> infrastructure supports transactions involving multiple volatile resources or a single durable resource.</span></span> <span data-ttu-id="ac2f0-112">如需實作資源管理員的詳細資訊，請參閱[實作資源管理員](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-112">For more information on implementing a resource manager, see [Implementing a Resource Manager](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md).</span></span>  
   
- 當其他永久性資源管理員向交易自行登記時，透過磁碟架構交易管理員 \(如 DTC\) 的協調，交易管理員在不需其他動作之下，也可以將本機交易擴大至分散式交易。<xref:System.Transactions> 基礎結構提供兩個提高效能的重要方法。  
+ <span data-ttu-id="ac2f0-113">當其他永久性資源管理員向交易自行登記時，透過磁碟架構交易管理員 (如 DTC) 的協調，交易管理員在不需其他動作之下，也可以將本機交易擴大至分散式交易。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-113">The transaction manager also transparently escalates local transactions to distributed transactions by coordinating with a disk-based transaction manager like the DTC, when an additional durable resource manager enlists itself with a transaction.</span></span> <span data-ttu-id="ac2f0-114"><xref:System.Transactions> 基礎結構提供兩個提高效能的重要方法。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-114">There are two key ways that the <xref:System.Transactions> infrastructure provides enhanced performance.</span></span>  
   
--   動態擴大規模，可確保在橫跨多個分散式資源進行交易時，<xref:System.Transactions> 基礎結構只使用 MSDTC。如需動態擴大規模的詳細資訊。請參閱[交易管理擴大規模案例 ](../../../../docs/framework/data/transactions/transaction-management-escalation.md)主題。  
+-   <span data-ttu-id="ac2f0-115">動態擴大規模，可確保在橫跨多個分散式資源進行交易時，<xref:System.Transactions> 基礎結構只使用 MSDTC。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-115">Dynamic Escalation, which ensures that the <xref:System.Transactions> infrastructure only engages the MSDTC when a transaction spans across multiple distributed resources.</span></span> <span data-ttu-id="ac2f0-116">如需動態擴大規模的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-116">For more information about dynamic escalation.</span></span> <span data-ttu-id="ac2f0-117">請參閱[交易管理擴大](../../../../docs/framework/data/transactions/transaction-management-escalation.md)主題。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-117">see [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md) topic.</span></span>  
   
--   可提升登記，可讓資源 \(例如資料庫\) 取得交易的擁有權 \(如果該資源是參與交易之唯一實體 \(Entity\) 的話\)。如果有需要，<xref:System.Transactions> 基礎結構仍可在稍後將交易管理擴大至 MSDTC。這會進一步減少 MSDTC 的使用。[使用單一階段交易認可和可提升單一階段告知進行最佳化 ](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md) 主題將進一步探討可提升登記。  
+-   <span data-ttu-id="ac2f0-118">可提升登記，可讓資源 (例如資料庫) 取得異動的擁有權 (如果該資源是參與異動之唯一實體 (Entity) 的話)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-118">Promotable Enlistments, which allows a resource, such as a database, to take ownership of the transaction if it is the only entity participating in the transaction.</span></span> <span data-ttu-id="ac2f0-119">如果有需要，<xref:System.Transactions> 基礎結構仍可在稍後將交易管理擴大至 MSDTC。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-119">Later, if needed, the <xref:System.Transactions> infrastructure can still escalate the management of the transaction to the MSDTC.</span></span> <span data-ttu-id="ac2f0-120">這會進一步減少 MSDTC 的使用。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-120">This further reduces the chance of using the MSDTC.</span></span> <span data-ttu-id="ac2f0-121">可提升登記涵蓋在本主題中深入[最佳化使用單一階段認可和可提升單一階段通知](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-121">Promotable Enlistments are covered in depth in the topic[Optimization using Single Phase Commit and Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).</span></span>  
   
- <xref:System.Transactions> 命名空間定義了三種信任層級 \- AllowPartiallyTrustedCallers \(APTCA\)、DistributedTransactionPermission \(DTP\)，以及完全信任，用以限制所公開的資源型別存取權限。如需各種信任層級的詳細資訊，請參閱[存取資源的安全性信任層級 ](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)。  
+ <span data-ttu-id="ac2f0-122"><xref:System.Transactions> 命名空間定義了三種信任層級 - AllowPartiallyTrustedCallers (APTCA)、DistributedTransactionPermission (DTP)，以及完全信任，用以限制所公開的資源型別存取權限。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-122">The <xref:System.Transactions> namespace defines three levels of trust - AllowPartiallyTrustedCallers (APTCA), DistributedTransactionPermission(DTP) and full trust - that restrict access to the types of resources it exposes.</span></span> <span data-ttu-id="ac2f0-123">如需各種信任層級，請參閱[安全性中存取資源的信任層級](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-123">For more information on the various trust levels, see [Security Trust Levels in Accessing Resources](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).</span></span>  
   
-## 本章節內容  
+## <a name="in-this-section"></a><span data-ttu-id="ac2f0-124">本節內容</span><span class="sxs-lookup"><span data-stu-id="ac2f0-124">In this section</span></span>  
   
-### 撰寫交易式應用程式  
- <xref:System.Transactions> 命名空間會提供兩種用來建立交易式應用程式的模型。[使用交易範圍實作隱含交易 ](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) 說明 <xref:System.Transactions> 命名空間如何藉由使用 <xref:System.Transactions.TransactionScope> 類別來支援建立隱含交易。  
+### <a name="writing-a-transactional-application"></a><span data-ttu-id="ac2f0-125">撰寫交易式應用程式</span><span class="sxs-lookup"><span data-stu-id="ac2f0-125">Writing A Transactional Application</span></span>  
+ <span data-ttu-id="ac2f0-126"><xref:System.Transactions> 命名空間會提供兩種用來建立交易式應用程式的模型。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-126">The <xref:System.Transactions> namespace provides two models for creating transactional applications.</span></span> <span data-ttu-id="ac2f0-127">[實作隱含交易使用交易範圍](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)描述如何<xref:System.Transactions>命名空間支援建立隱含的交易使用<xref:System.Transactions.TransactionScope>類別。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-127">[Implementing an Implicit Transaction using Transaction Scope](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) describes how the <xref:System.Transactions> namespace supports creating implicit transactions using the <xref:System.Transactions.TransactionScope> class.</span></span>  
   
- [使用 CommittableTransaction 實作明確交易 ](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) 說明 <xref:System.Transactions> 命名空間如何透過 <xref:System.Transactions.CommittableTransaction> 類別來支援建立明確的交易。  
+ <span data-ttu-id="ac2f0-128">[實作明確的交易中使用 CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)描述如何<xref:System.Transactions>命名空間支援建立使用外顯交易<xref:System.Transactions.CommittableTransaction>類別。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-128">[Implementing an Explicit Transaction using CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) describes how the <xref:System.Transactions> namespace supports creating explicit transactions using the <xref:System.Transactions.CommittableTransaction> class.</span></span>  
   
- 如需涵蓋撰寫交易式應用程式的其他主題，請參閱[撰寫交易式應用程式 ](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)。  
+ <span data-ttu-id="ac2f0-129">如需其他的主題，涵蓋撰寫異動應用程式，請參閱[撰寫異動應用程式](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-129">For additional topics covering writing a transactional application, see [Writing a Transactional Application](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).</span></span>  
   
-### 實作資源管理員  
- 若要實作可參與交易的資源管理員，請參閱[實作資源管理員 ](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)。本節涵蓋了資源登記、交易認可、故障復原，以及最佳化的最佳做法。
+### <a name="implementing-a-resource-manager"></a><span data-ttu-id="ac2f0-130">實作資源管理員</span><span class="sxs-lookup"><span data-stu-id="ac2f0-130">Implementing A Resource Manager</span></span>  
+ <span data-ttu-id="ac2f0-131">若要實作資源管理員可以參與交易中，請參閱[實作資源管理員](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-131">To implement a resource manager that can participate in a transaction, see [Implementing a Resource Manager](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md).</span></span> <span data-ttu-id="ac2f0-132">本節涵蓋了資源登記、交易認可、故障復原，以及最佳化的最佳做法。</span><span class="sxs-lookup"><span data-stu-id="ac2f0-132">This section covers the enlistment of a resource, committing a transaction, recovery after failure, and optimization best practices.</span></span>

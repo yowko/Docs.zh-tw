@@ -1,42 +1,44 @@
 ---
-title: "COLLECTION (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: COLLECTION (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8d078749d20740cdade323edab975ce221e72cfa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# COLLECTION (Entity SQL)
-COLLECTION 關鍵字只用於內嵌函式的定義。 集合函式是處理值的集合並產生純量輸出的函式。  
+# <a name="collection-entity-sql"></a><span data-ttu-id="88b05-102">COLLECTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="88b05-102">COLLECTION (Entity SQL)</span></span>
+<span data-ttu-id="88b05-103">COLLECTION 關鍵字只用於內嵌函式的定義。</span><span class="sxs-lookup"><span data-stu-id="88b05-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="88b05-104">集合函式是處理值的集合並產生純量輸出的函式。</span><span class="sxs-lookup"><span data-stu-id="88b05-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  
   
-## 語法  
+## <a name="syntax"></a><span data-ttu-id="88b05-105">語法</span><span class="sxs-lookup"><span data-stu-id="88b05-105">Syntax</span></span>  
   
 ```  
-  
 COLLECTION(type_definition)   
 ```  
   
-## 引數  
+## <a name="arguments"></a><span data-ttu-id="88b05-106">引數</span><span class="sxs-lookup"><span data-stu-id="88b05-106">Arguments</span></span>  
  `type_definition`  
- 傳回支援的型別、資料列或參考等集合的運算式。  
+ <span data-ttu-id="88b05-107">傳回支援的型別、資料列或參考等集合的運算式。</span><span class="sxs-lookup"><span data-stu-id="88b05-107">An expression that returns a collection of supported types, rows, or references.</span></span>  
   
-## 備註  
- 如需 COLLECTION 關鍵字的詳細資訊，請參閱 [類型定義](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)。  
+## <a name="remarks"></a><span data-ttu-id="88b05-108">備註</span><span class="sxs-lookup"><span data-stu-id="88b05-108">Remarks</span></span>  
+ <span data-ttu-id="88b05-109">如需 COLLECTION 關鍵字的詳細資訊，請參閱 [Type Definitions](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="88b05-109">For more information about the COLLECTION keyword, see [Type Definitions](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md).</span></span>  
   
-## 範例  
- 下列範例示範如何使用 COLLECTION 關鍵字將十進位的集合宣告為內嵌查詢函式的引數。  
+## <a name="example"></a><span data-ttu-id="88b05-110">範例</span><span class="sxs-lookup"><span data-stu-id="88b05-110">Example</span></span>  
+ <span data-ttu-id="88b05-111">下列範例示範如何使用 COLLECTION 關鍵字將十進位的集合宣告為內嵌查詢函式的引數。</span><span class="sxs-lookup"><span data-stu-id="88b05-111">The following sample shows how to use the COLLECTION keyword to declare a collection of decimals as an argument for an inline query function.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]  
   
-## 請參閱  
- [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="88b05-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="88b05-112">See Also</span></span>  
+ [<span data-ttu-id="88b05-113">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="88b05-113">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
