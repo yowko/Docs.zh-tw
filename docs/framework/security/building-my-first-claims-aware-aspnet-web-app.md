@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: aa25f163199652618e35399c6548a9864a17370a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)
-

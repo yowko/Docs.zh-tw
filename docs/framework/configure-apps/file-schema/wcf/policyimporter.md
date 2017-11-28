@@ -1,28 +1,36 @@
 ---
-title: "&lt;policyImporter&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;policyImporter&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 99bb7c6be02bad85792dfce9de1f6ef8ba1dcd17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;policyImporter&gt;
-指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 \(Assertion\)。  
+# <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
+指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。  
   
-## 語法  
+ \<系統。ServiceModel >  
+\<用戶端 >  
+\<中繼資料 >  
+\<policyImporters >  
+\<policyImporter >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <metadata>  
    <policyImporters>  
       <policyImporter type="string" />  
@@ -30,31 +38,31 @@ caps.handback.revision: 9
 </metadata>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
+|---------------|-----------------|  
 |`type`|此項目的型別。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<policyImporters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|指定所有原則匯入工具，這些工具會控制匯入有關繫結的自訂原則判斷提示 \(Assertion\)。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|指定所有原則匯入工具，這些工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。|  
   
-## 備註  
+## <a name="remarks"></a>備註  
  原則匯入工具是用來搜尋有關繫結功能的自訂原則判斷提示，以及附加可實作判斷提示所需要功能的自訂繫結項目。  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>   
- <xref:System.ServiceModel.Configuration.PolicyImporterElement>   
- <xref:System.ServiceModel.Configuration.MetadataElement>   
- <xref:System.ServiceModel.Description.MetadataImporter>   
- [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
+ <xref:System.ServiceModel.Configuration.PolicyImporterElement>  
+ <xref:System.ServiceModel.Configuration.MetadataElement>  
+ <xref:System.ServiceModel.Description.MetadataImporter>  
+ [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [用戶端](../../../../../docs/framework/wcf/feature-details/clients.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: effff61b424f914584ba1ffd963c100afbc3d745
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ab519f7881dd20c3fd9e2e08fef14591477d94a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的功能與行為。  
@@ -53,9 +51,8 @@ ms.lasthandoff: 09/05/2017
  [SQL Server 線上叢書](http://msdn.microsoft.com/library/ms130214.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [ADO.NET 中的資料類型對應](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
+ [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [ADO.NET 中的資料類型對應](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
-

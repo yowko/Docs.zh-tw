@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11d20e346bba9ae6300f88c5d5bf48f99ec27904
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5b4bcf0a7a7d23dd54fad36b341e3ed241975b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-names-and-pnrp-ids"></a>對等名稱和 PNRP 識別碼
 對等名稱代表通訊端點，可以是一部電腦、一位使用者、一個群組、一項服務，或是與可解析成 IPv6 位址之對等建立關聯的任何項目。 對等名稱解析通訊協定 (PNRP) 採用靜態上唯一的對等名稱來建立 PNRP 識別碼，以用來識別雲端成員。  
@@ -46,6 +40,5 @@ ms.lasthandoff: 08/21/2017
  這個 P2P 識別碼與服務位置的組合可讓單一電腦登錄多個 PNRP 識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Net.PeerToPeer.PeerName>   
+ <xref:System.Net.PeerToPeer.PeerName>  
  <xref:System.Net.PeerToPeer>
-

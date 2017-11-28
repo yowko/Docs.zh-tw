@@ -1,50 +1,54 @@
 ---
-title: "結構描述限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "結構描述限制"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 結構描述限制
-**GetSchema** 方法的第二個選擇性參數是用於限制傳回之結構描述資訊量的限制，會以字串陣列傳遞至 **GetSchema** 方法。  陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  
+# <a name="schema-restrictions"></a>結構描述限制
+第二個選擇性參數**GetSchema**方法會傳回用來限制的結構描述資訊量的限制，並將它傳遞至**GetSchema**方法的字串陣列. 陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  
   
- 例如，下表說明使用 .NET Framework Data Provider for SQL Server 之 "Tables" 結構描述集合所支援的限制。  SQL Server 結構描述集合的其他限制將列於本主題的結尾。  
+ 例如，下表說明使用 .NET Framework Data Provider for SQL Server 之 "Tables" 結構描述集合所支援的限制。 SQL Server 結構描述集合的其他限制將列於本主題的結尾。  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Name|TABLE\_NAME|3|  
-|TableType|@TableType|TABLE\_TYPE|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Name|TABLE_NAME|3|  
+|TableType|@TableType|TABLE_TYPE|4|  
   
-## 指定限制值  
- 若要使用 "Tables" 結構描述集合的其中一個限制，只需使用四個元素建立字串陣列，然後將符合限制數目的值置於元素中。  例如，若要將 **GetSchema** 方法所傳回的資料表限制為只有 "Sales" 結構描述中的資料表，請先將陣列的第二個元素設定為 "Sales"，再將它傳送至 **GetSchema** 方法。  
-  
-> [!NOTE]
->  `SqlClient` 及 `OracleClient` 的限制集合具有其他 `ParameterName` 資料行。  限制預設值資料行仍存在，用於回溯相容性，但目前會忽略它.  指定限制值時，應使用參數化查詢而不是字串取代，來將 SQL 資料隱碼攻擊的風險減至最小。  
+## <a name="specifying-restriction-values"></a>指定限制值  
+ 若要使用 "Tables" 結構描述集合的其中一個限制，只需使用四個元素建立字串陣列，然後將符合限制數目的值置於元素中。 例如，以限制資料表所傳回**GetSchema**只有"Sales"結構描述中的資料表的方法之前將其傳遞至設定為"Sales"陣列的第二個項目**GetSchema**方法。  
   
 > [!NOTE]
->  陣列中的項目數目必須少於或等於指定結構描述集合所支援的限制數目，否則將擲回 <xref:System.ArgumentException>。  可以少於限制的最大數目。  假設遺漏的限制為 Null \(未限制\)。  
+>  `SqlClient` 及 `OracleClient` 的限制集合具有其他 `ParameterName` 資料行。 限制預設值資料行仍存在，用於回溯相容性，但目前會忽略它. 指定限制值時，應使用參數化查詢而不是字串取代，來將 SQL 資料隱碼攻擊的風險減至最小。  
   
- 您可以藉由呼叫 **GetSchema** 方法 \(具有限制結構描述集合的名稱 Restrictions\)，來查詢 .NET Framework Managed 提供者，以判定支援的限制清單。  這將傳回 <xref:System.Data.DataTable>，其包含集合名稱、限制名稱、預設限制值及限制號碼的清單。  
+> [!NOTE]
+>  陣列中的項目數目必須少於或等於指定結構描述集合所支援的限制數目，否則將擲回 <xref:System.ArgumentException>。 可以少於限制的最大數目。 假設遺漏的限制為 Null (未限制)。  
   
-### 範例  
- 下列範例將示範如何使用 .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> 類別的 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 方法來擷取 **AdventureWorks** 範例資料庫中包含之所有資料表的結構描述資訊，並將傳回的資訊限制為只有 "Sales" 結構描述中的資料表：  
+ 您可以查詢.NET Framework managed 提供者以決定支援的限制清單，藉由呼叫**GetSchema**方法具有限制結構描述集合，也就是 「 限制 」 的名稱。 這將傳回 <xref:System.Data.DataTable>，其包含集合名稱、限制名稱、預設限制值及限制號碼的清單。  
   
- \[Visual Basic\]  
+### <a name="example"></a>範例  
+ 下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>方法的.NET Framework Data Provider for SQL Server<xref:System.Data.SqlClient.SqlConnection>類別來擷取所有所包含的資料表結構描述資訊**AdventureWorks**範例資料庫，以及限制的資訊傳回至只有"Sales"結構描述中的資料表：  
   
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -76,9 +80,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -138,136 +140,136 @@ class Program
 }  
 ```  
   
-## SQL Server 結構描述限制  
+## <a name="sql-server-schema-restrictions"></a>SQL Server 結構描述限制  
  下表將列出 SQL Server 結構描述集合的限制。  
   
-### 使用者  
+### <a name="users"></a>使用者  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|User\_Name|@Name|name|1|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|User_Name|@Name|name|1|  
   
-### 資料庫  
+### <a name="databases"></a>資料庫  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
+|----------------------|--------------------|-------------------------|------------------------|  
 |名稱|@Name|名稱|1|  
   
-### 資料表  
+### <a name="tables"></a>資料表  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Name|TABLE\_NAME|3|  
-|TableType|@TableType|TABLE\_TYPE|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Name|TABLE_NAME|3|  
+|TableType|@TableType|TABLE_TYPE|4|  
   
-### 資料行  
-  
-|限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Table|TABLE\_NAME|3|  
-|Column|@Column|COLUMN\_NAME|4|  
-  
-### StructuredTypeMembers  
+### <a name="columns"></a>資料行  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Table|TABLE\_NAME|3|  
-|Column|@Column|COLUMN\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Table|TABLE_NAME|3|  
+|資料行|@Column|COLUMN_NAME|4|  
   
-### 檢視  
-  
-|限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Table|TABLE\_NAME|3|  
-  
-### ViewColumns  
+### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|VIEW\_CATALOG|1|  
-|需要的|@Owner|VIEW\_SCHEMA|2|  
-|資料表|@Table|VIEW\_NAME|3|  
-|Column|@Column|COLUMN\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Table|TABLE_NAME|3|  
+|資料行|@Column|COLUMN_NAME|4|  
   
-### ProcedureParameters  
-  
-|限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|SPECIFIC\_CATALOG|1|  
-|需要的|@Owner|SPECIFIC\_SCHEMA|2|  
-|名稱|@Name|SPECIFIC\_NAME|3|  
-|參數|@Parameter|PARAMETER\_NAME|4|  
-  
-### 程序  
+### <a name="views"></a>檢視  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|SPECIFIC\_CATALOG|1|  
-|需要的|@Owner|SPECIFIC\_SCHEMA|2|  
-|名稱|@Name|SPECIFIC\_NAME|3|  
-|類型|@Type|ROUTINE\_TYPE|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Table|TABLE_NAME|3|  
   
-### IndexColumns  
-  
-|限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|db\_name\(\)|1|  
-|需要的|@Owner|user\_name\(\)|2|  
-|資料表|@Table|o.  name|3|  
-|ConstraintName|@ConstraintName|x.  name|4|  
-|Column|@Column|c.   name|5|  
-  
-### Indexes  
+### <a name="viewcolumns"></a>ViewColumns  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|db\_name\(\)|1|  
-|需要的|@Owner|user\_name\(\)|2|  
-|資料表|@Table|o.  name|3|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|VIEW_CATALOG|1|  
+|Owner|@Owner|VIEW_SCHEMA|2|  
+|資料表|@Table|VIEW_NAME|3|  
+|資料行|@Column|COLUMN_NAME|4|  
   
-### UserDefinedTypes  
-  
-|限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|assembly\_name|@AssemblyName|組件。  name|1|  
-|udt\_name|@UDTName|types.assembly\_class|2|  
-  
-### ForeignKeys  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|CONSTRAINT\_CATALOG|1|  
-|需要的|@Owner|CONSTRAINT\_SCHEMA|2|  
-|資料表|@Table|TABLE\_NAME|3|  
-|名稱|@Name|CONSTRAINT\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
+|Owner|@Owner|SPECIFIC_SCHEMA|2|  
+|名稱|@Name|SPECIFIC_NAME|3|  
+|參數|@Parameter|PARAMETER_NAME|4|  
   
-## SQL Server 2008 結構描述限制  
- 下表將列出 SQL Server 2008 結構描述集合的限制。  從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，這些限制便有效。  舊版 .NET Framework 和 SQL Server 不支援它們。  
-  
-### ColumnSetColumns  
+### <a name="procedures"></a>程序  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Table|TABLE\_NAME|3|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
+|Owner|@Owner|SPECIFIC_SCHEMA|2|  
+|名稱|@Name|SPECIFIC_NAME|3|  
+|類型|@Type|ROUTINE_TYPE|4|  
   
-### AllColumns  
+### <a name="indexcolumns"></a>IndexColumns  
   
 |限制名稱|參數名稱|預設限制值|限制號碼|  
-|----------|----------|-----------|----------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|需要的|@Owner|TABLE\_SCHEMA|2|  
-|資料表|@Table|TABLE\_NAME|3|  
-|Column|@Column|COLUMN\_NAME|4|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|db_name()|1|  
+|Owner|@Owner|user_name()|2|  
+|資料表|@Table|o.name|3|  
+|ConstraintName|@ConstraintName|x.name|4|  
+|資料行|@Column|c.name|5|  
   
-## 請參閱  
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+### <a name="indexes"></a>Indexes  
+  
+|限制名稱|參數名稱|預設限制值|限制號碼|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|db_name()|1|  
+|Owner|@Owner|user_name()|2|  
+|資料表|@Table|o.name|3|  
+  
+### <a name="userdefinedtypes"></a>UserDefinedTypes  
+  
+|限制名稱|參數名稱|預設限制值|限制號碼|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|assembly_name|@AssemblyName|assemblies.name|1|  
+|udt_name|@UDTName|types.assembly_class|2|  
+  
+### <a name="foreignkeys"></a>ForeignKeys  
+  
+|限制名稱|參數名稱|預設限制值|限制號碼|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
+|Owner|@Owner|CONSTRAINT_SCHEMA|2|  
+|資料表|@Table|TABLE_NAME|3|  
+|名稱|@Name|CONSTRAINT_NAME|4|  
+  
+## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 結構描述限制  
+ 下表將列出 SQL Server 2008 結構描述集合的限制。 從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，這些限制便有效。 舊版 .NET Framework 和 SQL Server 不支援它們。  
+  
+### <a name="columnsetcolumns"></a>ColumnSetColumns  
+  
+|限制名稱|參數名稱|預設限制值|限制號碼|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Table|TABLE_NAME|3|  
+  
+### <a name="allcolumns"></a>AllColumns  
+  
+|限制名稱|參數名稱|預設限制值|限制號碼|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Owner|@Owner|TABLE_SCHEMA|2|  
+|資料表|@Table|TABLE_NAME|3|  
+|資料行|@Column|COLUMN_NAME|4|  
+  
+## <a name="see-also"></a>另請參閱  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 091daa89f4546136980963f58cdc57efcc832279
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-features"></a>WIF 功能
 -   [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
@@ -34,4 +32,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Windows Identity Foundation](../../../docs/framework/security/index.md)
-

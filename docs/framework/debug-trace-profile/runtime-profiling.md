@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance counters
 - common language runtime, profiling
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9589e838eacd758d43ac9ceb1442d217e6406a03
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 876635cfe0349c734a61dcc827a6f9594bb2a5d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -83,4 +76,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)
-

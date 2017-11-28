@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
 在信賴憑證者應用程式中，授權會判斷哪些是已驗證的識別可以存取的資源，以及可以針對這些資源執行哪些作業。 不適當或弱式授權會導致資訊洩露以及資料遭竄改。 本主題概述可使用 Windows Identity Foundation (WIF) 和 Security Token Service (STS) (例如 Microsoft Azure Access Control Service (ACS)) 為宣告感知 ASP.NET Web 應用程式和服務實作授權的方式。  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/21/2017
 5.  如果結果為 true 則授與存取權限，如果為 false 則拒絕存取。 例如，規則可能是使用者必須年滿 21 歲，並且住在華盛頓州。  
   
  如果您希望利用外部的決策邏輯來處理應用程式中的宣告式授權，<xref:System.Security.Claims.ClaimsAuthorizationManager> 就很有用。 ClaimsAuthorizationManager 是隨附於 .NET 4.5 的 WIF 元件， 可讓您擷取傳入要求並實作您選擇的邏輯，根據傳入宣告制定授權決策。 如果必須變更授權邏輯，這就變得很重要。 在這種情況下，使用 ClaimsAuthorizationManager 既不會影響應用程式的完整性，還可以降低變更結果導致應用程式錯誤的可能性。 若要深入了解如何使用 ClaimsAuthorizationManager 實作宣告型存取控制，請參閱[作法：使用 WIF 與 ACS 在宣告感知 ASP.NET 應用程式中實作宣告授權](http://go.microsoft.com/fwlink/?LinkID=247446)。
-

@@ -1,99 +1,103 @@
 ---
-title: "&lt;ThrowUnobservedTaskExceptions&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<ThrowUnobservedTaskExceptions> 項目"
-  - "ThrowUnobservedTaskExceptions 項目"
+title: "&lt;ThrowUnobservedTaskExceptions&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ThrowUnobservedTaskExceptions element
+- <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d171c2058a79476d99c5952cc6a697f126af81c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;ThrowUnobservedTaskExceptions&gt; 項目
-指定未處理的工作例外狀況是否應該結束執行中處理序。  
+# <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt;項目
+指定未處理的工作例外狀況是否應終止執行中的處理序。  
   
-## 語法  
+ \<configuration>  
+\<執行階段 >  
+\<ThrowUnobservedTaskExceptions >  
   
-```vb  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <ThrowUnobservedTaskExceptions  
    enabled="true|false"/>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
-|--------|--------|  
-|`enabled`|必要屬性。<br /><br /> 指定未處理的工作例外狀況是否應該結束執行中處理序。|  
+|屬性|描述|  
+|---------------|-----------------|  
+|`enabled`|必要屬性。<br /><br /> 指定的例外狀況處理的工作是否終止執行中處理序。|  
   
-## 啟用屬性  
+## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|說明|  
-|-------|--------|  
-|`false`|不會因為未處理的工作例外狀況而結束執行中的處理序。  這是預設值。|  
-|`true`|因為未處理的工作例外狀況而結束執行中的處理序。|  
+|-----------|-----------------|  
+|`false`|不會終止例外狀況處理的工作執行的處理序。 這是預設值。|  
+|`true`|終止執行中處理序例外狀況處理的工作。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`runtime`|包含與執行階段初始化選項有關的資訊。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`runtime`|包含有關執行階段初始化選項的資訊。|  
 |||  
   
-## 備註  
- 如果與 <xref:System.Threading.Tasks.Task> 相關的例外狀況未被檢視，就沒有 <xref:System.Threading.Tasks.Task.Wait%2A> 作業，也不會附加父代，還有未讀取工作例外狀況的 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=fullName> 屬性視為未觀察。  
+## <a name="remarks"></a>備註  
+ 如果相關聯的例外狀況<xref:System.Threading.Tasks.Task>發現，沒有任何<xref:System.Threading.Tasks.Task.Wait%2A>未連接父代的作業，而<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>屬性未讀取的工作例外狀況會被視為未觀察到。  
   
- 在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]中，根據預設，如果內含未觀察例外狀況的 <xref:System.Threading.Tasks.Task> 已進行記憶體回收，則完成項擲回例外狀況並結束處理序。  處理序終止取決於記憶體回收和結束時間。  
+ 在[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，依預設，如果<xref:System.Threading.Tasks.Task>具有未觀察到的例外是記憶體回收中，完成項擲回例外狀況和終止處理序。 終止處理序取決於記憶體回收和最終處理的時機。  
   
- 為了方便開發人員撰寫以工作為基礎的非同步程式碼， [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 變更未觀察的例外狀況的預設行為。  未觀察的例外狀況仍然會引發 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 事件，不過根據預設，處理序不會結束。  相反地，例外狀況會在引發事件後忽略，不論事件處理常式是否觀察例外狀況。  
+ 若要簡化開發人員撰寫非同步程式碼，根據工作，[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]變成未觀察到的例外狀況的這個預設行為。 未觀察到的例外狀況，仍然會使<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>會引發事件，但根據預設，處理程序不會終止。 相反地之後會引發事件，不論是否事件處理常式會觀察到的例外狀況,，則會忽略例外狀況。  
   
- 在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]中，您可以在應用程式組態檔中使用 [\<ThrowUnobservedTaskExceptions\> 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) 啟用[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 行為擲回例外狀況。  
+ 在[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]，您可以使用[ \<ThrowUnobservedTaskExceptions > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)應用程式組態檔中啟用[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]擲回例外狀況的行為。  
   
- 您可以在下列其中一個方式，以指定例外狀況行為：  
+ 您也可以下列方式之一，指定例外狀況行為：  
   
--   藉由設定環境變數 `COMPlus_ThrowUnobservedTaskExceptions`\(`set COMPlus_ThrowUnobservedTaskExceptions=1`\) 。  
+-   設定環境變數`COMPlus_ThrowUnobservedTaskExceptions`(`set COMPlus_ThrowUnobservedTaskExceptions=1`)。  
   
--   藉由在 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework 索引鍵設定註冊 DWORD 值 ThrowUnobservedTaskExceptions \= 1。  
+-   藉由設定登錄 DWORD 值 ThrowUnobservedTaskExceptions = 1 中 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\。NETFramework 索引鍵。  
   
-## 範例  
- 下列範例示範如何使用應用程式組態檔，來啟用擲回工作中的例外狀況。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何啟用擲回的例外狀況，在工作中使用應用程式組態檔。  
   
-```  
+```xml  
 <configuration>   
     <runtime>   
         <ThrowUnobservedTaskExceptions enabled="true"/>   
     </runtime>   
 </configuration>  
-  
 ```  
   
-## 範例  
- 下列範例示範未觀察的例外狀況如何從工作擲回。  程式碼必須以發行程式執行來正確運作。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何從工作擲回未觀察到的例外狀況。 程式碼必須執行以發行的程式正常運作。  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

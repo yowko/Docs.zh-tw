@@ -1,48 +1,46 @@
 ---
-title: "組件繫結重新導向安全性使用權限 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "組件 [.NET Framework], 繫結重新導向"
-  - "並存執行, 組件繫結重新導向"
+title: "組件繫結重新導向安全性使用權限"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- side-by-side execution, assembly binding redirection
+- assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ddaf9965a3b3b5d6171a643b198db93309afad48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 組件繫結重新導向安全性使用權限
-在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。  這適用於 .NET Framework 組件和協力廠商組件的重新導向。  使用權限的授與方式是，在 [SecurityPermission Class](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic)上設定 [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) 旗標。  Managed 組件預設沒有任何使用權限。  
+# <a name="assembly-binding-redirection-security-permission"></a>組件繫結重新導向安全性使用權限
+在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由設定授與權<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 根據預設，managed 組件具有任何權限。  
   
- 安全性使用權限是授與給在受信任區域 \(本機電腦\) 和內部網路區域中執行的應用程式。  在網際網路區域中執行的應用程式則受到嚴格禁止，不能執行組件繫結重新導向。  
+ 安全性權限會授與信任的區域 （本機電腦） 和內部網路區域中執行的應用程式。 網際網路區域中執行的應用程式絕對禁止執行組件繫結重新導向。  
   
- 如果在元件發行者控制的發行者原則檔或是系統管理員控制的電腦組態檔中執行組件重新導向，就不需要任何使用權限。  然而，應用程式需要使用權限，來明確忽略於應用程式組態檔中使用[\<publisherPolicy apply\="no"\/\>](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) 項目的發行者原則。  
+ 如果由元件發行者的發行者原則檔中或在電腦組態檔由系統管理員所控制的方式執行組件重新導向，則不需要權限。 不過，需要的權限來明確忽略發行者原則使用的應用程式[ \<p 套用 ="否"/ >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)應用程式組態檔中的項目。  
   
- 以下的表格顯示 **BindingRedirects** 旗標的預設安全性設定。  
+ 下表顯示的預設安全性設定**方式是**旗標。  
   
-|區域|BindingRedirects 旗標設定|  
-|--------|---------------------------|  
-|受信任區域 \(本機電腦\)|**ON**|  
+|區域|設定的方式是旗標|  
+|----------|-----------------------------------|  
+|受信任的區域 （本機電腦）|**ON**|  
 |內部網路區域|**ON**|  
-|網際網路區域|**OFF**|  
-|未受信任區域|**OFF**|  
+|網際網路區域|**關閉**|  
+|不受信任的區域|**關閉**|  
   
- 系統管理員可以變更這些安全性設定，以支援或限制給定電腦上的特定案例。  沒有任何工具可以變更 **BindingRedirects** 旗標的預設設定；系統管理員必須手動編輯使用者電腦上的 Security.config 檔案。  
+ 系統管理員可以變更這些安全性設定，以支援或限制特定電腦的特定案例。 沒有變更工具**方式是**旗標預設值，從設定系統管理員必須手動編輯使用者的電腦上的 Security.config 檔。  
   
-## 請參閱  
- [Publisher Policy Files and Side\-by\-Side Execution](http://msdn.microsoft.com/zh-tw/97a042be-4d72-40c3-91c0-76fd36bdf133)   
- [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)   
+## <a name="see-also"></a>另請參閱  
+ [發行者原則檔和-並存執行](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)

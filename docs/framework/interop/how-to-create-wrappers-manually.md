@@ -5,28 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- wrappers, creating manually
+helpviewer_keywords: wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 218e92b379d562be66c72cb731654907766f2ec4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19f605203a79f8435d414fb3c2eb7041c9824640
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-wrappers-manually"></a>如何：手動建立包裝函式
 若您決定在 Managed 原始程式碼中手動宣告 COM 類型，現有的介面定義語言 (IDL) 檔或類型程式庫，將會是最佳的啟動位置。 沒有 IDL 檔案或無法產生類型程式庫檔案時，可建立 Managed 宣告並將所產生的組件匯出至類型程式庫，進而模擬 COM類型。  
@@ -101,9 +93,9 @@ namespace SAServer
  }   
  [ComImport]  
  [Guid("116CCA1E-7E39-4515-9849-90790DA6431E")]  
- [ClassInterface(ClassInterfaceType.None)]   
+ [ClassInterface(ClassInterfaceType.None)]  
  [TypeLibType(TypeLibTypeFlags.FCanCreate)]  
- public class SATest : ISATest   
+ public class SATest : ISATest  
  {  
   [DispId(1)]  
   [MethodImpl(MethodImplOptions.InternalCall,   
@@ -115,10 +107,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)   
- [COM 資料類型](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)   
- [如何：編輯 Interop 組件](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)   
- [類型程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe (型別程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
+ [自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [COM 資料類型](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [如何： 編輯 Interop 組件](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
-
