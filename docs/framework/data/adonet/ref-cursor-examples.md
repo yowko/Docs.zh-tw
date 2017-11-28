@@ -1,37 +1,40 @@
 ---
-title: "REF CURSOR 範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "REF CURSOR 範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 112f544531bfeed3aa791fa9215e316f05f99169
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# REF CURSOR 範例
+# <a name="ref-cursor-examples"></a>REF CURSOR 範例
 REF CURSOR 範例包括下列三個 Microsoft Visual Basic 範例，示範如何使用 REF CURSOR：  
   
-|範例|描述|  
-|--------|--------|  
-|[OracleDataReader 中的 REF CURSOR 參數](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|此範例執行可傳回 REF CURSOR 參數的 PL\/SQL 預存程序，並以 <xref:System.Data.OracleClient.OracleDataReader> 讀取值。|  
-|[使用 OracleDataReader 從多個 REF CURSOR 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|此範例執行可傳回兩個 REF CURSOR 參數的 PL\/SQL 預存程序，並使用 **OracleDataReader** 來讀取值。|  
-|[使用一個或多個 REF CURSOR 來填入 DataSet](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|此範例執行可傳回兩個 REF CURSOR 參數的 PL\/SQL 預存程序，並使用傳回的資料列填入 <xref:System.Data.DataSet>。|  
+|範例|說明|  
+|------------|-----------------|  
+|[OracleDataReader 中的 REF CURSOR 參數](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|此範例執行可傳回 REF CURSOR 參數的 PL/SQL 預存程序，並以 <xref:System.Data.OracleClient.OracleDataReader> 讀取值。|  
+|[從使用 OracleDataReader 的多個 REF Cursor 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|此範例會執行傳回兩個 REF CURSOR 參數，並讀取值使用的 PL/SQL 預存程序**OracleDataReader**。|  
+|[填入資料集使用其中一或多個 REF Cursor](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|此範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列填入 <xref:System.Data.DataSet>。|  
   
- 若要使用這些範例，您可能需要建立 Oracle 資料表，且必須建立 PL\/SQL 封裝及封裝主體。  
+ 若要使用這些範例，您可能需要建立 Oracle 資料表，且必須建立 PL/SQL 封裝及封裝主體。  
   
-## 建立 Oracle 資料表  
- 這些範例使用定義在 Oracle Scott\/Tiger 結構描述中的資料表。  大多數 Oracle 安裝都包含 Oracle Scott\/Tiger 結構描述。  如果此結構描述不存在，則可使用 {OracleHome}\\rdbms\\admin\\scott.sql 中的 SQL 命令檔案，來建立這些範例所使用的資料表及索引。  
+## <a name="creating-the-oracle-tables"></a>建立 Oracle 資料表  
+ 這些範例使用定義在 Oracle Scott/Tiger 結構描述中的資料表。 大多數 Oracle 安裝都包含 Oracle Scott/Tiger 結構描述。 如果此結構描述不存在，則可使用 {OracleHome}\rdbms\admin\scott.sql 中的 SQL 命令檔案，來建立這些範例所使用的資料表及索引。  
   
-## 建立 Oracle 封裝及封裝主體  
- 這些範例需要伺服器上的下列 PL\/SQL 封裝及封裝主體。  在 Oracle 伺服器上建立下列 Oracle 封裝。  
+## <a name="creating-the-oracle-package-and-package-body"></a>建立 Oracle 封裝及封裝主體  
+ 這些範例需要伺服器上的下列 PL/SQL 封裝及封裝主體。 在 Oracle 伺服器上建立下列 Oracle 封裝。  
   
 ```  
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -86,6 +89,6 @@ END CURSPKG;
 /  
 ```  
   
-## 請參閱  
- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [Oracle REF Cursor](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

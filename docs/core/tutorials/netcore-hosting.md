@@ -1,5 +1,5 @@
 ---
-title: "裝載 .NET Core | Microsoft Docs"
+title: "裝載 .NET Core"
 description: "從機器碼裝載 .NET Core 執行階段"
 keywords: ".NET, .NET Core, 裝載, 裝載 .NET Core"
 author: mjrousos
@@ -9,21 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="hosting-net-core"></a>裝載 .NET Core
 
 如同所有 Managed 程式碼，.NET Core 應用程式是由主機執行。 該主機會負責啟動執行階段 (包括 JIT 和記憶體回收行程等元件)、建立 AppDomain 及叫用 Managed 進入點。
 
 裝載 .NET Core 執行階段是進階案例，在大多數情況下，由於 .NET Core 建置程序會提供預設主機來執行 .NET Core 應用程式，因此 .NET Core 開發人員不需要擔心裝載相關事宜。 不過在某些特殊情況下，明確裝載 .NET Core 執行階段可能會很有用，像是用來叫用原生處理序中的 Managed 程式碼，或是用來增加對執行階段運作方式的更多控制。
 
-本文概述從機器碼啟動 .NET Core 執行階段、建立初始應用程式定義域 (@System.AppDomain) 及在其中執行 Managed 程式碼的必要步驟。
+本文概述從機器碼啟動 .NET Core 執行階段、建立初始應用程式定義域 (<xref:System.AppDomain>) 及在其中執行 Managed 程式碼的必要步驟。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -31,11 +29,11 @@ ms.lasthandoff: 08/14/2017
 
 您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://www.microsoft.com/net/core) 並[建置一個小型的.NET Core 測試應用程式](../../core/tutorials/with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
 
-本教學課程及其[相關範例](https://github.com/dotnet/docs/tree/master/samples/core/hosting)會建立 Windows 主機，但請同時參閱本文結尾有關裝載於 Unix 的注意事項。
+本教學課程及其相關範例會建置 Windows 主機；請參閱本文結尾有關裝載於 UNIX 的注意事項。
 
 ## <a name="creating-the-host"></a>建立主機
 
-[.NET Core 範例](https://github.com/dotnet/docs/tree/master/samples/core/hosting)存放庫中提供示範本文所述步驟的範例主機。 範例 host.cpp 檔案中的註解清楚地將本教學課程中的編號步驟關聯到範例中的執行位置。
+dotnet/docs GitHub 存放庫中提供示範本文所述步驟的[範例主機](https://github.com/dotnet/docs/tree/master/samples/core/hosting)。 範例 *host.cpp* 檔案中的註解清楚地將本教學課程中的編號步驟關聯到範例中的執行位置。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 請記住，範例主機是為了用於學習，因此錯誤檢查較不嚴謹，並設計成可讀性比效率更重要。 如需更多真實世界主機範例，請參閱 [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 存放庫。 特別是 [CoreRun 主機](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)，這是適合在讀完較簡單範例之後進行研究的一般用途主機。
 
@@ -110,9 +108,9 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
   domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",    // Target managed assembly
+  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
   L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                    // Target entry point (static method)
+  L"Main",                                  // Target entry point (static method)
   (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);

@@ -1,58 +1,66 @@
 ---
-title: "&lt;tokenReplayDetection&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;tokenReplayDetection&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
-caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f95d200f74621a40d2987acf68bc554df8d17ab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;tokenReplayDetection&gt;
-啟用語彙基元重新執行偵測，並指定語彙基元的到期時間。  
+# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+啟用權杖重新執行偵測，並指定權杖的到期時間。  
   
-## 語法  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<tokenReplayDetection >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
-    </tokenReplayDetection>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
+    </tokenReplayDetection>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 類型  
+## <a name="type"></a>類型  
  <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement>  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|enabled|值，指出是否已啟用語彙基元重新執行偵測。 「 真正 」 語彙基元，以便重新執行偵測。|  
-|expirationPeriod|A <xref:System.TimeSpan> ，指定最大項目會被視為過期，並從快取中移除之前的時間量。  如需有關如何指定<xref:System.TimeSpan>的值，請參閱[Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues)。|  
+|---------------|-----------------|  
+|enabled|值，指定是否啟用權杖重新執行偵測。"true"以啟用權杖重新執行偵測。|  
+|expirationPeriod|A<xref:System.TimeSpan>指定的最大項目會被視為已過期，且從快取中移除之前的時間量。  如需有關如何指定<xref:System.TimeSpan>值，請參閱[Timespan 值](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
   
-### 子項目  
- None  
+### <a name="child-elements"></a>子元素  
+ 無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級識別設定。|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供設定一系列安全性語彙基元的處理常式。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服務層級身分識別設定。|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供組態集合的安全性權杖處理常式。|  
   
-## 備註  
- A `<tokenReplayDetection>`項目，請指定在服務層級下`<identityConfiguration>`項目或安全性語彙基元的處理常式集合下的層級上`<securityTokenHandlerConfiguration>`項目。  在 \[語彙基元的處理常式集合的設定會覆寫所指定的服務。  
+## <a name="remarks"></a>備註  
+ A`<tokenReplayDetection>`元素可以指定在服務層級下`<identityConfiguration>`項目或安全性權杖處理常式集合層級下`<securityTokenHandlerConfiguration>`項目。 權杖處理常式集合上的設定會覆寫在服務上指定。  
   
- 指定的型別語彙基元的重新顯示快取的[\<tokenReplayCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)項目。
+ 權杖重新執行快取的類型，由指定[ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)項目。

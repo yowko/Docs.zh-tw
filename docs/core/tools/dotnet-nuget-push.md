@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -107,4 +106,3 @@ ms.lasthandoff: 08/14/2017
 將目前目錄中的所有 *.nupkg* 檔案推送至預設推送來源，並以最詳細的方式傳回命令執行結果：
 
 `dotnet nuget push *.nupkg --verbosity detailed`
-

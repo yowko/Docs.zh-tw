@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
 ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-in-depth"></a>深入了解非同步
 
 撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。本文說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
@@ -154,4 +152,3 @@ public async Task<int> CalculateResult(InputData data)
 [C# 中的非同步程式設計](~/docs/csharp/async.md)   
 [F# 中的非同步程式設計](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
 [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

@@ -1,23 +1,21 @@
 ---
-title: ".NET Core CLI 擴充性模型 | Microsoft Docs"
-description: ".NET Core CLI 擴充性模型"
+title: ".NET Core CLI 擴充性模型"
+description: "了解如何擴充命令列介面 (CLI) 工具。"
 keywords: "CLI, 擴充性, 自訂命令, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 02/06/2017
+ms.date: 04/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
+ms.openlocfilehash: a8f70505d1bb043ab21f87edbb5aa2d9f18a7071
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
-ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
 本文件涵蓋不同的方式可擴充 .NET Core 命令列介面 (CLI) 工具，並說明可驅動其中所有項目的案例。
@@ -49,6 +47,8 @@ CLI 工具可以透過三種主要方式進行擴充：
 
 ### <a name="consuming-per-project-tools"></a>使用個別專案工具
 使用這些工具，需要您針對要使用的每個工具在專案檔中新增 `<DotNetCliToolReference>` 項目。 在 `<DotNetCliToolReference>` 項目內部，您會參考工具所在的套件，並指定您需要的版本。 執行 [`dotnet restore`](dotnet-restore.md) 之後，會還原工具和其相依性。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 針對需要載入專案建置輸出來執行的工具，通常在專案檔中的一般相依性下方會列出另一個相依性。 因為 CLI 使用 MSBuild 作為其建置引擎，所以建議您將工具的這些部分撰寫為自訂 MSBuild [目標](/visualstudio/msbuild/msbuild-targets)及[工作](/visualstudio/msbuild/msbuild-tasks)，這樣它們就可以參與整體建置程序。 此外，它們可以輕鬆取得透過建置所產生的任何與全部資料，例如輸出檔的位置、目前正在建置的組態等。這項資訊全部會變成一組可從任何目標讀取的 MSBuild 屬性。 您稍後會在此文件中看到如何使用 NuGet 新增自訂目標。
 
@@ -165,4 +165,3 @@ echo "Hello World"
 在 macOS 上，我們可以將這個指令碼儲存為 `dotnet-hello`，並使用 `chmod +x dotnet-hello` 設定其可執行位元。 我們接著可以使用 `ln -s <full_path>/dotnet-hello /usr/local/bin/` 命令，以在 `/usr/local/bin` 中建立其符號連結。 這可能會使用 `dotnet hello` 語法來叫用此命令。
 
 在 Windows 中，可以將這個指令碼儲存為 `dotnet-hello.cmd`，並將它放在系統路徑中的位置 (也可以將它新增至已在路徑中的資料夾)。 在此之後，您只要使用 `dotnet hello`，就能執行這個範例。
-

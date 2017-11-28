@@ -1,25 +1,21 @@
 ---
 title: "如何：計算中繼值 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 93aa3683315b88c0ca85abc0eaff3efc8a15452a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17f3deb790f48173fbef189fcc8f4fd569f33036
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>如何：計算中繼值 (C#)
 這個範例顯示如何計算可用於排序、篩選與選取的中繼值。  
@@ -81,4 +77,3 @@ foreach (decimal ex in extensions)
   
 ## <a name="see-also"></a>另請參閱  
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

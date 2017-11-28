@@ -1,30 +1,28 @@
 ---
-title: "Property array index is not valid | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID381"
-dev_langs: 
-  - "VB"
+title: "無效的屬性陣列索引"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID381
 ms.assetid: 77c14680-bc61-4f46-9529-bb9fe366c18e
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ec666ee6c08d17394f1e2a19950e6782150f89d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Property array index is not valid
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-提供的值對於屬性 \(Property\) 陣列索引而言無效。  
+# <a name="property-array-index-is-not-valid"></a>無效的屬性陣列索引
+所提供的值不是有效的屬性陣列索引。  
   
-### 若要更正這個錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   請查閱元件的參考文件，以確認您的索引是否在指定屬性 \(Property\) 的有效範圍之內。  
+-   請檢查元件的文件，請確定您的索引已指定之屬性的有效範圍內。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

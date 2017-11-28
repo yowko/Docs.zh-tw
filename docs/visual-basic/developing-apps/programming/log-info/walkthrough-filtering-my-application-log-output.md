@@ -1,44 +1,25 @@
 ---
 title: "篩選 My.Application.Log 輸出 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。  
@@ -52,7 +33,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  加入名為 "Button1 to Form1" 的按鈕。  
   
-3.  在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件處理常式中，加入下列程式碼：  
+3.  在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件處理常式中新增下列程式碼：  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
@@ -73,10 +54,10 @@ ms.lasthandoff: 07/28/2017
     > [!NOTE]
     >  根據預設，應用程式會在應用程式關閉時清除記錄檔輸出。  
   
-     在上面的範例中，第二個 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法呼叫和 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法呼叫會產生記錄檔輸出，而第一個和最後一個 `WriteEntry` 方法呼叫則否。 這是因為 `WriteEntry` 和 `WriteException` 的嚴重性層級為 "Information" 和 "Error"，兩者皆為 `My.Application.Log` 物件的預設記錄檔篩選所允許。 不過，具有 "Start" 和 "Stop" 嚴重性層級的事件會阻礙記錄檔輸出的產生。  
+     在上述範例，第二次呼叫 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 方法和呼叫 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 方法會產生記錄輸出，而第一次和最後一次呼叫 `WriteEntry` 方法則不會。 這是因為 `WriteEntry` 和 `WriteException` 的嚴重性層級為 "Information" 和 "Error"，兩者皆為 `My.Application.Log` 物件的預設記錄檔篩選所允許。 不過，具有 "Start" 和 "Stop" 嚴重性層級的事件會阻礙記錄檔輸出的產生。  
   
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>篩選所有 My.Application.Log 接聽程式  
- `My.Application.Log` 物件會使用 <xref:System.Diagnostics.SourceSwitch> (名為 `DefaultSwitch`)，來控制要將哪些訊息從 `WriteEntry` 和 `WriteException` 方法傳遞給記錄檔接聽程式。 在應用程式的組態檔中，您可以將 `DefaultSwitch` 的值設定為其中一個 <xref:System.Diagnostics.SourceLevels> 列舉值以進行設定。 根據預設，其值為 "Information"。  
+ `My.Application.Log` 物件會使用名為 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，來控制要將 `WriteEntry` 和 `WriteException` 方法的哪些訊息傳遞給記錄檔接聽程式。 您可以將 `DefaultSwitch` 的值設定為 <xref:System.Diagnostics.SourceLevels> 列舉值之一，以在應用程式的組態檔中設定它。 根據預設，其值為 "Information"。  
   
  下表顯示依據特定 `DefaultSwitch` 設定的假設，記錄檔要將訊息寫入接聽程式所需的嚴重性層級。  
   
@@ -98,7 +79,7 @@ ms.lasthandoff: 07/28/2017
   
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件  
   
-1.  在方案總管****中，以滑鼠右鍵按一下 app.config，並選取 [開啟]****。  
+1.  在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。  
   
      -或-  
   
@@ -108,7 +89,7 @@ ms.lasthandoff: 07/28/2017
   
     2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入] ****。  
+    3.  按一下 [加入]。  
   
 2.  找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。  
   
@@ -162,7 +143,7 @@ ms.lasthandoff: 07/28/2017
 9. 將 `value` 屬性值變更回 "Information"。  
   
     > [!NOTE]
-    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug?displayProperty=fullName> 類別的行為。  
+    >  `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別的行為。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>個別篩選 My.Application.Log 接聽程式  
  上一個範例示範如何變更所有 `My.Application.Log` 輸出的篩選。 此範例示範如何篩選個別的記錄檔接聽程式。 應用程式預設會有兩個接聽程式，以寫入應用程式的偵錯輸出和記錄檔。  
@@ -173,7 +154,7 @@ ms.lasthandoff: 07/28/2017
   
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件  
   
-1.  在方案總管****中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]****。  
+1.  在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
   
      -或-  
   
@@ -183,9 +164,9 @@ ms.lasthandoff: 07/28/2017
   
     2.  在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。  
   
-    3.  按一下 [加入] ****。  
+    3.  按一下 [加入]。  
   
-2.  在方案總管****中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]****。  
+2.  在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。  
   
 3.  找出 `<listeners>` 區段，其位於具有 `name` 屬性 "DefaultSource" 之 `<source>` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<configuration>` 區段中的 `<system.diagnostics>` 區段下方。  
   
@@ -213,7 +194,7 @@ ms.lasthandoff: 07/28/2017
     </add>  
     ```  
   
-     <xref:System.Diagnostics.EventTypeFilter> 篩選條件會使用其中一個 <xref:System.Diagnostics.SourceLevels> 列舉值作為其 `initializeData` 屬性。  
+     <xref:System.Diagnostics.EventTypeFilter> 篩選會採用 <xref:System.Diagnostics.SourceLevels> 列舉值之一作為其 `initializeData` 屬性。  
   
 7.  App.config 檔案的內容應該類似下列 XML：  
   
@@ -275,10 +256,9 @@ ms.lasthandoff: 07/28/2017
  如需在部署後變更記錄檔設定的詳細資訊，請參閱[使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)   
+ [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)  
  [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

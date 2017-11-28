@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - expliciting defining cache behavior
 - location-based cache policies
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bcfd166b108dc0cf99381869e39952b09fcfca6b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a145bf30930c9be81dc92f3a9f1eebda046b7e8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：為應用程式設定以位置為基礎的快取原則
 以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
@@ -166,9 +163,8 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [快取原則](../../../docs/framework/network-programming/cache-policy.md)   
- [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [快取原則](../../../docs/framework/network-programming/cache-policy.md)  
+ [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

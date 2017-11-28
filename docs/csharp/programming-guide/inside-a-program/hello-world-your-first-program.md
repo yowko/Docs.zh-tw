@@ -1,49 +1,31 @@
 ---
 title: "Hello World -- 您的第一個程式 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
-ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一個程式 (C# 程式設計手冊)
 下列程序會建立 C# 版本的傳統 "Hello World!" 程式。 此程式會顯示字串 `Hello World!`  
   
  如需更多的介紹性概念範例，請參閱 [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)。  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-and-run-a-console-application"></a>建立並執行主控台應用程式  
   
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/31/2017
   
 6.  以下列程式碼取代 Program.cs 的內容。  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  選擇 F5 鍵執行執行專案。 包含 `Hello World!` 一行的命令提示字元視窗隨即出現  
   
@@ -72,11 +54,11 @@ ms.lasthandoff: 07/31/2017
 ## <a name="comments"></a>註解  
  第一行包含註解。 字元 `//` 會將該行的其餘部分轉換成註解。  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
+ [!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  您也可以用 `/*` 和 `*/` 字元括住它，註解文字區塊。 這在下列範例中顯示。  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
+ [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Main 方法  
  C# 主控台應用程式必須包含 `Main` 方法，控制項在此開始和結束。 `Main` 方法是您建立物件和執行其他方法的所在。  
@@ -85,19 +67,19 @@ ms.lasthandoff: 07/31/2017
   
 -   它會傳回 `void`。  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   它也可以傳回整數。  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   使用任一傳回型別，它可以接受引數。  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      -或-  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  `Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。 不像在 C++ 中，陣列不包含可執行檔 (exe) 的檔案名稱。  
   
@@ -108,9 +90,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="input-and-output"></a>輸入和輸出  
  C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/輸出服務。 陳述式 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。 這是執行階段程式庫中 <xref:System.Console> 類別的其中一個輸出方法。 它會在標準輸出資料流中顯示其字串參數，後面接著新行。 其他 <xref:System.Console> 方法可供不同的輸入和輸出作業使用。 如果您在程式開始處包含 `using System;` 指示詞，就可以直接使用 <xref:System> 類別和方法，而不必完整限定它們。 例如，您可以呼叫 `Console.WriteLine` 而不用呼叫 `System.Console.WriteLine`：  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
+ [!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  如需輸入/輸出方法的詳細資訊，請參閱 <xref:System.IO>。  
   
@@ -150,11 +132,10 @@ ms.lasthandoff: 07/31/2017
  如需 C# 編譯器及其選項的詳細資訊，請參閱[C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)。
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)   
- [字串](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [C# 參考](../../../csharp/language-reference/index.md)   
- [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [字串](../../../csharp/programming-guide/strings/index.md)  
+ [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

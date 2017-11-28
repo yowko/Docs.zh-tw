@@ -1,37 +1,29 @@
 ---
-title: "如何︰ 在命名空間 (Visual Basic) 中的 XML 上撰寫查詢 |Microsoft 文件"
+title: "如何： 在命名空間 (Visual Basic) 中的 XML 上撰寫查詢"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5708a2a162132262722f390842f59c9c6a6838e4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何︰ 在命名空間 (Visual Basic) 中的 XML 上撰寫查詢
-若要撰寫查詢的 XML 命名空間中，您必須使用<xref:System.Xml.Linq.XName>具有正確的命名空間的物件。</xref:System.Xml.Linq.XName>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何： 在命名空間 (Visual Basic) 中的 XML 上撰寫查詢
+若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。  
   
  在 Visual Basic 中，最常見的方法是定義全域命名空間，然後使用利用全域命名空間的 XML 常值和 XML 屬性。 您可以定義預設的全域命名空間，在此情況下，XML 常值中的項目預設會在命名空間中。 或者，您可以利用前置詞定義全域命名空間，然後在 XML 常值和 XML 屬性中使用前置詞 (如有需要)。 如同 XML 的其他格式，這些屬性預設永遠在沒有命名空間中。  
   
- 第一個集合，此主題中的範例示範如何在預設的命名空間中建立 XML 樹狀結構。 第二個集合會顯示如何在具有前置詞的命名空間中建立 XML 樹狀結構。  
+ 本主題中的第一組範例會示範如何在預設命名空間中建立 XML 樹狀結構。 第二組範例則示範如何在具有前置詞的命名空間中建立 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
  下列範例會建立位於預設命名空間中的 XML 樹狀。 接著，它會擷取項目的集合。  

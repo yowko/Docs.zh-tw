@@ -9,13 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
-ms.lasthandoff: 05/02/2017
-
+ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="samples-and-tutorials"></a>範例和教學課程
 
 .NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您對使用線上程式碼編輯器探索 C# 有興趣，請嘗試這些[互動式教學課程 (英文)](http://go.microsoft.com/fwlink/p/?LinkId=817234)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/02/2017
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-請參閱 [ASP.NET Core 教學課程 (英文)](https://docs.microsoft.com/aspnet/core/tutorials/)。 ASP.NET Core 文件中的許多文章都有針對它們所撰寫的範例連結。
+請參閱 [ASP.NET Core 教學課程 (英文)](/aspnet/core/tutorials/)。 ASP.NET Core 文件中的許多文章都有針對它們所撰寫的範例連結。
 
 ## <a name="c-language"></a>C# 語言
 
@@ -116,4 +115,3 @@ ms.lasthandoff: 05/02/2017
    * 使用 [Visual Studio](https://www.visualstudio.com/) 或 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。
    * 使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
    * 使用支援 .NET Core 專案的另一個 IDE。
-

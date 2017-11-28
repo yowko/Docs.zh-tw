@@ -1,12 +1,9 @@
 ---
 title: "明確數值轉換表 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>明確數值轉換表 (C# 參考)
 明確數值轉換是使用 cast 運算式，用來將任何數值類型轉換成任何其他數值類型，沒有任何隱含的轉換。 下表顯示這些轉換。  
@@ -54,7 +36,7 @@ ms.lasthandoff: 07/28/2017
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`、`byte`、`short`、`ushort`、`int` 或 `char`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong` 或 `char`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long` 或 `char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`、`byte` 或 `short`|  
+|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`、 `byte`或 `short`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char` 或 `decimal`。|  
 |[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `decimal`。|  
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float` 或 `double`。|  
@@ -80,11 +62,10 @@ ms.lasthandoff: 07/28/2017
  如需明確轉換的詳細資訊，請參閱＜C# 語言規格＞中的＜明確＞。 如需如何存取規格的詳細資訊，請參閱 [C# 語言規格](../../../csharp/language-reference/language-specification/index.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [轉型和類型轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [() 運算子](../../../csharp/language-reference/operators/invocation-operator.md)   
- [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [() 運算子](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-

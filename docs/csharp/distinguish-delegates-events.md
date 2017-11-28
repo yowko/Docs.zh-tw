@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>區別委派和事件
 
 [上一步](modern-events.md)
@@ -55,4 +53,3 @@ UX 控制項仍然會正常運作，即使沒有任何訂閱者接聽事件也�
 ## <a name="evaluate-carefully"></a>仔細評估
 
 上述考量不是很難和快速的規則。 相反地，它們所代表的指引可協助您決定最適合您特定使用方式的選項。 因為它們十分類似，所以您甚至可以建立原型，並考慮哪個使用起來更自然。 它們也都會處理晚期繫結案例。 請使用用來溝通最佳設計的案例。
-

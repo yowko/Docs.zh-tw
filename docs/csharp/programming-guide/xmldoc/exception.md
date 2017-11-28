@@ -1,47 +1,29 @@
 ---
 title: "&lt;例外狀況&gt; (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - exception
 - <exception>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd859a09bfbe9f814bf57f0987fd49ded9ba7100
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bdcbe116db4ed0f63ea73c524c482266b4ac1a38
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltexceptiongt-c-programming-guide"></a>&lt;例外狀況&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
   
-```  
+```xml  
 <exception cref="member">description</exception>  
 ```  
   
@@ -62,9 +44,8 @@ ms.lasthandoff: 07/28/2017
  如需例外狀況處理的詳細資訊，請參閱[例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)。  
   
 ## <a name="example"></a>範例  
- [!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

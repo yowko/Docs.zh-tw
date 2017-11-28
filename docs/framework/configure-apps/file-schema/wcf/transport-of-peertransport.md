@@ -1,70 +1,80 @@
 ---
-title: "&lt;peerTransport&gt; 的 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;peerTransport&gt; 的 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 787d4569416203364e04898c6adcd57fb5a7aec8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;peerTransport&gt; 的 &lt;transport&gt;
+# <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; 的 &lt;transport&gt;
 指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。  
   
-## 語法  
+ \<system.serviceModel >  
+\<繫結 >  
+\<customBinding >  
+\<繫結 >  
+\<p >  
+\<安全性 >  
+\<傳輸 >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <security>  
    <transport credentialType="Certificate/Password" />  
 </security>         
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列各節說明屬性、子元素和父元素  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|credentialType|選擇項。  指定認證的類型，用於驗證對等傳輸所傳送的訊息。  此屬性的型別為 <xref:System.ServiceModel.PeerTransportCredentialType>。|  
+|---------------|-----------------|  
+|credentialType|選擇項。 指定認證的類型，用於驗證對等傳輸所傳送的訊息。 此屬性的型別為 <xref:System.ServiceModel.PeerTransportCredentialType>。|  
   
-## credentialType 屬性  
+## <a name="credentialtype-attribute"></a>credentialType 屬性  
   
 |值|描述|  
-|-------|--------|  
+|-----------|-----------------|  
 |憑證|對等通道傳輸的驗證作業需要 X509 憑證。|  
 |密碼|對等通道傳輸的驗證作業需要正確的密碼。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定義對等傳輸的安全性設定。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|定義對等傳輸的安全性設定。|  
   
-## 備註  
- 這個項目只有在 [\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) 的模式屬性設為 `Transport` 或 `TransportWithMessageCredential` 時才會設定。  
+## <a name="remarks"></a>備註  
+ 只有當這個項目會設定目的 mode 屬性[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)設`Transport`或`TransportWithMessageCredential`。  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>   
- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>   
- <xref:System.ServiceModel.PeerTransportSecuritySettings>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [傳輸安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)   
- [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)   
- [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
+ <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
+ <xref:System.ServiceModel.PeerTransportSecuritySettings>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [傳輸安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [傳輸](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [選擇傳輸](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

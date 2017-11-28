@@ -1,39 +1,21 @@
 ---
 title: "如何：定義抽象屬性 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cd8a42c1040180c19bc58627ab0c6a21ace77773
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c6decaae138a21c24e94e2ed74111c860777f64b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何：定義抽象屬性 (C# 程式設計手冊)
 下例示範如何定義[抽象](../../../csharp/language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
@@ -55,7 +37,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  這個檔案會宣告包含 `double` 類型 `Area` 屬性的 `Shape` 類別。  
   
- [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
 -   屬性的修飾詞是放在屬性宣告中。 例如：  
   
@@ -68,17 +50,16 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  下列程式碼會示範 `Shape` 的三個子類別，以及它們如何覆寫 `Area` 屬性以提供它們自己的實作。  
   
- [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
 ## <a name="example"></a>範例  
  下列程式碼會示範測試程式，建立多個 `Shape` 衍生物件並列印其區域。  
   
- [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [如何：使用命令列建立和使用組件](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
-

@@ -1,42 +1,24 @@
 ---
 title: "如何：逐一查看目錄樹狀 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：逐一查看目錄樹狀 (C# 程式設計手冊)
-「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=fullName> 或 <xref:System.IO.DirectoryInfo?displayProperty=fullName> 物件的其他資訊。  
+「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
   
 > [!NOTE]
 >  在 Windows 中，「目錄」和「資料夾」等詞可交替使用。 大多數文件和使用者介面文字是使用「資料夾」一詞，但 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Class Library 則是使用「目錄」一詞。  
@@ -63,14 +45,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  這裡所處理的特定例外狀況，以及對每個檔案或資料夾所執行的特定動作，僅供示範之用。 您應該修改此程式碼，以符合特定需求。 如需詳細資訊，請參閱程式碼中的註解。  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## <a name="example"></a>範例  
  下列範例示範如何在不使用遞迴的情況下，逐一查看樹狀目錄中的所有檔案和資料夾。 這項技術使用泛型 <xref:System.Collections.Generic.Stack%601> 集合類型，也就是後進先出 (LIFO) 堆疊。  
   
  這裡所處理的特定例外狀況，以及對每個檔案或資料夾所執行的特定動作，僅供示範之用。 您應該修改此程式碼，以符合特定需求。 如需詳細資訊，請參閱程式碼中的註解。  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  測試每個資料夾來判斷應用程式是否有權開啟資料夾，通常非常耗時。 因此，程式碼範例只會將該部分的作業封入 `try/catch` 區塊中。 您可以修改 `catch` 區塊，以便您在存取資料夾遭拒時，可以嘗試評估權限，然後重新進行存取。 一般而言，您只會攔截可處理的例外狀況，而不會讓應用程式處於未知狀態。  
   
@@ -80,7 +62,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  設計穩固的檔案逐一查看程式碼時，必須考慮檔案系統的許多複雜情況。 如需詳細資訊，請參閱 [NTFS Technical Reference](http://go.microsoft.com/fwlink/?LinkId=79488) (NTFS 技術參考)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.IO>   
- [LINQ and File Directories](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808) (LINQ 和檔案目錄)   
- [檔案系統和登錄 (C# 程式設計手冊)](../../../csharp/programming-guide/file-system/index.md)
-
+ <xref:System.IO>  
+ [LINQ 和檔案目錄](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)

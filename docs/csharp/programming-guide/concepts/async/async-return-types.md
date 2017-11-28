@@ -1,30 +1,21 @@
 ---
 title: "非同步方法的傳回型別 (C#)"
 ms.custom: 
-ms.date: 2075-05-29
+ms.date: 05/29/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e7f31d4160d44668f4ddea5e1ca0eaa3037c5a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 非同步方法可有下列傳回型別：
@@ -35,7 +26,7 @@ ms.lasthandoff: 07/28/2017
 
 - 處理常式為 `void`。 
 
-- 自 C# 7 開始，任何具有可存取 `GetAwaiter` 方法的類型。 `GetAwaiter` 方法傳回的物件必須實作 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=fullName> 介面。
+- 自 C# 7 開始，任何具有可存取 `GetAwaiter` 方法的類型。 `GetAwaiter` 方法傳回的物件必須實作 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 介面。
   
 如需非同步方法的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。  
   
@@ -46,7 +37,7 @@ ms.lasthandoff: 07/28/2017
   
 在下列範例中，`GetLeisureHours` 非同步方法包含一個傳回整數的 `return` 陳述式。 因此，方法宣告必須指定 `Task<int>` 傳回型別。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同步方法是傳回字串作業的預留位置。
   
-[!code-cs[傳回值](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
 從 `ShowTodaysInfo` 方法的 await 運算式內呼叫 `GetLeisureHours` 時，await 運算式會擷取儲存在 `GetLeisureHours` 方法所傳回之工作中的整數值 (`leisureHours` 的值)。 如需 await 運算式的詳細資訊，請參閱 [await](../../../../csharp/language-reference/keywords/await.md)。  
   
@@ -55,14 +46,14 @@ ms.lasthandoff: 07/28/2017
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性是封鎖的屬性。 如果您嘗試在其工作完成之前先存取它，目前使用中的執行緒會封鎖，直到工作完成並且有可用的值為止。 在大部分情況下，您應該使用 `await` 來存取值，而不是直接存取屬性。 <br/> 前一個範例擷取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性的值，封鎖主執行緒，讓 `ShowTodaysInfo` 方法在應用程式結束之前可以完成執行。  
 
-[!code-cs[傳回值](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
 ##  <a name="BKMK_TaskReturnType"></a> 工作傳回型別  
 不包含 `return` 陳述式的非同步方法，或包含不會傳回運算元的 `return` 陳述式的非同步方法，通常具有傳回型別 <xref:System.Threading.Tasks.Task>。 這類方法如果以同步方式執行，會傳回 `void`。 如果您針對非同步方法使用 <xref:System.Threading.Tasks.Task> 傳回型別，則除非被呼叫的非同步方法完成，否則呼叫的方法可以使用 `await` 運算子暫止呼叫端完成。  
   
 在下列範例中，`WaitAndApologize` 非同步方法不包含 `return` 陳述式，所以方法傳回 <xref:System.Threading.Tasks.Task> 物件。 這就讓 `WaitAndApologize` 成為等候的。 請注意，<xref:System.Threading.Tasks.Task> 類型不包含 `Result` 屬性，因為它沒有傳回值。  
 
-[!code-cs[傳回值](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
   
 `WaitAndApologize` 是透過使用 await 陳述式而非 await 運算式成為等候的，類似同步 void 傳回方法的呼叫陳述式。 在此情況下，await 運算子的應用不會產生值。  
   
@@ -70,7 +61,7 @@ ms.lasthandoff: 07/28/2017
   
 下列程式碼隔開呼叫 `WaitAndApologize` 方法與等候方法傳回的工作。  
  
-[!code-cs[傳回值](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
 ##  <a name="BKMK_VoidReturnType"></a> Void 傳回型別  
 您在非同步事件處理常式中使用 `void` 傳回型別，這需要 `void` 傳回型別。 對於不傳回值的事件處理常式以外的方法，您應該要改傳回 <xref:System.Threading.Tasks.Task>，因為傳回 `void` 的非同步方法不能是等候的。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。  
@@ -81,7 +72,7 @@ ms.lasthandoff: 07/28/2017
   
 下例會定義非同步事件處理常式。  
  
-[!code-cs[傳回值](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>通用的非同步傳回型別和 ValueTask<T>
 
@@ -89,9 +80,9 @@ ms.lasthandoff: 07/28/2017
  
 因為 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 是參考型別，所以效能關鍵路徑中的記憶體配置，會對效能造成不良影響，特別是當配置出現在緊密迴圈中時。 支援通用的傳回型別，表示您可以傳回輕量型的實值型別，而不是參考型別，以避免額外的記憶體配置。 
 
-.NET 提供 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> 結構做為通用工作傳回值的輕量級實作。 若要使用 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> 類型，您必須將 `System.Threading.Tasks.Extensions` NuGet 套件新增至專案。 下列範例會使用 <xref:System.Threading.Tasks.ValueTask%601> 結構，擷取擲兩次骰子的值。 
+.NET 提供 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 結構做為通用工作傳回值的輕量級實作。 若要使用 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 類型，您必須將 `System.Threading.Tasks.Extensions` NuGet 套件新增至專案。 下列範例會使用 <xref:System.Threading.Tasks.ValueTask%601> 結構，擷取擲兩次骰子的值。 
   
-[!code-cs[傳回值](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
 ## <a name="see-also"></a>請參閱  
 <xref:System.Threading.Tasks.Task.FromResult%2A>   
@@ -99,4 +90,3 @@ ms.lasthandoff: 07/28/2017
 [非同步程式中的控制流程 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 [async](../../../../csharp/language-reference/keywords/async.md)   
 [await](../../../../csharp/language-reference/keywords/await.md)
-

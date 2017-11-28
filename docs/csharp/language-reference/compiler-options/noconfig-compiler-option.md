@@ -1,43 +1,24 @@
 ---
 title: "-noconfig (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /noconfig
-dev_langs:
-- CSharp
+f1_keywords: /noconfig
 helpviewer_keywords:
 - /noconfig compiler option [C#]
 - csc.rsp
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d2b15853cdd6ee9fe12b8b3ba3388a74e49c9701
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 594e972dc834ab74412e30a48428f850ae02b5ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="noconfig-c-compiler-options"></a>/noconfig (C# 編譯器選項)
 **/noconfig** 選項會指示編譯器不要使用 csc.rsp 檔案，該檔案位於與 csc.exe 檔案相同的目錄並從中載入。  
@@ -60,6 +41,5 @@ ms.lasthandoff: 07/28/2017
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-

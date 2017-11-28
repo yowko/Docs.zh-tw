@@ -1,30 +1,21 @@
 ---
 title: "LINQ 和檔案目錄 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 62c7ee272c788ca687b84bb76a853e58f83f69ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e7324e3b1d165bfe7ef477fa73bac5d3e7735dc5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ 和檔案目錄 (C#)
 許多檔案系統作業基本上就是查詢，因此很適合使用 LINQ 方法。  
@@ -59,4 +50,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

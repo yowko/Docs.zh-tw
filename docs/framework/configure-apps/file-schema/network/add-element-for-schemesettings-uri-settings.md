@@ -1,84 +1,87 @@
 ---
-title: "schemeSettings 的 &lt;add&gt; 項目 (Uri 設定) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;新增&gt;schemeSettings （Uri 設定） 的項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 8ce4cc33d054e74fc9868a16764e744daf260c10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# schemeSettings 的 &lt;add&gt; 項目 (Uri 設定)
-加入結構描述名稱的結構描述設定。  
+# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;新增&gt;schemeSettings （Uri 設定） 的項目
+新增配置名稱配置的設定。  
   
-## 語法  
+ \<configuration>  
+\<uri >  
+\<schemeSettings >  
+\<add>  
   
-```  
+## <a name="syntax"></a>語法  
   
-      <add   
-   name = "http|https" genericUriParserOptions="DontUnescapePathDotsAndSlashes"  
+```xml  
+<add
+  name="http|https"
+  genericUriParserOptions="DontUnescapePathDotsAndSlashes"
 />  
 ```  
   
-## 屬性和項目  
- 下列章節描述屬性 、子項目和父項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列各節說明屬性、子元素和父元素  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
-|--------|--------|  
-|name|此設定適用的結構描述名稱。  唯一支援的值是名稱\="http" 和名稱\="https"。|  
+|屬性|描述|  
+|---------------|-----------------|  
+|name|此設定會套用的配置名稱。 僅支援的值為 name ="http"及名稱 ="https"。|  
   
-## {屬性名稱} 屬性  
+## <a name="attribute-name-attribute"></a>{屬性名稱}屬性  
   
-|值|說明|  
-|-------|--------|  
-|genericUriParserOptions|這個結構描述的剖析器選項。  唯一支援的值是 genericUriParserOptions \= "DontUnescapePathDotsAndSlashes"。|  
+|值|描述|  
+|-----------|-----------------|  
+|genericUriParserOptions|此配置剖析器選項。 只支援值 genericUriParserOptions ="DontUnescapePathDotsAndSlashes"。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
-|[\<schemeSettings\> 項目 \(Uri 設定\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<schemeSettings> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
-## 備註  
- 根據預設，<xref:System.Uri?displayProperty=fullName> 類別會在執行路徑壓縮前，取消逸出百分比編碼路徑分隔符號。  這會實作為安全機制，以防禦下列攻擊：  
+## <a name="remarks"></a>備註  
+ 根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，再執行路徑壓縮。 實作此點，做為安全性機制，攻擊，如下所示：  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- 如果此 URI 傳遞到未正確處理百分比編碼字元的模組，可能會導致伺服器執行下列命令：  
+ 如果這個 URI 傳遞到模組未處理的百分之編碼字元正確，它可能會導致伺服器正在執行下列命令：  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- 因此，<xref:System.Uri?displayProperty=fullName> 類別會先取消逸出路徑分隔符號，然後再套用路徑壓縮。  將惡意 URL 傳遞至 <xref:System.Uri?displayProperty=fullName> 類別建構函式的結果，會產生下列 URI：  
+ 基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。 傳遞至上方惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式會導致下列 URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- 可以使用特定結構描述的 schemeSettings 組態選項，將這個預設行為修改為不取消逸出百分比編碼路徑分隔符號。  
+ 此預設行為修改為不取消逸出百分比編碼的路徑分隔符號使用的特定結構描述的 schemeSettings 組態選項。  
   
-## 組態檔  
- 這個項目可以用於應用程式組態檔或電腦組態檔 \(Machine.config\)。  
+## <a name="configuration-files"></a>組態檔  
+ 此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## 範例  
- 下列程式碼範例示範 <xref:System.Uri> 類別所使用的組態，該組態支援不逸出的 HTTP 結構描述的百分比編碼路徑分隔符號。  
+## <a name="example"></a>範例  
+ 下列範例示範使用組態<xref:System.Uri>類別，以支援不逸出的 http 配置的百分比編碼路徑分隔符號。  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -88,11 +91,11 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,38 +1,19 @@
 ---
 title: "false 運算子 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- false operator keyword [C#]
+helpviewer_keywords: false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f9761fb49e2c7f6e4a7615e64cec9fed88318c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e12de403ca31952837913fdaaa8b221986f0e5fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="false-operator-c-reference"></a>false 運算子 (C# 參考)
 若運算元為 `false` 即傳回 [bool](../../../csharp/language-reference/keywords/bool.md) 值 `true`；否則傳回 `false`。  
@@ -41,7 +22,7 @@ ms.lasthandoff: 09/25/2017
   
  使用可為 Null 的布林值時，運算式 `a != b` 不一定等於 `!(a == b)`，因為其中一個或兩個值可能為 Null。 您必須分別多載 `true` 和 `false` 運算子，以正確處理運算式中的 Null 值。 下列範例示範如何多載和使用 `true` 和 `false` 運算子。  
   
- [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-operator_1.cs)]  
   
  多載 `true` 和 `false` 運算子的類型可用於 [if](../../../csharp/language-reference/keywords/if-else.md)、[do](../../../csharp/language-reference/keywords/do.md)、[while](../../../csharp/language-reference/keywords/while.md) 和 [for](../../../csharp/language-reference/keywords/for.md) 陳述式以及[條件運算式](../../../csharp/language-reference/operators/conditional-operator.md)中的控制運算式。  
   
@@ -53,9 +34,8 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [C# 運算子](../../../csharp/language-reference/operators/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [C# 運算子](../../../csharp/language-reference/operators/index.md)  
  [true](../../../csharp/language-reference/keywords/true.md)
-

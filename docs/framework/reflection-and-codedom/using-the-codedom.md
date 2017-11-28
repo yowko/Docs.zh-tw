@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - code compilers
 - Code Document Object Model
@@ -24,114 +27,112 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 939a64919e9982232f6e8bd99070fe96e242b9bd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cd594e9087a158ab8d5372ad72019cf3e04c38af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 使用 CodeDOM
-CodeDOM 提供表示多種原始程式碼項目一般型別的型別。  您可以設計一個程式來建置使用 CodeDOM 項目的原始程式碼模型，以組譯物件 Graph。  這個物件 Graph 可以使用受支援的程式語言的 CodeDOM 程式碼產生器，轉譯成原始程式碼。  CodeDOM 也可以用於將原始程式碼編譯為二進位組件。  
+# <a name="using-the-codedom"></a>使用 CodeDOM
+CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。 您可以設計程式，建置使用 CodeDOM 項目的原始程式碼模型，組合物件圖形。 此物件圖形可以轉譯成使用 CodeDOM 程式碼產生器的原始程式碼，處理受支援的程式設計語言。 您也可以使用 CodeDOM 將原始程式碼編譯成二進位組件。  
   
- CodeDOM 的一些一般運用包括：  
+ 常見的 CodeDOM 用法包括：  
   
--   樣板化程式碼產生：為 ASP.NET、XML Web Service 用戶端 Proxy、程式碼精靈、設計工具或其他程式碼發出機制產生程式碼。  
+-   產生樣板化程式碼：為 ASP.NET、XML Web 服務用戶端 proxy、程式碼精靈、設計工具，或其他程式碼發出機制產生程式碼。  
   
--   動態編譯：支援使用單一或多種語言的程式碼編譯。  
+-   動態編譯：支援以單一或多種語言編譯程式碼。  
   
-## 建置 CodeDOM 物件 Graph  
- <xref:System.CodeDom> 命名空間提供了表示原始程式碼邏輯結構的類別，不限定語言語法。  
+## <a name="building-a-codedom-graph"></a>建置 CodeDOM 圖形  
+ <xref:System.CodeDom> 命名空間提供代表原始程式碼邏輯結構的類別，不受語言語法影響。  
   
-### CodeDOM 物件 Graph 的結構  
- CodeDOM 物件 Graph 的結構就像容器樹狀結構。  每個可編譯的 CodeDOM 物件 Graph 最上面的容器或根容器為 <xref:System.CodeDom.CodeCompileUnit>。  原始程式碼模型的每個項目都必須在 Graph 中，透過 <xref:System.CodeDom.CodeObject> 的屬性連結到 Graph。  
+### <a name="the-structure-of-a-codedom-graph"></a>CodeDOM 圖形的結構  
+ CodeDOM 圖形的結構就像容器的樹狀結構。 每個可編譯 CodeDOM 圖形的最上層 (或根) 容器都是 <xref:System.CodeDom.CodeCompileUnit>。 原始程式碼模型的每個項目都必須透過圖形中 <xref:System.CodeDom.CodeObject> 屬性連結到圖形。  
   
-### 建置範例 Hello World 程式的原始程式碼模型  
- 以下逐步解說提供的範例，示範如何建置表示簡單 Hello World 應用程式程式碼的 CodeDOM 物件 Graph。  如需這個程式碼範例的完整原始程式碼，請參閱 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName> 主題。  
+### <a name="building-a-source-code-model-for-a-sample-hello-world-program"></a>建置範例 Hello World 程式的原始程式碼模型  
+ 下列逐步解說提供如何建置 CodeDOM 物件圖形的範例，此物件圖形代表簡單的 Hello World 應用程式程式碼。 如需此程式碼範例的完整原始程式碼，請參閱 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 主題。  
   
-#### 建立編譯單位  
- CodeDOM 會定義一個名為 <xref:System.CodeDom.CodeCompileUnit> 的物件，它可以參考做為要編譯之原始程式碼的模型之 CodeDOM 物件 Graph。  **CodeCompileUnit** 的屬性 \(Property\) 可以儲存對屬性 \(Attribute\)、命名空間和組件的參考。  
+#### <a name="creating-a-compile-unit"></a>建立編譯單位  
+ CodeDOM 會定義名為 <xref:System.CodeDom.CodeCompileUnit> 的物件，如此可參考 CodeDOM 物件圖形，建立要編譯的原始程式碼模型。 **CodeCompileUnit** 的屬性可以儲存屬性、命名空間和組件的參考。  
   
- 衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別的 CodeDom 提供者包含了可處理 **CodeCompileUnit** 參考的物件圖形之方法。  
+ 衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別的 CodeDom 提供者有方法可處理 **CodeCompileUnit** 所參考的物件圖形。  
   
- 若要建立簡單應用程式的物件 Graph，您必須組譯原始程式碼模型，並且從 **CodeCompileUnit** 參考它。  
+ 若要建立簡單應用程式的物件圖形，您必須組合原始程式碼模型，並從 **CodeCompileUnit** 參考它。  
   
- 您可以使用這個範例中示範的語法建立新的編譯單元：  
+ 您可以使用本例示範的語法，建立新的編譯單位：  
   
  [!code-cpp[CodeDomExample#12](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#12)]
  [!code-csharp[CodeDomExample#12](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#12)]
  [!code-vb[CodeDomExample#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#12)]  
   
- <xref:System.CodeDom.CodeSnippetCompileUnit> 可以包含已經在目標語言中的原始程式碼區段，但是不能轉譯為其他語言。  
+ <xref:System.CodeDom.CodeSnippetCompileUnit> 可以包含已使用目標語言的原始程式碼區段，但無法轉譯成其他語言。  
   
-#### 定義命名空間  
- 若要定義命名空間，請建立 <xref:System.CodeDom.CodeNamespace>，並使用適當的建構函式或設定它的 **Name** 屬性，為它指派一個名稱。  
+#### <a name="defining-a-namespace"></a>定義命名空間  
+ 若要定義命名空間，請使用適當的建構函式，或設定其 **Name** 屬性，建立 <xref:System.CodeDom.CodeNamespace> 並指派其名稱。  
   
  [!code-cpp[CodeDomExample#13](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#13)]
  [!code-csharp[CodeDomExample#13](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#13)]
  [!code-vb[CodeDomExample#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#13)]  
   
-#### 匯入命名空間  
- 若要將命名空間匯入指示詞加入到命名空間，請加入指示要將命名空間匯入 **CodeNamespace.Imports** 集合的 <xref:System.CodeDom.CodeNamespaceImport>。  
+#### <a name="importing-a-namespace"></a>匯入命名空間  
+ 若要將命名空間匯入指示詞新增至命名空間，請新增 <xref:System.CodeDom.CodeNamespaceImport>，指示命名空間要匯入 **CodeNamespace.Imports** 集合。  
   
- 下列程式碼將 **System** 命名空間的匯入加入到名為 `samples` 之 **CodeNamespace** 的 **Imports** 集合中：  
+ 下列程式碼會將匯入的 **System** 命名空間新增至名為 `samples` 的 **CodeNamespace** 的 **Imports** 集合：  
   
  [!code-cpp[CodeDomExample#14](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#14)]
  [!code-csharp[CodeDomExample#14](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#14)]
  [!code-vb[CodeDomExample#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#14)]  
   
-#### 將程式碼項目連結到物件 Graph 中  
- 所有組成 CodeDOM 物件 Graph 的程式碼項目，都必須由 Graph 根物件屬性所直接參考項目之間的一系列參考來連結到 <xref:System.CodeDom.CodeCompileUnit>，後者是樹狀結構的根項目。  將物件設定為容器物件的屬性，建立來自容器物件的參考。  
+#### <a name="linking-code-elements-into-the-object-graph"></a>將程式碼項目連結到物件圖形  
+ 形成 CodeDOM 圖形的所有程式碼項目都必須連結到 <xref:System.CodeDom.CodeCompileUnit>，亦即樹狀結構的根項目，此樹狀結構是圖形根物件屬性直接參考項目間的一系列參考。 設定容器物件屬性的物件，從容器物件建立參考。  
   
- 下列陳述式會將 `samples` **CodeNamespace** 加入到根 **CodeCompileUnit** 的 **Namespaces** 集合屬性中。  
+ 下列陳述式會將 `samples` **CodeNamespace** 新增至根 **CodeCompileUnit** 的 **Namespaces** 集合屬性。  
   
  [!code-cpp[CodeDomExample#15](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#15)]
  [!code-csharp[CodeDomExample#15](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#15)]
  [!code-vb[CodeDomExample#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#15)]  
   
-#### 定義型別  
- 若要使用 CodeDOM 宣告類別、結構、介面或列舉型別，請建立一個新的 <xref:System.CodeDom.CodeTypeDeclaration>，並為它指派一個名稱。  下列範例使用建構函式多載，設定 **Name** 屬性來示範這項工作：  
+#### <a name="defining-a-type"></a>定義類型  
+ 若要宣告使用 CodeDOM 的類別、結構、介面或列舉，請建立新的 <xref:System.CodeDom.CodeTypeDeclaration>，並為它指派名稱。 下列範例會使用建構函式多載設定 **Name** 屬性，來示範此作業：  
   
  [!code-cpp[CodeDomExample#16](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#16)]
  [!code-csharp[CodeDomExample#16](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#16)]
  [!code-vb[CodeDomExample#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#16)]  
   
- 若要將型別加入命名空間，請加入表示此型別的 <xref:System.CodeDom.CodeTypeDeclaration>，將命名空間加入到 **CodeNamespace** 的 **Types** 集合。  
+ 若要將類型新增到命名空間，請新增代表類型的 <xref:System.CodeDom.CodeTypeDeclaration>，新增至 **CodeNamespace** 的 **Types** 集合的命名空間。  
   
- 下列範例示範如何將名為 `class1` 的類別加入到名為 `samples` 的 **CodeNamespace**：  
+ 下列範例示範如何將名為 `class1` 的類別新增至名為 `samples` 的 **CodeNamespace**：  
   
  [!code-cpp[CodeDomExample#17](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#17)]
  [!code-csharp[CodeDomExample#17](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#17)]
  [!code-vb[CodeDomExample#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#17)]  
   
-#### 將類別成員加入到類別  
- <xref:System.CodeDom> 命名空間提供多種可以用來表示類別成員的項目。  每個類別成員都可以加入到 <xref:System.CodeDom.CodeTypeDeclaration> 的 **Members** 集合中。  
+#### <a name="adding-class-members-to-a-class"></a>將類別成員新增至類別  
+ <xref:System.CodeDom> 命名空間提供各種不同的項目，可以用來代表類別成員。 每個類別成員皆可新增至 <xref:System.CodeDom.CodeTypeDeclaration> 的 **Members** 集合。  
   
-#### 為可執行檔定義程式碼進入點方法  
- 如果您正在建置可執行程式的程式碼，就需要指示程式的進入點，其方法是建立 <xref:System.CodeDom.CodeEntryPointMethod>，以表示程式執行應該開始的方法。  
+#### <a name="defining-a-code-entry-point-method-for-an-executable"></a>定義可執行檔的程式碼進入點方法  
+ 如果您要為可執行程式建置程式碼，就必須建立 <xref:System.CodeDom.CodeEntryPointMethod> 代表程式應該開始執行的那個方法，指示程式的進入點。  
   
- 下列範例將示範如何定義進入點方法，它含有呼叫 **System.Console.WriteLine** 來顯示 "Hello World\!" 的 <xref:System.CodeDom.CodeMethodInvokeExpression>：  
+ 下例示範如何定義包含 <xref:System.CodeDom.CodeMethodInvokeExpression> 的進入點方法，呼叫 **System.Console.WriteLine** 列印 "Hello World!"：  
   
  [!code-cpp[CodeDomExample#18](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#18)]
  [!code-csharp[CodeDomExample#18](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#18)]
  [!code-vb[CodeDomExample#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#18)]  
   
- 下列陳述式將名為 `Start` 的進入點方法加入到 `class1` 的 **Members** 集合中：  
+ 下列陳述式會將名為 `Start` 的進入點方法新增至 `class1` 的 **Members** 集合：  
   
  [!code-cpp[CodeDomExample#19](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#19)]
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- 現在，名為 `compileUnit` 的 <xref:System.CodeDom.CodeCompileUnit> 包含了簡單 Hello World 程式的 CodeDOM 物件 Graph。  如需從 CodeDOM 圖形產生及編譯程式碼的詳細資訊，請參閱[從 CodeDOM 圖形產生原始程式碼及編譯程式](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)。  
+ 現在名為 `compileUnit` 的 <xref:System.CodeDom.CodeCompileUnit> 包含簡單 Hello World 程式的 CodeDOM 圖形。 如需從 CodeDOM 圖形產生及編譯程式碼的相關資訊，請參閱[從 CodeDOM 圖形產生原始程式碼和編譯程式](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)。  
   
-### 建置 CodeDOM 物件 Graph 的詳細資訊  
- CodeDOM 支援很多可以在支援 Common Language Runtime 的程式語言中找到的程式碼項目一般型別。  CodeDOM 並非設計用來提供能表示所有可能之程式語言功能的項目。  不容易以 CodeDOM 項目表示的程式碼可以封裝在 <xref:System.CodeDom.CodeSnippetExpression>、<xref:System.CodeDom.CodeSnippetStatement>、<xref:System.CodeDom.CodeSnippetTypeMember> 或 <xref:System.CodeDom.CodeSnippetCompileUnit> 中。  然而，片段不能使用 CodeDOM 自動轉譯成其他語言。  
+### <a name="more-information-on-building-a-codedom-graph"></a>建置 CodeDOM 圖形的詳細資訊  
+ CodeDOM 支援許多程式設計語言中常見的程式碼項目類型，這些程式設計語言都支援 Common Language Runtime。 CodeDOM 的設計目的不是提供代表所有可能程式設計語言功能的項目。 無法簡單以 CodeDOM 項目表示的程式碼，可以封裝在 <xref:System.CodeDom.CodeSnippetExpression>、<xref:System.CodeDom.CodeSnippetStatement>、<xref:System.CodeDom.CodeSnippetTypeMember> 或 <xref:System.CodeDom.CodeSnippetCompileUnit> 中。 不過，CodeDOM 無法自動將程式碼片段轉譯成其他語言。  
   
- 如需每個 CodeDOM 型別的文件，請參閱 <xref:System.CodeDom> 命名空間的參考文件。  
+ 如需 CodeDOM 各類型的文件，請參閱 <xref:System.CodeDom> 命名空間的參考文件。  
   
  如需快速圖表，找出表示特定程式碼項目類型的 CodeDOM 項目，請參閱 [CodeDOM 快速參考](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。
-

@@ -1,39 +1,21 @@
 ---
-title: "介面 (C# 程式設計手冊) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "介面 (C# 程式設計手冊)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 9a580d0426038036f2e64167de8c540041c0a6b4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/15/2017
-
+ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 介面包含[類別](../../../csharp/language-reference/keywords/class.md)或 [struct](../../../csharp/language-reference/keywords/struct.md) 可實作的一組相關功能定義。  
@@ -42,7 +24,7 @@ ms.lasthandoff: 05/15/2017
   
  您會使用 [interface](../../../csharp/language-reference/keywords/interface.md) 關鍵字來定義介面，如下列範例所示。  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
  任何實作 <xref:System.IEquatable%601> 介面的類別或結構，必須包含 <xref:System.IEquatable%601.Equals%2A> 方法的定義，該方法符合介面指定的簽章。 如此一來，您可以倚賴實作 `IEquatable<T>` 的類別，以包含 `Equals` 方法，類別的執行個體可以使用該方法判斷它是否等於相同類別的另一個執行個體。  
   
@@ -58,7 +40,7 @@ ms.lasthandoff: 05/15/2017
   
  下列範例示範 IEquatable<T\> 介面的實作。 實作類別 `Car` 必須提供 <xref:System.IEquatable%601.Equals%2A> 方法的實作。  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
  類別的屬性與索引子可以針對介面中定義的屬性或索引子定義額外的存取子。 例如，介面可能會宣告具有 [get](../../../csharp/language-reference/keywords/get.md) 存取子的屬性。 實作介面的類別可以宣告具有 `get` 和 [set](../../../csharp/language-reference/keywords/set.md) 存取子的相同屬性。 不過，如果屬性或索引子使用明確的實作，則存取子必須相符。 如需明確實作的詳細資訊，請參閱[明確介面實作](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)和[介面屬性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)。  
   
@@ -117,6 +99,5 @@ ms.lasthandoff: 05/15/2017
  [了解 C# 3.0：掌握 C# 3.0 的基本概念 (英文)](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx) 中的[介面](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-

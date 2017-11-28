@@ -1,42 +1,23 @@
 ---
 title: "-langversion (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /langversion
-dev_langs:
-- CSharp
+f1_keywords: /langversion
 helpviewer_keywords:
 - /langversion compiler option [C#]
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d034958b14c54540aa175a23067d47bd5d850bab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc501c5532d27168d74d1a5f293abe59d3beeef1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="langversion-c-compiler-options"></a>/langversion (C# 編譯器選項)
 讓編譯器只接受所選擇 C# 語言規格中所含的語法。  
@@ -92,24 +73,24 @@ ms.lasthandoff: 07/28/2017
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。  
     
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+ [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)  
  
 ### <a name="c-language-specification"></a>C# 語言規格
- [C# 語言規格參考](../../../csharp/language-reference/language-specification/index.md)：.NET Foundation   
- C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) 資訊技術 -- C# 語言規格：ISO 目錄   
- C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) 資訊技術 -- C# 語言規格：ISO 目錄   
- C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) PDF 格式的 ISO/IEC 23270:2006：ISO 自由可用標準   
- C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# 語言規格版本 3.0：Microsoft Corporation   
+ [C# 語言規格參考](../../../csharp/language-reference/language-specification/index.md)：.NET Foundation  
+ C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) 資訊技術 -- C# 語言規格：ISO 目錄  
+ C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) 資訊技術 -- C# 語言規格：ISO 目錄  
+ C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://go.microsoft.com/fwlink/?LinkId=144406) PDF 格式的 ISO/IEC 23270:2006：ISO 自由可用標準  
+ C# 3.0 [CSharp Language Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# 語言規格版本 3.0：Microsoft Corporation  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) 標準 ECMA-334 第 4 版    
- C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/en-us/download/details.aspx?id=7029) C# 語言規格版本 5.0：Microsoft Corporation   
- C# 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C# 語言規格版本 6 - 非官方草稿：.NET Foundation   
- C# 7.0 (目前無法使用)   
+ C# 5.0 [CSharp Language Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) C# 語言規格版本 5.0：Microsoft Corporation  
+ C# 6.0 [README.md](https://github.com/dotnet/csharplang/blob/master/spec/README.md) C# 語言規格版本 6 - 非官方草稿：.NET Foundation  
+ C# 7.0 (目前無法使用)  
 
 <!--- Uncomment and add to the above when they become officially released
- C# 7.1 (spec is not yet finished)   
- C# 7.2 (spec is not yet finished)   
- C# 8.0 (spec is not yet finished)   
+ C# 7.1 (spec is not yet finished)  
+ C# 7.2 (spec is not yet finished)  
+ C# 8.0 (spec is not yet finished)  
 -->
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>支援所有語言功能所需的最低編譯器版本   
@@ -126,4 +107,3 @@ ms.lasthandoff: 07/28/2017
 [↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 20??    
 [↩](#TCS8)<a name="FCS71">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
 -->
-

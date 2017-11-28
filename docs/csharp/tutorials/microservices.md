@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
+ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5585db33fb5020ed18c26f32ce0b63f97353d20f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
 
 ## <a name="introduction"></a>簡介
@@ -94,6 +92,7 @@ Dotnet restore 會使用 NuGet 封裝管理員，將所有必要的封裝安裝�
 ```console
 dotnet build
 ```
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 然後在您建置應用程式之後，可以從命令列來執行它︰
 
@@ -140,7 +139,7 @@ ASP.NET Core 基礎結構會呼叫這兩個方法，來設定和執行應用程�
 
 Lambda 運算式中的引數就是要求的 `HttpContext`。 它的其中一個屬性是 `Request` 物件。 `Request` 物件具有 `Query` 屬性，其中包含要求的查詢字串上所有值的字典。 首先要加入的內容是尋找緯度和經度值︰
 
-[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "讀取查詢字串中的變數")]
+[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
 查詢字典值為 `StringValue` 型別。 該型別可以包含字串集合。 對於氣象服務而言，每個值都是單一字串。 這就是在上述程式碼中呼叫 `FirstOrDefault()` 的原因。 
 
@@ -156,17 +155,17 @@ bool TryParse(string s, out double result);
 
 擴充方法是指定義為靜態方法，但在第一個參數加上 `this` 修飾詞的方法，可以如同是該類別的成員一般來呼叫。 擴充方法只能在靜態類別中定義。 以下的類別定義包含可用於剖析的擴充方法：
 
-[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "嘗試剖析為可為 Null")]
+[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
 `default(double?)` 運算式會傳回 `double?` 型別的預設值。 該預設值是 Null (或遺漏) 值。
 
 您可以使用此擴充方法，將查詢字串引數轉換成 double 型別︰
 
-[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "使用嘗試剖析擴充方法")]
+[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
 更新回應以包含該引數的值，即可輕鬆地測試剖析程式碼︰
 
-[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "撰寫輸出回應")]
+[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Write the output response")]
 
 此時，您可以執行 Web 應用程式，並查看您的剖析程式碼是否可以正常運作。 將值加入至瀏覽器中的 Web 要求後，您應該會看到更新的結果。
 
@@ -196,11 +195,11 @@ public class WeatherReport
 
 接下來，建置會隨機設定這些值的建構函式。 此建構函式會使用經度和緯度的值來植入亂數產生器。 這表示相同位置會有相同的預報。 如果您變更緯度和經度的引數，您會得到不同的預報 (因為您從不同的種子開始)。
 
-[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "氣象報告建構函式")]
+[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
 您現在能以您的回應方法產生 5 天的預報︰
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "產生隨機的氣象報告")]
+[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
 
 ### <a name="build-the-json-response"></a>建立 JSON 回應。
 
@@ -212,7 +211,7 @@ dotnet add package Newtonsoft.Json
 
 然後，您可以使用 `JsonConvert` 類別來將該物件撰寫為字串︰
 
-[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "將物件轉換為 JSON")]
+[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
 上述程式碼會將預報物件 (`WeatherForecast` 物件清單) 轉換為 JSON 封包。 在您完成建構回應封包之後，您可以將內容類型設定為 `application/json`，然後撰寫字串。
 
@@ -248,7 +247,7 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 
 COPY WeatherMicroservice.csproj .
-RUN dotnet restore
+RUN dotnet restore 
 
 # copy and build everything else
 
@@ -257,6 +256,8 @@ COPY . .
 # RUN dotnet restore
 RUN dotnet publish -c Release -o out
 ```
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 這會將目前目錄中的專案檔案複製到 Docker VM，並還原所有封裝。 使用 DotNet CLI，表示 Docker 映像必須包含 .NET Core SDK。 之後，會複製您應用程式其餘的部分，然後 dotnet publish 命令會建置和封裝您的應用程式。
 
@@ -350,4 +351,3 @@ docker rmi weather-microservice
 您為該服務建置了 Docker 容器映像，並在您的機器上執行該容器。 您將終端機視窗附加至該服務，並看到來自您服務的診斷訊息。
 
 過程中，您也看到一些 C# 語言功能的實際運作。
-

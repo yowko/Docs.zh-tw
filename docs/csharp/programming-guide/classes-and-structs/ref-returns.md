@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -86,15 +85,14 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 下列範例定義 `NumberStore` 類別，以儲存整數值的陣列。 `FindNumber` 方法會以傳址方式傳回第一個數字，而此數字大於或等於傳遞為引數的數字。 如果數字未大於或等於引數，則方法會在索引 0 傳回數字。 
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 下列範例會呼叫 `NumberStore.FindNumber` 方法來擷取大於或等於 16 的第一個值。 呼叫者接著會將方法所傳回的值加倍。 如範例輸出所示，這項變更會反映在 `NumberStore` 執行個體的陣列元素值中。
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 如果不支援參考傳回值，則通常是透過傳回陣列元素和其值的索引來執行這類作業。 呼叫者接著可以使用這個索引，來修改不同方法呼叫中的值。 不過，呼叫者也可以修改要存取的索引，也可能修改其他陣列值。  
  
 ## <a name="see-also"></a>請參閱
 
 [ref 關鍵字](../../language-reference/keywords/ref.md)
-

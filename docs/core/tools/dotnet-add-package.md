@@ -7,12 +7,11 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -29,6 +28,8 @@ ms.lasthandoff: 08/14/2017
 ## <a name="description"></a>描述
 
 `dotnet add package` 命令提供方便的選項，可將套件參考新增至專案檔。 執行命令之後，會執行相容性檢查，確保套件與專案中的架構相容。 如果通過檢查，系統會將 `<PackageReference>` 元素新增到專案檔，並執行 [dotnet restore](dotnet-restore.md)。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 例如，將 `Newtonsoft.Json` 新增至 *ToDo.csproj* 會產生類似下例的輸出：
 
@@ -97,4 +98,3 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 使用特定 NuGet 來源新增套件：
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
-

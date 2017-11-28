@@ -1,42 +1,24 @@
 ---
 title: "&lt;include&gt; (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - include
 - <include>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f4df6a23b2fe33b2390aef86891aedc6b04e464d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
-ms.openlocfilehash: 0cabcc25c4e35027c600e4af2bccfad7f9db1514
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -66,7 +48,7 @@ ms.lasthandoff: 08/29/2017
 ## <a name="example"></a>範例  
  這是多檔案範例。 使用 \<include> 的第一個檔案如下所示：  
   
- [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
   
  第二個檔案 xml_include_tag.doc 包含下列文件註解：  
   
@@ -113,6 +95,5 @@ The summary for this other type.
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

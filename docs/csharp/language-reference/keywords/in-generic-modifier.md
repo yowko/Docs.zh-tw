@@ -1,39 +1,21 @@
 ---
 title: "in (泛型修飾詞) (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.assetid: 3a778c36-8aed-4ebe-aa8b-39f4057215b1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 84773fca826b5a25679f1385a11c51b590ea20f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (泛型修飾詞) (C# 參考)
 若為泛型型別參數，`in` 關鍵字會指定型別參數是 Contravariant。 您可以在泛型介面及委派中使用 `in` 關鍵字。  
@@ -51,18 +33,17 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  下例範例示範如何宣告、擴充及實作 Contravariant 泛型介面。 它也會示範如何針對實作此介面的類別使用隱含轉換。  
   
- [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
+ [!code-csharp[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
 ## <a name="example"></a>範例  
  下例範例示範如何宣告、具現化及叫用 Contravariant 泛型委派。 它也會示範如何以隱含方式轉換委派類型。  
   
- [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
+ [!code-csharp[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)   
+ [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)  
+ [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)
-

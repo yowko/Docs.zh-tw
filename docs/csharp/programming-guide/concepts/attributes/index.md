@@ -1,30 +1,21 @@
 ---
 title: "屬性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2993ef3f424aa6487681e194f21e0f82193342ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ab55021a073f914905e29163ba2a669f69d6dcab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)。  
@@ -189,7 +180,6 @@ int Method3() { return 0; }
 -   [呼叫端資訊 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)   
- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+ [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [屬性](https://msdn.microsoft.com/library/5x6cd29c)
-

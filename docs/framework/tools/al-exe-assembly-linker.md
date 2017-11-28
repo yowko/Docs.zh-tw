@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Al.exe
 - Assembly Linker
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 71600e0771c31392f568e11a7f51fc258ac5b362
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f02c8d9f292daf473dea1af3929b0001a0aadbb7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -88,7 +81,7 @@ al sources options
 |**/template:** `filename`|指定要從其中繼承所有組件中繼資料的組件 `filename`，但不包括 [文化特性] 欄位。<br /><br /> 使用 **/template** 建立的組件會是附屬組件。|
 |**/title:** `text`|為組件中的 [標題] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/title** 顯示為 Win32 **Description** 資源，而殼層將使用此資源作為應用程式的易記名稱。 如果檔案類型具有多個支援應用程式，則該檔案類型之捷徑功能表的 [開啟方式] 子功能表中也會顯示此項目。<br /><br /> 如果文字為空字串，Win32 **Description** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**，**/title** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
 |**/trade[mark]:** `text`|為組件中的 [商標] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/trademark** 顯示為 Win32 **Trademark** 資源。<br /><br /> 如果文字為空字串，Win32 **Trademark** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**，**/trademark** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|
-|**/v[ersion]:** `version`|指定這個組件的版本資訊。 版本字串的格式為 `major`.`minor`.`build`.`revision`。 預設值為 0。<br /><br /> 如果指定 **/version**，則必須同時指定 `major`。 如果您指定 `major` 和 `minor`，則可以指定星號 (\*) 代表 `build`。 這樣一來，`build` 就相當於自當地時間 2000 年 1 月 1 日起算的天數，而 `revision` 則等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 如果您指定 `major`、`minor` 和 `build`，則可以指定星號代表 `revision`。 這樣一來，`revision` 就等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 簡單來說，有效的版本字串如下：<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中 X 是指任何不帶正負號的簡短常數，但 65535 除外 (0-65534)。<br /><br /> 如不指定 **/win32res**，系統會將 **/version** 作為 Win32 **Assembly Version** 資源。<br /><br /> 如不指定 **/win32res**、**/productversion** 和 **/fileversion**，系統會將 **/version** 作為 Win32 **Assembly Version**、File Version 和 **Product Version** 資源。<br /><br /> 如果指定 **/win32res**，**/version** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
+|**/v[ersion]:** `version`|指定這個組件的版本資訊。 版本字串的格式為 `major`.`minor`.`build`.`revision`。預設值為 0。<br /><br /> 如果指定 **/version**，則必須同時指定 `major`。 如果您指定 `major` 和 `minor`，則可以指定星號 (\*) 代表 `build`。 這樣一來，`build` 就相當於自當地時間 2000 年 1 月 1 日起算的天數，而 `revision` 則等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 如果您指定 `major`、`minor` 和 `build`，則可以指定星號代表 `revision`。 這樣一來，`revision` 就等於自當地時間當天午夜起算的秒數除以 2。<br /><br /> 簡單來說，有效的版本字串如下：<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> 其中 X 是指任何不帶正負號的簡短常數，但 65535 除外 (0-65534)。<br /><br /> 如不指定 **/win32res**，系統會將 **/version** 作為 Win32 **Assembly Version** 資源。<br /><br /> 如不指定 **/win32res**、**/productversion** 和 **/fileversion**，系統會將 **/version** 作為 Win32 **Assembly Version**、File Version 和 **Product Version** 資源。<br /><br /> 如果指定 **/win32res**，**/version** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyVersionAttribute>)。|
 |**/win32icon:** `filename`|將 .ico 檔案插入組件中。 .ico 檔案會讓輸出檔在檔案總管中以所要的外觀顯示。|
 |**/win32res:** `filename`|將 Win32 資源 (.res 檔案) 插入輸出檔中。 您可以使用資源編譯器建立 Win32 資源檔。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .res 檔案則是從 .rc 檔案建立。|
 |`@filename`|指定包含 *Al.exe* 命令的回應檔。<br /><br /> 回應檔中的命令可顯示為一行一個，也可以全部顯示在同一行，並以一個或多個空格加以分隔。|
@@ -195,4 +188,3 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 [*Gacutil.exe* (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
 [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
 [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

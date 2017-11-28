@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
+ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式
 
 本主題提供在 Visual Studio 2017 中使用 C# 建置、偵錯及發行簡單 .NET Core 主控台應用程式的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
@@ -40,9 +38,9 @@ ms.lasthandoff: 09/14/2017
 
    ![Visual Studio 和新的 HelloWorld 專案](./media/with-visual-studio/devenv.png)
 
-   此範本會建立簡單的 "Hello World" 應用程式。 它會呼叫 <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> 方法，以在主控台視窗中顯示常值字串 "Hello World!" 。 透過使用工具列上的綠色箭頭選取 **HelloWorld** 按鈕，您可以 [偵錯] 模式執行程式。 不過，如果您這樣做，主控台視窗將會在簡短顯示之後關閉。 這是因為在 `Main` 方法中的單一陳述式執行完畢之後，`Main` 方法會立即終止，而應用程式會立即結束。
+   此範本會建立簡單的 "Hello World" 應用程式。 它會呼叫 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法，以在主控台視窗中顯示常值字串 "Hello World!" 。 透過使用工具列上的綠色箭頭選取 **HelloWorld** 按鈕，您可以 [偵錯] 模式執行程式。 不過，如果您這樣做，主控台視窗將會在簡短顯示之後關閉。 這是因為在 `Main` 方法中的單一陳述式執行完畢之後，`Main` 方法會立即終止，而應用程式會立即結束。
 
-1. 若要使應用程式在關閉主控台視窗之前先暫停，請在 <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> 方法呼叫之後立即新增下列程式碼：
+1. 若要使應用程式在關閉主控台視窗之前先暫停，請在 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法呼叫之後立即新增下列程式碼：
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -66,11 +64,11 @@ ms.lasthandoff: 09/14/2017
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   此程式碼取代現有的 <xref:System.Console.WriteLine%2A?displayProperty=fullName>、<xref:System.Console.Write%2A?displayProperty=fullName> 和 <xref:System.Console.ReadKey%2A?displayProperty=fullName> 陳述式。
+   此程式碼取代現有的 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>、<xref:System.Console.Write%2A?displayProperty=nameWithType> 和 <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> 陳述式。
 
    ![含有已更新之 Main 方法的 Visual Studio 程式 c-sharp 檔案](./media/with-visual-studio/codewindow.png)
 
-   此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=fullName> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，使用[字串插值](../../csharp/language-reference/keywords/interpolated-strings.md)在主控台視窗中顯示這些值。
+   此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，使用[字串插值](../../csharp/language-reference/keywords/interpolated-strings.md)在主控台視窗中顯示這些值。
 
 1. 選擇 [建置]  >  [建置方案] 來編譯程式。
 
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/14/2017
 除了主控台應用程式之外，您也可以使用 .NET Core 和 Visual Studio 2017 建置類別庫。 如需逐步介紹，請參閱[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)。
 
 您也可以使用 [Visual Studio Code](https://code.visualstudio.com/) (可免費下載的程式碼編輯器)，在 Mac、Linux 和 Windows 上開發 .NET Core 主控台應用程式。 如需逐步教學課程，請參閱[開始使用 Visual Studio Code](with-visual-studio-code.md)。
-

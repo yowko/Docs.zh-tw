@@ -1,25 +1,21 @@
 ---
 title: "如何：執行文字到 XML 的串流轉換 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 03c5ed5ef66db311ade751b5aad21de70b78f063
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3351f88bb27807714b3566992242e72a5d03ac14
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>如何：執行文字到 XML 的串流轉換 (C#)
 處理文字檔的其中一個方法是撰寫擴充方法，該方法會使用 `yield return` 建構將文字檔一次串流一行。 然後您可以撰寫利用延後的方式處理文字檔的 LINQ 查詢。 如果您接著使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出，您就可以使用最少量的記憶體建立文字檔到 XML 的轉換，而不必在乎來源文字檔的大小。  
@@ -99,6 +95,5 @@ class Program
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XStreamingElement>   
+ <xref:System.Xml.Linq.XStreamingElement>  
  [進階查詢技術 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

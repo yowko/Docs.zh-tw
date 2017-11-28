@@ -1,28 +1,37 @@
 ---
-title: "&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 00f4ddfd218e8797aa2089a21081ee711be316d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;
+# <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; 的 &lt;transport&gt;
 定義具名管道的傳輸安全性設定。  
   
-## 語法  
+ \<系統。ServiceModel >  
+\<繫結 >  
+\<netNamedPipeBinding >  
+\<繫結 >  
+\<安全性 >  
+\<傳輸 >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <netNamedPipeBinding>  
    <binding>  
       <security mode="None/Transport">  
@@ -32,31 +41,31 @@ caps.handback.revision: 12
 </netNamedPipeBinding>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|protectionLevel|定義具名管道的保護層級。  簽章訊息可降低訊息在傳輸期間遭第三方竄改的風險。  加密會提供傳輸期間的資料層級隱私權。  有效值包括以下的值：<br /><br /> -   None：沒有任何保護。<br />-   Sign：簽署訊息。<br />-   EncryptAndSign：加密和簽署訊息。<br /><br /> 預設值為 EncryptAndSign。|  
+|---------------|-----------------|  
+|protectionLevel|定義具名管道的保護層級。 簽章訊息可降低訊息在傳輸期間遭第三方竄改的風險。 加密會提供傳輸期間的資料層級隱私權。 有效值包括以下的值：<br /><br /> -None： 無保護。<br />-Sign： 簽署訊息。<br />-EncryptAndSign： 加密和訊息簽署。<br /><br /> 預設值為 EncryptAndSign。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|定義繫結的安全性設定。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|定義繫結的安全性設定。|  
   
-## 請參閱  
- <xref:System.ServiceModel.NamedPipeTransportSecurity>   
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>   
- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-tw/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<繫結\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.NamedPipeTransportSecurity>  
+ <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>  
+ [保護服務和用戶端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

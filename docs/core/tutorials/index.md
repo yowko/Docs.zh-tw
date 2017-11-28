@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-tutorials"></a>.NET Core 教學課程
 
 下列教學課程可用於了解 .NET Core。
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/14/2017
 - [建立適用於 dotnet new 的自訂範本](create-custom-template.md)
 
 如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](/aspnet/core/)。
-

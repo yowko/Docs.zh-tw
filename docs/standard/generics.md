@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>泛型型別 (泛型) 概觀
 
 我們經常會在 C# 中使用泛型，不論是隱含使用或明確使用。 當您在 C# 中使用 LINQ 時，您是否曾注意到您正在使用 IEnumerable<T>？ 如果您曾經看過使用 Entity Framework 與資料庫通訊的「一般存放庫」線上範例，您是否注意到大部分的方法會傳回 IQueryable<T>？ 您可能想知道這些範例中的 **T** 為何，以及它出現在這裡的原因。
@@ -75,4 +73,3 @@ Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
 
 *   [C# 泛型簡介](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [C# 程式設計手冊 - 泛型](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

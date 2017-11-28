@@ -1,30 +1,21 @@
 ---
 title: "多執行緒應用程式 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multithreaded-applications-c"></a>多執行緒應用程式 (C#)
 使用 C#，您可以撰寫一次執行多項工作的應用程式。 可能妨礙其他工作的工作可以另外的執行緒執行，此等程序稱之為「多執行緒」或「無限制執行緒」。  
@@ -91,8 +82,7 @@ newThread.Abort();
  「前景執行緒」無限期執行，而「背景執行緒」會在最後一個前景執行緒停止後立刻停止。 您可以使用 <xref:System.Threading.Thread.IsBackground%2A> 屬性來判斷或變更執行緒的背景狀態。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Thread>   
- [執行緒同步處理 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
- [多執行緒程序的參數和傳回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
- [執行緒處理 (C++)](../../../../csharp/programming-guide/concepts/threading/index.md)
-
+ <xref:System.Threading.Thread>  
+ [執行緒同步處理 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
+ [多執行緒程序的參數和傳回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)  
+ [執行緒 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)

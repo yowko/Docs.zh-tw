@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 253fb49742cc1969a5412248b01be295a45c282f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1fc7a5d74c6842f94d841b006e444fda3bb4a1e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 產生主要 Interop 組件
 有兩種方式可產生主要 Interop 組件：  
@@ -84,4 +77,3 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
   
 ## <a name="see-also"></a>另請參閱  
  [如何：登錄主要 Interop 組件](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
-

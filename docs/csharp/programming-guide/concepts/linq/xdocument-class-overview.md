@@ -1,30 +1,21 @@
 ---
 title: "XDocument 類別概觀 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5dcb221dadcae934c382d20a2a93149af9541db9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e8513c8c969f7522866454838c6c08da528c1b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 類別概觀 (C#)
 本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  
@@ -105,4 +96,3 @@ d.Save("test.xml");
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to XML 程式設計概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
-

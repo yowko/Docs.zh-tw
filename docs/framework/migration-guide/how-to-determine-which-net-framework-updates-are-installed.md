@@ -1,33 +1,34 @@
 ---
-title: "如何：判斷安裝的 .NET Framework 更新 | Microsoft Docs"
+title: "如何：判斷安裝的 .NET Framework 更新"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ba734dd3a9585b52b96cb2d27743da6190961126
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>如何：判斷安裝的 .NET Framework 更新
 電腦上所安裝之每一版 .NET Framework 已安裝的更新都會列在 Windows 登錄中。 您可以使用登錄編輯程式 (regedit.exe) 檢視這項資訊。  
   
- 在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝指南](../../../docs/framework/install/guide-for-developers.md)。  
+ 在登錄編輯程式中，.NET Framework 版本和每一版已安裝的更新會儲存在不同的子機碼中。 如需偵測已安裝之版本號碼的相關資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。 如需安裝 .NET Framework 的資訊，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。  
   
 ### <a name="to-find-installed-updates"></a>尋找已安裝的更新  
   
@@ -50,7 +51,6 @@ ms.lasthandoff: 09/19/2017
  這個範例產生的輸出類似下面所述：  
   
 ```  
-  
 Microsoft .NET Framework 3.5 SP1  
   KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
   SP1  
@@ -74,10 +74,10 @@ Microsoft .NET Framework 4 Extended
   KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
   KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [安裝指南](../../../docs/framework/install/guide-for-developers.md)   
- [版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+## <a name="see-also"></a>請參閱
+
+[如何：判斷安裝的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[安裝 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[版本和相依性](../../../docs/framework/migration-guide/versions-and-dependencies.md)

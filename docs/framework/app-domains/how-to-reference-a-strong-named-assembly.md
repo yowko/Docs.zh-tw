@@ -5,77 +5,78 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
 - compile-time assembly referencing
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b005926f99b7c151e5916a95a9852dd8b448a928
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aa46bfdfe42dca9509e39d4b6218473aa00a1877
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 如何：參考強式名稱簽署組件
-參考強式名稱組件的型別或資源的處理序 \(Process\) 通常是透明的。  您可以在編譯期間 \(早期繫結\) 或執行階段進行參考。  
+# <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱簽署組件
+參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
- 當您向編譯器指出您的組件明確參考其他組件時，便會發生編譯期間參考。  使用編譯期間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將該金鑰放入正在進行編譯之組件的組件參考中。  
+ 當您對編譯器指出您的組件明確參考另一個組件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。  
   
 > [!NOTE]
->  強式名稱組件只能使用來自其他強式名稱組件的型別。  否則，此強式名稱組件的安全性將受到威脅。  
+>  強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的安全性將會受到危害。  
   
-### 若要對強式名稱的組件進行編譯期間參考  
+### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的編譯時間參考  
   
 1.  在命令提示字元中輸入下列命令：  
   
-     \<*compiler command*\> **\/reference:**\<*assembly name*\>  
+     \<*編譯器命令*> **/reference:**\<組件名稱>  
   
-     在這個命令中，*compiler command* 是您使用的語言的編譯器命令，而*assembly name* 則為被參考的強式名稱組件的名稱。  您也可以使用其他編譯器選項，例如 **\/t:library** 選項，來建立程式庫組件。  
+     在這個命令中，「編譯器命令」是您所使用語言的編譯器命令，而「組件名稱」是所參考的強式名稱組件的名稱。 您也可以使用其他編譯器選項，例如 **/t:library** 選項來建立程式庫組件。  
   
- 下列範例建立 `myAssembly.dll` 組件，它參考來自 `myAssembly.cs` 程式庫模組的 `myLibAssembly.dll` 強式名稱組件。  
+ 下列範例會建立稱為 `myAssembly.dll` 的組件，而此組件從稱為 `myAssembly.cs` 的程式碼模組參考稱為 `myLibAssembly.dll` 的強式名稱組件。  
   
 ```  
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
   
-### 若要對強式名稱的組件進行執行階段參考  
+### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的執行階段參考  
   
-1.  當您對強式名稱組件進行執行階段參考 \(例如使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 方法\) 時，必須使用所參考強式名稱組件的顯示名稱。  顯示名稱的語法如下：  
+1.  當您建立強式名稱組件的執行階段參考時 (例如，使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法)，必須使用所參考之強式名稱組件的顯示名稱。 顯示名稱的語法如下：  
   
-     \<*assembly name*\>**,** \<*version number*\>**,** \<*culture*\>**,** \<*public key token*\>  
+     \<組件名稱>**,** \<版本號碼>**,** \<文化特性>**,** \<公開金鑰權杖>  
   
-     例如：  
+     例如:   
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
     ```  
   
-     在這個範例中，`PublicKeyToken` 是十六進位格式的公開金鑰語彙基元。  如果沒有文化特性值，則使用 `Culture=neutral`。  
+     在此範例中，`PublicKeyToken` 是公開金鑰權杖的十六進位格式。 如果沒有文化特性值，請使用 `Culture=neutral`。  
   
- 下列程式碼範例說明如何使用這項資訊和 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法。  
+ 下列程式碼範例示範如何搭配使用這項資訊與 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法。  
   
  [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)]
  [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)]
  [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
   
- 您可以使用下列[強式名稱 \(Sn.exe\)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來列印特定組件的十六進位格式公開金鑰和公開金鑰語彙基元：  
+ 您可以使用下列[強式名稱 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令，列印特定組件之公開金鑰和公開金鑰權杖的十六進位格式：  
   
- **sn \-Tp \<** *assembly* **\>**  
+ **sn -Tp \<**組件**>**  
   
- 如果您擁有公開金鑰檔，則可以使用下列命令 \(請注意命令列選項的大小寫不同處\)：  
+ 如果您有公開金鑰檔案，則可以改用下列命令 (請注意命令列選項上的大小寫差異)：  
   
- **sn \-tp \<** *assembly* **\>**  
+ **sn -tp \<**組件**>**  
   
 ## <a name="see-also"></a>另請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "取消一項非同步工作或工作清單 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 78becece40b4b527869c593f8a1fe1eeba1f1f51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消一項非同步工作或工作清單 (C#)
 如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。  
@@ -70,7 +61,7 @@ ms.lasthandoff: 07/28/2017
         CancellationTokenSource cts;  
     ```  
   
-2.  針對 [取消] 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 方法，以在使用者要求取消時通知 `cts`。  
+2.  針對 [取消] 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，以在使用者要求取消時通知 `cts`。  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -92,7 +83,7 @@ ms.lasthandoff: 07/28/2017
         cts = new CancellationTokenSource();  
         ```  
   
-    -   在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。  
+    -   在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。  
   
         ```csharp  
         try  
@@ -113,7 +104,7 @@ ms.lasthandoff: 07/28/2017
         }  
         ```  
   
-4.  在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。  
+4.  在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。  
   
      下列程式碼示範 `AccessTheWebAsync` 中的變更。  
   
@@ -530,9 +521,8 @@ namespace CancelAListOfTasks
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken>   
- [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (非同步範例：微調應用程式)
-
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [非同步範例：微調應用程式 (英文)](http://go.microsoft.com/fwlink/?LinkId=255046)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -263,6 +256,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 http://www.code.microsoft.com/utils 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 然後，執行階段會在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探查該組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
   
 ## <a name="see-also"></a>另請參閱  
- [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+ [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [部署](../../../docs/framework/deployment/index.md)
-

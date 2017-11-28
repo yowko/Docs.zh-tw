@@ -17,6 +17,3 @@
 ### [如何：存取 XML 子項目](how-to-access-xml-child-elements.md)
 ### [如何：存取 XML 屬性](how-to-access-xml-attributes.md)
 ### [如何：宣告和使用 XML 命名空間前置詞](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [XML IntelliSense](xml-intellisense.md)
-### [如何：啟用 XML IntelliSense](how-to-enable-xml-intellisense.md)
-### [XML to Schema 精靈](xml-to-schema-wizard.md)

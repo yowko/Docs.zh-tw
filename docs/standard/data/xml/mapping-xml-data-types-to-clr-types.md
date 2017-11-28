@@ -1,36 +1,34 @@
 ---
-title: "將 XML 資料型別對應至 CLR 型別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "將 XML 資料型別對應至 CLR 型別"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3b6e67d27de33e61f5d5190249e90ac48e1aaaec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 將 XML 資料型別對應至 CLR 型別
-下表說明 XML 資料型別及 Common Language Runtime \(CLR\) 型別之間的預設對應。  
+# <a name="mapping-xml-data-types-to-clr-types"></a>將 XML 資料型別對應至 CLR 型別
+下表說明 XML 資料型別及 Common Language Runtime (CLR) 型別之間的預設對應。  
   
-## 下表說明 XML 資料型別至 CLR 型別的預設對應。  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>下表說明 XML 資料型別至 CLR 型別的預設對應。  
   
 > [!NOTE]
->  `xs` 及 `xdt` 前置詞分別對應至 http:\/\/www.w3.org\/2001\/XMLSchema 及 http:\/\/www.w3.org\/2003\/05\/xpath\-datatypes 命名空間 URI。  
+>  `xs` 及 `xdt` 前置詞分別對應至 http://www.w3.org/2001/XMLSchema 及 http://www.w3.org/2003/05/xpath-datatypes 命名空間 URI。  
   
 |XML 型別|CLR 型別|  
-|------------|------------|  
+|--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
 |`xs:boolean`|<xref:System.Boolean>|  
@@ -88,5 +86,5 @@ caps.handback.revision: 2
 |Comment node|<xref:System.Xml.XPath.XPathNavigator>|  
 |Processing instruction node|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## 請參閱  
- [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>另請參閱  
+ [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

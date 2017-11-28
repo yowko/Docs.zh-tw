@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
 - deploying applications [.NET Framework]
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: eee16adfaa38b9a616f47d8489d99d0d9714cbaa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
 本文將協助您開始在應用程式上部署 .NET Framework。 大部分資訊的目標對象是開發人員、OEM 和企業系統管理員。 想要在電腦上安裝 .NET Framework 的使用者應閱讀[安裝 .NET Framework](~/docs/framework/install/index.md)。  
@@ -57,13 +50,13 @@ ms.lasthandoff: 09/05/2017
   
     -   [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   在用戶端應用程式上部署 .NET Framework (適用於開發人員)：  
   
-    -   在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield)  
+    -   在安裝和部署專案中[使用 InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)  
   
-    -   [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
+    -   [使用 Visual Studio ClickOnce 應用程式](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
   
     -   [建立 WiX 安裝套件](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -171,7 +164,7 @@ ms.lasthandoff: 09/05/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|  
-|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論可以避免能導致 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 及其他錯誤之類型識別問題的方法。|  
+|[組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|  
 |[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](../../../docs/framework/deployment/reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|  
 |[系統管理員部署手冊](../../../docs/framework/deployment/guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|  
 |[開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|  
@@ -183,4 +176,3 @@ ms.lasthandoff: 09/05/2017
   
 ## <a name="see-also"></a>另請參閱  
  [開發指南](../../../docs/framework/development-guide.md)
-

@@ -1,25 +1,21 @@
 ---
 title: "LINQ to XML 中的延後執行和延遲評估 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 847d8f830c26f54521664accc4bf569f822f255a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10ecebc2563df5a12b71a743727b1be21b19b671
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML 中的延後執行和延遲評估 (C#)
 若要使用延後執行，通常會實作查詢和座標軸運算。 本主題說明延後執行的條件與優點以及一些實作考量。  
@@ -27,7 +23,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="deferred-execution"></a>延後執行  
  延後執行是指延遲評估運算式，直到實際需要其「實現的」值為止。 當您必須管理大型資料集合，尤其是在包含一系列鏈結之查詢或管理的程式中時，延後執行會明顯改善效能。 在最好的情況下，延後執行僅能單一逐一查看來源集合。  
   
- LINQ 技術可讓延後執行大量用於 <xref:System.Linq?displayProperty=fullName> 核心類別的成員以及各種 LINQ 命名空間中的擴充方法，例如，<xref:System.Xml.Linq.Extensions?displayProperty=fullName>。  
+ LINQ 技術可讓延後執行大量用於 <xref:System.Linq?displayProperty=nameWithType> 核心類別的成員以及各種 LINQ 命名空間中的擴充方法，例如，<xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>。  
   
  在 Iterator 區塊中使用時，支援在 C# 語言中，透過 [yield](../../../../csharp/language-reference/keywords/yield.md) 關鍵字 (以 `yield-return` 陳述式的形式) 直接支援延後執行。 此類 Iterator 必須傳回型別 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> (或衍生型別) 的集合。  
   
@@ -46,8 +42,7 @@ ms.lasthandoff: 07/28/2017
 -   [延後執行範例 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)   
- [概念和術語 (函數式轉換) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)   
- [彙總作業 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)   
+ [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+ [概念和術語 (函數式轉換) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
+ [彙總作業 (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
  [yield](../../../../csharp/language-reference/keywords/yield.md)
-

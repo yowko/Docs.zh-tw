@@ -1,38 +1,19 @@
 ---
 title: "如何：識別可為 Null 的類型 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- nullable types [C#], identifying
+helpviewer_keywords: nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 610ed18308df02c5632361cd09ef94330dea598b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c9e05bfe8be45e5b71a8db06ce4f2502c5397fd4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：識別可為 Null 的類型 (C# 程式設計手冊)
 您可以使用 C# [typeof](../../../csharp/language-reference/keywords/typeof.md) 運算子來建立代表可為 Null 類型的 <xref:System.Type> 物件：  
@@ -70,6 +51,5 @@ if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)   
+ [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)  
  [對可為 Null 的型別進行 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
-

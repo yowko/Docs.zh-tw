@@ -1,5 +1,5 @@
 ---
-title: ".NET 教學課程 | Microsoft Docs"
+title: ".NET 教學課程"
 description: ".NET 某些重要功能的逐步導覽。"
 keywords: ".NET, .NET Core, 教學課程, 程式設計語言, 不安全, 記憶體管理, 型別安全, 非同步處理"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>.NET 教學課程
 
 .NET 是一般用途開發平台。 它有數種重要功能，例如支援多種程式設計語言、非同步和並行程式設計模型，以及原生互通性，可支援跨多重平台的眾多案例。
@@ -80,7 +78,7 @@ Microsoft 積極地開發並支援三種 .NET 語言：C#、F# 與 Visual Basic 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
-此外也會使用型別安全，藉由確保存取子關鍵字的精確度，來協助強制執行封裝。 存取子關鍵字是控制其他程式碼存取指定類型成員的成品。 這些關鍵字通常會用於某種類型中用來管理其行為的各種資料。
+此外也會使用型別安全，藉由確保存取子關鍵字的精確度，來協助強制執行封裝。 存取子關鍵字是控制其他程式碼存取指定型別成員的成品。 這些關鍵字通常會用於某種類型中用來管理其行為的各種資料。
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
@@ -149,4 +147,3 @@ CLR 可讓您根據語言支援透過 `unsafe` 程式碼存取原生記憶體及
 若要開始撰寫自己的程式碼，請瀏覽[使用者入門](get-started.md)。
 
 若要了解重要的 .NET 元件，請參閱 [.NET 架構元件](components.md)。
-

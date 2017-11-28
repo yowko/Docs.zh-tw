@@ -1,40 +1,22 @@
 ---
 title: "部分類別和方法 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41b07af83faa6af23695f3719aae29183c35a417
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 有可能分割 [class](../../../csharp/language-reference/keywords/class.md) 或 [struct](../../../csharp/language-reference/keywords/struct.md) 的定義，兩個或多個來源檔案上的[介面](../../../csharp/language-reference/keywords/interface.md)或方法。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。  
@@ -48,7 +30,7 @@ ms.lasthandoff: 09/25/2017
   
 -   若要分割類別定義，請使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 關鍵字修飾詞，如下所示︰  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  `partial` 關鍵字表示可在命名空間中定義類別、結構或介面的其他組件。 所有組件都必須使用 `partial` 關鍵字。 所有組件都必須可在編譯時間取得，以形成最後的型別。 所有組件必須有相同的存取範圍，例如 `public`、`private` 等等。  
   
@@ -61,15 +43,15 @@ ms.lasthandoff: 09/25/2017
   
  下例會顯示可為部分的巢狀型別，即使巢狀型別所在的型別不是部分本身。  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  在編譯時期會合併部分型別定義的屬性。 例如，請考慮下列宣告：  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  它們與下列宣告相同：  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  以下是合併自所有部分型別定義︰  
   
@@ -85,24 +67,24 @@ ms.lasthandoff: 09/25/2017
   
  例如，請考慮下列宣告：  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  它們與下列宣告相同：  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### <a name="restrictions"></a>限制  
  當您處理部分類別定義時要遵循數項規則︰  
   
 -   表示同型別組件的所有部分型別定義都必須使用 `partial` 來修改。 例如，下列類別宣告會產生錯誤︰  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   `partial` 修飾詞只能緊貼在關鍵字 `class`、`struct` 或 `interface` 之前。  
   
 -   部分型別定義中允許巢狀部分型別，如下例所示︰  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   表示同型別組件的所有部分型別定義都必須在相同的組件和相同的模組 (.exe 或 .dll 檔案) 中定義。 部分定義不能跨越多個模組。  
   
@@ -136,7 +118,7 @@ ms.lasthandoff: 09/25/2017
  在下例中，類別的欄位和建構函式 `CoOrds`，已在一個部分類別定義中宣告，而成員 `PrintCoOrds`，則是在另一個部分類別定義中宣告。  
   
 ### <a name="code"></a>程式碼  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## <a name="example-2"></a>範例 2  
   
@@ -144,7 +126,7 @@ ms.lasthandoff: 09/25/2017
  下例範例示範您也可以開發部分結構和介面。  
   
 ### <a name="code"></a>程式碼  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## <a name="partial-methods"></a>部分方法  
  部分類別或結構可包含部分方法。 類別的一個組件包含方法簽章。 選擇性實作可在相同組件或另一個組件中定義。 如未提供實作，則會在編譯時期移除方法和方法的所有呼叫。  
@@ -184,9 +166,8 @@ partial void onNameChanged()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [介面](../../../csharp/programming-guide/interfaces/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [介面](../../../csharp/programming-guide/interfaces/index.md)  
  [partial (型別)](../../../csharp/language-reference/keywords/partial-type.md)
-

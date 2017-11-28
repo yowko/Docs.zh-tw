@@ -1,43 +1,46 @@
 ---
-title: "驗證的延伸保護概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "驗證的延伸保護概觀"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: d8dadf09434778bc32bb75c5eff5ff4cb0494373
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 驗證的延伸保護概觀
-驗證的延伸保護有助於防範中間人 \(MITM\) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  
+# <a name="extended-protection-for-authentication-overview"></a>驗證的延伸保護概觀
+驗證的延伸保護有助於防範中間人 (MITM) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  
   
- 試想此一涉及三方的案例：用戶端、伺服器和攻擊者。伺服器的 URL 為 `https://server`，而攻擊者的 URL 為 `https://attacker`。攻擊者計誘用戶端誤以為存取了伺服器，但其實是進入攻擊者網站。接著攻擊者傳送要求至伺服器。如果攻擊者試圖存取受保護的資源，伺服器將以 WWW\-Authenticate 標頭回覆予攻擊者。由於攻擊者沒有驗證資訊，便將 WWW\-Authenticate 標頭傳送給用戶端。用戶端隨即傳送 Authorization 標頭給攻擊者，而攻擊者再將此標頭傳送至伺服器，致使其得以利用用戶端的認證存取受保護的資源。  
+ 試想此一涉及三方的案例：用戶端、伺服器和攻擊者。 伺服器的 URL 為 `https://server`，而攻擊者的 URL 為 `https://attacker`。 攻擊者計誘用戶端誤以為存取了伺服器，但其實是進入攻擊者網站。 接著攻擊者傳送要求至伺服器。 如果攻擊者試圖存取受保護的資源，伺服器將以 WWW-Authenticate 標頭回覆予攻擊者。 由於攻擊者沒有驗證資訊，便將 WWW-Authenticate 標頭傳送給用戶端。 用戶端隨即傳送 Authorization 標頭給攻擊者，而攻擊者再將此標頭傳送至伺服器，致使其得以利用用戶端的認證存取受保護的資源。  
   
- 就目前而言，當用戶端應用程式使用 Kerberos、Digest 或 NTLM 透過 HTTPS 向伺服器驗證自身時，首先會建立傳輸層安全性 \(TLS\) 通道，並且使用此通道進行驗證。但是，安全通訊端層 \(SSL\) 所產生的工作階段金鑰與驗證期間產生的工作階段金鑰之間並無任何繫結。因此在前述案例中，若通訊是透過 TLS \(例如 HTTPS 通道\) 進行，則所建立的 SSL 通道會有兩個：其一位於用戶端和攻擊者之間，其二位於攻擊者和伺服器之間。用戶端的認證從用戶端傳送至伺服器時，會先經過用戶端和攻擊者之間的 SSL 通道，再經過攻擊者和伺服器之間的通道。一旦用戶端的認證送達伺服器，伺服器隨即驗證其認證，卻未偵測送出這些認證的通道竟是來自攻擊者而非用戶端。  
+ 就目前而言，當用戶端應用程式使用 Kerberos、Digest 或 NTLM 透過 HTTPS 向伺服器驗證自身時，首先會建立傳輸層安全性 (TLS) 通道，並且使用此通道進行驗證。 但是，安全通訊端層 (SSL) 所產生的工作階段金鑰與驗證期間產生的工作階段金鑰之間並無任何繫結。 因此在前述案例中，若通訊是透過 TLS (例如 HTTPS 通道) 進行，則所建立的 SSL 通道會有兩個：其一位於用戶端和攻擊者之間，其二位於攻擊者和伺服器之間。 用戶端的認證從用戶端傳送至伺服器時，會先經過用戶端和攻擊者之間的 SSL 通道，再經過攻擊者和伺服器之間的通道。 一旦用戶端的認證送達伺服器，伺服器隨即驗證其認證，卻未偵測送出這些認證的通道竟是來自攻擊者而非用戶端。  
   
- 其解決方法是使用受 TLS 保護的外部通道，加上用戶端驗證型內部通道，並且將通道繫結權杖 \(CBT\) 傳遞至伺服器。CBT 為受 TLS 保護的通道之屬性，用於將外部通道繫結至用戶端驗證型內部通道上的對話。  
+ 其解決方法是使用受 TLS 保護的外部通道，加上用戶端驗證型內部通道，並且將通道繫結權杖 (CBT) 傳遞至伺服器。 CBT 為受 TLS 保護的通道之屬性，用於將外部通道繫結至用戶端驗證型內部通道上的對話。  
   
- 在前述案例中，用戶端和攻擊者間 TLS 通道的 CBT 將與傳送至伺服器的授權資訊合併。若伺服器可感知 CBT，便會將用戶端驗證資訊所內含的 CBT \(對應於用戶端和攻擊者間的通道\) 與附加至攻擊者和伺服器間通道的 CBT 相比較。CBT 乃是通道的目的端所特有，故而用戶端和攻擊者間的 CBT 與攻擊者和伺服器間的 CBT 不符。如此可讓伺服器偵測到 MITM 攻擊並拒絕驗證要求。  
+ 在前述案例中，用戶端和攻擊者間 TLS 通道的 CBT 將與傳送至伺服器的授權資訊合併。 若伺服器可感知 CBT，便會將用戶端驗證資訊所內含的 CBT (對應於用戶端和攻擊者間的通道) 與附加至攻擊者和伺服器間通道的 CBT 相比較。 CBT 乃是通道的目的端所特有，故而用戶端和攻擊者間的 CBT 與攻擊者和伺服器間的 CBT 不符。 如此可讓伺服器偵測到 MITM 攻擊並拒絕驗證要求。  
   
- 用戶端不需要任何組態設定。若用戶端已更新為會傳遞 CBT 至伺服器，往後都將一律這麼做。如果伺服器也已更新，即可設定為使用 CBT 或者予以忽略。伺服器只要未更新，就會忽略此權仗。  
+ 用戶端不需要任何組態設定。 若用戶端已更新為會傳遞 CBT 至伺服器，往後都將一律這麼做。 如果伺服器也已更新，即可設定為使用 CBT 或者予以忽略。 伺服器只要未更新，就會忽略此權仗。  
   
  伺服器可以具備下列保護層級：  
   
--   無。未執行通道繫結驗證。此乃所有未更新之伺服器的行為。  
+-   無。 未執行通道繫結驗證。 此乃所有未更新之伺服器的行為。  
   
--   部分。所有已更新的用戶端都必須向伺服器提供通道繫結資訊。尚未更新的用戶端則沒有這個必要。此乃顧及應用程式相容性的中繼選項。  
+-   部分。 所有已更新的用戶端都必須向伺服器提供通道繫結資訊。 尚未更新的用戶端則沒有這個必要。 此乃顧及應用程式相容性的中繼選項。  
   
--   完整。所有用戶端都必須提供通道繫結資訊。用戶端若未提供此資訊，伺服器會拒絕其驗證要求。  
+-   完整。 所有用戶端都必須提供通道繫結資訊。 用戶端若未提供此資訊，伺服器會拒絕其驗證要求。  
   
- 如需詳細資訊，請參閱「Win7 CBT\/延伸保護」範例。  
+ 如需詳細資訊，請參閱「Win7 CBT/延伸保護」範例。  
   
-## 請參閱  
- [Windows Server AppFabric 的資訊安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>另請參閱  
+ [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

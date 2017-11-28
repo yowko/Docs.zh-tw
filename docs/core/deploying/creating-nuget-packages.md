@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
+ms.openlocfilehash: a5738a4f3755a959660db4be683677673af61ef9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>如何使用跨平台工具建立 NuGet 封裝
 
 > [!NOTE]
@@ -28,6 +26,9 @@ ms.lasthandoff: 07/28/2017
 假設您剛寫完酷炫的新程式庫，希望透過 NuGet 散發。  您可以使用跨平台工具建立 NuGet 封裝，絲毫不差地完成此作業！  下例假設 **SuperAwesomeLibrary** 程式庫以 `netstandard1.0` 為目標。
 
 如果您有可轉移的相依性，也就是相依於另一個專案的專案，您必須先使用 `dotnet restore` 命令確保還原整個解決方案的封裝，再建立 NuGet 封裝。  未完成這項操作，會導致 `dotnet pack` 命令無法正常運作。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 
 在確定封裝還原後，您可以瀏覽至程式庫所在的目錄︰
 
@@ -66,4 +67,3 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>請勿混淆 `dotnet pack` 與 `dotnet publish`
 
 請務必注意，和 `dotnet publish` 命令一點關係都沒有。  `dotnet publish` 命令是要使用相同組合中的所有相依性來部署應用程式，不是用來產生要透過 NuGet 散發及使用的 NuGet 封裝。
-

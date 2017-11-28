@@ -1,46 +1,28 @@
 ---
 title: "委派 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4a6649537238af38e073eeb8747487822d058b7f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1d3dc2252b086f9df9e64a059a53ec8792e11b45
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
   
  委派可以用來將方法當做引數傳遞給其他方法。 事件處理常式就是透過委派叫用的方法。 建立自訂方法後，像是 Windows 控制項這樣的類別就會在特定事件發生時呼叫您的方法。 下列範例將示範委派宣告：  
   
- [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
  來自符合委派類型之任何可存取類別或結構的任何方法都可以指派給委派。 方法可以是靜態或執行個體方法。 如此即可用程式設計的方式變更方法呼叫，也可將新的程式碼插入現有的類別中。  
   
@@ -89,7 +71,6 @@ ms.lasthandoff: 09/25/2017
  [Delegates and Events](http://go.microsoft.com/fwlink/?LinkId=195418) in [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Delegate>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ <xref:System.Delegate>  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [事件](../../../csharp/programming-guide/events/index.md)
-

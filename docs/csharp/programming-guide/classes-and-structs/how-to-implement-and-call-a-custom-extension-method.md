@@ -1,38 +1,19 @@
 ---
 title: "如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- extension methods [C#], implementing and calling
+helpviewer_keywords: extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7de999c53f02fcc2bde4a8ccf504ba2b1d032638
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c1c26640c550ce2b16ffafd59430e92189764f9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
 本主題示範如何針對 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=217856) 中的任何類型，或您要擴充的任何其他 .NET 類型，實作您自己的擴充方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
@@ -56,22 +37,21 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  下列範例會在 `CustomExtensions.StringExtension` 類別中實作名為 `WordCount` 的擴充方法。 此方法會用於指定為第一個方法參數的 <xref:System.String> 類別。 `CustomExtensions` 命名空間會匯入應用程式命名空間，並在 `Main` 方法內呼叫此方法。  
   
- [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要執行此程式碼，請將它複製並貼至已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。   
+ 若要執行此程式碼，請將它複製並貼至已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  擴充方法沒有特定安全性弱點。 它們無法用於模擬類型上的現有方法，因為所有名稱衝突已使用類型自行定義的執行個體或靜態方法解決。 擴充方法無法存取擴充類別中的任何私用資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [this](../../../csharp/language-reference/keywords/this.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [this](../../../csharp/language-reference/keywords/this.md)  
  [命名空間](../../../csharp/language-reference/keywords/namespace.md)
-

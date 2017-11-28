@@ -1,33 +1,29 @@
 ---
 title: "如何：鏈結軸方法呼叫 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 7cf5cb445dc64dfa5f4734ae58e6e921a5a92148
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17793e0620969125de202de7edea89d748b98ee7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何：鏈結軸方法呼叫 (LINQ to XML) (C#)
 您在程式碼中使用的常見模式為呼叫座標軸方法，然後呼叫其中一個擴充方法座標軸。  
   
- 有兩個座標軸可傳回項目集合而且具有 `Elements` 名稱：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法。 您可以結合這兩個座標軸，在樹狀的指定深度，尋找指定之名稱的所有項目。  
+ 有兩個座標軸可傳回項目集合而且具有 `Elements` 名稱：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法。 您可以結合這兩個座標軸，在樹狀的指定深度，尋找指定之名稱的所有項目。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>，在所有 `Name` 項目的所有 `Address` 項目中，尋找所有 `PurchaseOrder` 項目。  
+ 這個範例會使用 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>，在所有 `Name` 項目的所有 `Address` 項目中，尋找所有 `PurchaseOrder` 項目。  
   
  此範例使用下列 XML 文件︰[範例 XML 檔：多份採購單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
@@ -45,7 +41,7 @@ foreach (XElement e in names)
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
 <Name>Cristian Osorio</Name>  
@@ -54,7 +50,7 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- 之所以可以這樣做，是因為 `Elements` 軸的其中一個實作是 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XContainer>。 <xref:System.Xml.Linq.XElement> 衍生自 <xref:System.Xml.Linq.XContainer>，所以可以呼叫在呼叫結果上的 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 方法至 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 方法。  
+ 之所以可以這樣做，是因為 `Elements` 軸的其中一個實作是 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XContainer>。 <xref:System.Xml.Linq.XElement> 衍生自 <xref:System.Xml.Linq.XContainer>，所以可以呼叫在呼叫結果上的 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法至 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法。  
   
 ## <a name="example"></a>範例  
  有時候您會想要在可能有也可能沒有介入祖系時，擷取特定項目深度的所有項目。 例如，在下列文件中，您可能想要擷取 `ConfigParameter` 項目子系的所有 `Customer` 項目，但不是 `ConfigParameter` 項目子系的 `Root`。  
@@ -81,7 +77,7 @@ foreach (XElement e in names)
 </Root>  
 ```  
   
- 如果要這樣做，您可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 座標軸，如下所示：  
+ 如果要這樣做，您可以使用 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 座標軸，如下所示：  
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
@@ -94,7 +90,7 @@ foreach (XElement cp in configParameters)
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
 <ConfigParameter>SecondConfigParameter</ConfigParameter>  
 ```  
@@ -119,7 +115,7 @@ foreach (XElement e in names)
   
  這個範例會產生下列輸出：  
   
-```  
+```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Tai Yee</aw:Name>  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Cristian Osorio</aw:Name>  
@@ -130,4 +126,3 @@ foreach (XElement e in names)
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to XML 座標軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

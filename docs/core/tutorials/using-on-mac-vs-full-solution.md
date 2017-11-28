@@ -4,19 +4,17 @@ description: "本主題會逐步引導您建置一個包含可重複使用之程
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 03/16/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案
 
 Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本主題會逐步引導您建置一個包含可重複使用之程式庫和單元測試的 .NET Core 解決方案。
@@ -25,7 +23,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 > [!NOTE]
 > 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
-> * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。 您可在 [開發人員社群](https://developercommunity.visualstudio.com/spaces/41/index.html) 入口網站追蹤您的意見反應。
+> * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/41/index.html)入口網站追蹤您的意見反應。
 > * 若要提出建議，請從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac UserVoice 網頁](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac) \(英文\)。
 
 ## <a name="prerequisites"></a>必要條件
@@ -80,7 +78,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 1. 為了讓測試程式庫能搭配 `WordCount` 類別使用，請將參考加入 `TextUtils` 專案。 在 [解決方案] 提要欄位中，以滑鼠右鍵按一下 [TestLibrary] 底下的 [相依性]。 從操作功能表選取 [編輯參考]。
 
-1. 在 [編輯參考] 對話方塊中，選取 [專案] 索引標籤上的 [TextUtils] 專案。 選取 [確定]。
+1. 在 [編輯參考] 對話方塊中，選取 [專案] 索引標籤上的 [TextUtils] 專案。選取 [確定]。
 
    ![[編輯參考] 對話方塊](./media/using-on-mac-vs-full-solution/vsmacfull07.png)
 
@@ -199,4 +197,3 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 ## <a name="see-also"></a>請參閱
 
 [Visual Studio 2017 for Mac 版本資訊](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
-

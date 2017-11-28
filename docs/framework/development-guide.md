@@ -1,26 +1,24 @@
 ---
-title: ".NET Framework 開發指南 | Microsoft Docs"
+title: ".NET Framework 開發指南"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework, development guide
+helpviewer_keywords: .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: b630f2dc91068168b1d57b37ad80d79f5e3d1738
-ms.openlocfilehash: 88219e428409a71eb2706c97dca31ccde38bb918
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 本節說明如何建立、設定、偵錯、保護和部署 .NET Framework 應用程式。 本節也提供有關技術領域的資訊，例如動態程式設計、互通性、擴充性、記憶體管理和執行緒。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 04/18/2017
  說明如何使用 Windows Communication Foundation (WCF) 建立安全、可靠的服務導向應用程式。  
   
  [使用 Windows Workflow Foundation 建立工作流程](windows-workflow-foundation/index.md)     
- 提供使用 Windows Workflow Foundation (WF) 程式撰寫模型、範例和工具的相關資訊。   
+ 提供使用 Windows Workflow Foundation (WF) 程式撰寫模型、範例和工具的相關資訊。  
 
  [Windows 服務應用程式](../../docs/framework/windows-services/index.md)  
  說明如何使用 Visual Studio 及 .NET Framework 建立要安裝為服務的應用程式，以及啟動、停止及控制其行為。  
@@ -78,7 +76,7 @@ ms.lasthandoff: 04/18/2017
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>參考資料  
- [.NET Framework 類別庫](https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7)  
+ [.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)  
  為每個包含在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空間的類別提供語法、程式碼範例和用法資訊。  
   
 ## <a name="related-sections"></a>相關章節  

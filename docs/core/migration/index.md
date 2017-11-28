@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>將 .NET Core 專案移轉至 .csproj 格式
 
 本文將討論 .NET Core 專案的移轉案例，並將介紹下列三種移轉案例：
@@ -53,7 +51,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 已移轉的檔案 (*project.json*、*global.json* 和 *.xproj*) 將會移至「備份」資料夾。
 
 > [!NOTE]
-> 如果您使用 VS Code，`dotnet migrate` 命令不會修改 VS Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。 這也適用於使用 Project Ryder 或是 Visual Studio 以外的任何編輯器或整合式開發環境 (IDE) 的情況。 
+> 如果您使用 Visual Studio Code，`dotnet migrate` 命令不會修改 Visual Studio Code 特定的檔案，例如 `tasks.json`。 這些檔案必須以手動方式變更。 這也適用於使用 Project Ryder 或是 Visual Studio 以外的任何編輯器或整合式開發環境 (IDE) 的情況。 
 
 如需 project.json 和 csproj 格式的比較，請參閱 [project.json 與 csproj 屬性的對應](../tools/project-json-to-csproj.md)。
 
@@ -90,4 +88,3 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 
 ## <a name="see-also"></a>請參閱
 [移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
-

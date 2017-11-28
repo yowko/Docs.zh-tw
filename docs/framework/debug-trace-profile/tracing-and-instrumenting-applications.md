@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework]
 - debugging [.NET Framework], instrumentation
@@ -23,19 +20,18 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 899776c29fc0d0c6a43f28c089c51b9695a1ef6f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
-追蹤可讓您在應用程式執行時，監視應用程式的執行。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=fullName>、<xref:System.Diagnostics.Debug?displayProperty=fullName> 和 <xref:System.Diagnostics.TraceSource?displayProperty=fullName> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  
+追蹤可讓您在應用程式執行時，監視應用程式的執行。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  
   
  「檢測」一詞是指監視或測量產品效能層級，以及診斷錯誤的能力。 在程式設計中，這表示應用程式納入下列項目的能力：  
   
@@ -68,7 +64,7 @@ System.Diagnostics.Trace.WriteLine("Hello World!");
 System.Diagnostics.Debug.WriteLine("Hello World!");  
 ```  
   
- 每個範例會顯示 "Hello World！" 偵錯工具中執行應用程式時，[輸出] 視窗中。  
+ 每個範例會顯示"Hello World ！" 在 [輸出] 視窗中偵錯工具執行應用程式時。  
   
  這可讓您偵錯應用程式，並依據其於測試環境中的的行為，將其效能最佳化。 您可在已啟動 <xref:System.Diagnostics.Debug> 條件屬性的偵錯組建中進行應用程式偵錯，以接收所有的偵錯輸出。 當您準備發行應用程式時，可以在不啟動 <xref:System.Diagnostics.Debug> 條件屬性的情況下編譯發行組建，如此編譯器就不會將偵錯程式碼納入最終可執行檔中。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 如需您的應用程式適用之不同組建組態的詳細資訊，請參閱[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
@@ -126,7 +122,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  在放置追蹤陳述式，以在執行階段使用時，您必須特別小心。 您必須考量，在所部署的應用程式中，可能會需要哪些追蹤資訊，以充分涵蓋所有可能的追蹤案例。 使用追蹤的應用程式差異甚大，但是並沒有追蹤策略位置的一般方針。 如需有關放置追蹤陳述式的詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)。  
   
 ## <a name="output-from-tracing"></a>追蹤的輸出  
- 追蹤輸出是由稱為「接聽項」的物件來收集。 接聽程式是會接收追蹤輸出，並將其寫入輸出裝置 (通常是視窗、記錄檔或文字檔) 的物件。 建立追蹤接聽程式時，通常會將它加入至 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=fullName> 集合，讓接聽程式能夠接收所有的追蹤輸出。  
+ 追蹤輸出是由稱為「接聽項」的物件來收集。 接聽程式是會接收追蹤輸出，並將其寫入輸出裝置 (通常是視窗、記錄檔或文字檔) 的物件。 建立追蹤接聽程式時，通常會將它加入至 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 集合，讓接聽程式能夠接收所有的追蹤輸出。  
   
  追蹤資訊一定至少會寫入至預設的 <xref:System.Diagnostics.Trace> 輸出目標，也就是 <xref:System.Diagnostics.DefaultTraceListener>。 如果您因為某種原因而已經刪除了 <xref:System.Diagnostics.DefaultTraceListener>，而且未將任何其他接聽程式加入至 <xref:System.Diagnostics.Trace.Listeners%2A> 集合，您將不會接收到任何追蹤訊息。 如需詳細資訊，請參閱[追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)。  
   
@@ -154,15 +150,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  如果您在部署 ASP.NET 應用程式之前，沒有先停用追蹤和偵錯，您的應用程式可能會顯示其本身會遭惡意程式利用的相關資訊。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)、[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)，以及[如何：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。 偵錯也可以透過 Internet Information Services (IIS) 來設定。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- [程式碼合約](../../../docs/framework/debug-trace-profile/code-contracts.md)   
- [C#、F# 和 Visual Basic 專案類型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)   
- [如何：將追蹤陳述式新增到應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [如何：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [如何：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
- [如何：使用 TraceSource 和含有追蹤接聽項的篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)   
- [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ [程式碼合約](../../../docs/framework/debug-trace-profile/code-contracts.md)  
+ [C#、F# 和 Visual Basic 專案類型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
+ [如何： 將追蹤陳述式加入至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [如何： 使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [如何： 建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [如何： 建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [如何： 使用 TraceSource 和篩選含有追蹤接聽項](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

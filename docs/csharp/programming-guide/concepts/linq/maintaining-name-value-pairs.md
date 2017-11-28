@@ -1,25 +1,21 @@
 ---
 title: "維護名稱/值組 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 998cfad22c28248eb22fef5141caa96035d2d0b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9515411123ad800df4e800d698921b76f6590286
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>維護名稱/值組 (C#)
 許多應用程式都必須維護妥善保存為成對名稱/值的資訊。 這類資訊可能是組態或全域設定的相關資訊。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含一些有助您輕鬆保存成對名稱/值組的方法。 您可以將該資訊保存為屬性或一組子項目。  
@@ -131,7 +127,6 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>   
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
  [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

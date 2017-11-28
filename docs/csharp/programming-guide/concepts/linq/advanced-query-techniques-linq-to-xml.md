@@ -1,25 +1,21 @@
 ---
 title: "進階查詢技術 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 91460ed99854edda829503d451728c4274d7ba2b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>進階查詢技術 (LINQ to XML) (C#)
 本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。  
@@ -40,4 +36,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-

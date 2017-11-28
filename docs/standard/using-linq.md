@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>這是什麼？
@@ -263,4 +261,3 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 *   [101 LINQ 範例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/)為 C#/F#/VB 的遊樂場環境和資料庫查詢引擎
 *   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書
-

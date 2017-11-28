@@ -1,43 +1,23 @@
 ---
 title: "default (C# 參考)"
-ms.date: 2017-08-04
+ms.date: 08/04/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - default
 - default_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- default keyword [C#]
+helpviewer_keywords: default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1078dd21101a41969754de1afc8919f8ac0bda8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: 60607855e4a947af694c8ad8a9a3f0515ebb1700
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="default-c-reference"></a>default (C# 參考)
 
 `default` 關鍵字。
@@ -50,7 +30,6 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="see-also"></a>另請參閱
 
- [C# 參考](../index.md)   
- [C# 程式設計手冊](../../programming-guide/index.md)   
- [C# 關鍵字](index.md)   
-
+ [C# 參考](../index.md)  
+ [C# 程式設計指南](../../programming-guide/index.md)  
+ [C# 關鍵字](index.md)  

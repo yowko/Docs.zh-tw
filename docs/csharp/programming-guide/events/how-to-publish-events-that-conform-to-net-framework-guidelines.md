@@ -1,38 +1,19 @@
 ---
 title: "如何：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- events [C#], implementation guidelines
+helpviewer_keywords: events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 570729e432146b4ef97e4c487f644b12b354bb4a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21badd504a54c7000fef76e901cc952134eff61e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何：發行符合 .NET Framework 方針的事件 (C# 程式設計手冊)
 下列程序示範如何將遵循標準 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式的事件，新增至您的類別和結構。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Class Library 中的所有事件都是以定義如下的 <xref:System.EventHandler> 委派為基礎：  
@@ -94,11 +75,10 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="example"></a>範例  
  下列範例使用自訂 EventArgs 類別和 <xref:System.EventHandler%601> 作為事件類型，來示範上述步驟。  
   
- [!code-cs[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
+ [!code-csharp[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Delegate>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [事件](../../../csharp/programming-guide/events/index.md)   
+ <xref:System.Delegate>  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [事件](../../../csharp/programming-guide/events/index.md)  
  [委派](../../../csharp/programming-guide/delegates/index.md)
-

@@ -10,12 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
+ms.openlocfilehash: 5806e3e71eabbc1d65ecffed72108ba548b57806
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 8b86f8f9cd02484cb91af3206606aced8fed1ecd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 09/08/2017
 
 請開始建立類別庫專案和其相關專案的方案。 Visual Studio 方案只能做為一個或多個專案的容器。 建立方案：
 
-1. 在 Visual Studio 功能表列上，選擇 **[檔案]** > **[新增]** > **[專案]**。
+1. 在 Visual Studio 功能表列上，選擇 [檔案]  >  [新增]   >  [專案]。
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 **[確定]** 按鈕。
+1. 在 **[新增專案]** 對話方塊中，展開 **[其他專案類型]** 節點，並選取 **[Visual Studio 方案]**。 將方案命名為 "ClassLibraryProjects"，然後選取 [確定] 按鈕。
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/newproject.png)
 
@@ -40,9 +39,9 @@ ms.lasthandoff: 09/08/2017
 
 建立您的類別庫專案：
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 **[新增]** > **[新增專案]**。
+1. 在方案總管  中，以滑鼠右鍵按一下 **ClassLibraryProjects** 方案檔，然後從內容功能表中，選取 [新增]  >  [新增專案]。
 
-1. 在 **[新增專案]** 對話方塊中，展開 **[Visual C#]** 節點，然後選取後面跟著 **[類別庫 (.NET Standard)]** 專案範本的 **[.NET Standard]** 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
+1. 在 **[新增專案]** 對話方塊中，展開 **[Visual C#]** 節點，然後選取後面跟著 **[類別庫 (.NET Standard)]** 專案範本的 **[.NET Standard]** 節點。 在 [名稱] 文字方塊中，輸入 "StringLibrary" 作為專案名稱。 選取 [確定] 以建立類別庫專案。
 
    ![[新增專案] 對話方塊](./media/library-with-visual-studio/libproject.png)
 
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/08/2017
 
    [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
-   類別庫 `UtilityLibraries.StringLibrary` 包含一個名為 `StartsWithUpper` 的方法，它會傳回 <xref:System.Boolean> 值，指出目前的字串執行個體是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> 方法會傳回 `true`。
+   類別庫 `UtilityLibraries.StringLibrary` 包含一個名為 `StartsWithUpper` 的方法，它會傳回 <xref:System.Boolean> 值，指出目前的字串執行個體是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
 1. 在功能表列中，選取 [組建]  >  [組建方案]。 專案應該會編譯而不會發生錯誤。
 

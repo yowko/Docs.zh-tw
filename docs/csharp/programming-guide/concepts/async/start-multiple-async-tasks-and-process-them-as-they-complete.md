@@ -1,33 +1,24 @@
 ---
 title: "啟動多項非同步工作並在它們完成時進行處理 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bf70bd5e79e962d8edaea2dc037f191707f4e047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
-使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
+使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
   
  下列範例使用查詢來建立工作集合。 每項工作都會下載所指定網站的內容。 在 while 迴圈的的每個反覆運算中，等候的 `WhenAny` 呼叫會先傳回完成其下載的工作集合中的工作。 該工作會從集合中予以移除，並進行處理。 迴圈會重複進行，直到集合未包含其他工作為止。  
   
@@ -67,7 +58,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  在專案的 MainWindow.xaml.cs 檔案中，對 `AccessTheWebAsync` 方法進行下列變更。  
   
--   套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。  
+-   套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -243,8 +234,7 @@ namespace ProcessTasksAsTheyFinish
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (非同步範例：微調應用程式)
-
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [非同步範例：微調應用程式 (英文)](http://go.microsoft.com/fwlink/?LinkId=255046)

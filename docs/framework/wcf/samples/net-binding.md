@@ -1,25 +1,28 @@
 ---
-title: "Net 繫結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Net 繫結"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d10072a-ae0a-486a-b713-49703e26d9bf
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a02a6526d6299545f8d943472e9eafafb698eab5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Net 繫結
+# <a name="net-binding"></a>Net 繫結
 本節包含示範使用端點項目之網路繫結屬性的範例。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [Net MSMQ 繫結](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
  使用端點項目的 MSMQ 繫結屬性示範。  
   

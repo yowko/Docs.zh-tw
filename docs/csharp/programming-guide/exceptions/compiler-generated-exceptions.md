@@ -1,38 +1,19 @@
 ---
 title: "編譯器所產生的例外狀況 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], compiler-generated
+helpviewer_keywords: exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d1417e42f588978d5fc1beca4ad55463502ee219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>編譯器所產生的例外狀況 (C# 程式設計手冊)
 基本作業失敗時，.NET Framework 的 Common Language Runtime (CLR) 會自動擲回一些例外狀況。 下表列出這些例外狀況和其錯誤條件。  
@@ -51,10 +32,9 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.TypeInitializationException>|在靜態建構函式擲回例外狀況而且沒有相容的 `catch` 子句可攔截它時擲回。|  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)   
- [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)  
+ [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
-

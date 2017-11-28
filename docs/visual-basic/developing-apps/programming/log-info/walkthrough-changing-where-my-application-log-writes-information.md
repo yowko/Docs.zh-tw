@@ -1,43 +1,24 @@
 ---
 title: "變更 My.Application.Log 寫入資訊的位置 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：變更 My.Application.Log 寫入資訊的位置 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 本逐步解說示範如何覆寫預設設定，而且使 `Log` 物件寫入至其他記錄檔接聽程式。  
@@ -65,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  將這些項目加入至該 `<listeners>` 區段。  
   
-    ```  
+    ```xml  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -84,7 +65,7 @@ ms.lasthandoff: 07/28/2017
   
 6.  將這些項目加入至該 `<sharedListeners>` 區段。  
   
-    ```  
+    ```xml  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -115,7 +96,7 @@ ms.lasthandoff: 07/28/2017
   
 7.  App.config 檔案的內容應該類似下列 XML：  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  
@@ -180,13 +161,13 @@ ms.lasthandoff: 07/28/2017
   
      您可以使用的類型如下︰  
   
-    -   寫入至檔案記錄檔的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 接聽程式。  
+    -   寫入檔案記錄檔的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式。  
   
-    -   將資訊寫入至由 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 參數指定之電腦事件記錄檔的 `initializeData` 接聽程式。  
+    -   將資訊寫入由 `initializeData` 參數指定之電腦事件記錄檔的 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式。  
   
-    -   寫入至由 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 參數中指定之檔案的 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 和 `initializeData` 接聽程式。  
+    -   寫入由 `initializeData` 參數中指定之檔案的 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 接聽程式。  
   
-    -   寫入至命令列主控台的 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 接聽程式。  
+    -   寫入命令列主控台的 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 接聽程式。  
   
      如需其他記錄檔接聽程式類型在何處寫入資訊的相關資訊，請查閱該類型的文件。  
   
@@ -209,10 +190,9 @@ ms.lasthandoff: 07/28/2017
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
+ [如何：將事件資訊寫入至文字檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
  [如何：寫入應用程式事件記錄檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
-

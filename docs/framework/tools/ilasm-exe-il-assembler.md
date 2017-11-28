@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fba6c6a912cc9d2df9e1b9b11790840f782922d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
@@ -94,7 +87,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|顯示工具的命令語法和選項。|
 
 > [!NOTE]
-> *Ilasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如，**/lis** 相當於 **/listing**，而 **/res**:myresfile.res 相當於 **/resource**:myresfile.res。 指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output**:*file.ext* 等同於 **/output=**=*file.ext*。
+> *Ilasm.exe* 的所有選項都不區分大小寫，並以前三個字母來辨識。 例如，**/lis** 相當於 **/listing**，而 **/res**:myresfile.res 相當於 **/resource**:myresfile.res。指定引數的選項可以接受冒號 (:) 或等號 (=) 做為選項與引數之間的分隔符號。 例如， **/output**:*file.ext* 等同於 **/output=**=*file.ext*。
 
 ## <a name="remarks"></a>備註
 
@@ -248,4 +241,3 @@ public class Hello
 [*Ildasm.exe* (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
 [Managed 執行程序](../../../docs/standard/managed-execution-process.md)  
 [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

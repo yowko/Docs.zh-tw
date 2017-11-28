@@ -7,12 +7,11 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-clean"></a>dotnet-clean
 
@@ -107,4 +106,3 @@ dotnet clean [-h|--help]
 清除使用發行組態來建置的專案︰
 
 `dotnet clean --configuration Release`
-

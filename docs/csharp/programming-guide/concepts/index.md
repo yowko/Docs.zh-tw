@@ -1,26 +1,18 @@
 ---
-title: "程式設計概念 (C#) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "程式設計概念 (C#)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0100944b93943f269b031fe0da2370ffccf06dcb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9c82430ec58b81f37a33f4c246ea40f6da465af8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="programming-concepts-c"></a>程式設計概念 (C#)
 本節說明 C# 語言的程式設計概念。  

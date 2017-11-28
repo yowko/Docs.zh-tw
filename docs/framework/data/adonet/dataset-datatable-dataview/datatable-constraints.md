@@ -1,43 +1,49 @@
 ---
-title: "DataTable 條件約束 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataTable 條件約束"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fb1fd2c7aa057fcc83c82ab9d72129db2cac680e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# DataTable 條件約束
-您可以使用條件約束，強制使用 <xref:System.Data.DataTable> 中的資料限制，以維持資料的完整性。  條件約束是指套用到資料行或相關資料行的自動規則，當資料列的值變更時，條件約束可決定採取的動作。  <xref:System.Data.DataSet> 的  `System.Data.DataSet.EnforceConstraints` 屬性為 **true** 時，便會強制使用條件約束。  如需示範如何設定 `EnforceConstraints` 屬性的程式碼範例，請參閱 <xref:System.Data.DataSet.EnforceConstraints%2A> 參考主題。  
+# <a name="datatable-constraints"></a>DataTable 條件約束
+您可以使用條件約束，強制使用 <xref:System.Data.DataTable> 中的資料限制，以維持資料的完整性。 條件約束是指套用到資料行或相關資料行的自動規則，當資料列的值變更時，條件約束可決定採取的動作。 強制使用條件約束時`System.Data.DataSet.EnforceConstraints`屬性<xref:System.Data.DataSet>是**true**。 如需示範如何設定 `EnforceConstraints` 屬性的程式碼範例，請參閱 <xref:System.Data.DataSet.EnforceConstraints%2A> 參考主題。  
   
- ADO.NET 有兩種條件約束：<xref:System.Data.ForeignKeyConstraint> 與 <xref:System.Data.UniqueConstraint>。  將 <xref:System.Data.DataRelation> 加入 **DataSet** 中，藉而建立兩個或多個資料表之間的關係時，預設會自動建立這兩個條件約束。  但是，您也可以在建立關聯時指定 **createConstraints** \= **false**，即可停用這種行為。  
+ ADO.NET 有兩種條件約束：<xref:System.Data.ForeignKeyConstraint> 與 <xref:System.Data.UniqueConstraint>。 根據預設，兩個條件約束會建立時自動建立您所新增的兩個或多個資料表之間的關聯性<xref:System.Data.DataRelation>至**資料集**。 不過，您可以停用此行為藉由指定**createConstraints** = **false**時建立關聯。  
   
-## ForeignKeyConstraint  
- **ForeignKeyConstraint** 對於相關資料表中更新和刪除內容的傳播方式，會強制使用規則。  例如，如果更新或刪除一個資料表的資料列值，而且有一或多個關聯資料表使用相同的值時，**ForeignKeyConstraint** 便會決定關聯資料表中發生的動作。  
+## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
+ A **ForeignKeyConstraint**會強制執行規則的相關更新與刪除導引到相關資料表的傳播方式。 例如，如果更新或刪除，一個資料表的資料列中的值和相同的值也會在一或多個關聯資料表， **ForeignKeyConstraint**決定相關的資料表中的動作。  
   
- **ForeignKeyConstraint** 的 <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> 和 <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> 屬性會定義使用者嘗試刪除或更新相關資料表中的資料列時，所要採取的動作。  下列表格說明 **ForeignKeyConstraint** 的 **DeleteRule** 和 **UpdateRule** 屬性可以使用的不同設定。  
+ <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A>和<xref:System.Data.ForeignKeyConstraint.UpdateRule%2A>屬性**ForeignKeyConstraint**定義使用者嘗試刪除或更新相關資料表中的資料列時，要採取的動作。 下表描述可用的不同設定**DeleteRule**和**UpdateRule**屬性**ForeignKeyConstraint**。  
   
-|規則設定|描述|  
-|----------|--------|  
-|**Cascade**|刪除或更新關聯資料列。|  
-|**SetNull**|將關聯資料列中的值設為 **DBNull**。|  
+|規則設定|說明|  
+|------------------|-----------------|  
+|**重疊顯示**|刪除或更新關聯資料列。|  
+|**SetNull**|在相關資料列中設定值**DBNull**。|  
 |**SetDefault**|將關聯資料列中的值設為預設值。|  
-|**無**|不對關聯資料列採取任何動作。  這是預設值。|  
+|**無**|不對關聯資料列採取任何動作。 這是預設值。|  
   
- **ForeignKeyConstraint** 可以限制 \(和傳播\) 變更到關聯資料行。  如果 **DataSet** 的 **EnforceConstraints** 屬性為 **true**，則當您在父資料列上執行特定作業時，便會視專為資料行的 **ForeignKeyConstraint** 所設定的屬性而定，傳回例外狀況。  例如，如果 **ForeignKeyConstraint** 的 **DeleteRule** 屬性設為 **None**，如果父資料列具有子資料列，該父資料列將無法刪除。  
+ A **ForeignKeyConstraint**可以限制，以及傳播，變更到關聯資料行。 根據設定的屬性**ForeignKeyConstraint**資料行，如果**EnforceConstraints**屬性**資料集**是**true**，父資料列上執行特定作業時，會導致例外狀況。 例如，如果**DeleteRule**屬性**ForeignKeyConstraint**是**無**，無法刪除父資料列，如果有任何子資料列。  
   
- 您可以使用 **ForeignKeyConstraint** 建構函式，在單一資料行之間或是在資料行陣列之間建立外部索引鍵條件約束。  將產生的 **ForeignKeyConstraint** 物件傳遞給資料表的 **Constraints** 屬性的 **Add** 方法，也就是 **ConstraintCollection**。  您也可以將建構函式的引數傳遞給 **ConstraintCollection** 的 **Add** 方法的數個多載，來建立 **ForeignKeyConstraint**。  
+ 您可以建立的外部索引鍵的條件約束使用的資料行的陣列之間或單一資料行之間**ForeignKeyConstraint**建構函式。 傳遞所產生的**ForeignKeyConstraint**物件**新增**方法資料表的**條件約束**屬性，這是**ConstraintCollection**. 您也可以傳遞給建構函式引數的數個多載**新增**方法**ConstraintCollection**建立**ForeignKeyConstraint**。  
   
- 當您建立 **ForeignKeyConstraint** 時，可以將 **DeleteRule** 和 **UpdateRule** 值當做引數傳遞給建構函式，也可以將它們設定為屬性，如下列範例所示 \(其中 **DeleteRule** 值設為 **None**\)。  
+ 建立時**ForeignKeyConstraint**，您可以傳遞**DeleteRule**和**UpdateRule**值建構函式做為引數，或者您可以將它們設定為做為中的屬性下列範例 (其中**DeleteRule**值設定為**無**)。  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
@@ -46,7 +52,6 @@ Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK"
 custOrderFK.DeleteRule = Rule.None    
 ' Cannot delete a customer value that has associated existing orders.  
 custDS.Tables("OrdersTable").Constraints.Add(custOrderFK)  
-  
 ```  
   
 ```csharp  
@@ -58,28 +63,28 @@ custOrderFK.DeleteRule = Rule.None;
 custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);  
 ```  
   
-### AcceptRejectRule  
- 您可以使用 **AcceptChanges** 方法來接受資料列的變更，或使用 **DataSet**、**DataTable** 和 **DataRow** 的 **RejectChanges** 方法來取消資料列的變更。  如果 **DataSet** 含有 **ForeignKeyConstraints**，呼叫 **AcceptChanges** 或 **RejectChanges** 方法會強制 **AcceptRejectRule**。  **ForeignKeyConstraint** 的 **AcceptRejectRule** 屬性可決定當在父資料列呼叫 **AcceptChanges** 或 **RejectChanges** 時，子資料列上將採取的動作。  
+### <a name="acceptrejectrule"></a>AcceptRejectRule  
+ 資料列的變更可以使用接受**AcceptChanges**方法，或已取消使用**RejectChanges**方法**資料集**， **DataTable**，或**DataRow**。 當**資料集**包含**ForeignKeyConstraints**、 叫用**AcceptChanges**或**RejectChanges**方法會強制**AcceptRejectRule**。 **AcceptRejectRule**屬性**ForeignKeyConstraint**判斷應採取哪些動作的子系上的資料列時**AcceptChanges**或**RejectChanges**父資料列上呼叫。  
   
- 下列表格列出 **AcceptRejectRule** 的可用設定。  
+ 下表列出可用的設定**AcceptRejectRule**。  
   
-|規則設定|描述|  
-|----------|--------|  
-|**Cascade**|接受或拒絕子資料列的變更。|  
-|**無**|不對子資料列採取任何動作。  這是預設值。|  
+|規則設定|說明|  
+|------------------|-----------------|  
+|**重疊顯示**|接受或拒絕子資料列的變更。|  
+|**無**|不對子資料列採取任何動作。 這是預設值。|  
   
-### 範例  
- 下列範例會建立 <xref:System.Data.ForeignKeyConstraint>、設定其某些屬性 \(包括 <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>\)，並將它加入 <xref:System.Data.DataTable> 物件的 <xref:System.Data.ConstraintCollection>。  
+### <a name="example"></a>範例  
+ 下列範例會建立 <xref:System.Data.ForeignKeyConstraint>、設定其某些屬性 (包括 <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>)，並將它加入 <xref:System.Data.ConstraintCollection> 物件的 <xref:System.Data.DataTable>。  
   
  [!code-csharp[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/CS/source.cs#1)]
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
-## UniqueConstraint  
- **UniqueConstraint** 物件可指定為單一資料行或 **DataTable** 的資料行陣列，它可確保每個資料列的指定資料行的所有資料都是唯一的。  您可以使用 **UniqueConstraint** 建構函式，為資料行或資料行陣列建立唯一的條件約束。  將產生的 **UniqueConstraint** 物件傳遞給資料表的 **Constraints** 屬性的 **Add** 方法，也就是 **ConstraintCollection**。  您也可以將建構函式的引數傳遞給 **ConstraintCollection** 的 **Add** 方法的數個多載，來建立 **UniqueConstraint**。  當您為一個或多個資料行建立 **UniqueConstraint** 時，可以選擇性地指定這些資料行是否為主索引鍵。  
+## <a name="uniqueconstraint"></a>UniqueConstraint  
+ **UniqueConstraint**物件，可以對單一資料行或陣列中的資料行指派**DataTable**，確保指定的資料行或資料行中的所有資料都是唯一的每個資料列。 您可以使用，以建立唯一的條件約束的資料行或資料行陣列**UniqueConstraint**建構函式。 傳遞所產生的**UniqueConstraint**物件**新增**方法資料表的**條件約束**屬性，這是**ConstraintCollection**. 您也可以傳遞給建構函式引數的數個多載**新增**方法**ConstraintCollection**建立**UniqueConstraint**。 建立時**UniqueConstraint**資料行或資料行，您可以選擇性地指定資料行或資料行是主索引鍵。  
   
- 您也可以將資料行的 **Unique** 屬性設定為 **true**，來為資料行建立唯一的條件約束。  另一種可能是，將單一資料行的 **Unique** 屬性設定為 **false**，這麼做會移除可能存在的任何唯一的條件約束。  如果將一個或多個資料行定義為資料表的主索引鍵，將會自動為指定的一個或多個資料行建立唯一的條件約束。  如果您從 **DataTable** 的 **PrimaryKey** 屬性中移除資料行，也會移除 **UniqueConstraint**。  
+ 您也可以建立 unique 條件約束資料行，藉由設定**Unique**屬性的資料行**true**。 或者，設定**Unique**屬性的單一資料行**false**移除可能存在的任何唯一條件約束。 如果將一個或多個資料行定義為資料表的主索引鍵，將會自動為指定的一個或多個資料行建立唯一的條件約束。 如果您移除的資料行**PrimaryKey**屬性**DataTable**、 **UniqueConstraint**已移除。  
   
- 下列範例為 **DataTable** 的兩個資料行建立 **UniqueConstraint**。  
+ 下列範例會建立**UniqueConstraint**兩個資料行的**DataTable**。  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -87,7 +92,6 @@ Dim custUnique As UniqueConstraint = _
     New UniqueConstraint(New DataColumn()   {custTable.Columns("CustomerID"), _  
     custTable.Columns("CompanyName")})  
 custDS.Tables("Customers").Constraints.Add(custUnique)  
-  
 ```  
   
 ```csharp  
@@ -98,11 +102,11 @@ UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## 請參閱  
- <xref:System.Data.DataRelation>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.ForeignKeyConstraint>   
- <xref:System.Data.UniqueConstraint>   
- [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)   
- [DataSet、DataTable 及 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.Data.DataRelation>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.ForeignKeyConstraint>  
+ <xref:System.Data.UniqueConstraint>  
+ [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

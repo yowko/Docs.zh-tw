@@ -1,30 +1,21 @@
 ---
 title: "LINQ to XML 比較其他 XML 技術的比較"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fac7fc1d902352b02215e9156954a23b553e5049
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
 這個主題會比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與下列 XML 技術：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 這個資訊可以協助您決定要使用的技術。  
@@ -71,4 +62,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
-

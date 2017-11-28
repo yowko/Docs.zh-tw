@@ -1,30 +1,21 @@
 ---
 title: "LINQ to XML 比較DOM (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 049b60477c7c6de2254dfc355a741a4beb1a725f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e27bf46390bca80ca573ab557953f70f591c9ae2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML 比較DOM (C#)
 本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。  
@@ -131,7 +122,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 不提供 `XmlDocumentFragment` 類別的對等類別。 在許多情況下，`XmlDocumentFragment` 概念可藉由查詢結果來處理，該查詢的類型為 <xref:System.Xml.Linq.XNode> 的 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Xml.Linq.XElement> 的 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ## <a name="support-for-xpathnavigator"></a>支援 XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.XPath?displayProperty=fullName> 命名空間中的擴充方法，提供 <xref:System.Xml.XPath.XPathNavigator> 的支援。 如需詳細資訊，請參閱<xref:System.Xml.XPath.Extensions?displayProperty=fullName>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.XPath?displayProperty=nameWithType> 命名空間中的擴充方法，提供 <xref:System.Xml.XPath.XPathNavigator> 的支援。 如需詳細資訊，請參閱<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
 ## <a name="support-for-white-space-and-indentation"></a>支援空白字元與縮排  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 處理空白字元時，比處理 DOM 更為容易。  
@@ -146,8 +137,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 項目支援一組可延伸的附註。 這在追蹤項目的其他資訊 (例如，結構描述資訊)、項目是否繫結至 UI 的相關資訊，或任何種類的應用程式專屬資訊時，相當實用。 如需詳細資訊，請參閱 [LINQ to XML 註釋](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)。  
   
 ## <a name="support-for-schema-information"></a>支援結構描述資訊  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.Schema?displayProperty=fullName> 命名空間中的擴充方法，提供 XSD 驗證支援。 您可以驗證 XML 樹狀是以 XSD 編譯。 您可以利用 Post-Schema-Validation Infoset (PSVI) 填入 XML 樹狀。 如需詳細資訊，請參閱[如何：使用 XSD 進行驗證](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和<xref:System.Xml.Schema.Extensions>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 透過 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的擴充方法，提供 XSD 驗證支援。 您可以驗證 XML 樹狀是以 XSD 編譯。 您可以利用 Post-Schema-Validation Infoset (PSVI) 填入 XML 樹狀。 如需詳細資訊，請參閱[如何：使用 XSD 進行驗證](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)和<xref:System.Xml.Schema.Extensions>。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
-

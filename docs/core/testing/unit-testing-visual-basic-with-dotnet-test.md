@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.topic: article
+dev_langs: vb
 ms.prod: .net-core
+ms.openlocfilehash: 3aa6e11ae14eecef1d291f7edc1fb9a27b49861e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: aa501a4223472bd0430955512a266754bd71a885
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/14/2017
     /PrimeService
 ```
 
-將 *PrimeService* 設定為目前的目錄，然後執行 [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.VB* 重新命名為 *PrimeService.VB*。 為了使用測試導向開發 (TDD)，您會建立 `PrimeService` 類別的失敗實作：
+將 *PrimeService* 設為目前的目錄，然後執行 [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.VB* 重新命名為 *PrimeService.VB*。 為了使用測試導向開發 (TDD)，您會建立 `PrimeService` 類別的失敗實作：
 
 ```vb
 Namespace Prime.Services
@@ -41,11 +41,11 @@ Namespace Prime.Services
 End Namespace
 ```
 
-將目錄變更回 *unit-testing-vb-using-dotnet-test* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加到方案中。
+將目錄變更回 *unit-testing-vb-using-dotnet-test* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
-接著，建立 *MathService.Tests* 目錄。 下列大綱顯示目錄結構：
+接著，建立 *PrimeService.Tests* 目錄。 下列大綱顯示目錄結構：
 
 ```
 /unit-testing-vb-using-dotnet-test
@@ -56,7 +56,7 @@ End Namespace
     /PrimeService.Tests
 ```
 
-將 *PrimeService.Tests* 目錄設定為目前的目錄，然後使用 [`dotnet new xunit -lang VB`](../tools/dotnet-new.md) 建立新的專案。 此命令會建立將 xUnit 作為測試程式庫使用的測試專案。 產生的範本會在 *PrimeServiceTests.vbproj* 中設定測試執行器：
+將 *PrimeService.Tests* 目錄設為目前的目錄，然後使用 [`dotnet new xunit -lang VB`](../tools/dotnet-new.md) 建立新的專案。 此命令會建立將 xUnit 作為測試程式庫使用的測試專案。 產生的範本會在 *PrimeServiceTests.vbproj* 中設定測試執行器：
 
 ```xml
 <ItemGroup>
@@ -143,4 +143,3 @@ if candidate < 2
 繼續在主要程式庫中新增更多測試、更多理論和更多程式碼，以反覆執行。 您有[測試的完成版](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb)和[程式庫的完整實作](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-dotnet-test/PrimeService/PrimeService.vb)。
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
-

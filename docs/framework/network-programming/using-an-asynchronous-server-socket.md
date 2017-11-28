@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用非同步伺服器通訊端
 非同步伺服器通訊端會使用 .NET Framework 非同步程式設計模型來處理網路服務要求。 <xref:System.Net.Sockets.Socket> 類別會遵循標準 .NET Framework 非同步命名模式；例如，同步 <xref:System.Net.Sockets.Socket.Accept%2A> 方法對應於非同步 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 和 <xref:System.Net.Sockets.Socket.EndAccept%2A> 方法。  
@@ -69,7 +66,7 @@ listener.BeginAccept(
     listener);  
 ```  
   
- 非同步通訊端使用系統執行緒集區中的執行緒來處理連入連線。 其中一個執行緒負責接受連線、另一個執行緒用來處理每個連入連線，還有一個執行緒負責接收來自連線的資料。 這些可能是相同的執行緒，視執行緒集區所指派的執行緒而定。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=fullName> 類別會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
+ 非同步通訊端使用系統執行緒集區中的執行緒來處理連入連線。 其中一個執行緒負責接受連線、另一個執行緒用來處理每個連入連線，還有一個執行緒負責接收來自連線的資料。 這些可能是相同的執行緒，視執行緒集區所指派的執行緒而定。 在下列範例中，<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類別會暫停執行主執行緒，並在可以繼續執行時發出訊號。  
   
  下列範例示範非同步方法，用來在本機電腦上建立非同步的 TCP/IP 通訊端，並開始接受連接。 它假設有一個名為 `allDone` 的全域 **ManualResetEvent**且該方法是 `SocketListener` 類別的成員，以及已定義名為 `acceptCallback` 的回呼方法。  
   
@@ -274,8 +271,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [執行緒](../../../docs/standard/threading/index.md)   
+ [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [執行緒處理](../../../docs/standard/threading/index.md)  
  [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)
-

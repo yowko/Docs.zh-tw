@@ -1,25 +1,23 @@
 ---
-title: "風險降低：在應用程式定義域之間還原序列化物件 | Microsoft Docs"
+title: "緩和：在應用程式定義域之間還原序列化物件"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
 在某些情況下，當應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域時，嘗試在跨應用程式定義域的邏輯呼叫內容中將物件還原序列化，將會擲回例外狀況。  
@@ -29,7 +27,7 @@ ms.lasthandoff: 05/22/2017
   
 1.  應用程式使用具有不同應用程式基底的兩個或多個應用程式定義域。  
   
-2.  某些類型透過呼叫 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> 這類方法明確加入至 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>。 這些類型並未標示為可序列化，而且未儲存在全域組件快取中。  
+2.  某些類型透過呼叫 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 或 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> 這類方法明確加入至 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>。 這些類型並未標示為可序列化，而且未儲存在全域組件快取中。  
   
 3.  在非預設應用程式定義域中執行的程式碼之後就會嘗試從組態檔讀取值，或使用 XML 將物件還原序列化。  
   

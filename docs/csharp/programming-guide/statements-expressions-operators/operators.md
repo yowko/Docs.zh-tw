@@ -1,52 +1,33 @@
 ---
 title: "運算子 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。 只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。 使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。 還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。  
   
  下列 C# 陳述式包含一個一元運算子和一個運算元。 遞增運算子 `++`會修改運算元 `y`的值。  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  下列 C# 陳述式包含兩個二元運算子，這兩個運算子各有兩個運算元。 指派運算子 `=`的運算元為整數變數 `y` 和運算式 `2 + 3` 。 運算式 `2 + 3` 本身包含加法運算子和兩個運算元 `2` 和 `3`。  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>運算子、評估和運算子優先順序  
  運算元可以是由任何長度的程式碼撰寫而成的有效運算式，而且可以包含任何數量的子運算式。 在包含多個運算子的運算式中，套用運算子的順序取決於「 *運算子優先順序*」(Operator Precedence)、「 *順序關聯性*」(Associativity) 以及括號。  
@@ -193,6 +174,5 @@ a = (b = c);
  如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-

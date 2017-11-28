@@ -16,16 +16,15 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a47761acfabd3de77d65483d50fbe7a77f96e076
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf4234f36745fdc13635ab2c6394f49aefabf7a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -116,13 +115,12 @@ ms.lasthandoff: 08/21/2017
  [回到頁首](#introduction)  
   
 ## <a name="see-also"></a>另請參閱  
- [概觀](../../docs/framework/get-started/overview.md)   
- [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)   
- [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)   
- [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)   
- [安全性](../../docs/standard/security/index.md)   
- [與 Unmanaged 程式碼互通](../../docs/framework/interop/index.md)   
- [部署](../../docs/framework/deployment/net-framework-applications.md)   
- [通用語言執行平台中的組件](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
+ [概觀](../../docs/framework/get-started/overview.md)  
+ [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)  
+ [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)  
+ [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+ [安全性](../../docs/standard/security/index.md)  
+ [與 Unmanaged 程式碼互通](../../docs/framework/interop/index.md)  
+ [部署](../../docs/framework/deployment/net-framework-applications.md)  
+ [Common Language Runtime 中的組件](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [應用程式定義域](../../docs/framework/app-domains/application-domains.md)
-

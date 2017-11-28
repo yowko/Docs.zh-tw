@@ -1,43 +1,42 @@
 ---
-title: "查詢計畫快取 (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "查詢計畫快取 (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 814b4451d5e08d5f9df4d370b2127d971f3fdd1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 查詢計畫快取 (Entity SQL)
-每當嘗試執行查詢時，查詢管線就會查閱它的查詢快取計畫，以查看精確的查詢是否已編譯且可用。  如果確實如此，它會重複使用快取的計畫，而不是建立新的計畫。  如果查詢計畫快取中找不到相符項目，就會編譯及快取此查詢。  查詢是由它的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 文字和參數集合 \(名稱和型別\) 所識別。  所有的文字比較都會區分大小寫。  
+# <a name="query-plan-caching-entity-sql"></a>查詢計畫快取 (Entity SQL)
+每當嘗試執行查詢時，查詢管線就會查閱它的查詢快取計畫，以查看精確的查詢是否已編譯且可用。 如果確實如此，它會重複使用快取的計畫，而不是建立新的計畫。 如果查詢計畫快取中找不到相符項目，就會編譯及快取此查詢。 查詢是由它的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 文字和參數集合 (名稱和型別) 所識別。 所有的文字比較都會區分大小寫。  
   
-## 組態  
+## <a name="configuration"></a>組態  
  查詢計畫快取可透過 <xref:System.Data.EntityClient.EntityCommand> 來設定。  
   
- 若要透過 <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=fullName> 來啟用或停用查詢計畫快取，請將此屬性設定為 `true` 或 `false`。  針對不太可能使用一次以上的個別動態查詢停用計畫快取時，將會提升效能。  
+ 若要透過 <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType> 來啟用或停用查詢計畫快取，請將此屬性設定為 `true` 或 `false`。 針對不太可能使用一次以上的個別動態查詢停用計畫快取時，將會提升效能。  
   
  您可以透過 <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A> 來啟用查詢計畫快取。  
   
-## 建議的作法  
- 一般來說，應該避免動態查詢。  下列動態查詢範例容易受到 SQL 插入式攻擊的侵害，因為它會在沒有任何驗證的情況下直接接受使用者輸入。  
+## <a name="recommended-practice"></a>建議的作法  
+ 一般來說，應該避免動態查詢。 下列動態查詢範例容易受到 SQL 插入式攻擊的侵害，因為它會在沒有任何驗證的情況下直接接受使用者輸入。  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
  如果您使用動態產生的查詢，請考慮停用查詢計畫快取，避免針對不太可能重複使用的快取項目產生不必要的記憶體耗用量。  
   
- 靜態查詢和參數化查詢上的查詢計畫快取可提供效能方面的優點。  下列是靜態查詢的範例：  
+ 靜態查詢和參數化查詢上的查詢計畫快取可提供效能方面的優點。 下列是靜態查詢的範例：  
   
 ```  
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
@@ -59,5 +58,5 @@ caps.handback.revision: 2
   
 -   變更為註解內的文字。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

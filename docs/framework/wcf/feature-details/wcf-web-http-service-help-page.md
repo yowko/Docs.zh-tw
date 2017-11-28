@@ -1,32 +1,35 @@
 ---
-title: "WCF Web HTTP 服務說明網頁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF Web HTTP 服務說明網頁"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 96c54320c77de766f00bde1e560eb5b0f0df2671
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# WCF Web HTTP 服務說明網頁
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。此功能預設為關閉。當使用者瀏覽 WCF WEB HTTP 服務，且在 URL 結尾附加 "\/Help" 時 \(例如 http:\/\/localhost:8000\/Customers\/Help\)，便會顯示如下列說明頁面的畫面。  
+# <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者瀏覽 WCF WEB HTTP 服務，且在 URL 結尾附加 "/Help" 時 (例如 http://localhost:8000/Customers/Help)，便會顯示如下列說明頁面的畫面。  
   
- ![WCF REST 說明頁面](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.png "WCFRESTHELPPAGEMAIN")  
+ ![WCF REST 說明頁面](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
- 使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。下圖是方法之說明頁面的範例。  
+ 使用者可以按一下說明頁面中列出的任何方法，該作業的詳細資訊頁面便會顯示，提供有關該方法的詳細資訊，包括訊息格式和回應範例。 下圖是方法之說明頁面的範例。  
   
- ![WCF REST 說明頁面詳細資料](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.png "WCFRESTHELPPAGEDETAIL2")  
+ ![WCF REST 說明頁面詳細說明](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
-## 使用 WCF Web HTTP 說明頁面  
- WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。此屬性會使用包含作業所套用之簡短描述的字串。例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。  
+## <a name="using-the-wcf-web-http-help-page"></a>使用 WCF Web HTTP 說明頁面  
+ WCF WEB HTTP 說明頁面會顯示每項作業的簡短描述，您可以使用 <xref:System.ComponentModel.DescriptionAttribute> 來指定任何一項。 此屬性會使用包含作業所套用之簡短描述的字串。 例如，下列程式碼示範如何使用 <xref:System.ComponentModel.DescriptionAttribute>來提供簡短描述。  
   
 ```  
 [OperationContract]  
@@ -35,9 +38,9 @@ caps.handback.revision: 11
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- 若要開啟 WCF WEB HTTP 說明頁面，您必須加入端點行為至服務的端點。這個動作可在組態或程式碼中完成。若要啟用組態中的 WCF WEB HTTP 說明頁面，請使用 `<webHttp>``enableHelp` 項目加入端點行為，將 `true` 設為，並加入端點然後將其設定為使用端點行為。下列組態程式碼示範如何執行這項工作。  
+ 若要開啟 WCF WEB HTTP 說明頁面，您必須加入端點行為至服務的端點。 這個動作可在組態或程式碼中完成。 若要啟用組態中的 WCF WEB HTTP 說明頁面，請使用 `<webHttp>``enableHelp` 項目加入端點行為，將 `true` 設為，並加入端點然後將其設定為使用端點行為。 下列組態程式碼示範如何執行這項工作。  
   
-```  
+```xml  
 <endpointBehaviors>  
    <behavior name="RESTEndpointBehavior">  
       <webHttp enableHelp="true"/>  
@@ -52,7 +55,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- 若要在程式碼中啟用 WCF Web HTTP 說明頁面，請加入服務端點，並將 <xref:System.ServiceModel.Description.WebHttpBehavior> 加入至端點設定，再將 <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A> 設定為 `true`。下列程式碼示範如何執行這項操作。  
+ 若要啟用 WCF Web HTTP 說明網頁程式碼中的，加入服務端點，並新增<xref:System.ServiceModel.Description.WebHttpBehavior>端點設定<!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>-->`EnableHelp`至`true`。 下列程式碼示範如何執行這項操作。  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -63,12 +66,12 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- 說明頁面是含有標記的 XHTML 架構，可識別頁面的不同部分。如此可讓用戶端以程式設計方式，使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 存取頁面。  
+ 說明頁面是含有標記的 XHTML 架構，可識別頁面的不同部分。 如此可讓用戶端以程式設計方式，使用 <xref:System.Xml.Linq.XElement> 或其他 XLinq API 存取頁面。  
   
-## WCF Web HTTP 服務說明頁面中使用的結構描述  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明頁面中使用的結構描述  
  WCF Web HTTP 服務說明頁面會使用下列結構描述。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="anyType" nillable="true" type="xs:anyType" />  
@@ -245,7 +248,6 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
   </xs:complexType>  
   <xs:element name="ArrayOfQName" nillable="true" type="tns:ArrayOfQName" />  
 </xs:schema>  
-  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]資料合約序列化結構描述的詳細資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]資料合約序列化結構描述，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。

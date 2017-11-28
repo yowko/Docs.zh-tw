@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Managed 偵錯助理 (MDA) 偵測到在保留 Microsoft Windows 作業系統載入器鎖定的執行緒上，有執行 Managed 程式碼的嘗試。  所有這樣的執行都不合法，因為它可能會產生死結，並在作業系統載入器尚未初始化 DLL 之前就先使用 DLL。  
@@ -45,7 +38,7 @@ ms.lasthandoff: 08/21/2017
  最後，就會發生作業系統載入器還未正確初始化 DLL 就先呼叫它們的情況。  不同於透過檢查所有與死結有關的執行緒堆疊可診斷出的死結失敗，不使用這個 MDA，要診斷出使用了未初始化的 DLL 很困難。  
   
 ## <a name="cause"></a>原因  
- 針對 .NET Framework 1.0 或 1.1 版建置的混合 Managed/Unmanaged C++ 組件，通常會在載入器鎖定內嘗試執行 Managed 程式碼，除非已特別注意；例如，與 **/NOENTRY** 連結。  如需這些問題的詳細描述，請參閱 MSDN Library 的＜混合 DLL 載入問題＞。  
+ 針對 .NET Framework 1.0 或 1.1 版建置的混合 Managed/Unmanaged C++ 組件，通常會在載入器鎖定內嘗試執行 Managed 程式碼，除非已特別注意；例如，與 **/NOENTRY** 連結。
   
  針對 .NET Framework 2.0 版建置的混合 Managed/Unmanaged C++ 組件，較不容易發生這些問題，與使用 Unmanaged DLL 違反作業系統規則的應用程式，有相同的降低風險。  例如，如果 Unmanaged DLL 的 `DllMain` 進入點，呼叫 `CoCreateInstance` 取得已向 COM 公開的 Managed 物件，結果是在載入器鎖定內嘗試執行 Managed 程式碼。 如需 .NET Framework 2.0 版或更新版本中的載入器鎖定問題的詳細資訊，請參閱[初始化混合組件](/cpp/dotnet/initialization-of-mixed-assemblies)。  
   
@@ -72,4 +65,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

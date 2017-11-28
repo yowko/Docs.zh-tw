@@ -8,11 +8,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c2b267562f78b359d5ceaa696ff9a9bdcffa5821
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: ff7cd60619f8583376442c202f27a4309790fff8
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="introduction-to-classes"></a>類別簡介
 
@@ -149,7 +150,7 @@ using System.Collections.Generic;
 
 [!code-csharp[DepositAndWithdrawal](../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-[`throw`](../language-reference/throw.md) 陳述式會**擲回**例外狀況。 目前方法的執行會結束，並會在找到對應的 `catch` 區塊時繼續。 您會在稍後新增 `catch` 區塊來測試此程式碼。
+[`throw`](../language-reference/keywords/throw.md) 陳述式會**擲回**例外狀況。 目前方法的執行會結束，並會在找到對應的 `catch` 區塊時繼續。 您會在稍後新增 `catch` 區塊來測試此程式碼。
 
 應該對建構函式進行一項變更來使它會新增初始交易，而不是直接更新餘額。 由於您已撰寫 `MakeDeposit` 方法，請從建構函式呼叫它。 完成的建構函式應該看起來如下：
 

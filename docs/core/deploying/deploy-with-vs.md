@@ -9,31 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-title: "使用 Visual Studio 部署 .NET Core 應用程式"
-description: "了解使用 Visual Studio 的 .NET Core 應用程式部署"
-keywords: ".NET、.NET Core、.NET Core 部署"
-author: rpetrusha
-ms.author: ronpet
-ms.date: 04/18/2017
-ms.topic: article
-ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
-ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/12/2017
-
----
-
 # <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
 您可以將 .NET Core 應用程式部署為「與 Framework 相依的部署」，其中包含您的應用程式二進位檔，但取決於目標系統上是否有 .NET Core 存在，也可以部署為「自封式部署」，其中包含您的應用程式和 .NET Core 二進位檔。 如需 .NET Core 應用程式部署的概觀，請參閱 [.NET Core 應用程式部署](index.md)。
@@ -59,7 +40,7 @@ ms.lasthandoff: 09/12/2017
 
    在編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 建立應用程式的偵錯組建。
 
@@ -109,7 +90,7 @@ ms.lasthandoff: 09/12/2017
 
    在您的編輯器中開啟 *Program.cs* 檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 定義您應用程式目標的平台。
 
@@ -206,4 +187,3 @@ ms.lasthandoff: 09/12/2017
 # <a name="see-also"></a>請參閱
 [.NET Core 應用程式部署](index.md)   
 [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)   
-

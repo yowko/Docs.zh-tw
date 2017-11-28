@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6712035c5502d56ac9d67a334fe3e47365027de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a7054102af46badc46ee7f987355cfce36860c6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 表示 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務可用於設定和公開能夠透過 HTTP 通訊之端點的繫結。 與雙工合約搭配使用時，將會使用 Web 通訊端，否則使用 HTTP。  
@@ -30,12 +28,7 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="syntax"></a>語法  
 
-<!-- todo: missing sample  
-```vb  
-```  
--->
-  
-```csharp  
+```xml  
 <netHttpBinding>  
    <binding   
        allowCookies="Boolean"  
@@ -195,12 +188,11 @@ ms.lasthandoff: 09/25/2017
  如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)
-

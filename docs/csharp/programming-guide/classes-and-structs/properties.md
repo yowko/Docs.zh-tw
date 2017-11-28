@@ -1,41 +1,22 @@
 ---
 title: "屬性 (C# 程式設計手冊)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
@@ -56,9 +37,9 @@ ms.lasthandoff: 07/28/2017
 
 實作屬性的一種基本模式需要使用私用支援欄位，來設定和擷取屬性值。 `get` 存取子會傳回私用欄位的值，而 `set` 存取子則可能會執行一些資料驗證，再將值指派給私用欄位。 這兩個存取子也可能會對資料執行一些轉換或計算，再儲存或傳回資料。
 
-下列範例將示範這個模式。 在此範例中，`TimePeriod` 類別代表時間間隔。 就內部而言，此類別會將時間間隔 (秒) 儲存在名為 `seconds` 的私用欄位中。 名為 `Hours` 的讀寫屬性可讓客戶以小時為單位指定時間間隔。 `get` 和 `set` 存取子都會執行小時與秒之間的必要轉換。 此外，`set` 存取子會驗證資料，並在小時數無效時擲回 @System.ArgumentOutOfRangeException。 
+下列範例將示範這個模式。 在此範例中，`TimePeriod` 類別代表時間間隔。 就內部而言，此類別會將時間間隔 (秒) 儲存在名為 `seconds` 的私用欄位中。 名為 `Hours` 的讀寫屬性可讓客戶以小時為單位指定時間間隔。 `get` 和 `set` 存取子都會執行小時與秒之間的必要轉換。 此外，`set` 存取子會驗證資料，並在小時數無效時擲回 <xref:System.ArgumentOutOfRangeException>。 
    
- [!code-cs[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>運算式主體定義  
 
@@ -66,11 +47,11 @@ ms.lasthandoff: 07/28/2017
 
  從 C# 6 開始，唯讀屬性可將 `get` 存取子實作為運算式主體成員。 在此情況下，不會使用 `get` 存取子關鍵字和 `return` 關鍵字。 下列範例會將唯讀 `Name` 屬性實作為運算式主體成員。
 
- [!code-cs[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  從 C# 7 開始，可同時將 `get` 和 `set` 存取子實作為運算式主體成員。 在此情況下，必須同時有 `get` 和 `set` 關鍵字。 下列範例說明如何使用運算式主體定義來表示這兩個存取子。 請注意，`return` 關鍵字不能搭配 `get` 存取子使用。
  
-  [!code-cs[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>自動實作屬性
 
@@ -78,7 +59,7 @@ ms.lasthandoff: 07/28/2017
 
 如果屬性具有 `get` 和 `set` 存取子，這兩者都必須自動實作。 您可以使用 `get` 和 `set` 關鍵字，但不提供任何實作，來定義自動實作屬性。 下列範例會重複上一個範例，不同之處在於 `Name` 和 `Price` 為自動實作屬性。 請注意，此範例也會移除參數化建構函式，讓 `SaleItem` 物件現在可透過呼叫預設建構函式和[物件初始設定式](object-and-collection-initializers.md)來進行初始化。
 
-  [!code-cs[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>相關章節  
   
@@ -96,9 +77,8 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [索引子](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [索引子](../../../csharp/programming-guide/indexers/index.md)  
  [get 關鍵字](../../../csharp/language-reference/keywords/get.md)    
  [set 關鍵字](../../../csharp/language-reference/keywords/set.md)    
-

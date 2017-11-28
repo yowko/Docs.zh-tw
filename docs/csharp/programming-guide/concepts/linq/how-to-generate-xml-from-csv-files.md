@@ -1,25 +1,21 @@
 ---
 title: "如何：從 CSV 檔案產生 XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 9ec534c53445a1c0568dae36d54d9140e0220057
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>如何：從 CSV 檔案產生 XML (C#)
 此範例顯示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從以逗號分隔的 (CSV) 檔案產生 XML 檔案。  
@@ -121,4 +117,3 @@ Console.WriteLine(cust);
   
 ## <a name="see-also"></a>另請參閱  
  [投影和轉換 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-

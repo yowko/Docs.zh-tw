@@ -1,41 +1,22 @@
 ---
 title: "sealed (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - sealed
 - sealed_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- sealed keyword [C#]
+helpviewer_keywords: sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8248b451f0431286fdaba3583fc2031eb6cdbcd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8d0fe959eac03aad4f1ae1fada61c0ad2fd65cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sealed-c-reference"></a>sealed (C# 參考)
 套用至類別時，`sealed` 修飾詞可防止其他類別繼承自它。 在下列範例中，`B` 類別繼承自 `A`類別，但類別無法繼承自 `B` 類別。  
@@ -50,7 +31,7 @@ sealed class B : A {}
 ## <a name="example"></a>範例  
  在下列範例中，`Z` 繼承自 `Y`，但 `Z` 無法覆寫宣告於 `X` 並密封於 `Y` 的虛擬函式 `F`。  
   
- [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
  當您在類別中定義新方法或屬性時，可以不將這些方法或屬性宣告為 [virtual](../../../csharp/language-reference/keywords/virtual.md)，以防止衍生類別覆寫它們。  
   
@@ -65,7 +46,7 @@ sealed class B : A {}
  如需更多範例，請參閱[抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
 ## <a name="example"></a>範例  
- [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  在上述範例中，您可以嘗試使用下列陳述式從 sealed 類別繼承︰  
   
@@ -86,13 +67,12 @@ sealed class B : A {}
 -   衍生類別可能會修改您的類別，因此它們無法再正確運作或如預期運作。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [virtual](../../../csharp/language-reference/keywords/virtual.md)
-

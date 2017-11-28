@@ -8,6 +8,10 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - generic methods, type inference
 - generics [.NET Framework], collections
@@ -28,16 +32,15 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef0b251add573c7aaed75b866523b5fdcd3d8e5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="generics-in-the-net-framework"></a>.NET Framework 中的泛型
 <a name="top"></a> 泛型可讓您將方法、類別、結構或介面，修改成其發揮作用的精確資料類型。 例如，不使用 <xref:System.Collections.Hashtable> 類別，讓索引鍵和值可為任何類型；而改用 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，指定索引鍵所允許的類型以及值所允許的類型。 泛型的優點包括加強程式碼的重複使用程度以及類型安全性。  
@@ -60,19 +63,23 @@ ms.lasthandoff: 09/05/2017
 ## <a name="defining-and-using-generics"></a>定義和使用泛型  
  泛型是指一些類別、結構、介面與方法，其具有所儲存或使用之一或多個類型的預留位置 (類型參數)。 泛型集合類別可能會針對所儲存的物件類型，使用類型參數做為預留位置；這些類型參數會顯示為其欄位的類型，和其方法的參數類型。 泛型方法可能會使用其類型參數，做為其傳回值的類型，或其型式參數之一的類型。 下列程式碼將會示範簡單的泛型類別定義。  
   
- [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)] [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)] [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
+ [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
+ [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
+ [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
  當您建立泛型類別的執行個體時，您會指定實際的類型來替代類型參數。 這會建立新的泛型類別，稱為建構的泛型類別，且在類型參數出現的任何地方，都有您所選擇的替代類型。 此結果是適合您選擇之類型的類型安全類別，如下程式碼所示。  
   
- [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)] [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)] [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
+ [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
+ [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
+ [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>泛型術語  
  下列詞彙可用以討論在 .NET Framework 中的泛型：  
   
--   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如， <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
+-   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
   
--   *「泛型類型參數」*(Generic type parameter) 或 *「類型參數」*(type parameter)，是泛型類型或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
+-   *「泛型類型參數」*(Generic type parameter) 或 *「類型參數」*(type parameter)，是泛型類型或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數，`TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
   
 -   *「建構的泛型類型」*(constructed generic type) 或 *「建構的類型」*(constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
   
@@ -82,15 +89,19 @@ ms.lasthandoff: 09/05/2017
   
 -   泛型類型參數的*「共變數」* (covariance) 和 *「反變數」* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (「反變數」) than a target constructed type. 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
   
--   *「條件約束」* (Constraint)，是在泛型類型參數上的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
+-   *「條件約束」* (Constraint)，是在泛型類型參數上的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將類型參數限制為具有特定基底類別的類型，或是具有預設建構函式的類型，或為參考類型或實值類型。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
 -   *「泛型方法定義」* (generic method definition)，是一種有兩個參數清單的方法：泛型類型參數清單和型式參數清單。 類型參數會顯示為傳回類型或型式參數的類型，如下程式碼所示。  
   
- [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)] [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)] [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
+ [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
+ [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
+ [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
  泛型方法可能會出現在泛型或非泛型類型上。 請務必注意，不會只因為某個方法屬於泛型類型，或只是因為它型式參數的類型是封入類型的泛用參數，此方法就成為泛型。 只有當方法有它自己的類型參數清單時，它才會是泛型。 在下列程式碼中，只有方法 `G` 是泛型。  
   
- [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)] [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)] [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
+ [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
+ [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
+ [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
  [回到頁首](#top)  
   
@@ -102,7 +113,9 @@ ms.lasthandoff: 09/05/2017
   
 -   程式碼較少且更容易重複使用程式碼。 沒有需要從基底類型繼承，並覆寫成員。 例如， <xref:System.Collections.Generic.LinkedList%601> 可以立即使用。 例如，您可以下列變數宣告，建立字串的連結清單：  
   
-     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]  [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]  [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
+     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
+     [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
+     [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
 -   效能較佳。 泛型集合類型在儲存和管理實值類型上，通常有較好的表現，因為不需要 box 實值類型。  
   
@@ -173,7 +186,6 @@ ms.lasthandoff: 09/05/2017
   
  <xref:System.Collections.ObjectModel>  
   
- <xref:System.Reflection.Emit.OpCodes?displayProperty=fullName>  
+ <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
   
  [回到頁首](#top)
-

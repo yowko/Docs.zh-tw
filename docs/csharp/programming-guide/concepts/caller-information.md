@@ -1,32 +1,23 @@
 ---
 title: "呼叫端資訊 (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caller-information-c"></a>呼叫端資訊 (C#)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
   
- 若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空間中定義的 Caller Info 屬性：  
+ 若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：  
   
 |屬性|描述|類型|  
 |---|---|---|  
@@ -90,8 +81,7 @@ public void TraceMessage(string message,
 |無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [常見屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
+ [屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [常見屬性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [具名和選擇性引數](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [程式設計概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
-

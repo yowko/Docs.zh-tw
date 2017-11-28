@@ -1,44 +1,26 @@
 ---
 title: "如何：在 Visual Basic 中將目錄複製到另一個目錄"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
 - I/O [Visual Basic], copying folders
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 72f20ee767902395439f420f14fc2e352297ad31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7bcc7f924d26247b0d0ab30a9ea0fc6d6333b652
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>如何：在 Visual Basic 中將目錄複製到另一個目錄
 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 方法可將目錄複製到另一個目錄。 這個方法會複製目錄內容以及目錄本身。 如果目標目錄不存在，則會予以建立。 如果目標位置存在同名的目錄且 `overwrite` 設為 `False`，即合併兩個目錄的內容。 您可以在作業期間指定目錄的新名稱。  
@@ -87,7 +69,6 @@ ms.lasthandoff: 07/28/2017
 -   目的地檔案存在，但無法存取 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   
- [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
+ [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
  [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
-

@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -122,6 +121,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+
 ---
 
 ### <a name="driver"></a>驅動器
@@ -150,5 +150,5 @@ dotnet /build_output/my_app.dll
 
 ## <a name="see-also"></a>請參閱
 
- [dotnet/CLI GitHub 存放庫](https://github.com/dotnet/cli/)  \(英文\)  
- [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)   
+ [dotnet/CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/)  
+ [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)  

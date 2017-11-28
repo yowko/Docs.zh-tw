@@ -1,24 +1,23 @@
 ---
-title: "風險降低︰WPF 版面配置 | Microsoft Docs"
+title: "風險降低：WPF 版面配置"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: bb9208e030de676bf18f405d1f1ca0e78308899d
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: d3ba5ac792169cc076f9621025f35444281cec6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-wpf-layout"></a>風險降低：WPF 版面配置
 WPF 控制項的版面配置可能略有不同。  
@@ -37,13 +36,13 @@ WPF 控制項的版面配置可能略有不同。
 ## <a name="mitigation"></a>緩和  
  由於此修改會停用高 DPI 之 WPF 控制項右側或底端的裁剪功能，因此，應用程式若是以舊版 .NET Framework 為目標，但要在 .NET Framework 4.6 上執行，可將下行加入 app.config 檔案中的 `<runtime>` 區段來選擇使用此新行為：  
   
-```  
+```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
  應用程式若是以 .NET Framework 4.6 為目標，但想使用先前的配置演算法來呈現 WPF 控制項，可將下行加入 app.config 檔案中的 `<runtime>` 區段，以執行此作業：  
   
-```  
+```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   

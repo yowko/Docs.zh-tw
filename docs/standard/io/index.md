@@ -16,16 +16,15 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，[System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 09/05/2017
  檔案是具有永續性存放裝置的已排序具名位元組集合。 當您使用檔案時，也會處理目錄路徑、磁碟存放裝置，以及檔案和目錄名稱。 相反地，資料流是可以用來讀取和寫入備份存放區的位元組序列，這類備份存放區可以是數種儲存媒體的其中一種 (例如磁碟或記憶體)。 就像除了磁碟以外，還有多種備份存放區一樣，資料流的種類除了檔案資料流之外，還有其他數種，例如網路、記憶體和管道資料流。  
   
 ## <a name="files-and-directories"></a>檔案和目錄  
- 您可以使用 <xref:System.IO?displayProperty=fullName> 命名空間中的類型與檔案和目錄互動。 例如，您可以取得及設定檔案和目錄的屬性，並且根據搜尋條件擷取檔案和目錄集合。  
+ 您可以使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類型與檔案和目錄互動。 例如，您可以取得及設定檔案和目錄的屬性，並且根據搜尋條件擷取檔案和目錄集合。  
   
  以下是常用的檔案和目錄類別：  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/05/2017
   
 -   <xref:System.IO.Path> - 提供以跨平台方式處理目錄字串的方法和屬性。  
   
- 除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> 類別針對檔案 I/O 提供的方法。  
+ 除了使用這些類別之外，Visual Basic 使用者還可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 類別針對檔案 I/O 提供的方法。  
   
  請參閱[如何：複製目錄](../../../docs/standard/io/how-to-copy-directories.md)、[如何：建立目錄清單](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)，以及[如何：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/05/2017
  以非同步方式處理資料流的範例，請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
 ## <a name="readers-and-writers"></a>讀取器和寫入器  
- <xref:System.IO?displayProperty=fullName> 命名空間提供從資料流讀取編碼字元以及將編碼字元寫入資料流的類型。 通常資料流是針對位元組輸入和輸出所設計。 讀取器和寫入器類型會處理編碼字元與位元組之間的轉換，讓資料流能夠完成作業。 每個讀取器和寫入器類別都會與資料流相關聯，可透過類別的 `BaseStream` 屬性擷取。  
+ <xref:System.IO?displayProperty=nameWithType> 命名空間提供從資料流讀取編碼字元以及將編碼字元寫入資料流的類型。 通常資料流是針對位元組輸入和輸出所設計。 讀取器和寫入器類型會處理編碼字元與位元組之間的轉換，讓資料流能夠完成作業。 每個讀取器和寫入器類別都會與資料流相關聯，可透過類別的 `BaseStream` 屬性擷取。  
   
  以下是常用的讀取器和寫入器類別：  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 09/05/2017
  如需詳細資訊，請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
   
 ## <a name="compression"></a>壓縮  
- 壓縮是指縮減檔案大小以便儲存的程序。 解壓縮則是指擷取壓縮檔的內容使其成為可使用格式的程序。 <xref:System.IO.Compression?displayProperty=fullName> 命名空間包含壓縮及解壓縮檔案和資料流的類型。  
+ 壓縮是指縮減檔案大小以便儲存的程序。 解壓縮則是指擷取壓縮檔的內容使其成為可使用格式的程序。 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間包含壓縮及解壓縮檔案和資料流的類型。  
   
  以下是壓縮和解壓縮檔案和資料流時經常使用的類別：  
   
@@ -156,7 +155,7 @@ ms.lasthandoff: 09/05/2017
  如需 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中 I/O 作業的詳細資訊，請參閱 Windows 開發人員中心的[快速入門：讀取和寫入檔案](http://go.microsoft.com/fwlink/p/?LinkId=243072)。  
   
 ## <a name="io-and-security"></a>I/O 和安全性  
- 當您使用 <xref:System.IO?displayProperty=fullName> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
+ 當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
   
  預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 對於傳統 .NET Framework 應用程式請改用[隔離儲存區](../../../docs/standard/io/isolated-storage.md)，對於 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式則改用[應用程式資料](http://go.microsoft.com/fwlink/?LinkId=229175)。  
   
@@ -183,4 +182,3 @@ ms.lasthandoff: 09/05/2017
 -   [記憶體對應檔案](../../../docs/standard/io/memory-mapped-files.md)  
   
  描述記憶體對應檔案，這些檔案包含磁碟檔案在虛擬記憶體中的內容。 您可以使用記憶體對應檔案來編輯超大的檔案，以及建立供處理序間通訊使用的共用記憶體。
-

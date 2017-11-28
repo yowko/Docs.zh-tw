@@ -1,62 +1,41 @@
 ---
 title: "存取使用者資料 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- domain names, retrieving
+- domain names [Visual Basic], retrieving
 - data [Visual Basic], accessing user data
-- My.User object, tasks
-- user data, domain
-- user names, retrieving
-- user data, accessing
-- login names
+- My.User object [Visual Basic], tasks
+- user data [Visual Basic], domain
+- user names [Visual Basic], retrieving
+- user data [Visual Basic], accessing
+- login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 92c0b97059896e86d54069b637c9956cac9d10e8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 396ae45d26551c3a44a8a8fa6334a744508734a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
-# Accessing User Data (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-本章節涵蓋有關 `My.User` 物件與使用此物件可以完成之工作的主題。  
+# <a name="accessing-user-data-visual-basic"></a>存取使用者資料 (Visual Basic)
+本節包含處理 `My.User` 物件以及可使用它完成的工作等主題。  
   
- `My.User` 物件會傳回實作 <xref:System.Security.Principal.IPrincipal> 介面的物件，藉以提供存取已登入的使用者之相關資訊的權限。  
+ `My.User` 物件透過傳回實作 <xref:System.Security.Principal.IPrincipal> 介面的物件，讓您存取已登入使用者的相關資訊。  
   
-## 工作  
+## <a name="tasks"></a>工作  
   
-|若要|請參閱|  
+|以|請參閱|  
 |--------|---------|  
 |取得使用者的登入名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|取得使用者的網域名稱 \(如果應用程式使用 Windows 驗證\)|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|如果應用程式使用 Windows 驗證即可取得使用者的網域名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |判斷使用者的角色|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>
-

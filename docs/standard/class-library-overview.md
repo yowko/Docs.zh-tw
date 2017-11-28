@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>.NET Framework 類別庫概觀
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包括類別、介面和實值型別，以加速和最佳化開發過程並提供對系統功能的存取。 為了促進語言之間的互通性 (Interoperability)，大部分 .NET Framework 型別符合 CLS 標準，因而可以用於所有符合 Common Language Specification (CLS) 程式語言編譯器之中。  
@@ -114,7 +113,6 @@ ass 物件|<xref:System.Object>|物件階層架構的根。|**物件**|**object*
  如需命名空間的詳細資訊，請瀏覽 [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195) (.NET Framework 類別庫)。 參考文件提供各個命名空間的簡要概觀，還有各個型別和它成員的正式說明。  
   
 ## <a name="see-also"></a>另請參閱  
- [一般型別系統](../../docs/standard/base-types/common-type-system.md)   
- [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [一般類型系統](../../docs/standard/base-types/common-type-system.md)  
+ [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [概觀](../../docs/framework/get-started/overview.md)
-

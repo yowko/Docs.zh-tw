@@ -1,45 +1,27 @@
 ---
 title: "在 Visual Basic 中讀取檔案"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data [Visual Basic], reading from files
 - I/O [Visual Basic], reading from files
 - examples [Visual Basic], reading from files
-- files, reading
-- reading files
+- files [Visual Basic], reading
+- reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 29eddd4abbadd2b4dfa12c19213612f4822bbb3f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="reading-from-files-in-visual-basic"></a>在 Visual Basic 中讀取檔案
 本節說明如何執行與讀取檔案建立關聯的工作。  
@@ -91,4 +73,3 @@ ms.lasthandoff: 07/28/2017
   
  [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  示範如何搭配使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 方法與檔案和目錄。
-

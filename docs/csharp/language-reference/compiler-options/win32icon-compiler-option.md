@@ -1,42 +1,23 @@
 ---
 title: "-win32icon (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32icon
-dev_langs:
-- CSharp
+f1_keywords: /win32icon
 helpviewer_keywords:
 - win32icon compiler option [C#]
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3f9419470d2f00a9f69aae24e925fea53d90cf10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: af5b9c3a44163167d932d378cbac4976e07eacbf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon (C# 編譯器選項)
 **/win32icon** 選項會在輸出檔內插入一個 .ico 檔，讓輸出檔在檔案總管中具有所需的外觀。  
@@ -74,6 +55,5 @@ csc /win32icon:rf.ico in.cs
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-

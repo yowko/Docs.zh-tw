@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - importing type library
 - type metadata
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a907e75785bb0eb9ced43466ef5e51e598d4f629
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a7657540991099cca29dc911c8e42e5ddcd22802
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯器則是在組件中產生型別中繼資料。 這兩種類型資訊的來源有相當大的差異。 本主題描述從型別程式庫產生中繼資料的技術。 產生的組件稱為 Interop 組件，其包含的類型資訊可讓 .NET Framework 應用程式使用 COM 類型。  
@@ -65,7 +58,7 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
      型別程式庫匯入工具提供命令列選項，可以調整產生的 Interop 檔案的中繼資料、從現有型別程式庫匯入型別，以及產生 Interop 組件和命名空間。 如需指示，請參閱[何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)。  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=fullName> 類別  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 類別  
   
      這個類別提供將型別程式庫中的 coclass 和介面轉換為組件內中繼資料的方法。 它會產生與 Tlbimp.exe 相同的中繼資料輸出。 不過，不同於 Tlbimp.exe，<xref:System.Runtime.InteropServices.TypeLibConverter> 類別可以將記憶體內部型別程式庫轉換為中繼資料。  
   
@@ -86,15 +79,14 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
  如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.TypeLibConverter>   
- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)   
- [類型程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe (型別程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [自訂標準包裝函式](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
- [在 Managed 程式碼中使用 COM 類型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)   
- [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)   
- [如何：將參考加入至型別程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)   
- [如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)   
+ <xref:System.Runtime.InteropServices.TypeLibConverter>  
+ [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
+ [型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [自訂標準包裝函式](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [在 Managed 程式碼中使用 COM 類型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)  
+ [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)  
+ [如何：將參考加入至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
+ [如何：從類型程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
  [逐步解說：從 Microsoft Office 組件內嵌類型資訊](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
-

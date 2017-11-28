@@ -1,42 +1,22 @@
 ---
 title: "支援 LINQ 的 C# 功能"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- LINQ [C#], features supporting LINQ
+helpviewer_keywords: LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01db44482ee3230d15af5ce8e0373fb15a769609
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 下節將介紹 C# 3.0 中引進的新語言建構。 雖然這些新功能或多或少都會用於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢，但不限於 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，還可用於任何您認為實用的內容中。  
@@ -113,4 +93,3 @@ public string Name {get; set;}
   
 ## <a name="see-also"></a>另請參閱  
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-

@@ -1,41 +1,22 @@
 ---
 title: "C# 前置處理器指示詞"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.preprocessor
-dev_langs:
-- CSharp
+f1_keywords: cs.preprocessor
 helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6378c8df794a4ee75e7b5ca283b18b228ba46383
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 76dfbcd548608eba7753fe9e91fdf6cdff2a5878
-ms.openlocfilehash: ccf46666baafe6e98103310554fee7a858bc4e01
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-preprocessor-directives"></a>C# 前置處理器指示詞
 本節包含下列 C# 前置處理器指示詞的相關資訊：
@@ -62,6 +43,5 @@ ms.lasthandoff: 08/22/2017
 每個前置處理器指示詞都必須是該行中的唯一指令。
 
 ## <a name="see-also"></a>請參閱
- [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-

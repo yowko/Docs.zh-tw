@@ -1,41 +1,22 @@
 ---
 title: "await (C# 參考)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- await_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 28be25d2f467ea5df4de50516bfa03347c77081e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="await-c-reference"></a>await (C# 參考)
 `await` 運算子會套用至非同步方法中的工作，以在執行方法中插入暫停點，直到等候的工作完成為止。 工作代表進行中的工作。  
@@ -48,12 +29,12 @@ ms.lasthandoff: 07/28/2017
 套用了 `await` 運算子的工作，通常是呼叫傳回給實作[工作式非同步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法。 它們包括傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 `System.Threading.Tasks.ValueType<TResult>` 物件的方法。  
 
   
- 在下列範例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=fullName> 方法會傳回 `Task<byte[]>`。 這個工作可保證工作完成時，一定會產生實際位元組陣列。 `await` 運算子會暫停執行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法的工作完成為止。 同時，控制權會返回 `GetPageSizeAsync` 的呼叫端。 在工作執行完成後，`await` 運算式評估為位元組陣列。  
+ 在下列範例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法會傳回 `Task<byte[]>`。 這個工作可保證工作完成時，一定會產生實際位元組陣列。 `await` 運算子會暫停執行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法的工作完成為止。 同時，控制權會返回 `GetPageSizeAsync` 的呼叫端。 在工作執行完成後，`await` 運算式評估為位元組陣列。  
 
-[!code-cs[await 範例](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  如需完整範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
+>  如需完整範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkID=255191) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
   
 如先前範例所示，如果將 `await` 套用至傳回 `Task<TResult>` 之方法呼叫的結果，則 `await` 運算式的類型為 `TResult`。 如果將 `await` 套用至傳回 `Task` 之方法呼叫的結果，則 `await` 運算式的類型為 `void`。 下列範例會說明其間的差異。  
   
@@ -79,19 +60,18 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
   
 如果您等候已取消的工作傳回非同步方法，則 `await` 運算子會重新擲回 <xref:System.OperationCanceledException>。  
   
-處於錯誤狀態的單一工作可能反映多個例外狀況。 例如，工作可能是對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 呼叫的結果。 當您等候這類工作時，await 作業只會重新擲回其中一個例外狀況。 不過，您無法預測重新擲回哪個例外狀況。  
+處於錯誤狀態的單一工作可能反映多個例外狀況。 例如，工作可能是對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 呼叫的結果。 當您等候這類工作時，await 作業只會重新擲回其中一個例外狀況。 不過，您無法預測重新擲回哪個例外狀況。  
   
 如需非同步方法中錯誤處理的範例，請參閱 [try-catch](../../../csharp/language-reference/keywords/try-catch.md)。  
   
 ## <a name="example"></a>範例  
-下列範例會傳回頁面的總字元數，這些頁面的 URL 會傳遞給它當做命令列引數。 本例會呼叫 `GetPageLengthsAsync` 方法，這會以 `async` 關鍵字標示。 `GetPageLengthsAsync` 方法接著會使用 `await` 關鍵字來等候對 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=fullName> 方法的呼叫。  
+下列範例會傳回頁面的總字元數，這些頁面的 URL 會傳遞給它當做命令列引數。 本例會呼叫 `GetPageLengthsAsync` 方法，這會以 `async` 關鍵字標示。 `GetPageLengthsAsync` 方法接著會使用 `await` 關鍵字來等候對 <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> 方法的呼叫。  
 
-[!code-cs[await 範例](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
+[!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-因為不支援在應用程式進入點中使用 `async` 和 `await`，所以我們無法將 `async` 屬性套用至 `Main` 方法，也不能等候 `GetPageLengthsAsync` 方法呼叫。 擷取 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=fullName> 屬性的值，以確保 `Main` 方法等候非同步作業完成。 針對不傳回值的工作，您可以呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName> 方法。 
+因為不支援在應用程式進入點中使用 `async` 和 `await`，所以我們無法將 `async` 屬性套用至 `Main` 方法，也不能等候 `GetPageLengthsAsync` 方法呼叫。 擷取 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 屬性的值，以確保 `Main` 方法等候非同步作業完成。 針對不傳回值的工作，您可以呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 
 
 ## <a name="see-also"></a>請參閱  
 [使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)   
 [逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 [async](../../../csharp/language-reference/keywords/async.md)
-

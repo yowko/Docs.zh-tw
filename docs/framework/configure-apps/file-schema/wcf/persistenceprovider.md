@@ -1,54 +1,62 @@
 ---
-title: "&lt;persistenceProvider&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;persistenceProvider&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b506b8ef14246ee954adb0a16102f4bb208106b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;persistenceProvider&gt;
+# <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
 指定要使用的持續性提供者實作型別，以及持續性作業所使用的逾時。  
   
-## 語法  
+ \<系統。ServiceModel >  
+\<行為 >  
+\<serviceBehaviors >  
+\<行為 >  
+\<persistenceProvider >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <persistenceProvider persistenceOperationTimeout="TimeSpan"  
    type="String" />  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|persistenceOperationTimeout|<xref:System.TimeSpan> 值，此值會指定用於持續性作業的逾時。  預設為 "00:00:30"。|  
+|---------------|-----------------|  
+|persistenceOperationTimeout|<xref:System.TimeSpan> 值，此值會指定用於持續性作業的逾時。 預設值是"00: 00:30"。|  
 |類型|字串，指定要使用的持續性提供者處理站之型別。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<行為\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
-## 備註  
- 這個項目會指定持續性提供者，該提供者會用來序列化 WCF 服務的狀態。  它應該搭配在 HTTP 標頭中傳遞狀態資訊的 `wsHttpContextBinding` 使用。  
+## <a name="remarks"></a>備註  
+ 這個項目會指定持續性提供者，該提供者會用來序列化 WCF 服務的狀態。 它應該搭配在 HTTP 標頭中傳遞狀態資訊的 `wsHttpContextBinding` 使用。  
   
-## 請參閱  
- <xref:System.ServiceModel.Configuration.PersistenceProviderElement>   
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Configuration.PersistenceProviderElement>  
  <xref:System.ServiceModel.Persistence.PersistenceProvider>

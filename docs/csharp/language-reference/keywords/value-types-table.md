@@ -1,42 +1,23 @@
 ---
 title: "實值類型表 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - value types [C#], table
 - Visual C#, types
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 49ada8d7c006808077b5a7c93175a143932bf277
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f97f0b7fd1887367bf64fef737420e4c6c3ada2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-table-c-reference"></a>實值類型表 (C# 參考)
 下表依類別列出 C# 實值型別。  
@@ -60,10 +41,9 @@ ms.lasthandoff: 07/28/2017
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|不帶正負號, 數值, 整數||  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [預設值表](../../../csharp/language-reference/keywords/default-values-table.md)   
- [實值型別](../../../csharp/language-reference/keywords/value-types.md)   
- [格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [預設值表](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
+ [格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

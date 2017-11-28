@@ -1,30 +1,26 @@
 ---
 title: "預先不可部分完成 XName 物件 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 32613771da42b3e8260b1608f20ad6c195008faa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc71a1a5b6d8fe038a9eefaff1649df0ea81aa02
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>預先不可部分完成 XName 物件 (LINQ to XML) (C#)
-在 LINQ to XML 中改善效能的一個方式是預先不可部分完成 <xref:System.Xml.Linq.XName> 物件。 預先不可部分完成表示您先將字串指派給 <xref:System.Xml.Linq.XName> 物件，再使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 類別的建構函式建立 XML 樹狀結構。 接著，不是將字串傳遞至建構函式，這會將字串以隱含方式轉換成 <xref:System.Xml.Linq.XName>，而是傳遞初始化的 <xref:System.Xml.Linq.XName> 物件。  
+在 LINQ to XML 中，改善效能的其中一種方式就是預先不可部分完成 <xref:System.Xml.Linq.XName> 物件。 預先不可部分完成是表示，您先指派字串給 <xref:System.Xml.Linq.XName> 物件，然後再使用 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XAttribute> 類別 (Class) 的建構函式 (Constructor) 來建立 XML 樹狀結構。 接著，您會傳遞初始化的 <xref:System.Xml.Linq.XName> 物件，而非將字串傳遞至建構函式 (會使用隱含轉換，從字串轉換成 <xref:System.Xml.Linq.XName>)。  
   
- 當您建立重複特定名稱的大型 XML 樹狀結構時，這樣做可以改善效能。 若要這樣做，請在建構 XML 樹狀結構之前先宣告並初始化 <xref:System.Xml.Linq.XName> 物件，然後使用 <xref:System.Xml.Linq.XName> 物件，而非指定項目和屬性名稱的字串。 如果您使用相同的名稱來建立大量項目 (或屬性)，這項技巧可能會大幅提升效能。  
+ 當您建立重複特定名稱的大型 XML 樹狀結構時，這樣做可以改善效能。 若要這樣做，請在建構 XML 樹狀結構之前宣告並初始化 <xref:System.Xml.Linq.XName> 物件，然後使用 <xref:System.Xml.Linq.XName> 物件，而非指定項目和屬性名稱的字串。 如果您使用相同的名稱來建立大量項目 (或屬性)，這項技巧可能會大幅提升效能。  
   
  您應該使用自己的案例來測試預先不可部分完成，以便決定是否應該使用此作業。  
   
@@ -130,6 +126,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [效能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)   
+ [效能 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)  
  [不可部分完成的 XName 和 XNamespace 物件 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
-

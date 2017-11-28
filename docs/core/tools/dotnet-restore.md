@@ -8,12 +8,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -44,6 +43,8 @@ dotnet restore [-h|--help]
 ## <a name="description"></a>說明
 
 `dotnet restore` 命令會使用 NuGet 來還原相依性以及專案檔中指定的專案特定工具。 預設會平行執行相依性和工具的還原。
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *NuGet.config* 組態檔提供。 安裝 CLI 工具時，會提供預設組態檔。 您可以在專案目錄中建立自己的 *NuGet.config* 檔案，以指定其他摘要。 您也可以在命令提示字元中針對每個引動過程指定其他摘要。
 
@@ -167,7 +168,6 @@ dotnet restore [-h|--help]
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-還原目前目錄中專案的相依性和工具，並且只在輸出中顯示錯誤︰
+還原目前目錄中專案的相依性和工具，並且只顯示最小輸出：
 
-`dotnet restore --verbosity Error`
-
+`dotnet restore --verbosity minimal`

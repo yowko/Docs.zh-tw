@@ -1,101 +1,103 @@
 ---
-title: "非同步程式設計 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "非同步程式設計"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-ado
+ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fb500b203555c9174727cd4e9f69eeb5f1df87db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 非同步程式設計
-本主題探討 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] \(SqlClient\) 中之非同步程式設計支援，包括在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中為支援非同步程式設計功能而引進的增強功能。  
+# <a name="asynchronous-programming"></a>非同步程式設計
+
+本主題探討 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) 中之非同步程式設計支援，包括在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中為支援非同步程式設計功能而引進的增強功能。  
   
-## 傳統非同步程式設計  
+## <a name="legacy-asynchronous-programming"></a>傳統非同步程式設計  
  在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，是使用下列方法和 `Asynchronous Processing=true` 連接屬性完成 SqlClient 非同步程式設計：  
   
-1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=fullName>  
+1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=fullName>  
+3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。  
   
  從 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 開始，這些方法不再需要連接字串中的 `Asynchronous Processing=true`。  
   
-## 在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增的非同步程式設計功能  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增的非同步程式設計功能  
  新的非同步程式設計功能提供了一些簡單的技巧，可以使程式碼非同步。  
   
  如需 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引進的非同步程式設計功能詳細資訊，請參閱：  
   
--   [Visual Studio 非同步程式設計](http://go.microsoft.com/fwlink/?LinkId=220765)  
-  
--   [在 .Net 4.5 中使用 SqlDataReader 的新非同步方法 \(第 1 部分\)](http://blogs.msdn.com/b/adonet/archive/2012/04/20/using-sqldatareader-s-new-async-methods-in-net-4-5-beta.aspx)  
-  
--   [在 .Net 4.5 中使用 SqlDataReader 的新非同步方法 \(第 2 部分\)](http://blogs.msdn.com/b/adonet/archive/2012/07/15/using-sqldatareader-s-new-async-methods-in-net-4-5-beta-part-2-examples.aspx)  
-  
- 當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。  傳統的非同步程式碼編寫涉及安裝回呼 \(也稱為接續\)，以表示非同步作業完成後發生的邏輯。  這會使非同步程式碼的結構比同步程式碼更複雜。  
+- [在 C# 中的非同步程式設計](../../../csharp/async.md)
+
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
+
+- [.Net 4.5 (第 1 部分) 中使用 SqlDataReader 的新非同步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+
+- [.Net 4.5 (第 2 部分) 中使用 SqlDataReader 的新非同步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+ 
+ 當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。  傳統的非同步程式碼編寫涉及安裝回呼 (也稱為接續)，以表示非同步作業完成後發生的邏輯。 這會使非同步程式碼的結構比同步程式碼更複雜。  
   
  您現在不需使用回呼即可呼叫非同步方法內部，並且不需跨多個方法或 Lambda 運算式分割程式碼。  
   
- `async` 修飾詞，指定方法為非同步方法。  呼叫 `async` 方法時會傳回工作。  針對工作呼叫 `await` 陳述式時，目前的方法會立即結束。  當工作完成時，會以相同的方法繼續執行。  
+ `async` 修飾詞，指定方法為非同步方法。 呼叫 `async` 方法時會傳回工作。 當`await`運算子套用至工作，會立即結束目前的方法。 當工作完成時，會以相同的方法繼續執行。
   
 > [!WARNING]
 >  如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。  
   
- 呼叫 `async` 方法不會配置任何額外的執行緒。  它可能會在結尾處簡短地使用現有的 I\/O 完成執行緒。  
+ 呼叫 `async` 方法不會配置任何額外的執行緒。 它可能會在結尾處簡短地使用現有的 I/O 完成執行緒。  
   
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增下列方法以支援非同步程式設計：  
   
--   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteDbDataReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteNonQueryAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteNonQueryAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbCommand.ExecuteScalarAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbCommand.ExecuteScalarAsync%2A?displayProperty=nameWithType>  
   
 -   <xref:System.Data.Common.DbDataReader.GetFieldValueAsync%2A>  
   
 -   <xref:System.Data.Common.DbDataReader.IsDBNullAsync%2A>  
   
--   <xref:System.Data.Common.DbDataReader.NextResultAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbDataReader.NextResultAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Common.DbDataReader.ReadAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.Common.DbDataReader.ReadAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlConnection.OpenAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQueryAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQueryAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteScalarAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteScalarAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlCommand.ExecuteXmlReaderAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlCommand.ExecuteXmlReaderAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.NextResultAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlDataReader.NextResultAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.ReadAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlDataReader.ReadAsync%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=fullName>  
+-   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- 已加入其他非同步成員，以支援[SqlClient 資料流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。  
+ 已加入其他非同步成員，以支援[SqlClient 串流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。  
   
-### 開啟同步與非同步的連接  
- 您可以升級現有的應用程式以使用新的非同步功能。  例如，假設應用程式具有同步連接演算法，並且會在每次連接至資料庫時封鎖 UI 執行緒，則一旦連接後，該應用程式就會呼叫預存程序，提示其他使用者方才有使用者登入。  
+### <a name="synchronous-to-asynchronous-connection-open"></a>開啟同步與非同步的連接  
+ 您可以升級現有的應用程式以使用新的非同步功能。 例如，假設應用程式具有同步連接演算法，並且會在每次連接至資料庫時封鎖 UI 執行緒，則一旦連接後，該應用程式就會呼叫預存程序，提示其他使用者方才有使用者登入。  
   
-```  
+```csharp
 using SqlConnection conn = new SqlConnection("…");  
 {  
    conn.Open();  
@@ -104,42 +106,41 @@ using SqlConnection conn = new SqlConnection("…");
       cmd.ExecuteNonQuery();  
    }  
 }  
-  
 ```  
   
  將程式轉換為使用新的非同步功能時，其看起來應類似：  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
   
 class A {  
   
-   static async Task<int> Method(SqlConnection conn, SqlCommand cmd) {  
-      await conn.OpenAsync();  
-      await cmd.ExecuteNonQueryAsync();  
-      return 1;  
-   }  
+   static async Task<int> Method(SqlConnection conn, SqlCommand cmd) {  
+      await conn.OpenAsync();  
+      await cmd.ExecuteNonQueryAsync();  
+      return 1;  
+   }  
   
-   public static void Main() {  
-      using (SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI")) {  
-         SqlCommand command = new SqlCommand("select top 2 * from orders", conn);  
+   public static void Main() {  
+      using (SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI")) {  
+         SqlCommand command = new SqlCommand("select top 2 * from orders", conn);  
   
-         int result = A.Method(conn, command).Result;  
+         int result = A.Method(conn, command).Result;  
   
-         SqlDataReader reader = command.ExecuteReader();  
+         SqlDataReader reader = command.ExecuteReader();  
          while (reader.Read())  
             Console.WriteLine(String.Format("{0}", reader[0]));  
-      }  
-   }  
+      }  
+   }  
 }  
 ```  
   
-### 在現有的應用程式 \(混合舊的和新的模式\) 中新增非同步功能  
- 您也可以在不變更現有非同步邏輯的情況下，新增非同步功能 \(SqlConnection::OpenAsync\)。  例如，如果應用程式目前使用：  
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a>在現有的應用程式 (混合舊的和新的模式) 中新增非同步功能  
+ 您也可以在不變更現有非同步邏輯的情況下，新增非同步功能 (SqlConnection::OpenAsync)。 例如，如果應用程式目前使用：  
   
-```  
+```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);  
 SqlConnection conn = new SqlConnection("…");  
 conn.Open();  
@@ -149,37 +150,37 @@ IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);
   
  您可以開始使用新的非同步模式，而不需大幅變更現有的演算法。  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
   
 class A {  
-   static void ProductList(IAsyncResult result) { }  
+   static void ProductList(IAsyncResult result) { }  
   
-   public static void Main() {  
-      // AsyncCallback productList = new AsyncCallback(ProductList);  
-      // SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
-      // conn.Open();  
-      // SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
-      // IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
+   public static void Main() {  
+      // AsyncCallback productList = new AsyncCallback(ProductList);  
+      // SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
+      // conn.Open();  
+      // SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
+      // IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
   
-      AsyncCallback productList = new AsyncCallback(ProductList);  
-      SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
-      conn.OpenAsync().ContinueWith((task) => {  
-         SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
-         IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
-      }, TaskContinuationOptions.OnlyOnRanToCompletion);  
-   }  
+      AsyncCallback productList = new AsyncCallback(ProductList);  
+      SqlConnection conn = new SqlConnection("Data Source=(local); Initial Catalog=NorthWind; Integrated Security=SSPI");  
+      conn.OpenAsync().ContinueWith((task) => {  
+         SqlCommand cmd = new SqlCommand("select top 2 * from orders", conn);  
+         IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
+      }, TaskContinuationOptions.OnlyOnRanToCompletion);  
+   }  
 }  
 ```  
   
-### 使用基礎提供者模型和新的非同步功能  
- 您可能需要建立能夠連接到不同的資料庫並執行查詢的工具。  您可以使用基礎提供者模型和新的非同步功能。  
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>使用基礎提供者模型和新的非同步功能  
+ 您可能需要建立能夠連接到不同的資料庫並執行查詢的工具。 您可以使用基礎提供者模型和新的非同步功能。  
   
- 您必須啟用伺服器上的「Microsoft 分散式交易控制器」\(MSDTC\)，才能使用分散式交易。  如需如何啟用 MSDTC 的詳細資訊，請參閱[如何在 Web 伺服器上啟用 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。  
+ 您必須啟用伺服器上的「Microsoft 分散式異動控制器」(MSDTC)，才能使用分散式異動。 如需如何啟用 MSDTC 的資訊，請參閱[如何啟用網頁伺服器上的 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。  
   
-```  
+```csharp
 using System;  
 using System.Data.Common;  
 using System.Data.SqlClient;  
@@ -222,9 +223,9 @@ class A {
 }  
 ```  
   
-### 使用 SQL 交易和新的非同步功能  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>使用 SQL 交易和新的非同步功能  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
@@ -286,13 +287,12 @@ class Program {
       }  
    }  
 }  
-  
 ```  
   
-### 使用 SQL 交易和新的非同步功能  
- 在企業應用程式中，您可能需在某些情況下新增分散式交易，以啟用多個資料庫伺服器之間的交易。  您可以使用 System.Transactions 命名空間並登記分散式交易，如下所示：  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>使用 SQL 交易和新的非同步功能  
+ 在企業應用程式中，您可能需在某些情況下新增分散式交易，以啟用多個資料庫伺服器之間的交易。 您可以使用 System.Transactions 命名空間並登記分散式交易，如下所示：  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading.Tasks;  
@@ -348,13 +348,12 @@ class Program {
       }  
    }  
 }  
-  
 ```  
   
-### 取消非同步作業  
+### <a name="cancelling-an-asynchronous-operation"></a>取消非同步作業  
  您可以使用 <xref:System.Threading.CancellationToken> 取消非同步要求。  
   
-```  
+```csharp
 using System;  
 using System.Data.SqlClient;  
 using System.Threading;  
@@ -391,10 +390,10 @@ namespace Samples {
 }  
 ```  
   
-### 使用 SqlBulkCopy 的非同步作業  
- 使用 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=fullName> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=fullName> 中也新增了非同步功能。  
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a>使用 SqlBulkCopy 的非同步作業  
+ 使用 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType> 中也新增了非同步功能。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Data;  
@@ -633,13 +632,13 @@ namespace SqlBulkCopyAsyncCodeSample {
 }  
 ```  
   
-## 非同步使用多個命令與 MARS  
- 範例會開啟到 **AdventureWorks** 資料庫的單一連接。  使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。  當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。  
+## <a name="asynchronously-using-multiple-commands-with-mars"></a>非同步使用多個命令與 MARS  
+ 範例會開啟的單一連接**AdventureWorks**資料庫。 使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。 當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。  
   
 > [!NOTE]
->  下列範例使用包含於 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的 **AdventureWorks** 範例資料庫。  範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。  視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -703,15 +702,15 @@ class Class1 {
 }  
 ```  
   
-## 使用 MARS 非同步讀取及更新資料  
- MARS 允許將連接用於讀取作業及資料操作語言 \(DML\) 作業 \(具有多個暫止作業\)。  使用此功能，應用程式即無需處理連接繁忙錯誤。  此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。  最後，因為多個作業可在單一連接上進行操作，所以它們可共用相同的交易內容，無需使用 **sp\_getbindtoken** 及 **sp\_bindsession** 系統預存程序。  
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 非同步讀取及更新資料  
+ MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。 使用此功能，應用程式即無需處理連接繁忙錯誤。 此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。 最後，多個作業可在單一連接上進行操作，因為它們可共用相同的交易內容，因而不須使用**sp_getbindtoken**和**sp_bindsession**系統預存程序。  
   
- 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。  第一個命令物件會擷取信用評等為 5 的廠商清單。  第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。  第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。  會執行計算以決定新的 **OnOrderQty**。  然後會使用第三個命令物件，以新值更新 **ProductVendor** 資料表。  這整個處理序會在單一交易中發生，並在結束時復原。  
+ 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 會執行計算以決定新**OnOrderQty**應該是。 第三個命令物件然後用來更新**ProductVendor**以新值的資料表。 這整個處理序會在單一異動中發生，並在結束時復原。  
   
 > [!NOTE]
->  下列範例使用包含於 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的 **AdventureWorks** 範例資料庫。  範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。  視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  
@@ -819,5 +818,5 @@ class Program {
 }  
 ```  
   
-## 請參閱  
- [擷取和修改 ADO.NET 中的資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+## <a name="see-also"></a>另請參閱  
+ [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

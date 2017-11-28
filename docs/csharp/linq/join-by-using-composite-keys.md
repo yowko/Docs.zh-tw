@@ -1,7 +1,7 @@
 ---
 title: "使用複合索引鍵執行聯結"
 description: "如何使用複合索引鍵執行聯結。"
-keywords: ".NET、.NET Core、C#"
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -10,12 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
+ms.openlocfilehash: c285e768d64d1da7e428e29fc67838e87575500c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e3e860729ca9267d29ba105ac03ebe22a70b1762
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-by-using-composite-keys"></a>使用複合索引鍵執行聯結
 
@@ -43,7 +42,6 @@ join...on new {Name = o.CustomerName, ID = o.CustID} equals
  複合索引鍵也可用於 `group` 子句。  
 
 ## <a name="see-also"></a>請參閱  
- [LINQ 查詢運算式](index.md)   
- [Join 子句](../language-reference/keywords/join-clause.md)   
+ [LINQ 查詢運算式](index.md)  
+ [join 子句](../language-reference/keywords/join-clause.md)  
  [group 子句](../language-reference/keywords/group-clause.md)
-

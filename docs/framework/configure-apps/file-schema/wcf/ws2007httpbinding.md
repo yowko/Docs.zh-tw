@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4eff0a30723d8122e895b73b106c136724c7a7d7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: c28b5f0304106fb2aa3e95e68ddb798b5a1fe0b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt;
 定義可互通的繫結，此繫結支援正確版本的 <xref:System.ServiceModel.WSHttpBinding.Security%2A>、<xref:System.ServiceModel.ReliableSession> 和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 繫結項目。  
@@ -147,10 +145,9 @@ textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.ServiceModel.WS2007HttpBinding>   
- <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WS2007HttpBinding>  
+ <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<繫結 >](../../../../../docs/framework/misc/binding.md)
-

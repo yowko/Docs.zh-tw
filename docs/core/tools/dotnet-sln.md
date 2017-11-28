@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 5071cb80be0fb14829a0fdffd0f5a2d2371b6ba8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -26,9 +25,9 @@ ms.lasthandoff: 08/14/2017
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
@@ -41,13 +40,13 @@ dotnet sln [-h|--help]
 
 `add <PROJECT> ...`
 
-`add **/*`
+`add <GLOBBING_PATTERN>`
 
 將一個專案或多個專案加入至方案檔。 以 Unix/Linux 為基礎的終端機上支援 [Globbing 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
 
 `remove <PROJECT> ...`
 
-`remove **/*`
+`remove <GLOBBING_PATTERN>`
 
 從方案檔中移除一個專案或多個專案。 以 Unix/Linux 為基礎的終端機上支援 [Globbing 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
 
@@ -69,18 +68,26 @@ dotnet sln [-h|--help]
 
 ## <a name="examples"></a>範例
 
-將專案加入至方案：
+將 C# 專案新增至方案：
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-將專案加入至目前目錄中的方案︰
-
-`dotnet sln add todo-app.csproj`
-
-移除方案中的專案：
+移除方案中的 C# 專案：
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-使用 Glob 模式將多個專案加入至解決方案︰
+將多個 C# 專案新增至方案：
+
+`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+
+從方案中移除多個 C# 專案：
+
+`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+
+使用 Glob 模式將多個 C# 專案新增至方案：
+
+`dotnet sln todo.sln add **/*.csproj`
+
+使用 Glob 模式從方案中移除多個 C# 專案：
 
 `dotnet sln todo.sln remove **/*.csproj`

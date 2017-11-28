@@ -1,52 +1,34 @@
 ---
 title: "在 Visual Basic 中管理檔案和目錄"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, reading text
-- reading files, text
+- files [Visual Basic], reading text
+- reading files [Visual Basic], text
 - I/O [Visual Basic], walkthroughs
 - text, writing to files
 - text, reading from files
-- reading text from files, walkthroughs
+- reading text from files [Visual Basic], walkthroughs
 - Visual Basic code, file access
-- files, writing text
+- files [Visual Basic], writing text
 - I/O [Visual Basic], writing text to files
 - file access, walkthroughs
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
 本逐步解說提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
@@ -186,8 +168,7 @@ ms.lasthandoff: 07/28/2017
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.IO>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   
+ <xref:System.IO>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
  [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
-

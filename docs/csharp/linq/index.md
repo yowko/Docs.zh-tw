@@ -1,5 +1,5 @@
 ---
-title: Language Integrated Query (LINQ) | Microsoft Docs
+title: Language Integrated Query (LINQ)
 description: "介紹使用 C# 的 Language Integrated Query (LINQ)"
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 21e4420d385bff07173b265782dd23f89f61e797
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/23/2017
-
+ms.openlocfilehash: c4c26e2b7b0693ec940958a9b7d2d306001090e7
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
 Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您必須針對每個資料來源型別 (例如 SQL 資料庫、XML 文件、各種 Web 服務等等) 學習不同的查詢語言。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。
@@ -26,7 +24,7 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 
 下列範例示範完整的查詢作業。 完整的作業包括建立資料來源、定義查詢運算式，並在 `foreach` 陳述式中執行查詢。
 
-[!code-cs[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>查詢運算式概觀
 
@@ -38,7 +36,7 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
   
 -   在您針對查詢變數進行逐一查看之前 (例如，在 `foreach` 陳述式中)，查詢將不會執行。 如需詳細資訊，請參閱 [LINQ 查詢簡介](../programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
--   在編譯期間，查詢運算式會根據 C# 規格中提出的規則，轉換成「標準查詢運算子」方法呼叫。 所有可使用查詢語法表示的查詢，也都可以利用方法語法來表示。 不過，在大多數情況下，查詢語法較容易閱讀且更簡潔。 如需詳細資訊，請參閱 [C# 語言規格](../language-reference/language-specification.md)和[標準查詢運算子概觀](../programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+-   在編譯期間，查詢運算式會根據 C# 規格中提出的規則，轉換成「標準查詢運算子」方法呼叫。 所有可使用查詢語法表示的查詢，也都可以利用方法語法來表示。 不過，在大多數情況下，查詢語法較容易閱讀且更簡潔。 如需詳細資訊，請參閱 [C# 語言規格](../language-reference/language-specification/index.md)和[標準查詢運算子概觀](../programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
 -   做為撰寫 LINQ 查詢的規則，我們建議您優先使用查詢語法，且只有在必要時才使用方法語法。 這兩個形式之間並沒有語意或效能上的差異。 相較於以方法語法撰寫的對等運算式，查詢運算式通常更容易閱讀。  
   
@@ -58,6 +56,5 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 若要深入了解 LINQ 的一般資訊，請參閱 [C# 中的 LINQ](linq-in-csharp.md)。
 
 若要開始使用 C# 中的 LINQ，請參閱[使用 LINQ](../tutorials/working-with-linq.md) 教學課程。
-
 
 

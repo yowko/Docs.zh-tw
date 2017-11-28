@@ -13,16 +13,15 @@ helpviewer_keywords:
 - base types
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-base-types-in-net"></a>在 .NET 中使用基底類型
 本節說明 .NET 基底類型作業，包括格式化、轉換和一般作業。  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/05/2017
   
  [日期、時間和時區](../../../docs/standard/datetime/index.md)  
  說明如何在時區感知應用程式中使用時區和時區轉換。
-

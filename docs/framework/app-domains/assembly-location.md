@@ -5,43 +5,40 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e069c1636004896bfb193fd70a352195ba045865
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bc0fc4e099540a87832b225aa0a3c262c54e9c3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 組件位置
-組件的位置可決定當 Common Language Runtime 被參考時是否能找到執行階段的位置，並可決定組件是否可供其他組件共用。  您可以在下列位置部署組件：  
+# <a name="assembly-location"></a>組件位置
+組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。 您可以在下列位置中部署組件：  
   
--   應用程式目錄或子目錄  
+-   應用程式的目錄或子目錄。  
   
-     這是部署組件時最常用的位置。  應用程式根目錄的子目錄可以語言或文化特性做為基礎。  如果組件擁有文化特性屬性資訊，則該組件必須位於以該文化特性名稱為名的應用程式目錄下的子目錄中。  
+     這是部署組件的最常用位置。 應用程式根目錄的子目錄可以根據語言或文化特性。 如果組件具有文化特性屬性中的資訊，則必須在具有該文化特性名稱之應用程式目錄下的子目錄中。  
   
--   全域組件快取  
+-   全域組件快取。  
   
-     此為機器程式碼快取，該快取與 Common Language Runtime 的安裝位置相同。  在多數情況下，如果您想要與多個應用程式共用組件，請將它部署到全域組件快取中。  
+     這是只要安裝 Common Language Runtime 的位置就會安裝的全機器程式碼快取。 在大部分情況下，如果您想要與多個應用程式共用組件，則應該將它部署到全域組件快取。  
   
--   在 HTTP 伺服器上  
+-   在 HTTP 伺服器上。  
   
-     部署在 HTTP 伺服器上的組件必須使用強式名稱；請指向應用程式檔案的程式碼基底區段中的組件。  
+     HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。  
   
-## 請參閱  
- [建立組件](../../../docs/framework/app-domains/create-assemblies.md)   
- [全域組件快取](../../../docs/framework/app-domains/gac.md)   
- [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立組件](../../../docs/framework/app-domains/create-assemblies.md)  
+ [全域組件快取](../../../docs/framework/app-domains/gac.md)  
+ [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

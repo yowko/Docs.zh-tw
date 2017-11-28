@@ -1,29 +1,32 @@
 ---
-title: "基本範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "基本範例"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ba2c7c4117ca212dd5f460064d5c59f8948dcc69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 基本範例
-這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。  這個範例包含二個專案：服務和用戶端。  
+# <a name="basic-sample"></a>基本範例
+這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。  
   
 > [!NOTE]
->  這個範例會在程式碼中實作探索。  如需在組態中實作探索的範例，請參閱[組態](../../../../docs/framework/wcf/samples/configuration-sample.md)。  
+>  這個範例會在程式碼中實作探索。  在組態中實作探索的範例，請參閱[組態](../../../../docs/framework/wcf/samples/configuration-sample.md)。  
   
-## 服務  
- 這是簡單的計算機服務實作。  與探索相關的程式碼位於 `Main` 中，其中 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會加入至服務主機，並且加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，如下列程式碼所示。  
+## <a name="service"></a>服務  
+ 這是簡單的計算機服務實作。 與探索相關的程式碼位於 `Main` 中，其中 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會加入至服務主機，並且加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，如下列程式碼所示。  
   
 ```  
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
@@ -40,8 +43,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }  
 ```  
   
-## 用戶端  
- 用戶端會使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 尋找服務。  <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是標準端點，會在用戶端開啟時解析服務的端點。  在此案例中，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 會根據服務合約尋找服務。  根據預設，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 會透過 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 進行搜尋。  一旦找到服務端點，用戶端就會透過指定的繫結連線到該服務。  
+## <a name="client"></a>用戶端  
+ 用戶端會使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 尋找服務。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是標準端點，會在用戶端開啟時解析服務的端點。 在此案例中，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 會根據服務合約尋找服務。 根據預設，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 會透過 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 進行搜尋。 一旦找到服務端點，用戶端就會透過指定的繫結連線到該服務。  
   
 ```csharp  
 public static void Main()  
@@ -51,7 +54,7 @@ public static void Main()
 }              
 ```  
   
- 用戶端會定義稱為 `InvokeCalculatorService` 的方法，該方法會使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 類別搜尋服務。  <xref:System.ServiceModel.Discovery.DynamicEndpoint> 繼承自 <xref:System.ServiceModel.Description.ServiceEndpoint>，因此可以傳遞至 `InvokeCalculatorService` 方法。  接著在範例中會使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 建立 `CalculatorServiceClient` 的執行個體，然後呼叫計算機服務的各項作業。  
+ 用戶端會定義稱為 `InvokeCalculatorService` 的方法，該方法會使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 類別搜尋服務。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 繼承自 <xref:System.ServiceModel.Description.ServiceEndpoint>，因此可以傳遞至 `InvokeCalculatorService` 方法。 接著在範例中會使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 建立 `CalculatorServiceClient` 的執行個體，然後呼叫計算機服務的各項作業。  
   
 ```csharp  
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)  
@@ -85,12 +88,11 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
    //Closing the client gracefully closes the connection and cleans up resources  
    client.Close();  
 }  
-  
 ```  
   
-#### 若要使用這個範例  
+#### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][設定 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)。  以更高的權限執行下列命令應該就能加入適當的 ACL。  如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。  `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][設定 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，開啟 Basic.sln 並建置範例。  
   
@@ -101,12 +103,12 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 5.  請注意，用戶端不需知道位址，就能找到此服務。  
   
 > [!IMPORTANT]
->  這些範例可能已安裝在您的電腦上。  請先檢查下列 \(預設\) 目錄，然後再繼續。  
+>  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至[適用於 .NET Framework 4 的 Windows Communication Foundation \(WCF\) 與 Windows Workflow Foundation \(WF\) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。  此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

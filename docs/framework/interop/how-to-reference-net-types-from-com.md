@@ -5,15 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - importing type library
 - COM interop, referencing .NET types
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 345a698a4d45093dfb873a8303712a7bff5046cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f58225e41d7e09471685395dd6e2194ee5de123c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-reference-net-types-from-com"></a>如何：參考 COM 的 .NET 類型
 從用戶端和伺服器程式碼的觀點來看，COM 和 .NET Framework 之間的差異大部分是無形的。 Microsoft Visual Basic 用戶端可以在物件瀏覽器中檢視 .NET 物件，這會公開物件方法和語法、屬性及欄位，完全如同它是任何其他 COM 物件一樣。  
@@ -57,8 +51,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [向 COM 註冊組件](../../../docs/framework/interop/registering-assemblies-with-com.md)   
- [呼叫 .NET 物件](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
+ [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [向 COM 註冊組件](../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [呼叫.NET 物件](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
  [部署供 COM 存取的應用程式](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
-

@@ -1,70 +1,74 @@
 ---
-title: "&lt;oidEntry&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidEntry> 項目"
-  - "oidEntry 項目"
+title: "&lt;oidEntry&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry
+helpviewer_keywords:
+- <oidEntry> element
+- oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;oidEntry&gt; 項目
-將 ASN.1 物件識別項對應至易記名稱。  
+# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;項目
+將 ASN.1 物件識別碼 (OID) 對應至易記名稱。  
   
-## 語法  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<oidMap >  
+\<oidEntry >  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|說明|  
-|--------|--------|  
-|**OID**|必要屬性。<br /><br /> 指定 ASN.1 OID，對應至您類別所實作的演算法。|  
-|**name**|必要屬性。<br /><br /> 指定 [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 標記中的 **name**  屬性值。|  
+|---------------|-----------------|  
+|**OID**|必要屬性。<br /><br /> 指定對應至您的類別所實作的演算法的 ASN.1 OID。|  
+|**name**|必要屬性。<br /><br /> 指定的值**名稱**屬性[ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)標記。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|說明|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
-|`mscorlib`|包含 `cryptographySettings` 項目。|  
-|`oidMap`|包含類別的 ASN.1 物件識別項 \(OID\) 對應。|  
+|`mscorlib`|包含`cryptographySettings`項目。|  
+|`oidMap`|包含類別到 ASN.1 物件識別碼 (OID) 對應。|  
   
-## 備註  
- ASN.1 物件識別項會以某些密碼編譯格式識別演算法。  將物件識別項對應至您要識別的演算法之易記名稱。  如需物件識別項的詳細資訊，請參閱 MSDN Library。  
+## <a name="remarks"></a>備註  
+ ASN.1 物件識別項識別中某些加密格式的演算法。 將物件識別碼對應至您想要識別演算法的易記名稱。  
   
-## 範例  
- 下列範例顯示如何使用 **\<oidEntry\>** 項目，來將 RIPEMD\-160 雜湊演算法的物件識別項，對應至該雜湊演算法的實作 \(Implementation\)。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用 **\<oidEntry >**項目，將 ripemd-160 雜湊演算法的物件識別碼對應至該雜湊演算法的實作。  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -84,9 +88,9 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## 請參閱  
- [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)   
- [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>另請參閱  
+ [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)  
+ [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [對應物件識別項至密碼編譯演算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

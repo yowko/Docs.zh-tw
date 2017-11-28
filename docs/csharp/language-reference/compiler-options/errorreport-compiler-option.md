@@ -1,42 +1,23 @@
 ---
 title: "-errorreport (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (C# 編譯器選項)
 此選項提供將 C# 編譯器內部錯誤回報給 Microsoft 的便利方式。  
@@ -46,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="syntax"></a>語法  
   
-```  
+```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   
@@ -62,9 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  **傳送**  
  自動向 Microsoft 傳送內部編譯器錯誤報告。 若要啟用此選項，您必須先同意 Microsoft 資料收集原則。 第一次在電腦上指定 **/errorreport:send** 時，編譯器訊息會請您參考包含 Microsoft 資料收集原則的網站。  
-  
- 此選項隨登錄設定而異。 如需如何在登錄中設定適當值的詳細資訊，請參閱 MSDN 網站上的[如何在 Visual Studio 2008 命令列工具中開啟自動錯誤報告](http://go.microsoft.com/fwlink/?LinkID=184695)。  
-  
+    
 ## <a name="remarks"></a>備註  
  編譯器無法處理原始程式碼檔案時，就會出現編譯器內部錯誤 (ICE)。 發生 ICE 時，編譯器不會產生輸出檔或任何有用的診斷，無法讓您修正程式碼。  
   
@@ -88,4 +67,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
-

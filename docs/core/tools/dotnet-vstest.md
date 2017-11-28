@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -129,4 +128,3 @@ ms.lasthandoff: 08/14/2017
 執行 `TestMethod1` 和 `TestMethod2` 測試：
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
-

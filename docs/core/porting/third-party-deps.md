@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>移轉到 .NET Core - 分析協力廠商相依性
 
 移轉程序的第一個步驟是了解您的協力廠商相依性。  您需要找出他們哪些尚未執行 .NET Core (如有)，並針對不執行 .NET Core 的開發應變計劃。
@@ -97,4 +95,3 @@ dotnet5.5
 ## <a name="next-steps"></a>後續步驟
 
 如要移轉程式庫，請參閱 [Porting to .NET Core - Libraries](libraries.md) (移轉至 .NET Core - 程式庫)。
-

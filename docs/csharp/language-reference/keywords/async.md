@@ -1,42 +1,23 @@
 ---
 title: "async (C# 參考)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
@@ -48,7 +29,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-如果您不熟悉非同步程式設計或不了解非同步方法如何使用 `await` 關鍵字進行可能需要長期執行的工作，而不封鎖呼叫端執行緒，請閱讀[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName> 方法： 
+如果您不熟悉非同步程式設計或不了解非同步方法如何使用 `await` 關鍵字進行可能需要長期執行的工作，而不封鎖呼叫端執行緒，請閱讀[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法： 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -82,7 +63,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - 將此程式碼貼入 MainPage.xaml.cs 的 `MainPage` 類別。  
 - 為 System.Net.Http 和 System.Threading.Tasks 新增 using 指示詞。  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
 >  如需工作以及等候工作時執行之程式碼的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。 如需使用類似項目的完整 WPF 範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
@@ -106,8 +87,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [逐步解說：使用 async 和 await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [await](../../../csharp/language-reference/keywords/await.md)  
+ [逐步解說：使用 Async 和 Await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)
-

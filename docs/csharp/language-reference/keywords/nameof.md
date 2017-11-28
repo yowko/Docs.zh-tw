@@ -1,39 +1,21 @@
 ---
 title: "nameof (C# 參考)"
-ms.date: 2017-06-16
+ms.date: 06/16/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
-dev_langs:
-- CSharp
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 95f50f45ec25c1eb3bacaa5051dc0407b11b7c34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: db79af5f38439b881863cf3e03aa0e684ec5cd39
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nameof-c-reference"></a>nameof (C# 參考)
 
@@ -153,8 +135,7 @@ class C {
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
  
-

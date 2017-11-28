@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66c3a64a12e791cedbd4e978de2c1b6e06eabb98
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="listening-with-sockets"></a>透過通訊端接聽
 接聽程式或伺服器通訊端會開啟網路的連接埠，等候用戶端連接到該連接埠。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 網路連線。  
@@ -56,11 +53,15 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
  決定本機端點之後，<xref:System.Net.Sockets.Socket> 必須使用 <xref:System.Net.Sockets.Socket.Bind%2A> 方法建立與該端點的關聯，並使用 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定接聽端點。 如已使用特定位址和連接埠的組合，**Bind** 會擲回例外狀況。 下列範例會示範建立**通訊端**與 **IPEndPoint** 的關聯。  
   
 ```vb  
+Dim listener As New Socket(ipAddress.AddressFamily, _  
+    SocketType.Stream, ProtocolType.Tcp) 
 listener.Bind(localEndPoint)  
 listener.Listen(100)  
 ```  
   
 ```csharp  
+Socket listener = new Socket(ipAddress.AddressFamily,
+    SocketType.Stream, ProtocolType.Tcp);
 listener.Bind(localEndPoint);  
 listener.Listen(100);  
 ```  
@@ -68,9 +69,8 @@ listener.Listen(100);
  **Listen** 方法會採用單一參數，指定在伺服器忙碌錯誤傳回至連線的用戶端之前，允許的**通訊端**暫止連線數目。 在本例中，在伺服器忙碌回應傳回至用戶端編號 101 之前，連線佇列中最多放置 100 個用戶端。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [使用用戶端通訊端](../../../docs/framework/network-programming/using-client-sockets.md)   
- [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
+ [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [使用非同步伺服器通訊端](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [使用用戶端通訊端](../../../docs/framework/network-programming/using-client-sockets.md)  
+ [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [通訊端](../../../docs/framework/network-programming/sockets.md)
-

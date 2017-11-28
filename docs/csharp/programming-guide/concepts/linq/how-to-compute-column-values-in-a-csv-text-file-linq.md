@@ -1,30 +1,21 @@
 ---
 title: "如何：計算 CSV 文字檔案中的資料行值 (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cee87fcb0d0b430d9577319abc30b8caf03e9188
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b397f3aa52a17dc35c73399b9cefdc9ad749167b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>如何：計算 CSV 文字檔案中的資料行值 (LINQ) (C#)
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
@@ -179,6 +170,5 @@ class SumColumns
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。  
   
 ## <a name="see-also"></a>另請參閱  
- [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ 和字串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-

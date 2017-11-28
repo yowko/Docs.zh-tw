@@ -1,30 +1,21 @@
 ---
 title: "逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)
 本逐步解說示範如何建立多執行緒的 Windows Forms 應用程式，以搜尋文字檔案中某個文字的出現次數。 其會示範：  
@@ -292,6 +283,5 @@ ms.lasthandoff: 07/28/2017
  此應用程式包含一些基本錯誤處理。 它會偵測空白的搜尋字串。 您可以藉由處理其他錯誤 (例如計算超過上限的文字或行數)，讓此程式更穩固。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
+ [執行緒 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [如何：訂閱及取消訂閱事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
-

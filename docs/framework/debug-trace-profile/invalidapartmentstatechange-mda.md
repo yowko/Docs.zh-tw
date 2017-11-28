@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
 - managed debugging assistants (MDAs), invalid apartment state
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71634018e42ad66fdd2d03d0b0d496394cde801e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` Managed 偵錯助理 (MDA) 是由下列兩個問題之一所啟動：  
@@ -50,7 +43,7 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="cause"></a>原因  
   
--   執行緒先前已初始化成不同的 COM Apartment 狀態。 請注意，可以明確或隱含方式設定執行緒的 Apartment 狀態。 明確的作業包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 屬性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 使用 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒，會以隱含方式設成 <xref:System.Threading.ApartmentState.MTA>，除非啟動執行緒之前呼叫 <xref:System.Threading.Thread.SetApartmentState%2A>。 應用程式的主執行緒也會以隱含方式初始化為 <xref:System.Threading.ApartmentState.MTA>，除非在 Main 方法上指定 <xref:System.STAThreadAttribute> 屬性。  
+-   執行緒先前已初始化成不同的 COM Apartment 狀態。 請注意，可以明確或隱含方式設定執行緒的 Apartment 狀態。 明確的作業包括 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 屬性以及 <xref:System.Threading.Thread.SetApartmentState%2A> 和 <xref:System.Threading.Thread.TrySetApartmentState%2A> 方法。 使用 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒，會以隱含方式設成 <xref:System.Threading.ApartmentState.MTA>，除非啟動執行緒之前呼叫 <xref:System.Threading.Thread.SetApartmentState%2A>。 應用程式的主執行緒也會以隱含方式初始化為 <xref:System.Threading.ApartmentState.MTA>，除非在 Main 方法上指定 <xref:System.STAThreadAttribute> 屬性。  
   
 -   在執行緒上呼叫具有不同並行模型的 `CoUninitialize` 方法 (或 `CoInitializeEx` 方法)。  
   
@@ -93,7 +86,6 @@ namespace ApartmentStateMDA
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [使用 Managed 偵錯助理診斷錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-class-libraries"></a>.NET 類別庫
 
 類別庫是 .NET 的[共用程式庫](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 它們可讓您將有用的功能設為可供多個應用程式使用的模組中的元件。 它們也可以作為一種方法，來載入應用程式啟動時不需要或未知的功能。 類別庫是使用 [.NET 組件檔案格式](assembly-format.md)進行描述。
@@ -54,7 +52,7 @@ ms.lasthandoff: 08/21/2017
 
 下列平台支援 .NET Standard 類別庫：
 
-*   .NET 核心
+*   .NET Core
 *   ASP.NET Core
 *   .NET Framework 4.5+
 *   Windows 市集 App
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/21/2017
 ### <a name="mono-class-libraries"></a>Mono 類別庫
 
 Mono 上支援類別庫 (包含上述三種類型的程式庫)。 Mono 經常被 (正確) 視為 Microsoft .NET Framework 的跨平台實作。 在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。 在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。
-

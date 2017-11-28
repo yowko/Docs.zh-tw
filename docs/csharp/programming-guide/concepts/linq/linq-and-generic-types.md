@@ -1,44 +1,25 @@
 ---
 title: "LINQ 和泛型類型 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: e62a1573fa5ebf51a5f0f23b133c274730cfbeb6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 177db64491d58b31ca50cef0bb2eda8c2cb65078
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ 和泛型類型 (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 版中引進的泛型型別為基礎。 您不需要深入了解泛型，就可以開始撰寫查詢。 不過，您可能需要了解兩個基本概念：  
@@ -52,18 +33,17 @@ ms.lasthandoff: 07/28/2017
 ## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ 查詢中的 IEnumerable<T\> 變數  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢變數的類型為 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IQueryable%601> 這類衍生類型。 當您看到類型為 `IEnumerable<Customer>` 的查詢變數時，只表示查詢在執行時會產生由零個以上的 `Customer` 物件所組成的序列。  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>讓編譯器處理泛型型別宣告  
  如果您想要，也可以使用 [var](../../../../csharp/language-reference/keywords/var.md) 關鍵字避免使用泛型語法。 `var` 關鍵字會指示編譯器查看 `from` 子句中指定的資料來源，來推斷查詢變數的類型。 下列範例會產生與上一個範例相同的已編譯程式碼：  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  當變數的類型很明顯，或不需要明確指定巢狀泛型型別 (例如群組查詢所產生的巢狀泛型型別) 時，`var` 關鍵字會很有用。 一般而言，如果使用 `var`，建議您考慮到它會讓其他人更難看懂您的程式碼。 如需詳細資訊，請參閱[隱含型別區域變數](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [泛型](../../../../csharp/programming-guide/generics/index.md)
-

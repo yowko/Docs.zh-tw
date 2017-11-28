@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-guide"></a>.NET 指南
 
 .NET 指南提供大量的 .NET 相關資訊。  您可視您對 .NET 的熟悉程度，瀏覽本指南的不同章節以及 .NET 文件的其他章節。
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/14/2017
 ## <a name="api-reference"></a>應用程式開發介面參考
 
 請參閱 [.NET API 參考](../../api/index.md)以了解可使用的 API 多寡。
-

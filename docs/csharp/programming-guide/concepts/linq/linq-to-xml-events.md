@@ -1,30 +1,21 @@
 ---
 title: "LINQ to XML 事件 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90e868c7de8c4eb8f252a914acf4bffe2fd8a6ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ccc3928795f188b7cf7b23d88a1f35ff043b889
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 事件 (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件可讓您在 XML 樹狀結構有所更改時收到通知。  
@@ -116,4 +107,3 @@ Total:308
   
 ## <a name="see-also"></a>另請參閱  
  [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

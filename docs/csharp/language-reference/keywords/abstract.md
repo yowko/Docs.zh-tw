@@ -1,41 +1,22 @@
 ---
 title: "abstract (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- abstract keyword [C#]
+helpviewer_keywords: abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a109a8e37f84a2e91229bfce789a69cdc26adba9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
 `abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別。 標記為抽象或包括在抽象類別中的成員，必須由衍生自抽象類別的類別所實作。  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  在此範例中，`Square` 類別必須提供 `Area` 的實作，因為它繼承自 `ShapesClass`：  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  抽象類別具有下列功能：  
   
@@ -85,12 +66,12 @@ ms.lasthandoff: 09/25/2017
   
  實作介面的抽象類別可能會將介面方法對應至抽象方法。 例如:   
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## <a name="example"></a>範例  
  在此範例中，`DerivedClass` 類別衍生自抽象類別 `BaseClass`。 抽象類別包含抽象方法 `AbstractMethod` 和兩個抽象屬性：`X` 和 `Y`。  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  在上述範例中，如果您嘗試使用如下的陳述式來具現化抽象類別︰  
   
@@ -104,10 +85,9 @@ BaseClass bc = new BaseClass();   // Error
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-

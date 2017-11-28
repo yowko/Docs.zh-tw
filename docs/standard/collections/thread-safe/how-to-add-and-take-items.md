@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, blocking dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b365d6d3236919f65c840343ec3b33edebea758b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66b4e921a4c7285976694f4633ce1eeaadcb7cf9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：從 BlockingCollection 個別加入和擷取項目
 本範例示範如何利用封鎖方式和非封鎖方式，在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中加入和移除項目。 如需 <xref:System.Collections.Concurrent.BlockingCollection%601> 的詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
@@ -40,6 +41,5 @@ ms.lasthandoff: 09/19/2017
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
-

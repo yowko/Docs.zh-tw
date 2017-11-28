@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
+ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
-ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型 #
 
@@ -99,11 +98,10 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 如果您並未撰寫類別、結構或介面，仍然可以解構該類型的物件，方法是實作一或多個 `Deconstruct` [擴充方法](programming-guide/classes-and-structs/extension-methods.md)來傳回您想要的值。 
 
-下列範例為 <xref:System.Reflection.PropertyInfo?displayProperty=fullName> 類別定義兩個 `Deconstruct` 擴充方法。 第一個方法會傳回一組值，指出屬性的特性 (包括其類型)、這是靜態或執行個體、是否為唯讀，以及是否已建立索引。 第二個方法指出屬性的存取範圍。 因為 get 和 set 存取子的存取範圍可能不同，所以布林值會指出屬性是否有不同的 get 和 set 存取子，並在不同時指出其是否具有相同的存取範圍。 如果只有一個存取子，或是 get 和 set 存取子具有相同的存取範圍，則 `access` 變數會指出屬性的整個存取範圍。 否則，get 和 set 存取子的存取範圍是以 `getAccess` 和 `setAccess` 變數表示。
+下列範例為 <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> 類別定義兩個 `Deconstruct` 擴充方法。 第一個方法會傳回一組值，指出屬性的特性 (包括其類型)、這是靜態或執行個體、是否為唯讀，以及是否已建立索引。 第二個方法指出屬性的存取範圍。 因為 get 和 set 存取子的存取範圍可能不同，所以布林值會指出屬性是否有不同的 get 和 set 存取子，並在不同時指出其是否具有相同的存取範圍。 如果只有一個存取子，或是 get 和 set 存取子具有相同的存取範圍，則 `access` 變數會指出屬性的整個存取範圍。 否則，get 和 set 存取子的存取範圍是以 `getAccess` 和 `setAccess` 變數表示。
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>請參閱
 [Discard](discards.md)   
 [元組](tuples.md)  
-

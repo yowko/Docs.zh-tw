@@ -1,43 +1,24 @@
 ---
 title: "C# 程式的一般結構 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- C# language, program structure
+helpviewer_keywords: C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8886f7601ce4d1de4a6b277a803ff87eb67bee78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d55ac6a6d35e5f47ab26da681afe9fb5555331ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程式的一般結構 (C# 程式設計手冊)
 C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多個命名空間。 命名空間可以包含類別、結構、介面、列舉和委派等類型，以及他命名空間。 以下是 C# 程式的基本架構，其中包含上述所有項目。  
   
- [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
+ [!code-csharp[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
   
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊：  
@@ -56,8 +37,7 @@ C# 程式可以包含一或多個檔案。 每個檔案可以包含零個或多�
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)   
- [C# 參考](../../../csharp/language-reference/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [C# 參考](../../../csharp/language-reference/index.md)  
  [\<paveover>C# 範例應用程式](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
-

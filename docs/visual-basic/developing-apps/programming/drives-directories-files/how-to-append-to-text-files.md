@@ -1,76 +1,55 @@
 ---
 title: "如何：在 Visual Basic 中附加至文字檔"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 41ab4491dbc21936c6fbfe9440fcbaeaaac6f1dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3425c82ed73e4a6fbded187b9333f4083111e78f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Append to Text Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-藉由指定將 `append` 參數設定為 `True`，<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可用於附加至文字檔。  
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>如何：在 Visual Basic 中附加至文字檔
+您可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法來附加至文字檔，方法是指定將 `append` 參數設定為 `True`。  
   
-### 若要附加至文字檔  
+### <a name="to-append-to-a-text-file"></a>附加至文字檔  
   
--   請使用 `WriteAllText` 方法，指定目標檔案和要附加的字串，並將 `append` 參數設定為 `True`。  
+-   使用 `WriteAllText` 方法，並指定要附加的目標檔案和字串以及將 `append` 參數設定為 `True`。  
   
-     這個範例會將字串 `"This is a test string."` 寫入名為 `Testfile.txt` 的檔案。  
+     這個範例會將 `"This is a test string."` 字串寫入名為 `Testfile.txt` 的檔案中。  
   
      [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
   
-## 穩固程式設計  
- 下列情形可能會造成例外狀況 \(Exception\)：  
+## <a name="robust-programming"></a>穩固程式設計  
+ 以下條件可能會造成例外狀況：  
   
--   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 \(開頭為 \\\\.  \\\) \(<xref:System.ArgumentException>\).  
+-   因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元、它包含無效的字元，或者它是裝置路徑 (開頭為 \\\\.\\) (<xref:System.ArgumentException>)。  
   
--   路徑無效，因為它是 `Nothing` \(<xref:System.ArgumentNullException>\)。  
+-   路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
--   `File` 指向不存在的路徑 \(<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>\)。  
+-   `File` 指向不存在的路徑 (<xref:System.IO.FileNotFoundException> 或 <xref:System.IO.DirectoryNotFoundException>)。  
   
--   檔案正由另一個程序使用中，或發生 I\/O 錯誤 \(<xref:System.IO.IOException>\)。  
+-   檔案正由另一個處理序使用中，或發生 I/O 錯誤 (<xref:System.IO.IOException>)。  
   
--   路徑超過系統定義的最大長度 \(<xref:System.IO.PathTooLongException>\)。  
+-   路徑超過系統定義的最大長度 (<xref:System.IO.PathTooLongException>)。  
   
--   路徑中的檔案或目錄名稱含有冒號 \(:\)，或者是無效的格式 \(<xref:System.NotSupportedException>\)。  
+-   路徑中的檔案或目錄名稱含有冒號 (:)，或者是無效的格式 (<xref:System.NotSupportedException>)。  
   
--   使用者缺乏必要的使用權限來檢視路徑 \(<xref:System.Security.SecurityException>\)。  
+-   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
-## 請參閱  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
+## <a name="see-also"></a>另請參閱  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
-

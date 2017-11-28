@@ -1,41 +1,22 @@
 ---
 title: "for (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - for
 - for_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- for keyword [C#]
+helpviewer_keywords: for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cb7e83733fe026658f502b430975a0f8a27e9df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d65c198b0fd763bddae4832290af038b8992eb48
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="for-c-reference"></a>for (C# 參考)
 透過 `for` 迴圈，您可以重複執行陳述式或陳述式區塊，直到指定的運算式評估為 `false` 為止。 這種迴圈對於逐一查看陣列很有用，也適用於您事先知道迴圈要反覆運算幾次的其他應用。  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  在下列範例中，`i` 值會寫入至主控台，並在迴圈每次反覆運算就加 1。  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
+ [!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  上述範例中的 `for` 陳述式會執行下列動作。  
   
@@ -120,20 +101,19 @@ for (initializer; condition; iterator)
   
  下列範例描述幾個較少見的選項︰將值指派給初始設定式區段中的外部迴圈變數、在初始設定式和迭代器區段中叫用 `Console.WriteLine` 方法，以及在迭代器區段中變更兩個變數的值。  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+ [!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  所有定義 `for` 陳述式的運算式都是選擇性的。 例如，下列陳述式會建立一個無限迴圈。  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+ [!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [for 陳述式 (C++)](/cpp/cpp/for-statement-cpp)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [for 陳述式 (C++)](/cpp/cpp/for-statement-cpp)  
  [反覆運算陳述式](../../../csharp/language-reference/keywords/iteration-statements.md)
-

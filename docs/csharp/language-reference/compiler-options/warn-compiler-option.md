@@ -1,14 +1,10 @@
 ---
 title: "-warn (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /warn
-dev_langs:
-- CSharp
+f1_keywords: /warn
 helpviewer_keywords:
 - warning level [C#]
 - /w compiler option [C#]
@@ -18,29 +14,14 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e703060b7cc5f897ddf0b6764e9607460666e92c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="warn-c-compiler-options"></a>/warn (C# 編譯器選項)
 **/warn** 選項指定要針對編譯器顯示的警告層級。  
@@ -88,6 +69,5 @@ csc /warn:1 in.cs
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-

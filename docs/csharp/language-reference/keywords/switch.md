@@ -18,24 +18,24 @@ ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 `switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。 
   
- [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+ [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
 如果針對三個或多個條件測試單一運算式，則通常會使用 `switch` 陳述式來替代 [if-else](if-else.md) 建構。 例如，下列 `switch` 陳述式判斷 `Color` 類型的變數是否有三個值之一︰ 
 
-[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
 
 它等同於下列使用 `if`-`else` 建構的範例。 
 
-[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
 
 ## <a name="the-match-expression"></a>比對運算式
 
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/02/2017
  
   `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。  
 
- [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+ [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
 
- switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「程式控制權無法從一個 case 標籤 (<case label>) 繼續到另一個」。   
+ switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「程式控制權無法從一個 case 標籤 (<case label>) 繼續到另一個」。  
 
 ```csharp  
 switch (caseSwitch)  
@@ -79,7 +79,7 @@ switch (caseSwitch)
 ```  
 使用 [break](break.md)、[goto](goto.md) 或 [return](return.md) 陳述式明確地結束參數區段，通常會符合這項需求。 不過，下列程式碼也是有效，因為它可確保程式控制權無法切換到 `default` 參數區段。
   
- [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
+ [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
  在 case 標籤符合比對運算式的參數區段中，陳述式清單是從第一個陳述式開始執行，然後繼續進行整份陳述式清單，通常會進行直到跳躍陳述式為止，例如到達 `break`、`goto case`、`goto label`、`return` 或 `throw`。 到達該點時，控制項會在 `switch` 陳述式之外傳輸，或傳輸至另一個 case 標籤。 如果使用 `goto` 陳述式，就必須將控制權轉移到常數標籤。 這項限制是必要的，因為嘗試將控制項傳送至非常數標籤，會將控制項傳送至程式碼中非預期的位置或建立無止盡的迴圈，出現非預期的副作用。
 
@@ -95,7 +95,7 @@ switch (caseSwitch)
 
  下列範例說明使用各種非互斥模式的 `switch` 陳述式。 如果您移動 `case 0:` 參數區段，讓它不再是 `switch` 陳述式中的第一個區段，則 C# 會產生編譯器錯誤，因為值為零的整數是所有整數的子集，而這是 `case int val` 陳述式所定義的模式。
 
- [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+ [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
 
 您可以更正此問題，並使用兩種方式之一來排除編譯器警告︰
 
@@ -138,11 +138,11 @@ switch (caseSwitch)
 
 下列範例使用常數模式，來判斷特定日期是週末、工作週的第一天、工作週的最後一天，還是工作週的中間一天。 其會依據 <xref:System.DayOfWeek> 列舉的成員，評估當日的 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 屬性。 
 
-[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 下列範例使用常數模式，來處理模擬自動咖啡機之主控台應用程式中的使用者輸入。
   
- [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+ [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
 
 ### <a name="type-pattern"></a>類型模式
 
@@ -173,11 +173,11 @@ case null:
  
 下列範例使用類型模式提供各種集合類型的資訊。
 
-[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，不需要測試轉換的結果是否為 `null` 或執行重複轉換，因此會產生更精簡且容易閱讀的程式碼。  
 
-[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="the-case-statement-and-the-when-clause"></a>`case` 陳述式和 `when` 子句
 
@@ -185,7 +185,7 @@ case null:
 
  下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件識別為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。 
 
-[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
   
 請注意，不會執行範例中嘗試測試 `Shape` 物件是否為 `null` 的 `when` 子句。 要測試是否為 `null` 的正確類型模式是 `case null:`。
 
@@ -194,11 +194,11 @@ case null:
   
 ## <a name="see-also"></a>另請參閱  
 
- [C# 參考](../index.md)   
- [C# 程式設計手冊](../../programming-guide/index.md)   
- [C# 關鍵字](index.md)   
- [if-else](if-else.md)   
- [模式比對](../../pattern-matching.md)   
+ [C# 參考](../index.md)  
+ [C# 程式設計指南](../../programming-guide/index.md)  
+ [C# 關鍵字](index.md)  
+ [if-else](if-else.md)  
+ [模式比對](../../pattern-matching.md)  
  
 
  

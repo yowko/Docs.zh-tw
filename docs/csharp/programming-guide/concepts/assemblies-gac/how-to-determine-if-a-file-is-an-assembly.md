@@ -1,30 +1,21 @@
 ---
 title: "如何：判斷檔案是否為組件 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3994dfc7a8c4e615072bf415d0497399309072e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee402e28374040ab22173788dce421345b2ef3b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>如何：判斷檔案是否為組件 (C#)
 檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](https://msdn.microsoft.com/library/1w45z383)主題。  
@@ -35,7 +26,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  載入要測試的檔案。  
   
-3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱[如何：檢視組件內容](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709)主題。  
+3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)主題。  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以程式設計方式判斷檔案是否為組件  
   
@@ -81,10 +72,9 @@ class TestAssembly
 */  
 ```  
   
- <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊後將其釋出。  
+ <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection.AssemblyName>   
- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
+ <xref:System.Reflection.AssemblyName>  
+ [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
  [組件和全域組件快取 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

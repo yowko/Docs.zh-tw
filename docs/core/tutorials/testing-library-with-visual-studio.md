@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 7c884985873679b25831c15ef5c8b6370ecd6460
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試類別庫
 
 於[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](vb-library-with-visual-studio.md)中，您建立了一個將擴充方法新增至 <xref:System.String> 類別的簡易類別庫。 現在您將建立單元測試，確定它如預期般運作。 您會將您的單元測試專案新增至上一個主題中所建立的方案。
@@ -29,7 +30,7 @@ ms.lasthandoff: 09/19/2017
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 在方案總管 中，開啟 **ClassLibraryProject** 方案節點的內容功能表，然後選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
+1. 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
 
    ![[新增專案] 對話方塊](./media/testing-library-with-visual-studio/testproject.png)
 
@@ -48,17 +49,17 @@ ms.lasthandoff: 09/19/2017
 
    * 它會套用 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 **[相依性]** 節點，然後從內容功能表中選取 **[新增參考]**。
+1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 [相依性] 節點，然後從內容功能表中選取 [新增參考]。
 
    ![StringLibraryTest 相依性的內容功能表](./media/testing-library-with-visual-studio/addreference.png)
 
-1. 在 **[參考管理員]** 對話方塊中，展開 **[專案]** 節點並核取 **[StringLibrary]** 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 這會在您的類別庫專案 `StringLibrary` 中新增參考。
+1. 在 [參考管理員] 對話方塊中，展開 [專案] 節點並核取 [StringLibrary] 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 這會在您的類別庫專案 `StringLibrary` 中新增參考。
 
    ![參考管理員](./media/testing-library-with-visual-studio/referencemanager.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. 在方案總管 中，開啟 **ClassLibraryProject** 方案節點的內容功能表，然後選取 [新增]  >  [新增專案]。
 
-1. 在 [新增專案] 對話方塊中，選取 [Visual Basic] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
+1. 在 [新增專案] 對話方塊中，選取 [Visual Basic] 節點。 然後選取後面跟著 [單元測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 [名稱] 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
 
    ![[新增專案] 對話方塊](./media/testing-library-with-visual-studio/vb-testproject.png)
 
@@ -77,11 +78,11 @@ ms.lasthandoff: 09/19/2017
 
    * 它會套用 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 **[相依性]** 節點，然後從內容功能表中選取 **[新增參考]**。
+1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 [相依性] 節點，然後從內容功能表中選取 [新增參考]。
 
    ![StringLibraryTest 相依性的內容功能表](./media/testing-library-with-visual-studio/addreference.png)
 
-1. 在 **[參考管理員]** 對話方塊中，展開 **[專案]** 節點並核取 **[StringLibrary]** 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 這會在您的類別庫專案 `StringLibrary` 中新增參考。
+1. 在 [參考管理員] 對話方塊中，展開 [專案] 節點並核取 [StringLibrary] 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 這會在您的類別庫專案 `StringLibrary` 中新增參考。
 
    ![參考管理員](./media/testing-library-with-visual-studio/referencemanager.png)
 ---
@@ -103,7 +104,7 @@ Assert 方法 | 函式
 
 在測試 `StringLibrary.StartsWithUpper` 方法時，您想提供幾個以大寫字元開頭的字串。 您預期此方法在這些情況下傳回 `true`，因此您可以呼叫 [Assert.IsTrue (布林值,字串)](https://msdn.microsoft.com/library/ms243754.aspx) 方法。 同樣地，您想提供幾個開頭不是大寫字元的字串。 您預期此方法在這些情況下傳回 `false`，因此您可以呼叫 [Assert.IsFalse (布林值,字串)](https://msdn.microsoft.com/library/ms243805.aspx) 方法。
 
-因為您的程式庫方法會處理字串，您也想確定它會成功處理[空字串 (`String.Empty`)](xref:System.String.Empty)，這是不包含任何字元且其 @System.String.Length 為 0 的有效字串和尚未初始化的 `null` 字串。 如果在 @System.String 執行個體上呼叫 `StartsWithUpper` 做為擴充方法，它將無法傳遞 `null` 字串。 不過，您也可以將其作為靜態方法來直接呼叫，並傳遞單一 @System.String 引數。
+因為您的程式庫方法會處理字串，您也想確定它會成功處理[空字串 (`String.Empty`)](xref:System.String.Empty)，這是不包含任何字元且其 <xref:System.String.Length> 為 0 的有效字串和尚未初始化的 `null` 字串。 如果在 <xref:System.String> 執行個體上呼叫 `StartsWithUpper` 做為擴充方法，它將無法傳遞 `null` 字串。 不過，您也可以將其作為靜態方法來直接呼叫，並傳遞單一 <xref:System.String> 引數。
 
 您會定義三個方法，每個方法會針對字串陣列中的每個項目重複呼叫其 [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) 方法。 因為測試方法會在發生第一次失敗時立即失敗，您將呼叫一個方法多載，以便傳遞一個字串來指示在方法呼叫中使用的字串值。
 
@@ -178,11 +179,10 @@ Assert 方法 | 函式
 
    ![Visual Studio 工具列](./media/testing-library-with-visual-studio/toolbar.png)
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibrary** 專案，然後從內容功能表中選取 **[組建]** 以重新編譯程式庫。
+1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibrary** 專案，然後從內容功能表中選取 [組建] 以重新編譯程式庫。
 
    ![StringLibrary 內容功能表](./media/testing-library-with-visual-studio/buildlibrary.png)
 
 1. 從功能表列中，選擇 [測試]  >  [執行]  >  [所有測試] 來執行單元測試。 所有測試皆通過。
 
 既然您已經完成程式庫測試，下一步是將它提供給呼叫端。 您可以將它與一或多個應用程式搭售，或是將將它發佈為 NuGet 套件。 如需詳細資訊，請參閱[使用 .NET Standard 類別庫](./consuming-library-with-visual-studio.md)。
-

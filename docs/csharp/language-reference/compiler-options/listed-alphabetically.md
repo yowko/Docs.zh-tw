@@ -1,47 +1,29 @@
 ---
 title: "依字母順序列出 C# 編譯器選項"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
 - C# language, compiler options listed alphabitically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 590253cc2899bc9efac9ce742d864195963a2b1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
-ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# C# Compiler Options Listed Alphabetically
-下列編譯器選項會依字母順序排序。  如需分類清單，請參閱[C\# Compiler Options Listed by Category](../../../csharp/language-reference/compiler-options/listed-by-category.md)。  
+# <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
+下列編譯器選項會依字母順序排序。 如需分類清單，請參閱[依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)。  
   
 |選項|用途|  
-|--------|--------|  
+|------------|-------------|  
 |[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|讀取回應檔以取得更多選項。|  
 |[/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|將使用方式訊息顯示到 stdout。|  
 |/additionalfile|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  
@@ -100,8 +82,7 @@ ms.lasthandoff: 09/19/2017
 |[/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|指定 win32 資源檔案 (.res)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)   
- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
- [如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
+ [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+ [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  [\<編譯器> 項目](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
-

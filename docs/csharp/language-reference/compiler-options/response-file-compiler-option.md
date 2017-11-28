@@ -1,41 +1,22 @@
 ---
 title: "@ (C# 編譯器選項)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '@'
-dev_langs:
-- CSharp
+f1_keywords: '@'
 helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d4dc8c81a9afd60add4c2a62be6804a0f6446124
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 219c12e4e3c9b847400f00a135d58506c72d2e7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
 @ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
@@ -79,4 +60,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)
-

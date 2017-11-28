@@ -1,38 +1,29 @@
 ---
 title: "如何：從 XmlReader 建立樹狀結構 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 28a052fb6de0a59503eba8c357cdd3c4745b71ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 61685e93e6886b3101d6b30c7f8eb04d026ea55a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>如何：從 XmlReader 建立樹狀結構 (C#)
-本主題顯示如何從 <xref:System.Xml.XmlReader> 直接建立 XML 樹狀結構。 若要從 <xref:System.Xml.XmlReader> 建立 <xref:System.Xml.Linq.XElement>，您必須將 <xref:System.Xml.XmlReader> 定位在項目節點。 <xref:System.Xml.XmlReader> 會略過註解與處理指示，但若 <xref:System.Xml.XmlReader> 定位在文字節點上，則會擲回錯誤。 為避免此類的錯誤，<xref:System.Xml.XmlReader> 請一律定位在項目上，再從 <xref:System.Xml.XmlReader> 建立 XML 樹狀結構。  
+這個主題顯示如何從 <xref:System.Xml.XmlReader> 直接建立 XML 樹狀結構。 若要從 <xref:System.Xml.Linq.XElement> 建立 <xref:System.Xml.XmlReader>，您必須將 <xref:System.Xml.XmlReader> 定位在項目節點上。 <xref:System.Xml.XmlReader> 將會略過註解與處理指示，但是，如果 <xref:System.Xml.XmlReader> 定位在文字節點上，則會擲出錯誤。 若要避免此類的錯誤，請務必將 <xref:System.Xml.XmlReader> 定位在項目上，然後再從 <xref:System.Xml.XmlReader> 建立 XML 樹狀結構。  
   
 ## <a name="example"></a>範例  
  此範例使用下列 XML 文件︰[範例 XML 檔：書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
- 下列程式碼會建立 `T:System.Xml.XmlReader` 物件，然後讀取節點，直到找到第一個項目節點為止。 然後它會載入 <xref:System.Xml.Linq.XElement> 物件。  
+ 下列程式碼會建立 `T:System.Xml.XmlReader` 物件，然後讀取節點，直到找到第一個項目節點為止。 接著，它會載入 <xref:System.Xml.Linq.XElement> 物件。  
   
 ```csharp  
 XmlReader r = XmlReader.Create("books.xml");  
@@ -70,4 +61,3 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>另請參閱  
  [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
-

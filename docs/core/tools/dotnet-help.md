@@ -7,12 +7,11 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: ca7c88675d54d99fdb3526244daaeffe32f32d45
 ms.openlocfilehash: 0d43db0bb0a62bb598f7db50c3b8e37936451550
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/18/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
@@ -47,4 +46,3 @@ ms.lasthandoff: 08/18/2017
 開啟 [dotnet new](dotnet-new.md) 命令的文件頁面：
 
 `dotnet help new`
-

@@ -1,38 +1,19 @@
 ---
 title: "泛型簡介 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], about generics
+helpviewer_keywords: generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d4fddd29135bfc15acedb8b89d577dc99a21e18a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>泛型簡介 (C# 程式設計手冊)
 泛型類別和方法將再使用性、型別安全和效率三者結合在一起，發揮了非泛型類別和方法所無法提供的功能。 泛型最常搭配在其上操作的集合和方法使用。 .NET Framework 2.0 版類別庫提供了新的命名空間 <xref:System.Collections.Generic>，其中包含數個新的泛型集合類別。 建議以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 和更新版本為目標的所有應用程式都使用新的泛型集合類別，而不是舊版的非泛型集合類別，例如 <xref:System.Collections.ArrayList>。 如需詳細資訊，請參閱 [.NET Framework 類別庫](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
@@ -47,14 +28,13 @@ ms.lasthandoff: 07/28/2017
   
  請注意，T 可用於巢狀 `Node` 類別。 當 `GenericList<T>` 以具象類型具現化時 (例如具現化為 `GenericList<int>`)，所出現的每個 `T` 都會以 `int` 取代。  
   
- [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
   
  下列程式碼範例示範用戶端程式碼如何使用泛型 `GenericList<T>` 類別建立整數清單。 您只要變更型別引數，就能輕鬆修改下列的程式碼來建立字串清單或任何其他自訂類型的清單：  
   
- [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Generic>   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ <xref:System.Collections.Generic>  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)
-

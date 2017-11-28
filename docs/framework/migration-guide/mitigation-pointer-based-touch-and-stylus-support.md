@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰以指標為基礎的觸控及手寫筆支援 | Microsoft Docs"
+title: "風險降低︰以指標為基礎的觸控及手寫筆支援"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: f93c914e0c1d285cc0f6117e5ae7a0f6338bc549
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: 053ff4c5fba7b4f2b5a4c29a35c954e888cb095a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>風險降低︰以指標為基礎的觸控及手寫筆支援
 
@@ -64,4 +64,3 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>請參閱
 
 [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "使用反射存取屬性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 162bdd6b968def391a2f3413596ee8c2a8b01cc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36724c7b6a2a786aff837db5bcf2ad2ccfa39205
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>使用反射存取屬性 (C#)
 您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱<xref:System.Attribute>。  
@@ -131,11 +122,10 @@ class TestAuthorAttribute
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
- [擷取儲存於屬性中的資訊](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+ [擷取儲存於屬性中的資訊](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-

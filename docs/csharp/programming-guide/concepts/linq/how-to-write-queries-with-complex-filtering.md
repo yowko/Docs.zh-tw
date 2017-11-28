@@ -1,25 +1,21 @@
 ---
 title: "如何：撰寫具有複雜篩選功能的查詢 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0d663b777b0d1b02462a6557097938831ef870b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5b212796df6e65263b8b35514b6807bcdf5797f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>如何：撰寫具有複雜篩選功能的查詢 (C#)
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  
@@ -82,9 +78,8 @@ foreach (XElement el in purchaseOrders)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Xml.Linq.XElement.Attribute%2A>   
- <xref:System.Xml.Linq.XContainer.Elements%2A>   
- [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [投射作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)   
+ <xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A>  
+ [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [投影作業 (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
  [數量詞作業 (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
-

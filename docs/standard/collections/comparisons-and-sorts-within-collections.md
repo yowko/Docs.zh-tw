@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - sorting data, collections
 - IComparable.CompareTo method
@@ -15,16 +18,15 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: bb7092a2eae8d950f3709ea4fde63f6c7d5b32b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1033d7ec64641dd5904372bc05bd2076efe60d39
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>在集合內比較和排序
 <xref:System.Collections> 類別幾乎會在管理集合內的所有處理序中執行比較，包含搜尋要移除的項目，或傳回成對的索引鍵與值。  
@@ -37,9 +39,9 @@ ms.lasthandoff: 09/19/2017
   
 -   如果類型 T 實作了 <xref:System.IEquatable%601> 泛型介面，則相等比較子會是該介面的 <xref:System.IEquatable%601.Equals%2A> 方法。  
   
--   如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=fullName> 。  
+-   如果類型 T 未實作 <xref:System.IEquatable%601>，則會使用 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 。  
   
- 此外，有些字典集合的建構函式多載，能接受 <xref:System.Collections.Generic.IEqualityComparer%601> 實作，其可用以比較索引鍵是否相等。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=fullName> 。  
+ 此外，有些字典集合的建構函式多載，能接受 <xref:System.Collections.Generic.IEqualityComparer%601> 實作，其可用以比較索引鍵是否相等。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 。  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>決定排序順序  
@@ -47,13 +49,13 @@ ms.lasthandoff: 09/19/2017
   
  預設比較子會依賴至少一個所比較的物件，實作 **IComparable** 介面。 最好的作法是在所有用做為清單集合中的值或是用做為字典集合中索引鍵的類別上，實作 **IComparable** 。 若為泛型集合，會根據下列項目來決定相等比較：  
   
--   如果類型 T 實作 <xref:System.IComparable%601?displayProperty=fullName> 泛型介面，則預設比較子會是該介面的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=fullName> 方法。  
+-   如果類型 T 實作 <xref:System.IComparable%601?displayProperty=nameWithType> 泛型介面，則預設比較子會是該介面的 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 方法。  
   
--   如果類型 T 實作非泛型 <xref:System.IComparable?displayProperty=fullName> 介面，則預設比較子會是該介面的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=fullName> 方法。  
+-   如果類型 T 實作非泛型 <xref:System.IComparable?displayProperty=nameWithType> 介面，則預設比較子會是該介面的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 方法。  
   
 -   如果類型 T 沒有實作其中一個介面，則不會有預設比較子，且必須明確地提供比較子或比較委派。  
   
- 若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 實作。  
+ 若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 實作。  
   
  系統目前的文化特性設定，會影響集合內的比較和排序。 依預設， **Collections** 類別中的比較和排序會區分文化特性。 若要略過文化特性設定，並因而取得一致的比較和排序結果，請使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 搭配接受 <xref:System.Globalization.CultureInfo>的成員多載。 如需詳細資訊，請參閱 [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 與 [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。  
   
@@ -65,9 +67,8 @@ ms.lasthandoff: 09/19/2017
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.IComparer>   
- <xref:System.IEquatable%601>   
- <xref:System.Collections.Generic.IComparer%601>   
- <xref:System.IComparable>   
+ <xref:System.Collections.IComparer>  
+ <xref:System.IEquatable%601>  
+ <xref:System.Collections.Generic.IComparer%601>  
+ <xref:System.IComparable>  
  <xref:System.IComparable%601>
-

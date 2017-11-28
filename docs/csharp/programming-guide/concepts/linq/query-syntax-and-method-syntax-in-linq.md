@@ -1,43 +1,24 @@
 ---
 title: "LINQ 中的查詢語法及方法語法 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 35ad7e9b086f36ca92974fdea197da4c513c8a51
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查詢語法及方法語法 (C#)
 介紹性 Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) 文件中的大多數查詢都是使用 LINQ 宣告式查詢語法所撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  
@@ -47,7 +28,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="standard-query-operator-extension-methods"></a>標準查詢運算子擴充方法  
  下列範例示範簡單「查詢運算式」以及撰寫為「方法查詢」的語意對等查詢。  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  這兩個範例的輸出完全相同。 您可以看到查詢變數的類型在兩種形式中都相同：<xref:System.Collections.Generic.IEnumerable%601>。  
   
@@ -71,4 +52,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

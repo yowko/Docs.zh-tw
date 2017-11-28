@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
 ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
 .NET Core 是由 NuGet 套件構成的平台。 有些產品體驗可獲益於細部定義的套件，有些則更適合廣泛定義的套件。 為了滿足這類雙重特性，產品會以細部套件組的形式散發，並以廣泛區塊的形式來描述，而這類套件類型俗稱為「中繼套件」。
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/04/2017
 `Microsoft.NETCore.App` 中繼套件是以 `netcoreapp` 架構為目標。 它提供約 ~60 種程式庫的存取權，其中 `NETStandard.Library` 套件提供約 ~40 種，另外再加上 ~20 多種。 若要存取其他 API，您可以參考其他目標為 `netcoreapp` 或相容架構的程式庫，例如 `netstandard`。 
 
 大部分由 `Microsoft.NETCore.App` 所提供的其他程式庫也會以 `netstandard` 為目標 (在其他 `netstandard` 程式庫滿足其相依性的情況下)。 這表示 `netstandard` 程式庫也可以將這些套件做為相依性參考。 
-

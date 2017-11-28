@@ -1,4 +1,4 @@
-# [共變數和反變數](covariance-and-contravariance.md)
+# [共變數和反變數](index.md)
 ## [泛型介面中的變異數](variance-in-generic-interfaces.md)
 ### [建立 Variant 泛型介面](creating-variant-generic-interfaces.md)
 ### [針對泛型集合使用介面中的變異數](using-variance-in-interfaces-for-generic-collections.md)

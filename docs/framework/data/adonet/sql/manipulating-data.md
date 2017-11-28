@@ -1,32 +1,38 @@
 ---
-title: "操作資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "操作資料"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5117d2aba6fe368a7a17e3d35d8c4887582267e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# 操作資料
-引進 Multiple Active Result Set \(MARS\) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。  此外，當在交易中使用多重連接時，需要繫結連接 \(使用 **sp\_getbindtoken** 及 **sp\_bindsession**\)。  下列案例顯示如何以啟用 MARS 的連接取代多重連接。  
+# <a name="manipulating-data"></a>操作資料
+引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。 此外，當在交易中使用多個連接時，繫結連接 (使用**sp_getbindtoken**和**sp_bindsession**) 所需。 下列案例顯示如何以啟用 MARS 的連接取代多重連接。  
   
-## 搭配使用多個命令與 MARS  
- 下列主控台應用程式示範如何使用具有兩個 <xref:System.Data.SqlClient.SqlCommand> 物件的兩個 <xref:System.Data.SqlClient.SqlDataReader> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。  
+## <a name="using-multiple-commands-with-mars"></a>搭配使用多個命令與 MARS  
+ 下列主控台應用程式示範如何使用具有兩個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。  
   
-### 範例  
- 範例會開啟到 **AdventureWorks** 資料庫的單一連接。  使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。  當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。  
+### <a name="example"></a>範例  
+ 範例會開啟的單一連接**AdventureWorks**資料庫。 使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。 當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。  
   
 > [!NOTE]
->  下列範例使用包含於 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的 **AdventureWorks** 範例資料庫。  範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。  視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
 ```vb  
 Option Strict On  
@@ -167,14 +173,14 @@ static void Main()
 }  
 ```  
   
-## 使用 MARS 讀取及更新資料  
- MARS 允許將連接用於讀取作業及資料操作語言 \(DML\) 作業 \(具有多個暫止作業\)。  使用此功能，應用程式即無需處理連接繁忙錯誤。  此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。  最後，因為多個作業可在單一連接上進行操作，所以它們可共用相同的交易內容，無需使用 **sp\_getbindtoken** 及 **sp\_bindsession** 系統預存程序。  
+## <a name="reading-and-updating-data-with-mars"></a>使用 MARS 讀取及更新資料  
+ MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。 使用此功能，應用程式即無需處理連接繁忙錯誤。 此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。 最後，多個作業可在單一連接上進行操作，因為它們可共用相同的交易內容，因而不須使用**sp_getbindtoken**和**sp_bindsession**系統預存程序。  
   
-### 範例  
- 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlCommand> 物件的兩個 <xref:System.Data.SqlClient.SqlDataReader> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。  第一個命令物件會擷取信用評等為 5 的廠商清單。  第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。  第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。  會執行計算以決定新的 **OnOrderQty**。  然後會使用第三個命令物件，以新值更新 **ProductVendor** 資料表。  這整個處理序會在單一交易中發生，並在結束時復原。  
+### <a name="example"></a>範例  
+ 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 會執行計算以決定新**OnOrderQty**應該是。 第三個命令物件然後用來更新**ProductVendor**以新值的資料表。 這整個處理序會在單一異動中發生，並在結束時復原。  
   
 > [!NOTE]
->  下列範例使用包含於 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的 **AdventureWorks** 範例資料庫。  範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。  視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
 ```vb  
 Option Strict On  
@@ -406,6 +412,6 @@ private static string GetConnectionString()
 }  
 ```  
   
-## 請參閱  
- [Multiple Active Result Set \(MARS\)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)   
- [ADO.NET Managed 提供者和資料集開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>另請參閱  
+ [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

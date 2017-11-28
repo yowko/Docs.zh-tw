@@ -1,25 +1,21 @@
 ---
 title: "WordprocessingML 文件的組織結構 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 8c1ccbfd71baff50a8055cd89ddecf47bd35cac9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5471b03c0bc5b96686f200318aacb71617805a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文件的組織結構 (C#)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  
@@ -67,7 +63,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  查看 XML 格式之 WordprocessingML 文件內容最簡單的方式是使用 Microsoft Word 建立一個這種文件、儲存起來，然後執行下列程式，將 XML 列印到主控台。  
   
- 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
+ 這個範例會使用在 WindowsBase 組件中找到的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -108,4 +104,3 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

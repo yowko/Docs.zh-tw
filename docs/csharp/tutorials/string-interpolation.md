@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>C# 中的字串插值 #
 
 「字串插補」是以字串變數的值取代字串中預留位置的方式。 在 C# 6 之前，是透過 `System.String.Format` 來執行這項操作。 這個運作方式還行，但由於它使用已編號的預留位置，因此更難以閱讀也更冗長。
@@ -46,23 +44,27 @@ dotnet new console
 
 此命令會建立一個含有 *interpolated.csproj* 專案檔和 *Program.cs* 原始程式碼檔案的陽春型 .NET Core 專案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 若要執行這個程式，請使用 `dotnet run`。 您應該會在主控台看到 "Hello, World" 輸出。
+
+
 
 ## <a name="intro-to-string-interpolation"></a>字串插補簡介
 
 使用 `System.String.Format` 時，您需指定要由字串後的參數取代的字串中「預留位置」。 若是執行個體：
 
-[!code-csharp[String.Format 範例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 此範例將會輸出 "My name is Matt Groves"。
 
 在 C# 6 中，您將不使用 `String.Format`，而是藉由在插補字串前加上 `$` 符號，然後直接在該字串中使用變數，來定義插捕字串。 若是執行個體：
 
-[!code-csharp[插補範例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 您不必只使用變數。 您可以在括弧內使用任何運算式。 若是執行個體：
 
-[!code-csharp[插補運算式範例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 這會輸出：
 
@@ -80,7 +82,7 @@ This is line number 5
 
 例如，您可以新增填補和設定數字格式：
 
-[!code-csharp[插補格式設定範例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 上述範例會產生類似以下的輸出：
 
@@ -107,7 +109,7 @@ Console.WriteLine(localizeMe);
 
 如果編譯它，您將會收到錯誤：
  
-* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」**才宣告 `adj` 變數。
+* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」才宣告 `adj` 變數。
 * `The name 'otheranimal' does not exist in the current context` - 從未宣告名為 `otheranimal` 的變數
 
 ## <a name="localization-and-internationalization"></a>當地語系化和國際化
@@ -118,9 +120,8 @@ Console.WriteLine(localizeMe);
 
 若是執行個體：
 
-[!code-csharp[插補國際化範例](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>結論 
 
 在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。
-

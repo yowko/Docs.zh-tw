@@ -1,25 +1,21 @@
 ---
 title: "以不同的組織結構投影 XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5de9010f35ee5a7537e99f19369d0b84422df03
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>以不同的組織結構投影 XML (C#)
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
@@ -31,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
  如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
- 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=fullName> 命名空間中的型別。  
+ 這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
 ```csharp  
 public static class LocalExtensions  
@@ -249,4 +245,3 @@ class Program
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：管理 WordprocessingML 文件中的內容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

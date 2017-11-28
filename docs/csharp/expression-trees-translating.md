@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="translating-expression-trees"></a>轉譯運算式樹狀架構
 
 [上一個主題 -- 建立運算式](expression-trees-building.md)
@@ -205,4 +203,3 @@ Computed sum: 10
 您可以查看一組程式碼、對該程式碼進行任何想要的變更，然後執行變更後的版本。 因為運算式樹狀架構為不可變，所以您可以使用現有樹狀的元件來建立新的樹狀。 如此即可降低建立修改後的運算式樹狀架構所需的記憶體數量。
 
 [下一個主題 -- 總結](expression-trees-summary.md)
-

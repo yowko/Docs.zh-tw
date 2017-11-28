@@ -1,39 +1,21 @@
 ---
 title: "運算子關鍵字 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f1109fb343ebed3dc66e14664ed5ba470750f59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-keywords-c-reference"></a>運算子關鍵字 (C# 參考)
 用來執行其他動作，例如建立物件、檢查物件的執行階段類型，取得類型的大小和其他動作。 本節將介紹下列關鍵字：  
@@ -79,8 +61,7 @@ ms.lasthandoff: 07/28/2017
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 指定 unchecked 內容。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
  [C# 運算子](../../../csharp/language-reference/operators/index.md)
-

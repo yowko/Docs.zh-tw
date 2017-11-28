@@ -1,42 +1,23 @@
 ---
 title: "實值類型 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-c-reference"></a>實值類型 (C# 參考)
 實值型別包含兩種主要類別：  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="main-features-of-value-types"></a>實值型別的主要功能  
  根據實值型別的變數直接包含值。 將一個實值型別變數指派給另一個實值型別變數會複製包含的值。 這與指派參考型別變數不同，後者會複製物件的參考，而不是物件本身。  
   
- 所有實值型別都是隱含地衍生自 <xref:System.ValueType?displayProperty=fullName>。  
+ 所有實值型別都是隱含地衍生自 <xref:System.ValueType?displayProperty=nameWithType>。  
   
  與參考型別不同，您無法從實值型別衍生新的類型。 不過，就像參考型別，結構可以實作介面。  
   
@@ -71,7 +52,7 @@ ms.lasthandoff: 07/28/2017
  每種實值型別都具有初始化該類型預設值的隱含預設建構函式。 如需實值型別預設值的資訊，請參閱[預設值表](../../../csharp/language-reference/keywords/default-values-table.md)。  
   
 ## <a name="main-features-of-simple-types"></a>簡單類型的主要功能  
- 所有簡單類型 (C# 語言的必要項目) 是 .NET Framework System 類型的別名。 例如，[int](../../../csharp/language-reference/keywords/int.md) 是 <xref:System.Int32?displayProperty=fullName> 的別名。 如需完整的別名清單，請參閱[內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)。  
+ 所有簡單類型 (C# 語言的必要項目) 是 .NET Framework System 類型的別名。 例如，[int](../../../csharp/language-reference/keywords/int.md) 是 <xref:System.Int32?displayProperty=nameWithType> 的別名。 如需完整的別名清單，請參閱[內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)。  
   
  在編譯時間，會評估常數運算式 (其運算元都是簡單類型常數)。  
   
@@ -123,10 +104,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
  如需格式化數值類型輸出的資訊，請參閱[格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [型別](../../../csharp/language-reference/keywords/types.md)   
- [類型的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [型別](../../../csharp/language-reference/keywords/types.md)  
+ [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [參考型別](../../../csharp/language-reference/keywords/reference-types.md)
-

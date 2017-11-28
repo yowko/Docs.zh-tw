@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="a-tour-of-the-c-language"></a>C# 語言教學課程  
 
 C# (發音為 "See Sharp") 是簡單、物件導向、型別安全的現代化程式設計語言。 C# 源自於是 C 系列語言，使用 C、C++、Java 和 JavaScript 的程式設計人員會立即感到熟悉。
@@ -85,4 +83,3 @@ C# 還有更多可探討的主題。  下列主題提供 C# 語言元素的概�
 
 >[!div class="step-by-step"]
 [下一步](program-structure.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="framework-types-supporting-expression-trees"></a>支援運算式樹狀架構的架構類型
 
 [上一篇 -- 說明運算式樹狀架構](expression-trees-explained.md)
@@ -74,4 +72,3 @@ var addition = Expression.Add(one, two);
  
  [下一篇 - 執行運算式樹狀架構](expression-trees-execution.md)
  
-

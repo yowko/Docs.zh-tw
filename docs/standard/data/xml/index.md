@@ -8,22 +8,16 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 .NET Framework 提供一組完整且整合的類別，好讓您輕鬆地建置可感知 XML 的應用程式。 下列命名空間中的類別支援 XML 的剖析與撰寫、記憶體中 XML 資料的編輯、資料驗證和 XSLT 轉換。  
@@ -42,13 +36,13 @@ ms.lasthandoff: 09/05/2017
   
  這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如:   
   
--   <xref:System.Xml.XmlDocument?displayProperty=fullName> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。  
   
--   <xref:System.Xml.XmlReader?displayProperty=fullName> 和 <xref:System.Xml.XmlWriter?displayProperty=fullName> 類別支援 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空間](http://www.w3.org/TR/REC-xml-names/)的建議事項。  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 類別支援 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空間](http://www.w3.org/TR/REC-xml-names/)的建議事項。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> 類別中的結構描述支援 [W3C XML 結構描述第一部分：結構](http://www.w3.org/TR/xmlschema-1/)和 [XML 結構描述第二部分：資料類型](http://www.w3.org/TR/xmlschema-2/)的建議事項。  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML 結構描述第一部分：結構](http://www.w3.org/TR/xmlschema-1/)和 [XML 結構描述第二部分：資料類型](http://www.w3.org/TR/xmlschema-2/)的建議事項。  
   
--   <xref:System.Xml.Xsl?displayProperty=fullName> 命名空間中的類別支援符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建議事項的 XSLT 轉換。  
+-   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空間中的類別支援符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建議事項的 XSLT 轉換。  
   
  .NET Framework 中的 XML 類別提供以下優點：  
   
@@ -101,4 +95,3 @@ ms.lasthandoff: 09/05/2017
   
  [XML 開發人員中心](http://go.microsoft.com/fwlink/?linkid=42458)  
  為 XML 開發人員提供其他技術資訊、下載、新聞群組及其他資源。
-

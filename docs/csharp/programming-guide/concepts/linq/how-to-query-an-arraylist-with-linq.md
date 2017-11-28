@@ -1,30 +1,21 @@
 ---
 title: "如何：使用 LINQ 查詢 ArrayList (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fe1426bb77f4e958abda83814632e61ee9ce415c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 77d7bbaa99f7b8becf53244211ad480736d9ffab
-ms.openlocfilehash: 3ef12d014715237fe752038466be85c4b47437eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/08/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>如何：使用 LINQ 查詢 ArrayList (C#)
 使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)看起來應該如下：  
@@ -102,4 +93,3 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

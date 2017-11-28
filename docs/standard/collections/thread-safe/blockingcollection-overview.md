@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- BlockingCollection, overview
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6dc6729bf4627164fbcde5980d4fcccd41b67645
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概觀
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是提供下列功能的安全執行緒集合類別︰  
@@ -86,7 +87,6 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  如果消費者需要同時從多個集合擷取項目，您可以建立 <xref:System.Collections.Concurrent.BlockingCollection%601> 陣列，並使用將新增至或擷取自陣列中任何集合的靜態方法 (例如 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>)。 如果封鎖其中一個集合，則方法會立即嘗試另一個集合，直到找到可執行作業的集合為止。 如需詳細資訊，請參閱[如何：在管線中使用封鎖回收的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [集合和資料結構](../../../../docs/standard/collections/index.md)   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [集合和資料結構](../../../../docs/standard/collections/index.md)  
  [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "迭代器"
+title: Iterator
 description: "了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="iterators"></a>Iterator
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。 
@@ -30,6 +28,8 @@ ms.lasthandoff: 07/28/2017
 + 建立資料管線，其中的資料會透過迭代器方法有效率地流動。
 
 C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
+
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 
@@ -48,7 +48,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>具有迭代器方法的列舉來源
 
-C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」**。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。 
+C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。 
 
 您可以撰寫這個方法，以產生從 0 到 9 的整數序列：
 
@@ -244,6 +244,5 @@ finally
 ```
 
 還好，您不需要記住上述所有詳細資料。 `foreach` 陳述式會為您處理上述所有細微差異。 編譯器會為上述任何建構產生正確的程式碼。 
-
 
 

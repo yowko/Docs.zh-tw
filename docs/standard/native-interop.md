@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="native-interoperability"></a>原生互通性
 
 在本文件中，我們將深入介紹透過 .NET 提供之執行「原生互通性」的三種方式。
@@ -342,4 +340,3 @@ public class StatClass {
 *   [PInvoke.net wiki](http://www.pinvoke.net) 是一個絕佳的 Wiki 網頁，具有通用的 Win32 API，以及如何呼叫它們的相關資訊。
 *   [P/Invoke on MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
 *   [P/Invoke 上的 Mono 文件](http://www.mono-project.com/docs/advanced/pinvoke/)
-

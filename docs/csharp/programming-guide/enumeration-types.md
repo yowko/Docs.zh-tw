@@ -2,8 +2,7 @@
 title: "列舉類型 (C# 程式設計手冊)"
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
 
@@ -68,7 +66,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 您可以使用列舉類型來定義位元旗標，讓列舉類型的執行個體儲存在列舉程式清單中所定義的任何值組。 (當然，某些組合在您的程式碼中可能無意義或不被允許。)
 
-您可透過套用 <xref:System.FlagsAttribute?displayProperty=fullName> 屬性和適當定義值來建立位元旗標列舉，以對它們執行 `AND`、`OR`、`NOT` 和 `XOR` 位元運算。 在位元旗標列舉中包含值為零的具名常數，表示「未設定任何旗標」。 如果不表示「未設定任何旗標」，請勿指定旗標值為零。
+您可透過套用 <xref:System.FlagsAttribute?displayProperty=nameWithType> 屬性和適當定義值來建立位元旗標列舉，以對它們執行 `AND`、`OR`、`NOT` 和 `XOR` 位元運算。 在位元旗標列舉中包含值為零的具名常數，表示「未設定任何旗標」。 如果不表示「未設定任何旗標」，請勿指定旗標值為零。
 
 在下例中，定義了另一個版本的 `Day` 列舉，名為 `Days`。 `Days` 具有 `Flags` 屬性，且每個值已指派下一個大於 2 的乘冪。 這可讓您建立其值為 `Days.Tuesday | Days.Thursday` 的 `Days` 變數。
 
@@ -82,20 +80,19 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-如需在定義含有 <xref:System.FlagsAttribute?displayProperty=fullName> 屬性之列舉類型時需考量事項的詳細資訊，請參閱 <xref:System.Enum?displayProperty=fullName>。
+如需在定義含有 <xref:System.FlagsAttribute?displayProperty=nameWithType> 屬性之列舉類型時需考量事項的詳細資訊，請參閱 <xref:System.Enum?displayProperty=nameWithType>。
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>使用 System.Enum 方法來探索和操作列舉值
 
-所有列舉都是 <xref:System.Enum?displayProperty=fullName> 類型的執行個體。 您不能從 <xref:System.Enum?displayProperty=fullName> 衍生新的類別，但可以使用其方法來探索相關資訊以及操作列舉執行個體中的值。
+所有列舉都是 <xref:System.Enum?displayProperty=nameWithType> 類型的執行個體。 您不能從 <xref:System.Enum?displayProperty=nameWithType> 衍生新的類別，但可以使用其方法來探索相關資訊以及操作列舉執行個體中的值。
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-如需詳細資訊，請參閱<xref:System.Enum?displayProperty=fullName>。
+如需詳細資訊，請參閱<xref:System.Enum?displayProperty=nameWithType>。
 
 您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：建立列舉的新方法 ](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ## <a name="see-also"></a>請參閱
- <xref:System.Enum?displayProperty=fullName>   
- [C# 程式設計手冊](../../csharp/programming-guide/index.md)   
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [C# 程式設計指南](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
-

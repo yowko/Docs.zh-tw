@@ -1,25 +1,21 @@
 ---
 title: "純函數式轉換簡介 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 535d022b68fd4d08f04648fb98f5a7a7c53ed6e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 34c4b94577291f300dd2a14ffc33a5ec04b31782
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>純函數式轉換簡介 (C#)
 本節說明功能性轉換，包括基礎的概念與支援的語言建構。 其中包含程式設計的物件導向與功能性轉換方法，包括如何轉換到後者的建議。 雖然在許多程式設計案例中都可以使用功能性轉換，但是此處使用 XML 轉換做為具體範例。  
@@ -36,4 +32,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
-

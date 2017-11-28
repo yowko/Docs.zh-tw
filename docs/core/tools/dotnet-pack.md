@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -44,7 +43,9 @@ dotnet pack [-h|--help]
 
 封裝專案的 NuGet 相依性會新增至 *.nuspec* 檔案，因此在安裝套件時可以正確地解析它們。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則必須一個專案各一個套件。
 
-`dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。 
+`dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
+
+您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 ## <a name="arguments"></a>引數
 
@@ -167,3 +168,7 @@ dotnet pack [-h|--help]
 在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
 
 `dotnet pack --version-suffix "ci-1234"`
+
+使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
+
+`dotnet pack /p:PackageVersion=2.1.0`

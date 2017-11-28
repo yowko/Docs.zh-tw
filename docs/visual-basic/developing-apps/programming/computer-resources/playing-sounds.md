@@ -1,15 +1,12 @@
 ---
 title: "播放音效 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - system sounds, playing
 - system sounds
@@ -20,29 +17,14 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8be5cec634482bf99ddff4ff6b6af8e897c4909e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a15efff54bd54fdaced6c741cd6acf5c8b544cdd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="playing-sounds-visual-basic"></a>播放音效 (Visual Basic)
 `My.Computer.Audio` 物件提供播放音效的方法。  
@@ -92,9 +74,8 @@ ms.lasthandoff: 07/28/2017
  [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:Microsoft.VisualBasic.Devices.Audio>   
- <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>   
- <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>   
- <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>   
+ <xref:Microsoft.VisualBasic.Devices.Audio>  
+ <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>  
  <xref:Microsoft.VisualBasic.AudioPlayMode>
-

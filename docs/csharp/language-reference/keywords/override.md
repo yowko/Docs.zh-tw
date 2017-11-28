@@ -1,41 +1,22 @@
 ---
 title: "override (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - override
 - override_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- override keyword [C#]
+helpviewer_keywords: override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 807fae02ca4e6f616c77877cc8815405baaf8428
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f5a87eaa5894b61187c379c92ad785336aa79b2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="override-c-reference"></a>override (C# 參考)
 需要 `override` 修飾詞才能夠擴充或修改繼承方法、屬性、索引子或事件的抽象或虛擬實作。  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  在本例中，`Square` 類別必須提供 `Area` 的覆寫實作，因為 `Area` 繼承自抽象的 `ShapesClass`：  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  `override` 方法提供繼承自基底類別的成員新實作。 `override` 宣告覆寫的方法稱之為覆寫基底方法。 覆寫基底方法必須和 `override` 方法有相同的簽章。 如需繼承的資訊，請參閱[繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)。  
   
@@ -60,19 +41,18 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  本例會定義名為 `Employee` 的基底類別，以及名為 `SalesEmployee` 的衍生類別。 `SalesEmployee` 類別包含額外的屬性 `salesbonus`，並會覆寫方法 `CalculatePay` 以將其納入考量。  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)   
- [abstract](../../../csharp/language-reference/keywords/abstract.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [多型](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)
-

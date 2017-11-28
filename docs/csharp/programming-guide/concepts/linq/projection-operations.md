@@ -1,30 +1,21 @@
 ---
 title: "投影作業 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a05a4f228e64405ba24d967193d9e7a487ae473
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b95072bf6e53ef090a7a7b398fa873bb0bf5b46
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="projection-operations-c"></a>投影作業 (C#)
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  
@@ -177,9 +168,8 @@ static void SelectVsSelectMany()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Linq>   
- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Select 子句](../../../../csharp/language-reference/keywords/select-clause.md)   
- [如何：從多個來源填入物件集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
+ <xref:System.Linq>  
+ [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [select 子句](../../../../csharp/language-reference/keywords/select-clause.md)  
+ [如何：從多個來源填入物件集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
  [如何：使用群組將檔案分割成許多檔案 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
-

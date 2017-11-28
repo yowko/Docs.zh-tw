@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8562670aad8a20a28eddcd2ebbe434a0402aff59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步用戶端通訊端
 在網路作業完成時，同步用戶端通訊端會暫止應用程式。 同步通訊端不適用於大量使用網路以進行作業的應用程式，但它們可以啟用其他應用程式的網路服務簡單存取。  
   
- 若要傳送資料，請傳遞位元組陣列給其中一個 <xref:System.Net.Sockets.Socket> 類別的資料傳送方法 (<xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.SendTo%2A>)。 下列範例會使用 <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName> 屬性將字串編碼成位元組陣列緩衝區，然後使用 **Send** 方法將緩衝區傳送給網路裝置。 **Send** 方法會傳回送給網路裝置的位元組數目。  
+ 若要傳送資料，請傳遞位元組陣列給其中一個 <xref:System.Net.Sockets.Socket> 類別的資料傳送方法 (<xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.SendTo%2A>)。 下列範例會使用 <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> 屬性將字串編碼成位元組陣列緩衝區，然後使用 **Send** 方法將緩衝區傳送給網路裝置。 **Send** 方法會傳回送給網路裝置的位元組數目。  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -83,7 +80,6 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [使用非同步用戶端通訊端](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [同步用戶端通訊端範例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-

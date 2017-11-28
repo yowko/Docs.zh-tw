@@ -1,31 +1,34 @@
 ---
-title: "&lt;customBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;customBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f73ad4d09e085040e006102e5b44664ece98a58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;customBinding&gt;
+# <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 對使用者提供訊息堆疊的完整控制權。  
   
-## 語法  
+ \<system.serviceModel >  
+\<繫結 >  
+\<customBinding >  
   
-```  
+## <a name="syntax"></a>語法  
   
+```xml  
 <customBinding>  
     <binding name="string"  
         closeTimeout="TimeSpan"  
@@ -181,63 +184,63 @@ caps.handback.revision: 24
 </customBinding>  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列各節說明屬性、子元素和父元素  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|closeTimeout|<xref:System.TimeSpan> 值，指定提供用來讓關閉作業完成的時間間隔。  這個值應該大於或等於 <xref:System.TimeSpan.Zero>。  預設為 00:01:00。|  
-|name|包含繫結之組態名稱的字串。  這個值是使用者定義的字串，它會充當自訂繫結的識別字串。  從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。  如需預設組態和無名稱繫結與行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
-|openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。  這個值應該大於或等於 <xref:System.TimeSpan.Zero>。  預設為 00:01:00。|  
-|receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。  這個值應該大於或等於 <xref:System.TimeSpan.Zero>。  預設為 00:01:00。|  
-|sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。  這個值應該大於或等於 <xref:System.TimeSpan.Zero>。  預設為 00:01:00。|  
+|---------------|-----------------|  
+|closeTimeout|<xref:System.TimeSpan> 值，指定提供用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
+|name|包含繫結之組態名稱的字串。 這個值是使用者定義的字串，它會充當自訂繫結的識別字串。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
+|openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
+|receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
+|sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
+  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|指定自訂繫結的雙向傳訊。 它是和本身不允許雙工通訊的傳輸一起使用，例如 HTTP。 相反地，TCP 本身就允許雙工通訊，因此不需要使用這個繫結項目也可讓服務將訊息傳回用戶端。<br /><br /> 用戶端必須公開位址，才能讓服務接觸並建立連接。 這個用戶端位址是由 `ClientBaseAddress` 屬性提供。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|  
+|[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定對等名稱解析通訊協定 (PNRP) 對等名稱解析程式。 此項目的型別為 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|  
+|[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS-Reliable 訊息設定。 將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。 此項目的型別為 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.SecurityElement>。|  
+|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 資料流繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|  
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定繫結應支援交易流程，並指定 `transactionProtocol` 屬性使用的通訊協定。 此項目的型別為 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|  
+|[\<windowsstreamsecurity 正在 >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自訂繫結的資料流 (Streaming) 安全性選項。 此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|  
+  
+### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
-|--------|--------|  
-|[\<compositeDuplex\>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|指定自訂繫結的雙向傳訊。  它是和本身不允許雙工通訊的傳輸一起使用，例如 HTTP。  相反地，TCP 本身就允許雙工通訊，因此不需要使用這個繫結項目也可讓服務將訊息傳回用戶端。<br /><br /> 用戶端必須公開位址，才能讓服務接觸並建立連接。  這個用戶端位址是由 `ClientBaseAddress` 屬性提供。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|  
-|[\<pnrpPeerResolver\>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定對等名稱解析通訊協定 \(PNRP\) 對等名稱解析程式。  此項目的型別為 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|  
-|[\<\<reliableSession\>\>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS\-Reliable 訊息設定。  將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。  此項目的型別為 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|  
-|[\<安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。  此項目的型別為 <xref:System.ServiceModel.Configuration.SecurityElement>。|  
-|[\<SSL 資料流安全性\>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 資料流繫結的安全性設定。  此項目的型別為 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|  
-|[\<transactionFlow\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定繫結應支援交易流程，並指定 `transactionProtocol` 屬性使用的通訊協定。  此項目的型別為 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|  
-|[\<windowsStreamSecurity\>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自訂繫結的資料流 \(Streaming\) 安全性選項。  此項目的型別為 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|  
-  
-### 父項目  
-  
-|項目|描述|  
-|--------|--------|  
+|-------------|-----------------|  
 |繫結|包含 Windows Communication Foundation 應用程式的所有繫結。|  
   
-## 備註  
- 自訂繫結會提供對於 WCF 訊息堆疊的完整控制權。  您可以新增特定實體的組態項目，來建立特別量身訂作的繫結。  例如，使用者可結合 `httpsTransport` 區段、`reliableSession` 區段和 `security` 區段來建立可靠且安全的 https 繫結。  
+## <a name="remarks"></a>備註  
+ 自訂繫結會提供對於 WCF 訊息堆疊的完整控制權。 您可以新增特定實體的組態項目，來建立特別量身訂作的繫結。 例如，使用者可結合 `httpsTransport` 區段、`reliableSession` 區段和 `security` 區段來建立可靠且安全的 https 繫結。  
   
- 個別繫結定義訊息堆疊的方式，是依據堆疊項目在堆疊中的出現順序來指定其組態項目。  每個項目都會定義及設定堆疊的一個項目。  各個自訂繫結中一定要出現一個而且是唯一一個的傳輸項目。  如果沒有這個項目，訊息堆疊就不完整。  
+ 個別繫結定義訊息堆疊的方式，是依據堆疊項目在堆疊中的出現順序來指定其組態項目。 每個項目都會定義及設定堆疊的一個項目。 各個自訂繫結中一定要出現一個而且是唯一一個的傳輸項目。 如果沒有這個項目，訊息堆疊就不完整。  
   
- 項目在堆疊中的出現順序很重要，因為這是作業套用至訊息的順序。  建議的堆疊項目順序如下所示：  
+ 項目在堆疊中的出現順序很重要，因為這是作業套用至訊息的順序。 建議的堆疊項目順序如下所示：  
   
-1.  交易 \(選擇性\)  
+1.  交易 (選擇性)  
   
-2.  可信賴傳訊 \(選擇性\)  
+2.  可信賴傳訊 (選擇性)  
   
-3.  安全性 \(選擇性\)  
+3.  安全性 (選擇性)  
   
 4.  Transport  
   
-5.  編碼器 \(選擇性\)  
+5.  編碼器 (選擇性)  
   
- 當系統提供的其中一個繫結不符合服務的需求時，請使用自訂繫結。  例如，若要在服務端點上啟用新的傳輸或新的編碼器，可以使用自訂繫結。  
+ 當系統提供的其中一個繫結不符合服務的需求時，請使用自訂繫結。 例如，若要在服務端點上啟用新的傳輸或新的編碼器，可以使用自訂繫結。  
   
  在建構自訂繫結時，會使用依據特定順序堆疊之繫結項目集合中的其中一個 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A>：  
   
 -   在最上方為允許流動交易的選擇性 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>。  
   
--   接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它會提供 WS\-ReliableMessaging 規格中所定義的工作階段和排序機制。  這個工作階段概念可以跨越 SOAP 和傳輸媒介。  
+-   接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。 這個工作階段概念可以跨越 SOAP 和傳輸媒介。  
   
--   接下來是選擇性安全性繫結項目，它會提供類似授權、驗證 \(Authentication\)、保護和機密性等安全性功能。  下列安全性繫結項目是由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 所提供：  
+-   接下來是選擇性安全性繫結項目，它會提供類似授權、驗證 (Authentication)、保護和機密性等安全性功能。 下列安全性繫結項目是由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 所提供：  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -251,7 +254,7 @@ caps.handback.revision: 24
   
 -   <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
   
--   接下來是選擇性傳輸升級\/helper 繫結項目：  
+-   接下來是選擇性傳輸升級/helper 繫結項目：  
   
     -   <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
   
@@ -259,7 +262,7 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   再來是必要的訊息編碼繫結項目。  您可以使用自己的傳輸或是使用下列其中一個訊息編碼繫結：  
+-   再來是必要的訊息編碼繫結項目。 您可以使用自己的傳輸或是使用下列其中一個訊息編碼繫結：  
   
     -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
@@ -267,7 +270,7 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   最下方是必要的傳輸項目。  您可以使用自己的傳輸或是使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供的其中一個傳輸繫結項目：  
+-   最下方是必要的傳輸項目。 您可以使用自己的傳輸或是使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供的其中一個傳輸繫結項目：  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -286,7 +289,7 @@ caps.handback.revision: 24
  下表摘要列出每一層的選項。  
   
 |圖層|選項|必要項|  
-|--------|--------|---------|  
+|-----------|-------------|--------------|  
 |交易流程|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|否|  
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|否|  
 |安全性|對稱、不對稱、傳輸層級|否|  
@@ -297,18 +300,20 @@ caps.handback.revision: 24
   
  此外，您也可以定義自己的繫結項目，並將其插入上述任何定義層之間。  
   
- 如需有關如何使用自訂繫結來修改系統提供之繫結的討論內容，請參閱 [HOW TO：自訂系統提供的繫結](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+ 如需有關如何使用自訂繫結來修改系統提供的繫結的討論，請參閱[How to： 自訂之繫結](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   
-## 請參閱  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.Configuration.BindingsSection>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [\<繫結\>](../../../../../docs/framework/misc/binding.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [customBinding Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [繫結](../../../../../docs/framework/wcf/bindings.md)   
- [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/zh-tw/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+1.  
+  
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.Configuration.BindingsSection>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [繫結](../../../../../docs/framework/wcf/bindings.md)  
+ [設定系統提供繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)

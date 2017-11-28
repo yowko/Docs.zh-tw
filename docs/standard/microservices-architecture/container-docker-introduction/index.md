@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: bb9466129287b0f10ace3c6d1129fb94b7a443e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 28a6e17f9c36d937ef323276c7ccc8c099844be7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 
@@ -36,4 +35,3 @@ ms.lasthandoff: 09/05/2017
 
 >[!div class="step-by-step"]
 [上一個] (../index.md) [下一個] (docker-defined.md)
-

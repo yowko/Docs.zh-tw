@@ -1,40 +1,21 @@
 ---
 title: "如何：將位元組陣列轉換成整數 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ee51cd94e961c7274286c812cb6900d26c6ce033
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 86ecfe95ab6fb5ce60e7568050cdf974d0dc3d88
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何：將位元組陣列轉換成整數 (C# 程式設計手冊)
 本例示範如何使用 <xref:System.BitConverter> 類別將位元組陣列轉換成 [int](../../../csharp/language-reference/keywords/int.md)，再回復成位元組陣列。 例如，在讀取網路位元組後，您可能必須從位元組轉換成內建資料類型。 除了範例中的 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 方法外，下表會列出 <xref:System.BitConverter> 類別中可將位元組轉換成其他內建類型的方法。  
@@ -58,7 +39,7 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  輸出會隨電腦架構位元組由大到小或由小到大而有所不同。  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
+ [!code-csharp[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## <a name="example"></a>範例  
  在此範例中，會呼叫 <xref:System.BitConverter> 類別的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，將 `int` 轉換成位元組陣列。  
@@ -66,10 +47,9 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  輸出會隨電腦架構位元組由大到小或由小到大而有所不同。  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
+ [!code-csharp[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.BitConverter>   
- <xref:System.BitConverter.IsLittleEndian>   
+ <xref:System.BitConverter>  
+ <xref:System.BitConverter.IsLittleEndian>  
  [型別](../../../csharp/programming-guide/types/index.md)
-

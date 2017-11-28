@@ -6,18 +6,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
+ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
 .NET 與語言無關。 這表示，身為開發人員，您可以使用以 .NET 實作為目標的許多語言之一進行開發，例如 C#、F# 和 Visual Basic。 您可以存取為 .NET 實作開發之類別庫的類型和成員，而不必知道原始撰寫的語言，也不必遵循原始語言的任何慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET 應用程式存取。
@@ -2952,5 +2953,4 @@ vbc example.vb /r:UtilityLib.dll
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
 

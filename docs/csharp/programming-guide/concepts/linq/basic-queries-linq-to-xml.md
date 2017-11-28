@@ -1,25 +1,21 @@
 ---
 title: "基本查詢 (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0374cdf35a1c617e390b9e270fbb00932727c2ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>基本查詢 (LINQ to XML) (C#)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 基本查詢的範例。  
@@ -31,8 +27,8 @@ ms.lasthandoff: 07/28/2017
 |[如何：尋找具有特定屬性的項目 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|顯示如何尋找其屬性具有特定值的特定項目。|  
 |[如何：尋找具有特定子項目的項目 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|顯示如何尋找其子項目具有特定值的特定項目。|  
 |[查詢 XDocument 與查詢 XElement (C#)](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|說明在根目錄為 <xref:System.Xml.Linq.XElement> 之 XML 樹狀結構上撰寫查詢與在根目錄為 <xref:System.Xml.Linq.XDocument> 之 XML 樹狀結構上撰寫查詢的差異。|  
-|[如何：尋找具有特定項目名稱的子系 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|顯示如何尋找具有特定名稱之項目的所有子代。 這個範例使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸。|  
-|[如何：使用 Descendants 方法尋找單一子系 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|顯示如何使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法來尋找單一的唯一具名項目。|  
+|[如何：尋找具有特定項目名稱的子系 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|顯示如何尋找具有特定名稱之項目的所有子代。 此範例使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸。|  
+|[如何：使用 Descendants 方法尋找單一子系 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|顯示如何使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸方法來尋找唯一具名的單一項目。|  
 |[如何：撰寫具有複雜篩選功能的查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|顯示如何使用更複雜的篩選條件撰寫查詢。|  
 |[如何：篩選選擇性項目 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|顯示如何在不規則組織的樹狀中尋找節點。|  
 |[如何：在命名空間中尋找所有節點 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|顯示如何尋找特定命名空間中的所有節點。|  
@@ -44,4 +40,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-

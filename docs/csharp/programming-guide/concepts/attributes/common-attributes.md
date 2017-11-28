@@ -1,30 +1,21 @@
 ---
 title: "常見屬性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  
@@ -67,7 +58,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.AssemblyFlagsAttribute>|指定是否支援在相同電腦上、相同處理程序中或相同應用程式定義域中並存執行組件。|  
   
 ### <a name="informational-attributes"></a>資訊屬性  
- 您可以使用資訊屬性，以提供組件其他的公司或產品資訊。 下表顯示 <xref:System.Reflection?displayProperty=fullName> 命名空間中定義的資訊屬性。  
+ 您可以使用資訊屬性，以提供組件其他的公司或產品資訊。 下表顯示 <xref:System.Reflection?displayProperty=nameWithType> 命名空間中定義的資訊屬性。  
   
 |屬性|用途|  
 |---------------|-------------|  
@@ -80,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.CLSCompliantAttribute>|表示組件是否符合 Common Language Specification (CLS) 規範。|  
   
 ### <a name="assembly-manifest-attributes"></a>組件資訊清單屬性。  
- 您可以使用組件資訊清單屬性，在組件資訊清單中提供資訊。 這包括標題、描述、預設別名和組態。 下表顯示 <xref:System.Reflection?displayProperty=fullName> 命名空間中定義的資訊清單屬性。  
+ 您可以使用組件資訊清單屬性，在組件資訊清單中提供資訊。 這包括標題、描述、預設別名和組態。 下表顯示 <xref:System.Reflection?displayProperty=nameWithType> 命名空間中定義的資訊清單屬性。  
   
 |屬性|用途|  
 |---------------|-------------|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> 呼叫端資訊屬性  
  使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。  
   
- 若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 命名空間中定義的 Caller Info 屬性：  
+ 若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：  
   
 |屬性|描述|類型|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  如需「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊 (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)   
- [屬性](https://msdn.microsoft.com/library/5x6cd29c)   
- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
+ [屬性](https://msdn.microsoft.com/library/5x6cd29c)  
+ [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

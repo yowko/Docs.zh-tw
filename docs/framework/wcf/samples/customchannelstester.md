@@ -1,31 +1,34 @@
 ---
-title: "CustomChannelsTester | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomChannelsTester
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d915d567a5918060ab5e7592d4cd49384249ab9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# CustomChannelsTester
-`CustomChannelsTester` 工具，可以用來針對預先定義之服務合約集合測試自訂通道實作。  您可以選擇服務合約集合，然後將該集合使用 XML 檔傳遞到此工具。  接著，此工具就會產生服務，以及會在訊息交換期間執行自訂通道實作的用戶端。  
+# <a name="customchannelstester"></a>CustomChannelsTester
+`CustomChannelsTester` 工具，可以用來針對預先定義之服務合約集合測試自訂通道實作。 您可以選擇服務合約集合，然後將該集合使用 XML 檔傳遞到此工具。 接著，此工具就會產生服務，以及會在訊息交換期間執行自訂通道實作的用戶端。  
   
-### 建置工具  
+### <a name="to-build-the-tool"></a>建置工具  
   
-1.  若要建置方案，請遵循 [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md) 中的指示進行。  
+1.  若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  建置此方案會產生三個檔案：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。  檔案 SampleRun.cmd 有一個範例命令列，該命令列會示範如何使用這個工具來測試[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 範例。  
+2.  建置此方案會產生三個檔案：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。 檔案 SampleRun.cmd 已經示範如何使用此工具來測試範例命令列[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
-### 執行工具  
+### <a name="to-run-the-tool"></a>執行工具  
   
 -   在命令提示字元中輸入下列命令：  
   
@@ -35,7 +38,7 @@ caps.handback.revision: 12
   
      這時必須使用 `/binding` 選項。  
   
-     如果 "binding" 不是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的系統提供繫結，就需要 `/dll` 選項。  
+     如果 "binding" 不是 `/dll` 提供的系統提供繫結，就需要 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 選項。  
   
      `/testspec` 是選擇項。  
   
@@ -43,9 +46,9 @@ caps.handback.revision: 12
   
      執行用戶端與伺服器，然後傳回結果。  
   
-     下列是測試規格之描述的範例 XML \(testspec.xml\)：  
+     下列是測試規格之描述的範例 XML (testspec.xml)：  
   
-    ```  
+    ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >  
     <ServiceContract>  
@@ -76,4 +79,4 @@ caps.handback.revision: 12
     </TestSpec>  
     ```  
   
-## 請參閱
+## <a name="see-also"></a>另請參閱

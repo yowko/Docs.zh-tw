@@ -1,41 +1,22 @@
 ---
 title: "enum (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- enum keyword [C#]
+helpviewer_keywords: enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 `enum` 關鍵字用來宣告列舉，是包含一組稱為列舉程式清單之具名常數的不同類型。  
@@ -89,17 +70,17 @@ int x = (int)Days.Sun;
 ## <a name="example"></a>範例  
  在下列範例中，宣告了 `Days`列舉。 兩個列舉程式已明確轉換成整數，並指派給整數變數。  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## <a name="example"></a>範例  
  在下列範例中，基底類型選項會用來宣告 `enum` ，其成員類型是 `long`。 請注意，即使列舉的基礎類型是 `long`，列舉成員仍必須使用轉換來明確地轉換成 `long` 類型。  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>範例  
  下列程式碼範例說明如何在 <xref:System.FlagsAttribute?displayProperty=nameWithType> 宣告上使用 `enum` 屬性與其效果。  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
+ [!code-csharp[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## <a name="comments"></a>註解  
  如果您移除 `Flags`，此範例就會顯示下列值︰  
@@ -112,11 +93,10 @@ int x = (int)Days.Sun;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [列舉類型](../../../csharp/programming-guide/enumeration-types.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [整數類型表](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [列舉型別](../../../csharp/programming-guide/enumeration-types.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [隱含數值轉換表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [明確數值轉換表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

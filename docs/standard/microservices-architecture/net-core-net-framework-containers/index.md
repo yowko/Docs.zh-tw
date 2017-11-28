@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: f7a5fee26f4d138ae22f3551a25a674b22a2f6d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5650fed27546efc1485a4617559198f03823f2de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -22,4 +21,3 @@ ms.lasthandoff: 09/05/2017
 
 >[!div class="step-by-step"]
 [上一個] (../container-docker-introduction/docker-containers-images-registries.md) [下一個] (general-guidance.md)
-

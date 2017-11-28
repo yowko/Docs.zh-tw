@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰使用 DataContractJsonSerializer 序列化控制字元 | Microsoft Docs"
+title: "風險降低︰使用 DataContractJsonSerializer 序列化控制字元"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -13,16 +13,15 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 596d7ea858e40a558767fa76bb717dbbba97d4ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 6da580d208736a64e2094f701fb4c1241a488322
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>風險降低︰使用 DataContractJsonSerializer 序列化控制字元
 
@@ -52,4 +51,3 @@ ms.lasthandoff: 05/22/2017
  
 ## <a name="see-also"></a>請參閱
 [.NET Framework 4.7 中的重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
-

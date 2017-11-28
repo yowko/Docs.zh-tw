@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
+ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 16c99ec5d1c120f1ab079940459cdb7716471353
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="types-variables-and-values"></a>類型、變數和值  
 C# 是強型別語言。 每個變數和常數都有型別，如同每個會評估為值的運算式一般。 每種方法簽章都會指定每個輸入參數與其傳回值的型別。 .NET Framework Class Library 會定義一組內建數字型別以及較複雜型別，代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。 一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。  
   
@@ -64,7 +62,7 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
 您可以使用 [struct](language-reference/keywords/class.md)、[class](language-reference/keywords/class.md)、[interface](language-reference/keywords/interface.md) 和 [enum](language-reference/keywords/enum.md) 建構來建立您自己的自訂類型。 .NET Framework Class Library 本身是 Microsoft 所提供的自訂型別集合，您可以在自己的應用程式中使用。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。 
   
 ## <a name="generic-types"></a>泛型類型  
-您可以使用一或多個「型別參數」來宣告類型，作為預留位置 (具象類型)，以供用戶端程式碼在其建立該類型的執行個體時提供實際類型。 這類的類型稱為「泛型型別」。 例如，.NET Framework 類型 @System.Collections.Generic.List%601 有一個型別參數，依慣例命名為 *T*。當您建立該型別的執行個體時，您會指定該清單將包含的物件型別，例如 string：  
+您可以使用一或多個「型別參數」來宣告類型，作為預留位置 (具象類型)，以供用戶端程式碼在其建立該類型的執行個體時提供實際類型。 這類的型別稱為「泛型型別」。 例如，.NET Framework 型別 <xref:System.Collections.Generic.List%601> 有一個型別參數，依慣例命名為 *T*。當您建立該型別的執行個體時，您會指定該清單將包含的物件型別，例如 string：  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)] 
   
@@ -80,7 +78,7 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
 ## <a name="the-common-type-system"></a>一般型別系統  
 請務必了解 .NET Framework 中有關型別系統的兩個基本概念：  
   
--   它支援繼承準則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 所有類型 (包括 @System.Int32 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 @System.Object (C# 關鍵字：`object`)。 這種統一類型階層架構稱為[一般型別系統](../standard/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
+-   它支援繼承準則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 所有類型 (包括 <xref:System.Int32> 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 <xref:System.Object> (C# 關鍵字：`object`)。 這種統一類型階層架構稱為[一般型別系統](../standard/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
   
 -   CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET Framework Class Library 中的所有自訂類型以及您自己的使用者定義型別。 您使用 [struct](language-reference/keywords/struct.md) 關鍵字定義的類型為實值型別；所有內建數字類型都是 **struct**。 如需實值型別的詳細資訊，請參閱[結構](structs.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的類型為參考型別。 如需參考型別的詳細資訊，請參閱[類別](classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
  
@@ -88,4 +86,3 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
 ## <a name="see-also"></a>請參閱
 [結構](structs.md)
 [類別](classes.md)
-

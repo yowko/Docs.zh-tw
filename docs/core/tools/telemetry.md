@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
+ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core CLI 工具遙測
 
 [.NET Core SDK](index.md) 包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/pull/2145)。 .NET 小組必須了解使用者如何使用這些工具，以便進行改善。 如需詳細資訊，請參閱 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)。
@@ -39,6 +37,7 @@ ms.lasthandoff: 08/12/2017
 - `dotnet pack`
 - `dotnet restore`
 - `dotnet run`
+
 
 ## <a name="behavior"></a>行為
 
@@ -112,20 +111,13 @@ Microsoft 的 .NET Core 散發是使用 [MICROSOFT .NET LIBRARY EULA](https://ak
 
 [.NET NuGet 套件](https://www.nuget.org/profiles/dotnetframework)使用相同的授權，但不啟用遙測 (請參閱[範圍](#scope))。
 
-```text
-2.      DATA.  The software may collect information about you and your use of
-the software, and send that to Microsoft. Microsoft may use this information
-to improve our products and services. You can learn more about data collection
-and use in the help documentation and the privacy statement at
-http://go.microsoft.com/fwlink/?LinkId=528096 . Your use of the software
-operates as your consent to these practices.
-```
+> 2. 資料。 軟體可能會收集和您及您使用軟體之方式有關的資訊，並將該資訊傳送給 Microsoft。 Microsoft 可能會使用此資訊以改善產品與服務。 您可以前往 http://go.microsoft.com/fwlink/?LinkId=528096，以在說明文件及隱私權聲明中深入了解資料收集和使用方式的相關資訊。 使用軟體即代表您同意這些做法。
 
 ## <a name="disclosure"></a>公開
 
 .NET Core CLI 工具會在您第一次執行其中一個命令時顯示下列文字 (例如，`dotnet restore`)。 文字可能略有不同，視執行中的 SDK 版本而定。 這個「第一次執行」經驗是 Microsoft 如何通知您有關資料收集。
 
-```text
+```console
 Welcome to .NET Core!
 ---------------------
 Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
@@ -142,4 +134,3 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)  
 [Telemetry reference source (dotnet/cli repo; release/2.0.0 branch)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)  (遙測參考來源 (dotnet/cli 存放庫，版本/2.0.0 分支))  
 [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md) (.NET Core SDK 使用方式資料)
-

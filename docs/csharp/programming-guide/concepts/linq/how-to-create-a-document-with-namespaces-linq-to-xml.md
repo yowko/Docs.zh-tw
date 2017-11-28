@@ -1,30 +1,21 @@
 ---
 title: "如何：建立包含命名空間的文件 (C#) (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d913cdf8b9018aa2bf91fd5a05b823e90ba63df2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何：建立包含命名空間的文件 (C#) (LINQ to XML)
 本主題顯示如何利用命名空間建立文件。  
@@ -161,4 +152,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>另請參閱  
  [處理 XML 命名空間 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
-

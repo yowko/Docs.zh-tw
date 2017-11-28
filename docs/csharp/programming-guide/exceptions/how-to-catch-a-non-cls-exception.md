@@ -1,38 +1,19 @@
 ---
 title: "如何：攔截非 CLS 例外狀況"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], non-CLS
+helpviewer_keywords: exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 473cace033983915c66647d14cae16dc7f5d5b9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18a19fe34b8ec13bd9fc6d25335d0931a22ce4a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>如何：攔截非 CLS 例外狀況
 包括 C++/CLI 在內的某些 .NET 語言，允許物件擲回非衍生自 <xref:System.Exception> 的例外狀況。 這類例外狀況稱之為「非 CLS 例外狀況」或「非例外狀況」。 在 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 中無法擲回非 CLS 例外狀況，但有兩種方式可以攔截它們︰  
@@ -52,7 +33,7 @@ ms.lasthandoff: 09/19/2017
 2.  透過 <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> 屬性存取原始的例外狀況。  
   
 ## <a name="example"></a>範例  
- 下例示範如何攔截從以 C++/CLR 撰寫的類別庫擲回的非 CLS 例外狀況。 請注意，本例的 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 用戶端程式碼點事先知道被擲回的例外狀況類型是 <xref:System.String?displayProperty=fullName>。 您可以將 <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> 屬性轉換回原始類型，只要您可從程式碼存取該類型。  
+ 下例示範如何攔截從以 C++/CLR 撰寫的類別庫擲回的非 CLS 例外狀況。 請注意，本例的 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 用戶端程式碼點事先知道被擲回的例外狀況類型是 <xref:System.String?displayProperty=nameWithType>。 您可以將 <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> 屬性轉換回原始類型，只要您可從程式碼存取該類型。  
   
 ```  
 // Class library written in C++/CLR.  
@@ -84,6 +65,5 @@ ms.lasthandoff: 09/19/2017
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Runtime.CompilerServices.RuntimeWrappedException>   
+ <xref:System.Runtime.CompilerServices.RuntimeWrappedException>  
  [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)
-

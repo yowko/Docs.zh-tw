@@ -1,42 +1,23 @@
 ---
 title: "is (C# 參考)"
 keywords: "is 關鍵字 (C#), is (C#)"
-ms.date: 2017-02-17
+ms.date: 02/17/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - is_CSharpKeyword
 - is
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- is keyword [C#]
+helpviewer_keywords: is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 5aeb29a799ba24b5ab7db3eca62a91035b25b8f6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
 
@@ -54,7 +35,7 @@ ms.lasthandoff: 09/25/2017
 
 例如，下列程式碼會判斷 `obj` 是否可轉換成 `Person` 類型的執行個體：
 
-[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
+[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
 如果下列條件為真，則 `is` 陳述式為 true：
 
@@ -68,14 +49,14 @@ ms.lasthandoff: 09/25/2017
 
 下列範例顯示在上述每個轉換過程中評估為 `true` 的 `is` 運算式。
 
-[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
+[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
 如果運算式已知一定會是 `true` 或 `false`，`is` 關鍵字會產生編譯時期警告。 它只會考慮參考轉換、boxing 轉換和 unboxing 轉換，不會考慮使用者定義轉換，或是由類型的 [implicit](implicit.md) 和 [explicit](explicit.md) 運算子定義的轉換。 下列範例會產生警告，因為轉換的結果在編譯時期為已知。 請注意，從 `int` 轉換成 `long` 和 `double` 的 `is` 運算式會傳回 false，因為這些轉換是由 [implicit](implicit.md) 運算子處理。
 
-[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
+[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
 `expr` 可以是傳回值的任何運算式，但匿名方法和 Lambda 運算式則除外。 下列範例使用 `is` 來評估方法呼叫的傳回值。   
-[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
+[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 從 C# 7 開始，您可以搭配[類型模式](#type)使用模式比對來撰寫更簡潔的程式碼，以使用 `is` 陳述式。
 
@@ -113,19 +94,19 @@ ms.lasthandoff: 09/25/2017
 
 下列範例使用 `is` 類型模式來提供類型之 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 方法的實作。
 
-[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
+[!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
 如果沒有模式比對，此程式碼可能會撰寫如下。 使用類型模式比對時，由於不需要測試轉換的結果是否為 `null`，因此會產生更精簡且容易閱讀的程式碼。  
 
-[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
+[!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
 `is` 類型模式也會產生更精簡的程式碼，來判斷實值型別的類型。 下列範例使用 `is` 類型模式來判斷物件為 `Person` 或 `Dog` 執行個體，再顯示適當屬性的值。 
 
-[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
+[!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
 不具有模式比對的對等程式碼需要包含明確轉換的個別指派。
 
-[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
+[!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 常數模式 ###
 
@@ -151,7 +132,7 @@ ms.lasthandoff: 09/25/2017
 
 下列範例結合類型和常數模式來測試物件是否為 `Dice` 執行個體；如果是，則判斷擲出的骰子值是否為 6。
 
-[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+[!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
 ### <a name="var" /> var 模式 </a>
 
@@ -163,7 +144,7 @@ ms.lasthandoff: 09/25/2017
 
 其中 *expr* 的值一定會指派給名為 *varname* 的區域變數。 *varname* 是其類型與 *expr* 相同的靜態變數。 下列範例使用 var 模式將運算式指派給名為 `obj` 的變數， 然後顯示 `obj` 的值和類型。
 
-[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+[!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
 請注意，如果 *expr* 為 `null`，`is` 運算式仍為 true，而且會將 `null` 指派給 *varname*。 
 
@@ -172,9 +153,8 @@ ms.lasthandoff: 09/25/2017
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
  [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)
-

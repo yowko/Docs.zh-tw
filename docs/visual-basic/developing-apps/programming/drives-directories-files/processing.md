@@ -1,15 +1,12 @@
 ---
 title: "處理磁碟機、目錄和檔案 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - drives
 - drives, processing
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 27a5c3c389860cdc29c4263edbff492738ffe565
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>處理磁碟機、目錄和檔案 (Visual Basic)
 您可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，利用 `My.Computer.FileSystem` 物件處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
@@ -64,4 +46,3 @@ ms.lasthandoff: 07/28/2017
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  `My.Computer.FileSystem` 物件及其成員的參考文件。
-

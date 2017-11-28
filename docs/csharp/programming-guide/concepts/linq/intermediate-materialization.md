@@ -1,28 +1,24 @@
 ---
 title: "中繼具體化 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 46d347921e24bc5504c69534d7b5c087818a6c7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3faf721dd4dd9cdda2f7d5f2d440c8d3c6623968
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="intermediate-materialization-c"></a>中繼具體化 (C#)
-如果不小心，在某些情況下，造成查詢中的集合過早具體化，可能會徹底改變應用程式的記憶體與效能設定檔。 有些標準查詢運算子會在產生單一項目前，造成其來源集合具體化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=fullName> 會先逐一查看其完整的來源集合，然後排序所有的項目，最後產生第一個項目。 也就是說，取得順序集合的第一個項目會高度耗費資源；之後每個項目則不會高度耗費資源。 這很合理：否則，該查詢運算子不可能這麼做。  
+如果不小心，在某些情況下，造成查詢中的集合過早具體化，可能會徹底改變應用程式的記憶體與效能設定檔。 有些標準查詢運算子會在產生單一項目前，造成其來源集合具體化。 例如，<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> 會先逐一查看其完整的來源集合，然後排序所有的項目，最後產生第一個項目。 也就是說，取得順序集合的第一個項目會高度耗費資源；之後每個項目則不會高度耗費資源。 這很合理：否則，該查詢運算子不可能這麼做。  
   
 ## <a name="example"></a>範例  
  此範例會改變先前的範例。 `AppendString` 方法會先呼叫 <xref:System.Linq.Enumerable.ToList%2A>，然後再逐一查看來源。 這會導致具體化。  
@@ -100,4 +96,3 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-

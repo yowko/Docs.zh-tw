@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰WCF 服務和憑證驗證 | Microsoft Docs"
+title: "風險降低︰WCF 服務和憑證驗證"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4c2156087ca168bafb1b7333310066cef73f3334
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: bb852719e3312b78b86621e3cb69fa8bf7267856
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>風險降低︰WCF 服務和憑證驗證
 .NET Framework 4.6 新增了 TLS 1.1 和 TLS 1.2 至 WCF SSL 的通訊協定預設清單。 當用戶端和伺服器電腦安裝 .NET Framework 4.6 或更新版本時，會使用 TLS 1.2 進行交涉。  
@@ -59,11 +58,10 @@ ms.lasthandoff: 04/18/2017
     </configuration>  
     ```  
   
--   如果繫結在原始程式碼中不是以動態方式設定，請更新原始程式碼中的 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 屬性，以使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) 或舊版的通訊協定。  
+-   如果繫結在原始程式碼中是以動態方式設定，請更新 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 屬性，以在原始程式碼中使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) 或舊版的通訊協定。  
   
     > [!CAUTION]
     >  我們不建議採取這項因應措施，因為使用 MD5 雜湊演算法的憑證並不安全。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-

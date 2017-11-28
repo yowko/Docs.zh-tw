@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +14,16 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
 ms.openlocfilehash: 9c41a7760afb03f1d14d433a30cc12194dcecfcb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
 
 .NET Framework 是支援建置和執行新一代應用程式及 XML Web Service 的技術。 .NET Framework 是專為實現以下目標所設計的：
@@ -110,4 +107,3 @@ Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化
 [工具](../../../docs/framework/tools/index.md)   
 [.NET Framework 範例](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)
-

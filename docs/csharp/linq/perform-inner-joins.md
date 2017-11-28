@@ -1,22 +1,20 @@
 ---
 title: "執行內部聯結"
 description: "如何執行內部聯結。"
-keywords: ".NET、.NET Core、C#"
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-inner-joins"></a>執行內部聯結
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="simple-key-join-example"></a>簡單索引鍵聯結範例  
  下例會建立兩個集合，包含兩個使用者定義型別的物件 `Person` 和 `Pet`。 查詢會使用 C# 的 `join` 子句來比對 `Person` 物件與其 `Owner` 是 `Person` 的 `Pet` 物件。 C# 的 `select` 子句會定義產生物件的外觀。 本例中，產生的物件是由擁有者名字和寵物名字組成的匿名型別。  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
  請注意，其 `LastName` 是 "Huff" 的 `Person` 物件不會出現在結果集中，因為沒有任何 `Pet` 物件的 `Pet.Owner` 等於 `Person`。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  下例會使用 `Employee` 物件清單和 `Student` 物件清單來判斷哪些員工也是學生。 這兩種類型都有 <xref:System.String> 類型的 `FirstName` 和 `LastName` 屬性。 從每個清單的項目建立聯結索引鍵的函式會傳回包含每個項目的 `FirstName` 和 `LastName` 屬性的匿名型別。 聯結作業會比較這些複合索引鍵是否相等，並傳回每份清單中名字和姓氏相符的物件配對。  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
 ## <a name="example"></a>範例  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  C# 的第二個 `join` 子句會根據以型別 `Person` 的 `Owner` 屬性組成的複合索引鍵和動物名稱的第一個字母，相互關聯第一個聯結傳回的匿名型別與所提供狗清單的 `Dog` 物件。 它會傳回一系列包含每個相符配對的 `Cat.Name` 和 `Dog.Name` 屬性的匿名型別。 因為這是內部聯結，所以只會傳回第一個資料來源中在第二個資料來源中有相符項目的這些物件。  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
 ## <a name="example"></a>範例  
   
@@ -74,13 +72,12 @@ ms.lasthandoff: 07/28/2017
   
  `query1` 的結果相當於使用不含 `into` 子句的 `join` 子句執行內部聯結所取得的結果集。 `query2` 變數會示範此對等查詢。  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
 ## <a name="see-also"></a>請參閱  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [執行群組聯結](perform-grouped-joins.md)   
- [執行左方外部聯結](perform-left-outer-joins.md)   
- [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [執行群組聯結](perform-grouped-joins.md)  
+ [執行左方外部聯結](perform-left-outer-joins.md)  
+ [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

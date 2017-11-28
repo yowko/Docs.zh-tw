@@ -1,12 +1,9 @@
 ---
 title: "靜態類別和靜態類別成員 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 [static](../../../csharp/language-reference/keywords/static.md) 類別基本上與非靜態類別相同，但有一項差異︰無法具現化靜態類別。 換句話說，您不能使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字來建立類別類型的變數。 因為沒有任何執行個體變數，所以您可以使用類別名稱本身來存取靜態類別的成員。 例如，如果您的 `UtilityClass` 靜態類別包含 `MethodA` 公用方法，則會呼叫方法，如下列範例所示︰  
@@ -45,7 +27,7 @@ ms.lasthandoff: 07/28/2017
 UtilityClass.MethodA();  
 ```  
   
- 如果方法集只作業於輸入參數，並且不需要取得或設定任何內部執行個體欄位，則靜態類別可以用作其方便使用的容器。 例如，在 .NET Framework 類別庫中，靜態 <xref:System.Math?displayProperty=fullName> 類別包含可執行數學運算的方法，而不需要儲存或擷取特定 <xref:System.Math> 類別執行個體所獨有的資料。 亦即，您可以指定類別名稱和方法名稱來套用類別的成員，如下列範例所示。  
+ 如果方法集只作業於輸入參數，並且不需要取得或設定任何內部執行個體欄位，則靜態類別可以用作其方便使用的容器。 例如，在 .NET Framework 類別庫中，靜態 <xref:System.Math?displayProperty=nameWithType> 類別包含可執行數學運算的方法，而不需要儲存或擷取特定 <xref:System.Math> 類別執行個體所獨有的資料。 亦即，您可以指定類別名稱和方法名稱來套用類別的成員，如下列範例所示。  
   
 ```csharp  
 double dub = -3.14;  
@@ -76,12 +58,12 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  因此，建立靜態類別，基本上與建立只包含靜態成員和私用建構函式的類別相同。 私用建構函式可防止具現化類別。 使用靜態類別的優點在於編譯器可以確認不會意外新增任何執行個體成員。 編譯器將保證無法建立此類別的執行個體。  
   
- 靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含執行個體建構函式，但可以包含靜態建構函式。 如果類別所包含的靜態成員不適合用平常方式來初始化，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
+ 靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含執行個體建構函式，但可以包含靜態建構函式。 如果類別包含需要重要初始化的靜態成員，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)。  
   
 ## <a name="example"></a>範例  
  以下是包含兩種方法可將溫度從攝氏轉換為華氏以及從華氏轉換為攝氏的靜態類別範例︰  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## <a name="static-members"></a>靜態成員  
  非靜態類別可以包含靜態方法、欄位、屬性或事件。 即使尚未建立類別的執行個體，還是可以在類別上呼叫靜態成員。 靜態成員一律是透過類別名稱進行存取，而不是執行個體名稱。 不論建立多少個類別執行個體，都只會有一個靜態成員複本。 靜態方法和屬性無法存取其包含類型中的非靜態欄位和事件，也無法存取任何物件的執行個體變數，除非它明確地傳入方法參數。  
@@ -96,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  在成員的傳回型別前面使用 `static` 關鍵字，即可宣告靜態類別成員，如下列範例所示︰  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  第一次存取靜態成員之前，以及呼叫靜態建構函式 (如果有的話) 之前，都會初始化靜態成員。 若要存取靜態類別成員，請使用類別的名稱來指定成員的位置，而不是變數名稱，如下列範例所示︰  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  如果您的類別包含靜態欄位，請提供在載入類別時初始化它們的靜態建構函式。  
   
@@ -110,10 +92,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
+ [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [靜態建構函式](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [執行個體建構函式](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
-

@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
+ms.openlocfilehash: 893999f9abcc299da4fb0923fe47c371079f695c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e11515031716a66ead866e52504137cb4e1df137
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 
 Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Core 建置簡單主控台應用程式。
@@ -34,7 +32,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 如果您已經安裝必要條件和 Visual Studio for Mac，請略過本節並移至[建立專案](#creating-a-project)。 請遵循下列步驟來安裝必要條件和 Visual Studio for Mac：
 
-1. 下載並安裝 [.NET Core 和 OpenSSL (英文)](https://www.microsoft.com/net/core#macos)。
+下載 [Visual Studio for Mac 安裝程式](https://www.visualstudio.com/vs/visual-studio-mac/)。 執行安裝程式。 閱讀並接受授權合約。 安裝過程中，系統會詢問您是否要安裝 Xamarin，這是一個跨平台的行動應用程式開發技術。 針對 .NET Core 開發，安裝 Xamarin 和其相關元件為選擇性。 如需 Visual Studio for Mac 安裝程序的逐步解說，請參閱 [Visual Studio for Mac 簡介 (英文)](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)。 安裝完成後，請啟動 Visual Studio for Mac IDE。
 
 ## <a name="creating-a-project"></a>建立專案
 
@@ -63,4 +61,3 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 ## <a name="next-step"></a>後續步驟
 
 [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](using-on-mac-vs-full-solution.md)主題，能說明如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
-

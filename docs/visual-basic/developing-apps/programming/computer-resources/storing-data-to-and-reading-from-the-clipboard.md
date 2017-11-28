@@ -1,15 +1,12 @@
 ---
 title: "在剪貼簿儲存和讀取資料 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
 - Clipboard, reading from (My.Computer.Clipboard)
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7bb4ad56f0a039aa7b23d7f0612aaab9366cb9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3b60942cf3e3a7f588a7838bcae0cb7b6fae2278
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>在剪貼簿儲存和讀取資料 (Visual Basic)
 剪貼簿可以用來儲存資料，例如文字和影像。 因為所有使用中處理序都共用剪貼簿，所以可以使用它在這兩者之間傳輸資料。 `My.Computer.Clipboard` 物件可讓您輕鬆地存取剪貼簿，以及讀取和寫入它。  
@@ -50,13 +32,13 @@ ms.lasthandoff: 07/28/2017
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
- 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows Forms 應用程式] > [剪貼簿] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
+ 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows Forms 應用程式] > [剪貼簿] 中。 如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
   
  使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> 方法來擷取剪貼簿中的影像。 這個範例會先確認剪貼簿上是否有影像，再擷取它，並將它指派給 `PictureBox1`。  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
- 這個程式碼範例也可作為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows Forms 應用程式] > [剪貼簿] 中。如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
+ 這個程式碼範例也可用為 IntelliSense 程式碼片段。 在程式碼片段選擇器中，它位於 [Windows Forms 應用程式] > [剪貼簿] 中。如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。  
   
  即使在關閉應用程式之後，還是會保留放在剪貼簿上的項目。  
   
@@ -95,9 +77,8 @@ ms.lasthandoff: 07/28/2017
 >  因為其他使用者可以存取剪貼簿，所以請不要使用它來儲存機密資訊，例如密碼或機密資料。  
   
 ## <a name="see-also"></a>請參閱  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
- [如何：從 XML 檔案讀取物件資料](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
+ [如何：從 XML 檔案讀取物件資料](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  [如何：將物件資料寫入 XML 檔案](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-

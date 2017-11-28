@@ -1,7 +1,7 @@
 ---
 title: "C# 版本控制 - C# 手冊"
 description: "了解 C# 和 .NET 的版本控制運作方式"
-keywords: ".NET、.NET Core、C#"
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.date: 01/08/2017
@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 
 在本教學課程中，您會了解版本控制在 .NET 中的意義。 您也會了解進行文件庫版本控制以及升級到新版文件庫時要考量的因素。
@@ -89,9 +87,9 @@ SemVer 最基本的方法是 3 元件格式 `MAJOR.MINOR.PATCH`，其中：
 
 請使用以下範例：
 
-[!code-csharp['new' 修飾詞的使用範例](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
-**Output**
+**輸出**
 
 ```
 A base method
@@ -107,9 +105,9 @@ A derived method
 
 `override` 修飾詞表示衍生的實作會擴充基底類別成員的實作，而非隱藏它。 基底類別成員需要套用 `virtual` 修飾詞。
 
-[!code-csharp['override' 修飾詞的使用範例](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
-**Output**
+**輸出**
 
 ```
 Base Method One: Method One
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 `override` 修飾詞會在編譯期間評估，如果編譯器找不到要覆寫的虛擬成員，它會擲回錯誤。
 
 您對前述技巧的掌握以及使用時機的了解，需要一段時間才能讓您輕鬆轉換版本。
-

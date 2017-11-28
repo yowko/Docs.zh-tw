@@ -1,39 +1,21 @@
 ---
 title: "修飾詞 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e2e7e5e3907ac9bb66676e749ddd55a8ac4836c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="modifiers-c-reference"></a>修飾詞 (C# 參考)
 修飾詞用來修飾類型和類型成員的宣告。 本節將介紹 C# 修飾詞。  
@@ -52,12 +34,11 @@ ms.lasthandoff: 07/28/2017
 |[readonly](../../../csharp/language-reference/keywords/readonly.md)|宣告欄位只能做為宣告的一部分或在相同類別的建構函式中擁有指派的值。|  
 |[sealed](../../../csharp/language-reference/keywords/sealed.md)|指定不能繼承類別。|  
 |[static](../../../csharp/language-reference/keywords/static.md)|宣告成員，該成員屬於類型本身而不是屬於特定物件。|  
-|[unsafe](../../../csharp/language-reference/keywords/unsafe.md)|宣告 unsafe 內容。|  
+|[Unsafe.DangerousAPI](../../../csharp/language-reference/keywords/unsafe.md)|宣告 unsafe 內容。|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|宣告方法或存取子的實作可藉由覆寫衍生類別中的成員變更。|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|表示欄位可以在程式中藉由像是作業系統、硬體或是同時執行的執行緒進行修改。|  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-

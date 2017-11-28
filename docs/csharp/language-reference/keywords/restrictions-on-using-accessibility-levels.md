@@ -1,38 +1,19 @@
 ---
 title: "使用存取範圍層級的限制 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- access modifiers [C#], accessibility level restrictions
+helpviewer_keywords: access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8e49afd38fd776593b87f065a079da0d546df4a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>使用存取範圍層級的限制 (C# 參考)
 當您在宣告中指定類型時，請檢查類型的存取範圍層級是否相依於成員或另一個類型的存取範圍層級。 例如，直接基底類別至少必須可以像衍生類別一樣地存取。 下列宣告會導致編譯器錯誤，因為基底類別 `BaseClass` 比 `MyClass` 更少存取：  
@@ -128,15 +109,14 @@ public class A
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [存取範圍定義域](../../../csharp/language-reference/keywords/accessibility-domain.md)   
- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [存取範圍定義域](../../../csharp/language-reference/keywords/accessibility-domain.md)  
+ [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)
-

@@ -1,12 +1,9 @@
 ---
 title: "限制存取子的存取範圍 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -15,34 +12,19 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 347fffa4f612c5cb674a6529e46c0b1785670c95
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>限制存取子的存取範圍 (C# 程式設計手冊)
 屬性或索引子的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分稱為「存取子」。 根據預設，這些存取子具有相同的可見性或存取層級：其所屬屬性或索引子的可見性或存取層級。 如需詳細資訊，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。 不過，限制其中一個存取子的存取權時，這有時十分有用。 一般而言，這包含限制 `set` 存取子的存取範圍，同時保留可公開存取的 `get` 存取子。 例如:   
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  在此範例中，稱為 `Name` 的屬性定義 `get` 和 `set` 存取子。 `get` 存取子會接收屬性本身的存取範圍階層 (在此情況下為 `public`)，同時將 [protected](../../../csharp/language-reference/keywords/protected.md) 存取修飾詞套用至存取子本身以明確限制 `set` 存取子。  
   
@@ -60,12 +42,12 @@ ms.lasthandoff: 07/28/2017
 ## <a name="access-modifiers-on-overriding-accessors"></a>覆寫存取子上的存取修飾詞  
  當您覆寫屬性或索引子時，覆寫端程式碼必須可以存取覆寫的存取子。 此外，屬性/索引子的存取範圍層級以及存取子的存取範圍層級必須符合對應已覆寫屬性/索引子和存取子。 例如:   
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## <a name="implementing-interfaces"></a>實作介面  
  當您使用存取子實作介面時，存取子不能有存取修飾詞。 不過，如果您使用一個存取子 (例如 `get`) 實作介面，其他存取子可以有存取修飾詞，如下列範例所示：  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## <a name="accessor-accessibility-domain"></a>存取子存取範圍定義域  
  如果您在存取子上使用存取修飾詞，這個修飾詞會判斷存取子的[存取範圍定義域](../../../csharp/language-reference/keywords/accessibility-domain.md)。  
@@ -77,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  此範例也會示範 `DerivedClass` 中 `Name` 屬性之 `set` 存取子上的 `private` 或 `protected` 這類限制性存取修飾詞防止存取存取子，並在您指派給它時產生錯誤。  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## <a name="comments"></a>註解  
  請注意，如果您將宣告 `new private string Id` 取代為 `new public string Id`，則會取得輸出：  
@@ -87,8 +69,7 @@ ms.lasthandoff: 07/28/2017
  `Name and ID in the derived class: John, John123`  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [索引子](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [索引子](../../../csharp/programming-guide/indexers/index.md)  
  [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-

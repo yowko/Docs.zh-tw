@@ -1,30 +1,21 @@
 ---
 title: "如何：使用 DataContractSerializer 進行序列化 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 73d45ec53770a8b1406098c6daaf11a18e499102
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da57267bb8fd33263c950db0ca3d0a5b1b5817d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>如何：使用 DataContractSerializer 進行序列化 (C#)
 本主題顯示的範例會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化與還原序列化。  
@@ -110,4 +101,3 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>另請參閱  
  [序列化包含 XElement 物件的物件圖形 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
-

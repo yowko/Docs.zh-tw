@@ -2,8 +2,7 @@
 title: ".NET Framework 4 移轉問題"
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
 本主題描述 .NET Framework 版本 3.5 Service Pack 1 與 .NET Framework 版本 4 之間的移轉問題，包含修正程式、標準合規性和安全性變更，以及根據客戶意見反應的變更。 大多數變更都不需要您的應用程式進行任何設計修改。 對於可能涉及修改的變更，請參閱表格的 [建議變更] 欄。
@@ -263,7 +260,7 @@ ms.lasthandoff: 08/28/2017
 | **繫結命令執行個體** | 為了提供機制將檢視模型命令執行個體繫結至檢視輸入手勢，<xref:System.Windows.Input.InputBinding> 類別現在繼承自 <xref:System.Windows.Freezable>，而不是 <xref:System.Windows.DependencyObject>。 下列屬性現在是相依性屬性：<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>這項變更會導致下列各項：<br><br>* <xref:System.Windows.Input.InputBinding> 物件現在在註冊後會予以凍結，而不是保持可變動。<br>* 因為 <xref:System.Windows.DependencyObject> 類別的限制，所以您無法從多個執行緒存取執行個體層級 <xref:System.Windows.Input.InputBinding> 物件。<br>* 因為 <xref:System.Windows.Freezable> 類別的限制，所以您無法在註冊之後變動類別層級輸入繫結。<br>* 您無法在檢視模型中所建立的命令執行個體上指定輸入繫結。 | 如果繫結是可變動的，或要凍結它們，請在個別執行緒上建立不同的 <xref:System.Windows.Input.InputBinding> 類別執行個體。 類別層級靜態 <xref:System.Windows.Input.InputBinding> 在註冊之後，就請不要進行變動。 |
 | **瀏覽器應用程式** | WPF 瀏覽器應用程式 (.XBAP) 現在會處理獨立 WPF 應用程式這類重要事件，因此物件會依正確順序接收已路由傳送的重要事件。 | 無。 |
 | **廢鍵組合** | WPF 會讓廢鍵模糊，因此不產生任何可見字元，而是改成指出按鍵是要與下一個字母鍵合併使用以產生一個字元。 <xref:System.Windows.Input.Keyboard.KeyDownEvent> 事件這類按鍵輸入事件，透過將 <xref:System.Windows.Input.KeyEventArgs.Key> 屬性設定為 <xref:System.Windows.Input.Key> 值報告按鍵何時是廢鍵。 因為應用程式通常不想要回應可建立合併字元的鍵盤輸入，所以這通常是預期行為。 | 預期會讀取屬於組合字元之按鍵的應用程式可以使用 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 屬性來取得現在的模糊按鍵。 |
-| **焦點管理員** | 將 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 附加屬性設定為 `true` 的項目傳遞給 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> 方法時，此方法會傳回為該焦點範圍內最後一個鍵盤聚焦項目的項目，而且只有在所傳回的項目屬於與傳遞給方法的項目相同的 <xref:System.Windows.PresentationSource> 物件時。 | 無。 |
+| **焦點管理員** | 將 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 附加屬性設定為 `true` 的項目傳遞給 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> 方法時，此方法會傳回為該焦點範圍內最後一個鍵盤聚焦項目的項目，而且只有在所傳回的項目屬於與傳遞給方法的項目相同的 <xref:System.Windows.PresentationSource> 物件時。 | 無。 |
 
 ### <a name="ui-automation"></a>UI 自動化
 
@@ -340,4 +337,3 @@ ms.lasthandoff: 08/28/2017
 
 [.NET Framework 的過時功能](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Migration Issues for .NET Framework 4 Applications: Beta 2 to RTM](http://go.microsoft.com/fwlink/?LinkId=191505) (.NET Framework 4 應用程式的移轉問題：Beta 2 到 RTM)
-

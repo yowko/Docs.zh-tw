@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
 ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
 [.NET Core SDK](https://www.microsoft.com/net/download/core) 隨附許多預先安裝的範本，搭配 [`dotnet new` 命令](dotnet-new.md)一起使用。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
@@ -89,7 +87,7 @@ dotnet new -l
 
 | 項目            | 類型   | 說明 |
 | ------------------ | ------ | ----------- |
-| **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。 這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
+| **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
 | **\<描述>** | 字串 | UI 顯示中的套件詳細描述。 |
 | **\<識別碼>**          | 字串 | 不區分大小寫的套件識別碼，在整個 nuget.org 或套件所在的任何組件庫都必須是唯一的。 識別碼可能不包含對 URL 而言無效的空格或字元，而且通常會遵循 .NET 命名空間規則。 如需指導方針，請參閱[選擇唯一的套件識別碼並設定版本號碼](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
 | **\<packageType>** | 字串 | 將此項目放在 **\<metadata>** 項目中的 **\<packageTypes>** 項目內。 將 **\<packageType>** 項目的 `name` 屬性設定為 `Template`。 |
@@ -164,4 +162,3 @@ dotnet new <TEMPLATE>
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples) (dotnet/dotnet-template-samples GitHub 存放庫)  
 [如何建立您自己的 dotnet new 範本](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 [JSON 結構描述保存區的 *template.json* 結構描述](http://json.schemastore.org/template)  
-

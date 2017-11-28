@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-type-system--common-language-specification"></a>一般類型系統和 Common Language Specification
 
 同樣地，這是在 .NET 世界內自由使用的兩個詞彙，它們實際上對了解 .NET 實作如何啟用多語言開發和其運作方式十分重要。
@@ -61,4 +59,3 @@ CLS 是 CTS 的子集。 除非 CLS 規則更嚴格，否則這表示 CTS 中的
 
 *   [一般類型系統](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
 *   [Common Language Specification](https://msdn.microsoft.com/library/12a7a7h3.aspx)
-

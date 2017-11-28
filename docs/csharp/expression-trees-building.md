@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-expression-trees"></a>組建運算式樹狀架構
 
 [上一篇 - 解譯運算式](expression-trees-interpreting.md)
@@ -171,8 +169,7 @@ BlockExpression body = Expression.Block(
 
 組建階乘函式運算式樹狀結構的程式碼相當長，也更複雜，滿是標籤和 break 陳述式及其他項目，是日常編碼工作想要避免的坑。 
 
-我在本節中也更新了訪客程式碼，可瀏覽此運算式樹狀結構中的每個節點，並寫出此範例所建立之節點的相關資訊。 您可以在[範例](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees)一節中看到程式碼。
-您可以親自試驗︰組建並執行範例。
+我在本節中也更新了訪客程式碼，可瀏覽此運算式樹狀結構中的每個節點，並寫出此範例所建立之節點的相關資訊。 您可以在 dotnet/docs GitHub 存放庫[檢視或下載範例程式碼](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees)。 建置並執行範例來親自試驗。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="examining-the-apis"></a>檢查 API
 
@@ -181,4 +178,3 @@ BlockExpression body = Expression.Block(
 此外，在此階段中，還有不能直接使用內建 `Expression` 類別方法來組建的 C# 運算式。 這些通常是新增至 C# 5 和 C# 6 的最新運算子和運算式。 (例如，無法組建 `async` 運算式，也不能直接建立新的 `?.` 運算子。)
 
 [下一篇 - 轉譯運算式](expression-trees-translating.md)
-

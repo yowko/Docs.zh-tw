@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
 [上一步](event-pattern.md)
@@ -25,7 +23,7 @@ ms.lasthandoff: 07/28/2017
 前一篇文章討論最常見的事件模式。 .NET Core 有比較寬鬆的模式。 在本版中，`EventHandler<TEventArgs>` 定義不再具有 `TEventArgs` 必須是 `System.EventArgs` 衍生類別的條件約束。
 
 這為您增加彈性，且與舊版相容。 讓我們開始使用彈性。 System.EventArgs 類別導入了方法 `MemberwiseClone()`，它會建立物件的淺層複本。
-該方法必須使用[反映](reflection.md)才能針對 `EventArgs` 的所有衍生類別實作其功能。 在特定的衍生類別中很容易建立該功能。 它會有效表示衍生自 System.EventArgs 的是條件約束，會限制您的設計，但不提供任何額外的好處。
+該方法必須使用反映，才能針對 `EventArgs` 的任何衍生類別實作其功能。 在特定的衍生類別中很容易建立該功能。 它會有效表示衍生自 System.EventArgs 的是條件約束，會限制您的設計，但不提供任何額外的好處。
 事實上，您可以變更 `FileFoundArgs` 和 `SearchDirectoryArgs` 的定義，讓它們不衍生自 `EventArgs`。
 程式運作完全相同。
 
@@ -89,4 +87,3 @@ worker.StartWorking += async (sender, eventArgs) =>
 本系列的下一篇文章會幫助您分辨在設計中使用 `delegates` 和 `events`。 它們的概念類似，且該文章會協助您為程式做出最佳決定。
 
 [下一步](distinguish-delegates-events.md)
-

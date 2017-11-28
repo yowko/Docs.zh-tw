@@ -5,30 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - platform invoke, marshaling data
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。 若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：  
@@ -46,24 +40,24 @@ ms.lasthandoff: 08/21/2017
   
 |在 Wtypes.h 中的 Unmanaged 類型|Unmanaged C 語言類型|Managed 類別名稱|說明|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8 位元|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16 位元|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16 位元|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32 位元|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32 位元|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32 位元|  
+|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|在 32 位元 Windows 作業系統上為 32 位元，在 64 位元 Windows 作業系統上為 64 位元。|  
+|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 位元|  
+|**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 位元|  
+|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 位元|  
+|**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32 位元|  
+|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=nameWithType>|32 位元|  
+|**LONG**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32 位元|  
 |**BOOL**|**long**|<xref:System.Byte>|32 位元|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 位元|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 位元|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|使用 ANSI 裝飾。|  
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=fullName>|使用 Unicode 裝飾。|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 ANSI 裝飾。|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 ANSI 裝飾。|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 Unicode 裝飾。|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=fullName> 或 <xref:System.Text.StringBuilder?displayProperty=fullName>|使用 Unicode 裝飾。|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32 位元|  
-|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=fullName>|64 位元|  
+|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 位元|  
+|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 位元|  
+|**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
+|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
+|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 ANSI 裝飾。|  
+|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|使用 Unicode 裝飾。|  
+|**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 位元|  
+|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 位元|  
   
  如需 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的對應類型，請參閱 [簡介](../../../docs/standard/class-library-overview.md)。  
   
@@ -74,4 +68,3 @@ ms.lasthandoff: 08/21/2017
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
-

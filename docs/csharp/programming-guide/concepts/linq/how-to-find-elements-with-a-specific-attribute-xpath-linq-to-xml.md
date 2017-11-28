@@ -1,25 +1,21 @@
 ---
 title: "如何：尋找具有特定屬性的項目 (XPath-LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 66053135dbfdf6f61ff1f09b846acd9d9cfe054f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fec0b9a4dc5cee0f10f1675f1b8b281c40be7f21
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何：尋找具有特定屬性的項目 (XPath-LINQ to XML) (C#)
 有時候您會想要尋找具有特定屬性的所有項目。 您並不關心屬性的內容。 但是，您想要根據屬性的存在與否來選擇。  
@@ -70,4 +66,3 @@ Results are identical
   
 ## <a name="see-also"></a>另請參閱  
  [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

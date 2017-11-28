@@ -1,45 +1,26 @@
 ---
 title: "try-catch (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - try
 - try_CSharpKeyword
 - catch
 - catch_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 753beb554796ad0aa2c5e15c715240453de9a3e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 try-catch 陳述式包含 `try` 區塊後面接著一個或多個 `catch` 子句，指定不同例外狀況的處理常式。  
@@ -146,7 +127,7 @@ static void Main()
   
  當控制項到達 `await` 方法時，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)和[非同步程式中的控制流程](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
   
- 套用 `await` 完成的工作可能因為傳回工作的方法中未處理的例外狀況而處於錯誤的狀態。 等候工作擲回例外狀況。 如果傳回工作的非同步程序被取消，工作也可能以取消的狀態結束。 等候已取消的工作會擲回 `OperationCanceledException`。 如需如何取消非同步處理序的詳細資訊，請參閱[微調非同步應用程式](http://msdn.microsoft.com/library/daaa32ea-c84c-4761-8230-c8292ffebd74)。  
+ 套用 `await` 完成的工作可能因為傳回工作的方法中未處理的例外狀況而處於錯誤的狀態。 等候工作擲回例外狀況。 如果傳回工作的非同步程序被取消，工作也可能以取消的狀態結束。 等候已取消的工作會擲回 `OperationCanceledException`。 如需如何取消非同步處理序的詳細資訊，請參閱[微調非同步應用程式](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
   
  若要攔截例外狀況，請在 `try` 區塊中等候工作，並在關聯的 `catch` 區塊中攔截例外狀況。 如需範例，請參閱＜範例＞一節。  
   
@@ -155,7 +136,7 @@ static void Main()
 ## <a name="example"></a>範例  
  在下列範例中，`try` 區塊包含可能會造成例外狀況的對 `ProcessString` 方法的呼叫。 `catch` 子句包含只會在螢幕上顯示訊息的例外狀況處理常式。 從 `MyMethod` 內呼叫 `throw` 陳述式時 ，系統會尋找 `catch` 陳述式，並顯示訊息 `Exception caught`。  
   
- [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>範例  
  在下列範例中，使用了兩個 catch 區塊，並會攔截會先出現的最特定例外狀況。  
@@ -164,7 +145,7 @@ static void Main()
   
  如果您先在範例中放置最特定的 catch 區塊，會出現下列錯誤訊息：`A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`。  
   
- [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>範例  
  下列範例說明非同步方法的例外狀況處理。 若要擷取非同步工作擲回的例外狀況，請將 `await` 運算式放置在 `try` 區塊中，並攔截 `catch` 區塊中的例外狀況。  
@@ -173,25 +154,24 @@ static void Main()
   
  取消註解 `throw new OperationCancelledException` 行來示範取消非同步處理序時會發生的情況。 工作的 `IsCanceled` 屬性設定為 `true`，並在 `catch` 區塊攔截例外狀況。 在不適用這個範例的部分情況下，工作的 `IsFaulted` 屬性會設定為 `true` 而 `IsCanceled` 設為 `false`。  
   
- [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
+ [!code-csharp[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>範例  
  下列範例說明多項工作可能會導致多個例外狀況的例外狀況處理。 `try` 區塊會等候對 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 的呼叫傳回的工作。 當套用所有項目的三項工作都完成時，工作即完成。  
   
  這三個工作都會造成例外狀況。 `catch` 區塊會逐一查看例外狀況，這可以在 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 傳回的工作的 `Exception.InnerExceptions` 屬性中找到。  
   
- [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
+ [!code-csharp[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
- [例外狀況處理陳述式](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [如何：明確擲回例外狀況](https://msdn.microsoft.com/library/xhcbs8fz)
-
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [例外狀況處理陳述式](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+ [操作說明：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

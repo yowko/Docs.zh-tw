@@ -1,47 +1,28 @@
 ---
 title: ":: 運算子 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- ::_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: ::_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6b4f1683e1250ed745e15ced88203ca942c75ff8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 97b9fa706669244ac579602a107c092e8593567d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>:: 運算子 (C# 參考)
 命名空間別名限定詞 (`::`) 用來查閱識別碼。 它一律位在兩個識別碼之間，如下例所示︰  
   
- [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
+ [!code-csharp[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## <a name="remarks"></a>備註  
  命名空間別名限定詞可以是 `global`。 這會在全域命名空間中叫用查詢，不是在別名命名空間中。  
@@ -55,10 +36,9 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 運算子](../../../csharp/language-reference/operators/index.md)   
- [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 運算子](../../../csharp/language-reference/operators/index.md)  
+ [命名空間關鍵字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [.運算子](../../../csharp/language-reference/operators/member-access-operator.md)  
  [外部別名](../../../csharp/language-reference/keywords/extern-alias.md)
-

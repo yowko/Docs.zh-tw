@@ -1,14 +1,10 @@
 ---
 title: "XML 文件註解 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.xml
-dev_langs:
-- CSharp
+f1_keywords: cs.xml
 helpviewer_keywords:
 - XML [C#], code comments
 - comments [C#], XML
@@ -17,29 +13,14 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7f88a85dd493836a17a80310ab4bce8ebf47c23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 408b2de29b15158499067da05dbb2f89eb1ba22f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文件註解 (C# 程式設計手冊)
 在 Visual C# 中，您可以加入程式碼的文件，加入的方法是在原始程式碼中，於註解所參考程式碼區塊之前的特殊註解欄位 (以三個斜線表示) 中加入 XML 項目，例如：  
@@ -78,4 +59,3 @@ public class MyClass{}
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-

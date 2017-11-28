@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
 [上一個](delegates-strongly-typed.md)
@@ -245,4 +243,3 @@ public static void LogMessage(string msg)
 記錄器類別可以進行任意數目的增強或變更，而不需要中斷變更。 與任何類別一樣，修改公用 API 會有中斷變更的風險。 但是，因為記錄器與任何輸出引擎之間的結合程度只能透過委派，所以不會包含其他類型 (例如介面或基底類別)。 結合程度越小越好。
 
 [下一個](events-overview.md)
-

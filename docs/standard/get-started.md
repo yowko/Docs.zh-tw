@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
 ms.openlocfilehash: 29f69cfa5b80f2a73f90e31d58f6b298f3c7ee7b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="get-started"></a>開始使用
 
 開始使用 .NET 的方法有好幾種。  由於 .NET 是大規模的平台，因此本文中提供多份文章，從不同的觀點為您示範開始使用 .NET 的方法。
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="get-started-using-docker-on-net-framework"></a>開始使用 .NET Framework 上的 Docker
 
 [.NET Framework 上的 Docker](../framework/docker/index.md) 會示範如何在 Windows Docker 容器上使用 .NET Framework。
-

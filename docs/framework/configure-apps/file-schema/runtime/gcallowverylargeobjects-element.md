@@ -1,81 +1,83 @@
 ---
-title: "&lt;gcAllowVeryLargeObjects&gt; 項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcAllowVeryLargeObjects> 項目"
-  - "gcAllowVeryLargeObjects 項目"
+title: "&lt;gcAllowVeryLargeObjects&gt;項目"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- gcAllowVeryLargeObjects element
+- <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 49046c343ef749e597402f7e19a08fe1f2c98ca0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;gcAllowVeryLargeObjects&gt; 項目
-在 64 位元平台上，啟用大小超過 2 GB 的陣列。  
+# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt;項目
+在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
   
-## 語法  
+ \<設定 > 項目  
+\<runtime > 項目  
+\<gcAllowVeryLargeObjects > 項目  
   
-```  
+## <a name="syntax"></a>語法  
+  
+```xml  
 <gcAllowVeryLargeObjects    
    enabled="true|false" />  
 ```  
   
-## 屬性和項目  
- 下列章節會說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
-|`enabled`|必要屬性。<br /><br /> 設定在 64 位元平台上是否啟用超過2 GB 的陣列。|  
+|---------------|-----------------|  
+|`enabled`|必要屬性。<br /><br /> 指定是否在 64 位元平台上啟用的總大小大於 2 GB 的陣列。|  
   
-## 啟用屬性  
+## <a name="enabled-attribute"></a>啟用屬性  
   
-|值|描述|  
-|-------|--------|  
-|`false`|未啟用總額超過 2 GB 的陣列。  這是預設值。|  
-|`true`|在 64 位元平台上啟用總額超過 2 GB 的陣列。|  
+|值|說明|  
+|-----------|-----------------|  
+|`false`|不會啟用大於 2 GB 的總大小的陣列。 這是預設值。|  
+|`true`|在 64 位元平台時啟用大於 2 GB 的總大小的陣列。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
-|--------|--------|  
-|`configuration`|Common Language Runtime 和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`runtime`|包含與執行階段初始化選項有關的資訊。|  
+|項目|描述|  
+|-------------|-----------------|  
+|`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
+|`runtime`|包含有關執行階段初始化選項的資訊。|  
   
-## 備註  
- 在您的應用程式組態檔中使用這個元素會啟用超過 2 GB 的陣列，但不會變更其他物件大小或陣列大小的限制：  
+## <a name="remarks"></a>備註  
+ 在應用程式組態檔中使用這個項目可讓陣列是大於 2 GB 的大小，但不會變更其他物件的大小或陣列大小的限制：  
   
--   陣列中數值最大的元素為<xref:System.UInt32.MaxValue?displayProperty=fullName>。  
+-   陣列中元素的數目上限是<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
   
--   位元組陣列和單一位元組結構的陣列在單一維度中的最大的索引值是 2,147,483,591 \(0x7FFFFFC7\)，其他型別陣列則為 2,146,435,071 \(0X7FEFFFFF\)。  
+-   2,147,483,591 (0x7FFFFFC7) 的位元組陣列和陣列的單一位元組結構，而其他類型的 2,146,435,071 (0X7FEFFFFF) 中任何單一維度的最大索引。  
   
--   字串和其他非陣列物件的大小上限不變。  
+-   字串和其他非陣列物件的大小上限不會變更。  
   
 > [!CAUTION]
->  在啟用這個功能之前，請確定您的應用程式沒有假設所有陣列大小小於 2 GB 的不安全程式碼。  例如，程式碼中若假設用來作為緩衝區的陣列不會大於 2 GB ，則緩衝區可能因滿溢而超出陣列範圍，如此即為不安全的程式碼。  
+>  之前啟用此功能，請確定您的應用程式不包含假設所有陣列都都小於 2 GB 大小的 unsafe 程式碼。 例如，使用陣列做為緩衝區的 unsafe 程式碼可能容易受到緩衝區滿溢如果撰寫假設陣列將不會超過 2 GB。  
   
-## 範例  
- 下列範例將示範如何為應用程式啟用舊有的此功能。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何為應用程式啟用此功能。  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <gcAllowVeryLargeObjects enabled="true" />  
@@ -83,6 +85,6 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## 請參閱  
- [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>另請參閱  
+ [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

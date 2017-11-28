@@ -1,54 +1,36 @@
 ---
 title: "陳述式 (C# 程式設計手冊)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 166130ca7a63127d0bd1df8328dc08b4a8cd7845
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4df592821f9bebb318138cffac9045fdbec1e759
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="statements-c-programming-guide"></a>陳述式 (C# 程式設計手冊)
 程式所採取的動作是在陳述式中表示。 根據指定的條件，常見動作包括宣告變數、指派值、呼叫方法、循環執行集合，以及分支到一個或另一個程式碼區塊。 陳述式在程式中的執行順序稱為「控制流程」或「執行流程」。 根據程式如何反應它在執行階段收到的輸入，每次執行程式時，控制流程可能都會不同。  
   
  陳述式可以包含一行以分號結束的程式碼或區塊中的一連串單行陳述式。 陳述式區塊會用 {} 括弧括住，而且可以包含巢狀區塊。 下列程式碼示範兩個單行陳述式範例和多行陳述式區塊範例︰  
   
- [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
 ## <a name="types-of-statements"></a>陳述式類型  
  下表列出 C# 中各種類型的陳述式和其相關聯的關鍵字，以及包含更多資訊的主題連結︰  
   
 |分類|C# 關鍵字/附註|  
 |--------------|---------------------------|  
-|宣告陳述式|宣告陳述式引進新的變數或常數。 變數宣告可以將值選擇性指派給變數。 在常數宣告中，需要進行指派。<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
-|運算式陳述式|計算值的運算式陳述式必須將值儲存在變數中。<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
+|宣告陳述式|宣告陳述式引進新的變數或常數。 變數宣告可以將值選擇性指派給變數。 在常數宣告中，需要進行指派。<br /><br /> [!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
+|運算式陳述式|計算值的運算式陳述式必須將值儲存在變數中。<br /><br /> [!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
 |[選取範圍陳述式](../../../csharp/language-reference/keywords/selection-statements.md)|選取範圍陳述式可讓您根據一或多個指定的條件，分支到不同的程式碼區段。 如需詳細資訊，請參閱下列主題：<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md)、[else](../../../csharp/language-reference/keywords/if-else.md)、[switch](../../../csharp/language-reference/keywords/switch.md)、[case](../../../csharp/language-reference/keywords/switch.md)|  
 |[反覆運算陳述式](../../../csharp/language-reference/keywords/iteration-statements.md)|反覆運算陳述式可讓您循環執行如陣列這類集合，或重複執行同一組陳述式，直到符合指定的條件為止。 如需詳細資訊，請參閱下列主題：<br /><br /> [do](../../../csharp/language-reference/keywords/do.md)、[for](../../../csharp/language-reference/keywords/for.md)、[foreach](../../../csharp/language-reference/keywords/foreach-in.md)、[in](../../../csharp/language-reference/keywords/foreach-in.md)、[while](../../../csharp/language-reference/keywords/while.md)|  
 |[跳躍陳述式](../../../csharp/language-reference/keywords/jump-statements.md)|跳躍陳述式會將控制權轉移給另一個程式碼區段。 如需詳細資訊，請參閱下列主題：<br /><br /> [break](../../../csharp/language-reference/keywords/break.md)、[continue](../../../csharp/language-reference/keywords/continue.md)、[default](../../../csharp/language-reference/keywords/switch.md)、[goto](../../../csharp/language-reference/keywords/goto.md)、[return](../../../csharp/language-reference/keywords/return.md)、[yield](../../../csharp/language-reference/keywords/yield.md)|  
@@ -59,30 +41,30 @@ ms.lasthandoff: 09/25/2017
 |`fixed` 陳述式|fixed 陳述式可防止記憶體回收行程重新配置可移動的變數。 如需詳細資訊，請參閱 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)。|  
 |`lock` 陳述式|lock 陳述式可讓您限制一次只能存取一個執行緒的程式碼區塊。 如需詳細資訊，請參閱 [lock](../../../csharp/language-reference/keywords/lock-statement.md)。|  
 |標記陳述式|您可以提供陳述式標籤，然後使用 [goto](../../../csharp/language-reference/keywords/goto.md) 關鍵字跳到標記陳述式。 (請參閱下面一列中的範例)。|  
-|空陳述式|空陳述式包含一個分號。 它不會執行任何作業，而且可以用於需要陳述式但不需要執行任何動作的位置。 下列範例示範空陳述式的兩種用法：<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
+|空陳述式|空陳述式包含一個分號。 它不會執行任何作業，而且可以用於需要陳述式但不需要執行任何動作的位置。 下列範例示範空陳述式的兩種用法：<br /><br /> [!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## <a name="embedded-statements"></a>內嵌陳述式  
  某些陳述式 (包含 [do](../../../csharp/language-reference/keywords/do.md)、[while](../../../csharp/language-reference/keywords/while.md)、[for](../../../csharp/language-reference/keywords/for.md) 和 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)) 的後面一律會有內嵌陳述式。 內嵌陳述式可能是單一陳述式或陳述式區塊中用 {} 括弧括住的多個陳述式。 甚至單行內嵌陳述式可以用 {} 括弧括住，如下列範例所示︰  
   
- [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
  未以 {} 括弧括住的內嵌陳述式不能是宣告陳述式或標記陳述式。 下列範例會顯示這一點：  
   
- [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   
  將內嵌的陳述式放入區塊中來修正錯誤︰  
   
- [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
   
 ## <a name="nested-statement-blocks"></a>巢狀陳述式區塊  
  陳述式區塊可以是巢狀，如下列程式碼所示︰  
   
- [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
   
 ## <a name="unreachable-statements"></a>無法達到的陳述式  
  如果編譯器判斷控制流程在任何情況下都永遠達不到特定陳述式，則會產生警告 CS0162，如下列範例所示︰  
   
- [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
   
 ## <a name="related-sections"></a>相關章節  
   
@@ -97,4 +79,3 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-

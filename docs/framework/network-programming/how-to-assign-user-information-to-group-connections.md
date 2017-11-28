@@ -8,21 +8,18 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c9a89b8164fce02f74ddbabae3d54eb8af830dec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>如何：將使用者資訊指派給群組連接
 
@@ -121,6 +118,5 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [管理連線](../../../docs/framework/network-programming/managing-connections.md)   
+ [管理連接](../../../docs/framework/network-programming/managing-connections.md)  
  [連線群組](../../../docs/framework/network-programming/connection-grouping.md)
-

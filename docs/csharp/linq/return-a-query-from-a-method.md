@@ -1,22 +1,20 @@
 ---
 title: "從方法傳回查詢"
 description: "如何傳回查詢。"
-keywords: ".NET、.NET Core、C#"
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
+ms.openlocfilehash: c1b69e3f5f0cd2c50ae80d2454e6b7f13dc30344
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 747345f0a765bc6cbe947a2b0c7bc025eb599550
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何：從方法傳回查詢 (C# 程式設計手冊)
 這個範例示範如何以傳回值和 `out` 參數形式從方法中傳回查詢。  
@@ -26,8 +24,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  在下列範例中，第一個方法會以傳回值形式傳回查詢，第二個方法會以 `out` 參數形式傳回查詢。 請注意，在這兩種情況下，它是傳回的查詢，而不是查詢結果。  
   
- [!code-cs[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>另請參閱  
  [LINQ 查詢運算式](index.md)
-

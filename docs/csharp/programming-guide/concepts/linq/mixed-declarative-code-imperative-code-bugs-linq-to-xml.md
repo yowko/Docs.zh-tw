@@ -1,30 +1,21 @@
 ---
 title: "混合的宣告式程式碼-命令式程式碼 Bug (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 328a266d910e57dc089991ead5fe09a87e722688
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2fb679ee2593520e633daba969ccaa4db4d30509
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各種方法，可讓您直接修改 XML 樹狀結構。 您可以加入項目、刪除項目、變更項目的內容、加入屬性等等。 [修改 XML 樹狀結構 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md) 會說明這個程式發展介面。 如果您要逐一查看其中一個座標軸 (例如，<xref:System.Xml.Linq.XContainer.Elements%2A>)，而且您要在逐一查看座標軸時修改 XML 樹狀結構，您可以解決一些奇怪的 Bug。  
@@ -187,4 +178,3 @@ Console.WriteLine(newRoot);
   
 ## <a name="see-also"></a>另請參閱  
  [進階 LINQ to XML 程式設計 (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

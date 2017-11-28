@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
 
 委派可定義指定特定方法簽章的類型。 符合此簽章的方法 (靜態或執行個體) 可指派給該類型的變數，然後直接呼叫 (使用適當的引數)，或當做引數本身傳遞至另一個方法，再進行呼叫。 下列範例示範委派的用法。
@@ -157,4 +155,3 @@ public MainWindow()
 *   [委派](https://msdn.microsoft.com/library/ms173171.aspx)
 *   [匿名函式](https://msdn.microsoft.com/library/bb882516.aspx)
 *   [Lambda 運算式](https://msdn.microsoft.com/library/bb397687.aspx)
-

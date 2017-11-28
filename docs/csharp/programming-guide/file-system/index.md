@@ -1,39 +1,22 @@
 ---
-title: "檔案系統和登錄 (C# 程式設計指南) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "檔案系統和登錄 (C# 程式設計手冊)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df97127bb3c018cd361217505dbc88e2268cfac9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3d1b4e3fa9b6c6da89abd242be855e9fb7c16dd6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>檔案系統和登錄 (C# 程式設計手冊)
 下列主題示範如何使用 C# 和 .NET Framework 來針對檔案、資料夾及登錄執行各種基本作業。  
@@ -62,4 +45,3 @@ ms.lasthandoff: 03/13/2017
  [檔案、資料夾和磁碟機](../../../csharp/programming-guide/file-system/index.md)  
   
  <xref:System.IO?displayProperty=nameWithType>
-

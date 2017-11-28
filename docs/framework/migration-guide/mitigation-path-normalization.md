@@ -1,5 +1,5 @@
 ---
-title: "風險降低︰路徑正規化 | Microsoft Docs"
+title: "風險降低︰路徑正規化"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0579bb975a62e512062b10d39c2967cdcd23438f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
-
+ms.openlocfilehash: e30099e315f88bd051dca2e1f6c83d1bccc49569
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-path-normalization"></a>風險降低︰路徑正規化
 從以 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
@@ -73,4 +72,3 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>另請參閱  
  [重定目標變更](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
-

@@ -5,18 +5,16 @@ author: spboyer
 keywords: ".NET, 容器, 主控台, 應用程式"
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 
 主控台應用程式的用途有許多種；從簡單的狀態查詢，到長時間執行的文件影像處理工作。 在任何情況下，您都可以啟動並調整這些應用程式的規模，但具有硬體取得、啟動時間或執行多個執行個體的限制。
@@ -86,7 +84,7 @@ Docerkfile 中的第一行會使用 [`FROM`](https://docs.docker.com/engine/refe
 ## <a name="creating-the-image"></a>建立映像
 若要建立 Docker 映像，請將下列程式碼加入 *build.ps1* 指令碼。 執行指令碼時，會使用從 MSBuild 編譯的資產來建立 `console-random-answer-generator` 映像，如[建置應用程式](#building-the-application)一節中所定義。
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {
@@ -145,4 +143,3 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>總結
 只要加入 Dockerfile 並發行應用程式，您就可以容器化 .NET Framework 主控台應用程式，並立即利用執行多個執行個體、正常啟動和停止及更多 Windows Server 2016 功能，完全不需要對應用程式程式碼進行任何變更。
-

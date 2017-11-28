@@ -1,30 +1,21 @@
 ---
 title: "執行緒共用 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>執行緒共用 (C#)
 「執行緒集區」是可用來在背景執行數項工作的執行緒集合。 (如需背景資訊，請參閱[執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md))。這可讓主要執行緒非同步地執行其他工作。  
@@ -37,7 +28,7 @@ ms.lasthandoff: 07/28/2017
   
  您可以實作自己的執行緒集區，但透過 <xref:System.Threading.ThreadPool> 類別較容易使用 .NET Framework 所提供的執行緒集區。  
   
- 使用執行緒集區，您可以使用您要執行之程序的委派來呼叫 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> 方法，而 C# 會建立執行緒並執行您的程序。  
+ 使用執行緒集區，您可以使用您要執行之程序的委派來呼叫 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 方法，而 C# 會建立執行緒並執行您的程序。  
   
 ## <a name="thread-pooling-example"></a>執行緒共用範例  
  下列範例示範如何使用執行緒共用來啟動數個工作。  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  結構無法用來傳回狀態物件內的值。 因為結構是實值型別，所以非同步處理程序所進行的變更不會變更原始結構的成員。 使用結構，以在不需要傳回值時提供參數。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [如何：使用執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [執行緒處理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [如何：使用執行緒集區 (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [執行緒 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [多執行緒應用程式 (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [執行緒同步處理 (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

@@ -5,28 +5,18 @@ ms.date: 02-02-2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 40567576716b5ae665f176677fc877db38370a9c
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e81eb0717dc60f6b4a9df26eedbbe8a3d2ff1ccd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
 Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。 傳統上，針對資料的查詢是以簡單字串表示，而不會在編譯期間進行型別檢查，或提供 IntelliSense 支援。 此外，您必須針對每個資料來源型別 (例如 SQL 資料庫、XML 文件、各種 Web 服務等等) 學習不同的查詢語言。 透過 LINQ，查詢會是第一級語言建構，和類別、方法及事件相同。
@@ -35,7 +25,7 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 
 下列範例示範完整的查詢作業。 完整的作業包括建立資料來源、定義查詢運算式，並在 `foreach` 陳述式中執行查詢。
 
-[!code-cs[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>查詢運算式概觀
 
@@ -67,7 +57,6 @@ Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# �
 若要深入了解 LINQ 的一般資訊，請參閱 [C# 中的 LINQ](../../../linq/linq-in-csharp.md)。
 
 若要開始使用 C# 中的 LINQ，請參閱[使用 LINQ](../../../tutorials/working-with-linq.md) 教學課程。
-
 
 
 

@@ -17,16 +17,15 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>全球化和當地語系化 .NET Framework 應用程式
 開發[世界通用的應用程式](http://msdn.microsoft.com/goglobal/bb978433.aspx)，包括可以當地語系化為一種或多種語言的應用程式，這項開發工作包含三個步驟：全球化、可當地語系化檢閱，以及當地語系化。  
@@ -67,7 +66,7 @@ ms.lasthandoff: 09/05/2017
  說明進行全球化、當地語系化和開發世界性的 ASP.NET 的最佳實施方針。  
   
 ## <a name="reference"></a>參考資料  
- <xref:System.Globalization?displayProperty=fullName> 命名空間  
+ <xref:System.Globalization?displayProperty=nameWithType> 命名空間  
  包含類別，定義與文化特性相關的資訊，包括語言、國家/地區、使用中的日曆、日期、貨幣和數字的格式模式，以及字串的排序順序。  
   
  <xref:System.Resources> 命名空間  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/05/2017
   
  [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  描述如何使用 Winres.exe 將 Windows Form 表單當地語系化。
-

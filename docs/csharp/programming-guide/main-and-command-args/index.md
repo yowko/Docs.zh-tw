@@ -1,16 +1,13 @@
 ---
 title: "Main() 和命令列引數 (C# 程式設計指南)"
-ms.date: 2017-08-02
+ms.date: 08/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS5001
 - main_CSharpKeyword
 - Main
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - Main method [C#]
 - C# language, command-line arguments
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ab0b93a867ecf252bffd529d284ef9ddcc9163ba
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: d019d1c5757a961c03439d756e808ae13fd8a67b
-ms.openlocfilehash: 51408654abd0dcd2f7159438b507c44bd579bfd9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -48,7 +30,7 @@ ms.lasthandoff: 08/03/2017
 
  C# 程式中只能有一個進入點。 如果您具有多個含 `Main` 方法的類別，就必須使用 **/main** 編譯器選項來編譯您的程式，以指定要使用哪一個 `Main` 方法做為進入點。 如需詳細資訊，請參閱 [/main (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。
 
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+ [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
 
 ## <a name="overview"></a>概觀
 
@@ -69,4 +51,3 @@ ms.lasthandoff: 08/03/2017
 [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
 [C# 程式深入解析](../../../csharp/programming-guide/inside-a-program/index.md)
-

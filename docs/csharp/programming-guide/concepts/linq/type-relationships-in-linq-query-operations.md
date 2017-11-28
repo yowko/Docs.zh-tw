@@ -1,15 +1,12 @@
 ---
 title: "LINQ 查詢作業中的類型關聯性 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
 - data sources [LINQ in C#], type relationships
@@ -21,30 +18,14 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a088a7f673a9f6aea7a0f50e18746259171bb7e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e33936ce2398cea782ec1f4272f22d9c3fc049e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 查詢作業中的類型關聯性 (C#)
 若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。 如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 範例和程式碼範例。 此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。  
@@ -94,4 +75,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>另請參閱  
  [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

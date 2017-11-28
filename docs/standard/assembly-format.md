@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
+ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 47e895274f6d400639878e0bd5c700e04b554ce5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
 .NET 定義用來完整描述並包含 .NET 程式的二進位檔案格式 - "assembly"。 組件用於程式本身以及任何相依的程式庫。 除了適當的 .NET 實作之外，.NET 程式也可以執行為一或多個沒有其他必要成品的組件。 雖然有時會使用這種格式 (例如，WinRT) 進行描述，但是原生相依性 (包括作業系統 API) 會有不同的考量，而且不會包含在 .NET 組件格式內。
@@ -40,5 +38,4 @@ ms.lasthandoff: 08/21/2017
 
 ## <a name="processing-the-assemblies"></a>處理組件
 
-可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=fullName> 和 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的之工具的不錯範例。
-
+可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=nameWithType> 和 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的之工具的不錯範例。

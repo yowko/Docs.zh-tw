@@ -1,39 +1,21 @@
 ---
 title: "查詢關鍵字 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 30526e7bc4f99110d421855866381d9b7934d31c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6dadce6d48e711032cca03a7f7c2ba02360e685f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-keywords-c-reference"></a>查詢關鍵字 (C# 參考)
 本節包含查詢運算式中所使用的內容關鍵字。  
@@ -58,8 +40,7 @@ ms.lasthandoff: 07/28/2017
 |[descending](../../../csharp/language-reference/keywords/descending.md)|[orderby](../../../csharp/language-reference/keywords/orderby-clause.md) 子句中的內容關鍵字。|  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [LINQ (Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)  
+ [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

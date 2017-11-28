@@ -1,30 +1,21 @@
 ---
 title: "如何：從 XML 檔案讀取物件資料 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6a3389de2f3272a546a7380ef386f5d88666e6d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02ff7a209cd78c70c6e3c443105d27b33c6f0af4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何：從 XML 檔案讀取物件資料 (C#)
 此範例會讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
@@ -79,8 +70,7 @@ public void ReadXML()
  永遠會驗證輸入，而且絕不會還原序列化來自未受信任來源的資料。 重新建立的物件會以還原序列化該物件之程式碼的權限，在本機電腦上執行。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.IO.StreamWriter>   
- [如何：將物件資料寫入 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)   
- [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ <xref:System.IO.StreamWriter>  
+ [如何：將物件資料寫入到 XML 檔案 (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [序列化 (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
-

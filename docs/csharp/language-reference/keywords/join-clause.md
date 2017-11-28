@@ -1,42 +1,24 @@
 ---
 title: "join 子句 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
 `join` 子句可用於將不同來源序列中的項目產生關聯，這些項目在物件模型中沒有直接關聯性。 唯一的需求是每個來源中的項目必須共用可比較是否相等的特定值。 例如，食品經銷商可能有一份特定產品的供應商清單，以及一份買家清單。 針對位於相同指定地區的所有供應商和買家，可使用 `join` 子句來建立該產品的供應商和買家清單。  
@@ -52,14 +34,14 @@ ms.lasthandoff: 07/28/2017
 ## <a name="inner-join"></a>內部聯結  
  下列範例顯示一個簡單的內部等聯結。 此查詢會產生「產品名稱/分類」配對的一般序列。 相同的分類字串會出現在多個項目中。 如果 `categories` 中有某個項目具有不相符的 `products`，則該分類不會出現在結果中。  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  如需詳細資訊，請參閱[如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)。  
   
 ## <a name="group-join"></a>群組聯結  
  具有 `into` 運算式的 `join` 子句稱為群組聯結。  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  群組聯結會產生階層式結果序列，將左側來源序列中的項目與右側來源序列中的一或多個相符項目產生關聯。 群組聯結從關聯式觀點來看沒有對等項目，它基本上是物件陣列的序列。  
   
@@ -69,14 +51,14 @@ ms.lasthandoff: 07/28/2017
   
  您當然也可以使用群組聯結的結果，作為另一個子查詢的產生器：  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  如需詳細資訊，請參閱[如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)。  
   
 ## <a name="left-outer-join"></a>左外部聯結  
  在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。 若要在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中執行左方外部聯結，請搭配群組聯結使用 `DefaultIfEmpty` 方法，以指定在左側項目沒有相符項目時所要產生的預設右側項目。 您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。 在下列範例中，會顯示使用者定義的預設類型：  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  如需詳細資訊，請參閱[如何：執行左方外部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)。  
   
@@ -97,20 +79,19 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>範例  
  下列範例使用相同的比對索引鍵，來比較相同資料來源中內部聯結、群組聯結和左方外部聯結的結果。 這些範例中新增了一些額外的程式碼，以釐清主控台顯示中的結果。  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>備註  
- 後面沒有 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 後面接著 `into` 的 `join` 子句會轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
+ 如果 `join` 子句沒有後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 如果 `join` 子句後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Join Operations](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107) (聯結作業)   
- [group 子句](../../../csharp/language-reference/keywords/group-clause.md)   
- [如何：執行左方外部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [如何：排序 Join 子句的結果](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [如何：安裝範例資料庫](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
-
+ [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [聯結作業](../../programming-guide/concepts/linq/join-operations.md)  
+ [group 子句](../../../csharp/language-reference/keywords/group-clause.md)  
+ [如何：執行左方外部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [如何：執行內部聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [如何：執行群組聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [如何：排序 Join 子句的結果](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [如何：使用複合索引鍵執行聯結](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [如何：安裝範例資料庫](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106e1ae03a39594aab907e130c139b84f579257d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f4e4eebce1779f1b32a74819fea19fb23204b80c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Application&gt; 項目 (.NET Native)
 做為容器，以包含整個應用程式中，可在執行階段將中繼資料用於反映的類型和類型成員，並將執行階段反映原則套用至應用程式中的所有程式元素。  
   
- \<Directives> 元素  
+ \<Directives> 項目  
 \<Application> 元素 (rd.xml)  
   
 ## <a name="syntax"></a>語法  
@@ -53,9 +51,9 @@ ms.lasthandoff: 08/21/2017
 |`Browse`|反射|選擇性屬性。 控制對類型相關資訊的查詢，或控制類型的列舉，但不會在執行階段啟用任何動態存取。|  
 |`Dynamic`|反射|選擇性屬性。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。|  
 |`Serialize`|序列化|選擇性屬性。 控制建構函式、欄位和屬性的執行階段存取，以便 Newtonsoft JSON 序列化程式等程式庫可對類型執行個體進行序列化和還原序列化。|  
-|`DataContractSerializer`|序列化|選用的屬性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 類別的序列化原則。|  
-|`DataContractJsonSerializer`|序列化|選用的屬性。 控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> 類別的 JSON 序列化原則。|  
-|`XmlSerializer`|序列化|選用的屬性。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 類別的 XML 序列化原則。|  
+|`DataContractSerializer`|序列化|選用的屬性。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。|  
+|`DataContractJsonSerializer`|序列化|選用的屬性。 控制使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。|  
+|`XmlSerializer`|序列化|選用的屬性。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 類別的 XML 序列化原則。|  
 |`MarshalObject`|Interop|選用的屬性。 控制 Windows 執行階段和 COM 之參考類型的封送處理原則。|  
 |`MarshalDelegate`|Interop|選用的屬性。 控制將委派類型當作函式指標封送處理至機器碼的原則。|  
 |`MarshalStructure`|Interop|選用的屬性。 控制將結構封送處理至機器碼的原則。|  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/21/2017
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將原則套用至特定組件中的所有類型。|  
 |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將原則套用至特定命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將原則套用至特定類型，例如類別或結構。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將原則套用至建構的泛型類型。 例如，[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 元素可用來定義 `List<String>` 類型的原則。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將原則套用至建構的泛型類型。 例如，[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目可用來定義 `List<String>` 類型的原則。|  
 |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將原則套用至特定類型上的方法。|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|將原則套用至建構的泛型方法。|  
 |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|將原則套用至特定類型上的屬性。|  
@@ -96,8 +94,7 @@ ms.lasthandoff: 08/21/2017
 -   做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 `<Application>` 元素的屬性會定義整個應用程式原則，這可能會被 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定義的子元素覆寫。  
   
 ## <a name="see-also"></a>另請參閱  
- [\<Library> 元素](../../../docs/framework/net-native/library-element-net-native.md)   
- [\<Directives> 元素](../../../docs/framework/net-native/directives-element-net-native.md)   
- [執行階段指示詞元素](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [\<文件庫 > 項目](../../../docs/framework/net-native/library-element-net-native.md)  
+ [\<指示詞 > 項目](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-

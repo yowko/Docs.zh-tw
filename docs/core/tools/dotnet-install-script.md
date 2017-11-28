@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 2f15f37016fe824d76b501e4793e0b28bbdbe167
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
 ## <a name="name"></a>名稱
@@ -158,4 +156,3 @@ macOS/Linux：
 
 [.NET Core 版本](https://github.com/dotnet/core/releases)   
 [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
-

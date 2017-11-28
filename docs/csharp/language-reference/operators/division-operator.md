@@ -1,41 +1,22 @@
 ---
 title: "/ 運算子 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: /_CSharpKeyword
 helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9e12e5c472266ea75d3f572a2091bd0784ea5dcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2972261996467f987fa457213b1bcb482d9f1519
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>/ 運算子 (C# 參考)
 除法運算子 (`/`) 會將它的第一個運算元除以第二個運算元。 所有數字類型都有預先定義的除法運算子。  
@@ -46,10 +27,9 @@ ms.lasthandoff: 07/28/2017
  分割兩個整數時，結果一律會是整數。 例如，7/3 的結果是 2。 若要判斷 7/3 的餘數，請使用餘數運算子 ([%](../../../csharp/language-reference/operators/modulus-operator.md))。 若要取得商數作為有理數或分數，則會提供被除數或除數類型 `float` 或 `double` 類型。 如果您將數字放在小數點右邊以將被除數或除數表示為小數，則可以隱含地指派類型，如下列範例所示。  
   
 ## <a name="example"></a>範例  
- [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
+ [!code-csharp[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 運算子](../../../csharp/language-reference/operators/index.md)
-

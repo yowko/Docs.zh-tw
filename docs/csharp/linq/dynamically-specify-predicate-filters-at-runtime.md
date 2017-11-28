@@ -1,22 +1,20 @@
 ---
 title: "在執行階段動態指定述詞篩選"
 description: "如何在執行階段動態指定述詞篩選。"
-keywords: ".NET、.NET Core、C#"
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
+ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e724428bce09e2b2fa20b9391ad131424e16413
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在執行階段動態指定述詞篩選
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 07/28/2017
   
 4.  使用下列程式碼取代 `Program` 類別。  
   
-     [!code-cs[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
+     [!code-csharp[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  將下列行新增至 `ids` 宣告下之 `DynamicPredicates` 類別中的 `Main` 方法。  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  將下列方法複製並貼入 `DynamicPredicates` 類別中。  
   
-     [!code-cs[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
+     [!code-csharp[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  在 `Main` 方法中，使用下列呼叫取代 `QueryByID` 的呼叫，將 `args` 陣列的第一個項目傳送為其引數︰`QueryByYear(args[0])`。  
   
@@ -78,6 +76,5 @@ ms.lasthandoff: 07/28/2017
   
  
 ## <a name="see-also"></a>另請參閱  
- [LINQ 查詢運算式](index.md)   
+ [LINQ 查詢運算式](index.md)  
  [where 子句](../language-reference/keywords/where-clause.md)
-

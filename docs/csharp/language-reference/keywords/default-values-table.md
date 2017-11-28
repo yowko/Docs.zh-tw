@@ -1,13 +1,10 @@
 ---
 title: "預設值表 (C# 參考)"
 descripton: Learn what are the default values of value types returned by the default constructors.
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - constructors [C#], default constructor
 - types [C#], default constructor return values
 ms.assetid: 4af2c1df-9e3a-48c1-83ac-b192986fc5bc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7f692ee1242af88dc6bd3938f7a00f3d11ed8ca7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: f8cf12317f1f0163028db003ff31604480da5d1c
-ms.openlocfilehash: 975d416259778e0741347829d8a9c79aaa6cfc8c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-values-table-c-reference"></a>預設值表 (C# 參考)
 下表顯示預設建構函式所傳回之實值型別的預設值。 預設建構函式是透過 `new` 運算子來叫用，如下所示：
@@ -77,10 +58,9 @@ int myInt = 0;
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|0|
 
 ## <a name="see-also"></a>請參閱
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [實值型別表](../../../csharp/language-reference/keywords/value-types-table.md)   
- [實值型別](../../../csharp/language-reference/keywords/value-types.md)   
- [內建類型表](../../../csharp/language-reference/keywords/built-in-types-table.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [實值型別表](../../../csharp/language-reference/keywords/value-types-table.md)  
+ [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
+ [內建型別表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

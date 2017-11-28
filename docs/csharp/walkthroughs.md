@@ -1,40 +1,22 @@
 ---
 title: "C# 逐步解說"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
@@ -44,7 +26,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="in-this-section"></a>本章節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- 說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) (已在 [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)] 中引入) 建立非同步方案。  
+ 說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 建立非同步解決方案。  
   
  [以 C# 或 Visual Basic 建立 Windows 執行階段元件，然後從 JavaScript 呼叫該元件](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  顯示如何建立 [!INCLUDE[wrt](~/includes/wrt-md.md)]類型，並將其封裝為 [!INCLUDE[wrt](~/includes/wrt-md.md)]元件，然後從 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式呼叫元件，而應用程式使用 JavaScript 針對 Windows 所建置。  
@@ -93,6 +75,5 @@ ms.lasthandoff: 07/28/2017
  提供通用部署情節的逐步範例。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計指南](../csharp/programming-guide/index.md)   
+ [C# 程式設計指南](../csharp/programming-guide/index.md)  
  [Visual Studio 範例](/visualstudio/ide/visual-studio-samples)
-

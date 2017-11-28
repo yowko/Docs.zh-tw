@@ -1,74 +1,73 @@
 ---
-title: "WCF 的 &lt;workflow&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 的 &lt;workflow&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ff25c5f79989cdc7a2ed85f9bce10da9c3a862e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 的 &lt;workflow&gt;
-設定追蹤參與者，這些參與者會接聽執行階段直接發出的追蹤記錄並處理記錄，無論記錄的設定為何。  這包括寫入至特定的輸出 \(例如檔案、主控台、ETW\)、處理\/彙總記錄，或任何其他可能需要的組合。  
+# <a name="ltworkflowgt-of-wcf"></a>WCF 的 &lt;workflow&gt;
+設定追蹤參與者，這些參與者會接聽執行階段直接發出的追蹤記錄並處理記錄，無論記錄的設定為何。 這包括寫入至特定的輸出 (例如檔案、主控台、ETW)、處理/彙總記錄，或任何其他可能需要的組合。  
   
- 如需工作流程追蹤及追蹤參與者的詳細資訊，請參閱[工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)和[追蹤參與者](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md)。  
+ 如需工作流程追蹤和追蹤參與者的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  
   
-## 語法  
+ \<system.serviceModel >  
+\<追蹤 >  
+\<參與者 >  
+\<add>  
   
-```vb  
+## <a name="syntax"></a>語法  
   
-<tracking>   
-   <participants>   
-      <add name="String"   
-           profileName="String"  
-           type="String" />   
-   </participants>   
-</tracking>  
-  
+```xml
+   <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>   
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |項目|描述|  
-|--------|--------|  
+|-------------|-----------------|  
 |name|指定追蹤參與者名稱的字串。|  
 |profileName|指定追蹤設定檔名稱的字串，該設定檔定義了追蹤參與者已訂閱的追蹤記錄。|  
 |類型|指定追蹤參與者型別的字串。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<participants\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|追蹤參與者的清單。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<參與者 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|追蹤參與者的清單。|  
   
-## 備註  
- 追蹤參與者是用來取得自工作流程發出的追蹤資料，然後將資料儲存至不同的媒體。  同樣地，追蹤記錄的任何後期處理也可在追蹤參與者之中完成。  
+## <a name="remarks"></a>備註  
+ 追蹤參與者是用來取得自工作流程發出的追蹤資料，然後將資料儲存至不同的媒體。 同樣地，追蹤記錄的任何後期處理也可在追蹤參與者之中完成。  
   
- 多個追蹤參與者可同時使用追蹤事件。  每個追蹤參與者都可以與不同的追蹤設定檔相關聯。  
+ 多個追蹤參與者可同時使用追蹤事件。 每個追蹤參與者都可以與不同的追蹤設定檔相關聯。  
   
- 此處提供標準的追蹤參與者，可將追蹤記錄寫入至 ETW 工作階段。  透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。  啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。  如果不符合需求，您也可以寫入自訂的追蹤參與者。  
+ 此處提供標準的追蹤參與者，可將追蹤記錄寫入至 ETW 工作階段。 透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。 啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
   
-## 範例  
+## <a name="example"></a>範例  
  以下組態範例顯示在 Web.config 檔案中設定的標準 ETW 追蹤參與者。  
   
- ETW 追蹤參與者用來寫入追蹤記錄至 ETW 的提供者識別碼會定義於 `<diagnostics>` 區段。  追蹤參與者擁有與其相關聯的設定檔，以指定已經訂閱的追蹤記錄。  這是由 `<add>` 項目的 `profileName` 屬性所定義。  一旦這些定義完成，追蹤參與者就會加入至 `<etwTracking>` 服務行為。  如此會將選取的追蹤參與者加入至工作流程執行個體的擴充，因此，追蹤參與者可開始接收追蹤記錄。  
+ ETW 追蹤參與者用來寫入追蹤記錄至 ETW 的提供者識別碼會定義於 `<diagnostics>` 區段。 追蹤參與者擁有與其相關聯的設定檔，以指定已經訂閱的追蹤記錄。 這是由 `profileName` 項目的 `<add>` 屬性所定義。 一旦這些定義完成，追蹤參與者就會加入至 `<etwTracking>` 服務行為。 如此會將選取的追蹤參與者加入至工作流程執行個體的擴充，因此，追蹤參與者可開始接收追蹤記錄。  
   
-```  
-  
+```xml  
 <configuration>   
   <system.web>   
     <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
@@ -93,9 +92,9 @@ caps.handback.revision: 3
 </configuration>  
 ```  
   
-## 請參閱  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>   
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehavior>   
- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [追蹤參與者](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
+ <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
+ [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

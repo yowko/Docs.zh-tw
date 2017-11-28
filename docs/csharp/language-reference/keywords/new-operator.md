@@ -1,38 +1,19 @@
 ---
 title: "new 運算子 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- new operator keyword [C#]
+helpviewer_keywords: new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 59e1cc2006548df9a7a10283a34044040e5c2fef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 用以建立物件及叫用建構函式。 例如：  
@@ -73,7 +54,7 @@ int i = 0;
 ## <a name="example"></a>範例  
  下例使用 `new` 運算子建立並初始化 `struct` 物件和類別物件，然後為物件指派值。 顯示預設值和指派的值。  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  請注意，範例中的字串預設值是 `null`。 因此，不會顯示。  
   
@@ -81,10 +62,9 @@ int i = 0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-

@@ -1,25 +1,21 @@
 ---
 title: "如何：尋找子項目的子系 (XPath-LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 873cfe6a725a932ac4616e7ccf0ea11e3f6479f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b645290b6cac55e48be0b15a33307f53c08edd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>如何：尋找子項目的子系 (XPath-LINQ to XML) (C#)
 本主題顯示如何利用特定名稱取得子項目的子代項目。  
@@ -89,4 +85,3 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>另請參閱  
  [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

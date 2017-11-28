@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
+ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 19744773d18f6ea43e4b4a7518405b60e6b53acf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 Hello World 應用程式進行偵錯
 
 截至目前為止，您已遵循[在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](.\with-visual-studio.md)或[在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式](vb-with-visual-studio.md)中的步驟，建立並執行簡單的主控台應用程式。 在您撰寫並編譯應用程式之後，便可以開始測試它。 Visual Studio 包含一組完整的偵錯工具，可供您在針對應用程式進行測試和疑難排解時使用。
@@ -65,13 +63,13 @@ ms.lasthandoff: 08/14/2017
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 在 [即時運算視窗] 中輸入`date = new DateTime(2016,11,01,11,59,00)`，然後按 Enter 鍵。
 
-   此 [即時運算視窗] 會顯示字串變數的值和 @System.DateTime 值的屬性。 此外，[自動變數] 和 [區域變數] 視窗中變數的值也會更新。
+   此 [即時運算視窗] 會顯示字串變數的值和 <xref:System.DateTime> 值的屬性。 此外，[自動變數] 和 [區域變數] 視窗中變數的值也會更新。
 
    ![[自動變數] 視窗和 [即時運算] 視窗](./media/debugging-with-visual-studio/autosimmediate.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. 在 [即時運算視窗] 中輸入`currentDate = new DateTime(2016,11,01,11,59,00)`，然後按 Enter 鍵。
 
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the @System.DateTime value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
+<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
 
    ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
 -->
@@ -119,9 +117,9 @@ ms.lasthandoff: 08/14/2017
 
 1. 在主控台視窗中，於提示您輸入名稱時，按 Enter 鍵。
 
-1. 由於已經滿足我們指定的條件 (`name` 是 `null` 或 <xref:System.String.Empty?displayProperty=fullName>)，因此程式會在到達中斷點且在 `Console.WriteLine` 方法執行之前，停止執行。
+1. 由於已經滿足我們指定的條件 (`name` 是 `null` 或 <xref:System.String.Empty?displayProperty=nameWithType>)，因此程式會在到達中斷點且在 `Console.WriteLine` 方法執行之前，停止執行。
 
-1. 選取 [區域變數] 視窗，此視窗會顯示目前正在執行之方法 (在您的程式中為 `Main` 方法) 的區域變數值。 注意到 `name` 變數的值會是 `""` 或 <xref:System.String.Empty?displayProperty=fullName>。
+1. 選取 [區域變數] 視窗，此視窗會顯示目前正在執行之方法 (在您的程式中為 `Main` 方法) 的區域變數值。 注意到 `name` 變數的值會是 `""` 或 <xref:System.String.Empty?displayProperty=nameWithType>。
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. 請在 [即時運算視窗] 中輸入下列陳述式來確認此值是空字串。 結果為 `true`。
@@ -175,13 +173,13 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 
 1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示包含 `name` 變數指派的陳述式。 [自動變數] 視窗顯示的 `name` 是 `null` (在 C# 中) 或 `Nothing` (在 Visual Basic 中)，而主控台視窗則會顯示 "What is your name?" 字串。
 
-1. 在主控台視窗中輸入一個字串並按 Enter，以回應提示。 主控台不會有回應，您輸入的字串也不會顯示在主控台視窗中，但 <xref:System.Console.ReadLine%2A?displayProperty=fullName> 方法仍然會擷取您的輸入。
+1. 在主控台視窗中輸入一個字串並按 Enter，以回應提示。 主控台不會有回應，您輸入的字串也不會顯示在主控台視窗中，但 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 方法仍然會擷取您的輸入。
 
-1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示包含 `date` (在 C# 中) 或 `currentDate` (在 Visual Basic 中) 變數指派的陳述式。 [自動變數] 視窗會顯示 <xref:System.DateTime.Now?displayProperty=fullName> 屬性值，以及對 <xref:System.Console.ReadLine%2A?displayProperty=fullName> 方法進行呼叫所傳回的值。 主控台視窗也會顯示在主控台提示輸入時輸入的字串。
+1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會醒目提示包含 `date` (在 C# 中) 或 `currentDate` (在 Visual Basic 中) 變數指派的陳述式。 [自動變數] 視窗會顯示 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性值，以及對 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 方法進行呼叫所傳回的值。 主控台視窗也會顯示在主控台提示輸入時輸入的字串。
 
-1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 [自動變數] 視窗現在會顯示從 <xref:System.DateTime.Now?displayProperty=fullName> 屬性指派之後的 `date` 變數值。 主控台視窗沒有變更。
+1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 [自動變數] 視窗現在會顯示從 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性指派之後的 `date` 變數值。 主控台視窗沒有變更。
 
-1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會呼叫 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=fullName> 方法。 `date` (或 `currentDate`) 和 `name` 變數的值會顯示在 [自動變數] 視窗中，而主控台視窗則會顯示已格式化的字串。
+1. 選取 [偵錯]  >  [逐步執行]，或按 F11 鍵。 Visual Studio 會呼叫 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 方法。 `date` (或 `currentDate`) 和 `name` 變數的值會顯示在 [自動變數] 視窗中，而主控台視窗則會顯示已格式化的字串。
 
 1. 選取 [偵錯]  >  [跳離函式]，或按 Shift 和 F11 鍵。 這會停止逐步執行。 主控台視窗會顯示訊息並等候您按下按鍵。
 
@@ -198,4 +196,3 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 當您按 F5 或從 [組建] 功能表中選擇 [組置方案] 時，Visual Studio 就會編譯您主控台應用程式的發行版本。 您可以測試該版本，就像您對應用程式的偵錯版本所做的一樣。
 
 完成應用程式偵錯之後，下一個步驟就是發行可部署的應用程式版本。 如需如何執行這項操作的資訊，請參閱[使用 Visual Studio 2017 發佈 Hello World 應用程式](./publishing-with-visual-studio.md)。
-

@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="structs"></a>結構
 
-和類別一樣，***結構***是可包含資料成員和函式成員的資料結構，但不同於類別，結構是實值型別，不需要堆積配置。 結構型別的變數直接儲存結構的資料，而類別型別的變數則儲存動態配置物件的參考。 結構型別不支援使用者指定的繼承，且所有結構型別都隱含地繼承自 `object` 型別。
+和類別一樣，***結構***是可包含資料成員和函式成員的資料結構，但不同於類別，結構是實值型別，不需要堆積配置。 結構型別的變數直接儲存結構的資料，而類別型別的變數則儲存動態配置物件的參考。 結構類型不支援使用者指定的繼承，且所有結構類型都隱含地繼承自 <xref:System.ValueType> 類型，而該類型又隱含地繼承自 `object`。
 
 結構特別適用於含有實值語意的小型資料結構。 複數、座標系統中的點或字典中的索引鍵/值組都是結構的良好範例。 針對小型資料結構使用結構而不使用類別，在應用程式執行的記憶體配置數目上有很大的差別。 比方說，下列程式會建立並初始化 100 個點的陣列。 使用 `Point` 做為類別，會具現化 101 個不同的物件 — 一個代表陣列，剩下的每個代表 100 個元素。
 
@@ -45,4 +43,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [上一頁](classes-and-objects.md)
 [下一頁](arrays.md)
-

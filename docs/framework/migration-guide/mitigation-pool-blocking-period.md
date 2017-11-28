@@ -1,5 +1,5 @@
 ---
-title: "風險降低：集區封鎖期 | Microsoft Docs"
+title: "風險降低︰集區封鎖期"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2569e6a07ba1456d8bba9b27bf16190e634d6b47
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 8749e2d7b91e611ee153c6f36708fa34a44ecccd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-pool-blocking-period"></a>風險降低︰集區封鎖期
 已移除 Azure SQL Database 連線的連線集區封鎖期。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/22/2017
  這項變更允許立即重試 Azure SQL Database 的連線開啟嘗試，因而提升啟用雲端功能的應用程式效能。  
   
 ## <a name="mitigation"></a>緩和  
- 如果這項變更會對應用程式造成負面影響，可以藉由設定新的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 屬性，來設定連線集區封鎖期。  屬性的值是 <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName> 列舉的成員，可以採用三個值的其中一個值︰  
+ 如果這項變更會對應用程式造成負面影響，可以藉由設定新的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 屬性，來設定連線集區封鎖期。  屬性的值是 <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> 列舉的成員，可以採用三個值的其中一個值︰  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
   

@@ -1,30 +1,21 @@
 ---
 title: "標準查詢運算子的查詢運算式語法 (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f662f23948f5d18c31a981a2f46d78f382ff5c96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30e994329234b8bd455f739694e50121bac63d5d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>標準查詢運算子的查詢運算式語法 (C#)
 某些更常用的標準查詢運算子具有專用 C# 語言關鍵字語法，可將它們呼叫為「查詢運算式」的一部分。 相較於「方法」對等項目，查詢運算式是一個不同且更具可讀性的表示查詢形式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。  
@@ -47,8 +38,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Linq.Enumerable.Where%2A>|`where`<br /><br /> (如需詳細資訊，請參閱 [where 子句](../../../../csharp/language-reference/keywords/where-clause.md))。|  
   
 ## <a name="see-also"></a>另請參閱  
- <xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable>   
- [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [標準查詢運算子概觀 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [依據執行方式將標準查詢運算子分類 (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-

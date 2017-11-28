@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.topic: article
+dev_langs: fsharp
 ms.prod: .net-core
+ms.openlocfilehash: f8ea697596f144fdd6d50c871399388a075ba935
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: f07569a4d352162f9d6e9a13ab1c5eb921077416
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -36,7 +36,7 @@ module MyMath =
     let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 以將類別庫專案加到方案中。
+將目錄變更回 *unit-testing-with-fsharp* 目錄。 執行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
@@ -179,4 +179,3 @@ let sumOfSquares xs =
 ```
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
-

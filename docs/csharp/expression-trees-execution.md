@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="executing-expression-trees"></a>執行運算式樹狀架構
 
 [上一個課程 -- 支援運算式樹狀架構的架構類型](expression-classes.md)
@@ -130,4 +128,3 @@ private static Func<int, int> CreateBoundResource()
 運算式樹狀架構可表示針對您所建立之任何指定建構執行的程式碼。 只要您編譯和執行程式碼的環境符合您建立運算式的環境，一切就會如預期運作。 如果不是這種情況，則預期會發生錯誤，而且會在第一次測試使用運算式樹狀架構的任何程式碼時攔截到這些錯誤。
 
 [下一個主題 -- 解譯運算式](expression-trees-interpreting.md)
-

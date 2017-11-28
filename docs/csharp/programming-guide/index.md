@@ -1,43 +1,24 @@
 ---
 title: "C# 程式設計手冊"
-ms.date: 2017-05-02
+ms.date: 05/02/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.langref
-dev_langs:
-- CSharp
+f1_keywords: cs.langref
 helpviewer_keywords:
 - reference tables [C#]
 - C# language, programming guide
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 0c95459f21aebf1d5efe1482e74ca2724d283821
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。  
@@ -59,27 +40,19 @@ ms.lasthandoff: 09/02/2017
 
  [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
   
- [Main() 和命令列引數](../../csharp/programming-guide/main-and-command-args/index.md)  
+ [介面](../../csharp/programming-guide/interfaces/index.md)  
+
+ [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
   
- [型別](../../csharp/programming-guide/types/index.md)  
-  
+ [委派](../../csharp/programming-guide/delegates/index.md)  
+ 
  [陣列](../../csharp/programming-guide/arrays/index.md)  
   
  [字串](../../csharp/programming-guide/strings/index.md)  
   
- [陳述式、運算式和運算子](../../csharp/programming-guide/statements-expressions-operators/index.md)  
-  
- [類別和結構](../../csharp/programming-guide/classes-and-structs/index.md)  
-  
  [屬性](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
- [介面](../../csharp/programming-guide/interfaces/index.md)  
-  
  [索引子](../../csharp/programming-guide/indexers/index.md)  
-  
- [列舉型別](../../csharp/programming-guide/enumeration-types.md)  
-  
- [委派](../../csharp/programming-guide/delegates/index.md)  
   
  [事件](../../csharp/programming-guide/events/index.md)  
   
@@ -117,6 +90,5 @@ ms.lasthandoff: 09/02/2017
  [反映](../../csharp/programming-guide/concepts/reflection.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../csharp/language-reference/index.md)   
+ [C# 參考](../../csharp/language-reference/index.md)  
  [C#](../../csharp/index.md)
-

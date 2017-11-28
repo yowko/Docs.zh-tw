@@ -1,25 +1,21 @@
 ---
 title: "如何：尋找兩個位置路徑的聯集 (XPath-LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 48c5182a32a78dd7f32f73b8180f90c0787e197a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b15991b6a97c19cd038114649bcef90f53ea5ace
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>如何：尋找兩個位置路徑的聯集 (XPath-LINQ to XML) (C#)
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  
@@ -82,4 +78,3 @@ Results are identical
   
 ## <a name="see-also"></a>另請參閱  
  [XPath 使用者適用的 LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

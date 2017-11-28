@@ -1,39 +1,21 @@
 ---
 title: "類型 (C# 參考)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2c7285e237b04c1290391c4bba3e62886dceb83c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2816a5dd86e71641198a340b3a72094dffc93bdf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="types-c-reference"></a>類型 (C# 參考)
 C# 類型系統包含下列類別：  
@@ -53,10 +35,9 @@ C# 類型系統包含下列類別：
  實值型別也可為 Null，這表示它們可以儲存額外的非值狀態。 如需詳細資訊，請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 參考](../../../csharp/language-reference/index.md)   
- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
- [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)   
- [類型的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
- [轉型和類型轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
+ [C# 參考](../../../csharp/language-reference/index.md)  
+ [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+ [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
+ [型別的參考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+ [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
  [型別](../../../csharp/programming-guide/types/index.md)
-

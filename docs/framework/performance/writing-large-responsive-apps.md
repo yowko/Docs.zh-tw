@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ec275cb904b90b87193e3ed72ef89a127d1fbea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -33,7 +31,8 @@ ms.lasthandoff: 08/21/2017
   
  當您的使用者與您的應用程式互動時，他們期望應用程式會有回應。  因此，請不要封鎖輸入或命令處理等動作。  說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。  您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。  
   
- 如果您想深入了解新編譯器，請參閱 [.NET Compiler Platform ("Roslyn") open source project](http://roslyn.codeplex.com/) (.NET 編譯器平台 ("Roslyn") 開放原始碼專案)。  
+ 如需 Roslyn 編譯器的詳細資訊，請瀏覽[dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub 上的儲存機制。
+ <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>認清事實  
  調整效能和建立回應能力佳的 .NET Framework 應用程式時，請考慮下列幾點事實。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="boxing"></a>Boxing  
  當通常存留在堆疊或資料結構中的實值型別包裝在物件中時，會發生 [Boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)。  換句話說，您可以配置保存資料的物件，再傳回物件的指標。  .NET Framework 有時由於方法的簽章或儲存位置的類型而以 Boxing 處理值。  在物件中包裝實值類型會導致記憶體配置。  許多 Boxing 作業可能導致數 MB 或 GB 的應用程式配置，這表示您的應用程式會造成更多 GC。 .NET Framework 和語言編譯器會盡可能避免 Boxing，但有時還是會在您預想不到的情況下發生。  
   
- 若要在 PerfView 中查看 Boxing，請開啟追蹤，然後檢視您的應用程式之處理序名稱下的 GC Heap Alloc Stacks (請記住，PerfView 會報告所有處理序)。  如果您在配置下看到類似 <xref:System.Int32?displayProperty=fullName> 和 <xref:System.Char?displayProperty=fullName> 的類型，則表示您以 Boxing 處理實值類型。  選擇其中一種類型可顯示以 Boxing 處理類型所在的堆疊和函式。  
+ 若要在 PerfView 中查看 Boxing，請開啟追蹤，然後檢視您的應用程式之處理序名稱下的 GC Heap Alloc Stacks (請記住，PerfView 會報告所有處理序)。  如果您在配置下看到類似 <xref:System.Int32?displayProperty=nameWithType> 和 <xref:System.Char?displayProperty=nameWithType> 的類型，則表示您以 Boxing 處理實值類型。  選擇其中一種類型可顯示以 Boxing 處理類型所在的堆疊和函式。  
   
  **範例 1：字串方法和實值型別引數**  
   
@@ -135,7 +134,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- 以 Boxing 處理列舉類型的另一個常見來源是 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> 方法。  傳遞至 <xref:System.Enum.HasFlag%28System.Enum%29> 的引數必須為 Boxed。  在大多數情況下，比較簡單且不需要配置的作法是以位元測試取代 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> 的呼叫。  
+ 以 Boxing 處理列舉類型的另一個常見來源是 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 方法。  傳遞至 <xref:System.Enum.HasFlag%28System.Enum%29> 的引數必須為 Boxed。  在大多數情況下，比較簡單且不需要配置的作法是以位元測試取代 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 的呼叫。  
   
  請記住第一點效能事實 (即不要太早進行最佳化)，不要以此方式開始重寫所有程式碼。    留意這些 Boxing 成本，但只在對應用程式進行程式碼分析並找出作用點之後變更程式碼。  
   
@@ -334,7 +333,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  這兩個 `new` 配置 (一個用於環境類別，一個用於委派) 現在是明確的。  
   
- 接著檢視 `FirstOrDefault` 的呼叫。 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 類型上的這個擴充方法也會造成配置。  由於 `FirstOrDefault` 將 <xref:System.Collections.Generic.IEnumerable%601> 物件當做它的第一個引數，因此您可以將呼叫擴充成下列程式碼 (稍微簡化以便討論)：  
+ 接著檢視 `FirstOrDefault` 的呼叫。 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 類型上的這個擴充方法也會造成配置。  由於 `FirstOrDefault` 將 <xref:System.Collections.Generic.IEnumerable%601> 物件當做它的第一個引數，因此您可以將呼叫擴充成下列程式碼 (稍微簡化以便討論)：  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -421,7 +420,7 @@ class Compilation { /*...*/
   
  **範例 6 的修正**  
   
- 若要移除完成的 <xref:System.Threading.Tasks.Task> 配置，您可以快取具有完成結果的 Task 物件：  
+ 若要移除已完成<xref:System.Threading.Tasks.Task>配置，您可以快取具有完成結果的 Task 物件：  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -471,13 +470,12 @@ class Compilation { /*...*/
 -   重點在於配置 - 這是編譯器平台小組花費最多時間提升新編譯器效能的地方。  
   
 ## <a name="see-also"></a>另請參閱  
- [本主題的簡報影片](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)   
- [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [效能](../../../docs/framework/performance/index.md)   
- [.NET Performance Tips](http://msdn.microsoft.com/library/ms973839.aspx)  (.NET 效能祕訣)  
- [Windows Phone Performance Analysis Tool](http://msdn.microsoft.com/magazine/hh781024.aspx)  (Windows Phone 效能分析工具)  
- [Find Application Bottlenecks with Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  (使用 Visual Studio 分析工具尋找應用程式瓶頸)  
- [Channel 9 PerfView Tutorial](http://channel9.msdn.com/Series/PerfView-Tutorial)  (Channel 9 PerfView 教學課程)  
- [High-level Performance Tips](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  (高階效能祕訣)  
- [.NET Compiler Platform ("Roslyn") open source project](http://roslyn.codeplex.com/) (.NET 編譯器平台 ("Roslyn") 開放原始碼專案)
-
+ [本主題的簡報的視訊](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [效能](../../../docs/framework/performance/index.md)  
+ [.NET 效能秘訣](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone 效能分析工具](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [找出應用程式與 Visual Studio 分析工具的瓶頸](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 PerfView 教學課程](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [高層級的效能提示](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [dotnet/roslyn GitHub 上的儲存機制](https://github.com/dotnet/roslyn)

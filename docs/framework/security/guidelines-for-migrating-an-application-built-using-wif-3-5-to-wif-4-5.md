@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 151a46a1d0f5ae5ae58508bdb3cab5bbb86f07ef
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: fc5554193d93f2a88fd9e6d1c1af7923a23b2280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ## <a name="applies-to"></a>適用於  
@@ -37,32 +35,32 @@ ms.lasthandoff: 08/21/2017
 ### <a name="assembly-and-namespace-changes"></a>組件和命名空間變更  
  在 WIF 3.5 中，所有 WIF 類別都已包含在 `Microsoft.IdentityModel` 組件 (microsoft.identitymicrosoft.identitymodel.dll) 中。 在 WIF 4.5 中，WIF 類別已分成下列組件：`mscorlib`(mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。  
   
- WIF 3.5 類別全部包含在其中一個 `Microsoft.IdentityModel` 命名空間中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` 等等。 在 WIF 4.5 中，WIF 類別現在會散佈到 [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 命名空間、<xref:System.Security.Claims?displayProperty=fullName> 命名空間和 <xref:System.ServiceModel.Security?displayProperty=fullName> 命名空間。 除了這項重組之外，WIF 4.5 中已卸除一些 WIF 3.5 類別。  
+ WIF 3.5 類別全部包含在其中一個 `Microsoft.IdentityModel` 命名空間中；例如，`Microsoft.IdentityModel`、`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Web` 等等。 在 WIF 4.5 中，WIF 類別現在會散佈到 [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) 命名空間、<xref:System.Security.Claims?displayProperty=nameWithType> 命名空間和 <xref:System.ServiceModel.Security?displayProperty=nameWithType> 命名空間。 除了這項重組之外，WIF 4.5 中已卸除一些 WIF 3.5 類別。  
   
  下表顯示一些更重要的 WIF 4.5 命名空間以及它們所含的類別類型。 如需 WIF 3.5 與 WIF 4.5 間之命名空間對應方式以及已在 WIF 4.5 中卸除之命名空間和類別的詳細資訊，請參閱 [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。  
   
 |WIF 4.5 命名空間|說明|  
 |-----------------------|-----------------|  
-|<xref:System.IdentityModel?displayProperty=fullName>|包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。 包含下列 WIF 3.5 命名空間中的類別：`Microsoft.IdentityModel`、`Microsoft.IdentityModel.SecurityTokenService` 和 `Microsoft.IdentityModel.Threading`。|  
-|<xref:System.Security.Claims?displayProperty=fullName>|包含的類別代表宣告、宣告式身分識別、宣告式主體，以及其他宣告式身分識別模型成品。 包含 `Microsoft.IdentityModel.Claims` 命名空間中的類別。|  
-|<xref:System.IdentityModel.Tokens?displayProperty=fullName>|包含的類別代表安全性權杖、安全性權杖處理常式，以及其他安全性權杖成品。 包含下列 WIF 3.5 命名空間中的類別：`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Tokens.Saml11` 和 `Microsoft.IdentityModel.Tokens.Saml2`。|  
-|<xref:System.IdentityModel.Services?displayProperty=fullName>|包含的類別用於被動 (WS-同盟) 案例。 包含 `Microsoft.IdentityModel.Web` 命名空間中的類別。|  
-|<xref:System.ServiceModel.Security?displayProperty=fullName>|類別代表 WCF 合約、通道、服務主機，以及主動 (WS-Trust) 案例中使用的其他成品，並且現在位在此命名空間中。 在 WIF 3.5 中，這些類別位在 `Microsoft.IdentityModel.Protocols.WSTrust` 命名空間中。|  
+|<xref:System.IdentityModel?displayProperty=nameWithType>|包含的類別代表 Cookie 轉換、安全性權杖服務，以及特定的 XML 字典讀取器。 包含下列 WIF 3.5 命名空間中的類別：`Microsoft.IdentityModel`、`Microsoft.IdentityModel.SecurityTokenService` 和 `Microsoft.IdentityModel.Threading`。|  
+|<xref:System.Security.Claims?displayProperty=nameWithType>|包含的類別代表宣告、宣告式身分識別、宣告式主體，以及其他宣告式身分識別模型成品。 包含 `Microsoft.IdentityModel.Claims` 命名空間中的類別。|  
+|<xref:System.IdentityModel.Tokens?displayProperty=nameWithType>|包含的類別代表安全性權杖、安全性權杖處理常式，以及其他安全性權杖成品。 包含下列 WIF 3.5 命名空間中的類別：`Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Tokens.Saml11` 和 `Microsoft.IdentityModel.Tokens.Saml2`。|  
+|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|包含的類別用於被動 (WS-同盟) 案例。 包含 `Microsoft.IdentityModel.Web` 命名空間中的類別。|  
+|<xref:System.ServiceModel.Security?displayProperty=nameWithType>|類別代表 WCF 合約、通道、服務主機，以及主動 (WS-Trust) 案例中使用的其他成品，並且現在位在此命名空間中。 在 WIF 3.5 中，這些類別位在 `Microsoft.IdentityModel.Protocols.WSTrust` 命名空間中。|  
   
 > [!IMPORTANT]
->  下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=fullName>、<xref:System.IdentityModel.Policy?displayProperty=fullName> 和 <xref:System.IdentityModel.Selectors?displayProperty=fullName>。 WIF 已取代 WCF 宣告式識別模型。 在建置以 WIF 為基礎的解決方案時，您不應該使用這三個命名空間中的類別。  
+>  下列 `System.IdentityModel` 命名空間包含的類別可實作 WCF 宣告式身分識別模型：<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、<xref:System.IdentityModel.Policy?displayProperty=nameWithType> 和 <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>。 WIF 已取代 WCF 宣告式識別模型。 在建置以 WIF 為基礎的解決方案時，您不應該使用這三個命名空間中的類別。  
   
 ### <a name="changes-due-to-net-integration"></a>.NET 整合所造成的變更  
- WIF 現在已整合至 .NET Framework。 大部分 .NET 身分識別和主體類別現在衍生自 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 和 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>。 WIF 4.5 中下列變更的結果：  
+ WIF 現在已整合至 .NET Framework。 大部分 .NET 身分識別和主體類別現在衍生自 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> 和 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>。 WIF 4.5 中下列變更的結果：  
   
--   代表宣告、身分識別和主體的 WIF 類別現在存在於 <xref:System.Security.Claims?displayProperty=fullName> 命名空間中。  
+-   代表宣告、身分識別和主體的 WIF 類別現在存在於 <xref:System.Security.Claims?displayProperty=nameWithType> 命名空間中。  
   
     > [!IMPORTANT]
-    >  <xref:System.IdentityModel.Claims?displayProperty=fullName> 命名空間所含的類別代表 WCF 宣告式身分識別模型中的成品。 其中許多類別的名稱都與 WIF 類別相同；例如，`Claims`。 以 WIF 為基礎建置解決方案時，請不要使用這些類別。  
+    >  <xref:System.IdentityModel.Claims?displayProperty=nameWithType> 命名空間所含的類別代表 WCF 宣告式身分識別模型中的成品。 其中許多類別的名稱都與 WIF 類別相同；例如，`Claims`。 以 WIF 為基礎建置解決方案時，請不要使用這些類別。  
   
--   .NET 身分識別和主體類別現在直接衍生自 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> 和 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName>，其代表宣告式身分識別和主體。 基於這個原因，不再需要 WIF 3.5 介面 `IClaimsIdentity` 和 `IClaimsPrincipal`，而且 WIF 4.5 中不再提供它們。  
+-   .NET 身分識別和主體類別現在直接衍生自 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> 和 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>，其代表宣告式身分識別和主體。 基於這個原因，不再需要 WIF 3.5 介面 `IClaimsIdentity` 和 `IClaimsPrincipal`，而且 WIF 4.5 中不再提供它們。  
   
--   因為 <xref:System.Security.Principal.WindowsIdentity?displayProperty=fullName> 和 <xref:System.Security.Principal.WindowsPrincipal?displayProperty=fullName> 這類 .NET 身分識別和主體類別現在衍生自 <xref:System.Security.Claims.ClaimsIdentity> 和 <xref:System.Security.Claims.ClaimsPrincipal>，所以已內建宣告功能。 基於這個原因，不再需要 WIF 3.5 中的宣告特定身分識別和主體類別 (例如 `WindowsClaimsIdentity` 和 `WindowsClaimsPrincipal`)，而且 WIF 4.5 中沒有它們。  
+-   因為 <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> 和 <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> 這類 .NET 身分識別和主體類別現在衍生自 <xref:System.Security.Claims.ClaimsIdentity> 和 <xref:System.Security.Claims.ClaimsPrincipal>，所以已內建宣告功能。 基於這個原因，不再需要 WIF 3.5 中的宣告特定身分識別和主體類別 (例如 `WindowsClaimsIdentity` 和 `WindowsClaimsPrincipal`)，而且 WIF 4.5 中沒有它們。  
   
 ### <a name="other-changes-to-wif-functionality"></a>其他 WIF 功能變更  
  除了命名空間變更以及與 .NET 整合所造成的變更之外，WIF 4.5 中也會發生下列一般 WIF 功能變更。  
@@ -118,9 +116,9 @@ ms.lasthandoff: 08/21/2017
 <a name="BKMK_ToolingChanges"></a>   
 ### <a name="passive-ws-federation-scenarios"></a>被動 (WS-同盟) 案例：  
   
--   支援被動案例的類別已移至 <xref:System.IdentityModel.Services?displayProperty=fullName> 命名空間。 在 WIF 3.5 中，這些類別位在 `Microsoft.IdentityModel.Web` 命名空間中。  
+-   支援被動案例的類別已移至 <xref:System.IdentityModel.Services?displayProperty=nameWithType> 命名空間。 在 WIF 3.5 中，這些類別位在 `Microsoft.IdentityModel.Web` 命名空間中。  
   
--   `Microsoft.IdentityModel.Web.Configuration` 命名空間中的類別已移至 <xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>。 這些類別代表被動案例中組態特有的物件。  
+-   `Microsoft.IdentityModel.Web.Configuration` 命名空間中的類別已移至 <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>。 這些類別代表被動案例中組態特有的物件。  
   
 -   不再支援 `FederatedPasssiveSignInControl`；已從 WIF 4.5 中移除 `Microsoft.IdentityModel.Web.Controls` 命名空間中的所有類別。  
   
@@ -128,7 +126,7 @@ ms.lasthandoff: 08/21/2017
   
 ### <a name="active-wcfws-trust-scenarios"></a>作用中 (WCF/WS-Trust) 案例：  
   
--   在 WIF 4.5 中，`Microsoft.IdentityModel.Protocols.WSTrust` 命名空間主要分成兩個命名空間。 代表 WS-Trust 通訊協定特有成品的類別現在位於 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName> 中。 這包含 <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> 這類類別。 類別代表 WCF 合約、通道、服務主機，以及在 WCF 應用程式中使用 WS-Trust 所含的其他成品，並且已移至 <xref:System.ServiceModel.Security?displayProperty=fullName>；例如，<xref:System.ServiceModel.Security.IWSTrust13AsyncContract> 介面。  
+-   在 WIF 4.5 中，`Microsoft.IdentityModel.Protocols.WSTrust` 命名空間主要分成兩個命名空間。 代表 WS-Trust 通訊協定特有成品的類別現在位於 <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType> 中。 這包含 <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> 這類類別。 類別代表 WCF 合約、通道、服務主機，以及在 WCF 應用程式中使用 WS-Trust 所含的其他成品，並且已移至 <xref:System.ServiceModel.Security?displayProperty=nameWithType>；例如，<xref:System.ServiceModel.Security.IWSTrust13AsyncContract> 介面。  
   
 -   已大幅簡化將 WCF 應用程式設定成使用 WIF。 之前，必須將 `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement` 新增為行為延伸模組，並且接著指定 `<federatedServiceHostConfiguration>` 項目，以使用這項功能將 WIF 插入服務行為中。 WIF 4.5 已更緊密地與 WCF 整合。 您現在可以在 WCF 服務上啟用 WIF，只需在 `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` 項目上指定 `useIdentityConfiguration` 屬性即可，如下列 XML 所示：  
   
@@ -182,8 +180,7 @@ add-windowsfeature windows-identity-foundation
 >  因為 WIF 3.5 和 WIF 4.5 中的許多類別都共用相同的名稱，所以同時使用 WIF 3.5 和 WIF 4.5 時，請一定要使用完整類別名稱，或使用命名空間別名來區分 WIF 3.5 和 WIF 4.5 中的類別。  
   
 ## <a name="see-also"></a>另請參閱  
- [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)   
- [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)   
- [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)   
+ [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
+ [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)  
  [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
-
