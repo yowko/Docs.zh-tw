@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - authentication [.NET Framework], classes
 - IAuthenticationModule interface
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a26811b5dd62e30b371af88bc79d06843ef58d05
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internet-authentication"></a>網際網路驗證
 <xref:System.Net> 類別支援各種不同的用戶端驗證機制，包括標準的網際網路驗證方法 (基本、摘要式、交涉式、NTLM 和 Kerberos 驗證) 以及您可以建立的自訂方法。  
@@ -46,7 +40,7 @@ ms.lasthandoff: 08/21/2017
   
  **CredentialCache** 類別儲存各種 Web 資源認證的集合。 呼叫 <xref:System.Net.CredentialCache.GetCredential%2A> 方法時，**CredentialCache** 會傳回適當的認證集，由 Web 資源 URI 和要求的驗證配置決定。 使用各種網際網路資源和不同驗證配置的應用程式，得益於使用 **CredentialCache** 類別，因為它會儲存所有認證並依要求提供認證。  
   
- 當網際網路資源要求驗證時，<xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> 方法會將 <xref:System.Net.WebRequest> 以及認證要求傳送至 **AuthenticationManager**。 然後根據下列程序驗證要求：  
+ 當網際網路資源要求驗證時，<xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 方法會將 <xref:System.Net.WebRequest> 以及認證要求傳送至 **AuthenticationManager**。 然後根據下列程序驗證要求：  
   
 1.  **AuthenticationManager** 會在每個已註冊的驗證模組上，依其註冊順序呼叫 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 方法。 **AuthenticationManager** 使用不會傳回 **null** 的第一個模組執行驗證程序。 程序的詳細資料隨所涉及的驗證模組類型而不同。  
   
@@ -55,7 +49,6 @@ ms.lasthandoff: 08/21/2017
  某些驗證配置可以驗證使用者，不需要先要求資源。 應用程式可以預先驗證使用者和資源，至少消除一次伺服器往返，進而節省時間。 或者，它可以在程式啟動期間執行驗證，以便稍後更能回應使用者。 可以使用預先驗證的驗證配置，將 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 屬性設為 **true**。  
   
 ## <a name="see-also"></a>另請參閱  
- [基本和摘要式驗證](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [NTLM 與 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [基本和摘要式驗證](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [NTLM 和 Kerberos 驗證](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [網路程式設計的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
-

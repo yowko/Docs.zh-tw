@@ -1,58 +1,60 @@
 ---
-title: "&lt;namespaceTable&gt; 的 &lt;add&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;namespaceTable&gt; 的 &lt;add&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f08f4b46c6e6290602fc78a2f06954b9cf0b07d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;namespaceTable&gt; 的 &lt;add&gt;
+# <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;namespaceTable&gt; 的 &lt;add&gt;
 代表組態項目，其中包含命名空間與前置詞之間的對應，這個對應稍後可用於 XPath 篩選條件中的路由。  
   
-## 語法  
+ \<system.serviceModel >  
+\<路由 >  
+\<a d d >  
+\<add>  
   
-```vb  
+## <a name="syntax"></a>語法  
   
-<routing>  
-   <namespaceTable>  
-     <add namespace="String" prefix="String" />   
-   </namespaceTable>  
-</routing>  
-  
+```xml  
+   <routing>   <namespaceTable>  
+     <add namespace="String" prefix="String" />    </namespaceTable></routing>  
 ```  
   
 ```csharp  
-  
 ```  
   
-## 屬性和項目  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子項目和父項目。  
   
-### 屬性  
+### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
-|--------|--------|  
+|---------------|-----------------|  
 |namespace|包含命名空間的字串。|  
 |prefix|包含這個命名空間的前置詞的字串。|  
   
-### 子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
-### 父項目  
+### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
-|--------|--------|  
-|[\<namespaceTable\>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。|  
+|項目|說明|  
+|-------------|-----------------|  
+|[\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。|  
   
-## 請參閱  
- [System.ServiceModel.Routing.Configuration.NamespaceElement](assetId:///System.ServiceModel.Routing.Configuration.NamespaceElement?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>另請參閱  
+ <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    

@@ -1,40 +1,21 @@
 ---
 title: "運算子 (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- operators [Visual Basic]
+helpviewer_keywords: operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1945b78f4b0c70df4680c977bdc70da2972b30e8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 928bd5165c36fbd9fe082539f154a6f32ada8fcc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="operators-visual-basic"></a>運算子 (Visual Basic)
 ## <a name="in-this-section"></a>本章節內容  
@@ -68,4 +49,3 @@ ms.lasthandoff: 07/28/2017
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
-
