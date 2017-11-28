@@ -1,31 +1,35 @@
 ---
-title: "&lt;endpointBehaviors&gt; 的 &lt;behavior&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "&lt;endpointBehaviors&gt; 的 &lt;behavior&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bef07c6cdd80874bfa17994dffafe4d3f2cfc5a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;endpointBehaviors&gt; 的 &lt;behavior&gt;
-`behavior` 項目包含端點行為之設定的集合。  各個行為是依其 `name` 進行索引。  端點可透過這個名稱連結至每一個行為。  從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。  如需預設組態和無名稱繫結與行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+# <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a><span data-ttu-id="54b18-102">&lt;endpointBehaviors&gt; 的 &lt;behavior&gt;</span><span class="sxs-lookup"><span data-stu-id="54b18-102">&lt;behavior&gt; of &lt;endpointBehaviors&gt;</span></span>
+<span data-ttu-id="54b18-103">`behavior` 項目包含端點行為之設定的集合。</span><span class="sxs-lookup"><span data-stu-id="54b18-103">The `behavior` element contains a collection of settings for the behavior of an endpoint.</span></span> <span data-ttu-id="54b18-104">各個行為是依其 `name` 進行索引。</span><span class="sxs-lookup"><span data-stu-id="54b18-104">Each behavior is indexed by its `name`.</span></span> <span data-ttu-id="54b18-105">端點可透過這個名稱連結至每一個行為。</span><span class="sxs-lookup"><span data-stu-id="54b18-105">Endpoints can link to each behavior through this name.</span></span> <span data-ttu-id="54b18-106">從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。</span><span class="sxs-lookup"><span data-stu-id="54b18-106">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="54b18-107">如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="54b18-107">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## 語法  
+ <span data-ttu-id="54b18-108">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="54b18-108">\<system.ServiceModel></span></span>  
+<span data-ttu-id="54b18-109">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="54b18-109">\<behaviors></span></span>  
+<span data-ttu-id="54b18-110">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="54b18-110">\<endpointBehaviors></span></span>  
+<span data-ttu-id="54b18-111">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="54b18-111">\<behavior></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="54b18-112">語法</span><span class="sxs-lookup"><span data-stu-id="54b18-112">Syntax</span></span>  
   
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <endpointBehaviors>  
@@ -35,34 +39,34 @@ caps.handback.revision: 19
 </system.ServiceModel>  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="54b18-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="54b18-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="54b18-114">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="54b18-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="54b18-115">屬性</span><span class="sxs-lookup"><span data-stu-id="54b18-115">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|name|唯一的字串，其中包含行為的組態名稱。  這個值是使用者定義的字串，它必須是唯一的，因為它會充當項目的識別字串。  從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。  如需預設組態和無名稱繫結與行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[WCF 服務的簡化組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。|  
+|<span data-ttu-id="54b18-116">屬性</span><span class="sxs-lookup"><span data-stu-id="54b18-116">Attribute</span></span>|<span data-ttu-id="54b18-117">描述</span><span class="sxs-lookup"><span data-stu-id="54b18-117">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="54b18-118">name</span><span class="sxs-lookup"><span data-stu-id="54b18-118">name</span></span>|<span data-ttu-id="54b18-119">唯一的字串，其中包含行為的組態名稱。</span><span class="sxs-lookup"><span data-stu-id="54b18-119">A unique string that contains the configuration name of the behavior.</span></span> <span data-ttu-id="54b18-120">這個值是使用者定義的字串，它必須是唯一的，因為它會充當項目的識別字串。</span><span class="sxs-lookup"><span data-stu-id="54b18-120">This value is a user-defined string that must be unique, since it acts as the identification string for the element.</span></span> <span data-ttu-id="54b18-121">從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。</span><span class="sxs-lookup"><span data-stu-id="54b18-121">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="54b18-122">如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="54b18-122">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
   
-### 子項目  
+### <a name="child-elements"></a><span data-ttu-id="54b18-123">子元素</span><span class="sxs-lookup"><span data-stu-id="54b18-123">Child Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
-|[\<callbackDebug\>](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 回呼物件的服務偵錯。|  
-|[\<callbackTimeouts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/callbacktimeouts.md)|指定用戶端回呼的逾時。|  
-|[\<clientVia\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientvia.md)|指定訊息應採用的路徑。|  
-|[\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md)|包含 DataContractSerializer 的組態資料。|  
-|[\<dispatcherSynchronization\>](../../../../../docs/framework/configure-apps/file-schema/wcf/dispatchersynchronization.md)|指定可讓服務以非同步方式傳送回覆的端點行為。|  
-|[\<enableWebScript\>](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)|可啟用端點行為，以取用 ASP.NET AJAX 網頁上的服務。  該行為只能與 \<webHttpBinding\> 標準繫結，或 \<webMessageEncoding\> 繫結項目搭配使用。|  
-|[\<endpointDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。|  
-|[\<soapProcessing\>](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|定義用戶端端點行為，這個行為會用來封送處理不同繫結型別和訊息版本之間的訊息。|  
-|[\<synchronousReceive\>](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|指定在服務或用戶端應用程式中接收訊息的執行階段行為。  它沒有任何屬性或子項目。|  
-|[\<transactedBatching\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|指定是否支援接收作業的交易批次處理。|  
-|[\<webHttp\>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|透過組態指定端點上的 WebHttpBehavior。  當與 \<webHttpBinding\> 標準繫結搭配使用時，這個行為會為 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務啟用 Web 程式設計模型。|  
+|<span data-ttu-id="54b18-124">項目</span><span class="sxs-lookup"><span data-stu-id="54b18-124">Element</span></span>|<span data-ttu-id="54b18-125">說明</span><span class="sxs-lookup"><span data-stu-id="54b18-125">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="54b18-126">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="54b18-126">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="54b18-127">指定用來對服務驗證用戶端的認證。</span><span class="sxs-lookup"><span data-stu-id="54b18-127">Specifies the credentials used to authenticate the client to a service.</span></span>|  
+|[<span data-ttu-id="54b18-128">\<callbackDebug ></span><span class="sxs-lookup"><span data-stu-id="54b18-128">\<callbackDebug></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|<span data-ttu-id="54b18-129">指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 回呼物件的服務偵錯。</span><span class="sxs-lookup"><span data-stu-id="54b18-129">Specifies service debugging for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] callback object.</span></span>|  
+|[<span data-ttu-id="54b18-130">\<callbackTimeouts ></span><span class="sxs-lookup"><span data-stu-id="54b18-130">\<callbackTimeouts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/callbacktimeouts.md)|<span data-ttu-id="54b18-131">指定用戶端回呼的逾時。</span><span class="sxs-lookup"><span data-stu-id="54b18-131">Specifies the timeout for the client callback.</span></span>|  
+|[<span data-ttu-id="54b18-132">\<clientVia ></span><span class="sxs-lookup"><span data-stu-id="54b18-132">\<clientVia></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientvia.md)|<span data-ttu-id="54b18-133">指定訊息應採用的路徑。</span><span class="sxs-lookup"><span data-stu-id="54b18-133">Specifies the route a message should take.</span></span>|  
+|[<span data-ttu-id="54b18-134">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="54b18-134">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md)|<span data-ttu-id="54b18-135">包含 DataContractSerializer 的組態資料。</span><span class="sxs-lookup"><span data-stu-id="54b18-135">Contains configuration data for the DataContractSerializer.</span></span>|  
+|[<span data-ttu-id="54b18-136">\<dispatcherSynchronization ></span><span class="sxs-lookup"><span data-stu-id="54b18-136">\<dispatcherSynchronization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/dispatchersynchronization.md)|<span data-ttu-id="54b18-137">指定可讓服務以非同步方式傳送回覆的端點行為。</span><span class="sxs-lookup"><span data-stu-id="54b18-137">Specifies an endpoint behavior that enables a service to send replies asynchronously.</span></span>|  
+|[<span data-ttu-id="54b18-138">\<enableWebScript ></span><span class="sxs-lookup"><span data-stu-id="54b18-138">\<enableWebScript></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)|<span data-ttu-id="54b18-139">可啟用端點行為，以取用 ASP.NET AJAX 網頁上的服務。</span><span class="sxs-lookup"><span data-stu-id="54b18-139">Enables the endpoint behavior that makes it possible to consume the service from ASP.NET AJAX web pages.</span></span> <span data-ttu-id="54b18-140">行為應該只用於搭配  \<webHttpBinding > 標準繫結，或\<webMessageEncoding > 繫結項目。</span><span class="sxs-lookup"><span data-stu-id="54b18-140">The behavior should only be used in conjunction with either the \<webHttpBinding> standard binding, or the \<webMessageEncoding> binding element.</span></span>|  
+|[<span data-ttu-id="54b18-141">\<endpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="54b18-141">\<endpointDiscovery></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|<span data-ttu-id="54b18-142">指定端點的各種探索設定，例如其探索能力、範圍以及中繼資料的任何自訂延伸模組。</span><span class="sxs-lookup"><span data-stu-id="54b18-142">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>|  
+|[<span data-ttu-id="54b18-143">\<soapProcessing ></span><span class="sxs-lookup"><span data-stu-id="54b18-143">\<soapProcessing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|<span data-ttu-id="54b18-144">定義用戶端端點行為，這個行為會用來封送處理不同繫結型別和訊息版本之間的訊息。</span><span class="sxs-lookup"><span data-stu-id="54b18-144">Defines the client endpoint behavior used to marshal messages between different binding types and message versions.</span></span>|  
+|[<span data-ttu-id="54b18-145">\<synchronousReceive ></span><span class="sxs-lookup"><span data-stu-id="54b18-145">\<synchronousReceive></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|<span data-ttu-id="54b18-146">指定在服務或用戶端應用程式中接收訊息的執行階段行為。</span><span class="sxs-lookup"><span data-stu-id="54b18-146">Specifies run-time behavior for receiving messages in either a service or client application.</span></span> <span data-ttu-id="54b18-147">它沒有任何屬性或子項目。</span><span class="sxs-lookup"><span data-stu-id="54b18-147">It does not have any attributes or child elements.</span></span>|  
+|[<span data-ttu-id="54b18-148">\<transactedBatching ></span><span class="sxs-lookup"><span data-stu-id="54b18-148">\<transactedBatching></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|<span data-ttu-id="54b18-149">指定是否支援接收作業的異動批次處理。</span><span class="sxs-lookup"><span data-stu-id="54b18-149">Specifies whether transaction batching is supported for receive operations.</span></span>|  
+|[<span data-ttu-id="54b18-150">\<webHttp ></span><span class="sxs-lookup"><span data-stu-id="54b18-150">\<webHttp></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|<span data-ttu-id="54b18-151">透過組態指定端點上的 WebHttpBehavior。</span><span class="sxs-lookup"><span data-stu-id="54b18-151">Specifies the WebHttpBehavior on an endpoint through configuration.</span></span> <span data-ttu-id="54b18-152">此行為，當搭配\<webHttpBinding > 標準繫結，可讓 Web 程式設計模型[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務。</span><span class="sxs-lookup"><span data-stu-id="54b18-152">This behavior, when used in conjunction with the \<webHttpBinding> standard binding, enables the Web programming model for a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span>|  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="54b18-153">父項目</span><span class="sxs-lookup"><span data-stu-id="54b18-153">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<endpointBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|端點行為項目的集合。|
+|<span data-ttu-id="54b18-154">項目</span><span class="sxs-lookup"><span data-stu-id="54b18-154">Element</span></span>|<span data-ttu-id="54b18-155">說明</span><span class="sxs-lookup"><span data-stu-id="54b18-155">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="54b18-156">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="54b18-156">\<endpointBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|<span data-ttu-id="54b18-157">端點行為項目的集合。</span><span class="sxs-lookup"><span data-stu-id="54b18-157">A collection of endpoint behavior elements.</span></span>|

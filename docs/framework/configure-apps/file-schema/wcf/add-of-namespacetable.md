@@ -1,58 +1,60 @@
 ---
-title: "&lt;namespaceTable&gt; 的 &lt;add&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;namespaceTable&gt; 的 &lt;add&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f08f4b46c6e6290602fc78a2f06954b9cf0b07d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;namespaceTable&gt; 的 &lt;add&gt;
-代表組態項目，其中包含命名空間與前置詞之間的對應，這個對應稍後可用於 XPath 篩選條件中的路由。  
+# <a name="ltaddgt-of-ltnamespacetablegt"></a><span data-ttu-id="809ca-102">&lt;namespaceTable&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="809ca-102">&lt;add&gt; of &lt;namespaceTable&gt;</span></span>
+<span data-ttu-id="809ca-103">代表組態項目，其中包含命名空間與前置詞之間的對應，這個對應稍後可用於 XPath 篩選條件中的路由。</span><span class="sxs-lookup"><span data-stu-id="809ca-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  
   
-## 語法  
+ <span data-ttu-id="809ca-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="809ca-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="809ca-105">\<路由 ></span><span class="sxs-lookup"><span data-stu-id="809ca-105">\<routing></span></span>  
+<span data-ttu-id="809ca-106">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="809ca-106">\<namespaceTable></span></span>  
+<span data-ttu-id="809ca-107">\<add></span><span class="sxs-lookup"><span data-stu-id="809ca-107">\<add></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="809ca-108">語法</span><span class="sxs-lookup"><span data-stu-id="809ca-108">Syntax</span></span>  
   
-<routing>  
-   <namespaceTable>  
-     <add namespace="String" prefix="String" />   
-   </namespaceTable>  
-</routing>  
-  
+```xml  
+   <routing>   <namespaceTable>  
+     <add namespace="String" prefix="String" />    </namespaceTable></routing>  
 ```  
   
 ```csharp  
-  
 ```  
   
-## 屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a><span data-ttu-id="809ca-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="809ca-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="809ca-110">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="809ca-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 屬性  
+### <a name="attributes"></a><span data-ttu-id="809ca-111">屬性</span><span class="sxs-lookup"><span data-stu-id="809ca-111">Attributes</span></span>  
   
-|屬性|描述|  
-|--------|--------|  
-|namespace|包含命名空間的字串。|  
-|prefix|包含這個命名空間的前置詞的字串。|  
+|<span data-ttu-id="809ca-112">屬性</span><span class="sxs-lookup"><span data-stu-id="809ca-112">Attribute</span></span>|<span data-ttu-id="809ca-113">描述</span><span class="sxs-lookup"><span data-stu-id="809ca-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="809ca-114">namespace</span><span class="sxs-lookup"><span data-stu-id="809ca-114">namespace</span></span>|<span data-ttu-id="809ca-115">包含命名空間的字串。</span><span class="sxs-lookup"><span data-stu-id="809ca-115">A string containing the namespace.</span></span>|  
+|<span data-ttu-id="809ca-116">prefix</span><span class="sxs-lookup"><span data-stu-id="809ca-116">prefix</span></span>|<span data-ttu-id="809ca-117">包含這個命名空間的前置詞的字串。</span><span class="sxs-lookup"><span data-stu-id="809ca-117">A string containing the prefix for this namespace.</span></span>|  
   
-### 子項目  
- 無。  
+### <a name="child-elements"></a><span data-ttu-id="809ca-118">子元素</span><span class="sxs-lookup"><span data-stu-id="809ca-118">Child Elements</span></span>  
+ <span data-ttu-id="809ca-119">無。</span><span class="sxs-lookup"><span data-stu-id="809ca-119">None.</span></span>  
   
-### 父項目  
+### <a name="parent-elements"></a><span data-ttu-id="809ca-120">父項目</span><span class="sxs-lookup"><span data-stu-id="809ca-120">Parent Elements</span></span>  
   
-|項目|描述|  
-|--------|--------|  
-|[\<namespaceTable\>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。|  
+|<span data-ttu-id="809ca-121">項目</span><span class="sxs-lookup"><span data-stu-id="809ca-121">Element</span></span>|<span data-ttu-id="809ca-122">說明</span><span class="sxs-lookup"><span data-stu-id="809ca-122">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="809ca-123">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="809ca-123">\<namespaceTable></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|<span data-ttu-id="809ca-124">代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。</span><span class="sxs-lookup"><span data-stu-id="809ca-124">Represents a configuration section for defining a set of elements that contain namespace to prefix mappings that can then be used in XPath filters for routing.</span></span>|  
   
-## 請參閱  
- [System.ServiceModel.Routing.Configuration.NamespaceElement](assetId:///System.ServiceModel.Routing.Configuration.NamespaceElement?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a><span data-ttu-id="809ca-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="809ca-125">See Also</span></span>  
+ <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    

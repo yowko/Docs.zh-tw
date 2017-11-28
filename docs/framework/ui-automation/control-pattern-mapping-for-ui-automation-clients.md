@@ -1,87 +1,90 @@
 ---
-title: "Control Pattern Mapping for UI Automation Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, for UI Automation clients"
-  - "UI Automation, clients, control patterns for"
+title: "UI 自動化用戶端的控制項模式對應"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, for UI Automation clients
+- UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# Control Pattern Mapping for UI Automation Clients
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a><span data-ttu-id="00a1e-102">UI 自動化用戶端的控制項模式對應</span><span class="sxs-lookup"><span data-stu-id="00a1e-102">Control Pattern Mapping for UI Automation Clients</span></span>
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  <span data-ttu-id="00a1e-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="00a1e-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="00a1e-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="00a1e-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 本主題列出控制項類型及其相關聯的控制項模式。  
+ <span data-ttu-id="00a1e-105">本主題列出控制項類型及其相關聯的控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-105">This topic lists control types and their associated control patterns.</span></span>  
   
- 下表將控制項模式整理為下列類別：  
+ <span data-ttu-id="00a1e-106">下表將控制項模式整理為下列類別：</span><span class="sxs-lookup"><span data-stu-id="00a1e-106">The following table organizes the control patterns into the following categories:</span></span>  
   
--   支援。 控制項必定支援此控制項模式。  
+-   <span data-ttu-id="00a1e-107">支援。</span><span class="sxs-lookup"><span data-stu-id="00a1e-107">Supported.</span></span> <span data-ttu-id="00a1e-108">控制項必定支援此控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-108">The control must support this control pattern.</span></span>  
   
--   有條件支援。 控制項可依據控制項的狀態決定是否支援此控制項模式。  
+-   <span data-ttu-id="00a1e-109">有條件支援。</span><span class="sxs-lookup"><span data-stu-id="00a1e-109">Conditional support.</span></span> <span data-ttu-id="00a1e-110">控制項可依據控制項的狀態決定是否支援此控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-110">The control may support this control pattern depending on the state of the control.</span></span>  
   
--   不支援。 控制項不支援此控制項模式；自訂控制項可能支援此控制項模式。  
+-   <span data-ttu-id="00a1e-111">不支援。</span><span class="sxs-lookup"><span data-stu-id="00a1e-111">Not supported.</span></span> <span data-ttu-id="00a1e-112">控制項不支援此控制項模式；自訂控制項可能支援此控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-112">The control does not support this control pattern; custom controls may support this control pattern.</span></span>  
   
 > [!NOTE]
->  有些控制項會依據其功能，有條件支援多種控制項模式。 例如，功能表項目控制項即依據其在功能表控制項中的功能，有條件支援 <xref:System.Windows.Automation.InvokePattern>、<xref:System.Windows.Automation.ExpandCollapsePattern>、<xref:System.Windows.Automation.TogglePattern>或 <xref:System.Windows.Automation.SelectionItemPattern> 控制項模式。  
+>  <span data-ttu-id="00a1e-113">有些控制項會依據其功能，有條件支援多種控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-113">Some controls have conditional support for several control patterns depending on the functionality of the control.</span></span> <span data-ttu-id="00a1e-114">例如，功能表項目控制項即依據其在功能表控制項中的功能，有條件支援 <xref:System.Windows.Automation.InvokePattern>、 <xref:System.Windows.Automation.ExpandCollapsePattern>、 <xref:System.Windows.Automation.TogglePattern>或 <xref:System.Windows.Automation.SelectionItemPattern> 控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-114">For example, the menu item control has conditional support for the <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, or <xref:System.Windows.Automation.SelectionItemPattern> control pattern, depending on its function in the menu control.</span></span>  
   
 <a name="control_mapping_clients"></a>   
-## 用戶端的 UI 自動化控制項模式  
+## <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="00a1e-115">用戶端的 UI 自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="00a1e-115">UI Automation Control Patterns for Clients</span></span>  
   
-|控制項類型|支援|有條件支援。|不支援|  
-|-----------|--------|------------|---------|  
-|按鈕|無|叫用、切換、展開摺疊|無|  
-|行事曆|方格、表格|選取、捲軸|值|  
-|核取方塊|Toggle|無|無|  
-|下拉式方塊|展開摺疊|選取、值|Scroll|  
-|資料格|Grid|捲軸、選取、表格|無|  
-|Data Item|Selection Item|展開摺疊、方格項目、捲軸項目、表格、切換、值|無|  
-|文件|Text|捲軸、值|無|  
-|Edit|無|文字、範圍值、值|無|  
-|群組|無|展開摺疊|無|  
-|頁首|無|Transform|無|  
-|標題項目|無|轉換、叫用|無|  
-|超連結|叫用|值|無|  
-|Image|無|方格項目、表格項目|叫用、選取項目|  
-|清單|無|方格、多重檢視、捲軸、選取|資料表|  
-|清單項目|Selection Item|展開摺疊、方格項目、叫用、捲軸項目 、切換、值|無|  
-|功能表|無|無|無|  
-|功能表列|無|展開摺疊、停駐、轉換|無|  
-|功能表項目|無|展開摺疊、叫用、選取項目、切換|無|  
-|窗格|無|停駐 捲軸、轉換|視窗|  
-|進度列|無|範圍值、值|無|  
-|選項按鈕|Selection Item|無|Toggle|  
-|Scroll Bar|無|Range Value|Scroll|  
-|Separator|無|無|無|  
-|滑桿|無|範圍值、選取、值|無|  
-|Spinner|無|範圍值、選取、值|無|  
-|Split Button|叫用、展開摺疊|無|無|  
-|狀態列|無|Grid|無|  
-|索引標籤|選取|Scroll|無|  
-|索引標籤項目|Selection Item|無|叫用|  
-|資料表|方格、方格項目、表格、表格項目|無|無|  
-|Text|無|方格項目、表格項目、文字|值|  
-|Thumb|Transform|無|無|  
-|標題列|無|無|無|  
-|工具列|無|停駐、展開摺疊、轉換|無|  
-|工具提示|無|文字、視窗|無|  
-|樹狀結構|無|捲軸、選取|無|  
-|樹狀目錄項目|展開摺疊|叫用、捲軸項目、選取項目、切換|無|  
-|視窗|轉換、視窗|停駐|無|  
+|<span data-ttu-id="00a1e-116">控制項類型</span><span class="sxs-lookup"><span data-stu-id="00a1e-116">Control Type</span></span>|<span data-ttu-id="00a1e-117">支援</span><span class="sxs-lookup"><span data-stu-id="00a1e-117">Supported</span></span>|<span data-ttu-id="00a1e-118">有條件支援。</span><span class="sxs-lookup"><span data-stu-id="00a1e-118">Conditional Support</span></span>|<span data-ttu-id="00a1e-119">不支援</span><span class="sxs-lookup"><span data-stu-id="00a1e-119">Not Supported</span></span>|  
+|------------------|---------------|-------------------------|-------------------|  
+|<span data-ttu-id="00a1e-120">按鈕</span><span class="sxs-lookup"><span data-stu-id="00a1e-120">Button</span></span>|<span data-ttu-id="00a1e-121">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-121">None</span></span>|<span data-ttu-id="00a1e-122">叫用、切換、展開摺疊</span><span class="sxs-lookup"><span data-stu-id="00a1e-122">Invoke, Toggle, Expand Collapse</span></span>|<span data-ttu-id="00a1e-123">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-123">None</span></span>|  
+|<span data-ttu-id="00a1e-124">行事曆</span><span class="sxs-lookup"><span data-stu-id="00a1e-124">Calendar</span></span>|<span data-ttu-id="00a1e-125">方格、表格</span><span class="sxs-lookup"><span data-stu-id="00a1e-125">Grid, Table</span></span>|<span data-ttu-id="00a1e-126">選取、捲軸</span><span class="sxs-lookup"><span data-stu-id="00a1e-126">Selection, Scroll</span></span>|<span data-ttu-id="00a1e-127">值</span><span class="sxs-lookup"><span data-stu-id="00a1e-127">Value</span></span>|  
+|<span data-ttu-id="00a1e-128">核取方塊</span><span class="sxs-lookup"><span data-stu-id="00a1e-128">Check Box</span></span>|<span data-ttu-id="00a1e-129">Toggle</span><span class="sxs-lookup"><span data-stu-id="00a1e-129">Toggle</span></span>|<span data-ttu-id="00a1e-130">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-130">None</span></span>|<span data-ttu-id="00a1e-131">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-131">None</span></span>|  
+|<span data-ttu-id="00a1e-132">下拉式方塊</span><span class="sxs-lookup"><span data-stu-id="00a1e-132">Combo Box</span></span>|<span data-ttu-id="00a1e-133">展開摺疊</span><span class="sxs-lookup"><span data-stu-id="00a1e-133">Expand Collapse</span></span>|<span data-ttu-id="00a1e-134">選取、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-134">Selection, Value</span></span>|<span data-ttu-id="00a1e-135">Scroll</span><span class="sxs-lookup"><span data-stu-id="00a1e-135">Scroll</span></span>|  
+|<span data-ttu-id="00a1e-136">資料格</span><span class="sxs-lookup"><span data-stu-id="00a1e-136">Data Grid</span></span>|<span data-ttu-id="00a1e-137">Grid</span><span class="sxs-lookup"><span data-stu-id="00a1e-137">Grid</span></span>|<span data-ttu-id="00a1e-138">捲軸、選取、表格</span><span class="sxs-lookup"><span data-stu-id="00a1e-138">Scroll, Selection, Table</span></span>|<span data-ttu-id="00a1e-139">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-139">None</span></span>|  
+|<span data-ttu-id="00a1e-140">Data Item</span><span class="sxs-lookup"><span data-stu-id="00a1e-140">Data Item</span></span>|<span data-ttu-id="00a1e-141">Selection Item</span><span class="sxs-lookup"><span data-stu-id="00a1e-141">Selection Item</span></span>|<span data-ttu-id="00a1e-142">展開摺疊、方格項目、捲軸項目、表格、切換、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span></span>|<span data-ttu-id="00a1e-143">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-143">None</span></span>|  
+|<span data-ttu-id="00a1e-144">文件</span><span class="sxs-lookup"><span data-stu-id="00a1e-144">Document</span></span>|<span data-ttu-id="00a1e-145">Text</span><span class="sxs-lookup"><span data-stu-id="00a1e-145">Text</span></span>|<span data-ttu-id="00a1e-146">捲軸、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-146">Scroll, Value</span></span>|<span data-ttu-id="00a1e-147">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-147">None</span></span>|  
+|<span data-ttu-id="00a1e-148">Edit</span><span class="sxs-lookup"><span data-stu-id="00a1e-148">Edit</span></span>|<span data-ttu-id="00a1e-149">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-149">None</span></span>|<span data-ttu-id="00a1e-150">文字、範圍值、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-150">Text, Range Value, Value</span></span>|<span data-ttu-id="00a1e-151">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-151">None</span></span>|  
+|<span data-ttu-id="00a1e-152">群組</span><span class="sxs-lookup"><span data-stu-id="00a1e-152">Group</span></span>|<span data-ttu-id="00a1e-153">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-153">None</span></span>|<span data-ttu-id="00a1e-154">展開摺疊</span><span class="sxs-lookup"><span data-stu-id="00a1e-154">Expand Collapse</span></span>|<span data-ttu-id="00a1e-155">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-155">None</span></span>|  
+|<span data-ttu-id="00a1e-156">頁首</span><span class="sxs-lookup"><span data-stu-id="00a1e-156">Header</span></span>|<span data-ttu-id="00a1e-157">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-157">None</span></span>|<span data-ttu-id="00a1e-158">Transform</span><span class="sxs-lookup"><span data-stu-id="00a1e-158">Transform</span></span>|<span data-ttu-id="00a1e-159">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-159">None</span></span>|  
+|<span data-ttu-id="00a1e-160">標題項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-160">Header Item</span></span>|<span data-ttu-id="00a1e-161">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-161">None</span></span>|<span data-ttu-id="00a1e-162">轉換、叫用</span><span class="sxs-lookup"><span data-stu-id="00a1e-162">Transform, Invoke</span></span>|<span data-ttu-id="00a1e-163">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-163">None</span></span>|  
+|<span data-ttu-id="00a1e-164">超連結</span><span class="sxs-lookup"><span data-stu-id="00a1e-164">Hyperlink</span></span>|<span data-ttu-id="00a1e-165">叫用</span><span class="sxs-lookup"><span data-stu-id="00a1e-165">Invoke</span></span>|<span data-ttu-id="00a1e-166">值</span><span class="sxs-lookup"><span data-stu-id="00a1e-166">Value</span></span>|<span data-ttu-id="00a1e-167">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-167">None</span></span>|  
+|<span data-ttu-id="00a1e-168">Image</span><span class="sxs-lookup"><span data-stu-id="00a1e-168">Image</span></span>|<span data-ttu-id="00a1e-169">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-169">None</span></span>|<span data-ttu-id="00a1e-170">方格項目、表格項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-170">Grid Item, Table Item</span></span>|<span data-ttu-id="00a1e-171">叫用、選取項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-171">Invoke, Selection Item</span></span>|  
+|<span data-ttu-id="00a1e-172">清單</span><span class="sxs-lookup"><span data-stu-id="00a1e-172">List</span></span>|<span data-ttu-id="00a1e-173">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-173">None</span></span>|<span data-ttu-id="00a1e-174">方格、多重檢視、捲軸、選取</span><span class="sxs-lookup"><span data-stu-id="00a1e-174">Grid, Multiple View, Scroll, Selection</span></span>|<span data-ttu-id="00a1e-175">資料表</span><span class="sxs-lookup"><span data-stu-id="00a1e-175">Table</span></span>|  
+|<span data-ttu-id="00a1e-176">清單項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-176">List Item</span></span>|<span data-ttu-id="00a1e-177">Selection Item</span><span class="sxs-lookup"><span data-stu-id="00a1e-177">Selection Item</span></span>|<span data-ttu-id="00a1e-178">展開摺疊、方格項目、叫用、捲軸項目 、切換、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span></span>|<span data-ttu-id="00a1e-179">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-179">None</span></span>|  
+|<span data-ttu-id="00a1e-180">功能表</span><span class="sxs-lookup"><span data-stu-id="00a1e-180">Menu</span></span>|<span data-ttu-id="00a1e-181">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-181">None</span></span>|<span data-ttu-id="00a1e-182">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-182">None</span></span>|<span data-ttu-id="00a1e-183">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-183">None</span></span>|  
+|<span data-ttu-id="00a1e-184">功能表列</span><span class="sxs-lookup"><span data-stu-id="00a1e-184">Menu Bar</span></span>|<span data-ttu-id="00a1e-185">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-185">None</span></span>|<span data-ttu-id="00a1e-186">展開摺疊、停駐、轉換</span><span class="sxs-lookup"><span data-stu-id="00a1e-186">Expand Collapse, Dock, Transform</span></span>|<span data-ttu-id="00a1e-187">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-187">None</span></span>|  
+|<span data-ttu-id="00a1e-188">功能表項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-188">Menu Item</span></span>|<span data-ttu-id="00a1e-189">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-189">None</span></span>|<span data-ttu-id="00a1e-190">展開摺疊、叫用、選取項目、切換</span><span class="sxs-lookup"><span data-stu-id="00a1e-190">Expand Collapse, Invoke, Selection Item, Toggle</span></span>|<span data-ttu-id="00a1e-191">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-191">None</span></span>|  
+|<span data-ttu-id="00a1e-192">窗格</span><span class="sxs-lookup"><span data-stu-id="00a1e-192">Pane</span></span>|<span data-ttu-id="00a1e-193">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-193">None</span></span>|<span data-ttu-id="00a1e-194">停駐</span><span class="sxs-lookup"><span data-stu-id="00a1e-194">Dock.</span></span> <span data-ttu-id="00a1e-195">捲軸、轉換</span><span class="sxs-lookup"><span data-stu-id="00a1e-195">Scroll, Transform</span></span>|<span data-ttu-id="00a1e-196">視窗</span><span class="sxs-lookup"><span data-stu-id="00a1e-196">Window</span></span>|  
+|<span data-ttu-id="00a1e-197">進度列</span><span class="sxs-lookup"><span data-stu-id="00a1e-197">Progress Bar</span></span>|<span data-ttu-id="00a1e-198">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-198">None</span></span>|<span data-ttu-id="00a1e-199">範圍值、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-199">Range Value, Value</span></span>|<span data-ttu-id="00a1e-200">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-200">None</span></span>|  
+|<span data-ttu-id="00a1e-201">選項按鈕</span><span class="sxs-lookup"><span data-stu-id="00a1e-201">Radio Button</span></span>|<span data-ttu-id="00a1e-202">Selection Item</span><span class="sxs-lookup"><span data-stu-id="00a1e-202">Selection Item</span></span>|<span data-ttu-id="00a1e-203">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-203">None</span></span>|<span data-ttu-id="00a1e-204">Toggle</span><span class="sxs-lookup"><span data-stu-id="00a1e-204">Toggle</span></span>|  
+|<span data-ttu-id="00a1e-205">Scroll Bar</span><span class="sxs-lookup"><span data-stu-id="00a1e-205">Scroll Bar</span></span>|<span data-ttu-id="00a1e-206">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-206">None</span></span>|<span data-ttu-id="00a1e-207">Range Value</span><span class="sxs-lookup"><span data-stu-id="00a1e-207">Range Value</span></span>|<span data-ttu-id="00a1e-208">Scroll</span><span class="sxs-lookup"><span data-stu-id="00a1e-208">Scroll</span></span>|  
+|<span data-ttu-id="00a1e-209">Separator</span><span class="sxs-lookup"><span data-stu-id="00a1e-209">Separator</span></span>|<span data-ttu-id="00a1e-210">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-210">None</span></span>|<span data-ttu-id="00a1e-211">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-211">None</span></span>|<span data-ttu-id="00a1e-212">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-212">None</span></span>|  
+|<span data-ttu-id="00a1e-213">滑桿</span><span class="sxs-lookup"><span data-stu-id="00a1e-213">Slider</span></span>|<span data-ttu-id="00a1e-214">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-214">None</span></span>|<span data-ttu-id="00a1e-215">範圍值、選取、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-215">Range Value, Selection, Value</span></span>|<span data-ttu-id="00a1e-216">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-216">None</span></span>|  
+|<span data-ttu-id="00a1e-217">Spinner</span><span class="sxs-lookup"><span data-stu-id="00a1e-217">Spinner</span></span>|<span data-ttu-id="00a1e-218">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-218">None</span></span>|<span data-ttu-id="00a1e-219">範圍值、選取、值</span><span class="sxs-lookup"><span data-stu-id="00a1e-219">Range Value, Selection, Value</span></span>|<span data-ttu-id="00a1e-220">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-220">None</span></span>|  
+|<span data-ttu-id="00a1e-221">Split Button</span><span class="sxs-lookup"><span data-stu-id="00a1e-221">Split Button</span></span>|<span data-ttu-id="00a1e-222">叫用、展開摺疊</span><span class="sxs-lookup"><span data-stu-id="00a1e-222">Invoke, Expand Collapse</span></span>|<span data-ttu-id="00a1e-223">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-223">None</span></span>|<span data-ttu-id="00a1e-224">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-224">None</span></span>|  
+|<span data-ttu-id="00a1e-225">狀態列</span><span class="sxs-lookup"><span data-stu-id="00a1e-225">Status Bar</span></span>|<span data-ttu-id="00a1e-226">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-226">None</span></span>|<span data-ttu-id="00a1e-227">Grid</span><span class="sxs-lookup"><span data-stu-id="00a1e-227">Grid</span></span>|<span data-ttu-id="00a1e-228">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-228">None</span></span>|  
+|<span data-ttu-id="00a1e-229">索引標籤</span><span class="sxs-lookup"><span data-stu-id="00a1e-229">Tab</span></span>|<span data-ttu-id="00a1e-230">選取</span><span class="sxs-lookup"><span data-stu-id="00a1e-230">Selection</span></span>|<span data-ttu-id="00a1e-231">Scroll</span><span class="sxs-lookup"><span data-stu-id="00a1e-231">Scroll</span></span>|<span data-ttu-id="00a1e-232">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-232">None</span></span>|  
+|<span data-ttu-id="00a1e-233">索引標籤項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-233">Tab Item</span></span>|<span data-ttu-id="00a1e-234">Selection Item</span><span class="sxs-lookup"><span data-stu-id="00a1e-234">Selection Item</span></span>|<span data-ttu-id="00a1e-235">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-235">None</span></span>|<span data-ttu-id="00a1e-236">叫用</span><span class="sxs-lookup"><span data-stu-id="00a1e-236">Invoke</span></span>|  
+|<span data-ttu-id="00a1e-237">資料表</span><span class="sxs-lookup"><span data-stu-id="00a1e-237">Table</span></span>|<span data-ttu-id="00a1e-238">方格、方格項目、表格、表格項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-238">Grid, Grid Item, Table, Table Item</span></span>|<span data-ttu-id="00a1e-239">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-239">None</span></span>|<span data-ttu-id="00a1e-240">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-240">None</span></span>|  
+|<span data-ttu-id="00a1e-241">Text</span><span class="sxs-lookup"><span data-stu-id="00a1e-241">Text</span></span>|<span data-ttu-id="00a1e-242">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-242">None</span></span>|<span data-ttu-id="00a1e-243">方格項目、表格項目、文字</span><span class="sxs-lookup"><span data-stu-id="00a1e-243">Grid Item, Table Item, Text</span></span>|<span data-ttu-id="00a1e-244">值</span><span class="sxs-lookup"><span data-stu-id="00a1e-244">Value</span></span>|  
+|<span data-ttu-id="00a1e-245">Thumb</span><span class="sxs-lookup"><span data-stu-id="00a1e-245">Thumb</span></span>|<span data-ttu-id="00a1e-246">Transform</span><span class="sxs-lookup"><span data-stu-id="00a1e-246">Transform</span></span>|<span data-ttu-id="00a1e-247">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-247">None</span></span>|<span data-ttu-id="00a1e-248">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-248">None</span></span>|  
+|<span data-ttu-id="00a1e-249">標題列</span><span class="sxs-lookup"><span data-stu-id="00a1e-249">Title Bar</span></span>|<span data-ttu-id="00a1e-250">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-250">None</span></span>|<span data-ttu-id="00a1e-251">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-251">None</span></span>|<span data-ttu-id="00a1e-252">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-252">None</span></span>|  
+|<span data-ttu-id="00a1e-253">工具列</span><span class="sxs-lookup"><span data-stu-id="00a1e-253">Tool Bar</span></span>|<span data-ttu-id="00a1e-254">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-254">None</span></span>|<span data-ttu-id="00a1e-255">停駐、展開摺疊、轉換</span><span class="sxs-lookup"><span data-stu-id="00a1e-255">Dock, Expand Collapse, Transform</span></span>|<span data-ttu-id="00a1e-256">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-256">None</span></span>|  
+|<span data-ttu-id="00a1e-257">工具提示</span><span class="sxs-lookup"><span data-stu-id="00a1e-257">Tool Tip</span></span>|<span data-ttu-id="00a1e-258">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-258">None</span></span>|<span data-ttu-id="00a1e-259">文字、視窗</span><span class="sxs-lookup"><span data-stu-id="00a1e-259">Text, Window</span></span>|<span data-ttu-id="00a1e-260">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-260">None</span></span>|  
+|<span data-ttu-id="00a1e-261">樹狀結構</span><span class="sxs-lookup"><span data-stu-id="00a1e-261">Tree</span></span>|<span data-ttu-id="00a1e-262">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-262">None</span></span>|<span data-ttu-id="00a1e-263">捲軸、選取</span><span class="sxs-lookup"><span data-stu-id="00a1e-263">Scroll, Selection</span></span>|<span data-ttu-id="00a1e-264">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-264">None</span></span>|  
+|<span data-ttu-id="00a1e-265">樹狀目錄項目</span><span class="sxs-lookup"><span data-stu-id="00a1e-265">Tree Item</span></span>|<span data-ttu-id="00a1e-266">展開摺疊</span><span class="sxs-lookup"><span data-stu-id="00a1e-266">Expand Collapse</span></span>|<span data-ttu-id="00a1e-267">叫用、捲軸項目、選取項目、切換</span><span class="sxs-lookup"><span data-stu-id="00a1e-267">Invoke, Scroll Item, Selection Item, Toggle</span></span>|<span data-ttu-id="00a1e-268">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-268">None</span></span>|  
+|<span data-ttu-id="00a1e-269">視窗</span><span class="sxs-lookup"><span data-stu-id="00a1e-269">Window</span></span>|<span data-ttu-id="00a1e-270">轉換、視窗</span><span class="sxs-lookup"><span data-stu-id="00a1e-270">Transform, Window</span></span>|<span data-ttu-id="00a1e-271">停駐</span><span class="sxs-lookup"><span data-stu-id="00a1e-271">Dock</span></span>|<span data-ttu-id="00a1e-272">無</span><span class="sxs-lookup"><span data-stu-id="00a1e-272">None</span></span>|  
   
 > [!NOTE]
->  如果控制項類型沒有所列的受支援控制項模式，但有一或多個有條件支援的控制項模式，就會一律支援其中一個條件式控制項模式。  
+>  <span data-ttu-id="00a1e-273">如果控制項類型沒有所列的受支援控制項模式，但有一或多個有條件支援的控制項模式，就會一律支援其中一個條件式控制項模式。</span><span class="sxs-lookup"><span data-stu-id="00a1e-273">If a control type has no supported control patterns listed but has one or more conditionally-supported control patterns, then one of those conditional control patterns will be supported at all times.</span></span>  
   
-## 請參閱  
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="00a1e-274">另請參閱</span><span class="sxs-lookup"><span data-stu-id="00a1e-274">See Also</span></span>  
+ [<span data-ttu-id="00a1e-275">UI 自動化概觀</span><span class="sxs-lookup"><span data-stu-id="00a1e-275">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

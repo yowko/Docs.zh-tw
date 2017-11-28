@@ -1,35 +1,38 @@
 ---
-title: "3810 - RoutingServiceConfigurationApplied | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3810 - RoutingServiceConfigurationApplied
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bef4b66-6a63-4f42-8396-6e21510fa4fb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 710b55f641ef22a9909a58c94abf001d2a019091
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/18/2017
 ---
-# 3810 - RoutingServiceConfigurationApplied
-## 屬性  
+# <a name="3810---routingserviceconfigurationapplied"></a><span data-ttu-id="ba724-102">3810 - RoutingServiceConfigurationApplied</span><span class="sxs-lookup"><span data-stu-id="ba724-102">3810 - RoutingServiceConfigurationApplied</span></span>
+## <a name="properties"></a><span data-ttu-id="ba724-103">屬性</span><span class="sxs-lookup"><span data-stu-id="ba724-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3810|  
-|關鍵字|RoutingServices|  
-|層級|資訊|  
-|通道|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="ba724-104">ID</span><span class="sxs-lookup"><span data-stu-id="ba724-104">ID</span></span>|<span data-ttu-id="ba724-105">3810</span><span class="sxs-lookup"><span data-stu-id="ba724-105">3810</span></span>|  
+|<span data-ttu-id="ba724-106">關鍵字</span><span class="sxs-lookup"><span data-stu-id="ba724-106">Keywords</span></span>|<span data-ttu-id="ba724-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="ba724-107">RoutingServices</span></span>|  
+|<span data-ttu-id="ba724-108">層級</span><span class="sxs-lookup"><span data-stu-id="ba724-108">Level</span></span>|<span data-ttu-id="ba724-109">資訊</span><span class="sxs-lookup"><span data-stu-id="ba724-109">Information</span></span>|  
+|<span data-ttu-id="ba724-110">通道</span><span class="sxs-lookup"><span data-stu-id="ba724-110">Channel</span></span>|<span data-ttu-id="ba724-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ba724-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 描述  
- 當路由組態套用到路由服務時，就會發出此事件。  
+## <a name="description"></a><span data-ttu-id="ba724-112">描述</span><span class="sxs-lookup"><span data-stu-id="ba724-112">Description</span></span>  
+ <span data-ttu-id="ba724-113">當路由組態套用到路由服務時，就會發出此事件。</span><span class="sxs-lookup"><span data-stu-id="ba724-113">This event is emitted when the routing configuration has been applied to the Routing Service.</span></span>  
   
-## 訊息  
- 已對路由服務套用新的 RoutingConfiguration。  
+## <a name="message"></a><span data-ttu-id="ba724-114">訊息</span><span class="sxs-lookup"><span data-stu-id="ba724-114">Message</span></span>  
+ <span data-ttu-id="ba724-115">已對路由服務套用新的 RoutingConfiguration。</span><span class="sxs-lookup"><span data-stu-id="ba724-115">A new RoutingConfiguration has been applied to the Routing Service.</span></span>  
   
-## 詳細資料
+## <a name="details"></a><span data-ttu-id="ba724-116">詳細資料</span><span class="sxs-lookup"><span data-stu-id="ba724-116">Details</span></span>
